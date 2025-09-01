@@ -9,21 +9,18 @@ export interface ListingItem {
   title: string;
   category: string;
   image?: string;
-  description?: string;
-}
+  description?: string}
 
 export interface ContactInfo {
   name: string;
   email: string;
   phone: string;
-  company: string;
-}
+  company: string}
 
 export interface Budget {
   amount: number;
   maxAmount?: number;
-  type: BudgetType;
-}
+  type: BudgetType}
 
 export interface QuoteFormData {
   serviceType: ServiceType;
@@ -35,8 +32,7 @@ export interface QuoteFormData {
   endDate?: Date;
   timeline: TimelineType;
   budget: Budget;
-  contactInfo: ContactInfo;
-}
+  contactInfo: ContactInfo}
 
 export type QuoteStatus = 'new' | 'in_review' | 'accepted' | 'responded' | 'closed' | 'archived';
 
@@ -60,5 +56,4 @@ export interface QuoteRequest {
   viewed_at?: string;
   replied_at?: string;
   created_at: string;
-  updated_at: string;
-}
+  updated_at: string}

@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
 import {
 
@@ -34,8 +32,6 @@ import {
   Building,
   Phone} from 'lucide-react';
 
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
-import { SEO } from '../components/SEO';
 
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -57,35 +53,12 @@ export default function InnovativeServices2027() {
     'innovation'
   );
 
-  const categories = ['
-    'all',
-    ...Array.from()
-      new Set()
-        INNOVATIVE_MICRO_SAAS_SERVICES_2027.map(service => service.category)
-      )
-    ),
-  ];
-
-  const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2027.filter()
-    service => {
-
-      const matchesSearch =
-        service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        service.tags.some(tag =>
-          tag.toLowerCase().includes(searchQuery.toLowerCase())
-        );
-      return matchesCategory && matchesSearch;
-    }
+  
+  
+      return matchesCategory && matchesSearch}
   );
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
-
-    switch (sortBy) {
-
-      case 'price':
-<<<<<<< HEAD
-        return a.price - b.price;
+  
       case 'roi':
 =======
         return a.price - b.price;'      case 'roi':
@@ -96,8 +69,7 @@ export default function InnovativeServices2027() {
       case 'innovation':'
         return a.innovationLevel === 'revolutionary' ? 1 : -1;
       default:
-        return 0;
-    }
+        return 0}
   }) ;
   return()
     <div className="min-h-screen bg-futuristic">
@@ -282,7 +254,7 @@ export default function InnovativeServices2027() {
                             key={idx}"
                             className="text-sm text-gray-400 flex items-center"
                           >"
-                            <Star className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />                            {feature}
+                            <Star className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0"  />                            {feature}
                           </li>) ) }
                       </ul>
                     </div>
@@ -298,7 +270,7 @@ export default function InnovativeServices2027() {
                             key={idx}"
                             className="text-sm text-gray-400 flex items-center"
                           >"
-                            <TrendingUp className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />                            {benefit}
+                            <TrendingUp className="w-3 h-3 text-green-400 mr-2 flex-shrink-0"  />                            {benefit}
                           </li>) ) }
                       </ul>
                     </div>
@@ -366,8 +338,7 @@ export default function InnovativeServices2027() {
                 onClick={() => {
 
                   setSelectedCategory('all');
-                  setSearchQuery('');
-                }}"                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                  setSearchQuery('')}}"                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
                 View All Services
               </button>
@@ -425,7 +396,7 @@ export default function InnovativeServices2027() {
               viewport={{ once: true }}"
               className="text-center"
             >"
-              <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />"
+              <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4"  />"
               <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>"              <p className="text-gray-300">+1 302 464 0950</p>
             </motion.div>
             <motion.div
@@ -435,7 +406,7 @@ export default function InnovativeServices2027() {
               viewport={{ once: true }}"
               className="text-center"
             >"
-              <MessageCircle className="w-12 h-12 text-purple-400 mx-auto mb-4" />"
+              <MessageCircle className="w-12 h-12 text-purple-400 mx-auto mb-4"  />"
               <h3 className="text-xl font-semibold text-white mb-2">Email</h3>"              <p className="text-gray-300">kleber@ziontechgroup.com</p>
             </motion.div>
             <motion.div
@@ -445,7 +416,7 @@ export default function InnovativeServices2027() {
               viewport={{ once: true }}"
               className="text-center"
             >"
-              <Building className="w-12 h-12 text-pink-400 mx-auto mb-4" />"
+              <Building className="w-12 h-12 text-pink-400 mx-auto mb-4"  />"
               <h3 className="text-xl font-semibold text-white mb-2">Address</h3>"
               <p className="text-gray-300">
                 364 E Main St STE 1008
@@ -456,6 +427,5 @@ export default function InnovativeServices2027() {
         </div>
       </section>
     </div>
-  );
-}
+  )}
 '"`

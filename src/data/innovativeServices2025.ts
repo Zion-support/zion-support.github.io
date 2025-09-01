@@ -30,16 +30,13 @@ export interface InnovativeService {
 
     mobile: string;
     email: string;
-    website: string;
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
-}
+    security: string[]}}
 ;export const innovativeServices2025: InnovativeService[] = [
   // AI & Machine Learning Services
   {

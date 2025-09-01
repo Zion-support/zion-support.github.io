@@ -13,31 +13,26 @@ declare module 'react-player';
 declare module '@google/model-viewer';
 declare module '*.module.css' {
   const classes: { [key: string]: string };
-  export default classes;
-}
+  export default classes}
 
 declare module '@tanstack/react-query';
 declare module 'react-day-picker' {
   export interface DateRange {
     from?: Date;
-    to?: Date;
-  }
+    to?: Date}
 
   // Minimal placeholder for the DayPicker component used in the app
   // The actual library provides full typings but we stub them here so the
   // TypeScript compiler can understand the imports without requiring the real
   // type definitions.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  export const DayPicker: any;
-}
+  export const DayPicker: any}
 declare module 'sonner';
 declare module 'lucide-react' {
-  import { FC, SVGProps } from 'react';
   export interface LucideProps extends SVGProps<SVGSVGElement> {
     size?: number | string;
     color?: string;
-    strokeWidth?: number | string;
-  }
+    strokeWidth?: number | string}
   export type LucideIcon = FC<LucideProps>;
 
   export const AlertCircle: LucideIcon;
@@ -232,14 +227,12 @@ declare module 'lucide-react' {
   export const XCircle: LucideIcon;
   export const Zap: LucideIcon;
   const icons: { [key: string]: LucideIcon };
-  export default icons;
-}
+  export default icons}
 declare module 'child_process';
 declare module 'date-fns';
 declare module 'jspdf' {
   export const jsPDF: any;
-  export default jsPDF;
-}
+  export default jsPDF}
 declare module '@hookform/resolvers/zod';
 declare module '@radix-ui/react-accordion';
 declare module '@radix-ui/react-alert-dialog';
@@ -269,15 +262,13 @@ declare module 'class-variance-authority' {
 }
 declare module 'clsx' {
   export type ClassValue = any;
-  export default function clsx(...classes: ClassValue[]): string;
-}
+  export default function clsx(...classes: ClassValue[]): string}
 declare module 'embla-carousel-react';
 declare module 'framer-motion';
 declare module 'i18next';
 declare module 'i18next-browser-languagedetector';
 declare module 'react-helmet-async';
 declare module 'react-hook-form' {
-  import type { ComponentType, ReactElement, ReactNode } from 'react'
 
   // Minimal generic typings to satisfy local usage without full type defs
   export type FieldValues = Record<string, any>
@@ -340,8 +331,7 @@ declare module 'recharts';
 declare module 'next' {
   export type GetStaticPaths = any;
   export type GetStaticProps<P = any, Q = any> = any;
-  export type GetServerSideProps<P = any, Q = any> = any;
-}
+  export type GetServerSideProps<P = any, Q = any> = any}
 declare module 'next/link' {
   const Link: React.ComponentType<any>
   export default Link

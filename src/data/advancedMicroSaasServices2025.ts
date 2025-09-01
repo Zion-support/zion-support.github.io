@@ -1,4 +1,3 @@
-import React from 'react';
 export interface AdvancedMicroSaasService {
   id: string;
   title: string;
@@ -22,9 +21,7 @@ export interface AdvancedMicroSaasService {
 
     phone: string;
     email: string;
-    website: string;
-  
-};  technicalSpecs?: {
+    website: string};  technicalSpecs?: {
 
     technology: string[];
     integrations: string[];
@@ -32,8 +29,7 @@ export interface AdvancedMicroSaasService {
     uptime: string;
     security: string[]};
   competitors?: string[];
-  marketSize?: string;
-}
+  marketSize?: string}
 ;export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
   // AI-Powered Financial Services
   {

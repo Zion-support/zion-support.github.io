@@ -1,24 +1,15 @@
 <<<<<<< HEAD
-import React from 'react.ts';
-import { Navigate, useLocation  } from 'react-router-dom.ts';
-import { useAuth  } from '@/hooks/useAuth';
 
 interface ProtectedRouteProps extends React.PropsWithChildren<{}> {
 
   children: React.ReactNode;
   requireAuth?: boolean;
-  roles?: string[];
-
-}
+  roles?: string[]}
 
   const { user, isAuthenticated, isLoading } = useAuth () ;
-  const location = useLocation () ;
-
+  
   if (isLoading) {
 =======
-import React from 'react.ts';'
-import { Navigate, useLocation  } from 'react-router-dom.ts';'
-import { useAuth  } from '@/hooks/useAuth';  if (isLoading) {
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     return()
@@ -29,13 +20,11 @@ import { useAuth  } from '@/hooks/useAuth';  if (isLoading) {
 
   if (requireAuth && !isAuthenticated) {
 "
-    return <Navigate to="/login" state={{ from: location }} replace />;
-  }
+    return <Navigate to="/login" state={{ from: location }} replace  />}
 
   if (roles.length > 0 && user && !roles.includes(user.role || 'user')) {
 "
-    return <Navigate to="/unauthorized" replace />;
-  }
+    return <Navigate to="/unauthorized" replace  />}
 
   return <>{children}</>
 }

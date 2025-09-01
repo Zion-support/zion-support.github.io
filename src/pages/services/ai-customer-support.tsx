@@ -1,5 +1,3 @@
-import React from 'react.ts';
-import { SEO } from '../../components/SEO';
 import {
 
   MessageCircle,
@@ -62,7 +60,7 @@ export default function AICustomerSupport(...args: any[]): any {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">"
               <div className="w-16 h-16 bg-blue-600/20 rounded-2xl flex items-center justify-center mb-6">"
-                <Bot className="w-8 h-8 text-blue-400" />
+                <Bot className="w-8 h-8 text-blue-400"  />
               </div>"
               <h3 className="text-xl font-bold text-white mb-4">
                 Intelligent Chatbots
@@ -74,7 +72,7 @@ export default function AICustomerSupport(...args: any[]): any {
 "
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">"
               <div className="w-16 h-16 bg-green-600/20 rounded-2xl flex items-center justify-center mb-6">"
-                <Clock className="w-8 h-8 text-green-400" />
+                <Clock className="w-8 h-8 text-green-400"  />
               </div>"
               <h3 className="text-xl font-bold text-white mb-4">
                 24/7 Availability
@@ -86,7 +84,7 @@ export default function AICustomerSupport(...args: any[]): any {
 "
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">"
               <div className="w-16 h-16 bg-purple-600/20 rounded-2xl flex items-center justify-center mb-6">"
-                <Brain className="w-8 h-8 text-purple-400" />
+                <Brain className="w-8 h-8 text-purple-400"  />
               </div>"
               <h3 className="text-xl font-bold text-white mb-4">
                 Smart Issue Resolution
@@ -98,7 +96,7 @@ export default function AICustomerSupport(...args: any[]): any {
 "
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">"
               <div className="w-16 h-16 bg-yellow-600/20 rounded-2xl flex items-center justify-center mb-6">"
-                <Users className="w-8 h-8 text-yellow-400" />
+                <Users className="w-8 h-8 text-yellow-400"  />
               </div>"
               <h3 className="text-xl font-bold text-white mb-4">
                 Personalized Support
@@ -109,7 +107,7 @@ export default function AICustomerSupport(...args: any[]): any {
 "
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">"
               <div className="w-16 h-16 bg-red-600/20 rounded-2xl flex items-center justify-center mb-6">"
-                <TrendingUp className="w-8 h-8 text-red-400" />
+                <TrendingUp className="w-8 h-8 text-red-400"  />
               </div>"
               <h3 className="text-xl font-bold text-white mb-4">
                 Performance Analytics
@@ -121,7 +119,7 @@ export default function AICustomerSupport(...args: any[]): any {
 "
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">"
               <div className="w-16 h-16 bg-indigo-600/20 rounded-2xl flex items-center justify-center mb-6">"
-                <Shield className="w-8 h-8 text-indigo-400" />
+                <Shield className="w-8 h-8 text-indigo-400"  />
               </div>"
               <h3 className="text-xl font-bold text-white mb-4">
                 Secure & Compliant
@@ -152,6 +150,5 @@ export default function AICustomerSupport(...args: any[]): any {
         </div>
       </section>
     </div>
-  );
-}
+  )}
 '"

@@ -5,8 +5,7 @@ export interface ServiceContact {
   phone: string;
   email: string;
   website: string;
-  address: string;
-}
+  address: string}
 
 export interface MicroSaasService {
   id: number;
@@ -31,8 +30,7 @@ export interface MicroSaasService {
   trialPeriod: string;
   innovationLevel: string;
   marketSize: string;
-  growthRate: string;
-}
+  growthRate: string}
 
 export interface ITService {
   id: number;
@@ -54,8 +52,7 @@ export interface ITService {
   support: string;
   innovationLevel: string;
   marketSize: string;
-  compliance: string[];
-}
+  compliance: string[]}
 
 export interface AIService {
   id: number;
@@ -82,9 +79,7 @@ export interface AIService {
 
     phone: string;
     email: string;
-    website: string;
-  
-};  technicalSpecs?: {
+    website: string};  technicalSpecs?: {
 
     technology: string[];
     integrations: string[];

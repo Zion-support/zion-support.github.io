@@ -1,8 +1,4 @@
 <<<<<<< HEAD
-import React from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import {
 
   Code,
@@ -30,66 +26,19 @@ import {
 } from 'lucide-react';
 
 const API: React.FC = () => {
-  const endpoints = [
-    {
-
-      method: 'GET',
-      path: '/api/v1/services',
-      description: 'Retrieve all available services',
-      auth: 'Required'
-    },
-    {
-
-      method: 'POST',
-      path: '/api/v1/quote',
-      description: 'Request a quote for services',
-      auth: 'Required'
-    },
-    {
-
-      method: 'GET',
-      path: '/api/v1/analytics',
-      description: 'Get analytics data',
-      auth: 'Required'
-    },;
+  
     {;
       method: 'PUT',;
       path: '/api/v1/user/profile',;
       description: 'Update user profile',;
-      auth: 'Required';
-    };
-  ];
-
-  const features = [
-    {
-
-      icon: Shield,
-      title: 'Secure Authentication',
-      description: 'OAuth 2.0 and API key authentication'
-    },
-    {
-
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Sub-100ms response times guaranteed'
-    },
-    {
-
-      icon: Globe,
-      title: 'Global CDN',
-      description: 'Worldwide edge locations for fast access';
-    },;
+      auth: 'Required'};
+  ]},;
     {;
       icon: Database,;
       title: 'Real-time Data',;
-      description: 'Live data synchronization across all endpoints';
-    };
+      description: 'Live data synchronization across all endpoints'};
   ];
 =======
-import React from 'react';'
-import SEO from '../components/SEO';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';  ];
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 url = "https://api.ziontechgroup.com/v1/ai/text/analyze"
@@ -109,22 +58,9 @@ print(response.json())`,
     title: 'Cloud Resource Management',
     language: 'JavaScript',
     description: 'Example of managing cloud resources through our infrastructure API.',`
-    code: `const axios = require('axios');
+    code: `
 
-const api = axios.create({
 
-    baseURL: 'https://api.ziontechgroup.com/v1/cloud',
-    headers: {'Authorization': 'Bearer YOUR_API_KEY'}
-}) ;
-
-const createInstance = async () => {
-
-    const response = await api.post('/instances', {
-
-        type: 'compute',
-        size: 'medium',
-        region: 'us-east-1'
-    });
     return response.data;`
 <<<<<<< HEAD
 };`,
@@ -166,7 +102,7 @@ export default function API() {
 <<<<<<< HEAD
         title="API Reference - Zion Tech Group"
         description="Comprehensive API documentation for Zion Tech Group services. Integrate with our platform using RESTful APIs, SDKs, and developer tools."
-      />
+       />
 =======
         title="API Reference - Zion Tech Group""        description="Comprehensive API documentation for Zion Tech Group services. Integrate with our platform using RESTful APIs, SDKs, and developer tools."
        />
@@ -195,7 +131,7 @@ export default function API() {
             className="text-center"
 "
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full border border-blue-400/30 mb-6">"
-              <Code className="w-5 h-5 text-blue-400 mr-2" />"              <span className="text-blue-300 font-medium">API Reference</span>
+              <Code className="w-5 h-5 text-blue-400 mr-2"  />"              <span className="text-blue-300 font-medium">API Reference</span>
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -431,11 +367,11 @@ export default function API() {
                 <h3 className="text-xl font-semibold text-white mb-2">{sdk.name}</h3>"
                 <div className="flex space-x-2">"
                   <button className="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-lg hover:bg-blue-500/30 transition-colors text-sm">"
-                    <Download className="w-4 h-4 inline mr-1" />
+                    <Download className="w-4 h-4 inline mr-1"  />
                     Download
                   </button>"
                   <button className="px-4 py-2 bg-slate-700/50 text-gray-300 rounded-lg hover:bg-slate-600/50 transition-colors text-sm">"
-                    <BookOpen className="w-4 h-4 inline mr-1" />                    Docs
+                    <BookOpen className="w-4 h-4 inline mr-1"  />                    Docs
                   </button>
                 </div>
               </motion.div>) ) }
@@ -479,7 +415,6 @@ export default function API() {
           </motion.div>;
         </div>;
       </section>;
-    </div>;) ;
-};
+    </div>;) };
 export default API;
 '"`

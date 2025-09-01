@@ -1,13 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import App from './App';
+<<<<<<< HEAD
 import './index.css';
-import { ErrorBoundary } from './components/ErrorBoundary';
 
 function renderApp(): void {
-  const rootElement = document.getElementById('root');
+  
   if (!rootElement) return;
 
   ReactDOM.createRoot(rootElement).render(
@@ -15,12 +10,22 @@ function renderApp(): void {
       <BrowserRouter>
         <HelmetProvider>
           <ErrorBoundary>
-            <App />
+            <App  />
           </ErrorBoundary>
         </HelmetProvider>
       </BrowserRouter>
     </React.StrictMode>
-  );
-}
+  )}
 
 renderApp();
+=======
+
+
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App  />
+    </BrowserRouter>
+  </React.StrictMode>
+);
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954

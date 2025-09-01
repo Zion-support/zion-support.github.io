@@ -1,6 +1,3 @@
-import React from 'react.ts';
-import { motion } from 'framer-motion.ts';
-import { Link } from 'react-router-dom.ts';
 import {
 
   Sparkles,
@@ -17,62 +14,11 @@ import {
   Users,
   Target,
   Rocket} from 'lucide-react.ts';
-import { SEO } from '@/components/SEO';
-import { NEW_INNOVATIVE_SERVICES_2025 } from '../data/newInnovativeServices2025';
 
 export default function NewInnovativeServicesShowcase(...args: any[]): any {
 
-  const serviceCategories = [
-    {
-
-      title: 'AI & Legal Tech',
-      description:'
-        'Revolutionary legal document automation and compliance solutions',
-      icon: Shield,
-      color: 'from-blue-500 to-purple-600'},
-    {
-
-      title: 'AI & Healthcare',
-      description:'
-        'Transformative healthcare analytics and clinical decision support',
-      icon: TrendingUp,
-      color: 'from-green-500 to-blue-600'},
-    {
-
-      title: 'AI & FinTech',
-      description:'
-        'Advanced trading platforms with intelligent risk management',
-      icon: DollarSign,
-      color: 'from-green-500 to-emerald-600'},
-  ];
-
-  const keyBenefits = [
-    {
-
-      title: 'Cutting-Edge AI Technology',
-      description:'
-        'Leverage the latest advances in machine learning, natural language processing, and predictive analytics',
-      icon: Sparkles},
-    {
-
-      title: 'Industry-Specific Solutions',
-      description:'
-        'Tailored solutions designed for specific industry challenges and regulatory requirements',
-      icon: Target},
-    {
-
-      title: 'Proven ROI & Results',
-      description:'
-        'Measurable improvements in efficiency, accuracy, and cost savings across all services',
-      icon: TrendingUp},
-    {
-
-      title: 'Enterprise-Grade Security',
-      description:'
-        'SOC 2, ISO 27001, and industry-specific compliance certifications for maximum security',
-      icon: Shield},
-  ];
-
+  
+  
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO"
@@ -96,7 +42,7 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
           >"
             <div className="flex justify-center mb-6">"
               <div className="p-3 bg-purple-500/20 rounded-2xl">"
-                <Sparkles className="h-8 w-8 text-purple-400" />              </div>
+                <Sparkles className="h-8 w-8 text-purple-400"  />              </div>
             </div>"
             <h1 className="text-4xl sm:text-6xl font-bold tracking-tight mb-6">
               New Innovative"
@@ -115,13 +61,13 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
                 href="tel:+13024640950"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-lg hover:from-purple-400 hover:to-blue-500 transition-all duration-300 font-semibold"
               >"
-                <Phone className="w-5 h-5 mr-2" />                Call +1 302 464 0950
+                <Phone className="w-5 h-5 mr-2"  />                Call +1 302 464 0950
               </a>
               <a"
                 href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center px-6 py-3 border border-purple-400/30 text-purple-400 rounded-lg hover:bg-purple-400/10 transition-all duration-300"
               >"
-                <Mail className="w-5 h-5 mr-2" />                Get Quote
+                <Mail className="w-5 h-5 mr-2"  />                Get Quote
               </a>
             </div>
           </motion.div>
@@ -160,15 +106,15 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
                 <p className="text-slate-300 mb-6">{category.description}</p>"
                 <div className="text-sm text-slate-400">"
                   <div className="flex items-center mb-2">"
-                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2"  />
                     AI-Powered Solutions
                   </div>"
                   <div className="flex items-center mb-2">"
-                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2"  />
                     Industry Expertise
                   </div>"
                   <div className="flex items-center">"
-                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />                    Proven Results
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2"  />                    Proven Results
                   </div>
                 </div>
               </motion.div>) ) }
@@ -235,7 +181,7 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
                   <div>"
                     <div className="flex items-center mb-4">"
                       <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">"
-                        <Rocket className="h-6 w-6 text-white" />                      </div>
+                        <Rocket className="h-6 w-6 text-white"  />                      </div>
                       <div>"
                         <h3 className="text-2xl font-bold">{service.title}</h3>"
                         <p className="text-slate-400 text-sm">
@@ -273,12 +219,12 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
                         className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-lg hover:from-purple-400 hover:to-blue-500 transition-all duration-300 font-semibold"
                       >
                         Learn More"
-                        <ArrowRight className="w-4 h-4 ml-2" />                      </Link>
+                        <ArrowRight className="w-4 h-4 ml-2"  />                      </Link>
                       <a"
                         href="tel:+13024640950"
                         className="inline-flex items-center px-6 py-3 border border-purple-400/30 text-purple-400 rounded-lg hover:bg-purple-400/10 transition-all duration-300"
                       >"
-                        <Phone className="w-4 h-4 mr-2" />                        Call Now
+                        <Phone className="w-4 h-4 mr-2"  />                        Call Now
                       </a>
                     </div>
                   </div>
@@ -292,7 +238,7 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
                         .slice(0, 6)
                         .map((feature, featureIndex) => ("
                           <div key={featureIndex} className="flex items-start">"
-                            <CheckCircle className="h-4 w-4 text-green-400 mr-3 mt-0.5 flex-shrink-0" />"
+                            <CheckCircle className="h-4 w-4 text-green-400 mr-3 mt-0.5 flex-shrink-0"  />"
                             <span className="text-sm text-slate-300">
                               {feature}
                             </span>
@@ -365,13 +311,13 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-lg hover:from-purple-400 hover:to-blue-500 transition-all duration-300 font-semibold text-lg"
               >"
-                <Phone className="w-6 h-6 mr-2" />                Call +1 302 464 0950
+                <Phone className="w-6 h-6 mr-2"  />                Call +1 302 464 0950
               </a>
               <a"
                 href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border-2 border-purple-400/50 text-purple-400 rounded-lg hover:bg-purple-400/10 transition-all duration-300 font-semibold text-lg"
               >"
-                <Mail className="w-6 h-6 mr-2" />
+                <Mail className="w-6 h-6 mr-2"  />
                 Schedule Consultation
               </a>
             </div>
@@ -382,13 +328,13 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
               </h3>"
               <div className="grid gap-3 text-sm text-slate-300">"
                 <div className="flex items-center justify-center">"
-                  <Phone className="h-4 w-4 mr-2 text-purple-400" />"
+                  <Phone className="h-4 w-4 mr-2 text-purple-400"  />"
                   <a href="tel:+13024640950" className="hover:text-purple-300">
                     +1 302 464 0950
                   </a>
                 </div>"
                 <div className="flex items-center justify-center">"
-                  <Mail className="h-4 w-4 mr-2 text-purple-400" />
+                  <Mail className="h-4 w-4 mr-2 text-purple-400"  />
                   <a"
                     href="mailto:kleber@ziontechgroup.com"
                     className="hover:text-purple-300"
@@ -397,11 +343,11 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
                   </a>
                 </div>"
                 <div className="flex items-center justify-center">"
-                  <MapPin className="h-4 w-4 mr-2 text-purple-400" />
+                  <MapPin className="h-4 w-4 mr-2 text-purple-400"  />
                   <span>364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>"
                 <div className="flex items-center justify-center">"
-                  <Globe className="h-4 w-4 mr-2 text-purple-400" />
+                  <Globe className="h-4 w-4 mr-2 text-purple-400"  />
                   <a"
                     href="https://ziontechgroup.com"
                     target="_blank"
@@ -416,6 +362,5 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
         </div>
       </section>
     </div>
-  );
-}
+  )}
 '"`

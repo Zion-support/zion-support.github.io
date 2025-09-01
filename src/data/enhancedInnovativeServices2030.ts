@@ -24,31 +24,22 @@ export interface EnhancedService {
     phone: string;
     email: string;
     website: string;
-    address: string;
-  };
+    address: string};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
+    security: string[]};
   competitors?: string[];
   marketSize?: string;
   freeTier?: boolean;
   trialPeriod?: string;
   setupTime?: string;
   growthRate?: string;
-  compliance?: string[];
-}
+  compliance?: string[]}
 
 // Zion Tech Group Contact Information
-const zionContact = {
-  phone: "+1 302 464 0950",
-  email: "kleber@ziontechgroup.com",
-  website: "https://ziontechgroup.com",
-  address: "364 E Main St STE 1008 Middletown DE 19709"
-};
 
 // Enhanced Innovative Services 2030
 export const enhancedInnovativeServices2030: EnhancedService[] = [

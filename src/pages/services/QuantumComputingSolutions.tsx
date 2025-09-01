@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 import {
   Atom, 
   Zap, 
@@ -46,165 +44,14 @@ import {
   Bluetooth,
   Radio'
 } from 'lucide-react';
-import { SEO } from '../../components/SEO';
 ;
 export { function };
 export default function QuantumComputingSolutions(...args: unknown[]): unknown {
-  const features = [
-    {
-
-      icon: Atom,
-      title: 'Quantum Processing',
-      description: 'Harness quantum superposition and entanglement for exponential computational power.'
-    },
-    {
-
-      icon: Brain,
-      title: 'AI Integration',
-      description: 'Seamlessly integrate quantum computing with AI and machine learning workflows.'
-    },
-    {
-
-      icon: Zap,
-      title: 'Real-time Optimization',
-      description: 'Solve complex optimization problems in seconds instead of years.'
-    },
-    {
-
-      icon: TrendingUp,
-      title: 'Scalable Solutions',
-      description: 'From small quantum circuits to enterprise-scale quantum applications.'
-    }
-  ];
-
-  const capabilities = [
-    {
-
-      title: 'Quantum Algorithms',
-      description: 'Custom quantum algorithms for specific business problems and use cases',
-      icon: Code,
-      benefits: ['Grover\'s algorithm',Shor\'s algorithm',Quantum annealing']
-    },
-    {
-
-      title: 'Hybrid Computing',
-      description: 'Combine classical and quantum computing for optimal performance',
-      icon: Cpu,
-      benefits: ['Quantum-classical integration',Hybrid algorithms',Performance optimization']
-    },
-    {
-
-      title: 'Quantum Simulation',
-      description: 'Simulate quantum systems for research and development',
-      icon: Monitor,
-      benefits: ['Molecular modeling',Material science',Drug discovery']
-    },
-    {
-
-      title: 'Quantum Security',
-      description: 'Quantum-resistant cryptography and secure communications',
-      icon: Shield,
-      benefits: ['Post-quantum crypto',Quantum key distribution',Secure networks']
-    }
-  ];
-
-  const useCases = [
-    {
-
-      industry: 'Financial Services',
-      description: 'Portfolio optimization, risk assessment, and algorithmic trading',
-      icon: BarChart3,
-      metrics: ['Portfolio Performance',Risk Reduction',Trading Speed']
-    },
-    {
-
-      industry: 'Pharmaceuticals',
-      description: 'Drug discovery, molecular modeling, and protein folding',
-      icon: Activity,
-      metrics: ['Discovery Speed',Accuracy Rate',Cost Reduction']
-    },
-    {
-
-      industry: 'Logistics',
-      description: 'Route optimization, supply chain management, and scheduling',
-      icon: Network,
-      metrics: ['Route Efficiency',Cost Savings',Delivery Time']
-    },
-    {
-
-      industry: 'Energy',
-      description: 'Grid optimization, renewable energy forecasting, and storage',
-      icon: Zap,
-      metrics: ['Grid Efficiency',Energy Savings',Forecast Accuracy']
-    }
-  ];
-
-  const pricing = [
-    {
-
-      name: 'Starter',
-      price: '$299',
-      period: '/month',
-      description: 'Perfect for research and development teams',
-      features: ['
-        'Up to 100 qubits',Basic quantum algorithms',Standard support',Documentation access',Community forum'
-      ],
-      cta: 'Start Free Trial',
-      popular: false
-    },
-    {
-
-      name: 'Professional',
-      price: '$799',
-      period: '/month',
-      description: 'Ideal for production quantum applications',
-      features: ['
-        'Up to 1000 qubits',Advanced algorithms',Priority support',Custom development',API access',Performance monitoring',SLA guarantees'
-      ],
-      cta: 'Start Free Trial',
-      popular: true
-    },
-    {
-
-      name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'For large-scale quantum computing needs',
-      features: ['
-        'Unlimited qubits',Custom algorithms',Dedicated team',On-premise options',White-label solutions',Training programs',24/7 support'
-      ],
-      cta: 'Contact Sales',
-      popular: false
-    }
-  ];
-
-  const benefits = [
-    {
-
-      icon: Zap,
-      title: '1000x Faster Processing',
-      description: 'Solve complex problems in seconds that would take classical computers years.'
-    },
-    {
-
-      icon: Brain,
-      title: 'AI Enhancement',
-      description: 'Supercharge machine learning with quantum computing capabilities.'
-    },
-    {
-
-      icon: Shield,
-      title: 'Future-Proof Security',
-      description: 'Implement quantum-resistant cryptography before it becomes critical.'
-    },
-    {
-
-      icon: Users,
-      title: 'Competitive Advantage',
-      description: 'Stay ahead of the curve with cutting-edge quantum technology.'
-    }
-  ];
-
+  
+  
+  
+  
+  
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
       <SEO "
@@ -212,7 +59,7 @@ export default function QuantumComputingSolutions(...args: unknown[]): unknown {
         title="Quantum Computing Solutions - Zion Tech Group"
         description="Harness the power of quantum computing for exponential performance gains. Solve complex problems 1000x faster with our quantum solutions."
         keywords="quantum computing, quantum algorithms, quantum AI, quantum optimization, quantum simulation, quantum security"
-      />
+       />
 =======
         title="Quantum Computing Solutions - Zion Tech Group""
         description="Harness the power of quantum computing for exponential performance gains. Solve complex problems 1000x faster with our quantum solutions.""        keywords="quantum computing, quantum algorithms, quantum AI, quantum optimization, quantum simulation, quantum security"
@@ -229,7 +76,7 @@ export default function QuantumComputingSolutions(...args: unknown[]): unknown {
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6">"
-              <Atom className="w-4 h-4 mr-2" />              Quantum Technology
+              <Atom className="w-4 h-4 mr-2"  />              Quantum Technology
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Quantum Computing Solutions
@@ -245,7 +92,7 @@ export default function QuantumComputingSolutions(...args: unknown[]): unknown {
                 className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Free Trial"
-                <ArrowRight className="ml-2 w-5 h-5" />              </motion.button>
+                <ArrowRight className="ml-2 w-5 h-5"  />              </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
@@ -331,7 +178,7 @@ export default function QuantumComputingSolutions(...args: unknown[]): unknown {
                     <ul className="space-y-2">
                       {capability.benefits.map((benefit, benefitIndex) => ("
                         <li key={benefitIndex} className="flex items-center text-gray-300">"
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />                          {benefit}
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2"  />                          {benefit}
                         </li>
                       ))}
                     </ul>
@@ -438,7 +285,7 @@ export default function QuantumComputingSolutions(...args: unknown[]): unknown {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />                      {feature}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />                      {feature}
                     </li>
                   ))}
                 </ul>

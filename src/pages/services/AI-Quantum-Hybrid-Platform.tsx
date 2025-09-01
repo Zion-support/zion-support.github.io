@@ -1,6 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import {
 
   Brain,
@@ -41,141 +38,12 @@ const AIQuantumHybridPlatform: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
+    setIsVisible(true)}, []);
 
-  const features = [
-    {
-
-      icon: Brain,
-      title: 'Quantum Neural Networks',
-      description:'
-        'Hybrid quantum-classical neural networks for superior pattern recognition and optimization'},
-    {
-
-      icon: Atom,
-      title: 'Quantum Algorithm Optimization',
-      description:'
-        'Advanced quantum algorithms for complex computational problems and simulations'},
-    {
-
-      icon: Zap,
-      title: 'Real-time Quantum Processing',
-      description:'
-        'Instant quantum computations with classical AI integration for real-world applications'},
-    {
-
-      icon: Shield,
-      title: 'Quantum-Safe Security',
-      description:'
-        'Post-quantum cryptography and quantum-resistant security protocols'},
-    {
-
-      icon: BarChart3,
-      title: 'Quantum Analytics',
-      description:'
-        'Quantum-enhanced data analysis and predictive modeling capabilities'},
-    {
-
-      icon: Cpu,
-      title: 'Hybrid Computing',
-      description:'
-        'Seamless integration between quantum and classical computing resources'},
-  ];
-
-  const useCases = [
-    {
-
-      industry: 'Financial Services',
-      applications: ['
-        'Portfolio Optimization',Risk Assessment',Algorithmic Trading',Fraud Detection',
-      ]},
-    {
-
-      industry: 'Healthcare',
-      applications: ['
-        'Drug Discovery',Protein Folding',Medical Imaging',Genomic Analysis',
-      ]},
-    {
-
-      industry: 'Manufacturing',
-      applications: ['
-        'Supply Chain Optimization',Quality Control',Predictive Maintenance',Resource Planning',
-      ]},
-    {
-
-      industry: 'Logistics',
-      applications: ['
-        'Route Optimization',Fleet Management',Inventory Management',Demand Forecasting',
-      ]},
-  ];
-
-  const pricingTiers = [
-    {
-
-      name: 'Starter',
-      price: '$5,000',
-      period: '/month',
-      description: 'Perfect for research institutions and small enterprises',
-      features: ['
-        'Quantum Computing Access (10 hours/month),AI Model Training',Basic Security Protocols',Email Support',Standard Documentation',
-      ],
-      marketPrice: '$6,500',
-      savings: '23%',
-      popular: false},
-    {
-
-      name: 'Professional',
-      price: '$12,000',
-      period: '/month',
-      description: 'Ideal for growing businesses and research teams',
-      features: ['
-        'Quantum Computing Access (50 hours/month),Advanced AI Models',Enhanced Security Features',Priority Support',Custom Integration',Performance Analytics',
-      ],
-      marketPrice: '$15,000',
-      savings: '20%',
-      popular: true},
-    {
-
-      name: 'Enterprise',
-      price: '$25,000',
-      period: '/month',
-      description: 'For large enterprises requiring maximum performance',
-      features: ['
-        'Unlimited Quantum Computing Access',Custom AI Model Development',Advanced Security & Compliance',24/7 Dedicated Support',Custom Infrastructure',White-label Solutions',Training & Certification',
-      ],
-      marketPrice: '$32,000',
-      savings: '22%',
-      popular: false},
-  ];
-
-  const benefits = [
-    {
-
-      title: 'Unprecedented Performance',
-      description:'
-        'Combine quantum computing power with AI intelligence for 1000x faster computations',
-      icon: Rocket},
-    {
-
-      title: 'Future-Proof Technology',
-      description:'
-        'Stay ahead with quantum-safe security and next-generation computing capabilities',
-      icon: Star},
-    {
-
-      title: 'Cost Optimization',
-      description:'
-        'Reduce computational costs by 60% through quantum-classical hybrid optimization',
-      icon: TrendingUp},
-    {
-
-      title: 'Competitive Advantage',
-      description:'
-        'Gain market leadership with cutting-edge quantum-AI capabilities',
-      icon: Target},
-  ];
-
+  
+  
+  
+  
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
@@ -187,7 +55,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
             className="mb-8"
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/20 text-purple-300 text-sm font-medium mb-6">"
-              <Atom className="w-4 h-4 mr-2" />              Revolutionary Technology
+              <Atom className="w-4 h-4 mr-2"  />              Revolutionary Technology
             </div>"
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               AI-Quantum Hybrid Platform
@@ -210,13 +78,13 @@ const AIQuantumHybridPlatform: React.FC = () => {
               to="/contact"
               className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >"
-              <Rocket className="w-5 h-5 mr-2" />              Start Your Quantum Journey
+              <Rocket className="w-5 h-5 mr-2"  />              Start Your Quantum Journey
             </Link>
             <Link"
               to="#demo"
               className="inline-flex items-center px-8 py-4 rounded-lg border-2 border-purple-500 text-purple-300 font-semibold text-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
             >"
-              <Eye className="w-5 h-5 mr-2" />              Watch Demo
+              <Eye className="w-5 h-5 mr-2"  />              Watch Demo
             </Link>
           </motion.div>
         </div>
@@ -301,7 +169,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
                 className="bg-gradient-to-br from-slate-800/80 to-purple-800/80 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20"
               >"
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">"
-                  <Target className="w-6 h-6 mr-3 text-purple-400" />                  {useCase.industry}
+                  <Target className="w-6 h-6 mr-3 text-purple-400"  />                  {useCase.industry}
                 </h3>"
                 <div className="space-y-3">
                   {useCase.applications.map((app, appIndex) => (
@@ -309,7 +177,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
                       key={appIndex}"
                       className="flex items-center text-gray-300"
                     >"
-                      <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0" />                      {app}
+                      <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0"  />                      {app}
                     </div>
                   ))}
                 </div>
@@ -388,7 +256,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
                       key={featureIndex}"
                       className="flex items-start text-gray-300"
                     >"
-                      <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0 mt-0.5" />"                      <span className="text-sm">{feature}</span>
+                      <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0 mt-0.5"  />"                      <span className="text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -473,15 +341,15 @@ const AIQuantumHybridPlatform: React.FC = () => {
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">"
               <div className="flex items-center text-gray-300">"
-                <Phone className="w-5 h-5 mr-2 text-purple-400" />
+                <Phone className="w-5 h-5 mr-2 text-purple-400"  />
                 <span>+1 302 464 0950</span>
               </div>"
               <div className="flex items-center text-gray-300">"
-                <Mail className="w-5 h-5 mr-2 text-purple-400" />
+                <Mail className="w-5 h-5 mr-2 text-purple-400"  />
                 <span>kleber@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center text-gray-300">"
-                <MapPin className="w-5 h-5 mr-2 text-purple-400" />                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                <MapPin className="w-5 h-5 mr-2 text-purple-400"  />                <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
 "
@@ -490,13 +358,13 @@ const AIQuantumHybridPlatform: React.FC = () => {
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >"
-                <Rocket className="w-5 h-5 mr-2" />                Schedule a Demo
+                <Rocket className="w-5 h-5 mr-2"  />                Schedule a Demo
               </Link>
               <Link"
                 to="https://ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 rounded-lg border-2 border-purple-500 text-purple-300 font-semibold text-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
               >"
-                <Globe className="w-5 h-5 mr-2" />                Visit Our Website
+                <Globe className="w-5 h-5 mr-2"  />                Visit Our Website
               </Link>
             </div>
           </motion.div>

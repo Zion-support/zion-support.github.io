@@ -1,6 +1,3 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { 
   Brain, 
   Cloud, 
@@ -36,46 +33,18 @@ import {
   Mail,
   MapPin
 } from 'lucide-react';
-import EnhancedSEO from '@/components/EnhancedSEO';
 
 export default function Services() {
   const [activeCategory, setActiveCategory] = useState(0);
   const [searchTerm, setSearchTerm] = useState('');
 
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
+  
+  
+  
+    
+    return matchesSearch && matchesCategory}) ;
 
-  const categories = ['
-    { id: 'all', name: 'All Services', icon: Settings, count: allServices.length },
-    { id: 'AI & Analytics', name: 'AI & Analytics', icon: Brain, count: allServices.filter(s => s.category === 'AI & Analytics').length },
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, count: allServices.filter(s => s.category === 'Cybersecurity').length },
-    { id: 'Emerging Tech', name: 'Emerging Tech', icon: Zap, count: allServices.filter(s => s.category === 'Emerging Tech').length },
-    { id: 'Enterprise Solutions', name: 'Enterprise Solutions', icon: Building, count: allServices.filter(s => s.category === 'Enterprise Solutions').length },
-    { id: 'Healthcare Tech', name: 'Healthcare Tech', icon: Heart, count: allServices.filter(s => s.category === 'Healthcare Tech').length },
-    { id: 'FinTech', name: 'FinTech', icon: DollarSign, count: allServices.filter(s => s.category === 'FinTech').length },
-    { id: 'Micro SaaS', name: 'Micro SaaS', icon: ShoppingCart, count: allServices.filter(s => s.category === 'Micro SaaS').length }
-  ];
-
-  const filteredServices = allServices.filter(service => {
-
-    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  }) ;
-
-  const filteredCategories = serviceCategories.filter(category =>
-    category.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    category.services.some(service =>
-      service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchTerm.toLowerCase())
-    )
-  );
-
+  
   return()
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">"
       <div className="container mx-auto px-4 py-24 text-center text-white">"        <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -264,7 +233,6 @@ export default function Services() {
         </div>
       </div>
     </>
-  );
-};
+  )};
 export default Services;
 '"

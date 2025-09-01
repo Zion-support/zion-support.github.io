@@ -1,6 +1,3 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   Search, 
   Filter, 
@@ -218,41 +215,22 @@ export default function SearchPage() {
     }
   ];
 
-  const filterOptions = ['
-    { id: 'ai-services', name: 'AI Services', icon: Brain, count: 0 },
-    { id: 'cloud-infrastructure', name: 'Cloud & Infrastructure', icon: Cloud, count: 0 },
-    { id: 'security', name: 'Security & Compliance', icon: Shield, count: 0 },
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0 },
-    { id: 'iot', name: 'IoT & Edge Computing', icon: Network, count: 0 },
-    { id: 'blog', name: 'Blog Posts', icon: BookOpen, count: 0 },
-    { id: 'case-studies', name: 'Case Studies', icon: FileText, count: 0 },
-    { id: 'documentation', name: 'Documentation', icon: Code, count: 0 }
-  ];
-
+  
   useEffect ( () => {
     if (searchQuery) {
 
-      performSearch();
-    }
+      performSearch()}
   }, [searchQuery, selectedFilters, sortBy]) ;
 
-  const performSearch = async () => {
-    setIsSearching (true) ;
+  
         // Simulate API call delay
     await new Promise (resolve => setTimeout (resolve, 800) ) ;
     
     let filtered = mockSearchResults.filter(result => {
 
-      const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          result.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       
-      const matchesFilters = selectedFilters.size === 0 || '
-                           selectedFilters.has(result.category.toLowerCase().replace(/\s+/g,-')) ||
-                           selectedFilters.has(result.type);
       
-      return matchesQuery && matchesFilters;
-    }) ;
+      return matchesQuery && matchesFilters}) ;
     // Sort results
     filtered.sort((a, b) => {
 
@@ -263,33 +241,11 @@ export default function SearchPage() {
         case 'popularity':
           return b.relevance - a.relevance;
         default:
-          return b.relevance - a.relevance;
-      }
+          return b.relevance - a.relevance}
     }) ;
 
     setSearchResults (filtered) ;
-    setIsSearching (false) ;
-  };
-
-  const toggleFilter = (filterType: keyof typeof activeFilters, value: string) => {
-
-    setActiveFilters(prev => ({
-
-      ...prev,
-      [filterType]: prev[filterType].includes (value) ? prev[filterType].filter (v => v !== value) : [...prev[filterType], value]
-    }) ) ;
-  };
-
-  const clearAllFilters = () => {
-    setActiveFilters({
-
-      type: [],
-      category: [],
-      location: [],
-      priceRange: [],
-      rating: []
-    }) ;
-  };
+    setIsSearching (false) }}};
 
   // Handle search
   const handleSearch = (e: React.FormEvent) => {
@@ -301,45 +257,31 @@ export default function SearchPage() {
       setTimeout(() => setIsSearching(false), 1000)}
   };
 
-  const toggleFilter = (filterId: string) => {
-
-    const newFilters = new Set(selectedFilters);
+  
     if (newFilters.has(filterId)) {
 
-      newFilters.delete(filterId);
-    } else {
+      newFilters.delete(filterId)} else {
 
-      newFilters.add(filterId);
-    }
-    setSelectedFilters (newFilters) ;
-  };
+      newFilters.add(filterId)}
+    setSelectedFilters (newFilters) };
 
   // Clear all filters
-  const clearFilters = () => {
-
-    setSelectedCategory('all');
+  
 <<<<<<< HEAD
     setSelectedTags([]);
     setSearchQuery('');
-    setSearchParams({});
-  };
+    setSearchParams({})};
 =======
     setSelectedTags([]);'    setSearchQuery('');
     setSearchParams({})};
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
-  const getResultIcon = (type: string) => {
-
-    switch (type) {
-<<<<<<< HEAD
-
-      case 'service': return Zap;
+  
       case 'page': return FileText;
       case 'blog': return BookOpen;
       case 'case-study': return FileText;
       case 'documentation': return Code;
-      default: return FileText;
-    }
+      default: return FileText}
 =======
 '
       case 'service': return Zap;'
@@ -350,16 +292,11 @@ export default function SearchPage() {
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   };
 
-  const getResultColor = (type: string) => {
-
-    switch (type) {
-
-      case 'service': return 'from-blue-500 to-indigo-500';
+  
       case 'blog': return 'from-green-500 to-emerald-500';
       case 'case-study': return 'from-purple-500 to-pink-500';
       case 'documentation': return 'from-orange-500 to-red-500';
-      default: return 'from-gray-500 to-slate-500';
-    }  };
+      default: return 'from-gray-500 to-slate-500'}  };
 
   // Calculate filter counts
   filterOptions.forEach(filter => {
@@ -398,7 +335,7 @@ export default function SearchPage() {
         >"
           <form onSubmit={handleSearch} className="max-w-3xl mx-auto">"
             <div className="relative">"
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-gray-400" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-gray-400"  />
               <input"                type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}"
@@ -502,7 +439,7 @@ export default function SearchPage() {
                         <result.icon className="w-6 h-6 text-cyan-400" />
                       </div>
                       {result.featured && ("
-                        <Star className="w-5 h-5 text-yellow-400" />                      )}
+                        <Star className="w-5 h-5 text-yellow-400"  />                      )}
                     </div>
                     "
                     <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
@@ -517,7 +454,7 @@ export default function SearchPage() {
                       <span className="text-xs text-slate-500 bg-slate-700/50 px-2 py-1 rounded">
                         {result.category}
                       </span>"
-                      <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-cyan-400 transition-colors" />                    </div>
+                      <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-cyan-400 transition-colors"  />                    </div>
                   </Link>
                 </motion.div>) ) }
             </AnimatePresence>
@@ -530,11 +467,10 @@ export default function SearchPage() {
               className="text-center py-12"
             >"
               <div className="w-16 h-16 bg-slate-700/50 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Search className="w-8 h-8 text-slate-400" />              </div>
+                <Search className="w-8 h-8 text-slate-400"  />              </div>
             )}
           </div>
         </div>;
       </div>
-    </div>;) ;
-}
+    </div>;) }
 '"`

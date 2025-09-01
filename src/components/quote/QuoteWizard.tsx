@@ -1,45 +1,28 @@
-import { useState } from 'react';
-import type { WizardStep } from '@/context/RequestQuoteWizard';
-import { useQuery } from '@tanstack/react-query';
-import { Loader2 } from 'lucide-react';
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { useRequestQuoteWizard } from '@/context';
-import { fetchServices, ServiceItem } from '@/api/services';
 
 const WIZARD_STEPS: WizardStep[] = ['Services', 'Details', 'Success'];
 
 function StepIndicator({ step }: { step: WizardStep }) {
-  const index = WIZARD_STEPS.indexOf(step);
+  
   return (
     <div data-testid="step-indicator" className="text-sm text-muted-foreground">
       Step {index + 1} of {WIZARD_STEPS.length}
     </div>
-  );
-}
+  )}
 
 export function QuoteWizard() {
   const { step, selectService, submitQuote } = useRequestQuoteWizard();
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
   const [message, setMessage] = useState('');
-  const queryResult = useQuery({
-    queryKey: ['services'],
-    queryFn: () => fetchServices(),
-    retry: 2,
-  }) as {
-    data: ServiceItem[] | undefined;
+  
     isPending: boolean;
-    error: unknown;
-  };
+    error: unknown};
   const { data = [], isPending, error } = queryResult;
 
   if (step === 'Services') {
-    const loading = isPending;
-
+    
     return (
       <div className="space-y-6">
-        <StepIndicator step={step} />
+        <StepIndicator step={step}  />
         {loading && (
           <div className="flex justify-center py-12">
             <Loader2 className="h-6 w-6 animate-spin" />
@@ -47,12 +30,17 @@ export function QuoteWizard() {
         )}
 
         {error && (
-          <div className="text-center text-red-500">Service temporarily unavailable</div>
+          <Alert variant="destructive" data-testid="service-fetch-error-alert">
+            <AlertTitle>Network Error</AlertTitle>
+            <AlertDescription>
+              There was a problem fetching the services. Please check your internet connection and try again.
+            </AlertDescription>
+          </Alert>
         )}
 
-        {data && (
+        {services.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {data.map((item) => (
+            {services.map((item) => (
               <Card
                 data-testid={`service-card-${item.id}`}
                 key={item.id}
@@ -72,13 +60,12 @@ export function QuoteWizard() {
           Continue
         </Button>
       </div>
-    );
-  }
+    )}
 
   if (step === 'Details') {
     return (
       <div data-testid="details-step" className="space-y-4">
-        <StepIndicator step={step} />
+        <StepIndicator step={step}  />
         <Textarea
           value={message}
           onChange={(e) => setMessage(e.target.value)}
@@ -87,17 +74,14 @@ export function QuoteWizard() {
         />
         <Button onClick={() => submitQuote(message)}>Submit</Button>
       </div>
-    );
-  }
+    )}
 
   if (step === 'Success') {
     return (
       <div data-testid="success-step" className="space-y-4">
-        <StepIndicator step={step} />
+        <StepIndicator step={step}  />
         <div>Quote Submitted</div>
       </div>
-    );
-  }
+    )}
 
-  return null;
-}
+  return null}

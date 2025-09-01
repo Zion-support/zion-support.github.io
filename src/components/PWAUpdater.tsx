@@ -1,12 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { RefreshCw, X, CheckCircle, AlertTriangle, Info } from 'lucide-react';
 const PWAUpdater: React.FC<PWAUpdaterProps> = ({
 
   autoCheck = true,
   checkInterval = 300000, // 5 minutes
-  showUpdatePrompt = true;
-}) => {
+  showUpdatePrompt = true}) => {
 
   const [updateAvailable, setUpdateAvailable] = useState(false);
   const [updating, setUpdating] = useState(false);
@@ -29,13 +25,12 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
           // Check for updates
           if (autoCheck) {
 
-            checkForUpdates(reg);
-          }          
+            checkForUpdates(reg)}          
           // Listen for updates'
           reg.addEventListener('updatefound', () => {
 
             // console.log('Service Worker update found');
-            const newWorker = reg.installing;
+            
             if (newWorker) {
 
               newWorker.addEventListener('statechange', () => {
@@ -45,11 +40,9 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
                   setUpdateAvailable(true);
                   if (showUpdatePrompt) {
 
-                    setShowPrompt(true);
-                  }
+                    setShowPrompt(true)}
                 }
-              }) ;
-            }          });
+              }) }          });
           
           // Listen for controller change (update applied)
           navigator.serviceWorker.addEventListener('controllerchange', () => {
@@ -65,35 +58,24 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
               setUpdateComplete(false)}, 3000)})})
         .catch((error) => {
 
-          // console.error('Service Worker registration failed:', error);
-        });
-    }
+          // console.error('Service Worker registration failed:', error)})}
   }, [autoCheck, showUpdatePrompt]) ;
   useEffect ( () => {
     if (autoCheck && registration) {
 
-      const interval = setInterval(() => {
-        checkForUpdates(registration);
+      
       }, checkInterval);
       
-      return () => clearInterval(interval);
-    }
+      return () => clearInterval(interval)}
   }, [autoCheck, checkInterval, registration]) ;
 
-  const checkForUpdates = async (reg: ServiceWorkerRegistration) => {
+  
+      // console.log('Service Worker update check completed')} catch (error) {
 
-    try {
-      await reg.update();
-      // console.log('Service Worker update check completed');
-    } catch (error) {
-
-      // console.error('Service Worker update check failed:', error);
-    }
+      // console.error('Service Worker update check failed:', error)}
   };
 
-  const applyUpdate = async : unknown {
-    if (!registration) return;
-
+  
     setUpdating (true) ;
     setShowPrompt (false) ;
 
@@ -101,13 +83,10 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
       // Send message to service worker to skip waiting
       if (registration.waiting) {
 
-        registration.waiting.postMessage({ type: 'SKIP_WAITING' });
-      }
+        registration.waiting.postMessage({ type: 'SKIP_WAITING' })}
       // Reload the page to apply the update
       setTimeout ( () => {
-        window.location.reload () ;
-      }, 1000) ;
-    } catch (error) {
+        window.location.reload () }, 1000) } catch (error) {
 
       // // // // // // // // console.error('Update failed:', error);
       setIsUpdating(false);
@@ -117,22 +96,18 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
       setShowPrompt(true)}
   };
 
-  const dismissUpdate = () => {
-    setShowPrompt (false) ;
+  
     // Auto - show again after 1 hour
     setTimeout ( () => {
       if (updateAvailable) {
 
-        setShowPrompt(true);
-      }
-    }, 3600000) ;
-  };
+        setShowPrompt(true)}
+    }, 3600000) };
 
   // Don't render anything if no update is available
   if (!updateAvailable && !updating && !updateComplete) {
 
-    return null;
-  }
+    return null}
   return()
     <>
       {/* Update Prompt */}
@@ -147,7 +122,7 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
             <div className="p-6">"
               <div className="flex items-start gap-4">"
                 <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">"
-                  <RefreshCw className="w-5 h-5 text-white" />
+                  <RefreshCw className="w-5 h-5 text-white"  />
                 </div>"
                 <div className="flex-1">"
                   <h3 className="text-white font-semibold text-lg mb-2">Update Available</h3>"                  <p className="text-gray-300 text-sm mb-4">
@@ -172,7 +147,7 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
                   onClick={dismissUpdate}"
                   className="text-gray-400 hover:text-white transition-colors flex-shrink-0"
                 >"
-                  <X className="w-5 h-5" />                </button>
+                  <X className="w-5 h-5"  />                </button>
               </div>
             </div>
           </motion.div>) }
@@ -194,7 +169,7 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
                     animate={{ rotate: 360 }}"
                     transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
                   >"
-                    <RefreshCw className="w-5 h-5 text-white" />                  </motion.div>
+                    <RefreshCw className="w-5 h-5 text-white"  />                  </motion.div>
                 </div>"
                 <div className="flex-1">"
                   <h3 className="text-white font-semibold text-lg mb-2">Updating...</h3>"
@@ -227,7 +202,7 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
             <div className="p-6">"
               <div className="flex items-center gap-4">"
                 <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0">"
-                  <CheckCircle className="w-5 h-5 text-white" />
+                  <CheckCircle className="w-5 h-5 text-white"  />
                 </div>"
                 <div className="flex-1">"
                   <h3 className="text-white font-semibold text-lg mb-2">Update Complete!</h3>"                  <p className="text-gray-300 text-sm">
@@ -248,13 +223,12 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
           title="Update available - Click to update"
         >"
           <div className="w-full h-full flex items-center justify-center">"
-            <RefreshCw className="w-6 h-6 text-white" />"
+            <RefreshCw className="w-6 h-6 text-white"  />"
             <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center">"
               <span className="text-white text-xs font-bold">!</span>
             </div>
           </div>
         </motion.div>) }
-    </>) ;
-};
+    </>) };
 export default PWAUpdater;
 '"

@@ -25,16 +25,13 @@ export interface InnovativeMicroSaasService2027 {
     name: string;
     id: string;
     avatarUrl?: string;
-    verified: boolean;
-  
-};  images: string[];
+    verified: boolean};  images: string[];
   createdAt: string;
   technologyStack: string[];
   useCases: string[];
   integrations: string[];
   compliance: string[];
-  support: string[];
-}
+  support: string[]}
 export const INNOVATIVE_MICRO_SAAS_SERVICES_2027: InnovativeMicroSaasService2027[] =
   [
     // AI-Powered Business Solutions

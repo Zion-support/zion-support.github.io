@@ -1,27 +1,15 @@
 
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { GradientHeading } from "@/components/GradientHeading";
-import { AIMatchmaker } from "@/components/AIMatchmaker";
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { toast } from "@/hooks/use-toast";
-import { MatchResult } from "@/lib/ai-matchmaking";
 
 export default function AIMatcherPage() {
-  const navigate = useNavigate();
+  
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   
-  const handleMatchSelect = (match: MatchResult) => {
-    // Get the item type from the category
-    let itemType = "service";
-    const category = match.item.category.toLowerCase();
+  
     
     if (category.includes("talent") || category === "engineering" || 
         category === "data science" || category === "development") {
-      itemType = "talent";
-    } else if (category.includes("equipment") || category === "hardware") {
-      itemType = "equipment";
-    }
+      itemType = "talent"} else if (category.includes("equipment") || category === "hardware") {
+      itemType = "equipment"}
     
     toast({
       title: "Match Selected",
@@ -34,8 +22,7 @@ export default function AIMatcherPage() {
         serviceType: itemType,
         specificItem: match.item
       }
-    });
-  };
+    })};
   
   return (
     <>
@@ -55,7 +42,7 @@ export default function AIMatcherPage() {
               </label>
               <Select value={selectedCategory} onValueChange={setSelectedCategory}>
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
-                  <SelectValue placeholder="All Categories" />
+                  <SelectValue placeholder="All Categories"  />
                 </SelectTrigger>
                 <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
                   <SelectItem value="all" className="text-white">All Categories</SelectItem>
@@ -66,13 +53,11 @@ export default function AIMatcherPage() {
               </Select>
             </div>
             
-            <AIMatchmaker 
-              serviceType={selectedCategory === "all" ? "" : selectedCategory}
+            <AIMatchmaker serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
-            />
+             />
           </div>
         </div>
       </div>
     </>
-  );
-}
+  )}

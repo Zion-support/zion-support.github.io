@@ -1,59 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Target, ArrowRight } from 'lucide-react';
-import { SEO } from '@/components/SEO';
 ;
 const MicroCRM: React.FC = props {
-  const services = [
-    {
-
-      title: 'Contact Management',
-      description:'
-        'Organize and track customer information, interactions, and history in one centralized location.',
-      icon: Target},
-    {
-
-      title: 'Sales Pipeline',
-      description:'
-        'Visualize and manage your sales process from lead to close with customizable stages.',
-      icon: Target},
-    {
-
-      title: 'Task Management',
-      description:'
-        'Set reminders, track follow-ups, and manage customer-related tasks efficiently.',
-      icon: Target},
-    {
-
-      title: 'Communication Tools',
-      description:'
-        'Integrated email, SMS, and phone tools for seamless customer communication.',
-      icon: Target},
-  ];
-
-  const useCases = [
-    {
-
-      industry: 'Local Services',
-      description:'
-        'Perfect for plumbers, electricians, and contractors who need to track jobs and customers.'},
-    {
-
-      industry: 'Small Retail',
-      description:'
-        'Ideal for boutique shops and local stores managing customer relationships and sales.'},
-    {
-
-      industry: 'Professional Services',
-      description:'
-        'Great for consultants, lawyers, and accountants tracking client interactions.'},
-    {
-
-      industry: 'Healthcare',
-      description:'
-        'Suitable for small medical practices managing patient relationships and appointments.'},
-  ];
-
+  
+  
   return()
     <div className="min-h-screen bg-futuristic text-white">
       <SEO"
@@ -122,7 +70,7 @@ const MicroCRM: React.FC = props {
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200"
               >"
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">"
-                  <Target className="w-8 h-8 text-white" />
+                  <Target className="w-8 h-8 text-white"  />
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {service.title}
@@ -161,7 +109,7 @@ const MicroCRM: React.FC = props {
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200"
               >"
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">"
-                  <Target className="w-8 h-8 text-white" />
+                  <Target className="w-8 h-8 text-white"  />
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {useCase.industry}
@@ -190,7 +138,7 @@ const MicroCRM: React.FC = props {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center">
                 Get Started Today"
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"  />
               </button>"              <button className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200">
                 Contact Sales
               </button>

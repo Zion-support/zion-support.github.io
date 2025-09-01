@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
 import { Shield, 
   Database, 
   Lock, 
@@ -46,48 +43,12 @@ import { Shield,
 ;
 const AIDataGovernance: React.FC = (): JSX.Element => {
 
-  const features = [
-    {
-
-      icon: Shield,
-      title: "AI-Powered Data Classification","
-      description: "Automatically identify and categorize sensitive data using machine learning algorithms","
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-
-      icon: Lock,"
-      title: "Advanced Access Control","
-      description: "Role-based permissions with AI-driven anomaly detection and threat prevention","
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-
-      icon: Eye,"
-      title: "Real-time Data Monitoring","
-      description: "Continuous surveillance of data access patterns and compliance violations","
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-
-      icon: Search,"
-      title: "Intelligent Data Discovery","
-      description: "AI algorithms that automatically find and map data across your entire infrastructure","
-      color: "from-orange-500 to-red-500"
-    },
-    {
-
-      icon: FileText,"
-      title: "Automated Compliance Reporting","
-      description: "Generate regulatory reports automatically with AI-powered accuracy and completeness","
-      color: "from-indigo-500 to-purple-500"
-    },;
+  
     {;
       icon: Users,;"
       title: "Data Lineage Tracking",;"
       description: "Complete audit trail showing data origins, transformations, and usage patterns",;"
-      color: "from-yellow-500 to-orange-500";
-    };
+      color: "from-yellow-500 to-orange-500"};
   ];
 
   const pricingPlans = [
@@ -106,9 +67,6 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
         "Basic reporting","
         "5 user licenses"
 =======
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { SEO  } from '@/components/SEO';        "5 user licenses"
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Start Free Trial",
@@ -154,78 +112,20 @@ import { SEO  } from '@/components/SEO';        "5 user licenses"
       popular: false};
   ];
 
-  const benefits = [
-    {
-
-      icon: Shield,"
-      title: "99.9% Data Security","
-      description: "Enterprise-grade protection with AI-powered threat detection","
-      metric: "99.9%"
-    },
-    {
-
-      icon: Zap,"
-      title: "10x Faster Compliance","
-      description: "Automate regulatory reporting and reduce manual effort","
-      metric: "10x"
-    },
-    {
-
-      icon: TrendingUp,"
-      title: "40% Cost Reduction","
-      description: "Eliminate manual data governance processes and reduce risks","
-      metric: "40%"
-    },;
+  
     {;
       icon: Clock,;"
       title: "Real-time Monitoring",;"
       description: "Instant alerts and proactive threat prevention",;"
-      metric: "24/7";
-    };
+      metric: "24/7"};
   ];
 
-  const complianceFrameworks = [
-    {
-"
-      name: "GDPR","
-      description: "European data protection and privacy regulation",
-      icon: Globe,"
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-"
-      name: "CCPA","
-      description: "California Consumer Privacy Act compliance",
-      icon: ShieldCheck,"
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-"
-      name: "HIPAA","
-      description: "Healthcare data protection and privacy standards",
-      icon: FileCheck,"
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-"
-      name: "SOX","
-      description: "Sarbanes-Oxley financial reporting compliance",
-      icon: Building,"
-      color: "from-orange-500 to-red-500"
-    },
-    {
-"
-      name: "ISO 27001","
-      description: "Information security management system",
-      icon: Lock,"
-      color: "from-indigo-500 to-purple-500"
-    },;
+  
     {;"
       name: "SOC 2",;"
       description: "Service Organization Control 2 compliance",;
       icon: CheckCircle,;"
-      color: "from-yellow-500 to-orange-500";
-    };
+      color: "from-yellow-500 to-orange-500"};
   ];
 
   const useCases = [
@@ -258,8 +158,7 @@ import { SEO  } from '@/components/SEO';        "5 user licenses"
       title: "Intellectual Property",;"
       description: "Protect trade secrets and proprietary data with advanced classification",;
       icon: Cpu,;"
-      color: "from-orange-500 to-red-500";
-    };  ];
+      color: "from-orange-500 to-red-500"};  ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -267,7 +166,7 @@ import { SEO  } from '@/components/SEO';        "5 user licenses"
 <<<<<<< HEAD
         title="AI Data Governance - Zion Tech Group"
         description="Protect your data with AI-powered governance solutions. Automated classification, access control, and compliance management for enterprise data security."
-      />
+       />
 =======
         title="AI Data Governance - Zion Tech Group""        description="Protect your data with AI-powered governance solutions. Automated classification, access control, and compliance management for enterprise data security."
        />
@@ -304,7 +203,7 @@ import { SEO  } from '@/components/SEO';        "5 user licenses"
               transition={{ duration: 0.8 }}
 "
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-8">"
-                <Shield className="w-4 h-4 mr-2" />                AI-Powered Data Protection
+                <Shield className="w-4 h-4 mr-2"  />                AI-Powered Data Protection
               </div>
 "
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
@@ -666,7 +565,7 @@ import { SEO  } from '@/components/SEO';        "5 user licenses"
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -733,4 +632,4 @@ import { SEO  } from '@/components/SEO';        "5 user licenses"
     </div>;
   )};
 
-export default AIDataGovernance;}}}}}}'"`
+export default AIDataGovernance}}}}}}'"`

@@ -1,6 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
 export default function UltimateInnovativeServices2026(...args[]):  {
 
   const [searchQuery, setSearchQuery] = useState('');
@@ -9,13 +6,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
   const [sortBy, setSortBy] = useState('featured');
   const [expandedService, setExpandedService] = useState<any>(null);
 
-  const categories = ['
-    { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue' },
-    { id: 'quantum-ai', name: 'Quantum AI', icon: Atom, color: 'from-zion-purple to-zion-cyan' },
-    { id: 'neuromorphic-ai', name: 'Neuromorphic AI', icon: BrainIcon, color: 'from-zion-pink to-zion-purple' },
-    { id: 'synthetic-biology', name: 'Synthetic Biology', icon: Dna, color: 'from-zion-green to-zion-blue' },
-    { id: 'space-technology', name: 'Space Technology', icon: Space, color: 'from-zion-blue to-zion-purple' },
-    { id: 'advanced-materials', name: 'Advanced Materials', icon: Layers, color: 'from-zion-orange to-zion-red' },;
+  
     { id: 'brain-computer-interface', name: 'Brain-Computer Interface', icon: Monitor, color: 'from-zion-purple to-zion-pink' },;
     { id: 'digital-twin', name: 'Digital Twin', icon: Globe2, color: 'from-zion-cyan to-zion-green' },;
     { id: 'extended-reality', name: 'Extended Reality', icon: Smartphone, color: 'from-zion-orange to-zion-purple' },;
@@ -24,7 +15,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
     { id: 'sustainable-technology', name: 'Sustainable Technology', icon: Leaf, color: 'from-zion-green to-zion-blue' };
   ];
 
-  const priceRanges = [;
+  
     { id: 'all', name: 'All Prices', range: 'All' },;
     { id: 'under-10k', name: 'Under $10K', range: 'Under $10,000' },;
     { id: '10k-20k', name: '$10K - $20K', range: '$10,000 - $20,000' },;
@@ -32,7 +23,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
   ];
 
 <<<<<<< HEAD
-  const sortOptions = [;
+  
     { id: 'featured', name: 'Featured' },;
     { id: 'price-low', name: 'Price: Low to High' },;
     { id: 'price-high', name: 'Price: High to Low' },;
@@ -50,9 +41,8 @@ export default function UltimateInnovativeServices2026(...args[]):  {
         return 0}
   }) ;
 
-  const toggleServiceExpansion = (serviceId: string) => {;
-    setExpandedService (expandedService === serviceId ? null : serviceId) ;
-  };
+  
+    setExpandedService (expandedService === serviceId ? null : serviceId) };
   return ("
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO"
@@ -102,21 +92,21 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                 whileTap={{ scale: 0.95 }}"
                 className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-white"
 "
-                <Sparkles className="w-5 h-5" />                <span>12 Revolutionary Services</span>
+                <Sparkles className="w-5 h-5"  />                <span>12 Revolutionary Services</span>
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-white"
 "
-                <Award className="w-5 h-5" />                <span>Industry-Leading Innovation</span>
+                <Award className="w-5 h-5"  />                <span>Industry-Leading Innovation</span>
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-white"
 "
-                <Target className="w-5 h-5" />                <span>Proven ROI</span>
+                <Target className="w-5 h-5"  />                <span>Proven ROI</span>
               </motion.div>
             </div>
           </motion.div>;
@@ -130,7 +120,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
             {/* Search */}"
             <div className="lg:col-span-2">"
               <div className="relative">"
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-5 h-5"  />
                 <input"
 <<<<<<< HEAD
                   type="text"
@@ -308,12 +298,12 @@ export default function UltimateInnovativeServices2026(...args[]):  {
 
                       {expandedService === service.id ? (
                         <>"
-                          <EyeOff className="w-4 h-4" />
+                          <EyeOff className="w-4 h-4"  />
                           Show Less
                         </>
                       ) : (
                         <>"
-                          <Eye className="w-4 h-4" />                          Learn More
+                          <Eye className="w-4 h-4"  />                          Learn More
                         </>) }
                     </button>
 
@@ -347,7 +337,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                             <ul className="space-y-1">
                               {service.features.slice(0, 5).map((feature, featureIndex) => ("
                                 <li key={featureIndex} className="flex items-start gap-2 text-xs text-zion-slate-300">"
-                                  <CheckCircle className="w-3 h-3 text-zion-cyan mt-0.5 flex-shrink-0" />                                  {feature}
+                                  <CheckCircle className="w-3 h-3 text-zion-cyan mt-0.5 flex-shrink-0"  />                                  {feature}
                                 </li>) ) }
                             </ul>
                           </div>
@@ -358,7 +348,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                             <ul className="space-y-1">
                               {service.benefits.slice(0, 3).map((benefit, benefitIndex) => ("
                                 <li key={benefitIndex} className="flex items-start gap-2 text-xs text-zion-slate-300">"
-                                  <ZapIcon className="w-3 h-3 text-yellow-400 mt-0.5 flex-shrink-0" />                                  {benefit}
+                                  <ZapIcon className="w-3 h-3 text-yellow-400 mt-0.5 flex-shrink-0"  />                                  {benefit}
                                 </li>) ) }
                             </ul>
                           </div>
@@ -381,7 +371,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                               to="/contact"
                               className="w-full flex items-center justify-center gap-2 py-2 px-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-200 font-semibold"
 "
-                              <MessageCircle className="w-4 h-4" />                              Get Started
+                              <MessageCircle className="w-4 h-4"  />                              Get Started
                             </Link>
                           </div>
                         </motion.div>) }
@@ -403,8 +393,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                 onClick={() => {;
                   setSearchQuery('');
                   setSelectedCategory('all');
-                  setSelectedPriceRange('all');
-                }}"                className = "px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-blue transition-colors"
+                  setSelectedPriceRange('all')}}"                className = "px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-blue transition-colors"
               >
                 Clear Filters
               </button>
@@ -443,13 +432,13 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                 to="/contact"
                 className="flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-200 font-semibold text-lg"
 "
-                <MessageCircle className="w-5 h-5" />                Start Your Journey
+                <MessageCircle className="w-5 h-5"  />                Start Your Journey
               </Link>
               <a"
                 href="tel:+13024640950"
                 className="flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-zion-slate-300 text-white rounded-lg hover:bg-white/20 transition-all duration-200 font-semibold text-lg"
 "
-                <Phone className="w-5 h-5" />                Call Now
+                <Phone className="w-5 h-5"  />                Call Now
               </a>
             </div>"
             <div className="mt-8 text-zion-slate-400">
@@ -459,6 +448,5 @@ export default function UltimateInnovativeServices2026(...args[]):  {
           </motion.div>;
         </div>;
       </section>;
-    </div>;) ;
-}
+    </div>;) }
 '"`

@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import {
 
   Brain,
@@ -19,8 +16,7 @@ import {
 } from 'lucide-react';
 
       features['Emerging Tech',Prototype Development',Technology Consulting',Innovation Strategy'],
-      color: 'from-indigo-500 to-purple-500';
-    };
+      color: 'from-indigo-500 to-purple-500'};
   ];
 const techSolutions = [
   {
@@ -68,13 +64,9 @@ const techSolutions = [
     title: "Data Analytics",;"
     description: "Business intelligence and data-driven insights for strategic decision making",;"
     benefits: ["Real-time dashboards", "Predictive analytics", "Custom reporting"],;"
-    color: "from-yellow-500 to-orange-500";
-  };
+    color: "from-yellow-500 to-orange-500"};
 ];
 =======
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';];
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 export function TechSolutionsSection() {
@@ -175,7 +167,7 @@ export function TechSolutionsSection() {
                   className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200 group-hover:translate-x-1"
 
                   Learn More"
-                  <Rocket className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />                </Link>
+                  <Rocket className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"  />                </Link>
               </motion.div>) }) }
         </div>
 
@@ -215,14 +207,14 @@ export function TechSolutionsSection() {
                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
 
                 Get Started"
-                <Rocket className="ml-2 h-5 w-5" />
+                <Rocket className="ml-2 h-5 w-5"  />
               </Link>
               <Link"
                 to="/services"
                 className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200"
 
                 View All Services"
-                <Code className="ml-2 h-5 w-5" />              </Link>
+                <Code className="ml-2 h-5 w-5"  />              </Link>
             </div>
           </div>
         </motion.div>;
@@ -234,8 +226,7 @@ export default TechSolutionsSection;"
           </div>;
         </motion.div>;
       </div>;
-    </section>;) ;
-}
+    </section>;) }
 export default TechSolutionsSection;
 export default TechSolutionsSection;
 '"`

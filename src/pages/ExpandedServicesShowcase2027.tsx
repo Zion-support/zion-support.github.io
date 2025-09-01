@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
 
   Search,
@@ -58,13 +56,9 @@ import {
   Server as Edge,
   Monitor as Healthcare,
   Cpu as FinTech'
-import { SEO } from '@/components/SEO';
-import {
 
   ALL_EXPANDED_SERVICES_2027,
 =======
-import React, { useState, useEffect } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_2027,
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   EXPANDED_SERVICE_CATEGORIES,
   getExpandedServicesByCategory,
@@ -81,17 +75,15 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
         return 'from-gray-500 to-slate-600'}
   };
 
-  const formatPrice = (pricing: ExpandedService2027['pricing']) => {;
+  
     if (pricing.model === 'Transaction Fees + Governance') {;
       return 'Free + Transaction Fees';
 
-    return `$${pricing.basePrice.toLocaleString () }/month`;
-  };
+    return `$${pricing.basePrice.toLocaleString () }/month`};
 
-  const renderServiceCard = (service: ExpandedService2027) => {;
-    const CategoryIcon = getCategoryIcon (service.category) ;
-    const categoryColor = getCategoryColor (service.category) ;
-
+  
+    
+    
     return()      <motion.div
         key = {service.id}
         initial = {
@@ -113,14 +105,14 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
         <div className={`bg-gradient-to-r ${categoryColor} p-6 text-white`}>"
           <div className="flex items-center justify-between mb-4">"
             <div className="flex items-center space-x-3">"
-              <CategoryIcon className="w-8 h-8" />
+              <CategoryIcon className="w-8 h-8"  />
               <div>"
                 <h3 className="text-xl font-bold">{service.name}</h3>"
                 <p className="text-sm opacity-90">{service.category}</p>
               </div>
             </div>"
             <div className="flex items-center space-x-2">"
-              <Star className="w-5 h-5 fill-current" />"
+              <Star className="w-5 h-5 fill-current"  />"
               <span className="font-semibold">{service.rating}</span>"              <span className="text-sm opacity-90">({service.reviews})</span>
             </div>
           </div>"
@@ -157,7 +149,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
             <div className="space-y-1">
               {service.features.slice(0, 3).map((feature, index) => ("
                 <div key={index} className="flex items-center space-x-2">"
-                  <CheckCircle className="w-4 h-4 text-green-500" />"                  <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
+                  <CheckCircle className="w-4 h-4 text-green-500"  />"                  <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
                 </div>
               ))}
               {service.features.length > 3 && (
@@ -201,7 +193,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
                 <div className="space-y-1">
                   {service.features.slice(3).map((feature, index) => ("
                     <div key={index} className="flex items-center space-x-2">"
-                      <CheckCircle className="w-4 h-4 text-green-500" />"                      <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
+                      <CheckCircle className="w-4 h-4 text-green-500"  />"                      <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -253,7 +245,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
           <div className="border-t border-gray-200 dark:border-slate-700 pt-4">;"
             <div className="flex items-center justify-between mb-3">"
               <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">"
-                <Phone className="w-4 h-4" />                <span>{service.contactInfo.phone}</span>
+                <Phone className="w-4 h-4"  />                <span>{service.contactInfo.phone}</span>
               </div>`
               <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
 
@@ -270,7 +262,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
                 href={`mailto:${service.contactInfo.email}`}"
                 className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
 "
-                <Mail className="w-4 h-4" />                <span>Contact</span>
+                <Mail className="w-4 h-4"  />                <span>Contact</span>
               </a>
               <a
                 href={service.contactInfo.website}"
@@ -278,18 +270,16 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
                 rel="noopener noreferrer"
                 className="flex-1 bg-gray-100 hover:bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 text-center py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
 "
-                <ExternalLink className="w-4 h-4" />                <span>Learn More</span>
+                <ExternalLink className="w-4 h-4"  />                <span>Learn More</span>
               </a>;
             </div>;
           </div>;
         </div>;
-      </motion.div>;) ;
-  };
+      </motion.div>;) };
 
-  const renderServiceList = (service: ExpandedService2027) => {;
-    const CategoryIcon = getCategoryIcon (service.category) ;
-    const categoryColor = getCategoryColor (service.category) ;
-
+  
+    
+    
     return()      <motion.div
         key = {service.id}
         initial = {
@@ -310,7 +300,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
         <div className="flex items-start space-x-4">
           {/* Icon and Category */}`
           <div className={`bg-gradient-to-r ${categoryColor} p-3 rounded-lg text-white flex-shrink-0`}>"
-            <CategoryIcon className="w-6 h-6" />          </div>
+            <CategoryIcon className="w-6 h-6"  />          </div>
 
           {/* Content */}"
           <div className="flex-1 min-w-0">"
@@ -320,7 +310,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
                 <p className="text-sm text-gray-500 dark:text-gray-400">{service.category} • {service.subcategory}</p>
               </div>"
               <div className="flex items-center space-x-2">"
-                <Star className="w-4 h-4 text-yellow-500 fill-current" />"
+                <Star className="w-4 h-4 text-yellow-500 fill-current"  />"
                 <span className="text-sm font-semibold">{service.rating}</span>"                <span className="text-xs text-gray-500">({service.reviews})</span>
               </div>
             </div>
@@ -362,7 +352,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
                 href={`mailto:${service.contactInfo.email}`}"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200 flex items-center space-x-2"
 "
-                <Mail className="w-4 h-4" />                <span>Contact Sales</span>
+                <Mail className="w-4 h-4"  />                <span>Contact Sales</span>
               </a>
               <a
                 href={service.contactInfo.website}"
@@ -370,13 +360,12 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
                 rel="noopener noreferrer"
                 className="bg-gray-100 hover:bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg transition-colors duration-200 flex items-center space-x-2"
 "
-                <ExternalLink className="w-4 h-4" />                <span>Learn More</span>
+                <ExternalLink className="w-4 h-4"  />                <span>Learn More</span>
               </a>;
             </div>;
           </div>;
         </div>;
-      </motion.div>;) ;
-  };
+      </motion.div>;) };
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <SEO"
@@ -475,21 +464,21 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
 "
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">"
                 <div className="flex items-center space-x-3">"
-                  <Phone className="w-5 h-5 text-blue-600" />
+                  <Phone className="w-5 h-5 text-blue-600"  />
                   <div>"
                     <p className="text-sm text-gray-500 dark:text-gray-400">Phone</p>"
                     <p className="font-semibold text-gray-900 dark:text-white">+1 302 464 0950</p>
                   </div>
                 </div>"
                 <div className="flex items-center space-x-3">"
-                  <Mail className="w-5 h-5 text-blue-600" />
+                  <Mail className="w-5 h-5 text-blue-600"  />
                   <div>"
                     <p className="text-sm text-gray-500 dark:text-gray-400">Email</p>"
                     <p className="font-semibold text-gray-900 dark:text-white">kleber@ziontechgroup.com</p>
                   </div>
                 </div>"
                 <div className="flex items-center space-x-3">"
-                  <MapPin className="w-5 h-5 text-blue-600" />
+                  <MapPin className="w-5 h-5 text-blue-600"  />
                   <div>"
                     <p className="text-sm text-gray-500 dark:text-gray-400">Address</p>"
                     <p className="font-semibold text-gray-900 dark:text-white">364 E Main St STE 1008</p>"                    <p className="font-semibold text-gray-900 dark:text-white">Middletown DE 19709</p>
@@ -509,7 +498,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
             {/* Search */}"
             <div className="flex-1 max-w-md">"
               <div className="relative">"
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                 <input"
 <<<<<<< HEAD
                   type="text"
@@ -558,7 +547,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
                       : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'`
                   }`}
 "
-                  <List className="w-5 h-5" />                </button>
+                  <List className="w-5 h-5"  />                </button>
               </div>
             </div>
           </div>
@@ -581,7 +570,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
         ) : ("
           <div className="text-center py-16">"
             <div className="text-gray-400 dark:text-gray-500 mb-4">"
-              <Search className="w-16 h-16 mx-auto" />
+              <Search className="w-16 h-16 mx-auto"  />
             </div>"
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">No services found</h3>"            <p className="text-gray-600 dark:text-gray-300">
               Try adjusting your search criteria or category filter
@@ -604,18 +593,17 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
               href="mailto:kleber@ziontechgroup.com"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center space-x-2"
 "
-              <Mail className="w-5 h-5" />              <span>Get Started</span>
+              <Mail className="w-5 h-5"  />              <span>Get Started</span>
             </a>
             <a"
               href="tel:+13024640950"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200 flex items-center space-x-2"
 "
-              <Phone className="w-5 h-5" />              <span>Call Now</span>
+              <Phone className="w-5 h-5"  />              <span>Call Now</span>
             </a>;
           </div>;
         </div>;
       </div>;
-    </div>;) ;
-};
+    </div>;) };
 
-export default ExpandedServicesShowcase2027;}}}}}'"`
+export default ExpandedServicesShowcase2027}}}}}'"`

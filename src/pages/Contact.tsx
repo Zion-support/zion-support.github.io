@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import {
 
   Phone,
@@ -23,42 +21,12 @@ export default function Contact() {
     message: '',
     service: 'general'});
 
-  const serviceOptions = ['
-    { value: 'general', label: 'General Inquiry' },
-    {
-
-      value: 'ai-autonomous-research',
-      label: 'AI Autonomous Research Assistant'},
-    { value: 'ai-supply-chain', label: 'AI Supply Chain Optimization' },
-    { value: 'ai-content-marketing', label: 'AI Content Marketing Suite' },
-    { value: 'ai-workflow-orchestrator', label: 'AI Workflow Orchestrator' },
-    {
-
-      value: 'ai-customer-experience',
-      label: 'AI Customer Experience Analytics'},
-    { value: 'ai-financial-risk', label: 'AI Financial Risk Management' },
-    { value: 'ai-cybersecurity', label: 'AI Cybersecurity Solutions' },
-    { value: 'cloud-devops', label: 'Cloud & DevOps Services' },
-    { value: 'digital-transformation', label: 'Digital Transformation' },
-    { value: 'micro-saas', label: 'Micro SaaS Solutions' },
-    { value: 'it-consulting', label: 'IT Consulting' },
-    { value: 'quantum-computing', label: 'Quantum Computing' },
-    { value: 'iot-edge', label: 'IoT & Edge Computing' },
-    { value: 'custom-development', label: 'Custom Development' },
-  ];
-
+  
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState('idle');
 
-  const handleInputChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-
-    const { name, value } = e.target;
-    setFormData (prev => ({ ...prev, [name]: value }) ) ;
-  };
+  
+    setFormData (prev => ({ ...prev, [name]: value }) ) };
 
   const handleSubmit = async (e: React.FormEvent) => {
 
@@ -75,82 +43,17 @@ export default function Contact() {
         company: '',
         phone: '',
         message: '',
-        service: 'general'});
-    } catch (error) {
+        service: 'general'})} catch (error) {
 
-      setSubmitStatus('error');
-    } finally {
+      setSubmitStatus('error')} finally {
 
-      setIsSubmitting(false);
-    }
+      setIsSubmitting(false)}
   };
 
-  const contactMethods = [
-    {
-      icon: Phone,
-      title: 'Phone',
-      value: '+1 302 464 0950',
-      description: 'Call us directly for immediate assistance',
-      action: 'tel:+13024640950',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: Mail,
-      title: 'Email',
-      value: 'kleber@ziontechgroup.com',
-      description: 'Send us a detailed message',
-      action: 'mailto:kleber@ziontechgroup.com',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: MapPin,
-      title: 'Address',
-      value: '364 E Main St STE 1008\nMiddletown DE 19709',
-      description: 'Visit our office for in-person meetings',
-      action: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Clock,
-      title: 'Business Hours',
-      value: 'Monday - Friday\n9:00 AM - 6:00 PM EST',
-      description: 'We\'re available during business hours',
-      action: null,
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
-
-  const services = [
-    'AI Business Intelligence',Micro SaaS Solutions',Cloud & DevOps',Cybersecurity',Digital Transformation',Data Analytics',IoT Solutions',Custom Development',Consulting Services',Other'
-  ];
-
-  const industries = [
-    'Healthcare',Financial Services',Manufacturing',Retail & E-commerce',Technology',Education',Legal Services',Government',Startup',Enterprise',Other'
-  ];
-
-  const whyChooseUs = [
-    {
-      icon: Brain,
-      title: 'AI-First Approach',
-      description: 'Cutting-edge artificial intelligence integrated into every solution'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security and compliance for all solutions'
-    },
-    {
-      icon: Users,
-      title: 'Expert Team',
-      description: 'Certified professionals with decades of combined experience'
-    },
-    {
-      icon: Zap,
-      title: 'Fast Implementation',
-      description: 'Rapid deployment and time-to-value for your business'
-    }
-  ];
-
+  
+  
+  
+  
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">"      <div className="container mx-auto px-4 py-24">
         {/* Header Section */}
@@ -190,7 +93,7 @@ export default function Contact() {
             <div className="space-y-6">"
               <div className="flex items-start space-x-4">"
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">"
-                  <Phone className="w-6 h-6 text-white" />                </div>
+                  <Phone className="w-6 h-6 text-white"  />                </div>
                 <div>"
                   <h3 className="text-white font-semibold text-lg">Phone</h3>"
                   <p className="text-gray-300">+1 302 464 0950</p>"
@@ -200,7 +103,7 @@ export default function Contact() {
 "
               <div className="flex items-start space-x-4">"
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">"
-                  <Mail className="w-6 h-6 text-white" />                </div>
+                  <Mail className="w-6 h-6 text-white"  />                </div>
                 <div>"
                   <h3 className="text-white font-semibold text-lg">Email</h3>"
                   <p className="text-gray-300">kleber@ziontechgroup.com</p>"
@@ -212,7 +115,7 @@ export default function Contact() {
 "
               <div className="flex items-start space-x-4">"
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">"
-                  <MapPin className="w-6 h-6 text-white" />                </div>
+                  <MapPin className="w-6 h-6 text-white"  />                </div>
                 <div>"
                   <h3 className="text-white font-semibold text-lg">Address</h3>"
                   <p className="text-gray-300">364 E Main St STE 1008</p>"
@@ -223,7 +126,7 @@ export default function Contact() {
 "
               <div className="flex items-start space-x-4">"
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center flex-shrink-0">"
-                  <Clock className="w-6 h-6 text-white" />                </div>
+                  <Clock className="w-6 h-6 text-white"  />                </div>
                 <div>"
                   <h3 className="text-white font-semibold text-lg">
                     Business Hours
@@ -246,11 +149,11 @@ export default function Contact() {
               </h3>"
               <div className="space-y-3">"
                 <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 flex items-center justify-center space-x-2">"
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-5 h-5"  />
                   <span>Call Now</span>
                 </button>"
                 <button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-200 flex items-center justify-center space-x-2">"
-                  <Mail className="w-5 h-5" />                  <span>Send Email</span>
+                  <Mail className="w-5 h-5"  />                  <span>Send Email</span>
                 </button>
               </div>
             </div>
@@ -274,7 +177,7 @@ export default function Contact() {
                     htmlFor="name"
                     className="block text-white font-medium mb-2"
                   >"
-                    <User className="w-4 h-4 inline mr-2" />                    Full Name *
+                    <User className="w-4 h-4 inline mr-2"  />                    Full Name *
                   </label>
                   <input"
                     type="text"
@@ -293,7 +196,7 @@ export default function Contact() {
                     htmlFor="email"
                     className="block text-white font-medium mb-2"
                   >"
-                    <Mail className="w-4 h-4 inline mr-2" />                    Email Address *
+                    <Mail className="w-4 h-4 inline mr-2"  />                    Email Address *
                   </label>
                   <input"
                     type="email"
@@ -314,7 +217,7 @@ export default function Contact() {
                     htmlFor="company"
                     className="block text-white font-medium mb-2"
                   >"
-                    <Building className="w-4 h-4 inline mr-2" />                    Company
+                    <Building className="w-4 h-4 inline mr-2"  />                    Company
                   </label>
                   <input"
                     type="text"
@@ -332,7 +235,7 @@ export default function Contact() {
                     htmlFor="phone"
                     className="block text-white font-medium mb-2"
                   >"
-                    <Phone className="w-4 h-4 inline mr-2" />                    Phone Number
+                    <Phone className="w-4 h-4 inline mr-2"  />                    Phone Number
                   </label>
                   <input"
                     type="tel"
@@ -376,7 +279,7 @@ export default function Contact() {
                   htmlFor="message"
                   className="block text-white font-medium mb-2"
                 >"
-                  <MessageSquare className="w-4 h-4 inline mr-2" />                  Message *
+                  <MessageSquare className="w-4 h-4 inline mr-2"  />                  Message *
                 </label>
                 <textarea"
                   id="message"
@@ -397,7 +300,7 @@ export default function Contact() {
                   animate={{ opacity: 1, scale: 1 }}"
                   className="bg-green-500/20 border border-green-500/50 rounded-lg p-4 flex items-center space-x-3"
                 >"
-                  <CheckCircle className="w-6 h-6 text-green-400" />"
+                  <CheckCircle className="w-6 h-6 text-green-400"  />"
                   <span className="text-green-400">
                     Message sent successfully! We'll get back to you soon.
                   </span>                </motion.div>
@@ -409,7 +312,7 @@ export default function Contact() {
                   animate={{ opacity: 1, scale: 1 }}"
                   className="bg-red-500/20 border border-red-500/50 rounded-lg p-4 flex items-center space-x-3"
                 >"
-                  <AlertCircle className="w-6 h-6 text-red-400" />"
+                  <AlertCircle className="w-6 h-6 text-red-400"  />"
                   <span className="text-red-400">
                     Failed to send message. Please try again.
                   </span>                </motion.div>
@@ -432,7 +335,7 @@ export default function Contact() {
                   </>
                 ) : (
                   <>"
-                    <Send className="w-6 h-6" />                    <span>Send Message</span>
+                    <Send className="w-6 h-6"  />                    <span>Send Message</span>
                   </>
                 )}
               </button>
@@ -453,7 +356,7 @@ export default function Contact() {
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">"
             <div className="text-center">"
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Rocket className="w-8 h-8 text-white" />
+                <Rocket className="w-8 h-8 text-white"  />
               </div>"
               <h3 className="text-white font-semibold text-xl mb-2">
                 Innovation First
@@ -465,7 +368,7 @@ export default function Contact() {
             </div>"
             <div className="text-center">"
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <CheckCircle className="w-8 h-8 text-white" />
+                <CheckCircle className="w-8 h-8 text-white"  />
               </div>"
               <h3 className="text-white font-semibold text-xl mb-2">
                 Proven Results
@@ -477,7 +380,7 @@ export default function Contact() {
             </div>"
             <div className="text-center">"
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <User className="w-8 h-8 text-white" />
+                <User className="w-8 h-8 text-white"  />
               </div>"
               <h3 className="text-white font-semibold text-xl mb-2">
                 Expert Team
@@ -489,6 +392,5 @@ export default function Contact() {
         </motion.div>
       </div>
     </div>
-  );
-}
+  )}
 '"`

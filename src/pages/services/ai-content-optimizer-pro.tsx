@@ -1,6 +1,3 @@
-import React from 'react';
-import { SEO } from "../../components/SEO";
-import { motion } from 'framer-motion';
 import {
   CheckCircle, 
   TrendingUp, 
@@ -26,12 +23,7 @@ import {
 
 const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 
-  const contactInfo = {
-<<<<<<< HEAD
-
-  phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
+  
   ;
 =======
 '
@@ -42,153 +34,34 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
   ;
   ;
   ;
-  website: 'https://ziontechgroup.com';
-  };
+  website: 'https://ziontechgroup.com'}};
 
-
-
-
-
-
-};
-
-  const features = [
-    {
-
-      icon: Brain,
-      title: 'AI-Powered SEO Optimization',
-      description: 'Advanced machine learning algorithms that analyze search patterns and optimize content for maximum visibility.',
-      benefits: ['Improve search rankings',Increase organic traffic',Optimize for featured snippets']
-    },
-    {
-
-      icon: Search,
-      title: 'Content Readability Scoring',
-      description: 'Intelligent analysis of content structure, complexity, and readability to ensure maximum engagement.',
-      benefits: ['Enhance user experience',Improve engagement rates',Reduce bounce rates']
-    },
-    {
-
-      icon: Globe,
-      title: 'Multi-Language Support',
-      description: 'Support for 50+ languages with cultural context and localization optimization.',
-      benefits: ['Global reach',Cultural relevance',Local SEO optimization']
-    },
-    {
-
-      icon: BarChart3,
-      title: 'Performance Analytics',
-      description: 'Comprehensive analytics dashboard with real-time performance metrics and actionable insights.',
-      benefits: ['Data-driven decisions',Performance tracking',ROI measurement']
-    },
-    {
-
-      icon: PenTool,
-      title: 'Automated A/B Testing',
-      description: 'AI-driven content testing that automatically optimizes headlines, CTAs, and content variations.',
-      benefits: ['Increase conversion rates',Optimize content performance',Reduce testing time']
-    },;
+  
     {;
       icon: Shield,;
       title: 'Content Plagiarism Detection',;
       description: 'Advanced plagiarism detection with originality scoring and content uniqueness analysis.',;
-      benefits: ['Ensure content originality',Protect brand reputation',Avoid legal issues'];
-    };
+      benefits: ['Ensure content originality',Protect brand reputation',Avoid legal issues']};
   ];
 
-  const pricingPlans = [
-    {
-
-      name: 'Starter',
-      price: '$199',
-      period: '/month',
-      description: 'Perfect for small businesses and content creators',
-      features: ['
-        'Up to 10,000 words per month',Basic SEO optimization',Readability scoring',Plagiarism detection',Email support',Basic analytics dashboard'
-      ],
-      popular: false,
-      cta: 'Start Free Trial'
-    },
-    {
-
-      name: 'Professional',
-      price: '$399',
-      period: '/month',
-      description: 'Ideal for growing businesses and marketing teams',
-      features: ['
-        'Up to 50,000 words per month',Advanced SEO optimization',Multi-language support',A/B testing automation',Priority support',Advanced analytics',API access',Team collaboration tools'
-      ],
-      popular: true,
-      cta: 'Get Started'
-    },
-    {
-
-      name: 'Enterprise',
-      price: '$799',
-      period: '/month',
-      description: 'Comprehensive solution for large organizations',
-      features: ['
-        'Unlimited words per month',Full feature suite',Custom AI models',White-label options',Dedicated support',Custom integrations',;
+  
         'Advanced reporting',;
         'SLA guarantees';
       ],;
       popular: false,;
-      cta: 'Contact Sales';
-    };
-  ];
-
-  const useCases = [
-    {
-
-      title: 'E-commerce Content',
-      description: 'Optimize product descriptions, category pages, and blog content for better search visibility and conversion rates.',
-      metrics: ['40% increase in organic traffic',25% improvement in conversion rates']
-    },
-    {
-
-      title: 'Blog & Content Marketing',
-      description: 'Enhance blog posts, articles, and long-form content for better engagement and SEO performance.',
-      metrics: ['60% increase in time on page',35% improvement in social shares']
-    },
-    {
-
-      title: 'Local Business SEO',
-      description: 'Optimize local business content, service pages, and location-specific content for local search.',
-      metrics: ['50% increase in local search visibility',30% improvement in local leads'];
-    },;
+      cta: 'Contact Sales'};
+  ]},;
     {;
       title: 'Technical Content',;
       description: 'Optimize technical documentation, whitepapers, and educational content for better comprehension.',;
-      metrics: ['45% improvement in readability scores',40% increase in engagement'];
-    };
+      metrics: ['45% improvement in readability scores',40% increase in engagement']};
   ];
 
-  const testimonials = [
-    {
-
-      name: 'Jennifer Martinez',
-      role: 'Content Marketing Director',
-      comp: 'TechFlow Solutions',
-      content: 'AI Content Optimizer Pro transformed our content strategy. We saw a 45% increase in organic traffic within 3 months.',
-      rating: 5
-    },
-    {
-
-      name: 'David Kim',
-      role: 'SEO Manager',
-      comp: 'Digital Growth Agency',
-      content: 'The AI-powered optimization suggestions are incredibly accurate. Our clients love the improved search rankings.',
-      rating: 5
-    },
-    {
-<<<<<<< HEAD
-
-      name: 'Sarah Williams'};
+  
       role: 'Content Creator',;
       company: 'Creative Content Studio',;
       content: 'This tool saves me hours of work and significantly improves my content quality. Highly recommended!',;
-      rating: 5;
-    };
+      rating: 5};
 =======
 '
       name: 'Sarah Williams'};'
@@ -360,7 +233,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => ("
                       <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">"
-                        <CheckCircle className="text-green-400 w-4 h-4 mr-2 flex-shrink-0" />                        {benefit}
+                        <CheckCircle className="text-green-400 w-4 h-4 mr-2 flex-shrink-0"  />                        {benefit}
                       </li>
                     ))}
                   </ul>
@@ -453,7 +326,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                   <div className="space-y-2">
                     {useCase.metrics.map((metric, metricIndex) => ("
                       <div key={metricIndex} className="flex items-center text-green-400 text-sm">"
-                        <TrendingUp className="w-4 h-4 mr-2" />                        {metric}
+                        <TrendingUp className="w-4 h-4 mr-2"  />                        {metric}
                       </div>
                     ))}
                   </div>
@@ -711,7 +584,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 "
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => ("
-                      <Star key={i} className="text-yellow-400 w-4 h-4 fill-current" />                    ))}
+                      <Star key={i} className="text-yellow-400 w-4 h-4 fill-current"  />                    ))}
                   </div>"
                   <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                   <div>"
@@ -763,17 +636,17 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 "
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">"
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">"
-                  <Phone className="text-blue-400 w-8 h-8 mx-auto mb-3" />"
+                  <Phone className="text-blue-400 w-8 h-8 mx-auto mb-3"  />"
                   <h3 className="text-white font-semibold mb-2">Call Us</h3>"
                   <p className="text-gray-300 text-sm">{contactInfo.phone}</p>
                 </div>"
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">"
-                  <Mail className="text-green-400 w-8 h-8 mx-auto mb-3" />"
+                  <Mail className="text-green-400 w-8 h-8 mx-auto mb-3"  />"
                   <h3 className="text-white font-semibold mb-2">Email Us</h3>"
                   <p className="text-gray-300 text-sm">{contactInfo.email}</p>
                 </div>"
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">"
-                  <MapPin className="text-red-400 w-8 h-8 mx-auto mb-3" />"
+                  <MapPin className="text-red-400 w-8 h-8 mx-auto mb-3"  />"
                   <h3 className="text-white font-semibold mb-2">Visit Us</h3>"                  <p className="text-gray-300 text-sm">{contactInfo.address}</p>
                 </div>
               </div>
@@ -783,13 +656,13 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                   href={`tel:${contactInfo.phone}`}"
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
 "
-                  <Phone className="w-4 h-4" />                  <span>Call Now</span>
+                  <Phone className="w-4 h-4"  />                  <span>Call Now</span>
                 </a>
                 <a`
                   href={`mailto:${contactInfo.email}`}"
                   className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2"
 "
-                  <Mail className="w-4 h-4" />                  <span>Send Email</span>
+                  <Mail className="w-4 h-4"  />                  <span>Send Email</span>
                 </a>
                 <a
                   href={contactInfo.website}"
@@ -797,7 +670,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                   rel="noopener noreferrer"
                   className="border-2 border-green-400 text-green-400 font-semibold py-3 px-8 rounded-lg hover:bg-green-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2"
 "
-                  <ExternalLink className="w-4 h-4" />                  <span>Visit Website</span>
+                  <ExternalLink className="w-4 h-4"  />                  <span>Visit Website</span>
                 </a>;
               </div>;
             </motion.div>;
@@ -805,7 +678,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
         </section>;
       </div>;
     </>
-  );
-};
+  )};
 
-export default AIContentOptimizerPro;}}}}}'"`
+export default AIContentOptimizerPro}}}}}'"`

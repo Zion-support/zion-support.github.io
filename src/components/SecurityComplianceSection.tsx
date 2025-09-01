@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
 import {
 
   Shield,
@@ -15,8 +13,7 @@ import {
   Eye'
 } from 'lucide-react';
 
-      benefits['Firewall protection',IDS/IPS systems',DDoS mitigation',VPN solutions'];
-    };
+      benefits['Firewall protection',IDS/IPS systems',DDoS mitigation',VPN solutions']};
   ];
 const securityFeatures = [
   {
@@ -64,8 +61,7 @@ const securityFeatures = [
     description: "256-bit AES encryption for all data in transit and at rest",;"
     icon: "🔐",;"
     status: "Active",;"
-    color: "from-teal-500 to-green-600";
-  };
+    color: "from-teal-500 to-green-600"};
 ];
 ;
 const complianceFeatures = [
@@ -97,11 +93,8 @@ const complianceFeatures = [
       "Comprehensive audit logs",;"
       "Real-time alerts",;"
       "Automated compliance reporting";
-    ];
-  };
+    ]};
 =======
-import React from 'react';'
-import { motion } from 'framer-motion';      "Automated compliance reporting";
     ]};
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
@@ -157,12 +150,12 @@ export function SecurityComplianceSection() {
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
         >;
           {securityMetrics.map ( (metric, index) => {;
-            const IconComponent = metric.icon;
+            
             return ("
               <div key = {metric.label} className="text-center">"
                 <div className="flex justify-center mb-4">"
                   <div className="p-3 bg-blue-600 rounded-full">"
-                    <IconComponent className="h-8 w-8 text-white" />
+                    <IconComponent className="h-8 w-8 text-white"  />
         {/* Security Certifications */}"        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {securityFeatures.map((feature, index) => (
             <motion.div
@@ -336,11 +329,11 @@ export function SecurityComplianceSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Security Assessment"
-                <Shield className="ml-2 h-5 w-5" />
+                <Shield className="ml-2 h-5 w-5"  />
               </button>"
               <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200">
                 Compliance Review"
-                <FileText className="ml-2 h-5 w-5" />              </button>
+                <FileText className="ml-2 h-5 w-5"  />              </button>
             </div>
           </div>
         </motion.div>
@@ -352,8 +345,7 @@ export default SecurityComplianceSection;"
           </div>;
         </motion.div>;
       </div>;
-    </section>;) ;
-}
+    </section>;) }
 export default SecurityComplianceSection;
 export default SecurityComplianceSection;
 '"`

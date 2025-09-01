@@ -1,61 +1,19 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import { motion } from 'framer-motion';
 import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, Gauge, Database, Shield, Zap, Users, Settings, BarChart3, Activity const AIPredictiveMaintenance: React.FC = props {
-  const features = [
-    {
-
-      icon: Brain,
-      title: 'AI-Powered Analytics',
-      description: 'Machine learning algorithms predict equipment failures'
-    },
-    {
-
-      icon: Gauge,
-      title: 'Real-time Monitoring',
-      description: 'Continuous monitoring of equipment performance'
-    },
-    {
-
-      icon: AlertTriangle,
-      title: 'Early Warning System',
-      description: 'Proactive alerts before equipment failure';
+  
     },;
     {;
       icon: BarChart3,;
       title: 'Performance Analytics',;
-      description: 'Data-driven insights for optimization';
-    };
-  ];
-
-  const applications = [
-    {
-
-      title: 'Manufacturing',
-      description: 'Predictive maintenance for production equipment',
-      icon: '🏭'
-    },
-    {
-
-      title: 'Energy & Utilities',
-      description: 'Monitor power plants and distribution systems',
-      icon: '⚡'
-    },
-    {
-
-      title: 'Transportation',
-      description: 'Fleet maintenance and vehicle optimization',
-      icon: '🚚';
-    },;
+      description: 'Data-driven insights for optimization'};
+  ]},;
     {;
       title: 'Healthcare',;
       description: 'Medical equipment maintenance and reliability',;
-      icon: '🏥';
-    };
+      icon: '🏥'};
   ];
 
 <<<<<<< HEAD
-  const benefits = [;
+  
     'Reduce unplanned downtime by up to 75%',;
     'Extend equipment lifespan and reliability',;
     'Lower maintenance costs and labor requirements',;
@@ -78,7 +36,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
 <<<<<<< HEAD
         title="AI Predictive Maintenance Services - Zion Tech Group"
         description="Transform your maintenance operations with AI-powered predictive maintenance. Prevent equipment failures and optimize performance with intelligent monitoring."
-      />
+       />
 =======
         title="AI Predictive Maintenance Services - Zion Tech Group""        description="Transform your maintenance operations with AI-powered predictive maintenance. Prevent equipment failures and optimize performance with intelligent monitoring."
        />
@@ -114,7 +72,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
             className="text-center"
 "
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full border border-orange-400/30 mb-6">"
-              <Wrench className="w-5 h-5 text-orange-400 mr-2" />"              <span className="text-orange-300 font-medium">AI Predictive Maintenance</span>
+              <Wrench className="w-5 h-5 text-orange-400 mr-2"  />"              <span className="text-orange-300 font-medium">AI Predictive Maintenance</span>
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -385,7 +343,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => ("
                   <li key={index} className="flex items-center space-x-3">"
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />"                    <span className="text-gray-300">{benefit}</span>
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0"  />"                    <span className="text-gray-300">{benefit}</span>
                   </li>
                 ))}
               </ul>
@@ -478,4 +436,4 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
     </div>;
   )};
 
-export default AIPredictiveMaintenance;}}}'"
+export default AIPredictiveMaintenance}}}'"

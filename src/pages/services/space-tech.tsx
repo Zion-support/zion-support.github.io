@@ -1,6 +1,3 @@
-import React from 'react.ts';
-import { SEO } from '@/components/SEO';
-import { motion } from 'framer-motion.ts';
 import {
 
   Rocket,
@@ -28,98 +25,9 @@ import {
 
 export default function SpaceTechnology(...args: any[]): any {
 
-  const features = [
-    {
-
-      icon: Satellite,
-      title: 'Satellite Technology',
-      description:'
-        'Advanced satellite systems for communication, navigation, and Earth observation.',
-      benefits: ['
-        'Global connectivity',Real-time data collection',Navigation systems',Environmental monitoring',
-      ]},
-    {
-
-      icon: Rocket,
-      title: 'Launch Systems',
-      description:'
-        'Innovative launch vehicle technology and space transportation solutions.',
-      benefits: ['
-        'Cost-effective launches',Reusable systems',Payload optimization',Mission planning',
-      ]},
-    {
-
-      icon: Brain,
-      title: 'AI Space Operations',
-      description:'
-        'Artificial intelligence for autonomous space missions and operations.',
-      benefits: ['
-        'Autonomous navigation',Predictive maintenance',Mission optimization',Risk assessment',
-      ]},
-    {
-
-      icon: Network,
-      title: 'Space Communications',
-      description:'
-        'Advanced communication networks for space missions and ground control.',
-      benefits: ['
-        'High-bandwidth links',Low-latency communication',Global coverage',Secure transmission',
-      ]},
-  ];
-
-  const applications = [
-    {
-
-      category: 'Commercial Space',
-      services: ['
-        'Satellite internet and communications',Earth observation and imaging',Space tourism infrastructure',Commercial launch services',
-      ]},
-    {
-
-      category: 'Scientific Research',
-      services: ['
-        'Space exploration missions',Astronomical observations',Climate and environmental research',Planetary science missions',
-      ]},
-    {
-
-      category: 'Defense & Security',
-      services: ['
-        'Space situational awareness',Satellite defense systems',Intelligence gathering',Strategic communications',
-      ]},
-    {
-
-      category: 'Infrastructure',
-      services: ['
-        'Space station development',Lunar and Mars bases',Space manufacturing',Resource utilization',
-      ]},
-  ];
-
-  const technologies = [
-    {
-
-      name: 'Quantum Computing in Space',
-      description:'
-        'Leveraging quantum computing for complex space calculations and simulations.',
-      icon: Atom},
-    {
-
-      name: 'AI-Powered Mission Control',
-      description:'
-        'Intelligent systems for autonomous space mission management.',
-      icon: Brain},
-    {
-
-      name: 'Advanced Propulsion',
-      description:'
-        'Next-generation propulsion systems for efficient space travel.',
-      icon: Rocket},
-    {
-
-      name: 'Space Cybersecurity',
-      description: 'Protecting space assets from cyber threats and attacks.',
-      icon: Shield},
-  ];
-
+  
+  
+  
   return()
     <div className="min-h-screen bg-slate-950 text-white">
       <SEO"
@@ -140,7 +48,7 @@ export default function SpaceTechnology(...args: any[]): any {
           >"
             <div className="flex justify-center mb-6">"
               <div className="w-20 h-20 bg-gradient-to-br from-blue-400 via-purple-500 to-cyan-400 rounded-2xl flex items-center justify-center">"
-                <Rocket className="w-10 h-10 text-white" />              </div>
+                <Rocket className="w-10 h-10 text-white"  />              </div>
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent mb-6">
@@ -214,7 +122,7 @@ export default function SpaceTechnology(...args: any[]): any {
                       key={idx}"
                       className="flex items-center text-sm text-slate-400"
                     >"
-                      <Star className="w-4 h-4 text-blue-400 mr-2" />                      {benefit}
+                      <Star className="w-4 h-4 text-blue-400 mr-2"  />                      {benefit}
                     </li>
                   ))}
                 </ul>
@@ -253,7 +161,7 @@ export default function SpaceTechnology(...args: any[]): any {
                 className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8"
               >"
                 <h3 className="text-2xl font-semibold text-white mb-6 flex items-center">"
-                  <Target className="w-6 h-6 text-blue-400 mr-3" />                  {app.category}
+                  <Target className="w-6 h-6 text-blue-400 mr-3"  />                  {app.category}
                 </h3>"
                 <ul className="space-y-3">
                   {app.services.map((service, idx) => ("
@@ -363,21 +271,20 @@ export default function SpaceTechnology(...args: any[]): any {
             </p>"
             <div className="flex flex-wrap justify-center gap-6 text-slate-300">"
               <div className="flex items-center">"
-                <Phone className="w-5 h-5 text-blue-400 mr-2" />
+                <Phone className="w-5 h-5 text-blue-400 mr-2"  />
                 <span>+1 302 464 0950</span>
               </div>"
               <div className="flex items-center">"
-                <Mail className="w-5 h-5 text-blue-400 mr-2" />
+                <Mail className="w-5 h-5 text-blue-400 mr-2"  />
                 <span>kleber@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center">"
-                <MapPin className="w-5 h-5 text-blue-400 mr-2" />                <span>Middletown, DE 19709</span>
+                <MapPin className="w-5 h-5 text-blue-400 mr-2"  />                <span>Middletown, DE 19709</span>
               </div>
             </div>
           </div>
         </div>
       </section>
     </div>
-  );
-}
+  )}
 '"

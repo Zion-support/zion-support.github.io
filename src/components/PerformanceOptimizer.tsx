@@ -1,4 +1,3 @@
-import React from 'react';
 
 <<<<<<< HEAD
   Activity,
@@ -18,8 +17,7 @@ interface PerformanceMetrics {
   cumulativeLayoutShift: number;
   firstInputDelay: number;
   timeToInteractive: number;
-  speedIndex: number;
-}
+  speedIndex: number}
 
 interface ResourceMetrics {
   totalResources: number;
@@ -27,8 +25,7 @@ interface ResourceMetrics {
   images: number;
   scripts: number;
   stylesheets: number;
-  fonts: number;
-}
+  fonts: number}
 
 interface OptimizationSuggestion {
   id: string;
@@ -103,31 +100,15 @@ const PerformanceOptimizer: React.FC = () => {
   const [history, setHistory] = useState < PerformanceMetrics[]> ([]) ;
 
   // Simulate performance monitoring
-  const measurePerformance = useCallback ( () => {
-    const newMetrics: PerformanceMetrics = {
-
-      fcp: Math.random() * 2000 + 500, // 500-2500ms
-      lcp: Math.random() * 3000 + 1000, // 1000-4000ms
-      fid: Math.random() * 100 + 10, // 10-110ms
-      cls: Math.random() * 0.1, // 0-0.1
-      ttfb: Math.random() * 500 + 100, // 100-600ms
-      score: 0};
-
+  
     // Calculate performance score
     calculatePerformanceScore(initialMetrics, resourceMetrics);
 
     // Continuous monitoring
     intervalRef.current = setInterval(() => {
-      updateResourceMetrics();
-    }, 5000);
-  }, []);
+      updateResourceMetrics()}, 5000)}, [])}, []);
 
-  const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics>) => {
-    setMetrics(prev => prev ? { ...prev, ...newMetrics } : null);
-  }, []);
-
-  const updateResourceMetrics = useCallback(() => {
-    const resources = performance.getEntriesByType('resource');
+  
     const newResourceMetrics: ResourceMetrics = {
       totalResources: resources.length,
       totalSize: resources.reduce((acc, resource) => acc + (resource as any).transferSize || 0, 0),
@@ -136,11 +117,9 @@ const PerformanceOptimizer: React.FC = () => {
       stylesheets: resources.filter(r => r.initiatorType === 'link').length,
       fonts: resources.filter(r => r.initiatorType === 'font').length
     };
-    setResourceMetrics(newResourceMetrics);
-  }, []);
+    setResourceMetrics(newResourceMetrics)}, []);
 
-  const calculatePerformanceScore = useCallback((metrics: PerformanceMetrics, resources: ResourceMetrics) => {
-    let score = 100;
+  
     if (newMetrics.fcp > 1800) score -= 20;
     if (newMetrics.lcp > 2500) score -= 25;
     if (newMetrics.fid > 100) score -= 20;
@@ -149,55 +128,34 @@ const PerformanceOptimizer: React.FC = () => {
 
     newMetrics.score = Math.max (0, score) ;
     setMetrics (newMetrics) ;
-    setHistory (prev => [...prev.slice (-9) , newMetrics]) ;
-  }, []) ;
+    setHistory (prev => [...prev.slice (-9) , newMetrics]) }, []) ;
 
   useEffect ( () => {
     if (isMonitoring) {
 
-      const interval = setInterval(measurePerformance, 5000);
-      return () => clearInterval(interval);
-    }
+      
+      return () => clearInterval(interval)}
 
-  const getScoreColor = (score: number) => {
-
-    if (score >= 90) return 'text-green-500';
+  
     if (score >= 70) return 'text-yellow-500';
-    return 'text-red-500';
-  };
+    return 'text-red-500'};
 
-  const getScoreIcon = (score: number) => {
-
-    if (score >= 90) return <CheckCircle className="w-5 h-5 text-green-500" />;
+  
     if (score >= 70)"
-      return <AlertTriangle className="w-5 h-5 text-yellow-500" />;"
-    return <AlertTriangle className="w-5 h-5 text-red-500" />;
-  };
+      return <AlertTriangle className="w-5 h-5 text-yellow-500"  />;"
+    return <AlertTriangle className="w-5 h-5 text-red-500"  />};
 
-  const getMetricStatus = (
-    value: number,
-    threshold: number,
-    lowerIsBetter = true;
+  
   ) => {
 
-    const isGood = lowerIsBetter ? value <= threshold : value >= threshold;
-    return isGood ? 'text-green-500' : 'text-red-500';
-  };
-
-  const toggleSuggestion = (id: string) => {
-
-    setSuggestions(prev =>
-      prev.map(suggestion =>
-        suggestion.id === id
-          ? { ...suggestion, implemented: !suggestion.implemented }
-          : suggestion) ) ;
-  };
+    
+    return isGood ? 'text-green-500' : 'text-red-500'}};
 
   return ("
     <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">"
       <div className="flex items-center justify-between mb-6">"
         <div className="flex items-center gap-3">"
-          <Activity className="w-6 h-6 text-zion-cyan" />"
+          <Activity className="w-6 h-6 text-zion-cyan"  />"
           <h2 className="text-xl font-bold text-white">
             Performance Optimizer
           </h2>
@@ -236,7 +194,7 @@ const PerformanceOptimizer: React.FC = () => {
 "
         <div className="bg-white/5 rounded-lg p-4">"
           <div className="flex items-center gap-2 mb-4">"
-            <TrendingUp className="w-5 h-5 text-zion-cyan" />"
+            <TrendingUp className="w-5 h-5 text-zion-cyan"  />"
             <h3 className="text-lg font-semibold text-white">
               Real-time Metrics
             </h3>
@@ -273,7 +231,7 @@ const PerformanceOptimizer: React.FC = () => {
       {/* Optimization Suggestions */}"
       <div className="mb-6">"
         <div className="flex items-center gap-2 mb-4">"
-          <Zap className="w-5 h-5 text-zion-cyan" />"
+          <Zap className="w-5 h-5 text-zion-cyan"  />"
           <h3 className="text-lg font-semibold text-white">
             Optimization Suggestions
           </h3>

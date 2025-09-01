@@ -1,8 +1,5 @@
 // removed duplicate old section
 
-import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
-import { ShoppingCart, Sparkles, CheckCircle, BarChart3  } from 'lucide-react';
 ;
 const EcommercePersonalization: React.FC = (): JSX.Element => {
 
@@ -15,7 +12,7 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {
       />"
       <section className="mx-auto max-w-6xl px-6 py-16">"
         <div className="flex items-center gap-3 mb-6 text-cyan-300">"
-          <ShoppingCart className="h-5 w-5" />"
+          <ShoppingCart className="h-5 w-5"  />"
           <span className="text-sm font-semibold">E‑COMMERCE PERSONALIZATION</span>
         </div>"
         <h1 className="text-4xl font-bold">Turn browsers into buyers with AI personalization</h1>"
@@ -25,17 +22,17 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {
           <div className="rounded-xl border border-white/10 bg-white/5 p-6">"
             <div className="mb-2 font-semibold">Capabilities</div>"
             <ul className="space-y-2 text-sm text-slate-300">"
-              <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400"/> Realtime recs and bundles</li>"
-              <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400"/> Cold‑start handling</li>"
-              <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400"/> Price sensitivity nudges</li>"
-              <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400"/> Merchandiser controls</li>
+              <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400" /> Realtime recs and bundles</li>"
+              <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400" /> Cold‑start handling</li>"
+              <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400" /> Price sensitivity nudges</li>"
+              <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400" /> Merchandiser controls</li>
             </ul>
           </div>"
           <div className="rounded-xl border border-white/10 bg-white/5 p-6">"
             <div className="mb-2 font-semibold">Outcomes</div>"
             <ul className="space-y-2 text-sm text-slate-300">"
-              <li className="flex items-center gap-2"><Sparkles className="h-4 w-4 text-cyan-300"/> +5–15% AOV</li>"
-              <li className="flex items-center gap-2"><Sparkles className="h-4 w-4 text-cyan-300"/> +3–8% conversion rate</li>"              <li className="flex items-center gap-2"><BarChart3 className="h-4 w-4 text-cyan-300"/> Experiment results dashboard</li>
+              <li className="flex items-center gap-2"><Sparkles className="h-4 w-4 text-cyan-300" /> +5–15% AOV</li>"
+              <li className="flex items-center gap-2"><Sparkles className="h-4 w-4 text-cyan-300" /> +3–8% conversion rate</li>"              <li className="flex items-center gap-2"><BarChart3 className="h-4 w-4 text-cyan-300"/> Experiment results dashboard</li>
             </ul>"
             <div className="mt-4 text-sm font-semibold text-cyan-300">Pricing: $249–$1,499/month</div>;
           </div>;
@@ -44,10 +41,7 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {
         <div className="mt-10 text-sm text-slate-400">Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008 Middletown DE 19709</div>;
       </section>;
     </div>;
-  );
-};
+  )};
 ;
 export { EcommercePersonalization };
-export default EcommercePersonalization;
-
-}'"
+export default EcommercePersonalization}'"

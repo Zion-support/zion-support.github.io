@@ -1,5 +1,3 @@
-import React from 'react.ts';
-import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe  } from 'lucide-react';
 
 const IoTServices = () => {
   const iotServices = [
@@ -26,27 +24,12 @@ const IoTServices = () => {
       icon: Database};
   ];
 
-  const iotTechnologies = [
-    {
-"
-      name: "Edge Computing","
-      description: "Local data processing and decision making",
-      icon: Activity,"
-      features: ["Local processing", "Reduced latency", "Bandwidth optimization", "Offline operation"]
-    },
-    {
-"
-      name: "Machine Learning","
-      description: "AI-powered IoT intelligence and automation",
-      icon: BarChart3,"
-      features: ["Predictive analytics", "Anomaly detection", "Automated responses", "Pattern recognition"]
-    },;
+  
     {;"
       name: "Security & Privacy",;"
       description: "Enterprise-grade IoT security solutions",;
       icon: Shield,;"
-      features: ["Device authentication", "Data encryption", "Secure updates", "Privacy compliance"];
-    };
+      features: ["Device authentication", "Data encryption", "Secure updates", "Privacy compliance"]};
   ];
 
   const benefits = [;"
@@ -64,7 +47,7 @@ const IoTServices = () => {
         <div className="max-w-7xl mx-auto text-center">"
           <div className="mb-8">"
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium mb-6">"
-              <Cog className="w-4 h-4 mr-2"/>              IoT Services
+              <Cog className="w-4 h-4 mr-2" />              IoT Services
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Internet of Things"
@@ -179,7 +162,7 @@ const IoTServices = () => {
             </div>"
             <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl p-8 border border-blue-500/30">"
               <div className="text-center">"
-                <Globe className="w-24 h-24 text-blue-400 mx-auto mb-4"/>"
+                <Globe className="w-24 h-24 text-blue-400 mx-auto mb-4" />"
                 <h3 className="text-2xl font-bold text-white mb-2">IoT Expertise</h3>"                <p className="text-gray-300 mb-6">
                   Our team has extensive experience building and deploying
                   IoT solutions across various industries.
@@ -216,9 +199,7 @@ const IoTServices = () => {
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 ;
 export { IoTServices };
-export default IoTServices;
-}}}'"
+export default IoTServices}}}'"

@@ -1,20 +1,10 @@
-import React from 'react';
 
-import { Route, Routes  } from 'react-router-dom.ts';
-import Login from "@/pages/Login";"
-import Signup from "@/pages/Signup";"
-import ForgotPassword from "@/pages/ForgotPassword";"
-import UpdatePassword from "@/pages/UpdatePassword";
-import { ProtectedRoute  } from '@/components/ProtectedRoute';"
-import Onboarding from "@/pages/Onboarding";"
-import TalentOnboarding from "@/pages/TalentOnboarding";"
-import ServiceOnboarding from "@/pages/ServiceOnboarding";
 
 const AuthRoutes = () => {
   return()
     <Routes>"
-      <Route path="/login" element={<Login />} />"
-      <Route path="/signup" element={<Signup />} />
+      <Route path="/login" element={<Login  />} />"
+      <Route path="/signup" element={<Signup  />} />
 
       {/* Protected routes that require authentication */}
       <Route"
@@ -46,4 +36,4 @@ const AuthRoutes = () => {
     </Routes>;
   )};
 
-export default AuthRoutes;}}}'"
+export default AuthRoutes}}}'"

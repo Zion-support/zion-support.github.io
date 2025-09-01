@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import {
 
   Code,
@@ -31,18 +28,9 @@ import {
 export { function };
 export default function CustomDevelopment(...args[]):  {
 
-  const services = [
-    {
-
-      title: 'Web Applications',
-      description: 'Custom web applications built with modern technologies and best practices for optimal performance and user experience.',
-      icon: Globe,
-      features['Responsive Design',Progressive Web Apps',E-commerce Solutions',Content Management Systems'];
+  
     },;
 =======
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { motion } from 'framer-motion';    },;
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     {
 
@@ -50,108 +38,66 @@ import { motion } from 'framer-motion';    },;
       description: 'Native and cross-platform mobile applications for iOS and Android that deliver exceptional user experiences.',
 <<<<<<< HEAD
       icon: Smartphone,
-      features['iOS Development',Android Development',Cross-platform Apps',App Store Optimization'];
-    },;
+      features['iOS Development',Android Development',Cross-platform Apps',App Store Optimization']},;
     {
 
       title: 'API Development',
 =======
       icon: Smartphone,'
-      features['iOS Development', 'Android Development', 'Cross-platform Apps', 'App Store Optimization'];
-    },;    {
+      features['iOS Development', 'Android Development', 'Cross-platform Apps', 'App Store Optimization']},;    {
 '
       title: 'API Development','
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       description: 'Robust and scalable APIs that enable seamless integration between systems and services.',
       icon: Network,
-      features['RESTful APIs',GraphQL APIs',API Documentation',Integration Support'];
-    },;
+      features['RESTful APIs',GraphQL APIs',API Documentation',Integration Support']},;
     {
 
-      features['Legacy System Integration',Third-party APIs',Data Synchronization',Workflow Automation'];
-    };
+      features['Legacy System Integration',Third-party APIs',Data Synchronization',Workflow Automation']};
       title: 'System Integration',;
       description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',;
               icon: GitFork,;
-      features: ['Legacy System Integration',Third-party APIs',Data Synchronization',Workflow Automation'];
-    };
-  ];
-
-  const technologies = [
-    {
-
-      title: 'Frontend',
-      description: 'Modern frontend frameworks and libraries for responsive and interactive user interfaces.',
-<<<<<<< HEAD
-      icon: Monitor,
-      stack['React',Vue.js',Angular',TypeScript',Tailwind CSS'];
-    },;
+      features: ['Legacy System Integration',Third-party APIs',Data Synchronization',Workflow Automation']};
+  ]},;
     {
 
       title: 'Backend',
       description: 'Robust backend technologies for scalable and secure applications.',
       icon: Cpu, // Changed from Server to Cpu'
-      stack['Node.js',Python',Java',C#',Go'];
-    },;
+      stack['Node.js',Python',Java',C#',Go']},;
     {
 
       title: 'Mobile',
 =======
       icon: Monitor,'
-      stack['React', 'Vue.js', 'Angular', 'TypeScript', 'Tailwind CSS'];
-    },;    {
+      stack['React', 'Vue.js', 'Angular', 'TypeScript', 'Tailwind CSS']},;    {
 '
       title: 'Backend','
       description: 'Robust backend technologies for scalable and secure applications.',
       icon: Cpu, // Changed from Server to Cpu'
-      stack['Node.js', 'Python', 'Java', 'C#', 'Go'];
-    },;    {
+      stack['Node.js', 'Python', 'Java', 'C#', 'Go']},;    {
 '
       title: 'Mobile','
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       description: 'Cross-platform and native mobile development technologies.',
       icon: Smartphone,
-      stack['React Native',Flutter',Swift',Kotlin',Xamarin'];
-    },;
+      stack['React Native',Flutter',Swift',Kotlin',Xamarin']},;
     {
 
-      stack['PostgreSQL',MongoDB',MySQL',Redis',Elasticsearch'];
-    };
+      stack['PostgreSQL',MongoDB',MySQL',Redis',Elasticsearch']};
       title: 'Database',;
       description: 'Modern database solutions for data storage and management.',;
       icon: Database,;
-      stack: ['PostgreSQL',MongoDB',MySQL',Redis',Elasticsearch'];
-    };
-  ];
-
-  const benefits = [
-    {
-
-      title: 'Custom Solutions',
-      description: 'Tailored software solutions designed specifically for your business needs and workflows.',
-      icon: Target
-    },
-    {
-
-      title: 'Scalability',
-      description: 'Applications built to grow with your business and handle increasing demands.',
-      icon: TrendingUp
-    },
-    {
-
-      title: 'Security',
-      description: 'Enterprise-grade security measures built into every application.',
-      icon: Shield;
-    },;
+      stack: ['PostgreSQL',MongoDB',MySQL',Redis',Elasticsearch']};
+  ]},;
 <<<<<<< HEAD
     {;
       title: 'Support & Maintenance',;
       description: 'Ongoing support and maintenance to ensure your applications run smoothly.',;
-      icon: Settings;
-    };
+      icon: Settings};
   ];
 
-  const industries = [;
+  
     'Healthcare',Finance',Manufacturing',Retail',Government',Education',Transportation',Energy';
 =======
     {;'
@@ -312,7 +258,7 @@ import { motion } from 'framer-motion';    },;
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center gap-2 text-zion-slate-light">"
-                        <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />                        {feature}
+                        <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"  />                        {feature}
                       </li>
                     ))}
                   </ul>
@@ -735,6 +681,5 @@ import { motion } from 'framer-motion';    },;
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}
 '"

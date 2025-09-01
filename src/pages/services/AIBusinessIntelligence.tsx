@@ -1,6 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
 import {
   Brain, 
   TrendingUp, 
@@ -23,8 +20,6 @@ import {
   Cpu,
   Lock'
 } from 'lucide-react';
-import { motion } from 'framer-motion';
-import {
   Brain,
   BarChart3,
   TrendingUp,
@@ -45,69 +40,13 @@ import {
  } from 'lucide-react';
 ;
 const AIBusinessIntelligence: React.FC = props {
-  const features = [
-    {
-
-      icon: Brain,
-      title: "Predictive Analytics","
-      description: "Advanced machine learning algorithms that forecast trends and identify opportunities before they emerge."
-    },
-    {
-
-      icon: BarChart3,"
-      title: "Real-time Dashboards","
-      description: "Interactive visualizations that provide instant insights into your business performance and KPIs."
-    },
-    {
-
-      icon: Target,"
-      title: "Intelligent Forecasting","
-      description: "AI-powered forecasting models that help you make data-driven decisions with confidence."
-    },
-      icon: Target,;
+  
       title: 'Performance Optimization',;
       description: 'AI-driven recommendations for optimizing business processes, pricing, and resource allocation.',;
-      benefits: ['Process optimization',Pricing strategies',Resource allocation',Efficiency improvements'];
-    }
+      benefits: ['Process optimization',Pricing strategies',Resource allocation',Efficiency improvements']}
   ];
 
-  const pricingPlans = [
-    {
-
-      name: 'Starter',
-      price: '$2,500',
-      period: '/month',
-      description: 'Perfect for small businesses starting their BI journey',
-      features: ['
-        'Basic predictive analytics',5 custom dashboards',Standard reporting',Email support',Data integration (3 sources),Monthly insights report'
-      ],
-      cta: 'Get Started',
-      popular: false
-    },
-    {
-
-      name: 'Professional',
-      price: '$5,000',
-      period: '/month',
-      description: 'Ideal for growing companies with complex data needs',
-      features: ['
-        'Advanced predictive analytics',Unlimited dashboards',Real-time reporting',Priority support',Data integration (10 sources),Weekly insights report',Custom AI models',API access'
-      ],
-      cta: 'Start Free Trial',
-      popular: true
-    },
-    {
-
-      name: 'Enterprise',
-      price: '$12,000',
-      period: '/month',
-      description: 'For large organizations requiring enterprise-grade BI solutions',
-      features: ['
-        'Enterprise predictive analytics',Unlimited everything',Custom AI development',24/7 dedicated support',Unlimited data sources',Real-time insights',White-label solutions',On-premise deployment',Custom integrations',Dedicated success manager'
-      ],
-      cta: 'Contact Sales',
-      popular: false
-;
+  
 export { function };
 export default function AIBusinessIntelligence(...args: unknown[]): unknown {
   const features = [;    {
@@ -147,16 +86,13 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
       description: "AI-generated recommendations and actionable insights delivered in real-time."
     }"
       title: "Automated Insights",;"
-      description: "Automatically discover patterns, anomalies, and actionable insights from your data.";
-    };
+      description: "Automatically discover patterns, anomalies, and actionable insights from your data."};
   ];
 
-  const benefits = [
-    {;
+  
       icon: Zap,;"
       title: "Automated Insights",;"
-      description: "AI-generated recommendations and actionable insights delivered in real-time.";
-    };
+      description: "AI-generated recommendations and actionable insights delivered in real-time."};
   ];
 
   const benefits = [;"
@@ -174,26 +110,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
     "Reduce risk by 30% with early warning systems"
   ];
 
-  const useCases = [
-    {
-"
-      industry: "E-commerce","
-      description: "Customer segmentation, inventory optimization, and sales forecasting"
-    },
-    {
-
-      title: 'Financial Services',
-      description: 'Risk assessment, fraud detection, and portfolio optimization',
-      metrics: ['90% fraud detection accuracy',35% reduction in risk exposure',50% faster decision making']
-    },
-    {
-
-      title: 'Manufacturing',
-      description: 'Predictive maintenance, quality control, and supply chain optimization',
-      metrics: ['70% reduction in downtime',45% improvement in quality',35% cost savings']
-    }
-  ];
-
+  
   return ("    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <Helmet>
         <title>AI Business Intelligence Platform - Zion Tech Group</title>"
@@ -244,7 +161,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
 <<<<<<< HEAD
         title="AI Business Intelligence - Zion Tech Group"
         description="Transform your business with AI-powered analytics, real-time insights, and predictive intelligence. Get comprehensive business intelligence solutions."
-      />
+       />
 =======
         title="AI Business Intelligence - Zion Tech Group""        description="Transform your business with AI-powered analytics, real-time insights, and predictive intelligence. Get comprehensive business intelligence solutions."
        />
@@ -281,7 +198,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
             className="text-center max-w-4xl mx-auto"
           >"
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full border border-cyan-400/30 mb-6">"
-              <Brain className="w-5 h-5 text-cyan-400 mr-2" />"              <span className="text-cyan-300 font-medium">AI Business Intelligence</span>
+              <Brain className="w-5 h-5 text-cyan-400 mr-2"  />"              <span className="text-cyan-300 font-medium">AI Business Intelligence</span>
             </div>
             "
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
@@ -318,7 +235,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
 "
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">"
           <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm text-white/90 backdrop-blur-sm mb-8">"
-            <Brain className="w-4 h-4 text-blue-300" />            <span>AI-Powered Business Intelligence</span>
+            <Brain className="w-4 h-4 text-blue-300"  />            <span>AI-Powered Business Intelligence</span>
           </div>
           "
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
@@ -339,7 +256,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
               className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Start Free Trial"
-              <ArrowRight className="w-5 h-5" />            </a>
+              <ArrowRight className="w-5 h-5"  />            </a>
             <a"
               href="#demo"
               className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
@@ -351,15 +268,15 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
           {/* Trust Indicators */}"
           <div className="mt-16 flex flex-wrap justify-center items-center gap-8 text-white/70">"
             <div className="flex items-center gap-2">"
-              <CheckCircle className="w-5 h-5 text-green-400" />
+              <CheckCircle className="w-5 h-5 text-green-400"  />
               <span>99.9% Uptime</span>
             </div>"
             <div className="flex items-center gap-2">"
-              <Shield className="w-5 h-5 text-blue-400" />
+              <Shield className="w-5 h-5 text-blue-400"  />
               <span>SOC 2 Type II Certified</span>
             </div>"
             <div className="flex items-center gap-2">"
-              <Users className="w-5 h-5 text-purple-400" />              <span>500+ Enterprise Clients</span>
+              <Users className="w-5 h-5 text-purple-400"  />              <span>500+ Enterprise Clients</span>
             </div>
           </div>
         </div>
@@ -527,7 +444,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
                   <ul className="space-y-3">
                     {feature.benefits.map((benefit, idx) => ("
                       <li key={idx} className="flex items-center gap-3 text-gray-700">"
-                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />                        <span>{benefit}</span>
+                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0"  />                        <span>{benefit}</span>
                       </li>
                     ))}
                   </ul>
@@ -555,7 +472,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
                 viewport={{ once: true }}"
                 className="flex items-start space-x-3"
               >"
-                <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />"                <p className="text-zion-slate-light text-lg">{benefit}</p>
+                <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0"  />"                <p className="text-zion-slate-light text-lg">{benefit}</p>
               </motion.div>
             ))}
 "
@@ -601,7 +518,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
 }}"
                     className="flex items-start space-x-3"
                   >"
-                    <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />"                    <span className="text-gray-300">{benefit}</span>
+                    <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0"  />"                    <span className="text-gray-300">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -611,23 +528,23 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
               <h3 className="text-2xl font-semibold text-white mb-6">Why Choose Zion Tech Group?</h3>"
               <div className="space-y-4">"
                 <div className="flex items-center space-x-3">"
-                  <Star className="w-5 h-5 text-yellow-400" />"
+                  <Star className="w-5 h-5 text-yellow-400"  />"
                   <span className="text-gray-300">Industry-leading AI algorithms</span>
                 </div>"
                 <div className="flex items-center space-x-3">"
-                  <Shield className="w-5 h-5 text-green-400" />"
+                  <Shield className="w-5 h-5 text-green-400"  />"
                   <span className="text-gray-300">Enterprise-grade security</span>
                 </div>"
                 <div className="flex items-center space-x-3">"
-                  <Cloud className="w-5 h-5 text-blue-400" />"
+                  <Cloud className="w-5 h-5 text-blue-400"  />"
                   <span className="text-gray-300">Scalable cloud infrastructure</span>
                 </div>"
                 <div className="flex items-center space-x-3">"
-                  <Users className="w-5 h-5 text-purple-400" />"
+                  <Users className="w-5 h-5 text-purple-400"  />"
                   <span className="text-gray-300">24/7 expert support</span>
                 </div>"
                 <div className="flex items-center space-x-3">"
-                  <Award className="w-5 h-5 text-cyan-400" />"                  <span className="text-gray-300">Proven track record</span>
+                  <Award className="w-5 h-5 text-cyan-400"  />"                  <span className="text-gray-300">Proven track record</span>
                 </div>
               </div>
             </div>
@@ -755,7 +672,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
               >"
                 <div className="flex items-center space-x-3 mb-4">"
                   <div className="w-10 h-10 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center">"
-                    <Globe className="w-5 h-5 text-cyan-400" />
+                    <Globe className="w-5 h-5 text-cyan-400"  />
                   </div>"                  <h3 className="text-lg font-semibold text-white">{useCase.industry}</h3>
                 </div>"
               <div key={index} className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 border border-gray-200">"
@@ -765,7 +682,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
                 <div className="space-y-3">
                   {useCase.metrics.map((metric, idx) => ("
                     <div key={idx} className="flex items-center gap-3 text-gray-700">"
-                      <TrendingUp className="w-5 h-5 text-green-500 flex-shrink-0" />"                      <span className="font-semibold">{metric}</span>
+                      <TrendingUp className="w-5 h-5 text-green-500 flex-shrink-0"  />"                      <span className="font-semibold">{metric}</span>
                     </div>
                   ))}
                 </div>
@@ -817,7 +734,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => ("
                     <li key={idx} className="flex items-center gap-3 text-gray-700">"
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />                      <span>{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0"  />                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -844,7 +761,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
               className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold"
             >
               Contact our sales team"
-              <ArrowRight className="w-4 h-4" />            </a>
+              <ArrowRight className="w-4 h-4"  />            </a>
           </div>
         </div>
       </section>;
@@ -916,7 +833,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
               className="inline-flex items-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
             >
               Start Free Trial"
-              <ArrowRight className="w-5 h-5" />            </a>
+              <ArrowRight className="w-5 h-5"  />            </a>
             <a"
               href="/contact"
               className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
@@ -927,7 +844,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
 "
           <div className="mt-12 flex flex-wrap justify-center items-center gap-8 text-white/70">"
             <div className="flex items-center gap-2">"
-              <Clock className="w-5 h-5 text-blue-400" />              <span>14-day free trial</span>
+              <Clock className="w-5 h-5 text-blue-400"  />              <span>14-day free trial</span>
             "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button

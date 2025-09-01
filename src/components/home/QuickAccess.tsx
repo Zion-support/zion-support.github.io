@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import {
 
   Brain,
@@ -101,55 +98,7 @@ const QuickAccess: React.FC = props {;
 ;
 const QuickAccess: React.FC = (): JSX.Element => {
 
-  const quickLinks = [
-    {
-
-      title: "AI Services","
-      description: "Machine Learning & Analytics",
-      icon: Brain,"
-      color: "from-purple-500 to-pink-500","
-      link: "/ai-services","
-      category: "Technology"
-    },
-    {
-"
-      title: "Cybersecurity","
-      description: "Protection & Compliance",
-      icon: Shield,"
-      color: "from-red-500 to-orange-500","
-      link: "/cybersecurity","
-      category: "Security"
-    },
-    {
-"
-      title: "Cloud Solutions","
-      description: "Migration & Optimization",
-      icon: Cloud,"
-      color: "from-blue-500 to-cyan-500","
-      link: "/cloud-solutions","
-      category: "Infrastructure"
-    },
-    {
-"
-      title: "Digital Transformation","
-      description: "Business Process Automation",
-      icon: Zap,"
-      color: "from-yellow-500 to-orange-500","
-      link: "/digital-transformation","
-      category: "Consulting"
-    },
-    {
-"
-      title: "IoT & Blockchain","
-      description: "Emerging Technologies",
-      icon: Globe,"
-      color: "from-green-500 to-teal-500","
-      link: "/emerging-tech","
-      category: "Innovation"
-    },
-    {
-"
-      category: "Business";
+  
     };
   ];
 
@@ -161,9 +110,6 @@ const QuickAccess: React.FC = (): JSX.Element => {
     { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },;"
     { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };
 =======
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';    { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
@@ -193,9 +139,7 @@ import { Link } from 'react-router-dom';    { name: "Business", count: 14, color
             whileInView = {
 
   { opacity: 1,
-  y: 0 ;
-
-}}
+  y: 0 }}
             transition={{ duration: 0.6 }}"
             className="text-3xl md:text-4xl font-bold text-white mb-4"
       title: "Micro SaaS","
@@ -206,43 +150,20 @@ import { Link } from 'react-router-dom';    { name: "Business", count: 14, color
       borderColor: "border-zion-purple/20",;"
       path: "/micro-saas",;"
       features: ["AI Lead Scoring", "Customer Feedback", "Compliance Tools", "Analytics"],;"
-      stats: { solutions: "25+", deployment: "<1hr", success: "90%" };
-    };
+      stats: { solutions: "25+", deployment: "<1hr", success: "90%" }};
   ];
 
-  const containerVariants = {
-
-    hidden: { opacity: 0 },;
+  
     visible: {
       opacity: 1,;
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1}}};
 
-  const itemVariants = {
-
-  hidden: { opacity: 0, y: 20,
-  scale: 0.95 
-
-
-
-
-
-
-},
-    visible: {
-
-      opacity: 1, 
-      y: 0, ;
+  
       scale: 1,;
       transition: {
         duration: 0.5,;"
-        ease: "easeOut";
-      };
-    };
-  };
+        ease: "easeOut"}}};
 
   const hoverVariants = {
 
@@ -254,7 +175,6 @@ import { Link } from 'react-router-dom';    { name: "Business", count: 14, color
 
         duration: 0.3,;"  ease: "easeOut";
       ;
-;
 }}};
 
   return ("
@@ -364,7 +284,7 @@ import { Link } from 'react-router-dom';    { name: "Business", count: 14, color
                   animate={{ rotate: hoveredCategory === link.title ? 90 : 0 }}
                   transition={{ duration: 0.3 }}
                 >"
-                  <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-zion-cyan transition-colors" />                </motion.div>
+                  <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-zion-cyan transition-colors"  />                </motion.div>
               </div>
 
               {/* Content */}"
@@ -486,7 +406,7 @@ import { Link } from 'react-router-dom';    { name: "Business", count: 14, color
                   className={`inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r ${link.color} text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25`}
                 >
                   Explore {link.title}"
-                  <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />                </Link>
+                  <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />                </Link>
               </motion.div>
             </motion.div>
           ))}
@@ -566,14 +486,7 @@ import { Link } from 'react-router-dom';    { name: "Business", count: 14, color
           transition = {
 
   { duration: 0.8,
-  delay: 0.4 ;
-
-
-
-
-
-
-}}
+  delay: 0.4 }}
           viewport={{ once: true }}"          className="text-center"
         >"
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">'"
@@ -599,7 +512,6 @@ import { Link } from 'react-router-dom';    { name: "Business", count: 14, color
         </motion.div>;
       </div>;
     </section>;
-  );
-};
+  )};
 ;export { QuickAccess };
 '"`

@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
 import { TrendingUp, 
   Shield, 
   Clock, 
@@ -25,42 +22,12 @@ import { TrendingUp,
 export { function };
 export default function AIFinancialTradingRiskManagement(...args[]):  {
 
-  const features = [
-    {
-
-      icon: TrendingUp,
-      title: "AI Trading Algorithms","
-      description: "Advanced algorithmic trading with machine learning for optimal execution and returns"
-    },
-    {
-
-      icon: Shield,"
-      title: "Risk Management","
-      description: "Comprehensive risk assessment and mitigation strategies with real-time monitoring"
-    },
-    {
-
-      icon: Clock,"
-      title: "Market Analysis","
-      description: "AI-powered market analysis with predictive insights and trend identification"
-    },
-    {
-
-      icon: Zap,"
-      title: "High-Frequency Trading","
-      description: "Ultra-fast trading execution with microsecond precision and advanced order routing"
-    },
-    {
-
-      icon: Search,"
-      title: "Security & Compliance","
-      description: "Enterprise-grade security with regulatory compliance and audit trails";
+  
     },;
     {;
       icon: Eye,;"
       title: "Data Integration",;"
-      description: "Seamless integration with major data providers and trading platforms";
-    };
+      description: "Seamless integration with major data providers and trading platforms"};
   ];
 
   const servicePackages = [
@@ -76,9 +43,6 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
         "Multi-asset support","
         "24/7 monitoring"
 =======
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { SEO  } from '@/components/SEO';        "24/7 monitoring"
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ]
     },;
@@ -157,7 +121,7 @@ import { SEO  } from '@/components/SEO';        "24/7 monitoring"
         description="Transform your trading operations with AI-powered algorithms, comprehensive risk management, and real-time market analysis. Maximize returns while minimizing risks."
         canonical="/services/ai-financial-trading-risk-management"
         url="https://ziontechgroup.com/services/ai-financial-trading-risk-management"
-      />
+       />
 "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
         {/* Hero Section */}"
         <section className="relative py-20 px-6 overflow-hidden">'"
@@ -385,7 +349,7 @@ import { SEO  } from '@/components/SEO';        "24/7 monitoring"
                   <ul className="space-y-3 mb-6">
                     {pkg.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center text-gray-300">"
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                        {feature}
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />                        {feature}
                       </li>
                     ))}
                   </ul>
@@ -479,7 +443,7 @@ import { SEO  } from '@/components/SEO';        "24/7 monitoring"
 }}"
                   className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 text-center"
 "
-                  <DollarSign className="w-8 h-8 text-cyan-400 mx-auto mb-3" />"                  <p className="text-white font-medium">{asset}</p>
+                  <DollarSign className="w-8 h-8 text-cyan-400 mx-auto mb-3"  />"                  <p className="text-white font-medium">{asset}</p>
                 </motion.div>;
               ))}
             </div>
@@ -564,7 +528,7 @@ import { SEO  } from '@/components/SEO';        "24/7 monitoring"
                   className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"
 "
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4">"
-                    <CheckCircle className="w-6 h-6 text-white" />
+                    <CheckCircle className="w-6 h-6 text-white"  />
                   </div>"                  <p className="text-white text-lg font-medium">{benefit}</p>
                 </motion.div>;
               ))}
@@ -649,7 +613,7 @@ import { SEO  } from '@/components/SEO';        "24/7 monitoring"
 }}"
                   className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 text-center"
 "
-                  <Zap className="w-8 h-8 text-blue-400 mx-auto mb-3" />"                  <p className="text-white font-medium">{tech}</p>
+                  <Zap className="w-8 h-8 text-blue-400 mx-auto mb-3"  />"                  <p className="text-white font-medium">{tech}</p>
                 </motion.div>;
               ))}
             </div>
@@ -845,7 +809,7 @@ import { SEO  } from '@/components/SEO';        "24/7 monitoring"
                 transition={{ duration: 0.6 }}"
                 className="text-center"
 "
-                <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />"
+                <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4"  />"
                 <h3 className="text-xl font-semibold mb-2 text-white">Phone</h3>"                <p className="text-gray-300">+1 302 464 0950</p>
               </motion.div>
 
@@ -885,7 +849,7 @@ import { SEO  } from '@/components/SEO';        "24/7 monitoring"
 }}"
                 className="text-center"
 "
-                <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4" />"
+                <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4"  />"
                 <h3 className="text-xl font-semibold mb-2 text-white">Email</h3>"                <p className="text-gray-300">kleber@ziontechgroup.com</p>
               </motion.div>
 
@@ -925,7 +889,7 @@ import { SEO  } from '@/components/SEO';        "24/7 monitoring"
 }}"
                 className="text-center"
 "
-                <Globe className="w-12 h-12 text-cyan-400 mx-auto mb-4" />"
+                <Globe className="w-12 h-12 text-cyan-400 mx-auto mb-4"  />"
                 <h3 className="text-xl font-semibold mb-2 text-white">Website</h3>"                <p className="text-gray-300">https://ziontechgroup.com</p>
               </motion.div>
             </div>
@@ -976,6 +940,5 @@ import { SEO  } from '@/components/SEO';        "24/7 monitoring"
         </section>;
       </div>;
     </>
-  );
-}
+  )}
 '"

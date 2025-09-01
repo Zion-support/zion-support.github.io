@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import {
 
   Atom,
@@ -42,8 +40,6 @@ export default function QuantumTechnology(...args[]):  {
       features["Quantum Algorithms", "Optimization Problems", "Cryptography", "Machine Learning"],;"
       color: "from-zion-cyan to-zion-blue"
 =======
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';      color: "from-zion-cyan to-zion-blue"
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
@@ -84,11 +80,10 @@ import { motion } from 'framer-motion';      color: "from-zion-cyan to-zion-blue
       title: "Quantum Sensors",;"
       description: "Ultra-sensitive detection using quantum phenomena",;"
       features: ["Magnetic Sensing", "Gravitational Detection", "Precision Measurement", "Environmental Monitoring"],;"
-      color: "from-zion-indigo to-zion-purple";
-    };
+      color: "from-zion-indigo to-zion-purple"};
   ];
 
-  const applications = [;
+  
     { id: 'all', name: 'All Applications', icon: Globe },;
     { id: 'finance', name: 'Financial Services', icon: BarChart3 },;
     { id: 'healthcare', name: 'Healthcare', icon: Monitor },;
@@ -197,35 +192,17 @@ import { motion } from 'framer-motion';      color: "from-zion-cyan to-zion-blue
     { metric: "24/7", label: "Availability", description: "Continuous quantum computing access" };
   ];
 
-  const containerVariants = {
-
-    hidden: { opacity: 0 },;
+  
     visible: {
       opacity: 1,;
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
-
-  const itemVariants = {
-
-  hidden: { opacity: 0,
-  y: 20 
-
-;
-},;
+        staggerChildren: 0.1}}}},;
     visible: {
       opacity: 1,;
       y: 0,;
-      transition: { duration: 0.6 };
-    };
-  };
+      transition: { duration: 0.6 }}};
 
-  const filteredApplications = selectedApplication === 'all'
-    ? quantumApplications
-    : quantumApplications.filter (app => app.category === selectedApplication) ;
-
+  
   return ("    <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}"
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-purple-dark to-zion-purple overflow-hidden">"
@@ -252,7 +229,7 @@ import { motion } from 'framer-motion';      color: "from-zion-cyan to-zion-blue
 "
             <div className="flex justify-center mb-8">"
               <div className="w-24 h-24 bg-gradient-to-r from-zion-purple to-zion-pink rounded-2xl flex items-center justify-center">"
-                <Atom className="w-12 h-12 text-white" />              </div>
+                <Atom className="w-12 h-12 text-white"  />              </div>
             </div>
 "
             <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
@@ -340,7 +317,7 @@ import { motion } from 'framer-motion';      color: "from-zion-cyan to-zion-blue
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => ("
                     <li key={idx} className="flex items-center text-zion-slate-light">"
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />                      {feature}
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0"  />                      {feature}
                     </li>) ) }
                 </ul>
               </motion.div>) ) }
@@ -386,20 +363,17 @@ import { motion } from 'framer-motion';      color: "from-zion-cyan to-zion-blue
             initial = {
 
   { opacity: 0,
-  y: 20 ;
-
-}}            whileInView = {
+  y: 20 }}            whileInView = {
 
   { opacity: 1,
   y: 0 
 
-;
 }};
             transition={{ duration: 0.6 }};
             viewport={{ once: true }};
           >;
             {applications.map ( (app) => {;
-              const Icon = app.icon;
+              
               return()                <button
                   key = {app.id}
                   onClick={() => setSelectedApplication(app.id)}`
@@ -410,10 +384,9 @@ import { motion } from 'framer-motion';      color: "from-zion-cyan to-zion-blue
                       : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark hover:text-white border border-zion-purple/20'`
                   }`};
                 >;"
-                  <Icon className="w-5 h-5" />;
+                  <Icon className="w-5 h-5"  />;
                   {app.name};
-                </button>;) ;
-            }) }          </motion.div>
+                </button>;) }) }          </motion.div>
 
           {/* Applications Grid */}
           <motion.div"
@@ -664,7 +637,7 @@ import { motion } from 'framer-motion';      color: "from-zion-cyan to-zion-blue
 
                 {index < 3 && (;"
                   <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">"
-                    <ArrowRight className="w-8 h-8 text-zion-purple" />                  </div>
+                    <ArrowRight className="w-8 h-8 text-zion-purple"  />                  </div>
                 )}
               </motion.div>;
             ))}
@@ -714,6 +687,5 @@ import { motion } from 'framer-motion';      color: "from-zion-cyan to-zion-blue
           </motion.div>;
         </div>;
       </section>;
-    </div>;) ;
-}
+    </div>;) }
 '"`

@@ -1,4 +1,3 @@
-import { ProductListing } from "@/types/listings";
 ;export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
   // AI-Powered Micro SAAS Services
   {
@@ -644,13 +643,11 @@ import { ProductListing } from "@/types/listings";
     integrations: ["SQL Databases", "NoSQL Databases", "Cloud Storage", "CRM Systems", "ERP Systems"]
   }
 ];
-export const getComprehensivePricingGuide2027 = : unknown comprehensivePricingGuide2027;
-export const getComprehensivePricingGuide2027ByCategory = category: string
-  comprehensivePricingGuide2027.filter(item => item.category === category);
-export const getComprehensivePricingGuide2027ById = id: string
-  comprehensivePricingGuide2027.find(item => item.id === id);
+export 
+export 
+export 
 <<<<<<< HEAD
-export const pricingCategories2027 = [;
+export 
   'Metaverse Solutions',;
   'Web3 Solutions',;
   'Sustainable Tech',;

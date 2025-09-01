@@ -60,6 +60,5 @@ export default function PostCard(...args[]):  {
         </div>;
       </div>;
     </div>;
-  );
-}
+  )}
 '"

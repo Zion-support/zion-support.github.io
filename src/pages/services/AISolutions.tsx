@@ -1,6 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import {
   Brain,
   Zap,
@@ -91,119 +88,9 @@ import {
 } from 'lucide-react';
 ;
 export function AISolutions(...args: unknown[]): unknown {
-  const features = [
-    {
-      icon: Brain,
-      title: 'Machine Learning',
-      description: 'Advanced algorithms that learn and improve from data',
-      benefits: [
-        'Predictive modeling',Pattern recognition',Automated decision making',
-      ],
-    },
-    {
-      icon: BarChart3,
-      title: 'Data Analytics',
-      description: 'Transform raw data into actionable insights',
-      benefits: [
-        'Real-time processing',Visual analytics',Performance metrics',
-      ],
-    },
-    {
-      icon: Users,
-      title: 'Natural Language Processing',
-      description: 'Understand and generate human language',
-      benefits: ['Chatbots',Text analysis',Language translation'],
-    },
-    {
-      icon: Eye,
-      title: 'Computer Vision',
-      description: 'Analyze and interpret visual information',
-      benefits: ['Image recognition',Object detection',Video analysis'],
-    },
-    {
-      icon: TrendingUp,
-      title: 'Predictive Analytics',
-      description: 'Forecast future trends and behaviors',
-      benefits: ['Risk assessment',Demand forecasting',Customer behavior'],
-    },
-    {
-      icon: Zap,
-      title: 'Process Automation',
-      description: 'Streamline operations with intelligent automation',
-      benefits: [
-        'Workflow optimization',Error reduction',Efficiency gains',
-      ],
-    },
-  ];
-
-  const useCases = [
-    {
-      industry: 'Healthcare',
-      icon: Heart,
-      applications: [
-        'Diagnostic assistance',Patient monitoring',Drug discovery',
-      ],
-      color: 'from-red-500 to-pink-600',
-    },
-    {
-      industry: 'Finance',
-      icon: DollarSign,
-      applications: [
-        'Fraud detection',Risk assessment',Trading algorithms',
-      ],
-      color: 'from-green-500 to-emerald-600',
-    },
-    {
-      industry: 'Manufacturing',
-      icon: Building,
-      applications: [
-        'Predictive maintenance',Quality control',Supply chain optimization',
-      ],
-      color: 'from-blue-500 to-cyan-600',
-    },
-    {
-      industry: 'Retail',
-      icon: ShoppingCart,
-      applications: [
-        'Customer segmentation',Inventory management',Personalized recommendations',
-      ],
-      color: 'from-purple-500 to-indigo-600',
-    },
-  ];
-
-  const technologies = [
-    {
-      name: 'TensorFlow',
-      description: 'Open-source machine learning framework',
-      icon: Brain,
-    },
-    {
-      name: 'PyTorch',
-      description: 'Deep learning platform with dynamic computation',
-      icon: Brain,
-    },
-    {
-      name: 'Scikit-learn',
-      description: 'Machine learning library for Python',
-      icon: Code,
-    },
-    {
-      name: 'OpenAI GPT',
-      description: 'Advanced language model for text generation',
-      icon: FileText,
-    },
-    {
-      name: 'Computer Vision APIs',
-      description: 'Pre-trained models for image analysis',
-      icon: Eye,
-    },
-    {
-      name: 'Natural Language APIs',
-      description: 'Text processing and understanding',
-      icon: Users,
-    },
-  ];
-
+  
+  
+  
   return 
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
@@ -216,7 +103,7 @@ export function AISolutions(...args: unknown[]): unknown {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-center justify-center gap-3 mb-6">
-              <Brain className="w-16 h-16 text-cyan-400" />
+              <Brain className="w-16 h-16 text-cyan-400"  />
               <h1 className="text-5xl font-bold">AI Solutions</h1>
             </div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -230,7 +117,7 @@ export function AISolutions(...args: unknown[]): unknown {
                 className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2"
               >
                 Get Started
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
               <Link
                 to="/request-quote"
@@ -288,7 +175,7 @@ export function AISolutions(...args: unknown[]): unknown {
                       key={idx}
                       className="flex items-center gap-2 text-sm text-gray-400"
                     >
-                      <CheckCircle className="w-4 h-4 text-cyan-400" />
+                      <CheckCircle className="w-4 h-4 text-cyan-400"  />
                       {benefit}
                     </li>
                   ))}
@@ -344,7 +231,7 @@ export function AISolutions(...args: unknown[]): unknown {
                       key={idx}
                       className="flex items-center gap-3 text-gray-300"
                     >
-                      <ArrowRight className="w-4 h-4 text-cyan-400" />
+                      <ArrowRight className="w-4 h-4 text-cyan-400"  />
                       {application}
                     </li>
                   ))}
@@ -419,7 +306,7 @@ export function AISolutions(...args: unknown[]): unknown {
                 className="bg-white text-cyan-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2"
               >
                 Schedule Consultation
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
               <Link
                 to="/services"
@@ -432,7 +319,6 @@ export function AISolutions(...args: unknown[]): unknown {
         </div>
       </section>
     </div>
-  );
-}
+  )}
 
 export default AISolutions;

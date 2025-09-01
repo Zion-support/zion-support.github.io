@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   BarChart3, 
   TrendingUp, 
@@ -87,8 +85,7 @@ showMetrics:  true,;
           profit: 700000,
 <<<<<<< HEAD
           growth: 15.5,
-          keyMetrics['Revenue Growth',Profit Margin',Cost Efficiency'];
-        },;
+          keyMetrics['Revenue Growth',Profit Margin',Cost Efficiency']},;
         lastUpdated: '2024-01-15',
         status: 'active',
         priority: 'high',
@@ -97,8 +94,7 @@ showMetrics:  true,;
         author: 'Sarah Johnson',
 =======
           growth: 15.5,'
-          keyMetrics['Revenue Growth', 'Profit Margin', 'Cost Efficiency'];
-        },;'
+          keyMetrics['Revenue Growth', 'Profit Margin', 'Cost Efficiency']},;'
         lastUpdated: '2024-01-15','
         status: 'active','
         priority: 'high','
@@ -122,8 +118,7 @@ showMetrics:  true,;
           uptime: 99.9,
 <<<<<<< HEAD
           userSatisfaction: 4.6,
-          keyMetrics['Accuracy',Response Time',Uptime',User Satisfaction'];
-        },;
+          keyMetrics['Accuracy',Response Time',Uptime',User Satisfaction']},;
         lastUpdated: '2024-01-14',
         status: 'active',
         priority: 'critical',
@@ -132,8 +127,7 @@ showMetrics:  true,;
         author: 'Michael Chen',
 =======
           userSatisfaction: 4.6,'
-          keyMetrics['Accuracy', 'Response Time', 'Uptime', 'User Satisfaction'];
-        },;'
+          keyMetrics['Accuracy', 'Response Time', 'Uptime', 'User Satisfaction']},;'
         lastUpdated: '2024-01-14','
         status: 'active','
         priority: 'critical','
@@ -157,8 +151,7 @@ showMetrics:  true,;
 <<<<<<< HEAD
           responseTime: 2.3,
           riskLevel: 'Medium',
-          keyMetrics['Threats Detected',Incidents Resolved',Response Time',Risk Level'];
-        },;
+          keyMetrics['Threats Detected',Incidents Resolved',Response Time',Risk Level']},;
         lastUpdated: '2024-01-13',
         status: 'active',
         priority: 'high',
@@ -168,8 +161,7 @@ showMetrics:  true,;
 =======
           responseTime: 2.3,'
           riskLevel: 'Medium','
-          keyMetrics['Threats Detected', 'Incidents Resolved', 'Response Time', 'Risk Level'];
-        },;'
+          keyMetrics['Threats Detected', 'Incidents Resolved', 'Response Time', 'Risk Level']},;'
         lastUpdated: '2024-01-13','
         status: 'active','
         priority: 'high','
@@ -193,8 +185,7 @@ showMetrics:  true,;
           storageUsage: 65.8,
 <<<<<<< HEAD
           networkTraffic: 45.2,
-          keyMetrics['CPU Utilization',Memory Usage',Storage Usage',Network Traffic'];
-        },;
+          keyMetrics['CPU Utilization',Memory Usage',Storage Usage',Network Traffic']},;
         lastUpdated: '2024-01-12',
         status: 'active',
         priority: 'medium',
@@ -203,8 +194,7 @@ showMetrics:  true,;
         author: 'Lisa Thompson',
 =======
           networkTraffic: 45.2,'
-          keyMetrics['CPU Utilization', 'Memory Usage', 'Storage Usage', 'Network Traffic'];
-        },;'
+          keyMetrics['CPU Utilization', 'Memory Usage', 'Storage Usage', 'Network Traffic']},;'
         lastUpdated: '2024-01-12','
         status: 'active','
         priority: 'medium','
@@ -228,8 +218,7 @@ showMetrics:  true,;
 <<<<<<< HEAD
           responseRate: 89.5,
           topConcerns['Response Time',Documentation',Support Quality'],;
-          keyMetrics['Overall Satisfaction',NPS',Response Rate',Top Concerns'];
-        },;
+          keyMetrics['Overall Satisfaction',NPS',Response Rate',Top Concerns']},;
         lastUpdated: '2024-01-11',
         status: 'active',
         priority: 'medium',
@@ -239,8 +228,7 @@ showMetrics:  true,;
 =======
           responseRate: 89.5,'
           topConcerns['Response Time', 'Documentation', 'Support Quality'],;'
-          keyMetrics['Overall Satisfaction', 'NPS', 'Response Rate', 'Top Concerns'];
-        },;'
+          keyMetrics['Overall Satisfaction', 'NPS', 'Response Rate', 'Top Concerns']},;'
         lastUpdated: '2024-01-11','
         status: 'active','
         priority: 'medium','
@@ -312,9 +300,7 @@ showMetrics:  true,;
   ;
   ;
   ;
-  critical: 4 ;
-
-};          aValue = priorityOrder[a.priority as keyof typeof priorityOrder];
+  critical: 4 };          aValue = priorityOrder[a.priority as keyof typeof priorityOrder];
           bValue = priorityOrder[b.priority as keyof typeof priorityOrder];
           break;
         case 'title':;
@@ -326,11 +312,9 @@ showMetrics:  true,;
           bValue = 0}
 
       if (sortOrder = == 'asc') {;
-        return aValue > bValue ? 1 : -1;
-      } else {
+        return aValue > bValue ? 1 : -1} else {
 
-        return aValue < bValue ? 1 : -1;
-      }
+        return aValue < bValue ? 1 : -1}
     }) ;
     setFilteredReports (filtered.slice (0, maxReports) ) }, [reports, selectedType, selectedCategory, selectedStatus, searchQuery, sortBy, sortOrder, maxReports]) ;
 

@@ -1,6 +1,3 @@
-import React, { useState, useMemo } from 'react.ts';
-import { motion } from 'framer-motion.ts';
-import { Helmet } from 'react-helmet-async.ts';
 import {
 
   Search,
@@ -27,7 +24,6 @@ import {
   Plus,
   Database,
   Layers} from 'lucide-react.ts';
-import {
 
   comprehensiveServicesIndex2025,
   getServiceStats,
@@ -41,12 +37,9 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
   const [selectedSource, setSelectedSource] = useState<any>('all');
   const [viewMode, setViewMode] = useState<any>('grid');
 
-  const stats = getServiceStats();
-  const categories = stats.categoryBreakdown;
-
-  const filteredServices = useMemo(() => {
-    let filtered = comprehensiveServicesIndex2025;
-
+  
+  
+  
     if (searchTerm) {
 
       filtered = filtered.filter()
@@ -56,82 +49,52 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
             .toLowerCase()
             .includes(searchTerm.toLowerCase()) ||
           service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    }
+      )}
 
     if (selectedCategory !== 'all') {
 
       filtered = filtered.filter()
         service => service.category === selectedCategory
-      );
-    }
+      )}
 
     if (selectedSource !== 'all') {
 
-      filtered = filtered.filter(service => service.source === selectedSource);
-    }
+      filtered = filtered.filter(service => service.source === selectedSource)}
 
-    return filtered;
-  }, [searchTerm, selectedCategory, selectedSource]);
+    return filtered}, [searchTerm, selectedCategory, selectedSource]);
 
-  const getCategoryColor = (category: anystring) => {
-
-    const colors: { [key: string]: string } = {
-
-      fintech: 'from-green-500 to-emerald-600',
-      healthtech: 'from-red-500 to-pink-600',
-      edutech: 'from-purple-500 to-violet-600',
-      martech: 'from-pink-500 to-rose-600',micro-saas': 'from-blue-500 to-indigo-600',ai-services': 'from-cyan-500 to-blue-600',it-services': 'from-slate-500 to-gray-600',emerging-tech': 'from-orange-500 to-yellow-600',
-      Fintech: 'from-green-500 to-emerald-600',
-      Healthtech: 'from-red-500 to-pink-600',
-      Edutech: 'from-purple-500 to-violet-600',
-      Martech: 'from-pink-500 to-rose-600',Micro SaaS': 'from-blue-500 to-indigo-600',AI Services': 'from-cyan-500 to-blue-600',IT Services': 'from-slate-500 to-gray-600'};
-    return colors[category] || 'from-gray-500 to-gray-600';
-  };
+  
+    return colors[category] || 'from-gray-500 to-gray-600'};
   const getCategoryIcon = (category: anystring) => {
 
     const icons: { [key: string]: React.ReactNode } = {
 
-      fintech: <DollarSign className="w-5 h-5" />,"
-      healthtech: <Heart className="w-5 h-5" />,"
-      edutech: <GraduationCap className="w-5 h-5" />,"
-      martech: <Target className="w-5 h-5" />,"
-      'micro-saas': <Settings className="w-5 h-5" />,"
-      'ai-services': <Zap className="w-5 h-5" />,"
-      'it-services': <Shield className="w-5 h-5" />,"
-      'emerging-tech': <TrendingUp className="w-5 h-5" />,"
-      Fintech: <DollarSign className="w-5 h-5" />,"
-      Healthtech: <Heart className="w-5 h-5" />,"
-      Edutech: <GraduationCap className="w-5 h-5" />,"
-      Martech: <Target className="w-5 h-5" />,"
-      'Micro SaaS': <Settings className="w-5 h-5" />,"
-      'AI Services': <Zap className="w-5 h-5" />,"
-      'IT Services': <Shield className="w-5 h-5" />};"
-    return icons[category] || <Globe className="w-5 h-5" />;
-  };
+      fintech: <DollarSign className="w-5 h-5"  />,"
+      healthtech: <Heart className="w-5 h-5"  />,"
+      edutech: <GraduationCap className="w-5 h-5"  />,"
+      martech: <Target className="w-5 h-5"  />,"
+      'micro-saas': <Settings className="w-5 h-5"  />,"
+      'ai-services': <Zap className="w-5 h-5"  />,"
+      'it-services': <Shield className="w-5 h-5"  />,"
+      'emerging-tech': <TrendingUp className="w-5 h-5"  />,"
+      Fintech: <DollarSign className="w-5 h-5"  />,"
+      Healthtech: <Heart className="w-5 h-5"  />,"
+      Edutech: <GraduationCap className="w-5 h-5"  />,"
+      Martech: <Target className="w-5 h-5"  />,"
+      'Micro SaaS': <Settings className="w-5 h-5"  />,"
+      'AI Services': <Zap className="w-5 h-5"  />,"
+      'IT Services': <Shield className="w-5 h-5"  />};"
+    return icons[category] || <Globe className="w-5 h-5"  />};
 
-  const getSourceBadge = (source: anystring) => {
-
-    const badges = {
-
-      existing: { color: 'bg-blue-100 text-blue-800', text: 'Existing' },
-      new: { color: 'bg-green-100 text-green-800', text: 'New' },pricing-guide': {
-
-        color: 'bg-purple-100 text-purple-800',
-        text: 'Pricing Guide'}};
-    const badge = badges[source as keyof typeof badges] || {
-
-      color: 'bg-gray-100 text-gray-800',
-      text: source};
-
+  
+    
     return()
       <span
         className={`px-2 py-1 rounded-full text-xs font-medium ${badge.color}`}
       >
         {badge.text}
       </span>
-    );
-  };
+    )};
 
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
@@ -170,15 +133,15 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">"
               <div className="flex items-center space-x-2 text-white">"
-                <Database className="w-5 h-5 text-blue-400" />
+                <Database className="w-5 h-5 text-blue-400"  />
                 <span>{stats.total} Total Services</span>
               </div>"
               <div className="flex items-center space-x-2 text-white">"
-                <Layers className="w-5 h-5 text-green-400" />
+                <Layers className="w-5 h-5 text-green-400"  />
                 <span>{stats.categories} Categories</span>
               </div>"
               <div className="flex items-center space-x-2 text-white">"
-                <Plus className="w-5 h-5 text-yellow-400" />
+                <Plus className="w-5 h-5 text-yellow-400"  />
                 <span>{stats.new} New Services</span>
               </div>
             </div>
@@ -192,15 +155,15 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">"
             <div className="flex items-center space-x-6">"
               <div className="flex items-center space-x-2 text-gray-600">"
-                <Phone className="w-4 h-4" />
+                <Phone className="w-4 h-4"  />
                 <span>+1 302 464 0950</span>
               </div>"
               <div className="flex items-center space-x-2 text-gray-600">"
-                <Mail className="w-4 h-4" />
+                <Mail className="w-4 h-4"  />
                 <span>kleber@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center space-x-2 text-gray-600">"
-                <MapPin className="w-4 h-4" />
+                <MapPin className="w-4 h-4"  />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
@@ -211,7 +174,7 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
               className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium"
             >
               <span>Visit Our Website</span>"
-              <ExternalLink className="w-4 h-4" />
+              <ExternalLink className="w-4 h-4"  />
             </a>
           </div>
         </div>
@@ -231,7 +194,7 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
               className="bg-white rounded-xl p-6 shadow-lg border border-gray-100"
             >"
               <div className="flex items-center space-x-3">"
-                <Database className="w-8 h-8 text-blue-600" />
+                <Database className="w-8 h-8 text-blue-600"  />
                 <div>"
                   <p className="text-sm text-gray-600">Total Services</p>"
                   <p className="text-2xl font-bold text-gray-800">
@@ -248,7 +211,7 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
               className="bg-white rounded-xl p-6 shadow-lg border border-gray-100"
             >"
               <div className="flex items-center space-x-3">"
-                <Layers className="w-8 h-8 text-green-600" />
+                <Layers className="w-8 h-8 text-green-600"  />
                 <div>"
                   <p className="text-sm text-gray-600">Categories</p>"
                   <p className="text-2xl font-bold text-gray-800">
@@ -265,7 +228,7 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
               className="bg-white rounded-xl p-6 shadow-lg border border-gray-100"
             >"
               <div className="flex items-center space-x-3">"
-                <Plus className="w-8 h-8 text-yellow-600" />
+                <Plus className="w-8 h-8 text-yellow-600"  />
                 <div>"
                   <p className="text-sm text-gray-600">New Services</p>"
                   <p className="text-2xl font-bold text-gray-800">
@@ -302,7 +265,7 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
             {/* Search */}"
             <div className="flex-1">"
               <div className="relative">"
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                 <input"
                   type="text"
                   placeholder="Search services..."
@@ -379,7 +342,7 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
         <div className="max-w-7xl mx-auto">
           {filteredServices.length === 0 ? ("
             <div className="text-center py-12">"
-              <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />"
+              <Search className="w-16 h-16 text-gray-400 mx-auto mb-4"  />"
               <h3 className="text-xl font-semibold text-gray-600 mb-2">
                 No services found
               </h3>"
@@ -447,7 +410,7 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
                           className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 px-4 rounded-lg font-medium hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 flex items-center justify-center space-x-2"
                         >
                           <span>Learn More</span>"
-                          <ArrowRight className="w-4 h-4" />
+                          <ArrowRight className="w-4 h-4"  />
                         </a>
                       </div>
                     </motion.div>
@@ -517,14 +480,14 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
               href="tel:+13024640950"
               className="inline-flex items-center space-x-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
             >"
-              <Phone className="w-5 h-5" />
+              <Phone className="w-5 h-5"  />
               <span>Call +1 302 464 0950</span>
             </a>
             <a"
               href="mailto:kleber@ziontechgroup.com"
               className="inline-flex items-center space-x-2 bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors"
             >"
-              <Mail className="w-5 h-5" />
+              <Mail className="w-5 h-5"  />
               <span>Email Us</span>
             </a>
           </div>
@@ -570,7 +533,6 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
         </div>
       </footer>
     </div>
-  );
-};
+  )};
 export default ComprehensiveServicesDashboard2025;
 '"`

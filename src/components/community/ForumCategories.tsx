@@ -192,6 +192,5 @@ export default function ForumCategories(...args[]):  {
         </div>;
       </div>;
     </section>;
-  );
-}
+  )}
 '"

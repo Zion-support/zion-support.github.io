@@ -9,6 +9,5 @@ export default function EnterpriseSolutions() {
         </p>
       </div>
     </div>
-  );
-}
+  )}
 '"

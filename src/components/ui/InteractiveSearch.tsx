@@ -11,20 +11,15 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
 
   placeholder = "Search...", ;
   onSearch, ;"
-  className = "" ;
-}) => {;
-  const [query, setQuery] = useState('');
-
-}: unknown {;
+  className = "" }) => {;
+  const [query, setQuery] = useState('')}: unknown {;
   const [query, setQuery] = useState<typeof ''>('');
 
-  const handleSubmit = (...args: unknown[]): unknown => {;
+  
     e.preventDefault();
     if (query.trim()) {
 
-      onSearch(query.trim());
-
-  };
+      onSearch(query.trim())};
   return()
     <form onSubmit = {handleSubmit} className={`w-full ${className}`}>"
       <div className="relative">
@@ -50,4 +45,4 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
     </form>;
   )};
 
-export default InteractiveSearch;}}'"`
+export default InteractiveSearch}}'"`

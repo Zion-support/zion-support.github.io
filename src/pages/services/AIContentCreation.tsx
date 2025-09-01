@@ -1,6 +1,3 @@
-import React from 'react.ts';
-import { motion } from 'framer-motion.ts';
-import { Link } from 'react-router-dom.ts';
 import {
 
   PenTool,
@@ -23,69 +20,12 @@ import {
   Sparkles,
   Lightbulb,
   BarChart3} from 'lucide-react.ts';
-import { SEO } from '@/components/SEO';
 
 export default function AIContentCreation(...args: any[]): any {
 
-  const features = [
-    {
-
-      icon: Brain,
-      title: 'AI-Powered Writing',
-      description:'
-        'Generate high-quality content with advanced language models'},
-    {
-
-      icon: Image,
-      title: 'Visual Content',
-      description: 'Create stunning images, graphics, and visual assets'},
-    {
-
-      icon: Video,
-      title: 'Video Production',
-      description: 'Generate and edit videos with AI-driven tools'},
-    {
-
-      icon: Globe,
-      title: 'Multi-Language',
-      description: 'Create content in multiple languages automatically'},
-  ];
-
-  const services = [
-    {
-
-      title: 'Content Writing',
-      description:'
-        'AI-powered writing assistance for blogs, articles, and marketing copy',
-      icon: PenTool,
-      features: ['
-        'Blog post generation',SEO-optimized content',Brand voice consistency',
-      ]},
-    {
-
-      title: 'Visual Design',
-      description:'
-        'Create compelling graphics, logos, and visual content with AI',
-      icon: Palette,
-      features: ['Logo design',Social media graphics',Brand assets']},
-    {
-
-      title: 'Video Creation',
-      description: 'Generate and edit videos for marketing and social media',
-      icon: Video,
-      features: ['Video generation',Auto-editing',Caption generation']},
-    {
-
-      title: 'Audio Content',
-      description: 'Create podcasts, voice-overs, and audio content with AI',
-      icon: Mic,
-      features: ['Voice synthesis',Audio editing',Podcast generation']},
-  ];
-
-  const technologies = ['
-    'Natural Language Processing (NLP),Generative Adversarial Networks (GANs),Computer Vision',Speech Synthesis',Content Optimization',Brand Voice Training',Multi-Modal AI',Content Analytics',
-  ];
-
+  
+  
+  
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO"
@@ -108,7 +48,7 @@ export default function AIContentCreation(...args: any[]): any {
             className="text-center max-w-4xl mx-auto"
           >"
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium mb-6">"
-              <PenTool className="w-4 h-4 mr-2" />              AI Content Creation
+              <PenTool className="w-4 h-4 mr-2"  />              AI Content Creation
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -130,7 +70,7 @@ export default function AIContentCreation(...args: any[]): any {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-pink-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20"
               >
                 Start Creating"
-                <ArrowRight className="w-5 h-5 ml-2" />              </Link>
+                <ArrowRight className="w-5 h-5 ml-2"  />              </Link>
               <Link"
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200"
@@ -225,7 +165,7 @@ export default function AIContentCreation(...args: any[]): any {
                       key={featureIndex}"
                       className="flex items-center text-slate-300"
                     >"
-                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />                      {feature}
+                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0"  />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -262,7 +202,7 @@ export default function AIContentCreation(...args: any[]): any {
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 className="flex items-center p-4 bg-slate-800/50 border border-slate-700/50 rounded-lg hover:border-purple-400/30 transition-all duration-200"
               >"
-                <Sparkles className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />"                <span className="text-white text-sm">{tech}</span>
+                <Sparkles className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0"  />"                <span className="text-white text-sm">{tech}</span>
               </motion.div>
             ))}
           </div>
@@ -291,7 +231,7 @@ export default function AIContentCreation(...args: any[]): any {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-pink-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20"
               >
                 Start Creating Today"
-                <ArrowRight className="w-5 h-5 ml-2" />              </Link>
+                <ArrowRight className="w-5 h-5 ml-2"  />              </Link>
               <Link"
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200"
@@ -303,6 +243,5 @@ export default function AIContentCreation(...args: any[]): any {
         </div>
       </section>
     </div>
-  );
-}
+  )}
 '"

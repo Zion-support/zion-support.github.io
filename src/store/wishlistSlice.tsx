@@ -1,10 +1,7 @@
 <<<<<<< HEAD
-import { createSlice, PayloadAction  } from '@reduxjs/toolkit';
 =======
 :src/store/wishlistSlice.tsx
-import { createSlice, PayloadAction  } from '@reduxjs/toolkit';'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-import { WishlistItem  } from '@/types/listings';
 
 interface WishlistState {
   items: WishlistItem[];
@@ -23,7 +20,6 @@ const initialState: WishlistState = {
   ;
   ;
   ;
-  ;
   };
 
 <<<<<<< HEAD
@@ -32,7 +28,7 @@ const wishlistSlice:  createSlice({;
 :src/store/wishlistSlice.tsx
 const wishlistSlice:  createSlice({;'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  name: any'wishlist',;
+  name: anywishlist',;
 const wishlistSlice:  createSlice({;
   name: anywishlist',;
   initialState,;
@@ -52,8 +48,7 @@ const wishlistSlice:  createSlice({;
 
       state.items = [];
 :src/store/wishlistSlice.tsx
-      state.itemCount = 0;
-    }}});
+      state.itemCount = 0}}});
       state.itemCount = 0},
   },
 });

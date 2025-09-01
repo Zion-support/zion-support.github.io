@@ -1,5 +1,3 @@
-import React from 'react.ts';
-import { motion } from 'framer-motion.ts';
 import {
 
   BarChart3,
@@ -25,135 +23,11 @@ import {
   Phone,
   Mail,
   MapPin} from 'lucide-react.ts';
-import { SEO } from '../../components/SEO';
 
-const AIBusinessIntelligenceDashboard = () => {
-  const features = [
-    {
 
-      icon: Brain,
-      title: 'AI-Powered Insights',
-      description:'
-        'Advanced machine learning algorithms that automatically identify trends, anomalies, and opportunities in your data'},
-    {
-
-      icon: BarChart3,
-      title: 'Real-time Analytics',
-      description:'
-        'Live dashboards with real-time data updates from multiple sources including CRM, ERP, and external APIs'},
-    {
-
-      icon: TrendingUp,
-      title: 'Predictive Analytics',
-      description:'
-        'Forecast future trends and outcomes using historical data and AI models with 95%+ accuracy'},
-    {
-
-      icon: Zap,
-      title: 'Automated Reporting',
-      description:'
-        'Intelligent report generation that adapts to your business needs and automatically highlights key insights'},
-    {
-
-      icon: Shield,
-      title: 'Enterprise Security',
-      description:'
-        'Bank-grade security with role-based access control, data encryption, and compliance with GDPR, HIPAA, and SOC 2'},
-    {
-
-      icon: Globe,
-      title: 'Multi-platform Access',
-      description:'
-        'Access your dashboards from anywhere - web, mobile apps, and integrate with existing business tools'},
-  ];
-
-  const pricingPlans = [
-    {
-
-      name: 'Starter',
-      price: '$299',
-      period: '/month',
-      description: 'Perfect for small businesses and startups',
-      features: ['
-        'Up to 5 data sources',Basic AI insights',5 user licenses',Standard reports',Email support',Basic integrations',
-      ],
-      popular: false},
-    {
-
-      name: 'Professional',
-      price: '$799',
-      period: '/month',
-      description: 'Ideal for growing businesses and teams',
-      features: ['
-        'Up to 20 data sources',Advanced AI analytics',25 user licenses',Custom dashboards',Priority support',API access',Advanced integrations',White-label options',
-      ],
-      popular: true},
-    {
-
-      name: 'Enterprise',
-      price: '$2,499',
-      period: '/month',
-      description: 'For large organizations with complex needs',
-      features: ['
-        'Unlimited data sources',Custom AI models',Unlimited users',Advanced security',Dedicated support',Custom development',On-premise options',SLA guarantees',
-      ],
-      popular: false},
-  ];
-
-  const useCases = [
-    {
-
-      title: 'Sales Performance Analytics',
-      description:'
-        'Track sales metrics, pipeline analysis, and revenue forecasting with AI-powered insights',
-      icon: TrendingUp},
-    {
-
-      title: 'Customer Behavior Analysis',
-      description:'
-        'Understand customer patterns, churn prediction, and lifetime value optimization',
-      icon: Users},
-    {
-
-      title: 'Financial Performance Tracking',
-      description:'
-        'Monitor KPIs, budget vs actual, and financial forecasting with automated alerts',
-      icon: BarChart3},
-    {
-
-      title: 'Operational Efficiency',
-      description:'
-        'Identify bottlenecks, optimize processes, and improve productivity across teams',
-      icon: Activity},
-  ];
-
-  const testimonials = [
-    {
-
-      name: 'Sarah Johnson',
-      role: 'VP of Operations',
-      company: 'TechFlow Solutions',
-      content:'
-        "The AI insights have transformed how we make decisions. We've increased efficiency by 40% and reduced costs significantly.",
-      rating: 5},
-    {
-
-      name: 'Michael Chen',
-      role: 'Data Scientist',
-      company: 'InnovateCorp',
-      content:'
-        'The predictive analytics capabilities are incredible. We can now forecast trends with remarkable accuracy.',
-      rating: 5},
-    {
-
-      name: 'Emily Rodriguez',
-      role: 'CEO',
-      company: 'StartupXYZ',
-      content:'
-        'This dashboard has given us enterprise-level insights at a fraction of the cost. Game-changer for our business.',
-      rating: 5},
-  ];
-
+  
+  
+  
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO"
@@ -170,7 +44,7 @@ const AIBusinessIntelligenceDashboard = () => {
             className="text-center relative z-10"
           >"
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-sm font-medium mb-8 backdrop-blur-sm">"
-              <Brain className="w-4 h-4 mr-2 text-cyan-400" />              AI-Powered Business Intelligence
+              <Brain className="w-4 h-4 mr-2 text-cyan-400"  />              AI-Powered Business Intelligence
             </div>
 "
             <h1 className="text-5xl md:text-7xl font-bold mb-6">"
@@ -194,12 +68,12 @@ const AIBusinessIntelligenceDashboard = () => {
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 flex items-center group"
               >
                 Start Free Trial"
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />              </a>
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"  />              </a>
               <a"
                 href="#demo"
                 className="border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center group"
               >"
-                <Play className="w-5 h-5 mr-2" />                Watch Demo
+                <Play className="w-5 h-5 mr-2"  />                Watch Demo
               </a>
             </div>
           </motion.div>
@@ -371,7 +245,7 @@ const AIBusinessIntelligenceDashboard = () => {
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, idx) => ("
                       <li key={idx} className="flex items-center text-gray-300">"
-                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />                        {feature}
+                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0"  />                        {feature}
                       </li>
                     ))}
                   </ul>
@@ -424,10 +298,9 @@ const AIBusinessIntelligenceDashboard = () => {
                 <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">"
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star
-                        key={i}"
+                      <Star key={i}"
                         className="w-5 h-5 fill-current text-yellow-400"
-                      />                    ))}
+                       />                    ))}
                   </div>"
                   <p className="text-gray-300 mb-6 italic">"
                     "{testimonial.content}"
@@ -472,12 +345,12 @@ const AIBusinessIntelligenceDashboard = () => {
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 flex items-center group"
               >
                 Start Free Trial"
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />              </a>
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"  />              </a>
               <a"
                 href="tel:+13024640950"
                 className="border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center group"
               >"
-                <Phone className="w-5 h-5 mr-2" />                Call +1 302 464 0950
+                <Phone className="w-5 h-5 mr-2"  />                Call +1 302 464 0950
               </a>
             </div>
           </motion.div>
@@ -490,7 +363,7 @@ const AIBusinessIntelligenceDashboard = () => {
           <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
             <div className="flex flex-col items-center">"
-              <Phone className="w-8 h-8 text-cyan-400 mb-4" />"              <div className="text-white font-semibold">Phone</div>
+              <Phone className="w-8 h-8 text-cyan-400 mb-4"  />"              <div className="text-white font-semibold">Phone</div>
               <a"
                 href="tel:+13024640950"
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"
@@ -499,7 +372,7 @@ const AIBusinessIntelligenceDashboard = () => {
               </a>
             </div>"
             <div className="flex flex-col items-center">"
-              <Mail className="w-8 h-8 text-cyan-400 mb-4" />"              <div className="text-white font-semibold">Email</div>
+              <Mail className="w-8 h-8 text-cyan-400 mb-4"  />"              <div className="text-white font-semibold">Email</div>
               <a"
                 href="mailto:kleber@ziontechgroup.com"
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"
@@ -508,7 +381,7 @@ const AIBusinessIntelligenceDashboard = () => {
               </a>
             </div>"
             <div className="flex flex-col items-center">"
-              <MapPin className="w-8 h-8 text-cyan-400 mb-4" />"
+              <MapPin className="w-8 h-8 text-cyan-400 mb-4"  />"
               <div className="text-white font-semibold">Address</div>"              <div className="text-gray-300 text-sm">
                 364 E Main St STE 1008
                 <br />

@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import {
 
   Shield,
@@ -43,8 +41,6 @@ export default function CybersecuritySolutions(...args[]):  {
       features["24/7 Monitoring", "Real-time Alerts", "Incident Response", "Threat Intelligence"],;"
       color: "from-zion-red to-zion-orange"
 =======
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';      color: "from-zion-red to-zion-orange"
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
@@ -85,11 +81,10 @@ import { motion } from 'framer-motion';      color: "from-zion-red to-zion-orang
       title: "Cloud Security",;"
       description: "Secure your cloud infrastructure and applications",;"
       features: ["Cloud Access Security", "API Security", "Container Security", "Cloud Compliance"],;"
-      color: "from-zion-indigo to-zion-purple";
-    };
+      color: "from-zion-indigo to-zion-purple"};
   ];
 
-  const threatTypes = [;
+  
     { id: 'all', name: 'All Threats', icon: Shield },;
     { id: 'malware', name: 'Malware', icon: Bug },;
     { id: 'phishing', name: 'Phishing', icon: Target },;
@@ -204,35 +199,17 @@ import { motion } from 'framer-motion';      color: "from-zion-red to-zion-orang
     { metric: "24/7", label: "Security Coverage", description: "Round-the-clock security operations" };
   ];
 
-  const containerVariants = {
-
-    hidden: { opacity: 0 },;
+  
     visible: {
       opacity: 1,;
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
-
-  const itemVariants = {
-
-  hidden: { opacity: 0,
-  y: 20 
-
-;
-},;
+        staggerChildren: 0.1}}}},;
     visible: {
       opacity: 1,;
       y: 0,;
-      transition: { duration: 0.6 };
-    };
-  };
+      transition: { duration: 0.6 }}};
 
-  const filteredThreats = selectedThreat === 'all'
-    ? securityThreats
-    : securityThreats.filter (threat => threat.type === selectedThreat) ;
-
+  
   return ("    <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}"
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-red-dark to-zion-red overflow-hidden">"
@@ -259,7 +236,7 @@ import { motion } from 'framer-motion';      color: "from-zion-red to-zion-orang
 "
             <div className="flex justify-center mb-8">"
               <div className="w-24 h-24 bg-gradient-to-r from-zion-red to-zion-orange rounded-2xl flex items-center justify-center">"
-                <Shield className="w-12 h-12 text-white" />              </div>
+                <Shield className="w-12 h-12 text-white"  />              </div>
             </div>
 "
             <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
@@ -347,7 +324,7 @@ import { motion } from 'framer-motion';      color: "from-zion-red to-zion-orang
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => ("
                     <li key={idx} className="flex items-center text-zion-slate-light">"
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />                      {feature}
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0"  />                      {feature}
                     </li>) ) }
                 </ul>
               </motion.div>) ) }
@@ -393,20 +370,17 @@ import { motion } from 'framer-motion';      color: "from-zion-red to-zion-orang
             initial = {
 
   { opacity: 0,
-  y: 20 ;
-
-}}            whileInView = {
+  y: 20 }}            whileInView = {
 
   { opacity: 1,
   y: 0 
 
-;
 }};
             transition={{ duration: 0.6 }};
             viewport={{ once: true }};
           >;
             {threatTypes.map ( (threat) => {;
-              const Icon = threat.icon;
+              
               return()                <button
                   key = {threat.id}
                   onClick={() => setSelectedThreat(threat.id)}`
@@ -417,10 +391,9 @@ import { motion } from 'framer-motion';      color: "from-zion-red to-zion-orang
                       : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark hover:text-white border border-zion-red/20'`
                   }`};
                 >;"
-                  <Icon className="w-5 h-5" />;
+                  <Icon className="w-5 h-5"  />;
                   {threat.name};
-                </button>;) ;
-            }) }          </motion.div>
+                </button>;) }) }          </motion.div>
 
           {/* Threats Grid */}
           <motion.div"
@@ -681,7 +654,7 @@ import { motion } from 'framer-motion';      color: "from-zion-red to-zion-orang
 
                 {index < 3 && (;"
                   <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">"
-                    <ArrowRight className="w-8 h-8 text-zion-red" />                  </div>
+                    <ArrowRight className="w-8 h-8 text-zion-red"  />                  </div>
                 )}
               </motion.div>;
             ))}
@@ -731,6 +704,5 @@ import { motion } from 'framer-motion';      color: "from-zion-red to-zion-orang
           </motion.div>;
         </div>;
       </section>;
-    </div>;) ;
-}
+    </div>;) }
 '"`

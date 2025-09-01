@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
 import {
 
   Star,
@@ -13,14 +11,10 @@ import {
   Heart'
 } from 'lucide-react';
 
-      metrics['8 Week Launch',MVP Ready',Scalable Architecture'];
-    };
+      metrics['8 Week Launch',MVP Ready',Scalable Architecture']};
   ];
 
-  const successMetrics = ['
-    { label: 'Client Satisfaction', value: '98%', icon: Heart },
-    { label: 'Project Success Rate', value: '99%', icon: CheckCircle },
-    { label: 'Client Retention', value: '95%', icon: Users },;
+  
     { label: 'Average Rating', value: '4.9/5', icon: Star };
   ];
 const successStories = [
@@ -76,12 +70,9 @@ const successStories = [
     author: "Dr. Emily Rodriguez",;"
     position: "Chief Medical Officer",;
     rating: 5,;"
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400";
-  };
+    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400"};
 ];
 =======
-import React from 'react';'
-import { motion } from 'framer-motion';];
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 export function ClientSuccessStoriesSection() {
@@ -135,12 +126,12 @@ export function ClientSuccessStoriesSection() {
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
         >;
           {successMetrics.map ( (metric, index) => {;
-            const IconComponent = metric.icon;
+            
             return ("
               <div key = {metric.label} className="text-center">"
                 <div className="flex justify-center mb-4">"
                   <div className="p-3 bg-green-100 rounded-full">"
-                    <IconComponent className="h-8 w-8 text-green-600" />                  </div>
+                    <IconComponent className="h-8 w-8 text-green-600"  />                  </div>
                 </div>"
                 <div className="text-3xl font-bold text-gray-900 mb-2">
                   {metric.value}
@@ -325,11 +316,11 @@ export function ClientSuccessStoriesSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-green-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Start Your Project"
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </button>"
               <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-green-600 rounded-lg font-medium transition-colors duration-200">
                 View All Case Studies"
-                <Award className="ml-2 h-5 w-5" />              </button>
+                <Award className="ml-2 h-5 w-5"  />              </button>
             </div>
           </div>
         </motion.div>
@@ -341,8 +332,7 @@ export default ClientSuccessStoriesSection;"
           </div>;
         </motion.div>;
       </div>;
-    </section>;) ;
-}
+    </section>;) }
 export default ClientSuccessStoriesSection;
 export default ClientSuccessStoriesSection;
 '"

@@ -1,5 +1,3 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
 export default function ComprehensiveServicesLanding2030(...args[]):  {
 
   const [activeCategory, setActiveCategory] = useState('all');
@@ -12,15 +10,15 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
   const [showModal, setShowModal] = useState(false);
 
   // Filter services based on category, search, price, and AI score
-  const filteredServices = COMPREHENSIVE_SERVICES_INDEX_2030.filter (service => {;
-    const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
+  
+    
                          service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
                          service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
-    const matchesAiScore = service.aiScore >= aiScoreRange[0] && service.aiScore <= aiScoreRange[1];
+    
     return matchesCategory && matchesSearch && matchesPrice && matchesAiScore}) ;
 
   // Sort services
-  const sortedServices = [...filteredServices].sort((a, b) => {;
+  
 <<<<<<< HEAD
     switch (sortBy) {;
       case 'rating':;
@@ -41,44 +39,38 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
 
     const icons: { [key: string]: React.ReactNode } = {
 '"
-      'AI & Business Intelligence': <Brain className="w-6 h-6" />,"
-      'AI & Healthcare': <Heart className="w-6 h-6" />,"
-      'AI & FinTech': <TrendingUp className="w-6 h-6" />,"
-      'IT Infrastructure': <Database className="w-6 h-6" />,"
-      'Emerging Technology': <Rocket className="w-6 h-6" />,"
-      'AI & Research': <Search className="w-6 h-6" />,"
-      'AI & Metaverse': <Globe className="w-6 h-6" />,"
-      'AI & Space Tech': <Rocket className="w-6 h-6" />,"
-      'AI & Development': <Zap className="w-6 h-6" />,"
-      'AI & Education': <Users className="w-6 h-6" />,"
-      'AI & Entertainment': <Star className="w-6 h-6" />,"
-      'Cybersecurity': <Shield className="w-6 h-6" />,"
-      'Cloud & DevOps': <Cloud className="w-6 h-6" />,;'"
-      'Quantum Computing': <Zap className="w-6 h-6" />,;'"
-      'IoT & Edge Computing': <Database className="w-6 h-6" />,;'"
-      'Blockchain & Web3': <Lock className="w-6 h-6" />,;'"
-      'Digital Twin': <Globe className="w-6 h-6" />,;'"
-      'Space Technology': <Rocket className="w-6 h-6" />,;'"
-      'Sustainable Technology': <Heart className="w-6 h-6" />;
-    };"
-    return icons[category] || <Rocket className="w-6 h-6" />};
+      'AI & Business Intelligence': <Brain className="w-6 h-6"  />,"
+      'AI & Healthcare': <Heart className="w-6 h-6"  />,"
+      'AI & FinTech': <TrendingUp className="w-6 h-6"  />,"
+      'IT Infrastructure': <Database className="w-6 h-6"  />,"
+      'Emerging Technology': <Rocket className="w-6 h-6"  />,"
+      'AI & Research': <Search className="w-6 h-6"  />,"
+      'AI & Metaverse': <Globe className="w-6 h-6"  />,"
+      'AI & Space Tech': <Rocket className="w-6 h-6"  />,"
+      'AI & Development': <Zap className="w-6 h-6"  />,"
+      'AI & Education': <Users className="w-6 h-6"  />,"
+      'AI & Entertainment': <Star className="w-6 h-6"  />,"
+      'Cybersecurity': <Shield className="w-6 h-6"  />,"
+      'Cloud & DevOps': <Cloud className="w-6 h-6"  />,;'"
+      'Quantum Computing': <Zap className="w-6 h-6"  />,;'"
+      'IoT & Edge Computing': <Database className="w-6 h-6"  />,;'"
+      'Blockchain & Web3': <Lock className="w-6 h-6"  />,;'"
+      'Digital Twin': <Globe className="w-6 h-6"  />,;'"
+      'Space Technology': <Rocket className="w-6 h-6"  />,;'"
+      'Sustainable Technology': <Heart className="w-6 h-6"  />};"
+    return icons[category] || <Rocket className="w-6 h-6"  />};
 
-  const getCategoryColor = (category: string)  => {
-
-    const colors: { [key: string]: string } = {
-
-      'AI & Business Intelligence': 'from-purple-500 to-pink-500',AI & Healthcare': 'from-pink-500 to-red-500',AI & FinTech': 'from-emerald-500 to-green-500',IT Infrastructure': 'from-slate-500 to-gray-500',Emerging Technology': 'from-violet-500 to-purple-500',AI & Research': 'from-purple-500 to-violet-500',AI & Metaverse': 'from-purple-500 to-indigo-500',AI & Space Tech': 'from-indigo-500 to-purple-500',AI & Development': 'from-cyan-500 to-blue-500',AI & Education': 'from-blue-500 to-indigo-500',AI & Entertainment': 'from-purple-500 to-pink-500',Cybersecurity': 'from-red-500 to-orange-500',Cloud & DevOps': 'from-blue-500 to-cyan-500',;
+  
       'Quantum Computing': 'from-indigo-500 to-purple-500',;
       'IoT & Edge Computing': 'from-teal-500 to-cyan-500',;
       'Blockchain & Web3': 'from-yellow-500 to-orange-500',;
       'Digital Twin': 'from-blue-500 to-indigo-500',;
       'Space Technology': 'from-purple-500 to-pink-500',;
-      'Sustainable Technology': 'from-green-500 to-teal-500';
-    };
+      'Sustainable Technology': 'from-green-500 to-teal-500'};
     return colors[category] || 'from-gray-500 to-slate-500'};
 
 <<<<<<< HEAD
-  const resetFilters = () => {;
+  
     setActiveCategory('all');
     setSearchTerm('');
     setSortBy('rating');
@@ -94,6 +86,5 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
           </motion.div>;) };
       </div>;
     </>
-  );
-}
+  )}
 '"

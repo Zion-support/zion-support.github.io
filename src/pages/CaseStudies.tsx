@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import {
 
   FileText,
@@ -46,173 +44,37 @@ export default function CaseStudies() {
   const [selectedService, setSelectedService] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
-  const industries = ['
-    { id: 'all', name: 'All Industries', icon: Building, count: 0 },
-    { id: 'healthcare', name: 'Healthcare', icon: Heart, count: 0 },
-    { id: 'finance', name: 'Financial Services', icon: DollarSign, count: 0 },
-    { id: 'manufacturing', name: 'Manufacturing', icon: Factory, count: 0 },
-    { id: 'retail', name: 'Retail & E-commerce', icon: Users, count: 0 },
-    { id: 'government', name: 'Government', icon: Building, count: 0 },
-  ];
-
-  const services = ['
-    { id: 'all', name: 'All Services', icon: Zap, count: 0 },
-    { id: 'ai', name: 'AI Solutions', icon: Brain, count: 0 },
-    { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, count: 0 },
-    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 0 },
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0 },
-    { id: 'iot', name: 'IoT & Edge Computing', icon: Network, count: 0 },
-  ];
-
-  const caseStudies = [
-    {
-
-      id: 1,
-      title: 'AI-Powered Healthcare Analytics Platform',
-      company: 'MedTech Solutions Inc.',
-      industry: 'healthcare',
-      service: 'ai',
-      challenge:'
-        'MedTech needed to analyze vast amounts of patient data to identify early disease patterns and improve treatment outcomes.',
-      solution:'
-        'Implemented an AI-powered analytics platform that processes real-time patient data, identifies patterns, and provides predictive insights.',
-      results: ['
-        '40% improvement in early disease detection',25% reduction in treatment costs',60% faster diagnosis times',95% accuracy in pattern recognition',
-      ],
-      duration: '6 months',
-      teamSize: '8 developers',
-      technologies: ['AI/ML',Python',TensorFlow',AWS',Healthcare APIs'],
-      featured: true,
-      image: '/api/placeholder/600/400'},
-    {
-
-      id: 2,
-      title: 'Quantum Computing for Financial Risk Modeling',
-      company: 'Global Finance Corp.',
-      industry: 'finance',
-      service: 'quantum',
-      challenge:'
-        'Global Finance needed to process complex risk calculations that would take traditional computers weeks to complete.',
-      solution:'
-        'Developed a quantum computing solution that processes risk models in hours instead of weeks, enabling real-time risk assessment.',
-      results: ['
-        '1000x faster risk calculations',Real-time risk monitoring',30% improvement in risk accuracy',$50M annual cost savings',
-      ],
-      duration: '12 months',
-      teamSize: '12 researchers',
-      technologies: ['
-        'Quantum Computing',Qiskit',Python',IBM Quantum',Risk Models',
-      ],
-      featured: true,
-      image: '/api/placeholder/600/400'},
-    {
-
-      id: 3,
-      title: 'Zero-Trust Security Architecture',
-      company: 'SecureNet Bank',
-      industry: 'finance',
-      service: 'security',
-      challenge:'
-        'SecureNet needed to protect customer data and prevent cyber attacks while maintaining seamless user experience.',
-      solution:'
-        'Implemented a comprehensive zero-trust security architecture with AI-powered threat detection and automated response systems.',
-      results: ['
-        '99.9% threat detection rate',Zero security breaches',50% reduction in false positives',24/7 automated monitoring',
-      ],
-      duration: '8 months',
-      teamSize: '10 security engineers',
-      technologies: ['
-        'Zero Trust',AI Security',Kubernetes',Terraform',SIEM',
-      ],
-      featured: false,
-      image: '/api/placeholder/600/400'},
-    {
-
-      id: 4,
-      title: 'Cloud Migration & DevOps Transformation',
-      company: 'TechCorp Manufacturing',
-      industry: 'manufacturing',
-      service: 'cloud',
-      challenge:'
-        'TechCorp needed to modernize their legacy systems and improve deployment efficiency for their manufacturing software.',
-      solution:'
-        'Migrated to cloud infrastructure and implemented CI/CD pipelines with automated testing and deployment processes.',
-      results: ['
-        '90% faster deployment times',99.9% uptime achieved',40% reduction in infrastructure costs',Automated scaling capabilities',
-      ],
-      duration: '10 months',
-      teamSize: '15 DevOps engineers',
-      technologies: ['AWS',Kubernetes',Docker',Jenkins',Terraform'],
-      featured: false,
-      image: '/api/placeholder/600/400'},
-    {
-
-      id: 5,
-      title: 'IoT Edge Computing for Smart Cities',
-      company: 'CitySmart Solutions',
-      industry: 'government',
-      service: 'iot',
-      challenge:'
-        'CitySmart needed to process data from thousands of IoT sensors in real-time for traffic management and public safety.',
-      solution:'
-        'Deployed edge computing infrastructure that processes sensor data locally, reducing latency and improving response times.',
-      results: ['
-        'Real-time traffic optimization',30% reduction in response times',Scalable IoT infrastructure',Improved public safety',
-      ],
-      duration: '14 months',
-      teamSize: '20 engineers',
-      technologies: ['
-        'IoT',Edge Computing',Kubernetes',MQTT',Time Series DB',
-      ],
-      featured: false,
-      image: '/api/placeholder/600/400'},
-  ];
+  
+  
+  
   // Calculate counts
   industries.forEach(industry => {
 
     if (industry.id === 'all') {
 
-      industry.count = caseStudies.length;
-    } else {
+      industry.count = caseStudies.length} else {
 
       industry.count = caseStudies.filter()
         cs => cs.industry === industry.id
-      ).length;
-    }
+      ).length}
   }) ;
   services.forEach(service => {
 
     if (service.id === 'all') {
 
-      service.count = caseStudies.length;
-    } else {
+      service.count = caseStudies.length} else {
 
       service.count = caseStudies.filter()
         cs => cs.service === service.id
-      ).length;
-    }
+      ).length}
   ];
 
-  const filteredCaseStudies = caseStudies.filter(cs => {
+  
+    
+    
+    return matchesIndustry && matchesService && matchesSearch});
 
-    const matchesIndustry ='
-      selectedIndustry === 'all' || cs.industry === selectedIndustry;
-    const matchesService ='
-      selectedService === 'all' || cs.service === selectedService;
-    const matchesSearch =
-      cs.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      cs.company.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      cs.challenge.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesIndustry && matchesService && matchesSearch;
-  });
-
-  const stats = ['
-    { label: 'Projects Completed', value: '150+', icon: CheckCircle },
-    { label: 'Client Satisfaction', value: '98%', icon: Star },
-    { label: 'Average ROI', value: '340%', icon: TrendingUp },
-    { label: 'Time to Value', value: '6 months', icon: Clock },
-  ];
-
+  
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Header */}"
       <div className="bg-white border-b border-gray-200">"
@@ -224,7 +86,7 @@ export default function CaseStudies() {
               transition={{ duration: 0.5 }}
             >"
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl mb-6">"
-                <FileText className="h-10 w-10 text-white" />
+                <FileText className="h-10 w-10 text-white"  />
               </div>"
               <h1 className="text-4xl font-bold text-gray-900 mb-4">
                 Customer Success Stories
@@ -243,7 +105,7 @@ export default function CaseStudies() {
           <div className="flex flex-col lg:flex-row gap-4">"
             <div className="flex-1">"
               <div className="relative">"
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400"  />
                 <input"
 <<<<<<< HEAD
                   type="text"
@@ -313,11 +175,11 @@ export default function CaseStudies() {
                       <p className="text-gray-600 mb-4">{cs.challenge}</p>"
                       <div className="flex items-center justify-between text-sm text-gray-500 mb-4">"
                         <span className="flex items-center">"
-                          <Clock className="h-4 w-4 mr-1" />
+                          <Clock className="h-4 w-4 mr-1"  />
                           {cs.duration}
                         </span>"
                         <span className="flex items-center">"
-                          <Users className="h-4 w-4 mr-1" />
+                          <Users className="h-4 w-4 mr-1"  />
                           {cs.teamSize}
                         </span>
                       </div>
@@ -326,7 +188,7 @@ export default function CaseStudies() {
                         className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
                       >
                         Read Full Case Study"
-                        <ArrowRight className="ml-1 h-4 w-4" />
+                        <ArrowRight className="ml-1 h-4 w-4"  />
                       </a>
                     </div>
                   </motion.article>
@@ -368,17 +230,17 @@ export default function CaseStudies() {
                       <p className="text-gray-600 mb-3">{cs.challenge}</p>"
                       <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">"
                         <span className="flex items-center">"
-                          <Clock className="h-4 w-4 mr-1" />
+                          <Clock className="h-4 w-4 mr-1"  />
                           {cs.duration}
                         </span>"
                         <span className="flex items-center">"
-                          <Users className="h-4 w-4 mr-1" />
+                          <Users className="h-4 w-4 mr-1"  />
                           {cs.teamSize}
                         </span>
                       </div>"
                       <div className="flex items-center space-x-2">"
                         <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">"
-                          <Bookmark className="h-4 w-4" />
+                          <Bookmark className="h-4 w-4"  />
                         </button>"
                         <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">"
                           <Share2 className="h-4 w-4" />
@@ -388,7 +250,7 @@ export default function CaseStudies() {
                           className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
                         >
                           Read Full Case Study"
-                          <ArrowRight className="ml-1 h-4 w-4" />
+                          <ArrowRight className="ml-1 h-4 w-4"  />
                         </a>
                       </div>
                     </div>"
@@ -402,7 +264,7 @@ export default function CaseStudies() {
                             key={idx}"
                             className="flex items-start text-sm text-gray-600"
                           >"
-                            <TrendingUp className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                            <TrendingUp className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0"  />
                             {result}
                           </li>
                         ))}
@@ -423,14 +285,14 @@ export default function CaseStudies() {
                     <div className="flex items-center justify-between">
                       <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
                         <span className="mr-2">View Details</span>
-                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"  />
                       </div>
                       <div className="flex items-center space-x-2">
                         <button className="p-2 rounded-lg bg-slate-700/50 hover:bg-slate-600/50 text-gray-400 hover:text-white transition-all duration-300">
                           <Share2 className="w-4 h-4" />
                         </button>
                         <button className="p-2 rounded-lg bg-slate-700/50 hover:bg-slate-600/50 text-gray-400 hover:text-white transition-all duration-300">
-                          <Download className="w-4 h-4" />
+                          <Download className="w-4 h-4"  />
                         </button>
                       </div>
                     </div>                  </div>
@@ -441,7 +303,7 @@ export default function CaseStudies() {
 
           {filteredCaseStudies.length === 0 && ("
             <div className="text-center py-12">"
-              <FileText className="h-12 w-12 text-gray-400 mx-auto mb-4" />"
+              <FileText className="h-12 w-12 text-gray-400 mx-auto mb-4"  />"
               <h3 className="text-lg font-medium text-gray-900 mb-2">
                 No case studies found
               </h3>"
@@ -472,19 +334,18 @@ export default function CaseStudies() {
                 className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-medium rounded-lg hover:bg-gray-50 transition-colors"
               >
                 Schedule a Consultation"
-                <ArrowRight className="ml-2 h-4 w-4" />              </a>
+                <ArrowRight className="ml-2 h-4 w-4"  />              </a>
               <a"
                 href="/services"
                 className="inline-flex items-center px-6 py-3 border border-white/30 text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
               >
                 <span>Explore Our Services</span>
-                <Rocket className="w-5 h-5 ml-2" />
+                <Rocket className="w-5 h-5 ml-2"  />
               </Link>
             </div>
           </div>
         </section>
       </div>
     </>
-  );
-}
+  )}
 '"`

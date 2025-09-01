@@ -1,5 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 
 interface SEOProps {
@@ -13,8 +11,7 @@ interface SEOProps {
     name: string;
     description: string;
     url: string;
-    category: string;
-  }>;
+    category: string}>;
   image?: string;
   url?: string;
   type?: 'website' | 'article' | 'product' | 'service';
@@ -26,8 +23,7 @@ interface SEOProps {
   canonical?: string;
   noindex?: boolean;
   nofollow?: boolean;
-  structuredData?: any;
-}
+  structuredData?: any}
 
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -47,69 +43,15 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
   author = 'Zion Tech Group',
   section,
   tags = [],
-  const defaultKeywords = [;
+  
     'AI solutions',cloud computing',cybersecurity',digital transformation',machine learning',quantum computing',IoT',blockchain',micro-SaaS',enterprise software',Zion Tech Group'
   ];
 
-  const generateStructuredData = useCallback ( () => {
-    const baseData = {
-
-      '@context': 'https://schema.org',@type': type === 'article' ? 'Article' : 'Organization',
-      name: 'Zion Tech Group',
-      description: description,
-      url: currentUrl,
-      logo: '/images/zion-tech-group-logo.png',
-      sameAs: ['
-        'https://twitter.com/ziontechgroup',https://linkedin.com/company/zion-tech-group',https://facebook.com/ziontechgroup'
-      ],
-      contactPoint: {
-
-        '@type': 'ContactPoint',
-        telephone: '+1-555-0123',
-        contactType: 'customer service',
-        areaServed: 'US',
-        availableLanguage: 'English'
-      }
-    } : undefined,
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://ziontechgroup.com"
-        },
-        ...(section ? [{
-          "@type": "ListItem",
-          "position": 2,
-          "name": section,
-          "item": `https://ziontechgroup.com/${section.toLowerCase()}`
-        }] : []),
-        {
-          "@type": "ListItem",
-          "position": section ? 3 : 2,
-          "name": title,
-          "item": url || `https://ziontechgroup.com${canonical || ''}`
-        }
-      ]
-    }
-  };
-
+  
   // Combine all structured data
-  const allStructuredData = [
-    organizationStructuredData,
-    pageStructuredData,
-    structuredData
-  ].filter(Boolean);
-
+  
   // Generate meta keywords
-  const metaKeywords = [
-    'Zion Tech Group',AI Solutions',Technology Services',Digital Transformation',IT Consulting',Cloud Services',Cybersecurity',
-    ...tags,
-    ...keywords
-  ].join(',);
-
+  
   const defaultStructuredData = {
 
   "@context": "https://schema.org","
@@ -122,7 +64,6 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
   canonical}) => {
 
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;`
-  const fullUrl = canonical || `${url}${window.location.pathname}`;
   
   // Structured data for better SEO
   const structuredData = {
@@ -211,25 +152,20 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
     // Preload critical images
     if (ogImage) {
 
-      const imageLink = document.createElement('link');
+      
       imageLink.rel = 'preload';
       imageLink.as = 'image';
       imageLink.href = ogImage;
-      document.head.appendChild (imageLink) ;
-    }
+      document.head.appendChild (imageLink) }
 
     // DNS prefetch for external domains
-    const dnsPrefetchDomains = ['
-      'https://fonts.googleapis.com',https://fonts.gstatic.com',https://www.google-analytics.com'
-    ];
-
+    
     dnsPrefetchDomains.forEach(domain => {
 
-      const link = document.createElement('link');
+      
       link.rel = 'dns-prefetch';
       link.href = domain;
-      document.head.appendChild(link);
-    });
+      document.head.appendChild(link)});
 <<<<<<< HEAD
   }, [ogImage]);
   if (type === 'article') {
@@ -263,8 +199,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
         "@type": "WebPage","
         "@id": fullUrl
       }
-    }) ;
-  }
+    }) }
   return()
     <Helmet>
       {/* Basic Meta Tags */}"
@@ -368,6 +303,5 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="format-detection" content="telephone=no" />"
       <meta name="mobile-web-app-capable" content="yes" />
     </Helmet>
-  );
-};
+  )};
 '"`

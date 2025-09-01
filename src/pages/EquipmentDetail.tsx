@@ -1,23 +1,8 @@
 
-import { useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { ShoppingCart, Truck, Shield, RotateCcw, Clock } from "lucide-react";
-import { RatingStars } from "@/components/RatingStars";
-import { toast } from "@/hooks/use-toast";
-import { useAuth } from "@/hooks/useAuth";
-import { getStripe } from "@/utils/getStripe";
-import { safeStorage } from '@/utils/safeStorage';
-import { useUnitSystem } from '@/context';
-import { formatDimensions, formatWeight } from '@/utils/unitConversion';
 
 interface EquipmentSpecification {
   name: string;
-  value: string;
-}
+  value: string}
 
 interface EquipmentDetails {
   id: string;
@@ -40,8 +25,7 @@ interface EquipmentDetails {
   weightKg?: number;
   widthCm?: number;
   heightCm?: number;
-  depthCm?: number;
-}
+  depthCm?: number}
 
 // Sample data - in a real app this would come from an API
 const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
@@ -168,7 +152,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
 
 export default function EquipmentDetail() {
   const { id } = useParams() as { id?: string };
-  const navigate = useNavigate();
+  
   const { isAuthenticated, user } = useAuth();
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
@@ -176,29 +160,7 @@ export default function EquipmentDetail() {
   const { unit, setUnit } = useUnitSystem();
   
   // In a real app, this would fetch from an API
-  const equipment = id ? SAMPLE_EQUIPMENT[id] : undefined;
-
-  const specsToDisplay = equipment
-    ? [
-        ...equipment.specifications,
-        ...(equipment.widthCm && equipment.heightCm && equipment.depthCm
-          ? [
-              {
-                name: 'Dimensions',
-                value: formatDimensions(
-                  equipment.widthCm,
-                  equipment.heightCm,
-                  equipment.depthCm,
-                  unit
-                ),
-              },
-            ]
-          : []),
-        ...(equipment.weightKg
-          ? [{ name: 'Weight', value: formatWeight(equipment.weightKg, unit) }]
-          : []),
-      ]
-    : [];
+  
   
   if (!equipment) {
     return (
@@ -212,18 +174,15 @@ export default function EquipmentDetail() {
           </div>
         </div>
       </>
-    );
-  }
+    )}
 
-  const handleAddToCart = () => {
-    if (isAdding) return;
-
-    const stored = safeStorage.getItem('cart');
+  
+    
     let cart: { id: string; name: string; price: number; quantity: number }[] = [];
     if (stored) {
-      try { cart = JSON.parse(stored); } catch { /* ignore */ }
+      try { cart = JSON.parse(stored)} catch { /* ignore */ }
     }
-    const existing = cart.find(i => i.id === equipment.id);
+    
     if (existing) existing.quantity += quantity;
     else cart.push({ id: equipment.id, name: equipment.name, price: equipment.price, quantity });
     safeStorage.setItem('cart', JSON.stringify(cart));
@@ -235,35 +194,23 @@ export default function EquipmentDetail() {
       toast({
         title: `${equipment.name} added to cart`,
       });
-      setTimeout(() => setAdded(false), 1500);
-    }, 800);
-  };
+      setTimeout(() => setAdded(false), 1500)}, 800)};
 
-  const handleBuyNow = async () => {
-    if (!isAuthenticated) {
-      const next = encodeURIComponent(`/checkout?sku=${id}`);
+  
       navigate(`/login?next=${next}`);
-      return;
-    }
+      return}
 
     setIsAdding(true);
     try {
-      const response = await fetch('/api/create-checkout-session', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ productId: id, userId: user?.id }),
-      });
-      const data = await response.json();
+      
+      
       if (!response.ok) throw new Error(data.error || 'Failed to create checkout session');
-      const stripe = await getStripe();
+      
       if (stripe && data.sessionId) {
-        await stripe.redirectToCheckout({ sessionId: data.sessionId });
-      }
+        await stripe.redirectToCheckout({ sessionId: data.sessionId })}
     } catch (err) {
-      toast({ title: 'Payment error', description: 'Could not start checkout.' });
-    } finally {
-      setIsAdding(false);
-    }
+      toast({ title: 'Payment error', description: 'Could not start checkout.' })} finally {
+      setIsAdding(false)}
   };
 
   return (
@@ -389,7 +336,7 @@ export default function EquipmentDetail() {
                 {/* Rating */}
                 {equipment.rating && (
                   <div className="flex items-center gap-2 mb-4">
-                    <RatingStars value={equipment.rating} />
+                    <RatingStars value={equipment.rating}  />
                     <span className="text-sm text-zion-slate-light">
                       {equipment.rating.toFixed(1)} ({equipment.reviewCount} reviews)
                     </span>
@@ -464,7 +411,7 @@ export default function EquipmentDetail() {
                     variant="outline"
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
                   >
-                    <ShoppingCart className="h-4 w-4 mr-2" />
+                    <ShoppingCart className="h-4 w-4 mr-2"  />
                     {isAdding ? 'Adding...' : added ? 'Added \u2713' : 'Add to Cart'}
                   </Button>
                 </div>
@@ -473,7 +420,7 @@ export default function EquipmentDetail() {
                 <div className="space-y-4 border-t border-zion-blue-light pt-4">
                   {/* Shipping */}
                   <div className="flex gap-3 text-zion-slate-light">
-                    <Truck className="h-5 w-5 text-zion-cyan flex-shrink-0" />
+                    <Truck className="h-5 w-5 text-zion-cyan flex-shrink-0"  />
                     <div>
                       <p className="text-white text-sm font-medium">Free Shipping</p>
                       <p className="text-xs">For orders over $100 within the US</p>
@@ -483,7 +430,7 @@ export default function EquipmentDetail() {
                   {/* Warranty */}
                   {equipment.warranty && (
                     <div className="flex gap-3 text-zion-slate-light">
-                      <Shield className="h-5 w-5 text-zion-cyan flex-shrink-0" />
+                      <Shield className="h-5 w-5 text-zion-cyan flex-shrink-0"  />
                       <div>
                         <p className="text-white text-sm font-medium">Warranty</p>
                         <p className="text-xs">{equipment.warranty}</p>
@@ -494,7 +441,7 @@ export default function EquipmentDetail() {
                   {/* Return Policy */}
                   {equipment.returnPolicy && (
                     <div className="flex gap-3 text-zion-slate-light">
-                      <RotateCcw className="h-5 w-5 text-zion-cyan flex-shrink-0" />
+                      <RotateCcw className="h-5 w-5 text-zion-cyan flex-shrink-0"  />
                       <div>
                         <p className="text-white text-sm font-medium">Returns</p>
                         <p className="text-xs">{equipment.returnPolicy}</p>
@@ -508,5 +455,4 @@ export default function EquipmentDetail() {
         </div>
       </div>
     </>
-  );
-}
+  )}

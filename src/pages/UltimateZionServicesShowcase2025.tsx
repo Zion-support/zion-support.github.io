@@ -1,7 +1,4 @@
-import React from 'react';
-import { SEO } from "../components/SEO";"
 <<<<<<< HEAD
-import { ultimateMicroSaasServices2025, ultimateITInfrastructureServices2025, ultimateAIServices2025 } from "../data/ultimateZionServices2025";
 
 const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
 
@@ -16,7 +13,6 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
 "
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 =======
-import { ultimateMicroSaasServices2025, ultimateITInfrastructureServices2025, ultimateAIServices2025 } from "../data/ultimateZionServices2025";      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         {/* Hero Section */}"
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
@@ -444,6 +440,5 @@ import { ultimateMicroSaasServices2025, ultimateITInfrastructureServices2025, ul
         </section>;
       </div>;
     </>
-  );
-};
+  )};
 export default UltimateZionServicesShowcase2025;'"`

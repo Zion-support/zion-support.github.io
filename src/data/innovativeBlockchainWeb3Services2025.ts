@@ -96,8 +96,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
       integrations["Ethereum", "Polygon", "BSC", "Solana", "Avalanche"],;
       apiEndpoints: 250,"
       uptime: "99.9%","
-      security["Smart contract audits", "Multi-sig wallets", "Insurance protocols", "Bug bounty programs"];
-    },;"
+      security["Smart contract audits", "Multi-sig wallets", "Insurance protocols", "Bug bounty programs"]},;"
     competitors["Yearn Finance", "Aave", "Compound", "Curve Finance", "Uniswap"],;"    marketSize: "$67.8 billion by 2025"
   },
 
@@ -163,8 +162,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
       integrations["Ethereum", "Polygon", "OpenSea API", "MetaMask", "WalletConnect"],;
       apiEndpoints: 180,"
       uptime: "99.9%","
-      security["Smart contract security", "IPFS storage", "Multi-sig wallets", "Access controls"];
-    },;"
+      security["Smart contract security", "IPFS storage", "Multi-sig wallets", "Access controls"]},;"
     competitors["OpenSea", "Rarible", "Foundation", "SuperRare", "Nifty Gateway"],;"    marketSize: "$23.4 billion by 2025"
   },
 
@@ -230,8 +228,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
       integrations["Ethereum", "Polygon", "Gnosis Safe", "Snapshot", "Discord"],;
       apiEndpoints: 120,"
       uptime: "99.9%","
-      security["Multi-sig security", "Smart contract audits", "Access controls", "Audit trails"];
-    },;"
+      security["Multi-sig security", "Smart contract audits", "Access controls", "Audit trails"]},;"
     competitors["Aragon", "Colony", "Moloch", "Gnosis", "Snapshot"],;"    marketSize: "$12.8 billion by 2025"
   },
 
@@ -297,8 +294,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
       integrations["Ethereum", "Polygon", "WalletConnect", "MetaMask", "Discord"],;
       apiEndpoints: 200,"
       uptime: "99.9%","
-      security["Cryptographic security", "Privacy protection", "Access controls", "Audit trails"];
-    },;"
+      security["Cryptographic security", "Privacy protection", "Access controls", "Audit trails"]},;"
     competitors["Spruce", "3Box", "BrightID", "Gitcoin Passport", "Worldcoin"],;"    marketSize: "$18.9 billion by 2025"
   },
 
@@ -364,9 +360,8 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
       integrations["Ethereum", "Polygon", "BSC", "Solana", "Avalanche"],;
       apiEndpoints: 300,"
       uptime: "99.99%","
-      security["Multi-sig security", "Audit trails", "Real-time monitoring", "Insurance protocols"];
-    },;"
+      security["Multi-sig security", "Audit trails", "Real-time monitoring", "Insurance protocols"]},;"
     competitors["Multichain", "Stargate", "Hop Protocol", "Synapse", "Celer Network"],;"
     marketSize: "$15.6 billion by 2025"
 
-];}}"
+]}}"

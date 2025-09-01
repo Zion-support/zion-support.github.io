@@ -1,6 +1,5 @@
 
-const sampleTitles = ['
-  'AI-Powered Analytics Platform',Cybersecurity Assessment Tool',Cloud Migration Service',IoT Edge Computing Solution',;
+
   'Quantum Computing Hardware',;
   'Data Science Consulting',;
   'Blockchain Development Service',;
@@ -9,8 +8,7 @@ const sampleTitles = ['
   'Network Security Solution';
 ];
 
-const sampleDescriptions = ['
-  'Advanced analytics platform powered by artificial intelligence for business intelligence and data insights.',Comprehensive cybersecurity assessment and monitoring solution for enterprise environments.',Professional cloud migration service including planning, execution, and optimization.',IoT platform with edge computing capabilities for real-time data processing.',;
+
   'State-of-the-art quantum computing components for research and development.',;
   'Expert data science consulting services for machine learning and analytics projects.',;
   'Blockchain development and implementation services for decentralized applications.',;
@@ -19,11 +17,7 @@ const sampleDescriptions = ['
   'Network security solution with advanced threat detection and prevention.';
 ];
 
-const sampleTags = ['
-  ['AI',Analytics',Business Intelligence'],
-  ['Security',Cybersecurity',Monitoring'],
-  ['Cloud',Migration',Enterprise'],
-  ['IoT',Edge Computing',Real-time'],;
+
   ['Quantum',Research',Hardware'],;
   ['Data Science',Machine Learning',Consulting'],;
   ['Blockchain',Development',DApps'],;
@@ -33,7 +27,7 @@ const sampleTags = ['
 ];
 
 <<<<<<< HEAD
-const sampleImages = [;
+
   'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',;
   'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;
   'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;
@@ -54,17 +48,15 @@ const categories: Array<any> = ['
   'products',talent',equipment',services'
 ];
 
-const priceRanges = [;
+
   '$500',$1,200',$2,500',$5,000',$8,500',$15,000',$25,000',$50,000';
 ];
 
-const locations = [;
+
   'San Francisco, CA',New York, NY',Austin, TX',Seattle, WA',Boston, MA',Remote';
 ];
 
-const sellerNames = ['
-<<<<<<< HEAD
-  'TechCorp Solutions',SecureNet Professionals',;
+
   'QuantumTech Labs',;
   'CloudMasters Inc',;
   'IoT Solutions Pro',;
@@ -84,11 +76,11 @@ const sellerNames = ['
 
 export function generateRandomListing(): MarketplaceItem {
 
-  const randomIndex = Math.floor(Math.random() * sampleTitles.length);
-  const category = categories[Math.floor(Math.random() * categories.length)];
-  const price = priceRanges[Math.floor(Math.random() * priceRanges.length)];
-  const location = locations[Math.floor(Math.random() * locations.length)];
-  const sellerName = sellerNames[Math.floor(Math.random() * sellerNames.length)];
+  
+  
+  
+  
+  
   return {
 
     id: `listing-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
@@ -107,13 +99,11 @@ export function generateRandomListing(): MarketplaceItem {
 
       name: sellerName || 'Default Seller',
       rating: 4.0 + Math.random() * 1.0,;
-      verified: Math.random() > 0.3;
-    },;
+      verified: Math.random() > 0.3},;
     location: location || 'Remote',;
     availability: Math.random() > 0.8 ? 'limited' : 'available',;'`
     deliveryTime: category === 'talent' ? 'Immediate' : `${Math.floor(Math.random() * 8) + 2}-${Math.floor(Math.random() * 4) + 4} weeks`,;'`
-    warranty: category === 'talent' ? 'N/A' : `${Math.floor(Math.random() * 3) + 1} year${Math.floor(Math.random() * 3) + 1 > 1 ? 's' : ''}`;
-  };
+    warranty: category === 'talent' ? 'N/A' : `${Math.floor(Math.random() * 3) + 1} year${Math.floor(Math.random() * 3) + 1 > 1 ? 's' : ''}`};
 export function generateRandomListings(count: number): MarketplaceItem[] {
 
   const listings: MarketplaceItem[] = [];
@@ -121,5 +111,4 @@ export function generateRandomListings(count: number): MarketplaceItem[] {
 
     listings.push(generateRandomListing());
 
-  return listings;
-}}}'`
+  return listings}}}'`

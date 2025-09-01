@@ -1,5 +1,3 @@
-import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
 <<<<<<< HEAD
 
 type Service = {;
@@ -48,8 +46,7 @@ const services: Service[] = ['
           <p className="text-slate-400 mt-1">364 E Main St STE 1008, Middletown DE 19709</p>;
         </div>;
       </section>;
-    </div>;) ;
-};
+    </div>;) };
 
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954

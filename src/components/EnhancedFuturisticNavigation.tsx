@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
 
   Menu,
@@ -222,45 +219,23 @@ import {
   Omega'
  } from 'lucide-react';
 
-    const handleScroll = () => {;
-      setScrolled(window.scrollY > 20);
-    };
+    
+      setScrolled(window.scrollY > 20)};
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
 =======
-import React, { useState, useEffect } from 'react';'
-import { Link, useLocation } from 'react-router-dom';'
-import { motion, AnimatePresence } from 'framer-motion';    return () => window.removeEventListener('scroll', handleScroll)}, []);
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   useEffect ( () => {
     setMobileMenuOpen (false) ;
     setActiveDropdown (null) }, [location.pathname]) ;
 
-      window.location.href = `/search?q=${encodeURIComponent (searchQuery.trim () ) }`};
-  };
+      window.location.href = `/search?q=${encodeURIComponent (searchQuery.trim () ) }`}};
 
-  const toggleDropdown = (dropdown: string) => {;
-    setActiveDropdown (activeDropdown === dropdown ? null : dropdown) ;
-  };
+  
+    setActiveDropdown (activeDropdown === dropdown ? null : dropdown) };
 
-  const navigationItems = [
-    {
-
-      name: 'Home',
-      href: '/',
-      icon: Home,
-      color: 'from-zion-cyan to-zion-blue',
-      isMain: true
-    },
-    {
-
-      name: 'AI & Consciousness',
-      href: '/ai-services',
-      icon: Brain,
-      color: 'from-zion-purple to-zion-pink',
-<<<<<<< HEAD
-      dropdown[;
+  
         { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Advanced AI consciousness research platform' },
         { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion', icon: Heart, description: 'Quantum-powered emotional intelligence' },
         { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems', icon: Cpu, description: 'Self-managing AI infrastructure' },
@@ -414,17 +389,16 @@ import { motion, AnimatePresence } from 'framer-motion';    return () => window.
                       <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${
 
                         activeDropdown === item.name ? 'rotate-180' : ''`
-                      }`} />
+                      }`}  />
                     </button>;) : (;
-                    <Link
-                      to={item.href}`                      className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
+                    <Link to={item.href}`                      className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
 
                         location.pathname === item.href'
                           ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25''
                           : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30'`
                       }`}
 "
-                      {item.icon && <item.icon className="w-4 h-4" />}                      <span>{item.name}</span>
+                      {item.icon && <item.icon className="w-4 h-4"  />}                      <span>{item.name}</span>
                     </Link>) }
 
                   {/* Dropdown Menu */}
@@ -482,7 +456,7 @@ import { motion, AnimatePresence } from 'framer-motion';    return () => window.
             <div className="flex items-center space-x-4">;
               {/* Search */}"
               <form onSubmit={handleSearch} className="relative">;"
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4"  />
                 <input"
 <<<<<<< HEAD
                   type="text"
@@ -499,10 +473,10 @@ import { motion, AnimatePresence } from 'framer-motion';    return () => window.
               {/* User Menu */}"
               <div className="flex items-center space-x-3">;"
                 <button className="p-2 text-gray-400 hover:text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200">"
-                  <Bell className="w-5 h-5" />
+                  <Bell className="w-5 h-5"  />
                 </button>"
                 <button className="p-2 text-gray-400 hover:text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200">"
-                  <User className="w-5 h-5" />                </button>
+                  <User className="w-5 h-5"  />                </button>
               </div>
             </div>
           </div>
@@ -537,7 +511,7 @@ import { motion, AnimatePresence } from 'framer-motion';    return () => window.
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}"
                 className="p-2 text-gray-400 hover:text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200"
 "
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}              </button>
+                {mobileMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}              </button>
             </div>
           </div>
         </div>
@@ -569,7 +543,7 @@ import { motion, AnimatePresence } from 'framer-motion';    return () => window.
               <div className="max-w-7xl mx-auto px-6 py-6">
                 {/* Search */}"
                 <form onSubmit={handleSearch} className="relative mb-6">"
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4"  />
                   <input"
 <<<<<<< HEAD
                     type="text"
@@ -605,7 +579,7 @@ import { motion, AnimatePresence } from 'framer-motion';    return () => window.
                             <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
 
                               activeDropdown === item.name ? 'rotate-180' : ''`
-                            }`} />                          </button>
+                            }`}  />                          </button>
 
                           {/* Mobile Dropdown */}
                           <AnimatePresence>
@@ -679,6 +653,5 @@ import { motion, AnimatePresence } from 'framer-motion';    return () => window.
       {/* Spacer for fixed navigation */};"
       <div className="h-20"></div>;
     </>
-  );
-};
+  )};
 '"`

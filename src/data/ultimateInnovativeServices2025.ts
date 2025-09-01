@@ -33,9 +33,7 @@ contactInfo: {
   competitors?: string[];
   caseStudies?: string[]}
 ;
-export const SERVICE_CATEGORIES = [
-<<<<<<< HEAD
-  'AI & Automation',Quantum Computing',Blockchain & Web3',Cybersecurity',;
+export 
   'IoT & Edge Computing',;
   'Metaverse & AR/VR',;
   'Robotics & Automation',;

@@ -5,9 +5,7 @@ interface User {
   email: string;
   name: string;
 :src/store/authSlice.tsx
-  avatar?: string;
-
-}
+  avatar?: string}
   avatar?: string}
 
 interface AuthState {
@@ -19,8 +17,7 @@ interface AuthState {
   token: string | null;
 
 :src/store/authSlice.tsx
-  error: string | null;
-}
+  error: string | null}
   error: string | null}
 
 }
@@ -33,18 +30,7 @@ const initialState: AuthState = {
   user: null,
   token: null,
 :src/store/authSlice.tsx
-  error: null};
-
-const authSlice = createSlice({
-
-  name: 'auth',
-  initialState,
-  reducers: {
-
-    setLoggedIn: (state, action: PayloadAction<boolean>) => {
-
-      state.isLoggedIn = action.payload;
-    },
+  error: null}},
   error: null,
 }},
     setUser: (state, action: PayloadAction<User>) => {
@@ -54,8 +40,7 @@ const authSlice = createSlice({
     setToken: (state, action: PayloadAction<string>) => {
 :src/store/authSlice.tsx
 
-      state.token = action.payload;
-    },
+      state.token = action.payload},
     logout: state => {
 
       state.token = action.payload},
@@ -68,16 +53,13 @@ const authSlice = createSlice({
     setLoading: (state, action: PayloadAction<boolean>) => {
 :src/store/authSlice.tsx
 
-      state.isLoading = action.payload;
-    },
+      state.isLoading = action.payload},
     setError: (state, action: PayloadAction<string>) => {
 
-      state.error = action.payload;
-    },
+      state.error = action.payload},
     clearError: state => {
 
-      state.error = null;
-    }}});
+      state.error = null}}});
       state.isLoading = action.payload},
     setError: (state, action: PayloadAction<string>) => {
       state.error = action.payload},

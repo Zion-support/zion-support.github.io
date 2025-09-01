@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 import {
 
   BarChart3,
@@ -46,94 +44,10 @@ import {
   AlertTriangle} from 'lucide-react';
 
 export default function CloudFinOpsOptimizer() {
-  const features = [
-    {
-
-      icon: Calculator,
-      title: 'Cost Optimization Engine',
-      description:'
-        'AI-powered cost analysis and optimization recommendations for cloud resources'},
-    {
-
-      icon: BarChart3,
-      title: 'Real-time Cost Monitoring',
-      description:'
-        'Live tracking of cloud spending with instant alerts and notifications'},
-    {
-
-      icon: Target,
-      title: 'Budget Management',
-      description:'
-        'Set and enforce budgets with automated cost controls and forecasting'},
-    {
-
-      icon: TrendingUp,
-      title: 'Performance Analytics',
-      description:'
-        'Comprehensive insights into resource utilization and performance metrics'},
-    {
-
-      icon: Shield,
-      title: 'Compliance Tracking',
-      description:'
-        'Monitor and ensure compliance with financial and regulatory requirements'},
-    {
-
-      icon: Brain,
-      title: 'Predictive Cost Modeling',
-      description:'
-        'Machine learning models to forecast future costs and optimize spending'},
-  ];
-
-  const benefits = ['
-    'Reduce cloud costs by up to 40% through intelligent optimization',Improve resource utilization efficiency by 60%',Eliminate waste with automated cost anomaly detection',Achieve better budget predictability and control',Streamline financial operations and reporting',Ensure compliance with cost governance policies',
-  ];
-
-  const useCases = [
-    {
-
-      title: 'Enterprise Cloud Users',
-      description:'
-        'Large organizations managing complex multi-cloud environments'},
-    {
-
-      title: 'Startups & Scale-ups',
-      description:'
-        'Growing companies optimizing cloud costs during rapid expansion'},
-    {
-
-      title: 'Financial Services',
-      description:'
-        'Banks and fintech companies with strict cost compliance requirements'},
-    {
-
-      title: 'E-commerce & SaaS',
-      description: 'Digital businesses with variable cloud usage patterns'},
-  ];
-
-  const optimizationStrategies = [
-    {
-
-      title: 'Resource Right-sizing',
-      description:'
-        'Automatically adjust resource allocation based on actual usage patterns'},
-    {
-
-      title: 'Reserved Instance Optimization',
-      description:'
-        'Maximize savings through strategic reserved instance purchases'},
-    {
-
-      title: 'Spot Instance Management',
-      description:'
-        'Leverage spot instances for non-critical workloads to reduce costs'},
-    {
-
-      title: 'Storage Tier Optimization',
-      description:'
-        'Move data to appropriate storage tiers based on access patterns'},
-  ];
-
+  
+  
+  
+  
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
       {/* Hero Section */}"
       <section className="relative overflow-hidden pt-32 pb-20">"
@@ -145,7 +59,7 @@ export default function CloudFinOpsOptimizer() {
             className="text-center"
           >"
             <div className="inline-flex items-center space-x-2 bg-zion-purple/20 text-zion-cyan px-4 py-2 rounded-full text-sm font-medium mb-6">"
-              <Cloud className="w-4 h-4" />              <span>Cloud Financial Operations</span>
+              <Cloud className="w-4 h-4"  />              <span>Cloud Financial Operations</span>
             </div>
 "
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -165,7 +79,7 @@ export default function CloudFinOpsOptimizer() {
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300"
               >
                 Start Free Trial"
-                <ArrowRight className="inline ml-2 w-5 h-5" />              </motion.button>
+                <ArrowRight className="inline ml-2 w-5 h-5"  />              </motion.button>
 
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -252,7 +166,7 @@ export default function CloudFinOpsOptimizer() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}"
                   className="flex items-start space-x-4"
                 >"
-                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />"
+                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0"  />"
                   <span className="text-zion-slate-light text-lg">
                     {benefit}
                   </span>                </motion.div>
@@ -268,7 +182,7 @@ export default function CloudFinOpsOptimizer() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}"
                   className="flex items-start space-x-4"
                 >"
-                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />"
+                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0"  />"
                   <span className="text-zion-slate-light text-lg">
                     {benefit}
                   </span>                </motion.div>
@@ -307,7 +221,7 @@ export default function CloudFinOpsOptimizer() {
               >"
                 <div className="flex items-start space-x-4">"
                   <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">"
-                    <Target className="w-6 h-6 text-white" />                  </div>
+                    <Target className="w-6 h-6 text-white"  />                  </div>
                   <div>"
                     <h3 className="text-xl font-semibold text-white mb-2">
                       {strategy.title}
@@ -351,7 +265,7 @@ export default function CloudFinOpsOptimizer() {
                 className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
               >"
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">"
-                  <Cloud className="w-8 h-8 text-white" />
+                  <Cloud className="w-8 h-8 text-white"  />
                 </div>"
                 <h3 className="text-lg font-semibold text-white mb-2">
                   {useCase.title}
@@ -387,7 +301,7 @@ export default function CloudFinOpsOptimizer() {
                 className="bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300"
               >
                 Start Optimizing Today"
-                <Rocket className="inline ml-2 w-5 h-5" />              </motion.button>
+                <Rocket className="inline ml-2 w-5 h-5"  />              </motion.button>
 
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -395,12 +309,11 @@ export default function CloudFinOpsOptimizer() {
                 className="border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-zion-purple transition-all duration-300"
               >
                 Contact Sales"
-                <MessageCircle className="inline ml-2 w-5 h-5" />              </motion.button>
+                <MessageCircle className="inline ml-2 w-5 h-5"  />              </motion.button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-  );
-}
+  )}
 '"

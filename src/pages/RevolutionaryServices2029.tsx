@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence } from 'framer-motion.ts';
 import {
 
   Search,
@@ -45,8 +43,6 @@ import {
 <<<<<<< HEAD
   Volume2,
   VolumeX} from 'lucide-react.ts';
-import { SEO } from '@/components/SEO';
-import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES } from '../../data/revolutionary-2029-advanced-micro-saas-services';
 
 export default function RevolutionaryServices2029(...args: any[]): any {
 
@@ -56,34 +52,16 @@ export default function RevolutionaryServices2029(...args: any[]): any {
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(0.5);
 
-  const categories = ['
-    'All',AI & Automation',Quantum Computing & AI',AI & Security',AI & Marketing',AI & Sales',AI & Support',AI & Analytics',IT & Infrastructure',Quantum Computing & Finance',AI & Healthcare',
-  ];
+  
+  
+      
+      return matchesSearch && matchesCategory});
 
-  const filteredServices =
-    REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES.filter(service => {
-
-      const matchesSearch =
-        service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        service.category.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesCategory ='
-        selectedCategory === 'All' || service.category === selectedCategory;
-      return matchesSearch && matchesCategory;
-    });
-
-  const sortedServices = [...filteredServices].sort((a, b) => {
-
-    switch (sortBy) {
-
-      case 'popularity':
-        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+  
       case 'price-low':
 =======
   Volume2,'
   VolumeX} from 'lucide-react.ts';'
-import { SEO } from '@/components/SEO';'
-import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES } from '../../data/revolutionary-2029-advanced-micro-saas-services';      case 'price-low':
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         return ('
           parseFloat(a.price.replace(/[^0-9.]/g,)) -'
@@ -99,13 +77,11 @@ import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES } from '../../data/revo
       case 'customers':
         return b.customers - a.customers;
       default:
-        return 0;
-    }
+        return 0}
   }) ;
 
-  const togglePlay = () => setIsPlaying (!isPlaying) ;
-  const toggleMute = () => setVolume (volume > 0 ? 0 : 0.5) ;
-
+  
+  
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       {/* Animated Background */}"
       <div className="absolute inset-0 overflow-hidden">"
@@ -186,13 +162,13 @@ import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES } from '../../data/revo
                 onClick={togglePlay}"
                 className="p-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-white hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-110"
               >
-                {isPlaying ? <Pause size={24}  /> : <Play size={24}  />}
+                {isPlaying ? <Pause size={24}   /> : <Play size={24}   />}
               </button>
               <button
                 onClick={toggleMute}"
                 className="p-3 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full text-white hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-110"
               >
-                {volume > 0 ? <Volume2 size={24} /> : <VolumeX size={24}  />}
+                {volume > 0 ? <Volume2 size={24} /> : <VolumeX size={24}   />}
               </button>
               <input"
                 type="range"
@@ -240,7 +216,7 @@ import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES } from '../../data/revo
                 {/* Search */}"
                 <div className="flex-1">"
                   <div className="relative">"
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                     <input"
 <<<<<<< HEAD
                       type="text"
@@ -354,7 +330,7 @@ import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES } from '../../data/revo
                             </span>
                           </div>"
                           <div className="flex items-center space-x-1">"
-                            <Star className="w-4 h-4 text-yellow-400 fill-current" />"
+                            <Star className="w-4 h-4 text-yellow-400 fill-current"  />"
                             <span className="text-white text-sm">
                               {service.rating}
                             </span>"
@@ -380,7 +356,7 @@ import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES } from '../../data/revo
                               key={idx}"
                               className="flex items-center text-gray-300 text-sm"
                             >"
-                              <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />                              {feature}
+                              <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"  />                              {feature}
                             </div>
                           ))}
                           {service.features.length > 3 && ("
@@ -401,7 +377,7 @@ import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES } from '../../data/revo
                               key={idx}"
                               className="flex items-center text-gray-300 text-sm"
                             >"
-                              <TrendingUp className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />                              {benefit}
+                              <TrendingUp className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0"  />                              {benefit}
                             </div>) ) }
                         </div>
                       </div>
@@ -445,7 +421,7 @@ import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES } from '../../data/revo
                           Learn More
                         </a>"
                         <button className="px-4 py-3 border border-purple-500 text-purple-400 rounded-xl hover:bg-purple-500 hover:text-white transition-all duration-300">"
-                          <MessageCircle className="w-5 h-5" />                        </button>
+                          <MessageCircle className="w-5 h-5"  />                        </button>
                       </div>
 
                       {/* Contact Info */}"
@@ -501,33 +477,26 @@ import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES } from '../../data/revo
       <style jsx>{`
         .animate-blob {
 
-          animation: blob 7s infinite;
-        }
+          animation: blob 7s infinite}
         .animation-delay-2000 {
 
-          animation-delay: 2s;
-        }
+          animation-delay: 2s}
         .animation-delay-4000 {
 
-          animation-delay: 4s;
-        }        @keyframes blob {
+          animation-delay: 4s}        @keyframes blob {
 
           0% {
 
-            transform: translate(0px, 0px) scale(1);
-          }
+            transform: translate(0px, 0px) scale(1)}
           33% {
 
-            transform: translate(30px, -50px) scale(1.1);
-          }
+            transform: translate(30px, -50px) scale(1.1)}
           66% {
 
-            transform: translate(-20px, 20px) scale(0.9);
-          }
+            transform: translate(-20px, 20px) scale(0.9)}
           100% {
 
-            transform: translate(0px, 0px) scale(1);
-          }        }
+            transform: translate(0px, 0px) scale(1)}        }
         .line-clamp-3 {
 
           display: -webkit-box;
@@ -549,10 +518,8 @@ import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES } from '../../data/revo
           border - radius: 50%;
           background: #8b5cf6;
           cursor: pointer;
-          border: none;
-        }`
+          border: none}`
       `}</style>
     </div>
-  );
-}
+  )}
 '"`

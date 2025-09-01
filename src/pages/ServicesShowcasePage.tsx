@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 <<<<<<< HEAD
 import {
 
@@ -51,8 +49,6 @@ import {
   Heart as HeartIcon,
   Globe as GlobeIcon,
   TrendingUp as TrendingUpIcon} from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
-import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data/comprehensivePricingGuide2025';
 
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -63,119 +59,24 @@ export function ServicesShowcasePage() {
   const [priceRange, setPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('innovation');
 
-  const categories = [
-    {
-
-      id: 'all',
-      name: 'All Categories',
-      icon: Globe,
-      color: 'from-blue-500 to-cyan-600'},
-    {
-
-      id: 'AI & Analytics',
-      name: 'AI & Analytics',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-600'},
-    {
-
-      id: 'Quantum Computing',
-      name: 'Quantum Computing',
-      icon: Atom,
-      color: 'from-cyan-500 to-blue-600'},
-    {
-
-      id: 'Cybersecurity',
-      name: 'Cybersecurity',
-      icon: Shield,
-      color: 'from-red-500 to-orange-600'},
-    {
-
-      id: 'Blockchain & Web3',
-      name: 'Blockchain & Web3',
-      icon: Code,
-      color: 'from-green-500 to-emerald-600'},
-    {
-
-      id: 'Marketing & Sales',
-      name: 'Marketing & Sales',
-      icon: TrendingUp,
-      color: 'from-yellow-500 to-orange-600'},
-    {
-
-      id: 'IoT & Edge Computing',
-      name: 'IoT & Edge Computing',
-      icon: Cpu,
-      color: 'from-indigo-500 to-purple-600'},
-    {
-
-      id: 'Cloud & DevOps',
-      name: 'Cloud & DevOps',
-      icon: Cloud,
-      color: 'from-teal-500 to-green-600'},
-    {
-
-      id: 'Customer Service',
-      name: 'Customer Service',
-      icon: Users,
-      color: 'from-pink-500 to-red-600'},
-    {
-
-      id: 'Compliance & Governance',
-      name: 'Compliance & Governance',
-      icon: Lock,
-      color: 'from-gray-500 to-slate-600'},
-  ];
-
-  const priceRanges = ['
-    { id: 'all', name: 'All Prices', range: 'All' },
-    { id: 'low', name: 'Under $1,000', range: '< $1,000' },
-    { id: 'medium', name: '$1,000 - $3,000', range: '$1,000 - $3,000' },
-    { id: 'high', name: 'Over $3,000', range: '> $3,000' },
-  ];
-
-  const sortOptions = ['
-    { id: 'innovation', name: 'Innovation Level', icon: Sparkles },
-    { id: 'price', name: 'Price', icon: DollarSign },
-    { id: 'roi', name: 'ROI', icon: TrendingUp },
-    { id: 'delivery', name: 'Delivery Time', icon: Clock },
-  ];
-
-  const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter()
-    service => {
-
-      const matchesSearch =
-        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.category.toLowerCase().includes(searchTerm.toLowerCase());
-
-      const matchesCategory ='
-        selectedCategory === 'all' || service.category === selectedCategory;
-
+  
+  
+  
+  
+      
       let matchesPrice = true;
       if (priceRange === 'low') {
 
-        matchesPrice = service.price < 1000;
-      } else if (priceRange === 'medium') {
+        matchesPrice = service.price < 1000} else if (priceRange === 'medium') {
 
-        matchesPrice = service.price >= 1000 && service.price <= 3000;
-      } else if (priceRange === 'high') {
+        matchesPrice = service.price >= 1000 && service.price <= 3000} else if (priceRange === 'high') {
 
-        matchesPrice = service.price > 3000;
-      }
+        matchesPrice = service.price > 3000}
 
-      return matchesSearch && matchesCategory && matchesPrice;
-    }
+      return matchesSearch && matchesCategory && matchesPrice}
   );
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
-
-    switch (sortBy) {
-
-      case 'innovation':
-        const innovationOrder = {
-
-          Revolutionary: 3,Cutting-edge': 2,
-          Advanced: 1};
+  
         return()
           (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] ||
             0) -
@@ -185,40 +86,28 @@ export function ServicesShowcasePage() {
       case 'price':
         return a.price - b.price;
       case 'roi':'
-        const aRoi = parseInt(a.roi.split('-')[0]);
-        const bRoi = parseInt(b.roi.split('-')[0]);
+        
+        
         return bRoi - aRoi;
       case 'delivery':'
-        const aDelivery = parseInt(a.estimatedDelivery.split('-')[0]);
-        const bDelivery = parseInt(b.estimatedDelivery.split('-')[0]);
+        
+        
         return aDelivery - bDelivery;
       default:
-        return 0;
-    }
+        return 0}
   }) ;
 
-  const getCategoryIcon = (category: string) => {
+  
+    return categoryData ? categoryData.icon : Globe};
 
-    const categoryData = categories.find(cat => cat.id === category);
-    return categoryData ? categoryData.icon : Globe;
-  };
+  
+    return categoryData ? categoryData.color : 'from-gray-500 to-slate-600'};
 
-  const getCategoryColor = (category: string) => {
-
-    const categoryData = categories.find(cat => cat.id === category);
-    return categoryData ? categoryData.color : 'from-gray-500 to-slate-600';
-  };
-
-  const getPriceRange = (price: number) => {
-
-    if (price < 1000) return 'low';
+  
     if (price <= 3000) return 'medium';
-    return 'high';
-  };
+    return 'high'};
 
-  const getPriceColor = (price: number) => {
-
-    const range = getPriceRange(price);
+  
     switch (range) {
 
       case 'low':'
@@ -228,23 +117,16 @@ export function ServicesShowcasePage() {
       case 'high':'
         return 'text-red-400';
       default:'
-        return 'text-gray-400';
-    }
+        return 'text-gray-400'}
   };
 
-  const getInnovationColor = (level: string) => {
-
-    switch (level) {
-
-      case 'Revolutionary':'
-        return 'text-purple-400';
+  
       case 'Cutting-edge':'
         return 'text-blue-400';
       case 'Advanced':'
         return 'text-green-400';
       default:'
-        return 'text-gray-400';
-    }  };
+        return 'text-gray-400'}  };
 
   return()
     <div className="min-h-screen py-8">"
@@ -267,15 +149,15 @@ export function ServicesShowcasePage() {
             </p>"
             <div className="mt-8 flex justify-center space-x-4">"
               <div className="flex items-center space-x-2 text-cyan-400">"
-                <Sparkles className="w-5 h-5" />
+                <Sparkles className="w-5 h-5"  />
                 <span>Revolutionary Technology</span>
               </div>"
               <div className="flex items-center space-x-2 text-green-400">"
-                <Award className="w-5 h-5" />
+                <Award className="w-5 h-5"  />
                 <span>Proven ROI</span>
               </div>"
               <div className="flex items-center space-x-2 text-purple-400">"
-                <ZapIcon className="w-5 h-5" />                <span>Fast Implementation</span>
+                <ZapIcon className="w-5 h-5"  />                <span>Fast Implementation</span>
               </div>
             </div>
           </motion.div>
@@ -286,7 +168,7 @@ export function ServicesShowcasePage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {/* Search */}"
             <div className="relative">"
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
               <input"
 <<<<<<< HEAD
                 type="text"
@@ -397,7 +279,7 @@ export function ServicesShowcasePage() {
                       key={idx}"
                       className="flex items-center space-x-2 text-sm text-gray-400"
                     >"
-                      <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />"                      <span className="line-clamp-1">{feature}</span>
+                      <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0"  />"                      <span className="line-clamp-1">{feature}</span>
                     </div>
                   ))}
                   {service.features.length > 3 && ("
@@ -459,15 +341,15 @@ export function ServicesShowcasePage() {
               <div className="mt-4 pt-4 border-t border-gray-700">"
                 <div className="text-xs text-gray-500 space-y-1">"
                   <div className="flex items-center space-x-2">"
-                    <Phone className="w-3 h-3" />
+                    <Phone className="w-3 h-3"  />
                     <span>{service.contactInfo.phone}</span>
                   </div>"
                   <div className="flex items-center space-x-2">"
-                    <Mail className="w-3 h-3" />
+                    <Mail className="w-3 h-3"  />
                     <span>{service.contactInfo.email}</span>
                   </div>"
                   <div className="flex items-center space-x-2">"
-                    <Globe className="w-3 h-3" />                    <span>{service.contactInfo.website}</span>
+                    <Globe className="w-3 h-3"  />                    <span>{service.contactInfo.website}</span>
                   </div>
                 </div>
               </div>
@@ -507,7 +389,6 @@ export function ServicesShowcasePage() {
           </div>
         </motion.div>
       </div>
-    </div>) ;
-}
+    </div>) }
 export default ServicesShowcasePage;
 '"`

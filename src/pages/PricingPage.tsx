@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 <<<<<<< HEAD
 import {
 
@@ -23,7 +21,6 @@ import {
   Code,
   Cloud,
   TrendingUp as TrendingUpIcon} from 'lucide-react';
-import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data/comprehensivePricingGuide2025';
 
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -32,68 +29,17 @@ export function PricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [billingCycle, setBillingCycle] = useState('monthly');
 
-  const categories = [
-    {
+  
+  
+  
+    return categoryData ? categoryData.icon : Globe};
 
-      id: 'all',
-      name: 'All Categories',
-      icon: Globe,
-      color: 'from-blue-500 to-cyan-600'},
-    {
+  
+    return categoryData ? categoryData.color : 'from-gray-500 to-slate-600'};
 
-      id: 'AI & Analytics',
-      name: 'AI & Analytics',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-600'},
-    {
-
-      id: 'Quantum Computing',
-      name: 'Quantum Computing',
-      icon: Atom,
-      color: 'from-cyan-500 to-blue-600'},
-    {
-
-      id: 'Cybersecurity',
-      name: 'Cybersecurity',
-      icon: Shield,
-      color: 'from-red-500 to-orange-600'},
-    {
-
-      id: 'Blockchain & Web3',
-      name: 'Blockchain & Web3',
-      icon: Code,
-      color: 'from-green-500 to-emerald-600'},
-    {
-
-      id: 'Marketing & Sales',
-      name: 'Marketing & Sales',
-      icon: TrendingUp,
-      color: 'from-yellow-500 to-orange-600'},
-  ];
-
-  const filteredServices = COMPREHENSIVE_PRICING_GUIDE_2025.filter()
-    service =>
-      selectedCategory === 'all' || service.category === selectedCategory
-  );
-
-  const getCategoryIcon = (category: string) => {
-
-    const categoryData = categories.find(cat => cat.id === category);
-    return categoryData ? categoryData.icon : Globe;
-  };
-
-  const getCategoryColor = (category: string) => {
-
-    const categoryData = categories.find(cat => cat.id === category);
-    return categoryData ? categoryData.color : 'from-gray-500 to-slate-600';
-  };
-
-  const getPriceColor = (price: number) => {
-
-    if (price < 1000) return 'text-green-400';
+  
     if (price <= 3000) return 'text-yellow-400';
-    return 'text-red-400';
-  };
+    return 'text-red-400'};
   return()
     <div className="min-h-screen py-8">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -114,15 +60,15 @@ export function PricingPage() {
             </p>"
             <div className="mt-8 flex justify-center space-x-4">"
               <div className="flex items-center space-x-2 text-cyan-400">"
-                <Sparkles className="w-5 h-5" />
+                <Sparkles className="w-5 h-5"  />
                 <span>No Hidden Fees</span>
               </div>"
               <div className="flex items-center space-x-2 text-green-400">"
-                <Award className="w-5 h-5" />
+                <Award className="w-5 h-5"  />
                 <span>Proven ROI</span>
               </div>"
               <div className="flex items-center space-x-2 text-purple-400">"
-                <Rocket className="w-5 h-5" />                <span>Fast Implementation</span>
+                <Rocket className="w-5 h-5"  />                <span>Fast Implementation</span>
               </div>
             </div>
           </motion.div>
@@ -180,15 +126,15 @@ export function PricingPage() {
                 </p>"
                 <div className="mt-4 flex justify-center space-x-6 text-sm text-gray-500">"
                   <div className="flex items-center space-x-2">"
-                    <TrendingUpIcon className="w-4 h-4" />
+                    <TrendingUpIcon className="w-4 h-4"  />
                     <span>ROI: {service.roi}</span>
                   </div>"
                   <div className="flex items-center space-x-2">"
-                    <Clock className="w-4 h-4" />
+                    <Clock className="w-4 h-4"  />
                     <span>Delivery: {service.estimatedDelivery}</span>
                   </div>"
                   <div className="flex items-center space-x-2">"
-                    <Users className="w-4 h-4" />                    <span>Support: {service.supportLevel}</span>
+                    <Users className="w-4 h-4"  />                    <span>Support: {service.supportLevel}</span>
                   </div>
                 </div>
               </div>
@@ -236,7 +182,7 @@ export function PricingPage() {
                           key={featureIndex}"
                           className="flex items-start space-x-3"
                         >"
-                          <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />"
+                          <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5"  />"
                           <span className="text-gray-300 text-sm">
                             {feature}
                           </span>                        </div>
@@ -288,15 +234,15 @@ export function PricingPage() {
                 <div className="text-sm text-gray-400 space-y-2">"
                   <div className="flex justify-center space-x-6">"
                     <div className="flex items-center space-x-2">"
-                      <Phone className="w-4 h-4" />
+                      <Phone className="w-4 h-4"  />
                       <span>{service.contactInfo.phone}</span>
                     </div>"
                     <div className="flex items-center space-x-2">"
-                      <Mail className="w-4 h-4" />
+                      <Mail className="w-4 h-4"  />
                       <span>{service.contactInfo.email}</span>
                     </div>"
                     <div className="flex items-center space-x-2">"
-                      <Globe className="w-4 h-4" />                      <span>{service.contactInfo.website}</span>
+                      <Globe className="w-4 h-4"  />                      <span>{service.contactInfo.website}</span>
                     </div>
                   </div>
                 </div>
@@ -337,7 +283,6 @@ export function PricingPage() {
           </div>
         </motion.div>
       </div>
-    </div>) ;
-}
+    </div>) }
 export default PricingPage;
 '"`

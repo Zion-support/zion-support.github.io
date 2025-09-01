@@ -1,71 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Zap, Users, TrendingUp, Shield, Globe, Rocket } from 'lucide-react';
 
 export default function MicroSAASSolutions() {
-  const solutions = [
-    {
-
-      name: 'AI Content Marketing Automation',
-      description:'
-        'Automate content creation, optimization, and distribution with AI-powered insights',
-      features: ['
-        'Content Generation',SEO Optimization',Social Media Automation',Performance Analytics',
-      ],
-      icon: Zap,
-      category: 'Marketing'},
-    {
-
-      name: 'AI Supply Chain Optimization',
-      description:'
-        'Optimize supply chain operations with predictive analytics and real-time monitoring',
-      features: ['
-        'Demand Forecasting',Inventory Management',Route Optimization',Risk Assessment',
-      ],
-      icon: TrendingUp,
-      category: 'Operations'},
-    {
-
-      name: 'AI HR Platform',
-      description:'
-        'Streamline HR processes with intelligent automation and data-driven insights',
-      features: ['
-        'Recruitment Automation',Performance Management',Employee Engagement',Compliance Tracking',
-      ],
-      icon: Users,
-      category: 'Human Resources'},
-    {
-
-      name: 'AI Legal Research Platform',
-      description:'
-        'Accelerate legal research with AI-powered document analysis and case law insights',
-      features: ['
-        'Document Analysis',Case Law Research',Legal Precedents',Compliance Checking',
-      ],
-      icon: Shield,
-      category: 'Legal'},
-    {
-
-      name: 'AI Education Platform',
-      description:'
-        'Personalize learning experiences with adaptive AI and intelligent tutoring',
-      features: ['
-        'Adaptive Learning',Progress Tracking',Content Personalization',Assessment Automation',
-      ],
-      icon: Globe,
-      category: 'Education'},
-    {
-
-      name: 'AI Project Management Platform',
-      description:'
-        'Enhance project delivery with intelligent planning, monitoring, and optimization',
-      features: ['
-        'Smart Planning',Resource Optimization',Risk Management',Performance Analytics',
-      ],
-      icon: Rocket,
-      category: 'Project Management'},
-  ];
-
+  
   return()
     <div className="min-h-screen bg-slate-900 text-white pt-20">"      <div className="container mx-auto px-4 py-12">
         {/* Header */}
@@ -112,7 +47,7 @@ export default function MicroSAASSolutions() {
                 <div className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center space-x-3">
-                      <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-green-500 flex-shrink-0"  />
                       <span className="text-sm text-gray-700">{feature}</span>
                     </div>
                   ))}
@@ -152,7 +87,7 @@ export default function MicroSAASSolutions() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
-                <Zap className="w-8 h-8 text-white" />
+                <Zap className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Rapid Deployment</h3>
               <p className="text-gray-600">Get up and running in hours, not months. Our solutions are designed for immediate implementation.</p>
@@ -160,7 +95,7 @@ export default function MicroSAASSolutions() {
 
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center">
-                <DollarSign className="w-8 h-8 text-white" />
+                <DollarSign className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Transparent Pricing</h3>
               <p className="text-gray-600">No hidden fees or surprise costs. Clear, predictable pricing that scales with your business.</p>
@@ -168,7 +103,7 @@ export default function MicroSAASSolutions() {
 
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
-                <Target className="w-8 h-8 text-white" />
+                <Target className="w-8 h-8 text-white"  />
               </div>
 "
               <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
@@ -226,6 +161,5 @@ export default function MicroSAASSolutions() {
         </div>
       </div>
     </div>
-  );
-}
+  )}
 '"

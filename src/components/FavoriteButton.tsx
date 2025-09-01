@@ -1,5 +1,3 @@
-import React, { useState } from 'react.ts';
-import { Heart  } from 'lucide-react';
 <<<<<<< HEAD
 
 interface FavoriteButtonProps extends React.PropsWithChildren<{}> {
@@ -11,7 +9,7 @@ interface FavoriteButtonProps extends React.PropsWithChildren<{}> {
 export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteButtonProps) {;
   const [isFavorited, setIsFavorited] = useState(false);
 
-  const handleToggleFavorite = useCallback ( (e: React.MouseEvent) => {;
+  
     e.stopPropagation () ;
     setIsFavorited (!isFavorited) ;
 
@@ -21,12 +19,10 @@ export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteBut
     if (isFavorited) {
 
       // Remove from favorites
-      // // // // // // // // console.log(`Removed ${itemType} ${itemId} from favorites`);
-    } else {
+      // // // // // // // // console.log(`Removed ${itemType} ${itemId} from favorites`)} else {
 
       // Add to favorites`
-      // // // // // // // // console.log(`Added ${itemType} ${itemId} to favorites`);
-    }`
+      // // // // // // // // console.log(`Added ${itemType} ${itemId} to favorites`)}`
       // console.log(`Removed ${itemType} ${itemId} from favorites`)} else {
 
       // Add to favorites`
@@ -61,6 +57,5 @@ className: {`w-4 h-4 transition-all duration-300 ${;
           isFavorited ? 'fill-current' : '';`
         }`} ;
       />;
-    </button>;) ;
-}
+    </button>;) }
 '`

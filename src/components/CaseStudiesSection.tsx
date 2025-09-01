@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import {
 
   TrendingUp,
@@ -13,8 +10,7 @@ import {
   CheckCircle'
 } from 'lucide-react';
 
-      color: 'from-purple-500 to-pink-500';
-    };
+      color: 'from-purple-500 to-pink-500'};
   ];
 const caseStudies = [
   {
@@ -63,13 +59,9 @@ const caseStudies = [
       "Improved customer trust by 80%";
     ],;"
     image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=400",;"
-    color: "from-green-500 to-emerald-500";
-  };
+    color: "from-green-500 to-emerald-500"};
 ];
 =======
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';];
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 export function CaseStudiesSection() {
@@ -152,14 +144,14 @@ export function CaseStudiesSection() {
                 <ul className="space-y-2">
                   {study.results.map((result, resultIndex) => ("
                     <li key={resultIndex} className="flex items-center text-sm text-gray-700">"
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />                      {result}
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"  />                      {result}
                     </li>) ) }
                 </ul>
               </div>
 "
               <div className="flex items-center justify-between">"
                 <div className="flex items-center text-sm text-gray-600">"
-                  <Star className="h-4 w-4 text-yellow-500 mr-1" />
+                  <Star className="h-4 w-4 text-yellow-500 mr-1"  />
                   <span>5.0</span>"                  <span className="mx-2">•</span>
                   <span>Verified Results</span>
                 </div>
@@ -203,14 +195,14 @@ export function CaseStudiesSection() {
                 className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200"
 
                 Start Your Project"
-                <TrendingUp className="ml-2 h-5 w-5" />
+                <TrendingUp className="ml-2 h-5 w-5"  />
               </Link>
               <Link"
                 to="/case-studies"
                 className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200"
 
                 View All Case Studies"
-                <ArrowRight className="ml-2 h-5 w-5" />              </Link>
+                <ArrowRight className="ml-2 h-5 w-5"  />              </Link>
             </div>
           </div>
         </motion.div>;
@@ -222,8 +214,7 @@ export default CaseStudiesSection;"
           </div>;
         </motion.div>;
       </div>;
-    </section>;) ;
-}
+    </section>;) }
 export default CaseStudiesSection;
 export default CaseStudiesSection;
 '"`

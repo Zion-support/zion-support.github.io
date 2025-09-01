@@ -22,9 +22,7 @@ export interface SpecializedITInfrastructureService2026 {
 
     phone: string;
     email: string;
-    website: string;
-  
-};  technicalSpecs?: {
+    website: string};  technicalSpecs?: {
 
     technology: string[];
     integrations: string[];

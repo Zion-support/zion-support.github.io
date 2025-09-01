@@ -1,22 +1,3 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Logo } from '@/components/header/Logo';
-import { PointsBadge } from '@/components/loyalty/PointsBadge';
-import { UserMenu } from '@/components/header/UserMenu';
-import { LanguageSelector } from '@/components/header/LanguageSelector';
-import { ModeToggle } from '@/components/ModeToggle';
-import { useAuth } from '@/hooks/useAuth';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { useMessaging } from '@/context/MessagingContext';
-import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';
-import { generateSearchSuggestions } from '@/data/marketplaceData';
-import { slugify } from '@/lib/slugify';
-import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { Menu, X, ShoppingCart import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
-import type { RootState } from '@/store';
 
       // // // // // // // // console.log('PrimaryNav search submit:', query);
 <<<<<<< HEAD
@@ -31,7 +12,7 @@ import type { RootState } from '@/store';
       router.push(`/search/${slugify(query)}`);
       setQuery('')}
 // Theme toggle component;
-const ModeToggle = (...args: unknown[]): unknown => {;
+
   const [isDark, setIsDark] = useState<typeof false>(false);
 
   const toggleTheme = (...args: unknown[]): unknown => {;    setIsDark(!isDark);
@@ -108,7 +89,7 @@ const ModeToggle = (...args: unknown[]): unknown => {;
 
 }
                   >"
-                    <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary" />
+                    <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary"  />
                     {cartCount > 0 && ("                      <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
                         {cartCount}
                       </span>
@@ -157,7 +138,7 @@ const ModeToggle = (...args: unknown[]): unknown => {;
             onClick={() => setIsOpen(!isOpen)}"
             className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-200"
           >"
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}          </button>
+            {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}          </button>
         </div>
 
         {/* Mobile Navigation */}
@@ -257,6 +238,5 @@ const ModeToggle = (...args: unknown[]): unknown => {;
         </AnimatePresence>;
       </nav>;
     </header>;
-  );
-}
+  )}
 '"`

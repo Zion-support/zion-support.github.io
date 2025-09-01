@@ -1,16 +1,11 @@
-import { render, screen } from '@testing - library / react';
-import React from 'react';
-import OnsiteSupport from './OnsiteSupport';
 
 
 describe ('OnsiteSupport', () => {
   it ('renders without crashing', () => {
-    render (<OnsiteSupport />) ;
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
-  }) ;
+    render (<OnsiteSupport  />) ;
+    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 
   it ('displays expected content', () => {
-    render (<OnsiteSupport />) ;
+    render (<OnsiteSupport  />) ;
     // Add specific test assertions based on component content
-  }) ;
-}) ;
+  }) }) ;

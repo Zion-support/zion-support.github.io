@@ -1,36 +1,19 @@
-import React from 'react';
 import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarChart3, Target, Zap, Shield, Users export default function AIPredictiveAnalytics() {
-  const features = [
-    'Advanced machine learning algorithms for pattern recognition',Real-time data processing and predictive modeling',;
+  
     'Custom AI models trained on your industry data',;
     'Automated feature engineering and model selection',;
     'Predictive insights with confidence intervals',;
     'Interactive dashboards and visualization tools',;
     'API integration with existing business systems',;
     'Automated model retraining and performance monitoring';
-  ];
-
-  const tiers = [
-    {
-
-      name: 'Starter',
-      price: '$299/mo',
-      details: ['Up to 5 predictive models',10GB data processing',Basic ML algorithms',Email support']
-    },
-    {
-
-      name: 'Professional',
-      price: '$799/mo',
-      details: ['Up to 20 predictive models',100GB data processing',Advanced ML algorithms',Priority support'] ;
-    },;
+  ]},;
     { ;
       name: 'Enterprise', ;
       price: '$1,999/mo', ;
-      details: ['Unlimited models',Unlimited data',Custom ML algorithms',24/7 dedicated support'] ;
-    },;
+      details: ['Unlimited models',Unlimited data',Custom ML algorithms',24/7 dedicated support'] },;
   ];
 
-  const useCases = [;
+  
     'Sales forecasting and demand prediction',;
     'Customer churn prediction and retention',;
     'Inventory optimization and supply chain forecasting',;
@@ -39,7 +22,7 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
     'Market trend analysis and investment insights';
   ];
 
-  const benefits = [;
+  
     'Improve forecast accuracy by 40-60%',;
     'Reduce operational costs by 25-35%',;
     'Increase revenue through better predictions',;
@@ -48,7 +31,7 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
     'Make data-driven decisions with confidence';
   ];
 
-  const industries = [;
+  
     'E-commerce & Retail',;
     'Financial Services',;
     'Healthcare & Pharmaceuticals',;
@@ -62,7 +45,7 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
       <section className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 py-20 text-center">"
         <div className="max-w-5xl mx-auto px-6">"
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">"
-            <TrendingUp className="w-4 h-4 mr-2" /> AI-Powered Predictive Intelligence
+            <TrendingUp className="w-4 h-4 mr-2"  /> AI-Powered Predictive Intelligence
           </div>"
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Predictive Analytics Platform</h1>"          <p className="text-purple-100 text-xl">Transform your business with AI-powered predictive insights that forecast trends, optimize operations, and drive strategic decision-making.</p>
         </div>
@@ -75,7 +58,7 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
             <ul className="space-y-3">
               {features.map((f) => ("
                 <li key={f} className="flex items-start">"
-                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />"                  <span className="text-gray-700">{f}</span>
+                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />"                  <span className="text-gray-700">{f}</span>
                 </li>
               ))}
             </ul>"
@@ -98,10 +81,10 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
             </div>"
             <div className="mt-6 flex flex-wrap gap-3">"
               <a href="/pricing" className="px-5 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors inline-flex items-center">"
-                View Full Pricing <ArrowRight className="w-4 h-4 ml-2" />
+                View Full Pricing <ArrowRight className="w-4 h-4 ml-2"  />
               </a>"
               <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="px-5 py-3 border border-gray-300 rounded-lg hover:border-indigo-400 transition-colors inline-flex items-center">"
-                Learn More <ExternalLink className="w-4 h-4 ml-2" />              </a>
+                Learn More <ExternalLink className="w-4 h-4 ml-2"  />              </a>
             </div>
           </div>
         </div>
@@ -109,7 +92,7 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {['40-60% accuracy improvement',Real-time predictions',Custom ML models'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
-              <Brain className="w-6 h-6 text-indigo-600 mb-3" />"              <div className="text-gray-900 font-semibold">{t}</div>
+              <Brain className="w-6 h-6 text-indigo-600 mb-3"  />"              <div className="text-gray-900 font-semibold">{t}</div>
             </div>
           ))}
         </div>
@@ -119,7 +102,7 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
           <div className="grid md:grid-cols-2 gap-6">
             {useCases.map((useCase) => ("
               <div key={useCase} className="flex items-center p-4 bg-white rounded-lg border border-gray-200">"
-                <Target className="w-5 h-5 text-indigo-600 mr-3" />"                <span className="text-gray-700">{useCase}</span>
+                <Target className="w-5 h-5 text-indigo-600 mr-3"  />"                <span className="text-gray-700">{useCase}</span>
               </div>
             ))}
           </div>
@@ -130,7 +113,7 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit) => ("
               <div key={benefit} className="flex items-start p-4 bg-white rounded-lg border border-indigo-200">"
-                <Zap className="w-5 h-5 text-indigo-600 mr-3 mt-0.5 flex-shrink-0" />"                <span className="text-gray-700">{benefit}</span>
+                <Zap className="w-5 h-5 text-indigo-600 mr-3 mt-0.5 flex-shrink-0"  />"                <span className="text-gray-700">{benefit}</span>
               </div>
             ))}
           </div>
@@ -141,7 +124,7 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((industry) => ("
               <div key={industry} className="flex items-center p-4 bg-gray-50 rounded-lg border border-gray-200">"
-                <Users className="w-5 h-5 text-indigo-600 mr-3" />"                <span className="text-gray-700">{industry}</span>
+                <Users className="w-5 h-5 text-indigo-600 mr-3"  />"                <span className="text-gray-700">{industry}</span>
               </div>
             ))}
           </div>
@@ -151,10 +134,10 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
           <div className="text-sm text-gray-600 mb-2">Ready to unlock predictive insights?</div>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">"
-              <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950
+              <Phone className="w-4 h-4 mr-2" /> +1 302 464 0950
             </a>"
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors">"
-              <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com            </a>
+              <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
           </div>;"
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
@@ -162,5 +145,4 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
         </div>;
       </section>;
     </div>;
-  );
-}}'"
+  )}}'"

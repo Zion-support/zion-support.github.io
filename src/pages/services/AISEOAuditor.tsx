@@ -1,5 +1,3 @@
-import React from 'react.ts';
-import { SEO } from '@/components/SEO';
 import {
 
   DollarSign,
@@ -48,7 +46,7 @@ const AISEOAuditor: React.FC = (): JSX.Element => {
 "
         <div className="mt-10 rounded-xl border border-white/10 bg-white/5 p-6">"
           <div className="flex items-center gap-2 text-slate-200 font-semibold">"
-            <DollarSign className="h-4 w-4" /> Pricing
+            <DollarSign className="h-4 w-4"  /> Pricing
           </div>"          <ul className="mt-3 grid gap-3 sm:grid-cols-2 text-slate-300 text-sm">
             <li>Starter: $49/mo for up to 500 pages</li>
             <li>Growth: $149/mo for up to 5k pages</li>
@@ -61,26 +59,25 @@ const AISEOAuditor: React.FC = (): JSX.Element => {
             target="_blank"
             rel="noreferrer"
           >"
-            Learn more <ExternalLink className="ml-1 h-3 w-3" />
+            Learn more <ExternalLink className="ml-1 h-3 w-3"  />
           </a>"
           <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-slate-300">
             <a"
               href="tel:+13024640950"
               className="inline-flex items-center gap-2 hover:text-cyan-200"
             >"
-              <Phone className="h-4 w-4" /> +1 302 464 0950
+              <Phone className="h-4 w-4"  /> +1 302 464 0950
             </a>
             <a"
               href="mailto:kleber@ziontechgroup.com"
               className="inline-flex items-center gap-2 hover:text-cyan-200"
             >"
-              <Mail className="h-4 w-4" /> kleber@ziontechgroup.com
+              <Mail className="h-4 w-4"  /> kleber@ziontechgroup.com
             </a>          </div>
         </div>
       </section>
     </div>
-  );
-};
+  )};
 ;
 export { AISEOAuditor };export default AISEOAuditor;
 '"

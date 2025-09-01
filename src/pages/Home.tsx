@@ -1,6 +1,3 @@
-import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
 
 import {
 
@@ -48,16 +45,6 @@ import {
 } from 'lucide-react';
 
 // Optimized futuristic animated background component
-const FuturisticBackground = React.memo(() => {
-  const particles = useMemo(() => 
-    [...Array(20)].map((_, i) => ({
-
-      id: i,
-      left: `${Math.random() * 100}%`,`
-      top: `${Math.random() * 100}%`,
-      delay: i * 0.1,
-      duration: 5 + i * 0.3
-    }) ) , []) ;
 
   return()
     <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
@@ -92,37 +79,22 @@ const FuturisticBackground = React.memo(() => {
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-cyan-900/10"></div>"
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10"></div>
     </div>
-  );
-});
+  )});
 
 
 // Floating Action Button Component
-const FloatingActionButton = React.memo ( () => {
-  const [isVisible, setIsVisible] = useState (false) ;
+
   const [isExpanded, setIsExpanded] = useState (false) ;
 
   useEffect ( () => {
-    const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
-
-        setIsVisible(true);
+    
       } else {
 
-        setIsVisible(false);
-      }
+        setIsVisible(false)}
     };
 
     window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({
-
-      top: 0,
-      behavior: 'smooth'
-    }) ;
-  };
+    return () => window.removeEventListener('scroll', toggleVisibility)}, [])};
 
   return()
     <AnimatePresence>
@@ -149,7 +121,7 @@ const FloatingActionButton = React.memo ( () => {
                     onClick={() => window.open('mailto:contact@ziontechgroup.com')}"
                     aria-label="Contact us via email"
                   >"
-                    <Mail className="h-5 w-5" />
+                    <Mail className="h-5 w-5"  />
                   </motion.button>
                   <motion.button
                     whileHover={{ scale: 1.1 }}
@@ -158,7 +130,7 @@ const FloatingActionButton = React.memo ( () => {
                     onClick={() => window.open('tel:+15551234567')}"
                     aria-label="Call us"
                   >"
-                    <Phone className="h-5 w-5" />
+                    <Phone className="h-5 w-5"  />
                   </motion.button>
                   <motion.button
                     whileHover={{ scale: 1.1 }}
@@ -167,7 +139,7 @@ const FloatingActionButton = React.memo ( () => {
                     onClick={() => window.open('/help',_blank')}"
                     aria-label="Get help"
                   >"
-                    <HelpCircle className="h-5 w-5" />
+                    <HelpCircle className="h-5 w-5"  />
                   </motion.button>
                 </motion.div>) }
             </AnimatePresence>
@@ -181,109 +153,41 @@ const FloatingActionButton = React.memo ( () => {
               aria-label="Quick actions menu"
             >
               {isExpanded ? ("
-                <ChevronUp className="h-6 w-6" />
+                <ChevronUp className="h-6 w-6"  />
               ) : ("
-                <MessageSquare className="h-6 w-6" />
+                <MessageSquare className="h-6 w-6"  />
               )}
             </motion.button>
           </div>
         </motion.div>
       )}
     </AnimatePresence>
-  );
-});
+  )});
 
 FloatingActionButton.displayName = 'FloatingActionButton';
 
 // Enhanced hero section component
-const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) => {
 
-  const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   
-  const heroSlides = [
-    {
-"
-      title: "AI-Powered Innovation","
-      subtitle: "Transform your business with cutting-edge artificial intelligence solutions","
-      description: "From autonomous research assistants to quantum computing platforms, we deliver the future of technology today.","
-      cta: "Explore AI Solutions","
-      link: "/services/ai-solutions",
-      icon: Brain,"
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-"
-      title: "Quantum Computing Excellence","
-      subtitle: "Unlock unprecedented computational power","
-      description: "Harness the power of quantum mechanics to solve complex problems that were once impossible.","
-      cta: "Discover Quantum","
-      link: "/services/quantum-computing",
-      icon: Atom,"
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-
-      name: 'AI Healthcare Analytics',
-      description: 'Predictive diagnostics and care optimization powered by AI',
-      icon: Heart,
-      href: '/services/ai-healthcare-analytics',
-      color: 'from-green-600 to-emerald-600',
-      features: ['Predictive analytics',Diagnostic support',Care optimization']
-    }
-  ], []) ;
-
+  
   // Auto - advance slides
   useEffect ( () => {
-    if (!isPlaying) return;
-    
-    const interval = setInterval ( () => {
-      setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) ;
-    }, 5000) ;
+    if (!isPlaying) return}, 5000) ;
 
-    return () => clearInterval (interval) ;
-  }, [isPlaying, heroSlides.length]) ;
+    return () => clearInterval (interval) }, [isPlaying, heroSlides.length]) ;
 
-  const togglePlayPause = () => setIsPlaying (!isPlaying) ;
-
-  const serviceCategories = [
-    {
-
-      name: 'AI & Analytics',
-      icon: Brain,
-      color: 'from-purple-600 to-pink-600',
-      services: ['
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
-        { name: 'AI Content Generation', href: '/services/ai-content-generation-platform' },
-        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation' },
-        { name: 'AI Project Management', href: '/services/ai-project-management-platform' }
-      ]
-    },
-    {
-
-      name: 'Cybersecurity',
-      icon: Shield,"
-      color: "from-red-500 to-orange-500"
-    }
-  ];
-
+  
+  
   useEffect ( () => {
-    const timer = setInterval ( () => {
-      setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) ;
+    
     }, 5000) ;
-    return () => clearInterval (timer) ;
-  }, [heroSlides.length]) ;
+    return () => clearInterval (timer) }, [heroSlides.length]) ;
 
-  const heroStats = ['
-    { label: 'AI Solutions', value: '50+', icon: Brain, description: 'Cutting-edge AI services' },
-    { label: 'Micro SaaS', value: '25+', icon: Rocket, description: 'Innovative products' },
-    { label: 'Enterprise Clients', value: '100+', icon: Building, description: 'Trusted partnerships' },
-    { label: 'Success Rate', value: '99%', icon: CheckCircle, description: 'Proven results' }
-  ];
-
+  
   return ("
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <FuturisticBackground />
+      <FuturisticBackground  />
       "
       <div className="relative z-10 container mx-auto px-4 text-center">"
         <AnimatePresence mode="wait">          <motion.div
@@ -388,66 +292,13 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
             className="ml-4 p-2 text-gray-400 hover:text-white transition-colors duration-200"'
             aria-label={isPlaying ? 'Pause slideshow' : 'Play slideshow'}
           >"
-            {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
+            {isPlaying ? <Pause className="h-4 w-4"  /> : <Play className="h-4 w-4"  />}
           </button>
         </div>
       </div>
-    </section>) ;
-};
+    </section>) };
 
 // Features Section Component
-const FeaturesSection = () => {
-  const features = [
-    {
-
-      icon: Brain,"
-      title: "AI & Machine Learning","
-      description: "Cutting-edge artificial intelligence solutions that learn, adapt, and evolve with your business needs.","
-      color: "from-purple-500 to-pink-500","
-      link: "/services/ai-solutions"
-    },
-    {
-
-      icon: Atom,"
-      title: "Quantum Computing","
-      description: "Revolutionary quantum algorithms and computing platforms for solving complex computational problems.","
-      color: "from-blue-500 to-cyan-500","
-      link: "/services/quantum-computing"
-    },
-    {
-
-      icon: Shield,"
-      title: "Cybersecurity","
-      description: "Advanced security solutions with zero-trust architecture and real-time threat detection.","
-      color: "from-red-500 to-orange-500","
-      link: "/services/cybersecurity"
-    },
-    {
-
-      icon: Cloud,"
-      title: "Cloud Infrastructure","
-      description: "Scalable cloud solutions designed for modern enterprise needs and digital transformation.","
-      color: "from-green-500 to-emerald-500","
-      link: "/services/cloud-infrastructure"
-    },
-    {
-
-      icon: Lock,"
-      title: "Blockchain & Web3","
-      description: "Secure, decentralized solutions for the next generation of digital applications.","
-      color: "from-indigo-500 to-purple-500","
-      link: "/services/blockchain-web3"
-    },
-    {
-
-      icon: Zap,"
-      title: "Digital Transformation","
-      description: "End-to-end digital transformation services to modernize your business operations.","
-      color: "from-yellow-500 to-orange-500","
-      link: "/services/digital-transformation"
-
-    }
-  ];
 
   return()
 "
@@ -496,7 +347,7 @@ const FeaturesSection = () => {
                   </p>"
                   <div className="mt-6 flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">"
                     <span className="font-medium">Learn More</span>"
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />
                   </div>
                 </div>
               </Link>
@@ -504,18 +355,9 @@ const FeaturesSection = () => {
             </motion.div>) ) }
         </div>
       </div>
-    </section>) ;
-
-};
+    </section>) };
 
 // Stats Section Component
-const StatsSection = () => {
-  const stats = ["
-    { number: "500+", label: "Projects Completed", icon: CheckCircle },"
-    { number: "50+", label: "Team Members", icon: Users },"
-    { number: "25+", label: "Countries Served", icon: Globe },"
-    { number: "99%", label: "Client Satisfaction", icon: Star }
-  ];
 
   return ("
     <section className="py-24 bg-gradient-to-br from-slate-800 via-blue-800 to-indigo-800">"
@@ -544,14 +386,14 @@ const StatsSection = () => {
               className="bg-gray-700 rounded-xl p-6 hover:bg-gray-600 transition-all duration-300"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
-                <Atom className="w-8 h-8 text-white"  />
+                <Atom className="w-8 h-8 text-white"   />
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Quantum Computing</h3>
               <p className="text-gray-400 mb-4">
                 Revolutionary quantum algorithms and machine learning solutions for complex problems.
               </p>
               <Link to="/services-showcase" className="text-cyan-400 hover:text-cyan-300 flex items-center">
-                Learn More <ArrowRight className="w-4 h-4 ml-2"  />
+                Learn More <ArrowRight className="w-4 h-4 ml-2"   />
               </Link>
             </motion.div>
 
@@ -563,78 +405,22 @@ const StatsSection = () => {
               className="bg-gray-700 rounded-xl p-6 hover:bg-gray-600 transition-all duration-300"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-xl flex items-center justify-center mb-4">
-                <Shield className="w-8 h-8 text-white"  />
+                <Shield className="w-8 h-8 text-white"   />
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Cybersecurity</h3>
               <p className="text-gray-400 mb-4">
                 Military-grade security solutions with advanced threat detection and zero-trust architecture.
               </p>
               <Link to="/services-showcase" className="text-cyan-400 hover:text-cyan-300 flex items-center">
-                Learn More <ArrowRight className="w-4 h-4 ml-2"  />
+                Learn More <ArrowRight className="w-4 h-4 ml-2"   />
               </Link>
             </motion.div>
           </div>
         </div>
       </div>
-    </section>) ;
-};
+    </section>) };
 
 // CTA Section Component
-const CTASection = () => {
-  return ("
-    <section className="py-24 bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900">"
-      <div className="container mx-auto px-4 text-center">
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-
-          transition={{ duration: 0.8 }}"
-          className="max-w-4xl mx-auto"
-        >"
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>"
-          <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-            Join hundreds of organizations that have already transformed their operations with our AI-powered solutions. '
-            Let's discuss how we can help you achieve your technology goals.
-
-          </p>"
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link"
-              to="/contact"
-"
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
-            >
-              Get Started Today
-            </Link>
-            <Link"
-              to="/services"
-              className="border-2 border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-            >
-              Call Now: +1 302 464 0950
-            </a>
-          </div>
-
-          {/* Contact Information */}"
-          <div className="mt-12 grid md:grid-cols-3 gap-8 max-w-2xl mx-auto">"
-            <div className="flex items-center justify-center space-x-3 text-gray-300">"
-              <Phone className="w-5 h-5 text-cyan-400" />
-              <span>+1 302 464 0950</span>
-            </div>"
-            <div className="flex items-center justify-center space-x-3 text-gray-300">"
-              <Mail className="w-5 h-5 text-cyan-400" />
-              <span>kleber@ziontechgroup.com</span>
-            </div>"
-            <div className="flex items-center justify-center space-x-3 text-gray-300">"
-              <MapPin className="w-5 h-5 text-cyan-400" />
-              <span>Middletown, DE</span>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>) ;
 
 };
 
@@ -642,10 +428,10 @@ const CTASection = () => {
 export default function Home() {
   return()
         {/* Services Showcase */}
-        <ServicesShowcase />
+        <ServicesShowcase  />
 
         {/* Micro SaaS Products */}
-        <MicroSaaSProducts />
+        <MicroSaaSProducts  />
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -698,45 +484,44 @@ export default function Home() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 <span>Explore 2026 Services</span>
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"  />
               </Link>
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300 transform hover:scale-105"
               >
                 <span>Contact Us</span>
-                <MessageCircle className="w-5 h-5 ml-2" />
+                <MessageCircle className="w-5 h-5 ml-2"  />
               </Link>
             </motion.div>
           </div>
         </section>
 
         {/* Additional Sections */}
-        <Suspense fallback={<LoadingFallback message="Loading additional sections..." />}>
-          <TechSolutionsSection />
-          <CaseStudiesSection />
-          <TeamExpertiseSection />
-          <GlobalPresenceSection />
-          <InnovationResearchSection />
-          <ClientSuccessStoriesSection />
-          <TechnologyStackSection />
-          <SecurityComplianceSection />
-          <AIServicesShowcase />
-          <InteractiveTestimonials />
-          <ServicesShowcase />
-          <BenefitsSection />
-          <HowItWorksSection />
-          <NewsletterSection />
-          <FeaturedListingsSection />
-          <FeatureHighlights />
-          <FeatureCTAs />
-          <ITServiceRequestHero />
-          <FloatingCTA />
-          <PricingSection />
+        <Suspense fallback={<LoadingFallback message="Loading additional sections..."  />}>
+          <TechSolutionsSection  />
+          <CaseStudiesSection  />
+          <TeamExpertiseSection  />
+          <GlobalPresenceSection  />
+          <InnovationResearchSection  />
+          <ClientSuccessStoriesSection  />
+          <TechnologyStackSection  />
+          <SecurityComplianceSection  />
+          <AIServicesShowcase  />
+          <InteractiveTestimonials  />
+          <ServicesShowcase  />
+          <BenefitsSection  />
+          <HowItWorksSection  />
+          <NewsletterSection  />
+          <FeaturedListingsSection  />
+          <FeatureHighlights  />
+          <FeatureCTAs  />
+          <ITServiceRequestHero  />
+          <FloatingCTA  />
+          <PricingSection  />
         </Suspense>
       </div>
-    </>) ;
-};
+    </>) };
 
 export default Home;
 '"`

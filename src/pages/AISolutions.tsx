@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-import React from 'react';
-import { SEO } from '@/components/SEO';
 
 export default function AiSolutions() {
   return()
@@ -13,14 +11,11 @@ export default function AiSolutions() {
         <h1 className="text-4xl font-bold mb-4">AI Solutions</h1>"
         <p className="text-lg text-gray-300 max-w-3xl">
 =======
-import React from 'react';'
-import { SEO } from '@/components/SEO';        <p className="text-lg text-gray-300 max-w-3xl">
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           We design and implement end-to-end AI systems that deliver measurable
           business outcomes: demand forecasting, intelligent search, fraud
           detection, personalization, autonomous process optimization, and more.
         </p>
       </section>
-    </div>) ;
-}
+    </div>) }
 '"

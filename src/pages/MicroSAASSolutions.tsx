@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-import React from 'react';
-import { SEO } from '../components/SEO';
 import {
 
   Code,
@@ -28,142 +26,50 @@ import {
 
 export default function MicroSAASSolutions(...args[]):  {
 
-  const services = [
-    {
-
-      title: "Custom SAAS Development","
-      description: "Tailored software-as-a-service solutions designed specifically for your business needs and industry requirements.",
-      icon: Code,"
-      features["Custom workflows", "API integration", "User management", "Scalable architecture"];
+  
     },;
 =======
-import React from 'react';'
-import { SEO } from '../components/SEO';    },;
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     {
 "
       title: "Multi-tenant Architecture","
       description: "Efficient multi-tenant systems that maximize resource utilization while maintaining data isolation and security.",
       icon: Users,"
-      features["Data isolation", "Resource sharing", "Customization options", "Performance optimization"];
-    },;    {
+      features["Data isolation", "Resource sharing", "Customization options", "Performance optimization"]},;    {
 "
       title: "Subscription Management","
       description: "Comprehensive billing and subscription systems with flexible pricing models and automated renewals.",
       icon: BarChart3,"
-      features["Flexible pricing", "Automated billing", "Usage tracking", "Payment processing"];
-    },;    {
+      features["Flexible pricing", "Automated billing", "Usage tracking", "Payment processing"]},;    {
 "
       title: "API Development & Integration","
       description: "Robust APIs that enable seamless integration with existing systems and third-party applications.",
       icon: Cpu,"
-      features["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"];
-    },;
+      features["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"]},;
     {
 "
-      features["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"];
-    };"
+      features["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]};"
       title: "Analytics & Reporting",;"
       description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",;
       icon: TrendingUp,;"
-      features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"];
-    };
-  ];
-
-  const benefits = [
-    {
-"
-      title: "Rapid Deployment","
-      description: "Quick time-to-market with agile development methodologies",
-      icon: Zap
-    },
-    {
-"
-      title: "Scalability","
-      description: "Built to grow with your business from day one",
-      icon: TrendingUp
-    },
-    {
-"
-      title: "Cost Efficiency","
-      description: "Reduced infrastructure costs with cloud-native solutions",
-      icon: BarChart3;
-    },;
+      features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]};
+  ]},;
     {;"
       title: "Security",;"
       description: "Enterprise-grade security and compliance standards",;
-      icon: Shield;
-    };
-  ];
-
-  const industries = [
-    {
-"
-      name: "Healthcare","
-      description: "HIPAA-compliant patient management systems",
-      icon: Building
-    },
-    {
-"
-      name: "Finance","
-      description: "Regulatory-compliant financial tools",
-      icon: Building
-    },
-    {
-"
-      name: "Education","
-      description: "Learning management and student tracking",
-      icon: Building
-    },
-    {
-"
-      name: "Manufacturing","
-      description: "Production planning and inventory management",
-      icon: Building
-    },
-    {
-"
-      name: "Retail","
-      description: "E-commerce and point-of-sale solutions",
-      icon: Building;
-    },;
+      icon: Shield};
+  ]},;
     {;"
       name: "Real Estate",;"      description: "Property management and client portals",;
       icon: Building};
   ];
 
-  const processSteps = [
-    {
-
-      step: 1,"
-      title: "Discovery & Planning","
-      description: "Understanding your business requirements and creating a comprehensive project plan",
-      icon: Target,"
-      duration: "1-2 weeks"
-    },
-    {
-
-      step: 2,"
-      title: "Design & Architecture","
-      description: "Creating the system architecture and user interface designs",
-      icon: Code,"
-      duration: "2-4 weeks"
-    },
-    {
-
-      step: 3,"
-      title: "Development","
-      description: "Building the core application with iterative development cycles",
-      icon: Cpu,"
-      duration: "8-16 weeks"
-    },
-    {;
+  
       step: 4,;"
       title: "Testing & Deployment",;"
       description: "Comprehensive testing and production deployment",;
       icon: Rocket,;"
-      duration: "2-4 weeks";
-    };  ];
+      duration: "2-4 weeks"};  ];
 
   return()
     <>
@@ -184,7 +90,7 @@ import { SEO } from '../components/SEO';    },;
           <div className="container-responsive relative z-10">"
             <div className="text-center max-w-4xl mx-auto">"
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8">"
-                <Code className="w-10 h-10 text-white" />              </div>
+                <Code className="w-10 h-10 text-white"  />              </div>
 "
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Micro SAAS"
@@ -198,15 +104,15 @@ import { SEO } from '../components/SEO';    },;
 "
               <div className="flex flex-wrap justify-center gap-4 text-sm">"
                 <div className="flex items-center gap-2 text-zion-cyan">"
-                  <Code className="w-4 h-4" />
+                  <Code className="w-4 h-4"  />
                   <span>Custom Development</span>
                 </div>"
                 <div className="flex items-center gap-2 text-zion-purple">"
-                  <Cloud className="w-4 h-4" />
+                  <Cloud className="w-4 h-4"  />
                   <span>Cloud Native</span>
                 </div>"
                 <div className="flex items-center gap-2 text-zion-blue">"
-                  <Shield className="w-4 h-4" />                  <span>Enterprise Security</span>
+                  <Shield className="w-4 h-4"  />                  <span>Enterprise Security</span>
                 </div>
               </div>
             </div>
@@ -239,7 +145,7 @@ import { SEO } from '../components/SEO';    },;
                   <div className="space-y-3">
                     {service.features.map((feature, featureIndex) => ("
                       <div key={featureIndex} className="flex items-center gap-3">"
-                        <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />"                        <span className="text-zion-slate-light text-sm">{feature}</span>
+                        <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0"  />"                        <span className="text-zion-slate-light text-sm">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -365,6 +271,5 @@ import { SEO } from '../components/SEO';    },;
         </section>;
       </div>;
     </>
-  );
-}
+  )}
 '"

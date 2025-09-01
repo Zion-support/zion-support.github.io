@@ -15,50 +15,12 @@ import {
 
 export default function AIMarketingAutomationSuite(...args: any[]): any {
 
-  const features = ['
-    'AI-powered audience segmentation and targeting',Predictive customer behavior modeling',Automated content generation and optimization',Multi-channel campaign orchestration',Real-time performance analytics and optimization',Personalized customer journey mapping',A/B testing with AI-driven insights',Social media automation and scheduling',Email marketing with smart personalization',ROI tracking and attribution modeling',
-  ];
-
-  const benefits = ['
-    'Increase conversion rates by 40-80%',Reduce customer acquisition costs by 30-50%',Improve customer lifetime value by 25-60%',Automate 70% of marketing tasks',Real-time campaign optimization',Data-driven marketing decisions',
-  ];
-
-  const useCases = ['
-    'E-commerce marketing automation',B2B lead generation campaigns',Customer retention programs',Product launch campaigns',Seasonal marketing campaigns',Account-based marketing (ABM),
-  ];
-
-  const tiers = [
-    {
-
-      name: 'Growth',
-      price: '$1,499/mo',
-      details: ['
-        'Up to 10,000 contacts',Basic AI insights',Email support',Standard integrations',
-      ]},
-    {
-
-      name: 'Professional',
-      price: '$3,999/mo',
-      details: ['
-        'Up to 100,000 contacts',Advanced AI analytics',Priority support',Custom integrations',
-      ]},
-    {
-
-      name: 'Enterprise',
-      price: '$9,999/mo',
-      details: ['
-        'Unlimited contacts',Custom AI models',Dedicated support',White-label solution',
-      ]},
-  ];
-
-  const marketingChannels = ['
-    'Email Marketing',Social Media',SMS Marketing',Push Notifications',Web Push',Retargeting Ads',
-  ];
-
-  const aiCapabilities = ['
-    'Predictive analytics',Content optimization',Audience targeting',Campaign automation',Performance optimization',Customer insights',
-  ];
-
+  
+  
+  
+  
+  
+  
   return()
     <div className="min-h-screen bg-white">"
       <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 py-20 text-center">"
@@ -84,7 +46,7 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {
             <ul className="space-y-3">
               {features.map(f => ("
                 <li key={f} className="flex items-start">"
-                  <Check className="w-5 h-5 text-purple-600 mr-3 mt-0.5" />"                  <span className="text-zion-slate-dark">{f}</span>
+                  <Check className="w-5 h-5 text-purple-600 mr-3 mt-0.5"  />"                  <span className="text-zion-slate-dark">{f}</span>
                 </li>
               ))}
             </ul>"
@@ -119,7 +81,7 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {
                 href="/pricing"
                 className="px-5 py-3 bg-purple-600/10 text-purple-600 rounded-lg hover:bg-purple-600/20 transition-colors inline-flex items-center"
               >"
-                View Full Pricing <ExternalLink className="w-4 h-4 ml-2" />
+                View Full Pricing <ExternalLink className="w-4 h-4 ml-2"  />
               </a>
               <a"
                 href="https://ziontechgroup.com"
@@ -127,7 +89,7 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {
                 rel="noreferrer"
                 className="px-5 py-3 border border-purple-600 text-purple-600 rounded-lg inline-flex items-center"
               >"
-                Learn More <ExternalLink className="w-4 h-4 ml-2" />              </a>
+                Learn More <ExternalLink className="w-4 h-4 ml-2"  />              </a>
             </div>
           </div>
         </div>
@@ -140,7 +102,7 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {
             <ul className="space-y-3">
               {benefits.map(b => ("
                 <li key={b} className="flex items-start">"
-                  <TrendingUp className="w-5 h-5 text-purple-600 mr-3 mt-0.5" />"                  <span className="text-zion-slate-dark">{b}</span>
+                  <TrendingUp className="w-5 h-5 text-purple-600 mr-3 mt-0.5"  />"                  <span className="text-zion-slate-dark">{b}</span>
                 </li>
               ))}
             </ul>
@@ -152,7 +114,7 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {
             <ul className="space-y-3">
               {useCases.map(u => ("
                 <li key={u} className="flex items-start">"
-                  <Target className="w-5 h-5 text-purple-600 mr-3 mt-0.5" />"                  <span className="text-zion-slate-dark">{u}</span>
+                  <Target className="w-5 h-5 text-purple-600 mr-3 mt-0.5"  />"                  <span className="text-zion-slate-dark">{u}</span>
                 </li>
               ))}
             </ul>
@@ -169,7 +131,7 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {
                 key={c}"
                 className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm"
               >"
-                <MessageSquare className="w-6 h-6 text-purple-600 mb-3" />"                <div className="text-zion-slate-dark font-semibold">{c}</div>
+                <MessageSquare className="w-6 h-6 text-purple-600 mb-3"  />"                <div className="text-zion-slate-dark font-semibold">{c}</div>
               </div>
             ))}
           </div>
@@ -185,7 +147,7 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {
                 key={c}"
                 className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm"
               >"
-                <Brain className="w-6 h-6 text-purple-600 mb-3" />"                <div className="text-zion-slate-dark font-semibold">{c}</div>
+                <Brain className="w-6 h-6 text-purple-600 mb-3"  />"                <div className="text-zion-slate-dark font-semibold">{c}</div>
               </div>
             ))}
           </div>
@@ -252,13 +214,13 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {
               href="tel:+13024640950"
               className="inline-flex items-center px-5 py-3 bg-purple-600 text-white rounded-lg"
             >"
-              <Phone className="w-4 h-4 mr-2" /> +1 302 464 0950
+              <Phone className="w-4 h-4 mr-2"  /> +1 302 464 0950
             </a>
             <a"
               href="mailto:kleber@ziontechgroup.com"
               className="inline-flex items-center px-5 py-3 border border-purple-600 text-purple-600 rounded-lg"
             >"
-              <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com
+              <Mail className="w-4 h-4 mr-2"  /> kleber@ziontechgroup.com
             </a>
           </div>"
           <div className="mt-4 text-sm text-zion-slate-light">
@@ -274,6 +236,5 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {
         </div>
       </section>
     </div>
-  );
-}
+  )}
 '"

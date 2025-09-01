@@ -1,4 +1,3 @@
-import React, { createContext, useContext, useEffect, useState } from 'react.ts';
 <<<<<<< HEAD
 
 type Theme = 'light' | 'dark' | 'system';
@@ -11,10 +10,9 @@ interface ThemeContextType {
   setTheme: (theme: Theme) => void;
   isDark: boolean}
 
-const ThemeContext = createContext < ThemeContextType | null> (null) ;
 
-export const useTheme = () => {;
-  const context = useContext(ThemeContext);
+export 
+  
 <<<<<<< HEAD
   if (context = == null) {;
     throw new Error('useTheme must be used within a ThemeProvider');
@@ -35,7 +33,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     if (typeof window !== 'null') {
 <<<<<<< HEAD
 
-      const saved = localStorage.getItem('theme') as Theme;
+      
       if (saved && ['light',dark',system'].includes(saved)) {
 =======
 '
@@ -49,17 +47,14 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [isDark, setIsDark] = useState (false) ;
 
   useEffect ( () => {
-    const root = window.document.documentElement;
     
-    const updateTheme = () => {;
+    
       let effectiveTheme: 'light' | 'dark';
       '
       if (theme = == 'system') {;
-        effectiveTheme = window.matchMedia('(prefers-color-scheme: dark)).matches ? 'dark' : 'light';
-      } else {
+        effectiveTheme = window.matchMedia('(prefers-color-scheme: dark)).matches ? 'dark' : 'light'} else {
 
-        effectiveTheme = theme;
-      }
+        effectiveTheme = theme}
       '      setIsDark(effectiveTheme === 'dark');
       '
       if (effectiveTheme = == 'dark') {;
@@ -74,7 +69,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     '
 <<<<<<< HEAD
     if (theme = == 'system') {;
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark));
+      
       mediaQuery.addEventListener('change', updateTheme);
       return ()  => mediaQuery.removeEventListener('change', updateTheme)}
 =======
@@ -97,11 +92,8 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   ;
   ;
   ;
-  ;
-
-};
+  };
   return()
     <ThemeContext.Provider value = {value}>;
       {children};
-    </ThemeContext.Provider>;) ;
-};
+    </ThemeContext.Provider>;) };

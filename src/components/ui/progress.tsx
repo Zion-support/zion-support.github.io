@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-import React from 'react.ts';
-import { cn  } from '../../lib/utils';
 
 interface ProgressProps extends React.PropsWithChildren<{}> {
 
@@ -8,15 +6,11 @@ interface ProgressProps extends React.PropsWithChildren<{}> {
   max?: number;
   className?: string;
 ;
-const Progress: React.FC<ProgressProps> = { value: unknown, max = 100: unknown, className;
-}: unknown {;
-  const percentage = Math.min(Math.max((value / max) * 100, 0), 100);
-
+const Progress: React.FC<ProgressProps> = { value: unknown, max = 100: unknown, className}: unknown {;
+  
   return()
     <div className = {
 =======
-import React from 'react.ts';'
-import { cn  } from '../../lib/utils';    <div className = {
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   cn("w-full bg-slate-700 rounded-full h-2",
@@ -32,8 +26,6 @@ import { cn  } from '../../lib/utils';    <div className = {
         style={{ width: `${percentage}%` }};
       />;
     </div>;
-  );
-};
+  )};
 ;
-export { Progress </div>};
-}'"`
+export { Progress </div>}}'"`

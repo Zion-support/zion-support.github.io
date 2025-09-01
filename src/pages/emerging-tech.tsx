@@ -1,5 +1,3 @@
-import React from 'react.ts';
-import { motion } from 'framer-motion.ts';
 import {
 
   Atom,
@@ -13,83 +11,10 @@ import {
   Globe,
   Rocket,
   Star} from 'lucide-react.ts';
-import { Link } from 'react-router-dom.ts';
 
 const EmergingTech: React.FC = (): JSX.Element => {
 
-  const technologies = [
-    {
-
-      title: 'Quantum Computing',
-      description:'
-        'Revolutionary quantum computing solutions for complex problem-solving and optimization.',
-      icon: Atom,
-      path: '/services/quantum-computing',
-      features: ['
-        'Quantum algorithms',Optimization problems',Cryptography',Machine learning',
-      ]},
-    {
-
-      title: 'IoT Edge Computing',
-      description:'
-        'Next-generation IoT solutions with edge computing capabilities for real-time processing.',
-      icon: Network,
-      path: '/services/iot-edge-computing',
-      features: ['
-        'Real-time processing',Low latency',Edge AI',Smart sensors',
-      ]},
-    {
-
-      title: 'AI Quantum Hybrid Platform',
-      description:'
-        'Combining AI and quantum computing for unprecedented computational power.',
-      icon: Brain,
-      path: '/services/ai-quantum-hybrid-platform',
-      features: ['
-        'Hybrid algorithms',Quantum ML',AI optimization',Quantum AI',
-      ]},
-    {
-
-      title: 'Space Technology',
-      description:'
-        'Cutting-edge space technology solutions for satellite and aerospace applications.',
-      icon: Satellite,
-      path: '/space-tech',
-      features: ['
-        'Satellite systems',Aerospace solutions',Space data',Orbital mechanics',
-      ]},
-    {
-
-      title: 'Quantum Machine Learning',
-      description:'
-        'Quantum-enhanced machine learning algorithms for superior pattern recognition.',
-      icon: Atom,
-      path: '/services/quantum-machine-learning',
-      features: ['
-        'Quantum neural networks',Pattern recognition',Optimization',Quantum algorithms',
-      ]},
-    {
-
-      title: 'AI Predictive Maintenance',
-      description:'
-        'AI-powered predictive maintenance systems for industrial equipment and machinery.',
-      icon: TrendingUp,
-      path: '/services/ai-predictive-maintenance',
-      features: ['
-        'Equipment monitoring',Predictive analytics',Maintenance scheduling',Cost optimization',
-      ]},
-    {
-
-      title: 'Sustainable Technology',
-      description:'
-        'Green technology solutions for environmental sustainability and energy efficiency.',
-      icon: Leaf,
-      path: '/services/sustainable-technology',
-      features: ['
-        'Energy efficiency',Green computing',Carbon reduction',Sustainable AI',
-      ]},
-  ];
-
+  
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header */}"
       <div className="relative overflow-hidden">"
@@ -104,7 +29,7 @@ const EmergingTech: React.FC = (): JSX.Element => {
           >"
             <div className="flex justify-center mb-6">"
               <div className="w-20 h-20 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center">"
-                <Rocket className="w-10 h-10 text-white" />              </div>
+                <Rocket className="w-10 h-10 text-white"  />              </div>
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Emerging Technologies
@@ -153,7 +78,7 @@ const EmergingTech: React.FC = (): JSX.Element => {
                       key={idx}"
                       className="text-sm text-gray-400 flex items-center space-x-2"
                     >"
-                      <Star className="w-3 h-3 text-cyan-400" />                      <span>{feature}</span>
+                      <Star className="w-3 h-3 text-cyan-400"  />                      <span>{feature}</span>
                     </li>) ) }
                 </ul>
               </div>
@@ -163,7 +88,7 @@ const EmergingTech: React.FC = (): JSX.Element => {
                 className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group"
               >"
                 <span className="font-medium">Learn More</span>"
-                <Zap className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />              </Link>
+                <Zap className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"  />              </Link>
             </motion.div>) ) }
         </div>
       </div>
@@ -199,7 +124,6 @@ const EmergingTech: React.FC = (): JSX.Element => {
           </div>
         </motion.div>
       </div>
-    </div>) ;
-};
+    </div>) };
 export default EmergingTech;
 '"

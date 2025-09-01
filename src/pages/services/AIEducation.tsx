@@ -1,36 +1,19 @@
-import React from 'react';
 import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, BookOpen, BarChart3 export default function AIEducation() {
-  const features = [
-    'AI-powered personalized learning paths and recommendations',Intelligent assessment and adaptive testing',;
+  
     'Automated content generation and curriculum optimization',;
     'Predictive analytics for student performance',;
     'Smart tutoring and homework assistance',;
     'Learning analytics and progress tracking',;
     'Integration with major LMS and educational platforms',;
     'Custom AI models for subject-specific learning';
-  ];
-
-  const tiers = [
-    {
-
-      name: 'Individual Teacher',
-      price: '$99/mo',
-      details: ['Up to 50 students',Basic AI features',Standard content',Email support']
-    },
-    {
-
-      name: 'School District',
-      price: '$399/mo',
-      details: ['Up to 1,000 students',Advanced AI features',Custom content',Priority support'] ;
-    },;
+  ]},;
     { ;
       name: 'University', ;
       price: '$999/mo', ;
-      details: ['Unlimited students',Custom AI models',Full platform integration',24/7 dedicated support'] ;
-    },;
+      details: ['Unlimited students',Custom AI models',Full platform integration',24/7 dedicated support'] },;
   ];
 
-  const useCases = [;
+  
     'K-12 personalized learning and tutoring',;
     'Higher education course optimization',;
     'Corporate training and skill development',;
@@ -39,7 +22,7 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
     'Professional certification and licensing';
   ];
 
-  const benefits = [;
+  
     'Improve student performance by 25-40%',;
     'Reduce learning time by 30-50%',;
     'Increase engagement and retention by 40-60%',;
@@ -48,7 +31,7 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
     'Scale educational programs without additional staff';
   ];
 
-  const industries = [;
+  
     'K-12 Education',;
     'Higher Education',;
     'Corporate Training',;
@@ -62,7 +45,7 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
       <section className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center">"
         <div className="max-w-5xl mx-auto px-6">"
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">"
-            <GraduationCap className="w-4 h-4 mr-2" /> AI-Powered Educational Intelligence
+            <GraduationCap className="w-4 h-4 mr-2"  /> AI-Powered Educational Intelligence
           </div>"
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Education Platform</h1>"          <p className="text-indigo-100 text-xl">Transform education with AI-powered learning that personalizes instruction, optimizes curriculum, and accelerates student achievement.</p>
         </div>
@@ -75,7 +58,7 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
             <ul className="space-y-3">
               {features.map((f) => ("
                 <li key={f} className="flex items-start">"
-                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />"                  <span className="text-gray-700">{f}</span>
+                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />"                  <span className="text-gray-700">{f}</span>
                 </li>
               ))}
             </ul>"
@@ -98,10 +81,10 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
             </div>"
             <div className="mt-6 flex flex-wrap gap-3">"
               <a href="/pricing" className="px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center">"
-                View Full Pricing <ArrowRight className="w-4 h-4 ml-2" />
+                View Full Pricing <ArrowRight className="w-4 h-4 ml-2"  />
               </a>"
               <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="px-5 py-3 border border-gray-300 rounded-lg hover:border-blue-400 transition-colors inline-flex items-center">"
-                Learn More <ExternalLink className="w-4 h-4 ml-2" />              </a>
+                Learn More <ExternalLink className="w-4 h-4 ml-2"  />              </a>
             </div>
           </div>
         </div>
@@ -109,7 +92,7 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {['25-40% performance improvement',30-50% faster learning',40-60% engagement increase'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
-              <Brain className="w-6 h-6 text-blue-600 mb-3" />"              <div className="text-gray-900 font-semibold">{t}</div>
+              <Brain className="w-6 h-6 text-blue-600 mb-3"  />"              <div className="text-gray-900 font-semibold">{t}</div>
             </div>
           ))}
         </div>
@@ -119,7 +102,7 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
           <div className="grid md:grid-cols-2 gap-6">
             {useCases.map((useCase) => ("
               <div key={useCase} className="flex items-center p-4 bg-white rounded-lg border border-gray-200">"
-                <Target className="w-5 h-5 text-blue-600 mr-3" />"                <span className="text-gray-700">{useCase}</span>
+                <Target className="w-5 h-5 text-blue-600 mr-3"  />"                <span className="text-gray-700">{useCase}</span>
               </div>
             ))}
           </div>
@@ -130,7 +113,7 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit) => ("
               <div key={benefit} className="flex items-start p-4 bg-white rounded-lg border border-blue-200">"
-                <Zap className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />"                <span className="text-gray-700">{benefit}</span>
+                <Zap className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0"  />"                <span className="text-gray-700">{benefit}</span>
               </div>
             ))}
           </div>
@@ -141,7 +124,7 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((industry) => ("
               <div key={industry} className="flex items-center p-4 bg-gray-50 rounded-lg border border-gray-200">"
-                <BookOpen className="w-5 h-5 text-blue-600 mr-3" />"                <span className="text-gray-700">{industry}</span>
+                <BookOpen className="w-5 h-5 text-blue-600 mr-3"  />"                <span className="text-gray-700">{industry}</span>
               </div>
             ))}
           </div>
@@ -151,10 +134,10 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
           <div className="text-sm text-gray-600 mb-2">Ready to transform education with AI?</div>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">"
-              <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950
+              <Phone className="w-4 h-4 mr-2" /> +1 302 464 0950
             </a>"
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">"
-              <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com            </a>
+              <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
           </div>;"
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
@@ -162,5 +145,4 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
         </div>;
       </section>;
     </div>;
-  );
-}}'"
+  )}}'"

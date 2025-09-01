@@ -22,9 +22,7 @@ export interface InnovativeService2028 {
 
     phone: string;
     email: string;
-    website: string;
-  
-};  technicalSpecs?: {
+    website: string};  technicalSpecs?: {
 
     technology: string[];
     integrations: string[];
@@ -35,8 +33,7 @@ export interface InnovativeService2028 {
   marketSize?: string;
   aiCapabilities?: string[];
   complianceFeatures?: string[];
-  scalabilityFeatures?: string[];
-}
+  scalabilityFeatures?: string[]}
 ;export const INNOVATIVE_SERVICES_2028: InnovativeService2028[] = [
   // AI-Powered Enterprise Solutions
   {

@@ -1,6 +1,3 @@
-import React, { useState } from 'react';
-import { ReactNode } from 'react';
-import React, { useState } from 'react';
 export default React.memo (function Layout (...args[]) :  {
 
 interface LayoutProps {
@@ -34,11 +31,10 @@ export default function Layout(...args[]):  {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState<any>(null);
-  const location = useLocation();
-  const isActive = (href: string) => location.pathname === href;
-  const toggleSidebarDropdown = (label: string) => {;
-    setSidebarDropdownOpen (sidebarDropdownOpen === label ? null : label) ;
-  };
+  
+  
+  
+    setSidebarDropdownOpen (sidebarDropdownOpen === label ? null : label) };
   return()
     <div className = "min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       {/* Header */}"
@@ -102,7 +98,7 @@ export default function Layout(...args[]):  {
                         <ChevronRight className={`w-4 h-4 transition-transform ${
 
                           sidebarDropdownOpen === item.label ? 'rotate-90' : ''`
-                        }`} />                      </button>
+                        }`}  />                      </button>
                       {sidebarDropdownOpen === item.label && (;"
                         <div className="ml-4 mt-2 space-y-1">
                           {item.children.map((child) => (
@@ -134,6 +130,5 @@ export default function Layout(...args[]):  {
           {children};
         </main>;
       </div>;
-    </div>;) ;
-}
+    </div>;) }
 '"`

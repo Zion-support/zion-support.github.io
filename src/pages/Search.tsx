@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import {
 
   Search as SearchIcon,
@@ -15,7 +13,6 @@ import {
   Eye,
   Bookmark,
   Share2} from 'lucide-react';
-import { SEO } from '../components/SEO';
 const Search: React.FC = () => {
 
   const [searchQuery, setSearchQuery] = useState('');
@@ -24,90 +21,13 @@ const Search: React.FC = () => {
   const [results, setResults] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
 
-  const categories = ['
-    { id: 'all', name: 'All Categories', count: 0 },
-    { id: 'services', name: 'Services', count: 0 },
-    { id: 'talent', name: 'Talent', count: 0 },
-    { id: 'equipment', name: 'Equipment', count: 0 },
-    { id: 'companies', name: 'Companies', count: 0 },
-  ];
-
-  const sortOptions = ['
-    { id: 'relevance', name: 'Relevance' },
-    { id: 'newest', name: 'Newest' },
-    { id: 'rating', name: 'Highest Rated' },
-    { id: 'price-low', name: 'Price: Low to High' },
-    { id: 'price-high', name: 'Price: High to Low' },
-  ];
-
-  const mockResults = [
-    {
-
-      id: 1,
-      title: 'AI-Powered Business Intelligence Platform',
-      description:'
-        'Advanced analytics and business intelligence solution powered by machine learning algorithms.',
-      type: 'services',
-      price: '$5,000/month',
-      rating: 4.8,
-      reviews: 127,
-      location: 'Remote',
-      company: 'Zion Tech Group',
-      tags: ['AI',Analytics',Business Intelligence',Machine Learning'],
-      featured: true,
-      date: '2024-12-01'},
-    {
-
-      id: 2,
-      title: 'Senior Full-Stack Developer',
-      description:'
-        'Experienced developer specializing in React, Node.js, and cloud technologies.',
-      type: 'talent',
-      price: '$120/hour',
-      rating: 4.9,
-      reviews: 89,
-      location: 'Remote',
-      company: 'Zion Tech Group',
-      tags: ['React',Node.js',Full-Stack',Cloud'],
-      featured: false,
-      date: '2024-11-28'},
-    {
-
-      id: 3,
-      title: 'Cloud Infrastructure Setup',
-      description:'
-        'Complete cloud infrastructure design and implementation for enterprise applications.',
-      type: 'services',
-      price: '$15,000',
-      rating: 4.7,
-      reviews: 203,
-      location: 'On-site',
-      company: 'Zion Tech Group',
-      tags: ['Cloud',Infrastructure',AWS',Azure'],
-      featured: true,
-      date: '2024-11-25'},
-    {
-
-      id: 4,
-      title: 'High-Performance Computing Cluster',
-      description:'
-        'Enterprise-grade computing cluster for data processing and machine learning workloads.',
-      type: 'equipment',
-      price: '$50,000',
-      rating: 4.6,
-      reviews: 45,
-      location: 'On-site',
-      company: 'Zion Tech Group',
-      tags: ['HPC',Computing',Data Processing',ML'],
-      featured: false,
-      date: '2024-11-20'},
-  ];
-
+  
+  
+  
   useEffect ( () => {
     if (searchQuery) {
 
-      performSearch();
-    }
+      performSearch()}
   }, [searchQuery, activeCategory, sortBy]) ;
 
   const performSearch = async () => {
@@ -117,18 +37,9 @@ const Search: React.FC = () => {
     // Filter results based on search query and category
     let filteredResults = mockResults.filter(result => {
 
-      const matchesQuery =
-        result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        result.tags.some((tag: string) =>
-          tag.toLowerCase().includes(searchQuery.toLowerCase())
-        );
-
-      const matchesCategory ='
-        activeCategory === 'all' || result.type === activeCategory;
-
-      return matchesQuery && matchesCategory;
-    }) ;
+      
+      
+      return matchesQuery && matchesCategory}) ;
     // Sort results
     filteredResults.sort((a, b) => {
 
@@ -149,51 +60,34 @@ const Search: React.FC = () => {
             parseFloat(a.price.replace(/[^0-9.]/g,))
           );
         default:
-          return 0;
-      }
+          return 0}
     }) ;
 
     setResults (filteredResults) ;
-    setLoading (false) ;
-  };
+    setLoading (false) };
 
-  const handleSearch = (e: React.FormEvent) => {
-
-    e.preventDefault();
+  
     if (searchQuery.trim()) {
 
-      performSearch();
-    }
+      performSearch()}
   };
 
-  const getTypeIcon = (type: string) => {
-
-    switch (type) {
-
-      case 'services':
-        return <Server className="w-5 h-5 text-blue-400" />;
+  
       case 'talent':"
-        return <Users className="w-5 h-5 text-purple-400" />;
+        return <Users className="w-5 h-5 text-purple-400"  />;
       case 'equipment':"
-        return <Building className="w-5 h-5 text-orange-400" />;
+        return <Building className="w-5 h-5 text-orange-400"  />;
       default:"
-        return <SearchIcon className="w-5 h-5 text-gray-400" />;
-    }
+        return <SearchIcon className="w-5 h-5 text-gray-400"  />}
   };
 
-  const getTypeLabel = (type: string) => {
-
-    switch (type) {
-
-      case 'services':'
-        return 'Service';
+  
       case 'talent':'
         return 'Talent';
       case 'equipment':'
         return 'Equipment';
       default:'
-        return 'Unknown';
-    }  };
+        return 'Unknown'}  };
 
   return()
     <>
@@ -224,7 +118,7 @@ const Search: React.FC = () => {
             {/* Search Form */}"
             <form onSubmit={handleSearch} className="max-w-4xl mx-auto">"
               <div className="relative">"
-                <SearchIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-6 h-6" />
+                <SearchIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-6 h-6"  />
                 <input"                  type="text"
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}"
@@ -250,7 +144,7 @@ const Search: React.FC = () => {
               <div className="lg:col-span-1">"
                 <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">"
                   <h3 className="text-white font-semibold text-lg mb-4 flex items-center gap-2">"
-                    <Filter className="w-5 h-5" />                    Filters
+                    <Filter className="w-5 h-5"  />                    Filters
                   </h3>
 
                   {/* Categories */}"
@@ -330,7 +224,7 @@ const Search: React.FC = () => {
                             </div>
                           </div>"
                           <div className="flex items-center gap-2">"
-                            <Star className="w-4 h-4 text-yellow-400 fill-current" />"
+                            <Star className="w-4 h-4 text-yellow-400 fill-current"  />"
                             <span className="text-white text-sm">
                               {result.rating}
                             </span>"
@@ -349,15 +243,15 @@ const Search: React.FC = () => {
 "
                         <div className="flex items-center gap-4 mb-4 text-sm text-gray-400">"
                           <div className="flex items-center gap-1">"
-                            <MapPin className="w-4 h-4" />
+                            <MapPin className="w-4 h-4"  />
                             {result.location}
                           </div>"
                           <div className="flex items-center gap-1">"
-                            <DollarSign className="w-4 h-4" />
+                            <DollarSign className="w-4 h-4"  />
                             {result.price}
                           </div>"
                           <div className="flex items-center gap-1">"
-                            <Calendar className="w-4 h-4" />                            {new Date(result.date).toLocaleDateString()}
+                            <Calendar className="w-4 h-4"  />                            {new Date(result.date).toLocaleDateString()}
                           </div>
                         </div>
 "
@@ -376,7 +270,7 @@ const Search: React.FC = () => {
                           </div>"
                           <div className="flex items-center gap-2">"
                             <button className="p-2 text-gray-400 hover:text-white transition-colors">"
-                              <Bookmark className="w-4 h-4" />
+                              <Bookmark className="w-4 h-4"  />
                             </button>"
                             <button className="p-2 text-gray-400 hover:text-white transition-colors">"                              <Share2 className="w-4 h-4" />
                             </button>"
@@ -390,7 +284,7 @@ const Search: React.FC = () => {
                   </div>
                 ) : searchQuery ? ("
                   <div className="text-center py-12">"
-                    <SearchIcon className="w-16 h-16 text-gray-400 mx-auto mb-4" />"
+                    <SearchIcon className="w-16 h-16 text-gray-400 mx-auto mb-4"  />"
                     <h3 className="text-white text-xl font-semibold mb-2">
                       No results found
                     </h3>"
@@ -400,7 +294,7 @@ const Search: React.FC = () => {
                   </div>
                 ) : ("
                   <div className="text-center py-12">"
-                    <SearchIcon className="w-16 h-16 text-gray-400 mx-auto mb-4" />"
+                    <SearchIcon className="w-16 h-16 text-gray-400 mx-auto mb-4"  />"
                     <h3 className="text-white text-xl font-semibold mb-2">
                       Start your search
                     </h3>"
@@ -414,7 +308,6 @@ const Search: React.FC = () => {
           </div>
         </section>
       </div>
-    </>) ;
-};
+    </>) };
 export default Search;
 '"`

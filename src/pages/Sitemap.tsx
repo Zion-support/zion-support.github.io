@@ -1,5 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import {
 
   Home,
@@ -43,16 +41,13 @@ interface SitemapSection {
   title: string;
   icon: unknown;
   color: string;
-  pages: SitemapPage[];
-
-}
+  pages: SitemapPage[]}
 interface SitemapPage {
 
   name: string;
   href: string;
   description: string;
-  featured?: boolean;
-}
+  featured?: boolean}
 ;
 const Sitemap: React.FC = props {
   const sitemapSections: SitemapSection[] = [
@@ -590,51 +585,13 @@ const Sitemap: React.FC = props {
       ]},
   ];
 
-  const quickActions = [
-    {
-
-      name: 'Get Started',
-      href: '/contact',
-      icon: Rocket,
-      color: 'from-cyan-500 to-blue-500'},
-    {
-
-      name: 'Request Quote',
-      href: '/request-quote',
-      icon: TrendingUp,
-      color: 'from-green-500 to-emerald-500'},
-    {
-
-      name: 'Schedule Demo',
-      href: '/schedule-demo',
-      icon: Calendar,
-      color: 'from-purple-500 to-pink-500'},
-    {
-
-      name: 'View Pricing',
-      href: '/pricing',
-      icon: DollarSign,
-      color: 'from-orange-500 to-red-500'},
-    {
-
-      name: 'Join Community',
-      href: '/community',
-      icon: Users,
-      color: 'from-indigo-500 to-purple-500'},
-    {
-
-      name: 'Try Demos',
-      href: '/demo',
-      icon: Zap,
-      color: 'from-yellow-500 to-orange-500'},
-  ];
-
+  
   return()
     <div className="min-h-screen bg-slate-900 text-white pt-20">"
       <div className="max-w-7xl mx-auto">"
         <div className="text-center">"
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mb-6">"
-            <SitemapIcon className="h-10 w-10 text-white" />
+            <SitemapIcon className="h-10 w-10 text-white"  />
           </div>"          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Complete Sitemap
           </h1>"
@@ -677,7 +634,7 @@ const Sitemap: React.FC = props {
                           </p>
                         </div>"
                         <div className="ml-4 opacity-0 group-hover:opacity-100 transition-opacity">"
-                          <ArrowRight className="w-4 h-4 text-cyan-400" />                        </div>
+                          <ArrowRight className="w-4 h-4 text-cyan-400"  />                        </div>
                       </div>
                     </Link>
                   </div>) ) }
@@ -701,25 +658,24 @@ const Sitemap: React.FC = props {
                 to="/contact"
                 className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors"
               >"
-                <MessageCircle className="w-5 h-5 mr-2" />                Contact Us
+                <MessageCircle className="w-5 h-5 mr-2"  />                Contact Us
               </Link>
               <Link"
                 to="/schedule-demo"
                 className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors"
               >"
-                <Calendar className="w-5 h-5 mr-2" />                Schedule Demo
+                <Calendar className="w-5 h-5 mr-2"  />                Schedule Demo
               </Link>
               <Link"
                 to="/faq"
                 className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl transition-colors"
               >"
-                <HelpCircle className="w-5 h-5 mr-2" />                View FAQ
+                <HelpCircle className="w-5 h-5 mr-2"  />                View FAQ
               </Link>
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )};
 '"

@@ -1,26 +1,13 @@
 <<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
 
 
 const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
   const [isOpen, setIsOpen] = useState (false) ;
-  const [activeCategory, setActiveCategory] = useState < any> (null) ;
+  const [activeCategory, setActiveCategory] = useState<any> (null) ;
 
-  const serviceCategories = [
-    {
-
-      name: "AI-Powered Micro SAAS","
-      description: "Cutting-edge AI solutions","
-      icon: "🤖","
-      color: "from-blue-600 to-purple-600",
-      services[;
+  
         {
 =======
-import React, { useState } from 'react.ts';'
-import { Link  } from 'react-router-dom.ts';'
-import { motion, AnimatePresence  } from 'framer-motion.ts';        {
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 "
           title: "Code Review & Security","
@@ -139,39 +126,8 @@ import { motion, AnimatePresence  } from 'framer-motion.ts';        {
           description: "AI-powered compliance","
           pricing: "Custom pricing"
         }
-      ];
-    };
-  ];
-
-  const quickLinks = [
-    {
-"
-      title: "AI Services Showcase","
-      url: "/ai-services-showcase","
-      description: "Explore our AI solutions","
-      icon: "🚀"
-    },
-    {
-"
-      title: "Comprehensive Services","
-      url: "/comprehensive-services","
-      description: "View all services","
-      icon: "📋"
-    },
-    {
-"
-      title: "Pricing Guide","
-      url: "/pricing","
-      description: "Transparent pricing","
-      icon: "💰"
-    },
-    {
-"
-      title: "Contact Sales","
-      url: "/contact","
-      description: "Get expert advice","
-      icon: "📞";
-    };  ];
+      ]};
+  ]};  ];
 
   return ("
     <div className = "relative">

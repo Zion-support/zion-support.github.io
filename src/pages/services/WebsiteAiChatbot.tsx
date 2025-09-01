@@ -1,9 +1,7 @@
-import React from 'react.ts';
-import { SEO   } from '@/components/SEO';
 ;
 const WebsiteAiChatbot: React.FC = (): JSX.Element => (
   <div className="min-h-screen bg-slate-900 text-white">"
-    <SEO title="Website AI Chatbot - Zion Tech Group" description="24/7 on-site AI assistant that answers, qualifies, and books meetings." />"
+    <SEO title="Website AI Chatbot - Zion Tech Group" description="24/7 on-site AI assistant that answers, qualifies, and books meetings."  />"
     <section className="container mx-auto px-4 py-12">"
       <h1 className="text-4xl font-bold mb-4">Website AI Chatbot</h1>"      <p className="text-slate-300 max-w-3xl">Deploy an AI chatbot trained on your docs, pages, and FAQs. Deflect support tickets, qualify prospects, and handoff to live agents with transcripts.</p>
     </section>"

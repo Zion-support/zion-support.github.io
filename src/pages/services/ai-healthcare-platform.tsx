@@ -1,65 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Brain, Heart, Shield, Zap, Users, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Cpu, Database, Lock, Eye, BarChart3, MessageSquare, Calendar, Phone, Mail, MapPin } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 export default function AIHealthcarePlatform() {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Diagnostics',
-      description: 'Advanced machine learning algorithms for accurate medical diagnosis and treatment recommendations'
-    },
-    {
-      icon: Heart,
-      title: 'Patient Care Optimization',
-      description: 'Intelligent patient monitoring and personalized care pathway management'
-    },
-    {
-      icon: Shield,
-      title: 'HIPAA Compliant Security',
-      description: 'Enterprise-grade security with full HIPAA compliance and data protection'
-    },
-    {
-      icon: Zap,
-      title: 'Real-time Analytics',
-      description: 'Live health metrics monitoring and predictive analytics for proactive care'
-    },
-    {
-      icon: Users,
-      title: 'Care Team Collaboration',
-      description: 'Seamless communication and coordination between healthcare providers'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Performance Insights',
-      description: 'Comprehensive reporting and analytics for healthcare quality improvement'
-    }
-  ];
-
-  const benefits = [
-    'Reduce diagnostic errors by up to 40%',Improve patient outcomes and satisfaction',Streamline clinical workflows and reduce administrative burden',Enable data-driven decision making',Ensure regulatory compliance and security',Scale healthcare operations efficiently'
-  ];
-
-  const useCases = [
-    {
-      title: 'Hospital Management',
-      description: 'Comprehensive hospital information system with AI-powered insights'
-    },
-    {
-      title: 'Telemedicine Platform',
-      description: 'Secure video consultations with AI symptom analysis'
-    },
-    {
-      title: 'Clinical Decision Support',
-      description: 'AI-powered clinical guidelines and treatment recommendations'
-    },
-    {
-      title: 'Patient Monitoring',
-      description: 'IoT-enabled patient monitoring with predictive analytics'
-    }
-  ];
-
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -73,7 +16,7 @@ export default function AIHealthcarePlatform() {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center gap-2 bg-red-500/10 border border-red-500/20 rounded-full px-4 py-2 text-red-400 text-sm font-medium mb-6">
-              <Heart className="w-4 h-4" />
+              <Heart className="w-4 h-4"  />
               Healthcare AI Platform
             </div>
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
@@ -92,7 +35,7 @@ export default function AIHealthcarePlatform() {
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25"
               >
                 Get Started
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
               <Link
                 to="/schedule-demo"
@@ -163,7 +106,7 @@ export default function AIHealthcarePlatform() {
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-red-400 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-red-400 mt-0.5 flex-shrink-0"  />
                     <span className="text-gray-300">{benefit}</span>
                   </li>
                 ))}
@@ -235,7 +178,7 @@ export default function AIHealthcarePlatform() {
                   className="inline-flex items-center gap-2 text-red-400 hover:text-red-300 font-medium transition-colors"
                 >
                   Learn More
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4"  />
                 </Link>
               </motion.div>
             ))}
@@ -265,7 +208,7 @@ export default function AIHealthcarePlatform() {
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25"
               >
                 Get Your Quote
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
               <Link
                 to="/schedule-demo"
@@ -278,5 +221,4 @@ export default function AIHealthcarePlatform() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

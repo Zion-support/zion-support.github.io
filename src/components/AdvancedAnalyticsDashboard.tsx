@@ -1,5 +1,3 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
 import {
 
@@ -47,9 +45,7 @@ interface AnalyticsData {
   category: string;
   timestamp: Date;
   target?: number;
-  unit?: string;
-
-}
+  unit?: string}
 
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -62,10 +58,7 @@ interface ChartData {
     data: number[];
     backgroundColor?: string;
     borderColor?: string;
-    borderWidth?: number;
-  
-}[];
-}
+    borderWidth?: number}[]}
 interface AdvancedAnalyticsDashboardProps {
   // Add your props here
 
@@ -93,33 +86,17 @@ export function AdvancedAnalyticsDashboard({
   const [isLoading, setIsLoading] = useState(false);
   const [showAdvancedMetrics, setShowAdvancedMetrics] = useState(false);
 
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
-  const chartRefs = useRef<{ [key: string]: any }>({});
-
+  
+  
   // Generate sample analytics data
-  const generateAnalyticsData = useCallback(() => {
-    const categories = ['
-      'performance',users',revenue',engagement',technical',
-    ];
-    const metrics = {
-
-      performance: ['
-        'Page Load Time',Core Web Vitals',Bundle Size',Memory Usage',
-      ],
-      users: ['Active Users',New Users',Returning Users',User Sessions'],
-      revenue: ['
-        'Monthly Revenue',Conversion Rate',Average Order Value',Customer Lifetime Value',
-      ],
-      engagement: ['Time on Site',Bounce Rate',Page Views',User Actions'],
-      technical: ['
-        'Error Rate',API Response Time',Database Performance',CDN Performance',
-      ]};
+  
+    
     const newData: AnalyticsData[] = [];
     categories.forEach(category => {
 
       metrics[category as keyof typeof metrics].forEach(metric => {
 
-        const value = Math.random() * 1000;
+        
         const change = (Math.random() - 0.5) * 20;        newData.push({
 
           id: `${category}-${metric}`,
@@ -135,45 +112,28 @@ export function AdvancedAnalyticsDashboard({
               ? 'ms''
               : category === 'revenue''
                 ? '$''
-                : ''});
-      });
-    });
+                : ''})})});
 
-    setAnalyticsData (newData) ;
-  }, []) ;
+    setAnalyticsData (newData) }, []) ;
 
   // Refresh data
-  const refreshData = useCallback ( () => {
-    setIsLoading (true) ;
+  
     setTimeout ( () => {
       generateAnalyticsData () ;
-      setIsLoading (false) ;
-    }, 1000) ;
-  }, [generateAnalyticsData]) ;
+      setIsLoading (false) }, 1000) }, [generateAnalyticsData]) ;
 
   // Export data
-  const exportData = useCallback ( () => {
-    if (onDataExport) {
-
-      onDataExport(analyticsData);
+  
     } else {
 
-      const csv = ['
-        'Metric,Value,Change,Trend,Category,Timestamp',
-        ...analyticsData.map()
-          item =>`
-            `${item.metric},${item.value},${item.change},${item.trend},${item.category},${item.timestamp.toISOString()}`
-        ),
-      ].join('\n');
-
-      const blob = new Blob([csv], { type: 'text/csv' });
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement('a');
+      
+      
+      
+      
       a.href = url;'`
       a.download = `analytics-${selectedTimeframe}-${new Date().toISOString().split('T')[0]}.csv`;
       a.click();
-      window.URL.revokeObjectURL(url);
-    }
+      window.URL.revokeObjectURL(url)}
   }, [analyticsData, selectedTimeframe, onDataExport]) ;
   // Setup real - time updates
   useEffect ( () => {
@@ -185,60 +145,41 @@ export function AdvancedAnalyticsDashboard({
       return () => {
         if (intervalRef.current) {
 
-          clearInterval(intervalRef.current);
-        }
-      };
-    }
+          clearInterval(intervalRef.current)}
+      }}
   }, [showRealTime, isOpen, refreshInterval, generateAnalyticsData]) ;
   // Initial data load
   useEffect ( () => {
     if (isOpen) {
 
-      generateAnalyticsData();
-    }
+      generateAnalyticsData()}
   }, [isOpen, generateAnalyticsData]) ;
 
   // Get trend icon and color'
-  const getTrendDisplay = (trend: 'up' | 'down' | 'stable', change: number) => {
-
-    const colors = {
-
-      up: 'text-green-500',
-      down: 'text-red-500',
-      stable: 'text-gray-500'};
-
-    const icons = {
-
-      up: <TrendingUp className="w-4 h-4" />,"
-      down: <TrendingUp className="w-4 h-4 rotate-180" />,"
-      stable: <Activity className="w-4 h-4" />};
-
+  
+    
     return()`      <div className={`flex items-center space-x-1 ${colors[trend]}`}>
         {icons[trend]}"
         <span className="text-sm font-medium">
           {change > 0 ? '+' : ''}
           {change}%
         </span>
-      </div>) ;
-  };
+      </div>) };
 
   // Get category icon
   const getCategoryIcon = (category: string) => {
 
     const icons: { [key: string]: React.ReactNode } = {
 "
-      performance: <Zap className="w-5 h-5" />,"
-      users: <Users className="w-5 h-5" />,"
-      revenue: <DollarSign className="w-5 h-5" />,"
-      engagement: <Activity className="w-5 h-5" />,"
-      technical: <Cpu className="w-5 h-5" />};"
-    return icons[category] || <Activity className="w-5 h-5" />;
-  };
+      performance: <Zap className="w-5 h-5"  />,"
+      users: <Users className="w-5 h-5"  />,"
+      revenue: <DollarSign className="w-5 h-5"  />,"
+      engagement: <Activity className="w-5 h-5"  />,"
+      technical: <Cpu className="w-5 h-5"  />};"
+    return icons[category] || <Activity className="w-5 h-5"  />};
 
   // Filter data by selected metrics
-  const filteredData = analyticsData.filter(item =>
-    selectedMetrics.includes(item.category)
-  );
+  
   if (!enabled) return null;
 
   return()
@@ -315,7 +256,7 @@ export function AdvancedAnalyticsDashboard({
                     onClick={() => setIsOpen(false)}"
                     className="p-2 text-gray-600 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400 transition-colors"
                   >"
-                    <X className="w-5 h-5" />                  </button>
+                    <X className="w-5 h-5"  />                  </button>
                 </div>
               </div>
 
@@ -360,8 +301,7 @@ export function AdvancedAnalyticsDashboard({
                               prev.includes(metric)
                                 ? prev.filter(m => m !== metric)
                                 : [...prev, metric]
-                            );
-                          }}`                          className={`px-3 py-1 text-sm rounded-full transition-colors ${
+                            )}}`                          className={`px-3 py-1 text-sm rounded-full transition-colors ${
 
                             selectedMetrics.includes(metric)
                               ? 'bg-green-600 text-white''
@@ -379,7 +319,7 @@ export function AdvancedAnalyticsDashboard({
                       onClick={exportData}"
                       className="flex items-center space-x-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
                     >"
-                      <Download className="w-4 h-4" />                      <span>Export</span>
+                      <Download className="w-4 h-4"  />                      <span>Export</span>
                     </button>
 
                     <button
@@ -388,7 +328,7 @@ export function AdvancedAnalyticsDashboard({
                       }"
                       className="flex items-center space-x-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
                     >"
-                      <Settings className="w-4 h-4" />
+                      <Settings className="w-4 h-4"  />
                       <span>
                         {showAdvancedMetrics ? 'Hide' : 'Show'} Advanced
                       </span>                    </button>
@@ -621,6 +561,5 @@ export function AdvancedAnalyticsDashboard({
           </motion.div>) }
       </AnimatePresence>
     </>
-  );
-}
+  )}
 '"`

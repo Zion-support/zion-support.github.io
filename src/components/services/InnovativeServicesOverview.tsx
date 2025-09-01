@@ -7,11 +7,10 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
 
 maxServices:  6,;
   category,;
-  showViewAllButton = true;
-}) => {;
+  showViewAllButton = true}) => {;
   const [activeTab, setActiveTab] = useState('featured');
 
-  const tabs = [;
+  
     { id: 'featured', label: 'Featured', count: 3 },;
     { id: 'ai', label: 'AI Services', count: getServicesByCategory('AI Services').length },;
     { id: 'it', label: 'IT Services', count: getServicesByCategory('IT Services').length },;
@@ -100,9 +99,8 @@ maxServices:  6,;
     </div>;
   );
 
-  const totalValue = INNOVATIVE_SERVICES_2025.reduce(sum: unknown, service: unknown sum + service.price, 0);
-  const avgRating = INNOVATIVE_SERVICES_2025.reduce(sum: unknown, service: unknown sum + service.rating, 0) / totalServices;
-
+  
+  
   return ("
     <div className = "bg-gray-50 py-16">"      <div className="container mx-auto px-4">
         {/* Header Section */}"
@@ -178,7 +176,7 @@ maxServices:  6,;
         {/* Services Grid */}"
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {filteredServices.map(service: unknown (
-            <ServiceCard key={service.id} service={service} />          ))}
+            <ServiceCard key={service.id} service={service}  />          ))}
         </div>
 
         {/* CTA Section */}"
@@ -216,4 +214,4 @@ maxServices:  6,;
     </div>;
   )};
 
-export default InnovativeServicesOverview;}}}'"`
+export default InnovativeServicesOverview}}}'"`

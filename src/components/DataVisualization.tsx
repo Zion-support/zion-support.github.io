@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
 
   BarChart3,
@@ -52,13 +50,10 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
 title:  "Data Analytics Dashboard",;
   showMetrics = true,;
   showCharts = true,;
-  showActions = true;
-}) => {;
+  showActions = true}) => {;
   const [selectedTimeRange, setSelectedTimeRange] = useState('7d');
   const [isLoading, setIsLoading] = useState(false);
 =======
-import React, { useState, useEffect } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';  const [selectedTimeRange, setSelectedTimeRange] = useState('7d');
   const [isLoading, setIsLoading] = useState(false);'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [activeChart, setActiveChart] = useState<any>('bar');
@@ -77,7 +72,7 @@ import { motion, AnimatePresence } from 'framer-motion';  const [selectedTimeRan
     }]
   }) ;
 
-  const [metrics, setMetrics] = useState < any> ([
+  const [metrics, setMetrics] = useState<any> ([
     {
 
       title: 'Total Revenue',
@@ -85,10 +80,10 @@ import { motion, AnimatePresence } from 'framer-motion';  const [selectedTimeRan
       change: 12.5,
       changeType: 'increase',"
 <<<<<<< HEAD
-      icon: <DollarSign className = "w-5 h-5" />,
+      icon: <DollarSign className = "w-5 h-5"  />,
       color: 'text-green-400'
 =======
-      icon: <DollarSign className = "w-5 h-5" />,'      color: 'text-green-400'
+      icon: <DollarSign className = "w-5 h-5"  />,'      color: 'text-green-400'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
@@ -98,10 +93,10 @@ import { motion, AnimatePresence } from 'framer-motion';  const [selectedTimeRan
       change: 8.1,
       changeType: 'increase',"
 <<<<<<< HEAD
-      icon: <Users className="w-5 h-5" />,
+      icon: <Users className="w-5 h-5"  />,
       color: 'text-blue-400'
 =======
-      icon: <Users className="w-5 h-5" />,'      color: 'text-blue-400'
+      icon: <Users className="w-5 h-5"  />,'      color: 'text-blue-400'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
@@ -111,10 +106,10 @@ import { motion, AnimatePresence } from 'framer-motion';  const [selectedTimeRan
       change: -2.4,
       changeType: 'decrease',"
 <<<<<<< HEAD
-      icon: <Target className="w-5 h-5" />,
+      icon: <Target className="w-5 h-5"  />,
       color: 'text-yellow-400'
 =======
-      icon: <Target className="w-5 h-5" />,'      color: 'text-yellow-400'
+      icon: <Target className="w-5 h-5"  />,'      color: 'text-yellow-400'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
@@ -123,13 +118,12 @@ import { motion, AnimatePresence } from 'framer-motion';  const [selectedTimeRan
       value: '2m 47s',;
       change: 0.0,;
       changeType: 'neutral',;"
-      icon: <Activity className="w-5 h-5" />,;
-      color: 'text-purple-400';
-    };
+      icon: <Activity className="w-5 h-5"  />,;
+      color: 'text-purple-400'};
   ]) ;
 
   // Simulate data refresh
-  const refreshData = async () => {;
+  
     setIsLoading (true) ;    // Simulate API call
     await new Promise (resolve => setTimeout (resolve, 1000) ) ;
 
@@ -138,9 +132,7 @@ setChartData (prev:  > ({;
       ...prev,;
       datasets: [{;
         ...prev.datasets[0],;
-        data: prev.datasets[0].data.map ( () => Math.floor (Math.random () * 100) + 20) ;
-      }];
-    }) ) ;
+        data: prev.datasets[0].data.map ( () => Math.floor (Math.random () * 100) + 20) }]}) ) ;
     // Update metrics with new random values
     setMetrics(prev => prev.map(metric => ({
 
@@ -169,10 +161,7 @@ setChartData (prev:  > ({;
   ;
   borderWidth: 2;
     ;
-;
-
-}];
-  };
+}]};
   // Generate line chart data
   const lineChartData = {
 '"

@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 import {
 
   Shield,
@@ -26,114 +24,12 @@ import {
   Building,
   Cpu,
   Network} from 'lucide-react';
-import { Link } from 'react-router-dom';
 ;
 const AIDataGovernancePlatform: React.FC = props {
-  const features = [
-    {
-
-      icon: Brain,
-      title: 'AI-Powered Data Discovery',
-      description:'
-        'Automatically discover, classify, and catalog sensitive data across your entire data ecosystem using machine learning.'},
-    {
-
-      icon: Shield,
-      title: 'Intelligent Compliance Monitoring',
-      description:'
-        'Real-time monitoring and automated compliance reporting for GDPR, CCPA, HIPAA, SOX, and other regulations.'},
-    {
-
-      icon: Lock,
-      title: 'Advanced Access Control',
-      description:'
-        'Role-based access control with AI-driven risk assessment and dynamic permission management.'},
-    {
-
-      icon: Database,
-      title: 'Data Lineage & Tracking',
-      description:'
-        'Complete data lineage tracking from source to consumption with impact analysis and change management.'},
-    {
-
-      icon: Users,
-      title: 'Collaborative Governance',
-      description:'
-        'Multi-stakeholder collaboration tools for data stewards, compliance officers, and business users.'},
-    {
-
-      icon: BarChart3,
-      title: 'Governance Analytics',
-      description:'
-        'Comprehensive dashboards and reporting on data quality, compliance status, and governance metrics.'},
-  ];
-
-  const pricingTiers = [
-    {
-
-      name: 'Foundation',
-      price: '$399',
-      period: '/month',
-      description:'
-        'Essential data governance for small to medium organizations',
-      features: ['
-        'Up to 10 data sources',Basic AI discovery',GDPR & CCPA compliance',Standard access control',Email support',Basic reporting',Up to 10 users',
-      ],
-      cta: 'Start Free Trial',
-      popular: false},
-    {
-
-      name: 'Enterprise',
-      price: '$1,199',
-      period: '/month',
-      description: 'Comprehensive governance for growing enterprises',
-      features: ['
-        'Up to 100 data sources',Advanced AI discovery',Full regulatory compliance',Advanced access control',Priority support',Custom reporting',Up to 100 users',API access',Custom integrations',
-      ],
-      cta: 'Start Free Trial',
-      popular: true},
-    {
-
-      name: 'Global',
-      price: '$2,999',
-      period: '/month',
-      description: 'Enterprise-scale governance for global organizations',
-      features: ['
-        'Unlimited data sources',Custom AI models',Global compliance framework',Advanced security features',Dedicated support',White-label solution',Unlimited users',On-premise deployment',Custom SLA',
-      ],
-      cta: 'Contact Sales',
-      popular: false},
-  ];
-
-  const benefits = [
-    {
-
-      icon: Shield,
-      title: 'Ensure Compliance',
-      description:'
-        'Automatically maintain compliance with global data protection regulations'},
-    {
-
-      icon: Lock,
-      title: 'Protect Sensitive Data',
-      description:'
-        'Identify and protect PII, PHI, and other sensitive information'},
-    {
-
-      icon: Users,
-      title: 'Build Trust',
-      description: 'Demonstrate data stewardship and build customer confidence'},
-    {
-
-      icon: Target,
-      title: 'Reduce Risk',
-      description: 'Minimize data breaches and regulatory penalties'},
-  ];
-
-  const complianceFrameworks = ['
-    'GDPR (General Data Protection Regulation),CCPA (California Consumer Privacy Act),HIPAA (Health Insurance Portability and Accountability Act),SOX (Sarbanes-Oxley Act),PCI DSS (Payment Card Industry Data Security Standard),ISO 27001 (Information Security Management),SOC 2 Type II (Service Organization Control),NIST Cybersecurity Framework',
-  ];
-
+  
+  
+  
+  
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Hero Section */}"
       <div className="relative overflow-hidden">"
@@ -147,7 +43,7 @@ const AIDataGovernancePlatform: React.FC = props {
           >"
             <div className="flex justify-center mb-6">"
               <div className="p-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full">"
-                <Shield className="w-8 h-8 text-white" />              </div>
+                <Shield className="w-8 h-8 text-white"  />              </div>
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
               AI Data Governance Platform
@@ -162,13 +58,13 @@ const AIDataGovernancePlatform: React.FC = props {
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-600 transition-all duration-300 transform hover:scale-105"
               >"
-                <Play className="w-5 h-5 mr-2" />                Start Free Trial
+                <Play className="w-5 h-5 mr-2"  />                Start Free Trial
               </Link>
               <Link"
                 to="/demo"
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >"
-                <ArrowRight className="w-5 h-5 mr-2" />                Watch Demo
+                <ArrowRight className="w-5 h-5 mr-2"  />                Watch Demo
               </Link>
             </div>
           </motion.div>
@@ -243,7 +139,7 @@ const AIDataGovernancePlatform: React.FC = props {
                 className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 text-center"
               >"
                 <div className="p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit mx-auto mb-4">"
-                  <CheckCircle className="w-6 h-6 text-white" />
+                  <CheckCircle className="w-6 h-6 text-white"  />
                 </div>"                <p className="text-white font-medium text-sm">{framework}</p>
               </motion.div>
             ))}
@@ -310,7 +206,7 @@ const AIDataGovernancePlatform: React.FC = props {
                       key={featureIndex}"
                       className="flex items-center text-gray-300"
                     >"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                      {feature}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -393,13 +289,13 @@ const AIDataGovernancePlatform: React.FC = props {
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-600 transition-all duration-300 transform hover:scale-105"
               >"
-                <Rocket className="w-5 h-5 mr-2" />                Start Free Trial
+                <Rocket className="w-5 h-5 mr-2"  />                Start Free Trial
               </Link>
               <Link"
                 to="/demo"
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >"
-                <Play className="w-5 h-5 mr-2" />                Schedule Demo
+                <Play className="w-5 h-5 mr-2"  />                Schedule Demo
               </Link>
             </div>
           </motion.div>
@@ -411,17 +307,17 @@ const AIDataGovernancePlatform: React.FC = props {
         <div className="container mx-auto px-4">"
           <div className="grid md:grid-cols-3 gap-8 text-center">"
             <div className="flex flex-col items-center">"
-              <Phone className="w-8 h-8 text-blue-400 mb-4" />"
+              <Phone className="w-8 h-8 text-blue-400 mb-4"  />"
               <h3 className="text-xl font-bold text-white mb-2">Phone</h3>"
               <p className="text-gray-300">+1 302 464 0950</p>
             </div>"
             <div className="flex flex-col items-center">"
-              <Mail className="w-8 h-8 text-blue-400 mb-4" />"
+              <Mail className="w-8 h-8 text-blue-400 mb-4"  />"
               <h3 className="text-xl font-bold text-white mb-2">Email</h3>"
               <p className="text-gray-300">kleber@ziontechgroup.com</p>
             </div>"
             <div className="flex flex-col items-center">"
-              <MapPin className="w-8 h-8 text-blue-400 mb-4" />"
+              <MapPin className="w-8 h-8 text-blue-400 mb-4"  />"
               <h3 className="text-xl font-bold text-white mb-2">Address</h3>"
               <p className="text-gray-300">
                 364 E Main St STE 1008

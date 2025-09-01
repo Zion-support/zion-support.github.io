@@ -1,4 +1,3 @@
-import { specializedIndustrySolutions2026 } from '@/data/2026-specialized-industry-solutions';
 // Interface for the existing service structure
 export interface Service {
   id: string;
@@ -74,6 +73,5 @@ export function map2026ServicesToExistingStructure(): Service[] {
     competitors: service.competitors,
     marketSize: service.marketSize,
     compliance: ['SOC 2',ISO 27001'], // Default compliance
-  }));
-}
+  }))}
 '"

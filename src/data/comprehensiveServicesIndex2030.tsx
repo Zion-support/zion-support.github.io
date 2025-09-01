@@ -41,23 +41,7 @@ export const SERVICE_CATEGORIES_2030 = ["
 ];
 
 // Service Statistics;
-export const SERVICE_STATISTICS_2030 = {
-
-  totalServices: COMPREHENSIVE_SERVICES_INDEX_2030.length,
-  totalCategories: SERVICE_CATEGORIES_2030.length,
-  averagePrice: Math.round()
-    COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)  => sum + service.price, 0) / 
-    COMPREHENSIVE_SERVICES_INDEX_2030.length
-  ),
-  averageRating: Math.round()
-    (COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)  => sum + service.rating, 0) / 
-    COMPREHENSIVE_SERVICES_INDEX_2030.length) * 10
-  ) / 10,
-  featuredServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => service.featured).length,
-  aiServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  =>
-    service.category.includes('AI') || service.aiScore > 90
-<<<<<<< HEAD
-  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => ;
+export 
 =======
   emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => ;'
 export 
@@ -79,26 +63,24 @@ export
   ;
   emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => ;
     service.category === 'Emerging Technology';
-  ).length;
-};
+  ).length};
 
 :src/data/comprehensiveServicesIndex2030.tsx
 // Featured Services;
-export const FEATURED_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => service.featured);
-
+export 
 // High-ROI Services (ROI > 500%);
-export const HIGH_ROI_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {;
-  const roi = service.roi;
+export 
+  
   if (typeof roi = == 'string') {;
-    const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
+    
     return roiNumber > 500}
   return false});
 
 // Quick Setup Services (< 8 weeks);
-export const QUICK_SETUP_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {;
-  const setupTime = service.setupTime;
+export 
+  
   if (typeof setupTime = == 'string') {;
-    const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
+    
 // Featured Services
 export 
 // High-ROI Services (ROI > 500%)

@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
-import { motion  } from 'framer-motion.ts';
 import { TrendingDown, 
   Brain, 
   BarChart3, 
@@ -18,30 +15,12 @@ import { TrendingDown,
 ;
 const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
 
-  const features = [
-    {
-
-      icon: Brain,
-      title: "AI-Powered Predictions","
-      description: "Advanced machine learning models that predict customer churn with 95%+ accuracy using behavioral patterns and engagement metrics."
-    },
-    {
-
-      icon: BarChart3,"
-      title: "Real-time Analytics","
-      description: "Live dashboards showing customer health scores, risk factors, and predictive insights updated every 15 minutes."
-    },
-    {
-
-      icon: Target,"
-      title: "Proactive Interventions","
-      description: "Automated alerts and recommended actions to prevent churn before it happens, with success rate tracking.";
+  
     },;
     {;
       icon: Users,;"
       title: "Customer Segmentation",;"
-      description: "Intelligent clustering of customers by risk level, value, and behavior patterns for targeted retention strategies.";
-    };
+      description: "Intelligent clustering of customers by risk level, value, and behavior patterns for targeted retention strategies."};
   ];
 
   const benefits = [;"
@@ -60,18 +39,9 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
     "Slack, Microsoft Teams, Email";
   ];
 
-  const pricing = [
-    {
-"
-      plan: "Starter","
-      price: "$299","
-      period: "/month","
-      features["Up to 1,000 customers", "Basic churn predictions", "Email alerts", "Standard support"],;
+  
       popular: false
 =======
-import React from 'react.ts';'
-import { SEO  } from '@/components/SEO';'
-import { motion  } from 'framer-motion.ts';      popular: false
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
@@ -99,7 +69,7 @@ import { motion  } from 'framer-motion.ts';      popular: false
         description="Predict and prevent customer churn with AI-powered analytics. Reduce churn by 40-60% and increase customer lifetime value with our advanced machine learning platform."
         keywords="customer churn prediction, AI analytics, customer retention, machine learning, predictive analytics, customer success"
         canonical="https://ziontechgroup.com/services/ai-customer-churn-prediction"
-      />
+       />
 =======
         title="AI Customer Churn Prediction Platform - Zion Tech Group""
         description="Predict and prevent customer churn with AI-powered analytics. Reduce churn by 40-60% and increase customer lifetime value with our advanced machine learning platform.""
@@ -138,7 +108,7 @@ import { motion  } from 'framer-motion.ts';      popular: false
             className="mb-8"
 "
             <div className="inline-flex items-center px-4 py-2 bg-red-500/20 border border-red-500/30 rounded-full text-red-400 text-sm font-medium mb-6">"
-              <TrendingDown className="w-4 h-4 mr-2" />              Churn Prevention Platform
+              <TrendingDown className="w-4 h-4 mr-2"  />              Churn Prevention Platform
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent">
               AI Customer Churn Prediction
@@ -148,15 +118,15 @@ import { motion  } from 'framer-motion.ts';      popular: false
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">"
               <div className="flex items-center text-cyan-400 font-semibold">"
-                <Star className="w-5 h-5 mr-2 fill-current" />
+                <Star className="w-5 h-5 mr-2 fill-current"  />
                 4.9/5 Rating
               </div>"
               <div className="flex items-center text-green-400 font-semibold">"
-                <CheckCircle className="w-5 h-5 mr-2" />
+                <CheckCircle className="w-5 h-5 mr-2"  />
                 95%+ Accuracy
               </div>"
               <div className="flex items-center text-blue-400 font-semibold">"
-                <Clock className="w-5 h-5 mr-2" />                Real-time Updates
+                <Clock className="w-5 h-5 mr-2"  />                Real-time Updates
               </div>
             </div>
           </motion.div>
@@ -331,7 +301,7 @@ import { motion  } from 'framer-motion.ts';      popular: false
                 className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 text-center"
 "
                 <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
-                  <CheckCircle className="w-6 h-6 text-white" />
+                  <CheckCircle className="w-6 h-6 text-white"  />
                 </div>"                <p className="text-slate-300 font-medium">{benefit}</p>
               </motion.div>;
             ))}
@@ -526,7 +496,7 @@ import { motion  } from 'framer-motion.ts';      popular: false
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => ("
                     <li key={idx} className="flex items-center text-slate-300">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                      {feature}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -586,7 +556,7 @@ import { motion  } from 'framer-motion.ts';      popular: false
                 className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
 
                 Start Free Trial"
-                <ArrowRight className="w-5 h-5 ml-2" />              </a>
+                <ArrowRight className="w-5 h-5 ml-2"  />              </a>
               <a"
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300"
@@ -605,17 +575,17 @@ import { motion  } from 'framer-motion.ts';      popular: false
             <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>"
             <div className="grid md:grid-cols-3 gap-6 text-slate-300">
               <div>"
-                <DollarSign className="w-6 h-6 text-cyan-400 mx-auto mb-2" />"
+                <DollarSign className="w-6 h-6 text-cyan-400 mx-auto mb-2"  />"
                 <p className="font-semibold">Starting at $299/month</p>"
                 <p className="text-sm">No setup fees, cancel time</p>
               </div>
               <div>"
-                <Clock className="w-6 h-6 text-green-400 mx-auto mb-2" />"
+                <Clock className="w-6 h-6 text-green-400 mx-auto mb-2"  />"
                 <p className="font-semibold">Setup in 24 hours</p>"
                 <p className="text-sm">Quick integration with your tools</p>
               </div>
               <div>"
-                <Shield className="w-6 h-6 text-blue-400 mx-auto mb-2" />"
+                <Shield className="w-6 h-6 text-blue-400 mx-auto mb-2"  />"
                 <p className="font-semibold">Enterprise Security</p>"                <p className="text-sm">SOC 2, GDPR, HIPAA compliant</p>
               </div>
             </div>"
@@ -633,4 +603,4 @@ import { motion  } from 'framer-motion.ts';      popular: false
     </div>;
   )};
 
-export default AICustomerChurnPrediction;}}}'"`
+export default AICustomerChurnPrediction}}}'"`

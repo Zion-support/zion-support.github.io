@@ -21,10 +21,7 @@ export function Switch({
   ...props}: SwitchProps) {;
   
     if (!disabled && onCheckedChange) {;
-      onCheckedChange(!checked);
-
-  
-};
+      onCheckedChange(!checked)};
   return()
     <button"
       type = "button"
@@ -59,9 +56,7 @@ export function Switch({
   checked ? 'translate-x-5' : 'translate-x-0'
         );
 ;
-;
 };
       />;
     </button>;
-  );
-}}}'"
+  )}}}'"

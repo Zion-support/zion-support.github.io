@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react.ts';
-import { api, ApiResponse  } from '@/services/api';
 <<<<<<< HEAD
 
 interface User {
@@ -12,46 +10,36 @@ const ApiDemo: React.FC = (): JSX.Element => {;
   const [users, setUsers] = useState<any>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<any>(null);
-const [newUser, setNewUser] = useState({ name: '', email: '';
-});
+const [newUser, setNewUser] = useState({ name: '', email: ''});
   const [healthStatus, setHealthStatus] = useState<any>('Checking...');
 
   // Check API health on component mount
   useEffect ( () => {
     checkHealth () ;
-    fetchUsers () ;
-  }, []) ;
+    fetchUsers () }, []) ;
 
-  const checkHealth = async : unknown {;
+  
     try {;
-      const response = await api.health () ;
-      setHealthStatus (`✅ API Healthy - ${response.data?.environment} mode`) ;
-    } catch (err) {
+      
+      setHealthStatus (`✅ API Healthy - ${response.data?.environment} mode`) } catch (err) {
 
-      setHealthStatus('❌ API Unhealthy');
+      setHealthStatus('❌ API Unhealthy')};
 
-  };
-
-  const fetchUsers = async () => {;
+  
     setLoading (true) ;
     setError (null) ;
 
     try {
-      const response = await api.getUsers () ;
+      
       if (response.success && response.data) {
 
-        setUsers(response.data);
+        setUsers(response.data)} catch (err) {
 
-    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to fetch users')} finally {
 
-      setError(err instanceof Error ? err.message : 'Failed to fetch users');
-    } finally {
+      setLoading(false)};
 
-      setLoading(false);
-
-  };
-
-  const handleCreateUser = async (e: anyReact.FormEvent) => {;
+  
     e.preventDefault () ;
 
 =======
@@ -65,20 +53,15 @@ const [newUser, setNewUser] = useState({ name: '', email: '';
     setError (null) ;
 
     try {
-      const response = await api.createUser (newUser) ;
+      
       if (response.success && response.data) {
 
         setUsers(prev => [...prev, response.data!]);
-        setNewUser({ name: '', email: '' });
+        setNewUser({ name: '', email: '' })} catch (err) {
 
-    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to create user')} finally {
 
-      setError(err instanceof Error ? err.message : 'Failed to create user');
-    } finally {
-
-      setLoading(false);
-
-  };
+      setLoading(false)};
   return()
     <div className = "max-w-4xl mx-auto p-6 space-y-6">"
       <div className="bg-white rounded-lg shadow-md p-6">"
@@ -202,7 +185,6 @@ const [newUser, setNewUser] = useState({ name: '', email: '';
           </div>;
         </div>;
       </div>;
-    </div>;) ;
-};
+    </div>;) };
 
-export default ApiDemo;}}}}}}}'"`
+export default ApiDemo}}}}}}}'"`

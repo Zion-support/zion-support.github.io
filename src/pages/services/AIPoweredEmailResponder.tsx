@@ -1,4 +1,3 @@
-import React from 'react.ts';
 ;const AIPoweredEmailResponder: React.FC = (): JSX.Element => {
 
   return()
@@ -137,7 +136,6 @@ import React from 'react.ts';
         </section>
       </div>
     </div>
-  );
-};
+  )};
 export default AIPoweredEmailResponder;
 '"

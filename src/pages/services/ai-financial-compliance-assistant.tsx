@@ -1,6 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
 import {
 
   Shield,
@@ -42,156 +39,11 @@ import {
   Globe,
   Network} from 'lucide-react';
 
-const AIFinancialComplianceAssistant = () => {
-  const features = [
-    {
 
-      icon: Brain,
-      title: 'AI-Powered Compliance Monitoring',
-      description:'
-        'Advanced machine learning algorithms continuously monitor financial transactions for compliance violations'},
-    {
-
-      icon: Shield,
-      title: 'Real-time Risk Detection',
-      description:'
-        'Instant identification of potential compliance risks, fraud, and regulatory violations'},
-    {
-
-      icon: FileText,
-      title: 'Automated Reporting',
-      description:'
-        'Generate comprehensive compliance reports automatically for regulators and internal audits'},
-    {
-
-      icon: AlertTriangle,
-      title: 'Proactive Alerts',
-      description:'
-        'Early warning system for compliance issues before they become violations'},
-    {
-
-      icon: BarChart3,
-      title: 'Compliance Analytics',
-      description:'
-        'Deep insights into compliance patterns, trends, and risk areas'},
-    {
-
-      icon: CheckCircle,
-      title: 'Regulatory Updates',
-      description:'
-        'Automatic updates on regulatory changes and their impact on your business'},
-  ];
-
-  const pricingPlans = [
-    {
-
-      name: 'Starter',
-      price: '$199',
-      period: '/month',
-      description: 'Perfect for small financial institutions and startups',
-      features: ['
-        'Up to 10,000 transactions/month',Basic compliance monitoring',Standard reporting',Email alerts',Email support',
-      ],
-      popular: false},
-    {
-
-      name: 'Professional',
-      price: '$599',
-      period: '/month',
-      description: 'Ideal for growing financial services companies',
-      features: ['
-        'Up to 100,000 transactions/month',Advanced AI compliance detection',Real-time monitoring',Custom reporting',Priority support',API access',Advanced analytics',Multi-user access',
-      ],
-      popular: true},
-    {
-
-      name: 'Enterprise',
-      price: '$1,999',
-      period: '/month',
-      description:'
-        'For large financial institutions and multinational corporations',
-      features: ['
-        'Unlimited transactions',Custom AI models',White-label solution',Dedicated support',Advanced analytics',Custom integrations',On-premise deployment',SLA guarantees',Custom training',
-      ],
-      popular: false},
-  ];
-
-  const complianceAreas = [
-    {
-
-      title: 'Anti-Money Laundering (AML),
-      description:'
-        'Monitor transactions for suspicious patterns and ensure AML compliance',
-      icon: Shield,
-      color: 'from-red-500 to-orange-500'},
-    {
-
-      title: 'Know Your Customer (KYC),
-      description: 'Automated customer verification and identity validation',
-      icon: Users,
-      color: 'from-blue-500 to-purple-500'},
-    {
-
-      title: 'Fraud Detection',
-      description: 'AI-powered fraud detection and prevention systems',
-      icon: AlertTriangle,
-      color: 'from-yellow-500 to-orange-500'},
-    {
-
-      title: 'Regulatory Reporting',
-      description: 'Automated generation of regulatory reports and filings',
-      icon: FileText,
-      color: 'from-green-500 to-emerald-500'},
-  ];
-
-  const useCases = [
-    {
-
-      title: 'Banks & Credit Unions',
-      description: 'Ensure regulatory compliance across all banking operations',
-      icon: Building2},
-    {
-
-      title: 'Investment Firms',
-      description: 'Monitor trading activities and ensure SEC compliance',
-      icon: TrendingUp},
-    {
-
-      title: 'Insurance Companies',
-      description: 'Compliance monitoring for insurance operations and claims',
-      icon: Shield},
-    {
-
-      title: 'Fintech Startups',
-      description: 'Build compliance into your financial technology platform',
-      icon: Zap},
-  ];
-
-  const benefits = [
-    {
-
-      title: 'Reduce Compliance Costs',
-      description:'
-        'Automate manual compliance processes to save time and money',
-      icon: DollarSign},
-    {
-
-      title: 'Prevent Violations',
-      description: 'Proactive detection prevents costly regulatory violations',
-      icon: AlertCircle},
-    {
-
-      title: 'Improve Efficiency',
-      description: 'Streamline compliance workflows and reduce manual work',
-      icon: TrendingUp},
-    {
-
-      title: 'Enhance Security',
-      description:'
-        'Advanced security features protect sensitive financial data',
-      icon: Lock},
-  ];
-
+  
+  
+  
+  
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
@@ -219,7 +71,7 @@ const AIFinancialComplianceAssistant = () => {
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium mb-6">"
-              <Shield className="w-4 h-4 mr-2" />              AI-Powered Financial Compliance
+              <Shield className="w-4 h-4 mr-2"  />              AI-Powered Financial Compliance
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -241,7 +93,7 @@ const AIFinancialComplianceAssistant = () => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-semibold rounded-xl hover:from-emerald-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 View Pricing"
-                <ArrowRight className="ml-2 w-5 h-5" />              </a>
+                <ArrowRight className="ml-2 w-5 h-5"  />              </a>
               <a"
                 href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border border-slate-600 text-white font-semibold rounded-xl hover:border-slate-500 transition-all duration-200"
@@ -479,7 +331,7 @@ const AIFinancialComplianceAssistant = () => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />"                      <span className="text-slate-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0"  />"                      <span className="text-slate-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -529,7 +381,7 @@ const AIFinancialComplianceAssistant = () => {
               viewport={{ once: true }}
             >"
               <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
-                <Phone className="w-8 h-8 text-white" />
+                <Phone className="w-8 h-8 text-white"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>"              <p className="text-slate-300">+1 302 464 0950</p>
             </motion.div>
@@ -542,7 +394,7 @@ const AIFinancialComplianceAssistant = () => {
               viewport={{ once: true }}
             >"
               <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
-                <Mail className="w-8 h-8 text-white" />
+                <Mail className="w-8 h-8 text-white"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">
                 Email Us
@@ -557,7 +409,7 @@ const AIFinancialComplianceAssistant = () => {
               viewport={{ once: true }}
             >"
               <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
-                <MapPin className="w-8 h-8 text-white" />
+                <MapPin className="w-8 h-8 text-white"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">
                 Visit Us
@@ -581,7 +433,7 @@ const AIFinancialComplianceAssistant = () => {
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-semibold rounded-xl hover:from-emerald-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               Request Demo"
-              <ArrowRight className="ml-2 w-5 h-5" />            </a>
+              <ArrowRight className="ml-2 w-5 h-5"  />            </a>
           </motion.div>
         </div>
       </section>

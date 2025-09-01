@@ -1,6 +1,3 @@
-import React from 'react.ts';
-import { motion } from 'framer-motion.ts';
-import { LucideIcon } from 'lucide-react.ts';
 export function StatsSection(...args: any[]): any {
 
   return()
@@ -39,7 +36,6 @@ export function StatsSection(...args: any[]): any {
             </motion.div>) ) }
         </div>
       </div>
-    </section>) ;
-}
+    </section>) }
 export default StatsSection;
 '"

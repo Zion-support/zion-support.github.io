@@ -1,86 +1,18 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { MessageCircle, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Mail, Phone  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
 ;
 export { function };
 export default function AISupportHelpdesk(...args[]):  {
 
-  const features = [
-    {
-
-      icon: Brain,
-      title: "AI-Powered Support","
-      description: "Intelligent chatbots and virtual agents that understand context and provide accurate, helpful responses 24/7."
-    },
-    {
-
-      icon: MessageCircle,"
-      title: "Multi-channel Support","
-      description: "Seamless support across email, chat, phone, social media, and self-service portals."
-    },
-    {
-
-      icon: Zap,"
-      title: "Instant Resolution","
-      description: "Automated ticket routing, smart categorization, and AI-powered solutions for faster issue resolution."
-    },
-    {
-
-      icon: BarChart3,"
-      title: "Advanced Analytics","
-      description: "Comprehensive insights into support performance, customer satisfaction, and operational efficiency."
-    },
-    {
-
-      icon: Smartphone,"
-      title: "Mobile-First Design","
-      description: "Fully responsive support platform accessible on  device with native mobile apps.";
+  
     },;
     {;
       icon: Globe,;"
       title: "Global Support",;"
-      description: "Multi-language support with localization and timezone-aware routing for global teams.";
-    };
-  ];
-
-  const aiCapabilities = [
-    {
-
-      icon: Brain,"
-      title: "Natural Language Processing","
-      description: "Advanced NLP for understanding customer intent and context"
-    },
-    {
-
-      icon: MessageCircle,"
-      title: "Conversational AI","
-      description: "Human-like conversations with personality and empathy"
-    },
-    {
-
-      icon: Zap,"
-      title: "Predictive Analytics","
-      description: "Anticipate issues and proactively resolve problems"
-    },
-    {
-
-      icon: Shield,"
-      title: "Smart Escalation","
-      description: "Intelligent routing to the right agent or department"
-    },
-    {
-
-      icon: Clock,"
-      title: "24/7 Availability","
-      description: "Round-the-clock support without human intervention";
-    },;
+      description: "Multi-language support with localization and timezone-aware routing for global teams."};
+  ]},;
     {;
       icon: Users,;"
       title: "Learning & Improvement",;"
-      description: "Continuous learning from interactions to improve responses";
-    };
+      description: "Continuous learning from interactions to improve responses"};
   ];
 
   const pricingPlans = [
@@ -131,72 +63,17 @@ export default function AISupportHelpdesk(...args[]):  {
         "Custom training",;"
         "On-premise options";
       ],;
-      popular: false;
-    };
-  ];
-
-  const benefits = [
-    {
-"
-      title: "Reduce Support Costs","
-      description: "Automate routine inquiries and reduce the need for human agents by up to 70%.",
-      icon: TrendingUp
-    },
-    {
-"
-      title: "Improve Customer Satisfaction","
-      description: "Provide instant, accurate responses and faster resolution times for better customer experience.",
-      icon: Users
-    },
-    {
-"
-      title: "Scale Support Operations","
-      description: "Handle unlimited support requests without increasing headcount or response times.",
-      icon: Globe;
-    },;
+      popular: false};
+  ]},;
     {;"
       title: "Gain Actionable Insights",;"
       description: "Understand customer needs and improve products with comprehensive support analytics.",;
-      icon: BarChart3;
-    };
-  ];
-
-  const supportChannels = [
-    {
-
-      icon: MessageCircle,"
-      title: "Live Chat","
-      description: "Real-time chat support with AI assistance and human handoff"
-    },
-    {
-
-      icon: Mail,"
-      title: "Email Support","
-      description: "Structured email support with automated categorization and routing"
-    },
-    {
-
-      icon: Phone,"
-      title: "Phone Support","
-      description: "Voice support with AI call screening and intelligent routing"
-    },
-    {
-
-      icon: Globe,"
-      title: "Self-Service Portal","
-      description: "Knowledge base and FAQ with AI-powered search and suggestions"
-    },
-    {
-
-      icon: Smartphone,"
-      title: "Mobile App","
-      description: "Native mobile apps for iOS and Android with push notifications";
-    },;
+      icon: BarChart3};
+  ]},;
     {;
       icon: Users,;"
       title: "Social Media",;"
-      description: "Monitor and respond to support requests across social platforms";
-    };  ];
+      description: "Monitor and respond to support requests across social platforms"};  ];
 
   return()
     <>
@@ -204,7 +81,7 @@ export default function AISupportHelpdesk(...args[]):  {
         title = "AI Support Helpdesk - Zion Tech Group"
         description="Professional AI-powered support helpdesk platform with intelligent chatbots, multi-channel support, and advanced analytics for exceptional customer service."
         canonical="/services/ai-support-helpdesk"
-      />
+       />
 "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}"
         <section className="relative py-20 overflow-hidden">"
@@ -590,7 +467,7 @@ export default function AISupportHelpdesk(...args[]):  {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center space-x-3">"
-                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />"                        <span className="text-gray-300">{feature}</span>
+                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0"  />"                        <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -665,6 +542,5 @@ export default function AISupportHelpdesk(...args[]):  {
         </section>;
       </div>;
     </>
-  );
-}
+  )}
 '"`

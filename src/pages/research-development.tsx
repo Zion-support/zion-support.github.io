@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import {
 
   FlaskConical,
@@ -43,20 +40,9 @@ import {
   Telescope'
  } from 'lucide-react';
 
-const researchAreas = [
-  {
 
-    id: 'ai-ml',
-    name: 'Artificial Intelligence & Machine Learning',
-    icon: Brain,
-    description: 'Advancing the frontiers of AI through innovative research in neural networks, natural language processing, and computer vision.',
-    color: 'from-purple-500 to-indigo-600',
-    focus[;
       'Deep Learning Architectures',Natural Language Processing',Computer Vision & Image Recognition',Reinforcement Learning',AI Ethics & Responsible AI',Edge AI & Federated Learning'
 =======
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';      'Edge AI & Federated Learning'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ],;
     publications: 15,
@@ -135,16 +121,7 @@ import { Link } from 'react-router-dom';      'Edge AI & Federated Learning'
     projects: 16};
 ];
 ;
-const researchProjects = [
-  {
 
-<<<<<<< HEAD
-    id: 1,
-    title: 'AI-Powered Cybersecurity Threat Detection',
-    area: 'AI & ML',
-    status: 'Active',
-    description: 'Developing machine learning algorithms to detect and respond to cybersecurity threats in real-time.',
-    team['Dr. Sarah Chen',AI Researcher',Security Expert'],;
     duration: '18 months',
     funding: '$500,000',
     outcomes[;
@@ -247,17 +224,10 @@ const researchProjects = [
       'Industry standards contribution';
     ],;
     icon: Brain,;
-    color: 'from-purple-500 to-indigo-600';
-  };
+    color: 'from-purple-500 to-indigo-600'};
 ];
 ;
-const publications = [
-  {
 
-<<<<<<< HEAD
-    id: 1,
-    title: 'Advanced Neural Network Architectures for Cybersecurity',
-    authors['Dr. Sarah Chen',Dr. Michael Rodriguez'],;
     journal: 'IEEE Transactions on Cybersecurity',
 =======
     id: 1,'
@@ -311,17 +281,10 @@ const publications = [
     year: 2026,;
     citations: 38,;
     area: 'Cloud-Native',;
-    abstract: 'This paper introduces security-first design patterns for cloud-native applications...';
-  };
+    abstract: 'This paper introduces security-first design patterns for cloud-native applications...'};
 ];
 ;
-const patents = [
-  {
 
-<<<<<<< HEAD
-    id: 1,
-    title: 'Adaptive Threat Detection System Using Machine Learning',
-    inventors['Dr. Sarah Chen',Dr. Michael Rodriguez'],;
     filingDate: '2026-08-15',
     status: 'Granted',
     patentNumber: 'US 11,234,567',
@@ -379,8 +342,7 @@ const patents = [
     status: 'Pending',;
     patentNumber: 'US 2026/0098765',;
     area: 'Cloud-Native',;
-    description: 'A security architecture pattern for cloud-native applications.';
-  };];
+    description: 'A security architecture pattern for cloud-native applications.'};];
 
 export default function ResearchDevelopment(...args[]):  {
 
@@ -388,17 +350,13 @@ export default function ResearchDevelopment(...args[]):  {
   const [selectedStatus, setSelectedStatus] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const areas = ['All', ...researchAreas.map(area => area.name)];
-  const statuses = ['All',Active',Completed',Planning'];
-
-  const filteredProjects = researchProjects.filter (project => {;
-    const matchesSearch = project.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
+  
+  
+  
+    
                          project.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ;
 
-    return matchesArea && matchesStatus && matchesSearch;
-  }) ;
-
-    }  };
+    return matchesArea && matchesStatus && matchesSearch}) }  };
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
@@ -422,7 +380,7 @@ export default function ResearchDevelopment(...args[]):  {
             className="text-center"
 "
             <div className="inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6">"
-              <FlaskConical className="w-5 h-5" />"              <span className="font-medium">Research & Development</span>
+              <FlaskConical className="w-5 h-5"  />"              <span className="font-medium">Research & Development</span>
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Advancing Technology Frontiers
@@ -443,7 +401,7 @@ export default function ResearchDevelopment(...args[]):  {
               {/* Search */}"
               <div className="md:col-span-1">"
                 <div className="relative">"
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4"  />
                   <input"
 <<<<<<< HEAD
                     type="text"
@@ -510,7 +468,7 @@ export default function ResearchDevelopment(...args[]):  {
 ;"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {researchAreas.map((area, index) => {;
-              const IconComponent = area.icon;
+              
               return()                <motion.div
                   key = {area.id}
                   initial = {
@@ -535,7 +493,7 @@ export default function ResearchDevelopment(...args[]):  {
                   className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
 
                   <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-2xl flex items-center justify-center mb-4`}>"
-                    <IconComponent className="w-8 h-8 text-white" />
+                    <IconComponent className="w-8 h-8 text-white"  />
                   </div>"
                   <h3 className="text-xl font-bold text-white mb-3">{area.name}</h3>"                  <p className="text-zion-slate-light mb-4">{area.description}</p>
 "
@@ -544,7 +502,7 @@ export default function ResearchDevelopment(...args[]):  {
                     <div className="space-y-1">
                       {area.focus.slice(0, 4).map((focus, idx) => ("
                         <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">"
-                          <CheckCircle className="w-3 h-3 text-green-400" />                          <span>{focus}</span>
+                          <CheckCircle className="w-3 h-3 text-green-400"  />                          <span>{focus}</span>
                         </div>) ) }
                     </div>
                   </div>
@@ -563,8 +521,7 @@ export default function ResearchDevelopment(...args[]):  {
                       <div className="text-xs text-zion-slate-light">Projects</div>;
                     </div>;
                   </div>;
-                </motion.div>;) ;
-            }) }          </div>
+                </motion.div>;) }) }          </div>
         </div>
       </section>
 
@@ -594,8 +551,8 @@ export default function ResearchDevelopment(...args[]):  {
 ;"
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {filteredProjects.map((project, index) => {;
-              const IconComponent = getAreaIcon(project.area);
-              const areaColor = getAreaColor(project.area);
+              
+              
               return()                <motion.div
                   key = {project.id}
                   initial = {
@@ -623,7 +580,7 @@ export default function ResearchDevelopment(...args[]):  {
                   <div className="flex items-start justify-between mb-4">"
                     <div className="flex items-center gap-3">`
                       <div className={`w-16 h-16 bg-gradient-to-br ${areaColor} rounded-2xl flex items-center justify-center`}>"
-                        <IconComponent className="w-8 h-8 text-white" />                      </div>
+                        <IconComponent className="w-8 h-8 text-white"  />                      </div>
                       <div>"
                         <h3 className="text-xl font-bold text-white mb-1">{project.title}</h3>"
                         <div className="flex items-center gap-2">
@@ -641,13 +598,13 @@ export default function ResearchDevelopment(...args[]):  {
                   <div className="grid grid-cols-2 gap-4 mb-4">"
                     <div className="text-sm text-zion-slate-light">"
                       <span className="flex items-center gap-1">"
-                        <Clock className="w-4 h-4" />
+                        <Clock className="w-4 h-4"  />
                         Duration: {project.duration}
                       </span>
                     </div>"
                     <div className="text-sm text-zion-slate-light">"
                       <span className="flex items-center gap-1">"
-                        <DollarSign className="w-4 h-4" />                        Funding: {project.funding}
+                        <DollarSign className="w-4 h-4"  />                        Funding: {project.funding}
                       </span>
                     </div>
                   </div>
@@ -669,7 +626,7 @@ export default function ResearchDevelopment(...args[]):  {
                     <div className="space-y-1">
                       {project.outcomes.map((outcome, idx) => ("
                         <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">"
-                          <Star className="w-3 h-3 text-yellow-400" />                          <span>{outcome}</span>
+                          <Star className="w-3 h-3 text-yellow-400"  />                          <span>{outcome}</span>
                         </div>) ) }
                     </div>
                   </div>
@@ -681,15 +638,14 @@ export default function ResearchDevelopment(...args[]):  {
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
 
                       Learn More"
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                      <ArrowRight className="ml-2 h-4 w-4"  />
                     </Link>"
                     <div className="text-right">"
                       <div className="text-sm text-zion-slate-light">Contact us for collaboration</div>;"
                       <div className="text-zion-cyan font-medium">+1 302 464 0950</div>;
                     </div>;
                   </div>;
-                </motion.div>;) ;
-            }) }          </div>
+                </motion.div>;) }) }          </div>
         </div>
       </section>
 
@@ -747,19 +703,19 @@ export default function ResearchDevelopment(...args[]):  {
                     <h3 className="text-xl font-bold text-white mb-2">{pub.title}</h3>"
                     <div className="flex items-center gap-4 text-sm text-zion-slate-light mb-3">"
                       <span className="flex items-center gap-1">"
-                        <Users className="w-4 h-4" />
+                        <Users className="w-4 h-4"  />
                         {pub.authors.join(',)}
                       </span>"
                       <span className="flex items-center gap-1">"
-                        <BookOpen className="w-4 h-4" />
+                        <BookOpen className="w-4 h-4"  />
                         {pub.journal}
                       </span>"
                       <span className="flex items-center gap-1">"
-                        <Clock className="w-4 h-4" />
+                        <Clock className="w-4 h-4"  />
                         {pub.year}
                       </span>"
                       <span className="flex items-center gap-1">"
-                        <Star className="w-4 h-4" />                        {pub.citations} citations
+                        <Star className="w-4 h-4"  />                        {pub.citations} citations
                       </span>
                     </div>"
                     <p className="text-zion-slate-light mb-3">{pub.abstract}</p>"
@@ -775,7 +731,7 @@ export default function ResearchDevelopment(...args[]):  {
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
 
                       Read Paper"
-                      <ArrowRight className="ml-2 h-4 w-4" />                    </Link>
+                      <ArrowRight className="ml-2 h-4 w-4"  />                    </Link>
                   </div>
                 </div>;
               </motion.div>) ) }
@@ -871,7 +827,7 @@ export default function ResearchDevelopment(...args[]):  {
                     className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
 
                     View Details"
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <ArrowRight className="ml-2 h-4 w-4"  />
                   </Link>"
                   <div className="text-right">"
                     <div className="text-sm text-zion-slate-light">Contact us for licensing</div>"                    <div className="text-zion-cyan font-medium">+1 302 464 0950</div>
@@ -915,7 +871,7 @@ export default function ResearchDevelopment(...args[]):  {
                 className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
 
                 Start Collaboration"
-                <ArrowRight className="ml-2 h-5 w-5" />              </Link>
+                <ArrowRight className="ml-2 h-5 w-5"  />              </Link>
               <Link"
                 to="/case-studies"
                 className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
@@ -926,6 +882,5 @@ export default function ResearchDevelopment(...args[]):  {
           </motion.div>;
         </div>;
       </section>;
-    </div>;) ;
-}
+    </div>;) }
 '"`

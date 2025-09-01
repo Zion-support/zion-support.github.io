@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import {
 
   Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
@@ -18,21 +15,9 @@ import {
   Barcode, Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX'
  } from 'lucide-react';
 
-const itServices2028 = [
-  {
 
-    id: 'quantum-cloud-infrastructure',
-    name: 'Quantum Cloud Infrastructure',
-    tagline: 'Next-generation quantum-ready cloud infrastructure',
-    price: '$45,999',
-    period: '/month',
-    description: 'Revolutionary quantum-ready cloud infrastructure that provides unprecedented performance, security, and scalability for enterprise applications.',
-    features[;
       'Quantum-ready computing nodes',Advanced AI optimization',Zero-latency networking',Quantum encryption',Auto-scaling infrastructure',Real-time monitoring',Disaster recovery',Global CDN',API management',DevOps automation'
 =======
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';      'DevOps automation'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ],;
     popular: true,
@@ -161,7 +146,6 @@ import { Link } from 'react-router-dom';      'DevOps automation'
           </motion.div>;
         </div>;
       </section>;
-    </div>;) ;
-};
+    </div>;) };
 
-export default ITServices2028;}}
+export default ITServices2028}}
