@@ -77,6 +77,12 @@ const AIFinancialTradingPlatform = createLazyComponent(() => import('./pages/ser
 const BlockchainEnterpriseSolutions = createLazyComponent(() => import('./pages/services/blockchain-enterprise-solutions'));
 const PodcastTranscriptionInsights = createLazyComponent(() => import('./pages/services/podcast-transcription-insights'));
 
+// Additional missing service components
+const AIDataPipelineOptimizer = createLazyComponent(() => import('./pages/services/ai-data-pipeline-optimizer'));
+const AISalesAssistant = createLazyComponent(() => import('./pages/services/ai-sales-assistant'));
+const SecurityPostureGuardian = createLazyComponent(() => import('./pages/services/security-posture-guardian'));
+const DeveloperProductivityCopilot = createLazyComponent(() => import('./pages/services/developer-productivity-copilot'));
+
 // 2025 Innovative Services
 const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025'));
 const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
@@ -389,7 +395,10 @@ function App() {
                     <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
                     <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
                     <Route path="/services/podcast-transcription-insights" element={<PodcastTranscriptionInsights />} />
->>>>>>> cursor/website-audit-content-update-and-deployment-a57c
+                    <Route path="/services/ai-data-pipeline-optimizer" element={<AIDataPipelineOptimizer />} />
+                    <Route path="/services/ai-sales-assistant" element={<AISalesAssistant />} />
+                    <Route path="/services/security-posture-guardian" element={<SecurityPostureGuardian />} />
+                    <Route path="/services/developer-productivity-copilot" element={<DeveloperProductivityCopilot />} />
 
                   {/* 2025 New Innovative Services */}
                   <Route path="/services/ai-supply-chain-risk-management" element={<AISupplyChainRiskManagement />} />
