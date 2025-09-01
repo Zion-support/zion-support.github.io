@@ -1,1 +1,1 @@
-export default function Verify() { return <div className="py-8">Verify Email</div>; }
+export default function Page(){ return <div /> }

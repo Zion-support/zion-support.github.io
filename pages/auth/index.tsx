@@ -1,1 +1,1 @@
-export default function Auth() { return <div className="py-8">Auth</div>; }
+export default function Page(){ return <div /> }

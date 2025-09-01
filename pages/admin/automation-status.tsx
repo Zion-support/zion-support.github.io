@@ -1,1 +1,1 @@
-export default function AutomationStatus() { return <div className="py-8">Automation Status</div>; }
+export default function Page(){ return <div /> }

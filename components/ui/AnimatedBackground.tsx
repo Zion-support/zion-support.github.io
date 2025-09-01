@@ -1,21 +1,27 @@
+import React from 'react';
+
 export default function AnimatedBackground() {
   return (
-    <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
-      {/* Gradient wash */}
-      <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full opacity-30 blur-3xl bg-gradient-to-tr from-neon-blue to-neon-purple animate-gradient-x" />
-      <div className="absolute -bottom-32 -right-32 h-[28rem] w-[28rem] rounded-full opacity-20 blur-3xl bg-gradient-to-tr from-neon-pink to-neon-green animate-gradient-x" />
-
-      {/* Floating orbs */}
-      <div className="absolute top-24 left-8 h-24 w-24 rounded-full bg-white/10 dark:bg-white/5 shadow-neon-high-contrast animate-float" />
-      <div className="absolute bottom-32 right-12 h-16 w-16 rounded-full bg-white/10 dark:bg-white/5 shadow-neon-high-contrast animate-cyber-float" />
-
-      {/* Scanning line */}
-      <div className="absolute inset-x-0 h-1 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-scan-line" />
-
-      {/* Particle drifts */}
-      <div className="absolute top-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" />
-      <div className="absolute top-1/3 -left-24 h-1 w-1/2 rounded-full bg-white/10 animate-particle-drift" />
-      <div className="absolute top-2/3 -left-10 h-1 w-1/3 rounded-full bg-white/10 animate-particle-drift" />
+    <div className="absolute inset-0 -z-10 overflow-hidden">
+      <style jsx>{`
+        @keyframes floatSlow {
+          0% { transform: translateY(0px) translateX(0px) scale(1); }
+          50% { transform: translateY(-40px) translateX(20px) scale(1.05); }
+          100% { transform: translateY(0px) translateX(0px) scale(1); }
+        }
+        @keyframes floatMedium {
+          0% { transform: translateY(0px) translateX(0px) scale(1); }
+          50% { transform: translateY(30px) translateX(-30px) scale(0.98); }
+          100% { transform: translateY(0px) translateX(0px) scale(1); }
+        }
+      `}</style>
+      <div className="absolute -top-24 -left-24 w-[40rem] h-[40rem] rounded-full blur-3xl opacity-40"
+           style={{ background: 'radial-gradient(circle at 30% 30%, #60a5fa, transparent 60%)', animation: 'floatSlow 12s ease-in-out infinite' }} />
+      <div className="absolute top-1/3 -right-24 w-[36rem] h-[36rem] rounded-full blur-3xl opacity-40"
+           style={{ background: 'radial-gradient(circle at 70% 70%, #a78bfa, transparent 60%)', animation: 'floatMedium 10s ease-in-out infinite' }} />
+      <div className="absolute bottom-0 left-1/4 w-[44rem] h-[44rem] rounded-full blur-3xl opacity-30"
+           style={{ background: 'radial-gradient(circle at 50% 50%, #34d399, transparent 60%)', animation: 'floatSlow 14s ease-in-out infinite' }} />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 dark:via-black/10 to-transparent" />
     </div>
   );
 }

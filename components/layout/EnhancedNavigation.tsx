@@ -18,8 +18,10 @@ export default function EnhancedNavigation() {
           <a className="font-semibold">Zion</a>
         </Link>
         <div className="flex items-center gap-4 text-sm">
-          <Link href="/about"><a>About</a></Link>
+          <Link href="/services"><a>Services</a></Link>
+          <Link href="/interviews"><a>Interviews</a></Link>
           <Link href="/blog"><a>Blog</a></Link>
+          <Link href="/about"><a>About</a></Link>
           <Link href="/contact"><a>Contact</a></Link>
           <Link href="/dashboard/wallet"><a className="inline-flex items-center gap-1 px-2 py-1 border rounded">
             <span>⚡</span>

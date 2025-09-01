@@ -1,1 +1,1 @@
-export default function Contact() { return <div className="py-8">Contact</div>; }
+export default function Page(){ return <div /> }

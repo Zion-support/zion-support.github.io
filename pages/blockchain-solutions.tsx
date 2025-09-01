@@ -1,1 +1,1 @@
-export default function BlockchainSolutions() { return <div className="py-8">Blockchain Solutions</div>; }
+export default function Page(){ return <div /> }
