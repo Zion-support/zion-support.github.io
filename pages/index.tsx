@@ -2747,15 +2747,9 @@ export default function HomePage() {
                   <li>• GitHub Actions Redundancy</li>
                   <li>• Netlify Functions Redundancy</li>
                 </ul>
-                <div className="mt-4 pt-4 border-t border-white/20">
-                  <Link href="/README_ULTIMATE_REDUNDANCY_V2.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                    Ultimate Redundancy V2 →
-                  </Link>
-                  <br />
-                  <Link href="/README_COMPREHENSIVE_REDUNDANCY.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                    Comprehensive Redundancy →
-                  </Link>
-                </div>
+                <Link href="/README_ULTIMATE_REDUNDANCY_V2.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  Explore Redundancy Systems →
+                </Link>
               </div>
 
               <div className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:border-fuchsia-400/30 hover:scale-105 transition-all duration-300">
@@ -2767,15 +2761,9 @@ export default function HomePage() {
                   <li>• Autonomous Agents</li>
                   <li>• Innovation Systems</li>
                 </ul>
-                <div className="mt-4 pt-4 border-t border-white/20">
-                  <Link href="/automation" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                    Explore AI Systems →
-                  </Link>
-                  <br />
-                  <Link href="/AI_CONTENT_FACTORY_README.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                    AI Content Factory →
-                  </Link>
-                </div>
+                <Link href="/EXPONENTIAL_GROWTH_AUTOMATION.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                  Explore AI Systems →
+                </Link>
               </div>
 
               <div className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:border-green-400/30 hover:scale-105 transition-all duration-300">
@@ -2787,66 +2775,9 @@ export default function HomePage() {
                   <li>• Performance Optimization</li>
                   <li>• Quality Assurance</li>
                 </ul>
-                <div className="mt-4 pt-4 border-t border-white/20">
-                  <Link href="/automation" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                    Explore Build Systems →
-                  </Link>
-                  <br />
-                  <Link href="/README_CONTINUOUS_OPERATION.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                    Continuous Operation →
-                  </Link>
-                </div>
-              </div>
-            </div>
-            
-            {/* Additional Automation Systems */}
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-blue-400 mb-4 text-center">🔧 Development Tools</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• TypeScript & ESLint</li>
-                  <li>• Husky Git Hooks</li>
-                  <li>• Pre-commit Validation</li>
-                  <li>• Code Quality Tools</li>
-                  <li>• Automated Linting</li>
-                </ul>
-                <div className="mt-4 pt-4 border-t border-white/20">
-                  <Link href="/CONTRIBUTING.md" className="text-blue-400 hover:text-blue-300 text-sm font-semibold">
-                    View Contributing →
-                  </Link>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-purple-400 mb-4 text-center">📊 Monitoring & Analytics</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Performance Monitoring</li>
-                  <li>• Health Checks</li>
-                  <li>• Analytics Dashboard</li>
-                  <li>• Real-time Metrics</li>
-                  <li>• Predictive Alerts</li>
-                </ul>
-                <div className="mt-4 pt-4 border-t border-white/20">
-                  <Link href="/automation" className="text-purple-400 hover:text-purple-300 text-sm font-semibold">
-                    View Monitoring →
-                  </Link>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-yellow-400 mb-4 text-center">🚀 Deployment & Scaling</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Multi-region Deployment</li>
-                  <li>• Auto-scaling Systems</li>
-                  <li>• Load Balancing</li>
-                  <li>• Geographic Distribution</li>
-                  <li>• Zero-downtime Updates</li>
-                </ul>
-                <div className="mt-4 pt-4 border-t border-white/20">
-                  <Link href="/DEPLOYMENT.md" className="text-yellow-400 hover:text-yellow-300 text-sm font-semibold">
-                    View Deployment →
-                  </Link>
-                </div>
+                <Link href="/README_GITHUB_ACTIONS.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  Explore Build Systems →
+                </Link>
               </div>
             </div>
           </section>
