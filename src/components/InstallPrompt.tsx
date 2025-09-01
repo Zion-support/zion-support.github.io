@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { safeSessionStorage } from '@/utils/safeStorage';
+import type { BeforeInstallPromptEvent } from '@/types/pwa';
+
+const SHOWN_KEY = 'pwaInstallShown';
+const DISMISS_KEY = 'pwaInstallDismissUntil';
+const DISMISS_MS = 24 * 60 * 60 * 1000; // 24 hours
 
 export const InstallPrompt: React.FC = () => {
   const [deferred, setDeferred] = useState<BeforeInstallPromptEvent | null>(null);
