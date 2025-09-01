@@ -1,30 +1,32 @@
-import React from 'react';
-import { toast } from 'react-hot-toast';
+import React, { Component, ReactNode } from "react";
 
-interface Props {
-  children: React.ReactNode;
+export interface ErrorBoundaryProps {
+  fallback: ReactNode;
+  children?: ReactNode;
 }
 
-interface State {
+interface ErrorBoundaryState {
   hasError: boolean;
 }
 
-export class ErrorBoundary extends React.Component<Props, State> {
-  state: State = { hasError: false };
+export default class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
-  static getDerivedStateFromError(): State {
+  static getDerivedStateFromError() {
     return { hasError: true };
   }
 
-  componentDidCatch(error: Error) {
-    toast.error(error.message || 'An unexpected error occurred');
+  componentDidCatch(error: unknown) {
+    console.error("ErrorBoundary caught an error", error);
   }
 
   render() {
     if (this.state.hasError) {
-      return null;
+      return this.props.fallback;
     }
-
     return this.props.children;
   }
 }
