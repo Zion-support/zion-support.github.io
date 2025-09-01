@@ -1,85 +1,87 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ; Phone,; Mail,; MapPin,; Globe,; Linkedin,; Twitter,; Facebook,; Instagram,; Github,; Youtube,; ArrowRight,; Star,; Shield,; Zap,; Brain,; Cloud,; Users,; Award,; TrendingUp,; Lightbulb,; Rocket,; Target,; CheckCircle,; Heart,; MessageCircle,; HelpCircle,; BookOpen,; ShoppingCart,; Cpu,; Database,; Network,; Lock,; BarChart3,; Code,; Server,; Smartphone,; Cpu as CpuIcon,; Wifi,; ShieldCheck,; Globe2,; Bot,; Workflow,; Eye,; Sparkles,; ExternalLink,; Building,; Handshake,; FileText,; Video,; GraduationCap,; Atom,; PenTool,; Leaf,; ChevronRight,; ChevronDown,; DollarSign; } from 'lucide-react';
-;
-export function EnhancedFooter() {;
+import { Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Github, Youtube, ArrowRight, Star, Shield, Zap, Brain, Cloud, Users, Award, TrendingUp, Lightbulb, Rocket, Target, CheckCircle, Heart, MessageCircle, HelpCircle, BookOpen, ShoppingCart, Cpu, Database, Network, Lock, BarChart3, Code, Server, Smartphone, Cpu as CpuIcon, Wifi, ShieldCheck, Globe2, Bot, Workflow, Eye, Sparkles, ExternalLink, Building, Handshake, FileText, Video, GraduationCap, Atom, PenTool, Leaf, ChevronRight, ChevronDown, DollarSign } from 'lucide-react';
+export function EnhancedFooter() {
   const currentYear = new Date().getFullYear();
-;
-  const footerSections = [;
-    {;
-      title: 'Featured Services',;
-      links: [;
-        { name: 'AI Content Creation Studio Pro', href: '/services/AI-Content-Creation-Studio-Pro', icon: PenTool, featured: true },;
-        { name: 'Quantum AI Trading Platform', href: '/services/Quantum-AI-Trading-Platform', icon: Atom, featured: true },;
-        { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Sparkles, featured: true },;
-        { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Sparkles, featured: true },;
-        { name: 'AI-Powered Micro SAAS', href: '/zion-cutting-edge-services-2029', icon: Brain, featured: true };
-      ];
-    },;
-    {;
-      title: 'Core Services',;
-      links: [;
-        { name: 'Micro SAAS Solutions', href: '/services/micro-saas-solutions', icon: Rocket },;
-        { name: 'AI Services', href: '/ai-services', icon: Brain },;
-        { name: 'IT Infrastructure', href: '/it-services', icon: Server },;
-        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },;
-        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Shield },;
-        { name: '2025 Innovative Services', href: '/zion-innovative-services-2025', icon: Sparkles },;
-        { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Sparkles };
-      ];
-    },;
-    {;
-      title: 'Solutions',;
-      links: [;
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building },;
-        { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: Heart },;
-        { name: 'Financial Solutions', href: '/solutions/financial', icon: TrendingUp },;
-        { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', icon: Cpu },;
-        { name: 'Retail Solutions', href: '/solutions/retail', icon: ShoppingCart },;
-        { name: 'Space Technology', href: '/solutions/space-tech', icon: Globe2 };
-      ];
-    },;
-    {;
-      title: 'Company',;
-      links: [;
-        { name: 'About Us', href: '/about', icon: Users },;
-        { name: 'Our Team', href: '/team', icon: Award },;
-        { name: 'Careers', href: '/careers', icon: Target },;
-        { name: 'News & Press', href: '/press', icon: BookOpen },;
-        { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },;
-        { name: 'Partners', href: '/partners', icon: Handshake };
-      ];
-    },;
-    {;
-      title: 'Resources',;
-      links: [;
-        { name: 'Blog', href: '/blog', icon: BookOpen },;
-        { name: 'Documentation', href: '/documentation', icon: FileText },;
-        { name: 'Help Center', href: '/help', icon: HelpCircle },;
-        { name: 'Webinars', href: '/webinars', icon: Video },;
-        { name: 'White Papers', href: '/white-papers', icon: FileText },;
-        { name: 'Training', href: '/training', icon: GraduationCap };
-      ];
-    };
+
+  const footerSections = [
+    {
+      title: 'Featured Services',
+      links: [
+        { name: 'AI Content Creation Studio Pro', href: '/services/AI-Content-Creation-Studio-Pro', icon: PenTool, featured: true },
+        { name: 'Quantum AI Trading Platform', href: '/services/Quantum-AI-Trading-Platform', icon: Atom, featured: true },
+        { name: 'AI Project Management Platform', href: '/services/ai-powered-project-management-platform', icon: Workflow, featured: true },
+        { name: 'AI Financial Analytics Platform', href: '/services/ai-financial-analytics-platform', icon: BarChart3, featured: true },
+        { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform', icon: Heart, featured: true },
+        { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Sparkles, featured: true },
+        { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Sparkles, featured: true },
+        { name: 'AI-Powered Micro SAAS', href: '/zion-cutting-edge-services-2029', icon: Brain, featured: true }
+      ]
+    },
+    {
+      title: 'Core Services',
+      links: [
+        { name: 'Micro SAAS Solutions', href: '/services/micro-saas-solutions', icon: Rocket },
+        { name: 'AI Services', href: '/ai-services', icon: Brain },
+        { name: 'IT Infrastructure', href: '/it-services', icon: Server },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
+        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Shield },
+        { name: '2025 Innovative Services', href: '/zion-innovative-services-2025', icon: Sparkles },
+        { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Sparkles }
+      ]
+    },
+    {
+      title: 'Solutions',
+      links: [
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building },
+        { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: Heart },
+        { name: 'Financial Solutions', href: '/solutions/financial', icon: TrendingUp },
+        { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', icon: Cpu },
+        { name: 'Retail Solutions', href: '/solutions/retail', icon: ShoppingCart },
+        { name: 'Space Technology', href: '/solutions/space-tech', icon: Globe2 }
+      ]
+    },
+    {
+      title: 'Company',
+      links: [
+        { name: 'About Us', href: '/about', icon: Users },
+        { name: 'Our Team', href: '/team', icon: Award },
+        { name: 'Careers', href: '/careers', icon: Target },
+        { name: 'News & Press', href: '/press', icon: BookOpen },
+        { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
+        { name: 'Partners', href: '/partners', icon: Handshake }
+      ]
+    },
+    {
+      title: 'Resources',
+      links: [
+        { name: 'Blog', href: '/blog', icon: BookOpen },
+        { name: 'Documentation', href: '/documentation', icon: FileText },
+        { name: 'Help Center', href: '/help', icon: HelpCircle },
+        { name: 'Webinars', href: '/webinars', icon: Video },
+        { name: 'White Papers', href: '/white-papers', icon: FileText },
+        { name: 'Training', href: '/training', icon: GraduationCap }
+      ]
+    }
   ];
-;
-  const socialLinks = [;
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },;
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },;
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' },;
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },;
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' },;
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' };
+
+  const socialLinks = [
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' },
+    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' }
   ];
-;
-  const quickLinks = [;
-    { name: 'Contact Us', href: '/contact', icon: MessageCircle },;
-    { name: 'Request Quote', href: '/request-quote', icon: DollarSign },;
-    { name: 'Support', href: '/help', icon: HelpCircle },;
-    { name: 'Privacy Policy', href: '/privacy', icon: Shield },;
-    { name: 'Terms of Service', href: '/terms', icon: FileText },;
-    { name: 'Cookie Policy', href: '/cookies', icon: Cookie };
+
+  const quickLinks = [
+    { name: 'Contact Us', href: '/contact', icon: MessageCircle },
+    { name: 'Request Quote', href: '/request-quote', icon: DollarSign },
+    { name: 'Support', href: '/help', icon: HelpCircle },
+    { name: 'Privacy Policy', href: '/privacy', icon: Shield },
+    { name: 'Terms of Service', href: '/terms', icon: FileText },
+    { name: 'Cookie Policy', href: '/cookies', icon: Cookie }
   ];
 ;
   return (;

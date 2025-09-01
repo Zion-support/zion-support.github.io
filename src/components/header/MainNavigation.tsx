@@ -151,6 +151,21 @@ export function MainNavigation({ className = '' }) {
                         AI Quantum Hybrid
                       </Link>
                     </li>
+                    <li>
+                      <Link to="/services/ai-powered-project-management-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                        AI Project Management
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-financial-analytics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                        AI Financial Analytics
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-healthcare-analytics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                        AI Healthcare Analytics
+                      </Link>
+                    </li>
                   </ul>
                 </div>
               </div>
