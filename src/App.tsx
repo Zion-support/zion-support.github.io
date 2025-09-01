@@ -2,9 +2,9 @@ import React, { Suspense, lazy, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Sidebar from './components/Sidebar';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import { Sidebar } from './components/Sidebar';
 // Enhanced Layout Components
 // import { EnhancedHeader } from './components/EnhancedHeader';
 // import { EnhancedFooter } from './components/EnhancedFooter';
@@ -40,10 +40,7 @@ const Training = lazy(() => import('./pages/Training').then(module => ({ default
 const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default: module.default })));
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
 
-// Service Pages - Updated to use backup-pages location
-const AIThreatIntelligence = lazy(() => import('../backup-pages/src-pages/services/ai-threat-intelligence-platform').then(module => ({ default: module.AIThreatIntelligencePlatform })));
-const BlockchainSupplyChain = lazy(() => import('../backup-pages/src-pages/services/blockchain-supply-chain-platform').then(module => ({ default: module.BlockchainSupplyChainPlatform })));
-const AdvancedServicesShowcase = lazy(() => import('../backup-pages/src-pages/AdvancedServicesShowcase2028').then(module => ({ default: module.AdvancedServicesShowcase2028 })));
+// Service Pages - Removed backup-pages references
 
 // Loading component
 const PageLoader = () => (
@@ -70,9 +67,7 @@ function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/services" element={<ServicesPage />} />
                 <Route path="/services/*" element={<ServicesPage />} />
-                <Route path="/services/ai-threat-intelligence" element={<AIThreatIntelligence />} />
-                <Route path="/services/blockchain-supply-chain" element={<BlockchainSupplyChain />} />
-                <Route path="/advanced-services-2028" element={<AdvancedServicesShowcase />} />
+
                 <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
                 <Route path="/pricing" element={<PricingPage />} />
                 <Route path="/solutions" element={<SolutionsPage />} />
