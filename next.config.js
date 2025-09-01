@@ -11,12 +11,8 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
-  },
   webpack: (config, { dev, isServer }) => {
-    // Completely exclude problematic directories from the build
+    // Exclude problematic directories from the build
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       exclude: [
@@ -24,12 +20,14 @@ const nextConfig = {
         /api-backup/,
         /pages\.disabled/,
         /backup-pages/,
-        /components\//,
         /\.backup/,
         /\.disabled/,
         /automation\/backups/,
         /automation_backup/,
         /broken_files_backup/,
+        /contracts/,
+        /contracts_backup/,
+        /cypress/,
       ],
     });
     

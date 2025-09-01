@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Layout from '../components/Layout';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Star, Users, Award, Globe } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Award, Globe, Brain, Cloud } from 'lucide-react';
 
 const Home: NextPage = () => {
   return (
@@ -134,6 +134,59 @@ const Home: NextPage = () => {
                 Connected device solutions and IoT infrastructure for smart business operations.
               </p>
               <Link href="/services/iot-platforms" className="text-indigo-600 hover:text-indigo-700 font-semibold flex items-center">
+                Learn More <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* New Services Showcase */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Latest AI & Technology Services</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our newest AI-powered solutions and cutting-edge technology services designed to transform your business.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <Brain className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-4">AI Content Generator</h3>
+              <p className="text-gray-600 mb-4">
+                Create high-quality content 10x faster with our AI-powered platform. Generate blogs, social media posts, and more.
+              </p>
+              <Link href="/services/ai-content-generator" className="text-blue-600 hover:text-blue-700 font-semibold flex items-center">
+                Learn More <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </div>
+
+            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                <CheckCircle className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-4">Smart Inventory Management</h3>
+              <p className="text-gray-600 mb-4">
+                AI-powered inventory optimization that reduces stockouts by 90% and cuts costs by 40%.
+              </p>
+              <Link href="/services/smart-inventory-management" className="text-green-600 hover:text-green-700 font-semibold flex items-center">
+                Learn More <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </div>
+
+            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                <Cloud className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-4">Cloud Migration Services</h3>
+              <p className="text-gray-600 mb-4">
+                Seamless cloud migration with zero downtime. Reduce costs by 30% and improve performance by 50%.
+              </p>
+              <Link href="/services/cloud-migration-services" className="text-purple-600 hover:text-purple-700 font-semibold flex items-center">
                 Learn More <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </div>

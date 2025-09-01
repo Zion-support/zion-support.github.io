@@ -113,6 +113,17 @@
     "broken_files_backup",
     "components",
     "**/*.backup",
-    "**/*.disabled"
+    "**/*.disabled",
+    "cypress_backup",
+    "contracts_backup",
+    "data_backup",
+    "fix_utils_files.ts",
+    "hooks/useResponsive.ts",
+    "lib_backup",
+    "pages-backup",
+    "pages.__backup",
+    "server",
+    "services",
+    "src.broken"
   ]
 }

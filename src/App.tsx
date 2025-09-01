@@ -106,6 +106,7 @@ const SolutionsHealthcare = lazy(() => import('./pages/solutions/Healthcare'));
 
 // AI Service pages
 const AILegalDocumentAutomation = createLazyComponent(() => import('./pages/services/AILegalDocumentAutomation'));
+const AIContentGenerator = createLazyComponent(() => import('./pages/services/ai-content-generator'));
 const AIContentOptimizer = createLazyComponent(() => import('./pages/services/ai-content-optimizer-pro'));
 const AICybersecuritySuite = createLazyComponent(() => import('./pages/services/ai-cybersecurity-suite'));
 const AIFinancialTrading = createLazyComponent(() => import('./pages/services/ai-financial-trading-platform'));
@@ -142,6 +143,7 @@ const QuantumTechnology = createLazyComponent(() => import('./pages/services/Qua
 // Other Services
 const BlockchainEnterpriseSolutions = createLazyComponent(() => import('./pages/services/blockchain-enterprise-solutions'));
 const CloudDevOps = createLazyComponent(() => import('./pages/services/cloud-devops'));
+const CloudMigrationServices = createLazyComponent(() => import('./pages/services/cloud-migration-services'));
 const Cybersecurity = createLazyComponent(() => import('./pages/services/cybersecurity'));
 const DigitalTransformation = createLazyComponent(() => import('./pages/services/digital-transformation'));
 const DigitalTwin = createLazyComponent(() => import('./pages/services/digital-twin'));
@@ -154,6 +156,7 @@ const IoTEdgeComputing = createLazyComponent(() => import('./pages/services/iot-
 const LLMContentStudio = createLazyComponent(() => import('./pages/services/llm-content-studio'));
 const MicroCRM = createLazyComponent(() => import('./pages/services/micro-crm'));
 const MicroSAASSolutions = createLazyComponent(() => import('./pages/services/micro-saas-solutions'));
+const SmartInventoryManagement = createLazyComponent(() => import('./pages/services/smart-inventory-management'));
 const SpaceTech = createLazyComponent(() => import('./pages/services/space-tech'));
 const Sustainability = createLazyComponent(() => import('./pages/services/sustainability'));
 const SustainableTechnology = createLazyComponent(() => import('./pages/services/sustainable-technology'));
@@ -358,6 +361,7 @@ function App() {
                   <Route path="/services/space-tech" element={<SpaceTech />} />
                   <Route path="/services/data-analytics" element={<DataAnalytics />} />
                   <Route path="/services/micro-crm" element={<MicroCRM />} />
+                  <Route path="/services/smart-inventory-management" element={<SmartInventoryManagement />} />
                   <Route path="/services/helpdesk" element={<HelpdeskPlatform />} />
                   <Route path="/services/website-analytics" element={<WebsiteAnalytics />} />
                   <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
@@ -368,6 +372,7 @@ function App() {
                   <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
                   <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
                   <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
+                  <Route path="/services/ai-content-generator" element={<AIContentGenerator />} />
                   <Route path="/services/ai-content-creation-suite" element={<AIContentCreationSuite />} />
                   <Route path="/services/ai-workflow-orchestrator" element={<AIWorkflowOrchestrator />} />
                   <Route path="/services/ai-data-governance-platform" element={<AIDataGovernancePlatform />} />
@@ -392,8 +397,9 @@ function App() {
                     <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
                     <Route path="/services/ai-enterprise-resource-planning" element={<ModernLayout><AIEnterpriseResourcePlanning /></ModernLayout>} />
                     <Route path="/services/ai-autonomous-manufacturing-platform" element={<ModernLayout><AIAutonomousManufacturingPlatform /></ModernLayout>} />
-                    <Route path="/services/cloud-devops" element={<CloudDevOps />} />
-                    <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+                                      <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+                  <Route path="/services/cloud-migration-services" element={<CloudMigrationServices />} />
+                  <Route path="/services/cybersecurity" element={<Cybersecurity />} />
                     <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
                     <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                     <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />

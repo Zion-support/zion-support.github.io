@@ -73,6 +73,16 @@ export function MainNavigation({ className = '' }) {
                         AI Customer Support
                       </Link>
                     </li>
+                    <li>
+                      <Link to="/services/ai-content-generator" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                        AI Content Generator
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/smart-inventory-management" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                        Smart Inventory Management
+                      </Link>
+                    </li>
                   </ul>
                 </div>
                 
@@ -95,6 +105,11 @@ export function MainNavigation({ className = '' }) {
                     <li>
                       <Link to="/services/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                         Cybersecurity
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/cloud-migration-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                        Cloud Migration Services
                       </Link>
                     </li>
                     <li>
