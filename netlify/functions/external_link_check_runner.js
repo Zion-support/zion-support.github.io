@@ -1,25 +1,27 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('external_link_check_runner function triggered');
+    console.log('🤖 external_link_check_runner function triggered');
     
-    // Basic function logic
-    const result = {
+    // Basic implementation - replace with actual logic
+    const timestamp = new Date().toISOString();
+    
+    return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'External link check runner function executed successfully',
-        timestamp: new Date().toISOString(),
+        message: 'external_link_check_runner function executed successfully',
+        timestamp: timestamp,
         function: 'external_link_check_runner'
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in external_link_check_runner:', error);
+    console.error('❌ external_link_check_runner function failed:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
+        error: 'external_link_check_runner function failed',
+        message: error.message,
+        timestamp: new Date().toISOString()
       })
     };
   }

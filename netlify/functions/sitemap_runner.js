@@ -1,32 +1,25 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context) {
   try {
     console.log('🤖 sitemap_runner function triggered');
     
-    // Simulate sitemap generation logic
+    // Basic implementation - replace with actual logic
     const timestamp = new Date().toISOString();
-    const result = {
+    
+    return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Sitemap runner executed successfully',
-        timestamp,
-        function: 'sitemap_runner',
-        status: 'completed',
-        sitemap: [
-          'pages_indexed',
-          'urls_generated',
-          'search_optimized'
-        ]
+        message: 'sitemap_runner function executed successfully',
+        timestamp: timestamp,
+        function: 'sitemap_runner'
       })
     };
-    
-    console.log('✅ sitemap_runner completed successfully');
-    return result;
   } catch (error) {
-    console.error('❌ sitemap_runner failed:', error);
+    console.error('❌ sitemap_runner function failed:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Sitemap runner failed',
+        error: 'sitemap_runner function failed',
         message: error.message,
         timestamp: new Date().toISOString()
       })

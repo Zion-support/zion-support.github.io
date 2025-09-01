@@ -1,25 +1,27 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('auto_discovery_runner function triggered');
+    console.log('🤖 auto_discovery_runner function triggered');
     
-    // Basic function logic
-    const result = {
+    // Basic implementation - replace with actual logic
+    const timestamp = new Date().toISOString();
+    
+    return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Auto discovery runner function executed successfully',
-        timestamp: new Date().toISOString(),
+        message: 'auto_discovery_runner function executed successfully',
+        timestamp: timestamp,
         function: 'auto_discovery_runner'
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in auto_discovery_runner:', error);
+    console.error('❌ auto_discovery_runner function failed:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
+        error: 'auto_discovery_runner function failed',
+        message: error.message,
+        timestamp: new Date().toISOString()
       })
     };
   }
