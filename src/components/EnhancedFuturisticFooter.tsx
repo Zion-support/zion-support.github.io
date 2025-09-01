@@ -1,1 +1,1 @@
-import { Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, 
+import { Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook,;

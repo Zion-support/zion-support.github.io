@@ -1,7 +1,7 @@
-declare module 'jspdf' {
-  export class jsPDF {
+declare module 'jspdf' {;
+  export class jsPDF {;
     constructor(options?: );
-<<<<<<< HEAD
+<<<<<<< HEAD;
     text(...args: unknown[]: unknown): void;
     addImage(...args: unknown[]: unknown): void;
     rect(...args: unknown[]: unknown): void;
@@ -14,15 +14,15 @@ declare module 'jspdf' {
     setDrawColor(...args: unknown[]: unknown): void;
     setLineWidth(...args: unknown[]: unknown): void;
     splitTextToSize(text: string, size: number): string[];
-    output(type?: string): }
+    output(type?: string): };
   export function autoTable(...args: unknown[]: unknown): void;
-
-declare module 'jspdf-autotable' {
+;
+declare module 'jspdf-autotable' {;
   const autoTable: ;
   export { autoTable };
-export default autoTable}
+export default autoTable};
 ;export default autoTable;
-=======
+=======;
     text(...args: unknown[]): void;
     addImage(...args: unknown[]): void;
     rect(...args: unknown[]): void;
@@ -35,29 +35,28 @@ export default autoTable}
     setDrawColor(...args: unknown[]): void;
     setLineWidth(...args: unknown[]): void;
     splitTextToSize(text: string, size: number): string[];
-<<<<<<< HEAD
+<<<<<<< HEAD;
     output(type?: string): unknown;
-
-=======
+;
+=======;
     output(type?: string): ;
-  }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
   export function autoTable(...args: unknown[]): void;
-
-declare module 'jspdf-autotable' {
+;
+declare module 'jspdf-autotable' {;
   const autoTable: ;
   export default autoTable;
-<<<<<<< HEAD
-}}}
-=======
-}
-
+<<<<<<< HEAD;
+}}};
+=======;
+};
 export default autoTable;
->>>>>>> cursor/add-new-services-and-advertise-them-971c
-export default autoTable;
+>>>>>>> cursor/add-new-services-and-advertise-them-971c;
 export default autoTable;
 export default autoTable;
 export default autoTable;
 export default autoTable;
 export default autoTable;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export default autoTable;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;

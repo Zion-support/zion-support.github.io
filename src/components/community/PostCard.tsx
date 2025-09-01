@@ -1,1 +1,1 @@
-interface PostCardProps extends React.PropsWithChildren<{}> { post: {; 
+interface PostCardProps extends React.PropsWithChildren<{}> { post: {; ;

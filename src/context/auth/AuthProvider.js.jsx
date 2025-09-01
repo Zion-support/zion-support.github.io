@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";";""
-import { supabase, getFromProfiles } from "../../integrations/supabase/client";";""
-import { useAuthOperations } from "../../hooks/useAuthOperations";";""
-import { AuthContext } from "./AuthContext";";""
-import { cleanupAuthState } from "../../utils/authUtils";""
-import { useNavigate, useLocation } from 'react-router-dom';";""
-import { useAuthState } from "./useAuthState";";""
-import { useAuthEventHandlers } from "./useAuthEventHandlers";";""
-import { mapProfileToUser } from "./profileMapper";";""
-import { loginUser, registerUser } from "@/services/authService";";""
-import { safeStorage } from "@/utils/safeStorage";";""
+import React, { useEffect } from "react";";"";"
+import { supabase, getFromProfiles } from "../../integrations/supabase/client";";"";"
+import { useAuthOperations } from "../../hooks/useAuthOperations";";"";"
+import { AuthContext } from "./AuthContext";";"";"
+import { cleanupAuthState } from "../../utils/authUtils";"";"
+import { useNavigate, useLocation } from 'react-router-dom';";"";"
+import { useAuthState } from "./useAuthState";";"";"
+import { useAuthEventHandlers } from "./useAuthEventHandlers";";"";"
+import { mapProfileToUser } from "./profileMapper";";"";"
+import { loginUser, registerUser } from "@/services/authService";";"";"
+import { safeStorage } from "@/utils/safeStorage";";"";"
 import { toast } from "@/hooks/use-toast"; // Import toast;
 import { useDispatch } from 'react-redux';
 import { addItem } from '@/store/cartSlice';
@@ -17,41 +17,41 @@ export const AuthProvider = ({ children }) => {;
     const navigate = useNavigate();
     const location = useLocation();
     const dispatch = useDispatch();
-    const { handleSignedIn, handleSignedOut } = useAuthEventHandlers(setUser, setOnboardingStep);
-    const { login: loginImpl, signup: signupImpl, logout, resetPassword, updateProfile, loginWithGoogle, loginWithFacebook, loginWithTwitter, loginWithWeb3 } = useAuthOperations(setUser, setIsLoading);
-    // Wrapper for login to match the AuthContextType interface;"
-    const login = async (email, password) => {;""
-        const { res, data } = await loginUser(email, password); // Calls /api/auth/login";""
-        // Check for specific "Email not confirmed" error first";""
-        if (res.status === 403 && data?.code === "EMAIL_NOT_CONFIRMED") {;"
-            toast({;";""
-                title: "Login Failed",";""
-                description: data.error || "Email not confirmed. Please check your inbox to verify your email.",";""
-                variant: "destructive"});";""
-            return { error: data.error || "Email not confirmed. Please check your inbox to verify your email." }};"
-        // Handle other errors from the API call;""
-        if (res.status === 400) { // Bad request (e.g. missing fields)";""
-            toast({ title: "Login Failed", description: data?.error || 'Missing email or password', variant: "destructive" });"
-            return { error: data?.error || 'Missing email or password' }};""
-        if (res.status === 401) { // Unauthorized (invalid credentials)";""
-            toast({ title: "Login Failed", description: 'Incorrect email or password', variant: "destructive" });
-            return { error: 'Incorrect email or password' }};
-        // Catch-all for other non-200 statuses from loginUser;"
-        if (res.status !== 200) {;";""
+    const { handleSignedIn, handleSignedOut } = useAuthEventHandlers(setUser, setOnboardingStep);"
+    const { login: loginImpl, signup: signupImpl, logout, resetPassword, updateProfile, loginWithGoogle, loginWithFacebook, loginWithTwitter, loginWithWeb3 } = useAuthOperations(setUser, setIsLoading);";"
+    // Wrapper for login to match the AuthContextType interface;";"
+    const login = async (email, password) => {;"";"
+        const { res, data } = await loginUser(email, password); // Calls /api/auth/login";"";"
+        // Check for specific "Email not confirmed" error first";"";"
+        if (res.status === 403 && data?.code === "EMAIL_NOT_CONFIRMED") {;";"
+            toast({;";"";"
+                title: "Login Failed",";"";"
+                description: data.error || "Email not confirmed. Please check your inbox to verify your email.",";"";"
+                variant: "destructive"});";"";"
+            return { error: data.error || "Email not confirmed. Please check your inbox to verify your email." }};";"
+        // Handle other errors from the API call;"";"
+        if (res.status === 400) { // Bad request (e.g. missing fields)";"";"
+            toast({ title: "Login Failed", description: data?.error || 'Missing email or password', variant: "destructive" });";"
+            return { error: data?.error || 'Missing email or password' }};"";"
+        if (res.status === 401) { // Unauthorized (invalid credentials)";"";"
+            toast({ title: "Login Failed", description: 'Incorrect email or password', variant: "destructive" });"
+            return { error: 'Incorrect email or password' }};";"
+        // Catch-all for other non-200 statuses from loginUser;";"
+        if (res.status !== 200) {;";"";"
             toast({ title: "Login Failed", description: data?.error || 'An unexpected error occurred during login.', variant: "destructive" });
             return { error: data?.error || 'Login failed' }};
         // At this point, loginUser call was successful (200 OK);
         setTokens({ accessToken: data.accessToken, refreshToken: data.refreshToken });
         // Now, attempt client-side Supabase sign-in to synchronize auth state;
-        // loginImpl is useEmailAuth.login which calls supabase.auth.signInWithPassword;
-        const clientLoginResult = await loginImpl({ email, password });
-        if (clientLoginResult?.error) {;"
-            // useEmailAuth.login already shows a toast on error.;""
-            // We just need to return the error to the caller of AuthProvider.login";""
-            // // // console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
-            // It's possible the server token is valid but client Supabase has an issue.;"
-            // For now, treat as a login failure and let user retry.;""
-            // Potentially clear tokens if this state is problematic: await logout();";""
+        // loginImpl is useEmailAuth.login which calls supabase.auth.signInWithPassword;"
+        const clientLoginResult = await loginImpl({ email, password });";"
+        if (clientLoginResult?.error) {;";"
+            // useEmailAuth.login already shows a toast on error.;"";"
+            // We just need to return the error to the caller of AuthProvider.login";"";"
+            // // // console.error("Client-side login after server confirmation failed:", clientLoginResult.error);";"
+            // It's possible the server token is valid but client Supabase has an issue.;";"
+            // For now, treat as a login failure and let user retry.;"";"
+            // Potentially clear tokens if this state is problematic: await logout();";"";"
             return { error: clientLoginResult.error?.message || "Client-side login failed." }};
         const params = new URLSearchParams(location.search);
         const next = params.get('redirectTo') || params.get('next') || '/equipment/recommendations';
@@ -112,14 +112,14 @@ export const AuthProvider = ({ children }) => {;
                                 router('/checkout', { replace: true })};
                             else if (next) {;
                                 router(decodeURIComponent(next), { replace: true })};
-                            // --- END MODIFICATION ---;
-                        };
-                    };"
-                    else if (error) {;";""
-                        // // // console.error("Error fetching user profile:", error);
-                        setUser(null)};
-                };"
-                catch (error) {;";""
+                            // --- END MODIFICATION ---;"
+                        };";"
+                    };";"
+                    else if (error) {;";"";"
+                        // // // console.error("Error fetching user profile:", error);"
+                        setUser(null)};";"
+                };";"
+                catch (error) {;";"";"
                     // // // console.error("Error fetching user profile:", error);
                     setUser(null)};
             };
@@ -149,7 +149,7 @@ export const AuthProvider = ({ children }) => {;
         setUser,;
         onboardingStep,;
   tokens;
-};
-    return (<AuthContext.Provider value={authContextValue}>;
-      {children};"
-    </AuthContext.Provider>)};";""
+};"
+    return (<AuthContext.Provider value={authContextValue}>;";"
+      {children};";"
+    </AuthContext.Provider>)};";"";"

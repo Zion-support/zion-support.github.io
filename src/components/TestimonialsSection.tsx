@@ -1,1 +1,1 @@
-import { Star, Quote, ChevronLeft, ChevronRight, 
+import { Star, Quote, ChevronLeft, ChevronRight,;

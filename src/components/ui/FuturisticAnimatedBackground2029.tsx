@@ -165,8 +165,8 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         opacity: intensity,;
         filter: theme === 'cyberpunk' ? 'blur(0.3px)' : 'none';
       }};
-    />;
->>>>>>> cursor/expand-services-and-deploy-updates-7186;
-  );"
-};""
-export default FuturisticAnimatedBackground2029;";""
+    />;"
+>>>>>>> cursor/expand-services-and-deploy-updates-7186;";"
+  );";"
+};"";"
+export default FuturisticAnimatedBackground2029;";"";"

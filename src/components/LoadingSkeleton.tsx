@@ -1,1 +1,1 @@
-const Skeleton: React.FC<SkeletonProps> = ({ 
+const Skeleton: React.FC<SkeletonProps> = ({;

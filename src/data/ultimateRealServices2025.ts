@@ -1,1 +1,1 @@
-; export },;" "Logistics AI": {" icon: "",;" 
+; export },;" "Logistics AI": {" icon: "",;" ";

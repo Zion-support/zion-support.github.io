@@ -1,1 +1,1 @@
-export function ContactSection(...args[]): { 
+export function ContactSection(...args[]): {;

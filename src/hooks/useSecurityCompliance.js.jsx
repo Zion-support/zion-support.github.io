@@ -275,7 +275,7 @@ export const useSecurityCompliance = (_initialConfig) => {;
         updateEventStatus,;
         addComplianceRule,;
         checkCompliance,;
-        generateSecurityReport,;
-        exportAuditLog,;
-        configureSecurity;"
-    }};";""
+        generateSecurityReport,;"
+        exportAuditLog,;";"
+        configureSecurity;";"
+    }};";"";"

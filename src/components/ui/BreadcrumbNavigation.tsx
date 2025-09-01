@@ -55,40 +55,40 @@ export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({;
   return (;
     <nav;
       className={`flex items-center space-x-2 text-sm text-gray-600 ${className}`};
-      aria-label="Breadcrumb";
-    >;
-      {showHome && (;"
-        <>;""
-          <Link ";""
-            to="/";""
-            className="flex items-center hover:text-cyan-600 transition-colors duration-200";""
-            aria-label="Go to home page";""
-          >";""
-            <Home className="w-4 h-4" />;""
-          </Link>";""
+      aria-label="Breadcrumb";"
+    >;";"
+      {showHome && (;";"
+        <>;"";"
+          <Link ";"";"
+            to="/";"";"
+            className="flex items-center hover:text-cyan-600 transition-colors duration-200";"";"
+            aria-label="Go to home page";"";"
+          >";"";"
+            <Home className="w-4 h-4" />;"";"
+          </Link>";"";"
           <ChevronRight className="w-4 h-4 text-gray-400" />;
         </>;
       )};
       {breadcrumbItems.map((item, index) => (;
-        <React.Fragment key={item.path}>;
-          {item.isCurrent ? (;
-            <motion.span;"
-              initial={{ opacity: 0, y: -5 }};""
-              animate={{ opacity: 1, y: 0 }}";""
-              className="text-cyan-600 font-medium";""
+        <React.Fragment key={item.path}>;"
+          {item.isCurrent ? (;";"
+            <motion.span;";"
+              initial={{ opacity: 0, y: -5 }};"";"
+              animate={{ opacity: 1, y: 0 }}";"";"
+              className="text-cyan-600 font-medium";"";"
               aria-current="page";
             >;
-              {item.label};
-            </motion.span>;
-          ) : (;"
-            <Link;""
-              to={item.path}";""
+              {item.label};"
+            </motion.span>;";"
+          ) : (;";"
+            <Link;"";"
+              to={item.path}";"";"
               className="hover:text-cyan-600 transition-colors duration-200";
-            >;
-              {item.label};
-            </Link>;"
-          )};""
-          {index < breadcrumbItems.length - 1 && (";""
+            >;"
+              {item.label};";"
+            </Link>;";"
+          )};"";"
+          {index < breadcrumbItems.length - 1 && (";"";"
             <ChevronRight className="w-4 h-4 text-gray-400" />;
           )};
         </React.Fragment>;
@@ -99,21 +99,21 @@ export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({;
 ;
 // Enhanced Breadcrumb with Structured Data;
 export const EnhancedBreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = (props) => {;
-  const breadcrumbItems = props.items || [];
-;
-  // Generate structured data for breadcrumbs;"
-  const structuredData = {;";""
-    "@context": "https://schema.org",";"@type": "BreadcrumbList",";"itemListElement": breadcrumbItems.map((item, index) => ({;";""
+  const breadcrumbItems = props.items || [];"
+;";"
+  // Generate structured data for breadcrumbs;";"
+  const structuredData = {;";"";"
+    "@context": "https://schema.org",";"@type": "BreadcrumbList",";"itemListElement": breadcrumbItems.map((item, index) => ({;";"";"
       "@type": "ListItem",";"position": index + 1,";"name": item.label,";"item": `https://ziontechgroup.com${item.path}`;
     }));
-  };
-;
-  return (;"
-    <>;""
-      <BreadcrumbNavigation {...props} />";""
+  };"
+;";"
+  return (;";"
+    <>;"";"
+      <BreadcrumbNavigation {...props} />";"";"
       <script type="application/ld+json">;
-        {JSON.stringify(structuredData)};
-      </script>;
-    </>;"
-  );""
-};";""
+        {JSON.stringify(structuredData)};"
+      </script>;";"
+    </>;";"
+  );"";"
+};";"";"

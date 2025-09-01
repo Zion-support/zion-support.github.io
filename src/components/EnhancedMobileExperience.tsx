@@ -288,207 +288,207 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({;
     if (value <= threshold) return 'text-green-500';
     if (value <= threshold * 1.5) return 'text-yellow-500';
     return 'text-red-500';
-  };
-;
-  const getNetworkIcon = (speed: string) => {;"
-    switch (speed) {;";""
-      case 'fast': return <Wifi className="w-4 h-4 text-green-500" />;";""
-      case 'medium': return <Wifi className="w-4 h-4 text-yellow-500" />;";""
-      case 'slow': return <Wifi className="w-4 h-4 text-red-500" />;";""
+  };"
+;";"
+  const getNetworkIcon = (speed: string) => {;";"
+    switch (speed) {;";"";"
+      case 'fast': return <Wifi className="w-4 h-4 text-green-500" />;";"";"
+      case 'medium': return <Wifi className="w-4 h-4 text-yellow-500" />;";"";"
+      case 'slow': return <Wifi className="w-4 h-4 text-red-500" />;";"";"
       default: return <Wifi className="w-4 h-4 text-gray-500" />;
     };
   };
 ;
-  return (;
-    <>;
-      {/* Floating Mobile Experience Button */};"
-      <motion.button;""
-        onClick={() => setIsOpen(!isOpen)}";""
-        className="fixed bottom-6 left-32 z-50 p-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-green-400";"
-        whileHover={{ scale: 1.1 }};""
-        whileTap={{ scale: 0.9 }}";""
-        aria-label="Mobile Experience Settings";""
-        title="Mobile Experience Settings (Alt + M)";""
-      >";""
+  return (;"
+    <>;";"
+      {/* Floating Mobile Experience Button */};";"
+      <motion.button;"";"
+        onClick={() => setIsOpen(!isOpen)}";"";"
+        className="fixed bottom-6 left-32 z-50 p-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-green-400";";"
+        whileHover={{ scale: 1.1 }};"";"
+        whileTap={{ scale: 0.9 }}";"";"
+        aria-label="Mobile Experience Settings";"";"
+        title="Mobile Experience Settings (Alt + M)";"";"
+      >";"";"
         <Smartphone className="w-6 h-6" />;
       </motion.button>;
       {/* Mobile Experience Panel */};
       <AnimatePresence>;
-        {isOpen && (;
-          <motion.div;
-            initial={{ opacity: 0, x: -400 }};"
-            animate={{ opacity: 1, x: 0 }};""
-            exit={{ opacity: 0, x: -400 }}";""
-            className="fixed bottom-6 left-44 z-40 w-96 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm border border-green-400/30 rounded-2xl shadow-2xl";""
-          >";""
-            <div className="p-6">;""
-              {/* Header */}";""
-              <div className="flex items-center justify-between mb-6">";""
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center">";""
-                  <Smartphone className="w-5 h-5 mr-2 text-green-500" />;
-                  Mobile Experience;
-                </h3>;"
-                <button;""
-                  onClick={() => setIsOpen(false)}";""
-                  className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors";""
-                  aria-label="Close mobile experience panel";""
-                >";""
-                  <X className="w-5 h-5" />;
-                </button>;"
-              </div>;""
-              {/* Device Info */}";""
-              <div className="mb-6 p-4 bg-gray-50 dark:bg-slate-700 rounded-lg">";""
-                <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3 flex items-center">";""
-                  <Info className="w-4 h-4 mr-2" />;"
-                  Device Information;""
-                </h4>";""
-                <div className="grid grid-cols-2 gap-2 text-xs text-gray-600 dark:text-gray-400">";""
-                  <div className="flex items-center">";""
-                    {deviceInfo.isMobile && <PhoneIcon className="w-3 h-3 mr-1" />}";""
-                    {deviceInfo.isTablet && <TabletIcon className="w-3 h-3 mr-1" />}";""
+        {isOpen && (;"
+          <motion.div;";"
+            initial={{ opacity: 0, x: -400 }};";"
+            animate={{ opacity: 1, x: 0 }};"";"
+            exit={{ opacity: 0, x: -400 }}";"";"
+            className="fixed bottom-6 left-44 z-40 w-96 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm border border-green-400/30 rounded-2xl shadow-2xl";"";"
+          >";"";"
+            <div className="p-6">;"";"
+              {/* Header */}";"";"
+              <div className="flex items-center justify-between mb-6">";"";"
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center">";"";"
+                  <Smartphone className="w-5 h-5 mr-2 text-green-500" />;"
+                  Mobile Experience;";"
+                </h3>;";"
+                <button;"";"
+                  onClick={() => setIsOpen(false)}";"";"
+                  className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors";"";"
+                  aria-label="Close mobile experience panel";"";"
+                >";"";"
+                  <X className="w-5 h-5" />;";"
+                </button>;";"
+              </div>;"";"
+              {/* Device Info */}";"";"
+              <div className="mb-6 p-4 bg-gray-50 dark:bg-slate-700 rounded-lg">";"";"
+                <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3 flex items-center">";"";"
+                  <Info className="w-4 h-4 mr-2" />;";"
+                  Device Information;"";"
+                </h4>";"";"
+                <div className="grid grid-cols-2 gap-2 text-xs text-gray-600 dark:text-gray-400">";"";"
+                  <div className="flex items-center">";"";"
+                    {deviceInfo.isMobile && <PhoneIcon className="w-3 h-3 mr-1" />}";"";"
+                    {deviceInfo.isTablet && <TabletIcon className="w-3 h-3 mr-1" />}";"";"
                     {deviceInfo.isDesktop && <DesktopIcon className="w-3 h-3 mr-1" />};
-                    {deviceInfo.isMobile ? 'Mobile' : deviceInfo.isTablet ? 'Tablet' : 'Desktop'};
-                  </div>;
-                  <div>{deviceInfo.screenWidth} × {deviceInfo.screenHeight}</div>;"
-                  <div>Pixel Ratio: {deviceInfo.pixelRatio}x</div>;""
-                  <div>{deviceInfo.touchSupport ? 'Touch' : 'No Touch'}</div>";""
+                    {deviceInfo.isMobile ? 'Mobile' : deviceInfo.isTablet ? 'Tablet' : 'Desktop'};"
+                  </div>;";"
+                  <div>{deviceInfo.screenWidth} × {deviceInfo.screenHeight}</div>;";"
+                  <div>Pixel Ratio: {deviceInfo.pixelRatio}x</div>;"";"
+                  <div>{deviceInfo.touchSupport ? 'Touch' : 'No Touch'}</div>";"";"
                   <div className="capitalize">{deviceInfo.orientation}</div>;
-                  <div>{deviceInfo.touchSupport ? 'Touch Enabled' : 'Touch Disabled'}</div>;
-                </div>;
-              </div>;"
-              {/* Performance Metrics */};""
-              {deviceInfo.isMobile && (";""
-                <div className="mb-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">";""
-                  <h4 className="text-sm font-medium text-blue-800 dark:text-blue-200 mb-3 flex items-center">";""
-                    <Activity className="w-4 h-4 mr-2" />;"
-                    Performance Metrics;""
-                  </h4>";""
-                  <div className="space-y-2 text-xs">";""
-                    <div className="flex justify-between">";""
-                      <span className="text-blue-700 dark:text-blue-300">Touch Latency:</span>;
-                      <span className={getPerformanceColor(performanceMetrics.touchLatency, 16)}>;
-                        {performanceMetrics.touchLatency}ms;"
-                      </span>;""
-                    </div>";""
-                    <div className="flex justify-between">";""
-                      <span className="text-blue-700 dark:text-blue-300">Scroll Performance:</span>;
-                      <span className={getPerformanceColor(performanceMetrics.scrollPerformance, 100)}>;
-                        {performanceMetrics.scrollPerformance}ms;"
-                      </span>;""
-                    </div>";""
-                    <div className="flex justify-between">";""
-                      <span className="text-blue-700 dark:text-blue-300">Network:</span>";""
-                      <span className="flex items-center">;""
-                        {getNetworkIcon(performanceMetrics.networkSpeed)}";""
+                  <div>{deviceInfo.touchSupport ? 'Touch Enabled' : 'Touch Disabled'}</div>;"
+                </div>;";"
+              </div>;";"
+              {/* Performance Metrics */};"";"
+              {deviceInfo.isMobile && (";"";"
+                <div className="mb-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">";"";"
+                  <h4 className="text-sm font-medium text-blue-800 dark:text-blue-200 mb-3 flex items-center">";"";"
+                    <Activity className="w-4 h-4 mr-2" />;";"
+                    Performance Metrics;"";"
+                  </h4>";"";"
+                  <div className="space-y-2 text-xs">";"";"
+                    <div className="flex justify-between">";"";"
+                      <span className="text-blue-700 dark:text-blue-300">Touch Latency:</span>;"
+                      <span className={getPerformanceColor(performanceMetrics.touchLatency, 16)}>;";"
+                        {performanceMetrics.touchLatency}ms;";"
+                      </span>;"";"
+                    </div>";"";"
+                    <div className="flex justify-between">";"";"
+                      <span className="text-blue-700 dark:text-blue-300">Scroll Performance:</span>;"
+                      <span className={getPerformanceColor(performanceMetrics.scrollPerformance, 100)}>;";"
+                        {performanceMetrics.scrollPerformance}ms;";"
+                      </span>;"";"
+                    </div>";"";"
+                    <div className="flex justify-between">";"";"
+                      <span className="text-blue-700 dark:text-blue-300">Network:</span>";"";"
+                      <span className="flex items-center">;"";"
+                        {getNetworkIcon(performanceMetrics.networkSpeed)}";"";"
                         <span className="ml-1 capitalize">{performanceMetrics.networkSpeed}</span>;
                       </span>;
-                    </div>;
-                  </div>;
-                </div>;"
-              )};""
-              {/* Settings */}";""
-              <div className="space-y-4">;""
-                {/* Touch Optimization */}";""
-                <div className="flex items-center justify-between">";""
-                                      <label className="flex items-center text-sm font-medium text-gray-700 dark:text-gray-300">";""
+                    </div>;"
+                  </div>;";"
+                </div>;";"
+              )};"";"
+              {/* Settings */}";"";"
+              <div className="space-y-4">;"";"
+                {/* Touch Optimization */}";"";"
+                <div className="flex items-center justify-between">";"";"
+                                      <label className="flex items-center text-sm font-medium text-gray-700 dark:text-gray-300">";"";"
                       <MousePointer className="w-4 h-4 mr-2" />;
                       Touch Optimization;
                     </label>;
-                  <button;
-                    onClick={() => setSettings(prev => ({ ...prev, touchOptimization: !prev.touchOptimization }))};
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${;"
-                      settings.touchOptimization ? 'bg-green-600' : 'bg-gray-200';""
-                    }`}";""
+                  <button;"
+                    onClick={() => setSettings(prev => ({ ...prev, touchOptimization: !prev.touchOptimization }))};";"
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${;";"
+                      settings.touchOptimization ? 'bg-green-600' : 'bg-gray-200';"";"
+                    }`}";"";"
                     aria-label="Toggle touch optimization";
                   >;
                     <span;
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${;
                         settings.touchOptimization ? 'translate-x-6' : 'translate-x-1';
-                      }`};
-                    />;
-                  </button>;"
-                </div>;""
-                {/* Gesture Navigation */}";""
-                <div className="flex items-center justify-between">";""
-                                      <label className="flex items-center text-sm font-medium text-gray-700 dark:text-gray-300">";""
+                      }`};"
+                    />;";"
+                  </button>;";"
+                </div>;"";"
+                {/* Gesture Navigation */}";"";"
+                <div className="flex items-center justify-between">";"";"
+                                      <label className="flex items-center text-sm font-medium text-gray-700 dark:text-gray-300">";"";"
                       <Hand className="w-4 h-4 mr-2" />;
                       Gesture Navigation;
                     </label>;
-                  <button;
-                    onClick={() => setSettings(prev => ({ ...prev, gestureNavigation: !prev.gestureNavigation }))};
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${;"
-                      settings.gestureNavigation ? 'bg-green-600' : 'bg-gray-200';""
-                    }`}";""
+                  <button;"
+                    onClick={() => setSettings(prev => ({ ...prev, gestureNavigation: !prev.gestureNavigation }))};";"
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${;";"
+                      settings.gestureNavigation ? 'bg-green-600' : 'bg-gray-200';"";"
+                    }`}";"";"
                     aria-label="Toggle gesture navigation";
                   >;
                     <span;
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${;
                         settings.gestureNavigation ? 'translate-x-6' : 'translate-x-1';
-                      }`};
-                    />;
-                  </button>;"
-                </div>;""
-                {/* Touch Feedback */}";""
-                <div className="flex items-center justify-between">";""
-                                      <label className="flex items-center text-sm font-medium text-gray-700 dark:text-gray-300">";""
+                      }`};"
+                    />;";"
+                  </button>;";"
+                </div>;"";"
+                {/* Touch Feedback */}";"";"
+                <div className="flex items-center justify-between">";"";"
+                                      <label className="flex items-center text-sm font-medium text-gray-700 dark:text-gray-300">";"";"
                       <MousePointer className="w-4 h-4 mr-2" />;
                       Touch Feedback;
                     </label>;
-                  <button;
-                    onClick={() => setSettings(prev => ({ ...prev, touchFeedback: !prev.touchFeedback }))};
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${;"
-                      settings.touchFeedback ? 'bg-green-600' : 'bg-gray-200';""
-                    }`}";""
+                  <button;"
+                    onClick={() => setSettings(prev => ({ ...prev, touchFeedback: !prev.touchFeedback }))};";"
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${;";"
+                      settings.touchFeedback ? 'bg-green-600' : 'bg-gray-200';"";"
+                    }`}";"";"
                     aria-label="Toggle touch feedback";
                   >;
                     <span;
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${;
                         settings.touchFeedback ? 'translate-x-6' : 'translate-x-1';
-                      }`};
-                    />;
-                  </button>;"
-                </div>;""
-                {/* Responsive Images */}";""
-                <div className="flex items-center justify-between">";""
-                  <label className="flex items-center text-sm font-medium text-gray-700 dark:text-gray-300">";""
-                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE5IDNINWMtMS4xIDAtMiAuOS0yIDJ2MTRjMCAxLjEuOSAyIDIgMmgxNGMxLjEgMCAyLS45IDItMlY1YzAtMS4xLS45LTItMi0yem0tNSAxNGMtMi43NiAwLTUtMi4yNC01LTVzMi4yNC01IDUtNSA1IDIuMjQgNSA1LTIuMjQgNS01IDV6bTAtOGMtMS42NiAwLTMgMS4zNC0zIDNzMS4zNCAzIDMgMyAzLTEuMzQgMy0zLTEuMzQtMy0zLTM6bTAgN2MtMi4yMSAwLTQtMS43OS00LTRzMS43OS00IDQtNCA0IDEuNzkgNCA0LTEuNzkgNC00IDR6IiBmaWxsPSJjdXJyZW50Q29sb3IiLz4KPC9zdmc+" className="w-4 h-4 mr-2" / / / />;
+                      }`};"
+                    />;";"
+                  </button>;";"
+                </div>;"";"
+                {/* Responsive Images */}";"";"
+                <div className="flex items-center justify-between">";"";"
+                  <label className="flex items-center text-sm font-medium text-gray-700 dark:text-gray-300">";"";"
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE5IDNINWMtMS4xIDAtMiAuOS0yIDJ2MTRjMCAxLjEuOSAyIDIgMmgxNGMxLjEgMCAyLS45IDItMlY1YzAtMS4xLS45LTItMi0yem0tNSAxNGMtMi43NiAwLTUtMi4yNC01LTVzMi4yNC01IDUtNSA1IDIuMjQgNSA1LTIuMjQgNS01IDV6bTAtOGMtMS42NiAwLTMgMS4zNC0zIDNzMS4zNCAzIDMgMyAzLTEuMzQgMy0zLTEuMzQtMy0zLTM6bTAgN2MtMi4yMSAwLTQtMS43OS00LTRzMS43OS00IDQtNCA0IDEuNzkgNCA0LTEuNzkgNC00IDR6IiBmaWxsPSJjdXJyZW50Q29sb3IiLz4KPC9zdmc+" className="w-4 h-4 mr-2" / / / / / />;
                     Responsive Images;
                   </label>;
-                  <button;
-                    onClick={() => setSettings(prev => ({ ...prev, responsiveImages: !prev.responsiveImages }))};
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${;"
-                      settings.responsiveImages ? 'bg-green-600' : 'bg-gray-200';""
-                    }`}";""
+                  <button;"
+                    onClick={() => setSettings(prev => ({ ...prev, responsiveImages: !prev.responsiveImages }))};";"
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${;";"
+                      settings.responsiveImages ? 'bg-green-600' : 'bg-gray-200';"";"
+                    }`}";"";"
                     aria-label="Toggle responsive images";
                   >;
                     <span;
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${;
                         settings.responsiveImages ? 'translate-x-6' : 'translate-x-1';
-                      }`};
-                    />;
-                  </button>;"
-                </div>;""
-                {/* Viewport Mode */}";""
-                <div className="space-y-2">";""
+                      }`};"
+                    />;";"
+                  </button>;";"
+                </div>;"";"
+                {/* Viewport Mode */}";"";"
+                <div className="space-y-2">";"";"
                   <label className="text-sm font-medium text-gray-700 dark:text-gray-300">;
-                    Viewport Mode;
-                  </label>;
-                  <select;"
-                    value={settings.viewportMode};""
-                    onChange={(e) => handleViewportModeChange(e.target.value as MobileSettings['viewportMode'])}";""
-                    className="w-full px-3 py-2 border border-gray-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-gray-900 dark:text-white text-sm";""
-                  >";""
-                    <option value="auto">Auto (Responsive)</option>";""
-                    <option value="mobile">Mobile</option>";""
-                    <option value="tablet">Tablet</option>";""
-                    <option value="desktop">Desktop</option>;
-                  </select>;"
-                </div>;""
-                {/* Touch Sensitivity */}";""
-                <div className="space-y-2">";""
-                  <label className="text-sm font-medium text-gray-700 dark:text-gray-300">;"
-                    Touch Sensitivity: {settings.touchSensitivity};""
-                  </label>";""
+                    Viewport Mode;"
+                  </label>;";"
+                  <select;";"
+                    value={settings.viewportMode};"";"
+                    onChange={(e) => handleViewportModeChange(e.target.value as MobileSettings['viewportMode'])}";"";"
+                    className="w-full px-3 py-2 border border-gray-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-gray-900 dark:text-white text-sm";"";"
+                  >";"";"
+                    <option value="auto">Auto (Responsive)</option>";"";"
+                    <option value="mobile">Mobile</option>";"";"
+                    <option value="tablet">Tablet</option>";"";"
+                    <option value="desktop">Desktop</option>;";"
+                  </select>;";"
+                </div>;"";"
+                {/* Touch Sensitivity */}";"";"
+                <div className="space-y-2">";"";"
+                  <label className="text-sm font-medium text-gray-700 dark:text-gray-300">;";"
+                    Touch Sensitivity: {settings.touchSensitivity};"";"
+                  </label>";"";"
                   <div className="flex space-x-2">;
                     {(['low', 'medium', 'high'] as const).map((sensitivity) => (;
                       <button;
@@ -501,32 +501,32 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({;
                         }`};
                       >;
                         {sensitivity.charAt(0).toUpperCase() + sensitivity.slice(1)};
-                      </button>;
-                    ))};
-                  </div>;"
-                </div>;""
-                {/* Mobile Animations */}";""
-                <div className="flex items-center justify-between">";""
-                  <label className="flex items-center text-sm font-medium text-gray-700 dark:text-gray-300">";""
+                      </button>;"
+                    ))};";"
+                  </div>;";"
+                </div>;"";"
+                {/* Mobile Animations */}";"";"
+                <div className="flex items-center justify-between">";"";"
+                  <label className="flex items-center text-sm font-medium text-gray-700 dark:text-gray-300">";"";"
                     <Maximize className="w-4 h-4 mr-2" />;
                     Mobile Animations;
                   </label>;
-                  <button;
-                    onClick={() => setSettings(prev => ({ ...prev, mobileAnimations: !prev.mobileAnimations }))};
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${;"
-                      settings.mobileAnimations ? 'bg-green-600' : 'bg-gray-200';""
-                    }`}";""
+                  <button;"
+                    onClick={() => setSettings(prev => ({ ...prev, mobileAnimations: !prev.mobileAnimations }))};";"
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${;";"
+                      settings.mobileAnimations ? 'bg-green-600' : 'bg-gray-200';"";"
+                    }`}";"";"
                     aria-label="Toggle mobile animations";
                   >;
                     <span;
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${;
                         settings.mobileAnimations ? 'translate-x-6' : 'translate-x-1';
                       }`};
-                    />;
-                  </button>;
-                </div>;"
-              </div>;""
-              {/* Action Buttons */}";""
+                    />;"
+                  </button>;";"
+                </div>;";"
+              </div>;"";"
+              {/* Action Buttons */}";"";"
               <div className="mt-6 flex space-x-2">;
                 <button;
                   onClick={() => {;
@@ -542,26 +542,26 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({;
                       batteryOptimization: true,;
                       networkOptimization: true,;
                       viewportMode: 'auto',;
-                      touchSensitivity: 'medium',;
-                      mobileAnimations: true;
-                    };"
-                    setSettings(defaultSettings);""
-                  }}";""
-                  className="flex-1 flex items-center justify-center px-4 py-2 bg-gray-200 dark:bg-slate-600 hover:bg-gray-300 dark:hover:bg-slate-500 text-gray-700 dark:text-gray-300 rounded-lg transition-colors";""
-                >";""
-                  <RotateCcw className="w-4 h-4 mr-2" />;
-                  Reset;
-                </button>;"
-                <button;""
-                  onClick={optimizeImages}";""
-                  className="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors";""
-                >";""
-                  <Check className="w-4 h-4 mr-2" />;
-                  Optimize Now;
-                </button>;"
-              </div>;""
-              {/* Footer */}";""
-              <div className="mt-6 pt-4 border-t border-gray-200 dark:border-slate-600">";""
+                      touchSensitivity: 'medium',;"
+                      mobileAnimations: true;";"
+                    };";"
+                    setSettings(defaultSettings);"";"
+                  }}";"";"
+                  className="flex-1 flex items-center justify-center px-4 py-2 bg-gray-200 dark:bg-slate-600 hover:bg-gray-300 dark:hover:bg-slate-500 text-gray-700 dark:text-gray-300 rounded-lg transition-colors";"";"
+                >";"";"
+                  <RotateCcw className="w-4 h-4 mr-2" />;"
+                  Reset;";"
+                </button>;";"
+                <button;"";"
+                  onClick={optimizeImages}";"";"
+                  className="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors";"";"
+                >";"";"
+                  <Check className="w-4 h-4 mr-2" />;"
+                  Optimize Now;";"
+                </button>;";"
+              </div>;"";"
+              {/* Footer */}";"";"
+              <div className="mt-6 pt-4 border-t border-gray-200 dark:border-slate-600">";"";"
                 <div className="text-xs text-gray-500 dark:text-gray-400 text-center">;
                   Press Alt + M to quickly toggle this panel;
                 </div>;
@@ -570,8 +570,8 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({;
           </motion.div>;
         )};
       </AnimatePresence>;
-    </>;
-  );
-};"
-;""
-export default EnhancedMobileExperience;";""
+    </>;"
+  );";"
+};";"
+;"";"
+export default EnhancedMobileExperience;";"";"

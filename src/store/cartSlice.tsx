@@ -1,1 +1,1 @@
-:src/store/cartSlice.tsx 
+:src/store/cartSlice.tsx;

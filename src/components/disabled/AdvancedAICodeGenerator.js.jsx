@@ -220,77 +220,77 @@ export const AdvancedAICodeGenerator = () => {;
   };
 ;
   return (;
-    <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6">";""
-      <div className="flex items-center justify-between mb-6">";""
-        <div className="flex items-center gap-3">";""
-          <Code className="w-8 h-8 text-blue-600" />;""
-          <div>";""
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">;"
-              AI Code Generator;""
-            </h2>";""
+    <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6">";"";"
+      <div className="flex items-center justify-between mb-6">";"";"
+        <div className="flex items-center gap-3">";"";"
+          <Code className="w-8 h-8 text-blue-600" />;"";"
+          <div>";"";"
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">;";"
+              AI Code Generator;"";"
+            </h2>";"";"
             <p className="text-gray-600 dark:text-gray-400">;
               Intelligent code snippets and generation;
             </p>;
-          </div>;
-        </div>;
-        <button;"
-          onClick={generateCode};""
-          disabled={isGenerating}";""
-          className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center gap-2";""
-        >";""
-          {isGenerating ? <Loader className="w-4 h-4 animate-spin" /> : <Zap className="w-4 h-4" />};
-          {isGenerating ? 'Generating...' : 'Generate Code'};
-        </button>;"
-      </div>;""
-      {/* Search and Filters */}";""
-      <div className="flex gap-4 mb-6">";""
-        <div className="flex-1">";""
-          <div className="relative">";""
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />;""
-            <input";""
-              type="text";""
-              placeholder="Search code snippets...";"
-              value={searchTerm};""
-              onChange={(e) = / / /> setSearchTerm(e.target.value)}";""
+          </div>;"
+        </div>;";"
+        <button;";"
+          onClick={generateCode};"";"
+          disabled={isGenerating}";"";"
+          className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center gap-2";"";"
+        >";"";"
+          {isGenerating ? <Loader className="w-4 h-4 animate-spin" /> : <Zap className="w-4 h-4" />};"
+          {isGenerating ? 'Generating...' : 'Generate Code'};";"
+        </button>;";"
+      </div>;"";"
+      {/* Search and Filters */}";"";"
+      <div className="flex gap-4 mb-6">";"";"
+        <div className="flex-1">";"";"
+          <div className="relative">";"";"
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />;"";"
+            <input";"";"
+              type="text";"";"
+              placeholder="Search code snippets...";";"
+              value={searchTerm};"";"
+              onChange={(e) = / / / / /> setSearchTerm(e.target.value)}";"";"
               className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white";
             />;
-          </div>;
-        </div>;
-        <select;"
-          value={filterLanguage};""
-          onChange={(e) => setFilterLanguage(e.target.value)}";""
+          </div>;"
+        </div>;";"
+        <select;";"
+          value={filterLanguage};"";"
+          onChange={(e) => setFilterLanguage(e.target.value)}";"";"
           className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white";
         >;
           {languages.map(lang => (;
             <option key={lang} value={lang}>;
               {lang.charAt(0).toUpperCase() + lang.slice(1)};
             </option>;
-          ))};
-        </select>;
-        <select;"
-          value={filterComplexity};""
-          onChange={(e) => setFilterComplexity(e.target.value)}";""
+          ))};"
+        </select>;";"
+        <select;";"
+          value={filterComplexity};"";"
+          onChange={(e) => setFilterComplexity(e.target.value)}";"";"
           className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white";
         >;
           {complexities.map(comp => (;
             <option key={comp} value={comp}>;
               {comp.charAt(0).toUpperCase() + comp.slice(1)};
-            </option>;
-          ))};
-        </select>;"
-      </div>;""
-      {/* Code Snippets Grid */}";""
-      <div className="grid gap-4">;
-        {filteredSnippets.map(snippet => (;"
-          <div;""
-            key={snippet.id}";""
-            className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer";"
-            onClick={() => setSelectedSnippet(snippet)};""
-          >";""
-            <div className="flex items-start justify-between mb-3">";""
-              <div className="flex-1">";""
-                <div className="flex items-center gap-2 mb-2">";""
-                  <FileText className="w-4 h-4 text-blue-600" />";""
+            </option>;"
+          ))};";"
+        </select>;";"
+      </div>;"";"
+      {/* Code Snippets Grid */}";"";"
+      <div className="grid gap-4">;";"
+        {filteredSnippets.map(snippet => (;";"
+          <div;"";"
+            key={snippet.id}";"";"
+            className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer";";"
+            onClick={() => setSelectedSnippet(snippet)};"";"
+          >";"";"
+            <div className="flex items-start justify-between mb-3">";"";"
+              <div className="flex-1">";"";"
+                <div className="flex items-center gap-2 mb-2">";"";"
+                  <FileText className="w-4 h-4 text-blue-600" />";"";"
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white">;
                     {snippet.title};
                   </h3>;
@@ -299,91 +299,91 @@ export const AdvancedAICodeGenerator = () => {;
                       ? 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200';
                       : snippet.complexity === 'medium';
                       ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200';
-                      : 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200';
-                  }`}>;
-                    {snippet.complexity};"
-                  </span>;""
-                </div>";""
-                <p className="text-gray-600 dark:text-gray-400 mb-3">;"
-                  {snippet.description};""
-                </p>";""
-                <div className="flex items-center gap-4 text-sm">";""
-                  <div className="flex items-center gap-1">";""
-                    <Star className="w-4 h-4 text-yellow-500" />;"
-                    <span>{snippet.rating}</span>;""
-                  </div>";""
-                  <div className="flex items-center gap-1">";""
-                    <Eye className="w-4 h-4 text-blue-600" />;"
-                    <span>{snippet.usageCount}</span>;""
-                  </div>";""
-                  <div className="flex items-center gap-1">";""
+                      : 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200';"
+                  }`}>;";"
+                    {snippet.complexity};";"
+                  </span>;"";"
+                </div>";"";"
+                <p className="text-gray-600 dark:text-gray-400 mb-3">;";"
+                  {snippet.description};"";"
+                </p>";"";"
+                <div className="flex items-center gap-4 text-sm">";"";"
+                  <div className="flex items-center gap-1">";"";"
+                    <Star className="w-4 h-4 text-yellow-500" />;";"
+                    <span>{snippet.rating}</span>;"";"
+                  </div>";"";"
+                  <div className="flex items-center gap-1">";"";"
+                    <Eye className="w-4 h-4 text-blue-600" />;";"
+                    <span>{snippet.usageCount}</span>;"";"
+                  </div>";"";"
+                  <div className="flex items-center gap-1">";"";"
                     <Clock className="w-4 h-4 text-gray-500" />;
                     <span>{snippet.createdAt}</span>;
                   </div>;
                 </div>;
               </div>;
-              <button;
-                onClick={(e) => {;
-                  e.stopPropagation();"
-                  copyToClipboard(snippet.code);""
-                }}";""
-                className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg";""
-              >";""
-                <Copy className="w-4 h-4" />;
-              </button>;"
-            </div>;""
-            {/* Tags */}";""
-            <div className="flex flex-wrap gap-2">;
-              {snippet.tags.map((tag, index) => (;"
-                <span;""
-                  key={index}";""
+              <button;"
+                onClick={(e) => {;";"
+                  e.stopPropagation();";"
+                  copyToClipboard(snippet.code);"";"
+                }}";"";"
+                className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg";"";"
+              >";"";"
+                <Copy className="w-4 h-4" />;";"
+              </button>;";"
+            </div>;"";"
+            {/* Tags */}";"";"
+            <div className="flex flex-wrap gap-2">;";"
+              {snippet.tags.map((tag, index) => (;";"
+                <span;"";"
+                  key={index}";"";"
                   className="px-2 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded text-xs";
                 >;
                   {tag};
                 </span>;
               ))};
             </div>;
-          </div>;
-        ))};
-      </div>;"
-      {/* Selected Snippet Details */};""
-      {selectedSnippet && (";""
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">";""
-          <div className="bg-white dark:bg-gray-800 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">";""
-            <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">;""
-              <div>";""
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white">;"
-                  {selectedSnippet.title};""
-                </h3>";""
+          </div>;"
+        ))};";"
+      </div>;";"
+      {/* Selected Snippet Details */};"";"
+      {selectedSnippet && (";"";"
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">";"";"
+          <div className="bg-white dark:bg-gray-800 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">";"";"
+            <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">;"";"
+              <div>";"";"
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white">;";"
+                  {selectedSnippet.title};"";"
+                </h3>";"";"
                 <p className="text-gray-600 dark:text-gray-400">;
-                  {selectedSnippet.description};
-                </p>;
-              </div>;"
-              <button;""
-                onClick={() => setSelectedSnippet(null)}";""
-                className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg";""
-              >";""
-                <X className="w-5 h-5" />;
-              </button>;"
-            </div>;";""
-            <div className="p-6 overflow-auto max-h-[60vh]">";""
-              <div className="bg-gray-900 text-gray-100 rounded-lg p-4 font-mono text-sm overflow-x-auto">;
-                <pre>{selectedSnippet.code}</pre>;"
-              </div>;";""
-              <div className="flex items-center justify-between mt-4">";""
-                <div className="flex items-center gap-4">;"
-                  <button;""
-                    onClick={() => copyToClipboard(selectedSnippet.code)}";""
-                    className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700";""
-                  >";""
-                    <Copy className="w-4 h-4" />;"
-                    Copy Code;""
-                  </button>";""
-                  <button className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600">";""
-                    <Download className="w-4 h-4" />;
-                    Download;
-                  </button>;"
-                </div>;";""
+                  {selectedSnippet.description};"
+                </p>;";"
+              </div>;";"
+              <button;"";"
+                onClick={() => setSelectedSnippet(null)}";"";"
+                className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg";"";"
+              >";"";"
+                <X className="w-5 h-5" />;";"
+              </button>;";"
+            </div>;";"";"
+            <div className="p-6 overflow-auto max-h-[60vh]">";"";"
+              <div className="bg-gray-900 text-gray-100 rounded-lg p-4 font-mono text-sm overflow-x-auto">;";"
+                <pre>{selectedSnippet.code}</pre>;";"
+              </div>;";"";"
+              <div className="flex items-center justify-between mt-4">";"";"
+                <div className="flex items-center gap-4">;";"
+                  <button;"";"
+                    onClick={() => copyToClipboard(selectedSnippet.code)}";"";"
+                    className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700";"";"
+                  >";"";"
+                    <Copy className="w-4 h-4" />;";"
+                    Copy Code;"";"
+                  </button>";"";"
+                  <button className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600">";"";"
+                    <Download className="w-4 h-4" />;"
+                    Download;";"
+                  </button>;";"
+                </div>;";"";"
                 <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">;
                   <span>Language: {selectedSnippet.language}</span>;
                   <span>Complexity: {selectedSnippet.complexity}</span>;
@@ -393,7 +393,7 @@ export const AdvancedAICodeGenerator = () => {;
             </div>;
           </div>;
         </div>;
-      )};
-    </div>;
-  );"
-};";""
+      )};"
+    </div>;";"
+  );";"
+};";"";"

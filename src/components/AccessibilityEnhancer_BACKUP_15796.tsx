@@ -92,11 +92,11 @@ export function AccessibilityEnhancer(...args: any[]): any {;
 ;
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [settings.keyboardNavigation]);
-;
-  // Arrow key navigation helper;"
-  const navigateWithArrows = (container: anyanyanyanyanyanyanyanyanyanyanyElement, direction: string)            => {;""
-    const focusableElements = Array.from(container.querySelectorAll(;";""
+  }, [settings.keyboardNavigation]);"
+;";"
+  // Arrow key navigation helper;";"
+  const navigateWithArrows = (container: anyanyanyanyanyanyanyanyanyanyanyElement, direction: string)            => {;"";"
+    const focusableElements = Array.from(container.querySelectorAll(;";"";"
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     )).filter(el => !(el as HTMLElement).hidden);
 ;
@@ -357,53 +357,53 @@ export function AccessibilityEnhancer(...args: any[]): any {;
     return () => clearTimeout(timer);
   }, []);
 ;
-  if (!enabled || !isVisible) return null;
-;
-  return (;"
-    <>;""
-      {/* Accessibility Toggle Button */}";""
+  if (!enabled || !isVisible) return null;"
+;";"
+  return (;";"
+    <>;"";"
+      {/* Accessibility Toggle Button */}";"";"
       <div className="fixed bottom-4 left-4 z-50">;
         <motion.button;
-          initial={{ opacity: 0, scale: 0.8 }};
-          animate={{ opacity: 1, scale: 1 }};
-          whileHover={{ scale: 1.1 }};"
-          whileTap={{ scale: 0.95 }};""
-          onClick={() => setIsExpanded(!isExpanded)}";""
-          className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-500/50";""
-          aria-label="Accessibility settings";""
-          title="Accessibility Settings";""
-        >";""
+          initial={{ opacity: 0, scale: 0.8 }};"
+          animate={{ opacity: 1, scale: 1 }};";"
+          whileHover={{ scale: 1.1 }};";"
+          whileTap={{ scale: 0.95 }};"";"
+          onClick={() => setIsExpanded(!isExpanded)}";"";"
+          className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-500/50";"";"
+          aria-label="Accessibility settings";"";"
+          title="Accessibility Settings";"";"
+        >";"";"
           <Settings className="w-6 h-6" />;
         </motion.button>;
       </div>;
       {/* Accessibility Panel */};
       <AnimatePresence>;
-        {isExpanded && (;
-          <motion.div;
-            initial={{ opacity: 0, x: -100, scale: 0.9 }};"
-            animate={{ opacity: 1, x: 0, scale: 1 }};""
-            exit={{ opacity: 0, x: -100, scale: 0.9 }}";""
-            transition={{ duration: 0.3, ease: "easeOut" }}";""
-            className="fixed inset-y-0 left-0 w-96 bg-slate-900/95 backdrop-blur-xl border-r border-cyan-400/20 shadow-2xl shadow-cyan-400/10 overflow-y-auto z-40";""
-          >";""
-            <div className="p-6">;""
-              {/* Header */}";""
-              <div className="flex items-center justify-between mb-6">";""
-                <h2 className="text-2xl font-bold text-cyan-400 flex items-center gap-2">";""
-                  <Settings className="w-6 h-6" />;
-                  Accessibility;
-                </h2>;"
-                <button;""
-                  onClick={() => setIsExpanded(false)}";""
-                  className="p-2 hover:bg-cyan-400/20 text-cyan-400 rounded-lg transition-colors";""
-                  aria-label="Close accessibility panel";""
-                >";""
-                  <X className="w-5 h-5" />;
-                </button>;"
-              </div>;""
-              {/* Quick Actions */}";""
-              <div className="mb-6">";""
-                <h3 className="text-lg font-semibold text-white mb-4">Quick Actions</h3>";""
+        {isExpanded && (;"
+          <motion.div;";"
+            initial={{ opacity: 0, x: -100, scale: 0.9 }};";"
+            animate={{ opacity: 1, x: 0, scale: 1 }};"";"
+            exit={{ opacity: 0, x: -100, scale: 0.9 }}";"";"
+            transition={{ duration: 0.3, ease: "easeOut" }}";"";"
+            className="fixed inset-y-0 left-0 w-96 bg-slate-900/95 backdrop-blur-xl border-r border-cyan-400/20 shadow-2xl shadow-cyan-400/10 overflow-y-auto z-40";"";"
+          >";"";"
+            <div className="p-6">;"";"
+              {/* Header */}";"";"
+              <div className="flex items-center justify-between mb-6">";"";"
+                <h2 className="text-2xl font-bold text-cyan-400 flex items-center gap-2">";"";"
+                  <Settings className="w-6 h-6" />;"
+                  Accessibility;";"
+                </h2>;";"
+                <button;"";"
+                  onClick={() => setIsExpanded(false)}";"";"
+                  className="p-2 hover:bg-cyan-400/20 text-cyan-400 rounded-lg transition-colors";"";"
+                  aria-label="Close accessibility panel";"";"
+                >";"";"
+                  <X className="w-5 h-5" />;";"
+                </button>;";"
+              </div>;"";"
+              {/* Quick Actions */}";"";"
+              <div className="mb-6">";"";"
+                <h3 className="text-lg font-semibold text-white mb-4">Quick Actions</h3>";"";"
                 <div className="grid grid-cols-2 gap-3">;
                   {quickActions.map((action) => (;
                     <button;
@@ -411,24 +411,24 @@ export function AccessibilityEnhancer(...args: any[]): any {;
                       onClick={action.action};
                       className={`p-3 rounded-lg border transition-all duration-200 ${;
                         action.active;
-                          ? 'bg-cyan-500/20 border-cyan-400 text-cyan-400';
-                          : 'bg-slate-800/50 border-slate-600 text-gray-300 hover:bg-slate-700/50';
-                      }`};"
-                      title={action.description};""
-                    >";""
-                      <div className="flex flex-col items-center space-y-2">";""
-                        <action.icon className="w-5 h-5" />";""
+                          ? 'bg-cyan-500/20 border-cyan-400 text-cyan-400';"
+                          : 'bg-slate-800/50 border-slate-600 text-gray-300 hover:bg-slate-700/50';";"
+                      }`};";"
+                      title={action.description};"";"
+                    >";"";"
+                      <div className="flex flex-col items-center space-y-2">";"";"
+                        <action.icon className="w-5 h-5" />";"";"
                         <span className="text-xs font-medium text-center">{action.name}</span>;
                       </div>;
-                    </button>;
-                  ))};
-                </div>;"
-              </div>;""
-              {/* Font Size Control */}";""
-              <div className="mb-6">";""
-                <h3 className="text-lg font-semibold text-white mb-4">Font Size</h3>";""
-                <div className="flex items-center space-x-2">";""
-                  <ZoomOut className="w-5 h-5 text-cyan-400" />";""
+                    </button>;"
+                  ))};";"
+                </div>;";"
+              </div>;"";"
+              {/* Font Size Control */}";"";"
+              <div className="mb-6">";"";"
+                <h3 className="text-lg font-semibold text-white mb-4">Font Size</h3>";"";"
+                <div className="flex items-center space-x-2">";"";"
+                  <ZoomOut className="w-5 h-5 text-cyan-400" />";"";"
                   <div className="flex-1 grid grid-cols-4 gap-2">;
                     {fontSizes.map((size) => (;
                       <button;
@@ -439,17 +439,17 @@ export function AccessibilityEnhancer(...args: any[]): any {;
                             ? 'bg-cyan-500 text-white';
                             : 'bg-slate-800 text-gray-300 hover:bg-slate-700';
                         }`};
-                      >;
-                        {size};
-                      </button>;"
-                    ))};""
-                  </div>";""
-                  <ZoomIn className="w-5 h-5 text-cyan-400" />;
-                </div>;"
-              </div>;""
-              {/* Line Height Control */}";""
-              <div className="mb-6">";""
-                <h3 className="text-lg font-semibold text-white mb-4">Line Height</h3>";""
+                      >;"
+                        {size};";"
+                      </button>;";"
+                    ))};"";"
+                  </div>";"";"
+                  <ZoomIn className="w-5 h-5 text-cyan-400" />;";"
+                </div>;";"
+              </div>;"";"
+              {/* Line Height Control */}";"";"
+              <div className="mb-6">";"";"
+                <h3 className="text-lg font-semibold text-white mb-4">Line Height</h3>";"";"
                 <div className="space-y-2">;
                   {[1.2, 1.4, 1.6, 1.8, 2.0].map((height) => (;
                     <button;
@@ -462,13 +462,13 @@ export function AccessibilityEnhancer(...args: any[]): any {;
                       }`};
                     >;
                       Line Height: {height};
-                    </button>;
-                  ))};
-                </div>;"
-              </div>;""
-              {/* Letter Spacing Control */}";""
-              <div className="mb-6">";""
-                <h3 className="text-lg font-semibold text-white mb-4">Letter Spacing</h3>";""
+                    </button>;"
+                  ))};";"
+                </div>;";"
+              </div>;"";"
+              {/* Letter Spacing Control */}";"";"
+              <div className="mb-6">";"";"
+                <h3 className="text-lg font-semibold text-white mb-4">Letter Spacing</h3>";"";"
                 <div className="space-y-2">;
                   {[-1, 0, 1, 2, 3].map((spacing) => (;
                     <button;
@@ -483,80 +483,80 @@ export function AccessibilityEnhancer(...args: any[]): any {;
                       Letter Spacing: {spacing}px;
                     </button>;
                   ))};
-                </div>;
-              </div>;
-              {/* Reset Button */};"
-              <button;""
-                onClick={resetSettings}";""
-                className="w-full py-3 px-4 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition-colors flex items-center justify-center gap-2";""
-              >";""
-                <RotateCcw className="w-4 h-4" />;
-                Reset to Default;"
-              </button>;""
-              {/* WCAG Compliance Info */}";""
-              <div className="mt-6 p-4 bg-cyan-500/10 border border-cyan-400/20 rounded-lg">";""
-                <h4 className="font-semibold text-cyan-400 mb-2 flex items-center gap-2">";""
-                  <CheckCircle className="w-4 h-4" />;"
-                  WCAG 2.1 AA Compliant;""
-                </h4>";""
+                </div>;"
+              </div>;";"
+              {/* Reset Button */};";"
+              <button;"";"
+                onClick={resetSettings}";"";"
+                className="w-full py-3 px-4 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition-colors flex items-center justify-center gap-2";"";"
+              >";"";"
+                <RotateCcw className="w-4 h-4" />;";"
+                Reset to Default;";"
+              </button>;"";"
+              {/* WCAG Compliance Info */}";"";"
+              <div className="mt-6 p-4 bg-cyan-500/10 border border-cyan-400/20 rounded-lg">";"";"
+                <h4 className="font-semibold text-cyan-400 mb-2 flex items-center gap-2">";"";"
+                  <CheckCircle className="w-4 h-4" />;";"
+                  WCAG 2.1 AA Compliant;"";"
+                </h4>";"";"
                 <p className="text-sm text-gray-300">;
-                  This website meets Web Content Accessibility Guidelines 2.1 Level AA standards for accessibility.;
-                </p>;
-              </div>;"
-            </div>;""
-            {/* Accessibility Scan */}";""
-            <div className="mb-6">";""
-              <div className="flex items-center justify-between mb-3">";""
-                <h4 className="text-sm font-semibold text-gray-300">Accessibility Scan</h4>;
-                <button;"
-                  onClick={scanForIssues};""
-                  disabled={isScanning}";""
+                  This website meets Web Content Accessibility Guidelines 2.1 Level AA standards for accessibility.;"
+                </p>;";"
+              </div>;";"
+            </div>;"";"
+            {/* Accessibility Scan */}";"";"
+            <div className="mb-6">";"";"
+              <div className="flex items-center justify-between mb-3">";"";"
+                <h4 className="text-sm font-semibold text-gray-300">Accessibility Scan</h4>;";"
+                <button;";"
+                  onClick={scanForIssues};"";"
+                  disabled={isScanning}";"";"
                   className="px-3 py-1 text-xs bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 text-white rounded-lg transition-colors";
-                >;
-                  {isScanning ? 'Scanning...' : 'Scan Now'};
-                </button>;"
-              </div>;""
-              {issues.length > 0 && (";""
+                >;"
+                  {isScanning ? 'Scanning...' : 'Scan Now'};";"
+                </button>;";"
+              </div>;"";"
+              {issues.length > 0 && (";"";"
                 <div className="space-y-2 max-h-32 overflow-y-auto">;
                   {issues.map((issue) => (;
                     <div;
                       key={issue.id};
                       className={`p-2 rounded-lg text-xs ${;
-                        issue.type === 'error' ? 'bg-red-500/20 border border-red-500/30' :;
-                        issue.type === 'warning' ? 'bg-yellow-500/20 border border-yellow-500/30' :;
-                        'bg-blue-500/20 border border-blue-500/30';"
-                      }`};""
-                    >";""
-                      <div className="flex items-start gap-2">";""
-                        {issue.type === 'error' ? <AlertTriangle className="w-3 h-3 text-red-400 mt-0.5" /> :";""
-                         issue.type === 'warning' ? <AlertTriangle className="w-3 h-3 text-yellow-400 mt-0.5" /> :";""
-                         <Info className="w-3 h-3 text-blue-400 mt-0.5" />};""
-                        <div>";""
-                          <div className="font-medium text-white">{issue.element}</div>";""
+                        issue.type === 'error' ? 'bg-red-500/20 border border-red-500/30' :;"
+                        issue.type === 'warning' ? 'bg-yellow-500/20 border border-yellow-500/30' :;";"
+                        'bg-blue-500/20 border border-blue-500/30';";"
+                      }`};"";"
+                    >";"";"
+                      <div className="flex items-start gap-2">";"";"
+                        {issue.type === 'error' ? <AlertTriangle className="w-3 h-3 text-red-400 mt-0.5" /> :";"";"
+                         issue.type === 'warning' ? <AlertTriangle className="w-3 h-3 text-yellow-400 mt-0.5" /> :";"";"
+                         <Info className="w-3 h-3 text-blue-400 mt-0.5" />};"";"
+                        <div>";"";"
+                          <div className="font-medium text-white">{issue.element}</div>";"";"
                           <div className="text-gray-300">{issue.description}</div>;
                         </div>;
                       </div>;
-                    </div>;
-                  ))};
-                </div>;"
-              )};""
-              {issues.length === 0 && !isScanning && (";""
-                <div className="text-center py-4 text-gray-400 text-sm">";""
+                    </div>;"
+                  ))};";"
+                </div>;";"
+              )};"";"
+              {issues.length === 0 && !isScanning && (";"";"
+                <div className="text-center py-4 text-gray-400 text-sm">";"";"
                   <CheckCircle className="w-8 h-8 mx-auto mb-2 text-green-400" />;
-                  No accessibility issues found;
-                </div>;
-              )};"
-            </div>;""
-            {/* Actions */}";""
-            <div className="flex gap-3">;"
-              <button;""
-                onClick={resetSettings}";""
+                  No accessibility issues found;"
+                </div>;";"
+              )};";"
+            </div>;"";"
+            {/* Actions */}";"";"
+            <div className="flex gap-3">;";"
+              <button;"";"
+                onClick={resetSettings}";"";"
                 className="flex-1 px-4 py-2 bg-slate-600 hover:bg-slate-700 text-white text-sm rounded-lg transition-colors";
-              >;
-                Reset All;
-              </button>;"
-              <button;""
-                onClick={() => setIsExpanded(false)}";""
+              >;"
+                Reset All;";"
+              </button>;";"
+              <button;"";"
+                onClick={() => setIsExpanded(false)}";"";"
                 className="flex-1 px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-sm rounded-lg transition-colors";
               >;
                 Apply;
@@ -565,35 +565,35 @@ export function AccessibilityEnhancer(...args: any[]): any {;
           </motion.div>;
         ) : (;
           <motion.button;
-            initial={{ opacity: 0, scale: 0.8 }};
-            animate={{ opacity: 1, scale: 1 }};
-            whileHover={{ scale: 1.05 }};"
-            whileTap={{ scale: 0.95 }};""
-            onClick={() => setIsExpanded(true)}";""
-            className="w-14 h-14 bg-green-600 hover:bg-green-700 rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-200";""
-            aria-label="Accessibility Settings";""
-          >";""
-            <Eye className="w-6 h-6" />;
-          </motion.button>;
-        )};"
-      </AnimatePresence>;""
-      {/* Notifications */}";""
+            initial={{ opacity: 0, scale: 0.8 }};"
+            animate={{ opacity: 1, scale: 1 }};";"
+            whileHover={{ scale: 1.05 }};";"
+            whileTap={{ scale: 0.95 }};"";"
+            onClick={() => setIsExpanded(true)}";"";"
+            className="w-14 h-14 bg-green-600 hover:bg-green-700 rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-200";"";"
+            aria-label="Accessibility Settings";"";"
+          >";"";"
+            <Eye className="w-6 h-6" />;"
+          </motion.button>;";"
+        )};";"
+      </AnimatePresence>;"";"
+      {/* Notifications */}";"";"
       <div className="fixed top-4 right-4 z-50 space-y-2">;
         <AnimatePresence>;
           {notifications.map((notification, index) => (;
-            <motion.div;
-              key={index};
-              initial={{ opacity: 0, x: 100, scale: 0.9 }};"
-              animate={{ opacity: 1, x: 0, scale: 1 }};""
-              exit={{ opacity: 0, x: 100, scale: 0.9 }}";""
-              className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg flex items-center gap-2";""
-            >";""
-              <CheckCircle className="w-4 h-4" />";""
+            <motion.div;"
+              key={index};";"
+              initial={{ opacity: 0, x: 100, scale: 0.9 }};";"
+              animate={{ opacity: 1, x: 0, scale: 1 }};"";"
+              exit={{ opacity: 0, x: 100, scale: 0.9 }}";"";"
+              className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg flex items-center gap-2";"";"
+            >";"";"
+              <CheckCircle className="w-4 h-4" />";"";"
               <span className="text-sm">{notification}</span>;
             </motion.div>;
           ))};
         </AnimatePresence>;
-      </div>;
-    </>;
-  );"
-};";""
+      </div>;"
+    </>;";"
+  );";"
+};";"";"

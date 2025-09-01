@@ -167,68 +167,68 @@ export const EnhancedUserExperience: React.FC = () => {;
       {/* Floating Action Button */};
       <motion.button;
         onClick={toggleVisibility};
-        className="fixed bottom-6 right-24 z-50 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300";"
-        whileHover={{ scale: 1.1 }};""
-        whileTap={{ scale: 0.9 }}";""
-        title="User Experience Settings";""
-      >";""
+        className="fixed bottom-6 right-24 z-50 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300";";"
+        whileHover={{ scale: 1.1 }};"";"
+        whileTap={{ scale: 0.9 }}";"";"
+        title="User Experience Settings";"";"
+      >";"";"
         <User className="w-6 h-6" />;
       </motion.button>;
       {/* Back to Top Button */};
       <AnimatePresence>;
         {showBackToTop && (;
-          <motion.button;
-            initial={{ opacity: 0, scale: 0 }};
-            animate={{ opacity: 1, scale: 1 }};"
-            exit={{ opacity: 0, scale: 0 }};""
-            onClick={scrollToTop}";""
-            className="fixed bottom-6 right-40 z-50 p-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300";"
-            whileHover={{ scale: 1.1 }};""
-            whileTap={{ scale: 0.9 }}";""
-            title="Back to Top";""
-          >";""
+          <motion.button;"
+            initial={{ opacity: 0, scale: 0 }};";"
+            animate={{ opacity: 1, scale: 1 }};";"
+            exit={{ opacity: 0, scale: 0 }};"";"
+            onClick={scrollToTop}";"";"
+            className="fixed bottom-6 right-40 z-50 p-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300";";"
+            whileHover={{ scale: 1.1 }};"";"
+            whileTap={{ scale: 0.9 }}";"";"
+            title="Back to Top";"";"
+          >";"";"
             <ChevronUp className="w-6 h-6" />;
           </motion.button>;
         )};
       </AnimatePresence>;
       {/* User Experience Dashboard */};
       <AnimatePresence>;
-        {isVisible && (;
-          <motion.div;
-            initial={{ opacity: 0, y: 100, scale: 0.8 }};"
-            animate={{ opacity: 1, y: 0, scale: 1 }};""
-            exit={{ opacity: 0, y: 100, scale: 0.8 }}";""
-            className="fixed bottom-24 right-24 z-40 w-96 max-h-[80vh] bg-white dark:bg-gray-900 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden";"
-          >;""
-            {/* Header */}";""
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4">";""
-              <div className="flex items-center justify-between">";""
-                <div className="flex items-center space-x-2">";""
-                  <User className="w-5 h-5" />";""
-                  <h3 className="font-semibold">User Experience</h3>;""
-                </div>";""
+        {isVisible && (;"
+          <motion.div;";"
+            initial={{ opacity: 0, y: 100, scale: 0.8 }};";"
+            animate={{ opacity: 1, y: 0, scale: 1 }};"";"
+            exit={{ opacity: 0, y: 100, scale: 0.8 }}";"";"
+            className="fixed bottom-24 right-24 z-40 w-96 max-h-[80vh] bg-white dark:bg-gray-900 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden";";"
+          >;"";"
+            {/* Header */}";"";"
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4">";"";"
+              <div className="flex items-center justify-between">";"";"
+                <div className="flex items-center space-x-2">";"";"
+                  <User className="w-5 h-5" />";"";"
+                  <h3 className="font-semibold">User Experience</h3>;"";"
+                </div>";"";"
                 <div className="flex items-center space-x-2">;
-                  <button;
-                    onClick={toggleCompactMode};
-                    className={`p-2 rounded-full transition-colors ${;"
-                      isCompact ? 'bg-white/20' : 'bg-white/10';""
-                    }`}";""
-                    title="Toggle Compact Mode";""
-                  >";""
-                    <Grid className="w-4 h-4" />;
-                  </button>;"
-                  <button;""
-                    onClick={toggleVisibility}";""
-                    className="p-1 hover:bg-white/20 rounded-full transition-colors";""
-                  >";""
+                  <button;"
+                    onClick={toggleCompactMode};";"
+                    className={`p-2 rounded-full transition-colors ${;";"
+                      isCompact ? 'bg-white/20' : 'bg-white/10';"";"
+                    }`}";"";"
+                    title="Toggle Compact Mode";"";"
+                  >";"";"
+                    <Grid className="w-4 h-4" />;";"
+                  </button>;";"
+                  <button;"";"
+                    onClick={toggleVisibility}";"";"
+                    className="p-1 hover:bg-white/20 rounded-full transition-colors";"";"
+                  >";"";"
                     <X className="w-4 h-4" />;
-                  </button>;
-                </div>;
-              </div>;"
-            </div>;""
-            {/* Content */}";""
-            <div className="p-4 space-y-4 max-h-[calc(80vh-80px)] overflow-y-auto">;""
-              {/* Tab Navigation */}";""
+                  </button>;"
+                </div>;";"
+              </div>;";"
+            </div>;"";"
+            {/* Content */}";"";"
+            <div className="p-4 space-y-4 max-h-[calc(80vh-80px)] overflow-y-auto">;"";"
+              {/* Tab Navigation */}";"";"
               <div className="flex space-x-1 bg-gray-100 dark:bg-gray-800 rounded-lg p-1">;
                 <button;
                   onClick={() => setCurrentTab('preferences')};
@@ -268,37 +268,37 @@ export const EnhancedUserExperience: React.FC = () => {;
                       : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white';
                   }`};
                 >;
-                  Help;
-                </button>;
-              </div>;"
-              {/* Preferences Tab */};""
-              {currentTab === 'preferences' && (";""
-                <div className="space-y-4">;""
-                  {/* Theme Selection */}";""
-                  <div className="space-y-2">";""
-                    <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Theme</label>";""
+                  Help;"
+                </button>;";"
+              </div>;";"
+              {/* Preferences Tab */};"";"
+              {currentTab === 'preferences' && (";"";"
+                <div className="space-y-4">;"";"
+                  {/* Theme Selection */}";"";"
+                  <div className="space-y-2">";"";"
+                    <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Theme</label>";"";"
                     <div className="flex space-x-2">;
                       {(['light', 'dark', 'auto'] as const).map((theme) => (;
                         <button;
                           key={theme};
                           onClick={() => handlePreferenceChange('theme', theme)};
                           className={`flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-colors ${;
-                            preferences.theme === theme;
-                              ? 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-300 dark:border-purple-700';
-                              : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700';"
-                          }`};""
-                        >";""
-                          {theme === 'light' && <Sun className="w-4 h-4 inline mr-1" />}";""
-                          {theme === 'dark' && <Moon className="w-4 h-4 inline mr-1" />}";""
+                            preferences.theme === theme;"
+                              ? 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-300 dark:border-purple-700';";"
+                              : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700';";"
+                          }`};"";"
+                        >";"";"
+                          {theme === 'light' && <Sun className="w-4 h-4 inline mr-1" />}";"";"
+                          {theme === 'dark' && <Moon className="w-4 h-4 inline mr-1" />}";"";"
                           {theme === 'auto' && <Monitor className="w-4 h-4 inline mr-1" />};
                           {theme.charAt(0).toUpperCase() + theme.slice(1)};
-                        </button>;
-                      ))};
-                    </div>;"
-                  </div>;""
-                  {/* Font Size */}";""
-                  <div className="space-y-2">";""
-                    <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Font Size</label>";""
+                        </button>;"
+                      ))};";"
+                    </div>;";"
+                  </div>;"";"
+                  {/* Font Size */}";"";"
+                  <div className="space-y-2">";"";"
+                    <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Font Size</label>";"";"
                     <div className="flex space-x-2">;
                       {(['small', 'medium', 'large'] as const).map((size) => (;
                         <button;
@@ -311,13 +311,13 @@ export const EnhancedUserExperience: React.FC = () => {;
                           }`};
                         >;
                           {size.charAt(0).toUpperCase() + size.slice(1)};
-                        </button>;
-                      ))};
-                    </div>;"
-                  </div>;""
-                  {/* Contrast */}";""
-                  <div className="space-y-2">";""
-                    <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Contrast</label>";""
+                        </button>;"
+                      ))};";"
+                    </div>;";"
+                  </div>;"";"
+                  {/* Contrast */}";"";"
+                  <div className="space-y-2">";"";"
+                    <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Contrast</label>";"";"
                     <div className="flex space-x-2">;
                       {(['normal', 'high'] as const).map((contrast) => (;
                         <button;
@@ -330,13 +330,13 @@ export const EnhancedUserExperience: React.FC = () => {;
                           }`};
                         >;
                           {contrast.charAt(0).toUpperCase() + contrast.slice(1)};
-                        </button>;
-                      ))};
-                    </div>;"
-                  </div>;""
-                  {/* Toggles */}";""
-                  <div className="space-y-3">";""
-                    <div className="flex items-center justify-between">";""
+                        </button>;"
+                      ))};";"
+                    </div>;";"
+                  </div>;"";"
+                  {/* Toggles */}";"";"
+                  <div className="space-y-3">";"";"
+                    <div className="flex items-center justify-between">";"";"
                       <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Animations</span>;
                       <button;
                         onClick={() => handlePreferenceChange('animations', !preferences.animations)};
@@ -345,11 +345,11 @@ export const EnhancedUserExperience: React.FC = () => {;
                         }`};
                       >;
                         <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${;
-                          preferences.animations ? 'translate-x-6' : 'translate-x-1';
-                        }`} />;
-                      </button>;"
-                    </div>;";""
-                    <div className="flex items-center justify-between">";""
+                          preferences.animations ? 'translate-x-6' : 'translate-x-1';"
+                        }`} />;";"
+                      </button>;";"
+                    </div>;";"";"
+                    <div className="flex items-center justify-between">";"";"
                       <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Sound</span>;
                       <button;
                         onClick={() => handlePreferenceChange('sound', !preferences.sound)};
@@ -362,20 +362,20 @@ export const EnhancedUserExperience: React.FC = () => {;
                         }`} />;
                       </button>;
                     </div>;
-                  </div>;
-                </div>;
-              )};"
-              {/* Feedback Tab */};""
-              {currentTab === 'feedback' && (";""
-                <div className="space-y-4">;""
-                  {/* Satisfaction Score */}";""
-                  <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-800">";""
-                    <div className="flex items-center justify-between">";""
-                      <span className="font-medium text-green-900 dark:text-green-100">User Satisfaction</span>";""
-                      <span className="text-2xl font-bold text-green-600 dark:text-green-400">;
-                        {getSatisfactionScore()}%;"
-                      </span>;""
-                    </div>";""
+                  </div>;"
+                </div>;";"
+              )};";"
+              {/* Feedback Tab */};"";"
+              {currentTab === 'feedback' && (";"";"
+                <div className="space-y-4">;"";"
+                  {/* Satisfaction Score */}";"";"
+                  <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-800">";"";"
+                    <div className="flex items-center justify-between">";"";"
+                      <span className="font-medium text-green-900 dark:text-green-100">User Satisfaction</span>";"";"
+                      <span className="text-2xl font-bold text-green-600 dark:text-green-400">;";"
+                        {getSatisfactionScore()}%;";"
+                      </span>;"";"
+                    </div>";"";"
                     <div className="flex items-center mt-2">;
                       {[1, 2, 3, 4, 5].map((star) => (;
                         <Star;
@@ -387,91 +387,91 @@ export const EnhancedUserExperience: React.FC = () => {;
                           }`};
                         />;
                       ))};
-                    </div>;
-                  </div>;
-                  {/* Feedback Form */};"
-                  <button;""
-                    onClick={() => setShowFeedbackForm(!showFeedbackForm)}";""
-                    className="w-full py-2 px-4 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors flex items-center justify-center space-x-2";""
-                  >";""
+                    </div>;"
+                  </div>;";"
+                  {/* Feedback Form */};";"
+                  <button;"";"
+                    onClick={() => setShowFeedbackForm(!showFeedbackForm)}";"";"
+                    className="w-full py-2 px-4 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors flex items-center justify-center space-x-2";"";"
+                  >";"";"
                     <MessageCircle className="w-4 h-4" />;
                     <span>Share Feedback</span>;
                   </button>;
                   <AnimatePresence>;
                     {showFeedbackForm && (;
-                      <motion.div;
-                        ref={feedbackFormRef};
-                        initial={{ opacity: 0, height: 0 }};"
-                        animate={{ opacity: 1, height: 'auto' }};""
-                        exit={{ opacity: 0, height: 0 }}";""
-                        className="space-y-3 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg";""
-                      >";""
-                        <div className="space-y-2">";""
-                          <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Rating</label>";""
+                      <motion.div;"
+                        ref={feedbackFormRef};";"
+                        initial={{ opacity: 0, height: 0 }};";"
+                        animate={{ opacity: 1, height: 'auto' }};"";"
+                        exit={{ opacity: 0, height: 0 }}";"";"
+                        className="space-y-3 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg";"";"
+                      >";"";"
+                        <div className="space-y-2">";"";"
+                          <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Rating</label>";"";"
                           <div className="flex space-x-1">;
                             {[1, 2, 3, 4, 5].map((rating) => (;
                               <button;
                                 key={rating};
                                 onClick={() => setNewFeedback(prev => ({ ...prev, rating }))};
                                 className={`p-1 rounded ${;
-                                  newFeedback.rating >= rating;
-                                    ? 'text-yellow-400';
-                                    : 'text-gray-300';"
-                                }`};""
-                              >";""
+                                  newFeedback.rating >= rating;"
+                                    ? 'text-yellow-400';";"
+                                    : 'text-gray-300';";"
+                                }`};"";"
+                              >";"";"
                                 <Star className="w-6 h-6" />;
-                              </button>;
-                            ))};
-                          </div>;"
-                        </div>;";""
-                        <div className="space-y-2">";""
-                          <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Category</label>;
-                          <select;"
-                            value={newFeedback.category};""
-                            onChange={(e) => setNewFeedback(prev => ({ ...prev, category: e.target.value }))}";""
-                            className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white";""
-                          >";""
-                            <option value="general">General</option>";""
-                            <option value="usability">Usability</option>";""
-                            <option value="design">Design</option>";""
-                            <option value="performance">Performance</option>";""
-                            <option value="bug">Bug Report</option>;
-                          </select>;"
-                        </div>;";""
-                        <div className="space-y-2">";""
-                          <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Comment</label>;
-                          <textarea;"
-                            value={newFeedback.comment};""
-                            onChange={(e) => setNewFeedback(prev => ({ ...prev, comment: e.target.value }))}";""
-                            placeholder="Share your thoughts...";""
-                            className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none";
-                            rows={3};
-                          />;"
-                        </div>;";""
-                        <div className="flex space-x-2">;"
-                          <button;""
-                            onClick={handleFeedbackSubmit}";""
+                              </button>;"
+                            ))};";"
+                          </div>;";"
+                        </div>;";"";"
+                        <div className="space-y-2">";"";"
+                          <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Category</label>;";"
+                          <select;";"
+                            value={newFeedback.category};"";"
+                            onChange={(e) => setNewFeedback(prev => ({ ...prev, category: e.target.value }))}";"";"
+                            className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white";"";"
+                          >";"";"
+                            <option value="general">General</option>";"";"
+                            <option value="usability">Usability</option>";"";"
+                            <option value="design">Design</option>";"";"
+                            <option value="performance">Performance</option>";"";"
+                            <option value="bug">Bug Report</option>;";"
+                          </select>;";"
+                        </div>;";"";"
+                        <div className="space-y-2">";"";"
+                          <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Comment</label>;";"
+                          <textarea;";"
+                            value={newFeedback.comment};"";"
+                            onChange={(e) => setNewFeedback(prev => ({ ...prev, comment: e.target.value }))}";"";"
+                            placeholder="Share your thoughts...";"";"
+                            className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none";"
+                            rows={3};";"
+                          />;";"
+                        </div>;";"";"
+                        <div className="flex space-x-2">;";"
+                          <button;"";"
+                            onClick={handleFeedbackSubmit}";"";"
                             className="flex-1 py-2 px-4 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors";
-                          >;
-                            Submit;
-                          </button>;"
-                          <button;""
-                            onClick={() => setShowFeedbackForm(false)}";""
+                          >;"
+                            Submit;";"
+                          </button>;";"
+                          <button;"";"
+                            onClick={() => setShowFeedbackForm(false)}";"";"
                             className="flex-1 py-2 px-4 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors";
                           >;
                             Cancel;
                           </button>;
                         </div>;
-                      </motion.div>;
-                    )};
-                  </AnimatePresence>;"
-                  {/* Recent Feedback */};""
-                  {feedback.length > 0 && (";""
-                    <div className="space-y-2">";""
-                      <h4 className="font-medium text-gray-900 dark:text-white">Recent Feedback</h4>;""
-                      {feedback.slice(-3).reverse().map((item, index) => (";""
-                        <div key={index} className="p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">";""
-                          <div className="flex items-center justify-between mb-2">";""
+                      </motion.div>;"
+                    )};";"
+                  </AnimatePresence>;";"
+                  {/* Recent Feedback */};"";"
+                  {feedback.length > 0 && (";"";"
+                    <div className="space-y-2">";"";"
+                      <h4 className="font-medium text-gray-900 dark:text-white">Recent Feedback</h4>;"";"
+                      {feedback.slice(-3).reverse().map((item, index) => (";"";"
+                        <div key={index} className="p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">";"";"
+                          <div className="flex items-center justify-between mb-2">";"";"
                             <div className="flex items-center space-x-1">;
                               {[1, 2, 3, 4, 5].map((star) => (;
                                 <Star;
@@ -479,61 +479,61 @@ export const EnhancedUserExperience: React.FC = () => {;
                                   className={`w-3 h-3 ${;
                                     star <= item.rating;
                                       ? 'text-yellow-400 fill-current';
-                                      : 'text-gray-300';
-                                  }`};
-                                />;"
-                              ))};""
-                            </div>";""
-                            <span className="text-xs text-gray-500 dark:text-gray-400">;
-                              {item.timestamp.toLocaleDateString()};"
-                            </span>;""
-                          </div>";""
-                          <p className="text-sm text-gray-700 dark:text-gray-300">{item.comment}</p>";""
+                                      : 'text-gray-300';"
+                                  }`};";"
+                                />;";"
+                              ))};"";"
+                            </div>";"";"
+                            <span className="text-xs text-gray-500 dark:text-gray-400">;";"
+                              {item.timestamp.toLocaleDateString()};";"
+                            </span>;"";"
+                          </div>";"";"
+                          <p className="text-sm text-gray-700 dark:text-gray-300">{item.comment}</p>";"";"
                           <span className="inline-block mt-2 px-2 py-1 text-xs bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full">;
                             {item.category};
                           </span>;
                         </div>;
                       ))};
                     </div>;
-                  )};
-                </div>;
-              )};"
-              {/* Analytics Tab */};""
-              {currentTab === 'analytics' && (";""
-                <div className="space-y-4">";""
-                  <div className="grid grid-cols-2 gap-3">";""
-                    <div className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">";""
-                      <div className="text-sm text-blue-600 dark:text-blue-400">Total Feedback</div>";""
-                      <div className="text-2xl font-bold text-blue-700 dark:text-blue-300">;
-                        {feedback.length};"
-                      </div>;""
-                    </div>";""
-                    <div className="p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">";""
-                      <div className="text-sm text-green-600 dark:text-green-400">Satisfaction</div>";""
+                  )};"
+                </div>;";"
+              )};";"
+              {/* Analytics Tab */};"";"
+              {currentTab === 'analytics' && (";"";"
+                <div className="space-y-4">";"";"
+                  <div className="grid grid-cols-2 gap-3">";"";"
+                    <div className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">";"";"
+                      <div className="text-sm text-blue-600 dark:text-blue-400">Total Feedback</div>";"";"
+                      <div className="text-2xl font-bold text-blue-700 dark:text-blue-300">;";"
+                        {feedback.length};";"
+                      </div>;"";"
+                    </div>";"";"
+                    <div className="p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">";"";"
+                      <div className="text-sm text-green-600 dark:text-green-400">Satisfaction</div>";"";"
                       <div className="text-2xl font-bold text-green-700 dark:text-green-300">;
-                        {getSatisfactionScore()}%;
-                      </div>;
-                    </div>;"
-                  </div>;";""
-                  <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">";""
-                    <h4 className="font-medium text-gray-900 dark:text-white mb-3">Feedback by Category</h4>";""
+                        {getSatisfactionScore()}%;"
+                      </div>;";"
+                    </div>;";"
+                  </div>;";"";"
+                  <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">";"";"
+                    <h4 className="font-medium text-gray-900 dark:text-white mb-3">Feedback by Category</h4>";"";"
                     <div className="space-y-2">;
-                      {['general', 'usability', 'design', 'performance', 'bug'].map((category) => {;
-                        const count = feedback.filter(f => f.category === category).length;
-                        const percentage = feedback.length > 0 ? Math.round((count / feedback.length) * 100) : 0;"
-;""
-                        return (";""
-                          <div key={category} className="flex items-center justify-between">";""
-                            <span className="text-sm text-gray-600 dark:text-gray-400 capitalize">;"
-                              {category};""
-                            </span>";""
-                            <div className="flex items-center space-x-2">";""
-                              <div className="w-20 bg-gray-200 dark:bg-gray-700 rounded-full h-2">;""
-                                <div";""
-                                  className="bg-purple-600 h-2 rounded-full transition-all duration-300";
-                                  style={{ width: `${percentage}%` }};"
-                                />;""
-                              </div>";""
+                      {['general', 'usability', 'design', 'performance', 'bug'].map((category) => {;"
+                        const count = feedback.filter(f => f.category === category).length;";"
+                        const percentage = feedback.length > 0 ? Math.round((count / feedback.length) * 100) : 0;";"
+;"";"
+                        return (";"";"
+                          <div key={category} className="flex items-center justify-between">";"";"
+                            <span className="text-sm text-gray-600 dark:text-gray-400 capitalize">;";"
+                              {category};"";"
+                            </span>";"";"
+                            <div className="flex items-center space-x-2">";"";"
+                              <div className="w-20 bg-gray-200 dark:bg-gray-700 rounded-full h-2">;"";"
+                                <div";"";"
+                                  className="bg-purple-600 h-2 rounded-full transition-all duration-300";";"
+                                  style={{ width: `${percentage}%` }};";"
+                                />;"";"
+                              </div>";"";"
                               <span className="text-sm text-gray-700 dark:text-gray-300 w-8 text-right">;
                                 {count};
                               </span>;
@@ -542,48 +542,48 @@ export const EnhancedUserExperience: React.FC = () => {;
                         );
                       })};
                     </div>;
-                  </div>;
-                </div>;
-              )};"
-              {/* Help Tab */};""
-              {currentTab === 'help' && (";""
-                <div className="space-y-4">";""
-                  <div className="space-y-3">";""
-                    <h4 className="font-medium text-gray-900 dark:text-white">Quick Actions</h4>;";""
-                    <button className="w-full p-3 bg-blue-50 dark:bg-blue-900/20 hover:bg-blue-100 dark:hover:bg-blue-900/30 rounded-lg transition-colors flex items-center space-x-3">";""
-                      <HelpCircle className="w-5 h-5 text-blue-600 dark:text-blue-400" />";""
-                      <span className="text-left">";""
-                        <div className="font-medium text-blue-900 dark:text-blue-100">Help Center</div>";""
-                        <div className="text-sm text-blue-700 dark:text-blue-300">Find answers to common questions</div>;
-                      </span>;"
-                    </button>;";""
-                    <button className="w-full p-3 bg-green-50 dark:bg-green-900/20 hover:bg-green-100 dark:hover:bg-green-900/30 rounded-lg transition-colors flex items-center space-x-3">";""
-                      <MessageCircle className="w-5 h-5 text-green-600 dark:text-green-400" />";""
-                      <span className="text-left">";""
-                        <div className="font-medium text-green-900 dark:text-green-100">Contact Support</div>";""
-                        <div className="text-sm text-green-700 dark:text-green-300">Get help from our team</div>;
-                      </span>;"
-                    </button>;";""
-                    <button className="w-full p-3 bg-purple-50 dark:bg-purple-900/20 hover:bg-purple-100 dark:hover:bg-purple-900/30 rounded-lg transition-colors flex items-center space-x-3">";""
-                      <Bookmark className="w-5 h-5 text-purple-600 dark:text-purple-400" />";""
-                      <span className="text-left">";""
-                        <div className="font-medium text-purple-900 dark:text-purple-100">Documentation</div>";""
-                        <div className="text-sm text-purple-700 dark:text-purple-300">Browse guides and tutorials</div>;
-                      </span>;
-                    </button>;"
-                  </div>;";""
-                  <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">";""
-                    <h4 className="font-medium text-gray-900 dark:text-white mb-2">Contact Information</h4>";""
-                    <div className="space-y-2 text-sm text-gray-600 dark:text-gray-400">";""
-                      <div className="flex items-center space-x-2">";""
-                        <Mail className="w-4 h-4" />;"
-                        <span>support@ziontechgroup.com</span>;""
-                      </div>";""
-                      <div className="flex items-center space-x-2">";""
-                        <Phone className="w-4 h-4" />;"
-                        <span>+1 (555) 123-4567</span>;""
-                      </div>";""
-                      <div className="flex items-center space-x-2">";""
+                  </div>;"
+                </div>;";"
+              )};";"
+              {/* Help Tab */};"";"
+              {currentTab === 'help' && (";"";"
+                <div className="space-y-4">";"";"
+                  <div className="space-y-3">";"";"
+                    <h4 className="font-medium text-gray-900 dark:text-white">Quick Actions</h4>;";"";"
+                    <button className="w-full p-3 bg-blue-50 dark:bg-blue-900/20 hover:bg-blue-100 dark:hover:bg-blue-900/30 rounded-lg transition-colors flex items-center space-x-3">";"";"
+                      <HelpCircle className="w-5 h-5 text-blue-600 dark:text-blue-400" />";"";"
+                      <span className="text-left">";"";"
+                        <div className="font-medium text-blue-900 dark:text-blue-100">Help Center</div>";"";"
+                        <div className="text-sm text-blue-700 dark:text-blue-300">Find answers to common questions</div>;";"
+                      </span>;";"
+                    </button>;";"";"
+                    <button className="w-full p-3 bg-green-50 dark:bg-green-900/20 hover:bg-green-100 dark:hover:bg-green-900/30 rounded-lg transition-colors flex items-center space-x-3">";"";"
+                      <MessageCircle className="w-5 h-5 text-green-600 dark:text-green-400" />";"";"
+                      <span className="text-left">";"";"
+                        <div className="font-medium text-green-900 dark:text-green-100">Contact Support</div>";"";"
+                        <div className="text-sm text-green-700 dark:text-green-300">Get help from our team</div>;";"
+                      </span>;";"
+                    </button>;";"";"
+                    <button className="w-full p-3 bg-purple-50 dark:bg-purple-900/20 hover:bg-purple-100 dark:hover:bg-purple-900/30 rounded-lg transition-colors flex items-center space-x-3">";"";"
+                      <Bookmark className="w-5 h-5 text-purple-600 dark:text-purple-400" />";"";"
+                      <span className="text-left">";"";"
+                        <div className="font-medium text-purple-900 dark:text-purple-100">Documentation</div>";"";"
+                        <div className="text-sm text-purple-700 dark:text-purple-300">Browse guides and tutorials</div>;"
+                      </span>;";"
+                    </button>;";"
+                  </div>;";"";"
+                  <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">";"";"
+                    <h4 className="font-medium text-gray-900 dark:text-white mb-2">Contact Information</h4>";"";"
+                    <div className="space-y-2 text-sm text-gray-600 dark:text-gray-400">";"";"
+                      <div className="flex items-center space-x-2">";"";"
+                        <Mail className="w-4 h-4" />;";"
+                        <span>support@ziontechgroup.com</span>;"";"
+                      </div>";"";"
+                      <div className="flex items-center space-x-2">";"";"
+                        <Phone className="w-4 h-4" />;";"
+                        <span>+1 (555) 123-4567</span>;"";"
+                      </div>";"";"
+                      <div className="flex items-center space-x-2">";"";"
                         <MapPin className="w-4 h-4" />;
                         <span>123 Tech Street, Innovation City</span>;
                       </div>;
@@ -595,8 +595,8 @@ export const EnhancedUserExperience: React.FC = () => {;
           </motion.div>;
         )};
       </AnimatePresence>;
-    </>;
-  );
-};"
-;""
-export default EnhancedUserExperience;";""
+    </>;"
+  );";"
+};";"
+;"";"
+export default EnhancedUserExperience;";"";"

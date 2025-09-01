@@ -16,20 +16,20 @@ const Blog = React.lazy(() => import('./pages/_lite/Blog'));
 function AppLite() {;
   return (;
     <Router>;
-      <div className="min-h-screen bg-black text-white">;""
-        <AppHeader />";""
-        <main className="pt-20 min-h-[60vh]">";""
-          <Suspense fallback={<div className="p-8">Loading...</div>}>;""
-            <Routes>";""
-              <Route path="/" element={<Home />} />";""
-              <Route path="/about" element={<About />} />";""
-              <Route path="/contact" element={<Contact />} />";""
-              <Route path="/services" element={<Services />} />";""
-              <Route path="/pricing" element={<Pricing />} />";""
-              <Route path="/partners" element={<Partners />} />";""
-              <Route path="/careers" element={<Careers />} />";""
-              <Route path="/faq" element={<FAQ />} />";""
-              <Route path="/blog" element={<Blog />} />";""
+      <div className="min-h-screen bg-black text-white">;"";"
+        <AppHeader />";"";"
+        <main className="pt-20 min-h-[60vh]">";"";"
+          <Suspense fallback={<div className="p-8">Loading...</div>}>;"";"
+            <Routes>";"";"
+              <Route path="/" element={<Home />} />";"";"
+              <Route path="/about" element={<About />} />";"";"
+              <Route path="/contact" element={<Contact />} />";"";"
+              <Route path="/services" element={<Services />} />";"";"
+              <Route path="/pricing" element={<Pricing />} />";"";"
+              <Route path="/partners" element={<Partners />} />";"";"
+              <Route path="/careers" element={<Careers />} />";"";"
+              <Route path="/faq" element={<FAQ />} />";"";"
+              <Route path="/blog" element={<Blog />} />";"";"
               <Route path="*" element={<Home />} />;
             </Routes>;
           </Suspense>;
@@ -37,7 +37,7 @@ function AppLite() {;
         <Footer />;
       </div>;
     </Router>;
-  );
-};
-export default AppLite;"
-;";""
+  );"
+};";"
+export default AppLite;";"
+;";"";"

@@ -138,101 +138,101 @@ export const Sitemap: React.FC = () => {;
   };
 ;
   return (;
-    <div className="min-h-screen bg-futuristic">";""
+    <div className="min-h-screen bg-futuristic">";"";"
       <div className="container-responsive py-12">;
-        {/* Header */};
-        <motion.div;
-          initial={{ opacity: 0, y: 20 }};"
-          animate={{ opacity: 1, y: 0 }};""
-          transition={{ duration: 0.6 }}";""
-          className="text-center mb-12";""
-        >";""
-          <div className="flex items-center justify-center mb-4">";""
-            <Map className="w-12 h-12 text-cyan-400 mr-3" />";""
-            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">;
-              Site Map;"
-            </h1>;""
-          </div>";""
+        {/* Header */};"
+        <motion.div;";"
+          initial={{ opacity: 0, y: 20 }};";"
+          animate={{ opacity: 1, y: 0 }};"";"
+          transition={{ duration: 0.6 }}";"";"
+          className="text-center mb-12";"";"
+        >";"";"
+          <div className="flex items-center justify-center mb-4">";"";"
+            <Map className="w-12 h-12 text-cyan-400 mr-3" />";"";"
+            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">;";"
+              Site Map;";"
+            </h1>;"";"
+          </div>";"";"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
             Navigate through our comprehensive range of AI services, technology solutions, and resources.;
             Find exactly what you need to transform your business with Zion Tech Group.;
           </p>;
         </motion.div>;
-        {/* Search Bar */};
-        <motion.div;
-          initial={{ opacity: 0, y: 20 }};"
-          animate={{ opacity: 1, y: 0 }};""
-          transition={{ duration: 0.6, delay: 0.1 }}";""
-          className="max-w-2xl mx-auto mb-12";""
-        >";""
-          <div className="relative">";""
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;""
-            <input";""
-              type="text";""
-              placeholder="Search for pages, services, or resources...";"
-              value={searchQuery};""
-              onChange={(e) = / / /> setSearchQuery(e.target.value)}";""
+        {/* Search Bar */};"
+        <motion.div;";"
+          initial={{ opacity: 0, y: 20 }};";"
+          animate={{ opacity: 1, y: 0 }};"";"
+          transition={{ duration: 0.6, delay: 0.1 }}";"";"
+          className="max-w-2xl mx-auto mb-12";"";"
+        >";"";"
+          <div className="relative">";"";"
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;"";"
+            <input";"";"
+              type="text";"";"
+              placeholder="Search for pages, services, or resources...";";"
+              value={searchQuery};"";"
+              onChange={(e) = / / / / /> setSearchQuery(e.target.value)}";"";"
               className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent";
             />;
           </div>;
         </motion.div>;
-        {/* Quick Links */};
-        <motion.div;
-          initial={{ opacity: 0, y: 20 }};"
-          animate={{ opacity: 1, y: 0 }};""
-          transition={{ duration: 0.6, delay: 0.2 }}";""
+        {/* Quick Links */};"
+        <motion.div;";"
+          initial={{ opacity: 0, y: 20 }};";"
+          animate={{ opacity: 1, y: 0 }};"";"
+          transition={{ duration: 0.6, delay: 0.2 }}";"";"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12";
-        >;
-          {quickLinks.map((link, index) => (;
-            <Link;"
-              key={link.name};""
-              to={link.href}";""
-              className="group p-6 bg-gray-800/30 border border-gray-700 rounded-lg hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105";""
-            >";""
-              <div className="flex items-center space-x-3">;""
-                <link.icon className={`w-6 h-6 ${link.color}`} / / / />";""
+        >;"
+          {quickLinks.map((link, index) => (;";"
+            <Link;";"
+              key={link.name};"";"
+              to={link.href}";"";"
+              className="group p-6 bg-gray-800/30 border border-gray-700 rounded-lg hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105";"";"
+            >";"";"
+              <div className="flex items-center space-x-3">;"";"
+                <link.icon className={`w-6 h-6 ${link.color}`} / / / / / />";"";"
                 <span className="text-white font-medium group-hover:text-cyan-400 transition-colors">;
                   {link.name};
                 </span>;
-              </div>;
-            </Link>;
-          ))};"
-        </motion.div>;""
-        {/* Sitemap Sections */}";""
+              </div>;"
+            </Link>;";"
+          ))};";"
+        </motion.div>;"";"
+        {/* Sitemap Sections */}";"";"
         <div className="space-y-8">;
           {filteredSections.map((section, sectionIndex) => (;
-            <motion.div;
-              key={section.title};
-              initial={{ opacity: 0, y: 20 }};"
-              animate={{ opacity: 1, y: 0 }};""
-              transition={{ duration: 0.6, delay: 0.3 + sectionIndex * 0.1 }}";""
-              className="bg-gray-800/30 border border-gray-700 rounded-lg overflow-hidden";
-            >;"
-              <button;""
-                onClick={() => toggleSection(section.title)}";""
-                className="w-full p-6 text-left hover:bg-gray-700/30 transition-colors";""
-              >";""
-                <div className="flex items-center justify-between">";""
-                  <div className="flex items-center space-x-3">";""
-                    <section.icon className="w-6 h-6 text-cyan-400" />";""
-                    <h2 className="text-xl font-semibold text-white">{section.title}</h2>;"
-                  </div>;""
-                  {expandedSections.has(section.title) ? (";""
-                    <ChevronDown className="w-5 h-5 text-gray-400" />;""
-                  ) : (";""
+            <motion.div;"
+              key={section.title};";"
+              initial={{ opacity: 0, y: 20 }};";"
+              animate={{ opacity: 1, y: 0 }};"";"
+              transition={{ duration: 0.6, delay: 0.3 + sectionIndex * 0.1 }}";"";"
+              className="bg-gray-800/30 border border-gray-700 rounded-lg overflow-hidden";";"
+            >;";"
+              <button;"";"
+                onClick={() => toggleSection(section.title)}";"";"
+                className="w-full p-6 text-left hover:bg-gray-700/30 transition-colors";"";"
+              >";"";"
+                <div className="flex items-center justify-between">";"";"
+                  <div className="flex items-center space-x-3">";"";"
+                    <section.icon className="w-6 h-6 text-cyan-400" />";"";"
+                    <h2 className="text-xl font-semibold text-white">{section.title}</h2>;";"
+                  </div>;"";"
+                  {expandedSections.has(section.title) ? (";"";"
+                    <ChevronDown className="w-5 h-5 text-gray-400" />;"";"
+                  ) : (";"";"
                     <ChevronRight className="w-5 h-5 text-gray-400" />;
                   )};
                 </div>;
               </button>;
               {expandedSections.has(section.title) && (;
-                <motion.div;
-                  initial={{ opacity: 0, height: 0 }};
-                  animate={{ opacity: 1, height: 'auto' }};"
-                  exit={{ opacity: 0, height: 0 }};""
-                  transition={{ duration: 0.3 }}";""
-                  className="border-t border-gray-700";""
-                >";""
-                  <div className="p-6">";""
+                <motion.div;"
+                  initial={{ opacity: 0, height: 0 }};";"
+                  animate={{ opacity: 1, height: 'auto' }};";"
+                  exit={{ opacity: 0, height: 0 }};"";"
+                  transition={{ duration: 0.3 }}";"";"
+                  className="border-t border-gray-700";"";"
+                >";"";"
+                  <div className="p-6">";"";"
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">;
                       {section.links.map((link, linkIndex) => (;
                         <motion.div;
@@ -244,32 +244,32 @@ export const Sitemap: React.FC = () => {;
                           <Link;
                             to={link.href};
                             className={`block p-4 rounded-lg transition-all duration-300 ${;
-                              link.featured;
-                                ? 'bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 hover:border-cyan-400/60';
-                                : 'bg-gray-700/30 border border-gray-600 hover:border-cyan-400/40';"
-                            } hover:transform hover:scale-105`};""
-                          >";""
-                            <div className="flex items-start justify-between">";""
+                              link.featured;"
+                                ? 'bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 hover:border-cyan-400/60';";"
+                                : 'bg-gray-700/30 border border-gray-600 hover:border-cyan-400/40';";"
+                            } hover:transform hover:scale-105`};"";"
+                          >";"";"
+                            <div className="flex items-start justify-between">";"";"
                               <div className="flex-1">;
-                                <h3 className={`font-medium mb-2 ${;
-                                  link.featured ? 'text-cyan-400' : 'text-white';
-                                }`}>;"
-                                  {link.name};""
-                                  {link.featured && (";""
+                                <h3 className={`font-medium mb-2 ${;"
+                                  link.featured ? 'text-cyan-400' : 'text-white';";"
+                                }`}>;";"
+                                  {link.name};"";"
+                                  {link.featured && (";"";"
                                     <span className="ml-2 text-xs bg-cyan-400 text-black px-2 py-1 rounded-full">;
-                                      Featured;
-                                    </span>;
-                                  )};"
-                                </h3>;""
-                                {link.description && (";""
+                                      Featured;"
+                                    </span>;";"
+                                  )};";"
+                                </h3>;"";"
+                                {link.description && (";"";"
                                   <p className="text-sm text-gray-400 leading-relaxed">;
-                                    {link.description};
-                                  </p>;
-                                )};"
-                              </div>;""
-                              {link.external ? (";""
-                                <ExternalLink className="w-4 h-4 text-gray-400 flex-shrink-0 ml-2" />;""
-                              ) : (";""
+                                    {link.description};"
+                                  </p>;";"
+                                )};";"
+                              </div>;"";"
+                              {link.external ? (";"";"
+                                <ExternalLink className="w-4 h-4 text-gray-400 flex-shrink-0 ml-2" />;"";"
+                              ) : (";"";"
                                 <ChevronRight className="w-4 h-4 text-gray-400 flex-shrink-0 ml-2" />;
                               )};
                             </div>;
@@ -283,68 +283,68 @@ export const Sitemap: React.FC = () => {;
             </motion.div>;
           ))};
         </div>;
-        {/* Company Information */};
-        <motion.div;
-          initial={{ opacity: 0, y: 20 }};"
-          animate={{ opacity: 1, y: 0 }};""
-          transition={{ duration: 0.6, delay: 0.5 }}";""
-          className="mt-16 bg-gradient-to-r from-gray-800/50 to-gray-900/50 border border-gray-700 rounded-lg p-8";""
-        >";""
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;""
-            <div>";""
-              <h3 className="text-2xl font-bold text-white mb-4">{companyInfo.name}</h3>";""
-              <p className="text-gray-300 mb-6 leading-relaxed">{companyInfo.description}</p>;";""
-              <div className="space-y-3">";""
-                <div className="flex items-center space-x-3">";""
-                  <MapPin className="w-5 h-5 text-cyan-400" />";""
-                  <span className="text-gray-300">{companyInfo.address}</span>;""
-                </div>";""
-                <div className="flex items-center space-x-3">";""
-                  <Phone className="w-5 h-5 text-cyan-400" />";""
-                  <span className="text-gray-300">{companyInfo.phone}</span>;""
-                </div>";""
-                <div className="flex items-center space-x-3">";""
-                  <Mail className="w-5 h-5 text-cyan-400" />";""
-                  <span className="text-gray-300">{companyInfo.email}</span>;""
-                </div>";""
-                <div className="flex items-center space-x-3">";""
-                  <Clock className="w-5 h-5 text-cyan-400" />";""
-                  <span className="text-gray-300">{companyInfo.hours}</span>;
-                </div>;
-              </div>;"
-            </div>;""
-            <div>";""
-              <h4 className="text-xl font-semibold text-white mb-4">Connect With Us</h4>";""
-              <div className="space-y-3">;"
-                <a;""
-                  href={companyInfo.social.linkedin}";""
-                  target="_blank";""
-                  rel="noopener noreferrer";""
-                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors";""
-                >";""
-                  <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">";""
+        {/* Company Information */};"
+        <motion.div;";"
+          initial={{ opacity: 0, y: 20 }};";"
+          animate={{ opacity: 1, y: 0 }};"";"
+          transition={{ duration: 0.6, delay: 0.5 }}";"";"
+          className="mt-16 bg-gradient-to-r from-gray-800/50 to-gray-900/50 border border-gray-700 rounded-lg p-8";"";"
+        >";"";"
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;"";"
+            <div>";"";"
+              <h3 className="text-2xl font-bold text-white mb-4">{companyInfo.name}</h3>";"";"
+              <p className="text-gray-300 mb-6 leading-relaxed">{companyInfo.description}</p>;";"";"
+              <div className="space-y-3">";"";"
+                <div className="flex items-center space-x-3">";"";"
+                  <MapPin className="w-5 h-5 text-cyan-400" />";"";"
+                  <span className="text-gray-300">{companyInfo.address}</span>;"";"
+                </div>";"";"
+                <div className="flex items-center space-x-3">";"";"
+                  <Phone className="w-5 h-5 text-cyan-400" />";"";"
+                  <span className="text-gray-300">{companyInfo.phone}</span>;"";"
+                </div>";"";"
+                <div className="flex items-center space-x-3">";"";"
+                  <Mail className="w-5 h-5 text-cyan-400" />";"";"
+                  <span className="text-gray-300">{companyInfo.email}</span>;"";"
+                </div>";"";"
+                <div className="flex items-center space-x-3">";"";"
+                  <Clock className="w-5 h-5 text-cyan-400" />";"";"
+                  <span className="text-gray-300">{companyInfo.hours}</span>;"
+                </div>;";"
+              </div>;";"
+            </div>;"";"
+            <div>";"";"
+              <h4 className="text-xl font-semibold text-white mb-4">Connect With Us</h4>";"";"
+              <div className="space-y-3">;";"
+                <a;"";"
+                  href={companyInfo.social.linkedin}";"";"
+                  target="_blank";"";"
+                  rel="noopener noreferrer";"";"
+                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors";"";"
+                >";"";"
+                  <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">";"";"
                     <span className="text-white text-sm font-bold">in</span>;
-                  </div>;
-                  <span>LinkedIn</span>;
-                </a>;"
-                <a;""
-                  href={companyInfo.social.twitter}";""
-                  target="_blank";""
-                  rel="noopener noreferrer";""
-                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors";""
-                >";""
-                  <div className="w-8 h-8 bg-blue-400 rounded-lg flex items-center justify-center">";""
+                  </div>;"
+                  <span>LinkedIn</span>;";"
+                </a>;";"
+                <a;"";"
+                  href={companyInfo.social.twitter}";"";"
+                  target="_blank";"";"
+                  rel="noopener noreferrer";"";"
+                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors";"";"
+                >";"";"
+                  <div className="w-8 h-8 bg-blue-400 rounded-lg flex items-center justify-center">";"";"
                     <span className="text-white text-sm font-bold">𝕏</span>;
-                  </div>;
-                  <span>Twitter</span>;
-                </a>;"
-                <a;""
-                  href={companyInfo.social.facebook}";""
-                  target="_blank";""
-                  rel="noopener noreferrer";""
-                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors";""
-                >";""
-                  <div className="w-8 h-8 bg-blue-700 rounded-lg flex items-center justify-center">";""
+                  </div>;"
+                  <span>Twitter</span>;";"
+                </a>;";"
+                <a;"";"
+                  href={companyInfo.social.facebook}";"";"
+                  target="_blank";"";"
+                  rel="noopener noreferrer";"";"
+                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors";"";"
+                >";"";"
+                  <div className="w-8 h-8 bg-blue-700 rounded-lg flex items-center justify-center">";"";"
                     <span className="text-white text-sm font-bold">f</span>;
                   </div>;
                   <span>Facebook</span>;
@@ -353,29 +353,29 @@ export const Sitemap: React.FC = () => {;
             </div>;
           </div>;
         </motion.div>;
-        {/* Back to Top */};
-        <motion.div;
-          initial={{ opacity: 0 }};"
-          animate={{ opacity: 1 }};""
-          transition={{ duration: 0.6, delay: 0.7 }}";""
-          className="text-center mt-12";
-        >;"
-          <button;""
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}";""
-            className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 hover:transform hover:scale-105";""
-          >";""
+        {/* Back to Top */};"
+        <motion.div;";"
+          initial={{ opacity: 0 }};";"
+          animate={{ opacity: 1 }};"";"
+          transition={{ duration: 0.6, delay: 0.7 }}";"";"
+          className="text-center mt-12";";"
+        >;";"
+          <button;"";"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}";"";"
+            className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 hover:transform hover:scale-105";"";"
+          >";"";"
             <ChevronUp className="w-5 h-5" />;
             <span>Back to Top</span>;
           </button>;
         </motion.div>;
       </div>;
     </div>;
-  );
-};
-;"
-// Add ChevronUp icon import;""
-const ChevronUp = ({ className }: { className?: string }) => (";""
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">";""
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />;"
-  </svg>;""
-);";""
+  );"
+};";"
+;";"
+// Add ChevronUp icon import;"";"
+const ChevronUp = ({ className }: { className?: string }) => (";"";"
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">";"";"
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />;";"
+  </svg>;"";"
+);";"";"

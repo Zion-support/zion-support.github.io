@@ -1,1 +1,1 @@
-:src/hooks/usePerformance.tsx 
+:src/hooks/usePerformance.tsx;

@@ -355,7 +355,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {;
         initializeConnection,;
         sendMessage,;
         // Utilities;
-        isConnected: state.isConnected,;
-        connectionStatus: state.connectionStatus,;
-        lastActivity: state.lastActivity;"
-    }};";""
+        isConnected: state.isConnected,;"
+        connectionStatus: state.connectionStatus,;";"
+        lastActivity: state.lastActivity;";"
+    }};";"";"

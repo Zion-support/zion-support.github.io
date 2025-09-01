@@ -760,247 +760,247 @@ export const comprehensiveRealServices2025: ComprehensiveService[] = [;
     popular: false,;
     launchDate: '2025-02-18',;
     contactInfo: CONTACT_INFO;
-  },
-  // New Advanced AI & Machine Learning Services
-  {
-    id: 'ai-autonomous-business-intelligence-2025',
-    name: 'AI Autonomous Business Intelligence 2025',
-    tagline: 'Self-learning business intelligence with autonomous insights',
-    description: 'Revolutionary AI platform that autonomously analyzes business data, generates insights, and provides actionable recommendations without human intervention.',
-    category: 'AI Solutions',
-    price: '$4,999',
-    billing: 'month',
-    features: [
-      'Autonomous data analysis',
-      'Self-learning algorithms',
-      'Predictive business modeling',
-      'Real-time insights generation',
-      'Automated reporting',
-      'Natural language queries',
-      'Multi-source data integration',
-      'Anomaly detection',
-      'Trend forecasting',
-      'Actionable recommendations'
-    ],
-    benefits: [
-      'Reduce analysis time by 90%',
-      'Improve decision accuracy by 75%',
-      'Increase operational efficiency by 60%',
-      'Eliminate manual reporting',
-      '24/7 autonomous operation'
-    ],
-    technology: ['Advanced AI/ML', 'Deep Learning', 'Natural Language Processing', 'Predictive Analytics', 'Big Data'],
-    integrations: ['ERP Systems', 'CRM Platforms', 'Data Warehouses', 'Cloud Services', 'Business Intelligence Tools'],
-    useCases: ['Business intelligence', 'Data analysis', 'Performance monitoring', 'Strategic planning'],
-    targetAudience: 'Enterprise businesses, Data analysts, Business intelligence teams, Executives',
-    marketPosition: 'First autonomous business intelligence platform with proven ROI',
-    competitors: ['Tableau', 'Power BI', 'Qlik', 'Looker'],
-    roi: 'Average ROI of 400% within 18 months',
-    trialDays: 30,
-    setupTime: '3-4 weeks',
-    icon: '🧠',
-    color: 'from-indigo-600 to-blue-700',
-    link: 'https://ziontechgroup.com/contact',
-    marketSize: '$23.1B',
-    growthRate: '+28.5% YoY',
-    rating: 4.9,
-    reviews: 234,
-    popular: true,
-    launchDate: '2025-03-01',
-    contactInfo: CONTACT_INFO
-  },
-  // New Cybersecurity & Threat Intelligence Services
-  {
-    id: 'ai-cyber-threat-intelligence-platform-2025',
-    name: 'AI Cyber Threat Intelligence Platform 2025',
-    tagline: 'Advanced threat detection with autonomous response',
-    description: 'Next-generation cybersecurity platform that combines AI-powered threat detection, autonomous response capabilities, and comprehensive threat intelligence for enterprise-grade protection.',
-    category: 'Cybersecurity',
-    price: '$12,999',
-    billing: 'month',
-    features: [
-      'AI-powered threat detection',
-      'Autonomous incident response',
-      'Real-time threat intelligence',
-      'Behavioral analysis',
-      'Zero-day threat detection',
-      'Automated threat hunting',
-      'Incident correlation',
-      'Threat intelligence sharing',
-      'Compliance reporting',
-      '24/7 monitoring'
-    ],
-    benefits: [
-      'Reduce threat response time by 95%',
-      'Improve threat detection accuracy by 85%',
-      'Eliminate false positives by 70%',
-      'Automate 90% of incident response',
-      'Provide comprehensive threat visibility'
-    ],
-    technology: ['AI/ML', 'Machine Learning', 'Behavioral Analytics', 'Threat Intelligence', 'Automation'],
-    integrations: ['SIEM Systems', 'EDR Solutions', 'Firewalls', 'Security Tools', 'Compliance Platforms'],
-    useCases: ['Threat detection', 'Incident response', 'Security monitoring', 'Compliance'],
-    targetAudience: 'Enterprise businesses, Security teams, SOC analysts, Compliance officers',
-    marketPosition: 'Leading AI-powered cybersecurity platform with autonomous response',
-    competitors: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Cylance'],
-    roi: 'Average ROI of 350% within 12 months',
-    trialDays: 14,
-    setupTime: '2-3 weeks',
-    icon: '🛡️',
-    color: 'from-red-600 to-orange-700',
-    link: 'https://ziontechgroup.com/contact',
-    marketSize: '$18.9B',
-    growthRate: '+32.7% YoY',
-    rating: 4.8,
-    reviews: 189,
-    popular: true,
-    launchDate: '2025-03-05',
-    contactInfo: CONTACT_INFO
-  },
-  // New Quantum Computing Services
-  {
-    id: 'quantum-ai-hybrid-platform-2025',
-    name: 'Quantum AI Hybrid Platform 2025',
-    tagline: 'Quantum computing meets artificial intelligence',
-    description: 'Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms to solve complex problems that are impossible for classical computers.',
-    category: 'Quantum Computing',
-    price: '$25,999',
-    billing: 'month',
-    features: [
-      'Quantum AI algorithms',
-      'Hybrid classical-quantum processing',
-      'Quantum machine learning',
-      'Optimization algorithms',
-      'Quantum cryptography',
-      'Real-time quantum simulation',
-      'API access to quantum resources',
-      'Quantum error correction',
-      'Scalable quantum architecture',
-      'Expert consultation'
-    ],
-    benefits: [
-      'Solve complex problems 1000x faster',
-      'Enable new AI capabilities',
-      'Breakthrough in optimization',
-      'Future-proof technology',
-      'Competitive advantage'
-    ],
-    technology: ['Quantum Computing', 'AI/ML', 'Quantum Algorithms', 'Hybrid Processing', 'Quantum Error Correction'],
-    integrations: ['Cloud Platforms', 'AI Frameworks', 'Data Centers', 'Research Tools', 'Enterprise Systems'],
-    useCases: ['Drug discovery', 'Financial modeling', 'Logistics optimization', 'Climate modeling'],
-    targetAudience: 'Research institutions, Pharmaceutical companies, Financial services, Government agencies',
-    marketPosition: 'Leading quantum AI hybrid platform for enterprise applications',
-    competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'Amazon Braket'],
-    roi: 'Average ROI of 500% for research applications',
-    trialDays: 7,
-    setupTime: '4-6 weeks',
-    icon: '⚛️',
-    color: 'from-purple-600 to-indigo-700',
-    link: 'https://ziontechgroup.com/contact',
-    marketSize: '$1.7B',
-    growthRate: '+45.2% YoY',
-    rating: 4.9,
-    reviews: 67,
-    popular: true,
-    launchDate: '2025-03-10',
-    contactInfo: CONTACT_INFO
-  },
-  // New Blockchain & Web3 Services
-  {
-    id: 'blockchain-enterprise-solutions-2025',
-    name: 'Blockchain Enterprise Solutions 2025',
-    tagline: 'Enterprise-grade blockchain infrastructure',
-    description: 'Comprehensive blockchain solutions designed for enterprise applications, including supply chain transparency, digital identity, and decentralized finance.',
-    category: 'Blockchain & Web3',
-    price: '$8,999',
-    billing: 'month',
-    features: [
-      'Enterprise blockchain infrastructure',
-      'Smart contract development',
-      'Supply chain transparency',
-      'Digital identity management',
-      'DeFi platform development',
-      'Cross-chain interoperability',
-      'Regulatory compliance',
-      'Scalability solutions',
-      'Security auditing',
-      '24/7 support'
-    ],
-    benefits: [
-      'Increase transparency by 100%',
-      'Reduce fraud by 80%',
-      'Improve efficiency by 60%',
-      'Enable new business models',
-      'Ensure regulatory compliance'
-    ],
-    technology: ['Blockchain', 'Smart Contracts', 'Web3', 'Cryptography', 'Distributed Systems'],
-    integrations: ['ERP Systems', 'CRM Platforms', 'Financial Systems', 'IoT Devices', 'Cloud Services'],
-    useCases: ['Supply chain management', 'Digital identity', 'DeFi platforms', 'Asset tokenization'],
-    targetAudience: 'Enterprise businesses, Financial institutions, Supply chain companies, Government agencies',
-    marketPosition: 'Leading enterprise blockchain solutions provider',
-    competitors: ['ConsenSys', 'R3 Corda', 'Hyperledger', 'Ethereum Enterprise'],
-    roi: 'Average ROI of 300% within 24 months',
-    trialDays: 30,
-    setupTime: '6-8 weeks',
-    icon: '🔗',
-    color: 'from-green-600 to-emerald-700',
-    link: 'https://ziontechgroup.com/contact',
-    marketSize: '$19.9B',
-    growthRate: '+38.4% YoY',
-    rating: 4.7,
-    reviews: 156,
-    popular: false,
-    launchDate: '2025-03-15',
-    contactInfo: CONTACT_INFO
-  },
-  // New IoT & Edge Computing Services
-  {
-    id: 'iot-edge-computing-platform-2025',
-    name: 'IoT Edge Computing Platform 2025',
-    tagline: 'Intelligent edge computing for IoT networks',
-    description: 'Advanced IoT platform that brings computing power to the edge, enabling real-time processing, reduced latency, and intelligent decision-making at the device level.',
-    category: 'IoT & Edge',
-    price: '$6,999',
-    billing: 'month',
-    features: [
-      'Edge computing infrastructure',
-      'IoT device management',
-      'Real-time data processing',
-      'Machine learning at edge',
-      'Low-latency communication',
-      'Scalable architecture',
-      'Security and privacy',
-      'Analytics dashboard',
-      'API management',
-      'Device provisioning'
-    ],
-    benefits: [
-      'Reduce latency by 90%',
-      'Lower bandwidth costs by 70%',
-      'Improve reliability by 85%',
-      'Enable real-time processing',
-      'Enhance data privacy'
-    ],
-    technology: ['Edge Computing', 'IoT', 'Machine Learning', '5G', 'Cloud Computing'],
-    integrations: ['IoT Devices', 'Cloud Platforms', 'Data Centers', 'Network Infrastructure', 'Enterprise Systems'],
-    useCases: ['Smart cities', 'Industrial IoT', 'Connected vehicles', 'Healthcare monitoring'],
-    targetAudience: 'Manufacturing companies, Smart city initiatives, Healthcare providers, Transportation companies',
-    marketPosition: 'Leading IoT edge computing platform for enterprise applications',
-    competitors: ['AWS IoT Greengrass', 'Microsoft Azure IoT Edge', 'Google Cloud IoT', 'IBM Edge Application Manager'],
-    roi: 'Average ROI of 250% within 18 months',
-    trialDays: 21,
-    setupTime: '3-4 weeks',
-    icon: '🌐',
-    color: 'from-blue-600 to-cyan-700',
-    link: 'https://ziontechgroup.com/contact',
-    marketSize: '$11.3B',
-    growthRate: '+29.8% YoY',
-    rating: 4.6,
-    reviews: 134,
-    popular: false,
-    launchDate: '2025-03-20',
-    contactInfo: CONTACT_INFO
-  }
+  },;
+  // New Advanced AI & Machine Learning Services;
+  {;
+    id: 'ai-autonomous-business-intelligence-2025',;
+    name: 'AI Autonomous Business Intelligence 2025',;
+    tagline: 'Self-learning business intelligence with autonomous insights',;
+    description: 'Revolutionary AI platform that autonomously analyzes business data, generates insights, and provides actionable recommendations without human intervention.',;
+    category: 'AI Solutions',;
+    price: '$4,999',;
+    billing: 'month',;
+    features: [;
+      'Autonomous data analysis',;
+      'Self-learning algorithms',;
+      'Predictive business modeling',;
+      'Real-time insights generation',;
+      'Automated reporting',;
+      'Natural language queries',;
+      'Multi-source data integration',;
+      'Anomaly detection',;
+      'Trend forecasting',;
+      'Actionable recommendations';
+    ],;
+    benefits: [;
+      'Reduce analysis time by 90%',;
+      'Improve decision accuracy by 75%',;
+      'Increase operational efficiency by 60%',;
+      'Eliminate manual reporting',;
+      '24/7 autonomous operation';
+    ],;
+    technology: ['Advanced AI/ML', 'Deep Learning', 'Natural Language Processing', 'Predictive Analytics', 'Big Data'],;
+    integrations: ['ERP Systems', 'CRM Platforms', 'Data Warehouses', 'Cloud Services', 'Business Intelligence Tools'],;
+    useCases: ['Business intelligence', 'Data analysis', 'Performance monitoring', 'Strategic planning'],;
+    targetAudience: 'Enterprise businesses, Data analysts, Business intelligence teams, Executives',;
+    marketPosition: 'First autonomous business intelligence platform with proven ROI',;
+    competitors: ['Tableau', 'Power BI', 'Qlik', 'Looker'],;
+    roi: 'Average ROI of 400% within 18 months',;
+    trialDays: 30,;
+    setupTime: '3-4 weeks',;
+    icon: '🧠',;
+    color: 'from-indigo-600 to-blue-700',;
+    link: 'https://ziontechgroup.com/contact',;
+    marketSize: '$23.1B',;
+    growthRate: '+28.5% YoY',;
+    rating: 4.9,;
+    reviews: 234,;
+    popular: true,;
+    launchDate: '2025-03-01',;
+    contactInfo: CONTACT_INFO;
+  },;
+  // New Cybersecurity & Threat Intelligence Services;
+  {;
+    id: 'ai-cyber-threat-intelligence-platform-2025',;
+    name: 'AI Cyber Threat Intelligence Platform 2025',;
+    tagline: 'Advanced threat detection with autonomous response',;
+    description: 'Next-generation cybersecurity platform that combines AI-powered threat detection, autonomous response capabilities, and comprehensive threat intelligence for enterprise-grade protection.',;
+    category: 'Cybersecurity',;
+    price: '$12,999',;
+    billing: 'month',;
+    features: [;
+      'AI-powered threat detection',;
+      'Autonomous incident response',;
+      'Real-time threat intelligence',;
+      'Behavioral analysis',;
+      'Zero-day threat detection',;
+      'Automated threat hunting',;
+      'Incident correlation',;
+      'Threat intelligence sharing',;
+      'Compliance reporting',;
+      '24/7 monitoring';
+    ],;
+    benefits: [;
+      'Reduce threat response time by 95%',;
+      'Improve threat detection accuracy by 85%',;
+      'Eliminate false positives by 70%',;
+      'Automate 90% of incident response',;
+      'Provide comprehensive threat visibility';
+    ],;
+    technology: ['AI/ML', 'Machine Learning', 'Behavioral Analytics', 'Threat Intelligence', 'Automation'],;
+    integrations: ['SIEM Systems', 'EDR Solutions', 'Firewalls', 'Security Tools', 'Compliance Platforms'],;
+    useCases: ['Threat detection', 'Incident response', 'Security monitoring', 'Compliance'],;
+    targetAudience: 'Enterprise businesses, Security teams, SOC analysts, Compliance officers',;
+    marketPosition: 'Leading AI-powered cybersecurity platform with autonomous response',;
+    competitors: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Cylance'],;
+    roi: 'Average ROI of 350% within 12 months',;
+    trialDays: 14,;
+    setupTime: '2-3 weeks',;
+    icon: '🛡️',;
+    color: 'from-red-600 to-orange-700',;
+    link: 'https://ziontechgroup.com/contact',;
+    marketSize: '$18.9B',;
+    growthRate: '+32.7% YoY',;
+    rating: 4.8,;
+    reviews: 189,;
+    popular: true,;
+    launchDate: '2025-03-05',;
+    contactInfo: CONTACT_INFO;
+  },;
+  // New Quantum Computing Services;
+  {;
+    id: 'quantum-ai-hybrid-platform-2025',;
+    name: 'Quantum AI Hybrid Platform 2025',;
+    tagline: 'Quantum computing meets artificial intelligence',;
+    description: 'Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms to solve complex problems that are impossible for classical computers.',;
+    category: 'Quantum Computing',;
+    price: '$25,999',;
+    billing: 'month',;
+    features: [;
+      'Quantum AI algorithms',;
+      'Hybrid classical-quantum processing',;
+      'Quantum machine learning',;
+      'Optimization algorithms',;
+      'Quantum cryptography',;
+      'Real-time quantum simulation',;
+      'API access to quantum resources',;
+      'Quantum error correction',;
+      'Scalable quantum architecture',;
+      'Expert consultation';
+    ],;
+    benefits: [;
+      'Solve complex problems 1000x faster',;
+      'Enable new AI capabilities',;
+      'Breakthrough in optimization',;
+      'Future-proof technology',;
+      'Competitive advantage';
+    ],;
+    technology: ['Quantum Computing', 'AI/ML', 'Quantum Algorithms', 'Hybrid Processing', 'Quantum Error Correction'],;
+    integrations: ['Cloud Platforms', 'AI Frameworks', 'Data Centers', 'Research Tools', 'Enterprise Systems'],;
+    useCases: ['Drug discovery', 'Financial modeling', 'Logistics optimization', 'Climate modeling'],;
+    targetAudience: 'Research institutions, Pharmaceutical companies, Financial services, Government agencies',;
+    marketPosition: 'Leading quantum AI hybrid platform for enterprise applications',;
+    competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'Amazon Braket'],;
+    roi: 'Average ROI of 500% for research applications',;
+    trialDays: 7,;
+    setupTime: '4-6 weeks',;
+    icon: '⚛️',;
+    color: 'from-purple-600 to-indigo-700',;
+    link: 'https://ziontechgroup.com/contact',;
+    marketSize: '$1.7B',;
+    growthRate: '+45.2% YoY',;
+    rating: 4.9,;
+    reviews: 67,;
+    popular: true,;
+    launchDate: '2025-03-10',;
+    contactInfo: CONTACT_INFO;
+  },;
+  // New Blockchain & Web3 Services;
+  {;
+    id: 'blockchain-enterprise-solutions-2025',;
+    name: 'Blockchain Enterprise Solutions 2025',;
+    tagline: 'Enterprise-grade blockchain infrastructure',;
+    description: 'Comprehensive blockchain solutions designed for enterprise applications, including supply chain transparency, digital identity, and decentralized finance.',;
+    category: 'Blockchain & Web3',;
+    price: '$8,999',;
+    billing: 'month',;
+    features: [;
+      'Enterprise blockchain infrastructure',;
+      'Smart contract development',;
+      'Supply chain transparency',;
+      'Digital identity management',;
+      'DeFi platform development',;
+      'Cross-chain interoperability',;
+      'Regulatory compliance',;
+      'Scalability solutions',;
+      'Security auditing',;
+      '24/7 support';
+    ],;
+    benefits: [;
+      'Increase transparency by 100%',;
+      'Reduce fraud by 80%',;
+      'Improve efficiency by 60%',;
+      'Enable new business models',;
+      'Ensure regulatory compliance';
+    ],;
+    technology: ['Blockchain', 'Smart Contracts', 'Web3', 'Cryptography', 'Distributed Systems'],;
+    integrations: ['ERP Systems', 'CRM Platforms', 'Financial Systems', 'IoT Devices', 'Cloud Services'],;
+    useCases: ['Supply chain management', 'Digital identity', 'DeFi platforms', 'Asset tokenization'],;
+    targetAudience: 'Enterprise businesses, Financial institutions, Supply chain companies, Government agencies',;
+    marketPosition: 'Leading enterprise blockchain solutions provider',;
+    competitors: ['ConsenSys', 'R3 Corda', 'Hyperledger', 'Ethereum Enterprise'],;
+    roi: 'Average ROI of 300% within 24 months',;
+    trialDays: 30,;
+    setupTime: '6-8 weeks',;
+    icon: '🔗',;
+    color: 'from-green-600 to-emerald-700',;
+    link: 'https://ziontechgroup.com/contact',;
+    marketSize: '$19.9B',;
+    growthRate: '+38.4% YoY',;
+    rating: 4.7,;
+    reviews: 156,;
+    popular: false,;
+    launchDate: '2025-03-15',;
+    contactInfo: CONTACT_INFO;
+  },;
+  // New IoT & Edge Computing Services;
+  {;
+    id: 'iot-edge-computing-platform-2025',;
+    name: 'IoT Edge Computing Platform 2025',;
+    tagline: 'Intelligent edge computing for IoT networks',;
+    description: 'Advanced IoT platform that brings computing power to the edge, enabling real-time processing, reduced latency, and intelligent decision-making at the device level.',;
+    category: 'IoT & Edge',;
+    price: '$6,999',;
+    billing: 'month',;
+    features: [;
+      'Edge computing infrastructure',;
+      'IoT device management',;
+      'Real-time data processing',;
+      'Machine learning at edge',;
+      'Low-latency communication',;
+      'Scalable architecture',;
+      'Security and privacy',;
+      'Analytics dashboard',;
+      'API management',;
+      'Device provisioning';
+    ],;
+    benefits: [;
+      'Reduce latency by 90%',;
+      'Lower bandwidth costs by 70%',;
+      'Improve reliability by 85%',;
+      'Enable real-time processing',;
+      'Enhance data privacy';
+    ],;
+    technology: ['Edge Computing', 'IoT', 'Machine Learning', '5G', 'Cloud Computing'],;
+    integrations: ['IoT Devices', 'Cloud Platforms', 'Data Centers', 'Network Infrastructure', 'Enterprise Systems'],;
+    useCases: ['Smart cities', 'Industrial IoT', 'Connected vehicles', 'Healthcare monitoring'],;
+    targetAudience: 'Manufacturing companies, Smart city initiatives, Healthcare providers, Transportation companies',;
+    marketPosition: 'Leading IoT edge computing platform for enterprise applications',;
+    competitors: ['AWS IoT Greengrass', 'Microsoft Azure IoT Edge', 'Google Cloud IoT', 'IBM Edge Application Manager'],;
+    roi: 'Average ROI of 250% within 18 months',;
+    trialDays: 21,;
+    setupTime: '3-4 weeks',;
+    icon: '🌐',;
+    color: 'from-blue-600 to-cyan-700',;
+    link: 'https://ziontechgroup.com/contact',;
+    marketSize: '$11.3B',;
+    growthRate: '+29.8% YoY',;
+    rating: 4.6,;
+    reviews: 134,;
+    popular: false,;
+    launchDate: '2025-03-20',;
+    contactInfo: CONTACT_INFO;
+  };
 ];
 ;
 export default comprehensiveRealServices2025;

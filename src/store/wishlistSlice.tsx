@@ -1,1 +1,1 @@
-:src/store/wishlistSlice.tsx 
+:src/store/wishlistSlice.tsx;

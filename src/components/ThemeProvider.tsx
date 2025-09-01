@@ -1,1 +1,1 @@
-"type Theme = "light" | "dark" | "system"; 
+"type Theme = "light" | "dark" | "system"; ";"

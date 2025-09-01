@@ -1,1 +1,1 @@
-import { Smartphone, Tablet, Monitor, 
+import { Smartphone, Tablet, Monitor,;

@@ -1,1 +1,1 @@
-description: "Get exclusive access to tech trends and analysis"},;" {;" icon: Zap,;" title: "Early Access",;" description: "Be the first to know about beta programs and launches"};" ];" </p> </div> </div>; </motion.div>; </div>; </div>; </section>;) }; 
+description: "Get exclusive access to tech trends and analysis"},;" {;" icon: Zap,;" title: "Early Access",;" description: "Be the first to know about beta programs and launches"};" ];" </p> </div> </div>; </motion.div>; </div>; </div>; </section>;) }; ";"

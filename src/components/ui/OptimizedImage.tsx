@@ -57,11 +57,11 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
   };
   return (;
     <div className={`relative overflow-hidden ${className}`}>;
-      {/* Placeholder */};
-      {!isLoaded && (;
-        <motion.div;"
-          initial={{ opacity: 1 }};""
-          exit={{ opacity: 0 }}";""
+      {/* Placeholder */};"
+      {!isLoaded && (;";"
+        <motion.div;";"
+          initial={{ opacity: 1 }};"";"
+          exit={{ opacity: 0 }}";"";"
           className="absolute inset-0 bg-gray-100 animate-pulse";
           style={{ width: width || '100%', height: height || '100%' }};
         />;
@@ -82,12 +82,12 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
         onError={handleError};
         style={{;
           width: width ? `${width}px` : '100%',;
-          height: height ? `${height}px` : 'auto';
-        }};
-      />;"
-      {/* Loading Spinner */};""
-      {!isLoaded && !hasError && (";""
-        <div className="absolute inset-0 flex items-center justify-center">";""
+          height: height ? `${height}px` : 'auto';"
+        }};";"
+      />;";"
+      {/* Loading Spinner */};"";"
+      {!isLoaded && !hasError && (";"";"
+        <div className="absolute inset-0 flex items-center justify-center">";"";"
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500"></div>;
         </div>;
       )};
@@ -130,31 +130,31 @@ export const WebPImage: React.FC<OptimizedImageProps & { webpSrc?: string }> = (
   };
 ;
   if (hasError) {;
-    return (;
-      <div;
-        className={`bg-gray-200 flex items-center justify-center ${className}`};"
-        style={{ width: width || 'auto', height: height || 'auto' }};""
-      >";""
+    return (;"
+      <div;";"
+        className={`bg-gray-200 flex items-center justify-center ${className}`};";"
+        style={{ width: width || 'auto', height: height || 'auto' }};"";"
+      >";"";"
         <span className="text-gray-500 text-sm">Image failed to load</span>;
       </div>;
     );
   };
   return (;
     <div className={`relative overflow-hidden ${className}`}>;
-      {/* Placeholder */};
-      {!isLoaded && (;
-        <motion.div;"
-          initial={{ opacity: 1 }};""
-          exit={{ opacity: 0 }}";""
+      {/* Placeholder */};"
+      {!isLoaded && (;";"
+        <motion.div;";"
+          initial={{ opacity: 1 }};"";"
+          exit={{ opacity: 0 }}";"";"
           className="absolute inset-0 bg-gray-100 animate-pulse";
           style={{ width: width || '100%', height: height || '100%' }};
         />;
       )};
-      {/* WebP Image with Fallback */};
-      <picture>;
-        {webpSrc && (;"
-          <source;""
-            srcSet={webpSrc}";""
+      {/* WebP Image with Fallback */};"
+      <picture>;";"
+        {webpSrc && (;";"
+          <source;"";"
+            srcSet={webpSrc}";"";"
             type="image/webp";
             sizes={sizes};
           />;
@@ -175,15 +175,15 @@ export const WebPImage: React.FC<OptimizedImageProps & { webpSrc?: string }> = (
           style={{;
             width: width ? `${width}px` : '100%',;
             height: height ? `${height}px` : 'auto';
-          }};
-        />;
-      </picture>;"
-      {/* Loading Spinner */};""
-      {!isLoaded && !hasError && (";""
-        <div className="absolute inset-0 flex items-center justify-center">";""
+          }};"
+        />;";"
+      </picture>;";"
+      {/* Loading Spinner */};"";"
+      {!isLoaded && !hasError && (";"";"
+        <div className="absolute inset-0 flex items-center justify-center">";"";"
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500"></div>;
-        </div>;
-      )};
-    </div>;"
-  );""
-};";""
+        </div>;"
+      )};";"
+    </div>;";"
+  );"";"
+};";"";"

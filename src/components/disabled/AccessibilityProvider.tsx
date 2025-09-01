@@ -158,15 +158,15 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
             initial={{ opacity: 0, y: -20 }};
             animate={{ opacity: 1, y: 0 }};
             exit={{ opacity: 0, y: -20 }};
-            className="fixed top-4 left-4 z-50 bg-blue-600 text-white p-4 rounded-lg shadow-lg";""
-          >";""
-            <div className="flex items-center gap-2 mb-2">";""
-              <SkipForward className="w-4 h-4" />";""
-              <span className="font-medium">Skip Links</span>;""
-            </div>";""
-            <div className="space-y-1">";""
-              <a href="#main" className="block text-sm hover:underline">Skip to main content</a>";""
-              <a href="#navigation" className="block text-sm hover:underline">Skip to navigation</a>";""
+            className="fixed top-4 left-4 z-50 bg-blue-600 text-white p-4 rounded-lg shadow-lg";"";"
+          >";"";"
+            <div className="flex items-center gap-2 mb-2">";"";"
+              <SkipForward className="w-4 h-4" />";"";"
+              <span className="font-medium">Skip Links</span>;"";"
+            </div>";"";"
+            <div className="space-y-1">";"";"
+              <a href="#main" className="block text-sm hover:underline">Skip to main content</a>";"";"
+              <a href="#navigation" className="block text-sm hover:underline">Skip to navigation</a>";"";"
               <a href="#footer" className="block text-sm hover:underline">Skip to footer</a>;
             </div>;
           </motion.div>;
@@ -185,11 +185,11 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
 ;
   useEffect(() => {;
     if (!isActive) return;
-;
-    const handleKeyDown = (event: KeyboardEvent) => {;
-      if (event.key !== 'Tab') return;"
-;""
-      const focusableElements = document.querySelectorAll(";""
+;"
+    const handleKeyDown = (event: KeyboardEvent) => {;";"
+      if (event.key !== 'Tab') return;";"
+;"";"
+      const focusableElements = document.querySelectorAll(";"";"
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
       );
 ;
@@ -207,7 +207,7 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
 ;
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isActive]);
-;
-  return <>{children}</>;"
-};";""
+  }, [isActive]);"
+;";"
+  return <>{children}</>;";"
+};";"";"

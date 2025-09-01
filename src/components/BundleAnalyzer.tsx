@@ -1,1 +1,1 @@
-export const BundleAnalyzer: React.FC < BundleAnalyzerProps> = ({ 
+export const BundleAnalyzer: React.FC < BundleAnalyzerProps> = ({;

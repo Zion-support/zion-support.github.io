@@ -365,64 +365,64 @@ export const AnalyticsMonitor: React.FC = () => {;
   }, []);
 ;
   return (;
-    <div className="fixed bottom-4 left-4 bg-white/90 backdrop-blur-sm border border-gray-300 rounded-lg p-4 shadow-lg z-40 max-w-sm">";""
-      <div className="flex items-center justify-between mb-3">";""
-        <h3 className="text-sm font-semibold text-gray-900">Analytics Monitor</h3>";""
-        <div className="flex gap-2">;"
-          <button;""
-            onClick={exportAnalytics}";""
-            className="px-2 py-1 text-xs bg-blue-600 text-white rounded hover:bg-blue-700";""
+    <div className="fixed bottom-4 left-4 bg-white/90 backdrop-blur-sm border border-gray-300 rounded-lg p-4 shadow-lg z-40 max-w-sm">";"";"
+      <div className="flex items-center justify-between mb-3">";"";"
+        <h3 className="text-sm font-semibold text-gray-900">Analytics Monitor</h3>";"";"
+        <div className="flex gap-2">;";"
+          <button;"";"
+            onClick={exportAnalytics}";"";"
+            className="px-2 py-1 text-xs bg-blue-600 text-white rounded hover:bg-blue-700";"";"
             title="Export analytics data";
-          >;
-            Export;
-          </button>;"
-          <button;""
-            onClick={clearAnalytics}";""
-            className="px-2 py-1 text-xs bg-red-600 text-white rounded hover:bg-red-700";""
+          >;"
+            Export;";"
+          </button>;";"
+          <button;"";"
+            onClick={clearAnalytics}";"";"
+            className="px-2 py-1 text-xs bg-red-600 text-white rounded hover:bg-red-700";"";"
             title="Clear analytics data";
           >;
-            Clear;
-          </button>;
-        </div>;"
-      </div>;";""
-      <div className="space-y-3 text-xs">;"
-        {/* Performance Metrics */};""
-        {performance && (";""
-          <div className="bg-gray-50 p-2 rounded">";""
-            <h4 className="font-medium text-gray-700 mb-2">Performance</h4>";""
+            Clear;"
+          </button>;";"
+        </div>;";"
+      </div>;";"";"
+      <div className="space-y-3 text-xs">;";"
+        {/* Performance Metrics */};"";"
+        {performance && (";"";"
+          <div className="bg-gray-50 p-2 rounded">";"";"
+            <h4 className="font-medium text-gray-700 mb-2">Performance</h4>";"";"
             <div className="grid grid-cols-2 gap-1">;
               <div>FCP: {performance.fcp}ms</div>;
               <div>LCP: {performance.lcp}ms</div>;
               <div>FID: {performance.fid}ms</div>;
-              <div>CLS: {performance.cls}</div>;
-            </div>;
-          </div>;"
-        )};""
-        {/* User Behavior */}";""
-        <div className="bg-gray-50 p-2 rounded">";""
-          <h4 className="font-medium text-gray-700 mb-2">User Behavior</h4>";""
+              <div>CLS: {performance.cls}</div>;"
+            </div>;";"
+          </div>;";"
+        )};"";"
+        {/* User Behavior */}";"";"
+        <div className="bg-gray-50 p-2 rounded">";"";"
+          <h4 className="font-medium text-gray-700 mb-2">User Behavior</h4>";"";"
           <div className="space-y-1">;
             <div>Page Views: {userBehavior.pageViews}</div>;
-            <div>Session: {userBehavior.sessionDuration}s</div>;
-            <div>Conversion: {(userBehavior.conversionRate * 100).toFixed(1)}%</div>;
-          </div>;"
-        </div>;""
-        {/* Recent Events */}";""
-        <div className="bg-gray-50 p-2 rounded">";""
-          <h4 className="font-medium text-gray-700 mb-2">Recent Events</h4>";""
-          <div className="space-y-1 max-h-20 overflow-y-auto">;""
-            {events.slice(-5).map(event => (";""
+            <div>Session: {userBehavior.sessionDuration}s</div>;"
+            <div>Conversion: {(userBehavior.conversionRate * 100).toFixed(1)}%</div>;";"
+          </div>;";"
+        </div>;"";"
+        {/* Recent Events */}";"";"
+        <div className="bg-gray-50 p-2 rounded">";"";"
+          <h4 className="font-medium text-gray-700 mb-2">Recent Events</h4>";"";"
+          <div className="space-y-1 max-h-20 overflow-y-auto">;"";"
+            {events.slice(-5).map(event => (";"";"
               <div key={event.id} className="text-gray-600">;
                 {event.category}: {event.action};
-              </div>;
-            ))};
-          </div>;"
-        </div>;""
-        {/* Session Info */}";""
+              </div>;"
+            ))};";"
+          </div>;";"
+        </div>;"";"
+        {/* Session Info */}";"";"
         <div className="text-gray-500 text-xs">;
           Session: {sessionId.slice(-8)};
-        </div>;
-      </div>;
-    </div>;"
-  );""
-};";""
+        </div>;"
+      </div>;";"
+    </div>;";"
+  );"";"
+};";"";"

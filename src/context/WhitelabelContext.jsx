@@ -1,1 +1,1 @@
-"const defaultConfig = {" 
+"const defaultConfig = {";"

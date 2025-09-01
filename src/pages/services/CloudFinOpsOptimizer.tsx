@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { Link               } from 'react-router-dom.ts';
-
+import { Link } from 'react-router-dom.ts';
+;
             </div>;
           </motion.div>;
         </div>;
@@ -8,6 +8,6 @@ import { Link               } from 'react-router-dom.ts';
     </div>;
   );
 };
-
+;
 export default CloudFinOpsOptimizer;
-
+;

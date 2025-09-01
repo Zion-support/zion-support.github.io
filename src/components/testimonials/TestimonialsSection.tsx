@@ -105,113 +105,113 @@ export function TestimonialsSection() {;
   const currentTestimonial = testimonials[currentIndex];
 ;
   return (;
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-900 to-zion-slate-dark">";""
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">;""
-        {/* Section Header */}";""
+    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-900 to-zion-slate-dark">";"";"
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">;"";"
+        {/* Section Header */}";"";"
         <div className="text-center mb-16">;
-          <motion.h2;
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }};"
-            viewport={{ once: true }};""
-            transition={{ duration: 0.6 }}";""
+          <motion.h2;"
+            initial={{ opacity: 0, y: 20 }};";"
+            whileInView={{ opacity: 1, y: 0 }};";"
+            viewport={{ once: true }};"";"
+            transition={{ duration: 0.6 }}";"";"
             className="text-4xl md:text-5xl font-bold text-white mb-6";
           >;
             What Our Clients Say;
           </motion.h2>;
-          <motion.p;
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }};"
-            viewport={{ once: true }};""
-            transition={{ duration: 0.6, delay: 0.2 }}";""
+          <motion.p;"
+            initial={{ opacity: 0, y: 20 }};";"
+            whileInView={{ opacity: 1, y: 0 }};";"
+            viewport={{ once: true }};"";"
+            transition={{ duration: 0.6, delay: 0.2 }}";"";"
             className="text-xl text-zion-slate-light max-w-3xl mx-auto";
-          >;
-            Discover how Zion Tech Group is transforming businesses across industries with our cutting-edge AI solutions;
-          </motion.p>;"
-        </div>;""
-        {/* Testimonials Carousel */}";""
-        <div className="relative max-w-6xl mx-auto">;""
-          {/* Main Testimonial */}";""
-          <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/10">";""
+          >;"
+            Discover how Zion Tech Group is transforming businesses across industries with our cutting-edge AI solutions;";"
+          </motion.p>;";"
+        </div>;"";"
+        {/* Testimonials Carousel */}";"";"
+        <div className="relative max-w-6xl mx-auto">;"";"
+          {/* Main Testimonial */}";"";"
+          <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/10">";"";"
             <AnimatePresence mode="wait" initial={false} custom={direction}>;
               <motion.div;
-                key={currentIndex};
-                custom={direction};
-                initial={{ opacity: 0, x: direction * 100 }};"
-                animate={{ opacity: 1, x: 0 }};""
-                exit={{ opacity: 0, x: direction * -100 }}";""
-                transition={{ duration: 0.5, ease: "easeInOut" }}";""
-                className="text-center";"
-              >;""
-                {/* Quote Icon */}";""
-                <div className="flex justify-center mb-6">";""
-                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">";""
-                    <Quote className="w-8 h-8 text-white" />;
-                  </div>;"
-                </div>;""
-                {/* Rating */}";""
-                <div className="flex justify-center mb-6">;""
-                  {[...Array(currentTestimonial.rating)].map((_, i) => (";""
-                    <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />;
-                  ))};"
-                </div>;""
-                {/* Content */}";""
-                <blockquote className="text-xl md:text-2xl text-white mb-8 leading-relaxed max-w-4xl mx-auto">";"{currentTestimonial.content}";"
-                </blockquote>;""
-                {/* Author Info */}";""
-                <div className="flex flex-col items-center space-y-4">";""
-                  <div className="flex items-center space-x-4">;""
-                    {currentTestimonial.image && (";""
-                      <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-zion-cyan">;
-                        <img;"
-                          src={currentTestimonial.image};""
-                          alt={currentTestimonial.name}";""
-                          className="w-full h-full object-cover";
-                        / / / />;"
-                      </div>;""
-                    )}";""
-                    <div className="text-left">";""
-                      <h4 className="text-xl font-semibold text-white">;"
-                        {currentTestimonial.name};""
-                      </h4>";""
+                key={currentIndex};"
+                custom={direction};";"
+                initial={{ opacity: 0, x: direction * 100 }};";"
+                animate={{ opacity: 1, x: 0 }};"";"
+                exit={{ opacity: 0, x: direction * -100 }}";"";"
+                transition={{ duration: 0.5, ease: "easeInOut" }}";"";"
+                className="text-center";";"
+              >;"";"
+                {/* Quote Icon */}";"";"
+                <div className="flex justify-center mb-6">";"";"
+                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">";"";"
+                    <Quote className="w-8 h-8 text-white" />;";"
+                  </div>;";"
+                </div>;"";"
+                {/* Rating */}";"";"
+                <div className="flex justify-center mb-6">;"";"
+                  {[...Array(currentTestimonial.rating)].map((_, i) => (";"";"
+                    <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />;";"
+                  ))};";"
+                </div>;"";"
+                {/* Content */}";"";"
+                <blockquote className="text-xl md:text-2xl text-white mb-8 leading-relaxed max-w-4xl mx-auto">";"{currentTestimonial.content}";";"
+                </blockquote>;"";"
+                {/* Author Info */}";"";"
+                <div className="flex flex-col items-center space-y-4">";"";"
+                  <div className="flex items-center space-x-4">;"";"
+                    {currentTestimonial.image && (";"";"
+                      <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-zion-cyan">;";"
+                        <img;";"
+                          src={currentTestimonial.image};"";"
+                          alt={currentTestimonial.name}";"";"
+                          className="w-full h-full object-cover";";"
+                        / / / / / />;";"
+                      </div>;"";"
+                    )}";"";"
+                    <div className="text-left">";"";"
+                      <h4 className="text-xl font-semibold text-white">;";"
+                        {currentTestimonial.name};"";"
+                      </h4>";"";"
                       <p className="text-zion-slate-light">;
-                        {currentTestimonial.title} at {currentTestimonial.company};
-                      </p>;
-                    </div>;"
-                  </div>;""
-                  {/* Service Used */}";""
+                        {currentTestimonial.title} at {currentTestimonial.company};"
+                      </p>;";"
+                    </div>;";"
+                  </div>;"";"
+                  {/* Service Used */}";"";"
                   <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-full text-sm font-medium">;
                     <span>Used: {currentTestimonial.service}</span>;
                   </div>;
-                </div>;
-              </motion.div>;
-            </AnimatePresence>;"
-          </div>;""
-          {/* Navigation Controls */}";""
-          <div className="flex items-center justify-center mt-8 space-x-4">;"
-            <button;""
-              onClick={goToPrevious}";""
-              className="p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors duration-200";""
-              aria-label="Previous testimonial";""
-            >";""
-              <ChevronLeft className="w-6 h-6" />;
-            </button>;
-            {/* Auto-play Toggle */};"
-            <button;""
-              onClick={toggleAutoPlay}";""
-              className="p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors duration-200";"
-              aria-label={isAutoPlaying ? 'Pause auto-play' : 'Start auto-play'};""
-            >";""
-              {isAutoPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />};
-            </button>;"
-            <button;""
-              onClick={goToNext}";""
-              className="p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors duration-200";""
-              aria-label="Next testimonial";""
-            >";""
-              <ChevronRight className="w-6 h-6" />;
-            </button>;"
-          </div>;""
-          {/* Dots Indicator */}";""
+                </div>;"
+              </motion.div>;";"
+            </AnimatePresence>;";"
+          </div>;"";"
+          {/* Navigation Controls */}";"";"
+          <div className="flex items-center justify-center mt-8 space-x-4">;";"
+            <button;"";"
+              onClick={goToPrevious}";"";"
+              className="p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors duration-200";"";"
+              aria-label="Previous testimonial";"";"
+            >";"";"
+              <ChevronLeft className="w-6 h-6" />;"
+            </button>;";"
+            {/* Auto-play Toggle */};";"
+            <button;"";"
+              onClick={toggleAutoPlay}";"";"
+              className="p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors duration-200";";"
+              aria-label={isAutoPlaying ? 'Pause auto-play' : 'Start auto-play'};"";"
+            >";"";"
+              {isAutoPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />};";"
+            </button>;";"
+            <button;"";"
+              onClick={goToNext}";"";"
+              className="p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors duration-200";"";"
+              aria-label="Next testimonial";"";"
+            >";"";"
+              <ChevronRight className="w-6 h-6" />;";"
+            </button>;";"
+          </div>;"";"
+          {/* Dots Indicator */}";"";"
           <div className="flex justify-center mt-6 space-x-2">;
             {testimonials.map((_, index) => (;
               <button;
@@ -228,30 +228,30 @@ export function TestimonialsSection() {;
           </div>;
         </div>;
         {/* Stats Section */};
-        <motion.div;
-          initial={{ opacity: 0, y: 20 }};
-          whileInView={{ opacity: 1, y: 0 }};"
-          viewport={{ once: true }};""
-          transition={{ duration: 0.6, delay: 0.4 }}";""
+        <motion.div;"
+          initial={{ opacity: 0, y: 20 }};";"
+          whileInView={{ opacity: 1, y: 0 }};";"
+          viewport={{ once: true }};"";"
+          transition={{ duration: 0.6, delay: 0.4 }}";"";"
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20";
         >;
           {[;
-            { number: '500+', label: 'Happy Clients' },;
-            { number: '99.9%', label: 'Client Satisfaction' },;
-            { number: '50+', label: 'AI Services' },;"
-            { number: '24/7', label: 'Support Available' };""
-          ].map((stat, index) => (";""
-            <div key={index} className="text-center">";""
-              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">;"
-                {stat.number};""
-              </div>";""
+            { number: '500+', label: 'Happy Clients' },;"
+            { number: '99.9%', label: 'Client Satisfaction' },;";"
+            { number: '50+', label: 'AI Services' },;";"
+            { number: '24/7', label: 'Support Available' };"";"
+          ].map((stat, index) => (";"";"
+            <div key={index} className="text-center">";"";"
+              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">;";"
+                {stat.number};"";"
+              </div>";"";"
               <div className="text-zion-slate-light text-sm md:text-base">;
                 {stat.label};
               </div>;
             </div>;
           ))};
-        </motion.div>;
-      </div>;
-    </section>;"
-  );""
-}";""
+        </motion.div>;"
+      </div>;";"
+    </section>;";"
+  );"";"
+}";"";"

@@ -1,1 +1,1 @@
-const PWAUpdater: React.FC<PWAUpdaterProps> = ({ 
+const PWAUpdater: React.FC<PWAUpdaterProps> = ({;
