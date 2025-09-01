@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+
+
 import { 
   Briefcase, 
-  MapPin, 
-  Clock, 
-  DollarSign, 
   Users, 
   Heart, 
   Zap, 
@@ -18,6 +17,7 @@ import {
   Star,
   Globe,
   Award,
+
   Lightbulb,
   Mail,
   Phone,
@@ -30,13 +30,30 @@ export default function Careers() {
   const [selectedLocation, setSelectedLocation] = useState('all');
   const [expandedJob, setExpandedJob] = useState<string | null>(null);
 
+
   const departments = [
-    { id: 'all', name: 'All Departments', count: 12 },
-    { id: 'engineering', name: 'Engineering', count: 5 },
-    { id: 'sales', name: 'Sales & Business Development', count: 3 },
-    { id: 'marketing', name: 'Marketing', count: 2 },
-    { id: 'operations', name: 'Operations', count: 2 }
+    { id: 'all', name: 'All Departments', icon: Briefcase },
+    { id: 'engineering', name: 'Engineering', icon: Code },
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain },
+    { id: 'sales', name: 'Sales & Business Development', icon: Target },
+    { id: 'marketing', name: 'Marketing', icon: Lightbulb },
+    { id: 'operations', name: 'Operations', icon: Settings },
+    { id: 'design', name: 'Design & UX', icon: Palette },
+    { id: 'data', name: 'Data Science', icon: BarChart3 },
+    { id: 'security', name: 'Cybersecurity', icon: Shield },
+    { id: 'quantum', name: 'Quantum Computing', icon: Atom }
   ];
+
+  const locations = [
+    { id: 'all', name: 'All Locations', icon: Globe },
+    { id: 'remote', name: 'Remote', icon: Wifi },
+    { id: 'middletown', name: 'Middletown, DE', icon: MapPin },
+    { id: 'new-york', name: 'New York, NY', icon: MapPin },
+    { id: 'san-francisco', name: 'San Francisco, CA', icon: MapPin },
+    { id: 'london', name: 'London, UK', icon: MapPin },
+    { id: 'singapore', name: 'Singapore', icon: MapPin }
+  ];
+
 
   const locations = [
     { id: 'all', name: 'All Locations', count: 12 },
@@ -201,10 +218,12 @@ export default function Careers() {
       ],
       icon: Users,
       color: 'from-blue-500 to-indigo-500'
+
     }
   ];
 
   const filteredJobs = jobListings.filter(job => {
+
     const matchesSearch = job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          job.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesDepartment = selectedDepartment === 'all' || job.department === selectedDepartment;
@@ -508,3 +527,4 @@ const ChevronUp = ({ className }: { className?: string }) => (
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
   </svg>
 );
+

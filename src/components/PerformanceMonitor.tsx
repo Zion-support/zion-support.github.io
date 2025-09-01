@@ -1,8 +1,11 @@
+
+
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Activity, Zap, Clock, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react';
 
 interface PerformanceMetrics {
+
   fcp: number; // First Contentful Paint
   lcp: number; // Largest Contentful Paint
   fid: number; // First Input Delay
@@ -89,36 +92,49 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   useEffect(() => {
     if ('PerformanceObserver' in window) {
       // Observe FCP
+
       const fcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
         if (fcpEntry) {
+
           setMetrics(prev => prev ? { ...prev, fcp: fcpEntry.startTime } : null);
+
         }
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
 
+
       // Observe LCP
+
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const lcpEntry = entries[entries.length - 1];
         if (lcpEntry) {
+
           setMetrics(prev => prev ? { ...prev, lcp: lcpEntry.startTime } : null);
+
         }
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
+
       // Observe FID
+
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const fidEntry = entries[entries.length - 1];
         if (fidEntry) {
+
           setMetrics(prev => prev ? { ...prev, fid: fidEntry.processingStart - fidEntry.startTime } : null);
+
         }
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
 
+
       // Observe CLS
+
       const clsObserver = new PerformanceObserver((list) => {
         let clsValue = 0;
         for (const entry of list.getEntries()) {
@@ -126,6 +142,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             clsValue += (entry as any).value;
           }
         }
+
         setMetrics(prev => prev ? { ...prev, cls: clsValue } : null);
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
@@ -135,6 +152,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       if (navigationEntry) {
         const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
         setMetrics(prev => prev ? { ...prev, ttfb } : { fcp: 0, lcp: 0, fid: 0, cls: 0, ttfb });
+
       }
 
       return () => {
@@ -147,6 +165,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   }, []);
 
   useEffect(() => {
+
     if (metrics) {
       const score = calculatePerformanceScore(metrics);
       setPerformanceScore(score);
@@ -245,6 +264,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             {performanceScore >= 90 ? 'Excellent' : 
              performanceScore >= 50 ? 'Needs Improvement' : 'Poor'}
           </span>
+
         </div>
       </div>
     </motion.div>
@@ -252,3 +272,5 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 };
 
 export default PerformanceMonitor;
+
+

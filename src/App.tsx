@@ -1,4 +1,5 @@
 import React, { Suspense, lazy } from 'react';
+
 import { Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
@@ -48,18 +49,35 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
   );
 };
 
-// Core pages with optimized imports
-const Home = createLazyComponent(() => import('./pages/Home'));
-const Home2026 = createLazyComponent(() => import('./pages/Home2026'));
-const About = createLazyComponent(() => import('./pages/About'));
-const Contact = createLazyComponent(() => import('./pages/Contact'));
-const Careers = createLazyComponent(() => import('./pages/Careers'));
-const News = createLazyComponent(() => import('./pages/News'));
-const Press = createLazyComponent(() => import('./pages/Press'));
-const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
+
+// New AI Services 2025
+const AISupplyChainOptimization = createLazyComponent(() => import('./pages/services/AI-Supply-Chain-Optimization'));
+const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cybersecurity-Platform'));
+const AIHealthcare = createLazyComponent(() => import('./pages/services/AI-Healthcare-Platform'));
+const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Hybrid-Platform'));
+
+// Showcase pages
+const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
+
+// 2031 Cutting-Edge Services
+const ZionCuttingEdgeServices2031 = createLazyComponent(() => import('./pages/ZionCuttingEdgeServices2031'));
+
+// Comprehensive Pricing Guide 2031
+const ComprehensivePricingGuide2031 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2031'));
+
+// Additional pages that actually exist
+const Solutions = createLazyComponent(() => import('./pages/solutions'));
+const CaseStudies = createLazyComponent(() => import('./pages/case-studies'));
 const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
+const Webinars = createLazyComponent(() => import('./pages/Webinars'));
+const RequestQuote = createLazyComponent(() => import('./pages/RequestQuote'));
+const Dashboard = createLazyComponent(() => import('./pages/Dashboard'));
+const Login = createLazyComponent(() => import('./pages/Login'));
+const FAQ = createLazyComponent(() => import('./pages/FAQ'));
+const Help = createLazyComponent(() => import('./pages/Help'));
 const Privacy = createLazyComponent(() => import('./pages/Privacy'));
 const Terms = createLazyComponent(() => import('./pages/Terms'));
+
 
 function App() {
   return (
@@ -108,6 +126,7 @@ function App() {
         </PerformanceOptimizer>
       </ErrorBoundary>
     </div>
+
   );
 }
 

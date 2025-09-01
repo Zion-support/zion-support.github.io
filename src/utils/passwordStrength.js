@@ -76,10 +76,12 @@ export const hasSpecialChars = (password) => {
  */
 export const getLengthScore = (password) => {
   if (!password) return 0;
+
   if (password.length < 8) return 0;
   if (password.length < 12) return 1;
   if (password.length < 16) return 2;
   return 3;
+
 };
 
 /**
@@ -101,10 +103,12 @@ export const calculatePasswordScore = (password) => {
   if (hasNumbers(password)) score += 6.25;
   if (hasSpecialChars(password)) score += 6.25;
 
+
   // Bonus for complexity
   const uniqueChars = new Set(password).size;
   if (uniqueChars > 8) score += 10;
   if (uniqueChars > 12) score += 10;
+
 
   return Math.min(100, Math.round(score));
 };
@@ -138,10 +142,12 @@ export const getPasswordFeedback = (password) => {
   }
 
   if (password.length < 8) {
+
     feedback.push('Password should be at least 8 characters long');
   }
 
   if (!hasLowercase(password)) {
+
     feedback.push('Include lowercase letters');
   }
 
@@ -185,6 +191,7 @@ export const validatePassword = (password) => {
   };
 };
 
+
 export default {
   PASSWORD_STRENGTH,
   PASSWORD_COLORS,
@@ -199,3 +206,4 @@ export default {
   getPasswordFeedback,
   validatePassword
 };
+

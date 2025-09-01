@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -13,6 +14,7 @@ import {
   Keyboard,
   MousePointer,
   Smartphone
+
 } from 'lucide-react';
 
 interface AccessibilitySettings {
@@ -20,6 +22,7 @@ interface AccessibilitySettings {
   largeText: boolean;
   reducedMotion: boolean;
   screenReader: boolean;
+
   keyboardNavigation: boolean;
   focusIndicator: boolean;
   zoomLevel: number;
@@ -27,11 +30,13 @@ interface AccessibilitySettings {
 
 export const EnhancedAccessibilityEnhancer: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
+
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     largeText: false,
     reducedMotion: false,
     screenReader: false,
+
     keyboardNavigation: false,
     focusIndicator: true,
     zoomLevel: 100
@@ -113,11 +118,13 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
           event.preventDefault();
           (focusableElements[focusableElements.length - 1] as HTMLElement)?.focus();
           break;
+
       }
     };
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
+
   }, [settings.keyboardNavigation]);
 
   // Enhanced focus management
@@ -349,10 +356,12 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
                       aria-label="Zoom in"
                     >
                       <ZoomIn className="w-4 h-4" />
+
                     </button>
                   </div>
                 </div>
               </div>
+
 
               {/* Screen Reader Support */}
               <div className="space-y-3">
@@ -424,3 +433,4 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
 };
 
 export default EnhancedAccessibilityEnhancer;
+

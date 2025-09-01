@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ChevronDown, 
@@ -282,6 +283,7 @@ export default function FAQ() {
             </div>
           </div>
         </motion.div>
+
       </div>
     </div>
   );

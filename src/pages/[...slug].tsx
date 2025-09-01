@@ -43,10 +43,12 @@ export default function GenericPage() {
         <ul style={{paddingLeft: 18}}>
           <li>Micro SaaS solutions tailored to your workflow</li>
           <li>Applied AI: assistants, RAG, and automation</li>
+
           <li>Cloud, DevOps, data, and cybersecurity services</li>
         </ul>
         <p style={{marginTop: 8}}>Have questions about {title.toLowerCase()}? <Link to="/contact" style={{color: '#2563eb'}}>Contact us</Link>.</p>
       </section>
     </main>
+
   );
 }

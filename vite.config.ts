@@ -64,6 +64,8 @@ export default defineConfig({
     },
     chunkSizeWarningLimit: 1000
   },
+
+
   optimizeDeps: {
     include: [
       'react',
@@ -101,6 +103,7 @@ export default defineConfig({
     devSourcemap: true,
     postcss: './postcss.config.js'
   },
+
   define: {
     __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
     __BUILD_TIME__: JSON.stringify(new Date().toISOString())

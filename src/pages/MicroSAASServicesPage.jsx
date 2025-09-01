@@ -87,14 +87,15 @@ export default function MicroSaasServicesPage() {
 import React, {useState} from 'react';
 import {Header} from '@/components/Header';
 import {Footer} from '@/components/Footer';
-import SEO from '@/components/SEO';
 import {Button} from '@/components/ui/button';
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
 import {Badge} from '@/components/ui/badge';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
 import {MICRO_SAAS_SERVICES,
             SERVICE_CATEGORIES,
+
             type} MicroSaasService
+
 } from '@/data/microSaasServices';
 import {Star,
             Clock,
@@ -112,11 +113,13 @@ import {Star,
             Sparkles} from 'lucide-react';
 import {Link} from 'react-router-dom';
 
+
 export default function MicroSaasServicesPage() { /* empty */ }
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
 
   const filteredServices = MICRO_SAAS_SERVICES.filter(service => { /* empty */ }
+
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -124,7 +127,9 @@ export default function MicroSaasServicesPage() { /* empty */ }
     return matchesCategory && matchesSearch;
   });
 
+
   const formatPrice = (price: number, currency: string, model: string) => { /* empty */ }
+
     if (model === 'monthly') return `${currency}${price}/month`;
     if (model === 'yearly') return `${currency}${price}/year`;
     if (model === 'one-time') return `${currency}${price}`;
@@ -134,6 +139,8 @@ export default function MicroSaasServicesPage() { /* empty */ }
   const ServiceCard = ({service}: {service}: MicroSaasService }) => (
     <Card className="group relative overflow-hidden border-0 bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate/50 backdrop-blur-sm hover:from-zion-blue-dark/70 hover:to-zion-slate/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-zion-purple/20">
       <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/5 to-zion-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+
 
       <CardHeader className="relative z-10">
         <div className="flex items-start justify-between mb-4">
@@ -146,6 +153,8 @@ export default function MicroSaasServicesPage() { /* empty */ }
             </CardDescription>
           </div>
         </div>
+
+
 
         <div className="flex items-center gap-2 mb-3">
           <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">
@@ -284,7 +293,9 @@ export default function MicroSaasServicesPage() { /* empty */ }
               Micro SAAS Services
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
+
               Transform your business with our innovative micro SAAS solutions. From AI-powered automation to enterprise IT services,
+
               we provide cutting-edge technology that drives growth and efficiency.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -297,6 +308,8 @@ export default function MicroSaasServicesPage() { /* empty */ }
                 kleber@ziontechgroup.com
               </Button>
             </div>
+
+
           </div>
         </div>
       </div>
@@ -391,6 +404,8 @@ export default function MicroSaasServicesPage() { /* empty */ }
               {filteredServices.map((service) => (<ServiceCard key={service.id} service={service}/>))}
             </div>
           </>)}
+
+
       </div>
 
       {/* CTA Section */}

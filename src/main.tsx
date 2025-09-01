@@ -7,6 +7,7 @@ import './index.css'
 import { registerServiceWorker } from './utils/serviceWorker'
 import { ErrorBoundary } from './components/ErrorBoundary'
 
+
 // Performance monitoring
 const reportWebVitals = (metric: any) => {
   if (process.env.NODE_ENV === 'development') {
@@ -33,6 +34,7 @@ const renderApp = () => {
 };
 
 // Initialize the application
+
 try {
   renderApp();
   
@@ -56,6 +58,7 @@ try {
   }
   
 } catch (error) {
+
   console.error('Failed to render application:', error);
   
   // Fallback error display
@@ -95,4 +98,5 @@ try {
       </div>
     `;
   }
+
 }

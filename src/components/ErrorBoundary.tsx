@@ -1,8 +1,11 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+
+
 import { 
   AlertTriangle, 
   RefreshCw, 
   Home, 
+
   Mail, 
   Bug, 
   Shield,
@@ -12,25 +15,30 @@ import {
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+
 }
 
 interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
+
   errorId: string;
   showDetails: boolean;
 }
 
 class ErrorBoundary extends Component<Props, State> {
+
   constructor(props: Props) {
     super(props);
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null,
+
       errorId: '',
       showDetails: false
+
     };
   }
 
@@ -38,7 +46,9 @@ class ErrorBoundary extends Component<Props, State> {
     return {
       hasError: true,
       error,
+
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+
     };
   }
 
@@ -46,6 +56,7 @@ class ErrorBoundary extends Component<Props, State> {
     this.setState({
       errorInfo
     });
+
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -57,10 +68,12 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   handleRetry = () => {
+
     this.setState({
       hasError: false,
       error: null,
       errorInfo: null,
+
       errorId: '',
       showDetails: false
     });
@@ -126,25 +139,31 @@ class ErrorBoundary extends Component<Props, State> {
                 <div className="text-sm text-gray-400">
                   <p><strong>Message:</strong> {error?.message || 'Unknown error'}</p>
                   <p><strong>Time:</strong> {new Date().toLocaleString()}</p>
+
                 </div>
               </div>
 
               {/* Action Buttons */}
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-6">
                 <button
                   onClick={this.handleRetry}
                   className="flex items-center justify-center gap-2 px-4 py-3 bg-zion-cyan hover:bg-zion-cyan-dark text-white rounded-lg font-medium transition-colors"
+
                 >
                   <RefreshCw className="w-4 h-4" />
                   Try Again
                 </button>
+
                 <button
                   onClick={this.handleGoHome}
                   className="flex items-center justify-center gap-2 px-4 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-medium transition-colors"
+
                 >
                   <Home className="w-4 h-4" />
                   Go Home
                 </button>
+
                 <button
                   onClick={this.handleReportError}
                   className="flex items-center justify-center gap-2 px-4 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-medium transition-colors"
@@ -207,6 +226,7 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
+
       );
     }
 
@@ -214,4 +234,6 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }
 
+
 export default ErrorBoundary;
+

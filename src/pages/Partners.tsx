@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const Partners = () => {
@@ -44,3 +45,4 @@ const Partners = () => {
 };
 
 export default Partners;
+

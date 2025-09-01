@@ -13,7 +13,9 @@ interface AuthState {
   isLoading: boolean;
   user: User | null;
   token: string | null;
+
   error: string | null;
+
 }
 
 const initialState: AuthState = {
@@ -25,6 +27,7 @@ const initialState: AuthState = {
   error: null,
 };
 
+
 const authSlice = createSlice({
   name: 'auth',
   initialState,
@@ -33,6 +36,7 @@ const authSlice = createSlice({
       state.isLoggedIn = action.payload;
     },
     setUser: (state, action: PayloadAction<User>) => {
+
       state.user = action.payload;
       state.isAuthenticated = true;
       state.error = null;
@@ -59,6 +63,7 @@ const authSlice = createSlice({
   },
 });
 
+
 export const { 
   setLoggedIn, 
   setUser, 
@@ -68,5 +73,6 @@ export const {
   setError, 
   clearError 
 } = authSlice.actions;
+
 
 export default authSlice.reducer;

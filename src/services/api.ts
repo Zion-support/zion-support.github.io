@@ -16,12 +16,14 @@ class ApiError extends Error {
   }
 }
 
+
 // Generic fetch wrapper with error handling
 async function apiRequest<T>(
   endpoint: string,
   options: RequestInit = {}
 ): Promise<ApiResponse<T>> {
   const url = `${API_BASE_URL}${endpoint}`;
+
   
   const config: RequestInit = {
     method: options.method || 'GET',
@@ -33,6 +35,7 @@ async function apiRequest<T>(
   };
 
   try {
+
     const response = await fetch(url, config);
 
     if (!response.ok) {
@@ -44,12 +47,14 @@ async function apiRequest<T>(
   } catch (error) {
     if (error instanceof ApiError) {
       throw error;
+
     }
     throw new ApiError(500, `Network error: ${error instanceof Error ? error.message : 'Unknown error'}`);
   }
 }
 
 export const api = {
+
   // Health check
   health: () => apiRequest('/health'),
 
@@ -110,6 +115,7 @@ export const api = {
       body: JSON.stringify(orderData),
     }),
   deleteOrder: (id: number) => apiRequest(`/orders/${id}`, { method: 'DELETE' }),
+
 };
 
 export default api;

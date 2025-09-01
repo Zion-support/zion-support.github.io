@@ -16,6 +16,7 @@ export const securityConfig = {
     'upgrade-insecure-requests': true
   },
 
+
   // Security Headers
   headers: {
     'X-Content-Type-Options': 'nosniff',
@@ -27,6 +28,7 @@ export const securityConfig = {
   },
 
   // Rate Limiting
+
   rateLimit: {
     windowMs: 15 * 60 * 1000, // 15 minutes
     max: 100, // limit each IP to 100 requests per windowMs
@@ -72,6 +74,7 @@ export const sanitizeInput = {
                 .replace(/<embed\b[^<]*(?:(?!<\/embed>)<[^<]*)*<\/embed>/gi, '');
   },
 
+
   // Remove SQL injection patterns
   sql: (input: string): string => {
     return input.replace(/['";\\]/g, '');
@@ -83,10 +86,12 @@ export const sanitizeInput = {
                 .replace(/on\w+\s*=/gi, '')
                 .replace(/<script/gi, '')
                 .replace(/<\/script>/gi, '');
+
   },
 
   // General sanitization
   general: (input: string): string => {
+
     return sanitizeInput.html(sanitizeInput.sql(sanitizeInput.xss(input)));
   }
 };
@@ -104,6 +109,7 @@ export const generateCSPHeader = (): string => {
 };
 
 // Validate input against patterns
+
 export const validateInput = {
   email: (email: string): boolean => securityConfig.validation.email.test(email),
   phone: (phone: string): boolean => securityConfig.validation.phone.test(phone),
@@ -116,6 +122,7 @@ export const validateInput = {
   decimal: (num: string): boolean => securityConfig.validation.decimal.test(num)
 };
 
+
 // Security middleware configuration
 export const securityMiddleware = {
   // Enable all security features
@@ -126,6 +133,7 @@ export const securityMiddleware = {
     session: true,
     validation: true
   }),
+
 
   // Enable only essential security features
   enableEssential: () => ({
@@ -145,5 +153,7 @@ export const securityMiddleware = {
     validation: true
   })
 };
+
+
 
 export default securityConfig;

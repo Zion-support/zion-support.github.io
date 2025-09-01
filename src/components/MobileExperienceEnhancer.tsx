@@ -1,9 +1,12 @@
+
 import React, { useEffect, useState, useCallback } from 'react';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Smartphone, 
   Tablet, 
   Monitor, 
+
   Touch, 
   Gesture, 
   Swipe, 
@@ -87,11 +90,13 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     return () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('orientationchange', handleOrientationChange);
+
     };
   }, []);
 
   // Touch gesture handling
   useEffect(() => {
+
     if (!enabled || !enableSwipeNavigation) return;
 
     const handleTouchStart = (e: TouchEvent) => {
@@ -256,10 +261,12 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     };
   }, [enabled, isMobile]);
 
+
   if (!enabled) return null;
 
   return (
     <>
+
       {/* Mobile Navigation Bar */}
       {isMobile && (
         <motion.div
@@ -444,10 +451,12 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
               >
                 Got it!
               </button>
+
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
+
 
       {/* Device Info Indicator (Development Only) */}
       {process.env.NODE_ENV === 'development' && (isMobile || isTablet) && (
@@ -489,3 +498,4 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 };
 
 export default MobileExperienceEnhancer;
+

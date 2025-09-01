@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from "./App.tsx";
@@ -17,6 +19,8 @@ import { AppLayout } from '@/layout/AppLayout';
 import { AuthProvider } from "./context/auth/AuthProvider";
 import { NotificationProvider } from "./context/notifications/NotificationContext";
 // Import analytics provider
+
+
 import { AnalyticsProvider } from './context/AnalyticsContext';
 import { ViewModeProvider } from './context/ViewModeContext';
 
@@ -30,7 +34,9 @@ const queryClient = new QueryClient({
     },
 });
 
+
 const rootElement = document.getElementById('root');
+
 
 const renderApp = () => {
     const app = (
@@ -63,6 +69,7 @@ const renderApp = () => {
         </React.StrictMode>
     );
 
+
     if (rootElement?.hasChildNodes()) {
         hydrateRoot(rootElement, app);
     } else if (rootElement) {
@@ -70,9 +77,12 @@ const renderApp = () => {
     }
 };
 
+
 function displayFatalError(message) {
     if (rootElement) {
         rootElement.innerHTML = `
+
+
             <div style="padding:20px;text-align:center;font-family:sans-serif;">
                 <h1>Application Error</h1>
                 <p>${message}</p>
@@ -88,6 +98,8 @@ try {
 }
 
 window.addEventListener('error', (e) => {
+
     console.error('Unhandled error:', e.error || e.message);
     displayFatalError(e.message);
 });
+

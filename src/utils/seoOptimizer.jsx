@@ -1,3 +1,4 @@
+
 export class SEOOptimizer {
     static DEFAULT_META_DESCRIPTIONS = {
         '/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.',
@@ -17,6 +18,7 @@ export class SEOOptimizer {
         '/solutions/enterprise': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.',
         '/solutions/healthcare': 'Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.'
     };
+
 
     static KEYWORD_MAPPINGS = {
         '/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'],
@@ -98,8 +100,10 @@ export class SEOOptimizer {
                 "@type": "Organization",
                 "name": "Zion Tech Group",
                 "url": "https://ziontechgroup.com",
+
                 "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"
             }
+
         };
 
         // Add specific structured data based on page type
@@ -230,4 +234,6 @@ export class SEOOptimizer {
 }
 
 export const seoOptimizer = new SEOOptimizer();
+
+
 export default SEOOptimizer;

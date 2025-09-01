@@ -1,3 +1,4 @@
+
 import React from 'react.ts';
 import { SEO  } from '../../components/SEO';
 import { Shield, 
@@ -13,6 +14,7 @@ import { Shield,
  } from 'lucide-react.ts';
 
 export default function Cybersecurity(...args: any[]): any {
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       <SEO 
@@ -21,6 +23,7 @@ export default function Cybersecurity(...args: any[]): any {
       />
       
       {/* Hero Section */}
+
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-red-900 via-orange-900 to-slate-900"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,6 +43,7 @@ export default function Cybersecurity(...args: any[]): any {
               >
                 Get Started with Cybersecurity
               </a>
+
             </div>
           </div>
         </div>
@@ -122,6 +126,7 @@ export default function Cybersecurity(...args: any[]): any {
       </section>
 
       {/* CTA Section */}
+
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
@@ -139,5 +144,6 @@ export default function Cybersecurity(...args: any[]): any {
         </div>
       </section>
     </div>
+
   );
 }

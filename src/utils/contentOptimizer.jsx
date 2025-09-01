@@ -1,3 +1,4 @@
+
 export class ContentOptimizer {
     static MIN_WORD_COUNT = 300;
     static MIN_HEADING_COUNT = 2;
@@ -191,5 +192,6 @@ export class ContentOptimizer {
         return optimizedContent;
     }
 }
+
 
 export default ContentOptimizer;

@@ -1,6 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
 import { 
   Users, 
   Target, 
@@ -20,18 +21,22 @@ import {
   Cloud,
   Lock,
   Database
+
 } from 'lucide-react';
 
 export default function About() {
   const stats = [
+
     { number: '500+', label: 'Projects Completed', description: 'Successfully delivered across industries' },
     { number: '50+', label: 'Team Members', description: 'Expert professionals and specialists' },
     { number: '25+', label: 'Countries Served', description: 'Global presence and reach' },
     { number: '99%', label: 'Client Satisfaction', description: 'Consistent high-quality delivery' }
+
   ];
 
   const values = [
     {
+
       icon: Lightbulb,
       title: 'Innovation First',
       description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creative solutions.',
@@ -54,11 +59,13 @@ export default function About() {
       title: 'Security & Trust',
       description: 'Your data and systems are protected with enterprise-grade security and compliance standards.',
       color: 'from-red-500 to-orange-500'
+
     }
   ];
 
   const teamMembers = [
     {
+
       name: 'Kleber Santos',
       role: 'CEO & Founder',
       bio: 'Visionary leader with 15+ years in technology innovation and business transformation.',
@@ -183,7 +190,9 @@ export default function About() {
               To democratize advanced technology and empower organizations with AI-powered solutions that drive 
               innovation, efficiency, and competitive advantage in the digital age.
             </p>
+
           </div>
+
 
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
             <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
@@ -206,10 +215,12 @@ export default function About() {
         >
           <h2 className="text-4xl font-bold text-white text-center mb-12">Our Core Values</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
             {values.map((value, index) => (
               <motion.div
                 key={value.title}
                 initial={{ opacity: 0, y: 20 }}
+
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center"
@@ -219,10 +230,12 @@ export default function About() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">{value.description}</p>
+
               </motion.div>
             ))}
           </div>
         </motion.div>
+
 
         {/* Technology Stack */}
         <motion.div
@@ -280,10 +293,12 @@ export default function About() {
                     </div>
                   ))}
                 </div>
+
               </motion.div>
             ))}
           </div>
         </motion.div>
+
 
         {/* Company Milestones */}
         <motion.div
@@ -330,10 +345,12 @@ export default function About() {
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join hundreds of organizations that have already transformed their operations with our AI-powered solutions.
+
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
+
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
               >
                 Get Started Today
@@ -341,6 +358,7 @@ export default function About() {
               <Link
                 to="/services"
                 className="border-2 border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
+
               >
                 Explore Our Services
               </Link>

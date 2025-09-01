@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useCallback } from 'react';
 import { 
   Activity, 
@@ -30,10 +31,12 @@ interface OptimizationSuggestion {
 
 const PerformanceOptimizer: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
+
     fcp: 0,
     lcp: 0,
     fid: 0,
     cls: 0,
+
     ttfb: 0,
     score: 0
   });
@@ -301,3 +304,4 @@ const PerformanceOptimizer: React.FC = () => {
 };
 
 export default PerformanceOptimizer;
+

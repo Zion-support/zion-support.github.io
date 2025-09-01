@@ -23,7 +23,9 @@ export const matchesSearchTerm = (text, searchTerm) => {
  */
 export const calculateRelevanceScore = (result, searchTerm) => {
     let score = 0;
+
     const term = searchTerm.toLowerCase();
+
     const title = result.title.toLowerCase();
     const description = result.description.toLowerCase();
 
@@ -192,3 +194,5 @@ export default {
     getSearchSuggestions,
     debounceSearch
 };
+
+

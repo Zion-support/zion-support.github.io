@@ -1,9 +1,12 @@
+
 import React, { useState, useRef, useEffect, useCallback } from 'react';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   MessageCircle, 
   X, 
   Send, 
+
   Bot, 
   User, 
   Sparkles,
@@ -29,13 +32,15 @@ import {
   Volume2,
   VolumeX,
   Star
+
 } from 'lucide-react';
 
 interface Message {
   id: string;
-  type: 'user' | 'assistant' | 'system';
-  content: string;
+  text: string;
+  sender: 'user' | 'assistant';
   timestamp: Date;
+
   isTyping?: boolean;
   attachments?: Array<{
     type: 'image' | 'file' | 'video';
@@ -75,14 +80,10 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
+
   const [inputValue, setInputValue] = useState('');
-  const [isTyping, setIsTyping] = useState(false);
-  const [isListening, setIsListening] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);
-  const [chatHistory, setChatHistory] = useState<Message[]>([]);
-  const [suggestions, setSuggestions] = useState<string[]>([]);
   const [isProcessing, setIsProcessing] = useState(false);
+
   const [currentTheme, setCurrentTheme] = useState(theme);
   const [showSuggestions, setShowSuggestions] = useState(false);
 
@@ -212,6 +213,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
 
   return (
     <div className={`fixed ${getPositionClasses()} z-50`}>
+
       {/* Chat Toggle Button */}
       {!isOpen && (
         <motion.button
@@ -220,7 +222,9 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={toggleChat}
+
           className={`w-14 h-14 rounded-full flex items-center justify-center transition-all duration-200 ${getThemeClasses()}`}
+
         >
           <MessageCircle className="w-6 h-6" />
         </motion.button>
@@ -234,6 +238,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
             transition={{ duration: 0.2 }}
+
             className={`w-80 h-96 rounded-lg border ${getThemeClasses()} flex flex-col`}
           >
             {/* Header */}
@@ -246,12 +251,15 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                 <button
                   onClick={toggleMinimize}
                   className="p-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
+
                 >
                   {isMinimized ? <Maximize2 className="w-4 h-4" /> : <Minimize2 className="w-4 h-4" />}
                 </button>
                 <button
                   onClick={toggleChat}
+
                   className="p-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
+
                 >
                   <X className="w-4 h-4" />
                 </button>
@@ -265,6 +273,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                   {messages.map((message) => (
                     <div
                       key={message.id}
+
                       className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                     >
                       <div
@@ -298,6 +307,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                           <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
                           <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
                           <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+
                         </div>
                       </div>
                     </div>
@@ -305,14 +315,17 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                   <div ref={messagesEndRef} />
                 </div>
 
+
                 {/* Input */}
                 <div className="p-4 border-t border-gray-200 dark:border-gray-700">
                   <div className="flex space-x-2">
+
                     <input
                       ref={inputRef}
                       type="text"
                       value={inputValue}
                       onChange={(e) => setInputValue(e.target.value)}
+
                       onKeyPress={handleKeyPress}
                       placeholder="Type your message..."
                       className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-transparent"
@@ -321,6 +334,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                       onClick={() => handleSendMessage(inputValue)}
                       disabled={!inputValue.trim() || isTyping}
                       className="px-3 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed"
+
                     >
                       <Send className="w-4 h-4" />
                     </button>
@@ -333,4 +347,6 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       </AnimatePresence>
     </div>
   );
+
 };
+
