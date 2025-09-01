@@ -8,12 +8,16 @@ export interface Listing {
   subcategory?: string;
   tags: string[];
   images: string[];
-seller: {
-    id: string;
-    name: string;
-    rating: number;
-<<<<<<< HEAD
-    reviews: number;
+  videoUrl?: string;
+  modelUrl?: string;
+  createdAt: string;
+  rating?: number;
+  reviewCount?: number;
+  featured?: boolean;
+  aiScore?: number; // Added aiScore as optional property
+  location?: string; // Adding location property to fix TypeScript errors
+  availability?: string; // Adding availability property to fix TypeScript errors
+}
 
 };
   location: string;

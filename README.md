@@ -139,7 +139,13 @@ Deployment instructions to be updated.
 
 See [docs/Integrations.md](docs/Integrations.md) for information on the Zion Assistant browser extension and Slack bot.
 
-### Preview production build
+## Product Media
+
+Product listings now support rich media. The `product_listings` table includes new
+`video_url` and `model_url` fields for MP4 videos and GLB 3D models. Upload media
+through the product submission form and view it in the gallery tabs (Images, Video, 3D).
+
+## Troubleshooting
 
 ```bash
 npm run preview

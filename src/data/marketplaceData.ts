@@ -23,11 +23,25 @@ seller: {
 ;
 export const marketplaceItems: MarketplaceItem[] = [{
 
-    id: 'ai-server-cluster',
-    title: 'AI-Powered Server Cluster',
-    category: 'products',
-    description: 'High-performance computing cluster optimized for AI workloads with GPU acceleration and scalable architecture.',
-    price: '$25,000',
+// Mock marketplace listings with more realistic data
+export const MARKETPLACE_LISTINGS: ProductListing[] = [
+  {
+    id: "ai-model-1",
+    title: "GPT-4 API Integration Package",
+    description: "Complete integration solution for GPT-4 API with ready-made templates, connectors, and usage optimization tools. Includes 10 hours of expert implementation support.",
+    category: "AI Models & APIs",
+    price: 1999,
+    currency: "$",
+    tags: ["GPT-4", "API Integration", "NLP"],
+    author: {
+      name: "AI Solutions Inc.",
+      id: "ai-solutions",
+      avatarUrl: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=500"],
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+    modelUrl: "/models/sample.glb",
+    createdAt: "2024-01-10T12:30:00.000Z",
     rating: 4.9,
     reviews: 127,
     views: 2847,
