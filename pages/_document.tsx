@@ -1,15 +1,16 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 
-class MyDocument extends Document {
+export default class MyDocument extends Document {
+  static async getInitialProps(ctx: DocumentContext) {
+    const initialProps = await Document.getInitialProps(ctx);
+    return { ...initialProps };
+  }
+
   render() {
     return (
-      <Html lang="en">
-        <Head>
-          <meta name="theme-color" content="#000000" />
-          <link rel="manifest" href="/site.webmanifest" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <body className="antialiased">
+      <Html>
+        <Head />
+        <body>
           <Main />
           <NextScript />
         </body>
@@ -17,5 +18,3 @@ class MyDocument extends Document {
     );
   }
 }
-
-export default MyDocument;
