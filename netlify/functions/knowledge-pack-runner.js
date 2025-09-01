@@ -1,26 +1,24 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🚀 knowledge-pack-runner function triggered');
+    console.log('🤖 knowledge-pack-runner function triggered');
     
-    // TODO: Implement knowledge-pack-runner logic here
+    // Basic function logic - can be expanded later
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'knowledge-pack-runner completed successfully',
+        message: 'knowledge-pack-runner function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'knowledge-pack-runner'
       })
     };
     
-    console.log('✅ knowledge-pack-runner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ knowledge-pack-runner failed:', error);
+    console.error('❌ knowledge-pack-runner function error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'knowledge-pack-runner failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'knowledge-pack-runner'
       })

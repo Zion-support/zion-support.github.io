@@ -1,26 +1,24 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🚀 a11y-alt-text-runner function triggered');
+    console.log('🤖 a11y-alt-text-runner function triggered');
     
-    // TODO: Implement a11y-alt-text-runner logic here
+    // Basic function logic - can be expanded later
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'a11y-alt-text-runner completed successfully',
+        message: 'a11y-alt-text-runner function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'a11y-alt-text-runner'
       })
     };
     
-    console.log('✅ a11y-alt-text-runner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ a11y-alt-text-runner failed:', error);
+    console.error('❌ a11y-alt-text-runner function error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'a11y-alt-text-runner failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'a11y-alt-text-runner'
       })

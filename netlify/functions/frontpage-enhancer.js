@@ -1,26 +1,24 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🚀 frontpage-enhancer function triggered');
+    console.log('🤖 frontpage-enhancer function triggered');
     
-    // TODO: Implement frontpage-enhancer logic here
+    // Basic function logic - can be expanded later
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'frontpage-enhancer completed successfully',
+        message: 'frontpage-enhancer function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'frontpage-enhancer'
       })
     };
     
-    console.log('✅ frontpage-enhancer completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ frontpage-enhancer failed:', error);
+    console.error('❌ frontpage-enhancer function error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'frontpage-enhancer failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'frontpage-enhancer'
       })

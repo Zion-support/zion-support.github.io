@@ -1,26 +1,24 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🚀 topics-map-runner function triggered');
+    console.log('🤖 topics-map-runner function triggered');
     
-    // TODO: Implement topics-map-runner logic here
+    // Basic function logic - can be expanded later
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'topics-map-runner completed successfully',
+        message: 'topics-map-runner function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'topics-map-runner'
       })
     };
     
-    console.log('✅ topics-map-runner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ topics-map-runner failed:', error);
+    console.error('❌ topics-map-runner function error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'topics-map-runner failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'topics-map-runner'
       })

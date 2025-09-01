@@ -1,26 +1,24 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🚀 front-ads-promoter function triggered');
+    console.log('🤖 front-ads-promoter function triggered');
     
-    // TODO: Implement front-ads-promoter logic here
+    // Basic function logic - can be expanded later
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'front-ads-promoter completed successfully',
+        message: 'front-ads-promoter function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'front-ads-promoter'
       })
     };
     
-    console.log('✅ front-ads-promoter completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ front-ads-promoter failed:', error);
+    console.error('❌ front-ads-promoter function error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'front-ads-promoter failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'front-ads-promoter'
       })

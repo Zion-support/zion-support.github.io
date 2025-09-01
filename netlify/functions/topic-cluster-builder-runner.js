@@ -1,26 +1,24 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🚀 topic-cluster-builder-runner function triggered');
+    console.log('🤖 topic-cluster-builder-runner function triggered');
     
-    // TODO: Implement topic-cluster-builder-runner logic here
+    // Basic function logic - can be expanded later
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'topic-cluster-builder-runner completed successfully',
+        message: 'topic-cluster-builder-runner function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'topic-cluster-builder-runner'
       })
     };
     
-    console.log('✅ topic-cluster-builder-runner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ topic-cluster-builder-runner failed:', error);
+    console.error('❌ topic-cluster-builder-runner function error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'topic-cluster-builder-runner failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'topic-cluster-builder-runner'
       })

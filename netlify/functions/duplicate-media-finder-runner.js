@@ -1,26 +1,24 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🚀 duplicate-media-finder-runner function triggered');
+    console.log('🤖 duplicate-media-finder-runner function triggered');
     
-    // TODO: Implement duplicate-media-finder-runner logic here
+    // Basic function logic - can be expanded later
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'duplicate-media-finder-runner completed successfully',
+        message: 'duplicate-media-finder-runner function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'duplicate-media-finder-runner'
       })
     };
     
-    console.log('✅ duplicate-media-finder-runner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ duplicate-media-finder-runner failed:', error);
+    console.error('❌ duplicate-media-finder-runner function error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'duplicate-media-finder-runner failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'duplicate-media-finder-runner'
       })

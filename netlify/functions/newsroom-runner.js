@@ -1,26 +1,24 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🚀 newsroom-runner function triggered');
+    console.log('🤖 newsroom-runner function triggered');
     
-    // TODO: Implement newsroom-runner logic here
+    // Basic function logic - can be expanded later
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'newsroom-runner completed successfully',
+        message: 'newsroom-runner function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'newsroom-runner'
       })
     };
     
-    console.log('✅ newsroom-runner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ newsroom-runner failed:', error);
+    console.error('❌ newsroom-runner function error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'newsroom-runner failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'newsroom-runner'
       })

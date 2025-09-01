@@ -1,26 +1,24 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🚀 marketing-and-features-promo function triggered');
+    console.log('🤖 marketing-and-features-promo function triggered');
     
-    // TODO: Implement marketing-and-features-promo logic here
+    // Basic function logic - can be expanded later
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'marketing-and-features-promo completed successfully',
+        message: 'marketing-and-features-promo function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'marketing-and-features-promo'
       })
     };
     
-    console.log('✅ marketing-and-features-promo completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ marketing-and-features-promo failed:', error);
+    console.error('❌ marketing-and-features-promo function error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'marketing-and-features-promo failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'marketing-and-features-promo'
       })

@@ -1,26 +1,24 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🚀 auto-discovery-runner function triggered');
+    console.log('🤖 auto-discovery-runner function triggered');
     
-    // TODO: Implement auto-discovery-runner logic here
+    // Basic function logic - can be expanded later
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'auto-discovery-runner completed successfully',
+        message: 'auto-discovery-runner function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'auto-discovery-runner'
       })
     };
     
-    console.log('✅ auto-discovery-runner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ auto-discovery-runner failed:', error);
+    console.error('❌ auto-discovery-runner function error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'auto-discovery-runner failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'auto-discovery-runner'
       })

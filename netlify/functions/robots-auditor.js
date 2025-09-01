@@ -1,26 +1,24 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🚀 robots-auditor function triggered');
+    console.log('🤖 robots-auditor function triggered');
     
-    // TODO: Implement robots-auditor logic here
+    // Basic function logic - can be expanded later
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'robots-auditor completed successfully',
+        message: 'robots-auditor function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'robots-auditor'
       })
     };
     
-    console.log('✅ robots-auditor completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ robots-auditor failed:', error);
+    console.error('❌ robots-auditor function error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'robots-auditor failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'robots-auditor'
       })

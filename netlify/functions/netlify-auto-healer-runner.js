@@ -3,156 +3,156 @@ const path = require('path');
 
 exports.handler = async function(event, context) {
   try {
-    console.log('🚀 Netlify Auto-Healer Runner function triggered');
+    console.log('🤖 netlify-auto-healer-runner function triggered');
     
-    // Check system health
-    const healthChecks = await performHealthChecks();
+    // Perform health checks
+    const healthChecks = [];
     
-    // Attempt auto-healing for any issues found
-    const healingResults = await performAutoHealing(healthChecks);
+    // Check 1: Functions directory exists and has functions
+    try {
+      const functionsDir = path.join(process.cwd(), 'netlify', 'functions');
+      if (fs.existsSync(functionsDir)) {
+        const functionFiles = fs.readdirSync(functionsDir).filter(f => f.endsWith('.js'));
+        healthChecks.push({
+          check: 'functions-directory',
+          status: 'healthy',
+          details: `${functionFiles.length} functions found`,
+          count: functionFiles.length
+        });
+      } else {
+        healthChecks.push({
+          check: 'functions-directory',
+          status: 'unhealthy',
+          details: 'Functions directory not found',
+          action: 'create-functions-directory'
+        });
+      }
+    } catch (error) {
+      healthChecks.push({
+        check: 'functions-directory',
+        status: 'error',
+        details: error.message,
+        action: 'investigate-permissions'
+      });
+    }
+    
+    // Check 2: Logs directory exists and writable
+    try {
+      const logsDir = path.join(process.cwd(), 'automation', 'logs');
+      if (!fs.existsSync(logsDir)) {
+        fs.mkdirSync(logsDir, { recursive: true });
+        healthChecks.push({
+          check: 'logs-directory',
+          status: 'healed',
+          details: 'Created logs directory',
+          action: 'directory-created'
+        });
+      } else {
+        // Test write access
+        const testFile = path.join(logsDir, 'health-check-test.json');
+        fs.writeFileSync(testFile, JSON.stringify({ test: true, timestamp: new Date().toISOString() }));
+        fs.unlinkSync(testFile);
+        healthChecks.push({
+          check: 'logs-directory',
+          status: 'healthy',
+          details: 'Logs directory is writable'
+        });
+      }
+    } catch (error) {
+      healthChecks.push({
+        check: 'logs-directory',
+        status: 'unhealthy',
+        details: error.message,
+        action: 'fix-permissions'
+      });
+    }
+    
+    // Check 3: Manifest file exists and valid
+    try {
+      const manifestPath = path.join(process.cwd(), 'netlify', 'functions', 'functions-manifest.json');
+      if (fs.existsSync(manifestPath)) {
+        const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+        if (manifest.functions && Array.isArray(manifest.functions)) {
+          healthChecks.push({
+            check: 'functions-manifest',
+            status: 'healthy',
+            details: `Manifest contains ${manifest.functions.length} functions`,
+            count: manifest.functions.length
+          });
+        } else {
+          healthChecks.push({
+            check: 'functions-manifest',
+            status: 'unhealthy',
+            details: 'Invalid manifest format',
+            action: 'regenerate-manifest'
+          });
+        }
+      } else {
+        healthChecks.push({
+          check: 'functions-manifest',
+          status: 'unhealthy',
+          details: 'Manifest file not found',
+          action: 'generate-manifest'
+        });
+      }
+    } catch (error) {
+      healthChecks.push({
+        check: 'functions-manifest',
+        status: 'error',
+        details: error.message,
+        action: 'investigate-manifest'
+      });
+    }
+    
+    // Calculate overall health status
+    const healthyChecks = healthChecks.filter(c => c.status === 'healthy').length;
+    const totalChecks = healthChecks.length;
+    const overallHealth = healthyChecks === totalChecks ? 'healthy' : 'degraded';
+    
+    // Generate health report
+    const healthReport = {
+      timestamp: new Date().toISOString(),
+      overallHealth: overallHealth,
+      summary: {
+        total: totalChecks,
+        healthy: healthyChecks,
+        unhealthy: healthChecks.filter(c => c.status === 'unhealthy').length,
+        errors: healthChecks.filter(c => c.status === 'error').length,
+        healed: healthChecks.filter(c => c.status === 'healed').length
+      },
+      checks: healthChecks
+    };
+    
+    // Save health report
+    try {
+      const logsDir = path.join(process.cwd(), 'automation', 'logs');
+      fs.mkdirSync(logsDir, { recursive: true });
+      const reportPath = path.join(logsDir, 'health-report.json');
+      fs.writeFileSync(reportPath, JSON.stringify(healthReport, null, 2));
+    } catch (error) {
+      console.error('Failed to save health report:', error.message);
+    }
     
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Netlify auto-healing completed successfully',
+        message: 'netlify-auto-healer-runner function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'netlify-auto-healer-runner',
-        healthChecks,
-        healingResults,
-        summary: {
-          totalChecks: healthChecks.length,
-          issuesFound: healthChecks.filter(check => !check.healthy).length,
-          healingAttempts: healingResults.length,
-          successfulHeals: healingResults.filter(heal => heal.success).length
-        }
+        healthReport: healthReport
       })
     };
     
-    console.log('✅ Netlify Auto-Healer Runner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ Netlify Auto-Healer Runner failed:', error);
+    console.error('❌ netlify-auto-healer-runner function error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Netlify auto-healing failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'netlify-auto-healer-runner'
       })
     };
   }
 };
-
-async function performHealthChecks() {
-  const checks = [];
-  
-  // Check if automation directory exists and is accessible
-  try {
-    const automationDir = path.join(process.cwd(), 'automation');
-    const stats = fs.statSync(automationDir);
-    checks.push({
-      name: 'automation_directory',
-      healthy: stats.isDirectory(),
-      details: { path: automationDir, exists: true }
-    });
-  } catch (error) {
-    checks.push({
-      name: 'automation_directory',
-      healthy: false,
-      details: { error: error.message }
-    });
-  }
-  
-  // Check if logs directory exists
-  try {
-    const logsDir = path.join(process.cwd(), 'automation', 'logs');
-    const stats = fs.statSync(logsDir);
-    checks.push({
-      name: 'logs_directory',
-      healthy: stats.isDirectory(),
-      details: { path: logsDir, exists: true }
-    });
-  } catch (error) {
-    checks.push({
-      name: 'logs_directory',
-      healthy: false,
-      details: { error: error.message }
-    });
-  }
-  
-  // Check if netlify functions directory exists
-  try {
-    const functionsDir = path.join(process.cwd(), 'netlify', 'functions');
-    const stats = fs.statSync(functionsDir);
-    const files = fs.readdirSync(functionsDir);
-    checks.push({
-      name: 'netlify_functions',
-      healthy: files.length > 0,
-      details: { path: functionsDir, functionCount: files.filter(f => f.endsWith('.js')).length }
-    });
-  } catch (error) {
-    checks.push({
-      name: 'netlify_functions',
-      healthy: false,
-      details: { error: error.message }
-    });
-  }
-  
-  return checks;
-}
-
-async function performAutoHealing(healthChecks) {
-  const results = [];
-  
-  for (const check of healthChecks) {
-    if (check.healthy) continue;
-    
-    try {
-      switch (check.name) {
-        case 'logs_directory':
-          if (!check.healthy) {
-            const logsDir = path.join(process.cwd(), 'automation', 'logs');
-            fs.mkdirSync(logsDir, { recursive: true });
-            results.push({
-              check: check.name,
-              success: true,
-              action: 'created_logs_directory',
-              details: { path: logsDir }
-            });
-          }
-          break;
-          
-        case 'netlify_functions':
-          if (!check.healthy) {
-            const functionsDir = path.join(process.cwd(), 'netlify', 'functions');
-            fs.mkdirSync(functionsDir, { recursive: true });
-            results.push({
-              check: check.name,
-              success: true,
-              action: 'created_functions_directory',
-              details: { path: functionsDir }
-            });
-          }
-          break;
-          
-        default:
-          results.push({
-            check: check.name,
-            success: false,
-            action: 'no_healing_strategy',
-            details: { message: 'No auto-healing strategy available for this check' }
-          });
-      }
-    } catch (error) {
-      results.push({
-        check: check.name,
-        success: false,
-        action: 'healing_failed',
-        details: { error: error.message }
-      });
-    }
-  }
-  
-  return results;
-}

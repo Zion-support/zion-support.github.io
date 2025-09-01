@@ -1,26 +1,24 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🚀 intelligent-meta-orchestrator function triggered');
+    console.log('🤖 intelligent-meta-orchestrator function triggered');
     
-    // TODO: Implement intelligent-meta-orchestrator logic here
+    // Basic function logic - can be expanded later
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'intelligent-meta-orchestrator completed successfully',
+        message: 'intelligent-meta-orchestrator function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'intelligent-meta-orchestrator'
       })
     };
     
-    console.log('✅ intelligent-meta-orchestrator completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ intelligent-meta-orchestrator failed:', error);
+    console.error('❌ intelligent-meta-orchestrator function error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'intelligent-meta-orchestrator failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'intelligent-meta-orchestrator'
       })

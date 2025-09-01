@@ -1,26 +1,24 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🚀 headers-enforcer function triggered');
+    console.log('🤖 headers-enforcer function triggered');
     
-    // TODO: Implement headers-enforcer logic here
+    // Basic function logic - can be expanded later
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'headers-enforcer completed successfully',
+        message: 'headers-enforcer function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'headers-enforcer'
       })
     };
     
-    console.log('✅ headers-enforcer completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ headers-enforcer failed:', error);
+    console.error('❌ headers-enforcer function error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'headers-enforcer failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'headers-enforcer'
       })

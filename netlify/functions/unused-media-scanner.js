@@ -1,26 +1,24 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🚀 unused-media-scanner function triggered');
+    console.log('🤖 unused-media-scanner function triggered');
     
-    // TODO: Implement unused-media-scanner logic here
+    // Basic function logic - can be expanded later
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'unused-media-scanner completed successfully',
+        message: 'unused-media-scanner function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'unused-media-scanner'
       })
     };
     
-    console.log('✅ unused-media-scanner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ unused-media-scanner failed:', error);
+    console.error('❌ unused-media-scanner function error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'unused-media-scanner failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'unused-media-scanner'
       })

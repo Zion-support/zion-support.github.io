@@ -1,26 +1,24 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🚀 docs-search-index-runner function triggered');
+    console.log('🤖 docs-search-index-runner function triggered');
     
-    // TODO: Implement docs-search-index-runner logic here
+    // Basic function logic - can be expanded later
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'docs-search-index-runner completed successfully',
+        message: 'docs-search-index-runner function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'docs-search-index-runner'
       })
     };
     
-    console.log('✅ docs-search-index-runner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ docs-search-index-runner failed:', error);
+    console.error('❌ docs-search-index-runner function error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'docs-search-index-runner failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'docs-search-index-runner'
       })

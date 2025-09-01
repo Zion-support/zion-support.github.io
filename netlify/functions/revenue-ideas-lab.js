@@ -1,26 +1,24 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🚀 revenue-ideas-lab function triggered');
+    console.log('🤖 revenue-ideas-lab function triggered');
     
-    // TODO: Implement revenue-ideas-lab logic here
+    // Basic function logic - can be expanded later
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'revenue-ideas-lab completed successfully',
+        message: 'revenue-ideas-lab function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'revenue-ideas-lab'
       })
     };
     
-    console.log('✅ revenue-ideas-lab completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ revenue-ideas-lab failed:', error);
+    console.error('❌ revenue-ideas-lab function error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'revenue-ideas-lab failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'revenue-ideas-lab'
       })

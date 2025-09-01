@@ -1,26 +1,24 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🚀 component-coupling-graph-runner function triggered');
+    console.log('🤖 component-coupling-graph-runner function triggered');
     
-    // TODO: Implement component-coupling-graph-runner logic here
+    // Basic function logic - can be expanded later
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'component-coupling-graph-runner completed successfully',
+        message: 'component-coupling-graph-runner function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'component-coupling-graph-runner'
       })
     };
     
-    console.log('✅ component-coupling-graph-runner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ component-coupling-graph-runner failed:', error);
+    console.error('❌ component-coupling-graph-runner function error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'component-coupling-graph-runner failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'component-coupling-graph-runner'
       })

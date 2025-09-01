@@ -1,26 +1,24 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🚀 todo-summary-runner function triggered');
+    console.log('🤖 todo-summary-runner function triggered');
     
-    // TODO: Implement todo-summary-runner logic here
+    // Basic function logic - can be expanded later
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'todo-summary-runner completed successfully',
+        message: 'todo-summary-runner function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'todo-summary-runner'
       })
     };
     
-    console.log('✅ todo-summary-runner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ todo-summary-runner failed:', error);
+    console.error('❌ todo-summary-runner function error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'todo-summary-runner failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'todo-summary-runner'
       })

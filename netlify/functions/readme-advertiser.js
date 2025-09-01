@@ -1,26 +1,24 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🚀 readme-advertiser function triggered');
+    console.log('🤖 readme-advertiser function triggered');
     
-    // TODO: Implement readme-advertiser logic here
+    // Basic function logic - can be expanded later
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'readme-advertiser completed successfully',
+        message: 'readme-advertiser function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'readme-advertiser'
       })
     };
     
-    console.log('✅ readme-advertiser completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ readme-advertiser failed:', error);
+    console.error('❌ readme-advertiser function error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'readme-advertiser failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'readme-advertiser'
       })

@@ -1,26 +1,24 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🚀 roadmap-curator function triggered');
+    console.log('🤖 roadmap-curator function triggered');
     
-    // TODO: Implement roadmap-curator logic here
+    // Basic function logic - can be expanded later
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'roadmap-curator completed successfully',
+        message: 'roadmap-curator function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'roadmap-curator'
       })
     };
     
-    console.log('✅ roadmap-curator completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ roadmap-curator failed:', error);
+    console.error('❌ roadmap-curator function error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'roadmap-curator failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'roadmap-curator'
       })

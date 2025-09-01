@@ -1,26 +1,24 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🚀 metadata-optimizer-runner function triggered');
+    console.log('🤖 metadata-optimizer-runner function triggered');
     
-    // TODO: Implement metadata-optimizer-runner logic here
+    // Basic function logic - can be expanded later
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'metadata-optimizer-runner completed successfully',
+        message: 'metadata-optimizer-runner function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'metadata-optimizer-runner'
       })
     };
     
-    console.log('✅ metadata-optimizer-runner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ metadata-optimizer-runner failed:', error);
+    console.error('❌ metadata-optimizer-runner function error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'metadata-optimizer-runner failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'metadata-optimizer-runner'
       })

@@ -1,26 +1,24 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🚀 canonical-auditor function triggered');
+    console.log('🤖 canonical-auditor function triggered');
     
-    // TODO: Implement canonical-auditor logic here
+    // Basic function logic - can be expanded later
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'canonical-auditor completed successfully',
+        message: 'canonical-auditor function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'canonical-auditor'
       })
     };
     
-    console.log('✅ canonical-auditor completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ canonical-auditor failed:', error);
+    console.error('❌ canonical-auditor function error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'canonical-auditor failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'canonical-auditor'
       })

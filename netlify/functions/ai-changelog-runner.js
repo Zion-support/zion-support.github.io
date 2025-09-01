@@ -1,26 +1,24 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🚀 ai-changelog-runner function triggered');
+    console.log('🤖 ai-changelog-runner function triggered');
     
-    // TODO: Implement ai-changelog-runner logic here
+    // Basic function logic - can be expanded later
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'ai-changelog-runner completed successfully',
+        message: 'ai-changelog-runner function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'ai-changelog-runner'
       })
     };
     
-    console.log('✅ ai-changelog-runner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ ai-changelog-runner failed:', error);
+    console.error('❌ ai-changelog-runner function error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'ai-changelog-runner failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'ai-changelog-runner'
       })
