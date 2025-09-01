@@ -3,68 +3,78 @@ import { Routes, Route } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
 import { Header } from './components/header/Header';
 import { Footer } from './components/Footer';
+import { NotificationProvider } from './components/ui/NotificationSystem';
+import { ThemeProvider } from './context/ThemeContext';
+import { ModernLoader } from './components/ui/ModernLoader';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.default })));
 const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.default })));
 const ComprehensivePricing = lazy(() => import('./pages/ComprehensivePricing2025').then(module => ({ default: module.default })));
 const SimplePage = lazy(() => import('./pages/SimplePage').then(module => ({ default: module.default })));
+const SettingsPage = lazy(() => import('./pages/SettingsPage').then(module => ({ default: module.default })));
+const AnalyticsDashboard = lazy(() => import('./components/dashboard/AnalyticsDashboard').then(module => ({ default: module.default })));
+const PerformanceMonitor = lazy(() => import('./components/monitoring/PerformanceMonitor').then(module => ({ default: module.default })));
 
 // Loading component
 const PageLoader = () => (
   <div className="flex items-center justify-center min-h-screen bg-zion-blue-dark">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-zion-cyan mx-auto mb-4"></div>
-      <p className="text-zion-slate-light">Loading...</p>
-    </div>
+    <ModernLoader size="lg" variant="spinner" text="Loading..." />
   </div>
 );
 
 function App() {
   return (
-    <ErrorBoundary fallback={<div>Something went wrong. Please refresh the page.</div>}>
-      <div className="App">
-        <Header />
-        <main className="min-h-screen">
-          <Suspense fallback={<PageLoader />}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/services/*" element={<ServicesPage />} />
-              <Route path="/pricing" element={<ComprehensivePricing />} />
-              <Route path="/comprehensive-services" element={<SimplePage />} />
-              <Route path="/solutions" element={<SimplePage />} />
-              <Route path="/solutions/*" element={<SimplePage />} />
-              <Route path="/about" element={<SimplePage />} />
-              <Route path="/about/*" element={<SimplePage />} />
-              <Route path="/contact" element={<SimplePage />} />
-              <Route path="/blog" element={<SimplePage />} />
-              <Route path="/blog/*" element={<SimplePage />} />
-              <Route path="/careers" element={<SimplePage />} />
-              <Route path="/partners" element={<SimplePage />} />
-              <Route path="/press" element={<SimplePage />} />
-              <Route path="/case-studies" element={<SimplePage />} />
-              <Route path="/research-development" element={<SimplePage />} />
-              <Route path="/docs" element={<SimplePage />} />
-              <Route path="/api" element={<SimplePage />} />
-              <Route path="/developer" element={<SimplePage />} />
-              <Route path="/help" element={<SimplePage />} />
-              <Route path="/training" element={<SimplePage />} />
-              <Route path="/community" element={<SimplePage />} />
-              <Route path="/support" element={<SimplePage />} />
-              <Route path="/sitemap" element={<SimplePage />} />
-              <Route path="/comprehensive-sitemap" element={<SimplePage />} />
-              <Route path="/privacy-policy" element={<SimplePage />} />
-              <Route path="/terms-of-service" element={<SimplePage />} />
-              <Route path="/cookie-policy" element={<SimplePage />} />
-              <Route path="/request-quote" element={<SimplePage />} />
-              <Route path="*" element={<SimplePage />} />
-            </Routes>
-          </Suspense>
-        </main>
-        <Footer />
-      </div>
-    </ErrorBoundary>
+    <ThemeProvider>
+      <NotificationProvider>
+        <ErrorBoundary fallback={<div>Something went wrong. Please refresh the page.</div>}>
+          <div className="App">
+            <Header />
+            <main className="min-h-screen">
+              <Suspense fallback={<PageLoader />}>
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/services/*" element={<ServicesPage />} />
+                  <Route path="/pricing" element={<ComprehensivePricing />} />
+                  <Route path="/comprehensive-services" element={<SimplePage />} />
+                  <Route path="/solutions" element={<SimplePage />} />
+                  <Route path="/solutions/*" element={<SimplePage />} />
+                  <Route path="/about" element={<SimplePage />} />
+                  <Route path="/about/*" element={<SimplePage />} />
+                  <Route path="/contact" element={<SimplePage />} />
+                  <Route path="/blog" element={<SimplePage />} />
+                  <Route path="/blog/*" element={<SimplePage />} />
+                  <Route path="/careers" element={<SimplePage />} />
+                  <Route path="/partners" element={<SimplePage />} />
+                  <Route path="/press" element={<SimplePage />} />
+                  <Route path="/case-studies" element={<SimplePage />} />
+                  <Route path="/research-development" element={<SimplePage />} />
+                  <Route path="/docs" element={<SimplePage />} />
+                  <Route path="/api" element={<SimplePage />} />
+                  <Route path="/developer" element={<SimplePage />} />
+                  <Route path="/help" element={<SimplePage />} />
+                  <Route path="/training" element={<SimplePage />} />
+                  <Route path="/community" element={<SimplePage />} />
+                  <Route path="/support" element={<SimplePage />} />
+                  <Route path="/sitemap" element={<SimplePage />} />
+                  <Route path="/comprehensive-sitemap" element={<SimplePage />} />
+                  <Route path="/privacy-policy" element={<SimplePage />} />
+                  <Route path="/terms-of-service" element={<SimplePage />} />
+                  <Route path="/cookie-policy" element={<SimplePage />} />
+                  <Route path="/request-quote" element={<SimplePage />} />
+                  <Route path="/settings" element={<SettingsPage />} />
+                  <Route path="/analytics" element={<AnalyticsDashboard />} />
+                  <Route path="/monitoring" element={<PerformanceMonitor />} />
+                  <Route path="*" element={<SimplePage />} />
+                </Routes>
+              </Suspense>
+            </main>
+            <Footer />
+          </div>
+        </ErrorBoundary>
+      </NotificationProvider>
+    </ThemeProvider>
   );
 }
 

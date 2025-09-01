@@ -11,6 +11,7 @@ import { EnhancedSearchInput } from '../search/EnhancedSearchInput';
 import { generateSearchSuggestions } from '../../data/marketplaceData';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../ui/Button';
+import { ThemeToggle } from '../ui/ThemeToggle';
 import { Menu, X, Sparkles, Phone } from 'lucide-react';
 import { Search as SearchIcon } from 'lucide-react';
 
@@ -110,6 +111,9 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
 
         {/* Right side actions */}
         <div className="flex items-center space-x-4">
+          {/* Theme Toggle */}
+          <ThemeToggle className="hidden sm:flex" />
+          
           {/* Contact button */}
           <Button
             variant="ghost"
