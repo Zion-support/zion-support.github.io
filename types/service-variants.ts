@@ -1,203 +1,215 @@
-<<<<<<< HEAD
-  | 'holographic''
-  | 'quantum''
-  | 'cyberpunk''
-  | 'neural''
-  | 'quantum-holographic''
-  | 'quantum-advanced''
-  | 'holographic-advanced''
-  | 'neural-quantum''
-  | 'quantum-cyberpunk''
-  | 'holographic-neural''
-  | 'quantum-holographic-advanced''
-  | 'quantum-matrix''
-  | 'neural-cyberpunk''
-  | 'holographic-quantum''
-  | 'quantum-neural-advanced''
-  | 'cyberpunk-holographic''
-  | 'quantum-space''
-  | 'ai-futuristic''
-  | 'quantum-entanglement''
-  | 'holographic-matrix''
-  | 'neural-quantum-cyberpunk''
-  | 'quantum-iot''
-  | 'quantum-logistics''
-  | 'quantum-financial''
-  | 'quantum-holographic''
-  | 'quantum-neural''
-  | 'quantum-cyberpunk''
-  | 'neural-quantum-cyberpunk''
-  | 'quantum-energy''
-  | 'quantum-futuristic''
-  | 'cloud-futuristic''
-  | 'devops-futuristic''
-  | 'security-futuristic''
-  | 'data-futuristic''
-  | 'mobility-futuristic''
-  | 'network-futuristic''
-  | 'backup-futuristic''
-  | 'itsm-futuristic''
-  | 'monitoring-futuristic''
-  | 'blockchain-futuristic''
-  | 'metaverse-futuristic''
-  | 'iot-futuristic''
-  | 'edge-futuristic''
-  | 'ar-futuristic''
-  | 'digital-twin-futuristic''
-  | '5g-futuristic''
-  | 'biometric-futuristic''
-  | 'autonomous-futuristic''
-  | 'enterprise-futuristic''
-  | 'holographic-futuristic''
-  | 'biotech-futuristic''
-  | 'simulation-futuristic''
-  | 'micro-saas-futuristic''
-  | 'hr-futuristic''
-  | 'marketing-futuristic''
-  | 'legal-futuristic''
-  | 'customer-service-futuristic''
-  | 'project-management-futuristic''
-  | 'fintech''
-  | 'fintech-futuristic''
-  | 'defi-futuristic''
-  | 'quantum-bio-enterprise''
-  | 'quantum-materials-enterprise''
-  | 'supply-chain-futuristic''
-  | 'ai-content''
-  | 'ai-education''
-  | 'it-futuristic''
-  | 'ai-consciousness''
-  | 'healthcare-futuristic''
-  | 'cybersecurity''
-  | 'ai-revolutionary''
-  | 'quantum-revolutionary''
-  | 'ai-quantum-revolutionary''
-  | 'quantum-ai-revolutionary''
-  | 'quantum-space-revolutionary''
-  | 'quantum-iot-revolutionary''
-  | 'quantum-energy-revolutionary''
-  | 'quantum-logistics-revolutionary''
-  | 'quantum-ai-finance''
-  | 'ai-emotional''
-  | 'ai-multimodal''
-  | 'ai-autonomous''
-  | 'ai-creative''
-  | 'ai-healthcare''
-  | 'ai-prediction''
-  | 'neural-revolutionary''
-  | 'quantum-security''
-  | 'quantum-ai-interface''
-  | 'ai-autonomous-vehicles''
-  | 'quantum-iot-revolutionary''
-  | 'space-futuristic''
-  | 'consulting-futuristic''
-  | 'api-futuristic''
-=======
-<<<<<<< HEAD
-export type ServiceVariant =
-  | 'default'
-=======
-export type ServiceVariant = | 'default'
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  | 'holographic'
-  | 'quantum'
-  | 'cyberpunk'
-  | 'neural'
-  | 'quantum-holographic'
-  | 'quantum-advanced'
-  | 'holographic-advanced'
-  | 'neural-quantum'
-  | 'quantum-cyberpunk'
-  | 'holographic-neural'
-  | 'quantum-holographic-advanced'
-  | 'quantum-matrix'
-  | 'neural-cyberpunk'
-  | 'holographic-quantum'
-  | 'quantum-neural-advanced'
-  | 'cyberpunk-holographic'
-  | 'quantum-space'
-  | 'ai-futuristic'
-  | 'quantum-entanglement'
-  | 'holographic-matrix'
-  | 'neural-quantum-cyberpunk'
-  | 'quantum-iot'
-  | 'quantum-logistics'
-  | 'quantum-financial'
-  | 'quantum-holographic'
-  | 'quantum-neural'
-  | 'quantum-cyberpunk'
-  | 'neural-quantum-cyberpunk'
-  | 'quantum-energy'
-  | 'quantum-futuristic'
-  | 'cloud-futuristic'
-  | 'devops-futuristic'
-  | 'security-futuristic'
-  | 'data-futuristic'
-  | 'mobility-futuristic'
-  | 'network-futuristic'
-  | 'backup-futuristic'
-  | 'itsm-futuristic'
-  | 'monitoring-futuristic'
-  | 'blockchain-futuristic'
-  | 'metaverse-futuristic'
-  | 'iot-futuristic'
-  | 'edge-futuristic'
-  | 'ar-futuristic'
-  | 'digital-twin-futuristic'
-  | '5g-futuristic'
-  | 'biometric-futuristic'
-  | 'autonomous-futuristic'
-  | 'enterprise-futuristic'
-  | 'holographic-futuristic'
-  | 'biotech-futuristic'
-  | 'simulation-futuristic'
-  | 'micro-saas-futuristic'
-  | 'hr-futuristic'
-  | 'marketing-futuristic'
-  | 'legal-futuristic'
-  | 'customer-service-futuristic'
-  | 'project-management-futuristic'
-  | 'fintech'
-  | 'fintech-futuristic'
-  | 'defi-futuristic'
-  | 'quantum-bio-enterprise'
-  | 'quantum-materials-enterprise'
-  | 'supply-chain-futuristic'
-  | 'ai-content'
-  | 'ai-education'
-  | 'it-futuristic'
-  | 'ai-consciousness'
-  | 'healthcare-futuristic'
+export interface ServiceVariant {
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+  features: string[];
+  pricing: {
+    basic: number;
+    premium: number;
+    enterprise: number;
+  };
+  technologies: string[];
+  timeline: string;
+  deliverables: string[];
+}
+
+export type ServiceCategory = 
+  | 'ai-development'
+  | 'cloud-services'
+  | 'web-development'
+  | 'mobile-development'
+  | 'blockchain'
+  | 'iot'
   | 'cybersecurity'
-  | 'ai-revolutionary'
-  | 'quantum-revolutionary'
-  | 'ai-quantum-revolutionary'
-  | 'quantum-ai-revolutionary'
-  | 'quantum-space-revolutionary'
-  | 'quantum-iot-revolutionary'
-  | 'quantum-energy-revolutionary'
-  | 'quantum-logistics-revolutionary'
-  | 'quantum-ai-finance'
-  | 'ai-emotional'
-  | 'ai-multimodal'
-  | 'ai-autonomous'
-  | 'ai-creative'
-  | 'ai-healthcare'
-  | 'ai-prediction'
-  | 'neural-revolutionary'
-  | 'quantum-security'
-  | 'quantum-ai-interface'
-  | 'ai-autonomous-vehicles'
-  | 'quantum-iot-revolutionary'
-  | 'space-futuristic'
-  | 'consulting-futuristic'
-  | 'api-futuristic'
->>>>>>> cursor/add-new-services-and-advertise-them-971c
-  | 'integration-futuristic';
-  | 'monitoring-futuristic';
-  | 'backup-futuristic';
-  | 'analytics-futuristic';
-  | 'emerging-tech';
-  | 'space-tech';
-  | 'autonomous-systems';
-  | 'quantum-futuristic';
+  | 'data-analytics'
+  | 'digital-transformation'
+  | 'consulting';
+
+export type ServiceTheme = 
+  | 'modern'
+  | 'futuristic'
+  | 'minimal'
+  | 'corporate'
+  | 'creative'
+  | 'tech'
+  | 'enterprise'
+  | 'startup'
+  | 'healthcare'
+  | 'finance'
+  | 'education'
+  | 'retail'
+  | 'manufacturing'
+  | 'government'
+  | 'nonprofit';
+
+export interface ServicePackage {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  duration: string;
+  features: string[];
+  included: string[];
+  notIncluded: string[];
+  recommended: boolean;
+}
+
+export interface ServiceTestimonial {
+  id: string;
+  name: string;
+  company: string;
+  role: string;
+  content: string;
+  rating: number;
+  image?: string;
+}
+
+export interface ServiceCaseStudy {
+  id: string;
+  title: string;
+  client: string;
+  industry: string;
+  challenge: string;
+  solution: string;
+  results: string[];
+  technologies: string[];
+  duration: string;
+  teamSize: number;
+  image?: string;
+}
+
+export interface ServiceFAQ {
+  id: string;
+  question: string;
+  answer: string;
+  category: string;
+}
+
+export interface ServiceProcess {
+  id: string;
+  step: number;
+  title: string;
+  description: string;
+  duration: string;
+  deliverables: string[];
+}
+
+export interface ServiceTeam {
+  id: string;
+  name: string;
+  role: string;
+  expertise: string[];
+  experience: string;
+  image?: string;
+  linkedin?: string;
+}
+
+export interface ServiceTechnology {
+  id: string;
+  name: string;
+  category: string;
+  description: string;
+  logo?: string;
+  website?: string;
+}
+
+export interface ServiceIndustry {
+  id: string;
+  name: string;
+  description: string;
+  challenges: string[];
+  solutions: string[];
+  caseStudies: string[];
+  technologies: string[];
+}
+
+export interface ServiceLocation {
+  id: string;
+  name: string;
+  address: string;
+  city: string;
+  state: string;
+  country: string;
+  timezone: string;
+  coordinates: {
+    lat: number;
+    lng: number;
+  };
+}
+
+export interface ServiceContact {
+  id: string;
+  name: string;
+  email: string;
+  phone: string;
+  role: string;
+  department: string;
+  availability: string;
+  timezone: string;
+}
+
+export interface ServiceDocumentation {
+  id: string;
+  title: string;
+  type: 'pdf' | 'doc' | 'html' | 'markdown';
+  url: string;
+  description: string;
+  version: string;
+  lastUpdated: string;
+}
+
+export interface ServiceSupport {
+  id: string;
+  type: 'email' | 'phone' | 'chat' | 'ticket';
+  availability: string;
+  responseTime: string;
+  description: string;
+  contact: string;
+}
+
+export interface ServiceCompliance {
+  id: string;
+  standard: string;
+  description: string;
+  certification: string;
+  validUntil: string;
+  scope: string[];
+}
+
+export interface ServiceSecurity {
+  id: string;
+  measure: string;
+  description: string;
+  implementation: string;
+  compliance: string[];
+  testing: string;
+}
+
+export interface ServicePerformance {
+  id: string;
+  metric: string;
+  value: string;
+  unit: string;
+  description: string;
+  benchmark: string;
+}
+
+export interface ServiceIntegration {
+  id: string;
+  name: string;
+  type: 'api' | 'webhook' | 'sdk' | 'plugin';
+  description: string;
+  documentation: string;
+  status: 'available' | 'beta' | 'planned';
+}
+
+export interface ServiceUpdate {
+  id: string;
+  version: string;
+  date: string;
+  type: 'feature' | 'bugfix' | 'security' | 'performance';
+  description: string;
+  changes: string[];
+  breaking: boolean;
+}
