@@ -229,8 +229,8 @@ export default function ServicesPage() {
   useEffect(() => {
     async function load() {
       try {
-        // /api/services returns the list of service offerings
-        const res = await apiClient.get('/api/services');
+        // '/services' resolves to '/api/services' via apiClient's baseURL
+        const res = await apiClient.get('/services');
         setListings(res.data as ProductListing[]);
       } catch (err) {
         console.error('Failed to fetch services', err);
