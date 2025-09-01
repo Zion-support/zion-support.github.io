@@ -33,6 +33,9 @@ import CommunityPage from './pages/CommunityPage';
 import Categories from './pages/Categories';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
+import NewProductsPage from './pages/NewProductsPage';
+import MoreProductsPage from './pages/MoreProductsPage';
+import Sitemap from './pages/Sitemap';
 import PartnersPage from './pages/Partners';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
@@ -54,6 +57,8 @@ const baseRoutes = [
   { path: '/categories', element: <Categories /> },
   { path: '/equipment', element: <EquipmentPage /> },
   { path: '/equipment/:id', element: <EquipmentDetail /> },
+  { path: '/new-products', element: <NewProductsPage /> },
+  { path: '/more-products', element: <MoreProductsPage /> },
   { path: '/analytics', element: <Analytics /> },
   { path: '/mobile-launch', element: <MobileLaunchPage /> },
   { path: '/community', element: <CommunityPage /> },
