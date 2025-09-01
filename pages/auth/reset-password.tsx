@@ -1,20 +1,8 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-
-const ResetPassword: NextPage = () => {
+export default function ResetPassword() {
   return (
     <div>
-      <Head>
-        <title>ResetPassword - Zion Tech Solutions</title>
-        <meta name="description" content="ResetPassword page" />
-      </Head>
-      
-      <main>
-        <h1>ResetPassword</h1>
-        <p>This page is under construction.</p>
-      </main>
+      <h1 className="text-2xl font-semibold">Reset Password</h1>
+      <p className="mt-2 text-gray-600 dark:text-gray-300">Reset flow coming soon.</p>
     </div>
   );
-};
-
-export default ResetPassword;
+}

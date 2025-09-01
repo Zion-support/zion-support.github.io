@@ -1,20 +1,8 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-
-const SustainableTechnologyPractices: NextPage = () => {
+export default function SustainableTechnologyPractices() {
   return (
     <div>
-      <Head>
-        <title>SustainableTechnologyPractices - Zion Tech Solutions</title>
-        <meta name="description" content="SustainableTechnologyPractices page" />
-      </Head>
-      
-      <main>
-        <h1>SustainableTechnologyPractices</h1>
-        <p>This page is under construction.</p>
-      </main>
+      <h1 className="text-2xl font-semibold">Sustainable Technology Practices</h1>
+      <p className="mt-2 text-gray-600 dark:text-gray-300">Content coming soon.</p>
     </div>
   );
-};
-
-export default SustainableTechnologyPractices;
+}

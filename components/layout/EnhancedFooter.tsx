@@ -8,7 +8,7 @@ export default function EnhancedFooter() {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <p>© {new Date().getFullYear()} Zion Tech Solutions</p>
         <div className="opacity-70 flex items-center gap-4">
-          <a href="/help" className="hover:underline">Help Center</a>
+          <a className="underline hover:no-underline" href="/constitution">Constitution</a>
           <span>All rights reserved.</span>
         </div>
       </div>

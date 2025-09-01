@@ -1,20 +1,8 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-
-const Index: NextPage = () => {
+export default function AuthIndex() {
   return (
     <div>
-      <Head>
-        <title>Index - Zion Tech Solutions</title>
-        <meta name="description" content="Index page" />
-      </Head>
-      
-      <main>
-        <h1>Index</h1>
-        <p>This page is under construction.</p>
-      </main>
+      <h1 className="text-2xl font-semibold">Auth</h1>
+      <p className="mt-2 text-gray-600 dark:text-gray-300">Authentication portal coming soon.</p>
     </div>
   );
-};
-
-export default Index;
+}

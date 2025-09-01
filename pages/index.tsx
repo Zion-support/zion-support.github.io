@@ -1,20 +1,12 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
 
-const Index: NextPage = () => {
+const Home: NextPage = () => {
   return (
     <div>
-      <Head>
-        <title>Index - Zion Tech Solutions</title>
-        <meta name="description" content="Index page" />
-      </Head>
-      
-      <main>
-        <h1>Index</h1>
-        <p>This page is under construction.</p>
-      </main>
+      <h1 className="text-2xl font-semibold">Welcome to Zion</h1>
+      <p className="mt-2 text-gray-600 dark:text-gray-300">Home page is under construction.</p>
     </div>
   );
 };
 
-export default Index;
+export default Home;

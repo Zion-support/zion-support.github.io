@@ -1,18 +1,10 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
 
 const About: NextPage = () => {
   return (
     <div>
-      <Head>
-        <title>About - Zion Tech Solutions</title>
-        <meta name="description" content="About page" />
-      </Head>
-      
-      <main>
-        <h1>About</h1>
-        <p>This page is under construction.</p>
-      </main>
+      <h1 className="text-2xl font-semibold">About Zion</h1>
+      <p className="mt-2 text-gray-600 dark:text-gray-300">About content coming soon.</p>
     </div>
   );
 };

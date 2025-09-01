@@ -22,7 +22,7 @@ export default function EnhancedNavigation() {
           <Link href="/certifications"><a>Certifications</a></Link>
           <Link href="/dao"><a>DAO</a></Link>
           <Link href="/contact"><a>Contact</a></Link>
-          <Link href="/media/kit"><a>Media Kit</a></Link>
+          <Link href="/constitution"><a>Constitution</a></Link>
         </div>
         <div className="flex items-center gap-4 text-sm">
           <Link href="/services"><a>Services</a></Link>

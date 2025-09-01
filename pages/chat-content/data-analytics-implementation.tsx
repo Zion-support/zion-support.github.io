@@ -1,20 +1,8 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-
-const DataAnalyticsImplementation: NextPage = () => {
+export default function DataAnalyticsImplementation() {
   return (
     <div>
-      <Head>
-        <title>DataAnalyticsImplementation - Zion Tech Solutions</title>
-        <meta name="description" content="DataAnalyticsImplementation page" />
-      </Head>
-      
-      <main>
-        <h1>DataAnalyticsImplementation</h1>
-        <p>This page is under construction.</p>
-      </main>
+      <h1 className="text-2xl font-semibold">Data Analytics Implementation</h1>
+      <p className="mt-2 text-gray-600 dark:text-gray-300">Content coming soon.</p>
     </div>
   );
-};
-
-export default DataAnalyticsImplementation;
+}
