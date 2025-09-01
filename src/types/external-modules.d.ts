@@ -22,10 +22,6 @@ declare module 'lucide-react' {
 }
 declare module 'child_process';
 declare module 'date-fns';
-declare module 'jspdf' {
-  export const jsPDF: any;
-  export default jsPDF;
-}
 declare module '@hookform/resolvers/zod';
 declare module '@radix-ui/react-accordion';
 declare module '@radix-ui/react-alert-dialog';

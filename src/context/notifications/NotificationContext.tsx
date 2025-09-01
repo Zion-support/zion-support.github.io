@@ -5,12 +5,9 @@ export default function Page() {
   fetchNotifications: async () => {},
 };
 
-const NotificationContext = createContext(defaultContext as NotificationContextType
-);
-
-export const useNotifications = (): NotificationContextType => {
-  const context = useContext(NotificationContext) as NotificationContextType;
-  if(!context) {
+export const useNotifications = () => {
+  const context = useContext<NotificationContextType>(NotificationContext);
+  if (!context) {
     throw new Error('useNotifications must be used within a NotificationProvider');
   }
   return context;
