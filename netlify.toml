@@ -1,9 +1,9 @@
 [build]
-  command = "npm ci && npm run build"
-  publish = ".next"
+  functions = "netlify/functions"
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
+  NODE_ENV = "production"
 
 # Scheduled functions for automation
 [[scheduled.functions]]
