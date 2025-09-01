@@ -2,6 +2,8 @@ module.exports = {
   extends: [
     "next/core-web-vitals"
   ],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint", "react-hooks"],
   rules: {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
@@ -9,6 +11,6 @@ module.exports = {
       "warn",
       { argsIgnorePattern: "^_" }
     ],
-    "no-explicit-any": "warn"
+    "@typescript-eslint/no-explicit-any": "warn"
   }
 };
