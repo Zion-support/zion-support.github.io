@@ -439,16 +439,11 @@ img {
   left: 50%;
   width: 20px;
   height: 20px;
-  border: 2px solid #f3f3f3;
-  border-top: 2px solid rgb(var(--zion-cyan));
+  margin: -10px 0 0 -10px;
+  border: 2px solid rgb(var(--zion-cyan));
+  border-top-color: transparent;
   border-radius: 50%;
   animation: spin 1s linear infinite;
-  transform: translate(-50%, -50%);
-}
-
-@keyframes spin {
-  0% { transform: translate(-50%, -50%) rotate(0deg); }
-  100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 .slider::-webkit-slider-thumb {
