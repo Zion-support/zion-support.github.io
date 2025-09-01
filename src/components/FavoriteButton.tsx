@@ -1,69 +1,46 @@
-<<<<<<< HEAD
-import { Heart  } from 'lucide-react';
- from 'react';
-export /**
+import React from 'react';
+import { Heart } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { useFavorites } from '@/hooks/useFavorites';
+import { useAuth } from '@/hooks/useAuth';
+import { useToast } from '@/hooks/use-toast';
 
- * FavoriteButton function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
- */
-function FavoriteButton({ itemId, itemType, className = '' }: FavoriteButtonProps) {;
-=======
-<<<<<<< HEAD
->>>>>>> main
-
-interface FavoriteButtonProps extends React.PropsWithChildren<{}> {
-
+interface FavoriteButtonProps {
   itemId: string;
-  itemType: 'product' | 'talent' | 'equipment' | 'service';
-  className?: string}
+  itemType: string;
+  className?: string;
+}
 
-export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteButtonProps) {;
-  const [isFavorited, setIsFavorited] = useState(false);
+export function FavoriteButton({ itemId, itemType, className }: FavoriteButtonProps) {
+  const { isFavorite, toggleFavorite } = useFavorites();
+  const { user } = useAuth();
+  const { toast } = useToast();
 
-    e.stopPropagation () ;
-    setIsFavorited(!isFavorited) ;
+  const handleClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!user) {
+      toast({
+        title: 'Authentication required',
+        description: 'Please log in to save items to your favorites',
+        variant: 'destructive'
+      });
+      return;
+    }
+    toggleFavorite(itemType, itemId);
+  };
 
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    // Here you would typically make an API call to save / remove from favorites
-    if(isFavorited) {
+  const active = isFavorite(itemType, itemId);
 
-      // Remove from favorites
-      // // // // // // // // console.log(`Removed ${itemType} ${itemId} from favorites`)} else {
-
-      // Add to favorites`
-      // // // // // // // // console.log(`Added ${itemType} ${itemId} to favorites`)}`
-      // console.log(`Removed ${itemType} ${itemId} from favorites`)} else {
-
-      // Add to favorites`
-      // console.log(`Added ${itemType} ${itemId} to favorites`)}  };
-
-  return ()
+  return (
     <button
-      onClick = {handleToggleFavorite}`
-      className={`absolute top-2 right-2 p-2 rounded-full transition-all duration-300 ${isFavorited'
-          ? 'bg-red-500 hover:bg-red-600 text-white''
-          : 'bg-zion-blue-dark/80 hover:bg-zion-cyan text-white'`
-      } ${className}`}
-      aria-label={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
+      className={cn(
+        'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors',
+        className
+      )}
+      onClick={handleClick}
+      aria-label={active ? 'Remove from favorites' : 'Save to favorites'}
     >
-      <Heart`
-        className={`w-4 h-4 transition-all duration-300 ${<<<<<<< HEAD
-
-          isFavorited ? 'fill-current' : ''`
-        }`}
-      />
-=======
-'
-          isFavorited ? 'fill-current' : ''`        }`}
-       />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+      <Heart className={cn('h-4 w-4', active ? 'fill-red-500 text-red-500' : 'text-zion-slate')} />
     </button>
-  )};`
-className: {`w-4 h-4 transition-all duration-300 ${;
-          isFavorited ? 'fill-current' : '';`
-        }`} ;
-      />;
-    </button>;) }
-'`
+  );
+}

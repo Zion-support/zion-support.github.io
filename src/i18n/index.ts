@@ -26,11 +26,16 @@ i18n
       escapeValue: false // React already escapes by default
     },
     detection: {
+      // Prefer cookie, then localStorage, then browser navigator
       order: ['cookie', 'localStorage', 'navigator'],
       lookupCookie: 'zion_language',
       lookupLocalStorage: 'zion_language',
-      caches: ['cookie']
+      caches: ['cookie'],
     },
+  })
+  .catch(error => {
+    console.error("Error initializing i18next or its detector:", error);
+    // This helps prevent an unhandled promise rejection if init fails.
   });
 
 // For RTL language support

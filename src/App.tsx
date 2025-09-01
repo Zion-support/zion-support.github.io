@@ -53,9 +53,10 @@ import OpenAppRedirect from './pages/OpenAppRedirect';
 import ContactPage from './pages/Contact';
 import ZionHireAI from './pages/ZionHireAI';
 import RequestQuotePage from './pages/RequestQuote';
+import WishlistPage from './pages/Wishlist';
 import CartPage from './pages/Cart';
 import Checkout from './pages/Checkout';
-import PrivacyPage from './pages/PrivacyPage';
+import { SupportChatbot } from './components/SupportChatbot';
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -72,7 +73,6 @@ const baseRoutes = [
   { path: '/equipment', element: <EquipmentPage /> },
   { path: '/equipment/:id', element: <EquipmentDetail /> },
   { path: '/new-products', element: <NewProductsPage /> },
-  { path: '/more-products', element: <MoreProductsPage /> },
   { path: '/analytics', element: <Analytics /> },
   { path: '/mobile-launch', element: <MobileLaunchPage /> },
   { path: '/open-app', element: <OpenAppRedirect /> },
@@ -96,12 +96,13 @@ const baseRoutes = [
   { path: '/wishlist', element: <WishlistPage /> },
   { path: '/cart', element: <CartPage /> },
   { path: '/checkout', element: <Checkout /> },
-  { path: '/profile/privacy', element: <PrivacyPage /> },
 ];
 
 const App = () => {
+  console.log("App.tsx: Start");
   // Ensure each navigation starts at the top of the page
   useScrollToTop();
+  console.log("App.tsx: Rendering Tree");
   return (
     <WhitelabelProvider>
       <ConsentProvider>
@@ -129,10 +130,9 @@ const App = () => {
         <OfflineToast />
         <Toaster />
         <SonnerToaster position="top-right" />
-          <CookieBanner />
-          <PwaInstallButton />
-        </ThemeProvider>
-      </ConsentProvider>
+        <SupportChatbot />
+        <PwaInstallButton />
+      </ThemeProvider>
     </WhitelabelProvider>
   );
 }

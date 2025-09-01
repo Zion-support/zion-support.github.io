@@ -1,12 +1,13 @@
 export interface CartItem {
-  id: string | number;
+  id: string;
   name: string;
   price: number;
   quantity: number;
 }
 
-export interface CartState {
+export interface CartContextType {
   items: CartItem[];
+  dispatch: React.Dispatch<CartAction>;
 }
 
 export type CartAction =

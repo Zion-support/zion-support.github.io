@@ -141,8 +141,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
                 const params = new URLSearchParams(location.search);
                 const next = params.get('next');
                 if (next) {
-                  const dest = decodeURIComponent(next);
-                  navigate(dest, { replace: true });
+                  navigate(decodeURIComponent(next), { replace: true });
                 }
               }
             } else if(error) {
@@ -172,6 +171,10 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       if (!session) {
         setIsLoading(false);
       }
+    }).catch(error => {
+      console.error("Error during initial Supabase getSession:", error);
+      setUser(null); // Explicitly set user to null on error
+      setIsLoading(false);
     });
 
     return () => {

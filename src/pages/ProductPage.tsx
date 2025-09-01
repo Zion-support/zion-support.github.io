@@ -1,74 +1,37 @@
-import React, { useState } from 'react';
-import { useCart } from '../context'; // Updated path
-import { Product } from '../types/product';
-import { toast } from '../hooks/use-toast'; // Assuming this is the correct path for toast
+import { useParams } from 'react-router-dom';
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { NEW_PRODUCTS } from '@/data/newProductsData';
+import { useCart } from '@/context/CartContext';
+import { toast } from '@/hooks/use-toast';
 
-// Define or import a mock product
-const mockProduct: Product = { 
-  id: '1', 
-  name: 'Awesome Gadget', 
-  price: 29.99, 
-  description: 'This is the best gadget ever.',
-  imageUrl: 'https://via.placeholder.com/150/0000FF/808080?Text=AwesomeGadget' // Optional image
-};
-
-const ProductPage: React.FC = () => {
+export default function ProductPage() {
+  const { id } = useParams();
+  const product = NEW_PRODUCTS.find(p => p.id === id);
   const { dispatch } = useCart();
-  const [isAdding, setIsAdding] = useState(false);
+  const [adding, setAdding] = useState(false);
 
-  const handleAddToCart = () => {
-    setIsAdding(true);
-    // The CartItem type expects id, name, price, quantity.
-    // Product has id, name, price. We add quantity here.
-    dispatch({ 
-      type: 'ADD_ITEM', 
-      payload: { 
-        id: mockProduct.id,
-        name: mockProduct.name,
-        price: mockProduct.price,
-        quantity: 1 // Add item with quantity 1
-      } 
+  if (!product) {
+    return <div className="p-6 text-white">Product not found</div>;
+  }
+
+  const handleAdd = () => {
+    setAdding(true);
+    dispatch({
+      type: 'ADD_ITEM',
+      payload: { id: product.id, name: product.title, price: product.price ?? 0, quantity: 1 }
     });
-    toast({
-      title: "Success!",
-      description: `${mockProduct.name} added to cart!`,
-      variant: "default", // Assuming 'default' or similar variant exists for success
-    });
-    setTimeout(() => {
-      setIsAdding(false);
-    }, 1000); 
+    toast({ title: 'Added to cart', variant: 'success' });
+    setTimeout(() => setAdding(false), 500);
   };
 
   return (
-    <div style={{ padding: '20px', maxWidth: '600px', margin: '0 auto' }}>
-      {mockProduct.imageUrl && 
-        <img 
-          src={mockProduct.imageUrl} 
-          alt={mockProduct.name} 
-          style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px' }} 
-        />}
-      <h2>{mockProduct.name}</h2>
-      <p>{mockProduct.description}</p>
-      <p style={{ fontWeight: 'bold', fontSize: '1.2em' }}>
-        Price: ${mockProduct.price.toFixed(2)}
-      </p>
-      <button 
-        onClick={handleAddToCart} 
-        disabled={isAdding}
-        style={{
-          padding: '10px 20px',
-          fontSize: '1em',
-          cursor: 'pointer',
-          backgroundColor: isAdding ? '#ccc' : '#007bff',
-          color: 'white',
-          border: 'none',
-          borderRadius: '5px'
-        }}
-      >
-        {isAdding ? 'Adding...' : 'Add to Cart'}
-      </button>
+    <div className="min-h-screen bg-zion-blue p-6 text-white">
+      <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
+      <p className="mb-6">{product.description}</p>
+      <Button onClick={handleAdd} disabled={adding}>
+        {adding ? 'Adding...' : 'Add to Cart'}
+      </Button>
     </div>
   );
-};
-
-export default ProductPage;
+}

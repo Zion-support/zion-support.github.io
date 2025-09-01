@@ -11,6 +11,8 @@ const WIZARD_STEPS: WizardStep[] = ['Services', 'Details', 'Success'];
 
 const WIZARD_STEPS: WizardStep[] = ['Services', 'Details', 'Success'];
 
+const WIZARD_STEPS: WizardStep[] = ['Services', 'Details', 'Success'];
+
 const fetcher = (url: string) => fetch(url).then(res => {
   if (!res.ok) throw new Error('Failed');
   return res.json();

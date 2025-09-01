@@ -57,7 +57,7 @@ export default function OrdersPage() {
               <TableHead>Date</TableHead>
               <TableHead>Total</TableHead>
               <TableHead>Status</TableHead>
-              <TableHead>Invoice</TableHead>
+              <TableHead>View</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -86,7 +86,7 @@ export default function OrdersPage() {
               <TableHead>Date</TableHead>
               <TableHead>Total</TableHead>
               <TableHead>Status</TableHead>
-              <TableHead>Invoice</TableHead>
+              <TableHead>View</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -97,9 +97,12 @@ export default function OrdersPage() {
                 <TableCell>{order.total}</TableCell>
                 <TableCell>{getStatusBadge(order.status)}</TableCell>
                 <TableCell>
-                  <a href={order.invoiceUrl} download className="text-zion-purple underline">
-                    Download PDF
-                  </a>
+                  <Link
+                    to={`/orders/${order.orderId}`}
+                    className="text-zion-purple underline"
+                  >
+                    View
+                  </Link>
                 </TableCell>
               </TableRow>
             ))}

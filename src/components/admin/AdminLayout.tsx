@@ -1,3 +1,5 @@
+import React from 'react';
+import Link from 'next/link';
 
 interface AdminLayoutProps {
   children: React.ReactNode;
@@ -12,7 +14,8 @@ const navItems = [
 ];
 
 export function AdminLayout({ children }: AdminLayoutProps) {
-  return (<div className="flex min-h-screen">
+  return (
+    <div className="flex min-h-screen">
       <aside className="w-64 border-r p-6 space-y-2 bg-muted/50">
         <h2 className="font-semibold text-lg mb-4">Back Office</h2>
         <nav className="space-y-1">
@@ -29,6 +32,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
       </aside>
       <main className="flex-1 p-6 overflow-y-auto">{children}</main>
     </div>
-  )}
+  );
+}
 
 export default AdminLayout;

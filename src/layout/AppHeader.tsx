@@ -4,15 +4,16 @@ import { useMessaging } from '@/context/MessagingContext';
 import { MainNavigation } from './MainNavigation';
 import { Logo } from '@/components/header/Logo';
 import { LanguageSelector } from '@/components/header/LanguageSelector';
-import { ModeToggle } from "@/components/ModeToggle";
 import { useTranslation } from 'react-i18next';
 import { Menu, X } from 'lucide-react';
 import { MobileMenu } from '@/components/header/MobileMenu';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
+import { PointsBadge } from '@/components/loyalty/PointsBadge';
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const isMobile = useIsMobile();
+  const { t } = useTranslation();
   
   // Try to access the messaging context, but provide a fallback value if it's not available
   let unreadCount = 0;
@@ -50,9 +51,9 @@ import { MobileBottomNav } from '@/components/header/MobileBottomNav';
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="inline-flex items-center justify-center rounded-md p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 focus:outline-none"
               aria-expanded={mobileMenuOpen}
-              aria-label="Toggle mobile menu"
+              aria-label={t('general.toggle_mobile_menu')}
             >
-              <span className="sr-only">Open main menu</span>
+              <span className="sr-only">{t('general.open_main_menu')}</span>
               {mobileMenuOpen ? (
                 <X className="block h-6 w-6" aria-hidden="true" />
               ) : (
@@ -61,10 +62,8 @@ import { MobileBottomNav } from '@/components/header/MobileBottomNav';
             </button>
           </div>
 
-          <div className="flex items-center gap-2">
-            <LanguageSelector />
-            <ModeToggle />
-          </div>
+          <PointsBadge />
+          <LanguageSelector />
         </div>
         {/* Mobile menu */}
         {mobileMenuOpen && ("

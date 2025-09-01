@@ -46,18 +46,10 @@ workbox.routing.setCatchHandler(async ({ event }) => {
 
 self.addEventListener('push', event => {
   const data = event.data ? event.data.json() : {};
-  const title = data.title || 'New message';
+  const title = data.title || 'Zion Notification';
   const options = {
     body: data.body,
-    icon: '/vite.svg',
-    data: data.url
+    icon: '/vite.svg'
   };
   event.waitUntil(self.registration.showNotification(title, options));
-});
-
-self.addEventListener('notificationclick', event => {
-  event.notification.close();
-  if (event.notification.data) {
-    event.waitUntil(clients.openWindow(event.notification.data));
-  }
 });

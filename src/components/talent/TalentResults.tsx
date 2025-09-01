@@ -10,8 +10,6 @@ interface TalentResultsProps {
   isLoading: boolean;
   viewProfile: (id: string) => void;
   handleRequestHire: (talent: TalentProfile) => void;
-  savedTalents: string[];
-  handleToggleSave: (id: string, isSaved: boolean) => void;
   isAuthenticated: boolean;
   activeFiltersProps: {
     selectedSkills: string[];
@@ -33,8 +31,6 @@ export function TalentResults({
   isLoading,
   viewProfile,
   handleRequestHire,
-  savedTalents,
-  handleToggleSave,
   isAuthenticated,
   activeFiltersProps
 }: TalentResultsProps) {
@@ -56,8 +52,6 @@ export function TalentResults({
         onTalentClick={viewProfile}
         viewProfile={viewProfile}
         handleRequestHire={handleRequestHire}
-        savedTalentIds={savedTalents}
-        onToggleSave={handleToggleSave}
         isAuthenticated={isAuthenticated}
         clearFilters={activeFiltersProps.clearFilters}
       />

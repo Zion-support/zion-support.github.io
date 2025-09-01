@@ -188,8 +188,10 @@ export default function Marketplace() {
   return (
     <main className="flex-grow container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto mb-8">
-          <h1 className="text-3xl font-bold text-white mb-4">{t('marketplace.title')}</h1>
-          <p className="text-zion-slate-light">
+          <h1 className="font-bold text-white mb-4 text-[clamp(1.5rem,3vw,1.875rem)]">
+            {t('marketplace.title')}
+          </h1>
+          <p className="text-zion-slate-light text-[clamp(1rem,2.5vw,1.125rem)]">
             {t('marketplace.description')}
           </p>
         </div>

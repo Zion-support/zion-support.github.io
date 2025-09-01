@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
+import { useNavigate, useSearchParams } from 'react-router-dom';
+import { Input } from '@/components/ui/input';
 import { safeStorage } from '@/utils/safeStorage';
 import { Button } from '@/components/ui/button';
-s1yros-codex/fix-unauthenticated-user-redirect-flow
-import { useNavigate, useSearchParams } from 'react-router-dom';
-main
 import { getStripe } from '@/utils/getStripe';
-import { CheckoutShippingOptions, ShippingRate } from '@/components/CheckoutShippingOptions';
+import { PointsBadge } from '@/components/loyalty/PointsBadge';
 import {
   Form,
   FormField,
@@ -32,8 +31,9 @@ interface CheckoutForm {
   country: string;
 }
 
-export default function CheckoutPage() {
+export default function Checkout() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const [searchParams] = useSearchParams();
   const [items, setItems] = useState<CartItem[]>([]);
   const form = useForm<CheckoutForm>({ defaultValues: { name: '', email: '', address: '', city: '', country: '' } });
@@ -58,17 +58,6 @@ export default function CheckoutPage() {
         // ignore parsing errors
       }
     }
-    s1yros-codex/fix-unauthenticated-user-redirect-flow
-    // Provide mock data if cart empty
-    setItems([
-      {
-        id: 'prod_mock',
-        name: 'Test Item',
-        price: 25,
-        quantity: 1,
-      },
-    ]);
-  }, [searchParams]);
   }, [searchParams]);
 
   const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
@@ -103,7 +92,10 @@ export default function CheckoutPage() {
 
   return (
     <div className="container max-w-2xl py-10">
-      <h1 className="text-3xl font-bold mb-6">{t('checkout.title')}</h1>
+      <div className="flex items-center justify-between mb-6">
+        <h1 className="text-3xl font-bold">{t('checkout.title')}</h1>
+        <PointsBadge />
+      </div>
       <div className="grid gap-6">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">

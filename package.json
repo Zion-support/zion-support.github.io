@@ -39,7 +39,9 @@
     "test:watch": "jest --watch",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --browser chrome",
-    "test:e2e": "playwright test"
+    "test:accessibility": "vitest run tests/Accessibility.test.tsx",
+    "test:e2e": "playwright test",
+    "es:index": "node scripts/index-elasticsearch.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
@@ -110,7 +112,10 @@
     "@google/model-viewer": "^1.12.0",
     "zod": "^3.22.4",
     "yup": "^1.2.0",
-    "@sentry/react": "^7.110.0"
+    "firebase": "^9.23.0"
+  },
+  "optionalDependencies": {
+    "@elastic/elasticsearch": "^8.12.0"
   },
   "devDependencies": {
     "@storybook/test-runner": "0.18.0",

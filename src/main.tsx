@@ -1,3 +1,4 @@
+console.log("main.tsx: Start");
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from './App.tsx';
@@ -13,6 +14,7 @@ import { LanguageProvider } from '@/context/LanguageContext';
 import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';
 import { WhitelabelProvider } from '@/context/WhitelabelContext';
 import { AppLayout } from '@/layout/AppLayout';
+import { ReferralMiddleware } from '@/components/referral/ReferralMiddleware';
 
 // Import auth and notification providers
 import { AuthProvider } from '@/context/auth/AuthProvider';
@@ -24,7 +26,6 @@ import { store } from './store';
 import { AnalyticsProvider } from './context/AnalyticsContext';
 import { ViewModeProvider } from './context/ViewModeContext';
 import { CartProvider } from './context/CartContext';
-import { UnitProvider } from './context/UnitContext';
 import { registerServiceWorker } from './serviceWorkerRegistration';
 
 // Initialize a React Query client with global error handling
@@ -39,10 +40,10 @@ const queryClient = new QueryClient({
   },
 });
 
-const rootElement = document.getElementById('root');
-
-function renderApp() {
-  const app = (
+try {
+  console.log("main.tsx: Before ReactDOM.createRoot");
+  // Render the app with proper provider structure
+  ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
       <HelmetProvider>
         <QueryClientProvider client={queryClient}>
@@ -53,13 +54,13 @@ function renderApp() {
                   <AnalyticsProvider>
                     <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
                       <ViewModeProvider>
-                        <UnitProvider>
-                          <CartProvider>
+                        <CartProvider>
+                          <ReferralMiddleware>
                             <AppLayout>
                               <App />
                             </AppLayout>
-                          </CartProvider>
-                        </UnitProvider>
+                          </ReferralMiddleware>
+                        </CartProvider>
                       </ViewModeProvider>
                       <LanguageDetectionPopup />
                     </LanguageProvider>
@@ -72,11 +73,21 @@ function renderApp() {
       </HelmetProvider>
     </React.StrictMode>
   );
-
-  if (rootElement?.hasChildNodes()) {
-    hydrateRoot(rootElement, app);
-  } else if (rootElement) {
-    createRoot(rootElement).render(app);
+  console.log("main.tsx: After ReactDOM.createRoot");
+} catch (error) {
+  console.error("Global error caught in main.tsx:", error);
+  console.log("main.tsx: Global error caught");
+  const rootElement = document.getElementById('root');
+  if (rootElement) {
+    rootElement.innerHTML = `
+      <div style="padding: 20px; text-align: center; font-family: sans-serif;">
+        <h1>Application Error</h1>
+        <p>A critical error occurred while loading the application.</p>
+        <p>Error: ${(error as Error).message}</p>
+        <pre>${(error as Error).stack}</pre>
+        <p>Please check the console for more details.</p>
+      </div>
+    `;
   }
 }
 

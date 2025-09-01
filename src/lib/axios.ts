@@ -1,50 +1,65 @@
-export interface AxiosRequestConfig {
-  baseURL?: string;
-  headers?: Record<string, string>;
+export interface AxiosError extends Error {
+  response?: { status: number; data?: any };
 }
 
-export interface AxiosResponse<T = any> {
-  status: number;
-  data: T;
+type FulfilledFn = (value: any) => any | Promise<any>;
+type RejectedFn = (error: any) => any | Promise<any>;
+
+class InterceptorManager {
+  handlers: { fulfilled?: FulfilledFn; rejected?: RejectedFn }[] = [];
+  use(fulfilled?: FulfilledFn, rejected?: RejectedFn) {
+    this.handlers.push({ fulfilled, rejected });
+  }
 }
 
-type RequestInterceptor = (config: AxiosRequestConfig) => AxiosRequestConfig;
+export interface AxiosInstance {
+  interceptors: { response: InterceptorManager };
+  get(url: string, config?: { params?: Record<string, any> } & RequestInit): Promise<any>;
+}
 
-class AxiosInstance {
-  baseURL: string;
-  headers: Record<string, string>;
-  interceptors = {
-    request: {
-      handlers: [] as RequestInterceptor[],
-      use: (fn: RequestInterceptor) => {
-        this.interceptors.request.handlers.push(fn);
-      },
+export function create(config: { baseURL?: string; withCredentials?: boolean } = {}): AxiosInstance {
+  const baseURL = config.baseURL || '';
+  const withCreds = !!config.withCredentials;
+
+  const instance: AxiosInstance = {
+    interceptors: { response: new InterceptorManager() },
+    async get(url, init = {}) {
+      const params = (init as any).params
+        ? '?' + new URLSearchParams((init as any).params).toString()
+        : '';
+      const opts = { ...init } as RequestInit;
+      delete (opts as any).params;
+      return request(baseURL + url + params, 'GET', opts);
     },
   };
-  constructor(config: AxiosRequestConfig = {}) {
-    this.baseURL = config.baseURL || '';
-    this.headers = config.headers || {};
-  }
-  private applyInterceptors(config: AxiosRequestConfig) {
-    return this.interceptors.request.handlers.reduce((c, fn) => fn(c), config);
-  }
-  async post<T = any>(url: string, data?: any): Promise<AxiosResponse<T>> {
-    const config = this.applyInterceptors({ baseURL: this.baseURL, headers: { ...this.headers } });
-    const res = await fetch(config.baseURL + url, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', ...(config.headers || {}) },
-      body: JSON.stringify(data),
-    });
-    let body: any = {};
-    try {
-      body = await res.json();
-    } catch {}
-    return { status: res.status, data: body };
-  }
-}
 
-export function create(config: AxiosRequestConfig = {}) {
-  return new AxiosInstance(config);
+  async function request(url: string, method: string, init: RequestInit) {
+    const response = await fetch(url, { ...init, method, credentials: withCreds ? 'include' : init.credentials });
+    let data: any = null;
+    try {
+      data = await response.clone().json();
+    } catch {}
+    const result = { data, status: response.status };
+    if (response.ok) {
+      let res: any = result;
+      for (const h of instance.interceptors.response.handlers) {
+        if (h.fulfilled) {
+          res = await h.fulfilled(res);
+        }
+      }
+      return res;
+    } else {
+      const err: AxiosError = Object.assign(new Error('Request failed'), { response: result });
+      for (const h of instance.interceptors.response.handlers) {
+        if (h.rejected) {
+          await h.rejected(err);
+        }
+      }
+      throw err;
+    }
+  }
+
+  return instance;
 }
 
 export default { create };

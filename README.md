@@ -8,10 +8,7 @@ Zion Tech Group is a comprehensive technology solutions platform offering cuttin
 
 ### 🎯 Core Functionality
 
-- **AI-Powered Services**: Machine learning, automation, and intelligent solutions
-- **Cybersecurity Suite**: Advanced threat detection and compliance tools
-- **Cloud & DevOps**: Scalable infrastructure and deployment solutions
-- **Digital Transformation**: Business process optimization and modernization
+There are several ways of editing your application.
 
 **Use your preferred IDE**
 
@@ -143,7 +140,7 @@ npm run test:coverage
 
 Deployment instructions to be updated.
 
-### Production build
+## Integrations
 
 See [docs/Integrations.md](docs/Integrations.md) for information on the Zion Assistant browser extension and Slack bot.
 

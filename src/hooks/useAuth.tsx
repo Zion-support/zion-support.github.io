@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState, useEffect, ReactNode } from
 import { supabase } from "@/integrations/supabase/client";
 import { AuthContext } from "@/context/auth/AuthContext";
 import type { UserDetails as AuthUserDetails } from "@/types/auth";
+import { subscribeToPush } from "@/utils/pushSubscription";
 
 interface User {
 
@@ -48,6 +49,12 @@ export function useAuth(...args: unknown[]): unknown {
       permissions: ["billing_access", "admin_access", "team_management"],
       companyId: "company-123"
     });
+    // Subscribe user to push notifications after login
+    try {
+      await subscribeToPush();
+    } catch (err) {
+      console.error('Push subscription error', err);
+    }
     return { error: null };
   };
 

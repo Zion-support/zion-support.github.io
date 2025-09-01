@@ -36,13 +36,12 @@ export default defineConfig({
         inlineDynamicImports: false,
       },
       // Bundle axios with the app to avoid missing module errors
-      external: ['@sentry/react']
     },
   },
   resolve: {
     alias: {
-      '@': srcDir,
-      'axios': axiosPath
+      '@': path.resolve(__dirname, './src'),
+      'axios': path.resolve(__dirname, './src/lib/axios.ts')
     }
   },
   server: {
