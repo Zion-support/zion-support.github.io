@@ -265,6 +265,10 @@ schedule = "*/2 * * * *" # every 2 minutes
 
 # Resolve conflict: include both redirect tools and a11y audit
 [[scheduled.functions]]
+  name = "embed-health-audit-runner"
+  schedule = "17 */6 * * *"
+
+[[scheduled.functions]]
   name = "redirect-healer"
   schedule = "*/15 * * * *"
 
@@ -275,6 +279,10 @@ schedule = "*/2 * * * *" # every 2 minutes
 [[scheduled.functions]]
   name = "redirect-manager"
   schedule = "*/30 * * * *"
+
+[[scheduled.functions]]
+  name = "orphan-page-linker-runner"
+  schedule = "13 */6 * * *"
 
 [[scheduled.functions]]
   name = "a11y-audit-runner"
