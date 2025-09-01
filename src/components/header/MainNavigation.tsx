@@ -66,12 +66,12 @@ export function MainNavigation({ className }) {
                     AI Solutions
                   </h4>
                   <ul className="space-y-2 text-sm">
-                    <li><Link to="/ai-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Services</Link></li>
-                    <li><Link to="/ai-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Solutions</Link></li>
+                    <li><Link to="/services/ai-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Solutions</Link></li>
+                    <li><Link to="/services/quantum-computing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Computing</Link></li>
+                    <li><Link to="/services/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cybersecurity</Link></li>
                     <li><Link to="/ai-cybersecurity-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Cybersecurity</Link></li>
                     <li><Link to="/ai-healthcare-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Healthcare</Link></li>
                     <li><Link to="/ai-supply-chain-optimization" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Supply Chain</Link></li>
-                    <li><Link to="/ai-quantum-hybrid-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Quantum Hybrid</Link></li>
                   </ul>
                 </div>
               </div>
@@ -189,6 +189,9 @@ export function MainNavigation({ className }) {
                 <li><Link to="/events" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Events</Link></li>
                 <li><Link to="/training" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Training</Link></li>
                 <li><Link to="/research-development" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Research</Link></li>
+                <li><Link to="/sitemap" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Sitemap</Link></li>
+                <li><Link to="/terms-of-service" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Terms of Service</Link></li>
+                <li><Link to="/cookie-policy" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cookie Policy</Link></li>
               </ul>
             </div>
           </div>

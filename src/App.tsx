@@ -24,7 +24,7 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
-const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.ServicesPage })));
+const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.default })));
 const SolutionsPage = lazy(() => import('./pages/SolutionsPage').then(module => ({ default: module.SolutionsPage })));
 const AboutPage = lazy(() => import('./pages/AboutPage').then(module => ({ default: module.AboutPage })));
 const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ default: module.ContactPage })));
@@ -37,14 +37,15 @@ const Support = lazy(() => import('./pages/Support').then(module => ({ default: 
 const Training = lazy(() => import('./pages/Training').then(module => ({ default: module.default })));
 const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default: module.default })));
 const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServicesPage').then(module => ({ default: module.RevolutionaryServicesPage })));
-const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025').then(module => ({ default: module.NewServicesShowcase2025 })));
-const EnhancedNewServices2025 = lazy(() => import('./pages/EnhancedNewServices2025').then(module => ({ default: module.EnhancedNewServices2025 })));
+const EnhancedNewServices2025 = lazy(() => import('./pages/EnhancedNewServices2025').then(module => ({ default: module.default || module.EnhancedNewServices2025 })));
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
+const TermsOfServicePage = lazy(() => import('./pages/TermsOfServicePage').then(module => ({ default: module.TermsOfServicePage })));
+const CookiePolicyPage = lazy(() => import('./pages/CookiePolicyPage').then(module => ({ default: module.CookiePolicyPage })));
 
 // Service Pages
-const AISolutions = lazy(() => import('./pages/services/AISolutions').then(module => ({ default: module.AISolutions })));
-const QuantumComputing = lazy(() => import('./pages/services/QuantumComputing').then(module => ({ default: module.QuantumComputing })));
-const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity').then(module => ({ default: module.Cybersecurity })));
+const AISolutions = lazy(() => import('./pages/services/AISolutionsPage').then(module => ({ default: module.AISolutionsPage })));
+const QuantumComputing = lazy(() => import('./pages/services/QuantumComputingPage').then(module => ({ default: module.QuantumComputingPage })));
+const Cybersecurity = lazy(() => import('./pages/services/CybersecurityPage').then(module => ({ default: module.CybersecurityPage })));
 
 // Loading component
 const PageLoader = () => (
@@ -73,7 +74,6 @@ const Pricing = createLazyComponent(() => import('./pages/Pricing'));
 const Help = createLazyComponent(() => import('./pages/Help'));
 const News = createLazyComponent(() => import('./pages/News'));
 const Careers = createLazyComponent(() => import('./pages/Careers'));
-const Support = createLazyComponent(() => import('./pages/Support'));
 const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
 const ComprehensivePricing = createLazyComponent(() => import('./pages/ComprehensivePricing'));
 
@@ -97,7 +97,7 @@ function App() {
                 <Route path="/services/cybersecurity" element={<Cybersecurity />} />
                 <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
                 <Route path="/revolutionary-services" element={<RevolutionaryServicesPage />} />
-                <Route path="/new-services-2025" element={<NewServicesShowcase2025 />} />
+                {/* Removed missing NewServicesShowcase2025 route */}
                 <Route path="/enhanced-new-services-2025" element={<EnhancedNewServices2025 />} />
                 <Route path="/pricing" element={<PricingPage />} />
                 <Route path="/solutions" element={<SolutionsPage />} />
@@ -122,8 +122,8 @@ function App() {
                 <Route path="/sitemap" element={<Sitemap />} />
                 <Route path="/comprehensive-sitemap" element={<ComprehensiveSitemap />} />
                 <Route path="/privacy-policy" element={<BlogPage />} />
-                <Route path="/terms-of-service" element={<BlogPage />} />
-                <Route path="/cookie-policy" element={<BlogPage />} />
+                <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+                <Route path="/cookie-policy" element={<CookiePolicyPage />} />
                 <Route path="/request-quote" element={<ContactPage />} />
                 <Route path="*" element={<NotFoundPage />} />
               </Routes>

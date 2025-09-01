@@ -53,7 +53,7 @@ interface SitemapPage {
   featured?: boolean;
 }
 
-const Sitemap: React.FC = () => {
+export const Sitemap: React.FC = () => {
   const sitemapSections: SitemapSection[] = [
     {
       title: 'Main Pages',
@@ -304,3 +304,5 @@ const Sitemap: React.FC = () => {
     </div>
   );
 }
+
+export default Sitemap;

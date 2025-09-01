@@ -30,7 +30,7 @@ import {
   Mailbox
 } from 'lucide-react';
 
-const Support = () => {
+export const Support = () => {
   const [selectedCategory, setSelectedCategory] = useState('general');
   const [contactMethod, setContactMethod] = useState('email');
 
@@ -426,3 +426,5 @@ const Support = () => {
     </div>
   );
 };
+
+export default Support;
