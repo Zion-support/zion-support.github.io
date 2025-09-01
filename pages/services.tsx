@@ -546,90 +546,182 @@ export default function ServicesPage() {
           </motion.div>
         </motion.div>
 
-        {/* Enhanced Search and Filters */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-12"
-        >
-          <div className="bg-gray-900/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 shadow-2xl shadow-cyan-500/10">
-            <div className="flex flex-col lg:flex-row gap-6 items-center">
-              {/* Enhanced Search */}
-              <div className="relative flex-1 w-full lg:w-auto">
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl blur-xl"></div>
-                <div className="relative">
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-cyan-400 w-6 h-6" />
-                  <input
-                    type="text"
-                    placeholder="Search our revolutionary services..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full lg:w-96 pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700/50 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-300 hover:border-cyan-500/30"
-                  />
+          {/* Main Content */}
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+            {/* Enhanced Header */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-20"
+            >
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 0.2 }}
+                className="mb-6"
+              >
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-4">
+                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse"></span>
+                  {allServices.length}+ Revolutionary Services Available
                 </div>
-              </div>
+              </motion.div>
+              
+              <h1 className="text-5xl md:text-7xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  Our Services
+                </span>
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+                Discover our comprehensive suite of cutting-edge AI, quantum computing, emerging technology, 
+                and micro SAAS services designed to transform your business and drive innovation.
+              </p>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="flex flex-wrap justify-center gap-6 text-sm text-gray-400"
+              >
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                  AI & Consciousness
+                </div>
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
+                  Quantum Computing
+                </div>
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
+                  Enterprise IT
+                </div>
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-pink-400 rounded-full mr-2"></div>
+                  Micro SAAS
+                </div>
+              </motion.div>
+              
+              {/* Revolutionary Services Banner */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="mt-8"
+              >
+                <div className="bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-red-500/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-xl">
+                  <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div className="text-left">
+                      <h3 className="text-2xl font-bold text-white mb-2">🚀 Revolutionary 2025 Services</h3>
+                      <p className="text-gray-300">
+                        Explore our latest breakthrough services including AI Consciousness, Quantum Internet, Space Technology, and more!
+                      </p>
+                    </div>
+                    <Link href="/revolutionary-2025-services-showcase">
+                      <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 whitespace-nowrap">
+                        View Revolutionary Services →
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
 
-              {/* Enhanced Category Filter */}
-              <div className="flex items-center space-x-4">
-                <div className="relative">
-                  <select
-                    value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="px-6 py-4 bg-gray-800/50 border border-gray-700/50 rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-300 hover:border-cyan-500/30 appearance-none pr-10"
-                  >
-                    <option value="all">All Categories</option>
-                    {serviceCategories.map((category) => (
-                      <option key={category.id} value={category.id}>
-                        {category.title}
-                      </option>
-                    ))}
-                  </select>
-                  <div className="absolute right-3 top-1/2 transform -translate-y-1/2 text-cyan-400 pointer-events-none">
-                    <ChevronDown className="w-5 h-5" />
+            {/* Enhanced Search and Filters */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="mb-12"
+            >
+              <div className="bg-gray-900/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 shadow-2xl shadow-cyan-500/10">
+                <div className="flex flex-col lg:flex-row gap-6 items-center">
+                  {/* Enhanced Search */}
+                  <div className="relative flex-1 w-full lg:w-auto">
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl blur-xl"></div>
+                    <div className="relative">
+                      <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-cyan-400 w-6 h-6" />
+                      <input
+                        type="text"
+                        placeholder="Search our revolutionary services..."
+                        value={searchQuery}
+                                              onChange={(e) => setSearchQuery(e.target.value)}
+                        className="w-full lg:w-96 pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700/50 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-300 hover:border-cyan-500/30"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Enhanced Category Filter */}
+                  <div className="flex items-center space-x-4">
+                    <div className="relative">
+                      <select
+                        value={selectedCategory}
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                        className="px-6 py-4 bg-gray-800/50 border border-gray-700/50 rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-300 hover:border-cyan-500/30 appearance-none pr-10"
+                      >
+                        <option value="all">All Categories</option>
+                        {categories.map((category) => (
+                          <option key={category.id} value={category.id}>
+                            {category.name}
+                          </option>
+                        ))}
+                      </select>
+                      <div className="absolute right-3 top-1/2 transform -translate-y-1/2 text-cyan-400 pointer-events-none">
+                        <ChevronDown className="w-5 h-5" />
+                      </div>
+                    </div>
+
+                    {/* Enhanced Sort */}
+                    <div className="relative">
+                      <select
+                        value={sortBy}
+                        onChange={(e) => setSortBy(e.target.value)}
+                        className="px-6 py-4 bg-gray-800/50 border border-gray-700/50 rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-300 hover:border-cyan-500/30 appearance-none pr-10"
+                      >
+                        {sortOptions.map((option) => (
+                          <option key={option.value} value={option.value}>
+                            {option.label}
+                          </option>
+                        ))}
+                      </select>
+                      <div className="absolute right-3 top-1/2 transform -translate-y-1/2 text-cyan-400 pointer-events-none">
+                        <ChevronDown className="w-5 h-5" />
+                      </div>
+                    </div>
+
+                    {/* Enhanced View Mode */}
+                    <div className="flex items-center space-x-2 bg-gray-800/50 rounded-2xl p-1.5 border border-gray-700/50">
+                      <button
+                        onClick={() => setViewMode('grid')}
+                        className={`p-3 rounded-xl transition-all duration-300 ${
+                          viewMode === 'grid' 
+                            ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg shadow-cyan-500/25' 
+                            : 'text-gray-400 hover:text-white hover:bg-gray-700/50'
+                        }`}
+                      >
+                        <Grid className="w-5 h-5" />
+                      </button>
+                      <button
+                        onClick={() => setViewMode('list')}
+                        className={`p-3 rounded-xl transition-all duration-300 ${
+                          viewMode === 'list' 
+                            ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg shadow-cyan-500/25' 
+                            : 'text-gray-400 hover:text-white hover:bg-gray-700/50'
+                        }`}
+                      >
+                        <List className="w-5 h-5" />
+                      </button>
+                    </div>
                   </div>
                 </div>
 
-                {/* Enhanced Sort */}
-                <div className="relative">
-                  <select
-                    value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)}
-                    className="px-6 py-4 bg-gray-800/50 border border-gray-700/50 rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-300 hover:border-cyan-500/30 appearance-none pr-10"
-                  >
-                    {sortOptions.map((option) => (
-                      <option key={option.value} value={option.value}>
-                        {option.label}
-                      </option>
-                    ))}
-                  </select>
-                  <div className="absolute right-3 top-1/2 transform -translate-y-1/2 text-cyan-400 pointer-events-none">
-                    <ChevronDown className="w-5 h-5" />
+                {/* Enhanced Results Count */}
+                <div className="mt-6 text-center">
+                  <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
+                    <span className="text-cyan-300 font-medium">
+                      Showing {filteredServices.length} of {allServices.length} revolutionary services
+                    </span>
                   </div>
-                </div>
-
-                {/* Enhanced View Mode */}
-                <div className="flex items-center space-x-2 bg-gray-800/50 rounded-2xl p-1.5 border border-gray-700/50">
-                  <button
-                    onClick={() => setViewMode('grid')}
-                    className={`p-3 rounded-xl transition-all duration-300 ${
-                      viewMode === 'grid' 
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg shadow-cyan-500/25' 
-                        : 'text-gray-400 hover:text-white hover:bg-gray-700/50'
-                    }`}
-                  >
-                    <Grid className="w-5 h-5" />
-                  </button>
-                  <button
-                    onClick={() => setViewMode('list')}
-                    className={`p-3 rounded-xl transition-all duration-300 ${
-                      viewMode === 'list' 
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg shadow-cyan-500/25' 
-                        : 'text-gray-400 hover:text-white hover:bg-gray-700/50'
-                    }`}
-                  >
-                    <List className="w-5 h-5" />
-                  </button>
                 </div>
               </div>
             </div>

@@ -605,6 +605,11 @@
     "h1": "Resources"
   },
   {
+    "route": "/revolutionary-2025-services-showcase",
+    "title": "Revolutionary 2025 Services Showcase | Zion Tech Group",
+    "h1": "Revolutionary 2025 Services"
+  },
+  {
     "route": "/revolutionary-2028-pricing",
     "title": "2028 Revolutionary Pricing - Zion Tech Group",
     "h1": ""
@@ -897,7 +902,7 @@
   {
     "route": "/reports",
     "title": "",
-    "h1": "Autonomous Content Hub"
+    "h1": "Reports"
   },
   {
     "route": "/reports/links",
