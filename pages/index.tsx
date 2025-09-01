@@ -68,7 +68,10 @@ const HomePage = memo(function HomePage() {
               <Link href="/services" className="px-8 py-4 bg-gradient-to-r from-fuchsia-500 to-purple-600 hover:from-fuchsia-600 hover:to-purple-700 border border-fuchsia-400/30 rounded-xl text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-fuchsia-500/25">
                 Our Services
               </Link>
-              <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 border border-green-400/30 rounded-xl text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/25">
+              <Link href="/automation" className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Automation Systems
+              </Link>
+              <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
                 Get Started
               </Link>
             </div>
@@ -138,8 +141,8 @@ const HomePage = memo(function HomePage() {
                   <li>• Auto-scaling infrastructure</li>
                 </ul>
                 <div className="mt-4 text-center">
-                  <Link href="/automation" className="text-cyan-400 hover:text-cyan-300 text-sm font-medium">
-                    Explore Automation →
+                  <Link href="/automation" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                    Explore Cloud Systems →
                   </Link>
                 </div>
               </div>
@@ -158,8 +161,8 @@ const HomePage = memo(function HomePage() {
                   <li>• Predictive analytics</li>
                 </ul>
                 <div className="mt-4 text-center">
-                  <Link href="/reports" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-medium">
-                    View AI Reports →
+                  <Link href="/automation" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                    Explore AI Systems →
                   </Link>
                 </div>
               </div>
@@ -178,8 +181,8 @@ const HomePage = memo(function HomePage() {
                   <li>• Zero-downtime operations</li>
                 </ul>
                 <div className="mt-4 text-center">
-                  <Link href="/reports/blueprints" className="text-green-400 hover:text-green-300 text-sm font-medium">
-                    View Blueprints →
+                  <Link href="/automation" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                    Explore Redundancy →
                   </Link>
                 </div>
               </div>
@@ -197,8 +200,8 @@ const HomePage = memo(function HomePage() {
                   <li>• AI-powered insights</li>
                 </ul>
                 <div className="mt-4 text-center">
-                  <Link href="/live-dashboard" className="text-yellow-400 hover:text-yellow-300 text-sm font-medium">
-                    Live Dashboard →
+                  <Link href="/automation" className="text-yellow-400 hover:text-yellow-300 text-sm font-semibold">
+                    Explore Monitoring →
                   </Link>
                 </div>
               </div>
@@ -217,8 +220,8 @@ const HomePage = memo(function HomePage() {
                   <li>• Zero-trust architecture</li>
                 </ul>
                 <div className="mt-4 text-center">
-                  <Link href="/security" className="text-red-400 hover:text-red-300 text-sm font-medium">
-                    Security Details →
+                  <Link href="/automation" className="text-red-400 hover:text-red-300 text-sm font-semibold">
+                    Explore Security →
                   </Link>
                 </div>
               </div>
@@ -251,6 +254,11 @@ const HomePage = memo(function HomePage() {
                   <li>• Content quality assurance</li>
                   <li>• Automated updates</li>
                 </ul>
+                <div className="mt-4 text-center">
+                  <Link href="/automation" className="text-purple-400 hover:text-purple-300 text-sm font-semibold">
+                    Explore Infrastructure →
+                  </Link>
+                </div>
               </div>
             </div>
           </section>
@@ -734,7 +742,15 @@ const HomePage = memo(function HomePage() {
                 <p className="text-white/70 text-sm">Discover our comprehensive AI solutions and automation services</p>
               </Link>
               
-              <Link href="/resources" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-blue-400/30 transition-all duration-300 text-center hover:scale-105">
+              <Link href="/automation" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">🤖</span>
+                </div>
+                <h3 className="text-lg font-semibold text-green-400 mb-2">Automation</h3>
+                <p className="text-white/70 text-sm">Advanced systems</p>
+              </Link>
+              
+              <Link href="/resources" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-blue-400/30 transition-all duration-300 text-center">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <span className="text-xl">📚</span>
                 </div>
@@ -757,72 +773,13 @@ const HomePage = memo(function HomePage() {
                 <h3 className="text-lg font-semibold text-purple-400 mb-2">Blog</h3>
                 <p className="text-white/70 text-sm">Read our latest insights on AI, automation, and technology trends</p>
               </Link>
-
-              <Link href="/reports" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300 text-center hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-xl">📈</span>
-                </div>
-                <h3 className="text-lg font-semibold text-green-400 mb-2">Reports</h3>
-                <p className="text-white/70 text-sm">View autonomous system reports and performance analytics</p>
-              </Link>
-
-              <Link href="/contact" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-red-400/30 transition-all duration-300 text-center hover:scale-105">
+              
+              <Link href="/contact" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-red-400/30 transition-all duration-300 text-center">
                 <div className="w-12 h-12 bg-gradient-to-br from-red-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <span className="text-xl">💬</span>
                 </div>
                 <h3 className="text-lg font-semibold text-red-400 mb-2">Contact</h3>
-                <p className="text-white/70 text-sm">Get in touch to discuss your automation needs</p>
-              </Link>
-
-              <Link href="/automation" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-indigo-400/30 transition-all duration-300 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-indigo-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-xl">⚙️</span>
-                </div>
-                <h3 className="text-lg font-semibold text-indigo-400 mb-2">Automation</h3>
-                <p className="text-white/70 text-sm">AI systems</p>
-              </Link>
-
-              <Link href="/reports" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-teal-400/30 transition-all duration-300 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-teal-400 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-xl">📈</span>
-                </div>
-                <h3 className="text-lg font-semibold text-teal-400 mb-2">Reports</h3>
-                <p className="text-white/70 text-sm">Analytics & insights</p>
-              </Link>
-            </div>
-            
-            {/* Additional Navigation Links */}
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Link href="/automation" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-indigo-400/30 transition-all duration-300 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-xl">⚙️</span>
-                </div>
-                <h3 className="text-lg font-semibold text-indigo-400 mb-2">Automation</h3>
-                <p className="text-white/70 text-sm">Systems & tools</p>
-              </Link>
-              
-              <Link href="/reports" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-teal-400/30 transition-all duration-300 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-teal-400 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-xl">📈</span>
-                </div>
-                <h3 className="text-lg font-semibold text-teal-400 mb-2">Reports</h3>
-                <p className="text-white/70 text-sm">Analytics & insights</p>
-              </Link>
-              
-              <Link href="/component-library" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-rose-400/30 transition-all duration-300 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-rose-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-xl">🧩</span>
-                </div>
-                <h3 className="text-lg font-semibold text-rose-400 mb-2">Components</h3>
-                <p className="text-white/70 text-sm">UI library</p>
-              </Link>
-              
-              <Link href="/api-documentation" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-amber-400/30 transition-all duration-300 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-xl">🔌</span>
-                </div>
-                <h3 className="text-lg font-semibold text-amber-400 mb-2">API Docs</h3>
-                <p className="text-white/70 text-sm">Integration guide</p>
+                <p className="text-white/70 text-sm">Get in touch</p>
               </Link>
             </div>
           </section>
@@ -1542,26 +1499,9 @@ const HomePage = memo(function HomePage() {
                 <Link href="/about" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white font-semibold transition-all duration-300 hover:border-cyan-400/50">
                   Learn More
                 </Link>
-                <Link href="/services" className="px-6 py-3 bg-gradient-to-r from-fuchsia-500 to-purple-600 hover:from-fuchsia-600 hover:to-purple-700 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
-                  View Services
+                <Link href="/automation" className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  Explore Automation
                 </Link>
-                <Link href="/resources" className="px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
-                  Explore Resources
-                </Link>
-              </div>
-              <div className="text-center">
-                <p className="text-white/60 text-sm mb-4">Connect with us on social media for the latest updates</p>
-                <div className="flex justify-center space-x-4">
-                  <a href="#" className="text-white/60 hover:text-cyan-400 transition-colors duration-300">
-                    <span className="text-xl">🐦</span>
-                  </a>
-                  <a href="#" className="text-white/60 hover:text-fuchsia-400 transition-colors duration-300">
-                    <span className="text-xl">💼</span>
-                  </a>
-                  <a href="#" className="text-white/60 hover:text-blue-400 transition-colors duration-300">
-                    <span className="text-xl">📧</span>
-                  </a>
-                </div>
               </div>
             </div>
           </section>
