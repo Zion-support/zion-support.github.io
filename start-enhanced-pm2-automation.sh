@@ -15,10 +15,10 @@ CYAN='\033[0;36m'
 NC='\033[0m' # No Color
 
 # Project configuration
-PROJECT_ROOT="/workspace"
-ENHANCED_ECOSYSTEM="$PROJECT_ROOT/ecosystem.enhanced.cjs"
-ORIGINAL_ECOSYSTEM="$PROJECT_ROOT/ecosystem.config.cjs"
-BACKUP_ECOSYSTEM="$PROJECT_ROOT/ecosystem.config.backup.$(date +%s).cjs"
+PROJECT_ROOT="$(pwd)"
+ENHANCED_ECOSYSTEM="$PROJECT_ROOT/ecosystem.enhanced.js"
+ORIGINAL_ECOSYSTEM="$PROJECT_ROOT/ecosystem.config.js"
+BACKUP_ECOSYSTEM="$PROJECT_ROOT/ecosystem.config.backup.$(date +%s).js"
 
 # Logging functions
 log() {
@@ -74,7 +74,9 @@ setup_enhanced_ecosystem() {
     mkdir -p "$PROJECT_ROOT/logs"
     
     # Set proper permissions
-    chmod +x "$PROJECT_ROOT/scripts/automation/"*.cjs
+    if [ -d "$PROJECT_ROOT/scripts/automation" ]; then
+        chmod +x "$PROJECT_ROOT/scripts/automation/"*.cjs
+    fi
     
     success "Enhanced ecosystem setup completed"
 }
@@ -96,7 +98,11 @@ stop_existing_processes() {
 start_enhanced_system() {
     log "Starting Enhanced PM2 Automation System..."
     
-    # Start the enhanced ecosystem
+    # Stop any existing processes first
+    pm2 stop all 2>/dev/null || true
+    pm2 delete all 2>/dev/null || true
+    
+    # Start the enhanced ecosystem (this will start all apps defined in the ecosystem file)
     pm2 start "$ENHANCED_ECOSYSTEM"
     
     # Wait for processes to start
@@ -210,6 +216,9 @@ display_system_status() {
 # Create management scripts
 create_management_scripts() {
     log "Creating management scripts..."
+    
+    # Create scripts directory if it doesn't exist
+    mkdir -p "$PROJECT_ROOT/scripts"
     
     # Enhanced start script
     cat > "$PROJECT_ROOT/scripts/enhanced-pm2-start.sh" << 'EOF'
