@@ -11,7 +11,9 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('auth/', include('authentication.urls')),
-    path('api/coupons/', include('promotions.urls')),
+vu1sbl-codex/implement-cart-recovery-logic
+    path('cart/', include('backend.cart.urls')),
     path('api/', include('public_api.urls')),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='swagger-ui'),
+main
 ]

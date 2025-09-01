@@ -109,7 +109,15 @@ zion.app/
 
 ## 🧪 Testing
 
-### Run all tests
+### Background tasks
+
+The Django backend runs scheduled jobs using Celery. To process abandoned cart emails locally run:
+
+```sh
+celery -A backend.celery worker -B
+```
+
+**Edit a file directly in GitHub**
 
 ```bash
 npm run test:all
