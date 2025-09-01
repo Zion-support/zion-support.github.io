@@ -1,81 +1,112 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+const fse = require('fs-extra');
+const glob = require('glob');
 
-function walk(dir, filterExts = new Set(['.tsx', '.jsx', '.md', '.mdx'])) {
-  const out = [];
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
-  for (const e of entries) {
-    if (e.name.startsWith('.')) continue;
-    const abs = path.join(dir, e.name);
-    if (e.isDirectory()) {
-      out.push(...walk(abs, filterExts));
-    } else {
-      const ext = path.extname(e.name);
-      if (filterExts.has(ext)) out.push(abs);
+function getFiles(patterns, ignore = []) {
+  const files = new Set();
+  for (const pattern of patterns) {
+    for (const file of glob.sync(pattern, { ignore, nodir: true })) {
+      files.add(path.normalize(file));
     }
   }
-  return out;
+  return Array.from(files);
 }
 
-function gitLastCommitUnixTs(filePath) {
-  try {
-    const out = execSync(`git log -1 --format=%ct -- ${JSON.stringify(filePath)}`, { encoding: 'utf8' }).trim();
-    return out ? parseInt(out, 10) : 0;
-  } catch {
-    try {
-      const stat = fs.statSync(filePath);
-      return Math.floor(stat.mtimeMs / 1000);
-    } catch { return 0; }
+function filePathToRoute(filePath) {
+  const normalized = filePath.replace(/\\/g, '/');
+  if (normalized.startsWith('pages/')) {
+    const rel = normalized.replace(/^pages\//, '').replace(/\.(tsx|ts|jsx|js)$/, '');
+    if (rel === '_app' || rel === '_document' || rel.startsWith('api/')) return null;
+    const route = '/' + rel.replace(/index$/i, '');
+    return route === '/' ? route : route.replace(/\/$/, '');
   }
+  if (normalized.startsWith('docs/')) {
+    return '/docs/' + normalized.replace(/^docs\//, '').replace(/\.(md|mdx)$/, '');
+  }
+  if (normalized.startsWith('data/')) {
+    return '/data/' + normalized.replace(/^data\//, '').replace(/\.(md|mdx|json|csv|yml|yaml)$/, '');
+  }
+  return null;
 }
 
-function daysBetween(a, b) {
-  return Math.round((b - a) / (24 * 60 * 60));
+function classifyAgeDays(ageDays) {
+  if (ageDays <= 1) return 'hot';
+  if (ageDays <= 7) return 'warm';
+  if (ageDays <= 30) return 'stale';
+  return 'cold';
 }
 
-function analyze() {
-  const root = process.cwd();
-  const targets = [
-    { label: 'pages', dir: path.join(root, 'pages') },
-    { label: 'docs', dir: path.join(root, 'docs') },
-    { label: 'components', dir: path.join(root, 'components') },
+function main() {
+  const cwd = process.cwd();
+  const startTime = Date.now();
+  const patterns = [
+    'pages/**/*.{tsx,ts,jsx,js}',
+    'docs/**/*.{md,mdx}',
+    'data/**/*.{md,mdx,json,csv,yml,yaml}',
+  ];
+  const ignore = [
+    '**/node_modules/**',
+    '**/.git/**',
+    'pages/_app.tsx',
+    'pages/_document.tsx',
   ];
 
-  const nowSec = Math.floor(Date.now() / 1000);
+  const files = getFiles(patterns, ignore);
+
   const items = [];
-  for (const t of targets) {
-    if (!fs.existsSync(t.dir)) continue;
-    for (const file of walk(t.dir)) {
-      const ts = gitLastCommitUnixTs(file);
-      const days = daysBetween(ts, nowSec);
-      items.push({ area: t.label, file: path.relative(root, file), lastCommitUnix: ts, stalenessDays: days });
+  for (const file of files) {
+    try {
+      const stat = fs.statSync(file);
+      if (!stat.isFile()) continue;
+      const route = filePathToRoute(file);
+      if (route === null) continue;
+      const modifiedAt = stat.mtime;
+      const ageDays = Math.max(0, (Date.now() - modifiedAt.getTime()) / (1000 * 60 * 60 * 24));
+      items.push({
+        file,
+        route,
+        modifiedAt: modifiedAt.toISOString(),
+        ageDays: Number(ageDays.toFixed(2)),
+        status: classifyAgeDays(ageDays),
+      });
+    } catch (e) {
+      // ignore
     }
   }
 
-  items.sort((a, b) => b.stalenessDays - a.stalenessDays);
-  const summary = {
+  items.sort((a, b) => b.ageDays - a.ageDays);
+  const staleTop = items.slice(0, 30);
+
+  const freshness = {
     generatedAt: new Date().toISOString(),
-    totals: { files: items.length },
-    mostStale: items.slice(0, 50),
-    freshnessByArea: targets.map(t => ({ area: t.label, avgStalenessDays: average(items.filter(i => i.area === t.label).map(i => i.stalenessDays)) })),
+    totalFiles: items.length,
+    summary: {
+      hot: items.filter(i => i.status === 'hot').length,
+      warm: items.filter(i => i.status === 'warm').length,
+      stale: items.filter(i => i.status === 'stale').length,
+      cold: items.filter(i => i.status === 'cold').length,
+    },
+    stalestTop30: staleTop,
   };
 
-  const outDir = path.join(root, 'public', 'automation');
-  fs.mkdirSync(outDir, { recursive: true });
-  const outPath = path.join(outDir, 'content-freshness.json');
-  fs.writeFileSync(outPath, JSON.stringify({ summary, items }, null, 2));
-  return outPath;
+  const outDir = path.resolve(cwd, 'public', 'automation');
+  fse.ensureDirSync(outDir);
+  const outFile = path.join(outDir, 'content-freshness-report.json');
+  fs.writeFileSync(outFile, JSON.stringify(freshness, null, 2));
+
+  console.log('Content Freshness Auditor');
+  console.log('- files scanned:', items.length);
+  console.log('- summary:', JSON.stringify(freshness.summary));
+  console.log('- output:', path.relative(cwd, outFile));
 }
 
-function average(arr) {
-  if (!arr.length) return 0;
-  return Math.round((arr.reduce((s, n) => s + n, 0) / arr.length) * 10) / 10;
+if (require.main === module) {
+  try {
+    main();
+    process.exit(0);
+  } catch (err) {
+    console.error('content-freshness-auditor failed:', err);
+    process.exit(1);
+  }
 }
-
-(function main() {
-  const outPath = analyze();
-  process.stdout.write(`Wrote content freshness report: ${outPath}\n`);
-})();

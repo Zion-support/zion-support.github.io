@@ -221,36 +221,18 @@ schedule = "0 */6 * * *" # every 6 hours
 name = "auto-scheduler"
 schedule = "*/15 * * * *" # every 15 minutes
 
-# Newly added cloud automations
 [[scheduled.functions]]
-name = "performance-audit-runner"
-schedule = "0 * * * *" # hourly
+name = "content-freshness-auditor"
+schedule = "*/20 * * * *" # every 20 minutes
 
 [[scheduled.functions]]
-name = "unused-deps-runner"
-schedule = "17 */6 * * *" # every 6 hours
-
-[[scheduled.functions]]
-name = "sitemap-pinger"
-schedule = "0 */2 * * *" # every 2 hours
-
-# Newly added autonomous cloud automations
-[[scheduled.functions]]
-  name = "front-autopilot"
-  schedule = "*/2 * * * *" # every 2 minutes
-
-[[scheduled.functions]]
-  name = "auto-heal-and-optimize"
-  schedule = "*/5 * * * *" # every 5 minutes
-
-[[scheduled.functions]]
-  name = "content-refresh-runner"
-  schedule = "*/10 * * * *" # every 10 minutes
+name = "dependency-intelligence-upgrader"
+schedule = "*/30 * * * *" # every 30 minutes
 
 # From main (keep)
 [[scheduled.functions]]
-  name = "autonomous-innovation-generator"
-  schedule = "*/2 * * * *" # every 2 minutes
+name = "autonomous-innovation-generator"
+schedule = "*/2 * * * *" # every 2 minutes
 
 [[scheduled.functions]]
   name = "seo-audit-runner"

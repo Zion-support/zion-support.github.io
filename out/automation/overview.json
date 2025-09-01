@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-11T22:48:08.954Z",
+  "generatedAt": "2025-08-11T22:47:32.677Z",
   "functions": [
     "a11y-audit-runner",
     "ai-changelog-runner",
@@ -20,13 +20,13 @@
     "capability-map-runner",
     "cloud-autonomous-orchestrator-runner",
     "cloud_orchestrator",
-    "content-freshness-runner",
+    "content-freshness-auditor",
     "continuous-front-runner",
     "continuous-orchestrator",
     "css-bloat-report",
     "dead-code-audit",
     "dead-code-report",
-    "docs-gap-finder-runner",
+    "dependency-intelligence-upgrader",
     "docs-index-runner",
     "docs-knowledge-sync",
     "docs-link-checker-runner",
