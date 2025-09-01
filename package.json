@@ -202,10 +202,11 @@
     "conflicts:cron:start": "bash automation/merge-conflict-cron.sh start",
     "conflicts:cron:stop": "bash automation/merge-conflict-cron.sh stop",
     "conflicts:cron:status": "bash automation/merge-conflict-cron.sh status",
-    "pages:auto-stub": "node automation/auto-page-stubber.cjs",
-    "audit:visual": "node automation/visual-snapshot-auditor.cjs",
-    "audit:dead-code": "node automation/dead-code-reporter.cjs",
-    "optimize:images": "node automation/image-optimizer.cjs"
+    "security:audit": "node automation/security-audit.cjs",
+    "security:audit:fix": "npm audit fix --force || true",
+    "changelog:generate": "node automation/generate-changelog.cjs",
+    "images:audit": "node automation/image-audit.cjs",
+    "links:scan:run": "npm run links:scan"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",

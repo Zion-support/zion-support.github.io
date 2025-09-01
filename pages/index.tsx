@@ -1,62 +1,75 @@
-import Link from 'next/link'
+import Head from 'next/head';
+import Link from 'next/link';
+import EnhancedLayout from '../components/layout/EnhancedLayout';
 
-export default function HomePage() {
+const WORKFLOWS = [
+  { name: 'Autonomous Cloud Bot', file: 'autonomous-cloud-bot.yml' },
+  { name: 'Fast Bot', file: 'autonomous-cloud-bot-fast.yml' },
+  { name: 'Dependencies Bot', file: 'autonomous-cloud-bot-deps.yml' },
+  { name: 'Security Bot', file: 'autonomous-cloud-bot-security.yml' },
+  { name: 'Content Bot', file: 'autonomous-cloud-bot-content.yml' },
+  { name: 'Links Bot', file: 'autonomous-cloud-bot-links.yml' },
+  { name: 'Changelog Bot', file: 'autonomous-cloud-bot-changelog.yml' },
+  { name: 'Images Bot', file: 'autonomous-cloud-bot-images.yml' },
+  { name: 'TODO Issues Bot', file: 'autonomous-cloud-bot-todos.yml' },
+  { name: 'Bundle Size Bot', file: 'autonomous-cloud-bot-bundle.yml' },
+  { name: 'Spellcheck', file: 'spellcheck.yml' },
+];
+
+export default function Home() {
   return (
-    <div className="py-10">
-      <div className="rounded-2xl p-8 md:p-12 bg-gradient-to-br from-indigo-600/10 to-cyan-500/10 border border-indigo-400/20 dark:border-cyan-400/20">
-        <h1 className="text-2xl md:text-3xl font-semibold">Zion AI Marketplace</h1>
-        <p className="mt-2 opacity-80 max-w-2xl">Find elite AI engineers, data scientists, and cloud experts. Post a job or browse vetted talent and get matched instantly.</p>
-        <div className="mt-6 flex flex-wrap gap-3 text-sm">
-          <Link href="/talent"><a className="rounded-md border px-4 py-2 hover:bg-gray-50 dark:hover:bg-white/5">Browse Talent</a></Link>
-          <Link href="/jobs/post"><a className="rounded-md border px-4 py-2 hover:bg-gray-50 dark:hover:bg-white/5">Post a Job</a></Link>
-        </div>
-      </div>
+    <EnhancedLayout>
+      <Head>
+        <title>Zion AI Marketplace — Autonomous Cloud Automations</title>
+        <meta name="description" content="Intelligent, innovative, and useful automations running autonomously in the cloud." />
+      </Head>
+
+      <section className="mb-10">
+        <h1 className="text-3xl font-extrabold">Autonomous Cloud Automations</h1>
+        <p className="mt-2 text-gray-700">
+          These intelligent automations run 100% in the cloud with no human or physical machine required.
+          They continuously improve the repository and sync changes at high speed.
+        </p>
+      </section>
+
+      <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {WORKFLOWS.map((wf) => (
+          <a
+            key={wf.file}
+            className="block border rounded-lg p-4 hover:shadow-md transition"
+            href={`https://github.com/Zion-Holdings/zion.app/blob/main/.github/workflows/${wf.file}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h2 className="text-lg font-semibold">{wf.name}</h2>
+            <p className="text-sm text-gray-600">View workflow: {wf.file}</p>
+          </a>
+        ))}
+      </section>
 
       <section className="mt-10">
-        <h2 className="text-lg font-semibold">Autonomous Cloud Automations</h2>
-        <p className="text-sm opacity-80 mt-1">These jobs run continuously in the cloud, self-heal, and sync changes directly to our repository.</p>
-        <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
-          <div className="rounded-lg border p-4">
-            <div className="font-medium">Sitemap & Robots</div>
-            <p className="opacity-80 mt-1">Keeps sitemap and robots.txt fresh for SEO.</p>
-            <div className="mt-3 flex flex-wrap gap-3">
-              <Link href="/sitemap.xml"><a className="underline underline-offset-2">Sitemap</a></Link>
-              <Link href="/robots.txt"><a className="underline underline-offset-2">Robots</a></Link>
-            </div>
-          </div>
-          <div className="rounded-lg border p-4">
-            <div className="font-medium">Link & Content Health</div>
-            <p className="opacity-80 mt-1">Scans and fixes broken links and typos.</p>
-            <div className="mt-3 flex flex-wrap gap-3">
-              <Link href="/reports/typo-report.txt"><a className="underline underline-offset-2">Typo Report</a></Link>
-            </div>
-          </div>
-          <div className="rounded-lg border p-4">
-            <div className="font-medium">Performance & Bundles</div>
-            <p className="opacity-80 mt-1">Optimizes CSS, images, and reports bundle sizes.</p>
-            <div className="mt-3 flex flex-wrap gap-3">
-              <Link href="/reports/bundle-report.txt"><a className="underline underline-offset-2">Bundle Report</a></Link>
-            </div>
-          </div>
-          <div className="rounded-lg border p-4">
-            <div className="font-medium">Feeds & Route Map</div>
-            <p className="opacity-80 mt-1">Publishes RSS/JSON feeds and live route maps.</p>
-            <div className="mt-3 flex flex-wrap gap-3">
-              <Link href="/feed.xml"><a className="underline underline-offset-2">RSS</a></Link>
-              <Link href="/feed.json"><a className="underline underline-offset-2">JSON</a></Link>
-              <Link href="/reports/route-map.json"><a className="underline underline-offset-2">Route Map</a></Link>
-            </div>
-          </div>
-          <div className="rounded-lg border p-4">
-            <div className="font-medium">OG Social Images</div>
-            <p className="opacity-80 mt-1">Generates Open Graph images for top routes.</p>
-            <div className="mt-3 flex flex-wrap gap-3">
-              <Link href="/og/home.svg"><a className="underline underline-offset-2">Home OG</a></Link>
-            </div>
-          </div>
-        </div>
-        <p className="text-xs opacity-70 mt-3">All tasks run via cloud workflows and auto-commit changes for maximum freshness.</p>
+        <h2 className="text-xl font-bold">Recent Reports</h2>
+        <ul className="mt-2 list-disc ml-6 text-sm text-gray-700 space-y-1">
+          <li>
+            <Link href="/data/reports/security">
+              <span className="underline">Security Reports</span>
+            </Link>
+          </li>
+          <li>
+            <Link href="/data/reports/images">
+              <span className="underline">Image Audits</span>
+            </Link>
+          </li>
+          <li>
+            <a className="underline" href="/CHANGELOG.md">Changelog</a>
+          </li>
+        </ul>
       </section>
-    </div>
-  )
+
+      <section className="mt-10 text-xs text-gray-500">
+        All automations use the integrated orchestrator and the GitHub token to commit and push changes or open PRs.
+        Schedules are optimized for fast sync, rebasing on the latest changes to reduce conflicts.
+      </section>
+    </EnhancedLayout>
+  );
 }
