@@ -1,8 +1,8 @@
 export default function AdminAutomationStatus() {
   return (
-    <div className="space-y-2">
-      <h1 className="text-xl font-semibold">Admin Automation Status</h1>
-      <p className="text-gray-600 dark:text-gray-400">System is operational.</p>
+    <div>
+      <h1 className="text-2xl font-semibold">Automation Status</h1>
+      <p className="opacity-80">Status overview placeholder.</p>
     </div>
   );
 }

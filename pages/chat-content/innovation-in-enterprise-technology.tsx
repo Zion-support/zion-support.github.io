@@ -1,1 +1,1 @@
-export default function Article() { return <div>Innovation in enterprise technology</div>; }
+export default function ChatInnovationEnterprise() { return <div>Placeholder</div>; }

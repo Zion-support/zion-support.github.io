@@ -1,1 +1,1 @@
-export default function Article() { return <div>AI-powered business solutions</div>; }
+export default function ChatAiBusiness() { return <div>Placeholder</div>; }

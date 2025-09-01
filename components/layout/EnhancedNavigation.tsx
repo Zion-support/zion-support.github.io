@@ -45,7 +45,8 @@ export default function EnhancedNavigation() {
           <Link href="/blog"><a>Blog</a></Link>
           <Link href="/book-builder"><a>Book Builder</a></Link>
           <Link href="/contact"><a>Contact</a></Link>
-          <Link href="/zion/init"><a className="font-medium text-indigo-600 dark:text-indigo-400">Deploy</a></Link>
+          <Link href="/wiki"><a>Wiki</a></Link>
+          <Link href="/docs"><a>Docs</a></Link>
         </div>
         <div className="flex items-center gap-4 text-sm">
           <Link href="/services"><a>Services</a></Link>

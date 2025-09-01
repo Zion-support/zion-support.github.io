@@ -1,1 +1,1 @@
-export default function Article() { return <div>Cybersecurity best practices</div>; }
+export default function ChatCybersecurity() { return <div>Placeholder</div>; }

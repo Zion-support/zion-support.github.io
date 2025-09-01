@@ -2,11 +2,11 @@ import { useRouter } from 'next/router';
 
 export default function TalentProfile() {
   const router = useRouter();
-  const { slug } = router.query;
+  const { slug } = router.query as { slug?: string };
   return (
-    <div className="space-y-2">
-      <h1 className="text-xl font-semibold">Talent: {slug}</h1>
-      <p className="text-gray-600 dark:text-gray-400">Profile details coming soon.</p>
+    <div>
+      <h1 className="text-2xl font-semibold">Talent Profile</h1>
+      <p className="opacity-80">Profile: {slug}</p>
     </div>
   );
 }

@@ -1,1 +1,1 @@
-export default function Article() { return <div>Future of work and automation</div>; }
+export default function ChatFutureOfWork() { return <div>Placeholder</div>; }

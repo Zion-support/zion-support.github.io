@@ -1,1 +1,1 @@
-export default function Article() { return <div>Data analytics implementation</div>; }
+export default function ChatDataAnalytics() { return <div>Placeholder</div>; }

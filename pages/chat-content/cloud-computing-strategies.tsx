@@ -1,1 +1,1 @@
-export default function Article() { return <div>Cloud computing strategies</div>; }
+export default function ChatCloudComputing() { return <div>Placeholder</div>; }
