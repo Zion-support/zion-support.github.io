@@ -1,1 +1,14 @@
-"// Enhanced lazy loading with preloading hints const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {; const LazyComponent = lazy(importFn); return (props: any) => ( <Suspense fallback={fallback || <div>Loading...</div>}> <LazyComponent {...props} /> </Suspense> ); }; // Lazy load pages for better performance const HomePage = lazy(() => import("./pages/HomePage").then(module => ({ default: module.HomePage })));"const ServicesPage = lazy(() => import("./pages/ServicesPage").then(module => ({ default: module.default })));"const SolutionsPage = lazy(() => import("./pages/SolutionsPage").then(module => ({ default: module.SolutionsPage })));"const AboutPage = lazy(() => import("./pages/AboutPage").then(module => ({ default: module.AboutPage })));"const ContactPage = lazy(() => import("./pages/ContactPage").then(module => ({ default: module.ContactPage })));"const BlogPage = lazy(() => import("./pages/BlogPage").then(module => ({ default: module.BlogPage })));"const NotFoundPage = lazy(() => import("./pages/NotFoundPage").then(module => ({ default: module.NotFoundPage })));"const ComprehensiveServicesPage = lazy(() => import("./pages/ComprehensiveServicesPage").then(module => ({ default: module.ComprehensiveServicesPage })));"const Sitemap = lazy(() => import("./pages/Sitemap").then(module => ({ default: module.default })));"const ComprehensiveSitemap = lazy(() => import("./pages/ComprehensiveSitemap").then(module => ({ default: module.ComprehensiveSitemap })));"const Support = lazy(() => import("./pages/Support").then(module => ({ default: module.default })));"const Training = lazy(() => import("./pages/Training").then(module => ({ default: module.default })));"const Helpdesk = lazy(() => import("./pages/Helpdesk").then(module => ({ default: module.default })));"const PricingPage = lazy(() => import("./pages/PricingPage").then(module => ({ default: module.PricingPage })));"// Service Pages - Updated to use backup-pages location const AIThreatIntelligence = lazy(() => import("./backup-pages/src-pages/services/ai-threat-intelligence-platform").then(module => ({ default: module.AIThreatIntelligencePlatform })));"const BlockchainSupplyChain = lazy(() => import("./backup-pages/src-pages/services/blockchain-supply-chain-platform").then(module => ({ default: module.BlockchainSupplyChainPlatform })));"const AdvancedServicesShowcase = lazy(() => import("./backup-pages/src-pages/AdvancedServicesShowcase2028").then(module => ({ default: module.AdvancedServicesShowcase2028 })));"// Loading component const PageLoader = () => (; <div className="flex items-center justify-center min-h-screen bg-gray-900">" <div className="text-center">" <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div>" <p className="text-gray-400">Loading...</p>" </div>" </div> 
+import React from 'react';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Zion Tech Group</h1>
+        <p>Welcome to our application</p>
+      </header>
+    </div>
+  );
+}
+
+export default App; 
