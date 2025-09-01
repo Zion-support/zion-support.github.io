@@ -214,18 +214,11 @@ const Index: NextPage = () => {
               { title: 'Autonomous Innovation Generator (2m)', desc: 'Synthesizes front promos and homepage refresh, then syncs to main.', href: '/.netlify/functions/autonomous-innovation-generator' },
               { title: 'Auto Scheduler (15m)', desc: 'Smart time-based runner that chooses and executes the best tasks.', href: '/.netlify/functions/auto-scheduler' },
               { title: 'Broken Image Scanner (6h)', desc: 'Finds broken images, optimizes assets, and syncs fixes.', href: '/.netlify/functions/broken-image-scanner' },
-              { title: 'Automation Guardian (10m)', desc: 'Runs improvement, orchestrators, quick fixes and syncs to main.', href: '/.netlify/functions/automation-guardian-runner' },
-              { title: 'Auto Discovery Runner (30m)', desc: 'Discovers and runs high‑value orchestrators autonomously.', href: '/.netlify/functions/auto-discovery-runner' },
-              { title: 'Cloud Autonomous Orchestrator (15m)', desc: 'Runs cloud orchestrations, then syncs and rebuilds.', href: '/.netlify/functions/cloud-autonomous-orchestrator-runner' },
-              { title: 'Smart Redirect Manager', desc: 'Fixes internal 404s by auto-adding redirects; writes a public report.', href: '/.netlify/functions/redirect-manager' },
-              { title: 'A11y Alt-Text Auditor', desc: 'Scans for missing alt text and publishes a report.', href: '/.netlify/functions/a11y-audit-runner' },
-              { title: 'Branch Cleanup Runner (daily)', desc: 'Deletes merged or stale ephemeral branches via GitHub API.', href: '/.netlify/functions/branch-cleanup-runner' },
-              { title: 'Redirect Healer', desc: 'Heals broken internal links by auto-adding smart redirects.', href: '/.netlify/functions/redirect-healer' },
-              { title: 'Sitemap Prioritizer', desc: 'Regenerates sitemap with popularity-weighted priorities.', href: '/.netlify/functions/sitemap-prioritizer' },
-              { title: 'Component Catalog', desc: 'Generates a live catalog of UI components with usage stats.', href: '/.netlify/functions/component-catalog-runner' },
-              { title: 'Automation Atlas', desc: 'Builds a consolidated atlas of functions, schedules, and workflows.', href: '/.netlify/functions/automation-atlas-runner' },
-              { title: 'Dependency Freshness Radar', desc: 'Finds outdated dependencies and publishes a report.', href: '/.netlify/functions/dependency-freshness-radar' },
-              { title: 'Automation Status Dashboard', desc: 'Publishes a unified automation overview and quick links.', href: '/.netlify/functions/automation-status-dashboard' },
+
+              { title: 'Branch Cleanup (daily)', desc: 'Auto‑prunes merged and stale branches.', href: '/.netlify/functions/branch-cleanup-runner' },
+              { title: 'Deps Auto‑Upgrade (daily)', desc: 'Safe minor/patch dependency updates with build checks.', href: '/.netlify/functions/deps-auto-upgrade-runner' },
+              { title: 'Auto Media Release (6h)', desc: 'Publishes media updates, regenerates OG images and optimizes assets.', href: '/.netlify/functions/auto-media-release-runner' },
+              { title: 'LLM Content Curator (30m)', desc: 'Curates content and updates promos and docs automatically.', href: '/.netlify/functions/llm-content-curator-runner' },
             ].map((tool) => (
               <a key={tool.title} href={tool.href} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />

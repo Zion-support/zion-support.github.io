@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2025-08-11T23:23:25.745Z",
+  "generatedAt": "2025-08-11T23:26:28.081Z",
   "functions": [
     "a11y-alt-text-auditor-runner",
     "a11y-audit-runner",
     "ai-changelog-runner",
-    "anchor-integrity-runner",
+    "auto-media-release-runner",
     "auto-scheduler",
     "automation-atlas-runner",
     "automation-matrix",
@@ -24,7 +24,6 @@
     "css-bloat-report",
     "dead-code-audit",
     "dead-code-report",
-    "dependency-freshness-radar",
     "deps-auto-upgrade-runner",
     "docs-index-runner",
     "docs-knowledge-sync",
