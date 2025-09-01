@@ -105,14 +105,13 @@ export default function WhitePapers() {
       tags: ['Digital Transformation', 'ROI', 'Strategy', 'Measurement'],
       coverImage: '/images/whitepapers/digital-transformation-roi.jpg',
       fileSize: '2.2 MB',
+      language: 'English',
+      rating: 4.5,
+      featured: false,
+      tags: ['Digital Transformation', 'ROI', 'Strategy', 'Measurement'],
+      coverImage: '/images/whitepapers/digital-transformation-roi.jpg',
+      fileSize: '2.2 MB',
       language: 'English'
-      rating: 4.5,;
-      featured: false,;
-      tags: ['Digital Transformation', 'ROI', 'Strategy', 'Measurement'],;
-      coverImage: '/images/whitepapers/digital-transformation-roi.jpg',;
-      fileSize: '2.2 MB',;
-      language: 'English';
-    };
     }
   ];
 
@@ -134,19 +133,6 @@ export default function WhitePapers() {
       description: 'Real-world examples of successful cloud transformations',
       icon: <Cloud className="w-6 h-6" />,
       link: '/insights/cloud-success-stories'
-    },;
-    {;
-      title: 'Cloud Migration Success Stories',;
-      description: 'Real-world examples of successful cloud transformations',;
-      icon: <Cloud className="w-6 h-6" />,;
-      link: '/insights/cloud-success-stories';
-    };
-  ];
-
-  const getCategoryCount = (categoryId: string) => {;
-    if (categoryId === 'all') {;
-      return whitePapers.length;
-
     }
   ];
 
@@ -158,20 +144,6 @@ export default function WhitePapers() {
   };
 
   // Update counts
-  const formatDate = (dateString: string) => {;
-    return new Date(dateString).toLocaleDateString('en-US', {;
-      year: 'numeric',;
-      month: 'long',;
-      day: 'numeric';
-    });
-  };
-
-  const formatDownloads = (downloads: number) => {;
-    if (downloads >= 1000000) {;
-      return (downloads / 1000000).toFixed(1) + 'M';
-    } else if (downloads >= 1000) {
-      return (downloads / 1000).toFixed(1) + 'K';
-
   categories.forEach(cat => {
     cat.count = getCategoryCount(cat.id);
   });
