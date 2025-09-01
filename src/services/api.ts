@@ -6,73 +6,116 @@ interface ApiResponse<T = any> {
   error?: string;
   message?: string;
   count?: number;
+}
 
 // Generic API error
 class ApiError extends Error {
   constructor(public status: number, message: string) {
     super(message);
     this.name = 'ApiError';
-
-
-interface ApiClientOptions {
-  method?: string;
-  body?: string;
-  headers?: Record<string, string>;
+  }
 }
 
-export async function apiClient(endpoint: string, options: ApiClientOptions = {}) {;
-  const { method = 'GET', body, headers = {} } = options;
+
+// Generic fetch wrapper with error handling
+async function apiRequest<T>(
+  endpoint: string,
+  options: RequestInit = {}
+): Promise<ApiResponse<T>> {
+  const url = `${API_BASE_URL}${endpoint}`;
+
   
   const config: RequestInit = {
-  method,
+    method: options.method || 'GET',
     headers: {
       'Content-Type': 'application/json',
-      ...headers,;
-  ;
-  ;
-  ;
-  ;
-  ;
-
-
-
-
-
-},;
+      ...options.headers,
+    },
+    ...options,
   };
 
-  if (body) {
-    config.body = body;
-  }
-
   try {
-    const response = await fetch(endpoint, config);
-    
+
+    const response = await fetch(url, config);
+
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+      throw new ApiError(response.status, `HTTP error! status: ${response.status}`);
     }
-    
-    return await response.json();
+
+    const data = await response.json();
+    return data;
   } catch (error) {
-    console.error('API request failed:', error);
-    throw error;
+    if (error instanceof ApiError) {
+      throw error;
+
+    }
+    throw new ApiError(500, `Network error: ${error instanceof Error ? error.message : 'Unknown error'}`);
   }
 }
 
 export const api = {
-  get: (endpoint: string, headers?: Record<string, string>) => 
-    apiClient(endpoint, { method: 'GET', headers: headers || {} }),
-  
-  post: (endpoint: string, data: any, headers?: Record<string, string>) => 
-    apiClient(endpoint, { method: 'POST', body: JSON.stringify(data), headers: headers || {} }),
-  
-  put: (endpoint: string, data: any, headers?: Record<string, string>) => 
-    apiClient(endpoint, { method: 'PUT', body: JSON.stringify(data), headers: headers || {} }),
-  
-  delete: (endpoint: string, headers?: Record<string, string>) => 
-    apiClient(endpoint, { method: 'DELETE', headers: headers || {} }),
+
+  // Health check
+  health: () => apiRequest('/health'),
+
+  // Users
+  getUsers: () => apiRequest<Array<any>>('/users'),
+  getUser: (id: number) => apiRequest<{ id: number; name: string; email: string }>(`/users/${id}`),
+  createUser: (userData: { name: string; email: string }) =>
+    apiRequest<{ id: number; name: string; email: string; createdAt: string }>('/users', {
+      method: 'POST',
+      body: JSON.stringify(userData),
+    }),
+  updateUser: (id: number, userData: { name?: string; email?: string }) =>
+    apiRequest<{ id: number; name: string; email: string; updatedAt: string }>(`/users/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify(userData),
+    }),
+  deleteUser: (id: number) => apiRequest(`/users/${id}`, { method: 'DELETE' }),
+
+  // Authentication
+  login: (credentials: { email: string; password: string }) =>
+    apiRequest<{ token: string; user: any }>('/auth/login', {
+      method: 'POST',
+      body: JSON.stringify(credentials),
+    }),
+  register: (userData: { name: string; email: string; password: string }) =>
+    apiRequest<{ token: string; user: any }>('/auth/register', {
+      method: 'POST',
+      body: JSON.stringify(userData),
+    }),
+  logout: () => apiRequest('/auth/logout', { method: 'POST' }),
+
+  // Products/Services
+  getProducts: () => apiRequest<Array<any>>('/products'),
+  getProduct: (id: number) => apiRequest<any>(`/products/${id}`),
+  createProduct: (productData: any) =>
+    apiRequest<any>('/products', {
+      method: 'POST',
+      body: JSON.stringify(productData),
+    }),
+  updateProduct: (id: number, productData: any) =>
+    apiRequest<any>(`/products/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify(productData),
+    }),
+  deleteProduct: (id: number) => apiRequest(`/products/${id}`, { method: 'DELETE' }),
+
+  // Orders
+  getOrders: () => apiRequest<Array<any>>('/orders'),
+  getOrder: (id: number) => apiRequest<any>(`/orders/${id}`),
+  createOrder: (orderData: any) =>
+    apiRequest<any>('/orders', {
+      method: 'POST',
+      body: JSON.stringify(orderData),
+    }),
+  updateOrder: (id: number, orderData: any) =>
+    apiRequest<any>(`/orders/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify(orderData),
+    }),
+  deleteOrder: (id: number) => apiRequest(`/orders/${id}`, { method: 'DELETE' }),
+
 };
 
-// Export types for use in components
-export type { ApiResponse };
-export { ApiError };}}}}}}}
+export default api;

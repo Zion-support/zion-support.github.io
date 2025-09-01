@@ -1,24 +1,28 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { LucideIcon } from 'lucide-react';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { LucideIcon  } from 'lucide-react.ts';
 
 interface Stat {
+
   number: string;
   label: string;
   icon: LucideIcon;
   description: string;
+
 }
 
-interface StatsSectionProps {
+interface StatsSectionProps extends React.PropsWithChildren<{}> {
+
   stats: Stat[];
+
 }
 
-export function StatsSection({ stats }: StatsSectionProps) {
+export function StatsSection(...args: any[]): any {
   return (
     <section className="py-16 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
+        <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
+          {stats.map((stat, index)  => (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}

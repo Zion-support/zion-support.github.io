@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from "../../components/SEO";
-import { 
-  MessageSquare, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '../../components/SEO';
+import { MessageSquare, 
   TrendingUp, 
   BarChart3, 
   Users, 
@@ -31,9 +30,9 @@ import {
   ShoppingCart,
   Shield,
   Settings
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function AICustomerFeedbackAnalytics() {
+export default function AICustomerFeedbackAnalytics(...args: any[]): any {
   const features = [
     {
       icon: Brain,
@@ -314,8 +313,8 @@ export default function AICustomerFeedbackAnalytics() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -412,8 +411,8 @@ export default function AICustomerFeedbackAnalytics() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={benefit.title}
                 initial = {
@@ -510,8 +509,8 @@ export default function AICustomerFeedbackAnalytics() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={plan.name}
                 initial = {
@@ -626,8 +625,8 @@ export default function AICustomerFeedbackAnalytics() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={useCase.industry}
                 initial = {
@@ -724,8 +723,8 @@ export default function AICustomerFeedbackAnalytics() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {integrations.map((integration, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {integrations.map((integration, index)  => (
               <motion.div
                 key={integration.name}
                 initial = {

@@ -1,9 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Search, TrendingUp, BarChart3, Target, Zap, Brain, Globe, Users, Clock, Shield, ArrowRight, CheckCircle, Star, Award, Rocket, Lightbulb, Code, Analytics, Monitor, Smartphone, Laptop, Phone } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Search, TrendingUp, BarChart3, Target, Zap, Brain, Globe, Users, Clock, Shield, ArrowRight, CheckCircle, Star, Award, Rocket, Lightbulb, Code, Analytics, Monitor, Smartphone, Laptop, Phone  } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
 
-export default function AIPoweredSEO() {
+export default function AIPoweredSEO(...args: any[]): any {
   const features = [
     {
       icon: Brain,
@@ -145,8 +145,8 @@ export default function AIPoweredSEO() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -183,8 +183,8 @@ export default function AIPoweredSEO() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -218,8 +218,8 @@ export default function AIPoweredSEO() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

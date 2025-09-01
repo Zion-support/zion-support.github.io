@@ -1,20 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import { X, CheckCircle, AlertCircle, Info, XCircle } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react.ts';
+import { X, CheckCircle, AlertCircle, Info, XCircle  } from 'lucide-react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
 
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
 
 export interface Toast {
-  id: string;
+
+  id: anystring;
   type: ToastType;
   title: string;
   message?: string;
   duration?: number;
+
 }
 
-interface ToastProps {
+interface ToastProps extends React.PropsWithChildren<{}> {
+
   toast: Toast;
-  onRemove: (id: string) => void;
+  onRemove: (id: string)  => void;
+
 }
 
 const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
@@ -95,24 +99,24 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
   );
 };
 
-export const ToastContainer: React.FC = () => {
-  const [toasts, setToasts] = useState<Toast[]>([]);
+export const ToastContainer: React.FC = (): JSX.Element => {
+  const [toasts, setToasts] = useState<any>([]);
 
-  const addToast = (toast: Omit<Toast, 'id'>) => {
+  const addToast = (toast: anyOmit<Toast, 'id'>)  => {
     const id = Math.random().toString(36).substr(2, 9);
     const newToast = { ...toast, id };
     setToasts(prev => [...prev, newToast]);
   };
 
-  const removeToast = (id: string) => {
+  const removeToast = (id: anystring)  => {
     setToasts(prev => prev.filter(toast => toast.id !== id));
   };
 
   // Expose addToast globally for easy access
   useEffect(() => {
-    (window as any).showToast = addToast;
+    (window as ).showToast = addToast;
     return () => {
-      delete (window as any).showToast;
+      delete (window as ).showToast;
     };
   }, []);
 
@@ -132,8 +136,8 @@ export const ToastContainer: React.FC = () => {
 };
 
 // Utility function to show toasts
-export const showToast = (type: ToastType, title: string, message?: string, duration?: number) => {
-  if (typeof window !== 'undefined' && (window as any).showToast) {
-    (window as any).showToast({ type, title, message, duration });
+export const showToast = (type: anyToastType, title: string, message?: string, duration?: number)  => {
+  if (typeof window !== 'undefined' && (window as ).showToast) {
+    (window as ).showToast({ type, title, message, duration });
   }
 };

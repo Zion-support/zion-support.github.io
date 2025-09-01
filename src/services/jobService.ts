@@ -1,7 +1,7 @@
 
-import { supabase } from "@/integrations/supabase/client";
+import { supabase  } from '@/integrations/supabase/client';
 
-export async function createJob(jobData: any) {
+export async function createJob(...args: any[]): any {
   const { data, error } = await supabase
     .from('jobs')
     .insert([jobData])
@@ -12,7 +12,7 @@ export async function createJob(jobData: any) {
   return data;
 }
 
-export async function updateJob(jobId: string, jobData: any) {
+export async function updateJob(...args: any[]): any {
   const { data, error } = await supabase
     .from('jobs')
     .update(jobData)
@@ -24,7 +24,7 @@ export async function updateJob(jobId: string, jobData: any) {
   return data;
 }
 
-export async function getJobById(jobId: string) {
+export async function getJobById(...args: any[]): any {
   const { data, error } = await supabase
     .from('jobs')
     .select('*')

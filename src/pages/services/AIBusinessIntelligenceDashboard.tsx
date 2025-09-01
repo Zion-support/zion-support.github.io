@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  BarChart3, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { BarChart3, 
   TrendingUp, 
   Brain, 
   Zap, 
@@ -25,8 +24,8 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../../components/SEO';
 
 const AIBusinessIntelligenceDashboard = () => {
   const features = [
@@ -241,8 +240,8 @@ const AIBusinessIntelligenceDashboard = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -288,8 +287,8 @@ const AIBusinessIntelligenceDashboard = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -335,8 +334,8 @@ const AIBusinessIntelligenceDashboard = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -410,8 +409,8 @@ const AIBusinessIntelligenceDashboard = () => {
             </h2>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {testimonials.map((testimonial, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -430,7 +429,7 @@ const AIBusinessIntelligenceDashboard = () => {
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-sm text-cyan-400">{testimonial.role}</div>
-                    <div className="text-sm text-gray-400">{testimonial.company}</div>
+                    <div className="text-sm text-gray-400">{testimonial.comp}</div>
                   </div>
                 </div>
               </motion.div>

@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Star, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Star, 
   CheckCircle, 
   ArrowRight, 
   Zap, 
@@ -43,16 +42,16 @@ import {
   Sparkles,
   Crown,
   Gem
-} from 'lucide-react';
-import { innovativeMicroSAASServices2029 } from '../../data/innovative-micro-saas-2029';
-import { revolutionaryAIServices2029 } from '../../data/revolutionary-ai-services-2029';
-import { revolutionaryITServices2029 } from '../../data/revolutionary-it-services-2029';
+ } from 'lucide-react.ts';
+import { innovativeMicroSAASServices2029  } from '../../data/innovative-micro-saas-2029';
+import { revolutionaryAIServices2029  } from '../../data/revolutionary-ai-services-2029';
+import { revolutionaryITServices2029  } from '../../data/revolutionary-it-services-2029';
 
-export default function ComprehensivePricing2029() {
+export default function ComprehensivePricing2029(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'price' | 'rating' | 'popularity'>('popularity');
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [sortBy, setSortBy] = useState<any>('popularity');
 
   const categories = ['All', 'AI & Analytics', 'Cybersecurity', 'AI & Operations', 'Blockchain & Security', 'AI & Legal Tech', 'IoT & Edge Computing', 'AI & Healthcare', 'Quantum Computing & AI', 'AI & Fintech', 'Sustainability & Consulting', 'Edge Computing', 'DevOps & Automation', 'Storage & Security', 'Network Optimization', 'Disaster Recovery', 'Quantum Security'];
 
@@ -85,7 +84,7 @@ export default function ComprehensivePricing2029() {
     }
   });
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: anystring)  => {
     const iconMap: { [key: string]: any } = {
       'AI & Analytics': Brain,
       'Cybersecurity': Shield,
@@ -252,7 +251,7 @@ export default function ComprehensivePricing2029() {
                 <span className="text-gray-400 text-sm">Sort by:</span>
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as any)}
+                  onChange={(e) => setSortBy(e.target.value as )}
                   className="bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
                 >
                   <option value="popularity">Popularity</option>
@@ -294,12 +293,12 @@ export default function ComprehensivePricing2029() {
             transition={{ duration: 0.8, delay: 0.7 }}
             className={`grid gap-6 ${
               viewMode === 'grid' 
-                ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
+                ? 'grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3' 
                 : 'grid-cols-1'
             }`}
           >
             <AnimatePresence>
-              {sortedServices.map((service, index) => (
+              {sortedServices.map((service, index)  => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}

@@ -1,49 +1,169 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Calendar, 
-  Clock, 
-  MapPin, 
-  Users, 
-  ExternalLink, 
-  Play,
+
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Calendar,
+  Clock,
+  MapPin,
+  Users,
   Video,
-  Mic,
-  Users2,
+  ExternalLink,
+  Filter,
+  Search,
+  ArrowRight,
+  Star,
+  Award,
+
   Globe,
   Zap,
   Brain,
   Shield,
   Cloud,
-  Database,
-  Rocket,
-  Atom,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  Activity,
-  MessageCircle,
-  BarChart,
-  Settings,
-  Palette,
-  Code,
-  Server,
-  Cpu,
-  Wifi,
-  ShieldCheck,
-  Bot,
-  Workflow,
-  Eye,
-  Sparkles,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Filter,
-  Search
-} from 'lucide-react';
 
-export default function Events() {
+  TrendingUp,
+  MessageCircle,
+  BookOpen,
+  CheckCircle
+ } from 'lucide-react.ts';
+
+const events = [
+  {
+    id: 1,
+    title: "AI & Machine Learning Summit 2027",
+    type: "Conference",
+    date: "2027-03-15",
+    time: "9:00 AM - 6:00 PM EST",
+    location: "Virtual + New York City",
+    status: "upcoming",
+    category: "AI & ML",
+    description: "Join industry leaders for a comprehensive exploration of AI and machine learning innovations, featuring keynote speakers, workshops, and networking opportunities.",
+    speakers: ["Dr. Sarah Chen", "Prof. Michael Rodriguez", "AI Expert Lisa Wang"],
+    attendees: 500,
+    price: "$299",
+    highlights: [
+      "Keynote presentations from AI pioneers",
+      "Hands-on workshops with real datasets",
+      "Networking with industry professionals",
+      "Latest AI research and applications"
+    ],
+    image: "/images/ai-summit-2027.jpg"
+  },
+  {
+    id: 2,
+    title: "Cybersecurity Best Practices Workshop",
+    type: "Workshop",
+    date: "2027-02-28",
+    time: "2:00 PM - 5:00 PM EST",
+    location: "Virtual",
+    status: "upcoming",
+    category: "Cybersecurity",
+    description: "Learn essential cybersecurity practices for modern businesses, including threat detection, incident response, and compliance requirements.",
+    speakers: ["Security Expert John Smith", "Compliance Officer Maria Garcia"],
+    attendees: 150,
+    price: "Free",
+    highlights: [
+      "Threat detection strategies",
+      "Incident response protocols",
+      "Compliance best practices",
+      "Security tool demonstrations"
+    ],
+    image: "/images/cybersecurity-workshop.jpg"
+  },
+  {
+    id: 3,
+    title: "Cloud Computing & DevOps Conference",
+    type: "Conference",
+    date: "2027-01-20",
+    time: "8:00 AM - 7:00 PM EST",
+    location: "San Francisco, CA",
+    status: "upcoming",
+    category: "Cloud & DevOps",
+    description: "Explore the latest trends in cloud computing, containerization, and DevOps practices with hands-on demonstrations and expert insights.",
+    speakers: ["Cloud Architect David Lee", "DevOps Engineer Sarah Johnson"],
+    attendees: 300,
+    price: "$199",
+    highlights: [
+      "Cloud migration strategies",
+      "Container orchestration",
+      "CI/CD pipeline optimization",
+      "Cost optimization techniques"
+    ],
+    image: "/images/cloud-devops-conference.jpg"
+  },
+  {
+    id: 4,
+    title: "Data Analytics & Business Intelligence",
+    type: "Webinar",
+    date: "2027-01-10",
+    time: "1:00 PM - 3:00 PM EST",
+    location: "Virtual",
+    status: "upcoming",
+    category: "Data Analytics",
+    description: "Discover how data analytics can transform your business decisions with real-world case studies and practical implementation strategies.",
+    speakers: ["Data Scientist Emily Chen", "BI Consultant Robert Wilson"],
+    attendees: 200,
+    price: "Free",
+    highlights: [
+      "Data visualization techniques",
+      "Predictive analytics models",
+      "Business intelligence tools",
+      "ROI measurement strategies"
+    ],
+    image: "/images/data-analytics-webinar.jpg"
+  },
+  {
+    id: 5,
+    title: "IoT & Edge Computing Symposium",
+    type: "Symposium",
+    date: "2026-12-15",
+    time: "10:00 AM - 4:00 PM EST",
+    location: "Virtual",
+    status: "past",
+    category: "IoT & Edge",
+    description: "Explore the future of IoT and edge computing with industry experts, featuring case studies and emerging technology trends.",
+    speakers: ["IoT Specialist Dr. James Brown", "Edge Computing Expert Lisa Chen"],
+    attendees: 180,
+    price: "$149",
+    highlights: [
+      "IoT architecture design",
+      "Edge computing optimization",
+      "Security considerations",
+      "Industry applications"
+    ],
+    image: "/images/iot-symposium.jpg"
+  },
+  {
+    id: 6,
+    title: "Digital Transformation Summit",
+    type: "Conference",
+    date: "2026-11-30",
+    time: "9:00 AM - 6:00 PM EST",
+    location: "Chicago, IL",
+    status: "past",
+    category: "Digital Transformation",
+    description: "Learn from successful digital transformation stories and discover strategies to modernize your business operations and customer experience.",
+    speakers: ["Digital Strategist Mark Davis", "Transformation Expert Anna Rodriguez"],
+    attendees: 400,
+    price: "$249",
+    highlights: [
+      "Transformation roadmaps",
+      "Change management strategies",
+      "Technology selection",
+      "Success metrics"
+    ],
+    image: "/images/digital-transformation-summit.jpg"
+  }
+];
+
+const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Symposium'];
+const categories = ['All', 'AI & ML', 'Cybersecurity', 'Cloud & DevOps', 'Data Analytics', 'IoT & Edge', 'Digital Transformation'];
+const statuses = ['All', 'upcoming', 'past'];
+
+export default function Events(...args: any[]): any {
+  const [selectedType, setSelectedType] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedStatus, setSelectedStatus] = useState('All');
+
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedType, setSelectedType] = useState('all');
@@ -264,7 +384,7 @@ export default function Events() {
   const upcomingEvents = events.filter(event => new Date(event.date) >= new Date()).slice(0, 3);
   const featuredEvents = events.filter(event => event.featured);
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: anystring)  => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
       weekday: 'long',
@@ -274,28 +394,26 @@ export default function Events() {
     });
   };
 
-  const getCategoryIcon = (categoryId: string) => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category ? category.icon : Calendar;
+
+  const getCategoryIcon = (category: anystring)  => {
+    switch (category) {
+      case 'AI & ML': return Brain;
+      case 'Cybersecurity': return Shield;
+      case 'Cloud & DevOps': return Cloud;
+      case 'Data Analytics': return TrendingUp;
+      case 'IoT & Edge': return Zap;
+      case 'Digital Transformation': return Globe;
+      default: return BookOpen;
+    }
   };
 
-  const getCategoryName = (categoryId: string) => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category ? category.name : 'General';
-  };
+  const getStatusBadge = (status: anystring)  => {
+    if (status === 'upcoming') {
+      return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Upcoming</span>;
+    } else {
+      return <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Past</span>;
+    }
 
-  const getTypeIcon = (typeId: string) => {
-    const type = eventTypes.find(t => t.id === typeId);
-    return type ? type.icon : Calendar;
-  };
-
-  const getTypeName = (typeId: string) => {
-    const type = eventTypes.find(t => t.id === typeId);
-    return type ? type.name : 'Event';
-  };
-
-  const isUpcoming = (dateString: string) => {
-    return new Date(dateString) >= new Date();
   };
 
   return (
@@ -356,10 +474,76 @@ export default function Events() {
         </div>
       </section>
 
-      {/* Featured Events */}
-      {featuredEvents.length > 0 && (
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark">
-          <div className="max-w-7xl mx-auto">
+
+      {/* Filters Section */}
+      <section className="py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+              {/* Search */}
+              <div className="md:col-span-2">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4" />
+                  <input
+                    type="text"
+                    placeholder="Search events..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                  />
+                </div>
+              </div>
+
+              {/* Event Type Filter */}
+              <div>
+                <select
+                  value={selectedType}
+                  onChange={(e) => setSelectedType(e.target.value)}
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                >
+                  {eventTypes.map(type  => (
+                    <option key={type} value={type}>{type}</option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Category Filter */}
+              <div>
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                >
+                  {categories.map(category  => (
+                    <option key={category} value={category}>{category}</option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Status Filter */}
+              <div>
+                <select
+                  value={selectedStatus}
+                  onChange={(e) => setSelectedStatus(e.target.value)}
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                >
+                  {statuses.map(status  => (
+                    <option key={status} value={status}>
+                      {status === 'upcoming' ? 'Upcoming' : status === 'past' ? 'Past' : status}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Upcoming Events */}
+      {upcomingEvents.length > 0 && (
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -375,20 +559,38 @@ export default function Events() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {featuredEvents.map((event, index) => (
-                <motion.div
-                  key={event.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-zion-blue-darker border border-zion-purple/20 rounded-lg overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"
-                >
-                  <div className="aspect-video bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center">
-                    <div className="text-center p-8">
-                      <Calendar className="w-16 h-16 text-zion-cyan mx-auto mb-4" />
-                      <p className="text-zion-slate-light">Featured Event</p>
+
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+              {upcomingEvents.map((event, index)  => {
+                const CategoryIcon = getCategoryIcon(event.category);
+                return (
+                  <motion.div
+                    key={event.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
+                  >
+                    {/* Header */}
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">
+                          <CategoryIcon className="w-6 h-6 text-white" />
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-bold text-white mb-1">{event.title}</h3>
+                          <div className="flex items-center gap-2">
+                            {getStatusBadge(event.status)}
+                            <span className="text-sm text-zion-slate-light">{event.type}</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-2xl font-bold text-zion-cyan">{event.price}</div>
+                        <div className="text-sm text-zion-slate-light">Registration</div>
+                      </div>
+
                     </div>
                   </div>
                   
@@ -483,175 +685,19 @@ export default function Events() {
                   </div>
                 </div>
 
-                {/* Event Types */}
-                <div className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                    <Calendar className="w-5 h-5 text-zion-cyan" />
-                    Event Types
-                  </h3>
-                  <div className="space-y-2">
-                    {eventTypes.map((type) => (
-                      <button
-                        key={type.id}
-                        onClick={() => setSelectedType(type.id)}
-                        className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors flex items-center gap-2 ${
-                          selectedType === type.id
-                            ? 'bg-zion-cyan text-zion-blue'
-                            : 'text-zion-slate-light hover:bg-zion-purple/20 hover:text-white'
-                        }`}
-                      >
-                        <type.icon className="w-4 h-4" />
-                        {type.name}
-                      </button>
-                    ))}
-                  </div>
-                </div>
 
-                {/* Upcoming Events */}
-                <div className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                    <Clock className="w-5 h-5 text-zion-cyan" />
-                    Upcoming
-                  </h3>
-                  <div className="space-y-3">
-                    {upcomingEvents.map((event) => (
-                      <div key={event.id} className="border-b border-zion-purple/20 pb-3 last:border-b-0">
-                        <h4 className="text-sm font-medium text-white mb-1 line-clamp-2 hover:text-zion-cyan transition-colors cursor-pointer">
-                          {event.title}
-                        </h4>
-                        <p className="text-xs text-zion-slate-light">{formatDate(event.date)}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+              {pastEvents.map((event, index)  => {
+                const CategoryIcon = getCategoryIcon(event.category);
+                return (
+                  <motion.div
+                    key={event.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 opacity-75"
 
-            {/* Main Content */}
-            <div className="lg:col-span-3">
-              {/* Results Header */}
-              <div className="flex items-center justify-between mb-8">
-                <div>
-                  <h2 className="text-2xl font-bold text-white">
-                    {searchTerm ? `Search Results for "${searchTerm}"` : 'All Events'}
-                  </h2>
-                  <p className="text-zion-slate-light">
-                    {filteredEvents.length} event{filteredEvents.length !== 1 ? 's' : ''} found
-                  </p>
-                </div>
-                
-                <div className="flex items-center gap-2">
-                  <span className="text-zion-slate-light text-sm">Sort by:</span>
-                  <select className="px-3 py-2 bg-zion-blue-dark border border-zion-purple/30 rounded-lg text-white text-sm focus:border-zion-cyan focus:outline-none">
-                    <option value="date">Date</option>
-                    <option value="popularity">Popularity</option>
-                    <option value="price">Price</option>
-                  </select>
-                </div>
-              </div>
-
-              {/* Events Grid */}
-              {filteredEvents.length > 0 ? (
-                <div className="space-y-6">
-                  {filteredEvents.map((event, index) => (
-                    <motion.div
-                      key={event.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg overflow-hidden hover:border-zion-cyan/40 transition-all duration-300"
-                    >
-                      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                        {/* Event Image */}
-                        <div className="aspect-video lg:aspect-square bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center">
-                          <div className="text-center p-6">
-                            <Calendar className="w-12 h-12 text-zion-cyan mx-auto mb-3" />
-                            <p className="text-zion-slate-light text-sm">Event</p>
-                          </div>
-                        </div>
-                        
-                        {/* Event Details */}
-                        <div className="lg:col-span-2 p-6">
-                          <div className="flex items-center gap-2 mb-3">
-                            <span className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs font-medium rounded-full">
-                              {getTypeName(event.type)}
-                            </span>
-                            <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs font-medium rounded-full">
-                              {getCategoryName(event.category)}
-                            </span>
-                            {event.isFree && (
-                              <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs font-medium rounded-full">
-                                Free
-                              </span>
-                            )}
-                          </div>
-                          
-                          <h3 className="text-xl font-bold text-white mb-3 hover:text-zion-cyan transition-colors">
-                            {event.title}
-                          </h3>
-                          
-                          <p className="text-zion-slate-light mb-4 line-clamp-3">
-                            {event.description}
-                          </p>
-                          
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-                            <div className="space-y-2">
-                              <div className="flex items-center gap-2 text-sm text-zion-slate-light">
-                                <Calendar className="w-4 h-4" />
-                                <span>{formatDate(event.date)}</span>
-                              </div>
-                              <div className="flex items-center gap-2 text-sm text-zion-slate-light">
-                                <Clock className="w-4 h-4" />
-                                <span>{event.time} {event.timezone}</span>
-                              </div>
-                            </div>
-                            <div className="space-y-2">
-                              <div className="flex items-center gap-2 text-sm text-zion-slate-light">
-                                <MapPin className="w-4 h-4" />
-                                <span>{event.location}</span>
-                              </div>
-                              <div className="flex items-center gap-2 text-sm text-zion-slate-light">
-                                <Users className="w-4 h-4" />
-                                <span>{event.attendees} attendees</span>
-                              </div>
-                            </div>
-                          </div>
-                          
-                          <div className="flex items-center justify-between">
-                            <div className="text-zion-cyan font-semibold text-lg">
-                              {event.isFree ? 'Free' : event.price}
-                            </div>
-                            
-                            <div className="flex items-center gap-3">
-                              <button className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm">
-                                View Details
-                              </button>
-                              <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 hover:-translate-y-1 flex items-center gap-2">
-                                Register
-                                <ArrowRight className="w-4 h-4" />
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-              ) : (
-                <div className="text-center py-16">
-                  <Calendar className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-2">No events found</h3>
-                  <p className="text-zion-slate-light mb-4">
-                    Try adjusting your search terms or filters to find events.
-                  </p>
-                  <button
-                    onClick={() => {
-                      setSearchTerm('');
-                      setSelectedCategory('all');
-                      setSelectedType('all');
-                    }}
-                    className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
                   >
                     Clear all filters
                   </button>

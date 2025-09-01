@@ -45,11 +45,17 @@ import {
   Clipboard,
   BookOpen,
   LineChart,
-  PieChart as PieChartIcon,
-  Activity as ActivityIcon,
   Clock,
   Globe,
-  Headphones
+  Headphones,
+  Phone,
+  Video,
+  TrendingUp,
+  BarChart3,
+  Heart,
+  Monitor,
+  Laptop,
+  ShoppingBag
 } from 'lucide-react';
 
 export default function AICustomerSupportAutomation() {
@@ -80,7 +86,7 @@ export default function AICustomerSupportAutomation() {
       description: "Enterprise-grade security with GDPR and HIPAA compliance built-in"
     },
     {
-      icon: BarChart,
+      icon: BarChart3,
       title: "Performance Analytics",
       description: "Comprehensive insights into support performance and customer satisfaction"
     }
@@ -91,50 +97,82 @@ export default function AICustomerSupportAutomation() {
     "Handle 80% of customer inquiries without human intervention",
     "Improve customer satisfaction scores by 40%",
     "Reduce support costs by 60% through automation",
-    "Provide 24/7 support coverage across all time zones",
-    "Scale support operations without proportional cost increases"
-  ];
-
-  const useCases = [
-    {
-      title: "E-commerce & Retail",
-      description: "Online stores handling high-volume customer inquiries and order support"
-    },
-    {
-      title: "SaaS & Technology",
-      description: "Software companies providing technical support and account assistance"
-    },
-    {
-      title: "Financial Services",
-      description: "Banks and fintech companies with complex customer service requirements"
-    },
-    {
-      title: "Healthcare & Wellness",
-      description: "Medical providers offering patient support and appointment scheduling"
-    }
+    "Scale support operations without proportional cost increases",
+    "Provide 24/7 customer support across all time zones"
   ];
 
   const supportChannels = [
     {
+      icon: MessageCircle,
       title: "Live Chat",
-      description: "Real-time chat support with intelligent routing and escalation"
+      description: "Real-time chat support with instant responses",
+      features: ["Instant responses", "Context awareness", "File sharing", "Screen sharing"]
     },
     {
-      title: "Email Support",
-      description: "Automated email responses with smart categorization and routing"
+      icon: Phone,
+      title: "Voice Support",
+      description: "AI-powered voice assistants and call routing",
+      features: ["Voice recognition", "Call routing", "Voice analytics", "Call recording"]
     },
     {
+      icon: Video,
+      title: "Video Support",
+      description: "Video chat with AI assistance and screen sharing",
+      features: ["Video calls", "Screen sharing", "Recording", "AI assistance"]
+    },
+    {
+      icon: Globe,
       title: "Social Media",
-      description: "Monitor and respond to customer inquiries across social platforms"
+      description: "Multi-platform social media support integration",
+      features: ["Multi-platform", "Sentiment analysis", "Auto-responses", "Escalation"]
+    }
+  ];
+
+  const useCases = [
+    {
+      industry: "E-commerce",
+      icon: ShoppingBag,
+      applications: [
+        "Order status inquiries and tracking",
+        "Product recommendations and support",
+        "Return and refund processing",
+        "Payment and billing assistance"
+      ]
     },
     {
-      title: "Phone Support",
-      description: "Intelligent call routing and automated call center management"
+      industry: "SaaS",
+      icon: Cpu,
+      applications: [
+        "Technical support and troubleshooting",
+        "Account management and billing",
+        "Feature requests and feedback",
+        "Onboarding and training support"
+      ]
+    },
+    {
+      industry: "Healthcare",
+      icon: Heart,
+      applications: [
+        "Appointment scheduling and reminders",
+        "Medical information and FAQs",
+        "Insurance and billing support",
+        "Patient portal assistance"
+      ]
+    },
+    {
+      industry: "Financial Services",
+      icon: Coins,
+      applications: [
+        "Account balance and transaction inquiries",
+        "Fraud detection and security alerts",
+        "Loan and credit applications",
+        "Investment advice and portfolio management"
+      ]
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -144,65 +182,55 @@ export default function AICustomerSupportAutomation() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center space-x-2 bg-zion-purple/20 text-zion-cyan px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Bot className="w-4 h-4" />
               <span>AI-Powered Customer Support</span>
             </div>
-            
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Customer Support Automation
             </h1>
-            
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your customer support with intelligent automation, 24/7 availability, 
-              and AI-driven insights that deliver exceptional customer experiences at scale.
+              and personalized assistance that delights your customers and reduces costs.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300"
+                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-300"
               >
                 Start Free Trial
                 <ArrowRight className="inline ml-2 w-5 h-5" />
               </motion.button>
-              
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >
                 Schedule Demo
               </motion.button>
             </div>
           </motion.div>
         </div>
-        
-        {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-cyan/10 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple/10 rounded-full blur-3xl"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"></div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 relative">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Intelligent Support Features
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Powerful Features
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Advanced AI capabilities that revolutionize customer support operations
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive AI-powered customer support tools designed to enhance 
+              customer experience and streamline support operations.
             </p>
-          </motion.div>
-          
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -210,13 +238,13 @@ export default function AICustomerSupportAutomation() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300 group"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-blue-400/30 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-6 h-6 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-6">
+                  <feature.icon className="w-8 h-8 text-blue-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-zion-slate-light">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -224,73 +252,47 @@ export default function AICustomerSupportAutomation() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-zion-blue-dark/30 relative">
+      <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Transform Your Customer Support
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Business Benefits
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Experience significant improvements in efficiency and customer satisfaction
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See measurable improvements in customer satisfaction and operational efficiency.
             </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              {benefits.slice(0, 3).map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="flex items-start space-x-4"
-                >
-                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
-                  <span className="text-zion-slate-light text-lg">{benefit}</span>
-                </motion.div>
-              ))}
-            </div>
-            
-            <div className="space-y-6">
-              {benefits.slice(3).map((benefit, index) => (
-                <motion.div
-                  key={index + 3}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="flex items-start space-x-4"
-                >
-                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
-                  <span className="text-zion-slate-light text-lg">{benefit}</span>
-                </motion.div>
-              ))}
-            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="flex items-start"
+              >
+                <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0" />
+                <span className="text-gray-300 text-lg">{benefit}</span>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Support Channels Section */}
-      <section className="py-20 relative">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Multi-Channel Support
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Provide consistent support across all customer touchpoints
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Provide seamless support across all customer touchpoints with 
+              unified AI-powered assistance.
             </p>
-          </motion.div>
-          
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {supportChannels.map((channel, index) => (
               <motion.div
@@ -298,17 +300,26 @@ export default function AICustomerSupportAutomation() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-blue-400/30 transition-all duration-300"
               >
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MessageCircle className="w-6 h-6 text-white" />
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mr-4">
+                    <channel.icon className="w-6 h-6 text-blue-400" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{channel.title}</h3>
-                    <p className="text-zion-slate-light">{channel.description}</p>
+                    <h3 className="text-xl font-semibold text-white">{channel.title}</h3>
+                    <p className="text-gray-400">{channel.description}</p>
                   </div>
                 </div>
+
+                <ul className="space-y-3">
+                  {channel.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300 text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
@@ -316,36 +327,41 @@ export default function AICustomerSupportAutomation() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 bg-zion-blue-dark/30 relative">
+      <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Perfect For Your Industry
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Industry Applications
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Tailored support automation solutions for various business types
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover how AI customer support automation transforms operations across different industries.
             </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-blue-400/30 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-white" />
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mr-4">
+                    <useCase.icon className="w-6 h-6 text-blue-400" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">{useCase.industry}</h3>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
-                <p className="text-zion-slate-light text-sm">{useCase.description}</p>
+
+                <ul className="space-y-3">
+                  {useCase.applications.map((application, appIndex) => (
+                    <li key={appIndex} className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300 text-sm">{application}</span>
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
@@ -353,37 +369,36 @@ export default function AICustomerSupportAutomation() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-purple to-zion-purple-dark relative">
+      <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-400/30 rounded-2xl p-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Automate Your Support?
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Customer Support?
             </h2>
-            <p className="text-xl text-zion-slate-light mb-8">
-              Join organizations already delivering exceptional customer experiences with AI
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Start leveraging the power of AI customer support automation today and see 
+              immediate improvements in customer satisfaction and operational efficiency.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300"
+                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-300"
               >
-                Start Automating Today
-                <Rocket className="inline ml-2 w-5 h-5" />
+                Get Started Now
+                <ArrowRight className="inline ml-2 w-5 h-5" />
               </motion.button>
-              
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-zion-purple transition-all duration-300"
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >
                 Contact Sales
-                <MessageCircle className="inline ml-2 w-5 h-5" />
               </motion.button>
             </div>
           </motion.div>

@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Atom, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Atom, 
   Cpu, 
   Zap, 
   Brain, 
@@ -23,9 +22,9 @@ import {
   Rocket,
   Microscope,
   TestTube
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const QuantumComputingElite: React.FC = () => {
+const QuantumComputingElite: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Atom,
@@ -206,8 +205,8 @@ const QuantumComputingElite: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -246,8 +245,8 @@ const QuantumComputingElite: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {quantumApplications.map((app, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {quantumApplications.map((app, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -283,8 +282,8 @@ const QuantumComputingElite: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {quantumTechnologies.map((tech, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
+            {quantumTechnologies.map((tech, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -322,8 +321,8 @@ const QuantumComputingElite: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

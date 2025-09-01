@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 import { 
   Mail, 
   Lock, 
+
+  Eye, 
+  EyeOff, 
+
   User, 
   Building, 
   Globe, 
@@ -34,7 +38,6 @@ import {
   Tablet,
   Laptop
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
 
 export default function Login() {
   const [isLogin, setIsLogin] = useState(true);
@@ -62,245 +65,338 @@ export default function Login() {
     }));
   };
 
-              </div>
-              <Link
-                to="/forgot-password"
-                className="text-sm text-blue-600 hover:text-blue-700 font-medium"
-              >
-                Forgot password?
-              </Link>
-            </div>
 
-            {/* Submit Button */}
-            <button
-              type="submit"
-              disabled={isLoading}
-              className="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
-            >
-              {isLoading ? (
-                <div className="flex items-center">
-                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                  Signing in...
-                </div>
-              </div>
-              <div className="relative flex justify-center text-sm">
-                <span className="px-2 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 text-gray-500">
-                  Or continue with
-                </span>
-              </div>
-            </div>
-          </div>
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    setIsSubmitting(false);
+    setSubmitted(true);
+    
+    // Reset form after 5 seconds
+    setTimeout(() => {
+      setSubmitted(false);
+      setFormData({
+        email: '',
+        password: '',
+        confirmPassword: '',
+        firstName: '',
+        lastName: '',
+        company: '',
+        phone: '',
+        acceptTerms: false,
+        acceptMarketing: false
+      });
+    }, 5000);
+  };
 
-          {/* Social Login Buttons */}
-          <div className="mt-6 grid grid-cols-2 gap-3">
-            <button className="w-full inline-flex justify-center items-center px-4 py-2 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition-colors">
-              <Github className="h-5 w-5 mr-2" />
-              GitHub
-            </button>
-            <button className="w-full inline-flex justify-center items-center px-4 py-2 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition-colors">
-              <Linkedin className="h-5 w-5 mr-2" />
-              LinkedIn
-            </button>
-          </div>
+  const toggleForm = () => {
+    setIsLogin(!isLogin);
+    setFormData({
+      email: '',
+      password: '',
+      confirmPassword: '',
+      firstName: '',
+      lastName: '',
+      company: '',
+      phone: '',
+      acceptTerms: false,
+      acceptMarketing: false
+    });
+  };
 
-          {/* Sign Up Link */}
-          <div className="mt-8 text-center">
-            <p className="text-sm text-gray-600">
-              Don't have an account?{' '}
-              <Link
-                to="/signup"
-                className="font-medium text-blue-600 hover:text-blue-700"
-              >
-                Sign up for free
-              </Link>
-            </p>
-          </div>
-        </motion.div>
-      </div>
+  const isFormValid = () => {
+    if (isLogin) {
+      return formData.email && formData.password;
+    } else {
+      return formData.email && formData.password && formData.confirmPassword && 
+             formData.firstName && formData.lastName && formData.acceptTerms;
+    }
+  };
 
-      {/* Right Side - Company Info & Features */}
-      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 p-12 text-white">
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 flex items-center justify-center p-4">
+      <div className="w-full max-w-md">
+        {/* Logo and Header */}
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="w-full max-w-lg mx-auto"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-8"
         >
-          {/* Company Header */}
-          <div className="mb-12">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-3xl mb-6">
-              <Zap className="h-10 w-10 text-white" />
-            </div>
-            <h2 className="text-4xl font-bold mb-4">Zion Tech Group</h2>
-            <p className="text-xl text-blue-100 leading-relaxed">
-              Leading the future of technology with cutting-edge AI, quantum computing, and sustainable solutions for enterprises worldwide.
-            </p>
+          <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <span className="text-white font-bold text-2xl">Z</span>
           </div>
+          <h1 className="text-3xl font-bold text-white mb-2">
+            {isLogin ? 'Welcome Back' : 'Create Account'}
+          </h1>
+          <p className="text-gray-300">
+            {isLogin ? 'Sign in to your account' : 'Join Zion Tech Group today'}
+          </p>
+        </motion.div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 gap-6 mb-12">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 + index * 0.1 }}
-                className="text-center"
-              >
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 rounded-xl mb-3">
-                  <stat.icon className="h-6 w-6 text-white" />
-                </div>
-                <div className="text-2xl font-bold">{stat.number}</div>
-                <div className="text-sm text-blue-100">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
+        {/* Form Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20"
+        >
+          {/* Success Message */}
+          {submitted && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center space-x-3"
+            >
+              <CheckCircle className="w-6 h-6 text-green-400" />
+              <span className="text-green-400">
+                {isLogin ? 'Successfully logged in!' : 'Account created successfully!'}
+              </span>
+            </motion.div>
+          )}
 
-          {/* Features */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold mb-4">Our Core Services</h3>
-            {features.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.6 + index * 0.1 }}
-                className="flex items-start space-x-3"
-              >
-                <div className="flex-shrink-0 w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                  <feature.icon className="h-4 w-4 text-white" />
+          <form onSubmit={handleSubmit} className="space-y-6">
+            {!isLogin && (
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="firstName" className="block text-white font-medium mb-2">
+                    <User className="w-4 h-4 inline mr-2" />
+                    First Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                    placeholder="Enter first name"
+                  />
                 </div>
                 <div>
-                  <label htmlFor="confirmPassword" className="block text-sm font-medium text-white mb-2">
-                    Confirm Password
+                  <label htmlFor="lastName" className="block text-white font-medium mb-2">
+                    <User className="w-4 h-4 inline mr-2" />
+                    Last Name *
                   </label>
-                  <div className="relative">
-                    <input
-                      type={showConfirmPassword ? 'text' : 'password'}
-                      id="confirmPassword"
-                      name="confirmPassword"
-                      value={formData.confirmPassword}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 pr-12 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-200"
-                      placeholder="Confirm your password"
-                    />
-                    <button
-                      type="button"
-                      onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                      className="absolute inset-y-0 right-0 pr-3 flex items-center text-zion-slate-light hover:text-white transition-colors duration-200"
-                    >
-                      {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                    </button>
-                  </div>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                    placeholder="Enter last name"
+                  />
                 </div>
-              )}
-
-              {!isLogin && (
-                <div className="space-y-3">
-                  <label className="flex items-center">
-                    <input
-                      type="checkbox"
-                      name="acceptTerms"
-                      checked={formData.acceptTerms}
-                      onChange={handleInputChange}
-                      required
-                      className="w-4 h-4 text-zion-cyan bg-zion-slate-light/10 border-zion-slate-light/20 rounded focus:ring-zion-cyan focus:ring-2"
-                    />
-                    <span className="ml-2 text-sm text-zion-slate-light">
-                      I agree to the{' '}
-                      <Link to="/terms" className="text-zion-cyan hover:text-zion-cyan/80 transition-colors duration-200">
-                        Terms of Service
-                      </Link>{' '}
-                      and{' '}
-                      <Link to="/privacy" className="text-zion-cyan hover:text-zion-cyan/80 transition-colors duration-200">
-                        Privacy Policy
-                      </Link>
-                    </span>
-                  </label>
-                  
-                  <label className="flex items-center">
-                    <input
-                      type="checkbox"
-                      name="acceptMarketing"
-                      checked={formData.acceptMarketing}
-                      onChange={handleInputChange}
-                      className="w-4 h-4 text-zion-cyan bg-zion-slate-light/10 border-zion-slate-light/20 rounded focus:ring-zion-cyan focus:ring-2"
-                    />
-                    <span className="ml-2 text-sm text-zion-slate-light">
-                      I want to receive updates about new features and services
-                    </span>
-                  </label>
-                </div>
-              )}
-
-              {isLogin && (
-                <div className="flex items-center justify-between">
-                  <label className="flex items-center">
-                    <input
-                      type="checkbox"
-                      className="w-4 h-4 text-zion-cyan bg-zion-slate-light/10 border-zion-slate-light/20 rounded focus:ring-zion-cyan focus:ring-2"
-                    />
-                    <span className="ml-2 text-sm text-zion-slate-light">Remember me</span>
-                  </label>
-                  <Link to="/forgot-password" className="text-sm text-zion-cyan hover:text-zion-cyan/80 transition-colors duration-200">
-                    Forgot password?
-                  </Link>
-                </div>
-              )}
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-4 rounded-lg font-medium hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
-              >
-                {isSubmitting ? (
-                  <div className="flex items-center justify-center gap-2">
-                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                    {isLogin ? 'Signing In...' : 'Creating Account...'}
-                  </div>
-                ) : (
-                  <div className="flex items-center justify-center gap-2">
-                    {isLogin ? 'Sign In' : 'Create Account'}
-                    <ArrowRight className="w-5 h-5" />
-                  </div>
-                )}
-              </button>
-            </motion.form>
-
-            {/* Success Message */}
-            {submitted && (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="mt-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg text-center"
-              >
-                <CheckCircle className="w-6 h-6 text-green-400 mx-auto mb-2" />
-                <p className="text-green-400 font-medium">
-                  {isLogin ? 'Successfully signed in!' : 'Account created successfully!'}
-                </p>
-                <p className="text-green-400/80 text-sm mt-1">
-                  Redirecting to dashboard...
-                </p>
-              </motion.div>
+              </div>
             )}
 
-          {/* Contact Info */}
-          <div className="mt-12 pt-8 border-t border-white/20">
-            <div className="flex items-center space-x-4 text-sm text-blue-100">
-              <div className="flex items-center">
-                <Phone className="h-4 w-4 mr-2" />
-                +1 (555) 123-4567
+            <div>
+              <label htmlFor="email" className="block text-white font-medium mb-2">
+                <Mail className="w-4 h-4 inline mr-2" />
+                Email Address *
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                required
+                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                placeholder="Enter your email"
+              />
+            </div>
+
+            {!isLogin && (
+              <div>
+                <label htmlFor="company" className="block text-white font-medium mb-2">
+                  <Building className="w-4 h-4 inline mr-2" />
+                  Company
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                  placeholder="Enter company name"
+                />
               </div>
-              <div className="flex items-center">
-                <MailIcon className="h-4 w-4 mr-2" />
-                contact@ziontechgroup.com
+            )}
+
+            <div>
+              <label htmlFor="password" className="block text-white font-medium mb-2">
+                <Lock className="w-4 h-4 inline mr-2" />
+                Password *
+              </label>
+              <div className="relative">
+                <input
+                  type={showPassword ? 'text' : 'password'}
+                  id="password"
+                  name="password"
+                  value={formData.password}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent pr-12"
+                  placeholder="Enter your password"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
+                >
+                  {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                </button>
               </div>
             </div>
-            <div className="mt-2 text-sm text-blue-100">
-              <MapPin className="h-4 w-4 inline mr-2" />
-              123 Innovation Drive, Tech Valley, CA 94000
+
+            {!isLogin && (
+              <div>
+                <label htmlFor="confirmPassword" className="block text-white font-medium mb-2">
+                  <Lock className="w-4 h-4 inline mr-2" />
+                  Confirm Password *
+                </label>
+                <div className="relative">
+                  <input
+                    type={showConfirmPassword ? 'text' : 'password'}
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    value={formData.confirmPassword}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent pr-12"
+                    placeholder="Confirm your password"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
+                  >
+                    {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {!isLogin && (
+              <div className="space-y-3">
+                <label className="flex items-center space-x-3">
+                  <input
+                    type="checkbox"
+                    name="acceptTerms"
+                    checked={formData.acceptTerms}
+                    onChange={handleInputChange}
+                    required
+                    className="w-4 h-4 text-cyan-500 bg-white/10 border-white/20 rounded focus:ring-cyan-400 focus:ring-2"
+                  />
+                  <span className="text-white text-sm">
+                    I agree to the{' '}
+                    <Link to="/terms" className="text-cyan-400 hover:text-cyan-300 underline">
+                      Terms of Service
+                    </Link>{' '}
+                    and{' '}
+                    <Link to="/privacy" className="text-cyan-400 hover:text-cyan-300 underline">
+                      Privacy Policy
+                    </Link>
+                  </span>
+                </label>
+                <label className="flex items-center space-x-3">
+                  <input
+                    type="checkbox"
+                    name="acceptMarketing"
+                    checked={formData.acceptMarketing}
+                    onChange={handleInputChange}
+                    className="w-4 h-4 text-cyan-500 bg-white/10 border-white/20 rounded focus:ring-cyan-400 focus:ring-2"
+                  />
+                  <span className="text-white text-sm">
+                    I want to receive updates about new features and services
+                  </span>
+                </label>
+              </div>
+            )}
+
+            <button
+              type="submit"
+              disabled={!isFormValid() || isSubmitting}
+              className={`w-full py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-200 flex items-center justify-center space-x-2 ${
+                isFormValid() && !isSubmitting
+                  ? 'bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white transform hover:-translate-y-1 shadow-lg hover:shadow-xl'
+                  : 'bg-gray-600 text-gray-400 cursor-not-allowed'
+              }`}
+            >
+              {isSubmitting ? (
+                <>
+                  <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-white"></div>
+                  <span>{isLogin ? 'Signing In...' : 'Creating Account...'}</span>
+                </>
+              ) : (
+                <>
+                  <span>{isLogin ? 'Sign In' : 'Create Account'}</span>
+                  <ArrowRight className="w-5 h-5" />
+                </>
+              )}
+            </button>
+          </form>
+
+          {/* Form Toggle */}
+          <div className="mt-6 text-center">
+            <p className="text-gray-300">
+              {isLogin ? "Don't have an account? " : "Already have an account? "}
+              <button
+                onClick={toggleForm}
+                className="text-cyan-400 hover:text-cyan-300 font-medium underline"
+              >
+                {isLogin ? 'Sign up' : 'Sign in'}
+              </button>
+            </p>
+          </div>
+
+          {/* Social Login */}
+          <div className="mt-8">
+            <div className="relative">
+              <div className="absolute inset-0 flex items-center">
+                <div className="w-full border-t border-white/20"></div>
+
+              </div>
+              <div className="relative flex justify-center text-sm">
+                <span className="px-2 bg-white/10 text-gray-300">Or continue with</span>
+              </div>
             </div>
+            <div className="mt-6 grid grid-cols-2 gap-3">
+              <button className="w-full inline-flex justify-center py-3 px-4 border border-white/20 rounded-lg shadow-sm bg-white/10 text-white hover:bg-white/20 transition-colors">
+                <Google className="w-5 h-5" />
+                <span className="ml-2">Google</span>
+              </button>
+              <button className="w-full inline-flex justify-center py-3 px-4 border border-white/20 rounded-lg shadow-sm bg-white/10 text-white hover:bg-white/20 transition-colors">
+                <Github className="w-5 h-5" />
+                <span className="ml-2">GitHub</span>
+              </button>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Footer Links */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-8 text-center text-gray-400 text-sm"
+        >
+          <div className="space-y-2">
+            <Link to="/forgot-password" className="block hover:text-white transition-colors">
+              Forgot your password?
+            </Link>
+            <Link to="/contact" className="block hover:text-white transition-colors">
+              Need help? Contact support
+            </Link>
           </div>
         </motion.div>
       </div>
