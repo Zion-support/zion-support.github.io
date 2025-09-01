@@ -178,22 +178,24 @@ export function EnhancedHeader() {
   const navigation = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'Services', href: '/services', icon: Code, hasDropdown: true },
-    { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
-    { name: 'IT Services', href: '/it-services', icon: Server },
-    { name: 'Micro SAAS', href: '/micro-saas', icon: Rocket },
-    { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
+    { name: 'Solutions', href: '/solutions', icon: Target },
     { name: 'About', href: '/about', icon: Users },
+    { name: 'Blog', href: '/blog', icon: BookOpen },
+    { name: 'News', href: '/news', icon: Newspaper },
+    { name: 'Partners', href: '/partners', icon: Handshake },
     { name: 'Contact', href: '/contact', icon: MessageCircle }
   ];
 
   const serviceCategories = [
+    // AI Services
     {
-      name: 'AI-Powered Micro SAAS',
-      description: 'Revolutionary AI-powered software solutions',
-      href: '/zion-cutting-edge-services-2029',
+      name: 'AI Services',
+      description: 'Cutting-edge artificial intelligence solutions',
+      href: '/ai-services',
       icon: Brain,
-      color: 'from-blue-500 to-cyan-500',
-      featured: true
+      color: 'from-purple-500 to-pink-500',
+      featured: true,
+      category: 'AI'
     },
     {
       name: 'AI Content Creation Studio Pro',
@@ -201,15 +203,8 @@ export function EnhancedHeader() {
       href: '/services/AI-Content-Creation-Studio-Pro',
       icon: PenTool,
       color: 'from-purple-500 to-pink-500',
-      featured: true
-    },
-    {
-      name: 'Quantum AI Trading Platform',
-      description: 'Next-generation quantum trading platform',
-      href: '/services/Quantum-AI-Trading-Platform',
-      icon: Atom,
-      color: 'from-orange-500 to-red-500',
-      featured: true
+      featured: true,
+      category: 'AI'
     },
     {
       name: 'AI Project Management Platform',
@@ -217,7 +212,8 @@ export function EnhancedHeader() {
       href: '/services/ai-powered-project-management-platform',
       icon: Workflow,
       color: 'from-blue-500 to-cyan-500',
-      featured: true
+      featured: true,
+      category: 'AI'
     },
     {
       name: 'AI Financial Analytics Platform',
@@ -225,7 +221,8 @@ export function EnhancedHeader() {
       href: '/services/ai-financial-analytics-platform',
       icon: BarChart3,
       color: 'from-green-500 to-emerald-500',
-      featured: true
+      featured: true,
+      category: 'AI'
     },
     {
       name: 'AI Healthcare Analytics Platform',
@@ -233,57 +230,94 @@ export function EnhancedHeader() {
       href: '/services/ai-healthcare-analytics-platform',
       icon: Heart,
       color: 'from-red-500 to-pink-500',
-      featured: true
+      featured: true,
+      category: 'AI'
     },
+    
+    // IT Services
     {
-      name: 'Micro SAAS Solutions',
-      description: 'Innovative software-as-a-service solutions',
-      href: '/services/micro-saas-solutions',
-      icon: Rocket,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      name: 'AI Services',
-      description: 'Cutting-edge artificial intelligence solutions',
-      href: '/ai-services',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      name: 'IT Infrastructure',
+      name: 'IT Services',
       description: 'Enterprise-grade IT solutions',
       href: '/it-services',
       icon: Server,
-      color: 'from-green-500 to-emerald-500'
+      color: 'from-green-500 to-emerald-500',
+      featured: true,
+      category: 'IT'
     },
+    {
+      name: 'Cloud Solutions',
+      description: 'Scalable cloud infrastructure and services',
+      href: '/cloud-solutions',
+      icon: Cloud,
+      color: 'from-blue-500 to-cyan-500',
+      category: 'IT'
+    },
+    {
+      name: 'Cybersecurity',
+      description: 'Advanced security solutions and protection',
+      href: '/cybersecurity',
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+      category: 'IT'
+    },
+    
+    // Emerging Technologies
     {
       name: 'Quantum Computing',
       description: 'Next-generation quantum solutions',
       href: '/services/quantum-computing',
       icon: Atom,
-      color: 'from-orange-500 to-red-500'
+      color: 'from-orange-500 to-red-500',
+      featured: true,
+      category: 'Emerging'
+    },
+    {
+      name: 'Quantum AI Trading Platform',
+      description: 'Next-generation quantum trading platform',
+      href: '/services/Quantum-AI-Trading-Platform',
+      icon: Atom,
+      color: 'from-orange-500 to-red-500',
+      featured: true,
+      category: 'Emerging'
     },
     {
       name: 'Blockchain Solutions',
       description: 'Secure blockchain and Web3 services',
       href: '/services/blockchain-enterprise-solutions',
       icon: Shield,
-      color: 'from-indigo-500 to-purple-500'
+      color: 'from-indigo-500 to-purple-500',
+      category: 'Emerging'
+    },
+    
+    // Micro SAAS
+    {
+      name: 'Micro SAAS',
+      description: 'Innovative software-as-a-service solutions',
+      href: '/micro-saas',
+      icon: Rocket,
+      color: 'from-blue-500 to-cyan-500',
+      featured: true,
+      category: 'SAAS'
     },
     {
-      name: '2025 Innovative Services',
-      description: 'Latest cutting-edge services',
-      href: '/zion-innovative-services-2025',
-      icon: SparklesIcon,
-      color: 'from-yellow-500 to-orange-500'
+      name: 'AI-Powered Micro SAAS',
+      description: 'Revolutionary AI-powered software solutions',
+      href: '/zion-cutting-edge-services-2029',
+      icon: Brain,
+      color: 'from-blue-500 to-cyan-500',
+      featured: true,
+      category: 'SAAS'
     },
+    
+    // Showcases
     {
       name: '2025 Services Showcase',
       description: 'Comprehensive innovative services showcase',
       href: '/innovative-services-showcase-2025',
       icon: SparklesIcon,
       color: 'from-cyan-500 to-blue-500',
-      featured: true
+      featured: true,
+      category: 'Showcase'
     },
     {
       name: '2029 Cutting-Edge Services',
@@ -291,7 +325,8 @@ export function EnhancedHeader() {
       href: '/zion-cutting-edge-services-2029',
       icon: SparklesIcon,
       color: 'from-indigo-500 to-purple-500',
-      featured: true
+      featured: true,
+      category: 'Showcase'
     }
   ];
 

@@ -65,28 +65,16 @@ export function EnhancedFooter() {
 
   const footerSections = [
     {
-      title: 'Featured Services',
+      title: 'Services',
       links: [
-        { name: 'AI Content Creation Studio Pro', href: '/services/AI-Content-Creation-Studio-Pro', icon: PenTool, featured: true },
-        { name: 'Quantum AI Trading Platform', href: '/services/Quantum-AI-Trading-Platform', icon: Atom, featured: true },
-        { name: 'AI Project Management Platform', href: '/services/ai-powered-project-management-platform', icon: Workflow, featured: true },
-        { name: 'AI Financial Analytics Platform', href: '/services/ai-financial-analytics-platform', icon: BarChart3, featured: true },
-        { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform', icon: Heart, featured: true },
-        { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Sparkles, featured: true },
-        { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Sparkles, featured: true },
-        { name: 'AI-Powered Micro SAAS', href: '/zion-cutting-edge-services-2029', icon: Brain, featured: true }
-      ]
-    },
-    {
-      title: 'Core Services',
-      links: [
-        { name: 'Micro SAAS Solutions', href: '/services/micro-saas-solutions', icon: Rocket },
-        { name: 'AI Services', href: '/ai-services', icon: Brain },
-        { name: 'IT Infrastructure', href: '/it-services', icon: Server },
+        { name: 'AI Services', href: '/ai-services', icon: Brain, featured: true },
+        { name: 'IT Services', href: '/it-services', icon: Server, featured: true },
+        { name: 'Micro SAAS', href: '/micro-saas', icon: Rocket, featured: true },
+        { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
+        { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
         { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
         { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Shield },
-        { name: '2025 Innovative Services', href: '/zion-innovative-services-2025', icon: Sparkles },
-        { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Sparkles }
+        { name: 'AI Content Creation Studio Pro', href: '/services/AI-Content-Creation-Studio-Pro', icon: PenTool, featured: true }
       ]
     },
     {
@@ -97,18 +85,22 @@ export function EnhancedFooter() {
         { name: 'Financial Solutions', href: '/solutions/financial', icon: TrendingUp },
         { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', icon: Cpu },
         { name: 'Retail Solutions', href: '/solutions/retail', icon: ShoppingCart },
-        { name: 'Space Technology', href: '/solutions/space-tech', icon: Globe2 }
+        { name: 'Government Solutions', href: '/solutions/government', icon: Building },
+        { name: 'Industry Solutions', href: '/industry-solutions', icon: Target },
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: Zap }
       ]
     },
     {
       title: 'Company',
       links: [
         { name: 'About Us', href: '/about', icon: Users },
-        { name: 'Our Team', href: '/team', icon: Award },
+        { name: 'Leadership', href: '/leadership', icon: Award },
         { name: 'Careers', href: '/careers', icon: Target },
-        { name: 'News & Press', href: '/press', icon: BookOpen },
+        { name: 'News', href: '/news', icon: BookOpen },
+        { name: 'Events', href: '/events', icon: Calendar },
         { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
-        { name: 'Partners', href: '/partners', icon: Handshake }
+        { name: 'Partners', href: '/partners', icon: Handshake },
+        { name: 'Contact', href: '/contact', icon: MessageCircle }
       ]
     },
     {
@@ -117,9 +109,11 @@ export function EnhancedFooter() {
         { name: 'Blog', href: '/blog', icon: BookOpen },
         { name: 'Documentation', href: '/documentation', icon: FileText },
         { name: 'Help Center', href: '/help', icon: HelpCircle },
+        { name: 'Support', href: '/support', icon: HelpCircle },
         { name: 'Webinars', href: '/webinars', icon: Video },
         { name: 'White Papers', href: '/white-papers', icon: FileText },
-        { name: 'Training', href: '/training', icon: GraduationCap }
+        { name: 'Training', href: '/training', icon: GraduationCap },
+        { name: 'Research & Development', href: '/research-development', icon: Lightbulb }
       ]
     }
   ];

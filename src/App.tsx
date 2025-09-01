@@ -56,7 +56,7 @@ const MicroSAASSolutions = createLazyComponent(() => import('./pages/services/Mi
 const ComprehensiveServices = createLazyComponent(() => import('./pages/ComprehensiveServices'));
 
 // Additional pages
-const Partners = createLazyComponent(() => import('./pages/Partners'));
+const Partners = createLazyComponent(() => import('./pages/partners'));
 const Team = createLazyComponent(() => import('./pages/Team'));
 const HelpCenter = createLazyComponent(() => import('./pages/HelpCenter'));
 const Documentation = createLazyComponent(() => import('./pages/Documentation'));
@@ -461,6 +461,7 @@ function App() {
                   <Route path="/events" element={<Events />} />
                   <Route path="/leadership" element={<Leadership />} />
                   <Route path="/news" element={<News />} />
+                  <Route path="/partners" element={<Partners />} />
                   <Route path="/press" element={<Press />} />
                   <Route path="/webinars" element={<Webinars />} />
                   <Route path="/white-papers" element={<WhitePapers />} />
