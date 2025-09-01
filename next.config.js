@@ -1,75 +1,80 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-
-  // Skip type checking for now
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-
-  // Exclude problematic files from build
-  webpack: (config, { isServer }) => {
-    config.module.rules.push({
-      test: /\.js$/,
-      include: /automation/,
-      use: 'ignore-loader'
-    });
-
-    // Exclude backup directory and problematic pages
-    config.module.rules.push({
-      test: /\.(tsx|ts)$/,
-      include: [
-        /pages\/backup/,
-        /pages\/advanced-cybersecurity\.tsx$/,
-        /pages\/careers\.tsx$/,
-        /pages\/case-studies\.page\.tsx$/,
-        /pages\/case-studies\.tsx$/,
-        /pages\/contact\.tsx$/
-      ],
-      use: 'ignore-loader'
-    });
-
-    // Exclude backup directory from page processing
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '/pages/backup': false
-    };
-
-    // Bundle analyzer (optional)
-    if (process.env.ANALYZE === 'true') {
-      config.plugins.push(
-        new (require('@next/bundle-analyzer'))({
-          enabled: true,
-        })
-      );
-    }
-
-    return config;
-  },
+  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx', 'page.tsx'],
   
+  // Security headers
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()',
+          },
+        ],
+      },
+    ];
+  },
+
   // Image optimization
   images: {
     domains: ['ziontechgroup.com'],
-    unoptimized: true,
-  },
-
-  // Compiler optimizations
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
+    unoptimized: false, // Enable Next.js image optimization
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
 
   // Performance optimizations
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
 
-  // Restrict page file extensions to reduce accidental inclusion of corrupted files
-  pageExtensions: ['ts', 'tsx'],
+  // Bundle analyzer (development only)
+  ...(process.env.ANALYZE === 'true' && {
+    webpack: (config) => {
+      config.plugins.push(
+        new (require('@next/bundle-analyzer'))({
+          enabled: true,
+        })
+      );
+      return config;
+    },
+  }),
 
-  // Loosen build-time checks to avoid blocking builds while automations fix code
+  // Environment variables
+  env: {
+    CUSTOM_KEY: process.env.CUSTOM_KEY,
+  },
+
+  // Build optimizations
+  compress: true,
+  
+  // Disable build-time checks temporarily (will re-enable after fixes)
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true, // Temporarily disable ESLint
+  },
+  typescript: {
+    ignoreBuildErrors: true, // Temporarily disable TypeScript
   },
 };
 
