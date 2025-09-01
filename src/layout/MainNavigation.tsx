@@ -2,7 +2,8 @@
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare, ShoppingCart } from "lucide-react"; // Added ShoppingCart
+import { MessageSquare, Heart } from "lucide-react";
+import { useFavorites } from "@/hooks/useFavorites";
 import { useTranslation } from "react-i18next";
 import { useCart } from "../../context"; // Added useCart
 
@@ -14,9 +15,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const isAuthenticated = !!user;
   const location = useLocation();
   const { t } = useTranslation();
-  const { cartState } = useCart(); // Added cartState
-
-  const totalItems = cartState.items.reduce((sum, item) => sum + item.quantity, 0); // Calculate totalItems
 
   const baseLinks = [
     {

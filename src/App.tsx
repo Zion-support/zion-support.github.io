@@ -47,7 +47,7 @@ import ZionHireAI from './pages/ZionHireAI';
 import RequestQuotePage from './pages/RequestQuote';
 import CartPage from './pages/Cart';
 import CheckoutPage from './pages/Checkout';
-import ProductPage from './pages/ProductPage'; // Added ProductPage
+import WishlistPage from './pages/Wishlist';
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -63,7 +63,7 @@ const baseRoutes = [
   { path: '/equipment', element: <EquipmentPage /> },
   { path: '/equipment/:id', element: <EquipmentDetail /> },
   { path: '/new-products', element: <NewProductsPage /> },
-  { path: '/more-products', element: <MoreProductsPage /> },
+  { path: '/new-services', element: <NewServicesPage /> },
   { path: '/analytics', element: <Analytics /> },
   { path: '/mobile-launch', element: <MobileLaunchPage /> },
   { path: '/community', element: <CommunityPage /> },
