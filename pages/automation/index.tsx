@@ -165,14 +165,10 @@ const Index: NextPage = () => {
             <p className="text-white/70">Deletes merged or stale ephemeral branches via GitHub API.</p>
             <a className="text-cyan-300 underline" href="/.netlify/functions/branch-cleanup-runner" target="_blank" rel="noopener">Trigger / View</a>
           </li>
-
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Autonomous Roadmap</h2>
-            <p className="text-white/70">Continuously generated roadmap from repository TODOs.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/roadmap-runner" target="_blank" rel="noopener">Trigger / View</a>
-            <span className="block text-white/60 text-sm mt-1">
-              <a className="underline" href="/reports/roadmap" target="_blank" rel="noopener">Open Report</a>
-            </span>
+            <h2 className="text-xl font-bold">Revenue Ideas Orchestrator</h2>
+            <p className="text-white/70">Generates monetization proposals and components; syncs to main.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/revenue-agents-runner" target="_blank" rel="noopener">Trigger / View</a>
           </li>
         </ul>
       </main>
