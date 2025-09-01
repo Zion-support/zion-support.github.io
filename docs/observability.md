@@ -20,9 +20,9 @@ A staff-only route `/admin/metrics` embeds a Grafana dashboard via an iframe. Se
 
 ## Frontend Error Reporting
 
-The React client integrates Sentry for capturing runtime errors. Provide your
-Sentry DSN via the `VITE_SENTRY_DSN` environment variable. Errors are
-automatically reported using `@sentry/react`.
+The React frontend integrates **Sentry** to capture uncaught errors. Configure the
+`VITE_SENTRY_DSN` environment variable to enable reporting. Errors encountered
+in `apiClient` requests are automatically forwarded to Sentry.
 
 ## Running with Loki and Prometheus
 

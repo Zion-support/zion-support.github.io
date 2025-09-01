@@ -1,8 +1,11 @@
-export const SENTRY_DSN = import.meta.env.VITE_SENTRY_DSN;
+import * as Sentry from '@sentry/react';
+
+Sentry.init({
+  dsn: import.meta.env.VITE_SENTRY_DSN,
+  integrations: [new Sentry.BrowserTracing()],
+  tracesSampleRate: 1.0,
+});
 
 export function captureException(error: unknown) {
-  if (typeof console !== 'undefined') {
-    console.error('Sentry captured exception:', error);
-  }
-  // Here you would send the error to Sentry using the DSN
+  Sentry.captureException(error);
 }
