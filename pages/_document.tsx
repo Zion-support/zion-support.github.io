@@ -1,13 +1,16 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 
-class ZionDocument extends Document {
+class MyDocument extends Document {
+  static async getInitialProps(ctx: DocumentContext) {
+    const initialProps = await Document.getInitialProps(ctx);
+    return { ...initialProps };
+  }
+
   render() {
     return (
-      <Html lang="en">
-        <Head>
-          <meta name="theme-color" content="#000000" />
-        </Head>
-        <body className="bg-white dark:bg-black text-gray-900 dark:text-gray-100">
+      <Html>
+        <Head />
+        <body>
           <Main />
           <NextScript />
         </body>
@@ -16,4 +19,4 @@ class ZionDocument extends Document {
   }
 }
 
-export default ZionDocument;
+export default MyDocument;
