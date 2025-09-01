@@ -18,17 +18,9 @@
     "noFallthroughCasesInSwitch": false,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@/pages/*": ["./src/pages/*", "./pages/*"],
-      "@/api/*": ["./src/api/*"],
-      "axios": ["./src/lib/axios.ts"],
-      "next": ["../types/next"],
-      "next/*": ["../types/next/*"]
+      "@/*": ["./src/*"]
     },
-    "typeRoots": ["./src/types", "./node_modules/@types"],
-    "types": ["node"],
-    "composite": true,
-    "noEmit": true
+    "types": ["vite/client", "react"]
   },
   "include": ["src", "types"]
 }
