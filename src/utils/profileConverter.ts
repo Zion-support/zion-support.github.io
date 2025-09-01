@@ -5,12 +5,12 @@ import { TalentProfile } from "@/types/talent";
 export function convertProfileToTalentProfile(profile: ProfileData | any): TalentProfile {
   // Handle both ProfileData and existing TalentProfile inputs
   
-  // If this is already a TalentProfile, ensure optional SEO fields exist
+  // If this is already a TalentProfile, ensure SEO-friendly fields
   if (profile.professional_title !== undefined) {
     return {
       ...profile,
-      name: profile.name || profile.full_name,
-      title: profile.title || profile.professional_title
+      name: profile.name ?? profile.full_name,
+      title: profile.title ?? profile.professional_title
     };
   }
   

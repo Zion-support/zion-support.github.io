@@ -14,8 +14,8 @@ import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { getStripe } from "@/utils/getStripe";
 import { safeStorage } from '@/utils/safeStorage';
-import { useUnitSystem } from '@/context';
-import { formatDimensions, formatWeight } from '@/utils/unitConversion';
+import { SEO } from "@/components/SEO";
+import { StructuredData } from "@/components/StructuredData";
 
 interface EquipmentSpecification {
   name: string;
