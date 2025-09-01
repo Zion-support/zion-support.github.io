@@ -44,9 +44,23 @@ export default function HomePage({ latestUpdates }: HomeProps) {
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         {/* Hero Section */}
         <main className="container mx-auto px-6 py-12">
-          {/* Hero */}
-          <section className="text-center mb-16">
-            <h1 className="text-6xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-blue-400 bg-clip-text text-transparent">
+          {/* Top Navigation */}
+          <header className="mb-12 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <Link href="/" className="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-blue-400 bg-clip-text text-transparent">
+              Zion Tech Group
+            </Link>
+            <nav className="flex flex-wrap items-center gap-3 sm:gap-6 text-white/90">
+              <Link href="/about" className="hover:text-cyan-300 transition-colors">About</Link>
+              <Link href="/services" className="hover:text-fuchsia-300 transition-colors">Services</Link>
+              <Link href="/blog" className="hover:text-purple-300 transition-colors">Blog</Link>
+              <Link href="/resources" className="hover:text-blue-300 transition-colors">Resources</Link>
+              <Link href="/case-studies" className="hover:text-yellow-300 transition-colors">Case Studies</Link>
+              <Link href="/contact" className="hover:text-green-300 transition-colors">Contact</Link>
+            </nav>
+          </header>
+          {/* Hero Section */}
+          <section className="text-center mb-20">
+            <h1 className="text-6xl font-extrabold mb-8 bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-blue-400 bg-clip-text text-transparent">
               Zion Tech Group
             </h1>
             <p className="text-xl text-white/90 max-w-4xl mx-auto">
@@ -674,7 +688,7 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Health monitoring</li>
                   <li>• Self-healing infrastructure</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/ULTIMATE_REDUNDANCY_AUTOMATION_README.md" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <Link href="/ULTIMATE_REDUNDANCY_AUTOMATION_README.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
@@ -816,44 +830,18 @@ export default function HomePage({ latestUpdates }: HomeProps) {
               </div>
             </div>
           </section>
-
-          {/* Key Benefits Summary */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">💎 Key Benefits & Advantages</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-3xl">⚡</span>
-                </div>
-                <h3 className="text-lg font-semibold text-green-400 mb-2">99.99% Uptime</h3>
-                <p className="text-white/70 text-sm">Zero-downtime operations with automatic failover</p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-3xl">🤖</span>
-                </div>
-                <h3 className="text-lg font-semibold text-cyan-400 mb-2">227+ Automations</h3>
-                <p className="text-white/70 text-sm">Intelligent systems handling every aspect</p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-fuchsia-400 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-3xl">🚀</span>
-                </div>
-                <h3 className="text-lg font-semibold text-fuchsia-400 mb-2">Auto-Scaling</h3>
-                <p className="text-white/70 text-sm">Handles any load automatically</p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-3xl">🔒</span>
-                </div>
-                <h3 className="text-lg font-semibold text-yellow-400 mb-2">Enterprise Security</h3>
-                <p className="text-white/70 text-sm">Bank-grade protection & compliance</p>
-              </div>
+          {/* Footer */}
+          <footer className="mx-auto max-w-7xl px-6 pb-8 text-center text-sm text-white/60">
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link href="/README.md" className="hover:text-white/80">README</Link>
+              <Link href="/SECURITY.md" className="hover:text-white/80">Security</Link>
+              <Link href="/TESTING.md" className="hover:text-white/80">Testing</Link>
+              <Link href="/PERFORMANCE.md" className="hover:text-white/80">Performance</Link>
+              <Link href="/privacy" className="hover:text-white/80">Privacy</Link>
+              <Link href="/resources" className="hover:text-white/80">Resources</Link>
             </div>
-          </section>
+            <div className="mt-3">© {new Date().getFullYear()} Zion Tech Group. All rights reserved.</div>
+          </footer>
         </main>
         {/* Documentation Highlights */}
         <section className="mx-auto max-w-7xl px-6 pb-16">
