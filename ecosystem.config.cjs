@@ -1,336 +1,277 @@
 module.exports = {
   apps: [
-    // Main application server
+    // Main application
     {
-      name: 'zion-website',
-      script: 'npm',
-      args: 'run dev',
-      cwd: '/workspace',
+      name: "bolt-app",
+      script: "npm",
+      args: "start",
+      cwd: "./",
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: "1G",
       env: {
-        NODE_ENV: 'development',
+        NODE_ENV: "development",
         PORT: 3000
       },
       env_production: {
-        NODE_ENV: 'production',
-        PORT: 3000
-      },
-      log_file: './logs/zion-website.log',
-      out_file: './logs/zion-website-out.log',
-      error_file: './logs/zion-website-error.log',
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      merge_logs: true
+        NODE_ENV: "production",
+        NODE_OPTIONS: "--max-old-space-size=6144 --openssl-legacy-provider"
+      }
     },
-
-    // Error Monitor - Monitors and detects errors
+    // Backend server
     {
-      name: 'error-monitor',
-      script: './scripts/automation/error-monitor.cjs',
-      cwd: '/workspace',
+      name: "zion-backend",
+      script: "npm",
+      args: "start",
+      cwd: "./server",
       instances: 1,
       autorestart: true,
       watch: false,
-      restart_delay: 5000,
-      max_restarts: 10,
-      min_uptime: '10s',
-      log_file: './logs/error-monitor.log',
-      out_file: './logs/error-monitor-out.log',
-      error_file: './logs/error-monitor-error.log',
-      cron_restart: '0 */2 * * *' // Restart every 2 hours
-    },
-
-    // Syntax Fixer - Automatically fixes syntax errors
-    {
-      name: 'syntax-fixer',
-      script: './scripts/automation/syntax-fixer.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      restart_delay: 10000,
-      max_restarts: 5,
-      min_uptime: '30s',
-      log_file: './logs/syntax-fixer.log',
-      out_file: './logs/syntax-fixer-out.log',
-      error_file: './logs/syntax-fixer-error.log',
-      cron_restart: '0 */6 * * *' // Restart every 6 hours
-    },
-
-    // Dependency Manager - Manages dependencies and vulnerabilities
-    {
-      name: 'dependency-manager',
-      script: './scripts/automation/dependency-manager.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      restart_delay: 15000,
-      max_restarts: 3,
-      min_uptime: '60s',
-      log_file: './logs/dependency-manager.log',
-      out_file: './logs/dependency-manager-out.log',
-      error_file: './logs/dependency-manager-error.log',
-      cron_restart: '0 8 * * *' // Restart daily at 8 AM
-    },
-
-    // Build Monitor - Monitors build health and performance
-    {
-      name: 'build-monitor',
-      script: './scripts/automation/build-monitor.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      restart_delay: 30000,
-      max_restarts: 3,
-      min_uptime: '120s',
-      log_file: './logs/build-monitor.log',
-      out_file: './logs/build-monitor-out.log',
-      error_file: './logs/build-monitor-error.log',
-      cron_restart: '0 */4 * * *' // Restart every 4 hours
-    },
-
-    // Health Checker - Performs health checks
-    {
-      name: 'health-checker',
-      script: './scripts/health-checker.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '300M',
+      max_memory_restart: "1G",
       env: {
-        NODE_ENV: 'production'
-      },
-      error_file: './logs/health-checker-error.log',
-      out_file: './logs/health-checker-out.log',
-      log_file: './logs/health-checker-combined.log',
-      time: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      merge_logs: true,
-      max_restarts: 5,
-      min_uptime: '5s',
-      restart_delay: 2000,
-      cron_restart: '*/5 * * * *', // Run every 5 minutes
-      pmx: true
+        NODE_ENV: "production"
+      }
     },
-
-    // Auto Fixer - Automatically fixes detected errors
+    // PM2 Error Prevention Automation - runs every 5 minutes (HIGHEST PRIORITY)
     {
-      name: 'auto-fixer',
-      script: './scripts/auto-fixer.js',
+      name: "pm2-error-prevention",
+      script: "./scripts/automation/pm2-error-prevention-automation.cjs",
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: "1G",
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: "production",
+        AUTOMATION_INTERVAL: "300000" // 5 minutes
       },
-      error_file: './logs/auto-fixer-error.log',
-      out_file: './logs/auto-fixer-out.log',
-      log_file: './logs/auto-fixer-combined.log',
-      time: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      merge_logs: true,
-      max_restarts: 3,
-      min_uptime: '10s',
-      restart_delay: 5000,
-<<<<<<< HEAD
-      // Run every 30 minutes
-      cron_restart: '*/30 * * * *'
-=======
-      cron_restart: '0 */2 * * *', // Run every 2 hours
-      pmx: true
+      log_file: "./automation/logs/pm2-error-prevention.log",
+      error_file: "./automation/logs/pm2-error-prevention-error.log",
+      out_file: "./automation/logs/pm2-error-prevention-out.log"
     },
-
-    // Log Cleaner - Manages log files and cleanup
+    // Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY)
     {
-      name: 'log-cleaner',
-      script: './scripts/log-cleaner.js',
+      name: "console-error-fixer",
+      script: "./scripts/automation/console-error-fixer.cjs",
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '200M',
+      max_memory_restart: "512M",
       env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 2 * * *', // Run daily at 2 AM
-      log_file: './logs/log-cleaner.log',
-      out_file: './logs/log-cleaner-out.log',
-      error_file: './logs/log-cleaner-error.log',
-      time: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      merge_logs: true,
-      max_restarts: 3,
-      min_uptime: '5s',
-      restart_delay: 2000,
-      pmx: true
+        NODE_ENV: "production",
+        AUTOMATION_INTERVAL: "900000" // 15 minutes
+      }
     },
-
-    // Security Audit - Runs security checks
+    // Comprehensive error fixer - runs every 30 minutes (HIGH PRIORITY)
     {
-      name: 'security-audit',
-      script: 'scripts/automation-wrapper.js',
-      args: 'security',
+      name: "comprehensive-error-fixer",
+      script: "./scripts/automation/comprehensive-error-fixer.cjs",
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: "512M",
       env: {
-        NODE_ENV: 'production',
-        PM2_PROCESS: 'security-audit'
-      },
-      cron_restart: '0 4 * * 1', // Restart every Monday at 4 AM
-      log_file: 'logs/security-audit.log',
-      out_file: 'logs/security-audit-out.log',
-      error_file: 'logs/security-audit-error.log'
+        NODE_ENV: "production",
+        AUTOMATION_INTERVAL: "1800000" // 30 minutes
+      }
     },
-
-    // Performance Monitor - Monitors application performance
+    // TypeScript error fixer - runs every 45 minutes (HIGH PRIORITY)
     {
-      name: 'performance-monitor',
-      script: 'scripts/automation-wrapper.js',
-      args: 'performance',
+      name: "typescript-error-fixer",
+      script: "./scripts/automation/typescript-error-fixer.cjs",
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: "512M",
       env: {
-        NODE_ENV: 'production',
-        PM2_PROCESS: 'performance-monitor'
-      },
-      cron_restart: '0 */4 * * *', // Restart every 4 hours
-      log_file: 'logs/performance-monitor.log',
-      out_file: 'logs/performance-monitor-out.log',
-      error_file: 'logs/performance-monitor-error.log'
+        NODE_ENV: "production",
+        AUTOMATION_INTERVAL: "2700000" // 45 minutes
+      }
     },
-
-    // Quality Checks - Runs quality assurance checks
+    // JSX error fixer - runs every 40 minutes (HIGH PRIORITY)
     {
-      name: 'quality-checks',
-      script: 'scripts/automation-wrapper.js',
-      args: 'quality',
+      name: "jsx-error-fixer",
+      script: "./scripts/automation/jsx-error-fixer.cjs",
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: "512M",
       env: {
-        NODE_ENV: 'production',
-        PM2_PROCESS: 'quality-checks'
-      },
-      cron_restart: '0 5 * * *', // Restart daily at 5 AM
-      log_file: 'logs/quality-checks.log',
-      out_file: 'logs/quality-checks-out.log',
-      error_file: 'logs/quality-checks-error.log'
+        NODE_ENV: "production",
+        AUTOMATION_INTERVAL: "2400000" // 40 minutes
+      }
     },
-
-    // Link Integrity - Ensures link integrity
+    // Master error fixer - runs every hour (COORDINATES ALL ERROR FIXERS)
     {
-      name: 'link-integrity',
-      script: 'scripts/automation-wrapper.js',
-      args: 'integrity',
+      name: "master-error-fixer",
+      script: "./scripts/automation/master-error-fixer.cjs",
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: "512M",
       env: {
-        NODE_ENV: 'production',
-        PM2_PROCESS: 'link-integrity'
-      },
-      cron_restart: '0 6 * * *', // Restart daily at 6 AM
-      log_file: 'logs/link-integrity.log',
-      out_file: 'logs/link-integrity-out.log',
-      error_file: 'logs/link-integrity-error.log'
+        NODE_ENV: "production",
+        AUTOMATION_INTERVAL: "3600000" // 1 hour
+      }
     },
-
-    // Front Maximizer - Optimizes frontend performance
+    // Continuous link checker - runs every 30 minutes
     {
-      name: 'front-maximizer',
-      script: 'scripts/automation-wrapper.js',
-      args: 'maximize',
+      name: "link-checker",
+      script: "./scripts/automation/link-checker.cjs",
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: "512M",
       env: {
-        NODE_ENV: 'production',
-        PM2_PROCESS: 'front-maximizer'
-      },
-      cron_restart: '0 7 * * *', // Restart daily at 7 AM
-      log_file: 'logs/front-maximizer.log',
-      out_file: 'logs/front-maximizer-out.log',
-      error_file: 'logs/front-maximizer-error.log'
+        NODE_ENV: "production",
+        AUTOMATION_INTERVAL: "1800000" // 30 minutes
+      }
     },
-
-    // Sitemap Runner - Generates and updates sitemap
+    // Continuous improvement - runs every 2 hours
     {
-      name: 'sitemap-runner',
-      script: 'scripts/automation-wrapper.js',
-      args: 'sitemap',
+      name: "continuous-improvement",
+      script: "./scripts/automation/continuous-improvement.cjs",
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: "512M",
       env: {
-        NODE_ENV: 'production',
-        PM2_PROCESS: 'sitemap-runner'
-      },
-      cron_restart: '0 8 * * *', // Restart daily at 8 AM
-      log_file: 'logs/sitemap-runner.log',
-      out_file: 'logs/sitemap-runner-out.log',
-      error_file: 'logs/sitemap-runner-error.log'
+        NODE_ENV: "production",
+        AUTOMATION_INTERVAL: "7200000" // 2 hours
+      }
     },
-
-    // Automated Build & Lint fixer
+    // Continuous build and test - runs every hour
     {
-      name: 'auto-fix-and-build',
-      script: 'bash',
-      args: '-lc "npm install --silent && npm run lint || true && npm run type-check || true && npm run build"',
+      name: "daily-build-test",
+      script: "./scripts/automation/daily-build-test.cjs",
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
-      env: { NODE_ENV: 'production' },
-      cron_restart: '0 */6 * * *', // Every 6 hours
-      log_file: 'logs/auto-fix-and-build.log',
-      out_file: 'logs/auto-fix-and-build-out.log',
-      error_file: 'logs/auto-fix-and-build-error.log'
+      max_memory_restart: "512M",
+      env: {
+        NODE_ENV: "production",
+        AUTOMATION_INTERVAL: "3600000" // 1 hour
+      }
     },
-
-    // Watcher to rebuild on changes
+    // Continuous security audit - runs every 4 hours
     {
-      name: 'dev-watch-build',
-      script: 'bash',
-      args: '-lc "npm run build"',
+      name: "security-audit",
+      script: "./scripts/automation/security-audit.cjs",
       instances: 1,
-      watch: ['src', 'public', 'postcss.config.js', 'vite.config.ts'],
-      ignore_watch: ['dist', 'node_modules', 'logs'],
-      max_memory_restart: '1G',
-      env: { NODE_ENV: 'development' },
-      log_file: 'logs/dev-watch-build.log',
-      out_file: 'logs/dev-watch-build-out.log',
-      error_file: 'logs/dev-watch-build-error.log'
->>>>>>> cursor/migrate-ci-to-pm2-and-clean-up-github-actions-430a
+      autorestart: true,
+      watch: false,
+      max_memory_restart: "512M",
+      env: {
+        NODE_ENV: "production",
+        AUTOMATION_INTERVAL: "14400000" // 4 hours
+      }
+    },
+    // Continuous dependency updates - runs every 6 hours
+    {
+      name: "dependency-updates",
+      script: "./scripts/automation/dependency-updates.cjs",
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: "512M",
+      env: {
+        NODE_ENV: "production",
+        AUTOMATION_INTERVAL: "21600000" // 6 hours
+      }
+    },
+    // Continuous performance monitoring - runs every 2 hours
+    {
+      name: "performance-monitor",
+      script: "./scripts/automation/performance-monitor.cjs",
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: "512M",
+      env: {
+        NODE_ENV: "production",
+        AUTOMATION_INTERVAL: "7200000" // 2 hours
+      }
+    },
+    // Continuous quality checks - runs every 3 hours
+    {
+      name: "quality-checks",
+      script: "./scripts/automation/quality-checks.cjs",
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: "512M",
+      env: {
+        NODE_ENV: "production",
+        AUTOMATION_INTERVAL: "10800000" // 3 hours
+      }
+    },
+    // Continuous link integrity checker - runs every 2 hours
+    {
+      name: "link-integrity",
+      script: "./scripts/automation/link-integrity.cjs",
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: "512M",
+      env: {
+        NODE_ENV: "production",
+        AUTOMATION_INTERVAL: "7200000" // 2 hours
+      }
+    },
+    // Continuous front maximizer - runs every 4 hours
+    {
+      name: "front-maximizer",
+      script: "./scripts/automation/front-maximizer.cjs",
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: "512M",
+      env: {
+        NODE_ENV: "production",
+        AUTOMATION_INTERVAL: "14400000" // 4 hours
+      }
+    },
+    // Continuous sitemap runner - runs every 6 hours
+    {
+      name: "sitemap-runner",
+      script: "./scripts/automation/sitemap-runner.cjs",
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: "512M",
+      env: {
+        NODE_ENV: "production",
+        AUTOMATION_INTERVAL: "21600000" // 6 hours
+      }
+    },
+    // Auto-fix and build automation
+    {
+      name: "auto-fix-and-build",
+      script: "bash",
+      args: "-lc 'npm install --silent && npm run lint || true && npm run type-check || true && npm run build'",
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: "1G",
+      env: {
+        NODE_ENV: "production"
+      },
+      cron_restart: "0 */6 * * *", // Every 6 hours
+      log_file: "logs/auto-fix-and-build.log",
+      out_file: "logs/auto-fix-and-build-out.log",
+      error_file: "logs/auto-fix-and-build-error.log"
     }
   ],
-
   deploy: {
     production: {
-      user: 'ubuntu',
-      host: 'localhost',
-      ref: 'origin/main',
-      repo: 'https://github.com/Zion-Holdings/zion.app.git',
-      path: '/workspace',
-      'pre-deploy-local': '',
-<<<<<<< HEAD
-      'post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.cjs --env production',
-      'pre-setup': ''
-=======
-      'post-deploy': 'npm install --legacy-peer-deps && npm run build && pm2 reload ecosystem.config.cjs --env production',
-      'pre-setup': 'mkdir -p /var/www/zion.app/logs'
->>>>>>> cursor/migrate-ci-to-pm2-and-clean-up-github-actions-430a
+      user: "root",
+      host: "localhost",
+      ref: "origin/main",
+      repo: "git@github.com:your-username/bolt.new.zion.app.git",
+      path: "/workspace/production",
+      "pre-deploy-local": "",
+      "post-deploy": "npm install && npm run build && pm2 reload ecosystem.config.cjs --env production",
+      "pre-setup": ""
     }
   }
 };
