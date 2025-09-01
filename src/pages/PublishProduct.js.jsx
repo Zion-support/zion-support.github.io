@@ -2,7 +2,7 @@ import React from "react";
 import { ProductSubmissionForm } from "@/components/ProductSubmissionForm";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 export default function PublishProduct() {
     const { isAuthenticated, isLoading } = useAuth();
     // Show loading while checking authentication

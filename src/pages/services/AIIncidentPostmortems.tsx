@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 
 const AIIncidentPostmortems: React.FC = () => (
   <div className="min-h-screen bg-slate-900 text-white">

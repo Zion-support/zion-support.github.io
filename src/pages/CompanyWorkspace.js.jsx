@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { CompDashboard } from "@/components/enterprise/workspace/CompDashboard";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate, useParams } from "react-router-dom";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useCompWorkspace } from "@/hooks/useCompWorkspace";
 import { useWhitelabel } from "@/context/WhitelabelContext";

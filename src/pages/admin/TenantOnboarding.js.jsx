@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
