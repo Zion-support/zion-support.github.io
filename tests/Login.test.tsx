@@ -1,21 +1,25 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { MemoryRouter, Routes, Route } from 'react-router-dom';
 import { vi } from 'vitest';
-import Login from '@/pages/auth/Login';
-import * as authApi from '@/services/auth';
+import { LoginForm } from '@/components/auth/login';
+import * as authService from '@/services/authService';
+import { Toaster } from '@/components/ui/toaster';
+import * as authHook from '@/hooks/useAuth';
 
 vi.mock('@/services/auth');
 
-describe('Login page', () => {
-  it('redirects to /dashboard on successful login', async () => {
-    vi.spyOn(authApi, 'login').mockResolvedValue({ status: 200, data: { token: 'x' } } as any);
-
+describe('LoginForm', () => {
+  it('shows error toast on 401 response', async () => {
+    vi.spyOn(authService, 'loginUser').mockResolvedValue({
+      res: { status: 401 } as Response,
+      data: { error: 'Invalid credentials' },
+    });
     render(
-      <MemoryRouter initialEntries={['/login']}>
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/dashboard" element={<div>Dashboard</div>} />
-        </Routes>
+      <MemoryRouter>
+        <>
+          <Toaster />
+          <LoginForm />
+        </>
       </MemoryRouter>
     );
 
@@ -23,6 +27,7 @@ describe('Login page', () => {
     fireEvent.input(screen.getByLabelText(/password/i), { target: { value: 'secret' } });
     fireEvent.click(screen.getByRole('button', { name: /login/i }));
 
-    await waitFor(() => expect(screen.getByText('Dashboard')).toBeInTheDocument());
+    // wait for toast to appear
+    await screen.findByText('Invalid credentials');
   });
 });
