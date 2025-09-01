@@ -1,12 +1,20 @@
-import { GetServerSideProps } from 'next';
-import TenantLanding from '../components/multiverse/TenantLanding';
-import { getServerSideTenant } from '../utils/tenant';
+import type { NextPage } from 'next';
+import Head from 'next/head';
 
-export default function HomePage({ tenant }: any) {
-  return <TenantLanding tenant={tenant ?? null} />;
-}
-
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const { tenant } = await getServerSideTenant(ctx as any);
-  return { props: { tenant } };
+const Index: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>Index - Zion Tech Solutions</title>
+        <meta name="description" content="Index page" />
+      </Head>
+      
+      <main>
+        <h1>Index</h1>
+        <p>This page is under construction.</p>
+      </main>
+    </div>
+  );
 };
+
+export default Index;

@@ -22,10 +22,7 @@ export default function EnhancedNavigation() {
           <Link href="/certifications"><a>Certifications</a></Link>
           <Link href="/dao"><a>DAO</a></Link>
           <Link href="/contact"><a>Contact</a></Link>
-          <span className="inline-flex items-center gap-1 text-xs">
-            <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--accent, #3b82f6)' }} />
-            <span className="text-gray-500">{tenant?.subdomain ?? 'global'}</span>
-          </span>
+          <Link href="/media/kit"><a>Media Kit</a></Link>
         </div>
         <div className="flex items-center gap-4 text-sm">
           <Link href="/services"><a>Services</a></Link>
