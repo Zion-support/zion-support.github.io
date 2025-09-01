@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useCallback, useRef, FocusEvent } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Eye, EyeOff, Volume2, VolumeX, Type, 
-  Contrast, ZoomIn, ZoomOut, RotateCcw,
-  Settings, X, Accessibility, Sun, Moon,
-  Highlighter, TextCursor, AlignJustify
+  Eye, EyeOff, Volume2, VolumeX, FileText, 
+  Settings, X, Sun, Moon,
+  RotateCcw
 } from 'lucide-react';
 
 interface AccessibilitySettings {
@@ -15,6 +14,9 @@ interface AccessibilitySettings {
   fontSize: number;
   lineSpacing: number;
   colorBlindMode: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
+  keyboardNavigation: boolean;
+  screenReader: boolean;
+  focusIndicators: boolean;
 }
 
 interface AccessibilityEnhancerProps {
@@ -31,11 +33,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     highlighter: false,
     fontSize: 16,
     lineSpacing: 1.5,
-    colorBlindMode: 'none'
+    colorBlindMode: 'none',
+    keyboardNavigation: false,
+    screenReader: false,
+    focusIndicators: false
   });
   const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null);
   const [isPanelOpen, setIsPanelOpen] = useState(false);
   const [isKeyboardNavigation, setIsKeyboardNavigation] = useState(false);
+  const [isReading, setIsReading] = useState(false);
+  const [speechRate, setSpeechRate] = useState(1.0);
   
   const focusRef = useRef<HTMLDivElement>(null);
   const announcementRef = useRef<HTMLDivElement>(null);
@@ -180,7 +187,15 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     }, 5000);
   }, []);
 
+  // Auto-optimize accessibility
+  const applySettings = useCallback((newSettings: AccessibilitySettings) => {
+    // Apply settings logic here
+    console.log('Applying accessibility settings:', newSettings);
+  }, []);
 
+  useEffect(() => {
+    applySettings(settings);
+  }, [settings, applySettings]);
 
   // Keyboard navigation enhancement
   useEffect(() => {
@@ -294,25 +309,25 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
   // Highlighter mode
   const toggleHighlighter = () => {
-    setSettings(prev => ({ ...prev, highlighter: !prev.highlighter }));
+    setSettings({ ...settings, highlighter: !settings.highlighter });
   };
 
   // Font size controls
   const increaseFontSize = () => {
-    setSettings(prev => ({ ...prev, fontSize: Math.min(prev.fontSize + 2, 24) }));
+    setSettings({ ...settings, fontSize: Math.min(settings.fontSize + 2, 24) });
   };
 
   const decreaseFontSize = () => {
-    setSettings(prev => ({ ...prev, fontSize: Math.max(prev.fontSize - 2, 12) }));
+    setSettings({ ...settings, fontSize: Math.max(settings.fontSize - 2, 12) });
   };
 
   // Line spacing controls
   const increaseLineSpacing = () => {
-    setSettings(prev => ({ ...prev, lineSpacing: Math.min(prev.lineSpacing + 0.1, 2.5) }));
+    setSettings({ ...settings, lineSpacing: Math.min(settings.lineSpacing + 0.1, 2.5) });
   };
 
   const decreaseLineSpacing = () => {
-    setSettings(prev => ({ ...prev, lineSpacing: Math.max(prev.lineSpacing - 0.1, 1.0) }));
+    setSettings({ ...settings, lineSpacing: Math.max(settings.lineSpacing - 0.1, 1.0) });
   };
 
   // Reset all settings
@@ -324,7 +339,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       highlighter: false,
       fontSize: 16,
       lineSpacing: 1.5,
-      colorBlindMode: 'none'
+      colorBlindMode: 'none',
+      keyboardNavigation: false,
+      screenReader: false,
+      focusIndicators: false
     });
   };
 
@@ -339,7 +357,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         aria-label="Accessibility options"
         aria-expanded={isVisible}
       >
-        <Accessibility className="w-6 h-6" />
+                    <Settings className="w-6 h-6" />
       </motion.button>
 
       {/* Accessibility Panel */}
@@ -355,7 +373,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-gray-700/50">
               <div className="flex items-center space-x-2">
-                <Accessibility className="w-5 h-5 text-purple-400" />
+                <Settings className="w-5 h-5 text-purple-400" />
                 <span className="text-white font-semibold">Accessibility</span>
               </div>
               <div className="flex items-center space-x-2">
@@ -396,7 +414,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
               {/* High Contrast Toggle */}
               <button
-                onClick={() => setSettings(prev => ({ ...prev, highContrast: !prev.highContrast }))}
+                onClick={() => setSettings({ ...settings, highContrast: !settings.highContrast })}
                 className={`w-full flex items-center justify-between p-3 rounded-lg transition-all duration-200 ${
                   settings.highContrast 
                     ? 'bg-yellow-500/20 border border-yellow-500/50 text-yellow-400' 
@@ -405,7 +423,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                 aria-label="Toggle high contrast"
               >
                 <span className="flex items-center space-x-2">
-                  <Contrast className="w-4 h-4" />
+                  <Settings className="w-4 h-4" />
                   <span>High Contrast</span>
                 </span>
                 <div className={`w-4 h-4 rounded border-2 ${
@@ -415,7 +433,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
               {/* Large Text Toggle */}
               <button
-                onClick={() => setSettings(prev => ({ ...prev, largeText: !prev.largeText }))}
+                onClick={() => setSettings({ ...settings, largeText: !settings.largeText })}
                 className={`w-full flex items-center justify-between p-3 rounded-lg transition-all duration-200 ${
                   settings.largeText 
                     ? 'bg-blue-500/20 border border-blue-500/50 text-blue-400' 
@@ -424,7 +442,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                 aria-label="Toggle large text"
               >
                 <span className="flex items-center space-x-2">
-                  <Type className="w-4 h-4" />
+                  <FileText className="w-4 h-4" />
                   <span>Large Text</span>
                 </span>
                 <div className={`w-4 h-4 rounded border-2 ${
@@ -434,7 +452,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
               {/* Reduced Motion Toggle */}
               <button
-                onClick={() => setSettings(prev => ({ ...prev, reducedMotion: !prev.reducedMotion }))}
+                onClick={() => setSettings({ ...settings, reducedMotion: !settings.reducedMotion })}
                 className={`w-full flex items-center justify-between p-3 rounded-lg transition-all duration-200 ${
                   settings.reducedMotion 
                     ? 'bg-green-500/20 border border-green-500/50 text-green-400' 
@@ -472,7 +490,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                           className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-300 hover:text-white transition-colors duration-200"
                           aria-label="Decrease font size"
                         >
-                          <ZoomOut className="w-4 h-4" />
+                          <RotateCcw className="w-4 h-4" />
                         </button>
                         <span className="text-white min-w-[3rem] text-center">{settings.fontSize}px</span>
                         <button
@@ -480,7 +498,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                           className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-300 hover:text-white transition-colors duration-200"
                           aria-label="Increase font size"
                         >
-                          <ZoomIn className="w-4 h-4" />
+                          <RotateCcw className="w-4 h-4" />
                         </button>
                       </div>
                     </div>
@@ -494,7 +512,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                           className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-300 hover:text-white transition-colors duration-200"
                           aria-label="Decrease line spacing"
                         >
-                          <AlignJustify className="w-4 h-4" />
+                          <Settings className="w-4 h-4" />
                         </button>
                         <span className="text-white min-w-[3rem] text-center">{settings.lineSpacing.toFixed(1)}</span>
                         <button
@@ -502,7 +520,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                           className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-300 hover:text-white transition-colors duration-200"
                           aria-label="Increase line spacing"
                         >
-                          <AlignJustify className="w-4 h-4 rotate-90" />
+                          <Settings className="w-4 h-4 rotate-90" />
                         </button>
                       </div>
                     </div>
@@ -512,7 +530,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                       <h4 className="text-sm font-semibold text-white">Color Blind Mode</h4>
                       <select
                         value={settings.colorBlindMode}
-                        onChange={(e) => setSettings(prev => ({ ...prev, colorBlindMode: e.target.value as any }))}
+                        onChange={(e) => setSettings({ ...settings, colorBlindMode: e.target.value as 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia' })}
                         className="w-full p-2 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
                       >
                         <option value="none">None</option>
@@ -577,5 +595,5 @@ export const SrOnly: React.FC<{ children: React.ReactNode }> = ({ children }) =>
   <span className="sr-only">{children}</span>
 );
 
-// Export the main provider component as default
-export default AccessibilityProvider;
+// Export the main component as default
+export default AccessibilityEnhancer;

@@ -1,310 +1,341 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import SmartHeader from '../components/SmartHeader';
-import SmartFooter from '../components/SmartFooter';
+import { motion } from 'framer-motion';
+import { 
+  Brain, Shield, Rocket, Cpu, Database, Atom, Users, Award, 
+  Globe, Target, Star, CheckCircle, TrendingUp, Lightbulb
+} from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
 
-export default function About() {
+export default function AboutPage() {
+  const values = [
+    {
+      icon: Brain,
+      title: "Innovation First",
+      description: "We push the boundaries of what's possible with cutting-edge AI and quantum technologies"
+    },
+    {
+      icon: Shield,
+      title: "Trust & Security",
+      description: "Enterprise-grade security and privacy protection for all our solutions"
+    },
+    {
+      icon: Users,
+      title: "Human-Centric",
+      description: "Technology that empowers people and enhances human capabilities"
+    },
+    {
+      icon: Globe,
+      title: "Global Impact",
+      description: "Solutions that address real-world challenges across industries and borders"
+    }
+  ];
+
+  const milestones = [
+    {
+      year: "2025",
+      title: "AI Autonomous Ecosystem Launch",
+      description: "Revolutionary autonomous AI solutions that adapt and evolve"
+    },
+    {
+      year: "2024",
+      title: "Quantum Computing Breakthrough",
+      description: "Advanced quantum neural networks and consciousness capabilities"
+    },
+    {
+      year: "2023",
+      title: "Edge Computing Platform",
+      description: "Intelligent edge orchestration and IoT management solutions"
+    },
+    {
+      year: "2022",
+      title: "Company Foundation",
+      description: "Zion Tech Group established with vision for autonomous innovation"
+    }
+  ];
+
+  const team = [
+    {
+      name: "Dr. Sarah Chen",
+      role: "Chief AI Officer",
+      expertise: "Quantum AI, Neural Networks, Consciousness Research"
+    },
+    {
+      name: "Marcus Rodriguez",
+      role: "Chief Technology Officer",
+      expertise: "Edge Computing, IoT, Autonomous Systems"
+    },
+    {
+      name: "Dr. Elena Petrova",
+      role: "Chief Quantum Officer",
+      expertise: "Quantum Computing, Cryptography, Materials Science"
+    },
+    {
+      name: "Alex Thompson",
+      role: "Chief Innovation Officer",
+      expertise: "Emerging Technologies, Strategic Innovation, R&D"
+    }
+  ];
+
   return (
     <>
       <Head>
-        <title>About Us - Zion Tech Group | AI-Powered Technology Solutions</title>
-        <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI-powered technology solutions, autonomous systems, and cutting-edge innovations." />
-        <meta name="keywords" content="Zion Tech Group, AI technology, autonomous systems, machine learning, cybersecurity, quantum computing" />
-        <meta property="og:title" content="About Zion Tech Group" />
-        <meta property="og:description" content="Leading provider of AI-powered technology solutions and autonomous systems." />
+        <title>About Us - Zion Tech Group | Leading AI & Quantum Innovation</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize technology through AI, quantum computing, and autonomous innovation. Discover our team, values, and vision for the future." />
+        <meta name="keywords" content="Zion Tech Group, AI innovation, quantum computing, autonomous systems, technology leadership" />
+        <meta property="og:title" content="About Us - Zion Tech Group" />
+        <meta property="og:description" content="Leading-edge technology solutions and autonomous innovation platform." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/about" />
-        <link rel="canonical" href="https://ziontechgroup.com/about" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
-        <SmartHeader />
-        
-        <main id="main-content" className="pt-16">
-          {/* Hero Section */}
-          <section className="relative py-20 px-6">
-            <div className="mx-auto max-w-7xl">
-              <div className="text-center">
-                <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent mb-6">
-                  About Zion Tech Group
-                </h1>
-                <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed">
-                  Pioneering the future of autonomous technology and AI-driven innovation
+      <EnhancedNavigation />
+
+      <main className="min-h-screen bg-slate-900 text-white">
+        {/* Hero Section */}
+        <section className="pt-32 pb-20 px-6">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+                About Zion Tech Group
+              </h1>
+              <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed">
+                Pioneering the future of autonomous technology through revolutionary AI, 
+                quantum computing, and consciousness evolution platforms.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Mission & Vision */}
+        <section className="py-20 px-6 bg-slate-800/50">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                  Our Mission
+                </h2>
+                <p className="text-lg text-white/80 leading-relaxed mb-6">
+                  To accelerate human progress by developing autonomous AI systems that 
+                  think, learn, and evolve independently, solving complex challenges 
+                  across industries and advancing our understanding of consciousness.
                 </p>
-              </div>
-            </div>
-          </section>
-
-          {/* Mission & Vision */}
-          <section className="py-20 px-6 bg-white/5">
-            <div className="mx-auto max-w-7xl">
-              <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                  <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
-                  <p className="text-lg text-white/80 leading-relaxed mb-6">
-                    To accelerate human progress through autonomous AI systems that continuously learn, adapt, and evolve. We believe in creating technology that works for humanity, not against it.
-                  </p>
-                  <p className="text-lg text-white/80 leading-relaxed">
-                    Our autonomous platforms are designed to handle complex business operations, research tasks, and creative endeavors with minimal human intervention, freeing people to focus on what truly matters.
-                  </p>
-                </div>
-                <div>
-                  <h2 className="text-4xl font-bold text-white mb-6">Our Vision</h2>
-                  <p className="text-lg text-white/80 leading-relaxed mb-6">
-                    A world where AI and humans collaborate seamlessly, where technology anticipates needs and solves problems before they arise, and where innovation happens at the speed of thought.
-                  </p>
-                  <p className="text-lg text-white/80 leading-relaxed">
-                    We envision a future where autonomous systems handle routine tasks while humans focus on creativity, strategy, and meaningful human connections.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Company Story */}
-          <section className="py-20 px-6">
-            <div className="mx-auto max-w-7xl">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-white mb-6">Our Story</h2>
-                <p className="text-xl text-white/70 max-w-3xl mx-auto">
-                  From humble beginnings to pioneering the future of autonomous technology
+                <p className="text-lg text-white/80 leading-relaxed">
+                  We believe in creating technology that doesn't just assist humans, 
+                  but collaborates with them as intelligent partners in innovation.
                 </p>
-              </div>
-              
-              <div className="grid md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-fuchsia-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="text-3xl">🚀</span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">Founded in 2020</h3>
-                  <p className="text-white/70">
-                    Started as a small team of AI researchers and engineers with a vision to democratize autonomous technology.
-                  </p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="text-3xl">🤖</span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">AI Breakthroughs</h3>
-                  <p className="text-white/70">
-                    Developed revolutionary autonomous systems that can learn, adapt, and operate independently across various domains.
-                  </p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="text-3xl">🌍</span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">Global Impact</h3>
-                  <p className="text-white/70">
-                    Now serving thousands of clients worldwide with cutting-edge autonomous solutions and AI-powered services.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
+              </motion.div>
 
-          {/* Core Values */}
-          <section className="py-20 px-6 bg-white/5">
-            <div className="mx-auto max-w-7xl">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-white mb-6">Our Core Values</h2>
-                <p className="text-xl text-white/70 max-w-3xl mx-auto">
-                  The principles that guide everything we do
-                </p>
-              </div>
-              
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl">🔬</span>
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <div className="relative z-10">
+                  <div className="w-full h-80 bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-2xl border border-white/10 backdrop-blur-sm p-8">
+                    <div className="flex items-center space-x-4 mb-6">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                        <Target className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-white">Vision 2030</h3>
+                    </div>
+                    <p className="text-white/90 leading-relaxed">
+                      A world where autonomous AI systems work seamlessly alongside humans, 
+                      accelerating scientific discovery, solving global challenges, and 
+                      expanding the boundaries of human consciousness and capability.
+                    </p>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">Innovation</h3>
-                  <p className="text-white/70 text-sm">
-                    Constantly pushing boundaries and exploring new possibilities in AI and autonomous systems.
-                  </p>
                 </div>
-                
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl">🤝</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">Collaboration</h3>
-                  <p className="text-white/70 text-sm">
-                    Working together with clients, partners, and the community to achieve shared goals.
-                  </p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl">🛡️</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">Trust</h3>
-                  <p className="text-white/70 text-sm">
-                    Building reliable, secure, and transparent systems that clients can depend on.
-                  </p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl">🌱</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">Growth</h3>
-                  <p className="text-white/70 text-sm">
-                    Continuous learning and improvement, both for our systems and our team.
-                  </p>
-                </div>
-              </div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-cyan-600/10 rounded-2xl blur-3xl"></div>
+              </motion.div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Technology Focus */}
-          <section className="py-20 px-6">
-            <div className="mx-auto max-w-7xl">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-white mb-6">Our Technology Focus</h2>
-                <p className="text-xl text-white/70 max-w-3xl mx-auto">
-                  Cutting-edge technologies that power our autonomous solutions
-                </p>
-              </div>
-              
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                  <div className="w-12 h-12 bg-gradient-to-r from-fuchsia-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
-                    <span className="text-xl">🧠</span>
+        {/* Values */}
+        <section className="py-20 px-6">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+                Our Core Values
+              </h2>
+              <p className="text-xl text-white/70 max-w-3xl mx-auto">
+                The principles that guide our innovation and shape our culture
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {values.map((value, index) => (
+                <motion.div
+                  key={value.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group"
+                >
+                  <div className="p-6 rounded-2xl bg-slate-800/50 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-800/70">
+                    <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <value.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
+                    <p className="text-white/70 leading-relaxed">{value.description}</p>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">Artificial Intelligence</h3>
-                  <p className="text-white/70 text-sm">
-                    Advanced machine learning, neural networks, and AI algorithms that enable autonomous decision-making and learning.
-                  </p>
-                </div>
-                
-                <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
-                    <span className="text-xl">⚛️</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">Quantum Computing</h3>
-                  <p className="text-white/70 text-sm">
-                    Next-generation computing that unlocks new possibilities in AI, cryptography, and complex problem-solving.
-                  </p>
-                </div>
-                
-                <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
-                    <span className="text-xl">🔒</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">Cybersecurity</h3>
-                  <p className="text-white/70 text-sm">
-                    Advanced security protocols and autonomous threat detection systems that protect our clients' digital assets.
-                  </p>
-                </div>
-                
-                <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-500 rounded-lg flex items-center justify-center mb-4">
-                    <span className="text-xl">☁️</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">Cloud Infrastructure</h3>
-                  <p className="text-white/70 text-sm">
-                    Scalable, resilient cloud platforms that power our autonomous services and ensure high availability.
-                  </p>
-                </div>
-                
-                <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
-                    <span className="text-xl">⛓️</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">Blockchain</h3>
-                  <p className="text-white/70 text-sm">
-                    Distributed ledger technology that provides transparency, security, and trust in our autonomous systems.
-                  </p>
-                </div>
-                
-                <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                  <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-4">
-                    <span className="text-xl">🚀</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">Autonomous Systems</h3>
-                  <p className="text-white/70 text-sm">
-                    Self-managing, self-improving systems that operate independently and continuously optimize performance.
-                  </p>
-                </div>
-              </div>
+                </motion.div>
+              ))}
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Team Section */}
-          <section className="py-20 px-6 bg-white/5">
-            <div className="mx-auto max-w-7xl">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-white mb-6">Our Team</h2>
-                <p className="text-xl text-white/70 max-w-3xl mx-auto">
-                  World-class experts in AI, machine learning, cybersecurity, and autonomous systems
-                </p>
-              </div>
-              
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="w-32 h-32 bg-gradient-to-r from-fuchsia-500 to-cyan-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                    <span className="text-4xl">👨‍💻</span>
+        {/* Milestones */}
+        <section className="py-20 px-6 bg-slate-800/50">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+                Our Journey
+              </h2>
+              <p className="text-xl text-white/70 max-w-3xl mx-auto">
+                Key milestones in our mission to revolutionize autonomous technology
+              </p>
+            </motion.div>
+
+            <div className="space-y-8">
+              {milestones.map((milestone, index) => (
+                <motion.div
+                  key={milestone.year}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                  className={`flex flex-col lg:flex-row items-center gap-8 ${
+                    index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                  }`}
+                >
+                  <div className="lg:w-1/2">
+                    <div className="p-8 rounded-2xl bg-slate-700/50 border border-white/10">
+                      <div className="flex items-center space-x-4 mb-4">
+                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                          <Star className="w-6 h-6 text-white" />
+                        </div>
+                        <span className="text-2xl font-bold text-blue-400">{milestone.year}</span>
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-3">{milestone.title}</h3>
+                      <p className="text-white/80 leading-relaxed">{milestone.description}</p>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">AI Researchers</h3>
-                  <p className="text-white/70 text-sm">
-                    PhD-level researchers pushing the boundaries of artificial intelligence and autonomous systems.
-                  </p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-32 h-32 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                    <span className="text-4xl">🔒</span>
+                  <div className="lg:w-1/2 flex justify-center">
+                    <div className="w-32 h-32 rounded-full bg-gradient-to-br from-blue-600/20 to-cyan-600/20 border border-white/10 flex items-center justify-center">
+                      <TrendingUp className="w-16 h-16 text-blue-400" />
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Security Experts</h3>
-                  <p className="text-white/70 text-sm">
-                    Cybersecurity specialists ensuring our autonomous systems are secure, compliant, and trustworthy.
-                  </p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                    <span className="text-4xl">🏗️</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Engineers</h3>
-                  <p className="text-white/70 text-sm">
-                    Full-stack engineers building robust, scalable platforms that power our autonomous services.
-                  </p>
-                </div>
-              </div>
+                </motion.div>
+              ))}
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* CTA Section */}
-          <section className="py-20 px-6">
-            <div className="mx-auto max-w-4xl text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Experience the Future?</h2>
-              <p className="text-xl text-white/80 mb-8">
-                Join thousands of organizations already benefiting from our autonomous AI solutions
+        {/* Team */}
+        <section className="py-20 px-6">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+                Leadership Team
+              </h2>
+              <p className="text-xl text-white/70 max-w-3xl mx-auto">
+                Visionary leaders driving innovation and shaping the future of autonomous technology
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {team.map((member, index) => (
+                <motion.div
+                  key={member.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group"
+                >
+                  <div className="p-6 rounded-2xl bg-slate-800/50 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-800/70">
+                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                      <Users className="w-10 h-10 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2 text-center">{member.name}</h3>
+                    <p className="text-blue-400 font-semibold mb-3 text-center">{member.role}</p>
+                    <p className="text-white/70 leading-relaxed text-center">{member.expertise}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-6 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl font-bold mb-6 text-white">
+                Join Us in Shaping the Future
+              </h2>
+              <p className="text-xl text-white/80 mb-8 leading-relaxed">
+                Ready to explore the possibilities of autonomous AI and quantum innovation? 
+                Let's collaborate to build tomorrow's technology today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="/services" 
-                  className="px-8 py-4 bg-gradient-to-r from-fuchsia-500 to-cyan-500 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105"
-                >
-                  Explore Our Services
-                </Link>
-                <Link 
-                  href="/contact" 
-                  className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+                <a
+                  href="/contact"
+                  className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Get in Touch
-                </Link>
+                </a>
+                <a
+                  href="/careers"
+                  className="px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300"
+                >
+                  Join Our Team
+                </a>
               </div>
-            </div>
-          </section>
-        </main>
+            </motion.div>
+          </div>
+        </section>
+      </main>
 
-        <SmartFooter />
-      </div>
+      <EnhancedFooter />
     </>
   );
 };

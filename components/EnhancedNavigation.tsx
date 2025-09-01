@@ -18,23 +18,31 @@ export default function EnhancedNavigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navigationItems = [
-    {
-      name: 'Services',
-      href: '#services',
-      dropdown: [
-        { name: 'AI & Analytics', href: 'https://ziontechgroup.com/ai-business-intelligence', icon: Brain },
-        { name: 'Cybersecurity', href: 'https://ziontechgroup.com/quantum-cybersecurity', icon: Shield },
-        { name: 'Edge Computing', href: 'https://ziontechgroup.com/edge-computing-orchestration', icon: Cpu },
-        { name: 'Space Technology', href: 'https://ziontechgroup.com/space-technology', icon: Rocket },
-        { name: 'Quantum AI', href: 'https://ziontechgroup.com/quantum-ai-research', icon: Atom },
-        { name: 'All Services', href: '/comprehensive-2025-services-showcase', icon: Database }
-      ]
-    },
-    { name: 'Pricing', href: '/pricing-2025' },
-    { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#contact' }
+  const services = [
+    { name: 'All Services', href: '/micro-saas', icon: Globe, description: 'Complete collection of innovative services' },
+    { name: 'AI Business Intelligence', href: '/micro-saas', icon: Brain, description: 'AI-powered analytics and insights' },
+    { name: 'Quantum Cybersecurity', href: '/micro-saas', icon: Shield, description: 'Quantum-resistant security solutions' },
+    { name: 'Edge Computing', href: '/micro-saas', icon: Cpu, description: 'Edge orchestration and IoT management' },
+    { name: 'Space Technology', href: '/micro-saas', icon: Rocket, description: 'Space exploration and satellite tech' },
+    { name: 'Pricing', href: '/market-pricing', icon: Award, description: 'Transparent pricing for all services' }
   ];
+
+  const company = [
+    { name: 'About Us', href: '/about', icon: Users, description: 'Learn about our mission and team' },
+    { name: 'Partners', href: '/partners', icon: Award, description: 'Strategic partnerships and collaborations' },
+    { name: 'Careers', href: '/careers', icon: Award, description: 'Join our team of innovators' },
+    { name: 'Blog & Insights', href: '/blog', icon: BookOpen, description: 'Stay updated with industry trends' },
+    { name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts' }
+  ];
+
+  const toggleDropdown = (dropdown: string) => {
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  };
+
+  const closeAllDropdowns = () => {
+    setActiveDropdown(null);
+    setIsOpen(false);
+  };
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
