@@ -1,270 +1,222 @@
-# PM2 Automation System
+# PM2 Automation System for Zion Tech Group
 
-This document describes the PM2 automation system that has replaced GitHub Actions for CI/CD, dependency management, and security monitoring.
+This document describes the PM2 automation system that automatically detects and fixes common project errors.
 
 ## Overview
 
-The PM2 automation system provides the following functionality that was previously handled by GitHub Actions:
+The PM2 automation system consists of multiple specialized error fixers that run continuously to maintain code quality and prevent errors from accumulating.
 
-- **CI/CD Pipeline**: Automated building, testing, and deployment
-- **Dependency Management**: Automated dependency updates and security audits
-- **Security Monitoring**: Regular security checks and vulnerability scanning
-- **Process Management**: Application monitoring and auto-restart capabilities
+## Architecture
 
-## Prerequisites
+### Core Components
 
-- Node.js 18+ installed
-- PM2 installed globally: `npm install -g pm2`
-- Yarn package manager (the project uses yarn)
+1. **PM2 Ecosystem Config** (`ecosystem.config.cjs`)
+   - Manages all automation processes
+   - Configures restart policies and resource limits
+   - Handles environment-specific configurations
 
-## Installation
+2. **Error Fixer Scripts**
+   - `console-error-fixer.cjs` - Fixes console and logging errors (runs every 15 min)
+   - `typescript-error-fixer.cjs` - Fixes TypeScript type errors (runs every 45 min)
+   - `jsx-error-fixer.cjs` - Fixes JSX syntax errors (runs every 40 min)
+   - `comprehensive-error-fixer.cjs` - Handles multiple error types (runs every 30 min)
+   - `master-error-fixer.cjs` - Coordinates all fixers (runs every hour)
 
-1. Ensure PM2 is installed globally:
+3. **Supporting Scripts**
+   - `start-automation.sh` - Bootstrap script for the entire system
+   - Log rotation and monitoring
 
-   ```bash
-   npm install -g pm2
-   ```
+## Quick Start
 
-2. The automation scripts are located in the `scripts/` directory:
-   - `pm2-automation.js` - Main automation script
-   - `pm2-cron.sh` - Cron job script for scheduled tasks
-
-3. Make scripts executable:
-   ```bash
-   chmod +x scripts/pm2-automation.js scripts/pm2-cron.sh
-   ```
-
-## Configuration
-
-### PM2 Ecosystem Configuration
-
-The `ecosystem.config.js` file contains PM2 configuration for:
-
-- Application startup and monitoring
-- Environment-specific settings
-- Deployment automation
-
-### Automation Scripts
-
-The main automation script (`scripts/pm2-automation.js`) provides the following commands:
-
-#### CI Process
+### 1. Install Dependencies
 
 ```bash
-node scripts/pm2-automation.js ci
+yarn add -D pm2
 ```
 
-- Installs dependencies
-- Runs linting (non-blocking)
-- Runs type checking (non-blocking)
-- Builds the project
-- Runs tests if available (non-blocking)
-
-#### Deployment Process
+### 2. Start the Automation System
 
 ```bash
-node scripts/pm2-automation.js deploy
+chmod +x start-automation.sh
+./start-automation.sh
 ```
 
-- Installs dependencies
-- Builds the project
-- Verifies build output
-- Prepares for deployment
-
-#### Dependency Updates
+### 3. Monitor the System
 
 ```bash
-node scripts/pm2-automation.js deps
-```
+# View all processes
+pm2 status
 
-- Checks for outdated packages
-- Runs security audit
-- Updates dependencies
-- Rebuilds and verifies the project
-- Runs quality checks (non-blocking)
-
-#### Security Checks
-
-```bash
-node scripts/pm2-automation.js security
-```
-
-- Installs dependencies
-- Runs security audit
-- Checks for outdated packages
-
-#### Start Monitoring
-
-```bash
-node scripts/pm2-automation.js deploy
-```
-
-- Starts PM2 monitoring
-- Provides monitoring dashboard access
-
-## Scheduled Automation
-
-The `scripts/pm2-cron.sh` script can be used with cron to automate tasks:
-
-### Cron Configuration
-
-Add the following to your crontab (`crontab -e`):
-
-```bash
-# Run dependency updates every Monday at 2 AM
-0 2 * * 1 /workspace/scripts/pm2-cron.sh
-
-# Run security checks every Monday at 2 AM
-0 2 * * 1 /workspace/scripts/pm2-cron.sh
-
-# Run CI checks daily at 6 AM
-0 6 * * * /workspace/scripts/pm2-cron.sh
-
-# Run deployment checks daily at 8 AM
-0 8 * * * /workspace/scripts/pm2-cron.sh
-```
-
-### Manual Cron Execution
-
-You can also run the cron script manually:
-
-```bash
-bash scripts/pm2-cron.sh
-```
-
-## PM2 Commands
-
-### Basic PM2 Operations
-
-```bash
-# Start the application
-pm2 start ecosystem.config.js
-
-# Monitor applications
+# Monitor in real-time
 pm2 monit
 
 # View logs
 pm2 logs
 
-# View status
+# View specific process logs
+pm2 logs console-error-fixer
+```
+
+## Manual Control
+
+### Start All Automations
+
+```bash
+pm2 start ecosystem.config.cjs
+```
+
+### Stop All Automations
+
+```bash
+pm2 stop all
+```
+
+### Restart All Automations
+
+```bash
+pm2 restart all
+```
+
+### View Process Status
+
+```bash
 pm2 status
-
-# Restart application
-pm2 restart bolt-zion-app
-
-# Stop application
-pm2 stop bolt-zion-app
-
-# Delete application from PM2
-pm2 delete bolt-zion-app
 ```
 
-### PM2 Monitoring
+## Error Fixer Details
 
-```bash
-# Real-time monitoring dashboard
-pm2 monit
+### Console Error Fixer
+- **Frequency**: Every 15 minutes
+- **Purpose**: Detects and fixes console.log, console.error, etc.
+- **Logs**: `logs/console-error-fixer.log`
 
-# View detailed information
-pm2 show bolt-zion-app
+### TypeScript Error Fixer
+- **Frequency**: Every 45 minutes
+- **Purpose**: Fixes TypeScript type errors, import issues, property access
+- **Logs**: `logs/typescript-error-fixer.log`
 
-# View logs for specific app
-pm2 logs bolt-zion-app
+### JSX Error Fixer
+- **Frequency**: Every 40 minutes
+- **Purpose**: Fixes JSX syntax errors, closing tags, expressions
+- **Logs**: `logs/jsx-error-fixer.log`
 
-# View logs with timestamps
-pm2 logs bolt-zion-app --timestamp
-```
+### Comprehensive Error Fixer
+- **Frequency**: Every 30 minutes
+- **Purpose**: Runs multiple checks and applies auto-fixes
+- **Logs**: `logs/comprehensive-error-fixer.log`
 
-## Logs and Monitoring
+### Master Error Fixer
+- **Frequency**: Every hour
+- **Purpose**: Coordinates all fixers, ensures system health
+- **Logs**: `logs/master-error-fixer.log`
 
-### Automation Logs
+## Log Management
 
-All automation tasks log to `pm2-automation.log` in the workspace root.
+### Log Rotation
+- **Max Size**: 10MB per log file
+- **Retention**: 30 log files
+- **Compression**: Enabled
+- **Format**: YYYY-MM-DD_HH-mm-ss
 
-### PM2 Logs
+### Log Locations
+- All logs are stored in the `logs/` directory
+- Each fixer has its own log file
+- Error logs are separated for easier debugging
 
-PM2 logs are stored in `~/.pm2/logs/` and can be viewed with:
+## Configuration
 
-```bash
-pm2 logs
-```
+### Environment Variables
+- `NODE_ENV`: Set to 'production' for production deployments
+- `AUTOMATION_INTERVAL`: Override default intervals (in milliseconds)
 
-### Monitoring Dashboard
-
-Access the PM2 monitoring dashboard:
-
-```bash
-pm2 monit
-```
+### PM2 Settings
+- **Auto-restart**: Enabled for all processes
+- **Memory limits**: 512MB for fixers, 1GB for main apps
+- **Watch mode**: Disabled (processes restart on completion)
 
 ## Troubleshooting
 
 ### Common Issues
 
-1. **PM2 not found**: Ensure PM2 is installed globally
-
+1. **PM2 not found**
    ```bash
    npm install -g pm2
    ```
 
-2. **Permission denied**: Make scripts executable
-
+2. **Permission denied on startup script**
    ```bash
-   chmod +x scripts/pm2-automation.js scripts/pm2-cron.sh
+   chmod +x start-automation.sh
    ```
 
-3. **Yarn issues**: Ensure yarn is properly installed and configured
-
-4. **Build failures**: Check the build logs and ensure all dependencies are installed
-
-### Debugging
-
-1. Check automation logs:
-
+3. **Processes not starting**
    ```bash
-   tail -f pm2-automation.log
+   pm2 kill
+   pm2 start ecosystem.config.cjs
    ```
 
-2. Check PM2 logs:
-
+4. **Log rotation not working**
    ```bash
-   pm2 logs bolt-zion-app
+   pm2 install pm2-logrotate
+   pm2 set pm2-logrotate:max_size 10M
    ```
 
-3. Check PM2 status:
-   ```bash
-   pm2 status
-   ```
+### Debug Mode
 
-## Migration from GitHub Actions
+To run a fixer in debug mode:
 
-This PM2 automation system replaces the following GitHub Actions workflows:
+```bash
+node scripts/automation/console-error-fixer.cjs
+```
 
-- `ci.yml` → `node scripts/pm2-automation.js ci`
-- `deploy.yml` → `node scripts/pm2-automation.js deploy`
-- `dependencies.yml` → `node scripts/pm2-automation.js deps`
-- `security.yml` → `node scripts/pm2-automation.js security`
+## Development
 
-### Benefits of PM2 Automation
+### Adding New Error Fixers
 
-- **Faster execution**: No need to wait for GitHub Actions runners
-- **Local control**: Full control over the automation environment
-- **Cost effective**: No GitHub Actions minutes consumed
-- **Real-time monitoring**: Immediate feedback and monitoring
-- **Customizable**: Easy to modify and extend automation logic
+1. Create a new script in `scripts/automation/`
+2. Follow the existing pattern with a class-based structure
+3. Add the process to `ecosystem.config.cjs`
+4. Update this README
+
+### Testing Fixers
+
+```bash
+# Test individual fixer
+node scripts/automation/typescript-error-fixer.cjs
+
+# Test with PM2
+pm2 start ecosystem.config.cjs --only typescript-error-fixer
+```
+
+## Production Deployment
+
+### Startup Script
+The system automatically sets up PM2 to start on system boot:
+
+```bash
+pm2 startup
+pm2 save
+```
+
+### Monitoring
+- Use `pm2 monit` for real-time monitoring
+- Set up external monitoring for PM2 processes
+- Configure log aggregation for centralized logging
 
 ## Security Considerations
 
-- The automation scripts run with the same permissions as the user executing them
-- Ensure proper access controls on the automation scripts
-- Monitor logs for any suspicious activity
-- Regularly update dependencies to address security vulnerabilities
+- All fixers run with limited permissions
+- No external network access by default
+- Logs contain only error information, no sensitive data
+- Processes restart automatically on failures
 
 ## Support
 
-For issues with the PM2 automation system:
+For issues with the automation system:
+1. Check PM2 status: `pm2 status`
+2. Review logs: `pm2 logs`
+3. Restart processes: `pm2 restart all`
+4. Check system resources: `pm2 monit`
 
-1. Check the logs in `pm2-automation.log`
-2. Review PM2 logs with `pm2 logs`
-3. Verify script permissions and dependencies
-4. Check the troubleshooting section above
+## License
+
+This automation system is part of the Zion Tech Group project.
