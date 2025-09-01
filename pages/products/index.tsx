@@ -1,1 +1,7 @@
-export default function ProductsPage() { return null; }
+export default function Products() {
+  return (
+    <div>
+      <h1 className="text-2xl font-semibold">Products</h1>
+    </div>
+  );
+}

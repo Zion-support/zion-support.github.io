@@ -1,1 +1,3 @@
-export default function ResetPasswordPage() { return null; }
+export default function ResetPassword() {
+  return <div className="text-sm">Reset password</div>;
+}

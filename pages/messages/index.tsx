@@ -1,57 +1,34 @@
-import React from 'react';
-import useSWR from 'swr';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useCurrentUser } from '../../hooks/useCurrentUser';
+import useSWR from 'swr';
 
-const fetcher = (url: string) => fetch(url).then((r) => (r.ok ? r.json() : Promise.reject(r)));
+const fetcher = (url: string) => fetch(url).then((r) => r.json());
 
-export default function InboxPage() {
-  const { user, loading } = useCurrentUser();
-  const router = useRouter();
+export default function MessagesIndex() {
+  const { data, error } = useSWR('/api/conversations', fetcher, { refreshInterval: 10000 });
 
-  React.useEffect(() => {
-    if (!loading && !user) router.replace('/auth');
-  }, [loading, user, router]);
-
-  const { data } = useSWR(user ? '/api/messages/inbox' : null, fetcher, {
-    refreshInterval: 5000,
-  });
-
-  if (!user) return null;
+  if (error) return <div className="text-red-600">Failed to load</div>;
+  const conversations = (data?.conversations as any[]) || [];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-5xl mx-auto p-4">
-        <h1 className="text-2xl font-semibold mb-4">Inbox</h1>
-        <div className="bg-white rounded-xl shadow-sm overflow-hidden">
-          <ul>
-            {data?.items?.length ? (
-              data.items.map((item: any) => (
-                <li key={item.conversation.id} className="border-b last:border-b-0">
-                  <Link href={`/messages/${item.conversation.id}`}>
-                    <a className="flex items-center p-4 hover:bg-gray-50">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 text-white flex items-center justify-center mr-3 shadow">
-                        {item.otherParticipant.name?.[0] || 'U'}
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center justify-between">
-                          <p className="font-medium truncate">{item.otherParticipant.name} <span className="text-xs text-gray-400 ml-2">({item.otherParticipant.role})</span></p>
-                          <span className="text-xs text-gray-400">{new Date(item.conversation.lastMessageAt).toLocaleString()}</span>
-                        </div>
-                        <p className="text-sm text-gray-600 truncate">{item.lastMessage?.body || 'No messages yet'}</p>
-                      </div>
-                      {item.unreadCount > 0 && (
-                        <span className="ml-3 text-xs px-2 py-1 rounded-full bg-indigo-100 text-indigo-700">{item.unreadCount}</span>
-                      )}
-                    </a>
-                  </Link>
-                </li>
-              ))
-            ) : (
-              <li className="p-8 text-center text-gray-500">No conversations yet</li>
-            )}
-          </ul>
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <h1 className="text-2xl font-semibold">Messages</h1>
+      </div>
+      <div className="border rounded p-4 bg-white dark:bg-gray-900">
+        {conversations.length === 0 && <p className="text-sm text-gray-600">No active conversations.</p>}
+        <ul className="divide-y">
+          {conversations.map((c) => (
+            <li key={c.id} className="py-3 flex items-center justify-between">
+              <div>
+                <p className="font-medium text-sm">Conversation {c.id.slice(0, 8)}</p>
+                <p className="text-xs text-gray-500">Messages: {c.messages?.length || 0}</p>
+              </div>
+              <Link href={`/messages/${c.id}`}><a className="text-sm underline">Open</a></Link>
+            </li>
+          ))}
+        </ul>
+        <div className="mt-3">
+          <Link href="/"><a className="text-sm underline">Back to home</a></Link>
         </div>
       </div>
     </div>

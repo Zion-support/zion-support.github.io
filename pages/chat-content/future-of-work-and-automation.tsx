@@ -1,1 +1,3 @@
-export default function ChatContentPage7() { return null; }
+export default function FutureOfWorkAndAutomation() {
+  return <div className="text-sm">Future of work and automation</div>;
+}

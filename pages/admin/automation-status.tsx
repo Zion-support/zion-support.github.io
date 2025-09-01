@@ -1,1 +1,7 @@
-export default function AutomationStatusPage() { return null; }
+export default function AdminAutomationStatus() {
+  return (
+    <div>
+      <h1 className="text-2xl font-semibold">Automation Status</h1>
+    </div>
+  );
+}

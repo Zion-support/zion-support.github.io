@@ -16,6 +16,9 @@ const EnhancedNavigation: React.FC = () => {
           <Link href="/dashboard/talent"><a>Talent</a></Link>
           <Link href="/dashboard/client"><a>Client</a></Link>
           <Link href="/contact"><a>Contact</a></Link>
+          <Link href="/post-job"><a className="font-medium">Post a Job</a></Link>
+          <Link href="/messages"><a>Messages</a></Link>
+          <Link href="/talent"><a>Talent</a></Link>
         </div>
         <div className="md:hidden text-sm opacity-80">Menu</div>
       </div>

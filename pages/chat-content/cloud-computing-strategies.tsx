@@ -1,1 +1,3 @@
-export default function ChatContentPage2() { return null; }
+export default function CloudComputingStrategies() {
+  return <div className="text-sm">Cloud computing strategies</div>;
+}

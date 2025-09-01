@@ -1,1 +1,3 @@
-export default function ChatContentPage3() { return null; }
+export default function CybersecurityBestPractices() {
+  return <div className="text-sm">Cybersecurity best practices</div>;
+}
