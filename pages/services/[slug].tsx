@@ -39,6 +39,10 @@ import { real2028ServiceExpansions } from '../../data/real-2028-service-expansio
 import { real2029Q1Additions } from '../../data/real-2029-q1-additions';
 import { realMarketServices } from '../../data/real-market-services';
 import { real2029Q2Additions } from '../../data/real-2029-q2-additions';
+import { innovativeMicroSaasServicesV3 } from '../../data/innovative-micro-saas-v3';
+import { innovative2026MicroSaasServicesV2 } from '../../data/innovative-2026-micro-saas-v2';
+import { ultimateRealMicroSaasServices2025 } from '../../data/2025-ultimate-real-micro-saas-services';
+import { innovativeRealMicroSaasServices2025 } from '../../data/2025-innovative-real-micro-saas-services';
 import { real2029Q3Additions } from '../../data/real-2029-q3-additions';
 import { ultimateRealMicroSaasServices2025 } from '../../data/2025-ultimate-real-micro-saas-services';
 
@@ -117,7 +121,11 @@ function getAllServices(): Service[] {
 		.concat(realMarketServices as unknown as Service[])
 		.concat(real2029Q2Additions as unknown as Service[])
 		.concat(real2029Q3Additions as unknown as Service[])
-		.concat(ultimateRealMicroSaasServices2025 as unknown as Service[]);
+		// Additional sources to cover more service slugs
+		.concat((innovativeMicroSaasServicesV3 as unknown) as Service[])
+		.concat((innovative2026MicroSaasServicesV2 as unknown) as Service[])
+		.concat((ultimateRealMicroSaasServices2025 as unknown) as Service[])
+		.concat((innovativeRealMicroSaasServices2025 as unknown) as Service[]);
 }
 
 function toSlug(value: string): string {

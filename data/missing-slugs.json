@@ -2,11 +2,11 @@
 
 [
   "ai-autonomous-marketing-platform",
+  "automated-financial-analytics-platform",
+  "entertainment-media-solutions",
   "industry-solutions",
-  "services/ai-knowledge-graph-studio",
-  "services/ai-sales-sequence-personalizer",
-  "services/ai-synthetic-data-studio",
-  "services/data-contracts-hub",
-  "services/llm-guarded-api-gateway",
-  "services/serverless-lakehouse-starter"
+  "intelligent-project-management-suite",
+  "leadership",
+  "real-estate-technology-solutions",
+  "transportation-logistics-solutions"
 ]
