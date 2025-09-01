@@ -64,13 +64,18 @@ export function MainNavigation({ className = '' }) {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/services/ai-business-intelligence" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                      <Link to="/services/ai-business-intelligence-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                         AI Business Intelligence
                       </Link>
                     </li>
                     <li>
                       <Link to="/services/ai-customer-support-automation" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                         AI Customer Support
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-autonomous-devops" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                        AI Autonomous DevOps
                       </Link>
                     </li>
                   </ul>
@@ -93,8 +98,8 @@ export function MainNavigation({ className = '' }) {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/services/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
-                        Cybersecurity
+                      <Link to="/services/ai-cybersecurity-threat-intelligence" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                        AI Cybersecurity Platform
                       </Link>
                     </li>
                     <li>

@@ -99,7 +99,7 @@ export function HomePage() {
         {
           name: 'AI Business Intelligence',
           description: 'Advanced analytics and business intelligence powered by artificial intelligence',
-          href: '/services/ai-business-intelligence',
+          href: '/services/ai-business-intelligence-platform',
           price: '$499/month',
           features: ['Predictive Analytics', 'Data Visualization', 'Real-time Insights', 'Custom Dashboards']
         },
@@ -109,6 +109,13 @@ export function HomePage() {
           href: '/services/ai-customer-support-automation',
           price: '$199/month',
           features: ['24/7 Support', 'Natural Language Processing', 'Ticket Automation', 'Customer Analytics']
+        },
+        {
+          name: 'AI Autonomous DevOps',
+          description: 'AI-powered DevOps automation with intelligent deployment and monitoring',
+          href: '/services/ai-autonomous-devops',
+          price: '$799/month',
+          features: ['Automated Deployments', 'Intelligent Monitoring', 'Self-Healing Infrastructure', 'Predictive Scaling']
         },
         {
           name: 'AI Project Management',
@@ -131,11 +138,11 @@ export function HomePage() {
           features: ['Cloud Migration', 'CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring & Alerting']
         },
         {
-          name: 'Cybersecurity Solutions',
-          description: 'Advanced cybersecurity protection and threat intelligence services',
-          href: '/services/cybersecurity',
-          price: 'Custom Pricing',
-          features: ['Threat Detection', 'Vulnerability Assessment', 'Security Audits', 'Incident Response']
+          name: 'AI Cybersecurity Platform',
+          description: 'AI-powered threat intelligence and automated security response',
+          href: '/services/ai-cybersecurity-threat-intelligence',
+          price: '$599/month',
+          features: ['AI Threat Detection', 'Automated Response', 'Zero-Trust Architecture', 'Real-time Monitoring']
         },
         {
           name: 'Digital Transformation',

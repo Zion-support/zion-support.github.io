@@ -42,6 +42,12 @@ const AIThreatIntelligence = lazy(() => import('./backup-pages/src-pages/service
 const BlockchainSupplyChain = lazy(() => import('./backup-pages/src-pages/services/blockchain-supply-chain-platform').then(module => ({ default: module.BlockchainSupplyChainPlatform })));
 const AdvancedServicesShowcase = lazy(() => import('./backup-pages/src-pages/AdvancedServicesShowcase2028').then(module => ({ default: module.AdvancedServicesShowcase2028 })));
 
+// New AI Services
+const AIAutonomousDevOps = lazy(() => import('./pages/services/ai-autonomous-devops-platform').then(module => ({ default: module.AIAutonomousDevOpsPlatform })));
+const AICybersecurityThreatIntelligence = lazy(() => import('./pages/services/ai-cybersecurity-threat-intelligence').then(module => ({ default: module.AICybersecurityThreatIntelligence })));
+const AIBusinessIntelligencePlatform = lazy(() => import('./pages/services/ai-business-intelligence-platform').then(module => ({ default: module.AIBusinessIntelligencePlatform })));
+const AICustomerSupportAutomation = lazy(() => import('./pages/services/ai-customer-support-automation').then(module => ({ default: module.AICustomerSupportAutomation })));
+
 // Loading component
 const PageLoader = () => (
   <div className="flex items-center justify-center min-h-screen bg-gray-900">
@@ -65,6 +71,10 @@ function App() {
               <Route path="/services/*" element={<ServicesPage />} />
               <Route path="/services/ai-threat-intelligence" element={<AIThreatIntelligence />} />
               <Route path="/services/blockchain-supply-chain" element={<BlockchainSupplyChain />} />
+              <Route path="/services/ai-autonomous-devops" element={<AIAutonomousDevOps />} />
+              <Route path="/services/ai-cybersecurity-threat-intelligence" element={<AICybersecurityThreatIntelligence />} />
+              <Route path="/services/ai-business-intelligence-platform" element={<AIBusinessIntelligencePlatform />} />
+              <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />
               <Route path="/advanced-services-2028" element={<AdvancedServicesShowcase />} />
               <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
               <Route path="/comprehensive-services-2026" element={<ComprehensiveServicesShowcase2026 />} />

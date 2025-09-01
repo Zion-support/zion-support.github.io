@@ -93,6 +93,27 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     >
                       Cloud FinOps Optimizer
                     </Link>
+                    <Link
+                      to="/services/ai-business-intelligence-platform"
+                      onClick={onClose}
+                      className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan transition-colors"
+                    >
+                      AI Business Intelligence
+                    </Link>
+                    <Link
+                      to="/services/ai-customer-support-automation"
+                      onClick={onClose}
+                      className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan transition-colors"
+                    >
+                      AI Customer Support
+                    </Link>
+                    <Link
+                      to="/services/ai-autonomous-devops"
+                      onClick={onClose}
+                      className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan transition-colors"
+                    >
+                      AI Autonomous DevOps
+                    </Link>
                     
                     <h4 className="text-xs font-semibold text-zion-cyan uppercase tracking-wider mt-4">IT Services</h4>
                     <Link
@@ -110,11 +131,11 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                       Cloud & DevOps
                     </Link>
                     <Link
-                      to="/services/cybersecurity"
+                      to="/services/ai-cybersecurity-threat-intelligence"
                       onClick={onClose}
                       className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan transition-colors"
                     >
-                      Cybersecurity
+                      AI Cybersecurity Platform
                     </Link>
                     
                     <h4 className="text-xs font-semibold text-zion-cyan uppercase tracking-wider mt-4">AI Solutions</h4>
