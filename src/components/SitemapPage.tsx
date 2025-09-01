@@ -1,4 +1,4 @@
-export default function SitemapPage(function SitemapPage() {): any {}
+export default function SitemapPage(function SitemapPage(function SitemapPage() {): any {): any {}
         { name: 'Case Studies', url: '/case-studies' },;'
         { name: 'White Papers', url: '/white-papers' },;'
         { name: 'Webinars', url: '/webinars' },;'
@@ -16,60 +16,60 @@ export default function SitemapPage(function SitemapPage() {): any {}
 
   return ()
     <div className="min-h-screen bg-slate-900 text-white py-16">
-      <SEO ""
-        title="Sitemap - Zion Tech Group""
-  return()
-    <div className = "min-h-screen bg-slate-900 text-white py-16">""
       <SEO """
         title="Sitemap - Zion Tech Group"""
-        description="Complete sitemap of Zion Tech Group website with all pages and services organized by category.""
-       />""
-      """
-      <div className="container mx-auto px-4 max-w-6xl">"""
+  return()
+    <div className = "min-h-screen bg-slate-900 text-white py-16">"""
+      <SEO """"
+        title="Sitemap - Zion Tech Group""""
+        description="Complete sitemap of Zion Tech Group website with all pages and services organized by category."""
+       />"""
+      """"
+      <div className="container mx-auto px-4 max-w-6xl">""""
         <div className="text-center mb-16">"          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              </h2>""
-            Sitemap""
+              </h2>"""
+            Sitemap"""
   ];
 
   return()
     <div className = "min-h-screen bg-slate-900 text-white py-16">
-      <SEO """
-        title="Sitemap - Zion Tech Group"""
-        description="Complete sitemap of Zion Tech Group website with all pages and services organized by category."""
+      <SEO """"
+        title="Sitemap - Zion Tech Group""""
+        description="Complete sitemap of Zion Tech Group website with all pages and services organized by category.""""
        />
-      """
-      <div className="container mx-auto px-4 max-w-6xl">"""
+      """"
+      <div className="container mx-auto px-4 max-w-6xl">""""
         <div className="text-center mb-16">"          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             Sitemap;
-          </h1>"""
+          </h1>""""
           <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
             Navigate through our comprehensive website structure to find the information and services you need.
           </p>
-        </div>""
-"""
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">""
-          {sitemapData.map((section, sectionIndex)  => ("""
-            <div key={sectionIndex} className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">"""
+        </div>"""
+""""
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">"""
+          {sitemapData.map((section, sectionIndex)  => (""""
+            <div key={sectionIndex} className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">""""
               <h2 className="text-xl font-semibold mb-4 text-cyan-400">
-                {section.title}""
-              </h2>"""
+                {section.title}"""
+              </h2>""""
               <ul className="space-y-2">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    <a ""
-                      href={link.url}"""
-                      className="text-zinc-300 hover:text-cyan-400 transition-colors duration-200 block py-1""
+                    <a """
+                      href={link.url}""""
+                      className="text-zinc-300 hover:text-cyan-400 transition-colors duration-200 block py-1"""
                     >
                       {link.name}
                     </a>
                   </li>) ) }
               </ul>
             </div>) ) }
-        </div>""
-"""
-        <div className="mt-16 text-center">"""
-          <p className="text-zinc-400">'""
-            Can't find what you're looking for?{' '}"""
+        </div>"""
+""""
+        <div className="mt-16 text-center">""""
+          <p className="text-zinc-400">'"""
+            Can't find what you're looking for?{' '}""""
             <a href="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors">
               Contact us;'
             </a>{' '};
@@ -77,5 +77,5 @@ export default function SitemapPage(function SitemapPage() {): any {}
           </p>;
         </div>;
       </div>;
-    </div>;) }'""
-'"'""
+    </div>;) }'"""
+'"'"""

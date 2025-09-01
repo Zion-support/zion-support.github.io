@@ -46,9 +46,11 @@ export interface PricingTier2031 {}
     services: []
       {}
 '
-        id: 'ai-autonomous-code-reviewer','
-        name: 'AI Autonomous Code Reviewer','
-        description:''
+''
+'''
+        id: 'ai-autonomous-code-reviewer','''
+        name: 'AI Autonomous Code Reviewer','''
+        description:''''
           'Intelligent code analysis that automatically reviews, suggests improvements, and maintains code quality standards.',
         pricingTiers: []
           {}
@@ -71,9 +73,11 @@ export interface PricingTier2031 {}
             addOns: []
               {}
 '
-                name: 'Advanced Security Scanning',
-                price: 99,'
-                description:''
+''
+'''
+                name: 'Advanced Security Scanning',''
+                price: 99,'''
+                description:''''
                   'Enhanced security vulnerability detection and remediation'},
               {}
 '
@@ -104,8 +108,10 @@ export interface PricingTier2031 {}
             addOns: []
               {}
 '
-                name: 'Enterprise Integrations',
-                price: 199,'
+''
+'''
+                name: 'Enterprise Integrations',''
+                price: 199,'''
                 description: 'Advanced integrations with enterprise tools'},
               {}
 '
@@ -136,8 +142,10 @@ export interface PricingTier2031 {}
             addOns: []
               {}
 '
-                name: 'White-label Solution',
-                price: 499,'
+''
+'''
+                name: 'White-label Solution',''
+                price: 499,'''
                 description: 'Custom branding and white-labeling'},
               {}
 '
@@ -167,14 +175,18 @@ export interface PricingTier2031 {}
         ],
         contactInfo: {}
 '
-          phone: '+1 302 464 0950','
-          email: 'kleber@ziontechgroup.com','
+''
+'''
+          phone: '+1 302 464 0950','''
+          email: 'kleber@ziontechgroup.com','''
           website: 'https://ziontechgroup.com'}},
       {}
 '
-        id: 'ai-quantum-financial-trading','
-        name: 'AI Quantum Financial Trading Platform','
-        description:''
+''
+'''
+        id: 'ai-quantum-financial-trading','''
+        name: 'AI Quantum Financial Trading Platform','''
+        description:''''
           'Next-generation trading platform combining quantum computing algorithms with AI for optimal portfolio management.',
         pricingTiers: []
           {}
@@ -198,8 +210,10 @@ export interface PricingTier2031 {}
             addOns: []
               {}
 '
-                name: 'Advanced Backtesting',
-                price: 499,'
+''
+'''
+                name: 'Advanced Backtesting',''
+                price: 499,'''
                 description: 'Comprehensive backtesting and simulation tools'},
               {}
 '
@@ -230,8 +244,10 @@ export interface PricingTier2031 {}
             addOns: []
               {}
 '
-                name: 'White-label Solution',
-                price: 1999,'
+''
+'''
+                name: 'White-label Solution',''
+                price: 1999,'''
                 description: 'Custom branding and white-labeling'},
               {}
 '
@@ -269,17 +285,21 @@ export interface PricingTier2031 {}
     ]},
   {}
 '
-    id: 'it-infrastructure-services','
-    name: 'IT Infrastructure & Cloud Services','
-    description:''
-      'Enterprise-grade infrastructure solutions for modern, scalable, and secure operations with project-based pricing.','
+''
+'''
+    id: 'it-infrastructure-services','''
+    name: 'IT Infrastructure & Cloud Services','''
+    description:''''
+      'Enterprise-grade infrastructure solutions for modern, scalable, and secure operations with project-based pricing.','''
     icon: '☁️',
     services: []
       {}
 '
-        id: 'cloud-native-transformation','
-        name: 'Cloud-Native Transformation & Migration','
-        description:''
+''
+'''
+        id: 'cloud-native-transformation','''
+        name: 'Cloud-Native Transformation & Migration','''
+        description:''''
           'End-to-end cloud transformation services that modernize legacy applications and infrastructure.',
         pricingTiers: []
           {}
@@ -301,8 +321,10 @@ export interface PricingTier2031 {}
             addOns: []
               {}
 '
-                name: 'Advanced Monitoring',
-                price: 5000,'
+''
+'''
+                name: 'Advanced Monitoring',''
+                price: 5000,'''
                 description: 'Comprehensive monitoring and alerting setup'},
               {}
 '
@@ -334,8 +356,10 @@ export interface PricingTier2031 {}
             addOns: []
               {}
 '
-                name: 'Custom Development',
-                price: 25000,'
+''
+'''
+                name: 'Custom Development',''
+                price: 25000,'''
                 description: 'Custom application development and integration'},
               {}
 '
@@ -365,14 +389,18 @@ export interface PricingTier2031 {}
         ],
         contactInfo: {}
 '
-          phone: '+1 302 464 0950','
-          email: 'kleber@ziontechgroup.com','
+''
+'''
+          phone: '+1 302 464 0950','''
+          email: 'kleber@ziontechgroup.com','''
           website: 'https://ziontechgroup.com'}},
       {}
 '
-        id: 'zero-trust-security','
-        name: 'Zero Trust Security Implementation','
-        description:''
+''
+'''
+        id: 'zero-trust-security','''
+        name: 'Zero Trust Security Implementation','''
+        description:''''
           'Comprehensive zero trust security implementation with continuous verification and least-privilege access.',
         pricingTiers: []
           {}
@@ -396,8 +424,10 @@ export interface PricingTier2031 {}
             addOns: []
               {}
 '
-                name: 'Advanced Monitoring',
-                price: 10000,'
+''
+'''
+                name: 'Advanced Monitoring',''
+                price: 10000,'''
                 description: 'Comprehensive security monitoring and alerting'},
               {}
 '
@@ -429,8 +459,10 @@ export interface PricingTier2031 {}
             addOns: []
               {}
 '
-                name: 'Custom Development',
-                price: 50000,'
+''
+'''
+                name: 'Custom Development',''
+                price: 50000,'''
                 description: 'Custom security tools and integrations'},
               {}
 '
@@ -466,17 +498,21 @@ export interface PricingTier2031 {}
     ]},
   {}
 '
-    id: 'specialized-ai-services','
-    name: 'Specialized AI Solutions','
-    description:''
-      'Cutting-edge AI solutions for specific industries and use cases with flexible pricing models.','
+''
+'''
+    id: 'specialized-ai-services','''
+    name: 'Specialized AI Solutions','''
+    description:''''
+      'Cutting-edge AI solutions for specific industries and use cases with flexible pricing models.','''
     icon: '🤖',
     services: []
       {}
 '
-        id: 'ai-strategy-consulting','
-        name: 'AI Strategy & Digital Transformation Consulting','
-        description:''
+''
+'''
+        id: 'ai-strategy-consulting','''
+        name: 'AI Strategy & Digital Transformation Consulting','''
+        description:''''
           'Comprehensive AI strategy consulting for digital transformation initiatives.',
         pricingTiers: []
           {}
@@ -500,8 +536,10 @@ export interface PricingTier2031 {}
             addOns: []
               {}
 '
-                name: 'Change Management',
-                price: 10000,'
+''
+'''
+                name: 'Change Management',''
+                price: 10000,'''
                 description: 'Change management strategy and implementation'},
               {}
 '
@@ -532,8 +570,10 @@ export interface PricingTier2031 {}
             addOns: []
               {}
 '
-                name: 'Custom AI Development',
-                price: 25000,'
+''
+'''
+                name: 'Custom AI Development',''
+                price: 25000,'''
                 description: 'Custom AI solution development'},
               {}
 '

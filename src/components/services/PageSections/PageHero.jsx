@@ -4,10 +4,10 @@ import { ArrowRight, Star, Users, Clock, Shield export const PageHero = ({}
   subtitle,
   description,
   features = [],
-  ctaText = "Get Started","""
+  ctaText = "Get Started",""""
   ctaLink = "#contact",
   backgroundImage = null,
   stats = []
 }) => {}
-  )};'""
-'"'""
+  )};'"""
+'"'"""

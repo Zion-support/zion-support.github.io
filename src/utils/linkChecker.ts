@@ -58,8 +58,8 @@ export class LinkChecker {}
           page: pagePath,'
           anchor: url.startsWith('#') ? url : undefined})}
     }
-'""
-    // Extract src attributes from img, script, and link tags'""
+'"""
+    // Extract src attributes from img, script, and link tags'"""
     while ((match = srcRegex.exec(pageContent)) !== null) {}
 '
       if (url && !url.startsWith('data:') && !url.startsWith('blob:')) {}
@@ -93,10 +93,14 @@ export class LinkChecker {}
 '
           link.status = 'working'} else {}
 '
+''
+'''
 '          link.status = 'missing';
           this.missingPages.push(link.url)}
       } else {}
 '
+''
+'''
         link.status = 'external'}
       checkedLinks.push(link)}
 
@@ -109,6 +113,8 @@ export class LinkChecker {}
   // Extract page title;
   private extractPageTitle(content: string): string {}
 '
+''
+'''
     return titleMatch ? titleMatch[1].trim() : 'Untitled'}
   // Get analysis summary;
   getSummary() {}

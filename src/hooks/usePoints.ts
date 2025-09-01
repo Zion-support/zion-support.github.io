@@ -1,9 +1,9 @@
-import { useEffect, useState, useCallback } from 'react'; // Added useCallback'
-import { supabase } from '@/integrations/supabase/client';'
-import { useAuth } from '@/hooks/useAuth';'
+import { useEffect, useState, useCallback } from 'react'; // Added useCallback'''
+import { supabase } from '@/integrations/supabase/client';'''
+import { useAuth } from '@/hooks/useAuth';'''
 import type { PointsLedgerEntry } from '@/types/points';
 
-export function usePoints(function usePoints(function usePoints() {): any {): any {}
+export function usePoints(function usePoints(function usePoints(function usePoints() {): any {): any {): any {}
   const { user } = useAuth();
   const [ledger, setLedger] = useState<PointsLedgerEntry[]>([]);
   const [balance, setBalance] = useState(0);
@@ -16,12 +16,12 @@ export function usePoints(function usePoints(function usePoints() {): any {): an
       setLoading(false);
       return;
     }
-
-    setLoading(true);
-    const { data, error } = await supabase'
-      .from('points_ledger')'
-      .select('*')'
-      .eq('user_id', user.id)'
+'
+    setLoading(true);''
+    const { data, error } = await supabase'''
+      .from('points_ledger')'''
+      .select('*')'''
+      .eq('user_id', user.id)'''
       .order('created_at', { ascending: false });
 
     if (!error && data) {}
@@ -43,4 +43,4 @@ export function usePoints(function usePoints(function usePoints() {): any {): an
   }, [fetchLedger]); // Added fetchLedger to dependency array;
   return { ledger, balance, loading, fetchLedger };
 }
-'""
+'"""

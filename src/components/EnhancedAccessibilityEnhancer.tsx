@@ -40,14 +40,18 @@ interface AccessibilitySettings {}
 '
         document.documentElement.classList.add('high-contrast')} else {}
 '
+''
+'''
         document.documentElement.classList.remove('high-contrast')}
 
-export default function Page(function Page() {): any {}
+export default function Page(function Page(function Page() {): any {): any {}
       // Apply large text;
       if (updatedSettings.largeText) {}
 '
         document.documentElement.classList.add('large-text')} else {}
 '
+''
+'''
         document.documentElement.classList.remove('large-text')}
 
       // Apply reduced motion;
@@ -61,10 +65,12 @@ export default function Page(function Page() {): any {}
     if (newSettings.colorBlindness !== 'none') {}
       root.classList.add(`color-blind-${newSettings.colorBlindness}`)} else {}
 '
-      root.classList.remove('color-blind-protanopia',color-blind-deuteranopia',color-blind-tritanopia')}
-
-      // Store settings in localStorage'
-      localStorage.setItem(''
+''
+'''
+      root.classList.remove('color-blind-protanopia',color-blind-deuteranopia',color-blind-tritanopia')}'
+''
+      // Store settings in localStorage'''
+      localStorage.setItem(''''
         'accessibility-settings',
         JSON.stringify(updatedSettings)
       )},
@@ -106,8 +112,6 @@ export default function Page(function Page() {): any {}
           event.preventDefault();
 
           (focusableElements[prevIndex] as HTMLElement)?.focus();
-          break;
-            currentIndex <= 0 ? focusableElements.length-1 : currentIndex - 1;          (focusableElements[prevIndex] as HTMLElement)?.focus();
           break;'
             currentIndex <= 0 ? focusableElements.length - 1 : currentIndex - 1;          (focusableElements[prevIndex] as HTMLElement)?.focus();'
           break;''
@@ -120,10 +124,10 @@ export default function Page(function Page() {): any {}
           (
             focusableElements[focusableElements.length-1] as HTMLElement;
           )?.focus();
-          break}
-    };
-'
-    document.addEventListener('keydown', handleKeyDown);'
+          break}'
+    };''
+'''
+    document.addEventListener('keydown', handleKeyDown);'''
     return () => document.removeEventListener('keydown', handleKeyDown)}, [settings.keyboardNavigation]);
 
   // Enhanced focus management;
@@ -133,22 +137,28 @@ export default function Page(function Page() {): any {}
 
       if (settings.focusIndicator) {}
 '
-        target.style.outline = '3px solid #3b82f6';'
+''
+'''
+        target.style.outline = '3px solid #3b82f6';'''
         target.style.outlineOffset = '2px'}
     };
 
       if (settings.focusIndicator) {}
 '
-        target.style.outline = '';'
-        target.style.outlineOffset = '';
-      }    };'
 ''
-    document.addEventListener('focusin', handleFocusChange);''
+'''
+        target.style.outline = '';'''
+        target.style.outlineOffset = '';''
+      }    };'''
+''''
+    document.addEventListener('focusin', handleFocusChange);''''
     document.addEventListener('focusout', handleFocusOut);
 
     return () => {}
 '
-      document.removeEventListener('focusin', handleFocusChange);'
+''
+'''
+      document.removeEventListener('focusin', handleFocusChange);'''
       document.removeEventListener('focusout', handleFocusOut)}}, [settings.focusIndicator]) ;
 
   // Screen reader announcements;
@@ -175,7 +185,9 @@ export default function Page(function Page() {): any {}
             : 'High contrast mode disabled''
         )} else if (key === 'largeText') {}
 '
-        announceToScreenReader(''
+''
+'''
+        announceToScreenReader(''''
           newValue ? 'Large text mode enabled' : 'Large text mode disabled'
         )}
     },
@@ -194,48 +206,48 @@ export default function Page(function Page() {): any {}
       {/* Accessibility Toggle Button */}
       <motion.button;
         onClick={() => setIsVisible(!isVisible)}
-        className="fixed bottom-6 left-6 z-50 p-3 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"""
+        className="fixed bottom-6 left-6 z-50 p-3 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group""""
         whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}""
-        onClick={() => setIsVisible(!isVisible)}"""
-        className="fixed top-4 right-4 z-50 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"""
-        aria-label="Toggle accessibility options"""
-        title="Accessibility Options"""
-      >"""
+        whileTap={{ scale: 0.9 }}"""
+        onClick={() => setIsVisible(!isVisible)}""""
+        className="fixed top-4 right-4 z-50 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2""""
+        aria-label="Toggle accessibility options""""
+        title="Accessibility Options""""
+      >""""
         <Accessibility className="w-5 h-5"  />      </motion.button>
 
       {/* Accessibility Panel */}
       <AnimatePresence>
         {isVisible && (<motion.div;
             initial={{ opacity: 0, x: 300 }}
-            animate={{ opacity: 1, x: 0 }}""
-            exit={{ opacity: 0, x: 300 }}"""
-            className="fixed top-4 right-20 z-50 w-80 bg-white dark:bg-slate-800 rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 overflow-hidden""
-          >""
-            {/* Header */}"""
-            <div className="flex items-center justify-between p-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"""
-              <div className="flex items-center space-x-2">"""
+            animate={{ opacity: 1, x: 0 }}"""
+            exit={{ opacity: 0, x: 300 }}""""
+            className="fixed top-4 right-20 z-50 w-80 bg-white dark:bg-slate-800 rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 overflow-hidden"""
+          >"""
+            {/* Header */}""""
+            <div className="flex items-center justify-between p-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white">""""
+              <div className="flex items-center space-x-2">""""
                 <Accessibility className="w-5 h-5"  />"                <h3 className="font-semibold">Accessibility</h3>
               </div>
-              <button""
-                onClick={() => setIsVisible(false)}"""
-                className="p-1 hover:bg-white/20 rounded transition-colors"""
-                aria-label="Close accessibility panel"""
-              >"""
+              <button"""
+                onClick={() => setIsVisible(false)}""""
+                className="p-1 hover:bg-white/20 rounded transition-colors""""
+                aria-label="Close accessibility panel""""
+              >""""
                 <EyeOff className="w-4 h-4"  />              </button>
             </div>
-""
-            {/* Content */}"""
-            <div className="p-4 space-y-4 max-h-96 overflow-y-auto">""
-              {/* Visual Enhancements */}"""
-              <div className="space-y-3">"""
+"""
+            {/* Content */}""""
+            <div className="p-4 space-y-4 max-h-96 overflow-y-auto">"""
+              {/* Visual Enhancements */}""""
+              <div className="space-y-3">""""
                 <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
                   Visual Enhancements;
-                </h4>""
-"""
-                <div className="flex items-center justify-between">"""
-                  <div className="flex items-center space-x-2">"""
-                    <Contrast className="w-4 h-4 text-slate-600 dark:text-slate-400"  />"""
+                </h4>"""
+""""
+                <div className="flex items-center justify-between">""""
+                  <div className="flex items-center space-x-2">""""
+                    <Contrast className="w-4 h-4 text-slate-600 dark:text-slate-400"  />""""
                     <span className="text-sm text-slate-700 dark:text-slate-300">
                       High Contrast;
                     </span>                  </div>'
@@ -250,17 +262,75 @@ export default function Page(function Page() {): any {}
                     <span``
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${}
 '
-                        settings.highContrast''
-                          ? 'translate-x-6'''`
-                          : 'translate-x-1'``
+''
+'''`
+                        settings.highContrast'''`'`
+                          ? 'translate-x-6'''`'`'`
+                          : 'translate-x-1'````
+                      }`}
+                    />""
+                  </button>"""
+                </div>""""
+"""""
+                <div className="flex items-center justify-between">"""""
+                  <div className="flex items-center space-x-2">"""""
+                    <Type className="w-4 h-4 text-slate-600 dark:text-slate-400"  />"""""
+                    <span className="text-sm text-slate-700 dark:text-slate-300">'
+                      Large Text''`
+                    </span>                  </div>''`'`
+                  <button''`'`'`
+                    onClick={() => toggleSetting('largeText')}````
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${}
+'`
+'`'`
+'`'`'`
+                      settings.largeText ? 'bg-blue-600' : 'bg-slate-300'`'`'`'`
+                    }`}'`'`'`'`
+                    aria-label={`${settings.largeText ? 'Disable' : 'Enable'} large text mode`}``
+                  >```
+                    <span````
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${}
+'`
+'`'`
+'`'`'`
+                        settings.largeText ? 'translate-x-6' : 'translate-x-1'````
+                      }`}
+                    />""
+                  </button>"""
+                </div>""""
+"""""
+                <div className="flex items-center justify-between">"""""
+                  <div className="flex items-center space-x-2">"""""
+                    <Eye className="w-4 h-4 text-slate-600 dark:text-slate-400"  />"""""
+                    <span className="text-sm text-slate-700 dark:text-slate-300">'
+                      Focus Indicator''`
+                    </span>                  </div>''`'`
+                  <button''`'`'`
+                    onClick={() => toggleSetting('focusIndicator')}````
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${}
+'`
+'`'`
+'`'`'`
+                      settings.focusIndicator ? 'bg-blue-600' : 'bg-slate-300'`'`'`'`
+                    }`}'`'`'`'`
+                    aria-label={`${settings.focusIndicator ? 'Disable' : 'Enable'} focus indicator`}``
+                  >```
+                    <span````
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${}
+'
+''
+'''`
+                        settings.focusIndicator'''`'`
+                          ? 'translate-x-6'''`'`'`
+                          : 'translate-x-1'````
                       }`}
                     />
                   </button>
-                </div>""
-"""
-                <div className="flex items-center justify-between">"""
-                  <div className="flex items-center space-x-2">"""
-                    <Type className="w-4 h-4 text-slate-600 dark:text-slate-400"  />"""
+                </div>"""
+""""
+                <div className="flex items-center justify-between">""""
+                  <div className="flex items-center space-x-2">""""
+                    <Type className="w-4 h-4 text-slate-600 dark:text-slate-400"  />""""
                     <span className="text-sm text-slate-700 dark:text-slate-300">
                       Large Text;
                     </span>                  </div>'
@@ -279,11 +349,11 @@ export default function Page(function Page() {): any {}
                       }`}
                     />
                   </button>
-                </div>""
-"""
-                <div className="flex items-center justify-between">"""
-                  <div className="flex items-center space-x-2">"""
-                    <Eye className="w-4 h-4 text-slate-600 dark:text-slate-400"  />"""
+                </div>"""
+""""
+                <div className="flex items-center justify-between">""""
+                  <div className="flex items-center space-x-2">""""
+                    <Eye className="w-4 h-4 text-slate-600 dark:text-slate-400"  />""""
                     <span className="text-sm text-slate-700 dark:text-slate-300">
                       Focus Indicator;
                     </span>                  </div>'
@@ -306,16 +376,16 @@ export default function Page(function Page() {): any {}
                   </button>
                 </div>
               </div>
-""
-              {/* Navigation Options */}"""
-              <div className="space-y-3">"""
+"""
+              {/* Navigation Options */}""""
+              <div className="space-y-3">""""
                 <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
                   Navigation;
-                </h4>""
-"""
-                <div className="flex items-center justify-between">"""
-                  <div className="flex items-center space-x-2">"""
-                    <Keyboard className="w-4 h-4 text-slate-600 dark:text-slate-400"  />"""
+                </h4>"""
+""""
+                <div className="flex items-center justify-between">""""
+                  <div className="flex items-center space-x-2">""""
+                    <Keyboard className="w-4 h-4 text-slate-600 dark:text-slate-400"  />""""
                     <span className="text-sm text-slate-700 dark:text-slate-300">
                       Keyboard Navigation;
                     </span>                  </div>'
@@ -338,11 +408,11 @@ export default function Page(function Page() {): any {}
                       }`}
                     />
                   </button>
-                </div>""
-"""
-                <div className="flex items-center justify-between">"""
-                  <div className="flex items-center space-x-2">"""
-                    <MousePointer className="w-4 h-4 text-slate-600 dark:text-slate-400"  />"""
+                </div>"""
+""""
+                <div className="flex items-center justify-between">""""
+                  <div className="flex items-center space-x-2">""""
+                    <MousePointer className="w-4 h-4 text-slate-600 dark:text-slate-400"  />""""
                     <span className="text-sm text-slate-700 dark:text-slate-300">
                       Reduced Motion;
                     </span>                  </div>'
@@ -365,51 +435,51 @@ export default function Page(function Page() {): any {}
                   </button>
                 </div>
                 <button;
-                  onClick={() => applySettings({ ...settings, zoomLevel: 100 })}""
-                  className="flex items-center space-x-2 text-zion-purple/60 hover:text-zion-purple text-xs transition-colors""
-                >""
+                  onClick={() => applySettings({ ...settings, zoomLevel: 100 })}"""
+                  className="flex items-center space-x-2 text-zion-purple/60 hover:text-zion-purple text-xs transition-colors"""
+                >"""
                   <RotateCcw className="w-3 h-3"  />
                   <span>Reset to 100%</span>
                 </button>
               </div>
-""
-              {/* Zoom Controls */}"""
-              <div className="space-y-3">"""
+"""
+              {/* Zoom Controls */}""""
+              <div className="space-y-3">""""
                 <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
                   Zoom Controls;
-                </h4>""
-"""
-                <div className="flex items-center justify-between">"""
+                </h4>"""
+""""
+                <div className="flex items-center justify-between">""""
                   <span className="text-sm text-slate-700 dark:text-slate-300">
-                    {settings.zoomLevel}%""
-                  </span>"""
+                    {settings.zoomLevel}%"""
+                  </span>""""
                   <div className="flex items-center space-x-2">'
-                    <button''""
-                      onClick={() => adjustZoom('out')}"""
-                      className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"""
-                      aria-label="Zoom out"""
-                    >"""
+                    <button''"""
+                      onClick={() => adjustZoom('out')}""""
+                      className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors""""
+                      aria-label="Zoom out""""
+                    >""""
                       <ZoomOut className="w-4 h-4"  />                    </button>'
-                    <button''""
-                      onClick={() => adjustZoom('in')}"""
-                      className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"""
-                      aria-label="Zoom in"""
-                    >"""
+                    <button''"""
+                      onClick={() => adjustZoom('in')}""""
+                      className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors""""
+                      aria-label="Zoom in""""
+                    >""""
                       <ZoomIn className="w-4 h-4"  />                    </button>
                   </div>
                 </div>
 
-                {accessibilityIssues.length > 0 && (""
-                  <div className="space-y-2">""
-                    <h5 className="text-zion-purple/80 text-xs font-medium">Issues Found:</h5>""
+                {accessibilityIssues.length > 0 && ("""
+                  <div className="space-y-2">"""
+                    <h5 className="text-zion-purple/80 text-xs font-medium">Issues Found:</h5>"""
                     <div className="space-y-1">
-                      {accessibilityIssues.slice(0, 3).map((issue, index) => (""
-                        <div key={index} className="text-white/80 text-xs bg-zion-slate/30 p-2 rounded-lg flex items-start space-x-2">""
+                      {accessibilityIssues.slice(0, 3).map((issue, index) => ("""
+                        <div key={index} className="text-white/80 text-xs bg-zion-slate/30 p-2 rounded-lg flex items-start space-x-2">"""
                           <AlertTriangle className="w-3 h-3 text-yellow-500 mt-0.5 flex-shrink-0"  />
                           <span>{issue}</span>
                         </div>
                       ))}
-                      {accessibilityIssues.length > 3 && (""
+                      {accessibilityIssues.length > 3 && ("""
                         <div className="text-white/60 text-xs text-center">
                           +{accessibilityIssues.length-3} more issues;
                         </div>
@@ -419,22 +489,22 @@ export default function Page(function Page() {): any {}
                 )}
 
                 <button;
-                  onClick={runAccessibilityAudit}""
-                  className="w-full bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple text-sm py-2 rounded-lg transition-colors""
+                  onClick={runAccessibilityAudit}"""
+                  className="w-full bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple text-sm py-2 rounded-lg transition-colors"""
                 >
                   Run Accessibility Audit;
                 </button>
               </div>
-""
-              {/* Screen Reader Support */}"""
-              <div className="space-y-3">"""
+"""
+              {/* Screen Reader Support */}""""
+              <div className="space-y-3">""""
                 <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
                   Screen Reader;
-                </h4>""
-"""
-                <div className="flex items-center justify-between">"""
-                  <div className="flex items-center space-x-2">"""
-                    <Volume2 className="w-4 h-4 text-slate-600 dark:text-slate-400" />"""
+                </h4>"""
+""""
+                <div className="flex items-center justify-between">""""
+                  <div className="flex items-center space-x-2">""""
+                    <Volume2 className="w-4 h-4 text-slate-600 dark:text-slate-400" />""""
                     <span className="text-sm text-slate-700 dark:text-slate-300">
                       Enhanced Support;
                     </span>
@@ -450,9 +520,11 @@ export default function Page(function Page() {): any {}
                     <span``
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${}
 '
-                        settings.screenReader''
-                          ? 'translate-x-6'''`
-                          : 'translate-x-1'``
+''
+'''`
+                        settings.screenReader'''`'`
+                          ? 'translate-x-6'''`'`'`
+                          : 'translate-x-1'````
                       }`}
                     />
                   </button>
@@ -460,12 +532,12 @@ export default function Page(function Page() {): any {}
               </div>
             </div>
 
-              {/* Current Focus Indicator */}""
-              {currentFocus && settings.focusIndicator && ("""
-                <div className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">"""
+              {/* Current Focus Indicator */}"""
+              {currentFocus && settings.focusIndicator && (""""
+                <div className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">""""
                   <h4 className="text-sm font-semibold text-blue-700 dark:text-blue-300 mb-2">
-                    Current Focus""
-                  </h4>"""
+                    Current Focus"""
+                  </h4>""""
                   <p className="text-xs text-blue-600 dark:text-blue-400">'
                     {currentFocus.tagName.toLowerCase()}:{' '}'
                     {currentFocus.textContent?.substring(0, 50) ||''
@@ -474,10 +546,10 @@ export default function Page(function Page() {): any {}
                 </div>) }
             </div>
           </motion.div>
-        )}
-      </AnimatePresence>
-`
-      {/* Screen Reader Only Styles */}``
+        )}`
+      </AnimatePresence>``
+```
+      {/* Screen Reader Only Styles */}````
       <style jsx>{`
         .sr-only {}
           position: absolute;

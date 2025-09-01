@@ -11,6 +11,8 @@ export default function Page() {}
     if(!isLoaded) {}
 `
 ``
+```
+````
         return (<div className={`min-h-[200px] ${className}`}>
         <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize}/>
       </div>) ;

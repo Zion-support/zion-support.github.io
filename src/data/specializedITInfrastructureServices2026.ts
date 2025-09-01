@@ -61,8 +61,10 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
       innovationLevel: 'Advanced',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -114,8 +116,10 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
       innovationLevel: 'Advanced',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -165,8 +169,10 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
       innovationLevel: 'Advanced',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -216,8 +222,10 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
       innovationLevel: 'Advanced',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -269,8 +277,10 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
       innovationLevel: 'Advanced',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -324,8 +334,10 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
       innovationLevel: 'Advanced',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -377,8 +389,10 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
       innovationLevel: 'Revolutionary',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -430,8 +444,10 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
       innovationLevel: 'Advanced',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -483,8 +499,10 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
       innovationLevel: 'Standard',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '

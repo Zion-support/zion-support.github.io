@@ -7,7 +7,9 @@
       // // // // // // // // console.log(`Added ${itemType} ${itemId} to favorites`)}``
       // console.log(`Removed ${itemType} ${itemId} from favorites`)} else {}
 `
-      // Add to favorites``
+``
+```
+      // Add to favorites````
       // console.log(`Added ${itemType} ${itemId} to favorites`)}  };
 
   return()

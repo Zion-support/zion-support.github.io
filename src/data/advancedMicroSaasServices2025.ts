@@ -59,8 +59,10 @@ export interface AdvancedMicroSaasService {}
     innovationLevel: 'Advanced',
     contactInfo: {}
 '
-      phone: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
+''
+'''
+      phone: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
       website: 'https://ziontechgroup.com'},
     technicalSpecs: {}
 '
@@ -110,8 +112,10 @@ export interface AdvancedMicroSaasService {}
     innovationLevel: 'Advanced',
     contactInfo: {}
 '
-      phone: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
+''
+'''
+      phone: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
       website: 'https://ziontechgroup.com'},
     technicalSpecs: {}
 '
@@ -163,8 +167,10 @@ export interface AdvancedMicroSaasService {}
     innovationLevel: 'Advanced',
     contactInfo: {}
 '
-      phone: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
+''
+'''
+      phone: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
       website: 'https://ziontechgroup.com'},
     technicalSpecs: {}
 '
@@ -214,8 +220,10 @@ export interface AdvancedMicroSaasService {}
     innovationLevel: 'Advanced',
     contactInfo: {}
 '
-      phone: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
+''
+'''
+      phone: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
       website: 'https://ziontechgroup.com'},
     technicalSpecs: {}
 '
@@ -267,8 +275,10 @@ export interface AdvancedMicroSaasService {}
     innovationLevel: 'Advanced',
     contactInfo: {}
 '
-      phone: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
+''
+'''
+      phone: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
       website: 'https://ziontechgroup.com'},
     technicalSpecs: {}
 '

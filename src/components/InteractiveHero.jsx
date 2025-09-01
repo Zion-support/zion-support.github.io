@@ -22,6 +22,8 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             setActiveStat((prev) => (prev + 1) % stats.length)}, 3000);
         return () => {}
 '
+''
+'''
             window.removeEventListener('mousemove', handleMouseMove);
             clearInterval(interval)}}, [stats.length]);
     const containerVariants = {}
@@ -41,8 +43,8 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             y: 0,
             transition: {}
                 duration: 0.6,
-                ease: "easeOut"""
+                ease: "easeOut""""
     };
     const floatingVariants = {}
-'""
-'"'""
+'"""
+'"'"""

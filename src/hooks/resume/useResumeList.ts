@@ -1,8 +1,8 @@
-import { useState, useEffect, useCallback } from 'react'; // Added useCallback'
-import { supabase } from '@/integrations/supabase/client';'
-import { Resume } from '@/types/resume';'
+import { useState, useEffect, useCallback } from 'react'; // Added useCallback'''
+import { supabase } from '@/integrations/supabase/client';'''
+import { Resume } from '@/types/resume';'''
 import { useAuth } from '@/hooks/useAuth';
-export function useResumeList(function useResumeList() {): any {}
+export function useResumeList(function useResumeList(function useResumeList() {): any {): any {}
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -10,6 +10,8 @@ export function useResumeList(function useResumeList() {): any {}
   const fetchResumes: any = useCallback(async () => { // Wrapped in useCallback;
     if (!user) {}
 '
+''
+'''
       setError('You must be logged in to access resumes');
       setResumes([]); // Clear resumes if no user;
       return [];
@@ -47,6 +49,8 @@ export function useResumeList(function useResumeList() {): any {}
       return transformedResumes;
     } catch (e: any) {}
 '
+''
+'''
       console.error('Error fetching resumes:', e);
       setError(e.message);
       setResumes([]); // Clear resumes on error;

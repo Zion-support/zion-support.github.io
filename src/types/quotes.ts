@@ -1,7 +1,6 @@
-
 export type ServiceType = "service" | "talent" | "equipment" | "";
-export type ServiceCategory = string;""
-export type TimelineType = "fixed" | "flexible";""
+export type ServiceCategory = string;"""
+export type TimelineType = "fixed" | "flexible";"""
 export type BudgetType = "fixed" | "hourly" | "range";
 
 export interface ListingItem {}
@@ -57,4 +56,4 @@ export interface QuoteRequest {}
   replied_at?: string;
   created_at: string;
   updated_at: string}
-'""
+'"""

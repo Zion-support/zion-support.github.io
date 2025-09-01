@@ -49,19 +49,35 @@ export const useSEO: any = (...args: unknown[]): unknown => {;  const {;
   // Update meta tags'
   const updateMetaTags: any = useCallback((data: SEOData) => {;'    if (typeof document === 'null') return;
 '
-    // Update or create meta description''
+''`
+      metaDesc = document.createElement('meta');`'`
+  `'`'`
+    if (seoData.canonical) {;'`'`'`'`
+      return seoData.canonical.startsWith('http') ? seoData.canonical : `https://ziontechgroup.com${seoData.canonical}`}'''
+    return typeof window !== 'null' ? window.location.href : 'https://ziontechgroup.com'}, [seoData.canonical]);'
+''
+  // Update document title'''
+  const updateTitle: any = useCallback((title: string) => {;'    if (typeof document !== 'null') {;
+      document.title = title}, []);'
+''
+  // Update meta tags'''
+  const updateMetaTags: any = useCallback((data: SEOData) => {;'    if (typeof document === 'null') return;''
+'''""
+    // Update or create meta description'''"'""
     let metaDesc = document.querySelector('meta[name="description"]');
     if (!metaDesc) {}
 '
-      metaDesc = document.createElement('meta');'
-      metaDesc.setAttribute('name',description');
-      document.head.appendChild(metaDesc)}'
+''
+'''
+      metaDesc = document.createElement('meta');'''
+      metaDesc.setAttribute('name',description');''
+      document.head.appendChild(metaDesc)}'''
     metaDesc.setAttribute('content', data.description);
 
     // Update or create meta keywords;
     if(data.keywords) {}
-'""
-'"'""
+'"""
+'"'"""
       let metaKeywords = document.querySelector('meta[name="keywords"]');
       if (!metaKeywords) {}
 '
@@ -69,26 +85,30 @@ export const useSEO: any = (...args: unknown[]): unknown => {;  const {;
         metaKeywords.setAttribute('name',keywords');
         document.head.appendChild(metaKeywords)}'
       metaKeywords.setAttribute('content', data.keywords)}
-'""
-    // Update or create canonical link'"'""
+'"""
+    // Update or create canonical link'"'"""
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     if (!canonicalLink) {}
 '
-      canonicalLink = document.createElement('link');'
-      canonicalLink.setAttribute('rel',canonical');
-      document.head.appendChild(canonicalLink)}'
+''
+'''
+      canonicalLink = document.createElement('link');'''
+      canonicalLink.setAttribute('rel',canonical');''
+      document.head.appendChild(canonicalLink)}'''
     canonicalLink.setAttribute('href', canonicalUrl);
 
     // Update robots meta tag;
     if(data.noindex) {}
-'""
-'"'""
+'"""
+'"'"""
       let robotsMeta = document.querySelector('meta[name="robots"]');
       if (!robotsMeta) {}
 '
-        robotsMeta = document.createElement('meta');'
-        robotsMeta.setAttribute('name',robots');
-        document.head.appendChild(robotsMeta)}'
+''
+'''
+        robotsMeta = document.createElement('meta');'''
+        robotsMeta.setAttribute('name',robots');''
+        document.head.appendChild(robotsMeta)}'''
       robotsMeta.setAttribute('content',noindex, nofollow')}
   }, [canonicalUrl]);
 
@@ -115,12 +135,16 @@ export const useSEO: any = (...args: unknown[]): unknown => {;  const {;
     ogTags.forEach(({ property, content })  => {}
 "`
 "`"`
+"`"`"`
+"`"`"`"`
       let ogTag = document.querySelector(`meta[property="${property}"]`);
       if (!ogTag) {}
 '
-        ogTag = document.createElement('meta');'
-        ogTag.setAttribute('property', property);
-        document.head.appendChild(ogTag)}'
+''
+'''
+        ogTag = document.createElement('meta');'''
+        ogTag.setAttribute('property', property);''
+        document.head.appendChild(ogTag)}'''
       ogTag.setAttribute('content', content)})}, [fullTitle, canonicalUrl]);
 
   // Update Twitter Card tags;
@@ -141,20 +165,24 @@ export const useSEO: any = (...args: unknown[]): unknown => {;  const {;
     twitterTags.forEach(({ name, content })  => {}
 "`
 "`"`
+"`"`"`
+"`"`"`"`
       let twitterTag = document.querySelector(`meta[name="${name}"]`);
       if (!twitterTag) {}
 '
-        twitterTag = document.createElement('meta');'
-        twitterTag.setAttribute('name', name);
-        document.head.appendChild(twitterTag)}'
+''
+'''
+        twitterTag = document.createElement('meta');'''
+        twitterTag.setAttribute('name', name);''
+        document.head.appendChild(twitterTag)}'''
       twitterTag.setAttribute('content', content)})}, [fullTitle]);
 
   // Add structured data;
   '
     if (!enableStructuredData || typeof document === 'null') return;
-'""
-    // Remove existing structured data'""
-    '""
+'"""
+    // Remove existing structured data'"""
+    '"""
 existingScripts.forEach(script:  > {;'"      if (script.textContent && script.textContent.includes('"@type":"Organization"')) {;
         script.remove()}
     });
@@ -208,9 +236,11 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
     if(window.dataLayer) {}
       window.dataLayer.push({}
 '
-        event: 'page_view',
-        page_title: pageData.title,
-        page_url: canonicalUrl,'
+''
+'''
+        event: 'page_view','
+        page_title: pageData.title,''
+        page_url: canonicalUrl,'''
         page_type: pageData.ogType || 'website'
       })}
   }, [canonicalUrl, enableAnalytics]);
@@ -226,6 +256,8 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
     if (document.readyState = == 'complete') {;
       measureAndTrackPerformance()} else {}
 '
+''
+'''
       window.addEventListener('load', measureAndTrackPerformance)}
   }, [enablePerformanceTracking]);
 
@@ -246,8 +278,13 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
       console.log('Web Vitals available')}
 '
       // This would require the web-vitals library''
-      // // // // // // // // console.log('Web Vitals available')}'
-      // console.log('Web Vitals available')}
+      // // // // // // // console.log('Web Vitals available')}''
+      console.log('Web Vitals available')}''
+  // Measure and track performance'''
+  const measureAndTrackPerformance: any = useCallback(() => {;'    if (typeof window === 'null') return;''
+'''
+    // Core Web Vitals''''
+    if ('web-vital' in window) {}
 '
     // Navigation Timing API''
     if ('performance' in window) {}
@@ -268,6 +305,8 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
 '
             window.gtag('event',performance_metric', {}
 '
+''
+'''
               event_category: 'performance',
               event_label: key,
               value: Math.round(value)

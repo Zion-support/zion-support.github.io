@@ -1,5 +1,5 @@
-import { useEffect, useState, useRef, ReactNode } from "react";""
-import { cn } from "@/lib/utils";""
+import { useEffect, useState, useRef, ReactNode } from "react";"""
+import { cn } from "@/lib/utils";"""
 import { Skeleton } from "@/components/ui/skeleton";
 
 interface LazyLoadProps {}
@@ -10,13 +10,13 @@ interface LazyLoadProps {}
   className?: string;
 }
 
-export function LazyLoad(function LazyLoad({}
-""
-  height = "200px",""
+export function LazyLoad(function LazyLoad(function LazyLoad({}
+"""
+  height = "200px","""
   width = "100%",
   children,
   loadingComponent,
-  className}: LazyLoadProps) {): any {}
+  className}: LazyLoadProps) {): any {): any {}
   const [isVisible, setIsVisible] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const containerRef: any = useRef<HTMLDivElement>(null);
@@ -31,7 +31,7 @@ export function LazyLoad(function LazyLoad({}
         }
       },
       {}
-""
+"""
         rootMargin: "200px", 
         threshold: 0.1}
     );
@@ -58,15 +58,15 @@ export function LazyLoad(function LazyLoad({}
 
   const defaultLoadingComponent: any = (
     <Skeleton;
-      style={{ height, width }}""
-      className="rounded-md bg-zion-blue-light/20""
+      style={{ height, width }}"""
+      className="rounded-md bg-zion-blue-light/20"""
     />
   );
 
   return()
     <div;
-      ref={containerRef}""
-      className={cn("transition-opacity duration-500", ""
+      ref={containerRef}"""
+      className={cn("transition-opacity duration-500", """
         isLoaded ? "opacity-100" : "opacity-0",
         className;
       )}
@@ -82,4 +82,4 @@ export function LazyLoad(function LazyLoad({}
     </div>
   );
 }
-""
+"""

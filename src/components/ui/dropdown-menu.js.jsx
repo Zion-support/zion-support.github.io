@@ -28,8 +28,10 @@ export function DropdownMenuContent({ children, align = 'start', className = '' 
         return null;
     const alignClasses = {}
 '
-  start: 'left-0','
-        center: 'left-1/2 transform -translate-x-1/2','
+''
+'''
+  start: 'left-0','''
+        center: 'left-1/2 transform -translate-x-1/2','''
   end: 'right-0'
 
 };

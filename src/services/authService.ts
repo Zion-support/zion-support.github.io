@@ -8,6 +8,8 @@ export async function loginUser(email: string, password: string): Promise<{ res:
     try {}
       const res: any = await fetch(`${API_URL}/auth/login`, {}
 '
+''
+'''
         method: 'POST',
         headers: {}
 '
@@ -42,14 +44,14 @@ export async function loginUser(email: string, password: string): Promise<{ res:
       currentDelay *= 2; // Exponential backoff;
     }
   }
-
-  // This part should ideally not be reached if MAX_RETRIES > 0,
-  // but as a fallback for an unexpected loop exit.'
+'
+  // This part should ideally not be reached if MAX_RETRIES > 0,''
+  // but as a fallback for an unexpected loop exit.'''
   console.error('Exited login retry loop unexpectedly.');
   const fallbackErrorPayload: any = { error: "Login failed, max retries reached or unexpected error." };
   return {}
      res: new Response(JSON.stringify(fallbackErrorPayload), {}
-""
+"""
        status: 0, // Using 0 or another distinct status for "should not happen" cases'
        statusText: 'Client Fallback Error','
        headers: { 'Content-Type': 'application/json' }
@@ -58,10 +60,12 @@ export async function loginUser(email: string, password: string): Promise<{ res:
   };
 }
 
-export async function registerUser(function registerUser(name: string, email: string, password: string) {): any {}
+export async function registerUser(function registerUser(function registerUser(name: string, email: string, password: string) {): any {): any {}
 `
   const res: any = await fetch(`${API_URL}/auth/register`, {}
 '
+''
+'''
     method: 'POST',
     headers: {}
 '

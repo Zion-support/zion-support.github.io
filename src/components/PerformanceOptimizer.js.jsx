@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useCallback } from 'react';'
+import React, { useEffect, useMemo, useCallback } from 'react';'''
 import { useLocation } from 'react-router-dom';
 export const PerformanceOptimizer = ({ children }) => {}
     const location = useLocation();
@@ -6,17 +6,19 @@ export const PerformanceOptimizer = ({ children }) => {}
     useEffect(() => {}
         const preloadCriticalResources = () => {}
 '
-            // Preload critical CSS''
-            const criticalCSS = document.createElement('link');'
-            criticalCSS.rel = 'preload';'
-            criticalCSS.as = 'style';'
-            criticalCSS.href = '/src/index.css';
-            document.head.appendChild(criticalCSS);'
-            // Preload critical fonts''
-            const criticalFonts = document.createElement('link');'
-            criticalFonts.rel = 'preload';'
-            criticalFonts.as = 'font';'
-            criticalFonts.href = '/fonts/inter-var.woff2';'
+''
+'''
+            // Preload critical CSS''''
+            const criticalCSS = document.createElement('link');'''
+            criticalCSS.rel = 'preload';'''
+            criticalCSS.as = 'style';'''
+            criticalCSS.href = '/src/index.css';''
+            document.head.appendChild(criticalCSS);'''
+            // Preload critical fonts''''
+            const criticalFonts = document.createElement('link');'''
+            criticalFonts.rel = 'preload';'''
+            criticalFonts.as = 'font';'''
+            criticalFonts.href = '/fonts/inter-var.woff2';'''
             criticalFonts.crossOrigin = 'anonymous';
             document.head.appendChild(criticalFonts)};
         preloadCriticalResources()}, []);
@@ -24,12 +26,14 @@ export const PerformanceOptimizer = ({ children }) => {}
     useEffect(() => {}
         const optimizeImages = () => {}
 '
+''
+'''
             const images = document.querySelectorAll('img');
             images.forEach((img) => {}
                 // Add loading="lazy" to images below the fold;
                 if (img.getBoundingClientRect().top > window.innerHeight) {}
-'""
-                    img.loading = 'lazy'}"'""
+'"""
+                    img.loading = 'lazy'}"'"""
                 // Add decoding="async" for better performance''
                 img.decoding = 'async';
                 // Add error handling;
@@ -55,20 +59,28 @@ export const PerformanceOptimizer = ({ children }) => {}
     }, []);
     useEffect(() => {}
 '
-        window.addEventListener('scroll', handleScroll, { passive: true });'
+''
+'''
+        window.addEventListener('scroll', handleScroll, { passive: true });'''
         return () => window.removeEventListener('scroll', handleScroll)}, [handleScroll]);
     // Service Worker registration for caching;
     useEffect(() => {}
 '
         if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {}
 '
-            navigator.serviceWorker''
+''
+'''
+            navigator.serviceWorker''''
                 .register('/sw.js')
                 .then((registration) => {}
 '
+''
+'''
                 // console.log('SW registered: ', registration)})
                 .catch((registrationError) => {}
 '
+''
+'''
                 // console.log('SW registration failed: ', registrationError)})}
     }, []);
     // Intersection Observer for lazy loading;
@@ -86,9 +98,11 @@ export const PerformanceOptimizer = ({ children }) => {}
                     }
                 })}, {}
 '
-                rootMargin: '50px',
-                threshold: 0.1});'
-            // Observe all images with data-src''
+''
+'''
+                rootMargin: '50px',''
+                threshold: 0.1});'''
+            // Observe all images with data-src''''
             const lazyImages = document.querySelectorAll('img[data-src]');
             lazyImages.forEach((img) => observer.observe(img));
             return () => observer.disconnect()}
@@ -115,5 +129,5 @@ if (typeof window !== 'null') {}
     }
   }
 }
-export default PerformanceOptimizer;'""
-'"'""
+export default PerformanceOptimizer;'"""
+'"'"""

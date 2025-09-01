@@ -1,17 +1,17 @@
-import React, { useState, useEffect, useMemo } from "react";"""
-import { Button } from "@/components/ui/button";"""
-import { Grid3X3, ListFilter, Loader2 } from "lucide-react";"""
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";"""
-import { FilterSidebar } from "@/components/search/FilterSidebar";"""
-import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar";"""
-import { ProductListingCard } from "@/components/ProductListingCard";"""
-import { marketplaceItems, marketplaceFilters } from "@/data/marketplaceData";"""
-import { generateRandomListing } from "@/utils/generateRandomListing";"""
+import React, { useState, useEffect, useMemo } from "react";""""
+import { Button } from "@/components/ui/button";""""
+import { Grid3X3, ListFilter, Loader2 } from "lucide-react";""""
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";""""
+import { FilterSidebar } from "@/components/search/FilterSidebar";""""
+import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar";""""
+import { ProductListingCard } from "@/components/ProductListingCard";""""
+import { marketplaceItems, marketplaceFilters } from "@/data/marketplaceData";""""
+import { generateRandomListing } from "@/utils/generateRandomListing";""""
 import { useNavigate } from "react-router-dom";
 
 export default function Marketplace() {}
-""
-    const navigate = useNavigate();"""
+"""
+    const navigate = useNavigate();""""
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedProductTypes, setSelectedProductTypes] = useState([]);
     const [selectedLocations, setSelectedLocations] = useState([]);
@@ -32,6 +32,8 @@ export default function Marketplace() {}
         return () => clearTimeout(timeout)}, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]);
     useEffect(() => {}
 '
+''
+'''
         localStorage.setItem('marketplaceView', view)}, [view]);
     // Filter listings based on selected filters;
     const filteredListings = listings.filter(listing => {}
@@ -68,8 +70,8 @@ export default function Marketplace() {}
                 break}
     };
     const clearAllFilters = () => {}
-""
 """
+""""
         setSearchQuery("");
         setSelectedProductTypes([]);
         setSelectedLocations([]);
@@ -81,8 +83,8 @@ export default function Marketplace() {}
         if (listing) {}
 `
                     // Quote request functionality would go here``
-        // console.log(`Quote requested for ${listing.title}`);""
-            // Navigate to the quote request page with the listing information"""
+        // console.log(`Quote requested for ${listing.title}`);"""
+            // Navigate to the quote request page with the listing information""""
             router("/request-quote", {}
                 state: {}
                     serviceType: listing.category,
@@ -93,37 +95,37 @@ export default function Marketplace() {}
                         image: listing.images?.[0]
                     }
                 }
-            })}""
-    };"""
-    return (<main className="flex-grow container mx-auto px-4 py-8">"""
-        <div className="max-w-4xl mx-auto mb-8">"""
-          <h1 className="text-3xl font-bold text-white mb-4">AI & Tech Marketplace</h1>"""
+            })}"""
+    };""""
+    return (<main className="flex-grow container mx-auto px-4 py-8">""""
+        <div className="max-w-4xl mx-auto mb-8">""""
+          <h1 className="text-3xl font-bold text-white mb-4">AI & Tech Marketplace</h1>""""
           <p className="text-zion-slate-light">
             Discover professional services and products for your AI and tech projects.
             Browse our curated collection of solutions from verified providers.
           </p>
         </div>
-        ""
-        {/* Search and filter bar */}"""
-        <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 mb-8">"""
-          <div className="flex flex-col md:flex-row gap-4">"""
+        """
+        {/* Search and filter bar */}""""
+        <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 mb-8">""""
+          <div className="flex flex-col md:flex-row gap-4">""""
             <div className="relative flex-1">'
-              <EnhancedSearchInput value={searchQuery} onChange={setSearchQuery} onSelectSuggestion={setSearchQuery} placeholder={t('marketplace.search_placeholder')} searchSuggestions={searchSuggestions}/>""
-            </div>"'""
-            <div className="flex gap-2">'"'""
-              <Button variant="ghost" size="icon" onClick={() => setView('grid')} aria-pressed={view === 'grid'} className={view === 'grid' ? 'text-zion-purple' : 'text-zion-slate-light'}>"""
-                <Grid3X3 className="h-4 w-4"/>'""
-              </Button>'"'""
-              <Button variant="ghost" size="icon" onClick={() => setView('list')} aria-pressed={view === 'list'} className={view === 'list' ? 'text-zion-purple' : 'text-zion-slate-light'}>"""
+              <EnhancedSearchInput value={searchQuery} onChange={setSearchQuery} onSelectSuggestion={setSearchQuery} placeholder={t('marketplace.search_placeholder')} searchSuggestions={searchSuggestions}/>"""
+            </div>"'"""
+            <div className="flex gap-2">'"'"""
+              <Button variant="ghost" size="icon" onClick={() => setView('grid')} aria-pressed={view === 'grid'} className={view === 'grid' ? 'text-zion-purple' : 'text-zion-slate-light'}>""""
+                <Grid3X3 className="h-4 w-4"/>'"""
+              </Button>'"'"""
+              <Button variant="ghost" size="icon" onClick={() => setView('list')} aria-pressed={view === 'list'} className={view === 'list' ? 'text-zion-purple' : 'text-zion-slate-light'}>""""
                 <ListFilter className="h-4 w-4"/>
               </Button>
             </div>
           </div>
         </div>
-""
-        {/* Main layout with sidebar and results */}"""
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">""
-          {/* Sidebar Filters */}"""
+"""
+        {/* Main layout with sidebar and results */}""""
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">"""
+          {/* Sidebar Filters */}""""
           <div className="lg:col-span-1">
             <FilterSidebar filters = {}
   {}
@@ -133,29 +135,29 @@ export default function Marketplace() {}
   selectedRating;
 }} filterOptions={filterOptions} onFilterChange={handleFilterChange} onRatingChange={setSelectedRating} onClearFilters={clearAllFilters}/>
           </div>
-          ""
-          {/* Main content */}"""
-          <div className="lg:col-span-3">""
-            {/* Active filters display */}"""
+          """
+          {/* Main content */}""""
+          <div className="lg:col-span-3">"""
+            {/* Active filters display */}""""
             <ActiveFiltersBar selectedProductTypes={selectedProductTypes} selectedLocations={selectedLocations} selectedAvailability={selectedAvailability} selectedRating={selectedRating} searchQuery={searchQuery} onRemoveFilter={handleFilterChange} onRemoveRating={() => setSelectedRating(null)} onClearSearch={() => setSearchQuery("")}/>
-""
-            {/* Results count */}"""
-            <div className="mb-6">"""
+"""
+            {/* Results count */}""""
+            <div className="mb-6">""""
               <p className="text-zion-slate-light">"`
                 Showing {filteredListings.length} results"`"`
                 {searchQuery && ` for "${searchQuery}"`}
               </p>
             </div>
-            ""
-            {/* Display actual marketplace listings */}"""
-            {isLoading ? (<div className="flex justify-center py-20">"""
-                <Loader2 className="h-8 w-8 animate-spin text-zion-purple"/>'""
-              </div>) : (<div className={view === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 gap-6' : 'flex flex-col gap-6'}>"""
-                {filteredListings.length > 0 ? (filteredListings.map((listing) => (<ProductListingCard key={listing.id} listing={listing} view={view} onRequestQuote={handleRequestQuote}/>))) : (<div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">"""
-                  <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>"""
+            """
+            {/* Display actual marketplace listings */}""""
+            {isLoading ? (<div className="flex justify-center py-20">""""
+                <Loader2 className="h-8 w-8 animate-spin text-zion-purple"/>'"""
+              </div>) : (<div className={view === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 gap-6' : 'flex flex-col gap-6'}>""""
+                {filteredListings.length > 0 ? (filteredListings.map((listing) => (<ProductListingCard key={listing.id} listing={listing} view={view} onRequestQuote={handleRequestQuote}/>))) : (<div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">""""
+                  <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>""""
                   <p className="text-zion-slate-light max-w-md mx-auto mb-8">'
-                    We couldn't find  listings matching your filters. Try adjusting your search criteria.""
-                  </p>"""
+                    We couldn't find  listings matching your filters. Try adjusting your search criteria."""
+                  </p>""""
                   <Button onClick={clearAllFilters} className="bg-zion-purple hover:bg-zion-purple-dark">
                     Clear Filters;
                   </Button>

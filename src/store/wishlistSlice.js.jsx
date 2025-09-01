@@ -20,6 +20,8 @@ export const loadWishlistFromDB = createAsyncThunk(''
 );
 const wishlistSlice = createSlice({}
 '
+''
+'''
   name: 'wishlist',
   initialState,
   reducers: {}

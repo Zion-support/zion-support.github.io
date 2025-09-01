@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';'
 import { motion } from 'framer-motion';'
 import { Users, MessageSquare, Sparkles, Save, Download, Loader2 } from 'lucide-react';
-import { useRealTimeCollaboration } from "../hooks/useRealTimeCollaboration";"""
+import { useRealTimeCollaboration } from "../hooks/useRealTimeCollaboration";""""
 import { useAnalytics } from "../hooks/useAnalytics";'
 export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = '', enableAI = true, enableCollaboration = true, enableVersioning = true, className = '', onSave, onExport }) => {}
     const { trackEvent } = useAnalytics({}
@@ -28,9 +28,9 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         userId,
         userName,
         enablePresence: true,
-        enableCursors: true,
-        enableSelection: true,
-        enableTextSync: true,'
+        enableCursors: true,'
+        enableSelection: true,''
+        enableTextSync: true,'''
         conflictResolution: 'client',
         messageRetention: 1000;
     }) ;
@@ -60,6 +60,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         if(enableCollaboration && collaboration.isConnected) {}
             collaboration.syncTextChange({}
 '
+''
+'''
                 type: 'text_change',
                 content: newContent,
                 selection: { start: selectionStart, end: selectionEnd },
@@ -85,9 +87,9 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
     const handleCursorMove = useCallback((event) => {}
         if(!enableCollaboration || !collaboration.isConnected)
             return;
-        const rect = event.currentTarget.getBoundingClientRect();
-        const x = event.clientX - rect.left;
-        const y = event.clientY - rect.top;'
+        const rect = event.currentTarget.getBoundingClientRect();'
+        const x = event.clientX - rect.left;''
+        const y = event.clientY - rect.top;'''
         collaboration.updateCursor(x, y,editor')}, [enableCollaboration, collaboration]);
     // Generate AI suggestions;
     const generateAISuggestions = useCallback(async () => {}
@@ -102,13 +104,13 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 suggestions.push({}
 `
 ``
-                    id: `suggestion_${Date.now()}_1`,'""
-                    type: 'grammar',"'""
+                    id: `suggestion_${Date.now()}_1`,'"""
+                    type: 'grammar',"'"""
                     text: "it's",
                     confidence: 0.95,'
-                    position: editorState.content.indexOf('its'),""
-                    length: 3,"'""
-                    reason: "Consider using 'it's' (contraction of 'it is') instead of 'its' (possessive)","'""
+                    position: editorState.content.indexOf('its'),"""
+                    length: 3,"'"""
+                    reason: "Consider using 'it's' (contraction of 'it is') instead of 'its' (possessive)","'"""
                     alternatives["it's", "it is"];
                 })}'
             // Style suggestions''
@@ -116,13 +118,13 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 suggestions.push({}
 `
 ``
-                    id: `suggestion_${Date.now()}_2`,'""
-                    type: 'style',"""
+                    id: `suggestion_${Date.now()}_2`,'"""
+                    type: 'style',""""
                     text: "extremely",
                     confidence: 0.88,'
-                    position: editorState.content.indexOf('very'),""
-                    length: 4,"'""
-                    reason: "Consider using a more specific adjective instead of 'very'","""
+                    position: editorState.content.indexOf('very'),"""
+                    length: 4,"'"""
+                    reason: "Consider using a more specific adjective instead of 'very'",""""
                     alternatives["extremely", "highly", "remarkably", "exceptionally"];
                 })}'
             // Completion suggestions''
@@ -130,17 +132,17 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 suggestions.push({}
 `
 ``
-                    id: `suggestion_${Date.now()}_3`,'""
-                    type: 'completion',"""
+                    id: `suggestion_${Date.now()}_3`,'"""
+                    type: 'completion',""""
                     text: " include improved efficiency, cost savings, and enhanced user experience.",
                     confidence: 0.92,
-                    position: editorState.content.length,""
-                    length: 0,"""
-                    reason: "Complete the sentence with common benefit statements",""
-                    alternatives[;"""
-                        " include improved efficiency, cost savings, and enhanced user experience.","""
-                        " are numerous and well-documented in industry research.","""
-                        " can be measured through key performance indicators.""
+                    position: editorState.content.length,"""
+                    length: 0,""""
+                    reason: "Complete the sentence with common benefit statements","""
+                    alternatives[;""""
+                        " include improved efficiency, cost savings, and enhanced user experience.",""""
+                        " are numerous and well-documented in industry research.",""""
+                        " can be measured through key performance indicators."""
                     ]
                 })}
             setEditorState(prev => ({}
@@ -150,18 +152,24 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             // // // // // // // // console.error('Failed to generate AI suggestions:', error);'
             trackEvent('editor',ai_suggestions_failed',generation_error', undefined, {}
 '
+''
+'''
                 error: error instanceof Error ? error.message : 'Unknown error'
             }) ;
 
         finally {}
             setIsProcessing(false);
 '
+            setIsProcessing(false);''
+'''
             trackEvent('editor',ai_suggestions_generated',suggestions_created', suggestions.length)}
         catch (error) {}
 '
             // console.error('Failed to generate AI suggestions:', error);'
             trackEvent('editor',ai_suggestions_failed',generation_error', null, {}
 '
+''
+'''
                 error: error instanceof Error ? error.message : 'Unknown error'
             }) }
         finally {}
@@ -184,9 +192,9 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         // Focus editor and set cursor position;
         if(editorRef.current) {}
             editorRef.current.focus();
-            const newPosition = suggestion.position + suggestion.text.length;
-            editorRef.current.setSelectionRange(newPosition, newPosition);
-        }'
+            const newPosition = suggestion.position + suggestion.text.length;'
+            editorRef.current.setSelectionRange(newPosition, newPosition);''
+        }'''
         trackEvent('editor',ai_suggestion_applied', suggestion.type, null, { suggestionId: suggestion.id });
     }, [editorState.content, trackEvent]);
     // Save content;
@@ -204,20 +212,24 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         else if (format === 'md') {}
 `
 ``
+```
+````
             exportContent = `# Document\n\n${editorState.content}`}
         if(onExport) {}
             onExport(exportContent, format)}
         else {}
 '
-            // Default export behavior''
-            const blob = new Blob([exportContent], { type: 'text/plain' });
-            const url = window.URL.createObjectURL(blob);'
-            const a = document.createElement('a');`
-            a.href = url;``
+''
+'''
+            // Default export behavior''''
+            const blob = new Blob([exportContent], { type: 'text/plain' });''`
+            const url = window.URL.createObjectURL(blob);''`'`
+            const a = document.createElement('a');```
+            a.href = url;````
             a.download = `document.${format}`;
-            a.click();
-            window.URL.revokeObjectURL(url);
-        }'
+            a.click();'
+            window.URL.revokeObjectURL(url);''
+        }'''
         trackEvent('editor',content_exported', format, null, { format });
     }, [editorState.content, onExport, trackEvent]);
     // Handle collaboration text changes;
@@ -242,6 +254,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         window.addEventListener('collaborationTextChange', handleCollaborationTextChange);
         return () => {}
 '
+''
+'''
             window.removeEventListener('collaborationTextChange', handleCollaborationTextChange)}}, [userId, trackEvent]);
     // Auto-save functionality;
     useEffect(() => {}
@@ -260,48 +274,48 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 generateAISuggestions()}
         }, 3000);`
         return () => clearTimeout(debounceTimer)}, [editorState.content, enableAI, generateAISuggestions]);``
-    return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>""
-      {/* Header */}"""
-      <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">"""
-        <div className="flex items-center justify-between">"""
-          <h3 className="text-lg font-semibold flex items-center gap-2">"""
-            <MessageSquare className="w-5 h-5"/>""
-            Collaborative Text Editor"""
-            {collaboration.isConnected && (<div className="flex items-center gap-1 px-2 py-1 bg-green-500/20 rounded-full text-xs">"""
+    return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>"""
+      {/* Header */}""""
+      <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">""""
+        <div className="flex items-center justify-between">""""
+          <h3 className="text-lg font-semibold flex items-center gap-2">""""
+            <MessageSquare className="w-5 h-5"/>"""
+            Collaborative Text Editor""""
+            {collaboration.isConnected && (<div className="flex items-center gap-1 px-2 py-1 bg-green-500/20 rounded-full text-xs">""""
                 <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                 Live;
               </div>)}
-          </h3>""
-"""
-          <div className="flex items-center gap-2">""
-            {/* Collaboration Status */}"""
-            {enableCollaboration && (<button onClick={() => setShowCollaborators(!showCollaborators)} className="px-3 py-1 bg-white/20 hover:bg-white/30 rounded text-sm transition-colors flex items-center gap-2">"""
+          </h3>"""
+""""
+          <div className="flex items-center gap-2">"""
+            {/* Collaboration Status */}""""
+            {enableCollaboration && (<button onClick={() => setShowCollaborators(!showCollaborators)} className="px-3 py-1 bg-white/20 hover:bg-white/30 rounded text-sm transition-colors flex items-center gap-2">""""
                 <Users className="w-4 h-4"/>
                 {collaboration.onlineUsers.length}
               </button>) }
-""
-            {/* AI Suggestions */}"""
-            {enableAI && (<button onClick={generateAISuggestions} disabled={isProcessing} className="px-3 py-1 bg-white/20 hover:bg-white/30 rounded text-sm transition-colors flex items-center gap-2 disabled:opacity-50">"""
+"""
+            {/* AI Suggestions */}""""
+            {enableAI && (<button onClick={generateAISuggestions} disabled={isProcessing} className="px-3 py-1 bg-white/20 hover:bg-white/30 rounded text-sm transition-colors flex items-center gap-2 disabled:opacity-50">""""
                 {isProcessing ? (<Loader2 className="w-4 h-4 animate-spin"/>) : (<Sparkles className="w-4 h-4"/>)}
                 AI;
               </button>) }
-""
-            {/* Save Button */}"""
-            <button onClick={handleSave} className="px-3 py-1 bg-green-500 hover:bg-green-600 rounded text-sm transition-colors flex items-center gap-2">"""
+"""
+            {/* Save Button */}""""
+            <button onClick={handleSave} className="px-3 py-1 bg-green-500 hover:bg-green-600 rounded text-sm transition-colors flex items-center gap-2">""""
               <Save className="w-4 h-4"/>
               Save;
             </button>
           </div>
         </div>
       </div>
-""
-      {/* Main Editor Area */}"""
-      <div className="flex h-96">""
-        {/* Editor */}"""
-        <div className="flex-1 p-4">"""
+"""
+      {/* Main Editor Area */}""""
+      <div className="flex h-96">"""
+        {/* Editor */}""""
+        <div className="flex-1 p-4">""""
           <textarea ref={editorRef} value={editorState.content} onChange={handleTextChange} onSelect={handleSelectionChange} onMouseMove={handleCursorMove} placeholder="Start typing your document..." className="w-full h-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none font-mono text-sm"/>
-""
-          {/* Status Bar */}"""
+"""
+          {/* Status Bar */}""""
           <div className="flex items-center justify-between mt-2 text-xs text-gray-500">
             <span>
               {editorState.content.length} characters, {editorState.content.split(/\s+/) .filter(Boolean) .length} words;
@@ -312,16 +326,16 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             </span>
           </div>
         </div>
-""
-        {/* Sidebar */}"""
-        <div className="w-80 border-l border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700">""
-          {/* AI Suggestions */}"""
-          {enableAI && showSuggestions && (<div className="p-4 border-b border-gray-200 dark:border-gray-600">"""
-              <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">"""
+"""
+        {/* Sidebar */}""""
+        <div className="w-80 border-l border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700">"""
+          {/* AI Suggestions */}""""
+          {enableAI && showSuggestions && (<div className="p-4 border-b border-gray-200 dark:border-gray-600">""""
+              <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">""""
                 <Sparkles className="w-4 h-4"/>
                 AI Suggestions;
-              </h4>""
-"""
+              </h4>"""
+""""
               <div className="space-y-3">
                 {editorState.suggestions.map(suggestion => (<motion.div key={suggestion.id} initial = {}
   { opacity: 0,
@@ -329,82 +343,82 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 }} animate = {}
   { opacity: 1,
   x: 0;
-""
 """
+""""
 }} className="p-3 bg-white dark:bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">"'"`
                     <div className="flex items-start justify-between mb-2">'`'`
                       <span className={`text-xs px-2 py-1 rounded-full ${suggestion.type === 'grammar' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :''`
                     suggestion.type === 'style' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300' :'`'`
                         'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'}`}>
-                        {suggestion.type}""
-                      </span>"""
+                        {suggestion.type}"""
+                      </span>""""
                       <span className="text-xs text-gray-500">
                         {Math.round(suggestion.confidence * 100)}%
                       </span>
-                    </div>""
-"""
+                    </div>"""
+""""
                     <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
                       {suggestion.reason}
-                    </p>""
-"""
+                    </p>"""
+""""
                     <div className="text-sm font-medium text-gray-900 dark:text-white mb-2">
                       {suggestion.text}
-                    </div>""
-"""
+                    </div>"""
+""""
                     <button onClick={() => applySuggestion(suggestion)} className="w-full px-2 py-1 bg-blue-500 hover:bg-blue-600 text-white text-xs rounded transition-colors">
                       Apply Suggestion;
                     </button>
-                  </motion.div>))}""
-"""
+                  </motion.div>))}"""
+""""
                 {editorState.suggestions.length === 0 && (<p className="text-sm text-gray-500 text-center py-4">
                     No suggestions yet.Start typing to get AI-powered recommendations.</p>)}
               </div>
             </div>) }
-""
-          {/* Collaborators */}"""
-          {enableCollaboration && showCollaborators && (<div className="p-4 border-b border-gray-200 dark:border-gray-600">"""
-              <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">"""
+"""
+          {/* Collaborators */}""""
+          {enableCollaboration && showCollaborators && (<div className="p-4 border-b border-gray-200 dark:border-gray-600">""""
+              <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">""""
                 <Users className="w-4 h-4"/>
                 Collaborators ({collaboration.onlineUsers.length})
-              </h4>""
-"""
-              <div className="space-y-2">"""
-                {collaboration.onlineUsers.map(user => (<div key={user.id} className="flex items-center gap-2 p-2 bg-white dark:bg-gray-600 rounded-lg">"""
-                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: user.color }}></div>"""
+              </h4>"""
+""""
+              <div className="space-y-2">""""
+                {collaboration.onlineUsers.map(user => (<div key={user.id} className="flex items-center gap-2 p-2 bg-white dark:bg-gray-600 rounded-lg">""""
+                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: user.color }}></div>""""
                     <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                      {user.name}""
-                    </span>"""
+                      {user.name}"""
+                    </span>""""
                     <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                  </div>))}""
-"""
-                {collaboration.offlineUsers.map(user => (<div key={user.id} className="flex items-center gap-2 p-2 bg-gray-100 dark:bg-gray-700 rounded-lg opacity-60">"""
-                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: user.color }}></div>"""
+                  </div>))}"""
+""""
+                {collaboration.offlineUsers.map(user => (<div key={user.id} className="flex items-center gap-2 p-2 bg-gray-100 dark:bg-gray-700 rounded-lg opacity-60">""""
+                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: user.color }}></div>""""
                     <span className="text-sm text-gray-500 dark:text-gray-400">
-                      {user.name}""
-                    </span>"""
+                      {user.name}"""
+                    </span>""""
                     <span className="text-xs text-gray-400">
                       {user.lastSeen.toLocaleTimeString()}
                     </span>
                   </div>) ) }
               </div>
             </div>) }
-""
-          {/* Actions */}"""
-          <div className="p-4">"""
-            <h4 className="font-medium text-gray-900 dark:text-white mb-3">Actions</h4>""
-"'""
-            <div className="space-y-2">'"'""
-              <button onClick={() => handleExport('txt')} className="w-full px-3 py-2 bg-gray-500 hover:bg-gray-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">"""
+"""
+          {/* Actions */}""""
+          <div className="p-4">""""
+            <h4 className="font-medium text-gray-900 dark:text-white mb-3">Actions</h4>"""
+"'"""
+            <div className="space-y-2">'"'"""
+              <button onClick={() => handleExport('txt')} className="w-full px-3 py-2 bg-gray-500 hover:bg-gray-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">""""
                 <Download className="w-4 h-4"/>
                 Export as TXT;
-              </button>'""
-'"'""
-              <button onClick={() => handleExport('md')} className="w-full px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">"""
+              </button>'"""
+'"'"""
+              <button onClick={() => handleExport('md')} className="w-full px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">""""
                 <Download className="w-4 h-4"/>
                 Export as MD;
-              </button>'""
-'"'""
-              <button onClick={() => handleExport('html')} className="w-full px-3 py-2 bg-purple-500 hover:bg-purple-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">"""
+              </button>'"""
+'"'"""
+              <button onClick={() => handleExport('html')} className="w-full px-3 py-2 bg-purple-500 hover:bg-purple-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">""""
                 <Download className="w-4 h-4"/>
                 Export as HTML;
               </button>
@@ -412,8 +426,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
           </div>
         </div>
       </div>
-""
-      {/* Collaboration Cursors Overlay */}"""
+"""
+      {/* Collaboration Cursors Overlay */}""""
       {enableCollaboration && (<div ref={collaborationRef} className="absolute inset-0 pointer-events-none" style={{ zIndex: 10 }}>
           {collaboration.activeCursors.map(({ x, y, user }) => (<motion.div key={user.id} initial = {}
   { opacity: 0,
@@ -424,8 +438,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 }} exit = {}
   { opacity: 0,
   scale: 0;
-""
 """
+""""
 }} className="absolute w-4 h-4" style = {}
   {}
                     left: x,
@@ -433,9 +447,9 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     transform: 'translate(-50%,
   -50%);
 
-""
-}}>;"""
-              <div className="w-full h-full rounded-full border-2 border-white shadow-lg" style={{ backgroundColor: user.color }}></div>"""
+"""
+}}>;""""
+              <div className="w-full h-full rounded-full border-2 border-white shadow-lg" style={{ backgroundColor: user.color }}></div>""""
               <div className="absolute top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap">
                 {user.name}
               </div>

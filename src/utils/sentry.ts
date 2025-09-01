@@ -3,5 +3,5 @@ Sentry.init({}
   integrations: [new Sentry.BrowserTracing()],
   tracesSampleRate: 1.0});
 
-export function captureException(function captureException(error: unknown) {): any {}
+export function captureException(function captureException(function captureException(error: unknown) {): any {): any {}
   Sentry.captureException(error)}

@@ -1,4 +1,4 @@
-import useSWR from 'swr';'
+import useSWR from 'swr';'''
 import { captureException } from '@/utils/sentry';
 
 export interface WizardResponse {}
@@ -11,6 +11,8 @@ const fetcher: any = async (url: string): Promise<WizardResponse> => {}
     const res: any = await fetch(url);
     if (!res.ok) {}
 '
+''
+'''
       throw new Error('Failed');
     }
     const data: any = await res.json();
@@ -32,9 +34,9 @@ const fetcher: any = async (url: string): Promise<WizardResponse> => {}
   }
 };
 
-export function useQuoteWizard()
-  category: string,
-  page = 1,'
+export function useQuoteWizard()'
+  category: string,''
+  page = 1,'''
   search = ''
 ) {}
   const params: any = new URLSearchParams({ page: String(page) });'

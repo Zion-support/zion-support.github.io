@@ -1,16 +1,39 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';''
+import { motion, AnimatePresence } from 'framer-motion';''
 import { Link } from 'react-router-dom';
 import {}
   Brain, 
-  Shield, 
   Cloud, 
+  Shield, 
+  Server, 
   Zap, 
-  Database, 
-  Users, 
-  ArrowRight,
-  Star,
-  Check,
+  Globe, 
+  Cpu, 
+  Database,
+  Network,
+  Smartphone,
+  Code,
+  Chip,
+  Wifi,
+  Bot,
+  Eye,
+  Sparkles,
+  Atom,
+  Leaf,
+  Gamepad2,
+  Coins,
+  Satellite,
+  Activity,
+  BarChart3,
+  Users2,
+  Settings,
+  Palette,
+  Rocket,
+  Award,
+  TrendingUp,
+  GraduationCap,
+  MessageCircle,
+  HelpCircle,
   Phone,
   Mail,
   MapPin,
@@ -51,7 +74,7 @@ const ServicesPage: React.FC = () => {}
         staggerChildren: 0.1;
       }
     }
-  };
+  });
 
   const cardVariants: any = {}
     hidden: { opacity: 0, y: 30 },
@@ -63,7 +86,7 @@ const ServicesPage: React.FC = () => {}
       <div className="container mx-auto px-4 py-16">
         {/* Header */}
         <motion.div;
-          className="text-center mb-16""
+          className="text-center mb-16"""
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -81,21 +104,21 @@ const ServicesPage: React.FC = () => {}
           {/* Contact Information */}
           <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-400 mb-8">
             <motion.div;
-              className="flex items-center gap-2 hover:text-cyan-400 transition-colors cursor-pointer""
+              className="flex items-center gap-2 hover:text-cyan-400 transition-colors cursor-pointer"""
               whileHover={{ scale: 1.05 }}
             >
               <Phone className="w-4 h-4" />
               <a href={`tel:${contactInfo.mobile}`}>{contactInfo.mobile}</a>
             </motion.div>
             <motion.div;
-              className="flex items-center gap-2 hover:text-cyan-400 transition-colors cursor-pointer""
+              className="flex items-center gap-2 hover:text-cyan-400 transition-colors cursor-pointer"""
               whileHover={{ scale: 1.05 }}
             >
               <Mail className="w-4 h-4" />
               <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
             </motion.div>
             <motion.div;
-              className="flex items-center gap-2 hover:text-cyan-400 transition-colors""
+              className="flex items-center gap-2 hover:text-cyan-400 transition-colors"""
               whileHover={{ scale: 1.05 }}
             >
               <MapPin className="w-4 h-4" />
@@ -106,7 +129,7 @@ const ServicesPage: React.FC = () => {}
 
         {/* Service Categories Overview */}
         <motion.div;
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16""
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"""
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
@@ -118,7 +141,7 @@ const ServicesPage: React.FC = () => {}
             return (
               <motion.div;
                 key={category}
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer group""
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer group"""
                 whileHover={{ y: -5, scale: 1.02 }}
                 onClick={() => setSelectedCategory(category)}
               >
@@ -141,25 +164,25 @@ const ServicesPage: React.FC = () => {}
 
         {/* Search and Filter */}
         <motion.div;
-          className="flex flex-col md:flex-row gap-4 mb-12""
+          className="flex flex-col md:flex-row gap-4 mb-12"""
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
           <div className="flex-1">
             <input;
-              type="text""
-              placeholder="Search services...""
+              type="text"""
+              placeholder="Search services..."""
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400""
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"""
             />
           </div>
           <div className="md:w-64">
             <select;
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400""
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"""
             >
               {categories.map(category => (
                 <option key={category} value={category} className="bg-slate-800">
@@ -172,10 +195,10 @@ const ServicesPage: React.FC = () => {}
 
         {/* Services Grid */}
         <motion.div;
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16""
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"""
           variants={containerVariants}
-          initial="hidden""
-          animate="visible""
+          initial="hidden"""
+          animate="visible"""
         >
           {filteredServices.map(service => {}
             const Icon: any = serviceIcons[service.category] || Brain;
@@ -184,7 +207,7 @@ const ServicesPage: React.FC = () => {}
               <motion.div;
                 key={service.id}
                 variants={cardVariants}
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group""
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group"""
                 whileHover={{ y: -5, scale: 1.02 }}
               >
                 {/* Service Header */}
@@ -193,26 +216,22 @@ const ServicesPage: React.FC = () => {}
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
                       <Icon className="w-6 h-6 text-white" />
                     </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">
-                        {service.name}
-                      </h3>
-                      <span className="text-xs text-cyan-400">{service.category}</span>
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-lg font-bold text-white">
-                      ${service.price}
-                    </div>
-                    <div className="text-xs text-gray-400">
-                      /{service.period}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Description */}
-                <p className="text-gray-300 text-sm mb-4 line-clamp-3">
-                  {service.description}
+                  </motion.div>
+                ))}""
+              </motion.div>"""
+            ) : (""""
+              <motion.div"""""
+                className="text-center py-16""
+                initial={{ opacity: 0 }}""
+                animate={{ opacity: 1 }}"""
+                exit={{ opacity: 0 }}""""
+              >"""""
+                <div className="text-6xl mb-4">🔍</div>"""""
+                <h3 className="text-2xl font-bold text-white mb-2">"""
+                  No services found""""
+                </h3>"""""
+                <p className="text-zion-slate-light mb-6">
+                  Try adjusting your search criteria or browse all categories;
                 </p>
 
                 {/* Key Features */}
@@ -249,7 +268,7 @@ const ServicesPage: React.FC = () => {}
                 <div className="space-y-2">
                   <motion.a;
                     href={service.url}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-2 px-4 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 flex items-center justify-center group""
+                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-2 px-4 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 flex items-center justify-center group"""
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -258,19 +277,71 @@ const ServicesPage: React.FC = () => {}
                   </motion.a>
                   <a;
                     href={`mailto:${contactInfo.email}?subject=Interest in ${service.name}`}
-                    className="w-full border border-cyan-400/50 text-cyan-400 py-2 px-4 rounded-lg text-sm hover:bg-cyan-400/10 transition-colors flex items-center justify-center""
+                    className="w-full border border-cyan-400/50 text-cyan-400 py-2 px-4 rounded-lg text-sm hover:bg-cyan-400/10 transition-colors flex items-center justify-center"""
                   >
                     Get Quote;
                   </a>
                 </div>
               </motion.div>
-            );
-          })}
-        </motion.div>
+            )}
+          </AnimatePresence>
+        </div>""
+      </section>"""
+""""
+      {/* Specialized Services Section */}"""""
+      <section className="py-16 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-dark">"""""
+        <div className="container-responsive">""""
+          <motion.div"""""
+            className="text-center mb-12""
+            initial={{ opacity: 0, y: 20 }}""
+            whileInView={{ opacity: 1, y: 0 }}"""
+            transition={{ duration: 0.6 }}""""
+          >"""""
+            <h2 className="heading-responsive font-bold mb-4">"""""
+              <span className="text-gradient">Specialized Solutions</span>""""
+            </h2>"""""
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Discover our specialized technology solutions designed for specific industries and use cases""
+            </p>"""
+          </motion.div>""""
+"""""
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">""
+            {ADDITIONAL_INNOVATIVE_SERVICES_2025.map((service, index) => ("""
+              <motion.div""""
+                key={service.id}"""""
+                className="card-futuristic text-center group""
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}""
+                transition={{ duration: 0.6, delay: index * 0.1 }}"""
+                whileHover={{ y: -5 }}""""
+              >"""""
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">"""""
+                  <Rocket className="w-8 h-8 text-white"  />                </div>""""
+"""""
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">""
+                  {service.title}"""
+                </h3>""""
+"""""
+                <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">""
+                  {service.description}"""
+                </p>""""
+"""""
+                <div className="text-zion-cyan font-bold mb-4">
+                  {service.marketPrice}`
+                </div>`"`
+`"`"`
+                <Link`"`"`"`
+                  to={`/services/${service.id}`}"""""
+                  className="btn-neon w-full""
+                >
+                  Explore Solution;
+                </Link>
+              </motion.div>
+            ))}
 
         {/* CTA Section */}
         <motion.div;
-          className="text-center""
+          className="text-center"""
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
@@ -286,7 +357,7 @@ const ServicesPage: React.FC = () => {}
             <div className="flex flex-wrap justify-center gap-4">
               <motion.a;
                 href={`tel:${contactInfo.mobile}`}
-                className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-3 rounded-lg font-medium hover:from-green-600 hover:to-green-700 transition-all duration-200 flex items-center""
+                className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-3 rounded-lg font-medium hover:from-green-600 hover:to-green-700 transition-all duration-200 flex items-center"""
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -294,8 +365,8 @@ const ServicesPage: React.FC = () => {}
                 Call Now for Free Consultation;
               </motion.a>
               <motion.a;
-                href="/pricing""
-                className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-medium hover:bg-cyan-400/10 transition-all duration-200 flex items-center""
+                href="/pricing"""
+                className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-medium hover:bg-cyan-400/10 transition-all duration-200 flex items-center"""
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

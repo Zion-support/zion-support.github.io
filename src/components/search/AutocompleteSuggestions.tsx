@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";""
+import React, { useEffect, useRef } from "react";"""
 import { SearchSuggestion, SearchHighlight } from "@/types/search";
 interface AutocompleteSuggestionsProps {}
   suggestions: SearchSuggestion[];
@@ -18,6 +18,8 @@ const highlightMatch: any = (text: string, searchTerm: string): SearchHighlight 
   const index: any = lowerText.indexOf(lowerSearchTerm);
   if (index === -1) {}
 '
+''
+'''
     return { before: '', match: text, after: '' };
   }
   return {}
@@ -26,14 +28,14 @@ const highlightMatch: any = (text: string, searchTerm: string): SearchHighlight 
     after: text.substring(index + searchTerm.length)
   };
 };
-export function AutocompleteSuggestions(function AutocompleteSuggestions({}
+export function AutocompleteSuggestions(function AutocompleteSuggestions(function AutocompleteSuggestions({}
   suggestions, 
   searchTerm, 
   onSelectSuggestion,
   visible,
   highlightedIndex, 
   listId;
-}: AutocompleteSuggestionsProps) {): any {}
+}: AutocompleteSuggestionsProps) {): any {): any {}
   const listRef: any = useRef<HTMLUListElement>(null);
   const highlightedItemRef: any = useRef<HTMLLIElement>(null);
   useEffect(() => {}
@@ -43,20 +45,20 @@ export function AutocompleteSuggestions(function AutocompleteSuggestions({}
     // and the highlightedItemRef.current will point to the correct item when those change.
     if (visible && suggestions.length > 0 && highlightedItemRef.current && highlightedIndex !== -1) {}
       highlightedItemRef.current.scrollIntoView({}
-""
-        block: "nearest",""
-        inline: "nearest""
+"""
+        block: "nearest","""
+        inline: "nearest"""
       });
     }
   }, [visible, suggestions]); // Removed highlightedIndex as per lint warning;
   if(!visible || suggestions.length === 0) return null;
-  return (""
+  return ("""
     <div className="absolute z-50 top-full left-0 right-0 w-full mt-1 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg max-h-64 overflow-y-auto">
       <ul;
         ref={listRef}
-        id={listId}""
-        role="listbox"""
-        className="py-2""
+        id={listId}"""
+        role="listbox""""
+        className="py-2"""
       >
         {suggestions.map((suggestion, index) => {}
           const highlight: any = highlightMatch(suggestion.text, searchTerm);
@@ -65,21 +67,21 @@ export function AutocompleteSuggestions(function AutocompleteSuggestions({}
             <li;
               key={`${suggestion.type}-${index}`}`
               id={`suggestion-item-${index}`}
-              ref={isHighlighted ? highlightedItemRef : null}""
-              role="option""
+              ref={isHighlighted ? highlightedItemRef : null}"""
+              role="option"""
               aria-selected={isHighlighted}'`
               className={`px-4 py-2 cursor-pointer ${isHighlighted ? 'bg-zion-blue-light' : 'hover:bg-zion-blue-light/20'}`}
               onMouseDown={(e) => {}
                 e.preventDefault();
                 onSelectSuggestion(suggestion.text);
               }}
-            >""
+            >"""
               <div className="flex items-center justify-between">
                 <div>
-                  <span>{highlight.before}</span>""
+                  <span>{highlight.before}</span>"""
                   <span className="font-bold text-zion-purple">{highlight.match}</span>
                   <span>{highlight.after}</span>
-                </div>""
+                </div>"""
                 <span className="text-xs text-zion-slate-light capitalize">
                   {suggestion.type}
                 </span>

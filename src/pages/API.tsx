@@ -1,23 +1,25 @@
-url = "https://api.ziontechgroup.com/v1/ai/text/analyze"""
+url = "https://api.ziontechgroup.com/v1/ai/text/analyze""""
 headers = {"Authorization": "Bearer YOUR_API_KEY"}
 
 response = requests.post(url, json={}
-""
 """
-    "text": "Your text here","""
-    "analysis_type": "sentiment""
+""""
+    "text": "Your text here",""""
+    "analysis_type": "sentiment"""
 }) print(response.json () ) `,
     category: 'AI & ML'
   },
   {}
 '
-    title: 'Cloud Resource Management','
-    language: 'JavaScript','`
-    description: 'Example of managing cloud resources through our infrastructure API.',``
-    code: `
-
-`
-    return response.data;`'`
+''
+'''`
+    title: 'Cloud Resource Management',''`'`
+    language: 'JavaScript','`'`'`
+    description: 'Example of managing cloud resources through our infrastructure API.',````
+    code: ``
+`'`
+`'`'`
+    return response.data;`'`'`'`
 };`,'    category: 'Cloud & DevOps'
   },
   {}
@@ -26,16 +28,16 @@ response = requests.post(url, json={}
     language: 'Python','`
     description: 'Implement real-time threat detection using our security API.',``
     code: `import requests;
-""
-def check_threat(ip_address): any;"""
-    url = "https://api.ziontechgroup.com/v1/security/threat-check"""
+"""
+def check_threat(ip_address): any;""""
+    url = "https://api.ziontechgroup.com/v1/security/threat-check""""
     headers = {"Authorization": "Bearer YOUR_API_KEY"}
 
     response = requests.post(url, json={}
-""
 """
-        "ip": ip_address,"""
-        "check_type": "comprehensive""
+""""
+        "ip": ip_address,""""
+        "check_type": "comprehensive"""
     })`
 ``
     return response.json()`,'
@@ -43,22 +45,22 @@ def check_threat(ip_address): any;"""
   }
 ];
 
-export default function API(function API() {): any {}
+export default function API(function API(function API() {): any {): any {}
 '
   const [searchQuery, setSearchQuery] = useState('');'
   const [selectedCategory, setSelectedCategory] = useState('All');
-""
-  return ("""
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">""
-      <SEO """
-        title="API Reference - Zion Tech Group""        description="Comprehensive API documentation for Zion Tech Group services. Integrate with our platform using RESTful APIs, SDKs, and developer tools.""
-       />
-""
-      {/* Hero Section */}"""
-      <section className="relative pt-32 pb-20 overflow-hidden">"""
-        <div className="absolute inset-0 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black" />"""
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,221,210,0.1),transparent_50%)]" />""
 """
+  return (""""
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"""
+      <SEO """"
+        title="API Reference - Zion Tech Group""        description="Comprehensive API documentation for Zion Tech Group services. Integrate with our platform using RESTful APIs, SDKs, and developer tools."""
+       />
+"""
+      {/* Hero Section */}""""
+      <section className="relative pt-32 pb-20 overflow-hidden">""""
+        <div className="absolute inset-0 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black" />""""
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,221,210,0.1),transparent_50%)]" />"""
+""""
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
             initial = {}
@@ -68,29 +70,29 @@ export default function API(function API() {): any {}
             animate = {}
   { opacity: 1,
   y: 0;
-}}""
-            transition={{ duration: 0.6 }}"""
-            className="text-center"""
-"""
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full border border-blue-400/30 mb-6">"""
+}}"""
+            transition={{ duration: 0.6 }}""""
+            className="text-center""""
+""""
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full border border-blue-400/30 mb-6">""""
               <Code className="w-5 h-5 text-blue-400 mr-2"  />"              <span className="text-blue-300 font-medium">API Reference</span>
-            </div>""
-"""
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">""
-              Developer"""
+            </div>"""
+""""
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"""
+              Developer""""
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-500 to-teal-400">
                 API Reference;
-              </span>""
-            </h1>"""
+              </span>"""
+            </h1>""""
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">'
               Integrate Zion Tech Group's cutting-edge services into your applications;
               with our comprehensive RESTful APIs. Build, deploy, and scale with confidence.
-            </p>""
-"""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
+            </p>"""
+""""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-cyan-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20">
-                Get API Key""
-              </button>"""
+                Get API Key"""
+              </button>""""
               <button className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-200">
                 View Documentation;
               </button>
@@ -98,9 +100,9 @@ export default function API(function API() {): any {}
           </motion.div>
         </div>
       </section>
-""
-      {/* Features Section */}"""
-      <section className="py-16 px-4">"""
+"""
+      {/* Features Section */}""""
+      <section className="py-16 px-4">""""
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -110,18 +112,18 @@ export default function API(function API() {): any {}
             whileInView = {}
   { opacity: 1,
   y: 0;
-}}""
-            transition={{ duration: 0.6 }}"""
-            className="text-center mb-16"""
-"""
+}}"""
+            transition={{ duration: 0.6 }}""""
+            className="text-center mb-16""""
+""""
             <h2 className="text-4xl font-bold text-white mb-4">
-              API Features""
-            </h2>"""
+              API Features"""
+            </h2>""""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Powerful tools for developers to build amazing applications;
             </p>
-          </motion.div>""
-"""
+          </motion.div>"""
+""""
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {apiCategories.map((category, index)  => (
               <motion.div;
@@ -138,24 +140,24 @@ export default function API(function API() {): any {}
   { duration: 0.6,
   delay: index * 0.1;
 }}
-                className="bg-slate - 800 / 50 border border-slate - 700 / 50 rounded-xl p - 6 hover:border-blue - 400 / 30 transition - all duration - 200 hover:scale -105""
-""
-}}"""
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 hover:scale-105"""
+                className="bg-slate - 800 / 50 border border-slate - 700 / 50 rounded-xl p - 6 hover:border-blue - 400 / 30 transition - all duration - 200 hover:scale -105"""
 """
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mb-4">"""
-                  <feature.icon className="w-6 h-6 text-blue-400" />""
-                </div>"""
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>"""
+}}""""
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 hover:scale-105""""
+""""
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mb-4">""""
+                  <feature.icon className="w-6 h-6 text-blue-400" />"""
+                </div>""""
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""""
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-""
-      {/* Endpoints Section */}"""
-      <section className="py-16 px-4 bg-slate-800/30">"""
+"""
+      {/* Endpoints Section */}""""
+      <section className="py-16 px-4 bg-slate-800/30">""""
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -165,18 +167,18 @@ export default function API(function API() {): any {}
             whileInView = {}
   { opacity: 1,
   y: 0;
-}}""
-            transition={{ duration: 0.6 }}"""
-            className="text-center mb-16"""
-"""
+}}"""
+            transition={{ duration: 0.6 }}""""
+            className="text-center mb-16""""
+""""
             <h2 className="text-4xl font-bold text-white mb-4">
-              API Endpoints""
-            </h2>"""
+              API Endpoints"""
+            </h2>""""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Explore our RESTful API endpoints;
             </p>
-          </motion.div>""
-"""
+          </motion.div>"""
+""""
           <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
             {quickStartExamples.map((example, index)  => (
               <motion.div;
@@ -193,11 +195,11 @@ export default function API(function API() {): any {}
   { duration: 0.6,
   delay: index * 0.1;
 }}
-                className="bg-slate - 800 / 50 border border-slate - 700 / 50 rounded-xl p - 6 hover:border-blue - 400 / 30 transition - all duration -200""
-""
-}}"""
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200"""
+                className="bg-slate - 800 / 50 border border-slate - 700 / 50 rounded-xl p - 6 hover:border-blue - 400 / 30 transition - all duration -200"""
 """
+}}""""
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200""""
+""""
                 <div className="flex items-center justify-between">""`
                   <div className="flex items-center space-x-4">``
                     <span className={`px-3 py-1 rounded-full text-sm font-semibold ${}
@@ -207,8 +209,8 @@ export default function API(function API() {): any {}
                       endpoint.method === 'PUT' ? 'bg-yellow-500/20 text-yellow-400' :''`
                       'bg-red-500/20 text-red-400'``
                     }`}>
-                      {endpoint.method}""
-                    </span>"""
+                      {endpoint.method}"""
+                    </span>""""
                     <code className="text-blue-300 font-mono text-lg">{endpoint.path}</code>`
                   </div>``
                   <span className={`px-3 py-1 rounded-full text-sm ${}
@@ -216,17 +218,17 @@ export default function API(function API() {): any {}
                     endpoint.auth === 'Required' ? 'bg-red-500/20 text-red-400' : 'bg-green-500/20 text-green-400'``
                   }`}>
                     {endpoint.auth}
-                  </span>""
-                </div>"""
+                  </span>"""
+                </div>""""
                 <p className="text-gray-300 mt-3">{endpoint.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-""
-      {/* SDKs Section */}"""
-      <section className="py-16 px-4">"""
+"""
+      {/* SDKs Section */}""""
+      <section className="py-16 px-4">""""
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -236,18 +238,18 @@ export default function API(function API() {): any {}
             whileInView = {}
   { opacity: 1,
   y: 0;
-}}""
-            transition={{ duration: 0.6 }}"""
-            className="text-center mb-16"""
-"""
+}}"""
+            transition={{ duration: 0.6 }}""""
+            className="text-center mb-16""""
+""""
             <h2 className="text-4xl font-bold text-white mb-4">
-              SDKs & Libraries""
-            </h2>"""
+              SDKs & Libraries"""
+            </h2>""""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Official SDKs for popular programming languages;
             </p>
-          </motion.div>""
-"""
+          </motion.div>"""
+""""
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {sdks.map((sdk, index) => (
               <motion.div;
@@ -264,19 +266,19 @@ export default function API(function API() {): any {}
   { duration: 0.6,
   delay: index * 0.1;
 }}
-                className="bg-slate - 800 / 50 border border-slate - 700 / 50 rounded-xl p - 6 hover:border-blue - 400 / 30 transition - all duration - 200 hover:scale -105""
-""
-}}"""
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 hover:scale-105"""
+                className="bg-slate - 800 / 50 border border-slate - 700 / 50 rounded-xl p - 6 hover:border-blue - 400 / 30 transition - all duration - 200 hover:scale -105"""
 """
-                <div className="text-4xl mb-4">{sdk.icon}</div>"""
-                <h3 className="text-xl font-semibold text-white mb-2">{sdk.name}</h3>"""
-                <div className="flex space-x-2">"""
-                  <button className="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-lg hover:bg-blue-500/30 transition-colors text-sm">"""
+}}""""
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 hover:scale-105""""
+""""
+                <div className="text-4xl mb-4">{sdk.icon}</div>""""
+                <h3 className="text-xl font-semibold text-white mb-2">{sdk.name}</h3>""""
+                <div className="flex space-x-2">""""
+                  <button className="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-lg hover:bg-blue-500/30 transition-colors text-sm">""""
                     <Download className="w-4 h-4 inline mr-1"  />
-                    Download""
-                  </button>"""
-                  <button className="px-4 py-2 bg-slate-700/50 text-gray-300 rounded-lg hover:bg-slate-600/50 transition-colors text-sm">"""
+                    Download"""
+                  </button>""""
+                  <button className="px-4 py-2 bg-slate-700/50 text-gray-300 rounded-lg hover:bg-slate-600/50 transition-colors text-sm">""""
                     <BookOpen className="w-4 h-4 inline mr-1"  />                    Docs;
                   </button>
                 </div>
@@ -284,9 +286,9 @@ export default function API(function API() {): any {}
           </div>
         </div>
       </section>
-""
-      {/* CTA Section */}"""
-      <section className="py-16 px-4">"""
+"""
+      {/* CTA Section */}""""
+      <section className="py-16 px-4">""""
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial = {}
@@ -297,26 +299,27 @@ export default function API(function API() {): any {}
   { opacity: 1,
   y: 0;
 }}
-            transition={{ duration: 0.6 }}""
-"""
+            transition={{ duration: 0.6 }}"""
+""""
             <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Get Started?""
-            </h2>"""
+              Ready to Get Started?"""
+            </h2>""""
             <p className="text-xl text-white/90 mb-8">
               Get API access, explore our documentation, and start integrating;
-              Zion Tech Group services into your applications today.""
-            </p>"""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
+              Zion Tech Group services into your applications today."""
+            </p>""""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-cyan-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20">
-                Get API Key""
-              </button>"""
+                Get API Key"""
+              </button>""""
               <button className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-200">
                 View Full Documentation;
               </button>
             </div>;
           </motion.div>;
         </div>;
-      </section>;
-    </div>;) };
-export default API;'"`
+      </section>;'"`
+    </div>;) };'"`'"`
+export default API;'"`'"`'"`
+'"`'"`'"`
 '"`'"`

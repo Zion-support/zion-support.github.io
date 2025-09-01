@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';''
 import { motion  } from 'framer-motion';
-export default function Page(function Page() {): any {}
+export default function Page(function Page(function Page() {): any {): any {}
 ,
     {}
       id: 'cloud-infrastructure',
@@ -58,12 +58,12 @@ export default function Page(function Page() {): any {}
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
-
+  };""
+"""
   return (<div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
       {/* Hero Section */}
       <motion.section;
-        className="relative py-20 overflow-hidden""
+        className="relative py-20 overflow-hidden"""
         initial={{ opacity: 0 }}
         animate={{ opacity: isVisible ? 1 : 0 }}
         transition={{ duration: 1 }}
@@ -71,20 +71,20 @@ export default function Page(function Page() {): any {}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h1;
-            className="text-6xl md:text-7xl font-bold text-white mb-8""
+            className="text-6xl md:text-7xl font-bold text-white mb-8"""
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
+            transition={{ duration: 0.8, delay: 0.2 }}""
+          >"""
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Zion Tech Group;
             </span>
             <br />
             <span className="text-white">2032</span>
           </motion.h1>
-          
+
           <motion.p;
-            className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed""
+            className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"""
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -93,20 +93,20 @@ export default function Page(function Page() {): any {}
 
           {/* Contact Information */}
           <motion.div;
-            className="flex flex-wrap justify-center gap-6 text-gray-300 mb-12""
+            className="flex flex-wrap justify-center gap-6 text-gray-300 mb-12"""
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <div className="flex items-center gap-2">
+            transition={{ duration: 0.8, delay: 0.6 }}""
+          >"""
+            <div className="flex items-center gap-2">"""
               <Phone className="w-5 h-5 text-blue-400" />
-              <span>{contact.mobile}</span>
-            </div>
-            <div className="flex items-center gap-2">
+              <span>{contact.mobile}</span>""
+            </div>"""
+            <div className="flex items-center gap-2">"""
               <Mail className="w-5 h-5 text-blue-400" />
-              <span>{contact.email}</span>
-            </div>
-            <div className="flex items-center gap-2">
+              <span>{contact.email}</span>""
+            </div>"""
+            <div className="flex items-center gap-2">"""
               <MapPin className="w-5 h-5 text-blue-400" />
               <span>{contact.address}</span>
             </div>
@@ -114,11 +114,11 @@ export default function Page(function Page() {): any {}
 
           {/* CTA Buttons */}
           <motion.div;
-            className="flex flex-col sm:flex-row gap-4 justify-center""
+            className="flex flex-col sm:flex-row gap-4 justify-center"""
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
+            transition={{ duration: 0.8, delay: 0.8 }}""
+          >"""
             <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
               Get Started;
             </button>
@@ -133,15 +133,15 @@ export default function Page(function Page() {): any {}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-            className="text-center mb-16""
+            className="text-center mb-16"""
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our <span className="text-blue-400">Services</span>
-            </h2>
+            viewport={{ once: true }}""
+          >"""
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"""
+              Our <span className="text-blue-400">Services</span>""
+            </h2>"""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover our comprehensive range of innovative solutions designed to drive your business forward;
             </p>
@@ -149,7 +149,7 @@ export default function Page(function Page() {): any {}
 
           {/* Category Tabs */}
           <motion.div;
-            className="flex flex-wrap justify-center gap-4 mb-12""
+            className="flex flex-wrap justify-center gap-4 mb-12"""
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -171,7 +171,7 @@ export default function Page(function Page() {): any {}
 
           {/* Services Grid */}
           <motion.div;
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8""
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"""
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -186,38 +186,38 @@ export default function Page(function Page() {): any {}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-              >
-                {service.popular && (
-                  <div className="inline-flex items-center gap-2 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium mb-4">
+              >""
+                {service.popular && ("""
+                  <div className="inline-flex items-center gap-2 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium mb-4">"""
                     <Star className="w-4 h-4" />
                     Most Popular;
                   </div>
-                )}
-                
-                <div className="flex items-center gap-4 mb-4">
+                )}""
+                """
+                <div className="flex items-center gap-4 mb-4">"""
                   <div className="text-blue-400">
-                    {service.icon}
-                  </div>
+                    {service.icon}""
+                  </div>"""
                   <h3 className="text-xl font-semibold text-white">{service.name}</h3>
-                </div>
-                
-                <p className="text-gray-300 mb-4">{service.description}</p>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-medium text-gray-400 mb-2">Key Features:</h4>
-                  <ul className="space-y-1">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
+                </div>""
+                """
+                <p className="text-gray-300 mb-4">{service.description}</p>""
+                """
+                <div className="mb-4">"""
+                  <h4 className="text-sm font-medium text-gray-400 mb-2">Key Features:</h4>"""
+                  <ul className="space-y-1">""
+                    {service.features.map((feature, idx) => ("""
+                      <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">"""
                         <CheckCircle className="w-4 h-4 text-green-400" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                </div>
-                
-                <div className="flex items-center justify-between">
-                  <span className="text-blue-400 font-semibold">{service.pricing}</span>
-                  <button className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors">
+                </div>""
+                """
+                <div className="flex items-center justify-between">"""
+                  <span className="text-blue-400 font-semibold">{service.pricing}</span>"""
+                  <button className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors">"""
                     Learn More <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -231,47 +231,47 @@ export default function Page(function Page() {): any {}
       <section className="py-20 bg-gray-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center""
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"""
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
-            <div>
-              <div className="text-4xl font-bold text-blue-400 mb-2">500+</div>
+          >""
+            <div>"""
+              <div className="text-4xl font-bold text-blue-400 mb-2">500+</div>"""
               <div className="text-gray-300">Happy Clients</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-purple-400 mb-2">1000+</div>
+            </div>""
+            <div>"""
+              <div className="text-4xl font-bold text-purple-400 mb-2">1000+</div>"""
               <div className="text-gray-300">Projects Completed</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
+            </div>""
+            <div>"""
+              <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>"""
               <div className="text-gray-300">Uptime SLA</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-pink-400 mb-2">24/7</div>
+            </div>""
+            <div>"""
+              <div className="text-4xl font-bold text-pink-400 mb-2">24/7</div>"""
               <div className="text-gray-300">Support Available</div>
             </div>
           </motion.div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-20">
+""
+      {/* CTA Section */}"""
+      <section className="py-20">"""
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+            viewport={{ once: true }}""
+          >"""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join hundreds of companies already leveraging our cutting-edge solutions to stay ahead of the competition.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              Ready to Transform Your Business?""
+            </h2>"""
+            <p className="text-xl text-gray-300 mb-8">""
+              Join hundreds of companies already leveraging our cutting-edge solutions to stay ahead of the competition.</p>"""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
                 Schedule a Consultation;
               </button>
@@ -285,5 +285,5 @@ export default function Page(function Page() {): any {}
     </div>
   );
 };
-
-export default EnhancedMainPage;
+'"`
+export default EnhancedMainPage;'"`'"`

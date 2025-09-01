@@ -56,28 +56,28 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = []
       "Performance analytics",
       "A/B testing tools",
       "Plagiarism detection",
-      "Content scheduling""
+      "Content scheduling"""
     ],
     benefits: []
       "Reduce content creation time by 80%",
       "Improve SEO rankings by 40%",
       "Increase engagement by 60%",
       "Automated content distribution",
-      "Scalable content strategy""
+      "Scalable content strategy"""
     ],
     useCases: []
       "Blog content creation",
       "Social media marketing",
       "Email campaigns",
       "Product descriptions",
-      "Marketing copy""
+      "Marketing copy"""
     ],
     targetAudience: []
       "Marketing agencies",
       "E-commerce businesses",
       "Content creators",
       "Small businesses",
-      "Startups""
+      "Startups"""
     ],
     tags: ["AI", "Content Creation", "Marketing", "SEO", "Social Media"],
     estimatedDelivery: "2-4 weeks",
@@ -88,7 +88,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = []
     contactInfo: {}
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com""
+      website: "https://ziontechgroup.com"""
     },
     technicalSpecs: {}
       technology: ["GPT-4", "BERT", "React", "Node.js", "MongoDB"],
@@ -100,7 +100,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = []
     competitors: ["Jasper", "Copy.ai", "Writesonic", "Grammarly"],
     marketSize: "$15.8B (2025)",
     demoUrl: "https://ziontechgroup.com/demo/ai-content",
-    documentationUrl: "https://ziontechgroup.com/docs/ai-content""
+    documentationUrl: "https://ziontechgroup.com/docs/ai-content"""
   },
 
   // Blockchain-Based Supply Chain Transparency Platform;
@@ -123,28 +123,28 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = []
       "Inventory optimization",
       "Payment automation",
       "Audit trail",
-      "Mobile app access""
+      "Mobile app access"""
     ],
     benefits: []
       "Reduce supply chain costs by 25%",
       "Improve transparency by 100%",
       "Eliminate counterfeit products",
       "Automated compliance reporting",
-      "Enhanced brand trust""
+      "Enhanced brand trust"""
     ],
     useCases: []
       "Food safety tracking",
       "Luxury goods authentication",
       "Pharmaceutical supply chain",
       "Sustainable sourcing",
-      "Import/export compliance""
+      "Import/export compliance"""
     ],
     targetAudience: []
       "Manufacturing companies",
       "Retail chains",
       "Food producers",
       "Pharmaceutical companies",
-      "Luxury brands""
+      "Luxury brands"""
     ],
     tags: ["Blockchain", "Supply Chain", "Transparency", "IoT", "Smart Contracts"],
     estimatedDelivery: "8-12 weeks",
@@ -155,7 +155,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = []
     contactInfo: {}
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com""
+      website: "https://ziontechgroup.com"""
     },
     technicalSpecs: {}
       technology: ["Ethereum", "Hyperledger", "IPFS", "React", "Node.js"],
@@ -167,7 +167,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = []
     competitors: ["IBM Food Trust", "VeChain", "Walmart Blockchain"],
     marketSize: "$12.3B (2025)",
     demoUrl: "https://ziontechgroup.com/demo/blockchain-supply-chain",
-    documentationUrl: "https://ziontechgroup.com/docs/blockchain-supply-chain""
+    documentationUrl: "https://ziontechgroup.com/docs/blockchain-supply-chain"""
   },
 
   // AI-Powered Customer Service Automation Platform;
@@ -190,28 +190,28 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = []
       "Performance analytics",
       "Voice recognition",
       "Multi-language support",
-      "Human handoff capabilities""
+      "Human handoff capabilities"""
     ],
     benefits: []
       "Reduce response time by 90%",
       "Lower support costs by 60%",
       "Improve customer satisfaction by 40%",
       "24/7 customer support",
-      "Scalable support operations""
+      "Scalable support operations"""
     ],
     useCases: []
       "E-commerce customer support",
       "SaaS product support",
       "Banking customer service",
       "Healthcare patient support",
-      "Travel booking assistance""
+      "Travel booking assistance"""
     ],
     targetAudience: []
       "E-commerce businesses",
       "SaaS companies",
       "Financial institutions",
       "Healthcare providers",
-      "Travel companies""
+      "Travel companies"""
     ],
     tags: ["AI", "Customer Service", "Chatbot", "Automation", "NLP"],
     estimatedDelivery: "4-6 weeks",
@@ -222,7 +222,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = []
     contactInfo: {}
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com""
+      website: "https://ziontechgroup.com"""
     },
     technicalSpecs: {}
       technology: ["GPT-4", "BERT", "React", "Node.js", "Redis"],
@@ -234,7 +234,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = []
     competitors: ["Intercom", "Zendesk", "Freshdesk", "Drift"],
     marketSize: "$18.7B (2025)",
     demoUrl: "https://ziontechgroup.com/demo/ai-customer-service",
-    documentationUrl: "https://ziontechgroup.com/docs/ai-customer-service""
+    documentationUrl: "https://ziontechgroup.com/docs/ai-customer-service"""
   },
 
   // Quantum-Safe Cybersecurity Platform;
@@ -257,28 +257,28 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = []
       "Security analytics",
       "Vulnerability assessment",
       "Penetration testing",
-      "Security training platform""
+      "Security training platform"""
     ],
     benefits: []
       "Future-proof against quantum threats",
       "Reduce security breaches by 95%",
       "Automated compliance reporting",
       "Advanced threat intelligence",
-      "Comprehensive security coverage""
+      "Comprehensive security coverage"""
     ],
     useCases: []
       "Financial data protection",
       "Government communications",
       "Healthcare data security",
       "Critical infrastructure",
-      "Cloud security""
+      "Cloud security"""
     ],
     targetAudience: []
       "Financial institutions",
       "Government agencies",
       "Healthcare organizations",
       "Critical infrastructure",
-      "Large enterprises""
+      "Large enterprises"""
     ],
     tags: ["Quantum-Safe", "Cybersecurity", "Encryption", "Zero-Trust", "Compliance"],
     estimatedDelivery: "6-10 weeks",
@@ -289,7 +289,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = []
     contactInfo: {}
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com""
+      website: "https://ziontechgroup.com"""
     },
     technicalSpecs: {}
       technology: ["Lattice-based cryptography", "Hash-based signatures", "Code-based cryptography", "Python", "Rust"],
@@ -301,7 +301,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = []
     competitors: ["IBM Quantum Safe", "Microsoft Post-Quantum", "Google Quantum Security"],
     marketSize: "$8.9B (2025)",
     demoUrl: "https://ziontechgroup.com/demo/quantum-safe-cybersecurity",
-    documentationUrl: "https://ziontechgroup.com/docs/quantum-safe-cybersecurity""
+    documentationUrl: "https://ziontechgroup.com/docs/quantum-safe-cybersecurity"""
   },
 
   // AI-Powered Predictive Maintenance Platform;
@@ -324,28 +324,28 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = []
       "Mobile app access",
       "Alert management",
       "Historical data analysis",
-      "Integration with CMMS""
+      "Integration with CMMS"""
     ],
     benefits: []
       "Reduce unplanned downtime by 70%",
       "Lower maintenance costs by 40%",
       "Extend equipment lifespan by 30%",
       "Improve operational efficiency",
-      "Predictive insights""
+      "Predictive insights"""
     ],
     useCases: []
       "Manufacturing equipment",
       "HVAC systems",
       "Transportation fleets",
       "Energy infrastructure",
-      "Building management""
+      "Building management"""
     ],
     targetAudience: []
       "Manufacturing companies",
       "Facility managers",
       "Transportation companies",
       "Energy providers",
-      "Property managers""
+      "Property managers"""
     ],
     tags: ["AI", "IoT", "Predictive Maintenance", "Machine Learning", "Analytics"],
     estimatedDelivery: "6-8 weeks",
@@ -356,7 +356,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = []
     contactInfo: {}
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com""
+      website: "https://ziontechgroup.com"""
     },
     technicalSpecs: {}
       technology: ["TensorFlow", "Python", "React", "Node.js", "MQTT"],
@@ -368,7 +368,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = []
     competitors: ["Uptake", "Predictronics", "Augury", "Senseye"],
     marketSize: "$11.2B (2025)",
     demoUrl: "https://ziontechgroup.com/demo/ai-predictive-maintenance",
-    documentationUrl: "https://ziontechgroup.com/docs/ai-predictive-maintenance""
+    documentationUrl: "https://ziontechgroup.com/docs/ai-predictive-maintenance"""
   },
 
   // Metaverse Development Platform;
@@ -391,28 +391,28 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = []
       "Analytics dashboard",
       "Multi-platform support",
       "NFT integration",
-      "Live streaming capabilities""
+      "Live streaming capabilities"""
     ],
     benefits: []
       "Create immersive experiences",
       "Monetize virtual spaces",
       "Engage customers in new ways",
       "Reduce physical event costs",
-      "Global reach and accessibility""
+      "Global reach and accessibility"""
     ],
     useCases: []
       "Virtual events and conferences",
       "Virtual retail experiences",
       "Educational platforms",
       "Gaming and entertainment",
-      "Virtual real estate""
+      "Virtual real estate"""
     ],
     targetAudience: []
       "Event organizers",
       "Retail brands",
       "Educational institutions",
       "Gaming companies",
-      "Real estate developers""
+      "Real estate developers"""
     ],
     tags: ["Metaverse", "VR/AR", "3D", "Immersive", "Virtual Commerce"],
     estimatedDelivery: "8-12 weeks",
@@ -423,7 +423,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = []
     contactInfo: {}
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com""
+      website: "https://ziontechgroup.com"""
     },
     technicalSpecs: {}
       technology: ["Unity", "Unreal Engine", "WebGL", "WebXR", "Three.js"],
@@ -435,7 +435,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = []
     competitors: ["Meta Horizon", "Roblox", "Decentraland", "The Sandbox"],
     marketSize: "$13.7B (2025)",
     demoUrl: "https://ziontechgroup.com/demo/metaverse-platform",
-    documentationUrl: "https://ziontechgroup.com/docs/metaverse-platform""
+    documentationUrl: "https://ziontechgroup.com/docs/metaverse-platform"""
   },
 
   // AI-Powered Legal Document Analysis Platform;
@@ -458,28 +458,28 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = []
       "Due diligence automation",
       "Regulatory updates",
       "Case law analysis",
-      "Legal workflow automation""
+      "Legal workflow automation"""
     ],
     benefits: []
       "Reduce document review time by 80%",
       "Improve accuracy by 60%",
       "Lower legal costs by 50%",
       "Automated compliance checking",
-      "Risk mitigation""
+      "Risk mitigation"""
     ],
     useCases: []
       "Contract review and negotiation",
       "Due diligence processes",
       "Compliance monitoring",
       "Legal research",
-      "Regulatory reporting""
+      "Regulatory reporting"""
     ],
     targetAudience: []
       "Law firms",
       "Corporate legal departments",
       "Compliance officers",
       "Risk managers",
-      "Legal consultants""
+      "Legal consultants"""
     ],
     tags: ["AI", "Legal Tech", "Document Analysis", "Compliance", "Risk Management"],
     estimatedDelivery: "6-8 weeks",
@@ -490,7 +490,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = []
     contactInfo: {}
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com""
+      website: "https://ziontechgroup.com"""
     },
     technicalSpecs: {}
       technology: ["BERT", "GPT-4", "Python", "React", "PostgreSQL"],
@@ -502,7 +502,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = []
     competitors: ["Kira Systems", "Luminance", "eBrevia", "LawGeex"],
     marketSize: "$9.8B (2025)",
     demoUrl: "https://ziontechgroup.com/demo/ai-legal-analysis",
-    documentationUrl: "https://ziontechgroup.com/docs/ai-legal-analysis""
+    documentationUrl: "https://ziontechgroup.com/docs/ai-legal-analysis"""
   },
 
   // Green Tech Sustainability Platform;
@@ -525,28 +525,28 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = []
       "Renewable energy integration",
       "Environmental impact assessment",
       "Sustainability goal setting",
-      "Stakeholder engagement""
+      "Stakeholder engagement"""
     ],
     benefits: []
       "Reduce carbon footprint by 30%",
       "Lower energy costs by 25%",
       "Improve ESG ratings",
       "Compliance automation",
-      "Enhanced brand reputation""
+      "Enhanced brand reputation"""
     ],
     useCases: []
       "Corporate sustainability",
       "Manufacturing optimization",
       "Supply chain management",
       "ESG reporting",
-      "Environmental compliance""
+      "Environmental compliance"""
     ],
     targetAudience: []
       "Large corporations",
       "Manufacturing companies",
       "Retail chains",
       "Government agencies",
-      "Non-profit organizations""
+      "Non-profit organizations"""
     ],
     tags: ["Sustainability", "Green Tech", "ESG", "Carbon Tracking", "Environmental Management"],
     estimatedDelivery: "6-10 weeks",
@@ -557,7 +557,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = []
     contactInfo: {}
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com""
+      website: "https://ziontechgroup.com"""
     },
     technicalSpecs: {}
       technology: ["IoT sensors", "Machine Learning", "React", "Node.js", "PostgreSQL"],
@@ -569,7 +569,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = []
     competitors: ["Watershed", "Normative", "Persefoni", "Carbon Analytics"],
     marketSize: "$14.2B (2025)",
     demoUrl: "https://ziontechgroup.com/demo/green-tech-sustainability",
-    documentationUrl: "https://ziontechgroup.com/docs/green-tech-sustainability""
+    documentationUrl: "https://ziontechgroup.com/docs/green-tech-sustainability"""
   },
 
   // AI-Powered Recruitment Platform;
@@ -592,28 +592,28 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = []
       "Performance analytics",
       "Talent pipeline management",
       "Background verification",
-      "Onboarding automation""
+      "Onboarding automation"""
     ],
     benefits: []
       "Reduce hiring time by 60%",
       "Improve candidate quality by 40%",
       "Lower recruitment costs by 50%",
       "Automated screening process",
-      "Better candidate experience""
+      "Better candidate experience"""
     ],
     useCases: []
       "Corporate recruitment",
       "Staffing agencies",
       "Startup hiring",
       "Remote team building",
-      "Diversity hiring""
+      "Diversity hiring"""
     ],
     targetAudience: []
       "HR departments",
       "Recruitment agencies",
       "Startups",
       "Large enterprises",
-      "Remote companies""
+      "Remote companies"""
     ],
     tags: ["AI", "Recruitment", "HR Tech", "Talent Acquisition", "Automation"],
     estimatedDelivery: "4-6 weeks",
@@ -624,7 +624,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = []
     contactInfo: {}
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com""
+      website: "https://ziontechgroup.com"""
     },
     technicalSpecs: {}
       technology: ["NLP", "Machine Learning", "React", "Node.js", "MongoDB"],
@@ -636,6 +636,6 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = []
     competitors: ["HireVue", "Pymetrics", "HiredScore", "Entelo"],
     marketSize: "$16.3B (2025)",
     demoUrl: "https://ziontechgroup.com/demo/ai-recruitment",
-    documentationUrl: "https://ziontechgroup.com/docs/ai-recruitment""
+    documentationUrl: "https://ziontechgroup.com/docs/ai-recruitment"""
   }
 ];

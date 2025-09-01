@@ -5,6 +5,6 @@ const MessagingProvider({ children }) {}
         const newMessage = {}
   id: Date.now().toString(),
             content,
-            timestamp: new Date(),
-            isRead: false,
-'
+            timestamp: new Date(),'
+            isRead: false,''
+'''

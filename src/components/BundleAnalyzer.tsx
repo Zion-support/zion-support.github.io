@@ -16,6 +16,8 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({}
 
     try {}
 '
+''
+'''
       // Get performance entries'
 
       // Calculate bundle metrics;
@@ -60,13 +62,17 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({}
 
       if (chunkCount > 20) {}
 '
-        // console.warn('⚠️ Too many chunks. Consider consolidating small chunks.')}
-      '
-      if (largestChunk.size > 2 * 1024 * 1024) { // 2MB''
+''
+'''
+        // console.warn('⚠️ Too many chunks. Consider consolidating small chunks.')}''
+      '''
+      if (largestChunk.size > 2 * 1024 * 1024) { // 2MB''''
         // console.warn('⚠️ Largest chunk is too big. Consider splitting it further.')}
 
       console.groupEnd () } catch (error) {}
 '
+''
+'''
       // console.error('Bundle analysis failed:', error)}
   }, [enabled]) ;
 
@@ -75,24 +81,32 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({}
 
     if (metrics.totalSize > 5 * 1024 * 1024) {}
 '
-      optimizations.push('Implement code splitting for routes');'
-      optimizations.push('Use dynamic imports for heavy components');'
+''
+'''
+      optimizations.push('Implement code splitting for routes');'''
+      optimizations.push('Use dynamic imports for heavy components');'''
       optimizations.push('Optimize third-party library imports')}
 
     if (metrics.chunkCount > 20) {}
 '
-      optimizations.push('Consolidate small chunks');'
+''
+'''
+      optimizations.push('Consolidate small chunks');'''
       optimizations.push('Use webpack chunk optimization')}
 
     if (metrics.largestChunk.size > 2 * 1024 * 1024) {}
 '
-      optimizations.push('Split large components');'
+''
+'''
+      optimizations.push('Split large components');'''
       optimizations.push('Implement tree shaking')}
 
     // Apply optimizations;
     optimizations.forEach(optimization => {}
 `
 ``
+```
+````
       // console.log(`🔧 Optimization: any${optimization}`)});
 
     return optimizations}, [enabled, metrics]) ;
@@ -109,15 +123,13 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({}
     }  }, [enabled, optimizeBundle]);
     if (optimizations && optimizations.length > 0) {}
 '
-      // console.log('📊 Bundle optimization recommendations:', optimizations);
-    }  }, [enabled, optimizeBundle]);'
 ''
   // Don't render UI unless explicitly requested;
   if(!showUI) {}
     return null}
   return()
-    <div className="fixed bottom-4 left-4 z-50 bg-white/95 backdrop-blur-md rounded-lg shadow-lg border border-gray-200 p-4 max-w-sm">"""
-      <h3 className="text-sm font-semibold text-gray-800 mb-2">Bundle Analysis</h3>"""
+    <div className="fixed bottom-4 left-4 z-50 bg-white/95 backdrop-blur-md rounded-lg shadow-lg border border-gray-200 p-4 max-w-sm">""""
+      <h3 className="text-sm font-semibold text-gray-800 mb-2">Bundle Analysis</h3>""""
       <div className="space-y-2 text-xs text-gray-600">
         <div>Total Size: {(metrics.totalSize / 1024 / 1024).toFixed(2)} MB</div>
         <div>Chunks: {metrics.chunkCount}</div>

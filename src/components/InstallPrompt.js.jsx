@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';'
+import React, { useEffect, useState } from 'react';'''
 import { Button } from '@/components/ui/button';
 
-      e.preventDefault();
-      setDeferred(e);
-    };'
-    window.addEventListener('beforeinstallprompt', handler);'
+      e.preventDefault();'
+      setDeferred(e);''
+    };'''
+    window.addEventListener('beforeinstallprompt', handler);'''
     return () => window.removeEventListener('beforeinstallprompt', handler);
   }, []);
   if (!deferred) return null;
@@ -24,5 +24,5 @@ import { Button } from '@/components/ui/button';
     </div>
   );
 };
-export default InstallPrompt;'""
-'"'""
+export default InstallPrompt;'"""
+'"'"""

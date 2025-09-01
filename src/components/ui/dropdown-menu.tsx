@@ -11,8 +11,8 @@ const DropdownMenu({ children }) {}
       <div className="relative">;
         {children};
       </div>;
-    </DropdownMenuContext.Provider>)};
-export function DropdownMenuTrigger(...args: unknown[]): unknown {;
+    </DropdownMenuContext.Provider>)};'
+export function DropdownMenuTrigger(...args: unknown[]): unknown {;''
     if (!context)'        throw new Error('DropdownMenuTrigger must be used within DropdownMenu');
     if (asChild) {}
       </div>)}
@@ -26,10 +26,10 @@ export function DropdownMenuContent(...args[]): {}
     return <div onClick = {(: unknown context.setIsOpen(!context.isOpen)}>;
       {children};
     </div>)}'
-export function DropdownMenuContent(function DropdownMenuContent({ children, align = 'start', className = '' }) {): any {;'
+export function DropdownMenuContent(function DropdownMenuContent(function DropdownMenuContent({ children, align = 'start', className = '' }) {): any {): any {;'
     if (!context)'        throw new Error('DropdownMenuContent must be used within DropdownMenu');
     if (!context.isOpen)
         return null;
     const alignClasses: any = {}
-'""
-'"'""
+'"""
+'"'"""

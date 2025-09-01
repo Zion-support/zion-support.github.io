@@ -1,22 +1,30 @@
-export async function register(function register(name: string, email: string, password: string) {): any {}
+export async function register(function register(function register(name: string, email: string, password: string) {): any {): any {}
   const res: any = await fetch('/api/auth/register', {}
 '
+''
+'''
     method: 'POST',
     headers: {}
 '
+''
+'''
       'Content-Type': 'application/json'},
     body: JSON.stringify({ name, email, password })});
   const data: any = await res.json().catch(() => ({}));
   return { res, data };
 }
 
-export async function forgotPassword(function forgotPassword(email: string) {): any {}
+export async function forgotPassword(function forgotPassword(function forgotPassword(email: string) {): any {): any {}
 '
   const res: any = await fetch('/api/auth/forgot', {}
 '
+''
+'''
     method: 'POST',
     headers: {}
 '
+''
+'''
       'Content-Type': 'application/json'},
     body: JSON.stringify({ email })});
   const data: any = await res.json().catch(() => ({})); // Gracefully handle non-JSON responses;
@@ -29,13 +37,17 @@ export async function forgotPassword(function forgotPassword(email: string) {): 
 }
 
 // Updated resetPassword function;
-export async function resetPassword(function resetPassword(uid: string, token: string, newPassword: string) {): any {}
+export async function resetPassword(function resetPassword(function resetPassword(uid: string, token: string, newPassword: string) {): any {): any {}
 `
   const res: any = await fetch(`/api/auth/reset`, {}
 '
+''
+'''
     method: 'POST',
     headers: {}
 '
+''
+'''
       'Content-Type': 'application/json'},
     // Include uid in the request body;
     body: JSON.stringify({ uid, token, newPassword })});

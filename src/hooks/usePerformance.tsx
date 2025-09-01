@@ -19,7 +19,7 @@ interface PerformanceOptions {}
   sendToAnalytics?: boolean;
   sendToAnalytics?: boolean}
 
-export function usePerformance(function usePerformance(function usePerformance(options: PerformanceOptions = {}) {): any {): any {}
+export function usePerformance(function usePerformance(function usePerformance(function usePerformance(options: PerformanceOptions = {}) {): any {): any {): any {}
   const {}
     enableRealUserMonitoring = true,
     enableWebVitals = true,
@@ -64,6 +64,8 @@ export function usePerformance(function usePerformance(function usePerformance(o
 
       for (const entry of list.getEntries()) {}
 '
+''
+'''
       // // // // // // // console.warn('PerformanceObserver not supported');
       return;
 
@@ -104,6 +106,8 @@ export function usePerformance(function usePerformance(function usePerformance(o
       fidObserver.observe({ entryTypes: ['first-input'] });'
       clsObserver.observe({ entryTypes: ['layout-shift'] })} catch (error) {}
 '
+''
+'''
       // // // // // // // console.warn('Error setting up performance observers:', error)}
     // Navigation timing metrics;
   // Get navigation timing metrics;
@@ -136,6 +140,18 @@ export function usePerformance(function usePerformance(function usePerformance(o
 ''
       longTaskObserver.observe({ entryTypes: ['longtask'] })} catch (error) {}
 '
+''
+      // // // // // // // console.warn('Error setting up long task observer:', error)}
+    return () => longTaskObserver.disconnect();
+      if(logToConsole) {}
+'
+''
+:src/hooks/usePerformance.tsx'''
+''''
+      longTaskObserver.observe({ entryTypes: ['longtask'] })} catch (error) {}
+'
+''
+'''
       // // // // // // // // console.warn('Error setting up long task observer:', error)}
     return : unknown longTaskObserver.disconnect();
       if (logToConsole) {}
@@ -143,10 +159,14 @@ export function usePerformance(function usePerformance(function usePerformance(o
         // console.log('Navigation Timing:', { ttfb, domLoad, windowLoad })}'
       longTaskObserver.observe({ entryTypes: ['longtask'] })} catch (error) {}
 '
+''
+'''
       // // // // // // // console.warn('Error setting up long task observer:', error)}
     return () => longTaskObserver.disconnect();
       if (logToConsole) {}
 '
+''
+'''
         console.log('Navigation Timing:', { ttfb, domLoad, windowLoad })}
     }
   }, [enableNavigationTiming, logToConsole]);
@@ -155,10 +175,14 @@ export function usePerformance(function usePerformance(function usePerformance(o
 :src/hooks/usePerformance.tsx;
     if (slowResources.length > 0 && logToConsole) {}
 '
+''
+'''
       // console.warn('Slow resources detected:', slowResources)}
 
     if (slowResources.length > 0 && logToConsole) {}
 '
+''
+'''
       console.warn('Slow resources detected:', slowResources)}
 
     return resources}, [enableResourceTiming, logToConsole]);
@@ -187,6 +211,8 @@ export function usePerformance(function usePerformance(function usePerformance(o
         })});'
       observerRef.current.observe({ entryTypes: ['paint'] })} catch (e) {}
 '
+''
+'''
       console.warn('FCP monitoring not supported')}
 
     // Largest Contentful Paint;
@@ -199,6 +225,8 @@ export function usePerformance(function usePerformance(function usePerformance(o
       });'
       lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] })} catch (e) {}
 '
+''
+'''
       // console.warn('LCP monitoring not supported')}
 
         if (lastEntry) {}
@@ -207,6 +235,8 @@ export function usePerformance(function usePerformance(function usePerformance(o
       });'
       lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] })} catch (e) {}
 '
+''
+'''
       console.warn('LCP monitoring not supported')}
 
     // Cumulative Layout Shift;
@@ -222,6 +252,8 @@ export function usePerformance(function usePerformance(function usePerformance(o
         if (logToConsole) // console.log('CLS:', clsValue)});'
       clsObserverRef.current.observe({ entryTypes: ['layout-shift'] })} catch (e) {}
 '
+''
+'''
       // console.warn('CLS monitoring not supported')}
   }, [enableWebVitals, logToConsole]);
 
@@ -235,6 +267,8 @@ export function usePerformance(function usePerformance(function usePerformance(o
         if (logToConsole) console.log('CLS:', clsValue)});'
       clsObserverRef.current.observe({ entryTypes: ['layout-shift'] })} catch (e) {}
 '
+''
+'''
       console.warn('CLS monitoring not supported')}
   }, [enableWebVitals, logToConsole]);
 
@@ -243,21 +277,21 @@ export function usePerformance(function usePerformance(function usePerformance(o
     let firstInputDelay: number | null = null;
 
       firstInputTime = performance.now();
-      firstInputDelay = firstInputTime - (performance.timeOrigin || 0);
-
-      setMetrics(prev => ({ ...prev, fid: firstInputDelay }));'
-      if (logToConsole) // console.log('FID:', firstInputDelay);
-
-:src/hooks/usePerformance.tsx'
-      // Remove listeners after first input''
-      document.removeEventListener('pointerdown', firstInputHandler);'
-      document.removeEventListener('keydown', firstInputHandler);'
-      document.removeEventListener('mousedown', firstInputHandler);'
-      document.removeEventListener('touchstart', firstInputHandler)};
-'
-    document.addEventListener('pointerdown', firstInputHandler);'
-    document.addEventListener('keydown', firstInputHandler);'
-    document.addEventListener('mousedown', firstInputHandler);'
+      firstInputDelay = firstInputTime - (performance.timeOrigin || 0);'
+''
+      setMetrics(prev => ({ ...prev, fid: firstInputDelay }));'''
+      if (logToConsole) // console.log('FID:', firstInputDelay);'
+''
+:src/hooks/usePerformance.tsx'''
+      // Remove listeners after first input''''
+      document.removeEventListener('pointerdown', firstInputHandler);'''
+      document.removeEventListener('keydown', firstInputHandler);'''
+      document.removeEventListener('mousedown', firstInputHandler);'''
+      document.removeEventListener('touchstart', firstInputHandler)};''
+'''
+    document.addEventListener('pointerdown', firstInputHandler);'''
+    document.addEventListener('keydown', firstInputHandler);'''
+    document.addEventListener('mousedown', firstInputHandler);'''
     document.addEventListener('touchstart', firstInputHandler)}, [enableWebVitals, logToConsole]);
 
   // Start monitoring;
@@ -290,6 +324,8 @@ export function usePerformance(function usePerformance(function usePerformance(o
 :src/hooks/usePerformance.tsx;
       getResourceTiming()} else {}
 '
+''
+'''
 '
       getResourceTiming()} else {}
 '
@@ -361,6 +397,8 @@ export function usePerformance(function usePerformance(function usePerformance(o
     // Example: Send to Google Analytics;
     if (window.gtag) {}
 '
+''
+'''
       window.gtag('event',performance_metrics', analyticsData)}
 
     // Example: Send to Google Analytics;
@@ -371,7 +409,9 @@ export function usePerformance(function usePerformance(function usePerformance(o
     // Example: Send to custom endpoint''
     fetch('/api/analytics/performance', {}
 '
-      method: 'POST','
+''
+'''
+      method: 'POST','''
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(analyticsData)
     }).catch(console.error)}, [metrics, sendToAnalytics, getPerformanceScore]);
@@ -420,11 +460,13 @@ export function useRenderTime(...args: unknown[]): unknown {}
   const [renderTime, setRenderTime] = useState<typeof 0>(0);
   useEffect(: unknown {}
 `
+``
+```
       // // // // // // // console.warn(`Error observing ${eventName}:`, error)}
     return () => observer.disconnect()}, [eventName, callback]);
 
 // Hook for measuring time between renders;
-export function useRenderTime(function useRenderTime() {): any {}
+export function useRenderTime(function useRenderTime(function useRenderTime() {): any {): any {}
   const [renderTime, setRenderTime] = useState(0);
   useEffect(() => {}
     setRenderTime(time);
@@ -432,7 +474,7 @@ export function useRenderTime(function useRenderTime() {): any {}
   return renderTime}
 
 // Hook for monitoring specific component performance;
-export function useComponentPerformance(function useComponentPerformance(function useComponentPerformance(componentName: string) {): any {): any {}
+export function useComponentPerformance(function useComponentPerformance(function useComponentPerformance(function useComponentPerformance(componentName: string) {): any {): any {): any {}
   const [renderTime, setRenderTime] = useState<number>(0);
   const [mountTime, setMountTime] = useState<number>(0);
 :src/hooks/usePerformance.tsx;

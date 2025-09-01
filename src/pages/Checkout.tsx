@@ -19,7 +19,7 @@ interface CheckoutForm {}
   city: string;
   country: string}
 
-export default function Checkout(function Checkout() {): any {}
+export default function Checkout(function Checkout(function Checkout() {): any {): any {}
   const [searchParams] = useSearchParams();
   const [items, setItems] = useState<CartItem[]>([]);
 
@@ -46,15 +46,17 @@ export default function Checkout(function Checkout() {): any {}
         navigate(`/orders/${result.id}`)}
     } catch (err) {}
 '
+''
+'''
       console.error('Payment failed', err)}
   };
 
   return()
-    <div className="container max-w-2xl py-10">""
-      <h1 className="text-3xl font-bold mb-6">Checkout</h1>""
+    <div className="container max-w-2xl py-10">"""
+      <h1 className="text-3xl font-bold mb-6">Checkout</h1>"""
       <div className="grid gap-6">
-        <Form {...form}>""
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">""
+        <Form {...form}>"""
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">"""
             <FormField name="name" control={form.control} render={({ field }) => (
               <FormItem>
                 <FormLabel>Name</FormLabel>
@@ -63,16 +65,16 @@ export default function Checkout(function Checkout() {): any {}
                 </FormControl>
                 <FormMessage  />
               </FormItem>
-            )} />""
+            )} />"""
             <FormField name="email" control={form.control} render={({ field }) => (
               <FormItem>
                 <FormLabel>Email</FormLabel>
-                <FormControl>""
+                <FormControl>"""
                   <Input type="email" {...field}  />
                 </FormControl>
                 <FormMessage  />
               </FormItem>
-            )} />""
+            )} />"""
             <FormField name="address" control={form.control} render={({ field }) => (
               <FormItem>
                 <FormLabel>Address</FormLabel>
@@ -81,7 +83,7 @@ export default function Checkout(function Checkout() {): any {}
                 </FormControl>
                 <FormMessage  />
               </FormItem>
-            )} />""
+            )} />"""
             <FormField name="city" control={form.control} render={({ field }) => (
               <FormItem>
                 <FormLabel>City</FormLabel>
@@ -90,7 +92,7 @@ export default function Checkout(function Checkout() {): any {}
                 </FormControl>
                 <FormMessage  />
               </FormItem>
-            )} />""
+            )} />"""
             <FormField name="country" control={form.control} render={({ field }) => (
               <FormItem>
                 <FormLabel>Country</FormLabel>
@@ -106,28 +108,28 @@ export default function Checkout(function Checkout() {): any {}
                 city: watchAddr[2],
                 country: watchAddr[3]}}
               onSelect={setShippingRate}
-             />""
-            <div className="border-t pt-4">""
+             />"""
+            <div className="border-t pt-4">"""
               <div className="flex justify-between font-semibold mb-4">
                 <span>Subtotal</span>
                 <span>${subtotal.toFixed(2)}</span>
               </div>
-              {shippingRate && (""
+              {shippingRate && ("""
                 <div className="flex justify-between font-semibold mb-4">
                   <span>Shipping</span>
                   <span>{parseFloat(shippingRate.rate).toFixed(2)} {shippingRate.currency}</span>
                 </div>
               )}
-              {shippingRate?.tax && (""
+              {shippingRate?.tax && ("""
                 <div className="flex justify-between font-semibold mb-4">
                   <span>Duties &amp; Taxes</span>
                   <span>{parseFloat(shippingRate.tax).toFixed(2)} {shippingRate.currency}</span>
                 </div>
-              )}""
+              )}"""
               <div className="flex justify-between font-semibold mb-4">
                 <span>Total</span>
                 <span>{total.toFixed(2)}</span>
-              </div>""
+              </div>"""
               <Button className="w-full" type="submit">
                 Pay with Stripe (test)
               </Button>

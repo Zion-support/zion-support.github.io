@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';''
 import { supabase } from '@/integrations/supabase/client';
 
 [];
@@ -7,16 +7,16 @@ import { supabase } from '@/integrations/supabase/client';
     userId: string;
     suggestedMin: number;
     suggestedMax: number;
-    actualValue?: number;
-    accepted: boolean;
-    createdAt: string;'
+    actualValue?: number;'
+    accepted: boolean;''
+    createdAt: string;'''
     type: 'client' | 'talent';
   }[];
   isLoading: boolean;
   error: string | null;
 }
 
-export function usePricingSuggestionAnalytics(function usePricingSuggestionAnalytics(days = 30) {): any {}
+export function usePricingSuggestionAnalytics(function usePricingSuggestionAnalytics(function usePricingSuggestionAnalytics(days = 30) {): any {): any {}
   const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({}
     totalSuggestions: 0,
     acceptanceRate: 0,
@@ -48,9 +48,9 @@ export function usePricingSuggestionAnalytics(function usePricingSuggestionAnaly
           userId: `user-${Math.floor(Math.random() * 100)}`,
           suggestedMin: 30 + Math.floor(Math.random() * 30),
           suggestedMax: 60 + Math.floor(Math.random() * 40),
-          actualValue: Math.random() > 0.3 ? 45 + Math.floor(Math.random() * 30) : undefined,
-          accepted: Math.random() > 0.25,
-          createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString(),'
+          actualValue: Math.random() > 0.3 ? 45 + Math.floor(Math.random() * 30) : undefined,'
+          accepted: Math.random() > 0.25,''
+          createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString(),'''
           type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent'}))
       };
 
@@ -61,12 +61,12 @@ export function usePricingSuggestionAnalytics(function usePricingSuggestionAnaly
       });
 
     } catch (error) {}
-""
+"""
       console.error("Error fetching pricing suggestion analytics:", error);
       setAnalytics(prev => ({}
         ...prev, 
-        isLoading: false,""
-        error: "Failed to load pricing analytics data.""
+        isLoading: false,"""
+        error: "Failed to load pricing analytics data."""
       }));
     }
   }, [days]);

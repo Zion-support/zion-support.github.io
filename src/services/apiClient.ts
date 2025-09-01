@@ -9,6 +9,8 @@ apiClient.interceptors.response.use()
         // console.error('Failed to logout after 401', e)}'
       if (typeof window !== 'null') {}
 '
+''
+'''
         window.location.assign('/login')}
     } else {}
       toast.error (message) }

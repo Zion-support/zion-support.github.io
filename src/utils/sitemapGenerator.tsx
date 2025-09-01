@@ -40,7 +40,7 @@ interface SitemapConfig {}
     <priority>${priority}</priority>`
   </url>`}).join('\n');
 `
-    return `<?xml version = "1.0" encoding="UTF-8"?>;"""
+    return `<?xml version = "1.0" encoding="UTF-8"?>;""""
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;
 ${xmlUrls};`
 </urlset>`}
@@ -90,7 +90,7 @@ Crawl-delay: 1`}
     <lastmod>${lastmod}</lastmod>`
   </sitemap>`}).join('\n');
 "`
-    return `<?xml version = "1.0" encoding="UTF-8"?>;"""
+    return `<?xml version = "1.0" encoding="UTF-8"?>;""""
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;
 ${sitemapEntries};`
 </sitemapindex>`}
@@ -113,25 +113,25 @@ ${sitemapEntries};
 
 :src/utils/sitemapGenerator.tsx;
     const structuredData: any = {}
-"""
-  "@context": "https://schema.org","""
-      "@type": "WebSite","""
-      "name": "Zion Tech Group","""
-      "url": baseUrl,"""
-      "description": "Empowering the future through innovative technology solutions","""
+""""
+  "@context": "https://schema.org",""""
+      "@type": "WebSite",""""
+      "name": "Zion Tech Group",""""
+      "url": baseUrl,""""
+      "description": "Empowering the future through innovative technology solutions",""""
       "potentialAction": {}
-"""
-        "@type": "SearchAction","""
+""""
+        "@type": "SearchAction",""""
         "target": {}
-"""
+""""
           "@type": "EntryPoint","`
   "urlTemplate": `${baseUrl;
 `
 }/search?q={search_term_string}`
-        },;"""
-        "query-input": "required name=search_term_string"},;"""
-      "sameAs": [;"""
-        "https://linkedin.com/company/zion-tech-group",;"""
+        },;""""
+        "query-input": "required name=search_term_string"},;""""
+      "sameAs": [;""""
+        "https://linkedin.com/company/zion-tech-group",;""""
         "query-input": "required name=search_term_string"},;
       "sameAs": [;
         "https://linkedin.com/company/zion-tech-group",;

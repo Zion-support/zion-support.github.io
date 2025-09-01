@@ -1,9 +1,9 @@
-import { useEffect, useState, useCallback } from 'react'; // Added useCallback'
-import { useAuth } from '@/hooks/useAuth';'
-import { supabase } from '@/integrations/supabase/client';'
+import { useEffect, useState, useCallback } from 'react'; // Added useCallback'''
+import { useAuth } from '@/hooks/useAuth';'''
+import { supabase } from '@/integrations/supabase/client';'''
 import type { Wallet, TokenTransaction } from '@/types/tokens';
 
-export function useWallet(function useWallet(function useWallet() {): any {): any {}
+export function useWallet(function useWallet(function useWallet(function useWallet() {): any {): any {): any {}
   const { user } = useAuth();
   const [wallet, setWallet] = useState<Wallet | null>(null);
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]);
@@ -32,6 +32,8 @@ export function useWallet(function useWallet(function useWallet() {): any {): an
       // setError(null); // setError will be handled by the useEffect calling this;
     } catch (err: any) {}
 '
+''
+'''
       console.error('Error fetching wallet:', err);
       setError(err.message);
       setWallet(null); // Ensure wallet is null on error;
@@ -54,12 +56,14 @@ export function useWallet(function useWallet(function useWallet() {): any {): an
       setTransactions((data || []) as TokenTransaction[]);
     } catch (err: any) {}
 '
+''
+'''
       console.error('Error fetching transactions:', err);
       // setError(err.message); // Decide if this should set a general error;
       setTransactions([]); // Ensure transactions are empty on error;
     }
   }, [user?.id]); // Dependency for fetchTransactions;
-  async function earnTokens(function earnTokens(amount: number, reason?: string) {): any {}
+  async function earnTokens(function earnTokens(function earnTokens(amount: number, reason?: string) {): any {): any {}
     if (!user?.id) return;
     // This is an optimistic update, actual logic might involve backend call;
     setWallet(prev => prev ? { ...prev, balance: prev.balance + amount } : { balance: amount, user_id: user.id, id: crypto.randomUUID(), updated_at: new Date().toISOString() });
@@ -71,12 +75,12 @@ export function useWallet(function useWallet(function useWallet() {): any {): an
         transaction_type: 'earn',
         reason: reason || null,
         created_at: new Date().toISOString()},
-      ...prev
+      ...prev;
     ]);
     // TODO: Call actual API to record token earning;
   }
 
-  async function spendTokens(function spendTokens(amount: number, reason?: string) {): any {}
+  async function spendTokens(function spendTokens(function spendTokens(amount: number, reason?: string) {): any {): any {}
     if (!user?.id) return;
     // This is an optimistic update;
     setWallet(prev =>
@@ -90,13 +94,13 @@ export function useWallet(function useWallet(function useWallet() {): any {): an
         transaction_type: 'burn', // or 'spend'
         reason: reason || null,
         created_at: new Date().toISOString()},
-      ...prev
+      ...prev;
     ]);
     // TODO: Call actual API to record token spending;
   }
 
   useEffect(() => {}
-    async function loadData(function loadData() {): any {}
+    async function loadData(function loadData(function loadData() {): any {): any {}
       if (user?.id) {}
         setLoading(true);
         setError(null);

@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';'''
 import { cn } from '../../lib/utils';
 
 const Progress = React.forwardRef()
@@ -15,7 +15,7 @@ const Progress = React.forwardRef()
         {...props}
       >
         <div;
-          className="h-full w-full flex-1 bg-blue-600 transition-all duration-300 ease-in-out"""
+          className="h-full w-full flex-1 bg-blue-600 transition-all duration-300 ease-in-out""""
           style={{ width: `${percentage}%` }}
         />
       </div>

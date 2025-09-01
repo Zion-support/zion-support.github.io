@@ -1,4 +1,4 @@
-export default function WishlistPage(function WishlistPage(function WishlistPage() {): any {): any {}
+export default function WishlistPage(function WishlistPage(function WishlistPage(function WishlistPage() {): any {): any {): any {}
   const { favorites, loading } = useFavorites();
   const { user } = useAuth();
 
@@ -18,13 +18,13 @@ export default function WishlistPage(function WishlistPage(function WishlistPage
     return acc}, {});
 
   return()
-    <div className="container py-8">""
+    <div className="container py-8">"""
       <h1 className="text-3xl font-bold mb-6">Wishlist</h1>
       {loading ? (
         <p>Loading...</p>
       ) : favorites.length === 0 ? (
         <p>No items saved.</p>
-      ) : (""
+      ) : ("""
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {favorites.map(fav => {}
 '
@@ -39,9 +39,9 @@ export default function WishlistPage(function WishlistPage(function WishlistPage
                 />
               ) : null}
 
-            return item ? (""
+            return item ? ("""
               <div key={fav.item_id} className="relative">
-                <ProductListingCard listing={item}  />""
+                <ProductListingCard listing={item}  />"""
                 <Button size="sm" className="absolute bottom-2 right-2" onClick={() => addToCart(item)}>
                   Add to Cart;
                 </Button>
@@ -51,4 +51,4 @@ export default function WishlistPage(function WishlistPage(function WishlistPage
       )}
     </div>
   )}
-'""
+'"""

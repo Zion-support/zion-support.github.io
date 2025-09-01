@@ -17,15 +17,15 @@ describe('TrustScoreBadge Component', () => {}
   });
 '
   it('displays "N/A" when score is null', () => {}
-""
+"""
     render(<TrustScoreBadge score={null} tooltipText="Score not available" />);'
     expect(screen.getByText('Zion Trust Score: N/A/100')).toBeInTheDocument();'
     const badgeElement: any = screen.getByText('Zion Trust Score: N/A/100').closest('div');'
     expect(badgeElement).toHaveAttribute('title', 'Trust score not yet calculated.');
   });
-'""
+'"""
   it('displays "N/A" when score is undefined', () => {}
-""
+"""
     render(<TrustScoreBadge score={undefined} tooltipText="Score not available" />);'
     expect(screen.getByText('Zion Trust Score: N/A/100')).toBeInTheDocument();'
     const badgeElement: any = screen.getByText('Zion Trust Score: N/A/100').closest('div');'

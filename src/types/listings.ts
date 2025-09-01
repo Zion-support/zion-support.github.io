@@ -31,6 +31,8 @@ seller: {}
 ;export interface ServiceListing extends Listing {}
 '
 ''
+'''
+''''
   serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support';
   duration?: string;
   availability: string[];
@@ -49,9 +51,9 @@ seller: {}
   references?: string[]}
 ;export interface CartItem {}
   id: string;
-  title: string;
-  price: number;
-  quantity: number;'
+  title: string;'
+  price: number;''
+  quantity: number;'''
   type: 'product' | 'service' | 'talent';
   image?: string}
 ;export interface WishlistItem {}

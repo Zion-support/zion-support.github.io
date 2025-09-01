@@ -67,5 +67,5 @@ export function map2026ServicesToExistingStructure(): Service[] {}
     competitors: service.competitors,
     marketSize: service.marketSize,'
     compliance: ['SOC 2',ISO 27001'], // Default compliance;
-  }))}'""
-'"'""
+  }))}'"""
+'"'"""

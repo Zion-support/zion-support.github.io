@@ -1,20 +1,20 @@
-export default function AIMatcherPage(function AIMatcherPage() {): any {}
+export default function AIMatcherPage(function AIMatcherPage(function AIMatcherPage() {): any {): any {}
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
-    ""
-    if (category.includes("talent") || category === "engineering" || ""
+    """
+    if (category.includes("talent") || category === "engineering" || """
         category === "data science" || category === "development") {}
-""
+"""
       itemType = "talent"} else if (category.includes("equipment") || category === "hardware") {}
-""
+"""
       itemType = "equipment"}
 
     toast({}
-""
+"""
       title: "Match Selected",
       description: `You've selected ${match.item.title}`});
 
-    // Navigate to the quote request page with the selected item""
+    // Navigate to the quote request page with the selected item"""
     navigate("/request-quote", {}
       state: {}
         serviceType: itemType,
@@ -23,34 +23,34 @@ export default function AIMatcherPage(function AIMatcherPage() {): any {}
     })};
 
   return()
-    <>""
-      <div className="min-h-screen bg-zion-blue py-12 px-4">""
-        <div className="container mx-auto">""
+    <>"""
+      <div className="min-h-screen bg-zion-blue py-12 px-4">"""
+        <div className="container mx-auto">"""
           <div className="text-center mb-12">
-            <GradientHeading>AI Matchmaker</GradientHeading>""
+            <GradientHeading>AI Matchmaker</GradientHeading>"""
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
               Describe your needs and our AI will match you with the perfect services, talents, or equipment.
             </p>
           </div>
-          ""
-          <div className="max-w-4xl mx-auto">""
-            <div className="mb-8">""
+          """
+          <div className="max-w-4xl mx-auto">"""
+            <div className="mb-8">"""
               <label className="block text-sm font-medium text-zion-slate-light mb-2">'
                 I'm looking for: any;
               </label>
-              <Select value={selectedCategory} onValueChange={setSelectedCategory}>""
-                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">""
+              <Select value={selectedCategory} onValueChange={setSelectedCategory}>"""
+                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">"""
                   <SelectValue placeholder="All Categories"  />
-                </SelectTrigger>""
-                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">""
-                  <SelectItem value="all" className="text-white">All Categories</SelectItem>""
-                  <SelectItem value="service" className="text-white">Services</SelectItem>""
-                  <SelectItem value="talent" className="text-white">Talent</SelectItem>""
+                </SelectTrigger>"""
+                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">"""
+                  <SelectItem value="all" className="text-white">All Categories</SelectItem>"""
+                  <SelectItem value="service" className="text-white">Services</SelectItem>"""
+                  <SelectItem value="talent" className="text-white">Talent</SelectItem>"""
                   <SelectItem value="equipment" className="text-white">Equipment</SelectItem>
                 </SelectContent>
               </Select>
             </div>
-            ""
+            """
             <AIMatchmaker serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
              />

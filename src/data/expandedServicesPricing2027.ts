@@ -71,9 +71,11 @@ starter: {}
 export const cybersecurityPricing: ExpandedServicePricing[] = []
   {}
 '
-    serviceId: 'quantum-threat-hunter','
-    serviceName: 'Quantum Threat Hunter','
-    category: 'Cybersecurity','
+''
+'''
+    serviceId: 'quantum-threat-hunter','''
+    serviceName: 'Quantum Threat Hunter','''
+    category: 'Cybersecurity','''
     subcategory: 'Threat Intelligence',
     pricingTiers: {}
       starter: {}
@@ -126,66 +128,78 @@ export const cybersecurityPricing: ExpandedServicePricing[] = []
       },
       custom: {}
 '
-        priceRange: 'Contact Sales','
-        currency: 'USD','
-        billingCycle: 'flexible',
-        features[;'
-          'All Enterprise features',Custom development',On-premise deployment',Industry-specific compliance',Dedicated account manager',Custom SLA requirements'
-        ],;
-        limitations[;'
-          'Requires custom development',Extended implementation time'
-        ],;
-        bestFor[;'
-          'Government agencies',Military organizations',Highly regulated industries',Custom security requirements'
-        ],;
-        setupFee: 50000,'
+''
+'''
+        priceRange: 'Contact Sales','''
+        currency: 'USD','''
+        billingCycle: 'flexible',''
+        features[;'''
+          'All Enterprise features',Custom development',On-premise deployment',Industry-specific compliance',Dedicated account manager',Custom SLA requirements''
+        ],;''
+        limitations[;'''
+          'Requires custom development',Extended implementation time''
+        ],;''
+        bestFor[;'''
+          'Government agencies',Military organizations',Highly regulated industries',Custom security requirements''
+        ],;''
+        setupFee: 50000,'''
         contractTerm: 'negotiable'
 
     },
     marketComparison: {}
 '
-      competitors['CrowdStrike',SentinelOne',Palo Alto Networks'],;'
-      marketPosition: 'leader','
-      priceAdvantage: '20-30% more cost-effective than competitors','
+''
+'''
+      competitors['CrowdStrike',SentinelOne',Palo Alto Networks'],;'''
+      marketPosition: 'leader','''
+      priceAdvantage: '20-30% more cost-effective than competitors','''
       valueProposition: 'Quantum-resistant security with AI-powered threat detection'
     },
     roiAnalysis: {}
 '
-      paybackPeriod: '6-8 months','
-      annualROI: '400-600%',
-      costSavings[;'
-        'Reduced security incidents by 90%',Automated compliance saves 40 hours/month',Lower insurance premiums due to enhanced security'
-      ],;
-      revenueImpact[;'
-        'Increased customer trust and retention',Faster security clearance for new business',Reduced downtime from security incidents'
-      ],;
-      riskMitigation[;'
+''
+'''
+      paybackPeriod: '6-8 months','''
+      annualROI: '400-600%',''
+      costSavings[;'''
+        'Reduced security incidents by 90%',Automated compliance saves 40 hours/month',Lower insurance premiums due to enhanced security''
+      ],;''
+      revenueImpact[;'''
+        'Increased customer trust and retention',Faster security clearance for new business',Reduced downtime from security incidents''
+      ],;''
+      riskMitigation[;'''
         'Prevents data breaches and associated costs',Ensures regulatory compliance',Protects brand reputation'
       ]
     },;
     implementation: {}
 '
-      setupTime: '2-4 weeks','
-      trainingRequired: '2-3 days for security team','
-      integrationComplexity: 'medium','
-      supportIncluded: '24/7 Security Operations Center',
-      customizationOptions[;'
+''
+'''
+      setupTime: '2-4 weeks','''
+      trainingRequired: '2-3 days for security team','''
+      integrationComplexity: 'medium','''
+      supportIncluded: '24/7 Security Operations Center',''
+      customizationOptions[;'''
         'Custom threat intelligence feeds',Industry-specific compliance modules',Integration with existing security tools',Custom reporting and dashboards'
       ]
     },;
     contactInfo: {}
 '
-      phone: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
-      website: 'https://ziontechgroup.com/quantum-threat-hunter','
+''
+'''
+      phone: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
+      website: 'https://ziontechgroup.com/quantum-threat-hunter','''
       address: '364 E Main St STE 1008 Middletown DE 19709'
 
   },
   {}
 '
-    serviceId: 'ai-compliance-automator','
-    serviceName: 'AI Compliance Automator','
-    category: 'Cybersecurity','
+''
+'''
+    serviceId: 'ai-compliance-automator','''
+    serviceName: 'AI Compliance Automator','''
+    category: 'Cybersecurity','''
     subcategory: 'Compliance Automation',
     pricingTiers: {}
       starter: {}
@@ -238,58 +252,68 @@ export const cybersecurityPricing: ExpandedServicePricing[] = []
       },
       custom: {}
 '
-        priceRange: 'Contact Sales','
-        currency: 'USD','
-        billingCycle: 'flexible',
-        features[;'
-          'All Enterprise features',Custom development',Industry-specific modules',On-premise deployment'
-        ],;
-        limitations[;'
-          'Custom development required'
-        ],;
-        bestFor[;'
-          'Government agencies',Military organizations',Custom compliance requirements'
-        ],;
-        setupFee: 20000,'
+''
+'''
+        priceRange: 'Contact Sales','''
+        currency: 'USD','''
+        billingCycle: 'flexible',''
+        features[;'''
+          'All Enterprise features',Custom development',Industry-specific modules',On-premise deployment''
+        ],;''
+        limitations[;'''
+          'Custom development required''
+        ],;''
+        bestFor[;'''
+          'Government agencies',Military organizations',Custom compliance requirements''
+        ],;''
+        setupFee: 20000,'''
         contractTerm: 'negotiable'
 
     },
     marketComparison: {}
 '
-      competitors['OneTrust',TrustArc',LogicGate'],;'
-      marketPosition: 'challenger','
-      priceAdvantage: '15-25% more affordable than competitors','
+''
+'''
+      competitors['OneTrust',TrustArc',LogicGate'],;'''
+      marketPosition: 'challenger','''
+      priceAdvantage: '15-25% more affordable than competitors','''
       valueProposition: 'AI-powered compliance automation with comprehensive framework support'
     },
     roiAnalysis: {}
 '
-      paybackPeriod: '4-6 months','
-      annualROI: '300-500%',
-      costSavings[;'
-        '90% reduction in compliance costs',Automated reporting saves 60 hours/month',Reduced audit preparation time'
-      ],;
-      revenueImpact[;'
-        'Faster regulatory approval',Increased customer confidence',Reduced compliance-related delays'
-      ],;
-      riskMitigation[;'
+''
+'''
+      paybackPeriod: '4-6 months','''
+      annualROI: '300-500%',''
+      costSavings[;'''
+        '90% reduction in compliance costs',Automated reporting saves 60 hours/month',Reduced audit preparation time''
+      ],;''
+      revenueImpact[;'''
+        'Faster regulatory approval',Increased customer confidence',Reduced compliance-related delays''
+      ],;''
+      riskMitigation[;'''
         'Prevents compliance violations',Automated regulatory updates',Reduced audit risks'
       ]
     },;
     implementation: {}
 '
-      setupTime: '1-2 weeks','
-      trainingRequired: '1-2 days for compliance team','
-      integrationComplexity: 'low','
-      supportIncluded: 'Business hours + emergency support',
-      customizationOptions[;'
+''
+'''
+      setupTime: '1-2 weeks','''
+      trainingRequired: '1-2 days for compliance team','''
+      integrationComplexity: 'low','''
+      supportIncluded: 'Business hours + emergency support',''
+      customizationOptions[;'''
         'Custom compliance workflows',Industry-specific templates',Integration with existing systems',Custom reporting formats'
       ]
     },;
     contactInfo: {}
 '
-      phone: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
-      website: 'https://ziontechgroup.com/ai-compliance-automator','
+''
+'''
+      phone: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
+      website: 'https://ziontechgroup.com/ai-compliance-automator','''
       address: '364 E Main St STE 1008 Middletown DE 19709'
 
 ];
@@ -298,9 +322,11 @@ export const cybersecurityPricing: ExpandedServicePricing[] = []
 export const dataAnalyticsPricing: ExpandedServicePricing[] = []
   {}
 '
-    serviceId: 'predictive-insights-engine','
-    serviceName: 'Predictive Insights Engine','
-    category: 'Data Analytics','
+''
+'''
+    serviceId: 'predictive-insights-engine','''
+    serviceName: 'Predictive Insights Engine','''
+    category: 'Data Analytics','''
     subcategory: 'Predictive Analytics',
     pricingTiers: {}
       starter: {}
@@ -353,58 +379,68 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = []
       },
       custom: {}
 '
-        priceRange: 'Contact Sales','
-        currency: 'USD','
-        billingCycle: 'flexible',
-        features[;'
-          'All Enterprise features',Custom AI development',Industry-specific models',On-premise deployment'
-        ],;
-        limitations[;'
-          'Custom development required'
-        ],;
-        bestFor[;'
-          'Research organizations',Government agencies',Custom AI requirements'
-        ],;
-        setupFee: 30000,'
+''
+'''
+        priceRange: 'Contact Sales','''
+        currency: 'USD','''
+        billingCycle: 'flexible',''
+        features[;'''
+          'All Enterprise features',Custom AI development',Industry-specific models',On-premise deployment''
+        ],;''
+        limitations[;'''
+          'Custom development required''
+        ],;''
+        bestFor[;'''
+          'Research organizations',Government agencies',Custom AI requirements''
+        ],;''
+        setupFee: 30000,'''
         contractTerm: 'negotiable'
 
     },
     marketComparison: {}
 '
-      competitors['Tableau',Power BI',Qlik',Looker'],;'
-      marketPosition: 'challenger','
-      priceAdvantage: '25-35% more cost-effective than competitors','
+''
+'''
+      competitors['Tableau',Power BI',Qlik',Looker'],;'''
+      marketPosition: 'challenger','''
+      priceAdvantage: '25-35% more cost-effective than competitors','''
       valueProposition: 'AI-powered predictive analytics with advanced machine learning capabilities'
     },
     roiAnalysis: {}
 '
-      paybackPeriod: '5-7 months','
-      annualROI: '250-400%',
-      costSavings[;'
-        'Reduced manual analysis by 70%',Faster decision making',Optimized resource allocation'
-      ],;
-      revenueImpact[;'
-        'Improved forecasting accuracy',Better customer insights',Optimized pricing strategies'
-      ],;
-      riskMitigation[;'
+''
+'''
+      paybackPeriod: '5-7 months','''
+      annualROI: '250-400%',''
+      costSavings[;'''
+        'Reduced manual analysis by 70%',Faster decision making',Optimized resource allocation''
+      ],;''
+      revenueImpact[;'''
+        'Improved forecasting accuracy',Better customer insights',Optimized pricing strategies''
+      ],;''
+      riskMitigation[;'''
         'Data-driven risk assessment',Predictive maintenance',Proactive problem identification'
       ]
     },;
     implementation: {}
 '
-      setupTime: '2-3 weeks','
-      trainingRequired: '2-3 days for data team','
-      integrationComplexity: 'medium','
-      supportIncluded: 'Business hours + 24/7 emergency',
-      customizationOptions[;'
+''
+'''
+      setupTime: '2-3 weeks','''
+      trainingRequired: '2-3 days for data team','''
+      integrationComplexity: 'medium','''
+      supportIncluded: 'Business hours + 24/7 emergency',''
+      customizationOptions[;'''
         'Custom ML models',Industry-specific algorithms',Integration with data sources',Custom dashboard development'
       ]
     },;
     contactInfo: {}
 '
-      phone: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
-      website: 'https://ziontechgroup.com/predictive-insights-engine','
+''
+'''
+      phone: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
+      website: 'https://ziontechgroup.com/predictive-insights-engine','''
       address: '364 E Main St STE 1008 Middletown DE 19709'
 
 ];
@@ -413,9 +449,11 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = []
 export const cloudDevOpsPricing: ExpandedServicePricing[] = []
   {}
 '
-    serviceId: 'multi-cloud-orchestrator','
-    serviceName: 'Multi-Cloud Orchestrator','
-    category: 'Cloud & DevOps','
+''
+'''
+    serviceId: 'multi-cloud-orchestrator','''
+    serviceName: 'Multi-Cloud Orchestrator','''
+    category: 'Cloud & DevOps','''
     subcategory: 'Multi-Cloud Management',
     pricingTiers: {}
       starter: {}
@@ -468,58 +506,68 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = []
       },
       custom: {}
 '
-        priceRange: 'Contact Sales','
-        currency: 'USD','
-        billingCycle: 'flexible',
-        features[;'
-          'All Enterprise features',Custom cloud integrations',Industry-specific modules',On-premise deployment'
-        ],;
-        limitations[;'
-          'Custom development required'
-        ],;
-        bestFor[;'
-          'Government agencies',Military organizations',Custom cloud requirements'
-        ],;
-        setupFee: 40000,'
+''
+'''
+        priceRange: 'Contact Sales','''
+        currency: 'USD','''
+        billingCycle: 'flexible',''
+        features[;'''
+          'All Enterprise features',Custom cloud integrations',Industry-specific modules',On-premise deployment''
+        ],;''
+        limitations[;'''
+          'Custom development required''
+        ],;''
+        bestFor[;'''
+          'Government agencies',Military organizations',Custom cloud requirements''
+        ],;''
+        setupFee: 40000,'''
         contractTerm: 'negotiable'
 
     },
     marketComparison: {}
 '
-      competitors['Terraform',Ansible',HashiCorp',AWS Systems Manager'],;'
-      marketPosition: 'challenger','
-      priceAdvantage: '30-40% more cost-effective than competitors','
+''
+'''
+      competitors['Terraform',Ansible',HashiCorp',AWS Systems Manager'],;'''
+      marketPosition: 'challenger','''
+      priceAdvantage: '30-40% more cost-effective than competitors','''
       valueProposition: 'Intelligent multi-cloud orchestration with AI-powered optimization'
     },
     roiAnalysis: {}
 '
-      paybackPeriod: '3-5 months','
-      annualROI: '200-400%',
-      costSavings[;'
-        '30-50% reduction in cloud costs',Automated optimization saves 20 hours/month',Reduced vendor lock-in'
-      ],;
-      revenueImpact[;'
-        'Faster cloud deployments',Improved performance',Better resource utilization'
-      ],;
-      riskMitigation[;'
+''
+'''
+      paybackPeriod: '3-5 months','''
+      annualROI: '200-400%',''
+      costSavings[;'''
+        '30-50% reduction in cloud costs',Automated optimization saves 20 hours/month',Reduced vendor lock-in''
+      ],;''
+      revenueImpact[;'''
+        'Faster cloud deployments',Improved performance',Better resource utilization''
+      ],;''
+      riskMitigation[;'''
         'Reduced cloud costs',Improved reliability',Better disaster recovery'
       ]
     },;
     implementation: {}
 '
-      setupTime: '4-6 weeks','
-      trainingRequired: '3-5 days for DevOps team','
-      integrationComplexity: 'high','
-      supportIncluded: '24/7 cloud operations support',
-      customizationOptions[;'
+''
+'''
+      setupTime: '4-6 weeks','''
+      trainingRequired: '3-5 days for DevOps team','''
+      integrationComplexity: 'high','''
+      supportIncluded: '24/7 cloud operations support',''
+      customizationOptions[;'''
         'Custom cloud integrations',Industry-specific optimizations',Custom automation workflows',Integration with existing tools'
       ]
     },;
     contactInfo: {}
 '
-      phone: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
-      website: 'https://ziontechgroup.com/multi-cloud-orchestrator','
+''
+'''
+      phone: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
+      website: 'https://ziontechgroup.com/multi-cloud-orchestrator','''
       address: '364 E Main St STE 1008 Middletown DE 19709'
 
 ];
@@ -528,9 +576,11 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = []
 export const iotEdgePricing: ExpandedServicePricing[] = []
   {}
 '
-    serviceId: 'industrial-iot-intelligence','
-    serviceName: 'Industrial IoT Intelligence Platform','
-    category: 'IoT & Edge Computing','
+''
+'''
+    serviceId: 'industrial-iot-intelligence','''
+    serviceName: 'Industrial IoT Intelligence Platform','''
+    category: 'IoT & Edge Computing','''
     subcategory: 'Industrial IoT',
     pricingTiers: {}
       starter: {}
@@ -583,58 +633,68 @@ export const iotEdgePricing: ExpandedServicePricing[] = []
       },
       custom: {}
 '
-        priceRange: 'Contact Sales','
-        currency: 'USD','
-        billingCycle: 'flexible',
-        features[;'
-          'All Enterprise features',Custom IoT development',Industry-specific protocols',On-premise deployment'
-        ],;
-        limitations[;'
-          'Custom development required'
-        ],;
-        bestFor[;'
-          'Government facilities',Military installations',Custom IoT requirements'
-        ],;
-        setupFee: 50000,'
+''
+'''
+        priceRange: 'Contact Sales','''
+        currency: 'USD','''
+        billingCycle: 'flexible',''
+        features[;'''
+          'All Enterprise features',Custom IoT development',Industry-specific protocols',On-premise deployment''
+        ],;''
+        limitations[;'''
+          'Custom development required''
+        ],;''
+        bestFor[;'''
+          'Government facilities',Military installations',Custom IoT requirements''
+        ],;''
+        setupFee: 50000,'''
         contractTerm: 'negotiable'
 
     },
     marketComparison: {}
 '
-      competitors['PTC ThingWorx',Siemens Mindsphere',GE Predix',IBM Watson IoT'],;'
-      marketPosition: 'challenger','
-      priceAdvantage: '25-35% more affordable than competitors','
+''
+'''
+      competitors['PTC ThingWorx',Siemens Mindsphere',GE Predix',IBM Watson IoT'],;'''
+      marketPosition: 'challenger','''
+      priceAdvantage: '25-35% more affordable than competitors','''
       valueProposition: 'AI-powered industrial IoT with predictive maintenance and optimization'
     },
     roiAnalysis: {}
 '
-      paybackPeriod: '6-8 months','
-      annualROI: '250-400%',
-      costSavings[;'
-        '40-60% reduction in equipment downtime',20-30% energy cost savings',Reduced maintenance costs'
-      ],;
-      revenueImpact[;'
-        'Improved operational efficiency',Better product quality',Faster production cycles'
-      ],;
-      riskMitigation[;'
+''
+'''
+      paybackPeriod: '6-8 months','''
+      annualROI: '250-400%',''
+      costSavings[;'''
+        '40-60% reduction in equipment downtime',20-30% energy cost savings',Reduced maintenance costs''
+      ],;''
+      revenueImpact[;'''
+        'Improved operational efficiency',Better product quality',Faster production cycles''
+      ],;''
+      riskMitigation[;'''
         'Preventive maintenance',Reduced equipment failures',Improved safety monitoring'
       ]
     },;
     implementation: {}
 '
-      setupTime: '6-8 weeks','
-      trainingRequired: '3-5 days for operations team','
-      integrationComplexity: 'high','
-      supportIncluded: '24/7 industrial support',
-      customizationOptions[;'
+''
+'''
+      setupTime: '6-8 weeks','''
+      trainingRequired: '3-5 days for operations team','''
+      integrationComplexity: 'high','''
+      supportIncluded: '24/7 industrial support',''
+      customizationOptions[;'''
         'Custom IoT protocols',Industry-specific integrations',Custom analytics models',Integration with existing systems'
       ]
     },;
     contactInfo: {}
 '
-      phone: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
-      website: 'https://ziontechgroup.com/industrial-iot-intelligence','
+''
+'''
+      phone: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
+      website: 'https://ziontechgroup.com/industrial-iot-intelligence','''
       address: '364 E Main St STE 1008 Middletown DE 19709'
 
 ];
@@ -643,9 +703,11 @@ export const iotEdgePricing: ExpandedServicePricing[] = []
 export const finTechPricing: ExpandedServicePricing[] = []
   {}
 '
-    serviceId: 'quantum-financial-modeling','
-    serviceName: 'Quantum Financial Modeling Platform','
-    category: 'Financial Technology','
+''
+'''
+    serviceId: 'quantum-financial-modeling','''
+    serviceName: 'Quantum Financial Modeling Platform','''
+    category: 'Financial Technology','''
     subcategory: 'Quantum Finance',
     pricingTiers: {}
       starter: {}
@@ -698,58 +760,68 @@ export const finTechPricing: ExpandedServicePricing[] = []
       },
       custom: {}
 '
-        priceRange: 'Contact Sales','
-        currency: 'USD','
-        billingCycle: 'flexible',
-        features[;'
-          'All Enterprise features',Custom quantum development',Industry-specific models',On-premise deployment'
-        ],;
-        limitations[;'
-          'Custom development required'
-        ],;
-        bestFor[;'
-          'Government agencies',Military organizations',Custom quantum requirements'
-        ],;
-        setupFee: 150000,'
+''
+'''
+        priceRange: 'Contact Sales','''
+        currency: 'USD','''
+        billingCycle: 'flexible',''
+        features[;'''
+          'All Enterprise features',Custom quantum development',Industry-specific models',On-premise deployment''
+        ],;''
+        limitations[;'''
+          'Custom development required''
+        ],;''
+        bestFor[;'''
+          'Government agencies',Military organizations',Custom quantum requirements''
+        ],;''
+        setupFee: 150000,'''
         contractTerm: 'negotiable'
 
     },
     marketComparison: {}
 '
-      competitors['Bloomberg Terminal',Thomson Reuters',FactSet',Refinitiv'],;'
-      marketPosition: 'emerging','
-      priceAdvantage: '40-60% more cost-effective than competitors','
+''
+'''
+      competitors['Bloomberg Terminal',Thomson Reuters',FactSet',Refinitiv'],;'''
+      marketPosition: 'emerging','''
+      priceAdvantage: '40-60% more cost-effective than competitors','''
       valueProposition: 'Quantum-powered financial modeling with unprecedented speed and accuracy'
     },
     roiAnalysis: {}
 '
-      paybackPeriod: '8-12 months','
-      annualROI: '500-1000%',
-      costSavings[;'
-        '1000x faster calculations',Reduced computational costs',Superior risk assessment'
-      ],;
-      revenueImpact[;'
-        'Better investment decisions',Faster portfolio optimization',Competitive advantage'
-      ],;
-      riskMitigation[;'
+''
+'''
+      paybackPeriod: '8-12 months','''
+      annualROI: '500-1000%',''
+      costSavings[;'''
+        '1000x faster calculations',Reduced computational costs',Superior risk assessment''
+      ],;''
+      revenueImpact[;'''
+        'Better investment decisions',Faster portfolio optimization',Competitive advantage''
+      ],;''
+      riskMitigation[;'''
         'Superior risk modeling',Enhanced fraud detection',Better regulatory compliance'
       ]
     },;
     implementation: {}
 '
-      setupTime: '8-12 weeks','
-      trainingRequired: '1-2 weeks for financial team','
-      integrationComplexity: 'high','
-      supportIncluded: '24/7 financial support',
-      customizationOptions[;'
+''
+'''
+      setupTime: '8-12 weeks','''
+      trainingRequired: '1-2 weeks for financial team','''
+      integrationComplexity: 'high','''
+      supportIncluded: '24/7 financial support',''
+      customizationOptions[;'''
         'Custom quantum algorithms',Industry-specific models',Integration with trading platforms',Custom compliance modules'
       ]
     },;
     contactInfo: {}
 '
-      phone: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
-      website: 'https://ziontechgroup.com/quantum-financial-modeling','
+''
+'''
+      phone: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
+      website: 'https://ziontechgroup.com/quantum-financial-modeling','''
       address: '364 E Main St STE 1008 Middletown DE 19709'
 
 ];
@@ -758,9 +830,11 @@ export const finTechPricing: ExpandedServicePricing[] = []
 export const healthcarePricing: ExpandedServicePricing[] = []
   {}
 '
-    serviceId: 'ai-diagnostic-assistant','
-    serviceName: 'AI Diagnostic Assistant','
-    category: 'Healthcare Technology','
+''
+'''
+    serviceId: 'ai-diagnostic-assistant','''
+    serviceName: 'AI Diagnostic Assistant','''
+    category: 'Healthcare Technology','''
     subcategory: 'AI Diagnostics',
     pricingTiers: {}
       starter: {}
@@ -813,58 +887,68 @@ export const healthcarePricing: ExpandedServicePricing[] = []
       },
       custom: {}
 '
-        priceRange: 'Contact Sales','
-        currency: 'USD','
-        billingCycle: 'flexible',
-        features[;'
-          'All Enterprise features',Custom medical AI',Industry-specific modules',On-premise deployment'
-        ],;
-        limitations[;'
-          'Custom development required'
-        ],;
-        bestFor[;'
-          'Government agencies',Military medical facilities',Custom medical requirements'
-        ],;
-        setupFee: 70000,'
+''
+'''
+        priceRange: 'Contact Sales','''
+        currency: 'USD','''
+        billingCycle: 'flexible',''
+        features[;'''
+          'All Enterprise features',Custom medical AI',Industry-specific modules',On-premise deployment''
+        ],;''
+        limitations[;'''
+          'Custom development required''
+        ],;''
+        bestFor[;'''
+          'Government agencies',Military medical facilities',Custom medical requirements''
+        ],;''
+        setupFee: 70000,'''
         contractTerm: 'negotiable'
 
     },
     marketComparison: {}
 '
-      competitors['IBM Watson Health',Google Health',Microsoft Healthcare',Philips Healthcare'],;'
-      marketPosition: 'challenger','
-      priceAdvantage: '30-40% more affordable than competitors','
+''
+'''
+      competitors['IBM Watson Health',Google Health',Microsoft Healthcare',Philips Healthcare'],;'''
+      marketPosition: 'challenger','''
+      priceAdvantage: '30-40% more affordable than competitors','''
       valueProposition: 'AI-powered diagnostic assistance with advanced medical AI capabilities'
     },
     roiAnalysis: {}
 '
-      paybackPeriod: '6-10 months','
-      annualROI: '300-600%',
-      costSavings[;'
-        'Improved diagnostic accuracy',Reduced diagnostic time',Lower medical errors'
-      ],;
-      revenueImpact[;'
-        'Better patient outcomes',Increased provider efficiency',Faster treatment planning'
-      ],;
-      riskMitigation[;'
+''
+'''
+      paybackPeriod: '6-10 months','''
+      annualROI: '300-600%',''
+      costSavings[;'''
+        'Improved diagnostic accuracy',Reduced diagnostic time',Lower medical errors''
+      ],;''
+      revenueImpact[;'''
+        'Better patient outcomes',Increased provider efficiency',Faster treatment planning''
+      ],;''
+      riskMitigation[;'''
         'Reduced diagnostic errors',Better patient safety',Enhanced compliance'
       ]
     },;
     implementation: {}
 '
-      setupTime: '6-8 weeks','
-      trainingRequired: '2-3 days for medical staff','
-      integrationComplexity: 'high','
-      supportIncluded: '24/7 medical support',
-      customizationOptions[;'
+''
+'''
+      setupTime: '6-8 weeks','''
+      trainingRequired: '2-3 days for medical staff','''
+      integrationComplexity: 'high','''
+      supportIncluded: '24/7 medical support',''
+      customizationOptions[;'''
         'Custom medical AI models',Specialty-specific modules',Integration with EHR systems',Custom compliance workflows'
       ]
     },;
     contactInfo: {}
 '
-      phone: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
-      website: 'https://ziontechgroup.com/ai-diagnostic-assistant','
+''
+'''
+      phone: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
+      website: 'https://ziontechgroup.com/ai-diagnostic-assistant','''
       address: '364 E Main St STE 1008 Middletown DE 19709'
 
 ];

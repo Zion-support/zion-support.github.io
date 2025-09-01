@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState, useEffect } from 'react';'''
+import { motion, AnimatePresence } from 'framer-motion';'''
 import { Settings, FileText, Eye, Zap, Volume2, VolumeX } from 'lucide-react';
 import { Button } from "./button";
 export function AccessibilityMenu() {}
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({}
 '
+''
+'''
         fontSize: 'medium',
         highContrast: false,
         reducedMotion: false,
@@ -13,7 +15,9 @@ export function AccessibilityMenu() {}
     });
     useEffect(() => {}
 '
-        // Load settings from localStorage''
+''
+'''
+        // Load settings from localStorage''''
         const savedSettings = localStorage.getItem('accessibility-settings');
         if (savedSettings) {}
             setSettings(JSON.parse(savedSettings))}
@@ -31,16 +35,24 @@ export function AccessibilityMenu() {}
         // High contrast;
         if (newSettings.highContrast) {}
 '
+''
+'''
             root.classList.add('high-contrast')}
         else {}
 '
+''
+'''
             root.classList.remove('high-contrast')}
         // Reduced motion;
         if (newSettings.reducedMotion) {}
 '
+''
+'''
             root.classList.add('reduced-motion')}
         else {}
 '
+''
+'''
             root.classList.remove('reduced-motion')}
     };
     const toggleSetting = (key) => {}
@@ -54,5 +66,5 @@ export function AccessibilityMenu() {}
         const defaultSettings = {}
 '
   fontSize: 'medium',
-            highContrast: false,""
-            reducedMotion: false,"'""
+            highContrast: false,"""
+            reducedMotion: false,"'"""

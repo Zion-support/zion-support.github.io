@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';'''
 import { useUIContext } from '@/context/UIContext';
 import {}
   AlertDialog,
@@ -18,6 +18,8 @@ export const ErrorModal: any = () => {}
   const { state, dispatch } = useUIContext();
   const handleClose: any = () => {}
 '
+''
+'''
     dispatch({ type: 'HIDE_ERROR_MODAL' });
   };
   const handleRetry: any = async () => {}
@@ -65,7 +67,7 @@ export const ErrorModal: any = () => {}
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <AlertDialogCancel asChild>""
+          <AlertDialogCancel asChild>"""
             <Button variant="outline" onClick={handleClose}>Close</Button>
           </AlertDialogCancel>
           {state.errorRetryConfig && (
@@ -78,4 +80,4 @@ export const ErrorModal: any = () => {}
     </AlertDialog>
   );
 };
-'""
+'"""

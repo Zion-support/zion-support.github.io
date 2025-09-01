@@ -44,44 +44,44 @@ export const COMPREHENSIVE_SERVICES_CATALOG_2025: ComprehensiveService2025[] = [
 
 // Service categories for easy filtering;
 :src/data/comprehensiveServicesCatalog2025.tsx;
-export const SERVICE_CATEGORIES: any = ["""
-  "AI & Analytics","""
-  "AI & Customer Experience","""
-  "AI & FinTech","""
-  "AI & Legal Tech","""
-  "AI & Healthcare","""
-  "AI & Education","""
-  "AI & Real Estate","""
-  "AI & Marketing","""
-  "AI & Supply Chain","""
-  "AI & Customer Service","""
-  "AI & Sales","""
-  "AI & Project Management","""
-  "AI & Business Automation","""
-  "AI & Robotics","""
-  "AI & Space Tech","""
-  "AI & Climate","""
-  "Quantum Computing","""
-  "Quantum AI","""
-  "Quantum Security","""
-  "Quantum Finance","""
-  "Quantum Chemistry","""
-  "Blockchain","""
-  "DeFi & NFTs","""
-  "Supply Chain & Sustainability","""
-  "Cybersecurity","""
-  "AI Security","""
-  "IoT & Edge Computing","""
-  "Edge AI","""
-  "Digital Twin","""
-  "AI Simulation","""
-  "Content Creation","""
-  "HR & Talent",;"""
-  "Sustainability",;"""
-  "Manufacturing",;"""
-  "Retail",;"""
-  "Energy",;"""
-  "Transportation",;"""
+export const SERVICE_CATEGORIES: any = [""""
+  "AI & Analytics",""""
+  "AI & Customer Experience",""""
+  "AI & FinTech",""""
+  "AI & Legal Tech",""""
+  "AI & Healthcare",""""
+  "AI & Education",""""
+  "AI & Real Estate",""""
+  "AI & Marketing",""""
+  "AI & Supply Chain",""""
+  "AI & Customer Service",""""
+  "AI & Sales",""""
+  "AI & Project Management",""""
+  "AI & Business Automation",""""
+  "AI & Robotics",""""
+  "AI & Space Tech",""""
+  "AI & Climate",""""
+  "Quantum Computing",""""
+  "Quantum AI",""""
+  "Quantum Security",""""
+  "Quantum Finance",""""
+  "Quantum Chemistry",""""
+  "Blockchain",""""
+  "DeFi & NFTs",""""
+  "Supply Chain & Sustainability",""""
+  "Cybersecurity",""""
+  "AI Security",""""
+  "IoT & Edge Computing",""""
+  "Edge AI",""""
+  "Digital Twin",""""
+  "AI Simulation",""""
+  "Content Creation",""""
+  "HR & Talent",;""""
+  "Sustainability",;""""
+  "Manufacturing",;""""
+  "Retail",;""""
+  "Energy",;""""
+  "Transportation",;""""
   "Logistics";
 ];
 
@@ -89,12 +89,12 @@ export const SERVICE_CATEGORIES: any = ["""
 export;
   { id: 'budget', name: 'Budget', range: '$100 - $1,000/month', count: 0 },;''
   { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000/month', count: 0 },;'
-export ""
-  "Sustainability",;""
-  "Manufacturing",;""
-  "Retail",;""
-  "Energy",;""
-  "Transportation",;""
+export """
+  "Sustainability",;"""
+  "Manufacturing",;"""
+  "Retail",;"""
+  "Energy",;"""
+  "Transportation",;"""
   "Logistics";
 ];
 
@@ -136,11 +136,11 @@ export '
 export;
       ...tier,;
   ;
-  ;
-  ;
-  count: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => {;'
-        if (tier.id === 'budget') return service.price <= 1000;'
-        if (tier.id === 'mid-range') return service.price > 1000 && service.price <= 5000;'
+  ;'
+  ;''
+  count: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => {;'''
+        if (tier.id === 'budget') return service.price <= 1000;'''
+        if (tier.id === 'mid-range') return service.price > 1000 && service.price <= 5000;'''
         if (tier.id === 'enterprise') return service.price > 5000;
         return false}).length;
     })),;
@@ -289,9 +289,9 @@ export;
     const aScore: any = parseInt(a.roi.replace(/\D/g, ''));'
 
     return bScore - aScore})};
-'""
-export default COMPREHENSIVE_SERVICES_CATALOG_2025}}}}}'""
+'"""
+export default COMPREHENSIVE_SERVICES_CATALOG_2025}}}}}'"""
     return bScore - aScore})};
 
 export default COMPREHENSIVE_SERVICES_CATALOG_2025}}}}}
-'""
+'"""

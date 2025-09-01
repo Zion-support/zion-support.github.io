@@ -29,6 +29,8 @@ describe('useQuoteWizard', () => {}
   test('should fetch data successfully and return it', async () => {}
     mockFetcher.mockResolvedValue(mockServiceItems);
 '
+    mockFetcher.mockResolvedValue(mockServiceItems);''
+'''
     const { result } = renderUseQuoteWizard('services');
     expect(result.current.isLoading).toBe(true);
     await waitFor(() => expect(result.current.isLoading).toBe(false));

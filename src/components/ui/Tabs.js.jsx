@@ -12,11 +12,11 @@ var __rest =
           Object.prototype.propertyIsEnumerable.call(s, p[i])
         )
           t[p[i]] = s[p[i]];
-      }
-    return t;
-  };'
-import { jsx as _jsx } from 'react/jsx-runtime';'
-import React from 'react';'
+      }'
+    return t;''
+  };'''
+import { jsx as _jsx } from 'react/jsx-runtime';'''
+import React from 'react';'''
 import { cn } from '@/lib/utils';
 const Tabs = React.forwardRef((_a, ref) => {}
   var { className } = _a,'

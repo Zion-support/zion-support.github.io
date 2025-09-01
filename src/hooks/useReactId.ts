@@ -11,7 +11,7 @@ const useIdFallback: any = (): string => {}
 };
 
 // Determine which ID generation function to use.
-// This check happens once when the module is loaded.""
+// This check happens once when the module is loaded."""
 const useActualId: any = typeof React.useId === "function" ? React.useId : useIdFallback;
 
 /**`

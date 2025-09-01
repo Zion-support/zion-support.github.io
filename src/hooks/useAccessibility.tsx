@@ -83,15 +83,17 @@ export;
   // Focus management;
       lastFocusedElementRef.current = document.activeElement}
 ;
-    // Focus the new element;
-    element.focus();
-'
-    // Add focus indicator''
+    // Focus the new element;'
+    element.focus();''
+'''
+    // Add focus indicator''''
     element.classList.add('focus-visible');
 
     // Remove focus indicator after animation;
     setTimeout(() => {}
 '
+''
+'''
       element.classList.remove('focus-visible')}, 2000)}, [enableFocusManagement]);
 
   // Focus trap for modals;
@@ -114,38 +116,38 @@ export;
       'select:not([disabled]),;'
       'textarea:not([disabled]),;'
       'a[href]',;'
-      '[tabindex]:not([tabindex="-1"]),;'"'""
+      '[tabindex]:not([tabindex="-1"]),;'"'"""
       '[contenteditable="true"]';'
     ].join(',);'
       'button:not([disabled])',;''
       'input:not([disabled])',;''
       'select:not([disabled])',;''
       'textarea:not([disabled])',;''
-      'a[href]',;''""
-      '[tabindex]:not([tabindex="-1"])',;'"'""
+      'a[href]',;''"""
+      '[tabindex]:not([tabindex="-1"])',;'"'"""
       '[contenteditable="true"]';'
   '
       'input:not([disabled])',;'
       'select:not([disabled])',;'
       'textarea:not([disabled])',;'
-      'a[href]',;'""
-      '[tabindex]:not([tabindex="-1"])',;'""
+      'a[href]',;'"""
+      '[tabindex]:not([tabindex="-1"])',;'"""
       '[contenteditable="true"]';'
     ].join(', ');
-
-    return Array.from(container.querySelectorAll(selector)) as HTMLElement[]}, []);
 '
-  // Navigate focus''
+    return Array.from(container.querySelectorAll(selector)) as HTMLElement[]}, []);''
+'''
+  // Navigate focus''''
     if (direction = == 'forward') {;
 :src/hooks/useAccessibility.tsx;
       nextIndex = currentIndex < focusableElements.length-1 ? currentIndex + 1 : 0} else {}
       nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1}
       nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0} else {}
       nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1}
-
-    manageFocus(focusableElements[nextIndex])}, [getFocusableElements, manageFocus]);
 '
-  // Vertical navigation''
+    manageFocus(focusableElements[nextIndex])}, [getFocusableElements, manageFocus]);''
+'''
+  // Vertical navigation''''
     if (direction = == 'up') {;
 :src/hooks/useAccessibility.tsx;
       nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length-1} else {}
@@ -274,7 +276,11 @@ activeElements.forEach(element:  > {;
 :src/hooks/useAccessibility.tsx'
     // Load saved preferences'
 '
-    if(highContrast) document.documentElement.classList.add('high-contrast');'
+''
+:src/hooks/useAccessibility.tsx'''
+    // Load saved preferences'''
+'''
+    if(highContrast) document.documentElement.classList.add('high-contrast');'''
     if(reducedMotion) document.documentElement.classList.add('reduced-motion');'
     // Load saved preferences;
     if(highContrast) document.documentElement.classList.add('high-contrast');
@@ -285,22 +291,30 @@ activeElements.forEach(element:  > {;
     if(enableKeyboardNavigation) {}
     '
 ''
-    if (highContrast) document.documentElement.classList.add('high-contrast');''
+    '''
+''''
+    if (highContrast) document.documentElement.classList.add('high-contrast');''''
     if (reducedMotion) document.documentElement.classList.add('reduced-motion');'
     // Load saved preferences;
     '
-    if (highContrast) document.documentElement.classList.add('high-contrast');'
-    if (reducedMotion) document.documentElement.classList.add('reduced-motion');'
+    ''
+    '''
+    if (highContrast) document.documentElement.classList.add('high-contrast');'''
+    if (reducedMotion) document.documentElement.classList.add('reduced-motion');'''
     if (largeText) document.documentElement.classList.add('large-text');
 
     // Add keyboard event listener;
     if (enableKeyboardNavigation) {}
 '
+''
+'''
       document.addEventListener('keydown', handleKeyboardNavigation)}
 
     // Cleanup;
     return () => {}
 '
+''
+'''
       document.removeEventListener('keydown', handleKeyboardNavigation)}}, [enableKeyboardNavigation, handleKeyboardNavigation]);
 
   return {}

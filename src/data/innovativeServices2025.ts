@@ -21,9 +21,9 @@ export interface InnovativeService {}
   billing: 'month' | 'project' | 'hour' | 'one-time';
   features: string[];
   benefits: string[];
-  targetAudience: string[];
-  marketPrice: string;
-  roi: string;'
+  targetAudience: string[];'
+  marketPrice: string;''
+  roi: string;'''
   innovationLevel: 'Emerging' | 'Established' | 'Cutting-edge' | 'Revolutionary';
   contactInfo: {}
     mobile: string;
@@ -79,11 +79,13 @@ export interface InnovativeService {}
     innovationLevel: 'Cutting-edge',
     contactInfo: {}
 '
-      mobile: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
-      address: '364 E Main St STE 1008 Middletown DE 19709'},'
-    link: 'https://ziontechgroup.com/services/ai-autonomous-research-assistant','
-    icon: '🔬','
+''
+'''
+      mobile: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
+      address: '364 E Main St STE 1008 Middletown DE 19709'},'''
+    link: 'https://ziontechgroup.com/services/ai-autonomous-research-assistant','''
+    icon: '🔬','''
     color: 'from-blue-600 to-indigo-700',
     popular: true,
     featured: true,
@@ -135,11 +137,13 @@ export interface InnovativeService {}
     innovationLevel: 'Cutting-edge',
     contactInfo: {}
 '
-      mobile: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
-      address: '364 E Main St STE 1008 Middletown DE 19709'},'
-    link: 'https://ziontechgroup.com/services/quantum-ai-hybrid-platform','
-    icon: '⚛️','
+''
+'''
+      mobile: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
+      address: '364 E Main St STE 1008 Middletown DE 19709'},'''
+    link: 'https://ziontechgroup.com/services/quantum-ai-hybrid-platform','''
+    icon: '⚛️','''
     color: 'from-purple-600 to-violet-700',
     popular: true,
     featured: true},
@@ -190,11 +194,13 @@ export interface InnovativeService {}
     innovationLevel: 'Cutting-edge',
     contactInfo: {}
 '
-      mobile: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
-      address: '364 E Main St STE 1008 Middletown DE 19709'},'
-    link: 'https://ziontechgroup.com/services/blockchain-enterprise-solutions','
-    icon: '🔗','
+''
+'''
+      mobile: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
+      address: '364 E Main St STE 1008 Middletown DE 19709'},'''
+    link: 'https://ziontechgroup.com/services/blockchain-enterprise-solutions','''
+    icon: '🔗','''
     color: 'from-green-600 to-emerald-700',
     popular: true},
 
@@ -242,11 +248,13 @@ export interface InnovativeService {}
     innovationLevel: 'Revolutionary',
     contactInfo: {}
 '
-      mobile: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
-      address: '364 E Main St STE 1008 Middletown DE 19709'},'
-    link: 'https://ziontechgroup.com/services/space-technology-solutions','
-    icon: '🚀','
+''
+'''
+      mobile: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
+      address: '364 E Main St STE 1008 Middletown DE 19709'},'''
+    link: 'https://ziontechgroup.com/services/space-technology-solutions','''
+    icon: '🚀','''
     color: 'from-slate-600 to-gray-700',
     featured: true},
 
@@ -294,11 +302,13 @@ export interface InnovativeService {}
     innovationLevel: 'Revolutionary',
     contactInfo: {}
 '
-      mobile: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
-      address: '364 E Main St STE 1008 Middletown DE 19709'},'
-    link: 'https://ziontechgroup.com/services/green-technology-solutions','
-    icon: '🌱','
+''
+'''
+      mobile: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
+      address: '364 E Main St STE 1008 Middletown DE 19709'},'''
+    link: 'https://ziontechgroup.com/services/green-technology-solutions','''
+    icon: '🌱','''
     color: 'from-green-500 to-emerald-600',
     popular: true},
 
@@ -346,11 +356,13 @@ export interface InnovativeService {}
     innovationLevel: 'Cutting-edge',
     contactInfo: {}
 '
-      mobile: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
-      address: '364 E Main St STE 1008 Middletown DE 19709'},'
-    link: 'https://ziontechgroup.com/services/ai-cybersecurity-platform','
-    icon: '🛡️','
+''
+'''
+      mobile: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
+      address: '364 E Main St STE 1008 Middletown DE 19709'},'''
+    link: 'https://ziontechgroup.com/services/ai-cybersecurity-platform','''
+    icon: '🛡️','''
     color: 'from-red-600 to-orange-700',
     popular: true,
     featured: true},
@@ -397,11 +409,13 @@ export interface InnovativeService {}
     innovationLevel: 'Cutting-edge',
     contactInfo: {}
 '
-      mobile: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
-      address: '364 E Main St STE 1008 Middletown DE 19709'},'
-    link: 'https://ziontechgroup.com/services/micro-crm-platform','
-    icon: '👥','
+''
+'''
+      mobile: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
+      address: '364 E Main St STE 1008 Middletown DE 19709'},'''
+    link: 'https://ziontechgroup.com/services/micro-crm-platform','''
+    icon: '👥','''
     color: 'from-blue-500 to-cyan-600',
     popular: true},
 
@@ -447,11 +461,13 @@ export interface InnovativeService {}
     innovationLevel: 'Established',
     contactInfo: {}
 '
-      mobile: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
-      address: '364 E Main St STE 1008 Middletown DE 19709'},'
-    link: 'https://ziontechgroup.com/services/advanced-data-analytics','
-    icon: '📊','
+''
+'''
+      mobile: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
+      address: '364 E Main St STE 1008 Middletown DE 19709'},'''
+    link: 'https://ziontechgroup.com/services/advanced-data-analytics','''
+    icon: '📊','''
     color: 'from-indigo-600 to-purple-700',
     popular: true},
 
@@ -498,11 +514,13 @@ export interface InnovativeService {}
     innovationLevel: 'Cutting-edge',
     contactInfo: {}
 '
-      mobile: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
-      address: '364 E Main St STE 1008 Middletown DE 19709'},'
-    link: 'https://ziontechgroup.com/services/cloud-devops-automation','
-    icon: '☁️','
+''
+'''
+      mobile: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
+      address: '364 E Main St STE 1008 Middletown DE 19709'},'''
+    link: 'https://ziontechgroup.com/services/cloud-devops-automation','''
+    icon: '☁️','''
     color: 'from-cyan-600 to-blue-700',
     popular: true},
 
@@ -549,11 +567,13 @@ export interface InnovativeService {}
     innovationLevel: 'Revolutionary',
     contactInfo: {}
 '
-      mobile: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
-      address: '364 E Main St STE 1008 Middletown DE 19709'},'
-    link: 'https://ziontechgroup.com/services/digital-transformation-suite','
-    icon: '🔄','
+''
+'''
+      mobile: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
+      address: '364 E Main St STE 1008 Middletown DE 19709'},'''
+    link: 'https://ziontechgroup.com/services/digital-transformation-suite','''
+    icon: '🔄','''
     color: 'from-orange-600 to-red-700',
     featured: true}
 ];

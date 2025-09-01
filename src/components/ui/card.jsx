@@ -10,7 +10,9 @@ const Card = ({ children, className = '' }) => {}
 };'
 const CardHeader = ({ children, className = '' }) => {}
 `
-  return()``
+``
+```
+  return()````
     <div className={`flex flex-col space-y-1.5 p-6 ${className}`}>
       {children}
     </div>
@@ -38,7 +40,9 @@ const CardContent = ({ children, className = '' }) => {}
 };'
 const CardFooter = ({ children, className = '' }) => {}
 `
-  return()``
+``
+```
+  return()````
     <div className={`flex items-center p-6 pt-0 ${className}`}>{children}</div>
   );
 };

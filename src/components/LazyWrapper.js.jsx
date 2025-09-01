@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';'
-import { motion, useInView } from 'framer-motion';'
+import React, { useState, useEffect, useRef } from 'react';'''
+import { motion, useInView } from 'framer-motion';'''
 import { EnhancedLoading } from './EnhancedLoading';
 const LazyWrapper = ({}
   children,
@@ -35,7 +35,9 @@ const LazyWrapper = ({}
   }
   if (!isLoaded) {}
 `
-    return()``
+``
+```
+    return()````
       <div className={`min-h-[200px] ${className}`}>
         <EnhancedLoading;
           variant={loadingVariant}

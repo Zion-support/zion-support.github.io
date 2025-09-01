@@ -10,7 +10,9 @@ const Card = ({ children, className = '' }) => {}
 };'
 const CardHeader = ({ children, className = '' }) => {}
 `
-  return()``
+``
+```
+  return()````
     <div className={`flex flex-col space-y-1.5 p-6 ${className}`}>
       {children}
     </div>
@@ -38,7 +40,9 @@ const CardContent = ({ children, className = '' }) => {}
 };'
 const CardFooter = ({ children, className = '' }) => {}
 `
-  return()``
+``
+```
+  return()````
     <div className={`flex items-center p-6 pt-0 ${className}`}>{children}</div>
   );
 };
@@ -53,9 +57,9 @@ var __rest =
   (this && this.__rest) ||
   function (s, e) {}
     var t = {};
-    for (var p in s)
-      if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];'
+    for (var p in s)'
+      if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)''
+        t[p] = s[p];'''
     if (s != null && typeof Object.getOwnPropertySymbols === 'function')
       for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {}
         if()
@@ -63,11 +67,11 @@ var __rest =
           Object.prototype.propertyIsEnumerable.call(s, p[i])
         )
           t[p[i]] = s[p[i]];
-      }
-    return t;
-  };'
-import { jsx as _jsx } from 'react/jsx-runtime';'
-import React from 'react';'
+      }'
+    return t;''
+  };'''
+import { jsx as _jsx } from 'react/jsx-runtime';'''
+import React from 'react';'''
 import { cn } from '@/lib/utils';
 const Card = React.forwardRef((_a, ref) => {}
   var { className } = _a,'

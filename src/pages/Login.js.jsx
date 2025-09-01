@@ -1,6 +1,6 @@
-import React, { useState } from 'react';'
-import { SEO } from '@/components/SEO';'
-import { GradientHeading } from '@/components/GradientHeading';'
+import React, { useState } from 'react';'''
+import { SEO } from '@/components/SEO';'''
+import { GradientHeading } from '@/components/GradientHeading';'''
 import { Button } from '@/components/ui/button';
 export default function Login() {}
   const { isAuthenticated, user, isLoading } = useAuth();
@@ -16,6 +16,8 @@ export default function Login() {}
     const token = params.get('token');
     if (token) {}
 '
+''
+'''
       safeStorage.setItem('zion_token', token);
       // Clear token from URL to prevent re-processing;
       router(location.pathname, { replace: true });
@@ -48,5 +50,5 @@ export default function Login() {}
   // If authenticated and isLoading is false, the useEffect above should have navigated.
   // Return null or a minimal layout if needed, though direct navigation is preferred.
   return null;
-}'""
-'"'""
+}'"""
+'"'"""

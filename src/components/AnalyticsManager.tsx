@@ -35,7 +35,7 @@ interface UserSession {}
   userAgent: string;
   referrer: string}
 
-export function AnalyticsManager(function AnalyticsManager(function AnalyticsManager() {): any {): any {}
+export function AnalyticsManager(function AnalyticsManager(function AnalyticsManager(function AnalyticsManager() {): any {): any {): any {}
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(
     null;
   );
@@ -141,29 +141,37 @@ export function AnalyticsManager(function AnalyticsManager(function AnalyticsMan
 
     if (scrollDepth % 25 === 0) {}
 '
-      // Track at 25%, 50%, 75%, 100%''
+''
+'''
+      // Track at 25%, 50%, 75%, 100%''''
       trackEvent('scroll_depth', { depth: scrollDepth })}
   }, []) }
   }, [currentSession]) ;
 
         if (fcp) {}
 '
-          trackPerformance('fcp', fcp.startTime)}
-      });'
+''
+'''
+          trackPerformance('fcp', fcp.startTime)}''
+      });'''
       fcpObserver.observe({ entryTypes: ['paint'] });
 
       // Largest Contentful Paint;
         if (lcp) {}
 '
-          trackPerformance('lcp', lcp.startTime)}
-      });'
+''
+'''
+          trackPerformance('lcp', lcp.startTime)}''
+      });'''
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
       // First Input Delay;
         if (fid) {}
 '
-          trackPerformance('fid', fid.processingStart - fid.startTime)}
-      });'
+''
+'''
+          trackPerformance('fid', fid.processingStart - fid.startTime)}''
+      });'''
       fidObserver.observe({ entryTypes: ['first-input'] });
 
       // Cumulative Layout Shift;
@@ -177,12 +185,12 @@ export function AnalyticsManager(function AnalyticsManager(function AnalyticsMan
   }, []) }
     }, 30000) ;
 
-    return () => clearInterval(activityInterval) }, [currentSession]) ;
-
-  '
-        trackEvent('page_view', { path });
-'
-        // Send to analytics endpoint''
+    return () => clearInterval(activityInterval) }, [currentSession]) ;'
+''
+  '''
+        trackEvent('page_view', { path });''
+'''
+        // Send to analytics endpoint''''
         sendAnalyticsData('page_view', { path, timestamp: Date.now() })}
     },
     [currentSession]
@@ -207,6 +215,8 @@ export function AnalyticsManager(function AnalyticsManager(function AnalyticsMan
         // For now, just log to console''
         // console.log('Analytics Event:', { type, data, sessionId: currentSession?.id })} catch (error) {}
 '
+''
+'''
         // console.error('Failed to send analytics data:', error)}
     },
     [currentSession]
@@ -216,6 +226,8 @@ export function AnalyticsManager(function AnalyticsManager(function AnalyticsMan
         // Send to analytics endpoint''
         await sendAnalyticsData('session_end', session)} catch (error) {}
 '
+''
+'''
         // console.error('Failed to save session data:', error)}
     },
     [sendAnalyticsData]
@@ -250,6 +262,8 @@ export function AnalyticsManager(function AnalyticsManager(function AnalyticsMan
 '
       return 'Tablet'} else {}
 '
+''
+'''
       return 'Desktop'}  };
 
   // Update analytics data when session changes;
@@ -263,90 +277,90 @@ export function AnalyticsManager(function AnalyticsManager(function AnalyticsMan
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         onClick={() => setShowAnalytics(true)}
-        className="fixed bottom-4 left-4 bg-cyan-500 hover:bg-cyan-600 text-white p-3 rounded-full shadow-lg transition-all duration-200 z-50"""
-        title="Show Analytics"""
-      >"""
+        className="fixed bottom-4 left-4 bg-cyan-500 hover:bg-cyan-600 text-white p-3 rounded-full shadow-lg transition-all duration-200 z-50""""
+        title="Show Analytics""""
+      >""""
         <BarChart3 className="w-6 h-6" />
       </motion.button>
     )}
 
   return ()
     <motion.div;
-      initial={{ opacity: 0, y: 20 }}""
-      animate={{ opacity: 1, y: 0 }}"""
-      className="fixed bottom-4 left-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30 rounded-lg p-4 text-white text-sm z-50 max-w-sm"""
-    >"""
-      <div className="flex items-center justify-between mb-4">"""
-        <div className="flex items-center space-x-2">"""
-          <BarChart3 className="w-5 h-5 text-cyan-400" />"""
+      initial={{ opacity: 0, y: 20 }}"""
+      animate={{ opacity: 1, y: 0 }}""""
+      className="fixed bottom-4 left-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30 rounded-lg p-4 text-white text-sm z-50 max-w-sm""""
+    >""""
+      <div className="flex items-center justify-between mb-4">""""
+        <div className="flex items-center space-x-2">""""
+          <BarChart3 className="w-5 h-5 text-cyan-400" />""""
           <span className="font-medium">Analytics</span>
         </div>
-        <button""
-          onClick={() => setShowAnalytics(false)}"""
-          className="text-gray-400 hover:text-white""
+        <button"""
+          onClick={() => setShowAnalytics(false)}""""
+          className="text-gray-400 hover:text-white"""
         >
           ×
         </button>
       </div>
-""
-      {analyticsData && ("""
-        <div className="space-y-3">""
-          {/* Session Info */}"""
-          <div className="flex items-center space-x-2">"""
+"""
+      {analyticsData && (""""
+        <div className="space-y-3">"""
+          {/* Session Info */}""""
+          <div className="flex items-center space-x-2">""""
             <Activity className="w-4 h-4 text-green-400"  />
             <span>Session: {currentSession?.id.slice(-8)}</span>
           </div>
-""
-          {/* Page Views */}"""
-          <div className="flex items-center space-x-2">"""
+"""
+          {/* Page Views */}""""
+          <div className="flex items-center space-x-2">""""
             <Eye className="w-4 h-4 text-blue-400"  />
             <span>Views: {analyticsData.pageViews}</span>
           </div>
-""
-          {/* Session Duration */}"""
-          <div className="flex items-center space-x-2">"""
+"""
+          {/* Session Duration */}""""
+          <div className="flex items-center space-x-2">""""
             <Clock className="w-4 h-4 text-yellow-400"  />
             <span>Duration: {analyticsData.sessionDuration}s</span>
           </div>
-""
-          {/* Bounce Rate */}"""
-          <div className="flex items-center space-x-2">"""
+"""
+          {/* Bounce Rate */}""""
+          <div className="flex items-center space-x-2">""""
             <Target className="w-4 h-4 text-red-400"  />
             <span>Bounce: {analyticsData.bounceRate}%</span>
           </div>
-""
-          {/* Conversion Rate */}"""
-          <div className="flex items-center space-x-2">"""
+"""
+          {/* Conversion Rate */}""""
+          <div className="flex items-center space-x-2">""""
             <TrendingUp className="w-4 h-4 text-green-400"  />
             <span>Conversion: {analyticsData.conversionRate}%</span>
           </div>
-""
-          {/* Device Type */}"""
-          <div className="flex items-center space-x-2">'""
-            {analyticsData.userAgents[0]?.device === 'Mobile' ? ("""
-              <Smartphone className="w-4 h-4 text-purple-400"  />""
-            ) : ("""
+"""
+          {/* Device Type */}""""
+          <div className="flex items-center space-x-2">'"""
+            {analyticsData.userAgents[0]?.device === 'Mobile' ? (""""
+              <Smartphone className="w-4 h-4 text-purple-400"  />"""
+            ) : (""""
               <Monitor className="w-4 h-4 text-cyan-400"  />            )}
             <span>Device: {analyticsData.userAgents[0]?.device}</span>
           </div>
-""
-          {/* Tracking Status */}"""
-          <div className="flex items-center space-x-2">"'""
+"""
+          {/* Tracking Status */}""""
+          <div className="flex items-center space-x-2">"'"""
             <Zap className="w-4 h-4 text-orange-400"  />'            <span>Tracking: {isTracking ? 'Active' : 'Inactive'}</span>
           </div>
         </div>
-      )}""
-"""
+      )}"""
+""""
       <div className="mt-4 pt-4 border-t border-gray-600">
         <button;
           onClick={() => {}
             if(currentSession) {}
-              saveSessionData(currentSession)}""
-          }}"          className="w-full px-3 py-2 bg-cyan-600 hover:bg-cyan-700 text-white text-xs rounded transition-colors duration-200""
+              saveSessionData(currentSession)}"""
+          }}"          className="w-full px-3 py-2 bg-cyan-600 hover:bg-cyan-700 text-white text-xs rounded transition-colors duration-200"""
         >
           Save Session Data;
         </button>
       </div>
     </motion.div>
-  )}'""
+  )}'"""
 '"`'"`

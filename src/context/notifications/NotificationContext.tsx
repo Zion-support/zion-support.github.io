@@ -1,13 +1,13 @@
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';'
-import { supabase } from '@/integrations/supabase/client';'
-import { useAuth } from '@/hooks/useAuth';'
-import { useNotificationOperations } from './useNotificationOperations';'
+import React, { createContext, useContext, useEffect, ReactNode } from 'react';'''
+import { supabase } from '@/integrations/supabase/client';'''
+import { useAuth } from '@/hooks/useAuth';'''
+import { useNotificationOperations } from './useNotificationOperations';'''
 import { NotificationContextType } from './types';
 const defaultContext: NotificationContextType = {}
   notifications: [],
-  filteredNotifications: [],
-  unreadCount: 0,
-  loading: false,'
+  filteredNotifications: [],'
+  unreadCount: 0,''
+  loading: false,'''
   filter: 'all',
   markAsRead: async () => {},
   markAllAsRead: async () => {},
@@ -21,6 +21,8 @@ export const useNotifications: any = (): NotificationContextType => {}
   const context: any = useContext(NotificationContext) as NotificationContextType;
   if (!context) {}
 '
+''
+'''
     throw new Error('useNotifications must be used within a NotificationProvider');
   }
   return context;
@@ -40,13 +42,17 @@ export const NotificationProvider: any = ({ children }: { children: ReactNode })
         .on('postgres_changes', 
           {}
 '
-            event: '*', '
-            schema: 'public','
+''
+'''
+            event: '*', '''
+            schema: 'public','''
             table: 'notifications',
             filter: `user_id=eq.${user.id}`
           },
           (payload) => {}
 '
+''
+'''
             console.log('Notification change received:', payload);
             notificationOps.fetchNotifications(); // Call fetchNotifications from the stable notificationOps;
           }

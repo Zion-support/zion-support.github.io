@@ -1,9 +1,9 @@
-import React, { useState } from 'react';'
-import { useTalentQuotes } from '@/hooks/useTalentQuotes';'
-import { useAuth } from '@/hooks/useAuth';'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';'
-import { QuoteDetails } from '@/components/quotes/QuoteDetails';'
-import { RequestsHeader, QuoteRequestsList } from '@/components/quotes';'
+import React, { useState } from 'react';'''
+import { useTalentQuotes } from '@/hooks/useTalentQuotes';'''
+import { useAuth } from '@/hooks/useAuth';'''
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';'''
+import { QuoteDetails } from '@/components/quotes/QuoteDetails';'''
+import { RequestsHeader, QuoteRequestsList } from '@/components/quotes';'''
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 export default function RequestsPanel() {}
   const { user } = useAuth();'
@@ -35,7 +35,7 @@ export default function RequestsPanel() {}
   return()
     <ProtectedRoute>
       <div>
-        <div className="min-h-screen bg-zion-blue px-4 py-8">"""
+        <div className="min-h-screen bg-zion-blue px-4 py-8">""""
           <div className="container mx-auto">
             <RequestsHeader;
               unreadCount={unreadCount}
@@ -44,14 +44,14 @@ export default function RequestsPanel() {}
               archiveFilter={archiveFilter}
               setArchiveFilter={setArchiveFilter}
             />
-""
-            {/* Main Content */}"""
-            <Tabs defaultValue="active" className="mb-6">"""
-              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">"""
-                <TabsTrigger value="active">Active Requests</TabsTrigger>"""
-                <TabsTrigger value="archived">Archived</TabsTrigger>
-              </TabsList>""
 """
+            {/* Main Content */}""""
+            <Tabs defaultValue="active" className="mb-6">""""
+              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">""""
+                <TabsTrigger value="active">Active Requests</TabsTrigger>""""
+                <TabsTrigger value="archived">Archived</TabsTrigger>
+              </TabsList>"""
+""""
               <TabsContent value="active">
                 <QuoteRequestsList;
                   quotes={activeQuotes}
@@ -61,8 +61,8 @@ export default function RequestsPanel() {}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
                 />
-              </TabsContent>""
-"""
+              </TabsContent>"""
+""""
               <TabsContent value="archived">
                 <QuoteRequestsList;
                   quotes={archivedQuotes}
@@ -89,5 +89,5 @@ export default function RequestsPanel() {}
       </div>
     </ProtectedRoute>
   );
-}'""
-'"'""
+}'"""
+'"'"""

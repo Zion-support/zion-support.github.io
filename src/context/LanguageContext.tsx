@@ -1,9 +1,9 @@
-import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';'
-import { safeStorage } from '@/utils/safeStorage';'
-import { useTranslation } from 'react-i18next';'
-import { supabase } from '../integrations/supabase/client';'
-import { toast } from '../components/ui/use-toast';
-'
+import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';'''
+import { safeStorage } from '@/utils/safeStorage';'''
+import { useTranslation } from 'react-i18next';'''
+import { supabase } from '../integrations/supabase/client';'''
+import { toast } from '../components/ui/use-toast';''
+'''
 export type SupportedLanguage = 'en' | 'es' | 'pt' | 'ar';
 
 export type LanguageContextType = {}
@@ -22,6 +22,8 @@ const supportedLanguages: any = ['
 
 const defaultLanguageContext: LanguageContextType = {}
 '
+''
+'''
   currentLanguage: 'en',
   changeLanguage: async () => {},
   isRTL: false,
@@ -63,15 +65,21 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({}
   }, [i18n]); // i18n is a dependency here;
   useEffect(() => {}
 '
+''
+'''
     setIsRTL(i18n.dir() === 'rtl');
     document.documentElement.dir = i18n.dir();
     document.documentElement.lang = currentLanguage;
     '
     if (i18n.dir() === 'rtl') {}
 '
+''
+'''
       document.documentElement.classList.add('rtl');
     } else {}
 '
+''
+'''
       document.documentElement.classList.remove('rtl');
     }
   }, [currentLanguage, i18n]); // Correct: i18n and currentLanguage;
@@ -86,10 +94,14 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({}
 
           if (error) {}
 '
+''
+'''
             console.error('Error updating language preference:', error);
           }
         } catch (err) {}
 '
+''
+'''
           console.error('Error syncing language with profile:', err);
         }
       }
@@ -108,6 +120,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({}
       const langName: any = supportedLanguages.find(l => l.code === lang)?.name || lang;
       toast({}
 '
+''
+'''
         description: t('language.language_changed', { language: langName })
       });
 
@@ -115,6 +129,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({}
       // that depends on currentLanguage, isAuthenticated, and user.
     } catch (err) {}
 '
+''
+'''
       console.error('Error changing language:', err);
     }
   };

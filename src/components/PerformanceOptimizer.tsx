@@ -1,4 +1,4 @@
-export default function Page(function Page() {): any {}
+export default function Page(function Page(function Page() {): any {): any {}
 ,
     {}
       id: 'code-splitting',
@@ -75,18 +75,18 @@ export default function Page(function Page() {): any {}
     if(score >= 70) return 'text-yellow-500';
     return 'text-red-500'};
 
-    if(score >= 70)""
-      return <AlertTriangle className="w-5 h-5 text-yellow-500"  />;""
+    if(score >= 70)"""
+      return <AlertTriangle className="w-5 h-5 text-yellow-500"  />;"""
     return <AlertTriangle className="w-5 h-5 text-red-500"  />};
 
   ) => {}
     return isGood ? 'text-green-500' : 'text-red-500'}};
 
-  return ("""
-    <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">"""
-      <div className="flex items-center justify-between mb-6">"""
-        <div className="flex items-center gap-3">"""
-          <Activity className="w-6 h-6 text-zion-cyan"  />"""
+  return (""""
+    <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">""""
+      <div className="flex items-center justify-between mb-6">""""
+        <div className="flex items-center gap-3">""""
+          <Activity className="w-6 h-6 text-zion-cyan"  />""""
           <h2 className="text-xl font-bold text-white">
             Performance Optimizer;
           </h2>
@@ -102,52 +102,52 @@ export default function Page(function Page() {): any {}
         </button>
       </div>
 
-      {/* Performance Score */}"""
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">"""
-        <div className="bg-white/5 rounded-lg p-4">"""
-          <div className="flex items-center justify-between mb-4">"""
+      {/* Performance Score */}""""
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">""""
+        <div className="bg-white/5 rounded-lg p-4">""""
+          <div className="flex items-center justify-between mb-4">""""
             <h3 className="text-lg font-semibold text-white">
               Performance Score;
             </h3>
             {getScoreIcon(metrics.score)}
-          </div>"""
+          </div>""""
           <div className="text-center">
             <div`
               className={`text-4xl font-bold ${getScoreColor(metrics.score)}`}
             >
               {Math.round(metrics.score)}
-            </div>"""
+            </div>""""
             <div className="text-sm text-gray-400 mt-1">out of 100</div>
           </div>
         </div>
-"""
-        <div className="bg-white/5 rounded-lg p-4">"""
-          <div className="flex items-center gap-2 mb-4">"""
-            <TrendingUp className="w-5 h-5 text-zion-cyan"  />"""
+""""
+        <div className="bg-white/5 rounded-lg p-4">""""
+          <div className="flex items-center gap-2 mb-4">""""
+            <TrendingUp className="w-5 h-5 text-zion-cyan"  />""""
             <h3 className="text-lg font-semibold text-white">
               Real-time Metrics;
             </h3>
-          </div>"""
-          <div className="space-y-2 text-sm">"""
-            <div className="flex justify-between">"""
+          </div>""""
+          <div className="space-y-2 text-sm">""""
+            <div className="flex justify-between">""""
               <span className="text-gray-300">FCP:</span>
               <span className={getMetricStatus(metrics.fcp, 1800)}>
                 {Math.round(metrics.fcp)}ms;
               </span>
-            </div>"""
-            <div className="flex justify-between">"""
+            </div>""""
+            <div className="flex justify-between">""""
               <span className="text-gray-300">LCP:</span>
               <span className={getMetricStatus(metrics.lcp, 2500)}>
                 {Math.round(metrics.lcp)}ms;
               </span>
-            </div>"""
-            <div className="flex justify-between">"""
+            </div>""""
+            <div className="flex justify-between">""""
               <span className="text-gray-300">FID:</span>
               <span className={getMetricStatus(metrics.fid, 100)}>
                 {Math.round(metrics.fid)}ms;
               </span>
-            </div>"""
-            <div className="flex justify-between">"""
+            </div>""""
+            <div className="flex justify-between">""""
               <span className="text-gray-300">CLS:</span>
               <span className={getMetricStatus(metrics.cls, 0.1)}>
                 {metrics.cls.toFixed(3)}
@@ -157,14 +157,14 @@ export default function Page(function Page() {): any {}
         </div>
       </div>
 
-      {/* Optimization Suggestions */}"""
-      <div className="mb-6">"""
-        <div className="flex items-center gap-2 mb-4">"""
-          <Zap className="w-5 h-5 text-zion-cyan"  />"""
+      {/* Optimization Suggestions */}""""
+      <div className="mb-6">""""
+        <div className="flex items-center gap-2 mb-4">""""
+          <Zap className="w-5 h-5 text-zion-cyan"  />""""
           <h3 className="text-lg font-semibold text-white">
             Optimization Suggestions;
           </h3>
-        </div>"""
+        </div>""""
         <div className="space-y-3">
           {suggestions.map(suggestion => (
             <div;
@@ -173,28 +173,28 @@ export default function Page(function Page() {): any {}
                   ? 'bg-green-500/10 border-green-500/30''
                   : 'bg-white/5 border-white/20'`
               }`}
-            >"""
-              <div className="flex items-start justify-between">"""
-                <div className="flex-1">"""
-                  <div className="flex items-center gap-2 mb-2">"""
+            >""""
+              <div className="flex items-start justify-between">""""
+                <div className="flex-1">""""
+                  <div className="flex items-center gap-2 mb-2">""""
                     <h4 className="font-medium text-white">
-                      {suggestion.title}
-                    </h4>
-                    <span`
-                      className={`px-2 py-1 rounded text-xs font-medium ${suggestion.impact === 'high''
-                          ? 'bg-red-500/20 text-red-300''
-                          : suggestion.impact === 'medium''
-                            ? 'bg-yellow-500/20 text-yellow-300''
-                            : 'bg-blue-500/20 text-blue-300'`
+                      {suggestion.title}`
+                    </h4>`'`
+                    <span`'`'`
+                      className={`px-2 py-1 rounded text-xs font-medium ${suggestion.impact === 'high''''
+                          ? 'bg-red-500/20 text-red-300''''
+                          : suggestion.impact === 'medium''''`
+                            ? 'bg-yellow-500/20 text-yellow-300'''`'`
+                            : 'bg-blue-500/20 text-blue-300'```
                       }`}
                     >
                       {suggestion.impact} impact;
                     </span>
-                  </div>"""
+                  </div>""""
                   <p className="text-sm text-gray-300 mb-3">
                     {suggestion.description}
-                  </p>"""
-                  <div className="flex items-center gap-4 text-xs text-gray-400">"""
+                  </p>""""
+                  <div className="flex items-center gap-4 text-xs text-gray-400">""""
                     <span className="capitalize">{suggestion.category}</span>
                     <span>•</span>
                     <span > Estimated improvement: 15 - 25%</span>
@@ -216,22 +216,22 @@ export default function Page(function Page() {): any {}
 
       {/* Performance History */}
       {history.length > 0 && (
-        <div>"""
-          <div className="flex items-center gap-2 mb-4">"""
-            <BarChart3 className="w-5 h-5 text-zion-cyan" />"""
+        <div>""""
+          <div className="flex items-center gap-2 mb-4">""""
+            <BarChart3 className="w-5 h-5 text-zion-cyan" />""""
             <h3 className="text-lg font-semibold text-white">
               Performance History;
             </h3>
-          </div>"""
-          <div className="bg-white/5 rounded-lg p-4">"""
+          </div>""""
+          <div className="bg-white/5 rounded-lg p-4">""""
             <div className="flex items-center justify-between text-sm text-gray-300 mb-3">
               <span>Last 10 measurements</span>
               <span>Score trend</span>
-            </div>"""
+            </div>""""
             <div className="flex items-end gap-1 h-20">
               {history.map((metric, index) => (
                 <div;
-                  key={index}"""
+                  key={index}""""
                   className="flex-1 bg-gradient-to-t from-zion-cyan to-zion-cyan-light rounded-t"`
                   style={{ height: `${metric.score}%` }}`
                   title={`Score: ${Math.round(metric.score)}`}
@@ -252,4 +252,4 @@ const PerformanceOptimizer: React.FC<{ enabled?: boolean }> = ({ enabled = true 
   );
 };
 
-export default PerformanceOptimizer;""
+export default PerformanceOptimizer;"""

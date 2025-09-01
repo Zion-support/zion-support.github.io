@@ -1,16 +1,16 @@
-import { useState, useEffect } from "react";""
-import { Star } from "lucide-react";""
-import { ReviewStats } from "@/components/reviews/ReviewStats";""
-import { ReviewsList } from "@/components/reviews/ReviewsList";""
-import { useReviews } from "@/hooks/useReviews";""
-import { Button } from "@/components/ui/button";""
+import { useState, useEffect } from "react";"""
+import { Star } from "lucide-react";"""
+import { ReviewStats } from "@/components/reviews/ReviewStats";"""
+import { ReviewsList } from "@/components/reviews/ReviewsList";"""
+import { useReviews } from "@/hooks/useReviews";"""
+import { Button } from "@/components/ui/button";"""
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 interface ProfileRatingsProps {}
   userId: string;
   averageRating?: number;
   ratingCount?: number;
 }
-export function ProfileRatings(function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) {): any {}
+export function ProfileRatings(function ProfileRatings(function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) {): any {): any {}
   const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
   const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({});
   // Calculate rating distribution;
@@ -29,9 +29,9 @@ export function ProfileRatings(function ProfileRatings({ userId, averageRating =
   useEffect(() => {}
     fetchUserReviews(userId);
   }, [userId, fetchUserReviews]); // Added fetchUserReviews;
-  return (""
-    <div className="space-y-6">""
-      <div className="flex flex-col md:flex-row gap-6">""
+  return ("""
+    <div className="space-y-6">"""
+      <div className="flex flex-col md:flex-row gap-6">"""
         <div className="md:w-1/3">
           <ReviewStats;
             averageRating={averageRating}
@@ -39,15 +39,15 @@ export function ProfileRatings(function ProfileRatings({ userId, averageRating =
             ratingDistribution={ratingDistribution}
           />
         </div>
-        ""
-        <div className="md:w-2/3">""
-          <Tabs defaultValue="all">""
-            <TabsList className="mb-4">""
-              <TabsTrigger value="all">All Reviews ({reviews.length})</TabsTrigger>""
-              <TabsTrigger value="positive">Positive</TabsTrigger>""
+        """
+        <div className="md:w-2/3">"""
+          <Tabs defaultValue="all">"""
+            <TabsList className="mb-4">"""
+              <TabsTrigger value="all">All Reviews ({reviews.length})</TabsTrigger>"""
+              <TabsTrigger value="positive">Positive</TabsTrigger>"""
               <TabsTrigger value="critical">Critical</TabsTrigger>
             </TabsList>
-            ""
+            """
             <TabsContent value="all">
               <ReviewsList;
                 reviews={reviews}
@@ -55,7 +55,7 @@ export function ProfileRatings(function ProfileRatings({ userId, averageRating =
                 onReportReview={reportReview}
               />
             </TabsContent>
-            ""
+            """
             <TabsContent value="positive">
               <ReviewsList;
                 reviews={reviews.filter((r) => r.rating >= 4)}
@@ -63,7 +63,7 @@ export function ProfileRatings(function ProfileRatings({ userId, averageRating =
                 onReportReview={reportReview}
               />
             </TabsContent>
-            ""
+            """
             <TabsContent value="critical">
               <ReviewsList;
                 reviews={reviews.filter((r) => r.rating < 4)}
@@ -77,4 +77,4 @@ export function ProfileRatings(function ProfileRatings({ userId, averageRating =
     </div>
   );
 }
-""
+"""

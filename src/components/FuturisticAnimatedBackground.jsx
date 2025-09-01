@@ -38,7 +38,9 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
         // Animation loop;
         const animate = () => {}
 '
-            // Clear canvas with fade effect''
+''
+'''
+            // Clear canvas with fade effect''''
             ctx.fillStyle = 'rgba(0, 0, 0, 0.1);
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             // Draw grid;
@@ -70,23 +72,23 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
                 particle.life--;
                 if(particle.life <= 0) {}
                     particle.life = particle.maxLife;
-                    particle.x = Math.random () * canvas.width;
-                    particle.y = Math.random () * canvas.height}
-                // Draw particle'`
-                const alpha = (particle.life / particle.maxLife) * particle.opacity;'`'`
+                    particle.x = Math.random () * canvas.width;'`
+                    particle.y = Math.random () * canvas.height}'`'`
+                // Draw particle'`'`'`
+                const alpha = (particle.life / particle.maxLife) * particle.opacity;'`'`'`'`
                 ctx.fillStyle = `${particle.color}${Math.floor(alpha * 255).toString(16).padStart(2,0')}`;
                 ctx.beginPath();
-                ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-                ctx.fill();
-                // Draw glow effect'`
-                const gradient = ctx.createRadialGradient(particle.x, particle.y, 0, particle.x, particle.y, particle.size * 3);'`'`
-                gradient.addColorStop(0, `${particle.color}${Math.floor(alpha * 100).toString(16).padStart(2,0')}`);'
+                ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);'`
+                ctx.fill();'`'`
+                // Draw glow effect'`'`'`
+                const gradient = ctx.createRadialGradient(particle.x, particle.y, 0, particle.x, particle.y, particle.size * 3);'`'`'`'`
+                gradient.addColorStop(0, `${particle.color}${Math.floor(alpha * 100).toString(16).padStart(2,0')}`);'''
                 gradient.addColorStop(1,transparent');
                 ctx.fillStyle = gradient;
-                ctx.beginPath();
-                ctx.arc(particle.x, particle.y, particle.size * 3, 0, Math.PI * 2);
-                ctx.fill()});`
-            // Draw connecting lines between nearby particles``
+                ctx.beginPath();`
+                ctx.arc(particle.x, particle.y, particle.size * 3, 0, Math.PI * 2);``
+                ctx.fill()});```
+            // Draw connecting lines between nearby particles````
             ctx.strokeStyle = `rgba(0, 255, 255, ${gridOpacity * 0.5})`;
             ctx.lineWidth = 0.5;
             for(let i = 0; i < particles.length; i++) {}
@@ -94,7 +96,9 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
                     const distance = Math.sqrt(dx * dx + dy * dy);
                     if (distance < 100) {}
 `
-                        const alpha = (1 - distance / 100) * gridOpacity * 0.5;``
+``
+```
+                        const alpha = (1 - distance / 100) * gridOpacity * 0.5;````
                         ctx.strokeStyle = `rgba(0, 255, 255, ${alpha})`;
                         ctx.beginPath();
                         ctx.moveTo(particles[i].x, particles[i].y);
@@ -107,18 +111,18 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
             for(let i = 0; i < 3; i++) {}
                 const x = Math.sin(time * 0.5 + i) * canvas.width * 0.3 + canvas.width * 0.5;
                 const y = Math.cos(time * 0.3 + i) * canvas.height * 0.3 + canvas.height * 0.5;
-                const size = Math.sin(time + i) * 20 + 40;
-                const alpha = (Math.sin(time * 2 + i) + 1) * 0.1 + 0.05;
-                // Orb glow`
-                const gradient = ctx.createRadialGradient(x, y, 0, x, y, size * 2);``
-                gradient.addColorStop(0, `rgba(0, 255, 255, ${alpha})`);``
-                gradient.addColorStop(0.5, `rgba(0, 255, 255, ${alpha * 0.5})`);'
+                const size = Math.sin(time + i) * 20 + 40;`
+                const alpha = (Math.sin(time * 2 + i) + 1) * 0.1 + 0.05;``
+                // Orb glow```
+                const gradient = ctx.createRadialGradient(x, y, 0, x, y, size * 2);```'`
+                gradient.addColorStop(0, `rgba(0, 255, 255, ${alpha})`);``'`'`
+                gradient.addColorStop(0.5, `rgba(0, 255, 255, ${alpha * 0.5})`);'''
                 gradient.addColorStop(1,transparent');
                 ctx.fillStyle = gradient;
-                ctx.beginPath();
-                ctx.arc(x, y, size * 2, 0, Math.PI * 2);
-                ctx.fill();`
-                // Orb core``
+                ctx.beginPath();`
+                ctx.arc(x, y, size * 2, 0, Math.PI * 2);``
+                ctx.fill();```
+                // Orb core````
                 ctx.fillStyle = `rgba(0, 255, 255, ${alpha * 2})`;
                 ctx.beginPath();
                 ctx.arc(x, y, size * 0.3, 0, Math.PI * 2);

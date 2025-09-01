@@ -13,4 +13,4 @@ const SmartNotificationSystem: React.FC<SmartNotificationSystemProps> = ({ enabl
   if (!enabled) return null;
   return <div className="hidden" aria-hidden="true" />};
 
-export default SmartNotificationSystem;""
+export default SmartNotificationSystem;"""

@@ -2,21 +2,23 @@
 export const securityConfig: any = {}
   // Content Security Policy;
   csp: {}
-    'default-src': ["'self'"],"'""
-    'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'"],"'""
-    'style-src': ["'self'", "'unsafe-inline'"],"'""
-    'img-src': ["'self'",data:',https:'],"'""
-    'font-src': ["'self'",https:'],"'""
-    'connect-src': ["'self'",https:'],"'""
-    'frame-src': ["'none'"],"'""
-    'object-src': ["'none'"],"'""
-    'base-uri': ["'self'"],"'""
-    'form-action': ["'self'"],"'""
+    'default-src': ["'self'"],"'"""
+    'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'"],"'"""
+    'style-src': ["'self'", "'unsafe-inline'"],"'"""
+    'img-src': ["'self'",data:',https:'],"'"""
+    'font-src': ["'self'",https:'],"'"""
+    'connect-src': ["'self'",https:'],"'"""
+    'frame-src': ["'none'"],"'"""
+    'object-src': ["'none'"],"'"""
+    'base-uri': ["'self'"],"'"""
+    'form-action': ["'self'"],"'"""
     'frame-ancestors': ["'none'"],upgrade-insecure-requests': true},
 
   // Security Headers;
   headers: {}
 '
+''
+'''
     'X-Content-Type-Options': 'nosniff',X-Frame-Options': 'DENY',X-XSS-Protection': '1; mode=block',Referrer-Policy': 'strict-origin-when-cross-origin',Permissions-Policy': 'geolocation=(), microphone=(), camera=(),Strict-Transport-Security': 'max-age=31536000; includeSubDomains'},
 
   // Rate Limiting;
@@ -43,14 +45,18 @@ export const securityConfig: any = {}
   // Session Configuration;
   session: {}
 '
+''
+'''
     secret: process.env.SESSION_SECRET || 'your-session-secret',
     resave: false,
     saveUninitialized: false,
     cookie: {}
 '
-      secure: process.env.NODE_ENV === 'production',
-      httpOnly: true,'
-      maxAge: 24 * 60 * 60 * 1000, // 24 hours''
+''
+'''
+      secure: process.env.NODE_ENV === 'production',''
+      httpOnly: true,'''
+      maxAge: 24 * 60 * 60 * 1000, // 24 hours''''
       sameSite: 'strict'}}};
 
 // Input sanitization functions;
@@ -59,13 +65,15 @@ export;
 
   // Remove SQL injection patterns;
   sql: (input: string): string => {}
-'""
-'"'""
+'"""
+'"'"""
     return input.replace(/['";\\]/g,)},
 
   // Remove XSS patterns;
   xss: (input: string): string => {}
 '
+''
+'''
     return input'
       .replace(/javascript:/gi,)
       .replace(/on\w+\s*=/gi,)

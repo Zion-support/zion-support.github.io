@@ -5,17 +5,21 @@ const [isLoading, setIsLoading] = useState(false);'
   // Sample data - in a real app, this would come from an API;
   const [chartData, setChartData] = useState<any>({}
 '
+''
+'''
     labels['Jan',Feb',Mar',Apr',May',Jun'],;
     datasets[{}
 '
-      label: 'Revenue',
-      data[65, 59, 80, 81, 56, 55],;'
-      backgroundColor['rgba(34, 221, 210, 0.2)],;'
+''
+'''
+      label: 'Revenue',''
+      data[65, 59, 80, 81, 56, 55],;'''
+      backgroundColor['rgba(34, 221, 210, 0.2)],;'''
       borderColor['rgba(34, 221, 210, 1)],;
       borderWidth: 2;
     }]
-  }) ;
-
+  }) ;'
+''
       icon: <DollarSign className="w-5 h-5"  />,'      color: 'text-green-400'
   const [metrics, setMetrics] = useState<any> ([]
     {}
@@ -23,31 +27,31 @@ const [isLoading, setIsLoading] = useState(false);'
       title: 'Total Revenue','
       value: '$2.4M',
       change: 12.5,'
-      changeType: 'increase',"'""
+      changeType: 'increase',"'"""
       icon: <DollarSign className = "w-5 h-5"  />,'      color: 'text-green-400'
     },
     {}
 '
       title: 'Active Users','
       value: '45.2K',
-      change: 8.1,'""
-      changeType: 'increase',"'""
+      change: 8.1,'"""
+      changeType: 'increase',"'"""
       icon: <Users className="w-5 h-5"  />,'      color: 'text-blue-400'
     },
     {}
 '
       title: 'Conversion Rate','
       value: '3.24%',
-      change: -2.4,'""
-      changeType: 'decrease',"'""
+      change: -2.4,'"""
+      changeType: 'decrease',"'"""
       icon: <Target className="w-5 h-5"  />,'      color: 'text-yellow-400'
     },
     {}
 '
       title: 'Avg Session',;'
       value: '2m 47s',;
-      change: 0.0,;'""
-      changeType: 'neutral',;"""
+      change: 0.0,;'"""
+      changeType: 'neutral',;""""
       icon: <Activity className="w-5 h-5"  />,;'
       color: 'text-purple-400'};
   ]) ;
@@ -71,10 +75,10 @@ setChartData(prev:  > ({;
       changeType: Math.random() > 0.6 ? 'increase' :''
                  Math.random() > 0.3 ? 'decrease' : 'neutral'
     })));
-
-    setIsLoading (false) };
 '
-  // Get change icon and color''
+    setIsLoading (false) };''
+'''
+  // Get change icon and color''''
   labels: ['AI Services',Cloud Solutions',Security',Consulting',Development'],
     datasets: [{}
       data: [35, 25, 20, 15, 5],'
@@ -91,5 +95,5 @@ setChartData(prev:  > ({;
 }]};
   // Generate line chart data;
   const lineChartData: any = {}
-'""
-'"'""
+'"""
+'"'"""

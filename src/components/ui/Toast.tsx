@@ -17,13 +17,13 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {}
   useEffect(() => {}
       setTimeout(: unknown onRemove(toast.id), 300)}, toast.duration || 5000);
     return : unknown clearTimeout(timer)}, [toast.id, toast.duration, onRemove]);'
-      case 'error':"""
-        return <XCircle className="w-5 h-5 text-red-500"  />;'""
-      case 'warning':"""
-        return <AlertCircle className="w-5 h-5 text-yellow-500"  />;'""
-      case 'info':"""
-        return <Info className="w-5 h-5 text-blue-500"  />;""
-      default:"""
+      case 'error':""""
+        return <XCircle className="w-5 h-5 text-red-500"  />;'"""
+      case 'warning':""""
+        return <AlertCircle className="w-5 h-5 text-yellow-500"  />;'"""
+      case 'info':""""
+        return <Info className="w-5 h-5 text-blue-500"  />;"""
+      default:""""
         return <Info className="w-5 h-5 text-blue-500"  />}
   };'
       case 'error':''
@@ -40,17 +40,17 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, y: -50, scale: 0.9 }}'
       transition={{ duration: 0.3, ease: 'easeOut' }}
-      className={`relative p-4 rounded-lg border shadow-lg ${getBgColor()} max-w-sm w-full`}""
-    >"""
-      <div className="flex items-start space-x-3">"""
+      className={`relative p-4 rounded-lg border shadow-lg ${getBgColor()} max-w-sm w-full`}"""
+    >""""
+      <div className="flex items-start space-x-3">""""
         <div className="flex-shrink-0 mt-0.5">
-          {getIcon()}""
-        </div>"""
-        <div className="flex-1 min-w-0">"""
+          {getIcon()}"""
+        </div>""""
+        <div className="flex-1 min-w-0">""""
           <h4 className="text-sm font-medium text-gray-900 dark:text-white">
             {toast.title}
-          </h4>""
-          {toast.message && ("""
+          </h4>"""
+          {toast.message && (""""
             <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">
               {toast.message}
             </p>
@@ -58,10 +58,10 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {}
         </div>
         <button;
           onClick={: unknown {}
-            setIsVisible(false);""
-            setTimeout(() => onRemove(toast.id), 300)}}"""
-          className="flex-shrink-0 ml-2 p-1 rounded-md text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors"""
-        >"""
+            setIsVisible(false);"""
+            setTimeout(() => onRemove(toast.id), 300)}}""""
+          className="flex-shrink-0 ml-2 p-1 rounded-md text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors""""
+        >""""
           <X className="w-4 h-4"  />
         </button>
       </div>
@@ -74,8 +74,8 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {}
   useEffect(: unknown {}
     (window as ).showToast = addToast;
     return : unknown {}
-      delete (window as ).showToast}}, []);""
-  return ("""
+      delete (window as ).showToast}}, []);"""
+  return (""""
     <div className="fixed top-4 right-4 z-50 space-y-2">
       <AnimatePresence>
         {toasts.map(toast => (

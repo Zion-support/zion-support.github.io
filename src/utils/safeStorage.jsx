@@ -23,10 +23,10 @@ function isLocalStorageAvailable() {}
   try {}
     if (typeof window === 'undefined') {}
       localStorageAvailable = false;
-      return false;
-    }
-'
-    const testKey = '__localStorage_test__';'
+      return false;'
+    }''
+'''
+    const testKey = '__localStorage_test__';'''
     localStorage.setItem (testKey,test') ;
     localStorage.removeItem (testKey) ;
     localStorageAvailable = true;
@@ -44,8 +44,10 @@ function isLocalStorageAvailable() {}
  */
 function safeConsoleError (message, error) {}
 '
-  const env = globalThis.process?.env?.NODE_ENV ?? 'production';
-  // Prevent infinite recursion in console logging'
+''
+'''
+  const env = globalThis.process?.env?.NODE_ENV ?? 'production';''
+  // Prevent infinite recursion in console logging'''
   if (env === 'production') return;
 
   try {}
@@ -60,6 +62,8 @@ function safeConsoleError (message, error) {}
       return localStorage.getItem (key) ;
     } catch (error) {}
 '
+''
+'''
       console.warn ('Failed to get item from localStorage:', error) ;
 
       return null;
@@ -72,6 +76,8 @@ function safeConsoleError (message, error) {}
       return true;
     } catch (error) {}
 '
+''
+'''
       console.warn ('Failed to set item in localStorage:', error) ;
 
       return false;
@@ -84,6 +90,8 @@ function safeConsoleError (message, error) {}
       return true;
     } catch (error) {}
 '
+''
+'''
       console.warn ('Failed to remove item from localStorage:', error) ;
 
       return false;
@@ -96,6 +104,8 @@ function safeConsoleError (message, error) {}
       return true;
     } catch (error) {}
 '
+''
+'''
       console.warn ('Failed to clear localStorage:', error) ;
 
       return false;
@@ -107,6 +117,8 @@ function safeConsoleError (message, error) {}
       return localStorage.key (index) ;
     } catch (error) {}
 '
+''
+'''
       console.warn ('Failed to get key from localStorage:', error) ;
       return null;
     }
@@ -117,6 +129,8 @@ function safeConsoleError (message, error) {}
       return localStorage.length;
     } catch (error) {}
 '
+''
+'''
       console.warn ('Failed to get localStorage length:', error) ;
       return 0;
     }

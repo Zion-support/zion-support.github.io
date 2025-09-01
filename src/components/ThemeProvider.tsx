@@ -44,7 +44,9 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {}
         root.classList.add('dark');'
         root.classList.remove('light')} else {}
 '
-        root.classList.add('light');'
+''
+'''
+        root.classList.add('light');'''
         root.classList.remove('dark')}
     };
 
@@ -61,6 +63,8 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {}
 
   useEffect(() => {}
 '
+''
+'''
     localStorage.setItem('theme', theme)}, [theme]);
 
   const value: any = {}

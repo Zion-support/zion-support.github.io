@@ -1,23 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';''
 import { Link } from 'react-router-dom';
 import {}
   ArrowRight,
   Star,
-  CheckCircle,
   Users,
-  TrendingUp,
   Award,
-  Globe,
-  Brain,
-  Cloud,
-  Shield,
-  Zap,
-  Database,
-  Phone,
-  Mail,
-  MapPin,
-  ChevronUp,
+  CheckCircle,
   Play,
   Sparkles;
 } from 'lucide-react';
@@ -43,7 +31,7 @@ const FuturisticBackground: React.FC = () => {}
       {particles.map((particle) => (
         <motion.div;
           key={particle.id}
-          className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-80 shadow-lg shadow-cyan-400/50""
+          className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-80 shadow-lg shadow-cyan-400/50"""
           style={{}
             left: particle.left,
             top: particle.top;
@@ -56,18 +44,12 @@ const FuturisticBackground: React.FC = () => {}
             duration: particle.duration,
             delay: particle.delay,
             repeat: Infinity,
-            ease: "easeInOut""
+            ease: "easeInOut"""
           }}
         />
       ))}
 
-      {/* Subtle gradient overlays */}
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-cyan-900/10"></div>
-      <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10"></div>
-    </div>
-  );
-};
-
+// Loading skeleton components;
 // Floating Action Button Component;
 const FloatingActionButton: React.FC = () => {}
   const [isVisible, setIsVisible] = useState(false);
@@ -90,7 +72,7 @@ const FloatingActionButton: React.FC = () => {}
     <AnimatePresence>
       {isVisible && (
         <motion.div;
-          className="fixed bottom-8 right-8 z-50""
+          className="fixed bottom-8 right-8 z-50"""
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0 }}
@@ -101,7 +83,7 @@ const FloatingActionButton: React.FC = () => {}
             <AnimatePresence>
               {isExpanded && (
                 <motion.div;
-                  className="absolute bottom-16 right-0 space-y-3""
+                  className="absolute bottom-16 right-0 space-y-3"""
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
@@ -109,7 +91,7 @@ const FloatingActionButton: React.FC = () => {}
                 >
                   <motion.a;
                     href={`tel:${contactInfo.mobile}`}
-                    className="block w-12 h-12 bg-green-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center""
+                    className="block w-12 h-12 bg-green-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"""
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
@@ -117,20 +99,41 @@ const FloatingActionButton: React.FC = () => {}
                   </motion.a>
                   <motion.a;
                     href={`mailto:${contactInfo.email}`}
-                    className="block w-12 h-12 bg-blue-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center""
+                    className="block w-12 h-12 bg-blue-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"""
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
                     <Mail className="w-5 h-5" />
                   </motion.a>
                 </motion.div>
-              )}
-            </AnimatePresence>
+              ))}""
+            </div>"""
+""""
+            {/* CTA Buttons */}"""""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
+              <Link"""""
+                to="/contact"""""
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900"""""
+                aria-label="Get started with Zion Tech Group""""
+              >""""
+                <span>Get Started</span>"""""
+                <ArrowRight className="w-5 h-5"  />              </Link>""""
+              <Link"""""
+                to="/services"""""
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg hover:bg-white/20 transition-all duration-200 font-semibold text-lg border border-white/20 hover:border-white/40 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-gray-900"""""
+                aria-label="Explore our services""""
+              >""""
+                <span>Explore Services</span>"""""
+                <ChevronRight className="w-5 h-5"  />              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
             {/* Main FAB */}
             <motion.button;
               onClick={() => setIsExpanded(!isExpanded)}
-              className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center""
+              className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"""
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -164,24 +167,51 @@ const StatsSection: React.FC = () => {}
           {stats.map((stat, index) => (
             <motion.div;
               key={index}
-              className="text-center""
+              className="text-center"""
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ duration: 0.5 }}
+            >""
+              Our Services"""
+            </motion.h2>""""
+            <motion.p"""""
+              className="text-xl text-gray-400 max-w-3xl mx-auto""
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <stat.icon className="w-8 h-8 text-white" />
+              Comprehensive technology solutions designed to drive innovation;
+              and growth;
+            </motion.p>
+          </div>
+
+          <Suspense;
+            fallback={}
+""
+"""
+""""
+"""""
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"""""
+                <div className="h-80 bg-gray-800 rounded-xl animate-pulse"></div>"""""
+                <div className="h-80 bg-gray-800 rounded-xl animate-pulse"></div>"""""
+                <div className="h-80 bg-gray-800 rounded-xl animate-pulse"></div>"""""
+                <div className="h-80 bg-gray-800 rounded-xl animate-pulse"></div>
               </div>
-              <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
-              <div className="text-gray-300">{stat.label}</div>
-            </motion.div>
-          ))}
+            }""
+          >"""
+            <LazyServicesGrid services={services}  />          </Suspense>""""
+"""""
+          <div className="text-center mt-12">""""
+            <Link"""""
+              to="/services"""""
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-semibold focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900"""""
+              aria-label="View all our services""""
+            >""""
+              <span>View All Services</span>"""""
+              <ArrowRight className="w-5 h-5"  />            </Link>
+          </div>
         </div>
-      </div>
-    </section>
-  );
-};
+      </section>
 
 // Hero Section Component;
 const HeroSection: React.FC = () => {}
@@ -193,7 +223,7 @@ const HeroSection: React.FC = () => {}
         <div className="text-center max-w-5xl mx-auto">
           {/* Hero Badge */}
           <motion.div;
-            className="inline-flex items-center bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-2 mb-8""
+            className="inline-flex items-center bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-2 mb-8"""
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -204,7 +234,7 @@ const HeroSection: React.FC = () => {}
 
           {/* Hero Title */}
           <motion.h1;
-            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6""
+            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"""
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -217,7 +247,7 @@ const HeroSection: React.FC = () => {}
 
           {/* Hero Subtitle */}
           <motion.p;
-            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed""
+            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"""
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -228,21 +258,21 @@ const HeroSection: React.FC = () => {}
 
           {/* CTA Buttons */}
           <motion.div;
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16""
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"""
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <Link;
-              to="/services""
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 flex items-center group shadow-lg hover:shadow-xl""
+              to="/services"""
+              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 flex items-center group shadow-lg hover:shadow-xl"""
             >
               Explore Our Services;
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <a;
               href={`tel:${contactInfo.mobile}`}
-              className="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-200 backdrop-blur-sm""
+              className="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-200 backdrop-blur-sm"""
             >
               Get Free Consultation;
             </a>
@@ -250,7 +280,7 @@ const HeroSection: React.FC = () => {}
 
           {/* Contact Info */}
           <motion.div;
-            className="flex flex-wrap justify-center gap-6 text-sm text-gray-400""
+            className="flex flex-wrap justify-center gap-6 text-sm text-gray-400"""
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
@@ -273,14 +303,14 @@ const HeroSection: React.FC = () => {}
 
       {/* Scroll Indicator */}
       <motion.div;
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2""
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"""
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1 }}
       >
         <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
           <motion.div;
-            className="w-1 h-3 bg-white rounded-full mt-2""
+            className="w-1 h-3 bg-white rounded-full mt-2"""
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
           />

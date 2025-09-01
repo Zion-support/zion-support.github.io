@@ -31,9 +31,9 @@ export function DialogContent({ children, className = '' }) {}
     const context = useContext(DialogContext);
     if (!context)'
         throw new Error('DialogContent must be used within Dialog');
-    if (!context.isOpen)""
-        return null;"""
-    return (<div className="fixed inset-0 z-50 flex items-center justify-center">"""
+    if (!context.isOpen)"""
+        return null;""""
+    return (<div className="fixed inset-0 z-50 flex items-center justify-center">""""
       <div className="fixed inset-0 bg-black bg-opacity-50" onClick={() => context.setIsOpen(false)}/>
       <div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className}`}>
         {children}

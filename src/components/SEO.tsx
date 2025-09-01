@@ -5,12 +5,12 @@ type SEOProps = {}
   image?: string;
 };
 
-export function SEO(function SEO({}
+export function SEO(function SEO(function SEO({}
   title = 'Zion Tech Group - Technology Solutions','
   description = 'Zion Tech Group delivers AI, cloud, cybersecurity and digital transformation services.','
   url = 'https://ziontechgroup.com','
   image = '/og-image.jpg'
-}: SEOProps) {): any {}
+}: SEOProps) {): any {): any {}
             text-align: center}
 
           /* Optimize font loading */
@@ -41,7 +41,7 @@ export function SEO(function SEO({}
               animation-duration: 0.01ms !important;
               animation-iteration-count: 1 !important;
               transition-duration: 0.01ms !important}
-          }`
+          }```
         `}
       </style>
 
@@ -70,38 +70,38 @@ export function SEO(function SEO({}
             import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {}
               getCLS(console.log);
               getFID(console.log);
-              getFCP(console.log);
-              getLCP(console.log);
-              getTTFB(console.log)})}`
+              getFCP(console.log);`
+              getLCP(console.log);``
+              getTTFB(console.log)})}```
         `}
-      </script>
-    </Helmet>) }
-'"`
-      <meta name="description" content={description} />
-      <link rel="canonical" href={url} />
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:url" content={url} />
-      <meta property="og:image" content={image} />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
+      </script>'`
+    </Helmet>) }'`'`
+'"`"""
+      <meta name="description" content={description} />"""
+      <link rel="canonical" href={url} />"""
+      <meta property="og:type" content="website" />"""
+      <meta property="og:title" content={title} />"""
+      <meta property="og:description" content={description} />"""
+      <meta property="og:url" content={url} />"""
+      <meta property="og:image" content={image} />"""
+      <meta name="twitter:card" content="summary_large_image" />"""
+      <meta name="twitter:title" content={title} />"""
       <meta name="twitter:description" content={description} />
 
   return()
     <Helmet>
       <title>{title}</title>
-      <meta name="description" content={description} />""
-      <link rel="canonical" href={url} />""
-      <meta property="og:type" content="website" />""
-      <meta property="og:title" content={title} />""
-      <meta property="og:description" content={description} />""
-      <meta property="og:url" content={url} />""
-      <meta property="og:image" content={image} />""
-      <meta name="twitter:card" content="summary_large_image" />""
-      <meta name="twitter:title" content={title} />""
-      <meta name="twitter:description" content={description} />""
+      <meta name="description" content={description} />"""
+      <link rel="canonical" href={url} />"""
+      <meta property="og:type" content="website" />"""
+      <meta property="og:title" content={title} />"""
+      <meta property="og:description" content={description} />"""
+      <meta property="og:url" content={url} />"""
+      <meta property="og:image" content={image} />"""
+      <meta name="twitter:card" content="summary_large_image" />"""
+      <meta name="twitter:title" content={title} />"""
+      <meta name="twitter:description" content={description} />"""
       <meta name="twitter:image" content={image} />
     </Helmet>
   )}
-'""
+'"""

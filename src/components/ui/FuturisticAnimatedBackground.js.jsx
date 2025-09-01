@@ -77,10 +77,12 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
         function getParticleColor() {}
             const colors = {}
 '
-  cyberpunk['#00ffff',#ff00ff',#ffff00',#ff0080',#00ff80'],;'
-                quantum['#4facfe',#00f2fe',#43e97b',#38f9d7',#fa709a'],;'
-                neon['#ff006e',#8338ec',#3a86ff',#06ffa5',#ffbe0b'],;'
-                matrix['#00ff41',#00ff00',#39ff14',#7fff00',;'
+''
+'''
+  cyberpunk['#00ffff',#ff00ff',#ffff00',#ff0080',#00ff80'],;'''
+                quantum['#4facfe',#00f2fe',#43e97b',#38f9d7',#fa709a'],;'''
+                neon['#ff006e',#8338ec',#3a86ff',#06ffa5',#ffbe0b'],;'''
+                matrix['#00ff41',#00ff00',#39ff14',#7fff00',;'''
   '#bfff00']
 
 };
@@ -133,6 +135,8 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
             if (variant === 'cyberpunk') {}
 '`
 '`'`
+'`'`'`
+'`'`'`'`
                 ctx.strokeStyle = `rgba(0, 255, 255, ${intensity === 'low' ? 0.05 : intensity === 'medium' ? 0.1 : 0.15})`;
                 ctx.lineWidth = 0.5;
                 const gridSize = 50;
@@ -150,7 +154,9 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
             // Add wave effect for quantum variant''
             if (variant === 'quantum') {}
 '`
-                const time = Date.now() * 0.001;'`'`
+'`'`
+'`'`'`
+                const time = Date.now() * 0.001;'`'`'`'`
                 ctx.strokeStyle = `rgba(74, 172, 254, ${intensity === 'low' ? 0.1 : intensity === 'medium' ? 0.2 : 0.3})`;
                 ctx.lineWidth = 2;
                 ctx.beginPath();
@@ -165,9 +171,11 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
             // Add scan line effect for neon variant''
             if (variant === 'neon') {}
 '`
-                const scanLineY = (Date.now() * 0.1) % canvas.height;'`'`
-                ctx.strokeStyle = `rgba(255, 0, 110, ${intensity === 'low' ? 0.3 : intensity === 'medium' ? 0.5 : 0.7})`;
-                ctx.lineWidth = 3;'
+'`'`
+'`'`'`
+                const scanLineY = (Date.now() * 0.1) % canvas.height;'`'`'`'`
+                ctx.strokeStyle = `rgba(255, 0, 110, ${intensity === 'low' ? 0.3 : intensity === 'medium' ? 0.5 : 0.7})`;''
+                ctx.lineWidth = 3;'''
                 ctx.shadowColor = '#ff006e';
                 ctx.shadowBlur = 20;
                 ctx.beginPath();
@@ -179,6 +187,8 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
         animate();
         return () => {}
 '
+''
+'''
             window.removeEventListener('resize', resizeCanvas);
             if (animationRef.current) {}
                 cancelAnimationFrame(animationRef.current)}`
@@ -187,27 +197,29 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
       <canvas ref={canvasRef} className="w-full h-full" style = {}
   {}
 '
-            background: variant === 'matrix'''
-                ? 'linear-gradient(0deg, #000000 0%, #001a00 50%, #000000 100%)'''
-                : variant === 'cyberpunk'''
-                    ? 'linear-gradient(135deg, #000000 0%, #001122 50%, #000000 100%)'''
-                    : variant === 'quantum'''
-                        ? 'linear-gradient(45deg, #000428 0%, #004e92 50%, #000428 100%)'''
+''
+'''
+            background: variant === 'matrix'''''
+                ? 'linear-gradient(0deg, #000000 0%, #001a00 50%, #000000 100%)'''''
+                : variant === 'cyberpunk'''''
+                    ? 'linear-gradient(135deg, #000000 0%, #001122 50%, #000000 100%)'''''
+                    : variant === 'quantum'''''
+                        ? 'linear-gradient(45deg, #000428 0%, #004e92 50%, #000428 100%)'''''
                         : 'linear-gradient(180deg, #000000 0%, #1a0033 50%,
   #000000 100%);
 
 }}/>
-      ""
-      {/* Overlay effects */}"'""
-      <div className="absolute inset-0 pointer-events-none">'"'""
-        {variant === 'cyberpunk' && (<div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent animate-pulse"/>)}'"'""
-        {variant === 'quantum' && (<div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10"/>)}'"'""
-        {variant === 'neon' && (<div className="absolute inset-0 bg-gradient-to-t from-pink-500/5 via-transparent to-yellow-500/5"/>)}'"'""
+      """
+      {/* Overlay effects */}"'"""
+      <div className="absolute inset-0 pointer-events-none">'"'"""
+        {variant === 'cyberpunk' && (<div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent animate-pulse"/>)}'"'"""
+        {variant === 'quantum' && (<div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10"/>)}'"'"""
+        {variant === 'neon' && (<div className="absolute inset-0 bg-gradient-to-t from-pink-500/5 via-transparent to-yellow-500/5"/>)}'"'"""
         {variant === 'matrix' && (<div className="absolute inset-0 bg-gradient-to-b from-green-500/10 via-transparent to-transparent"/>)}
       </div>
-""
-      {/* Floating geometric shapes */}"""
-      <div className="absolute inset-0 pointer-events-none">"""
+"""
+      {/* Floating geometric shapes */}""""
+      <div className="absolute inset-0 pointer-events-none">""""
         <motion.div className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30" animate = {}
   {}
             rotate: 360,
@@ -217,11 +229,11 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
 
 }} transition = {}
   {}
-            duration: 8,""
-            repeat: Infinity,"""
-  ease: "linear""
-""
-}}/>"""
+            duration: 8,"""
+            repeat: Infinity,""""
+  ease: "linear"""
+"""
+}}/>""""
         <motion.div className="absolute top-40 right-32 w-24 h-24 border border-pink-400/30 rounded-full" animate = {}
   {}
             y[0, -20, 0],;
@@ -230,11 +242,11 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
 
 }} transition = {}
   {}
-            duration: 6,""
-            repeat: Infinity,"""
-  ease: "easeInOut""
-""
-}}/>"""
+            duration: 6,"""
+            repeat: Infinity,""""
+  ease: "easeInOut"""
+"""
+}}/>""""
         <motion.div className="absolute bottom-32 left-1/3 w-20 h-20 border border-yellow-400/30 transform rotate-45" animate = {}
   {}
             rotate[0, 180, 360],;
@@ -243,9 +255,9 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
 
 }} transition = {}
   {}
-            duration: 10,""
-            repeat: Infinity,"""
-  ease: "linear""
+            duration: 10,"""
+            repeat: Infinity,""""
+  ease: "linear"""
 }}/>
       </div>
     </div>)};

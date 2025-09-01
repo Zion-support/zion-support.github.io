@@ -57,6 +57,8 @@ class MimeTypeFallback {}
       if(!contentType) {}
 `
 ``
+```
+````
         // console.warn(`No content-type header for: ${url}`);
         return false}
 
@@ -73,6 +75,8 @@ class MimeTypeFallback {}
       return await this.tryFallbackUrl(url)} catch(error) {}
 `
 ``
+```
+````
       // console.error(`Error checking MIME type for ${url}:`, error);
       return await this.tryFallbackUrl(url)}
   }
@@ -81,6 +85,8 @@ class MimeTypeFallback {}
     if (fallbackUrl) {}
 `
 ``
+```
+````
       // console.log(`Trying fallback URL: ${fallbackUrl}`);
 
       try {}
@@ -88,6 +94,8 @@ class MimeTypeFallback {}
           if (contentType && contentType.includes(expectedType)) {}
 `
 ``
+```
+````
             // console.log(`Fallback URL has correct MIME type: ${fallbackUrl}`);
             this.replaceResource(originalUrl, fallbackUrl);
             return true}
@@ -95,43 +103,57 @@ class MimeTypeFallback {}
       } catch(error) {}
 `
 ``
+```
+````
         // console.error(`Fallback URL failed: ${fallbackUrl}`, error)}    }
 
     return false}
 
   private replaceResource(originalUrl: string, fallbackUrl: string) {}
 `
+``
+```
     // Replace script tags`
 
     scripts.forEach(script => {}
 `
-      (script as HTMLScriptElement).src = fallbackUrl;``
-      // console.log(`Replaced script source: ${originalUrl} -> ${fallbackUrl}`)});
-`
+``
+```
+      (script as HTMLScriptElement).src = fallbackUrl;````
+      // console.log(`Replaced script source: ${originalUrl} -> ${fallbackUrl}`)});``
+```
     // Replace stylesheet links"`
 
     links.forEach(link => {}
 `
-      (link as HTMLLinkElement).href = fallbackUrl;``
+``
+```
+      (link as HTMLLinkElement).href = fallbackUrl;````
       // console.log(`Replaced stylesheet href: ${originalUrl} -> ${fallbackUrl}`)})}
 
   async preloadCriticalResources(): Promise<any> {}
 '
+''
+'''
     // console.log('🔍 Preloading critical resources...');
     for(const resource of criticalResources) {}
       try {}
         if (!isValid) {}
 `
 ``
+```
+````
           // console.warn(`Critical resource has MIME type issues: ${resource}`)}
       } catch(error) {}
 `
 ``
+```
+````
         // console.error(`Error preloading resource: ${resource}`, error)}    }
   }
-
-  createResourceElement()
-    url: string,'
+'
+  createResourceElement()''
+    url: string,'''
     type: 'script' | 'stylesheet'
   ): HTMLElement {}
 '
@@ -155,6 +177,8 @@ class MimeTypeFallback {}
       element.onload = () => {}
 `
 ``
+```
+````
         // console.log(`✅ Resource loaded successfully: ${url}`);
         resolve()};
 

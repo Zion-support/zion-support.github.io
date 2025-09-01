@@ -12,21 +12,23 @@ const TrustScoreBadge: React.FC<TrustScoreBadgeProps> = ({ score, tooltipText })
 
   const getScoreColor: any = () => {}
 '
-    if (score === null || score === undefined) return 'text-gray-500';'
-    if (score > 85) return 'text-green-600';'
-    if (score > 70) return 'text-yellow-600';'
+''
+'''
+    if (score === null || score === undefined) return 'text-gray-500';'''
+    if (score > 85) return 'text-green-600';'''
+    if (score > 70) return 'text-yellow-600';'''
     return 'text-red-600';
   };
 
   return()
     <div;
-      className="trust-score-badge p-2 border rounded-md shadow-sm bg-white inline-block""
+      className="trust-score-badge p-2 border rounded-md shadow-sm bg-white inline-block"""
       title={tooltipText || defaultTooltip} // Simple title attribute for tooltip;
     >`
       <span className={`font-semibold ${getScoreColor()}`}>
         Zion Trust Score: {displayScore}/100;
       </span>
-      {/* Basic CSS Tooltip (optional, if title attribute is not enough) */}""
+      {/* Basic CSS Tooltip (optional, if title attribute is not enough) */}"""
       {/* <span className="tooltip-text">{tooltipText}</span> */}`
       <style jsx>{`
         .trust-score-badge {}

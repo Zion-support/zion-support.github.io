@@ -1,21 +1,21 @@
-import { useEffect, useState, useCallback } from "react"; // Added useCallback""
-import { supabase } from "@/integrations/supabase/client";""
-import { toast } from "@/hooks/use-toast";""
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";""
-import { EmptyMatchesCard } from './EmptyMatchesCard';""
+import { useEffect, useState, useCallback } from "react"; // Added useCallback"""
+import { supabase } from "@/integrations/supabase/client";"""
+import { toast } from "@/hooks/use-toast";"""
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";"""
+import { EmptyMatchesCard } from './EmptyMatchesCard';"""
 import { JobMatchCard } from './JobMatchCard';
 interface SuggestedTalentsProps {}
   jobId: string;
   jobTitle?: string;
 }
-export function SuggestedTalents(function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {): any {}
+export function SuggestedTalents(function SuggestedTalents(function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {): any {): any {}
   const [talents, setTalents] = useState<any[]>([]); // Added type for talents;
   const [isLoading, setIsLoading] = useState(true);
   const [isProcessing, setIsProcessing] = useState(false);
   const fetchSuggestedTalents: any = useCallback(async () => { // Wrapped in useCallback;
     setIsLoading(true);
     try {}
-      const { data, error } = await supabase""
+      const { data, error } = await supabase"""
         .from("suggested_talents")
         .select(`
           *,
@@ -34,35 +34,35 @@ export function SuggestedTalents(function SuggestedTalents({ jobId, jobTitle }: 
             category,
             company_name;
           )`
-        `)""
+        `)"""
         .eq("job_id", jobId);
       if(error) throw error;
       setTalents(data || []);
     } catch (error) {}
-""
+"""
       console.error("Error fetching suggested talents:", error);
       toast({}
-""
-        title: "Error",""
-        description: "Failed to load suggested talents. Please try again later.",""
+"""
+        title: "Error","""
+        description: "Failed to load suggested talents. Please try again later.","""
         variant: "destructive"});
     } finally {}
       setIsLoading(false);
     }
   }, [jobId]); // jobId is a dependency of fetchSuggestedTalents;
   const handleViewProfile: any = (talentId: string) => {}
-""
+"""
     console.log("View talent profile:", talentId);
     toast({}
-""
+"""
       title: "View Profile",`
       description: `Navigating to talent profile: ${talentId}`});
   };
   const handleInvite: any = (talentId: string) => {}
-""
+"""
     console.log("Invite talent:", talentId);
     toast({}
-""
+"""
       title: "Invite Talent",`
       description: `Inviting talent: ${talentId}`});
   };
@@ -90,18 +90,18 @@ export function SuggestedTalents(function SuggestedTalents({ jobId, jobTitle }: 
       matchPercent: talent.match_score || 85,
       skills: talent.talent_profile?.skills || []};
   });
-  return (""
+  return ("""
     <Card className="border-zion-blue-light bg-zion-blue">
       <CardHeader>'`
         <CardTitle>{jobTitle ? `Talents for ${jobTitle}` : 'Suggested Talents'}</CardTitle>
       </CardHeader>
-      ""
+      """
       <CardContent className="pt-6">
         {isLoading ? (
           <div>Loading suggested talents...</div>
         ) : talents.length === 0 ? (
           <EmptyMatchesCard onRefresh={handleRefresh} isProcessing={isProcessing} />
-        ) : (""
+        ) : ("""
           <div className="space-y-4">
             {transformedTalents.map((talent) => (
               <JobMatchCard;

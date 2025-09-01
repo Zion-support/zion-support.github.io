@@ -27,7 +27,7 @@ const ServiceShowcase: React.FC = () => {}
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div;
-          className="text-center mb-16""
+          className="text-center mb-16"""
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -45,16 +45,16 @@ const ServiceShowcase: React.FC = () => {}
 
         {/* Services Grid */}
         <motion.div;
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8""
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"""
           variants={containerVariants}
-          initial="hidden""
-          animate="visible""
+          initial="hidden"""
+          animate="visible"""
         >
           {featuredServices.map((service, index) => (
             <motion.div;
               key={service.id}
               variants={cardVariants}
-              className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group""
+              className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group"""
               whileHover={{ y: -5, scale: 1.02 }}
             >
               {/* Service Header */}
@@ -104,7 +104,7 @@ const ServiceShowcase: React.FC = () => {}
               <div className="space-y-2">
                 <motion.a;
                   href={service.url}
-                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-2 px-4 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 flex items-center justify-center group""
+                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-2 px-4 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 flex items-center justify-center group"""
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -113,7 +113,7 @@ const ServiceShowcase: React.FC = () => {}
                 </motion.a>
                 <a;
                   href={`mailto:${contactInfo.email}?subject=Interest in ${service.name}`}
-                  className="w-full border border-cyan-400/50 text-cyan-400 py-2 px-4 rounded-lg text-sm hover:bg-cyan-400/10 transition-colors flex items-center justify-center""
+                  className="w-full border border-cyan-400/50 text-cyan-400 py-2 px-4 rounded-lg text-sm hover:bg-cyan-400/10 transition-colors flex items-center justify-center"""
                 >
                   Get Quote;
                 </a>
@@ -124,14 +124,14 @@ const ServiceShowcase: React.FC = () => {}
 
         {/* CTA Section */}
         <motion.div;
-          className="text-center mt-16""
+          className="text-center mt-16"""
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
         >
           <motion.a;
-            href="/services""
-            className="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-200""
+            href="/services"""
+            className="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-200"""
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

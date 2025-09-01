@@ -33,7 +33,7 @@ export function VirtualScroll<T>({}
     }
   }, [items.length]) ;
 
-  return()``
+  return()````
     <div className = {`relative ${className}`}>
       {/* Scroll to top button */}
       {scrollTop > 200 && (<motion.button;
@@ -50,18 +50,18 @@ export function VirtualScroll<T>({}
   scale: 0.8;
 }}
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors"""
-          aria-label="Scroll to top"""
-        >"""
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">"""
+          className="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors""""
+          aria-label="Scroll to top""""
+        >""""
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">""""
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
           </svg>
         </motion.button>) }
 
       {/* Virtual scroll container */}
-      <div""
-        ref={containerRef}"""
-        className="overflow-auto""
+      <div"""
+        ref={containerRef}""""
+        className="overflow-auto"""
         style={{ height }}
         onScroll={handleScroll}
       >
@@ -69,7 +69,7 @@ export function VirtualScroll<T>({}
   { height: totalHeight,'
   position: 'relative' 
 
-}}>""
+}}>"""
           <div role="button" style={{ transform }}>
             <AnimatePresence>
               {items.slice(visibleRange.start, visibleRange.end) .map((item, index) => (<motion.div;
@@ -95,8 +95,8 @@ export function VirtualScroll<T>({}
           </div>
         </div>
       </div>;
-;""
-      {/* Scroll position indicator */};"""
+;"""
+      {/* Scroll position indicator */};""""
       <div className="absolute top-2 right-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">;
         {Math.round((scrollTop / (totalHeight - height)) * 100)}%;
       </div>;
@@ -115,28 +115,28 @@ interface ServiceVirtualScrollProps extends React.PropsWithChildren<{}> {}
   className?: string}
 
 export function ServiceVirtualScroll(...args: any[]): any {}
-""
-  const renderServiceCard: any = useCallback((service: anyServiceCard, index: number)  => ("""
+"""
+  const renderServiceCard: any = useCallback((service: anyServiceCard, index: number)  => (""""
     <div className="p-4">
       <motion.div;
-        whileHover={{ scale: 1.02 }}""
-        whileTap={{ scale: 0.98 }}"""
-        className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 cursor-pointer hover:shadow-md transition-shadow""
-        onClick={() => onServiceClick?.(service)}""
-      >"""
-        <div className="flex items-start space-x-4">""
-          {service.icon && ("""
-            <div className="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">"""
+        whileHover={{ scale: 1.02 }}"""
+        whileTap={{ scale: 0.98 }}""""
+        className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 cursor-pointer hover:shadow-md transition-shadow"""
+        onClick={() => onServiceClick?.(service)}"""
+      >""""
+        <div className="flex items-start space-x-4">"""
+          {service.icon && (""""
+            <div className="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">""""
               <span className="text-2xl">{service.icon}</span>
-            </div>""
-          )}"""
-          <div className="flex-1 min-w-0">"""
+            </div>"""
+          )}""""
+          <div className="flex-1 min-w-0">""""
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-              {service.name}""
-            </h3>"""
+              {service.name}"""
+            </h3>""""
             <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
-              {service.description}""
-            </p>"""
+              {service.description}"""
+            </p>""""
             <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded-full">;              {service.category};
             </span>;
           </div>;

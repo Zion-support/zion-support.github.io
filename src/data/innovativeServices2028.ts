@@ -62,9 +62,11 @@ export interface InnovativeService2028 {}
     innovationLevel: 'revolutionary',
     contactInfo: {}
 '
-      phone: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
-      website: 'https://ziontechgroup.com'},'
+''
+'''
+      phone: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
+      website: 'https://ziontechgroup.com'},'''
     marketSize: '$8.5 billion by 2028'},
 
   // Quantum AI Hybrid Solutions;
@@ -99,9 +101,11 @@ export interface InnovativeService2028 {}
     innovationLevel: 'revolutionary',
     contactInfo: {}
 '
-      phone: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
-      website: 'https://ziontechgroup.com'},'
+''
+'''
+      phone: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
+      website: 'https://ziontechgroup.com'},'''
     marketSize: '$15.2 billion by 2028'},
 
   // AI-Powered Cybersecurity Platform;
@@ -138,9 +142,11 @@ export interface InnovativeService2028 {}
     innovationLevel: 'cutting-edge',
     contactInfo: {}
 '
-      phone: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
-      website: 'https://ziontechgroup.com'},'
+''
+'''
+      phone: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
+      website: 'https://ziontechgroup.com'},'''
     marketSize: '$12.8 billion by 2028'},
 
   // AI-Powered Healthcare Analytics Platform;
@@ -175,9 +181,11 @@ export interface InnovativeService2028 {}
     innovationLevel: 'cutting-edge',
     contactInfo: {}
 '
-      phone: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
-      website: 'https://ziontechgroup.com'},'
+''
+'''
+      phone: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
+      website: 'https://ziontechgroup.com'},'''
     marketSize: '$18.5 billion by 2028'},
 
   // AI-Powered Financial Trading Platform;
@@ -212,9 +220,11 @@ export interface InnovativeService2028 {}
     innovationLevel: 'cutting-edge',
     contactInfo: {}
 '
-      phone: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
-      website: 'https://ziontechgroup.com'},'
+''
+'''
+      phone: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
+      website: 'https://ziontechgroup.com'},'''
     marketSize: '$22.1 billion by 2028'},
 
   // AI-Powered Supply Chain Optimization;
@@ -249,9 +259,11 @@ export interface InnovativeService2028 {}
     innovationLevel: 'cutting-edge',
     contactInfo: {}
 '
-      phone: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
-      website: 'https://ziontechgroup.com'},'
+''
+'''
+      phone: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
+      website: 'https://ziontechgroup.com'},'''
     marketSize: '$16.8 billion by 2028'},
 
   // AI-Powered Content Creation Suite;
@@ -286,9 +298,11 @@ export interface InnovativeService2028 {}
     innovationLevel: 'cutting-edge',
     contactInfo: {}
 '
-      phone: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
-      website: 'https://ziontechgroup.com'},'
+''
+'''
+      phone: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
+      website: 'https://ziontechgroup.com'},'''
     marketSize: '$14.2 billion by 2028'},
 
   // AI-Powered Project Management Platform;
@@ -325,9 +339,11 @@ export interface InnovativeService2028 {}
     innovationLevel: 'cutting-edge',
     contactInfo: {}
 '
-      phone: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
-      website: 'https://ziontechgroup.com'},'
+''
+'''
+      phone: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
+      website: 'https://ziontechgroup.com'},'''
     marketSize: '$11.8 billion by 2028'},
 
   // AI-Powered Customer Support Automation;
@@ -362,9 +378,11 @@ export interface InnovativeService2028 {}
     innovationLevel: 'cutting-edge',
     contactInfo: {}
 '
-      phone: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
-      website: 'https://ziontechgroup.com'},'
+''
+'''
+      phone: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
+      website: 'https://ziontechgroup.com'},'''
     marketSize: '$13.5 billion by 2028'},
 
   // AI-Powered Marketing Automation Platform;

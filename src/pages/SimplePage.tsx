@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react';''
 import { Link } from 'react-router-dom';
 
-export default function SimplePage(function SimplePage() {): any {}
+export default function SimplePage(function SimplePage(function SimplePage() {): any {): any {}
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,11 +12,11 @@ export default function SimplePage(function SimplePage() {): any {}
           <p className="text-xl text-gray-600 mb-12">
             Welcome to our innovative technology services;
           </p>
-          
+
           <div className="text-center">
             <Link;
-              to="/services""
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300""
+              to="/services"""
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300"""
             >
               View Our Services;
             </Link>
@@ -24,5 +24,5 @@ export default function SimplePage(function SimplePage() {): any {}
         </div>
       </div>
     </div>
-  );
-}
+  );'""
+}'"'""

@@ -2,11 +2,11 @@ import React from 'react';
 export { function };
 export default function TermsOfService() {}
   return()
-    <div className="max-w-4xl mx-auto">"""
-      <h1 className="text-3xl font-bold text-white mb-8">Terms of Service</h1>""
-"""
-      <div className="space-y-6 text-zion-slate-light">""
-        <section>"""
+    <div className="max-w-4xl mx-auto">""""
+      <h1 className="text-3xl font-bold text-white mb-8">Terms of Service</h1>"""
+""""
+      <div className="space-y-6 text-zion-slate-light">"""
+        <section>""""
           <h2 className="text-xl font-semibold text-white mb-3">
             1.Acceptance of Terms;
           </h2>
@@ -14,8 +14,8 @@ export default function TermsOfService() {}
             By accessing and using Zion Tech Group's services, you accept and;
             agree to be bound by the terms and provision of this agreement.</p>
         </section>
-""
-        <section>"""
+"""
+        <section>""""
           <h2 className="text-xl font-semibold text-white mb-3">
             2.Use License;
           </h2>
@@ -25,8 +25,8 @@ export default function TermsOfService() {}
             personal, non-commercial transitory viewing only.
           </p>
         </section>
-""
-        <section>"""
+"""
+        <section>""""
           <h2 className="text-xl font-semibold text-white mb-3">
             3.Disclaimer;
           </h2>
@@ -39,8 +39,8 @@ export default function TermsOfService() {}
             non-infringement of intellectual property or other violation of;
             rights.</p>
         </section>
-""
-        <section>"""
+"""
+        <section>""""
           <h2 className="text-xl font-semibold text-white mb-3">
             4.Limitations;
           </h2>
@@ -53,8 +53,8 @@ export default function TermsOfService() {}
             been notified orally or in writing of the possibility of such;
             damage.</p>
         </section>
-""
-        <section>"""
+"""
+        <section>""""
           <h2 className="text-xl font-semibold text-white mb-3">
             5.Revisions and Errata;
           </h2>
@@ -67,5 +67,5 @@ export default function TermsOfService() {}
       </div>
     </div>
   );
-}'""
-'"'""
+}'"""
+'"'"""

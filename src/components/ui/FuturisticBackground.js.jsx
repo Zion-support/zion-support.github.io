@@ -92,6 +92,8 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
         // Grid system''
         if (variant === 'grid') {}
 '
+''
+'''
             const gridSize = intensity === 'high' ? 20 : intensity === 'medium' ? 30 : 40;
             const animate = () => {}
                 ctx.clearRect(0, 0, canvas.width, canvas.height);'
@@ -148,17 +150,21 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
         // Matrix system''
         if (variant === 'matrix') {}
 '
-            const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
-            const drops = [];'
+''
+'''
+            const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';''
+            const drops = [];'''
             const fontSize = intensity === 'high' ? 12 : intensity === 'medium' ? 16 : 20;
             const columns = Math.floor(canvas.width / fontSize);
             for (let i = 0; i < columns; i++) {}
                 drops[i] = 1}
             const animate = () => {}
 '
-                ctx.fillStyle = 'rgba(0, 0, 0, 0.05);
-                ctx.fillRect(0, 0, canvas.width, canvas.height);'`
-                ctx.fillStyle = '#0f0';``
+''
+'''`
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.05);'`'`
+                ctx.fillRect(0, 0, canvas.width, canvas.height);'`'`'`
+                ctx.fillStyle = '#0f0';````
                 ctx.font = `${fontSize}px monospace`;
                 for (let i = 0; i < drops.length; i++) {}
                     const text = characters[Math.floor(Math.random() * characters.length)];
@@ -174,6 +180,8 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
     return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style = {}
   {}
 '
+''
+'''
             background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%,
   #16213e 100%);
 
@@ -181,11 +189,15 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
 // Neon text component''
 export function NeonText({ children, color = '#00ffff', glowIntensity = 'medium', className = '' }) {}
 '
+''
+'''
     const glowSize = glowIntensity === 'high' ? '0 0 20px' : glowIntensity === 'medium' ? '0 0 15px' : '0 0 10px';
     return (<span className={className} style = {}
   {}
 `
-            color: color,``
+``
+```
+            color: color,````
   textShadow: `
           ${glowSize;
 } ${color},
@@ -203,26 +215,30 @@ export function FuturisticCard({ children, className = '', glowColor = '#00ffff'
     return (<div className={`relative overflow-hidden rounded-lg border border-transparent bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm ${className}`} style={{}
 `
 ``
-            boxShadow: `0 0 ${glowSize} ${glowColor}`,``
+```
+````
+            boxShadow: `0 0 ${glowSize} ${glowColor}`,````
             borderColor: `${glowColor}40`
         }}>
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20"/>"""
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20"/>""""
       <div className="relative z-10 p-6">
-        {children}""
-      </div>"""
+        {children}"""
+      </div>""""
       <div className="absolute inset-0 opacity-20" style = {}
   {}
 `
 ``
-            background: `linear-gradient(45deg, transparent 30%,
-  ${glowColor`
-``
-}20 50%, transparent 70%)`,'
-            animation: 'shimmer 3s ease-in-out infinite'
-        }}/>
-    </div>)}'
-// Add CSS animations''`
-const style = document.createElement('style');``
+```
+````
+            background: `linear-gradient(45deg, transparent 30%,``
+  ${glowColor``'`
+``'`'`
+}20 50%, transparent 70%)`,'''
+            animation: 'shimmer 3s ease-in-out infinite''
+        }}/>''`
+    </div>)}''`'`
+// Add CSS animations''`'`'`
+const style = document.createElement('style');````
 style.textContent = `
   @keyframes neon-pulse {}
     from {}

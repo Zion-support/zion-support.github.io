@@ -1,11 +1,13 @@
-import React from 'react';'
+import React from 'react';'''
 import { Link } from 'react-router-dom';
 const InnovativeServices2025 = () => {}
   const innovativeServices = []
     {}
 '
-      category: 'AI-Powered Micro SAAS Solutions','
-      description:''
+''
+'''
+      category: 'AI-Powered Micro SAAS Solutions','''
+      description:''''
         'Intelligent software-as-a-service solutions that automate and optimize business processes',
       services: []
         {}
@@ -71,8 +73,10 @@ const InnovativeServices2025 = () => {}
       ]},
     {}
 '
-      category: 'Advanced AI & Machine Learning','
-      description:''
+''
+'''
+      category: 'Advanced AI & Machine Learning','''
+      description:''''
         'Enterprise-grade artificial intelligence solutions that drive innovation and competitive advantage',
       services: []
         {}
@@ -138,8 +142,10 @@ const InnovativeServices2025 = () => {}
       ]},
     {}
 '
-      category: 'Emerging Technology Solutions','
-      description:''
+''
+'''
+      category: 'Emerging Technology Solutions','''
+      description:''''
         'Cutting-edge technology services that position businesses for the future',
       services: []
         {}
@@ -205,8 +211,10 @@ const InnovativeServices2025 = () => {}
       ]},
     {}
 '
-      category: 'Advanced Cybersecurity Solutions','
-      description:''
+''
+'''
+      category: 'Advanced Cybersecurity Solutions','''
+      description:''''
         'Next-generation security solutions that protect against evolving cyber threats',
       services: []
         {}
@@ -252,43 +260,43 @@ const InnovativeServices2025 = () => {}
       ]}
   ];
   return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">""
-      {/* Hero Section */}"""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">"""
-        <div className="max-w-7xl mx-auto text-center">"""
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">""
-            Innovative"""
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"""
+      {/* Hero Section */}""""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">""""
+        <div className="max-w-7xl mx-auto text-center">""""
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">"""
+            Innovative""""
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'
               {' '}
               Services 2025;
-            </span>""
-          </h1>"""
+            </span>"""
+          </h1>""""
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Discover our cutting-edge portfolio of AI-powered micro SAAS;
             solutions, advanced technology services, and emerging tech;
             innovations designed to transform your business and drive;
-            competitive advantage""
-          </p>"""
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">""
-            <a"""
-              href="tel:+13024640950"""
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300""
+            competitive advantage"""
+          </p>""""
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">"""
+            <a""""
+              href="tel:+13024640950""""
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"""
             >
               Call Us: +1 302 464 0950;
-            </a>""
-            <a"""
-              href="mailto:kleber@ziontechgroup.com"""
-              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300""
+            </a>"""
+            <a""""
+              href="mailto:kleber@ziontechgroup.com""""
+              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"""
             >
               Email Us;
-            </a>""
-          </div>"""
+            </a>"""
+          </div>""""
           <div className="text-sm text-gray-400 space-y-1">
             <p>'
-              🌐 Website:{' '}""
-              <a"""
-                href="https://ziontechgroup.com"""
-                className="text-blue-400 hover:text-blue-300""
+              🌐 Website:{' '}"""
+              <a""""
+                href="https://ziontechgroup.com""""
+                className="text-blue-400 hover:text-blue-300"""
               >
                 ziontechgroup.com;
               </a>
@@ -302,118 +310,118 @@ const InnovativeServices2025 = () => {}
       {innovativeServices.map((category, categoryIndex) => (
         <section;
           key={categoryIndex}'
-          className={`py-20 px-4 sm:px-6 lg:px-8 ${categoryIndex % 2 === 0 ? 'bg-white/5' : ''}`}""
-        >"""
-          <div className="max-w-7xl mx-auto">"""
-            <div className="text-center mb-16">"""
+          className={`py-20 px-4 sm:px-6 lg:px-8 ${categoryIndex % 2 === 0 ? 'bg-white/5' : ''}`}"""
+        >""""
+          <div className="max-w-7xl mx-auto">""""
+            <div className="text-center mb-16">""""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                {category.category}""
-              </h2>"""
+                {category.category}"""
+              </h2>""""
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 {category.description}
               </p>
-            </div>""
-"""
+            </div>"""
+""""
             <div className="space-y-12">
               {category.services.map((service, serviceIndex) => (
-                <div""
-                  key={serviceIndex}"""
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300"""
-                >"""
+                <div"""
+                  key={serviceIndex}""""
+                  className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300""""
+                >""""
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    {/* Service Details */}""
-                    <div>"""
+                    {/* Service Details */}"""
+                    <div>""""
                       <h3 className="text-2xl font-bold text-white mb-4">
-                        {service.name}""
-                      </h3>"""
+                        {service.name}"""
+                      </h3>""""
                       <p className="text-gray-300 mb-6 text-lg">
                         {service.description}
-                      </p>""
-"""
-                      <div className="mb-6">"""
+                      </p>"""
+""""
+                      <div className="mb-6">""""
                         <h4 className="text-lg font-semibold text-blue-400 mb-3">
-                          Key Features:""
-                        </h4>"""
+                          Key Features:"""
+                        </h4>""""
                         <ul className="space-y-2">
                           {service.features.map((feature, idx) => (
-                            <li""
-                              key={idx}"""
-                              className="text-gray-300 flex items-start"""
-                            >"""
+                            <li"""
+                              key={idx}""""
+                              className="text-gray-300 flex items-start""""
+                            >""""
                               <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
                               {feature}
                             </li>) ) }
                         </ul>
-                      </div>""
-"""
-                      <div className="mb-6">"""
+                      </div>"""
+""""
+                      <div className="mb-6">""""
                         <h4 className="text-lg font-semibold text-green-400 mb-3">
-                          Key Benefits:""
-                        </h4>"""
+                          Key Benefits:"""
+                        </h4>""""
                         <ul className="space-y-2">
                           {service.benefits.map((benefit, idx) => (
-                            <li""
-                              key={idx}"""
-                              className="text-gray-300 flex items-start"""
-                            >"""
+                            <li"""
+                              key={idx}""""
+                              className="text-gray-300 flex items-start""""
+                            >""""
                               <span className="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
                               {benefit}
                             </li>) ) }
                         </ul>
                       </div>
                     </div>
-""
-                    {/* Market Information */}"""
-                    <div className="space-y-6">"""
-                      <div className="bg-white/5 rounded-lg p-6">"""
+"""
+                    {/* Market Information */}""""
+                    <div className="space-y-6">""""
+                      <div className="bg-white/5 rounded-lg p-6">""""
                         <h4 className="text-lg font-semibold text-yellow-400 mb-3">
-                          Pricing & Market Position""
-                        </h4>"""
-                        <div className="space-y-3">""
-                          <div>"""
+                          Pricing & Market Position"""
+                        </h4>""""
+                        <div className="space-y-3">"""
+                          <div>""""
                             <span className="text-sm text-gray-400">
-                              Pricing:""
-                            </span>"""
+                              Pricing:"""
+                            </span>""""
                             <p className="text-white font-semibold text-lg">
                               {service.pricing}
                             </p>
-                          </div>""
-                          <div>"""
+                          </div>"""
+                          <div>""""
                             <span className="text-sm text-gray-400">
-                              Market Position:""
-                            </span>"""
+                              Market Position:"""
+                            </span>""""
                             <p className="text-gray-300">
                               {service.marketPosition}
                             </p>
                           </div>
                         </div>
-                      </div>""
-"""
-                      <div className="bg-white/5 rounded-lg p-6">"""
+                      </div>"""
+""""
+                      <div className="bg-white/5 rounded-lg p-6">""""
                         <h4 className="text-lg font-semibold text-purple-400 mb-3">
-                          Business Information""
-                        </h4>"""
-                        <div className="space-y-3">""
-                          <div>"""
+                          Business Information"""
+                        </h4>""""
+                        <div className="space-y-3">"""
+                          <div>""""
                             <span className="text-sm text-gray-400">
-                              Use Cases:""
-                            </span>"""
+                              Use Cases:"""
+                            </span>""""
                             <p className="text-gray-300">'
                               {service.useCases.join(',)}
                             </p>
-                          </div>""
-                          <div>"""
+                          </div>"""
+                          <div>""""
                             <span className="text-sm text-gray-400">
-                              Competitors:""
-                            </span>"""
+                              Competitors:"""
+                            </span>""""
                             <p className="text-gray-300">'
                               {service.competitors.join(',)}
                             </p>
-                          </div>""
-                          <div>"""
+                          </div>"""
+                          <div>""""
                             <span className="text-sm text-gray-400">
-                              Competitive Advantage:""
-                            </span>"""
+                              Competitive Advantage:"""
+                            </span>""""
                             <p className="text-gray-300">
                               {service.competitiveAdvantage}
                             </p>
@@ -427,46 +435,46 @@ const InnovativeServices2025 = () => {}
           </div>
         </section>
       ))}
-""
-      {/* Enhanced CTA Section */}"""
-      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">"""
-        <div className="max-w-4xl mx-auto text-center">"""
+"""
+      {/* Enhanced CTA Section */}""""
+      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">""""
+        <div className="max-w-4xl mx-auto text-center">""""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business with Innovation?""
-          </h2>"""
+            Ready to Transform Your Business with Innovation?"""
+          </h2>""""
           <p className="text-xl text-gray-300 mb-8">'
             Let's discuss how our cutting-edge services can position your;
-            business for success in 2025 and beyond""
-          </p>"""
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">""
-            <Link"""
-              to="/contact"""
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300""
+            business for success in 2025 and beyond"""
+          </p>""""
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">"""
+            <Link""""
+              to="/contact""""
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"""
             >
               Start Your Innovation Journey;
-            </Link>""
-            <a"""
-              href="tel:+13024640950"""
-              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300""
+            </Link>"""
+            <a""""
+              href="tel:+13024640950""""
+              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"""
             >
               Call: +1 302 464 0950;
-            </a>""
-          </div>"""
+            </a>"""
+          </div>""""
           <div className="text-sm text-gray-400 space-y-1">
             <p>'
-              📧 Email:{' '}""
-              <a"""
-                href="mailto:kleber@ziontechgroup.com"""
-                className="text-blue-400 hover:text-blue-300""
+              📧 Email:{' '}"""
+              <a""""
+                href="mailto:kleber@ziontechgroup.com""""
+                className="text-blue-400 hover:text-blue-300"""
               >
                 kleber@ziontechgroup.com;
               </a>
             </p>
             <p>'
-              🌐 Website:{' '}""
-              <a"""
-                href="https://ziontechgroup.com"""
-                className="text-blue-400 hover:text-blue-300""
+              🌐 Website:{' '}"""
+              <a""""
+                href="https://ziontechgroup.com""""
+                className="text-blue-400 hover:text-blue-300"""
               >
                 ziontechgroup.com;
               </a>
@@ -476,7 +484,8 @@ const InnovativeServices2025 = () => {}
         </div>
       </section>
     </div>) ;
-};
-
-export default InnovativeServices2025;'"`
+};'"`
+'"`'"`
+export default InnovativeServices2025;'"`'"`'"`
+'"`'"`'"`
 '"`'"`

@@ -14,9 +14,11 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
         const particles = [];
         const colors = {}
 '
-  quantum['#00ffff',#ff00ff',#ffff00',#00ff00'],;'
-            neon['#ff0080',#8000ff',#00ffff',#ffff00'],;'
-            holographic['#ff6b6b',#4ecdc4',#45b7d1',;'
+''
+'''
+  quantum['#00ffff',#ff00ff',#ffff00',#00ff00'],;'''
+            neon['#ff0080',#8000ff',#00ffff',#ffff00'],;'''
+            holographic['#ff6b6b',#4ecdc4',#45b7d1',;'''
   '#96ceb4']
 };
         const selectedColors = colors[theme];

@@ -1,7 +1,7 @@
-import { useState, useEffect, useCallback } from 'react'; // Added useCallback'
+import { useState, useEffect, useCallback } from 'react'; // Added useCallback'''
 import { supabase } from '@/integrations/supabase/client';
 
-export function useJobDetails(function useJobDetails(jobId: string | undefined) {): any {}
+export function useJobDetails(function useJobDetails(function useJobDetails(jobId: string | undefined) {): any {): any {}
   const [job, setJob] = useState<any | null>(null); // Consider defining a proper Job type;
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null); // Changed error type to string | null;
@@ -25,6 +25,8 @@ export function useJobDetails(function useJobDetails(jobId: string | undefined) 
       setError(null);
     } catch (err: any) {}
 '
+''
+'''
       console.error('Error loading job details:', err);
       setError(err.message);
       setJob(null); // Clear job on error;

@@ -45,7 +45,9 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 '
         window.gtag('event',performance_metric', {}
 '
-          event_category: 'performance','
+''
+'''
+          event_category: 'performance','''
           event_label: 'load_time',
           value: Math.round(loadTime)
         })}
@@ -104,10 +106,10 @@ const metricsRef:  useRef<PerformanceMetrics>({;
           // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2),MB')}
       }
     };
-
-    return : unknown clearInterval(intervalId)}, [enableMemoryManagement]);
-        if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB'
-          // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}'
+'
+    return : unknown clearInterval(intervalId)}, [enableMemoryManagement]);''
+        if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB'''
+          // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}'''
           console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}
       }
     };
@@ -131,14 +133,14 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 
     if(observerRef.current) {}
       observerRef.current.observe(element)}
-  }, [enableLazyLoading, createIntersectionObserver]);
-
-:src/hooks/usePerformanceOptimization.tsx'`
-  // Performance monitoring'`'`
-        // // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2),ms')}'`'`
-        // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
-  // Performance monitoring'`
-        // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}'`
+  }, [enableLazyLoading, createIntersectionObserver]);'`
+'`'`
+:src/hooks/usePerformanceOptimization.tsx'`'`'`
+  // Performance monitoring'`'`'`'`
+        // // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2),ms')}'`'`'`'`
+        // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}'`'`
+  // Performance monitoring'`'`'`
+        // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}'`'`'`
         console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
 
       // Report to analytics if available;
@@ -146,7 +148,9 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 '
         window.gtag('event',performance_metric', {}
 '
-          event_category: 'performance','
+''
+'''
+          event_category: 'performance','''
           event_label: 'render_time',
           value: Math.round(renderTime)
         })}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';'''
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 export default function Page() {}
 , [state.scrollTop, containerHeight, itemHeight, overscan, items.length]);
@@ -58,10 +58,14 @@ export default function Page() {}
     // Scroll to top;
     const scrollToTop = useCallback(() => {}
 '
+''
+'''
         scrollToIndex(0,start')}, [scrollToIndex]);
     // Scroll to bottom;
     const scrollToBottom = useCallback(() => {}
 '
+''
+'''
         scrollToIndex(items.length - 1,end')}, [scrollToIndex, items.length]);
     // Get current scroll position;
     const getScrollTop = useCallback(() => {}
@@ -87,12 +91,14 @@ export default function Page() {}
                 const event = new CustomEvent('virtualScrollEnd', {}
                     detail: { scrollTop, scrollHeight, clientHeight }
                 });
-                window.dispatchEvent(event)}
-        };
-        const container = containerRef.current;'
+                window.dispatchEvent(event)}'
+        };''
+        const container = containerRef.current;'''
         container.addEventListener('scroll', handleScrollEnd);
         return () => {}
 '
+''
+'''
             container.removeEventListener('scroll', handleScrollEnd)}}, [enableInfiniteScroll, threshold]);
     // Cleanup on unmount;
     useEffect(() => {}
@@ -124,6 +130,8 @@ export default function Page() {}
 
 `
 ``
+```
+````
 }px)`
         }
     };

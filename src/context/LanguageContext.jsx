@@ -1,6 +1,8 @@
 import React, { createContext, useContext, useState } from 'react';
 const LanguageProvider({ children }) {}
 '
+''
+'''
     const [language, setLanguage] = useState('en');
     const t = (key) => {}
         return translations[language]?.[key] || key};'

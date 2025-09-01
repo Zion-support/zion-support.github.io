@@ -1,18 +1,20 @@
-import { useEffect } from 'react';'
-import { supabase } from '@/integrations/supabase/client';'
+import { useEffect } from 'react';'''
+import { supabase } from '@/integrations/supabase/client';'''
 import { useAuth } from '@/hooks/useAuth';
-export function ReferralMiddleware(function ReferralMiddleware({ children }: Props) {): any {}
+export function ReferralMiddleware(function ReferralMiddleware(function ReferralMiddleware({ children }: Props) {): any {): any {}
   const { user } = useAuth();
   useEffect(() => {}
     const params: any = new URLSearchParams(window.location.search);'
     const code: any = params.get('ref');
     if (code) {}
 '
+''
+'''
       localStorage.setItem('referralCode', code);
     }
   }, []);
   useEffect(() => {}
-    async function sendReferral(function sendReferral() {): any {}
+    async function sendReferral(function sendReferral(function sendReferral() {): any {): any {}
 '
       const code: any = localStorage.getItem('referralCode');
       if(!code || !user?.id || !user?.email) return; // Guard against missing email as well;
@@ -23,6 +25,8 @@ export function ReferralMiddleware(function ReferralMiddleware({ children }: Pro
         localStorage.removeItem('referralCode');
       } catch (err) {}
 '
+''
+'''
         console.error('Error tracking referral', err);
       }
     }

@@ -4,4 +4,4 @@ Transform care delivery with AI diagnostics, predictive analytics, and;
       </div>
     </div>) };
 export default HealthcareSolutions;
-'"'""
+'"'"""

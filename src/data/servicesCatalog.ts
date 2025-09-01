@@ -32,7 +32,9 @@ export type ServiceCategory = {}
 ;export const servicesCatalog: ServiceCategory[] = []
   {}
 '
-    name: 'Micro SaaS','
+''
+'''
+    name: 'Micro SaaS','''
     slug: 'micro-saas',
     items: []
       {}
@@ -66,7 +68,9 @@ export type ServiceCategory = {}
     ]},
   {}
 '
-    name: 'AI Solutions','
+''
+'''
+    name: 'AI Solutions','''
     slug: 'ai-solutions',
     items: []
       {}
@@ -226,7 +230,9 @@ export type ServiceCategory = {}
     ]},
   {}
 '
-    name: 'IT Services','
+''
+'''
+    name: 'IT Services','''
     slug: 'it-services',
     items: []
       {}
@@ -330,7 +336,9 @@ export type ServiceCategory = {}
     ]},
   {}
 '
-    name: 'Cybersecurity','
+''
+'''
+    name: 'Cybersecurity','''
     slug: 'cybersecurity',
     items: []
       {}
@@ -434,7 +442,9 @@ export type ServiceCategory = {}
     ]},
   {}
 '
-    name: 'Data & Analytics','
+''
+'''
+    name: 'Data & Analytics','''
     slug: 'data-analytics',
     items: []
       {}
@@ -496,7 +506,9 @@ export type ServiceCategory = {}
     ]},
   {}
 '
-    name: 'Cloud & DevOps','
+''
+'''
+    name: 'Cloud & DevOps','''
     slug: 'cloud-devops',
     items: []
       {}
@@ -572,7 +584,9 @@ export type ServiceCategory = {}
     ]},
   {}
 '
-    name: 'Quantum Computing','
+''
+'''
+    name: 'Quantum Computing','''
     slug: 'quantum-computing',
     items: []
       {}
@@ -634,7 +648,9 @@ export type ServiceCategory = {}
     ]},
   {}
 '
-    name: 'Blockchain & Web3','
+''
+'''
+    name: 'Blockchain & Web3','''
     slug: 'blockchain-web3',
     items: []
       {}
@@ -668,7 +684,9 @@ export type ServiceCategory = {}
     ]},
   {}
 '
-    name: 'IoT & Edge','
+''
+'''
+    name: 'IoT & Edge','''
     slug: 'iot-edge',
     items: []
       {}
@@ -730,7 +748,9 @@ export type ServiceCategory = {}
     ]},
   {}
 '
-    name: 'Green Tech','
+''
+'''
+    name: 'Green Tech','''
     slug: 'green-tech',
     items: []
       {}
@@ -778,7 +798,9 @@ export type ServiceCategory = {}
     ]},
   {}
 '
-    name: 'Space Tech','
+''
+'''
+    name: 'Space Tech','''
     slug: 'space-tech',
     items: []
       {}
@@ -826,7 +848,9 @@ export type ServiceCategory = {}
     ]},
   {}
 '
-    name: 'BioTech & Health','
+''
+'''
+    name: 'BioTech & Health','''
     slug: 'biotech-health',
     items: []
       {}
@@ -874,7 +898,9 @@ export type ServiceCategory = {}
     ]},
   {}
 '
-    name: 'FinTech & DeFi','
+''
+'''
+    name: 'FinTech & DeFi','''
     slug: 'fintech-defi',
     items: []
       {}
@@ -922,7 +948,9 @@ export type ServiceCategory = {}
     ]},
   {}
 '
-    name: 'Metaverse & AR/VR','
+''
+'''
+    name: 'Metaverse & AR/VR','''
     slug: 'metaverse-ar-vr',
     items: []
       {}
@@ -970,7 +998,9 @@ export type ServiceCategory = {}
     ]},
   {}
 '
-    name: 'Autonomous Systems','
+''
+'''
+    name: 'Autonomous Systems','''
     slug: 'autonomous-systems',
     items: []
       {}
@@ -1020,7 +1050,9 @@ export type ServiceCategory = {}
   // New Service Categories Added;
   {}
 '
-    name: 'Supply Chain & Logistics','
+''
+'''
+    name: 'Supply Chain & Logistics','''
     slug: 'supply-chain-logistics',
     items: []
       {}
@@ -1041,7 +1073,9 @@ export type ServiceCategory = {}
 
   {}
 '
-    name: 'Energy Management','
+''
+'''
+    name: 'Energy Management','''
     slug: 'energy-management',
     items: []
       {}
@@ -1062,7 +1096,9 @@ export type ServiceCategory = {}
 
   {}
 '
-    name: 'Manufacturing Intelligence','
+''
+'''
+    name: 'Manufacturing Intelligence','''
     slug: 'manufacturing-intelligence',
     items: []
       {}
@@ -1083,7 +1119,9 @@ export type ServiceCategory = {}
 
   {}
 '
-    name: 'Data Center Management','
+''
+'''
+    name: 'Data Center Management','''
     slug: 'data-center-management',
     items: []
       {}

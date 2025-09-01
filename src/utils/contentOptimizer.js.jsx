@@ -85,8 +85,8 @@ export class ContentOptimizer {}
     if (!content.includes('<h2>)) score -= 5;'
     // Check for images with alt text''
     const imagesWithAlt = images.filter(img => img.includes('alt='));
-    if (images.length > 0 && imagesWithAlt.length === 0) score -= 10;""
-    // Check for internal links"""
+    if (images.length > 0 && imagesWithAlt.length === 0) score -= 10;"""
+    // Check for internal links""""
     const internalLinks = content.match(/href="\/[^"]*"/g) || [];
     if(internalLinks.length < 2) score -= 10;
     return Math.max(0, score);
@@ -97,36 +97,44 @@ export class ContentOptimizer {}
     if(metrics.headingCount < this.MIN_HEADING_COUNT) {}
       issues.push({}
 '
-        type: 'missing-headings','
-        severity: 'high',
-        description: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`,'
+''
+'''
+        type: 'missing-headings','''
+        severity: 'high',''
+        description: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`,'''
         location: 'Page structure'});
     }
     // Check for minimal content;
     if(metrics.wordCount < this.MIN_WORD_COUNT) {}
       issues.push({}
 '
-        type: 'minimal-content','`
-        severity: 'medium',``
-        description: `Only ${metrics.wordCount} words found. Minimum recommended: ${this.MIN_WORD_COUNT}`,'
+''`
+''`'`
+        type: 'minimal-content','`'`'`
+        severity: 'medium',``'`'`
+        description: `Only ${metrics.wordCount} words found. Minimum recommended: ${this.MIN_WORD_COUNT}`,'''
         location: 'Content body'});
     }
     // Check for no images;
     if(metrics.imageCount === 0) {}
       issues.push({}
 '
-        type: 'no-images','
-        severity: 'medium','
-        description: 'No images found. Images improve user engagement and SEO','
+''
+'''
+        type: 'no-images','''
+        severity: 'medium','''
+        description: 'No images found. Images improve user engagement and SEO','''
         location: 'Content body'});
     }
     // Check for poor structure;
     if(metrics.headingCount === 0 && metrics.wordCount > 100) {}
       issues.push({}
 '
-        type: 'poor-structure','
-        severity: 'high','
-        description: 'Content lacks proper heading structure for organization','
+''
+'''
+        type: 'poor-structure','''
+        severity: 'high','''
+        description: 'Content lacks proper heading structure for organization','''
         location: 'Page structure'});
     }
     // Check for missing keywords;
@@ -138,9 +146,11 @@ export class ContentOptimizer {}
     if(missingKeywords.length > 0) {}
       issues.push({}
 '
-        type: 'missing-keywords','`
-        severity: 'medium',`'`
-        description: `Missing important keywords: ${missingKeywords.join(',)}`,'
+''`
+''`'`
+        type: 'missing-keywords','`'`'`
+        severity: 'medium',`'`'`'`
+        description: `Missing important keywords: ${missingKeywords.join(',)}`,'''
         location: 'Content optimization'});
     }
     return issues;
@@ -192,11 +202,13 @@ export class ContentOptimizer {}
         case 'missing-keywords': any;
           suggestions.push({}
 '
-            type: 'add-keywords','
-            priority: 'medium','
-            description:''
-              'Naturally incorporate missing keywords into the content','
-            example:''
+''
+'''
+            type: 'add-keywords','''
+            priority: 'medium','''
+            description:''''
+              'Naturally incorporate missing keywords into the content','''
+            example:''''
               'Use keywords in headings, subheadings, and naturally throughout the text'});
           break;
       }
@@ -205,11 +217,15 @@ export class ContentOptimizer {}
   }
   static extractPageKeywords(page) {}
 '
-    // Extract keywords from page path''
+''
+'''
+    // Extract keywords from page path''''
     const segments = page.split('/').filter(Boolean);
     const keywords = [];
     segments.forEach(segment => {}
 '
+''
+'''
       const words = segment.split('-').filter(w => w.length > 2);
       keywords.push(...words);
     });
@@ -233,6 +249,8 @@ export class ContentOptimizer {}
     const templates = {}
 `
 ``
+```
+````
       service: `
         <h1>Service Title</h1>
         <p>Comprehensive description of the service and its benefits.</p>

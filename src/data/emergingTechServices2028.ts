@@ -62,13 +62,13 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [// Space 
       "Real-time satellite telemetry",
       "Space data analytics",
       "Launch vehicle integration",
-      "Ground station management""
+      "Ground station management"""
     ],
     benefits: ["Access to space-based technologies",
       "Real-time Earth observation data",
       "Global communication capabilities",
       "Advanced weather forecasting",
-      "Space research opportunities""
+      "Space research opportunities"""
     ],
     targetAudience: ["Space Agencies", "Telecommunications", "Weather Services", "Agriculture", "Defense"],
     marketPrice: "$5,999-25,000/month",
@@ -79,9 +79,9 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [// Space 
     tags: ["Space Technology", "Satellites", "Earth Observation", "Communication", "Innovation"],
     aiScore: 98,
     rating: 4.9,
-    reviewCount: 45,
-    featured: true,
-    location: "Global",
+    reviewCount: 45,""
+    featured: true,"""
+    location: "Global","""
     availability: "Limited",
     author: {}
       name: "Zion Tech Group",
@@ -100,7 +100,7 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [// Space 
     implementationTime: "12-24 weeks",
     securityFeatures: ["Encrypted communications", "Access control", "Audit trails", "Compliance monitoring"],
     scalability: "Global satellite networks",
-    uptime: "99.9%""
+    uptime: "99.9%"""
   },
 
   // Autonomous Vehicle Systems;
@@ -122,13 +122,13 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [// Space 
       "Passenger management",
       "Energy optimization",
       "Regulatory compliance",
-      "Mobile fleet app""
+      "Mobile fleet app"""
     ],
     benefits: ["Reduce transportation costs by 60%",
       "Improve safety by 90%",
       "24/7 autonomous operation",
       "Optimized route planning",
-      "Reduced environmental impact""
+      "Reduced environmental impact"""
     ],
     targetAudience: ["Transportation Companies", "Logistics Providers", "Ride-sharing Services", "Delivery Companies", "Municipalities"],
     marketPrice: "$3,499-12,000/month",
@@ -139,9 +139,9 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [// Space 
     tags: ["Autonomous Vehicles", "Fleet Management", "AI", "Transportation", "Safety"],
     aiScore: 97,
     rating: 4.8,
-    reviewCount: 167,
-    featured: true,
-    location: "Global",
+    reviewCount: 167,""
+    featured: true,"""
+    location: "Global","""
     availability: "Available",
     author: {}
       name: "Zion Tech Group",
@@ -160,7 +160,7 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [// Space 
     implementationTime: "16-24 weeks",
     securityFeatures: ["Cybersecurity protection", "Safety systems", "Real-time monitoring", "Emergency protocols"],
     scalability: "Unlimited fleet size",
-    uptime: "99.99%""
+    uptime: "99.99%"""
   },
 
   // AI-Powered Drug Discovery;
@@ -182,13 +182,13 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [// Space 
       "Biomarker discovery",
       "Personalized medicine",
       "Regulatory compliance",
-      "Research collaboration tools""
+      "Research collaboration tools"""
     ],
     benefits: ["Reduce drug development time by 70%",
       "Lower development costs by 60%",
       "Improve success rates by 40%",
       "Accelerate time to market",
-      "Enhanced drug efficacy""
+      "Enhanced drug efficacy"""
     ],
     targetAudience: ["Pharmaceutical Companies", "Biotech Firms", "Research Institutions", "Academic Labs", "CROs"],
     marketPrice: "$7,999-50,000/month",
@@ -199,9 +199,9 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [// Space 
     tags: ["Drug Discovery", "AI", "Pharmaceuticals", "Molecular Biology", "Healthcare"],
     aiScore: 99,
     rating: 4.9,
-    reviewCount: 89,
-    featured: true,
-    location: "Global",
+    reviewCount: 89,""
+    featured: true,"""
+    location: "Global","""
     availability: "Limited",
     author: {}
       name: "Zion Tech Group",
@@ -220,7 +220,7 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [// Space 
     implementationTime: "8-16 weeks",
     securityFeatures: ["Data encryption", "Access controls", "Audit trails", "Compliance monitoring"],
     scalability: "Enterprise research",
-    uptime: "99.9%""
+    uptime: "99.9%"""
   },
 
   // Quantum Internet Infrastructure;
@@ -242,13 +242,13 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [// Space 
       "Quantum internet APIs",
       "Quantum cloud access",
       "Quantum network monitoring",
-      "Quantum cryptography""
+      "Quantum cryptography"""
     ],
     benefits: ["Unhackable communication",
       "Quantum advantage in networking",
       "Future-proof infrastructure",
       "Ultra-secure data transmission",
-      "Quantum computing access""
+      "Quantum computing access"""
     ],
     targetAudience: ["Government Agencies", "Financial Institutions", "Defense Contractors", "Research Institutions", "Technology Companies"],
     marketPrice: "$8,999-100,000/month",
@@ -259,9 +259,9 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [// Space 
     tags: ["Quantum Internet", "Quantum Communication", "Cryptography", "Networking", "Security"],
     aiScore: 99,
     rating: 4.9,
-    reviewCount: 34,
-    featured: true,
-    location: "Global",
+    reviewCount: 34,""
+    featured: true,"""
+    location: "Global","""
     availability: "Limited",
     author: {}
       name: "Zion Tech Group",
@@ -280,7 +280,7 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [// Space 
     implementationTime: "24-48 weeks",
     securityFeatures: ["Quantum encryption", "Entanglement-based security", "Quantum key distribution", "Zero-trust architecture"],
     scalability: "Global quantum networks",
-    uptime: "99.5%""
+    uptime: "99.5%"""
   },
 
   // AI-Powered Climate Modeling;
@@ -302,13 +302,13 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [// Space 
       "Sustainability planning",
       "Climate adaptation strategies",
       "Real-time climate monitoring",
-      "Policy impact modeling""
+      "Policy impact modeling"""
     ],
     benefits: ["Accurate climate predictions",
       "Early warning systems",
       "Risk mitigation strategies",
       "Sustainability planning",
-      "Policy decision support""
+      "Policy decision support"""
     ],
     targetAudience: ["Government Agencies", "Insurance Companies", "Energy Companies", "Agriculture", "Urban Planners"],
     marketPrice: "$2,799-8,000/month",
@@ -319,9 +319,9 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [// Space 
     tags: ["Climate Modeling", "AI", "Environmental Science", "Weather Forecasting", "Sustainability"],
     aiScore: 96,
     rating: 4.8,
-    reviewCount: 123,
-    featured: true,
-    location: "Global",
+    reviewCount: 123,""
+    featured: true,"""
+    location: "Global","""
     availability: "Available",
     author: {}
       name: "Zion Tech Group",
@@ -340,7 +340,7 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [// Space 
     implementationTime: "12-20 weeks",
     securityFeatures: ["Data encryption", "Access controls", "Audit trails", "Quality assurance"],
     scalability: "Global climate models",
-    uptime: "99.9%""
+    uptime: "99.9%"""
   },
 
   // Autonomous Manufacturing Systems;
@@ -362,13 +362,13 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [// Space 
       "Production planning",
       "Inventory management",
       "Quality assurance",
-      "Mobile monitoring app""
+      "Mobile monitoring app"""
     ],
     benefits: ["Reduce manufacturing costs by 50%",
       "Improve product quality by 90%",
       "24/7 autonomous production",
       "Zero defect manufacturing",
-      "Optimized resource utilization""
+      "Optimized resource utilization"""
     ],
     targetAudience: ["Manufacturing Companies", "Automotive Industry", "Electronics", "Pharmaceuticals", "Food & Beverage"],
     marketPrice: "$4,299-15,000/month",
@@ -379,9 +379,9 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [// Space 
     tags: ["Manufacturing", "Autonomous Systems", "AI", "Robotics", "Industry 4.0"],
     aiScore: 97,
     rating: 4.8,
-    reviewCount: 189,
-    featured: true,
-    location: "Global",
+    reviewCount: 189,""
+    featured: true,"""
+    location: "Global","""
     availability: "Available",
     author: {}
       name: "Zion Tech Group",
@@ -400,7 +400,7 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [// Space 
     implementationTime: "20-32 weeks",
     securityFeatures: ["Cybersecurity protection", "Safety systems", "Access controls", "Audit trails"],
     scalability: "Multiple production lines",
-    uptime: "99.95%""
+    uptime: "99.95%"""
   },
 
   // AI-Powered Education Platform;
@@ -422,13 +422,13 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [// Space 
       "Progress tracking",
       "Collaborative learning",
       "Mobile learning apps",
-      "Parent-teacher communication""
+      "Parent-teacher communication"""
     ],
     benefits: ["Improve learning outcomes by 40%",
       "Reduce learning time by 30%",
       "Personalized education for all",
       "Real-time progress monitoring",
-      "Enhanced student engagement""
+      "Enhanced student engagement"""
     ],
     targetAudience: ["K-12 Schools", "Universities", "Corporate Training", "Online Education", "Tutoring Centers"],
     marketPrice: "$899-3,500/month",
@@ -439,9 +439,9 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [// Space 
     tags: ["Education", "AI", "Personalized Learning", "EdTech", "Student Success"],
     aiScore: 95,
     rating: 4.8,
-    reviewCount: 456,
-    featured: true,
-    location: "Global",
+    reviewCount: 456,""
+    featured: true,"""
+    location: "Global","""
     availability: "Available",
     author: {}
       name: "Zion Tech Group",
@@ -460,7 +460,7 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [// Space 
     implementationTime: "4-8 weeks",
     securityFeatures: ["Data encryption", "Access controls", "Privacy protection", "Compliance monitoring"],
     scalability: "Unlimited students",
-    uptime: "99.9%""
+    uptime: "99.9%"""
   },
 
   // Quantum Machine Learning Platform;
@@ -482,13 +482,13 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [// Space 
       "Quantum data processing",
       "Quantum model training",
       "Quantum inference engines",
-      "Research collaboration tools""
+      "Research collaboration tools"""
     ],
     benefits: ["Solve previously impossible problems",
       "Exponential speedup for ML tasks",
       "Quantum advantage in AI",
       "Future-proof ML capabilities",
-      "Breakthrough research opportunities""
+      "Breakthrough research opportunities"""
     ],
     targetAudience: ["AI Research Labs", "Technology Companies", "Financial Services", "Pharmaceuticals", "Government Agencies"],
     marketPrice: "$6,999-25,000/month",
@@ -499,9 +499,9 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [// Space 
     tags: ["Quantum Computing", "Machine Learning", "AI", "Research", "Innovation"],
     aiScore: 99,
     rating: 4.9,
-    reviewCount: 78,
-    featured: true,
-    location: "Global",
+    reviewCount: 78,""
+    featured: true,"""
+    location: "Global","""
     availability: "Limited",
     author: {}
       name: "Zion Tech Group",
@@ -520,6 +520,6 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [// Space 
     implementationTime: "4-8 weeks",
     securityFeatures: ["Quantum encryption", "Access controls", "Research security", "IP protection"],
     scalability: "Limited by quantum hardware",
-    uptime: "99.5%""
+    uptime: "99.5%"""
   }
 ];

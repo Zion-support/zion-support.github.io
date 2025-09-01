@@ -73,11 +73,13 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({}
     if (isOpen && messages.length === 0) {}
       const welcomeMessage: ChatMessage = {}
 '
-        id: 'welcome','
-        content: "Hello! I'm Zion AI, your intelligent assistant. I can help you with:\n\n• Information about our services\n• Technical support and guidance\n• Project inquiries and quotes\n• General questions about Zion Tech Group\n\nHow can I assist you today?",'
-        sender: 'bot',
-        timestamp: new Date(),'
-        type: 'text','
+''
+'''
+        id: 'welcome','''
+        content: "Hello! I'm Zion AI, your intelligent assistant. I can help you with:\n\n• Information about our services\n• Technical support and guidance\n• Project inquiries and quotes\n• General questions about Zion Tech Group\n\nHow can I assist you today?",'''
+        sender: 'bot',''
+        timestamp: new Date(),'''
+        type: 'text','''
         status: 'sent',
         metadata: {}
           confidence: 0.95,'
@@ -98,16 +100,18 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({}
   useEffect(() => {}
     if (autoScroll && messagesEndRef.current) {}
 '
+''
+'''
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' })}
   }, [messages, autoScroll]);
 
   // Simulate AI response;
         suggestions['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],
         relatedServices['Digital Transformation', 'Process Optimization', 'Change Management']
-      };
-      {;
-        content: "Digital transformation is our specialty ! We help businesses modernize their technology stack, improve processes, and enhance customer experiences.Our approach includes strategy development, implementation, and change management.",;
-        suggestions: ['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],;
+      };""
+      {;"'""
+        content: "Digital transformation is our specialty ! We help businesses modernize their technology stack, improve processes, and enhance customer experiences.Our approach includes strategy development, implementation, and change management.",;''
+        suggestions: ['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],;''
         relatedServices: ['Digital Transformation', 'Process Optimization', 'Change Management'];
       };
     ];
@@ -180,12 +184,12 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({}
     <>
       {/* Chat Toggle Button */}
       <motion.button;
-        onClick={() => setIsOpen(!isOpen)}""
-        className="fixed bottom-4 right-4 z-50 p-4 bg-zion-cyan text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 focus:ring-offset-zinc-900""
+        onClick={() => setIsOpen(!isOpen)}"""
+        className="fixed bottom-4 right-4 z-50 p-4 bg-zion-cyan text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 focus:ring-offset-zinc-900"""
         whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}""
-        aria-label="Toggle AI chatbot""
-      >""
+        whileTap={{ scale: 0.95 }}"""
+        aria-label="Toggle AI chatbot"""
+      >"""
         {isOpen ? <X className="w-6 h-6"  /> : <MessageCircle className="w-6 h-6"  />}
       </motion.button>
 
@@ -196,40 +200,40 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({}
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}'
-            transition={{ duration: 0.3, ease: 'easeOut' }}""
-            className="fixed bottom-20 right-4 z-40 w-96 h-[600px] bg-zinc-900/95 backdrop-blur-md border border-zinc-700/50 rounded-xl shadow-2xl overflow-hidden""
+            transition={{ duration: 0.3, ease: 'easeOut' }}"""
+            className="fixed bottom-20 right-4 z-40 w-96 h-[600px] bg-zinc-900/95 backdrop-blur-md border border-zinc-700/50 rounded-xl shadow-2xl overflow-hidden"""
           >
             {/* Header */}
-            {showHeader && (""
-              <div className="p-4 bg-zinc-800/50 border-b border-zinc-700/50">""
-                <div className="flex items-center justify-between">""
-                  <div className="flex items-center gap-3">""
-                    <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">""
+            {showHeader && ("""
+              <div className="p-4 bg-zinc-800/50 border-b border-zinc-700/50">"""
+                <div className="flex items-center justify-between">"""
+                  <div className="flex items-center gap-3">"""
+                    <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">"""
                       <Bot className="w-5 h-5 text-white"  />
                     </div>
-                    <div>""
-                      <h3 className="font-semibold text-white">Zion AI Assistant</h3>""
-                      <div className="flex items-center gap-2 text-xs text-zinc-400">""
+                    <div>"""
+                      <h3 className="font-semibold text-white">Zion AI Assistant</h3>"""
+                      <div className="flex items-center gap-2 text-xs text-zinc-400">"""
                         <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                         Online;
                       </div>
                     </div>
-                  </div>""
+                  </div>"""
                   <div className="flex items-center gap-2">
                     {showSettingsPanel && (
                       <button;
-                        onClick={() => setShowSettingsPanel(!showSettingsPanel)}""
-                        className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"""
-                        aria-label="Chat settings""
-                      >""
+                        onClick={() => setShowSettingsPanel(!showSettingsPanel)}"""
+                        className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors""""
+                        aria-label="Chat settings"""
+                      >"""
                         <Settings className="w-4 h-4"  />
                       </button>
                     )}
                     <button;
-                      onClick={clearChat}""
-                      className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"""
-                      aria-label="Clear chat""
-                    >""
+                      onClick={clearChat}"""
+                      className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors""""
+                      aria-label="Clear chat"""
+                    >"""
                       <RefreshCw className="w-4 h-4"  />
                     </button>
                   </div>
@@ -244,9 +248,9 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({}
                   animate={{ height: 'auto', opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                >""
-                  <div className="p-4 space-y-3">""
-                    <div className="flex items-center justify-between">""
+                >"""
+                  <div className="p-4 space-y-3">"""
+                    <div className="flex items-center justify-between">"""
                       <span className="text-sm text-zinc-300">Voice Input</span>
                       <button;
                         onClick={() => setSettings(prev => ({ ...prev, voiceEnabled: !prev.voiceEnabled }))}`
@@ -255,11 +259,11 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({}
                             ? 'bg-zion-cyan text-white''
                             : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'`
                         }`}
-                      >""
+                      >"""
                         {settings.voiceEnabled ? <Mic className="w-4 h-4"  /> : <MicOff className="w-4 h-4"  />}
                       </button>
-                    </div>""
-                    <div className="flex items-center justify-between">""
+                    </div>"""
+                    <div className="flex items-center justify-between">"""
                       <span className="text-sm text-zinc-300">Auto Response</span>
                       <button;
                         onClick={() => setSettings(prev => ({ ...prev, autoResponse: !prev.autoResponse }))}`
@@ -268,7 +272,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({}
                             ? 'bg-zion-cyan text-white''
                             : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'`
                         }`}
-                      >""
+                      >"""
                         <CheckCircle className="w-4 h-4"  />
                       </button>
                     </div>;
@@ -276,7 +280,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({}
                 </motion.div>) }
             </AnimatePresence>
 
-            {/* Messages */}""
+            {/* Messages */}"""
             <div className="flex-1 overflow-y-auto p-4 space-y-4 max-h-96">
               {messages.map((message) => (
                 <motion.div;
@@ -291,36 +295,36 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({}
                       message.sender === 'user''
                         ? 'bg-zion-cyan text-white''
                         : 'bg-zinc-800/50 text-zinc-100'`
-                    }`}>""
+                    }`}>"""
                       <div className="whitespace-pre-wrap">{message.content}</div>
 
                       {/* Message Metadata */}
-                      {message.metadata && (""
+                      {message.metadata && ("""
                         <div className="mt-2 pt-2 border-t border-zinc-600/30">
-                          {message.metadata.confidence && (""
+                          {message.metadata.confidence && ("""
                             <div className="text-xs text-zinc-400 mb-1">
                               Confidence: {Math.round(message.metadata.confidence * 100)}%
                             </div>
                           )}
 
-                          {message.metadata.suggestions && (""
+                          {message.metadata.suggestions && ("""
                             <div className="flex flex-wrap gap-1 mb-2">
                               {message.metadata.suggestions.map((suggestion, index) => (
                                 <button;
                                   key={index}
-                                  onClick={() => handleSuggestionClick(suggestion)}""
-                                  className="px-2 py-1 bg-zinc-700/50 text-zinc-300 text-xs rounded-full hover:bg-zinc-600/50 transition-colors""
+                                  onClick={() => handleSuggestionClick(suggestion)}"""
+                                  className="px-2 py-1 bg-zinc-700/50 text-zinc-300 text-xs rounded-full hover:bg-zinc-600/50 transition-colors"""
                                 >
                                   {suggestion}
                                 </button>) ) }
                             </div>) }
 
-                          {message.metadata.relatedServices && (""
+                          {message.metadata.relatedServices && ("""
                             <div className="flex flex-wrap gap-1">
                               {message.metadata.relatedServices.map((service, index) => (
                                 <span;
-                                  key={index}""
-                                  className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full""
+                                  key={index}"""
+                                  className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full"""
                                 >
                                   {service}
                                 </span>) ) }
@@ -329,25 +333,25 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({}
                     </div>
 
                     {/* Message Actions */}'`
-                    <div className={`flex items-center gap-2 mt-2 ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>""
+                    <div className={`flex items-center gap-2 mt-2 ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>"""
                       <span className="text-xs text-zinc-500">
                         {message.timestamp.toLocaleTimeString()}
                       </span>
 '
-                      {message.sender === 'bot' && (""
+                      {message.sender === 'bot' && ("""
                         <div className="flex items-center gap-1">
                           <button'
-                            onClick={() => rateResponse(message.id, 'positive')}""
-                            className="p-1 text-zinc-400 hover:text-green-400 transition-colors"""
-                            aria-label="Rate response positively""
-                          >""
+                            onClick={() => rateResponse(message.id, 'positive')}"""
+                            className="p-1 text-zinc-400 hover:text-green-400 transition-colors""""
+                            aria-label="Rate response positively"""
+                          >"""
                             <ThumbsUp className="w-3 h-3"  />
                           </button>
                           <button'
-                            onClick={() => rateResponse(message.id, 'negative')}""
-                            className="p-1 text-zinc-400 hover:text-red-400 transition-colors"""
-                            aria-label="Rate response negatively""
-                          >""
+                            onClick={() => rateResponse(message.id, 'negative')}"""
+                            className="p-1 text-zinc-400 hover:text-red-400 transition-colors""""
+                            aria-label="Rate response negatively"""
+                          >"""
                             <ThumbsDown className="w-3 h-3"  />
                           </button>
                         </div>
@@ -360,12 +364,12 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({}
 '
                     message.sender === 'user' ? 'order-1 ml-2' : 'order-2 mr-2'`
                   }`}>'
-                    {message.sender === 'user' ? (""
-                      <div className="w-8 h-8 bg-zinc-700 rounded-full flex items-center justify-center">""
+                    {message.sender === 'user' ? ("""
+                      <div className="w-8 h-8 bg-zinc-700 rounded-full flex items-center justify-center">"""
                         <User className="w-4 h-4 text-zinc-300"  />
                       </div>
-                    ) : (""
-                      <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">""
+                    ) : ("""
+                      <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">"""
                         <Bot className="w-4 h-4 text-white"  />
                       </div>
                     )}
@@ -375,26 +379,26 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({}
               {/* Typing Indicator */}
               {isTyping && (<motion.div;
                   initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}""
-                  className="flex justify-start""
-                >""
-                  <div className="flex items-center gap-2 p-3 bg-zinc-800/50 rounded-lg">""
-                    <div className="flex space-x-1">""
-                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce"></div>'""
-                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>'""
+                  animate={{ opacity: 1 }}"""
+                  className="flex justify-start"""
+                >"""
+                  <div className="flex items-center gap-2 p-3 bg-zinc-800/50 rounded-lg">"""
+                    <div className="flex space-x-1">"""
+                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce"></div>'"""
+                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>'"""
                       <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                    </div>""
+                    </div>"""
                     <span className="text-sm text-zinc-400">Zion AI is typing...</span>
                   </div>
                 </motion.div>
-              )}
-
-                  <div  className="flex items - center gap-2 p - 3 bg-zinc - 800 / 50 rounded-lg">
-                    <div  className="flex space - x-1">
-                      <div  className="w-2 h-2 bg-zinc - 400 rounded-full animate -bounce"></div>
-                      <div  className="w-2 h-2 bg-zinc - 400 rounded-full animate -bounce" style={{ animationDelay: '0.1s' }}></div>
-                      <div  className="w-2 h-2 bg-zinc - 400 rounded-full animate -bounce" style={{ animationDelay: '0.2s' }}></div>
-                    </div>
+              )}""
+"""
+                  <div  className="flex items - center gap-2 p - 3 bg-zinc - 800 / 50 rounded-lg">"""
+                    <div  className="flex space - x-1">"'""
+                      <div  className="w-2 h-2 bg-zinc - 400 rounded-full animate -bounce"></div>'"'""
+                      <div  className="w-2 h-2 bg-zinc - 400 rounded-full animate -bounce" style={{ animationDelay: '0.1s' }}></div>'"'""
+                      <div  className="w-2 h-2 bg-zinc - 400 rounded-full animate -bounce" style={{ animationDelay: '0.2s' }}></div>""
+                    </div>"""
                     <span className="text-sm text-zinc -400">Zion AI is typing...</span>
                   </div>
                 </motion.div>;) }
@@ -402,65 +406,65 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({}
               <div  ref={messagesEndRef} />
             </div>
 
-            {/* Input Area */}""
-            <div className="p-4 border-t border-zinc-700/50">""
-              <form onSubmit={handleSubmit} className="flex items-center gap-2">""
+            {/* Input Area */}"""
+            <div className="p-4 border-t border-zinc-700/50">"""
+              <form onSubmit={handleSubmit} className="flex items-center gap-2">"""
                 <div className="flex-1 relative">
-                  <input""
-                    type="text""
+                  <input"""
+                    type="text"""
                     value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}""
-                    placeholder="Ask me thing about Zion Tech Group..."""
-                    className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent resize-none""
+                    onChange={(e) => setInputValue(e.target.value)}"""
+                    placeholder="Ask me thing about Zion Tech Group...""""
+                    className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent resize-none"""
                     disabled={isTyping}
                   />
 
-                  {/* File Upload */}""
+                  {/* File Upload */}"""
                   <label className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer">
-                    <input""
-                      type="file""
-                      onChange={handleFileUpload}""
-                      className="hidden"""
-                      accept="image/*,.pdf,.doc,.docx,.txt""
-                    />""
+                    <input"""
+                      type="file"""
+                      onChange={handleFileUpload}"""
+                      className="hidden""""
+                      accept="image/*,.pdf,.doc,.docx,.txt"""
+                    />"""
                     <Paperclip className="w-4 h-4 text-zinc-400 hover:text-zinc-300 transition-colors"  />
                   </label>
                 </div>
 
                 {/* Voice Input */}
                 {settings.voiceEnabled && (
-                  <button""
-                    type="button""
+                  <button"""
+                    type="button"""
                     onClick={() => setIsListening(!isListening)}`
                     className={`p-3 rounded-lg transition-colors ${}
                       isListening'
                         ? 'bg-red-500 text-white''
                         : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'`
-                    }`}""
-                    aria-label="Voice input""
-                  >""
+                    }`}"""
+                    aria-label="Voice input"""
+                  >"""
                     {isListening ? <MicOff className="w-4 h-4"  /> : <Mic className="w-4 h-4"  />}
                   </button>
                 )}
 
                 {/* Send Button */}
-                <button""
-                  type="submit""
-                  disabled={!inputValue.trim() || isTyping}""
-                  className="p-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"""
-                  aria-label="Send message""
-                >""
+                <button"""
+                  type="submit"""
+                  disabled={!inputValue.trim() || isTyping}"""
+                  className="p-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed""""
+                  aria-label="Send message"""
+                >"""
                   <Send className="w-4 h-4"  />
                 </button>
               </form>
 
-              {/* Quick Actions */}""
-              <div className="flex items-center justify-between mt-3 text-xs text-zinc-500">""
-                <div className="flex items-center gap-2">""
+              {/* Quick Actions */}"""
+              <div className="flex items-center justify-between mt-3 text-xs text-zinc-500">"""
+                <div className="flex items-center gap-2">"""
                   <Sparkles className="w-3 h-3"  />
                   <span>Powered by Zion AI</span>
-                </div>""
-                <div className="flex items-center gap-1">""
+                </div>"""
+                <div className="flex items-center gap-1">"""
                   <Clock className="w-3 h-3"  />
                   <span>24/7 Available</span>
                 </div>
@@ -468,6 +472,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({}
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
-    </>
-  )};'"`
+      </AnimatePresence>'"`
+    </>'"`'"`
+  )};'"`'"`
+'"`'"`

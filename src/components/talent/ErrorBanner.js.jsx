@@ -5,5 +5,5 @@ export function ErrorBanner({ msg }) {}
       {msg}
     </div>
   );
-}'""
-'"'""
+}'"""
+'"'"""

@@ -1,8 +1,8 @@
-import { useState, useEffect, useCallback } from "react"; // Added useCallback""
-import { supabase } from "@/integrations/supabase/client";""
-import { Job, JobStatus } from "@/types/jobs";""
-import { toast } from "sonner";""
-import { useAuth } from './useAuth';""
+import { useState, useEffect, useCallback } from "react"; // Added useCallback"""
+import { supabase } from "@/integrations/supabase/client";"""
+import { Job, JobStatus } from "@/types/jobs";"""
+import { toast } from "sonner";"""
+import { useAuth } from './useAuth';"""
 import { createJob as createJobService, updateJob as updateJobService, getJobById } from "@/services/jobService"; // Aliased service functions;
 export const useJobs: any = (userId?: string, status?: JobStatus) => {}
   const { user } = useAuth();
@@ -22,14 +22,14 @@ export const useJobs: any = (userId?: string, status?: JobStatus) => {}
     try {}
       setIsLoading(true);
 
-      let query = supabase;""
-        .from("jobs")""
-        .select("*")""
-        .eq("client_id", clientId)""
+      let query = supabase;"""
+        .from("jobs")"""
+        .select("*")"""
+        .eq("client_id", clientId)"""
         .order("created_at", { ascending: false });
 
       if (status) {}
-""
+"""
         query = query.eq("status", status);
       }
 
@@ -40,9 +40,9 @@ export const useJobs: any = (userId?: string, status?: JobStatus) => {}
       setJobs(data as Job[] || []); // Ensure data is not null;
       setError(null);
     } catch (err: any) {}
-""
-      console.error("Error fetching jobs:", err);""
-      setError("Failed to fetch jobs. Please try again.");""
+"""
+      console.error("Error fetching jobs:", err);"""
+      setError("Failed to fetch jobs. Please try again.");"""
       toast.error("Failed to fetch jobs");
       setJobs([]); // Clear jobs on error;
     } finally {}
@@ -52,20 +52,20 @@ export const useJobs: any = (userId?: string, status?: JobStatus) => {}
   const updateJobStatus: any = async (jobId: string, newStatus: JobStatus) => {}
     if (!clientId) return false;
     try {}
-      const { error: updateError } = await supabase""
+      const { error: updateError } = await supabase"""
         .from("jobs")
-        .update({ status: newStatus })""
-        .eq("id", jobId)""
+        .update({ status: newStatus })"""
+        .eq("id", jobId)"""
         .eq("client_id", clientId); 
 
       if(updateError) throw updateError;
 
-      setJobs(prevJobs => prevJobs.map(job => job.id === jobId ? {...job, status: newStatus} : job));""
+      setJobs(prevJobs => prevJobs.map(job => job.id === jobId ? {...job, status: newStatus} : job));"""
       toast.success("Job status updated successfully");
       return true;
     } catch (err: any) {}
-""
-      console.error("Error updating job status:", err);""
+"""
+      console.error("Error updating job status:", err);"""
       toast.error("Failed to update job status");
       return false;
     }
@@ -74,20 +74,20 @@ export const useJobs: any = (userId?: string, status?: JobStatus) => {}
   const deleteJob: any = async (jobId: string) => {}
     if (!clientId) return false;
     try {}
-      const { error: deleteError } = await supabase""
+      const { error: deleteError } = await supabase"""
         .from("jobs")
-        .delete()""
-        .eq("id", jobId)""
+        .delete()"""
+        .eq("id", jobId)"""
         .eq("client_id", clientId); 
 
       if(deleteError) throw deleteError;
 
-      setJobs(prevJobs => prevJobs.filter(job => job.id !== jobId));""
+      setJobs(prevJobs => prevJobs.filter(job => job.id !== jobId));"""
       toast.success("Job deleted successfully");
       return true;
     } catch (err: any) {}
-""
-      console.error("Error deleting job:", err);""
+"""
+      console.error("Error deleting job:", err);"""
       toast.error("Failed to delete job");
       return false;
     }
@@ -108,4 +108,4 @@ export const useJobs: any = (userId?: string, status?: JobStatus) => {}
     getJobById;
   };
 };
-""
+"""

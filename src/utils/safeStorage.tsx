@@ -3,7 +3,7 @@ const inMemoryStore: any = {};
 let localStorageAvailable = null; // Cache the availability check;
 let lastAvailabilityCheck = 0;
 const AVAILABILITY_CHECK_INTERVAL: any = 5000; // Check every 5 seconds max;
-function isLocalStorageAvailable(function isLocalStorageAvailable() {): any {}
+function isLocalStorageAvailable(function isLocalStorageAvailable(function isLocalStorageAvailable() {): any {): any {}
   const now: any = Date.now();
   // Use cached result if checked recently;
   if()
@@ -34,7 +34,7 @@ function isLocalStorageAvailable(function isLocalStorageAvailable() {): any {}
 }
 
 <<<<<<< HEAD:src/utils/safeStorage.tsx;
-function safeConsoleError(function safeConsoleError(message, error) {): any {}
+function safeConsoleError(function safeConsoleError(function safeConsoleError(message, error) {): any {): any {}
 '
   const env: any = globalThis.process?.env?.NODE_ENV ?? 'production';'
   // Prevent infinite recursion in console logging''
@@ -53,6 +53,8 @@ export const safeStorage: any = {}
 <<<<<<< HEAD:src/utils/safeStorage.tsx;
     } catch (error) {}
 '
+''
+'''
       // console.warn('Failed to get item from localStorage:', error);
       return null;
     }
@@ -65,6 +67,8 @@ export const safeStorage: any = {}
 <<<<<<< HEAD:src/utils/safeStorage.tsx;
     } catch (error) {}
 '
+''
+'''
       // console.warn('Failed to set item in localStorage:', error);
       return false;
     }
@@ -77,6 +81,8 @@ export const safeStorage: any = {}
 <<<<<<< HEAD:src/utils/safeStorage.tsx;
     } catch (error) {}
 '
+''
+'''
       // console.warn('Failed to remove item from localStorage:', error);
       return false;
     }
@@ -89,6 +95,8 @@ export const safeStorage: any = {}
 <<<<<<< HEAD:src/utils/safeStorage.tsx;
     } catch (error) {}
 '
+''
+'''
       // console.warn('Failed to clear localStorage:', error);
       return false;
     }
@@ -101,6 +109,8 @@ export const safeStorage: any = {}
     } catch (error) {}
 '
 ''
+'''
+''''
       // console.warn('Failed to get key from localStorage:', error);      return null;
     }
   },
@@ -112,6 +122,8 @@ export const safeStorage: any = {}
     } catch (error) {}
 '
 ''
+'''
+''''
       // console.warn('Failed to get localStorage length:', error);      return 0;
     }
   }};

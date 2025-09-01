@@ -1,6 +1,6 @@
-import React, { Suspense, lazy, memo, useMemo, useCallback } from 'react';'
-import { LoadingSpinner } from './ui/loading-spinner';'
-// Lazy load heavy components''
+import React, { Suspense, lazy, memo, useMemo, useCallback } from 'react';'''
+import { LoadingSpinner } from './ui/loading-spinner';'''
+// Lazy load heavy components''''
 const LazyExpensiveComponent = lazy(() => import('./ExpensiveComponent'));
 // Memoized component for expensive calculations;
 const MemoizedDataGrid = memo(({ data, onItemClick }) => {}
@@ -20,22 +20,22 @@ const MemoizedDataGrid = memo(({ data, onItemClick }) => {}
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {processedData.map((item, index) => (
         <div;
-          key={item.id || index}""
-          onClick={() => handleClick(item)}"""
-          className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"""
-        >"""
+          key={item.id || index}"""
+          onClick={() => handleClick(item)}""""
+          className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer""""
+        >""""
           <h3 className="text-lg font-semibold text-zion-slate-light mb-2">
-            {item.title}""
-          </h3>"""
-          <p className="text-zion-slate text-sm mb-2">{item.description}</p>"""
+            {item.title}"""
+          </h3>""""
+          <p className="text-zion-slate text-sm mb-2">{item.description}</p>""""
           <div className="text-zion-cyan text-sm">
             Processed: {item.processed}
           </div>
         </div>
       ))}
-    </div>
-  );
-});'
+    </div>'
+  );''
+});'''
 MemoizedDataGrid.displayName = 'MemoizedDataGrid';
 // Virtual scrolling component for large lists;
 const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {}
@@ -51,9 +51,11 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {}
       index: startIndex + index,
       style: {}
 '
-        position: 'absolute',
-        top: (startIndex + index) * itemHeight,
-        height: itemHeight,'
+''
+'''
+        position: 'absolute','
+        top: (startIndex + index) * itemHeight,''
+        height: itemHeight,'''
         width: '100%'}}));
   }, [items, scrollTop, itemHeight, containerHeight]);
   const handleScroll = useCallback(e => {}
@@ -61,19 +63,19 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {}
   }, []);
   return()'
     <div''
-      style={{ height: containerHeight, overflow: 'auto' }}""
-      onScroll={handleScroll}"""
-      className="border border-zion-slate/20 rounded-lg""
+      style={{ height: containerHeight, overflow: 'auto' }}"""
+      onScroll={handleScroll}""""
+      className="border border-zion-slate/20 rounded-lg"""
     >'
       <div style={{ height: items.length * itemHeight, position: 'relative' }}>
         {visibleItems.map(item => (
           <div;
-            key={item.id || item.index}""
-            style={item.style}"""
-            className="p-3 border-b border-zion-slate/10 hover:bg-zion-slate/5 transition-colors"""
-          >"""
-            <div className="flex items-center justify-between">"""
-              <span className="text-zion-slate-light">{item.title}</span>"""
+            key={item.id || item.index}"""
+            style={item.style}""""
+            className="p-3 border-b border-zion-slate/10 hover:bg-zion-slate/5 transition-colors""""
+          >""""
+            <div className="flex items-center justify-between">""""
+              <span className="text-zion-slate-light">{item.title}</span>""""
               <span className="text-zion-cyan text-sm">{item.value}</span>
             </div>
           </div>
@@ -94,38 +96,40 @@ export function PerformanceOptimizations() {}
   ]);
   const handleItemClick = useCallback(item => {}
 '
-    // // // // // // // // console.log('Item clicked:', item);
-  }, []);'
+''
+'''
+    // // // // // // // // console.log('Item clicked:', item);''
+  }, []);'''
   // console.log('Item clicked:', item)}, []);
   const addItem = useCallback(() => {}
     setData(prev => [...prev,
       {}
         id: Date.now(),
-        title: `Service ${prev.length + 1}`,``
+        title: `Service ${prev.length + 1}`,````
         description: `Description ${prev.length + 1}`,
         value: Math.floor(Math.random() * 1000)}
     ]);
-  }, []);""
-  return ("""
-    <div className="space-y-8 p-6">"""
-      <div className="text-center">"""
+  }, []);"""
+  return (""""
+    <div className="space-y-8 p-6">""""
+      <div className="text-center">""""
         <h2 className="text-3xl font-bold text-zion-blue mb-4">
-          Performance Optimizations""
-        </h2>"""
+          Performance Optimizations"""
+        </h2>""""
         <p className="text-zion-slate-light text-lg">
           Advanced performance features for better user experience;
         </p>
       </div>
 
-      {/* Memoized Data Grid */}""
-      <div>"""
+      {/* Memoized Data Grid */}"""
+      <div>""""
         <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
-          Memoized Data Grid""
-        </h3>"""
+          Memoized Data Grid"""
+        </h3>""""
         <div className="mb-4">
-          <button""
-            onClick={addItem}"""
-            className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-4 py-2 rounded-lg transition-colors""
+          <button"""
+            onClick={addItem}""""
+            className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-4 py-2 rounded-lg transition-colors"""
           >
             Add Item;
           </button>
@@ -133,15 +137,17 @@ export function PerformanceOptimizations() {}
         <MemoizedDataGrid data={data} onItemClick={handleItemClick} />
       </div>
 
-      {/* Virtual Scrolling */}""
-      <div>"""
+      {/* Virtual Scrolling */}"""
+      <div>""""
         <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
           Virtual Scrolling;
         </h3>
         <VirtualList;
           items={Array.from({ length: 1000 }, (_, i) => ({}
 `
-            id: i,``
+``
+```
+            id: i,````
             title: `Item ${i + 1}`,
             value: Math.floor(Math.random() * 1000)}))}
           itemHeight={60}
@@ -149,20 +155,20 @@ export function PerformanceOptimizations() {}
         />
       </div>
 
-      {/* Lazy Loading */}""
-      <div>"""
+      {/* Lazy Loading */}"""
+      <div>""""
         <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
           Lazy Loading;
         </h3>
-        <button""
-          onClick={() => setShowExpensive(!showExpensive)}"""
-          className="bg-zion-purple hover:bg-zion-purple-dark text-white px-4 py-2 rounded-lg transition-colors""
+        <button"""
+          onClick={() => setShowExpensive(!showExpensive)}""""
+          className="bg-zion-purple hover:bg-zion-purple-dark text-white px-4 py-2 rounded-lg transition-colors"""
         >'
           {showExpensive ? 'Hide' : 'Show'} Expensive Component;
         </button>
 
-        {showExpensive && (""
-          <Suspense fallback={<LoadingSpinner />}>"""
+        {showExpensive && ("""
+          <Suspense fallback={<LoadingSpinner />}>""""
             <div className="mt-4 p-4 bg-zion-slate/10 rounded-lg">
               <LazyExpensiveComponent />
             </div>
@@ -170,24 +176,24 @@ export function PerformanceOptimizations() {}
         )}
       </div>
 
-      {/* Performance Metrics */}""
-      <div>"""
+      {/* Performance Metrics */}"""
+      <div>""""
         <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
-          Performance Metrics""
-        </h3>"""
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">"""
-          <div className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl text-center">"""
+          Performance Metrics"""
+        </h3>""""
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">""""
+          <div className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl text-center">""""
             <div className="text-2xl font-bold text-zion-cyan">
-              {data.length}""
-            </div>"""
-            <div className="text-zion-slate text-sm">Total Items</div>""
-          </div>"""
-          <div className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl text-center">"""
-            <div className="text-2xl font-bold text-zion-purple">1000</div>"""
-            <div className="text-zion-slate text-sm">Virtual Items</div>""
-          </div>"""
-          <div className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl text-center">"""
-            <div className="text-2xl font-bold text-zion-blue">3.27s</div>"""
+              {data.length}"""
+            </div>""""
+            <div className="text-zion-slate text-sm">Total Items</div>"""
+          </div>""""
+          <div className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl text-center">""""
+            <div className="text-2xl font-bold text-zion-purple">1000</div>""""
+            <div className="text-zion-slate text-sm">Virtual Items</div>"""
+          </div>""""
+          <div className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl text-center">""""
+            <div className="text-2xl font-bold text-zion-blue">3.27s</div>""""
             <div className="text-zion-slate text-sm">Build Time</div>
           </div>
         </div>

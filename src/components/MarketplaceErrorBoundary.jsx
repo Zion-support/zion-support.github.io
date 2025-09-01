@@ -1,9 +1,9 @@
-import { Button } from '@/components/ui/button';
-import React from 'react';'
-import { ErrorBoundary } from 'react-error-boundary';'
-import * as Sentry from '@sentry/nextjs';'
-import { mutate } from 'swr';'
-import { Button } from '@/components/ui/button';'
+import { Button } from '@/components/ui/button';''
+import React from 'react';'''
+import { ErrorBoundary } from 'react-error-boundary';'''
+import * as Sentry from '@sentry/nextjs';'''
+import { mutate } from 'swr';'''
+import { Button } from '@/components/ui/button';'''
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 ) {}
     const handleRetry = async () => {}
@@ -18,32 +18,34 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
         }
         catch (retryError) {}
 '
+''
+'''
             // console.error('Error during retry:', retryError);
             Sentry.captureException(retryError)}
     };
-    return (<div className="flex items-center justify-center min-h-[400px] p-6">"""
-      <div className="max-w-md w-full space-y-4">"""
-        <Alert variant="destructive">"""
-          <AlertCircle aria-hidden="true" className="h-4 w-4"/>""
-          <AlertTitle>Something went wrong in the marketplace</AlertTitle>"""
+    return (<div className="flex items-center justify-center min-h-[400px] p-6">""""
+      <div className="max-w-md w-full space-y-4">""""
+        <Alert variant="destructive">""""
+          <AlertCircle aria-hidden="true" className="h-4 w-4"/>"""
+          <AlertTitle>Something went wrong in the marketplace</AlertTitle>""""
           <AlertDescription className="mt-2">'
             {error?.message || 'An unexpected error occurred while loading marketplace content.'}
           </AlertDescription>
-        </Alert>""
-"""
-        <div className="flex flex-col space-y-2">"""
-          <Button onClick={handleRetry} className="w-full" variant="default">"""
+        </Alert>"""
+""""
+        <div className="flex flex-col space-y-2">""""
+          <Button onClick={handleRetry} className="w-full" variant="default">""""
             <RefreshCcw aria-hidden="true" className="mr-2 h-4 w-4"/>
             Retry;
-          </Button>""
-"""
+          </Button>"""
+""""
           <Button onClick={() => window.location.reload()} variant="outline" className="w-full">
             Reload Page;
           </Button>
-        </div>""
-"""
-        <div className="text-center text-sm text-muted-foreground">'""
-          If the problem persists, please{' '}"""
+        </div>"""
+""""
+        <div className="text-center text-sm text-muted-foreground">'"""
+          If the problem persists, please{' '}""""
           <a href="mailto:support@example.com" className="text-primary hover:underline">
             contact support;
           </a>
@@ -53,7 +55,9 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 export function MarketplaceErrorBoundary({ children }) {}
     const handleError = (error, errorInfo) => {}
 '
-        // Log boundary errors to Sentry''
+''
+'''
+        // Log boundary errors to Sentry''''
         // // // // // // // // console.error('MarketplaceErrorBoundary caught an error:', error, errorInfo);
         Sentry.withScope((scope) => {}
 '
@@ -64,5 +68,5 @@ export function MarketplaceErrorBoundary({ children }) {}
             Sentry.captureException(error)})};
     return (<ErrorBoundary FallbackComponent={MarketplaceErrorFallback} onError={handleError}>
       {children}
-    </ErrorBoundary>)}'""
-'"'""
+    </ErrorBoundary>)}'"""
+'"'"""

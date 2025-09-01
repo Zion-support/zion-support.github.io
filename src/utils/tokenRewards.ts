@@ -2,6 +2,8 @@ export async function rewardOnboarding(...args: any[]): any {}
 '  await apiClient('/functions/v1/token-manager/earn', {}
 '
 ''
+'''
+''''
     method: 'POST',
     body: JSON.stringify({ userId, action, amount })});
 
@@ -13,6 +15,8 @@ export async function rewardOnboarding(...args: any[]): any {}
 '
     await apiClient('/functions/v1/token-manager/earn', {}
 '
+''
+'''
       method: 'POST',
       body: JSON.stringify({}
         userId,'
@@ -27,6 +31,8 @@ export async function rewardOnboarding(...args: any[]): any {}
 '
       await apiClient('/functions/v1/token-manager/earn', {}
 '
+''
+'''
         method: 'POST',
         body: JSON.stringify({}
           userId,'

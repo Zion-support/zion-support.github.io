@@ -1,25 +1,25 @@
-import React, { useState } from 'react';'
-import { SEO } from '@/components/SEO';'
-import { useAuth } from '@/hooks/useAuth';'
+import React, { useState } from 'react';'''
+import { SEO } from '@/components/SEO';'''
+import { useAuth } from '@/hooks/useAuth';'''
 import { Navigate } from 'react-router-dom';
 import {}
   Card,
-  CardContent,
-  CardDescription,
-  CardHeader,'
-  CardTitle} from '@/components/ui/card';'
-import { Input } from '@/components/ui/input';'
-import { Label } from '@/components/ui/label';'
-import { Button } from '@/components/ui/button';'
+  CardContent,'
+  CardDescription,''
+  CardHeader,'''
+  CardTitle} from '@/components/ui/card';'''
+import { Input } from '@/components/ui/input';'''
+import { Label } from '@/components/ui/label';'''
+import { Button } from '@/components/ui/button';'''
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {}
   Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,'
-  SelectValue} from '@/components/ui/select';'
-import { toast } from 'sonner';'
-import { supabase } from '@/integrations/supabase/client';'
+  SelectContent,'
+  SelectItem,''
+  SelectTrigger,'''
+  SelectValue} from '@/components/ui/select';'''
+import { toast } from 'sonner';'''
+import { supabase } from '@/integrations/supabase/client';'''
 import { Switch } from '@/components/ui/switch';
 export default function TenantOnboarding() {}
   const { user } = useAuth();'
@@ -27,16 +27,18 @@ export default function TenantOnboarding() {}
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({}
 '
-    brand_name: '','
-    subdomain: '','
-    logo_url: '','
-    primary_color: '#9b87f5','
-    theme_preset: 'light','
-    comp_size: '','
-    industry: '','
-    custom_domain: '',
-    is_co_branded: true});'
-  // Check if user has admin role''
+''
+'''
+    brand_name: '','''
+    subdomain: '','''
+    logo_url: '','''
+    primary_color: '#9b87f5','''
+    theme_preset: 'light','''
+    comp_size: '','''
+    industry: '','''
+    custom_domain: '',''
+    is_co_branded: true});'''
+  // Check if user has admin role''''
   const isAdmin = user?.role === 'admin';
   if (!isAdmin) {}
     return <Navigate to="/unauthorized" />;
@@ -56,14 +58,18 @@ export default function TenantOnboarding() {}
       // Create landing page copy;
       const landingPageCopy = {}
 '
+''
+'''
         headline: 'AI Hiring Assistant',
         subtitle: `Find the best talent for your ${}
 '`
-          formData.industry || 'comp'``
-        }`,'
-        cta: 'Get Started'};
-      // Submit to Supabase'
-      const { data, error } = await supabase''
+'`'`
+'`'`'`
+          formData.industry || 'comp'``'`'`
+        }`,'''
+        cta: 'Get Started'};''
+      // Submit to Supabase'''
+      const { data, error } = await supabase''''
         .from('whitelabel_tenants')
         .insert({}
           brand_name: formData.brand_name,
@@ -83,22 +89,26 @@ export default function TenantOnboarding() {}
       toast.success('Tenant created successfully!', {}
 `
 ``
+```
+````
         description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`});
       // Reset form;
       setFormData({}
 '
-        brand_name: '','
-        subdomain: '','
-        logo_url: '','
-        primary_color: '#9b87f5','
-        theme_preset: 'light','
-        comp_size: '','
-        industry: '','
+''
+'''
+        brand_name: '','''
+        subdomain: '','''
+        logo_url: '','''
+        primary_color: '#9b87f5','''
+        theme_preset: 'light','''
+        comp_size: '','''
+        industry: '','''
         custom_domain: '',
         is_co_branded: true});
     } catch (error) {}
-""
 """
+""""
       // console.error("Error creating tenant:", error);'
       toast.error('Failed to create tenant', {}
         description: error.message});
@@ -107,18 +117,18 @@ export default function TenantOnboarding() {}
     }
   };
   return()
-    <>""
-      <SEO"""
-        title="Tenant Onboarding - Zion AI Marketplace"""
-        description="Onboard a new white-label tenant to the Zion AI Marketplace platform.""
-      />""
-"""
-      <main className="flex-1 container max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8">"""
-        <div className="flex flex-col space-y-6">""
-          <div>"""
+    <>"""
+      <SEO""""
+        title="Tenant Onboarding - Zion AI Marketplace""""
+        description="Onboard a new white-label tenant to the Zion AI Marketplace platform."""
+      />"""
+""""
+      <main className="flex-1 container max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8">""""
+        <div className="flex flex-col space-y-6">"""
+          <div>""""
             <h1 className="text-3xl font-bold tracking-tight">
-              Tenant Onboarding""
-            </h1>"""
+              Tenant Onboarding"""
+            </h1>""""
             <p className="text-muted-foreground mt-2">
               Create a new white-label instance of Zion Hire AI for a company.
             </p>
@@ -131,174 +141,174 @@ export default function TenantOnboarding() {}
                 Configure the branding and details for the new white-label;
                 tenant.
               </CardDescription>
-            </CardHeader>""
-            <CardContent>"""
+            </CardHeader>"""
+            <CardContent>""""
               <form onSubmit={handleSubmit} className="space-y-6">
                 <Tabs;
-                  value={activeTab}""
-                  onValueChange={setActiveTab}"""
-                  className="w-full"""
-                >"""
-                  <TabsList className="mb-4 grid grid-cols-3 w-full">"""
-                    <TabsTrigger value="comp">Comp Info</TabsTrigger>"""
-                    <TabsTrigger value="branding">Branding</TabsTrigger>"""
+                  value={activeTab}"""
+                  onValueChange={setActiveTab}""""
+                  className="w-full""""
+                >""""
+                  <TabsList className="mb-4 grid grid-cols-3 w-full">""""
+                    <TabsTrigger value="comp">Comp Info</TabsTrigger>""""
+                    <TabsTrigger value="branding">Branding</TabsTrigger>""""
                     <TabsTrigger value="domain">Domain Setup</TabsTrigger>
-                  </TabsList>""
-"""
-                  <TabsContent value="comp" className="space-y-4">"""
-                    <div className="space-y-2">"""
-                      <Label htmlFor="brand_name">Comp Name</Label>""
-                      <Input"""
-                        id="brand_name"""
-                        name="brand_name""
-                        value={formData.brand_name}""
-                        onChange={handleInputChange}"""
-                        placeholder="Acme Corporation""
+                  </TabsList>"""
+""""
+                  <TabsContent value="comp" className="space-y-4">""""
+                    <div className="space-y-2">""""
+                      <Label htmlFor="brand_name">Comp Name</Label>"""
+                      <Input""""
+                        id="brand_name""""
+                        name="brand_name"""
+                        value={formData.brand_name}"""
+                        onChange={handleInputChange}""""
+                        placeholder="Acme Corporation"""
                         required;
                       />
-                    </div>""
-"""
-                    <div className="space-y-2">"""
-                      <Label htmlFor="industry">Industry</Label>""
-                      <Select"""
-                        name="industry""
+                    </div>"""
+""""
+                    <div className="space-y-2">""""
+                      <Label htmlFor="industry">Industry</Label>"""
+                      <Select""""
+                        name="industry"""
                         value={formData.industry}
                         onValueChange={value =>'
                           handleSelectChange('industry', value)
                         }
-                      >""
-                        <SelectTrigger>"""
+                      >"""
+                        <SelectTrigger>""""
                           <SelectValue placeholder="Select industry" />
-                        </SelectTrigger>""
-                        <SelectContent>"""
-                          <SelectItem value="technology">Technology</SelectItem>"""
-                          <SelectItem value="healthcare">Healthcare</SelectItem>"""
-                          <SelectItem value="finance">Finance</SelectItem>"""
-                          <SelectItem value="education">Education</SelectItem>"""
-                          <SelectItem value="retail">Retail</SelectItem>"""
+                        </SelectTrigger>"""
+                        <SelectContent>""""
+                          <SelectItem value="technology">Technology</SelectItem>""""
+                          <SelectItem value="healthcare">Healthcare</SelectItem>""""
+                          <SelectItem value="finance">Finance</SelectItem>""""
+                          <SelectItem value="education">Education</SelectItem>""""
+                          <SelectItem value="retail">Retail</SelectItem>""""
                           <SelectItem value="manufacturing">
-                            Manufacturing""
-                          </SelectItem>"""
+                            Manufacturing"""
+                          </SelectItem>""""
                           <SelectItem value="services">
-                            Professional Services""
-                          </SelectItem>"""
+                            Professional Services"""
+                          </SelectItem>""""
                           <SelectItem value="other">Other</SelectItem>
                         </SelectContent>
                       </Select>
-                    </div>""
-"""
-                    <div className="space-y-2">"""
-                      <Label htmlFor="comp_size">Comp Size</Label>""
-                      <Select"""
-                        name="comp_size""
+                    </div>"""
+""""
+                    <div className="space-y-2">""""
+                      <Label htmlFor="comp_size">Comp Size</Label>"""
+                      <Select""""
+                        name="comp_size"""
                         value={formData.comp_size}
                         onValueChange={value =>'
                           handleSelectChange('comp_size', value)
                         }
-                      >""
-                        <SelectTrigger>"""
+                      >"""
+                        <SelectTrigger>""""
                           <SelectValue placeholder="Select comp size" />
-                        </SelectTrigger>""
-                        <SelectContent>"""
-                          <SelectItem value="1-10">1-10 employees</SelectItem>"""
-                          <SelectItem value="11-50">11-50 employees</SelectItem>"""
+                        </SelectTrigger>"""
+                        <SelectContent>""""
+                          <SelectItem value="1-10">1-10 employees</SelectItem>""""
+                          <SelectItem value="11-50">11-50 employees</SelectItem>""""
                           <SelectItem value="51-200">
-                            51-200 employees""
-                          </SelectItem>"""
+                            51-200 employees"""
+                          </SelectItem>""""
                           <SelectItem value="201-500">
-                            201-500 employees""
-                          </SelectItem>"""
+                            201-500 employees"""
+                          </SelectItem>""""
                           <SelectItem value="501-1000">
-                            501-1000 employees""
-                          </SelectItem>"""
+                            501-1000 employees"""
+                          </SelectItem>""""
                           <SelectItem value="1000+">1000+ employees</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
-                  </TabsContent>""
-"""
-                  <TabsContent value="branding" className="space-y-4">"""
-                    <div className="space-y-2">"""
-                      <Label htmlFor="logo_url">Logo URL</Label>""
-                      <Input"""
-                        id="logo_url"""
-                        name="logo_url""
-                        value={formData.logo_url}""
-                        onChange={handleInputChange}"""
-                        placeholder="https://example.com/logo.png"""
-                      />"""
+                  </TabsContent>"""
+""""
+                  <TabsContent value="branding" className="space-y-4">""""
+                    <div className="space-y-2">""""
+                      <Label htmlFor="logo_url">Logo URL</Label>"""
+                      <Input""""
+                        id="logo_url""""
+                        name="logo_url"""
+                        value={formData.logo_url}"""
+                        onChange={handleInputChange}""""
+                        placeholder="https://example.com/logo.png""""
+                      />""""
                       <p className="text-xs text-muted-foreground">
                         Enter a direct URL to your logo image (SVG or PNG with;
                         transparent background recommended)
                       </p>
-                    </div>""
-"""
-                    <div className="space-y-2">"""
-                      <Label htmlFor="primary_color">Primary Brand Color</Label>"""
-                      <div className="flex items-center gap-2">""
-                        <Input"""
-                          id="primary_color"""
+                    </div>"""
+""""
+                    <div className="space-y-2">""""
+                      <Label htmlFor="primary_color">Primary Brand Color</Label>""""
+                      <div className="flex items-center gap-2">"""
+                        <Input""""
+                          id="primary_color""""
+                          name="primary_color""""
+                          type="color"""
+                          value={formData.primary_color}"""
+                          onChange={handleInputChange}""""
+                          className="w-12 p-1 h-10"""
+                        />"""
+                        <Input""""
                           name="primary_color"""
-                          type="color""
-                          value={formData.primary_color}""
-                          onChange={handleInputChange}"""
-                          className="w-12 p-1 h-10""
-                        />""
-                        <Input"""
-                          name="primary_color""
-                          value={formData.primary_color}""
-                          onChange={handleInputChange}"""
-                          placeholder="#9b87f5""
+                          value={formData.primary_color}"""
+                          onChange={handleInputChange}""""
+                          placeholder="#9b87f5"""
                         />
                       </div>
-                    </div>""
-"""
-                    <div className="space-y-2">"""
-                      <Label htmlFor="theme_preset">Theme Preset</Label>""
-                      <Select"""
-                        name="theme_preset""
+                    </div>"""
+""""
+                    <div className="space-y-2">""""
+                      <Label htmlFor="theme_preset">Theme Preset</Label>"""
+                      <Select""""
+                        name="theme_preset"""
                         value={formData.theme_preset}
                         onValueChange={value =>'
                           handleSelectChange('theme_preset', value)
                         }
-                      >""
-                        <SelectTrigger>"""
+                      >"""
+                        <SelectTrigger>""""
                           <SelectValue placeholder="Select theme" />
-                        </SelectTrigger>""
-                        <SelectContent>"""
-                          <SelectItem value="light">Light</SelectItem>"""
-                          <SelectItem value="dark">Dark</SelectItem>"""
-                          <SelectItem value="corporate">Corporate</SelectItem>"""
-                          <SelectItem value="startup">Startup</SelectItem>"""
+                        </SelectTrigger>"""
+                        <SelectContent>""""
+                          <SelectItem value="light">Light</SelectItem>""""
+                          <SelectItem value="dark">Dark</SelectItem>""""
+                          <SelectItem value="corporate">Corporate</SelectItem>""""
+                          <SelectItem value="startup">Startup</SelectItem>""""
                           <SelectItem value="neon">Neon</SelectItem>
                         </SelectContent>
                       </Select>
-                    </div>""
-"""
-                    <div className="flex items-center justify-between">"""
-                      <div className="space-y-0.5">"""
-                        <Label htmlFor="is_co_branded">Co-branding</Label>"""
-                        <p className="text-xs text-muted-foreground">"""
+                    </div>"""
+""""
+                    <div className="flex items-center justify-between">""""
+                      <div className="space-y-0.5">""""
+                        <Label htmlFor="is_co_branded">Co-branding</Label>""""
+                        <p className="text-xs text-muted-foreground">""""
                           Show "Powered by Zion AI" in the footer and elsewhere;
                         </p>
-                      </div>""
-                      <Switch"""
-                        id="is_co_branded""
+                      </div>"""
+                      <Switch""""
+                        id="is_co_branded"""
                         checked={formData.is_co_branded}
                         onCheckedChange={checked =>'
                           handleSwitchChange('is_co_branded', checked)
                         }
                       />
                     </div>
-                  </TabsContent>""
-"""
-                  <TabsContent value="domain" className="space-y-4">"""
-                    <div className="space-y-2">"""
-                      <Label htmlFor="subdomain">Subdomain</Label>"""
-                      <div className="flex items-center">""
-                        <Input"""
-                          id="subdomain"""
-                          name="subdomain""
+                  </TabsContent>"""
+""""
+                  <TabsContent value="domain" className="space-y-4">""""
+                    <div className="space-y-2">""""
+                      <Label htmlFor="subdomain">Subdomain</Label>""""
+                      <div className="flex items-center">"""
+                        <Input""""
+                          id="subdomain""""
+                          name="subdomain"""
                           value={formData.subdomain}
                           onChange={handleInputChange}
                           placeholder={}
@@ -306,46 +316,46 @@ export default function TenantOnboarding() {}
                               ? formData.brand_name;
                                   .toLowerCase()
                                   .replace(/[^a-z0-9]/g,)'
-                              : 'comp'""
-                          }"""
-                          className="rounded-r-none"""
-                        />"""
+                              : 'comp'"""
+                          }""""
+                          className="rounded-r-none""""
+                        />""""
                         <div className="bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground">
                           .ziontechmarketplace.com;
-                        </div>""
-                      </div>"""
+                        </div>"""
+                      </div>""""
                       <p className="text-xs text-muted-foreground">
                         Leave blank to auto-generate from comp name;
                       </p>
-                    </div>""
-"""
-                    <div className="space-y-2">"""
+                    </div>"""
+""""
+                    <div className="space-y-2">""""
                       <Label htmlFor="custom_domain">
                         Custom Domain (Optional)
-                      </Label>""
-                      <Input"""
-                        id="custom_domain"""
-                        name="custom_domain""
-                        value={formData.custom_domain}""
-                        onChange={handleInputChange}"""
-                        placeholder="hire.yourcompany.com"""
-                      />"""
+                      </Label>"""
+                      <Input""""
+                        id="custom_domain""""
+                        name="custom_domain"""
+                        value={formData.custom_domain}"""
+                        onChange={handleInputChange}""""
+                        placeholder="hire.yourcompany.com""""
+                      />""""
                       <p className="text-xs text-muted-foreground">'
                         If you want to use your own domain, enter it here.''
                         You'll need to configure DNS records.
                       </p>
                     </div>
                   </TabsContent>
-                </Tabs>""
-"""
-                <div className="flex justify-end space-x-2">""
-                  <Button"""
-                    type="button"""
-                    variant="outline""
+                </Tabs>"""
+""""
+                <div className="flex justify-end space-x-2">"""
+                  <Button""""
+                    type="button""""
+                    variant="outline"""
                     onClick={() => window.history.back()}
                   >
-                    Cancel""
-                  </Button>"""
+                    Cancel"""
+                  </Button>""""
                   <Button type="submit" disabled={isSubmitting}>'
                     {isSubmitting ? 'Creating...' : 'Create Tenant'}
                   </Button>

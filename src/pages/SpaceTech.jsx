@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';'''
 import { Link } from 'react-router-dom';
 const SpaceTech = () => {}
   const spaceTechnologies = []
@@ -37,63 +37,63 @@ const SpaceTech = () => {}
   ];
 
   return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">"""
-        <div className="max-w-7xl mx-auto">"""
-          <div className="text-center mb-16">"""
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">""
-              Space"""
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">""""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">""""
+        <div className="max-w-7xl mx-auto">""""
+          <div className="text-center mb-16">""""
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">"""
+              Space""""
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'
                 {' '}
                 Technology;
-              </span>""
-            </h1>"""
+              </span>"""
+            </h1>""""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
               Advancing humanity's reach into space with cutting-edge technology;
               solutions for exploration, communication, and scientific discovery;
             </p>
-          </div>""
-"""
+          </div>"""
+""""
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {spaceTechnologies.map((tech, index) => (
-              <div""
-                key={index}"""
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"""
-              >"""
+              <div"""
+                key={index}""""
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300""""
+              >""""
                 <h3 className="text-xl font-semibold text-white mb-3">
-                  {tech.title}""
-                </h3>"""
+                  {tech.title}"""
+                </h3>""""
                 <p className="text-gray-300 mb-4">{tech.description}</p>
-""
-                <div>"""
+"""
+                <div>""""
                   <h4 className="font-semibold text-blue-400 mb-2">
-                    Applications""
-                  </h4>"""
+                    Applications"""
+                  </h4>""""
                   <ul className="space-y-1">
                     {tech.applications.map((app, idx) => (
-                      <li""
-                        key={idx}"""
-                        className="text-sm text-gray-300 flex items-center"""
-                      >"""
+                      <li"""
+                        key={idx}""""
+                        className="text-sm text-gray-300 flex items-center""""
+                      >""""
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
                         {app}
                       </li>) ) }
                   </ul>
                 </div>
               </div>) ) }
-          </div>""
-"""
-          <div className="text-center">"""
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">"""
-              <h3 className="text-2xl font-bold mb-4">Reach for the Stars</h3>"""
+          </div>"""
+""""
+          <div className="text-center">""""
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">""""
+              <h3 className="text-2xl font-bold mb-4">Reach for the Stars</h3>""""
               <p className="text-gray-300 mb-6">'
                 Ready to explore the final frontier? Let's discuss how space;
                 technology can advance your mission and expand human;
                 capabilities.
-              </p>""
-              <Link"""
-                to="/contact"""
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300""
+              </p>"""
+              <Link""""
+                to="/contact""""
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"""
               >
                 Explore Space Solutions;
               </Link>
@@ -104,5 +104,5 @@ const SpaceTech = () => {}
     </div>) ;
 };
 
-export default SpaceTech;'""
-'"'""
+export default SpaceTech;'"""
+'"'"""

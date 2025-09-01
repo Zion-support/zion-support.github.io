@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';'''
 import { motion } from 'framer-motion';
 import {}
   Brain,
@@ -6,9 +6,9 @@ import {}
   Shield,
   Users,
   TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  Star,'
+  CheckCircle,'
+  ArrowRight,''
+  Star,'''
   Award} from 'lucide-react';
 const highlights = []
   {}
@@ -107,96 +107,96 @@ export function FeatureHighlights() {}
       x: 0,
       transition: { duration: 0.5 }}};
   return()
-    <section className="py-20 bg-gradient-to-b from-zion-slate-dark to-zion-slate relative overflow-hidden">""
-      {/* Background decorative elements */}"""
-      <div className="absolute inset-0 opacity-5">"""
-        <div className="absolute top-20 right-20 w-96 h-96 bg-zion-purple rounded-full blur-3xl"></div>"""
+    <section className="py-20 bg-gradient-to-b from-zion-slate-dark to-zion-slate relative overflow-hidden">"""
+      {/* Background decorative elements */}""""
+      <div className="absolute inset-0 opacity-5">""""
+        <div className="absolute top-20 right-20 w-96 h-96 bg-zion-purple rounded-full blur-3xl"></div>""""
         <div className="absolute bottom-20 left-20 w-80 h-80 bg-zion-cyan rounded-full blur-3xl"></div>
-      </div>""
-"""
+      </div>"""
+""""
       <div className="container mx-auto px-4 relative z-10">
-        {/* Header */}""
-        <motion.div"""
-          className="text-center mb-20""
+        {/* Header */}"""
+        <motion.div""""
+          className="text-center mb-20"""
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}""
-        >"""
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">'""
-            Why Choose{' '}"""
+          transition={{ duration: 0.8 }}"""
+        >""""
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">'"""
+            Why Choose{' '}""""
             <span className="bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent">
               Zion Tech;
-            </span>""
-          </h2>"""
+            </span>"""
+          </h2>""""
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
             Experience the future of technology with our cutting-edge solutions,
             backed by innovation, security, and global expertise.</p>
         </motion.div>
-        {/* Feature Grid */}""
-        <motion.div"""
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20"""
-          variants={containerVariants}"""
-          initial="hidden"""
-          whileInView="visible""
+        {/* Feature Grid */}"""
+        <motion.div""""
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20""""
+          variants={containerVariants}""""
+          initial="hidden""""
+          whileInView="visible"""
           viewport={{ once: true }}
-        >""
-          {highlights.map((highlight, index) => ("""
+        >"""
+          {highlights.map((highlight, index) => (""""
             <motion.div key={index} variants={itemVariants} className="group">
               <div;
                 className={`${highlight.bgColor} ${highlight.borderColor} border rounded-2xl p-8 h-full transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20 group-hover:scale-105`}
               >`
                 <div``
-                  className={`w-16 h-16 bg-gradient-to-r ${highlight.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}""
-                >"""
-                  <highlight.icon className="w-8 h-8 text-white" />""
-                </div>"""
+                  className={`w-16 h-16 bg-gradient-to-r ${highlight.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}"""
+                >""""
+                  <highlight.icon className="w-8 h-8 text-white" />"""
+                </div>""""
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-200">
-                  {highlight.title}""
-                </h3>"""
+                  {highlight.title}"""
+                </h3>""""
                 <p className="text-zion-slate-light mb-6 leading-relaxed">
-                  {highlight.description}""
-                </p>"""
+                  {highlight.description}"""
+                </p>""""
                 <ul className="space-y-2 mb-6">
                   {highlight.features.map((feature, featureIndex) => (
-                    <li""
-                      key={featureIndex}"""
-                      className="flex items-center text-zion-slate-light"""
-                    >"""
+                    <li"""
+                      key={featureIndex}""""
+                      className="flex items-center text-zion-slate-light""""
+                    >""""
                       <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
                       {feature}
                     </li>
-                  ))}""
-                </ul>"""
-                <div className="flex items-center text-zion-purple-light font-medium group-hover:text-zion-purple transition-colors duration-200">""
-                  Learn More"""
+                  ))}"""
+                </ul>""""
+                <div className="flex items-center text-zion-purple-light font-medium group-hover:text-zion-purple transition-colors duration-200">"""
+                  Learn More""""
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
                 </div>
               </div>
             </motion.div>
           ))}
         </motion.div>
-        {/* Achievements Section */}""
-        <motion.div"""
-          className="text-center mb-20""
+        {/* Achievements Section */}"""
+        <motion.div""""
+          className="text-center mb-20"""
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.3 }}""
-        >"""
+          transition={{ duration: 0.8, delay: 0.3 }}"""
+        >""""
           <h3 className="text-3xl font-bold text-white mb-12">
-            Trusted by Millions Worldwide""
-          </h3>"""
+            Trusted by Millions Worldwide"""
+          </h3>""""
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => (
               <motion.div;
-                key={index}""
-                variants={achievementVariants}"""
-                initial="hidden"""
-                whileInView="visible""
-                viewport={{ once: true }}""
-                transition={{ delay: index * 0.1 }}"""
-                className="text-center""
+                key={index}"""
+                variants={achievementVariants}""""
+                initial="hidden""""
+                whileInView="visible"""
+                viewport={{ once: true }}"""
+                transition={{ delay: index * 0.1 }}""""
+                className="text-center"""
               >`
                 <div``
                   className={`w-20 h-20 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4`}
@@ -206,8 +206,8 @@ export function FeatureHighlights() {}
                   />`
                 </div>``
                 <div className={`text-3xl font-bold ${achievement.color} mb-2`}>
-                  {achievement.number}""
-                </div>"""
+                  {achievement.number}"""
+                </div>""""
                 <div className="text-zion-slate-light text-sm">
                   {achievement.label}
                 </div>
@@ -215,27 +215,27 @@ export function FeatureHighlights() {}
             ))}
           </div>
         </motion.div>
-        {/* Technologies Section */}""
-        <motion.div"""
-          className="text-center""
+        {/* Technologies Section */}"""
+        <motion.div""""
+          className="text-center"""
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.5 }}""
-        >"""
+          transition={{ duration: 0.8, delay: 0.5 }}"""
+        >""""
           <h3 className="text-3xl font-bold text-white mb-8">
-            Cutting-Edge Technologies""
-          </h3>"""
+            Cutting-Edge Technologies"""
+          </h3>""""
           <div className="flex flex-wrap justify-center gap-4">
             {technologies.map((tech, index) => (
               <motion.div;
-                key={index}""
-                variants={techVariants}"""
-                initial="hidden"""
-                whileInView="visible""
-                viewport={{ once: true }}""
-                transition={{ delay: index * 0.1 }}"""
-                className="px-6 py-3 bg-zion-purple/10 border border-zion-purple/20 rounded-full text-zion-cyan hover:bg-zion-purple/20 hover:border-zion-purple/40 transition-all duration-200""
+                key={index}"""
+                variants={techVariants}""""
+                initial="hidden""""
+                whileInView="visible"""
+                viewport={{ once: true }}"""
+                transition={{ delay: index * 0.1 }}""""
+                className="px-6 py-3 bg-zion-purple/10 border border-zion-purple/20 rounded-full text-zion-cyan hover:bg-zion-purple/20 hover:border-zion-purple/40 transition-all duration-200"""
               >
                 {tech}
               </motion.div>

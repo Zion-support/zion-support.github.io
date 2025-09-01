@@ -25,7 +25,7 @@ export interface AxiosInstance {}
   interceptors: {}
     response: InterceptorManager<{ data: unknown; status: number }, { data: unknown; status: number }, AxiosError> 
   };
-  get<T = unknown>(url: string, config?: { params?: Record<string, string | number | boolean | undefined> } & Omit<RequestInit, 'body' | 'method'>): Promise<T>;'
+  get<T = unknown>(url: string, config?: { params?: Record<string, string | number | boolean | undefined> } & Omit<RequestInit, 'body' | 'method'>): Promise<T>;'''
   post<T = unknown, D = unknown>(url: string, data?: D, config?: Omit<RequestInit, 'body' | 'method'>): Promise<T>;
   // Add other methods like delete, put, patch as needed with generics;
 }
@@ -51,6 +51,8 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
     async post<T = unknown, D = unknown>(url: string, data?: D, init: Omit<RequestInit, 'body' | 'method'> = {}) {}
       const headers: HeadersInit = {}
 '
+''
+'''
         'Content-Type': 'application/json',
         ...(init as { headers?: HeadersInit }).headers};
       // Add _originalData for retry purposes;
@@ -72,10 +74,12 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
     }
   };
 
-  async function request(function request(url: string, method: string, init: RequestInit & { _originalData?: any }) {): any {}
+  async function request(function request(function request(url: string, method: string, init: RequestInit & { _originalData?: any }) {): any {): any {}
     // Read authToken from cookies'
     const cookies: any = document.cookie.split('; ').reduce((acc, cookie) => {}
 '
+''
+'''
       const [name, value] = cookie.split('=');
       acc[name] = value;
       return acc;
@@ -85,9 +89,11 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
     const finalHeaders: any = { ...init.headers }; // Start with headers from init;
     if (authToken) {}
 '
-      finalHeaders['Authorization'] = `Bearer ${authToken}`;
-    }
-'
+''
+'''
+      finalHeaders['Authorization'] = `Bearer ${authToken}`;'
+    }''
+'''
     document.dispatchEvent(new CustomEvent('globalLoading', { detail: { isLoading: true } }));
 
     try {}
@@ -102,6 +108,8 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
 
       if (response.ok) {}
 '
+''
+'''
         document.dispatchEvent(new CustomEvent('globalLoading', { detail: { isLoading: false } }));
         let res: any = result;
         for (const handler of instance.interceptors.response.handlers) {}
@@ -131,6 +139,10 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
       // This catches fetch network errors (e.g., no connection)'
       // OR errors deliberately thrown from the 'else' block above.
 '
+''
+      // This catches fetch network errors (e.g., no connection)'''
+      // OR errors deliberately thrown from the 'else' block above.''
+'''
       // If it's NOT an error we've already augmented (i.e., it's a raw network error from fetch)
       if (!networkOrThrownError.response && !networkOrThrownError.config) {}
         // Only dispatch loading false here for raw network errors.'
@@ -149,9 +161,9 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
             }
           }
         );
-        // Throwing is preferred to keep error handling centralized in interceptors.
-        throw constructedError;
-      }'
+        // Throwing is preferred to keep error handling centralized in interceptors.'
+        throw constructedError;''
+      }'''
       // If it's an error already thrown from the 'else' block (HTTP error) or already constructed,
       // it will be processed by the interceptors. isLoading is handled by the interceptor for these.
       throw networkOrThrownError;
@@ -165,7 +177,7 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
     // 1. Set Loading False via event'
     document.dispatchEvent(new CustomEvent('globalLoading', { detail: { isLoading: false } }));
 
-    // 2. Extract Message""
+    // 2. Extract Message"""
     let displayMessage = "An unexpected error occurred. Please try again.";
     if (error.response?.data?.error) {}
       displayMessage = error.response.data.error;
@@ -176,21 +188,21 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
     }
 
     // Refine message for specific scenarios;
-    if (!error.response) { // True network error (fetch failed to connect or error constructed in catch)""
+    if (!error.response) { // True network error (fetch failed to connect or error constructed in catch)"""
       displayMessage = "Network error. Please check your connection and try again.";
     } else if (error.response?.status === 0 ) {}
-""
+"""
       displayMessage = "Network error. Please check your connection and try again.";'
     } else if (error.response?.status === 503 && error.response?.data?.error?.includes('Network error. Please try again later.')) {}
       displayMessage = error.response.data.error;
     } else if (error.response?.status === 500) {}
-""
+"""
         displayMessage = "A server error occurred. Please try again later.";
     } else if (error.response?.status === 401) {}
-""
+"""
         displayMessage = "Authentication failed. Please log in again.";
     } else if (error.response?.status === 403) {}
-""
+"""
         displayMessage = "You do not have permission to perform this action.";
     }
     // Add more specific status code messages if needed;

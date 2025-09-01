@@ -37,7 +37,7 @@ const ComprehensivePricing2025: React.FC = () => {}
       <div className="container mx-auto px-4 py-16">
         {/* Header */}
         <motion.div;
-          className="text-center mb-16""
+          className="text-center mb-16"""
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -71,7 +71,7 @@ const ComprehensivePricing2025: React.FC = () => {}
 
         {/* Filters */}
         <motion.div;
-          className="flex flex-wrap justify-center gap-4 mb-12""
+          className="flex flex-wrap justify-center gap-4 mb-12"""
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
@@ -81,10 +81,9 @@ const ComprehensivePricing2025: React.FC = () => {}
             <select;
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400""
+              className="bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"""
             >
-              {categories.map(category => (
-                <option key={category} value={category} className="bg-slate-800">
+              {categories.map(category => (<option key={category} value={category}>
                   {category}
                 </option>
               ))}
@@ -95,29 +94,27 @@ const ComprehensivePricing2025: React.FC = () => {}
             <select;
               value={selectedIndustry}
               onChange={(e) => setSelectedIndustry(e.target.value)}
-              className="bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400""
+              className="bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"""
             >
-              {industries.map(industry => (
-                <option key={industry} value={industry} className="bg-slate-800">
+              {industries.map(industry => (<option key={industry} value={industry}>
                   {industry}
-                </option>
-              ))}
+                </option>) ) }
             </select>
           </div>
         </motion.div>
 
         {/* Service Cards */}
         <motion.div;
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8""
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"""
           variants={containerVariants}
-          initial="hidden""
-          animate="visible""
+          initial="hidden"""
+          animate="visible"""
         >
           {filteredServices.map(service => (
             <motion.div;
               key={service.id}
               variants={cardVariants}
-              className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group""
+              className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group"""
               whileHover={{ y: -5, scale: 1.02 }}
             >
               {/* Service Header */}
@@ -174,7 +171,7 @@ const ComprehensivePricing2025: React.FC = () => {}
               <div className="space-y-3">
                 <motion.a;
                   href={service.url}
-                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 flex items-center justify-center group""
+                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 flex items-center justify-center group"""
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -183,7 +180,7 @@ const ComprehensivePricing2025: React.FC = () => {}
                 </motion.a>
                 <a;
                   href={`mailto:${contactInfo.email}?subject=Interest in ${service.name}`}
-                  className="w-full border border-cyan-400/50 text-cyan-400 py-2 px-4 rounded-lg text-sm hover:bg-cyan-400/10 transition-colors flex items-center justify-center""
+                  className="w-full border border-cyan-400/50 text-cyan-400 py-2 px-4 rounded-lg text-sm hover:bg-cyan-400/10 transition-colors flex items-center justify-center"""
                 >
                   Contact Sales;
                 </a>
@@ -194,7 +191,7 @@ const ComprehensivePricing2025: React.FC = () => {}
 
         {/* Contact Section */}
         <motion.div;
-          className="mt-20 text-center""
+          className="mt-20 text-center"""
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
@@ -210,14 +207,14 @@ const ComprehensivePricing2025: React.FC = () => {}
             <div className="flex flex-wrap justify-center gap-4">
               <a;
                 href={`tel:${contactInfo.mobile}`}
-                className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-lg font-medium hover:from-green-600 hover:to-green-700 transition-all duration-200 flex items-center""
+                className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-lg font-medium hover:from-green-600 hover:to-green-700 transition-all duration-200 flex items-center"""
               >
                 <Phone className="w-4 h-4 mr-2" />
                 Call Now;
               </a>
               <a;
                 href={`mailto:${contactInfo.email}?subject=Custom Solution Inquiry`}
-                className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:from-blue-600 hover:to-blue-700 transition-all duration-200 flex items-center""
+                className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:from-blue-600 hover:to-blue-700 transition-all duration-200 flex items-center"""
               >
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us;

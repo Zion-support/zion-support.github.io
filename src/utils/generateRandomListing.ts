@@ -4,14 +4,14 @@
   'Machine Learning Platform',;'
   'DevOps Automation Tool',;'
   'Network Security Solution';
-];
-
-'
-  'State-of-the-art quantum computing components for research and development.',;'
-  'Expert data science consulting services for machine learning and analytics projects.',;'
-  'Blockchain development and implementation services for decentralized applications.',;'
-  'Machine learning platform with pre-trained models and custom training capabilities.',;'
-  'DevOps automation tools for continuous integration and deployment pipelines.',;'
+];'
+''
+'''
+  'State-of-the-art quantum computing components for research and development.',;'''
+  'Expert data science consulting services for machine learning and analytics projects.',;'''
+  'Blockchain development and implementation services for decentralized applications.',;'''
+  'Machine learning platform with pre-trained models and custom training capabilities.',;'''
+  'DevOps automation tools for continuous integration and deployment pipelines.',;'''
   'Network security solution with advanced threat detection and prevention.';
 ];
 
@@ -34,31 +34,31 @@ const sampleImages: any = [;''
 '
 const categories: Array<any> = [''
   'products',talent',equipment',services'
-];
-
-  'TechCorp Solutions','
-  'SecureNet Professionals',;'
-'
+];'
+''
+  'TechCorp Solutions','''
+  'SecureNet Professionals',;'''
+'''
   '$500',$1,200',$2,500',$5,000',$8,500',$15,000',$25,000',$50,000';
-];
-
-'
+];'
+''
+'''
   'San Francisco, CA',New York, NY',Austin, TX',Seattle, WA',Boston, MA',Remote';
-];
-
-'
-  'QuantumTech Labs',;'
-  'CloudMasters Inc',;'
-  'IoT Solutions Pro',;'
-  'DataGenius Consulting',;'
-  'Innovation Labs',;'
-  'FutureTech Systems';'
-  'TechCorp Solutions',''
-  'SecureNet Professionals',;''
-  'QuantumTech Labs',;''
-  'CloudMasters Inc',;''
-  'IoT Solutions Pro',;''
-  'DataGenius Consulting',;''
+];'
+''
+'''
+  'QuantumTech Labs',;'''
+  'CloudMasters Inc',;'''
+  'IoT Solutions Pro',;'''
+  'DataGenius Consulting',;'''
+  'Innovation Labs',;'''
+  'FutureTech Systems';'''
+  'TechCorp Solutions',''''
+  'SecureNet Professionals',;''''
+  'QuantumTech Labs',;''''
+  'CloudMasters Inc',;''''
+  'IoT Solutions Pro',;''''
+  'DataGenius Consulting',;''''
   'Innovation Labs',;'  'FutureTech Systems';
 ];
 
@@ -70,20 +70,22 @@ export function generateRandomListing(): MarketplaceItem {}
     description: sampleDescriptions[randomIndex] || 'Default description','
     price: price || '$1,000',
     rating: 4.0 + Math.random() * 1.0,
-    reviews: Math.floor(Math.random() * 200) + 10,
-    views: Math.floor(Math.random() * 5000) + 100,
-    likes: Math.floor(Math.random() * 300) + 20,'
-    image: image || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib = rb-4.0.3&auto=format&fit=crop&w=2072&q=80','
+    reviews: Math.floor(Math.random() * 200) + 10,'
+    views: Math.floor(Math.random() * 5000) + 100,''
+    likes: Math.floor(Math.random() * 300) + 20,'''
+    image: image || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib = rb-4.0.3&auto=format&fit=crop&w=2072&q=80','''
     tags: sampleTags[randomIndex] || ['Technology',Solution'],
     featured: Math.random() > 0.7,
     seller: {}
 '
-      name: sellerName || 'Default Seller',
-      rating: 4.0 + Math.random() * 1.0,;
-      verified: Math.random() > 0.3},;'
-    location: location || 'Remote',;'`
-    availability: Math.random() > 0.8 ? 'limited' : 'available',;'`'`
-    deliveryTime: category === 'talent' ? 'Immediate' : `${Math.floor(Math.random() * 8) + 2}-${Math.floor(Math.random() * 4) + 4} weeks`,;'`'`
+''
+'''
+      name: sellerName || 'Default Seller','
+      rating: 4.0 + Math.random() * 1.0,;''`
+      verified: Math.random() > 0.3},;''`'`
+    location: location || 'Remote',;'`'`'`
+    availability: Math.random() > 0.8 ? 'limited' : 'available',;'`'`'`'`
+    deliveryTime: category === 'talent' ? 'Immediate' : `${Math.floor(Math.random() * 8) + 2}-${Math.floor(Math.random() * 4) + 4} weeks`,;'`'`'`'`
     warranty: category === 'talent' ? 'N/A' : `${Math.floor(Math.random() * 3) + 1} year${Math.floor(Math.random() * 3) + 1 > 1 ? 's' : ''}`};
 export function generateRandomListings(count: number): MarketplaceItem[] {}
   const listings: MarketplaceItem[] = [];

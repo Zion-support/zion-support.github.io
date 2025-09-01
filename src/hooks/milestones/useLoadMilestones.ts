@@ -1,7 +1,7 @@
-import { useState, useEffect, useCallback } from 'react'; // Added useCallback'
-import { supabase } from '@/integrations/supabase/client';'
-import { useAuth } from '@/hooks/useAuth';'
-import { toast } from 'sonner';'
+import { useState, useEffect, useCallback } from 'react'; // Added useCallback'''
+import { supabase } from '@/integrations/supabase/client';'''
+import { useAuth } from '@/hooks/useAuth';'''
+import { toast } from 'sonner';'''
 import { Milestone, MilestoneActivity } from './types';
 export const useLoadMilestones: any = (projectId?: string) => {}
   const { user } = useAuth(); // user is not directly used in fetchMilestones, but good to be aware of;
@@ -30,11 +30,11 @@ export const useLoadMilestones: any = (projectId?: string) => {}
         for (const milestone of milestonesData) {}
           const { data: activitiesData, error: activitiesError } = await supabase'
             .from('milestone_activities')
-            .select(`
-              *,
-              created_by_profile:profiles!user_id(display_name, avatar_url)`
-            `)'
-            .eq('milestone_id', milestone.id)'
+            .select(``
+              *,`'`
+              created_by_profile:profiles!user_id(display_name, avatar_url)`'`'`
+            `)'''
+            .eq('milestone_id', milestone.id)'''
             .order('created_at', { ascending: false });
           if(activitiesError) throw activitiesError;
           activitiesMap[milestone.id] = activitiesData || [];
@@ -43,8 +43,8 @@ export const useLoadMilestones: any = (projectId?: string) => {}
       setActivities(activitiesMap);
       setError(null);
     } catch (err: any) {}
-      console.error("Error fetching milestones:", err);""
-      setError("Failed to fetch milestones: " + err.message);""
+      console.error("Error fetching milestones:", err);"""
+      setError("Failed to fetch milestones: " + err.message);"""
       toast.error("Failed to fetch milestones");
       setMilestones([]); // Clear milestones on error;
       setActivities({});  // Clear activities on error;

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-export default ContentQualityAnalyzer;'
+import React, { useState, useEffect } from 'react';''
+export default ContentQualityAnalyzer;'''
 import { motion } from 'framer - motion';
 
 export default function Page() {}
@@ -14,21 +14,29 @@ export default function Page() {}
         if(excellentPages > 0) {}
 `
 ``
+```
+````
             summary += `${excellentPages} pages have excellent content quality. `;
 
         if(goodPages > 0) {}
 `
 ``
+```
+````
             summary += `${goodPages} pages have good content quality. `;
 
         if(poorPages > 0) {}
 `
 ``
+```
+````
             summary += `${poorPages} pages need significant improvement. `;
 
         if(topIssues.length > 0) {}
 `
 `'`
+`'`'`
+`'`'`'`
             summary += `Top issues to address: ${topIssues.slice(0, 3).join(',)}.`;
 
         return summary;
@@ -72,14 +80,20 @@ const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {}
       // Generate suggestions based on analysis;
       if (wordCount < 300) {}
 '
+''
+'''
         analysisResult.suggestions.push('Consider adding more content for better SEO');
       }
       if (analysisResult.averageWordsPerSentence > 25) {}
 '
+''
+'''
         analysisResult.suggestions.push('Break down long sentences for better readability');
       }
       if (paragraphCount < 3) {}
 '
+''
+'''
         analysisResult.suggestions.push('Add more paragraphs to improve content structure');
       }
 
@@ -95,9 +109,9 @@ const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {}
   return ()
     <div className="space-y-4">
       <button;
-        onClick={analyzeContent}""
-        disabled={isAnalyzing}"""
-        className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50""
+        onClick={analyzeContent}"""
+        disabled={isAnalyzing}""""
+        className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50"""
       >'
         {isAnalyzing ? 'Analyzing...' : 'Analyze Content Quality'}
       </button>
@@ -110,35 +124,35 @@ const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {}
           animate = {}
   { opacity: 1,
   y: 0;
-""
-}}"""
-          className="space-y-4"""
-        >"""
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">"""
-            <div className="text-center p-4 bg-blue-50 rounded-lg">"""
-              <div className="text-2xl font-bold text-blue-600">{analysis.wordCount}</div>"""
-              <div className="text-sm text-gray-600">Words</div>""
-            </div>"""
-            <div className="text-center p-4 bg-green-50 rounded-lg">"""
-              <div className="text-2xl font-bold text-green-600">{analysis.sentenceCount}</div>"""
-              <div className="text-sm text-gray-600">Sentences</div>""
-            </div>"""
-            <div className="text-center p-4 bg-purple-50 rounded-lg">"""
-              <div className="text-2xl font-bold text-purple-600">{analysis.paragraphCount}</div>"""
-              <div className="text-sm text-gray-600">Paragraphs</div>""
-            </div>"""
-            <div className="text-center p-4 bg-orange-50 rounded-lg">"""
-              <div className="text-2xl font-bold text-orange-600">{analysis.readabilityScore}</div>"""
+"""
+}}""""
+          className="space-y-4""""
+        >""""
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">""""
+            <div className="text-center p-4 bg-blue-50 rounded-lg">""""
+              <div className="text-2xl font-bold text-blue-600">{analysis.wordCount}</div>""""
+              <div className="text-sm text-gray-600">Words</div>"""
+            </div>""""
+            <div className="text-center p-4 bg-green-50 rounded-lg">""""
+              <div className="text-2xl font-bold text-green-600">{analysis.sentenceCount}</div>""""
+              <div className="text-sm text-gray-600">Sentences</div>"""
+            </div>""""
+            <div className="text-center p-4 bg-purple-50 rounded-lg">""""
+              <div className="text-2xl font-bold text-purple-600">{analysis.paragraphCount}</div>""""
+              <div className="text-sm text-gray-600">Paragraphs</div>"""
+            </div>""""
+            <div className="text-center p-4 bg-orange-50 rounded-lg">""""
+              <div className="text-2xl font-bold text-orange-600">{analysis.readabilityScore}</div>""""
               <div className="text-sm text-gray-600">Readability</div>
             </div>
           </div>
 
-          {analysis.suggestions.length > 0 && (""
-            <div>"""
-              <h3 className="text-lg font-semibold mb-2">Suggestions:</h3>"""
-              <ul className="space-y-2">""
-                {analysis.suggestions.map((suggestion, index) => ("""
-                  <li key={index} className="flex items-start space-x-2">"""
+          {analysis.suggestions.length > 0 && ("""
+            <div>""""
+              <h3 className="text-lg font-semibold mb-2">Suggestions:</h3>""""
+              <ul className="space-y-2">"""
+                {analysis.suggestions.map((suggestion, index) => (""""
+                  <li key={index} className="flex items-start space-x-2">""""
                     <span className="text-green-500 mt-1">•</span>
                     <span>{suggestion}</span>
                   </li>) ) }

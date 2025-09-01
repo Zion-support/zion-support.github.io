@@ -75,9 +75,11 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       innovationLevel: 'Breakthrough',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
-        website: 'https://ziontechgroup.com/quantum-ai-business','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
+        website: 'https://ziontechgroup.com/quantum-ai-business','''
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       technicalSpecs: {}
 '
@@ -133,9 +135,11 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       innovationLevel: 'Breakthrough',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
-        website: 'https://ziontechgroup.com/ai-cybersecurity','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
+        website: 'https://ziontechgroup.com/ai-cybersecurity','''
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       technicalSpecs: {}
 '
@@ -191,9 +195,11 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       innovationLevel: 'Breakthrough',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
-        website: 'https://ziontechgroup.com/ai-research','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
+        website: 'https://ziontechgroup.com/ai-research','''
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       technicalSpecs: {}
 '
@@ -248,9 +254,11 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       innovationLevel: 'Breakthrough',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
-        website: 'https://ziontechgroup.com/quantum-trading','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
+        website: 'https://ziontechgroup.com/quantum-trading','''
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       technicalSpecs: {}
 '
@@ -306,9 +314,11 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       innovationLevel: 'Breakthrough',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
-        website: 'https://ziontechgroup.com/ai-healthcare','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
+        website: 'https://ziontechgroup.com/ai-healthcare','''
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       technicalSpecs: {}
 '
@@ -364,9 +374,11 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       innovationLevel: 'Breakthrough',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
-        website: 'https://ziontechgroup.com/ai-manufacturing','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
+        website: 'https://ziontechgroup.com/ai-manufacturing','''
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       technicalSpecs: {}
 '
@@ -421,9 +433,11 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       innovationLevel: 'Breakthrough',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
-        website: 'https://ziontechgroup.com/quantum-edge','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
+        website: 'https://ziontechgroup.com/quantum-edge','''
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       technicalSpecs: {}
 '
@@ -479,9 +493,11 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       innovationLevel: 'Revolutionary',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
-        website: 'https://ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
+        website: 'https://ziontechgroup.com','''
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       technicalSpecs: {}
 '
@@ -537,9 +553,11 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       innovationLevel: 'Breakthrough',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
-        website: 'https://ziontechgroup.com/ai-education','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
+        website: 'https://ziontechgroup.com/ai-education','''
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       technicalSpecs: {}
 '
@@ -605,9 +623,11 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       innovationLevel: 'Breakthrough',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
-        website: 'https://ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
+        website: 'https://ziontechgroup.com','''
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       technicalSpecs: {}
 '
@@ -672,9 +692,11 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       innovationLevel: 'Breakthrough',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
-        website: 'https://ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
+        website: 'https://ziontechgroup.com','''
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       technicalSpecs: {}
 '
@@ -739,9 +761,11 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       innovationLevel: 'Breakthrough',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
-        website: 'https://ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
+        website: 'https://ziontechgroup.com','''
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       technicalSpecs: {}
 '
@@ -801,9 +825,11 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       innovationLevel: 'Breakthrough',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
-        website: 'https://ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
+        website: 'https://ziontechgroup.com','''
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       technicalSpecs: {}
 '

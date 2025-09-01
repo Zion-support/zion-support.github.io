@@ -32,8 +32,8 @@ export default to;
      * Generate sitemap index for large sites;
      */
     generateIndex(sitemaps) {}
-'""
-'"'""
+'"""
+'"'"""
         const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>;
         const sitemapElements = sitemaps.map(sitemap => {}
 `
@@ -88,12 +88,12 @@ Crawl-delay: 1`;
     generateHTML() {}
 `
         const { baseUrl, urls } = this.config;`"`
-        const html = `<!DOCTYPE html>"""
-<html lang="en">""
-<head>"""
-    <meta charset="UTF-8">"""
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">""
-    <title>Sitemap - Zion Tech Group</title>"""
+        const html = `<!DOCTYPE html>""""
+<html lang="en">"""
+<head>""""
+    <meta charset="UTF-8">""""
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">"""
+    <title>Sitemap - Zion Tech Group</title>""""
     <meta name="description" content="Complete sitemap of Zion Tech Group website">
     <style > body { font - family: Arial, sans - serif; margin: 40px; line - height: 1.6; }
         .container { max - width: 1200px; margin: 0 auto; }
@@ -107,64 +107,64 @@ Crawl-delay: 1`;
         .priority - medium { border-left: 4px solid #ff9800; }
         .priority - low { border-left: 4px solid #4caf50; }
     </style>
-</head>""
-<body>"""
+</head>"""
+<body>""""
     <div class="container">
         <h1>Zion Tech Group - Sitemap</h1>
-        <p>Complete navigation guide for our website. Find all our services, solutions, and resources.</p>""
-        """
-        <div class="sitemap-section">""
-            <h2>Main Pages</h2>"""
+        <p>Complete navigation guide for our website. Find all our services, solutions, and resources.</p>"""
+        """"
+        <div class="sitemap-section">"""
+            <h2>Main Pages</h2>""""
             <div class="sitemap-links">
                 ${urls`
             .filter(url => url.priority && url.priority >= 0.8)`"`
-            .map(url => `"""
+            .map(url => `""""
                     <a href="${baseUrl}${url.url}" class="sitemap-link priority-high">'
                         ${url.url === '/' ? 'Home' : url.url.split('/').pop()?.replace(/-/g,).replace(/\b\w/g, l => l.toUpperCase()) || url.url}'`
                     </a>'`'`
                   `).join('')}
             </div>
-        </div>""
-        """
-        <div class="sitemap-section">""
-            <h2>Services</h2>"""
+        </div>"""
+        """"
+        <div class="sitemap-section">"""
+            <h2>Services</h2>""""
             <div class="sitemap-links">'
                 ${urls''`
             .filter(url => url.url.startsWith('/services/'))`"`
-            .map(url => `"""
+            .map(url => `""""
                     <a href="${baseUrl}${url.url}" class="sitemap-link priority-medium">'
                         ${url.url.split('/').pop()?.replace(/-/g,).replace(/\b\w/g, l => l.toUpperCase()) || url.url}'`
                     </a>'`'`
                   `).join('')}
             </div>
-        </div>""
-        """
-        <div class="sitemap-section">""
-            <h2>Solutions</h2>"""
+        </div>"""
+        """"
+        <div class="sitemap-section">"""
+            <h2>Solutions</h2>""""
             <div class="sitemap-links">'
                 ${urls''`
             .filter(url => url.url.startsWith('/solutions/'))`"`
-            .map(url => `"""
+            .map(url => `""""
                     <a href="${baseUrl}${url.url}" class="sitemap-link priority-medium">'
                         ${url.url.split('/').pop()?.replace(/-/g,).replace(/\b\w/g, l => l.toUpperCase()) || url.url}'`
                     </a>'`'`
                   `).join('')}
             </div>
-        </div>""
-        """
-        <div class="sitemap-section">""
-            <h2>Other Pages</h2>"""
+        </div>"""
+        """"
+        <div class="sitemap-section">"""
+            <h2>Other Pages</h2>""""
             <div class="sitemap-links">'
                 ${urls''`
             .filter(url => !url.url.startsWith('/services/') && !url.url.startsWith('/solutions/') && url.url !== '/' && url.priority && url.priority < 0.8)`"`
-            .map(url => `"""
+            .map(url => `""""
                     <a href="${baseUrl}${url.url}" class="sitemap-link priority-low">'
                         ${url.url.split('/').pop()?.replace(/-/g,).replace(/\b\w/g, l => l.toUpperCase()) || url.url}'`
                     </a>'`'`
                   `).join('')}
             </div>
-        </div>""
-        """
+        </div>"""
+        """"
         <div class="sitemap-section">
             <p><strong>Total Pages:</strong> ${urls.length}</p>
             <p><strong>Last Updated:</strong> ${new Date().toLocaleDateString()}</p>

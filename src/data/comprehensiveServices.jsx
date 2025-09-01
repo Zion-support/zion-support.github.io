@@ -124,35 +124,45 @@ export const comprehensiveServices = [{}
 export const serviceCategories = []
   {}
 '
-    name: 'Infrastructure','
-    description: 'Core IT infrastructure services','
-    icon: '🏗️','
-    services: comprehensiveServices.filter(''
+''
+'''
+    name: 'Infrastructure','''
+    description: 'Core IT infrastructure services','''
+    icon: '🏗️','''
+    services: comprehensiveServices.filter(''''
       s => s.category === 'Infrastructure'
     )},
   {}
 '
-    name: 'Security','
-    description: 'Cybersecurity and compliance services','
-    icon: '🛡️','
+''
+'''
+    name: 'Security','''
+    description: 'Cybersecurity and compliance services','''
+    icon: '🛡️','''
     services: comprehensiveServices.filter(s => s.category === 'Security')},
   {}
 '
-    name: 'Cloud','
-    description: 'Cloud computing and migration services','
-    icon: '☁️','
+''
+'''
+    name: 'Cloud','''
+    description: 'Cloud computing and migration services','''
+    icon: '☁️','''
     services: comprehensiveServices.filter(s => s.category === 'Cloud')},
   {}
 '
-    name: 'Data','
-    description: 'Data management and recovery services','
-    icon: '💾','
+''
+'''
+    name: 'Data','''
+    description: 'Data management and recovery services','''
+    icon: '💾','''
     services: comprehensiveServices.filter(s => s.category === 'Data')},
   {}
 '
-    name: 'Networking','
-    description: 'Network infrastructure services','
-    icon: '🌐','
+''
+'''
+    name: 'Networking','''
+    description: 'Network infrastructure services','''
+    icon: '🌐','''
     services: comprehensiveServices.filter(s => s.category === 'Networking')},
   {}
 '

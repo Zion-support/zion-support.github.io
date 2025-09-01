@@ -14,9 +14,9 @@ class ResourceMonitor {}
 
     this.isMonitoring = true;
     this.setupErrorListeners();
-    this.setupResourceObservers();
-    this.monitorCriticalResources();
-'
+    this.setupResourceObservers();'
+    this.monitorCriticalResources();''
+'''
     // console.log('🔍 Resource Monitor started')}
 
   stop() {}
@@ -48,7 +48,9 @@ class ResourceMonitor {}
         event.reason.includes('MIME')
       ) {}
 '
-        this.handleResourceError(''
+''
+'''
+        this.handleResourceError(''''
           'unknown',other',
           `MIME type error: ${event.reason}`
         )}
@@ -77,6 +79,8 @@ class ResourceMonitor {}
 '
     script.addEventListener('error', () => {}
 '
+''
+'''
       this.handleResourceError(script.src,script',Script loading failed')})}
 
   private monitorStylesheet(link: anyHTMLLinkElement) {}
@@ -125,10 +129,19 @@ class ResourceMonitor {}
     } catch(error) {}
 '`
 '`'`
+        this.handleResourceError()'`'`'`
+          url,stylesheet',````
+          `Incorrect MIME type: ${contentType} (expected css)`
+        )}
+    } catch (error) {}
+'`
+'`'`
+'`'`'`
+'`'`'`'`
       this.handleResourceError(url, 'other', `Fetch error: ${error}`)}  }
-
-  private handleResourceError()
-    url: string,'
+'
+  private handleResourceError()''
+    url: string,'''
     type: ResourceError['type'],
     error: string;
   ) {}
@@ -136,9 +149,9 @@ class ResourceMonitor {}
       url,
       type,
       error,
-      timestamp: Date.now()};
-
-    this.errors.push(resourceError);'
+      timestamp: Date.now()};'
+''
+    this.errors.push(resourceError);'''
     // console.error('🚨 Resource Error:', resourceError);
 
     // Attempt to retry loading;
@@ -151,6 +164,8 @@ class ResourceMonitor {}
     if (attempts >= this.maxRetries) {}
 `
 ``
+```
+````
       // console.warn(`Max retry attempts reached for ${url}`);
       return}
 
@@ -179,26 +194,36 @@ class ResourceMonitor {}
     script.onload = () => {}
 `
 ``
+```
+````
       // console.log(`✅ Script loaded successfully: ${src}`);
       this.retryAttempts.delete(src)};
     script.onerror = () => {}
 `
 ``
+```
+````
       // console.error(`❌ Script retry failed: ${src}`)};
     document.head.appendChild(script)}
 
   private loadStylesheet(href: string) {}
 '
+''
+'''
     link.rel = 'stylesheet';
     link.href = href;
     link.onload = () => {}
 `
 ``
+```
+````
       // console.log(`✅ Stylesheet loaded successfully: ${href}`);
       this.retryAttempts.delete(href)};
     link.onerror = () => {}
 `
 ``
+```
+````
       // console.error(`❌ Stylesheet retry failed: ${href}`)};
     document.head.appendChild(link)}
   private reportError(error: ResourceError) {}
@@ -207,24 +232,23 @@ class ResourceMonitor {}
     // In production, send to monitoring service''
     if (process.env.NODE_ENV === 'production') {}
 '
-      // Example: Sentry, LogRocket, etc.''
-      // console.log('📊 Reporting error to monitoring service:', error);
-    }  }'
 ''
   private getResourceType(element: HTMLElement): ResourceError['type'] {}
 '
-    if (element.tagName === 'SCRIPT') return 'script';'
-    if (''
-      element.tagName === 'LINK' &&''
-      (element as HTMLLinkElement).rel === 'stylesheet'
-    )'
-      return 'stylesheet';'
-    if (element.tagName === 'IMG') return 'image';'
-    if (''
-      element.tagName === 'LINK' &&''
-      (element as HTMLLinkElement).rel === 'preload'
-    )'
-      return 'font';'
+''
+'''
+    if (element.tagName === 'SCRIPT') return 'script';'''
+    if (''''
+      element.tagName === 'LINK' &&''''
+      (element as HTMLLinkElement).rel === 'stylesheet'''
+    )'''
+      return 'stylesheet';'''
+    if (element.tagName === 'IMG') return 'image';'''
+    if (''''
+      element.tagName === 'LINK' &&''''
+      (element as HTMLLinkElement).rel === 'preload'''
+    )'''
+      return 'font';'''
     return 'other'}
 
   getErrors(): ResourceError[] {}

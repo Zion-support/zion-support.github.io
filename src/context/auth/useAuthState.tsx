@@ -30,6 +30,8 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
         if (typeof window !== 'null') {;
           if (auth) {}
 '
+''
+'''
         if (typeof window !== 'null') {;
           if (auth) {}
             if (parsed.user && parsed.token) {}

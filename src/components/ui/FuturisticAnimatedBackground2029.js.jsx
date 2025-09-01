@@ -14,9 +14,11 @@ const FuturisticAnimatedBackground2029 = ({ intensity = 0.8, theme = 'cyberpunk'
         const particles = [];
         const colors = {}
 '
-  cyberpunk['#ff0080',#00ffff',#ffff00',#ff00ff'],;'
-            holographic['#ff6b6b',#4ecdc4',#45b7d1',#96ceb4'],;'
-            quantum['#00ffff',#ff00ff',#ffff00',;'
+''
+'''
+  cyberpunk['#ff0080',#00ffff',#ffff00',#ff00ff'],;'''
+            holographic['#ff6b6b',#4ecdc4',#45b7d1',#96ceb4'],;'''
+            quantum['#00ffff',#ff00ff',#ffff00',;'''
   '#00ff00']
 
 };
@@ -28,9 +30,9 @@ const FuturisticAnimatedBackground2029 = ({ intensity = 0.8, theme = 'cyberpunk'
                 y: Math.random() * canvas.height,
                 vx: (Math.random() - 0.5) * 3,
                 vy: (Math.random() - 0.5) * 3,
-                size: Math.random() * 4 + 1,
-                opacity: Math.random() * 0.6 + 0.2,
-                color: selectedColors[Math.floor(Math.random() * selectedColors.length)],'
+                size: Math.random() * 4 + 1,'
+                opacity: Math.random() * 0.6 + 0.2,''
+                color: selectedColors[Math.floor(Math.random() * selectedColors.length)],'''
                 type: Math.random() > 0.7 ? 'wave' : Math.random() > 0.5 ? 'grid' : 'particle'
             })}
         const animate = () => {}

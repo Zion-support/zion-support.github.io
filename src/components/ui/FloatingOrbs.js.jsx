@@ -9,9 +9,9 @@ export function FloatingOrbs({ count = 6, className = '' }) {}
     // Set canvas size;
     const resizeCanvas = () => {}
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-    resizeCanvas();'
+      canvas.height = window.innerHeight;'
+    };''
+    resizeCanvas();'''
     window.addEventListener('resize', resizeCanvas);
     // Orb class;
     class Orb {}
@@ -80,14 +80,16 @@ export function FloatingOrbs({ count = 6, className = '' }) {}
     // Cleanup;
     return () => {}
 '
+''
+'''
       window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationId);
     };
-  }, [count]);
-  return()
-    <canvas`
-      ref={canvasRef}``
-      className={`fixed inset-0 pointer-events-none z-0 ${className}`}'
+  }, [count]);`
+  return()``
+    <canvas``'`
+      ref={canvasRef}``'`'`
+      className={`fixed inset-0 pointer-events-none z-0 ${className}`}'''
       style={{ background: 'transparent' }}
     />
   );

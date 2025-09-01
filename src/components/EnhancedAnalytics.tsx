@@ -72,7 +72,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({}
       document.head.appendChild(script) ;
 
       window.dataLayer = window.dataLayer || [];
-      function gtag(function gtag(...args: any[]) {): any {}
+      function gtag(function gtag(function gtag(...args: any[]) {): any {): any {}
         window.dataLayer.push(args);'
       }''
       gtag('js', new Date());'      gtag('config', trackingId, {}
@@ -132,6 +132,8 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({}
 
     return () => {}
 '
+''
+'''
       window.removeEventListener('popstate', handleRouteChange)}}, [enabled, currentPage, timeOnPage]) ;
   // Track user interactions;
   useEffect(() => {}
@@ -143,6 +145,8 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({}
       setUserInteractions(prev => prev + 1);'      trackEvent('user_interaction', {}
 '
 ''
+'''
+''''
         interaction_type: 'click',
         page_path: currentPage,
         timestamp: Date.now()})};
@@ -167,11 +171,11 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({}
 '
           trackEvent('scroll_milestone', {}
             milestone: 90,
-            page_path: currentPage})}
-      }
-    }};'
-    // Set up event listeners''
-    document.addEventListener('click', trackInteraction);'
+            page_path: currentPage})}'
+      }''
+    }};'''
+    // Set up event listeners''''
+    document.addEventListener('click', trackInteraction);'''
     window.addEventListener('scroll', trackScroll);
 
     // Update time on page every second;
@@ -179,7 +183,9 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({}
 
     return () => {}
 '
-      document.removeEventListener('click', trackInteraction);'
+''
+'''
+      document.removeEventListener('click', trackInteraction);'''
       window.removeEventListener('scroll', trackScroll);
       if(sessionRef.current) {}
         clearInterval(sessionRef.current)}
@@ -199,7 +205,9 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({}
     if (document.readyState === 'complete') {}
       trackPerformance()} else {}
 '
-      window.addEventListener('load', trackPerformance);'
+''
+'''
+      window.addEventListener('load', trackPerformance);'''
       return () => window.removeEventListener('load', trackPerformance)}
   }, [enabled, currentPage]) ;
   // Track session end;
@@ -220,6 +228,8 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({}
       // Google Analytics 4;
       if (window.gtag) {}
 '
+''
+'''
         window.gtag('event', eventName, parameters)}
 
       // Custom analytics tracking;
@@ -227,7 +237,9 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({}
       if(process.env.REACT_APP_ANALYTICS_ENDPOINT) {}
         fetch(process.env.REACT_APP_ANALYTICS_ENDPOINT, {}
 '
-          method: 'POST','
+''
+'''
+          method: 'POST','''
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(eventData)}).catch(console.error)}
 
@@ -241,9 +253,9 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({}
           userEngagement: {}
             ...prev.userEngagement,
             scrollDepth: Math.max(prev.userEngagement.scrollDepth, scrollDepth),
-            timeOnPage: Math.max(prev.userEngagement.timeOnPage, timeOnPage),
-            interactions: userInteractions}}});
-'
+            timeOnPage: Math.max(prev.userEngagement.timeOnPage, timeOnPage),'
+            interactions: userInteractions}}});''
+'''
       // console.log('Analytics Event:', eventData)},
     [enabled, currentPage, scrollDepth, timeOnPage, userInteractions]
   );
@@ -288,10 +300,10 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={() => setIsVisible(!isVisible)}
-          className="fixed top-4 right-32 z-50 p-3 bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2"""
-          aria-label="Toggle analytics dashboard"""
-          title="Analytics Dashboard"""
-        >"""
+          className="fixed top-4 right-32 z-50 p-3 bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2""""
+          aria-label="Toggle analytics dashboard""""
+          title="Analytics Dashboard""""
+        >""""
           <BarChart3 className="w-5 h-5" />
         </motion.button>
       )}
@@ -300,159 +312,163 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({}
       <AnimatePresence>
         {isVisible && showDashboard && analyticsData && (<motion.div;
             initial={{ opacity: 0, x: 300 }}
-            animate={{ opacity: 1, x: 0 }}""
-            exit={{ opacity: 0, x: 300 }}"""
-            className="fixed top-4 right-48 z-50 w-96 bg-white dark:bg-slate-800 rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 overflow-hidden max-h-[80vh]""
-          >""
-            {/* Header */}"""
-            <div className="flex items-center justify-between p-4 bg-gradient-to-r from-green-600 to-blue-600 text-white">"""
-              <div className="flex items-center space-x-2">"""
-                <BarChart3 className="w-5 h-5" />"""
+            animate={{ opacity: 1, x: 0 }}"""
+            exit={{ opacity: 0, x: 300 }}""""
+            className="fixed top-4 right-48 z-50 w-96 bg-white dark:bg-slate-800 rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 overflow-hidden max-h-[80vh]"""
+          >"""
+            {/* Header */}""""
+            <div className="flex items-center justify-between p-4 bg-gradient-to-r from-green-600 to-blue-600 text-white">""""
+              <div className="flex items-center space-x-2">""""
+                <BarChart3 className="w-5 h-5" />""""
                 <h3 className="font-semibold">Analytics</h3>
               </div>
-              <button""
-                onClick={() => setIsVisible(false)}"""
-                className="p-1 hover:bg-white/20 rounded transition-colors"""
-                aria-label="Close analytics dashboard"""
-              >"""
+              <button"""
+                onClick={() => setIsVisible(false)}""""
+                className="p-1 hover:bg-white/20 rounded transition-colors""""
+                aria-label="Close analytics dashboard""""
+              >""""
                 <Eye className="w-4 h-4"  />              </button>
             </div>
-""
-            {/* Content */}"""
-            <div className="p-4 space-y-4 max-h-96 overflow-y-auto">""
-              {/* Overview Metrics */}"""
-              <div className="grid grid-cols-2 gap-4">"""
-                <div className="text-center p-3 bg-slate-50 dark:bg-slate-700 rounded-lg">"""
+"""
+            {/* Content */}""""
+            <div className="p-4 space-y-4 max-h-96 overflow-y-auto">"""
+              {/* Overview Metrics */}""""
+              <div className="grid grid-cols-2 gap-4">""""
+                <div className="text-center p-3 bg-slate-50 dark:bg-slate-700 rounded-lg">""""
                   <div className="text-2xl font-bold text-green-600">
-                    {analyticsData.pageViews}""
-                  </div>"""
+                    {analyticsData.pageViews}"""
+                  </div>""""
                   <div className="text-xs text-slate-600 dark:text-slate-400">
                     Page Views;
-                  </div>""
-                </div>"""
-                <div className="text-center p-3 bg-slate-50 dark:bg-slate-700 rounded-lg">"""
-                  <div className="text-2xl font-bold text-blue-600">
-                    {analyticsData.uniqueVisitors}""
                   </div>"""
+                </div>""""
+                <div className="text-center p-3 bg-slate-50 dark:bg-slate-700 rounded-lg">""""
+                  <div className="text-2xl font-bold text-blue-600">
+                    {analyticsData.uniqueVisitors}"""
+                  </div>""""
                   <div className="text-xs text-slate-600 dark:text-slate-400">
                     Unique Visitors                  </div>
                 </div>
               </div>
-""
-              {/* Device Types */}"""
-              <div className="space-y-3">"""
+"""
+              {/* Device Types */}""""
+              <div className="space-y-3">""""
                 <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                  Device Types""
-                </h4>"""
-                <div className="space-y-2">"""
-                  <div className="flex items-center justify-between">"""
-                    <div className="flex items-center space-x-2">"""
-                      <Monitor className="w-4 h-4 text-blue-500"  />"""
+                  Device Types"""
+                </h4>""""
+                <div className="space-y-2">""""
+                  <div className="flex items-center justify-between">""""
+                    <div className="flex items-center space-x-2">""""
+                      <Monitor className="w-4 h-4 text-blue-500"  />""""
                       <span className="text-sm text-slate-600 dark:text-slate-400">
                         Desktop;
-                      </span>""
-                    </div>"""
+                      </span>"""
+                    </div>""""
                     <span className="text-sm font-medium">
                       {analyticsData.deviceTypes.desktop}%
-                    </span>""
-                  </div>"""
-                  <div className="flex items-center justify-between">"""
-                    <div className="flex items-center space-x-2">"""
-                      <Smartphone className="w-4 h-4 text-green-500"  />"""
+                    </span>"""
+                  </div>""""
+                  <div className="flex items-center justify-between">""""
+                    <div className="flex items-center space-x-2">""""
+                      <Smartphone className="w-4 h-4 text-green-500"  />""""
                       <span className="text-sm text-slate-600 dark:text-slate-400">
                         Mobile;
-                      </span>""
-                    </div>"""
+                      </span>"""
+                    </div>""""
                     <span className="text-sm font-medium">
                       {analyticsData.deviceTypes.mobile}%
-                    </span>""
-                  </div>"""
-                  <div className="flex items-center justify-between">"""
-                    <div className="flex items-center space-x-2">"""
-                      <Tablet className="w-4 h-4 text-purple-500"  />"""
+                    </span>"""
+                  </div>""""
+                  <div className="flex items-center justify-between">""""
+                    <div className="flex items-center space-x-2">""""
+                      <Tablet className="w-4 h-4 text-purple-500"  />""""
                       <span className="text-sm text-slate-600 dark:text-slate-400">
                         Tablet;
-                      </span>""
-                    </div>"""
+                      </span>"""
+                    </div>""""
                     <span className="text-sm font-medium">
                       {analyticsData.deviceTypes.tablet}%
                     </span>
                   </div>
                 </div>
               </div>
-""
-              {/* User Engagement */}"""
-              <div className="space-y-3">"""
+"""
+              {/* User Engagement */}""""
+              <div className="space-y-3">""""
                 <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                  User Engagement""
-                </h4>"""
-                <div className="space-y-2">"""
-                  <div className="flex items-center justify-between">"""
+                  User Engagement"""
+                </h4>""""
+                <div className="space-y-2">""""
+                  <div className="flex items-center justify-between">""""
                     <span className="text-sm text-slate-600 dark:text-slate-400">
-                      Scroll Depth""
-                    </span>"""
+                      Scroll Depth"""
+                    </span>""""
                     <span className="text-sm font-medium">
                       {analyticsData.userEngagement.scrollDepth}%
-                    </span>""
-                  </div>"""
-                  <div className="flex items-center justify-between">"""
-                    <span className="text-sm text-slate-600 dark:text-slate-400">
-                      Time on Page""
                     </span>"""
+                  </div>""""
+                  <div className="flex items-center justify-between">""""
+                    <span className="text-sm text-slate-600 dark:text-slate-400">
+                      Time on Page"""
+                    </span>""""
                     <span className="text-sm font-medium">
                       {Math.round(analyticsData.userEngagement.timeOnPage)}s;
-                    </span>""
-                  </div>"""
-                  <div className="flex items-center justify-between">"""
-                    <span className="text-sm text-slate-600 dark:text-slate-400">
-                      Interactions""
                     </span>"""
+                  </div>""""
+                  <div className="flex items-center justify-between">""""
+                    <span className="text-sm text-slate-600 dark:text-slate-400">
+                      Interactions"""
+                    </span>""""
                     <span className="text-sm font-medium">
                       {analyticsData.userEngagement.interactions}
                     </span>
                   </div>
                 </div>
               </div>
-""
-              {/* Performance */}"""
-              <div className="space-y-3">"""
+"""
+              {/* Performance */}""""
+              <div className="space-y-3">""""
                 <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                  Performance""
-                </h4>"""
-                <div className="space-y-2">"""
-                  <div className="flex items-center justify-between">"""
+                  Performance"""
+                </h4>""""
+                <div className="space-y-2">""""
+                  <div className="flex items-center justify-between">""""
                     <span className="text-sm text-slate-600 dark:text-slate-400">
-                      Load Time""
-                    </span>"""
+                      Load Time"""
+                    </span>""""
                     <span className="text-sm font-medium">
                       {analyticsData.performance.loadTime}ms;
-                    </span>""
-                  </div>"""
-                  <div className="flex items-center justify-between">"""
+                    </span>"""
+                  </div>""""
+                  <div className="flex items-center justify-between">""""
                     <span className="text-sm text-slate-600 dark:text-slate-400">
                       FCP;
                     </span>`
                     <span``
                       className={`text-sm font-medium ${}
 '
-                        analyticsData.performance.coreWebVitals.fcp <= 1800''
-                          ? 'text-green-600'''`
-                          : 'text-yellow-600'``
+''
+'''`
+                        analyticsData.performance.coreWebVitals.fcp <= 1800'''`'`
+                          ? 'text-green-600'''`'`'`
+                          : 'text-yellow-600'````
                       }`}
                     >
                       {analyticsData.performance.coreWebVitals.fcp}ms;
-                    </span>""
-                  </div>"""
-                  <div className="flex items-center justify-between">"""
+                    </span>"""
+                  </div>""""
+                  <div className="flex items-center justify-between">""""
                     <span className="text-sm text-slate-600 dark:text-slate-400">
                       LCP;
                     </span>`
                     <span``
                       className={`text-sm font-medium ${}
 '
-                        analyticsData.performance.coreWebVitals.lcp <= 2500''
-                          ? 'text-green-600'''`
-                          : 'text-yellow-600'``
+''
+'''`
+                        analyticsData.performance.coreWebVitals.lcp <= 2500'''`'`
+                          ? 'text-green-600'''`'`'`
+                          : 'text-yellow-600'````
                       }`}
                     >
                       {analyticsData.performance.coreWebVitals.lcp}ms;
@@ -460,26 +476,26 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({}
                   </div>
                 </div>
               </div>
-""
-              {/* Top Pages */}"""
-              <div className="space-y-3">"""
+"""
+              {/* Top Pages */}""""
+              <div className="space-y-3">""""
                 <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                  Top Pages""
-                </h4>"""
+                  Top Pages"""
+                </h4>""""
                 <div className="space-y-2">
                   {analyticsData.topPages.map((page, index) => (
-                    <div""
-                      key={page.path}"""
-                      className="flex items-center justify-between p-2 bg-slate-50 dark:bg-slate-700 rounded"""
-                    >"""
-                      <div className="flex items-center space-x-2">"""
+                    <div"""
+                      key={page.path}""""
+                      className="flex items-center justify-between p-2 bg-slate-50 dark:bg-slate-700 rounded""""
+                    >""""
+                      <div className="flex items-center space-x-2">""""
                         <span className="text-xs font-medium text-slate-500">
-                          {index + 1}""
-                        </span>"""
+                          {index + 1}"""
+                        </span>""""
                         <span className="text-sm text-slate-700 dark:text-slate-300">
                           {page.title}
-                        </span>""
-                      </div>"""
+                        </span>"""
+                      </div>""""
                       <span className="text-sm font-medium text-slate-600 dark:text-slate-400">
                         {page.views}
                       </span>

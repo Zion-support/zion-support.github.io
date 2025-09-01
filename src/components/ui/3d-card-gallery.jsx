@@ -1,8 +1,8 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';'
-import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';'
+import React, { useState, useRef, useEffect, useCallback } from 'react';'''
+import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';'''
 import { Eye, Heart, Share2, Play, Pause, RotateCcw, Grid, List, Search, Star, Zap, Shield, Globe, Rocket, Brain, Settings, TrendingUp, X } from 'lucide-react';
-import { Button } from "./button";"""
-import { Badge } from "./badge";"""
+import { Button } from "./button";""""
+import { Badge } from "./badge";""""
 export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = false, showFilters = true, onCardClick, onAction, className = "" }) {}
     const [selectedItem, setSelectedItem] = useState(null);'
     const [viewMode, setViewMode] = useState('grid');
@@ -54,6 +54,8 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
     // Auto-play carousel;
     useEffect(() => {}
 '
+''
+'''
         if (!isPlaying || viewMode !== 'carousel' || filteredAndSortedItems.length === 0)
             return;
         const interval = setInterval(() => {}
@@ -70,34 +72,38 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
     const getStatusColor = (status) => {}
         switch (status) {}
 '
-            case 'active':''
-                return 'border-green-500/50 bg-green-500/10 text-green-400';'
-            case 'beta':''
-                return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';'
-            case 'coming-soon':''
-                return 'border-blue-500/50 bg-blue-500/10 text-blue-400';'
-            case 'deprecated':''
-                return 'border-red-500/50 bg-red-500/10 text-red-400';'
-            default:''
+''
+'''
+            case 'active':''''
+                return 'border-green-500/50 bg-green-500/10 text-green-400';'''
+            case 'beta':''''
+                return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';'''
+            case 'coming-soon':''''
+                return 'border-blue-500/50 bg-blue-500/10 text-blue-400';'''
+            case 'deprecated':''''
+                return 'border-red-500/50 bg-red-500/10 text-red-400';'''
+            default:''''
                 return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400'}
     };
     // Get complexity color;
     const getComplexityColor = (complexity) => {}
         switch (complexity) {}
 '
-            case 'beginner':''
-                return 'border-green-500/50 bg-green-500/10 text-green-400';'
-            case 'intermediate':''
-                return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';'
-            case 'advanced':''
-                return 'border-orange-500/50 bg-orange-500/10 text-orange-400';'
-            case 'expert':''
-                return 'border-red-500/50 bg-red-500/10 text-red-400';'
-            default:''
+''
+'''
+            case 'beginner':''''
+                return 'border-green-500/50 bg-green-500/10 text-green-400';'''
+            case 'intermediate':''''
+                return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';'''
+            case 'advanced':''''
+                return 'border-orange-500/50 bg-orange-500/10 text-orange-400';'''
+            case 'expert':''''
+                return 'border-red-500/50 bg-red-500/10 text-red-400';'''
+            default:''''
                 return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400'}
     };
     // Get category icon;
     const getCategoryIcon = (category) => {}
         const iconMap = {}
-'""
-  'AI & ML': Brain,Cybersecurity': Shield,Cloud': Globe,Development': Rocket,Analytics': Zap,Infrastructure': Settings,"'""
+'"""
+  'AI & ML': Brain,Cybersecurity': Shield,Cloud': Globe,Development': Rocket,Analytics': Zap,Infrastructure': Settings,"'"""

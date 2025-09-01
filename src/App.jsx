@@ -98,7 +98,7 @@ function App() {}
 
               {/* Catch-all route for 404 */}
               <Route;
-                path="*"""
+                path="*""""
                 element={}
                   <div className="flex items-center justify-center min-h-screen">
                     <div className="text-center">
@@ -109,8 +109,8 @@ function App() {}
                         The page you're looking for doesn't exist.
                       </p>
                       <a;
-                        href="/"""
-                        className="bg-zion-purple text-white px-6 py-3 rounded-lg hover:bg-zion-purple-dark transition-colors"""
+                        href="/""""
+                        className="bg-zion-purple text-white px-6 py-3 rounded-lg hover:bg-zion-purple-dark transition-colors""""
                       >
                         Go Home;
                       </a>

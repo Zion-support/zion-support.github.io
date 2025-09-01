@@ -3,8 +3,10 @@ function getDefaultUnit(): UnitSystem {}
 '
     if (region === 'US' || region === 'LR' || region === 'MM') {}
 '
-      return 'imperial'}
-  }'
+''
+'''
+      return 'imperial'}''
+  }'''
   return 'metric'}
 
 interface UnitContextState {}
@@ -12,8 +14,10 @@ interface UnitContextState {}
   setUnit: (u: UnitSystem) => void;
   toggleUnit: () => void}
 
-export function UnitProvider(function UnitProvider({ children }: { children: ReactNode }) {): any {}
+export function UnitProvider(function UnitProvider(function UnitProvider({ children }: { children: ReactNode }) {): any {): any {}
 '
+''
+'''
   const [unit, setUnit] = useLocalStorage<UnitSystem>('unitSystem', getDefaultUnit());
 
   return()

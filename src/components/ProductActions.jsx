@@ -1,5 +1,5 @@
-import { useState } from 'react';'
-import { Loader2 import { toast } from 'react-toastify';'
+import { useState } from 'react';'''
+import { Loader2 import { toast } from 'react-toastify';'''
 import { Button } from '@/components/ui/button';
 export function ProductActions({ onAddToCart }) {}
     const [loading, setLoading] = useState(false);'
@@ -15,9 +15,9 @@ export function ProductActions({ onAddToCart }) {}
             setLoading(false)}
     };
     return (<Button onClick={addToCart} disabled={loading}>
-      {loading ? (<span className="flex items-center gap-2">"""
+      {loading ? (<span className="flex items-center gap-2">""""
           <Loader2 className="h-4 w-4 animate-spin"/>
           {label}
         </span>) : (label)}
-    </Button>)}'""
-'"'""
+    </Button>)}'"""
+'"'"""

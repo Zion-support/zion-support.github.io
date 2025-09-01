@@ -1,6 +1,6 @@
-import React from 'react';'
-import { cn } from '../../lib/utils';'
-import React from 'react';'
+import React from 'react';'''
+import { cn } from '../../lib/utils';'''
+import React from 'react';'''
 import { cn } from '../../lib/utils';
 
 const Textarea = React.forwardRef(({ className, ...props }, ref) => {}
@@ -13,9 +13,9 @@ const Textarea = React.forwardRef(({ className, ...props }, ref) => {}
       ref={ref}
       {...props}
     />
-  );
-});
-'
+  );'
+});''
+'''
 Textarea.displayName = 'Textarea';
 ;
 export { Textarea };

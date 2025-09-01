@@ -34,6 +34,7 @@ export function unregisterServiceWorker(): void {}
         return false;
       });
   }
-  return Promise.resolve(undefined);
-}
-'
+  return Promise.resolve(undefined);'
+}''
+''
+''

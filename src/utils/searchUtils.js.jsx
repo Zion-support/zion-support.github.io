@@ -229,11 +229,13 @@ export const formatSearchQuery = (query) => {}
  */
 export const hasActiveFilters = (filters) => {}
 '
-    return (filters.types.length > 0 ||''
-        filters.category !== '' ||
-        filters.minPrice > 0 ||
-        filters.maxPrice < 10000 ||'
-        filters.minRating > 0 ||''
+''
+'''
+    return (filters.types.length > 0 ||''''
+        filters.category !== '' ||'
+        filters.minPrice > 0 ||''
+        filters.maxPrice < 10000 ||'''
+        filters.minRating > 0 ||''''
         filters.sort !== 'relevance');
 };
 /**
@@ -246,9 +248,9 @@ export const getActiveFilterCount = (filters) => {}
     if(filters.category)
         count += 1;
     if(filters.minPrice > 0 || filters.maxPrice < 10000)
-        count += 1;
-    if (filters.minRating > 0)
         count += 1;'
+    if (filters.minRating > 0)''
+        count += 1;'''
     if (filters.sort !== 'relevance')
         count += 1;
     return count;
@@ -259,9 +261,9 @@ export const getActiveFilterCount = (filters) => {}
 export const getDefaultFilters = () => ({}
     types: [],'
     category: '',
-    minPrice: 0,
-    maxPrice: 10000,
-    minRating: 0,'
+    minPrice: 0,'
+    maxPrice: 10000,''
+    minRating: 0,'''
     sort: 'relevance'
 });
 export default {}

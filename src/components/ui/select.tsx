@@ -5,12 +5,12 @@ interface SelectProps extends React.PropsWithChildren<{}> {}
   onChange?: e: React.ChangeEvent<HTMLSelectElement> void;
   disabled?: boolean}
 
-export function Select(function Select(function Select({}
+export function Select(function Select(function Select(function Select({}
   children,
   className = '',
   value,
   onChange,
-  disabled = false}: SelectProps) {): any {}
+  disabled = false}: SelectProps) {): any {): any {}
   return()    <select;
       className = {`${baseClasses} ${className}`}
       value={value}

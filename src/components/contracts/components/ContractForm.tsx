@@ -7,7 +7,7 @@ interface ContractFormProps {}
   onContractGenerated: (contractContent: string) => void;
   deployOptions?: DeploymentOptions;
   onDeployOptionsChange?: (options: DeploymentOptions) => void}
-export function ContractForm(function ContractForm({}
+export function ContractForm(function ContractForm(function ContractForm({}
   talent,
   clientName,
   initialValues,
@@ -15,7 +15,7 @@ export function ContractForm(function ContractForm({}
   onContractGenerated,
   deployOptions,
   onDeployOptionsChange;
-}: ContractFormProps) {): any {): any {}
+}: ContractFormProps) {): any {): any {): any {}
   // const [isGenerating, setIsGenerating] = useState(false); // Removed;
   const { toast } = useToast();
   // Update form when initialValues change;
@@ -31,12 +31,12 @@ export function ContractForm(function ContractForm({}
       return () => subscription.unsubscribe()}
   }, [form, onFormValuesChange]);
     form.setValue("manualMilestones", transformedAIMilestones);
-    // If payment terms isn't already set to milestone, update it""
+    // If payment terms isn't already set to milestone, update it"""
     if (form.getValues("paymentTerms") !== "milestone") {}
-""
+"""
       form.setValue("paymentTerms", "milestone")}
     toast({}
-""
+"""
       title: "Milestones Generated",
       description: `${milestones.length} milestones have been suggested and added to the form. Please review and adjust payment amounts.`})};
   // const onSubmit: any = async(values: ContractFormValues) => { // Removed onSubmit;
@@ -45,12 +45,12 @@ export function ContractForm(function ContractForm({}
   //   //   
   //   //   onContractGenerated(contract);
   //   // } catch (error) {}
-""
+"""
   //   //   console.error("Error generating contract:", error);
   //   //   toast({}
-""
-  //   //     title: "Contract Generation Failed",""
-  //   //     description: error instanceof Error ? error.message : "Something went wrong. Please try again.",""
+"""
+  //   //     title: "Contract Generation Failed","""
+  //   //     description: error instanceof Error ? error.message : "Something went wrong. Please try again.","""
   //   //     variant: "destructive",
   //   //   });
   //   // } finally {}
@@ -59,14 +59,14 @@ export function ContractForm(function ContractForm({}
   // };
   return()
     <>
-      <DialogHeader>""
+      <DialogHeader>"""
         <DialogTitle className="text-xl">Contract Builder</DialogTitle>
         <DialogDescription>
           Create a professional contract for your project with {talent.full_name}
         </DialogDescription>
       </DialogHeader>
       <Form {...form}>
-        {/* Removed form.handleSubmit(onSubmit) from here, form submission will be handled by parent */}""
+        {/* Removed form.handleSubmit(onSubmit) from here, form submission will be handled by parent */}"""
         <form className="space-y-6">
           <ProjectDetailsFields form={form} 
            />
@@ -77,26 +77,26 @@ export function ContractForm(function ContractForm({}
           <AdditionalClausesFields form={form}
            />
           {/* Removed internal submit button */}
-          {/* <Button""
-            type="submit" ""
-            className="w-full bg-zion-purple hover:bg-zion-purple-dark""
+          {/* <Button"""
+            type="submit" """
+            className="w-full bg-zion-purple hover:bg-zion-purple-dark"""
             // disabled={isGenerating} // Removed;
           >
             {isGenerating ? ( // Removed;
-              <>""
+              <>"""
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Generating Contract...
               </>
-            ) : (""
-              "Generate Contract""
+            ) : ("""
+              "Generate Contract"""
             )}
           </Button> */}
         </form>
       </Form>
-      ""
+      """
       <DialogFooter className="gap-2 flex-wrap mt-4">
-        <Button ""
-          variant="outline""
+        <Button """
+          variant="outline"""
           onClick={() => form.reset()}
           // disabled={isGenerating} // Removed;
         >

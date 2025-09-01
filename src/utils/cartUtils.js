@@ -16,8 +16,10 @@ const SHIPPING_COST = 9.99;
  */
 export const validateCartItem = item => {}
 '
-  if (!item || typeof item !== 'object') return false;
-'
+''
+'''
+  if (!item || typeof item !== 'object') return false;''
+'''
   const requiredFields = ['id',name',price',quantity'];
   return requiredFields.every()
     field =>
@@ -35,6 +37,8 @@ export const validateCartItem = item => {}
 export const addToCart = (cart, newItem) => {}
   if (!validateCartItem(newItem)) {}
 '
+''
+'''
     // console.error('Invalid cart item:', newItem);
     return cart;
   }
@@ -176,6 +180,8 @@ export const formatPrice = (price, currency = 'USD') => {}
 '
   return new Intl.NumberFormat('en-US', {}
 '
+''
+'''
     style: 'currency',
     currency: currency}).format(price);
 };
@@ -208,7 +214,9 @@ export const exportCartData = cart => {}
     return JSON.stringify(cart, null, 2);
   } catch (error) {}
 '
-    // console.error('Error exporting cart data:', error);'
+''
+'''
+    // console.error('Error exporting cart data:', error);'''
     return '[]';
   }
 };
@@ -227,6 +235,8 @@ export const importCartData = cartData => {}
     return [];
   } catch (error) {}
 '
+''
+'''
     // console.error('Error importing cart data:', error);
     return [];
   }

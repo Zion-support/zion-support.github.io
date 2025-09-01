@@ -1,7 +1,7 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-
-// Async thunk for login'
-export const loginUser = createAsyncThunk(''
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';'
+''
+// Async thunk for login'''
+export const loginUser = createAsyncThunk(''''
   'auth/loginUser',
   async (credentials, { rejectWithValue }) => {}
     try {}
@@ -18,13 +18,15 @@ export const loginUser = createAsyncThunk(''
               token: 'mock-jwt-token'});
           } else {}
 '
+''
+'''
             reject(new Error('Invalid credentials'));
           }
-        }, 1000);
-      });
-'
-      // Store token in localStorage''
-      localStorage.setItem('token', response.token);'
+        }, 1000);'
+      });''
+'''
+      // Store token in localStorage''''
+      localStorage.setItem('token', response.token);'''
       localStorage.setItem('user', JSON.stringify(response.user));
 
       return response;
@@ -32,10 +34,10 @@ export const loginUser = createAsyncThunk(''
       return rejectWithValue(error.message);
     }
   }
-);
-
-// Async thunk for signup'
-export const signupUser = createAsyncThunk(''
+);'
+''
+// Async thunk for signup'''
+export const signupUser = createAsyncThunk(''''
   'auth/signupUser',
   async (userData, { rejectWithValue }) => {}
     try {}
@@ -52,13 +54,15 @@ export const signupUser = createAsyncThunk(''
               token: 'mock-jwt-token'});
           } else {}
 '
+''
+'''
             reject(new Error('Invalid user data'));
           }
-        }, 1000);
-      });
-'
-      // Store token in localStorage''
-      localStorage.setItem('token', response.token);'
+        }, 1000);'
+      });''
+'''
+      // Store token in localStorage''''
+      localStorage.setItem('token', response.token);'''
       localStorage.setItem('user', JSON.stringify(response.user));
 
       return response;
@@ -66,10 +70,10 @@ export const signupUser = createAsyncThunk(''
       return rejectWithValue(error.message);
     }
   }
-);
-
-// Async thunk for logout'
-export const logoutUser = createAsyncThunk(''
+);'
+''
+// Async thunk for logout'''
+export const logoutUser = createAsyncThunk(''''
   'auth/logoutUser',
   async (_, { rejectWithValue }) => {}
     try {}
@@ -87,15 +91,17 @@ export const logoutUser = createAsyncThunk(''
       return rejectWithValue(error.message);
     }
   }
-);
-
-// Async thunk for checking auth status'
-export const checkAuthStatus = createAsyncThunk(''
+);'
+''
+// Async thunk for checking auth status'''
+export const checkAuthStatus = createAsyncThunk(''''
   'auth/checkAuthStatus',
   async (_, { rejectWithValue }) => {}
     try {}
 '
-      const token = localStorage.getItem('token');'
+''
+'''
+      const token = localStorage.getItem('token');'''
       const user = localStorage.getItem('user');
 
       if(token && user) {}
@@ -104,6 +110,8 @@ export const checkAuthStatus = createAsyncThunk(''
           token: token};
       } else {}
 '
+''
+'''
         throw new Error('No auth data found');
       }
     } catch(error) {}
@@ -121,6 +129,8 @@ const initialState = {}
 
 const authSlice = createSlice({}
 '
+''
+'''
   name: 'auth',
   initialState,
   reducers: {}

@@ -19,14 +19,25 @@ export function AvatarImage({ src, alt = '', className = '' }) {}
 }'
 export function AvatarFallback({ children, className = '' }) {}
   return()`
-    <div``
+    <img``
+      src={src}```
+      alt={alt}````
+      className={`aspect-square h-full w-full ${className}`}
+    />'
+  );''
+}'''
+export function AvatarFallback({ children, className = '' }) {}
+`
+``
+  return()```
+    <div````
       className={`flex h-full w-full items-center justify-center rounded-full bg-zion-slate ${className}`}
     >
       {children}
-    </div>
-  );
-}'
-import React from 'react';'
+    </div>'
+  );''
+}'''
+import React from 'react';'''
 import { cn } from '@/lib/utils';
 const Avatar = React.forwardRef(({ className, ...props }, ref) => (
   <div;
@@ -47,9 +58,9 @@ const AvatarImage = React.forwardRef(''
       src={src}
       alt={alt}
       {...props}
-    />
-  )
-);'
+    />'
+  )''
+);'''
 AvatarImage.displayName = 'AvatarImage';
 const AvatarFallback = React.forwardRef(({ className, ...props }, ref) => (
   <div;

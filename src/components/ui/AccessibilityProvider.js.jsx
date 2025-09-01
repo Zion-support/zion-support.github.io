@@ -4,6 +4,8 @@ export const useAccessibility = () => {}
     const context = useContext(AccessibilityContext);
     if (!context) {}
 '
+''
+'''
         throw new Error('useAccessibility must be used within an AccessibilityProvider')}
     return context};
 export const AccessibilityProvider = ({ children }) => {}
@@ -13,48 +15,64 @@ export const AccessibilityProvider = ({ children }) => {}
     // Check for user preferences on mount;
     useEffect(() => {}
 '
-        // Check for reduced motion preference''
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)).matches;
-        setIsReducedMotion(prefersReducedMotion);'
-        // Check for high contrast preference''
-        const prefersHighContrast = window.matchMedia('(prefers-contrast: high)).matches;
-        setIsHighContrast(prefersHighContrast);'
-        // Check for large text preference''
-        const prefersLargeText = window.matchMedia('(prefers-reduced-motion: reduce)).matches;
-        setIsLargeText(prefersLargeText);'
-        // Listen for preference changes''
-        const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce));'
-        const contrastQuery = window.matchMedia('(prefers-contrast: high));
-        const handleContrastChange = (e) => setIsHighContrast(e.matches);'
-        motionQuery.addEventListener('change', handleMotionChange);'
+''
+'''
+        // Check for reduced motion preference''''
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)).matches;''
+        setIsReducedMotion(prefersReducedMotion);'''
+        // Check for high contrast preference''''
+        const prefersHighContrast = window.matchMedia('(prefers-contrast: high)).matches;''
+        setIsHighContrast(prefersHighContrast);'''
+        // Check for large text preference''''
+        const prefersLargeText = window.matchMedia('(prefers-reduced-motion: reduce)).matches;''
+        setIsLargeText(prefersLargeText);'''
+        // Listen for preference changes''''
+        const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce));'''
+        const contrastQuery = window.matchMedia('(prefers-contrast: high));''
+        const handleContrastChange = (e) => setIsHighContrast(e.matches);'''
+        motionQuery.addEventListener('change', handleMotionChange);'''
         contrastQuery.addEventListener('change', handleContrastChange);
         return () => {}
 '
-            motionQuery.removeEventListener('change', handleMotionChange);'
+''
+'''
+            motionQuery.removeEventListener('change', handleMotionChange);'''
             contrastQuery.removeEventListener('change', handleContrastChange)}}, []);
     // Apply accessibility classes to body;
     useEffect(() => {}
         const body = document.body;
         if (isHighContrast) {}
 '
+''
+'''
             body.classList.add('high-contrast')}
         else {}
 '
+''
+'''
             body.classList.remove('high-contrast')}
         if (isReducedMotion) {}
 '
+''
+'''
             body.classList.add('reduced-motion')}
         else {}
 '
+''
+'''
             body.classList.remove('reduced-motion')}
         if (isLargeText) {}
 '
+''
+'''
             body.classList.add('large-text')}
         else {}
 '
-            body.classList.remove('large-text')}
-    }, [isHighContrast, isReducedMotion, isLargeText]);'
-    // Focus trap functionality''
+''
+'''
+            body.classList.remove('large-text')}''
+    }, [isHighContrast, isReducedMotion, isLargeText]);'''
+    // Focus trap functionality''''
     const focusableElements = element.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]));
         if (focusableElements.length === 0)
             return;
@@ -72,18 +90,20 @@ export const AccessibilityProvider = ({ children }) => {}
                     if (document.activeElement === lastElement) {}
                         e.preventDefault();
                         firstElement.focus()}
-                }
-            }
-        };'
+                }'
+            }''
+        };'''
         element.addEventListener('keydown', handleKeyDown);
         firstElement.focus();
         return () => {}
 '
-            element.removeEventListener('keydown', handleKeyDown)}};'
-    // Screen reader announcements''
-    const announcement = document.createElement('div');'
-        announcement.setAttribute('aria-live',polite');'
-        announcement.setAttribute('aria-atomic',true');'
+''
+'''
+            element.removeEventListener('keydown', handleKeyDown)}};'''
+    // Screen reader announcements''''
+    const announcement = document.createElement('div');'''
+        announcement.setAttribute('aria-live',polite');'''
+        announcement.setAttribute('aria-atomic',true');'''
         announcement.className = 'sr-only';
         announcement.textContent = message;
         document.body.appendChild(announcement);
@@ -127,10 +147,10 @@ export const AccessibilityProvider = ({ children }) => {}
     </AccessibilityContext.Provider>)};
 // Accessibility toolbar component;
 export const AccessibilityToolbar = () => {}
-""
-    const { isHighContrast, isReducedMotion, isLargeText, toggleHighContrast, toggleReducedMotion, toggleLargeText} = useAccessibility();"""
-    return (<div className="fixed bottom-4 left-4 z-50 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-cyan/20 rounded-2xl p-4 shadow-2xl shadow-zion-cyan/20">"""
-      <div className="space-y-3">"""
+"""
+    const { isHighContrast, isReducedMotion, isLargeText, toggleHighContrast, toggleReducedMotion, toggleLargeText} = useAccessibility();""""
+    return (<div className="fixed bottom-4 left-4 z-50 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-cyan/20 rounded-2xl p-4 shadow-2xl shadow-zion-cyan/20">""""
+      <div className="space-y-3">""""
         <h3 className="text-white text-sm font-semibold mb-3">Accessibility</h3>`
         `'`
         <button onClick={toggleHighContrast} className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${isHighContrast''`
@@ -149,8 +169,8 @@ export const AccessibilityToolbar = () => {}
             ? 'bg-zion-cyan text-zion-blue-dark''`'`
             : 'bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-light/30'}`} aria-label={`${isLargeText ? 'Disable' : 'Enable'} large text`}>
           Large Text;
-        </button>""
-"""
+        </button>"""
+""""
         <div className="text-xs text-zion-slate-light text-center pt-2 border-t border-zion-cyan/20">
           <p>Keyboard shortcuts:</p>
           <p>Ctrl/Cmd + K: High Contrast</p>
@@ -161,8 +181,8 @@ export const AccessibilityToolbar = () => {}
     </div>)};
 // Skip to main content link;
 export const SkipToMainContent = () => {}
-""
 """
+""""
     return (<a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zion-blue-dark">
       Skip to main content;
     </a>)};'"`

@@ -1,14 +1,18 @@
-'use client';
-'use client';'
+'use client';''
+'use client';'''
 import * as React from 'react';
 
 const ThemeContext = React.createContext({}
 '
+''
+'''
   theme: 'dark',
   setTheme: () => null});
 
 export const ThemeProvider = ({ children }) => {}
 '
+''
+'''
   const [theme, setTheme] = React.useState('dark');
 
   React.useEffect(() => {}
@@ -36,6 +40,8 @@ export const ThemeProvider = ({ children }) => {}
   const context = React.useContext (ThemeContext) ;
   if (context === null) {}
 '
+''
+'''
     throw new Error('useTheme must be used within a ThemeProvider');
   }
   return context;

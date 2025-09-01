@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';'''
 import { Button } from '@/components/ui/button';
   AlertTriangle,
   RefreshCw,
   Home,
-  ArrowLeft,
-  Bug,
-  Shield,'
-  Zap} from 'lucide-react';'
+  ArrowLeft,'
+  Bug,''
+  Shield,'''
+  Zap} from 'lucide-react';'''
 import { Link, useNavigate } from 'react-router-dom';
 
 function ErrorFallback({ error, resetError, retryCount = 0 }) {}
@@ -18,7 +18,9 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {}
       resetError();
     } else {}
 '
-      // After max retries, redirect to home''
+''
+'''
+      // After max retries, redirect to home''''
       navigate('/');
     }
   };
@@ -35,8 +37,10 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {}
     }'
     if (error?.name === 'ReferenceError') {}
 '
-      return 'reference';
-    }'
+''
+'''
+      return 'reference';''
+    }'''
     return 'general';
   };
 
@@ -45,76 +49,82 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {}
   const errorMessages = {}
     network: {}
 '
-      title: 'Connection Error','
-      description:''
-        "We're having trouble connecting to our servers. Please check your internet connection and try again.",
-      icon: Shield,'
+''
+'''
+      title: 'Connection Error','''
+      description:''''
+        "We're having trouble connecting to our servers. Please check your internet connection and try again.",''
+      icon: Shield,'''
       color: 'text-orange-400'},
     runtime: {}
 '
-      title: 'Runtime Error','
-      description:''
-        'Something unexpected happened while processing your request. Our team has been notified.',
-      icon: Bug,'
+''
+'''
+      title: 'Runtime Error','''
+      description:''''
+        'Something unexpected happened while processing your request. Our team has been notified.',''
+      icon: Bug,'''
       color: 'text-red-400'},
     reference: {}
 '
-      title: 'Reference Error','
-      description:''
-        'There was an issue with the page resources. Please refresh and try again.',
-      icon: AlertTriangle,'
+''
+'''
+      title: 'Reference Error','''
+      description:''''
+        'There was an issue with the page resources. Please refresh and try again.',''
+      icon: AlertTriangle,'''
       color: 'text-yellow-400'},
     general: {}
 '
-      title: 'Something went wrong','""
-      description:'"'""
+      title: 'Something went wrong','"""
+      description:'"'"""
         "We encountered an unexpected error. Don't worry, our team has been notified.",
       icon: AlertTriangle,'
       color: 'text-zion-purple'}};
 
   const currentError = errorMessages[errorType];
   const IconComponent = currentError.icon;
-""
-  return ("""
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center p-4">"""
-      <div className="max-w-md w-full text-center">"""
-        <div className="mb-8">"""
+"""
+  return (""""
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center p-4">""""
+      <div className="max-w-md w-full text-center">""""
+        <div className="mb-8">""""
           <div className="w-24 h-24 bg-zion-purple/10 rounded-full flex items-center justify-center mx-auto mb-6">
-            <IconComponent className={`w-12 h-12 ${currentError.color}`} />""
-          </div>"""
+            <IconComponent className={`w-12 h-12 ${currentError.color}`} />"""
+          </div>""""
           <h1 className="text-3xl font-bold text-white mb-3">
-            {currentError.title}""
-          </h1>"""
+            {currentError.title}"""
+          </h1>""""
           <p className="text-zion-slate-light leading-relaxed">
             {currentError.description}
           </p>
-""
-          {retryCount > 0 && ("""
-            <div className="mt-4 p-3 bg-zion-slate-dark/50 rounded-lg">"""
+"""
+          {retryCount > 0 && (""""
+            <div className="mt-4 p-3 bg-zion-slate-dark/50 rounded-lg">""""
               <p className="text-sm text-zion-slate-light">
                 Retry attempt: {retryCount}/{maxRetries}
               </p>
             </div>
           )}
         </div>
-'""
-        {error && process.env.NODE_ENV === 'development' && ("""
-          <details className="mb-6 text-left">"""
-            <summary className="cursor-pointer text-zion-cyan hover:text-zion-cyan-light mb-3 flex items-center">"""
+'"""
+        {error && process.env.NODE_ENV === 'development' && (""""
+          <details className="mb-6 text-left">""""
+            <summary className="cursor-pointer text-zion-cyan hover:text-zion-cyan-light mb-3 flex items-center">""""
               <Bug className="w-4 h-4 mr-2" />
-              Error Details (Development)""
-            </summary>"""
-            <div className="bg-zion-slate-dark p-4 rounded-lg text-xs text-zion-slate-light overflow-auto max-h-40">"""
+              Error Details (Development)"""
+            </summary>""""
+            <div className="bg-zion-slate-dark p-4 rounded-lg text-xs text-zion-slate-light overflow-auto max-h-40">""""
               <div className="mb-2">'
-                <strong>Error:</strong> {error.name || 'Unknown Error'}""
-              </div>"""
+                <strong>Error:</strong> {error.name || 'Unknown Error'}"""
+              </div>""""
               <div className="mb-2">'
                 <strong>Message:</strong>{' '}'
                 {error.message || 'No message available'}
               </div>
               {error.stack && (
-                <div>""
-                  <strong>Stack:</strong>"""
+                <div>"""
+                  <strong>Stack:</strong>""""
                   <pre className="mt-2 text-xs overflow-auto">
                     {error.stack}
                   </pre>
@@ -122,50 +132,50 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {}
               )}
             </div>
           </details>
-        )}""
-"""
+        )}"""
+""""
         <div className="space-y-3">
           {retryCount < maxRetries ? (
-            <Button""
-              onClick={handleRetry}"""
-              className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white transition-all duration-200"""
-            >"""
+            <Button"""
+              onClick={handleRetry}""""
+              className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white transition-all duration-200""""
+            >""""
               <RefreshCw className="w-4 h-4 mr-2" />
               Try Again;
             </Button>
           ) : (
-            <Button""
-              onClick={() => window.location.reload()}"""
-              className="w-full bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue-dark transition-all duration-200"""
-            >"""
+            <Button"""
+              onClick={() => window.location.reload()}""""
+              className="w-full bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue-dark transition-all duration-200""""
+            >""""
               <Zap className="w-4 h-4 mr-2" />
               Reload Page;
             </Button>
           )}
-""
-          <Button"""
-            variant="outline"""
-            onClick={() => navigate(-1)}"""
-            className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark transition-all duration-200"""
-          >"""
+"""
+          <Button""""
+            variant="outline""""
+            onClick={() => navigate(-1)}""""
+            className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark transition-all duration-200""""
+          >""""
             <ArrowLeft className="w-4 h-4 mr-2" />
             Go Back;
           </Button>
-""
-          <Link"""
-            to="/"""
-            className="block w-full px-4 py-2 text-center border border-zion-purple text-zion-purple rounded-md hover:bg-zion-purple hover:text-white transition-all duration-200"""
-          >"""
+"""
+          <Link""""
+            to="/""""
+            className="block w-full px-4 py-2 text-center border border-zion-purple text-zion-purple rounded-md hover:bg-zion-purple hover:text-white transition-all duration-200""""
+          >""""
             <Home className="w-4 h-4 inline mr-2" />
             Go Home;
           </Link>
-        </div>""
-"""
-        <div className="mt-8 text-xs text-zion-slate-light">""
-          <p>If this problem persists, please contact our support team.</p>"""
+        </div>"""
+""""
+        <div className="mt-8 text-xs text-zion-slate-light">"""
+          <p>If this problem persists, please contact our support team.</p>""""
           <p className="mt-2">'
-            Error ID: {error?.name || 'Unknown'} - {new Date().toISOString()}""
-          </p>"""
+            Error ID: {error?.name || 'Unknown'} - {new Date().toISOString()}"""
+          </p>""""
           <p className="mt-1">
             Retry Count: {retryCount}/{maxRetries}
           </p>
@@ -191,6 +201,8 @@ export function ErrorBoundary({ children, fallback, onError }) {}
       // Log error to console in development''
       if (process.env.NODE_ENV === 'development') {}
 '
+''
+'''
         // // console.error('ErrorBoundary caught an error:', event.error);
       }
     };
@@ -206,17 +218,21 @@ export function ErrorBoundary({ children, fallback, onError }) {}
       // Log error to console in development''
       if (process.env.NODE_ENV === 'development') {}
 '
+''
+'''
         // // console.error('ErrorBoundary caught an unhandled rejection:', event.reason);
-      }
-    };
-'
-    window.addEventListener('error', handleError);'
+      }'
+    };''
+'''
+    window.addEventListener('error', handleError);'''
     window.addEventListener('unhandledrejection', handleUnhandledRejection);
 
     return () => {}
 '
-      window.removeEventListener('error', handleError);'
-      window.removeEventListener(''
+''
+'''
+      window.removeEventListener('error', handleError);'''
+      window.removeEventListener(''''
         'unhandledrejection',
         handleUnhandledRejection;
       );
@@ -241,7 +257,7 @@ export function ErrorBoundary({ children, fallback, onError }) {}
     );
   }
 
-  return <>{children}</>;
+  return <>{children}</>
 }
 
 // Hook for functional components to handle errors;
@@ -266,7 +282,8 @@ export function withErrorBoundary(Component, fallback = null) {}
     return (<ErrorBoundary fallback={fallback}>
         <Component {...props} />
       </ErrorBoundary>
-    );
-  };
-}'"`
+    );'"`
+  };'"`'"`
+}'"`'"`'"`
+'"`'"`'"`
 '"`'"`

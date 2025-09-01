@@ -1,6 +1,6 @@
-'
-import { Sun, Moon, Monitor type Theme = 'dark' | 'light' | 'system'; type Theme = 'dark' | 'light' | 'system'; interface ThemeToggleProps { // Add your props here className?: string }'
-''
+'''
+import { Sun, Moon, Monitor type Theme = 'dark' | 'light' | 'system'; type Theme = 'dark' | 'light' | 'system'; interface ThemeToggleProps { // Add your props here className?: string }'''
+''''
 export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {;'  const [theme, setTheme] = useState<Theme>('system');
   const [mounted, setMounted] = useState(false);
 
@@ -16,8 +16,10 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
   useEffect ( () => {}
     if (!mounted) return;
 '
-      root.classList.toggle('dark', theme === 'dark')}'
-    ''
+    if (!mounted) return;''
+'''
+      root.classList.toggle('dark', theme === 'dark')}'''
+    ''''
     localStorage.setItem('theme', theme)}, [theme, mounted]);
   if(!mounted) {}
     return ()
@@ -29,17 +31,17 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     { value: 'dark', label: 'Dark', icon: Moon },'
     { value: 'system', label: 'System', icon: Monitor }
   ];
-""
-  return ("""
+"""
+  return (""""
     <div className="relative">
-      <button""
-        onClick={() => setIsOpen(!isOpen)}"""
-        className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"""
-        aria-label="Select theme"""
-        aria-expanded={isOpen}"""
-        aria-haspopup="true""
-      >'""
-        {themes.find(t => t.value === theme)?.icon({ className: 'w-4 h-4' })}"""
+      <button"""
+        onClick={() => setIsOpen(!isOpen)}""""
+        className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors""""
+        aria-label="Select theme""""
+        aria-expanded={isOpen}""""
+        aria-haspopup="true"""
+      >'"""
+        {themes.find(t => t.value === theme)?.icon({ className: 'w-4 h-4' })}""""
         <span className="text-sm font-medium">{themes.find(t => t.value === theme)?.label}</span>
       </button>
 
@@ -47,10 +49,10 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
         {isOpen && (<motion.div;
             initial={{ opacity: 0, y: -10, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -10, scale: 0.95 }}""
-            transition={{ duration: 0.15 }}"""
-            className="absolute top-full right-0 mt-2 w-32 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-50""
-          >""
+            exit={{ opacity: 0, y: -10, scale: 0.95 }}"""
+            transition={{ duration: 0.15 }}""""
+            className="absolute top-full right-0 mt-2 w-32 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-50"""
+          >"""
             {themes.map ( (themeOption) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={themeOption.value}
                 onClick={ () => {}
                   setTheme (themeOption.value) ;
@@ -59,8 +61,8 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
                   theme === themeOption.value''
                     ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400'''`
                     : 'text-gray-700 dark:text-gray-300'``
-                }`}""
-              >"""
+                }`}"""
+              >""""
                 <themeOption.icon className="w-4 h-4" />
                 <span>{themeOption.label}</span>
               </button>) ) }
@@ -80,15 +82,17 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
       root.style.setProperty('--zion-text-primary',#f8fafc');'
       root.style.setProperty('--zion-text-secondary',#cbd5e1')} else {}
 '
-      root.style.setProperty('--zion-bg-primary',#ffffff');'
-      root.style.setProperty('--zion-bg-secondary',#f1f5f9');'
-      root.style.setProperty('--zion-text-primary',#0f172a');'
-      root.style.setProperty('--zion-text-secondary',#475569')}
-'
-    localStorage.setItem('zion-theme', theme)}, [theme, mounted])};'
-  const themes: { value: Theme; label: string; icon: React.ComponentType<any> }[] = [''
-    { value: 'light', label: 'Light theme', icon: Sun },'
-    { value: 'dark', label: 'Dark theme', icon: Moon },'
+''
+'''
+      root.style.setProperty('--zion-bg-primary',#ffffff');'''
+      root.style.setProperty('--zion-bg-secondary',#f1f5f9');'''
+      root.style.setProperty('--zion-text-primary',#0f172a');'''
+      root.style.setProperty('--zion-text-secondary',#475569')}''
+'''
+    localStorage.setItem('zion-theme', theme)}, [theme, mounted])};'''
+  const themes: { value: Theme; label: string; icon: React.ComponentType<any> }[] = [''''
+    { value: 'light', label: 'Light theme', icon: Sun },'''
+    { value: 'dark', label: 'Dark theme', icon: Moon },'''
     { value: 'system', label: 'System theme', icon: Monitor }
   ];
 
@@ -99,9 +103,9 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     )}
 `
   return()``
-    <div className={`relative ${className}`}>""
-      <motion.div"""
-        className="flex items-center space-x-1 bg-white/10 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-1""
+    <div className={`relative ${className}`}>"""
+      <motion.div""""
+        className="flex items-center space-x-1 bg-white/10 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-1"""
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3 }}
@@ -113,19 +117,21 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
               onClick={() => handleThemeChange(themeOption.value)}``
               className={`relative p-2 rounded-lg transition-all duration-200 ${}
 '
-                isActive''
-                  ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'''`
-                  : 'text-gray-300 hover:text-white hover:bg-white/10'``
+''
+'''`
+                isActive'''`'`
+                  ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'''`'`'`
+                  : 'text-gray-300 hover:text-white hover:bg-white/10'````
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               aria - label={themeOption.label}
-              title={themeOption.label}""
-            >"""
-              <Icon className="w-4 h-4"  />              {isActive && (""
-                <motion.div"""
-                  className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500"""
-                  layoutId="activeTheme"""
+              title={themeOption.label}"""
+            >""""
+              <Icon className="w-4 h-4"  />              {isActive && ("""
+                <motion.div""""
+                  className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500""""
+                  layoutId="activeTheme""""
                   transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                 />) }
             </motion.button>) }) }

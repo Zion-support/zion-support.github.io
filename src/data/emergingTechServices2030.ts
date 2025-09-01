@@ -66,8 +66,10 @@ export interface EmergingTechService2030 {}
     innovationLevel: 'Revolutionary',
     contactInfo: {}
 '
-      phone: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
+''
+'''
+      phone: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
       website: 'https://ziontechgroup.com'},
     technicalSpecs: {}
 '
@@ -129,8 +131,10 @@ export interface EmergingTechService2030 {}
     innovationLevel: 'Revolutionary',
     contactInfo: {}
 '
-      phone: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
+''
+'''
+      phone: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
       website: 'https://ziontechgroup.com'},
     technicalSpecs: {}
 '
@@ -192,8 +196,10 @@ export interface EmergingTechService2030 {}
     innovationLevel: 'Revolutionary',
     contactInfo: {}
 '
-      phone: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
+''
+'''
+      phone: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
       website: 'https://ziontechgroup.com'},
     technicalSpecs: {}
 '
@@ -255,8 +261,10 @@ export interface EmergingTechService2030 {}
     innovationLevel: 'Revolutionary',
     contactInfo: {}
 '
-      phone: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
+''
+'''
+      phone: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
       website: 'https://ziontechgroup.com'},
     technicalSpecs: {}
 '
@@ -318,8 +326,10 @@ export interface EmergingTechService2030 {}
     innovationLevel: 'Revolutionary',
     contactInfo: {}
 '
-      phone: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup.com','
+''
+'''
+      phone: '+1 302 464 0950','''
+      email: 'kleber@ziontechgroup.com','''
       website: 'https://ziontechgroup.com'},
     technicalSpecs: {}
 '

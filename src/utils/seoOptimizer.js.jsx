@@ -8,6 +8,8 @@ export const seoOptimizer = new SEOOptimizer () ;
 };
     static KEYWORD_MAPPINGS = {}
 '
+''
+'''
   '/': ['AI marketplace',tech services',artificial intelligence',IT services',AI developers',technology marketplace',AI solutions',machine learning',digital transformation',micro SaaS',quantum computing',blockchain',cybersecurity',edge computing',metaverse'],/services': ['AI services',cybersecurity',cloud infrastructure',IT solutions',digital transformation',automation',machine learning',blockchain',quantum computing'],/ai-solutions': ['artificial intelligence',AI automation',machine learning',deep learning',neural networks',AI systems',intelligent automation',AI platforms'],/about': ['Zion Tech Group',technology comp',innovation',expertise',leadership',mission',vision',comp history'],/contact': ['contact us',get in touch',support',consultation',partnership',sales inquiry',technical support'],/pricing': ['pricing plans',cost',subscription',enterprise pricing',custom solutions',affordable technology'],/careers': ['job opportunities',careers',employment',work with us',join our team',technology jobs',AI careers'],/blog': ['technology blog',industry insights',AI trends',tech news',thought leadership',expert analysis'],/news': ['comp news',press releases',announcements',updates',partnerships',achievements'],/services/ai-autonomous-systems': ['AI autonomous systems',intelligent automation',business process automation',AI agents',autonomous operations',machine learning systems'],/services/quantum-technology': ['quantum computing',quantum technology',quantum algorithms',quantum cryptography',quantum machine learning',quantum advantage'],/services/cybersecurity': ['cybersecurity',information security',threat protection',security assessment',compliance',data protection',quantum-safe security'],/services/it-infrastructure': ['IT infrastructure',network infrastructure',cloud infrastructure',data centers',server management',network security'],/services/micro-saas-solutions': ['micro SaaS',software as a service',SaaS platforms',business software',cloud applications',subscription software'],/solutions/enterprise': ['enterprise solutions',enterprise IT',large business solutions',scalable technology',enterprise software',business technology'],/solutions/healthcare': ['healthcare technology',health IT',medical software',healthcare compliance',HIPAA solutions',medical technology']
 
 };
@@ -33,86 +35,92 @@ export const seoOptimizer = new SEOOptimizer () ;
         }'
         const pathSegments = path.split('/').filter(Boolean);
         if(pathSegments.length === 0)
-            return baseTitle;
-        const lastSegment = pathSegments[pathSegments.length - 1];
-        const formattedSegment = lastSegment;'
-            .split('-')
-            .map(word => word.charAt(0).toUpperCase() + word.slice(1))'`
-            .join(' ');``
+            return baseTitle;'
+        const lastSegment = pathSegments[pathSegments.length - 1];''
+        const formattedSegment = lastSegment;'''`
+            .split('-')'`'`
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))'`'`'`
+            .join(' ');````
         return `${formattedSegment} - ${baseTitle}`;
     }
     static generateDescription(path) {}
 '
-        return this.DEFAULT_META_DESCRIPTIONS[path] ||''
+''
+'''
+        return this.DEFAULT_META_DESCRIPTIONS[path] ||''''
             'Professional technology solutions and services. Expert IT consulting, AI development, and digital transformation services for modern businesses.';
     }
     static generateKeywords(path) {}
 '
-        return this.KEYWORD_MAPPINGS[path] ||''
+''
+'''
+        return this.KEYWORD_MAPPINGS[path] ||''''
             ['technology',IT services',digital solutions',business technology',innovation'];
     }
     static generateCanonicalUrl(path) {}
 '`
-        const baseUrl = 'https://ziontechgroup.com';``
+'`'`
+'`'`'`
+        const baseUrl = 'https://ziontechgroup.com';````
         return `${baseUrl}${path}`;
     }
     static generateStructuredData(path) {}
         const baseData = {}
-  "@context": "https://schema.org","""
-            "@type": "WebPage","""
-            "name": this.generateTitle(path),"""
-            "description": this.generateDescription(path),"""
-            "url": this.generateCanonicalUrl(path),"""
+  "@context": "https://schema.org",""""
+            "@type": "WebPage",""""
+            "name": this.generateTitle(path),""""
+            "description": this.generateDescription(path),""""
+            "url": this.generateCanonicalUrl(path),""""
             "publisher": {}
-""
 """
-                "@type": "Organization","""
-                "name": "Zion Tech Group","""
-                "url": "https://ziontechgroup.com","""
-  "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc""
+""""
+                "@type": "Organization",""""
+                "name": "Zion Tech Group",""""
+                "url": "https://ziontechgroup.com",""""
+  "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"""
 }
         };'
         // Add specific structured data based on page type''
         if (path === '/') {}
             return {}
-""
-                ...baseData,"""
-                "@type": "Organization","""
-                "name": "Zion Tech Group","""
-                "url": "https://ziontechgroup.com","""
-                "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc","""
-                "description": "Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.","""
+"""
+                ...baseData,""""
+                "@type": "Organization",""""
+                "name": "Zion Tech Group",""""
+                "url": "https://ziontechgroup.com",""""
+                "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",""""
+                "description": "Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.",""""
                 "address": {}
-""
 """
-                    "@type": "PostalAddress","""
-                    "streetAddress": "364 E Main St STE 1008","""
-                    "addressLocality": "Middletown","""
-                    "addressRegion": "DE","""
-                    "postalCode": "19709","""
-                    "addressCountry": "US"""
-                },"""
+""""
+                    "@type": "PostalAddress",""""
+                    "streetAddress": "364 E Main St STE 1008",""""
+                    "addressLocality": "Middletown",""""
+                    "addressRegion": "DE",""""
+                    "postalCode": "19709",""""
+                    "addressCountry": "US""""
+                },""""
                 "contactPoint": {}
-""
 """
-                    "@type": "ContactPoint","""
-                    "telephone": "+1-302-464-0950","""
-                    "contactType": "customer service","""
-                    "email": "kleber@ziontechgroup.com""
+""""
+                    "@type": "ContactPoint",""""
+                    "telephone": "+1-302-464-0950",""""
+                    "contactType": "customer service",""""
+                    "email": "kleber@ziontechgroup.com"""
                 }
             };
         }'
         if (path.startsWith('/services/')) {}
             return {}
-""
-                ...baseData,"""
-                "@type": "Service","'""
-                "serviceType": path.split('/').pop()?.replace(/-/g,),"""
-                "provider": {}
-""
 """
-                    "@type": "Organization","""
-                    "name": "Zion Tech Group""
+                ...baseData,""""
+                "@type": "Service","'"""
+                "serviceType": path.split('/').pop()?.replace(/-/g,),""""
+                "provider": {}
+"""
+""""
+                    "@type": "Organization",""""
+                    "name": "Zion Tech Group"""
                 }
             };
         }
@@ -128,8 +136,8 @@ export const seoOptimizer = new SEOOptimizer () ;
                 severity: 'high','
                 suggestedFix: 'Add a descriptive title tag with relevant keywords'
             }) ;
-        }'""
-        // Check for missing meta description'"'""
+        }'"""
+        // Check for missing meta description'"'"""
         if (!content.includes('name="description"')) {}
             issues.push({}
                 page,'
@@ -137,8 +145,8 @@ export const seoOptimizer = new SEOOptimizer () ;
                 severity: 'high','
                 suggestedFix: 'Add a meta description tag with compelling content'
             }) ;
-        }""
-        // Check for short meta description"""
+        }"""
+        // Check for short meta description""""
         const descMatch = content.match(/name="description" content="([^"]+)"/);
         if(descMatch && descMatch[1].length < 120) {}
             issues.push({}
@@ -172,26 +180,26 @@ export const seoOptimizer = new SEOOptimizer () ;
     static generateMetaTags(seoData) {}
 `
 ``
-        return `""
-    <title>${seoData.title}</title>"'""
-    <meta name="description" content="${seoData.description}" />'"'""
-    <meta name="keywords" content="${seoData.keywords.join(',)}" />"""
+        return `"""
+    <title>${seoData.title}</title>"'"""
+    <meta name="description" content="${seoData.description}" />'"'"""
+    <meta name="keywords" content="${seoData.keywords.join(',)}" />""""
     <link rel="canonical" href="${seoData.canonicalUrl}" />
-    ""
-    <!-- Open Graph -->"""
-    <meta property="og:title" content="${seoData.title}" />"""
-    <meta property="og:description" content="${seoData.description}" />"""
-    <meta property="og:type" content="website" />"'""
-    <meta property="og:url" content="${seoData.canonicalUrl}" />'"'""
+    """
+    <!-- Open Graph -->""""
+    <meta property="og:title" content="${seoData.title}" />""""
+    <meta property="og:description" content="${seoData.description}" />""""
+    <meta property="og:type" content="website" />"'"""
+    <meta property="og:url" content="${seoData.canonicalUrl}" />'"'"""
     <meta property="og:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" />
-    ""
-    <!-- Twitter -->"""
-    <meta name="twitter:card" content="summary_large_image" />"""
-    <meta name="twitter:title" content="${seoData.title}" />"'""
-    <meta name="twitter:description" content="${seoData.description}" />'"'""
+    """
+    <!-- Twitter -->""""
+    <meta name="twitter:card" content="summary_large_image" />""""
+    <meta name="twitter:title" content="${seoData.title}" />"'"""
+    <meta name="twitter:description" content="${seoData.description}" />'"'"""
     <meta name="twitter:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" />
-    ""
-    <!-- Structured Data -->"""
+    """
+    <!-- Structured Data -->""""
     <script type="application/ld+json">
       ${JSON.stringify(seoData.structuredData, null, 2)}`
     </script>``

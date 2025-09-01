@@ -35,9 +35,13 @@ export function useAuth(...args: unknown[]): unknown {}
 :src/hooks/useAuth.tsx;
             isLoading: false})} catch (error) {}
 '
+''
+'''
           // console.error('Error parsing stored user:', error);
             isLoading: false})} catch (error) {}
 '
+''
+'''
           console.error('Error parsing stored user:', error);
           setAuthState({}
             user: null,
@@ -62,11 +66,11 @@ export function useAuth(...args: unknown[]): unknown {}
 
     setAuthState({}
       user: mockUser,
-      isAuthenticated: true,
-      isLoading: false});
-'
-    // Store user data in localStorage''
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));'
+      isAuthenticated: true,'
+      isLoading: false});''
+'''
+    // Store user data in localStorage''''
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));'''
     localStorage.setItem('authToken',mock-jwt-token');
 
 :src/hooks/useAuth.tsx;
@@ -85,11 +89,11 @@ export function useAuth(...args: unknown[]): unknown {}
 
     setAuthState({}
       user: mockUser,
-      isAuthenticated: true,
-      isLoading: false});
-'
-    // Store user data in localStorage''
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));'
+      isAuthenticated: true,'
+      isLoading: false});''
+'''
+    // Store user data in localStorage''''
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));'''
     localStorage.setItem('authToken',mock-jwt-token');
 
     return { success: true, user: mockUser }};

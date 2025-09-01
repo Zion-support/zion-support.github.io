@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';'
+import React, { useEffect, useState } from 'react';'''
 import { Button } from '@/components/ui/button';
 
     const [deferred, setDeferred] = useState (null) ;
@@ -22,5 +22,5 @@ import { Button } from '@/components/ui/button';
     return (<div className="fixed bottom - 4 right - 4 z -50">
       <Button onClick={onClick}>Install App</Button>
     </div>)};
-export default InstallPrompt;'""
-}}'"'""
+export default InstallPrompt;'"""
+}}'"'"""

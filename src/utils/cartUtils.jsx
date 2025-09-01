@@ -52,6 +52,8 @@ export const addToCart = (cart, newItem) => {}
                                    */
                                   if (!validateCartItem (newItem) ) {}
 '
+''
+'''
                                     console.error ('Invalid cart item:',
                                       newItem) ;
                                     return cart;
@@ -191,6 +193,8 @@ export const addToCart = (cart, newItem) => {}
 '
               return new Intl.NumberFormat ('en - US', {}
 '
+''
+'''
                 style: 'currency',
                 currency: currency}) .format (price) ;
             };
@@ -220,7 +224,9 @@ export const addToCart = (cart, newItem) => {}
             return JSON.stringify (cart, null, 2) ;
           } catch (error) {}
 '
-            console.error ('Error exporting cart data:', error) ;'
+''
+'''
+            console.error ('Error exporting cart data:', error) ;'''
             return '[]';
           }
         };
@@ -237,6 +243,8 @@ export const addToCart = (cart, newItem) => {}
           return [];
         } catch (error) {}
 '
+''
+'''
           console.error ('Error importing cart data:', error) ;
           return [];
         }

@@ -1,5 +1,5 @@
-import React from 'react';'
-import { useUIContext } from '@/context/UIContext';'
+import React from 'react';'''
+import { useUIContext } from '@/context/UIContext';'''
 import { Loader2 } from 'lucide-react';
 export const GlobalSpinner: any = () => {}
   const { state } = useUIContext();
@@ -10,6 +10,8 @@ export const GlobalSpinner: any = () => {}
     <div;
       style={{}
 '
+''
+'''
         position: 'fixed',
         top: 0,
         left: 0,
@@ -26,4 +28,4 @@ export const GlobalSpinner: any = () => {}
     </div>
   );
 };
-'""
+'"""

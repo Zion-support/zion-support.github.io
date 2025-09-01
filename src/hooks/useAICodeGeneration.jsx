@@ -50,6 +50,14 @@ import { useState, useCallback, useRef, useEffect } from 'react';
             // // // // // // // // console.error('Failed to generate code:', error);'            trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {}
 '
 ''
+'''
+                target: options.target,'''
+                quality: options.quality''''
+            // // // // // // // // console.error('Failed to generate code:', error);'            trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {}
+'
+''
+'''
+''''
                 error: error instanceof Error ? error.message : 'Unknown error';
             });
 
@@ -63,6 +71,8 @@ import { useState, useCallback, useRef, useEffect } from 'react';
             // console.error('Failed to generate code:', error);'            trackEvent('ai_code_generation', 'generation_failed', 'error', null, {}
 '
 ''
+'''
+''''
                 error: error instanceof Error ? error.message : 'Unknown error'
             })}
         finally {}
@@ -99,6 +109,14 @@ import { useState, useCallback, useRef, useEffect } from 'react';
             // // // // // // // // console.error('Failed to analyze code:', error);'            trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {}
 '
 ''
+'''
+                security: analysis.security,'''
+                performance: analysis.performance''''
+            // // // // // // // // console.error('Failed to analyze code:', error);'            trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {}
+'
+''
+'''
+''''
                 error: error instanceof Error ? error.message : 'Unknown error';
             });
 
@@ -112,6 +130,8 @@ import { useState, useCallback, useRef, useEffect } from 'react';
             // console.error('Failed to analyze code:', error);'            trackEvent('ai_code_analysis', 'analysis_failed', 'error', null, {}
 '
 ''
+'''
+''''
                 error: error instanceof Error ? error.message : 'Unknown error'
             })}
         finally {}
@@ -152,11 +172,20 @@ import { useState, useCallback, useRef, useEffect } from 'react';
             // // // // // // // // console.error('Failed to optimize code:', error);'            trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {}
 '
 ''
+'''
+                    break;'''
+                case 'accessibility':'''
+                    optimizedCode = optimizeForAccessibility(code);''''
+            // // // // // // // // console.error('Failed to optimize code:', error);'            trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {}
+'
+''
+'''
+''''
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
-            return code;
-
-                    break}'
+            return code;'
+''
+                    break}'''
             trackEvent('ai_code_generation',code_optimized', focus, optimizedCode.length);
             return optimizedCode}
         catch (error) {}
@@ -165,6 +194,8 @@ import { useState, useCallback, useRef, useEffect } from 'react';
             // console.error('Failed to optimize code:', error);'            trackEvent('ai_code_generation', 'optimization_failed', 'error', null, {}
 '
 ''
+'''
+''''
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
             return code}
@@ -198,8 +229,10 @@ import { useState, useCallback, useRef, useEffect } from 'react';
             // console.error('Failed to generate tests:', error);'            trackEvent('ai_code_generation', 'test_generation_failed', 'error', null, {}
 '
 ''
-                error: error instanceof Error ? error.message : 'Unknown error'
-            });'
+'''
+''''
+                error: error instanceof Error ? error.message : 'Unknown error'''
+            });'''
             return '// Failed to generate tests'}
     }, [trackEvent]);
     // Generate documentation for code;
@@ -231,8 +264,10 @@ import { useState, useCallback, useRef, useEffect } from 'react';
             // console.error('Failed to generate documentation:', error);'            trackEvent('ai_code_generation', 'doc_generation_failed', 'error', null, {}
 '
 ''
-                error: error instanceof Error ? error.message : 'Unknown error'
-            });'
+'''
+''''
+                error: error instanceof Error ? error.message : 'Unknown error'''
+            });'''
             return '// Failed to generate documentation'}
     }, [trackEvent]);
     // Clear generation history;
@@ -253,7 +288,9 @@ import { useState, useCallback, useRef, useEffect } from 'react';
         else if (format === 'md') {}
 '`
 '`'`
-            exportContent = `# Generated Code\n\n\`\`\`typescript\n${generatedCode}\n\`\`\`\n\n## Analysis\n\n${codeAnalysis ? JSON.stringify(codeAnalysis, null, 2) : 'No analysis available'}`;'
+'`'`'`
+'`'`'`'`
+            exportContent = `# Generated Code\n\n\`\`\`typescript\n${generatedCode}\n\`\`\`\n\n## Analysis\n\n${codeAnalysis ? JSON.stringify(codeAnalysis, null, 2) : 'No analysis available'}`;'''
             filename = 'generated-code.md'}
         else {}
             exportContent = generatedCode;'
@@ -262,17 +299,17 @@ import { useState, useCallback, useRef, useEffect } from 'react';
         const url = window.URL.createObjectURL(blob);'
         const a = document.createElement('a');
         a.href = url;
-        a.download = filename;
-        a.click();
-        window.URL.revokeObjectURL(url);'
+        a.download = filename;'
+        a.click();''
+        window.URL.revokeObjectURL(url);'''
         trackEvent('ai_code_generation',code_exported', format, exportContent.length)}, [generatedCode, codeAnalysis, suggestions, trackEvent]);
     // Get basic code metrics;
     const getCodeMetrics = useCallback((code) => {}
 '
         const lines = code.split('\n').length;
         const functions = (code.match(/function\s+\w+|const\s+\w+\s*=\s*\(|=>/g) || []).length;
-        const classes = (code.match(/class\s+\w+/g) || []).length;'""
-        const imports = (code.match(/import\s+.*from|import\s+.*require/g) || []).length;'"'""
+        const classes = (code.match(/class\s+\w+/g) || []).length;'"""
+        const imports = (code.match(/import\s+.*from|import\s+.*require/g) || []).length;'"'"""
         const dependencies = (code.match(/from\s+['"][^'"]+['"]|require\s*\(['"][^'"]+['"]/g) || []).length;
         return {}
             linesOfCode: lines,
@@ -304,21 +341,23 @@ export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'Component
 
   return ()
     <motion.div;
-      initial={{ opacity: 0 }}""
-      animate={{ opacity: 1 }}"""
-      className="generated-component""
+      initial={{ opacity: 0 }}"""
+      animate={{ opacity: 1 }}""""
+      className="generated-component"""
       {/* TODO: Implement component based on prompt: ${prompt} */}
       <h1>Generated Component</h1>
-      <p>This component was generated based on your prompt.</p>
-    </motion.div>
-  )};`
-``
+      <p>This component was generated based on your prompt.</p>`
+    </motion.div>``
+  )};```
+````
 export default GeneratedComponent;`};
     const generateExpressCode = (prompt, _options) => {}
 '`
 '`'`
-        return `import express from 'express';'
-import cors from 'cors';'
+'`'`'`
+'`'`'`'`
+        return `import express from 'express';'''
+import cors from 'cors';'''
 import helmet from 'helmet';
 ;
 const app = express();
@@ -332,41 +371,45 @@ app.use(express.json());
 // Routes''
 app.get('/', (req, res) => {}
 '
+''
+'''
   res.json({ message: 'Generated API based on prompt: ${prompt}})});
 
 // TODO: Implement additional routes based on prompt;
 app.listen(PORT, () => {}
 `
 ``
+```
+````
   // // // // // // // // console.log(\`Server running on port \${PORT}\`);`});`;
     };
     const generatePythonCode = (prompt, _options) => {}
 `
 `"`
-        return `#!/usr/bin/env python3"""
+        return `#!/usr/bin/env python3""""
+"""""
+Generated Python code based on prompt: ${prompt}""""
 """"
-Generated Python code based on prompt: ${prompt}"""
-"""
 ;
 import asyncio;
 from typing import Optional, List, Dict, Any;
 from dataclasses import dataclass;
-@dataclass""
-class GeneratedClass:"""
-    """Generated class based on prompt."""
+@dataclass"""
+class GeneratedClass:""""
+    """Generated class based on prompt.""""
     def __init__(self): any;
         # TODO: Implement initialization;
         pass;
-""
-    async def process_data(self, data: Any) -> Any:"""
-        """Process data based on prompt requirements."""
+"""
+    async def process_data(self, data: Any) -> Any:""""
+        """Process data based on prompt requirements.""""
         # TODO: Implement data processing logic;
         return data;
-""
-async def main():"""
-    """Main function."""
+"""
+async def main():""""
+    """Main function.""""
     instance = GeneratedClass()
-    # TODO: Implement main logic based on prompt""
+    # TODO: Implement main logic based on prompt"""
 ""`
 if __name__ == "__main__":``
     asyncio.run(main())`;
@@ -374,25 +417,27 @@ if __name__ == "__main__":``
     const generateGenericCode = (prompt, options) => {}
 `
 ``
-        return `// Generated ${options.language} code based on prompt: ${prompt}'
+``'`
+``'`'`
+        return `// Generated ${options.language} code based on prompt: ${prompt}'''
 // Framework: ${options.framework || 'none'}
 // Style: ${options.style}
 // Target: ${options.target}
 
 // TODO: Implement code based on prompt requirements;
-""
-// // // // // // // // console.log("Generated code placeholder");""
+"""
+// // // // // // // // console.log("Generated code placeholder");"""
 // // // // // // // // console.log("Prompt:", "${prompt}");"`
 // // // // // // // // console.log("Language:", "${options.language}");`;
-    };"""
-// console.log("Generated code placeholder");"""
+    };""""
+// console.log("Generated code placeholder");""""
 // console.log("Prompt:", "${prompt}");"`
-// This is a placeholder implementation""
-"""
+// This is a placeholder implementation"""
+""""
 // // // // // // // // console.log("Generated code placeholder");""`
 // // // // // // // // console.log("Prompt:", "${prompt}");"`"`
-// // // // // // // // console.log("Language:", "${options.language}");`;""
-    };"""
+// // // // // // // // console.log("Language:", "${options.language}");`;"""
+    };""""
 // console.log("Generated code placeholder");""`
 // console.log("Prompt:", "${prompt}");"`"`
 // console.log("Language:", "${options.language}");`};    // Helper functions for code analysis;
@@ -401,6 +446,8 @@ if __name__ == "__main__":``
     };
     const calculateMaintainability = (code) => {}
 '
+''
+'''
         const lines = code.split('\n').length;
         const functions = (code.match(/function|=>/g) || []).length;
         const avgFunctionLength = lines / Math.max(1, functions);
@@ -461,16 +508,18 @@ if __name__ == "__main__":``
             suggestions.push({}
 `
 ``
-                id: `suggestion_${Date.now()}_3`,'
-                type: 'best_practice','
-                title: 'Remove Console Logs','
-                description: 'Remove console.log statements for production code','
-                code: '// Remove console.log statements\n// Use proper logging library for production',
-                confidence: 0.90,'
-                impact: 'low','
-                category: 'Best Practices','
-                tags['logging',production',cleanup'],'
-                explanation: 'Console logs should not be in production code as they can impact performance and expose sensitive information.','
+``'`
+``'`'`
+                id: `suggestion_${Date.now()}_3`,'''
+                type: 'best_practice','''
+                title: 'Remove Console Logs','''
+                description: 'Remove console.log statements for production code','''
+                code: '// Remove console.log statements\n// Use proper logging library for production',''
+                confidence: 0.90,'''
+                impact: 'low','''
+                category: 'Best Practices','''
+                tags['logging',production',cleanup'],'''
+                explanation: 'Console logs should not be in production code as they can impact performance and expose sensitive information.','''
                 alternatives['winston',pino',debug package']
             })}
         return suggestions};
@@ -485,24 +534,24 @@ if __name__ == "__main__":``
             })}'
         if (code.includes('')) {}
             issues.push({}
-'""
-                severity: 'warning',"'""
+'"""
+                severity: 'warning',"'"""
                 message: 'Usage of "" type reduces type safety','
                 line: code.split('\n').findIndex(line => line.includes('')) + 1;
             })}
         return issues};
     // Helper functions for code optimization;
     const optimizeForAccessibility = (code) => {}
-'""
-        return code'"'""
-            .replace(/<div>/g,<div role="main">)'"'""
-            .replace(/<button>/g,<button aria-label="Action button">)'"'""
+'"""
+        return code'"'"""
+            .replace(/<div>/g,<div role="main">)'"'"""
+            .replace(/<button>/g,<button aria-label="Action button">)'"'"""
             .replace(/<img/g,<img alt="Description"')};
     // Helper functions for test generation;
     const generateJestTests = (_code) => {}
 '`
 '`'"`
-        return `import { render, screen, fireEvent } from '@testing-library/react';"""
+        return `import { render, screen, fireEvent } from '@testing-library/react';""""
 import GeneratedComponent from "./GeneratedComponent";
 '
 describe('GeneratedComponent', () => {}
@@ -520,6 +569,8 @@ describe('GeneratedComponent', () => {}
     const generatePytestTests = (_code) => {}
 `
 ``
+```
+````
         return `import pytest;
 from generated_module import GeneratedClass;
 ;
@@ -527,9 +578,9 @@ class TestGeneratedClass: any;
     def test_initialization(self): any;
         instance = GeneratedClass()
         assert instance is not None;
-    def test_process_data(self): any;""
-        instance = GeneratedClass()"""
-        result = instance.process_data("test")"""
+    def test_process_data(self): any;"""
+        instance = GeneratedClass()""""
+        result = instance.process_data("test")""""
         assert result == "test"`
 ``
     # TODO: Add more specific test cases based on class functionality`;
@@ -544,12 +595,16 @@ describe('Generated Code Tests', () => {}
 '
   it('should work as expected', () => {}
 `
-    // TODO: Add test implementation``
+``
+```
+    // TODO: Add test implementation````
     expect(true).toBe(true)})});`};
     // Helper functions for documentation generation;
     const generateJSDoc = (_code) => {}
 `
 ``
+```
+````
         return `/**
  * Generated Component;
  *
@@ -560,7 +615,9 @@ describe('Generated Code Tests', () => {}
  */;
 export const GeneratedComponent = () => {}
 `
-  // Component implementation``
+``
+```
+  // Component implementation````
 };`;
     };
     const generatePythonDoc = (_code) => {}
@@ -568,15 +625,15 @@ export const GeneratedComponent = () => {}
 "`"`
         return `""";
 Generated Module;
-""
-This module was generated based on user requirements.;"""
+"""
+This module was generated based on user requirements.;""""
 """;
-""
-def generated_function(): any;"""
+"""
+def generated_function(): any;""""
     """;
     Generated function with docstring.;
 
-    Returns: any;""
+    Returns: any;"""
         str: Description of return value""`
     """;``
     pass`;
@@ -584,12 +641,16 @@ def generated_function(): any;"""
     const generateGenericDocs = (_code, language) => {}
 `
 ``
+```
+````
         return `/**
  * Generated ${language} Code;
  *
  * This code was generated based on user requirements.
  *`
- * TODO: Add specific documentation based on code functionality``
+ * This code was generated based on user requirements.``
+ *```
+ * TODO: Add specific documentation based on code functionality````
  */`};
     // Cleanup timeout on unmount;
     useEffect(() => {}
@@ -619,8 +680,6 @@ def generated_function(): any;"""
     };
 };
 ;
-export default with;
-export default with;
 export default with;
 export default with;
 export default with;'"`

@@ -14,8 +14,8 @@ import {}
   ChevronDown,
   ChevronUp,
   Shield,
-  Server} from 'lucide-react';'
-  X''
+  Server} from 'lucide-react';'''
+  X''''
 } from 'lucide-react';
 
 interface ReportData {}
@@ -53,18 +53,18 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 showMetrics:  true,;
   showFilters = true,;
   showCharts = true,;
-  maxReports = 15}) => {;
-  const [reports, setReports] = useState<ReportData[]>([]);
-  const [filteredReports, setFilteredReports] = useState<ReportData[]>([]);'
-  const [selectedType, setSelectedType] = useState<string>('all');'
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');'
-  const [selectedStatus, setSelectedStatus] = useState<string>('all');'
-  const [searchQuery, setSearchQuery] = useState('');'
+  maxReports = 15}) => {;'
+  const [reports, setReports] = useState<ReportData[]>([]);''
+  const [filteredReports, setFilteredReports] = useState<ReportData[]>([]);'''
+  const [selectedType, setSelectedType] = useState<string>('all');'''
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');'''
+  const [selectedStatus, setSelectedStatus] = useState<string>('all');'''
+  const [searchQuery, setSearchQuery] = useState('');'''
   const [viewMode, setViewMode] = useState<any>('grid');
-  const [showReportForm, setShowReportForm] = useState(false);
-  const [selectedReport, setSelectedReport] = useState<any>(null);
-  const [showReportDetails, setShowReportDetails] = useState(false);'
-  const [sortBy, setSortBy] = useState<any>('date');'
+  const [showReportForm, setShowReportForm] = useState(false);'
+  const [selectedReport, setSelectedReport] = useState<any>(null);''
+  const [showReportDetails, setShowReportDetails] = useState(false);'''
+  const [sortBy, setSortBy] = useState<any>('date');'''
   const [sortOrder, setSortOrder] = useState<any>('desc');
 
   // Sample report data;
@@ -72,9 +72,11 @@ showMetrics:  true,;
     const sampleReports: ReportData[] = []
       {}
 '
-        id: '1','
-        title: 'Q4 Financial Performance Analysis','
-        type: 'financial','
+''
+'''
+        id: '1','''
+        title: 'Q4 Financial Performance Analysis','''
+        type: 'financial','''
         category: 'Financial Reports',
         data: {}
           revenue: 2500000,
@@ -93,9 +95,11 @@ showMetrics:  true,;
       },
       {}
 '
-        id: '2','
-        title: 'AI Services Performance Metrics','
-        type: 'performance','
+''
+'''
+        id: '2','''
+        title: 'AI Services Performance Metrics','''
+        type: 'performance','''
         category: 'Performance Reports',
         data: {}
           accuracy: 94.2,
@@ -114,9 +118,11 @@ showMetrics:  true,;
       },
       {}
 '
-        id: '3','
-        title: 'Cybersecurity Threat Assessment','
-        type: 'security','
+''
+'''
+        id: '3','''
+        title: 'Cybersecurity Threat Assessment','''
+        type: 'security','''
         category: 'Security Reports',
         data: {}
           threatsDetected: 156,
@@ -135,9 +141,11 @@ showMetrics:  true,;
       },
       {}
 '
-        id: '4','
-        title: 'Cloud Infrastructure Utilization','
-        type: 'operational','
+''
+'''
+        id: '4','''
+        title: 'Cloud Infrastructure Utilization','''
+        type: 'operational','''
         category: 'Operational Reports',
         data: {}
           cpuUtilization: 78.5,
@@ -156,9 +164,11 @@ showMetrics:  true,;
       },
       {}
 '
-        id: '5','
-        title: 'Customer Satisfaction Survey Results','
-        type: 'customer','
+''
+'''
+        id: '5','''
+        title: 'Customer Satisfaction Survey Results','''
+        type: 'customer','''
         category: 'Customer Reports',
         data: {}
           overallSatisfaction: 4.6,

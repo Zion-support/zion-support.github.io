@@ -48,17 +48,17 @@ const RatingStarsDisplay: React.FC<Pick<RatingStarsProps, 'value'>> = ({ value }
   <div className="flex items-center">
     {Array.from({ length: 5 }, (_, i) => ('
       <span key={i} className={i < value ? 'text-yellow-400' : 'text-gray-300'}>★</span>
-    ))}""
+    ))}"""
     <span className="ml-2 text-sm text-gray-600">({value.toFixed(1)})</span>
   </div>
 );
 
 // Placeholder for an interactive star rating input'
-const StarRatingInput: React.FC<Pick<RatingStarsProps, 'value' | 'onRate'>> = ({ value, onRate }) => (""
+const StarRatingInput: React.FC<Pick<RatingStarsProps, 'value' | 'onRate'>> = ({ value, onRate }) => ("""
   <div className="flex">
     {[1, 2, 3, 4, 5].map((star) => (
-      <button""
-        type="button""
+      <button"""
+        type="button"""
         key={star}
         onClick={() => onRate?.(star)}'
         className={`text-2xl ${star <= value ? 'text-yellow-400' : 'text-gray-300'} focus:outline-none`}
@@ -77,9 +77,9 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {}
   const { user, isAuthenticated } = useAuth();
   const [reviews, setReviews] = useState<Review[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-  const [newRating, setNewRating] = useState(0);'
+  const [error, setError] = useState<string | null>(null);'
+''
+  const [newRating, setNewRating] = useState(0);'''
   const [newComment, setNewComment] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
@@ -112,6 +112,8 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {}
     e.preventDefault();
     if (newRating === 0) {}
 '
+''
+'''
       setSubmitError('Please select a rating.');
       return;
     }
@@ -123,7 +125,9 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {}
 '
       const response: any = await fetch('/api/reviews', {}
 '
-        method: 'POST','
+''
+'''
+        method: 'POST','''
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ productId, rating: newRating, comment: newComment })});
 
@@ -143,26 +147,26 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {}
     }
   };
 
-  return (""
-    <div className="mt-8">""
+  return ("""
+    <div className="mt-8">"""
       <h3 className="text-xl font-semibold mb-4">Product Reviews</h3>
 
-      {isLoading && <p>Loading reviews...</p>}""
+      {isLoading && <p>Loading reviews...</p>}"""
       {error && <p className="text-red-500">Error: {error}</p>}
 
       {!isLoading && !error && reviews.length === 0 && (
         <p>No reviews yet.Be the first to review!</p>
       )}
 
-      {!isLoading && !error && reviews.length > 0 && (""
+      {!isLoading && !error && reviews.length > 0 && ("""
         <div className="space-y-4 mb-6">
-          {reviews.map((review) => (""
-            <div key={review.id} className="border p-4 rounded-md bg-gray-50 dark:bg-gray-800">""
-              <div className="flex items-center mb-1">'""
+          {reviews.map((review) => ("""
+            <div key={review.id} className="border p-4 rounded-md bg-gray-50 dark:bg-gray-800">"""
+              <div className="flex items-center mb-1">'"""
                 <strong className="mr-2">{review.reviewer_profile?.display_name || review.user?.name || 'Anonymous'}</strong>
                 <RatingStarsDisplay value={review.rating} />
-              </div>""
-              <p className="text-gray-700 dark:text-gray-300">{review.review_text || review.comment}</p>""
+              </div>"""
+              <p className="text-gray-700 dark:text-gray-300">{review.review_text || review.comment}</p>"""
               <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                 {new Date(review.created_at).toLocaleDateString()}
               </p>
@@ -171,38 +175,38 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {}
         </div>
       )}
 
-      {isAuthenticated && (""
-        <div className="mt-6 p-4 border rounded-md bg-white dark:bg-gray-900">""
+      {isAuthenticated && ("""
+        <div className="mt-6 p-4 border rounded-md bg-white dark:bg-gray-900">"""
           <h4 className="text-lg font-semibold mb-3">Write a Review</h4>
-          <form onSubmit={handleSubmitReview}>""
-            <div className="mb-3">""
+          <form onSubmit={handleSubmitReview}>"""
+            <div className="mb-3">"""
               <label htmlFor="rating" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">Your Rating:</label>
               <StarRatingInput value={newRating} onRate={setNewRating} />
-            </div>""
-            <div className="mb-3">""
+            </div>"""
+            <div className="mb-3">"""
               <label htmlFor="comment" className="block text-sm font-medium text-gray-700 dark:text-gray-200">Your Comment (Optional):</label>
-              <textarea""
-                id="comment""
+              <textarea"""
+                id="comment"""
                 value={newComment}
                 onChange={(e) => setNewComment(e.target.value)}
-                rows={4}""
-                className="w-full p-2 border rounded-md dark:bg-gray-800 dark:border-gray-700 dark:text-white""
+                rows={4}"""
+                className="w-full p-2 border rounded-md dark:bg-gray-800 dark:border-gray-700 dark:text-white"""
               />
-            </div>""
-            {submitError && <p className="text-red-500 text-sm mb-2">Error: {submitError}</p>}""
+            </div>"""
+            {submitError && <p className="text-red-500 text-sm mb-2">Error: {submitError}</p>}"""
             {submitSuccess && <p className="text-green-500 text-sm mb-2">{submitSuccess}</p>}
-            <button""
-              type="submit""
-              disabled={isSubmitting || newRating === 0}""
-              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:bg-gray-400""
+            <button"""
+              type="submit"""
+              disabled={isSubmitting || newRating === 0}"""
+              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:bg-gray-400"""
             >'
               {isSubmitting ? 'Submitting...' : 'Submit Review'}
             </button>
           </form>
         </div>
       )}
-      {!isAuthenticated && (""
-        <p className="mt-6 text-sm text-gray-600 dark:text-gray-400">""
+      {!isAuthenticated && ("""
+        <p className="mt-6 text-sm text-gray-600 dark:text-gray-400">"""
           Please <a href="/login" className="text-blue-500 hover:underline">login</a> to write a review.
         </p>
       )}

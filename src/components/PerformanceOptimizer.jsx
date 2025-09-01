@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useCallback } from 'react';'
+import React, { useEffect, useMemo, useCallback } from 'react';'''
 import { useLocation } from 'react-router-dom';
 
 export const PerformanceOptimizer = ({ children }) => {}
@@ -17,18 +17,22 @@ export const PerformanceOptimizer = ({ children }) => {}
   useEffect(() => {}
     const optimizeImages = () => {}
 '
+''
+'''
       const images = document.querySelectorAll('img');
       images.forEach(img => {}
         // Add loading="lazy" to images below the fold;
         if (img.getBoundingClientRect().top > window.innerHeight) {}
 '
-          img.loading = 'lazy';""
-        }"'""
+          img.loading = 'lazy';"""
+        }"'"""
         // Add decoding="async" for better performance''
         img.decoding = 'async';
         // Add error handling;
         img.onerror = () => {}
 '
+''
+'''
           img.style.display = 'none';
         };
       });
@@ -58,7 +62,9 @@ export const PerformanceOptimizer = ({ children }) => {}
 
   useEffect(() => {}
 '
-    window.addEventListener('scroll', handleScroll, { passive: true });'
+''
+'''
+    window.addEventListener('scroll', handleScroll, { passive: true });'''
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
@@ -67,7 +73,9 @@ export const PerformanceOptimizer = ({ children }) => {}
 '
     if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {}
 '
-      navigator.serviceWorker''
+''
+'''
+      navigator.serviceWorker''''
         .register('/sw.js')
         .then(registration => {}
 '
@@ -80,12 +88,16 @@ export const PerformanceOptimizer = ({ children }) => {}
 '
               newWorker.addEventListener('statechange', () => {}
 '
-                if (''
+''
+'''
+                if (''''
                   newWorker.state === 'installed' &&
                   navigator.serviceWorker.controller;
                 ) {}
 '
-                  // New service worker available''
+''
+'''
+                  // New service worker available''''
                   // // console.log('New service worker available');
                 }
               });
@@ -94,6 +106,8 @@ export const PerformanceOptimizer = ({ children }) => {}
         })
         .catch(registrationError => {}
 '
+''
+'''
           // // console.warn('SW registration failed: ', registrationError);
         });
     }
@@ -118,11 +132,13 @@ export const PerformanceOptimizer = ({ children }) => {}
         },
         {}
 '
+''
+'''
           rootMargin: '50px',
-          threshold: 0.1}
-      );
-'
-      // Observe all images with data-src''
+          threshold: 0.1}'
+      );''
+'''
+      // Observe all images with data-src''''
       const lazyImages = document.querySelectorAll('img[data-src]');
       lazyImages.forEach(img => observer.observe(img));
 
@@ -159,5 +175,5 @@ if (typeof window !== 'undefined') {}
   }
 }
 
-export default PerformanceOptimizer;'""
-'"'""
+export default PerformanceOptimizer;'"""
+'"'"""

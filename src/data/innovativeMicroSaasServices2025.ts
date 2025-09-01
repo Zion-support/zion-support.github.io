@@ -66,8 +66,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       innovationLevel: 'Advanced',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -117,8 +119,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       innovationLevel: 'Cutting-edge',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -170,8 +174,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       innovationLevel: 'Advanced',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -223,8 +229,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       innovationLevel: 'Advanced',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -274,8 +282,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       innovationLevel: 'Advanced',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -325,8 +335,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       innovationLevel: 'Advanced',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -376,8 +388,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       innovationLevel: 'Advanced',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -427,8 +441,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       innovationLevel: 'Advanced',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -478,8 +494,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       innovationLevel: 'Advanced',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -527,8 +545,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       innovationLevel: 'Advanced',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -578,8 +598,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       innovationLevel: 'Cutting-edge',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -631,8 +653,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       innovationLevel: 'Advanced',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -689,8 +713,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       innovationLevel: 'Cutting-edge',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -744,8 +770,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       innovationLevel: 'Cutting-edge',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -797,8 +825,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       innovationLevel: 'Revolutionary',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -854,8 +884,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       innovationLevel: 'Advanced',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -903,8 +935,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       innovationLevel: 'Advanced',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -954,8 +988,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       innovationLevel: 'Advanced',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -1009,8 +1045,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       innovationLevel: 'Advanced',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -1060,8 +1098,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       innovationLevel: 'Cutting-edge',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -1115,8 +1155,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       innovationLevel: 'Revolutionary',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '
@@ -1166,8 +1208,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       innovationLevel: 'Revolutionary',
       contactInfo: {}
 '
-        phone: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup.com','
+''
+'''
+        phone: '+1 302 464 0950','''
+        email: 'kleber@ziontechgroup.com','''
         website: 'https://ziontechgroup.com'},
       technicalSpecs: {}
 '

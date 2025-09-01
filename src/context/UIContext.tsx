@@ -70,6 +70,8 @@ export const useUIContext: any = () => {}
   const context: any = useContext(UIContext);
   if (context === undefined) {}
 '
+''
+'''
     throw new Error('useUIContext must be used within a UIProvider');
   }
   return context;

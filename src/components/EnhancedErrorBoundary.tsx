@@ -29,7 +29,9 @@ export class EnhancedErrorBoundary extends Component<Props, State> {}
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
     this.setState({ errorInfo });
 '
-    // Log error to console''
+    this.setState({ errorInfo });''
+'''
+    // Log error to console''''
     // console.error('Error caught by boundary:', error, errorInfo);
 
     // Call custom error handler if provided;
@@ -45,10 +47,14 @@ export class EnhancedErrorBoundary extends Component<Props, State> {}
       // Send to your error reporting endpoint'      await fetch('/api/error-report', {}
 '
 ''
-        method: 'POST',''
+'''
+''''
+        method: 'POST',''''
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(errorReport)})} catch (reportError) {}
 '
+''
+'''
       // console.error('Failed to report error:', reportError)}  }
 
   private handleRetry = () => {}
@@ -61,6 +67,8 @@ export class EnhancedErrorBoundary extends Component<Props, State> {}
 
   private handleGoHome = () => {}
 '
+''
+'''
     window.location.href = '/'};
 
   private handleGoBack = () => {}
@@ -93,6 +101,8 @@ export class EnhancedErrorBoundary extends Component<Props, State> {}
 
   private handleGoHome = () => {}
 '
+''
+'''
     window.location.href = '/'};
   private handleCopyError = async : unknown {}
     if (this.state.error) {}
@@ -104,6 +114,8 @@ export class EnhancedErrorBoundary extends Component<Props, State> {}
         // You could show a toast notification here;
       } catch (err) {}
 '
+''
+'''
         // console.error('Failed to copy error details:', err)}    }
   };
 
@@ -118,33 +130,33 @@ export class EnhancedErrorBoundary extends Component<Props, State> {}
         <motion.div;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4"""
-        >"""
+          className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4""""
+        >""""
           <div className="max-w-2xl w-full bg-white/5 backdrop-blur-sm border border-red-500/20 rounded-2xl p-8 text-center">
             {/* Error Icon */}
             <motion.div;
               initial={{ scale: 0 }}
-              animate={{ scale: 1 }}'""
-              transition={{ delay: 0.2, type: 'spring' }}"""
-              className="mx-auto w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mb-6"""
-            >"""
+              animate={{ scale: 1 }}'"""
+              transition={{ delay: 0.2, type: 'spring' }}""""
+              className="mx-auto w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mb-6""""
+            >""""
               <AlertTriangle className="w-10 h-10 text-red-400"  />            </motion.div>
 
             {/* Error Message */}
             <motion.h1;
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}""
-              transition={{ delay: 0.3 }}"""
-              className="text-3xl font-bold text-white mb-4""
+              animate={{ opacity: 1, y: 0 }}"""
+              transition={{ delay: 0.3 }}""""
+              className="text-3xl font-bold text-white mb-4"""
             >
               Oops ! Something went wrong;
             </motion.h1>
 
             <motion.p;
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}""
-              transition={{ delay: 0.4 }}"""
-              className="text-gray-300 mb-6 text-lg""
+              animate={{ opacity: 1, y: 0 }}"""
+              transition={{ delay: 0.4 }}""""
+              className="text-gray-300 mb-6 text-lg"""
             >'
               We're sorry, but something unexpected happened. Our team has been;
               notified and is working to fix this issue.
@@ -153,25 +165,25 @@ export class EnhancedErrorBoundary extends Component<Props, State> {}
             {/* Error Details(Collapsible) */}
             <motion.details;
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}""
-              transition={{ delay: 0.5 }}"""
-              className="mb-6 text-left"""
-            >"""
+              animate={{ opacity: 1 }}"""
+              transition={{ delay: 0.5 }}""""
+              className="mb-6 text-left""""
+            >""""
               <summary className="cursor-pointer text-cyan-400 hover:text-cyan-300 mb-2">
-                Error Details""
-              </summary>"""
-              <div className="bg-black/20 rounded-lg p-4 text-sm text-gray-300 font-mono">"""
+                Error Details"""
+              </summary>""""
+              <div className="bg-black/20 rounded-lg p-4 text-sm text-gray-300 font-mono">""""
                 <div className="mb-2">'
                   <strong>Error:</strong> {this.state.error?.name}:{' '}
                   {this.state.error?.message}
-                </div>""
-                {this.state.errorId && ("""
+                </div>"""
+                {this.state.errorId && (""""
                   <div className="mb-2">
                     <strong>Error ID:</strong> {this.state.errorId}
-                  </div>""
-                )}"""
-                <div className="text-xs opacity-75">""
-                  <strong>Component Stack:</strong>"""
+                  </div>"""
+                )}""""
+                <div className="text-xs opacity-75">"""
+                  <strong>Component Stack:</strong>""""
                   <pre className="mt-1 overflow-x-auto">
                     {this.state.errorInfo?.componentStack}
                   </pre>
@@ -182,28 +194,28 @@ export class EnhancedErrorBoundary extends Component<Props, State> {}
             {/* Action Buttons */}
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}""
-              transition={{ delay: 0.6 }}"""
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center""
+              animate={{ opacity: 1, y: 0 }}"""
+              transition={{ delay: 0.6 }}""""
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center"""
             >
-              <button""
-                onClick={this.handleRetry}"""
-                className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center space-x-2"""
-              >"""
+              <button"""
+                onClick={this.handleRetry}""""
+                className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center space-x-2""""
+              >""""
                 <RefreshCw className="w-5 h-5"  />                <span>Try Again</span>
               </button>
 
-              <button""
-                onClick={this.handleGoBack}"""
-                className="px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center space-x-2"""
-              >"""
+              <button"""
+                onClick={this.handleGoBack}""""
+                className="px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center space-x-2""""
+              >""""
                 <ArrowLeft className="w-5 h-5"  />                <span>Go Back</span>
               </button>
 
-              <button""
-                onClick={this.handleGoHome}"""
-                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center space-x-2"""
-              >"""
+              <button"""
+                onClick={this.handleGoHome}""""
+                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center space-x-2""""
+              >""""
                 <Home className="w-5 h-5"  />                <span>Go Home</span>
               </button>
             </motion.div>
@@ -211,33 +223,33 @@ export class EnhancedErrorBoundary extends Component<Props, State> {}
             {/* Error Reporting */}
             {this.props.showReportButton && (<motion.div;
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}""
-                transition={{ delay: 0.7 }}"""
-                className="mt-6 pt-6 border-t border-gray-600"""
-              >"""
+                animate={{ opacity: 1 }}"""
+                transition={{ delay: 0.7 }}""""
+                className="mt-6 pt-6 border-t border-gray-600""""
+              >""""
                 <p className="text-gray-400 mb-4">
                   Help us improve by reporting this error;
                 </p>
 
                 {!this.state.reportSent ? (
                   <button;
-                    onClick={this.handleReportError}""
-                    disabled={this.state.isReporting}"""
-                    className="px-6 py-3 bg-green-600 hover:bg-green-700 disabled:bg-green-800 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center space-x-2 mx-auto disabled:opacity-50""
+                    onClick={this.handleReportError}"""
+                    disabled={this.state.isReporting}""""
+                    className="px-6 py-3 bg-green-600 hover:bg-green-700 disabled:bg-green-800 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center space-x-2 mx-auto disabled:opacity-50"""
                   >
-                    {this.state.isReporting ? (""
-                      <>"""
+                    {this.state.isReporting ? ("""
+                      <>""""
                         <RefreshCw className="w-5 h-5 animate-spin"  />
                         <span>Reporting...</span>
                       </>
-                    ) : (""
-                      <>"""
+                    ) : ("""
+                      <>""""
                         <Bug className="w-5 h-5"  />                        <span>Report Error</span>
                       </>
                     )}
-                  </button>""
-                ) : ("""
-                  <div className="flex items-center justify-center space-x-2 text-green-400">"""
+                  </button>"""
+                ) : (""""
+                  <div className="flex items-center justify-center space-x-2 text-green-400">""""
                     <Send className="w-5 h-5"  />                    <span>Error reported successfully!</span>
                   </div>
                 )}
@@ -247,15 +259,15 @@ export class EnhancedErrorBoundary extends Component<Props, State> {}
             {/* Contact Information */}
             <motion.div;
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}""
-              transition={{ delay: 0.8 }}"""
-              className="mt-6 pt-6 border-t border-gray-600"""
-            >"""
+              animate={{ opacity: 1 }}"""
+              transition={{ delay: 0.8 }}""""
+              className="mt-6 pt-6 border-t border-gray-600""""
+            >""""
               <p className="text-gray-400 text-sm">'
-                If this problem persists, please contact our support team at{' '}""
-                <a"""
-                  href="mailto:support@ziontechgroup.com"""
-                  className="text-cyan-400 hover:text-cyan-300 underline""
+                If this problem persists, please contact our support team at{' '}"""
+                <a""""
+                  href="mailto:support@ziontechgroup.com""""
+                  className="text-cyan-400 hover:text-cyan-300 underline"""
                 >
                   support@ziontechgroup.com;
                 </a>

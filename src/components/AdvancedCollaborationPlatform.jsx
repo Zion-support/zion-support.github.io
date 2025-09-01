@@ -1,17 +1,19 @@
-import { Users, Video, Mic, MicOff, VideoOff, MessageSquare, FileText, Monitor, X, Maximize2, Minimize2, Plus, MoreVertical, PhoneOff, ScreenShare, Square, Hand, Clock, CheckCircle, UserPlus  } from 'lucide-react';
- : p))};
-import React, { useState, useRef } from 'react';'
+import { Users, Video, Mic, MicOff, VideoOff, MessageSquare, FileText, Monitor, X, Maximize2, Minimize2, Plus, MoreVertical, PhoneOff, ScreenShare, Square, Hand, Clock, CheckCircle, UserPlus  } from 'lucide-react';'
+ : p))};''
+import React, { useState, useRef } from 'react';'''
 import { Users, Video, Mic, MicOff, VideoOff, MessageSquare, FileText, Monitor, X, Maximize2, Minimize2, Plus, MoreVertical, PhoneOff, ScreenShare, Square, Hand, Clock, CheckCircle, UserPlus } from 'lucide-react';
 const mockMeetings = []
     {}
 '
-        id: '1','
-        title: 'Q4 2024 Review Meeting','
-        startTime: '2024-01-15T10:00:00.000Z','
-        endTime: '2024-01-15T11:30:00.000Z',
-        participants: 3,'
-        status: 'active',
-        recording: true,'
+''
+'''
+        id: '1','''
+        title: 'Q4 2024 Review Meeting','''
+        startTime: '2024-01-15T10:00:00.000Z','''
+        endTime: '2024-01-15T11:30:00.000Z',''
+        participants: 3,'''
+        status: 'active',''
+        recording: true,'''
         password: 'Q4Review2024'
 
 ];
@@ -21,16 +23,16 @@ export function AdvancedCollaborationPlatform() {}
     const [isFullscreen, setIsFullscreen] = useState(false);'
     const [activeTab, setActiveTab] = useState('meeting');
     const [isMuted, setIsMuted] = useState(false);
-    const [isVideoOff, setIsVideoOff] = useState(false);
-    const [isScreenSharing, setIsScreenSharing] = useState(false);
-    const [isRecording, setIsRecording] = useState(true);'
+    const [isVideoOff, setIsVideoOff] = useState(false);'
+    const [isScreenSharing, setIsScreenSharing] = useState(false);''
+    const [isRecording, setIsRecording] = useState(true);'''
     const [chatMessage, setChatMessage] = useState('');
     const [showParticipants, setShowParticipants] = useState(true);
     const [showChat, setShowChat] = useState(true);
     const [participants, setParticipants] = useState(mockParticipants);
-    const [chatMessages, setChatMessages] = useState(mockChatMessages);
-    const [documents, setDocuments] = useState(mockDocuments);
-    const [meetings, setMeetings] = useState(mockMeetings);'
+    const [chatMessages, setChatMessages] = useState(mockChatMessages);'
+    const [documents, setDocuments] = useState(mockDocuments);''
+    const [meetings, setMeetings] = useState(mockMeetings);'''
     const [searchQuery, setSearchQuery] = useState('');
     const containerRef = useRef(null);
     const toggleMute = () => {}

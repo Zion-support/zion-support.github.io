@@ -1,4 +1,4 @@
-import { useEffect } from 'react';'
+import { useEffect } from 'react';'''
 import { useUIContext } from '@/context/UIContext';
 
 export const useGlobalEventListeners: any = () => {}
@@ -7,9 +7,13 @@ export const useGlobalEventListeners: any = () => {}
   useEffect(() => {}
     const handleGlobalError: any = (event: CustomEvent) => {}
 '
+''
+'''
       console.log('GlobalEventListener: Caught globalError event', event.detail);
       dispatch({}
 '
+''
+'''
         type: 'SHOW_ERROR_MODAL',
         payload: {}
           message: event.detail.message,
@@ -18,19 +22,25 @@ export const useGlobalEventListeners: any = () => {}
 
     const handleGlobalLoading: any = (event: CustomEvent) => {}
 '
+''
+'''
       console.log('GlobalEventListener: Caught globalLoading event', event.detail);
       dispatch({}
 '
+''
+'''
         type: 'SET_IS_LOADING',
-        payload: event.detail.isLoading});
-    };
-'
-    document.addEventListener('globalError', handleGlobalError as EventListener);'
+        payload: event.detail.isLoading});'
+    };''
+'''
+    document.addEventListener('globalError', handleGlobalError as EventListener);'''
     document.addEventListener('globalLoading', handleGlobalLoading as EventListener);
 
     return () => {}
 '
-      document.removeEventListener('globalError', handleGlobalError as EventListener);'
+''
+'''
+      document.removeEventListener('globalError', handleGlobalError as EventListener);'''
       document.removeEventListener('globalLoading', handleGlobalLoading as EventListener);
     };
   }, [dispatch]);

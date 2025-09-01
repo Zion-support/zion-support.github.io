@@ -2,12 +2,12 @@ import React from 'react';
 import {}
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,'
-  CardTitle} from '@/components/ui/card';'
-import { Button } from '@/components/ui/button';'
-import { Badge } from '@/components/ui/badge';'
+  CardDescription,'
+  CardFooter,''
+  CardHeader,'''
+  CardTitle} from '@/components/ui/card';'''
+import { Button } from '@/components/ui/button';'''
+import { Badge } from '@/components/ui/badge';'''
 import { Link } from 'react-router-dom';
 import {}
   ArrowRight,
@@ -20,30 +20,32 @@ import {}
   Clock,
   Brain,
   Server,
-  TrendingUp,
-  CheckCircle,
-  Play,'
+  TrendingUp,'
+  CheckCircle,''
+  Play,'''
   Download} from 'lucide-react';
 export function FeatureCTAs() {}
   const features = []
     {}
 '
-      title: 'AI Services & Solutions','
-      description:''
+''
+'''
+      title: 'AI Services & Solutions','''
+      description:''''
         'Comprehensive AI services from strategy to implementation, including custom model development and AI consulting.',
-      icon: (
-        <Brain className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />
-      ),'
-      link: '/ai-services','
-      badge: 'New','
-      details:''
+      icon: ('
+        <Brain className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />''
+      ),'''
+      link: '/ai-services','''
+      badge: 'New','''
+      details:''''
         'Transform your business with cutting-edge AI solutions including machine learning, computer vision, NLP, and strategic AI consulting.'},
     {}
 '
       title: 'IT Services & Infrastructure','
       description:''
-        'Complete IT solutions including cloud management, cybersecurity, DevOps, and infrastructure modernization.',""
-      icon: ("""
+        'Complete IT solutions including cloud management, cybersecurity, DevOps, and infrastructure modernization.',"""
+      icon: (""""
         <Server className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />
       ),'
       link: '/it-services','
@@ -54,8 +56,8 @@ export function FeatureCTAs() {}
 '
       title: 'Digital Marketing Services','
       description:''
-        'Full-service digital marketing including SEO, PPC, social media, content marketing, and analytics.',""
-      icon: ("""
+        'Full-service digital marketing including SEO, PPC, social media, content marketing, and analytics.',"""
+      icon: (""""
         <TrendingUp className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700" />
       ),'
       link: '/digital-marketing','
@@ -66,8 +68,8 @@ export function FeatureCTAs() {}
 '
       title: 'Business Solutions & Consulting','
       description:''
-        'Strategic business consulting, process optimization, and digital transformation services.',""
-      icon: ("""
+        'Strategic business consulting, process optimization, and digital transformation services.',"""
+      icon: (""""
         <CheckCircle className="h-10 w-10 p-2 rounded-md bg-green-100 text-green-700" />
       ),'
       link: '/business-solutions','
@@ -77,8 +79,8 @@ export function FeatureCTAs() {}
 '
       title: 'AI Talent Matching','
       description:''
-        'Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.',""
-      icon: ("""
+        'Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.',"""
+      icon: (""""
         <Search className="h-10 w-10 p-2 rounded-md bg-indigo-100 text-indigo-700" />
       ),'
       link: '/marketplace','
@@ -89,8 +91,8 @@ export function FeatureCTAs() {}
 '
       title: 'Talent Directory','
       description:''
-        'Browse our extensive database of verified AI and tech specialists, filtered by expertise and availability.',""
-      icon: ("""
+        'Browse our extensive database of verified AI and tech specialists, filtered by expertise and availability.',"""
+      icon: (""""
         <Users className="h-10 w-10 p-2 rounded-md bg-pink-100 text-pink-700" />
       ),'
       link: '/talent','
@@ -100,8 +102,8 @@ export function FeatureCTAs() {}
 '
       title: 'Equipment Catalog','
       description:''
-        'Find specialized hardware and tech equipment for AI development and research.',""
-      icon: ("""
+        'Find specialized hardware and tech equipment for AI development and research.',"""
+      icon: (""""
         <Settings className="h-10 w-10 p-2 rounded-md bg-amber-100 text-amber-700" />
       ),'
       link: '/equipment','
@@ -111,8 +113,8 @@ export function FeatureCTAs() {}
 '
       title: 'Community Hub','
       description:''
-        'Connect with like-minded professionals, share insights, and stay updated with industry trends.',""
-      icon: ("""
+        'Connect with like-minded professionals, share insights, and stay updated with industry trends.',"""
+      icon: (""""
         <MessageSquare className="h-10 w-10 p-2 rounded-md bg-emerald-100 text-emerald-700" />
       ),'
       link: '/community','
@@ -122,8 +124,8 @@ export function FeatureCTAs() {}
 '
       title: 'Enterprise Solutions','
       description:''
-        'Custom-branded hiring portal, dedicated talent pool, and powerful admin controls for your organization.',""
-      icon: ("""
+        'Custom-branded hiring portal, dedicated talent pool, and powerful admin controls for your organization.',"""
+      icon: (""""
         <Building className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />
       ),'
       link: '/enterprise','
@@ -133,60 +135,60 @@ export function FeatureCTAs() {}
 '
       title: 'Zion Hire AI','
       description:''
-        'AI-powered recruiting assistant to streamline your hiring process and find better matches.',""
-      icon: ("""
+        'AI-powered recruiting assistant to streamline your hiring process and find better matches.',"""
+      icon: (""""
         <Clock className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700" />
       ),'
       link: '/zion-hire-ai','
       badge: 'Premium','
       details:''
         'Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution.'}
-  ];""
-  return ("""
-    <section className="py-16 bg-gradient-to-b from-background to-background/90">"""
-      <div className="container mx-auto px-4">"""
-        <div className="mb-12 text-center">"""
+  ];"""
+  return (""""
+    <section className="py-16 bg-gradient-to-b from-background to-background/90">""""
+      <div className="container mx-auto px-4">""""
+        <div className="mb-12 text-center">""""
           <h2 className="text-3xl font-bold tracking-tight mb-3">'
-            Discover Zion's Powerful Features""
-          </h2>"""
+            Discover Zion's Powerful Features"""
+          </h2>""""
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Explore our comprehensive suite of tools designed to transform how;
             you connect, collaborate, and create in the tech ecosystem.
           </p>
-        </div>""
-"""
+        </div>"""
+""""
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <Card""
-              key={index}"""
-              className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50"""
-            >"""
-              <CardHeader className="pb-2">"""
+            <Card"""
+              key={index}""""
+              className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50""""
+            >""""
+              <CardHeader className="pb-2">""""
                 <div className="flex justify-between items-start">
                   {feature.icon}
-                  {feature.badge && (""
-                    <Badge"""
-                      variant="secondary"""
-                      className="bg-primary/20 text-primary""
+                  {feature.badge && ("""
+                    <Badge""""
+                      variant="secondary""""
+                      className="bg-primary/20 text-primary"""
                     >
                       {feature.badge}
                     </Badge>
-                  )}""
-                </div>"""
-                <CardTitle className="mt-4">{feature.title}</CardTitle>"""
+                  )}"""
+                </div>""""
+                <CardTitle className="mt-4">{feature.title}</CardTitle>""""
                 <CardDescription className="line-clamp-2">
                   {feature.description}
                 </CardDescription>
-              </CardHeader>""
-              <CardContent>"""
+              </CardHeader>"""
+              <CardContent>""""
                 <p className="text-sm text-muted-foreground">
                   {feature.details}
                 </p>
-              </CardContent>""
-              <CardFooter>"""
+              </CardContent>"""
+              <CardFooter>""""
                 <Button className="w-full gap-1">
-                  <Link to={feature.link}>""
-                    <span>Explore {feature.title}</span>"""
+                  <Link to={feature.link}>"""
+                    <span>Explore {feature.title}</span>""""
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
@@ -197,5 +199,5 @@ export function FeatureCTAs() {}
       </div>
     </section>
   );
-}'""
-'"'""
+}'"""
+'"'"""

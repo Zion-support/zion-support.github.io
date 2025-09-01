@@ -26,10 +26,12 @@ function cartReducer(state: CartState, action: CartAction): CartState {}
 
 export function useCart(): CartContextType {}
 '
+''
+'''
   if (!ctx) throw new Error('useCart must be used within a CartProvider');
   return ctx}
 
-export function CartProvider(function CartProvider({ children }: { children: React.ReactNode }) {): any {}
+export function CartProvider(function CartProvider(function CartProvider({ children }: { children: React.ReactNode }) {): any {): any {}
   const [state, dispatch] = useReducer(cartReducer, initialState);
   const { user } = useAuth();
 
@@ -39,6 +41,8 @@ export function CartProvider(function CartProvider({ children }: { children: Rea
         try {}
           if (items.length) {}
 '
+''
+'''
             dispatch({ type: 'SET_ITEMS', payload: items })}
         } catch {}
           /* ignore */
@@ -49,7 +53,9 @@ export function CartProvider(function CartProvider({ children }: { children: Rea
     if (storedGuest) {}
       try {}
 '
-        mergeGuestCart(items).catch(err => console.error('Cart merge failed', err));'
+''
+'''
+        mergeGuestCart(items).catch(err => console.error('Cart merge failed', err));'''
         dispatch({ type: 'SET_ITEMS', payload: items });
         safeStorage.removeItem(GUEST_CART_KEY)} catch {}
         /* ignore */

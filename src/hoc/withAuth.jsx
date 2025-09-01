@@ -1,5 +1,5 @@
-import { useEffect } from 'react';'
-import { useNavigate } from 'react-router-dom';'
+import { useEffect } from 'react';'''
+import { useNavigate } from 'react-router-dom';'''
 import { useSelector } from 'react-redux';
 function withAuth(Component) {}
     const Wrapped = (props) => {}
@@ -8,6 +8,8 @@ function withAuth(Component) {}
         useEffect(() => {}
             if (!isLoggedIn) {}
 '
+''
+'''
                 navigate('/login?next=/community/new');
             }
         }, [isLoggedIn, router]);
@@ -18,9 +20,9 @@ function withAuth(Component) {}
     };
     return Wrapped;
 ;
-export { withAuth };
-export default withAuth;
-}}}'
+export { withAuth };'
+export default withAuth;''
+}}}'''
                 router('/login?next=/community/new');
             }
         }, [isLoggedIn, router]);

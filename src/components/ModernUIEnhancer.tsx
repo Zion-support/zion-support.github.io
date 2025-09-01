@@ -37,11 +37,13 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({}
         Object.entries(value).forEach(([shade, colorValue]) => {}
 `
 ``
-          root.style.setProperty(`--color-${key}-${shade}`, colorValue)})}
-    }) ;
-'`
-    // Apply accent color variations'`'`
-    root.style.setProperty('--color-primary-light', `${accentColor}20`);'`'`
+```
+````
+          root.style.setProperty(`--color-${key}-${shade}`, colorValue)})}'`
+    }) ;'`'`
+'`'`'`
+    // Apply accent color variations'`'`'`'`
+    root.style.setProperty('--color-primary-light', `${accentColor}20`);'`'`'`'`
     root.style.setProperty('--color-primary-dark', `${accentColor}80`)}, [enabled, accentColor]);
 
     // Modern spacing scale(4px base unit)
@@ -49,24 +51,32 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({}
     Object.entries(spacing).forEach(([key, value]) => {}
 `
 ``
+```
+````
       root.style.setProperty(`--spacing-${key}`, value)})}, [enabled]);
 
     // Modern shadow system;
     Object.entries(shadows).forEach(([key, value]) => {}
 `
 ``
+```
+````
       root.style.setProperty(`--shadow-${key}`, value)})}, [enabled]);
 
     // Modern transition system;
     Object.entries(transitions).forEach(([key, value]) => {}
 `
 ``
+```
+````
       root.style.setProperty(`--transition-${key}`, value)})}, [enabled]);
 
     // Modern border radius system;
     Object.entries(radius).forEach(([key, value]) => {}
 `
 ``
+```
+````
       root.style.setProperty(`--radius-${key}`, value)})}, [enabled]);
 
     if (isDarkMode) {}
@@ -78,11 +88,13 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({}
       root.style.setProperty('--text-secondary',#cbd5e1');'
       root.style.setProperty('--border-color',#334155')} else {}
 '
-      root.classList.remove('dark');'
-      root.style.setProperty('--bg-primary',#ffffff');'
-      root.style.setProperty('--bg-secondary',#f8fafc');'
-      root.style.setProperty('--text-primary',#0f172a');'
-      root.style.setProperty('--text-secondary',#475569');'
+''
+'''
+      root.classList.remove('dark');'''
+      root.style.setProperty('--bg-primary',#ffffff');'''
+      root.style.setProperty('--bg-secondary',#f8fafc');'''
+      root.style.setProperty('--text-primary',#0f172a');'''
+      root.style.setProperty('--text-secondary',#475569');'''
       root.style.setProperty('--border-color',#e2e8f0')}
   }, [enabled, isDarkMode]) ;
 
@@ -90,14 +102,16 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({}
 '
       if(!button.classList.contains('modern-enhanced')) {}
         button.classList.add('modern-enhanced');`
-  '""
-    // Add modern button styles'"'""
+  '"""
+    // Add modern button styles'"'"""
     const buttons: any = document.querySelectorAll('button, .btn, [role="button"]');    buttons.forEach((button) => {}
 '
 ''
       if (!button.classList.contains('modern-enhanced')) {}
 '`
-        button.classList.add('modern-enhanced');``
+'`'`
+'`'`'`
+        button.classList.add('modern-enhanced');````
         button.style.cssText += `
           border-radius: var(--radius-md);
           transition: var(--transition-normal);
@@ -105,19 +119,21 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({}
           box-shadow: var(--shadow-sm);``
         `}
     }) ;
-'""
-    // Add modern card styles'"'""
+'"""
+    // Add modern card styles'"'"""
     const cards: any = document.querySelectorAll('.card, [class*="card"], [class*="Card"]');    cards.forEach((card) => {}
 '
 ''
       if (!card.classList.contains('modern-enhanced')) {}
 '`
-        card.classList.add('modern-enhanced');``
+'`'`
+'`'`'`
+        card.classList.add('modern-enhanced');````
         card.style.cssText += `
-          border-radius: var(--radius-lg);
-          box-shadow: var(--shadow-md);
-          transition: var(--transition-normal);`
-          border: 1px solid var(--border-color);``
+          border-radius: var(--radius-lg);`
+          box-shadow: var(--shadow-md);``
+          transition: var(--transition-normal);```
+          border: 1px solid var(--border-color);````
         `}
     }) }, [enabled]) ;
   useEffect(() => {}

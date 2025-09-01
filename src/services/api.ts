@@ -20,9 +20,13 @@ async function apiRequest<T>(endpoint: string,
 : any): Promise<ApiResponse<T>> {}
   const config: RequestInit = {}
 '
+''
+'''
     method: options.method || 'GET',
     headers: {}
 '
+''
+'''
       'Content-Type': 'application/json',
       ...options.headers},
     ...options};
@@ -30,7 +34,7 @@ async function apiRequest<T>(endpoint: string,
   try {}
     if (!response.ok) {}
       throw new ApiError()
-        response.status,``
+        response.status,````
         `HTTP error! status: ${response.status}`
       )}
 
@@ -44,29 +48,35 @@ async function apiRequest<T>(endpoint: string,
 
 export const api: any = {}
 '
-  // Health check''
-  health: () => apiRequest('/health'),
-'
-  // Users''
-  getUsers: () => apiRequest<Array<any>>('/users'),`
-  getUser: (id: number) =>``
-    apiRequest<{ id: number; name: string; email: string }>(`/users/${id}`),
-  createUser: (userData: { name: string; email: string }) =>'
-    apiRequest<{ id: number; name: string; email: string; createdAt: string }>(''
+''
+'''
+  // Health check''''
+  health: () => apiRequest('/health'),''
+'''`
+  // Users'''`'`
+  getUsers: () => apiRequest<Array<any>>('/users'),```
+  getUser: (id: number) =>```'`
+    apiRequest<{ id: number; name: string; email: string }>(`/users/${id}`),''
+  createUser: (userData: { name: string; email: string }) =>'''
+    apiRequest<{ id: number; name: string; email: string; createdAt: string }>(''''
       '/users',
       {}
 '
+''
+'''
         method: 'POST',
-        body: JSON.stringify(userData)}
-    ),
-  updateUser: (id: number, userData: { name?: string; email?: string }) =>`
-    apiRequest<{ id: number; name: string; email: string; updatedAt: string }>(``
+        body: JSON.stringify(userData)}`
+    ),``
+  updateUser: (id: number, userData: { name?: string; email?: string }) =>```
+    apiRequest<{ id: number; name: string; email: string; updatedAt: string }>(````
       `/users/${id}`,
       {}
 '
-        method: 'PUT',
-        body: JSON.stringify(userData)}`
-    ),`'`
+''
+'''`
+        method: 'PUT',`'`
+        body: JSON.stringify(userData)}`'`'`
+    ),`'`'`'`
   deleteUser: (id: number) => apiRequest(`/users/${id}`, { method: 'DELETE' }),
 
   // Authentication;

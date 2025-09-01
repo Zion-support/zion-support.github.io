@@ -10,7 +10,6 @@ const ComprehensivePricing: any = lazy(() => import('./pages/ComprehensivePricin
 
 const SimplePage: any = lazy(() => import('./pages/SimplePage').then(module => ({ default: module.default })));
 
-
 // Loading component;
 const PageLoader: any = () => (
   <div className="flex items-center justify-center min-h-screen bg-gray-900">
@@ -21,7 +20,7 @@ const PageLoader: any = () => (
   </div>
 );
 
-function App(function App(function App() {): any {): any {}
+function App(function App(function App(function App() {): any {): any {): any {}
   return (
     <ErrorBoundary fallback={<div>Something went wrong. Please refresh the page.</div>}>
       <div className="App">
@@ -65,7 +64,5 @@ function App(function App(function App() {): any {): any {}
       </div>
     </ErrorBoundary>
   );
-}
-
-export default App;
-
+}'
+export default App;''

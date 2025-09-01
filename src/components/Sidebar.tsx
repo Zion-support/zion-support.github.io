@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react';''
 import { Link, useLocation } from 'react-router-dom';
 import {}
   Menu,
@@ -48,7 +48,7 @@ import {}
   Code;
 } from 'lucide-react';
 
-export default function Page(function Page() {): any {}
+export default function Page(function Page(function Page() {): any {): any {}
 ) => {}
   const location: any = useLocation();
   const [expandedSections, setExpandedSections] = useState<string[]>(['main', 'services']);
@@ -60,12 +60,12 @@ export default function Page(function Page() {): any {}
     return location.pathname.startsWith(href);
   };
 
-  return (
+  return()
     <>
       {/* Mobile Overlay */}
       {isOpen && (
         <div;
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden""
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"""
           onClick={onToggle}
         />
       )}
@@ -86,14 +86,14 @@ export default function Page(function Page() {): any {}
               <span className="text-lg font-semibold text-white">Navigation</span>
             </div>
           </div>
-
-          {/* Navigation Sections */}
-          <nav className="flex-1 overflow-y-auto p-4 space-y-6">
-            {navigation.map((section) => (
+""
+          {/* Navigation Sections */}"""
+          <nav className="flex-1 overflow-y-auto p-4 space-y-6">""
+            {navigation.map((section) => ("""
               <div key={section.id} className="space-y-2">
                 <button;
                   onClick={() => toggleSection(section.id)}
-                  className="flex items-center justify-between w-full p-2 text-left text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-colors duration-200""
+                  className="flex items-center justify-between w-full p-2 text-left text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-colors duration-200"""
                 >
                   <div className="flex items-center space-x-2">
                     <section.icon className="w-5 h-5" />
@@ -105,8 +105,8 @@ export default function Page(function Page() {): any {}
                     }`} 
                   />
                 </button>
-
-                {expandedSections.includes(section.id) && (
+""
+                {expandedSections.includes(section.id) && ("""
                   <div className="ml-6 space-y-1">
                     {section.links.map((link) => (
                       <Link;
@@ -116,8 +116,8 @@ export default function Page(function Page() {): any {}
                           // Close sidebar on mobile after navigation;
                           if (window.innerWidth < 1024) {}
                             onToggle();
-                          }
-                        }}
+                          }`
+                        }}``
                         className={`
                           flex items-center space-x-2 p-2 rounded-lg transition-colors duration-200 text-sm;
                           ${isActive(link.href)
@@ -142,28 +142,28 @@ export default function Page(function Page() {): any {}
               {/* Quick Actions */}
               <div className="space-y-2">
                 <Link;
-                  to="/request-quote""
-                  className="flex items-center space-x-2 p-2 text-cyan-400 hover:text-cyan-300 hover:bg-cyan-400/10 rounded-lg transition-colors duration-200""
+                  to="/request-quote"""
+                  className="flex items-center space-x-2 p-2 text-cyan-400 hover:text-cyan-300 hover:bg-cyan-400/10 rounded-lg transition-colors duration-200"""
                 >
                   <Plus className="w-4 h-4" />
                   <span className="text-sm font-medium">Request Quote</span>
                 </Link>
                 <Link;
-                  to="/contact""
-                  className="flex items-center space-x-2 p-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-200""
+                  to="/contact"""
+                  className="flex items-center space-x-2 p-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"""
                 >
                   <Mail className="w-4 h-4" />
                   <span className="text-sm">Contact Us</span>
                 </Link>
               </div>
-
-              {/* Contact Info */}
-              <div className="pt-3 border-t border-gray-800 space-y-2 text-xs text-gray-500">
-                <div className="flex items-center space-x-2">
+""
+              {/* Contact Info */}"""
+              <div className="pt-3 border-t border-gray-800 space-y-2 text-xs text-gray-500">"""
+                <div className="flex items-center space-x-2">"""
                   <Phone className="w-3 h-3" />
-                  <span>+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center space-x-2">
+                  <span>+1 (555) 123-4567</span>""
+                </div>"""
+                <div className="flex items-center space-x-2">"""
                   <Mail className="w-3 h-3" />
                   <span>contact@ziontechgroup.com</span>
                 </div>
@@ -176,28 +176,36 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {}
   const navigation: SidebarItem[] = []
     {}
 '
-      id: 'main','
-      title: 'Main Navigation',
-      icon: Home,'
-      links: [''
+''
+'''
+      id: 'main','''
+      title: 'Main Navigation',''
+      icon: Home,'''
+      links: [''''
         { name: 'Home', href: '/', icon: Home, description: 'Main dashboard' },
         {}
 '
-          name: 'About Us','
-          href: '/about',
-          icon: Building,'
+''
+'''
+          name: 'About Us','''
+          href: '/about',''
+          icon: Building,'''
           description: 'Our story and mission'},
         {}
 '
-          name: 'Contact','
-          href: '/contact',
-          icon: PhoneCall,'
+''
+'''
+          name: 'Contact','''
+          href: '/contact',''
+          icon: PhoneCall,'''
           description: 'Get in touch'},
         {}
 '
-          name: 'Get Quote','
-          href: '/request-quote',
-          icon: DollarSign,'
+''
+'''
+          name: 'Get Quote','''
+          href: '/request-quote',''
+          icon: DollarSign,'''
           description: 'Request pricing'},
         {}
 '
@@ -208,39 +216,51 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {}
       ]},
     {}
 '
-      id: 'services','
+''
+'''
+      id: 'services','''
       title: 'Services Portfolio',
       icon: Settings,
       links: []
         {}
 '
-          name: 'Services Overview','
-          href: '/services-overview',
-          icon: BarChart3,'
+''
+'''
+          name: 'Services Overview','''
+          href: '/services-overview',''
+          icon: BarChart3,'''
           description: 'Complete service portfolio'},
         {}
 '
-          name: 'Services Catalog','
-          href: '/services-catalog',
-          icon: FileText,'
+''
+'''
+          name: 'Services Catalog','''
+          href: '/services-catalog',''
+          icon: FileText,'''
           description: 'Browse all services'},
         {}
 '
-          name: 'Services Comparison','
-          href: '/services-comparison',
-          icon: TrendingUp,'
+''
+'''
+          name: 'Services Comparison','''
+          href: '/services-comparison',''
+          icon: TrendingUp,'''
           description: 'Compare offerings'},
         {}
 '
-          name: 'AI Services','
-          href: '/ai-services',
-          icon: Brain,'
+''
+'''
+          name: 'AI Services','''
+          href: '/ai-services',''
+          icon: Brain,'''
           description: 'Artificial Intelligence solutions'},
         {}
 '
-          name: 'IT Services','
-          href: '/it-services',
-          icon: Settings,'
+''
+'''
+          name: 'IT Services','''
+          href: '/it-services',''
+          icon: Settings,'''
           description: 'Information Technology services'},
         {}
 '
@@ -251,45 +271,59 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {}
       ]},
     {}
 '
-      id: 'ai-solutions','
+''
+'''
+      id: 'ai-solutions','''
       title: 'AI Solutions',
       icon: Brain,
       items: []
         {}
 '
-          name: 'AI Business Intelligence','
-          path: '/services/ai-business-intelligence',
-          icon: Brain,'
+''
+'''
+          name: 'AI Business Intelligence','''
+          path: '/services/ai-business-intelligence',''
+          icon: Brain,'''
           description: 'Machine Learning & Data Science'},
         {}
 '
-          name: 'AI Workflow Orchestrator','
-          path: '/services/ai-workflow-orchestrator',
-          icon: Workflow,'
+''
+'''
+          name: 'AI Workflow Orchestrator','''
+          path: '/services/ai-workflow-orchestrator',''
+          icon: Workflow,'''
           description: 'Intelligent Process Automation'},
         {}
 '
-          name: 'AI Data Governance Platform','
-          path: '/services/ai-data-governance-platform',
-          icon: Shield,'
+''
+'''
+          name: 'AI Data Governance Platform','''
+          path: '/services/ai-data-governance-platform',''
+          icon: Shield,'''
           description: 'Data Protection & Compliance'},
         {}
 '
-          name: 'AI Customer Experience Analytics','
-          path: '/services/ai-customer-experience-analytics',
-          icon: Users,'
+''
+'''
+          name: 'AI Customer Experience Analytics','''
+          path: '/services/ai-customer-experience-analytics',''
+          icon: Users,'''
           description: 'Customer Insights & Analytics'},
         {}
 '
-          name: 'AI Healthcare Analytics','
-          path: '/services/ai-healthcare-analytics',
-          icon: Brain,'
+''
+'''
+          name: 'AI Healthcare Analytics','''
+          path: '/services/ai-healthcare-analytics',''
+          icon: Brain,'''
           description: 'Medical AI & Diagnostics'},
         {}
 '
-          name: 'AI Financial Trading','
-          path: '/services/ai-financial-trading',
-          icon: TrendingUp,'
+''
+'''
+          name: 'AI Financial Trading','''
+          path: '/services/ai-financial-trading',''
+          icon: TrendingUp,'''
           description: 'FinTech AI Solutions'},
         {}
 '
@@ -300,45 +334,59 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {}
       ]},
     {}
 '
-      id: 'enterprise-services','
+''
+'''
+      id: 'enterprise-services','''
       title: 'Enterprise Services',
       icon: Building,
       links: []
         {}
 '
-          name: 'Cloud DevOps','
-          href: '/services/cloud-devops',
-          icon: Cloud,'
+''
+'''
+          name: 'Cloud DevOps','''
+          href: '/services/cloud-devops',''
+          icon: Cloud,'''
           description: 'Cloud infrastructure'},
         {}
 '
-          name: 'Cybersecurity Suite','
-          href: '/services/ai-compliance-copilot',
-          icon: Shield,'
+''
+'''
+          name: 'Cybersecurity Suite','''
+          href: '/services/ai-compliance-copilot',''
+          icon: Shield,'''
           description: 'Security solutions'},
         {}
 '
-          name: 'Digital Twin','
-          href: '/services/digital-twin',
-          icon: Rocket,'
+''
+'''
+          name: 'Digital Twin','''
+          href: '/services/digital-twin',''
+          icon: Rocket,'''
           description: 'Digital simulation'},
         {}
 '
-          name: 'IoT Edge Computing','
-          href: '/services/iot-edge',
-          icon: Cpu,'
+''
+'''
+          name: 'IoT Edge Computing','''
+          href: '/services/iot-edge',''
+          icon: Cpu,'''
           description: 'Internet of Things'},
         {}
 '
-          name: 'Data Analytics','
-          href: '/services/data-analytics',
-          icon: Database,'
+''
+'''
+          name: 'Data Analytics','''
+          href: '/services/data-analytics',''
+          icon: Database,'''
           description: 'Data processing'},
         {}
 '
-          name: 'IT Infrastructure','
-          href: '/services/it-infrastructure',
-          icon: Settings,'
+''
+'''
+          name: 'IT Infrastructure','''
+          href: '/services/it-infrastructure',''
+          icon: Settings,'''
           description: 'Infrastructure management'},
         {}
 '
@@ -349,39 +397,51 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {}
       ]},
     {}
 '
-      id: 'specialized-services','
+''
+'''
+      id: 'specialized-services','''
       title: 'Specialized Services',
       icon: Star,
       links: []
         {}
 '
-          name: 'Healthcare Tech','
-          href: '/services/healthcare-tech',
-          icon: Heart,'
+''
+'''
+          name: 'Healthcare Tech','''
+          href: '/services/healthcare-tech',''
+          icon: Heart,'''
           description: 'Medical technology'},
         {}
 '
-          name: 'Blockchain Solutions','
-          href: '/services/blockchain-enterprise-solutions',
-          icon: Lock,'
+''
+'''
+          name: 'Blockchain Solutions','''
+          href: '/services/blockchain-enterprise-solutions',''
+          icon: Lock,'''
           description: 'Blockchain technology'},
         {}
 '
-          name: 'Quantum Computing','
-          href: '/services/quantum-computing',
-          icon: Zap,'
+''
+'''
+          name: 'Quantum Computing','''
+          href: '/services/quantum-computing',''
+          icon: Zap,'''
           description: 'Quantum solutions'},
         {}
 '
-          name: 'Space Technology','
-          href: '/services/space-tech',
-          icon: Rocket,'
+''
+'''
+          name: 'Space Technology','''
+          href: '/services/space-tech',''
+          icon: Rocket,'''
           description: 'Aerospace solutions'},
         {}
 '
-          name: 'Sustainability Tech','
-          href: '/services/sustainability',
-          icon: Globe,'
+''
+'''
+          name: 'Sustainability Tech','''
+          href: '/services/sustainability',''
+          icon: Globe,'''
           description: 'Green technology'},
         {}
 '
@@ -392,45 +452,59 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {}
       ]},
     {}
 '
-      id: 'micro-saas-products','
+''
+'''
+      id: 'micro-saas-products','''
       title: 'Micro SaaS Products',
       icon: ShoppingCart,
       links: []
         {}
 '
-          name: 'Micro SaaS Solutions','
-          href: '/services/micro-saas-solutions',
-          icon: ShoppingCart,'
+''
+'''
+          name: 'Micro SaaS Solutions','''
+          href: '/services/micro-saas-solutions',''
+          icon: ShoppingCart,'''
           description: 'All SaaS products'},
         {}
 '
-          name: 'AI Lead Scoring','
-          href: '/services/ai-lead-scoring',
-          icon: Target,'
+''
+'''
+          name: 'AI Lead Scoring','''
+          href: '/services/ai-lead-scoring',''
+          icon: Target,'''
           description: 'Lead qualification'},
         {}
 '
-          name: 'Website AI Chatbot','
-          href: '/services/website-ai-chatbot',
-          icon: MessageCircle,'
+''
+'''
+          name: 'Website AI Chatbot','''
+          href: '/services/website-ai-chatbot',''
+          icon: MessageCircle,'''
           description: 'Customer support'},
         {}
 '
-          name: 'AI SEO Optimizer','
-          href: '/services/ai-seo-optimizer',
-          icon: Search,'
+''
+'''
+          name: 'AI SEO Optimizer','''
+          href: '/services/ai-seo-optimizer',''
+          icon: Search,'''
           description: 'SEO automation'},
         {}
 '
-          name: 'SaaS Churn Predictor','
-          href: '/services/saas-churn-predictor',
-          icon: TrendingUp,'
+''
+'''
+          name: 'SaaS Churn Predictor','''
+          href: '/services/saas-churn-predictor',''
+          icon: TrendingUp,'''
           description: 'Customer retention'},
         {}
 '
-          name: 'API Monitoring','
-          href: '/services/api-monitoring',
-          icon: Smartphone,'
+''
+'''
+          name: 'API Monitoring','''
+          href: '/services/api-monitoring',''
+          icon: Smartphone,'''
           description: 'API health tracking'},
         {}
 '
@@ -441,27 +515,35 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {}
       ]},
     {}
 '
-      id: 'innovative-showcase','
+''
+'''
+      id: 'innovative-showcase','''
       title: 'Innovation Hub',
       icon: Star,
       links: []
         {}
 '
-          name: 'Innovative Services 2025','
-          href: '/innovative-services-showcase-2025',
-          icon: Star,'
+''
+'''
+          name: 'Innovative Services 2025','''
+          href: '/innovative-services-showcase-2025',''
+          icon: Star,'''
           description: 'Latest innovations'},
         {}
 '
-          name: 'Revolutionary Services 2030','
-          href: '/revolutionary-services-2030',
-          icon: Rocket,'
+''
+'''
+          name: 'Revolutionary Services 2030','''
+          href: '/revolutionary-services-2030',''
+          icon: Rocket,'''
           description: 'Future technologies'},
         {}
 '
-          name: 'Comprehensive Services 2028','
-          href: '/comprehensive-services-landing-2028',
-          icon: BarChart3,'
+''
+'''
+          name: 'Comprehensive Services 2028','''
+          href: '/comprehensive-services-landing-2028',''
+          icon: BarChart3,'''
           description: 'Complete portfolio'},
         {}
 '
@@ -472,27 +554,35 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {}
       ]},
     {}
 '
-      id: 'pricing','
+''
+'''
+      id: 'pricing','''
       title: 'Pricing & Plans',
       icon: DollarSign,
       links: []
         {}
 '
-          name: 'Pricing Overview','
-          href: '/pricing',
-          icon: DollarSign,'
+''
+'''
+          name: 'Pricing Overview','''
+          href: '/pricing',''
+          icon: DollarSign,'''
           description: 'Service pricing'},
         {}
 '
-          name: 'Pricing Guide','
-          href: '/pricing-guide',
-          icon: FileText,'
+''
+'''
+          name: 'Pricing Guide','''
+          href: '/pricing-guide',''
+          icon: FileText,'''
           description: 'Detailed pricing info'},
         {}
 '
-          name: 'Comprehensive Pricing 2026','
-          href: '/comprehensive-pricing-guide-2026',
-          icon: BarChart3,'
+''
+'''
+          name: 'Comprehensive Pricing 2026','''
+          href: '/comprehensive-pricing-guide-2026',''
+          icon: BarChart3,'''
           description: 'Future pricing'},
         {}
 '
@@ -503,51 +593,67 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {}
       ]},
     {}
 '
-      id: 'resources','
+''
+'''
+      id: 'resources','''
       title: 'Resources & Learning',
       icon: BookOpen,
       links: []
         {}
 '
-          name: 'Help Center','
-          href: '/help',
-          icon: HelpCircle,'
+''
+'''
+          name: 'Help Center','''
+          href: '/help',''
+          icon: HelpCircle,'''
           description: 'Get support'},
         {}
 '
-          name: 'Documentation','
-          href: '/documentation',
-          icon: FileText,'
+''
+'''
+          name: 'Documentation','''
+          href: '/documentation',''
+          icon: FileText,'''
           description: 'Technical docs'},
         {}
 '
-          name: 'Training','
-          href: '/training',
-          icon: GraduationCap,'
+''
+'''
+          name: 'Training','''
+          href: '/training',''
+          icon: GraduationCap,'''
           description: 'Learning resources'},
         {}
 '
-          name: 'Blog','
-          href: '/blog',
-          icon: BookOpen,'
+''
+'''
+          name: 'Blog','''
+          href: '/blog',''
+          icon: BookOpen,'''
           description: 'Latest insights'},
         {}
 '
-          name: 'Webinars','
-          href: '/webinars',
-          icon: Calendar,'
+''
+'''
+          name: 'Webinars','''
+          href: '/webinars',''
+          icon: Calendar,'''
           description: 'Educational events'},
         {}
 '
-          name: 'Case Studies','
-          href: '/case-studies',
-          icon: Award,'
+''
+'''
+          name: 'Case Studies','''
+          href: '/case-studies',''
+          icon: Award,'''
           description: 'Success stories'},
         {}
 '
-          name: 'White Papers','
-          href: '/white-papers',
-          icon: FileText,'
+''
+'''
+          name: 'White Papers','''
+          href: '/white-papers',''
+          icon: FileText,'''
           description: 'Research papers'},
         {}
 '
@@ -558,45 +664,59 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {}
       ]},
     {}
 '
-      id: 'company','
+''
+'''
+      id: 'company','''
       title: 'Company',
       icon: Building,
       links: []
         {}
 '
-          name: 'Our Team','
-          href: '/team',
-          icon: Users,'
+''
+'''
+          name: 'Our Team','''
+          href: '/team',''
+          icon: Users,'''
           description: 'Meet our experts'},
         {}
 '
-          name: 'Careers','
-          href: '/careers',
-          icon: Briefcase,'
+''
+'''
+          name: 'Careers','''
+          href: '/careers',''
+          icon: Briefcase,'''
           description: 'Join our team'},
         {}
 '
-          name: 'Partners','
-          href: '/partners',
-          icon: Building,'
+''
+'''
+          name: 'Partners','''
+          href: '/partners',''
+          icon: Building,'''
           description: 'Strategic partnerships'},
         {}
 '
-          name: 'News & Press','
-          href: '/news',
-          icon: FileText,'
+''
+'''
+          name: 'News & Press','''
+          href: '/news',''
+          icon: FileText,'''
           description: 'Latest news'},
         {}
 '
-          name: 'Events','
-          href: '/events',
-          icon: Calendar,'
+''
+'''
+          name: 'Events','''
+          href: '/events',''
+          icon: Calendar,'''
           description: 'Upcoming events'},
         {}
 '
-          name: 'Blog','
-          href: '/blog',
-          icon: BookOpen,'
+''
+'''
+          name: 'Blog','''
+          href: '/blog',''
+          icon: BookOpen,'''
           description: 'Latest insights'},
         {}
 '
@@ -607,28 +727,36 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {}
       ]},
     {}
 '
-      id: 'platform','
+''
+'''
+      id: 'platform','''
       title: 'Platform',
       icon: Settings,
       links: []
         {}
 '
-          name: 'Dashboard','
-          href: '/dashboard',
-          icon: BarChart3,'
+''
+'''
+          name: 'Dashboard','''
+          href: '/dashboard',''
+          icon: BarChart3,'''
           description: 'User dashboard'},
         {}
 '
-          name: 'Support Center','
-          href: '/support',
-          icon: HelpCircle,'
+''
+'''
+          name: 'Support Center','''
+          href: '/support',''
+          icon: HelpCircle,'''
           description: 'Technical support'},
         {}
 '
-          name: 'Community','
-          href: '/community',
-          icon: Users,'
-          description: 'User community'},'
+''
+'''
+          name: 'Community','''
+          href: '/community',''
+          icon: Users,'''
+          description: 'User community'},'''
         { name: 'Login', href: '/login', icon: User, description: 'Sign in' },
         {}
 '
@@ -639,39 +767,51 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {}
       ]},
     {}
 '
-      id: 'legal','
+''
+'''
+      id: 'legal','''
       title: 'Legal & Policies',
       icon: FileText,
       links: []
         {}
 '
-          name: 'Privacy Policy','
-          href: '/privacy',
-          icon: Lock,'
+''
+'''
+          name: 'Privacy Policy','''
+          href: '/privacy',''
+          icon: Lock,'''
           description: 'Privacy information'},
         {}
 '
-          name: 'Terms of Service','
-          href: '/terms',
-          icon: FileText,'
+''
+'''
+          name: 'Terms of Service','''
+          href: '/terms',''
+          icon: FileText,'''
           description: 'Terms and conditions'},
         {}
 '
-          name: 'Cookie Policy','
-          href: '/cookies',
-          icon: Shield,'
+''
+'''
+          name: 'Cookie Policy','''
+          href: '/cookies',''
+          icon: Shield,'''
           description: 'Cookie usage'},
         {}
 '
-          name: 'Security','
-          href: '/security',
-          icon: Shield,'
+''
+'''
+          name: 'Security','''
+          href: '/security',''
+          icon: Shield,'''
           description: 'Security measures'},
         {}
 '
-          name: 'Compliance','
-          href: '/compliance',
-          icon: Award,'
+''
+'''
+          name: 'Compliance','''
+          href: '/compliance',''
+          icon: Award,'''
           description: 'Regulatory compliance'},
         {}
 '
@@ -684,48 +824,48 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {}
     return location.pathname.startsWith (href) };
   if (!isOpen) {}
     return()
-      <div className="fixed left-0 top-16 z-40 w-16 h-full bg-slate-900/95 backdrop-blur-md border-r border-slate-700/50 lg:block hidden">"""
+      <div className="fixed left-0 top-16 z-40 w-16 h-full bg-slate-900/95 backdrop-blur-md border-r border-slate-700/50 lg:block hidden">""""
         <div className="flex flex-col items-center py-4 space-y-4">
           {navigationSections.slice(0, 6).map(section => {}
             return()              <button;
-                key={section.id}""
-                onClick={onToggle}"""
-                className="p-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors""
-                title={section.title}""
-              >"""
+                key={section.id}"""
+                onClick={onToggle}""""
+                className="p-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"""
+                title={section.title}"""
+              >""""
                 <Icon className="w-5 h-5"  />              </button>
             )})}
         </div>
-      </div>) }""
-  return ("""
-    <div className="fixed left-0 top-16 z-40 w-80 h-full bg-slate-900/95 backdrop-blur-md border-r border-slate-700/50 overflow-y-auto">"""
-      <div className="p-4">"""
-        <div className="flex items-center justify-between mb-6">"""
+      </div>) }"""
+  return (""""
+    <div className="fixed left-0 top-16 z-40 w-80 h-full bg-slate-900/95 backdrop-blur-md border-r border-slate-700/50 overflow-y-auto">""""
+      <div className="p-4">""""
+        <div className="flex items-center justify-between mb-6">""""
           <h2 className="text-lg font-semibold text-white">Navigation</h2>
-          <button""
-            onClick={onToggle}"""
-            className="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"""
-          >"""
+          <button"""
+            onClick={onToggle}""""
+            className="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors""""
+          >""""
             <X className="w-5 h-5"  />          </button>
-        </div>""
-"""
+        </div>"""
+""""
         <div className="space-y-2">
           {navigationSections.map(section => {}
-""
+"""
             return ("              <div key={section.id} className="space-y-1">
-                <button""
-                  onClick={() => toggleSection(section.id)}"""
-                  className="w-full flex items-center justify-between p-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"""
-                >"""
-                  <div className="flex items-center space-x-3">"""
-                    <Icon className="w-5 h-5"  />"""
+                <button"""
+                  onClick={() => toggleSection(section.id)}""""
+                  className="w-full flex items-center justify-between p-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors""""
+                >""""
+                  <div className="flex items-center space-x-3">""""
+                    <Icon className="w-5 h-5"  />""""
                     <span className="font-medium">{section.title}</span>
                   </div>'
                   <ChevronDown''
                     className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
                   />                </button>
-""
-                {isExpanded && ("""
+"""
+                {isExpanded && (""""
                   <div className="ml-4 space-y-1">
                     {section.links.map(link => {}
                       return()                        <Link;
@@ -736,10 +876,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {}
                             active''
                               ? 'bg-cyan-600 text-white'''`
                               : 'text-slate-300 hover:text-white hover:bg-slate-800'``
-                          }`}""
-                        >"""
-                          <div className="flex items-center space-x-3">"""
-                            <LinkIcon className="w-4 h-4"  />"""
+                          }`}"""
+                        >""""
+                          <div className="flex items-center space-x-3">""""
+                            <LinkIcon className="w-4 h-4"  />""""
                             <div className="flex-1 min-w-0">"                              <div className="font-medium">{link.name}</div>
                               {link.description && ('`
                                 <div'`'`
@@ -747,56 +887,57 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {}
                                 >
                                   {link.description}
                                 </div>
-                              )}""
-                            </div>"""
+                              )}"""
+                            </div>""""
                             {active && <ChevronRight className="w-4 h-4"  />}
                           </div>
                         </Link>) }) }
                   </div>) }
               </div>) }) }        </div>
-""
-        {/* Quick Actions */}"""
-        <div className="mt-8 pt-6 border-t border-slate-700">"""
+"""
+        {/* Quick Actions */}""""
+        <div className="mt-8 pt-6 border-t border-slate-700">""""
           <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">
-            Quick Actions""
-          </div>"""
-          <div className="space-y-2">""
-            <Link"""
-              to="/request-quote"""
-              className="block p-3 rounded-lg bg-gradient-to-r from-cyan-600 to-blue-600 text-white hover:from-cyan-700 hover:to-blue-700 transition-colors"""
-            >"""
-              <div className="flex items-center space-x-3">"""
-                <DollarSign className="w-4 h-4"  />"""
-                <span className="font-medium">Get Quote</span>"""
+            Quick Actions"""
+          </div>""""
+          <div className="space-y-2">"""
+            <Link""""
+              to="/request-quote""""
+              className="block p-3 rounded-lg bg-gradient-to-r from-cyan-600 to-blue-600 text-white hover:from-cyan-700 hover:to-blue-700 transition-colors""""
+            >""""
+              <div className="flex items-center space-x-3">""""
+                <DollarSign className="w-4 h-4"  />""""
+                <span className="font-medium">Get Quote</span>""""
                 <ExternalLink className="w-4 h-4 ml-auto"  />              </div>
-            </Link>""
-            <Link"""
-              to="/schedule-demo"""
-              className="block p-3 rounded-lg border border-slate-600 text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"""
-            >"""
-              <div className="flex items-center space-x-3">"""
-                <Calendar className="w-4 h-4"  />"""
-                <span className="font-medium">Schedule Demo</span>"""
+            </Link>"""
+            <Link""""
+              to="/schedule-demo""""
+              className="block p-3 rounded-lg border border-slate-600 text-slate-300 hover:text-white hover:bg-slate-800 transition-colors""""
+            >""""
+              <div className="flex items-center space-x-3">""""
+                <Calendar className="w-4 h-4"  />""""
+                <span className="font-medium">Schedule Demo</span>""""
                 <ExternalLink className="w-4 h-4 ml-auto"  />              </div>
             </Link>
           </div>
         </div>
-""
-        {/* Contact Info */}"""
-        <div className="mt-6 pt-6 border-t border-slate-700">"""
+"""
+        {/* Contact Info */}""""
+        <div className="mt-6 pt-6 border-t border-slate-700">""""
           <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">
-            Contact""
-          </div>"""
-          <div className="space-y-2 text-xs text-slate-400">"""
-            <div className="flex items-center space-x-2">"""
+            Contact"""
+          </div>""""
+          <div className="space-y-2 text-xs text-slate-400">""""
+            <div className="flex items-center space-x-2">""""
               <Mail className="w-3 h-3"  />
-              <span>contact@ziontechgroup.com</span>""
-            </div>"""
-            <div className="flex items-center space-x-2">"""
+              <span>contact@ziontechgroup.com</span>"""
+            </div>""""
+            <div className="flex items-center space-x-2">""""
               <PhoneCall className="w-3 h-3"  />              <span>+1 (555) 123-4567</span>
             </div>
           </div>
-        </div>
-      </div>
-    </div>) };'"`
+        </div>'"`
+      </div>'"`'"`
+    </div>) };'"`'"`'"`
+'"`'"`'"`
 '"`'"`
