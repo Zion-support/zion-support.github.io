@@ -106,11 +106,13 @@ npm run quality:full
 ```
 
 ### Run Tests
+
 ```bash
 npm run test:verify
 ```
 
 ### Monitor PM2
+
 ```bash
 pm2 monit          # Monitor processes
 pm2 logs           # View logs
@@ -119,6 +121,7 @@ pm2 restart bolt-app # Restart application
 ```
 
 ### PM2 Management
+
 ```bash
 pm2 save           # Save current configuration
 pm2 startup        # Configure startup

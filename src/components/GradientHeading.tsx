@@ -1,6 +1,1 @@
-''''
-GradientHeading.displayName = 'GradientHeading';
-'
-export { GradientHeading };''
-''
-''
+"GradientHeading.displayName = "GradientHeading";"export { GradientHeading }; 

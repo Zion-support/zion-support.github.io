@@ -31,8 +31,14 @@ async function handler(req, res) {
     const liveKey = process.env.STRIPE_SECRET_KEY || '';
     const testKey = process.env.STRIPE_TEST_SECRET_KEY || liveKey;
 
-    if (!isProdDomain() && liveKey.startsWith('sk_live') && !process.env.STRIPE_TEST_SECRET_KEY) {
-      throw new Error('Refusing to use live Stripe key on non-production domain');
+    if (
+      !isProdDomain() &&
+      liveKey.startsWith('sk_live') &&
+      !process.env.STRIPE_TEST_SECRET_KEY
+    ) {
+      throw new Error(
+        'Refusing to use live Stripe key on non-production domain'
+      );
     }
 
     const stripe = new Stripe(isProdDomain() ? liveKey : testKey, {
