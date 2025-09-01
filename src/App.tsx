@@ -17,6 +17,7 @@ const SettingsPage = lazy(() => import('./pages/SettingsPage').then(module => ({
 const AnalyticsDashboard = lazy(() => import('./components/dashboard/AnalyticsDashboard').then(module => ({ default: module.default })));
 const PerformanceMonitor = lazy(() => import('./components/monitoring/PerformanceMonitor').then(module => ({ default: module.default })));
 const ComprehensiveServicesShowcase = lazy(() => import('./pages/ComprehensiveServicesShowcase').then(module => ({ default: module.default })));
+const AdminDashboard = lazy(() => import('./pages/AdminDashboard').then(module => ({ default: module.default })));
 const EnhancedHomePage = lazy(() => import('./pages/EnhancedHomePage').then(module => ({ default: module.default })));
 const EnhancedPricingPage = lazy(() => import('./pages/EnhancedPricingPage').then(module => ({ default: module.default })));
 
@@ -74,6 +75,7 @@ function App() {
                   <Route path="/analytics" element={<AnalyticsDashboard />} />
                   <Route path="/monitoring" element={<PerformanceMonitor />} />
                   <Route path="/services-showcase" element={<ComprehensiveServicesShowcase />} />
+                  <Route path="/admin" element={<AdminDashboard />} />
                   <Route path="*" element={<SimplePage />} />
                 </Routes>
               </Suspense>
