@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-11T23:13:30.270Z",
+  "generatedAt": "2025-08-11T23:13:36.648Z",
   "functions": [
     "a11y-alt-text-auditor-runner",
     "a11y-audit-runner",
@@ -68,7 +68,7 @@
     "marketing-and-features-promo",
     "marketing-scheduler",
     "media-og-and-optimize",
-    "meta-tags-audit-runner",
+    "meta-accelerator",
     "netlify-auto-healer-runner",
     "newsroom-auto-publisher",
     "newsroom-runner",
