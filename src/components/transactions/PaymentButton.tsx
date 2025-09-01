@@ -12,10 +12,6 @@ import { useAnalytics } from "@/context/AnalyticsContext";
 import { event as gtagEvent } from "@/lib/gtag";
 import { captureException } from "@/lib/sentry";
 
-const stripePromise = loadStripe(
-  import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || ""
-);
-
 interface PaymentButtonProps {
   amount: number;
   serviceId: string;
