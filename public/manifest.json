@@ -1,11 +1,7 @@
 {
-  "name": "Zion Tech Group - AI-Powered Business Solutions",
-  "short_name": "Zion Tech",
-<<<<<<< HEAD
-  "description": "Leading provider of AI-powered business solutions, quantum computing, and innovative IT services for digital transformation.",
-=======
+
   "description": "Leading AI solutions, quantum computing, and digital transformation services",
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-7189
+
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",
@@ -13,7 +9,19 @@
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en-US",
-<<<<<<< HEAD
+
+  "name": "Zion Tech Group - Revolutionary Technology Solutions",
+  "short_name": "Zion Tech",
+  "description": "Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1f2937",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "dir": "ltr",
+
   "categories": ["business", "productivity", "technology", "utilities"],
   "icons": [
     {
@@ -83,123 +91,71 @@
       "src": "/images/zion-tech-group-logo.png",
       "sizes": "512x512",
       "type": "image/png",
-<<<<<<< HEAD
-      "purpose": "any maskable"
-=======
+
       "purpose": "maskable any"
     }
   ],
   "shortcuts": [
     {
-      "name": "Services",
-      "short_name": "Services",
-      "description": "View our AI and technology services",
-      "url": "/services",
-      "icons": [
-        {
-          "src": "/images/services-icon.png",
-          "sizes": "96x96"
-        }
-      ]
-    },
-    {
-      "name": "Contact",
-      "short_name": "Contact",
-      "description": "Get in touch with our team",
-      "url": "/contact",
-      "icons": [
-        {
-          "src": "/images/contact-icon.png",
-          "sizes": "96x96"
-        }
-      ]
-    },
-    {
-      "name": "AI Solutions",
-      "short_name": "AI Solutions",
-      "description": "Explore our AI-powered solutions",
-      "url": "/ai-services",
+
+      "name": "About Us",
+      "short_name": "About",
+      "description": "Learn about Zion Tech Group",
+      "url": "/about",
+
       "icons": [
         {
           "src": "/images/ai-icon.png",
           "sizes": "96x96"
         }
       ]
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-7189
+
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Get in touch with us",
+      "url": "/contact",
+      "icons": [
+        {
+          "src": "/icons/contact-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Services",
+      "short_name": "Services",
+      "description": "View our services",
+      "url": "/services",
+      "icons": [
+        {
+          "src": "/icons/services-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+
     }
   ],
   "screenshots": [
     {
-      "src": "/images/screenshot-desktop.png",
+
+      "src": "/screenshots/desktop-home.png",
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide",
-      "label": "Zion Tech Group Desktop Experience"
+      "label": "Homepage on desktop"
     },
     {
-      "src": "/images/screenshot-mobile.png",
+      "src": "/screenshots/mobile-home.png",
       "sizes": "390x844",
       "type": "image/png",
       "form_factor": "narrow",
-      "label": "Zion Tech Group Mobile Experience"
+      "label": "Homepage on mobile"
+
     }
   ],
-  "shortcuts": [
-    {
-      "name": "AI Solutions",
-      "short_name": "AI",
-      "description": "Explore our AI-powered business solutions",
-      "url": "/ai-solutions",
-      "icons": [
-        {
-          "src": "/images/ai-icon.png",
-          "sizes": "96x96"
-        }
-      ]
-    },
-    {
-      "name": "Services",
-      "short_name": "Services",
-      "description": "View our comprehensive service offerings",
-      "url": "/services",
-      "icons": [
-        {
-          "src": "/images/services-icon.png",
-          "sizes": "96x96"
-        }
-      ]
-    },
-    {
-      "name": "Contact",
-      "short_name": "Contact",
-      "description": "Get in touch with our team",
-      "url": "/contact",
-      "icons": [
-        {
-          "src": "/images/contact-icon.png",
-          "sizes": "96x96"
-        }
-      ]
-    },
-    {
-      "name": "Request Quote",
-      "short_name": "Quote",
-      "description": "Request a custom quote for your project",
-      "url": "/request-quote",
-      "icons": [
-        {
-          "src": "/images/quote-icon.png",
-          "sizes": "96x96"
-        }
-      ]
-    }
-  ],
-  "related_applications": [
-    {
-      "platform": "webapp",
-      "url": "https://ziontechgroup.com"
-    }
-  ],
+  "related_applications": [],
   "prefer_related_applications": false,
   "edge_side_panel": {
     "preferred_width": 400
@@ -207,40 +163,37 @@
   "launch_handler": {
     "client_mode": "navigate-existing"
   },
-  "handle_links": "preferred",
-<<<<<<< HEAD
-  "capture_links": "new-client",
-  "file_handlers": [
-    {
-      "action": "/upload",
-      "accept": {
-        "text/*": [".txt", ".md", ".json"],
-        "application/pdf": [".pdf"],
-        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".svg"]
-      }
-    }
-  ],
+
+
 =======
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-7189
+
   "protocol_handlers": [
     {
       "protocol": "web+zion",
       "url": "/protocol-handler?url=%s"
     }
   ],
-<<<<<<< HEAD
-=======
+
   "file_handlers": [
     {
       "action": "/file-handler",
       "accept": {
         "application/pdf": [".pdf"],
         "text/plain": [".txt"],
+=======
+  "file_handlers": [
+    {
+      "action": "/upload",
+      "accept": {
+        "text/*": [".txt", ".md", ".json"],
+        "application/pdf": [".pdf"],
+
         "image/*": [".png", ".jpg", ".jpeg", ".gif", ".webp"]
       }
     }
   ],
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-7189
+
+
   "share_target": {
     "action": "/share",
     "method": "POST",
@@ -257,25 +210,17 @@
       ]
     }
   },
-  "permissions": [
-    "notifications",
-    "background-sync",
-    "storage"
-  ],
-  "features": [
-    "Cross Platform",
-    "fast",
-<<<<<<< HEAD
-    "simple",
-    "AI-Powered",
-    "Quantum Computing",
-    "Business Solutions"
-=======
+
     "simple"
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-7189
+
   ],
   "developer": {
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com"
   }
 }
+=======
+  "handle_links": "preferred",
+  "capture_links": "existing-client-navigate"
+}
+>>>>>>> origin/auto/autonomy-17187611596
