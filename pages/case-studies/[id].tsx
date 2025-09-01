@@ -1,189 +1,261 @@
-import { useRouter } from 'next/router';
-import Link from 'next/link';
+import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-// Mock case study data - in a real app this would come from an API or CMS
-const caseStudies = {
-  'ai-automation-success': {
-    id: 'ai-automation-success',
-    title: 'AI-Powered Automation Success Story',
-    company: 'TechCorp Solutions',
-    industry: 'Technology',
-    challenge: 'Manual processes were consuming 40+ hours per week and causing delays in customer service.',
-    solution: 'Implemented intelligent automation workflows using AI and machine learning algorithms.',
-    results: [
-      'Reduced manual processing time by 85%',
-      'Improved customer response time from 24 hours to 2 hours',
-      'Increased team productivity by 60%',
-      'ROI of 300% within 6 months'
-    ],
-    technologies: ['AI/ML', 'RPA', 'Workflow Automation', 'API Integration'],
-    duration: '4 months',
-    teamSize: '8 developers + 2 business analysts'
-  },
-  'digital-transformation': {
-    id: 'digital-transformation',
-    title: 'Complete Digital Transformation Journey',
-    company: 'Global Manufacturing Inc.',
-    industry: 'Manufacturing',
-    challenge: 'Legacy systems were preventing growth and causing operational inefficiencies across 12 locations.',
-    solution: 'End-to-end digital transformation including cloud migration, process automation, and data analytics.',
-    results: [
-      'Unified operations across all locations',
-      'Reduced operational costs by 35%',
-      'Improved supply chain visibility by 90%',
-      'Enhanced decision-making with real-time analytics'
-    ],
-    technologies: ['Cloud Computing', 'IoT', 'Data Analytics', 'Process Automation'],
-    duration: '18 months',
-    teamSize: '15 developers + 5 architects + 10 business users'
-  },
-  'startup-scaling': {
-    id: 'startup-scaling',
-    title: 'Startup Scaling from 0 to 100K Users',
-    company: 'InnovateStart',
-    industry: 'SaaS',
-    challenge: 'Rapid user growth was overwhelming manual processes and causing system crashes.',
-    solution: 'Built scalable infrastructure and automated user onboarding, support, and analytics systems.',
-    results: [
-      'Successfully handled 100K+ concurrent users',
-      'Automated 95% of user onboarding',
-      'Reduced support tickets by 70%',
-      'Achieved 99.9% uptime'
-    ],
-    technologies: ['Microservices', 'Auto-scaling', 'CI/CD', 'Monitoring'],
-    duration: '6 months',
-    teamSize: '6 developers + 2 DevOps engineers'
-  }
-};
-
-export default function CaseStudyDetail() {
+export default function CaseStudyPage() {
   const router = useRouter();
   const { id } = router.query;
-  
-  const caseStudy = caseStudies[id as keyof typeof caseStudies];
+
+  // Case studies data - this should match the data in case-studies.tsx
+  const caseStudies = [
+    {
+      id: 'ai-automation-manufacturing',
+      title: 'AI-Powered Manufacturing Automation',
+      company: 'Global Manufacturing Corp',
+      industry: 'Manufacturing',
+      challenge: 'Traditional manufacturing processes were inefficient with high downtime and low production rates.',
+      solution: 'Implemented autonomous AI systems with predictive maintenance and real-time optimization.',
+      results: ['40% increase in production efficiency', '60% reduction in downtime', '25% improvement in quality control'],
+      duration: '6 months',
+      description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
+      fullContent: `
+        <h2>Background</h2>
+        <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes. 
+        High downtime, inefficient production scheduling, and quality control issues were impacting their bottom line.</p>
+        
+        <h2>Challenge</h2>
+        <p>The company needed to modernize their manufacturing operations while maintaining high quality standards 
+        and reducing operational costs. They required a solution that could adapt to changing production demands 
+        and minimize human intervention.</p>
+        
+        <h2>Solution</h2>
+        <p>We implemented a comprehensive AI automation system that included:</p>
+        <ul>
+          <li>Predictive maintenance algorithms</li>
+          <li>Real-time production optimization</li>
+          <li>Automated quality control systems</li>
+          <li>Intelligent scheduling and resource allocation</li>
+        </ul>
+        
+        <h2>Results</h2>
+        <p>The implementation delivered exceptional results:</p>
+        <ul>
+          <li><strong>40% increase in production efficiency</strong> - Streamlined processes and reduced bottlenecks</li>
+          <li><strong>60% reduction in downtime</strong> - Predictive maintenance prevented equipment failures</li>
+          <li><strong>25% improvement in quality control</strong> - AI-powered inspection systems caught defects early</li>
+        </ul>
+        
+        <h2>Implementation Timeline</h2>
+        <p>The project was completed in 6 months with minimal disruption to ongoing operations. 
+        The system was deployed in phases, allowing for gradual adoption and optimization.</p>
+      `
+    },
+    {
+      id: 'content-generation-scale',
+      title: 'Scaling Content Generation 10x',
+      company: 'Digital Marketing Agency',
+      industry: 'Marketing',
+      challenge: 'Manual content creation was limiting growth and unable to meet client demands.',
+      solution: 'Deployed autonomous AI content generation systems with human oversight.',
+      results: ['10x increase in content output', '85% improvement in engagement', '70% reduction in production time'],
+      duration: '4 months',
+      description: 'Transforming content creation through autonomous AI systems.',
+      fullContent: `
+        <h2>Background</h2>
+        <p>A leading digital marketing agency was struggling to scale their content creation capabilities. 
+        Their manual processes were limiting growth and preventing them from taking on new clients.</p>
+        
+        <h2>Challenge</h2>
+        <p>The agency needed to dramatically increase their content production capacity while maintaining 
+        high quality standards and creative excellence. They required a solution that could handle multiple 
+        content types and formats.</p>
+        
+        <h2>Solution</h2>
+        <p>We implemented an autonomous content generation system that included:</p>
+        <ul>
+          <li>AI-powered content creation engines</li>
+          <li>Automated research and fact-checking</li>
+          <li>Intelligent content optimization</li>
+          <li>Human oversight and quality control</li>
+        </ul>
+        
+        <h2>Results</h2>
+        <p>The transformation was remarkable:</p>
+        <ul>
+          <li><strong>10x increase in content output</strong> - From 50 to 500 pieces per month</li>
+          <li><strong>85% improvement in engagement</strong> - AI-optimized content performed significantly better</li>
+          <li><strong>70% reduction in production time</strong> - Automated workflows accelerated delivery</li>
+        </ul>
+        
+        <h2>Implementation Timeline</h2>
+        <p>The system was deployed in 4 months with comprehensive training for the creative team. 
+        The AI systems learned from human feedback and continuously improved over time.</p>
+      `
+    },
+    {
+      id: 'cloud-infrastructure-optimization',
+      title: 'Cloud Infrastructure Optimization',
+      company: 'E-commerce Platform',
+      industry: 'Technology',
+      challenge: 'Cloud costs were spiraling out of control with poor resource utilization.',
+      solution: 'Built self-healing, auto-scaling cloud infrastructure with intelligent cost optimization.',
+      results: ['50% reduction in cloud costs', '99.9% uptime achieved', '3x improvement in performance'],
+      duration: '8 months',
+      description: 'Building self-healing, auto-scaling cloud infrastructure.',
+      fullContent: `
+        <h2>Background</h2>
+        <p>A growing e-commerce platform was experiencing skyrocketing cloud costs and frequent outages. 
+        Their infrastructure was not scaling efficiently with their business growth.</p>
+        
+        <h2>Challenge</h2>
+        <p>The platform needed to optimize their cloud infrastructure for cost, performance, and reliability. 
+        They required a solution that could automatically adapt to traffic patterns and prevent outages.</p>
+        
+        <h2>Solution</h2>
+        <p>We designed and implemented a comprehensive cloud optimization system:</p>
+        <ul>
+          <li>Auto-scaling infrastructure with intelligent resource allocation</li>
+          <li>Self-healing systems with automatic failure recovery</li>
+          <li>Cost optimization algorithms</li>
+          <li>Performance monitoring and alerting</li>
+        </ul>
+        
+        <h2>Results</h2>
+        <p>The optimization delivered outstanding results:</p>
+        <ul>
+          <li><strong>50% reduction in cloud costs</strong> - Intelligent resource allocation eliminated waste</li>
+          <li><strong>99.9% uptime achieved</strong> - Self-healing systems prevented outages</li>
+          <li><strong>3x improvement in performance</strong> - Optimized infrastructure handled traffic spikes</li>
+        </ul>
+        
+        <h2>Implementation Timeline</h2>
+        <p>The project was completed in 8 months with careful planning to avoid service disruption. 
+        The new infrastructure was deployed alongside the existing system and gradually migrated traffic.</p>
+      `
+    }
+  ];
+
+  const caseStudy = caseStudies.find(study => study.id === id);
 
   if (!caseStudy) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold mb-4">Case Study Not Found</h1>
-            <p className="text-xl mb-8">The case study you're looking for doesn't exist.</p>
-            <Link href="/case-studies" className="px-6 py-3 bg-cyan-600 hover:bg-cyan-700 rounded-lg transition-colors">
-              Back to Case Studies
-            </Link>
-          </div>
+      <>
+        <Head>
+          <title>Case Study Not Found | Zion Tech Group</title>
+        </Head>
+        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+          <main className="container mx-auto px-6 py-12">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl font-bold mb-6 text-white">Case Study Not Found</h1>
+              <p className="text-xl text-white/80 mb-8">
+                The case study you're looking for doesn't exist.
+              </p>
+              <Link 
+                href="/case-studies"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+              >
+                ← Back to Case Studies
+              </Link>
+            </div>
+          </main>
         </div>
-      </div>
+      </>
     );
   }
 
   return (
     <>
       <Head>
-        <title>{caseStudy.title} - Case Study | Zion App</title>
-        <meta name="description" content={`${caseStudy.company} case study: ${caseStudy.challenge}`} />
+        <title>{caseStudy.title} | Zion Tech Group - Case Study</title>
+        <meta name="description" content={caseStudy.description} />
+        <meta property="og:title" content={`${caseStudy.title} | Zion Tech Group`} />
+        <meta property="og:description" content={caseStudy.description} />
       </Head>
       
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
-        {/* Navigation */}
-        <nav className="border-b border-white/10 bg-white/5 backdrop-blur-xl">
-          <div className="container mx-auto px-4 py-4">
-            <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-              ← Back to Home
-            </Link>
-          </div>
-        </nav>
-
-        {/* Hero Section */}
-        <div className="container mx-auto px-4 py-16">
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+        <main className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <span className="inline-block px-4 py-2 bg-cyan-600/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium mb-6">
-                Case Study
-              </span>
-              <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-transparent">
-                {caseStudy.title}
-              </h1>
-              <div className="flex items-center justify-center gap-6 text-lg text-gray-300">
-                <span className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-                  {caseStudy.company}
-                </span>
-                <span className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+            <nav className="mb-8">
+              <Link href="/case-studies" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                ← Back to Case Studies
+              </Link>
+            </nav>
+            
+            <header className="mb-12">
+              <div className="mb-6">
+                <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
                   {caseStudy.industry}
                 </span>
               </div>
-            </div>
-
-            {/* Challenge & Solution */}
-            <div className="grid md:grid-cols-2 gap-8 mb-16">
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold mb-4 text-red-400">The Challenge</h3>
-                <p className="text-lg text-gray-300 leading-relaxed">{caseStudy.challenge}</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold mb-4 text-green-400">Our Solution</h3>
-                <p className="text-lg text-gray-300 leading-relaxed">{caseStudy.solution}</p>
-              </div>
-            </div>
-
-            {/* Results */}
-            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-16">
-              <h3 className="text-3xl font-bold mb-6 text-center text-yellow-400">Results & Impact</h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                {caseStudy.results.map((result, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <span className="text-2xl text-green-400">✓</span>
-                    <p className="text-lg text-gray-300">{result}</p>
+              <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
+              <p className="text-xl text-cyan-400 font-semibold mb-2">{caseStudy.company}</p>
+              <p className="text-white/80 text-lg">{caseStudy.description}</p>
+            </header>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+              <div className="lg:col-span-2">
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
+                  <h2 className="text-2xl font-bold mb-6 text-white">Overview</h2>
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="font-semibold text-cyan-400 text-lg mb-2">Challenge</h3>
+                      <p className="text-white/80">{caseStudy.challenge}</p>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-fuchsia-400 text-lg mb-2">Solution</h3>
+                      <p className="text-white/80">{caseStudy.solution}</p>
+                    </div>
                   </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Technical Details */}
-            <div className="grid md:grid-cols-3 gap-8 mb-16">
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 text-center">
-                <h4 className="text-xl font-bold mb-3 text-cyan-400">Technologies</h4>
-                <div className="space-y-2">
-                  {caseStudy.technologies.map((tech, index) => (
-                    <span key={index} className="inline-block px-3 py-1 bg-cyan-600/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm">
-                      {tech}
-                    </span>
-                  ))}
                 </div>
               </div>
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 text-center">
-                <h4 className="text-xl font-bold mb-3 text-purple-400">Duration</h4>
-                <p className="text-2xl font-bold text-white">{caseStudy.duration}</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 text-center">
-                <h4 className="text-xl font-bold mb-3 text-green-400">Team Size</h4>
-                <p className="text-2xl font-bold text-white">{caseStudy.teamSize}</p>
+              
+              <div className="space-y-6">
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                  <h3 className="font-semibold text-green-400 text-lg mb-4">Key Results</h3>
+                  <ul className="space-y-3">
+                    {caseStudy.results.map((result, index) => (
+                      <li key={index} className="text-white/80 flex items-center gap-3">
+                        <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                        {result}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                  <h3 className="font-semibold text-blue-400 text-lg mb-4">Project Details</h3>
+                  <div className="space-y-3">
+                    <div>
+                      <span className="text-white/60 text-sm">Duration:</span>
+                      <p className="text-white font-medium">{caseStudy.duration}</p>
+                    </div>
+                    <div>
+                      <span className="text-white/60 text-sm">Industry:</span>
+                      <p className="text-white font-medium">{caseStudy.industry}</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-
-            {/* CTA */}
+            
+            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
+              <div 
+                className="prose prose-invert max-w-none"
+                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
+              />
+            </div>
+            
             <div className="text-center">
-              <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 backdrop-blur-xl rounded-2xl p-8 border border-cyan-500/30">
-                <h3 className="text-2xl font-bold mb-4">Ready to Start Your Success Story?</h3>
-                <p className="text-lg text-gray-300 mb-6">
-                  Let's discuss how we can help transform your business with intelligent automation.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="px-8 py-4 bg-cyan-600 hover:bg-cyan-700 rounded-lg font-semibold transition-colors">
-                    Get Started
-                  </Link>
-                  <Link href="/case-studies" className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg font-semibold transition-colors">
-                    View More Case Studies
-                  </Link>
-                </div>
-              </div>
+              <Link 
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+              >
+                Get Started with Your Project
+              </Link>
             </div>
           </div>
-        </div>
+        </main>
       </div>
     </>
   );
