@@ -158,25 +158,6 @@ const HomePage = memo(function HomePage() {
             </div>
           </section>
 
-          {/* Call to Action Section */}
-          <section className="mx-auto max-w-7xl px-6 pb-14">
-            <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-12 border border-cyan-500/20 text-center">
-              <h2 className="text-3xl font-bold mb-6 text-white">Ready to Transform Your Business?</h2>
-              <p className="text-xl text-white/80 mb-8 max-w-3xl mx-auto">
-                Join the autonomous revolution and discover how AI-powered automation can drive 
-                growth, efficiency, and innovation in your organization.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 transform hover:scale-105">
-                  Get Started Today
-                </Link>
-                <Link href="/case-studies" className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold text-lg border border-white/20 hover:border-cyan-400/50 hover:bg-white/20 transition-all duration-300">
-                  View Case Studies
-                </Link>
-              </div>
-            </div>
-          </section>
-
           {/* Footer */}
           <footer className="border-t border-white/20 mt-20">
             <div className="max-w-7xl mx-auto px-6 py-12">
