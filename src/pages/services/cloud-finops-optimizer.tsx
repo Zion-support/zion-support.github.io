@@ -1,339 +1,461 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import {
-
+import { Helmet } from 'react-helmet-async';
+import { 
   Cloud, 
   TrendingDown, 
-  DollarSign, 
   BarChart3, 
   Zap, 
-  Brain, 
-  Shield,
+  Shield, 
+  Globe, 
+  Lock,
   CheckCircle,
   ArrowRight,
-  Star,
-  Rocket,
-  Lightbulb,
-  Cpu,
-  Database,
-  Network,
-  Smartphone,
-  Lock,
-  Code,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Bot,
-  Workflow,
-  Eye,
-  Sparkles,
-  Atom,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  Activity,
-  MessageSquare,
-  BarChart,
-  Users2,
-  Settings,
-  Palette,
-  Calculator,
-  PieChart,
-  Target,
-  AlertTriangle,
+  Play,
+  Users,
   Clock,
-  Calendar,
-  FileText,
-  Monitor,
-  Gauge,
-  TrendingUp
+  Star,
+  Headphones,
+  Database,
+  Eye,
+  Search,
+  TrendingUp,
+  DollarSign,
+  Settings,
+  Target,
+  Activity
 } from 'lucide-react';
 
 export default function CloudFinOpsOptimizer() {
-
-  const features = [
-    {
-
-      icon: <Calculator className="w-6 h-6" />,
-      title: "Cost Analytics & Reporting",
-      description: "Real-time cost tracking and detailed financial reporting across all cloud services and resources."
-    },
-    {
-
-      icon: <TrendingDown className="w-6 h-6" />,
-      title: "Automated Cost Optimization",
-      description: "AI-powered recommendations to reduce cloud spending while maintaining performance and reliability."
-    },
-    {
-
-      icon: <PieChart className="w-6 h-6" />,
-      title: "Resource Utilization Insights",
-      description: "Deep visibility into resource usage patterns to identify waste and optimization opportunities."
-    },
-    {
-
-      icon: <Target className="w-6 h-6" />,
-      title: "Budget Management",
-      description: "Set and enforce budgets with automated alerts and cost control mechanisms."
-    },
-    {
-
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Performance Monitoring",
-      description: "Track cost-performance metrics to ensure optimal resource allocation and efficiency."
-    },
-    {
-
-      icon: <Cloud className="w-6 h-6" />,
-      title: "Multi-Cloud Optimization",
-      description: "Optimize costs across AWS, Azure, Google Cloud, and other cloud providers."
-    }
-  ];
-
-  const benefits = [
-    "Reduce cloud costs by 30-50%",
-    "Improve resource utilization by 40%",
-    "Eliminate wasted cloud spending",
-    "Automate cost optimization processes",
-    "Provide real-time cost visibility",
-    "Enable data-driven cloud decisions"
-  ];
-
-  const useCases = [
-    {
-
-      industry: "Enterprise",
-      description: "Large-scale cloud cost management and optimization for enterprise organizations"
-    },
-    {
-
-      industry: "Startups",
-      description: "Cost-effective cloud scaling and resource optimization for growing companies"
-    },
-    {
-
-      industry: "E-commerce",
-      description: "Dynamic resource scaling and cost optimization for seasonal traffic patterns"
-    },
-    {
-
-      industry: "SaaS Companies",
-      description: "Multi-tenant cost allocation and optimization for SaaS platforms"
-    }
-  ];
-
-  const optimizationStrategies = [
-    "Right-sizing instances and resources",
-    "Reserved instance and spot instance optimization",
-    "Storage lifecycle management",
-    "Network cost optimization",
-    "Container and serverless cost management",
-    "Cross-region cost optimization"
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="inline-flex items-center space-x-2 bg-zion-purple/20 text-zion-cyan px-4 py-2 rounded-full mb-6">
-              <Cloud className="w-5 h-5" />
-              <span className="text-sm font-medium">Cloud Cost Optimization</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Cloud FinOps Optimizer
-            </h1>
-            
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Transform your cloud financial operations with intelligent cost optimization, 
-              automated resource management, and comprehensive financial visibility across all cloud platforms.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300">
-                Start Free Trial
-              </button>
-              <button className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300">
-                Schedule Demo
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+    <>
+      <Helmet>
+        <title>Cloud FinOps Optimizer - Cloud Cost Management & Optimization | Zion Tech Group</title>
+        <meta name="description" content="Optimize your cloud costs with AI-powered FinOps automation. Reduce cloud spending by 30-50%, improve resource utilization, and gain real-time cost visibility." />
+        <meta name="keywords" content="cloud FinOps, cloud cost optimization, AWS cost management, Azure cost optimization, cloud spending, resource optimization, cost allocation" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/cloud-finops-optimizer" />
+      </Helmet>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive FinOps Features
-            </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Our Cloud FinOps Optimizer provides everything you need to master cloud financial operations 
-              and maximize your cloud investment returns.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300"
-              >
-                <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-zion-slate-light">{feature.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Cloud FinOps Optimizer?
-            </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Experience unprecedented control over your cloud costs with our intelligent 
-              optimization platform and expert FinOps practices.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
-              <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start space-x-3">
-                    <CheckCircle className="w-6 h-6 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    <span className="text-zion-slate-light">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-2xl font-semibold text-white mb-6">Use Cases</h3>
-              <div className="space-y-4">
-                {useCases.map((useCase, index) => (
-                  <div key={index} className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg p-4">
-                    <h4 className="font-semibold text-zion-cyan mb-2">{useCase.industry}</h4>
-                    <p className="text-zion-slate-light text-sm">{useCase.description}</p>
-                  </div>
-                ))}
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-darker">
+        {/* Hero Section */}
+        <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-sm font-medium mb-8">
+                <Cloud className="w-4 h-4 mr-2" />
+                AI-Powered Cloud Cost Optimization
               </div>
-            </motion.div>
+              
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Cloud FinOps Optimizer
+                <span className="block text-zion-cyan">Maximize Cloud ROI, Minimize Waste</span>
+              </h1>
+              
+              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+                Transform your cloud financial operations with AI-powered optimization. Reduce cloud costs by 30-50%, 
+                improve resource utilization, and gain real-time visibility into your cloud spending.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="https://ziontechgroup.com/contact" 
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105"
+                >
+                  Start Free Trial
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </a>
+                <a 
+                  href="#demo" 
+                  className="inline-flex items-center px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+                >
+                  <Play className="w-5 h-5 mr-2" />
+                  Watch Demo
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Optimization Strategies Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Proven Optimization Strategies
-            </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Our platform implements industry-leading FinOps practices to maximize your cloud cost savings.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {optimizationStrategies.map((strategy, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg p-6 text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-8 h-8 text-white" />
+        {/* Key Benefits */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Cloud FinOps Optimizer?
+              </h2>
+              <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+                Take control of your cloud costs with intelligent automation and data-driven insights
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
+                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
+                  <TrendingDown className="w-6 h-6 text-zion-cyan" />
                 </div>
-                <p className="text-zion-slate-light font-medium">{strategy}</p>
-              </motion.div>
-            ))}
+                <h3 className="text-xl font-semibold text-white mb-3">Cost Reduction</h3>
+                <p className="text-zion-slate-light">
+                  Reduce cloud costs by 30-50% through intelligent resource optimization and waste elimination.
+                </p>
+              </div>
+              
+              <div className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
+                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
+                  <Eye className="w-6 h-6 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Real-time Visibility</h3>
+                <p className="text-zion-slate-light">
+                  Gain complete visibility into cloud spending with real-time dashboards and detailed cost breakdowns.
+                </p>
+              </div>
+              
+              <div className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
+                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
+                  <Target className="w-6 h-6 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Resource Optimization</h3>
+                <p className="text-zion-slate-light">
+                  Automatically optimize resource allocation and sizing based on actual usage patterns and demand.
+                </p>
+              </div>
+              
+              <div className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
+                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
+                  <Globe className="w-6 h-6 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Multi-Cloud Support</h3>
+                <p className="text-zion-slate-light">
+                  Optimize costs across all major cloud providers from a single unified platform.
+                </p>
+              </div>
+              
+              <div className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
+                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
+                  <TrendingUp className="w-6 h-6 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Performance Optimization</h3>
+                <p className="text-zion-slate-light">
+                  Improve application performance while reducing costs through intelligent resource management.
+                </p>
+              </div>
+              
+              <div className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
+                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
+                  <Shield className="w-6 h-6 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Security & Compliance</h3>
+                <p className="text-zion-slate-light">
+                  Maintain security and compliance while optimizing costs with built-in governance controls.
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-darker/50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Powerful FinOps Features
+              </h2>
+              <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+                Everything you need to optimize your cloud financial operations
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">AI-Powered Cost Optimization</h3>
+                      <p className="text-zion-slate-light">
+                        Machine learning algorithms analyze usage patterns and automatically recommend cost-saving opportunities.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">Automated Resource Management</h3>
+                      <p className="text-zion-slate-light">
+                        Automatically scale resources up and down based on demand, eliminating waste and improving efficiency.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">Cost Allocation & Chargeback</h3>
+                      <p className="text-zion-slate-light">
+                        Accurately allocate costs to teams, projects, and business units with automated tagging and reporting.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">Reserved Instance Optimization</h3>
+                      <p className="text-zion-slate-light">
+                        Maximize savings with intelligent reserved instance recommendations and automated purchasing.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-zion-blue-dark/30 border border-zion-purple/20 rounded-xl p-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <BarChart3 className="w-8 h-8 text-zion-cyan" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4">Cost Analytics Dashboard</h3>
+                  <p className="text-zion-slate-light mb-6">
+                    Comprehensive cost analytics with drill-down capabilities and trend analysis.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 text-center">
+                    <div>
+                      <div className="text-2xl font-bold text-zion-cyan">40%</div>
+                      <div className="text-sm text-zion-slate-light">Average Cost Reduction</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-zion-cyan">85%</div>
+                      <div className="text-sm text-zion-slate-light">Resource Utilization</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Supported Clouds */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Supported Cloud Platforms
+              </h2>
+              <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+                Optimize costs across all major cloud providers from a single unified platform
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-zion-blue-dark/30 border border-zion-purple/20 rounded-lg p-6 text-center">
+                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Cloud className="w-6 h-6 text-zion-cyan" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Amazon Web Services</h3>
+                <p className="text-sm text-zion-slate-light">EC2, RDS, S3, Lambda, ECS</p>
+              </div>
+              
+              <div className="bg-zion-blue-dark/30 border border-zion-purple/20 rounded-lg p-6 text-center">
+                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Cloud className="w-6 h-6 text-zion-cyan" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Microsoft Azure</h3>
+                <p className="text-sm text-zion-slate-light">Virtual Machines, SQL Database, Blob Storage</p>
+              </div>
+              
+              <div className="bg-zion-blue-dark/30 border border-zion-purple/20 rounded-lg p-6 text-center">
+                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Cloud className="w-6 h-6 text-zion-cyan" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Google Cloud Platform</h3>
+                <p className="text-sm text-zion-slate-light">Compute Engine, Cloud SQL, Cloud Storage</p>
+              </div>
+              
+              <div className="bg-zion-blue-dark/30 border border-zion-purple/20 rounded-lg p-6 text-center">
+                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Cloud className="w-6 h-6 text-zion-cyan" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Other Clouds</h3>
+                <p className="text-sm text-zion-slate-light">IBM Cloud, Oracle Cloud, DigitalOcean</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-darker/50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Simple, Transparent Pricing
+              </h2>
+              <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+                Choose the plan that fits your cloud infrastructure. All plans include a 14-day free trial.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Starter Plan */}
+              <div className="bg-zion-blue-dark/30 border border-zion-purple/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300">
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
+                  <div className="text-4xl font-bold text-zion-cyan mb-2">$149</div>
+                  <div className="text-zion-slate-light">per month</div>
+                </div>
+                
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    Up to $50K monthly cloud spend
+                  </li>
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    Basic cost optimization
+                  </li>
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    Single cloud provider
+                  </li>
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    Standard reporting
+                  </li>
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    Email support
+                  </li>
+                </ul>
+                
+                <a 
+                  href="https://ziontechgroup.com/contact" 
+                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
+                >
+                  Start Free Trial
+                </a>
+              </div>
+              
+              {/* Professional Plan */}
+              <div className="bg-zion-blue-dark/50 border-2 border-zion-cyan rounded-xl p-8 relative">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-zion-cyan text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    Most Popular
+                  </span>
+                </div>
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
+                  <div className="text-4xl font-bold text-zion-cyan mb-2">$399</div>
+                  <div className="text-zion-slate-light">per month</div>
+                </div>
+                
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    Up to $500K monthly cloud spend
+                  </li>
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    Advanced AI optimization
+                  </li>
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    Multi-cloud support
+                  </li>
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    Advanced analytics
+                  </li>
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    Priority support
+                  </li>
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    Cost allocation
+                  </li>
+                </ul>
+                
+                <a 
+                  href="https://ziontechgroup.com/contact" 
+                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
+                >
+                  Start Free Trial
+                </a>
+              </div>
+              
+              {/* Enterprise Plan */}
+              <div className="bg-zion-blue-dark/30 border border-zion-purple/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300">
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
+                  <div className="text-4xl font-bold text-zion-cyan mb-2">Custom</div>
+                  <div className="text-zion-slate-light">contact us</div>
+                </div>
+                
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    Unlimited cloud spend
+                  </li>
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    Custom AI models
+                  </li>
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    White-label solutions
+                  </li>
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    Custom integrations
+                  </li>
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    Dedicated account manager
+                  </li>
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    24/7 phone support
+                  </li>
+                </ul>
+                
+                <a 
+                  href="https://ziontechgroup.com/contact" 
+                  className="w-full inline-flex items-center justify-center px-6 py-3 border border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-colors"
+                >
+                  Contact Sales
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10">
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Optimize Your Cloud Costs?
             </h2>
-            <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
-              Join thousands of organizations who have already transformed their cloud financial 
-              operations and achieved significant cost savings.
+            <p className="text-xl text-zion-slate-light mb-8">
+              Join thousands of organizations who have already reduced their cloud spending with AI-powered optimization.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center space-x-2">
-                <span>Get Started Now</span>
-                <ArrowRight className="w-5 h-5" />
-              </button>
-              <button className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300">
-                Contact Sales
-              </button>
+              <a 
+                href="https://ziontechgroup.com/contact" 
+                className="inline-flex items-center px-8 py-4 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
+              >
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </a>
+              <a 
+                href="tel:+13024640950" 
+                className="inline-flex items-center px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-colors"
+              >
+                <Headphones className="w-5 h-5 mr-2" />
+                Call +1 (302) 464-0950
+              </a>
             </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }

@@ -1,34 +1,32 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Shield, 
-  CheckCircle, 
-  AlertTriangle, 
-  FileText, 
+  Target, 
+  TrendingUp, 
+  Users, 
+  BarChart3, 
   Zap, 
+  Shield, 
   Globe, 
-  Lock,
-  BarChart3,
+  Clock,
+  CheckCircle,
+  Star,
   ArrowRight,
   Play,
-  Users,
-  Clock,
-  Star,
-  Headphones,
-  Database,
-  Eye,
-  Search,
-  TrendingUp
+  MessageSquare,
+  Calendar,
+  DollarSign,
+  Headphones
 } from 'lucide-react';
 
-export default function AIComplianceAssistant() {
+export default function AISalesCopilot() {
   return (
     <>
       <Helmet>
-        <title>AI Compliance Assistant - Automated Regulatory Compliance | Zion Tech Group</title>
-        <meta name="description" content="Stay compliant with automated regulatory monitoring, real-time compliance checks, and AI-powered risk assessment. Reduce compliance costs and eliminate manual errors." />
-        <meta name="keywords" content="AI compliance, regulatory compliance, compliance automation, risk assessment, compliance monitoring, regulatory technology" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-compliance-assistant" />
+        <title>AI Sales Copilot - Intelligent Sales Automation | Zion Tech Group</title>
+        <meta name="description" content="Transform your sales process with our AI Sales Copilot. Automate lead qualification, personalize outreach, and boost conversion rates with intelligent sales automation." />
+        <meta name="keywords" content="AI sales automation, sales copilot, lead qualification, sales intelligence, CRM automation, sales optimization" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-sales-copilot" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-darker">
@@ -37,18 +35,18 @@ export default function AIComplianceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-sm font-medium mb-8">
-                <Shield className="w-4 h-4 mr-2" />
-                AI-Powered Compliance Automation
+                <Zap className="w-4 h-4 mr-2" />
+                AI-Powered Sales Automation
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI Compliance Assistant
-                <span className="block text-zion-cyan">Stay Compliant, Stay Ahead</span>
+                AI Sales Copilot
+                <span className="block text-zion-cyan">Your Intelligent Sales Partner</span>
               </h1>
               
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-                Automate regulatory compliance with AI-powered monitoring, real-time risk assessment, 
-                and automated reporting. Reduce compliance costs by 60% while eliminating manual errors.
+                Transform your sales process with AI-powered automation. Qualify leads, personalize outreach, 
+                and close more deals with intelligent sales assistance that works 24/7.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -76,51 +74,51 @@ export default function AIComplianceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose AI Compliance Assistant?
+                Why Choose AI Sales Copilot?
               </h2>
               <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-                Transform your compliance operations with intelligent automation and real-time monitoring
+                Boost your sales performance with intelligent automation and data-driven insights
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
-                  <Eye className="w-6 h-6 text-zion-cyan" />
+                  <Target className="w-6 h-6 text-zion-cyan" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Real-time Monitoring</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">Smart Lead Qualification</h3>
                 <p className="text-zion-slate-light">
-                  Continuous monitoring of regulatory changes and compliance status across all jurisdictions.
+                  AI automatically scores and qualifies leads based on behavior, demographics, and engagement patterns.
                 </p>
               </div>
               
               <div className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
-                  <AlertTriangle className="w-6 h-6 text-zion-cyan" />
+                  <MessageSquare className="w-6 h-6 text-zion-cyan" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Risk Assessment</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">Personalized Outreach</h3>
                 <p className="text-zion-slate-light">
-                  AI-powered risk scoring and automated alerts for potential compliance violations.
+                  Generate personalized messages and follow-ups that resonate with each prospect's unique needs.
                 </p>
               </div>
               
               <div className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
-                  <FileText className="w-6 h-6 text-zion-cyan" />
+                  <BarChart3 className="w-6 h-6 text-zion-cyan" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Automated Reporting</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">Predictive Analytics</h3>
                 <p className="text-zion-slate-light">
-                  Generate compliance reports automatically with customizable templates and scheduling.
+                  Forecast sales outcomes and identify the best opportunities with AI-powered predictions.
                 </p>
               </div>
               
               <div className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
-                  <Globe className="w-6 h-6 text-zion-cyan" />
+                  <Clock className="w-6 h-6 text-zion-cyan" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Multi-Jurisdiction</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">24/7 Availability</h3>
                 <p className="text-zion-slate-light">
-                  Support for global regulations including GDPR, CCPA, SOX, HIPAA, and industry-specific standards.
+                  Your AI copilot never sleeps, engaging prospects at optimal times across all time zones.
                 </p>
               </div>
               
@@ -128,19 +126,19 @@ export default function AIComplianceAssistant() {
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
                   <TrendingUp className="w-6 h-6 text-zion-cyan" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Cost Reduction</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">Performance Optimization</h3>
                 <p className="text-zion-slate-light">
-                  Reduce compliance costs by up to 60% through automation and reduced manual effort.
+                  Continuously learn and improve from every interaction to maximize conversion rates.
                 </p>
               </div>
               
               <div className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
-                  <Lock className="w-6 h-6 text-zion-cyan" />
+                  <Shield className="w-6 h-6 text-zion-cyan" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Enterprise Security</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">Compliance & Security</h3>
                 <p className="text-zion-slate-light">
-                  Bank-level security with SOC 2 Type II compliance and end-to-end encryption.
+                  Built-in compliance features ensure all communications meet regulatory requirements.
                 </p>
               </div>
             </div>
@@ -152,10 +150,10 @@ export default function AIComplianceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Comprehensive Compliance Features
+                Powerful Features
               </h2>
               <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-                Everything you need to automate and streamline your compliance operations
+                Everything you need to automate and optimize your sales process
               </p>
             </div>
             
@@ -165,9 +163,9 @@ export default function AIComplianceAssistant() {
                   <div className="flex items-start space-x-4">
                     <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">Regulatory Change Monitoring</h3>
+                      <h3 className="text-lg font-semibold text-white mb-2">Intelligent Lead Scoring</h3>
                       <p className="text-zion-slate-light">
-                        AI continuously monitors regulatory bodies and automatically alerts you to relevant changes that affect your business.
+                        AI algorithms analyze prospect behavior, company data, and engagement patterns to automatically score and prioritize leads.
                       </p>
                     </div>
                   </div>
@@ -175,9 +173,9 @@ export default function AIComplianceAssistant() {
                   <div className="flex items-start space-x-4">
                     <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">Automated Compliance Checks</h3>
+                      <h3 className="text-lg font-semibold text-white mb-2">Multi-Channel Communication</h3>
                       <p className="text-zion-slate-light">
-                        Run automated compliance audits against current regulations with detailed reports and actionable recommendations.
+                        Seamlessly manage outreach across email, LinkedIn, phone, and SMS with unified conversation tracking.
                       </p>
                     </div>
                   </div>
@@ -185,9 +183,9 @@ export default function AIComplianceAssistant() {
                   <div className="flex items-start space-x-4">
                     <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">Policy Management</h3>
+                      <h3 className="text-lg font-semibold text-white mb-2">Smart Follow-up Sequences</h3>
                       <p className="text-zion-slate-light">
-                        Centralized policy management with version control, approval workflows, and automated distribution to stakeholders.
+                        Automatically schedule and send personalized follow-ups based on prospect engagement and response patterns.
                       </p>
                     </div>
                   </div>
@@ -195,9 +193,9 @@ export default function AIComplianceAssistant() {
                   <div className="flex items-start space-x-4">
                     <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">Incident Management</h3>
+                      <h3 className="text-lg font-semibold text-white mb-2">CRM Integration</h3>
                       <p className="text-zion-slate-light">
-                        Track and manage compliance incidents with automated workflows, escalation rules, and resolution tracking.
+                        Native integration with Salesforce, HubSpot, Pipedrive, and other popular CRM platforms.
                       </p>
                     </div>
                   </div>
@@ -209,18 +207,18 @@ export default function AIComplianceAssistant() {
                   <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-6">
                     <BarChart3 className="w-8 h-8 text-zion-cyan" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">Compliance Dashboard</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4">Real-time Analytics Dashboard</h3>
                   <p className="text-zion-slate-light mb-6">
-                    Real-time visibility into your compliance status across all regulations and jurisdictions.
+                    Monitor your sales performance with comprehensive analytics and actionable insights.
                   </p>
                   <div className="grid grid-cols-2 gap-4 text-center">
                     <div>
-                      <div className="text-2xl font-bold text-zion-cyan">99.9%</div>
-                      <div className="text-sm text-zion-slate-light">Compliance Rate</div>
+                      <div className="text-2xl font-bold text-zion-cyan">87%</div>
+                      <div className="text-sm text-zion-slate-light">Response Rate Increase</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-zion-cyan">60%</div>
-                      <div className="text-sm text-zion-slate-light">Cost Reduction</div>
+                      <div className="text-2xl font-bold text-zion-cyan">3.2x</div>
+                      <div className="text-sm text-zion-slate-light">Faster Lead Qualification</div>
                     </div>
                   </div>
                 </div>
@@ -229,63 +227,15 @@ export default function AIComplianceAssistant() {
           </div>
         </section>
 
-        {/* Supported Regulations */}
+        {/* Pricing Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Supported Regulations & Standards
+                Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-                Comprehensive coverage across major regulatory frameworks and industry standards
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-zion-blue-dark/30 border border-zion-purple/20 rounded-lg p-6 text-center">
-                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Globe className="w-6 h-6 text-zion-cyan" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Data Privacy</h3>
-                <p className="text-sm text-zion-slate-light">GDPR, CCPA, LGPD, PIPEDA</p>
-              </div>
-              
-              <div className="bg-zion-blue-dark/30 border border-zion-purple/20 rounded-lg p-6 text-center">
-                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Database className="w-6 h-6 text-zion-cyan" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Financial</h3>
-                <p className="text-sm text-zion-slate-light">SOX, Basel III, Dodd-Frank</p>
-              </div>
-              
-              <div className="bg-zion-blue-dark/30 border border-zion-purple/20 rounded-lg p-6 text-center">
-                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-6 h-6 text-zion-cyan" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Healthcare</h3>
-                <p className="text-sm text-zion-slate-light">HIPAA, HITECH, FDA</p>
-              </div>
-              
-              <div className="bg-zion-blue-dark/30 border border-zion-purple/20 rounded-lg p-6 text-center">
-                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-6 h-6 text-zion-cyan" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Cybersecurity</h3>
-                <p className="text-sm text-zion-slate-light">NIST, ISO 27001, SOC 2</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-darker/50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Transparent Pricing
-              </h2>
-              <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-                Choose the plan that fits your compliance needs. All plans include a 30-day free trial.
+                Choose the plan that fits your business needs. All plans include a 14-day free trial.
               </p>
             </div>
             
@@ -294,30 +244,30 @@ export default function AIComplianceAssistant() {
               <div className="bg-zion-blue-dark/30 border border-zion-purple/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300">
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
-                  <div className="text-4xl font-bold text-zion-cyan mb-2">$199</div>
+                  <div className="text-4xl font-bold text-zion-cyan mb-2">$99</div>
                   <div className="text-zion-slate-light">per month</div>
                 </div>
                 
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center text-zion-slate-light">
                     <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                    Up to 5 regulations
+                    Up to 1,000 leads/month
                   </li>
                   <li className="flex items-center text-zion-slate-light">
                     <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                    Basic compliance monitoring
+                    Basic AI lead scoring
                   </li>
                   <li className="flex items-center text-zion-slate-light">
                     <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                    Standard reporting
+                    Email automation
+                  </li>
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    Basic analytics
                   </li>
                   <li className="flex items-center text-zion-slate-light">
                     <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
                     Email support
-                  </li>
-                  <li className="flex items-center text-zion-slate-light">
-                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                    Up to 100 users
                   </li>
                 </ul>
                 
@@ -339,34 +289,34 @@ export default function AIComplianceAssistant() {
                 
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
-                  <div className="text-4xl font-bold text-zion-cyan mb-2">$499</div>
+                  <div className="text-4xl font-bold text-zion-cyan mb-2">$299</div>
                   <div className="text-zion-slate-light">per month</div>
                 </div>
                 
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center text-zion-slate-light">
                     <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                    Up to 25 regulations
+                    Up to 10,000 leads/month
                   </li>
                   <li className="flex items-center text-zion-slate-light">
                     <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                    Advanced AI monitoring
+                    Advanced AI lead scoring
                   </li>
                   <li className="flex items-center text-zion-slate-light">
                     <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                    Custom reporting
+                    Multi-channel automation
                   </li>
                   <li className="flex items-center text-zion-slate-light">
                     <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                    Policy management
+                    Advanced analytics & reporting
+                  </li>
+                  <li className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    CRM integrations
                   </li>
                   <li className="flex items-center text-zion-slate-light">
                     <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
                     Priority support
-                  </li>
-                  <li className="flex items-center text-zion-slate-light">
-                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                    Up to 500 users
                   </li>
                 </ul>
                 
@@ -389,7 +339,7 @@ export default function AIComplianceAssistant() {
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center text-zion-slate-light">
                     <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                    Unlimited regulations
+                    Unlimited leads
                   </li>
                   <li className="flex items-center text-zion-slate-light">
                     <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
@@ -428,10 +378,10 @@ export default function AIComplianceAssistant() {
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Automate Your Compliance?
+              Ready to Transform Your Sales Process?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join hundreds of organizations who have already transformed their compliance operations with AI.
+              Join thousands of sales teams who have already increased their conversion rates with AI Sales Copilot.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
