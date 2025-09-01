@@ -2,10 +2,8 @@ name: WORKFLOW_NAME_PLACEHOLDER
 'on':
   workflow_dispatch: {}
   schedule:
-  - cron: '*/30 * * * *'
-concurrency:
-  group: workflow-workflow_name_placeholder-${{ github.ref }}
-  cancel-in-progress: true
+    - cron: '0 2 * * 1' # Every Monday at 2 AM
+
 permissions:
   contents: write
   actions: read

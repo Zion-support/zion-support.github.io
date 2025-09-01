@@ -2,10 +2,7 @@ name: Automation Cleanup
 'on':
   workflow_dispatch: {}
   schedule:
-  - cron: '*/30 * * * *'
-concurrency:
-  group: workflow-automation-cleanup-${{ github.ref }}
-  cancel-in-progress: true
+    - cron: '0 2 * * *' # Daily at 2 AM
 
 permissions:
   contents: write

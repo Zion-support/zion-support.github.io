@@ -2,7 +2,7 @@ name: WORKFLOW_NAME_PLACEHOLDER
 'on':
   workflow_dispatch: {}
   schedule:
-    - cron: '0 */4 * * *'  # Every 4 hours
+    - cron: '0 0 * * *' # Every 4 hours
 
 permissions:
   contents: write
