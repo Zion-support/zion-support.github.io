@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-09-01T12:29:29.934Z",
-  "reportId": "2025-09-01T12-29-29-934Z",
+  "timestamp": "2025-09-01T12:05:10.567Z",
+  "reportId": "2025-09-01T12-05-10-567Z",
   "summary": {
     "totalErrors": 0,
     "lintErrors": 0,
@@ -24,7 +24,7 @@
     "build": {
       "hasErrors": true,
       "buildSuccess": false,
-      "output": "\n> zion-tech-group@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n   - Environments: .env\n   - Experiments (use with caution):\n     ✓ optimizeCss\n     · optimizePackageImports\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully in 2.7s\n   Collecting page data ...\n\n> Build error occurred\n[Error: Cannot find module '/workspace/.next/server/middleware-manifest.json'\nRequire stack:\n- /workspace/node_modules/next/dist/build/index.js\n- /workspace/node_modules/next/dist/cli/next-build.js] {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: [Array]\n}\n"
+      "output": "\n> zion-tech-group@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n   - Environments: .env\n   - Experiments (use with caution):\n     ✓ optimizeCss\n     · optimizePackageImports\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully in 3.0s\n   Collecting page data ...\n[Error: Cannot find module '/workspace/.next/server/pages/index.js'\nRequire stack:\n- /workspace/node_modules/next/dist/server/require.js\n- /workspace/node_modules/next/dist/server/load-components.js\n- /workspace/node_modules/next/dist/build/utils.js\n- /workspace/node_modules/next/dist/build/worker.js\n- /workspace/node_modules/next/dist/compiled/jest-worker/processChild.js] {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: [Array]\n}\n\n> Build error occurred\n[Error: Failed to collect page data for /] { type: 'Error' }\n"
     },
     "corruptedFiles": []
   },
