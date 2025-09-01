@@ -7,7 +7,7 @@ function runNode(relativePath, args = []) {
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
 }
 
-exports.config = { schedule: '13 */6 * * *' };
+exports.config = { schedule: '11 */2 * * *' };
 
 exports.handler = async () => {
   const logs = [];
@@ -20,7 +20,7 @@ exports.handler = async () => {
     return status;
   }
 
-  step('a11y:audit', () => runNode('automation/a11y-audit.cjs'));
+  step('og:validate', () => runNode('automation/og-tags-validator.cjs'));
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };
