@@ -39,7 +39,9 @@ import Categories from './pages/Categories';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import NewProductsPage from './pages/NewProductsPage';
-import MoreProductsPage from './pages/MoreProductsPage';
+erpabg-codex/add-new-products-page-with-10-items
+import NewServicesPage from './pages/NewServicesPage';
+main
 import Sitemap from './pages/Sitemap';
 import PartnersPage from './pages/Partners';
 import Help from './pages/Help';
@@ -70,7 +72,7 @@ const baseRoutes = [
   { path: '/equipment', element: <EquipmentPage /> },
   { path: '/equipment/:id', element: <EquipmentDetail /> },
   { path: '/new-products', element: <NewProductsPage /> },
-  { path: '/new-services', element: <NewServicesPage /> },
+  { path: '/more-products', element: <MoreProductsPage /> },
   { path: '/analytics', element: <Analytics /> },
   { path: '/mobile-launch', element: <MobileLaunchPage /> },
   { path: '/open-app', element: <OpenAppRedirect /> },
