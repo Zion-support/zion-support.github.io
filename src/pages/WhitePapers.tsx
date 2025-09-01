@@ -338,7 +338,7 @@ export default function WhitePapers() {
                   className={`bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow ${
                     paper.featured ? 'ring-2 ring-zion-cyan' : ''
                   }`}
-
+                >
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-2">
                       <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
