@@ -53,6 +53,17 @@
     }
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    ".next",
+    "out",
+    "dist",
+    "build",
+    "automation",
+    "scripts",
+    "fix_*.js",
+    "fix_*.cjs",
+    "*.fix.js",
+    "*.fix.cjs",
+    "supabase/functions/**"
   ]
 }
