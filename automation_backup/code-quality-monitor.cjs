@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+
 const { execSync } = require('child_process');
 
 class CodeQualityMonitor {
@@ -17,7 +16,7 @@ class CodeQualityMonitor {
   async analyzeCodeQuality() {
     try {
       // Analyze TypeScript complexity
-      const result = execSync('npx tsc --noEmit', { encoding: 'utf8' });
+      execSync('npx tsc --noEmit', { encoding: 'utf8' });
       this.metrics.complexity = this.calculateComplexity();
       this.metrics.maintainability = this.calculateMaintainability();
 

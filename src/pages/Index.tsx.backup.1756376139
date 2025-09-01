@@ -1,9 +1,4 @@
 import React from 'react';
-
-<<<<<<< HEAD
-const Home: React.FC = () => {
-=======
-
 import { Footer } from "@/components/Footer";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
@@ -33,11 +28,9 @@ import {
   BarChart3,
   Smartphone
 } from "lucide-react";
-
 export default function Index() {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
-  
   // Tools and features showcase
   const toolsFeatures = [
     {
@@ -83,8 +76,6 @@ export default function Index() {
       link: "/mobile-launch"
     }
   ];
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4b87
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       {/* Hero Section */}
@@ -113,7 +104,6 @@ export default function Index() {
           </div>
         </div>
       </div>
-
       {/* Quick Links */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-3 gap-8">
@@ -126,7 +116,6 @@ export default function Index() {
               Learn More
             </a>
           </div>
-
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
             <h3 className="text-2xl font-bold text-white mb-4">Our Products</h3>
             <p className="text-gray-300 mb-6">
@@ -136,7 +125,6 @@ export default function Index() {
               View Products
             </a>
           </div>
-
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
             <h3 className="text-2xl font-bold text-white mb-4">Get In Touch</h3>
             <p className="text-gray-300 mb-6">
@@ -148,7 +136,6 @@ export default function Index() {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="text-center py-16">
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 max-w-4xl mx-auto">
@@ -177,5 +164,4 @@ export default function Index() {
     </div>
   );
 };
-
 export default Home;

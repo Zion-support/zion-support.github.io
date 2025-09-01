@@ -69,11 +69,7 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-tooltip": "^1.0.7",
     "@reduxjs/toolkit": "^2.8.2",
-<<<<<<< HEAD
-    "@rollup/rollup-linux-x64-gnu": "^4.18.0",
-=======
     "@rollup/rollup-linux-x64-gnu": "^4.49.0",
->>>>>>> cursor/website-audit-content-update-and-deployment-dee9
     "@stripe/stripe-js": "^7.9.0",
     "@tailwindcss/postcss": "^4.1.12",
     "@tanstack/react-query": "^5.85.5",
@@ -133,10 +129,6 @@
     }
   },
   "resolutions": {
-<<<<<<< HEAD
-    "@rollup/rollup-darwin-x64": "@rollup/rollup-linux-x64-gnu"
-=======
     "rollup": "^4.18.0"
->>>>>>> cursor/website-audit-content-update-and-deployment-dee9
   }
 }

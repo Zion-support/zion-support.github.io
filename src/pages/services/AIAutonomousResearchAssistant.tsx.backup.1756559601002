@@ -245,7 +245,7 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Content Sections */}
       <section className="relative py-12 px-4 sm:px-6 lg:px-8">

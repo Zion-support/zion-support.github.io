@@ -67,10 +67,6 @@ export default function Services() {
 
   // Enhanced categories with new services
   const categories = [
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/website-audit-content-update-and-deployment-dee9
     { id: 'all', name: 'All Services', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.length, icon: '🚀', color: 'from-cyan-500 to-blue-500' },
     { id: 'AI & Autonomous Operations', name: 'AI & Autonomous Operations', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Autonomous Operations').length, icon: '🤖', color: 'from-purple-500 to-pink-500' },
     { id: 'Quantum Computing', name: 'Quantum Computing', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-indigo-500 to-purple-500' },

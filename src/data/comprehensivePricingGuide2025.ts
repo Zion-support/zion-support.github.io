@@ -660,7 +660,7 @@ export interface ServicePricing {
     supportLevel: "24/7",
     contactInfo
   }
-];
+};
 
 export const comprehensivePricingGuide2025: ServicePricing[] = [
   {

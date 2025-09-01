@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { cn } from '@/lib/utils';
 /**
  * Image component that falls back to a placeholder and offers a retry button when the image fails to load.

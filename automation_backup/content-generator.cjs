@@ -106,7 +106,7 @@ export default Page;`;
   }
 }
 
-const generator = new ContentGenerator();
 // Example usage:
+// const generator = new ContentGenerator();
 // generator.generateContent('blog', 'My Blog Post', { title: 'My Blog Post', description: 'A great blog post' });
 console.log('Content generator ready');
