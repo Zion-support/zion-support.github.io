@@ -292,11 +292,7 @@ export default function EquipmentDetail() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Left Column - Images */}
             <div className="lg:col-span-2">
-              <ProductGallery
-                images={equipment.images}
-                videoUrl={equipment.videoUrl}
-                modelUrl={equipment.modelUrl}
-              />
+              <ProductGallery images={equipment.images} />
 
               {/* Product Details Tabs */}
               <div className="mt-8">
