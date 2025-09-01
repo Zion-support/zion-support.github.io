@@ -48,6 +48,36 @@
   --zion-teal-dark: #0d9488;
   --zion-rose: #f43f5e;
   --zion-rose-light: #fb7185;
+}
+
+/* Responsive Design Improvements */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+  
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  h2 {
+    font-size: 1.75rem !important;
+  }
+  
+  h3 {
+    font-size: 1.5rem !important;
+  }
+}
   --zion-rose-dark: #e11d48;
   --zion-sky: #0ea5e9;
   --zion-sky-light: #38bdf8;

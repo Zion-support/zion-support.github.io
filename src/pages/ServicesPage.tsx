@@ -7,6 +7,8 @@ import { INNOVATIVE_AI_SERVICES_2025 } from '@/data/innovativeAIServices2025';
 import { CYBERSECURITY_SERVICES_2025 } from '@/data/cybersecurityServices2025';
 import { BLOCKCHAIN_WEB3_SERVICES_2025 } from '@/data/blockchainWeb3Services2025';
 import { IOT_EDGE_SERVICES_2025 } from '@/data/iotEdgeServices2025';
+import { REVOLUTIONARY_SERVICES_2026 } from '@/data/revolutionaryServices2026';
+import { ADVANCED_MICRO_SAAS_2026 } from '@/data/advancedMicroSaaS2026';
 import { SEO } from '@/components/SEO';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -140,6 +142,8 @@ export default React.memo(function ServicesPage() {
     ...CYBERSECURITY_SERVICES_2025,
     ...BLOCKCHAIN_WEB3_SERVICES_2025,
     ...IOT_EDGE_SERVICES_2025,
+    ...REVOLUTIONARY_SERVICES_2026,
+    ...ADVANCED_MICRO_SAAS_2026,
   ];
 
   const filteredServices = allServices.filter (service => {

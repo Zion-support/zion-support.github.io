@@ -43,6 +43,7 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
+    "@rollup/rollup-linux-x64-gnu": "^4.50.0",
     "@vitejs/plugin-react": "^5.0.2",
     "axios": "^1.6.0",
     "critters": "^0.0.23",

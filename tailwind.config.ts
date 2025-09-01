@@ -1,25 +1,16 @@
-<<<<<<< HEAD
 import type { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
 
 const config: Config = {
-=======
-import type { Config } from 'tailwindcss'
-
-export default {
+  darkMode: 'class',
   content: [
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}',
     './src/**/*.{html,js}',
-    './node_modules/tw-elements/dist/js/**/*.js'
-  ],
->>>>>>> cursor/add-new-services-and-advertise-them-971c
-  darkMode: 'class',
-  content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx,js,jsx}'
+    './node_modules/tw-elements/dist/js/**/*.js'
   ],
   theme: {
     extend: {

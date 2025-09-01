@@ -38,6 +38,7 @@ const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ d
 const AIThreatIntelligence = lazy(() => import('./backup-pages/src-pages/services/ai-threat-intelligence-platform').then(module => ({ default: module.AIThreatIntelligencePlatform })));
 const BlockchainSupplyChain = lazy(() => import('./backup-pages/src-pages/services/blockchain-supply-chain-platform').then(module => ({ default: module.BlockchainSupplyChainPlatform })));
 const AdvancedServicesShowcase = lazy(() => import('./backup-pages/src-pages/AdvancedServicesShowcase2028').then(module => ({ default: module.AdvancedServicesShowcase2028 })));
+const AIQuantumFinancialTrading = lazy(() => import('./pages/services/ai-quantum-financial-trading').then(module => ({ default: module.default })));
 
 // Loading component
 const PageLoader = () => (
@@ -66,6 +67,8 @@ function App() {
                 <Route path="/services/*" element={<ServicesPage />} />
                 <Route path="/services/ai-threat-intelligence" element={<AIThreatIntelligence />} />
                 <Route path="/services/blockchain-supply-chain" element={<BlockchainSupplyChain />} />
+                <Route path="/services/ai-quantum-financial-trading" element={<AIQuantumFinancialTrading />} />
+                <Route path="/services/AIQuantumFinancialTrading" element={<AIQuantumFinancialTrading />} />
                 <Route path="/advanced-services-2028" element={<AdvancedServicesShowcase />} />
                 <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
                 <Route path="/comprehensive-services-2026" element={<ComprehensiveServicesShowcase2026 />} />
