@@ -207,6 +207,37 @@ module.exports = {
       log_file: 'logs/sitemap-runner.log',
       out_file: 'logs/sitemap-runner-out.log',
       error_file: 'logs/sitemap-runner-error.log'
+    },
+
+    // Automated Build & Lint fixer
+    {
+      name: 'auto-fix-and-build',
+      script: 'bash',
+      args: '-lc "npm install --silent && npm run lint || true && npm run type-check || true && npm run build"',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: { NODE_ENV: 'production' },
+      cron_restart: '0 */6 * * *',
+      log_file: 'logs/auto-fix-and-build.log',
+      out_file: 'logs/auto-fix-and-build-out.log',
+      error_file: 'logs/auto-fix-and-build-error.log'
+    },
+
+    // Watcher to rebuild on changes
+    {
+      name: 'dev-watch-build',
+      script: 'bash',
+      args: '-lc "npm run build"',
+      instances: 1,
+      watch: ['src', 'public', 'postcss.config.js', 'vite.config.ts'],
+      ignore_watch: ['dist', 'node_modules', 'logs'],
+      max_memory_restart: '1G',
+      env: { NODE_ENV: 'development' },
+      log_file: 'logs/dev-watch-build.log',
+      out_file: 'logs/dev-watch-build-out.log',
+      error_file: 'logs/dev-watch-build-error.log'
     }
   ],
 
