@@ -1,1 +1,11 @@
-export default function Page() { return <div className="py-10">Sustainable technology practices</div>; }
+import React from 'react';
+export default function Page() {
+  return (
+    <main className="min-h-screen bg-black text-zinc-100 p-8">
+      <section className="prose prose-invert max-w-3xl mx-auto">
+        <h1>chat-content sustainable-technology-practices</h1>
+        <p>Auto-healed placeholder. Replace with real content.</p>
+      </section>
+    </main>
+  );
+}

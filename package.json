@@ -238,8 +238,7 @@
     "conflicts:cron:start": "bash automation/merge-conflict-cron.sh start",
     "conflicts:cron:stop": "bash automation/merge-conflict-cron.sh stop",
     "conflicts:cron:status": "bash automation/merge-conflict-cron.sh status",
-    "book:export:pdf": "node scripts/export-zion-book.mjs",
-    "book:export:epub": "curl -sS -o dist/zion-os-book.epub http://localhost:3000/api/book/export-epub || true"
+    "fix:all": "eslint . --ext .js,.jsx,.ts,.tsx --fix || true && node fix_typescript_syntax_errors.cjs || true && node fix_empty_files.cjs || true && node fix_empty_pages.js || true && node fix_corrupted_files.js || true && node fix_all_typescript_errors.cjs || true && node fix_utils_files.js || true && node fix_remaining_errors.cjs || true && node final_fix.cjs || true"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
