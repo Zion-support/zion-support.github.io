@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
+
   Brain,
   Zap,
   Users,
@@ -198,32 +199,38 @@ import {
 } from 'lucide-react';
 
 export function AIEnterpriseResourceOptimizer() {
+
   const features = [
     {
+
       icon: Brain,
       title: 'AI-Powered Resource Allocation',
       description: 'Intelligent algorithms that optimize resource distribution across your entire enterprise',
       benefits: ['Dynamic resource allocation', 'Predictive demand forecasting', 'Cost optimization', 'Performance maximization']
     },
     {
+
       icon: BarChart3,
       title: 'Real-Time Analytics Dashboard',
       description: 'Comprehensive monitoring and analytics for all enterprise resources',
       benefits: ['Live resource tracking', 'Performance metrics', 'Trend analysis', 'Custom reporting']
     },
     {
+
       icon: Zap,
       title: 'Automated Optimization',
       description: 'Continuous learning system that automatically adjusts resource allocation',
       benefits: ['Machine learning optimization', 'Automated decision making', 'Continuous improvement', 'Adaptive algorithms']
     },
     {
+
       icon: Users,
       title: 'Team Productivity Enhancement',
       description: 'AI-driven insights to maximize team efficiency and collaboration',
       benefits: ['Workload balancing', 'Skill matching', 'Collaboration optimization', 'Performance tracking']
     },
     {
+
       icon: Cloud,
       title: 'Multi-Cloud Resource Management',
       description: 'Unified management across AWS, Azure, Google Cloud, and on-premise infrastructure',
@@ -233,6 +240,7 @@ export function AIEnterpriseResourceOptimizer() {
 
   const pricingPlans = [
     {
+
       name: 'Starter',
       price: '$299',
       period: '/month',
@@ -249,6 +257,7 @@ export function AIEnterpriseResourceOptimizer() {
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$799',
       period: '/month',
@@ -267,6 +276,7 @@ export function AIEnterpriseResourceOptimizer() {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: 'Custom',
       period: '',
@@ -288,24 +298,28 @@ export function AIEnterpriseResourceOptimizer() {
 
   const optimizationFeatures = [
     {
+
       title: 'Infrastructure Optimization',
       description: 'AI-powered infrastructure scaling and cost optimization',
       icon: Server,
       benefits: ['Auto-scaling', 'Cost reduction', 'Performance tuning', 'Capacity planning']
     },
     {
+
       title: 'Workforce Optimization',
       description: 'Intelligent workforce planning and productivity enhancement',
       icon: Users,
       benefits: ['Skill matching', 'Workload balancing', 'Training recommendations', 'Performance analytics']
     },
     {
+
       title: 'Financial Resource Management',
       description: 'Comprehensive financial planning and budget optimization',
       icon: DollarSign,
       benefits: ['Budget optimization', 'Cost forecasting', 'ROI analysis', 'Financial planning']
     },
     {
+
       title: 'Supply Chain Optimization',
       description: 'End-to-end supply chain visibility and optimization',
       icon: Truck,
@@ -315,24 +329,28 @@ export function AIEnterpriseResourceOptimizer() {
 
   const useCases = [
     {
+
       title: 'Manufacturing',
       description: 'Optimize production lines, equipment utilization, and workforce allocation',
       icon: Factory,
       benefits: ['Production optimization', 'Equipment efficiency', 'Workforce planning', 'Quality improvement']
     },
     {
+
       title: 'Healthcare',
       description: 'Optimize patient care resources, staff scheduling, and facility utilization',
       icon: Stethoscope,
       benefits: ['Patient flow optimization', 'Staff scheduling', 'Facility utilization', 'Resource allocation']
     },
     {
+
       title: 'Retail',
       description: 'Optimize inventory, staffing, and store operations',
       icon: Store,
       benefits: ['Inventory optimization', 'Staff scheduling', 'Store operations', 'Customer experience']
     },
     {
+
       title: 'Technology',
       description: 'Optimize development resources, infrastructure, and team productivity',
       icon: Code,
@@ -547,6 +565,7 @@ export function AIEnterpriseResourceOptimizer() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-gradient-to-br from-cyan-900/20 to-blue-900/20 p-8 rounded-xl border ${
+
                   plan.popular 
                     ? 'border-cyan-500/50 shadow-lg shadow-cyan-500/20' 
                     : 'border-cyan-500/20'
@@ -581,6 +600,7 @@ export function AIEnterpriseResourceOptimizer() {
                 <Link
                   to={plan.name === 'Enterprise' ? '/contact' : '/pricing'}
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
                       : 'border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'

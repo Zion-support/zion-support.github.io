@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronDown, Globe } from 'lucide-react';
 export const LanguageSelector = () => {
+
     const [isOpen, setIsOpen] = useState(false);
     const [currentLanguage, setCurrentLanguage] = useState('EN');
     const languages = [
@@ -16,6 +17,7 @@ export const LanguageSelector = () => {
         { code: 'KO', name: '한국어', flag: '🇰🇷' }
     ];
     const handleLanguageChange = (languageCode) => {
+
         setCurrentLanguage(languageCode);
         setIsOpen(false);
         // Here you would typically implement language change logic

@@ -1,4 +1,5 @@
 export interface InnovativeITService {
+
   id: string;
   title: string;
   description: string;
@@ -26,6 +27,7 @@ export interface InnovativeITService {
   location: string;
   availability: string;
   author: {
+
     name: string;
     id: string;
     avatarUrl?: string;
@@ -38,6 +40,7 @@ export interface InnovativeITService {
 export const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [
   // Cloud Infrastructure & DevOps Services
   {
+
     id: "cloud-native-devops-platform",
     title: "Cloud-Native DevOps Platform Elite",
     description: "Comprehensive cloud-native DevOps platform with automated CI/CD pipelines, infrastructure as code, monitoring, and security compliance for modern application development.",
@@ -86,6 +89,7 @@ export const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [
     location: "Global",
     availability: "Immediate",
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
@@ -97,6 +101,7 @@ export const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [
 
   // Advanced Cybersecurity Services
   {
+
     id: "zero-trust-security-architecture",
     title: "Zero Trust Security Architecture Suite",
     description: "Comprehensive zero trust security architecture implementation with identity verification, network segmentation, and continuous monitoring for enterprise-grade security.",
@@ -145,6 +150,7 @@ export const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [
     location: "Global",
     availability: "Immediate",
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
@@ -156,6 +162,7 @@ export const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [
 
   // Data Center & Infrastructure Services
   {
+
     id: "hybrid-cloud-infrastructure",
     title: "Hybrid Cloud Infrastructure Solutions",
     description: "Advanced hybrid cloud infrastructure services combining on-premises, private cloud, and public cloud resources for optimal performance, cost, and security.",
@@ -204,6 +211,7 @@ export const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [
     location: "Global",
     availability: "Immediate",
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
@@ -215,6 +223,7 @@ export const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [
 
   // Network & Connectivity Services
   {
+
     id: "software-defined-networking",
     title: "Software-Defined Networking (SDN) Solutions",
     description: "Advanced software-defined networking solutions for enterprise networks with centralized management, automation, and enhanced security capabilities.",
@@ -263,6 +272,7 @@ export const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [
     location: "Global",
     availability: "Immediate",
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
@@ -274,6 +284,7 @@ export const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [
 
   // Data Management & Analytics Services
   {
+
     id: "enterprise-data-lake-platform",
     title: "Enterprise Data Lake Platform",
     description: "Comprehensive enterprise data lake platform for big data storage, processing, analytics, and AI/ML model training with advanced governance and security.",
@@ -322,6 +333,7 @@ export const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [
     location: "Global",
     availability: "Immediate",
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
@@ -333,6 +345,7 @@ export const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [
 
   // Application Development & Modernization
   {
+
     id: "legacy-application-modernization",
     title: "Legacy Application Modernization Services",
     description: "Comprehensive legacy application modernization services including cloud migration, microservices transformation, and digital architecture implementation.",
@@ -381,6 +394,7 @@ export const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [
     location: "Global",
     availability: "Immediate",
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
@@ -392,6 +406,7 @@ export const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [
 
   // Managed IT Services
   {
+
     id: "managed-it-services-premium",
     title: "Managed IT Services Premium",
     description: "Comprehensive managed IT services including 24/7 monitoring, proactive maintenance, help desk support, and strategic IT consulting for enterprise organizations.",
@@ -440,6 +455,7 @@ export const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [
     location: "Global",
     availability: "Immediate",
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
@@ -451,6 +467,7 @@ export const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [
 
   // Digital Transformation Consulting
   {
+
     id: "digital-transformation-consulting",
     title: "Digital Transformation Consulting Services",
     description: "Strategic digital transformation consulting services helping organizations modernize operations, enhance customer experiences, and drive innovation through technology.",
@@ -499,6 +516,7 @@ export const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [
     location: "Global",
     availability: "Immediate",
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
@@ -510,6 +528,7 @@ export const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [
 
   // Blockchain & Web3 Services
   {
+
     id: "blockchain-web3-solutions",
     title: "Blockchain & Web3 Solutions Platform",
     description: "Comprehensive blockchain and Web3 solutions including smart contract development, DeFi platforms, NFT marketplaces, and enterprise blockchain implementation.",
@@ -558,6 +577,7 @@ export const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [
     location: "Global",
     availability: "Immediate",
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",

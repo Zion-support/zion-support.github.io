@@ -1,45 +1,53 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Zap, Brain, Shield, Target, CheckCircle, ArrowRight, TrendingUp,
   MessageCircle, Phone, Mail, MapPin, Star, Award, Lightbulb,
   Settings, Search, Users, Cloud, Cpu, Database, Layers
 } from 'lucide-react';
 
 const AIAutonomousOperations: React.FC = () => {
+
   const features = [
     {
+
       icon: Zap,
       title: 'Autonomous Systems',
       description: 'Self-operating AI systems for continuous operations',
       color: 'from-blue-500 to-cyan-500'
     },
     {
+
       icon: Brain,
       title: 'Intelligent Decision Making',
       description: 'AI-powered autonomous decision making and execution',
       color: 'from-purple-500 to-pink-500'
     },
     {
+
       icon: Shield,
       title: 'Safety & Security',
       description: 'Built-in safety protocols and security measures',
       color: 'from-red-500 to-pink-500'
     },
     {
+
       icon: Target,
       title: 'Precision Operations',
       description: 'High-accuracy autonomous task execution',
       color: 'from-green-500 to-emerald-500'
     },
     {
+
       icon: Cloud,
       title: 'Scalable Infrastructure',
       description: 'Cloud-based autonomous operations platform',
       color: 'from-indigo-500 to-blue-500'
     },
     {
+
       icon: Settings,
       title: 'Adaptive Learning',
       description: 'Continuous learning and system optimization',
@@ -49,6 +57,7 @@ const AIAutonomousOperations: React.FC = () => {
 
   const solutions = [
     {
+
       title: 'Autonomous Manufacturing',
       description: 'AI-powered autonomous production and quality control',
       icon: Settings,
@@ -56,6 +65,7 @@ const AIAutonomousOperations: React.FC = () => {
       color: 'from-blue-500 to-cyan-500'
     },
     {
+
       title: 'Autonomous Logistics',
       description: 'Self-driving vehicles and intelligent supply chain management',
       icon: Target,
@@ -63,6 +73,7 @@ const AIAutonomousOperations: React.FC = () => {
       color: 'from-purple-500 to-pink-500'
     },
     {
+
       title: 'Autonomous Monitoring',
       description: 'Continuous monitoring and predictive maintenance',
       icon: Shield,
@@ -70,6 +81,7 @@ const AIAutonomousOperations: React.FC = () => {
       color: 'from-green-500 to-emerald-500'
     },
     {
+
       title: 'Autonomous Security',
       description: 'AI-powered security systems and threat detection',
       icon: Brain,

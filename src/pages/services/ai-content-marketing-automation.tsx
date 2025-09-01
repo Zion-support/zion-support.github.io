@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Brain, 
   PenTool, 
   TrendingUp, 
@@ -40,33 +41,40 @@ import {
 import { SEO } from '../../components/SEO';
 
 export default function AIContentMarketingAutomation() {
+
   const features = [
     {
+
       icon: Brain,
       title: 'AI Content Generation',
       description: 'Generate high-quality, SEO-optimized content using advanced language models'
     },
     {
+
       icon: PenTool,
       title: 'Multi-Format Content',
       description: 'Create blogs, social media posts, emails, and landing pages from single prompts'
     },
     {
+
       icon: TrendingUp,
       title: 'Performance Analytics',
       description: 'Track content performance with AI-powered insights and optimization recommendations'
     },
     {
+
       icon: Target,
       title: 'Audience Segmentation',
       description: 'Automatically segment audiences and personalize content for maximum engagement'
     },
     {
+
       icon: Calendar,
       title: 'Smart Scheduling',
       description: 'AI-optimized posting schedules based on audience behavior and engagement patterns'
     },
     {
+
       icon: Share2,
       title: 'Cross-Platform Distribution',
       description: 'Automatically distribute content across multiple channels with platform-specific optimization'
@@ -84,21 +92,25 @@ export default function AIContentMarketingAutomation() {
 
   const useCases = [
     {
+
       industry: 'E-commerce',
       applications: ['Product descriptions', 'Email campaigns', 'Social media content', 'Blog posts'],
       icon: ShoppingCart
     },
     {
+
       industry: 'B2B Marketing',
       applications: ['Thought leadership content', 'Case studies', 'White papers', 'LinkedIn posts'],
       icon: Users
     },
     {
+
       industry: 'Agency Services',
       applications: ['Client content creation', 'Campaign management', 'Performance reporting', 'A/B testing'],
       icon: Globe
     },
     {
+
       industry: 'SaaS Companies',
       applications: ['Feature announcements', 'User onboarding', 'Support documentation', 'Community content'],
       icon: Cpu
@@ -116,6 +128,7 @@ export default function AIContentMarketingAutomation() {
 
   const pricing = [
     {
+
       plan: 'Starter',
       price: '$299',
       period: '/month',
@@ -132,6 +145,7 @@ export default function AIContentMarketingAutomation() {
       popular: false
     },
     {
+
       plan: 'Professional',
       price: '$599',
       period: '/month',
@@ -149,6 +163,7 @@ export default function AIContentMarketingAutomation() {
       popular: true
     },
     {
+
       plan: 'Enterprise',
       price: '$1,299',
       period: '/month',
@@ -168,21 +183,27 @@ export default function AIContentMarketingAutomation() {
   ];
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
+
         staggerChildren: 0.1
       }
     }
   };
 
   const itemVariants = {
+
     hidden: { y: 20, opacity: 0 },
     visible: {
+
       y: 0,
       opacity: 1,
       transition: {
+
         duration: 0.5
       }
     }
@@ -390,6 +411,7 @@ export default function AIContentMarketingAutomation() {
                 key={index}
                 variants={itemVariants}
                 className={`relative bg-slate-800/50 p-8 rounded-2xl border ${
+
                   plan.popular 
                     ? 'border-cyan-400 ring-2 ring-cyan-400/20' 
                     : 'border-slate-700'
@@ -424,6 +446,7 @@ export default function AIContentMarketingAutomation() {
                 <Link
                   to={plan.plan === 'Enterprise' ? '/contact' : '/contact'}
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center block transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                       : 'bg-slate-700 text-white hover:bg-slate-600'

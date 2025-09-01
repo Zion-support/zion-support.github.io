@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Shield, 
   Zap, 
   Brain, 
@@ -74,38 +75,45 @@ import {
 import { Link } from 'react-router-dom';
 
 export default function QuantumEnhancedCybersecurityOperationsCenter() {
+
   const features = [
     {
+
       icon: Brain,
       title: "Quantum AI Threat Detection",
       description: "Advanced quantum machine learning algorithms that detect and analyze threats in real-time with unprecedented accuracy",
       benefits: ["Quantum-enhanced pattern recognition", "Real-time threat analysis", "Predictive threat modeling"]
     },
     {
+
       icon: Shield,
       title: "Zero-Trust Security Architecture",
       description: "Implement comprehensive zero-trust security with quantum-resistant encryption and continuous verification",
       benefits: ["Quantum-resistant encryption", "Continuous verification", "Micro-segmentation"]
     },
     {
+
       icon: Radar,
       title: "Advanced Threat Intelligence",
       description: "AI-powered threat intelligence that aggregates and analyzes data from global security sources",
       benefits: ["Global threat feeds", "AI-powered analysis", "Real-time updates"]
     },
     {
+
       icon: Activity,
       title: "24/7 Security Operations",
       description: "Round-the-clock security monitoring with automated incident response and human expert oversight",
       benefits: ["Continuous monitoring", "Automated response", "Expert escalation"]
     },
     {
+
       icon: Zap,
       title: "Quantum Cryptography",
       description: "Next-generation quantum cryptography for unbreakable communication and data protection",
       benefits: ["Quantum key distribution", "Unbreakable encryption", "Future-proof security"]
     },
     {
+
       icon: Network,
       title: "Network Security Orchestration",
       description: "Intelligent network security that automatically adapts and responds to emerging threats",
@@ -115,6 +123,7 @@ export default function QuantumEnhancedCybersecurityOperationsCenter() {
 
   const pricingPlans = [
     {
+
       name: "Essential",
       price: "$1,999",
       period: "/month",
@@ -131,6 +140,7 @@ export default function QuantumEnhancedCybersecurityOperationsCenter() {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$4,999",
       period: "/month",
@@ -149,6 +159,7 @@ export default function QuantumEnhancedCybersecurityOperationsCenter() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$12,999",
       period: "/month",
@@ -170,21 +181,25 @@ export default function QuantumEnhancedCybersecurityOperationsCenter() {
 
   const useCases = [
     {
+
       industry: "Financial Services",
       description: "Protect critical financial systems with quantum-enhanced security and compliance",
       metrics: ["Threat detection rate", "Incident response time", "Compliance score"]
     },
     {
+
       industry: "Healthcare",
       description: "Secure patient data and medical systems with HIPAA-compliant quantum security",
       metrics: ["Data breach prevention", "System uptime", "Patient trust score"]
     },
     {
+
       industry: "Government",
       description: "Defend critical infrastructure and sensitive government systems",
       metrics: ["National security", "Infrastructure protection", "Threat intelligence"]
     },
     {
+
       industry: "Manufacturing",
       description: "Protect industrial control systems and intellectual property",
       metrics: ["Production security", "IP protection", "Operational continuity"]
@@ -410,6 +425,7 @@ export default function QuantumEnhancedCybersecurityOperationsCenter() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-2xl p-8 ${
+
                   plan.popular 
                     ? 'border-blue-500/50 shadow-lg shadow-blue-500/25' 
                     : 'border-slate-700'
@@ -442,6 +458,7 @@ export default function QuantumEnhancedCybersecurityOperationsCenter() {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700'
                     : 'bg-slate-700 text-white hover:bg-slate-600'

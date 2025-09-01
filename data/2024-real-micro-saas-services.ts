@@ -47,7 +47,8 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     tagline: 'Transform data into actionable insights with AI',
     price: '$299',
     period: '/month',
-    description: 'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, and provides actionable recommendations for growth and optimization.',
+    description:
+      'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, and provides actionable recommendations for growth and optimization.',
     features: [
       'AI-powered data analysis and insights',
       'Real-time dashboard with 50+ customizable widgets',
@@ -58,22 +59,28 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
       'Mobile-responsive design',
       'White-label solution for agencies',
       'API access for custom integrations',
-      'Advanced security and compliance (SOC 2, GDPR)'
+      'Advanced security and compliance (SOC 2, GDPR)',
     ],
     popular: true,
     icon: '📊',
     color: 'from-blue-500 to-cyan-600',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-business-intelligence-pro',
-    marketPosition: 'Competitive with Tableau ($70/user/month), Power BI ($9.99/user/month), and Looker ($30/user/month). Our advantage: AI-powered insights, lower cost, and easier setup.',
-    targetAudience: 'Small to medium businesses, Marketing agencies, E-commerce companies, SaaS businesses, Consultants, Financial services',
+    marketPosition:
+      'Competitive with Tableau ($70/user/month), Power BI ($9.99/user/month), and Looker ($30/user/month). Our advantage: AI-powered insights, lower cost, and easier setup.',
+    targetAudience:
+      'Small to medium businesses, Marketing agencies, E-commerce companies, SaaS businesses, Consultants, Financial services',
     trialDays: 14,
     setupTime: '15 minutes',
     category: 'Business Intelligence & Analytics',
     realService: true,
     technology: ['React, Node.js, Python, TensorFlow, PostgreSQL, Redis, AWS'],
-    integrations: ['Salesforce, HubSpot, Shopify, Google Analytics, Stripe, Zapier'],
-    useCases: ['Sales performance analysis, Marketing ROI tracking, Customer behavior insights, Financial forecasting, Operational efficiency optimization'],
+    integrations: [
+      'Salesforce, HubSpot, Shopify, Google Analytics, Stripe, Zapier',
+    ],
+    useCases: [
+      'Sales performance analysis, Marketing ROI tracking, Customer behavior insights, Financial forecasting, Operational efficiency optimization',
+    ],
     roi: 'Average customer sees 400% ROI within 6 months through improved decision-making and operational efficiency.',
     competitors: ['Tableau, Power BI, Looker, Sisense, Domo'],
     marketSize: '$23.1B market',
@@ -83,14 +90,15 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Fully functional SaaS platform with real-time data processing, AI models for predictive analytics, and comprehensive reporting capabilities.',
+    implementationDetails:
+      'Fully functional SaaS platform with real-time data processing, AI models for predictive analytics, and comprehensive reporting capabilities.',
     launchDate: '2024-03-15',
     customers: 1800,
     rating: 4.9,
-    reviews: 890
+    reviews: 890,
   },
 
   // AI Customer Success Automation
@@ -100,7 +108,8 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     tagline: 'Automate customer success with intelligent workflows',
     price: '$199',
     period: '/month',
-    description: 'Intelligent customer success automation platform that helps businesses reduce churn, increase customer lifetime value, and scale customer success operations efficiently.',
+    description:
+      'Intelligent customer success automation platform that helps businesses reduce churn, increase customer lifetime value, and scale customer success operations efficiently.',
     features: [
       'AI-powered churn prediction and prevention',
       'Automated onboarding workflows',
@@ -111,24 +120,30 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
       'Custom automation rules and triggers',
       'Performance analytics and reporting',
       'Multi-channel communication (email, SMS, in-app)',
-      'Customer feedback collection and analysis'
+      'Customer feedback collection and analysis',
     ],
     popular: true,
     icon: '🤖',
     color: 'from-green-500 to-emerald-600',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-customer-success-automation',
-    marketPosition: 'Competitive with Gainsight ($500/user/month), Totango ($99/user/month), and ChurnZero ($199/user/month). Our advantage: AI-powered automation, lower cost, and easier implementation.',
-    targetAudience: 'SaaS companies, Subscription businesses, E-commerce platforms, Service companies, B2B companies',
+    marketPosition:
+      'Competitive with Gainsight ($500/user/month), Totango ($99/user/month), and ChurnZero ($199/user/month). Our advantage: AI-powered automation, lower cost, and easier implementation.',
+    targetAudience:
+      'SaaS companies, Subscription businesses, E-commerce platforms, Service companies, B2B companies',
     trialDays: 14,
     setupTime: '30 minutes',
     category: 'Customer Success & Retention',
     realService: true,
     technology: ['React, Node.js, Python, TensorFlow, PostgreSQL, Redis, AWS'],
     integrations: ['Salesforce, HubSpot, Pipedrive, Intercom, Zendesk, Slack'],
-    useCases: ['Customer onboarding automation, Churn prevention, Customer health monitoring, Success milestone tracking, Automated customer communications'],
+    useCases: [
+      'Customer onboarding automation, Churn prevention, Customer health monitoring, Success milestone tracking, Automated customer communications',
+    ],
     roi: 'Average customer sees 300% ROI within 4 months through reduced churn and increased customer lifetime value.',
-    competitors: ['Gainsight, Totango, ChurnZero, CustomerSuccessBox, ClientSuccess'],
+    competitors: [
+      'Gainsight, Totango, ChurnZero, CustomerSuccessBox, ClientSuccess',
+    ],
     marketSize: '$1.5B market',
     growthRate: '15.2% annual growth',
     variant: 'ai-automation',
@@ -136,13 +151,14 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Production-ready SaaS platform with AI models for churn prediction, automated workflow engine, and comprehensive analytics dashboard.',
+    implementationDetails:
+      'Production-ready SaaS platform with AI models for churn prediction, automated workflow engine, and comprehensive analytics dashboard.',
     launchDate: '2024-02-20',
     customers: 1200,
     rating: 4.8,
-    reviews: 650
-  }
+    reviews: 650,
+  },
 ];

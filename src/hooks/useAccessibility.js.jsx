@@ -1,6 +1,8 @@
 import { useState, useEffect, useCallback } from 'react';
 export const useAccessibility = () => {
+
     const [preferences, setPreferences] = useState({
+
         highContrast: false,
         largeText: false,
         reducedMotion: false,
@@ -9,6 +11,7 @@ export const useAccessibility = () => {
         keyboardNavigation: true
     });
     const [settings, setSettings] = useState({
+
         fontSize: 'medium',
         colorScheme: 'default',
         motionPreference: 'no-preference',
@@ -16,23 +19,32 @@ export const useAccessibility = () => {
     });
     // Load preferences from localStorage
     useEffect(() => {
+
         const savedSettings = localStorage.getItem('zion-accessibility-settings');
         if (savedPreferences) {
+
             try {
+
                 setPreferences(JSON.parse(savedPreferences))}
             catch (error) {
-                console.warn('Failed to parse accessibility preferences:', error)}
+
+                // // // console.warn('Failed to parse accessibility preferences:', error)}
         }
         if (savedSettings) {
+
             try {
+
                 setSettings(JSON.parse(savedSettings))}
             catch (error) {
-                console.warn('Failed to parse accessibility settings:', error)}
+
+                // // // console.warn('Failed to parse accessibility settings:', error)}
         }
     }, []);
     // Save preferences to localStorage
     const savePreferences = useCallback((newPreferences) => {
+
         const updatedPreferences = {
+
   ...preferences,
   ...newPreferences 
 
@@ -40,7 +52,9 @@ export const useAccessibility = () => {
         setPreferences(updatedPreferences);
         localStorage.setItem('zion-accessibility-preferences', JSON.stringify(updatedPreferences))}, [preferences]);
     const saveSettings = useCallback((newSettings) => {
+
         const updatedSettings = {
+
   ...settings,
   ...newSettings 
 
@@ -49,52 +63,68 @@ export const useAccessibility = () => {
         localStorage.setItem('zion-accessibility-settings', JSON.stringify(updatedSettings))}, [settings]);
     // Apply accessibility features
     useEffect(() => {
+
         const root = document.documentElement;
         // Apply high contrast
         if (preferences.highContrast) {
+
             root.classList.add('high-contrast');
             root.style.setProperty('--contrast-multiplier', '1.5')}
         else {
+
             root.classList.remove('high-contrast');
             root.style.removeProperty('--contrast-multiplier')}
         // Apply large text
         if (preferences.largeText) {
+
             root.classList.add('large-text');
             root.style.setProperty('--font-size-multiplier', '1.2')}
         else {
+
             root.classList.remove('large-text');
             root.style.removeProperty('--font-size-multiplier')}
         // Apply reduced motion
         if (preferences.reducedMotion) {
+
             root.classList.add('reduced-motion');
             root.style.setProperty('--motion-reduction', '0.5')}
         else {
+
             root.classList.remove('reduced-motion');
             root.style.removeProperty('--motion-reduction')}
         // Apply focus indicator
         if (preferences.focusIndicator) {
+
             root.classList.add('focus-visible')}
         else {
+
             root.classList.remove('focus-visible')}
     }, [preferences]);
     // Keyboard navigation support
     useEffect(() => {
+
         if (!preferences.keyboardNavigation)
             return;
         const handleKeyDown = (event) => {
+
             // Skip to main content
             if (event.key === 'Tab' && event.altKey) {
+
                 event.preventDefault();
                 const mainContent = document.querySelector('main');
                 if (mainContent) {
+
                     mainContent.focus()}
             }
             // Toggle accessibility menu
             if (event.key === 'Escape') {
+
                 // Close  open modals or menus
                 const modals = document.querySelectorAll('[role="dialog"]');
                 modals.forEach(modal => {
+
                     if (modal instanceof HTMLElement) {
+
                         modal.style.display = 'none'}
                 })}
         };
@@ -108,15 +138,19 @@ export const useAccessibility = () => {
             announcement.textContent = message;
             document.body.appendChild(announcement);
             setTimeout(() => {
+
                 document.body.removeChild(announcement)}, 1000)}
     }, [preferences.screenReader]);
     // Focus management
     const focusableElements = container.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
         if (focusableElements.length > 0) {
+
             focusableElements[0].focus()}
     }, []);
     const trapFocus = useCallback((container) => {
+
         const focusableElements = Array.from(container.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')).filter(el => {
+
             const element = el;
             return !element.disabled});
         if (focusableElements.length === 0)
@@ -124,14 +158,20 @@ export const useAccessibility = () => {
         const firstElement = focusableElements[0];
         const lastElement = focusableElements[focusableElements.length - 1];
         const handleTabKey = (event) => {
+
             if (event.key === 'Tab') {
+
                 if (event.shiftKey) {
+
                     if (document.activeElement === firstElement) {
+
                         event.preventDefault();
                         lastElement.focus()}
                 }
                 else {
+
                     if (document.activeElement === lastElement) {
+
                         event.preventDefault();
                         firstElement.focus()}
                 }
@@ -140,6 +180,7 @@ export const useAccessibility = () => {
         container.addEventListener('keydown', handleTabKey);
         return () => container.removeEventListener('keydown', handleTabKey)}, []);
     return {
+
         preferences,
         settings,
         savePreferences,

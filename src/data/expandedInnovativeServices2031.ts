@@ -3,6 +3,7 @@ import { ProductListing } from "@/types/listings";
 export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
   // AI-Powered Financial Services & FinTech
   {
+
     id: "ai-powered-credit-risk-assessment",
     title: "AI-Powered Credit Risk Assessment Platform",
     description: "Advanced machine learning platform that analyzes credit risk with 98% accuracy using alternative data sources, behavioral patterns, and real-time market analysis. Reduces default rates by 45% and increases approval rates by 30%.",
@@ -21,6 +22,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
     availability: "3-4 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/credit-risk-assessment",
@@ -35,6 +37,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
 
   // AI-Powered Healthcare & Telemedicine
   {
+
     id: "ai-powered-diagnostic-assistant",
     title: "AI-Powered Medical Diagnostic Assistant",
     description: "Advanced medical AI platform that assists healthcare professionals with diagnosis, treatment recommendations, and patient monitoring. Achieves 96% diagnostic accuracy and reduces diagnosis time by 70%.",
@@ -53,6 +56,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/medical-diagnostic-ai",
@@ -67,6 +71,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
 
   // AI-Powered Legal Technology
   {
+
     id: "ai-powered-legal-document-analyzer",
     title: "AI-Powered Legal Document Analyzer",
     description: "Intelligent legal document analysis platform that reviews contracts, identifies risks, and provides legal insights with 94% accuracy. Reduces legal review time by 80% and improves risk detection by 60%.",
@@ -85,6 +90,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
     availability: "3-4 Weeks",
     aiScore: 94,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/legal-document-analyzer",
@@ -99,6 +105,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
 
   // AI-Powered Education Technology
   {
+
     id: "ai-powered-personalized-learning-platform",
     title: "AI-Powered Personalized Learning Platform",
     description: "Adaptive learning platform that personalizes educational content based on individual learning styles, progress, and performance. Improves learning outcomes by 40% and reduces dropout rates by 35%.",
@@ -117,6 +124,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
     availability: "2-3 Weeks",
     aiScore: 95,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/personalized-learning",
@@ -131,6 +139,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
 
   // AI-Powered Entertainment & Gaming
   {
+
     id: "ai-powered-game-content-generator",
     title: "AI-Powered Game Content Generator",
     description: "Revolutionary gaming platform that generates dynamic game content, characters, and storylines using AI. Creates unlimited unique gaming experiences and reduces development time by 70%.",
@@ -149,6 +158,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
     availability: "4-5 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/game-content-generator",
@@ -163,6 +173,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
 
   // AI-Powered Manufacturing & Industry 4.0
   {
+
     id: "ai-powered-predictive-maintenance-industrial",
     title: "AI-Powered Industrial Predictive Maintenance",
     description: "Advanced industrial IoT platform that predicts equipment failures, optimizes maintenance schedules, and reduces downtime by 60%. Provides real-time monitoring and AI-driven insights for manufacturing operations.",
@@ -181,6 +192,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
     availability: "5-6 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/industrial-predictive-maintenance",
@@ -195,6 +207,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
 
   // AI-Powered Real Estate Technology
   {
+
     id: "ai-powered-property-valuation-platform",
     title: "AI-Powered Property Valuation Platform",
     description: "Intelligent real estate platform that provides accurate property valuations using AI, market data, and predictive analytics. Achieves 95% accuracy and reduces valuation time from weeks to minutes.",
@@ -213,6 +226,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
     availability: "2-3 Weeks",
     aiScore: 95,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/property-valuation",
@@ -227,6 +241,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
 
   // AI-Powered Transportation & Logistics
   {
+
     id: "ai-powered-fleet-optimization-platform",
     title: "AI-Powered Fleet Optimization Platform",
     description: "Comprehensive fleet management solution that optimizes routes, reduces fuel costs by 25%, and improves delivery efficiency by 40%. Uses AI to predict traffic patterns and optimize logistics operations.",
@@ -245,6 +260,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
     availability: "3-4 Weeks",
     aiScore: 94,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/fleet-optimization",
@@ -259,6 +275,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
 
   // AI-Powered Agriculture & AgTech
   {
+
     id: "ai-powered-precision-agriculture-platform",
     title: "AI-Powered Precision Agriculture Platform",
     description: "Advanced agricultural technology platform that optimizes crop yields, reduces water usage by 30%, and improves resource efficiency using AI, IoT sensors, and satellite imagery.",
@@ -277,6 +294,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
     availability: "3-4 Weeks",
     aiScore: 95,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/precision-agriculture",
@@ -291,6 +309,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
 
   // AI-Powered Energy & Smart Grid
   {
+
     id: "ai-powered-smart-grid-optimization",
     title: "AI-Powered Smart Grid Optimization Platform",
     description: "Intelligent energy management platform that optimizes power distribution, reduces energy waste by 35%, and improves grid reliability using AI and real-time monitoring.",
@@ -309,6 +328,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/smart-grid-optimization",
@@ -323,6 +343,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
 
   // AI-Powered Retail & E-commerce
   {
+
     id: "ai-powered-inventory-prediction-retail",
     title: "AI-Powered Retail Inventory Prediction",
     description: "Advanced retail analytics platform that predicts inventory needs, optimizes stock levels, and increases sales by 25% using AI-powered demand forecasting and customer behavior analysis.",
@@ -341,6 +362,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
     availability: "2-3 Weeks",
     aiScore: 94,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/retail-inventory-prediction",
@@ -355,6 +377,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
 
   // AI-Powered Insurance & Risk Management
   {
+
     id: "ai-powered-insurance-risk-assessment",
     title: "AI-Powered Insurance Risk Assessment Platform",
     description: "Intelligent insurance platform that assesses risk with 97% accuracy, automates underwriting, and reduces claims processing time by 70% using AI and machine learning.",
@@ -373,6 +396,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
     availability: "4-5 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/insurance-risk-assessment",
@@ -387,6 +411,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
 
   // AI-Powered Hospitality & Tourism
   {
+
     id: "ai-powered-hotel-optimization-platform",
     title: "AI-Powered Hotel Revenue Optimization Platform",
     description: "Advanced hospitality platform that optimizes room pricing, increases occupancy rates by 20%, and improves guest satisfaction using AI-powered demand forecasting and personalized recommendations.",
@@ -405,6 +430,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
     availability: "3-4 Weeks",
     aiScore: 94,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/hotel-optimization",
@@ -419,6 +445,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
 
   // AI-Powered Construction & Engineering
   {
+
     id: "ai-powered-construction-project-management",
     title: "AI-Powered Construction Project Management Platform",
     description: "Intelligent construction management platform that optimizes project timelines, reduces costs by 25%, and improves safety using AI-powered scheduling, resource allocation, and risk assessment.",
@@ -437,6 +464,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2031: ProductListing[] = [
     availability: "4-5 Weeks",
     aiScore: 95,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/construction-project-management",

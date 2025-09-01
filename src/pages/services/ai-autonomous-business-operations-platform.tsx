@@ -3,6 +3,7 @@ import { SEO } from '../../components/SEO';
 import { Brain, Zap, TrendingUp, Shield, Users, BarChart3, Clock, Target } from 'lucide-react';
 
 export default function AIAutonomousBusinessOperationsPlatform() {
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 

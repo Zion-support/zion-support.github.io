@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom';
 import { Menu, X, ChevronRight, Search, User, Bell, Settings, HelpCircle, MessageCircle } from 'lucide-react';
 
 interface MobileNavigationProps {
+
   isOpen: boolean;
   onClose: () => void;
 }
 
 interface NavigationItem {
+
   name: string;
   href: string;
   icon: React.ComponentType<{ className?: string }>;
@@ -17,11 +19,13 @@ interface NavigationItem {
 }
 
 export const MobileNavigation = memo<MobileNavigationProps>(({ isOpen, onClose }) => {
+
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
 
   const navigationItems: NavigationItem[] = [
     {
+
       name: 'Services',
       href: '/services-overview',
       icon: Settings,
@@ -35,6 +39,7 @@ export const MobileNavigation = memo<MobileNavigationProps>(({ isOpen, onClose }
       ]
     },
     {
+
       name: 'Solutions',
       href: '/ai-solutions',
       icon: Settings,
@@ -47,6 +52,7 @@ export const MobileNavigation = memo<MobileNavigationProps>(({ isOpen, onClose }
       ]
     },
     {
+
       name: 'Company',
       href: '/about',
       icon: Settings,
@@ -59,6 +65,7 @@ export const MobileNavigation = memo<MobileNavigationProps>(({ isOpen, onClose }
       ]
     },
     {
+
       name: 'Support',
       href: '/help',
       icon: HelpCircle,
@@ -79,26 +86,33 @@ export const MobileNavigation = memo<MobileNavigationProps>(({ isOpen, onClose }
   ];
 
   useEffect(() => {
+
     if (isOpen) {
+
       document.body.style.overflow = 'hidden';
     } else {
+
       document.body.style.overflow = 'unset';
     }
 
     return () => {
+
       document.body.style.overflow = 'unset';
     };
   }, [isOpen]);
 
   const handleSearch = (e: React.FormEvent) => {
+
     e.preventDefault();
     if (searchQuery.trim()) {
+
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
       onClose();
     }
   };
 
   const toggleSection = (sectionName: string) => {
+
     setActiveSection(activeSection === sectionName ? null : sectionName);
   };
 
@@ -191,6 +205,7 @@ export const MobileNavigation = memo<MobileNavigationProps>(({ isOpen, onClose }
                       </div>
                       <ChevronRight 
                         className={`w-5 h-5 text-zion-cyan transition-transform ${
+
                           activeSection === item.name ? 'rotate-90' : ''
                         }`} 
                       />

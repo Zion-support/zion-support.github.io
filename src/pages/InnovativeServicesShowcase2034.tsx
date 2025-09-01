@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { 
+import {
+
   Brain, 
   Shield, 
   Zap, 
@@ -64,6 +65,7 @@ import { INNOVATIVE_IT_SERVICES_2034 } from '../data/innovativeITServices2034';
 import { COMPREHENSIVE_PRICING_GUIDE_2034 } from '../data/comprehensivePricingGuide2034';
 
 export default function InnovativeServicesShowcase2034() {
+
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<string | null>(null);
 
@@ -94,6 +96,7 @@ export default function InnovativeServicesShowcase2034() {
   const filteredServices = selectedCategory === 'all' 
     ? allServices 
     : allServices.filter(service => {
+
         if (selectedCategory === 'ai') return service.tags.includes('AI');
         if (selectedCategory === 'legal') return service.category === 'Legal Technology';
         if (selectedCategory === 'healthcare') return service.category === 'Healthcare Technology';
@@ -113,7 +116,9 @@ export default function InnovativeServicesShowcase2034() {
       });
 
   const getCategoryIcon = (category: string) => {
+
     const iconMap: { [key: string]: any } = {
+
       'Legal Technology': Scale,
       'Healthcare Technology': Heart,
       'Financial Technology': Coins,
@@ -134,7 +139,9 @@ export default function InnovativeServicesShowcase2034() {
   };
 
   const getCategoryColor = (category: string) => {
+
     const colorMap: { [key: string]: string } = {
+
       'Legal Technology': 'from-blue-400 to-indigo-500',
       'Healthcare Technology': 'from-green-400 to-emerald-500',
       'Financial Technology': 'from-yellow-400 to-orange-500',
@@ -236,6 +243,7 @@ export default function InnovativeServicesShowcase2034() {
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-200 ${
+
                   selectedCategory === category.id
                     ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400'
                     : 'border-gray-600 text-gray-400 hover:border-cyan-400 hover:text-cyan-400'
@@ -257,6 +265,7 @@ export default function InnovativeServicesShowcase2034() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => {
+
               const CategoryIcon = getCategoryIcon(service.category);
               const categoryColor = getCategoryColor(service.category);
               
@@ -351,6 +360,7 @@ export default function InnovativeServicesShowcase2034() {
                     {/* Innovation Level Badge */}
                     <div className="absolute top-4 right-4">
                       <div className={`px-3 py-1 rounded-full text-xs font-semibold ${
+
                         service.innovationLevel === 'Breakthrough' 
                           ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white'
                           : service.innovationLevel === 'Advanced'
@@ -394,6 +404,7 @@ export default function InnovativeServicesShowcase2034() {
               </div>
 
               {(() => {
+
                 const service = allServices.find(s => s.id === selectedService);
                 if (!service) return null;
 

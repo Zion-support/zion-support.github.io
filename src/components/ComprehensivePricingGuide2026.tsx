@@ -4,6 +4,7 @@ import { ADVANCED_INNOVATIVE_SERVICES_2025 } from "../data/advancedInnovativeSer
 import { NEXT_GEN_INNOVATIVE_SERVICES_2026 } from "../data/nextGenInnovativeServices2026";
 
 const ComprehensivePricingGuide2026: React.FC = () => {
+
   const [selectedPricingTier, setSelectedPricingTier] = useState('all');
   const [selectedIndustry, setSelectedIndustry] = useState('all');
 
@@ -31,12 +32,14 @@ const ComprehensivePricingGuide2026: React.FC = () => {
   ];
 
   const getPricingTier = (price: number) => {
+
     if (price < 15000) return 'starter';
     if (price < 30000) return 'professional';
     return 'enterprise';
   };
 
   const getIndustryMatch = (service: any) => {
+
     const serviceTags = service.tags.join(' ').toLowerCase();
     const serviceDescription = service.description.toLowerCase();
     
@@ -53,16 +56,20 @@ const ComprehensivePricingGuide2026: React.FC = () => {
   };
 
   const filteredServices = allServices.filter(service => {
+
     const matchesPricingTier = selectedPricingTier === 'all' || getPricingTier(service.price) === selectedPricingTier;
     const matchesIndustry = selectedIndustry === 'all' || getIndustryMatch(service) === selectedIndustry;
     return matchesPricingTier && matchesIndustry;
   });
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
+
         staggerChildren: 0.1,
         delayChildren: 0.2
       }
@@ -70,8 +77,10 @@ const ComprehensivePricingGuide2026: React.FC = () => {
   };
 
   const itemVariants = {
+
     hidden: { opacity: 0, y: 20 },
     visible: {
+
       opacity: 1,
       y: 0,
       transition: { duration: 0.5 }
@@ -79,11 +88,14 @@ const ComprehensivePricingGuide2026: React.FC = () => {
   };
 
   const calculateTotalValue = () => {
+
     return allServices.reduce((total, service) => total + service.price, 0);
   };
 
   const calculateAverageROI = () => {
+
     const rois = allServices.map(service => {
+
       const roiStr = service.roi;
       const match = roiStr.match(/(\d+)%/);
       return match ? parseInt(match[1]) : 0;
@@ -184,6 +196,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {
                     key={tier.id}
                     onClick={() => setSelectedPricingTier(tier.id)}
                     className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+
                       selectedPricingTier === tier.id
                         ? `bg-gradient-to-r ${tier.color} text-white`
                         : 'bg-white/10 text-gray-300 hover:bg-white/20'
@@ -204,6 +217,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {
                     key={industry.id}
                     onClick={() => setSelectedIndustry(industry.id)}
                     className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+
                       selectedIndustry === industry.id
                         ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'
                         : 'bg-white/10 text-gray-300 hover:bg-white/20'

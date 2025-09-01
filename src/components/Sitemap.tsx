@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Search, 
   ChevronDown, 
   ChevronRight, 
@@ -24,9 +25,11 @@ import {
 } from 'lucide-react';
 
 interface SitemapSection {
+
   title: string;
   icon: React.ComponentType<any>;
   links: Array<{
+
     name: string;
     href: string;
     description?: string;
@@ -36,14 +39,18 @@ interface SitemapSection {
 }
 
 export const Sitemap: React.FC = () => {
+
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
 
   const toggleSection = (sectionTitle: string) => {
+
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(sectionTitle)) {
+
       newExpanded.delete(sectionTitle);
     } else {
+
       newExpanded.add(sectionTitle);
     }
     setExpandedSections(newExpanded);
@@ -51,6 +58,7 @@ export const Sitemap: React.FC = () => {
 
   const sitemapData: SitemapSection[] = [
     {
+
       title: 'Main Pages',
       icon: Globe,
       links: [
@@ -62,6 +70,7 @@ export const Sitemap: React.FC = () => {
       ]
     },
     {
+
       title: 'AI Services',
       icon: Brain,
       links: [
@@ -73,6 +82,7 @@ export const Sitemap: React.FC = () => {
       ]
     },
     {
+
       title: 'Technology Solutions',
       icon: Code,
       links: [
@@ -84,6 +94,7 @@ export const Sitemap: React.FC = () => {
       ]
     },
     {
+
       title: 'Innovation Showcases',
       icon: Star,
       links: [
@@ -95,6 +106,7 @@ export const Sitemap: React.FC = () => {
       ]
     },
     {
+
       title: 'Resources & Support',
       icon: BookOpen,
       links: [
@@ -107,6 +119,7 @@ export const Sitemap: React.FC = () => {
       ]
     },
     {
+
       title: 'Business Solutions',
       icon: Users,
       links: [
@@ -118,6 +131,7 @@ export const Sitemap: React.FC = () => {
       ]
     },
     {
+
       title: 'Legal & Compliance',
       icon: Shield,
       links: [
@@ -130,6 +144,7 @@ export const Sitemap: React.FC = () => {
   ];
 
   const filteredSections = sitemapData.map(section => ({
+
     ...section,
     links: section.links.filter(link =>
       link.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -145,6 +160,7 @@ export const Sitemap: React.FC = () => {
   ];
 
   const companyInfo = {
+
     name: 'Zion Tech Group',
     description: 'Leading provider of cutting-edge AI services, IT solutions, and innovative technology services.',
     address: '123 Innovation Drive, Tech City, CA 90210',
@@ -152,6 +168,7 @@ export const Sitemap: React.FC = () => {
     email: 'contact@ziontechgroup.com',
     hours: 'Monday - Friday: 9:00 AM - 6:00 PM PST',
     social: {
+
       linkedin: 'https://linkedin.com/company/zion-tech-group',
       twitter: 'https://twitter.com/ziontechgroup',
       facebook: 'https://facebook.com/ziontechgroup'
@@ -269,6 +286,7 @@ export const Sitemap: React.FC = () => {
                           <Link
                             to={link.href}
                             className={`block p-4 rounded-lg transition-all duration-300 ${
+
                               link.featured
                                 ? 'bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 hover:border-cyan-400/60'
                                 : 'bg-gray-700/30 border border-gray-600 hover:border-cyan-400/40'
@@ -277,6 +295,7 @@ export const Sitemap: React.FC = () => {
                             <div className="flex items-start justify-between">
                               <div className="flex-1">
                                 <h3 className={`font-medium mb-2 ${
+
                                   link.featured ? 'text-cyan-400' : 'text-white'
                                 }`}>
                                   {link.name}

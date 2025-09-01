@@ -1,4 +1,5 @@
 export type EnhancedInnovativeService = {
+
   id: string;
   title: string;
   description: string;
@@ -35,6 +36,7 @@ export type EnhancedInnovativeService = {
 export const enhancedInnovativeServices2026: EnhancedInnovativeService[] = [
   // ADVANCED MICRO SAAS SERVICES
   {
+
     id: 'ai-powered-revenue-optimization-engine',
     title: 'AI-Powered Revenue Optimization Engine',
     description: 'Intelligent revenue optimization platform that increases business revenue by 25-40% through dynamic pricing, demand forecasting, and customer behavior analysis.',
@@ -96,6 +98,7 @@ export const enhancedInnovativeServices2026: EnhancedInnovativeService[] = [
     performanceMetrics: ['99.9% uptime', '<100ms response time', 'Real-time processing']
   },
   {
+
     id: 'intelligent-supply-chain-resilience-platform',
     title: 'Intelligent Supply Chain Resilience Platform',
     description: 'AI-powered supply chain platform that predicts disruptions with 90% accuracy and automatically reroutes logistics to maintain 99.5% delivery success rate.',
@@ -157,6 +160,7 @@ export const enhancedInnovativeServices2026: EnhancedInnovativeService[] = [
     performanceMetrics: ['Real-time updates', '<50ms response time', '99.9% accuracy']
   },
   {
+
     id: 'autonomous-customer-success-platform',
     title: 'Autonomous Customer Success Platform',
     description: 'Self-learning customer success platform that automatically identifies at-risk customers and implements retention strategies, reducing churn by 60%.',
@@ -220,6 +224,7 @@ export const enhancedInnovativeServices2026: EnhancedInnovativeService[] = [
 
   // ADVANCED AI SOLUTIONS
   {
+
     id: 'federated-learning-ai-platform',
     title: 'Federated Learning AI Platform',
     description: 'Privacy-preserving AI platform that enables collaborative machine learning across organizations without sharing raw data, maintaining 95% model accuracy.',
@@ -281,6 +286,7 @@ export const enhancedInnovativeServices2026: EnhancedInnovativeService[] = [
     performanceMetrics: ['95% model accuracy', 'Real-time collaboration', '99.9% uptime']
   },
   {
+
     id: 'neuromorphic-computing-platform',
     title: 'Neuromorphic Computing Platform',
     description: 'Brain-inspired computing platform that processes AI workloads 1000x faster than traditional GPUs while consuming 90% less power.',
@@ -344,6 +350,7 @@ export const enhancedInnovativeServices2026: EnhancedInnovativeService[] = [
 
   // CUTTING-EDGE IT SERVICES
   {
+
     id: 'quantum-internet-infrastructure',
     title: 'Quantum Internet Infrastructure',
     description: 'End-to-end quantum internet solution enabling ultra-secure communication and quantum network connectivity with quantum key distribution.',
@@ -405,6 +412,7 @@ export const enhancedInnovativeServices2026: EnhancedInnovativeService[] = [
     performanceMetrics: ['Quantum secure', 'Real-time key generation', '99.9% uptime']
   },
   {
+
     id: 'digital-twin-enterprise-platform',
     title: 'Digital Twin Enterprise Platform',
     description: 'Comprehensive digital twin platform that creates real-time virtual replicas of physical assets, processes, and systems for predictive maintenance and optimization.',
@@ -468,6 +476,7 @@ export const enhancedInnovativeServices2026: EnhancedInnovativeService[] = [
 
   // EMERGING TECHNOLOGY SOLUTIONS
   {
+
     id: 'brain-computer-interface-platform',
     title: 'Brain-Computer Interface Platform',
     description: 'Advanced BCI platform enabling direct communication between the human brain and computers for medical applications, accessibility, and human augmentation.',
@@ -529,6 +538,7 @@ export const enhancedInnovativeServices2026: EnhancedInnovativeService[] = [
     performanceMetrics: ['Real-time processing', '99.5% accuracy', '<50ms latency']
   },
   {
+
     id: 'holographic-display-platform',
     title: 'Holographic Display Platform',
     description: 'Next-generation holographic display technology enabling immersive 3D visualizations for entertainment, education, and professional applications.',
@@ -592,6 +602,7 @@ export const enhancedInnovativeServices2026: EnhancedInnovativeService[] = [
 
   // SUSTAINABILITY & GREEN TECH
   {
+
     id: 'carbon-neutral-cloud-platform',
     title: 'Carbon-Neutral Cloud Platform',
     description: 'Environmentally conscious cloud platform that automatically offsets carbon emissions and provides 100% renewable energy-powered infrastructure.',
@@ -655,6 +666,7 @@ export const enhancedInnovativeServices2026: EnhancedInnovativeService[] = [
 
   // FINANCIAL TECHNOLOGY
   {
+
     id: 'decentralized-finance-platform',
     title: 'Decentralized Finance (DeFi) Platform',
     description: 'Comprehensive DeFi platform enabling decentralized lending, borrowing, trading, and yield farming with advanced security and compliance features.',
@@ -719,26 +731,31 @@ export const enhancedInnovativeServices2026: EnhancedInnovativeService[] = [
 
 export const enhancedServiceCategories = [
   {
+
     name: 'Advanced Micro SaaS',
     description: 'Next-generation software solutions with AI and automation',
     services: enhancedInnovativeServices2026.filter(s => s.category === 'Micro SaaS')
   },
   {
+
     name: 'Cutting-Edge AI Solutions',
     description: 'Revolutionary artificial intelligence and machine learning',
     services: enhancedInnovativeServices2026.filter(s => s.category === 'AI Solutions')
   },
   {
+
     name: 'Emerging Technologies',
     description: 'Future-defining technologies and innovations',
     services: enhancedInnovativeServices2026.filter(s => ['Quantum Computing', 'BioTech & Health', 'Metaverse & AR/VR', 'FinTech & DeFi'].includes(s.category))
   },
   {
+
     name: 'Sustainability & Green Tech',
     description: 'Environmentally conscious technology solutions',
     services: enhancedInnovativeServices2026.filter(s => s.category === 'Green Tech')
   },
   {
+
     name: 'Digital Transformation',
     description: 'Advanced digital transformation and modernization',
     services: enhancedInnovativeServices2026.filter(s => s.category === 'Digital Transformation')

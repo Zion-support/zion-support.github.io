@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Home, 
   TrendingUp, 
   BarChart3, 
@@ -33,7 +34,9 @@ import {
 import { SEO } from '../../components/SEO';
 
 export default function AIRealEstateAnalyticsPlatform() {
+
   const contactInfo = {
+
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -42,31 +45,37 @@ export default function AIRealEstateAnalyticsPlatform() {
 
   const features = [
     {
+
       icon: TrendingUp,
       title: 'AI-Powered Market Predictions',
       description: 'Advanced machine learning algorithms predict market trends with 85% accuracy up to 12 months ahead'
     },
     {
+
       icon: Calculator,
       title: 'Property Valuation Algorithms',
       description: 'Real-time property valuation using multiple data sources including market trends, comparable sales, and location factors'
     },
     {
+
       icon: Target,
       title: 'Investment Opportunity Scoring',
       description: 'AI-driven scoring system that identifies high-potential investment opportunities based on multiple risk and return factors'
     },
     {
+
       icon: ChartBar,
       title: 'Market Trend Analysis',
       description: 'Comprehensive analysis of market trends, price movements, and demand patterns across different property types and locations'
     },
     {
+
       icon: Search,
       title: 'Comparative Market Analysis',
       description: 'Advanced CMA tools that provide detailed comparisons with similar properties in the market'
     },
     {
+
       icon: Shield,
       title: 'Risk Assessment Tools',
       description: 'Comprehensive risk assessment including market volatility, economic factors, and property-specific risks'
@@ -75,21 +84,25 @@ export default function AIRealEstateAnalyticsPlatform() {
 
   const benefits = [
     {
+
       icon: TrendingUp,
       title: 'Increase Investment Returns by 25%',
       description: 'Data-driven insights help identify undervalued properties and optimal timing for transactions'
     },
     {
+
       icon: Clock,
       title: 'Reduce Market Research Time by 70%',
       description: 'Automated data collection and analysis save hundreds of hours of manual research'
     },
     {
+
       icon: Target,
       title: 'Improve Decision Accuracy by 40%',
       description: 'AI algorithms eliminate human bias and provide objective market analysis'
     },
     {
+
       icon: Zap,
       title: 'Identify Opportunities Faster',
       description: 'Real-time alerts and predictive analytics help you act quickly on market opportunities'
@@ -98,6 +111,7 @@ export default function AIRealEstateAnalyticsPlatform() {
 
   const pricing = [
     {
+
       name: 'Starter',
       price: '$599',
       period: '/month',
@@ -114,6 +128,7 @@ export default function AIRealEstateAnalyticsPlatform() {
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$1,199',
       period: '/month',
@@ -131,6 +146,7 @@ export default function AIRealEstateAnalyticsPlatform() {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: '$2,499',
       period: '/month',
@@ -151,6 +167,7 @@ export default function AIRealEstateAnalyticsPlatform() {
 
   const testimonials = [
     {
+
       name: 'David Rodriguez',
       role: 'Real Estate Investor',
       company: 'Rodriguez Properties',
@@ -158,6 +175,7 @@ export default function AIRealEstateAnalyticsPlatform() {
       rating: 5
     },
     {
+
       name: 'Jennifer Kim',
       role: 'Investment Manager',
       company: 'Urban Development Fund',
@@ -165,6 +183,7 @@ export default function AIRealEstateAnalyticsPlatform() {
       rating: 5
     },
     {
+
       name: 'Robert Thompson',
       role: 'Real Estate Agent',
       company: 'Thompson Realty Group',
@@ -175,16 +194,19 @@ export default function AIRealEstateAnalyticsPlatform() {
 
   const marketData = [
     {
+
       metric: '$8.9B',
       label: 'Market Size',
       description: 'Real Estate Tech Industry'
     },
     {
+
       metric: '35%',
       label: 'Annual Growth',
       description: 'AI Analytics Solutions'
     },
     {
+
       metric: '85%',
       label: 'Prediction Accuracy',
       description: 'Market Trend Forecasting'
@@ -376,6 +398,7 @@ export default function AIRealEstateAnalyticsPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`bg-white rounded-xl shadow-lg p-8 ${
+
                   plan.popular ? 'ring-2 ring-green-500 relative' : ''
                 }`}
               >

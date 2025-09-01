@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Star, Quote, ChevronLeft, ChevronRight, Play } from 'lucide-react';
 
 interface Testimonial {
+
   id: number;
   name: string;
   position: string;
@@ -17,6 +18,7 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
+
     id: 1,
     name: "Sarah Chen",
     position: "CTO",
@@ -28,6 +30,7 @@ const testimonials: Testimonial[] = [
     results: ["450% Efficiency Increase", "800% ROI", "24/7 AI Support"]
   },
   {
+
     id: 2,
     name: "Marcus Rodriguez",
     position: "VP of Engineering",
@@ -39,6 +42,7 @@ const testimonials: Testimonial[] = [
     results: ["90% Faster Processing", "Revolutionary Technology", "Future-Proof Solution"]
   },
   {
+
     id: 3,
     name: "Dr. Emily Watson",
     position: "Chief Innovation Officer",
@@ -50,6 +54,7 @@ const testimonials: Testimonial[] = [
     results: ["95% Accuracy Rate", "Early Detection", "Better Patient Outcomes"]
   },
   {
+
     id: 4,
     name: "David Kim",
     position: "CEO",
@@ -61,6 +66,7 @@ const testimonials: Testimonial[] = [
     results: ["75% Carbon Reduction", "40% Cost Savings", "ESG Compliance"]
   },
   {
+
     id: 5,
     name: "Lisa Thompson",
     position: "Head of Digital Transformation",
@@ -72,6 +78,7 @@ const testimonials: Testimonial[] = [
     results: ["60% Downtime Reduction", "35% Productivity Increase", "Predictive Maintenance"]
   },
   {
+
     id: 6,
     name: "James Wilson",
     position: "Chief Security Officer",
@@ -85,6 +92,7 @@ const testimonials: Testimonial[] = [
 ];
 
 export const EnhancedTestimonials: React.FC = () => {
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -96,9 +104,11 @@ export const EnhancedTestimonials: React.FC = () => {
     : testimonials.filter(testimonial => testimonial.category === selectedCategory);
 
   useEffect(() => {
+
     if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
+
       setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length);
     }, 5000);
 
@@ -106,16 +116,19 @@ export const EnhancedTestimonials: React.FC = () => {
   }, [isAutoPlaying, filteredTestimonials.length]);
 
   const nextTestimonial = () => {
+
     setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length);
     setIsAutoPlaying(false);
   };
 
   const prevTestimonial = () => {
+
     setCurrentIndex((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length);
     setIsAutoPlaying(false);
   };
 
   const goToTestimonial = (index: number) => {
+
     setCurrentIndex(index);
     setIsAutoPlaying(false);
   };
@@ -151,6 +164,7 @@ export const EnhancedTestimonials: React.FC = () => {
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+
                   selectedCategory === category
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25'
                     : 'bg-slate-800/60 text-slate-300 hover:bg-slate-700/60 border border-slate-700/50'
@@ -290,6 +304,7 @@ export const EnhancedTestimonials: React.FC = () => {
                 key={index}
                 onClick={() => goToTestimonial(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
+
                   index === currentIndex 
                     ? 'bg-cyan-400 w-8' 
                     : 'bg-slate-600 hover:bg-slate-500'

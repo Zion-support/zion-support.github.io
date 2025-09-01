@@ -6,6 +6,7 @@ import { ProductListing } from "@/types/listings";
 export const CUTTING_EDGE_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
   // 6G Network Infrastructure
   {
+
     id: "6g-network-infrastructure",
     title: "6G Network Infrastructure Platform",
     description: "Next-generation 6G network infrastructure providing terabit speeds, ultra-low latency, and AI-powered network optimization. Enables holographic communications and advanced IoT applications.",
@@ -24,6 +25,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
     availability: "20-24 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/6g-network",
@@ -38,6 +40,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
 
   // Quantum Internet Backbone
   {
+
     id: "quantum-internet-backbone",
     title: "Quantum Internet Backbone Infrastructure",
     description: "Revolutionary quantum internet backbone providing unhackable communications, quantum entanglement distribution, and ultra-secure data transmission across global networks.",
@@ -56,6 +59,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
     availability: "24-32 Weeks",
     aiScore: 100,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-internet",
@@ -70,6 +74,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
 
   // Edge AI Computing Grid
   {
+
     id: "edge-ai-computing-grid",
     title: "Edge AI Computing Grid Platform",
     description: "Distributed edge AI computing grid that brings artificial intelligence processing to the edge of networks, reducing latency and enabling real-time AI applications.",
@@ -88,6 +93,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
     availability: "10-12 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/edge-ai-grid",
@@ -102,6 +108,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
 
   // Neuromorphic Computing Infrastructure
   {
+
     id: "neuromorphic-computing-infrastructure",
     title: "Neuromorphic Computing Infrastructure",
     description: "Brain-inspired neuromorphic computing infrastructure that mimics neural networks for ultra-efficient AI processing, reducing power consumption by 90% while maintaining performance.",
@@ -120,6 +127,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
     availability: "16-20 Weeks",
     aiScore: 99,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/neuromorphic-computing",
@@ -134,6 +142,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
 
   // Holographic Data Centers
   {
+
     id: "holographic-data-centers",
     title: "Holographic Data Center Infrastructure",
     description: "Revolutionary holographic data center infrastructure using light-based computing and 3D holographic storage for unprecedented data density and processing speed.",
@@ -152,6 +161,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
     availability: "20-24 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/holographic-data-centers",
@@ -166,6 +176,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
 
   // Zero-Trust Network Architecture
   {
+
     id: "zero-trust-network-architecture",
     title: "Zero-Trust Network Architecture Platform",
     description: "Comprehensive zero-trust network architecture that continuously verifies every user, device, and connection, providing military-grade security for enterprise networks.",
@@ -184,6 +195,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
     availability: "12-16 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/zero-trust-network",
@@ -198,6 +210,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
 
   // Quantum-Safe Cryptography Infrastructure
   {
+
     id: "quantum-safe-cryptography",
     title: "Quantum-Safe Cryptography Infrastructure",
     description: "Future-proof quantum-safe cryptography infrastructure that protects against quantum computer attacks, ensuring data security for decades to come.",
@@ -216,6 +229,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
     availability: "14-18 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-cryptography",
@@ -230,6 +244,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
 
   // Autonomous Data Center Management
   {
+
     id: "autonomous-data-center-management",
     title: "Autonomous Data Center Management Platform",
     description: "AI-powered autonomous data center management platform that self-optimizes cooling, power, and performance while predicting and preventing failures before they occur.",
@@ -248,6 +263,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
     availability: "10-14 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/autonomous-data-center",
@@ -262,6 +278,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
 
   // Biometric Security Infrastructure
   {
+
     id: "biometric-security-infrastructure",
     title: "Advanced Biometric Security Infrastructure",
     description: "Next-generation biometric security infrastructure using AI-powered facial recognition, voice analysis, and behavioral biometrics for multi-factor authentication.",
@@ -280,6 +297,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
     availability: "8-10 Weeks",
     aiScore: 95,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/biometric-security",
@@ -294,6 +312,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
 
   // Green Computing Infrastructure
   {
+
     id: "green-computing-infrastructure",
     title: "Sustainable Green Computing Infrastructure",
     description: "Environmentally conscious computing infrastructure using renewable energy, liquid cooling, and AI optimization to reduce carbon footprint by 80% while maintaining performance.",
@@ -312,6 +331,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
     availability: "12-16 Weeks",
     aiScore: 94,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/green-computing",

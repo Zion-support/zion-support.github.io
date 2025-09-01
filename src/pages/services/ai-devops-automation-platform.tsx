@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import SEOOptimizer from '../../components/SEOOptimizer';
-import { 
+import {
+
   Cpu, 
   Brain, 
   Zap, 
@@ -113,33 +114,40 @@ import {
 } from 'lucide-react';
 
 const AIDevOpsAutomationPlatform = () => {
+
   const features = [
     {
+
       icon: <Brain className="w-6 h-6" />,
       title: "AI-Powered CI/CD",
       description: "Intelligent continuous integration and deployment that automatically optimizes build processes and deployment strategies."
     },
     {
+
       icon: <Workflow className="w-6 h-6" />,
       title: "Automated Testing",
       description: "AI-driven test automation that intelligently identifies test scenarios and optimizes test coverage."
     },
     {
+
       icon: <Shield className="w-6 h-6" />,
       title: "Security Automation",
       description: "Automated security scanning, vulnerability assessment, and compliance monitoring with AI-powered threat detection."
     },
     {
+
       icon: <Scale className="w-6 h-6" />,
       title: "Infrastructure Scaling",
       description: "Intelligent auto-scaling that predicts demand and automatically adjusts resources for optimal performance."
     },
     {
+
       icon: <Monitor className="w-6 h-6" />,
       title: "Proactive Monitoring",
       description: "AI-powered monitoring that predicts issues before they occur and automatically triggers remediation."
     },
     {
+
       icon: <Code className="w-6 h-6" />,
       title: "Code Quality Analysis",
       description: "Automated code review with AI-powered suggestions for improvements, security, and best practices."
@@ -159,6 +167,7 @@ const AIDevOpsAutomationPlatform = () => {
 
   const pricing = [
     {
+
       name: "Starter",
       price: "$3,999",
       period: "/month",
@@ -173,6 +182,7 @@ const AIDevOpsAutomationPlatform = () => {
       ]
     },
     {
+
       name: "Professional",
       price: "$7,999",
       period: "/month",
@@ -189,6 +199,7 @@ const AIDevOpsAutomationPlatform = () => {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$15,999",
       period: "/month",
@@ -206,31 +217,37 @@ const AIDevOpsAutomationPlatform = () => {
 
   const automationAreas = [
     {
+
       icon: <GitBranch className="w-8 h-8" />,
       title: "Code Management",
       description: "Automated Git workflows, branch management, and code review processes"
     },
     {
+
       icon: <TestTube className="w-8 h-8" />,
       title: "Testing & QA",
       description: "Automated testing, quality gates, and continuous quality assurance"
     },
     {
+
       icon: <Deploy className="w-8 h-8" />,
       title: "Deployment",
       description: "Intelligent deployment strategies with rollback and blue-green deployments"
     },
     {
+
       icon: <Monitor className="w-8 h-8" />,
       title: "Monitoring",
       description: "Real-time monitoring, alerting, and automated incident response"
     },
     {
+
       icon: <Scale className="w-8 h-8" />,
       title: "Infrastructure",
       description: "Automated provisioning, scaling, and infrastructure management"
     },
     {
+
       icon: <Shield className="w-8 h-8" />,
       title: "Security",
       description: "Automated security scanning, compliance, and threat detection"
@@ -238,6 +255,7 @@ const AIDevOpsAutomationPlatform = () => {
   ];
 
   const seoData = {
+
     title: "AI DevOps Automation Platform | Zion Tech Group",
     description: "Revolutionary AI-powered DevOps automation platform that streamlines CI/CD, testing, and infrastructure management. Reduce deployment time by 80% and eliminate manual errors.",
     keywords: "AI DevOps, DevOps automation, CI/CD automation, automated testing, infrastructure automation, DevOps platform",
@@ -444,6 +462,7 @@ const AIDevOpsAutomationPlatform = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`relative bg-zion-slate-dark/50 border rounded-xl p-8 ${
+
                     plan.popular 
                       ? 'border-zion-cyan shadow-lg shadow-zion-cyan/20' 
                       : 'border-zion-purple/20'
@@ -479,6 +498,7 @@ const AIDevOpsAutomationPlatform = () => {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                       plan.popular
                         ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:from-zion-cyan-dark hover:to-zion-purple-dark'
                         : 'bg-zion-slate-dark border border-zion-purple/30 text-zion-purple hover:bg-zion-purple/10'

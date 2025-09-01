@@ -20,6 +20,7 @@ import { Workflow,
              } from 'lucide-react.ts';
 
 const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
+
   const features = [
     'Reduce manual work by up to 80%',
     'Improve process efficiency by 60%',
@@ -161,6 +162,7 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
                 <motion.div
                   key={plan.name}
                   className={`relative p-8 rounded-2xl border-2 transition-all duration-300 ${
+
                     plan.popular 
                       ? 'border-purple-500 bg-gradient-to-br from-purple-500/20 to-blue-500/20' 
                       : 'border-purple-500/20 bg-gradient-to-br from-slate-800/50 to-slate-900/50'
@@ -199,6 +201,7 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
                   
                   <motion.button 
                     className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+
                       plan.popular
                         ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
                         : 'border border-purple-500/30 text-purple-300 hover:bg-purple-500/10'

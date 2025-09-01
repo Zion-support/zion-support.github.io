@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Loader2, Zap, Cpu, Brain, Cloud, Shield } from 'lucide-react';
 
 interface ModernLoadingSpinnerProps {
+
   size?: 'sm' | 'md' | 'lg' | 'xl';
   variant?: 'default' | 'futuristic' | 'ai' | 'cyber' | 'quantum';
   text?: string;
@@ -13,32 +14,40 @@ interface ModernLoadingSpinnerProps {
 }
 
 const loadingVariants = {
+
   hidden: { opacity: 0, scale: 0.8 },
   visible: { opacity: 1, scale: 1 },
   exit: { opacity: 0, scale: 0.8 }
 };
 
 const spinnerVariants = {
+
   rotate: {
+
     rotate: 360,
     transition: {
+
       duration: 1,
       repeat: Infinity,
       ease: "linear"
     }
   },
   pulse: {
+
     scale: [1, 1.1, 1],
     opacity: [0.5, 1, 0.5],
     transition: {
+
       duration: 2,
       repeat: Infinity,
       ease: "easeInOut"
     }
   },
   float: {
+
     y: [-10, 10, -10],
     transition: {
+
       duration: 3,
       repeat: Infinity,
       ease: "easeInOut"
@@ -47,17 +56,22 @@ const spinnerVariants = {
 };
 
 const iconVariants = {
+
   rotate: {
+
     rotate: 360,
     transition: {
+
       duration: 2,
       repeat: Infinity,
       ease: "linear"
     }
   },
   pulse: {
+
     scale: [1, 1.2, 1],
     transition: {
+
       duration: 1.5,
       repeat: Infinity,
       ease: "easeInOut"
@@ -66,6 +80,7 @@ const iconVariants = {
 };
 
 export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
+
   size = 'md',
   variant = 'default',
   text = 'Loading...',
@@ -74,10 +89,12 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
   duration = 3000,
   onComplete
 }) => {
+
   const [currentProgress, setCurrentProgress] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
 
   const sizeClasses = {
+
     sm: 'w-8 h-8',
     md: 'w-12 h-12',
     lg: 'w-16 h-16',
@@ -85,6 +102,7 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
   };
 
   const textSizes = {
+
     sm: 'text-sm',
     md: 'text-base',
     lg: 'text-lg',
@@ -93,10 +111,15 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
 
   // Progress simulation
   useEffect(() => {
+
     if (showProgress && !isComplete) {
+
       const interval = setInterval(() => {
+
         setCurrentProgress(prev => {
+
           if (prev >= 100) {
+
             setIsComplete(true);
             onComplete?.();
             return 100;
@@ -111,8 +134,11 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
 
   // Auto-complete after duration
   useEffect(() => {
+
     if (!showProgress && duration) {
+
       const timer = setTimeout(() => {
+
         setIsComplete(true);
         onComplete?.();
       }, duration);
@@ -122,20 +148,25 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
   }, [duration, showProgress, onComplete]);
 
   const renderSpinner = () => {
+
     switch (variant) {
+
       case 'futuristic':
         return (
           <div className="relative">
             <motion.div
               className={`${sizeClasses[size]} border-4 border-transparent rounded-full`}
               style={{
+
                 background: 'linear-gradient(45deg, #22ddd2, #a855f7, #10b981)',
                 backgroundSize: '200% 200%'
               }}
               animate={{
+
                 backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
               }}
               transition={{
+
                 duration: 2,
                 repeat: Infinity,
                 ease: "easeInOut"
@@ -145,6 +176,7 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
               className="absolute inset-0 border-4 border-slate-800 rounded-full"
               animate={{ rotate: 360 }}
               transition={{
+
                 duration: 1.5,
                 repeat: Infinity,
                 ease: "linear"
@@ -184,10 +216,12 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
             <motion.div
               className="absolute inset-0 border-2 border-purple-400 rounded-full"
               style={{
+
                 background: 'conic-gradient(from 0deg, transparent, #a855f7, transparent)'
               }}
               animate={{ rotate: 360 }}
               transition={{
+
                 duration: 2,
                 repeat: Infinity,
                 ease: "linear"
@@ -209,10 +243,12 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
             <motion.div
               className="absolute inset-0 border-2 border-green-400 rounded-full"
               animate={{
+
                 scale: [1, 1.5, 1],
                 opacity: [1, 0.3, 1]
               }}
               transition={{
+
                 duration: 2,
                 repeat: Infinity,
                 ease: "easeInOut"
@@ -227,6 +263,7 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
             className={`${sizeClasses[size]} border-4 border-slate-600 border-t-cyan-400 rounded-full`}
             animate={{ rotate: 360 }}
             transition={{
+
               duration: 1,
               repeat: Infinity,
               ease: "linear"
@@ -237,6 +274,7 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
   };
 
   const renderProgressBar = () => {
+
     if (!showProgress) return null;
 
     return (
@@ -258,6 +296,7 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
   };
 
   const renderLoadingText = () => {
+
     if (!text) return null;
 
     const loadingDots = text.split('').map((char, index) => (
@@ -266,6 +305,7 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
+
           delay: index * 0.1,
           duration: 0.3
         }}
@@ -288,6 +328,7 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
   };
 
   if (isComplete) {
+
     return (
       <motion.div
         className="flex flex-col items-center justify-center"
@@ -334,11 +375,13 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
               <motion.div
                 className="absolute -top-2 -left-2 w-2 h-2 bg-cyan-400 rounded-full"
                 animate={{
+
                   x: [0, 10, 0],
                   y: [0, -10, 0],
                   opacity: [0.5, 1, 0.5]
                 }}
                 transition={{
+
                   duration: 2,
                   repeat: Infinity,
                   ease: "easeInOut"
@@ -347,11 +390,13 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
               <motion.div
                 className="absolute -top-2 -right-2 w-2 h-2 bg-purple-400 rounded-full"
                 animate={{
+
                   x: [0, -10, 0],
                   y: [0, -10, 0],
                   opacity: [0.5, 1, 0.5]
                 }}
                 transition={{
+
                   duration: 2,
                   repeat: Infinity,
                   ease: "easeInOut",
@@ -361,11 +406,13 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
               <motion.div
                 className="absolute -bottom-2 -left-2 w-2 h-2 bg-green-400 rounded-full"
                 animate={{
+
                   x: [0, 10, 0],
                   y: [0, 10, 0],
                   opacity: [0.5, 1, 0.5]
                 }}
                 transition={{
+
                   duration: 2,
                   repeat: Infinity,
                   ease: "easeInOut",
@@ -395,10 +442,12 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
                 key={i}
                 className="w-2 h-2 bg-cyan-400 rounded-full"
                 animate={{
+
                   scale: [1, 1.5, 1],
                   opacity: [0.5, 1, 0.5]
                 }}
                 transition={{
+
                   duration: 1,
                   repeat: Infinity,
                   ease: "easeInOut",

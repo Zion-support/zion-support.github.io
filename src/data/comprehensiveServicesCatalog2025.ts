@@ -4,19 +4,6 @@ import { EMERGING_TECH_SERVICES_2025, EMERGING_TECH_SOLUTIONS_2025              
 
 export interface ComprehensiveService2025 {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   id: string;
   title: string;
   description: string;
@@ -36,11 +23,13 @@ export interface ComprehensiveService2025 {
   roi: string;
   innovationLevel: string;
   contactInfo: {
+
     phone: string;
     email: string;
     website: string;
   };
   technicalSpecs?: {
+
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
@@ -118,7 +107,9 @@ export const SUPPORT_LEVELS = [
 ];
 // Calculate counts for each category
 export const calculateServiceStats = () => {
+
   const stats = {
+
     totalServices: COMPREHENSIVE_SERVICES_CATALOG_2025.length,
     categories: SERVICE_CATEGORIES.length,
     pricingTiers: anyanyanyanyanyanyanyanyanyanyanyanyanyPRICING_TIERS.map(tier              => ({;
@@ -134,6 +125,7 @@ export const calculateServiceStats = () => {
 }).length
     })),
     innovationLevels: INNOVATION_LEVELS.map(level = > ({
+
       ...level,
       count: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_CATALOG_2025.filter(service              =>
         service.innovationLevel.toLowerCase() === level.id
@@ -150,30 +142,35 @@ export const calculateServiceStats = () => {
 };
 // Get services by category
 export const getServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
     service.category.toLowerCase().includes(category.toLowerCase().replace('-', ' '))
   );
 };
 // Get services by price range
 export const getServicesByPriceRange = (minPrice: anyanyanyanyanyanyanyanyanyanyanyanyanynumber, maxPrice: number)              => {
+
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
     service.price >= minPrice && service.price <= maxPrice
   );
 };
 // Get services by innovation level
 export const getServicesByInnovationLevel = (level: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
     service.innovationLevel.toLowerCase() === level.toLowerCase()
   );
 };
 // Get services by support level
 export const getServicesBySupportLevel = (level: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
     service.supportLevel.toLowerCase() === level.toLowerCase()
   );
 };
 // Search services
 export const searchServices = (query: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+
   const searchTerm = query.toLowerCase();
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
     service.title.toLowerCase().includes(searchTerm) ||
@@ -185,8 +182,10 @@ export const searchServices = (query: anyanyanyanyanyanyanyanyanyanyanyanyanystr
 };
 // Get featured services (high ROI and innovation)
 export const getFeaturedServices = (limit: number = 10) => {
+
   return COMPREHENSIVE_SERVICES_CATALOG_2025
     .sort((a, b) => {
+
       const aScore = parseInt(a.roi.replace(/\D/g, '')) + (a.innovationLevel === 'Cutting-edge' ? 100 : 0);
       const bScore = parseInt(b.roi.replace(/\D/g, '')) + (b.innovationLevel === 'Cutting-edge' ? 100 : 0);
       return bScore - aScore})
@@ -200,7 +199,9 @@ export const getTrendingServices = (limit: number = 10) => {;
 };
 // Get services by industry
 export const getServicesByIndustry = (industry: string) => {
+
   const industryMap: { [key: string]: string[] } = {
+
     'healthcare': ['AI & Healthcare', 'Medical Diagnostics', 'Healthcare AI'],
     'finance': ['AI & FinTech', 'Quantum Finance', 'Financial Planning'],
     'legal': ['AI & Legal Tech', 'Legal Research'],
@@ -225,23 +226,29 @@ export const getServicesByIndustry = (industry: string) => {
 };
 // Get service recommendations based on user preferences
 export const getServiceRecommendations = (preferences: {
+
   industry?: string;
   budget?: number;
   innovationLevel?: string;
   supportLevel?: string}) => {
+
   let recommendations = COMPREHENSIVE_SERVICES_CATALOG_2025;
   if (preferences.industry) {
+
     recommendations = getServicesByIndustry(preferences.industry);
   }
   if (preferences.budget) {
+
     recommendations = recommendations.filter(service => service.price <= preferences.budget!);
   }
   if (preferences.innovationLevel) {
+
     recommendations = recommendations.filter(service =>
       service.innovationLevel.toLowerCase() === preferences.innovationLevel!.toLowerCase()
     );
   }
   if (preferences.supportLevel) {
+
     recommendations = recommendations.filter(service =>
       service.supportLevel.toLowerCase() === preferences.supportLevel!.toLowerCase()
     )};
@@ -250,6 +257,7 @@ export const getServiceRecommendations = (preferences: {
     );
   }
   return recommendations.sort((a, b) => {
+
     const aScore = parseInt(a.roi.replace(/\D/g, ''));
     const bScore = parseInt(b.roi.replace(/\D/g, ''));
     return bScore - aScore})};

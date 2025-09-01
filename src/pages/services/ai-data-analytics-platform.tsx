@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Brain, 
   BarChart3, 
   Database, 
@@ -28,38 +29,45 @@ import {
 import { SEO } from '@/components/SEO';
 
 const AIDataAnalyticsPlatform: React.FC = () => {
+
   const features = [
     {
+
       icon: Brain,
       title: 'AI-Powered Insights',
       description: 'Advanced machine learning algorithms that automatically discover patterns and generate actionable insights',
       benefits: ['Pattern recognition', 'Anomaly detection', 'Predictive modeling', 'Natural language generation']
     },
     {
+
       icon: BarChart3,
       title: 'Advanced Visualizations',
       description: 'Interactive dashboards and charts that make complex data easy to understand and act upon',
       benefits: ['Custom dashboards', 'Real-time updates', 'Interactive charts', 'Mobile responsive']
     },
     {
+
       icon: Database,
       title: 'Multi-Source Integration',
       description: 'Connect and analyze data from 100+ sources including databases, APIs, and cloud services',
       benefits: ['Data connectors', 'ETL automation', 'Real-time sync', 'Data quality checks']
     },
     {
+
       icon: Search,
       title: 'Natural Language Queries',
       description: 'Ask questions in plain English and get instant answers from your data',
       benefits: ['Voice queries', 'Semantic search', 'Query suggestions', 'Auto-completion']
     },
     {
+
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with role-based access control and comprehensive audit trails',
       benefits: ['Data encryption', 'Access controls', 'Compliance reporting', 'Audit logging']
     },
     {
+
       icon: Zap,
       title: 'Real-time Processing',
       description: 'Process and analyze data in real-time for instant decision-making capabilities',
@@ -69,6 +77,7 @@ const AIDataAnalyticsPlatform: React.FC = () => {
 
   const pricingTiers = [
     {
+
       name: 'Starter',
       price: '$1,200',
       period: '/month',
@@ -85,6 +94,7 @@ const AIDataAnalyticsPlatform: React.FC = () => {
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$4,500',
       period: '/month',
@@ -103,6 +113,7 @@ const AIDataAnalyticsPlatform: React.FC = () => {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: '$8,500',
       period: '/month',
@@ -125,21 +136,25 @@ const AIDataAnalyticsPlatform: React.FC = () => {
 
   const benefits = [
     {
+
       icon: TrendingUp,
       title: '25% Revenue Increase',
       description: 'Average revenue improvement through data-driven decision making'
     },
     {
+
       icon: Clock,
       title: '20+ Hours Saved Per Week',
       description: 'Time savings for each analyst using the platform'
     },
     {
+
       icon: Target,
       title: 'Improved Decision Making',
       description: 'Make faster, more accurate decisions with real-time insights'
     },
     {
+
       icon: Lightbulb,
       title: 'New Business Opportunities',
       description: 'Discover hidden patterns and uncover new revenue streams'
@@ -148,18 +163,22 @@ const AIDataAnalyticsPlatform: React.FC = () => {
 
   const useCases = [
     {
+
       industry: 'E-commerce',
       applications: ['Customer behavior analysis', 'Inventory optimization', 'Price optimization', 'Marketing ROI analysis']
     },
     {
+
       industry: 'Healthcare',
       applications: ['Patient outcome analysis', 'Resource optimization', 'Predictive diagnostics', 'Cost analysis']
     },
     {
+
       industry: 'Financial Services',
       applications: ['Risk assessment', 'Fraud detection', 'Customer segmentation', 'Portfolio optimization']
     },
     {
+
       industry: 'Manufacturing',
       applications: ['Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Production efficiency']
     }
@@ -383,6 +402,7 @@ const AIDataAnalyticsPlatform: React.FC = () => {
                 <motion.div
                   key={tier.name}
                   className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+
                     tier.popular 
                       ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent' 
                       : 'border-gray-700/50'
@@ -421,6 +441,7 @@ const AIDataAnalyticsPlatform: React.FC = () => {
                   
                   <motion.button
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                       tier.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
                         : 'bg-gray-700 text-white hover:bg-gray-600'

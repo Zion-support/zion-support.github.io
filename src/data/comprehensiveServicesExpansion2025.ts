@@ -4,6 +4,7 @@ import { ProductListing } from "@/types/listings";
 export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
   // Advanced AI & Machine Learning Services
   {
+
     id: "ai-autonomous-research-assistant",
     title: "AI Autonomous Research Assistant Pro",
     description: "Advanced AI research platform that autonomously conducts comprehensive research, analyzes data, generates insights, and creates detailed reports across multiple domains including scientific, business, and academic research.",
@@ -13,11 +14,11 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     currency: "$",
     tags: ["AI Research", "Data Analysis", "Report Generation", "Multi-domain Research"],
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       email: "kleber@ziontechgroup.com",
-      avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
-    },
+      avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100"},
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-01-30T09:00:00.000Z",
     rating: 4.9,
@@ -37,6 +38,7 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     ]
   },
   {
+
     id: "ai-creative-design-studio",
     title: "AI Creative Design Studio Enterprise",
     description: "Revolutionary AI-powered design platform that creates stunning visual designs, logos, marketing materials, and creative content. Features brand consistency, style transfer, and collaborative design workflows.",
@@ -46,10 +48,10 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     currency: "$",
     tags: ["AI Design", "Creative Automation", "Brand Consistency", "Visual Content"],
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
+      email: "kleber@ziontechgroup.com"},
     images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-02-05T14:30:00.000Z",
     rating: 4.8,
@@ -68,6 +70,7 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     ]
   },
   {
+
     id: "ai-customer-experience-platform",
     title: "AI Customer Experience Platform",
     description: "Comprehensive customer experience management platform powered by AI that personalizes interactions, predicts customer needs, and optimizes engagement across all touchpoints.",
@@ -77,10 +80,10 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     currency: "$",
     tags: ["Customer Experience", "Personalization", "Predictive Analytics", "Engagement Optimization"],
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
+      email: "kleber@ziontechgroup.com"},
     images: ["https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-02-10T11:15:00.000Z",
     rating: 4.9,
@@ -102,6 +105,7 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
 
   // Advanced Cloud & Infrastructure Services
   {
+
     id: "quantum-cloud-hybrid-platform",
     title: "Quantum Cloud Hybrid Platform",
     description: "Next-generation hybrid cloud platform that combines quantum computing capabilities with traditional cloud infrastructure, enabling unprecedented computational power and security.",
@@ -111,10 +115,10 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     currency: "$",
     tags: ["Quantum Computing", "Hybrid Cloud", "Advanced Security", "High Performance"],
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
+      email: "kleber@ziontechgroup.com"},
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-02-15T10:00:00.000Z",
     rating: 4.9,
@@ -134,6 +138,7 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     ]
   },
   {
+
     id: "autonomous-edge-computing",
     title: "Autonomous Edge Computing Platform",
     description: "Intelligent edge computing platform that autonomously manages distributed computing resources, optimizes performance, and provides real-time data processing at the edge.",
@@ -143,10 +148,10 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     currency: "$",
     tags: ["Edge Computing", "Autonomous Management", "Real-time Processing", "Distributed Computing"],
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
+      email: "kleber@ziontechgroup.com"},
     images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-02-20T14:30:00.000Z",
     rating: 4.8,
@@ -167,6 +172,7 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
 
   // Advanced Cybersecurity Services
   {
+
     id: "ai-threat-intelligence-platform",
     title: "AI Threat Intelligence Platform",
     description: "Advanced threat intelligence platform that uses AI to predict, detect, and respond to cybersecurity threats in real-time. Provides comprehensive threat analysis and automated response capabilities.",
@@ -176,10 +182,10 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     currency: "$",
     tags: ["Threat Intelligence", "AI Security", "Real-time Detection", "Automated Response"],
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
+      email: "kleber@ziontechgroup.com"},
     images: ["https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-02-25T11:15:00.000Z",
     rating: 4.9,
@@ -199,6 +205,7 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     ]
   },
   {
+
     id: "quantum-encryption-suite",
     title: "Quantum Encryption Suite",
     description: "Next-generation quantum encryption platform that provides unbreakable security using quantum key distribution and post-quantum cryptography algorithms.",
@@ -208,10 +215,10 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     currency: "$",
     tags: ["Quantum Encryption", "Post-quantum Cryptography", "Quantum Key Distribution", "Unbreakable Security"],
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
+      email: "kleber@ziontechgroup.com"},
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-03-01T10:00:00.000Z",
     rating: 4.9,
@@ -233,6 +240,7 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
 
   // Advanced IoT & Smart City Services
   {
+
     id: "smart-city-iot-platform",
     title: "Smart City IoT Platform",
     description: "Comprehensive IoT platform for smart cities that manages infrastructure, monitors environmental conditions, optimizes resource usage, and improves citizen services.",
@@ -242,10 +250,10 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     currency: "$",
     tags: ["Smart Cities", "IoT Infrastructure", "Environmental Monitoring", "Resource Optimization"],
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
+      email: "kleber@ziontechgroup.com"},
     images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-03-05T14:30:00.000Z",
     rating: 4.9,
@@ -265,6 +273,7 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     ]
   },
   {
+
     id: "industrial-iot-automation",
     title: "Industrial IoT Automation Platform",
     description: "Advanced industrial IoT platform that automates manufacturing processes, monitors equipment health, and optimizes production efficiency using AI and machine learning.",
@@ -274,10 +283,10 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     currency: "$",
     tags: ["Industrial IoT", "Manufacturing Automation", "Equipment Monitoring", "Production Optimization"],
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
+      email: "kleber@ziontechgroup.com"},
     images: ["https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-03-10T11:15:00.000Z",
     rating: 4.8,
@@ -298,6 +307,7 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
 
   // Advanced Blockchain & Web3 Services
   {
+
     id: "ai-blockchain-governance",
     title: "AI Blockchain Governance Platform",
     description: "Intelligent blockchain governance platform that uses AI to automate decision-making, manage smart contracts, and ensure transparent and efficient blockchain operations.",
@@ -307,10 +317,10 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     currency: "$",
     tags: ["Blockchain Governance", "AI Automation", "Smart Contracts", "Transparent Operations"],
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
+      email: "kleber@ziontechgroup.com"},
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-03-15T10:00:00.000Z",
     rating: 4.8,
@@ -329,6 +339,7 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     ]
   },
   {
+
     id: "defi-trading-automation",
     title: "DeFi Trading Automation Platform",
     description: "Advanced DeFi trading platform that automates trading strategies, manages risk, and optimizes yield farming using AI and machine learning algorithms.",
@@ -338,10 +349,10 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     currency: "$",
     tags: ["DeFi Trading", "Trading Automation", "Risk Management", "Yield Farming"],
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
+      email: "kleber@ziontechgroup.com"},
     images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-03-20T14:30:00.000Z",
     rating: 4.9,
@@ -363,6 +374,7 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
 
   // Advanced Healthcare & Biotechnology Services
   {
+
     id: "ai-drug-discovery-platform",
     title: "AI Drug Discovery Platform",
     description: "Revolutionary AI platform that accelerates drug discovery by analyzing molecular structures, predicting drug interactions, and optimizing clinical trial designs.",
@@ -372,10 +384,10 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     currency: "$",
     tags: ["Drug Discovery", "AI Healthcare", "Molecular Analysis", "Clinical Trials"],
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
+      email: "kleber@ziontechgroup.com"},
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-03-25T11:15:00.000Z",
     rating: 4.9,
@@ -395,6 +407,7 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     ]
   },
   {
+
     id: "precision-medicine-ai",
     title: "Precision Medicine AI Platform",
     description: "Advanced precision medicine platform that uses AI to analyze genetic data, predict disease risks, and create personalized treatment plans for individual patients.",
@@ -404,10 +417,10 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     currency: "$",
     tags: ["Precision Medicine", "Genetic Analysis", "Disease Prediction", "Personalized Treatment"],
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
+      email: "kleber@ziontechgroup.com"},
     images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-03-30T10:00:00.000Z",
     rating: 4.8,
@@ -428,6 +441,7 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
 
   // Advanced Financial Technology Services
   {
+
     id: "ai-risk-management-platform",
     title: "AI Risk Management Platform",
     description: "Comprehensive risk management platform that uses AI to identify, assess, and mitigate financial risks in real-time across multiple asset classes and markets.",
@@ -437,10 +451,10 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     currency: "$",
     tags: ["Risk Management", "AI Finance", "Real-time Assessment", "Multi-asset Coverage"],
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
+      email: "kleber@ziontechgroup.com"},
     images: ["https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-04-01T14:30:00.000Z",
     rating: 4.9,
@@ -460,6 +474,7 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     ]
   },
   {
+
     id: "cryptocurrency-portfolio-manager",
     title: "Cryptocurrency Portfolio Manager Pro",
     description: "Advanced cryptocurrency portfolio management platform that uses AI to optimize trading strategies, manage risk, and maximize returns across multiple digital assets.",
@@ -469,10 +484,10 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     currency: "$",
     tags: ["Cryptocurrency", "Portfolio Management", "AI Trading", "Risk Management"],
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
+      email: "kleber@ziontechgroup.com"},
     images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-04-05T11:15:00.000Z",
     rating: 4.8,
@@ -493,6 +508,7 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
 
   // Advanced Education & Learning Services
   {
+
     id: "ai-personalized-learning-platform",
     title: "AI Personalized Learning Platform",
     description: "Revolutionary learning platform that uses AI to create personalized educational experiences, adapt to individual learning styles, and optimize knowledge retention.",
@@ -502,10 +518,10 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     currency: "$",
     tags: ["Personalized Learning", "AI Education", "Adaptive Learning", "Knowledge Retention"],
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
+      email: "kleber@ziontechgroup.com"},
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-04-10T10:00:00.000Z",
     rating: 4.8,
@@ -524,6 +540,7 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     ]
   },
   {
+
     id: "virtual-reality-education",
     title: "Virtual Reality Education Platform",
     description: "Immersive VR education platform that creates interactive learning experiences, virtual field trips, and hands-on training simulations for enhanced learning outcomes.",
@@ -533,10 +550,10 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     currency: "$",
     tags: ["Virtual Reality", "Immersive Learning", "Interactive Education", "VR Training"],
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
+      email: "kleber@ziontechgroup.com"},
     images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-04-15T14:30:00.000Z",
     rating: 4.9,
@@ -558,6 +575,7 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
 
   // Advanced Manufacturing & Industry 4.0 Services
   {
+
     id: "smart-manufacturing-automation",
     title: "Smart Manufacturing Automation Platform",
     description: "Comprehensive Industry 4.0 platform that automates manufacturing processes, optimizes production efficiency, and provides real-time monitoring and analytics.",
@@ -567,10 +585,10 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     currency: "$",
     tags: ["Smart Manufacturing", "Industry 4.0", "Process Automation", "Production Optimization"],
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
+      email: "kleber@ziontechgroup.com"},
     images: ["https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-04-20T11:15:00.000Z",
     rating: 4.9,
@@ -590,6 +608,7 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     ]
   },
   {
+
     id: "3d-printing-optimization",
     title: "3D Printing Optimization Platform",
     description: "Advanced 3D printing platform that optimizes print parameters, reduces material waste, and improves print quality using AI and machine learning algorithms.",
@@ -599,10 +618,10 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     currency: "$",
     tags: ["3D Printing", "Print Optimization", "Material Efficiency", "Quality Improvement"],
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
+      email: "kleber@ziontechgroup.com"},
     images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-04-25T10:00:00.000Z",
     rating: 4.8,
@@ -623,6 +642,7 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
 
   // Advanced Energy & Sustainability Services
   {
+
     id: "renewable-energy-optimization",
     title: "Renewable Energy Optimization Platform",
     description: "Comprehensive renewable energy platform that optimizes energy production, manages grid integration, and maximizes efficiency using AI and predictive analytics.",
@@ -632,10 +652,10 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     currency: "$",
     tags: ["Renewable Energy", "Energy Optimization", "Grid Integration", "Predictive Analytics"],
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
+      email: "kleber@ziontechgroup.com"},
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-04-30T14:30:00.000Z",
     rating: 4.9,
@@ -655,6 +675,7 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     ]
   },
   {
+
     id: "carbon-footprint-tracking",
     title: "Carbon Footprint Tracking Platform",
     description: "Advanced carbon footprint tracking platform that monitors, analyzes, and helps reduce carbon emissions across organizations and supply chains.",
@@ -664,10 +685,10 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     currency: "$",
     tags: ["Carbon Footprint", "Emission Tracking", "Sustainability", "Environmental Impact"],
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
+      email: "kleber@ziontechgroup.com"},
     images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-05-01T11:15:00.000Z",
     rating: 4.8,
@@ -689,6 +710,7 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
 
 // Export additional service categories for easy access
 export const SERVICE_CATEGORIES = {
+
   "AI & ML": COMPREHENSIVE_SERVICES_EXPANSION_2025.filter(service => service.category === "AI & ML"),
   "Cloud & Infrastructure": COMPREHENSIVE_SERVICES_EXPANSION_2025.filter(service => service.category === "Cloud & Infrastructure"),
   "Cybersecurity": COMPREHENSIVE_SERVICES_EXPANSION_2025.filter(service => service.category === "Cybersecurity"),
@@ -706,6 +728,7 @@ export const FEATURED_SERVICES = COMPREHENSIVE_SERVICES_EXPANSION_2025.filter(se
 
 // Export services by price range
 export const SERVICES_BY_PRICE = {
+
   "Budget": COMPREHENSIVE_SERVICES_EXPANSION_2025.filter(service => service.price < 2000),
   "Mid-range": COMPREHENSIVE_SERVICES_EXPANSION_2025.filter(service => service.price >= 2000 && service.price < 5000),
   "Enterprise": COMPREHENSIVE_SERVICES_EXPANSION_2025.filter(service => service.price >= 5000)

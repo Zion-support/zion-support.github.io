@@ -4,6 +4,7 @@ import { Search, X, ArrowRight, Zap, Brain, Server, Target } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface SearchResult {
+
   id: string;
   title: string;
   description: string;
@@ -14,6 +15,7 @@ interface SearchResult {
 }
 
 export function GlobalSearch() {
+
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
@@ -27,6 +29,7 @@ export function GlobalSearch() {
   const searchData: SearchResult[] = [
     // AI Services
     {
+
       id: 'ai-enterprise-automation',
       title: 'AI Enterprise Automation Platform',
       description: 'Transform your business operations with intelligent automation',
@@ -36,6 +39,7 @@ export function GlobalSearch() {
       relevance: 100
     },
     {
+
       id: 'ai-cybersecurity',
       title: 'AI Cybersecurity Platform',
       description: 'Advanced threat detection and response powered by AI',
@@ -45,6 +49,7 @@ export function GlobalSearch() {
       relevance: 95
     },
     {
+
       id: 'ai-healthcare',
       title: 'AI Healthcare Platform',
       description: 'Revolutionary healthcare solutions with AI technology',
@@ -55,6 +60,7 @@ export function GlobalSearch() {
     },
     // IT Services
     {
+
       id: 'cloud-devops',
       title: 'Cloud & DevOps Solutions',
       description: 'Scalable cloud infrastructure and development operations',
@@ -64,6 +70,7 @@ export function GlobalSearch() {
       relevance: 85
     },
     {
+
       id: 'blockchain',
       title: 'Blockchain Enterprise Solutions',
       description: 'Secure and transparent blockchain implementations',
@@ -74,6 +81,7 @@ export function GlobalSearch() {
     },
     // Solutions
     {
+
       id: 'healthcare-solutions',
       title: 'Healthcare Solutions',
       description: 'Comprehensive healthcare technology solutions',
@@ -83,6 +91,7 @@ export function GlobalSearch() {
       relevance: 75
     },
     {
+
       id: 'financial-solutions',
       title: 'Financial Solutions',
       description: 'Advanced financial technology and automation',
@@ -94,8 +103,11 @@ export function GlobalSearch() {
   ];
 
   useEffect(() => {
+
     const handleClickOutside = (event: MouseEvent) => {
+
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+
         setIsOpen(false);
         setQuery('');
         setResults([]);
@@ -103,7 +115,9 @@ export function GlobalSearch() {
     };
 
     const handleEscape = (event: KeyboardEvent) => {
+
       if (event.key === 'Escape') {
+
         setIsOpen(false);
         setQuery('');
         setResults([]);
@@ -114,13 +128,16 @@ export function GlobalSearch() {
     document.addEventListener('keydown', handleEscape);
 
     return () => {
+
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('keydown', handleEscape);
     };
   }, []);
 
   useEffect(() => {
+
     if (query.trim().length === 0) {
+
       setResults([]);
       return;
     }
@@ -129,7 +146,8 @@ export function GlobalSearch() {
     
     // Simulate search delay
     const timeoutId = setTimeout(() => {
-      const filteredResults = searchData
+
+      const filteredResults = searchData;
         .filter(item => 
           item.title.toLowerCase().includes(query.toLowerCase()) ||
           item.description.toLowerCase().includes(query.toLowerCase())
@@ -145,21 +163,26 @@ export function GlobalSearch() {
   }, [query]);
 
   const handleKeyDown = (event: React.KeyboardEvent) => {
+
     if (event.key === 'ArrowDown') {
+
       event.preventDefault();
       setSelectedIndex(prev => 
         prev < results.length - 1 ? prev + 1 : prev
       );
     } else if (event.key === 'ArrowUp') {
+
       event.preventDefault();
       setSelectedIndex(prev => prev > 0 ? prev - 1 : -1);
     } else if (event.key === 'Enter' && selectedIndex >= 0) {
+
       event.preventDefault();
       handleResultClick(results[selectedIndex]);
     }
   };
 
   const handleResultClick = (result: SearchResult) => {
+
     navigate(result.url);
     setIsOpen(false);
     setQuery('');
@@ -167,12 +190,15 @@ export function GlobalSearch() {
   };
 
   const openSearch = () => {
+
     setIsOpen(true);
     setTimeout(() => inputRef.current?.focus(), 100);
   };
 
   const getCategoryColor = (category: string) => {
+
     switch (category) {
+
       case 'service': return 'text-cyan-500 bg-cyan-50';
       case 'solution': return 'text-purple-500 bg-purple-50';
       case 'page': return 'text-blue-500 bg-blue-50';
@@ -182,7 +208,9 @@ export function GlobalSearch() {
   };
 
   const getCategoryLabel = (category: string) => {
+
     switch (category) {
+
       case 'service': return 'Service';
       case 'solution': return 'Solution';
       case 'page': return 'Page';
@@ -256,6 +284,7 @@ export function GlobalSearch() {
                       ) : results.length > 0 ? (
                         <div className="p-2">
                           {results.map((result, index) => {
+
                             const Icon = result.icon;
                             return (
                               <motion.div
@@ -264,6 +293,7 @@ export function GlobalSearch() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.05 }}
                                 className={`p-3 rounded-lg cursor-pointer transition-all duration-200 ${
+
                                   index === selectedIndex
                                     ? 'bg-zion-50 border border-zion-200'
                                     : 'hover:bg-gray-50'

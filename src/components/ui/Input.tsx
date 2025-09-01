@@ -1,12 +1,14 @@
 import React, { forwardRef } from 'react';
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+
   label?: string;
   error?: string;
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ label, error, className = '', ...props }, ref) => {
+
     return (
       <div className="w-full">
         {label && (

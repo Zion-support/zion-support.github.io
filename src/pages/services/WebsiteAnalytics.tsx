@@ -150,28 +150,34 @@ import { BarChart3,
              } from 'lucide-react.ts';
 
 const WebsiteAnalytics = () => {
+
   const features = [
     {
+
       icon: BarChart3,
       title: 'Real-time Analytics',
       description: 'Live website performance monitoring and insights'
     },
     {
+
       icon: Users2,
       title: 'User Behavior Tracking',
       description: 'Comprehensive user journey and interaction analysis'
     },
     {
+
       icon: MousePointer,
       title: 'Click Tracking',
       description: 'Detailed click heatmaps and user interaction data'
     },
     {
+
       icon: Clock,
       title: 'Performance Monitoring',
       description: 'Page load times and performance optimization insights'
     },
     {
+
       icon: MapPin,
       title: 'Geographic Analytics',
       description: 'User location and regional performance data';
@@ -194,16 +200,19 @@ const WebsiteAnalytics = () => {
 
   const services = [
     {
+
       icon: Monitor,
       title: 'Analytics Dashboard',
       description: 'Comprehensive analytics dashboard with real-time data'
     },
     {
+
       icon: Eye2,
       title: 'User Session Recording',
       description: 'Record and analyze user sessions for insights'
     },
     {
+
       icon: TrendingUp,
       title: 'Conversion Tracking',
       description: 'Track conversions and optimize funnels';
@@ -217,14 +226,17 @@ const WebsiteAnalytics = () => {
 
   const useCases = [
     {
+
       industry: 'E-commerce',
       description: 'Track sales funnels and customer behavior'
     },
     {
+
       industry: 'Marketing',
       description: 'Measure campaign performance and ROI'
     },
     {
+
       industry: 'Content',;
       description: 'Analyze content engagement and user preferences';
     },;
@@ -242,6 +254,7 @@ const WebsiteAnalytics = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -252,6 +265,7 @@ const WebsiteAnalytics = () => {
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -298,6 +312,7 @@ const WebsiteAnalytics = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -308,6 +323,7 @@ const WebsiteAnalytics = () => {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -334,6 +350,7 @@ const WebsiteAnalytics = () => {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -344,6 +361,7 @@ const WebsiteAnalytics = () => {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -354,6 +372,7 @@ const WebsiteAnalytics = () => {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -381,6 +400,7 @@ const WebsiteAnalytics = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -391,6 +411,7 @@ const WebsiteAnalytics = () => {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -417,6 +438,7 @@ const WebsiteAnalytics = () => {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
 
@@ -427,6 +449,7 @@ const WebsiteAnalytics = () => {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -437,6 +460,7 @@ const WebsiteAnalytics = () => {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -468,6 +492,7 @@ const WebsiteAnalytics = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -478,6 +503,7 @@ const WebsiteAnalytics = () => {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -504,6 +530,7 @@ const WebsiteAnalytics = () => {
                 <motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   x: -20 
 
@@ -514,6 +541,7 @@ const WebsiteAnalytics = () => {
 
 }}
                   whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -524,6 +552,7 @@ const WebsiteAnalytics = () => {
 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -545,6 +574,7 @@ const WebsiteAnalytics = () => {
                 <motion.div
                   key={index + 3}
                   initial = {
+
   { opacity: 0,
   x: 20 
 
@@ -555,6 +585,7 @@ const WebsiteAnalytics = () => {
 
 }}
                   whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -565,6 +596,7 @@ const WebsiteAnalytics = () => {
 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -590,6 +622,7 @@ const WebsiteAnalytics = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -600,6 +633,7 @@ const WebsiteAnalytics = () => {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -626,6 +660,7 @@ const WebsiteAnalytics = () => {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -636,6 +671,7 @@ const WebsiteAnalytics = () => {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -646,6 +682,7 @@ const WebsiteAnalytics = () => {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -673,6 +710,7 @@ const WebsiteAnalytics = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -683,6 +721,7 @@ const WebsiteAnalytics = () => {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 

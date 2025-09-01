@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Brain, 
   Zap, 
   Shield, 
@@ -115,6 +116,7 @@ import {
 import { SEO } from '../components/SEO';
 
 export default function InnovativeAIServices2025() {
+
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState('grid');
@@ -122,6 +124,7 @@ export default function InnovativeAIServices2025() {
   const aiServices = [
     // AI-Powered Business Intelligence
     {
+
       id: "ai-business-intelligence-suite",
       title: "AI Business Intelligence Suite",
       description: "Advanced AI-powered BI platform with natural language queries, predictive analytics, and automated insights generation. Transforms raw data into actionable business intelligence with 95% accuracy.",
@@ -166,6 +169,7 @@ export default function InnovativeAIServices2025() {
 
     // AI-Powered Healthcare Platform
     {
+
       id: "ai-healthcare-platform",
       title: "AI Healthcare Platform",
       description: "Comprehensive AI healthcare platform with diagnostic assistance, patient monitoring, and treatment optimization. Improves diagnostic accuracy by 35% and reduces treatment costs by 25%.",
@@ -210,6 +214,7 @@ export default function InnovativeAIServices2025() {
 
     // AI-Powered Content Creation
     {
+
       id: "ai-content-creation-studio",
       title: "AI Content Creation Studio",
       description: "Advanced AI-powered content creation platform with multi-language support, SEO optimization, and brand voice consistency. Generates high-quality content 10x faster with 95% accuracy.",
@@ -254,6 +259,7 @@ export default function InnovativeAIServices2025() {
 
     // AI-Powered Cybersecurity
     {
+
       id: "ai-cybersecurity-platform",
       title: "AI Cybersecurity Platform",
       description: "Intelligent cybersecurity platform with AI-powered threat detection, behavioral analysis, and automated response. Detects threats 10x faster and reduces false positives by 90%.",
@@ -298,6 +304,7 @@ export default function InnovativeAIServices2025() {
 
     // AI-Powered Customer Support
     {
+
       id: "ai-customer-support-automation",
       title: "AI Customer Support Automation",
       description: "Intelligent customer support automation with 24/7 availability, multilingual support, and seamless human handoff. Reduces response time by 90% and increases customer satisfaction by 85%.",
@@ -342,6 +349,7 @@ export default function InnovativeAIServices2025() {
 
     // AI-Powered HR & Recruitment
     {
+
       id: "ai-hr-recruitment-suite",
       title: "AI HR & Recruitment Suite",
       description: "Comprehensive HR platform with AI-powered candidate screening, skill assessment, and cultural fit analysis. Reduces hiring time by 60% and improves candidate quality by 75%.",
@@ -386,6 +394,7 @@ export default function InnovativeAIServices2025() {
 
     // AI-Powered Legal Tech
     {
+
       id: "ai-legal-document-analysis",
       title: "AI Legal Document Analysis",
       description: "Advanced legal document analysis platform with contract review, risk assessment, and compliance checking. Processes legal documents 20x faster with 98% accuracy.",
@@ -430,6 +439,7 @@ export default function InnovativeAIServices2025() {
 
     // AI-Powered Financial Trading
     {
+
       id: "ai-financial-trading-platform",
       title: "AI Financial Trading Platform",
       description: "Intelligent trading platform with predictive analytics, risk management, and automated trading strategies. Increases trading accuracy by 40% and reduces risk by 60%.",
@@ -474,6 +484,7 @@ export default function InnovativeAIServices2025() {
 
     // AI-Powered Research & Development
     {
+
       id: "ai-research-development-platform",
       title: "AI Research & Development Platform",
       description: "Advanced AI-powered research and development platform with automated hypothesis testing, data analysis, and innovation management. Accelerates research by 5x and improves success rate by 70%.",
@@ -518,6 +529,7 @@ export default function InnovativeAIServices2025() {
 
     // AI-Powered Supply Chain
     {
+
       id: "ai-supply-chain-optimization",
       title: "AI Supply Chain Optimization",
       description: "Intelligent supply chain optimization platform with demand forecasting, inventory management, and logistics optimization. Reduces supply chain costs by 30% and improves efficiency by 45%.",
@@ -576,6 +588,7 @@ export default function InnovativeAIServices2025() {
   ];
 
   const filteredServices = aiServices.filter(service => {
+
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -584,11 +597,13 @@ export default function InnovativeAIServices2025() {
   });
 
   const getCategoryIcon = (category: string) => {
+
     const categoryData = categories.find(c => c.id === category);
     return categoryData?.icon || '🤖';
   };
 
   const getCategoryColor = (category: string) => {
+
     const categoryData = categories.find(c => c.id === category);
     return categoryData?.color || 'from-gray-500 to-gray-600';
   };
@@ -680,6 +695,7 @@ export default function InnovativeAIServices2025() {
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
+
                   activeCategory === category.id
                     ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg'
                     : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
@@ -717,6 +733,7 @@ export default function InnovativeAIServices2025() {
             <p className="text-gray-600 mb-6">Try adjusting your search criteria</p>
             <button
               onClick={() => {
+
                 setActiveCategory('all');
                 setSearchTerm('');
               }}
@@ -734,6 +751,7 @@ export default function InnovativeAIServices2025() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden ${
+
                   viewMode === 'list' ? 'flex' : ''
                 }`}
               >

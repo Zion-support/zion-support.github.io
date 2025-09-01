@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Utensils, 
   TrendingUp, 
   BarChart3, 
@@ -52,38 +53,45 @@ import { SEO } from '../../components/SEO';
 import { Link } from 'react-router-dom';
 
 export default function AIRestaurantManagementSystem() {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Inventory Management",
       description: "Smart inventory tracking with predictive ordering, waste reduction, and real-time stock monitoring",
       color: "from-green-500 to-emerald-500"
     },
     {
+
       icon: Users,
       title: "Customer Relationship Management",
       description: "AI-driven customer insights, loyalty programs, and personalized marketing campaigns",
       color: "from-blue-500 to-cyan-500"
     },
     {
+
       icon: BarChart3,
       title: "Analytics & Reporting",
       description: "Comprehensive business intelligence with sales trends, performance metrics, and predictive analytics",
       color: "from-purple-500 to-pink-500"
     },
     {
+
       icon: Utensils,
       title: "Kitchen Operations",
       description: "Streamlined order management, recipe optimization, and kitchen efficiency monitoring",
       color: "from-orange-500 to-red-500"
     },
     {
+
       icon: DollarSign,
       title: "Financial Management",
       description: "Automated accounting, cost tracking, profit margin analysis, and financial forecasting",
       color: "from-indigo-500 to-purple-500"
     },
     {
+
       icon: Shield,
       title: "Compliance & Safety",
       description: "Food safety monitoring, health code compliance, and automated safety checklists",
@@ -93,24 +101,28 @@ export default function AIRestaurantManagementSystem() {
 
   const benefits = [
     {
+
       icon: Clock,
       title: "Time Savings",
       description: "Reduce operational time by 70%",
       metric: "70%"
     },
     {
+
       icon: DollarSign,
       title: "Cost Reduction",
       description: "Lower operational costs by 40%",
       metric: "40%"
     },
     {
+
       icon: Target,
       title: "Efficiency",
       description: "Increase productivity by 3.5x",
       metric: "3.5x"
     },
     {
+
       icon: TrendingUp,
       title: "Revenue Growth",
       description: "Boost sales by 25%",
@@ -120,6 +132,7 @@ export default function AIRestaurantManagementSystem() {
 
   const pricing = [
     {
+
       name: "Starter",
       price: 1999,
       period: "one-time setup",
@@ -135,6 +148,7 @@ export default function AIRestaurantManagementSystem() {
       cta: "Get Started"
     },
     {
+
       name: "Professional",
       price: 3999,
       period: "one-time setup",
@@ -151,6 +165,7 @@ export default function AIRestaurantManagementSystem() {
       cta: "Most Popular"
     },
     {
+
       name: "Enterprise",
       price: 7999,
       period: "one-time setup",
@@ -179,24 +194,28 @@ export default function AIRestaurantManagementSystem() {
 
   const useCases = [
     {
+
       title: "Quick Service Restaurants",
       description: "Streamline operations for fast-food chains, food trucks, and casual dining establishments",
       icon: Utensils,
       color: "from-green-500 to-emerald-500"
     },
     {
+
       title: "Fine Dining",
       description: "Enhance guest experience with personalized service and sophisticated inventory management",
       icon: ChefHat,
       color: "from-purple-500 to-pink-500"
     },
     {
+
       title: "Multi-Location Chains",
       description: "Centralized management for restaurant chains with real-time monitoring and reporting",
       icon: Building,
       color: "from-blue-500 to-cyan-500"
     },
     {
+
       title: "Ghost Kitchens",
       description: "Optimize delivery-only operations with AI-driven order management and kitchen efficiency",
       icon: Rocket,
@@ -393,6 +412,7 @@ export default function AIRestaurantManagementSystem() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`p-8 rounded-xl border ${
+
                   plan.popular 
                     ? 'bg-gradient-to-br from-green-900/50 to-emerald-900/50 border-green-500/50 shadow-2xl shadow-green-500/25' 
                     : 'bg-slate-800/50 border-slate-700/50'
@@ -423,6 +443,7 @@ export default function AIRestaurantManagementSystem() {
                 <Link
                   to={plan.name === "Enterprise" ? "/contact" : "/request-quote"}
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white transform hover:scale-105'
                       : 'bg-slate-700 hover:bg-slate-600 text-white'

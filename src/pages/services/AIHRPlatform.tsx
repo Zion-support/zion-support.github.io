@@ -34,6 +34,7 @@ import { Brain,
               } from 'lucide-react.ts';
 
 export default function AIHRPlatform(...args[]: any):  {
+
   const features = [
     "AI-powered candidate screening and matching",
     "Intelligent resume parsing and analysis",
@@ -70,6 +71,7 @@ export default function AIHRPlatform(...args[]: any):  {
 
   const pricing = [
     {
+
       name: "Starter",
       price: "$399",
       period: "/month",
@@ -86,6 +88,7 @@ export default function AIHRPlatform(...args[]: any):  {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$899",
       period: "/month",
@@ -103,6 +106,7 @@ export default function AIHRPlatform(...args[]: any):  {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$1,999",
       period: "/month",
@@ -133,6 +137,7 @@ export default function AIHRPlatform(...args[]: any):  {
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -143,6 +148,7 @@ export default function AIHRPlatform(...args[]: any):  {
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -193,6 +199,7 @@ export default function AIHRPlatform(...args[]: any):  {
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -203,6 +210,7 @@ export default function AIHRPlatform(...args[]: any):  {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -228,6 +236,7 @@ export default function AIHRPlatform(...args[]: any):  {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -238,6 +247,7 @@ export default function AIHRPlatform(...args[]: any):  {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -248,6 +258,7 @@ export default function AIHRPlatform(...args[]: any):  {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -274,6 +285,7 @@ export default function AIHRPlatform(...args[]: any):  {
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -284,6 +296,7 @@ export default function AIHRPlatform(...args[]: any):  {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -309,6 +322,7 @@ export default function AIHRPlatform(...args[]: any):  {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -319,6 +333,7 @@ export default function AIHRPlatform(...args[]: any):  {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -329,6 +344,7 @@ export default function AIHRPlatform(...args[]: any):  {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -355,6 +371,7 @@ export default function AIHRPlatform(...args[]: any):  {
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -365,6 +382,7 @@ export default function AIHRPlatform(...args[]: any):  {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -390,6 +408,7 @@ export default function AIHRPlatform(...args[]: any):  {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -400,6 +419,7 @@ export default function AIHRPlatform(...args[]: any):  {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -410,6 +430,7 @@ export default function AIHRPlatform(...args[]: any):  {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -436,6 +457,7 @@ export default function AIHRPlatform(...args[]: any):  {
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -446,6 +468,7 @@ export default function AIHRPlatform(...args[]: any):  {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -470,6 +493,7 @@ export default function AIHRPlatform(...args[]: any):  {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -480,6 +504,7 @@ export default function AIHRPlatform(...args[]: any):  {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -490,6 +515,7 @@ export default function AIHRPlatform(...args[]: any):  {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -500,6 +526,7 @@ export default function AIHRPlatform(...args[]: any):  {
 
 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+
                   plan.popular
                     ? 'border-indigo-500 ring-2 ring-indigo-500/20'
                     : 'border-gray-700'
@@ -535,6 +562,7 @@ export default function AIHRPlatform(...args[]: any):  {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700'
                       : 'bg-gray-700 text-white hover:bg-gray-600'
@@ -553,6 +581,7 @@ export default function AIHRPlatform(...args[]: any):  {
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -563,6 +592,7 @@ export default function AIHRPlatform(...args[]: any):  {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 

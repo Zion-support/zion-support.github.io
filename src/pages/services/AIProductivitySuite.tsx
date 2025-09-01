@@ -4,32 +4,38 @@ import { Brain, Zap, Users, TrendingUp, Shield, Clock, Target, BarChart3, CheckC
 import { Link } from 'react-router-dom';
 
 export default function AIProductivitySuite() {
+
   const features = [
     {
+
       title: "AI-Powered Task Management",
       description: "Intelligent task prioritization, deadline optimization, and automated scheduling based on your work patterns",
       icon: Target,
       benefits: ["Smart prioritization", "Automated scheduling", "Workload balancing", "Performance insights"]
     },
     {
+
       title: "Intelligent Document Processing",
       description: "AI-driven document analysis, summarization, and content extraction from any format",
       icon: Brain,
       benefits: ["Document summarization", "Content extraction", "Format conversion", "Search optimization"]
     },
     {
+
       title: "Smart Meeting Assistant",
       description: "Automated meeting notes, action item tracking, and follow-up reminders with CRM integration",
       icon: Users,
       benefits: ["Auto-transcription", "Action tracking", "CRM sync", "Follow-up automation"]
     },
     {
+
       title: "Predictive Analytics Dashboard",
       description: "Real-time insights into productivity patterns, bottlenecks, and optimization opportunities",
       icon: BarChart3,
       benefits: ["Performance metrics", "Bottleneck detection", "Optimization suggestions", "Trend analysis"]
     },
     {
+
       title: "Cross-Platform Synchronization",
       description: "Seamless integration across all devices and platforms with real-time sync",
       icon: Cloud,
@@ -39,6 +45,7 @@ export default function AIProductivitySuite() {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$29",
       period: "/month",
@@ -53,6 +60,7 @@ export default function AIProductivitySuite() {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$79",
       period: "/month",
@@ -68,6 +76,7 @@ export default function AIProductivitySuite() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$199",
       period: "/month",
@@ -86,21 +95,25 @@ export default function AIProductivitySuite() {
 
   const useCases = [
     {
+
       industry: "Legal",
       description: "Automated contract analysis, case research, and document management",
       benefits: ["Time savings", "Accuracy improvement", "Cost reduction"]
     },
     {
+
       industry: "Healthcare",
       description: "Patient data analysis, appointment scheduling, and medical record management",
       benefits: ["Efficiency gains", "Compliance adherence", "Patient satisfaction"]
     },
     {
+
       industry: "Finance",
       description: "Financial document processing, compliance monitoring, and risk assessment",
       benefits: ["Risk reduction", "Compliance automation", "Operational efficiency"]
     },
     {
+
       industry: "Education",
       description: "Student performance tracking, content creation, and administrative automation",
       benefits: ["Student engagement", "Administrative efficiency", "Personalized learning"]
@@ -109,6 +122,7 @@ export default function AIProductivitySuite() {
 
   const testimonials = [
     {
+
       name: "Sarah Chen",
       role: "Operations Director",
       company: "TechFlow Solutions",
@@ -116,6 +130,7 @@ export default function AIProductivitySuite() {
       rating: 5
     },
     {
+
       name: "Michael Rodriguez",
       role: "CEO",
       company: "InnovateCorp",
@@ -123,6 +138,7 @@ export default function AIProductivitySuite() {
       rating: 5
     },
     {
+
       name: "Dr. Emily Watson",
       role: "Medical Director",
       company: "HealthFirst Clinic",
@@ -220,6 +236,7 @@ export default function AIProductivitySuite() {
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={plan.name} className={`relative bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border-2 ${
+
                 plan.popular ? 'border-cyan-500' : 'border-slate-700'
               }`}>
                 {plan.popular && (
@@ -248,6 +265,7 @@ export default function AIProductivitySuite() {
                 <Link 
                   to="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+
                     plan.popular 
                       ? 'bg-cyan-500 hover:bg-cyan-600 text-white' 
                       : 'border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'

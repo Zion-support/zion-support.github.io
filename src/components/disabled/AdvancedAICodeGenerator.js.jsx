@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Code, Brain, Zap, Download, RefreshCw, X, Maximize2, Minimize2, Eye, EyeOff, Search, FileText, CheckCircle, AlertCircle, Copy, Shield, Activity, BarChart3, Gauge } from 'lucide-react';
 const mockCodeSnippets = [
     {
+
         id: '1',
         title: 'React Hook for API Calls',
         description: 'Custom hook for managing API calls with loading states and error handling',
@@ -9,40 +10,49 @@ const mockCodeSnippets = [
         code: `import { useState, useEffect } from 'react';
 
 interface UseApiOptions<T> {
+
   url: string;
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
   body?;headers?: Record<string, string>}
 
 export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<T>) {
+
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const execute = async () => {
+
     try {
+
       setLoading(true);
       setError(null);
       
       const response = await fetch(url, {
+
         method,
         headers: {
+
           'Content-Type': 'application/json',
-          ...headers,
-        },
-        body: body ? JSON.stringify(body) : null,
-      });
+          ...headers},
+        body: body ? JSON.stringify(body) : null});
 
       if (!response.ok) {
+
         throw new Error(\`HTTP error! status: \${response.status}\`)}
 
       const result = await response.json();
       setData(result)} catch (err) {
+
       setError(err instanceof Error ? err.message : 'An error occurred')} finally {
+
       setLoading(false)}
   };
 
   useEffect(() => {
+
     if (method === 'GET') {
+
       execute()}
   }, [url]);
 
@@ -54,18 +64,23 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
         createdAt: '2024-01-15'
     },
     {
+
         id: '2',
         title: 'Tailwind CSS Animation Utilities',
         description: 'Custom Tailwind utilities for advanced animations and transitions',
         language: 'css',
         code: `@layer utilities {
+
   .animate-float {
+
     animation: float 3s ease-in-out infinite}
   
   .animate-glow {
+
     animation: glow 2s ease-in-out infinite alternate}
   
   .animate-shimmer {
+
     background: linear-gradient(
       90deg,
       transparent,
@@ -77,16 +92,19 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
 }
 
 @keyframes float {
+
   0%, 100% { transform: translateY(0px)}
   50% { transform: translateY(-10px)}
 }
 
 @keyframes glow {
+
   from { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5)}
   to { box-shadow: 0 0 30px rgba(59, 130, 246, 0.8)}
 }
 
 @keyframes shimmer {
+
   0% { background-position: -200% 0}
   100% { background-position: 200% 0}
 }`,
@@ -97,14 +115,18 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
         createdAt: '2024-01-10'
     },
     {
+
         id: '3',
         title: 'Advanced Form Validation',
         description: 'Comprehensive form validation with custom rules and error handling',
         language: 'javascript',
         code: `class FormValidator {
+
   constructor(form, options = {}) {
+
     this.form = form;
     this.options = {
+
   validateOnBlur: true,
       validateOnSubmit: true,
       showErrors: true,
@@ -118,16 +140,20 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     this.init()}
 
   addRule(field, rule) {
+
     if (!this.rules.has(field)) {
+
       this.rules.set(field, [])}
     this.rules.get(field).push(rule)}
 
   validateField(field) {
+
     const value = this.form[field]?.value;
     const fieldErrors = [];
 
     for (const result = rule(value, this.form);
       if (result !== true) {
+
         fieldErrors.push(result)}
     }
 
@@ -136,35 +162,47 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     return fieldErrors.length === 0}
 
   validateForm() {
+
     let isValid = true;
     for (const fieldElement = this.form[field];
     const errors = this.errors.get(field) || [];
     
     if (errors.length > 0) {
+
       fieldElement.classList.add('error');
       this.showFieldErrors(field, errors)} else {
+
       fieldElement.classList.remove('error');
       this.hideFieldErrors(field)}
   }
 
   showFieldErrors(field, errors) {
+
     // Implementation for showing field-specific errors
   }
 
   hideFieldErrors(field) {
+
     // Implementation for hiding field-specific errors
   }
 
   init() {
+
     if (this.options.validateOnBlur) {
+
       this.form.addEventListener('blur', (e) => {
+
         if (e.target.name) {
+
           this.validateField(e.target.name)}
       }, true)}
 
     if (this.options.validateOnSubmit) {
+
       this.form.addEventListener('submit', (e) => {
+
         if (!this.validateForm()) {
+
           e.preventDefault()}
       })}
   }
@@ -178,25 +216,33 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
 ];
 const mockAIGenerations = [
     {
+
         id: '1',
         prompt: 'Create a React hook for managing local storage with TypeScript',
         generatedCode: `import { useState, useEffect } from 'react';
 
 export function useLocalStorage<T>(key: string, initialValue: T) {
+
   const [storedValue, setStoredValue] = useState<T>(() => {
+
     try {
+
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue} catch (error) {
-      console.error(\`Error reading localStorage key "\${key}":\`, error);
+
+      // // // console.error(\`Error reading localStorage key "\${key}":\`, error);
       return initialValue}
   });
 
   const setValue = (value: T | ((val: T) => T)) => {
+
     try {
+
       const valueToStore = value instanceof Function ? value(storedValue) : value;
       setStoredValue(valueToStore);
       window.localStorage.setItem(key, JSON.stringify(valueToStore))} catch (error) {
-      console.error(\`Error setting localStorage key "\${key}":\`, error)}
+
+      // // // console.error(\`Error setting localStorage key "\${key}":\`, error)}
   };
 
   return [storedValue, setValue] as const}`,
@@ -211,6 +257,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
     }
 ];
 export function AdvancedAICodeGenerator() {
+
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
@@ -227,30 +274,36 @@ export function AdvancedAICodeGenerator() {
     const [showSuggestions, setShowSuggestions] = useState(true);
     const containerRef = useRef(null);
     const getComplexityColor = (complexity) => {
+
         switch (complexity) {
+
             case 'low': return 'text-green-500';
             case 'medium': return 'text-yellow-500';
             case 'high': return 'text-red-500';
             default: return 'text-gray-500'}
     };
     const getQualityColor = (score) => {
+
         if (score >= 90)
             return 'text-green-500';
         if (score >= 80)
             return 'text-yellow-500';
         return 'text-red-500'};
     const generateCode = async () => {
+
         if (!aiPrompt.trim())
             return;
         setIsGenerating(true);
         // Simulate AI code generation
         setTimeout(() => {
+
             const newGeneration = {
+
   id: Date.now().toString(),
                 prompt: aiPrompt,
   generatedCode: `// Generated code for: ${aiPrompt
 
-}\n\nfunction example() {\n  console.log("Hello from AI!");\n  return "Generated code";\n}`,
+}\n\nfunction example() {\n  // // // console.log("Hello from AI!");\n  return "Generated code";\n}`,
                 language: 'javascript',
                 confidence: 0.87,
                 alternatives[
@@ -264,12 +317,15 @@ export function AdvancedAICodeGenerator() {
             setGeneratedCode(newGeneration.generatedCode);
             setIsGenerating(false)}, 2000)};
     const copyToClipboard = (text) => {
+
         navigator.clipboard.writeText(text)};
     if (!isOpen) {
+
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-110 z-50">
         <Code className="w-6 h-6"/>
       </button>)}
     if (isMinimized) {
+
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50">
         <div className="flex items-center justify-between p-3 border-b border-zion-slate-light">
           <div className="flex items-center space-x-2">
@@ -521,6 +577,7 @@ export function AdvancedAICodeGenerator() {
 
             <div className="space-y-4">
               {codeAnalysis.map((analysis) => {
+
                 const snippet = codeSnippets.find(s => s.id === analysis.snippetId);
                 return (<div key={analysis.id} className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
                     <div className="flex items-start justify-between mb-4">

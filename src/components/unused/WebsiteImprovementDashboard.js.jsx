@@ -2,9 +2,11 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChartBarIcon, CogIcon, ExclamationTriangleIcon, CheckCircleIcon, InformationCircleIcon, XMarkIcon, ArrowUpIcon, ArrowDownIcon, MinusIcon, EyeIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
 const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => {
+
     const [isOpen, setIsOpen] = useState(showOnLoad);
     const [activeTab, setActiveTab] = useState('overview');
     const [metrics, setMetrics] = useState({
+
         loadTime: 0,
         firstContentfulPaint: 0,
         largestContentfulPaint: 0,
@@ -13,10 +15,12 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         timeToInteractive: 0
     });
     const [seoAnalysis, setSeoAnalysis] = useState({
+
         score: 0,
         issues[],
         suggestions[],
         metaTags: {
+
             title: false,
             description: false,
             keywords: false,
@@ -26,6 +30,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         }
     });
     const [accessibilityReport, setAccessibilityReport] = useState({
+
         score: 0,
         issues[],
         wcagCompliance: 'Non-Compliant',
@@ -35,11 +40,13 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     // Analyze website performance
     const analyzePerformance = useCallback(async () => {
+
         setIsAnalyzing(true);
         // Simulate performance analysis
         await new Promise(resolve => setTimeout(resolve, 2000));
         // Mock performance data (in a real app, you'd use Web Vitals API)
         const mockMetrics = {
+
   loadTime: Math.random() * 3000 + 1000, // 1-4 seconds
             firstContentfulPaint: Math.random() * 2000 + 500, // 0.5-2.5 seconds
             largestContentfulPaint: Math.random() * 3000 + 1000, // 1-4 seconds
@@ -54,10 +61,12 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         setIsAnalyzing(false)}, []);
     // Analyze SEO
     const analyzeSEO = useCallback(async () => {
+
         setIsAnalyzing(true);
         await new Promise(resolve => setTimeout(resolve, 1500));
         // Mock SEO analysis
         const mockSEO = {
+
   score: Math.floor(Math.random() * 40) + 60, // 60-100
             issues[
                 'Missing meta description on some pages',
@@ -70,6 +79,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                 'Improve internal linking structure'
             ],
             metaTags: {
+
                 title: true,
                 description: Math.random() > 0.3,
                 keywords: Math.random() > 0.5,
@@ -84,10 +94,12 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         setIsAnalyzing(false)}, []);
     // Analyze accessibility
     const analyzeAccessibility = useCallback(async () => {
+
         setIsAnalyzing(true);
         await new Promise(resolve => setTimeout(resolve, 1800));
         // Mock accessibility analysis
         const mockAccessibility = {
+
   score: Math.floor(Math.random() * 30) + 70, // 70-100
             issues[
                 'Some form controls lack proper labels',
@@ -104,6 +116,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         setIsAnalyzing(false)}, []);
     // Run comprehensive analysis
     const runFullAnalysis = useCallback(async () => {
+
         await Promise.all([
             analyzePerformance(),
             analyzeSEO(),
@@ -111,6 +124,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         ])}, [analyzePerformance, analyzeSEO, analyzeAccessibility]);
     // Get performance grade
     const getPerformanceGrade = (metric, thresholds) => {
+
         if (metric <= thresholds.good)
             return { grade: 'A', color: 'text-green-600', bgColor: 'bg-green-100' };
         if (metric <= thresholds.needsImprovement)
@@ -118,13 +132,16 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         return { grade: 'C', color: 'text-red-600', bgColor: 'bg-red-100' }};
     // Get trend indicator
     const getTrendIndicator = (value, previousValue) => {
+
         if (value < previousValue)
             return { icon: ArrowUpIcon, color: 'text-green-600', text: 'Improving' };
         if (value > previousValue)
             return { icon: ArrowDownIcon, color: 'text-red-600', text: 'Declining' };
         return { icon: MinusIcon, color: 'text-gray-600', text: 'Stable' }};
     useEffect(() => {
+
         if (showOnLoad) {
+
             runFullAnalysis()}
     }, [showOnLoad, runFullAnalysis]);
     return (<>
@@ -136,14 +153,17 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
       {/* Dashboard Panel */}
       <AnimatePresence>
         {isOpen && (<motion.div initial = {
+
   { opacity: 0,
   x: -400 
 
 }} animate = {
+
   { opacity: 1,
   x: 0 
 
 }} exit = {
+
   { opacity: 0,
   x: -400 
 
@@ -250,36 +270,42 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                   <div className="space-y-3">
                     {[
                     {
+
                         label: 'Load Time',
                         value: metrics.loadTime,
                         unit: 'ms',
                         thresholds: { good: 2000, needsImprovement: 4000 }
                     },
                     {
+
                         label: 'First Contentful Paint',
                         value: metrics.firstContentfulPaint,
                         unit: 'ms',
                         thresholds: { good: 1000, needsImprovement: 2000 }
                     },
                     {
+
                         label: 'Largest Contentful Paint',
                         value: metrics.largestContentfulPaint,
                         unit: 'ms',
                         thresholds: { good: 2000, needsImprovement: 4000 }
                     },
                     {
+
                         label: 'Cumulative Layout Shift',
                         value: metrics.cumulativeLayoutShift,
                         unit: '',
                         thresholds: { good: 0.1, needsImprovement: 0.25 }
                     },
                     {
+
                         label: 'First Input Delay',
                         value: metrics.firstInputDelay,
                         unit: 'ms',
                         thresholds: { good: 100, needsImprovement: 300 }
                     }
                 ].map((metric, index) => {
+
                     const grade = getPerformanceGrade(metric.value, metric.thresholds);
                     return (<div key={index} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
                           <div>
@@ -408,6 +434,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                   <div className="space-y-3">
                     {[
                     {
+
                         priority: 'High',
                         title: 'Fix Critical Accessibility Issues',
                         description: 'Address WCAG compliance violations',
@@ -415,6 +442,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                         effort: 'Medium'
                     },
                     {
+
                         priority: 'High',
                         title: 'Optimize Core Web Vitals',
                         description: 'Improve page load performance',
@@ -422,6 +450,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                         effort: 'High'
                     },
                     {
+
                         priority: 'Medium',
                         title: 'Enhance SEO Meta Tags',
                         description: 'Add missing meta descriptions and titles',
@@ -429,6 +458,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                         effort: 'Low'
                     },
                     {
+
                         priority: 'Medium',
                         title: 'Improve Image Optimization',
                         description: 'Add alt text and compress images',

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Home, 
   TrendingUp, 
   Brain, 
@@ -31,23 +32,28 @@ import {
 } from 'lucide-react';
 
 const AIRealEstateAnalyticsPlatform = () => {
+
   const features = [
     {
+
       icon: <Brain className="w-6 h-6" />,
       title: "AI-Powered Market Analysis",
       description: "Advanced machine learning algorithms analyze real estate markets in real-time, providing predictive insights for investment decisions with 92% accuracy."
     },
     {
+
       icon: <TrendingUp className="w-6 h-6" />,
       title: "Predictive Property Valuation",
       description: "AI models predict property values based on market trends, neighborhood data, and economic indicators, helping investors make informed decisions."
     },
     {
+
       icon: <Building className="w-6 h-6" />,
       title: "Portfolio Optimization",
       description: "Intelligent portfolio management tools that optimize real estate investments based on risk tolerance, market conditions, and investment goals."
     },
     {
+
       icon: <MapPinIcon className="w-6 h-6" />,
       title: "Geographic Market Intelligence",
       description: "Comprehensive geographic analysis including neighborhood trends, school ratings, crime statistics, and future development plans."
@@ -65,6 +71,7 @@ const AIRealEstateAnalyticsPlatform = () => {
 
   const pricing = [
     {
+
       plan: "Starter",
       price: "$199",
       period: "/month",
@@ -76,6 +83,7 @@ const AIRealEstateAnalyticsPlatform = () => {
       ]
     },
     {
+
       plan: "Professional",
       price: "$399",
       period: "/month",
@@ -88,6 +96,7 @@ const AIRealEstateAnalyticsPlatform = () => {
       ]
     },
     {
+
       plan: "Enterprise",
       price: "$799",
       period: "/month",
@@ -103,18 +112,22 @@ const AIRealEstateAnalyticsPlatform = () => {
 
   const useCases = [
     {
+
       title: "Real Estate Investors",
       description: "Identify high-potential properties and optimize investment portfolios with AI-driven insights."
     },
     {
+
       title: "Property Developers",
       description: "Analyze market demand and identify optimal locations for new developments."
     },
     {
+
       title: "Real Estate Agents",
       description: "Provide clients with data-driven market insights and property recommendations."
     },
     {
+
       title: "Financial Institutions",
       description: "Assess real estate collateral values and manage portfolio risk effectively."
     }
@@ -262,6 +275,7 @@ const AIRealEstateAnalyticsPlatform = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`bg-slate-800 p-8 rounded-lg border ${
+
                   index === 1 ? 'border-blue-500 ring-2 ring-blue-500/20' : 'border-slate-700'
                 }`}
               >
@@ -281,6 +295,7 @@ const AIRealEstateAnalyticsPlatform = () => {
                 <a
                   href="https://ziontechgroup.com/contact"
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-colors ${
+
                     index === 1
                       ? 'bg-blue-600 text-white hover:bg-blue-700'
                       : 'bg-slate-700 text-white hover:bg-slate-600'

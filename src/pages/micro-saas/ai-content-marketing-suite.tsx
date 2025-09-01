@@ -3,33 +3,40 @@ import { motion } from 'framer-motion';
 import { FileText, Brain, TrendingUp, Users, BarChart3, Globe, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Star, Award, Target, PenTool } from 'lucide-react';
 
 const AIContentMarketingSuite: React.FC = () => {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI Content Generation",
       description: "Generate high-quality, SEO-optimized content in seconds with advanced language models and industry-specific knowledge"
     },
     {
+
       icon: Target,
       title: "Audience Intelligence",
       description: "Deep insights into your target audience with AI-powered persona analysis and content performance prediction"
     },
     {
+
       icon: TrendingUp,
       title: "SEO Optimization",
       description: "Automatic keyword research, content optimization, and SERP analysis to boost your search rankings"
     },
     {
+
       icon: BarChart3,
       title: "Performance Analytics",
       description: "Comprehensive content performance tracking with AI-driven insights and optimization recommendations"
     },
     {
+
       icon: Globe,
       title: "Multi-Platform Publishing",
       description: "Seamlessly publish and optimize content across all major platforms with automated workflows"
     },
     {
+
       icon: Zap,
       title: "Smart Automation",
       description: "Automated content scheduling, A/B testing, and performance optimization based on real-time data"
@@ -49,6 +56,7 @@ const AIContentMarketingSuite: React.FC = () => {
 
   const pricing = [
     {
+
       plan: "Starter",
       price: "$199",
       period: "/month",
@@ -63,6 +71,7 @@ const AIContentMarketingSuite: React.FC = () => {
       popular: false
     },
     {
+
       plan: "Professional",
       price: "$499",
       period: "/month",
@@ -79,6 +88,7 @@ const AIContentMarketingSuite: React.FC = () => {
       popular: true
     },
     {
+
       plan: "Enterprise",
       price: "$1,499",
       period: "/month",
@@ -98,24 +108,28 @@ const AIContentMarketingSuite: React.FC = () => {
 
   const benefits = [
     {
+
       icon: TrendingUp,
       title: "10x Faster Content Creation",
       value: "90%",
       description: "Reduce content creation time from days to hours with AI-powered generation"
     },
     {
+
       icon: BarChart3,
       title: "Improved SEO Rankings",
       value: "40-60%",
       description: "AI-optimized content that consistently ranks higher in search results"
     },
     {
+
       icon: Users,
       title: "Better Engagement",
       value: "35-50%",
       description: "Data-driven content that resonates with your target audience"
     },
     {
+
       icon: DollarSign,
       title: "Cost Reduction",
       value: "60-80%",
@@ -297,6 +311,7 @@ const AIContentMarketingSuite: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 className={`relative bg-white/5 border rounded-2xl p-8 ${
+
                   plan.popular 
                     ? 'border-purple-400/50 bg-gradient-to-b from-purple-500/10 to-transparent' 
                     : 'border-white/10'
@@ -330,6 +345,7 @@ const AIContentMarketingSuite: React.FC = () => {
                 <a
                   href="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white'
                       : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'

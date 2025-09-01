@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Activity, Zap, Clock, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react';
 
 interface PerformanceMetrics {
+
   loadTime: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
@@ -16,6 +17,7 @@ interface PerformanceMetrics {
 }
 
 interface PerformanceThresholds {
+
   loadTime: { good: number; poor: number };
   firstContentfulPaint: { good: number; poor: number };
   largestContentfulPaint: { good: number; poor: number };
@@ -24,7 +26,9 @@ interface PerformanceThresholds {
 }
 
 export function PerformanceMonitor() {
+
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
+
     loadTime: 0,
     firstContentfulPaint: 0,
     largestContentfulPaint: 0,
@@ -40,6 +44,7 @@ export function PerformanceMonitor() {
   const [showDetails, setShowDetails] = useState(false);
 
   const thresholds: PerformanceThresholds = {
+
     loadTime: { good: 2000, poor: 4000 },
     firstContentfulPaint: { good: 1800, poor: 3000 },
     largestContentfulPaint: { good: 2500, poor: 4000 },
@@ -48,6 +53,7 @@ export function PerformanceMonitor() {
   };
 
   const getPerformanceScore = useCallback((metrics: PerformanceMetrics): number => {
+
     let score = 100;
     
     // Load time scoring (25% weight)
@@ -74,18 +80,21 @@ export function PerformanceMonitor() {
   }, [thresholds]);
 
   const getScoreColor = (score: number): string => {
+
     if (score >= 90) return 'text-green-500';
     if (score >= 70) return 'text-yellow-500';
     return 'text-red-500';
   };
 
   const getScoreBgColor = (score: number): string => {
+
     if (score >= 90) return 'bg-green-500/20';
     if (score >= 70) return 'bg-yellow-500/20';
     return 'bg-red-500/20';
   };
 
   const getMetricStatus = (metric: keyof PerformanceMetrics, value: number): 'good' | 'warning' | 'poor' => {
+
     const threshold = thresholds[metric];
     if (!threshold) return 'good';
     
@@ -95,7 +104,9 @@ export function PerformanceMonitor() {
   };
 
   const getStatusIcon = (status: 'good' | 'warning' | 'poor') => {
+
     switch (status) {
+
       case 'good': return <CheckCircle className="w-4 h-4 text-green-500" />;
       case 'warning': return <AlertTriangle className="w-4 h-4 text-yellow-500" />;
       case 'poor': return <AlertTriangle className="w-4 h-4 text-red-500" />;
@@ -103,7 +114,9 @@ export function PerformanceMonitor() {
   };
 
   const getStatusColor = (status: 'good' | 'warning' | 'poor') => {
+
     switch (status) {
+
       case 'good': return 'text-green-500';
       case 'warning': return 'text-yellow-500';
       case 'poor': return 'text-red-500';
@@ -111,6 +124,7 @@ export function PerformanceMonitor() {
   };
 
   const measurePerformance = useCallback(() => {
+
     if (typeof window === 'undefined' || !window.performance) return;
 
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -121,6 +135,7 @@ export function PerformanceMonitor() {
     const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
     
     const newMetrics: PerformanceMetrics = {
+
       loadTime: navigation.loadEventEnd - navigation.loadEventStart,
       firstContentfulPaint: fcp ? fcp.startTime : 0,
       largestContentfulPaint: lcp ? lcp.startTime : 0,
@@ -136,17 +151,23 @@ export function PerformanceMonitor() {
   }, []);
 
   useEffect(() => {
+
     // Measure initial performance after page load
     const timer = setTimeout(measurePerformance, 1000);
     
     // Set up performance observer for LCP
     if ('PerformanceObserver' in window) {
+
       try {
+
         const lcpObserver = new PerformanceObserver((entryList) => {
+
           const entries = entryList.getEntries();
           const lastEntry = entries[entries.length - 1];
           if (lastEntry) {
+
             setMetrics(prev => ({
+
               ...prev,
               largestContentfulPaint: lastEntry.startTime
             }));
@@ -156,7 +177,8 @@ export function PerformanceMonitor() {
         
         return () => lcpObserver.disconnect();
       } catch (e) {
-        console.warn('PerformanceObserver not supported');
+
+        // // // console.warn('PerformanceObserver not supported');
       }
     }
     
@@ -164,6 +186,7 @@ export function PerformanceMonitor() {
   }, [measurePerformance]);
 
   useEffect(() => {
+
     // Show performance monitor after 3 seconds
     const timer = setTimeout(() => setIsVisible(true), 3000);
     return () => clearTimeout(timer);
@@ -230,6 +253,7 @@ export function PerformanceMonitor() {
             className="space-y-3 border-t pt-4"
           >
             {Object.entries(metrics).map(([key, value]) => {
+
               if (key === 'loadTime' || key === 'firstContentfulPaint') return null;
               
               const status = getMetricStatus(key as keyof PerformanceMetrics, value);

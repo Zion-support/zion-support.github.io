@@ -3,6 +3,7 @@ import { ProductListing } from "@/types/listings";
 export const NEXT_GEN_INNOVATIVE_SERVICES_2026: ProductListing[] = [
   // Quantum AI Hybrid Solutions
   {
+
     id: "quantum-ai-hybrid-platform",
     title: "Quantum AI Hybrid Computing Platform",
     description: "Revolutionary platform combining quantum computing with AI for solving complex optimization problems, drug discovery, and financial modeling with unprecedented speed.",
@@ -21,6 +22,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2026: ProductListing[] = [
     availability: "20-24 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-ai-hybrid",
@@ -35,6 +37,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2026: ProductListing[] = [
 
   // Advanced Blockchain Solutions
   {
+
     id: "blockchain-enterprise-suite",
     title: "Enterprise Blockchain & Web3 Integration Suite",
     description: "Comprehensive enterprise blockchain solution with DeFi integration, smart contract automation, and cross-chain interoperability for modern business applications.",
@@ -53,6 +56,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2026: ProductListing[] = [
     availability: "16-20 Weeks",
     aiScore: 94,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/blockchain-enterprise",
@@ -67,6 +71,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2026: ProductListing[] = [
 
   // Advanced Space Technology
   {
+
     id: "space-tech-analytics-platform",
     title: "Space Technology Analytics & Satellite Management Platform",
     description: "Advanced platform for satellite data analysis, space debris tracking, and orbital optimization using AI and machine learning algorithms.",
@@ -85,6 +90,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2026: ProductListing[] = [
     availability: "24-28 Weeks",
     aiScore: 95,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/space-tech-analytics",
@@ -99,6 +105,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2026: ProductListing[] = [
 
   // Advanced Biotechnology
   {
+
     id: "ai-biotech-research-platform",
     title: "AI Biotechnology Research & Drug Discovery Platform",
     description: "Cutting-edge biotech platform using AI for protein folding, drug discovery, and genetic engineering with CRISPR technology integration.",
@@ -117,6 +124,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2026: ProductListing[] = [
     availability: "20-24 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-biotech-research",
@@ -131,6 +139,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2026: ProductListing[] = [
 
   // Advanced Autonomous Systems
   {
+
     id: "autonomous-vehicle-ai",
     title: "Autonomous Vehicle AI & Safety Platform",
     description: "Advanced AI platform for autonomous vehicle navigation, safety systems, and traffic optimization with real-time decision making capabilities.",
@@ -149,6 +158,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2026: ProductListing[] = [
     availability: "24-28 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/autonomous-vehicle-ai",
@@ -163,6 +173,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2026: ProductListing[] = [
 
   // Advanced Metaverse Solutions
   {
+
     id: "metaverse-enterprise-platform",
     title: "Enterprise Metaverse & AR/VR Integration Platform",
     description: "Comprehensive metaverse platform for enterprise collaboration, virtual events, and immersive training with advanced AR/VR capabilities.",
@@ -181,6 +192,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2026: ProductListing[] = [
     availability: "12-16 Weeks",
     aiScore: 93,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/metaverse-enterprise",
@@ -195,6 +207,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2026: ProductListing[] = [
 
   // Advanced Green Technology
   {
+
     id: "ai-climate-change-mitigation",
     title: "AI Climate Change Mitigation & Carbon Reduction Platform",
     description: "Intelligent platform for climate change analysis, carbon footprint tracking, and sustainable business optimization using advanced AI algorithms.",
@@ -213,6 +226,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2026: ProductListing[] = [
     availability: "14-18 Weeks",
     aiScore: 94,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-climate-change",
@@ -227,6 +241,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2026: ProductListing[] = [
 
   // Advanced Financial Technology
   {
+
     id: "ai-fintech-innovation-platform",
     title: "AI FinTech Innovation & Digital Banking Platform",
     description: "Next-generation fintech platform with AI-powered fraud detection, personalized banking, and automated financial advisory services.",
@@ -245,6 +260,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2026: ProductListing[] = [
     availability: "16-20 Weeks",
     aiScore: 95,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-fintech-innovation",
@@ -259,6 +275,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2026: ProductListing[] = [
 
   // Advanced Internet of Things
   {
+
     id: "iot-ai-edge-computing",
     title: "IoT AI Edge Computing & Smart Device Platform",
     description: "Advanced IoT platform with AI edge computing capabilities for smart cities, industrial automation, and connected device management.",
@@ -277,6 +294,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2026: ProductListing[] = [
     availability: "12-16 Weeks",
     aiScore: 93,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/iot-ai-edge",
@@ -291,6 +309,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2026: ProductListing[] = [
 
   // Advanced Cybersecurity Innovation
   {
+
     id: "ai-cybersecurity-defense",
     title: "AI Cybersecurity Defense & Threat Intelligence Platform",
     description: "Next-generation cybersecurity platform using AI for proactive threat detection, automated response, and advanced security analytics.",
@@ -309,6 +328,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2026: ProductListing[] = [
     availability: "14-18 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-cybersecurity-defense",
@@ -323,6 +343,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2026: ProductListing[] = [
 
   // Advanced Data Science
   {
+
     id: "ai-data-science-workbench",
     title: "AI Data Science Workbench & MLOps Platform",
     description: "Comprehensive data science platform with automated ML model development, deployment, and monitoring for enterprise AI initiatives.",
@@ -341,6 +362,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2026: ProductListing[] = [
     availability: "12-16 Weeks",
     aiScore: 94,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-data-science-workbench",
@@ -355,6 +377,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2026: ProductListing[] = [
 
   // Advanced Cloud Innovation
   {
+
     id: "ai-cloud-optimization-suite",
     title: "AI Cloud Optimization & Multi-Cloud Management Suite",
     description: "Intelligent cloud management platform with AI-powered optimization, cost management, and multi-cloud orchestration capabilities.",
@@ -373,6 +396,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2026: ProductListing[] = [
     availability: "12-16 Weeks",
     aiScore: 93,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-cloud-optimization",
@@ -387,6 +411,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2026: ProductListing[] = [
 
   // Advanced Digital Transformation
   {
+
     id: "ai-digital-transformation",
     title: "AI Digital Transformation & Business Process Automation Platform",
     description: "Comprehensive digital transformation platform using AI for business process automation, workflow optimization, and digital innovation.",
@@ -405,6 +430,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2026: ProductListing[] = [
     availability: "18-22 Weeks",
     aiScore: 95,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-digital-transformation",

@@ -1,7 +1,8 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Link, 
   Shield, 
   Zap, 
@@ -68,38 +69,45 @@ import {
 } from 'lucide-react';
 
 export default function BlockchainSolutions() {
+
   const features = [
     {
+
       icon: Shield,
       title: 'Smart Contracts',
       description: 'Automated, self-executing contracts with blockchain security',
       color: 'from-blue-500 to-cyan-500'
     },
     {
+
       icon: Database,
       title: 'Distributed Ledger',
       description: 'Immutable, transparent record-keeping across networks',
       color: 'from-purple-500 to-pink-500'
     },
     {
+
       icon: Lock,
       title: 'Cryptographic Security',
       description: 'Advanced encryption and digital signature verification',
       color: 'from-green-500 to-emerald-500'
     },
     {
+
       icon: Network,
       title: 'Decentralized Networks',
       description: 'Peer-to-peer systems without central authority',
       color: 'from-yellow-500 to-orange-500'
     },
     {
+
       icon: Zap,
       title: 'Instant Settlements',
       description: 'Real-time transactions and immediate confirmations',
       color: 'from-red-500 to-pink-500'
     },
     {
+
       icon: Globe,
       title: 'Cross-Border Solutions',
       description: 'Global transactions without traditional banking delays',
@@ -118,21 +126,25 @@ export default function BlockchainSolutions() {
 
   const useCases = [
     {
+
       title: 'Financial Services',
       description: 'Cryptocurrency, DeFi, and cross-border payments',
       icon: CreditCard
     },
     {
+
       title: 'Supply Chain',
       description: 'Transparent tracking and verification of goods',
       icon: Truck
     },
     {
+
       title: 'Healthcare',
       description: 'Secure patient records and medical data sharing',
       icon: HeartPulse
     },
     {
+
       title: 'Real Estate',
       description: 'Property tokenization and smart contract automation',
       icon: Building2
@@ -141,21 +153,25 @@ export default function BlockchainSolutions() {
 
   const blockchainCapabilities = [
     {
+
       name: 'Smart Contract Development',
       description: 'Custom smart contracts for business automation',
       examples: ['Ethereum', 'Solana', 'Polygon', 'Custom chains']
     },
     {
+
       name: 'DeFi Solutions',
       description: 'Decentralized finance applications and protocols',
       examples: ['Lending platforms', 'DEX exchanges', 'Yield farming']
     },
     {
+
       name: 'NFT Development',
       description: 'Non-fungible token creation and marketplace',
       examples: ['Digital art', 'Gaming assets', 'Collectibles']
     },
     {
+
       name: 'Enterprise Blockchain',
       description: 'Private and consortium blockchain networks',
       examples: ['Hyperledger', 'Corda', 'Quorum', 'Custom solutions']
@@ -164,31 +180,37 @@ export default function BlockchainSolutions() {
 
   const industries = [
     {
+
       name: 'Finance & Banking',
       icon: CreditCard,
       description: 'Cryptocurrency, payments, and DeFi solutions'
     },
     {
+
       name: 'Supply Chain',
       icon: Truck,
       description: 'Transparent tracking and verification systems'
     },
     {
+
       name: 'Healthcare',
       icon: HeartPulse,
       description: 'Secure medical records and data sharing'
     },
     {
+
       name: 'Real Estate',
       icon: Building2,
       description: 'Property tokenization and smart contracts'
     },
     {
+
       name: 'Gaming',
       icon: Play,
       description: 'NFT assets and blockchain gaming platforms'
     },
     {
+
       name: 'Energy',
       icon: Zap,
       description: 'Renewable energy trading and carbon credits'

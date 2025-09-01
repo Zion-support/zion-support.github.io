@@ -9,7 +9,7 @@ const ProductManagementChat: NextPage = () => {
         <title>ProductManagementChat - Zion Tech Solutions</title>
         <meta name="description" content="ProductManagementChat blog post" />
       </Head>
-      
+
       <main>
         <h1>ProductManagementChat</h1>
         <p>Blog content coming soon...</p>

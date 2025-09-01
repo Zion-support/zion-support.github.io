@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
+
   BarChart3,
   TrendingUp,
   Target,
@@ -39,33 +40,40 @@ import {
 } from 'lucide-react';
 
 export default function AIContentPerformanceAnalytics() {
+
   const features = [
     {
+
       icon: Brain,
       title: 'AI-Powered Insights',
       description: 'Advanced machine learning algorithms analyze content performance and predict engagement patterns'
     },
     {
+
       icon: BarChart3,
       title: 'Real-time Analytics',
       description: 'Live dashboards showing content performance metrics, audience engagement, and ROI tracking'
     },
     {
+
       icon: Target,
       title: 'Predictive Performance',
       description: 'AI predicts which content will perform best before publishing, optimizing your content strategy'
     },
     {
+
       icon: Users,
       title: 'Audience Intelligence',
       description: 'Deep insights into audience behavior, preferences, and content consumption patterns'
     },
     {
+
       icon: Globe,
       title: 'Multi-platform Analytics',
       description: 'Track performance across all channels: website, social media, email, and mobile apps'
     },
     {
+
       icon: Zap,
       title: 'Automated Optimization',
       description: 'AI automatically suggests content improvements and A/B testing opportunities'
@@ -83,6 +91,7 @@ export default function AIContentPerformanceAnalytics() {
 
   const pricing = [
     {
+
       name: 'Creator',
       price: '$199',
       period: '/month',
@@ -97,6 +106,7 @@ export default function AIContentPerformanceAnalytics() {
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$399',
       period: '/month',
@@ -112,6 +122,7 @@ export default function AIContentPerformanceAnalytics() {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: '$899',
       period: '/month',
@@ -130,21 +141,25 @@ export default function AIContentPerformanceAnalytics() {
 
   const useCases = [
     {
+
       title: 'Content Marketing',
       description: 'Optimize blog posts, articles, and whitepapers for maximum engagement',
       icon: BookOpen
     },
     {
+
       title: 'Social Media',
       description: 'Track performance across all social platforms and optimize posting strategy',
       icon: Share2
     },
     {
+
       title: 'Email Marketing',
       description: 'Analyze email content performance and improve open rates and click-throughs',
       icon: Mail
     },
     {
+
       title: 'Video Content',
       description: 'Track video performance metrics and optimize for viewer engagement',
       icon: Play
@@ -153,24 +168,28 @@ export default function AIContentPerformanceAnalytics() {
 
   const metrics = [
     {
+
       icon: Eye,
       title: 'Engagement Rate',
       value: '45%',
       description: 'Average improvement in content engagement'
     },
     {
+
       icon: Users,
       title: 'Audience Growth',
       value: '2.3x',
       description: 'Faster audience growth with optimized content'
     },
     {
+
       icon: TrendingUp,
       title: 'ROI Increase',
       value: '180%',
       description: 'Average ROI improvement for content marketing'
     },
     {
+
       icon: Clock,
       title: 'Time Saved',
       value: '60%',
@@ -410,6 +429,7 @@ export default function AIContentPerformanceAnalytics() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`bg-gray-800/50 rounded-xl p-6 border ${
+
                   plan.popular 
                     ? 'border-blue-500/50 bg-blue-500/10' 
                     : 'border-gray-700'
@@ -444,6 +464,7 @@ export default function AIContentPerformanceAnalytics() {
                 <Link
                   to="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
                       : 'bg-gray-700 text-white hover:bg-gray-600'

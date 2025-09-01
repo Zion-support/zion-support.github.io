@@ -2,6 +2,7 @@ import { ProductListing } from "@/types/listings";
 
 export const CLOUD_DEVOPS_SERVICES_2025: ProductListing[] = [
   {
+
     id: "multi-cloud-orchestration-platform",
     title: "Multi-Cloud Orchestration & Management Platform",
     description: "Advanced platform that provides unified management, monitoring, and optimization across AWS, Azure, Google Cloud, and private cloud environments with intelligent cost optimization and security compliance.",
@@ -20,6 +21,7 @@ export const CLOUD_DEVOPS_SERVICES_2025: ProductListing[] = [
     availability: "4-5 Weeks",
     aiScore: 95,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/multi-cloud-orchestration",
@@ -32,6 +34,7 @@ export const CLOUD_DEVOPS_SERVICES_2025: ProductListing[] = [
     integrations: ["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Terraform", "Ansible", "Jenkins"]
   },
   {
+
     id: "ai-powered-devops-automation",
     title: "AI-Powered DevOps Automation & CI/CD Platform",
     description: "Intelligent DevOps platform that uses AI to automate deployment pipelines, predict deployment failures, optimize resource allocation, and provide intelligent insights for continuous improvement.",
@@ -50,6 +53,7 @@ export const CLOUD_DEVOPS_SERVICES_2025: ProductListing[] = [
     availability: "3-4 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-devops-automation",
@@ -62,6 +66,7 @@ export const CLOUD_DEVOPS_SERVICES_2025: ProductListing[] = [
     integrations: ["GitHub", "GitLab", "Bitbucket", "Docker", "Kubernetes", "AWS", "Azure", "Google Cloud"]
   },
   {
+
     id: "serverless-architecture-platform",
     title: "Serverless Architecture & Event-Driven Computing Platform",
     description: "Comprehensive serverless platform that enables rapid development and deployment of scalable, event-driven applications with automatic scaling, pay-per-use pricing, and zero server management.",
@@ -80,6 +85,7 @@ export const CLOUD_DEVOPS_SERVICES_2025: ProductListing[] = [
     availability: "2-3 Weeks",
     aiScore: 94,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/serverless-architecture",
@@ -92,6 +98,7 @@ export const CLOUD_DEVOPS_SERVICES_2025: ProductListing[] = [
     integrations: ["AWS Lambda", "Azure Functions", "Google Cloud Functions", "API Gateway", "EventBridge", "SQS", "SNS"]
   },
   {
+
     id: "kubernetes-native-security-platform",
     title: "Kubernetes-Native Security & Compliance Platform",
     description: "Advanced security platform designed specifically for Kubernetes environments, providing runtime protection, vulnerability scanning, compliance monitoring, and threat detection for containerized applications.",
@@ -110,6 +117,7 @@ export const CLOUD_DEVOPS_SERVICES_2025: ProductListing[] = [
     availability: "5-6 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/kubernetes-security",
@@ -122,6 +130,7 @@ export const CLOUD_DEVOPS_SERVICES_2025: ProductListing[] = [
     integrations: ["Kubernetes", "Docker", "Helm", "Istio", "Prometheus", "Grafana", "ELK Stack", "Open Policy Agent"]
   },
   {
+
     id: "edge-computing-orchestration",
     title: "Edge Computing Orchestration & Edge AI Platform",
     description: "Intelligent edge computing platform that orchestrates distributed computing resources, manages edge AI workloads, and provides real-time data processing capabilities for IoT and edge applications.",
@@ -140,6 +149,7 @@ export const CLOUD_DEVOPS_SERVICES_2025: ProductListing[] = [
     availability: "6-7 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/edge-computing-orchestration",

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Brain, 
   Cloud, 
   Shield, 
@@ -49,6 +50,7 @@ import { SEO } from '../components/SEO';
 import { COMPREHENSIVE_SERVICES_2030 } from '../data/comprehensiveServices2030';
 
 export default function InnovativeServicesOverview() {
+
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
@@ -83,6 +85,7 @@ export default function InnovativeServicesOverview() {
   ];
 
   const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service => {
+
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -92,7 +95,9 @@ export default function InnovativeServicesOverview() {
   });
 
   const sortedServices = [...filteredServices].sort((a, b) => {
+
     switch (sortBy) {
+
       case 'rating':
         return b.rating - a.rating;
       case 'price':
@@ -244,6 +249,7 @@ export default function InnovativeServicesOverview() {
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
                 className={`p-4 rounded-lg text-center transition-all duration-300 ${
+
                   activeCategory === category.id
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg transform scale-105'
                     : 'bg-slate-700/50 text-gray-300 hover:bg-slate-600/50 hover:text-white'

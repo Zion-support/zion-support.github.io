@@ -4,7 +4,8 @@ import { Badge } from './ui/badge';
 import { Progress } from './ui/progress';
 import { Button } from './ui/button';
 import { Skeleton } from './ui/Skeleton';
-import { 
+import {
+
   Activity, 
   Zap, 
   Gauge, 
@@ -20,6 +21,7 @@ import {
 import { usePerformanceMonitor } from '@/hooks/usePerformanceMonitor';
 
 interface PerformanceMetric {
+
   name: string;
   value: number | null;
   unit: string;
@@ -29,13 +31,17 @@ interface PerformanceMetric {
 }
 
 const PerformanceDashboard: React.FC = () => {
+
   const { metrics, isMonitoring, startMonitoring, stopMonitoring, getPerformanceScore, getPerformanceGrade } = usePerformanceMonitor();
   const [isExpanded, setIsExpanded] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<Date>(new Date());
 
   useEffect(() => {
+
     if (isMonitoring) {
+
       const interval = setInterval(() => {
+
         setLastUpdate(new Date());
       }, 5000);
       return () => clearInterval(interval);
@@ -43,6 +49,7 @@ const PerformanceDashboard: React.FC = () => {
   }, [isMonitoring]);
 
   const getMetricStatus = (value: number | null, target: number): PerformanceMetric['status'] => {
+
     if (value === null) return 'needs-improvement';
     const percentage = (value / target) * 100;
     if (percentage >= 90) return 'excellent';
@@ -52,7 +59,9 @@ const PerformanceDashboard: React.FC = () => {
   };
 
   const getStatusColor = (status: PerformanceMetric['status']) => {
+
     switch (status) {
+
       case 'excellent': return 'bg-green-500';
       case 'good': return 'bg-blue-500';
       case 'needs-improvement': return 'bg-yellow-500';
@@ -62,7 +71,9 @@ const PerformanceDashboard: React.FC = () => {
   };
 
   const getStatusText = (status: PerformanceMetric['status']) => {
+
     switch (status) {
+
       case 'excellent': return 'Excellent';
       case 'good': return 'Good';
       case 'needs-improvement': return 'Needs Improvement';
@@ -73,6 +84,7 @@ const PerformanceDashboard: React.FC = () => {
 
   const performanceMetrics: PerformanceMetric[] = [
     {
+
       name: 'First Contentful Paint',
       value: metrics.fcp,
       unit: 'ms',
@@ -81,6 +93,7 @@ const PerformanceDashboard: React.FC = () => {
       description: 'Time until first content is painted on screen'
     },
     {
+
       name: 'Largest Contentful Paint',
       value: metrics.lcp,
       unit: 'ms',
@@ -89,6 +102,7 @@ const PerformanceDashboard: React.FC = () => {
       description: 'Time until largest content element is visible'
     },
     {
+
       name: 'First Input Delay',
       value: metrics.fid,
       unit: 'ms',
@@ -97,6 +111,7 @@ const PerformanceDashboard: React.FC = () => {
       description: 'Time from first interaction to response'
     },
     {
+
       name: 'Cumulative Layout Shift',
       value: metrics.cls,
       unit: '',
@@ -105,6 +120,7 @@ const PerformanceDashboard: React.FC = () => {
       description: 'Visual stability measure'
     },
     {
+
       name: 'Time to First Byte',
       value: metrics.ttfb,
       unit: 'ms',
@@ -118,9 +134,12 @@ const PerformanceDashboard: React.FC = () => {
   const grade = getPerformanceGrade();
 
   const handleToggleMonitoring = () => {
+
     if (isMonitoring) {
+
       stopMonitoring();
     } else {
+
       startMonitoring();
     }
   };

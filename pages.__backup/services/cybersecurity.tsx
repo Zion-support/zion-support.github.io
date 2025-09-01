@@ -1,9 +1,20 @@
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import { 
-  Shield, ArrowRight, CheckCircle, Zap, Target, Users, 
-  TrendingUp, Lock, Cpu, Database, Globe, Star, Eye
+import {
+  Shield,
+  ArrowRight,
+  CheckCircle,
+  Zap,
+  Target,
+  Users,
+  TrendingUp,
+  Lock,
+  Cpu,
+  Database,
+  Globe,
+  Star,
+  Eye,
 } from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
@@ -11,77 +22,99 @@ import EnhancedFooter from '../../components/EnhancedFooter';
 export default function CybersecurityPage() {
   const services = [
     {
-      title: "Advanced Threat Detection",
-      description: "AI-powered threat detection and response with real-time monitoring",
+      title: 'Advanced Threat Detection',
+      description:
+        'AI-powered threat detection and response with real-time monitoring',
       features: [
-        "24/7 threat monitoring",
-        "AI-powered analysis",
-        "Real-time alerts",
-        "Automated response"
+        '24/7 threat monitoring',
+        'AI-powered analysis',
+        'Real-time alerts',
+        'Automated response',
       ],
-      price: "$899/month",
-      icon: Eye
+      price: '$899/month',
+      icon: Eye,
     },
     {
-      title: "Zero-Trust Architecture",
-      description: "Implement comprehensive zero-trust security across your organization",
+      title: 'Zero-Trust Architecture',
+      description:
+        'Implement comprehensive zero-trust security across your organization',
       features: [
-        "Identity verification",
-        "Access control",
-        "Network segmentation",
-        "Continuous monitoring"
+        'Identity verification',
+        'Access control',
+        'Network segmentation',
+        'Continuous monitoring',
       ],
-      price: "$1,199/month",
-      icon: Lock
+      price: '$1,199/month',
+      icon: Lock,
     },
     {
-      title: "Incident Response",
-      description: "Rapid response and recovery from security incidents",
+      title: 'Incident Response',
+      description: 'Rapid response and recovery from security incidents',
       features: [
-        "24/7 incident response",
-        "Forensic analysis",
-        "Recovery planning",
-        "Post-incident review"
+        '24/7 incident response',
+        'Forensic analysis',
+        'Recovery planning',
+        'Post-incident review',
       ],
-      price: "$699/month",
-      icon: Shield
-    }
+      price: '$699/month',
+      icon: Shield,
+    },
   ];
 
   const benefits = [
     {
       icon: Shield,
-      title: "Comprehensive Protection",
-      description: "Multi-layered security that protects against all types of threats"
+      title: 'Comprehensive Protection',
+      description:
+        'Multi-layered security that protects against all types of threats',
     },
     {
       icon: Zap,
-      title: "Real-Time Response",
-      description: "Instant detection and automated response to security threats"
+      title: 'Real-Time Response',
+      description:
+        'Instant detection and automated response to security threats',
     },
     {
       icon: Users,
-      title: "Expert Team",
-      description: "24/7 support from cybersecurity experts and AI systems"
+      title: 'Expert Team',
+      description: '24/7 support from cybersecurity experts and AI systems',
     },
     {
       icon: Target,
-      title: "Compliance Ready",
-      description: "Meet all industry standards and regulatory requirements"
-    }
+      title: 'Compliance Ready',
+      description: 'Meet all industry standards and regulatory requirements',
+    },
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
         <title>Cybersecurity Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced cybersecurity solutions including threat detection, zero-trust architecture, and incident response services." />
-        <meta name="keywords" content="cybersecurity, threat detection, zero-trust, incident response, security, Zion Tech Group" />
-        <meta property="og:title" content="Cybersecurity Services - Zion Tech Group" />
-        <meta property="og:description" content="Advanced cybersecurity solutions for comprehensive protection." />
+        <meta
+          name="description"
+          content="Advanced cybersecurity solutions including threat detection, zero-trust architecture, and incident response services."
+        />
+        <meta
+          name="keywords"
+          content="cybersecurity, threat detection, zero-trust, incident response, security, Zion Tech Group"
+        />
+        <meta
+          property="og:title"
+          content="Cybersecurity Services - Zion Tech Group"
+        />
+        <meta
+          property="og:description"
+          content="Advanced cybersecurity solutions for comprehensive protection."
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/services/cybersecurity" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/cybersecurity" />
+        <meta
+          property="og:url"
+          content="https://ziontechgroup.com/services/cybersecurity"
+        />
+        <link
+          rel="canonical"
+          href="https://ziontechgroup.com/services/cybersecurity"
+        />
       </Head>
 
       <EnhancedNavigation />
@@ -101,8 +134,9 @@ export default function CybersecurityPage() {
               Cybersecurity
             </h1>
             <p className="text-xl md:text-2xl text-white/70 max-w-4xl mx-auto mb-8">
-              Protect your organization with cutting-edge cybersecurity solutions. 
-              From advanced threat detection to zero-trust architecture, we keep you secure.
+              Protect your organization with cutting-edge cybersecurity
+              solutions. From advanced threat detection to zero-trust
+              architecture, we keep you secure.
             </p>
             <motion.a
               href="mailto:kleber@ziontechgroup.com"
@@ -131,7 +165,8 @@ export default function CybersecurityPage() {
               Security Services
             </h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
-              Comprehensive cybersecurity solutions designed to protect your digital assets
+              Comprehensive cybersecurity solutions designed to protect your
+              digital assets
             </p>
           </motion.div>
 
@@ -146,25 +181,32 @@ export default function CybersecurityPage() {
                 className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 backdrop-blur-xl hover:border-red-400/30 transition-all duration-300 transform hover:scale-105"
               >
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-red-500/0 via-orange-400/10 to-red-500/0 opacity-0 blur-2xl transition-opacity hover:opacity-100" />
-                
+
                 <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-red-500 to-orange-500 p-4 mb-6">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-                
-                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  {service.title}
+                </h3>
                 <p className="text-white/70 mb-6">{service.description}</p>
-                
+
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-3">
+                    <li
+                      key={featureIndex}
+                      className="flex items-center space-x-3"
+                    >
                       <CheckCircle className="w-5 h-5 text-red-400 flex-shrink-0" />
                       <span className="text-white/80">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                
-                <div className="text-2xl font-bold text-red-400 mb-4">{service.price}</div>
-                
+
+                <div className="text-2xl font-bold text-red-400 mb-4">
+                  {service.price}
+                </div>
+
                 <motion.a
                   href="mailto:kleber@ziontechgroup.com"
                   whileHover={{ scale: 1.02 }}
@@ -193,7 +235,8 @@ export default function CybersecurityPage() {
               Why Choose Our Security?
             </h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
-              Experience the highest level of protection with our proven security approach
+              Experience the highest level of protection with our proven
+              security approach
             </p>
           </motion.div>
 
@@ -211,7 +254,9 @@ export default function CybersecurityPage() {
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                  <h3 className="text-xl font-bold text-white mb-3">
+                    {benefit.title}
+                  </h3>
                   <p className="text-white/70">{benefit.description}</p>
                 </div>
               </motion.div>
@@ -233,7 +278,8 @@ export default function CybersecurityPage() {
               Ready to Secure Your Business?
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our cybersecurity solutions can protect your organization from evolving threats
+              Let's discuss how our cybersecurity solutions can protect your
+              organization from evolving threats
             </p>
             <motion.a
               href="mailto:kleber@ziontechgroup.com"

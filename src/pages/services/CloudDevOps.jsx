@@ -4,26 +4,31 @@ import { Cloud, Zap, Database, Server, GitBranch, Cpu, Globe, Shield } from 'luc
 import SEO from '@/components/SEO';
 
 const CloudDevOps = () => {
+
   const cloudServices = [
     {
+
       icon: Cloud,
       title: "Cloud Migration",
       description: "Seamless migration to cloud platforms with minimal downtime and maximum efficiency.",
       features: ["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"]
     },
     {
+
       icon: Server,
       title: "Infrastructure as Code",
       description: "Automated infrastructure provisioning and management using modern DevOps practices.",
       features: ["Terraform", "AWS CloudFormation", "Azure ARM", "Kubernetes"]
     },
     {
+
       icon: GitFork,
       title: "CI/CD Pipelines",
       description: "Automated build, test, and deployment pipelines for faster, more reliable releases.",
       features: ["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps"]
     },
     {
+
       icon: Database,
       title: "Database Management",
       description: "Scalable database solutions with high availability and disaster recovery.",
@@ -33,21 +38,25 @@ const CloudDevOps = () => {
 
   const platforms = [
     {
+
       name: "AWS",
       description: "Amazon Web Services cloud platform solutions",
       icon: "☁️"
     },
     {
+
       name: "Azure",
       description: "Microsoft Azure cloud services and solutions",
       icon: "🔷"
     },
     {
+
       name: "Google Cloud",
       description: "Google Cloud Platform infrastructure and services",
       icon: "🔵"
     },
     {
+
       name: "Multi-Cloud",
       description: "Hybrid and multi-cloud strategy implementation",
       icon: "🌐"

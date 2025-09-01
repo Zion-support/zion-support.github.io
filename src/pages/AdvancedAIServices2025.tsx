@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
+
   Brain, Cpu, Database, ChartBar, Eye, MessageCircle, FileText,
   Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe,
   Star, Award, Clock, Calendar, Sparkles, Users, Shield, Cloud
@@ -10,6 +11,7 @@ import {
 // Advanced AI Services with Real Market Pricing
 const aiServices = [
   {
+
     id: 'ai-business-intelligence',
     title: 'AI Business Intelligence',
     description: 'Enterprise AI-powered analytics platform with predictive insights and automated reporting.',
@@ -26,6 +28,7 @@ const aiServices = [
       'White-label Solutions'
     ],
     pricing: {
+
       starter: '$499/month',
       professional: '$1,299/month',
       enterprise: '$2,999/month'
@@ -40,6 +43,7 @@ const aiServices = [
     competitors: ['Tableau', 'Power BI', 'Looker']
   },
   {
+
     id: 'ai-content-generation',
     title: 'AI Content Generation',
     description: 'Professional content creation platform powered by advanced language models.',
@@ -56,6 +60,7 @@ const aiServices = [
       'Social Media Integration'
     ],
     pricing: {
+
       starter: '$99/month',
       professional: '$299/month',
       enterprise: '$799/month'
@@ -70,6 +75,7 @@ const aiServices = [
     competitors: ['Jasper', 'Copy.ai', 'Writesonic']
   },
   {
+
     id: 'ai-customer-service',
     title: 'AI Customer Service',
     description: 'Intelligent customer support automation with natural language processing.',
@@ -86,6 +92,7 @@ const aiServices = [
       'Human Handoff'
     ],
     pricing: {
+
       starter: '$199/month',
       professional: '$499/month',
       enterprise: '$1,299/month'
@@ -100,6 +107,7 @@ const aiServices = [
     competitors: ['Intercom', 'Zendesk', 'Freshdesk']
   },
   {
+
     id: 'ai-computer-vision',
     title: 'AI Computer Vision',
     description: 'Advanced image and video analysis for quality control and automation.',
@@ -116,6 +124,7 @@ const aiServices = [
       'API Integration'
     ],
     pricing: {
+
       starter: '$299/month',
       professional: '$799/month',
       enterprise: '$1,999/month'
@@ -130,6 +139,7 @@ const aiServices = [
     competitors: ['Google Vision', 'AWS Rekognition', 'Azure Computer Vision']
   },
   {
+
     id: 'ai-process-automation',
     title: 'AI Process Automation',
     description: 'Intelligent automation for business processes and workflows.',
@@ -146,6 +156,7 @@ const aiServices = [
       'Mobile Support'
     ],
     pricing: {
+
       starter: '$149/month',
       professional: '$399/month',
       enterprise: '$999/month'
@@ -160,6 +171,7 @@ const aiServices = [
     competitors: ['UiPath', 'Automation Anywhere', 'Blue Prism']
   },
   {
+
     id: 'ai-data-science',
     title: 'AI Data Science Platform',
     description: 'End-to-end data science platform with automated ML and model deployment.',
@@ -176,6 +188,7 @@ const aiServices = [
       'Scalable Infrastructure'
     ],
     pricing: {
+
       starter: '$399/month',
       professional: '$999/month',
       enterprise: '$2,499/month'
@@ -193,6 +206,7 @@ const aiServices = [
 
 // Contact Information
 const contactInfo = {
+
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -202,21 +216,25 @@ const contactInfo = {
 // Benefits
 const benefits = [
   {
+
     icon: Zap,
     title: 'Rapid Implementation',
     description: 'Get AI solutions running in weeks'
   },
   {
+
     icon: CheckCircle,
     title: 'Proven ROI',
     description: 'See results within 30-60 days'
   },
   {
+
     icon: Shield,
     title: 'Enterprise Security',
     description: 'Bank-level security and compliance'
   },
   {
+
     icon: Users,
     title: 'Expert AI Team',
     description: 'PhD-level AI specialists'
@@ -224,6 +242,7 @@ const benefits = [
 ];
 
 export default function AdvancedAIServices2025() {
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue">
       {/* Hero Section */}

@@ -2,8 +2,10 @@ import React from 'react';
 import EnhancedNavigation2025 from "./layout/EnhancedNavigation2025";
 import EnhancedFooter from "./layout/EnhancedFooter";
 interface LayoutProps extends React.PropsWithChildren<{}> {
+
   children: React.ReactNode}
 export default function Layout(...args[]):  {
+
   return (
     <div className = "min-h-screen flex flex-col">
       <EnhancedNavigation2025 />

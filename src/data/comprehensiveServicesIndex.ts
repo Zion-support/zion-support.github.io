@@ -60,6 +60,7 @@ export const PRICING_MODELS = [
 ];
 // Contact Information
 export const CONTACT_INFO = {
+
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   website: 'https://ziontechgroup.com',
@@ -73,6 +74,7 @@ export const CONTACT_INFO = {
 };
 // Service Statistics
 export const SERVICE_STATS = {
+
   totalServices: ALL_COMPREHENSIVE_SERVICES.length,
   categories: SERVICE_CATEGORIES.length,
   innovationLevels: INNOVATION_LEVELS.length,
@@ -94,6 +96,7 @@ export const getServicesByInnovationLevel = (level: anyanyanyanyanyanyanyanyanya
 };
 
 export const getServicesByPriceRange = (minPrice: anyanyanyanyanyanyanyanyanyanyanyanyanynumber, maxPrice: number)              => {
+
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>
     service.price >= minPrice && service.price <= maxPrice
   );

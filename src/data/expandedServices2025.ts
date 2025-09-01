@@ -1,4 +1,5 @@
 export type ServiceItem = {
+
   id: string;
   title: string;
   description: string;
@@ -13,6 +14,7 @@ export type ServiceItem = {
   href: string; // internal path or external URL
   external?: boolean;
   contactInfo: {
+
     phone: string;
     email: string;
     address: string;
@@ -20,6 +22,7 @@ export type ServiceItem = {
 };
 
 export type ServiceCategory = {
+
   name: string;
   slug: string;
   description: string;
@@ -28,11 +31,13 @@ export type ServiceCategory = {
 
 export const expandedServices2025: ServiceCategory[] = [
   {
+
     name: 'AI-Powered Micro SaaS',
     slug: 'ai-micro-saas',
     description: 'Intelligent software-as-a-service solutions powered by cutting-edge AI',
     items: [
       {
+
         id: 'ai-content-optimizer-pro',
         title: 'AI Content Optimizer Pro',
         description: 'Advanced content optimization using AI to improve SEO, readability, and engagement across all digital platforms with real-time performance analytics.',
@@ -60,12 +65,14 @@ export const expandedServices2025: ServiceCategory[] = [
         ctaLabel: 'Start Free Trial',
         href: 'https://ziontechgroup.com/contact',
         contactInfo: {
+
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
         }
       },
       {
+
         id: 'ai-sales-intelligence-platform',
         title: 'AI Sales Intelligence Platform',
         description: 'Comprehensive sales intelligence platform that uses AI to identify prospects, predict buying behavior, and automate sales processes.',
@@ -93,12 +100,14 @@ export const expandedServices2025: ServiceCategory[] = [
         ctaLabel: 'Schedule Demo',
         href: 'https://ziontechgroup.com/contact',
         contactInfo: {
+
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
         }
       },
       {
+
         id: 'ai-customer-success-automation',
         title: 'AI Customer Success Automation',
         description: 'Intelligent customer success platform that automates onboarding, engagement, and retention strategies using predictive analytics.',
@@ -126,12 +135,14 @@ export const expandedServices2025: ServiceCategory[] = [
         ctaLabel: 'Get Started',
         href: 'https://ziontechgroup.com/contact',
         contactInfo: {
+
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
         }
       },
       {
+
         id: 'ai-workflow-automation-suite',
         title: 'AI Workflow Automation Suite',
         description: 'Comprehensive workflow automation platform that uses AI to streamline business processes, reduce manual work, and improve efficiency.',
@@ -159,6 +170,7 @@ export const expandedServices2025: ServiceCategory[] = [
         ctaLabel: 'Start Free Trial',
         href: 'https://ziontechgroup.com/contact',
         contactInfo: {
+
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -167,11 +179,13 @@ export const expandedServices2025: ServiceCategory[] = [
     ]
   },
   {
+
     name: 'Advanced IT Infrastructure',
     slug: 'advanced-it-infrastructure',
     description: 'Enterprise-grade IT infrastructure solutions for modern businesses',
     items: [
       {
+
         id: 'zero-trust-security-framework',
         title: 'Zero Trust Security Framework',
         description: 'Comprehensive zero-trust security implementation that provides continuous verification and strict access controls across all network resources.',
@@ -199,12 +213,14 @@ export const expandedServices2025: ServiceCategory[] = [
         ctaLabel: 'Request Quote',
         href: 'https://ziontechgroup.com/contact',
         contactInfo: {
+
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
         }
       },
       {
+
         id: 'hybrid-cloud-migration',
         title: 'Hybrid Cloud Migration Services',
         description: 'End-to-end hybrid cloud migration services that optimize costs, improve performance, and ensure business continuity during transition.',
@@ -232,12 +248,14 @@ export const expandedServices2025: ServiceCategory[] = [
         ctaLabel: 'Schedule Consultation',
         href: 'https://ziontechgroup.com/contact',
         contactInfo: {
+
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
         }
       },
       {
+
         id: 'devops-automation-platform',
         title: 'DevOps Automation Platform',
         description: 'Comprehensive DevOps automation platform that streamlines CI/CD pipelines, infrastructure management, and deployment processes.',
@@ -265,6 +283,7 @@ export const expandedServices2025: ServiceCategory[] = [
         ctaLabel: 'Get Started',
         href: 'https://ziontechgroup.com/contact',
         contactInfo: {
+
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -273,11 +292,13 @@ export const expandedServices2025: ServiceCategory[] = [
     ]
   },
   {
+
     name: 'AI-Powered Business Solutions',
     slug: 'ai-business-solutions',
     description: 'Intelligent AI solutions that transform business operations and decision-making',
     items: [
       {
+
         id: 'ai-business-intelligence-suite',
         title: 'AI Business Intelligence Suite',
         description: 'Advanced business intelligence platform powered by AI that provides real-time insights, predictive analytics, and automated reporting.',
@@ -305,12 +326,14 @@ export const expandedServices2025: ServiceCategory[] = [
         ctaLabel: 'Request Demo',
         href: 'https://ziontechgroup.com/contact',
         contactInfo: {
+
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
         }
       },
       {
+
         id: 'ai-supply-chain-optimization',
         title: 'AI Supply Chain Optimization',
         description: 'Intelligent supply chain optimization platform that uses AI to predict demand, optimize inventory, and reduce costs across the supply chain.',
@@ -338,12 +361,14 @@ export const expandedServices2025: ServiceCategory[] = [
         ctaLabel: 'Schedule Consultation',
         href: 'https://ziontechgroup.com/contact',
         contactInfo: {
+
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
         }
       },
       {
+
         id: 'ai-customer-experience-platform',
         title: 'AI Customer Experience Platform',
         description: 'Comprehensive customer experience platform that uses AI to personalize interactions, predict customer needs, and improve satisfaction.',
@@ -371,6 +396,7 @@ export const expandedServices2025: ServiceCategory[] = [
         ctaLabel: 'Get Started',
         href: 'https://ziontechgroup.com/contact',
         contactInfo: {
+
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -379,11 +405,13 @@ export const expandedServices2025: ServiceCategory[] = [
     ]
   },
   {
+
     name: 'Emerging Technology Solutions',
     slug: 'emerging-tech-solutions',
     description: 'Cutting-edge technology solutions for forward-thinking organizations',
     items: [
       {
+
         id: 'quantum-computing-solutions',
         title: 'Quantum Computing Solutions',
         description: 'Advanced quantum computing solutions for complex problem-solving, optimization, and research applications.',
@@ -411,12 +439,14 @@ export const expandedServices2025: ServiceCategory[] = [
         ctaLabel: 'Schedule Consultation',
         href: 'https://ziontechgroup.com/contact',
         contactInfo: {
+
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
         }
       },
       {
+
         id: 'blockchain-enterprise-solutions',
         title: 'Blockchain Enterprise Solutions',
         description: 'Enterprise-grade blockchain solutions for supply chain transparency, digital identity, and secure transactions.',
@@ -444,12 +474,14 @@ export const expandedServices2025: ServiceCategory[] = [
         ctaLabel: 'Request Quote',
         href: 'https://ziontechgroup.com/contact',
         contactInfo: {
+
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
         }
       },
       {
+
         id: 'iot-edge-computing-platform',
         title: 'IoT Edge Computing Platform',
         description: 'Comprehensive IoT edge computing platform that enables real-time data processing, analytics, and automation at the edge.',
@@ -477,6 +509,7 @@ export const expandedServices2025: ServiceCategory[] = [
         ctaLabel: 'Get Started',
         href: 'https://ziontechgroup.com/contact',
         contactInfo: {
+
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -485,11 +518,13 @@ export const expandedServices2025: ServiceCategory[] = [
     ]
   },
   {
+
     name: 'Industry-Specific Solutions',
     slug: 'industry-solutions',
     description: 'Tailored solutions for specific industry verticals',
     items: [
       {
+
         id: 'healthcare-ai-platform',
         title: 'Healthcare AI Platform',
         description: 'AI-powered healthcare platform for diagnosis assistance, patient monitoring, and medical research.',
@@ -517,12 +552,14 @@ export const expandedServices2025: ServiceCategory[] = [
         ctaLabel: 'Schedule Demo',
         href: 'https://ziontechgroup.com/contact',
         contactInfo: {
+
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
         }
       },
       {
+
         id: 'fintech-innovation-suite',
         title: 'FinTech Innovation Suite',
         description: 'Comprehensive fintech solutions for digital banking, payment processing, and financial analytics.',
@@ -550,12 +587,14 @@ export const expandedServices2025: ServiceCategory[] = [
         ctaLabel: 'Request Consultation',
         href: 'https://ziontechgroup.com/contact',
         contactInfo: {
+
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
         }
       },
       {
+
         id: 'education-technology-platform',
         title: 'Education Technology Platform',
         description: 'Innovative edtech platform for personalized learning, student analytics, and educational content management.',
@@ -583,12 +622,14 @@ export const expandedServices2025: ServiceCategory[] = [
         ctaLabel: 'Get Started',
         href: 'https://ziontechgroup.com/contact',
         contactInfo: {
+
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
         }
       },
       {
+
         id: 'ai-legal-compliance-automation',
         title: 'AI Legal Compliance Automation',
         description: 'Intelligent legal compliance platform that automates regulatory monitoring, document analysis, and compliance reporting across multiple jurisdictions.',
@@ -616,12 +657,14 @@ export const expandedServices2025: ServiceCategory[] = [
         ctaLabel: 'Start Free Trial',
         href: 'https://ziontechgroup.com/contact',
         contactInfo: {
+
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
         }
       },
       {
+
         id: 'ai-real-estate-analytics-platform',
         title: 'AI Real Estate Analytics Platform',
         description: 'Advanced real estate analytics platform using AI to predict market trends, property valuations, and investment opportunities with unprecedented accuracy.',
@@ -649,12 +692,14 @@ export const expandedServices2025: ServiceCategory[] = [
         ctaLabel: 'Schedule Demo',
         href: 'https://ziontechgroup.com/contact',
         contactInfo: {
+
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
         }
       },
       {
+
         id: 'ai-logistics-optimization-suite',
         title: 'AI Logistics Optimization Suite',
         description: 'Intelligent logistics platform that optimizes supply chain operations, route planning, and inventory management using advanced AI algorithms.',
@@ -682,12 +727,14 @@ export const expandedServices2025: ServiceCategory[] = [
         ctaLabel: 'Request Consultation',
         href: 'https://ziontechgroup.com/contact',
         contactInfo: {
+
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
         }
       },
       {
+
         id: 'ai-energy-management-platform',
         title: 'AI Energy Management Platform',
         description: 'Smart energy management platform that optimizes energy consumption, predicts demand, and enables sustainable energy solutions for commercial buildings.',
@@ -715,12 +762,14 @@ export const expandedServices2025: ServiceCategory[] = [
         ctaLabel: 'Get Started',
         href: 'https://ziontechgroup.com/contact',
         contactInfo: {
+
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
         }
       },
       {
+
         id: 'ai-creative-content-studio',
         title: 'AI Creative Content Studio',
         description: 'Revolutionary AI-powered creative platform that generates, edits, and optimizes visual content, videos, and multimedia assets for marketing campaigns.',
@@ -748,12 +797,14 @@ export const expandedServices2025: ServiceCategory[] = [
         ctaLabel: 'Start Free Trial',
         href: 'https://ziontechgroup.com/contact',
         contactInfo: {
+
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
         }
       },
       {
+
         id: 'ai-customer-feedback-intelligence',
         title: 'AI Customer Feedback Intelligence',
         description: 'Intelligent feedback analysis platform that uses AI to extract insights from customer feedback, reviews, and social media to drive product improvements.',
@@ -781,12 +832,14 @@ export const expandedServices2025: ServiceCategory[] = [
         ctaLabel: 'Schedule Demo',
         href: 'https://ziontechgroup.com/contact',
         contactInfo: {
+
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
         }
       },
       {
+
         id: 'ai-autonomous-vehicle-platform',
         title: 'AI Autonomous Vehicle Platform',
         description: 'Advanced autonomous vehicle technology platform for fleet management, safety monitoring, and intelligent transportation systems.',
@@ -814,12 +867,14 @@ export const expandedServices2025: ServiceCategory[] = [
         ctaLabel: 'Request Consultation',
         href: 'https://ziontechgroup.com/contact',
         contactInfo: {
+
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
         }
       },
       {
+
         id: 'ai-metaverse-development-suite',
         title: 'AI Metaverse Development Suite',
         description: 'Comprehensive metaverse development platform for creating immersive virtual experiences, digital twins, and interactive 3D environments.',
@@ -847,12 +902,14 @@ export const expandedServices2025: ServiceCategory[] = [
         ctaLabel: 'Get Started',
         href: 'https://ziontechgroup.com/contact',
         contactInfo: {
+
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
         }
       },
       {
+
         id: 'ai-biotech-research-platform',
         title: 'AI Biotech Research Platform',
         description: 'Advanced biotechnology research platform using AI for drug discovery, genetic analysis, and medical research automation.',
@@ -880,12 +937,14 @@ export const expandedServices2025: ServiceCategory[] = [
         ctaLabel: 'Schedule Demo',
         href: 'https://ziontechgroup.com/contact',
         contactInfo: {
+
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
         }
       },
       {
+
         id: 'ai-web3-defi-platform',
         title: 'AI Web3 DeFi Platform',
         description: 'Intelligent decentralized finance platform that combines AI with blockchain technology for automated trading, risk management, and yield optimization.',
@@ -913,6 +972,7 @@ export const expandedServices2025: ServiceCategory[] = [
         ctaLabel: 'Start Free Trial',
         href: 'https://ziontechgroup.com/contact',
         contactInfo: {
+
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'

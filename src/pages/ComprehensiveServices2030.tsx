@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
+
   Search,
   Filter,
   Star,
@@ -55,6 +56,7 @@ import {
 import { COMPREHENSIVE_SERVICES_2030 } from '../data/comprehensiveServices2030';
 
 const categoryIcons: Record<string, React.ComponentType<any>> = {
+
   'AI & Automation': Brain,
   'Cybersecurity': Shield,
   'Content Creation': Palette,
@@ -77,6 +79,7 @@ const categoryIcons: Record<string, React.ComponentType<any>> = {
 };
 
 export default function ComprehensiveServices2030() {
+
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState('rating');
@@ -85,7 +88,9 @@ export default function ComprehensiveServices2030() {
   const categories = ['All', ...Array.from(new Set(COMPREHENSIVE_SERVICES_2030.map(service => service.category)))];
 
   const filteredServices = useMemo(() => {
+
     let filtered = COMPREHENSIVE_SERVICES_2030.filter(service => {
+
       const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -99,6 +104,7 @@ export default function ComprehensiveServices2030() {
 
     // Sort services
     switch (sortBy) {
+
       case 'rating':
         filtered.sort((a, b) => b.rating - a.rating);
         break;
@@ -125,6 +131,7 @@ export default function ComprehensiveServices2030() {
   }, [searchQuery, selectedCategory, sortBy, priceRange]);
 
   const stats = {
+
     totalServices: COMPREHENSIVE_SERVICES_2030.length,
     averageRating: (COMPREHENSIVE_SERVICES_2030.reduce((sum, service) => sum + service.rating, 0) / COMPREHENSIVE_SERVICES_2030.length).toFixed(1),
     totalReviews: COMPREHENSIVE_SERVICES_2030.reduce((sum, service) => sum + service.reviewCount, 0),
@@ -206,6 +213,7 @@ export default function ComprehensiveServices2030() {
                     key={category}
                     onClick={() => setSelectedCategory(category)}
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+
                       selectedCategory === category
                         ? 'bg-blue-600 text-white shadow-lg'
                         : 'bg-white/10 text-blue-100 hover:bg-white/20 border border-white/20'
@@ -269,6 +277,7 @@ export default function ComprehensiveServices2030() {
             <AnimatePresence>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredServices.map((service, index) => {
+
                   const CategoryIcon = categoryIcons[service.category] || Globe;
                   
                   return (
@@ -398,6 +407,7 @@ export default function ComprehensiveServices2030() {
                 </p>
                 <button
                   onClick={() => {
+
                     setSearchQuery('');
                     setSelectedCategory('All');
                     setPriceRange([0, 50000]);

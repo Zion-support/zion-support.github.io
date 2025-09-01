@@ -2,6 +2,7 @@
 // Cutting-edge infrastructure solutions for modern enterprises
 
 export interface ServiceContact {
+
   phone: string;
   email: string;
   website: string;
@@ -9,6 +10,7 @@ export interface ServiceContact {
 }
 
 export interface ITInfrastructureService {
+
   id: number;
   name: string;
   category: string;
@@ -33,6 +35,7 @@ export interface ITInfrastructureService {
 
 // Zion Tech Group Contact Information
 const zionContact: ServiceContact = {
+
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
@@ -42,6 +45,7 @@ const zionContact: ServiceContact = {
 // Innovative IT Infrastructure Services 2030
 export const innovativeITInfrastructureServices2030: ITInfrastructureService[] = [
   {
+
     id: 1,
     name: "Zero-Trust Network Architecture Implementation",
     category: "Cybersecurity & Networking",
@@ -85,6 +89,7 @@ export const innovativeITInfrastructureServices2030: ITInfrastructureService[] =
     compliance: ["SOX", "HIPAA", "PCI-DSS", "GDPR", "NIST"]
   },
   {
+
     id: 2,
     name: "Hybrid Cloud Migration & Optimization",
     category: "Cloud & DevOps",
@@ -128,6 +133,7 @@ export const innovativeITInfrastructureServices2030: ITInfrastructureService[] =
     compliance: ["ISO 27001", "SOC 2", "HIPAA", "PCI-DSS"]
   },
   {
+
     id: 3,
     name: "Edge Computing Infrastructure Design",
     category: "Edge Computing & IoT",
@@ -171,6 +177,7 @@ export const innovativeITInfrastructureServices2030: ITInfrastructureService[] =
     compliance: ["ISO 27001", "NIST", "Industry-specific regulations"]
   },
   {
+
     id: 4,
     name: "AI-Powered Data Center Automation",
     category: "Data Center & Automation",
@@ -214,6 +221,7 @@ export const innovativeITInfrastructureServices2030: ITInfrastructureService[] =
     compliance: ["ISO 27001", "SOC 2", "TIA-942", "Uptime Institute"]
   },
   {
+
     id: 5,
     name: "Quantum-Ready Network Infrastructure",
     category: "Quantum Computing & Networking",
@@ -257,6 +265,7 @@ export const innovativeITInfrastructureServices2030: ITInfrastructureService[] =
     compliance: ["NIST", "FIPS", "Government standards", "Industry-specific regulations"]
   },
   {
+
     id: 6,
     name: "Sustainable Green IT Infrastructure",
     category: "Sustainability & Green Tech",
@@ -300,6 +309,7 @@ export const innovativeITInfrastructureServices2030: ITInfrastructureService[] =
     compliance: ["ISO 14001", "LEED", "BREEAM", "Energy Star"]
   },
   {
+
     id: 7,
     name: "5G & Next-Gen Network Infrastructure",
     category: "5G & Telecommunications",
@@ -343,6 +353,7 @@ export const innovativeITInfrastructureServices2030: ITInfrastructureService[] =
     compliance: ["3GPP standards", "FCC regulations", "Industry standards"]
   },
   {
+
     id: 8,
     name: "Hyperconverged Infrastructure (HCI) Implementation",
     category: "Hyperconvergence & Virtualization",
@@ -386,6 +397,7 @@ export const innovativeITInfrastructureServices2030: ITInfrastructureService[] =
     compliance: ["ISO 27001", "SOC 2", "Industry-specific regulations"]
   },
   {
+
     id: 9,
     name: "Blockchain Infrastructure & DLT Solutions",
     category: "Blockchain & Distributed Ledger",
@@ -429,6 +441,7 @@ export const innovativeITInfrastructureServices2030: ITInfrastructureService[] =
     compliance: ["Regulatory requirements", "Industry standards", "Security frameworks"]
   },
   {
+
     id: 10,
     name: "AI-Optimized Network Security Operations Center (SOC)",
     category: "AI & Cybersecurity",

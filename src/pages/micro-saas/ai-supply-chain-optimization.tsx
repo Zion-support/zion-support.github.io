@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Truck, 
   Package, 
   Globe, 
@@ -26,23 +27,28 @@ import {
 } from 'lucide-react';
 
 export default function AISupplyChainOptimization() {
+
   const features = [
     {
+
       icon: Truck,
       title: 'Smart Logistics',
       description: 'AI-optimized routing and delivery optimization for maximum efficiency'
     },
     {
+
       icon: Package,
       title: 'Inventory Management',
       description: 'Intelligent demand forecasting and automated inventory optimization'
     },
     {
+
       icon: Globe,
       title: 'Global Supply Chain',
       description: 'End-to-end visibility across international supply networks'
     },
     {
+
       icon: BarChart3,
       title: 'Predictive Analytics',
       description: 'AI-powered insights for supply chain risk management and optimization'
@@ -51,31 +57,37 @@ export default function AISupplyChainOptimization() {
 
   const capabilities = [
     {
+
       title: 'Demand Forecasting',
       description: 'Machine learning algorithms for accurate demand prediction and inventory planning',
       icon: TrendingUp
     },
     {
+
       title: 'Route Optimization',
       description: 'AI-powered logistics optimization for cost-effective and timely deliveries',
       icon: Truck
     },
     {
+
       title: 'Supplier Management',
       description: 'Intelligent supplier evaluation, risk assessment, and performance monitoring',
       icon: Users
     },
     {
+
       title: 'Real-time Tracking',
       description: 'End-to-end visibility of goods movement across the entire supply chain',
       icon: Package
     },
     {
+
       title: 'Risk Management',
       description: 'Predictive risk assessment and automated mitigation strategies',
       icon: AlertTriangle
     },
     {
+
       title: 'Cost Optimization',
       description: 'AI-driven cost analysis and optimization recommendations',
       icon: Target
@@ -93,6 +105,7 @@ export default function AISupplyChainOptimization() {
 
   const pricing = [
     {
+
       plan: 'Small Business',
       price: '$199',
       period: '/month',
@@ -107,6 +120,7 @@ export default function AISupplyChainOptimization() {
       popular: false
     },
     {
+
       plan: 'Enterprise',
       price: '$599',
       period: '/month',
@@ -122,6 +136,7 @@ export default function AISupplyChainOptimization() {
       popular: true
     },
     {
+
       plan: 'Global',
       price: '$1,499',
       period: '/month',
@@ -332,6 +347,7 @@ export default function AISupplyChainOptimization() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`bg-slate-800/50 p-8 rounded-xl border ${
+
                   plan.popular 
                     ? 'border-orange-500 ring-2 ring-orange-500/20' 
                     : 'border-slate-700'
@@ -365,6 +381,7 @@ export default function AISupplyChainOptimization() {
                 <a 
                   href="https://ziontechgroup.com/contact" 
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+
                     plan.popular
                       ? 'bg-orange-600 hover:bg-orange-700 text-white'
                       : 'bg-slate-700 hover:bg-slate-600 text-white'

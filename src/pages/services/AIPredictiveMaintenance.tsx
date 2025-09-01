@@ -1,4 +1,5 @@
 import { Wrench, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, AlertTriangle, TrendingUp, Zap, Target, Clock, Shield, Settings export default function AIPredictiveMaintenance(...args: any[]): any {
+
   const features = [
     'AI-powered equipment health monitoring and analysis',
     'Real-time predictive maintenance scheduling',
@@ -32,11 +33,13 @@ import { Wrench, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, AlertT
 
   const tiers = [
     {
+
       name: 'Maintenance Starter',
       price: '$399/mo',
       details: ['Up to 50 assets', 'Basic AI prediction', 'Standard monitoring', 'Email support']
     },
-    { 
+    {
+
       name: 'Maintenance Professional', 
       price: '$999/mo', 
       details: ['Up to 500 assets', 'Advanced AI features', 'Custom dashboards', 'Priority support'] ;

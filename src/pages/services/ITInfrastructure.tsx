@@ -14,38 +14,45 @@ import { Server,
              } from 'lucide-react.ts';
 
 const ITInfrastructure = () => {
+
   const services = [
     {
+
       icon: <Server className="w-8 h-8" />,
       title: "Server Infrastructure",
       description: "Enterprise-grade server solutions with high availability and performance optimization.",
       features: ["Load balancing", "Auto-scaling", "High availability", "Performance monitoring"]
     },
     {
+
       icon: <Cloud className="w-8 h-8" />,
       title: "Cloud Infrastructure",
       description: "Multi-cloud infrastructure management and optimization services.",
       features: ["Multi-cloud strategy", "Cost optimization", "Security compliance", "Migration support"]
     },
     {
+
       icon: <Database className="w-8 h-8" />,
       title: "Database Management",
       description: "Comprehensive database infrastructure and management solutions.",
       features: ["Performance tuning", "Backup & recovery", "Security hardening", "Monitoring"]
     },
     {
+
       icon: <Network className="w-8 h-8" />,
       title: "Network Infrastructure",
       description: "Robust network design and implementation for enterprise environments.",
       features: ["Network design", "Security implementation", "Performance optimization", "24/7 monitoring"]
     },
     {
+
       icon: <Shield className="w-8 h-8" />,
       title: "Security Infrastructure",
       description: "Advanced security infrastructure and threat protection systems.",
       features: ["Firewall management", "Intrusion detection", "Vulnerability assessment", "Incident response"]
     },
     {
+
       icon: <Zap className="w-8 h-8" />,
       title: "Performance Optimization",
       description: "Infrastructure performance tuning and optimization services.",

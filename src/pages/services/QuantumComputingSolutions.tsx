@@ -1,6 +1,7 @@
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
-import { 
+import {
+
   Atom, 
   Zap, 
   Brain, 
@@ -49,23 +50,28 @@ import {
 import { SEO              } from '../../components/SEO';
 
 export default function QuantumComputingSolutions(...args: any[]): any {
+
   const features = [
     {
+
       icon: Atom,
       title: 'Quantum Processing',
       description: 'Harness quantum superposition and entanglement for exponential computational power.'
     },
     {
+
       icon: Brain,
       title: 'AI Integration',
       description: 'Seamlessly integrate quantum computing with AI and machine learning workflows.'
     },
     {
+
       icon: Zap,
       title: 'Real-time Optimization',
       description: 'Solve complex optimization problems in seconds instead of years.'
     },
     {
+
       icon: TrendingUp,
       title: 'Scalable Solutions',
       description: 'From small quantum circuits to enterprise-scale quantum applications.'
@@ -73,24 +79,28 @@ export default function QuantumComputingSolutions(...args: any[]): any {
   ];
   const capabilities = [
     {
+
       title: 'Quantum Algorithms',
       description: 'Custom quantum algorithms for specific business problems and use cases',
       icon: Code,
       benefits: ['Grover\'s algorithm', 'Shor\'s algorithm', 'Quantum annealing']
     },
     {
+
       title: 'Hybrid Computing',
       description: 'Combine classical and quantum computing for optimal performance',
       icon: Cpu,
       benefits: ['Quantum-classical integration', 'Hybrid algorithms', 'Performance optimization']
     },
     {
+
       title: 'Quantum Simulation',
       description: 'Simulate quantum systems for research and development',
       icon: Monitor,
       benefits: ['Molecular modeling', 'Material science', 'Drug discovery']
     },
     {
+
       title: 'Quantum Security',
       description: 'Quantum-resistant cryptography and secure communications',
       icon: Shield,
@@ -99,24 +109,28 @@ export default function QuantumComputingSolutions(...args: any[]): any {
   ];
   const useCases = [
     {
+
       industry: 'Financial Services',
       description: 'Portfolio optimization, risk assessment, and algorithmic trading',
       icon: BarChart3,
       metrics: ['Portfolio Performance', 'Risk Reduction', 'Trading Speed']
     },
     {
+
       industry: 'Pharmaceuticals',
       description: 'Drug discovery, molecular modeling, and protein folding',
       icon: Activity,
       metrics: ['Discovery Speed', 'Accuracy Rate', 'Cost Reduction']
     },
     {
+
       industry: 'Logistics',
       description: 'Route optimization, supply chain management, and scheduling',
       icon: Network,
       metrics: ['Route Efficiency', 'Cost Savings', 'Delivery Time']
     },
     {
+
       industry: 'Energy',
       description: 'Grid optimization, renewable energy forecasting, and storage',
       icon: Zap,
@@ -125,6 +139,7 @@ export default function QuantumComputingSolutions(...args: any[]): any {
   ];
   const pricing = [
     {
+
       name: 'Starter',
       price: '$299',
       period: '/month',
@@ -140,6 +155,7 @@ export default function QuantumComputingSolutions(...args: any[]): any {
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$799',
       period: '/month',
@@ -157,6 +173,7 @@ export default function QuantumComputingSolutions(...args: any[]): any {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: 'Custom',
       period: '',
@@ -176,21 +193,25 @@ export default function QuantumComputingSolutions(...args: any[]): any {
   ];
   const benefits = [
     {
+
       icon: Zap,
       title: '1000x Faster Processing',
       description: 'Solve complex problems in seconds that would take classical computers years.'
     },
     {
+
       icon: Brain,
       title: 'AI Enhancement',
       description: 'Supercharge machine learning with quantum computing capabilities.'
     },
     {
+
       icon: Shield,
       title: 'Future-Proof Security',
       description: 'Implement quantum-resistant cryptography before it becomes critical.'
     },
     {
+
       icon: Users,
       title: 'Competitive Advantage',
       description: 'Stay ahead of the curve with cutting-edge quantum technology.'
@@ -395,6 +416,7 @@ export default function QuantumComputingSolutions(...args: any[]): any {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'border-indigo-500/50 ring-2 ring-indigo-500/20' 
                     : 'border-gray-700 hover:border-indigo-500/50'
@@ -427,6 +449,7 @@ export default function QuantumComputingSolutions(...args: any[]): any {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700'
                       : 'bg-gray-700 text-white hover:bg-gray-600'

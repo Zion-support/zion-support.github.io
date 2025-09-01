@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
+
   Heart, 
   Share2, 
   MessageCircle, 
@@ -14,12 +15,14 @@ import {
 } from 'lucide-react';
 
 interface FeedbackData {
+
   type: 'positive' | 'negative' | 'suggestion';
   message: string;
   timestamp: Date;
 }
 
 export const EnhancedInteractiveFeatures: React.FC = () => {
+
   const [isVisible, setIsVisible] = useState(false);
   const [feedback, setFeedback] = useState<FeedbackData[]>([]);
   const [showFeedbackForm, setShowFeedbackForm] = useState(false);
@@ -30,32 +33,41 @@ export const EnhancedInteractiveFeatures: React.FC = () => {
   const [showRating, setShowRating] = useState(false);
 
   useEffect(() => {
+
     // Load saved feedback from localStorage
     const savedFeedback = localStorage.getItem('zion-feedback');
     if (savedFeedback) {
+
       try {
+
         setFeedback(JSON.parse(savedFeedback));
       } catch (error) {
-        console.error('Failed to parse saved feedback:', error);
+
+        // // // console.error('Failed to parse saved feedback:', error);
       }
     }
 
     // Load bookmark status
     const savedBookmark = localStorage.getItem('zion-bookmark');
     if (savedBookmark) {
+
       setIsBookmarked(JSON.parse(savedBookmark));
     }
   }, []);
 
   const saveFeedback = (newFeedback: FeedbackData) => {
+
     const updatedFeedback = [...feedback, newFeedback];
     setFeedback(updatedFeedback);
     localStorage.setItem('zion-feedback', JSON.stringify(updatedFeedback));
   };
 
   const handleFeedbackSubmit = () => {
+
     if (feedbackMessage.trim()) {
+
       const newFeedback: FeedbackData = {
+
         type: feedbackType,
         message: feedbackMessage.trim(),
         timestamp: new Date()
@@ -67,34 +79,44 @@ export const EnhancedInteractiveFeatures: React.FC = () => {
   };
 
   const toggleBookmark = () => {
+
     const newBookmarkState = !isBookmarked;
     setIsBookmarked(newBookmarkState);
     localStorage.setItem('zion-bookmark', JSON.stringify(newBookmarkState));
   };
 
   const handleShare = async () => {
+
     if (navigator.share) {
+
       try {
+
         await navigator.share({
+
           title: 'Zion Tech Group',
           text: 'Check out this amazing technology company!',
           url: window.location.href
         });
       } catch (error) {
-        console.error('Error sharing:', error);
+
+        // // // console.error('Error sharing:', error);
       }
     } else {
+
       // Fallback: copy to clipboard
       try {
+
         await navigator.clipboard.writeText(window.location.href);
         alert('Link copied to clipboard!');
       } catch (error) {
-        console.error('Failed to copy:', error);
+
+        // // // console.error('Failed to copy:', error);
       }
     }
   };
 
   const handleRating = (newRating: number) => {
+
     setRating(newRating);
     setShowRating(false);
     // Save rating to localStorage or send to analytics
@@ -147,6 +169,7 @@ export const EnhancedInteractiveFeatures: React.FC = () => {
                   whileTap={{ scale: 0.95 }}
                   onClick={toggleBookmark}
                   className={`p-3 rounded-lg border-2 transition-all duration-200 flex flex-col items-center space-y-2 ${
+
                     isBookmarked
                       ? 'border-purple-500 bg-purple-50 text-purple-700'
                       : 'border-gray-200 hover:border-purple-300 hover:bg-purple-50'
@@ -192,6 +215,7 @@ export const EnhancedInteractiveFeatures: React.FC = () => {
                             key={star}
                             onClick={() => handleRating(star)}
                             className={`p-1 transition-colors ${
+
                               star <= rating ? 'text-yellow-500' : 'text-gray-300'
                             }`}
                           >
@@ -233,6 +257,7 @@ export const EnhancedInteractiveFeatures: React.FC = () => {
                             key={type}
                             onClick={() => setFeedbackType(type)}
                             className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+
                               feedbackType === type
                                 ? 'bg-blue-100 text-blue-700'
                                 : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
@@ -269,6 +294,7 @@ export const EnhancedInteractiveFeatures: React.FC = () => {
                       <div
                         key={index}
                         className={`p-2 rounded-lg text-xs ${
+
                           item.type === 'positive' ? 'bg-green-50 text-green-700' :
                           item.type === 'negative' ? 'bg-red-50 text-red-700' :
                           'bg-blue-50 text-blue-700'

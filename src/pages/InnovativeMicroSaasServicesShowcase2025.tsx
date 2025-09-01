@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
+
   Brain, 
   Cloud, 
   Shield, 
@@ -58,6 +59,7 @@ import { SEO } from '../components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 
 export default function InnovativeMicroSaasServicesShowcase2025() {
+
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
@@ -81,6 +83,7 @@ export default function InnovativeMicroSaasServicesShowcase2025() {
   ];
 
   const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(service => {
+
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -90,7 +93,9 @@ export default function InnovativeMicroSaasServicesShowcase2025() {
   });
 
   const sortedServices = [...filteredServices].sort((a, b) => {
+
     switch (sortBy) {
+
       case 'price':
         return a.price - b.price;
       case 'name':
@@ -103,21 +108,27 @@ export default function InnovativeMicroSaasServicesShowcase2025() {
   });
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
+
         staggerChildren: 0.1
       }
     }
   };
 
   const itemVariants = {
+
     hidden: { opacity: 0, y: 20 },
     visible: {
+
       opacity: 1,
       y: 0,
       transition: {
+
         duration: 0.5
       }
     }
@@ -275,6 +286,7 @@ export default function InnovativeMicroSaasServicesShowcase2025() {
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setActiveCategory(category.id)}
                   className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+
                     activeCategory === category.id
                       ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                       : 'bg-slate-700/50 text-slate-300 hover:bg-slate-600/50'

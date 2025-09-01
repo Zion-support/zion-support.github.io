@@ -1,6 +1,7 @@
 export const INNOVATIVE_AI_SERVICES = [
     // AI-Powered Content Generation & Marketing
     {
+
         id: "ai-content-marketing-suite",
         title: "AI Content Marketing Suite",
         description: "Comprehensive AI-powered content creation platform that generates high-quality marketing materials, social media posts, and SEO-optimized content.",
@@ -45,6 +46,7 @@ export const INNOVATIVE_AI_SERVICES = [
         supportLevel: "premium",
         marketPrice: "$399 - $1,500/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -60,6 +62,7 @@ export const INNOVATIVE_AI_SERVICES = [
     },
     // AI-Powered Video Analytics
     {
+
         id: "ai-video-analytics-platform",
         title: "AI Video Analytics Platform",
         description: "Advanced video analysis platform that uses computer vision to extract insights, detect objects, and analyze customer behavior in retail and security applications.",
@@ -104,6 +107,7 @@ export const INNOVATIVE_AI_SERVICES = [
         supportLevel: "enterprise",
         marketPrice: "$599 - $2,500/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -119,6 +123,7 @@ export const INNOVATIVE_AI_SERVICES = [
     },
     // AI-Powered Financial Trading Assistant
     {
+
         id: "ai-financial-trading-assistant",
         title: "AI Financial Trading Assistant",
         description: "Intelligent trading platform that uses machine learning to analyze market trends, predict price movements, and provide automated trading recommendations.",
@@ -163,6 +168,7 @@ export const INNOVATIVE_AI_SERVICES = [
         supportLevel: "enterprise",
         marketPrice: "$799 - $3,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -178,6 +184,7 @@ export const INNOVATIVE_AI_SERVICES = [
     },
     // AI-Powered Healthcare Diagnostics
     {
+
         id: "ai-healthcare-diagnostics",
         title: "AI Healthcare Diagnostics Platform",
         description: "Advanced medical imaging analysis platform that uses deep learning to assist healthcare professionals in diagnosing diseases and conditions.",
@@ -222,6 +229,7 @@ export const INNOVATIVE_AI_SERVICES = [
         supportLevel: "enterprise",
         marketPrice: "$1,299 - $5,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -237,6 +245,7 @@ export const INNOVATIVE_AI_SERVICES = [
     },
     // AI-Powered Supply Chain Optimization
     {
+
         id: "ai-supply-chain-optimization",
         title: "AI Supply Chain Optimization Platform",
         description: "Intelligent supply chain management system that uses AI to predict demand, optimize inventory, and streamline logistics operations.",
@@ -281,6 +290,7 @@ export const INNOVATIVE_AI_SERVICES = [
         supportLevel: "premium",
         marketPrice: "$699 - $2,500/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"

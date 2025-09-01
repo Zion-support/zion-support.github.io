@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { 
+import {
+
   Brain, 
   Shield, 
   Zap, 
@@ -38,16 +39,19 @@ import {
 import { innovativeMicroSaasServices2025, innovativeITServices2025, innovativeAIServices2025 } from '../data/innovativeNewServices2025';
 
 const InnovativeNewServicesShowcase2025: React.FC = () => {
+
   const [activeTab, setActiveTab] = useState('micro-saas');
   const [selectedService, setSelectedService] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openServiceModal = (service: any) => {
+
     setSelectedService(service);
     setIsModalOpen(true);
   };
 
   const closeModal = () => {
+
     setIsModalOpen(false);
     setSelectedService(null);
   };
@@ -59,7 +63,9 @@ const InnovativeNewServicesShowcase2025: React.FC = () => {
   ];
 
   const getServicesByTab = () => {
+
     switch (activeTab) {
+
       case 'micro-saas':
         return innovativeMicroSaasServices2025;
       case 'it-services':
@@ -72,7 +78,9 @@ const InnovativeNewServicesShowcase2025: React.FC = () => {
   };
 
   const getServiceIcon = (category: string) => {
+
     switch (category.toLowerCase()) {
+
       case 'customer analytics':
         return <BarChart3 className="w-6 h-6" />;
       case 'document security':
@@ -180,6 +188,7 @@ const InnovativeNewServicesShowcase2025: React.FC = () => {
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex items-center gap-3 px-6 py-3 rounded-full transition-all duration-300 ${
+
                     activeTab === tab.id
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
                       : 'bg-zinc-800 text-gray-300 hover:bg-zinc-700 border border-zinc-600'
@@ -271,21 +280,25 @@ const InnovativeNewServicesShowcase2025: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
+
                   icon: <Award className="w-12 h-12" />,
                   title: "Industry Leader",
                   description: "Recognized as a top innovator in AI, quantum computing, and edge technologies"
                 },
                 {
+
                   icon: <Users className="w-12 h-12" />,
                   title: "Expert Team",
                   description: "World-class engineers, scientists, and business strategists with decades of experience"
                 },
                 {
+
                   icon: <Shield className="w-12 h-12" />,
                   title: "Enterprise Security",
                   description: "SOC2, ISO27001, and industry-specific compliance with military-grade security"
                 },
                 {
+
                   icon: <Clock className="w-12 h-12" />,
                   title: "24/7 Support",
                   description: "Round-the-clock technical support and dedicated success managers"
@@ -331,6 +344,7 @@ const InnovativeNewServicesShowcase2025: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
+
                   title: "Micro SAAS Services",
                   roi: "300-800%",
                   timeframe: "6-12 months",
@@ -338,6 +352,7 @@ const InnovativeNewServicesShowcase2025: React.FC = () => {
                   growth: "35-50% YoY"
                 },
                 {
+
                   title: "IT Services",
                   roi: "250-600%",
                   timeframe: "8-20 weeks",
@@ -345,6 +360,7 @@ const InnovativeNewServicesShowcase2025: React.FC = () => {
                   growth: "25-40% YoY"
                 },
                 {
+
                   title: "AI Services",
                   roi: "400-1000%",
                   timeframe: "3-8 months",

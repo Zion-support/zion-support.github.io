@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Atom, Brain, Zap, Globe, Users, BarChart3, 
   Lock, Cpu, Network, Eye, AlertTriangle, CheckCircle,
   ArrowRight, Star, Award, Phone, Mail, MapPin, TrendingUp,
@@ -8,33 +9,40 @@ import {
 } from 'lucide-react';
 
 const AIQuantumFinancialTradingPlatform: React.FC = () => {
+
   const features = [
     {
+
       icon: Atom,
       title: "Quantum Computing Power",
       description: "Access to 1000+ qubit quantum computers for complex financial modeling"
     },
     {
+
       icon: Brain,
       title: "AI-Powered Trading",
       description: "Advanced machine learning algorithms for market prediction and analysis"
     },
     {
+
       icon: Shield,
       title: "Quantum-Safe Security",
       description: "Post-quantum cryptography to protect against future quantum threats"
     },
     {
+
       icon: Network,
       title: "Global Market Access",
       description: "Real-time trading across 150+ global markets and exchanges"
     },
     {
+
       icon: BarChart3,
       title: "Predictive Analytics",
       description: "ML-powered market forecasting with 95%+ accuracy rates"
     },
     {
+
       icon: Target,
       title: "Risk Management",
       description: "Advanced risk assessment and portfolio optimization algorithms"
@@ -43,6 +51,7 @@ const AIQuantumFinancialTradingPlatform: React.FC = () => {
 
   const pricingTiers = [
     {
+
       name: "Professional Trader",
       price: "$5,000",
       period: "/month",
@@ -60,6 +69,7 @@ const AIQuantumFinancialTradingPlatform: React.FC = () => {
       popular: false
     },
     {
+
       name: "Institutional Trader",
       price: "$25,000",
       period: "/month",
@@ -78,6 +88,7 @@ const AIQuantumFinancialTradingPlatform: React.FC = () => {
       popular: true
     },
     {
+
       name: "Enterprise Trading",
       price: "$100,000",
       period: "/month",
@@ -99,21 +110,25 @@ const AIQuantumFinancialTradingPlatform: React.FC = () => {
 
   const benefits = [
     {
+
       title: "Quantum Advantage",
       description: "Solve complex financial problems 1000x faster than classical computers",
       icon: Atom
     },
     {
+
       title: "AI Predictions",
       description: "95%+ accuracy in market forecasting and trend prediction",
       icon: Brain
     },
     {
+
       title: "Risk Reduction",
       description: "Advanced algorithms reduce portfolio risk by up to 60%",
       icon: Shield
     },
     {
+
       title: "Global Access",
       description: "Trade across 150+ markets with real-time execution",
       icon: Globe
@@ -122,36 +137,42 @@ const AIQuantumFinancialTradingPlatform: React.FC = () => {
 
   const tradingStrategies = [
     {
+
       title: "Quantum Arbitrage",
       description: "Identify and execute arbitrage opportunities across global markets in milliseconds",
       icon: Target,
       color: "from-blue-500 to-cyan-500"
     },
     {
+
       title: "AI Market Making",
       description: "Intelligent market making with dynamic spread optimization",
       icon: Brain,
       color: "from-purple-500 to-pink-500"
     },
     {
+
       title: "Portfolio Optimization",
       description: "Quantum-powered portfolio optimization for maximum returns with minimal risk",
       icon: PieChart,
       color: "from-green-500 to-emerald-500"
     },
     {
+
       title: "High-Frequency Trading",
       description: "Ultra-low latency trading with quantum-enhanced execution algorithms",
       icon: Zap,
       color: "from-yellow-500 to-orange-500"
     },
     {
+
       title: "Risk Management",
       description: "Real-time risk assessment and automated position sizing",
       icon: Shield,
       color: "from-red-500 to-pink-500"
     },
     {
+
       title: "Sentiment Analysis",
       description: "AI-powered market sentiment analysis for informed trading decisions",
       icon: TrendingUp,
@@ -337,6 +358,7 @@ const AIQuantumFinancialTradingPlatform: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+
                   tier.popular 
                     ? 'border-purple-500 ring-2 ring-purple-500/20' 
                     : 'border-gray-700'
@@ -369,6 +391,7 @@ const AIQuantumFinancialTradingPlatform: React.FC = () => {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                   tier.popular
                     ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
                     : 'bg-gray-700 text-white hover:bg-gray-600'

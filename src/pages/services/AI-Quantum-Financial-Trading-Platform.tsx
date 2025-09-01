@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Brain, 
   TrendingUp, 
   Shield, 
@@ -36,23 +37,28 @@ import {
 import { SEO } from '@/components/SEO';
 
 export default function AIQuantumFinancialTradingPlatform() {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Trading Algorithms",
       description: "Advanced machine learning models that analyze market patterns and execute trades with precision"
     },
     {
+
       icon: Atom,
       title: "Quantum Computing Integration",
       description: "Leverage quantum algorithms for complex financial modeling and risk assessment"
     },
     {
+
       icon: Shield,
       title: "Real-time Risk Management",
       description: "Continuous monitoring and automated risk mitigation across all trading activities"
     },
     {
+
       icon: Zap,
       title: "High-Frequency Trading",
       description: "Ultra-fast execution with microsecond latency for competitive advantage"
@@ -61,24 +67,28 @@ export default function AIQuantumFinancialTradingPlatform() {
 
   const services = [
     {
+
       title: "Algorithmic Trading",
       description: "Custom trading algorithms powered by AI and quantum computing for optimal performance",
       icon: ChartLine,
       features: ["AI-driven strategy development", "Quantum optimization", "Real-time backtesting", "Performance analytics"]
     },
     {
+
       title: "Portfolio Management",
       description: "Intelligent portfolio optimization using quantum algorithms and AI risk assessment",
       icon: BarChart3,
       features: ["Risk-adjusted returns", "Diversification optimization", "Dynamic rebalancing", "Tax optimization"]
     },
     {
+
       title: "Market Analysis",
       description: "Advanced market intelligence with predictive analytics and sentiment analysis",
       icon: TrendingUp,
       features: ["Sentiment analysis", "News impact assessment", "Technical analysis", "Fundamental insights"]
     },
     {
+
       title: "Compliance & Reporting",
       description: "Automated regulatory compliance and comprehensive reporting for financial institutions",
       icon: Lock,
@@ -99,6 +109,7 @@ export default function AIQuantumFinancialTradingPlatform() {
 
   const pricing = [
     {
+
       plan: "Starter",
       price: "$2,500",
       period: "/month",
@@ -113,6 +124,7 @@ export default function AIQuantumFinancialTradingPlatform() {
       popular: false
     },
     {
+
       plan: "Professional",
       price: "$8,500",
       period: "/month",
@@ -128,6 +140,7 @@ export default function AIQuantumFinancialTradingPlatform() {
       popular: true
     },
     {
+
       plan: "Enterprise",
       price: "$25,000",
       period: "/month",
@@ -311,6 +324,7 @@ export default function AIQuantumFinancialTradingPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 border rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'border-green-400/50 bg-gradient-to-br from-green-500/10 to-blue-500/10' 
                     : 'border-slate-700/50'
@@ -344,6 +358,7 @@ export default function AIQuantumFinancialTradingPlatform() {
                 <Link
                   to="/contact"
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white hover:from-green-400 hover:to-blue-500 hover:scale-105'
                       : 'bg-slate-700 text-white hover:bg-slate-600'

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   DollarSign, TrendingUp, Clock, Users, CheckCircle, Star,
   Phone, Mail, MapPin, ExternalLink, ArrowRight, Zap,
   Shield, Globe, Cpu, Brain, Atom, Rocket, Target,
@@ -9,6 +10,7 @@ import {
 import { comprehensivePricingGuide2026, pricingCategories } from '../data/comprehensivePricingGuide2026';
 
 export default function ComprehensivePricingShowcase2026() {
+
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<string | null>(null);
 
@@ -17,21 +19,27 @@ export default function ComprehensivePricingShowcase2026() {
     : comprehensivePricingGuide2026.filter(s => s.category === selectedCategory);
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
+
         staggerChildren: 0.1
       }
     }
   };
 
   const itemVariants = {
+
     hidden: { y: 20, opacity: 0 },
     visible: {
+
       y: 0,
       opacity: 1,
       transition: {
+
         duration: 0.5
       }
     }
@@ -117,6 +125,7 @@ export default function ComprehensivePricingShowcase2026() {
             <button
               onClick={() => setSelectedCategory('all')}
               className={`p-4 rounded-lg border transition-all duration-300 ${
+
                 selectedCategory === 'all'
                   ? 'border-blue-500 bg-blue-500/20 text-blue-400'
                   : 'border-white/20 bg-white/5 text-gray-300 hover:border-white/40 hover:bg-white/10'
@@ -133,6 +142,7 @@ export default function ComprehensivePricingShowcase2026() {
                 key={category.name}
                 onClick={() => setSelectedCategory(category.name)}
                 className={`p-4 rounded-lg border transition-all duration-300 ${
+
                   selectedCategory === category.name
                     ? 'border-purple-500 bg-purple-500/20 text-purple-400'
                     : 'border-white/20 bg-white/5 text-gray-300 hover:border-white/40 hover:bg-white/10'
@@ -254,6 +264,7 @@ export default function ComprehensivePricingShowcase2026() {
                     <div
                       key={tier.id}
                       className={`relative bg-white/5 rounded-xl border transition-all duration-300 hover:border-white/30 ${
+
                         tier.popular ? 'border-purple-500 bg-purple-500/10' : 'border-white/20'
                       }`}
                     >
@@ -325,6 +336,7 @@ export default function ComprehensivePricingShowcase2026() {
                         <a
                           href={tier.href}
                           className={`w-full inline-flex items-center justify-center px-4 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
+
                             tier.popular
                               ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
                               : 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'

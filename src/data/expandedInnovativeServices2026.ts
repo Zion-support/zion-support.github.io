@@ -1,4 +1,5 @@
 export interface ExpandedInnovativeService2026 {
+
   id: string;
   title: string;
   description: string;
@@ -18,11 +19,13 @@ export interface ExpandedInnovativeService2026 {
   roi: string;
   innovationLevel: string;
   contactInfo: {
+
     phone: string;
     email: string;
     website: string;
   };
   technicalSpecs?: {
+
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
@@ -38,6 +41,7 @@ export interface ExpandedInnovativeService2026 {
 export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] = [
   // AI-Powered Legal Tech Platform
   {
+
     id: 'ai-legal-tech-platform',
     title: 'AI Legal Tech Platform',
     description: 'Intelligent legal document analysis, contract review, and legal research automation platform using advanced NLP and machine learning.',
@@ -86,11 +90,13 @@ export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] 
     roi: '280-450%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['Python', 'TensorFlow', 'BERT', 'React', 'Node.js'],
       integrations: ['LexisNexis', 'Westlaw', 'DocuSign', 'Clio', 'PracticePanther'],
       apiEndpoints: 180,
@@ -105,6 +111,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] 
 
   // AI-Powered Healthcare Analytics Platform
   {
+
     id: 'ai-healthcare-analytics-platform',
     title: 'AI Healthcare Analytics Platform',
     description: 'Comprehensive healthcare analytics platform using AI to analyze patient data, predict outcomes, and optimize healthcare operations.',
@@ -153,11 +160,13 @@ export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] 
     roi: '320-500%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['Python', 'TensorFlow', 'PyTorch', 'React', 'PostgreSQL'],
       integrations: ['Epic', 'Cerner', 'Allscripts', 'HL7 FHIR', 'Custom EMRs'],
       apiEndpoints: 200,
@@ -172,6 +181,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] 
 
   // AI-Powered Education Platform
   {
+
     id: 'ai-education-platform',
     title: 'AI Education Platform',
     description: 'Intelligent learning platform that personalizes education using AI, adaptive learning algorithms, and real-time student performance analytics.',
@@ -220,11 +230,13 @@ export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] 
     roi: '200-350%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['Python', 'TensorFlow', 'React', 'Node.js', 'MongoDB'],
       integrations: ['Canvas', 'Blackboard', 'Moodle', 'Google Classroom', 'Microsoft Teams'],
       apiEndpoints: 120,
@@ -239,6 +251,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] 
 
   // AI-Powered Real Estate Platform
   {
+
     id: 'ai-real-estate-platform',
     title: 'AI Real Estate Platform',
     description: 'Intelligent real estate platform using AI for property valuation, market analysis, and investment decision support.',
@@ -287,11 +300,13 @@ export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] 
     roi: '250-400%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL'],
       integrations: ['Zillow API', 'Redfin API', 'MLS systems', 'Financial data APIs'],
       apiEndpoints: 150,
@@ -306,6 +321,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] 
 
   // AI-Powered Supply Chain Platform
   {
+
     id: 'ai-supply-chain-platform',
     title: 'AI Supply Chain Platform',
     description: 'Intelligent supply chain optimization platform using AI for demand forecasting, inventory management, and logistics optimization.',
@@ -354,11 +370,13 @@ export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] 
     roi: '280-450%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL'],
       integrations: ['SAP', 'Oracle', 'Salesforce', 'Shopify', 'Custom ERPs'],
       apiEndpoints: 180,
@@ -373,6 +391,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] 
 
   // AI-Powered Customer Service Platform
   {
+
     id: 'ai-customer-service-platform',
     title: 'AI Customer Service Platform',
     description: 'Intelligent customer service platform using AI chatbots, sentiment analysis, and automated ticket routing for enhanced customer experience.',
@@ -421,11 +440,13 @@ export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] 
     roi: '220-380%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['Python', 'TensorFlow', 'React', 'Node.js', 'MongoDB'],
       integrations: ['Zendesk', 'Freshdesk', 'Intercom', 'Slack', 'Microsoft Teams'],
       apiEndpoints: 100,
@@ -440,6 +461,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] 
 
   // AI-Powered Sales Platform
   {
+
     id: 'ai-sales-platform',
     title: 'AI Sales Platform',
     description: 'Intelligent sales platform using AI for lead scoring, sales forecasting, and customer relationship optimization.',
@@ -488,11 +510,13 @@ export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] 
     roi: '250-400%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL'],
       integrations: ['Salesforce', 'HubSpot', 'Pipedrive', 'Zoho CRM', 'Custom CRMs'],
       apiEndpoints: 120,
@@ -507,6 +531,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] 
 
   // AI-Powered Project Management Platform
   {
+
     id: 'ai-project-management-platform',
     title: 'AI Project Management Platform',
     description: 'Intelligent project management platform using AI for task optimization, resource allocation, and project risk assessment.',
@@ -555,11 +580,13 @@ export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] 
     roi: '220-380%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL'],
       integrations: ['Jira', 'Asana', 'Trello', 'Monday.com', 'Microsoft Project'],
       apiEndpoints: 100,
@@ -574,6 +601,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] 
 
   // AI-Powered Business Automation Platform
   {
+
     id: 'ai-business-automation-platform',
     title: 'AI Business Automation Platform',
     description: 'Comprehensive business process automation platform using AI for workflow optimization, document processing, and decision automation.',
@@ -622,11 +650,13 @@ export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] 
     roi: '280-450%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL'],
       integrations: ['SAP', 'Oracle', 'Salesforce', 'Microsoft Dynamics', 'Custom systems'],
       apiEndpoints: 150,
@@ -641,6 +671,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] 
 
   // AI-Powered Robotics Platform
   {
+
     id: 'ai-robotics-platform',
     title: 'AI Robotics Platform',
     description: 'Advanced robotics control platform using AI for autonomous navigation, object recognition, and robotic process automation.',
@@ -689,11 +720,13 @@ export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] 
     roi: '350-600%',
     innovationLevel: 'Cutting-edge',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['Python', 'TensorFlow', 'ROS', 'C++', 'Computer Vision'],
       integrations: ['Industrial robots', 'Sensors', 'IoT devices', 'Custom hardware'],
       apiEndpoints: 250,
@@ -708,6 +741,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] 
 
   // AI-Powered Space Tech Platform
   {
+
     id: 'ai-space-tech-platform',
     title: 'AI Space Tech Platform',
     description: 'Revolutionary space technology platform using AI for satellite operations, space data analysis, and orbital optimization.',
@@ -756,11 +790,13 @@ export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] 
     roi: '400-700%',
     innovationLevel: 'Cutting-edge',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['Python', 'TensorFlow', 'C++', 'Fortran', 'Space simulation tools'],
       integrations: ['Satellite systems', 'Ground stations', 'Space databases', 'NASA APIs'],
       apiEndpoints: 300,
@@ -775,6 +811,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] 
 
   // AI-Powered Climate Tech Platform
   {
+
     id: 'ai-climate-tech-platform',
     title: 'AI Climate Tech Platform',
     description: 'Intelligent climate technology platform using AI for environmental monitoring, climate prediction, and sustainability optimization.',
@@ -823,11 +860,13 @@ export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] 
     roi: '250-400%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL'],
       integrations: ['IoT sensors', 'Weather APIs', 'Energy management systems', 'Environmental databases'],
       apiEndpoints: 150,

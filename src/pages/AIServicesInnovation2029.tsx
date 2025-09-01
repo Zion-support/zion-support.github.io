@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Brain, 
   Bot, 
   Cpu, 
@@ -174,6 +175,7 @@ import {
 } from 'lucide-react';
 
 const AIServicesInnovation2029: React.FC = () => {
+
   const [activeCategory, setActiveCategory] = useState('all');
 
   const categories = [
@@ -190,6 +192,7 @@ const AIServicesInnovation2029: React.FC = () => {
   const aiServices = [
     // Generative AI Solutions
     {
+
       id: 'enterprise-llm-platform',
       category: 'generative-ai',
       title: 'Enterprise LLM Platform',
@@ -205,6 +208,7 @@ const AIServicesInnovation2029: React.FC = () => {
         '24/7 technical support'
       ],
       pricing: {
+
         starter: '$5,000/month',
         professional: '$15,000/month',
         enterprise: '$50,000/month'
@@ -223,6 +227,7 @@ const AIServicesInnovation2029: React.FC = () => {
       demo: 'https://ziontechgroup.com/demo/enterprise-llm-platform'
     },
     {
+
       id: 'ai-content-generation',
       category: 'generative-ai',
       title: 'AI Content Generation Suite',
@@ -238,6 +243,7 @@ const AIServicesInnovation2029: React.FC = () => {
         'Team collaboration tools'
       ],
       pricing: {
+
         starter: '$99/month',
         professional: '$299/month',
         enterprise: '$799/month'
@@ -257,6 +263,7 @@ const AIServicesInnovation2029: React.FC = () => {
 
     // Machine Learning Solutions
     {
+
       id: 'ml-model-development',
       category: 'machine-learning',
       title: 'Custom ML Model Development',
@@ -272,6 +279,7 @@ const AIServicesInnovation2029: React.FC = () => {
         'Integration with production systems'
       ],
       pricing: {
+
         assessment: '$10,000 - $25,000',
         development: '$25,000 - $150,000',
         ongoing: '$2,000 - $15,000/month'
@@ -290,6 +298,7 @@ const AIServicesInnovation2029: React.FC = () => {
       demo: 'https://ziontechgroup.com/demo/ml-model-development'
     },
     {
+
       id: 'mlops-platform',
       category: 'machine-learning',
       title: 'MLOps & Model Management',
@@ -305,6 +314,7 @@ const AIServicesInnovation2029: React.FC = () => {
         'Integration with major cloud platforms'
       ],
       pricing: {
+
         starter: '$2,000/month',
         professional: '$5,000/month',
         enterprise: '$15,000/month'
@@ -324,6 +334,7 @@ const AIServicesInnovation2029: React.FC = () => {
 
     // Computer Vision Solutions
     {
+
       id: 'computer-vision-platform',
       category: 'computer-vision',
       title: 'Enterprise Computer Vision Platform',
@@ -339,6 +350,7 @@ const AIServicesInnovation2029: React.FC = () => {
         'API integration and SDKs'
       ],
       pricing: {
+
         starter: '$3,000/month',
         professional: '$8,000/month',
         enterprise: '$25,000/month'
@@ -356,6 +368,7 @@ const AIServicesInnovation2029: React.FC = () => {
       demo: 'https://ziontechgroup.com/demo/computer-vision-platform'
     },
     {
+
       id: 'ai-image-editing',
       category: 'computer-vision',
       title: 'AI-Powered Image Editing Studio',
@@ -371,6 +384,7 @@ const AIServicesInnovation2029: React.FC = () => {
         'Team collaboration features'
       ],
       pricing: {
+
         starter: '$79/month',
         professional: '$199/month',
         enterprise: '$499/month'
@@ -390,6 +404,7 @@ const AIServicesInnovation2029: React.FC = () => {
 
     // NLP & Processing Solutions
     {
+
       id: 'nlp-processing-platform',
       category: 'nlp-processing',
       title: 'Advanced NLP Processing Platform',
@@ -405,6 +420,7 @@ const AIServicesInnovation2029: React.FC = () => {
         'Real-time processing capabilities'
       ],
       pricing: {
+
         starter: '$1,500/month',
         professional: '$4,000/month',
         enterprise: '$12,000/month'
@@ -424,6 +440,7 @@ const AIServicesInnovation2029: React.FC = () => {
 
     // AI Automation Solutions
     {
+
       id: 'ai-workflow-automation',
       category: 'ai-automation',
       title: 'AI Workflow Automation Platform',
@@ -439,6 +456,7 @@ const AIServicesInnovation2029: React.FC = () => {
         'Scalable automation framework'
       ],
       pricing: {
+
         starter: '$2,500/month',
         professional: '$6,000/month',
         enterprise: '$18,000/month'
@@ -458,6 +476,7 @@ const AIServicesInnovation2029: React.FC = () => {
 
     // AI Analytics Solutions
     {
+
       id: 'ai-business-intelligence',
       category: 'ai-analytics',
       title: 'AI-Powered Business Intelligence',
@@ -473,6 +492,7 @@ const AIServicesInnovation2029: React.FC = () => {
         'Advanced security and compliance'
       ],
       pricing: {
+
         starter: '$3,000/month',
         professional: '$8,000/month',
         enterprise: '$25,000/month'
@@ -492,6 +512,7 @@ const AIServicesInnovation2029: React.FC = () => {
 
     // AI Infrastructure Solutions
     {
+
       id: 'ai-infrastructure-platform',
       category: 'ai-infrastructure',
       title: 'Enterprise AI Infrastructure',
@@ -507,6 +528,7 @@ const AIServicesInnovation2029: React.FC = () => {
         '24/7 infrastructure support'
       ],
       pricing: {
+
         starter: '$5,000/month',
         professional: '$15,000/month',
         enterprise: '$50,000/month'
@@ -577,6 +599,7 @@ const AIServicesInnovation2029: React.FC = () => {
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
                 className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+
                   activeCategory === category.id
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -602,6 +625,7 @@ const AIServicesInnovation2029: React.FC = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
                 className={`bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden ${
+
                   service.featured ? 'ring-2 ring-purple-500' : ''
                 }`}
               >

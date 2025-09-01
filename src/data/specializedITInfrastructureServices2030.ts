@@ -3,6 +3,7 @@ import { ProductListing } from "@/types/listings";
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
   // Advanced Cybersecurity & Zero Trust Architecture
   {
+
     id: "zero-trust-cybersecurity-architecture",
     title: "Zero Trust Cybersecurity Architecture",
     description: "Comprehensive zero-trust security framework with continuous authentication, micro-segmentation, and AI-powered threat detection. Implements defense-in-depth strategy with 99.99% security uptime and reduces security incidents by 90%.",
@@ -21,6 +22,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
     availability: "8-12 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/zero-trust-architecture",
@@ -35,6 +37,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
 
   // Quantum Computing Infrastructure & Solutions
   {
+
     id: "quantum-computing-infrastructure-platform",
     title: "Quantum Computing Infrastructure & Solutions Platform",
     description: "Advanced quantum computing platform that provides access to quantum processors, quantum algorithms, and hybrid quantum-classical computing solutions. Enables organizations to solve complex problems 1000x faster than classical computers.",
@@ -53,6 +56,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
     availability: "12-16 Weeks",
     aiScore: 99,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-computing",
@@ -67,6 +71,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
 
   // Edge Computing & IoT Infrastructure Platform
   {
+
     id: "edge-computing-iot-infrastructure-platform",
     title: "Edge Computing & IoT Infrastructure Platform",
     description: "Comprehensive edge computing platform that processes data closer to the source, reducing latency and bandwidth requirements. Manages IoT devices, edge nodes, and provides real-time analytics with 99.9% uptime.",
@@ -85,6 +90,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
     availability: "8-10 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/edge-computing",
@@ -99,6 +105,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
 
   // Blockchain & Web3 Infrastructure Platform
   {
+
     id: "blockchain-web3-infrastructure-platform",
     title: "Blockchain & Web3 Infrastructure Platform",
     description: "Enterprise-grade blockchain platform that enables secure, transparent, and decentralized applications. Supports multiple blockchain protocols, smart contracts, and provides comprehensive Web3 development tools.",
@@ -117,6 +124,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
     availability: "10-12 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/blockchain-platform",
@@ -131,6 +139,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
 
   // Digital Twin & Simulation Platform
   {
+
     id: "digital-twin-simulation-platform",
     title: "Digital Twin & Simulation Platform",
     description: "Advanced digital twin platform that creates virtual replicas of physical assets, processes, and systems. Enables real-time monitoring, predictive maintenance, and simulation-based optimization with 95% accuracy.",
@@ -149,6 +158,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
     availability: "12-16 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/digital-twin",
@@ -163,6 +173,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
 
   // Space Technology & Satellite Infrastructure Platform
   {
+
     id: "space-technology-satellite-infrastructure",
     title: "Space Technology & Satellite Infrastructure Platform",
     description: "Comprehensive space technology platform for satellite operations, space debris tracking, and orbital optimization. Manages satellite fleets with AI-powered predictive maintenance and collision avoidance systems.",
@@ -181,6 +192,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
     availability: "16-20 Weeks",
     aiScore: 99,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/space-technology",
@@ -195,6 +207,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
 
   // Sustainable Technology & Green IT Infrastructure
   {
+
     id: "sustainable-technology-green-it-platform",
     title: "Sustainable Technology & Green IT Infrastructure Platform",
     description: "Eco-friendly IT infrastructure platform that optimizes energy consumption, reduces carbon footprint, and implements sustainable technology practices. Achieves 40% energy savings and 60% reduction in environmental impact.",
@@ -213,6 +226,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
     availability: "8-10 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/sustainable-technology",
@@ -227,6 +241,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
 
   // Cloud-Native Infrastructure & DevOps Platform
   {
+
     id: "cloud-native-infrastructure-devops-platform",
     title: "Cloud-Native Infrastructure & DevOps Platform",
     description: "Modern cloud-native platform that enables rapid application development, deployment, and scaling. Implements microservices architecture, container orchestration, and automated CI/CD pipelines with 99.9% availability.",
@@ -245,6 +260,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
     availability: "8-10 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/cloud-native",
@@ -259,6 +275,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
 
   // Data Center & Network Infrastructure Platform
   {
+
     id: "data-center-network-infrastructure-platform",
     title: "Data Center & Network Infrastructure Platform",
     description: "Enterprise-grade data center and network infrastructure platform with high availability, redundancy, and security. Provides 99.99% uptime, automated failover, and comprehensive monitoring capabilities.",
@@ -277,6 +294,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
     availability: "12-16 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/data-center-infrastructure",
@@ -291,6 +309,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
 
   // AI-Powered Infrastructure Management Platform
   {
+
     id: "ai-powered-infrastructure-management",
     title: "AI-Powered Infrastructure Management Platform",
     description: "Intelligent infrastructure management platform that uses AI to predict failures, optimize performance, and automate maintenance. Reduces downtime by 70% and improves operational efficiency by 50%.",
@@ -309,6 +328,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
     availability: "10-12 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-infrastructure-management",
@@ -323,6 +343,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
 
   // Hybrid Cloud & Multi-Cloud Management Platform
   {
+
     id: "hybrid-cloud-multi-cloud-management",
     title: "Hybrid Cloud & Multi-Cloud Management Platform",
     description: "Comprehensive platform for managing hybrid and multi-cloud environments with unified monitoring, cost optimization, and security management. Reduces cloud costs by 35% and improves governance.",
@@ -341,6 +362,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
     availability: "10-12 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/hybrid-cloud-management",
@@ -355,6 +377,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
 
   // 5G & Next-Generation Network Infrastructure
   {
+
     id: "5g-next-generation-network-infrastructure",
     title: "5G & Next-Generation Network Infrastructure Platform",
     description: "Advanced 5G and next-generation network infrastructure platform with ultra-low latency, high bandwidth, and massive IoT connectivity. Enables next-generation applications and services with 99.99% reliability.",
@@ -373,6 +396,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
     availability: "16-20 Weeks",
     aiScore: 99,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/5g-network-infrastructure",
@@ -387,6 +411,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
 
   // AI-Powered Network Security & Threat Intelligence
   {
+
     id: "ai-network-security-threat-intelligence",
     title: "AI-Powered Network Security & Threat Intelligence Platform",
     description: "Intelligent network security platform that uses AI to detect, analyze, and respond to cyber threats in real-time. Provides comprehensive threat intelligence and automated incident response with 99.9% accuracy.",
@@ -405,6 +430,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2030: ProductListing[] = [
     availability: "12-16 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-network-security",

@@ -3,6 +3,7 @@ import { ProductListing } from "@/types/listings";
 export const SPECIALIZED_INDUSTRY_SERVICES_2025: ProductListing[] = [
   // AI-Powered Manufacturing Quality Control
   {
+
     id: "ai-manufacturing-quality-control-pro",
     title: "AI Manufacturing Quality Control Pro",
     description: "Advanced AI-powered quality control system for manufacturing that detects defects in real-time with 99.8% accuracy. Reduces defect rates by 60% and increases production efficiency by 45%.",
@@ -21,6 +22,7 @@ export const SPECIALIZED_INDUSTRY_SERVICES_2025: ProductListing[] = [
     availability: "10-12 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-manufacturing",
@@ -35,6 +37,7 @@ export const SPECIALIZED_INDUSTRY_SERVICES_2025: ProductListing[] = [
 
   // AI Logistics & Supply Chain Optimization
   {
+
     id: "ai-logistics-supply-chain-optimization-pro",
     title: "AI Logistics & Supply Chain Optimization Pro",
     description: "Intelligent logistics and supply chain optimization platform that predicts demand, optimizes routes, and reduces costs with 90% accuracy. Reduces logistics costs by 35% and delivery time by 40%.",
@@ -53,6 +56,7 @@ export const SPECIALIZED_INDUSTRY_SERVICES_2025: ProductListing[] = [
     availability: "8-10 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-logistics",
@@ -67,6 +71,7 @@ export const SPECIALIZED_INDUSTRY_SERVICES_2025: ProductListing[] = [
 
   // AI Agriculture & Precision Farming
   {
+
     id: "ai-agriculture-precision-farming-pro",
     title: "AI Agriculture & Precision Farming Pro",
     description: "Advanced AI-powered precision farming platform that optimizes crop yields, monitors soil health, and automates irrigation. Increases crop yields by 30% and reduces water usage by 40%.",
@@ -85,6 +90,7 @@ export const SPECIALIZED_INDUSTRY_SERVICES_2025: ProductListing[] = [
     availability: "8-10 Weeks",
     aiScore: 95,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-agriculture",
@@ -99,6 +105,7 @@ export const SPECIALIZED_INDUSTRY_SERVICES_2025: ProductListing[] = [
 
   // AI Construction & Project Management
   {
+
     id: "ai-construction-project-management-pro",
     title: "AI Construction & Project Management Pro",
     description: "Intelligent construction project management platform with progress tracking, resource optimization, and safety monitoring. Reduces project delays by 50% and increases safety compliance by 80%.",
@@ -117,6 +124,7 @@ export const SPECIALIZED_INDUSTRY_SERVICES_2025: ProductListing[] = [
     availability: "10-12 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-construction",
@@ -131,6 +139,7 @@ export const SPECIALIZED_INDUSTRY_SERVICES_2025: ProductListing[] = [
 
   // AI Healthcare Diagnostics & Imaging
   {
+
     id: "ai-healthcare-diagnostics-imaging-pro",
     title: "AI Healthcare Diagnostics & Imaging Pro",
     description: "Advanced AI-powered healthcare diagnostics platform that analyzes medical images and provides diagnostic assistance with 96% accuracy. Improves diagnostic speed by 70% and accuracy by 25%.",
@@ -149,6 +158,7 @@ export const SPECIALIZED_INDUSTRY_SERVICES_2025: ProductListing[] = [
     availability: "12-14 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-healthcare-diagnostics",
@@ -163,6 +173,7 @@ export const SPECIALIZED_INDUSTRY_SERVICES_2025: ProductListing[] = [
 
   // AI Financial Trading & Algorithmic Trading
   {
+
     id: "ai-financial-trading-algorithmic-trading-pro",
     title: "AI Financial Trading & Algorithmic Trading Pro",
     description: "Advanced AI-powered algorithmic trading platform that executes trades with millisecond precision and 85% win rate. Increases trading profits by 200% and reduces risk by 60%.",
@@ -181,6 +192,7 @@ export const SPECIALIZED_INDUSTRY_SERVICES_2025: ProductListing[] = [
     availability: "14-16 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-trading",
@@ -195,6 +207,7 @@ export const SPECIALIZED_INDUSTRY_SERVICES_2025: ProductListing[] = [
 
   // AI Education & Learning Analytics
   {
+
     id: "ai-education-learning-analytics-pro",
     title: "AI Education & Learning Analytics Pro",
     description: "Intelligent education platform with personalized learning paths, progress tracking, and adaptive content delivery. Improves learning outcomes by 50% and student engagement by 70%.",
@@ -213,6 +226,7 @@ export const SPECIALIZED_INDUSTRY_SERVICES_2025: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 95,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-education-analytics",
@@ -227,6 +241,7 @@ export const SPECIALIZED_INDUSTRY_SERVICES_2025: ProductListing[] = [
 
   // AI Retail & Customer Experience
   {
+
     id: "ai-retail-customer-experience-pro",
     title: "AI Retail & Customer Experience Pro",
     description: "Advanced AI-powered retail platform with personalized recommendations, inventory optimization, and customer behavior analysis. Increases sales by 45% and customer satisfaction by 60%.",
@@ -245,6 +260,7 @@ export const SPECIALIZED_INDUSTRY_SERVICES_2025: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-retail",

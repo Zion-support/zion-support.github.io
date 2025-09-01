@@ -4,25 +4,31 @@ import { ProductListing } from '../types/listings';
 import { CheckCircle, X, BarChart3, DollarSign, Clock, TrendingUp, Star, Users } from 'lucide-react';
 
 interface ServiceComparisonToolProps {
+
   services: ProductListing[];
   onClose: () => void;
 }
 
 export const ServiceComparisonTool: React.FC<ServiceComparisonToolProps> = ({ services, onClose }) => {
+
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [comparisonMode, setComparisonMode] = useState<'features' | 'pricing' | 'roi'>('features');
 
   const addServiceToComparison = (serviceId: string) => {
+
     if (selectedServices.length < 4 && !selectedServices.includes(serviceId)) {
+
       setSelectedServices([...selectedServices, serviceId]);
     }
   };
 
   const removeServiceFromComparison = (serviceId: string) => {
+
     setSelectedServices(selectedServices.filter(id => id !== serviceId));
   };
 
   const getComparisonData = () => {
+
     return selectedServices.map(id => services.find(s => s.id === id)).filter(Boolean) as ProductListing[];
   };
 
@@ -69,6 +75,7 @@ export const ServiceComparisonTool: React.FC<ServiceComparisonToolProps> = ({ se
                 onClick={() => addServiceToComparison(service.id)}
                 disabled={selectedServices.includes(service.id) || selectedServices.length >= 4}
                 className={`p-3 rounded-lg border-2 transition-all ${
+
                   selectedServices.includes(service.id)
                     ? 'border-cyan-500 bg-cyan-500/10'
                     : selectedServices.length >= 4
@@ -96,6 +103,7 @@ export const ServiceComparisonTool: React.FC<ServiceComparisonToolProps> = ({ se
               key={tab.key}
               onClick={() => setComparisonMode(tab.key as any)}
               className={`flex-1 p-4 flex items-center justify-center gap-2 transition-colors ${
+
                 comparisonMode === tab.key
                   ? 'bg-cyan-500/10 border-b-2 border-cyan-500 text-cyan-400'
                   : 'text-slate-400 hover:text-white hover:bg-slate-800'

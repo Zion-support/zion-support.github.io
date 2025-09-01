@@ -2,17 +2,39 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
-  DollarSign, Shield, Mail, MapPin, Rocket, Brain, 
-  Sparkles, Atom, Target, Microscope, Search, Filter,
-  ExternalLink, Users, Clock, BarChart3, Award
+import {
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Zap,
+  DollarSign,
+  Shield,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Sparkles,
+  Atom,
+  Target,
+  Microscope,
+  Search,
+  Filter,
+  ExternalLink,
+  Users,
+  Clock,
+  BarChart3,
+  Award,
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground2035 from '../components/ui/UltraFuturisticBackground2035';
 import UltraFuturisticNavigation2033 from '../components/layout/UltraFuturisticNavigation2033';
 import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034';
-import { realMicroSaasServices2025, microSaasCategories } from '../data/2025-real-micro-saas-expansion';
+import {
+  realMicroSaasServices2025,
+  microSaasCategories,
+} from '../data/2025-real-micro-saas-expansion';
 
 export default function EnhancedMicroSaasShowcase() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -23,16 +45,19 @@ export default function EnhancedMicroSaasShowcase() {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
+    website: 'https://ziontechgroup.com',
   };
 
   const filteredServices = realMicroSaasServices2025
-    .filter(service => 
-      (selectedCategory === 'all' || service.category === selectedCategory) &&
-      (searchQuery === '' || 
-        service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        service.category.toLowerCase().includes(searchQuery.toLowerCase()))
+    .filter(
+      service =>
+        (selectedCategory === 'all' || service.category === selectedCategory) &&
+        (searchQuery === '' ||
+          service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          service.description
+            .toLowerCase()
+            .includes(searchQuery.toLowerCase()) ||
+          service.category.toLowerCase().includes(searchQuery.toLowerCase()))
     )
     .sort((a, b) => {
       if (sortBy === 'price') {
@@ -48,9 +73,9 @@ export default function EnhancedMicroSaasShowcase() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1,
+      },
+    },
   };
 
   const itemVariants = {
@@ -59,38 +84,65 @@ export default function EnhancedMicroSaasShowcase() {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6
-      }
-    }
+        duration: 0.6,
+      },
+    },
   };
 
   return (
     <>
       <Head>
-        <title>Enhanced Micro SAAS Showcase 2025 | Zion Tech Group - Revolutionary Business Automation Solutions</title>
-        <meta name="description" content="Discover our comprehensive collection of real, market-ready micro SAAS services. From AI-powered content automation to cybersecurity automation, transform your business with cutting-edge solutions." />
-        <meta name="keywords" content="micro SAAS, business automation, AI automation, content marketing, financial management, customer success, sales automation, HR automation, e-commerce automation, project management, data analytics, cybersecurity, customer support" />
+        <title>
+          Enhanced Micro SAAS Showcase 2025 | Zion Tech Group - Revolutionary
+          Business Automation Solutions
+        </title>
+        <meta
+          name="description"
+          content="Discover our comprehensive collection of real, market-ready micro SAAS services. From AI-powered content automation to cybersecurity automation, transform your business with cutting-edge solutions."
+        />
+        <meta
+          name="keywords"
+          content="micro SAAS, business automation, AI automation, content marketing, financial management, customer success, sales automation, HR automation, e-commerce automation, project management, data analytics, cybersecurity, customer support"
+        />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
-        
+
         {/* Open Graph */}
-        <meta property="og:title" content="Enhanced Micro SAAS Showcase 2025 | Zion Tech Group" />
-        <meta property="og:description" content="Revolutionary micro SAAS services for business automation and growth. Real solutions with proven ROI." />
-        <meta property="og:url" content="https://ziontechgroup.com/enhanced-micro-saas-showcase" />
+        <meta
+          property="og:title"
+          content="Enhanced Micro SAAS Showcase 2025 | Zion Tech Group"
+        />
+        <meta
+          property="og:description"
+          content="Revolutionary micro SAAS services for business automation and growth. Real solutions with proven ROI."
+        />
+        <meta
+          property="og:url"
+          content="https://ziontechgroup.com/enhanced-micro-saas-showcase"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Zion Tech Group" />
-        
+
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Enhanced Micro SAAS Showcase 2025 | Zion Tech Group" />
-        <meta name="twitter:description" content="Revolutionary micro SAAS services for business automation and growth." />
-        
-        <link rel="canonical" href="https://ziontechgroup.com/enhanced-micro-saas-showcase" />
+        <meta
+          name="twitter:title"
+          content="Enhanced Micro SAAS Showcase 2025 | Zion Tech Group"
+        />
+        <meta
+          name="twitter:description"
+          content="Revolutionary micro SAAS services for business automation and growth."
+        />
+
+        <link
+          rel="canonical"
+          href="https://ziontechgroup.com/enhanced-micro-saas-showcase"
+        />
       </Head>
 
       <UltraFuturisticBackground2035>
         <UltraFuturisticNavigation2033 />
-        
+
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center pt-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -130,8 +182,10 @@ export default function EnhancedMicroSaasShowcase() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
             >
-              Transform your business with our comprehensive collection of market-ready micro SAAS services. 
-              From AI-powered automation to comprehensive business solutions, we deliver real ROI and measurable results.
+              Transform your business with our comprehensive collection of
+              market-ready micro SAAS services. From AI-powered automation to
+              comprehensive business solutions, we deliver real ROI and
+              measurable results.
             </motion.p>
 
             {/* Stats */}
@@ -142,19 +196,27 @@ export default function EnhancedMicroSaasShowcase() {
               className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16"
             >
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">10+</div>
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
+                  10+
+                </div>
                 <div className="text-gray-300 text-sm">Service Categories</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">$200B+</div>
+                <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">
+                  $200B+
+                </div>
                 <div className="text-gray-300 text-sm">Market Opportunity</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">24/7</div>
+                <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">
+                  24/7
+                </div>
                 <div className="text-gray-300 text-sm">Support Available</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">99.9%</div>
+                <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">
+                  99.9%
+                </div>
                 <div className="text-gray-300 text-sm">Uptime Guarantee</div>
               </div>
             </motion.div>
@@ -175,7 +237,7 @@ export default function EnhancedMicroSaasShowcase() {
                 <span>Explore Services</span>
                 <ArrowRight className="w-6 h-6" />
               </motion.a>
-              
+
               <motion.a
                 href={`tel:${contactInfo.mobile}`}
                 whileHover={{ scale: 1.05 }}
@@ -206,7 +268,9 @@ export default function EnhancedMicroSaasShowcase() {
                 <span className="text-white"> Micro SAAS Services</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover our comprehensive collection of market-ready micro SAAS solutions designed to transform your business operations and drive growth.
+                Discover our comprehensive collection of market-ready micro SAAS
+                solutions designed to transform your business operations and
+                drive growth.
               </p>
             </motion.div>
 
@@ -225,7 +289,7 @@ export default function EnhancedMicroSaasShowcase() {
                     type="text"
                     placeholder="Search services..."
                     value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onChange={e => setSearchQuery(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-black/30 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20"
                   />
                 </div>
@@ -234,11 +298,11 @@ export default function EnhancedMicroSaasShowcase() {
                 <div className="flex items-center space-x-4">
                   <select
                     value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    onChange={e => setSelectedCategory(e.target.value)}
                     className="px-4 py-3 bg-black/30 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400"
                   >
                     <option value="all">All Categories</option>
-                    {microSaasCategories.map((category) => (
+                    {microSaasCategories.map(category => (
                       <option key={category.name} value={category.name}>
                         {category.icon} {category.name}
                       </option>
@@ -248,7 +312,9 @@ export default function EnhancedMicroSaasShowcase() {
                   {/* Sort */}
                   <select
                     value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'category')}
+                    onChange={e =>
+                      setSortBy(e.target.value as 'name' | 'price' | 'category')
+                    }
                     className="px-4 py-3 bg-black/30 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400"
                   >
                     <option value="name">Sort by Name</option>
@@ -279,13 +345,17 @@ export default function EnhancedMicroSaasShowcase() {
                         <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
                           {service.name}
                         </h3>
-                        <p className="text-sm text-cyan-400 font-medium">{service.category}</p>
+                        <p className="text-sm text-cyan-400 font-medium">
+                          {service.category}
+                        </p>
                       </div>
                       <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-xl flex items-center justify-center">
                         <Target className="w-6 h-6 text-cyan-400" />
                       </div>
                     </div>
-                    <p className="text-gray-300 text-sm leading-relaxed">{service.description}</p>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      {service.description}
+                    </p>
                   </div>
 
                   {/* Features */}
@@ -296,7 +366,10 @@ export default function EnhancedMicroSaasShowcase() {
                     </h4>
                     <div className="space-y-2">
                       {service.features.slice(0, 4).map((feature, idx) => (
-                        <div key={idx} className="flex items-center text-sm text-gray-300">
+                        <div
+                          key={idx}
+                          className="flex items-center text-sm text-gray-300"
+                        >
                           <CheckCircle className="w-4 h-4 mr-2 text-green-400 flex-shrink-0" />
                           <span>{feature}</span>
                         </div>
@@ -317,7 +390,9 @@ export default function EnhancedMicroSaasShowcase() {
                     </h4>
                     <div className="text-2xl font-bold text-green-400">
                       ${service.pricing.starter.price}
-                      <span className="text-sm text-gray-400 font-normal">/{service.pricing.starter.period}</span>
+                      <span className="text-sm text-gray-400 font-normal">
+                        /{service.pricing.starter.period}
+                      </span>
                     </div>
                   </div>
 
@@ -340,11 +415,15 @@ export default function EnhancedMicroSaasShowcase() {
                   <div className="mb-6 grid grid-cols-2 gap-4 text-sm">
                     <div>
                       <span className="text-gray-400">Market Size:</span>
-                      <div className="text-cyan-400 font-medium">{service.marketSize}</div>
+                      <div className="text-cyan-400 font-medium">
+                        {service.marketSize}
+                      </div>
                     </div>
                     <div>
                       <span className="text-gray-400">Use Cases:</span>
-                      <div className="text-purple-400 font-medium">{service.useCases.length}+</div>
+                      <div className="text-purple-400 font-medium">
+                        {service.useCases.length}+
+                      </div>
                     </div>
                   </div>
 
@@ -383,8 +462,12 @@ export default function EnhancedMicroSaasShowcase() {
                 className="text-center py-20"
               >
                 <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-                <p className="text-gray-300 mb-6">Try adjusting your search criteria or category filter</p>
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  No services found
+                </h3>
+                <p className="text-gray-300 mb-6">
+                  Try adjusting your search criteria or category filter
+                </p>
                 <button
                   onClick={() => {
                     setSearchQuery('');
@@ -411,9 +494,10 @@ export default function EnhancedMicroSaasShowcase() {
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Get in touch with our team to discuss how our micro SAAS solutions can drive growth and efficiency for your organization.
+                Get in touch with our team to discuss how our micro SAAS
+                solutions can drive growth and efficiency for your organization.
               </p>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="flex items-center justify-center space-x-3 p-4 bg-black/30 border border-cyan-500/20 rounded-lg">
                   <Phone className="w-5 h-5 text-cyan-400" />
@@ -439,7 +523,7 @@ export default function EnhancedMicroSaasShowcase() {
                   <Phone className="w-6 h-6" />
                   <span>Call Now</span>
                 </motion.a>
-                
+
                 <motion.a
                   href={`mailto:${contactInfo.email}`}
                   whileHover={{ scale: 1.05 }}
@@ -455,7 +539,7 @@ export default function EnhancedMicroSaasShowcase() {
         </section>
 
         <UltraFuturisticFooter2034 />
-              </UltraFuturisticBackground2035>
+      </UltraFuturisticBackground2035>
     </>
   );
 }

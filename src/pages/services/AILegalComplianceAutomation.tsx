@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Shield, 
   FileText, 
   Globe, 
@@ -32,7 +33,9 @@ import {
 import { SEO } from '../../components/SEO';
 
 export default function AILegalComplianceAutomation() {
+
   const contactInfo = {
+
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -41,31 +44,37 @@ export default function AILegalComplianceAutomation() {
 
   const features = [
     {
+
       icon: Globe,
       title: 'Multi-Jurisdiction Compliance',
       description: 'Monitor regulatory requirements across multiple jurisdictions simultaneously with AI-powered analysis'
     },
     {
+
       icon: FileText,
       title: 'AI Document Analysis',
       description: 'Automated analysis of legal documents, contracts, and regulatory filings with 95% accuracy'
     },
     {
+
       icon: AlertTriangle,
       title: 'Regulatory Change Alerts',
       description: 'Real-time notifications of regulatory changes that impact your business operations'
     },
     {
+
       icon: BarChart3,
       title: 'Risk Assessment Scoring',
       description: 'AI-powered risk scoring and prioritization to focus on high-impact compliance issues'
     },
     {
+
       icon: Clock,
       title: 'Automated Reporting',
       description: 'Generate comprehensive compliance reports automatically, saving 40+ hours per month'
     },
     {
+
       icon: Lock,
       title: 'Audit Trail Management',
       description: 'Complete audit trails and documentation for regulatory examinations and internal reviews'
@@ -74,21 +83,25 @@ export default function AILegalComplianceAutomation() {
 
   const benefits = [
     {
+
       icon: TrendingUp,
       title: 'Reduce Compliance Costs by 60%',
       description: 'Automate routine compliance tasks and reduce manual review requirements'
     },
     {
+
       icon: CheckCircle,
       title: 'Improve Accuracy by 95%',
       description: 'AI algorithms eliminate human error and ensure consistent compliance monitoring'
     },
     {
+
       icon: Clock,
       title: 'Save 40+ Hours Per Month',
       description: 'Automate document review, reporting, and regulatory monitoring tasks'
     },
     {
+
       icon: Shield,
       title: 'Minimize Regulatory Risks',
       description: 'Proactive identification and mitigation of compliance risks before they become issues'
@@ -97,6 +110,7 @@ export default function AILegalComplianceAutomation() {
 
   const pricing = [
     {
+
       name: 'Starter',
       price: '$799',
       period: '/month',
@@ -112,6 +126,7 @@ export default function AILegalComplianceAutomation() {
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$1,299',
       period: '/month',
@@ -128,6 +143,7 @@ export default function AILegalComplianceAutomation() {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: '$2,499',
       period: '/month',
@@ -148,6 +164,7 @@ export default function AILegalComplianceAutomation() {
 
   const testimonials = [
     {
+
       name: 'Sarah Johnson',
       role: 'General Counsel',
       company: 'TechCorp Inc.',
@@ -155,6 +172,7 @@ export default function AILegalComplianceAutomation() {
       rating: 5
     },
     {
+
       name: 'Michael Chen',
       role: 'Compliance Officer',
       company: 'Global Financial Services',
@@ -162,6 +180,7 @@ export default function AILegalComplianceAutomation() {
       rating: 5
     },
     {
+
       name: 'Emily Rodriguez',
       role: 'Legal Director',
       company: 'Healthcare Solutions',
@@ -374,6 +393,7 @@ export default function AILegalComplianceAutomation() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`bg-white rounded-xl shadow-lg p-8 ${
+
                   plan.popular ? 'ring-2 ring-blue-500 relative' : ''
                 }`}
               >

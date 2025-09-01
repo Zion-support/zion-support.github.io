@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
+
   Brain, 
   Cloud, 
   Shield, 
@@ -42,6 +43,7 @@ import {
 } from 'lucide-react';
 
 interface NavigationItem {
+
   name: string;
   href: string;
   icon: React.ReactNode;
@@ -53,16 +55,19 @@ interface NavigationItem {
 
 const navigationItems: NavigationItem[] = [
   {
+
     name: 'Home',
     href: '/',
     icon: <Home className="w-5 h-5" />
   },
   {
+
     name: 'AI & ML Services',
     href: '/ai-services',
     icon: <Brain className="w-5 h-5" />,
     children: [
       {
+
         name: 'Comprehensive Services 2025',
         href: '/comprehensive-services-2025',
         icon: <Star className="w-4 h-4" />,
@@ -70,6 +75,7 @@ const navigationItems: NavigationItem[] = [
         badge: 'New'
       },
       {
+
         name: 'Innovative Services 2025',
         href: '/innovative-services-2025',
         icon: <Sparkles className="w-4 h-4" />,
@@ -77,41 +83,49 @@ const navigationItems: NavigationItem[] = [
         badge: 'Hot'
       },
       {
+
         name: 'AI Business Manager',
         href: '/services/ai-autonomous-business-manager',
         icon: <Building className="w-4 h-4" />
       },
       {
+
         name: 'AI Content Factory',
         href: '/services/ai-content-factory-enterprise',
         icon: <FileText className="w-4 h-4" />
       },
       {
+
         name: 'AI Cybersecurity',
         href: '/services/ai-cybersecurity-sentinel',
         icon: <Shield className="w-4 h-4" />
       },
       {
+
         name: 'AI Healthcare',
         href: '/services/ai-biomedical-research-platform',
         icon: <Heart className="w-4 h-4" />
       },
       {
+
         name: 'AI Financial Trading',
         href: '/services/ai-financial-trading-platform',
         icon: <ZapIcon className="w-4 h-4" />
       },
       {
+
         name: 'AI Legal Assistant',
         href: '/services/ai-legal-research-assistant',
         icon: <FileText className="w-4 h-4" />
       },
       {
+
         name: 'AI Education',
         href: '/services/ai-education-professor',
         icon: <GraduationCap className="w-4 h-4" />
       },
       {
+
         name: 'AI Manufacturing',
         href: '/services/ai-manufacturing-optimization',
         icon: <Factory className="w-4 h-4" />
@@ -119,21 +133,25 @@ const navigationItems: NavigationItem[] = [
     ]
   },
   {
+
     name: 'Cloud & DevOps',
     href: '/cloud-devops',
     icon: <Cloud className="w-5 h-5" />,
     children: [
       {
+
         name: 'Quantum Cloud Infrastructure',
         href: '/services/quantum-cloud-infrastructure',
         icon: <Zap className="w-4 h-4" />
       },
       {
+
         name: 'Autonomous DevOps',
         href: '/services/autonomous-devops-platform',
         icon: <Code className="w-4 h-4" />
       },
       {
+
         name: 'Cloud Migration',
         href: '/services/cloud-migration-enterprise',
         icon: <Database className="w-4 h-4" />
@@ -141,26 +159,31 @@ const navigationItems: NavigationItem[] = [
     ]
   },
   {
+
     name: 'Emerging Tech',
     href: '/emerging-tech',
     icon: <Sparkles className="w-5 h-5" />,
     children: [
       {
+
         name: 'IoT Edge Computing',
         href: '/services/iot-edge-intelligence-platform',
         icon: <Cpu className="w-4 h-4" />
       },
       {
+
         name: 'Blockchain Governance',
         href: '/services/blockchain-governance-platform',
         icon: <Network className="w-4 h-4" />
       },
       {
+
         name: 'Space Technology',
         href: '/services/space-tech-ai-platform',
         icon: <Rocket className="w-4 h-4" />
       },
       {
+
         name: 'Climate AI',
         href: '/services/ai-climate-prediction-engine',
         icon: <TreePine className="w-4 h-4" />
@@ -168,46 +191,55 @@ const navigationItems: NavigationItem[] = [
     ]
   },
   {
+
     name: 'Industry Solutions',
     href: '/solutions',
     icon: <Target className="w-5 h-5" />,
     children: [
       {
+
         name: 'Healthcare Solutions',
         href: '/solutions/healthcare',
         icon: <Heart className="w-4 h-4" />
       },
       {
+
         name: 'Financial Services',
         href: '/solutions/financial',
         icon: <ZapIcon className="w-4 h-4" />
       },
       {
+
         name: 'Manufacturing',
         href: '/solutions/manufacturing',
         icon: <Factory className="w-4 h-4" />
       },
       {
+
         name: 'Retail & E-commerce',
         href: '/solutions/retail',
         icon: <ShoppingCart className="w-4 h-4" />
       },
       {
+
         name: 'Transportation',
         href: '/solutions/transportation',
         icon: <Truck className="w-4 h-4" />
       },
       {
+
         name: 'Energy & Utilities',
         href: '/solutions/energy',
         icon: <Sun className="w-4 h-4" />
       },
       {
+
         name: 'Real Estate',
         href: '/solutions/real-estate',
         icon: <Building className="w-4 h-4" />
       },
       {
+
         name: 'Agriculture',
         href: '/solutions/agriculture',
         icon: <TreePine className="w-4 h-4" />
@@ -215,36 +247,43 @@ const navigationItems: NavigationItem[] = [
     ]
   },
   {
+
     name: 'Company',
     href: '/about',
     icon: <Globe className="w-5 h-5" />,
     children: [
       {
+
         name: 'About Us',
         href: '/about',
         icon: <Users className="w-4 h-4" />
       },
       {
+
         name: 'Leadership',
         href: '/leadership',
         icon: <Users className="w-4 h-4" />
       },
       {
+
         name: 'Careers',
         href: '/careers',
         icon: <Briefcase className="w-4 h-4" />
       },
       {
+
         name: 'News & Press',
         href: '/news',
         icon: <FileText className="w-4 h-4" />
       },
       {
+
         name: 'Case Studies',
         href: '/case-studies',
         icon: <FileText className="w-4 h-4" />
       },
       {
+
         name: 'Partners',
         href: '/partners',
         icon: <Users className="w-4 h-4" />
@@ -252,41 +291,49 @@ const navigationItems: NavigationItem[] = [
     ]
   },
   {
+
     name: 'Resources',
     href: '/resources',
     icon: <FileText className="w-5 h-5" />,
     children: [
       {
+
         name: 'Blog',
         href: '/blog',
         icon: <FileText className="w-4 h-4" />
       },
       {
+
         name: 'Documentation',
         href: '/docs',
         icon: <FileText className="w-4 h-4" />
       },
       {
+
         name: 'API Reference',
         href: '/api',
         icon: <Code className="w-4 h-4" />
       },
       {
+
         name: 'Help Center',
         href: '/help',
         icon: <HelpCircle className="w-4 h-4" />
       },
       {
+
         name: 'Training',
         href: '/training',
         icon: <GraduationCap className="w-4 h-4" />
       },
       {
+
         name: 'Webinars',
         href: '/webinars',
         icon: <Users className="w-4 h-4" />
       },
       {
+
         name: 'White Papers',
         href: '/white-papers',
         icon: <FileText className="w-4 h-4" />
@@ -294,26 +341,31 @@ const navigationItems: NavigationItem[] = [
     ]
   },
   {
+
     name: 'Contact',
     href: '/contact',
     icon: <Phone className="w-5 h-5" />,
     children: [
       {
+
         name: 'Get Quote',
         href: '/request-quote',
         icon: <FileText className="w-4 h-4" />
       },
       {
+
         name: 'Support',
         href: '/contact',
         icon: <HelpCircle className="w-4 h-4" />
       },
       {
+
         name: 'Sales',
         href: '/contact?type=sales',
         icon: <Users className="w-4 h-4" />
       },
       {
+
         name: 'Partnerships',
         href: '/contact?type=partnership',
         icon: <Users className="w-4 h-4" />
@@ -323,15 +375,18 @@ const navigationItems: NavigationItem[] = [
 ];
 
 interface SidebarNavigationProps {
+
   isOpen: boolean;
   onClose: () => void;
 }
 
 const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {
+
   const [expandedItems, setExpandedItems] = useState<string[]>([]);
   const location = useLocation();
 
   const toggleExpanded = (itemName: string) => {
+
     setExpandedItems(prev => 
       prev.includes(itemName) 
         ? prev.filter(name => name !== itemName)
@@ -340,7 +395,9 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
   };
 
   const isActive = (href: string) => {
+
     if (href === '/') {
+
       return location.pathname === '/';
     }
     return location.pathname.startsWith(href);
@@ -395,6 +452,7 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
                       <button
                         onClick={() => toggleExpanded(item.name)}
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-all duration-200 ${
+
                           isActive(item.href)
                             ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30'
                             : 'text-zion-slate-light hover:bg-zion-slate/50 hover:text-white'
@@ -426,6 +484,7 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
                                 to={child.href}
                                 onClick={onClose}
                                 className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-200 ${
+
                                   isActive(child.href)
                                     ? 'bg-zion-cyan/10 text-zion-cyan'
                                     : 'text-zion-slate-light hover:bg-zion-slate/30 hover:text-white'
@@ -449,6 +508,7 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
                       to={item.href}
                       onClick={onClose}
                       className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-200 ${
+
                         isActive(item.href)
                           ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30'
                           : 'text-zion-slate-light hover:bg-zion-slate/50 hover:text-white'

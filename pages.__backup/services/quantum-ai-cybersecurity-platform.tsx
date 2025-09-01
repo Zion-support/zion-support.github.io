@@ -1,13 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  Lock, 
-  Brain, 
-  Zap, 
-  Target, 
-  CheckCircle, 
+import {
+  Shield,
+  Lock,
+  Brain,
+  Zap,
+  Target,
+  CheckCircle,
   ArrowRight,
   Cpu,
   Database,
@@ -17,7 +17,7 @@ import {
   Star,
   Eye,
   AlertTriangle,
-  Key
+  Key,
 } from 'lucide-react';
 
 export default function QuantumAICybersecurityPlatform() {
@@ -25,33 +25,39 @@ export default function QuantumAICybersecurityPlatform() {
     {
       icon: Shield,
       title: 'Quantum-Resistant Encryption',
-      description: 'Advanced encryption algorithms that remain secure even against quantum computing attacks.'
+      description:
+        'Advanced encryption algorithms that remain secure even against quantum computing attacks.',
     },
     {
       icon: Brain,
       title: 'AI-Powered Threat Detection',
-      description: 'Machine learning algorithms that identify and respond to threats in real-time.'
+      description:
+        'Machine learning algorithms that identify and respond to threats in real-time.',
     },
     {
       icon: Zap,
       title: 'Zero-Day Vulnerability Protection',
-      description: 'Proactive protection against unknown threats using behavioral analysis and AI.'
+      description:
+        'Proactive protection against unknown threats using behavioral analysis and AI.',
     },
     {
       icon: Target,
       title: 'Advanced Persistent Threat (APT) Defense',
-      description: 'Multi-layered defense against sophisticated, long-term cyber attacks.'
+      description:
+        'Multi-layered defense against sophisticated, long-term cyber attacks.',
     },
     {
       icon: Lock,
       title: 'Identity & Access Management',
-      description: 'Comprehensive IAM with biometric authentication and quantum-secure tokens.'
+      description:
+        'Comprehensive IAM with biometric authentication and quantum-secure tokens.',
     },
     {
       icon: Eye,
       title: 'Continuous Monitoring',
-      description: '24/7 security monitoring with real-time alerts and automated response.'
-    }
+      description:
+        '24/7 security monitoring with real-time alerts and automated response.',
+    },
   ];
 
   const benefits = [
@@ -60,30 +66,33 @@ export default function QuantumAICybersecurityPlatform() {
     'Achieve compliance with SOC 2, ISO 27001, and more',
     'Real-time threat detection and response',
     'Automated security operations',
-    'Scalable security for growing organizations'
+    'Scalable security for growing organizations',
   ];
 
   const securityLayers = [
     {
       name: 'Network Security',
-      description: 'Advanced firewall, intrusion detection, and network segmentation.',
-      icon: Globe
+      description:
+        'Advanced firewall, intrusion detection, and network segmentation.',
+      icon: Globe,
     },
     {
       name: 'Endpoint Protection',
       description: 'AI-powered endpoint detection and response (EDR) systems.',
-      icon: Cpu
+      icon: Cpu,
     },
     {
       name: 'Data Security',
-      description: 'Encryption at rest and in transit with quantum-resistant algorithms.',
-      icon: Database
+      description:
+        'Encryption at rest and in transit with quantum-resistant algorithms.',
+      icon: Database,
     },
     {
       name: 'Application Security',
-      description: 'SAST, DAST, and runtime application self-protection (RASP).',
-      icon: Key
-    }
+      description:
+        'SAST, DAST, and runtime application self-protection (RASP).',
+      icon: Key,
+    },
   ];
 
   const complianceFrameworks = [
@@ -92,7 +101,7 @@ export default function QuantumAICybersecurityPlatform() {
     'NIST Cybersecurity Framework',
     'GDPR',
     'HIPAA',
-    'PCI DSS'
+    'PCI DSS',
   ];
 
   return (
@@ -108,14 +117,17 @@ export default function QuantumAICybersecurityPlatform() {
             >
               <div className="flex items-center justify-center space-x-2 mb-6">
                 <Star className="w-6 h-6 text-yellow-500 fill-current" />
-                <span className="text-sm font-medium text-yellow-600">Featured Service</span>
+                <span className="text-sm font-medium text-yellow-600">
+                  Featured Service
+                </span>
               </div>
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
                 Quantum AI Cybersecurity Platform
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600 lg:text-xl">
-                Next-generation cybersecurity that combines quantum-resistant encryption with AI-powered threat detection 
-                to protect your organization against the most sophisticated cyber attacks.
+                Next-generation cybersecurity that combines quantum-resistant
+                encryption with AI-powered threat detection to protect your
+                organization against the most sophisticated cyber attacks.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
@@ -128,7 +140,8 @@ export default function QuantumAICybersecurityPlatform() {
                   href="/services"
                   className="text-sm font-semibold leading-6 text-gray-900 hover:text-red-600"
                 >
-                  View All Services <ArrowRight className="ml-2 h-5 w-5 inline" />
+                  View All Services{' '}
+                  <ArrowRight className="ml-2 h-5 w-5 inline" />
                 </Link>
               </div>
             </motion.div>
@@ -144,10 +157,11 @@ export default function QuantumAICybersecurityPlatform() {
               Platform Features
             </h2>
             <p className="mt-6 text-lg text-gray-600">
-              Our cybersecurity platform provides comprehensive protection using the latest quantum and AI technologies.
+              Our cybersecurity platform provides comprehensive protection using
+              the latest quantum and AI technologies.
             </p>
           </div>
-          
+
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => (
               <motion.div
@@ -160,7 +174,9 @@ export default function QuantumAICybersecurityPlatform() {
                 <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-red-100 mb-6 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="h-8 w-8 text-red-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-600">{feature.description}</p>
               </motion.div>
             ))}
@@ -177,8 +193,9 @@ export default function QuantumAICybersecurityPlatform() {
                 Why Choose Our Cybersecurity Platform?
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Our platform delivers enterprise-grade security with measurable results that protect your business 
-                and ensure compliance with industry standards.
+                Our platform delivers enterprise-grade security with measurable
+                results that protect your business and ensure compliance with
+                industry standards.
               </p>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -223,10 +240,11 @@ export default function QuantumAICybersecurityPlatform() {
               Multi-Layer Security Architecture
             </h2>
             <p className="mt-6 text-lg text-gray-600">
-              Our defense-in-depth approach ensures comprehensive protection across all attack vectors.
+              Our defense-in-depth approach ensures comprehensive protection
+              across all attack vectors.
             </p>
           </div>
-          
+
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {securityLayers.map((layer, index) => (
               <motion.div
@@ -239,7 +257,9 @@ export default function QuantumAICybersecurityPlatform() {
                 <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-red-100 mb-6 group-hover:scale-110 transition-transform duration-300">
                   <layer.icon className="h-8 w-8 text-red-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{layer.name}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  {layer.name}
+                </h3>
                 <p className="text-gray-600 text-sm">{layer.description}</p>
               </motion.div>
             ))}
@@ -255,9 +275,10 @@ export default function QuantumAICybersecurityPlatform() {
               Industry Compliance & Standards
             </h2>
             <p className="text-lg text-gray-600 mb-12">
-              Our platform helps you achieve and maintain compliance with major industry standards and regulations.
+              Our platform helps you achieve and maintain compliance with major
+              industry standards and regulations.
             </p>
-            
+
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {complianceFrameworks.map((framework, index) => (
                 <motion.div
@@ -269,7 +290,9 @@ export default function QuantumAICybersecurityPlatform() {
                 >
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-6 w-6 text-green-500" />
-                    <span className="font-medium text-gray-900">{framework}</span>
+                    <span className="font-medium text-gray-900">
+                      {framework}
+                    </span>
                   </div>
                 </motion.div>
               ))}
@@ -286,7 +309,8 @@ export default function QuantumAICybersecurityPlatform() {
               Secure Your Digital Future
             </h2>
             <p className="mt-6 text-lg leading-8 text-red-100">
-              Don't wait until it's too late. Protect your organization with the most advanced cybersecurity platform available.
+              Don't wait until it's too late. Protect your organization with the
+              most advanced cybersecurity platform available.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link

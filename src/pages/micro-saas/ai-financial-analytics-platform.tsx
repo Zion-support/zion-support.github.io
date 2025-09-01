@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   TrendingUp, 
   BarChart3, 
   DollarSign, 
@@ -26,23 +27,28 @@ import {
 } from 'lucide-react';
 
 export default function AIFinancialAnalyticsPlatform() {
+
   const features = [
     {
+
       icon: TrendingUp,
       title: 'AI Market Predictions',
       description: 'Advanced algorithms for market trend forecasting and investment insights'
     },
     {
+
       icon: BarChart3,
       title: 'Real-time Analytics',
       description: 'Live financial data analysis and portfolio performance tracking'
     },
     {
+
       icon: DollarSign,
       title: 'Risk Assessment',
       description: 'Intelligent risk modeling and portfolio optimization strategies'
     },
     {
+
       icon: PieChart,
       title: 'Portfolio Management',
       description: 'Automated portfolio rebalancing and asset allocation optimization'
@@ -51,31 +57,37 @@ export default function AIFinancialAnalyticsPlatform() {
 
   const capabilities = [
     {
+
       title: 'Predictive Market Analytics',
       description: 'AI-powered market trend analysis and investment opportunity identification',
       icon: TrendingUp
     },
     {
+
       title: 'Portfolio Optimization',
       description: 'Machine learning algorithms for optimal asset allocation and risk management',
       icon: Target
     },
     {
+
       title: 'Real-time Risk Monitoring',
       description: 'Continuous portfolio risk assessment and alert systems',
       icon: AlertCircle
     },
     {
+
       title: 'Financial Planning Tools',
       description: 'AI-driven financial planning and retirement strategy optimization',
       icon: Calculator
     },
     {
+
       title: 'Compliance & Reporting',
       description: 'Automated regulatory compliance and comprehensive financial reporting',
       icon: Shield
     },
     {
+
       title: 'Multi-Asset Support',
       description: 'Comprehensive coverage of stocks, bonds, ETFs, cryptocurrencies, and more',
       icon: PieChart
@@ -93,6 +105,7 @@ export default function AIFinancialAnalyticsPlatform() {
 
   const pricing = [
     {
+
       plan: 'Individual',
       price: '$99',
       period: '/month',
@@ -107,6 +120,7 @@ export default function AIFinancialAnalyticsPlatform() {
       popular: false
     },
     {
+
       plan: 'Professional',
       price: '$299',
       period: '/month',
@@ -122,6 +136,7 @@ export default function AIFinancialAnalyticsPlatform() {
       popular: true
     },
     {
+
       plan: 'Enterprise',
       price: '$799',
       period: '/month',
@@ -332,6 +347,7 @@ export default function AIFinancialAnalyticsPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`bg-slate-800/50 p-8 rounded-xl border ${
+
                   plan.popular 
                     ? 'border-green-500 ring-2 ring-green-500/20' 
                     : 'border-slate-700'
@@ -365,6 +381,7 @@ export default function AIFinancialAnalyticsPlatform() {
                 <a 
                   href="https://ziontechgroup.com/contact" 
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+
                     plan.popular
                       ? 'bg-green-600 hover:bg-green-700 text-white'
                       : 'bg-slate-700 hover:bg-slate-600 text-white'

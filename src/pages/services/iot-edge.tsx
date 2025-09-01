@@ -4,6 +4,7 @@ import { Cpu, Wifi, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, 
 import { Link               } from 'react-router-dom.ts';
 
 export default function IoTEdge(...args: []):  {
+
   return (
     <>
       <Helmet>
@@ -60,31 +61,37 @@ export default function IoTEdge(...args: []):  {
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
+
                   icon: Cpu,
                   title: "Edge Processing",
                   description: "Process data locally on IoT devices for reduced latency and improved performance."
                 },
                 {
+
                   icon: Wifi,
                   title: "Device Connectivity",
                   description: "Seamless connectivity across multiple protocols and network types."
                 },
                 {
+
                   icon: Zap,
                   title: "Real-time Analytics",
                   description: "Instant insights and decision-making with edge-based analytics."
                 },
                 {
+
                   icon: Settings,
                   title: "Device Management",
                   description: "Centralized management and monitoring of all IoT devices and sensors."
                 },
                 {
+
                   icon: Users,
                   title: "Smart Automation",
                   description: "Intelligent automation based on sensor data and predefined rules."
                 },
                 {
+
                   icon: Shield,
                   title: "Security & Privacy",
                   description: "Enterprise-grade security with encryption and access controls."
@@ -116,36 +123,42 @@ export default function IoTEdge(...args: []):  {
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
+
                   title: "Smart Manufacturing",
                   description: "Monitor production equipment, predict maintenance, and optimize manufacturing processes.",
                   icon: Settings,
                   benefits: ["Predictive maintenance", "Quality control", "Production optimization"]
                 },
                 {
+
                   title: "Smart Cities",
                   description: "Manage urban infrastructure, traffic systems, and public services efficiently.",
                   icon: Globe,
                   benefits: ["Traffic management", "Infrastructure monitoring", "Public safety"]
                 },
                 {
+
                   title: "Healthcare IoT",
                   description: "Patient monitoring, medical device management, and remote healthcare delivery.",
                   icon: Users,
                   benefits: ["Patient monitoring", "Device management", "Remote care"]
                 },
                 {
+
                   title: "Energy Management",
                   description: "Smart grid monitoring, renewable energy optimization, and energy efficiency.",
                   icon: Zap,
                   benefits: ["Grid monitoring", "Energy optimization", "Efficiency management"]
                 },
                 {
+
                   title: "Agriculture",
                   description: "Precision farming, crop monitoring, and automated irrigation systems.",
                   icon: Target,
                   benefits: ["Crop monitoring", "Precision farming", "Automated irrigation"]
                 },
                 {
+
                   title: "Retail & Logistics",
                   description: "Inventory management, supply chain optimization, and customer experience.",
                   icon: Activity,
@@ -234,18 +247,22 @@ export default function IoTEdge(...args: []):  {
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
+
                   title: "IoT Protocols",
                   description: "Support for MQTT, CoAP, HTTP, and custom protocols"
                 },
                 {
+
                   title: "Edge Computing",
                   description: "Docker containers, Kubernetes, and edge-native applications"
                 },
                 {
+
                   title: "Data Processing",
                   description: "Stream processing, real-time analytics, and machine learning"
                 },
                 {
+
                   title: "Security",
                   description: "TLS encryption, device authentication, and secure communication"
                 }
@@ -276,21 +293,25 @@ export default function IoTEdge(...args: []):  {
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
+
                   step: "01",
                   title: "Assessment",
                   description: "Evaluate current infrastructure and identify IoT opportunities."
                 },
                 {
+
                   step: "02",
                   title: "Design",
                   description: "Architect IoT solution with edge computing capabilities."
                 },
                 {
+
                   step: "03",
                   title: "Implementation",
                   description: "Deploy IoT devices and edge computing infrastructure."
                 },
                 {
+
                   step: "04",
                   title: "Optimization",
                   description: "Monitor performance and continuously optimize the system."

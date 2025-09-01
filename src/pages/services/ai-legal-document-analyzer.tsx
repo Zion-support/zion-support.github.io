@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Scale, 
   FileText, 
   Shield, 
@@ -47,38 +48,45 @@ import { SEO } from '../../components/SEO';
 import { Link } from 'react-router-dom';
 
 export default function AILegalDocumentAnalyzer() {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Analysis",
       description: "Advanced machine learning algorithms analyze legal documents with 99.2% accuracy",
       color: "from-purple-500 to-pink-500"
     },
     {
+
       icon: Shield,
       title: "Risk Assessment",
       description: "Automatically identify potential risks, compliance issues, and legal vulnerabilities",
       color: "from-red-500 to-orange-500"
     },
     {
+
       icon: CheckCircle,
       title: "Compliance Checking",
       description: "Real-time compliance verification against current laws and regulations",
       color: "from-green-500 to-emerald-500"
     },
     {
+
       icon: Search,
       title: "Smart Search",
       description: "Natural language search across thousands of legal documents instantly",
       color: "from-blue-500 to-cyan-500"
     },
     {
+
       icon: TrendingUp,
       title: "Predictive Insights",
       description: "AI-powered predictions on case outcomes and legal strategy recommendations",
       color: "from-indigo-500 to-purple-500"
     },
     {
+
       icon: Users,
       title: "Collaboration Tools",
       description: "Multi-user collaboration with role-based access and real-time updates",
@@ -88,24 +96,28 @@ export default function AILegalDocumentAnalyzer() {
 
   const benefits = [
     {
+
       icon: Clock,
       title: "Time Savings",
       description: "Reduce document review time by 85%",
       metric: "85%"
     },
     {
+
       icon: DollarSign,
       title: "Cost Reduction",
       description: "Lower legal costs by 60%",
       metric: "60%"
     },
     {
+
       icon: Target,
       title: "Accuracy",
       description: "99.2% accuracy in legal analysis",
       metric: "99.2%"
     },
     {
+
       icon: TrendingUp,
       title: "Efficiency",
       description: "Increase productivity by 3x",
@@ -115,6 +127,7 @@ export default function AILegalDocumentAnalyzer() {
 
   const pricing = [
     {
+
       name: "Basic",
       price: 3499,
       period: "one-time setup",
@@ -130,6 +143,7 @@ export default function AILegalDocumentAnalyzer() {
       cta: "Get Started"
     },
     {
+
       name: "Professional",
       price: 5999,
       period: "one-time setup",
@@ -146,6 +160,7 @@ export default function AILegalDocumentAnalyzer() {
       cta: "Most Popular"
     },
     {
+
       name: "Enterprise",
       price: 9999,
       period: "one-time setup",
@@ -174,24 +189,28 @@ export default function AILegalDocumentAnalyzer() {
 
   const useCases = [
     {
+
       title: "Contract Review & Analysis",
       description: "Automatically analyze contracts for risks, compliance issues, and optimization opportunities",
       icon: FileText,
       color: "from-blue-500 to-cyan-500"
     },
     {
+
       title: "Legal Research & Discovery",
       description: "AI-powered legal research with intelligent case law analysis and precedent identification",
       icon: Search,
       color: "from-purple-500 to-pink-500"
     },
     {
+
       title: "Compliance Monitoring",
       description: "Real-time compliance monitoring across all legal documents and regulatory changes",
       icon: Shield,
       color: "from-green-500 to-emerald-500"
     },
     {
+
       title: "Risk Assessment",
       description: "Comprehensive risk assessment with automated alerts and mitigation recommendations",
       icon: AlertTriangle,
@@ -388,6 +407,7 @@ export default function AILegalDocumentAnalyzer() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`p-8 rounded-xl border ${
+
                   plan.popular 
                     ? 'bg-gradient-to-br from-purple-900/50 to-pink-900/50 border-purple-500/50 shadow-2xl shadow-purple-500/25' 
                     : 'bg-slate-800/50 border-slate-700/50'
@@ -418,6 +438,7 @@ export default function AILegalDocumentAnalyzer() {
                 <Link
                   to={plan.name === "Enterprise" ? "/contact" : "/request-quote"}
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white transform hover:scale-105'
                       : 'bg-slate-700 hover:bg-slate-600 text-white'

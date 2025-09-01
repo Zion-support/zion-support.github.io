@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Brain, 
   DollarSign, 
   TrendingUp, 
@@ -37,26 +38,31 @@ import {
 } from 'lucide-react';
 
 export default function AIFinancialServicesPlatform() {
+
   const features = [
     {
+
       title: 'AI-Powered Risk Assessment',
       description: 'Advanced machine learning algorithms analyze market trends, credit scores, and economic indicators for comprehensive risk evaluation',
       icon: Shield,
       benefits: ['Real-time risk scoring', 'Predictive analytics', 'Portfolio optimization', 'Regulatory compliance']
     },
     {
+
       title: 'Intelligent Investment Management',
       description: 'Automated portfolio management with AI-driven asset allocation and rebalancing strategies',
       icon: TrendingUp,
       benefits: ['Dynamic asset allocation', 'Market timing optimization', 'Tax-loss harvesting', 'Performance tracking']
     },
     {
+
       title: 'Fraud Detection & Prevention',
       description: 'Real-time transaction monitoring with AI-powered anomaly detection and fraud prevention',
       icon: AlertTriangle,
       benefits: ['Real-time monitoring', 'Behavioral analysis', 'Instant alerts', 'False positive reduction']
     },
     {
+
       title: 'Personalized Financial Planning',
       description: 'AI-driven financial advice and planning based on individual goals, risk tolerance, and market conditions',
       icon: Target,
@@ -66,6 +72,7 @@ export default function AIFinancialServicesPlatform() {
 
   const pricingPlans = [
     {
+
       name: 'Starter',
       price: '$299/month',
       description: 'Perfect for small financial advisors and individual investors',
@@ -80,6 +87,7 @@ export default function AIFinancialServicesPlatform() {
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$799/month',
       description: 'Ideal for growing financial firms and wealth managers',
@@ -96,6 +104,7 @@ export default function AIFinancialServicesPlatform() {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: 'Custom',
       description: 'For large financial institutions and enterprise clients',
@@ -115,24 +124,28 @@ export default function AIFinancialServicesPlatform() {
 
   const useCases = [
     {
+
       title: 'Wealth Management Firms',
       description: 'Streamline portfolio management with AI-driven insights and automated rebalancing',
       icon: Building,
       benefits: ['Increased AUM', 'Better client retention', 'Operational efficiency', 'Competitive advantage']
     },
     {
+
       title: 'Banks & Credit Unions',
       description: 'Enhance customer experience with personalized financial products and risk management',
       icon: CreditCard,
       benefits: ['Improved customer satisfaction', 'Reduced fraud losses', 'Better loan decisions', 'Regulatory compliance']
     },
     {
+
       title: 'Insurance Companies',
       description: 'Optimize underwriting and claims processing with AI-powered risk assessment',
       icon: Shield,
       benefits: ['Accurate risk pricing', 'Faster claims processing', 'Fraud prevention', 'Cost reduction']
     },
     {
+
       title: 'Fintech Startups',
       description: 'Launch innovative financial products with enterprise-grade AI capabilities',
       icon: Zap,
@@ -142,6 +155,7 @@ export default function AIFinancialServicesPlatform() {
 
   const technicalSpecs = [
     {
+
       category: 'AI & Machine Learning',
       specs: [
         'Deep learning models for risk assessment',
@@ -152,6 +166,7 @@ export default function AIFinancialServicesPlatform() {
       ]
     },
     {
+
       category: 'Security & Compliance',
       specs: [
         'SOC 2 Type II compliance',
@@ -163,6 +178,7 @@ export default function AIFinancialServicesPlatform() {
       ]
     },
     {
+
       category: 'Integration & APIs',
       specs: [
         'RESTful API with GraphQL support',
@@ -367,6 +383,7 @@ export default function AIFinancialServicesPlatform() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 rounded-xl p-8 border ${
+
                   plan.popular 
                     ? 'border-green-500/50 bg-green-600/10' 
                     : 'border-gray-700 hover:border-green-500/50'
@@ -398,6 +415,7 @@ export default function AIFinancialServicesPlatform() {
                 <Link
                   to={plan.name === 'Enterprise' ? '/contact' : '/signup'}
                   className={`block w-full text-center px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700'
                       : 'bg-gray-700 text-white hover:bg-gray-600'

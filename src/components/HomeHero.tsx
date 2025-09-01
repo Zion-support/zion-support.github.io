@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Brain, 
   Shield, 
   Rocket, 
@@ -33,6 +34,7 @@ import {
 } from 'lucide-react';
 
 export function HomeHero() {
+
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -46,10 +48,13 @@ export function HomeHero() {
   ];
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
+
         staggerChildren: 0.2,
         delayChildren: 0.3
       }
@@ -57,11 +62,14 @@ export function HomeHero() {
   };
 
   const itemVariants = {
+
     hidden: { opacity: 0, y: 20 },
     visible: {
+
       opacity: 1,
       y: 0,
       transition: {
+
         duration: 0.6,
         ease: "easeOut"
       }
@@ -69,9 +77,12 @@ export function HomeHero() {
   };
 
   const floatingVariants = {
+
     float: {
+
       y: [-10, 10, -10],
       transition: {
+
         duration: 6,
         repeat: Infinity,
         ease: "easeInOut"
@@ -80,10 +91,13 @@ export function HomeHero() {
   };
 
   const pulseVariants = {
+
     pulse: {
+
       scale: [1, 1.05, 1],
       opacity: [0.5, 0.8, 0.5],
       transition: {
+
         duration: 3,
         repeat: Infinity,
         ease: "easeInOut"
@@ -93,21 +107,26 @@ export function HomeHero() {
 
   // Auto-rotate stats
   useEffect(() => {
+
     const interval = setInterval(() => {
+
       setCurrentStatIndex((prev) => (prev + 1) % heroStats.length);
     }, 4000);
     return () => clearInterval(interval);
   }, [heroStats.length]);
 
   const handleVideoToggle = () => {
+
     setIsVideoPlaying(!isVideoPlaying);
   };
 
   const handleMuteToggle = () => {
+
     setIsMuted(!isMuted);
   };
 
   const handleFullscreenToggle = () => {
+
     setIsFullscreen(!isFullscreen);
   };
 
@@ -121,6 +140,7 @@ export function HomeHero() {
         {/* Animated Grid Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
+
             backgroundImage: `
               linear-gradient(rgba(34, 211, 238, 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(34, 211, 238, 0.1) 1px, transparent 1px)
@@ -139,14 +159,14 @@ export function HomeHero() {
             variants={floatingVariants}
             animate="float"
             transition={{
+
               duration: 8 + i * 2,
               repeat: Infinity,
-              delay: i * 0.5,
-            }}
+              delay: i * 0.5}}
             style={{
+
               left: `${20 + i * 7}%`,
-              top: `${30 + i * 8}%`,
-            }}
+              top: `${30 + i * 8}%`}}
           />
         ))}
         
@@ -158,14 +178,14 @@ export function HomeHero() {
             variants={floatingVariants}
             animate="float"
             transition={{
+
               duration: 12 + i * 3,
               repeat: Infinity,
-              delay: i * 0.8,
-            }}
+              delay: i * 0.8}}
             style={{
+
               left: `${15 + i * 12}%`,
-              top: `${25 + i * 10}%`,
-            }}
+              top: `${25 + i * 10}%`}}
           />
         ))}
       </div>

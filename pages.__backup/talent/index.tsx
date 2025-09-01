@@ -8,7 +8,7 @@ const Index: NextPage = () => {
         <title>Index - Zion Tech Solutions</title>
         <meta name="description" content="Index page" />
       </Head>
-      
+
       <main>
         <h1>Index</h1>
         <p>This page is under construction.</p>

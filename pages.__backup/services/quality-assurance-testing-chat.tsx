@@ -7,9 +7,12 @@ const QualityAssuranceTestingChat: NextPage = () => {
     <div>
       <Head>
         <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>
-        <meta name="description" content="QualityAssuranceTestingChat service" />
+        <meta
+          name="description"
+          content="QualityAssuranceTestingChat service"
+        />
       </Head>
-      
+
       <main>
         <h1>QualityAssuranceTestingChat</h1>
         <p>Service details coming soon...</p>

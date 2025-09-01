@@ -1,3 +1,1 @@
-
-export function cn(...args[]: any):  {}
-  return twMerge(clsx(inputs))}
+ export function cn(...args[]: any): { 

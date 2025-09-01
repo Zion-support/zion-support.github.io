@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   FileText, 
   Shield, 
   Scale, 
@@ -24,6 +25,7 @@ import {
 import { SEO } from '../../components/SEO';
 
 export default function AIPoweredLegalDocumentGenerator() {
+
   const features = [
     "AI-powered contract generation with legal compliance",
     "Real-time legal document templates for 50+ jurisdictions",
@@ -46,6 +48,7 @@ export default function AIPoweredLegalDocumentGenerator() {
 
   const pricing = [
     {
+
       plan: "Starter",
       price: "$299",
       period: "/month",
@@ -57,6 +60,7 @@ export default function AIPoweredLegalDocumentGenerator() {
       ]
     },
     {
+
       plan: "Professional",
       price: "$599",
       period: "/month",
@@ -69,6 +73,7 @@ export default function AIPoweredLegalDocumentGenerator() {
       ]
     },
     {
+
       plan: "Enterprise",
       price: "$1,299",
       period: "/month",
@@ -236,6 +241,7 @@ export default function AIPoweredLegalDocumentGenerator() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl p-8 border-2 ${
+
                   index === 1 ? 'border-blue-500 scale-105' : 'border-slate-700'
                 }`}
               >

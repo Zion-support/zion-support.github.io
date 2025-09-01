@@ -4,50 +4,64 @@ import { Button } from "@/components/ui/button";
 import { Upload, Trash2, Plus } from "lucide-react";
 import { toast } from "sonner";
 export const ScreenshotManager = ({ platform }) => {
+
     const [screenshots, setScreenshots] = useState([]);
     const [isDragging, setIsDragging] = useState(false);
     const fileInputRef = useRef(null);
     const handleFileSelect = (e) => {
+
         if (e.target.files) {
+
             addScreenshots(Array.from(e.target.files))}
     };
     const addScreenshots = (files) => {
+
         // Filter for image files only
         const imageFiles = files.filter(file => file.type.startsWith('image/'));
         if (imageFiles.length === 0) {
+
             toast.error("Please select valid image files");
             return}
         // Limit the number of screenshots
         const maxScreenshots = platform === "ios" ? 10 : 8;
         const availableSlots = maxScreenshots - screenshots.length;
         if (availableSlots <= 0) {
+
             toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
             return}
         const filesToAdd = imageFiles.slice(0, availableSlots);
         const newScreenshots = filesToAdd.map(file => ({
+
             id: Math.random().toString(36).substring(2, 9),
             url: URL.createObjectURL(file),
             file
         }));
         setScreenshots(prev => [...prev, ...newScreenshots]);
         if (filesToAdd.length < imageFiles.length) {
+
             toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`)}
     };
     const removeScreenshot = (id) => {
+
         setScreenshots(prev => {
+
             const filtered = prev.filter(screenshot => screenshot.id !== id);
             // Revoke object URL to avoid memory leaks
             const removed = prev.find(screenshot => screenshot.id === id);
             if (removed) {
+
                 URL.revokeObjectURL(removed.url)}
             return filtered})};
     const handleDragOver = (e) => {
+
         e.preventDefault();
         setIsDragging(true)};
     const handleDrop = (e) => {
+
         e.preventDefault();
         setIsDragging(false);
         if (e.dataTransfer.files) {
+
             addScreenshots(Array.from(e.dataTransfer.files))}
     };
     return (<Card className="bg-zion-blue border-zion-purple/30">

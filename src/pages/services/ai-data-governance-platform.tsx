@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
+
   Database,
   Shield,
   Search,
@@ -93,32 +94,38 @@ import {
 } from 'lucide-react';
 
 export function AIDataGovernancePlatform() {
+
   const features = [
     {
+
       icon: Database,
       title: 'Intelligent Data Discovery',
       description: 'AI-powered scanning and classification of data across all systems and repositories',
       benefits: ['Automated data mapping', 'Smart classification', 'Sensitive data detection', 'Real-time discovery']
     },
     {
+
       icon: Shield,
       title: 'Advanced Data Protection',
       description: 'Comprehensive security measures including encryption, access controls, and compliance monitoring',
       benefits: ['End-to-end encryption', 'Role-based access', 'Audit logging', 'Compliance automation']
     },
     {
+
       icon: Search,
       title: 'Smart Data Lineage',
       description: 'Track data flow and transformations across your entire data ecosystem',
       benefits: ['Visual data flow', 'Impact analysis', 'Change tracking', 'Dependency mapping']
     },
     {
+
       icon: BarChart3,
       title: 'Data Quality Intelligence',
       description: 'AI-driven data quality assessment and improvement recommendations',
       benefits: ['Quality scoring', 'Anomaly detection', 'Automated cleansing', 'Quality metrics']
     },
     {
+
       icon: Rocket,
       title: 'Compliance Automation',
       description: 'Automated compliance checks and reporting for GDPR, CCPA, HIPAA, and more',
@@ -128,6 +135,7 @@ export function AIDataGovernancePlatform() {
 
   const pricingPlans = [
     {
+
       name: 'Foundation',
       price: '$499',
       period: '/month',
@@ -146,6 +154,7 @@ export function AIDataGovernancePlatform() {
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$1,299',
       period: '/month',
@@ -168,6 +177,7 @@ export function AIDataGovernancePlatform() {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: '$2,999',
       period: '/month',
@@ -193,24 +203,28 @@ export function AIDataGovernancePlatform() {
 
   const complianceFrameworks = [
     {
+
       title: 'GDPR Compliance',
       description: 'Full compliance with European data protection regulations',
       icon: Shield,
       benefits: ['Data subject rights', 'Consent management', 'Data portability', 'Breach notification']
     },
     {
+
       title: 'CCPA Compliance',
       description: 'California Consumer Privacy Act compliance and automation',
       icon: Lock,
       benefits: ['Consumer rights', 'Opt-out mechanisms', 'Data disclosure', 'Privacy notices']
     },
     {
+
       title: 'HIPAA Compliance',
       description: 'Healthcare data protection and privacy compliance',
       icon: Heart,
       benefits: ['PHI protection', 'Access controls', 'Audit trails', 'Risk assessment']
     },
     {
+
       title: 'SOC 2 Compliance',
       description: 'Security, availability, and confidentiality compliance',
       icon: Award,
@@ -453,6 +467,7 @@ export function AIDataGovernancePlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-gradient-to-br from-blue-900/20 to-indigo-900/20 p-8 rounded-2xl border ${
+
                   plan.popular 
                     ? 'border-blue-500/50 shadow-lg shadow-blue-500/20' 
                     : 'border-blue-500/20'
@@ -487,6 +502,7 @@ export function AIDataGovernancePlatform() {
                 <Link
                   to={plan.name === 'Enterprise' ? '/contact' : '/pricing'}
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white hover:from-blue-600 hover:to-indigo-700'
                       : 'border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'

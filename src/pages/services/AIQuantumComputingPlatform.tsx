@@ -19,6 +19,7 @@ import { Brain,
 import { SEO               } from '../../components/SEO';
 
 const AIQuantumComputingPlatform = () => {
+
   const features = [
     'AI-powered quantum algorithm optimization',
     'Hybrid quantum-classical computing solutions',
@@ -43,12 +44,14 @@ const AIQuantumComputingPlatform = () => {
 
   const pricing = [
     {
+
       name: 'Starter',
       price: '$1,299/mo',
       features: ['Up to 10 qubits', 'Basic quantum simulation', 'Standard algorithms', 'Email support', 'Monthly usage reports'],
       popular: false
     },
     {
+
       name: "Quantum Professional",
       price: "$19,999",
       period: "/month",
@@ -96,11 +99,13 @@ const AIQuantumComputingPlatform = () => {
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30 
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -135,11 +140,13 @@ const AIQuantumComputingPlatform = () => {
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30 
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -161,17 +168,20 @@ const AIQuantumComputingPlatform = () => {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }}
                 viewport={{ once: true }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -194,11 +204,13 @@ const AIQuantumComputingPlatform = () => {
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30 
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -220,22 +232,26 @@ const AIQuantumComputingPlatform = () => {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }}
                 viewport={{ once: true }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
 }}
                 className={`relative bg-zion-slate-dark/50 backdrop-blur-lg border rounded-2xl p-8 ${
+
                   service.popular 
                     ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' 
                     : 'border-zion-slate/30'
@@ -269,6 +285,7 @@ const AIQuantumComputingPlatform = () => {
                 <Link
                   to="/contact"
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+
                     service.popular
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:shadow-lg hover:shadow-zion-cyan/25'
                       : 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white'
@@ -288,11 +305,13 @@ const AIQuantumComputingPlatform = () => {
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30 
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -314,17 +333,20 @@ const AIQuantumComputingPlatform = () => {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
 
 }}
                 whileInView = {
+
   { opacity: 1,
   x: 0 
 
 }}
                 viewport={{ once: true }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -355,11 +377,13 @@ const AIQuantumComputingPlatform = () => {
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30 
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -381,17 +405,20 @@ const AIQuantumComputingPlatform = () => {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   scale: 0.8 
 
 }}
                 whileInView = {
+
   { opacity: 1,
   scale: 1 
 
 }}
                 viewport={{ once: true }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -413,11 +440,13 @@ const AIQuantumComputingPlatform = () => {
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30 
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 

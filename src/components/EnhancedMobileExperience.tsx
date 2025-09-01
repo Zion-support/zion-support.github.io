@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
+
   Smartphone, 
   Tablet, 
   Monitor, 
@@ -25,6 +26,7 @@ import {
 } from 'lucide-react';
 
 interface MobileSettings {
+
   touchOptimization: boolean;
   gestureNavigation: boolean;
   mobileFirst: boolean;
@@ -41,18 +43,22 @@ interface MobileSettings {
 }
 
 interface MobileExperienceProps {
+
   enabled?: boolean;
   showControls?: boolean;
   onSettingsChange?: (settings: MobileSettings) => void;
 }
 
 export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({
+
   enabled = true,
   showControls = true,
   onSettingsChange
 }) => {
+
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<MobileSettings>({
+
     touchOptimization: true,
     gestureNavigation: true,
     mobileFirst: true,
@@ -69,6 +75,7 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({
   });
 
   const [deviceInfo, setDeviceInfo] = useState({
+
     isMobile: false,
     isTablet: false,
     isDesktop: false,
@@ -80,6 +87,7 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({
   });
 
   const [performanceMetrics, setPerformanceMetrics] = useState({
+
     touchLatency: 0,
     scrollPerformance: 0,
     imageLoadTime: 0,
@@ -88,7 +96,9 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({
 
   // Detect device and capabilities
   useEffect(() => {
+
     const detectDevice = () => {
+
       const userAgent = navigator.userAgent;
       const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
       const isTablet = /iPad|Android(?=.*\bMobile\b)(?=.*\bSafari\b)/i.test(userAgent);
@@ -98,6 +108,7 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({
       const pixelRatio = window.devicePixelRatio || 1;
       
       setDeviceInfo({
+
         isMobile,
         isTablet,
         isDesktop,
@@ -114,6 +125,7 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({
     window.addEventListener('orientationchange', detectDevice);
 
     return () => {
+
       window.removeEventListener('resize', detectDevice);
       window.removeEventListener('orientationchange', detectDevice);
     };
@@ -121,18 +133,22 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({
 
   // Measure mobile performance
   useEffect(() => {
+
     if (!enabled || !deviceInfo.isMobile) return;
 
     const measurePerformance = async () => {
+
       // Measure touch latency
       let touchStartTime = 0;
       let touchEndTime = 0;
       
       const touchStartHandler = () => {
+
         touchStartTime = performance.now();
       };
       
       const touchEndHandler = () => {
+
         touchEndTime = performance.now();
         const latency = touchEndTime - touchStartTime;
         setPerformanceMetrics(prev => ({ ...prev, touchLatency: Math.round(latency) }));
@@ -147,12 +163,15 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({
       let scrollCount = 0;
       
       const scrollHandler = () => {
+
         if (scrollCount === 0) {
+
           scrollStartTime = performance.now();
         }
         scrollCount++;
         
         if (scrollCount >= 10) {
+
           scrollEndTime = performance.now();
           const duration = scrollEndTime - scrollStartTime;
           setPerformanceMetrics(prev => ({ ...prev, scrollPerformance: Math.round(duration) }));
@@ -165,6 +184,7 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({
       // Measure network speed (simplified)
       const startTime = performance.now();
       try {
+
         await fetch('/favicon.ico', { cache: 'no-cache' });
         const endTime = performance.now();
         const duration = endTime - startTime;
@@ -175,10 +195,12 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({
         
         setPerformanceMetrics(prev => ({ ...prev, networkSpeed }));
       } catch (error) {
-        console.warn('Network speed measurement failed:', error);
+
+        // // // console.warn('Network speed measurement failed:', error);
       }
 
       return () => {
+
         document.removeEventListener('touchstart', touchStartHandler);
         document.removeEventListener('touchend', touchEndHandler);
         document.removeEventListener('scroll', scrollHandler);
@@ -191,15 +213,18 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({
 
   // Apply mobile optimizations
   const applyMobileOptimizations = useCallback((newSettings: MobileSettings) => {
+
     const root = document.documentElement;
     const body = document.body;
 
     // Touch optimization
     if (newSettings.touchOptimization) {
+
       root.style.setProperty('--touch-action', 'manipulation');
       root.style.setProperty('--user-select', 'none');
       root.style.setProperty('--webkit-tap-highlight-color', 'rgba(0,0,0,0.1)');
     } else {
+
       root.style.removeProperty('--touch-action');
       root.style.removeProperty('--user-select');
       root.style.removeProperty('--webkit-tap-highlight-color');
@@ -207,16 +232,20 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({
 
     // Touch feedback
     if (newSettings.touchFeedback) {
+
       root.classList.add('touch-feedback');
     } else {
+
       root.classList.remove('touch-feedback');
     }
 
     // Mobile animations
     if (newSettings.mobileAnimations && deviceInfo.isMobile) {
+
       root.style.setProperty('--animation-duration', '0.3s');
       root.style.setProperty('--transition-duration', '0.2s');
     } else {
+
       root.style.removeProperty('--animation-duration');
       root.style.removeProperty('--transition-duration');
     }
@@ -231,32 +260,40 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({
 
   // Load settings from localStorage
   useEffect(() => {
+
     const savedSettings = localStorage.getItem('mobile-experience-settings');
     if (savedSettings) {
+
       try {
+
         const parsed = JSON.parse(savedSettings);
         setSettings(parsed);
         applyMobileOptimizations(parsed);
       } catch (error) {
-        console.warn('Failed to load mobile experience settings:', error);
+
+        // // // console.warn('Failed to load mobile experience settings:', error);
       }
     }
   }, [applyMobileOptimizations]);
 
   // Apply settings when they change
   useEffect(() => {
+
     applyMobileOptimizations(settings);
     onSettingsChange?.(settings);
   }, [settings, applyMobileOptimizations, onSettingsChange]);
 
   // Handle viewport mode change
   const handleViewportModeChange = useCallback((mode: MobileSettings['viewportMode']) => {
+
     setSettings(prev => ({ ...prev, viewportMode: mode }));
     
     // Apply viewport changes
     const viewport = document.querySelector('meta[name="viewport"]');
     if (viewport) {
+
       switch (mode) {
+
         case 'mobile':
           viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
           break;
@@ -275,16 +312,20 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({
 
   // Optimize images for mobile
   const optimizeImages = useCallback(() => {
+
     if (!settings.responsiveImages) return;
 
     const images = document.querySelectorAll('img');
     images.forEach(img => {
+
       if (!img.loading) {
+
         img.loading = 'lazy';
       }
       
       // Add responsive image attributes
       if (deviceInfo.isMobile && !img.hasAttribute('data-mobile-src')) {
+
         img.setAttribute('data-mobile-src', img.src);
         img.setAttribute('data-tablet-src', img.src);
         img.setAttribute('data-desktop-src', img.src);
@@ -294,14 +335,18 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({
 
   // Apply image optimizations
   useEffect(() => {
+
     optimizeImages();
   }, [optimizeImages]);
 
   // Keyboard shortcuts
   useEffect(() => {
+
     const handleKeyDown = (event: KeyboardEvent) => {
+
       // Alt + M to toggle mobile experience panel
       if (event.altKey && event.key === 'm') {
+
         event.preventDefault();
         setIsOpen(!isOpen);
       }
@@ -314,13 +359,16 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({
   if (!enabled) return null;
 
   const getPerformanceColor = (value: number, threshold: number) => {
+
     if (value <= threshold) return 'text-green-500';
     if (value <= threshold * 1.5) return 'text-yellow-500';
     return 'text-red-500';
   };
 
   const getNetworkIcon = (speed: string) => {
+
     switch (speed) {
+
       case 'fast': return <Wifi className="w-4 h-4 text-green-500" />;
       case 'medium': return <Wifi className="w-4 h-4 text-yellow-500" />;
       case 'slow': return <Wifi className="w-4 h-4 text-red-500" />;
@@ -430,12 +478,14 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({
                   <button
                     onClick={() => setSettings(prev => ({ ...prev, touchOptimization: !prev.touchOptimization }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+
                       settings.touchOptimization ? 'bg-green-600' : 'bg-gray-200'
                     }`}
                     aria-label="Toggle touch optimization"
                   >
                     <span
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+
                         settings.touchOptimization ? 'translate-x-6' : 'translate-x-1'
                       }`}
                     />
@@ -451,12 +501,14 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({
                   <button
                     onClick={() => setSettings(prev => ({ ...prev, gestureNavigation: !prev.gestureNavigation }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+
                       settings.gestureNavigation ? 'bg-green-600' : 'bg-gray-200'
                     }`}
                     aria-label="Toggle gesture navigation"
                   >
                     <span
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+
                         settings.gestureNavigation ? 'translate-x-6' : 'translate-x-1'
                       }`}
                     />
@@ -472,12 +524,14 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({
                   <button
                     onClick={() => setSettings(prev => ({ ...prev, touchFeedback: !prev.touchFeedback }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+
                       settings.touchFeedback ? 'bg-green-600' : 'bg-gray-200'
                     }`}
                     aria-label="Toggle touch feedback"
                   >
                     <span
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+
                         settings.touchFeedback ? 'translate-x-6' : 'translate-x-1'
                       }`}
                     />
@@ -493,12 +547,14 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({
                   <button
                     onClick={() => setSettings(prev => ({ ...prev, responsiveImages: !prev.responsiveImages }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+
                       settings.responsiveImages ? 'bg-green-600' : 'bg-gray-200'
                     }`}
                     aria-label="Toggle responsive images"
                   >
                     <span
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+
                         settings.responsiveImages ? 'translate-x-6' : 'translate-x-1'
                       }`}
                     />
@@ -533,6 +589,7 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({
                         key={sensitivity}
                         onClick={() => setSettings(prev => ({ ...prev, touchSensitivity: sensitivity }))}
                         className={`flex-1 px-3 py-2 text-xs rounded-lg transition-colors ${
+
                           settings.touchSensitivity === sensitivity
                             ? 'bg-green-600 text-white'
                             : 'bg-gray-200 dark:bg-slate-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-slate-500'
@@ -553,12 +610,14 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({
                   <button
                     onClick={() => setSettings(prev => ({ ...prev, mobileAnimations: !prev.mobileAnimations }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+
                       settings.mobileAnimations ? 'bg-green-600' : 'bg-gray-200'
                     }`}
                     aria-label="Toggle mobile animations"
                   >
                     <span
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+
                         settings.mobileAnimations ? 'translate-x-6' : 'translate-x-1'
                       }`}
                     />
@@ -570,7 +629,9 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({
               <div className="mt-6 flex space-x-2">
                 <button
                   onClick={() => {
+
                     const defaultSettings: MobileSettings = {
+
                       touchOptimization: true,
                       gestureNavigation: true,
                       mobileFirst: true,

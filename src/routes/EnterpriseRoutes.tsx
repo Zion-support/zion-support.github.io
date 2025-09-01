@@ -6,6 +6,7 @@ import EnterpriseBilling from '../pages/EnterpriseBilling';
 import EnterpriseDemo from '../pages/EnterpriseDemo';
 
 export default function EnterpriseRoutes(...args: any[]): any {
+
   return (
     <Routes>
       {/* Enterprise Routes */}

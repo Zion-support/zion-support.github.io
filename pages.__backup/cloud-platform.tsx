@@ -1,30 +1,37 @@
 import React from 'react';
 import Head from 'next/head';
-import { Cloud, Shield, Globe, Server, Database, ArrowRight, Check } from 'lucide-react';
-
+import {
+  Cloud,
+  Shield,
+  Globe,
+  Server,
+  Database,
+  ArrowRight,
+  Check,
+} from 'lucide-react';
 
 export default function CloudPlatformPage() {
   const features = [
     {
       icon: <Server className="w-8 h-8 text-white" />,
       title: 'Scalable Infrastructure',
-      description: 'Auto-scaling compute resources that grow with your needs'
+      description: 'Auto-scaling compute resources that grow with your needs',
     },
     {
       icon: <Database className="w-8 h-8 text-white" />,
       title: 'Managed Databases',
-      description: 'Fully managed databases with automated backups and scaling'
+      description: 'Fully managed databases with automated backups and scaling',
     },
     {
       icon: <Globe className="w-8 h-8 text-white" />,
       title: 'Global CDN',
-      description: 'Lightning-fast content delivery across the globe'
+      description: 'Lightning-fast content delivery across the globe',
     },
     {
       icon: <Shield className="w-8 h-8 text-white" />,
       title: 'Enterprise Security',
-      description: 'SOC 2 compliant with advanced threat protection'
-    }
+      description: 'SOC 2 compliant with advanced threat protection',
+    },
   ];
 
   const benefits = [
@@ -33,14 +40,17 @@ export default function CloudPlatformPage() {
     'Real-time monitoring',
     'Automated scaling',
     'Pay-as-you-go pricing',
-    '24/7 expert support'
+    '24/7 expert support',
   ];
 
   return (
     <>
       <Head>
         <title>Cloud Platform - Zion Tech Group</title>
-        <meta name="description" content="Enterprise-grade cloud infrastructure with global reach, automated scaling, and 99.99% uptime guarantee." />
+        <meta
+          name="description"
+          content="Enterprise-grade cloud infrastructure with global reach, automated scaling, and 99.99% uptime guarantee."
+        />
       </Head>
 
       <div className="min-h-screen bg-black">
@@ -50,7 +60,7 @@ export default function CloudPlatformPage() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.08),transparent_50%)]" />
           </div>
-          
+
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <div className="mb-8">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
@@ -58,22 +68,24 @@ export default function CloudPlatformPage() {
                 Enterprise Cloud Infrastructure
               </div>
             </div>
-            
+
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
               Cloud Platform
             </h1>
             <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
-              Enterprise-grade cloud infrastructure with global reach, automated scaling, and 99.99% uptime guarantee.
+              Enterprise-grade cloud infrastructure with global reach, automated
+              scaling, and 99.99% uptime guarantee.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a
-                href="/contact" className="shadow-2xl shadow-blue-500/25">
+              <a href="/contact" className="shadow-2xl shadow-blue-500/25">
                 Deploy Now
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
               <a
-                href="/contact" className="border-white/20 hover:border-white/40">
+                href="/contact"
+                className="border-white/20 hover:border-white/40"
+              >
                 View Documentation
               </a>
             </div>
@@ -95,7 +107,9 @@ export default function CloudPlatformPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (
                 <div
-                  key={index} className="p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">
+                  key={index}
+                  className="p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300"
+                >
                   <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
                     {feature.icon}
                   </div>
@@ -130,7 +144,7 @@ export default function CloudPlatformPage() {
                   ))}
                 </div>
               </div>
-              
+
               <div className="relative">
                 <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20">
                   <div className="text-center">
@@ -139,7 +153,8 @@ export default function CloudPlatformPage() {
                       Global Infrastructure
                     </h3>
                     <p className="text-gray-300 mb-6">
-                      Deploy your applications across multiple regions for optimal performance
+                      Deploy your applications across multiple regions for
+                      optimal performance
                     </p>
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-400 text-sm">
                       <Globe className="w-4 h-4 mr-2" />
@@ -163,11 +178,15 @@ export default function CloudPlatformPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/contact" className="bg-white text-blue-600 hover:bg-gray-100">
+                href="/contact"
+                className="bg-white text-blue-600 hover:bg-gray-100"
+              >
                 Start Free Trial
               </a>
               <a
-                href="/contact" className="border-white text-white hover:bg-white hover:text-blue-600">
+                href="/contact"
+                className="border-white text-white hover:bg-white hover:text-blue-600"
+              >
                 Contact Sales
               </a>
             </div>

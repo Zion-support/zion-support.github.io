@@ -1,4 +1,5 @@
 export interface ComprehensivePricingService {
+
   id: string;
   title: string;
   description: string;
@@ -14,6 +15,7 @@ export interface ComprehensivePricingService {
   estimatedDelivery: string;
   supportLevel: string;
   contactInfo: {
+
     phone: string;
     email: string;
     website: string;
@@ -27,6 +29,7 @@ export interface ComprehensivePricingService {
 export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [
   // Enterprise Solutions
   {
+
     id: 'enterprise-erp-platform',
     title: 'Enterprise ERP Platform',
     description: 'Comprehensive enterprise resource planning platform that integrates all business processes including finance, HR, supply chain, and customer relationship management.',
@@ -61,6 +64,7 @@ export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [
     estimatedDelivery: '12-16 weeks',
     supportLevel: 'enterprise',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
@@ -73,6 +77,7 @@ export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [
 
   // AI Services
   {
+
     id: 'ai-content-generation-platform',
     title: 'AI Content Generation Platform',
     description: 'Advanced AI-powered content generation platform that creates high-quality, SEO-optimized content for websites, blogs, social media, and marketing materials.',
@@ -107,6 +112,7 @@ export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [
     estimatedDelivery: '4-6 weeks',
     supportLevel: 'premium',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
@@ -119,6 +125,7 @@ export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [
 
   // Cybersecurity Services
   {
+
     id: 'zero-trust-security-platform',
     title: 'Zero Trust Security Platform',
     description: 'Comprehensive zero trust security platform that implements continuous verification and least-privilege access controls across all enterprise resources.',
@@ -153,6 +160,7 @@ export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [
     estimatedDelivery: '8-12 weeks',
     supportLevel: 'enterprise',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
@@ -165,6 +173,7 @@ export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [
 
   // Blockchain & Web3 Services
   {
+
     id: 'defi-platform-development',
     title: 'DeFi Platform Development',
     description: 'Complete decentralized finance platform development including DEX, lending protocols, yield farming, and liquidity management solutions.',
@@ -199,6 +208,7 @@ export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [
     estimatedDelivery: '12-20 weeks',
     supportLevel: 'enterprise',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
@@ -211,6 +221,7 @@ export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [
 
   // IoT & Edge Services
   {
+
     id: 'industrial-iot-platform',
     title: 'Industrial IoT Platform',
     description: 'Comprehensive industrial IoT platform that connects, monitors, and optimizes industrial equipment and processes for maximum efficiency.',
@@ -245,6 +256,7 @@ export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [
     estimatedDelivery: '12-16 weeks',
     supportLevel: 'enterprise',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
@@ -257,6 +269,7 @@ export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [
 
   // Smart City Platform
   {
+
     id: 'smart-city-platform',
     title: 'Smart City Platform',
     description: 'Comprehensive smart city platform that integrates IoT sensors, data analytics, and automation to optimize urban infrastructure and services.',
@@ -291,6 +304,7 @@ export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [
     estimatedDelivery: '16-24 weeks',
     supportLevel: 'enterprise',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
@@ -303,6 +317,7 @@ export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [
 
   // AI Video Analytics
   {
+
     id: 'ai-video-analytics-platform',
     title: 'AI Video Analytics Platform',
     description: 'Intelligent video analytics platform that uses computer vision and AI to analyze video content, extract insights, and provide actionable business intelligence.',
@@ -337,6 +352,7 @@ export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [
     estimatedDelivery: '6-8 weeks',
     supportLevel: 'enterprise',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
@@ -349,6 +365,7 @@ export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [
 
   // NFT Marketplace Platform
   {
+
     id: 'nft-marketplace-platform',
     title: 'NFT Marketplace Platform',
     description: 'Complete NFT marketplace platform with minting, trading, auctions, and royalty distribution capabilities for digital assets.',
@@ -383,6 +400,7 @@ export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [
     estimatedDelivery: '10-16 weeks',
     supportLevel: 'premium',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
@@ -395,6 +413,7 @@ export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [
 
   // Advanced Threat Detection
   {
+
     id: 'advanced-threat-detection',
     title: 'Advanced Threat Detection Platform',
     description: 'Next-generation threat detection platform that uses AI and machine learning to identify and respond to sophisticated cyber threats in real-time.',
@@ -429,6 +448,7 @@ export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [
     estimatedDelivery: '6-10 weeks',
     supportLevel: 'enterprise',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
@@ -441,6 +461,7 @@ export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [
 
   // Edge Computing Platform
   {
+
     id: 'edge-computing-platform',
     title: 'Edge Computing Platform',
     description: 'Advanced edge computing platform that processes data locally for real-time applications, reducing latency and bandwidth requirements.',
@@ -475,6 +496,7 @@ export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [
     estimatedDelivery: '8-12 weeks',
     supportLevel: 'premium',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'

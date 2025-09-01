@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Shield, 
   Eye, 
   AlertTriangle, 
@@ -19,6 +20,7 @@ import {
 } from 'lucide-react';
 
 const AICybersecurityThreatIntelligence: React.FC = () => {
+
   const features = [
     "Real-time threat detection with 99.9% accuracy using AI/ML",
     "Advanced behavioral analysis and anomaly detection",
@@ -47,36 +49,42 @@ const AICybersecurityThreatIntelligence: React.FC = () => {
 
   const threatTypes = [
     {
+
       category: "Malware & Ransomware",
       description: "Advanced detection of sophisticated malware variants",
       icon: Shield,
       color: "text-red-600"
     },
     {
+
       category: "Phishing & Social Engineering",
       description: "AI-powered email and message analysis",
       icon: Eye,
       color: "text-orange-600"
     },
     {
+
       category: "Network Attacks",
       description: "Real-time DDoS and intrusion detection",
       icon: Network,
       color: "text-blue-600"
     },
     {
+
       category: "Insider Threats",
       description: "Behavioral analysis and user activity monitoring",
       icon: Users,
       color: "text-purple-600"
     },
     {
+
       category: "API Security",
       description: "Comprehensive API threat detection and protection",
       icon: Lock,
       color: "text-green-600"
     },
     {
+
       category: "Cloud Security",
       description: "Multi-cloud security monitoring and compliance",
       icon: Globe,
@@ -86,6 +94,7 @@ const AICybersecurityThreatIntelligence: React.FC = () => {
 
   const pricingTiers = [
     {
+
       name: "Essential",
       price: 199,
       period: "month",
@@ -100,6 +109,7 @@ const AICybersecurityThreatIntelligence: React.FC = () => {
       popular: false
     },
     {
+
       name: "Professional",
       price: 499,
       period: "month",
@@ -115,6 +125,7 @@ const AICybersecurityThreatIntelligence: React.FC = () => {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: 1299,
       period: "month",
@@ -351,6 +362,7 @@ const AICybersecurityThreatIntelligence: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-white p-8 rounded-2xl shadow-lg border-2 ${
+
                   tier.popular 
                     ? 'border-red-500 scale-105' 
                     : 'border-gray-200'
@@ -382,6 +394,7 @@ const AICybersecurityThreatIntelligence: React.FC = () => {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
+
                   tier.popular
                     ? 'bg-red-600 text-white hover:bg-red-700'
                     : 'bg-gray-100 text-gray-900 hover:bg-gray-200'

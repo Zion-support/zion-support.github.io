@@ -3,6 +3,7 @@ import { ProductListing } from "@/types/listings";
 export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2030: ProductListing[] = [
   // AI-Powered DeFi Analytics Platform
   {
+
     id: "ai-defi-analytics-platform",
     title: "AI DeFi Analytics Platform",
     description: "Advanced AI-powered DeFi analytics platform that provides real-time market insights, risk assessment, and yield optimization strategies. Increases DeFi returns by 40% and reduces risk exposure by 60%.",
@@ -21,6 +22,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2030: ProductListing[] = [
     availability: "5-7 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-defi-analytics",
@@ -35,6 +37,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2030: ProductListing[] = [
 
   // Enterprise Blockchain Platform
   {
+
     id: "enterprise-blockchain-platform",
     title: "Enterprise Blockchain Platform",
     description: "Comprehensive enterprise blockchain platform that enables businesses to build, deploy, and manage private blockchain networks. Improves supply chain transparency by 80% and reduces transaction costs by 50%.",
@@ -53,6 +56,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2030: ProductListing[] = [
     availability: "10-12 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/enterprise-blockchain",
@@ -67,6 +71,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2030: ProductListing[] = [
 
   // NFT Marketplace Platform
   {
+
     id: "nft-marketplace-platform",
     title: "NFT Marketplace Platform",
     description: "Advanced NFT marketplace platform that provides secure trading, automated royalty distribution, and AI-powered valuation. Supports multiple blockchains and reduces gas fees by 40%.",
@@ -85,6 +90,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2030: ProductListing[] = [
     availability: "4-6 Weeks",
     aiScore: 95,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/nft-marketplace",
@@ -99,6 +105,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2030: ProductListing[] = [
 
   // Web3 Identity Management Platform
   {
+
     id: "web3-identity-management",
     title: "Web3 Identity Management Platform",
     description: "Decentralized identity management platform that provides self-sovereign identity, privacy-preserving authentication, and cross-platform identity verification. Eliminates password-based authentication and improves security by 90%.",
@@ -117,6 +124,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2030: ProductListing[] = [
     availability: "5-7 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/web3-identity",
@@ -131,6 +139,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2030: ProductListing[] = [
 
   // DAO Governance Platform
   {
+
     id: "dao-governance-platform",
     title: "DAO Governance Platform",
     description: "Comprehensive DAO governance platform that provides voting mechanisms, proposal management, and treasury management for decentralized organizations. Improves governance efficiency by 70% and increases participation by 50%.",
@@ -149,6 +158,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2030: ProductListing[] = [
     availability: "4-5 Weeks",
     aiScore: 94,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/dao-governance",

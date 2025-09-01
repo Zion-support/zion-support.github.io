@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { 
+import {
+
   Brain, 
   Shield, 
   Zap, 
@@ -164,6 +165,7 @@ import {
 import { INNOVATIVE_SERVICES } from '../data/servicesData';
 
 export default function ComprehensivePricingGuide2032() {
+
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('price');
@@ -207,6 +209,7 @@ export default function ComprehensivePricingGuide2032() {
   ];
 
   const filteredServices = INNOVATIVE_SERVICES.filter(service => {
+
     const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
     
     let matchesPrice = true;
@@ -219,7 +222,9 @@ export default function ComprehensivePricingGuide2032() {
   });
 
   const sortedServices = [...filteredServices].sort((a, b) => {
+
     switch (sortBy) {
+
       case 'price':
         return a.price - b.price;
       case 'price-desc':
@@ -241,6 +246,7 @@ export default function ComprehensivePricingGuide2032() {
   });
 
   const contactInfo = {
+
     phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     website: "https://ziontechgroup.com",
@@ -334,6 +340,7 @@ export default function ComprehensivePricingGuide2032() {
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
                     className={`flex items-center px-4 py-2 rounded-full border-2 transition-all duration-300 text-sm ${
+
                       selectedCategory === category.id
                         ? 'border-cyan-500 bg-cyan-500/20 text-cyan-400'
                         : 'border-white/20 text-white hover:border-cyan-500/50 hover:bg-cyan-500/10'
@@ -358,6 +365,7 @@ export default function ComprehensivePricingGuide2032() {
                     key={range.id}
                     onClick={() => setPriceRange(range.id)}
                     className={`px-4 py-2 rounded-full border-2 transition-all duration-300 text-sm ${
+
                       priceRange === range.id
                         ? 'border-cyan-500 bg-cyan-500/20 text-cyan-400'
                         : 'border-white/20 text-white hover:border-cyan-500/50 hover:bg-cyan-500/10'
@@ -378,6 +386,7 @@ export default function ComprehensivePricingGuide2032() {
                     key={option.id}
                     onClick={() => setSortBy(option.id)}
                     className={`flex items-center px-4 py-2 rounded-full border-2 transition-all duration-300 text-sm ${
+
                       sortBy === option.id
                         ? 'border-cyan-500 bg-cyan-500/20 text-cyan-400'
                         : 'border-white/20 text-white hover:border-cyan-500/50 hover:bg-cyan-500/10'
@@ -529,6 +538,7 @@ export default function ComprehensivePricingGuide2032() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
               {
+
                 name: "Budget Tier",
                 price: "$0 - $999",
                 description: "Perfect for startups and small businesses",
@@ -537,6 +547,7 @@ export default function ComprehensivePricingGuide2032() {
                 color: "from-green-500 to-emerald-600"
               },
               {
+
                 name: "Professional Tier",
                 price: "$1,000 - $2,999",
                 description: "Ideal for growing businesses and teams",
@@ -545,6 +556,7 @@ export default function ComprehensivePricingGuide2032() {
                 color: "from-blue-500 to-cyan-600"
               },
               {
+
                 name: "Enterprise Tier",
                 price: "$3,000 - $5,999",
                 description: "Built for large organizations",
@@ -553,6 +565,7 @@ export default function ComprehensivePricingGuide2032() {
                 color: "from-purple-500 to-pink-600"
               },
               {
+
                 name: "Premium Tier",
                 price: "$6,000+",
                 description: "For mission-critical applications",

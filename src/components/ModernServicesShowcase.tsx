@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Brain, 
   Cloud, 
   Shield, 
@@ -19,6 +20,7 @@ import { ModernCard } from './ui/ModernCard';
 import { ModernButton } from './ui/ModernButton';
 
 interface Service {
+
   id: string;
   title: string;
   description: string;
@@ -33,6 +35,7 @@ interface Service {
 
 const services: Service[] = [
   {
+
     id: 'ai-business-intelligence',
     title: 'AI Business Intelligence',
     description: 'Transform your data into actionable insights with advanced AI algorithms and machine learning.',
@@ -45,6 +48,7 @@ const services: Service[] = [
     featured: true
   },
   {
+
     id: 'cloud-devops',
     title: 'Cloud & DevOps',
     description: 'Streamline your development and operations with modern cloud infrastructure and automation.',
@@ -57,6 +61,7 @@ const services: Service[] = [
     featured: true
   },
   {
+
     id: 'cybersecurity',
     title: 'Cybersecurity Solutions',
     description: 'Protect your digital assets with comprehensive security measures and threat intelligence.',
@@ -69,6 +74,7 @@ const services: Service[] = [
     featured: true
   },
   {
+
     id: 'digital-twin',
     title: 'Digital Twin Platform',
     description: 'Create virtual replicas of your physical systems for simulation and optimization.',
@@ -81,6 +87,7 @@ const services: Service[] = [
     featured: true
   },
   {
+
     id: 'data-analytics',
     title: 'Data Analytics & BI',
     description: 'Unlock the power of your data with advanced analytics and business intelligence tools.',
@@ -93,6 +100,7 @@ const services: Service[] = [
     featured: false
   },
   {
+
     id: 'it-infrastructure',
     title: 'IT Infrastructure',
     description: 'Build robust and scalable technology foundations for your business growth.',
@@ -116,6 +124,7 @@ const categories = [
 ];
 
 export const ModernServicesShowcase: React.FC = () => {
+
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [hoveredService, setHoveredService] = useState<string | null>(null);
 
@@ -164,6 +173,7 @@ export const ModernServicesShowcase: React.FC = () => {
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
               className={`flex items-center gap-2 px-4 py-2 rounded-full border-2 transition-all duration-300 ${
+
                 selectedCategory === category.id
                   ? 'border-zion-cyan bg-zion-cyan/20 text-zion-cyan'
                   : 'border-zion-slate-light/30 text-gray-300 hover:border-zion-cyan/50 hover:text-zion-cyan/70'

@@ -16,33 +16,40 @@ import { Users,
              } from 'lucide-react.ts';
 
 const AISalesCopilot = () => {
+
   const features = [
     {
+
       icon: Users,
       title: "Lead Scoring & Qualification",
       description: "AI-powered lead analysis and prioritization to focus on high-value prospects."
     },
     {
+
       icon: MessageCircle,
       title: "Intelligent Conversation AI",
       description: "Natural language processing for personalized customer interactions and support."
     },
     {
+
       icon: TrendingUp,
       title: "Sales Forecasting",
       description: "Predictive analytics for accurate revenue forecasting and pipeline management."
     },
     {
+
       icon: Target,
       title: "Opportunity Management",
       description: "Smart tracking and optimization of sales opportunities throughout the funnel."
     },
     {
+
       icon: Zap,
       title: "Automated Follow-ups",
       description: "Intelligent scheduling and automated follow-up sequences for better conversion."
     },
     {
+
       icon: BarChart3,
       title: "Performance Analytics",
       description: "Comprehensive insights into sales performance, trends, and optimization opportunities."
@@ -60,16 +67,19 @@ const AISalesCopilot = () => {
 
   const salesProcess = [
     {
+
       stage: "Lead Generation",
       description: "AI-powered prospecting and lead identification",
       icon: Search
     },
     {
+
       icon: Target,
       title: "Automated Follow-ups",
       description: "Smart email sequences and follow-up scheduling based on prospect behavior patterns."
     },
     {
+
       icon: BarChart3,
       title: "Performance Insights",
       description: "Real-time sales metrics and performance optimization recommendations.";
@@ -92,6 +102,7 @@ const AISalesCopilot = () => {
 
   const pricingTiers = [
     {
+
       name: "Starter",
       price: 199,
       period: "month",
@@ -107,6 +118,7 @@ const AISalesCopilot = () => {
       popular: false
     },
     {
+
       name: "Professional",
       price: 399,
       period: "month",
@@ -123,16 +135,19 @@ const AISalesCopilot = () => {
       popular: true
     },
     {
+
       icon: Users,
       title: "Enhanced Customer Experience",
       description: "Provide personalized interactions and faster response times to prospects."
     },
     {
+
       icon: BarChart3,
       title: "Data-Driven Decisions",
       description: "Make informed sales decisions based on AI analytics and insights."
     },
     {
+
       icon: Clock,
       title: "Time Optimization",
       description: "Reduce manual work and focus on building relationships and closing deals.";
@@ -146,6 +161,7 @@ const AISalesCopilot = () => {
 
   const testimonials = [
     {
+
       name: "Sarah Johnson",
       role: "Sales Director",
       comp: "TechFlow Solutions",
@@ -153,6 +169,7 @@ const AISalesCopilot = () => {
       rating: 5
     },
     {
+
       name: "Michael Chen",
       role: "VP of Sales",
       comp: "InnovateCorp",
@@ -160,16 +177,19 @@ const AISalesCopilot = () => {
       rating: 5
     },
     {
+
       stage: "Engagement",
       description: "Intelligent conversation AI and personalized communication",
       icon: MessageCircle
     },
     {
+
       stage: "Opportunity Management",
       description: "Track and manage sales opportunities with predictive analytics",
       icon: TrendingUp
     },
     {
+
       stage: "Closing",
       description: "AI-assisted deal closing with optimized pricing and negotiation",
       icon: CheckCircle;
@@ -183,21 +203,25 @@ const AISalesCopilot = () => {
 
   const useCases = [
     {
+
       industry: "B2B Sales",
       description: "Enterprise sales teams and complex deal management",
       icon: Users
     },
     {
+
       industry: "E-commerce",
       description: "Online retail sales and customer relationship management",
       icon: ShoppingCart
     },
     {
+
       industry: "SaaS",
       description: "Software subscription sales and customer lifecycle management",
       icon: Cpu
     },
     {
+
       industry: "Real Estate",
       description: "Property sales automation, lead management, and client relationship optimization"
     }
@@ -216,6 +240,7 @@ const AISalesCopilot = () => {
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -226,6 +251,7 @@ const AISalesCopilot = () => {
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -280,6 +306,7 @@ const AISalesCopilot = () => {
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -290,6 +317,7 @@ const AISalesCopilot = () => {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -317,6 +345,7 @@ const AISalesCopilot = () => {
               <motion.div
                 key={feature.title}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -327,6 +356,7 @@ const AISalesCopilot = () => {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -337,6 +367,7 @@ const AISalesCopilot = () => {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -368,6 +399,7 @@ const AISalesCopilot = () => {
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -378,6 +410,7 @@ const AISalesCopilot = () => {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -426,6 +459,7 @@ const AISalesCopilot = () => {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -436,6 +470,7 @@ const AISalesCopilot = () => {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -487,6 +522,7 @@ const AISalesCopilot = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -497,6 +533,7 @@ const AISalesCopilot = () => {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -524,6 +561,7 @@ const AISalesCopilot = () => {
               <motion.div
                 key={stage.stage}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -534,6 +572,7 @@ const AISalesCopilot = () => {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -544,6 +583,7 @@ const AISalesCopilot = () => {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -573,6 +613,7 @@ const AISalesCopilot = () => {
                 <a 
                   href="tel:+13024640950" 
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all ${
+
                     tier.popular
                       ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:scale-105'
                       : 'bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900'
@@ -591,6 +632,7 @@ const AISalesCopilot = () => {
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -601,6 +643,7 @@ const AISalesCopilot = () => {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -650,6 +693,7 @@ const AISalesCopilot = () => {
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -660,6 +704,7 @@ const AISalesCopilot = () => {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 

@@ -1,16 +1,1 @@
-describe('EnhancedErrorBoundary', () => {}
-  it('renders without crashing', () => {}
-    render(<EnhancedErrorBoundary  />) ;
-    expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ;
-
-describe ('EnhancedErrorBoundary', () => {}
-'
-  it ('renders without crashing', () => {}
-    render (<EnhancedErrorBoundary  />) ;'
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
-'
-  it ('displays expected content', () => {}
-    render (<EnhancedErrorBoundary  />) ;
-    // Add specific test assertions based on component content;
-  }) }) ;
-'
+describe ("EnhancedErrorBoundary", () => { it ("renders without crashing", () => { render (<EnhancedErrorBoundary />) ; expect (screen.getByRole ("main") || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; it ("displays expected content", () => { render (<EnhancedErrorBoundary />) ; // Add specific test assertions based on component content }) }) ; 

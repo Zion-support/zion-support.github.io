@@ -140,6 +140,7 @@ const Home2026: React.FC = (): JSX.Element => {;
 
   const serviceCategories = [
     {
+
       title: anyanyanyanyanyanyanyanyanyanyanyanyany"AI & Analytics",
       icon: Brain,
       description: "Revolutionary AI-powered business intelligence and analytics platforms",
@@ -147,6 +148,7 @@ const Home2026: React.FC = (): JSX.Element => {;
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s              => s.category === 'AI & Analytics').length
     },
     {
+
       title: anyanyanyanyanyanyanyanyanyanyanyanyany"Quantum Computing",
       icon: Zap,
       description: "Next-generation quantum computing solutions for complex problems",
@@ -154,6 +156,7 @@ const Home2026: React.FC = (): JSX.Element => {;
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s              => s.category === 'Quantum Computing').length
     },
     {
+
       title: anyanyanyanyanyanyanyanyanyanyanyanyany"Cybersecurity",
       icon: Shield,
       description: "AI-powered cybersecurity with zero false positives",
@@ -161,6 +164,7 @@ const Home2026: React.FC = (): JSX.Element => {;
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s              => s.category === 'Cybersecurity').length
     },
     {
+
       title: anyanyanyanyanyanyanyanyanyanyanyanyany"IoT & Edge",
       icon: Cpu,
       description: "Real-time edge computing and IoT solutions",
@@ -168,6 +172,7 @@ const Home2026: React.FC = (): JSX.Element => {;
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s              => s.category === 'IoT & Edge Computing').length
     },
     {
+
       title: anyanyanyanyanyanyanyanyanyanyanyanyany"Digital Twin",
       icon: Rocket,
       description: "3D digital twin platforms for asset optimization",
@@ -191,6 +196,7 @@ const Home2026: React.FC = (): JSX.Element => {;
   ];
 
   useEffect(()              => {
+
     const interval = setInterval(() => {;
       setCurrentServiceIndex((prev) => (prev + 1) % featuredServices.length);
     }, 5000);
@@ -221,13 +227,16 @@ const Home2026: React.FC = (): JSX.Element => {;
               key={i}
               className="absolute text-cyan-400/20"
               style={{
+
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 5}s`,
                 animationDuration: `${3 + Math.random() * 4}s`
               }}
               animate = {
+
   {
+
                 y: [0, -20, 0],
                 opacity: [0.2, 0.5, 0.2],
                 rotate: [0,
@@ -241,7 +250,9 @@ const Home2026: React.FC = (): JSX.Element => {;
 
 }}
               transition = {
+
   {
+
                 duration: 4,
                 repeat: Infinity,
   ease: "easeInOut"
@@ -264,6 +275,7 @@ const Home2026: React.FC = (): JSX.Element => {;
         <div className="container mx-auto px-4 relative z-10 text-center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30 
 
@@ -274,6 +286,7 @@ const Home2026: React.FC = (): JSX.Element => {;
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -363,6 +376,7 @@ const Home2026: React.FC = (): JSX.Element => {;
         <motion.div
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
           animate = {
+
   { y: [0, 10,
   0] 
 
@@ -373,6 +387,7 @@ const Home2026: React.FC = (): JSX.Element => {;
 
 }}
           transition = {
+
   { duration: 2,
   repeat: Infinity 
 
@@ -387,6 +402,7 @@ const Home2026: React.FC = (): JSX.Element => {;
             <motion.div
               className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
               animate = {
+
   { y: [0, 12,
   0] 
 
@@ -397,6 +413,7 @@ const Home2026: React.FC = (): JSX.Element => {;
 
 }}
               transition = {
+
   { duration: 2,
   repeat: Infinity 
 
@@ -419,6 +436,7 @@ const Home2026: React.FC = (): JSX.Element => {;
               <motion.div
                 key={stat.label}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -429,6 +447,7 @@ const Home2026: React.FC = (): JSX.Element => {;
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -439,6 +458,7 @@ const Home2026: React.FC = (): JSX.Element => {;
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -466,6 +486,7 @@ const Home2026: React.FC = (): JSX.Element => {;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -476,6 +497,7 @@ const Home2026: React.FC = (): JSX.Element => {;
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -501,6 +523,7 @@ const Home2026: React.FC = (): JSX.Element => {;
               <motion.div
                 key={category.title}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -511,6 +534,7 @@ const Home2026: React.FC = (): JSX.Element => {;
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -521,6 +545,7 @@ const Home2026: React.FC = (): JSX.Element => {;
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -568,6 +593,7 @@ const Home2026: React.FC = (): JSX.Element => {;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -578,6 +604,7 @@ const Home2026: React.FC = (): JSX.Element => {;
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -604,6 +631,7 @@ const Home2026: React.FC = (): JSX.Element => {;
                 <motion.div
                   key={service.id}
                   initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -614,6 +642,7 @@ const Home2026: React.FC = (): JSX.Element => {;
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -624,6 +653,7 @@ const Home2026: React.FC = (): JSX.Element => {;
 
 }}
                   transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -634,6 +664,7 @@ const Home2026: React.FC = (): JSX.Element => {;
 
 }}
                   className={`group bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur border border-cyan-400/30 hover:border-cyan-400/60 rounded-3xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-400/20 ${
+
                     index === currentServiceIndex ? 'ring-2 ring-cyan-400/50' : ''
                   }`}
 
@@ -695,6 +726,7 @@ const Home2026: React.FC = (): JSX.Element => {;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -705,6 +737,7 @@ const Home2026: React.FC = (): JSX.Element => {;
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -728,36 +761,42 @@ const Home2026: React.FC = (): JSX.Element => {;
           <div className="grid gap-8 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
             {[
               {
+
                 icon: Star,
                 title: "Revolutionary Innovation",
                 description: "Leading the charge with cutting-edge AI, quantum computing, and next-generation technologies that don't exist anywhere else.",
                 color: "from-yellow-500 to-orange-600"
               },
               {
+
                 icon: Award,
                 title: "Proven Excellence",
                 description: "Track record of delivering transformative solutions with 99.9% success rate and 98% client satisfaction.",
                 color: "from-blue-500 to-cyan-600"
               },
               {
+
                 icon: Target,
                 title: "Future-Focused",
                 description: "We don't just solve today's problems – we anticipate tomorrow's challenges and build solutions for the future.",
                 color: "from-green-500 to-emerald-600"
               },
               {
+
                 icon: Users,
                 title: "Expert Team",
                 description: "World-class engineers, scientists, and innovators with deep expertise in AI, quantum computing, and emerging technologies.",
                 color: "from-purple-500 to-pink-600"
               },
               {
+
                 icon: Globe,
                 title: "Global Impact",
                 description: "Our solutions are transforming industries worldwide, from healthcare to finance, manufacturing to sustainability.",
                 color: "from-indigo-500 to-purple-600"
               },
               {
+
                 icon: TrendingUp,
                 title: "Continuous Growth",
                 description: "We never stop innovating. Our R&D team is constantly pushing the boundaries of what's possible.",
@@ -767,6 +806,7 @@ const Home2026: React.FC = (): JSX.Element => {;
               <motion.div
                 key={feature.title}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -777,6 +817,7 @@ const Home2026: React.FC = (): JSX.Element => {;
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -787,6 +828,7 @@ const Home2026: React.FC = (): JSX.Element => {;
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -820,6 +862,7 @@ const Home2026: React.FC = (): JSX.Element => {;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -830,6 +873,7 @@ const Home2026: React.FC = (): JSX.Element => {;
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 

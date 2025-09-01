@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   DollarSign, 
   Calendar, 
   TrendingUp, 
@@ -25,6 +26,7 @@ import {
 } from 'lucide-react';
 
 const ExpandedServicesPricing2027: React.FC = () => {
+
   const [selectedPlan, setSelectedPlan] = useState('starter');
   const [selectedBilling, setSelectedBilling] = useState('monthly');
   const [selectedRegion, setSelectedRegion] = useState('global');
@@ -45,6 +47,7 @@ const ExpandedServicesPricing2027: React.FC = () => {
 
   const serviceCategories = [
     {
+
       id: 'ai-solutions',
       name: 'AI Solutions',
       icon: <Bot className="w-8 h-8" />,
@@ -52,6 +55,7 @@ const ExpandedServicesPricing2027: React.FC = () => {
       description: 'Advanced artificial intelligence and machine learning services'
     },
     {
+
       id: 'cloud-platforms',
       name: 'Cloud Platforms',
       icon: <Cloud className="w-8 h-8" />,
@@ -59,6 +63,7 @@ const ExpandedServicesPricing2027: React.FC = () => {
       description: 'Scalable cloud infrastructure and platform services'
     },
     {
+
       id: 'cybersecurity',
       name: 'Cybersecurity',
       icon: <Shield className="w-8 h-8" />,
@@ -66,6 +71,7 @@ const ExpandedServicesPricing2027: React.FC = () => {
       description: 'Comprehensive security solutions for enterprise protection'
     },
     {
+
       id: 'data-analytics',
       name: 'Data Analytics',
       icon: <Database className="w-8 h-8" />,
@@ -73,6 +79,7 @@ const ExpandedServicesPricing2027: React.FC = () => {
       description: 'Business intelligence and data analysis tools'
     },
     {
+
       id: 'automation-tools',
       name: 'Automation Tools',
       icon: <Zap className="w-8 h-8" />,
@@ -80,6 +87,7 @@ const ExpandedServicesPricing2027: React.FC = () => {
       description: 'Intelligent automation and workflow optimization'
     },
     {
+
       id: 'consulting',
       name: 'Consulting Services',
       icon: <Users className="w-8 h-8" />,
@@ -89,7 +97,9 @@ const ExpandedServicesPricing2027: React.FC = () => {
   ];
 
   const pricingPlans = {
+
     starter: {
+
       name: 'Starter',
       description: 'Perfect for small businesses and startups',
       price: { monthly: 99, annual: 79, biennial: 69 },
@@ -109,6 +119,7 @@ const ExpandedServicesPricing2027: React.FC = () => {
       color: 'from-green-500 to-emerald-500'
     },
     professional: {
+
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
       price: { monthly: 299, annual: 239, biennial: 209 },
@@ -129,6 +140,7 @@ const ExpandedServicesPricing2027: React.FC = () => {
       color: 'from-blue-500 to-cyan-500'
     },
     enterprise: {
+
       name: 'Enterprise',
       description: 'Comprehensive solution for large organizations',
       price: { monthly: 799, annual: 639, biennial: 559 },
@@ -151,6 +163,7 @@ const ExpandedServicesPricing2027: React.FC = () => {
       color: 'from-purple-500 to-pink-500'
     },
     custom: {
+
       name: 'Custom',
       description: 'Tailored solutions for unique requirements',
       price: { monthly: 'Custom', annual: 'Custom', biennial: 'Custom' },
@@ -174,30 +187,35 @@ const ExpandedServicesPricing2027: React.FC = () => {
 
   const addOnServices = [
     {
+
       name: 'AI Model Training',
       description: 'Custom AI model development and training',
       price: { monthly: 199, annual: 159, biennial: 139 },
       category: 'ai-solutions'
     },
     {
+
       name: 'Advanced Security',
       description: 'Enhanced security features and compliance',
       price: { monthly: 149, annual: 119, biennial: 99 },
       category: 'cybersecurity'
     },
     {
+
       name: 'Data Migration',
       description: 'Professional data migration and setup',
       price: { monthly: 299, annual: 239, biennial: 209 },
       category: 'data-analytics'
     },
     {
+
       name: 'Custom Integration',
       description: 'Custom API integrations and connectors',
       price: { monthly: 399, annual: 319, biennial: 279 },
       category: 'automation-tools'
     },
     {
+
       name: 'Training & Support',
       description: 'Comprehensive training and support packages',
       price: { monthly: 99, annual: 79, biennial: 69 },
@@ -206,6 +224,7 @@ const ExpandedServicesPricing2027: React.FC = () => {
   ];
 
   const calculatePrice = (basePrice: number, billing: string, region: string) => {
+
     const regionData = regions.find(r => r.id === region);
     const billingData = billingOptions.find(b => b.id === billing);
     
@@ -218,6 +237,7 @@ const ExpandedServicesPricing2027: React.FC = () => {
   };
 
   const getCurrencySymbol = (region: string) => {
+
     const regionData = regions.find(r => r.id === region);
     return regionData?.currency || '$';
   };
@@ -388,6 +408,7 @@ const ExpandedServicesPricing2027: React.FC = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 ${
+
                   selectedPlan === id ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' : ''
                 } hover:border-cyan-500/30 transition-all duration-300`}
               >
@@ -454,6 +475,7 @@ const ExpandedServicesPricing2027: React.FC = () => {
                 <button 
                   onClick={() => setSelectedPlan(id)}
                   className={`w-full px-6 py-3 font-semibold rounded-xl transition-all duration-300 ${
+
                     selectedPlan === id
                       ? 'bg-cyan-500 text-white hover:bg-cyan-600'
                       : 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600 transform hover:scale-105 shadow-lg shadow-cyan-500/25'

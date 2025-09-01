@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react.ts';
 import { motion, AnimatePresence            } from 'framer-motion.ts';
-import { 
+import {
+
   Eye, 
   EyeOff, 
   Type, 
@@ -15,16 +16,6 @@ import {
            } from 'lucide-react.ts';
 
 interface AccessibilitySettings {
-
-
-
-
-
-
-
-
-
-
 
   highContrast: boolean;
   largeText: boolean;
@@ -44,9 +35,11 @@ interface AccessibilityEnhancerProps extends React.PropsWithChildren<{}> {
 }
 
 export function AccessibilityEnhancer(...args: any[]): any {
+
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(showSettings);
   const [settings, setSettings] = useState<any>({
+
     highContrast: false,
     largeText: false,
     reducedMotion: false,
@@ -62,20 +55,25 @@ export function AccessibilityEnhancer(...args: any[]): any {
 
   // Load saved settings from localStorage
   useEffect(() => {
+
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
+
       try {
+
         const parsed = JSON.parse(savedSettings);
         setSettings(prev => ({ ...prev, ...parsed }));
         applySettings({ ...settings, ...parsed });
       } catch (error) {
-        console.error('Failed to parse accessibility settings:', error);
+
+        // // // console.error('Failed to parse accessibility settings:', error);
       }
     }
   }, [applySettings]);
 
   // Keyboard navigation support
   useEffect(() => {
+
     const handleKeyDown = (event: anyanyanyanyanyanyanyanyanyanyanyKeyboardEvent)            => {;
       // Skip if not in keyboard navigation mode;
       if (!settings.keyboardNavigation) return;
@@ -84,6 +82,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
       
       // Tab navigation enhancement
       if (event.key = == 'Tab') {
+
         const focusableElements = document.querySelectorAll(;
           'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
         );
@@ -102,8 +101,10 @@ export function AccessibilityEnhancer(...args: any[]): any {
 
       // Arrow key navigation for custom components
       if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {
+
         const currentElement = target.closest('[data-navigation-group]');
         if (currentElement) {
+
           event.preventDefault();
           navigateWithArrows(currentElement, event.key);
         }
@@ -111,7 +112,9 @@ export function AccessibilityEnhancer(...args: any[]): any {
 
       // Enter/Space for interactive elements
       if (['Enter', ' '].includes(event.key)) {
+
         if (target.getAttribute('role') === 'button' || target.classList.contains('interactive')) {
+
           event.preventDefault();
           target.click();
         }
@@ -124,6 +127,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
 
   // Arrow key navigation helper
   const navigateWithArrows = (container: anyanyanyanyanyanyanyanyanyanyanyElement, direction: string)            => {
+
     const focusableElements = Array.from(container.querySelectorAll(;
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     )).filter(el => !(el as HTMLElement).hidden);
@@ -132,6 +136,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
     let nextIndex = currentIndex;
 
     switch (direction) {
+
       case 'ArrowRight':
       case 'ArrowDown':
         nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0;
@@ -155,6 +160,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
       document.body.appendChild(announcement);
       
       setTimeout(() => {
+
         document.body.removeChild(announcement);
       }, 1000);
     }
@@ -162,6 +168,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
 
   // Add accessibility attributes to interactive elements
   useEffect(() => {
+
     const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
     
     interactiveElements.forEach(element = > {;
@@ -174,14 +181,17 @@ export function AccessibilityEnhancer(...args: any[]): any {
       
       // Add aria-label for elements without text
       if (!el.textContent?.trim() && !el.getAttribute('aria-label')) {
+
         const title = el.getAttribute('title');
         if (title) {
+
           el.setAttribute('aria-label', title);
         }
       }
       
       // Add focus indicator
       if (settings.focusIndicator) {
+
         el.classList.add('focus-visible');
       }
     });
@@ -189,6 +199,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
 
   // Add CSS for accessibility features
   useEffect(() => {
+
     const style = document.createElement('style');
     style.textContent = `
       /* High contrast mode */;
@@ -202,6 +213,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
       }
       
       .high-contrast * {
+
         color: var(--text-primary) !important;
         background-color: var(--bg-primary) !important;
         border-color: var(--border) !important;
@@ -209,6 +221,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
       
       /* Large text mode */
       .large-text {
+
         font-size: 1.2em !important;
       }
       
@@ -221,6 +234,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
       .reduced-motion *,
       .reduced-motion *::before,
       .reduced-motion *::after {
+
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
@@ -229,16 +243,19 @@ export function AccessibilityEnhancer(...args: any[]): any {
       
       /* Focus indicators */
       .focus-visible:focus {
+
         outline: 3px solid #3b82f6 !important;
         outline-offset: 2px !important;
       }
       
       .focus-visible:focus:not(:focus-visible) {
+
         outline: none !important;
       }
       
       /* Screen reader only */
       .sr-only {
+
         position: absolute !important;
         width: 1px !important;
         height: 1px !important;
@@ -252,6 +269,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
       
       /* Skip to main content link */
       .skip-link {
+
         position: absolute;
         top: -40px;
         left: 6px;
@@ -263,26 +281,31 @@ export function AccessibilityEnhancer(...args: any[]): any {
       }
       
       .skip-link:focus {
+
         top: 6px;
       }
     `;
     document.head.appendChild(style);
 
     return ()            => {
+
       document.head.removeChild(style);
     };
   }, []);
 
   // Apply accessibility settings to the document
   const applySettings = (newSettings: anyanyanyanyanyanyanyanyanyanyanyAccessibilitySettings)            => {
+
     const root = document.documentElement;
     
     // High contrast
     if (newSettings.highContrast) {
+
       root.style.setProperty('--text-color', '#ffffff');
       root.style.setProperty('--bg-color', '#000000');
       root.style.setProperty('--accent-color', '#ffff00');
     } else {
+
       root.style.removeProperty('--text-color');
       root.style.removeProperty('--bg-color');
       root.style.removeProperty('--accent-color');
@@ -290,25 +313,31 @@ export function AccessibilityEnhancer(...args: any[]): any {
 
     // Large text
     if (newSettings.largeText) {
+
       root.style.setProperty('--base-font-size', '18px');
       root.style.setProperty('--heading-scale', '1.3');
     } else {
+
       root.style.setProperty('--base-font-size', '16px');
       root.style.setProperty('--heading-scale', '1.2');
     }
 
     // Reduced motion
     if (newSettings.reducedMotion) {
+
       root.style.setProperty('--animation-duration', '0.1s');
       root.style.setProperty('--transition-duration', '0.1s');
     } else {
+
       root.style.removeProperty('--animation-duration');
       root.style.removeProperty('--transition-duration');
 
     // High saturation
     if (newSettings.highSaturation) {
+
       root.style.setProperty('--saturation-filter', 'saturate(1.5)');
     } else {
+
       root.style.removeProperty('--saturation-filter');
     }
 
@@ -320,6 +349,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
 
   // Save settings to localStorage
   const saveSettings = (newSettings: anyanyanyanyanyanyanyanyanyanyanyAccessibilitySettings)            => {
+
     localStorage.setItem('zion-accessibility-settings', JSON.stringify(newSettings));
     setSettings(newSettings);
     applySettings(newSettings);
@@ -330,6 +360,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
     key: anyanyanyanyanyanyanyanyanyanyanyK, 
     value: AccessibilitySettings[K]
   )            => {
+
     const newSettings = { ...settings, [key]: value };
     saveSettings(newSettings);
     
@@ -337,13 +368,16 @@ export function AccessibilityEnhancer(...args: any[]): any {
     const notification = `Updated ${key.replace(/([A-Z])/g, ' $1').toLowerCase()}`;
     setNotifications(prev => [...prev, notification]);
     setTimeout(() => {
+
       setNotifications(prev => prev.filter(n => n !== notification));
     }, 3000);
   };
 
   // Reset to default settings
   const resetSettings = () => {
+
     const defaultSettings: AccessibilitySettings = {
+
       highContrast: anyanyanyanyanyanyanyanyanyanyanyfalse,
       largeText: false,
       reducedMotion: false,
@@ -355,6 +389,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
     saveSettings(defaultSettings);
     setNotifications(prev            => [...prev, 'Settings reset to default']);
     setTimeout(() => {
+
       setNotifications(prev => prev.filter(n => n !== 'Settings reset to default'));
     }, 3000);
   };
@@ -362,6 +397,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
   // Quick accessibility actions
   const quickActions = [
     {
+
       name: anyanyanyanyanyanyanyanyanyanyany'High Contrast',
       icon: Contrast,
       action: ()            => updateSetting('highContrast', !settings.highContrast),
@@ -369,6 +405,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
       description: 'Increase contrast for better readability'
     },
     {
+
       name: 'Large Text',
       icon: Type,
       action: ()            => updateSetting('largeText', !settings.largeText),
@@ -376,6 +413,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
       description: 'Increase text size for better readability'
     },
     {
+
       name: 'Reduced Motion',
       icon: EyeOff,
       action: ()            => updateSetting('reducedMotion', !settings.reducedMotion),
@@ -383,6 +421,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
       description: 'Reduce animations for motion sensitivity'
     },
     {
+
       name: 'High Saturation',
       icon: Eye,
       action: ()            => updateSetting('highSaturation', !settings.highSaturation),
@@ -395,6 +434,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
   const fontSizes = [12, 14, 16, 18, 20, 24, 28, 32];
 
   useEffect(() => {
+
     // Show accessibility panel after page load
     const timer = setTimeout(() => setIsVisible(true), 3000);
     return () => clearTimeout(timer);
@@ -455,6 +495,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
                       key={action.name}
                       onClick={action.action}
                       className={`p-3 rounded-lg border transition-all duration-200 ${
+
                         action.active
                           ? 'bg-cyan-500/20 border-cyan-400 text-cyan-400'
                           : 'bg-slate-800/50 border-slate-600 text-gray-300 hover:bg-slate-700/50'
@@ -481,6 +522,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
                         key={size}
                         onClick={() => updateSetting('fontSize', size)}
                         className={`p-2 rounded text-xs font-medium transition-colors ${
+
                           settings.fontSize === size
                             ? 'bg-cyan-500 text-white'
                             : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
@@ -503,6 +545,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
                       key={height}
                       onClick={() => updateSetting('lineHeight', height)}
                       className={`w-full p-2 rounded text-sm transition-colors ${
+
                         settings.lineHeight === height
                           ? 'bg-cyan-500 text-white'
                           : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
@@ -523,6 +566,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
                       key={spacing}
                       onClick={() => updateSetting('letterSpacing', spacing)}
                       className={`w-full p-2 rounded text-sm transition-colors ${
+
                         settings.letterSpacing === spacing
                           ? 'bg-cyan-500 text-white'
                           : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
@@ -574,6 +618,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
                     <div
                       key={issue.id}
                       className={`p-2 rounded-lg text-xs ${
+
                         issue.type === 'error' ? 'bg-red-500/20 border border-red-500/30' :
                         issue.type === 'warning' ? 'bg-yellow-500/20 border border-yellow-500/30' :
                         'bg-blue-500/20 border border-blue-500/30'

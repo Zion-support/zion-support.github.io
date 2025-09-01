@@ -3,6 +3,7 @@ import { ProductListing } from "@/types/listings";
 export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
   // Quantum Computing as a Service
   {
+
     id: "quantum-computing-as-a-service",
     title: "Quantum Computing as a Service Platform",
     description: "Enterprise quantum computing platform providing access to quantum processors, quantum algorithms, and quantum software development tools. Enables solving complex optimization problems that are impossible for classical computers.",
@@ -21,6 +22,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     availability: "12-16 Weeks",
     aiScore: 99,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-computing-service",
@@ -35,6 +37,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
 
   // Space Technology Platform
   {
+
     id: "space-technology-platform",
     title: "Advanced Space Technology Platform",
     description: "Comprehensive space technology platform for satellite operations, space data analytics, and space infrastructure management. Enables organizations to leverage space-based technologies for Earth observation and communication.",
@@ -53,6 +56,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     availability: "10-14 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/space-technology-platform",
@@ -67,6 +71,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
 
   // Neuromorphic Computing Platform
   {
+
     id: "neuromorphic-computing-platform",
     title: "Neuromorphic Computing Platform",
     description: "Brain-inspired computing platform that mimics neural networks for ultra-efficient AI processing. Achieves 1000x better energy efficiency than traditional AI chips and enables edge AI applications with minimal power consumption.",
@@ -85,6 +90,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     availability: "14-18 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/neuromorphic-computing",
@@ -99,6 +105,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
 
   // Synthetic Biology Platform
   {
+
     id: "synthetic-biology-platform",
     title: "Synthetic Biology Design Platform",
     description: "Advanced platform for designing and engineering biological systems using computational biology and AI. Enables drug discovery, bio-manufacturing, and sustainable materials development with unprecedented precision.",
@@ -117,6 +124,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     availability: "12-16 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/synthetic-biology-platform",
@@ -131,6 +139,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
 
   // Fusion Energy Technology Platform
   {
+
     id: "fusion-energy-technology-platform",
     title: "Fusion Energy Technology Platform",
     description: "Revolutionary fusion energy platform using advanced plasma physics and AI control systems. Provides clean, limitless energy with zero carbon emissions and minimal radioactive waste.",
@@ -149,6 +158,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     availability: "20-24 Weeks",
     aiScore: 99,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/fusion-energy-platform",
@@ -163,6 +173,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
 
   // Metaverse Development Platform
   {
+
     id: "metaverse-development-platform",
     title: "Enterprise Metaverse Development Platform",
     description: "Complete metaverse development platform for creating immersive 3D virtual worlds, virtual events, and digital twin experiences. Supports VR/AR, blockchain integration, and AI-powered avatars.",
@@ -181,6 +192,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     availability: "8-12 Weeks",
     aiScore: 94,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/metaverse-development-platform",
@@ -195,6 +207,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
 
   // Brain-Computer Interface Platform
   {
+
     id: "brain-computer-interface-platform",
     title: "Advanced Brain-Computer Interface Platform",
     description: "Next-generation brain-computer interface platform enabling direct communication between the brain and computers. Applications include assistive technology, gaming, and medical rehabilitation.",
@@ -213,6 +226,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     availability: "16-20 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/brain-computer-interface",
@@ -227,6 +241,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
 
   // Quantum Internet Platform
   {
+
     id: "quantum-internet-platform",
     title: "Quantum Internet Infrastructure Platform",
     description: "Revolutionary quantum internet platform enabling ultra-secure communication using quantum entanglement and quantum key distribution. Provides unhackable communication channels for government and enterprise.",
@@ -245,6 +260,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     availability: "18-22 Weeks",
     aiScore: 99,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-internet-platform",
@@ -259,6 +275,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
 
   // Autonomous Vehicle Technology Platform
   {
+
     id: "autonomous-vehicle-technology",
     title: "Autonomous Vehicle Technology Platform",
     description: "Comprehensive autonomous vehicle platform with advanced AI, sensor fusion, and safety systems. Enables Level 4-5 autonomy for passenger vehicles, trucks, and industrial applications.",
@@ -277,6 +294,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     availability: "14-18 Weeks",
     aiScore: 95,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/autonomous-vehicle-platform",
@@ -291,6 +309,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
 
   // Advanced Robotics Platform
   {
+
     id: "advanced-robotics-platform",
     title: "Advanced Robotics and Automation Platform",
     description: "Next-generation robotics platform with human-like dexterity, AI-powered decision making, and collaborative capabilities. Enables safe human-robot collaboration in manufacturing, healthcare, and service industries.",
@@ -309,6 +328,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     availability: "12-16 Weeks",
     aiScore: 94,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/advanced-robotics-platform",

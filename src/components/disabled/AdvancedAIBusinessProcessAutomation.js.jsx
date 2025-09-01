@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Workflow, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader } from 'lucide-react';
 const mockBusinessProcesses = [
     {
+
         id: 'bp-001',
         name: 'Invoice Processing & Approval',
         description: 'Automated invoice processing with AI-powered validation and approval workflows',
@@ -22,6 +23,7 @@ const mockBusinessProcesses = [
         nextExecution: new Date('2024-01-16T09:00:00Z'),
         executionHistory[
             {
+
                 id: 'exec-001',
                 timestamp: new Date('2024-01-15T10:30:00Z'),
                 status: 'success',
@@ -34,6 +36,7 @@ const mockBusinessProcesses = [
         ],
         rules[
             {
+
                 id: 'rule-001',
                 name: 'Auto-approve under $1000',
                 condition: 'amount < 1000 AND vendor_verified = true',
@@ -48,6 +51,7 @@ const mockBusinessProcesses = [
         dependencies['vendor_verification', 'budget_approval']
     },
     {
+
         id: 'bp-002',
         name: 'Employee Onboarding',
         description: 'Streamlined employee onboarding with automated document processing and task assignment',
@@ -68,6 +72,7 @@ const mockBusinessProcesses = [
         nextExecution: new Date('2024-01-17T09:00:00Z'),
         executionHistory[
             {
+
                 id: 'exec-002',
                 timestamp: new Date('2024-01-14T14:15:00Z'),
                 status: 'success',
@@ -80,6 +85,7 @@ const mockBusinessProcesses = [
         ],
         rules[
             {
+
                 id: 'rule-002',
                 name: 'Auto-assign IT tasks',
                 condition: 'employee_type = "full_time" AND department != "contractor"',
@@ -94,6 +100,7 @@ const mockBusinessProcesses = [
         dependencies['background_check', 'document_verification']
     },
     {
+
         id: 'bp-003',
         name: 'Customer Support Ticket Routing',
         description: 'Intelligent ticket routing based on AI analysis of customer issues and agent expertise',
@@ -114,6 +121,7 @@ const mockBusinessProcesses = [
         nextExecution: new Date('2024-01-15T17:00:00Z'),
         executionHistory[
             {
+
                 id: 'exec-003',
                 timestamp: new Date('2024-01-15T16:45:00Z'),
                 status: 'success',
@@ -126,6 +134,7 @@ const mockBusinessProcesses = [
         ],
         rules[
             {
+
                 id: 'rule-003',
                 name: 'Priority-based routing',
                 condition: 'priority = "critical" AND category = "technical"',
@@ -141,6 +150,7 @@ const mockBusinessProcesses = [
     }
 ];
 export function AdvancedAIBusinessProcessAutomation() {
+
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
@@ -155,7 +165,9 @@ export function AdvancedAIBusinessProcessAutomation() {
     const [isExecuting, setIsExecuting] = useState(false);
     const containerRef = useRef(null);
     const getStatusColor = (status) => {
+
         switch (status) {
+
             case 'active': return 'text-green-500 bg-green-100 dark:bg-green-900/20';
             case 'paused': return 'text-yellow-500 bg-yellow-100 dark:bg-yellow-900/20';
             case 'completed': return 'text-blue-500 bg-blue-100 dark:bg-blue-900/20';
@@ -164,7 +176,9 @@ export function AdvancedAIBusinessProcessAutomation() {
             default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20'}
     };
     const getPriorityColor = (priority) => {
+
         switch (priority) {
+
             case 'critical': return 'text-red-600 bg-red-100 dark:bg-red-900/20';
             case 'high': return 'text-orange-600 bg-orange-100 dark:bg-orange-900/20';
             case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20';
@@ -172,14 +186,18 @@ export function AdvancedAIBusinessProcessAutomation() {
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20'}
     };
     const getAutomationLevelColor = (level) => {
+
         switch (level) {
+
             case 'fully-automated': return 'text-green-600 bg-green-100 dark:bg-green-900/20';
             case 'semi-automated': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20';
             case 'manual': return 'text-red-600 bg-red-100 dark:bg-red-900/20';
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20'}
     };
     const getCategoryIcon = (category) => {
+
         switch (category) {
+
             case 'finance': return <DollarSign className="w-4 h-4"/>;
             case 'hr': return <Users className="w-4 h-4"/>;
             case 'operations': return <Settings className="w-4 h-4"/>;
@@ -189,8 +207,10 @@ export function AdvancedAIBusinessProcessAutomation() {
             default: return <FileText className="w-4 h-4"/>}
     };
     const formatPercentage = (value) => {
+
         return `${value}%`};
     const executeProcess = async (processId) => {
+
         setIsExecuting(true);
         // Simulate process execution
         await new Promise(resolve => setTimeout(resolve, 2000));
@@ -200,10 +220,12 @@ export function AdvancedAIBusinessProcessAutomation() {
             ? { ...p, lastExecuted: new Date(), status: 'active' }
             : p))};
     const filteredProcesses = businessProcesses.filter(process => {
+
         const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
             process.description.toLowerCase().includes(searchQuery.toLowerCase());
         return matchesCategory && matchesStatus && matchesSearch});
     if (!isOpen) {
+
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-purple text-white p-4 rounded-full shadow-2xl hover:shadow-zion-blue/50 transition-all duration-300 z-50 group">
         <div className="flex items-center gap-3">
           <Workflow className="w-6 h-6"/>
@@ -214,6 +236,7 @@ export function AdvancedAIBusinessProcessAutomation() {
         </div>
       </button>)}
     if (isMinimized) {
+
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50">
         <div className="flex items-center gap-3 p-3">
           <Workflow className="w-5 h-5 text-zion-blue"/>
@@ -526,6 +549,7 @@ export function AdvancedAIBusinessProcessAutomation() {
               </h3>
               <div className="space-y-4">
                 {businessProcesses.flatMap(process => process.rules.map(rule => ({
+
                 ...rule,
                 processName: process.name,
                 processCategory: process.category

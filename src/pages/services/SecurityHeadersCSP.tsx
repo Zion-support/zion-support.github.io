@@ -39,33 +39,40 @@ import { Shield,
              } from 'lucide-react.ts';
 
 export default function SecurityHeadersCSP(...args: any[]): any {
+
   const features = [
     {
+
       icon: Shield,
       title: "Security Headers Implementation",
       description: "Comprehensive implementation of all essential security headers for web applications."
     },
     {
+
       icon: Lock,
       title: "Content Security Policy",
       description: "Advanced CSP configuration and monitoring for XSS protection."
     },
     {
+
       icon: Target,
       title: "Threat Detection",
       description: "Real-time monitoring and alerting for security violations."
     },
     {
+
       icon: Zap,
       title: "Automated Security",
       description: "Intelligent automation of security header management and updates."
     },
     {
+
       icon: BarChart3,
       title: "Security Analytics",
       description: "Comprehensive insights into security posture and threat landscape."
     },
     {
+
       icon: Server,
       title: "Infrastructure Security",
       description: "Server-level security hardening and configuration optimization."
@@ -83,31 +90,37 @@ export default function SecurityHeadersCSP(...args: any[]): any {
 
   const securityHeaders = [
     {
+
       header: "Content Security Policy (CSP)",
       description: "Prevent XSS attacks by controlling resource loading",
       icon: Shield
     },
     {
+
       header: "X-Frame-Options",
       description: "Protect against clickjacking attacks",
       icon: Lock
     },
     {
+
       header: "X-Content-Type-Options",
       description: "Prevent MIME type sniffing attacks",
       icon: Eye
     },
     {
+
       header: "Strict-Transport-Security (HSTS)",
       description: "Enforce HTTPS connections",
       icon: Key
     },
     {
+
       header: "X-XSS-Protection",
       description: "Enable browser XSS filtering",
       icon: AlertTriangle
     },
     {
+
       header: "Referrer-Policy",
       description: "Control referrer information in HTTP requests",
       icon: Eye
@@ -116,21 +129,25 @@ export default function SecurityHeadersCSP(...args: any[]): any {
 
   const useCases = [
     {
+
       industry: "E-commerce",
       description: "Protect customer data and payment information in online stores",
       icon: ShoppingCart
     },
     {
+
       industry: "Financial Services",
       description: "Secure banking and financial applications with strict security policies",
       icon: DollarSign
     },
     {
+
       industry: "Healthcare",
       description: "Protect patient data and ensure HIPAA compliance",
       icon: Heart
     },
     {
+
       industry: "Government",
       description: "Public data security, compliance requirements, and citizen information protection"
     }
@@ -150,6 +167,7 @@ export default function SecurityHeadersCSP(...args: any[]): any {
         <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -160,6 +178,7 @@ export default function SecurityHeadersCSP(...args: any[]): any {
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -204,6 +223,7 @@ export default function SecurityHeadersCSP(...args: any[]): any {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -214,6 +234,7 @@ export default function SecurityHeadersCSP(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -241,6 +262,7 @@ export default function SecurityHeadersCSP(...args: any[]): any {
               <motion.div
                 key={feature.title}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -251,6 +273,7 @@ export default function SecurityHeadersCSP(...args: any[]): any {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -261,6 +284,7 @@ export default function SecurityHeadersCSP(...args: any[]): any {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -303,6 +327,7 @@ export default function SecurityHeadersCSP(...args: any[]): any {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -313,6 +338,7 @@ export default function SecurityHeadersCSP(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -340,6 +366,7 @@ export default function SecurityHeadersCSP(...args: any[]): any {
               <motion.div
                 key={benefit.title}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -350,6 +377,7 @@ export default function SecurityHeadersCSP(...args: any[]): any {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -360,6 +388,7 @@ export default function SecurityHeadersCSP(...args: any[]): any {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -402,6 +431,7 @@ export default function SecurityHeadersCSP(...args: any[]): any {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -412,6 +442,7 @@ export default function SecurityHeadersCSP(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -439,6 +470,7 @@ export default function SecurityHeadersCSP(...args: any[]): any {
               <motion.div
                 key={header.header}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -449,6 +481,7 @@ export default function SecurityHeadersCSP(...args: any[]): any {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -459,6 +492,7 @@ export default function SecurityHeadersCSP(...args: any[]): any {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -501,6 +535,7 @@ export default function SecurityHeadersCSP(...args: any[]): any {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -511,6 +546,7 @@ export default function SecurityHeadersCSP(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -538,6 +574,7 @@ export default function SecurityHeadersCSP(...args: any[]): any {
               <motion.div
                 key={useCase.industry}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -548,6 +585,7 @@ export default function SecurityHeadersCSP(...args: any[]): any {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -558,6 +596,7 @@ export default function SecurityHeadersCSP(...args: any[]): any {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -600,6 +639,7 @@ export default function SecurityHeadersCSP(...args: any[]): any {
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -610,6 +650,7 @@ export default function SecurityHeadersCSP(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 

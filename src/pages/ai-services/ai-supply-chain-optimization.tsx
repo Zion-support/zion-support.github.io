@@ -3,33 +3,40 @@ import { motion } from 'framer-motion';
 import { Network, TrendingUp, Shield, Zap, BarChart3, Globe, Truck, Package, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, DollarSign, Users } from 'lucide-react';
 
 const AISupplyChainOptimization: React.FC = () => {
+
   const features = [
     {
+
       icon: Network,
       title: "AI-Powered Forecasting",
       description: "Advanced machine learning algorithms predict demand patterns with 95%+ accuracy across all product categories"
     },
     {
+
       icon: TrendingUp,
       title: "Real-time Visibility",
       description: "End-to-end supply chain transparency with real-time tracking, alerts, and predictive analytics"
     },
     {
+
       icon: Truck,
       title: "Intelligent Routing",
       description: "AI-optimized logistics routes that reduce delivery times by 30% and cut transportation costs by 25%"
     },
     {
+
       icon: Shield,
       title: "Risk Management",
       description: "Proactive identification and mitigation of supply chain risks with automated contingency planning"
     },
     {
+
       icon: BarChart3,
       title: "Performance Analytics",
       description: "Comprehensive KPI dashboards with actionable insights for continuous supply chain improvement"
     },
     {
+
       icon: Globe,
       title: "Global Optimization",
       description: "Multi-region supply chain coordination with intelligent inventory distribution and demand balancing"
@@ -38,24 +45,28 @@ const AISupplyChainOptimization: React.FC = () => {
 
   const benefits = [
     {
+
       icon: DollarSign,
       title: "Cost Reduction",
       value: "25-40%",
       description: "Lower inventory costs, reduced transportation expenses, and optimized supplier relationships"
     },
     {
+
       icon: Clock,
       title: "Faster Delivery",
       value: "30-50%",
       description: "Improved lead times and faster order fulfillment through intelligent routing and inventory optimization"
     },
     {
+
       icon: TrendingUp,
       title: "Increased Efficiency",
       value: "35-60%",
       description: "Streamlined operations, reduced waste, and improved resource utilization across the supply chain"
     },
     {
+
       icon: Shield,
       title: "Risk Mitigation",
       value: "90%+",
@@ -65,6 +76,7 @@ const AISupplyChainOptimization: React.FC = () => {
 
   const pricing = [
     {
+
       plan: "Starter",
       price: "$499",
       period: "/month",
@@ -79,6 +91,7 @@ const AISupplyChainOptimization: React.FC = () => {
       popular: false
     },
     {
+
       plan: "Professional",
       price: "$1,499",
       period: "/month",
@@ -95,6 +108,7 @@ const AISupplyChainOptimization: React.FC = () => {
       popular: true
     },
     {
+
       plan: "Enterprise",
       price: "$3,999",
       period: "/month",
@@ -297,6 +311,7 @@ const AISupplyChainOptimization: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 className={`relative bg-white/5 border rounded-2xl p-8 ${
+
                   plan.popular 
                     ? 'border-green-400/50 bg-gradient-to-b from-green-500/10 to-transparent' 
                     : 'border-white/10'
@@ -330,6 +345,7 @@ const AISupplyChainOptimization: React.FC = () => {
                 <a
                   href="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white'
                       : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'

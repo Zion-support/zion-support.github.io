@@ -10,11 +10,12 @@ const mockScreenshots = [
     { id: 5, alt: "Profile screen", src: "/placeholder.svg" },
 ];
 export const AppScreenshots = () => {
+
     const scrollAmount = 300;
             scrollContainerRef.current.scrollBy({
+
                 left: direction === "left" ? -scrollAmount : scrollAmount,
-                behavior: "smooth",
-            })}
+                behavior: "smooth"})}
     };
     return (<section className="py-16 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -31,6 +32,7 @@ export const AppScreenshots = () => {
           </Button>
           
           <div ref={scrollContainerRef} className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory" style = {
+
   { scrollbarWidth: "none",
   msOverflowStyle: "none" 
 

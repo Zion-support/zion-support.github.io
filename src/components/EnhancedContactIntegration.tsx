@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
+
   Phone, 
   Mail, 
   MapPin, 
@@ -15,18 +16,22 @@ import {
 } from 'lucide-react';
 
 interface EnhancedContactIntegrationProps {
+
   onClose: () => void;
   serviceTitle?: string;
 }
 
-export const EnhancedContactIntegration: React.FC<EnhancedContactIntegrationProps> = ({ 
+export const EnhancedContactIntegration: React.FC<EnhancedContactIntegrationProps> = ({
+
   onClose, 
   serviceTitle 
 }) => {
+
   const [copiedField, setCopiedField] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<'contact' | 'schedule' | 'support'>('contact');
 
   const contactInfo = {
+
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     website: 'https://ziontechgroup.com',
@@ -36,17 +41,21 @@ export const EnhancedContactIntegration: React.FC<EnhancedContactIntegrationProp
   };
 
   const copyToClipboard = async (text: string, field: string) => {
+
     try {
+
       await navigator.clipboard.writeText(text);
       setCopiedField(field);
       setTimeout(() => setCopiedField(null), 2000);
     } catch (err) {
-      console.error('Failed to copy text: ', err);
+
+      // // // console.error('Failed to copy text: ', err);
     }
   };
 
   const contactMethods = [
     {
+
       icon: Phone,
       title: 'Call Us',
       description: 'Speak directly with our team',
@@ -55,6 +64,7 @@ export const EnhancedContactIntegration: React.FC<EnhancedContactIntegrationProp
       color: 'from-green-500 to-emerald-500'
     },
     {
+
       icon: Mail,
       title: 'Email Us',
       description: 'Send us a detailed message',
@@ -63,6 +73,7 @@ export const EnhancedContactIntegration: React.FC<EnhancedContactIntegrationProp
       color: 'from-blue-500 to-cyan-500'
     },
     {
+
       icon: MessageSquare,
       title: 'Live Chat',
       description: 'Get instant support',
@@ -71,6 +82,7 @@ export const EnhancedContactIntegration: React.FC<EnhancedContactIntegrationProp
       color: 'from-purple-500 to-pink-500'
     },
     {
+
       icon: Calendar,
       title: 'Schedule Demo',
       description: 'Book a personalized demo',
@@ -82,18 +94,21 @@ export const EnhancedContactIntegration: React.FC<EnhancedContactIntegrationProp
 
   const supportTiers = [
     {
+
       tier: 'Basic Support',
       description: 'Email support with 24-hour response',
       included: ['Email support', 'Documentation access', 'Community forum'],
       price: 'Included'
     },
     {
+
       tier: 'Priority Support',
       description: 'Enhanced support with faster response times',
       included: ['Phone support', '4-hour response', 'Dedicated support team', 'Priority ticket handling'],
       price: '$99/month'
     },
     {
+
       tier: 'Enterprise Support',
       description: 'Dedicated support with SLA guarantees',
       included: ['24/7 phone support', '1-hour response', 'Dedicated account manager', 'Custom SLA', 'On-site support'],
@@ -136,6 +151,7 @@ export const EnhancedContactIntegration: React.FC<EnhancedContactIntegrationProp
               key={tab.key}
               onClick={() => setActiveTab(tab.key as any)}
               className={`flex-1 p-4 flex items-center justify-center gap-2 transition-colors ${
+
                 activeTab === tab.key
                   ? 'bg-cyan-500/10 border-b-2 border-cyan-500 text-cyan-400'
                   : 'text-slate-400 hover:text-white hover:bg-slate-800'
@@ -350,6 +366,7 @@ export const EnhancedContactIntegration: React.FC<EnhancedContactIntegrationProp
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.1 }}
                       className={`bg-slate-800 rounded-lg p-6 border-2 ${
+
                         tier.tier === 'Priority Support' 
                           ? 'border-cyan-500 bg-cyan-500/5' 
                           : 'border-slate-700'

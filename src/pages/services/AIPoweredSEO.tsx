@@ -24,28 +24,34 @@ import { Search,
              } from 'lucide-react.ts';
 
 export default function AIPoweredSEO(...args: any[]): any {
+
   const features = [
     {
+
       icon: Search,
       title: "AI Keyword Research",
       description: "Intelligent keyword discovery and analysis using machine learning algorithms."
     },
     {
+
       icon: TrendingUp,
       title: "Content Optimization",
       description: "AI-powered content analysis and optimization for better search rankings."
     },
     {
+
       icon: Target,
       title: "Competitive Analysis",
       description: "Advanced competitor research and gap analysis with AI insights."
     },
     {
+
       icon: BarChart3,
       title: "Performance Tracking",
       description: "Real-time SEO performance monitoring and analytics dashboard."
     },
     {
+
       icon: Globe,
       title: "Local SEO",
       description: "AI-driven local search optimization and Google My Business management."
@@ -63,31 +69,37 @@ export default function AIPoweredSEO(...args: any[]): any {
 
   const seoProcess = [
     {
+
       stage: "Research & Analysis",
       description: "AI-powered keyword research, competitor analysis, and technical audit",
       icon: Search
     },
     {
+
       stage: "Content Strategy",
       description: "Data-driven content planning and optimization recommendations",
       icon: Target
     },
     {
+
       stage: "Technical Optimization",
       description: "Automated technical SEO improvements and performance optimization",
       icon: Cpu
     },
     {
+
       stage: "Monitoring & Reporting",
       description: "Real-time performance tracking and actionable insights",
       icon: BarChart3
     },
     {
+
       stage: "Optimization",
       description: "Continuous improvement based on AI insights and data",
       icon: TrendingUp
     },
     {
+
       stage: "Reporting",
       description: "Comprehensive reporting and ROI measurement",
       icon: Eye
@@ -96,26 +108,31 @@ export default function AIPoweredSEO(...args: any[]): any {
 
   const useCases = [
     {
+
       industry: "E-commerce",
       description: "Optimize product pages, category pages, and search functionality",
       icon: ShoppingCart
     },
     {
+
       industry: "B2B Services",
       description: "Improve lead generation through targeted keyword optimization",
       icon: Building
     },
     {
+
       industry: "Content Marketing",
       description: "Enhance content discoverability and engagement metrics",
       icon: FileText
     },
     {
+
       industry: "Local Businesses",
       description: "Boost local search visibility and Google My Business optimization",
       icon: MapPin
     },
     {
+
       industry: "Technology",
       description: "SaaS SEO, technical content optimization, and developer targeting"
     }
@@ -134,6 +151,7 @@ export default function AIPoweredSEO(...args: any[]): any {
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -144,6 +162,7 @@ export default function AIPoweredSEO(...args: any[]): any {
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -195,6 +214,7 @@ export default function AIPoweredSEO(...args: any[]): any {
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -205,6 +225,7 @@ export default function AIPoweredSEO(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -232,6 +253,7 @@ export default function AIPoweredSEO(...args: any[]): any {
               <motion.div
                 key={feature.title}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -242,6 +264,7 @@ export default function AIPoweredSEO(...args: any[]): any {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -252,6 +275,7 @@ export default function AIPoweredSEO(...args: any[]): any {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -283,6 +307,7 @@ export default function AIPoweredSEO(...args: any[]): any {
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -293,6 +318,7 @@ export default function AIPoweredSEO(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -368,6 +394,7 @@ export default function AIPoweredSEO(...args: any[]): any {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -378,6 +405,7 @@ export default function AIPoweredSEO(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -405,6 +433,7 @@ export default function AIPoweredSEO(...args: any[]): any {
               <motion.div
                 key={stage.stage}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -415,6 +444,7 @@ export default function AIPoweredSEO(...args: any[]): any {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -425,6 +455,7 @@ export default function AIPoweredSEO(...args: any[]): any {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -467,6 +498,7 @@ export default function AIPoweredSEO(...args: any[]): any {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -477,6 +509,7 @@ export default function AIPoweredSEO(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -504,6 +537,7 @@ export default function AIPoweredSEO(...args: any[]): any {
               <motion.div
                 key={useCase.industry}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -514,6 +548,7 @@ export default function AIPoweredSEO(...args: any[]): any {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -524,6 +559,7 @@ export default function AIPoweredSEO(...args: any[]): any {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -566,6 +602,7 @@ export default function AIPoweredSEO(...args: any[]): any {
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -576,6 +613,7 @@ export default function AIPoweredSEO(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 

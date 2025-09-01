@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Truck, 
   TrendingUp, 
   Target, 
@@ -51,38 +52,45 @@ import {
 import { Link } from 'react-router-dom';
 
 export default function AIPoweredSupplyChainOptimizationPlatform() {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Demand Forecasting",
       description: "Advanced machine learning algorithms that predict demand patterns with 95%+ accuracy, optimizing inventory levels and reducing stockouts",
       benefits: ["Predictive analytics", "Seasonal pattern recognition", "Demand variability analysis"]
     },
     {
+
       icon: Route,
       title: "Intelligent Route Optimization",
       description: "AI-driven logistics optimization that reduces transportation costs, delivery times, and carbon footprint",
       benefits: ["Dynamic routing", "Real-time optimization", "Multi-modal transport"]
     },
     {
+
       icon: Warehouse,
       title: "Smart Inventory Management",
       description: "Automated inventory optimization that balances stock levels, reduces carrying costs, and improves cash flow",
       benefits: ["Just-in-time inventory", "Safety stock optimization", "ABC analysis"]
     },
     {
+
       icon: Zap,
       title: "Real-time Supply Chain Monitoring",
       description: "24/7 visibility into supply chain operations with instant alerts for disruptions and performance issues",
       benefits: ["Live tracking", "Disruption alerts", "Performance metrics"]
     },
     {
+
       icon: Target,
       title: "Supplier Performance Analytics",
       description: "Comprehensive supplier evaluation and scoring to optimize partnerships and reduce supply chain risks",
       benefits: ["Supplier scoring", "Risk assessment", "Performance tracking"]
     },
     {
+
       icon: BarChart3,
       title: "Advanced Analytics & Reporting",
       description: "Deep insights into supply chain performance, cost optimization opportunities, and ROI of improvements",
@@ -92,6 +100,7 @@ export default function AIPoweredSupplyChainOptimizationPlatform() {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$299",
       period: "/month",
@@ -108,6 +117,7 @@ export default function AIPoweredSupplyChainOptimizationPlatform() {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$799",
       period: "/month",
@@ -126,6 +136,7 @@ export default function AIPoweredSupplyChainOptimizationPlatform() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$1,999",
       period: "/month",
@@ -147,21 +158,25 @@ export default function AIPoweredSupplyChainOptimizationPlatform() {
 
   const useCases = [
     {
+
       industry: "Manufacturing",
       description: "Optimize production planning, inventory management, and supplier relationships for efficient manufacturing operations",
       metrics: ["Production efficiency", "Inventory turnover", "Supplier performance"]
     },
     {
+
       industry: "Retail & E-commerce",
       description: "Streamline inventory management, optimize distribution networks, and improve customer delivery experiences",
       metrics: ["Stock availability", "Delivery speed", "Customer satisfaction"]
     },
     {
+
       industry: "Logistics & Transportation",
       description: "Optimize route planning, reduce fuel costs, and improve fleet utilization for better operational efficiency",
       metrics: ["Route efficiency", "Fuel savings", "Fleet utilization"]
     },
     {
+
       industry: "Healthcare & Pharmaceuticals",
       description: "Ensure critical supplies availability, optimize cold chain logistics, and maintain regulatory compliance",
       metrics: ["Supply availability", "Cold chain integrity", "Regulatory compliance"]
@@ -170,21 +185,25 @@ export default function AIPoweredSupplyChainOptimizationPlatform() {
 
   const benefits = [
     {
+
       icon: TrendingUp,
       title: "Reduce Supply Chain Costs by 15-30%",
       description: "AI optimization significantly reduces transportation, inventory, and operational costs"
     },
     {
+
       icon: Clock,
       title: "Improve Delivery Performance",
       description: "Better route optimization and inventory management lead to faster, more reliable deliveries"
     },
     {
+
       icon: DollarSign,
       title: "Increase Cash Flow",
       description: "Optimized inventory levels reduce carrying costs and improve working capital efficiency"
     },
     {
+
       icon: Shield,
       title: "Reduce Supply Chain Risks",
       description: "Proactive monitoring and AI-driven insights help prevent disruptions and mitigate risks"
@@ -193,31 +212,37 @@ export default function AIPoweredSupplyChainOptimizationPlatform() {
 
   const optimizationTools = [
     {
+
       icon: Brain,
       title: "Demand Forecasting Engine",
       description: "AI-powered demand prediction with machine learning algorithms"
     },
     {
+
       icon: Route,
       title: "Route Optimization System",
       description: "Dynamic routing algorithms for multi-stop deliveries"
     },
     {
+
       icon: Warehouse,
       title: "Inventory Optimization",
       description: "Smart inventory management and stock level optimization"
     },
     {
+
       icon: Package,
       title: "Logistics Management",
       description: "End-to-end logistics tracking and optimization"
     },
     {
+
       icon: Factory,
       title: "Production Planning",
       description: "AI-driven production scheduling and capacity planning"
     },
     {
+
       icon: Users,
       title: "Supplier Management",
       description: "Supplier performance tracking and relationship optimization"
@@ -426,6 +451,7 @@ export default function AIPoweredSupplyChainOptimizationPlatform() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-2xl p-8 ${
+
                   plan.popular 
                     ? 'border-orange-500 shadow-lg shadow-orange-500/25' 
                     : 'border-slate-700'
@@ -458,6 +484,7 @@ export default function AIPoweredSupplyChainOptimizationPlatform() {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-orange-500 to-red-600 text-white hover:from-orange-600 hover:to-red-700'
                     : 'bg-slate-700 text-white hover:bg-slate-600'

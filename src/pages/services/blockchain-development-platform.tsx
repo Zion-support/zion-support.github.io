@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Link, 
   Shield, 
   Brain, 
@@ -33,33 +34,40 @@ import {
 import { SEO } from '../../components/SEO';
 
 export default function BlockchainDevelopmentPlatform() {
+
   const features = [
     {
+
       icon: <Code className="w-6 h-6" />,
       title: "Smart Contract Development",
       description: "Secure, audited smart contracts for DeFi, NFTs, DAOs, and enterprise blockchain applications"
     },
     {
+
       icon: <Network className="w-6 h-6" />,
       title: "Multi-Chain Support",
       description: "Build on Ethereum, Polygon, Binance Smart Chain, Solana, and other leading blockchain networks"
     },
     {
+
       icon: <Shield className="w-6 h-6" />,
       title: "Security & Auditing",
       description: "Comprehensive security audits, penetration testing, and vulnerability assessment for blockchain applications"
     },
     {
+
       icon: <Wallet className="w-6 h-6" />,
       title: "Wallet Integration",
       description: "Seamless integration with MetaMask, WalletConnect, and custom wallet solutions"
     },
     {
+
       icon: <Database className="w-6 h-6" />,
       title: "Blockchain Infrastructure",
       description: "Node management, RPC endpoints, and blockchain data indexing services"
     },
     {
+
       icon: <Rocket className="w-6 h-6" />,
       title: "Deployment & Management",
       description: "Automated deployment, monitoring, and maintenance of blockchain applications"
@@ -68,6 +76,7 @@ export default function BlockchainDevelopmentPlatform() {
 
   const pricing = [
     {
+
       name: "Developer",
       price: "$299",
       period: "/month",
@@ -83,6 +92,7 @@ export default function BlockchainDevelopmentPlatform() {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$1,299",
       period: "/month",
@@ -99,6 +109,7 @@ export default function BlockchainDevelopmentPlatform() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$4,999",
       period: "/month",
@@ -127,21 +138,25 @@ export default function BlockchainDevelopmentPlatform() {
 
   const useCases = [
     {
+
       industry: "DeFi & Finance",
       description: "Decentralized exchanges, lending platforms, yield farming, and financial instruments",
       advantage: "Launch DeFi protocols in weeks"
     },
     {
+
       industry: "NFTs & Gaming",
       description: "NFT marketplaces, gaming platforms, digital collectibles, and metaverse applications",
       advantage: "Create NFT ecosystems rapidly"
     },
     {
+
       industry: "Supply Chain",
       description: "Transparent tracking, authentication, and verification of products and materials",
       advantage: "End-to-end traceability"
     },
     {
+
       industry: "Healthcare",
       description: "Secure medical records, drug authentication, and patient data management",
       advantage: "HIPAA-compliant blockchain"
@@ -383,6 +398,7 @@ export default function BlockchainDevelopmentPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 ${
+
                   plan.popular 
                     ? 'border-green-500 ring-2 ring-green-500/20' 
                     : 'border-slate-700 hover:border-green-500'

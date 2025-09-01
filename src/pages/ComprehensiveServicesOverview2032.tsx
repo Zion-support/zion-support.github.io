@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Brain, 
   Shield, 
   Rocket, 
@@ -109,6 +110,7 @@ import { SEO } from '../components/SEO';
 import { ADVANCED_INNOVATIVE_SERVICES_2032 } from '../data/advancedInnovativeServices2032';
 
 const categoryIcons: Record<string, React.ComponentType<any>> = {
+
   'AI Solutions': Brain,
   'Cybersecurity': Shield,
   'Space Tech': Rocket,
@@ -129,6 +131,7 @@ const categoryIcons: Record<string, React.ComponentType<any>> = {
 };
 
 const categoryColors: Record<string, string> = {
+
   'AI Solutions': 'from-purple-600 to-pink-600',
   'Cybersecurity': 'from-red-600 to-orange-600',
   'Space Tech': 'from-blue-600 to-indigo-600',
@@ -149,6 +152,7 @@ const categoryColors: Record<string, string> = {
 };
 
 const categoryDescriptions: Record<string, string> = {
+
   'AI Solutions': 'Revolutionary artificial intelligence platforms that transform business operations and decision-making processes.',
   'Cybersecurity': 'Next-generation security solutions using neuromorphic computing and AI to protect against advanced threats.',
   'Space Tech': 'Cutting-edge space technology services for satellite management, orbital optimization, and space exploration.',
@@ -169,14 +173,18 @@ const categoryDescriptions: Record<string, string> = {
 };
 
 export default function ComprehensiveServicesOverview2032() {
+
   const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set());
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   const toggleCategory = (category: string) => {
+
     const newExpanded = new Set(expandedCategories);
     if (newExpanded.has(category)) {
+
       newExpanded.delete(category);
     } else {
+
       newExpanded.add(category);
     }
     setExpandedCategories(newExpanded);
@@ -188,7 +196,9 @@ export default function ComprehensiveServicesOverview2032() {
     : ADVANCED_INNOVATIVE_SERVICES_2032.filter(service => service.category === selectedCategory);
 
   const totalMarketValue = ADVANCED_INNOVATIVE_SERVICES_2032.reduce((total, service) => {
+
     if (service.marketSize) {
+
       const value = parseFloat(service.marketSize.replace(/[^0-9.]/g, ''));
       return total + value;
     }
@@ -196,6 +206,7 @@ export default function ComprehensiveServicesOverview2032() {
   }, 0);
 
   const averageROI = ADVANCED_INNOVATIVE_SERVICES_2032.reduce((total, service) => {
+
     const roi = parseFloat(service.roi.replace(/[^0-9.]/g, ''));
     return total + roi;
   }, 0) / ADVANCED_INNOVATIVE_SERVICES_2032.length;
@@ -251,6 +262,7 @@ export default function ComprehensiveServicesOverview2032() {
               <button
                 onClick={() => setSelectedCategory('all')}
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+
                   selectedCategory === 'all'
                     ? 'bg-blue-600 text-white'
                     : 'bg-white/20 text-white hover:bg-white/30'
@@ -263,6 +275,7 @@ export default function ComprehensiveServicesOverview2032() {
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+
                     selectedCategory === category
                       ? 'bg-blue-600 text-white'
                       : 'bg-white/20 text-white hover:bg-white/30'
@@ -317,6 +330,7 @@ export default function ComprehensiveServicesOverview2032() {
         <div className="max-w-7xl mx-auto">
           <div className="space-y-8">
             {categories.map((category, categoryIndex) => {
+
               const categoryServices = ADVANCED_INNOVATIVE_SERVICES_2032.filter(service => service.category === category);
               const isExpanded = expandedCategories.has(category);
               const categoryIcon = categoryIcons[category];
@@ -385,6 +399,7 @@ export default function ComprehensiveServicesOverview2032() {
                               <div className="flex items-start justify-between mb-3">
                                 <h3 className="text-lg font-semibold text-white line-clamp-2">{service.title}</h3>
                                 <span className={`inline-block px-2 py-1 rounded-full text-xs font-semibold ${
+
                                   service.innovationLevel === 'Breakthrough' ? 'bg-red-600 text-white' :
                                   service.innovationLevel === 'Revolutionary' ? 'bg-orange-600 text-white' :
                                   service.innovationLevel === 'Advanced' ? 'bg-blue-600 text-white' :

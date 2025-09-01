@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 interface OptimizedImageProps {
+
   src: string;
   alt: string;
   width?: number;
@@ -15,6 +16,7 @@ interface OptimizedImageProps {
 }
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
+
   src,
   alt,
   width,
@@ -26,27 +28,33 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   onLoad,
   onError
 }) => {
+
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
+
     if (priority && imgRef.current) {
+
       imgRef.current.loading = 'eager';
     }
   }, [priority]);
 
   const handleLoad = () => {
+
     setIsLoaded(true);
     onLoad?.();
   };
 
   const handleError = () => {
+
     setHasError(true);
     onError?.();
   };
 
   if (hasError) {
+
     return (
       <div 
         className={`bg-gray-200 flex items-center justify-center ${className}`}
@@ -79,11 +87,13 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         sizes={sizes}
         loading={priority ? 'eager' : 'lazy'}
         className={`transition-opacity duration-300 ${
+
           isLoaded ? 'opacity-100' : 'opacity-0'
         }`}
         onLoad={handleLoad}
         onError={handleError}
         style={{
+
           width: width ? `${width}px` : '100%',
           height: height ? `${height}px` : 'auto'
         }}
@@ -101,6 +111,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
 // WebP Image Component with Fallback
 export const WebPImage: React.FC<OptimizedImageProps & { webpSrc?: string }> = ({
+
   src,
   webpSrc,
   alt,
@@ -113,27 +124,33 @@ export const WebPImage: React.FC<OptimizedImageProps & { webpSrc?: string }> = (
   onLoad,
   onError
 }) => {
+
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
+
     if (priority && imgRef.current) {
+
       imgRef.current.loading = 'eager';
     }
   }, [priority]);
 
   const handleLoad = () => {
+
     setIsLoaded(true);
     onLoad?.();
   };
 
   const handleError = () => {
+
     setHasError(true);
     onError?.();
   };
 
   if (hasError) {
+
     return (
       <div 
         className={`bg-gray-200 flex items-center justify-center ${className}`}
@@ -174,11 +191,13 @@ export const WebPImage: React.FC<OptimizedImageProps & { webpSrc?: string }> = (
           sizes={sizes}
           loading={priority ? 'eager' : 'lazy'}
           className={`transition-opacity duration-300 ${
+
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           onLoad={handleLoad}
           onError={handleError}
           style={{
+
             width: width ? `${width}px` : '100%',
             height: height ? `${height}px` : 'auto'
           }}

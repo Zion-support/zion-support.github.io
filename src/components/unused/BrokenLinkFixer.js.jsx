@@ -2,11 +2,13 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LinkIcon, ExclamationTriangleIcon, CheckCircleIcon, XMarkIcon, ArrowPathIcon, WrenchScrewdriverIcon, InformationCircleIcon } from '@heroicons/react/24/outline';
 export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails = true, fixBrokenLinks = true }) => {
+
     const [isOpen, setIsOpen] = useState(false);
     const [links, setLinks] = useState([]);
     const [isChecking, setIsChecking] = useState(false);
     const [activeTab, setActiveTab] = useState('overview');
     const [stats, setStats] = useState({
+
         total: 0,
         healthy: 0,
         broken: 0,
@@ -15,11 +17,15 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
     });
     // Find all links on the page
     const findAllLinks = useCallback(() => {
+
         const links = [];
         linkElements.forEach((element, index) => {
+
             const href = element.getAttribute('href');
             if (href) {
+
                 const link = {
+
   url: href,
                     status: 'unknown',
                     lastChecked: new Date(),
@@ -32,34 +38,42 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
 };
                 // Determine if link is fixable
                 if (href.startsWith('#')) {
+
                     // Internal anchor links
                     const targetElement = document.querySelector(href);
                     if (!targetElement) {
+
                         link.status = 'broken';
                         link.error = 'Target element not found';
                         link.fixable = true;
                         link.suggestedFix = 'Add missing element or fix anchor reference'}
                     else {
+
                         link.status = 'healthy'}
                 }
                 else if (href.startsWith('javascript:')) {
+
                     // JavaScript links
                     link.status = 'unknown';
                     link.error = 'JavaScript link - cannot verify';
                     link.fixable = false}
                 else if (href.startsWith('mailto:') || href.startsWith('tel:')) {
+
                     // Protocol links
                     link.status = 'healthy';
                     link.fixable = false}
                 else if (href.startsWith('http')) {
+
                     // External links - will be checked
                     link.status = 'unknown';
                     link.fixable = true}
                 else if (href.startsWith('/')) {
+
                     // Internal relative links
                     link.status = 'unknown';
                     link.fixable = true}
                 else {
+
                     // Other relative links
                     link.status = 'unknown';
                     link.fixable = true}
@@ -68,25 +82,33 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
         return links}, []);
     // Check if a link is working
     const checkLink = useCallback(async (link) => {
+
         if (link.url.startsWith('#')) {
+
             // Internal anchor links
             const targetElement = document.querySelector(link.url);
             if (targetElement) {
+
                 return { ...link, status: 'healthy', lastChecked: new Date() }}
             else {
+
                 return { ...link, status: 'broken', error: 'Target element not found', lastChecked: new Date() }}
         }
         if (link.url.startsWith('javascript:') || link.url.startsWith('mailto:') || link.url.startsWith('tel:')) {
+
             return { ...link, status: 'healthy', lastChecked: new Date() }}
         try {
+
             // For external and internal links, we'll simulate checking
             // In a real implementation, you'd make actual HTTP requests
             const isInternal = link.url.startsWith('/') || link.url.startsWith(window.location.origin);
             if (isInternal) {
+
                 // Simulate internal link check
                 await new Promise(resolve => setTimeout(resolve, 100));
                 return { ...link, status: 'healthy', lastChecked: new Date() }}
             else {
+
                 // Simulate external link check
                 await new Promise(resolve => setTimeout(resolve, 200));
                 // Simulate some broken external links
@@ -94,11 +116,14 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                 if (random < 0.1) { // 10% chance of broken external link
                     return { ...link, status: 'broken', error: 'Connection timeout', lastChecked: new Date() }}
                 else {
+
                     return { ...link, status: 'healthy', lastChecked: new Date() }}
             }
         }
         catch (error) {
+
             return {
+
                 ...link,
                 status: 'broken',
                 error: error instanceof Error ? error.message : 'Unknown error',
@@ -107,11 +132,13 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
     }, []);
     // Check all links
     const checkAllLinks = useCallback(async () => {
+
         setIsChecking(true);
         const allLinks = findAllLinks();
         setLinks(allLinks);
         // Update stats
         setStats({
+
             total: allLinks.length,
             healthy: 0,
             broken: 0,
@@ -121,6 +148,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
         // Check links in batches to avoid overwhelming the system
         const batchSize = 5;
         for (let i = 0; i < allLinks.length; i += batchSize) {
+
             const batch = allLinks.slice(i, i + batchSize);
             // Mark batch as checking
             setLinks(prev => prev.map(link => batch.some(batchLink => batchLink.url === link.url)
@@ -130,12 +158,15 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
             const checkedBatch = await Promise.all(batch.map(checkLink));
             // Update links with results
             setLinks(prev => prev.map(link => {
+
                 const checkedLink = checkedBatch.find(checked => checked.url === link.url);
                 return checkedLink || link}));
             // Update stats
             setStats(prev => {
+
                 const newStats = { ...prev };
                 checkedBatch.forEach(checkedLink => {
+
                     if (checkedLink.status === 'healthy')
                         newStats.healthy++;
                     else if (checkedLink.status === 'broken')
@@ -145,18 +176,23 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                 return newStats});
             // Small delay between batches
             if (i + batchSize < allLinks.length) {
+
                 await new Promise(resolve => setTimeout(resolve, 100))}
         }
         setIsChecking(false)}, [findAllLinks, checkLink]);
     // Auto-fix broken links
     const autoFixBrokenLinks = useCallback(() => {
+
         const brokenLinks = links.filter(link => link.status === 'broken' && link.fixable);
         let fixedCount = 0;
         brokenLinks.forEach(link => {
+
             if (link.element && link.url.startsWith('#')) {
+
                 // Fix broken anchor links
                 const targetElement = document.getElementById(targetId);
                 if (!targetElement) {
+
                     // Create a placeholder element
                     const placeholder = document.createElement('div');
                     placeholder.id = targetId;
@@ -168,25 +204,30 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                     fixedCount++}
             }
             else if (link.element && link.url.startsWith('/')) {
+
                 // Fix broken internal links by updating to a working page
                 const workingPages = ['/', '/about', '/services', '/contact', '/home'];
                 const randomPage = workingPages[Math.floor(Math.random() * workingPages.length)];
                 if (randomPage !== link.url) {
+
                     link.element.setAttribute('href', randomPage);
                     link.element.setAttribute('title', `Redirected from ${link.url} to working page`);
                     fixedCount++}
             }
         });
         if (fixedCount > 0) {
+
             // Re-check links after fixes
             setTimeout(checkAllLinks, 1000)}
         return fixedCount}, [links, checkAllLinks]);
     // Highlight broken link in page
     const highlightBrokenLink = useCallback((link) => {
+
         if (!link.element)
             return;
         // Remove previous highlights
         document.querySelectorAll('.broken-link-highlight').forEach(el => {
+
             el.classList.remove('broken-link-highlight')});
         // Add highlight to selected element
         link.element.classList.add('broken-link-highlight');
@@ -194,16 +235,21 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
         link.element.scrollIntoView({ behavior: 'smooth', block: 'center' });
         // Remove highlight after 3 seconds
         setTimeout(() => {
+
             link.element?.classList.remove('broken-link-highlight')}, 3000)}, []);
     // Auto-check links
     useEffect(() => {
+
         if (autoCheck) {
+
             const timer = setTimeout(checkAllLinks, 2000);
             return () => clearTimeout(timer)}
     }, [autoCheck, checkAllLinks]);
     // Get status color
     const getStatusColor = (status) => {
+
         switch (status) {
+
             case 'healthy': return 'text-green-600 bg-green-100 dark:bg-green-900/30';
             case 'broken': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
             case 'checking': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';
@@ -211,7 +257,9 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
     };
     // Get status icon
     const getStatusIcon = (status) => {
+
         switch (status) {
+
             case 'healthy': return <CheckCircleIcon className="w-4 h-4 text-green-600"/>;
             case 'broken': return <ExclamationTriangleIcon className="w-4 h-4 text-red-600"/>;
             case 'checking': return <ArrowPathIcon className="w-4 h-4 text-yellow-600 animate-spin"/>;
@@ -226,14 +274,17 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
       {/* Broken Link Fixer Panel */}
       <AnimatePresence>
         {isOpen && (<motion.div initial = {
+
   { opacity: 0, scale: 0.8,
   y: 20 
 
 }} animate = {
+
   { opacity: 1, scale: 1,
   y: 0 
 
 }} exit = {
+
   { opacity: 0, scale: 0.8,
   y: 20 
 
@@ -404,11 +455,15 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
 
                   {/* Export Report */}
                   {links.length > 0 && (<button onClick = {
+
   () => {
+
                         const report = {
+
                             timestamp: new Date().toISOString(),
                             stats,
                             links: links.map(link => ({
+
                                 url: link.url,
                                 status: link.status,
                                 error: link.error,
@@ -435,15 +490,18 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
       {/* CSS for highlighting */}
       <style>{`
         .broken-link-highlight {
+
           outline: 3px solid #f97316 !important;
           outline-offset: 2px !important;
           background-color: rgba(249, 115, 22, 0.1) !important;
           transition: all 0.3s ease !important}
         
         .link-target-placeholder {
+
           animation: pulse 2s infinite}
         
         @keyframes pulse {
+
           0%, 100% { opacity: 1}
           50% { opacity: 0.7}
         }

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Shield, 
   Lock, 
   Eye, 
@@ -57,40 +58,48 @@ import {
 } from 'lucide-react';
 
 const AICybersecurityPlatform: React.FC = () => {
+
   const [activeTab, setActiveTab] = useState('overview');
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+
     setIsVisible(true);
   }, []);
 
   const features = [
     {
+
       icon: Brain,
       title: 'AI Threat Detection',
       description: 'Advanced machine learning algorithms that detect and respond to threats in real-time'
     },
     {
+
       icon: Shield,
       title: 'Zero-Day Protection',
       description: 'Protection against unknown threats using behavioral analysis and AI prediction'
     },
     {
+
       icon: Network,
       title: 'Network Security',
       description: 'Comprehensive network monitoring and intrusion prevention systems'
     },
     {
+
       icon: Lock,
       title: 'Data Encryption',
       description: 'End-to-end encryption for data at rest and in transit'
     },
     {
+
       icon: Eye,
       title: 'Continuous Monitoring',
       description: '24/7 security monitoring with instant alerting and response'
     },
     {
+
       icon: Zap,
       title: 'Automated Response',
       description: 'AI-powered automated threat response and incident management'
@@ -99,26 +108,32 @@ const AICybersecurityPlatform: React.FC = () => {
 
   const securityModules = [
     {
+
       name: 'Threat Intelligence',
       features: ['Real-time threat feeds', 'Global threat database', 'Custom threat hunting', 'Vulnerability assessment']
     },
     {
+
       name: 'Endpoint Protection',
       features: ['Advanced antivirus', 'Behavioral analysis', 'Device control', 'Data loss prevention']
     },
     {
+
       name: 'Network Security',
       features: ['Firewall management', 'Intrusion detection', 'Traffic analysis', 'VPN services']
     },
     {
+
       name: 'Cloud Security',
       features: ['Cloud access security', 'API protection', 'Container security', 'Multi-cloud support']
     },
     {
+
       name: 'Identity Management',
       features: ['Multi-factor authentication', 'Single sign-on', 'Privileged access', 'Identity governance']
     },
     {
+
       name: 'Compliance & Audit',
       features: ['SOC 2 compliance', 'GDPR compliance', 'HIPAA compliance', 'Audit reporting']
     }
@@ -126,6 +141,7 @@ const AICybersecurityPlatform: React.FC = () => {
 
   const pricingTiers = [
     {
+
       name: 'Essential',
       price: '$2,500',
       period: '/month',
@@ -144,6 +160,7 @@ const AICybersecurityPlatform: React.FC = () => {
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$5,500',
       period: '/month',
@@ -164,6 +181,7 @@ const AICybersecurityPlatform: React.FC = () => {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: '$12,000',
       period: '/month',
@@ -188,21 +206,25 @@ const AICybersecurityPlatform: React.FC = () => {
 
   const benefits = [
     {
+
       title: 'Proactive Protection',
       description: 'AI-powered threat detection prevents attacks before they happen, reducing risk by 95%',
       icon: Shield
     },
         {
+
       title: 'Cost Efficiency',
       description: 'Reduce security costs by 40% while improving protection through automation',
       icon: TrendingUp
     },
     {
+
       title: 'Compliance Ready',
       description: 'Built-in compliance frameworks ensure you meet industry standards automatically',
       icon: CheckCircle
     },
     {
+
       title: '24/7 Security',
       description: 'Continuous monitoring and automated response ensure your business is always protected',
       icon: Activity
@@ -398,6 +420,7 @@ const AICybersecurityPlatform: React.FC = () => {
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.1 * index }}
                 className={`relative bg-gradient-to-br from-slate-800/80 to-red-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${
+
                   tier.popular 
                     ? 'border-red-500 scale-105' 
                     : 'border-red-500/20'
@@ -441,6 +464,7 @@ const AICybersecurityPlatform: React.FC = () => {
                 <Link
                   to="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     tier.popular
                       ? 'bg-gradient-to-r from-red-600 to-orange-600 text-white hover:from-red-700 hover:to-orange-700'
                       : 'border-2 border-red-500 text-red-300 hover:bg-red-500 hover:text-white'

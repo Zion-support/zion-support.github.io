@@ -1,11 +1,1 @@
-describe ('BlockchainEnterpriseSolutions', () => {}
-'
-  it ('renders without crashing', () => {}
-    render (<BlockchainEnterpriseSolutions  />) ;'
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
-'
-  it ('displays expected content', () => {}
-    render (<BlockchainEnterpriseSolutions  />) ;
-    // Add specific test assertions based on component content;
-  }) }) ;
-'
+describe ("BlockchainEnterpriseSolutions", () => { it ("renders without crashing", () => { render (<BlockchainEnterpriseSolutions />) ; expect (screen.getByRole ("main") || screen.getByText (/.*/) ) .toBeInTheDocument () ; }) ; it ("displays expected content", () => { render (<BlockchainEnterpriseSolutions />) ; // Add specific test assertions based on component content }) ; }) ; 

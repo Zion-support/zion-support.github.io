@@ -7,11 +7,12 @@ import { Avatar } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon } from "lucide-react";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, } from "@/components/ui/dropdown-menu";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
 import { toast } from "@/hooks/use-toast";
 import { HireConfirmationModal } from "./HireConfirmationModal";
 export function CandidateCard({ application, index }) {
+
     const [showNotes, setShowNotes] = useState(false);
     const [notes, setNotes] = useState(application.notes || "");
     const [showHireModal, setShowHireModal] = useState(false);
@@ -20,16 +21,20 @@ export function CandidateCard({ application, index }) {
         new Date(application.updated_at).getTime() <
             (Date.now() - 7 * 24 * 60 * 60 * 1000);
     const handleSaveNotes = () => {
+
         // Here you would save the notes to the database
         // For now, we'll just show a toast
         toast({
+
             title: "Notes saved",
             description: "Your notes have been saved"
         });
         setShowNotes(false)};
     const handleHireConfirmed = () => {
+
         // Hiring process completed via the modal
         toast({
+
             title: "Hiring process initiated",
             description: "Offer has been sent to the talent."
         })};

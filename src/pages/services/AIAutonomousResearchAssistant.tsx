@@ -1,33 +1,40 @@
 import { motion } from 'framer-motion';
 
 const AIAutonomousResearchAssistant = () => {
+
   const features = [
     {
+
       icon: <Brain className="w-6 h-6" />,
       title: "AI-Powered Research",
       description: "Advanced AI algorithms that autonomously conduct comprehensive research across multiple sources and databases."
     },
     {
+
       icon: <Search className="w-6 h-6" />,
       title: "Multi-Source Analysis",
       description: "Automatically gather, analyze, and synthesize information from academic papers, industry reports, and real-time data."
     },
     {
+
       icon: <BookOpen className="w-6 h-6" />,
       title: "Academic Integration",
       description: "Seamless integration with academic databases, research repositories, and peer-reviewed sources."
     },
     {
+
       icon: <TrendingUp className="w-6 h-6" />,
       title: "Trend Analysis",
       description: "Identify emerging trends, patterns, and insights from vast amounts of research data."
     },
     {
+
       icon: <Zap className="w-6 h-6" />,
       title: "Real-time Updates",
       description: "Continuous monitoring and updates on research topics with automated alerts and notifications."
     },
     {
+
       icon: <Shield className="w-6 h-6" />,
       title: "Data Security",
       description: "Enterprise-grade security with encryption, access controls, and compliance with research ethics standards."
@@ -36,6 +43,7 @@ const AIAutonomousResearchAssistant = () => {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$99",
       period: "/month",
@@ -50,6 +58,7 @@ const AIAutonomousResearchAssistant = () => {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$299",
       period: "/month",
@@ -65,6 +74,7 @@ const AIAutonomousResearchAssistant = () => {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$799",
       period: "/month",
@@ -84,21 +94,25 @@ const AIAutonomousResearchAssistant = () => {
 
   const useCases = [
     {
+
       title: "Academic Research",
       description: "Accelerate literature reviews, identify research gaps, and discover relevant studies across disciplines.",
       icon: <BookOpen className="w-8 h-8 text-blue-500" />
     },
     {
+
       title: "Market Intelligence",
       description: "Monitor industry trends, competitor analysis, and market opportunities with automated research.",
       icon: <TrendingUp className="w-8 h-8 text-green-500" />
     },
     {
+
       title: "Product Development",
       description: "Research user needs, market requirements, and technical feasibility for new product ideas.",
       icon: <Lightbulb className="w-8 h-8 text-yellow-500" />
     },
     {
+
       title: "Policy Research",
       description: "Analyze policy implications, stakeholder perspectives, and implementation strategies.",
       icon: <Target className="w-8 h-8 text-purple-500" />
@@ -251,6 +265,7 @@ const AIAutonomousResearchAssistant = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent' 
                     : 'border-slate-700/50'
@@ -286,6 +301,7 @@ const AIAutonomousResearchAssistant = () => {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600'
                       : 'bg-slate-700 text-white hover:bg-slate-600'

@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Brain, 
   Shield, 
   Rocket, 
@@ -147,6 +148,7 @@ import { SEO } from '../components/SEO';
 import { ADVANCED_INNOVATIVE_SERVICES_2032, getServicesByCategory, getServicesByPriceRange, getServicesByInnovationLevel, getServicesByTags } from '../data/advancedInnovativeServices2032';
 
 const categoryIcons: Record<string, React.ComponentType<any>> = {
+
   'AI Solutions': Brain,
   'Cybersecurity': Shield,
   'Space Tech': Rocket,
@@ -167,6 +169,7 @@ const categoryIcons: Record<string, React.ComponentType<any>> = {
 };
 
 const categoryColors: Record<string, string> = {
+
   'AI Solutions': 'from-purple-600 to-pink-600',
   'Cybersecurity': 'from-red-600 to-orange-600',
   'Space Tech': 'from-blue-600 to-indigo-600',
@@ -187,6 +190,7 @@ const categoryColors: Record<string, string> = {
 };
 
 export default function AdvancedInnovativeServices2032() {
+
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 50000]);
@@ -195,13 +199,16 @@ export default function AdvancedInnovativeServices2032() {
   const [sortBy, setSortBy] = useState<'price' | 'innovation' | 'roi' | 'name'>('name');
 
   const filteredServices = useMemo(() => {
+
     let filtered = ADVANCED_INNOVATIVE_SERVICES_2032;
 
     if (selectedCategory !== 'all') {
+
       filtered = filtered.filter(service => service.category === selectedCategory);
     }
 
     if (selectedInnovationLevel !== 'all') {
+
       filtered = filtered.filter(service => service.innovationLevel === selectedInnovationLevel);
     }
 
@@ -210,6 +217,7 @@ export default function AdvancedInnovativeServices2032() {
     );
 
     if (searchTerm) {
+
       filtered = filtered.filter(service =>
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -219,7 +227,9 @@ export default function AdvancedInnovativeServices2032() {
 
     // Sort services
     filtered.sort((a, b) => {
+
       switch (sortBy) {
+
         case 'price':
           return a.price - b.price;
         case 'innovation':
@@ -242,7 +252,9 @@ export default function AdvancedInnovativeServices2032() {
   const innovationLevels = Array.from(new Set(ADVANCED_INNOVATIVE_SERVICES_2032.map(service => service.innovationLevel)));
 
   const totalMarketValue = ADVANCED_INNOVATIVE_SERVICES_2032.reduce((total, service) => {
+
     if (service.marketSize) {
+
       const value = parseFloat(service.marketSize.replace(/[^0-9.]/g, ''));
       return total + value;
     }
@@ -455,6 +467,7 @@ export default function AdvancedInnovativeServices2032() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className={`bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 ${
+
                     viewMode === 'list' ? 'flex space-x-6' : ''
                   }`}
                 >
@@ -477,6 +490,7 @@ export default function AdvancedInnovativeServices2032() {
                     {/* Innovation Level Badge */}
                     <div className="flex items-center justify-between mb-3">
                       <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${
+
                         service.innovationLevel === 'Breakthrough' ? 'bg-red-600 text-white' :
                         service.innovationLevel === 'Revolutionary' ? 'bg-orange-600 text-white' :
                         service.innovationLevel === 'Advanced' ? 'bg-blue-600 text-white' :

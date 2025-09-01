@@ -1,7 +1,8 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   PenTool, 
   Brain, 
   Zap, 
@@ -34,38 +35,45 @@ import {
 } from 'lucide-react';
 
 export default function AIContentCreation() {
+
   const features = [
     {
+
       icon: Type,
       title: 'AI Text Generation',
       description: 'Advanced language models for creating engaging, SEO-optimized content',
       color: 'from-blue-500 to-cyan-500'
     },
     {
+
       icon: Image,
       title: 'AI Image Creation',
       description: 'Generate stunning visuals, graphics, and illustrations with AI',
       color: 'from-purple-500 to-pink-500'
     },
     {
+
       icon: Video,
       title: 'AI Video Production',
       description: 'Create professional videos, animations, and multimedia content',
       color: 'from-red-500 to-orange-500'
     },
     {
+
       icon: Music,
       title: 'AI Audio Generation',
       description: 'Generate background music, sound effects, and voiceovers',
       color: 'from-green-500 to-emerald-500'
     },
     {
+
       icon: Code,
       title: 'AI Code Generation',
       description: 'Automated code writing and technical documentation',
       color: 'from-yellow-500 to-orange-500'
     },
     {
+
       icon: Palette,
       title: 'AI Design Tools',
       description: 'Intelligent design assistance and creative automation',
@@ -84,21 +92,25 @@ export default function AIContentCreation() {
 
   const useCases = [
     {
+
       title: 'Marketing Content',
       description: 'Generate blog posts, social media content, and marketing copy',
       icon: Target
     },
     {
+
       title: 'Product Descriptions',
       description: 'Create compelling product descriptions and e-commerce content',
       icon: ShoppingCart
     },
     {
+
       title: 'Technical Documentation',
       description: 'Generate user manuals, API docs, and technical guides',
       icon: FileText
     },
     {
+
       title: 'Creative Writing',
       description: 'Novels, scripts, poetry, and creative storytelling',
       icon: PenTool
@@ -107,21 +119,25 @@ export default function AIContentCreation() {
 
   const contentTypes = [
     {
+
       name: 'Blog Posts & Articles',
       description: 'SEO-optimized content for websites and blogs',
       examples: ['How-to guides', 'Industry insights', 'Product reviews']
     },
     {
+
       name: 'Social Media Content',
       description: 'Engaging posts for all social platforms',
       examples: ['Captions', 'Hashtag suggestions', 'Visual content']
     },
     {
+
       name: 'Email Marketing',
       description: 'Personalized email campaigns and newsletters',
       examples: ['Subject lines', 'Email body', 'Call-to-actions']
     },
     {
+
       name: 'Video Scripts',
       description: 'Scripts for YouTube, TikTok, and marketing videos',
       examples: ['Product demos', 'Educational content', 'Brand stories']

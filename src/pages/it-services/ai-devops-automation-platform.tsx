@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Zap, 
   Code, 
   Cloud, 
@@ -25,23 +26,28 @@ import {
 } from 'lucide-react';
 
 export default function AIDevOpsAutomationPlatform() {
+
   const features = [
     {
+
       icon: Zap,
       title: 'AI-Powered Automation',
       description: 'Intelligent automation of CI/CD pipelines and deployment processes'
     },
     {
+
       icon: Code,
       title: 'Smart Code Analysis',
       description: 'Automated code review, testing, and quality assurance'
     },
     {
+
       icon: Cloud,
       title: 'Multi-Cloud Management',
       description: 'Unified management across AWS, Azure, GCP, and on-premise'
     },
     {
+
       icon: Database,
       title: 'Infrastructure as Code',
       description: 'Automated infrastructure provisioning and configuration management'
@@ -50,31 +56,37 @@ export default function AIDevOpsAutomationPlatform() {
 
   const capabilities = [
     {
+
       title: 'Intelligent CI/CD Pipelines',
       description: 'AI-optimized build, test, and deployment workflows with automatic optimization',
       icon: Workflow
     },
     {
+
       title: 'Automated Testing & QA',
       description: 'Machine learning-powered test generation and quality assurance automation',
       icon: CheckCircle
     },
     {
+
       title: 'Smart Infrastructure Management',
       description: 'Automated scaling, monitoring, and optimization of cloud resources',
       icon: Server
     },
     {
+
       title: 'Security & Compliance',
       description: 'Automated security scanning, vulnerability assessment, and compliance checks',
       icon: Shield
     },
     {
+
       title: 'Performance Monitoring',
       description: 'Real-time application performance monitoring and optimization',
       icon: Monitor
     },
     {
+
       title: 'Disaster Recovery',
       description: 'Automated backup, recovery, and business continuity solutions',
       icon: Database
@@ -92,6 +104,7 @@ export default function AIDevOpsAutomationPlatform() {
 
   const pricing = [
     {
+
       plan: 'Starter',
       price: '$399',
       period: '/month',
@@ -106,6 +119,7 @@ export default function AIDevOpsAutomationPlatform() {
       popular: false
     },
     {
+
       plan: 'Professional',
       price: '$999',
       period: '/month',
@@ -121,6 +135,7 @@ export default function AIDevOpsAutomationPlatform() {
       popular: true
     },
     {
+
       plan: 'Enterprise',
       price: '$2,499',
       period: '/month',
@@ -331,6 +346,7 @@ export default function AIDevOpsAutomationPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`bg-slate-800/50 p-8 rounded-xl border ${
+
                   plan.popular 
                     ? 'border-purple-500 ring-2 ring-purple-500/20' 
                     : 'border-slate-700'
@@ -364,6 +380,7 @@ export default function AIDevOpsAutomationPlatform() {
                 <a 
                   href="https://ziontechgroup.com/contact" 
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+
                     plan.popular
                       ? 'bg-purple-600 hover:bg-purple-700 text-white'
                       : 'bg-slate-700 hover:bg-slate-600 text-white'

@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
+
   TrendingUp,
   Brain,
   Zap,
@@ -86,26 +87,31 @@ import {
 } from 'lucide-react';
 
 export function AIFinancialTradingPlatform2025() {
+
   const features = [
     {
+
       icon: Brain,
       title: 'AI-Powered Trading Algorithms',
       description: 'Advanced machine learning algorithms that analyze market patterns and execute trades automatically',
       benefits: ['Pattern recognition', 'Predictive modeling', 'Automated execution']
     },
     {
+
       icon: TrendingUp,
       title: 'Real-time Risk Management',
       description: 'Comprehensive risk assessment and portfolio protection with instant alerts',
       benefits: ['Portfolio monitoring', 'Risk scoring', 'Stop-loss automation']
     },
     {
+
       icon: Zap,
       title: 'High-Frequency Trading',
       description: 'Ultra-fast execution with microsecond latency for optimal trading performance',
       benefits: ['Low latency', 'High throughput', 'Market making']
     },
     {
+
       icon: Users,
       title: 'Multi-Asset Support',
       description: 'Trade across multiple asset classes including stocks, bonds, forex, and cryptocurrencies',
@@ -115,6 +121,7 @@ export function AIFinancialTradingPlatform2025() {
 
   const pricingPlans = [
     {
+
       name: 'Professional',
       price: '$999',
       period: '/month',
@@ -131,6 +138,7 @@ export function AIFinancialTradingPlatform2025() {
       popular: false
     },
     {
+
       name: 'Institutional',
       price: '$4,999',
       period: '/month',
@@ -149,6 +157,7 @@ export function AIFinancialTradingPlatform2025() {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: 'Custom',
       period: '',
@@ -170,24 +179,28 @@ export function AIFinancialTradingPlatform2025() {
 
   const tradingFeatures = [
     {
+
       title: 'Algorithmic Trading',
       description: 'Sophisticated trading algorithms that adapt to market conditions in real-time',
       icon: Brain,
       benefits: ['Machine learning', 'Pattern recognition', 'Adaptive strategies']
     },
     {
+
       title: 'Risk Analytics',
       description: 'Comprehensive risk assessment with VaR, stress testing, and scenario analysis',
       icon: TrendingUp,
       benefits: ['Risk modeling', 'Stress testing', 'Portfolio optimization']
     },
     {
+
       title: 'Market Intelligence',
       description: 'Real-time market data and sentiment analysis for informed decision making',
       icon: BarChart3,
       benefits: ['Market data', 'Sentiment analysis', 'News integration']
     },
     {
+
       title: 'Compliance & Reporting',
       description: 'Built-in compliance tools and comprehensive reporting for regulatory requirements',
       icon: Shield,
@@ -451,6 +464,7 @@ export function AIFinancialTradingPlatform2025() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'border-cyan-500 shadow-lg shadow-cyan-500/20' 
                     : 'border-gray-700'
@@ -485,6 +499,7 @@ export function AIFinancialTradingPlatform2025() {
                 <Link
                   to={plan.name === 'Enterprise' ? '/contact' : '/pricing'}
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
                       : 'border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'

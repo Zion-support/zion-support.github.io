@@ -36,6 +36,7 @@ export const SERVICE_CATEGORIES_2026 = [
 
 // Service Statistics
 export const SERVICE_STATISTICS_2026 = {
+
   totalServices: innovativeMicroSaasServices2026.length + innovativeITServices2026.length + innovativeAIServices2026.length,
   totalCategories: SERVICE_CATEGORIES_2026.length,
   microSaasServices: innovativeMicroSaasServices2026.length,
@@ -47,11 +48,13 @@ export const SERVICE_STATISTICS_2026 = {
     (innovativeMicroSaasServices2026.length + innovativeITServices2026.length + innovativeAIServices2026.length)
   ),
   highROIServices: innovativeMicroSaasServices2026.filter(service => {
+
     const roi = service.roi;
     const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
     return roiNumber > 400;
   }).length,
   quickSetupServices: innovativeMicroSaasServices2026.filter(service => {
+
     const setupTime = service.setupTime;
     const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
     return weeks < 3;
@@ -63,6 +66,7 @@ export const SERVICE_STATISTICS_2026 = {
 // Featured Services (High ROI, High AI Score, or High Value)
 export const FEATURED_SERVICES_2026 = [
   ...innovativeMicroSaasServices2026.filter(service => {
+
     const roi = service.roi;
     const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
     return roiNumber > 500;
@@ -73,6 +77,7 @@ export const FEATURED_SERVICES_2026 = [
 
 // High-ROI Services (ROI > 500%)
 export const HIGH_ROI_SERVICES_2026 = innovativeMicroSaasServices2026.filter(service => {
+
   const roi = service.roi;
   const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
   return roiNumber > 500;
@@ -80,6 +85,7 @@ export const HIGH_ROI_SERVICES_2026 = innovativeMicroSaasServices2026.filter(ser
 
 // Quick Setup Services (< 3 weeks)
 export const QUICK_SETUP_SERVICES_2026 = innovativeMicroSaasServices2026.filter(service => {
+
   const setupTime = service.setupTime;
   const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
   return weeks < 3;
@@ -154,6 +160,7 @@ export const ECOMMERCE_SERVICES_2026 = [
 
 // Export individual service arrays for specific use cases
 export {
+
   innovativeMicroSaasServices2026,
   innovativeITServices2026,
   innovativeAIServices2026
@@ -161,7 +168,9 @@ export {
 
 // Utility functions for service management
 export const getServiceById = (id: number, type: 'microsaas' | 'it' | 'ai') => {
+
   switch (type) {
+
     case 'microsaas':
       return innovativeMicroSaasServices2026.find(service => service.id === id);
     case 'it':
@@ -174,6 +183,7 @@ export const getServiceById = (id: number, type: 'microsaas' | 'it' | 'ai') => {
 };
 
 export const getServicesByCategory = (category: string) => {
+
   const microSaas = innovativeMicroSaasServices2026.filter(service => service.category === category);
   const it = innovativeITServices2026.filter(service => service.category === category);
   const ai = innovativeAIServices2026.filter(service => service.category === category);
@@ -182,6 +192,7 @@ export const getServicesByCategory = (category: string) => {
 };
 
 export const searchServices = (query: string) => {
+
   const allServices = [
     ...innovativeMicroSaasServices2026,
     ...innovativeITServices2026,
@@ -199,6 +210,7 @@ export const searchServices = (query: string) => {
 };
 
 export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
+
   const allServices = [
     ...innovativeMicroSaasServices2026,
     ...innovativeITServices2026,
@@ -206,12 +218,14 @@ export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   ];
   
   return allServices.filter(service => {
+
     const price = service.price || 0;
     return price >= minPrice && price <= maxPrice;
   });
 };
 
 export const getServicesByInnovationLevel = (level: string) => {
+
   const allServices = [
     ...innovativeMicroSaasServices2026,
     ...innovativeITServices2026,

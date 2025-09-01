@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Sparkles } from "lucide-react";
 import { Search as SearchIcon } from "lucide-react";
 export function Header({ hideLogin = false, customLogo, customTheme }) {
+
     const { user } = useAuth();
     const { isWhitelabel, primaryColor } = useWhitelabel();
     const navigate = useNavigate();
@@ -24,28 +25,35 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
     // If we have a white-label tenant and no specific customTheme is provided,
     // use the tenant's primary color
     const effectiveTheme = customTheme || (isWhitelabel ? {
+
         primaryColor,
         backgroundColor: '#000000', // Default dark background
         textColor: '#ffffff', // Default light text
     } : null);
     const headerStyle = effectiveTheme ? {
+
         backgroundColor: effectiveTheme.backgroundColor,
         color: effectiveTheme.textColor,
         borderColor: `${effectiveTheme.primaryColor}20`
     } : {};
     // Handle scroll effect
     useEffect(() => {
+
         const handleScroll = () => {
+
             setIsScrolled(window.scrollY > 20)};
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll)}, []);
     const handleSubmit = (e) => {
+
         e.preventDefault();
         if (query.trim()) {
+
             router(`/search?q=${encodeURIComponent(query)}`);
             setQuery("")}
     };
     const toggleMobileMenu = () => {
+
         setIsMobileMenuOpen(!isMobileMenuOpen)};
     return (<header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-gradient-to-r from-zion-blue-dark/95 via-zion-purple-dark/95 to-zion-slate-dark/95 backdrop-blur-md shadow-lg shadow-zion-purple/10" className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-gradient-to-r from-zion-blue-dark/95 via-zion-slate-dark/95 to-zion-blue-dark/95 backdrop-blur-xl shadow-2xl shadow-zion-purple/10" className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md neon-pulse" style={headerStyle}>
       {/* Animated background pattern */}
@@ -68,6 +76,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
         {/* Desktop Search */}
         <form onSubmit={handleSubmit} className="hidden lg:block w-64 mx-4">
           <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion={(text) => {
+
             router(`/search?q=${encodeURIComponent(text)}`);
             setQuery("")}} searchSuggestions={searchSuggestions}/>
         </form>
@@ -110,6 +119,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion={(text) => {
+
             router(`/search?q=${encodeURIComponent(text)}`);
             setQuery("")}} searchSuggestions={searchSuggestions}/>
               <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
@@ -141,6 +151,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
           <form onSubmit={handleSubmit}>
             <div className="relative">
               <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion={(text) => {
+
             router(`/search?q=${encodeURIComponent(text)}`);
             setQuery("")}} searchSuggestions={searchSuggestions} placeholder="Search services, talent, equipment..."/>
               <div className="absolute right-3 top-1/2 transform -translate-y-1/2">

@@ -1,45 +1,53 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Building, Users, Target, CheckCircle, TrendingUp, MessageCircle, 
   Phone, Mail, MapPin, Shield, Zap, Globe, Database, Network,
   Cloud, Cpu, Layers, FileText, Settings, Activity, Star
 } from 'lucide-react';
 
 const EnterpriseSolutions: React.FC = () => {
+
   const features = [
     {
+
       icon: Building,
       title: 'Enterprise Architecture',
       description: 'Scalable enterprise-grade architecture design',
       color: 'from-blue-500 to-cyan-500'
     },
     {
+
       icon: Users,
       title: 'Team Collaboration',
       description: 'Advanced collaboration and communication tools',
       color: 'from-purple-500 to-pink-500'
     },
     {
+
       icon: Target,
       title: 'Strategic Planning',
       description: 'Comprehensive strategic planning and execution',
       color: 'from-yellow-500 to-orange-500'
     },
     {
+
       icon: Shield,
       title: 'Security & Compliance',
       description: 'Enterprise-grade security and compliance solutions',
       color: 'from-green-500 to-emerald-500'
     },
     {
+
       icon: Cloud,
       title: 'Cloud Integration',
       description: 'Seamless cloud integration and management',
       color: 'from-indigo-500 to-blue-500'
     },
     {
+
       icon: Database,
       title: 'Data Management',
       description: 'Advanced data management and analytics',
@@ -49,6 +57,7 @@ const EnterpriseSolutions: React.FC = () => {
 
   const solutions = [
     {
+
       title: 'Digital Transformation',
       description: 'End-to-end digital transformation solutions',
       icon: Zap,
@@ -56,6 +65,7 @@ const EnterpriseSolutions: React.FC = () => {
       color: 'from-blue-500 to-cyan-500'
     },
     {
+
       title: 'Enterprise Integration',
       description: 'Seamless system integration and connectivity',
       icon: Network,
@@ -63,6 +73,7 @@ const EnterpriseSolutions: React.FC = () => {
       color: 'from-purple-500 to-pink-500'
     },
     {
+
       title: 'Business Intelligence',
       description: 'Advanced analytics and business intelligence',
       icon: TrendingUp,
@@ -70,6 +81,7 @@ const EnterpriseSolutions: React.FC = () => {
       color: 'from-green-500 to-emerald-500'
     },
     {
+
       title: 'Enterprise Security',
       description: 'Comprehensive security and risk management',
       icon: Shield,

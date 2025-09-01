@@ -4,6 +4,7 @@ import { Search as SearchIcon, X, Filter, TrendingUp, Clock, Globe, Building, Br
 import { cn } from '@/lib/utils';
 
 interface SearchResult {
+
   id: string;
   title: string;
   description: string;
@@ -15,6 +16,7 @@ interface SearchResult {
 }
 
 interface SearchProps {
+
   className?: string;
   placeholder?: string;
   onSearch?: (query: string) => void;
@@ -23,12 +25,14 @@ interface SearchProps {
 }
 
 export function Search({
+
   className,
   placeholder = 'Search Zion Tech Group...',
   onSearch,
   showFilters = true,
-  showSuggestions = true
+  showSuggestions = true;
 }: SearchProps) {
+
   const [query, setQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const [results, setResults] = useState<SearchResult[]>([]);
@@ -41,6 +45,7 @@ export function Search({
   // Mock search data - in real app, this would come from API
   const mockSearchData: SearchResult[] = [
     {
+
       id: '1',
       title: 'AI Enterprise Orchestrator',
       description: 'Multi-agent AI coordination & workflow automation for enterprise-scale operations',
@@ -51,6 +56,7 @@ export function Search({
       relevance: 0.95
     },
     {
+
       id: '2',
       title: 'AI Cybersecurity Suite',
       description: 'AI-powered threat detection and response for comprehensive security',
@@ -61,6 +67,7 @@ export function Search({
       relevance: 0.92
     },
     {
+
       id: '3',
       title: 'Quantum AI Platform',
       description: 'Next-generation quantum computing solutions for complex problem solving',
@@ -71,6 +78,7 @@ export function Search({
       relevance: 0.89
     },
     {
+
       id: '4',
       title: 'AI Healthcare Analytics',
       description: 'Predictive diagnostics and care optimization powered by AI',
@@ -100,7 +108,9 @@ export function Search({
 
   // Handle search
   const handleSearch = useCallback(async (searchQuery: string) => {
+
     if (!searchQuery.trim()) {
+
       setResults([]);
       return;
     }
@@ -112,6 +122,7 @@ export function Search({
     
     // Filter results based on query and filters
     const filteredResults = mockSearchData.filter(result => {
+
       const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           result.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -129,19 +140,23 @@ export function Search({
     setIsLoading(false);
     
     if (onSearch) {
+
       onSearch(searchQuery);
     }
   }, [selectedFilters, onSearch]);
 
   // Handle input change
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+
     const value = e.target.value;
     setQuery(value);
     
     if (value.trim()) {
+
       setIsOpen(true);
       handleSearch(value);
     } else {
+
       setIsOpen(false);
       setResults([]);
     }
@@ -149,6 +164,7 @@ export function Search({
 
   // Handle filter toggle
   const toggleFilter = (categoryId: string) => {
+
     setSelectedFilters(prev => 
       prev.includes(categoryId) 
         ? prev.filter(id => id !== categoryId)
@@ -158,16 +174,20 @@ export function Search({
 
   // Handle result click
   const handleResultClick = (result: SearchResult) => {
+
     setIsOpen(false);
     setQuery(result.title);
     // In real app, navigate to result.url
-    console.log('Navigating to:', result.url);
+    // // // console.log('Navigating to:', result.url);
   };
 
   // Handle outside click
   useEffect(() => {
+
     const handleClickOutside = (event: MouseEvent) => {
+
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+
         setIsOpen(false);
       }
     };
@@ -178,8 +198,11 @@ export function Search({
 
   // Handle keyboard navigation
   useEffect(() => {
+
     const handleKeyDown = (e: KeyboardEvent) => {
+
       if (e.key === 'Escape') {
+
         setIsOpen(false);
       }
     };
@@ -190,7 +213,9 @@ export function Search({
 
   // Re-run search when filters change
   useEffect(() => {
+
     if (query.trim()) {
+
       handleSearch(query);
     }
   }, [selectedFilters, handleSearch, query]);
@@ -230,6 +255,7 @@ export function Search({
         {query && (
           <button
             onClick={() => {
+
               setQuery('');
               setResults([]);
               setIsOpen(false);
@@ -343,6 +369,7 @@ export function Search({
                       <button
                         key={search}
                         onClick={() => {
+
                           setQuery(search);
                           handleSearch(search);
                         }}
@@ -365,6 +392,7 @@ export function Search({
                       <button
                         key={search}
                         onClick={() => {
+
                           setQuery(search);
                           handleSearch(search);
                         }}

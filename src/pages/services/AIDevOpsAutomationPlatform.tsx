@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, BarChart3, CheckCircle, Cloud, Cpu, Database, GitFork, Server, Shield, Sparkles, Zap } from 'lucide-react';
 
 export default function AIDevOpsAutomationPlatform() {
+
   const features = [
     'AI-powered CI/CD pipeline optimization and failure prediction',
     'Automated infrastructure provisioning with Terraform and CloudFormation',

@@ -3,6 +3,7 @@ import { ProductListing } from "@/types/listings";
 export const ADVANCED_ENTERPRISE_SERVICES_2030: ProductListing[] = [
   // AI-Powered Enterprise Resource Planning (ERP)
   {
+
     id: "ai-enterprise-resource-planning",
     title: "AI Enterprise Resource Planning (ERP) Platform",
     description: "Next-generation ERP system powered by AI that automates business processes, predicts resource needs, and optimizes operations across all departments. Reduces operational costs by 40% and improves efficiency by 60%.",
@@ -21,6 +22,7 @@ export const ADVANCED_ENTERPRISE_SERVICES_2030: ProductListing[] = [
     availability: "8-12 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-erp-platform",
@@ -35,6 +37,7 @@ export const ADVANCED_ENTERPRISE_SERVICES_2030: ProductListing[] = [
 
   // Quantum-Secure Communication Network
   {
+
     id: "quantum-secure-communication-network",
     title: "Quantum-Secure Communication Network",
     description: "Future-proof communication infrastructure using quantum cryptography to ensure unbreakable security. Protects against quantum computing threats and provides military-grade encryption for enterprises.",
@@ -53,6 +56,7 @@ export const ADVANCED_ENTERPRISE_SERVICES_2030: ProductListing[] = [
     availability: "12-16 Weeks",
     aiScore: 95,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-secure-network",
@@ -67,6 +71,7 @@ export const ADVANCED_ENTERPRISE_SERVICES_2030: ProductListing[] = [
 
   // AI-Powered Predictive Maintenance for Industrial IoT
   {
+
     id: "ai-industrial-iot-predictive-maintenance",
     title: "AI Industrial IoT Predictive Maintenance Platform",
     description: "Advanced predictive maintenance system for industrial equipment using AI and IoT sensors. Prevents costly breakdowns, reduces maintenance costs by 50%, and increases equipment uptime by 35%.",
@@ -85,6 +90,7 @@ export const ADVANCED_ENTERPRISE_SERVICES_2030: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-industrial-iot",
@@ -99,6 +105,7 @@ export const ADVANCED_ENTERPRISE_SERVICES_2030: ProductListing[] = [
 
   // Blockchain-Based Supply Chain Transparency Platform
   {
+
     id: "blockchain-supply-chain-transparency",
     title: "Blockchain Supply Chain Transparency Platform",
     description: "End-to-end supply chain visibility using blockchain technology. Ensures product authenticity, tracks ethical sourcing, and provides real-time transparency for compliance and consumer trust.",
@@ -117,6 +124,7 @@ export const ADVANCED_ENTERPRISE_SERVICES_2030: ProductListing[] = [
     availability: "4-6 Weeks",
     aiScore: 94,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/blockchain-supply-chain",
@@ -131,6 +139,7 @@ export const ADVANCED_ENTERPRISE_SERVICES_2030: ProductListing[] = [
 
   // AI-Powered Cybersecurity Threat Intelligence
   {
+
     id: "ai-cybersecurity-threat-intelligence",
     title: "AI Cybersecurity Threat Intelligence Platform",
     description: "Advanced threat intelligence system that uses AI to detect, analyze, and respond to cybersecurity threats in real-time. Provides proactive protection against zero-day attacks and advanced persistent threats.",
@@ -149,6 +158,7 @@ export const ADVANCED_ENTERPRISE_SERVICES_2030: ProductListing[] = [
     availability: "5-7 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-cybersecurity",
@@ -163,6 +173,7 @@ export const ADVANCED_ENTERPRISE_SERVICES_2030: ProductListing[] = [
 
   // AI-Powered Financial Risk Management
   {
+
     id: "ai-financial-risk-management",
     title: "AI Financial Risk Management Platform",
     description: "Comprehensive financial risk management system using AI to predict market risks, assess credit risk, and optimize investment portfolios. Reduces financial losses by 45% and improves decision-making accuracy.",
@@ -181,6 +192,7 @@ export const ADVANCED_ENTERPRISE_SERVICES_2030: ProductListing[] = [
     availability: "7-9 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-financial-risk",
@@ -195,6 +207,7 @@ export const ADVANCED_ENTERPRISE_SERVICES_2030: ProductListing[] = [
 
   // AI-Powered Healthcare Diagnostics Platform
   {
+
     id: "ai-healthcare-diagnostics-platform",
     title: "AI Healthcare Diagnostics Platform",
     description: "Advanced medical diagnostics platform using AI to analyze medical images, predict diseases, and assist healthcare professionals. Improves diagnostic accuracy by 30% and reduces diagnosis time by 50%.",
@@ -213,6 +226,7 @@ export const ADVANCED_ENTERPRISE_SERVICES_2030: ProductListing[] = [
     availability: "10-12 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-healthcare-diagnostics",
@@ -227,6 +241,7 @@ export const ADVANCED_ENTERPRISE_SERVICES_2030: ProductListing[] = [
 
   // AI-Powered Smart City Management Platform
   {
+
     id: "ai-smart-city-management",
     title: "AI Smart City Management Platform",
     description: "Comprehensive smart city management system using AI to optimize traffic flow, manage energy consumption, and improve public services. Reduces city operational costs by 25% and improves citizen satisfaction.",
@@ -245,6 +260,7 @@ export const ADVANCED_ENTERPRISE_SERVICES_2030: ProductListing[] = [
     availability: "12-16 Weeks",
     aiScore: 95,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-smart-city",
@@ -259,6 +275,7 @@ export const ADVANCED_ENTERPRISE_SERVICES_2030: ProductListing[] = [
 
   // AI-Powered Autonomous Vehicle Fleet Management
   {
+
     id: "ai-autonomous-vehicle-fleet-management",
     title: "AI Autonomous Vehicle Fleet Management Platform",
     description: "Advanced fleet management system for autonomous vehicles using AI to optimize routes, manage safety, and coordinate operations. Increases fleet efficiency by 40% and reduces operational costs by 35%.",
@@ -277,6 +294,7 @@ export const ADVANCED_ENTERPRISE_SERVICES_2030: ProductListing[] = [
     availability: "8-10 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-autonomous-fleet",

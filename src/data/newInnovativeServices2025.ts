@@ -1,4 +1,5 @@
 export type ServiceItem = {
+
   id: string;
   title: string;
   description: string;
@@ -17,6 +18,7 @@ export type ServiceItem = {
 };
 
 export type ServiceCategory = {
+
   name: string;
   slug: string;
   description: string;
@@ -25,11 +27,13 @@ export type ServiceCategory = {
 
 export const newInnovativeServices2025: ServiceCategory[] = [
   {
+
     name: 'AI-Powered Business Intelligence',
     slug: 'ai-business-intelligence',
     description: 'Advanced AI-driven business intelligence solutions for data-driven decision making',
     items: [
       {
+
         id: 'ai-predictive-business-analytics',
         title: 'AI Predictive Business Analytics Platform',
         description: 'Advanced AI-powered business analytics platform that predicts market trends, customer behavior, and business outcomes with 95% accuracy.',
@@ -66,6 +70,7 @@ export const newInnovativeServices2025: ServiceCategory[] = [
         implementationTime: '2-4 weeks'
       },
       {
+
         id: 'ai-customer-lifetime-value-predictor',
         title: 'AI Customer Lifetime Value Predictor',
         description: 'Predict customer lifetime value and optimize marketing spend with AI-powered analytics and segmentation.',
@@ -104,11 +109,13 @@ export const newInnovativeServices2025: ServiceCategory[] = [
     ]
   },
   {
+
     name: 'Cybersecurity & Compliance',
     slug: 'cybersecurity-compliance',
     description: 'Advanced cybersecurity solutions and compliance automation for modern enterprises',
     items: [
       {
+
         id: 'ai-threat-intelligence-platform',
         title: 'AI Threat Intelligence Platform',
         description: 'Real-time AI-powered threat intelligence platform that detects, analyzes, and responds to cybersecurity threats automatically.',
@@ -145,6 +152,7 @@ export const newInnovativeServices2025: ServiceCategory[] = [
         implementationTime: '3-6 weeks'
       },
       {
+
         id: 'automated-compliance-manager',
         title: 'Automated Compliance Manager',
         description: 'AI-powered compliance automation platform that ensures continuous adherence to GDPR, HIPAA, SOC 2, and other regulations.',
@@ -183,11 +191,13 @@ export const newInnovativeServices2025: ServiceCategory[] = [
     ]
   },
   {
+
     name: 'Cloud & DevOps Innovation',
     slug: 'cloud-devops-innovation',
     description: 'Next-generation cloud infrastructure and DevOps automation solutions',
     items: [
       {
+
         id: 'ai-powered-cloud-cost-optimizer',
         title: 'AI-Powered Cloud Cost Optimizer',
         description: 'Intelligent cloud cost optimization platform that automatically reduces cloud spending by 30-50% while maintaining performance.',
@@ -224,6 +234,7 @@ export const newInnovativeServices2025: ServiceCategory[] = [
         implementationTime: '1-2 weeks'
       },
       {
+
         id: 'devops-automation-platform',
         title: 'DevOps Automation Platform',
         description: 'Comprehensive DevOps automation platform that accelerates software delivery by 10x while improving quality and security.',
@@ -262,11 +273,13 @@ export const newInnovativeServices2025: ServiceCategory[] = [
     ]
   },
   {
+
     name: 'Data & Analytics Solutions',
     slug: 'data-analytics-solutions',
     description: 'Advanced data analytics and business intelligence solutions for data-driven organizations',
     items: [
       {
+
         id: 'real-time-data-analytics-platform',
         title: 'Real-Time Data Analytics Platform',
         description: 'High-performance real-time data analytics platform that processes millions of events per second for instant business insights.',
@@ -303,6 +316,7 @@ export const newInnovativeServices2025: ServiceCategory[] = [
         implementationTime: '3-5 weeks'
       },
       {
+
         id: 'ai-data-governance-platform',
         title: 'AI Data Governance Platform',
         description: 'Intelligent data governance platform that ensures data quality, compliance, and security across all data assets.',
@@ -341,11 +355,13 @@ export const newInnovativeServices2025: ServiceCategory[] = [
     ]
   },
   {
+
     name: 'Sustainability & Green Tech',
     slug: 'sustainability-green-tech',
     description: 'Innovative sustainability solutions and green technology for environmentally conscious organizations',
     items: [
       {
+
         id: 'carbon-footprint-tracker',
         title: 'Carbon Footprint Tracking Platform',
         description: 'Comprehensive carbon footprint tracking and reduction platform for businesses committed to sustainability and ESG goals.',
@@ -382,6 +398,7 @@ export const newInnovativeServices2025: ServiceCategory[] = [
         implementationTime: '2-3 weeks'
       },
       {
+
         id: 'energy-optimization-platform',
         title: 'AI Energy Optimization Platform',
         description: 'AI-powered energy optimization platform that reduces energy costs by 20-35% while improving sustainability.',
@@ -420,11 +437,13 @@ export const newInnovativeServices2025: ServiceCategory[] = [
     ]
   },
   {
+
     name: 'Healthcare & Life Sciences',
     slug: 'healthcare-life-sciences',
     description: 'Innovative healthcare technology solutions for improved patient care and medical research',
     items: [
       {
+
         id: 'ai-healthcare-diagnostics',
         title: 'AI Healthcare Diagnostics Platform',
         description: 'Advanced AI-powered healthcare diagnostics platform that improves diagnostic accuracy by 30% and reduces diagnosis time by 60%.',
@@ -461,6 +480,7 @@ export const newInnovativeServices2025: ServiceCategory[] = [
         implementationTime: '6-8 weeks'
       },
       {
+
         id: 'telehealth-platform',
         title: 'Advanced Telehealth Platform',
         description: 'Comprehensive telehealth platform with AI-powered triage, virtual consultations, and integrated health monitoring.',
@@ -499,11 +519,13 @@ export const newInnovativeServices2025: ServiceCategory[] = [
     ]
   },
   {
+
     name: 'Financial Technology',
     slug: 'financial-technology',
     description: 'Innovative fintech solutions for modern financial services and digital banking',
     items: [
       {
+
         id: 'ai-fraud-detection',
         title: 'AI Fraud Detection Platform',
         description: 'Advanced AI-powered fraud detection platform that identifies fraudulent transactions with 99.5% accuracy in real-time.',
@@ -540,6 +562,7 @@ export const newInnovativeServices2025: ServiceCategory[] = [
         implementationTime: '4-6 weeks'
       },
       {
+
         id: 'blockchain-payment-platform',
         title: 'Blockchain Payment Platform',
         description: 'Secure, fast, and cost-effective blockchain-based payment platform for international transactions and digital assets.',
@@ -578,11 +601,13 @@ export const newInnovativeServices2025: ServiceCategory[] = [
     ]
   },
   {
+
     name: 'Manufacturing & Industry 4.0',
     slug: 'manufacturing-industry-4',
     description: 'Smart manufacturing solutions and Industry 4.0 technologies for modern production facilities',
     items: [
       {
+
         id: 'smart-manufacturing-platform',
         title: 'Smart Manufacturing Platform',
         description: 'Comprehensive Industry 4.0 platform that optimizes manufacturing operations, reduces costs, and improves quality.',
@@ -619,6 +644,7 @@ export const newInnovativeServices2025: ServiceCategory[] = [
         implementationTime: '8-12 weeks'
       },
       {
+
         id: 'supply-chain-optimization',
         title: 'AI Supply Chain Optimization',
         description: 'AI-powered supply chain optimization platform that reduces costs, improves efficiency, and enhances visibility.',

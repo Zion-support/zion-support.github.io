@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Shield, Lock, Database, Users, FileText, CheckCircle, Eye, Globe, Server, Key, AlertTriangle } from 'lucide-react';
 
 export default function DataProtection() {
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Header Section */}
@@ -424,7 +425,8 @@ export default function DataProtection() {
           className="text-center mt-8"
         >
           <p className="text-zion-slate-light text-sm">
-            Last Updated: {new Date().toLocaleDateString('en-US', { 
+            Last Updated: {new Date().toLocaleDateString('en-US', {
+
               year: 'numeric', 
               month: 'long', 
               day: 'numeric' 

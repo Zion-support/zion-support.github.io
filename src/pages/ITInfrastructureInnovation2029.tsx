@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Server, 
   Cloud, 
   Shield, 
@@ -110,6 +111,7 @@ import {
 } from 'lucide-react';
 
 const ITInfrastructureInnovation2029: React.FC = () => {
+
   const [activeCategory, setActiveCategory] = useState('all');
 
   const categories = [
@@ -126,6 +128,7 @@ const ITInfrastructureInnovation2029: React.FC = () => {
   const itInfrastructureServices = [
     // Cloud Migration Solutions
     {
+
       id: 'enterprise-cloud-migration',
       category: 'cloud-migration',
       title: 'Enterprise Cloud Migration Suite',
@@ -141,6 +144,7 @@ const ITInfrastructureInnovation2029: React.FC = () => {
         'Compliance and security validation'
       ],
       pricing: {
+
         assessment: '$15,000 - $50,000',
         migration: '$50,000 - $500,000',
         ongoing: '$5,000 - $25,000/month'
@@ -159,6 +163,7 @@ const ITInfrastructureInnovation2029: React.FC = () => {
       demo: 'https://ziontechgroup.com/demo/enterprise-cloud-migration'
     },
     {
+
       id: 'legacy-modernization',
       category: 'cloud-migration',
       title: 'Legacy System Modernization',
@@ -174,6 +179,7 @@ const ITInfrastructureInnovation2029: React.FC = () => {
         'Ongoing support and maintenance'
       ],
       pricing: {
+
         assessment: '$10,000 - $30,000',
         modernization: '$30,000 - $300,000',
         support: '$2,000 - $15,000/month'
@@ -193,6 +199,7 @@ const ITInfrastructureInnovation2029: React.FC = () => {
 
     // Cybersecurity Solutions
     {
+
       id: 'zero-trust-security',
       category: 'cybersecurity',
       title: 'Zero Trust Security Architecture',
@@ -208,6 +215,7 @@ const ITInfrastructureInnovation2029: React.FC = () => {
         '24/7 security operations center'
       ],
       pricing: {
+
         implementation: '$25,000 - $150,000',
         monthly: '$3,000 - $20,000',
         annual: '$30,000 - $200,000'
@@ -226,6 +234,7 @@ const ITInfrastructureInnovation2029: React.FC = () => {
       demo: 'https://ziontechgroup.com/demo/zero-trust-security'
     },
     {
+
       id: 'ai-threat-intelligence',
       category: 'cybersecurity',
       title: 'AI-Powered Threat Intelligence',
@@ -241,6 +250,7 @@ const ITInfrastructureInnovation2029: React.FC = () => {
         'Integration with SIEM and SOAR platforms'
       ],
       pricing: {
+
         starter: '$2,000/month',
         professional: '$5,000/month',
         enterprise: '$15,000/month'
@@ -260,6 +270,7 @@ const ITInfrastructureInnovation2029: React.FC = () => {
 
     // DevOps & Automation
     {
+
       id: 'devops-transformation',
       category: 'devops-automation',
       title: 'DevOps Transformation Platform',
@@ -275,6 +286,7 @@ const ITInfrastructureInnovation2029: React.FC = () => {
         'Performance optimization and scaling'
       ],
       pricing: {
+
         assessment: '$8,000 - $25,000',
         implementation: '$25,000 - $150,000',
         ongoing: '$3,000 - $15,000/month'
@@ -293,6 +305,7 @@ const ITInfrastructureInnovation2029: React.FC = () => {
       demo: 'https://ziontechgroup.com/demo/devops-transformation'
     },
     {
+
       id: 'infrastructure-automation',
       category: 'devops-automation',
       title: 'Infrastructure Automation Suite',
@@ -308,6 +321,7 @@ const ITInfrastructureInnovation2029: React.FC = () => {
         'Integration with major cloud providers'
       ],
       pricing: {
+
         starter: '$1,500/month',
         professional: '$4,000/month',
         enterprise: '$10,000/month'
@@ -327,6 +341,7 @@ const ITInfrastructureInnovation2029: React.FC = () => {
 
     // Data Infrastructure
     {
+
       id: 'data-lake-platform',
       category: 'data-infrastructure',
       title: 'Enterprise Data Lake Platform',
@@ -342,6 +357,7 @@ const ITInfrastructureInnovation2029: React.FC = () => {
         'Integration with BI and analytics tools'
       ],
       pricing: {
+
         starter: '$5,000/month',
         professional: '$15,000/month',
         enterprise: '$50,000/month'
@@ -359,6 +375,7 @@ const ITInfrastructureInnovation2029: React.FC = () => {
       demo: 'https://ziontechgroup.com/demo/data-lake-platform'
     },
     {
+
       id: 'data-warehouse-optimization',
       category: 'data-infrastructure',
       title: 'Data Warehouse Optimization',
@@ -374,6 +391,7 @@ const ITInfrastructureInnovation2029: React.FC = () => {
         'Monitoring and alerting'
       ],
       pricing: {
+
         assessment: '$10,000 - $30,000',
         optimization: '$20,000 - $100,000',
         ongoing: '$2,000 - $10,000/month'
@@ -393,6 +411,7 @@ const ITInfrastructureInnovation2029: React.FC = () => {
 
     // Network & Security
     {
+
       id: 'sd-wan-solution',
       category: 'network-security',
       title: 'Software-Defined WAN Solution',
@@ -408,6 +427,7 @@ const ITInfrastructureInnovation2029: React.FC = () => {
         'Real-time analytics and reporting'
       ],
       pricing: {
+
         implementation: '$15,000 - $75,000',
         monthly: '$2,000 - $10,000',
         annual: '$20,000 - $100,000'
@@ -427,6 +447,7 @@ const ITInfrastructureInnovation2029: React.FC = () => {
 
     // Edge Computing
     {
+
       id: 'edge-computing-platform',
       category: 'edge-computing',
       title: 'Edge Computing Platform',
@@ -442,6 +463,7 @@ const ITInfrastructureInnovation2029: React.FC = () => {
         'Integration with cloud platforms'
       ],
       pricing: {
+
         starter: '$3,000/month',
         professional: '$8,000/month',
         enterprise: '$25,000/month'
@@ -461,6 +483,7 @@ const ITInfrastructureInnovation2029: React.FC = () => {
 
     // Quantum Ready
     {
+
       id: 'quantum-readiness-platform',
       category: 'quantum-ready',
       title: 'Quantum Readiness Platform',
@@ -476,6 +499,7 @@ const ITInfrastructureInnovation2029: React.FC = () => {
         'Ongoing quantum threat monitoring'
       ],
       pricing: {
+
         assessment: '$20,000 - $50,000',
         implementation: '$50,000 - $200,000',
         ongoing: '$5,000 - $20,000/month'
@@ -546,6 +570,7 @@ const ITInfrastructureInnovation2029: React.FC = () => {
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
                 className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+
                   activeCategory === category.id
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -571,6 +596,7 @@ const ITInfrastructureInnovation2029: React.FC = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
                 className={`bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden ${
+
                   service.featured ? 'ring-2 ring-indigo-500' : ''
                 }`}
               >

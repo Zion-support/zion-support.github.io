@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   CheckCircle2, 
   ArrowRight, 
   DollarSign, 
@@ -34,6 +35,7 @@ import {
 import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from '@/data/comprehensiveInnovativeServices2030';
 
 const ComprehensiveInnovativeServices2030: React.FC = () => {
+
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
 
@@ -51,6 +53,7 @@ const ComprehensiveInnovativeServices2030: React.FC = () => {
   ];
 
   const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service => {
+
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -59,6 +62,7 @@ const ComprehensiveInnovativeServices2030: React.FC = () => {
   });
 
   const getCategoryIcon = (category: string) => {
+
     const categoryData = categories.find(c => c.id === category);
     return categoryData ? categoryData.icon : Globe;
   };
@@ -145,6 +149,7 @@ const ComprehensiveInnovativeServices2030: React.FC = () => {
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`flex items-center px-4 py-2 rounded-full border transition-all duration-300 ${
+
                   selectedCategory === category.id
                     ? 'bg-blue-600 border-blue-500 text-white'
                     : 'bg-slate-800/50 border-slate-600 text-gray-300 hover:border-blue-500 hover:text-blue-400'
@@ -165,6 +170,7 @@ const ComprehensiveInnovativeServices2030: React.FC = () => {
       <section className="container mx-auto px-4 pb-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service) => {
+
             const CategoryIcon = getCategoryIcon(service.category);
             return (
               <div
@@ -275,6 +281,7 @@ const ComprehensiveInnovativeServices2030: React.FC = () => {
             <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>
             <button
               onClick={() => {
+
                 setSelectedCategory('all');
                 setSearchTerm('');
               }}

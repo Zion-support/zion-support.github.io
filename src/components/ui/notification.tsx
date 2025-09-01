@@ -6,19 +6,25 @@ import { Button } from './button';
 const NotificationContext = createContext(undefined);
 // Hook
 export function useNotifications() {
+
     const context = useContext(NotificationContext);
     if (!context) {
+
         throw new Error('useNotifications must be used within a NotificationProvider');
     }
     return context;
 }
 export function NotificationProvider({ children, maxNotifications = 5, position = 'top-right' }) {
+
     const [notifications, setNotifications] = useState([]);
     const removeNotification = useCallback((id) => {
+
         setNotifications(prev => prev.filter(n => n.id !== id));
     }, []);
     const addNotification = useCallback((notification) => {
+
         const newNotification = {
+
             ...notification,
             id: Math.random().toString(36).substr(2, 9),
             timestamp: new Date(),
@@ -26,20 +32,25 @@ export function NotificationProvider({ children, maxNotifications = 5, position 
             duration: notification.duration ?? 5000
         };
         setNotifications(prev => {
+
             const updated = [newNotification, ...prev];
             return updated.slice(0, maxNotifications);
         });
         // Auto-dismiss after duration
         if (newNotification.duration && newNotification.duration > 0) {
+
             setTimeout(() => {
+
                 removeNotification(newNotification.id);
             }, newNotification.duration);
         }
     }, [maxNotifications, removeNotification]);
     const clearAll = useCallback(() => {
+
         setNotifications([]);
     }, []);
     const value = {
+
         notifications,
         addNotification,
         removeNotification,
@@ -51,9 +62,12 @@ export function NotificationProvider({ children, maxNotifications = 5, position 
     </NotificationContext.Provider>);
 }
 function NotificationContainer({ position }) {
+
     const { notifications, clearAll } = useNotifications();
     const getPositionClasses = (pos) => {
+
         switch (pos) {
+
             case 'top-right':
                 return 'top-4 right-4';
             case 'top-left':
@@ -95,9 +109,12 @@ function NotificationContainer({ position }) {
     </div>);
 }
 function NotificationItem({ notification }) {
+
     const { removeNotification } = useNotifications();
     const getIcon = (type) => {
+
         switch (type) {
+
             case 'success':
                 return <CheckCircle className="w-5 h-5 text-green-400"/>;
             case 'error':
@@ -111,7 +128,9 @@ function NotificationItem({ notification }) {
         }
     };
     const getTypeClasses = (type) => {
+
         switch (type) {
+
             case 'success':
                 return 'border-green-500/30 bg-green-500/10';
             case 'error':
@@ -125,7 +144,9 @@ function NotificationItem({ notification }) {
         }
     };
     const getProgressColor = (type) => {
+
         switch (type) {
+
             case 'success':
                 return 'bg-green-400';
             case 'error':
@@ -139,6 +160,7 @@ function NotificationItem({ notification }) {
         }
     };
     return (<motion.div layout initial={{ opacity: 0, x: 300, scale: 0.8 }} animate={{ opacity: 1, x: 0, scale: 1 }} exit={{ opacity: 0, x: 300, scale: 0.8 }} transition={{
+
             type: "spring",
             stiffness: 500,
             damping: 30,
@@ -184,15 +206,19 @@ function NotificationItem({ notification }) {
 }
 // Convenience functions for quick notifications
 export function showSuccess(title, message, options) {
+
     // This would be called from the context
     return { type: 'success', title, message, ...options };
 }
 export function showError(title, message, options) {
+
     return { type: 'error', title, message, ...options };
 }
 export function showWarning(title, message, options) {
+
     return { type: 'warning', title, message, ...options };
 }
 export function showInfo(title, message, options) {
+
     return { type: 'info', title, message, ...options };
 }

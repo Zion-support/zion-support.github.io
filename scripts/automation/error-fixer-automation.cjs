@@ -67,8 +67,7 @@ class ErrorFixerAutomation {
       try {
         const content = fs.readFileSync(file, 'utf8');
         if (
-          content.includes('<<<<<<< HEAD') ||
-          content.includes('=======') ||
+          content.includes('') ||
           content.includes('>>>>>>>')
         ) {
           console.log(`  Fixing merge conflicts in ${file}`);
@@ -76,12 +75,10 @@ class ErrorFixerAutomation {
           // Remove merge conflict markers and keep the first version
           let fixedContent = content
             .replace(
-              /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [a-f0-9]+\n/g,
-              '$1'
+              /\n([\s\S]*?)\n              '$1'
             )
             .replace(
-              /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [a-f0-9]+\n/g,
-              '$1'
+              /\n([\s\S]*?)\n              '$1'
             );
 
           fs.writeFileSync(file, fixedContent);

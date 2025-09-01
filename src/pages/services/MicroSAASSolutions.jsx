@@ -2,32 +2,38 @@ import React from 'react';
 import SEO from '../../components/SEO';
 import { Code, Zap, Users, TrendingUp, Shield, Building, Cpu, BarChart3 } from 'lucide-react';
 export default function MicroSAASSolutions() {
+
     const services = [
         {
+
             title: "Custom SAAS Development",
             description: "Tailored software-as-a-service solutions designed specifically for your business needs and industry requirements.",
             icon: Code,
             features: ["Custom workflows", "API integration", "User management", "Scalable architecture"]
         },
         {
+
             title: "Multi-tenant Architecture",
             description: "Efficient multi-tenant systems that maximize resource utilization while maintaining data isolation and security.",
             icon: Users,
             features: ["Data isolation", "Resource sharing", "Customization options", "Performance optimization"]
         },
         {
+
             title: "Subscription Management",
             description: "Comprehensive billing and subscription systems with flexible pricing models and automated renewals.",
             icon: BarChart3,
             features: ["Flexible pricing", "Automated billing", "Usage tracking", "Payment processing"]
         },
         {
+
             title: "API Development & Integration",
             description: "Robust APIs that enable seamless integration with existing systems and third-party applications.",
             icon: Cpu,
             features: ["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"]
         },
         {
+
             title: "Analytics & Reporting",
             description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",
             icon: TrendingUp,
@@ -36,21 +42,25 @@ export default function MicroSAASSolutions() {
     ];
     const benefits = [
         {
+
             title: "Rapid Deployment",
             description: "Quick time-to-market with agile development methodologies",
             icon: Zap
         },
         {
+
             title: "Scalability",
             description: "Built to grow with your business from day one",
             icon: TrendingUp
         },
         {
+
             title: "Cost Efficiency",
             description: "Reduced infrastructure costs with cloud-native solutions",
             icon: BarChart3
         },
         {
+
             title: "Security",
             description: "Enterprise-grade security and compliance standards",
             icon: Shield
@@ -58,21 +68,25 @@ export default function MicroSAASSolutions() {
     ];
     const industries = [
         {
+
             name: "Healthcare",
             description: "HIPAA-compliant patient management systems",
             icon: Building
         },
         {
+
             name: "Finance",
             description: "Regulatory-compliant financial tools",
             icon: Building
         },
         {
+
             name: "Education",
             description: "Learning management and student tracking",
             icon: Building
         },
         {
+
             name: "Real Estate",
             description: "Property management and client portals",
             icon: Building

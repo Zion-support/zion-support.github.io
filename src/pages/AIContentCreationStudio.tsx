@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   PenTool, 
   Palette, 
   Video, 
@@ -27,33 +28,40 @@ import {
 } from 'lucide-react';
 
 export default function AIContentCreationStudio() {
+
   const features = [
     {
+
       icon: <PenTool className="w-6 h-6" />,
       title: "AI Writing Assistant",
       description: "Generate high-quality content for blogs, articles, marketing copy, and social media posts with advanced language models."
     },
     {
+
       icon: <Image className="w-6 h-6" />,
       title: "AI Image Generation",
       description: "Create stunning visuals, illustrations, and graphics using state-of-the-art AI image generation technology."
     },
     {
+
       icon: <Video className="w-6 h-6" />,
       title: "AI Video Creation",
       description: "Generate engaging video content, animations, and motion graphics with AI-powered video synthesis."
     },
     {
+
       icon: <Mic className="w-6 h-6" />,
       title: "AI Audio Generation",
       description: "Create professional voice-overs, podcasts, and audio content with natural-sounding AI voices."
     },
     {
+
       icon: <FileText className="w-6 h-6" />,
       title: "Content Optimization",
       description: "AI-powered SEO optimization, readability analysis, and content performance insights."
     },
     {
+
       icon: <Sparkles className="w-6 h-6" />,
       title: "Creative Templates",
       description: "Access to thousands of customizable templates for various content types and industries."
@@ -62,6 +70,7 @@ export default function AIContentCreationStudio() {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$99",
       period: "/month",
@@ -76,6 +85,7 @@ export default function AIContentCreationStudio() {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$299",
       period: "/month",
@@ -92,6 +102,7 @@ export default function AIContentCreationStudio() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$799",
       period: "/month",
@@ -111,21 +122,25 @@ export default function AIContentCreationStudio() {
 
   const useCases = [
     {
+
       title: "Marketing Agencies",
       description: "Create compelling campaigns, social media content, and marketing materials at scale.",
       icon: <Target className="w-8 h-8" />
     },
     {
+
       title: "E-commerce Businesses",
       description: "Generate product descriptions, marketing copy, and visual content for online stores.",
       icon: <ShoppingBag className="w-8 h-8" />
     },
     {
+
       title: "Content Creators",
       description: "Streamline content creation workflow with AI-powered writing and design tools.",
       icon: <Users className="w-8 h-8" />
     },
     {
+
       title: "Educational Institutions",
       description: "Create engaging educational content, presentations, and learning materials.",
       icon: <GraduationCap className="w-8 h-8" />
@@ -271,6 +286,7 @@ export default function AIContentCreationStudio() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 border rounded-2xl p-8 ${
+
                   plan.popular 
                     ? 'border-cyan-500/50 shadow-2xl shadow-cyan-500/20' 
                     : 'border-gray-700'
@@ -303,6 +319,7 @@ export default function AIContentCreationStudio() {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600'
                     : 'border border-gray-600 text-gray-300 hover:border-cyan-500 hover:text-cyan-400'

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
+import {
+
   Headphones, 
   FileText, 
   Search, 
@@ -24,6 +25,7 @@ import {
 } from 'lucide-react';
 
 export default function PodcastTranscriptionInsights() {
+
   return (
     <>
       <Helmet>

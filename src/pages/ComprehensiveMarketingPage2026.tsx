@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
+
   Brain, 
   Cloud, 
   Shield, 
@@ -60,6 +61,7 @@ import {
 import { COMPREHENSIVE_SERVICES_CATALOG_2025, calculateCategoryCounts, getFeaturedServices, getTrendingServices } from '../data/comprehensiveServicesCatalog2025';
 
 const ComprehensiveMarketingPage2026: React.FC = () => {
+
   const [selectedIndustry, setSelectedIndustry] = useState('all');
   const stats = calculateCategoryCounts();
   const featuredServices = getFeaturedServices();
@@ -82,9 +84,11 @@ const ComprehensiveMarketingPage2026: React.FC = () => {
   ];
 
   const getIndustryServices = (industryId: string) => {
+
     if (industryId === 'all') return COMPREHENSIVE_SERVICES_CATALOG_2025;
     
     const industryMapping: Record<string, string[]> = {
+
       'healthcare': ['AI & Healthcare', 'AI & Legal Tech'],
       'finance': ['AI & FinTech', 'AI & Financial Services'],
       'manufacturing': ['AI & Manufacturing', 'AI & Supply Chain', 'AI & Robotics'],
@@ -209,6 +213,7 @@ const ComprehensiveMarketingPage2026: React.FC = () => {
                   key={industry.id}
                   onClick={() => setSelectedIndustry(industry.id)}
                   className={`p-6 rounded-xl text-center transition-all duration-300 ${
+
                     selectedIndustry === industry.id
                       ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/25'
                       : 'bg-zion-slate-light/10 text-zion-slate-light hover:bg-zion-slate-light/20 hover:text-white'
@@ -482,24 +487,28 @@ const ComprehensiveMarketingPage2026: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
+
                   icon: Brain2,
                   title: 'AI-First Approach',
                   description: 'Leverage the latest AI and machine learning technologies for competitive advantage',
                   color: 'from-zion-cyan to-zion-blue'
                 },
                 {
+
                   icon: ShieldCheck,
                   title: 'Enterprise Security',
                   description: 'Bank-grade security with SOC 2, ISO 27001, and GDPR compliance',
                   color: 'from-zion-red to-zion-orange'
                 },
                 {
+
                   icon: Zap2,
                   title: 'Rapid Implementation',
                   description: 'Quick deployment with average delivery times of 4-12 weeks',
                   color: 'from-zion-yellow to-zion-orange'
                 },
                 {
+
                   icon: Users2,
                   title: 'Expert Support',
                   description: '24/7 technical support and dedicated account management',
@@ -540,6 +549,7 @@ const ComprehensiveMarketingPage2026: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 {
+
                   name: 'Budget',
                   range: '$100 - $1,000',
                   description: 'Perfect for startups and small businesses',
@@ -547,6 +557,7 @@ const ComprehensiveMarketingPage2026: React.FC = () => {
                   color: 'from-zion-green to-zion-cyan'
                 },
                 {
+
                   name: 'Mid-Range',
                   range: '$1,000 - $5,000',
                   description: 'Ideal for growing businesses and scale-ups',
@@ -554,6 +565,7 @@ const ComprehensiveMarketingPage2026: React.FC = () => {
                   color: 'from-zion-blue to-zion-purple'
                 },
                 {
+
                   name: 'Enterprise',
                   range: '$5,000 - $15,000',
                   description: 'Built for large enterprises and corporations',
@@ -561,6 +573,7 @@ const ComprehensiveMarketingPage2026: React.FC = () => {
                   color: 'from-zion-purple to-zion-pink'
                 },
                 {
+
                   name: 'Premium',
                   range: '$15,000+',
                   description: 'Custom solutions for industry leaders',

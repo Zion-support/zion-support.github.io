@@ -1,7 +1,8 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Truck, 
   Brain, 
   BarChart3, 
@@ -52,33 +53,40 @@ import {
 } from 'lucide-react';
 
 export default function AISupplyChainOptimization() {
+
   const features = [
     {
+
       icon: <Brain className="w-6 h-6" />,
       title: "AI-Powered Forecasting",
       description: "Advanced machine learning models predict demand with 95% accuracy, optimizing inventory levels and reducing stockouts."
     },
     {
+
       icon: <Route className="w-6 h-6" />,
       title: "Route Optimization",
       description: "Real-time route optimization reduces delivery costs by 30% and improves delivery times by 40%."
     },
     {
+
       icon: <BarChart3 className="w-6 h-6" />,
       title: "Predictive Analytics",
       description: "Identify supply chain risks before they impact operations with AI-driven predictive modeling."
     },
     {
+
       icon: <Warehouse className="w-6 h-6" />,
       title: "Inventory Management",
       description: "Smart inventory tracking with automated reorder points and demand-driven replenishment."
     },
     {
+
       icon: <Globe className="w-6 h-6" />,
       title: "Global Visibility",
       description: "End-to-end supply chain visibility across all suppliers, warehouses, and distribution centers."
     },
     {
+
       icon: <Shield className="w-6 h-6" />,
       title: "Risk Management",
       description: "Proactive risk assessment and mitigation strategies for supply chain disruptions."
@@ -87,6 +95,7 @@ export default function AISupplyChainOptimization() {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$499",
       period: "/month",
@@ -101,6 +110,7 @@ export default function AISupplyChainOptimization() {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$1,299",
       period: "/month",
@@ -117,6 +127,7 @@ export default function AISupplyChainOptimization() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "Custom",
       period: "",
@@ -137,21 +148,25 @@ export default function AISupplyChainOptimization() {
 
   const benefits = [
     {
+
       icon: <DollarSign className="w-8 h-8" />,
       title: "Cost Reduction",
       description: "Reduce supply chain costs by 25-40% through optimized routes and inventory management"
     },
     {
+
       icon: <Clock className="w-8 h-8" />,
       title: "Faster Delivery",
       description: "Improve delivery times by 30-50% with AI-powered route optimization"
     },
     {
+
       icon: <Shield className="w-8 h-8" />,
       title: "Risk Mitigation",
       description: "Identify and prevent 90% of supply chain disruptions before they occur"
     },
     {
+
       icon: <TrendingUp className="w-8 h-8" />,
       title: "Increased Efficiency",
       description: "Boost operational efficiency by 35% with automated processes and real-time insights"
@@ -160,21 +175,25 @@ export default function AISupplyChainOptimization() {
 
   const useCases = [
     {
+
       title: "E-commerce",
       description: "Optimize fulfillment centers, last-mile delivery, and inventory management for online retailers",
       icon: <Package className="w-6 h-6" />
     },
     {
+
       title: "Manufacturing",
       description: "Streamline production planning, supplier management, and distribution networks",
       icon: <Factory className="w-6 h-6" />
     },
     {
+
       title: "Logistics",
       description: "Optimize multi-modal transportation, warehousing, and cross-border operations",
       icon: <Truck className="w-6 h-6" />
     },
     {
+
       title: "Retail",
       description: "Improve store replenishment, seasonal planning, and omnichannel inventory",
       icon: <Warehouse className="w-6 h-6" />
@@ -183,21 +202,25 @@ export default function AISupplyChainOptimization() {
 
   const transportationModes = [
     {
+
       icon: <Truck className="w-8 h-8" />,
       title: "Road Transport",
       description: "Optimize truck routes, reduce fuel costs, and improve delivery efficiency"
     },
     {
+
       icon: <Ship className="w-8 h-8" />,
       title: "Maritime",
       description: "Optimize shipping routes, container utilization, and port operations"
     },
     {
+
       icon: <Plane className="w-8 h-8" />,
       title: "Air Freight",
       description: "Optimize air routes, cargo capacity, and time-sensitive deliveries"
     },
     {
+
       icon: <Train className="w-8 h-8" />,
       title: "Rail Transport",
       description: "Optimize rail networks, intermodal connections, and bulk cargo"
@@ -206,6 +229,7 @@ export default function AISupplyChainOptimization() {
 
   const keyMetrics = [
     {
+
       icon: <Gauge className="w-6 h-6" />,
       title: "Order Fill Rate",
       current: "98.5%",
@@ -213,6 +237,7 @@ export default function AISupplyChainOptimization() {
       description: "Percentage of orders fulfilled completely and on time"
     },
     {
+
       icon: <Clock className="w-6 h-6" />,
       title: "Cycle Time",
       current: "2.3 days",
@@ -220,6 +245,7 @@ export default function AISupplyChainOptimization() {
       description: "Time from order placement to delivery"
     },
     {
+
       icon: <DollarSign className="w-6 h-6" />,
       title: "Cost per Order",
       current: "$18.50",
@@ -227,6 +253,7 @@ export default function AISupplyChainOptimization() {
       description: "Total cost to fulfill a single order"
     },
     {
+
       icon: <BarChart3 className="w-6 h-6" />,
       title: "Inventory Turnover",
       current: "8.2x",
@@ -402,6 +429,7 @@ export default function AISupplyChainOptimization() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+
                 plan.popular 
                   ? 'border-cyan-500/50 bg-slate-800/70' 
                   : 'border-slate-600'

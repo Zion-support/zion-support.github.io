@@ -3,9 +3,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CandidateCard } from "./CandidateCard";
 export function KanbanColumn({ id, title, description, applications, count }) {
+
     // Add color based on column type
     const getBadgeVariant = (columnId) => {
+
         switch (columnId) {
+
             case "new":
                 return "secondary";
             case "shortlisted":
@@ -20,7 +23,9 @@ export function KanbanColumn({ id, title, description, applications, count }) {
                 return "outline"}
     };
     const getColumnBgColor = (columnId) => {
+
         switch (columnId) {
+
             case "hired":
                 return "bg-green-50";
             case "rejected":

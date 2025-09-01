@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 
 interface AnalyticsEvent {
+
   id: string;
   type: string;
   category: string;
@@ -16,6 +17,7 @@ interface AnalyticsEvent {
 }
 
 interface PerformanceMetrics {
+
   fcp: number;
   lcp: number;
   fid: number;
@@ -26,6 +28,7 @@ interface PerformanceMetrics {
 }
 
 interface UserBehavior {
+
   pageViews: number;
   sessionDuration: number;
   bounceRate: number;
@@ -35,9 +38,11 @@ interface UserBehavior {
 }
 
 export const AnalyticsMonitor: React.FC = () => {
+
   const [events, setEvents] = useState<AnalyticsEvent[]>([]);
   const [performance, setPerformance] = useState<PerformanceMetrics | null>(null);
   const [userBehavior, setUserBehavior] = useState<UserBehavior>({
+
     pageViews: 0,
     sessionDuration: 0,
     bounceRate: 0,
@@ -50,12 +55,15 @@ export const AnalyticsMonitor: React.FC = () => {
 
   // Generate unique session ID
   function generateSessionId(): string {
+
     return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
   }
 
   // Track custom event
   const trackEvent = useCallback((category: string, action: string, label?: string, value?: number) => {
+
     const event: AnalyticsEvent = {
+
       id: generateEventId(),
       type: 'custom',
       category,
@@ -80,46 +88,57 @@ export const AnalyticsMonitor: React.FC = () => {
 
   // Generate unique event ID
   function generateEventId(): string {
+
     return 'event_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
   }
 
   // Send event to analytics service
   const sendToAnalytics = useCallback(async (event: AnalyticsEvent) => {
+
     try {
+
       // Store event locally instead of sending to non-existent API
       // TODO: Implement actual analytics service when available
       storeEventLocally(event);
       
       // Log event for debugging (remove in production)
       if (process.env.NODE_ENV === 'development') {
-        console.log('Analytics event stored locally:', event);
+
+        // // // console.log('Analytics event stored locally:', event);
       }
     } catch (error) {
-      console.warn('Error storing analytics event locally:', error);
+
+      // // // console.warn('Error storing analytics event locally:', error);
     }
   }, [storeEventLocally]);
 
   // Store event locally
   const storeEventLocally = useCallback((event: AnalyticsEvent) => {
+
     try {
+
       const storedEvents = localStorage.getItem('analytics-events');
       const events = storedEvents ? JSON.parse(storedEvents) : [];
       events.push(event);
       
       // Keep only last 1000 events
       if (events.length > 1000) {
+
         events.splice(0, events.length - 1000);
       }
       
       localStorage.setItem('analytics-events', JSON.stringify(events));
     } catch (error) {
-      console.warn('Error storing event locally:', error);
+
+      // // // console.warn('Error storing event locally:', error);
     }
   }, []);
 
   // Track page view
   const trackPageView = useCallback((url: string) => {
+
     const event: AnalyticsEvent = {
+
       id: generateEventId(),
       type: 'pageview',
       category: 'navigation',
@@ -138,6 +157,7 @@ export const AnalyticsMonitor: React.FC = () => {
     
     // Update user behavior
     setUserBehavior(prev => ({
+
       ...prev,
       pageViews: prev.pageViews + 1,
       topPages: [...new Set([...prev.topPages, url])].slice(0, 10),
@@ -147,15 +167,18 @@ export const AnalyticsMonitor: React.FC = () => {
 
   // Track user interaction
   const trackInteraction = useCallback((element: string, action: string, details?: any) => {
+
     trackEvent('interaction', action, element, details?.value);
   }, [trackEvent]);
 
   // Track conversion
   const trackConversion = useCallback((goal: string, value?: number) => {
+
     trackEvent('conversion', 'goal_completed', goal, value);
     
     // Update conversion rate
     setUserBehavior(prev => ({
+
       ...prev,
       conversionRate: ((prev.conversionRate * prev.pageViews) + 1) / (prev.pageViews + 1)
     }));
@@ -163,14 +186,21 @@ export const AnalyticsMonitor: React.FC = () => {
 
   // Performance monitoring
   useEffect(() => {
+
     if ('PerformanceObserver' in window) {
+
       try {
+
         // First Contentful Paint
         const fcpObserver = new PerformanceObserver((list) => {
+
           const entries = list.getEntries();
           entries.forEach((entry) => {
+
             if (entry.name === 'first-contentful-paint') {
+
               setPerformance(prev => ({
+
                 ...prev,
                 fcp: Math.round(entry.startTime)
               } as PerformanceMetrics));
@@ -181,10 +211,13 @@ export const AnalyticsMonitor: React.FC = () => {
 
         // Largest Contentful Paint
         const lcpObserver = new PerformanceObserver((list) => {
+
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
           if (lastEntry) {
+
             setPerformance(prev => ({
+
               ...prev,
               lcp: Math.round(lastEntry.startTime)
             } as PerformanceMetrics));
@@ -194,9 +227,12 @@ export const AnalyticsMonitor: React.FC = () => {
 
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
+
           const entries = list.getEntries();
           entries.forEach((entry) => {
+
             setPerformance(prev => ({
+
               ...prev,
               fid: Math.round(entry.processingStart - entry.startTime)
             } as PerformanceMetrics));
@@ -206,13 +242,17 @@ export const AnalyticsMonitor: React.FC = () => {
 
         // Cumulative Layout Shift
         const clsObserver = new PerformanceObserver((list) => {
+
           let clsValue = 0;
           list.getEntries().forEach((entry: any) => {
+
             if (!entry.hadRecentInput) {
+
               clsValue += entry.value;
             }
           });
           setPerformance(prev => ({
+
             ...prev,
             cls: Math.round(clsValue * 1000) / 1000
           } as PerformanceMetrics));
@@ -220,21 +260,26 @@ export const AnalyticsMonitor: React.FC = () => {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
 
         return () => {
+
           fcpObserver.disconnect();
           lcpObserver.disconnect();
           fidObserver.disconnect();
           clsObserver.disconnect();
         };
       } catch (error) {
-        console.warn('Performance monitoring not supported:', error);
+
+        // // // console.warn('Performance monitoring not supported:', error);
       }
     }
 
     // Fallback performance metrics
     const measurePerformance = () => {
+
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
+
         setPerformance({
+
           fcp: 0,
           lcp: 0,
           fid: 0,
@@ -247,8 +292,10 @@ export const AnalyticsMonitor: React.FC = () => {
     };
 
     if (document.readyState === 'complete') {
+
       measurePerformance();
     } else {
+
       window.addEventListener('load', measurePerformance);
       return () => window.removeEventListener('load', measurePerformance);
     }
@@ -256,11 +303,14 @@ export const AnalyticsMonitor: React.FC = () => {
 
   // Session tracking
   useEffect(() => {
+
     const startTime = Date.now();
     
     const handleBeforeUnload = () => {
+
       const sessionDuration = Date.now() - startTime;
       setUserBehavior(prev => ({
+
         ...prev,
         sessionDuration: Math.round(sessionDuration / 1000)
       }));
@@ -270,9 +320,12 @@ export const AnalyticsMonitor: React.FC = () => {
     };
 
     const handleVisibilityChange = () => {
+
       if (document.hidden) {
+
         trackEvent('session', 'page_hidden', 'user_left_page');
       } else {
+
         trackEvent('session', 'page_visible', 'user_returned');
       }
     };
@@ -284,6 +337,7 @@ export const AnalyticsMonitor: React.FC = () => {
     trackEvent('session', 'session_start', 'new_session');
 
     return () => {
+
       window.removeEventListener('beforeunload', handleBeforeUnload);
       document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
@@ -291,31 +345,39 @@ export const AnalyticsMonitor: React.FC = () => {
 
   // Auto-track common interactions
   useEffect(() => {
+
     if (!isTracking) return;
 
     const trackClick = (event: Event) => {
+
       const target = event.target as HTMLElement;
       const tagName = target.tagName.toLowerCase();
       const text = target.textContent?.trim() || '';
       const href = (target as HTMLAnchorElement).href;
       
       if (tagName === 'a' && href) {
+
         trackInteraction('link', 'click', { text, href });
       } else if (tagName === 'button') {
+
         trackInteraction('button', 'click', { text });
       } else if (tagName === 'input' || tagName === 'textarea') {
+
         trackInteraction('form_field', 'focus', { type: (target as HTMLInputElement).type });
       }
     };
 
     const trackScroll = () => {
+
       const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
       if (scrollDepth > 0 && scrollDepth % 25 === 0) {
+
         trackEvent('engagement', 'scroll_depth', `${scrollDepth}%`, scrollDepth);
       }
     };
 
     const trackFormSubmit = (event: Event) => {
+
       const form = event.target as HTMLFormElement;
       trackEvent('form', 'submit', form.action || 'unknown_form');
     };
@@ -325,6 +387,7 @@ export const AnalyticsMonitor: React.FC = () => {
     document.addEventListener('submit', trackFormSubmit);
 
     return () => {
+
       document.removeEventListener('click', trackClick);
       window.removeEventListener('scroll', trackScroll);
       document.removeEventListener('submit', trackFormSubmit);
@@ -333,13 +396,16 @@ export const AnalyticsMonitor: React.FC = () => {
 
   // Start tracking when component mounts
   useEffect(() => {
+
     setIsTracking(true);
     trackPageView(window.location.href);
   }, [trackPageView]);
 
   // Export analytics data
   const exportAnalytics = useCallback(() => {
+
     const data = {
+
       events,
       performance,
       userBehavior,
@@ -358,9 +424,11 @@ export const AnalyticsMonitor: React.FC = () => {
 
   // Clear analytics data
   const clearAnalytics = useCallback(() => {
+
     setEvents([]);
     setPerformance(null);
     setUserBehavior({
+
       pageViews: 0,
       sessionDuration: 0,
       bounceRate: 0,

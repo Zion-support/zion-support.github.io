@@ -14,14 +14,17 @@ import { Handshake,
   Rocket
  } from 'lucide-react'
 export default function Partners(...args[]):  {
+
   const title = 'Partners — Zion Tech Group'
   const description = 'Strategic partnerships with leading technology providers, cloud platforms, and cybersecurity experts to deliver comprehensive solutions.'
             <motion.div 
               initial = {
+
   { opacity: 0,
   y: 20 
 }}
               animate = {
+
   { opacity: 1,
   y: 0 
 }}
@@ -31,14 +34,17 @@ export default function Partners(...args[]):  {
             </motion.div>
             <motion.h1 
               initial = {
+
   { opacity: 0,
   y: 20 
 }}
               animate = {
+
   { opacity: 1,
   y: 0 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.2 
 }}
@@ -50,14 +56,17 @@ export default function Partners(...args[]):  {
             </motion.h1>
             <motion.p 
               initial = {
+
   { opacity: 0,
   y: 20 
 }}
               animate = {
+
   { opacity: 1,
   y: 0 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.4 
 }}
@@ -72,10 +81,12 @@ export default function Partners(...args[]):  {
           <div className="max-w-7xl mx-auto px-6">
             <motion.div 
               initial = {
+
   { opacity: 0,
   y: 20 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
@@ -93,14 +104,17 @@ export default function Partners(...args[]):  {
                 <motion.div
                   key={benefit.title}
                   initial = {
+
   { opacity: 0,
   y: 20 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
                   transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 }}
@@ -121,10 +135,12 @@ export default function Partners(...args[]):  {
           <div className="max-w-7xl mx-auto px-6">
             <motion.div 
               initial = {
+
   { opacity: 0,
   y: 20 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
@@ -142,14 +158,17 @@ export default function Partners(...args[]):  {
                 <motion.div
                   key={category.title}
                   initial = {
+
   { opacity: 0,
   y: 20 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
                   transition = {
+
   { duration: 0.6,
   delay: categoryIndex * 0.2 
 }}
@@ -169,14 +188,17 @@ export default function Partners(...args[]):  {
                       <motion.div
                         key={partner.name}
                         initial = {
+
   { opacity: 0,
   scale: 0.9 
 }}
                         whileInView = {
+
   { opacity: 1,
   scale: 1 
 }}
                         transition = {
+
   { duration: 0.4,
   delay: partnerIndex * 0.1 
 }}
@@ -186,6 +208,7 @@ export default function Partners(...args[]):  {
                         <h4 className="font-semibold mb-1">{partner.name}</h4>
                         <p className="text-sm text-gray-600 mb-2">{partner.description}</p>
                         <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
+
                           partner.tier === 'Platinum' ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white' :
                           partner.tier === 'Gold' ? 'bg-gradient-to-r from-yellow-500 to-orange-500 text-white' :
                           'bg-gray-500 text-white'
@@ -205,10 +228,12 @@ export default function Partners(...args[]):  {
           <div className="max-w-7xl mx-auto px-6">
             <motion.div 
               initial = {
+
   { opacity: 0,
   y: 20 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
@@ -226,14 +251,17 @@ export default function Partners(...args[]):  {
                 <motion.div
                   key={level.name}
                   initial = {
+
   { opacity: 0,
   y: 20 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
                   transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 }}
@@ -265,10 +293,12 @@ export default function Partners(...args[]):  {
           <div className="max-w-4xl mx-auto px-6 text-center">
             <motion.h2 
               initial = {
+
   { opacity: 0,
   y: 20 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
@@ -279,14 +309,17 @@ export default function Partners(...args[]):  {
             </motion.h2>
             <motion.p 
               initial = {
+
   { opacity: 0,
   y: 20 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.2 
 }}
@@ -297,14 +330,17 @@ export default function Partners(...args[]):  {
             </motion.p>
             <motion.div 
               initial = {
+
   { opacity: 0,
   y: 20 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.4 
 }}

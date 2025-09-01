@@ -6,8 +6,14 @@ export default function GDPRDSARPortal() {
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>
         <title>GDPR DSAR Portal — Services — Zion</title>
-        <meta name="description" content="Privacy request intake, verification, and processing automation with audit trails." />
-        <link rel="canonical" href="https://ziontechgroup.com/services/gdpr-dsar-portal" />
+        <meta
+          name="description"
+          content="Privacy request intake, verification, and processing automation with audit trails."
+        />
+        <link
+          rel="canonical"
+          href="https://ziontechgroup.com/services/gdpr-dsar-portal"
+        />
       </Head>
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float" />
@@ -16,20 +22,34 @@ export default function GDPRDSARPortal() {
         <div className="absolute inset-0 beams opacity-[0.06]" />
       </div>
       <main className="relative z-10 mx-auto max-w-3xl px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-extrabold gradient-text">GDPR DSAR Portal</h1>
-        <p className="mt-4 text-white/80">Self‑serve privacy requests (access, delete, rectify, opt‑out) with identity verification, SLAs, and an auditable workflow.</p>
+        <h1 className="text-4xl md:text-5xl font-extrabold gradient-text">
+          GDPR DSAR Portal
+        </h1>
+        <p className="mt-4 text-white/80">
+          Self‑serve privacy requests (access, delete, rectify, opt‑out) with
+          identity verification, SLAs, and an auditable workflow.
+        </p>
         <ul className="mt-6 space-y-2 text-white/80 list-disc pl-5">
           <li>Identity verification, ticketing, and SLA timers</li>
           <li>Data source connectors and fulfillment automation</li>
           <li>Evidence archive and export for audits</li>
         </ul>
-        <div className="mt-6 text-sm text-white/60">Market refs: onetrust.com/pricing, transcend.io/pricing</div>
+        <div className="mt-6 text-sm text-white/60">
+          Market refs: onetrust.com/pricing, transcend.io/pricing
+        </div>
         <div className="mt-8 flex gap-3">
-          <Link href="/services"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Back to Services</a></Link>
-          <Link href="/contact"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a></Link>
+          <Link href="/services">
+            <a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">
+              Back to Services
+            </a>
+          </Link>
+          <Link href="/contact">
+            <a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">
+              Get Started
+            </a>
+          </Link>
         </div>
       </main>
     </div>
   );
 }
-

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Wrench, 
   Activity, 
   AlertTriangle, 
@@ -28,33 +29,40 @@ import {
 import { SEO } from '../../components/SEO';
 
 export default function AIPredictiveMaintenancePlatform() {
+
   const features = [
     {
+
       icon: <Brain className="w-6 h-6" />,
       title: "AI-Powered Failure Prediction",
       description: "Advanced machine learning algorithms predict equipment failures with 94% accuracy up to 30 days in advance"
     },
     {
+
       icon: <Activity className="w-6 h-6" />,
       title: "Real-Time Monitoring",
       description: "Continuous monitoring of equipment health with IoT sensors and edge computing for instant alerts"
     },
     {
+
       icon: <BarChart3 className="w-6 h-6" />,
       title: "Predictive Analytics Dashboard",
       description: "Comprehensive insights into equipment performance, maintenance schedules, and cost optimization"
     },
     {
+
       icon: <Wrench className="w-6 h-6" />,
       title: "Automated Maintenance Scheduling",
       description: "AI-driven maintenance planning that optimizes schedules based on usage patterns and failure predictions"
     },
     {
+
       icon: <TrendingUp className="w-6 h-6" />,
       title: "Performance Optimization",
       description: "Continuous optimization of equipment performance and energy efficiency through machine learning"
     },
     {
+
       icon: <Database className="w-6 h-6" />,
       title: "Historical Data Analysis",
       description: "Deep analysis of historical performance data to identify patterns and improve predictive accuracy"
@@ -63,6 +71,7 @@ export default function AIPredictiveMaintenancePlatform() {
 
   const pricing = [
     {
+
       name: "Starter",
       price: "$399",
       period: "/month",
@@ -77,6 +86,7 @@ export default function AIPredictiveMaintenancePlatform() {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$1,299",
       period: "/month",
@@ -93,6 +103,7 @@ export default function AIPredictiveMaintenancePlatform() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$3,999",
       period: "/month",
@@ -121,21 +132,25 @@ export default function AIPredictiveMaintenancePlatform() {
 
   const useCases = [
     {
+
       industry: "Manufacturing",
       description: "Predictive maintenance for production lines, CNC machines, and industrial equipment",
       savings: "$500K+ annually"
     },
     {
+
       industry: "Healthcare",
       description: "Medical equipment monitoring and predictive maintenance for critical devices",
       savings: "$200K+ annually"
     },
     {
+
       industry: "Transportation",
       description: "Fleet maintenance optimization and vehicle health monitoring",
       savings: "$300K+ annually"
     },
     {
+
       industry: "Energy",
       description: "Wind turbine, solar panel, and power plant equipment monitoring",
       savings: "$1M+ annually"
@@ -295,6 +310,7 @@ export default function AIPredictiveMaintenancePlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 ${
+
                   plan.popular 
                     ? 'border-blue-500 ring-2 ring-blue-500/20' 
                     : 'border-slate-700 hover:border-blue-500'

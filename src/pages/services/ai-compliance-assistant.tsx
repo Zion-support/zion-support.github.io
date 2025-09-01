@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Shield, 
   CheckCircle, 
   AlertTriangle, 
@@ -53,33 +54,40 @@ import {
 } from 'lucide-react';
 
 export default function AIComplianceAssistant() {
+
   const features = [
     {
+
       icon: <Monitor className="w-6 h-6" />,
       title: "Real-time Compliance Monitoring",
       description: "Continuous monitoring of regulatory requirements and automated compliance status tracking."
     },
     {
+
       icon: <AlertTriangle className="w-6 h-6" />,
       title: "Risk Assessment & Alerts",
       description: "AI-powered risk identification and proactive alerting for compliance violations."
     },
     {
+
       icon: <FileText className="w-6 h-6" />,
       title: "Automated Documentation",
       description: "Intelligent document generation and management for compliance requirements."
     },
     {
+
       icon: <Scale className="w-6 h-6" />,
       title: "Regulatory Updates",
       description: "Stay current with changing regulations through automated monitoring and updates."
     },
     {
+
       icon: <CheckCircle className="w-6 h-6" />,
       title: "Compliance Auditing",
       description: "Comprehensive audit trails and reporting for regulatory compliance verification."
     },
     {
+
       icon: <Shield className="w-6 h-6" />,
       title: "Policy Management",
       description: "Centralized policy creation, distribution, and enforcement across your organization."
@@ -97,26 +105,32 @@ export default function AIComplianceAssistant() {
 
   const complianceAreas = [
     {
+
       area: "GDPR & Data Privacy",
       description: "Automated data protection compliance and privacy regulation monitoring"
     },
     {
+
       area: "SOX & Financial Compliance",
       description: "Financial reporting compliance and internal control monitoring"
     },
     {
+
       area: "HIPAA & Healthcare",
       description: "Healthcare data protection and patient privacy compliance"
     },
     {
+
       area: "ISO Standards",
       description: "Quality management and information security compliance"
     },
     {
+
       area: "Industry Regulations",
       description: "Sector-specific compliance requirements and monitoring"
     },
     {
+
       area: "Environmental Compliance",
       description: "Sustainability and environmental regulation compliance"
     }
@@ -124,18 +138,22 @@ export default function AIComplianceAssistant() {
 
   const useCases = [
     {
+
       industry: "Financial Services",
       description: "SOX, Basel III, and financial regulatory compliance automation"
     },
     {
+
       industry: "Healthcare",
       description: "HIPAA, FDA, and healthcare compliance monitoring"
     },
     {
+
       industry: "Manufacturing",
       description: "ISO, OSHA, and manufacturing safety compliance"
     },
     {
+
       industry: "Technology",
       description: "GDPR, SOC2, and cybersecurity compliance management"
     }

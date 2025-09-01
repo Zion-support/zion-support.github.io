@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   TrendingUp, 
   DollarSign, 
   Shield, 
@@ -40,35 +41,42 @@ import {
 } from 'lucide-react';
 
 const AIFinancialTechnologyPlatform: React.FC = () => {
+
   const [activeTab, setActiveTab] = useState('overview');
 
   const features = [
     {
+
       icon: TrendingUp,
       title: 'AI-Powered Trading',
       description: 'Advanced algorithmic trading with machine learning for optimal returns'
     },
     {
+
       icon: Shield,
       title: 'Fraud Detection',
       description: 'Real-time fraud detection using AI and behavioral analytics'
     },
     {
+
       icon: Database,
       title: 'Risk Management',
       description: 'Intelligent risk assessment and portfolio optimization'
     },
     {
+
       icon: BarChart3,
       title: 'Predictive Analytics',
       description: 'Market trend prediction and investment insights'
     },
     {
+
       icon: CreditCard,
       title: 'Digital Banking',
       description: 'Next-generation digital banking and payment solutions'
     },
     {
+
       icon: Brain,
       title: 'Smart Contracts',
       description: 'AI-powered smart contracts and blockchain integration'
@@ -77,31 +85,37 @@ const AIFinancialTechnologyPlatform: React.FC = () => {
 
   const useCases = [
     {
+
       title: 'Investment Management',
       description: 'AI-driven portfolio management and investment strategies',
       icon: ChartLine
     },
     {
+
       title: 'Trading Platforms',
       description: 'Advanced trading platforms with AI-powered insights',
       icon: TrendingUp
     },
     {
+
       title: 'Risk Assessment',
       description: 'Comprehensive risk analysis and mitigation strategies',
       icon: Shield
     },
     {
+
       title: 'Customer Service',
       description: 'AI-powered customer support and financial advisory',
       icon: Users
     },
     {
+
       title: 'Compliance & Regulation',
       description: 'Automated compliance monitoring and regulatory reporting',
       icon: Building2
     },
     {
+
       title: 'Payment Processing',
       description: 'Secure and efficient payment processing solutions',
       icon: CreditCard
@@ -110,6 +124,7 @@ const AIFinancialTechnologyPlatform: React.FC = () => {
 
   const pricing = [
     {
+
       plan: 'Starter',
       price: '$1,500',
       period: '/month',
@@ -126,6 +141,7 @@ const AIFinancialTechnologyPlatform: React.FC = () => {
       popular: false
     },
     {
+
       plan: 'Professional',
       price: '$5,500',
       period: '/month',
@@ -143,6 +159,7 @@ const AIFinancialTechnologyPlatform: React.FC = () => {
       popular: true
     },
     {
+
       plan: 'Enterprise',
       price: '$18,000',
       period: '/month',
@@ -164,31 +181,37 @@ const AIFinancialTechnologyPlatform: React.FC = () => {
 
   const benefits = [
     {
+
       icon: Zap,
       title: 'Increased Returns',
       description: 'AI-powered trading can increase returns by 15-25% on average'
     },
     {
+
       icon: Shield,
       title: 'Enhanced Security',
       description: 'Advanced fraud detection and security protocols'
     },
     {
+
       icon: TrendingUp,
       title: 'Better Performance',
       description: 'Superior performance through intelligent automation'
     },
     {
+
       icon: Clock,
       title: '24/7 Operation',
       description: 'Round-the-clock trading and monitoring capabilities'
     },
     {
+
       icon: Globe,
       title: 'Global Access',
       description: 'Access to global markets and financial instruments'
     },
     {
+
       icon: Users,
       title: 'Expert Support',
       description: 'Dedicated financial technology specialists and AI experts'
@@ -197,31 +220,37 @@ const AIFinancialTechnologyPlatform: React.FC = () => {
 
   const technologies = [
     {
+
       name: 'Machine Learning',
       description: 'Advanced ML algorithms for pattern recognition and prediction',
       icon: Brain
     },
     {
+
       name: 'Blockchain',
       description: 'Secure and transparent financial transactions',
       icon: Shield
     },
     {
+
       name: 'Big Data Analytics',
       description: 'Real-time analysis of massive financial datasets',
       icon: Database
     },
     {
+
       name: 'Natural Language Processing',
       description: 'AI-powered financial news and sentiment analysis',
       icon: MessageSquare
     },
     {
+
       name: 'Computer Vision',
       description: 'Document processing and verification automation',
       icon: Eye
     },
     {
+
       name: 'Predictive Modeling',
       description: 'Advanced forecasting and trend prediction',
       icon: TrendingUp
@@ -408,6 +437,7 @@ const AIFinancialTechnologyPlatform: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative rounded-2xl p-8 ${
+
                   plan.popular 
                     ? 'bg-gradient-to-br from-green-600 to-blue-700 text-white shadow-2xl scale-105' 
                     : 'bg-white border-2 border-slate-200 hover:border-green-300'
@@ -423,23 +453,27 @@ const AIFinancialTechnologyPlatform: React.FC = () => {
                 
                 <div className="text-center mb-8">
                   <h3 className={`text-2xl font-bold mb-2 ${
+
                     plan.popular ? 'text-white' : 'text-gray-900'
                   }`}>
                     {plan.plan}
                   </h3>
                   <div className="flex items-baseline justify-center">
                     <span className={`text-4xl font-bold ${
+
                       plan.popular ? 'text-white' : 'text-gray-900'
                     }`}>
                       {plan.price}
                     </span>
                     <span className={`ml-2 text-lg ${
+
                       plan.popular ? 'text-green-100' : 'text-gray-600'
                     }`}>
                       {plan.period}
                     </span>
                   </div>
                   <p className={`mt-2 ${
+
                     plan.popular ? 'text-green-100' : 'text-gray-600'
                   }`}>
                     {plan.description}
@@ -450,6 +484,7 @@ const AIFinancialTechnologyPlatform: React.FC = () => {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
                       <CheckCircle className={`h-5 w-5 mr-3 mt-0.5 ${
+
                         plan.popular ? 'text-green-400' : 'text-green-500'
                       }`} />
                       <span className={plan.popular ? 'text-green-100' : 'text-gray-600'}>
@@ -460,6 +495,7 @@ const AIFinancialTechnologyPlatform: React.FC = () => {
                 </ul>
                 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                   plan.popular
                     ? 'bg-white text-green-600 hover:bg-gray-100'
                     : 'bg-gradient-to-r from-green-500 to-blue-600 text-white hover:from-green-600 hover:to-blue-700'

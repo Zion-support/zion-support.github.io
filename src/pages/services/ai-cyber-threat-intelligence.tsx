@@ -4,6 +4,7 @@ import { Brain, Shield, Zap, CheckCircle, ArrowRight, Star, Globe, Lock, Cpu, Ta
 import { SEO } from '@/components/SEO';
 
 const AICyberThreatIntelligence: React.FC = () => {
+
   const features = [
     'AI-powered threat detection and analysis in real-time',
     'Advanced behavioral analytics for anomaly detection',
@@ -27,6 +28,7 @@ const AICyberThreatIntelligence: React.FC = () => {
 
   const pricing = [
     {
+
       plan: 'Professional',
       price: '$3,999',
       period: 'month',
@@ -34,6 +36,7 @@ const AICyberThreatIntelligence: React.FC = () => {
       popular: false
     },
     {
+
       plan: 'Enterprise',
       price: '$9,999',
       period: 'month',
@@ -41,6 +44,7 @@ const AICyberThreatIntelligence: React.FC = () => {
       popular: true
     },
     {
+
       plan: 'Global',
       price: '$24,999',
       period: 'month',
@@ -288,6 +292,7 @@ const AICyberThreatIntelligence: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-white rounded-2xl shadow-xl border-2 ${
+
                   plan.popular ? 'border-red-500 scale-105' : 'border-gray-200'
                 }`}
               >
@@ -318,6 +323,7 @@ const AICyberThreatIntelligence: React.FC = () => {
                   <a
                     href="https://ziontechgroup.com/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                       plan.popular
                         ? 'bg-red-600 text-white hover:bg-red-700'
                         : 'bg-gray-100 text-gray-900 hover:bg-gray-200'

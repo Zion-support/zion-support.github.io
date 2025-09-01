@@ -1,39 +1,47 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Car, Shield, Brain, Zap, Globe, Users, BarChart3, 
   Lock, Cpu, Network, Eye, AlertTriangle, CheckCircle,
   ArrowRight, Star, Award, Phone, Mail, MapPin
 } from 'lucide-react';
 
 const AIAutonomousVehicleManagementPlatform: React.FC = () => {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Decision Making",
       description: "Advanced neural networks for real-time vehicle control and route optimization"
     },
     {
+
       icon: Shield,
       title: "Cybersecurity Protection",
       description: "Military-grade security protocols to protect against cyber threats and hacking"
     },
     {
+
       icon: Eye,
       title: "360° Environmental Awareness",
       description: "Multi-sensor fusion for complete situational awareness in all conditions"
     },
     {
+
       icon: Network,
       title: "5G/6G Connectivity",
       description: "Ultra-low latency communication for real-time fleet coordination"
     },
     {
+
       icon: BarChart3,
       title: "Predictive Analytics",
       description: "ML-powered predictive maintenance and performance optimization"
     },
     {
+
       icon: Globe,
       title: "Global Fleet Management",
       description: "Centralized control of autonomous vehicles across multiple continents"
@@ -42,6 +50,7 @@ const AIAutonomousVehicleManagementPlatform: React.FC = () => {
 
   const pricingTiers = [
     {
+
       name: "Starter Fleet",
       price: "$15,000",
       period: "/month",
@@ -58,6 +67,7 @@ const AIAutonomousVehicleManagementPlatform: React.FC = () => {
       popular: false
     },
     {
+
       name: "Professional Fleet",
       price: "$45,000",
       period: "/month",
@@ -75,6 +85,7 @@ const AIAutonomousVehicleManagementPlatform: React.FC = () => {
       popular: true
     },
     {
+
       name: "Enterprise Fleet",
       price: "$120,000",
       period: "/month",
@@ -95,21 +106,25 @@ const AIAutonomousVehicleManagementPlatform: React.FC = () => {
 
   const benefits = [
     {
+
       title: "Safety First",
       description: "AI-powered collision avoidance with 99.99% accuracy rate",
       icon: Shield
     },
     {
+
       title: "Cost Efficiency",
       description: "Reduce operational costs by up to 60% through automation",
       icon: BarChart3
     },
     {
+
       title: "24/7 Operation",
       description: "Continuous operation without driver fatigue or breaks",
       icon: Clock
     },
     {
+
       title: "Environmental Impact",
       description: "Optimize routes to reduce fuel consumption and emissions",
       icon: Globe
@@ -256,6 +271,7 @@ const AIAutonomousVehicleManagementPlatform: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+
                   tier.popular 
                     ? 'border-blue-500 ring-2 ring-blue-500/20' 
                     : 'border-gray-700'
@@ -288,6 +304,7 @@ const AIAutonomousVehicleManagementPlatform: React.FC = () => {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                   tier.popular
                     ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600'
                     : 'bg-gray-700 text-white hover:bg-gray-600'

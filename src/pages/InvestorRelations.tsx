@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
-import { 
+import {
+
   TrendingUp, 
   BarChart3, 
   FileText, 
@@ -35,8 +36,10 @@ import {
 } from 'lucide-react';
 
 export default function InvestorRelations() {
+
   const financialHighlights = [
     {
+
       metric: 'Revenue Growth',
       value: '156%',
       change: '+23%',
@@ -45,6 +48,7 @@ export default function InvestorRelations() {
       color: 'text-green-400'
     },
     {
+
       metric: 'Market Cap',
       value: '$2.4B',
       change: '+18%',
@@ -53,6 +57,7 @@ export default function InvestorRelations() {
       color: 'text-blue-400'
     },
     {
+
       metric: 'Global Customers',
       value: '1,200+',
       change: '+45%',
@@ -61,6 +66,7 @@ export default function InvestorRelations() {
       color: 'text-purple-400'
     },
     {
+
       metric: 'Market Presence',
       value: '25+',
       change: '+5',
@@ -72,6 +78,7 @@ export default function InvestorRelations() {
 
   const quarterlyResults = [
     {
+
       quarter: 'Q4 2024',
       revenue: '$89.2M',
       growth: '+23%',
@@ -80,6 +87,7 @@ export default function InvestorRelations() {
       status: 'Projected'
     },
     {
+
       quarter: 'Q3 2024',
       revenue: '$72.5M',
       growth: '+18%',
@@ -88,6 +96,7 @@ export default function InvestorRelations() {
       status: 'Reported'
     },
     {
+
       quarter: 'Q2 2024',
       revenue: '$61.4M',
       growth: '+15%',
@@ -96,6 +105,7 @@ export default function InvestorRelations() {
       status: 'Reported'
     },
     {
+
       quarter: 'Q1 2024',
       revenue: '$53.4M',
       growth: '+12%',
@@ -107,6 +117,7 @@ export default function InvestorRelations() {
 
   const strategicInitiatives = [
     {
+
       title: 'AI Platform Expansion',
       description: 'Major investment in AI infrastructure and model development',
       investment: '$45M',
@@ -115,6 +126,7 @@ export default function InvestorRelations() {
       impact: 'High'
     },
     {
+
       title: 'Global Market Entry',
       description: 'Expansion into APAC and European markets',
       investment: '$28M',
@@ -123,6 +135,7 @@ export default function InvestorRelations() {
       impact: 'Medium'
     },
     {
+
       title: 'Quantum Computing R&D',
       description: 'Research and development in quantum technologies',
       investment: '$32M',
@@ -131,6 +144,7 @@ export default function InvestorRelations() {
       impact: 'Long-term'
     },
     {
+
       title: 'Cybersecurity Platform',
       description: 'Next-generation security solutions development',
       investment: '$38M',
@@ -142,6 +156,7 @@ export default function InvestorRelations() {
 
   const investorResources = [
     {
+
       title: 'Annual Report 2024',
       description: 'Comprehensive overview of our financial performance and strategic initiatives',
       type: 'PDF',
@@ -150,6 +165,7 @@ export default function InvestorRelations() {
       featured: true
     },
     {
+
       title: 'Q3 2024 Earnings Call',
       description: 'Audio recording and transcript of our Q3 2024 earnings call',
       type: 'Audio/Transcript',
@@ -158,6 +174,7 @@ export default function InvestorRelations() {
       featured: false
     },
     {
+
       title: 'Investor Presentation',
       description: 'Latest investor presentation with company overview and financial highlights',
       type: 'PDF',
@@ -166,6 +183,7 @@ export default function InvestorRelations() {
       featured: true
     },
     {
+
       title: 'Corporate Governance',
       description: 'Board composition, committee charters, and governance policies',
       type: 'PDF',
@@ -174,6 +192,7 @@ export default function InvestorRelations() {
       featured: false
     },
     {
+
       title: 'ESG Report 2024',
       description: 'Environmental, Social, and Governance performance report',
       type: 'PDF',
@@ -182,6 +201,7 @@ export default function InvestorRelations() {
       featured: false
     },
     {
+
       title: 'Financial Statements',
       description: 'Quarterly and annual financial statements and disclosures',
       type: 'PDF',
@@ -193,6 +213,7 @@ export default function InvestorRelations() {
 
   const upcomingEvents = [
     {
+
       title: 'Q4 2024 Earnings Call',
       date: 'February 15, 2025',
       time: '5:00 PM ET',
@@ -200,6 +221,7 @@ export default function InvestorRelations() {
       registration: 'Required'
     },
     {
+
       title: 'Annual Shareholder Meeting',
       date: 'May 20, 2025',
       time: '10:00 AM ET',
@@ -207,6 +229,7 @@ export default function InvestorRelations() {
       registration: 'Required'
     },
     {
+
       title: 'Technology Investor Day',
       date: 'March 28, 2025',
       time: '9:00 AM ET',
@@ -214,6 +237,7 @@ export default function InvestorRelations() {
       registration: 'Open'
     },
     {
+
       title: 'Q1 2025 Earnings Call',
       date: 'May 8, 2025',
       time: '5:00 PM ET',
@@ -223,6 +247,7 @@ export default function InvestorRelations() {
   ];
 
   const contactInfo = {
+
     investorRelations: 'investors@ziontechgroup.com',
     phone: '+1 (302) 464-0950',
     address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -310,6 +335,7 @@ export default function InvestorRelations() {
                     <td className="p-4 text-white">{quarter.customers}</td>
                     <td className="p-4">
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+
                         quarter.status === 'Reported' ? 'bg-green-500/20 text-green-300' :
                         quarter.status === 'Projected' ? 'bg-yellow-500/20 text-yellow-300' :
                         'bg-blue-500/20 text-blue-300'
@@ -354,6 +380,7 @@ export default function InvestorRelations() {
                 <div className="flex items-start justify-between mb-4">
                   <h3 className="text-xl font-semibold text-white">{initiative.title}</h3>
                   <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+
                     initiative.impact === 'High' ? 'bg-red-500/20 text-red-300' :
                     initiative.impact === 'Medium' ? 'bg-yellow-500/20 text-yellow-300' :
                     'bg-blue-500/20 text-blue-300'
@@ -474,6 +501,7 @@ export default function InvestorRelations() {
                 <div className="flex items-start justify-between mb-4">
                   <h3 className="text-xl font-semibold text-white">{event.title}</h3>
                   <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+
                     event.registration === 'Required' ? 'bg-red-500/20 text-red-300' :
                     'bg-green-500/20 text-green-300'
                   }`}>

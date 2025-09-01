@@ -13,6 +13,7 @@ import { useTranslation } from 'react-i18next';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 export function MobileMenu({ className }) {
+
     const { user, isAuthenticated } = useAuth();
     const location = useLocation();
     const { t } = useTranslation();
@@ -27,8 +28,10 @@ export function MobileMenu({ className }) {
         { href: '/community', label: t('nav.community'), icon: Users, matches: (path) => path.startsWith('/community') },
     ];
     if (isAuthenticated) {
+
         navigationItems.push({ href: '/dashboard', label: t('nav.dashboard'), icon: Settings, matches: (path) => path.startsWith('/dashboard') })}
     return (<div className = {
+
   cn("md:hidden",
   className)
 
@@ -51,9 +54,11 @@ export function MobileMenu({ className }) {
             {/* Navigation items */}
             <nav className="p-4 space-y-2">
               {navigationItems.map((item) => {
+
                 const Icon = item.icon;
                 const isActive = item.matches(location.pathname);
                 return (<Link key={item.href} to={item.href} onClick={toggleMenu} className = {
+
   cn("flex items-center gap-3 px-4 py-3 rounded-lg text-white transition-colors",
   isActive
                         ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/40"

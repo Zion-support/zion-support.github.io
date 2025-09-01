@@ -3,6 +3,7 @@ import { ProductListing } from "@/types/listings";
 export const QUANTUM_SPACE_TECH_SERVICES_2031: ProductListing[] = [
   // Quantum Computing & Quantum AI
   {
+
     id: "quantum-ai-trading-platform-2031",
     title: "Quantum AI Trading Platform 2031",
     description: "Revolutionary quantum computing platform that processes financial data at quantum speeds, enabling real-time market analysis, risk assessment, and automated trading with 99.9% accuracy. Reduces trading latency by 1000x and increases profit margins by 300%.",
@@ -21,6 +22,7 @@ export const QUANTUM_SPACE_TECH_SERVICES_2031: ProductListing[] = [
     availability: "8-12 Weeks",
     aiScore: 99,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-ai-trading",
@@ -35,6 +37,7 @@ export const QUANTUM_SPACE_TECH_SERVICES_2031: ProductListing[] = [
 
   // Quantum Machine Learning & Drug Discovery
   {
+
     id: "quantum-ml-drug-discovery-2031",
     title: "Quantum Machine Learning Drug Discovery Platform 2031",
     description: "Breakthrough quantum computing platform that accelerates drug discovery by 1000x using quantum machine learning algorithms. Simulates molecular interactions at quantum level, reducing drug development time from years to months.",
@@ -53,6 +56,7 @@ export const QUANTUM_SPACE_TECH_SERVICES_2031: ProductListing[] = [
     availability: "12-16 Weeks",
     aiScore: 99,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-ml-drug-discovery",
@@ -67,6 +71,7 @@ export const QUANTUM_SPACE_TECH_SERVICES_2031: ProductListing[] = [
 
   // Quantum Cryptography & Security
   {
+
     id: "quantum-cryptography-platform-2031",
     title: "Quantum Cryptography & Security Platform 2031",
     description: "Unbreakable quantum encryption platform that provides absolute security for data transmission, storage, and communication. Uses quantum key distribution and quantum-resistant algorithms to protect against all known and future cyber threats.",
@@ -85,6 +90,7 @@ export const QUANTUM_SPACE_TECH_SERVICES_2031: ProductListing[] = [
     availability: "10-14 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-cryptography",
@@ -99,6 +105,7 @@ export const QUANTUM_SPACE_TECH_SERVICES_2031: ProductListing[] = [
 
   // Space Technology & Satellite Systems
   {
+
     id: "ai-powered-satellite-constellation-management-2031",
     title: "AI-Powered Satellite Constellation Management Platform 2031",
     description: "Advanced space technology platform that manages satellite constellations, optimizes orbital paths, and provides global connectivity with 99.99% uptime. Enables real-time communication, Earth observation, and space exploration missions.",
@@ -117,6 +124,7 @@ export const QUANTUM_SPACE_TECH_SERVICES_2031: ProductListing[] = [
     availability: "16-20 Weeks",
     aiScore: 99,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/satellite-constellation-management",
@@ -131,6 +139,7 @@ export const QUANTUM_SPACE_TECH_SERVICES_2031: ProductListing[] = [
 
   // Mars Colony Management & Space Habitation
   {
+
     id: "mars-colony-management-system-2031",
     title: "Mars Colony Management & Life Support System 2031",
     description: "Revolutionary space technology platform that manages human colonies on Mars, including life support systems, resource management, and autonomous operations. Ensures sustainable human presence in space with 99.9% reliability.",
@@ -149,6 +158,7 @@ export const QUANTUM_SPACE_TECH_SERVICES_2031: ProductListing[] = [
     availability: "24-32 Weeks",
     aiScore: 99,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/mars-colony-management",
@@ -163,6 +173,7 @@ export const QUANTUM_SPACE_TECH_SERVICES_2031: ProductListing[] = [
 
   // Asteroid Mining & Space Resource Extraction
   {
+
     id: "asteroid-mining-automation-platform-2031",
     title: "Asteroid Mining & Space Resource Extraction Platform 2031",
     description: "Advanced space technology platform that automates asteroid mining operations, resource extraction, and material processing in space. Enables sustainable resource utilization and reduces Earth's resource dependency.",
@@ -181,6 +192,7 @@ export const QUANTUM_SPACE_TECH_SERVICES_2031: ProductListing[] = [
     availability: "20-28 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/asteroid-mining",
@@ -195,6 +207,7 @@ export const QUANTUM_SPACE_TECH_SERVICES_2031: ProductListing[] = [
 
   // Quantum Internet & Communication
   {
+
     id: "quantum-internet-communication-platform-2031",
     title: "Quantum Internet & Communication Platform 2031",
     description: "Revolutionary quantum internet platform that provides instant, secure, and unbreakable communication across the globe. Uses quantum entanglement for instant data transmission and absolute security.",
@@ -213,6 +226,7 @@ export const QUANTUM_SPACE_TECH_SERVICES_2031: ProductListing[] = [
     availability: "14-18 Weeks",
     aiScore: 99,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-internet",
@@ -227,6 +241,7 @@ export const QUANTUM_SPACE_TECH_SERVICES_2031: ProductListing[] = [
 
   // Space Tourism & Commercial Space Travel
   {
+
     id: "space-tourism-management-platform-2031",
     title: "Space Tourism & Commercial Space Travel Platform 2031",
     description: "Comprehensive space tourism platform that manages commercial space travel, passenger safety, and space experiences. Enables safe and accessible space tourism for civilians with 99.99% safety rating.",
@@ -245,6 +260,7 @@ export const QUANTUM_SPACE_TECH_SERVICES_2031: ProductListing[] = [
     availability: "12-16 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/space-tourism",
@@ -259,6 +275,7 @@ export const QUANTUM_SPACE_TECH_SERVICES_2031: ProductListing[] = [
 
   // Quantum Sensors & Quantum Metrology
   {
+
     id: "quantum-sensors-metrology-platform-2031",
     title: "Quantum Sensors & Metrology Platform 2031",
     description: "Advanced quantum sensing platform that provides unprecedented precision in measurement, detection, and analysis. Enables breakthrough applications in science, medicine, and industry with quantum-level accuracy.",
@@ -277,6 +294,7 @@ export const QUANTUM_SPACE_TECH_SERVICES_2031: ProductListing[] = [
     availability: "16-20 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-sensors",
@@ -291,6 +309,7 @@ export const QUANTUM_SPACE_TECH_SERVICES_2031: ProductListing[] = [
 
   // Space Debris Cleanup & Orbital Sustainability
   {
+
     id: "space-debris-cleanup-platform-2031",
     title: "Space Debris Cleanup & Orbital Sustainability Platform 2031",
     description: "Innovative space technology platform that automatically detects, tracks, and removes space debris to ensure orbital sustainability. Protects satellites and spacecraft while maintaining clean space environment.",
@@ -309,6 +328,7 @@ export const QUANTUM_SPACE_TECH_SERVICES_2031: ProductListing[] = [
     availability: "18-24 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/space-debris-cleanup",

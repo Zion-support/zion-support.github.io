@@ -1,3 +1,17 @@
+<<<<<<< HEAD:pages/research-development.tsx
+import React from 'react';
+
+const Component = () => {
+  return (
+    <div>
+      <h1>Page Content</h1>
+      <p>This page is under construction.</p>
+    </div>
+  );
+};
+
+export default Component;
+=======
 import React from 'react.ts'
 import { Link  } from 'react-router-dom.ts'
 import { FlaskConical, Lightbulb, Users, Award, ArrowRight, BookOpen, Microscope, Rocket  } from 'lucide-react'
@@ -31,3 +45,4 @@ export default function ResearchDevelopment(...args[]):  {
 		</>;
 	);
 };
+>>>>>>> main:pages.__backup/research-development.tsx

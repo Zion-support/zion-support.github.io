@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
+
   Smartphone,
   Tablet,
   Monitor,
@@ -31,6 +32,7 @@ import {
 } from 'lucide-react';
 
 interface MobileSettings {
+
   touchOptimization: boolean;
   gestureSupport: boolean;
   pinchZoom: boolean;
@@ -47,19 +49,23 @@ interface MobileSettings {
 }
 
 interface MobileOptimizerProps {
+
   enabled?: boolean;
   showPanel?: boolean;
   autoDetect?: boolean;
 }
 
 export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
+
   enabled = true,
   showPanel = false,
-  autoDetect = true
+  autoDetect = true;
 }) => {
+
   const [isOpen, setIsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<'general' | 'touch' | 'display' | 'performance' | 'help'>('general');
   const [settings, setSettings] = useState<MobileSettings>({
+
     touchOptimization: true,
     gestureSupport: true,
     pinchZoom: true,
@@ -76,6 +82,7 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
   });
   
   const [deviceInfo, setDeviceInfo] = useState({
+
     isMobile: false,
     isTablet: false,
     isDesktop: false,
@@ -88,6 +95,7 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
   });
   
   const [gestureHistory, setGestureHistory] = useState<Array<{
+
     type: string;
     timestamp: Date;
     details: string;
@@ -99,9 +107,11 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
 
   // Auto-detect device capabilities
   useEffect(() => {
+
     if (!autoDetect) return;
 
     const detectDevice = () => {
+
       const userAgent = navigator.userAgent;
       const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
       const isTablet = /iPad|Android(?!.*Mobile)/i.test(userAgent);
@@ -111,6 +121,7 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       const pixelRatio = window.devicePixelRatio || 1;
       
       setDeviceInfo(prev => ({
+
         ...prev,
         isMobile,
         isTablet,
@@ -118,6 +129,7 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
         touchSupport,
         pixelRatio,
         screenSize: {
+
           width: window.innerWidth,
           height: window.innerHeight
         }
@@ -125,14 +137,18 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     };
 
     const handleOrientationChange = () => {
+
       const orientation = window.innerWidth > window.innerHeight ? 'landscape' : 'portrait';
       setDeviceInfo(prev => ({ ...prev, orientation }));
     };
 
     const handleResize = () => {
+
       setDeviceInfo(prev => ({
+
         ...prev,
         screenSize: {
+
           width: window.innerWidth,
           height: window.innerHeight
         }
@@ -141,27 +157,35 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
 
     // Battery API
     const getBatteryInfo = async () => {
+
       if ('getBattery' in navigator) {
+
         try {
+
           const battery = await (navigator as any).getBattery();
           setDeviceInfo(prev => ({ ...prev, batteryLevel: battery.level * 100 }));
           
           battery.addEventListener('levelchange', () => {
+
             setDeviceInfo(prev => ({ ...prev, batteryLevel: battery.level * 100 }));
           });
         } catch (error) {
-          console.log('Battery API not supported');
+
+          // // // console.log('Battery API not supported');
         }
       }
     };
 
     // Network Information API
     const getNetworkInfo = () => {
+
       if ('connection' in navigator) {
+
         const connection = (navigator as any).connection;
         setDeviceInfo(prev => ({ ...prev, connectionType: connection.effectiveType || 'unknown' }));
         
         connection.addEventListener('change', () => {
+
           setDeviceInfo(prev => ({ ...prev, connectionType: connection.effectiveType || 'unknown' }));
         });
       }
@@ -176,6 +200,7 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     window.addEventListener('resize', handleResize);
     
     return () => {
+
       window.removeEventListener('orientationchange', handleOrientationChange);
       window.removeEventListener('resize', handleResize);
     };
@@ -183,6 +208,7 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
 
   // Apply mobile optimizations
   useEffect(() => {
+
     if (!enabled) return;
 
     const root = document.documentElement;
@@ -190,10 +216,12 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
 
     // Touch optimization
     if (settings.touchOptimization) {
+
       root.classList.add('touch-optimized');
       body.style.setProperty('--touch-target-size', '44px');
       body.style.setProperty('--touch-feedback-opacity', '0.3');
     } else {
+
       root.classList.remove('touch-optimized');
       body.style.removeProperty('--touch-target-size');
       body.style.removeProperty('--touch-feedback-opacity');
@@ -201,41 +229,52 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
 
     // Gesture support
     if (settings.gestureSupport) {
+
       root.classList.add('gesture-enabled');
     } else {
+
       root.classList.remove('gesture-enabled');
     }
 
     // Pinch zoom
     if (settings.pinchZoom) {
+
       root.classList.add('pinch-zoom-enabled');
     } else {
+
       root.classList.remove('pinch-zoom-enabled');
     }
 
     // Adaptive layout
     if (settings.adaptiveLayout) {
+
       root.classList.add('adaptive-layout');
     } else {
+
       root.classList.remove('adaptive-layout');
     }
 
     // Touch targets
     if (settings.touchTargets) {
+
       root.classList.add('large-touch-targets');
     } else {
+
       root.classList.remove('large-touch-targets');
     }
 
     // Orientation lock
     if (settings.orientationLock !== 'auto') {
+
       root.classList.add(`orientation-${settings.orientationLock}`);
     } else {
+
       root.classList.remove('orientation-portrait', 'orientation-landscape');
     }
 
     // Font size
     const fontSizeMap = {
+
       small: '14px',
       medium: '16px',
       large: '18px'
@@ -244,19 +283,25 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
 
     // Contrast
     if (settings.contrast === 'high') {
+
       root.classList.add('high-contrast');
     } else if (settings.contrast === 'inverted') {
+
       root.classList.add('inverted-colors');
     } else {
+
       root.classList.remove('high-contrast', 'inverted-colors');
     }
 
     // Brightness
     if (settings.brightness === 'low') {
+
       root.classList.add('low-brightness');
     } else if (settings.brightness === 'high') {
+
       root.classList.add('high-brightness');
     } else {
+
       root.classList.remove('low-brightness', 'high-brightness');
     }
 
@@ -264,10 +309,12 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
 
   // Touch gesture handling
   const handleTouchStart = useCallback((event: TouchEvent) => {
+
     if (!settings.gestureSupport) return;
     
     const touch = event.touches[0];
     touchStartRef.current = {
+
       x: touch.clientX,
       y: touch.clientY,
       time: Date.now()
@@ -275,6 +322,7 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
   }, [settings.gestureSupport]);
 
   const handleTouchEnd = useCallback((event: TouchEvent) => {
+
     if (!settings.gestureSupport || !touchStartRef.current) return;
     
     const touch = event.changedTouches[0];
@@ -284,11 +332,13 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     
     // Detect swipe gestures
     if (deltaTime < 300 && Math.abs(deltaX) > 50) {
+
       const direction = deltaX > 0 ? 'right' : 'left';
       handleSwipe(direction);
     }
     
     if (deltaTime < 300 && Math.abs(deltaY) > 50) {
+
       const direction = deltaY > 0 ? 'down' : 'up';
       handleSwipe(direction);
     }
@@ -297,10 +347,12 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
   }, [settings.gestureSupport]);
 
   const handleSwipe = useCallback((direction: string) => {
+
     if (!settings.swipeGestures) return;
     
     // Add gesture to history
     setGestureHistory(prev => [...prev.slice(-9), {
+
       type: 'swipe',
       timestamp: new Date(),
       details: `Swipe ${direction}`
@@ -308,63 +360,75 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     
     // Handle navigation based on swipe direction
     switch (direction) {
+
       case 'left':
         // Navigate forward/next
-        console.log('Swipe left - navigate forward');
+        // // // console.log('Swipe left - navigate forward');
         break;
       case 'right':
         // Navigate back
-        console.log('Swipe right - navigate back');
+        // // // console.log('Swipe right - navigate back');
         break;
       case 'up':
         // Scroll up or show menu
-        console.log('Swipe up - scroll up');
+        // // // console.log('Swipe up - scroll up');
         break;
       case 'down':
         // Scroll down or hide menu
-        console.log('Swipe down - scroll down');
+        // // // console.log('Swipe down - scroll down');
         break;
     }
   }, [settings.swipeGestures]);
 
   // Haptic feedback
   const triggerHapticFeedback = useCallback(() => {
+
     if (!settings.hapticFeedback) return;
     
     if ('vibrate' in navigator) {
+
       navigator.vibrate(50);
     }
   }, [settings.hapticFeedback]);
 
   // Auto-optimization
   const performAutoOptimization = useCallback(async () => {
+
     if (!enabled) return;
     
     setIsOptimizing(true);
     
     try {
+
       // Optimize images for mobile
       const images = document.querySelectorAll('img');
       images.forEach(img => {
+
         if (!img.hasAttribute('loading')) {
+
           img.setAttribute('loading', 'lazy');
         }
         if (!img.hasAttribute('decoding')) {
+
           img.setAttribute('decoding', 'async');
         }
       });
       
       // Add mobile-specific CSS classes
       if (deviceInfo.isMobile) {
+
         document.body.classList.add('mobile-device');
       }
       
       // Optimize touch targets
       const touchTargets = document.querySelectorAll('button, a, input, select, textarea');
       touchTargets.forEach(target => {
+
         if (target instanceof HTMLElement) {
+
           const rect = target.getBoundingClientRect();
           if (rect.width < 44 || rect.height < 44) {
+
             target.classList.add('small-touch-target');
           }
         }
@@ -372,34 +436,41 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       
       // Add mobile navigation enhancements
       if (settings.mobileNavigation) {
+
         const nav = document.querySelector('nav');
         if (nav) {
+
           nav.classList.add('mobile-optimized-nav');
         }
       }
       
       // Record optimization
       setGestureHistory(prev => [...prev.slice(-9), {
+
         type: 'optimization',
         timestamp: new Date(),
         details: 'Mobile optimization applied'
       }]);
       
     } catch (error) {
-      console.error('Mobile optimization failed:', error);
+
+      // // // console.error('Mobile optimization failed:', error);
     } finally {
+
       setIsOptimizing(false);
     }
   }, [enabled, deviceInfo.isMobile, settings.mobileNavigation]);
 
   // Touch event listeners
   useEffect(() => {
+
     if (!enabled || !settings.gestureSupport) return;
 
     document.addEventListener('touchstart', handleTouchStart, { passive: true });
     document.addEventListener('touchend', handleTouchEnd, { passive: true });
     
     return () => {
+
       document.removeEventListener('touchstart', handleTouchStart);
       document.removeEventListener('touchend', handleTouchEnd);
     };
@@ -407,6 +478,7 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
 
   // Auto-optimization effect
   useEffect(() => {
+
     if (!enabled) return;
     
     performAutoOptimization();
@@ -469,6 +541,7 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
                   key={key}
                   onClick={() => setActiveTab(key as any)}
                   className={`flex-1 flex items-center justify-center space-x-2 px-3 py-2 text-sm font-medium transition-colors ${
+
                     activeTab === key
                       ? 'text-green-600 border-b-2 border-green-600'
                       : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
@@ -745,8 +818,10 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
                   <div className="text-center">
                     <button
                       onClick={() => {
+
                         // Reset to defaults
                         setSettings({
+
                           touchOptimization: true,
                           gestureSupport: true,
                           pinchZoom: true,

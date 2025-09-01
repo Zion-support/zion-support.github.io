@@ -1,6 +1,7 @@
 export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
     // Blockchain & Web3 Solutions
     {
+
         id: "blockchain-web3-enterprise-platform",
         title: "Blockchain & Web3 Enterprise Platform - Decentralized Business Solutions",
         description: "Comprehensive blockchain and Web3 platform that enables enterprises to build decentralized applications, implement smart contracts, and leverage blockchain technology for business transformation and innovation.",
@@ -47,6 +48,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         supportLevel: "enterprise",
         marketPrice: "$1,299 - $5,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -66,6 +68,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
     },
     // Quantum Computing Solutions
     {
+
         id: "quantum-computing-solutions-platform",
         title: "Quantum Computing Solutions Platform - Next-Generation Computing Power",
         description: "Advanced quantum computing platform that provides quantum algorithms, quantum machine learning, and quantum optimization solutions for complex computational problems that are impossible to solve with classical computers.",
@@ -112,6 +115,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         supportLevel: "enterprise",
         marketPrice: "$2,499 - $10,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -131,6 +135,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
     },
     // Edge Computing & IoT Solutions
     {
+
         id: "edge-computing-iot-platform",
         title: "Edge Computing & IoT Platform - Intelligent Edge Intelligence",
         description: "Comprehensive edge computing and IoT platform that processes data at the edge, reduces latency, improves performance, and enables real-time decision making for connected devices and smart systems.",
@@ -177,6 +182,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         supportLevel: "enterprise",
         marketPrice: "$799 - $3,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -196,6 +202,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
     },
     // 5G & Advanced Connectivity Solutions
     {
+
         id: "5g-advanced-connectivity-platform",
         title: "5G & Advanced Connectivity Platform - Next-Generation Network Solutions",
         description: "Advanced 5G and connectivity platform that provides ultra-fast wireless communication, low-latency networking, and advanced connectivity solutions for businesses, IoT devices, and emerging technologies.",
@@ -242,6 +249,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         supportLevel: "enterprise",
         marketPrice: "$999 - $4,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -261,6 +269,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
     },
     // Augmented Reality & Virtual Reality Solutions
     {
+
         id: "ar-vr-enterprise-platform",
         title: "AR/VR Enterprise Platform - Immersive Business Solutions",
         description: "Comprehensive augmented reality and virtual reality platform that provides immersive experiences, training simulations, virtual collaboration, and AR/VR solutions for enterprise applications and business transformation.",
@@ -307,6 +316,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         supportLevel: "premium",
         marketPrice: "$899 - $3,500/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -326,6 +336,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
     },
     // Robotics & Automation Solutions
     {
+
         id: "robotics-automation-platform",
         title: "Robotics & Automation Platform - Intelligent Automation Solutions",
         description: "Advanced robotics and automation platform that provides intelligent automation, robotic process automation (RPA), and autonomous systems for manufacturing, logistics, healthcare, and other industries.",
@@ -372,6 +383,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         supportLevel: "enterprise",
         marketPrice: "$1,199 - $5,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -391,6 +403,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
     },
     // Digital Twin & Simulation Solutions
     {
+
         id: "digital-twin-simulation-platform",
         title: "Digital Twin & Simulation Platform - Virtual Replica Solutions",
         description: "Comprehensive digital twin and simulation platform that creates virtual replicas of physical systems, enables predictive modeling, and provides real-time monitoring and optimization for complex systems and processes.",
@@ -437,6 +450,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         supportLevel: "enterprise",
         marketPrice: "$999 - $4,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -456,6 +470,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
     },
     // Green Technology & Sustainability Solutions
     {
+
         id: "green-technology-sustainability-platform",
         title: "Green Technology & Sustainability Platform - Eco-Friendly Solutions",
         description: "Comprehensive green technology and sustainability platform that provides renewable energy solutions, carbon footprint tracking, environmental monitoring, and sustainable business practices for organizations committed to environmental responsibility.",
@@ -502,6 +517,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         supportLevel: "premium",
         marketPrice: "$699 - $2,500/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"

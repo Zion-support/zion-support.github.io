@@ -1,6 +1,7 @@
 export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
     // Advanced AI & Machine Learning Services
     {
+
         id: "ai-multimodal-orchestrator",
         title: "AI Multimodal Orchestrator Pro",
         description: "Revolutionary AI platform that seamlessly orchestrates text, image, video, and audio processing for comprehensive content understanding and generation.",
@@ -49,11 +50,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         roi: "400-600%",
         innovationLevel: "Cutting-edge",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
+
             technology["GPT-4", "DALL-E 3", "Whisper", "React", "Python", "TensorFlow"],
             integrations["OpenAI API", "Azure", "AWS", "Google Cloud", "Custom APIs"],
             apiEndpoints: 50,
@@ -67,6 +70,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
     },
     // Blockchain & Web3 Services
     {
+
         id: "blockchain-enterprise-suite",
         title: "Blockchain Enterprise Suite Pro",
         description: "Comprehensive enterprise blockchain solution for supply chain transparency, smart contracts, and decentralized applications with enterprise-grade security.",
@@ -115,11 +119,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         roi: "300-500%",
         innovationLevel: "Revolutionary",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
+
             technology["Ethereum", "Solidity", "React", "Node.js", "IPFS", "Web3.js"],
             integrations["MetaMask", "WalletConnect", "Chainlink", "The Graph"],
             apiEndpoints: 100,
@@ -132,6 +138,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
     },
     // Quantum Computing Services
     {
+
         id: "quantum-optimization-platform",
         title: "Quantum Optimization Platform Elite",
         description: "Advanced quantum computing platform for solving complex optimization problems in logistics, finance, and scientific research with hybrid quantum-classical algorithms.",
@@ -180,11 +187,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         roi: "400-800%",
         innovationLevel: "Revolutionary",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
+
             technology["IBM Qiskit", "Google Cirq", "Microsoft Q#", "Python", "Quantum algorithms"],
             integrations["IBM Quantum", "Google Quantum", "Azure Quantum", "AWS Braket"],
             apiEndpoints: 25,
@@ -197,6 +206,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
     },
     // Advanced Cybersecurity Services
     {
+
         id: "ai-threat-intelligence-platform",
         title: "AI Threat Intelligence Platform Pro",
         description: "Next-generation cybersecurity platform that uses AI to detect, analyze, and respond to advanced threats in real-time with predictive capabilities.",
@@ -245,11 +255,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         roi: "300-500%",
         innovationLevel: "Cutting-edge",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
+
             technology["Machine Learning", "NLP", "Python", "Elasticsearch", "Kafka", "React"],
             integrations["SIEM systems", "EDR solutions", "Firewalls", "Cloud platforms"],
             apiEndpoints: 75,
@@ -262,6 +274,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
     },
     // Edge Computing & IoT Services
     {
+
         id: "edge-ai-orchestrator",
         title: "Edge AI Orchestrator Platform",
         description: "Intelligent edge computing platform that brings AI processing closer to data sources for real-time analytics, automation, and decision-making.",
@@ -310,11 +323,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         roi: "350-600%",
         innovationLevel: "Cutting-edge",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
+
             technology["Kubernetes", "Docker", "Python", "TensorFlow Lite", "MQTT", "React"],
             integrations["AWS IoT", "Azure IoT", "Google Cloud IoT", "Custom protocols"],
             apiEndpoints: 150,
@@ -327,6 +342,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
     },
     // Advanced Data Analytics Services
     {
+
         id: "real-time-data-fabric",
         title: "Real-Time Data Fabric Platform",
         description: "Unified data platform that provides real-time data processing, analytics, and insights across multiple sources with AI-powered automation.",
@@ -375,11 +391,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         roi: "400-700%",
         innovationLevel: "Cutting-edge",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
+
             technology["Apache Kafka", "Apache Spark", "Python", "React", "PostgreSQL", "Redis"],
             integrations["Cloud platforms", "Databases", "APIs", "BI tools", "ML platforms"],
             apiEndpoints: 200,
@@ -392,6 +410,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
     },
     // Autonomous Systems Services
     {
+
         id: "autonomous-workflow-orchestrator",
         title: "Autonomous Workflow Orchestrator Pro",
         description: "Intelligent workflow automation platform that uses AI to design, optimize, and execute complex business processes autonomously.",
@@ -440,11 +459,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         roi: "300-500%",
         innovationLevel: "Cutting-edge",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
+
             technology["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
             integrations["CRM systems", "ERP platforms", "Email systems", "APIs", "Databases"],
             apiEndpoints: 100,
@@ -457,6 +478,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
     },
     // Digital Twin Services
     {
+
         id: "digital-twin-platform",
         title: "Digital Twin Platform Elite",
         description: "Advanced digital twin platform for creating virtual replicas of physical assets, processes, and systems with real-time monitoring and predictive capabilities.",
@@ -505,11 +527,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         roi: "400-800%",
         innovationLevel: "Cutting-edge",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
+
             technology["Unity 3D", "Unreal Engine", "Python", "React", "Three.js", "WebGL"],
             integrations["IoT platforms", "SCADA systems", "Building management", "Energy systems"],
             apiEndpoints: 75,
@@ -522,6 +546,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
     },
     // Metaverse Development Services
     {
+
         id: "metaverse-development-platform",
         title: "Metaverse Development Platform Pro",
         description: "Comprehensive platform for building immersive metaverse experiences, virtual worlds, and digital environments with advanced 3D graphics and AI integration.",
@@ -570,11 +595,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         roi: "350-600%",
         innovationLevel: "Revolutionary",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
+
             technology["Unity 3D", "Unreal Engine", "WebXR", "Three.js", "React", "Node.js"],
             integrations["VR headsets", "AR devices", "Payment systems", "Social platforms"],
             apiEndpoints: 125,
@@ -587,6 +614,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
     },
     // Green Technology Services
     {
+
         id: "sustainable-tech-optimizer",
         title: "Sustainable Technology Optimizer",
         description: "AI-powered platform for optimizing energy consumption, reducing carbon footprint, and implementing sustainable technology solutions across organizations.",
@@ -635,11 +663,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         roi: "250-400%",
         innovationLevel: "Cutting-edge",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
+
             technology["IoT sensors", "Machine Learning", "Python", "React", "PostgreSQL", "Time-series DB"],
             integrations["Building management systems", "Energy monitoring", "IoT platforms", "Analytics tools"],
             apiEndpoints: 80,

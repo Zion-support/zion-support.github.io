@@ -1,5 +1,6 @@
 import React, { createContext, useContext } from 'react';
 const defaultConfig = {
+
   compName: 'Zion Tech Group',
     logo: '/logo.svg',
     primaryColor: '#1e40af',
@@ -7,6 +8,7 @@ const defaultConfig = {
     domain: 'https://ziontechgroup.com',
     isWhitelabel: false,
     contactInfo: {
+
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -17,7 +19,9 @@ const defaultConfig = {
 const WhitelabelContext = createContext(defaultConfig);
 export const useWhitelabel = () => useContext(WhitelabelContext);
 export const WhitelabelProvider = ({ children, config = {} }) => {
+
     const mergedConfig = {
+
   ...defaultConfig,
   ...config 
 

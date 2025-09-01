@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { HomeIcon, MagnifyingGlassIcon, ArrowLeftIcon, ExclamationTriangleIcon } from '@heroicons/react/24/outline';
 export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
+
     const defaultSuggestions = [
         '/services',
         '/ai-solutions',
@@ -13,16 +14,19 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
     const suggestions = suggestedRoutes.length > 0 ? suggestedRoutes : defaultSuggestions;
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
       <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition={{ duration: 0.6 }} className="max-w-4xl mx-auto text-center">
         {/* Error Icon */}
         <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition = {
+
   { delay: 0.2, type: "spring",
   stiffness: 200 
 
@@ -35,10 +39,12 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
 
         {/* Main Error Message */}
         <motion.h1 initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -47,10 +53,12 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
         </motion.h1>
 
         <motion.h2 initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -59,10 +67,12 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
         </motion.h2>
 
         {requestedPath && (<motion.p initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -71,10 +81,12 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
           </motion.p>)}
 
         <motion.p initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -85,10 +97,12 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
 
         {/* Action Buttons */}
         <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -111,10 +125,12 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
 
         {/* Suggested Pages */}
         <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -125,10 +141,12 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {suggestions.map((route, index) => (<motion.div key={route} initial = {
+
   { opacity: 0,
   x: -20 
 
 }} animate = {
+
   { opacity: 1,
   x: 0 
 
@@ -148,10 +166,12 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
 
         {/* Help Section */}
         <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 

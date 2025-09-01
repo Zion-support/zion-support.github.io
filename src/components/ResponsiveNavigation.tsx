@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
+
   Menu, 
   X, 
   ChevronDown, 
@@ -32,6 +33,7 @@ import {
 } from 'lucide-react';
 
 interface NavigationItem {
+
   name: string;
   href: string;
   current: boolean;
@@ -41,10 +43,12 @@ interface NavigationItem {
 }
 
 interface ServiceCategory {
+
   name: string;
   icon: React.ComponentType<any>;
   color: string;
   services: Array<{
+
     name: string;
     href: string;
     description: string;
@@ -52,6 +56,7 @@ interface ServiceCategory {
 }
 
 export function ResponsiveNavigation() {
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
@@ -64,15 +69,20 @@ export function ResponsiveNavigation() {
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+
     const handleScroll = () => {
+
       setScrolled(window.scrollY > 10);
     };
 
     const handleClickOutside = (event: MouseEvent) => {
+
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+
         setSearchQuery('');
       }
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+
         setServicesDropdownOpen(false);
         setActiveDropdown(null);
       }
@@ -82,25 +92,31 @@ export function ResponsiveNavigation() {
     document.addEventListener('mousedown', handleClickOutside);
 
     return () => {
+
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
 
   useEffect(() => {
+
     setMobileMenuOpen(false);
     setServicesDropdownOpen(false);
     setActiveDropdown(null);
   }, [location.pathname]);
 
   const handleSearch = async (e: React.FormEvent) => {
+
     e.preventDefault();
     if (searchQuery.trim()) {
+
       setIsSearching(true);
       try {
+
         await new Promise(resolve => setTimeout(resolve, 1000));
         window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
       } finally {
+
         setIsSearching(false);
       }
     }
@@ -118,6 +134,7 @@ export function ResponsiveNavigation() {
 
   const serviceCategories: ServiceCategory[] = [
     {
+
       name: 'AI & Analytics',
       icon: Brain,
       color: 'from-purple-600 to-pink-600',
@@ -129,6 +146,7 @@ export function ResponsiveNavigation() {
       ]
     },
     {
+
       name: 'Cloud & DevOps',
       icon: Cloud,
       color: 'from-blue-600 to-cyan-600',
@@ -139,6 +157,7 @@ export function ResponsiveNavigation() {
       ]
     },
     {
+
       name: 'Digital Solutions',
       icon: Rocket,
       color: 'from-green-600 to-emerald-600',
@@ -149,6 +168,7 @@ export function ResponsiveNavigation() {
       ]
     },
     {
+
       name: 'Cybersecurity',
       icon: Shield,
       color: 'from-red-600 to-orange-600',
@@ -160,15 +180,19 @@ export function ResponsiveNavigation() {
   ];
 
   const toggleDropdown = (dropdownName: string) => {
+
     if (activeDropdown === dropdownName) {
+
       setActiveDropdown(null);
     } else {
+
       setActiveDropdown(dropdownName);
     }
   };
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+
       scrolled ? 'bg-black/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -194,6 +218,7 @@ export function ResponsiveNavigation() {
                     <button
                       onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
                       className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+
                         item.current
                           ? 'text-cyan-400 bg-cyan-400/10'
                           : 'text-gray-300 hover:text-white hover:bg-gray-700/50'
@@ -249,6 +274,7 @@ export function ResponsiveNavigation() {
                   <Link
                     to={item.href}
                     className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+
                       item.current
                         ? 'text-cyan-400 bg-cyan-400/10'
                         : 'text-gray-300 hover:text-white hover:bg-gray-700/50'
@@ -342,6 +368,7 @@ export function ResponsiveNavigation() {
                         <button
                           onClick={() => toggleDropdown(item.name)}
                           className={`w-full flex items-center justify-between px-4 py-3 text-left rounded-lg transition-colors ${
+
                             item.current
                               ? 'text-cyan-400 bg-cyan-400/10'
                               : 'text-gray-300 hover:text-white hover:bg-gray-700/50'
@@ -350,6 +377,7 @@ export function ResponsiveNavigation() {
                         >
                           <span>{item.name}</span>
                           <ChevronDown className={`w-4 h-4 transition-transform ${
+
                             activeDropdown === item.name ? 'rotate-180' : ''
                           }`} />
                         </button>
@@ -391,6 +419,7 @@ export function ResponsiveNavigation() {
                       <Link
                         to={item.href}
                         className={`block px-4 py-3 rounded-lg transition-colors ${
+
                           item.current
                             ? 'text-cyan-400 bg-cyan-400/10'
                             : 'text-gray-300 hover:text-white hover:bg-gray-700/50'

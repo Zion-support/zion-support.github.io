@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Brain, 
   Cloud, 
   Shield, 
@@ -88,6 +89,7 @@ import { SEO } from '../components/SEO';
 import { COMPREHENSIVE_SERVICES_2030 } from '../data/comprehensiveServices2030';
 
 export default function ComprehensiveServicesAdvertising() {
+
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
@@ -122,6 +124,7 @@ export default function ComprehensiveServicesAdvertising() {
   ];
 
   const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service => {
+
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -131,7 +134,9 @@ export default function ComprehensiveServicesAdvertising() {
   });
 
   const sortedServices = [...filteredServices].sort((a, b) => {
+
     switch (sortBy) {
+
       case 'rating':
         return b.rating - a.rating;
       case 'price':
@@ -146,7 +151,9 @@ export default function ComprehensiveServicesAdvertising() {
   });
 
   const getCategoryIcon = (category: string) => {
+
     switch (category) {
+
       case 'AI & Business Intelligence':
         return <Brain className="w-6 h-6" />;
       case 'Cybersecurity':
@@ -305,6 +312,7 @@ export default function ComprehensiveServicesAdvertising() {
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
+
                   activeCategory === category.id
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700'

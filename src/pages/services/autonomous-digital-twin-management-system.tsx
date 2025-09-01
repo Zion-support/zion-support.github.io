@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Cpu, 
   Zap, 
   Brain, 
@@ -81,38 +82,45 @@ import {
 import { Link } from 'react-router-dom';
 
 export default function AutonomousDigitalTwinManagementSystem() {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Twin Creation",
       description: "Advanced machine learning algorithms that automatically create and maintain digital twins of physical assets",
       benefits: ["Automated twin generation", "Real-time synchronization", "Intelligent asset mapping"]
     },
     {
+
       icon: Cpu,
       title: "Real-Time Data Integration",
       description: "Seamlessly integrate IoT sensors, SCADA systems, and enterprise data for comprehensive twin modeling",
       benefits: ["Multi-source integration", "Real-time updates", "Data validation"]
     },
     {
+
       icon: Zap,
       title: "Predictive Analytics & Maintenance",
       description: "AI-driven predictive maintenance that identifies potential failures before they occur",
       benefits: ["Failure prediction", "Maintenance optimization", "Cost reduction"]
     },
     {
+
       icon: Target,
       title: "Autonomous Decision Making",
       description: "Self-learning systems that make autonomous decisions to optimize asset performance",
       benefits: ["Autonomous optimization", "Performance improvement", "Efficiency gains"]
     },
     {
+
       icon: Shield,
       title: "Cybersecurity & Compliance",
       description: "Built-in security features and compliance monitoring for critical infrastructure",
       benefits: ["Threat protection", "Compliance monitoring", "Data security"]
     },
     {
+
       icon: Network,
       title: "Scalable Architecture",
       description: "Cloud-native architecture that scales from single assets to entire cities",
@@ -122,6 +130,7 @@ export default function AutonomousDigitalTwinManagementSystem() {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$799",
       period: "/month",
@@ -138,6 +147,7 @@ export default function AutonomousDigitalTwinManagementSystem() {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$1,999",
       period: "/month",
@@ -156,6 +166,7 @@ export default function AutonomousDigitalTwinManagementSystem() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$4,999",
       period: "/month",
@@ -177,21 +188,25 @@ export default function AutonomousDigitalTwinManagementSystem() {
 
   const useCases = [
     {
+
       industry: "Manufacturing",
       description: "Create digital twins of production lines, equipment, and processes for optimization",
       metrics: ["Production efficiency", "Equipment uptime", "Quality improvement"]
     },
     {
+
       industry: "Smart Cities",
       description: "Manage urban infrastructure with digital twins for better city planning and operations",
       metrics: ["Infrastructure efficiency", "Resource optimization", "Citizen satisfaction"]
     },
     {
+
       industry: "Energy & Utilities",
       description: "Monitor power plants, grids, and renewable energy systems with intelligent twins",
       metrics: ["Energy efficiency", "Grid reliability", "Renewable integration"]
     },
     {
+
       industry: "Healthcare",
       description: "Create digital twins of medical devices and patient monitoring systems",
       metrics: ["Device reliability", "Patient outcomes", "Operational efficiency"]
@@ -417,6 +432,7 @@ export default function AutonomousDigitalTwinManagementSystem() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-2xl p-8 ${
+
                   plan.popular 
                     ? 'border-indigo-500/50 shadow-lg shadow-indigo-500/25' 
                     : 'border-slate-700'
@@ -449,6 +465,7 @@ export default function AutonomousDigitalTwinManagementSystem() {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700'
                     : 'bg-slate-700 text-white hover:bg-slate-600'

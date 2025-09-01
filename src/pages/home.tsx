@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import EnhancedHero from '../components/EnhancedHero';
-import { 
+import {
+
   Zap, 
   Brain, 
   Rocket, 
@@ -35,26 +36,31 @@ import {
 } from 'lucide-react';
 
 export default function Home() {
+
   const features = [
     {
+
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Cutting-edge artificial intelligence that transforms business operations and drives innovation.',
       color: 'from-purple-500 to-pink-500'
     },
     {
+
       icon: Atom,
       title: 'Quantum Computing',
       description: 'Next-generation quantum solutions that solve complex problems beyond classical computing.',
       color: 'from-orange-500 to-red-500'
     },
     {
+
       icon: Rocket,
       title: 'Micro SAAS Platform',
       description: 'Innovative software-as-a-service solutions that scale with your business needs.',
       color: 'from-blue-500 to-cyan-500'
     },
     {
+
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Military-grade cybersecurity and compliance solutions for enterprise protection.',
@@ -71,6 +77,7 @@ export default function Home() {
 
   const services = [
     {
+
       title: 'AI Services',
       description: 'Comprehensive AI solutions for business automation and intelligence',
       href: '/ai-services',
@@ -78,6 +85,7 @@ export default function Home() {
       color: 'from-purple-500 to-pink-500'
     },
     {
+
       title: 'IT Infrastructure',
       description: 'Enterprise-grade IT solutions and cloud architecture',
       href: '/it-services',
@@ -85,6 +93,7 @@ export default function Home() {
       color: 'from-green-500 to-emerald-500'
     },
     {
+
       title: 'Quantum Solutions',
       description: 'Cutting-edge quantum computing and technology services',
       href: '/services/quantum-computing',
@@ -92,6 +101,7 @@ export default function Home() {
       color: 'from-orange-500 to-red-500'
     },
     {
+
       title: 'Micro SAAS',
       description: 'Innovative software solutions for modern businesses',
       href: '/micro-saas',

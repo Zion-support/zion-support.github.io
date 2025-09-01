@@ -1,4 +1,5 @@
 export interface InnovativeITService {
+
   id: string;
   title: string;
   description: string;
@@ -18,11 +19,13 @@ export interface InnovativeITService {
   roi: string;
   innovationLevel: string;
   contactInfo: {
+
     phone: string;
     email: string;
     website: string;
   };
   technicalSpecs?: {
+
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
@@ -36,6 +39,7 @@ export interface InnovativeITService {
 export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
   // Advanced Cybersecurity Services
   {
+
     id: "zero-trust-security-implementation",
     title: "Zero Trust Security Implementation",
     description: "Comprehensive zero trust security architecture implementation with continuous verification, micro-segmentation, and adaptive access control for modern enterprise environments.",
@@ -84,11 +88,13 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     roi: "300-500%",
     innovationLevel: "Advanced",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
       technology: ["CrowdStrike", "Palo Alto Networks", "Okta", "Microsoft Azure AD", "Cisco"],
       integrations: ["SIEM systems", "EDR platforms", "Identity providers", "Network security"],
       apiEndpoints: 300,
@@ -101,6 +107,7 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
 
   // Cloud Infrastructure & DevOps
   {
+
     id: "multi-cloud-orchestration-platform",
     title: "Multi-Cloud Orchestration Platform",
     description: "Intelligent multi-cloud management platform that optimizes costs, automates deployments, and provides unified visibility across AWS, Azure, and Google Cloud.",
@@ -149,11 +156,13 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     roi: "250-400%",
     innovationLevel: "Advanced",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
       technology: ["Terraform", "Kubernetes", "Docker", "Python", "React"],
       integrations: ["AWS", "Azure", "Google Cloud", "GitHub", "Jenkins"],
       apiEndpoints: 400,
@@ -166,6 +175,7 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
 
   // Data & Analytics Infrastructure
   {
+
     id: "enterprise-data-fabric-platform",
     title: "Enterprise Data Fabric Platform",
     description: "Next-generation data architecture that creates a unified, intelligent data layer across all enterprise systems, enabling real-time analytics and AI-driven insights.",
@@ -214,11 +224,13 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     roi: "300-500%",
     innovationLevel: "Advanced",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
       technology: ["Apache Kafka", "Apache Spark", "Python", "React", "PostgreSQL"],
       integrations: ["Snowflake", "Databricks", "AWS", "Azure", "Google Cloud"],
       apiEndpoints: 500,
@@ -231,6 +243,7 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
 
   // Network & Infrastructure
   {
+
     id: "software-defined-network-transformation",
     title: "Software-Defined Network Transformation",
     description: "Complete network transformation to software-defined architecture with automation, virtualization, and intelligent traffic management for modern enterprise needs.",
@@ -279,11 +292,13 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     roi: "250-400%",
     innovationLevel: "Advanced",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
       technology: ["VMware NSX", "Cisco ACI", "OpenStack", "Python", "Ansible"],
       integrations: ["VMware", "Cisco", "Juniper", "Arista", "Cloud platforms"],
       apiEndpoints: 600,
@@ -296,6 +311,7 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
 
   // AI & Machine Learning Infrastructure
   {
+
     id: "enterprise-ai-infrastructure-platform",
     title: "Enterprise AI Infrastructure Platform",
     description: "Scalable AI infrastructure platform that provides GPU clusters, model management, and automated ML pipelines for enterprise AI initiatives.",
@@ -344,11 +360,13 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     roi: "300-500%",
     innovationLevel: "Advanced",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
       technology: ["Kubernetes", "Docker", "TensorFlow", "PyTorch", "Python"],
       integrations: ["AWS", "Azure", "Google Cloud", "GitHub", "MLflow"],
       apiEndpoints: 350,
@@ -361,6 +379,7 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
 
   // IoT & Edge Computing
   {
+
     id: "enterprise-iot-platform",
     title: "Enterprise IoT Platform",
     description: "Comprehensive IoT platform for enterprise device management, data collection, analytics, and automation across industrial and commercial environments.",
@@ -409,11 +428,13 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     roi: "250-400%",
     innovationLevel: "Advanced",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
       technology: ["Kubernetes", "MQTT", "Python", "React", "InfluxDB"],
       integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "SAP", "Oracle"],
       apiEndpoints: 250,
@@ -426,6 +447,7 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
 
   // Blockchain & Web3 Infrastructure
   {
+
     id: "enterprise-blockchain-platform",
     title: "Enterprise Blockchain Platform",
     description: "Scalable blockchain infrastructure for enterprise applications including supply chain, identity management, and decentralized applications.",
@@ -474,11 +496,13 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     roi: "300-500%",
     innovationLevel: "Advanced",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
       technology: ["Ethereum", "Hyperledger", "IPFS", "React", "Node.js"],
       integrations: ["SAP", "Oracle", "Salesforce", "ERP systems", "WMS"],
       apiEndpoints: 200,
@@ -491,6 +515,7 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
 
   // Quantum Computing Services
   {
+
     id: "quantum-computing-consulting",
     title: "Quantum Computing Consulting & Implementation",
     description: "Expert consulting and implementation services for quantum computing applications in optimization, cryptography, and scientific research.",
@@ -539,11 +564,13 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     roi: "400-600%",
     innovationLevel: "Cutting-edge",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
       technology: ["Qiskit", "Cirq", "PennyLane", "Python", "Quantum hardware"],
       integrations: ["IBM Quantum", "Google Quantum", "AWS Braket", "Azure Quantum"],
       apiEndpoints: 100,
@@ -556,6 +583,7 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
 
   // Digital Transformation Services
   {
+
     id: "digital-transformation-consulting",
     title: "Digital Transformation Consulting & Implementation",
     description: "Comprehensive digital transformation services that help organizations modernize their technology, processes, and culture for the digital age.",
@@ -604,11 +632,13 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     roi: "200-400%",
     innovationLevel: "Advanced",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
       technology: ["Strategy frameworks", "Change management tools", "Analytics platforms", "Project management"],
       integrations: ["ERP systems", "CRM platforms", "Analytics tools", "Communication platforms"],
       apiEndpoints: 150,

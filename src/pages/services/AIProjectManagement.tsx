@@ -6,6 +6,7 @@ import { Badge              } from '../../components/ui/Badge';
 import { CheckCircle, Brain, TrendingUp, Users, Shield, Zap, Globe, Clock, Phone, Mail              } from 'lucide-react.ts';
 
 const AIProjectManagement: React.FC = (): JSX.Element => {
+
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 

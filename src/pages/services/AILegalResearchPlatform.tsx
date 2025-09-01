@@ -11,7 +11,9 @@ import { SEO } from '../../components/SEO';
 
 
 const AILegalResearchPlatform: React.FC = () => {
+
   const serviceData = {
+
     title: "AI-Powered Legal Research Platform",
     subtitle: "Intelligent legal research that accelerates case analysis, improves accuracy, and reduces research time",
     description: "Transform your legal practice with our AI-powered research platform that analyzes millions of legal documents, predicts case outcomes, and provides comprehensive legal insights. Reduce research time by 80%, improve case success rates by 60%, and stay ahead of legal developments.",
@@ -28,31 +30,37 @@ const AILegalResearchPlatform: React.FC = () => {
 
   const features = [
     {
+
       title: "AI Case Analysis",
       description: "Advanced AI algorithms analyze case law, statutes, and legal precedents for relevant insights",
       icon: "🧠"
     },
     {
+
       title: "Predictive Case Outcomes",
       description: "AI-powered prediction of case outcomes based on historical data and legal patterns",
       icon: "🔮"
     },
     {
+
       title: "Intelligent Document Review",
       description: "Automated review and analysis of legal documents, contracts, and case files",
       icon: "📄"
     },
     {
+
       title: "Legal Research Automation",
       description: "Automated legal research workflows that save hours of manual work",
       icon: "⚡"
     },
     {
+
       title: "Compliance Monitoring",
       description: "Real-time monitoring of regulatory changes and compliance requirements",
       icon: "📋"
     },
     {
+
       title: "Multi-Jurisdiction Support",
       description: "Comprehensive coverage of federal, state, and international legal systems",
       icon: "🌍"
@@ -70,21 +78,25 @@ const AILegalResearchPlatform: React.FC = () => {
 
   const useCases = [
     {
+
       title: "Law Firms",
       description: "Comprehensive legal research platform for law firms of all sizes",
       industry: "Legal Services"
     },
     {
+
       title: "Corporate Legal Departments",
       description: "In-house legal research and compliance monitoring for corporations",
       industry: "Corporate Legal"
     },
     {
+
       title: "Government Agencies",
       description: "Legal research and regulatory compliance for government entities",
       industry: "Government & Public Sector"
     },
     {
+
       title: "Legal Education",
       description: "Advanced research tools for law schools and legal education institutions",
       industry: "Legal Education"
@@ -93,6 +105,7 @@ const AILegalResearchPlatform: React.FC = () => {
 
   const pricingPlans = [
     {
+
       name: "Professional",
       price: 2199,
       currency: "$",
@@ -108,6 +121,7 @@ const AILegalResearchPlatform: React.FC = () => {
       popular: false
     },
     {
+
       name: "Enterprise",
       price: 4999,
       currency: "$",
@@ -124,6 +138,7 @@ const AILegalResearchPlatform: React.FC = () => {
       popular: true
     },
     {
+
       name: "Global",
       price: 6999,
       currency: "$",
@@ -143,18 +158,21 @@ const AILegalResearchPlatform: React.FC = () => {
 
   const competitors = [
     {
+
       name: "Westlaw",
       price: "$5,000 - $15,000/month",
       pros: ["Industry standard", "Comprehensive database"],
       cons: ["Very expensive", "Complex interface"]
     },
     {
+
       name: "LexisNexis",
       price: "$4,500 - $12,000/month",
       pros: ["Good coverage", "Established platform"],
       cons: ["High cost", "Limited AI features"]
     },
     {
+
       name: "Zion Tech Group AI Legal",
       price: "$2,199 - $6,999/month",
       pros: ["Advanced AI", "Cost-effective", "Easy to use"],
@@ -164,18 +182,22 @@ const AILegalResearchPlatform: React.FC = () => {
 
   const faqs = [
     {
+
       question: "How accurate is the AI case analysis?",
       answer: "Our AI achieves 90% accuracy in case analysis by analyzing millions of legal documents, precedents, and outcomes using advanced natural language processing and machine learning."
     },
     {
+
       question: "What legal databases do you cover?",
       answer: "We cover comprehensive legal databases including federal and state case law, statutes, regulations, administrative decisions, and international legal sources."
     },
     {
+
       question: "Can I integrate with my existing legal software?",
       answer: "Yes! We support integration with major legal practice management systems including Clio, PracticePanther, MyCase, and many others through our comprehensive API."
     },
     {
+
       question: "Do you support multiple jurisdictions?",
       answer: "Absolutely. Our platform covers federal, state, and international legal systems with jurisdiction-specific research tools and compliance monitoring."
     }

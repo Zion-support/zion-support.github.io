@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Brain, 
   Cloud, 
   Shield, 
@@ -97,6 +98,7 @@ import { SEO } from '@/components/SEO';
 import { COMPREHENSIVE_INNOVATIVE_SERVICES_2025 } from '@/data/comprehensiveInnovativeServices2025';
 
 const ComprehensiveInnovativeServices2025: React.FC = () => {
+
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('featured');
@@ -123,6 +125,7 @@ const ComprehensiveInnovativeServices2025: React.FC = () => {
   ];
 
   const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2025.filter(service => {
+
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -131,7 +134,9 @@ const ComprehensiveInnovativeServices2025: React.FC = () => {
   });
 
   const sortedServices = [...filteredServices].sort((a, b) => {
+
     switch (sortBy) {
+
       case 'price-low':
         return a.price - b.price;
       case 'price-high':
@@ -147,21 +152,27 @@ const ComprehensiveInnovativeServices2025: React.FC = () => {
   });
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
+
         staggerChildren: 0.1
       }
     }
   };
 
   const itemVariants = {
+
     hidden: { y: 20, opacity: 0 },
     visible: {
+
       y: 0,
       opacity: 1,
       transition: {
+
         duration: 0.5
       }
     }

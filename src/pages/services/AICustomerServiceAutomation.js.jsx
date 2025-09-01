@@ -2,33 +2,40 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MessageCircle, Brain, Shield, Users, BarChart3, Clock, DollarSign, Smartphone, Globe, Zap, CheckCircle, TrendingUp, Phone, Mail, MessageSquare, Bot } from 'lucide-react';
 export default function AICustomerServiceAutomation() {
+
     const features = [
         {
+
             icon: Brain,
             title: "AI Chatbots",
             description: "Intelligent chatbots that understand context and provide accurate responses 24/7"
         },
         {
+
             icon: MessageCircle,
             title: "Multi-Channel Support",
             description: "Seamless support across email, chat, phone, social media, and messaging platforms"
         },
         {
+
             icon: Users,
             title: "Smart Routing",
             description: "AI-powered ticket routing to the most qualified agents for faster resolution"
         },
         {
+
             icon: BarChart3,
             title: "Sentiment Analysis",
             description: "Real-time emotion detection to prioritize urgent cases and improve customer satisfaction"
         },
         {
+
             icon: Zap,
             title: "Automated Responses",
             description: "Instant responses to common queries with human-like conversation flow"
         },
         {
+
             icon: Shield,
             title: "Data Security",
             description: "Enterprise-grade security with GDPR and SOC2 compliance for customer data protection"
@@ -36,6 +43,7 @@ export default function AICustomerServiceAutomation() {
     ];
     const pricingPlans = [
         {
+
             name: "Starter",
             price: "$199",
             period: "/month",
@@ -52,6 +60,7 @@ export default function AICustomerServiceAutomation() {
             popular: false
         },
         {
+
             name: "Professional",
             price: "$599",
             period: "/month",
@@ -70,6 +79,7 @@ export default function AICustomerServiceAutomation() {
             popular: true
         },
         {
+
             name: "Enterprise",
             price: "$1,999",
             period: "/month",
@@ -90,31 +100,37 @@ export default function AICustomerServiceAutomation() {
     ];
     const benefits = [
         {
+
             icon: DollarSign,
             title: "Cost Reduction",
             description: "Reduce customer service costs by 40-60% while improving response times and quality"
         },
         {
+
             icon: Clock,
             title: "24/7 Availability",
             description: "Provide instant support around the clock without increasing staff costs"
         },
         {
+
             icon: Users,
             title: "Improved Satisfaction",
             description: "Faster response times and accurate answers lead to higher customer satisfaction scores"
         },
         {
+
             icon: Brain,
             title: "Intelligent Automation",
             description: "AI handles routine queries while human agents focus on complex customer needs"
         },
         {
+
             icon: TrendingUp,
             title: "Scalability",
             description: "Handle customer volume spikes without proportional cost increases"
         },
         {
+
             icon: BarChart3,
             title: "Data Insights",
             description: "Gain valuable insights into customer behavior and service optimization opportunities"
@@ -122,31 +138,37 @@ export default function AICustomerServiceAutomation() {
     ];
     const channels = [
         {
+
             icon: MessageSquare,
             title: "Live Chat",
             description: "Real-time chat support with instant AI responses and seamless human handoff"
         },
         {
+
             icon: Mail,
             title: "Email Support",
             description: "Automated email categorization, routing, and intelligent response suggestions"
         },
         {
+
             icon: Phone,
             title: "Voice Support",
             description: "AI-powered call routing, transcription, and intelligent voice response systems"
         },
         {
+
             icon: Smartphone,
             title: "Mobile Apps",
             description: "In-app support with push notifications and seamless mobile experience"
         },
         {
+
             icon: Globe,
             title: "Social Media",
             description: "Monitor and respond to customer inquiries across all social platforms"
         },
         {
+
             icon: Bot,
             title: "Messaging Apps",
             description: "Support for WhatsApp, Facebook Messenger, Slack, and other messaging platforms"

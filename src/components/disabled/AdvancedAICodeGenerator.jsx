@@ -22,7 +22,9 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
   const [error, setError] = useState<string | null>(null);
 
   const execute = async () => {
+
     try {
+
       setLoading (true) ;
       setError (null) ;
       
@@ -36,6 +38,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
         body: body ? JSON.stringify(body) : null});
 
       if (!response.ok) {
+
 `
         throw new Error(\`HTTP error! status: \${response.status}\`)}
 
@@ -118,6 +121,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
         description: 'Comprehensive form validation with custom rules and error handling',
         language: 'javascript',`
         code: `class FormValidator {
+
   constructor(form, options = {}) {
 
     this.form = form;
@@ -157,6 +161,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     return fieldErrors.length === 0}
 
   validateForm () {
+
     let isValid = true;
     for (const fieldElement = this.form[field];
     const errors = this.errors.get (field) || [];
@@ -181,6 +186,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
   }
 
   init () {
+
     if (this.options.validateOnBlur) {
 
       this.form.addEventListener('blur', (e) => {
@@ -217,22 +223,27 @@ const mockAIGenerations = [
 export function useLocalStorage<T>(key: string, initialValue: T) {
 
   const [storedValue, setStoredValue] = useState<T>(() => {
+
     try {
+
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue} catch (error) {
+
 `
-      // console.error(\`Error reading localStorage key "\${key}":\`, error);
+      // // // // console.error(\`Error reading localStorage key "\${key}":\`, error);
       return initialValue}
   }) ;
 
   const setValue = (value: T | ((val: T) => T)) => {
 
     try {
+
       const valueToStore = value instanceof Function ? value(storedValue) : value;
       setStoredValue(valueToStore);
       window.localStorage.setItem(key, JSON.stringify(valueToStore))} catch (error) {
+
 "`
-      // console.error(\`Error setting localStorage key "\${key}":\`, error)}
+      // // // // console.error(\`Error setting localStorage key "\${key}":\`, error)}
   };
 `
   return [storedValue, setValue] as const}`,
@@ -245,6 +256,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
     }
 ];
 export function AdvancedAICodeGenerator() {
+
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
@@ -277,17 +289,19 @@ export function AdvancedAICodeGenerator() {
             return 'text-yellow-500';
         return 'text-red-500'};
     const generateCode = async () => {
+
         if (!aiPrompt.trim () ) return;
         setIsGenerating (true) ;
         // Simulate AI code generation
         setTimeout ( () => {
+
             const newGeneration = {
 
   id: Date.now().toString(),
                 prompt: aiPrompt,`
   generatedCode: `// Generated code for: ${aiPrompt
 "`
-}\n\nfunction example() {\n  // console.log("Hello from AI!");\n  return "Generated code";\n}`,
+}\n\nfunction example() {\n  // // // // console.log("Hello from AI!");\n  return "Generated code";\n}`,
                 language: 'javascript',
                 confidence: 0.87,
                 alternatives[;
@@ -301,11 +315,13 @@ export function AdvancedAICodeGenerator() {
 
         navigator.clipboard.writeText(text)};
     if (!isOpen) {
+
 "
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-110 z-50">"
         <Code className="w-6 h-6"/>
       </button>)}
     if (isMinimized) {
+
 "
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50">"
         <div className="flex items-center justify-between p-3 border-b border-zion-slate-light">"

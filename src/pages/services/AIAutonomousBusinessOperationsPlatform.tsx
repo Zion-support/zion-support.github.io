@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Bot, 
   Zap, 
   BarChart3, 
@@ -37,23 +38,28 @@ import {
 import { SEO } from '@/components/SEO';
 
 export default function AIAutonomousBusinessOperationsPlatform() {
+
   const features = [
     {
+
       icon: Bot,
       title: "Autonomous Decision Making",
       description: "AI agents that make intelligent business decisions without human intervention"
     },
     {
+
       icon: Zap,
       title: "Real-time Process Automation",
       description: "Instant automation of complex business workflows and operations"
     },
     {
+
       icon: BarChart3,
       title: "Predictive Business Intelligence",
       description: "Advanced analytics that forecast trends and optimize operations proactively"
     },
     {
+
       icon: Settings,
       title: "Self-Optimizing Systems",
       description: "Platforms that continuously improve performance through machine learning"
@@ -62,24 +68,28 @@ export default function AIAutonomousBusinessOperationsPlatform() {
 
   const services = [
     {
+
       title: "Autonomous Process Orchestration",
       description: "AI-driven workflow automation that adapts and optimizes business processes in real-time",
       icon: Workflow,
       features: ["Intelligent workflow routing", "Dynamic process optimization", "Automated decision trees", "Real-time adaptation"]
     },
     {
+
       title: "Predictive Resource Management",
       description: "AI-powered resource allocation and optimization across all business functions",
       icon: Brain,
       features: ["Demand forecasting", "Resource optimization", "Cost reduction", "Efficiency maximization"]
     },
     {
+
       title: "Autonomous Customer Service",
       description: "24/7 AI customer support that handles complex queries and escalates when needed",
       icon: Users,
       features: ["Natural language processing", "Context-aware responses", "Seamless human handoff", "Continuous learning"]
     },
     {
+
       title: "Intelligent Supply Chain Management",
       description: "End-to-end supply chain optimization with autonomous decision-making capabilities",
       icon: Network,
@@ -100,6 +110,7 @@ export default function AIAutonomousBusinessOperationsPlatform() {
 
   const pricing = [
     {
+
       name: "Starter",
       price: "$499",
       period: "/month",
@@ -115,6 +126,7 @@ export default function AIAutonomousBusinessOperationsPlatform() {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$1,299",
       period: "/month",
@@ -132,6 +144,7 @@ export default function AIAutonomousBusinessOperationsPlatform() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$2,999",
       period: "/month",
@@ -354,6 +367,7 @@ export default function AIAutonomousBusinessOperationsPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-indigo-800/50 border rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'border-indigo-400/50 shadow-lg shadow-indigo-500/20' 
                     : 'border-indigo-700/50'
@@ -388,6 +402,7 @@ export default function AIAutonomousBusinessOperationsPlatform() {
                 <Link
                   to="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-400 hover:to-purple-500'
                       : 'bg-indigo-700/50 text-indigo-100 hover:bg-indigo-700/70'

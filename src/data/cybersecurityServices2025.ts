@@ -1,4 +1,5 @@
 export interface CybersecurityService {
+
   id: string;
   title: string;
   description: string;
@@ -18,11 +19,13 @@ export interface CybersecurityService {
   roi: string;
   innovationLevel: string;
   contactInfo: {
+
     phone: string;
     email: string;
     website: string;
   };
   technicalSpecs?: {
+
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
@@ -38,6 +41,7 @@ export interface CybersecurityService {
 export const CYBERSECURITY_SERVICES_2025: CybersecurityService[] = [
   // Zero Trust Security Platform
   {
+
     id: 'zero-trust-security-platform',
     title: 'Zero Trust Security Platform',
     description: 'Comprehensive zero trust security platform that implements continuous verification and least-privilege access controls across all enterprise resources.',
@@ -88,11 +92,13 @@ export const CYBERSECURITY_SERVICES_2025: CybersecurityService[] = [
     roi: '300-500%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['OAuth 2.0', 'SAML', 'OIDC', 'Python', 'React', 'Node.js'],
       integrations: ['Active Directory', 'LDAP', 'SAML providers', 'SIEM systems'],
       apiEndpoints: 100,
@@ -107,6 +113,7 @@ export const CYBERSECURITY_SERVICES_2025: CybersecurityService[] = [
 
   // Advanced Threat Detection
   {
+
     id: 'advanced-threat-detection',
     title: 'Advanced Threat Detection Platform',
     description: 'Next-generation threat detection platform that uses AI and machine learning to identify and respond to sophisticated cyber threats in real-time.',
@@ -157,11 +164,13 @@ export const CYBERSECURITY_SERVICES_2025: CybersecurityService[] = [
     roi: '250-400%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['Machine Learning', 'Python', 'Elasticsearch', 'Kafka', 'React'],
       integrations: ['Splunk', 'QRadar', 'LogRhythm', 'FireEye', 'CrowdStrike'],
       apiEndpoints: 120,
@@ -176,6 +185,7 @@ export const CYBERSECURITY_SERVICES_2025: CybersecurityService[] = [
 
   // Cloud Security Platform
   {
+
     id: 'cloud-security-platform',
     title: 'Cloud Security Platform',
     description: 'Comprehensive cloud security platform that provides visibility, compliance, and threat protection across multi-cloud environments.',
@@ -226,11 +236,13 @@ export const CYBERSECURITY_SERVICES_2025: CybersecurityService[] = [
     roi: '200-350%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['AWS SDK', 'Azure SDK', 'GCP SDK', 'Python', 'React', 'Node.js'],
       integrations: ['AWS', 'Azure', 'GCP', 'Kubernetes', 'Docker', 'Terraform'],
       apiEndpoints: 150,
@@ -245,6 +257,7 @@ export const CYBERSECURITY_SERVICES_2025: CybersecurityService[] = [
 
   // Data Protection and Privacy
   {
+
     id: 'data-protection-privacy',
     title: 'Data Protection and Privacy Platform',
     description: 'Comprehensive data protection and privacy platform that ensures compliance with global regulations while protecting sensitive data.',
@@ -295,11 +308,13 @@ export const CYBERSECURITY_SERVICES_2025: CybersecurityService[] = [
     roi: '180-300%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['AES-256', 'RSA', 'Python', 'React', 'Node.js', 'PostgreSQL'],
       integrations: ['Databases', 'Cloud storage', 'Email systems', 'File systems'],
       apiEndpoints: 80,
@@ -314,6 +329,7 @@ export const CYBERSECURITY_SERVICES_2025: CybersecurityService[] = [
 
   // Security Operations Center (SOC)
   {
+
     id: 'managed-soc-services',
     title: 'Managed Security Operations Center (SOC)',
     description: '24/7 managed security operations center that provides continuous monitoring, threat detection, and incident response services.',
@@ -364,11 +380,13 @@ export const CYBERSECURITY_SERVICES_2025: CybersecurityService[] = [
     roi: '200-400%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['SIEM', 'EDR', 'XDR', 'SOAR', 'Threat Intelligence'],
       integrations: ['Security tools', 'Monitoring systems', 'Ticketing systems'],
       apiEndpoints: 200,

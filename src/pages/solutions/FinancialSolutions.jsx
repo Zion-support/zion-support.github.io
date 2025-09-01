@@ -1,33 +1,40 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight, CheckCircle, CreditCard export default function FinancialSolutions() {
+
     const features = [
         {
+
             icon: Brain,
             title: "AI-Powered Risk Assessment",
             description: "Advanced machine learning models for credit risk and fraud detection"
         },
         {
+
             icon: BarChart3,
             title: "Predictive Analytics",
             description: "Forecast market trends and customer behavior with high accuracy"
         },
         {
+
             icon: Shield,
             title: "Regulatory Compliance",
             description: "Automated compliance monitoring for financial regulations"
         },
         {
+
             icon: Zap,
             title: "Real-time Processing",
             description: "High-speed transaction processing and settlement systems"
         },
         {
+
             icon: Lock,
             title: "Enterprise Security",
             description: "Bank-grade security with multi-layer encryption and authentication"
         },
         {
+
             icon: TrendingUp,
             title: "Portfolio Optimization",
             description: "AI-driven investment strategies and portfolio management"
@@ -43,18 +50,22 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
     ];
     const solutions = [
         {
+
             title: "Digital Banking",
             description: "Modern digital banking platforms with AI-powered features"
         },
         {
+
             title: "Payment Processing",
             description: "Secure and efficient payment processing solutions"
         },
         {
+
             title: "Risk Management",
             description: "Comprehensive risk assessment and mitigation tools"
         },
         {
+
             title: "Compliance Automation",
             description: "Automated regulatory compliance and reporting"
 
@@ -74,6 +85,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -83,6 +95,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -120,6 +133,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -129,6 +143,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -149,6 +164,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (<motion.div key={feature.title} initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -158,6 +174,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -167,6 +184,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
 
 
 }} transition = {
+
   { duration: 0.8,
   delay: index * 0.1 
 
@@ -190,6 +208,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -199,6 +218,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -218,6 +238,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div initial = {
+
   { opacity: 0,
   x: -20 
 
@@ -227,6 +248,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
 
 
 }} whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -246,6 +268,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
             </motion.div>
 
             <motion.div initial = {
+
   { opacity: 0,
   x: 20 
 
@@ -255,6 +278,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
 
 
 }} whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -280,6 +304,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -289,6 +314,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -309,6 +335,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {industries.map((industry, index) => (<motion.div key={industry} initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -318,6 +345,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -327,6 +355,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
 
 
 }} transition = {
+
   { duration: 0.8,
   delay: index * 0.1 
 
@@ -347,6 +376,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -356,6 +386,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 

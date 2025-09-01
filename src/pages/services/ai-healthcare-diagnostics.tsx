@@ -4,6 +4,7 @@ import { Brain, Heart, Shield, Zap, CheckCircle, ArrowRight, Star, Globe, Lock, 
 import { SEO } from '@/components/SEO';
 
 const AIHealthcareDiagnostics: React.FC = () => {
+
   const features = [
     'AI-powered medical image analysis (X-ray, MRI, CT, ultrasound)',
     'Real-time diagnostic assistance for radiologists and physicians',
@@ -27,6 +28,7 @@ const AIHealthcareDiagnostics: React.FC = () => {
 
   const pricing = [
     {
+
       plan: 'Clinic',
       price: '$2,999',
       period: 'month',
@@ -34,6 +36,7 @@ const AIHealthcareDiagnostics: React.FC = () => {
       popular: false
     },
     {
+
       plan: 'Hospital',
       price: '$7,999',
       period: 'month',
@@ -41,6 +44,7 @@ const AIHealthcareDiagnostics: React.FC = () => {
       popular: true
     },
     {
+
       plan: 'Health System',
       price: '$19,999',
       period: 'month',
@@ -286,6 +290,7 @@ const AIHealthcareDiagnostics: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-white rounded-2xl shadow-xl border-2 ${
+
                   plan.popular ? 'border-green-500 scale-105' : 'border-gray-200'
                 }`}
               >
@@ -316,6 +321,7 @@ const AIHealthcareDiagnostics: React.FC = () => {
                   <a
                     href="https://ziontechgroup.com/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                       plan.popular
                         ? 'bg-green-600 text-white hover:bg-green-700'
                         : 'bg-gray-100 text-gray-900 hover:bg-gray-200'

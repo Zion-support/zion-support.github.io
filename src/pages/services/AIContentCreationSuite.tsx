@@ -1,4 +1,5 @@
 import { PenTool, Image, Video, FileText, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database, Globe, Shield export default function AIContentCreationSuite(...args: any[]): any {
+
   const features = [
     'AI-powered text generation and editing',
     'Automated image creation and editing',
@@ -32,6 +33,7 @@ import { PenTool, Image, Video, FileText, Check, ArrowRight, ExternalLink, Phone
 
   const tiers = [
     {
+
       name: 'Creator',
       price: '$199/mo',
       details: [
@@ -43,6 +45,7 @@ import { PenTool, Image, Video, FileText, Check, ArrowRight, ExternalLink, Phone
       ]
     },
     {
+
       name: 'Professional',
       price: '$499/mo',
       details: [
@@ -55,6 +58,7 @@ import { PenTool, Image, Video, FileText, Check, ArrowRight, ExternalLink, Phone
       ]
     },
     {
+
       name: 'Enterprise',
       price: '$1,299/mo',
       details: [
@@ -69,6 +73,7 @@ import { PenTool, Image, Video, FileText, Check, ArrowRight, ExternalLink, Phone
   ];
 
   const technicalSpecs = {
+
   technology: ['GPT-4', 'DALL-E', 'Stable Diffusion', 'Python', 'React', 'Node.js', 'PostgreSQL', 'Redis'],
     integrations: ['WordPress', 'Shopify', 'HubSpot', 'Mailchimp', 'Hootsuite', 'Buffer', 'Canva', 'Adobe Creative Suite'],
     security: ['SOC 2 Type II', 'ISO 27001', 'GDPR', 'End-to-end encryption', 'Multi-factor authentication'],
@@ -90,10 +95,12 @@ import { PenTool, Image, Video, FileText, Check, ArrowRight, ExternalLink, Phone
 
   const contentTypes = [
     {
+
       type: 'Text Content',
       solutions: ['Blog posts', 'Social media posts', 'Email campaigns', 'Product descriptions', 'Press releases']
     },
     {
+
       type: 'Visual Content',;
       solutions: ['Images and graphics', 'Infographics', 'Social media visuals', 'Product photos', 'Brand assets'];
     },;

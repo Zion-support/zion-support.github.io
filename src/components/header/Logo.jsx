@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import { Zap } from 'lucide-react';
 
 export function Logo({ customLogo, customColor, className = '' }) {
+
   if (customLogo) {
+
     return (
       <Link to="/" className={`flex-shrink-0 group ${className}`}>
         <img 

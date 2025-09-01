@@ -1,6 +1,7 @@
 export const INNOVATIVE_SERVICES = [
   // AI-Powered Business Intelligence Platform
   {
+
     id: "ai-business-intelligence-platform",
     title: "AI Business Intelligence Platform",
     description: "Next-generation business intelligence platform that uses AI to automatically analyze data, generate insights, and create actionable reports for business decision-making.",
@@ -49,11 +50,13 @@ export const INNOVATIVE_SERVICES = [
     roi: "250-400%",
     innovationLevel: "Advanced",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
       technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
       integrations: ["Salesforce", "HubSpot", "QuickBooks", "Google Analytics", "Shopify"],
       apiEndpoints: 150,
@@ -66,6 +69,7 @@ export const INNOVATIVE_SERVICES = [
 
   // AI-Powered Autonomous DevOps Platform
   {
+
     id: "ai-autonomous-devops-platform",
     title: "AI Autonomous DevOps Platform",
     description: "Self-healing DevOps platform that automatically detects, diagnoses, and resolves infrastructure issues using AI and machine learning.",
@@ -114,11 +118,13 @@ export const INNOVATIVE_SERVICES = [
     roi: "300-500%",
     innovationLevel: "Cutting-edge",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
       technology: ["Python", "Kubernetes", "Docker", "Terraform", "Prometheus"],
       integrations: ["AWS", "Azure", "GCP", "GitHub", "Jenkins", "Slack"],
       apiEndpoints: 200,
@@ -131,6 +137,7 @@ export const INNOVATIVE_SERVICES = [
 
   // Quantum-Safe Cybersecurity Suite
   {
+
     id: "quantum-safe-cybersecurity-suite",
     title: "Quantum-Safe Cybersecurity Suite",
     description: "Future-proof cybersecurity solution that implements post-quantum cryptography to protect against quantum computing threats.",
@@ -179,11 +186,13 @@ export const INNOVATIVE_SERVICES = [
     roi: "200-400%",
     innovationLevel: "Cutting-edge",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
       technology: ["Post-quantum algorithms", "Hybrid encryption", "Key management", "React", "Node.js"],
       integrations: ["PKI systems", "Identity management", "SIEM platforms", "Compliance tools"],
       apiEndpoints: 200,
@@ -196,6 +205,7 @@ export const INNOVATIVE_SERVICES = [
 
   // AI-Powered Healthcare Diagnostics Platform
   {
+
     id: "ai-healthcare-diagnostics-platform",
     title: "AI Healthcare Diagnostics Platform",
     description: "Advanced medical diagnostics platform that uses AI to analyze medical images, lab results, and patient data for early disease detection.",
@@ -244,11 +254,13 @@ export const INNOVATIVE_SERVICES = [
     roi: "150-300%",
     innovationLevel: "Advanced",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
       technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"],
       integrations: ["PACS systems", "EHR platforms", "Lab systems", "Telemedicine platforms"],
       apiEndpoints: 300,
@@ -261,6 +273,7 @@ export const INNOVATIVE_SERVICES = [
 
   // Edge AI Computing Platform
   {
+
     id: "edge-ai-computing-platform",
     title: "Edge AI Computing Platform",
     description: "Distributed AI computing platform that brings machine learning capabilities to edge devices for real-time processing and decision making.",
@@ -309,11 +322,13 @@ export const INNOVATIVE_SERVICES = [
     roi: "250-450%",
     innovationLevel: "Cutting-edge",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
       technology: ["TensorFlow Lite", "ONNX", "Edge TPU", "React", "Node.js", "MongoDB"],
       integrations: ["IoT platforms", "Cloud AI services", "Edge devices", "Data centers"],
       apiEndpoints: 400,

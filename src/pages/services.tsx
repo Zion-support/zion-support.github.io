@@ -29,6 +29,7 @@ import { Brain,
              } from 'lucide-react.ts';
 
 type Service = {
+
   title: string;
   description: string;
   priceRange: string;
@@ -38,111 +39,117 @@ type Service = {
 
 const featuredServices: Service[] = [
   {
+
     title: 'AI Development & MLOps',
     description: 'Custom LLMs, RAG, fine-tuning, and MLOps pipelines on AWS/Azure/GCP.',
     priceRange: '$8,000 - $120,000',
-    learnMoreUrl: 'https://learn.microsoft.com/azure/machine-learning/',
-  },
+    learnMoreUrl: 'https://learn.microsoft.com/azure/machine-learning/'},
   {
+
     title: 'Cloud Migration & Modernization',
     description: 'Lift-and-shift, containerization, and serverless refactors with IaC.',
     priceRange: '$15,000 - $250,000',
-    learnMoreUrl: 'https://aws.amazon.com/migration-hub/',
-  },
+    learnMoreUrl: 'https://aws.amazon.com/migration-hub/'},
   {
+
     title: 'Zero-Trust Cybersecurity',
     description: 'ZTA architecture, SOC hardening, SIEM, EDR/XDR integrations.',
     priceRange: '$5,000 - $90,000',
-    learnMoreUrl: 'https://cloud.google.com/security-command-center',
-  },
+    learnMoreUrl: 'https://cloud.google.com/security-command-center'},
   {
+
     title: 'Data Engineering & Analytics',
     description: 'ELT/ETL, data lakes/warehouses, BI dashboards, KPI design.',
     priceRange: '$7,500 - $140,000',
-    learnMoreUrl: 'https://cloud.google.com/bigquery/docs',
-  },
+    learnMoreUrl: 'https://cloud.google.com/bigquery/docs'},
   {
+
     title: 'IoT & Edge Platforms',
     description: 'Secure device onboarding, telemetry pipelines, OTA, and twin modeling.',
     priceRange: '$12,000 - $180,000',
-    learnMoreUrl: 'https://learn.microsoft.com/azure/iot-hub/',
-  },
+    learnMoreUrl: 'https://learn.microsoft.com/azure/iot-hub/'},
   {
+
     title: 'Quantum Readiness Advisory',
     description: 'PQ crypto readiness, QC PoCs, and quantum-inspired optimizations.',
     priceRange: '$6,000 - $60,000',
-    learnMoreUrl: 'https://quantum.microsoft.com/azure-quantum',
-  },
+    learnMoreUrl: 'https://quantum.microsoft.com/azure-quantum'},
 ];
 
 const microSaaS: Service[] = [
   {
+
     title: 'LeadGen AI Microsite',
     description: 'SEO + AI chat, CRM integration, and analytics for B2B lead capture.',
     priceRange: '$99 - $499/mo',
-    learnMoreUrl: 'https://vercel.com/ai',
-  },
+    learnMoreUrl: 'https://vercel.com/ai'},
   {
+
     title: 'Agentic Support Bot',
     description: 'Retrieval-augmented agent with help center and Slack/Teams connectors.',
     priceRange: '$149 - $999/mo',
-    learnMoreUrl: 'https://platform.openai.com/',
-  },
+    learnMoreUrl: 'https://platform.openai.com/'},
   {
+
     title: 'Automated Reporting Studio',
     description: 'Auto-ingest spreadsheets/CSV, generate dashboards and scheduled PDFs.',
     priceRange: '$79 - $399/mo',
-    learnMoreUrl: 'https://www.metabase.com/',
-  },
+    learnMoreUrl: 'https://www.metabase.com/'},
   {
+
     title: 'Security Posture Scanner',
     description: 'Continuous cloud config checks and CIS benchmarks with alerts.',
     priceRange: '$199 - $1,499/mo',
-    learnMoreUrl: 'https://www.aquasec.com/cloud-security/',
-  },
+    learnMoreUrl: 'https://www.aquasec.com/cloud-security/'},
   {
+
     title: 'Image/Doc OCR Pipeline',
     description: 'OCR + LLM extraction for invoices, IDs, and contracts at scale.',
     priceRange: '$0.50 - $2.00 / 1k tokens + hosting',
-    learnMoreUrl: 'https://platform.openai.com/docs/guides/vision',
-  },
+    learnMoreUrl: 'https://platform.openai.com/docs/guides/vision'},
   {
+
     title: 'Synthetic Data Generator',
     description: 'Privacy-safe tabular and text data generation to augment small datasets.',
     priceRange: '$299 - $1,999/mo',
-    learnMoreUrl: 'https://huggingface.co/',
-  },
+    learnMoreUrl: 'https://huggingface.co/'},
 ];
 
 const Services: React.FC = (): JSX.Element => {
+
   const [activeCategory, setActiveCategory] = useState('all');
 
   const serviceCategories = [
     {
+
       title: 'AI & Machine Learning',
       description: 'Cutting-edge artificial intelligence solutions that transform business operations',
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
       services: [
         {
+
           name: 'AI Sales Copilot',
           description: 'Intelligent sales automation and lead management',
           href: '/services/ai-sales-copilot',
           features: ['Lead scoring', 'Automated follow-ups', 'Sales analytics']
         },
         {
+
           name: 'AI Compliance Assistant',
           description: 'Automated compliance monitoring and reporting',
           href: '/services/ai-compliance-assistant',
           features: ['Regulatory tracking', 'Automated audits', 'Risk assessment']
         },
         {
+
           name: 'LLM Content Studio',
           description: 'AI-powered content creation and management',
           href: '/services/llm-content-studio',
           features: ['Content generation', 'Brand consistency', 'SEO optimization']
         },
         {
+
           name: 'Interview Assessment AI',
           description: 'Intelligent candidate evaluation and scoring',
           href: '/services/interview-assessment',
@@ -151,24 +158,28 @@ const Services: React.FC = (): JSX.Element => {
       ]
     },
     {
+
       title: 'Cloud & DevOps',
       description: 'Scalable cloud infrastructure and automated deployment solutions',
       icon: Cloud,
       color: 'from-blue-500 to-cyan-500',
       services: [
         {
+
           name: 'Cloud DevOps',
           description: 'End-to-end cloud infrastructure and automation',
           href: '/services/cloud-devops',
           features: ['Infrastructure as Code', 'CI/CD pipelines', 'Monitoring & alerting']
         },
         {
+
           name: 'Cloud FinOps Optimizer',
           description: 'Cloud cost optimization and financial management',
           href: '/services/cloud-finops-optimizer',
           features: ['Cost tracking', 'Resource optimization', 'Budget management']
         },
         {
+
           name: 'IT Infrastructure',
           description: 'Enterprise-grade IT infrastructure solutions',
           href: '/services/it-infrastructure',
@@ -177,24 +188,28 @@ const Services: React.FC = (): JSX.Element => {
       ]
     },
     {
+
       title: 'Business Automation',
       description: 'Streamline operations with intelligent automation tools',
       icon: Zap,
       color: 'from-yellow-500 to-orange-500',
       services: [
         {
+
           name: 'AI Auto Email Responder',
           description: 'Intelligent email automation and response management',
           href: '/services/ai-auto-email-responder',
           features: ['Smart responses', 'CRM integration', 'Sentiment analysis']
         },
         {
+
           name: 'Email Sequencer',
           description: 'Automated email marketing and follow-up sequences',
           href: '/services/email-sequencer',
           features: ['Sequence automation', 'A/B testing', 'Performance tracking']
         },
         {
+
           name: 'Micro CRM',
           description: 'Lightweight CRM solution for small businesses',
           href: '/services/micro-crm',
@@ -203,24 +218,28 @@ const Services: React.FC = (): JSX.Element => {
       ]
     },
     {
+
       title: 'Data & Analytics',
       description: 'Transform data into actionable business insights',
       icon: BarChart3,
       color: 'from-green-500 to-emerald-500',
       services: [
         {
+
           name: 'Website Analytics',
           description: 'Privacy-first website analytics and insights',
           href: '/services/website-analytics',
           features: ['Visitor tracking', 'Conversion analysis', 'Privacy compliance']
         },
         {
+
           name: 'Customer Feedback Surveys',
           description: 'AI-powered survey and feedback collection',
           href: '/services/mobile-feedback-surveys',
           features: ['Survey automation', 'Sentiment analysis', 'Actionable insights']
         },
         {
+
           name: 'Affiliate Tracking',
           description: 'Comprehensive affiliate marketing platform',
           href: '/services/affiliate-tracking',
@@ -229,24 +248,28 @@ const Services: React.FC = (): JSX.Element => {
       ]
     },
     {
+
       title: 'Security & Compliance',
       description: 'Enterprise-grade security and regulatory compliance solutions',
       icon: Shield,
       color: 'from-red-500 to-pink-500',
       services: [
         {
+
           name: 'AI Compliance Copilot',
           description: 'Automated compliance management and reporting',
           href: '/services/ai-compliance-copilot',
           features: ['SOC2 automation', 'ISO compliance', 'Evidence collection']
         },
         {
+
           name: 'Security Headers & CSP',
           description: 'Advanced web security and content security policies',
           href: '/services/security-headers-csp',
           features: ['HSTS implementation', 'CSP configuration', 'Security monitoring']
         },
         {
+
           name: 'DSR Privacy Portal',
           description: 'GDPR and CCPA data subject rights management',
           href: '/services/dsr-portal',
@@ -255,24 +278,28 @@ const Services: React.FC = (): JSX.Element => {
       ]
     },
     {
+
       title: 'Specialized Solutions',
       description: 'Industry-specific and specialized technology solutions',
       icon: Rocket,
       color: 'from-indigo-500 to-purple-500',
       services: [
         {
+
           name: 'Podcast Transcription',
           description: 'AI-powered audio transcription and show notes',
           href: '/services/podcast-transcription',
           features: ['Accurate transcription', 'Show notes generation', 'Multi-language support']
         },
         {
+
           name: 'Returns Management',
           description: 'E-commerce returns and RMA automation',
           href: '/services/returns-management',
           features: ['Automated processing', 'Customer self-service', 'Analytics dashboard']
         },
         {
+
           name: 'IT Helpdesk',
           description: 'Comprehensive IT support and ticket management',
           href: '/services/it-helpdesk',
@@ -283,21 +310,25 @@ const Services: React.FC = (): JSX.Element => {
   ];
   const benefits = [
     {
+
       icon: TrendingUp,
       title: 'Increased Efficiency',
       description: 'Automate repetitive tasks and streamline operations'
     },
     {
+
       icon: Shield,
       title: 'Enhanced Security',
       description: 'Enterprise-grade security and compliance features'
     },
     {
+
       icon: Users,
       title: 'Better User Experience',
       description: 'Intuitive interfaces and seamless integrations'
     },
     {
+
       icon: Star,
       title: 'Proven Results',
       description: 'Track record of successful implementations'
@@ -399,6 +430,7 @@ const Services: React.FC = (): JSX.Element => {
               </p>
               <button
                 onClick={() => {
+
                   setSearchTerm('');
                   setActiveCategory('all');
                 }}

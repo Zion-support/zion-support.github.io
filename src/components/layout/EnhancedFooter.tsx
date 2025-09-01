@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Zap, 
   Brain, 
   Shield, 
@@ -24,8 +25,10 @@ import {
 } from 'lucide-react';
 
 export function EnhancedFooter() {
+
   const footerSections = [
     {
+
       title: "AI & Machine Learning",
       links: [
         { name: "AI Business Intelligence", href: "/services/ai-business-intelligence" },
@@ -37,6 +40,7 @@ export function EnhancedFooter() {
       ]
     },
     {
+
       title: "Cybersecurity & Compliance",
       links: [
         { name: "AI Cybersecurity Platform", href: "/services/ai-cybersecurity-platform" },
@@ -48,6 +52,7 @@ export function EnhancedFooter() {
       ]
     },
     {
+
       title: "Cloud & Infrastructure",
       links: [
         { name: "Cloud DevOps", href: "/services/cloud-devops" },
@@ -59,6 +64,7 @@ export function EnhancedFooter() {
       ]
     },
     {
+
       title: "Digital Transformation",
       links: [
         { name: "Digital Twin", href: "/services/digital-twin" },
@@ -70,6 +76,7 @@ export function EnhancedFooter() {
       ]
     },
     {
+
       title: "Emerging Technologies",
       links: [
         { name: "Quantum Computing", href: "/services/quantum-computing" },
@@ -81,6 +88,7 @@ export function EnhancedFooter() {
       ]
     },
     {
+
       title: "Micro SaaS Solutions",
       links: [
         { name: "Micro CRM", href: "/services/micro-crm" },

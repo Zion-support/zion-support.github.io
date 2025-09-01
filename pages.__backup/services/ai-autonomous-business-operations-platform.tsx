@@ -1,21 +1,21 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Zap, 
-  Target, 
-  TrendingUp, 
-  Shield, 
-  Users, 
-  CheckCircle, 
+import {
+  Brain,
+  Zap,
+  Target,
+  TrendingUp,
+  Shield,
+  Users,
+  CheckCircle,
   ArrowRight,
   Cpu,
   Database,
   Globe,
   BarChart3,
   Rocket,
-  Star
+  Star,
 } from 'lucide-react';
 
 export default function AIAutonomousBusinessOperationsPlatform() {
@@ -23,33 +23,39 @@ export default function AIAutonomousBusinessOperationsPlatform() {
     {
       icon: Brain,
       title: 'Intelligent Decision Making',
-      description: 'AI-powered decision engines that analyze data and make optimal business decisions in real-time.'
+      description:
+        'AI-powered decision engines that analyze data and make optimal business decisions in real-time.',
     },
     {
       icon: Zap,
       title: 'Automated Workflows',
-      description: 'Seamlessly automate complex business processes with intelligent routing and optimization.'
+      description:
+        'Seamlessly automate complex business processes with intelligent routing and optimization.',
     },
     {
       icon: Target,
       title: 'Predictive Analytics',
-      description: 'Forecast business trends and identify opportunities before they become apparent.'
+      description:
+        'Forecast business trends and identify opportunities before they become apparent.',
     },
     {
       icon: TrendingUp,
       title: 'Performance Optimization',
-      description: 'Continuously monitor and optimize business performance across all operations.'
+      description:
+        'Continuously monitor and optimize business performance across all operations.',
     },
     {
       icon: Shield,
       title: 'Security & Compliance',
-      description: 'Built-in security measures and compliance monitoring for all automated operations.'
+      description:
+        'Built-in security measures and compliance monitoring for all automated operations.',
     },
     {
       icon: Users,
       title: 'Human-AI Collaboration',
-      description: 'Seamless integration between human expertise and AI capabilities for optimal results.'
-    }
+      description:
+        'Seamless integration between human expertise and AI capabilities for optimal results.',
+    },
   ];
 
   const benefits = [
@@ -58,30 +64,34 @@ export default function AIAutonomousBusinessOperationsPlatform() {
     'Improve decision accuracy by 85%',
     'Enable 24/7 autonomous operations',
     'Scale operations without proportional cost increase',
-    'Reduce human error in repetitive tasks'
+    'Reduce human error in repetitive tasks',
   ];
 
   const useCases = [
     {
       industry: 'Manufacturing',
-      description: 'Automated quality control, predictive maintenance, and supply chain optimization.',
-      icon: Cpu
+      description:
+        'Automated quality control, predictive maintenance, and supply chain optimization.',
+      icon: Cpu,
     },
     {
       industry: 'Finance',
-      description: 'Risk assessment, fraud detection, and automated trading strategies.',
-      icon: Database
+      description:
+        'Risk assessment, fraud detection, and automated trading strategies.',
+      icon: Database,
     },
     {
       industry: 'Healthcare',
-      description: 'Patient monitoring, diagnosis assistance, and resource allocation.',
-      icon: Users
+      description:
+        'Patient monitoring, diagnosis assistance, and resource allocation.',
+      icon: Users,
     },
     {
       industry: 'Retail',
-      description: 'Inventory management, demand forecasting, and personalized marketing.',
-      icon: Globe
-    }
+      description:
+        'Inventory management, demand forecasting, and personalized marketing.',
+      icon: Globe,
+    },
   ];
 
   return (
@@ -97,14 +107,17 @@ export default function AIAutonomousBusinessOperationsPlatform() {
             >
               <div className="flex items-center justify-center space-x-2 mb-6">
                 <Star className="w-6 h-6 text-yellow-500 fill-current" />
-                <span className="text-sm font-medium text-yellow-600">Featured Service</span>
+                <span className="text-sm font-medium text-yellow-600">
+                  Featured Service
+                </span>
               </div>
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
                 AI Autonomous Business Operations Platform
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600 lg:text-xl">
-                Transform your business with our revolutionary AI platform that enables fully autonomous operations, 
-                intelligent decision-making, and unprecedented efficiency gains.
+                Transform your business with our revolutionary AI platform that
+                enables fully autonomous operations, intelligent
+                decision-making, and unprecedented efficiency gains.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
@@ -117,7 +130,8 @@ export default function AIAutonomousBusinessOperationsPlatform() {
                   href="/services"
                   className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600"
                 >
-                  View All Services <ArrowRight className="ml-2 h-5 w-5 inline" />
+                  View All Services{' '}
+                  <ArrowRight className="ml-2 h-5 w-5 inline" />
                 </Link>
               </div>
             </motion.div>
@@ -133,10 +147,11 @@ export default function AIAutonomousBusinessOperationsPlatform() {
               Platform Features
             </h2>
             <p className="mt-6 text-lg text-gray-600">
-              Our AI platform provides comprehensive capabilities to automate and optimize every aspect of your business operations.
+              Our AI platform provides comprehensive capabilities to automate
+              and optimize every aspect of your business operations.
             </p>
           </div>
-          
+
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => (
               <motion.div
@@ -149,7 +164,9 @@ export default function AIAutonomousBusinessOperationsPlatform() {
                 <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 mb-6 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="h-8 w-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-600">{feature.description}</p>
               </motion.div>
             ))}
@@ -166,7 +183,8 @@ export default function AIAutonomousBusinessOperationsPlatform() {
                 Transform Your Business Operations
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Our AI platform delivers measurable results that directly impact your bottom line and competitive advantage.
+                Our AI platform delivers measurable results that directly impact
+                your bottom line and competitive advantage.
               </p>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -211,10 +229,11 @@ export default function AIAutonomousBusinessOperationsPlatform() {
               Industry Applications
             </h2>
             <p className="mt-6 text-lg text-gray-600">
-              Our AI platform is designed to work across industries, providing tailored solutions for your specific business needs.
+              Our AI platform is designed to work across industries, providing
+              tailored solutions for your specific business needs.
             </p>
           </div>
-          
+
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {useCases.map((useCase, index) => (
               <motion.div
@@ -227,7 +246,9 @@ export default function AIAutonomousBusinessOperationsPlatform() {
                 <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 mb-6 group-hover:scale-110 transition-transform duration-300">
                   <useCase.icon className="h-8 w-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{useCase.industry}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  {useCase.industry}
+                </h3>
                 <p className="text-gray-600 text-sm">{useCase.description}</p>
               </motion.div>
             ))}
@@ -243,7 +264,8 @@ export default function AIAutonomousBusinessOperationsPlatform() {
               Ready to Automate Your Operations?
             </h2>
             <p className="mt-6 text-lg leading-8 text-blue-100">
-              Let's discuss how our AI platform can transform your business operations and drive unprecedented growth.
+              Let's discuss how our AI platform can transform your business
+              operations and drive unprecedented growth.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link

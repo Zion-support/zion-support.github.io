@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   DollarSign, 
   TrendingUp, 
   TrendingDown, 
@@ -22,6 +23,7 @@ import {
 } from 'lucide-react';
 
 const MarketPricing: React.FC = () => {
+
   const [selectedRegion, setSelectedRegion] = useState('global');
   const [selectedIndustry, setSelectedIndustry] = useState('all');
   const [selectedTimeframe, setSelectedTimeframe] = useState('1y');
@@ -52,6 +54,7 @@ const MarketPricing: React.FC = () => {
 
   const marketTrends = [
     {
+
       category: 'AI & Machine Learning',
       currentPrice: '$2,500',
       change: '+15%',
@@ -61,6 +64,7 @@ const MarketPricing: React.FC = () => {
       icon: <Bot className="w-6 h-6" />
     },
     {
+
       category: 'Cloud Computing',
       currentPrice: '$1,800',
       change: '+8%',
@@ -70,6 +74,7 @@ const MarketPricing: React.FC = () => {
       icon: <Cloud className="w-6 h-6" />
     },
     {
+
       category: 'Cybersecurity',
       currentPrice: '$3,200',
       change: '+12%',
@@ -79,6 +84,7 @@ const MarketPricing: React.FC = () => {
       icon: <Shield className="w-6 h-6" />
     },
     {
+
       category: 'Data Analytics',
       currentPrice: '$2,100',
       change: '+6%',
@@ -88,6 +94,7 @@ const MarketPricing: React.FC = () => {
       icon: <Database className="w-6 h-6" />
     },
     {
+
       category: 'Automation Tools',
       currentPrice: '$1,600',
       change: '+18%',
@@ -100,6 +107,7 @@ const MarketPricing: React.FC = () => {
 
   const pricingComparison = [
     {
+
       provider: 'Zion Tech Group',
       aiSolutions: '$99-299',
       cloudPlatform: '$0.10-0.25',
@@ -110,6 +118,7 @@ const MarketPricing: React.FC = () => {
       features: ['AI-powered', 'Enterprise-grade', '24/7 support', 'Custom solutions']
     },
     {
+
       provider: 'Competitor A',
       aiSolutions: '$150-450',
       cloudPlatform: '$0.15-0.35',
@@ -120,6 +129,7 @@ const MarketPricing: React.FC = () => {
       features: ['Standard features', 'Business support', 'Limited customization']
     },
     {
+
       provider: 'Competitor B',
       aiSolutions: '$200-600',
       cloudPlatform: '$0.20-0.40',
@@ -132,17 +142,21 @@ const MarketPricing: React.FC = () => {
   ];
 
   const regionalPricing = {
+
     'north-america': {
+
       aiSolutions: { base: 99, premium: 299, enterprise: 599 },
       cloudPlatform: { base: 0.10, premium: 0.25, enterprise: 0.50 },
       cybersecurity: { base: 25, premium: 199, enterprise: 399 }
     },
     'europe': {
+
       aiSolutions: { base: 89, premium: 269, enterprise: 539 },
       cloudPlatform: { base: 0.09, premium: 0.23, enterprise: 0.45 },
       cybersecurity: { base: 23, premium: 179, enterprise: 359 }
     },
     'asia-pacific': {
+
       aiSolutions: { base: 79, premium: 239, enterprise: 479 },
       cloudPlatform: { base: 0.08, premium: 0.20, enterprise: 0.40 },
       cybersecurity: { base: 20, premium: 159, enterprise: 319 }
@@ -151,18 +165,21 @@ const MarketPricing: React.FC = () => {
 
   const marketInsights = [
     {
+
       title: 'AI Market Expansion',
       description: 'The AI market is expected to grow by 28% annually, driven by increased adoption in enterprise applications.',
       impact: 'Positive',
       confidence: 'High'
     },
     {
+
       title: 'Cloud Cost Optimization',
       description: 'Businesses are increasingly focusing on cloud cost optimization, leading to more competitive pricing.',
       impact: 'Positive',
       confidence: 'Medium'
     },
     {
+
       title: 'Cybersecurity Demand',
       description: 'Rising cyber threats are driving increased investment in security solutions across all industries.',
       impact: 'Positive',
@@ -297,6 +314,7 @@ const MarketPricing: React.FC = () => {
                     {trend.icon}
                   </div>
                   <div className={`flex items-center px-3 py-1 rounded-full text-sm font-medium ${
+
                     trend.trend === 'up' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
                   }`}>
                     {trend.trend === 'up' ? <TrendingUp className="w-4 h-4 mr-1" /> : <TrendingDown className="w-4 h-4 mr-1" />}
@@ -380,6 +398,7 @@ const MarketPricing: React.FC = () => {
                             <Star
                               key={i}
                               className={`w-4 h-4 ${
+
                                 i < Math.floor(provider.rating)
                                   ? 'fill-yellow-400 text-yellow-400'
                                   : 'text-gray-400'
@@ -490,6 +509,7 @@ const MarketPricing: React.FC = () => {
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-bold text-white">{insight.title}</h3>
                   <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+
                     insight.impact === 'Positive' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
                   }`}>
                     {insight.impact}
@@ -501,6 +521,7 @@ const MarketPricing: React.FC = () => {
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-400">Confidence:</span>
                   <span className={`text-sm font-medium ${
+
                     insight.confidence === 'High' ? 'text-green-400' : 'text-yellow-400'
                   }`}>
                     {insight.confidence}

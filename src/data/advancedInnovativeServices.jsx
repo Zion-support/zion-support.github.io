@@ -1,6 +1,7 @@
 export const ADVANCED_INNOVATIVE_SERVICES = [
     // AI-Powered Predictive Maintenance Platform
     {
+
         id: "ai-predictive-maintenance-platform",
         title: "AI Predictive Maintenance Platform",
         description: "Intelligent IoT-based predictive maintenance solution that uses machine learning to predict equipment failures, optimize maintenance schedules, and reduce downtime costs.",
@@ -48,6 +49,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         supportLevel: "enterprise",
         marketPrice: "$599 - $2,500/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -63,6 +65,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
     },
     // Quantum Machine Learning Platform
     {
+
         id: "quantum-machine-learning-platform",
         title: "Quantum Machine Learning Platform",
         description: "Revolutionary platform that combines quantum computing principles with machine learning to solve complex optimization problems and accelerate AI model training.",
@@ -110,6 +113,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         supportLevel: "enterprise",
         marketPrice: "$1,500 - $8,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -125,6 +129,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
     },
     // Autonomous Drone Fleet Management
     {
+
         id: "autonomous-drone-fleet-management",
         title: "Autonomous Drone Fleet Management Platform",
         description: "AI-powered platform for managing autonomous drone fleets for delivery, inspection, surveillance, and data collection with real-time monitoring and optimization.",
@@ -172,6 +177,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         supportLevel: "enterprise",
         marketPrice: "$799 - $3,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -187,6 +193,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
     },
     // Blockchain-Based Digital Identity Platform
     {
+
         id: "blockchain-digital-identity-platform",
         title: "Blockchain Digital Identity Platform",
         description: "Decentralized digital identity solution using blockchain technology for secure, verifiable, and privacy-preserving identity management across organizations.",
@@ -234,6 +241,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         supportLevel: "premium",
         marketPrice: "$299 - $1,200/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -249,6 +257,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
     },
     // AI-Powered Legal Document Analysis
     {
+
         id: "ai-legal-document-analysis",
         title: "AI Legal Document Analysis Platform",
         description: "Intelligent platform that uses natural language processing and machine learning to analyze legal documents, extract key information, and provide legal insights.",
@@ -296,6 +305,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         supportLevel: "premium",
         marketPrice: "$449 - $1,800/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -311,6 +321,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
     },
     // Sustainable Energy Management Platform
     {
+
         id: "sustainable-energy-management",
         title: "Sustainable Energy Management Platform",
         description: "AI-powered platform for optimizing renewable energy systems, monitoring carbon footprints, and implementing sustainable business practices with real-time analytics.",
@@ -358,6 +369,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         supportLevel: "premium",
         marketPrice: "$399 - $1,500/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -373,6 +385,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
     },
     // Advanced Cybersecurity Threat Intelligence
     {
+
         id: "advanced-cybersecurity-threat-intelligence",
         title: "Advanced Cybersecurity Threat Intelligence Platform",
         description: "Next-generation threat intelligence platform that uses AI and machine learning to detect, analyze, and respond to cybersecurity threats in real-time.",
@@ -420,6 +433,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         supportLevel: "enterprise",
         marketPrice: "$899 - $3,500/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -435,6 +449,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
     },
     // Smart City IoT Management Platform
     {
+
         id: "smart-city-iot-management",
         title: "Smart City IoT Management Platform",
         description: "Comprehensive IoT platform for managing smart city infrastructure, including traffic management, environmental monitoring, and public services optimization.",
@@ -482,6 +497,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         supportLevel: "enterprise",
         marketPrice: "$699 - $2,800/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -497,6 +513,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
     },
     // AI-Powered Healthcare Diagnostics
     {
+
         id: "ai-healthcare-diagnostics",
         title: "AI-Powered Healthcare Diagnostics Platform",
         description: "Advanced AI platform for medical image analysis, diagnostic assistance, and patient care optimization using deep learning and computer vision.",
@@ -544,6 +561,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         supportLevel: "enterprise",
         marketPrice: "$599 - $2,200/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -559,6 +577,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
     },
     // Quantum-Safe Communication Platform
     {
+
         id: "quantum-safe-communication",
         title: "Quantum-Safe Communication Platform",
         description: "Future-proof communication platform that implements post-quantum cryptography to secure communications against quantum computing threats.",
@@ -606,6 +625,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         supportLevel: "enterprise",
         marketPrice: "$799 - $3,200/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"

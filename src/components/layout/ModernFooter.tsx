@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Globe, 
   Brain, 
   Cloud, 
@@ -19,10 +20,12 @@ import {
 } from 'lucide-react';
 
 const ModernFooter = () => {
+
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
     {
+
       title: 'Services',
       links: [
         { name: 'AI Solutions', href: '/ai-services', icon: Brain },
@@ -33,6 +36,7 @@ const ModernFooter = () => {
       ]
     },
     {
+
       title: 'Company',
       links: [
         { name: 'About Us', href: '/about' },
@@ -43,6 +47,7 @@ const ModernFooter = () => {
       ]
     },
     {
+
       title: 'Resources',
       links: [
         { name: 'Documentation', href: '/docs' },
@@ -53,6 +58,7 @@ const ModernFooter = () => {
       ]
     },
     {
+
       title: 'Legal',
       links: [
         { name: 'Privacy Policy', href: '/privacy' },
@@ -77,6 +83,7 @@ const ModernFooter = () => {
   ];
 
   const scrollToTop = () => {
+
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -209,10 +216,12 @@ const ModernFooter = () => {
       {/* Floating Elements */}
       <motion.div
         animate={{
+
           y: [0, -10, 0],
           opacity: [0.3, 0.6, 0.3]
         }}
         transition={{
+
           duration: 4,
           repeat: Infinity,
           ease: "easeInOut"
@@ -221,10 +230,12 @@ const ModernFooter = () => {
       />
       <motion.div
         animate={{
+
           y: [0, 10, 0],
           opacity: [0.2, 0.5, 0.2]
         }}
         transition={{
+
           duration: 6,
           repeat: Infinity,
           ease: "easeInOut",

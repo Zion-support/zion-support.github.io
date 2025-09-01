@@ -11,6 +11,6 @@ export const real2026Additions: Real2026Addition[] = [
     name: '2026 Addition Service 1',
     tagline: '2026 innovation service',
     price: '$699',
-    features: ['2026 features', 'Latest technology', 'Future-ready']
-  }
+    features: ['2026 features', 'Latest technology', 'Future-ready'],
+  },
 ];

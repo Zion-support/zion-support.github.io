@@ -7,7 +7,8 @@ const glob = require('glob');
 class ImportExportFixer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.automationInterval = parseInt(process.env.AUTOMATION_INTERVAL) || 2700000; // 45 minutes default
+    this.automationInterval =
+      parseInt(process.env.AUTOMATION_INTERVAL) || 2700000; // 45 minutes default
     this.fixesApplied = 0;
   }
 
@@ -17,10 +18,12 @@ class ImportExportFixer {
 
   async run() {
     this.log('Starting import/export fixing automation...');
-    
+
     try {
       await this.fixImportExportIssues();
-      this.log(`Import/export fixing completed. Applied ${this.fixesApplied} fixes.`);
+      this.log(
+        `Import/export fixing completed. Applied ${this.fixesApplied} fixes.`
+      );
     } catch (error) {
       this.log(`Error during import/export fixing: ${error.message}`);
     }
@@ -28,19 +31,22 @@ class ImportExportFixer {
 
   async fixImportExportIssues() {
     this.log('Fixing import/export issues...');
-    
-    const files = glob.sync('**/*.{js,jsx,ts,tsx}', { 
-      ignore: ['node_modules/**', '.git/**', 'dist/**', 'build/**', 'out/**'] 
+
+    const files = glob.sync('**/*.{js,jsx,ts,tsx}', {
+      ignore: ['node_modules/**', '.git/**', 'dist/**', 'build/**', 'out/**'],
     });
-    
+
     for (const file of files) {
       try {
         const content = fs.readFileSync(file, 'utf8');
         let modified = false;
         let newContent = content;
-        
+
         // Fix default export issues
-        if (content.includes('export default') && !content.includes('export {')) {
+        if (
+          content.includes('export default') &&
+          !content.includes('export {')
+        ) {
           const exportMatch = content.match(/export default\s+(\w+)/);
           if (exportMatch) {
             const componentName = exportMatch[1];
@@ -53,13 +59,13 @@ class ImportExportFixer {
             }
           }
         }
-        
+
         // Fix React import issues
-        if (content.includes('React.') && !content.includes("import React")) {
+        if (content.includes('React.') && !content.includes('import React')) {
           newContent = "import React from 'react';\n" + newContent;
           modified = true;
         }
-        
+
         if (modified) {
           fs.writeFileSync(file, newContent);
           this.fixesApplied++;

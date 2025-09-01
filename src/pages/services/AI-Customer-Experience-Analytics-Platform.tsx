@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
+
   Users,
   BarChart3,
   Brain,
@@ -34,38 +35,45 @@ import {
 } from 'lucide-react';
 
 export default function AICustomerExperienceAnalyticsPlatform() {
+
   const features = [
     {
+
       title: 'Real-time Sentiment Analysis',
       description: 'AI-powered analysis of customer emotions and satisfaction across all touchpoints',
       icon: Heart,
       color: 'from-red-600 to-pink-600'
     },
     {
+
       title: 'Omnichannel Journey Mapping',
       description: 'Track customer interactions across web, mobile, social, and offline channels',
       icon: Globe,
       color: 'from-blue-600 to-cyan-600'
     },
     {
+
       title: 'Predictive Customer Behavior',
       description: 'Machine learning models that predict customer churn, lifetime value, and preferences',
       icon: Brain,
       color: 'from-purple-600 to-pink-600'
     },
     {
+
       title: 'Voice & Text Analytics',
       description: 'Advanced NLP for analyzing customer feedback, calls, and support interactions',
       icon: MessageCircle,
       color: 'from-green-600 to-emerald-600'
     },
     {
+
       title: 'Personalization Engine',
       description: 'AI-driven recommendations and content personalization for better engagement',
       icon: Target,
       color: 'from-orange-600 to-red-600'
     },
     {
+
       title: 'Customer Health Scoring',
       description: 'Comprehensive scoring system to identify at-risk customers and opportunities',
       icon: Activity,
@@ -75,6 +83,7 @@ export default function AICustomerExperienceAnalyticsPlatform() {
 
   const pricing = [
     {
+
       plan: 'Starter',
       price: '$249',
       period: '/month',
@@ -90,6 +99,7 @@ export default function AICustomerExperienceAnalyticsPlatform() {
       popular: false
     },
     {
+
       plan: 'Professional',
       price: '$599',
       period: '/month',
@@ -107,6 +117,7 @@ export default function AICustomerExperienceAnalyticsPlatform() {
       popular: true
     },
     {
+
       plan: 'Enterprise',
       price: '$1,499',
       period: '/month',
@@ -127,21 +138,25 @@ export default function AICustomerExperienceAnalyticsPlatform() {
 
   const benefits = [
     {
+
       icon: Zap,
       title: 'Improved Customer Satisfaction',
       description: 'Increase NPS scores by up to 30% with data-driven insights'
     },
     {
+
       icon: TrendingUp,
       title: 'Higher Customer Retention',
       description: 'Reduce churn by up to 25% through proactive customer care'
     },
     {
+
       icon: DollarSign,
       title: 'Increased Revenue',
       description: 'Boost customer lifetime value by up to 40%'
     },
     {
+
       icon: Users,
       title: 'Better Customer Understanding',
       description: 'Deep insights into customer needs and preferences'
@@ -150,24 +165,28 @@ export default function AICustomerExperienceAnalyticsPlatform() {
 
   const useCases = [
     {
+
       title: 'E-commerce & Retail',
       description: 'Optimize shopping experiences, reduce cart abandonment, and increase conversions',
       icon: ShoppingCart,
       color: 'from-blue-600 to-cyan-600'
     },
     {
+
       title: 'Financial Services',
       description: 'Enhance banking experiences, improve fraud detection, and increase trust',
       icon: Shield,
       color: 'from-green-600 to-emerald-600'
     },
     {
+
       title: 'Healthcare',
       description: 'Improve patient satisfaction, optimize care delivery, and reduce wait times',
       icon: Heart,
       color: 'from-red-600 to-pink-600'
     },
     {
+
       title: 'Travel & Hospitality',
       description: 'Enhance guest experiences, optimize pricing, and increase loyalty',
       icon: Globe,
@@ -417,6 +436,7 @@ export default function AICustomerExperienceAnalyticsPlatform() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 rounded-xl p-8 border transition-all duration-300 ${
+
                   plan.popular 
                     ? 'border-purple-500 bg-gray-800/70 scale-105' 
                     : 'border-gray-700 hover:border-purple-500/50'
@@ -452,6 +472,7 @@ export default function AICustomerExperienceAnalyticsPlatform() {
                 <Link
                   to="/contact"
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
                       : 'border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white'

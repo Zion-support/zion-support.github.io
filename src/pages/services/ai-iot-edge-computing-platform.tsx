@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Cpu, 
   Zap, 
   Brain, 
@@ -53,33 +54,40 @@ import {
 import { SEO } from '../../components/SEO';
 
 export default function AIIoTEdgeComputingPlatform() {
+
   const features = [
     {
+
       icon: Brain,
       title: 'AI-Powered Edge Intelligence',
       description: 'Machine learning models that run directly on IoT devices for real-time decision making'
     },
     {
+
       icon: Zap,
       title: 'Real-time Data Processing',
       description: 'Process sensor data at the edge with sub-millisecond latency for immediate insights'
     },
     {
+
       icon: Network,
       title: 'Distributed Edge Computing',
       description: 'Intelligent workload distribution across edge nodes for optimal performance and reliability'
     },
     {
+
       icon: Server,
       title: 'Edge-to-Cloud Orchestration',
       description: 'Seamless data flow between edge devices and cloud infrastructure with intelligent routing'
     },
     {
+
       icon: Cloud,
       title: 'Hybrid Cloud Integration',
       description: 'Support for multi-cloud environments with intelligent data placement and processing'
     },
     {
+
       icon: Shield,
       title: 'Edge Security & Privacy',
       description: 'Advanced security protocols including encryption, authentication, and secure boot'
@@ -97,21 +105,25 @@ export default function AIIoTEdgeComputingPlatform() {
 
   const useCases = [
     {
+
       industry: 'Manufacturing',
       applications: ['Predictive maintenance', 'Quality control', 'Supply chain monitoring', 'Energy optimization'],
       icon: Cpu
     },
     {
+
       industry: 'Healthcare',
       applications: ['Patient monitoring', 'Medical device management', 'Telemedicine', 'Clinical analytics'],
       icon: Shield
     },
     {
+
       industry: 'Smart Cities',
       applications: ['Traffic management', 'Environmental monitoring', 'Public safety', 'Energy management'],
       icon: Globe
     },
     {
+
       industry: 'Agriculture',
       applications: ['Precision farming', 'Crop monitoring', 'Livestock tracking', 'Weather prediction'],
       icon: Network
@@ -138,6 +150,7 @@ export default function AIIoTEdgeComputingPlatform() {
 
   const pricingPlans = [
     {
+
       name: 'Starter',
       description: 'Perfect for small IoT projects and prototypes',
       price: { monthly: 299, annual: 2990 },
@@ -156,6 +169,7 @@ export default function AIIoTEdgeComputingPlatform() {
       link: '/contact'
     },
     {
+
       name: 'Professional',
       description: 'Ideal for production IoT deployments',
       price: { monthly: 899, annual: 8990 },
@@ -176,6 +190,7 @@ export default function AIIoTEdgeComputingPlatform() {
       link: '/contact'
     },
     {
+
       name: 'Enterprise',
       description: 'For large-scale IoT operations',
       price: { monthly: 2499, annual: 24990 },
@@ -428,6 +443,7 @@ export default function AIIoTEdgeComputingPlatform() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'border-blue-500 bg-gradient-to-br from-blue-500/20 to-cyan-500/20' 
                     : 'border-white/10'
@@ -468,6 +484,7 @@ export default function AIIoTEdgeComputingPlatform() {
                 <Link
                   to={plan.link}
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700'
                       : 'border border-white/20 text-white hover:bg-white/10'

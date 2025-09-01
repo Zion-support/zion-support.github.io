@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
+
   TrendingUp,
   DollarSign,
   BarChart3,
@@ -102,32 +103,38 @@ import {
 } from 'lucide-react';
 
 export function AIRevenueOperationsPlatform() {
+
   const features = [
     {
+
       icon: TrendingUp,
       title: 'AI-Powered Revenue Forecasting',
       description: 'Advanced machine learning algorithms that predict revenue with unprecedented accuracy',
       benefits: ['Predictive modeling', 'Scenario planning', 'Trend analysis', 'Confidence scoring']
     },
     {
+
       icon: DollarSign,
       title: 'Intelligent Pipeline Management',
       description: 'Smart pipeline optimization and deal scoring using AI and machine learning',
       benefits: ['Deal scoring', 'Pipeline optimization', 'Conversion prediction', 'Risk assessment']
     },
     {
+
       icon: BarChart3,
       title: 'Revenue Analytics & Insights',
       description: 'Comprehensive analytics that provide actionable insights for revenue growth',
       benefits: ['Performance metrics', 'Growth analysis', 'Bottleneck identification', 'ROI measurement']
     },
     {
+
       icon: Target,
       title: 'Automated Revenue Operations',
       description: 'Streamline revenue processes with intelligent automation and workflows',
       benefits: ['Process automation', 'Workflow optimization', 'Efficiency gains', 'Error reduction']
     },
     {
+
       icon: Rocket,
       title: 'Cross-Functional Alignment',
       description: 'Align sales, marketing, and customer success teams for maximum revenue impact',
@@ -137,6 +144,7 @@ export function AIRevenueOperationsPlatform() {
 
   const pricingPlans = [
     {
+
       name: 'Growth',
       price: '$599',
       period: '/month',
@@ -155,6 +163,7 @@ export function AIRevenueOperationsPlatform() {
       popular: false
     },
     {
+
       name: 'Scale',
       price: '$1,499',
       period: '/month',
@@ -176,6 +185,7 @@ export function AIRevenueOperationsPlatform() {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: '$3,999',
       period: '/month',
@@ -201,24 +211,28 @@ export function AIRevenueOperationsPlatform() {
 
   const revenueMetrics = [
     {
+
       title: 'Revenue Growth Rate',
       description: 'Track and optimize your revenue growth with AI-powered insights',
       icon: TrendingUp,
       benefits: ['Growth tracking', 'Trend analysis', 'Forecasting', 'Optimization']
     },
     {
+
       title: 'Customer Lifetime Value',
       description: 'Maximize customer value with intelligent CLV optimization strategies',
       icon: Star,
       benefits: ['CLV calculation', 'Optimization strategies', 'Retention focus', 'Upsell opportunities']
     },
     {
+
       title: 'Sales Cycle Optimization',
       description: 'Reduce sales cycle length and improve conversion rates',
       icon: Clock,
       benefits: ['Cycle analysis', 'Bottleneck identification', 'Process optimization', 'Conversion improvement']
     },
     {
+
       title: 'Revenue Per Employee',
       description: 'Measure and improve team productivity and revenue efficiency',
       icon: Users,
@@ -464,6 +478,7 @@ export function AIRevenueOperationsPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-gradient-to-br from-purple-900/20 to-pink-900/20 p-8 rounded-2xl border ${
+
                   plan.popular 
                     ? 'border-purple-500/50 shadow-lg shadow-purple-500/20' 
                     : 'border-purple-500/20'
@@ -498,6 +513,7 @@ export function AIRevenueOperationsPlatform() {
                 <Link
                   to={plan.name === 'Enterprise' ? '/contact' : '/pricing'}
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700'
                       : 'border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white'

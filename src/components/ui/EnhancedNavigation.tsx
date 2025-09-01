@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
+
   Menu,
   X,
   ChevronDown,
@@ -20,6 +21,7 @@ import {
 import { ThemeToggle } from './ThemeToggle';
 
 interface NavigationItem {
+
   name: string;
   href: string;
   description?: string;
@@ -30,12 +32,14 @@ interface NavigationItem {
 
 const navigation: NavigationItem[] = [
   {
+
     name: 'Services',
     href: '/services',
     description: 'Explore our comprehensive technology solutions',
     icon: Zap,
     children: [
-      { 
+      {
+
         name: 'AI Solutions', 
         href: '/ai-services', 
         description: 'Cutting-edge artificial intelligence services',
@@ -49,6 +53,7 @@ const navigation: NavigationItem[] = [
     ]
   },
   {
+
     name: 'Solutions',
     href: '/solutions',
     description: 'Industry-specific technology solutions',
@@ -63,12 +68,14 @@ const navigation: NavigationItem[] = [
     ]
   },
   {
+
     name: 'About',
     href: '/about',
     description: 'Learn about our company and mission',
     icon: User
   },
   {
+
     name: 'Contact',
     href: '/contact',
     description: 'Get in touch with our team',
@@ -83,6 +90,7 @@ const contactInfo = [
 ];
 
 export const EnhancedNavigation: React.FC = () => {
+
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -91,7 +99,9 @@ export const EnhancedNavigation: React.FC = () => {
 
   // Handle scroll effect
   useEffect(() => {
+
     const handleScroll = () => {
+
       setIsScrolled(window.scrollY > 10);
     };
 
@@ -101,26 +111,31 @@ export const EnhancedNavigation: React.FC = () => {
 
   // Close mobile menu when route changes
   useEffect(() => {
+
     setIsOpen(false);
     setActiveDropdown(null);
   }, [location.pathname]);
 
   const handleDropdownToggle = useCallback((name: string) => {
+
     setActiveDropdown(activeDropdown === name ? null : name);
   }, [activeDropdown]);
 
   const closeAllDropdowns = useCallback(() => {
+
     setActiveDropdown(null);
   }, []);
 
   const handleSearch = useCallback((e: React.FormEvent) => {
+
     e.preventDefault();
     // Implement search functionality
-    console.log('Searching for:', searchQuery);
+    // // // console.log('Searching for:', searchQuery);
   }, [searchQuery]);
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+
       isScrolled 
         ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 shadow-xl' 
         : 'bg-transparent'
@@ -307,6 +322,7 @@ export const EnhancedNavigation: React.FC = () => {
                           <span className="font-medium">{item.name}</span>
                         </div>
                         <ChevronDown className={`w-5 h-5 transition-transform ${
+
                           activeDropdown === item.name ? 'rotate-180' : ''
                         }`} />
                       </button>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
+
   Brain, 
   Sparkles, 
   Target, 
@@ -31,6 +32,7 @@ import {
 } from 'lucide-react';
 
 interface ServiceCategory {
+
   id: string;
   name: string;
   icon: React.ComponentType<any>;
@@ -44,6 +46,7 @@ interface ServiceCategory {
 }
 
 interface UserBehavior {
+
   pageViews: string[];
   timeSpent: number;
   interactions: string[];
@@ -56,6 +59,7 @@ interface UserBehavior {
 }
 
 interface ServiceRecommendation {
+
   id: string;
   service: ServiceCategory;
   confidence: number;
@@ -69,6 +73,7 @@ interface ServiceRecommendation {
 
 const serviceCategories: ServiceCategory[] = [
   {
+
     id: 'ai-ml',
     name: 'AI & Machine Learning',
     icon: Brain,
@@ -81,6 +86,7 @@ const serviceCategories: ServiceCategory[] = [
     roi: '300-500%'
   },
   {
+
     id: 'quantum-computing',
     name: 'Quantum Computing',
     icon: Cpu,
@@ -93,6 +99,7 @@ const serviceCategories: ServiceCategory[] = [
     roi: '500-1000%'
   },
   {
+
     id: 'cybersecurity',
     name: 'Cybersecurity',
     icon: Shield,
@@ -105,6 +112,7 @@ const serviceCategories: ServiceCategory[] = [
     roi: '200-400%'
   },
   {
+
     id: 'cloud-devops',
     name: 'Cloud & DevOps',
     icon: Cloud,
@@ -117,6 +125,7 @@ const serviceCategories: ServiceCategory[] = [
     roi: '150-300%'
   },
   {
+
     id: 'data-analytics',
     name: 'Data Analytics & BI',
     icon: BarChart3,
@@ -129,6 +138,7 @@ const serviceCategories: ServiceCategory[] = [
     roi: '180-350%'
   },
   {
+
     id: 'blockchain',
     name: 'Blockchain & Web3',
     icon: Globe,
@@ -141,6 +151,7 @@ const serviceCategories: ServiceCategory[] = [
     roi: '250-600%'
   },
   {
+
     id: 'iot-edge',
     name: 'IoT & Edge Computing',
     icon: Database,
@@ -153,6 +164,7 @@ const serviceCategories: ServiceCategory[] = [
     roi: '200-450%'
   },
   {
+
     id: 'digital-twin',
     name: 'Digital Twin Platform',
     icon: Eye,
@@ -167,9 +179,11 @@ const serviceCategories: ServiceCategory[] = [
 ];
 
 export function AIServiceRecommendationEngine() {
+
   const [isOpen, setIsOpen] = useState(false);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [userBehavior, setUserBehavior] = useState<UserBehavior>({
+
     pageViews: [],
     timeSpent: 0,
     interactions: [],
@@ -186,6 +200,7 @@ export function AIServiceRecommendationEngine() {
 
   // Analyze user behavior and generate recommendations
   const analyzeUserBehavior = useCallback(async () => {
+
     setIsAnalyzing(true);
     setAnalysisProgress(0);
 
@@ -199,6 +214,7 @@ export function AIServiceRecommendationEngine() {
     ];
 
     for (let i = 0; i < steps.length; i++) {
+
       await new Promise(resolve => setTimeout(resolve, 800));
       setAnalysisProgress(((i + 1) / steps.length) * 100);
     }
@@ -211,6 +227,7 @@ export function AIServiceRecommendationEngine() {
 
   // AI recommendation algorithm
   const generateRecommendations = useCallback(() => {
+
     const newRecommendations: ServiceRecommendation[] = [];
 
     // Analyze user behavior patterns
@@ -222,6 +239,7 @@ export function AIServiceRecommendationEngine() {
 
     // Generate personalized recommendations
     serviceCategories.forEach(service => {
+
       let confidence = 50; // Base confidence
       const reasoning: string[] = [];
       const benefits: string[] = [];
@@ -229,6 +247,7 @@ export function AIServiceRecommendationEngine() {
 
       // AI/ML services
       if (service.id === 'ai-ml' && hasAIIntrest) {
+
         confidence += 30;
         reasoning.push('High interest in AI solutions detected');
         reasoning.push('Company size supports AI implementation');
@@ -242,6 +261,7 @@ export function AIServiceRecommendationEngine() {
 
       // Cybersecurity services
       if (service.id === 'cybersecurity' && hasSecurityConcerns) {
+
         confidence += 35;
         reasoning.push('Security concerns identified in pain points');
         reasoning.push('Critical for business continuity and compliance');
@@ -255,6 +275,7 @@ export function AIServiceRecommendationEngine() {
 
       // Data Analytics services
       if (service.id === 'data-analytics' && hasDataNeeds) {
+
         confidence += 25;
         reasoning.push('Data-driven decision making identified as need');
         reasoning.push('Company has data assets to leverage');
@@ -268,6 +289,7 @@ export function AIServiceRecommendationEngine() {
 
       // Enterprise services
       if (isEnterprise && service.id === 'quantum-computing') {
+
         confidence += 20;
         reasoning.push('Enterprise company can support quantum initiatives');
         reasoning.push('High budget allocation available');
@@ -281,6 +303,7 @@ export function AIServiceRecommendationEngine() {
 
       // High budget services
       if (hasHighBudget && service.id === 'digital-twin') {
+
         confidence += 15;
         reasoning.push('Budget supports advanced technology investment');
         reasoning.push('Long-term strategic value proposition');
@@ -294,6 +317,7 @@ export function AIServiceRecommendationEngine() {
 
       // Industry-specific recommendations
       if (userBehavior.industry === 'healthcare' && service.id === 'ai-ml') {
+
         confidence += 20;
         reasoning.push('Healthcare industry benefits greatly from AI');
         reasoning.push('Regulatory compliance requirements met');
@@ -303,6 +327,7 @@ export function AIServiceRecommendationEngine() {
       }
 
       if (userBehavior.industry === 'finance' && service.id === 'blockchain') {
+
         confidence += 25;
         reasoning.push('Finance industry embracing blockchain technology');
         reasoning.push('High security and transparency requirements');
@@ -318,7 +343,9 @@ export function AIServiceRecommendationEngine() {
 
       // Only include recommendations with sufficient confidence
       if (confidence >= 50) {
+
         newRecommendations.push({
+
           id: `${service.id}-rec`,
           service,
           confidence,
@@ -334,6 +361,7 @@ export function AIServiceRecommendationEngine() {
 
     // Sort by confidence and priority
     return newRecommendations.sort((a, b) => {
+
       if (a.priority === 'high' && b.priority !== 'high') return -1;
       if (b.priority === 'high' && a.priority !== 'high') return 1;
       return b.confidence - a.confidence;
@@ -342,10 +370,13 @@ export function AIServiceRecommendationEngine() {
 
   // Track user behavior
   useEffect(() => {
+
     // Simulate tracking user behavior
     const trackBehavior = () => {
+
       const currentPage = window.location.pathname;
       setUserBehavior(prev => ({
+
         ...prev,
         pageViews: [...prev.pageViews, currentPage],
         timeSpent: prev.timeSpent + 1,
@@ -359,7 +390,9 @@ export function AIServiceRecommendationEngine() {
 
   // Auto-analyze when behavior changes significantly
   useEffect(() => {
+
     if (userBehavior.pageViews.length > 5 && !isAnalyzing) {
+
       analyzeUserBehavior();
     }
   }, [userBehavior.pageViews.length, analyzeUserBehavior, isAnalyzing]);
@@ -474,6 +507,7 @@ export function AIServiceRecommendationEngine() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         className={`p-4 rounded-lg border cursor-pointer transition-all duration-200 hover:shadow-md ${
+
                           recommendation.priority === 'high' ? 'border-red-200 bg-red-50 dark:bg-red-900/20 dark:border-red-800' :
                           recommendation.priority === 'medium' ? 'border-yellow-200 bg-yellow-50 dark:bg-yellow-900/20 dark:border-yellow-800' :
                           'border-blue-200 bg-blue-50 dark:bg-blue-900/20 dark:border-blue-800'
@@ -496,6 +530,7 @@ export function AIServiceRecommendationEngine() {
                           </div>
                           <div className="text-right">
                             <div className={`px-2 py-1 rounded-full text-xs font-medium ${
+
                               recommendation.priority === 'high' ? 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200' :
                               recommendation.priority === 'medium' ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200' :
                               'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
@@ -620,6 +655,7 @@ export function AIServiceRecommendationEngine() {
                       <div className="flex justify-between">
                         <span className="text-gray-600 dark:text-gray-400">Priority:</span>
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+
                           selectedService.priority === 'high' ? 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200' :
                           selectedService.priority === 'medium' ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200' :
                           'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'

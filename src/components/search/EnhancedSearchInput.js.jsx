@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, X, ArrowDown } from 'lucide-react';
 export const EnhancedSearchInput = ({ placeholder = "Search for services, talent, or equipment...", onSearch, suggestions = [], className = "" }) => {
+
     const [query, setQuery] = useState('');
     const [showSuggestions, setShowSuggestions] = useState(false);
     const [filteredSuggestions, setFilteredSuggestions] = useState([]);
@@ -8,43 +9,56 @@ export const EnhancedSearchInput = ({ placeholder = "Search for services, talent
     const inputRef = useRef(null);
     const suggestionsRef = useRef(null);
     useEffect(() => {
+
         if (query.trim()) {
+
             const filtered = suggestions.filter(suggestion => suggestion.title.toLowerCase().includes(query.toLowerCase()) ||
                 suggestion.description?.toLowerCase().includes(query.toLowerCase()));
             setFilteredSuggestions(filtered.slice(0, 5));
             setShowSuggestions(true);
             setSelectedIndex(-1)}
         else {
+
             setFilteredSuggestions([]);
             setShowSuggestions(false)}
     }, [query, suggestions]);
     useEffect(() => {
+
         const handleClickOutside = (event) => {
+
             if (suggestionsRef.current && !suggestionsRef.current.contains(event.target)) {
+
                 setShowSuggestions(false)}
         };
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
     const handleClear = () => {
+
         setQuery('');
         setShowSuggestions(false);
         inputRef.current?.focus()};
     const handleSubmit = (e) => {
+
         e.preventDefault();
         if (query.trim() && onSearch) {
+
             onSearch(query.trim());
             setShowSuggestions(false)}
     };
     const handleSuggestionClick = (suggestion) => {
+
         setQuery(suggestion.title);
         setShowSuggestions(false);
         if (onSearch) {
+
             onSearch(suggestion.title)}
     };
     const handleKeyDown = (e) => {
+
         if (!showSuggestions)
             return;
         switch (e.key) {
+
             case 'ArrowDown':
                 e.preventDefault();
                 setSelectedIndex(prev => prev < filteredSuggestions.length - 1 ? prev + 1 : prev);
@@ -56,8 +70,10 @@ export const EnhancedSearchInput = ({ placeholder = "Search for services, talent
             case 'Enter':
                 e.preventDefault();
                 if (selectedIndex >= 0 && filteredSuggestions[selectedIndex]) {
+
                     handleSuggestionClick(filteredSuggestions[selectedIndex])}
                 else if (query.trim()) {
+
                     handleSubmit(e)}
                 break;
             case 'Escape':

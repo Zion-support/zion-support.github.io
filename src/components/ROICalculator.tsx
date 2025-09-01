@@ -4,12 +4,15 @@ import { ProductListing } from '../types/listings';
 import { Calculator, TrendingUp, DollarSign, Clock, Target, BarChart3, X } from 'lucide-react';
 
 interface ROICalculatorProps {
+
   service: ProductListing;
   onClose: () => void;
 }
 
 export const ROICalculator: React.FC<ROICalculatorProps> = ({ service, onClose }) => {
+
   const [inputs, setInputs] = useState({
+
     initialInvestment: service.price,
     monthlyRevenue: 0,
     monthlyCosts: 0,
@@ -18,6 +21,7 @@ export const ROICalculator: React.FC<ROICalculatorProps> = ({ service, onClose }
   });
 
   const [results, setResults] = useState({
+
     totalRevenue: 0,
     totalCosts: 0,
     netProfit: 0,
@@ -27,6 +31,7 @@ export const ROICalculator: React.FC<ROICalculatorProps> = ({ service, onClose }
   });
 
   const calculateROI = () => {
+
     const { initialInvestment, monthlyRevenue, monthlyCosts, timeFrame, growthRate } = inputs;
     
     let totalRevenue = 0;
@@ -34,6 +39,7 @@ export const ROICalculator: React.FC<ROICalculatorProps> = ({ service, onClose }
     let currentRevenue = monthlyRevenue;
     
     for (let month = 1; month <= timeFrame; month++) {
+
       totalRevenue += currentRevenue;
       totalCosts += monthlyCosts;
       currentRevenue *= (1 + growthRate / 100);
@@ -46,6 +52,7 @@ export const ROICalculator: React.FC<ROICalculatorProps> = ({ service, onClose }
     const monthlyROI = roi / timeFrame;
     
     setResults({
+
       totalRevenue,
       totalCosts,
       netProfit,
@@ -56,15 +63,19 @@ export const ROICalculator: React.FC<ROICalculatorProps> = ({ service, onClose }
   };
 
   const handleInputChange = (field: string, value: number) => {
+
     setInputs(prev => ({ ...prev, [field]: value }));
   };
 
   React.useEffect(() => {
+
     calculateROI();
   }, [inputs]);
 
   const formatCurrency = (amount: number) => {
+
     return new Intl.NumberFormat('en-US', {
+
       style: 'currency',
       currency: 'USD',
       minimumFractionDigits: 0,
@@ -73,6 +84,7 @@ export const ROICalculator: React.FC<ROICalculatorProps> = ({ service, onClose }
   };
 
   const formatPercentage = (value: number) => {
+
     return `${value.toFixed(1)}%`;
   };
 

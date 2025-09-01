@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { useFavorites } from "@/hooks/useFavorites";
 export function MobileBottomNav({ unreadCount = 0 }) {
+
     const location = useLocation();
     const { user } = useAuth();
     const isAuthenticated = !!user;
@@ -14,24 +15,28 @@ export function MobileBottomNav({ unreadCount = 0 }) {
     const cartCount = items.reduce((sum, i) => sum + i.quantity, 0);
     const navItems = [
         {
+
             name: "Home",
             href: "/",
             icon: Home,
             matches: (path) => path === "/"
         },
         {
+
             name: "Browse",
             href: "/talent",
             icon: Search,
             matches: (path) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")
         },
         {
+
             name: "Community",
             href: "/community",
             icon: MessageCircle,
             matches: (path) => path.startsWith("/community") || path.startsWith("/forum")
         },
         {
+
             name: "Messages",
             href: "/messages",
             icon: MessageSquare,
@@ -40,6 +45,7 @@ export function MobileBottomNav({ unreadCount = 0 }) {
             authRequired: true
         },
         {
+
             name: "Cart",
             href: "/cart",
             icon: ShoppingCart,
@@ -47,6 +53,7 @@ export function MobileBottomNav({ unreadCount = 0 }) {
             badge: cartCount
         },
         {
+
             name: "Dashboard",
             href: "/dashboard",
             icon: User,
@@ -59,6 +66,7 @@ export function MobileBottomNav({ unreadCount = 0 }) {
     return (<nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">
       <div className="flex justify-around items-center h-16">
         {visibleItems.map(item => (<Link key={item.name} to={item.href} className = {
+
   cn("flex flex-col items-center justify-center w-full h-full px-1 py-1",
   item.matches(location.pathname)
                 ? "text-zion-cyan"

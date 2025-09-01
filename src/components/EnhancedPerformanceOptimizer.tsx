@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
+
   Zap, 
   Gauge, 
   HardDrive, 
@@ -19,6 +20,7 @@ import {
 } from 'lucide-react';
 
 interface PerformanceMetrics {
+
   fcp: number; // First Contentful Paint
   lcp: number; // Largest Contentful Paint
   fid: number; // First Input Delay
@@ -34,6 +36,7 @@ interface PerformanceMetrics {
 }
 
 interface PerformanceRecommendation {
+
   id: string;
   title: string;
   description: string;
@@ -45,7 +48,9 @@ interface PerformanceRecommendation {
 }
 
 export function EnhancedPerformanceOptimizer() {
+
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
+
     fcp: 0,
     lcp: 0,
     fid: 0,
@@ -66,12 +71,16 @@ export function EnhancedPerformanceOptimizer() {
 
   // Performance monitoring
   useEffect(() => {
+
     if ('PerformanceObserver' in window) {
+
       // First Contentful Paint
       const fcpObserver = new PerformanceObserver((list) => {
+
         const entries = list.getEntries();
         const fcp = entries[entries.length - 1];
         if (fcp) {
+
           setMetrics(prev => ({ ...prev, fcp: fcp.startTime }));
         }
       });
@@ -79,9 +88,11 @@ export function EnhancedPerformanceOptimizer() {
 
       // Largest Contentful Paint
       const lcpObserver = new PerformanceObserver((list) => {
+
         const entries = list.getEntries();
         const lcp = entries[entries.length - 1];
         if (lcp) {
+
           setMetrics(prev => ({ ...prev, lcp: lcp.startTime }));
         }
       });
@@ -89,9 +100,11 @@ export function EnhancedPerformanceOptimizer() {
 
       // First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
+
         const entries = list.getEntries();
         const fid = entries[entries.length - 1];
         if (fid) {
+
           setMetrics(prev => ({ ...prev, fid: fid.processingStart - fid.startTime }));
         }
       });
@@ -99,9 +112,12 @@ export function EnhancedPerformanceOptimizer() {
 
       // Cumulative Layout Shift
       const clsObserver = new PerformanceObserver((list) => {
+
         let clsValue = 0;
         for (const entry of list.getEntries()) {
+
           if (!entry.hadRecentInput) {
+
             clsValue += (entry as any).value;
           }
         }
@@ -110,6 +126,7 @@ export function EnhancedPerformanceOptimizer() {
       clsObserver.observe({ entryTypes: ['layout-shift'] });
 
       return () => {
+
         fcpObserver.disconnect();
         lcpObserver.disconnect();
         fidObserver.disconnect();
@@ -120,10 +137,14 @@ export function EnhancedPerformanceOptimizer() {
 
   // Network and system monitoring
   useEffect(() => {
+
     const updateNetworkInfo = () => {
+
       if ('connection' in navigator) {
+
         const connection = (navigator as any).connection;
         setMetrics(prev => ({
+
           ...prev,
           connectionType: connection.effectiveType || 'unknown',
           networkSpeed: connection.downlink || 0
@@ -132,24 +153,32 @@ export function EnhancedPerformanceOptimizer() {
     };
 
     const updateBatteryInfo = async () => {
+
       if ('getBattery' in navigator) {
+
         try {
+
           const battery = await (navigator as any).getBattery();
           setMetrics(prev => ({ ...prev, batteryLevel: battery.level * 100 }));
           
           battery.addEventListener('levelchange', () => {
+
             setMetrics(prev => ({ ...prev, batteryLevel: battery.level * 100 }));
           });
         } catch (error) {
-          console.log('Battery API not supported');
+
+          // // // console.log('Battery API not supported');
         }
       }
     };
 
     const updateMemoryInfo = () => {
+
       if ('memory' in performance) {
+
         const memory = (performance as any).memory;
         setMetrics(prev => ({
+
           ...prev,
           memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024)
         }));
@@ -157,6 +186,7 @@ export function EnhancedPerformanceOptimizer() {
     };
 
     const updateOnlineStatus = () => {
+
       setMetrics(prev => ({ ...prev, isOnline: navigator.onLine }));
     };
 
@@ -175,6 +205,7 @@ export function EnhancedPerformanceOptimizer() {
     const interval = setInterval(updateMemoryInfo, 5000);
 
     return () => {
+
       window.removeEventListener('online', updateOnlineStatus);
       window.removeEventListener('offline', updateOnlineStatus);
       window.removeEventListener('load', updateMemoryInfo);
@@ -184,11 +215,14 @@ export function EnhancedPerformanceOptimizer() {
 
   // Generate performance recommendations
   useEffect(() => {
+
     const newRecommendations: PerformanceRecommendation[] = [];
 
     // FCP recommendations
     if (metrics.fcp > 1800) {
+
       newRecommendations.push({
+
         id: 'fcp-slow',
         title: 'Slow First Contentful Paint',
         description: 'Your page takes too long to show the first content. Consider optimizing images and reducing render-blocking resources.',
@@ -202,7 +236,9 @@ export function EnhancedPerformanceOptimizer() {
 
     // LCP recommendations
     if (metrics.lcp > 2500) {
+
       newRecommendations.push({
+
         id: 'lcp-slow',
         title: 'Slow Largest Contentful Paint',
         description: 'The main content takes too long to load. Optimize images and consider lazy loading.',
@@ -216,7 +252,9 @@ export function EnhancedPerformanceOptimizer() {
 
     // CLS recommendations
     if (metrics.cls > 0.1) {
+
       newRecommendations.push({
+
         id: 'cls-poor',
         title: 'Poor Cumulative Layout Shift',
         description: 'Page elements are shifting during load, causing poor user experience.',
@@ -230,7 +268,9 @@ export function EnhancedPerformanceOptimizer() {
 
     // Memory recommendations
     if (metrics.memoryUsage > 100) {
+
       newRecommendations.push({
+
         id: 'memory-high',
         title: 'High Memory Usage',
         description: 'The application is using significant memory. Consider implementing memory management.',
@@ -244,7 +284,9 @@ export function EnhancedPerformanceOptimizer() {
 
     // Network recommendations
     if (metrics.networkSpeed < 1) {
+
       newRecommendations.push({
+
         id: 'network-slow',
         title: 'Slow Network Connection',
         description: 'User has a slow network connection. Consider implementing progressive enhancement.',
@@ -261,25 +303,30 @@ export function EnhancedPerformanceOptimizer() {
 
   // Performance score calculation
   const performanceScore = useMemo(() => {
+
     let score = 100;
 
     // FCP scoring (0-1800ms = 100-0 points)
     if (metrics.fcp > 0) {
+
       score -= Math.min(100, (metrics.fcp - 1800) / 18);
     }
 
     // LCP scoring (0-2500ms = 100-0 points)
     if (metrics.lcp > 0) {
+
       score -= Math.min(100, (metrics.lcp - 2500) / 25);
     }
 
     // CLS scoring (0-0.1 = 100-0 points)
     if (metrics.cls > 0) {
+
       score -= Math.min(100, metrics.cls * 1000);
     }
 
     // Memory scoring (0-100MB = 100-0 points)
     if (metrics.memoryUsage > 0) {
+
       score -= Math.min(100, metrics.memoryUsage);
     }
 
@@ -288,6 +335,7 @@ export function EnhancedPerformanceOptimizer() {
 
   // Performance grade
   const performanceGrade = useMemo(() => {
+
     if (performanceScore >= 90) return { grade: 'A', color: 'text-green-400', bg: 'bg-green-500/20' };
     if (performanceScore >= 80) return { grade: 'B', color: 'text-yellow-400', bg: 'bg-yellow-500/20' };
     if (performanceScore >= 70) return { grade: 'C', color: 'text-orange-400', bg: 'bg-orange-500/20' };
@@ -297,10 +345,14 @@ export function EnhancedPerformanceOptimizer() {
 
   // Refresh performance data
   const refreshMetrics = useCallback(() => {
+
     if ('performance' in window) {
+
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
+
         setMetrics(prev => ({
+
           ...prev,
           ttfb: navigation.responseStart - navigation.requestStart,
           domLoad: navigation.domContentLoadedEventEnd - navigation.navigationStart,
@@ -312,7 +364,9 @@ export function EnhancedPerformanceOptimizer() {
 
   // Auto-hide after 5 seconds
   useEffect(() => {
+
     if (isVisible) {
+
       const timer = setTimeout(() => setIsVisible(false), 5000);
       return () => clearTimeout(timer);
     }
@@ -320,7 +374,9 @@ export function EnhancedPerformanceOptimizer() {
 
   // Show performance panel on performance issues
   useEffect(() => {
+
     if (performanceScore < 70 && !isVisible) {
+
       setIsVisible(true);
     }
   }, [performanceScore, isVisible]);

@@ -19,15 +19,6 @@ import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon  } from 'lucide-react
 
 interface AccessibilityContextType {
 
-
-
-
-
-
-
-
-
-
   highContrast: anyanyanyanyanyanyanyanyanyboolean;
   toggleHighContrast: ()           => void;
   reducedMotion: anyanyanyanyanyanyanyanyanyboolean;
@@ -55,6 +46,7 @@ const AccessibilityContext = createContext<AccessibilityContextType | null>(null
 export const useAccessibility = () => {;
   const context = useContext(AccessibilityContext);
   if (!context) {
+
     throw new Error('useAccessibility must be used within an AccessibilityProvider')
 }
   return context};
@@ -64,6 +56,7 @@ interface AccessibilityProviderProps extends React.PropsWithChildren<{}> {
   children: ReactNode}
 
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
+
   const [highContrast, setHighContrast] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const [fontSize, setFontSize] = useState(16);
@@ -72,6 +65,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
   // Load accessibility preferences from localStorage
   useEffect(() => {
+
     const savedVoiceNavigation = localStorage.getItem('zion-voice-navigation') === 'true';
 
     setHighContrast(savedHighContrast);
@@ -81,16 +75,21 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
   // Apply accessibility settings to document
   useEffect(() => {
+
     const root = document.documentElement;
 
     // Apply high contrast
     if (highContrast) {
+
       root.classList.add('high-contrast')} else {
+
       root.classList.remove('high-contrast')}
 
     // Apply reduced motion
     if (reducedMotion) {
+
       root.classList.add('reduce-motion')} else {
+
       root.classList.remove('reduce-motion')}
 
     // Apply font size
@@ -98,6 +97,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
   // Keyboard navigation support
   useEffect(() => {
+
         setTimeout(() => setShowSkipLinks(false), 5000)}
 
       // High contrast toggle (Alt + H)
@@ -148,6 +148,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     localStorage.setItem('zion-voice-navigation', newValue.toString())};
 
   const value = {
+
   highContrast,
     toggleHighContrast,
     reducedMotion,
@@ -181,6 +182,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
         {showSkipLinks && (
           <motion.div
             initial = {
+
   { opacity: 0,
   y: -20 
 
@@ -191,6 +193,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -201,6 +204,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
 }}
             exit = {
+
   { opacity: 0,
   y: -20 
 
@@ -240,6 +244,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
       <div className="fixed bottom-4 left-4 z-40">
         <motion.div
           initial = {
+
   { opacity: 0,
   x: -20 
 
@@ -250,6 +255,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
 }}
           animate = {
+
   { opacity: 1,
   x: 0 
 
@@ -265,6 +271,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
             <button
               onClick={toggleHighContrast}
               className={`p-2 rounded-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
+
                 highContrast ? 'bg-zion-cyan text-black' : 'bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10'
               }`}
               aria-label="Toggle high contrast"
@@ -276,6 +283,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
             <button
               onClick={toggleReducedMotion}
               className={`p-2 rounded-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
+
                 reducedMotion ? 'bg-zion-cyan text-black' : 'bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10'
               }`}
               aria-label="Toggle reduced motion"
@@ -321,12 +329,15 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
 // Focus trap component for modals
 export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = ({
+
   children,
-  isActive = true
+  isActive = true;
 }) => {
+
   const [focusedElement, setFocusedElement] = useState<any>(null);
 
   useEffect(() => {
+
     if (!isActive) return;
 
     const focusableElements = document.querySelectorAll(;
@@ -338,6 +349,7 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
 
           lastElement.focus()}
       } else {
+
         if (document.activeElement = == lastElement) {;
           event.preventDefault();
           firstElement.focus()}

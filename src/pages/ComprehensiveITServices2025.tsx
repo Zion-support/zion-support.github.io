@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
+
   Server, Shield, Cloud, Code, Network, Database, Lock, Users,
   Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe,
   Star, Award, Clock, Calendar, Sparkles, Cpu, HardDrive,
@@ -11,6 +12,7 @@ import {
 // Comprehensive IT Services with Real Market Pricing
 const itServices = [
   {
+
     id: 'managed-it-services',
     title: 'Managed IT Services',
     description: 'Complete IT infrastructure management with 24/7 monitoring, support, and proactive maintenance.',
@@ -27,6 +29,7 @@ const itServices = [
       'Vendor Management'
     ],
     pricing: {
+
       starter: '$2,999/month',
       professional: '$5,999/month',
       enterprise: '$12,999/month'
@@ -41,6 +44,7 @@ const itServices = [
     competitors: ['Datto', 'ConnectWise', 'Kaseya']
   },
   {
+
     id: 'cybersecurity-solutions',
     title: 'Enterprise Cybersecurity',
     description: 'Comprehensive security solutions including threat detection, incident response, and compliance.',
@@ -57,6 +61,7 @@ const itServices = [
       'Risk Assessment'
     ],
     pricing: {
+
       starter: '$1,999/month',
       professional: '$4,999/month',
       enterprise: '$9,999/month'
@@ -71,6 +76,7 @@ const itServices = [
     competitors: ['CrowdStrike', 'SentinelOne', 'Carbon Black']
   },
   {
+
     id: 'cloud-migration',
     title: 'Cloud Migration Services',
     description: 'End-to-end cloud migration with strategy, implementation, and optimization.',
@@ -87,6 +93,7 @@ const itServices = [
       'Training & Support'
     ],
     pricing: {
+
       starter: '$15,000',
       professional: '$50,000',
       enterprise: '$150,000+'
@@ -101,6 +108,7 @@ const itServices = [
     competitors: ['Accenture', 'Deloitte', 'AWS Professional Services']
   },
   {
+
     id: 'data-analytics',
     title: 'Data Analytics & BI',
     description: 'Transform raw data into actionable insights with advanced analytics and visualization.',
@@ -117,6 +125,7 @@ const itServices = [
       'User Training'
     ],
     pricing: {
+
       starter: '$3,999/month',
       professional: '$8,999/month',
       enterprise: '$19,999/month'
@@ -134,6 +143,7 @@ const itServices = [
 
 // Contact Information
 const contactInfo = {
+
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -143,21 +153,25 @@ const contactInfo = {
 // Benefits
 const benefits = [
   {
+
     icon: Zap,
     title: 'Rapid Implementation',
     description: 'Get up and running in weeks, not months'
   },
   {
+
     icon: CheckCircle,
     title: 'Proven ROI',
     description: 'See measurable results within 60 days'
   },
   {
+
     icon: Shield,
     title: 'Enterprise Security',
     description: 'Bank-level security and compliance'
   },
   {
+
     icon: Users,
     title: 'Expert Team',
     description: 'Certified professionals with 15+ years experience'
@@ -165,6 +179,7 @@ const benefits = [
 ];
 
 export default function ComprehensiveITServices2025() {
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue">
       {/* Hero Section */}

@@ -11,7 +11,9 @@ import { SEO } from '../../components/SEO';
 
 
 const AIEducationPlatform: React.FC = () => {
+
   const serviceData = {
+
     title: "AI-Powered Education Platform",
     subtitle: "Intelligent learning platform that personalizes education, adapts to student needs, and improves learning outcomes",
     description: "Revolutionize education with our AI-powered platform that creates personalized learning experiences, provides intelligent tutoring, and tracks student progress in real-time. Improve learning outcomes by 200%, reduce dropout rates by 60%, and create engaging educational experiences.",
@@ -28,31 +30,37 @@ const AIEducationPlatform: React.FC = () => {
 
   const features = [
     {
+
       title: "Personalized Learning Paths",
       description: "AI algorithms create customized learning experiences based on individual student needs and learning styles",
       icon: "🎯"
     },
     {
+
       title: "Intelligent Tutoring",
       description: "AI-powered virtual tutors that provide personalized guidance and support 24/7",
       icon: "🤖"
     },
     {
+
       title: "Adaptive Content",
       description: "Dynamic content that adjusts difficulty and presentation based on student performance",
       icon: "📚"
     },
     {
+
       title: "Progress Analytics",
       description: "Real-time tracking of student progress with detailed insights and recommendations",
       icon: "📊"
     },
     {
+
       title: "Interactive Assessments",
       description: "AI-generated assessments that adapt to student knowledge and provide instant feedback",
       icon: "✅"
     },
     {
+
       title: "Collaborative Learning",
       description: "AI-facilitated group learning and peer collaboration tools",
       icon: "👥"
@@ -70,21 +78,25 @@ const AIEducationPlatform: React.FC = () => {
 
   const useCases = [
     {
+
       title: "K-12 Education",
       description: "Comprehensive learning platform for primary and secondary education institutions",
       industry: "K-12 Education"
     },
     {
+
       title: "Higher Education",
       description: "Advanced learning platform for universities and colleges",
       industry: "Higher Education"
     },
     {
+
       title: "Corporate Training",
       description: "Employee training and development platform for businesses",
       industry: "Corporate Training"
     },
     {
+
       title: "Online Learning",
       description: "Virtual learning platform for remote and hybrid education",
       industry: "Online Education"
@@ -93,6 +105,7 @@ const AIEducationPlatform: React.FC = () => {
 
   const pricingPlans = [
     {
+
       name: "Professional",
       price: 1399,
       currency: "$",
@@ -108,6 +121,7 @@ const AIEducationPlatform: React.FC = () => {
       popular: false
     },
     {
+
       name: "Enterprise",
       price: 2999,
       currency: "$",
@@ -124,6 +138,7 @@ const AIEducationPlatform: React.FC = () => {
       popular: true
     },
     {
+
       name: "Global",
       price: 4999,
       currency: "$",
@@ -143,18 +158,21 @@ const AIEducationPlatform: React.FC = () => {
 
   const competitors = [
     {
+
       name: "Blackboard",
       price: "$3,000 - $10,000/month",
       pros: ["Market leader", "Comprehensive features"],
       cons: ["Very expensive", "Complex interface"]
     },
     {
+
       name: "Canvas",
       price: "$2,500 - $8,000/month",
       pros: ["User-friendly", "Good features"],
       cons: ["High cost", "Limited AI"]
     },
     {
+
       name: "Zion Tech Group AI Education",
       price: "$1,399 - $4,999/month",
       pros: ["Advanced AI", "Cost-effective", "Easy to use"],
@@ -164,18 +182,22 @@ const AIEducationPlatform: React.FC = () => {
 
   const faqs = [
     {
+
       question: "How does AI personalize learning for each student?",
       answer: "Our AI analyzes student performance, learning styles, and preferences to create customized learning paths, content recommendations, and adaptive assessments that optimize learning outcomes."
     },
     {
+
       question: "What subjects and grade levels do you support?",
       answer: "We support all major subjects including math, science, language arts, social studies, and more, across all grade levels from K-12 to higher education and corporate training."
     },
     {
+
       question: "Can I integrate with my existing educational software?",
       answer: "Yes! We support integration with major learning management systems including Blackboard, Canvas, Moodle, Google Classroom, and many others through our comprehensive API."
     },
     {
+
       question: "How do you ensure student data privacy and security?",
       answer: "We implement enterprise-grade security measures and comply with FERPA, COPPA, and other educational privacy regulations to protect student data."
     }

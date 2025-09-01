@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Brain, 
   Cloud, 
   Shield, 
@@ -94,6 +95,7 @@ import { SEO } from '../components/SEO';
 import { COMPREHENSIVE_SERVICES_2030 } from '../data/comprehensiveServices2030';
 
 export default function EnhancedServicesLanding() {
+
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
@@ -128,6 +130,7 @@ export default function EnhancedServicesLanding() {
   ];
 
   const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service => {
+
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -137,7 +140,9 @@ export default function EnhancedServicesLanding() {
   });
 
   const sortedServices = [...filteredServices].sort((a, b) => {
+
     switch (sortBy) {
+
       case 'rating':
         return b.rating - a.rating;
       case 'price':
@@ -152,7 +157,9 @@ export default function EnhancedServicesLanding() {
   });
 
   const getCategoryIcon = (category: string) => {
+
     const iconMap: { [key: string]: React.ReactNode } = {
+
       'AI & Business Intelligence': <Brain className="w-6 h-6" />,
       'Cybersecurity': <Shield className="w-6 h-6" />,
       'Cloud & DevOps': <Cloud className="w-6 h-6" />,
@@ -412,31 +419,37 @@ export default function EnhancedServicesLanding() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
+
                 icon: <Brain className="w-12 h-12 text-cyan-400" />,
                 title: "AI-First Approach",
                 description: "Every solution is built with AI at its core, ensuring maximum intelligence and automation capabilities."
               },
               {
+
                 icon: <Award className="w-12 h-12 text-cyan-400" />,
                 title: "Proven Results",
                 description: "Our solutions deliver measurable ROI with documented success stories across industries."
               },
               {
+
                 icon: <Globe className="w-12 h-12 text-cyan-400" />,
                 title: "Global Expertise",
                 description: "Serving clients worldwide with localized solutions and 24/7 support capabilities."
               },
               {
+
                 icon: <Zap className="w-12 h-12 text-cyan-400" />,
                 title: "Rapid Deployment",
                 description: "Quick implementation with minimal disruption to your existing operations."
               },
               {
+
                 icon: <Shield className="w-12 h-12 text-cyan-400" />,
                 title: "Enterprise Security",
                 description: "Bank-grade security and compliance with industry standards and regulations."
               },
               {
+
                 icon: <Users className="w-12 h-12 text-cyan-400" />,
                 title: "Expert Team",
                 description: "Experienced professionals with deep expertise in AI, cloud, and enterprise solutions."

@@ -1,7 +1,8 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Shield, 
   Brain, 
   Zap, 
@@ -36,38 +37,45 @@ import {
 } from 'lucide-react';
 
 export default function AICybersecurity() {
+
   const features = [
     {
+
       icon: Brain,
       title: 'AI Threat Detection',
       description: 'Advanced machine learning algorithms for real-time threat identification and analysis',
       color: 'from-blue-500 to-cyan-500'
     },
     {
+
       icon: Shield,
       title: 'Zero-Day Protection',
       description: 'Proactive defense against unknown vulnerabilities and emerging threats',
       color: 'from-green-500 to-emerald-500'
     },
     {
+
       icon: Zap,
       title: 'Real-Time Response',
       description: 'Instant automated threat response and incident containment',
       color: 'from-yellow-500 to-orange-500'
     },
     {
+
       icon: Lock,
       title: 'Advanced Encryption',
       description: 'Quantum-resistant encryption and secure communication protocols',
       color: 'from-purple-500 to-indigo-500'
     },
     {
+
       icon: Network,
       title: 'Network Security',
       description: 'Comprehensive network monitoring and intrusion prevention',
       color: 'from-red-500 to-pink-500'
     },
     {
+
       icon: Database,
       title: 'Data Protection',
       description: 'End-to-end data security with AI-powered access controls',
@@ -86,21 +94,25 @@ export default function AICybersecurity() {
 
   const useCases = [
     {
+
       title: 'Enterprise Security',
       description: 'Comprehensive cybersecurity for large organizations and corporations',
       icon: Building
     },
     {
+
       title: 'Cloud Security',
       description: 'Protect cloud infrastructure and applications from cyber threats',
       icon: Cloud
     },
     {
+
       title: 'IoT Security',
       description: 'Secure connected devices and Internet of Things networks',
       icon: Cpu
     },
     {
+
       title: 'Financial Security',
       description: 'Protect financial systems and prevent fraud with AI',
       icon: DollarSign
@@ -109,21 +121,25 @@ export default function AICybersecurity() {
 
   const securityLayers = [
     {
+
       name: 'Perimeter Security',
       description: 'Advanced firewall and network protection systems',
       features: ['DDoS protection', 'Intrusion detection', 'Traffic analysis']
     },
     {
+
       name: 'Endpoint Security',
       description: 'Device-level protection for all connected endpoints',
       features: ['Malware detection', 'Behavioral analysis', 'Threat isolation']
     },
     {
+
       name: 'Application Security',
       description: 'Secure software development and runtime protection',
       features: ['Code analysis', 'Vulnerability scanning', 'Runtime monitoring']
     },
     {
+
       name: 'Data Security',
       description: 'Protection for sensitive data and information',
       features: ['Encryption', 'Access controls', 'Data loss prevention']

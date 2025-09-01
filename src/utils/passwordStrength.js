@@ -10,6 +10,7 @@
 <<<<<<< HEAD
 =======
 export const PASSWORD_STRENGTH = {
+
   VERY_WEAK: 'very-weak',
   WEAK: 'weak',
   MEDIUM: 'medium',
@@ -28,6 +29,7 @@ export const PASSWORD_STRENGTH = {
  * Password strength colors
  */
 export const PASSWORD_COLORS = {
+
   [PASSWORD_STRENGTH.VERY_WEAK]: 'bg-red-500',
   [PASSWORD_STRENGTH.WEAK]: 'bg-orange-500',
   [PASSWORD_STRENGTH.MEDIUM]: 'bg-yellow-500',
@@ -46,6 +48,7 @@ export const PASSWORD_COLORS = {
  * Password strength labels
  */
 export const PASSWORD_LABELS = {
+
   [PASSWORD_STRENGTH.VERY_WEAK]: 'Very Weak',
   [PASSWORD_STRENGTH.WEAK]: 'Weak',
   [PASSWORD_STRENGTH.MEDIUM]: 'Medium',
@@ -67,6 +70,7 @@ export const PASSWORD_LABELS = {
  * @returns {boolean} True if contains lowercase
  */
 export const hasLowercase = (password) => {
+
   return /[a-z]/.test(password);
 };
 
@@ -76,6 +80,7 @@ export const hasLowercase = (password) => {
  * @returns {boolean} True if contains uppercase
  */
 export const hasUppercase = (password) => {
+
   return /[A-Z]/.test(password);
 };
 
@@ -85,6 +90,7 @@ export const hasUppercase = (password) => {
  * @returns {boolean} True if contains numbers
  */
 export const hasNumbers = (password) => {
+
   return /\d/.test(password);
 };
 
@@ -94,6 +100,7 @@ export const hasNumbers = (password) => {
  * @returns {boolean} True if contains special characters
  */
 export const hasSpecialChars = (password) => {
+
 <<<<<<< HEAD
   return /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>/?]/.test(password);
 =======
@@ -107,6 +114,7 @@ export const hasSpecialChars = (password) => {
  * @returns {number} Length score (0-3)
  */
 export const getLengthScore = (password) => {
+
   if (!password) return 0;
 
   const length = password.length;
@@ -122,6 +130,7 @@ export const getLengthScore = (password) => {
  * @returns {number} Variety score (0-4)
  */
 export const getVarietyScore = (password) => {
+
   if (!password) return 0;
 
   let score = 0;
@@ -139,6 +148,7 @@ export const getVarietyScore = (password) => {
  * @returns {number} Pattern penalty score
  */
 export const getPatternPenalty = (password) => {
+
   if (!password) return 0;
 
 <<<<<<< HEAD
@@ -153,7 +163,9 @@ export const getPatternPenalty = (password) => {
 
   // Check for repeated characters
   for (let i = 0; i < password.length - 2; i++) {
+
     if (password[i] === password[i + 1] && password[i] === password[i + 2]) {
+
       penalty += 2;
 <<<<<<< HEAD
 
@@ -167,9 +179,11 @@ export const getPatternPenalty = (password) => {
 
   // Check for sequential characters
   for (let i = 0; i < password.length - 2; i++) {
+
     const char3 = password.charCodeAt(i + 2);
 
     if (char2 === char1 + 1 && char3 === char2 + 1) {
+
       penalty += 1;
 <<<<<<< HEAD
 
@@ -184,7 +198,9 @@ export const getPatternPenalty = (password) => {
   // Check for common keyboard patterns
   const keyboardPatterns = ['qwerty', 'asdfgh', 'zxcvbn', '123456', 'abcdef'];
   keyboardPatterns.forEach(pattern => {
+
     if (password.toLowerCase().includes(pattern)) {
+
       penalty += 3;
 <<<<<<< HEAD
     }
@@ -202,6 +218,7 @@ export const getPatternPenalty = (password) => {
  * @returns {number} Strength score (0-100)
  */
 export const calculatePasswordScore = (password) => {
+
   if (!password) return 0;
 
   let score = 0;
@@ -214,6 +231,7 @@ export const calculatePasswordScore = (password) => {
 
   // Bonus for longer passwords
   if (password.length > 12) {
+
     score += 10;
 <<<<<<< HEAD
 =======
@@ -236,6 +254,7 @@ export const calculatePasswordScore = (password) => {
  * @returns {string} Strength level
  */
 export const getPasswordStrength = (password) => {
+
   const score = calculatePasswordScore(password);
 <<<<<<< HEAD
   
@@ -260,6 +279,7 @@ export const getPasswordStrength = (password) => {
  * @returns {string} CSS color class
  */
 export const getPasswordStrengthColor = (password) => {
+
   const score = calculatePasswordScore(password);
 <<<<<<< HEAD
   
@@ -276,10 +296,12 @@ export const getPasswordStrengthColor = (password) => {
  * @returns {object} Requirements status
  */
 export const getPasswordRequirements = (password) => {
+
 =======
 
 >>>>>>> cursor/add-new-services-and-advertise-them-971c
   return {
+
     length: password.length >= 8,
     lowercase: hasLowercase(password),
     uppercase: hasUppercase(password),
@@ -297,46 +319,58 @@ export const getPasswordRequirements = (password) => {
  * @returns {Array} Array of feedback messages
  */
 export const getPasswordFeedback = (password, strength) => {
+
   const feedback = [];
 
   if (password.length < 8) {
+
     feedback.push('Use at least 8 characters');
 <<<<<<< HEAD
 
   if (!hasLowercase(password)) {
+
     feedback.push('Add lowercase letters');
 
   if (!hasUppercase(password)) {
+
     feedback.push('Add uppercase letters');
 
   if (!hasNumbers(password)) {
+
     feedback.push('Add numbers');
 
   if (!hasSpecialChars(password)) {
+
     feedback.push('Add special characters');
 
   if (password.length < 12 && strength === PASSWORD_STRENGTH.MEDIUM) {
+
     feedback.push('Consider using 12+ characters for better security');
 =======
   }
 
   if (!hasLowercase(password)) {
+
     feedback.push('Add lowercase letters');
   }
 
   if (!hasUppercase(password)) {
+
     feedback.push('Add uppercase letters');
   }
 
   if (!hasNumbers(password)) {
+
     feedback.push('Add numbers');
   }
 
   if (!hasSpecialChars(password)) {
+
     feedback.push('Add special characters');
   }
 
   if (password.length < 12 && strength === PASSWORD_STRENGTH.MEDIUM) {
+
     feedback.push('Consider using 12+ characters for better security');
   }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -353,12 +387,14 @@ export const getPasswordFeedback = (password, strength) => {
  * @returns {object} Validation result
  */
 export const validatePassword = (password, requirements = { /* empty */ }) => {
+
   const {
+
     minLength = 8,
     requireLowercase = true,
     requireUppercase = true,
     requireNumbers = true,
-    requireSpecial = true
+    requireSpecial = true;
   } = requirements;
 
   const errors = [];
@@ -367,45 +403,56 @@ export const validatePassword = (password, requirements = { /* empty */ }) => {
   const warnings = [];
 
   if (!password) {
+
     errors.push('Password is required');
     return { isValid: false, errors, warnings };
 <<<<<<< HEAD
 
   if (password.length < minLength) {
+
     errors.push(`Password must be at least ${minLength} characters long`);
 
   if (requireLowercase && !hasLowercase(password)) {
+
     errors.push('Password must contain at least one lowercase letter');
 
   if (requireUppercase && !hasUppercase(password)) {
+
     errors.push('Password must contain at least one uppercase letter');
 
   if (requireNumbers && !hasNumbers(password)) {
+
     errors.push('Password must contain at least one number');
 
   if (requireSpecial && !hasSpecialChars(password)) {
+
     errors.push('Password must contain at least one special character');
 =======
   }
 >>>>>>> cursor/add-new-services-and-advertise-them-971c
 
   if (password.length < minLength) {
+
     errors.push(`Password must be at least ${minLength} characters long`);
   }
 
   if (requireLowercase && !hasLowercase(password)) {
+
     errors.push('Password must contain at least one lowercase letter');
   }
 
   if (requireUppercase && !hasUppercase(password)) {
+
     errors.push('Password must contain at least one uppercase letter');
   }
 
   if (requireNumbers && !hasNumbers(password)) {
+
     errors.push('Password must contain at least one number');
   }
 
   if (requireSpecial && !hasSpecialChars(password)) {
+
     errors.push('Password must contain at least one special character');
   }
 <<<<<<< HEAD
@@ -415,6 +462,7 @@ export const validatePassword = (password, requirements = { /* empty */ }) => {
   // Warnings for weak passwords
   const strength = getPasswordStrength(password);
   if (strength === PASSWORD_STRENGTH.VERY_WEAK || strength === PASSWORD_STRENGTH.WEAK) {
+
     warnings.push('Consider using a stronger password for better security');
 <<<<<<< HEAD
 =======
@@ -423,6 +471,7 @@ export const validatePassword = (password, requirements = { /* empty */ }) => {
 >>>>>>> cursor/add-new-services-and-advertise-them-971c
 
   return {
+
     isValid: errors.length === 0,
     errors,
     score: calculatePasswordScore(password),
@@ -437,36 +486,44 @@ export const validatePassword = (password, requirements = { /* empty */ }) => {
  */
 <<<<<<< HEAD
 export const generatePasswordSuggestions = (password) => {
+
   const suggestions = [];
   const requirements = getPasswordRequirements(password);
 
   if (!requirements.lowercase) {
+
     suggestions.push('Add lowercase letters to increase variety');
   }
 
   if (!requirements.uppercase) {
+
     suggestions.push('Add uppercase letters to increase variety');
   }
 
   if (!requirements.numbers) {
+
     suggestions.push('Add numbers to increase variety');
   }
 
   if (!requirements.special) {
+
     suggestions.push('Add special characters to increase variety');
   }
 
   if (password.length < 12) {
+
     suggestions.push('Consider using a longer password (12+ characters)');
   }
 
   if (getPatternPenalty(password) > 0) {
+
     suggestions.push('Avoid common patterns and repeated characters');
   }
 
   return suggestions;
 =======
 export const getPasswordMeterData = (password) => {
+
   const details = getPasswordStrengthDetails(password);
   const segments = [];
 
@@ -480,7 +537,9 @@ export const getPasswordMeterData = (password) => {
   ];
 
   requirements.forEach(req => {
+
     segments.push({
+
       key: req.key,
       label: req.label,
       met: req.met,
@@ -489,6 +548,7 @@ export const getPasswordMeterData = (password) => {
   });
 
   return {
+
     ...details,
     segments,
     progress: details.score
@@ -503,6 +563,7 @@ export const getPasswordMeterData = (password) => {
  */
 <<<<<<< HEAD
 export const getPasswordStrengthIndicator = (password) => {
+
   const score = calculatePasswordScore(password);
   const strength = getPasswordStrength(password);
   const color = getPasswordStrengthColor(password);
@@ -510,8 +571,11 @@ export const getPasswordStrengthIndicator = (password) => {
   const suggestions = generatePasswordSuggestions(password);
 =======
 export function calculatePasswordStrength(password) {
+
   if (!password) {
+
     return {
+
       score: 0,
       strength: 'Very Weak',
       feedback: 'Enter a password',
@@ -525,54 +589,70 @@ export function calculatePasswordStrength(password) {
 
   // Length check
   if (password.length >= 8) {
+
     score += 1;
   } else {
+
     feedback.push('At least 8 characters');
   }
 
   if (password.length >= 12) {
+
     score += 1;
   }
 
   if (password.length >= 16) {
+
     score += 1;
   }
 
   // Character variety checks
   if (/[a-z]/.test(password)) {
+
     score += 1;
   } else {
+
     feedback.push('Include lowercase letters');
   }
 
   if (/[A-Z]/.test(password)) {
+
     score += 1;
   } else {
+
     feedback.push('Include uppercase letters');
   }
 
   if (/[0-9]/.test(password)) {
+
     score += 1;
   } else {
+
     feedback.push('Include numbers');
   }
 
   if (/[^A-Za-z0-9]/.test(password)) {
+
     score += 1;
   } else {
+
     feedback.push('Include special characters');
   }
 
   // Pattern checks
-  if (!/(.)\1{2,}/.test(password)) {
+  if (!/(.)\1{2}/.test(password)) {
+
     score += 1;
   } else {
+
     feedback.push('Avoid repeated characters');
   }
 
   if (!/(123|abc|qwe|password|admin)/i.test(password)) {
+
     score += 1;
   } else {
+
     feedback.push('Avoid common patterns');
   }
 
@@ -580,22 +660,27 @@ export function calculatePasswordStrength(password) {
   let strength, color, bgColor;
   
   if (score <= 2) {
+
     strength = 'Very Weak';
     color = 'text-red-500';
     bgColor = 'bg-red-100';
   } else if (score <= 4) {
+
     strength = 'Weak';
     color = 'text-orange-500';
     bgColor = 'bg-orange-100';
   } else if (score <= 6) {
+
     strength = 'Fair';
     color = 'text-yellow-500';
     bgColor = 'bg-yellow-100';
   } else if (score <= 8) {
+
     strength = 'Good';
     color = 'text-blue-500';
     bgColor = 'bg-blue-100';
   } else {
+
     strength = 'Strong';
     color = 'text-green-500';
     bgColor = 'bg-green-100';
@@ -603,6 +688,7 @@ export function calculatePasswordStrength(password) {
 >>>>>>> cursor/add-new-services-and-advertise-them-971c
 
   return {
+
     score,
     strength,
     color,
@@ -624,6 +710,7 @@ export function calculatePasswordStrength(password) {
  */
 <<<<<<< HEAD
 export const isCommonPassword = (password) => {
+
   const commonPasswords = [
     'password', '123456', '123456789', 'qwerty', 'abc123',
     'password123', 'admin', 'letmein', 'welcome', 'monkey',
@@ -639,6 +726,7 @@ export const isCommonPassword = (password) => {
  * @returns {object} Complete password analysis
  */
 export const analyzePassword = (password) => {
+
   const score = calculatePasswordScore(password);
   const strength = getPasswordStrength(password);
   const requirements = getPasswordRequirements(password);
@@ -647,11 +735,13 @@ export const analyzePassword = (password) => {
   const isCommon = isCommonPassword(password);
 =======
 export function getPasswordStrengthIndicator(password) {
+
   const strength = calculatePasswordStrength(password);
   const percentage = (strength.score / strength.maxScore) * 100;
 >>>>>>> cursor/add-new-services-and-advertise-them-971c
 
   return {
+
     password,
     score,
     strength,
@@ -668,6 +758,7 @@ export function getPasswordStrengthIndicator(password) {
 
 <<<<<<< HEAD
 export const getStrengthLabel = (score) => {
+
   if (score >= 4) return 'Very Strong';
   if (score >= 3) return 'Strong';
   if (score >= 2) return 'Medium';

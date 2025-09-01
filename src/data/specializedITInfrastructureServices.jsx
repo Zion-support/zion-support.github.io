@@ -1,6 +1,7 @@
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
     // Edge Computing Infrastructure Platform
     {
+
         id: "edge-computing-infrastructure-platform",
         title: "Edge Computing Infrastructure Platform",
         description: "Distributed edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving performance for IoT and real-time applications.",
@@ -47,6 +48,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         supportLevel: "enterprise",
         marketPrice: "$2,800 - $8,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -61,6 +63,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
     },
     // Zero-Trust Security Architecture
     {
+
         id: "zero-trust-security-architecture",
         title: "Zero-Trust Security Architecture Platform",
         description: "Comprehensive zero-trust security platform that implements continuous verification and least-privilege access controls across all network resources and applications.",
@@ -107,6 +110,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         supportLevel: "enterprise",
         marketPrice: "$3,500 - $12,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -121,6 +125,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
     },
     // Hybrid Cloud Management Platform
     {
+
         id: "hybrid-cloud-management-platform",
         title: "Hybrid Cloud Management Platform",
         description: "Unified platform for managing and orchestrating workloads across multiple cloud providers and on-premises infrastructure with seamless integration and optimization.",
@@ -167,6 +172,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         supportLevel: "enterprise",
         marketPrice: "$2,200 - $7,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -181,6 +187,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
     },
     // Software-Defined Networking (SDN) Platform
     {
+
         id: "software-defined-networking-platform",
         title: "Software-Defined Networking (SDN) Platform",
         description: "Intelligent networking platform that centralizes network control and management through software, enabling dynamic configuration and automation of network resources.",
@@ -227,6 +234,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         supportLevel: "premium",
         marketPrice: "$1,800 - $5,500/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -241,6 +249,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
     },
     // Container Orchestration Platform
     {
+
         id: "container-orchestration-platform",
         title: "Container Orchestration Platform",
         description: "Enterprise-grade container orchestration platform that automates deployment, scaling, and management of containerized applications across distributed environments.",
@@ -287,6 +296,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         supportLevel: "premium",
         marketPrice: "$1,500 - $4,500/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"

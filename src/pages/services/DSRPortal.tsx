@@ -31,33 +31,40 @@ import { Shield,
              } from 'lucide-react.ts';
 
 export default function DSRPortal(...args: any[]): any {
+
   const features = [
     {
+
       icon: Shield,
       title: "Data Subject Rights Management",
       description: "Comprehensive management of GDPR, CCPA, and other privacy regulation rights."
     },
     {
+
       icon: FileText,
       title: "Automated Request Processing",
       description: "AI-powered processing of data subject requests with intelligent routing."
     },
     {
+
       icon: Target,
       title: "Data Discovery & Mapping",
       description: "Automated discovery and mapping of personal data across systems."
     },
     {
+
       icon: Zap,
       title: "Compliance Workflows",
       description: "Streamlined workflows for handling privacy requests and compliance tasks."
     },
     {
+
       icon: BarChart3,
       title: "Compliance Analytics",
       description: "Real-time insights into privacy compliance and request processing metrics."
     },
     {
+
       icon: Lock,
       title: "Secure Data Handling",
       description: "Enterprise-grade security for sensitive personal data processing."
@@ -75,26 +82,31 @@ export default function DSRPortal(...args: any[]): any {
 
   const dataRights = [
     {
+
       right: "Right to Access",
       description: "Individuals can request access to their personal data",
       icon: Eye
     },
     {
+
       right: "Right to Rectification",
       description: "Individuals can request correction of inaccurate personal data",
       icon: FileText
     },
     {
+
       right: "Right to Erasure",
       description: "Individuals can request deletion of their personal data",
       icon: Trash
     },
     {
+
       right: "Right to Portability",
       description: "Individuals can request transfer of their data to another controller",
       icon: Download
     },
     {
+
       right: "Right to Restriction",
       description: "Individuals can request limitation of data processing",
       icon: Lock;
@@ -108,26 +120,31 @@ export default function DSRPortal(...args: any[]): any {
 
   const useCases = [
     {
+
       industry: "E-commerce",
       description: "Manage customer data rights and privacy requests for online retail",
       icon: ShoppingCart
     },
     {
+
       industry: "Financial Services",
       description: "Comply with financial privacy regulations and customer data rights",
       icon: DollarSign
     },
     {
+
       industry: "Healthcare",
       description: "Manage patient data rights and HIPAA compliance requirements",
       icon: Heart
     },
     {
+
       industry: "Technology",
       description: "Handle user data rights for SaaS and digital service platforms",
       icon: Cpu
     },
     {
+
       industry: "Education",
       description: "Student data, academic records, and educational service information"
     }
@@ -147,6 +164,7 @@ export default function DSRPortal(...args: any[]): any {
         <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -157,6 +175,7 @@ export default function DSRPortal(...args: any[]): any {
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -201,6 +220,7 @@ export default function DSRPortal(...args: any[]): any {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -211,6 +231,7 @@ export default function DSRPortal(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -238,6 +259,7 @@ export default function DSRPortal(...args: any[]): any {
               <motion.div
                 key={feature.title}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -248,6 +270,7 @@ export default function DSRPortal(...args: any[]): any {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -258,6 +281,7 @@ export default function DSRPortal(...args: any[]): any {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -300,6 +324,7 @@ export default function DSRPortal(...args: any[]): any {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -310,6 +335,7 @@ export default function DSRPortal(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -337,6 +363,7 @@ export default function DSRPortal(...args: any[]): any {
               <motion.div
                 key={benefit.title}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -347,6 +374,7 @@ export default function DSRPortal(...args: any[]): any {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -357,6 +385,7 @@ export default function DSRPortal(...args: any[]): any {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -399,6 +428,7 @@ export default function DSRPortal(...args: any[]): any {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -409,6 +439,7 @@ export default function DSRPortal(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -436,6 +467,7 @@ export default function DSRPortal(...args: any[]): any {
               <motion.div
                 key={right.right}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -446,6 +478,7 @@ export default function DSRPortal(...args: any[]): any {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -456,6 +489,7 @@ export default function DSRPortal(...args: any[]): any {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -498,6 +532,7 @@ export default function DSRPortal(...args: any[]): any {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -508,6 +543,7 @@ export default function DSRPortal(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -535,6 +571,7 @@ export default function DSRPortal(...args: any[]): any {
               <motion.div
                 key={useCase.industry}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -545,6 +582,7 @@ export default function DSRPortal(...args: any[]): any {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -555,6 +593,7 @@ export default function DSRPortal(...args: any[]): any {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -597,6 +636,7 @@ export default function DSRPortal(...args: any[]): any {
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -607,6 +647,7 @@ export default function DSRPortal(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 

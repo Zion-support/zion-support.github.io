@@ -2,8 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { StarIcon } from '@heroicons/react/24/solid';
 export function TestimonialsSection() {
+
     const testimonials = [
         {
+
             name: "Sarah Johnson",
             role: "CTO",
             comp: "TechFlow Solutions",
@@ -12,6 +14,7 @@ export function TestimonialsSection() {
             avatar: "SJ"
         },
         {
+
             name: "Michael Chen",
             role: "VP of Engineering",
             comp: "InnovateCorp",
@@ -20,6 +23,7 @@ export function TestimonialsSection() {
             avatar: "MC"
         },
         {
+
             name: "Emily Rodriguez",
             role: "Director of IT",
             comp: "Global Manufacturing Inc.",
@@ -28,6 +32,7 @@ export function TestimonialsSection() {
             avatar: "ER"
         },
         {
+
             name: "David Thompson",
             role: "CEO",
             comp: "StartupXYZ",
@@ -37,23 +42,29 @@ export function TestimonialsSection() {
         }
     ];
     const containerVariants = {
+
         hidden: { opacity: 0 },
         visible: {
+
             opacity: 1,
             transition: {
+
                 staggerChildren: 0.2
             }
         }
     };
     const itemVariants = {
+
   hidden: { y: 20,
   opacity: 0 
 
 },
         visible: {
+
             y: 0,
             opacity: 1,
             transition: {
+
                 duration: 0.5
             }
         }
@@ -67,10 +78,12 @@ export function TestimonialsSection() {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -114,14 +127,17 @@ export function TestimonialsSection() {
 
         {/* Stats */}
         <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} viewport={{ once: true }} transition = {
+
   { duration: 0.8,
   delay: 0.5 
 

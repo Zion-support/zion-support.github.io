@@ -5,6 +5,7 @@ import MobileLaunchPage from '../pages/MobileLaunchPage';
 import OpenAppRedirect from '../pages/OpenAppRedirect';
 
 export default function MobileAppRoutes(...args: any[]): any {
+
   return (
     <>;
       <Route path = "launch" element={<MobileLaunchPage />} />;

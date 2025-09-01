@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Heart, 
   Stethoscope, 
   Brain, 
@@ -69,40 +70,48 @@ import {
 } from 'lucide-react';
 
 const AIHealthcarePlatform: React.FC = () => {
+
   const [activeTab, setActiveTab] = useState('overview');
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+
     setIsVisible(true);
   }, []);
 
   const features = [
     {
+
       icon: Brain,
       title: 'AI Diagnostic Assistant',
       description: 'Advanced AI algorithms for accurate disease diagnosis and treatment recommendations'
     },
     {
+
       icon: Heart,
       title: 'Predictive Healthcare',
       description: 'Predict patient outcomes and identify health risks before they become critical'
     },
     {
+
       icon: Stethoscope,
       title: 'Virtual Health Monitoring',
       description: 'Real-time health monitoring with AI-powered insights and alerts'
     },
     {
+
       icon: Shield,
       title: 'HIPAA Compliant Security',
       description: 'Enterprise-grade security ensuring patient data privacy and compliance'
     },
     {
+
       icon: BarChart3,
       title: 'Healthcare Analytics',
       description: 'Comprehensive analytics for population health and treatment effectiveness'
     },
     {
+
       icon: Zap,
       title: 'Automated Workflows',
       description: 'Streamlined healthcare processes with intelligent automation'
@@ -111,26 +120,32 @@ const AIHealthcarePlatform: React.FC = () => {
 
   const healthcareModules = [
     {
+
       name: 'Clinical Decision Support',
       features: ['Evidence-based recommendations', 'Drug interaction checking', 'Treatment protocols', 'Clinical guidelines']
     },
     {
+
       name: 'Medical Imaging AI',
       features: ['Radiology analysis', 'Pathology detection', 'Image enhancement', 'Automated reporting']
     },
     {
+
       name: 'Patient Management',
       features: ['Electronic health records', 'Appointment scheduling', 'Patient portals', 'Care coordination']
     },
     {
+
       name: 'Telemedicine Platform',
       features: ['Video consultations', 'Remote monitoring', 'Secure messaging', 'Mobile apps']
     },
     {
+
       name: 'Population Health',
       features: ['Disease surveillance', 'Risk stratification', 'Preventive care', 'Health trends']
     },
     {
+
       name: 'Research & Analytics',
       features: ['Clinical trials', 'Data mining', 'Outcome analysis', 'Research insights']
     }
@@ -138,6 +153,7 @@ const AIHealthcarePlatform: React.FC = () => {
 
   const pricingTiers = [
     {
+
       name: 'Clinic',
       price: '$3,500',
       period: '/month',
@@ -156,6 +172,7 @@ const AIHealthcarePlatform: React.FC = () => {
       popular: false
     },
     {
+
       name: 'Hospital',
       price: '$8,500',
       period: '/month',
@@ -176,6 +193,7 @@ const AIHealthcarePlatform: React.FC = () => {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: '$18,000',
       period: '/month',
@@ -200,21 +218,25 @@ const AIHealthcarePlatform: React.FC = () => {
 
   const benefits = [
     {
+
       title: 'Improved Patient Outcomes',
       description: 'AI-powered diagnostics improve accuracy by 30% and reduce diagnostic errors by 50%',
       icon: Heart
     },
     {
+
       title: 'Cost Reduction',
       description: 'Reduce healthcare costs by 25% through automation and predictive care',
       icon: TrendingUp
     },
     {
+
       title: 'Enhanced Efficiency',
       description: 'Streamline workflows and reduce administrative burden by 40%',
       icon: Zap
     },
     {
+
       title: 'Better Care Coordination',
       description: 'Seamless integration across departments and care teams',
       icon: Users
@@ -230,18 +252,22 @@ const AIHealthcarePlatform: React.FC = () => {
 
   const useCases = [
     {
+
       industry: 'Primary Care',
       applications: ['Preventive Care', 'Chronic Disease Management', 'Screening Programs', 'Health Education']
     },
     {
+
       industry: 'Specialty Medicine',
       applications: ['Oncology', 'Cardiology', 'Neurology', 'Radiology']
     },
     {
+
       industry: 'Emergency Care',
       applications: ['Triage', 'Critical Care', 'Trauma Assessment', 'Emergency Response']
     },
     {
+
       industry: 'Research & Development',
       applications: ['Clinical Trials', 'Drug Discovery', 'Medical Research', 'Population Studies']
     }
@@ -473,6 +499,7 @@ const AIHealthcarePlatform: React.FC = () => {
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.1 * index }}
                 className={`relative bg-gradient-to-br from-slate-800/80 to-green-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${
+
                   tier.popular 
                     ? 'border-green-500 scale-105' 
                     : 'border-green-500/20'
@@ -516,6 +543,7 @@ const AIHealthcarePlatform: React.FC = () => {
                 <Link
                   to="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     tier.popular
                       ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700'
                       : 'border-2 border-green-500 text-green-300 hover:bg-green-500 hover:text-white'

@@ -3,6 +3,7 @@ import { ProductListing } from "@/types/listings";
 export const ADVANCED_AI_BUSINESS_SERVICES_2030: ProductListing[] = [
   // AI-Powered Business Intelligence Platform
   {
+
     id: "ai-business-intelligence-platform",
     title: "AI Business Intelligence Platform",
     description: "Advanced AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting. Reduces decision-making time by 70% and increases business efficiency by 45%.",
@@ -21,6 +22,7 @@ export const ADVANCED_AI_BUSINESS_SERVICES_2030: ProductListing[] = [
     availability: "4-6 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-business-intelligence",
@@ -35,6 +37,7 @@ export const ADVANCED_AI_BUSINESS_SERVICES_2030: ProductListing[] = [
 
   // AI-Powered Customer Experience Platform
   {
+
     id: "ai-customer-experience-platform",
     title: "AI Customer Experience Platform",
     description: "Comprehensive customer experience platform powered by AI that personalizes interactions, predicts customer needs, and optimizes engagement across all touchpoints. Increases customer satisfaction by 60% and retention by 40%.",
@@ -53,6 +56,7 @@ export const ADVANCED_AI_BUSINESS_SERVICES_2030: ProductListing[] = [
     availability: "3-5 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-customer-experience",
@@ -67,6 +71,7 @@ export const ADVANCED_AI_BUSINESS_SERVICES_2030: ProductListing[] = [
 
   // AI-Powered Financial Risk Management
   {
+
     id: "ai-financial-risk-management",
     title: "AI Financial Risk Management Platform",
     description: "Advanced financial risk management platform using AI and machine learning to identify, assess, and mitigate financial risks in real-time. Reduces risk exposure by 35% and improves compliance by 90%.",
@@ -85,6 +90,7 @@ export const ADVANCED_AI_BUSINESS_SERVICES_2030: ProductListing[] = [
     availability: "5-7 Weeks",
     aiScore: 99,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-financial-risk",
@@ -99,6 +105,7 @@ export const ADVANCED_AI_BUSINESS_SERVICES_2030: ProductListing[] = [
 
   // AI-Powered HR Analytics Platform
   {
+
     id: "ai-hr-analytics-platform",
     title: "AI HR Analytics Platform",
     description: "Intelligent HR analytics platform that provides insights into employee performance, predicts turnover, and optimizes workforce planning. Improves employee retention by 30% and productivity by 25%.",
@@ -117,6 +124,7 @@ export const ADVANCED_AI_BUSINESS_SERVICES_2030: ProductListing[] = [
     availability: "3-4 Weeks",
     aiScore: 95,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-hr-analytics",
@@ -131,6 +139,7 @@ export const ADVANCED_AI_BUSINESS_SERVICES_2030: ProductListing[] = [
 
   // AI-Powered Marketing Attribution Platform
   {
+
     id: "ai-marketing-attribution-platform",
     title: "AI Marketing Attribution Platform",
     description: "Advanced marketing attribution platform that uses AI to track customer journeys, measure campaign effectiveness, and optimize marketing spend. Increases marketing ROI by 50% and reduces customer acquisition costs by 30%.",
@@ -149,6 +158,7 @@ export const ADVANCED_AI_BUSINESS_SERVICES_2030: ProductListing[] = [
     availability: "4-5 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-marketing-attribution",

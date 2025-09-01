@@ -4,6 +4,7 @@ import { Brain, Zap, Settings, Users, TrendingUp, Shield, Globe, ArrowRight, Che
 import { Link               } from 'react-router-dom.ts';
 
 export default function AIEnterpriseOrchestrator(...args: []):  {
+
   return (
     <>
       <Helmet>
@@ -60,31 +61,37 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
+
                   icon: Brain,
                   title: "Multi-Agent Coordination",
                   description: "Intelligent AI agents work together to coordinate complex workflows across departments and systems."
                 },
                 {
+
                   icon: Zap,
                   title: "Real-time Optimization",
                   description: "Continuously optimize processes based on real-time data and performance metrics."
                 },
                 {
+
                   icon: Settings,
                   title: "Workflow Automation",
                   description: "Automate repetitive tasks and complex business processes with intelligent decision-making."
                 },
                 {
+
                   icon: Users,
                   title: "Cross-functional Integration",
                   description: "Seamlessly integrate with existing systems, databases, and third-party applications."
                 },
                 {
+
                   icon: TrendingUp,
                   title: "Performance Analytics",
                   description: "Comprehensive insights into process efficiency, bottlenecks, and optimization opportunities."
                 },
                 {
+
                   icon: Shield,
                   title: "Security & Compliance",
                   description: "Enterprise-grade security with built-in compliance monitoring and audit trails."
@@ -117,21 +124,25 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
+
                   step: "01",
                   title: "Process Analysis",
                   description: "AI analyzes your current business processes and identifies optimization opportunities."
                 },
                 {
+
                   step: "02",
                   title: "Agent Deployment",
                   description: "Intelligent AI agents are deployed to coordinate and optimize specific workflows."
                 },
                 {
+
                   step: "03",
                   title: "Real-time Coordination",
                   description: "Agents work together in real-time to coordinate tasks and optimize resource allocation."
                 },
                 {
+
                   step: "04",
                   title: "Continuous Learning",
                   description: "The system continuously learns and improves based on performance data and outcomes."

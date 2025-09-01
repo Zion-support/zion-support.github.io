@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import {
+
   CheckCircle,
   Clock,
   ExternalLink,
@@ -18,6 +19,7 @@ import { CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/cleanInnovati
 import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
 
 const ComprehensiveServicesShowcase2025 = () => {
+
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('innovation');
@@ -55,7 +57,9 @@ const ComprehensiveServicesShowcase2025 = () => {
   ];
 
   const filteredServices = allServices.filter(service => {
+
     if (!service || !service.title || !service.description || !service.category || !service.tags) {
+
       return false;
     }
     
@@ -68,19 +72,25 @@ const ComprehensiveServicesShowcase2025 = () => {
   });
 
   const sortedServices = [...filteredServices].sort((a, b) => {
+
     switch (sortBy) {
+
       case 'innovation': {
+
         return (b.innovationLevel === 'Revolutionary' ? 1 : -1);
       }
       case 'price': {
+
         return (a.price || 0) - (b.price || 0);
       }
       case 'roi': {
+
         const aRoi = parseInt((a.roi || '0').split('-')[0]) || 0;
         const bRoi = parseInt((b.roi || '0').split('-')[0]) || 0;
         return bRoi - aRoi;
       }
       case 'name': {
+
         return (a.title || '').localeCompare(b.title || '');
       }
       default:
@@ -89,28 +99,36 @@ const ComprehensiveServicesShowcase2025 = () => {
   });
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
+
         staggerChildren: 0.1
       }
     }
   };
 
   const itemVariants = {
+
     hidden: { y: 20, opacity: 0 },
     visible: {
+
       y: 0,
       opacity: 1,
       transition: {
+
         duration: 0.5
       }
     }
   };
 
   const getInnovationColor = (level) => {
+
     switch (level) {
+
       case 'Revolutionary': return 'text-purple-600 bg-purple-100';
       case 'Cutting-edge': return 'text-blue-600 bg-blue-100';
       case 'Advanced': return 'text-green-600 bg-green-100';
@@ -119,12 +137,14 @@ const ComprehensiveServicesShowcase2025 = () => {
   };
 
   const getCategoryIcon = (category) => {
+
     const categoryData = categories.find(c => c.id === category);
     return categoryData?.icon || '🚀';
   };
 
   // Safety check for services data
   if (!allServices || allServices.length === 0) {
+
     return (
       <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 flex items-center justify-center">
         <div className="text-center">
@@ -285,6 +305,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+
                   activeCategory === category.id
                     ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg'
                     : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md'
@@ -310,6 +331,7 @@ const ComprehensiveServicesShowcase2025 = () => {
               variants={itemVariants}
               whileHover={{ y: -5, scale: 1.02 }}
               className={`bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 ${
+
                 viewMode === 'list' ? 'flex' : ''
               }`}
             >

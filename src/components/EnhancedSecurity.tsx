@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Shield, 
   Lock, 
   AlertTriangle, 
@@ -14,6 +15,7 @@ import {
 } from 'lucide-react';
 
 interface SecurityStatus {
+
   https: boolean;
   csp: boolean;
   hsts: boolean;
@@ -25,6 +27,7 @@ interface SecurityStatus {
 }
 
 interface SecurityThreat {
+
   id: string;
   type: 'low' | 'medium' | 'high' | 'critical';
   description: string;
@@ -33,8 +36,10 @@ interface SecurityThreat {
 }
 
 export const EnhancedSecurity: React.FC = () => {
+
   const [isOpen, setIsOpen] = useState(false);
   const [securityStatus, setSecurityStatus] = useState<SecurityStatus>({
+
     https: false,
     csp: false,
     hsts: false,
@@ -49,6 +54,7 @@ export const EnhancedSecurity: React.FC = () => {
   const [lastScan, setLastScan] = useState<Date | null>(null);
 
   useEffect(() => {
+
     // Check security status on component mount
     checkSecurityStatus();
     
@@ -59,7 +65,9 @@ export const EnhancedSecurity: React.FC = () => {
   }, []);
 
   const checkSecurityStatus = async () => {
+
     try {
+
       // Check HTTPS
       const https = window.location.protocol === 'https:';
       
@@ -70,6 +78,7 @@ export const EnhancedSecurity: React.FC = () => {
       const vulnerabilities = await checkVulnerabilities();
       
       setSecurityStatus({
+
         https,
         csp: headers.csp,
         hsts: headers.hsts,
@@ -82,21 +91,27 @@ export const EnhancedSecurity: React.FC = () => {
 
       // Update threats if vulnerabilities found
       if (vulnerabilities.length > 0) {
+
         setThreats(prev => [...prev, ...vulnerabilities]);
       }
 
       setLastScan(new Date());
     } catch (error) {
-      console.error('Security check failed:', error);
+
+      // // // console.error('Security check failed:', error);
     }
   };
 
   const checkSecurityHeaders = async (): Promise<any> => {
+
     // Simulate checking security headers
     // In a real implementation, this would make a request to check headers
     return new Promise((resolve) => {
+
       setTimeout(() => {
+
         resolve({
+
           csp: true,
           hsts: true,
           xss: true,
@@ -110,14 +125,19 @@ export const EnhancedSecurity: React.FC = () => {
   };
 
   const checkVulnerabilities = async (): Promise<SecurityThreat[]> => {
+
     // Simulate vulnerability scanning
     return new Promise((resolve) => {
+
       setTimeout(() => {
+
         const foundThreats: SecurityThreat[] = [];
         
         // Check for common vulnerabilities
         if (window.location.protocol !== 'https:') {
+
           foundThreats.push({
+
             id: 'no-https',
             type: 'high',
             description: 'Website is not using HTTPS encryption',
@@ -129,7 +149,9 @@ export const EnhancedSecurity: React.FC = () => {
         // Check for console errors that might indicate security issues
         const consoleErrors = (window as any).consoleErrors || [];
         if (consoleErrors.length > 10) {
+
           foundThreats.push({
+
             id: 'console-errors',
             type: 'medium',
             description: 'Multiple console errors detected',
@@ -144,23 +166,28 @@ export const EnhancedSecurity: React.FC = () => {
   };
 
   const runSecurityScan = async () => {
+
     setIsScanning(true);
     try {
+
       await checkSecurityStatus();
       // Additional deep scan
       await new Promise(resolve => setTimeout(resolve, 2000));
     } finally {
+
       setIsScanning(false);
     }
   };
 
   const getSecurityScore = (): number => {
+
     const checks = Object.values(securityStatus);
     const passed = checks.filter(Boolean).length;
     return Math.round((passed / checks.length) * 100);
   };
 
   const getThreatLevel = (): 'low' | 'medium' | 'high' | 'critical' => {
+
     if (threats.some(t => t.type === 'critical')) return 'critical';
     if (threats.some(t => t.type === 'high')) return 'high';
     if (threats.some(t => t.type === 'medium')) return 'medium';
@@ -168,7 +195,9 @@ export const EnhancedSecurity: React.FC = () => {
   };
 
   const getThreatLevelColor = (level: 'low' | 'medium' | 'high' | 'critical') => {
+
     switch (level) {
+
       case 'low': return 'text-green-500';
       case 'medium': return 'text-yellow-500';
       case 'high': return 'text-orange-500';
@@ -178,7 +207,9 @@ export const EnhancedSecurity: React.FC = () => {
   };
 
   const getThreatLevelBg = (level: 'low' | 'medium' | 'high' | 'critical') => {
+
     switch (level) {
+
       case 'low': return 'bg-green-100 dark:bg-green-900/20';
       case 'medium': return 'bg-yellow-100 dark:bg-yellow-900/20';
       case 'high': return 'bg-orange-100 dark:bg-orange-900/20';
@@ -283,6 +314,7 @@ export const EnhancedSecurity: React.FC = () => {
                         )}
                       </div>
                       <div className={`text-xs px-2 py-1 rounded-full ${
+
                         value 
                           ? 'bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400'
                           : 'bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400'

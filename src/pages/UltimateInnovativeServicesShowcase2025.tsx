@@ -33,6 +33,7 @@ import { Brain,
 import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES              } from '../data/ultimateInnovativeServices2025';
 
 export default function UltimateInnovativeServicesShowcase2025(...args[]: any):  {
+
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [selectedSubcategory, setSelectedSubcategory] = useState<any>('all');
   const [searchTerm, setSearchTerm] = useState<any>('');
@@ -41,12 +42,15 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]: any): 
   const filtered = ULTIMATE_INNOVATIVE_SERVICES_2025;
 
     if (selectedCategory !== 'all') {
+
       filtered = filtered.filter(service => service.category === selectedCategory)}
 
     if (selectedSubcategory !== 'all') {
+
       filtered = filtered.filter(service => service.subcategory === selectedSubcategory)}
 
     if (searchTerm) {
+
       filtered = filtered.filter(service =>;
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -56,6 +60,7 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]: any): 
 
     // Sort services
     switch (sortBy) {
+
       case 'price-low':
         filtered = [...filtered].sort((a, b) => a.price - b.price);
         break;
@@ -200,6 +205,7 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]: any): 
             <motion.div
               key={service.id}
               initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -210,6 +216,7 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]: any): 
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0 
 

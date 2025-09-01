@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   TrendingUp, 
   DollarSign, 
   Brain, 
@@ -27,33 +28,40 @@ import {
 import { SEO } from '../../components/SEO';
 
 export default function AIFinancialTrading() {
+
   const features = [
     {
+
       icon: <Brain className="w-6 h-6" />,
       title: "AI-Powered Market Analysis",
       description: "Advanced machine learning algorithms analyze market patterns, sentiment, and trends with 92% accuracy"
     },
     {
+
       icon: <TrendingUp className="w-6 h-6" />,
       title: "Predictive Trading Signals",
       description: "Real-time trading signals based on AI analysis of multiple data sources and market indicators"
     },
     {
+
       icon: <Target className="w-6 h-6" />,
       title: "Portfolio Optimization",
       description: "Intelligent portfolio rebalancing and risk management with automated position sizing"
     },
     {
+
       icon: <Activity className="w-6 h-6" />,
       title: "Real-time Market Monitoring",
       description: "24/7 market surveillance with instant alerts for trading opportunities and risk events"
     },
     {
+
       icon: <Shield className="w-6 h-6" />,
       title: "Advanced Risk Management",
       description: "Multi-layered risk controls including stop-loss automation and position limit management"
     },
     {
+
       icon: <BarChart3 className="w-6 h-6" />,
       title: "Performance Analytics",
       description: "Comprehensive trading performance metrics, backtesting, and strategy optimization tools"
@@ -62,6 +70,7 @@ export default function AIFinancialTrading() {
 
   const pricing = [
     {
+
       name: "Starter",
       price: "$299",
       period: "/month",
@@ -75,6 +84,7 @@ export default function AIFinancialTrading() {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$799",
       period: "/month",
@@ -90,6 +100,7 @@ export default function AIFinancialTrading() {
       popular: true
     },
     {
+
       name: "Institutional",
       price: "$1,999",
       period: "/month",
@@ -117,21 +128,25 @@ export default function AIFinancialTrading() {
 
   const tradingStrategies = [
     {
+
       strategy: "Momentum Trading",
       description: "AI-powered momentum detection and trend following with dynamic position sizing",
       performance: "35% annual return"
     },
     {
+
       strategy: "Mean Reversion",
       description: "Statistical arbitrage using machine learning to identify overbought/oversold conditions",
       performance: "28% annual return"
     },
     {
+
       strategy: "Sentiment Analysis",
       description: "Social media and news sentiment analysis for market direction prediction",
       performance: "42% annual return"
     },
     {
+
       strategy: "Multi-Factor Models",
       description: "Combined technical, fundamental, and macroeconomic factor analysis",
       performance: "38% annual return"
@@ -293,6 +308,7 @@ export default function AIFinancialTrading() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border ${
+
                   plan.popular 
                     ? 'border-yellow-500 ring-2 ring-yellow-500/20' 
                     : 'border-slate-700'
@@ -326,6 +342,7 @@ export default function AIFinancialTrading() {
                 <a
                   href="https://ziontechgroup.com/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-yellow-600 to-orange-600 text-white hover:from-yellow-700 hover:to-orange-700'
                       : 'bg-slate-700 text-white hover:bg-slate-600'

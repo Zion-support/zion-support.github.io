@@ -25,23 +25,28 @@ import { Cpu,
 import { SEO              } from '@/components/SEO';
 
 export default function IoTEdgeComputing(...args: any[]): any {
+
   const features = [
     {
+
       icon: Cpu,
       title: "Edge Processing",
       description: "Real-time data processing at the edge for instant decision making"
     },
     {
+
       icon: Network,
       title: "IoT Connectivity",
       description: "Seamless integration of IoT devices and sensors across networks"
     },
     {
+
       icon: Zap,
       title: "Low Latency",
       description: "Ultra-fast response times for critical applications and real-time analytics"
     },
     {
+
       icon: Globe,
       title: "Global Reach",
       description: "Distributed edge computing infrastructure worldwide"
@@ -49,24 +54,28 @@ export default function IoTEdgeComputing(...args: any[]): any {
   ];
   const services = [
     {
+
       title: "Edge Computing Infrastructure",
       description: "Deploy and manage edge computing nodes for optimal performance and reliability",
       icon: Server,
       features: ["Edge node deployment", "Load balancing", "Failover systems"]
     },
     {
+
       title: "IoT Device Management",
       description: "Centralized management and monitoring of IoT devices and sensors",
       icon: Smartphone,
       features: ["Device provisioning", "Remote monitoring", "Firmware updates"]
     },
     {
+
       title: "Real-time Analytics",
       description: "Process and analyze data streams in real-time at the edge",
       icon: BarChart3,
       features: ["Stream processing", "Real-time dashboards", "Predictive analytics"]
     },
     {
+
       title: "Edge Security",
       description: "Comprehensive security for edge computing and IoT deployments",
       icon: Shield,

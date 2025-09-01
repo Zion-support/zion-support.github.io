@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Heart, 
   Stethoscope, 
   Brain, 
@@ -26,6 +27,7 @@ import {
 import { SEO } from '../../components/SEO';
 
 export default function AIHealthcareDiagnosticsPlatform() {
+
   const features = [
     "AI-powered medical image analysis with 98% accuracy",
     "Real-time diagnostic assistance for radiologists",
@@ -48,6 +50,7 @@ export default function AIHealthcareDiagnosticsPlatform() {
 
   const pricing = [
     {
+
       plan: "Clinic",
       price: "$2,999",
       period: "/month",
@@ -60,6 +63,7 @@ export default function AIHealthcareDiagnosticsPlatform() {
       ]
     },
     {
+
       plan: "Hospital",
       price: "$7,999",
       period: "/month",
@@ -73,6 +77,7 @@ export default function AIHealthcareDiagnosticsPlatform() {
       ]
     },
     {
+
       plan: "Enterprise",
       price: "$19,999",
       period: "/month",
@@ -240,6 +245,7 @@ export default function AIHealthcareDiagnosticsPlatform() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl p-8 border-2 ${
+
                   index === 1 ? 'border-red-500 scale-105' : 'border-slate-700'
                 }`}
               >

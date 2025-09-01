@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
+import {
+
   Shield, 
   AlertTriangle, 
   TrendingUp, 
@@ -38,33 +39,40 @@ import {
 } from 'lucide-react';
 
 const AISupplyChainRiskManagement = () => {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Risk Detection",
       description: "Advanced machine learning algorithms identify potential supply chain disruptions before they occur"
     },
     {
+
       icon: Globe,
       title: "Global Supply Chain Mapping",
       description: "Real-time visualization of your entire supply network with risk hotspots and vulnerability analysis"
     },
     {
+
       icon: AlertTriangle,
       title: "Early Warning System",
       description: "Proactive alerts for potential disruptions, delays, and supply chain vulnerabilities"
     },
     {
+
       icon: TrendingUp,
       title: "Predictive Analytics",
       description: "Forecast supply chain risks using historical data and external factors like weather, politics, and economics"
     },
     {
+
       icon: Shield,
       title: "Compliance Monitoring",
       description: "Automated tracking of regulatory requirements and industry standards across your supply chain"
     },
     {
+
       icon: BarChart3,
       title: "Risk Scoring Dashboard",
       description: "Comprehensive risk assessment with real-time scoring and actionable insights"
@@ -73,6 +81,7 @@ const AISupplyChainRiskManagement = () => {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$149",
       period: "/month",
@@ -87,6 +96,7 @@ const AISupplyChainRiskManagement = () => {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$399",
       period: "/month",
@@ -104,6 +114,7 @@ const AISupplyChainRiskManagement = () => {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$1,299",
       period: "/month",
@@ -125,21 +136,25 @@ const AISupplyChainRiskManagement = () => {
 
   const useCases = [
     {
+
       title: "Manufacturing",
       description: "Monitor supplier performance and identify potential disruptions in manufacturing supply chains",
       icon: Factory
     },
     {
+
       title: "Retail & E-commerce",
       description: "Ensure product availability and manage inventory risks across retail networks",
       icon: Truck
     },
     {
+
       title: "Healthcare",
       description: "Maintain critical medical supply chains and ensure patient safety",
       icon: Shield
     },
     {
+
       title: "Logistics",
       description: "Optimize transportation routes and manage carrier risks in global logistics",
       icon: Ship
@@ -148,24 +163,28 @@ const AISupplyChainRiskManagement = () => {
 
   const riskTypes = [
     {
+
       title: "Supplier Risk",
       description: "Financial stability, operational capacity, and geographic location risks",
       icon: Factory,
       color: "from-red-500 to-orange-500"
     },
     {
+
       title: "Geopolitical Risk",
       description: "Political instability, trade wars, and regulatory changes",
       icon: Globe,
       color: "from-blue-500 to-purple-500"
     },
     {
+
       title: "Environmental Risk",
       description: "Natural disasters, climate change, and sustainability issues",
       icon: AlertTriangle,
       color: "from-green-500 to-emerald-500"
     },
     {
+
       title: "Financial Risk",
       description: "Currency fluctuations, inflation, and economic instability",
       icon: DollarSign,
@@ -368,6 +387,7 @@ const AISupplyChainRiskManagement = () => {
               <motion.div
                 key={index}
                 className={`relative rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'bg-gradient-to-br from-green-600 to-blue-600 border-2 border-green-400' 
                     : 'bg-slate-800/50 border border-slate-700/50'
@@ -406,6 +426,7 @@ const AISupplyChainRiskManagement = () => {
                 <a 
                   href="mailto:kleber@ziontechgroup.com?subject=AI Supply Chain Risk Management - {plan.name} Plan"
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-white text-green-600 hover:bg-slate-100'
                       : 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover:from-green-600 hover:to-blue-600'

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
+
   Activity, 
   TrendingUp, 
   TrendingDown, 
@@ -19,6 +20,7 @@ import {
 } from 'lucide-react';
 
 interface PerformanceMetrics {
+
   fcp: number; // First Contentful Paint
   lcp: number; // Largest Contentful Paint
   fid: number; // First Input Delay
@@ -27,6 +29,7 @@ interface PerformanceMetrics {
   domContentLoaded: number;
   loadEvent: number;
   memoryUsage?: {
+
     used: number;
     total: number;
   };
@@ -35,6 +38,7 @@ interface PerformanceMetrics {
 }
 
 interface PerformanceAlert {
+
   id: string;
   type: 'warning' | 'error' | 'info';
   metric: keyof PerformanceMetrics;
@@ -44,15 +48,16 @@ interface PerformanceAlert {
 }
 
 export const EnhancedPerformanceMonitor: React.FC = () => {
+
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
+
     fcp: 0,
     lcp: 0,
     fid: 0,
     cls: 0,
     ttfb: 0,
     domContentLoaded: 0,
-    loadEvent: 0,
-  });
+    loadEvent: 0});
   
   const [alerts, setAlerts] = useState<PerformanceAlert[]>([]);
   const [isMinimized, setIsMinimized] = useState(false);
@@ -62,6 +67,7 @@ export const EnhancedPerformanceMonitor: React.FC = () => {
 
   // Performance thresholds based on Core Web Vitals recommendations
   const thresholds = {
+
     fcp: { good: 1800, poor: 3000 }, // First Contentful Paint
     lcp: { good: 2500, poor: 4000 }, // Largest Contentful Paint
     fid: { good: 100, poor: 300 },   // First Input Delay
@@ -70,6 +76,7 @@ export const EnhancedPerformanceMonitor: React.FC = () => {
   };
 
   const getPerformanceScore = useCallback((metric: keyof typeof thresholds, value: number): number => {
+
     const threshold = thresholds[metric];
     if (!threshold) return 100;
     
@@ -83,6 +90,7 @@ export const EnhancedPerformanceMonitor: React.FC = () => {
   }, []);
 
   const getMetricStatus = useCallback((metric: keyof typeof thresholds, value: number): 'good' | 'needs-improvement' | 'poor' => {
+
     const threshold = thresholds[metric];
     if (!threshold) return 'good';
     
@@ -92,6 +100,7 @@ export const EnhancedPerformanceMonitor: React.FC = () => {
   }, []);
 
   const collectPerformanceMetrics = useCallback((): PerformanceMetrics => {
+
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     const paint = performance.getEntriesByType('paint');
     
@@ -104,38 +113,46 @@ export const EnhancedPerformanceMonitor: React.FC = () => {
     
     // Get Largest Contentful Paint
     if ('getLargestContentfulPaint' in window) {
+
       try {
+
         new PerformanceObserver((entryList) => {
+
           const entries = entryList.getEntries();
           if (entries.length > 0) {
+
             lcp = entries[entries.length - 1].startTime;
           }
         }).observe({ entryTypes: ['largest-contentful-paint'] });
       } catch (e) {
-        console.warn('LCP observation not supported');
+
+        // // // console.warn('LCP observation not supported');
       }
     }
 
     // Calculate memory usage if available
     let memoryUsage;
     if ('memory' in performance) {
+
       const memory = (performance as any).memory;
       memoryUsage = {
+
         used: memory.usedJSHeapSize,
-        total: memory.totalJSHeapSize,
-      };
+        total: memory.totalJSHeapSize};
     }
 
     // Get connection information if available
     let networkEffectiveType;
     let connectionDownlink;
     if ('connection' in navigator) {
+
       const connection = (navigator as any).connection;
       networkEffectiveType = connection.effectiveType;
       connectionDownlink = connection.downlink;
     }
 
     return {
+
       fcp,
       lcp,
       fid: 0, // FID needs to be measured via PerformanceObserver
@@ -145,52 +162,57 @@ export const EnhancedPerformanceMonitor: React.FC = () => {
       loadEvent: navigation ? navigation.loadEventEnd - navigation.navigationStart : 0,
       memoryUsage,
       networkEffectiveType,
-      connectionDownlink,
-    };
+      connectionDownlink};
   }, []);
 
   const generateAlerts = useCallback((newMetrics: PerformanceMetrics) => {
+
     const newAlerts: PerformanceAlert[] = [];
     const timestamp = Date.now();
 
     // Check each metric against thresholds
     Object.entries(thresholds).forEach(([metric, threshold]) => {
+
       const value = newMetrics[metric as keyof PerformanceMetrics] as number;
       const status = getMetricStatus(metric as keyof typeof thresholds, value);
       
       if (status === 'poor') {
+
         newAlerts.push({
+
           id: `${metric}-${timestamp}`,
           type: 'error',
           metric: metric as keyof PerformanceMetrics,
           message: `Poor ${metric.toUpperCase()}: ${value.toFixed(0)}ms`,
           suggestion: getOptimizationSuggestion(metric as keyof typeof thresholds),
-          timestamp,
-        });
+          timestamp});
       } else if (status === 'needs-improvement') {
+
         newAlerts.push({
+
           id: `${metric}-${timestamp}`,
           type: 'warning',
           metric: metric as keyof PerformanceMetrics,
           message: `${metric.toUpperCase()} needs improvement: ${value.toFixed(0)}ms`,
           suggestion: getOptimizationSuggestion(metric as keyof typeof thresholds),
-          timestamp,
-        });
+          timestamp});
       }
     });
 
     // Memory usage alerts
     if (newMetrics.memoryUsage) {
+
       const memoryUsagePercent = (newMetrics.memoryUsage.used / newMetrics.memoryUsage.total) * 100;
       if (memoryUsagePercent > 80) {
+
         newAlerts.push({
+
           id: `memory-${timestamp}`,
           type: 'warning',
           metric: 'memoryUsage' as keyof PerformanceMetrics,
           message: `High memory usage: ${memoryUsagePercent.toFixed(1)}%`,
           suggestion: 'Consider optimizing memory usage by reducing bundle size or lazy loading components.',
-          timestamp,
-        });
+          timestamp});
       }
     }
 
@@ -198,17 +220,19 @@ export const EnhancedPerformanceMonitor: React.FC = () => {
   }, [getMetricStatus]);
 
   const getOptimizationSuggestion = (metric: keyof typeof thresholds): string => {
+
     const suggestions = {
+
       fcp: 'Optimize critical resources, reduce render-blocking CSS/JS, use resource hints.',
       lcp: 'Optimize images, improve server response time, preload critical resources.',
       fid: 'Reduce JavaScript execution time, split long tasks, use web workers.',
       cls: 'Specify image dimensions, avoid dynamic content insertion, use CSS transforms.',
-      ttfb: 'Optimize server configuration, use CDN, implement caching strategies.',
-    };
+      ttfb: 'Optimize server configuration, use CDN, implement caching strategies.'};
     return suggestions[metric] || 'Review performance best practices.';
   };
 
   const refreshMetrics = useCallback(() => {
+
     if (!isEnabled) return;
     
     const newMetrics = collectPerformanceMetrics();
@@ -217,11 +241,13 @@ export const EnhancedPerformanceMonitor: React.FC = () => {
   }, [isEnabled, collectPerformanceMetrics, generateAlerts]);
 
   useEffect(() => {
+
     // Initial load
     refreshMetrics();
 
     // Set up auto-refresh
     if (autoRefresh) {
+
       const interval = setInterval(refreshMetrics, 5000); // Refresh every 5 seconds
       return () => clearInterval(interval);
     }
@@ -230,7 +256,9 @@ export const EnhancedPerformanceMonitor: React.FC = () => {
   const clearAlerts = () => setAlerts([]);
 
   const getStatusColor = (status: 'good' | 'needs-improvement' | 'poor') => {
+
     switch (status) {
+
       case 'good': return 'text-green-400';
       case 'needs-improvement': return 'text-yellow-400';
       case 'poor': return 'text-red-400';
@@ -239,7 +267,9 @@ export const EnhancedPerformanceMonitor: React.FC = () => {
   };
 
   const getStatusIcon = (status: 'good' | 'needs-improvement' | 'poor') => {
+
     switch (status) {
+
       case 'good': return <CheckCircle className="w-4 h-4" />;
       case 'needs-improvement': return <AlertTriangle className="w-4 h-4" />;
       case 'poor': return <TrendingDown className="w-4 h-4" />;
@@ -401,6 +431,7 @@ export const EnhancedPerformanceMonitor: React.FC = () => {
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
                         className={`p-2 rounded text-xs border-l-2 ${
+
                           alert.type === 'error' 
                             ? 'bg-red-900/20 border-red-400' 
                             : alert.type === 'warning'

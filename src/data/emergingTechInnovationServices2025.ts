@@ -1,4 +1,5 @@
 export interface EmergingTechInnovationService2025 {
+
   id: string;
   title: string;
   description: string;
@@ -8,6 +9,7 @@ export interface EmergingTechInnovationService2025 {
   currency: string;
   tags: string[];
   author: {
+
     name: string;
     id: string;
     email: string;
@@ -22,6 +24,7 @@ export interface EmergingTechInnovationService2025 {
   availability: string;
   aiScore: number;
   contactInfo: {
+
     phone: string;
     email: string;
     website: string;
@@ -73,6 +76,7 @@ export interface EmergingTechInnovationService2025 {
 
 export const EMERGING_TECH_INNOVATION_SERVICES_2025: EmergingTechInnovationService2025[] = [
   {
+
     id: "space-tech-innovation-platform",
     title: "Space Technology Innovation & Satellite Management Platform",
     description: "Advanced space technology platform that enables satellite operations, space data analytics, and space-based services. Provides real-time satellite tracking, data processing, and space mission management capabilities.",
@@ -82,6 +86,7 @@ export const EMERGING_TECH_INNOVATION_SERVICES_2025: EmergingTechInnovationServi
     currency: "$",
     tags: ["Space Tech", "Satellite Management", "Space Data", "Mission Control", "Space Analytics"],
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       email: "kleber@ziontechgroup.com",
@@ -96,6 +101,7 @@ export const EMERGING_TECH_INNOVATION_SERVICES_2025: EmergingTechInnovationServi
     availability: "10-12 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/space-tech-innovation-platform",
@@ -303,6 +309,7 @@ export const EMERGING_TECH_INNOVATION_SERVICES_2025: EmergingTechInnovationServi
     ]
   },
   {
+
     id: "iot-edge-computing-platform",
     title: "IoT Edge Computing & Intelligent Device Management Platform",
     description: "Comprehensive IoT platform that provides edge computing capabilities, device management, and real-time data processing. Enables intelligent IoT deployments with 99.9% uptime and real-time analytics at the edge.",
@@ -312,6 +319,7 @@ export const EMERGING_TECH_INNOVATION_SERVICES_2025: EmergingTechInnovationServi
     currency: "$",
     tags: ["IoT", "Edge Computing", "Device Management", "Real-time Analytics", "Smart Devices"],
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       email: "kleber@ziontechgroup.com",
@@ -326,6 +334,7 @@ export const EMERGING_TECH_INNOVATION_SERVICES_2025: EmergingTechInnovationServi
     availability: "4-5 Weeks",
     aiScore: 95,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/iot-edge-computing-platform",
@@ -533,6 +542,7 @@ export const EMERGING_TECH_INNOVATION_SERVICES_2025: EmergingTechInnovationServi
     ]
   },
   {
+
     id: "sustainability-green-tech-platform",
     title: "Sustainability & Green Technology Innovation Platform",
     description: "Comprehensive sustainability platform that enables organizations to track, manage, and optimize their environmental impact. Provides carbon footprint analysis, renewable energy management, and sustainability reporting with AI-powered insights.",
@@ -542,6 +552,7 @@ export const EMERGING_TECH_INNOVATION_SERVICES_2025: EmergingTechInnovationServi
     currency: "$",
     tags: ["Sustainability", "Green Tech", "Carbon Footprint", "Renewable Energy", "Environmental Impact"],
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       email: "kleber@ziontechgroup.com",
@@ -556,6 +567,7 @@ export const EMERGING_TECH_INNOVATION_SERVICES_2025: EmergingTechInnovationServi
     availability: "3-4 Weeks",
     aiScore: 94,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/sustainability-green-tech-platform",

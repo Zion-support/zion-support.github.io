@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   TrendingUp, 
   Target, 
   Users, 
@@ -31,8 +32,10 @@ import {
 import { SEO } from '@/components/SEO';
 
 const InnovativeAIServicesShowcase2025 = () => {
+
   const services = [
     {
+
       id: 'ai-project-management-assistant',
       title: 'AI Project Management Assistant',
       description: 'Revolutionize project delivery with AI-powered task prioritization, risk management, team collaboration, and real-time analytics.',
@@ -44,6 +47,7 @@ const InnovativeAIServicesShowcase2025 = () => {
       href: '/services/ai-project-management-assistant'
     },
     {
+
       id: 'ai-financial-planning-assistant',
       title: 'AI Financial Planning Assistant',
       description: 'Transform financial planning with AI-powered investment analysis, budget optimization, risk management, and predictive modeling.',
@@ -55,6 +59,7 @@ const InnovativeAIServicesShowcase2025 = () => {
       href: '/services/ai-financial-planning-assistant'
     },
     {
+
       id: 'ai-healthcare-analytics-platform',
       title: 'AI Healthcare Analytics Platform',
       description: 'Revolutionize healthcare delivery with AI-powered patient risk assessment, real-time monitoring, and predictive diagnosis.',
@@ -66,6 +71,7 @@ const InnovativeAIServicesShowcase2025 = () => {
       href: '/services/ai-healthcare-analytics-platform'
     },
     {
+
       id: 'ai-supply-chain-optimization-platform',
       title: 'AI Supply Chain Optimization Platform',
       description: 'Transform supply chain operations with AI-powered demand forecasting, route optimization, and global visibility.',
@@ -77,6 +83,7 @@ const InnovativeAIServicesShowcase2025 = () => {
       href: '/services/ai-supply-chain-optimization-platform'
     },
     {
+
       id: 'ai-cybersecurity-threat-intelligence-platform',
       title: 'AI Cybersecurity Threat Intelligence Platform',
       description: 'Revolutionize cybersecurity with AI-powered threat detection, real-time intelligence, and automated response.',
@@ -88,6 +95,7 @@ const InnovativeAIServicesShowcase2025 = () => {
       href: '/services/ai-cybersecurity-threat-intelligence-platform'
     },
     {
+
       id: 'ai-sales-copilot',
       title: 'AI Sales Copilot Pro',
       description: 'Transform your sales process with AI-powered lead scoring, automated follow-ups, call analysis, and predictive analytics.',
@@ -112,6 +120,7 @@ const InnovativeAIServicesShowcase2025 = () => {
 
   const testimonials = [
     {
+
       name: "Sarah Johnson",
       role: "CTO",
       company: "InnovateTech Solutions",
@@ -119,6 +128,7 @@ const InnovativeAIServicesShowcase2025 = () => {
       rating: 5
     },
     {
+
       name: "Michael Chen",
       role: "Operations Director",
       company: "Global Dynamics Corp",
@@ -126,6 +136,7 @@ const InnovativeAIServicesShowcase2025 = () => {
       rating: 5
     },
     {
+
       name: "Emily Rodriguez",
       role: "VP of Technology",
       company: "Future Forward Inc",

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Brain, 
   Shield, 
   Rocket, 
@@ -64,23 +65,27 @@ import { ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 } from '../data/advancedITInfr
 import { ADVANCED_AI_SERVICES_2025 } from '../data/advancedAIServices2025';
 
 export default function AdvancedPricingGuide2025() {
+
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricingModel, setSelectedPricingModel] = useState('all');
 
   const allServices = [
     ...ADVANCED_MICRO_SAAS_SERVICES_2025.map(service => ({
+
       ...service,
       type: 'Micro SAAS',
       icon: getServiceIcon(service.category),
       pricingType: 'subscription'
     })),
     ...ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025.map(service => ({
+
       ...service,
       type: 'IT Infrastructure',
       icon: getServiceIcon(service.category),
       pricingType: 'project'
     })),
     ...ADVANCED_AI_SERVICES_2025.map(service => ({
+
       ...service,
       type: 'AI Services',
       icon: getServiceIcon(service.category),
@@ -89,7 +94,9 @@ export default function AdvancedPricingGuide2025() {
   ];
 
   function getServiceIcon(category: string) {
+
     const iconMap: { [key: string]: any } = {
+
       'AI & Analytics': Brain,
       'AI & Customer Experience': Users,
       'AI & Operations': Truck,
@@ -110,6 +117,7 @@ export default function AdvancedPricingGuide2025() {
   }
 
   const filteredServices = allServices.filter(service => {
+
     const matchesCategory = selectedCategory === 'all' || service.type === selectedCategory;
     const matchesPricing = selectedPricingModel === 'all' || service.pricingType === selectedPricingModel;
     return matchesCategory && matchesPricing;
@@ -119,14 +127,19 @@ export default function AdvancedPricingGuide2025() {
   const pricingModels = ['all', 'subscription', 'project'];
 
   const getPricingDisplay = (service: any) => {
+
     if (service.pricingType === 'subscription') {
+
       return {
+
         primary: `${service.currency}${service.price}/month`,
         secondary: service.marketPrice,
         type: 'Monthly Subscription'
       };
     } else {
+
       return {
+
         primary: `From ${service.currency}${service.projectRate.toLocaleString()}`,
         secondary: `${service.currency}${service.hourlyRate}/hour`,
         type: 'Project-Based'
@@ -250,6 +263,7 @@ export default function AdvancedPricingGuide2025() {
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-6 py-3 rounded-lg font-medium transition-all ${
+
                     selectedCategory === category
                       ? 'bg-zion-cyan text-white shadow-lg'
                       : 'bg-zion-slate-light text-zion-slate-dark hover:bg-zion-slate hover:text-white'
@@ -266,6 +280,7 @@ export default function AdvancedPricingGuide2025() {
                   key={model}
                   onClick={() => setSelectedPricingModel(model)}
                   className={`px-6 py-3 rounded-lg font-medium transition-all ${
+
                     selectedPricingModel === model
                       ? 'bg-zion-cyan text-white shadow-lg'
                       : 'bg-zion-slate-light text-zion-slate-dark hover:bg-zion-slate hover:text-white'
@@ -283,6 +298,7 @@ export default function AdvancedPricingGuide2025() {
       <div className="container mx-auto px-4 pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {filteredServices.map((service, index) => {
+
             const pricing = getPricingDisplay(service);
             return (
               <motion.div
@@ -432,6 +448,7 @@ export default function AdvancedPricingGuide2025() {
             <div className="text-zion-slate-light text-xl mb-4">No services found matching your criteria</div>
             <button
               onClick={() => {
+
                 setSelectedCategory('all');
                 setSelectedPricingModel('all');
               }}

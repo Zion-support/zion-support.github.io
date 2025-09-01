@@ -52,33 +52,40 @@ import { Shield,
              } from 'lucide-react.ts';
 
 export default function AICybersecurityThreatIntelligence(...args[]: any):  {
+
   const features = [
     {
+
       icon: Shield,
       title: 'AI-Powered Threat Detection',
       description: 'Advanced machine learning algorithms that identify and analyze cyber threats in real-time'
     },
     {
+
       icon: Radar,
       title: 'Real-time Threat Intelligence',
       description: 'Continuous monitoring and analysis of global threat landscapes and emerging cyber risks'
     },
     {
+
       icon: Bug,
       title: 'Vulnerability Assessment',
       description: 'Automated scanning and assessment of security vulnerabilities across your infrastructure'
     },
     {
+
       icon: AlertTriangle,
       title: 'Proactive Threat Hunting',
       description: 'AI-driven threat hunting that identifies potential threats before they become active attacks'
     },
     {
+
       icon: Globe2,
       title: 'Global Threat Feed',
       description: 'Real-time threat intelligence from global sources, dark web monitoring, and threat databases'
     },
     {
+
       icon: ShieldCheck,
       title: 'Incident Response Automation',
       description: 'Automated response and mitigation strategies for detected threats and security incidents'
@@ -94,21 +101,25 @@ export default function AICybersecurityThreatIntelligence(...args[]: any):  {
   ];
   const services = [
     {
+
       icon: Server,
       title: 'Threat Intelligence Platform',
       description: 'Comprehensive platform for collecting, analyzing, and disseminating threat intelligence'
     },
     {
+
       icon: Workflow,
       title: 'Security Operations Center',
       description: 'AI-powered SOC services with 24/7 monitoring and automated incident response'
     },
     {
+
       icon: Database,
       title: 'Threat Database & Analytics',
       description: 'Extensive database of known threats, attack patterns, and security intelligence'
     },
     {
+
       icon: Network,
       title: 'Network Security Monitoring',
       description: 'Real-time network traffic analysis and anomaly detection using AI algorithms'
@@ -116,24 +127,29 @@ export default function AICybersecurityThreatIntelligence(...args[]: any):  {
   ];
   const useCases = [
     {
+
       industry: 'Financial Services',
       description: 'Protect financial data, prevent fraud, and ensure regulatory compliance with AI threat intelligence'
     },
     {
+
       industry: 'Healthcare',
       description: 'Secure patient data, protect medical devices, and ensure HIPAA compliance'
     },
     {
+
       industry: 'Government & Defense',
       description: 'National security, classified information protection, and critical infrastructure security'
     },
     {
+
       industry: 'Enterprise IT',
       description: 'Corporate network security, data protection, and employee security awareness'
     }
   ];
   const pricing = [
     {
+
       name: 'Starter',
       price: '$399',
       period: '/month',
@@ -150,6 +166,7 @@ export default function AICybersecurityThreatIntelligence(...args[]: any):  {
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$999',
       period: '/month',
@@ -168,6 +185,7 @@ export default function AICybersecurityThreatIntelligence(...args[]: any):  {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: '$2,499',
       period: '/month',
@@ -197,10 +215,12 @@ export default function AICybersecurityThreatIntelligence(...args[]: any):  {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 }}
@@ -233,14 +253,17 @@ export default function AICybersecurityThreatIntelligence(...args[]: any):  {
           {/* Stats */}
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 }}
             transition = {
+
   { duration: 0.8,
   delay: 0.2 
 }}
@@ -270,10 +293,12 @@ export default function AICybersecurityThreatIntelligence(...args[]: any):  {
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
@@ -313,10 +338,12 @@ export default function AICybersecurityThreatIntelligence(...args[]: any):  {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
@@ -360,10 +387,12 @@ export default function AICybersecurityThreatIntelligence(...args[]: any):  {
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
@@ -415,10 +444,12 @@ export default function AICybersecurityThreatIntelligence(...args[]: any):  {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
@@ -442,6 +473,7 @@ export default function AICybersecurityThreatIntelligence(...args[]: any):  {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 border rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'border-red-500/50 bg-red-500/5' 
                     : 'border-slate-700/50'
@@ -470,6 +502,7 @@ export default function AICybersecurityThreatIntelligence(...args[]: any):  {
                   ))}
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-red-500 to-orange-500 text-white hover:from-red-600 hover:to-orange-600'
                     : 'bg-slate-700 text-white hover:bg-slate-600'
@@ -583,10 +616,12 @@ export default function AICybersecurityThreatIntelligence(...args[]: any):  {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 }}

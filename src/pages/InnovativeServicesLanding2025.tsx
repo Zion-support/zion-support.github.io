@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Star, 
   Rocket, 
   Brain, 
@@ -48,8 +49,10 @@ import {
 } from 'lucide-react';
 
 export default function InnovativeServicesLanding2025() {
+
   const featuredServices = [
     {
+
       name: 'AI Workflow Orchestrator',
       description: 'Intelligent process automation and workflow management',
       icon: Brain,
@@ -59,6 +62,7 @@ export default function InnovativeServicesLanding2025() {
       color: 'from-blue-500 to-purple-600'
     },
     {
+
       name: 'Cloud DevOps Platform',
       description: 'Streamlined development and operations',
       icon: Cloud,
@@ -68,6 +72,7 @@ export default function InnovativeServicesLanding2025() {
       color: 'from-green-500 to-blue-600'
     },
     {
+
       name: 'AI Cybersecurity Platform',
       description: 'AI-powered threat detection and response',
       icon: Shield,
@@ -77,6 +82,7 @@ export default function InnovativeServicesLanding2025() {
       color: 'from-red-500 to-orange-600'
     },
     {
+
       name: 'Quantum Computing Solutions',
       description: 'Next-generation quantum computing services',
       icon: Atom,
@@ -86,6 +92,7 @@ export default function InnovativeServicesLanding2025() {
       color: 'from-purple-500 to-pink-600'
     },
     {
+
       name: 'Micro CRM Platform',
       description: 'Customer relationship management for small businesses',
       icon: ShoppingCart,
@@ -95,6 +102,7 @@ export default function InnovativeServicesLanding2025() {
       color: 'from-indigo-500 to-purple-600'
     },
     {
+
       name: 'FinOps Advisor',
       description: 'Cloud cost optimization and management',
       icon: DollarSign,
@@ -107,6 +115,7 @@ export default function InnovativeServicesLanding2025() {
 
   const serviceCategories = [
     {
+
       name: 'AI & Machine Learning',
       icon: Brain,
       description: 'Cutting-edge artificial intelligence and machine learning solutions',
@@ -114,6 +123,7 @@ export default function InnovativeServicesLanding2025() {
       color: 'from-blue-500 to-purple-600'
     },
     {
+
       name: 'Cloud & Infrastructure',
       icon: Cloud,
       description: 'Scalable cloud solutions and infrastructure management',
@@ -121,6 +131,7 @@ export default function InnovativeServicesLanding2025() {
       color: 'from-green-500 to-blue-600'
     },
     {
+
       name: 'Cybersecurity',
       icon: Shield,
       description: 'Advanced security solutions for modern threats',
@@ -128,6 +139,7 @@ export default function InnovativeServicesLanding2025() {
       color: 'from-red-500 to-orange-600'
     },
     {
+
       name: 'Emerging Technologies',
       icon: Atom,
       description: 'Next-generation technology solutions',
@@ -135,6 +147,7 @@ export default function InnovativeServicesLanding2025() {
       color: 'from-purple-500 to-pink-600'
     },
     {
+
       name: 'Micro SaaS Solutions',
       icon: ShoppingCart,
       description: 'Productized SaaS solutions for specific niches',
@@ -142,6 +155,7 @@ export default function InnovativeServicesLanding2025() {
       color: 'from-indigo-500 to-purple-600'
     },
     {
+
       name: 'Digital Transformation',
       icon: Zap,
       description: 'End-to-end digital transformation services',
@@ -157,6 +171,7 @@ export default function InnovativeServicesLanding2025() {
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -167,6 +182,7 @@ export default function InnovativeServicesLanding2025() {
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -376,21 +392,25 @@ export default function InnovativeServicesLanding2025() {
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
+
                 icon: Star,
                 title: 'Innovation First',
                 description: 'Leading-edge solutions that keep you ahead of the competition'
               },
               {
+
                 icon: Users,
                 title: 'Expert Team',
                 description: 'Experienced professionals with deep industry knowledge'
               },
               {
+
                 icon: Shield,
                 title: 'Trusted Partner',
                 description: 'Reliable, secure, and scalable solutions you can count on'
               },
               {
+
                 icon: TrendingUp,
                 title: 'Proven Results',
                 description: 'Track record of successful implementations and ROI'

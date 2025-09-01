@@ -36,7 +36,9 @@ describe('/api/team-builder/generate API Endpoint', () => {
     });
     await generateHandler(req, res);
     expect(res._getStatusCode()).toBe(400);
-    expect(res._getJSONData().error).toBe('Missing required fields in project brief.');
+    expect(res._getJSONData().error).toBe(
+      'Missing required fields in project brief.'
+    );
   });
 
   it('should return 500 if Supabase function call fails', async () => {
@@ -47,7 +49,10 @@ describe('/api/team-builder/generate API Endpoint', () => {
       budget: '$10k',
       techStack: ['React'],
     };
-    mockSupabaseInvoke.mockResolvedValueOnce({ error: { message: 'Supabase error' }, data: null });
+    mockSupabaseInvoke.mockResolvedValueOnce({
+      error: { message: 'Supabase error' },
+      data: null,
+    });
 
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'POST' as RequestMethod,
@@ -74,7 +79,9 @@ describe('/api/team-builder/generate API Endpoint', () => {
     });
     await generateHandler(req, res);
     expect(res._getStatusCode()).toBe(500);
-    expect(res._getJSONData().error).toBe('Failed to generate team recommendation: No data returned.');
+    expect(res._getJSONData().error).toBe(
+      'Failed to generate team recommendation: No data returned.'
+    );
   });
 
   it('should return 200 with team recommendation on successful Supabase call', async () => {
@@ -85,11 +92,15 @@ describe('/api/team-builder/generate API Endpoint', () => {
       budget: '$10k',
       techStack: ['React'],
     };
-    const mockRecommendation: Partial<TeamRecommendation> = { // Using Partial for brevity
+    const mockRecommendation: Partial<TeamRecommendation> = {
+      // Using Partial for brevity
       recommendationSummary: '1 PM, 2 Devs',
       roles: [],
     };
-    mockSupabaseInvoke.mockResolvedValueOnce({ data: mockRecommendation, error: null });
+    mockSupabaseInvoke.mockResolvedValueOnce({
+      data: mockRecommendation,
+      error: null,
+    });
 
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'POST' as RequestMethod,

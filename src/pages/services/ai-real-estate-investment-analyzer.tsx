@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Home, 
   TrendingUp, 
   BarChart3, 
@@ -47,38 +48,45 @@ import { SEO } from '../../components/SEO';
 import { Link } from 'react-router-dom';
 
 export default function AIRealEstateInvestmentAnalyzer() {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Market Analysis",
       description: "Advanced machine learning algorithms analyze market trends, property values, and investment opportunities with 95.8% accuracy",
       color: "from-blue-500 to-cyan-500"
     },
     {
+
       icon: TrendingUp,
       title: "Predictive Analytics",
       description: "Forecast property appreciation, rental yields, and market movements using historical data and AI predictions",
       color: "from-green-500 to-emerald-500"
     },
     {
+
       icon: BarChart3,
       title: "ROI Calculator",
       description: "Comprehensive ROI analysis including cash flow, appreciation, tax benefits, and maintenance costs",
       color: "from-purple-500 to-pink-500"
     },
     {
+
       icon: MapPin,
       title: "Geographic Intelligence",
       description: "Location-based insights including school ratings, crime statistics, and future development plans",
       color: "from-orange-500 to-red-500"
     },
     {
+
       icon: Shield,
       title: "Risk Assessment",
       description: "Identify potential risks including market volatility, property condition, and regulatory changes",
       color: "from-red-500 to-pink-500"
     },
     {
+
       icon: Users,
       title: "Portfolio Management",
       description: "Track multiple properties, diversify investments, and optimize your real estate portfolio",
@@ -88,24 +96,28 @@ export default function AIRealEstateInvestmentAnalyzer() {
 
   const benefits = [
     {
+
       icon: Clock,
       title: "Time Savings",
       description: "Reduce research time by 80%",
       metric: "80%"
     },
     {
+
       icon: DollarSign,
       title: "Better Returns",
       description: "Increase investment returns by 25%",
       metric: "25%"
     },
     {
+
       icon: Target,
       title: "Accuracy",
       description: "95.8% accuracy in market predictions",
       metric: "95.8%"
     },
     {
+
       icon: TrendingUp,
       title: "Efficiency",
       description: "Analyze 10x more properties",
@@ -115,6 +127,7 @@ export default function AIRealEstateInvestmentAnalyzer() {
 
   const pricing = [
     {
+
       name: "Starter",
       price: 2999,
       period: "one-time setup",
@@ -130,6 +143,7 @@ export default function AIRealEstateInvestmentAnalyzer() {
       cta: "Get Started"
     },
     {
+
       name: "Professional",
       price: 4999,
       period: "one-time setup",
@@ -146,6 +160,7 @@ export default function AIRealEstateInvestmentAnalyzer() {
       cta: "Most Popular"
     },
     {
+
       name: "Enterprise",
       price: 8999,
       period: "one-time setup",
@@ -174,24 +189,28 @@ export default function AIRealEstateInvestmentAnalyzer() {
 
   const useCases = [
     {
+
       title: "Residential Investment",
       description: "Analyze single-family homes, condos, and multi-family properties for optimal investment returns",
       icon: Home,
       color: "from-blue-500 to-cyan-500"
     },
     {
+
       title: "Commercial Real Estate",
       description: "Evaluate office buildings, retail spaces, and industrial properties with advanced market insights",
       icon: Building,
       color: "from-purple-500 to-pink-500"
     },
     {
+
       title: "Portfolio Optimization",
       description: "Diversify and optimize your real estate portfolio using AI-driven recommendations",
       icon: BarChart3,
       color: "from-green-500 to-emerald-500"
     },
     {
+
       title: "Market Timing",
       description: "Identify the best times to buy, sell, or hold properties using predictive analytics",
       icon: TrendingUp,
@@ -388,6 +407,7 @@ export default function AIRealEstateInvestmentAnalyzer() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`p-8 rounded-xl border ${
+
                   plan.popular 
                     ? 'bg-gradient-to-br from-blue-900/50 to-cyan-900/50 border-blue-500/50 shadow-2xl shadow-blue-500/25' 
                     : 'bg-slate-800/50 border-slate-700/50'
@@ -418,6 +438,7 @@ export default function AIRealEstateInvestmentAnalyzer() {
                 <Link
                   to={plan.name === "Enterprise" ? "/contact" : "/request-quote"}
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white transform hover:scale-105'
                       : 'bg-slate-700 hover:bg-slate-600 text-white'

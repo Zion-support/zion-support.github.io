@@ -2,13 +2,43 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
-  DollarSign, Shield, Mail, MapPin, Rocket, Brain, 
-  Sparkles, Atom, Target, Microscope, Search, Filter,
-  ExternalLink, Users, Clock, BarChart3, Award, Globe,
-  Cpu, Database, Lock, MessageSquare, BarChart, ShoppingCart,
-  UserCheck, FileText, Palette, Camera, Video, Music
+import {
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Zap,
+  DollarSign,
+  Shield,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Sparkles,
+  Atom,
+  Target,
+  Microscope,
+  Search,
+  Filter,
+  ExternalLink,
+  Users,
+  Clock,
+  BarChart3,
+  Award,
+  Globe,
+  Cpu,
+  Database,
+  Lock,
+  MessageSquare,
+  BarChart,
+  ShoppingCart,
+  UserCheck,
+  FileText,
+  Palette,
+  Camera,
+  Video,
+  Music,
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground2035 from '../components/ui/UltraFuturisticBackground2035';
@@ -23,14 +53,15 @@ export default function EnhancedServicesOverview() {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
+    website: 'https://ziontechgroup.com',
   };
 
   const serviceCategories = [
     {
       id: 'ai-services',
       name: 'Artificial Intelligence',
-      description: 'Revolutionary AI solutions including consciousness platforms, emotional intelligence, and autonomous business systems.',
+      description:
+        'Revolutionary AI solutions including consciousness platforms, emotional intelligence, and autonomous business systems.',
       icon: Brain,
       color: 'from-violet-500 to-purple-600',
       services: [
@@ -41,17 +72,22 @@ export default function EnhancedServicesOverview() {
         'AI Content Generation & Optimization',
         'AI Sales Automation',
         'AI HR Recruitment',
-        'AI Legal Contract Analysis'
+        'AI Legal Contract Analysis',
       ],
       pricing: { starting: '$1,499', range: '$1,499 - $9,999' },
-      benefits: ['300% ROI improvement', '80% time savings', 'Enhanced decision making'],
+      benefits: [
+        '300% ROI improvement',
+        '80% time savings',
+        'Enhanced decision making',
+      ],
       href: '/ai-services',
-      featured: true
+      featured: true,
     },
     {
       id: 'quantum-services',
       name: 'Quantum Computing',
-      description: 'Cutting-edge quantum computing solutions for security, finance, and emerging technology applications.',
+      description:
+        'Cutting-edge quantum computing solutions for security, finance, and emerging technology applications.',
       icon: Atom,
       color: 'from-indigo-500 to-blue-600',
       services: [
@@ -62,17 +98,22 @@ export default function EnhancedServicesOverview() {
         'Quantum Cybersecurity Solutions',
         'Quantum Energy Optimization',
         'Quantum Logistics Platform',
-        'Quantum Metaverse Development'
+        'Quantum Metaverse Development',
       ],
       pricing: { starting: '$2,999', range: '$2,999 - $19,999' },
-      benefits: ['Unbreakable security', 'Exponential performance', 'Future-proof technology'],
+      benefits: [
+        'Unbreakable security',
+        'Exponential performance',
+        'Future-proof technology',
+      ],
       href: '/quantum-services',
-      featured: true
+      featured: true,
     },
     {
       id: 'space-technology',
       name: 'Space Technology',
-      description: 'Advanced space technology solutions including mining automation, satellite systems, and space infrastructure.',
+      description:
+        'Advanced space technology solutions including mining automation, satellite systems, and space infrastructure.',
       icon: Rocket,
       color: 'from-teal-500 to-emerald-600',
       services: [
@@ -83,17 +124,22 @@ export default function EnhancedServicesOverview() {
         'Space Resource Analytics',
         'Space Weather Monitoring',
         'Space Communication Networks',
-        'Space Manufacturing Systems'
+        'Space Manufacturing Systems',
       ],
       pricing: { starting: '$4,999', range: '$4,999 - $49,999' },
-      benefits: ['Access to space resources', 'Global connectivity', 'Innovation leadership'],
+      benefits: [
+        'Access to space resources',
+        'Global connectivity',
+        'Innovation leadership',
+      ],
       href: '/space-technology',
-      featured: true
+      featured: true,
     },
     {
       id: 'enterprise-it',
       name: 'Enterprise IT Solutions',
-      description: 'Comprehensive enterprise IT solutions including infrastructure, security, and operations automation.',
+      description:
+        'Comprehensive enterprise IT solutions including infrastructure, security, and operations automation.',
       icon: Cpu,
       color: 'from-blue-500 to-cyan-600',
       services: [
@@ -104,17 +150,22 @@ export default function EnhancedServicesOverview() {
         'Cloud Infrastructure Management',
         'Data Center Automation',
         'Network Security Monitoring',
-        'IT Asset Management'
+        'IT Asset Management',
       ],
       pricing: { starting: '$1,999', range: '$1,999 - $29,999' },
-      benefits: ['Operational efficiency', 'Cost reduction', 'Security enhancement'],
+      benefits: [
+        'Operational efficiency',
+        'Cost reduction',
+        'Security enhancement',
+      ],
       href: '/enterprise-it',
-      featured: true
+      featured: true,
     },
     {
       id: 'micro-saas',
       name: 'Micro SAAS Solutions',
-      description: 'Market-ready micro SAAS services for business automation, marketing, and operational efficiency.',
+      description:
+        'Market-ready micro SAAS services for business automation, marketing, and operational efficiency.',
       icon: Target,
       color: 'from-green-500 to-yellow-600',
       services: [
@@ -125,17 +176,18 @@ export default function EnhancedServicesOverview() {
         'HR Automation Suite',
         'E-commerce Automation Platform',
         'Project Management AI',
-        'Data Analytics Automation'
+        'Data Analytics Automation',
       ],
       pricing: { starting: '$19', range: '$19 - $499' },
       benefits: ['Quick implementation', 'Affordable pricing', 'Immediate ROI'],
       href: '/enhanced-micro-saas-showcase',
-      featured: true
+      featured: true,
     },
     {
       id: 'cybersecurity',
       name: 'Cybersecurity',
-      description: 'Advanced cybersecurity solutions including threat detection, incident response, and security automation.',
+      description:
+        'Advanced cybersecurity solutions including threat detection, incident response, and security automation.',
       icon: Shield,
       color: 'from-red-500 to-pink-600',
       services: [
@@ -146,17 +198,22 @@ export default function EnhancedServicesOverview() {
         'Compliance Monitoring System',
         'Penetration Testing Automation',
         'Security Operations Center',
-        'Risk Assessment AI'
+        'Risk Assessment AI',
       ],
       pricing: { starting: '$79', range: '$79 - $999' },
-      benefits: ['Threat prevention', 'Compliance assurance', 'Risk mitigation'],
+      benefits: [
+        'Threat prevention',
+        'Compliance assurance',
+        'Risk mitigation',
+      ],
       href: '/security',
-      featured: false
+      featured: false,
     },
     {
       id: 'data-analytics',
       name: 'Data Analytics',
-      description: 'Comprehensive data analytics solutions including collection, processing, and visualization automation.',
+      description:
+        'Comprehensive data analytics solutions including collection, processing, and visualization automation.',
       icon: BarChart3,
       color: 'from-orange-500 to-red-600',
       services: [
@@ -167,17 +224,22 @@ export default function EnhancedServicesOverview() {
         'Business Intelligence Suite',
         'Data Visualization Tools',
         'Machine Learning Pipeline',
-        'Data Governance Platform'
+        'Data Governance Platform',
       ],
       pricing: { starting: '$49', range: '$49 - $799' },
-      benefits: ['Data-driven decisions', 'Operational insights', 'Performance optimization'],
+      benefits: [
+        'Data-driven decisions',
+        'Operational insights',
+        'Performance optimization',
+      ],
       href: '/ai-data-analytics',
-      featured: false
+      featured: false,
     },
     {
       id: 'content-creation',
       name: 'Content Creation',
-      description: 'AI-powered content creation and management solutions for marketing and communication.',
+      description:
+        'AI-powered content creation and management solutions for marketing and communication.',
       icon: FileText,
       color: 'from-pink-500 to-rose-600',
       services: [
@@ -188,17 +250,22 @@ export default function EnhancedServicesOverview() {
         'SEO Optimization Tools',
         'Multimedia Content Creation',
         'Content Performance Analytics',
-        'Brand Voice AI'
+        'Brand Voice AI',
       ],
       pricing: { starting: '$29', range: '$29 - $399' },
-      benefits: ['Content quality improvement', 'Time savings', 'Engagement increase'],
+      benefits: [
+        'Content quality improvement',
+        'Time savings',
+        'Engagement increase',
+      ],
       href: '/ai-content-generator',
-      featured: false
+      featured: false,
     },
     {
       id: 'automation',
       name: 'Business Automation',
-      description: 'Comprehensive business process automation solutions for operational efficiency.',
+      description:
+        'Comprehensive business process automation solutions for operational efficiency.',
       icon: Zap,
       color: 'from-yellow-500 to-orange-600',
       services: [
@@ -209,17 +276,18 @@ export default function EnhancedServicesOverview() {
         'Automation Consulting',
         'Integration Services',
         'Performance Monitoring',
-        'Automation Strategy'
+        'Automation Strategy',
       ],
       pricing: { starting: '$99', range: '$99 - $1,999' },
       benefits: ['Process efficiency', 'Cost reduction', 'Error elimination'],
       href: '/automation',
-      featured: false
+      featured: false,
     },
     {
       id: 'research-development',
       name: 'Research & Development',
-      description: 'Cutting-edge R&D services including emerging technology research and innovation consulting.',
+      description:
+        'Cutting-edge R&D services including emerging technology research and innovation consulting.',
       icon: Microscope,
       color: 'from-purple-500 to-indigo-600',
       services: [
@@ -230,17 +298,21 @@ export default function EnhancedServicesOverview() {
         'Patent Research',
         'Market Analysis',
         'Technology Transfer',
-        'Innovation Workshops'
+        'Innovation Workshops',
       ],
       pricing: { starting: '$199', range: '$199 - $2,999' },
-      benefits: ['Innovation leadership', 'Competitive advantage', 'Future readiness'],
+      benefits: [
+        'Innovation leadership',
+        'Competitive advantage',
+        'Future readiness',
+      ],
       href: '/emerging-tech',
-      featured: false
-    }
+      featured: false,
+    },
   ];
 
-  const filteredCategories = serviceCategories.filter(category =>
-    selectedCategory === 'all' || category.id === selectedCategory
+  const filteredCategories = serviceCategories.filter(
+    category => selectedCategory === 'all' || category.id === selectedCategory
   );
 
   const containerVariants = {
@@ -248,9 +320,9 @@ export default function EnhancedServicesOverview() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1,
+      },
+    },
   };
 
   const itemVariants = {
@@ -259,38 +331,65 @@ export default function EnhancedServicesOverview() {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6
-      }
-    }
+        duration: 0.6,
+      },
+    },
   };
 
   return (
     <>
       <Head>
-        <title>Enhanced Services Overview 2025 | Zion Tech Group - Comprehensive Technology Solutions</title>
-        <meta name="description" content="Explore our comprehensive range of technology services including AI, quantum computing, space technology, enterprise IT, and micro SAAS solutions. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="technology services, AI services, quantum computing, space technology, enterprise IT, micro SAAS, cybersecurity, data analytics, content creation, business automation, research development" />
+        <title>
+          Enhanced Services Overview 2025 | Zion Tech Group - Comprehensive
+          Technology Solutions
+        </title>
+        <meta
+          name="description"
+          content="Explore our comprehensive range of technology services including AI, quantum computing, space technology, enterprise IT, and micro SAAS solutions. Transform your business with cutting-edge technology."
+        />
+        <meta
+          name="keywords"
+          content="technology services, AI services, quantum computing, space technology, enterprise IT, micro SAAS, cybersecurity, data analytics, content creation, business automation, research development"
+        />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
-        
+
         {/* Open Graph */}
-        <meta property="og:title" content="Enhanced Services Overview 2025 | Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive technology solutions for the future. AI, quantum computing, space technology, and more." />
-        <meta property="og:url" content="https://ziontechgroup.com/enhanced-services-overview" />
+        <meta
+          property="og:title"
+          content="Enhanced Services Overview 2025 | Zion Tech Group"
+        />
+        <meta
+          property="og:description"
+          content="Comprehensive technology solutions for the future. AI, quantum computing, space technology, and more."
+        />
+        <meta
+          property="og:url"
+          content="https://ziontechgroup.com/enhanced-services-overview"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Zion Tech Group" />
-        
+
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Enhanced Services Overview 2025 | Zion Tech Group" />
-        <meta name="twitter:description" content="Comprehensive technology solutions for the future." />
-        
-        <link rel="canonical" href="https://ziontechgroup.com/enhanced-services-overview" />
+        <meta
+          name="twitter:title"
+          content="Enhanced Services Overview 2025 | Zion Tech Group"
+        />
+        <meta
+          name="twitter:description"
+          content="Comprehensive technology solutions for the future."
+        />
+
+        <link
+          rel="canonical"
+          href="https://ziontechgroup.com/enhanced-services-overview"
+        />
       </Head>
 
       <UltraFuturisticBackground2035>
         <UltraFuturisticNavigation2033 />
-        
+
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center pt-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -330,8 +429,10 @@ export default function EnhancedServicesOverview() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
             >
-              From revolutionary AI consciousness platforms to cutting-edge quantum computing solutions, 
-              discover our comprehensive range of technology services designed to transform businesses and advance humanity.
+              From revolutionary AI consciousness platforms to cutting-edge
+              quantum computing solutions, discover our comprehensive range of
+              technology services designed to transform businesses and advance
+              humanity.
             </motion.p>
 
             {/* Stats */}
@@ -342,19 +443,27 @@ export default function EnhancedServicesOverview() {
               className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16"
             >
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">10+</div>
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
+                  10+
+                </div>
                 <div className="text-gray-300 text-sm">Service Categories</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">100+</div>
+                <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">
+                  100+
+                </div>
                 <div className="text-gray-300 text-sm">Individual Services</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">$500B+</div>
+                <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">
+                  $500B+
+                </div>
                 <div className="text-gray-300 text-sm">Market Opportunity</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">24/7</div>
+                <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">
+                  24/7
+                </div>
                 <div className="text-gray-300 text-sm">Global Support</div>
               </div>
             </motion.div>
@@ -375,7 +484,7 @@ export default function EnhancedServicesOverview() {
                 <span>Explore Services</span>
                 <ArrowRight className="w-6 h-6" />
               </motion.a>
-              
+
               <motion.a
                 href={`tel:${contactInfo.mobile}`}
                 whileHover={{ scale: 1.05 }}
@@ -406,7 +515,8 @@ export default function EnhancedServicesOverview() {
                 <span className="text-white"> Service Categories</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover our comprehensive range of technology services designed to transform every aspect of your business operations.
+                Discover our comprehensive range of technology services designed
+                to transform every aspect of your business operations.
               </p>
             </motion.div>
 
@@ -428,7 +538,7 @@ export default function EnhancedServicesOverview() {
                 >
                   All Categories
                 </button>
-                {serviceCategories.map((category) => (
+                {serviceCategories.map(category => (
                   <button
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
@@ -473,9 +583,13 @@ export default function EnhancedServicesOverview() {
                         <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
                           {category.name}
                         </h3>
-                        <p className="text-gray-300 text-sm leading-relaxed">{category.description}</p>
+                        <p className="text-gray-300 text-sm leading-relaxed">
+                          {category.description}
+                        </p>
                       </div>
-                      <div className={`w-16 h-16 bg-gradient-to-br ${category.color} border border-cyan-500/30 rounded-2xl flex items-center justify-center`}>
+                      <div
+                        className={`w-16 h-16 bg-gradient-to-br ${category.color} border border-cyan-500/30 rounded-2xl flex items-center justify-center`}
+                      >
                         <category.icon className="w-8 h-8 text-white" />
                       </div>
                     </div>
@@ -489,7 +603,10 @@ export default function EnhancedServicesOverview() {
                     </h4>
                     <div className="space-y-2">
                       {category.services.slice(0, 4).map((service, idx) => (
-                        <div key={idx} className="flex items-center text-sm text-gray-300">
+                        <div
+                          key={idx}
+                          className="flex items-center text-sm text-gray-300"
+                        >
                           <CheckCircle className="w-4 h-4 mr-2 text-green-400 flex-shrink-0" />
                           <span>{service}</span>
                         </div>
@@ -572,9 +689,11 @@ export default function EnhancedServicesOverview() {
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Get in touch with our team to discuss how our comprehensive technology solutions can drive growth and innovation for your organization.
+                Get in touch with our team to discuss how our comprehensive
+                technology solutions can drive growth and innovation for your
+                organization.
               </p>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="flex items-center justify-center space-x-3 p-4 bg-black/30 border border-cyan-500/20 rounded-lg">
                   <Phone className="w-5 h-5 text-cyan-400" />
@@ -600,7 +719,7 @@ export default function EnhancedServicesOverview() {
                   <Phone className="w-6 h-6" />
                   <span>Call Now</span>
                 </motion.a>
-                
+
                 <motion.a
                   href={`mailto:${contactInfo.email}`}
                   whileHover={{ scale: 1.05 }}

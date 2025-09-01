@@ -1,4 +1,5 @@
 export interface EnhancedServiceItem {
+
   id: string;
   title: string;
   description: string;
@@ -20,6 +21,7 @@ export interface EnhancedServiceItem {
   trialDays: number;
   setupTime: string;
   contactInfo: {
+
     mobile: string;
     email: string;
     address: string;
@@ -36,6 +38,7 @@ export interface EnhancedServiceItem {
 export const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = [
   // MICRO SAAS SERVICES
   {
+
     id: 'ai-powered-project-management-suite',
     title: 'AI-Powered Project Management Suite',
     description: 'Intelligent project management platform that uses AI to predict project risks, optimize resource allocation, and automate task prioritization for maximum efficiency.',
@@ -95,6 +98,7 @@ export const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = [
     trialDays: 14,
     setupTime: '2-4 hours',
     contactInfo: {
+
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -109,6 +113,7 @@ export const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = [
   },
 
   {
+
     id: 'smart-contract-audit-platform',
     title: 'Smart Contract Audit Platform',
     description: 'Comprehensive blockchain smart contract security auditing platform with AI-powered vulnerability detection and automated compliance checking.',
@@ -168,6 +173,7 @@ export const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = [
     trialDays: 7,
     setupTime: '1-2 hours',
     contactInfo: {
+
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -182,6 +188,7 @@ export const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = [
   },
 
   {
+
     id: 'ai-content-optimization-engine',
     title: 'AI Content Optimization Engine',
     description: 'Advanced content optimization platform that uses AI to improve SEO, readability, engagement, and conversion rates across all digital content.',
@@ -241,6 +248,7 @@ export const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = [
     trialDays: 10,
     setupTime: '30 minutes',
     contactInfo: {
+
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -256,6 +264,7 @@ export const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = [
 
   // AI SOLUTIONS
   {
+
     id: 'autonomous-business-intelligence-platform',
     title: 'Autonomous Business Intelligence Platform',
     description: 'Self-learning AI platform that autonomously analyzes business data, identifies patterns, generates insights, and makes data-driven recommendations without human intervention.',
@@ -315,6 +324,7 @@ export const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = [
     trialDays: 30,
     setupTime: '1-2 weeks',
     contactInfo: {
+
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -329,6 +339,7 @@ export const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = [
   },
 
   {
+
     id: 'quantum-ai-hybrid-computing',
     title: 'Quantum AI Hybrid Computing Platform',
     description: 'Revolutionary platform that combines quantum computing with artificial intelligence to solve complex problems that are impossible for classical computers.',
@@ -388,6 +399,7 @@ export const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = [
     trialDays: 14,
     setupTime: '2-4 weeks',
     contactInfo: {
+
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -403,6 +415,7 @@ export const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = [
 
   // IT SERVICES
   {
+
     id: 'zero-trust-cybersecurity-platform',
     title: 'Zero-Trust Cybersecurity Platform',
     description: 'Comprehensive zero-trust security platform that continuously verifies every user, device, and transaction to provide enterprise-grade protection against modern cyber threats.',
@@ -462,6 +475,7 @@ export const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = [
     trialDays: 30,
     setupTime: '2-4 weeks',
     contactInfo: {
+
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -476,6 +490,7 @@ export const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = [
   },
 
   {
+
     id: 'edge-computing-orchestration-platform',
     title: 'Edge Computing Orchestration Platform',
     description: 'Advanced edge computing platform that optimizes data processing, reduces latency, and enables real-time applications across distributed edge networks.',
@@ -535,6 +550,7 @@ export const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = [
     trialDays: 21,
     setupTime: '1-3 weeks',
     contactInfo: {
+
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -550,6 +566,7 @@ export const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = [
 
   // EMERGING TECHNOLOGIES
   {
+
     id: 'digital-twin-enterprise-platform',
     title: 'Digital Twin Enterprise Platform',
     description: 'Comprehensive digital twin platform that creates virtual replicas of physical assets, processes, and systems for real-time monitoring, simulation, and optimization.',
@@ -609,6 +626,7 @@ export const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = [
     trialDays: 30,
     setupTime: '3-6 weeks',
     contactInfo: {
+
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -623,6 +641,7 @@ export const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = [
   },
 
   {
+
     id: 'sustainable-tech-optimization-platform',
     title: 'Sustainable Technology Optimization Platform',
     description: 'AI-powered platform that optimizes technology infrastructure for maximum energy efficiency, carbon reduction, and sustainability while maintaining performance.',
@@ -682,6 +701,7 @@ export const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = [
     trialDays: 21,
     setupTime: '2-4 weeks',
     contactInfo: {
+
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -698,6 +718,7 @@ export const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = [
 
 export const serviceCategories = [
   {
+
     name: 'Micro SaaS',
     slug: 'micro-saas',
     description: 'Innovative software-as-a-service solutions for modern businesses',
@@ -706,6 +727,7 @@ export const serviceCategories = [
     color: 'from-blue-600 to-cyan-700'
   },
   {
+
     name: 'AI Solutions',
     slug: 'ai-solutions',
     description: 'Cutting-edge artificial intelligence and machine learning solutions',
@@ -714,6 +736,7 @@ export const serviceCategories = [
     color: 'from-purple-600 to-indigo-700'
   },
   {
+
     name: 'IT Services',
     slug: 'it-services',
     description: 'Comprehensive IT infrastructure and cybersecurity services',
@@ -722,6 +745,7 @@ export const serviceCategories = [
     color: 'from-green-600 to-emerald-700'
   },
   {
+
     name: 'Digital Twin',
     slug: 'digital-twin',
     description: 'Advanced digital twin technology for asset optimization',
@@ -730,6 +754,7 @@ export const serviceCategories = [
     color: 'from-orange-600 to-red-700'
   },
   {
+
     name: 'Sustainable Tech',
     slug: 'sustainable-tech',
     description: 'Green technology solutions for sustainable business operations',

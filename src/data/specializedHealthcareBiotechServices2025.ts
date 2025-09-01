@@ -6,6 +6,7 @@ import { ProductListing } from "@/types/listings";
 export const SPECIALIZED_HEALTHCARE_BIOTECH_SERVICES_2025: ProductListing[] = [
   // AI-Powered Drug Discovery & Development
   {
+
     id: 'ai-drug-discovery-platform',
     name: 'AI Drug Discovery Platform',
     description: 'Advanced AI-powered platform for drug discovery and development that accelerates the identification of potential drug candidates, predicts efficacy, and optimizes molecular structures. Includes virtual screening, toxicity prediction, and clinical trial optimization.',
@@ -40,6 +41,7 @@ export const SPECIALIZED_HEALTHCARE_BIOTECH_SERVICES_2025: ProductListing[] = [
     useCases: ['Drug discovery', 'Molecular optimization', 'Clinical trial design', 'Target identification'],
     technologies: ['Machine Learning', 'Computational Chemistry', 'Bioinformatics', 'Drug Discovery'],
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/ai-drug-discovery'
@@ -48,6 +50,7 @@ export const SPECIALIZED_HEALTHCARE_BIOTECH_SERVICES_2025: ProductListing[] = [
 
   // AI-Powered Medical Imaging & Diagnostics
   {
+
     id: 'ai-medical-imaging-diagnostics',
     name: 'AI Medical Imaging & Diagnostics Platform',
     description: 'Intelligent medical imaging platform that uses AI to analyze medical images, detect abnormalities, and provide diagnostic insights. Includes support for X-rays, CT scans, MRIs, and ultrasound images with high accuracy and speed.',
@@ -82,6 +85,7 @@ export const SPECIALIZED_HEALTHCARE_BIOTECH_SERVICES_2025: ProductListing[] = [
     useCases: ['Medical imaging analysis', 'Diagnostic support', 'Quality assurance', 'Patient screening'],
     technologies: ['Computer Vision', 'Deep Learning', 'Medical Imaging', 'Healthcare AI'],
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/ai-medical-imaging'
@@ -90,6 +94,7 @@ export const SPECIALIZED_HEALTHCARE_BIOTECH_SERVICES_2025: ProductListing[] = [
 
   // AI-Powered Patient Care & Monitoring
   {
+
     id: 'ai-patient-care-monitoring',
     name: 'AI Patient Care & Monitoring Platform',
     description: 'Comprehensive patient care platform that uses AI to monitor patient health, predict deterioration, and optimize care plans. Includes remote monitoring, predictive analytics, and personalized treatment recommendations.',
@@ -124,6 +129,7 @@ export const SPECIALIZED_HEALTHCARE_BIOTECH_SERVICES_2025: ProductListing[] = [
     useCases: ['Patient monitoring', 'Care optimization', 'Remote healthcare', 'Preventive care'],
     technologies: ['IoT', 'Machine Learning', 'Predictive Analytics', 'Healthcare Integration'],
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/ai-patient-care'
@@ -132,6 +138,7 @@ export const SPECIALIZED_HEALTHCARE_BIOTECH_SERVICES_2025: ProductListing[] = [
 
   // AI-Powered Clinical Decision Support
   {
+
     id: 'ai-clinical-decision-support',
     name: 'AI Clinical Decision Support System',
     description: 'Intelligent clinical decision support system that provides evidence-based recommendations, alerts, and insights to healthcare providers. Includes integration with clinical guidelines, patient data analysis, and treatment optimization.',
@@ -166,6 +173,7 @@ export const SPECIALIZED_HEALTHCARE_BIOTECH_SERVICES_2025: ProductListing[] = [
     useCases: ['Clinical decision support', 'Treatment optimization', 'Patient safety', 'Care standardization'],
     technologies: ['Clinical Decision Support', 'Evidence-Based Medicine', 'Healthcare Analytics', 'Clinical Integration'],
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/ai-clinical-decision'
@@ -174,6 +182,7 @@ export const SPECIALIZED_HEALTHCARE_BIOTECH_SERVICES_2025: ProductListing[] = [
 
   // AI-Powered Healthcare Analytics & Insights
   {
+
     id: 'ai-healthcare-analytics-platform',
     name: 'AI Healthcare Analytics Platform',
     description: 'Advanced healthcare analytics platform that uses AI to analyze patient data, identify trends, and provide actionable insights for healthcare organizations. Includes population health analytics, operational insights, and predictive modeling.',
@@ -208,6 +217,7 @@ export const SPECIALIZED_HEALTHCARE_BIOTECH_SERVICES_2025: ProductListing[] = [
     useCases: ['Population health', 'Operational analytics', 'Quality improvement', 'Cost optimization'],
     technologies: ['Healthcare Analytics', 'Predictive Modeling', 'Population Health', 'Data Integration'],
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/ai-healthcare-analytics'
@@ -216,6 +226,7 @@ export const SPECIALIZED_HEALTHCARE_BIOTECH_SERVICES_2025: ProductListing[] = [
 
   // AI-Powered Genomics & Precision Medicine
   {
+
     id: 'ai-genomics-precision-medicine',
     name: 'AI Genomics & Precision Medicine Platform',
     description: 'Intelligent genomics platform that uses AI to analyze genetic data, identify disease risk factors, and develop personalized treatment plans. Includes genetic variant analysis, drug response prediction, and clinical interpretation.',
@@ -250,6 +261,7 @@ export const SPECIALIZED_HEALTHCARE_BIOTECH_SERVICES_2025: ProductListing[] = [
     useCases: ['Genetic analysis', 'Precision medicine', 'Drug response prediction', 'Disease risk assessment'],
     technologies: ['Genomics', 'Machine Learning', 'Precision Medicine', 'Genetic Analysis'],
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/ai-genomics'
@@ -258,6 +270,7 @@ export const SPECIALIZED_HEALTHCARE_BIOTECH_SERVICES_2025: ProductListing[] = [
 
   // AI-Powered Mental Health & Behavioral Analysis
   {
+
     id: 'ai-mental-health-behavioral',
     name: 'AI Mental Health & Behavioral Analysis Platform',
     description: 'Intelligent mental health platform that uses AI to analyze behavioral patterns, detect mental health conditions, and provide personalized interventions. Includes mood tracking, risk assessment, and therapeutic recommendations.',
@@ -292,6 +305,7 @@ export const SPECIALIZED_HEALTHCARE_BIOTECH_SERVICES_2025: ProductListing[] = [
     useCases: ['Mental health screening', 'Behavioral analysis', 'Treatment monitoring', 'Crisis prevention'],
     technologies: ['Natural Language Processing', 'Behavioral Analysis', 'Mental Health AI', 'Predictive Analytics'],
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/ai-mental-health'
@@ -300,6 +314,7 @@ export const SPECIALIZED_HEALTHCARE_BIOTECH_SERVICES_2025: ProductListing[] = [
 
   // AI-Powered Healthcare Operations & Management
   {
+
     id: 'ai-healthcare-operations-management',
     name: 'AI Healthcare Operations Management Platform',
     description: 'Intelligent healthcare operations platform that optimizes hospital workflows, resource allocation, and patient flow. Includes bed management, staff scheduling, and operational analytics for improved efficiency.',
@@ -334,6 +349,7 @@ export const SPECIALIZED_HEALTHCARE_BIOTECH_SERVICES_2025: ProductListing[] = [
     useCases: ['Operations optimization', 'Resource management', 'Patient flow', 'Staff scheduling'],
     technologies: ['Operations Research', 'Healthcare Management', 'Predictive Analytics', 'Resource Optimization'],
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/ai-healthcare-operations'
@@ -342,6 +358,7 @@ export const SPECIALIZED_HEALTHCARE_BIOTECH_SERVICES_2025: ProductListing[] = [
 
   // AI-Powered Medical Research & Clinical Trials
   {
+
     id: 'ai-medical-research-clinical-trials',
     name: 'AI Medical Research & Clinical Trials Platform',
     description: 'Advanced platform for medical research and clinical trials that uses AI to optimize trial design, patient recruitment, and data analysis. Includes protocol optimization, patient matching, and real-time monitoring.',
@@ -376,6 +393,7 @@ export const SPECIALIZED_HEALTHCARE_BIOTECH_SERVICES_2025: ProductListing[] = [
     useCases: ['Clinical trial optimization', 'Patient recruitment', 'Data analysis', 'Research collaboration'],
     technologies: ['Clinical Research', 'Trial Management', 'Data Analytics', 'Research Collaboration'],
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/ai-medical-research'
@@ -384,6 +402,7 @@ export const SPECIALIZED_HEALTHCARE_BIOTECH_SERVICES_2025: ProductListing[] = [
 
   // AI-Powered Healthcare Compliance & Risk Management
   {
+
     id: 'ai-healthcare-compliance-risk',
     name: 'AI Healthcare Compliance & Risk Management Platform',
     description: 'Intelligent platform for healthcare compliance and risk management that automates regulatory monitoring, risk assessment, and compliance reporting. Includes HIPAA compliance, audit preparation, and risk mitigation.',
@@ -418,6 +437,7 @@ export const SPECIALIZED_HEALTHCARE_BIOTECH_SERVICES_2025: ProductListing[] = [
     useCases: ['Compliance monitoring', 'Risk management', 'Audit preparation', 'Policy enforcement'],
     technologies: ['Healthcare Compliance', 'Risk Management', 'Regulatory Monitoring', 'Audit Support'],
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/ai-healthcare-compliance'

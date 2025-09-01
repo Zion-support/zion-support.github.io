@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { 
+import {
+
   Brain, 
   Zap, 
   Workflow, 
@@ -26,6 +27,7 @@ import {
 } from 'lucide-react';
 
 export default function AIBusinessProcessAutomationPlatform() {
+
   const features = [
     "Intelligent Workflow Design & Orchestration",
     "AI-Powered Decision Making & Routing",
@@ -50,6 +52,7 @@ export default function AIBusinessProcessAutomationPlatform() {
 
   const pricing = [
     {
+
       name: "Starter",
       price: "$299",
       period: "/month",
@@ -64,6 +67,7 @@ export default function AIBusinessProcessAutomationPlatform() {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$799",
       period: "/month",
@@ -79,6 +83,7 @@ export default function AIBusinessProcessAutomationPlatform() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$1,999",
       period: "/month",
@@ -98,24 +103,28 @@ export default function AIBusinessProcessAutomationPlatform() {
 
   const useCases = [
     {
+
       title: "HR Onboarding Automation",
       description: "Streamline employee onboarding with automated document processing, task assignments, and compliance checks",
       icon: Users,
       savings: "Save 15 hours per new hire"
     },
     {
+
       title: "Invoice Processing",
       description: "Automate invoice capture, approval workflows, and payment processing with AI-powered validation",
       icon: DollarSign,
       savings: "Reduce processing time by 80%"
     },
     {
+
       title: "Customer Service Routing",
       description: "Intelligently route customer inquiries to the right agents based on complexity and expertise",
       icon: Monitor,
       savings: "Improve response time by 70%"
     },
     {
+
       title: "Sales Process Management",
       description: "Automate lead scoring, follow-up scheduling, and opportunity tracking",
       icon: Target,
@@ -354,6 +363,7 @@ export default function AIBusinessProcessAutomationPlatform() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 ${
+
                     plan.popular 
                       ? 'border-cyan-500/50 bg-gradient-to-br from-white/5 to-cyan-900/20 scale-105' 
                       : 'border-white/10 hover:border-blue-400/50'
@@ -384,6 +394,7 @@ export default function AIBusinessProcessAutomationPlatform() {
                   </ul>
                   
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
                       : 'bg-zinc-700 text-white hover:bg-zinc-600'

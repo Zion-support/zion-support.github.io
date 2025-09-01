@@ -4,6 +4,7 @@ import { ProductListing              } from '@/types/listings';
 export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
   // AI-Powered Business Intelligence & Analytics
   {
+
     id: "ai-business-intelligence-suite",
     title: "AI Business Intelligence Suite",
     description: "Enterprise-grade AI-powered business intelligence platform with real-time analytics, predictive modeling, and automated insights generation. Transforms raw data into actionable business intelligence.",
@@ -13,6 +14,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     currency: "$",
     tags: ["AI Analytics", "Business Intelligence", "Predictive Modeling", "Real-time Insights"],
     author: {
+
       name: "Zion Tech Group",
       id: "ziontech",
       avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto = format&fit=crop&w=100&h=100",
@@ -41,6 +43,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       "Enable data-driven strategic planning"
     ],
     pricing: {
+
       monthly: 899,
       yearly: 8990,
       currency: "$",
@@ -48,12 +51,14 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     },
     link: "https://ziontechgroup.com/ai-business-intelligence",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
   },
   // AI-Powered Cybersecurity Platform
   {
+
     id: "ai-cybersecurity-platform",
     title: "AI Cybersecurity Platform",
     description: "Next-generation AI-powered cybersecurity platform with threat detection, automated response, and 24/7 monitoring. Protects against advanced cyber threats with machine learning algorithms.",
@@ -63,6 +68,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     currency: "$",
     tags: ["AI Security", "Threat Detection", "Automated Response", "24/7 Monitoring"],
     author: {
+
       name: "Zion Tech Group",
       id: "ziontech",
       avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
@@ -91,6 +97,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       "Ensure 99.9% threat detection rate"
     ],
     pricing: {
+
       monthly: 1299,
       yearly: 12990,
       currency: "$",
@@ -98,12 +105,14 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     },
     link: "https://ziontechgroup.com/ai-cybersecurity",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
   },
   // Quantum Computing Solutions
   {
+
     id: "quantum-computing-solutions",
     title: "Quantum Computing Solutions",
     description: "Cutting-edge quantum computing services for complex problem-solving, optimization, and research applications. Access to quantum hardware and quantum algorithm development.",
@@ -113,6 +122,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     currency: "$",
     tags: ["Quantum Computing", "Algorithm Development", "Optimization", "Research"],
     author: {
+
       name: "Zion Tech Group",
       id: "ziontech",
       avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
@@ -141,6 +151,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       "Access to cutting-edge quantum resources"
     ],
     pricing: {
+
       monthly: 2499,
       yearly: 24990,
       currency: "$",
@@ -148,12 +159,14 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     },
     link: "https://ziontechgroup.com/quantum-computing",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
   },
   // Blockchain & DeFi Solutions
   {
+
     id: "blockchain-defi-solutions",
     title: "Blockchain & DeFi Solutions",
     description: "Comprehensive blockchain development and DeFi platform solutions. Smart contract development, token creation, and decentralized application deployment.",
@@ -163,6 +176,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     currency: "$",
     tags: ["Blockchain", "DeFi", "Smart Contracts", "Token Development"],
     author: {
+
       name: "Zion Tech Group",
       id: "ziontech",
       avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
@@ -191,6 +205,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       "Comprehensive DeFi strategy implementation"
     ],
     pricing: {
+
       monthly: 799,
       yearly: 7990,
       currency: "$",
@@ -198,12 +213,14 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     },
     link: "https://ziontechgroup.com/blockchain-defi",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
   },
   // IoT Management Platform
   {
+
     id: "iot-management-platform",
     title: "IoT Management Platform",
     description: "Enterprise IoT device management platform with real-time monitoring, data analytics, and automated device management. Scalable solution for large IoT deployments.",
@@ -213,6 +230,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     currency: "$",
     tags: ["IoT", "Device Management", "Real-time Monitoring", "Data Analytics"],
     author: {
+
       name: "Zion Tech Group",
       id: "ziontech",
       avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
@@ -241,6 +259,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       "Automated device lifecycle management"
     ],
     pricing: {
+
       monthly: 599,
       yearly: 5990,
       currency: "$",
@@ -248,12 +267,14 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     },
     link: "https://ziontechgroup.com/iot-management",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
   },
   // AI-Powered Legal Document Automation
   {
+
     id: "ai-legal-document-automation",
     title: "AI Legal Document Automation",
     description: "Intelligent legal document generation, review, and analysis platform. Automates contract creation, legal research, and document review processes.",
@@ -263,6 +284,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     currency: "$",
     tags: ["Legal Tech", "Document Automation", "Contract Generation", "Legal Research"],
     author: {
+
       name: "Zion Tech Group",
       id: "ziontech",
       avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
@@ -291,6 +313,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       "Ensure compliance and risk mitigation"
     ],
     pricing: {
+
       monthly: 699,
       yearly: 6990,
       currency: "$",
@@ -298,12 +321,14 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     },
     link: "https://ziontechgroup.com/ai-legal-automation",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
   },
   // AI Healthcare Analytics Platform
   {
+
     id: "ai-healthcare-analytics",
     title: "AI Healthcare Analytics Platform",
     description: "Advanced healthcare analytics platform with AI-powered patient insights, predictive diagnostics, and healthcare optimization. HIPAA-compliant and FDA-ready.",
@@ -313,6 +338,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     currency: "$",
     tags: ["Healthcare", "AI Analytics", "Predictive Diagnostics", "HIPAA Compliant"],
     author: {
+
       name: "Zion Tech Group",
       id: "ziontech",
       avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
@@ -341,6 +367,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       "Ensure regulatory compliance"
     ],
     pricing: {
+
       monthly: 1499,
       yearly: 14990,
       currency: "$",
@@ -348,12 +375,14 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     },
     link: "https://ziontechgroup.com/ai-healthcare",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
   },
   // AI Financial Trading Platform
   {
+
     id: "ai-financial-trading",
     title: "AI Financial Trading Platform",
     description: "Advanced AI-powered financial trading platform with algorithmic trading, risk management, and market analysis. Real-time market insights and automated trading strategies.",
@@ -363,6 +392,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     currency: "$",
     tags: ["AI Trading", "Algorithmic Trading", "Risk Management", "Market Analysis"],
     author: {
+
       name: "Zion Tech Group",
       id: "ziontech",
       avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
@@ -391,6 +421,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       "Data-driven investment decisions"
     ],
     pricing: {
+
       monthly: 1999,
       yearly: 19990,
       currency: "$",
@@ -398,12 +429,14 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     },
     link: "https://ziontechgroup.com/ai-trading",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
   },
   // AI Supply Chain Optimization
   {
+
     id: "ai-supply-chain-optimization",
     title: "AI Supply Chain Optimization",
     description: "Intelligent supply chain optimization platform with demand forecasting, inventory management, and logistics optimization. Reduces costs and improves efficiency.",
@@ -413,6 +446,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     currency: "$",
     tags: ["Supply Chain", "AI Optimization", "Demand Forecasting", "Inventory Management"],
     author: {
+
       name: "Zion Tech Group",
       id: "ziontech",
       avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
@@ -441,6 +475,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       "Enhance supplier relationships"
     ],
     pricing: {
+
       monthly: 899,
       yearly: 8990,
       currency: "$",
@@ -448,12 +483,14 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     },
     link: "https://ziontechgroup.com/ai-supply-chain",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
   },
   // AI Customer Service Automation
   {
+
     id: "ai-customer-service-automation",
     title: "AI Customer Service Automation",
     description: "Intelligent customer service automation platform with AI chatbots, sentiment analysis, and automated ticket routing. Improves customer satisfaction and reduces support costs.",
@@ -463,6 +500,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     currency: "$",
     tags: ["Customer Service", "AI Chatbots", "Sentiment Analysis", "Ticket Automation"],
     author: {
+
       name: "Zion Tech Group",
       id: "ziontech",
       avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
@@ -491,6 +529,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       "24/7 automated customer support"
     ],
     pricing: {
+
       monthly: 599,
       yearly: 5990,
       currency: "$",
@@ -498,12 +537,14 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     },
     link: "https://ziontechgroup.com/ai-customer-service",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
   },
   // 5G Enterprise Solutions
   {
+
     id: "5g-enterprise-solutions",
     title: "5G Enterprise Solutions",
     description: "Comprehensive 5G enterprise solutions with private networks, edge computing, and IoT integration. Enables next-generation enterprise connectivity and applications.",
@@ -513,6 +554,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     currency: "$",
     tags: ["5G", "Enterprise Networks", "Edge Computing", "IoT Integration"],
     author: {
+
       name: "Zion Tech Group",
       id: "ziontech",
       avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
@@ -541,6 +583,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       "Future-proof enterprise infrastructure"
     ],
     pricing: {
+
       monthly: 2999,
       yearly: 29990,
       currency: "$",
@@ -548,12 +591,14 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     },
     link: "https://ziontechgroup.com/5g-enterprise",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
   },
   // Autonomous Business Operations Platform
   {
+
     id: "autonomous-business-operations",
     title: "Autonomous Business Operations Platform",
     description: "Revolutionary autonomous business operations platform that runs entire business processes without human intervention. AI-powered decision making and automated execution.",
@@ -563,6 +608,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     currency: "$",
     tags: ["Autonomous Operations", "AI Decision Making", "Business Automation", "Process Optimization"],
     author: {
+
       name: "Zion Tech Group",
       id: "ziontech",
       avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
@@ -591,6 +637,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       "Enable scalable business growth"
     ],
     pricing: {
+
       monthly: 3999,
       yearly: 39990,
       currency: "$",
@@ -598,12 +645,14 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     },
     link: "https://ziontechgroup.com/autonomous-operations",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
   },
   // AI-Powered IT Asset Management
   {
+
     id: "ai-it-asset-management",
     title: "AI-Powered IT Asset Management",
     description: "Intelligent IT asset management platform with automated discovery, lifecycle management, and cost optimization. Comprehensive IT infrastructure visibility and control.",
@@ -613,6 +662,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     currency: "$",
     tags: ["IT Asset Management", "Lifecycle Management", "Cost Optimization", "Infrastructure Visibility"],
     author: {
+
       name: "Zion Tech Group",
       id: "ziontech",
       avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
@@ -641,6 +691,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       "Optimize IT infrastructure investments"
     ],
     pricing: {
+
       monthly: 799,
       yearly: 7990,
       currency: "$",
@@ -648,12 +699,14 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     },
     link: "https://ziontechgroup.com/ai-it-assets",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
   },
   // SOC2 Compliance Automation
   {
+
     id: "soc2-compliance-automation",
     title: "SOC2 Compliance Automation",
     description: "Automated SOC2 compliance platform with continuous monitoring, automated testing, and compliance reporting. Ensures ongoing security and compliance standards.",
@@ -663,6 +716,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     currency: "$",
     tags: ["SOC2 Compliance", "Automated Testing", "Continuous Monitoring", "Security Standards"],
     author: {
+
       name: "Zion Tech Group",
       id: "ziontech",
       avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
@@ -691,6 +745,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       "Streamline audit processes"
     ],
     pricing: {
+
       monthly: 1299,
       yearly: 12990,
       currency: "$",
@@ -698,12 +753,14 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     },
     link: "https://ziontechgroup.com/soc2-compliance",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
   },
   // AI Autonomous Research Assistant
   {
+
     id: "ai-autonomous-research-assistant",
     title: "AI Autonomous Research Assistant",
     description: "Intelligent research assistant that autonomously conducts research, analyzes data, and generates comprehensive reports. Accelerates research processes across all industries.",
@@ -713,6 +770,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     currency: "$",
     tags: ["AI Research", "Autonomous Analysis", "Data Processing", "Report Generation"],
     author: {
+
       name: "Zion Tech Group",
       id: "ziontech",
       avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
@@ -741,6 +799,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       "Enable data-driven decision making"
     ],
     pricing: {
+
       monthly: 899,
       yearly: 8990,
       currency: "$",

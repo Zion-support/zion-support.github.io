@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Phone, 
   Mail, 
   MapPin, 
@@ -61,10 +62,12 @@ import {
 } from 'lucide-react';
 
 export function EnhancedFooter() {
+
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
     {
+
       title: 'Featured Services',
       links: [
         { name: 'AI Content Creation Studio Pro', href: '/services/AI-Content-Creation-Studio-Pro', icon: PenTool, featured: true },
@@ -75,6 +78,7 @@ export function EnhancedFooter() {
       ]
     },
     {
+
       title: 'Core Services',
       links: [
         { name: 'Micro SAAS Solutions', href: '/services/micro-saas-solutions', icon: Rocket },
@@ -87,6 +91,7 @@ export function EnhancedFooter() {
       ]
     },
     {
+
       title: 'Solutions',
       links: [
         { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building },
@@ -98,6 +103,7 @@ export function EnhancedFooter() {
       ]
     },
     {
+
       title: 'Company',
       links: [
         { name: 'About Us', href: '/about', icon: Users },
@@ -109,6 +115,7 @@ export function EnhancedFooter() {
       ]
     },
     {
+
       title: 'Resources',
       links: [
         { name: 'Blog', href: '/blog', icon: BookOpen },
@@ -205,10 +212,12 @@ export function EnhancedFooter() {
                     <Link
                       to={link.href}
                       className={`flex items-center space-x-2 text-gray-300 hover:text-white transition-colors group ${
+
                         link.featured ? 'font-medium text-blue-300 hover:text-blue-200' : ''
                       }`}
                     >
                       <link.icon className={`w-4 h-4 transition-transform group-hover:scale-110 ${
+
                         link.featured ? 'text-blue-400' : 'text-blue-400'
                       }`} />
                       <span className="text-sm">{link.name}</span>

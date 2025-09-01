@@ -1,4 +1,5 @@
 export interface ComprehensiveITService2026 {
+
   id: string;
   title: string;
   description: string;
@@ -18,11 +19,13 @@ export interface ComprehensiveITService2026 {
   roi: string;
   innovationLevel: string;
   contactInfo: {
+
     phone: string;
     email: string;
     website: string;
   };
   technicalSpecs?: {
+
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
@@ -38,6 +41,7 @@ export interface ComprehensiveITService2026 {
 export const COMPREHENSIVE_IT_SERVICES_2026: ComprehensiveITService2026[] = [
   // Cloud Infrastructure & DevOps Services
   {
+
     id: 'cloud-infrastructure-devops',
     title: 'Cloud Infrastructure & DevOps Services',
     description: 'Comprehensive cloud infrastructure management and DevOps automation services for scalable, secure, and efficient application deployment.',
@@ -86,11 +90,13 @@ export const COMPREHENSIVE_IT_SERVICES_2026: ComprehensiveITService2026[] = [
     roi: '250-400%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['AWS', 'Azure', 'GCP', 'Kubernetes', 'Docker', 'Terraform'],
       integrations: ['GitHub', 'GitLab', 'Jenkins', 'CircleCI', 'Datadog', 'New Relic'],
       apiEndpoints: 200,
@@ -105,6 +111,7 @@ export const COMPREHENSIVE_IT_SERVICES_2026: ComprehensiveITService2026[] = [
 
   // Cybersecurity & Threat Intelligence
   {
+
     id: 'cybersecurity-threat-intelligence',
     title: 'Cybersecurity & Threat Intelligence',
     description: 'Advanced cybersecurity services including threat detection, incident response, and security infrastructure management for comprehensive protection.',
@@ -153,11 +160,13 @@ export const COMPREHENSIVE_IT_SERVICES_2026: ComprehensiveITService2026[] = [
     roi: '300-500%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['SIEM', 'EDR', 'XDR', 'SOAR', 'Threat Intelligence Platforms'],
       integrations: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Splunk', 'QRadar'],
       apiEndpoints: 150,
@@ -172,6 +181,7 @@ export const COMPREHENSIVE_IT_SERVICES_2026: ComprehensiveITService2026[] = [
 
   // Data Analytics & Business Intelligence
   {
+
     id: 'data-analytics-business-intelligence',
     title: 'Data Analytics & Business Intelligence',
     description: 'Comprehensive data analytics and business intelligence services to transform raw data into actionable insights for strategic decision-making.',
@@ -220,11 +230,13 @@ export const COMPREHENSIVE_IT_SERVICES_2026: ComprehensiveITService2026[] = [
     roi: '280-450%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['Snowflake', 'BigQuery', 'Redshift', 'Tableau', 'Power BI', 'Python'],
       integrations: ['Salesforce', 'HubSpot', 'QuickBooks', 'Google Analytics', 'Custom APIs'],
       apiEndpoints: 180,
@@ -239,6 +251,7 @@ export const COMPREHENSIVE_IT_SERVICES_2026: ComprehensiveITService2026[] = [
 
   // Network Infrastructure & Security
   {
+
     id: 'network-infrastructure-security',
     title: 'Network Infrastructure & Security',
     description: 'Comprehensive network infrastructure design, implementation, and security services for reliable, secure, and high-performance networking.',
@@ -287,11 +300,13 @@ export const COMPREHENSIVE_IT_SERVICES_2026: ComprehensiveITService2026[] = [
     roi: '220-380%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['Cisco', 'Juniper', 'Aruba', 'Fortinet', 'Palo Alto Networks'],
       integrations: ['Active Directory', 'LDAP', 'RADIUS', 'SIEM systems', 'Monitoring tools'],
       apiEndpoints: 100,
@@ -306,6 +321,7 @@ export const COMPREHENSIVE_IT_SERVICES_2026: ComprehensiveITService2026[] = [
 
   // Managed IT Services
   {
+
     id: 'managed-it-services',
     title: 'Managed IT Services',
     description: 'Comprehensive managed IT services including helpdesk support, system administration, and proactive IT management for businesses of all sizes.',
@@ -354,11 +370,13 @@ export const COMPREHENSIVE_IT_SERVICES_2026: ComprehensiveITService2026[] = [
     roi: '180-300%',
     innovationLevel: 'Standard',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['Windows Server', 'Linux', 'Active Directory', 'Office 365', 'Backup solutions'],
       integrations: ['RMM tools', 'PSA systems', 'Monitoring platforms', 'Security tools'],
       apiEndpoints: 80,
@@ -373,6 +391,7 @@ export const COMPREHENSIVE_IT_SERVICES_2026: ComprehensiveITService2026[] = [
 
   // Software Development & Custom Solutions
   {
+
     id: 'software-development-custom-solutions',
     title: 'Software Development & Custom Solutions',
     description: 'Custom software development services including web applications, mobile apps, and enterprise software solutions tailored to business needs.',
@@ -421,11 +440,13 @@ export const COMPREHENSIVE_IT_SERVICES_2026: ComprehensiveITService2026[] = [
     roi: '300-600%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['React', 'Node.js', 'Python', 'Java', 'PostgreSQL', 'MongoDB'],
       integrations: ['Third-party APIs', 'Payment gateways', 'Authentication systems', 'Cloud services'],
       apiEndpoints: 200,
@@ -440,6 +461,7 @@ export const COMPREHENSIVE_IT_SERVICES_2026: ComprehensiveITService2026[] = [
 
   // Digital Transformation Consulting
   {
+
     id: 'digital-transformation-consulting',
     title: 'Digital Transformation Consulting',
     description: 'Strategic digital transformation consulting services to help organizations modernize their technology, processes, and business models.',
@@ -488,11 +510,13 @@ export const COMPREHENSIVE_IT_SERVICES_2026: ComprehensiveITService2026[] = [
     roi: '400-700%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['Strategy frameworks', 'Assessment tools', 'Process mapping', 'Change management platforms'],
       integrations: ['Project management tools', 'Communication platforms', 'Analytics tools', 'Survey platforms'],
       apiEndpoints: 50,
@@ -507,6 +531,7 @@ export const COMPREHENSIVE_IT_SERVICES_2026: ComprehensiveITService2026[] = [
 
   // IoT & Edge Computing Solutions
   {
+
     id: 'iot-edge-computing-solutions',
     title: 'IoT & Edge Computing Solutions',
     description: 'Comprehensive IoT and edge computing solutions for connected devices, real-time data processing, and intelligent automation.',
@@ -555,11 +580,13 @@ export const COMPREHENSIVE_IT_SERVICES_2026: ComprehensiveITService2026[] = [
     roi: '320-500%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['Kubernetes', 'Docker', 'MQTT', 'Node.js', 'Python', 'TensorFlow'],
       integrations: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Custom protocols', 'Legacy systems'],
       apiEndpoints: 200,
@@ -574,6 +601,7 @@ export const COMPREHENSIVE_IT_SERVICES_2026: ComprehensiveITService2026[] = [
 
   // Data Center & Colocation Services
   {
+
     id: 'data-center-colocation-services',
     title: 'Data Center & Colocation Services',
     description: 'Professional data center design, implementation, and colocation services for reliable, secure, and scalable infrastructure.',
@@ -622,11 +650,13 @@ export const COMPREHENSIVE_IT_SERVICES_2026: ComprehensiveITService2026[] = [
     roi: '350-600%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['HVAC systems', 'UPS systems', 'Generator systems', 'Security systems', 'Monitoring tools'],
       integrations: ['Network equipment', 'Storage systems', 'Server infrastructure', 'Management platforms'],
       apiEndpoints: 100,
@@ -641,6 +671,7 @@ export const COMPREHENSIVE_IT_SERVICES_2026: ComprehensiveITService2026[] = [
 
   // IT Training & Certification
   {
+
     id: 'it-training-certification',
     title: 'IT Training & Certification',
     description: 'Comprehensive IT training and certification programs for individuals and organizations to enhance technical skills and knowledge.',
@@ -689,11 +720,13 @@ export const COMPREHENSIVE_IT_SERVICES_2026: ComprehensiveITService2026[] = [
     roi: '150-300%',
     innovationLevel: 'Standard',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['Learning management system', 'Virtual labs', 'Video streaming', 'Assessment tools'],
       integrations: ['Certification bodies', 'Learning platforms', 'Progress tracking', 'Communication tools'],
       apiEndpoints: 50,

@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { 
+import {
+
   Brain, 
   Users, 
   BarChart3, 
@@ -27,6 +28,7 @@ import {
 } from 'lucide-react';
 
 export default function AICustomerExperienceAnalyticsPlatform() {
+
   const features = [
     "Real-time Customer Journey Mapping",
     "AI-Powered Sentiment Analysis",
@@ -51,6 +53,7 @@ export default function AICustomerExperienceAnalyticsPlatform() {
 
   const pricing = [
     {
+
       name: "Starter",
       price: "$199",
       period: "/month",
@@ -65,6 +68,7 @@ export default function AICustomerExperienceAnalyticsPlatform() {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$599",
       period: "/month",
@@ -81,6 +85,7 @@ export default function AICustomerExperienceAnalyticsPlatform() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$1,499",
       period: "/month",
@@ -100,24 +105,28 @@ export default function AICustomerExperienceAnalyticsPlatform() {
 
   const useCases = [
     {
+
       title: "E-commerce Customer Journey",
       description: "Track customer behavior across your online store to optimize conversion funnels and reduce cart abandonment",
       icon: ShoppingCart,
       impact: "Increase conversions by 40%"
     },
     {
+
       title: "Customer Support Optimization",
       description: "Analyze support interactions to identify pain points and improve response quality and speed",
       icon: MessageCircle,
       impact: "Reduce support tickets by 30%"
     },
     {
+
       title: "Product Experience Enhancement",
       description: "Understand how customers use your products to identify improvement opportunities and new features",
       icon: Target,
       impact: "Boost product adoption by 50%"
     },
     {
+
       title: "Marketing Campaign Optimization",
       description: "Track campaign performance and customer engagement to optimize marketing spend and messaging",
       icon: TrendingUp,
@@ -134,24 +143,28 @@ export default function AICustomerExperienceAnalyticsPlatform() {
 
   const analyticsTypes = [
     {
+
       name: "Behavioral Analytics",
       description: "Track how customers interact with your products and services",
       icon: Eye,
       metrics: ["Click patterns", "Navigation paths", "Feature usage", "Session duration"]
     },
     {
+
       name: "Sentiment Analysis",
       description: "Understand customer emotions and satisfaction levels",
       icon: Heart,
       metrics: ["Emotion detection", "Satisfaction scoring", "Feedback analysis", "Trend identification"]
     },
     {
+
       name: "Predictive Analytics",
       description: "Forecast customer behavior and identify opportunities",
       icon: TrendingUp,
       metrics: ["Churn prediction", "LTV forecasting", "Next-best-action", "Demand prediction"]
     },
     {
+
       name: "Journey Analytics",
       description: "Map complete customer experiences across touchpoints",
       icon: Globe,
@@ -432,6 +445,7 @@ export default function AICustomerExperienceAnalyticsPlatform() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 ${
+
                     plan.popular 
                       ? 'border-cyan-500/50 bg-gradient-to-br from-white/5 to-cyan-900/20 scale-105' 
                       : 'border-white/10 hover:border-blue-400/50'
@@ -462,6 +476,7 @@ export default function AICustomerExperienceAnalyticsPlatform() {
                   </ul>
                   
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
                       : 'bg-zinc-700 text-white hover:bg-zinc-600'

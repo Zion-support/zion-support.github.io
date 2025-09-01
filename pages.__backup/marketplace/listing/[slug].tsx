@@ -24,7 +24,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: 'blocking' };
 };
 
-export const getStaticProps: GetStaticProps<ListingProps> = async ({ params }) => {
+export const getStaticProps: GetStaticProps<ListingProps> = async ({
+  params,
+}) => {
   const slug = params?.slug as string;
   const listing = MARKETPLACE_LISTINGS.find(l => l.id === slug) || null;
   if (!listing) {

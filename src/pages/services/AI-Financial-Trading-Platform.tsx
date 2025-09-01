@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   TrendingUp, 
   Brain, 
   Shield, 
@@ -43,23 +44,28 @@ import {
 import { SEO } from '@/components/SEO';
 
 export default function AIFinancialTradingPlatform() {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Trading Algorithms",
       description: "Advanced machine learning algorithms with 87.3% prediction accuracy for market movements"
     },
     {
+
       icon: TrendingUp,
       title: "Real-Time Market Analysis",
       description: "Instant market data processing with AI-driven insights and trend identification"
     },
     {
+
       icon: Shield,
       title: "Enterprise Security",
       description: "Bank-level security with end-to-end encryption and regulatory compliance"
     },
     {
+
       icon: Clock,
       title: "24/7 Trading Operations",
       description: "Continuous market monitoring and automated trading execution worldwide"
@@ -68,24 +74,28 @@ export default function AIFinancialTradingPlatform() {
 
   const services = [
     {
+
       title: "Algorithmic Trading",
       description: "AI-powered trading algorithms with backtesting and optimization capabilities",
       icon: LineChart,
       features: ["Strategy backtesting", "Risk management", "Portfolio optimization", "Performance analytics"]
     },
     {
+
       title: "Market Intelligence",
       description: "Real-time market analysis with AI-driven insights and predictive modeling",
       icon: BarChart3,
       features: ["Sentiment analysis", "News impact analysis", "Technical indicators", "Market forecasting"]
     },
     {
+
       title: "Portfolio Management",
       description: "Intelligent portfolio optimization with risk assessment and rebalancing",
       icon: PieChart,
       features: ["Asset allocation", "Risk assessment", "Rebalancing automation", "Performance tracking"]
     },
     {
+
       title: "Risk Management",
       description: "Comprehensive risk management with real-time monitoring and alerts",
       icon: Shield,
@@ -106,6 +116,7 @@ export default function AIFinancialTradingPlatform() {
 
   const pricing = [
     {
+
       plan: "Starter",
       price: "$499",
       period: "/month",
@@ -120,6 +131,7 @@ export default function AIFinancialTradingPlatform() {
       popular: false
     },
     {
+
       plan: "Professional",
       price: "$1,999",
       period: "/month",
@@ -136,6 +148,7 @@ export default function AIFinancialTradingPlatform() {
       popular: true
     },
     {
+
       plan: "Institutional",
       price: "$4,999",
       period: "/month",
@@ -155,6 +168,7 @@ export default function AIFinancialTradingPlatform() {
 
   const marketStats = [
     {
+
       metric: "Market Volume",
       value: "$2.1T",
       description: "Daily global trading volume",
@@ -162,6 +176,7 @@ export default function AIFinancialTradingPlatform() {
       color: "from-green-400 to-emerald-500"
     },
     {
+
       metric: "Success Rate",
       value: "87.3%",
       description: "AI prediction accuracy",
@@ -169,6 +184,7 @@ export default function AIFinancialTradingPlatform() {
       color: "from-blue-400 to-purple-500"
     },
     {
+
       metric: "ROI",
       value: "156%",
       description: "Average annual return",
@@ -176,6 +192,7 @@ export default function AIFinancialTradingPlatform() {
       color: "from-purple-400 to-pink-500"
     },
     {
+
       metric: "Response Time",
       value: "<50ms",
       description: "Market execution speed",
@@ -432,6 +449,7 @@ export default function AIFinancialTradingPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 border rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'border-green-400/50 bg-gradient-to-b from-green-500/10 to-slate-800/50' 
                     : 'border-slate-700/50'
@@ -465,6 +483,7 @@ export default function AIFinancialTradingPlatform() {
                 <Link
                   to="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white hover:from-green-400 hover:to-blue-500'
                       : 'bg-slate-700 text-white hover:bg-slate-600'

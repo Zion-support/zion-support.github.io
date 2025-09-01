@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   FileText, 
   Zap, 
   Brain, 
@@ -29,38 +30,45 @@ import {
 import { Link } from 'react-router-dom';
 
 export default function AIDocumentProcessingAutomation() {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Document Understanding",
       description: "Advanced NLP and computer vision to extract, classify, and process documents with human-like accuracy",
       benefits: ["99.5% accuracy", "Multi-language support", "Context understanding"]
     },
     {
+
       icon: Zap,
       title: "Intelligent Workflow Automation",
       description: "Automate document processing workflows with smart routing, approval chains, and exception handling",
       benefits: ["Workflow automation", "Smart routing", "Exception handling"]
     },
     {
+
       icon: FileText,
       title: "Multi-Format Document Support",
       description: "Process PDFs, images, scanned documents, emails, and more with unified extraction capabilities",
       benefits: ["Universal format support", "OCR capabilities", "Email processing"]
     },
     {
+
       icon: BarChart3,
       title: "Real-time Analytics & Insights",
       description: "Track processing metrics, identify bottlenecks, and optimize workflows with detailed analytics",
       benefits: ["Live metrics", "Performance insights", "Optimization recommendations"]
     },
     {
+
       icon: Shield,
       title: "Enterprise Security & Compliance",
       description: "Bank-level security with SOC2, GDPR, and HIPAA compliance for sensitive document processing",
       benefits: ["Enterprise security", "Compliance ready", "Data protection"]
     },
     {
+
       icon: Cloud,
       title: "Scalable Cloud Infrastructure",
       description: "Process millions of documents with auto-scaling infrastructure and 99.9% uptime guarantee",
@@ -70,6 +78,7 @@ export default function AIDocumentProcessingAutomation() {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$299",
       period: "/month",
@@ -86,6 +95,7 @@ export default function AIDocumentProcessingAutomation() {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$799",
       period: "/month",
@@ -104,6 +114,7 @@ export default function AIDocumentProcessingAutomation() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$1,999",
       period: "/month",
@@ -125,21 +136,25 @@ export default function AIDocumentProcessingAutomation() {
 
   const useCases = [
     {
+
       industry: "Financial Services",
       description: "Automate loan processing, KYC verification, and compliance document review",
       metrics: ["Processing speed", "Accuracy rates", "Compliance scores"]
     },
     {
+
       industry: "Healthcare",
       description: "Process medical records, insurance claims, and patient documentation",
       metrics: ["Document accuracy", "Processing time", "Compliance adherence"]
     },
     {
+
       industry: "Legal",
       description: "Automate contract review, legal document analysis, and discovery processes",
       metrics: ["Review accuracy", "Time savings", "Risk identification"]
     },
     {
+
       industry: "Manufacturing",
       description: "Process invoices, purchase orders, and quality control documentation",
       metrics: ["Processing efficiency", "Error reduction", "Cost savings"]
@@ -266,6 +281,7 @@ export default function AIDocumentProcessingAutomation() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-2xl p-8 ${
+
                   plan.popular 
                     ? 'border-cyan-500/50 shadow-lg shadow-cyan-500/25' 
                     : 'border-slate-700'
@@ -298,6 +314,7 @@ export default function AIDocumentProcessingAutomation() {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                     : 'bg-slate-700 text-white hover:bg-slate-600'

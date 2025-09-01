@@ -3,6 +3,7 @@
 ## Production Build
 
 1. Build the application:
+
 ```bash
 npm run build
 ```
@@ -47,4 +48,5 @@ VITE_APP_ENV=production
 - Set up uptime monitoring
 
 ---
-*Generated automatically by Smart Documentation Generator*
+
+_Generated automatically by Smart Documentation Generator_

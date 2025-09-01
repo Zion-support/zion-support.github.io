@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
+
   Menu, 
   X, 
   ChevronDown, 
@@ -17,13 +18,16 @@ import {
 } from 'lucide-react';
 
 const ModernNavigation = () => {
+
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
 
   useEffect(() => {
+
     const handleScroll = () => {
+
       setIsScrolled(window.scrollY > 20);
     };
 
@@ -33,7 +37,8 @@ const ModernNavigation = () => {
 
   const navigationItems = [
     { name: 'Home', href: '/' },
-    { 
+    {
+
       name: 'Services', 
       href: '/services',
       dropdown: [
@@ -55,16 +60,19 @@ const ModernNavigation = () => {
   ];
 
   const toggleDropdown = (name: string) => {
+
     setActiveDropdown(activeDropdown === name ? null : name);
   };
 
   const closeMobileMenu = () => {
+
     setIsOpen(false);
     setActiveDropdown(null);
   };
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+
       isScrolled 
         ? 'bg-gray-900/95 backdrop-blur-md border-b border-cyan-400/20' 
         : 'bg-transparent'
@@ -93,6 +101,7 @@ const ModernNavigation = () => {
                     >
                       <span>{item.name}</span>
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+
                         activeDropdown === item.name ? 'rotate-180' : ''
                       }`} />
                     </button>
@@ -136,6 +145,7 @@ const ModernNavigation = () => {
                   <Link
                     to={item.href}
                     className={`text-gray-300 hover:text-cyan-300 transition-colors duration-200 py-2 ${
+
                       location.pathname === item.href ? 'text-cyan-400' : ''
                     }`}
                   >
@@ -209,6 +219,7 @@ const ModernNavigation = () => {
                         >
                           <span>{item.name}</span>
                           <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+
                             activeDropdown === item.name ? 'rotate-180' : ''
                           }`} />
                         </button>
@@ -242,6 +253,7 @@ const ModernNavigation = () => {
                         to={item.href}
                         onClick={closeMobileMenu}
                         className={`block px-3 py-2 rounded-lg transition-colors duration-200 ${
+
                           location.pathname === item.href
                             ? 'text-cyan-400 bg-cyan-400/10'
                             : 'text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50'

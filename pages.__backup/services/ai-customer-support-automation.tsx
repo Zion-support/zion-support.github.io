@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  MessageSquare, 
-  Users, 
-  Zap, 
-  Clock, 
-  CheckCircle, 
+import {
+  MessageSquare,
+  Users,
+  Zap,
+  Clock,
+  CheckCircle,
   ArrowRight,
   Headphones,
   Globe,
@@ -15,7 +15,7 @@ import {
   Brain,
   Shield,
   Phone,
-  Mail
+  Mail,
 } from 'lucide-react';
 
 export default function AICustomerSupportAutomation() {
@@ -23,33 +23,39 @@ export default function AICustomerSupportAutomation() {
     {
       icon: MessageSquare,
       title: '24/7 Chatbot Support',
-      description: 'Intelligent chatbots that provide instant responses and handle common customer inquiries.'
+      description:
+        'Intelligent chatbots that provide instant responses and handle common customer inquiries.',
     },
     {
       icon: Brain,
       title: 'Natural Language Processing',
-      description: 'Advanced NLP that understands customer intent and provides accurate, contextual responses.'
+      description:
+        'Advanced NLP that understands customer intent and provides accurate, contextual responses.',
     },
     {
       icon: Users,
       title: 'Human-AI Handoff',
-      description: 'Seamless escalation to human agents when complex issues require personal attention.'
+      description:
+        'Seamless escalation to human agents when complex issues require personal attention.',
     },
     {
       icon: Zap,
       title: 'Automated Ticket Routing',
-      description: 'Smart ticket routing that directs inquiries to the most qualified support agents.'
+      description:
+        'Smart ticket routing that directs inquiries to the most qualified support agents.',
     },
     {
       icon: Clock,
       title: 'Response Time Optimization',
-      description: 'Reduce response times and improve customer satisfaction with automated workflows.'
+      description:
+        'Reduce response times and improve customer satisfaction with automated workflows.',
     },
     {
       icon: BarChart3,
       title: 'Performance Analytics',
-      description: 'Comprehensive analytics to monitor support performance and identify improvement areas.'
-    }
+      description:
+        'Comprehensive analytics to monitor support performance and identify improvement areas.',
+    },
   ];
 
   const benefits = [
@@ -58,30 +64,30 @@ export default function AICustomerSupportAutomation() {
     'Increase customer satisfaction scores',
     'Handle multiple inquiries simultaneously',
     'Provide consistent support quality',
-    'Scale support operations efficiently'
+    'Scale support operations efficiently',
   ];
 
   const supportChannels = [
     {
       name: 'Live Chat',
       description: 'AI-powered live chat with instant responses.',
-      icon: MessageSquare
+      icon: MessageSquare,
     },
     {
       name: 'Email Support',
       description: 'Automated email categorization and response.',
-      icon: Mail
+      icon: Mail,
     },
     {
       name: 'Phone Support',
       description: 'Intelligent call routing and IVR systems.',
-      icon: Phone
+      icon: Phone,
     },
     {
       name: 'Social Media',
       description: 'Monitor and respond to social media inquiries.',
-      icon: Globe
-    }
+      icon: Globe,
+    },
   ];
 
   const industries = [
@@ -92,7 +98,7 @@ export default function AICustomerSupportAutomation() {
     'Travel & Hospitality',
     'Education & Training',
     'Real Estate',
-    'Manufacturing'
+    'Manufacturing',
   ];
 
   return (
@@ -110,8 +116,9 @@ export default function AICustomerSupportAutomation() {
                 AI Customer Support Automation
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600 lg:text-xl">
-                Transform your customer support with AI-powered automation that provides instant, 
-                accurate responses and scales your support operations efficiently.
+                Transform your customer support with AI-powered automation that
+                provides instant, accurate responses and scales your support
+                operations efficiently.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
@@ -124,7 +131,8 @@ export default function AICustomerSupportAutomation() {
                   href="/services"
                   className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600"
                 >
-                  View All Services <ArrowRight className="ml-2 h-5 w-5 inline" />
+                  View All Services{' '}
+                  <ArrowRight className="ml-2 h-5 w-5 inline" />
                 </Link>
               </div>
             </motion.div>
@@ -140,10 +148,11 @@ export default function AICustomerSupportAutomation() {
               Platform Features
             </h2>
             <p className="mt-6 text-lg text-gray-600">
-              Our AI support automation platform provides comprehensive tools to enhance your customer support experience.
+              Our AI support automation platform provides comprehensive tools to
+              enhance your customer support experience.
             </p>
           </div>
-          
+
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => (
               <motion.div
@@ -156,7 +165,9 @@ export default function AICustomerSupportAutomation() {
                 <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 mb-6 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="h-8 w-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-600">{feature.description}</p>
               </motion.div>
             ))}
@@ -173,7 +184,8 @@ export default function AICustomerSupportAutomation() {
                 Why Choose AI Support Automation?
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Our platform delivers measurable results that transform your customer support operations and improve satisfaction.
+                Our platform delivers measurable results that transform your
+                customer support operations and improve satisfaction.
               </p>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -218,10 +230,11 @@ export default function AICustomerSupportAutomation() {
               Multi-Channel Support
             </h2>
             <p className="mt-6 text-lg text-gray-600">
-              Provide consistent support across all customer touchpoints with our integrated platform.
+              Provide consistent support across all customer touchpoints with
+              our integrated platform.
             </p>
           </div>
-          
+
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {supportChannels.map((channel, index) => (
               <motion.div
@@ -234,7 +247,9 @@ export default function AICustomerSupportAutomation() {
                 <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 mb-6 group-hover:scale-110 transition-transform duration-300">
                   <channel.icon className="h-8 w-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{channel.name}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  {channel.name}
+                </h3>
                 <p className="text-gray-600 text-sm">{channel.description}</p>
               </motion.div>
             ))}
@@ -250,9 +265,10 @@ export default function AICustomerSupportAutomation() {
               Industries We Serve
             </h2>
             <p className="text-lg text-gray-600 mb-12">
-              Our AI support automation platform works across industries, providing tailored solutions for your specific support needs.
+              Our AI support automation platform works across industries,
+              providing tailored solutions for your specific support needs.
             </p>
-            
+
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {industries.map((industry, index) => (
                 <motion.div
@@ -264,7 +280,9 @@ export default function AICustomerSupportAutomation() {
                 >
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-6 w-6 text-blue-500" />
-                    <span className="font-medium text-gray-900">{industry}</span>
+                    <span className="font-medium text-gray-900">
+                      {industry}
+                    </span>
                   </div>
                 </motion.div>
               ))}
@@ -281,7 +299,8 @@ export default function AICustomerSupportAutomation() {
               Ready to Transform Your Support?
             </h2>
             <p className="mt-6 text-lg leading-8 text-blue-100">
-              Let's discuss how our AI support automation can revolutionize your customer support operations.
+              Let's discuss how our AI support automation can revolutionize your
+              customer support operations.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
