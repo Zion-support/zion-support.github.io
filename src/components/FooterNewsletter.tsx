@@ -1,1 +1,0 @@
-// // // // // // // // // // // console.error("Newsletter subscription failed:", error)} finally { setIsSubmitting(false); setTimeout(() => setIsSubmitted(false), 3000)} catch (error) { 

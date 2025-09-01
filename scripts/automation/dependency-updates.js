@@ -5,7 +5,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 const __dirname = path.dirname(__filename);
 // // // // // // // console.log('📦 Starting continuous dependency updates automation...');
-=======
 // // // console.log('📦 Starting continuous dependency updates automation...');
 // Get automation interval from environment variable (default: 6 hours)
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 21600000; // 6 hours
@@ -72,8 +71,7 @@ async function runDependencyUpdates() {
     }
     // Check for major version updates
     // // // // // // // console.log('🔍 Checking for major version updates...');
-=======
-    try {
+try {
       const outdated = JSON.parse(outdatedOutput);
       const majorUpdates = Object.entries(outdated).filter(([pkg, info]) => {
         const current = info.current.split('.')[0];
@@ -121,14 +119,12 @@ async function runDependencyUpdates() {
       // // // // // // // console.log('✅ Tests passed after updates');
     } catch (error) {
       // // // // // // // console.log('❌ Tests failed after updates - rolling back...');
-=======
-      execSync('npm install', { stdio: 'inherit' });
+execSync('npm install', { stdio: 'inherit' });
       // Don't exit, just log the error and continue
     // Generate dependency update report
   status: 'completed'
 };
-=======
-    const reportPath = path.join(process.cwd(), 'dependency-updates-report.json');
+const reportPath = path.join(process.cwd(), 'dependency-updates-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     // // // console.log(`📊 Report saved to ${reportPath}`);
     // // // console.log('✅ Continuous dependency updates completed successfully');
@@ -138,13 +134,11 @@ async function runDependencyUpdates() {
     // // // // // // // console.log('✅ Continuous dependency updates completed successfully');
   } catch (error) {
     // // // // // // // console.error('❌ Continuous dependency updates failed:', error.message);
-=======
-    // Don't exit, just log the error and continue
+// Don't exit, just log the error and continue
 // Main continuous loop
 async function runContinuous() {
   // // // // // // // console.log(`🚀 Starting continuous dependency updates with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
-=======
-  // // // console.log(`🚀 Starting continuous dependency updates with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+// // // console.log(`🚀 Starting continuous dependency updates with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   // Run initial dependency updates
   await runDependencyUpdates();
   // Set up continuous execution
@@ -156,8 +150,7 @@ async function runContinuous() {
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   // // // // // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
-=======
-  // // // console.log(`✅ Continuous dependency updates running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+// // // console.log(`✅ Continuous dependency updates running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
@@ -165,15 +158,13 @@ process.on('SIGINT', () => {
 });
 process.on('SIGTERM', () => {
   // // // // // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
-=======
-  // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
+// // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
   process.exit(0);
 });
 // Start the continuous dependency updates
 runContinuous().catch(error => {
   // // // // // // // console.error('❌ Failed to start continuous dependency updates:', error);
-=======
-  // // // console.error('❌ Failed to start continuous dependency updates:', error);
+// // // console.error('❌ Failed to start continuous dependency updates:', error);
   process.exit(1);
 });
 }}}}}}}}}}

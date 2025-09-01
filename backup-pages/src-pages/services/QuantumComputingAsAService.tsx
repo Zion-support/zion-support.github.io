@@ -1,7 +1,6 @@
 
 const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 
-  
     {;
       icon: Target,;
       title: 'Quantum Simulation',;
@@ -9,12 +8,10 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
       color: 'from-indigo-500 to-purple-500'};
   ];
 
-  
         'On-premise deployment options',;
         'Research partnerships';
       ],;
-=======
-        'Unlimited quantum computing hours','
+'Unlimited quantum computing hours','
         'Custom quantum hardware access','
         'Dedicated quantum team','
         '24/7 phone support','
@@ -30,7 +27,6 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
       metrics: ['40% cost reduction',Optimal route planning',Real-time optimization']};
   ];
 
-  
     'Python',Qiskit',Cirq',PennyLane',Q#',Julia',MATLAB',;
     'AWS Braket',Azure Quantum',Google Cloud',IBM Quantum',;
     'REST APIs',GraphQL',Webhooks',Docker',Kubernetes';
@@ -336,32 +332,17 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 transition = {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}`
                 className={`bg-slate-800 rounded-xl p-8 border-2 ${
@@ -435,32 +416,17 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 transition = {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}"
                 className="bg-slate-800 rounded-xl p-6 border border-slate-700"

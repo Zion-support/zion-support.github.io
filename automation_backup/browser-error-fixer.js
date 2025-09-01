@@ -77,12 +77,7 @@ class BrowserErrorFixer {
       // console.log(`⚠️  No fix strategy identified for this error`);
     }
   }
-<<<<<<<< HEAD:automation_backup/browser-error-fixer.jsx
-
-========
->>>>>>>> cursor/add-new-services-and-advertise-them-660b:automation_backup/browser-error-fixer.js
-
-  identifyFixStrategy(error) {
+<:automation_backup/browser-error-fixer.jsxidentifyFixStrategy(error) {
     const message = error.message || '';
     
     for (const [errorType, strategy] of Object.entries(this.fixPatterns)) {
@@ -119,12 +114,7 @@ class BrowserErrorFixer {
       console.error(`❌ Error applying fix strategy:`, error);
     }
   }
-<<<<<<<< HEAD:automation_backup/browser-error-fixer.jsx
-
-========
->>>>>>>> cursor/add-new-services-and-advertise-them-660b:automation_backup/browser-error-fixer.js
-
-  async findRelevantSourceFiles(error) {
+<:automation_backup/browser-error-fixer.jsxasync findRelevantSourceFiles(error) {
     const sourceFiles = [];
     const extensions = ['.js',.jsx',.ts',.tsx'];
     
@@ -157,12 +147,7 @@ class BrowserErrorFixer {
       return [];
     }
   }
-<<<<<<<< HEAD:automation_backup/browser-error-fixer.jsx
-
-========
->>>>>>>> cursor/add-new-services-and-advertise-them-660b:automation_backup/browser-error-fixer.js
-
-  async findFilesRecursively(dir, extensions, maxDepth = 3) {
+<:automation_backup/browser-error-fixer.jsxasync findFilesRecursively(dir, extensions, maxDepth = 3) {
     const files = [];
     
     async function search(currentDir, depth) {
@@ -218,7 +203,6 @@ class BrowserErrorFixer {
     }
   }
 
-
   async applyFixes(filePath, originalContent, fixes) {
     try {
       let modifiedContent = originalContent;
@@ -232,7 +216,6 @@ class BrowserErrorFixer {
       // console.log(`✅ Applied ${fixes.length} fixes to ${path.relative(this.projectRoot, filePath)}`);
     } catch (error) {
       console.error(`❌ Failed to apply fixes to ${filePath}:`, error);
-
 
   applySingleFix(content, fix) {
     if (fix.type === 'replace') {
@@ -327,7 +310,6 @@ class BrowserErrorFixer {
       console.error('❌ Failed to generate fix report:', error);
       return null;
 
-
   async cleanupBackups(keepRecent = 5) {
     try {
       if (this.backupsCreated.length <= keepRecent) {
@@ -342,11 +324,9 @@ class BrowserErrorFixer {
         } catch (err) {
           // Backup already removed or inaccessible
 
-
       this.backupsCreated = this.backupsCreated.slice(-keepRecent);
     } catch (error) {
       console.error('❌ Error during backup cleanup:', error);
-
 
   async runFixCycle(errorLog) {
     // console.log('🚀 Starting browser error auto-fix cycle...');
@@ -359,7 +339,6 @@ class BrowserErrorFixer {
     
     // console.log(`✅ Auto-fix cycle completed. Applied ${this.fixesApplied.length} fixes.`);
     return this.fixesApplied;
-
 
 // Export for use in other modules
 module.exports = BrowserErrorFixer;

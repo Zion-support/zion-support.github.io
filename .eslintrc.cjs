@@ -1,1 +1,41 @@
-module.exports = { root: true, extends: [], ignorePatterns: [ "automation/**", "scripts/**", "tests/**", "pages/**/*.ts", "pages/**/*.tsx", "pages/**/*.js", "pages/**/*.jsx", "src/**/*.ts", "src/**/*.tsx", ], }; module.exports = { root: true, env: { browser: true, es2021: true, node: true, }, extends: [ "eslint:recommended", "@typescript-eslint/recommended", "plugin:react/recommended", "plugin:react-hooks/recommended", "plugin:jsx-a11y/recommended", ], parser: "@typescript-eslint/parser", parserOptions: { ecmaFeatures: { jsx: true, }, ecmaVersion: 2022, sourceType: "module", project: "./tsconfig.json", }, plugins: ["react", "@typescript-eslint", "jsx-a11y"], 
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
+  },
+  extends: [
+    'next/core-web-vitals',
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:@typescript-eslint/recommended',
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 12,
+    sourceType: 'module',
+  },
+  plugins: ['react', '@typescript-eslint'],
+  rules: {
+    '@typescript-eslint/no-unused-vars': 'warn',
+    '@typescript-eslint/no-explicit-any': 'warn',
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off',
+    'no-console': 'warn',
+  },
+  ignorePatterns: [
+    'node_modules/',
+    '.next/',
+    'out/',
+    'dist/',
+    'automation/',
+    'components.disabled/',
+    '**/*.disabled',
+    '**/*.backup',
+    '**/*.tsbackup',
+  ],
+}; 

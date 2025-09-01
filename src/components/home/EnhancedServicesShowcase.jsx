@@ -1,1 +1,0 @@
-const featuredServices = ENHANCED_SERVICES.filter(service => service.featured).slice(0, 6); const serviceIcons = { 

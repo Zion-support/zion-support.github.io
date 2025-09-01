@@ -1,1 +1,0 @@
-" min = parseFloat(budgetString.replace(/[>$,\soverk]/g, "));" 

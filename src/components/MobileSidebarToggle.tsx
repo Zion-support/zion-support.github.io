@@ -1,1 +1,0 @@
-newExpanded.delete(section)} else { newExpanded.add(section)} setExpandedSections(newExpanded)}; 

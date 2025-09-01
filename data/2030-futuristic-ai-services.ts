@@ -36,13 +36,7 @@ export interface FuturisticAIService2030 {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
-  reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export const futuristicAIServices2030: FuturisticAIService2030[] = [
+reviews: number;export const futuristicAIServices2030: FuturisticAIService2030[] = [
   // AI Consciousness & Evolution 2030
   {
     id: 'ai-consciousness-evolution-2030',

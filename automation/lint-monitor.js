@@ -15,8 +15,7 @@ class LintMonitor {
     this.logFile = path.join(__dirname, 'logs', 'lint-monitor.log');
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
-=======
-    this.ensureLogDirectory()}
+this.ensureLogDirectory()}
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
@@ -193,8 +192,7 @@ switch (command) {
   default:
     // // // // // // // // console.log('Usage: node lint-monitor.js [start|stop|status|stats]');
     process.exit(1);
-=======
-    console.log('Usage: node lint-monitor.js [start|stop|status|stats]');
+console.log('Usage: node lint-monitor.js [start|stop|status|stats]');
     process.exit(1)}
 // Graceful shutdown
 process.on('SIGINT', () => {

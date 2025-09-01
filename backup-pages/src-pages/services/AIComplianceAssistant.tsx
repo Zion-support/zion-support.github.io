@@ -23,17 +23,12 @@ import {
 } from 'lucide-react';
 
 export default function AIComplianceAssistant() {
-  
-  
-  
-  
-  
+
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
 =
-=======
-        title="AI Compliance Assistant - Zion Tech Group""        description="Automate regulatory compliance with our AI-powered compliance assistant. Monitor, assess, and maintain compliance across multiple regulatory frameworks."
+title="AI Compliance Assistant - Zion Tech Group""        description="Automate regulatory compliance with our AI-powered compliance assistant. Monitor, assess, and maintain compliance across multiple regulatory frameworks."
        />
       
       {/* Hero Section */}"
