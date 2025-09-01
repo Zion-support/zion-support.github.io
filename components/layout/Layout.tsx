@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-
-import UltraFuturisticNavigation2036 from './UltraFuturisticNavigation2036';
-import UltraFuturisticFooter2036 from './UltraFuturisticFooter2036';
+import UltraFuturisticNavigation2047 from './UltraFuturisticNavigation2047';
+import UltraFuturisticFooter2047 from './UltraFuturisticFooter2047';
 import EnhancedSidebar2025 from './EnhancedSidebar2025';
 import UltraFuturisticBackground2037 from '../backgrounds/UltraFuturisticBackground2037';
 import TopContactBar from './TopContactBar';
@@ -203,7 +202,7 @@ export default function Layout({
           <TopContactBar />
           
           {/* Navigation */}
-          <UltraFuturisticNavigation2036 />
+          <UltraFuturisticNavigation2047 />
           
           {/* Sidebar and Main Content */}
           <div className="flex">
@@ -220,24 +219,41 @@ export default function Layout({
           </div>
           
           {/* Footer */}
-          <UltraFuturisticFooter2036 />
-          
-          {/* Performance Monitor */}
-          <EnhancedPerformanceMonitor />
-          
-          {/* Accessibility Enhancer */}
-          <AccessibilityEnhancer />
-          
-          {/* Cookie Consent Banner */}
-          <CookieConsentBanner />
-          
-          {/* Offline Indicator */}
-          {!isOnline && (
-            <div className="fixed bottom-4 right-4 bg-red-600 text-white px-4 py-2 rounded-lg shadow-lg z-50">
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                <span className="text-sm">You are offline</span>
-              </div>
+          <UltraFuturisticFooter2047 />
+        </div>
+      </div>
+
+      {/* Accessibility and Performance Tools */}
+      <AccessibilityEnhancer />
+      <EnhancedPerformanceMonitor />
+      
+      {/* Cookie Consent Banner */}
+      <CookieConsentBanner />
+      
+      {/* Service Worker Update Notification */}
+      <div id="sw-update-notification" className="hidden fixed bottom-4 right-4 bg-cyan-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
+        <div className="flex items-start gap-3">
+          <div className="flex-shrink-0">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <div className="flex-1">
+            <h4 className="font-semibold mb-1">Update Available</h4>
+            <p className="text-sm text-cyan-100 mb-3">A new version of Zion Tech Group is available.</p>
+            <div className="flex gap-2">
+              <button 
+                onClick={() => window.location.reload()} 
+                className="bg-white text-cyan-600 px-3 py-1 rounded text-sm font-medium hover:bg-cyan-500 transition-colors"
+              >
+                Update Now
+              </button>
+              <button 
+                onClick={() => document.getElementById('sw-update-notification')?.classList.add('hidden')} 
+                className="text-cyan-100 hover:text-white text-sm transition-colors"
+              >
+                Later
+              </button>
             </div>
           )}
         </div>

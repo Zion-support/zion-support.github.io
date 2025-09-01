@@ -7,12 +7,12 @@ import {
   Building, Target, Heart, Palette, Truck
 } from 'lucide-react';
 
-// Import our comprehensive service data
-import { advancedRealMicroSaasExpansion2025 } from '../data/2025-advanced-real-micro-saas-expansion';
-import { advancedITInfrastructureExpansion2025 } from '../data/2025-advanced-it-infrastructure-expansion';
-import { advancedAIServicesExpansion2025 } from '../data/2025-advanced-ai-services-expansion';
-import { emergingTechInnovationsExpansion2025 } from '../data/2025-emerging-tech-innovations-expansion';
-import { innovativeBusinessSolutionsExpansion2025 } from '../data/2025-innovative-business-solutions-expansion';
+// Import our new service data
+import { advancedBusinessIntelligenceServices2025 } from '../data/2025-advanced-business-intelligence-services';
+import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
+import { innovative2025ITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services';
+import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions';
+import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
 
 const serviceCategories = [
   {
@@ -120,11 +120,11 @@ export default function ComprehensiveServicesShowcase2025() {
   }, []);
 
   const allServices = [
-    ...advancedRealMicroSaasExpansion2025,
-    ...advancedITInfrastructureExpansion2025,
-    ...advancedAIServicesExpansion2025,
-    ...emergingTechInnovationsExpansion2025,
-    ...innovativeBusinessSolutionsExpansion2025
+    ...advancedBusinessIntelligenceServices2025,
+    ...advancedAIAutomationServices2025,
+    ...innovative2025ITInfrastructureServices,
+    ...innovativeMicroSaasSolutions2025,
+    ...cuttingEdgeAIServices2025
   ];
 
   const filteredServices = selectedCategory === 'all' 

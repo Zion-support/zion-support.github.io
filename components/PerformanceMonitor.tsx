@@ -14,6 +14,23 @@ interface PerformanceMetrics {
   fmp: number; // First Meaningful Paint
   si: number; // Speed Index
   tti: number; // Time to Interactive
+  tbt: number; // Total Blocking Time
+}
+
+interface PerformanceEntryExtended {
+  name: string;
+  startTime: number;
+  processingStart?: number;
+  value?: number;
+  entryType: string;
+  duration: number;
+}
+
+interface PerformanceData {
+  timestamp: number;
+  metrics: PerformanceMetrics;
+  score: number;
+  grade: 'A' | 'B' | 'C' | 'D' | 'F';
 }
 
 interface PerformanceMonitorProps {
