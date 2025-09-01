@@ -639,7 +639,7 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• GitHub Actions Redundancy</li>
                   <li>• Netlify Functions Redundancy</li>
                 </ul>
-                <Link href="/privacy" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/SECURITY.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold" target="_blank" rel="noopener noreferrer">
                   View Security Guide →
                 </a>
               </div>
@@ -653,7 +653,7 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Security testing</li>
                   <li>• Continuous validation</li>
                 </ul>
-                <Link href="/resources" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/TESTING.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold" target="_blank" rel="noopener noreferrer">
                   View Testing Guide →
                 </a>
               </div>
@@ -668,7 +668,7 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Predictive maintenance</li>
                   <li>• Automated QA</li>
                 </ul>
-                <Link href="/resources" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/PERFORMANCE.md" className="text-green-400 hover:text-green-300 text-sm font-semibold" target="_blank" rel="noopener noreferrer">
                   View Performance Guide →
                 </a>
               </div>
@@ -688,7 +688,7 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Health monitoring</li>
                   <li>• Self-healing infrastructure</li>
                 </ul>
-                <Link href="/ULTIMATE_REDUNDANCY_AUTOMATION_README.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/README_ULTIMATE_REDUNDANCY.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold" target="_blank" rel="noopener noreferrer">
                   Learn More →
                 </a>
               </div>
@@ -702,7 +702,7 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Error prevention</li>
                   <li>• Predictive analytics</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_COMPREHENSIVE_REDUNDANCY.md" target="_blank" rel="noopener noreferrer" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/README_COMPREHENSIVE_REDUNDANCY.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold" target="_blank" rel="noopener noreferrer">
                   Learn More →
                 </a>
               </div>
@@ -716,53 +716,41 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Performance monitoring</li>
                   <li>• Cluster management</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_PM2_REDUNDANCY_COMPLETE.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/README_PM2_REDUNDANCY_COMPLETE.md" className="text-green-400 hover:text-green-300 text-sm font-semibold" target="_blank" rel="noopener noreferrer">
                   Learn More →
                 </a>
               </div>
             </div>
           </section>
 
-          {/* Quick Links Directory */}
+          {/* Developer Documentation */}
           <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🗂️ Quick Links Directory</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Link href="/about" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 group">
-                <h3 className="text-lg font-semibold text-cyan-400 mb-2 group-hover:text-cyan-300">About Our Vision</h3>
-                <p className="text-white/70 text-sm">Mission, values, and our autonomous future</p>
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📘 Developer Documentation</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/README.md" target="_blank" rel="noopener noreferrer" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-cyan-400 mb-2">Project Overview</h3>
+                <p className="text-white/70 text-sm">Start here to understand the platform.</p>
               </Link>
-              <Link href="/services" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300 group">
-                <h3 className="text-lg font-semibold text-fuchsia-400 mb-2 group-hover:text-fuchsia-300">AI Services</h3>
-                <p className="text-white/70 text-sm">Automation, cloud, DevOps, analytics</p>
+              <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/API.md" target="_blank" rel="noopener noreferrer" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-fuchsia-400 mb-2">API Reference</h3>
+                <p className="text-white/70 text-sm">Endpoints and integrations.</p>
               </Link>
-              <Link href="/resources" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-blue-400/30 transition-all duration-300 group">
-                <h3 className="text-lg font-semibold text-blue-400 mb-2 group-hover:text-blue-300">Resources</h3>
-                <p className="text-white/70 text-sm">Case studies, whitepapers, tools</p>
+              <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/ARCHITECTURE.md" target="_blank" rel="noopener noreferrer" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-blue-400/30 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-blue-400 mb-2">Architecture</h3>
+                <p className="text-white/70 text-sm">System design and components.</p>
               </Link>
-              <Link href="/blog" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-purple-400/30 transition-all duration-300 group">
-                <h3 className="text-lg font-semibold text-purple-400 mb-2 group-hover:text-purple-300">Blog</h3>
-                <p className="text-white/70 text-sm">Trends and insights</p>
+              <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/DEPLOYMENT.md" target="_blank" rel="noopener noreferrer" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-green-400 mb-2">Deployment</h3>
+                <p className="text-white/70 text-sm">How we ship with zero-downtime.</p>
               </Link>
-              <Link href="/case-studies" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-yellow-400/30 transition-all duration-300 group">
-                <h3 className="text-lg font-semibold text-yellow-400 mb-2 group-hover:text-yellow-300">Case Studies</h3>
-                <p className="text-white/70 text-sm">Success stories and results</p>
+              <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-red-400/30 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-red-400 mb-2">Security</h3>
+                <p className="text-white/70 text-sm">Policies and hardening practices.</p>
               </Link>
-              <Link href="/contact" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300 group">
-                <h3 className="text-lg font-semibold text-green-400 mb-2 group-hover:text-green-300">Contact</h3>
-                <p className="text-white/70 text-sm">Start a project or ask questions</p>
+              <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/TESTING.md" target="_blank" rel="noopener noreferrer" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-yellow-400/30 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-yellow-400 mb-2">Testing</h3>
+                <p className="text-white/70 text-sm">Quality assurance systems.</p>
               </Link>
-              <Link href="/privacy" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-red-400/30 transition-all duration-300 group">
-                <h3 className="text-lg font-semibold text-red-400 mb-2 group-hover:text-red-300">Privacy</h3>
-                <p className="text-white/70 text-sm">Security, trust, and compliance</p>
-              </Link>
-              <Link href="/reports" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-indigo-400/30 transition-all duration-300 group">
-                <h3 className="text-lg font-semibold text-indigo-400 mb-2 group-hover:text-indigo-300">Reports</h3>
-                <p className="text-white/70 text-sm">Updates and performance data</p>
-              </Link>
-              <a href="https://github.com/Zion-Holdings/zion.app" target="_blank" rel="noopener noreferrer" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group">
-                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-300">GitHub Repository</h3>
-                <p className="text-white/70 text-sm">Browse code, docs, and issues</p>
-              </a>
             </div>
           </section>
 
