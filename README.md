@@ -2919,15 +2919,22 @@ Home: https://github.com/Zion-Holdings/zion.app#readme
 - /site-health
 
 ### Automations
-Our GitHub Actions workflows are continuously evolving. Currently active workflows include:
-
-- [Marketing Sync](https://github.com/Zion-Holdings/zion/actions/workflows/marketing-sync.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/marketing-sync.yml/badge.svg)
-- [Sync Health](https://github.com/Zion-Holdings/zion/actions/workflows/sync-health.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/sync-health.yml/badge.svg)
-- [Ultimate Redundancy](https://github.com/Zion-Holdings/zion/actions/workflows/ultimate-redundancy.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/ultimate-redundancy.yml/badge.svg)
-- [Build Monitor Ultimate](https://github.com/Zion-Holdings/zion/actions/workflows/build-monitor-ultimate.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/build-monitor-ultimate.yml/badge.svg)
-- [Automation Health Ultimate](https://github.com/Zion-Holdings/zion/actions/workflows/automation-health-ultimate.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/automation-health-ultimate.yml/badge.svg)
-
-*Note: Workflow configurations are dynamically managed and updated by our autonomous systems.*
+- [Automation Health Ultimate](https://github.com/Zion-Holdings/zion.app/actions/workflows/automation-health-ultimate.yml) ![status](https://github.com/Zion-Holdings/zion.app/actions/workflows/automation-health-ultimate.yml/badge.svg)
+- [Automation Health Ultimate Backup](https://github.com/Zion-Holdings/zion.app/actions/workflows/automation-health-ultimate-backup.yml) ![status](https://github.com/Zion-Holdings/zion.app/actions/workflows/automation-health-ultimate-backup.yml/badge.svg)
+- [Build Monitor Ultimate](https://github.com/Zion-Holdings/zion.app/actions/workflows/build-monitor-ultimate.yml) ![status](https://github.com/Zion-Holdings/zion.app/actions/workflows/build-monitor-ultimate.yml/badge.svg)
+- [Build Monitor Ultimate Backup](https://github.com/Zion-Holdings/zion.app/actions/workflows/build-monitor-ultimate-backup.yml) ![status](https://github.com/Zion-Holdings/zion.app/actions/workflows/build-monitor-ultimate-backup.yml/badge.svg)
+- [Marketing Sync](https://github.com/Zion-Holdings/zion.app/actions/workflows/marketing-sync.yml) ![status](https://github.com/Zion-Holdings/zion.app/actions/workflows/marketing-sync.yml/badge.svg)
+- [Marketing Sync Backup](https://github.com/Zion-Holdings/zion.app/actions/workflows/marketing-sync-backup.yml) ![status](https://github.com/Zion-Holdings/zion.app/actions/workflows/marketing-sync-backup.yml/badge.svg)
+- [Marketing Sync Redundancy](https://github.com/Zion-Holdings/zion.app/actions/workflows/marketing-sync-redundancy.yml) ![status](https://github.com/Zion-Holdings/zion.app/actions/workflows/marketing-sync-redundancy.yml/badge.svg)
+- [Marketing Sync Redundancy Backup](https://github.com/Zion-Holdings/zion.app/actions/workflows/marketing-sync-redundancy-backup.yml) ![status](https://github.com/Zion-Holdings/zion.app/actions/workflows/marketing-sync-redundancy-backup.yml/badge.svg)
+- [Marketing Sync Backup Redundancy](https://github.com/Zion-Holdings/zion.app/actions/workflows/marketing-sync-backup-redundancy.yml) ![status](https://github.com/Zion-Holdings/zion.app/actions/workflows/marketing-sync-backup-redundancy.yml/badge.svg)
+- [Sync Health](https://github.com/Zion-Holdings/zion.app/actions/workflows/sync-health.yml) ![status](https://github.com/Zion-Holdings/zion.app/actions/workflows/sync-health.yml/badge.svg)
+- [Sync Health Backup](https://github.com/Zion-Holdings/zion.app/actions/workflows/sync-health-backup.yml) ![status](https://github.com/Zion-Holdings/zion.app/actions/workflows/sync-health-backup.yml/badge.svg)
+- [Sync Health Redundancy](https://github.com/Zion-Holdings/zion.app/actions/workflows/sync-health-redundancy.yml) ![status](https://github.com/Zion-Holdings/zion.app/actions/workflows/sync-health-redundancy.yml/badge.svg)
+- [Sync Health Redundancy Backup](https://github.com/Zion-Holdings/zion.app/actions/workflows/sync-health-redundancy-backup.yml) ![status](https://github.com/Zion-Holdings/zion.app/actions/workflows/sync-health-redundancy-backup.yml/badge.svg)
+- [Sync Health Backup Redundancy](https://github.com/Zion-Holdings/zion.app/actions/workflows/sync-health-backup-redundancy.yml) ![status](https://github.com/Zion-Holdings/zion.app/actions/workflows/sync-health-backup-redundancy.yml/badge.svg)
+- [Ultimate Redundancy](https://github.com/Zion-Holdings/zion.app/actions/workflows/ultimate-redundancy.yml) ![status](https://github.com/Zion-Holdings/zion.app/actions/workflows/ultimate-redundancy.yml/badge.svg)
+- [Ultimate Redundancy Backup](https://github.com/Zion-Holdings/zion.app/actions/workflows/ultimate-redundancy-backup.yml) ![status](https://github.com/Zion-Holdings/zion.app/actions/workflows/ultimate-redundancy-backup.yml/badge.svg)
 
 ### Local Development
 1. Install Node 20+ and npm 10+.
