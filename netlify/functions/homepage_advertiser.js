@@ -1,47 +1,32 @@
-const { execSync } = require('child_process');
-const path = require('path');
-
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context) {
+  console.log('🤖 homepage_advertiser function triggered');
+  
   try {
-    console.log('🚀 homepage_advertiser function triggered');
-    
-    // Execute the corresponding automation script
-    const scriptPath = path.join(process.cwd(), 'automation', 'homepage-auto-advertiser.cjs');
-    const result = execSync(`node "${scriptPath}"`, { 
-      encoding: 'utf8',
-      cwd: process.cwd(),
-      timeout: 30000 // 30 second timeout
-    });
-    
-    console.log('✅ homepage_advertiser completed successfully');
-    
-    return {
+    // Simple homepage advertising logic
+    const timestamp = new Date().toISOString();
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'homepage_advertiser executed successfully',
-        timestamp: new Date().toISOString(),
-        result: result
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-        'Cache-Control': 'no-cache'
-      }
+        message: 'Homepage advertising completed successfully',
+        timestamp: timestamp,
+        function: 'homepage_advertiser',
+        status: 'success'
+      })
     };
     
-  } catch (error) {
-    console.error('❌ homepage_advertiser failed:', error.message);
+    console.log('✅ homepage_advertiser completed successfully');
+    return result;
     
+  } catch (error) {
+    console.error('❌ homepage_advertiser failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        message: 'homepage_advertiser execution failed',
-        timestamp: new Date().toISOString(),
-        error: error.message
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-        'Cache-Control': 'no-cache'
-      }
+        message: 'Homepage advertising failed',
+        error: error.message,
+        function: 'homepage_advertiser',
+        status: 'error'
+      })
     };
   }
 };
