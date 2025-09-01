@@ -11,17 +11,17 @@ exports.config = { schedule: '15 */12 * * *' };
 
 exports.handler = async () => {
   const logs = [];
-  const step = (name, fn) => {
+  function step(name, rel, args = []) {
     logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = fn();
+    const { status, stdout, stderr } = runNode(rel, args);
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);
     logs.push(`exit=${status}`);
     return status;
   };
 
-  step('security:audit', () => runNode('automation/security-audit.cjs'));
-  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+  step('security:audit', 'automation/security-audit.cjs');
+  step('git:sync', 'automation/advanced-git-sync.cjs');
 
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };
 };

@@ -214,8 +214,8 @@ const Index: NextPage = () => {
               { title: 'Autonomous Innovation Generator (2m)', desc: 'Synthesizes front promos and homepage refresh, then syncs to main.', href: '/.netlify/functions/autonomous-innovation-generator' },
               { title: 'Auto Scheduler (15m)', desc: 'Smart time-based runner that chooses and executes the best tasks.', href: '/.netlify/functions/auto-scheduler' },
               { title: 'Broken Image Scanner (6h)', desc: 'Finds broken images, optimizes assets, and syncs fixes.', href: '/.netlify/functions/broken-image-scanner' },
-              { title: 'Alt‑Text Suggester (15m)', desc: 'Scans public images and proposes accessible alt text, syncing reports.', href: '/.netlify/functions/alt-text-suggester-runner' },
-              { title: 'Components Catalog (30m)', desc: 'Builds a live catalog of components and pages with export names.', href: '/.netlify/functions/components-catalog-runner' },
+              { title: 'AI Trends Radar (15m)', desc: 'Scans and publishes emerging AI trends to the live radar dashboard.', href: '/.netlify/functions/ai-trends-radar-runner' },
+              { title: 'SEO Audit Runner (30m)', desc: 'Analyzes pages for SEO improvements and commits updates automatically.', href: '/.netlify/functions/seo-audit-runner' },
             ].map((tool) => (
               <a key={tool.title} href={tool.href} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />

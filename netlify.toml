@@ -289,6 +289,14 @@ schedule = "*/2 * * * *" # every 2 minutes
   schedule = "*/20 * * * *"}  
 
 [[scheduled.functions]]
+  name = "ai-trends-radar-runner"
+  schedule = "*/15 * * * *"
+
+[[scheduled.functions]]
+  name = "seo-audit-runner"
+  schedule = "*/30 * * * *"
+
+[[scheduled.functions]]
   name = "todo-summary-runner"
   schedule = "*/30 * * * *"
 
