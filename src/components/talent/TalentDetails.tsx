@@ -1,6 +1,8 @@
 import React from 'react';
 import { TalentProfile } from '@/types/talent';
 import { Button } from '@/components/ui/button';
+import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card'; // Adjusted path
+import { Badge } from '@/components/ui/badge'; // Adjusted path
 
 export interface TalentDetailsProps {
   talent: TalentProfile & { social?: Record<string, string> };
@@ -38,35 +40,64 @@ const TalentDetails: React.FC<TalentDetailsProps> = ({ talent }) => (
         </section>
       )}
 
-      {talent.hourly_rate && <p>Hourly Rate: ${talent.hourly_rate}/hr</p>}
-
-      {talent.social && (
-        <section>
-          <h2 className="text-xl font-semibold mb-2">Contact</h2>
-          <ul className="space-y-1">
-            {Object.entries(talent.social).map(([platform, url]) => (
-              <li key={platform}>
-                <a href={url} className="text-zion-cyan underline" target="_blank" rel="noopener noreferrer">
-                  {platform}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </section>
+      {/* Hourly Rate Card */}
+      {talent.hourly_rate !== undefined ? ( // Check for undefined specifically if 0 is a valid rate
+        <Card>
+          <CardHeader>
+            <CardTitle>Hourly Rate</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-2xl font-semibold">${talent.hourly_rate}/hr</p>
+          </CardContent>
+        </Card>
+      ) : (
+        <Card>
+          <CardHeader><CardTitle>Hourly Rate</CardTitle></CardHeader>
+          <CardContent><p>Not specified.</p></CardContent>
+        </Card>
       )}
 
-      {talent.key_projects && talent.key_projects.length > 0 && (
-        <section>
-          <h2 className="text-xl font-semibold mb-2">Portfolio</h2>
-          <ul className="space-y-2">
+      {/* Contact Section - Assuming this remains as is, or could be a card too */}
+      {talent.social && (
+        <Card>
+          <CardHeader>
+            <CardTitle>Contact</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="space-y-1">
+              {Object.entries(talent.social).map(([platform, url]) => (
+                <li key={platform}>
+                  <a href={url} className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
+                    {platform.charAt(0).toUpperCase() + platform.slice(1)} {/* Capitalize platform name */}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
+      )}
+
+      {/* Portfolio (Key Projects) Card */}
+      {(talent.key_projects && talent.key_projects.length > 0) ? (
+        <Card>
+          <CardHeader>
+            <CardTitle>Portfolio</CardTitle>
+            <CardDescription>Key projects and contributions.</CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
             {talent.key_projects.map((proj, i) => (
-              <li key={i} className="border-b border-zion-purple/20 pb-2">
-                <h3 className="font-medium">{proj.title}</h3>
-                <p className="text-sm text-zion-slate">{proj.description}</p>
-              </li>
+              <div key={i} className="border-b pb-2 last:border-b-0 last:pb-0">
+                <h3 className="font-semibold text-lg">{proj.title}</h3>
+                <p className="text-sm text-muted-foreground">{proj.description}</p>
+              </div>
             ))}
-          </ul>
-        </section>
+          </CardContent>
+        </Card>
+      ) : (
+        <Card>
+          <CardHeader><CardTitle>Portfolio</CardTitle></CardHeader>
+          <CardContent><p>No projects listed.</p></CardContent>
+        </Card>
       )}
 
       <Button className="bg-zion-purple text-white">Hire</Button>
