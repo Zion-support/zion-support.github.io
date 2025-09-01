@@ -5,12 +5,10 @@ import LoadingSpinner from './components/ui/loading-spinner';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
-const ServicesPage = lazy(() => import('./pages/SimpleServicesPage').then(module => ({ default: module.default })));
-
-
+const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.default })));
+const ComprehensivePricing = lazy(() => import('./pages/ComprehensivePricing2025').then(module => ({ default: module.default })));
 
 const SimplePage = lazy(() => import('./pages/SimplePage').then(module => ({ default: module.default })));
-
 
 
 // Loading component
@@ -33,8 +31,8 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/services" element={<ServicesPage />} />
               <Route path="/services/*" element={<ServicesPage />} />
+              <Route path="/pricing" element={<ComprehensivePricing />} />
               <Route path="/comprehensive-services" element={<SimplePage />} />
-              <Route path="/pricing" element={<SimplePage />} />
               <Route path="/solutions" element={<SimplePage />} />
               <Route path="/solutions/*" element={<SimplePage />} />
               <Route path="/about" element={<SimplePage />} />
