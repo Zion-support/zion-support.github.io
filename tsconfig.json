@@ -88,9 +88,7 @@
     "node_modules",
     "zion.app/recovered-content/**",
     "contracts/**",
-    "hardhat.config.ts",
-    "cypress.config.ts",
     "cypress/**",
-    "**/*.backup.*"
+    "vitest.config.ts"
   ]
 }

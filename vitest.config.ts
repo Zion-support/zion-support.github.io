@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitest/config';
+import path from 'node:path';
 
 export default defineConfig({
   resolve: {
@@ -18,8 +19,8 @@ export default defineConfig({
       'react-router-dom': path.resolve(
         __dirname,
         './src/stubs/react-router-dom.ts',
-      ),
-    },
+      )
+    }
   },
   define: {
     'import.meta.env.NEXT_PUBLIC_SUPABASE_URL': JSON.stringify(
@@ -27,7 +28,7 @@ export default defineConfig({
     ),
     'import.meta.env.NEXT_PUBLIC_SUPABASE_ANON_KEY': JSON.stringify(
       'test-anon-key-placeholder',
-    ),
+    )
   },
   test: {
     environment: 'jsdom',
@@ -35,7 +36,7 @@ export default defineConfig({
     globals: true,
     coverage: {
       provider: 'v8',
-      reporter: ['text', 'html'],
+      reporter: ['text', 'html']
     },
     exclude: [
       '**/node_modules/**',
@@ -43,7 +44,7 @@ export default defineConfig({
       '**/cypress/**',
       '**/.{idea,git,cache,output,temp}/**',
       '**/{karma,rollup,webpack,vite,vitest,jest,ava,babel,nyc,cypress,tsup,build,eslint,prettier}.config.*',
-      'tests/e2e/**',
-    ],
-  },
+      'tests/e2e/**'
+    ]
+  }
 });

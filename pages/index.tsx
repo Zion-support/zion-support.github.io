@@ -1,16 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Layout from '../components/Layout';
-import { 
-  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
-  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-import EnhancedContactForm from '../components/EnhancedContactForm';
-import ComprehensiveServicesShowcase from '../components/ComprehensiveServicesShowcase';
-import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export default function HomePage() {
   const heroStats = [
@@ -271,50 +263,36 @@ export default function HomePage() {
   ];
 
   return (
-    <Layout>
-      <div className="text-white">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <motion.h1 
-                className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0.2 }}
-              >
-                Zion Tech Group
-              </motion.h1>
-              <motion.p 
-                className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >
-                Pioneering the future of autonomous business operations with cutting-edge AI, 
-                quantum computing, and emerging technologies.
-              </motion.p>
-              <motion.div 
-                className="flex flex-col sm:flex-row gap-4 justify-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-              >
-                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
-                  Explore Services
-                  <ArrowRight className="w-5 h-5" />
-                </button>
-                <button className="border border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
-                  Contact Us
-                </button>
-              </motion.div>
-            </motion.div>
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+      <Head>
+        <title>Zion Tech Group - Leading Technology Solutions Provider | AI, Cloud & Digital Transformation</title>
+        <meta name="description" content="Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence with innovative micro SAAS solutions." />
+        <meta name="keywords" content="technology solutions, AI services, cloud migration, web development, mobile apps, cybersecurity, micro SAAS, digital transformation" />
+      </Head>
+      
+      <Header />
+      
+      {/* Hero Section */}
+      <main className="container mx-auto px-4 py-16">
+        <div className="text-center text-white mb-20">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            Welcome to Zion Tech Group
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto opacity-90">
+            Leading technology solutions provider helping businesses transform their digital presence 
+            with cutting-edge AI, cloud architecture, and innovative micro SAAS services.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+            <Link href="/services" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+              Explore Our Services
+            </Link>
+            <Link href="/products" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+              View Products
+            </Link>
+            <a href="tel:+13024640950" className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+              Call +1 302 464 0950
+            </a>
           </div>
         </section>
 
@@ -516,12 +494,9 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </main>
 
-      {/* Enhanced Services Showcase */}
-      <div id="services">
-        <EnhancedServicesShowcase />
-      </div>
-    </Layout>
+      <Footer />
+    </div>
   );
 }

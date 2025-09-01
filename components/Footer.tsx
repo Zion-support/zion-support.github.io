@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Mail, Smartphone, Building, Globe, Zap, Shield, Users, ArrowUp } from 'lucide-react';
+import { Mail, Phone, Building, Globe, Zap, Shield, Users, ArrowUp } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -17,22 +17,33 @@ const Footer: React.FC = () => {
       title: 'Core Services',
       links: [
         { name: 'AI & Machine Learning', href: '/services/ai-machine-learning' },
-        { name: 'Quantum Computing', href: '/services/quantum-computing' },
+        { name: 'Cloud & Infrastructure', href: '/services/cloud-infrastructure' },
+        { name: 'Web & Mobile Development', href: '/services/web-mobile-development' },
         { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'Cloud Infrastructure', href: '/services/cloud-infrastructure' },
         { name: 'Blockchain & DeFi', href: '/services/blockchain-defi' },
-        { name: 'Space Technology', href: '/services/space-technology' }
+        { name: 'IoT & Smart Cities', href: '/services/iot-smart-cities' }
       ]
     },
     {
-      title: 'Solutions by Industry',
+      title: 'Solutions',
       links: [
-        { name: 'Financial Services', href: '/solutions/financial-services' },
-        { name: 'Healthcare', href: '/solutions/healthcare' },
-        { name: 'Manufacturing', href: '/solutions/manufacturing' },
-        { name: 'Government', href: '/solutions/government' },
-        { name: 'Education', href: '/solutions/education' },
-        { name: 'Retail & E-commerce', href: '/solutions/retail-ecommerce' }
+        { name: 'Enterprise IT', href: '/solutions/enterprise-it' },
+        { name: 'Micro SaaS', href: '/solutions/micro-saas' },
+        { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
+        { name: 'Research & Development', href: '/solutions/research-development' },
+        { name: 'Quantum Computing', href: '/solutions/quantum-computing' },
+        { name: 'Space Technology', href: '/solutions/space-technology' }
+      ]
+    },
+    {
+      title: 'Industries',
+      links: [
+        { name: 'Financial Services', href: '/industries/financial-services' },
+        { name: 'Healthcare', href: '/industries/healthcare' },
+        { name: 'Manufacturing', href: '/industries/manufacturing' },
+        { name: 'Government', href: '/industries/government' },
+        { name: 'Education', href: '/industries/education' },
+        { name: 'Retail & E-commerce', href: '/industries/retail-ecommerce' }
       ]
     },
     {
@@ -42,28 +53,19 @@ const Footer: React.FC = () => {
         { name: 'Careers', href: '/careers' },
         { name: 'News & Updates', href: '/news' },
         { name: 'Case Studies', href: '/case-studies' },
-        { name: 'Research & Development', href: '/research-development' },
+        { name: 'Research', href: '/research' },
         { name: 'Support', href: '/support' }
-      ]
-    },
-    {
-      title: 'Resources',
-      links: [
-        { name: 'Documentation', href: '/docs' },
-        { name: 'White Papers', href: '/white-papers' },
-        { name: 'Webinars', href: '/webinars' },
-        { name: 'Events', href: '/events' },
-        { name: 'Blog', href: '/blog' },
-        { name: 'API Reference', href: '/api' }
       ]
     }
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup' },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup' },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup' },
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup' }
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: '💼' },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: '🐦' },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: '💻' },
+    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: '📺' },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: '📘' },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: '📷' }
   ];
 
   const scrollToTop = () => {
@@ -91,7 +93,7 @@ const Footer: React.FC = () => {
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg group-hover:shadow-2xl group-hover:shadow-blue-500/25">
                   <span className="text-white font-bold text-2xl">Z</span>
                 </div>
-                <div className="absolute -inset-1 bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300 -z-10" />
+                <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300 -z-10" />
               </div>
               <div className="flex flex-col">
                 <span className="text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all duration-300">
@@ -104,41 +106,37 @@ const Footer: React.FC = () => {
             </Link>
             
             <p className="text-gray-400 mb-6 max-w-md">
-              Pioneering the future of autonomous business operations with cutting-edge AI, 
-              quantum computing, and emerging technologies.
+              Leading technology solutions provider helping businesses transform their digital presence 
+              with cutting-edge AI, cloud architecture, and innovative micro SAAS services.
             </p>
 
-            {/* Contact Information */}
+            {/* Contact Info */}
             <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Smartphone className="w-4 h-4 text-blue-400" />
-                <a href={`tel:${contactInfo.mobile}`} className="hover:text-white transition-colors duration-200">
-                  {contactInfo.mobile}
-                </a>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Mail className="w-4 h-4 text-blue-400" />
-                <a href={`mailto:${contactInfo.email}`} className="hover:text-white transition-colors duration-200">
-                  {contactInfo.email}
-                </a>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Building className="w-4 h-4 text-blue-400" />
-                <span>{contactInfo.address}</span>
+              <a href="tel:+13024640950" className="flex items-center space-x-3 text-gray-300 hover:text-blue-400 transition-colors duration-200">
+                <Phone className="w-4 h-4" />
+                <span>{contactInfo.mobile}</span>
+              </a>
+              <a href="mailto:kleber@ziontechgroup.com" className="flex items-center space-x-3 text-gray-300 hover:text-blue-400 transition-colors duration-200">
+                <Mail className="w-4 h-4" />
+                <span>{contactInfo.email}</span>
+              </a>
+              <div className="flex items-start space-x-3 text-gray-300">
+                <Building className="w-4 h-4 mt-1" />
+                <span className="text-sm">{contactInfo.address}</span>
               </div>
             </div>
           </div>
 
-          {/* Footer Links */}
+          {/* Navigation Sections */}
           {footerSections.map((section) => (
             <div key={section.title}>
-              <h3 className="text-white font-semibold mb-4 text-lg">{section.title}</h3>
+              <h3 className="text-white font-semibold mb-4">{section.title}</h3>
               <ul className="space-y-2">
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                      className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm"
                     >
                       {link.name}
                     </Link>
@@ -152,39 +150,42 @@ const Footer: React.FC = () => {
         {/* Bottom Section */}
         <div className="border-t border-white/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between">
+            {/* Copyright */}
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-            
-            <div className="flex items-center space-x-6">
-              {/* Social Links */}
-              <div className="flex items-center space-x-4">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-white transition-colors duration-200"
-                  >
-                    {social.name}
-                  </a>
-                ))}
-              </div>
 
-              {/* Legal Links */}
-              <div className="flex items-center space-x-4 text-sm">
-                <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Privacy Policy
-                </Link>
-                <Link href="/terms" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Terms of Service
-                </Link>
-                <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Cookies
-                </Link>
-              </div>
+            {/* Social Links */}
+            <div className="flex items-center space-x-4">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center text-gray-300 hover:text-white transition-all duration-200 hover:scale-110"
+                  aria-label={social.name}
+                >
+                  <span className="text-lg">{social.icon}</span>
+                </a>
+              ))}
             </div>
+          </div>
+
+          {/* Legal Links */}
+          <div className="flex flex-wrap items-center justify-center space-x-6 mt-6 text-sm text-gray-400">
+            <Link href="/privacy" className="hover:text-white transition-colors duration-200">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="hover:text-white transition-colors duration-200">
+              Terms of Service
+            </Link>
+            <Link href="/cookies" className="hover:text-white transition-colors duration-200">
+              Cookie Policy
+            </Link>
+            <Link href="/accessibility" className="hover:text-white transition-colors duration-200">
+              Accessibility
+            </Link>
           </div>
         </div>
       </div>
@@ -192,9 +193,10 @@ const Footer: React.FC = () => {
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-50"
+        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-110 z-50"
+        aria-label="Scroll to top"
       >
-        <ArrowUp className="w-5 h-5" />
+        <ArrowUp className="w-6 h-6 mx-auto" />
       </button>
     </footer>
   );
