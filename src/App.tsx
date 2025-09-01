@@ -20,9 +20,16 @@ const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const Partners = React.lazy(() => import('./pages/Partners'));
-const Pricing = React.lazy(() => import('./pages/Pricing'));
-const SearchPage = React.lazy(() => import('./pages/SearchPage'));
-const EnhancedContact = React.lazy(() => import('./components/EnhancedContact'));
+const ServicesComparisonPage = React.lazy(() => import('./pages/ServicesComparisonPage'));
+const Team = React.lazy(() => import('./pages/Team'));
+const Press = React.lazy(() => import('./pages/Press'));
+const Webinars = React.lazy(() => import('./pages/Webinars'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const AdvancedServicesShowcase2025 = React.lazy(() => import('./pages/AdvancedServicesShowcase2025'));
+const Signup = React.lazy(() => import('./pages/Signup'));
+const ScheduleDemo = React.lazy(() => import('./pages/ScheduleDemo'));
 
 // New comprehensive pages
 const ComprehensiveServicesShowcase2026 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2026'));
@@ -199,6 +206,7 @@ function App() {
               <Route path="/signup" element={<Signup />} />
               <Route path="/status" element={<Status />} />
               <Route path="/demo" element={<Demo />} />
+              <Route path="/schedule-demo" element={<ScheduleDemo />} />
               <Route path="/onsite-support" element={<OnsiteSupport />} />
               <Route path="/pricing" element={<ComprehensivePricingGuide2027 />} />
               <Route path="/pricing-2030" element={<ComprehensivePricingGuide2030 />} />

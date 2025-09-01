@@ -69,7 +69,7 @@ export function AppHeader(...args: unknown[]): unknown {
     { name: 'Company', href: '/about', current: false, hasDropdown: true },
     { name: 'Resources', href: '/resources', current: false, hasDropdown: true },
     { name: 'Contact', href: '/contact', current: false },
-    { name: 'Get Quote', href: '/request-quote', current: false }
+    { name: 'Schedule Demo', href: '/schedule-demo', current: false, featured: true },
   ];
 
   const services = [
