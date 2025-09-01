@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
-<<<<<<< HEAD
+interface HeaderProps {
+  onMenuClick?: () => void;
+  className?: string;
+}
 
-<<<<<<< HEAD
- * Header function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
- */
-function Header({ className }: HeaderProps) {
-
-=======
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
+function Header({ onMenuClick, className }: HeaderProps) {
   Menu,
   X,
   Search,

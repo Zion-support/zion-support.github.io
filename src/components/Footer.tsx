@@ -1,20 +1,86 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Link  } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import {
+  Twitter,
+  Linkedin,
+  Facebook,
+  Instagram,
+  Github,
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Zap,
+  Brain,
+  Shield,
+  Users,
+  HardDrive,
+  TrendingUp,
+  Building2,
+  FileText,
+  HelpCircle,
+  Activity,
+  Cpu,
+  GraduationCap,
+  BarChart3,
+  ArrowUp,
+  Heart,
+  Star,
+  CheckCircle,
+  Award,
+  Rocket,
+  Target,
+  Handshake,
+  Lightbulb,
+  Database,
+  Network,
+  Smartphone,
+  Lock,
+  Code,
+  Server,
+  Chip,
+  Wifi,
+  ShieldCheck,
+  Bot,
+  Workflow,
+  Eye,
+  Sparkles,
+  Atom,
+  Leaf,
+  Gamepad2,
+  Coins,
+  Satellite,
+  MessageCircle,
+  Search,
+  BarChart,
+  Users2,
+  Settings,
+  Palette,
+  ChevronDown
+} from 'lucide-react';
 
-export default function Page() {
-      return newSet}) };
+export function Footer() {
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['company']));
 
-  // Scroll to top function
-  
-  };
+  // Handle scroll to show/hide scroll to top button
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const scrollToTopButton = document.getElementById('scroll-to-top');
+      if (scrollToTopButton) {
+        if (window.pageYOffset > 300) {
+          scrollToTopButton.classList.remove('hidden');
+        } else {
+          scrollToTopButton.classList.add('hidden');
+        }
+      }
+    };
 
-<<<<<<< HEAD
-  return (<footer className="bg-zion - blue - dark border-t border-zion -purple / 30">
-      {/* Main Footer Content */}
-      <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-12">
-        <div  className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap-8">
-=======
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Toggle section expansion (for mobile)
+  const toggleSection = (title: string) => {
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
