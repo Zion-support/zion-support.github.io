@@ -111,8 +111,8 @@
     "socket.io-client": "^4.7.5",
     "zod": "^3.22.4",
     "yup": "^1.2.0",
-    "react-player": "^2.12.0",
-    "@google/model-viewer": "^3.3.0"
+    "socket.io": "^4.7.2",
+    "socket.io-client": "^4.7.2"
   },
   "devDependencies": {
     "@storybook/test-runner": "0.18.0",

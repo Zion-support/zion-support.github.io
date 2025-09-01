@@ -14,7 +14,13 @@
       "@/*": ["./src/*"],
       "@/pages/*": ["./src/pages/*"]
     },
-    "types": [],
+    "types": [
+      "vite/client",
+      "react",
+      "react-router-dom",
+      "socket.io",
+      "socket.io-client"
+    ],
 
     /* Bundler mode */
     "moduleResolution": "node",

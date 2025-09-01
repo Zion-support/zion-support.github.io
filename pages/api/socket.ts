@@ -1,22 +1,32 @@
-import { Server as IOServer } from 'socket.io'
-import type { IncomingMessage, Server, ServerResponse } from 'http'
+import { Server as IOServer } from 'socket.io';
+import type { Server as NetServer, IncomingMessage, ServerResponse } from 'http';
 
-export const config = { api: { bodyParser: false } }
+export const config = { api: { bodyParser: false } };
 
-type ResWithIO = ServerResponse & { socket: Server & { io?: IOServer } }
+// Basic request/response types so this handler works in Node or serverless environments
+type Req = IncomingMessage & { method?: string };
+interface SocketServer extends NetServer {
+  io?: IOServer;
+}
+interface Res extends ServerResponse {
+  socket: SocketServer;
+}
 
-export default function handler(_req: IncomingMessage, res: ResWithIO) {
-  if (!res.socket.io) {
-    const io = new IOServer(res.socket, { path: '/api/socket' })
-    res.socket.io = io
+export default function handler(req: Req, res: Res) {
+  const httpServer = res.socket as SocketServer;
+  if (!httpServer.io) {
+    const io = new IOServer(httpServer, { path: '/api/socket' });
+    httpServer.io = io;
 
-    io.on('connection', socket => {
-      socket.on('join-room', (roomId: string) => socket.join(roomId))
+    io.on('connection', (socket) => {
+      socket.on('join-room', (roomId: string) => {
+        socket.join(roomId);
+      });
+
       socket.on('send-message', ({ roomId, message }) => {
-        socket.to(roomId).emit('receive-message', message)
-      })
-    })
+        socket.to(roomId).emit('receive-message', message);
+      });
+    });
   }
-  res.writeHead(200)
-  res.end()
+  res.end();
 }

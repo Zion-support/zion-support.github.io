@@ -1,39 +1,19 @@
 # Instant Messaging Setup
 
-This project uses **Socket.IO** for real-time chat rooms keyed by the related order or service ID. The client connects through `/api/socket` and the server stores the Socket.IO instance on the HTTP server. Messages should also be persisted via a `ChatMessage` table in your database.
+The application uses **Socket.IO** for real-time negotiations. A minimal API route
+initialises a Socket.IO server and bridges to Django Channels. Rooms are keyed by
+the related order or service identifier so participants only receive messages for
+their transaction.
 
-## Installing dependencies
+Install the required packages:
 
 ```bash
 npm install socket.io socket.io-client
 ```
 
-## Minimal server
-
 ```ts
 // pages/api/socket.ts
-import { Server as IOServer } from 'socket.io'
-import type { IncomingMessage, ServerResponse, Server } from 'http'
-
-export const config = { api: { bodyParser: false } }
-
-type ResWithIO = ServerResponse & { socket: Server & { io?: IOServer } }
-
-export default function handler(_req: IncomingMessage, res: ResWithIO) {
-  if (!res.socket.io) {
-    const io = new IOServer(res.socket, { path: '/api/socket' })
-    res.socket.io = io
-
-    io.on('connection', socket => {
-      socket.on('join-room', (roomId: string) => socket.join(roomId))
-      socket.on('send-message', ({ roomId, message }) => {
-        socket.to(roomId).emit('receive-message', message)
-      })
-    })
-  }
-  res.writeHead(200)
-  res.end()
-}
+// Serverless API route creating a Socket.IO server
 ```
 
 ## Django Channel Layer
@@ -48,4 +28,5 @@ CHANNEL_LAYERS = {
 }
 ```
 
-Messages should be stored in a `ChatMessage` model that includes the room id, sender, content and timestamp.
+Messages should be stored in a `ChatMessage` model. Each message includes the
+room ID, sender, content and timestamp.

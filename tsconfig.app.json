@@ -21,7 +21,13 @@
       "@/*": ["./src/*"],
       "@/pages/*": ["./src/pages/*"]
     },
-    "types": ["vite/client", "react", "react-router-dom", "storybook__react"]
+    "types": [
+      "vite/client",
+      "react",
+      "react-router-dom",
+      "socket.io",
+      "socket.io-client"
+    ]
   },
   "include": ["src", "types"]
 }
