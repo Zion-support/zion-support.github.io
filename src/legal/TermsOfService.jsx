@@ -1,5 +1,6 @@
 import React from 'react';
 export default function TermsOfService() {
+
   return()
     <div className="max-w-4xl mx-auto">"
       <h1 className="text-3xl font-bold text-white mb-8">Terms of Service</h1>
@@ -30,7 +31,7 @@ export default function TermsOfService() {
           <h2 className="text-xl font-semibold text-white mb-3">
             3. Disclaimer
           </h2>
-          <p>'
+          <p>
             The materials on Zion Tech Group's website are provided on an 'as'
             is' basis. Zion Tech Group makes no warranties, expressed or
             implied, and hereby disclaims and negates all other warranties
@@ -60,7 +61,7 @@ export default function TermsOfService() {
           <h2 className="text-xl font-semibold text-white mb-3">
             5. Revisions and Errata
           </h2>
-          <p>'
+          <p>
             The materials appearing on Zion Tech Group's website could include
             technical, typographical, or photographic errors. Zion Tech Group
             does not warrant that any of the materials on its website are

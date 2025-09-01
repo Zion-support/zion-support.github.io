@@ -1,6 +1,10 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import {
+
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer - motion';
+=======
+>>>>>>> main
 
   BarChart3,
   LineChart,
@@ -33,7 +37,7 @@ import {
   EyeOff,
   Maximize2,
   Minimize2,
-  Info,'
+  Info,
   X} from 'lucide-react';
 
 interface AnalyticsData {
@@ -41,15 +45,15 @@ interface AnalyticsData {
   id: string;
   metric: string;
   value: number;
-  change: number;'
+  change: number;
   trend: 'up' | 'down' | 'stable';
   category: string;
   timestamp: Date;
   target?: number;
-  unit?: string;
+  unit?: string}
 
-}
-
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface ChartData {
 
   labels: string[];
@@ -59,12 +63,9 @@ interface ChartData {
     data: number[];
     backgroundColor?: string;
     borderColor?: string;
-    borderWidth?: number;
-  
-}[];
-}
-
+    borderWidth?: number}[]}
 interface AdvancedAnalyticsDashboardProps {
+
   // Add your props here
 
 
@@ -72,7 +73,6 @@ interface AdvancedAnalyticsDashboardProps {
   showRealTime?: boolean;
   refreshInterval?: number;
   onDataExport?: data: AnalyticsData[] void;
-
 export function AdvancedAnalyticsDashboard({
 
   enabled = true,
@@ -86,62 +86,28 @@ export function AdvancedAnalyticsDashboard({
     '1h' | '24h' | '7d' | '30d''
   >('24h');
   const [selectedMetrics, setSelectedMetrics] = useState<string[]>(['
-    'performance','
-    'users','
-    'revenue',
+    'performance',users',revenue',
   ]);
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [showAdvancedMetrics, setShowAdvancedMetrics] = useState(false);
 
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
-  const chartRefs = useRef<{ [key: string]: any }>({});
-
+  
+  
   // Generate sample analytics data
-  const generateAnalyticsData = useCallback(() => {
-    const categories = ['
-      'performance','
-      'users','
-      'revenue','
-      'engagement','
-      'technical',
-    ];
-    const metrics = {
-
-      performance: ['
-        'Page Load Time','
-        'Core Web Vitals','
-        'Bundle Size','
-        'Memory Usage',
-      ],'
-      users: ['Active Users', 'New Users', 'Returning Users', 'User Sessions'],
-      revenue: ['
-        'Monthly Revenue','
-        'Conversion Rate','
-        'Average Order Value','
-        'Customer Lifetime Value',
-      ],'
-      engagement: ['Time on Site', 'Bounce Rate', 'Page Views', 'User Actions'],
-      technical: ['
-        'Error Rate','
-        'API Response Time','
-        'Database Performance','
-        'CDN Performance',
-      ]};
-
+  
+    
     const newData: AnalyticsData[] = [];
     categories.forEach(category => {
 
       metrics[category as keyof typeof metrics].forEach(metric => {
 
-        const value = Math.random() * 1000;
-        const change = (Math.random() - 0.5) * 20;
-        newData.push({
+        const change = (Math.random() - 0.5) * 20;        newData.push({
 
           id: `${category}-${metric}`,
           metric,
           value: Math.round(value * 100) / 100,
-          change: Math.round(change * 100) / 100,'
+          change: Math.round(change * 100) / 100,
           trend: change > 2 ? 'up' : change < -2 ? 'down' : 'stable',
           category,
           timestamp: new Date(),
@@ -151,114 +117,75 @@ export function AdvancedAnalyticsDashboard({
               ? 'ms''
               : category === 'revenue''
                 ? '$''
-                : ''});
-      });
-    });
+                : ''})})});
 
-    setAnalyticsData (newData) ;
-  }, []) ;
+    setAnalyticsData (newData) }, []) ;
 
   // Refresh data
-  const refreshData = useCallback ( () => {
-    setIsLoading (true) ;
+  
     setTimeout ( () => {
+
       generateAnalyticsData () ;
-      setIsLoading (false) ;
-    }, 1000) ;
-  }, [generateAnalyticsData]) ;
+      setIsLoading (false) }, 1000) }, [generateAnalyticsData]) ;
 
   // Export data
-  const exportData = useCallback ( () => {
-    if (onDataExport) {
-
-      onDataExport(analyticsData);
+  
     } else {
 
-      const csv = ['
-        'Metric,Value,Change,Trend,Category,Timestamp',
-        ...analyticsData.map()
-          item =>`
-            `${item.metric},${item.value},${item.change},${item.trend},${item.category},${item.timestamp.toISOString()}`
-        ),'
-      ].join('\n');
-'
-      const blob = new Blob([csv], { type: 'text/csv' });
-      const url = window.URL.createObjectURL(blob);'
-      const a = document.createElement('a');
       a.href = url;'`
       a.download = `analytics-${selectedTimeframe}-${new Date().toISOString().split('T')[0]}.csv`;
       a.click();
-      window.URL.revokeObjectURL(url);
-    }
+      window.URL.revokeObjectURL(url)}
   }, [analyticsData, selectedTimeframe, onDataExport]) ;
-
   // Setup real - time updates
   useEffect ( () => {
+
     if (showRealTime && isOpen) {
 
       generateAnalyticsData();
       intervalRef.current = setInterval(generateAnalyticsData, refreshInterval);
 
       return () => {
+
         if (intervalRef.current) {
 
-          clearInterval(intervalRef.current);
-        }
-      };
-    }
+          clearInterval(intervalRef.current)}
+      }}
   }, [showRealTime, isOpen, refreshInterval, generateAnalyticsData]) ;
-
   // Initial data load
   useEffect ( () => {
+
     if (isOpen) {
 
-      generateAnalyticsData();
-    }
+      generateAnalyticsData()}
   }, [isOpen, generateAnalyticsData]) ;
 
   // Get trend icon and color'
-  const getTrendDisplay = (trend: 'up' | 'down' | 'stable', change: number) => {
-
-    const colors = {
-'
-      up: 'text-green-500','
-      down: 'text-red-500','
-      stable: 'text-gray-500'};
-
-    const icons = {
-
-      up: <TrendingUp className="w-4 h-4" />,"
-      down: <TrendingUp className="w-4 h-4 rotate-180" />,"
-      stable: <Activity className="w-4 h-4" />};
-
-    return()`
-      <div className={`flex items-center space-x-1 ${colors[trend]}`}>
+  
+    
+    return()`      <div className={`flex items-center space-x-1 ${colors[trend]}`}>
         {icons[trend]}"
-        <span className="text-sm font-medium">'
+        <span className="text-sm font-medium">
           {change > 0 ? '+' : ''}
           {change}%
         </span>
-      </div>) ;
-  };
+      </div>) };
 
   // Get category icon
   const getCategoryIcon = (category: string) => {
 
     const icons: { [key: string]: React.ReactNode } = {
+
 "
-      performance: <Zap className="w-5 h-5" />,"
-      users: <Users className="w-5 h-5" />,"
-      revenue: <DollarSign className="w-5 h-5" />,"
-      engagement: <Activity className="w-5 h-5" />,"
-      technical: <Cpu className="w-5 h-5" />};"
-    return icons[category] || <Activity className="w-5 h-5" />;
-  };
+      performance: <Zap className="w-5 h-5"  />,"
+      users: <Users className="w-5 h-5"  />,"
+      revenue: <DollarSign className="w-5 h-5"  />,"
+      engagement: <Activity className="w-5 h-5"  />,"
+      technical: <Cpu className="w-5 h-5"  />};"
+    return icons[category] || <Activity className="w-5 h-5"  />};
 
   // Filter data by selected metrics
-  const filteredData = analyticsData.filter(item =>
-    selectedMetrics.includes(item.category)
-  );
-
+  
   if (!enabled) return null;
 
   return()
@@ -288,12 +215,12 @@ export function AdvancedAnalyticsDashboard({
           >
             <motion.div`
               className={`bg-white dark:bg-gray-900 rounded-2xl shadow-2xl overflow-hidden ${
-'
+
                 isFullscreen ? 'w-full h-full' : 'w-full max-w-7xl max-h-[90vh]'`
               }`}
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}'
+              exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
             >
               {/* Header */}"
@@ -318,8 +245,7 @@ export function AdvancedAnalyticsDashboard({
                   >
                     <RefreshCw'`
                       className={`w-5 h-5 ${isLoading ? 'animate-spin' : ''}`}
-                    />
-                  </button>
+                    />                  </button>
 
                   <button
                     onClick={() => setIsFullscreen(!isFullscreen)}"
@@ -336,8 +262,7 @@ export function AdvancedAnalyticsDashboard({
                     onClick={() => setIsOpen(false)}"
                     className="p-2 text-gray-600 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400 transition-colors"
                   >"
-                    <X className="w-5 h-5" />
-                  </button>
+                    <X className="w-5 h-5"  />                  </button>
                 </div>
               </div>
 
@@ -349,8 +274,8 @@ export function AdvancedAnalyticsDashboard({
                     <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                       Timeframe:
                     </span>"
-                    <div className="flex bg-white dark:bg-gray-700 rounded-lg p-1">'
-                      {(['1h', '24h', '7d', '30d'] as const).map(timeframe => (
+                    <div className="flex bg-white dark:bg-gray-700 rounded-lg p-1">
+                      {(['1h',24h',7d',30d'] as const).map(timeframe => (
                         <button
                           key={timeframe}
                           onClick={() => setSelectedTimeframe(timeframe)}`
@@ -373,24 +298,19 @@ export function AdvancedAnalyticsDashboard({
                     </span>"
                     <div className="flex flex-wrap gap-2">
                       {['
-                        'performance','
-                        'users','
-                        'revenue','
-                        'engagement','
-                        'technical',
+                        'performance',users',revenue',engagement',technical',
                       ].map(metric => (
                         <button
                           key={metric}
                           onClick={() => {
+
                             setSelectedMetrics(prev =>
                               prev.includes(metric)
                                 ? prev.filter(m => m !== metric)
                                 : [...prev, metric]
-                            );
-                          }}`
-                          className={`px-3 py-1 text-sm rounded-full transition-colors ${
+                            )}}`                          className={`px-3 py-1 text-sm rounded-full transition-colors ${
 
-                            selectedMetrics.includes(metric)'
+                            selectedMetrics.includes(metric)
                               ? 'bg-green-600 text-white''
                               : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'`
                           }`}
@@ -406,8 +326,7 @@ export function AdvancedAnalyticsDashboard({
                       onClick={exportData}"
                       className="flex items-center space-x-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
                     >"
-                      <Download className="w-4 h-4" />
-                      <span>Export</span>
+                      <Download className="w-4 h-4"  />                      <span>Export</span>
                     </button>
 
                     <button
@@ -416,11 +335,10 @@ export function AdvancedAnalyticsDashboard({
                       }"
                       className="flex items-center space-x-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
                     >"
-                      <Settings className="w-4 h-4" />
-                      <span>'
+                      <Settings className="w-4 h-4"  />
+                      <span>
                         {showAdvancedMetrics ? 'Hide' : 'Show'} Advanced
-                      </span>
-                    </button>
+                      </span>                    </button>
                   </div>
                 </div>
               </div>
@@ -477,6 +395,7 @@ export function AdvancedAnalyticsDashboard({
                                 <div"
                                   className="bg-blue-600 h-2 rounded-full transition-all duration-300"
                                   style={{
+
 `
                                     width: `${Math.min((item.value / item.target) * 100, 100)}%`}}
                                 ></div>
@@ -545,7 +464,7 @@ export function AdvancedAnalyticsDashboard({
                                 <td className="px-6 py-4 whitespace-nowrap">
                                   <div`
                                     className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
-'
+
                                       item.trend === 'up''
                                         ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400''
                                         : item.trend === 'down''
@@ -571,7 +490,7 @@ export function AdvancedAnalyticsDashboard({
                     {showAdvancedMetrics && (
                       <motion.div"
                         className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6"
-                        initial={{ opacity: 0, height: 0 }}'
+                        initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
                       >"
@@ -650,6 +569,5 @@ export function AdvancedAnalyticsDashboard({
           </motion.div>) }
       </AnimatePresence>
     </>
-  );
-}
+  )}
 '"`

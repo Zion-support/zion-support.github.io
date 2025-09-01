@@ -1,7 +1,26 @@
+<<<<<<< HEAD
 import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
-import { SEO } from "@/components/SEO";'
-import { Link } from 'react-router-dom';
+import { SEO } from "@/components / SEO";
+import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025 } from '@/data / ultimateRealServices2025';
+export default React.memo (/**
+export default UltimateServicesShowcase2025;
+import {
+
+ * UltimateServicesShowcase2025 function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function UltimateServicesShowcase2025 () {
+
+  Brain,
+  Zap,
+  Shield,
+  Database,
+  Users,
+  TrendingUp,
+  Globe,
+=======
 import {
 
   Brain, 
@@ -11,6 +30,7 @@ import {
   Users, 
   TrendingUp, 
   Globe, 
+>>>>>>> main
   Lock,
   Cloud,
   Briefcase,
@@ -24,34 +44,41 @@ import {
   MapPin,
   ExternalLink,
   Search'
-} from 'lucide-react';'
-import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025 } from '@/data/ultimateRealServices2025';
-
+} from 'lucide-react';
 export default function UltimateServicesShowcase2025() {
-'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
+
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
+  
+  
+    
+    return matchesCategory && matchesSearch});
 
-  const filteredServices = ULTIMATE_REAL_SERVICES_2025.filter(service => {
-'
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
-                         service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
-                         service.category.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
-                         service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
-    return matchesCategory && matchesSearch;
-  }) ;
+  
+    
+    return matchesCategory && matchesSearch}) ;
 
+<<<<<<< HEAD
   const getCategoryIcon = (category: string) => {
-'"
-    if (category === 'all') return <Rocket className="w-6 h-6" />;
-    return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ? "
-      <span className="text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> : "
-      <Rocket className="w-6 h-6" />;
+
+    if (category === 'all') return < Rocket className="w - 6 h - 6" />;
+    return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ?
+      <span className="text - 2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> :
+      <Rocket className="w - 6 h - 6" />;
   };
 
+  return (<div role="button" className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light text - white relative overflow - hidden">
+      {/* Animated Background */}
+      <div role="button" className="absolute inset - 0">
+        <div role="button" className="absolute inset - 0 bg-[linear - gradient (rgba (34,221,210,0.03) _1px,transparent_1px) ,linear - gradient (90deg,rgba (34,221,210,0.03) _1px,transparent_1px) ] bg-[size:100px_100px] animate - pulse" />
+        <div role="button" className="absolute inset - 0 bg - gradient - to - br from - zion - purple / 5 via - transparent to - zion - cyan / 5" />
+        <div role="button" className="absolute top - 0 left - 0 w - full h - full bg - gradient - radial from - zion - cyan / 10 via - transparent to - transparent" />
+=======
+  
+    return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ? "
+      <span className="text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> : "
+      <Rocket className="w-6 h-6"  />};
   return ("
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">
       {/* Animated Background */}"
@@ -59,6 +86,7 @@ export default function UltimateServicesShowcase2025() {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.03)_1px,transparent_1px)] bg-[size:100px_100px] animate-pulse" />"
         <div className="absolute inset-0 bg-gradient-to-br from-zion-purple/5 via-transparent to-zion-cyan/5" />"
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-radial from-zion-cyan/10 via-transparent to-transparent" />
+>>>>>>> main
       </div>
 
       {/* Header Section */}"
@@ -79,12 +107,18 @@ export default function UltimateServicesShowcase2025() {
               Discover our revolutionary portfolio of cutting-edge micro SAAS solutions, AI-powered innovations, and quantum computing services designed to transform your business and drive competitive advantage in the digital age
             </p>
           </motion.div>
-          
+
           {/* Key Statistics */}
+<<<<<<< HEAD
+          <motion.div
+            className="grid grid - cols - 2 md:grid - cols - 4 gap - 6 max - w-5xl mx - auto mb - 12"
+            variants={containerVariants}
+=======
           <motion.div "
             className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-12"
             variants={containerVariants}"
-            initial="hidden""
+>>>>>>> main
+            initial="hidden"
             animate="visible"
           >"
             <motion.div variants={itemVariants} className="glass rounded-xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 group">"
@@ -106,22 +140,26 @@ export default function UltimateServicesShowcase2025() {
           </motion.div>
 
           {/* Search and Filter */}
+<<<<<<< HEAD
+          <motion.div
+            className="max - w-4xl mx - auto mb - 8"
+=======
           <motion.div "
             className="max-w-4xl mx-auto mb-8"
+>>>>>>> main
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >"
             <div className="relative mb-6">
               <input"
-                type="text""
+                type="text"
                 placeholder="Search services, features, or technologies..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full px-6 py-4 glass border border-zion-cyan/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 text-lg"
               />"
-              <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-zion-cyan" />
-            </div>
+              <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-zion-cyan"  />            </div>
 
             {/* Sort and View Controls */}"
             <div className="flex flex-wrap items-center justify-center gap-4">"
@@ -138,14 +176,24 @@ export default function UltimateServicesShowcase2025() {
                   <option value="name">Name</option>
                 </select>
               </div>
+<<<<<<< HEAD
+
+              <div role="button" className="flex items - center gap - 2">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
+                  className={`p - 2 rounded - lg transition - colors ${viewMode === 'grid' ? 'bg - zion - cyan text - white' : 'glass text - gray - 300 hover:text - white'}`}
+                >
+                  <svg className="w - 5 h - 5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M5 3a2 2 0 00 - 2 2v2a2 2 0 002 2h2a2 2 0 002 - 2V5a2 2 0 00 - 2-2H5zM5 11a2 2 0 00 - 2 2v2a2 2 0 002 2h2a2 2 0 002 - 2v - 2a2 2 0 00 - 2-2H5zM11 5a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h - 2a2 2 0 01 - 2-2V5zM11 13a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h - 2a2 2 0 01 - 2-2v - 2z" />
+=======
               "
               <div className="flex items-center gap-2">
                 <button'
-                  onClick={() => setViewMode('grid')}'
+                  onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-colors ${viewMode === 'grid' ? 'bg-zion-cyan text-white' : 'glass text-gray-300 hover:text-white'}`}
                 >"
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">"
                     <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+>>>>>>> main
                   </svg>
                 </button>
                 <button'
@@ -162,24 +210,40 @@ export default function UltimateServicesShowcase2025() {
         </div>
       </section>;
 
+<<<<<<< HEAD
+      {/* Services Grid / List */}
+      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
+        <div role="button" className="max - w-7xl mx - auto">
+          <motion.div
+            className={viewMode === 'grid'
+              ? "grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8"
+              : "space - y-6"
+=======
       {/* Services Grid/List */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-7xl mx-auto">
           <motion.div '
             className={viewMode === 'grid' "
-              ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8""
+              ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               : "space-y-6"
+>>>>>>> main
             }
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             animate="visible"
           >
             {sortedServices.map ( (service, index) => (<motion.div
                 key={service.id}
-                variants={itemVariants}'
+                variants={itemVariants}
+<<<<<<< HEAD
+                className={viewMode === 'grid'
+                  ? "glass rounded - 2xl p - 6 border border - white / 20 hover:border - zion - cyan / 40 transition - all duration - 500 hover:transform hover:scale - 105 cursor - pointer group"
+                  : "glass rounded - 2xl p - 6 border border - white / 20 hover:border - zion - cyan / 40 transition - all duration - 500 cursor - pointer group"
+=======
                 className={viewMode === 'grid' "
-                  ? "glass rounded-2xl p-6 border border-white/20 hover:border-zion-cyan/40 transition-all duration-500 hover:transform hover:scale-105 cursor-pointer group""
+                  ? "glass rounded-2xl p-6 border border-white/20 hover:border-zion-cyan/40 transition-all duration-500 hover:transform hover:scale-105 cursor-pointer group"
                   : "glass rounded-2xl p-6 border border-white/20 hover:border-zion-cyan/40 transition-all duration-500 cursor-pointer group"
+>>>>>>> main
                 }
                 onClick={ () => handleServiceClick (service) }
                 whileHover={{ y: -5 }}
@@ -188,17 +252,25 @@ export default function UltimateServicesShowcase2025() {
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>"
                   <div className="flex items-center gap-1 text-yellow-400">
                     {[...Array(5)].map((_, i) => ('`
-                      <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'fill-current' : 'fill-gray-600'}`} />
-                    ))}"
-                    <span className="text-sm text-gray-400 ml-1">({service.reviews})</span>
+                      <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'fill-current' : 'fill-gray-600'}`}  />
+                    ))}"                    <span className="text-sm text-gray-400 ml-1">({service.reviews})</span>
                   </div>
                 </div>
+<<<<<<< HEAD
+
+                <h3 className="text - xl font - semibold text - white mb - 3 group - hover:text - zion - cyan transition - colors duration - 300">{service.name}</h3>
+                <p className="text - gray - 300 mb - 4 line - clamp - 3 leading - relaxed">{service.description}</p>
+
+                <div role="button" className="mb - 4">
+                  <span className="inline - block px - 3 py - 1 bg - zion - purple / 20 text - zion - purple text - sm rounded - full border border - zion - purple / 30">
+=======
 "
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">{service.name}</h3>"
                 <p className="text-gray-300 mb-4 line-clamp-3 leading-relaxed">{service.description}</p>
                 "
                 <div className="mb-4">"
                   <span className="inline-block px-3 py-1 bg-zion-purple/20 text-zion-purple text-sm rounded-full border border-zion-purple/30">
+>>>>>>> main
                     {service.category}
                   </span>
                 </div>
@@ -210,14 +282,12 @@ export default function UltimateServicesShowcase2025() {
 "
                 <div className="mb-6">"
                   <h4 className="text-sm font-semibold text-zion-cyan mb-2 flex items-center gap-2">"
-                    <Zap className="w-4 h-4" />
-                    Key Features:
+                    <Zap className="w-4 h-4"  />                    Key Features:
                   </h4>"
                   <ul className="space-y-1">
                     {service.features.slice(0, 3).map((feature, idx) => ("
                       <li key={idx} className="text-sm text-gray-300 flex items-center">"
-                        <CheckCircle className="w-3 h-3 text-zion-green mr-2 flex-shrink-0" />
-                        {feature}
+                        <CheckCircle className="w-3 h-3 text-zion-green mr-2 flex-shrink-0"  />                        {feature}
                       </li>
                     ))}
                     {service.features.length > 3 && ("
@@ -230,23 +300,30 @@ export default function UltimateServicesShowcase2025() {
 "
                 <div className="flex items-center justify-between">"
                   <div className="flex items-center gap-2 text-sm text-gray-400">"
-                    <Clock className="w-4 h-4" />
+                    <Clock className="w-4 h-4"  />
                     {service.estimatedDelivery}
                   </div>"
                   <button className="text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300 flex items-center gap-1 group-hover:gap-2">"
-                    Learn More <ArrowRight className="w-4 h-4" />
-                  </button>
+                    Learn More <ArrowRight className="w-4 h-4"  />                  </button>
                 </div>
               </motion.div>) ) }
           </motion.div>
         </div>
       </section>
 
+<<<<<<< HEAD
+      {/* Why Choose Zion Tech Group */}
+      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8 bg - white / 5">;
+        <div role="button" className="max - w-7xl mx - auto">
+          <motion.div
+            className="text - center mb - 16"
+=======
       {/* Why Choose Zion Tech Group */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white/5">;"
         <div className="max-w-7xl mx-auto">
           <motion.div "
             className="text-center mb-16"
+>>>>>>> main
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -259,11 +336,18 @@ export default function UltimateServicesShowcase2025() {
               We combine cutting-edge technology with proven business expertise to deliver solutions that drive real results and competitive advantage
             </p>
           </motion.div>
+<<<<<<< HEAD
+
+          <motion.div
+            className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8"
+            variants={containerVariants}
+=======
           
           <motion.div "
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+>>>>>>> main
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >"
@@ -272,6 +356,19 @@ export default function UltimateServicesShowcase2025() {
               <h3 className="text-xl font-semibold text-white mb-3">Innovation First</h3>"
               <p className="text-gray-300">We stay ahead of the curve with the latest technologies and methodologies, ensuring your business always has a competitive edge.</p>
             </motion.div>
+<<<<<<< HEAD
+
+            <motion.div variants={itemVariants} className="glass rounded - xl p - 6 border border - white / 20 hover:border - zion - cyan / 30 transition - all duration - 300 group">
+              <div role="button" className="text - 4xl mb - 4 group - hover:scale - 110 transition - transform duration - 300">🎯</div>
+              <h3 className="text - xl font - semibold text - white mb - 3">Results Driven</h3>
+              <p className="text - gray - 300">Our solutions are designed to deliver measurable business outcomes, from increased efficiency to improved customer satisfaction.</p>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="glass rounded - xl p - 6 border border - white / 20 hover:border - zion - cyan / 30 transition - all duration - 300 group">
+              <div role="button" className="text - 4xl mb - 4 group - hover:scale - 110 transition - transform duration - 300">🤝</div>
+              <h3 className="text - xl font - semibold text - white mb - 3">Partnership Approach</h3>
+              <p className="text - gray - 300">We work as an extension of your team, providing ongoing support and collaboration to ensure long - term success.</p>
+=======
             "
             <motion.div variants={itemVariants} className="glass rounded-xl p-6 border border-white/20 hover:border-zion-cyan/30 transition-all duration-300 group">"
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🎯</div>"
@@ -283,6 +380,7 @@ export default function UltimateServicesShowcase2025() {
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🤝</div>"
               <h3 className="text-xl font-semibold text-white mb-3">Partnership Approach</h3>"
               <p className="text-gray-300">We work as an extension of your team, providing ongoing support and collaboration to ensure long-term success.</p>
+>>>>>>> main
             </motion.div>
           </motion.div>
         </div>
@@ -325,19 +423,27 @@ export default function UltimateServicesShowcase2025() {
                   <ul className="space-y-2">
                     {selectedService.features.map((feature, idx) => ("
                       <li key={idx} className="text-gray-300 flex items-center">"
-                        <CheckCircle className="w-4 h-4 text-zion-green mr-2 flex-shrink-0" />
-                        {feature}
+                        <CheckCircle className="w-4 h-4 text-zion-green mr-2 flex-shrink-0"  />                        {feature}
                       </li>) ) }
                   </ul>
                 </div>
+<<<<<<< HEAD
+
+                <div>
+                  <h3 className="text - lg font - semibold text - zion - purple mb - 3">Benefits</h3>
+                  <ul className="space - y-2">
+                    {selectedService.benefits.map ( (benefit, idx) => (<li key={idx} className="text - gray - 300 flex items - center">
+                        <TrendingUp className="w - 4 h - 4 text - zion - green mr - 2 flex - shrink - 0" />
+                        {benefit}
+=======
                 
                 <div>"
                   <h3 className="text-lg font-semibold text-zion-purple mb-3">Benefits</h3>"
                   <ul className="space-y-2">
                     {selectedService.benefits.map((benefit, idx) => ("
                       <li key={idx} className="text-gray-300 flex items-center">"
-                        <TrendingUp className="w-4 h-4 text-zion-green mr-2 flex-shrink-0" />
-                        {benefit}
+                        <TrendingUp className="w-4 h-4 text-zion-green mr-2 flex-shrink-0"  />                        {benefit}
+>>>>>>> main
                       </li>) ) }
                   </ul>
                 </div>
@@ -376,7 +482,5 @@ export default function UltimateServicesShowcase2025() {
             </motion.div>
           </motion.div>) }
       </AnimatePresence>
-    </div>) ;
-};
-
+    </div>) };
 export default UltimateServicesShowcase2025;'"`

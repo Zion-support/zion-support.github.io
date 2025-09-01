@@ -5,7 +5,6 @@ export function ComprehensiveSitemap () {
 import {
 import { motion } from 'framer - motion';
 
-
   Map,
   Globe,
   Zap,
@@ -923,7 +922,7 @@ import { motion } from 'framer - motion';
     ],
   };
 
-  const getStatusIcon = (...args: unknown[]): unknown => {
+  const getStatusIcon = (status: string) => {
     switch (status) {
       case 'exists':
         return < CheckCircle className="w - 5 h - 5 text - green - 500" />;
@@ -934,7 +933,7 @@ import { motion } from 'framer - motion';
     }
   };
 
-  const getStatusColor = (...args: unknown[]): unknown => {
+  const getStatusColor = (status: string) => {
     switch (status) {
       case 'exists':
         return 'text - green - 500';

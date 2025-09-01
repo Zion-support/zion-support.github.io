@@ -2,6 +2,7 @@
 // Next-generation infrastructure and development solutions
 ;
 export interface CloudDevOpsService {
+
   id: string;
   title: string;
   description: string;
@@ -55,23 +56,21 @@ const zionContact = {
 
   phone: "+1 302 464 0950","
   email: "kleber@ziontechgroup.com","
-  website: "https://ziontechgroup.com",;
-  ;
+  website: "https://ziontechgroup.com",;  ;
   ;
   ;
   ;"
-  address: "364 E Main St STE 1008 Middletown DE 19709";
+  address: "364 E Main St STE 1008 Middletown DE 19709"};
 ;
-
-
-
-
-
+<<<<<<< HEAD
 
 };
-;
+
+=======
+>>>>>>> main
 export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
   {
+
 "
     id: "multi-cloud-orchestration-platform","
     title: "Zion Multi-Cloud Orchestration Platform","
@@ -167,6 +166,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
   },
 
   {
+
 "
     id: "ai-powered-devops-automation","
     title: "Zion AI-Powered DevOps Automation","
@@ -262,6 +262,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
   },
 
   {
+
 "
     id: "edge-computing-orchestrator","
     title: "Zion Edge Computing Orchestrator","
@@ -357,6 +358,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
   },
 
   {
+
 "
     id: "serverless-architecture-platform","
     title: "Zion Serverless Architecture Platform","
@@ -452,6 +454,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
   },
 
   {
+
 "
     id: "gitops-workflow-automation","
     title: "Zion GitOps Workflow Automation","
@@ -543,8 +546,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&h=500",;"
     createdAt: "2030-01-15T10:00:00.000Z",;
     featured: true,;
-    trending: true;
-  };
+    trending: true};
 ];
 
-export default innovativeCloudDevOpsServices2030;}}"
+export default innovativeCloudDevOpsServices2030}}"

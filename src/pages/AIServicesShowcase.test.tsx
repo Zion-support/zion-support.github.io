@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import AIServicesShowcase from './AIServicesShowcase';
 
-
 describe ('AIServicesShowcase', () => {
   it ('renders without crashing', () => {
     render (<AIServicesShowcase />) ;

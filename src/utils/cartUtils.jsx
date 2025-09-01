@@ -1,25 +1,41 @@
                                   export const validateCartItem = item => {
+
                                 export const updateItemQuantity = (cart,
                               export const removeFromCart = (cart, itemId) => {
-                            export const mergeCarts = (cart1, cart2) => {
-                          export const mergeCartItems = (cart1, cart2) => {
-                        export const isCartEmpty = cart => {
-                      export const importCartData = cartData => {
-                    export const getCartSummary = cart => {
-                  export const getCartKey = (userId = null) => {
-                export const getCartItemCount = cart => {
-              export const formatPrice = (price, currency = 'USD') => {
-            export const exportCartData = cart => {
-          export const clearCart = () => {
-        export const calculateTax = subtotal => {
-      export const calculateShipping = subtotal => {
-    export const calculateCartTotal = cart => {
-  export const calculateCartSubtotal = cart => {
-export const addToCart = (cart, newItem) => {
 
+                            export const mergeCarts = (cart1, cart2) => {
+
+                          export const mergeCartItems = (cart1, cart2) => {
+
+                        export const isCartEmpty = cart => {
+
+                      export const importCartData = cartData => {
+
+                    export const getCartSummary = cart => {
+
+                  export const getCartKey = (userId = null) => {
+
+                export const getCartItemCount = cart => {
+
+              export const formatPrice = (price, currency = 'USD') => {
+
+            export const exportCartData = cart => {
+
+          export const clearCart = () => {
+
+        export const calculateTax = subtotal => {
+
+      export const calculateShipping = subtotal => {
+
+    export const calculateCartTotal = cart => {
+
+  export const calculateCartSubtotal = cart => {
+
+export const addToCart = (cart, newItem) => {
 
                                   itemId,
                                   quantity) => {
+
                                     /**
                                      * Cart utility functions for Zion Tech Group * Provides comprehensive cart management functionality
                                      */
@@ -38,10 +54,7 @@ export const addToCart = (cart, newItem) => {
                                     if (!item || typeof item !== 'object') return false;
 
                                     const requiredFields = [
-                                      'id',
-                                      'name',
-                                      'price',
-                                      'quantity',
+                                      'id',name',price',quantity',
                                     ];
                                     return requiredFields.every (field =>
                                         itemObject.prototype.hasOwnProperty.call (field) &&
@@ -56,6 +69,7 @@ export const addToCart = (cart, newItem) => {
                                    * @returns {Array} Updated cart
                                    */
                                   if (!validateCartItem (newItem) ) {
+
                                     console.error ('Invalid cart item:',
                                       newItem) ;
                                     return cart;
@@ -64,23 +78,25 @@ export const addToCart = (cart, newItem) => {
                                   const existingItemIndex = cart.findIndex (item => item.id === newItem.id) ;
 
                                   if (existingItemIndex !== -1) {
+
                                     // Update existing item quantity
                                     const updatedCart = [...cart];
                                     updatedCart[existingItemIndex] = {
+
                                       ...updatedCart[existingItemIndex],
                                       quantity:
                                         updatedCart[existingItemIndex]
-                                          .quantity + newItem.quantity,
-                                    };
+                                          .quantity + newItem.quantity};
                                     return updatedCart;
                                   } else {
+
                                     // Add new item
                                     return [
                                       ...cart,
                                       {
+
                                         ...newItem,
-                                        addedAt: new Date () .toISOString () ,
-                                      },
+                                        addedAt: new Date () .toISOString () },
                                     ];
                                   }
                                 };
@@ -102,16 +118,17 @@ export const addToCart = (cart, newItem) => {
                                * @returns {Array} Updated cart
                                */
                               if (quantity <= 0) {
+
                                 return removeFromCart (cart, itemId) ;
                               }
 
                               return cart.map (item =>
                                 item.id === itemId
                                   ? {
+
                                       ...item,
                                       quantity,
-                                      updatedAt: new Date () .toISOString () ,
-                                    }
+                                      updatedAt: new Date () .toISOString () }
                                   : item) ;
                             };
 
@@ -178,13 +195,13 @@ export const addToCart = (cart, newItem) => {
                 const total = subtotal + tax + shipping;
 
                 return {
+
                   subtotal,
                   tax,
                   shipping,
                   total,
                   itemCount: getCartItemCount (cart) ,
-                  uniqueItems: cart.length,
-                };
+                  uniqueItems: cart.length};
               };
 
               /**
@@ -193,13 +210,14 @@ export const addToCart = (cart, newItem) => {
                * @param {string} currency - Currency code (default: USD) * @returns {string} Formatted price
                */
               if (typeof price !== 'number' || isNaN (price) ) {
+
                 return '$0.00';
               }
 
               return new Intl.NumberFormat ('en - US', {
+
                 style: 'currency',
-                currency: currency,
-              }) .format (price) ;
+                currency: currency}) .format (price) ;
             };
 
             /**
@@ -210,14 +228,14 @@ export const addToCart = (cart, newItem) => {
             const total = calculateCartTotal (cart) ;
 
             return {
+
               itemCount: total.itemCount,
               uniqueItems: cart.length,
               subtotal: formatPrice (total.subtotal) ,
               tax: formatPrice (total.tax) ,
               shipping: formatPrice (total.shipping) ,
               total: formatPrice (total.total) ,
-              isEmpty: isCartEmpty (cart) ,
-            };
+              isEmpty: isCartEmpty (cart) };
           };
 
           /**
@@ -225,8 +243,10 @@ export const addToCart = (cart, newItem) => {
            * @returns {string} JSON string of cart data
            */
           try {
+
             return JSON.stringify (cart, null, 2) ;
           } catch (error) {
+
             console.error ('Error exporting cart data:', error) ;
             return '[]';
           }
@@ -237,12 +257,15 @@ export const addToCart = (cart, newItem) => {
          * @returns {Array} Parsed cart array
          */
         try {
+
           const parsed = JSON.parse (cartData) ;
           if (Array.isArray (parsed) ) {
+
             return parsed.filter (item => validateCartItem (item) ) ;
           }
           return [];
         } catch (error) {
+
           console.error ('Error importing cart data:', error) ;
           return [];
         }
@@ -252,6 +275,7 @@ export const addToCart = (cart, newItem) => {
        * Get cart key for storage (useful for user - specific carts) * @param {string} userId - User ID (optional) * @returns {string} Cart storage key
        */
       if (userId) {
+
         return `zion_cart_${userId}`;
       }
       return CART_STORAGE_KEY;
@@ -263,23 +287,28 @@ export const addToCart = (cart, newItem) => {
      * @returns {Array} Merged cart
      */
     if (!Array.isArray (cart1) || !Array.isArray (cart2) ) {
+
       return Array.isArray (cart1) ? cart1 : Array.isArray (cart2) ? cart2 : [];
     }
 
     const merged = [...cart1];
 
     cart2.forEach (item2 => {
+
       if (validateCartItem (item2) ) {
+
         const existingIndex = merged.findIndex (item1 => item1.id === item2.id) ;
 
         if (existingIndex !== -1) {
+
           // Merge quantities
           merged[existingIndex] = {
+
             ...merged[existingIndex],
             quantity: merged[existingIndex].quantity + item2.quantity,
-            updatedAt: new Date () .toISOString () ,
-          };
+            updatedAt: new Date () .toISOString () };
         } else {
+
           // Add new item
           merged.push ({ ...item2, addedAt: new Date () .toISOString () }) ;
         }

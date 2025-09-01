@@ -12,9 +12,7 @@ export interface PricingTier {
   limitations: string[];
   recommendedFor: string[];
   savings?: number;
-  popular?: boolean;
-
-}
+  popular?: boolean}
 ;
 export interface EnterprisePricing {
 
@@ -29,11 +27,8 @@ export interface EnterprisePricing {
 
     phone: string;
     email: string;
-    website: string;
-  
-};
-;
-export interface ServicePricing {
+    website: string};
+;export interface ServicePricing {
 
   serviceId: string;
   serviceName: string;
@@ -44,28 +39,21 @@ export interface ServicePricing {
 
     competitors: string[];
     ourAdvantage: string;
-    priceDifference: string;
-  
-};
-}
+    priceDifference: string}}
 
 // Zion Tech Group Contact Information;
-const zionContact = {
-
-  phone: "+1 302 464 0950","
-  email: "kleber@ziontechgroup.com","
-  website: "https://ziontechgroup.com"
-};
 
 // Revolutionary Micro SAAS Services Pricing;
 export const revolutionaryMicroSaasPricing: ServicePricing[] = [
   {
+
 "
     serviceId: "neuralflow-enterprise","
     serviceName: "NeuralFlow Enterprise","
     category: "AI-Powered Workflow Automation",
     tiers: [
       {
+
 "
         id: "starter","
         name: "Starter",
@@ -88,6 +76,7 @@ export const revolutionaryMicroSaasPricing: ServicePricing[] = [
         recommendedFor: ["Small teams", "Startups", "Individual professionals"]
       },
       {
+
 "
         id: "professional","
         name: "Professional",
@@ -111,6 +100,7 @@ export const revolutionaryMicroSaasPricing: ServicePricing[] = [
         recommendedFor: ["Growing businesses", "Medium teams", "Professional services"]
       },
       {
+
 "
         id: "enterprise","
         name: "Enterprise",
@@ -134,6 +124,7 @@ export const revolutionaryMicroSaasPricing: ServicePricing[] = [
       }
     ],
     enterprise: {
+
 "
       id: "neuralflow-custom","
       name: "NeuralFlow Custom Enterprise","
@@ -166,6 +157,7 @@ export const revolutionaryMicroSaasPricing: ServicePricing[] = [
       contactInfo: zionContact
     },
     marketComparison: {
+
 "
       competitors: ["UiPath", "Automation Anywhere", "Blue Prism"],"
       ourAdvantage: "AI-powered learning and optimization that gets smarter over time","
@@ -173,12 +165,14 @@ export const revolutionaryMicroSaasPricing: ServicePricing[] = [
     }
   },
   {
+
 "
     serviceId: "quantumsync-pro","
     serviceName: "QuantumSync Pro","
     category: "Quantum Computing Integration",
     tiers: [
       {
+
 "
         id: "researcher","
         name: "Researcher",
@@ -201,6 +195,7 @@ export const revolutionaryMicroSaasPricing: ServicePricing[] = [
         recommendedFor: ["Research institutions", "Academic researchers", "Small R&D teams"]
       },
       {
+
 "
         id: "professional","
         name: "Professional",
@@ -224,6 +219,7 @@ export const revolutionaryMicroSaasPricing: ServicePricing[] = [
         recommendedFor: ["Technology companies", "Pharmaceutical companies", "Financial services"]
       },
       {
+
 "
         id: "enterprise","
         name: "Enterprise",
@@ -247,6 +243,7 @@ export const revolutionaryMicroSaasPricing: ServicePricing[] = [
       }
     ],
     enterprise: {
+
 "
       id: "quantumsync-custom","
       name: "QuantumSync Custom Enterprise","
@@ -278,6 +275,7 @@ export const revolutionaryMicroSaasPricing: ServicePricing[] = [
       contactInfo: zionContact
     },
     marketComparison: {
+
 "
       competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum"],"
       ourAdvantage: "Hybrid quantum-classical processing with enterprise-grade support","
@@ -289,12 +287,14 @@ export const revolutionaryMicroSaasPricing: ServicePricing[] = [
 // Revolutionary IT Services Pricing;
 export const revolutionaryITServicesPricing: ServicePricing[] = [
   {
+
 "
     serviceId: "quantum-infrastructure-consulting","
     serviceName: "Quantum Infrastructure Consulting","
     category: "Quantum Computing Infrastructure",
     tiers: [
       {
+
 "
         id: "assessment","
         name: "Infrastructure Assessment",
@@ -317,6 +317,7 @@ export const revolutionaryITServicesPricing: ServicePricing[] = [
         recommendedFor: ["Companies exploring quantum computing", "Technology assessment", "Strategic planning"]
       },
       {
+
 "
         id: "implementation","
         name: "Full Implementation",
@@ -339,6 +340,7 @@ export const revolutionaryITServicesPricing: ServicePricing[] = [
       }
     ],
     enterprise: {
+
 "
       id: "quantum-custom","
       name: "Custom Quantum Infrastructure","
@@ -370,6 +372,7 @@ export const revolutionaryITServicesPricing: ServicePricing[] = [
       contactInfo: zionContact
     },
     marketComparison: {
+
 "
       competitors: ["IBM", "Microsoft", "Google"],"
       ourAdvantage: "End-to-end quantum infrastructure with dedicated support and customization","
@@ -381,12 +384,14 @@ export const revolutionaryITServicesPricing: ServicePricing[] = [
 // Revolutionary AI Services Pricing;
 export const revolutionaryAIServicesPricing: ServicePricing[] = [
   {
+
 "
     serviceId: "multimodal-ai-orchestration","
     serviceName: "Multimodal AI Orchestration","
     category: "Advanced AI Integration",
     tiers: [
       {
+
 "
         id: "starter","
         name: "Starter",
@@ -409,6 +414,7 @@ export const revolutionaryAIServicesPricing: ServicePricing[] = [
         recommendedFor: ["Small businesses", "Startups", "Individual developers"]
       },
       {
+
 "
         id: "professional","
         name: "Professional",
@@ -432,6 +438,7 @@ export const revolutionaryAIServicesPricing: ServicePricing[] = [
         recommendedFor: ["Medium businesses", "Technology companies", "Professional services"]
       },
       {
+
 "
         id: "enterprise","
         name: "Enterprise",
@@ -454,6 +461,7 @@ export const revolutionaryAIServicesPricing: ServicePricing[] = [
       }
     ],
     enterprise: {
+
 "
       id: "multimodal-custom","
       name: "Custom Multimodal AI Platform","
@@ -485,6 +493,7 @@ export const revolutionaryAIServicesPricing: ServicePricing[] = [
       contactInfo: zionContact
     },
     marketComparison: {
+
 "
       competitors: ["OpenAI", "Google AI", "Microsoft AI"],"
       ourAdvantage: "Enterprise-grade multimodal AI with customization and dedicated support","
@@ -494,34 +503,7 @@ export const revolutionaryAIServicesPricing: ServicePricing[] = [
 ];
 
 // Pricing Comparison and Recommendations;
-export const pricingRecommendations = {
-
-  smallBusiness: {
-"
-    recommendedServices: ["NeuralFlow Starter", "QuantumSync Researcher", "Multimodal AI Starter"],"
-    estimatedMonthlyCost: "$3,500 - $5,500","
-    roi: "200-300% within 12 months"
-  },
-  mediumBusiness: {
-"
-    recommendedServices: ["NeuralFlow Professional", "QuantumSync Professional", "Multimodal AI Professional"],"
-    estimatedMonthlyCost: "$8,500 - $12,000","
-    roi: "300-400% within 12 months"
-  },
-  enterprise: {
-"
-    recommendedServices: ["NeuralFlow Enterprise", "QuantumSync Enterprise", "Multimodal AI Enterprise"],"
-    estimatedMonthlyCost: "$15,000 - $25,000","
-    roi: "400-600% within 18 months"
-  }
-};
-
+export 
 // Export all pricing data;
-export const allRevolutionaryPricing2030 = {
-
-  microSaas: revolutionaryMicroSaasPricing,
-  itServices: revolutionaryITServicesPricing,
-  aiServices: revolutionaryAIServicesPricing,
-  recommendations: pricingRecommendations
-};
+export 
 '"

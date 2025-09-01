@@ -1,31 +1,37 @@
-import React, { useState, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 } from 'lucide-react';
 import { useMachineLearning } from "../hooks/useMachineLearning";"
-import { useAnalytics } from "../hooks/useAnalytics";'
+import { useAnalytics } from "../hooks/useAnalytics";
 export const MachineLearningDashboard = ({ className = '' }) => {
 
+<<<<<<< HEAD
+    const { trackEvent } = useAnalytics ({
+
+=======
     const { trackEvent } = useAnalytics({
 
+>>>>>>> main
         enableTracking: true,
         enableUserBehaviorTracking: true
-    });'
+    });
     const [activeTab, setActiveTab] = useState('overview');
     const [showCreateModel, setShowCreateModel] = useState(false);
     const [showImportModel, setShowImportModel] = useState(false);
     const { models, trainingJobs, predictions, metrics, isPredicting, createModel, startTraining, stopTraining, deployModel, archiveModel, makePrediction, exportModel, importModel } = useMachineLearning();
     const [newModelForm, setNewModelForm] = useState({
-'
-        name: '','
-        type: 'classification','
+
+        name: '',
+        type: 'classification',
         framework: 'tensorflow'
     });
     const [predictionForm, setPredictionForm] = useState({
-'
-        modelId: '','
+
+        modelId: '',
         input: ''
     });
     const handleCreateModel = useCallback(() => {
+
         if (newModelForm.name.trim()) {
 
             createModel({
@@ -33,67 +39,71 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                 name: newModelForm.name,
                 type: newModelForm.type,
                 framework: newModelForm.framework
-            });'
+            });
             setNewModelForm({ name: '', type: 'classification', framework: 'tensorflow' });
-            setShowCreateModel(false);'
-            trackEvent('ml', 'dashboard', 'model_created')}
+            setShowCreateModel(false);
+            trackEvent('ml',dashboard',model_created')}
     }, [newModelForm, createModel, trackEvent]);
     const hyperparameters = {
 
   learningRate: 0.001,
             batchSize: 32,
-            epochs: 100,'
+            epochs: 100,
   optimizer: 'adam'
 
 };
         try {
-            await startTraining(modelId, hyperparameters);'
-            // // // // // // // // console.error('Training failed:', error);
-        }'
-            trackEvent('ml', 'dashboard', 'training_started')}
+
+            await startTraining(modelId, hyperparameters);
+            // // // // // // // // // // console.error('Training failed:', error);
+        }
+            trackEvent('ml',dashboard',training_started')}
         catch (error) {
-'
-            // console.error('Training failed:', error)}
+
+            // // // console.error('Training failed:', error)}
     }, [startTraining, trackEvent]);
     const handleStopTraining = useCallback((jobId) => {
 
-        stopTraining(jobId);'
-        trackEvent('ml', 'dashboard', 'training_stopped')}, [stopTraining, trackEvent]);
+        stopTraining(jobId);
+        trackEvent('ml',dashboard',training_stopped')}, [stopTraining, trackEvent]);
     const handleDeployModel = useCallback((modelId) => {
 
-        deployModel(modelId);'
-        trackEvent('ml', 'dashboard', 'model_deployed')}, [deployModel, trackEvent]);
+        deployModel(modelId);
+        trackEvent('ml',dashboard',model_deployed')}, [deployModel, trackEvent]);
     const handleArchiveModel = useCallback((modelId) => {
 
-        archiveModel(modelId);'
-        trackEvent('ml', 'dashboard', 'model_archived')}, [archiveModel, trackEvent]);
+        archiveModel(modelId);
+        trackEvent('ml',dashboard',model_archived')}, [archiveModel, trackEvent]);
     const handleMakePrediction = useCallback(async () => {
+
         if (predictionForm.modelId && predictionForm.input.trim()) {
 
             try {
+
                 const input = JSON.parse(predictionForm.input);
-                const result = await makePrediction(predictionForm.modelId, input);'
-                // // // // // // // // console.log('Prediction result:', result);'
-                setPredictionForm({ modelId: '', input: '' });'
-                // // // // // // // // console.error('Prediction failed:', error);
-            }'
-                trackEvent('ml', 'dashboard', 'prediction_made')}
+                const result = await makePrediction(predictionForm.modelId, input);
+                // // // // // // // // // // console.log('Prediction result:', result);
+                setPredictionForm({ modelId: '', input: '' });
+                // // // // // // // // // // console.error('Prediction failed:', error);
+            }
+                trackEvent('ml',dashboard',prediction_made')}
             catch (error) {
-'
-                // console.error('Prediction failed:', error)}
+
+                // // // console.error('Prediction failed:', error)}
         }
     }, [predictionForm, makePrediction, trackEvent]);
     const handleExportModel = useCallback((modelId) => {
 
         try {
+
             const modelData = exportModel(modelId);
-            navigator.clipboard.writeText(modelData);'
-            // // // // // // // // console.error('Export failed:', error);
-        }'
-            trackEvent('ml', 'dashboard', 'model_exported')}
+            navigator.clipboard.writeText(modelData);
+            // // // // // // // // // // console.error('Export failed:', error);
+        }
+            trackEvent('ml',dashboard',model_exported')}
         catch (error) {
-'
-            // console.error('Export failed:', error)}
+
+            // // // console.error('Export failed:', error)}
     }, [exportModel, trackEvent]);
     const handleImportModel = useCallback((event) => {
 
@@ -104,44 +114,46 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             reader.onload = (e) => {
 
                 try {
+
                     const modelData = e.target?.result;
                     importModel(modelData);
-                    setShowImportModel(false);'
-                    // // // // // // // // console.error('Import failed:', error);
+                    setShowImportModel(false);
+                    // // // // // // // // // // console.error('Import failed:', error);
                 }
             };
             reader.readAsText(file);
-'
-                    trackEvent('ml', 'dashboard', 'model_imported')}
+
+                    trackEvent('ml',dashboard',model_imported')}
                 catch (error) {
-'
-                    // console.error('Import failed:', error)}
+
+                    // // // console.error('Import failed:', error)}
             };
             reader.readAsText (file) }
     }, [importModel, trackEvent]) ;
     const getStatusColor = (status) => {
 
         switch (status) {
-'
-            case 'deployed': return 'text-green-600 bg-green-100';'
-            case 'ready': return 'text-blue-600 bg-blue-100';'
-            case 'training': return 'text-yellow-600 bg-yellow-100';'
-            case 'archived': return 'text-gray-600 bg-gray-100';'
+
+            case 'deployed': return 'text-green-600 bg-green-100';
+            case 'ready': return 'text-blue-600 bg-blue-100';
+            case 'training': return 'text-yellow-600 bg-yellow-100';
+            case 'archived': return 'text-gray-600 bg-gray-100';
             default: return 'text-gray-600 bg-gray-100'}
     };
     const getJobStatusColor = (status) => {
 
         switch (status) {
-'
-            case 'running': return 'text-blue-600 bg-blue-100';'
-            case 'completed': return 'text-green-600 bg-green-100';'
-            case 'failed': return 'text-red-600 bg-red-100';'
-            case 'pending': return 'text-yellow-600 bg-yellow-100';'
+
+            case 'running': return 'text-blue-600 bg-blue-100';
+            case 'completed': return 'text-green-600 bg-green-100';
+            case 'failed': return 'text-red-600 bg-red-100';
+            case 'pending': return 'text-yellow-600 bg-yellow-100';
             default: return 'text-gray-600 bg-gray-100'}
     };
     const getModelTypeIcon = (type) => {
 
         switch (type) {
+
 '"
             case 'classification': return <Target className="w-4 h-4"/>;'"
             case 'regression': return <TrendingUp className="w-4 h-4"/>;'"
@@ -184,10 +196,10 @@ export const MachineLearningDashboard = ({ className = '' }) => {
       {/* Navigation Tabs */}"
       <div className="flex border-b border-gray-200 dark:border-gray-700">
         {['
-            { id: 'overview', label: 'Overview', icon: BarChart3 },'
-            { id: 'models', label: 'Models', icon: Brain },'
-            { id: 'training', label: 'Training', icon: Activity },'
-            { id: 'predictions', label: 'Predictions', icon: Target },'
+            { id: 'overview', label: 'Overview', icon: BarChart3 },
+            { id: 'models', label: 'Models', icon: Brain },
+            { id: 'training', label: 'Training', icon: Activity },
+            { id: 'predictions', label: 'Predictions', icon: Target },
             { id: 'analytics', label: 'Analytics', icon: TrendingUp }`
         ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id)} className={`flex items-center space-x-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${activeTab === id'
                 ? 'border-purple-500 text-purple-600 dark:text-purple-400''`
@@ -203,17 +215,17 @@ export const MachineLearningDashboard = ({ className = '' }) => {
           {activeTab === 'overview' && (<motion.div key="overview" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
 
   { opacity: 0,
-  y: -20 
+  y: -20
 
 
 
@@ -319,17 +331,17 @@ export const MachineLearningDashboard = ({ className = '' }) => {
           {activeTab === 'models' && (<motion.div key="models" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
 
   { opacity: 0,
-  y: -20 
+  y: -20
 
 
 
@@ -352,18 +364,29 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                 {showCreateModel && (<motion.div initial = {
 
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }} animate = {
 
-  { opacity: 1,'
-  height: 'auto' 
+  { opacity: 1,
+  height: 'auto'
 
 }} exit = {
 
   { opacity: 0,
-  height: 0 
+  height: 0
 
+<<<<<<< HEAD
+}} className="bg - gray - 50 dark:bg - gray - 800 p - 4 rounded - lg">
+                    <h4 className="font - medium text - gray - 900 dark:text - white mb - 3">Create New Model</h4>
+                    <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4">
+                      <input type="text" placeholder="Model Name" value={newModelForm.name} onChange = { (e) => setNewModelForm (prev => ({ ...prev,
+  name: e.target.value
+
+}) ) } className="px - 3 py - 2 border border - gray - 300 dark:border - gray - 600 rounded - lg bg - white dark:bg - gray - 700 text - gray - 900 dark:text - white"/>
+                      <select value={newModelForm.type} onChange = { (e) => setNewModelForm (prev => ({ ...prev,
+  type: e.target.value
+=======
 
 
 
@@ -387,6 +410,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 
   (e) => setNewModelForm(prev => ({ ...prev,
   type: e.target.value 
+>>>>>>> main
 
 
 
@@ -401,10 +425,15 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                         <option value="computer_vision">Computer Vision</option>"
                         <option value="recommendation">Recommendation</option>
                       </select>
+<<<<<<< HEAD
+                      <select value={newModelForm.framework} onChange = { (e) => setNewModelForm (prev => ({ ...prev,
+  framework: e.target.value
+=======
                       <select value={newModelForm.framework} onChange = {
 
   (e) => setNewModelForm(prev => ({ ...prev,
   framework: e.target.value 
+>>>>>>> main
 
 
 
@@ -434,17 +463,17 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                 {showImportModel && (<motion.div initial = {
 
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }} animate = {
 
-  { opacity: 1,'
-  height: 'auto' 
+  { opacity: 1,
+  height: 'auto'
 
 }} exit = {
 
   { opacity: 0,
-  height: 0 
+  height: 0
 
 
 
@@ -508,7 +537,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                       </div>
                     </div>
 "
-                    <div className="flex space-x-2">'
+                    <div className="flex space-x-2">
                       {model.status === 'ready' && (<>"
                           <button onClick={() => handleStartTraining(model.id)} className="flex-1 px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">"
                             <Play className="w-4 h-4 inline mr-2"/>
@@ -529,17 +558,17 @@ export const MachineLearningDashboard = ({ className = '' }) => {
           {activeTab === 'training' && (<motion.div key="training" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
 
   { opacity: 0,
-  y: -20 
+  y: -20
 
 
 
@@ -560,7 +589,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                             {model ? getModelTypeIcon(model.type) : <Brain className="w-4 h-4"/>}
                           </div>
                           <div>"
-                            <p className="font-medium text-gray-900 dark:text-white">'
+                            <p className="font-medium text-gray-900 dark:text-white">
                               {model?.name || 'Unknown Model'}
                             </p>"
                             <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -592,7 +621,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                           </div>
                           <div>"
                             <p className="text-sm text-gray-500 dark:text-gray-400">Latest Loss</p>"
-                            <p className="font-medium text-gray-900 dark:text-white">'
+                            <p className="font-medium text-gray-900 dark:text-white">
                               {job.metrics.loss[job.metrics.loss.length - 1]?.toFixed(4) || 'N/A'}
                             </p>
                           </div>
@@ -612,6 +641,15 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                             Training failed
                           </div>) }
                       </div>
+<<<<<<< HEAD
+                    </div>) }) }
+
+                {trainingJobs.length === 0 && (<div className="text - center py - 8 text - gray - 500 dark:text - gray - 400">
+                    <Activity className="w - 12 h - 12 mx - auto mb - 4 text - gray - 400"/>
+                    <p > No training jobs found</p>
+                    <p className="text - sm">Start training a model to see jobs here</p>
+                  </div>) }
+=======
                     </div>)})}
                 "
                 {trainingJobs.length === 0 && (<div className="text-center py-8 text-gray-500 dark:text-gray-400">"
@@ -619,25 +657,33 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                     <p>No training jobs found</p>"
                     <p className="text-sm">Start training a model to see jobs here</p>
                   </div>)}
+>>>>>>> main
               </div>
             </motion.div>)}
 '"
           {activeTab === 'predictions' && (<motion.div key="predictions" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
 
   { opacity: 0,
-  y: -20 
+  y: -20
 
 
+<<<<<<< HEAD
+              {/* Prediction Form */}
+              <div className="bg - gray - 50 dark:bg - gray - 800 p - 4 rounded - lg">
+                <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4 mb - 4">
+                  <select value={predictionForm.modelId} onChange = { (e) => setPredictionForm (prev => ({ ...prev,
+  modelId: e.target.value
+=======
 
 
 
@@ -652,6 +698,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 
   (e) => setPredictionForm(prev => ({ ...prev,
   modelId: e.target.value 
+>>>>>>> main
 
 
 
@@ -659,7 +706,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 
 "
 }))} className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white">"
-                    <option value="">Select a deployed model</option>'
+                    <option value="">Select a deployed model</option>
                     {models.filter(m => m.status === 'deployed').map(model => (<option key={model.id} value={model.id}>
                         {model.name} ({model.type})
                       </option>))}
@@ -668,11 +715,17 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                     {isPredicting ? (<Loader2 className="w-4 h-4 inline mr-2 animate-spin"/>) : (<Target className="w-4 h-4 inline mr-2"/>)}
                     Make Prediction
                   </button>
+<<<<<<< HEAD
+                </div>
+                <textarea placeholder="Enter input data (JSON format) " value={predictionForm.input} onChange = { (e) => setPredictionForm (prev => ({ ...prev,
+  input: e.target.value
+=======
                 </div>"
                 <textarea placeholder="Enter input data (JSON format)" value={predictionForm.input} onChange = {
 
   (e) => setPredictionForm(prev => ({ ...prev,
   input: e.target.value 
+>>>>>>> main
 
 
 
@@ -692,7 +745,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                 return (<div key={prediction.id} className="bg-white dark:bg-gray-700 p-3 rounded-lg">"
                         <div className="flex items-center justify-between mb-2">"
                           <div className="flex items-center space-x-2">"
-                            <span className="text-sm font-medium text-gray-900 dark:text-white">'
+                            <span className="text-sm font-medium text-gray-900 dark:text-white">
                               {model?.name || 'Unknown Model'}
                             </span>'`
                             <span className={`px-2 py-1 text-xs font-medium rounded-full ${prediction.status === 'completed' ? 'text-green-600 bg-green-100' :'
@@ -705,6 +758,24 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                             {prediction.timestamp.toLocaleTimeString()}
                           </span>
                         </div>
+<<<<<<< HEAD
+
+                        {prediction.status === 'completed' && prediction.result && (<div className="text - sm text - gray - 700 dark:text - gray - 300">
+                            <p><strong > Result:</strong> {JSON.stringify (prediction.result) }</p>
+                            {prediction.confidence && (<p><strong > Confidence:</strong> { (prediction.confidence * 100) .toFixed (1) }%</p>) }
+                            {prediction.processingTime && (<p><strong > Processing Time:</strong> {prediction.processingTime}ms</p>) }
+                          </div>) }
+
+                        {prediction.status === 'failed' && prediction.error && (<div className="text - sm text - red - 600 dark:text - red - 400">
+                            <strong > Error:</strong> {prediction.error}
+                          </div>) }
+                      </div>) }) }
+
+                  {predictions.length === 0 && (<div className="text - center py - 4 text - gray - 500 dark:text - gray - 400">
+                      <Target className="w - 8 h - 8 mx - auto mb - 2 text - gray - 400"/>
+                      <p > No predictions yet</p>
+                    </div>) }
+=======
 '"
                         {prediction.status === 'completed' && prediction.result && (<div className="text-sm text-gray-700 dark:text-gray-300">
                             <p><strong>Result:</strong> {JSON.stringify(prediction.result)}</p>
@@ -721,6 +792,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                       <Target className="w-8 h-8 mx-auto mb-2 text-gray-400"/>
                       <p>No predictions yet</p>
                     </div>)}
+>>>>>>> main
                 </div>
               </div>
             </motion.div>)}
@@ -728,17 +800,17 @@ export const MachineLearningDashboard = ({ className = '' }) => {
           {activeTab === 'analytics' && (<motion.div key="analytics" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} exit = {
 
   { opacity: 0,
-  y: -20 
+  y: -20
 
 
 

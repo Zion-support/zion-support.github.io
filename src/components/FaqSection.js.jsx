@@ -1,5 +1,6 @@
 import React from 'react';
 export function FaqSection() {
+
   return()
     <div className="py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">"
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">"
@@ -28,7 +29,7 @@ export function FaqSection() {
             <h3 className="text-xl font-semibold text-white mb-3">
               How can I get started with your services?
             </h3>"
-            <p className="text-zion-slate-light">'
+            <p className="text-zion-slate-light">
               Contact us through our website or call us directly. We'll schedule
               a consultation to understand your needs and provide a customized
               solution.

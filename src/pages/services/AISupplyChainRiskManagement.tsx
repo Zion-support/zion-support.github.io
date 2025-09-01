@@ -1,424 +1,298 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
-import { 
-  Shield, 
-  AlertTriangle, 
-  TrendingUp, 
-  BarChart3, 
-  Globe, 
-  CheckCircle, 
-  ArrowRight,
-  Star,
-  Users,
-  Database,
-  Cpu,
-  Cloud,
-  Lock,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Truck,
-  Factory,
-  Warehouse,
-  Ship
-} from 'lucide-react';
-
-export default function AISupplyChainRiskManagement() {
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
+import { Shield, AlertTriangle, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Cpu export default function AISupplyChainRiskManagement(...args: any[]): any {
   const features = [
-    "Real-time supply chain monitoring",
-    "AI-powered risk prediction and scoring",
-    "Multi-tier supplier risk assessment",
-    "Geopolitical risk analysis",
-    "Weather and natural disaster alerts",
-    "Financial health monitoring",
-    "Compliance and regulatory tracking",
-    "Automated risk mitigation recommendations",
-    "Supply chain mapping and visualization",
-    "Performance analytics and reporting"
+    'AI-powered supply chain risk assessment and monitoring',
+    'Real-time global supply chain disruption alerts',
+    'Predictive analytics for supply chain vulnerabilities',
+    'Automated risk scoring and prioritization',;
+    'Multi-tier supplier risk analysis',;
+    'Geopolitical and economic risk integration',;
+    'Supply chain resilience optimization',;
+    'Compliance and regulatory risk monitoring',;
+    'Custom risk threshold configuration',;
+    'Advanced visualization and reporting dashboards';
   ];
 
-  const benefits = [
-    "Reduce supply chain disruptions by 60%",
-    "Improve supplier performance by 40%",
-    "Cut operational costs by 25%",
-    "Enhance compliance and risk mitigation",
-    "Real-time visibility across supply chain",
-    "Proactive risk management strategies"
-  ];
-
-  const useCases = [
-    "Manufacturing companies",
-    "Retail and e-commerce",
-    "Healthcare and pharmaceuticals",
-    "Automotive industry",
-    "Food and beverage",
-    "Electronics and technology",
-    "Logistics and transportation",
-    "Energy and utilities"
+  const benefits = [;
+    'Reduce supply chain disruptions by 60-80%',;
+    'Cut risk assessment time by 90%',;
+    'Improve supplier selection accuracy by 75%',;
+    'Real-time global risk monitoring',;
+    'Predict supply chain issues 30-60 days in advance',;
+    'Automated compliance reporting and alerts';
   ];
 
   const pricing = [
     {
-      plan: "Essential",
-      price: "$3,999",
-      period: "month",
-      description: "Perfect for small to medium businesses",
-      features: [
-        "Up to 100 suppliers",
-        "Basic risk monitoring",
-        "Email alerts",
-        "Standard reporting",
-        "Email support"
-      ]
+      name: 'Starter',
+      price: '$299/mo',
+      features: ['Up to 100 suppliers', 'Basic risk scoring', 'Standard alerts', 'Email support', 'Monthly reports'],
+      popular: false
     },
     {
-      plan: "Professional",
-      price: "$7,999",
-      period: "month",
-      description: "Ideal for growing enterprises",
-      features: [
-        "Up to 500 suppliers",
-        "Advanced AI risk scoring",
-        "Real-time monitoring",
-        "Custom dashboards",
-        "Priority support",
-        "API access"
-      ]
-    },
-    {
-      plan: "Enterprise",
-      price: "$15,999",
-      period: "month",
-      description: "For large-scale operations",
-      features: [
-        "Unlimited suppliers",
-        "Full AI suite",
-        "Custom risk models",
-        "Dedicated support team",
-        "On-site consultation",
-        "White-label options"
-      ]
-    }
+      name: 'Professional',
+      price: '$799/mo',
+      features: ['Up to 500 suppliers', 'Advanced AI analytics', 'Real-time monitoring', 'Priority support', 'Custom dashboards', 'API access'],
+      popular: true
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$2,499/mo', ;
+      features: ['Unlimited suppliers', 'Full AI suite', 'Custom risk models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],;
+      popular: false;
+    };
+  ];
+
+  const useCases = [;
+    'Manufacturing supply chain risk management',;
+    'Retail inventory risk assessment',;
+    'Healthcare supply chain monitoring',;
+    'Automotive supplier risk analysis',;
+    'Food and beverage supply chain safety',;
+    'Technology component sourcing risk';
+  ];
+
+  const riskCategories = [
+    'Geopolitical Risk Analysis',
+    'Economic Instability Monitoring',;
+    'Natural Disaster Prediction',;
+    'Supplier Financial Health',;
+    'Regulatory Compliance Risk',;
+    'Cybersecurity Threats',;
+    'Transportation Disruptions',;
+    'Quality Control Issues';
   ];
 
   return (
-    <>
-      <SEO 
-        title="AI Supply Chain Risk Management - Zion Tech Group"
-        description="Protect your supply chain with AI-powered risk management. Monitor suppliers, predict disruptions, and mitigate risks in real-time with our intelligent platform."
-        canonical="/services/ai-supply-chain-risk-management"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <div className="flex justify-center mb-6">
-                <div className="p-3 bg-blue-500/20 rounded-full">
-                  <Shield className="h-12 w-12 text-blue-400" />
-                </div>
-              </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                AI Supply Chain Risk Management
-              </h1>
-              <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Protect your supply chain with intelligent risk management. Monitor suppliers, predict disruptions, 
-                and mitigate risks in real-time with our AI-powered platform.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center justify-center gap-2"
-                >
-                  Start Free Trial
-                  <ArrowRight className="h-5 w-5" />
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="border border-slate-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-slate-800 transition-colors"
-                >
-                  Schedule Demo
-                </motion.button>
-              </div>
-            </motion.div>
+    <div className = "min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-orange-600 via-red-600 to-red-800 py-20 text-center text-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
+            <Shield className="w-4 h-4 mr-2" /> AI-Powered Supply Chain Risk Management
           </div>
-        </section>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">AI Supply Chain Risk Management Platform</h1>
+          <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
+            Protect your business from supply chain disruptions with AI-driven risk assessment, real-time monitoring,
+            and predictive analytics. Stay ahead of global risks and ensure business continuity.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#pricing" className="px-8 py-4 bg-white text-red-600 rounded-lg font-semibold hover:bg-orange-50 transition-colors">
+              View Pricing
+            </a>
+            <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </section>
 
-        {/* Features Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Comprehensive Risk Management Features
-              </h2>
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Our AI platform provides end-to-end supply chain risk management capabilities designed to 
-                protect your business from disruptions and ensure operational continuity.
-              </p>
-            </motion.div>
+      {/* Features Section */}
+      <section className="py-16 max-w-6xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Risk Intelligence</h2>
+          <p className="text-xl text-gray-600">Comprehensive supply chain risk management powered by AI</p>
+        </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Core Capabilities</h3>
+            <ul className="space-y-4">
               {features.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-colors"
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-blue-500/20 rounded-lg">
-                      <CheckCircle className="h-5 w-5 text-blue-400" />
-                    </div>
-                    <h3 className="text-lg font-semibold text-white">{feature}</h3>
-                  </div>
-                </motion.div>
+                <li key={index} className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700">{feature}</span>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
-        </section>
 
-        {/* Benefits Section */}
-        <section className="py-20 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Transform Your Supply Chain Security
-              </h2>
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Experience significant improvements in risk mitigation, operational efficiency, and 
-                supply chain resilience with our AI-powered platform.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="p-4 bg-blue-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                    <TrendingUp className="h-8 w-8 text-blue-400" />
-                  </div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Flexible Pricing Plans
-              </h2>
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Choose the plan that best fits your supply chain risk management needs and scale as you grow.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricing.map((plan, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className={`bg-slate-800/50 p-8 rounded-xl border ${
-                    index === 1 ? 'border-blue-500/50 bg-blue-500/10' : 'border-slate-700'
-                  }`}
-                >
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
-                    <p className="text-slate-400 mb-4">{plan.description}</p>
-                    <div className="mb-4">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
-                      <span className="text-slate-400">/{plan.period}</span>
-                    </div>
-                  </div>
-                  
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center gap-3">
-                        <CheckCircle className="h-5 w-5 text-blue-400 flex-shrink-0" />
-                        <span className="text-slate-300">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
-                      index === 1
-                        ? 'bg-blue-600 hover:bg-blue-700 text-white'
-                        : 'bg-slate-700 hover:bg-slate-600 text-white'
-                    }`}
-                  >
-                    Get Started
-                  </motion.button>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Use Cases Section */}
-        <section className="py-20 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Perfect for Every Industry
-              </h2>
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Our AI supply chain risk management platform is designed to meet the unique needs of various 
-                industries and business types.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {useCases.map((useCase, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 text-center hover:border-blue-500/50 transition-colors"
-                >
-                  <div className="p-3 bg-blue-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                    {index === 0 && <Factory className="h-8 w-8 text-blue-400" />}
-                    {index === 1 && <Truck className="h-8 w-8 text-blue-400" />}
-                    {index === 2 && <Warehouse className="h-8 w-8 text-blue-400" />}
-                    {index === 3 && <Ship className="h-8 w-8 text-blue-400" />}
-                    {index > 3 && <Globe className="h-8 w-8 text-blue-400" />}
-                  </div>
-                  <h3 className="text-lg font-semibold text-white">{useCase}</h3>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Ready to Protect Your Supply Chain?
-              </h2>
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Contact our team to learn how AI can transform your supply chain risk management and help you 
-                achieve operational resilience and cost savings.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-center"
-              >
-                <div className="p-4 bg-blue-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Phone className="h-8 w-8 text-blue-400" />
+          <div>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Risk Categories</h3>
+            <div className="grid grid-cols-1 gap-3">
+              {riskCategories.map((category, index) => (
+                <div key={index} className="flex items-center p-3 bg-gray-50 rounded-lg">
+                  <AlertTriangle className="w-4 h-4 text-orange-500 mr-3" />
+                  <span className="text-gray-700">{category}</span>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
-                <p className="text-slate-300">{contactInfo.phone}</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
-                className="text-center"
-              >
-                <div className="p-4 bg-blue-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Mail className="h-8 w-8 text-blue-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
-                <p className="text-slate-300">{contactInfo.email}</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-center"
-              >
-                <div className="p-4 bg-blue-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <MapPin className="h-8 w-8 text-blue-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
-                <p className="text-slate-300">{contactInfo.address}</p>
-              </motion.div>
+              ))}
             </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-center mt-12"
-            >
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center justify-center gap-2 mx-auto"
-              >
-                Schedule a Consultation
-                <ArrowRight className="h-5 w-5" />
-              </motion.button>
-            </motion.div>
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose AI Supply Chain Risk Management?</h2>
+            <p className="text-xl text-gray-600">Transform your supply chain resilience with intelligent risk management</p>
+          </div>
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)              => (
+              <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                  <TrendingUp className="w-6 h-6 text-red-600" />
+                </div>
+                <p className="text-gray-700 font-medium">{benefit}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-16 max-w-6xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Industry Applications</h2>
+          <p className="text-xl text-gray-600">Trusted by leading companies across industries</p>
+        </div>
+
+        <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+          {useCases.map((useCase, index)              => (
+            <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+              <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                <Database className="w-5 h-5 text-orange-600" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">{useCase}</h3>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Transparent Pricing</h2>
+            <p className="text-xl text-gray-600">Choose the plan that fits your supply chain risk management needs</p>
+          </div>
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)              => (
+              <div key={index} className={`relative bg-white rounded-2xl shadow-lg border-2 ${
+                plan.popular ? 'border-red-500' : 'border-gray-200'
+              } p-8`}>
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                  <div className="text-4xl font-bold text-red-600 mb-2">{plan.price}</div>
+                  <p className="text-gray-600">per month</p>
+                </div>
+
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
+                  plan.popular
+                    ? 'bg-red-600 text-white hover:bg-red-700'
+                    : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                }`}>
+                  Get Started
+                </button>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-gray-600 mb-4">Need a custom plan? Contact us for enterprise pricing</p>
+            <a href="mailto:kleber@ziontechgroup.com" className="text-red-600 hover:text-red-700 font-semibold">
+              Contact Sales Team
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ROI Section */}
+      <section className="py-16 bg-red-50">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Proven Results</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg p-6 shadow-sm">
+              <div className="text-3xl font-bold text-red-600 mb-2">60-80%</div>
+              <p className="text-gray-700">Reduction in supply chain disruptions</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 shadow-sm">
+              <div className="text-3xl font-bold text-red-600 mb-2">90%</div>
+              <p className="text-gray-700">Faster risk assessment time</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 shadow-sm">
+              <div className="text-3xl font-bold text-red-600 mb-2">30-60 days</div>
+              <p className="text-gray-700">Early warning for supply chain issues</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gray-900 text-white">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold mb-6">Ready to Protect Your Supply Chain?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join hundreds of companies already using AI Supply Chain Risk Management to ensure business continuity.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="mailto:kleber@ziontechgroup.com" className="px-8 py-4 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700 transition-colors">
+              Start Free Trial
+            </a>
+            <a href="tel:+13024640950" className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors">
+              Call Us
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-16 max-w-4xl mx-auto px-6 text-center">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8">Questions? We're Here to Help</h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+            <Phone className="w-8 h-8 text-red-500 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">Call Us</h3>
+            <p className="text-gray-600 mb-4">Speak with our supply chain risk experts</p>
+            <a href="tel:+13024640950" className="text-red-600 hover:text-red-700 font-semibold">
+              +1 302 464 0950
+            </a>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+            <Mail className="w-8 h-8 text-red-500 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">Email Us</h3>
+            <p className="text-gray-600 mb-4">Get detailed information and pricing</p>
+            <a href="mailto:kleber@ziontechgroup.com" className="text-red-600 hover:text-red-700 font-semibold">
+              kleber@ziontechgroup.com
+            </a>
+          </div>
+        </div>
+
+        <div className="mt-12 p-6 bg-gray-50 rounded-xl">
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Our Website</h3>
+          <p className="text-gray-600 mb-4">
+            Learn more about our complete suite of AI-powered business solutions
+          </p>
+          <a 
+            href="https://ziontechgroup.com" 
+            target="_blank" 
+            rel="noreferrer" 
+            className="inline-flex items-center text-red-600 hover:text-red-700 font-semibold";
+          >;
+            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
+          </a>;
+        </div>;
+      </section>;
+    </div>;
   );
-}
+}}}

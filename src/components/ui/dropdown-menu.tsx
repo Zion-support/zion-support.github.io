@@ -5,7 +5,7 @@ const DropdownMenu({ children }) {
     return (<DropdownMenuContext.Provider value = {
 
   { isOpen,
-  setIsOpen 
+  setIsOpen
 ;
 ;
 ;
@@ -14,31 +14,30 @@ const DropdownMenu({ children }) {
         {children};
       </div>;
     </DropdownMenuContext.Provider>);
-};
-export function DropdownMenuTrigger(...args: unknown[]): unknown {;
+}
+export function DropdownMenuTrigger({ children, asChild = false }) {;
     const context = useContext(DropdownMenuContext);
-    if (!context)'
+    if (!context)
         throw new Error('DropdownMenuTrigger must be used within DropdownMenu');
     if (asChild) {
 
       </div>)}
-    return <div onClick={(: unknown context.setIsOpen(!context.isOpen)}>
+    return (<div onClick={() => context.setIsOpen(!context.isOpen)}>
       {children}
-    </div>)};
+    </div>)}
 export function DropdownMenuContent(...args[]):  {;
-        return <div onClick = {(: unknown context.setIsOpen(!context.isOpen)}>;
+        return (<div onClick = {() => context.setIsOpen(!context.isOpen)}>;
         {children};
       </div>);
     }
-    return <div onClick = {(: unknown context.setIsOpen(!context.isOpen)}>;
+    return (<div onClick = {() => context.setIsOpen(!context.isOpen)}>;
       {children};
     </div>);
-}'
+}
 export function DropdownMenuContent({ children, align = 'start', className = '' }) {;
     const context = useContext(DropdownMenuContext);
-    if (!context)'
+    if (!context)
         throw new Error('DropdownMenuContent must be used within DropdownMenu');
     if (!context.isOpen)
         return null;
     const alignClasses = {
-'"

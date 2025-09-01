@@ -1,4 +1,3 @@
-import React from 'react.ts';
 
 interface PostCardProps extends React.PropsWithChildren<{}> {
 
@@ -61,6 +60,5 @@ export default function PostCard(...args[]):  {
         </div>;
       </div>;
     </div>;
-  );
-}
+  )}
 '"

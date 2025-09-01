@@ -1,7 +1,7 @@
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images/zion-tech-group-og.jpg', url = window.location.href, type = 'website', structuredData }) => {
-'
+
     const siteName = 'Zion Tech Group';
     const fullTitle = `${title} | ${siteName}`;
     // Default structured data for organization
@@ -14,6 +14,7 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
         "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png","
         "description": "Leading provider of AI-powered technology solutions and innovative micro SAAS services","
         "address": {
+
 "
             "@type": "PostalAddress","
             "streetAddress": "364 E Main St STE 1008","
@@ -24,6 +25,7 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
 
 },"
         "contactPoint": {
+
 "
             "@type": "ContactPoint","
             "telephone": "+1-302-464-0950","
@@ -39,14 +41,17 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
         "numberOfEmployees": "50+","
         "serviceArea": "Worldwide","
         "hasOfferCatalog": {
+
 "
             "@type": "OfferCatalog","
             "name": "Technology Services","
             "itemListElement"[;
                 {
+
 "
                     "@type": "Offer","
                     "itemOffered": {
+
 "
                         "@type": "Service","
                         "name": "AI Strategy Consulting","
@@ -54,9 +59,11 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
                     }
                 },
                 {
+
 "
                     "@type": "Offer","
                     "itemOffered": {
+
 "
                         "@type": "Service","
                         "name": "Quantum AI Fusion Platform","

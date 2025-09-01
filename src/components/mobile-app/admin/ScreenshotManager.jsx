@@ -18,6 +18,7 @@ export const ScreenshotManager = ({ platform }) => {
         // Filter for image files only
         const imageFiles = files.filter(file => file.type.startsWith('image/'));
         if (imageFiles.length === 0) {
+
 "
             toast.error("Please select valid image files");
             return}
@@ -25,6 +26,7 @@ export const ScreenshotManager = ({ platform }) => {
         const maxScreenshots = platform === "ios" ? 10 : 8;
         const availableSlots = maxScreenshots - screenshots.length;
         if (availableSlots <= 0) {
+
 "
             toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
             return}
@@ -37,6 +39,7 @@ export const ScreenshotManager = ({ platform }) => {
         }));
         setScreenshots(prev => [...prev, ...newScreenshots]);
         if (filesToAdd.length < imageFiles.length) {
+
 `
             toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`)}
     };
@@ -81,8 +84,8 @@ export const ScreenshotManager = ({ platform }) => {
         </div>
 "
         <div className="text-xs text-gray-300 mb-4">"
-          {platform === "ios""
-            ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots.""
+          {platform === "ios"
+            ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots."
             : "Vary by device. Include phone and tablet screenshots. Max 8 per device type."}
         </div>
 "

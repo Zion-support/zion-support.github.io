@@ -2,19 +2,19 @@ import React, { useState } from 'react';
 export default ContactForm;
 import { Button } from "./ui / Button";
 
-
 const ContactForm = () => {
+
     const [formData, setFormData] = useState({
-'
-        firstName: '','
-        lastName: '','
-        email: '','
-        comp: '','
-        phone: '','
-        service: '','
+
+        firstName: '',
+        lastName: '',
+        email: '',
+        comp: '',
+        phone: '',
+        service: '',
         message: ''
     });
-    const [isSubmitting, setIsSubmitting] = useState(false);'
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState('idle');
     const handleInputChange = (e) => {
 
@@ -27,27 +27,28 @@ const ContactForm = () => {
     const handleSubmit = async (e) => {
 
         e.preventDefault();
-        setIsSubmitting(true);'
+        setIsSubmitting(true);
         setSubmitStatus('idle');
         try {
+
             // Simulate API call
             await new Promise (resolve => setTimeout (resolve, 2000) ) ;
             // Reset form on success
             setFormData({
-'
-                firstName: '','
-                lastName: '','
-                email: '','
-                comp: '','
-                phone: '','
-                service: '','
+
+                firstName: '',
+                lastName: '',
+                email: '',
+                comp: '',
+                phone: '',
+                service: '',
                 message: ''
-            });'
-            setSubmitStatus('success');'
+            });
+            setSubmitStatus('success');
             setTimeout(() => setSubmitStatus('idle'), 5000)}
         catch (error) {
-'
-            setSubmitStatus('error');'
+
+            setSubmitStatus('error');
             setTimeout(() => setSubmitStatus('idle'), 5000)}
         finally {
 
@@ -59,7 +60,7 @@ const ContactForm = () => {
           <div className="flex items-center">"
             <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">"
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-            </svg>'
+            </svg>
             Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.
           </div>
         </div>)}
@@ -138,16 +139,16 @@ const ContactForm = () => {
         </div>
 "
         <div className="pt-4">"
-          <Button type="submit" size="lg" fullWidth loading={isSubmitting} disabled={!isFormValid} className="w-full">'
+          <Button type="submit" size="lg" fullWidth loading={isSubmitting} disabled={!isFormValid} className="w-full">
             {isSubmitting ? 'Sending Message...' : 'Send Message'}
           </Button>
         </div>
 "
-        <p className="text-xs text-gray-400 text-center">'
+        <p className="text-xs text-gray-400 text-center">
           By submitting this form, you agree to our{' '}"
           <a href="/privacy" className="text-blue-400 hover:text-blue-300 underline">
             Privacy Policy'
-          </a>{' '}'
+          </a>{' '}
           and{' '}"
           <a href="/terms" className="text-blue-400 hover:text-blue-300 underline">
             Terms of Service

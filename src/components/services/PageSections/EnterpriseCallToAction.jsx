@@ -1,44 +1,38 @@
-import React from 'react';'
+import React from 'react';
 import { Building2, Users, Globe, Shield, Award, ArrowRight, Phone, Mail, Calendar, CheckCircle } from 'lucide-react';
 ;
 export const EnterpriseCallToAction = () => {
+
   const enterpriseBenefits = ['
-    'Customized solutions tailored to your business needs','
-    'Dedicated account manager and support team','
-    'Priority response times and escalation procedures','
-    'Comprehensive reporting and analytics','
-    'Strategic IT consulting and roadmap planning','
-    'Compliance and regulatory support','
-    'Vendor management and procurement assistance','
-    'Training and change management programs'
+    'Customized solutions tailored to your business needs',Dedicated account manager and support team',Priority response times and escalation procedures',Comprehensive reporting and analytics',Strategic IT consulting and roadmap planning',Compliance and regulatory support',Vendor management and procurement assistance',Training and change management programs'
   ];
 
   const contactMethods = [
     {
 
-      icon: Phone,'
-      title: 'Call Us','
-      description: 'Speak directly with our enterprise team','
-      action: '+1 (555) 123-4567','
-      link: 'tel:+15551234567','
+      icon: Phone,
+      title: 'Call Us',
+      description: 'Speak directly with our enterprise team',
+      action: '+1 (555) 123-4567',
+      link: 'tel:+15551234567',
       color: 'blue'
     },
     {
 
-      icon: Mail,'
-      title: 'Email Us','
-      description: 'Send us your requirements and questions','
-      action: 'enterprise@zion.com','
-      link: 'mailto:enterprise@zion.com','
+      icon: Mail,
+      title: 'Email Us',
+      description: 'Send us your requirements and questions',
+      action: 'enterprise@zion.com',
+      link: 'mailto:enterprise@zion.com',
       color: 'green'
     },
     {
 
-      icon: Calendar,'
-      title: 'Schedule Meeting','
-      description: 'Book a consultation with our experts','
-      action: 'Book Consultation','
-      link: '#consultation','
+      icon: Calendar,
+      title: 'Schedule Meeting',
+      description: 'Book a consultation with our experts',
+      action: 'Book Consultation',
+      link: '#consultation',
       color: 'purple'
 
   ];
@@ -117,13 +111,13 @@ export const EnterpriseCallToAction = () => {
 "
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
             <a"
-              href="#enterprise-demo""
+              href="#enterprise-demo"
               className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 text-lg"
 
               Request Enterprise Demo
             </a>
             <a"
-              href="#enterprise-quote""
+              href="#enterprise-quote"
               className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 text-lg"
 
               Get Enterprise Quote
@@ -203,13 +197,13 @@ export const EnterpriseCallToAction = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="#enterprise-contact""
+                href="#enterprise-contact"
                 className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
 
                 Contact Enterprise Team
               </a>
               <a"
-                href="#enterprise-case-studies""
+                href="#enterprise-case-studies"
                 className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
 
                 View Case Studies

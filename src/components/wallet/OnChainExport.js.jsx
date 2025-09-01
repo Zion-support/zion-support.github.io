@@ -6,18 +6,22 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/compo
 import { useToast } from "@/hooks/use-toast";"
 import { useAuth } from "@/hooks/useAuth";
 export function OnChainExport() {
+
     const [isConnected, setIsConnected] = useState(false);
     const [isExporting, setIsExporting] = useState(false);
     const [exportStatus, setExportStatus] = useState('idle');
     const { toast } = useToast();
     const { user } = useAuth();
     const handleConnectWallet = async () => {
+
         try {
+
             // Check if wallet is available
             const ethereum = window.ethereum;
             if (!ethereum) {
 
                 toast({
+
 "
                     title: "Wallet not detected","
                     description: "Please install MetaMask or another Ethereum wallet to use this feature","
@@ -29,17 +33,20 @@ export function OnChainExport() {
             // Sign message to verify ownership
             const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
             await ethereum.request({
-'
+
                 method: 'personal_sign',
                 params[address, message];
             });
             setIsConnected(true);
             toast({
+
 "
                 title: "Wallet connected",`
                 description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`})}
         catch (error) {
+
             toast({
+
 "
                 title: "Connection failed","
                 description: error.message || "Could not connect to wallet","
@@ -47,20 +54,24 @@ export function OnChainExport() {
             })}
     };
     const handleExportTokens = async () => {
-        setIsExporting(true);'
+
+        setIsExporting(true);
         setExportStatus('processing');
         try {
+
             // Simulate token export
-            await new Promise(resolve => setTimeout(resolve, 2000));'
+            await new Promise(resolve => setTimeout(resolve, 2000));
             setExportStatus('success');
             toast({
+
 "
                 title: "Tokens exported","
                 description: "Your ZION$ tokens have been exported to your wallet"})}
         catch (error) {
-'
+
             setExportStatus('error');
             toast({
+
 "
                 title: "Export failed","
                 description: error.message || "Could not export tokens","

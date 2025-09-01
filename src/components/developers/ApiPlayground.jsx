@@ -1,10 +1,20 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { useState } from "react";
+import { useLocalStorage } from "@/hooks";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+=======
 import { useState } from "react";"
 import { useLocalStorage } from "@/hooks";"
 import { Input } from "@/components/ui/input";"
 import { Textarea } from "@/components/ui/textarea";"
 import { Button } from "@/components/ui/button";"
+>>>>>>> main
 import CodeBlock from "./CodeBlock";
 export function ApiPlayground({ method, path, params = [] }) {
+
 "
     const [apiKey, setApiKey] = useLocalStorage("zion_api_key", "");
     const [paramValues, setParamValues] = useState({ /* empty */ });"
@@ -15,6 +25,7 @@ export function ApiPlayground({ method, path, params = [] }) {
 
         setParamValues((prev) => ({ ...prev, [name]: value }))};
     const sendRequest = async () => {
+
 "
         const baseUrl = process.env.NEXT_PUBLIC_API_URL || "";
         const url = `${baseUrl}${path}`;
@@ -33,9 +44,14 @@ export function ApiPlayground({ method, path, params = [] }) {
 
   method,
   headers: {
+
 `
                 Authorization: `Bearer ${apiKey
 
+<<<<<<< HEAD
+}`,
+                "Content-Type": "application/json"}};
+=======
 
 
 
@@ -43,9 +59,11 @@ export function ApiPlayground({ method, path, params = [] }) {
 `
 }`,"
                 "Content-Type": "application/json"}};"
+>>>>>>> main
         if (method !== "GET" && method !== "DELETE") {
 
             try {
+
                 options.body = JSON.stringify(JSON.parse(body))}
             catch {
 
@@ -54,10 +72,12 @@ export function ApiPlayground({ method, path, params = [] }) {
         setLoading(true);
         setResponse(null);
         try {
+
             const res = await fetch(url, options);
             const text = await res.text();
             setResponse(text)}
         catch (err) {
+
             setResponse(err.message)}
         finally {
 
@@ -70,12 +90,16 @@ export function ApiPlayground({ method, path, params = [] }) {
   (e) => handleParamChange(p.name,
   e.target.value)
 
+<<<<<<< HEAD
+} placeholder={p.name}/>))}
+=======
 
 
 
 
 
 } placeholder={p.name}/>))}"
+>>>>>>> main
       {method !== "GET" && method !== "DELETE" && (<Textarea value={body} onChange={(e) => setBody(e.target.value)} className="font-mono"/>)}
       <Button onClick={sendRequest} disabled={loading}>"
         {loading ? "Sending..." : "Send Request"}

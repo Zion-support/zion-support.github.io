@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from 'react';'
-import { Link, useLocation } from 'react-router-dom';'
-import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import {
+
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer - motion';
+=======
+>>>>>>> main
 
   Menu,
   X,
@@ -221,137 +224,129 @@ import {
   Omega'
  } from 'lucide-react';
 
-    const handleScroll = () => {;
-      setScrolled(window.scrollY > 20);
-    };'
-    window.addEventListener('scroll', handleScroll);'
+    
+      setScrolled(window.scrollY > 20)};
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   useEffect ( () => {
+
     setMobileMenuOpen (false) ;
     setActiveDropdown (null) }, [location.pathname]) ;
 
-      window.location.href = `/search?q=${encodeURIComponent (searchQuery.trim () ) }`};
-  };
+      window.location.href = `/search?q=${encodeURIComponent (searchQuery.trim () ) }`}};
 
-  const toggleDropdown = (dropdown: string) => {;
-    setActiveDropdown (activeDropdown === dropdown ? null : dropdown) ;
-  };
+  
+    setActiveDropdown (activeDropdown === dropdown ? null : dropdown) };
 
-  const navigationItems = [
-    {
-'
-      name: 'Home','
-      href: '/',
-      icon: Home,'
-      color: 'from-zion-cyan to-zion-blue',
-      isMain: true
-    },
-    {
-'
-      name: 'AI & Consciousness','
-      href: '/ai-services',
-      icon: Brain,'
-      color: 'from-zion-purple to-zion-pink',
+  
+        { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Advanced AI consciousness research platform' },
+        { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion', icon: Heart, description: 'Quantum-powered emotional intelligence' },
+        { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems', icon: Cpu, description: 'Self-managing AI infrastructure' },
+        { name: 'Neural Network Architect', href: '/ai-services/neural-architect', icon: Network, description: 'Custom neural network design' },
+        { name: 'AI Ethics Framework', href: '/ai-services/ai-ethics', icon: Shield, description: 'Ethical AI development tools' },
+        { name: 'Predictive Analytics', href: '/ai-services/predictive-analytics', icon: TrendingUp, description: 'AI-powered business insights' }
+=======
       dropdown[;'
         { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Advanced AI consciousness research platform' },'
         { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion', icon: Heart, description: 'Quantum-powered emotional intelligence' },'
         { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems', icon: Cpu, description: 'Self-managing AI infrastructure' },'
         { name: 'Neural Network Architect', href: '/ai-services/neural-architect', icon: Network, description: 'Custom neural network design' },'
-        { name: 'AI Ethics Framework', href: '/ai-services/ai-ethics', icon: Shield, description: 'Ethical AI development tools' },'
-        { name: 'Predictive Analytics', href: '/ai-services/predictive-analytics', icon: TrendingUp, description: 'AI-powered business insights' }
+        { name: 'AI Ethics Framework', href: '/ai-services/ai-ethics', icon: Shield, description: 'Ethical AI development tools' },'        { name: 'Predictive Analytics', href: '/ai-services/predictive-analytics', icon: TrendingUp, description: 'AI-powered business insights' }
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ]
     },;
     {
-'
-      name: 'Micro SAAS','
+
+      name: 'Micro SAAS',
       href: '/micro-saas',
-      icon: Code,'
+      icon: Code,
       color: 'from-zion-purple to-zion-cyan',
-      dropdown[;'
-        { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence', icon: BarChart3, description: 'Intelligent business analytics platform' },'
-        { name: 'Customer Experience Hub', href: '/micro-saas/customer-experience', icon: Users, description: '360° customer journey management' },'
-        { name: 'Quantum Computing Suite', href: '/micro-saas/quantum-computing', icon: Atom, description: 'Quantum computing solutions' },'
-        { name: 'Supply Chain Optimizer', href: '/micro-saas/supply-chain', icon: Globe, description: 'AI-powered supply chain management' },'
-        { name: 'Cybersecurity Platform', href: '/micro-saas/cybersecurity', icon: ShieldCheck, description: 'Advanced threat protection' },'
-        { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge', icon: Cpu, description: 'Edge computing solutions' },'
-        { name: 'Content Creation AI', href: '/micro-saas/content-creation', icon: FileText, description: 'AI-powered content generation' },'
+      dropdown[;
+        { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence', icon: BarChart3, description: 'Intelligent business analytics platform' },
+        { name: 'Customer Experience Hub', href: '/micro-saas/customer-experience', icon: Users, description: '360° customer journey management' },
+        { name: 'Quantum Computing Suite', href: '/micro-saas/quantum-computing', icon: Atom, description: 'Quantum computing solutions' },
+        { name: 'Supply Chain Optimizer', href: '/micro-saas/supply-chain', icon: Globe, description: 'AI-powered supply chain management' },
+        { name: 'Cybersecurity Platform', href: '/micro-saas/cybersecurity', icon: ShieldCheck, description: 'Advanced threat protection' },
+        { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge', icon: Cpu, description: 'Edge computing solutions' },
+        { name: 'Content Creation AI', href: '/micro-saas/content-creation', icon: FileText, description: 'AI-powered content generation' },
         { name: 'HR Management Suite', href: '/micro-saas/hr-platform', icon: Briefcase, description: 'Modern HR management platform' }
       ]
     },;
     {
-'
-      name: 'IT Services','
+
+      name: 'IT Services',
       href: '/it-services',
-      icon: Network,'
+      icon: Network,
       color: 'from-zion-blue to-zion-purple',
-      dropdown[;'
-        { name: 'Infrastructure Management', href: '/it-services/infrastructure', icon: Server, description: 'Complete infrastructure solutions' },'
-        { name: 'Digital Transformation', href: '/it-services/digital-transformation', icon: Zap, description: 'Digital transformation consulting' },'
-        { name: 'IT Consulting', href: '/it-services/consulting', icon: Users, description: 'Expert IT consulting services' },'
-        { name: 'Onsite Support', href: '/it-services/onsite-support', icon: Wifi, description: '24/7 onsite technical support' },'
-        { name: 'Green IT Solutions', href: '/it-services/green-it', icon: Heart, description: 'Sustainable IT infrastructure' },'
+      dropdown[;
+        { name: 'Infrastructure Management', href: '/it-services/infrastructure', icon: Server, description: 'Complete infrastructure solutions' },
+        { name: 'Digital Transformation', href: '/it-services/digital-transformation', icon: Zap, description: 'Digital transformation consulting' },
+        { name: 'IT Consulting', href: '/it-services/consulting', icon: Users, description: 'Expert IT consulting services' },
+        { name: 'Onsite Support', href: '/it-services/onsite-support', icon: Wifi, description: '24/7 onsite technical support' },
+        { name: 'Green IT Solutions', href: '/it-services/green-it', icon: Heart, description: 'Sustainable IT infrastructure' },
         { name: '5G Network Solutions', href: '/it-services/5g-solutions', icon: Satellite, description: 'Next-gen network infrastructure' }
       ]
     },;
     {
-'
-      name: 'Emerging Tech','
+
+      name: 'Emerging Tech',
       href: '/emerging-tech',
-      icon: Rocket,'
+      icon: Rocket,
       color: 'from-zion-cyan to-zion-purple',
-      dropdown[;'
-        { name: 'Quantum Computing', href: '/emerging-tech/quantum-computing', icon: Atom, description: 'Quantum computing solutions' },'
-        { name: 'Blockchain & DeFi', href: '/emerging-tech/blockchain-defi', icon: Lock, description: 'Blockchain and DeFi platforms' },'
-        { name: 'Space Technology', href: '/emerging-tech/space-tech', icon: Satellite, description: 'Space technology innovations' },'
-        { name: 'Biotechnology', href: '/emerging-tech/biotech', icon: Dna, description: 'Biotech and healthcare solutions' },'
-        { name: 'Nanotechnology', href: '/emerging-tech/nanotech', icon: Microscope, description: 'Nanotechnology applications' },'
+      dropdown[;
+        { name: 'Quantum Computing', href: '/emerging-tech/quantum-computing', icon: Atom, description: 'Quantum computing solutions' },
+        { name: 'Blockchain & DeFi', href: '/emerging-tech/blockchain-defi', icon: Lock, description: 'Blockchain and DeFi platforms' },
+        { name: 'Space Technology', href: '/emerging-tech/space-tech', icon: Satellite, description: 'Space technology innovations' },
+        { name: 'Biotechnology', href: '/emerging-tech/biotech', icon: Dna, description: 'Biotech and healthcare solutions' },
+        { name: 'Nanotechnology', href: '/emerging-tech/nanotech', icon: Microscope, description: 'Nanotechnology applications' },
         { name: 'Augmented Reality', href: '/emerging-tech/ar-vr', icon: Eye, description: 'AR/VR development services' }
       ]
     },;
     {
-'
-      name: 'Marketplace','
+
+      name: 'Marketplace',
       href: '/marketplace',
-      icon: ShoppingCart,'
+      icon: ShoppingCart,
       color: 'from-zion-purple to-zion-cyan',
-      dropdown[;'
-        { name: 'AI Products', href: '/marketplace/ai-products', icon: Brain, description: 'AI-powered products and tools' },'
-        { name: 'IT Equipment', href: '/marketplace/it-equipment', icon: Monitor, description: 'Professional IT equipment' },'
-        { name: 'Software Solutions', href: '/marketplace/software', icon: Code, description: 'Enterprise software solutions' },'
-        { name: 'Professional Services', href: '/marketplace/services', icon: Briefcase, description: 'Expert professional services' },'
-        { name: 'Talent Network', href: '/marketplace/talent', icon: Users, description: 'Skilled professionals network' },'
+      dropdown[;
+        { name: 'AI Products', href: '/marketplace/ai-products', icon: Brain, description: 'AI-powered products and tools' },
+        { name: 'IT Equipment', href: '/marketplace/it-equipment', icon: Monitor, description: 'Professional IT equipment' },
+        { name: 'Software Solutions', href: '/marketplace/software', icon: Code, description: 'Enterprise software solutions' },
+        { name: 'Professional Services', href: '/marketplace/services', icon: Briefcase, description: 'Expert professional services' },
+        { name: 'Talent Network', href: '/marketplace/talent', icon: Users, description: 'Skilled professionals network' },
         { name: 'Innovation Hub', href: '/marketplace/innovation', icon: Lightbulb, description: 'Innovation and R&D services' }
       ]
     },;
     {
-'
-      name: 'Comprehensive','
+
+      name: 'Comprehensive',
       href: '/services-overview',
-      icon: BarChart3,'
+      icon: BarChart3,
       color: 'from-zion-green to-zion-emerald',
-      dropdown[;'
-        { name: 'Services Overview', href: '/services-overview', icon: BarChart3, description: 'Complete portfolio of all services' },'
-        { name: 'Pricing Guide', href: '/pricing-guide', icon: Calculator, description: 'Detailed pricing and ROI analysis' },'
-        { name: 'Ultimate Services 2027', href: '/enhanced-innovative-services-2027', icon: Crown, description: 'Most advanced services for 2027' },'
+      dropdown[;
+        { name: 'Services Overview', href: '/services-overview', icon: BarChart3, description: 'Complete portfolio of all services' },
+        { name: 'Pricing Guide', href: '/pricing-guide', icon: Calculator, description: 'Detailed pricing and ROI analysis' },
+        { name: 'Ultimate Services 2027', href: '/enhanced-innovative-services-2027', icon: Crown, description: 'Most advanced services for 2027' },
         { name: 'Innovative Services', href: '/innovative-services-2027', icon: Lightbulb, description: 'Cutting-edge innovative solutions' }
       ]
     },;
     {
-'
-      name: 'About','
+
+      name: 'About',
       href: '/about',
-      icon: Info,'
+      icon: Info,
       color: 'from-zion-blue to-zion-cyan',
       isMain: true
     },
-    {;'
-      name: 'Contact',;'
+    {;
+      name: 'Contact',;
       href: '/contact',;
-      icon: Phone,;'
+      icon: Phone,;
       color: 'from-zion-cyan to-zion-purple',;
-      isMain: true;
-    };
+      isMain: true};
   ];
 
   return()
@@ -398,21 +393,18 @@ import {
                       {item.icon && <item.icon className="w-4 h-4" />}
                       <span>{item.name}</span>`
                       <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${
-'
+
                         activeDropdown === item.name ? 'rotate-180' : ''`
-                      }`} />
+                      }`}  />
                     </button>;) : (;
-                    <Link
-                      to={item.href}`
-                      className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
+                    <Link to={item.href}`                      className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
 
                         location.pathname === item.href'
                           ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25''
                           : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30'`
                       }`}
 "
-                      {item.icon && <item.icon className="w-4 h-4" />}
-                      <span>{item.name}</span>
+                      {item.icon && <item.icon className="w-4 h-4"  />}                      <span>{item.name}</span>
                     </Link>) }
 
                   {/* Dropdown Menu */}
@@ -421,19 +413,19 @@ import {
                           initial = {
 
   { opacity: 0, y: 10,
-  scale: 0.95 
+  scale: 0.95
 
 }}
                           animate = {
 
   { opacity: 1, y: 0,
-  scale: 1 
+  scale: 1
 
 }}
                           exit = {
 
   { opacity: 0, y: 10,
-  scale: 0.95 
+  scale: 0.95
 
 }}
                           transition={{ duration: 0.2 }}"
@@ -470,10 +462,14 @@ import {
             <div className="flex items-center space-x-4">;
               {/* Search */}"
               <form onSubmit={handleSearch} className="relative">;"
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4"  />
                 <input"
-                  type="text""
+<<<<<<< HEAD
+                  type="text"
                   placeholder="Search services..."
+=======
+                  type="text""                  placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-64 pl-10 pr-4 py-2 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
@@ -483,11 +479,10 @@ import {
               {/* User Menu */}"
               <div className="flex items-center space-x-3">;"
                 <button className="p-2 text-gray-400 hover:text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200">"
-                  <Bell className="w-5 h-5" />
+                  <Bell className="w-5 h-5"  />
                 </button>"
                 <button className="p-2 text-gray-400 hover:text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200">"
-                  <User className="w-5 h-5" />
-                </button>
+                  <User className="w-5 h-5"  />                </button>
               </div>
             </div>
           </div>
@@ -522,8 +517,7 @@ import {
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}"
                 className="p-2 text-gray-400 hover:text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200"
 "
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              </button>
+                {mobileMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}              </button>
             </div>
           </div>
         </div>
@@ -534,19 +528,19 @@ import {
               initial = {
 
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
               animate = {
 
-  { opacity: 1,'
-  height: 'auto' 
+  { opacity: 1,
+  height: 'auto'
 
 }}
               exit = {
 
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
               transition={{ duration: 0.3 }}"
@@ -555,10 +549,14 @@ import {
               <div className="max-w-7xl mx-auto px-6 py-6">
                 {/* Search */}"
                 <form onSubmit={handleSearch} className="relative mb-6">"
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4"  />
                   <input"
-                    type="text""
+<<<<<<< HEAD
+                    type="text"
                     placeholder="Search services..."
+=======
+                    type="text""                    placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}"
                     className="w-full pl-10 pr-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
@@ -585,10 +583,9 @@ import {
                               <span>{item.name}</span>
                             </div>`
                             <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
-'
+
                               activeDropdown === item.name ? 'rotate-180' : ''`
-                            }`} />
-                          </button>
+                            }`}  />                          </button>
 
                           {/* Mobile Dropdown */}
                           <AnimatePresence>
@@ -596,19 +593,19 @@ import {
                                 initial = {
 
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                                 animate = {
 
-  { opacity: 1,'
-  height: 'auto' 
+  { opacity: 1,
+  height: 'auto'
 
 }}
                                 exit = {
 
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                                 transition={{ duration: 0.3 }}"
@@ -662,6 +659,5 @@ import {
       {/* Spacer for fixed navigation */};"
       <div className="h-20"></div>;
     </>
-  );
-};
+  )};
 '"`

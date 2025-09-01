@@ -5,10 +5,10 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from '../ui/card';'
-import { Button } from '../ui/button';'
-import { Badge } from '../ui/badge';'
+  CardHeader,
+  CardTitle} from '../ui/card';
+import { Button } from '../ui/button';
+import { Badge } from '../ui/badge';
 import { Link } from 'react-router-dom';
 import {
 
@@ -18,9 +18,10 @@ import {
   Globe,
   Clock,
   MessageSquare,
-  ExternalLink,'
+  ExternalLink,
   Star} from 'lucide-react';
 export function ContactInfo() {
+
   return()
     <section className="py-20 bg-zion-blue-dark">"
       <div className="container mx-auto px-4">"
@@ -89,9 +90,9 @@ export function ContactInfo() {
                   <div>"
                     <p className="text-white font-medium">Website</p>
                     <a"
-                      href="https://ziontechgroup.com""
-                      target="_blank""
-                      rel="noopener noreferrer""
+                      href="https://ziontechgroup.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-zion-cyan hover:text-zion-cyan-light transition-colors flex items-center gap-1"
                     >
                       ziontechgroup.com"
@@ -108,7 +109,7 @@ export function ContactInfo() {
                   <Clock className="h-5 w-5 text-zion-cyan" />
                   Business Hours
                 </CardTitle>"
-                <CardDescription className="text-zion-slate-light">'
+                <CardDescription className="text-zion-slate-light">
                   We're available when you need us
                 </CardDescription>
               </CardHeader>
@@ -136,7 +137,7 @@ export function ContactInfo() {
                         24/7 Support
                       </span>
                       <Badge"
-                        variant="secondary""
+                        variant="secondary"
                         className="bg-green-500/20 text-green-400 border-green-500/30"
                       >
                         Available
@@ -169,7 +170,7 @@ export function ContactInfo() {
 "
                 <Link to="/comprehensive-services">
                   <Button"
-                    variant="outline""
+                    variant="outline"
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
                   >
                     View All Services
@@ -178,7 +179,7 @@ export function ContactInfo() {
 "
                 <Link to="/it-onsite-services">
                   <Button"
-                    variant="outline""
+                    variant="outline"
                     className="w-full border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light/10"
                   >
                     IT Onsite Services
@@ -250,7 +251,7 @@ export function ContactInfo() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link to="/request-quote">
                 <Button"
-                  size="lg""
+                  size="lg"
                   className="bg-white text-zion-purple hover:bg-zion-slate-light px-8 py-3"
                 >
                   Get Free Consultation
@@ -258,8 +259,8 @@ export function ContactInfo() {
               </Link>"
               <a href="tel:+13024640950">
                 <Button"
-                  size="lg""
-                  variant="outline""
+                  size="lg"
+                  variant="outline"
                   className="border-white text-white hover:bg-white hover:text-zion-purple px-8 py-3"
                 >
                   Call Now: +1 302 464 0950

@@ -1,5 +1,5 @@
-import React from 'react';
 export interface AdvancedITService {
+
   id: string;
   title: string;
   description: string;
@@ -91,6 +91,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     roi: "300-600%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -98,16 +99,15 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
+
 "
       technology["Machine Learning", "Python", "React", "Node.js", "PostgreSQL"],;"
       integrations["AWS", "Azure", "Google Cloud", "VMware", "Kubernetes"],;
       apiEndpoints: 400,"
       uptime: "99.99%","
-      security["SOC 2", "ISO 27001", "Encryption", "Access controls"];
-    },;"
+      security["SOC 2", "ISO 27001", "Encryption", "Access controls"]},;"
     competitors["ServiceNow", "BMC Software", "BMC Helix", "Ivanti"],;"
-    marketSize: "$152.4 billion by 2025","
-    growthRate: "180% annual growth",
+    marketSize: "$152.4 billion by 2025","    growthRate: "180% annual growth",
     rating: 4.8,
     reviews: 234,
     customers: 456
@@ -115,6 +115,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
 
   // Quantum-Enhanced Cloud Computing
   {
+
 "
     id: "quantum-cloud-computing","
     title: "Quantum-Enhanced Cloud Computing","
@@ -164,6 +165,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     roi: "500-1000%","
     innovationLevel: "Revolutionary",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -171,16 +173,15 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
+
 "
       technology["Quantum algorithms", "Qiskit", "React", "Python", "PostgreSQL"],;"
       integrations["AWS", "Azure", "Google Cloud", "Quantum simulators", "AI platforms"],;
       apiEndpoints: 800,"
       uptime: "99.99%","
-      security["Quantum encryption", "SOC 2", "FedRAMP", "Zero-trust"];
-    },;"
+      security["Quantum encryption", "SOC 2", "FedRAMP", "Zero-trust"]},;"
     competitors["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Amazon Braket"],;"
-    marketSize: "$832.1 billion by 2025","
-    growthRate: "300% annual growth",
+    marketSize: "$832.1 billion by 2025","    growthRate: "300% annual growth",
     rating: 4.9,
     reviews: 156,
     customers: 234
@@ -188,6 +189,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
 
   // Edge Computing & IoT Platform
   {
+
 "
     id: "edge-computing-iot-platform","
     title: "Edge Computing & IoT Platform","
@@ -237,6 +239,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     roi: "250-500%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -244,16 +247,15 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
+
 "
       technology["Edge nodes", "IoT protocols", "React", "Python", "MongoDB"],;"
       integrations["IoT devices", "Cloud platforms", "Analytics tools", "Security systems"],;
       apiEndpoints: 300,"
       uptime: "99.9%","
-      security["Edge security", "Device authentication", "Data encryption"];
-    },;"
+      security["Edge security", "Device authentication", "Data encryption"]},;"
     competitors["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge"],;"
-    marketSize: "$43.4 billion by 2025","
-    growthRate: "200% annual growth",
+    marketSize: "$43.4 billion by 2025","    growthRate: "200% annual growth",
     rating: 4.7,
     reviews: 189,
     customers: 345
@@ -261,6 +263,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
 
   // Zero-Trust Security Architecture
   {
+
 "
     id: "zero-trust-security-architecture","
     title: "Zero-Trust Security Architecture","
@@ -310,6 +313,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     roi: "400-800%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -317,16 +321,15 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
+
 "
       technology["AI/ML", "Blockchain", "React", "Python", "PostgreSQL"],;"
       integrations["SIEM", "IAM", "Firewalls", "EDR", "Cloud platforms"],;
       apiEndpoints: 500,"
       uptime: "99.99%","
-      security["SOC 2", "ISO 27001", "FedRAMP", "Zero-trust architecture"];
-    },;"
+      security["SOC 2", "ISO 27001", "FedRAMP", "Zero-trust architecture"]},;"
     competitors["Palo Alto Networks", "Cisco", "Fortinet", "Check Point"],;"
-    marketSize: "$67.8 billion by 2025","
-    growthRate: "250% annual growth",
+    marketSize: "$67.8 billion by 2025","    growthRate: "250% annual growth",
     rating: 4.8,
     reviews: 267,
     customers: 489
@@ -334,6 +337,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
 
   // AI-Powered DevOps Automation
   {
+
 "
     id: "ai-devops-automation","
     title: "AI-Powered DevOps Automation","
@@ -383,6 +387,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     roi: "300-600%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -390,16 +395,15 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
+
 "
       technology["Machine Learning", "Docker", "Kubernetes", "React", "Python"],;"
       integrations["GitHub", "Jenkins", "Docker Hub", "AWS", "Azure"],;
       apiEndpoints: 350,"
       uptime: "99.9%","
-      security["Code scanning", "Vulnerability assessment", "Access controls"];
-    },;"
+      security["Code scanning", "Vulnerability assessment", "Access controls"]},;"
     competitors["GitLab", "Jenkins", "CircleCI", "GitHub Actions"],;"
-    marketSize: "$25.2 billion by 2025","
-    growthRate: "180% annual growth",
+    marketSize: "$25.2 billion by 2025","    growthRate: "180% annual growth",
     rating: 4.7,
     reviews: 198,
     customers: 367
@@ -407,6 +411,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
 
   // Blockchain-Based Identity Management
   {
+
 "
     id: "blockchain-identity-management","
     title: "Blockchain-Based Identity Management","
@@ -456,6 +461,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     roi: "250-500%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -463,16 +469,15 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
+
 "
       technology["Ethereum", "Hyperledger", "React", "Node.js", "MongoDB"],;"
       integrations["SSO systems", "CRM platforms", "Banking systems", "Government databases"],;
       apiEndpoints: 250,"
       uptime: "99.9%","
-      security["Blockchain security", "Encryption", "Multi-factor authentication"];
-    },;"
+      security["Blockchain security", "Encryption", "Multi-factor authentication"]},;"
     competitors["Microsoft Identity", "Okta", "Auth0", "OneLogin"],;"
-    marketSize: "$28.6 billion by 2025","
-    growthRate: "220% annual growth",
+    marketSize: "$28.6 billion by 2025","    growthRate: "220% annual growth",
     rating: 4.6,
     reviews: 145,
     customers: 278
@@ -480,6 +485,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
 
   // Quantum-Enhanced Data Analytics
   {
+
 "
     id: "quantum-data-analytics","
     title: "Quantum-Enhanced Data Analytics","
@@ -529,6 +535,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     roi: "400-800%","
     innovationLevel: "Revolutionary",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -536,20 +543,19 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
+
 "
       technology["Quantum algorithms", "Qiskit", "Python", "React", "PostgreSQL"],;"
       integrations["Data warehouses", "Cloud platforms", "BI tools", "AI platforms"],;
       apiEndpoints: 600,"
       uptime: "99.99%","
-      security["Quantum encryption", "SOC 2", "Data protection", "Access controls"];
-    },;"
+      security["Quantum encryption", "SOC 2", "Data protection", "Access controls"]},;"
     competitors["Tableau", "Power BI", "Qlik", "Looker"],;"
-    marketSize: "$29.9 billion by 2025","
-    growthRate: "250% annual growth",
+    marketSize: "$29.9 billion by 2025","    growthRate: "250% annual growth",
     rating: 4.9,
     reviews: 178,
     customers: 289
 
 ];
 
-export default ADVANCED_IT_SERVICES_2025;}}"
+export default ADVANCED_IT_SERVICES_2025}}"

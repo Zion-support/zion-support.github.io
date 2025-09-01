@@ -10,47 +10,48 @@ import {
   MessageSquare,
   X,
   Maximize2,
-  Minimize2,'
+  Minimize2,
   PhoneOff} from 'lucide-react';
 const mockParticipants = [
   {
-'
-    id: '1','
+
+    id: '1',
     name: 'John Smith',
     isVideoOn: true,
     isAudioOn: true,
     isScreenSharing: false,
-    isSpeaking: true,'
+    isSpeaking: true,
     avatar: '👨‍💼'},
   {
-'
-    id: '2','
+
+    id: '2',
     name: 'Sarah Johnson',
     isVideoOn: false,
     isAudioOn: true,
     isScreenSharing: true,
-    isSpeaking: false,'
+    isSpeaking: false,
     avatar: '👩‍💻'},
   {
-'
-    id: '3','
+
+    id: '3',
     name: 'Mike Chen',
     isVideoOn: true,
     isAudioOn: false,
     isScreenSharing: false,
-    isSpeaking: false,'
+    isSpeaking: false,
     avatar: '👨‍🔬'},
   {
-'
-    id: '4','
+
+    id: '4',
     name: 'Emily Davis',
     isVideoOn: true,
     isAudioOn: true,
     isScreenSharing: false,
-    isSpeaking: false,'
+    isSpeaking: false,
     avatar: '👩‍🎨'},
 ];
 export function CollaborationPlatform() {
+
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -64,44 +65,49 @@ export function CollaborationPlatform() {
   const [activeChat, setActiveChat] = useState(false);
   const [chatMessages, setChatMessages] = useState([
     {
-'
-      id: '1','
-      user: 'John Smith','
+
+      id: '1',
+      user: 'John Smith',
       message: 'Great presentation!',
       timestamp: new Date()},
     {
-'
-      id: '2','
-      user: 'Sarah Johnson','
+
+      id: '2',
+      user: 'Sarah Johnson',
       message: 'I have some questions about the implementation',
       timestamp: new Date()},
-  ]);'
+  ]);
   const [newMessage, setNewMessage] = useState('');
   const [isRecording, setIsRecording] = useState(false);
   const [meetingDuration, setMeetingDuration] = useState(0);
   const containerRef = useRef(null);
   useEffect(() => {
+
     const interval = setInterval(() => {
+
       setMeetingDuration(prev => prev + 1);
     }, 1000);
     return () => clearInterval(interval);
   }, []);
   const toggleMute = () => {
+
     setLocalUser(prev => ({ ...prev, isMuted: !prev.isMuted }));
   };
   const toggleRecording = () => {
+
     setIsRecording(!isRecording);
   };
   const sendMessage = () => {
+
     if (newMessage.trim()) {
 
       const message = {
 
-        id: Date.now().toString(),'
+        id: Date.now().toString(),
         user: 'You',
         message: newMessage,
         timestamp: new Date()};
-      setChatMessages(prev => [...prev, message]);'
+      setChatMessages(prev => [...prev, message]);
       setNewMessage('');
     }
   };
@@ -109,10 +115,11 @@ export function CollaborationPlatform() {
 
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
-    const secs = seconds % 60;'
-    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    const secs = seconds % 60;
+    return `${hours.toString().padStart(2,0')}:${minutes.toString().padStart(2,0')}:${secs.toString().padStart(2,0')}`;
   };
   const toggleChat = () => {
+
     setActiveChat(!activeChat);
   };
   if (!isOpen) {
@@ -120,7 +127,7 @@ export function CollaborationPlatform() {
     return()
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-4 right-20 p-3 bg-zion-purple hover:bg-zion-purple-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50""
+        className="fixed bottom-4 right-20 p-3 bg-zion-purple hover:bg-zion-purple-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50"
         title="Start Collaboration Session"
       >"
         <Users className="w-5 h-5" />
@@ -175,7 +182,7 @@ export function CollaborationPlatform() {
               isRecording'
                 ? 'bg-red-500 text-white animate-pulse''
                 : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30'`
-            }`}'
+            }`}
             title={isRecording ? 'Stop Recording' : 'Start Recording'}
           >"
             <div className="w-4 h-4 rounded-full border-2 border-current"></div>
@@ -193,14 +200,14 @@ export function CollaborationPlatform() {
           </button>
           <button
             onClick={() => setIsMinimized(true)}"
-            className="p-2 text-zion-slate-light hover:text-zion-slate transition-colors""
+            className="p-2 text-zion-slate-light hover:text-zion-slate transition-colors"
             title="Minimize"
           >"
             <Minimize2 className="w-4 h-4" />
           </button>
           <button
             onClick={() => setIsOpen(false)}"
-            className="p-2 text-zion-slate-light hover:text-zion-slate transition-colors""
+            className="p-2 text-zion-slate-light hover:text-zion-slate transition-colors"
             title="Close"
           >"
             <X className="w-4 h-4" />
@@ -274,7 +281,7 @@ export function CollaborationPlatform() {
                   localUser.isVideoOn'
                     ? 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30''
                     : 'bg-red-500 text-white'`
-                }`}'
+                }`}
                 title={localUser.isVideoOn ? 'Turn Off Video' : 'Turn On Video'}
               >
                 {localUser.isVideoOn ? ("
@@ -291,7 +298,7 @@ export function CollaborationPlatform() {
                   localUser.isAudioOn'
                     ? 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30''
                     : 'bg-red-500 text-white'`
-                }`}'
+                }`}
                 title={localUser.isAudioOn ? 'Mute' : 'Unmute'}
               >
                 {localUser.isAudioOn ? ("
@@ -310,7 +317,7 @@ export function CollaborationPlatform() {
                     : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30'`
                 }`}
                 title={
-'
+
                   localUser.isScreenSharing ? 'Stop Sharing' : 'Share Screen'
                 }
               >"
@@ -332,7 +339,7 @@ export function CollaborationPlatform() {
 
               <button
                 onClick={() => setIsOpen(false)}"
-                className="p-3 bg-red-500 hover:bg-red-600 text-white rounded-full transition-all duration-200""
+                className="p-3 bg-red-500 hover:bg-red-600 text-white rounded-full transition-all duration-200"
                 title="Leave Meeting"
               >"
                 <PhoneOff className="w-5 h-5" />
@@ -357,8 +364,8 @@ export function CollaborationPlatform() {
                     </span>"
                     <span className="text-xs text-zion-slate-light">
                       {message.timestamp.toLocaleTimeString([], {
-'
-                        hour: '2-digit','
+
+                        hour: '2-digit',
                         minute: '2-digit'})}
                     </span>
                   </div>"
@@ -374,9 +381,9 @@ export function CollaborationPlatform() {
                 <input"
                   type="text"
                   value={newMessage}
-                  onChange={e => setNewMessage(e.target.value)}'
+                  onChange={e => setNewMessage(e.target.value)}
                   onKeyPress={e => e.key === 'Enter' && sendMessage()}"
-                  placeholder="Type a message...""
+                  placeholder="Type a message..."
                   className="flex-1 px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate focus:ring-2 focus:ring-zion-purple focus:border-transparent"
                 />
                 <button

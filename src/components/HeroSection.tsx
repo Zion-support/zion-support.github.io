@@ -1,7 +1,17 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import {
+
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer - motion';
+
+ * HeroSection function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function HeroSection () {
+
+=======
+>>>>>>> main
 
   ArrowRight,
   Play,
@@ -15,7 +25,7 @@ import {
   Brain,
   Rocket,
   Target,
-  TrendingUp,'
+  TrendingUp,
   Pause} from 'lucide-react';
 
 interface HeroSlide {
@@ -30,190 +40,140 @@ interface HeroSlide {
   features: string[];
   gradient: string;
   icon: React.ComponentType < any>;
-  stats: { label: string; value: string; icon: React.ComponentType < any> }[];
-}
+  stats: { label: string; value: string; icon: React.ComponentType < any> }[]}
 ;
 const heroSlides: HeroSlide[] = [
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   {
-'
-    id: 'ai-solutions','
+
+    id: 'ai-solutions',
     title: 'AI-Powered Business Solutions',
     subtitle:'
       'Transform your business with cutting-edge artificial intelligence',
     description:'
-      'Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization. Our solutions are designed to scale with your business needs.','
-    image: '/images/hero-ai-solutions.jpg','
-    cta: 'Explore AI Solutions','
+      'Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization. Our solutions are designed to scale with your business needs.',
+    image: '/images/hero-ai-solutions.jpg',
+    cta: 'Explore AI Solutions',
     path: '/services/ai-business-intelligence',
     features: ['
-      'Machine Learning','
-      'Predictive Analytics','
-      'Process Automation','
-      'Real-time Insights',
-    ],'
+      'Machine Learning',Predictive Analytics',Process Automation',Real-time Insights',
+    ],
     gradient: 'from-zion-cyan via-zion-purple to-zion-blue',
     icon: Brain,
     stats: ['
-      { label: 'Accuracy Rate', value: '95%+', icon: Target },'
-      { label: 'ROI Increase', value: '450%', icon: TrendingUp },'
+      { label: 'Accuracy Rate', value: '95%+', icon: Target },
+      { label: 'ROI Increase', value: '450%', icon: TrendingUp },
       { label: 'Market Growth', value: '280%', icon: Rocket },
     ]},
   {
-'
-    id: 'it-services','
-    title: 'Comprehensive IT Services','
+
+    id: 'it-services',
+    title: 'Comprehensive IT Services',
     subtitle: 'End-to-end technology solutions for modern businesses',
     description:'
-      "From infrastructure management to digital transformation, we provide the expertise you need to succeed in today's competitive landscape.",'
-    image: '/images/hero-it-services.jpg','
-    cta: 'View Our Services','
+      "From infrastructure management to digital transformation, we provide the expertise you need to succeed in today's competitive landscape.",
+    image: '/images/hero-it-services.jpg',
+    cta: 'View Our Services',
     path: '/services',
     features: ['
-      'Cloud Infrastructure','
-      'Cybersecurity','
-      'DevOps Automation','
-      '24/7 Support',
-    ],'
+      'Cloud Infrastructure',Cybersecurity',DevOps Automation',24/7 Support',
+    ],
     gradient: 'from-zion-blue via-zion-cyan to-zion-purple',
     icon: Shield,
     stats: ['
-      { label: 'Uptime', value: '99.99%', icon: Target },'
-      { label: 'Cost Savings', value: '700%', icon: TrendingUp },'
+      { label: 'Uptime', value: '99.99%', icon: Target },
+      { label: 'Cost Savings', value: '700%', icon: TrendingUp },
       { label: 'Response Time', value: '<5min', icon: Rocket },
     ]},
   {
-'
-    id: 'green-it','
-    title: 'Green IT Solutions','
+
+    id: 'green-it',
+    title: 'Green IT Solutions',
     subtitle: 'Sustainable technology for a better future',
     description:'
-      'Implement eco-friendly IT solutions that reduce your carbon footprint while maintaining performance and driving business value.','
-    image: '/images/hero-green-it.jpg','
-    cta: 'Learn More','
+      'Implement eco-friendly IT solutions that reduce your carbon footprint while maintaining performance and driving business value.',
+    image: '/images/hero-green-it.jpg',
+    cta: 'Learn More',
     path: '/green-it',
     features: ['
-      'Energy Efficiency','
-      'Carbon Reduction','
-      'Sustainable Practices','
-      'Cost Savings',
-    ],'
+      'Energy Efficiency',Carbon Reduction',Sustainable Practices',Cost Savings',
+    ],
     gradient: 'from-zion-cyan via-zion-blue to-zion-purple',
     icon: Globe,
     stats: ['
-      { label: 'Energy Savings', value: '60%', icon: Target },'
-      { label: 'Carbon Reduction', value: '75%', icon: TrendingUp },'
+      { label: 'Energy Savings', value: '60%', icon: Target },
+      { label: 'Carbon Reduction', value: '75%', icon: TrendingUp },
       { label: 'Cost Reduction', value: '40%', icon: Rocket },
     ]},
 ];
-;
-const slideVariants = {
-
-  enter: (direction: number) => ({
-
-    x: direction > 0 ? 1000 : -1000,
-    opacity: 0}),
-  center: {
-
-    zIndex: 1,
-    x: 0,
-    opacity: 1},
-  exit: (direction: number) => ({
-
-    zIndex: 0,
-    x: direction < 0 ? 1000 : -1000,
-    opacity: 0})};
-
-const swipeConfidenceThreshold = 10000;
-const swipePower = (offset: number, velocity: number) => {
-
-  return Math.abs(offset) * velocity;
 };
-
   const [currentSlide, setCurrentSlide] = useState (0) ;
   const [isAutoPlaying, setIsAutoPlaying] = useState (true) ;
   const [direction, setDirection] = useState (0) ;
   const [isLoading, setIsLoading] = useState (true) ;
 
   // Memoize slides to prevent unnecessary re - renders
-  const memoizedSlides = useMemo ( () => heroSlides, []) ;
-
+  
   // Optimized slide navigation with useCallback
-  const nextSlide = useCallback(() => {
-    setDirection(1);
+  
     setCurrentSlide(prev => (prev + 1) % memoizedSlides.length);
-    setIsAutoPlaying(false);
-  }, [memoizedSlides.length]);
+    setIsAutoPlaying(false)}, [memoizedSlides.length]);
 
-  const prevSlide = useCallback(() => {
-    setDirection(-1);
+  
     setCurrentSlide()
       prev => (prev - 1 + memoizedSlides.length) % memoizedSlides.length
     );
-    setIsAutoPlaying(false);
-  }, [memoizedSlides.length]);
+    setIsAutoPlaying(false)}, [memoizedSlides.length]);
 
-  const goToSlide = useCallback()
-    (index: number) => {
-
-      setDirection(index > currentSlide ? 1 : -1);
+  
       setCurrentSlide(index);
-      setIsAutoPlaying(false);
-    },
+      setIsAutoPlaying(false)},
     [currentSlide]
   );
-
   // Auto-play functionality with pause on hover
   useEffect(() => {
+
     if (!isAutoPlaying) return;
 
-    const interval = setInterval(() => {
-      setDirection(1);
-      setCurrentSlide(prev => (prev + 1) % memoizedSlides.length);
-    }, 6000);
+    
+      setCurrentSlide(prev => (prev + 1) % memoizedSlides.length)}, 6000);
 
-    return () => clearInterval (interval) ;
-  }, [isAutoPlaying, memoizedSlides.length]) ;
+    return () => clearInterval (interval) }, [isAutoPlaying, memoizedSlides.length]) ;
 
   // Handle keyboard navigation
   useEffect ( () => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-'
-      if (e.key === 'ArrowLeft') prevSlide();'
-      if (e.key === 'ArrowRight') nextSlide();'
+
+      if (e.key === 'ArrowRight') nextSlide();
       if (e.key === ' ') {
 
-        e.preventDefault();
-        setIsAutoPlaying(!isAutoPlaying);
-      }
-    };
+=======
 '
-    window.addEventListener('keydown', handleKeyDown);'
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [prevSlide, nextSlide, isAutoPlaying]);
+      if (e.key === 'ArrowLeft') prevSlide();'
+      if (e.key === 'ArrowRight') nextSlide();'      if (e.key === ' ') {
+
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+
+        e.preventDefault();
+        setIsAutoPlaying(!isAutoPlaying)}
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown)}, [prevSlide, nextSlide, isAutoPlaying]);
 
   // Handle image loading
   useEffect ( () => {
-    const preloadImages = async () => {
-      const imagePromises = memoizedSlides.map(slide => {
 
-        return new Promise(resolve => {
-
-          const img = new Image();
           img.onload = resolve;
           img.onerror = resolve;
-          img.src = slide.image;
-        }) ;
-      }) ;
+          img.src = slide.image}) }) ;
 
       await Promise.all (imagePromises) ;
-      setIsLoading (false) ;
-    };
+      setIsLoading (false) };
 
-    preloadImages () ;
-  }, [memoizedSlides]) ;
+    preloadImages () }, [memoizedSlides]) ;
 
-  const currentSlideData = memoizedSlides[currentSlide];
-
+  
   if (isLoading) {
 
     return ("
@@ -224,9 +184,7 @@ const swipePower = (offset: number, velocity: number) => {
             Loading amazing experiences...
           </p>
         </div>
-      </div>) ;
-  }
-
+      </div>) }
   return ("
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Background Pattern */}"
@@ -252,8 +210,7 @@ const swipePower = (offset: number, velocity: number) => {
                 transition={{ duration: 0.6, delay: 0.4 }}"
                 className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 text-cyan-300 text-sm font-medium"
               >"
-                <Star className="w-4 h-4 mr-2 text-yellow-400" />
-                Leading Technology Solutions
+                <Star className="w-4 h-4 mr-2 text-yellow-400"  />                Leading Technology Solutions
               </motion.div>
 
               <motion.h1
@@ -295,8 +252,7 @@ const swipePower = (offset: number, velocity: number) => {
             >
               {currentSlideData.features.map((feature, index) => ("
                 <div key={feature} className="flex items-center space-x-2">"
-                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />"
-                  <span className="text-slate-300 text-sm">{feature}</span>
+                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0"  />"                  <span className="text-slate-300 text-sm">{feature}</span>
                 </div>
               ))}
             </motion.div>
@@ -313,23 +269,21 @@ const swipePower = (offset: number, velocity: number) => {
                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
               >
                 {currentSlideData.cta}"
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
+                <ArrowRight className="w-5 h-5 ml-2"  />              </Link>
 
               <button
                 onClick={() => setIsAutoPlaying(!isAutoPlaying)}"
                 className="inline-flex items-center justify-center px-6 py-4 border border-slate-600 hover:border-cyan-400 text-slate-300 hover:text-cyan-400 font-medium rounded-lg transition-all duration-300"
                 aria-label={
-'
+
                   isAutoPlaying ? 'Pause slideshow' : 'Play slideshow'
                 }
               >
                 {isAutoPlaying ? ("
-                  <Pause className="w-5 h-5" />
+                  <Pause className="w-5 h-5"  />
                 ) : ("
-                  <Play className="w-5 h-5" />
-                )}
-              </button>
+                  <Play className="w-5 h-5"  />
+                )}              </button>
             </motion.div>
 
             {/* Stats */}
@@ -397,21 +351,18 @@ const swipePower = (offset: number, velocity: number) => {
       {/* Arrow Navigation */}
       <button
         onClick={prevSlide}"
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-slate-800/50 hover:bg-slate-700/70 text-slate-300 hover:text-white transition-all duration-300 backdrop-blur-sm""
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-slate-800/50 hover:bg-slate-700/70 text-slate-300 hover:text-white transition-all duration-300 backdrop-blur-sm"
         aria-label="Previous slide"
       >"
-        <ChevronLeft className="w-6 h-6" />
-      </button>
+        <ChevronLeft className="w-6 h-6"  />      </button>
 
       <button
         onClick={nextSlide}"
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-slate-800/50 hover:bg-slate-700/70 text-slate-300 hover:text-white transition-all duration-300 backdrop-blur-sm""
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-slate-800/50 hover:bg-slate-700/70 text-slate-300 hover:text-white transition-all duration-300 backdrop-blur-sm"
         aria-label="Next slide"
       >"
-        <ChevronRight className="w-6 h-6" />
+        <ChevronRight className="w-6 h-6"  />
       </button>
-    </section>) ;
-}
-
+    </section>) }
 export { HeroSection };
 '"`

@@ -1,7 +1,10 @@
-import React, { useState } from 'react';'
-import { Link, useLocation } from 'react-router-dom';'
-import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import {
+
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer - motion';
+=======
+>>>>>>> main
 
   Home,
   Brain,
@@ -41,7 +44,7 @@ import {
   Wifi,
   HeartPulse,
   DollarSign,
-  Leaf,'
+  Leaf,
   Building} from 'lucide-react';
   User,
   Factory,
@@ -107,12 +110,11 @@ import {
   MailIcon as MailIcon2'
 } from 'lucide-react';
 
-export const EnhancedSidebar: React.FC = () => {;'
+export const EnhancedSidebar: React.FC = () => {;
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
-  const location = useLocation();
-
-  const toggleSection = (section: string) => {;
-    const newExpanded = new Set(expandedSections);
+  
+  
+    
     if (newExpanded.has(section)) {
 
       newExpanded.delete(section)} else {
@@ -120,8 +122,7 @@ export const EnhancedSidebar: React.FC = () => {;'
       newExpanded.add(section)}
     setExpandedSections(newExpanded)};
 
-  const isActive = (path: string) => location.pathname === path;
-
+  
   const navigationSections = [
     {
 
@@ -138,9 +139,12 @@ export const EnhancedSidebar: React.FC = () => {;'
         { name: "Contact", href: "/contact", icon: MessageCircle },"
         { name: "Careers", href: "/careers", icon: Briefcase },"
         { name: "Partners", href: "/partners", icon: Handshake }
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ]
     },;
     {
+
 "
       title: "Service Areas",
       icon: Zap,
@@ -158,6 +162,7 @@ export const EnhancedSidebar: React.FC = () => {;'
       ]
     },;
     {
+
 "
       title: "Security & Compliance",
       icon: Shield,
@@ -175,28 +180,20 @@ export const EnhancedSidebar: React.FC = () => {;'
 
   ];
 
-  const quickActions = ["
-    { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },"
-    { name: "Book Demo", href: "/request-quote", icon: Calendar, variant: "secondary" },"
-    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" }
-  ];
-
+  
   return ("
-    <div className = "w-64 bg-slate-900/95 backdrop-blur-xl border-r border-slate-700/50 h-screen overflow-y-auto">"
-      <div className="p-6">
+    <div className = "w-64 bg-slate-900/95 backdrop-blur-xl border-r border-slate-700/50 h-screen overflow-y-auto">"      <div className="p-6">
         {/* Logo */}"
         <div className="mb-8">;"
         { name: "Sitemap", href: "/sitemap", icon: Globe },;"
         { name: "Dashboard", href: "/dashboard", icon: BarChart3 },;"
         { name: "Login", href: "/login", icon: User };
-      ];
-    };
+      ]};
   ];
 
   const quickActions = [;"
     { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },;"
-    { name: "Book Demo", href: "/enterprise-demo", icon: Calendar, variant: "secondary" },;"
-    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" };
+    { name: "Book Demo", href: "/enterprise-demo", icon: Calendar, variant: "secondary" },;"    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" };
   ];
 
   return ("
@@ -208,22 +205,21 @@ export const EnhancedSidebar: React.FC = () => {;'
           initial = {
 
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ duration: 0.5 }}
         >"
           <Link to="/" className="flex items-center space-x-3 group">"
             <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">"
-              <Zap className="w-6 h-6 text-white" />
-            </div>"
-            <h1 className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
+              <Zap className="w-6 h-6 text-white"  />
+            </div>"            <h1 className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
               Zion Tech Group
             </h1>
           </Link>
@@ -235,19 +231,19 @@ export const EnhancedSidebar: React.FC = () => {;'
           initial = {
 
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition = {
 
   { duration: 0.5,
-  delay: 0.1 
+  delay: 0.1
 
 }}
         >"
@@ -259,33 +255,31 @@ export const EnhancedSidebar: React.FC = () => {;'
                 initial = {
 
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
                 animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                 transition = {
 
   { duration: 0.3,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
               >
-                <Link
-                  to={action.href}
+                <Link to={action.href}
                   className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 group ${
-'
+
                     action.variant === 'primary''
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan/90 hover:to-zion-blue/90 shadow-lg shadow-zion-cyan/25''
                       : 'bg-zion-slate-dark/50 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 border border-zion-cyan/20 hover:border-zion-cyan/40'`
                   }`}
 "
-                  <action.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />"
-                  <span className="font-medium">{action.name}</span>
+                  <action.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300"  />"                  <span className="font-medium">{action.name}</span>
                 </Link>
               </motion.div>;) ) }
           </div>
@@ -299,19 +293,19 @@ export const EnhancedSidebar: React.FC = () => {;'
               initial = {
 
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               transition = {
 
   { duration: 0.5,
-  delay: sectionIndex * 0.1 
+  delay: sectionIndex * 0.1
 
 }}
             >
@@ -325,12 +319,28 @@ export const EnhancedSidebar: React.FC = () => {;'
                     {section.title}
                   </span>
                 </div>
+<<<<<<< HEAD
+                <ChevronDown
+                  className={`w - 4 h - 4 text - slate - 400 transition - transform duration - 200 ${
+
+                    expandedSections.has (section.title) ? 'rotate - 180' : ''
+                  }`}
+                />
+=======
                 <ChevronDown `
                   className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
-'
+
+<<<<<<< HEAD
+
                     expandedSections.has(section.title) ? 'rotate-180' : ''`
                   }`} 
-                />
+                 />
+=======
+'
+                    expandedSections.has(section.title) ? 'rotate-180' : ''`                  }`} 
+                 />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+>>>>>>> main
               </button>
 
               <AnimatePresence>
@@ -338,19 +348,19 @@ export const EnhancedSidebar: React.FC = () => {;'
                     initial = {
 
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                     animate = {
 
-  { opacity: 1,'
-  height: 'auto' 
+  { opacity: 1,
+  height: 'auto'
 
 }}
                     exit = {
 
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                     transition={{ duration: 0.3 }}"
@@ -361,19 +371,19 @@ export const EnhancedSidebar: React.FC = () => {;'
                         initial = {
 
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
                         animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                         transition = {
 
   { duration: 0.2,
-  delay: itemIndex * 0.05 
+  delay: itemIndex * 0.05
 
 }}
                       >"
@@ -396,39 +406,37 @@ export const EnhancedSidebar: React.FC = () => {;'
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition = {
 
   { duration: 0.5,
-  delay: 0.5 
+  delay: 0.5
 
 }}
         >"
           <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?</h3>"
           <div className="space-y-2 text-xs text-zion-slate-light">"
             <div className="flex items-center space-x-2">"
-              <Phone className="w-3 h-3" />
+              <Phone className="w-3 h-3"  />
               <span>+1 302 464 0950</span>
             </div>"
             <div className="flex items-center space-x-3 text-sm text-slate-400">"
-              <Mail className="w-4 h-4" />
+              <Mail className="w-4 h-4"  />
               <span>kleber@ziontechgroup.com</span>
             </div>"
             <div className = "flex items-center space-x-2">"
-              <MapPin className="w-3 h-3" />;
-              <span>Middletown, DE</span>;
+              <MapPin className="w-3 h-3"  />;              <span>Middletown, DE</span>;
             </div>;
           </div>;
         </motion.div>;
       </div>;
-    </aside>;) ;
-};
+    </aside>;) };
 '"`

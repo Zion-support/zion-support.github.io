@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import RevolutionaryServicesPage from './RevolutionaryServicesPage';
 
-
 describe ('RevolutionaryServicesPage', () => {
   it ('renders without crashing', () => {
     render (<RevolutionaryServicesPage />) ;

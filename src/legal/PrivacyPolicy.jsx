@@ -1,7 +1,7 @@
-import React from 'react';'
-import ReactMarkdown from 'react-markdown';'
-import { Header } from '@/components/Header';'
-import { Footer } from '@/components/Footer';'
+import React from 'react';
+import ReactMarkdown from 'react-markdown';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import SEO from '@/components/SEO';
 const markdown = `
 # Privacy Policy
@@ -10,11 +10,12 @@ Your privacy is important to us. This policy explains how Zion Tech Group collec
 const draft = true;
 export { function };
 export default function PrivacyPolicy() {
+
   return()
     <>
       <SEO
-        title="Privacy Policy""
-        description="Learn how Zion Tech Group handles your data and protects your privacy.""
+        title="Privacy Policy"
+        description="Learn how Zion Tech Group handles your data and protects your privacy."
         canonical="https://app.ziontechgroup.com/privacy"
         noindex={draft}
       />

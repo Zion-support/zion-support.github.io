@@ -1,16 +1,23 @@
-import React, { useState } from 'react';'
-import { Link } from 'react-router-dom';'
+import React, { useState } from 'react';
+<<<<<<< HEAD
+export default EnhancedServicesShowcase;
+import { enhancedServices2025 } from "../data / enhanced - services - 2025";
+import { motion } from 'framer - motion';
+
+=======
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { enhancedServices2025 } from "../data/enhanced-services-2025";
+>>>>>>> main
 const EnhancedServicesShowcase = () => {
-'
-    const [selectedCategory, setSelectedCategory] = useState('all');'
+
+    const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const categories = ['
-        { id: 'all', name: 'All Services', icon: '🌟' },'
-        { id: 'micro-saas', name: 'Micro SAAS', icon: '💻' },'
-        { id: 'it-services', name: 'IT Services', icon: '🖥️' },'
-        { id: 'ai-services', name: 'AI Services', icon: '🤖' },'
+        { id: 'all', name: 'All Services', icon: '🌟' },
+        { id: 'micro-saas', name: 'Micro SAAS', icon: '💻' },
+        { id: 'it-services', name: 'IT Services', icon: '🖥️' },
+        { id: 'ai-services', name: 'AI Services', icon: '🤖' },
         { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀' }
     ];
     const filteredServices = enhancedServices2025.filter(service => {
@@ -34,7 +41,7 @@ const EnhancedServicesShowcase = () => {
     const itemVariants = {
 
   hidden: { opacity: 0,
-  y: 20 
+  y: 20
 
 },
         visible: {
@@ -51,12 +58,12 @@ const EnhancedServicesShowcase = () => {
           <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ duration: 0.6 }}>
             Comprehensive"
@@ -67,20 +74,20 @@ const EnhancedServicesShowcase = () => {
           <motion.p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
 
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}>
-            Discover our extensive portfolio of innovative micro SAAS services, enterprise IT solutions, 
+            Discover our extensive portfolio of innovative micro SAAS services, enterprise IT solutions,
             cutting - edge AI services, and emerging technology solutions designed to transform your business.
           </motion.p>
 
@@ -88,17 +95,17 @@ const EnhancedServicesShowcase = () => {
           <motion.div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-2xl mx-auto" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
 
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 
 
@@ -126,17 +133,17 @@ const EnhancedServicesShowcase = () => {
           <motion.div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-12" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
 
   { duration: 0.6,
-  delay: 0.6 
+  delay: 0.6
 
 
 
@@ -168,7 +175,7 @@ const EnhancedServicesShowcase = () => {
                     {service.icon}
                   </div>"
                   <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>'"
-                  <p className="text-sm text-blue-400 font-medium">{service.category.replace('-', ' ').toUpperCase()}</p>
+                  <p className="text-sm text-blue-400 font-medium">{service.category.replace('-',).toUpperCase()}</p>
                 </div>
 
                 {/* Tagline */}"
@@ -230,7 +237,7 @@ const EnhancedServicesShowcase = () => {
           {filteredServices.length === 0 && (<motion.div className="text-center py-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>"
               <p className="text-gray-400 text-lg">No services found matching your criteria.</p>
               <button onClick={() => {
-'
+
                 setSelectedCategory('all');'"
                 setSearchTerm('')}} className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300">
                 View All Services
@@ -245,12 +252,12 @@ const EnhancedServicesShowcase = () => {
           <motion.h2 className="text-3xl md:text-4xl font-bold text-white mb-6" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ duration: 0.6 }}>
             Ready to Transform Your Business?
@@ -258,41 +265,47 @@ const EnhancedServicesShowcase = () => {
           <motion.p className="text-xl text-gray-300 mb-8" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
 
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 
 
 
 
 
-}}>'
+}}>
             Let's discuss how our innovative services can help drive your success and competitive advantage
           </motion.p>
+<<<<<<< HEAD
+
+          <motion.div className="flex flex - col sm:flex - row gap - 4 justify - center mb - 8" initial = {
+
+=======
           "
           <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" initial = {
 
+>>>>>>> main
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
 
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 
 
@@ -311,17 +324,17 @@ const EnhancedServicesShowcase = () => {
           <motion.div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition = {
 
   { duration: 0.6,
-  delay: 0.6 
+  delay: 0.6
 
 
 
@@ -353,7 +366,7 @@ const EnhancedServicesShowcase = () => {
           <motion.div className="mt-8 text-sm text-gray-400" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition = {
 
   { duration: 0.6,
-  delay: 0.8 
+  delay: 0.8
 
 }}>
             <p>Email: kleber@ziontechgroup.com</p>

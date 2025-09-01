@@ -1,10 +1,16 @@
-import React from 'react';'
-import { Button } from '../ui/button';'
+import React from 'react';
+import { Button } from '../ui/button';
 import { Link } from 'react-router-dom';
 export const ErrorPage = ({
 
-  statusCode = 404,'
-  title = 'Page Not Found','
+<<<<<<< HEAD
+export default ErrorPage;
+import { Button } from '../ui / button';
+=======
+>>>>>>> main
+
+  statusCode = 404,
+  title = 'Page Not Found',
   message = 'The page you are looking for does not exist.'}) => {
 
   return()

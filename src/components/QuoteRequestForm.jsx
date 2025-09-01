@@ -1,21 +1,33 @@
 import React, { useState } from 'react';
 import {
 
+<<<<<<< HEAD
+import {
+
+import {
+
+import { Button } from './ui / Button';
+import { Checkbox } from './ui / checkbox';
+import { Input } from './ui / input';
+import { Textarea } from './ui / textarea';
+=======
+>>>>>>> main
+
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from './ui/card';'
-import { Button } from './ui/Button';'
-import { Input } from './ui/input';'
+  CardHeader,
+  CardTitle} from './ui/card';
+import { Button } from './ui/Button';
+import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import {
 
   Select,
   SelectContent,
   SelectItem,
-  SelectTrigger,'
-  SelectValue} from './ui/select';'
+  SelectTrigger,
+  SelectValue} from './ui/select';
 import { Checkbox } from './ui/checkbox';
 import {
 
@@ -23,22 +35,23 @@ import {
   Phone,
   Building,
   Send,
-  CheckCircle,'
+  CheckCircle,
   AlertCircle} from 'lucide-react';
 
 export const QuoteRequestForm = () => {
+
   const [formData, setFormData] = useState({
-'
-    firstName: '','
-    lastName: '','
-    email: '','
-    phone: '','
-    company: '','
-    serviceType: '','
-    projectDescription: '','
-    timeline: '','
-    budget: '','
-    urgency: 'medium','
+
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    company: '',
+    serviceType: '',
+    projectDescription: '',
+    timeline: '',
+    budget: '',
+    urgency: 'medium',
     contactMethod: 'email',
     agreeToTerms: false,
     agreeToMarketing: false});
@@ -48,38 +61,38 @@ export const QuoteRequestForm = () => {
   const [errors, setErrors] = useState ({}) ;
 
   const serviceTypes = ['
-    { value: 'ai-services', label: 'AI & Machine Learning Services' },'
-    { value: 'it-solutions', label: 'IT Infrastructure & Solutions' },'
-    { value: 'talent-hiring', label: 'Talent Acquisition & Staffing' },'
-    { value: 'equipment', label: 'Equipment & Hardware' },'
-    { value: 'consulting', label: 'IT Consulting & Strategy' },'
-    { value: 'custom-development', label: 'Custom Software Development' },'
+    { value: 'ai-services', label: 'AI & Machine Learning Services' },
+    { value: 'it-solutions', label: 'IT Infrastructure & Solutions' },
+    { value: 'talent-hiring', label: 'Talent Acquisition & Staffing' },
+    { value: 'equipment', label: 'Equipment & Hardware' },
+    { value: 'consulting', label: 'IT Consulting & Strategy' },
+    { value: 'custom-development', label: 'Custom Software Development' },
     { value: 'other', label: 'Other Services' },
   ];
 
   const timelineOptions = ['
-    { value: 'asap', label: 'ASAP (Within 1 week)' },'
-    { value: '1-2-weeks', label: '1-2 weeks' },'
-    { value: '1-month', label: '1 month' },'
-    { value: '2-3-months', label: '2-3 months' },'
-    { value: '3-6-months', label: '3-6 months' },'
+    { value: 'asap', label: 'ASAP (Within 1 week)},
+    { value: '1-2-weeks', label: '1-2 weeks' },
+    { value: '1-month', label: '1 month' },
+    { value: '2-3-months', label: '2-3 months' },
+    { value: '3-6-months', label: '3-6 months' },
     { value: '6-months-plus', label: '6+ months' },
   ];
 
   const budgetRanges = ['
-    { value: 'under-5k', label: 'Under $5,000' },'
-    { value: '5k-10k', label: '$5,000 - $10,000' },'
-    { value: '10k-25k', label: '$10,000 - $25,000' },'
-    { value: '25k-50k', label: '$25,000 - $50,000' },'
-    { value: '50k-100k', label: '$50,000 - $100,000' },'
-    { value: '100k-plus', label: '$100,000+' },'
+    { value: 'under-5k', label: 'Under $5,000' },
+    { value: '5k-10k', label: '$5,000 - $10,000' },
+    { value: '10k-25k', label: '$10,000 - $25,000' },
+    { value: '25k-50k', label: '$25,000 - $50,000' },
+    { value: '50k-100k', label: '$50,000 - $100,000' },
+    { value: '100k-plus', label: '$100,000+' },
     { value: 'to-be-discussed', label: 'To be discussed' },
   ];
 
   const urgencyLevels = ['
-    { value: 'low', label: 'Low - Planning phase' },'
-    { value: 'medium', label: 'Medium - Ready to start soon' },'
-    { value: 'high', label: 'High - Need to start immediately' },'
+    { value: 'low', label: 'Low - Planning phase' },
+    { value: 'medium', label: 'Medium - Ready to start soon' },
+    { value: 'high', label: 'High - Need to start immediately' },
     { value: 'critical', label: 'Critical - Emergency situation' },
   ];
 
@@ -95,25 +108,26 @@ export const QuoteRequestForm = () => {
 
       setErrors(prev => ({
 
-        ...prev,'
+        ...prev,
         [field]: ''}));
     }
   };
 
   const validateForm = () => {
+
     const newErrors = {};
 
-    if (!formData.firstName.trim())'
-      newErrors.firstName = 'First name is required';'
-    if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';'
+    if (!formData.firstName.trim())
+      newErrors.firstName = 'First name is required';
+    if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
     if (!formData.email.trim()) newErrors.email = 'Email is required';
-    if (!formData.company.trim())'
+    if (!formData.company.trim())
       newErrors.company = 'Company name is required';
-    if (!formData.serviceType)'
+    if (!formData.serviceType)
       newErrors.serviceType = 'Service type is required';
-    if (!formData.projectDescription.trim())'
+    if (!formData.projectDescription.trim())
       newErrors.projectDescription = 'Project description is required';
-    if (!formData.agreeToTerms)'
+    if (!formData.agreeToTerms)
       newErrors.agreeToTerms = 'You must agree to the terms and conditions';
 
     setErrors (newErrors) ;
@@ -132,29 +146,30 @@ export const QuoteRequestForm = () => {
     setIsSubmitting (true) ;
 
     try {
+
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
 
       setIsSubmitted(true);
       // Reset form
       setFormData({
-'
-        firstName: '','
-        lastName: '','
-        email: '','
-        phone: '','
-        company: '','
-        serviceType: '','
-        projectDescription: '','
-        timeline: '','
-        budget: '','
-        urgency: 'medium','
+
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        company: '',
+        serviceType: '',
+        projectDescription: '',
+        timeline: '',
+        budget: '',
+        urgency: 'medium',
         contactMethod: 'email',
         agreeToTerms: false,
         agreeToMarketing: false});
     } catch (error) {
-'
-      // console.error('Error submitting form:', error);
+
+      // // // console.error('Error submitting form:', error);
     } finally {
 
       setIsSubmitting(false);
@@ -185,7 +200,7 @@ export const QuoteRequestForm = () => {
     <Card className="max-w-4xl mx-auto">"
       <CardHeader className="text-center">"
         <CardTitle className="text-3xl font-bold">Request a Quote</CardTitle>
-        <CardDescription>'
+        <CardDescription>
           Tell us about your project and we'll provide you with a customized
           quote
         </CardDescription>
@@ -199,7 +214,7 @@ export const QuoteRequestForm = () => {
                 First Name *
               </label>
               <Input
-                value={formData.firstName}'
+                value={formData.firstName}
                 onChange={e => handleChange('firstName', e.target.value)}"
                 placeholder="John"'
                 className={errors.firstName ? 'border-red-500' : ''}
@@ -214,7 +229,7 @@ export const QuoteRequestForm = () => {
                 Last Name *
               </label>
               <Input
-                value={formData.lastName}'
+                value={formData.lastName}
                 onChange={e => handleChange('lastName', e.target.value)}"
                 placeholder="Doe"'
                 className={errors.lastName ? 'border-red-500' : ''}
@@ -233,7 +248,7 @@ export const QuoteRequestForm = () => {
               </label>
               <Input"
                 type="email"
-                value={formData.email}'
+                value={formData.email}
                 onChange={e => handleChange('email', e.target.value)}"
                 placeholder="john@company.com"'
                 className={errors.email ? 'border-red-500' : ''}
@@ -248,7 +263,7 @@ export const QuoteRequestForm = () => {
                 Phone
               </label>
               <Input
-                value={formData.phone}'
+                value={formData.phone}
                 onChange={e => handleChange('phone', e.target.value)}"
                 placeholder="+1 (555) 123-4567"
               />
@@ -261,7 +276,7 @@ export const QuoteRequestForm = () => {
               Company Name *
             </label>
             <Input
-              value={formData.company}'
+              value={formData.company}
               onChange={e => handleChange('company', e.target.value)}"
               placeholder="Your Company Inc."'
               className={errors.company ? 'border-red-500' : ''}
@@ -278,7 +293,7 @@ export const QuoteRequestForm = () => {
                 Service Type *
               </label>
               <Select
-                value={formData.serviceType}'
+                value={formData.serviceType}
                 onValueChange={value => handleChange('serviceType', value)}
               >
                 <SelectTrigger'
@@ -305,7 +320,7 @@ export const QuoteRequestForm = () => {
                 Timeline
               </label>
               <Select
-                value={formData.timeline}'
+                value={formData.timeline}
                 onValueChange={value => handleChange('timeline', value)}
               >
                 <SelectTrigger>"
@@ -327,7 +342,7 @@ export const QuoteRequestForm = () => {
                 Budget Range
               </label>
               <Select
-                value={formData.budget}'
+                value={formData.budget}
                 onValueChange={value => handleChange('budget', value)}
               >
                 <SelectTrigger>"
@@ -347,7 +362,7 @@ export const QuoteRequestForm = () => {
                 Urgency Level
               </label>
               <Select
-                value={formData.urgency}'
+                value={formData.urgency}
                 onValueChange={value => handleChange('urgency', value)}
               >
                 <SelectTrigger>
@@ -369,10 +384,10 @@ export const QuoteRequestForm = () => {
               Project Description *
             </label>
             <Textarea
-              value={formData.projectDescription}'
+              value={formData.projectDescription}
               onChange={e => handleChange('projectDescription', e.target.value)}"
               placeholder="Please describe your project requirements, goals, and any specific needs..."
-              rows={6}'
+              rows={6}
               className={errors.projectDescription ? 'border-red-500' : ''}
             />
             {errors.projectDescription && ("
@@ -389,7 +404,7 @@ export const QuoteRequestForm = () => {
                 Preferred Contact Method
               </label>
               <Select
-                value={formData.contactMethod}'
+                value={formData.contactMethod}
                 onValueChange={value => handleChange('contactMethod', value)}
               >
                 <SelectTrigger>
@@ -410,11 +425,11 @@ export const QuoteRequestForm = () => {
               <Checkbox"
                 id="terms"
                 checked={formData.agreeToTerms}
-                onCheckedChange={checked =>'
+                onCheckedChange={checked =>
                   handleChange('agreeToTerms', checked)
                 }
               />"
-              <label htmlFor="terms" className="text-sm text-gray-700">'
+              <label htmlFor="terms" className="text-sm text-gray-700">
                 I agree to the{' '}"
                 <a href="/terms" className="text-blue-600 hover:underline">
                   Terms and Conditions'
@@ -430,7 +445,7 @@ export const QuoteRequestForm = () => {
               <Checkbox"
                 id="marketing"
                 checked={formData.agreeToMarketing}
-                onCheckedChange={checked =>'
+                onCheckedChange={checked =>
                   handleChange('agreeToMarketing', checked)
                 }
               />"

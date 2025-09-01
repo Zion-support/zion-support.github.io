@@ -1,5 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from '@heroicons/react/24/outline';
 class EnhancedErrorBoundary extends Component {
 
@@ -13,7 +13,7 @@ class EnhancedErrorBoundary extends Component {
             errorInfo: null,
             errorId: null,
   showStackTrace: false
-        
+
 
 }}
     static getDerivedStateFromError(error) {
@@ -28,7 +28,7 @@ class EnhancedErrorBoundary extends Component {
 
         this.setState({ errorInfo });
         // Log error to console'
-        // // // // // // // // console.error('Error caught by boundary:', error, errorInfo);
+        // // // // // // // // // // console.error('Error caught by boundary:', error, errorInfo);
         // Call custom error handler if provided
         if (this.props.onError) {
 
@@ -36,6 +36,7 @@ class EnhancedErrorBoundary extends Component {
         // Send error to error reporting service (if available)
         this.reportError(error, errorInfo)}
     static generateErrorId() {
+
         return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
     reportError(error, errorInfo) {
 
@@ -50,7 +51,7 @@ class EnhancedErrorBoundary extends Component {
                 name: error.name,
                 message: error.message,
   stack: error.stack
-            
+
 
 },
             errorInfo: {
@@ -67,21 +68,22 @@ class EnhancedErrorBoundary extends Component {
         };
         // Log to console for development'
         if (process.env.NODE_ENV === 'development') {
-'
-            console.group('Error Report');'
-            // // // // // // // // console.log('Error ID:', errorReport.id);'
-            // // // // // // // // console.log('Error Details:', errorReport);
+
+            console.group('Error Report');
+            // // // // // // // // // // console.log('Error ID:', errorReport.id);
+            // // // // // // // // // // console.log('Error Details:', errorReport);
             console.groupEnd();
 
         // In production, you would send this to your error reporting service
         // Example: Sentry.captureException(error, { extra: errorReport });
-'
-            // console.log('Error ID:', errorReport.id);'
-            // console.log('Error Details:', errorReport);
+
+            // // // console.log('Error ID:', errorReport.id);
+            // // // console.log('Error Details:', errorReport);
             console.groupEnd()}
         // In production, you would send this to your error reporting service
         // Example: Sentry.captureException(error, { extra: errorReport })}
     handleRetry = () => {
+
         this.setState({
 
             hasError: false,
@@ -91,14 +93,16 @@ class EnhancedErrorBoundary extends Component {
             showStackTrace: false
         })};
     handleGoHome = () => {
-'
+
         window.location.href = '/'};
     handleReportIssue = () => {
+
         const errorInfo = this.state.errorInfo;
         if (error && errorInfo) {
+
 `
-            const issueUrl = `https://github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`;'
-            window.open(issueUrl, '_blank')}
+            const issueUrl = `https://github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`;
+            window.open(issueUrl,_blank')}
     };
                 return this.props.fallback}
             // Default error UI
@@ -106,13 +110,18 @@ class EnhancedErrorBoundary extends Component {
           <motion.div initial = {
 
   { opacity: 0,
-  scale: 0.9 
+  scale: 0.9
 
 }} animate = {
 
   { opacity: 1,
+<<<<<<< HEAD
+  scale: 1
+
+=======
   scale: 1 
 "
+>>>>>>> main
 }} className="max-w-2xl w-full bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden">
             {/* Header */}"
             <div className="bg-gradient-to-r from-red-500 to-pink-500 p-6 text-white">"
@@ -123,15 +132,15 @@ class EnhancedErrorBoundary extends Component {
                   <p className="text-red-100">We've encountered an unexpected error</p>
 
     // Add global error handler'
-    window.addEventListener('error', handleError);'
+    window.addEventListener('error', handleError);
     window.addEventListener('unhandledrejection', (event) => {
-'
+
       handleError(event.reason, { componentStack: 'Promise rejection' });
     });
 
     return () => {
-'
-      window.removeEventListener('error', handleError);'
+
+      window.removeEventListener('error', handleError);
       window.removeEventListener('unhandledrejection', handleError);
     };
   }, []);
@@ -144,23 +153,13 @@ class EnhancedErrorBoundary extends Component {
           initial = {
 
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }}"
           className="max-w-md mx-auto text-center p-8 bg-white rounded-xl shadow-lg"
@@ -170,12 +169,21 @@ class EnhancedErrorBoundary extends Component {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
             </svg>
           </div>
+<<<<<<< HEAD
+
+          <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h1>
+          <p className="text-gray-600 mb-6">
+            We're sorry, but something unexpected happened. Please try refreshing the page.
+          </p>
+
+=======
           "
           <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h1>"
-          <p className="text-gray-600 mb-6">'
+          <p className="text-gray-600 mb-6">
             We're sorry, but something unexpected happened. Please try refreshing the page.
           </p>
           "
+>>>>>>> main
           <div className="space-y-3">
             <button
               onClick={() => window.location.reload()}"
@@ -183,7 +191,7 @@ class EnhancedErrorBoundary extends Component {
             >
               Refresh Page
             </button>
-            
+
             <button
               onClick={() => window.history.back()}"
               className="w-full bg-gray-200 text-gray-800 py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors"
@@ -191,9 +199,15 @@ class EnhancedErrorBoundary extends Component {
               Go Back
             </button>
           </div>
+<<<<<<< HEAD
+
+          {process.env.NODE_ENV === 'development' && error && (
+            <details className="mt-6 text-left">
+=======
           '
           {process.env.NODE_ENV === 'development' && error && ("
             <details className="mt-6 text-left">"
+>>>>>>> main
               <summary className="cursor-pointer text-sm text-gray-600 hover:text-gray-800">
                 Error Details (Development)
               </summary>"

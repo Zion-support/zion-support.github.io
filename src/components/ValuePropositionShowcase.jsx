@@ -1,6 +1,11 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
+
+<<<<<<< HEAD
+import { motion } from 'framer - motion';
+=======
+>>>>>>> main
 
   TrendingUp,
   Target,
@@ -26,6 +31,7 @@ const valueMetrics = [;
     color: "from-green-500 to-emerald-600"
   },
   {
+
 "
     icon: <Target className="w-8 h-8" />,"
     title: "Market Position","
@@ -34,6 +40,7 @@ const valueMetrics = [;
     color: "from-blue-500 to-cyan-600"
   },
   {
+
 "
     icon: <Zap className="w-8 h-8" />,"
     title: "Setup Time","
@@ -42,6 +49,7 @@ const valueMetrics = [;
     color: "from-yellow-500 to-orange-600"
   },
   {
+
 "
     icon: <Shield className="w-8 h-8" />,"
     title: "Security Rating","
@@ -53,6 +61,7 @@ const valueMetrics = [;
 ;
 const competitiveAdvantages = [
   {
+
 "
     title: "AI-Powered Intelligence","
     description: "Advanced machine learning algorithms that continuously improve performance and provide predictive insights","
@@ -60,6 +69,7 @@ const competitiveAdvantages = [
     color: "from-purple-500 to-pink-600"
   },
   {
+
 "
     title: "Cloud-Native Architecture","
     description: "Built for scale with automatic scaling, high availability, and global distribution","
@@ -67,6 +77,7 @@ const competitiveAdvantages = [
     color: "from-blue-500 to-cyan-600"
   },
   {
+
 "
     title: "Enterprise Integration","
     description: "Seamless integration with existing systems and workflows through comprehensive APIs","
@@ -74,6 +85,7 @@ const competitiveAdvantages = [
     color: "from-green-500 to-emerald-600"
   },
   {
+
 "
     title: "24/7 Expert Support","
     description: "Round-the-clock technical support from certified professionals and AI assistants","
@@ -84,6 +96,7 @@ const competitiveAdvantages = [
 ;
 const marketComparison = [
   {
+
 "
     category: "AI Business Intelligence","
     competitors["Tableau", "Power BI", "Looker"],;"
@@ -93,6 +106,7 @@ const marketComparison = [
     advantage: "AI-powered insights, natural language queries, predictive analytics"
   },
   {
+
 "
     category: "Customer Success Platform","
     competitors["Gainsight", "Totango", "ChurnZero"],;"
@@ -102,6 +116,7 @@ const marketComparison = [
     advantage: "AI-powered predictions, affordable pricing, easy setup"
   },
   {
+
 "
     category: "Zero-Trust Security","
     competitors["Palo Alto Networks", "CrowdStrike", "Zscaler"],;"
@@ -114,6 +129,7 @@ const marketComparison = [
 ;
 const successStories = [
   {
+
 "
     comp: "TechCorp Solutions","
     industry: "SaaS","
@@ -123,6 +139,7 @@ const successStories = [
     roi: "280% in 8 months"
   },
   {
+
 "
     comp: "Global Manufacturing Inc","
     industry: "Manufacturing","
@@ -132,6 +149,7 @@ const successStories = [
     roi: "320% in 12 months"
   },
   {
+
 "
     comp: "FinTech Innovations","
     industry: "Financial Services","
@@ -158,7 +176,7 @@ const successStories = [
   const itemVariants = {
 
   hidden: { y: 30,
-  opacity: 0 
+  opacity: 0
 
 },
     visible: {
@@ -175,7 +193,7 @@ const successStories = [
   const cardVariants = {
 
   hidden: { scale: 0.95,
-  opacity: 0 
+  opacity: 0
 
 },
     visible: {
@@ -198,13 +216,13 @@ const successStories = [
           initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ duration: 0.6 }}
@@ -277,6 +295,7 @@ const successStories = [
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20"
                 variants={cardVariants}
                 whileHover = {
+
 "
   { y: -5, boxShadow: "0 20px 40px rgba(0, 0, 0,"
   0.3)" ;
@@ -460,13 +479,13 @@ const successStories = [
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="mailto:kleber@ziontechgroup.com""
+                href="mailto:kleber@ziontechgroup.com"
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
 
                 Start Your Transformation
               </a>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="bg-zion-slate-dark text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover:bg-zion-slate hover:border-zion-cyan/50 transition-all duration-300"
 
                 Call: +1 302 464 0950

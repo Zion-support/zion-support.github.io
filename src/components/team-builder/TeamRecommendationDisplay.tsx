@@ -1,10 +1,4 @@
-import React from 'react';
-import { TeamRecommendation, ProjectBrief  } from '@/types';
-import { RoleCard  } from "./RoleCard";'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '@/components/ui/card';'
-import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';'
-import { CheckCircle, Info, TrendingUp, Users, Bullseye, Calendar, CreditCard, Briefcase  } from 'lucide-react'; // Target changed to Bullseye"
-import { BudgetStatusDisplay  } from "./BudgetStatusDisplay"; // New import
+<<<<<<< HEAD
 
 interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {
 
@@ -16,15 +10,18 @@ interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {
 
 }
 ;
-export const TeamRecommendationDisplay = (...args: unknown[]): unknown => {;
+export 
   if (!recommendation) return null;
 
   return ("
     <div className = "space-y-8 mt-6">"
       <Alert className="border-green-500 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300">"
-        <CheckCircle className="h-5 w-5 text-green-500" />"
+        <CheckCircle className="h-5 w-5 text-green-500"  />"
         <AlertTitle className="font-semibold">Team Recommendation Generated!</AlertTitle>
+        <AlertDescription>
+=======
         <AlertDescription>'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           Here's the AI-powered team structure based on your project brief. Review the roles and suggested talent.
         </AlertDescription>
       </Alert>
@@ -32,8 +29,7 @@ export const TeamRecommendationDisplay = (...args: unknown[]): unknown => {;
       <Card className="shadow-xl">
         <CardHeader>"
           <CardTitle className="text-2xl flex items-center">"
-            <Users className="h-7 w-7 mr-2.5 text-primary" />
-            Team Summary: {recommendation.recommendationSummary}
+            <Users className="h-7 w-7 mr-2.5 text-primary"  />            Team Summary: {recommendation.recommendationSummary}
           </CardTitle>
           <CardDescription>
             Below is a breakdown of the recommended roles and estimated costs.
@@ -41,36 +37,39 @@ export const TeamRecommendationDisplay = (...args: unknown[]): unknown => {;
         </CardHeader>"
         <CardContent className="space-y-4">"
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-4"> {/* Added mb-4 */}"
-            <InfoCard title="Project Goal" icon={<Bullseye className="h-5 w-5" />} value={projectBrief.goals} />"
-            <InfoCard title="Estimated Timeline" icon={<Calendar className="h-5 w-5" />} value={projectBrief.timeline} />"
-            <InfoCard title="Your Budget" icon={<CreditCard className="h-5 w-5" />} value={projectBrief.budget} />
+            <InfoCard title="Project Goal" icon={<Bullseye className="h-5 w-5"  />} value={projectBrief.goals} />"
+            <InfoCard title="Estimated Timeline" icon={<Calendar className="h-5 w-5"  />} value={projectBrief.timeline} />"
+            <InfoCard title="Your Budget" icon={<CreditCard className="h-5 w-5"  />} value={projectBrief.budget} />
             <InfoCard"
-              title="Est. Total Project Cost""
-              icon={<TrendingUp className="h-5 w-5" />}
+<<<<<<< HEAD
+              title="Est. Total Project Cost"
+              icon={<TrendingUp className="h-5 w-5"  />}
               value={`$${recommendation.totalProjectEstimate.min.toLocaleString()} - $${recommendation.totalProjectEstimate.max.toLocaleString()}`}
+=======
+              title="Est. Total Project Cost""
+              icon={<TrendingUp className="h-5 w-5"  />}              value={`$${recommendation.totalProjectEstimate.min.toLocaleString()} - $${recommendation.totalProjectEstimate.max.toLocaleString()}`}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
             />
           </div>
           {/* Budget status display will be added here */}
-          <BudgetStatusDisplay
-            projectBriefBudget={projectBrief.budget}
+          <BudgetStatusDisplay projectBriefBudget={projectBrief.budget}
             estimatedCost={recommendation.totalProjectEstimate}
-          />
+            />
         </CardContent>
       </Card>
 
       <div>"
         <h3 className="text-xl font-semibold mb-4 flex items-center">"
-          <Briefcase className="h-6 w-6 mr-2 text-primary" />
+          <Briefcase className="h-6 w-6 mr-2 text-primary"  />
           Recommended Roles
         </h3>
         {recommendation.roles.map(role: unknown, index: unknown (
-          <RoleCard key={index} role={role} onInviteTalent={onInviteTalent} />
+          <RoleCard key={index} role={role} onInviteTalent={onInviteTalent}  />
         ))}
       </div>
       {recommendation.roles.length === 0 && ("
         <Alert variant="default">"
-          <Info className="h-4 w-4" />
-          <AlertTitle>No Roles Recommended</AlertTitle>
+          <Info className="h-4 w-4"  />          <AlertTitle>No Roles Recommended</AlertTitle>
           <AlertDescription>
             The AI could not determine specific roles based on the provided brief. You might want to refine your project goals or scope.
           </AlertDescription>

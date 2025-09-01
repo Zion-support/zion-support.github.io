@@ -3,10 +3,10 @@ import { MemoryRouter } from 'react-router-dom';
 import { LoginForm } from '@/components/auth/login';
 import * as authService from '@/services/authService';
 import * as authHook from '@/hooks/useAuth';
-jest.spyOn(authHook, 'useAuth').mockReturnValue({ isLoading: false, login: jest.fn() } as );
+jest.spyOn(authHook,useAuth').mockReturnValue({ isLoading: false, login: jest.fn() } as );
 describe'LoginForm': unknown, (: unknown {
   it'shows server error on 401 response': unknown, async (: unknown {
-    jest.spyOn(authService, 'loginUser').mockResolvedValue({
+    jest.spyOn(authService,loginUser').mockResolvedValue({
       res: { status: 401 } as Response,
       data: { error: 'Invalid credentials' }
     });

@@ -1,8 +1,7 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Check, X, Star, Zap, Shield, Users, ArrowRight, Crown, Rocket, Building const plans = [
 import { motion } from 'framer - motion';
-
 
     {
 
@@ -29,6 +28,7 @@ import { motion } from 'framer - motion';
         cta: "Get Started"
     },
     {
+
 "
         name: "Professional",
         price: 299,"
@@ -54,6 +54,7 @@ import { motion } from 'framer - motion';
         cta: "Start Free Trial"
     },
     {
+
 "
         name: "Enterprise",
         price: 999,"
@@ -81,6 +82,7 @@ import { motion } from 'framer - motion';
 ];
 const addons = [
     {
+
 "
         name: "AI Model Training",
         price: 199,"
@@ -90,6 +92,7 @@ const addons = [
         features["Custom model training", "Performance optimization", "Model monitoring"]
     },
     {
+
 "
         name: "Premium Support",
         price: 99,"
@@ -99,6 +102,7 @@ const addons = [
         features["24/7 phone support", "Guaranteed 2-hour response", "Dedicated support team"]
     },
     {
+
 "
         name: "Advanced Analytics",
         price: 149,"
@@ -109,11 +113,11 @@ const addons = [
     }
 ];
 export function PricingSection() {
-'
+
     const [billingPeriod, setBillingPeriod] = useState('month');
     const [selectedPlan, setSelectedPlan] = useState(null);
     const getDiscountedPrice = (price) => {
-'
+
         return billingPeriod === 'year' ? Math.round(price * 10) : price};
     const containerVariants = {
 
@@ -130,7 +134,7 @@ export function PricingSection() {
     const itemVariants = {
 
   hidden: { y: 30,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -157,12 +161,12 @@ export function PricingSection() {
         <motion.div className="text-center mb-16" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -178,7 +182,7 @@ export function PricingSection() {
           </p>
 
           {/* Billing toggle */}"
-          <div className="inline-flex items-center bg-zion-blue-dark/40 rounded-xl p-1 border border-zion-blue-light/30">'
+          <div className="inline-flex items-center bg-zion-blue-dark/40 rounded-xl p-1 border border-zion-blue-light/30">
             <button onClick={() => setBillingPeriod('month')} className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${billingPeriod === 'month''
             ? 'bg-zion-cyan text-white shadow-lg''`
             : 'text-zion-slate-light hover:text-white'}`}>
@@ -198,9 +202,10 @@ export function PricingSection() {
         {/* Pricing Plans */}"
         <motion.div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {plans.map((plan, index) => (<motion.div key={plan.name} variants={itemVariants} whileHover={{ y: -8 }} transition = {
+
 "
   { type: "spring",
-  stiffness: 300 
+  stiffness: 300
 
 
 
@@ -266,17 +271,17 @@ export function PricingSection() {
         <motion.div className="text-center mb-16" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.6,
-  delay: 0.3 
+  delay: 0.3
 
 
 
@@ -294,9 +299,10 @@ export function PricingSection() {
 "
         <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {addons.map((addon, index) => (<motion.div key={addon.name} variants={itemVariants} whileHover={{ y: -4 }} transition = {
+
 "
   { type: "spring",
-  stiffness: 300 
+  stiffness: 300
 
 
 
@@ -339,17 +345,17 @@ export function PricingSection() {
         <motion.div className="text-center mt-20" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.6,
-  delay: 0.5 
+  delay: 0.5
 
 
 

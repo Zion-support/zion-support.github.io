@@ -1,57 +1,52 @@
-import React from 'react';'
-import { cn } from '../../lib/utils';
+import React from 'react';
 
-interface AlertProps {
-  // Add your props here
+interface AlertProps extends React.PropsWithChildren<{
 
+}> {
 
   children: React.ReactNode;
-  className?: string;
+  className?: string}
 
 }
 
 interface AlertTitleProps {
-  // Add your props here
-
 
   children: React.ReactNode;
   className?: string;
+=======
+  className?: string}
 
 }
 
 interface AlertDescriptionProps {
-  // Add your props here
-
 
   children: React.ReactNode;
   className?: string;
 }
-'
+
 export function Alert({ children, className = '' }: AlertProps) {
 
-  return ('
+  return (
     <div className={cn('relative w-full rounded-lg border p-4', className)}>
       {children}
     </div>
   );
 }
-'
+
 export function AlertTitle({ children, className = '' }: AlertTitleProps) {
 
-  return()
-    <h5'
-      className={cn('mb-1 font-medium leading-none tracking-tight', className)}
-    >
+  return (
+    <h5 className={cn('mb-1 font-medium leading-none tracking-tight', className)}>
       {children}
     </h5>
   );
 }
 
-export function AlertDescription({
+export function AlertDescription({ children, className = '' }: AlertDescriptionProps) {
 
-  children,'
-  className = ''}: AlertDescriptionProps) {
-'
-  return <div className={cn('text-sm', className)}>{children}</div>;
+  return (
+    <div className={cn('text-sm', className)}>
+      {children}
+    </div>
+  );
 }
-'

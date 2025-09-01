@@ -1,6 +1,6 @@
-import React from 'react';'
-import { cn } from '@/lib/utils';'
-import { Badge } from '@/components/ui/badge';'
+import React from 'react';
+import { cn } from '@/lib/utils';
+import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 export function ListingCard({
 
@@ -11,7 +11,7 @@ export function ListingCard({
   category,
   tags,
   author,
-  className,'
+  className,
   profileType = 'service'}) {
 
   // Generate a profile ID based on the listing data
@@ -40,7 +40,7 @@ export function ListingCard({
       <div className="flex flex-col p-4 flex-grow">"
         <div className="mb-2">
           <Badge"
-            variant="secondary""
+            variant="secondary"
             className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30"
           >
             {category}
@@ -56,7 +56,7 @@ export function ListingCard({
             {tags.map((tag, i) => (
               <Badge
                 key={i}"
-                variant="outline""
+                variant="outline"
                 className="border-zion-slate-dark text-zion-slate-light"
               >
                 {tag}

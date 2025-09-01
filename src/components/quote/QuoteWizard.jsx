@@ -1,11 +1,15 @@
-import { useState, useMemo, useEffect } from 'react';'
-import { useQuoteWizard } from '@/hooks/useQuoteWizard';'
-import { useDelayedError } from '@/hooks/useDelayedError';'
-import { Card } from '@/components/ui/card';'
-import { Button } from '@/components/ui/button';'
-import { Textarea } from '@/components/ui/textarea';'
-import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';'
-import Skeleton from '@/components/ui/skeleton';'
+<<<<<<< HEAD
+import React, { useState } from 'react';
+=======
+>>>>>>> main
+import { useState, useMemo, useEffect } from 'react';
+import { useQuoteWizard } from '@/hooks/useQuoteWizard';
+import { useDelayedError } from '@/hooks/useDelayedError';
+import { Card } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
+import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
+import Skeleton from '@/components/ui/skeleton';
 import { useToast } from '@/hooks/use-toast';
 const WIZARD_STEPS = [1, 2, 3];
 function StepIndicator({ step }) {
@@ -14,7 +18,7 @@ function StepIndicator({ step }) {
   return()
     <div className="space-y-1">
       <div"
-        data-testid="step-indicator""
+        data-testid="step-indicator"
         className="text-sm text-muted-foreground"
       >
         {step}/{WIZARD_STEPS.length}
@@ -31,24 +35,26 @@ function StepIndicator({ step }) {
 export function QuoteWizard({ category }) {
 
   const [step, setStep] = useState(1);
-  const [selectedItemId, setSelectedItemId] = useState(null);'
-  const [message, setMessage] = useState('');'
+  const [selectedItemId, setSelectedItemId] = useState(null);
+  const [message, setMessage] = useState('');
   const [selectionError, setSelectionError] = useState('');
   const { data, error, mutate, isLoading } = useQuoteWizard(category);
   const delayedError = useDelayedError(error);
   const { toast } = useToast();
   useEffect(() => {
+
     if (delayedError) {
 
       toast({
-'
-        title: 'Unable to load services','
+
+        title: 'Unable to load services',
         variant: 'destructive'});
     }
   }, [delayedError, toast]);
   // Use isLoading from SWR for a more direct loading state
   const loading = isLoading;
   const selectedItem = useMemo(() => {
+
     if (!data || !selectedItemId) return null;
     return data.find(item => item.id === selectedItemId);
   }, [data, selectedItemId]);
@@ -58,11 +64,12 @@ export function QuoteWizard({ category }) {
     setStep(2);
   };
   const handleContinue = () => {
+
     if (!selectedItemId) {
 
       setSelectionError()`
         `Please choose a ${
-'
+
           category === 'services''
             ? 'service''
             : category === 'talent''
@@ -71,24 +78,25 @@ export function QuoteWizard({ category }) {
         } to continue.`
       );
       return;
-    }'
+    }
     setSelectionError('');
     setStep(2);
   };
   const handleSubmit = async () => {
-    if (!selectedItemId) return;'
+
+    if (!selectedItemId) return;
     let endpoint = '/api/quotes';
     const payload = { user_message: message };
     switch (category) {
-'
+
       case 'services':'
         endpoint = '/api/services/quotes';
         payload.service_id = selectedItemId;
-        break;'
+        break;
       case 'talent':'
         endpoint = '/api/talent/quotes';
         payload.talent_id = selectedItemId;
-        break;'
+        break;
       case 'equipment':'
         endpoint = '/api/equipment/quotes';
         payload.item_id = selectedItemId;
@@ -98,8 +106,8 @@ export function QuoteWizard({ category }) {
         payload.category = category;
     }
     await fetch(endpoint, {
-'
-      method: 'POST','
+
+      method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)});
     setStep(3);
@@ -111,7 +119,7 @@ export function QuoteWizard({ category }) {
         <StepIndicator step={step} />
         {loading && !delayedError && (
           <div"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4""
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
             data-testid="loading-indicator"
           >
             {Array.from({ length: 6 }).map((_, i) => ("
@@ -155,7 +163,7 @@ export function QuoteWizard({ category }) {
                 onClick={() => setSelectedItemId(item.id)}
                 tabIndex={0}
                 onKeyDown={e => {
-'
+
                   if (e.key === 'Enter' || e.key === ' ') {
 
                     e.preventDefault();
@@ -172,7 +180,7 @@ export function QuoteWizard({ category }) {
                 )}
                 {/* item.slug might not be directly displayable but useful for links if needed later */}
                 <Button"
-                  size="sm""
+                  size="sm"
                   variant="outline"`
                   data-testid={`select-item-${item.id}`}
                   onClick={e => {
@@ -181,8 +189,8 @@ export function QuoteWizard({ category }) {
                     handleSelect(item.id);
                   }}"
                   className="w-full mt-2"
-                >'
-                  Select this{' '}'
+                >
+                  Select this{' '}
                   {category === 'services''
                     ? 'Service''
                     : category === 'talent''
@@ -196,7 +204,7 @@ export function QuoteWizard({ category }) {
 
         {selectionError && (
           <p"
-            className="text-red-500 text-sm mt-2""
+            className="text-red-500 text-sm mt-2"
             data-testid="selection-error"
           >
             {selectionError}
@@ -219,10 +227,10 @@ export function QuoteWizard({ category }) {
         <StepIndicator step={step} />
         {selectedItem && (
           <div"
-            data-testid="selected-item-name""
+            data-testid="selected-item-name"
             className="text-lg font-semibold text-zion-slate-dark"
-          >'
-            Selected{' '}'
+          >
+            Selected{' '}
             {category === 'services''
               ? 'Service''
               : category === 'talent''
@@ -262,15 +270,16 @@ export function QuoteWizard({ category }) {
         <div className="text-2xl font-semibold text-green-600">
           Quote Submitted Successfully!
         </div>"
-        <p className="text-muted-foreground">'
-          Thank you for your request regarding{' '}'
+        <p className="text-muted-foreground">
+          Thank you for your request regarding{' '}
           {selectedItem?.name || 'the selected item'}. We will get back to you
           shortly.
         </p>
         <Button
           onClick={() => {
+
             setStep(1);
-            setSelectedItemId(null);'
+            setSelectedItemId(null);
             setMessage('');
           }}
         >

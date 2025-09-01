@@ -1,8 +1,14 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 export function AdvancedAnalytics() {
+
   const [analyticsData, setAnalyticsData] = useState({
 
+<<<<<<< HEAD
+  const [analyticsData, setAnalyticsData] = useState ({
+
+=======
+>>>>>>> main
     visitors: 0,
     conversions: 0,
     revenue: 0,
@@ -10,12 +16,14 @@ export function AdvancedAnalytics() {
     avgSessionDuration: 0,
     topPages: [],
     trafficSources: [],
-    deviceTypes: []});'
+    deviceTypes: []});
   const [timeRange, setTimeRange] = useState('7d');
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
+
     // Simulate API call
     const fetchData = async () => {
+
       setIsLoading(true);
       await new Promise(resolve => setTimeout(resolve, 1500));
       setAnalyticsData({
@@ -26,21 +34,21 @@ export function AdvancedAnalytics() {
         bounceRate: Math.random() * 30 + 20,
         avgSessionDuration: Math.floor(Math.random() * 300) + 120,
         topPages: ['
-          { page: '/', views: Math.floor(Math.random() * 5000) + 2000 },'
-          { page: '/services', views: Math.floor(Math.random() * 3000) + 1500 },'
-          { page: '/contact', views: Math.floor(Math.random() * 2000) + 1000 },'
-          { page: '/about', views: Math.floor(Math.random() * 1500) + 800 },'
+          { page: '/', views: Math.floor(Math.random() * 5000) + 2000 },
+          { page: '/services', views: Math.floor(Math.random() * 3000) + 1500 },
+          { page: '/contact', views: Math.floor(Math.random() * 2000) + 1000 },
+          { page: '/about', views: Math.floor(Math.random() * 1500) + 800 },
           { page: '/pricing', views: Math.floor(Math.random() * 1000) + 500 },
         ],
         trafficSources: ['
-          { source: 'Organic Search', percentage: 45 },'
-          { source: 'Direct', percentage: 25 },'
-          { source: 'Social Media', percentage: 20 },'
+          { source: 'Organic Search', percentage: 45 },
+          { source: 'Direct', percentage: 25 },
+          { source: 'Social Media', percentage: 20 },
           { source: 'Referral', percentage: 10 },
         ],
         deviceTypes: ['
-          { device: 'Desktop', percentage: 60 },'
-          { device: 'Mobile', percentage: 35 },'
+          { device: 'Desktop', percentage: 60 },
+          { device: 'Mobile', percentage: 35 },
           { device: 'Tablet', percentage: 5 },
         ]});
       setIsLoading(false);
@@ -48,16 +56,16 @@ export function AdvancedAnalytics() {
     fetchData();
   }, [timeRange]);
   const formatNumber = num => {
-'
-    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';'
+
+    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
     if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
     return num.toString();
   };
   const formatCurrency = num => {
-'
+
     return new Intl.NumberFormat('en-US', {
-'
-      style: 'currency','
+
+      style: 'currency',
       currency: 'USD'}).format(num);
   };
   if (isLoading) {
@@ -80,8 +88,8 @@ export function AdvancedAnalytics() {
         </p>
 
         {/* Time Range Selector */}"
-        <div className="flex justify-center mt-4 space-x-2">'
-          {['1d', '7d', '30d', '90d'].map(range => (
+        <div className="flex justify-center mt-4 space-x-2">
+          {['1d',7d',30d',90d'].map(range => (
             <button
               key={range}
               onClick={() => setTimeRange(range)}

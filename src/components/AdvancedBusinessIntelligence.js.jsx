@@ -12,55 +12,56 @@ import {
   X,
   Maximize2,
   Minimize2,
-  Calendar,'
+  Calendar,
   Activity} from 'lucide-react';
 const mockModels = [
   {
-'
-    id: 'model-1','
+
+    id: 'model-1',
     name: 'Customer Lifetime Value Predictor',
-    accuracy: 94.2,'
-    lastTrained: '2024-01-10T00:00:00.000Z','
+    accuracy: 94.2,
+    lastTrained: '2024-01-10T00:00:00.000Z',
     status: 'active',
-    predictions: 15420,'
+    predictions: 15420,
     category: 'Customer Analytics'},
   {
-'
-    id: 'model-2','
+
+    id: 'model-2',
     name: 'Revenue Forecasting Model',
-    accuracy: 89.7,'
-    lastTrained: '2024-01-08T00:00:00.000Z','
+    accuracy: 89.7,
+    lastTrained: '2024-01-08T00:00:00.000Z',
     status: 'active',
-    predictions: 2847500,'
+    predictions: 2847500,
     category: 'Financial Analytics'},
   {
-'
-    id: 'model-3','
+
+    id: 'model-3',
     name: 'Churn Prediction Model',
-    accuracy: 91.5,'
-    lastTrained: '2024-01-12T00:00:00.000Z','
+    accuracy: 91.5,
+    lastTrained: '2024-01-12T00:00:00.000Z',
     status: 'training',
-    predictions: 15420,'
+    predictions: 15420,
     category: 'Customer Analytics'},
 ];
 export function AdvancedBusinessIntelligence() {
+
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);'
-  const [activeTab, setActiveTab] = useState('overview');'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [activeTab, setActiveTab] = useState('overview');
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [timeRange, setTimeRange] = useState('30d');
   const [autoRefresh, setAutoRefresh] = useState(true);
   const [showPredictions, setShowPredictions] = useState(true);
   const [data, setData] = useState(mockMetrics);
   const [insights, setInsights] = useState(mockInsights);
   const [models, setModels] = useState(mockModels);
-  const [isRefreshing, setIsRefreshing] = useState(false);'
-  const categories = ['all', 'Financial', 'Customer', 'Operations', 'Growth'];
+  const [isRefreshing, setIsRefreshing] = useState(false);
+  const categories = ['all',Financial',Customer',Operations',Growth'];
   const timeRanges = ['
-    { value: '7d', label: '7 Days' },'
-    { value: '30d', label: '30 Days' },'
-    { value: '90d', label: '90 Days' },'
+    { value: '7d', label: '7 Days' },
+    { value: '30d', label: '30 Days' },
+    { value: '90d', label: '90 Days' },
     { value: '1y', label: '1 Year' },
   ];
   const filteredMetrics ='
@@ -68,12 +69,14 @@ export function AdvancedBusinessIntelligence() {
       ? data
       : data.filter(metric => metric.category === selectedCategory);
   const refreshData = async () => {
+
     setIsRefreshing(true);
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1500));
     setIsRefreshing(false);
   };
   useEffect(() => {
+
     if (autoRefresh) {
 
       const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
@@ -83,9 +86,9 @@ export function AdvancedBusinessIntelligence() {
   const getTrendIcon = trend => {
 
     switch (trend) {
-'
+
       case 'up':
-        return <TrendingUp className="w-4 h-4 text-green-500" />;'
+        return <TrendingUp className="w-4 h-4 text-green-500" />;
       case 'down':"
         return <TrendingUp className="w-4 h-4 text-red-500 rotate-180" />;
       default:"
@@ -95,9 +98,9 @@ export function AdvancedBusinessIntelligence() {
   const getPriorityColor = priority => {
 
     switch (priority) {
-'
+
       case 'high':'
-        return 'border-red-500 bg-red-50 dark:bg-red-900/20';'
+        return 'border-red-500 bg-red-50 dark:bg-red-900/20';
       case 'medium':'
         return 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20';
       default:'
@@ -107,13 +110,13 @@ export function AdvancedBusinessIntelligence() {
   const getInsightIcon = type => {
 
     switch (type) {
-'
+
       case 'prediction':"
-        return <Brain className="w-5 h-5 text-blue-500" />;'
+        return <Brain className="w-5 h-5 text-blue-500" />;
       case 'anomaly':"
-        return <AlertTriangle className="w-5 h-5 text-red-500" />;'
+        return <AlertTriangle className="w-5 h-5 text-red-500" />;
       case 'opportunity':"
-        return <Target className="w-5 h-5 text-green-500" />;'
+        return <Target className="w-5 h-5 text-green-500" />;
       case 'risk':"
         return <AlertTriangle className="w-5 h-5 text-orange-500" />;
       default:"
@@ -121,20 +124,20 @@ export function AdvancedBusinessIntelligence() {
     }
   };
   const formatValue = (value, unit) => {
-'
+
     if (unit === 'USD') {
-'
+
       return new Intl.NumberFormat('en-US', {
-'
-        style: 'currency','
+
+        style: 'currency',
         currency: 'USD',
         minimumFractionDigits: 0,
         maximumFractionDigits: 0}).format(value);
-    }'
+    }
     if (unit === '%') {
 
       return `${value.toFixed(1)}%`;
-    }'
+    }
     return new Intl.NumberFormat('en-US').format(value);
   };
   if (!isOpen) {
@@ -142,7 +145,7 @@ export function AdvancedBusinessIntelligence() {
     return()
       <button
         onClick={() => setIsOpen(true)}"
-        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40""
+        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40"
         title="Open Business Intelligence Dashboard"
       >"
         <Brain className="w-6 h-6" />
@@ -191,7 +194,7 @@ export function AdvancedBusinessIntelligence() {
             onClick={() => setAutoRefresh(!autoRefresh)}'`
             className={`p-2 rounded-lg transition-colors ${autoRefresh ? 'bg-white/20' : 'hover:bg-white/10'}`}
             title={
-'
+
               autoRefresh ? 'Auto-refresh enabled' : 'Auto-refresh disabled'
             }
           >
@@ -234,7 +237,7 @@ export function AdvancedBusinessIntelligence() {
               className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate"
             >
               {categories.map(category => (
-                <option key={category} value={category}>'
+                <option key={category} value={category}>
                   {category === 'all' ? 'All Categories' : category}
                 </option>
               ))}
@@ -282,9 +285,9 @@ export function AdvancedBusinessIntelligence() {
       {/* Tabs */}"
       <div className="flex border-b border-zion-slate-light">
         {['
-          { id: 'overview', label: 'Overview', icon: BarChart3 },'
-          { id: 'insights', label: 'AI Insights', icon: Brain },'
-          { id: 'models', label: 'ML Models', icon: Zap },'
+          { id: 'overview', label: 'Overview', icon: BarChart3 },
+          { id: 'insights', label: 'AI Insights', icon: Brain },
+          { id: 'models', label: 'ML Models', icon: Zap },
           { id: 'analytics', label: 'Analytics', icon: TrendingUp },
         ].map(tab => {
 
@@ -308,7 +311,7 @@ export function AdvancedBusinessIntelligence() {
       </div>
 
       {/* Content */}"
-      <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">'
+      <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">
         {activeTab === 'overview' && ("
           <div className="space-y-6">
             {/* Key Metrics Grid */}"
@@ -330,14 +333,14 @@ export function AdvancedBusinessIntelligence() {
                   <div className="flex items-center justify-between text-sm">
                     <span`
                       className={`font-medium ${
-'
+
                         metric.trend === 'up''
                           ? 'text-green-600''
                           : metric.trend === 'down''
                             ? 'text-red-600''
                             : 'text-gray-600'`
                       }`}
-                    >'
+                    >
                       {metric.trend === 'up' ? '+' : ''}
                       {metric.change}%
                     </span>"
@@ -347,7 +350,7 @@ export function AdvancedBusinessIntelligence() {
                   </div>
                   {showPredictions && ("
                     <div className="mt-3 pt-3 border-t border-zion-slate-light/30">"
-                      <div className="text-xs text-zion-slate-light">'
+                      <div className="text-xs text-zion-slate-light">
                         AI Prediction:{' '}
                         {formatValue()
                           metric.value * (1 + metric.change / 100),
@@ -369,20 +372,20 @@ export function AdvancedBusinessIntelligence() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 {[
                   {
-'
+
                     label: 'Generate Report',
                     icon: Download,
                     action: () => {}},
                   {
-'
+
                     label: 'Schedule Review',
                     icon: Calendar,
                     action: () => {}},
                   {
-'
+
                     label: 'Set Alerts',
                     icon: AlertTriangle,
-                    action: () => {}},'
+                    action: () => {}},
                   { label: 'Export Data', icon: Download, action: () => {} },
                 ].map((item, index) => {
 
@@ -402,7 +405,7 @@ export function AdvancedBusinessIntelligence() {
             </div>
           </div>
         )}
-'
+
         {activeTab === 'insights' && ("
           <div className="space-y-4">
             {insights.map(insight => (
@@ -419,7 +422,7 @@ export function AdvancedBusinessIntelligence() {
                       </h3>
                       <span`
                         className={`px-2 py-1 rounded-full text-xs font-medium ${
-'
+
                           insight.impact === 'high''
                             ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300''
                             : insight.impact === 'medium''
@@ -459,7 +462,7 @@ export function AdvancedBusinessIntelligence() {
             ))}
           </div>
         )}
-'
+
         {activeTab === 'models' && ("
           <div className="space-y-4">
             {models.map(model => (
@@ -473,7 +476,7 @@ export function AdvancedBusinessIntelligence() {
                   </h3>
                   <span`
                     className={`px-3 py-1 rounded-full text-sm font-medium ${
-'
+
                       model.status === 'active''
                         ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300''
                         : model.status === 'training''
@@ -505,7 +508,7 @@ export function AdvancedBusinessIntelligence() {
                   </div>
                   <div>"
                     <span className="text-zion-slate-light">Predictions:</span>"
-                    <div className="font-semibold text-zion-slate">'
+                    <div className="font-semibold text-zion-slate">
                       {new Intl.NumberFormat('en-US').format(model.predictions)}
                     </div>
                   </div>
@@ -514,7 +517,7 @@ export function AdvancedBusinessIntelligence() {
             ))}
           </div>
         )}
-'
+
         {activeTab === 'analytics' && ("
           <div className="space-y-6">"
             <div className="text-center text-zion-slate-light">"

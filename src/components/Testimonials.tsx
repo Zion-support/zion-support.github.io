@@ -1,29 +1,34 @@
-import React from 'react.ts';'
-import { motion } from 'framer-motion.ts';'
-import { Star, Users } from 'lucide-react.ts';
-
-interface Testimonial {
-  quote: string;
-  author: string;
-  role: string;
-  company: string;
-  rating: number;
-  avatar: string;
-}
-
-interface TestimonialsProps extends React.PropsWithChildren<{}> {
-
-  testimonials: Testimonial[];
-}
-
 export function Testimonials(...args: any[]): any {
 
+<<<<<<< HEAD
+  interface Testimonial {
+
+    quote: string;
+    author: string;
+    role: string;
+    company: string;
+    rating: number;
+    avatar: string;
+  }
+
+  interface TestimonialsProps extends React.PropsWithChildren<{}> {
+
+    testimonials: Testimonial[];
+  }
+
+  return (<section className="py - 20 bg - gray - 800">
+      <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">
+        <div className="text - center mb - 16">
+          <motion.h2
+            className="text - 4xl font - bold text - white mb - 4"
+=======
   return()
     <section className="py-20 bg-gray-800">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
         <div className="text-center mb-16">
           <motion.h2"
             className="text-4xl font-bold text-white mb-4"
+>>>>>>> main
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -58,8 +63,7 @@ export function Testimonials(...args: any[]): any {
                     animate={{ scale: 1 }}
                     transition={{ duration: 0.3, delay: i * 0.1 }}
                   >"
-                    <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                  </motion.div>
+                    <Star className="w-5 h-5 text-yellow-400 fill-current"  />                  </motion.div>
                 ))}
               </div>
 
@@ -78,8 +82,7 @@ export function Testimonials(...args: any[]): any {
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
                 >"
-                  <Users className="w-6 h-6 text-white" />
-                </motion.div>
+                  <Users className="w-6 h-6 text-white"  />                </motion.div>
                 <div>"
                   <div className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
                     {testimonial.author}
@@ -95,8 +98,6 @@ export function Testimonials(...args: any[]): any {
             </motion.div>) ) }
         </div>
       </div>
-    </section>) ;
-}
-
+    </section>) }
 export default Testimonials;
 '"

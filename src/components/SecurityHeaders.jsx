@@ -1,5 +1,13 @@
 import React from 'react';
+<<<<<<< HEAD
+export function SecurityHeadersCompact ({ className }) {
+
+import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeaders ({ className }) {
+
+=======
 import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeaders({ className }) {
+
+>>>>>>> main
 
     const securityFeatures = [
         {
@@ -41,7 +49,7 @@ import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeader
         { name: "GDPR", status: "Compliant", year: "2024", icon: CheckCircle },"
         { name: "CCPA", status: "Compliant", year: "2024", icon: CheckCircle },"
         { name: "HIPAA", status: "Ready", year: "2024", icon: AlertTriangle }
-    ];'
+    ];
     return (<section className={`py-16 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark ${className || ''}`}>"
       <div className="container mx-auto px-4">
         {/* Header */}"
@@ -131,6 +139,7 @@ import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeader
     </section>) }
 // Compact version for smaller spaces
 export function SecurityHeadersCompact({ className }) {
+
 '`
     return (<div className={`flex flex-wrap justify-center gap-6 ${className || ''}`}>"
       <div className="flex items-center gap-2 text-zion-cyan text-sm">"

@@ -4,15 +4,16 @@ import { Button } from "@/components/ui/button";"
 import { Link } from "react-router-dom";
 import { Zap, Shield, Cloud, Database, Code, ShoppingCart, BarChart3, Link as LinkIcon, Network, Monitor, Smartphone, CheckCircle, Star, Clock, Users, Globe // Service categories with detailed information
 
-
 const serviceCategories = [
     {
+
 "
         title: "AI Services","
         description: "Cutting-edge artificial intelligence solutions that transform business operations","
         icon: <Zap className="w-8 h-8 text-zion-cyan"/>,
         services = [
             {
+
 "
                 name: "AI Chatbot Builder Pro","
                 price: "$299","
@@ -20,6 +21,7 @@ const serviceCategories = [
                 benefits["24/7 customer support", "Reduced response time", "Scalable automation", "Cost-effective solution"]
             },
             {
+
 "
                 name: "AI Content Generator Suite","
                 price: "$199","
@@ -27,6 +29,7 @@ const serviceCategories = [
                 benefits["Faster content creation", "Improved SEO rankings", "Consistent brand voice", "Time savings"]
             },
             {
+
 "
                 name: "AI Image Generator Pro","
                 price: "$399","
@@ -39,12 +42,14 @@ const serviceCategories = [
         link: "/micro-saas-services"
     },
     {
+
 "
         title: "Business Solutions","
         description: "Data-driven insights and analytics to drive business growth and decision-making","
         icon: <BarChart3 className="w-8 h-8 text-zion-purple"/>,
         services = [
             {
+
 "
                 name: "Business Intelligence Dashboard","
                 price: "$599","
@@ -52,6 +57,7 @@ const serviceCategories = [
                 benefits["Data-driven decisions", "Performance insights", "Operational efficiency", "Competitive advantage"]
             },
             {
+
 "
                 name: "Predictive Analytics Engine","
                 price: "$799","
@@ -64,12 +70,14 @@ const serviceCategories = [
         link: "/micro-saas-services"
     },
     {
+
 "
         title: "Cybersecurity","
         description: "Comprehensive security solutions to protect your digital assets and ensure compliance","
         icon: <Shield className="w-8 h-8 text-zion-red"/>,
         services = [
             {
+
 "
                 name: "24/7 Cybersecurity Monitoring","
                 price: "$899","
@@ -77,6 +85,7 @@ const serviceCategories = [
                 benefits["Continuous protection", "Compliance assurance", "Incident response", "Peace of mind"]
             },
             {
+
 "
                 name: "Penetration Testing Service","
                 price: "$2,499","
@@ -89,12 +98,14 @@ const serviceCategories = [
         link: "/micro-saas-services"
     },
     {
+
 "
         title: "Cloud Services","
         description: "Scalable cloud solutions for modern business infrastructure and digital transformation","
         icon: <Cloud className="w-8 h-8 text-zion-blue"/>,
         services = [
             {
+
 "
                 name: "Cloud Migration Expert","
                 price: "$3,999","
@@ -102,6 +113,7 @@ const serviceCategories = [
                 benefits["Reduced costs", "Improved scalability", "Enhanced security", "Better performance"]
             },
             {
+
 "
                 name: "DevOps Automation Platform","
                 price: "$699","
@@ -114,12 +126,14 @@ const serviceCategories = [
         link: "/micro-saas-services"
     },
     {
+
 "
         title: "Data Services","
         description: "Enterprise-grade data solutions for analytics, warehousing, and business intelligence","
         icon: <Database className="w-8 h-8 text-zion-green"/>,
         services = [
             {
+
 "
                 name: "Data Warehouse Solution","
                 price: "$1,299","
@@ -127,6 +141,7 @@ const serviceCategories = [
                 benefits["Centralized data", "Better insights", "Improved reporting", "Data quality"]
             },
             {
+
 "
                 name: "Database Performance Optimization","
                 price: "$899","
@@ -139,12 +154,14 @@ const serviceCategories = [
         link: "/micro-saas-services"
     },
     {
+
 "
         title: "Development","
         description: "Custom software development solutions for web, mobile, and enterprise applications","
         icon: <Code className="w-8 h-8 text-zion-orange"/>,
         services = [
             {
+
 "
                 name: "Progressive Web App Development","
                 price: "$2,999","
@@ -152,6 +169,7 @@ const serviceCategories = [
                 benefits["Better user engagement", "Improved performance", "Cross-platform compatibility", "Enhanced SEO"]
             },
             {
+
 "
                 name: "Cross-Platform Mobile App","
                 price: "$4,999","
@@ -159,6 +177,7 @@ const serviceCategories = [
                 benefits["Cost-effective development", "Faster time to market", "Native performance", "Easy maintenance"]
             },
             {
+
 "
                 name: "Custom API Development","
                 price: "$1,999","
@@ -171,12 +190,14 @@ const serviceCategories = [
         link: "/micro-saas-services"
     },
     {
+
 "
         title: "E-commerce","
         description: "Complete e-commerce solutions for online businesses and digital marketplaces","
         icon: <ShoppingCart className="w-8 h-8 text-zion-pink"/>,
         services = [
             {
+
 "
                 name: "E-commerce Platform Development","
                 price: "$5,999","
@@ -189,12 +210,14 @@ const serviceCategories = [
         link: "/micro-saas-services"
     },
     {
+
 "
         title: "Marketing","
         description: "AI-powered marketing automation and analytics solutions for business growth","
         icon: <BarChart3 className="w-8 h-8 text-zion-yellow"/>,
         services = [
             {
+
 "
                 name: "Marketing Automation Platform","
                 price: "$799","
@@ -207,12 +230,14 @@ const serviceCategories = [
         link: "/micro-saas-services"
     },
     {
+
 "
         title: "Integration","
         description: "Seamless third-party integrations and API synchronization services","
         icon: <LinkIcon className="w-8 h-8 text-zion-indigo"/>,
         services = [
             {
+
 "
                 name: "Third-Party Integration Service","
                 price: "$1,499","
@@ -225,12 +250,14 @@ const serviceCategories = [
         link: "/micro-saas-services"
     },
     {
+
 "
         title: "Blockchain","
         description: "Next-generation blockchain and Web3 development solutions","
         icon: <Network className="w-8 h-8 text-zion-teal"/>,
         services = [
             {
+
 "
                 name: "Smart Contract Development","
                 price: "$3,999","
@@ -238,6 +265,7 @@ const serviceCategories = [
                 benefits["Decentralized solutions", "Transparent transactions", "Automated execution", "Innovation leadership"]
             },
             {
+
 "
                 name: "Web3 DApp Development","
                 price: "$5,999","
@@ -250,12 +278,14 @@ const serviceCategories = [
         link: "/micro-saas-services"
     },
     {
+
 "
         title: "IoT","
         description: "Internet of Things platform development and hardware prototyping services","
         icon: <Monitor className="w-8 h-8 text-zion-lime"/>,
         services = [
             {
+
 "
                 name: "IoT Platform Development","
                 price: "$4,999","
@@ -268,12 +298,14 @@ const serviceCategories = [
         link: "/micro-saas-services"
     },
     {
+
 "
         title: "Hardware","
         description: "Rapid prototyping and hardware development services for IoT and embedded systems","
         icon: <Smartphone className="w-8 h-8 text-zion-gray"/>,
         services = [
             {
+
 "
                 name: "Hardware Prototyping Service","
                 price: "$2,999","
@@ -289,24 +321,28 @@ const serviceCategories = [
 // Why choose Zion Tech Group;
 const whyChooseUs = [
     {
+
 "
         title: "Expert Team","
         description: "Certified professionals with 10+ years of experience","
         icon: <Users className="w-6 h-6 text-zion-cyan"/>
     },
     {
+
 "
         title: "Global Reach","
         description: "Serving clients worldwide with 24/7 support","
         icon: <Globe className="w-6 h-6 text-zion-purple"/>
     },
     {
+
 "
         title: "Fast Delivery","
         description: "Quick turnaround times without compromising quality","
         icon: <Clock className="w-6 h-6 text-zion-green"/>
     },
     {
+
 "
         title: "Proven Results","
         description: "Track record of successful project deliveries","
@@ -314,6 +350,7 @@ const whyChooseUs = [
 
 ];
 export function ServicesOverview() {
+
 "
     return (<div className="py-20 bg-zion-blue-dark">"
       <div className="container mx-auto px-4">

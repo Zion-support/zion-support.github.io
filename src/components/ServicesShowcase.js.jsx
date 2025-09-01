@@ -5,14 +5,14 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from '@/components/ui/card';'
-import { Badge } from '@/components/ui/badge';'
+  CardHeader,
+  CardTitle} from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import {
 
   MICRO_SAAS_SERVICES,
-  MICRO_SAAS_CATEGORIES,'
+  MICRO_SAAS_CATEGORIES,
   CONTACT_INFO} from '@/data/microSaasServices';
 import {
 
@@ -32,58 +32,47 @@ import {
   ArrowRight,
   Phone,
   Mail,
-  MapPin,'
-  Globe} from 'lucide-react';'
+  MapPin,
+  Globe} from 'lucide-react';
 import { Link } from 'react-router-dom';
 const categoryColors = {
-'
-  'AI Business Solutions': 'from-purple-500 to-indigo-600','
-  'IT Infrastructure': 'from-blue-500 to-cyan-600','
-  'Data Analytics': 'from-green-500 to-emerald-600','
-  'AI Development': 'from-orange-500 to-red-600','
-  FinTech: 'from-yellow-500 to-orange-600','
-  HealthTech: 'from-pink-500 to-rose-600','
-  'E-commerce': 'from-indigo-500 to-purple-600','
+
+  'AI Business Solutions': 'from-purple-500 to-indigo-600',IT Infrastructure': 'from-blue-500 to-cyan-600',Data Analytics': 'from-green-500 to-emerald-600',AI Development': 'from-orange-500 to-red-600',
+  FinTech: 'from-yellow-500 to-orange-600',
+  HealthTech: 'from-pink-500 to-rose-600',E-commerce': 'from-indigo-500 to-purple-600',
   EdTech: 'from-teal-500 to-green-600'};
 const features = ['
-  'AI-Powered Automation','
-  'Real-time Analytics','
-  'Multi-cloud Support','
-  'API-First Architecture','
-  'Scalable Infrastructure','
-  'Custom Integrations','
-  'White-label Solutions','
-  'Comprehensive Documentation','
-  '24/7 Technical Support','
-  '99.9% Uptime Guarantee','
-  'SOC 2 Type II Compliant','
-  '30-Day Money Back Guarantee',
+  'AI-Powered Automation',Real-time Analytics',Multi-cloud Support',API-First Architecture',Scalable Infrastructure',Custom Integrations',White-label Solutions',Comprehensive Documentation',24/7 Technical Support',99.9% Uptime Guarantee',SOC 2 Type II Compliant',30-Day Money Back Guarantee',
 ];
 const benefits = [
   {
 
-    icon: <Zap className="h-6 w-6" />,'
+    icon: <Zap className="h-6 w-6" />,
     title: 'Immediate Deployment',
     description:'
       'All services are ready for immediate deployment with no setup delays'},
   {
+
 "
-    icon: <Shield className="h-6 w-6" />,'
+    icon: <Shield className="h-6 w-6" />,
     title: 'Enterprise Security',
     description:'
       'Bank-level security with SOC 2 compliance and 24/7 monitoring'},
   {
+
 "
-    icon: <TrendingUp className="h-6 w-6" />,'
-    title: 'Proven ROI','
+    icon: <TrendingUp className="h-6 w-6" />,
+    title: 'Proven ROI',
     description: 'Average 300% ROI within 6 months of implementation'},
   {
+
 "
-    icon: <CheckCircle className="h-6 w-6" />,'
-    title: 'Quality Guaranteed','
+    icon: <CheckCircle className="h-6 w-6" />,
+    title: 'Quality Guaranteed',
     description: '30-day money-back guarantee with free migration support'},
 ];
 export function ServicesShowcase() {
+
   const featuredServices = MICRO_SAAS_SERVICES.filter()
     service => service.featured
   ).slice(0, 6);
@@ -103,7 +92,7 @@ export function ServicesShowcase() {
           <div className="flex flex-wrap justify-center gap-4">"
             <Link to="/micro-saas-services">
               <Button"
-                size="lg""
+                size="lg"
                 className="bg-white text-zion-blue hover:bg-gray-100"
               >"
                 <Brain className="h-5 w-5 mr-2" />
@@ -112,8 +101,8 @@ export function ServicesShowcase() {
             </Link>"
             <Link to="/contact">
               <Button"
-                size="lg""
-                variant="outline""
+                size="lg"
+                variant="outline"
                 className="border-white text-white hover:bg-white hover:text-zion-blue"
               >"
                 <Phone className="h-5 w-5 mr-2" />
@@ -197,7 +186,7 @@ export function ServicesShowcase() {
                       </span>
                     </div>
                     <Badge"
-                      variant="secondary""
+                      variant="secondary"
                       className="bg-zion-purple/20 text-zion-cyan"
                     >
                       AI Score: {service.aiScore}
@@ -211,7 +200,7 @@ export function ServicesShowcase() {
                       </span>
                     </div>
                     <Button"
-                      size="sm""
+                      size="sm"
                       className="bg-zion-purple hover:bg-zion-purple-dark"
                     >
                       Learn More
@@ -331,7 +320,7 @@ export function ServicesShowcase() {
                 </Link>"
                 <Link to="/contact">
                   <Button"
-                    variant="outline""
+                    variant="outline"
                     className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white"
                   >
                     Schedule Consultation
@@ -339,7 +328,7 @@ export function ServicesShowcase() {
                 </Link>"
                 <Link to="/micro-saas-services">
                   <Button"
-                    variant="outline""
+                    variant="outline"
                     className="w-full border-zion-blue text-zion-blue hover:bg-zion-blue hover:text-white"
                   >
                     View All Services
@@ -348,7 +337,7 @@ export function ServicesShowcase() {
               </div>
 "
               <div className="mt-8 p-6 bg-zion-blue/5 rounded-lg border border-zion-blue/20">"
-                <h5 className="font-medium text-zion-blue mb-2">'
+                <h5 className="font-medium text-zion-blue mb-2">
                   What's Included:
                 </h5>"
                 <ul className="text-sm text-gray-600 space-y-1">
@@ -366,7 +355,7 @@ export function ServicesShowcase() {
           <div className="text-center mt-12">"
             <Link to="/micro-saas-services">
               <Button"
-                size="lg""
+                size="lg"
                 className="bg-zion-purple hover:bg-zion-purple-dark"
               >
                 Explore All Micro SAAS Services"

@@ -4,30 +4,37 @@ import { Button } from "@/components/ui/button";"
 import { ChatAssistant } from "@/components/ChatAssistant";"
 import { apiClient } from "@/utils/apiClient";
 export function ChatAssistantTrigger() {
+
     const [isOpen, setIsOpen] = useState(false);
     // Handle sending messages to the AI chat assistant
     const handleSendMessage = async (message) => {
 
         try {
+
 "
             const response = await apiClient("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
+
 "
                 method: "POST",
                 headers: {
+
 "
                     "Content-Type": "application/json"},
                 body: JSON.stringify({
+
 "
                     messages[{ role: "user", content: message }];
                 }) ,;
             }) ;
             if (!response.ok) {
+
 "
                 throw new Error("Failed to get response from AI assistant")}
             return Promise.resolve()}
         catch (error) {
+
 "
-            // console.error("Error in AI chat:", error);
+            // // // console.error("Error in AI chat:", error);
             return Promise.resolve()}
     };
     return (<>"
@@ -39,9 +46,9 @@ export function ChatAssistantTrigger() {
 
   {
 
-                id: 'ai-assistant','
-                name: 'AI Assistant','
-                avatarUrl: 'https://placehold.co/64x64?text=AI','
+                id: 'ai-assistant',
+                name: 'AI Assistant',
+                avatarUrl: 'https://placehold.co/64x64?text=AI',
   role: 'Virtual Assistant'
 
 }} onSendMessage={handleSendMessage}/>)}

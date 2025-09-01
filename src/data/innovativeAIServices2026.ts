@@ -2,13 +2,14 @@
 // Cutting-edge AI solutions with market data and pricing
 
 export interface ServiceContact {
+
   phone: string;
   email: string;
   website: string;
-  address: string;
-}
+  address: string}
 
 export interface AIService2026 {
+
   id: number;
   name: string;
   category: string;
@@ -34,11 +35,11 @@ export interface AIService2026 {
   growthRate: string;
   useCases: string[];
   technologies: string[];
-  compliance: string[];
-}
+  compliance: string[]}
 
 // Zion Tech Group Contact Information
 const zionContact: ServiceContact = {
+
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
@@ -48,6 +49,7 @@ const zionContact: ServiceContact = {
 // Innovative AI Services 2026
 export const innovativeAIServices2026: AIService2026[] = [
   {
+
     id: 1,
     name: "AI-Powered Autonomous Business Operations Platform",
     category: "Business Process Automation",
@@ -104,6 +106,7 @@ export const innovativeAIServices2026: AIService2026[] = [
     compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry standards", "Data security"]
   },
   {
+
     id: 2,
     name: "AI-Powered Neural Interface & Brain-Computer Interface Platform",
     category: "Neural Technology",
@@ -160,6 +163,7 @@ export const innovativeAIServices2026: AIService2026[] = [
     compliance: ["FDA", "Medical device regulations", "Safety standards", "Ethical guidelines", "Research protocols"]
   },
   {
+
     id: 3,
     name: "AI-Powered Quantum Machine Learning Platform",
     category: "Quantum AI",
@@ -216,6 +220,7 @@ export const innovativeAIServices2026: AIService2026[] = [
     compliance: ["Research ethics", "Data security", "Intellectual property", "Export controls", "Safety protocols"]
   },
   {
+
     id: 4,
     name: "AI-Powered Synthetic Biology & Gene Editing Platform",
     category: "Biotechnology",
@@ -272,6 +277,7 @@ export const innovativeAIServices2026: AIService2026[] = [
     compliance: ["FDA", "EPA", "Biosafety", "Ethical guidelines", "Research protocols"]
   },
   {
+
     id: 5,
     name: "AI-Powered Space Technology & Satellite Operations Platform",
     category: "Space Technology",
@@ -328,6 +334,7 @@ export const innovativeAIServices2026: AIService2026[] = [
     compliance: ["ITAR", "EAR", "ISO 27001", "SOC 2", "Space regulations"]
   },
   {
+
     id: 6,
     name: "AI-Powered Climate Intelligence & Environmental Monitoring Platform",
     category: "Environmental Technology",
@@ -384,6 +391,7 @@ export const innovativeAIServices2026: AIService2026[] = [
     compliance: ["Environmental regulations", "Data accuracy", "Reporting standards", "Sustainability guidelines"]
   },
   {
+
     id: 7,
     name: "AI-Powered Autonomous Vehicle & Transportation Platform",
     category: "Autonomous Transportation",
@@ -440,6 +448,7 @@ export const innovativeAIServices2026: AIService2026[] = [
     compliance: ["Vehicle safety", "Traffic regulations", "Data privacy", "Safety standards", "Transportation laws"]
   },
   {
+
     id: 8,
     name: "AI-Powered Digital Twin & Metaverse Platform",
     category: "Digital Twin & Metaverse",
@@ -496,6 +505,7 @@ export const innovativeAIServices2026: AIService2026[] = [
     compliance: ["Data privacy", "Content standards", "Accessibility", "Safety guidelines", "Industry standards"]
   },
   {
+
     id: 9,
     name: "AI-Powered Blockchain & Web3 Intelligence Platform",
     category: "Blockchain & Web3",
@@ -552,6 +562,7 @@ export const innovativeAIServices2026: AIService2026[] = [
     compliance: ["Financial regulations", "AML/KYC", "Data privacy", "Blockchain standards", "Security protocols"]
   },
   {
+
     id: 10,
     name: "AI-Powered Cybersecurity & Threat Intelligence Platform",
     category: "Cybersecurity",

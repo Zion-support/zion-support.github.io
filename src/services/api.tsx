@@ -1,30 +1,30 @@
+<<<<<<< HEAD
 export const api = {
 export default api;
 import { API_BASE_URL } from '../config / constants';
 
-
+=======
+export 
+>>>>>>> main
 interface ApiResponse < T = any> {
   success: boolean;
   data?: T;
   error?: string;
   message?: string;
-  count?: number;
-}
+  count?: number}
 
 // Generic API error
 class ApiError extends Error {
   constructor (public status: number,
     message: string) {
     super (message) ;
-    this.name = 'ApiError';
-  }
+    this.name = 'ApiError'}
 }
 
 // Generic fetch wrapper with error handling
 async function apiRequest < T> (endpoint: string,
-  options: RequestInit = {}) : Promise < ApiResponse < T>> {
-  const url = `${API_BASE_URL}${endpoint}`;
-
+  options: RequestInit = {}: any): Promise < ApiResponse < T>> {
+  
   const config: RequestInit = {
     method: options.method || 'GET',
     headers: {
@@ -35,22 +35,17 @@ async function apiRequest < T> (endpoint: string,
   };
 
   try {
-    const response = await fetch (url, config) ;
-
+    
     if (!response.ok) {
       throw new ApiError (response.status,
-        `HTTP error ! status: ${response.status}`) ;
-    }
+        `HTTP error ! status: ${response.status}`) }
 
-    const data = await response.json () ;
-    return data;
-  } catch (error) {
+    
+    return data} catch (error) {
     if (error instanceof ApiError) {
-      throw error;
-    }
+      throw error}
     throw new ApiError (500,
-      `Network error: ${error instanceof Error ? error.message : 'Unknown error'}`) ;
-  }
+      `Network error: ${error instanceof Error ? error.message : 'Unknown error'}`) }
 }
 
   // Health check

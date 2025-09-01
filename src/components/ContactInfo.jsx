@@ -1,5 +1,30 @@
 import { Link } from "react - router - dom";
 import React from 'react';
+<<<<<<< HEAD
+import { Badge } from "../ui / badge";
+import { Button } from "../ui / button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui / card";
+import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star export function ContactInfo () {
+
+    return (<section className="py - 20 bg - zion - blue - dark">
+      <div className="container mx - auto px - 4">
+        <div className="text - center mb - 16">
+          <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">
+            Get In Touch
+          </h2>
+          <p className="text - zion - slate - light text - lg max - w-3xl mx - auto">
+            Ready to transform your business with cutting - edge technology? Contact our experts today for a free consultation.
+          </p>
+        </div>
+
+        <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">
+          {/* Contact Information */}
+          <div className="space - y-6">
+            <Card className="bg - zion - blue border - zion - blue - light">
+              <CardHeader>
+                <CardTitle className="text - white flex items - center gap - 2">
+                  <Phone className="h - 5 w - 5 text - zion - cyan"/>
+=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";"
 import { Button } from "../ui/button";"
 import { Badge } from "../ui/badge";"
@@ -10,6 +35,7 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
               <CardHeader>"
                 <CardTitle className="text-white flex items-center gap-2">"
                   <Phone className="h-5 w-5 text-zion-cyan"/>
+>>>>>>> main
                   Contact Details
                 </CardTitle>"
                 <CardDescription className="text-zion-slate-light">
@@ -68,7 +94,7 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                   <Clock className="h-5 w-5 text-zion-cyan"/>
                   Business Hours
                 </CardTitle>"
-                <CardDescription className="text-zion-slate-light">'
+                <CardDescription className="text-zion-slate-light">
                   We're available when you need us
                 </CardDescription>
               </CardHeader>

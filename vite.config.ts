@@ -1,14 +1,18 @@
+<<<<<<< HEAD
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 
-// https://vitejs.dev/config/;
-export { defineConfig };
+=======
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import compression from 'vite-plugin-compression'
+import { resolve } from 'path'
+
+// https://vitejs.dev/config/
+>>>>>>> cursor/add-new-services-and-advertise-them-971c
 export default defineConfig({
-  plugins: [
-    react(),
-    splitVendorChunkPlugin()
-  ],
+  plugins: [react()],
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
@@ -26,55 +30,55 @@ export default defineConfig({
       '@constants': resolve(__dirname, 'src/constants'),
     },
   },
+<<<<<<< HEAD
+});
+=======
   build: {
-    target: 'esnext',
-    minify: 'terser',
+    target: 'es2020',
+    minify: 'esbuild',
     sourcemap: false,
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: [
-          'console.log',
-          'console.info',
-          'console.debug',
-          'console.warn',
-        ],
-      },
-    },
     rollupOptions: {
-      input: {
-        main: './index.html',
-      },
       output: {
         manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'router-vendor': ['react-router-dom'],
-          'ui-vendor': ['framer-motion', 'lucide-react'],
-          'utils-vendor': ['date-fns', 'clsx', 'tailwind-merge'],
-          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
+          // Core React libraries
+          'react-core': ['react', 'react-dom'],
+          // Routing
+          'routing': ['react-router-dom'],
+          // UI and animations
+          'ui-animations': ['framer-motion', 'lucide-react'],
+          // Form handling
+          'forms': ['react-hook-form', '@hookform/resolvers', 'zod'],
+          // Utilities
+          'utils': ['clsx', 'tailwind-merge', 'class-variance-authority'],
+          // Charts and data visualization
+          'charts': ['recharts', 'd3-color', 'd3-format', 'd3-path', 'd3-time-format'],
+          // AI and ML related
+          'ai-ml': ['fuse.js', 'embla-carousel-react'],
+          // Enterprise features
+          'enterprise': ['@reduxjs/toolkit', 'react-redux', 'axios'],
         },
-        chunkFileNames: 'js/[name]-[hash].js',
-        entryFileNames: 'js/[name]-[hash].js',
-        assetFileNames: assetInfo => {
-          const info = assetInfo.name.split('.');
-          const ext = info[info.length - 1];
-          if (/png|jpe?g|svg|gif|tiff|bmp|ico|webp/i.test(ext)) {
-            return `images/[name]-[hash][extname]`;
+        chunkFileNames: (chunkInfo) => {
+          const facadeModuleId = chunkInfo.facadeModuleId
+            ? chunkInfo.facadeModuleId.split('/').pop()?.replace('.tsx', '').replace('.ts', '')
+            : 'chunk'
+          return `js/${facadeModuleId}-[hash].js`
+        },
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name?.split('.') || []
+          const ext = info[info.length - 1]
+          if (/\.(css)$/.test(assetInfo.name || '')) {
+            return `css/[name]-[hash].${ext}`
           }
-          if (/css/i.test(ext)) {
-            return `css/[name]-[hash][extname]`;
+          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) {
+            return `images/[name]-[hash].${ext}`
           }
-          if (/woff2?|ttf|eot/i.test(ext)) {
-            return `fonts/[name]-[hash][extname]`;
-          }
-          return `assets/[name]-[hash][extname]`;
+          return `assets/[name]-[hash].${ext}`
         },
       },
     },
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 800, // Reduced from 1000
+    reportCompressedSize: true,
   },
-
   optimizeDeps: {
     include: [
       'react',
@@ -84,7 +88,12 @@ export default defineConfig({
       'lucide-react',
       'clsx',
       'tailwind-merge',
+      'class-variance-authority',
+      'react-hook-form',
+      '@hookform/resolvers',
+      'zod'
     ],
+    exclude: ['@vite/client', '@vite/env'],
   },
   server: {
     port: 3000,
@@ -94,27 +103,25 @@ export default defineConfig({
     hmr: {
       overlay: false,
     },
-    proxy: {
-      '/api': {
-        target: 'http://localhost:5000',
-        changeOrigin: true,
-        secure: false,
-        rewrite: path => path.replace(/^\/api/, '/api'),
-      },
-    },
   },
   preview: {
     port: 4173,
     host: true,
-    open: true,
-  },
-  css: {
-    devSourcemap: true,
-    postcss: './postcss.config.js',
+    cors: true,
   },
 
   define: {
+    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
+    __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
     __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
     __BUILD_TIME__: JSON.stringify(new Date().toISOString()),
   },
-});
+  esbuild: {
+    drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
+    pure: process.env.NODE_ENV === 'production' ? ['console.log', 'console.info'] : [],
+  },
+  worker: {
+    format: 'es',
+  },
+})
+>>>>>>> cursor/add-new-services-and-advertise-them-971c

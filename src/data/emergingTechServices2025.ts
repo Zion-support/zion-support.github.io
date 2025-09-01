@@ -1,5 +1,5 @@
-import React from 'react';
 export interface EmergingTechService {
+
   id: string;
   title: string;
   description: string;
@@ -30,13 +30,10 @@ contactInfo: {
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
+    security: string[]};
   competitors?: string[];
-  marketSize?: string;
-}
-;
-export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
+  marketSize?: string}
+;export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
   // Quantum Computing Solutions
   {
 
@@ -88,12 +85,14 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     roi: "500-1000%","
     innovationLevel: "Revolutionary",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology: ["Qiskit", "Cirq", "PennyLane", "Python", "React", "PostgreSQL"],"
       integrations: ["IBM Quantum", "Google Quantum", "AWS Braket", "Azure Quantum", "D-Wave"],
@@ -107,6 +106,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
 
   // Edge AI Computing Platform
   {
+
 "
     id: "edge-ai-computing-platform","
     title: "Edge AI Computing Platform","
@@ -156,12 +156,14 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     roi: "300-600%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology: ["TensorFlow Lite", "ONNX Runtime", "React", "Node.js", "PostgreSQL", "Redis"],"
       integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "Kubernetes", "Docker"],
@@ -175,6 +177,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
 
   // Blockchain DeFi Platform
   {
+
 "
     id: "blockchain-defi-platform","
     title: "Blockchain DeFi Platform","
@@ -224,12 +227,14 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     roi: "400-800%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology: ["Ethereum", "Solidity", "React", "Node.js", "PostgreSQL", "Redis"],"
       integrations: ["MetaMask", "WalletConnect", "Uniswap", "Compound", "Aave"],
@@ -243,6 +248,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
 
   // AI-Powered Cybersecurity Mesh
   {
+
 "
     id: "ai-cybersecurity-mesh","
     title: "AI Cybersecurity Mesh Platform","
@@ -292,12 +298,14 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     roi: "400-700%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Elasticsearch"],"
       integrations: ["SIEM systems", "EDR solutions", "Firewalls", "Cloud platforms", "Identity providers"],
@@ -311,6 +319,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
 
   // Metaverse Development Platform
   {
+
 "
     id: "metaverse-development-platform","
     title: "Metaverse Development Platform","
@@ -360,12 +369,14 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     roi: "300-600%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology: ["Unity", "Unreal Engine", "React", "Node.js", "PostgreSQL", "Redis"],"
       integrations: ["Meta Quest", "HTC Vive", "Steam VR", "WebXR", "Blockchain networks"],
@@ -378,4 +389,4 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
   }
 ];
 
-export default EMERGING_TECH_SERVICES_2025;}}}}}}}}}}}"
+export default EMERGING_TECH_SERVICES_2025}}}}}}}}}}}"

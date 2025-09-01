@@ -1,19 +1,19 @@
-import React, { useState } from 'react.ts';'
-import { motion, AnimatePresence  } from 'framer-motion.ts';'
-import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown  } from 'lucide-react';'
-import { Link, useLocation  } from 'react-router-dom.ts';
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
       newExpanded.delete(section)} else {
 
       newExpanded.add(section)}
     setExpandedSections(newExpanded)};
 
+>>>>>>> main
       newExpanded.delete (section) } else {
+
       newExpanded.add (section) }
     setExpandedSections (newExpanded) };
 
-  const isActive = (path: string) => location.pathname === path;
-
+  
   const navigationSections = [
     {
 
@@ -25,9 +25,12 @@ import { Link, useLocation  } from 'react-router-dom.ts';
         { name: "Contact", href: "/contact", icon: MessageCircle },"
         { name: "Partners", href: "/partners", icon: Users },"
         { name: "Careers", href: "/careers", icon: Briefcase }
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ]
     },;
     {
+
 "
       title: "Services",
       icon: Zap,
@@ -39,6 +42,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
       ]
     },;
     {
+
 "
       title: "Solutions",
       icon: Target,
@@ -50,6 +54,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
       ]
     },;
     {
+
 "
       title: "Resources",
       icon: BookOpen,
@@ -58,14 +63,12 @@ import { Link, useLocation  } from 'react-router-dom.ts';
         { name: "API Reference", href: "/api", icon: FileText },;"
         { name: "Developer Portal", href: "/developer", icon: Server },;"
         { name: "Support Center", href: "/support", icon: HelpCircle };
-      ];
-    };
+      ]};
   ];
 
   const quickActions = [;"
     { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },;"
-    { name: "Book Demo", href: "/demo", icon: Users, variant: "secondary" },;"
-    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" };
+    { name: "Book Demo", href: "/demo", icon: Users, variant: "secondary" },;"    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" };
   ];
 
   return()
@@ -77,8 +80,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
         onClick={() => setIsOpen(!isOpen)}"
         className="lg:hidden p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
 "
-        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-      </motion.button>
+        {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}      </motion.button>
 
       {/* Mobile Sidebar Overlay */}
       <AnimatePresence>
@@ -96,12 +98,12 @@ import { Link, useLocation  } from 'react-router-dom.ts';
             {/* Mobile Sidebar */}
             <motion.div'
               initial={{ x: '-100%' }}
-              animate={{ x: 0 }}'
+              animate={{ x: 0 }}
               exit={{ x: '-100%' }}
               transition = {
 
-  { duration: 0.3,'
-  ease: 'easeOut' 
+  { duration: 0.3,
+  ease: 'easeOut'
 
 
 
@@ -129,8 +131,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
                     onClick={() => setIsOpen(false)}"
                     className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
 "
-                    <X className="w-5 h-5" />
-                  </button>
+                    <X className="w-5 h-5"  />                  </button>
                 </div>
 
                 {/* Quick Actions */}"
@@ -143,19 +144,19 @@ import { Link, useLocation  } from 'react-router-dom.ts';
                         initial = {
 
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
                         animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                         transition = {
 
   { duration: 0.3,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                       >
@@ -163,7 +164,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
                           to={action.href}
                           onClick={() => setIsOpen(false)}
                           className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 group ${
-'
+
                             action.variant === 'primary''
                               ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan/90 hover:to-zion-blue/90 shadow-lg shadow-zion-cyan/25''
                               : 'bg-zion-slate-dark/50 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 border border-zion-cyan/20 hover:border-zion-cyan/40'`
@@ -184,19 +185,19 @@ import { Link, useLocation  } from 'react-router-dom.ts';
                       initial = {
 
   { opacity: 0,
-  y: -20 
+  y: -20
 
 }}
                       animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                       transition = {
 
   { duration: 0.5,
-  delay: sectionIndex * 0.1 
+  delay: sectionIndex * 0.1
 
 }}
                     >
@@ -209,10 +210,9 @@ import { Link, useLocation  } from 'react-router-dom.ts';
                           <span className="font-medium">{section.title}</span>
                         </div>
                         {expandedSections.has(section.title) ? ("
-                          <ChevronDown className="w-4 h-4 transition-transform duration-300" />
+                          <ChevronDown className="w-4 h-4 transition-transform duration-300"  />
                         ) : ("
-                          <ChevronRight className="w-4 h-4 transition-transform duration-300" />
-                        )}
+                          <ChevronRight className="w-4 h-4 transition-transform duration-300"  />                        )}
                       </button>
 
                       <AnimatePresence>
@@ -220,19 +220,19 @@ import { Link, useLocation  } from 'react-router-dom.ts';
                             initial = {
 
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                             animate = {
 
-  { opacity: 1,'
-  height: 'auto' 
+  { opacity: 1,
+  height: 'auto'
 
 }}
                             exit = {
 
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                             transition={{ duration: 0.3 }}"
@@ -244,19 +244,19 @@ import { Link, useLocation  } from 'react-router-dom.ts';
                                 initial = {
 
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
                                 animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                                 transition = {
 
   { duration: 0.2,
-  delay: itemIndex * 0.05 
+  delay: itemIndex * 0.05
 
 }}
                               >
@@ -265,7 +265,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
                                   onClick={() => setIsOpen(false)}`
                                   className={`flex items-center space-x-3 p-2 rounded-lg transition-all duration-300 group ${
 
-                                    isActive(item.href)'
+                                    isActive(item.href)
                                       ? 'text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/30''
                                       : 'text-zion-slate-light hover:text-white hover:bg-zion-cyan/5'`
                                   }`}
@@ -300,6 +300,5 @@ import { Link, useLocation  } from 'react-router-dom.ts';
         )};
       </AnimatePresence>;
     </>
-  );
-};
+  )};
 '"`

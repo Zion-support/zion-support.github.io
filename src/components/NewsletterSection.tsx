@@ -1,15 +1,18 @@
-import React, { useState } from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-react';
+<<<<<<< HEAD
 
+<<<<<<< HEAD
       description: "Get exclusive access to tech trends and analysis";
     },;
+=======
+      description: "Get exclusive access to tech trends and analysis"},;
+>>>>>>> main
     {;
       icon: Zap,;"
       title: "Early Access",;"
-      description: "Be the first to know about beta programs and launches";
-    };
+      description: "Be the first to know about beta programs and launches"};
   ];
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   if (isSubscribed) {
 
@@ -20,24 +23,28 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
             initial = {
 
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }}
             animate = {
 
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }}
             transition={{ duration: 0.5 }}"
             className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-3xl p-12 border border-green-500/20"
 "
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full mb-6">"
-              <CheckCircle className="w-10 h-10 text-white" />
+              <CheckCircle className="w-10 h-10 text-white"  />
             </div>"
             <h2 className="text-3xl font-bold text-white mb-4">Welcome to the Zion Tech Group Community!</h2>"
-            <p className="text-gray-300 text-lg mb-6">'
+<<<<<<< HEAD
+            <p className="text-gray-300 text-lg mb-6">
               You're now subscribed to our newsletter. We'll keep you updated with the latest technology insights,
+=======
+            <p className="text-gray-300 text-lg mb-6">'              You're now subscribed to our newsletter. We'll keep you updated with the latest technology insights,
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               service announcements, and exclusive content.
             </p>
             <button
@@ -48,9 +55,7 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
             </button>;
           </motion.div>;
         </div>;
-      </section>;) ;
-  }
-
+      </section>;) }
   return ("
     <section className = "py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">"
       <div className="max-w-7xl mx-auto px-6">"
@@ -60,13 +65,13 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
             initial = {
 
   { opacity: 0,
-  x: -30 
+  x: -30
 
 }}
             whileInView = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
             transition={{ duration: 0.6 }}
@@ -86,19 +91,19 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
                   initial = {
 
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
                   whileInView = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                   transition = {
 
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 
 
@@ -119,8 +124,7 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
             </div>
 "
             <div className="flex items-center text-sm text-gray-400">"
-              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-              <span>No spam, unsubscribe at  time</span>
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2"  />              <span>No spam, unsubscribe at  time</span>
             </div>
           </motion.div>
 
@@ -129,29 +133,28 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
             initial = {
 
   { opacity: 0,
-  x: 30 
+  x: 30
 
 }}
             whileInView = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
             transition = {
 
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 }}
           >"
             <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-3xl p-8 border border-slate-500">"
               <div className="text-center mb-6">"
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4">"
-                  <Mail className="w-8 h-8 text-white" />
+                  <Mail className="w-8 h-8 text-white"  />
                 </div>"
-                <h3 className="text-2xl font-bold text-white mb-2">Subscribe to Our Newsletter</h3>"
-                <p className="text-gray-300">Get the latest updates delivered to your inbox</p>
+                <h3 className="text-2xl font-bold text-white mb-2">Subscribe to Our Newsletter</h3>"                <p className="text-gray-300">Get the latest updates delivered to your inbox</p>
               </div>
 "
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -160,11 +163,11 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
                     Email Address
                   </label>
                   <input"
-                    type="email""
+                    type="email"
                     id="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}"
-                    placeholder="Enter your email address""
+                    placeholder="Enter your email address"
                     className="w-full px-4 py-3 bg-slate-800 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300"
                     required
                   />
@@ -183,18 +186,17 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
                   ) : (
                     <>
                       Subscribe Now"
-                      <ArrowRight className="ml-2 w-5 h-5" />
-                    </>
+                      <ArrowRight className="ml-2 w-5 h-5"  />                    </>
                   )}
                 </button>
               </form>
 "
               <div className="mt-6 text-center">"
-                <p className="text-xs text-gray-400">'
+                <p className="text-xs text-gray-400">
                   By subscribing, you agree to our{' '}"
                   <a href="/privacy" className="text-cyan-400 hover:text-cyan-300 underline">
                     Privacy Policy'
-                  </a>{' '}'
+                  </a>{' '}
                   and{' '}"
                   <a href="/terms" className="text-cyan-400 hover:text-cyan-300 underline">
                     Terms of Service
@@ -205,7 +207,6 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
           </motion.div>;
         </div>;
       </div>;
-    </section>;) ;
-};
+    </section>;) };
 
-export default NewsletterSection;}}}'"
+export default NewsletterSection}}}'"

@@ -1,164 +1,135 @@
-import React, { useState } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState } from 'react';
+<<<<<<< HEAD
+export function TechSolutionsSection () {
+
+import { motion, AnimatePresence } from 'framer - motion';
+
+=======
+import { motion, AnimatePresence } from 'framer-motion';
 import { Brain, Cloud, Shield, Database, Globe, Smartphone, Cpu, Lock, TrendingUp, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
+>>>>>>> main
 const solutions = [
     {
-'
-        id: 'ai-ml','
-        title: 'AI & Machine Learning','
+
+        id: 'ai-ml',
+        title: 'AI & Machine Learning',
         description: 'Cutting-edge artificial intelligence and machine learning solutions',
-        icon: <Brain className="w-8 h-8"/>,'
-        color: 'from-zion-purple to-zion-purple-dark','
+        icon: <Brain className="w-8 h-8"/>,
+        color: 'from-zion-purple to-zion-purple-dark',
         bgColor: 'from-zion-purple/20 to-zion-purple-dark/20',
         features = ['
-            'Custom AI model development','
-            'Natural language processing','
-            'Computer vision solutions','
-            'Predictive analytics','
-            'Automated decision making'
+            'Custom AI model development',Natural language processing',Computer vision solutions',Predictive analytics',Automated decision making'
         ],
         benefits = ['
-            'Increase efficiency by 300%','
-            'Reduce operational costs by 40%','
-            'Improve accuracy by 95%'
-        ],'
-        useCases['Healthcare', 'Finance', 'Retail', 'Manufacturing'],
+            'Increase efficiency by 300%',Reduce operational costs by 40%',Improve accuracy by 95%'
+        ],
+        useCases['Healthcare',Finance',Retail',Manufacturing'],
         rating: 4.9,
-        projects: 150,'
+        projects: 150,
         category: 'Emerging Tech'
     },
     {
-'
-        id: 'cloud-infrastructure','
-        title: 'Cloud Infrastructure','
+
+        id: 'cloud-infrastructure',
+        title: 'Cloud Infrastructure',
         description: 'Scalable and secure cloud solutions for modern businesses',"
-        icon: <Cloud className="w-8 h-8"/>,'
-        color: 'from-zion-cyan to-zion-blue','
+        icon: <Cloud className="w-8 h-8"/>,
+        color: 'from-zion-cyan to-zion-blue',
         bgColor: 'from-zion-cyan/20 to-zion-blue/20',
         features = ['
-            'Multi-cloud architecture','
-            'Auto-scaling solutions','
-            'Disaster recovery','
-            'Performance optimization','
-            'Cost management'
+            'Multi-cloud architecture',Auto-scaling solutions',Disaster recovery',Performance optimization',Cost management'
         ],
         benefits = ['
-            'Reduce infrastructure costs by 60%','
-            'Improve uptime to 99.99%','
-            'Scale resources automatically'
-        ],'
-        useCases['E-commerce', 'SaaS', 'Enterprise', 'Startups'],
+            'Reduce infrastructure costs by 60%',Improve uptime to 99.99%',Scale resources automatically'
+        ],
+        useCases['E-commerce',SaaS',Enterprise',Startups'],
         rating: 4.8,
-        projects: 200,'
+        projects: 200,
         category: 'Infrastructure'
     },
     {
-'
-        id: 'cybersecurity','
-        title: 'Cybersecurity','
+
+        id: 'cybersecurity',
+        title: 'Cybersecurity',
         description: 'Comprehensive security solutions to protect your digital assets',"
-        icon: <Shield className="w-8 h-8"/>,'
-        color: 'from-zion-cyan-light to-zion-cyan','
+        icon: <Shield className="w-8 h-8"/>,
+        color: 'from-zion-cyan-light to-zion-cyan',
         bgColor: 'from-zion-cyan-light/20 to-zion-cyan/20',
         features = ['
-            'Threat detection & response','
-            'Vulnerability assessment','
-            'Identity & access management','
-            'Data encryption','
-            'Compliance management'
+            'Threat detection & response',Vulnerability assessment',Identity & access management',Data encryption',Compliance management'
         ],
         benefits = ['
-            'Prevent 99.9% of cyber attacks','
-            'Meet industry compliance standards','
-            'Protect customer data integrity'
-        ],'
-        useCases['Banking', 'Healthcare', 'Government', 'Education'],
+            'Prevent 99.9% of cyber attacks',Meet industry compliance standards',Protect customer data integrity'
+        ],
+        useCases['Banking',Healthcare',Government',Education'],
         rating: 4.9,
-        projects: 120,'
+        projects: 120,
         category: 'Security'
     },
     {
-'
-        id: 'data-analytics','
-        title: 'Data Analytics','
+
+        id: 'data-analytics',
+        title: 'Data Analytics',
         description: 'Transform raw data into actionable business insights',"
-        icon: <Database className="w-8 h-8"/>,'
-        color: 'from-zion-purple-light to-zion-purple','
+        icon: <Database className="w-8 h-8"/>,
+        color: 'from-zion-purple-light to-zion-purple',
         bgColor: 'from-zion-purple-light/20 to-zion-purple/20',
         features = ['
-            'Real-time data processing','
-            'Advanced reporting dashboards','
-            'Predictive modeling','
-            'Data visualization','
-            'Business intelligence'
+            'Real-time data processing',Advanced reporting dashboards',Predictive modeling',Data visualization',Business intelligence'
         ],
         benefits = ['
-            'Make data-driven decisions','
-            'Identify new business opportunities','
-            'Optimize operational processes'
-        ],'
-        useCases['Marketing', 'Operations', 'Sales', 'Research'],
+            'Make data-driven decisions',Identify new business opportunities',Optimize operational processes'
+        ],
+        useCases['Marketing',Operations',Sales',Research'],
         rating: 4.7,
-        projects: 180,'
+        projects: 180,
         category: 'Analytics'
     },
     {
-'
-        id: 'iot-solutions','
-        title: 'IoT Solutions','
+
+        id: 'iot-solutions',
+        title: 'IoT Solutions',
         description: 'Connected devices and smart systems for the modern world',"
-        icon: <Cpu className="w-8 h-8"/>,'
-        color: 'from-zion-cyan to-zion-purple','
+        icon: <Cpu className="w-8 h-8"/>,
+        color: 'from-zion-cyan to-zion-purple',
         bgColor: 'from-zion-cyan/20 to-zion-purple/20',
         features = ['
-            'Device connectivity management','
-            'Real-time monitoring','
-            'Data collection & analysis','
-            'Remote control systems','
-            'Predictive maintenance'
+            'Device connectivity management',Real-time monitoring',Data collection & analysis',Remote control systems',Predictive maintenance'
         ],
         benefits = ['
-            'Monitor assets in real-time','
-            'Reduce maintenance costs by 30%','
-            'Improve operational efficiency'
-        ],'
-        useCases['Manufacturing', 'Smart Cities', 'Agriculture', 'Healthcare'],
+            'Monitor assets in real-time',Reduce maintenance costs by 30%',Improve operational efficiency'
+        ],
+        useCases['Manufacturing',Smart Cities',Agriculture',Healthcare'],
         rating: 4.6,
-        projects: 90,'
+        projects: 90,
         category: 'Connected Devices'
     },
     {
-'
-        id: 'mobile-apps','
-        title: 'Mobile Applications','
+
+        id: 'mobile-apps',
+        title: 'Mobile Applications',
         description: 'Native and cross-platform mobile solutions for all devices',"
-        icon: <Smartphone className="w-8 h-8"/>,'
-        color: 'from-zion-purple to-zion-cyan','
+        icon: <Smartphone className="w-8 h-8"/>,
+        color: 'from-zion-purple to-zion-cyan',
         bgColor: 'from-zion-purple/20 to-zion-cyan/20',
         features = ['
-            'iOS & Android development','
-            'Cross-platform solutions','
-            'UI/UX design','
-            'Performance optimization','
-            'App store deployment'
+            'iOS & Android development',Cross-platform solutions',UI/UX design',Performance optimization',App store deployment'
         ],
         benefits = ['
-            'Reach customers on all devices','
-            'Improve user engagement','
-            'Increase brand visibility'
-        ],'
-        useCases['Retail', 'Entertainment', 'Education', 'Healthcare'],
+            'Reach customers on all devices',Improve user engagement',Increase brand visibility'
+        ],
+        useCases['Retail',Entertainment',Education',Healthcare'],
         rating: 4.8,
-        projects: 250,'
+        projects: 250,
         category: 'Mobile'
     }
 ];
 const industries = ['"
-    { name: 'Healthcare', icon: <Shield className="w-5 h-5"/>, projects: 80 },'"
-    { name: 'Finance', icon: <TrendingUp className="w-5 h-5"/>, projects: 120 },'"
-    { name: 'Retail', icon: <Globe className="w-5 h-5"/>, projects: 95 },'"
-    { name: 'Manufacturing', icon: <Cpu className="w-5 h-5"/>, projects: 75 },'"
-    { name: 'Education', icon: <Users className="w-5 h-5"/>, projects: 60 },'"
+    { name: 'Healthcare', icon: <Shield className="w-5 h-5"/>, projects: 80 },"
+    { name: 'Finance', icon: <TrendingUp className="w-5 h-5"/>, projects: 120 },"
+    { name: 'Retail', icon: <Globe className="w-5 h-5"/>, projects: 95 },"
+    { name: 'Manufacturing', icon: <Cpu className="w-5 h-5"/>, projects: 75 },"
+    { name: 'Education', icon: <Users className="w-5 h-5"/>, projects: 60 },"
     { name: 'Government', icon: <Lock className="w-5 h-5"/>, projects: 45 }
 ];
     const [selectedSolution, setSelectedSolution] = useState (null) ;
@@ -179,7 +150,7 @@ const industries = ['"
     const itemVariants = {
 
   hidden: { y: 30,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -196,7 +167,7 @@ const industries = ['"
     const cardVariants = {
 
   hidden: { scale: 0.95,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -223,19 +194,28 @@ const industries = ['"
         <motion.div className="text-center mb-20" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
+<<<<<<< HEAD
+}} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+          <h2 className="text - 4xl md:text - 5xl lg:text - 6xl font - bold text - white mb - 6">
+            Technology < span className="bg - gradient - to - r from - zion - cyan to - zion - purple bg - clip - text text - transparent">Solutions</span>
+          </h2>
+          <p className="text - zion - slate - light text - lg md:text - xl max - w-4xl mx - auto leading - relaxed mb - 8">
+            Discover our comprehensive suite of cutting - edge technology solutions designed to transform your business
+=======
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>"
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">"
             Technology <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Solutions</span>
           </h2>"
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
             Discover our comprehensive suite of cutting-edge technology solutions designed to transform your business 
+>>>>>>> main
             and drive innovation across all industries.
           </p>
 
@@ -244,20 +224,27 @@ const industries = ['"
             {industries.map((industry, index) => (<motion.div key={industry.name} initial = {
 
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }} whileInView = {
 
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.4,
+<<<<<<< HEAD
+  delay: index * 0.1
+
+}} className="text - center p - 3 rounded - xl bg - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 20">
+                <div className="text - zion - cyan mb - 2 flex justify - center">
+=======
   delay: index * 0.1 
 "
 }} className="text-center p-3 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">"
                 <div className="text-zion-cyan mb-2 flex justify-center">
+>>>>>>> main
                   {industry.icon}
                 </div>"
                 <div className="text-white font-semibold text-sm mb-1">{industry.name}</div>"
@@ -269,8 +256,24 @@ const industries = ['"
         {/* Solutions Grid */}"
         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {solutions.map((solution, index) => (<motion.div key={solution.id} variants={itemVariants} whileHover={{ y: -8 }} transition = {
+
 "
   { type: "spring",
+<<<<<<< HEAD
+  stiffness: 300
+
+}} className="relative" onHoverStart={ () => setHoveredSolution (solution.id) } onHoverEnd={ () => setHoveredSolution (null) }>
+              <div className="h - full p - 8 rounded - 2xl bg - gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 30 hover:border - zion - cyan / 50 transition - all duration - 300 hover:shadow - 2xl hover:shadow - zion - cyan / 20 group cursor - pointer" onClick={ () => setSelectedSolution (selectedSolution === solution.id ? null : solution.id) }>
+                {/* Header */}
+                <div className="text - center mb - 6">
+                  <div className={`inline - flex items - center justify - center w - 20 h - 20 rounded - 2xl bg - gradient - to - br ${solution.color} mb - 6 shadow - lg group - hover:shadow - xl transition - all duration - 300 group - hover:scale - 110`}>
+                    <div className="text - white">
+                      {solution.icon}
+                    </div>
+                  </div>
+
+                  <h3 className="text - 2xl font - bold text - white mb - 3 group - hover:text - zion - cyan transition - colors">
+=======
   stiffness: 300 
 "
 }} className="relative" onHoverStart={() => setHoveredSolution(solution.id)} onHoverEnd={() => setHoveredSolution(null)}>"
@@ -284,6 +287,7 @@ const industries = ['"
                   </div>
                   "
                   <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
+>>>>>>> main
                     {solution.title}
                   </h3>"
                   <p className="text-zion-slate-light leading-relaxed mb-4">
@@ -331,17 +335,18 @@ const industries = ['"
                   {selectedSolution === solution.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
 
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 }} animate = {
+
 "
   { opacity: 1, height: "auto",
-  y: 0 
+  y: 0
 
 }} exit = {
 
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 }} transition={{ duration: 0.3 }}>"
                       <h4 className="text-zion-cyan font-semibold text-sm mb-3">Key Benefits:</h4>"
@@ -349,12 +354,12 @@ const industries = ['"
                         {solution.benefits.map((benefit, idx) => (<motion.div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-xs" initial = {
 
   { opacity: 0,
-  x: -10 
+  x: -10
 
 }} animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }} transition={{ delay: idx * 0.1 }}>"
                             <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
@@ -367,12 +372,12 @@ const industries = ['"
                         {solution.useCases.map((useCase, idx) => (<motion.span key={idx} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30" initial = {
 
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }} animate = {
 
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} transition={{ delay: idx * 0.1 }}>
                             {useCase}
@@ -388,17 +393,17 @@ const industries = ['"
         <motion.div className="text-center" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.6,
-  delay: 0.5 
+  delay: 0.5
 
 }}>"
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">"

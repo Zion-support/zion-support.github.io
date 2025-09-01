@@ -7,7 +7,7 @@ import {
   Users,
   Globe,
   CheckCircle,
-  Star,'
+  Star,
   Zap} from 'lucide-react';
 export function TrustIndicators({
 
@@ -18,39 +18,39 @@ export function TrustIndicators({
   const indicators = [
     {
 
-      icon: Shield,'
-      title: 'Enterprise Security','
-      description: 'SOC 2 Type II certified with end-to-end encryption','
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'SOC 2 Type II certified with end-to-end encryption',
       color: 'text-zion-cyan'},
     {
 
-      icon: Lock,'
-      title: 'Data Protection','
-      description: 'GDPR & CCPA compliant with zero-knowledge architecture','
+      icon: Lock,
+      title: 'Data Protection',
+      description: 'GDPR & CCPA compliant with zero-knowledge architecture',
       color: 'text-zion-purple'},
     {
 
-      icon: Award,'
-      title: 'Industry Leader','
-      description: 'Recognized by Gartner & Forrester as market leader','
+      icon: Award,
+      title: 'Industry Leader',
+      description: 'Recognized by Gartner & Forrester as market leader',
       color: 'text-zion-cyan'},
     {
 
-      icon: Users,'
-      title: 'Verified Community','
-      description: '10,000+ verified professionals and companies','
+      icon: Users,
+      title: 'Verified Community',
+      description: '10,000+ verified professionals and companies',
       color: 'text-zion-purple'},
   ];
   const certifications = ['
-    { name: 'SOC 2 Type II', status: 'Certified', year: '2024' },'
-    { name: 'ISO 27001', status: 'Certified', year: '2024' },'
-    { name: 'GDPR', status: 'Compliant', year: '2024' },'
+    { name: 'SOC 2 Type II', status: 'Certified', year: '2024' },
+    { name: 'ISO 27001', status: 'Certified', year: '2024' },
+    { name: 'GDPR', status: 'Compliant', year: '2024' },
     { name: 'CCPA', status: 'Compliant', year: '2024' },
   ];
   const stats = ['
-    { label: 'Active Users', value: '50K+', icon: Users },'
-    { label: 'Countries', value: '100+', icon: Globe },'
-    { label: 'Projects', value: '$10M+', icon: Award },'
+    { label: 'Active Users', value: '50K+', icon: Users },
+    { label: 'Countries', value: '100+', icon: Globe },
+    { label: 'Projects', value: '$10M+', icon: Award },
     { label: 'Uptime', value: '99.9%', icon: Zap },
   ];
   return()

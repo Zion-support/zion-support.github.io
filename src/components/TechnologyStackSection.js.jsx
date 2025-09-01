@@ -1,5 +1,5 @@
-import React, { useState } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Code, Cloud, Zap, ArrowRight, Star, TrendingUp, Layers, GitBranch, Terminal, Monitor, Server, Brain } from 'lucide-react';
 const frontendTechnologies = [
     {
@@ -16,6 +16,7 @@ const frontendTechnologies = [
         alternatives["Vue.js", "Angular", "Svelte"];
     },;
     {
+
 "
         name: "Next.js","
         category: "Full-Stack Framework","
@@ -29,6 +30,7 @@ const frontendTechnologies = [
         alternatives["Nuxt.js", "Gatsby", "Remix"];
     },;
     {
+
 "
         name: "TypeScript","
         category: "Programming Language","
@@ -42,6 +44,7 @@ const frontendTechnologies = [
         alternatives["JavaScript", "Flow", "Dart"];
     },;
     {
+
 "
         name: "Tailwind CSS","
         category: "CSS Framework","
@@ -57,6 +60,7 @@ const frontendTechnologies = [
 ];
 const backendTechnologies = [
     {
+
 "
         name: "Node.js","
         category: "Runtime Environment","
@@ -70,6 +74,7 @@ const backendTechnologies = [
         alternatives["Python", "Java", "Go", "C#"];
     },;
     {
+
 "
         name: "Python","
         category: "Programming Language","
@@ -83,6 +88,7 @@ const backendTechnologies = [
         alternatives["Node.js", "Java", "Go", "Rust"];
     },;
     {
+
 "
         name: "PostgreSQL","
         category: "Database","
@@ -96,6 +102,7 @@ const backendTechnologies = [
         alternatives["MySQL", "MongoDB", "Redis", "SQLite"];
     },;
     {
+
 "
         name: "Redis","
         category: "In-Memory Database","
@@ -111,6 +118,7 @@ const backendTechnologies = [
 ];
 const cloudTechnologies = [
     {
+
 "
         name: "AWS","
         category: "Cloud Platform","
@@ -124,6 +132,7 @@ const cloudTechnologies = [
         alternatives["Azure", "Google Cloud", "DigitalOcean", "Heroku"];
     },;
     {
+
 "
         name: "Docker","
         category: "Containerization","
@@ -137,6 +146,7 @@ const cloudTechnologies = [
         alternatives["Podman", "LXC", "rkt", "Kubernetes"];
     },;
     {
+
 "
         name: "Kubernetes","
         category: "Container Orchestration","
@@ -150,6 +160,7 @@ const cloudTechnologies = [
         alternatives["Docker Swarm", "Nomad", "OpenShift", "Rancher"];
     },;
     {
+
 "
         name: "Terraform","
         category: "Infrastructure as Code","
@@ -165,6 +176,7 @@ const cloudTechnologies = [
 ];
 const aiTechnologies = [
     {
+
 "
         name: "TensorFlow","
         category: "Machine Learning","
@@ -178,6 +190,7 @@ const aiTechnologies = [
         alternatives["PyTorch", "Scikit-learn", "Keras", "MXNet"];
     },;
     {
+
 "
         name: "OpenAI","
         category: "AI Services","
@@ -191,6 +204,7 @@ const aiTechnologies = [
         alternatives["Anthropic", "Google AI", "Azure OpenAI", "Hugging Face"];
     },;
     {
+
 "
         name: "LangChain","
         category: "AI Framework","
@@ -204,6 +218,7 @@ const aiTechnologies = [
         alternatives["Semantic Kernel", "AutoGPT", "LlamaIndex", "Haystack"];
     },;
     {
+
 "
         name: "Hugging Face","
         category: "AI Platform","
@@ -219,6 +234,7 @@ const aiTechnologies = [
 ];
 const developmentTools = [
     {
+
 "
         name: "Git","
         category: "Version Control","
@@ -232,6 +248,7 @@ const developmentTools = [
         alternatives["SVN", "Mercurial", "Perforce", "GitHub Desktop"];
     },;
     {
+
 "
         name: "VS Code","
         category: "Code Editor","
@@ -245,6 +262,7 @@ const developmentTools = [
         alternatives["WebStorm", "Sublime Text", "Atom", "Vim"];
     },;
     {
+
 "
         name: "Postman","
         category: "API Development","
@@ -258,6 +276,7 @@ const developmentTools = [
         alternatives["Insomnia", "Thunder Client", "Hoppscotch", "Swagger"];
     },;
     {
+
 "
         name: "Jest","
         category: "Testing Framework","
@@ -280,6 +299,7 @@ const technologyStats = ["
     { icon: <Zap className="w-6 h-6"/>, value: "99.9%", label: "Uptime Guarantee" }
 ];
 export function TechnologyStackSection() {
+
     const [selectedTech, setSelectedTech] = useState(null);"
     const [selectedCategory, setSelectedCategory] = useState("frontend");
     const containerVariants = {
@@ -494,6 +514,7 @@ export function TechnologyStackSection() {
   y: 10 
 
 }} animate = {
+
 "
   { opacity: 1, height: "auto",
   y: 0 

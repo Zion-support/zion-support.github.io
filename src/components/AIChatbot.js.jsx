@@ -1,5 +1,5 @@
-import React, { useState, useCallback, useEffect, useRef } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState, useCallback, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from 'lucide-react';
 import { useAnalytics } from "../hooks/useAnalytics";'"
 export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => {
@@ -11,17 +11,18 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
     });
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
-    const [messages, setMessages] = useState([]);'
+    const [messages, setMessages] = useState([]);
     const [inputValue, setInputValue] = useState('');
     const [isTyping, setIsTyping] = useState(false);
     const messagesEndRef = useRef(null);
     const inputRef = useRef(null);
     // Initialize chatbot
     useEffect(() => {
+
         if (isOpen && messages.length === 0) {
 
             addBotMessage(welcomeMessage, {
-'
+
                 intent: 'greeting',
                 confidence: 1.0,
                 suggestions[;"
@@ -34,12 +35,12 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
     }, [isOpen, messages.length, welcomeMessage]);
     // Auto-scroll to bottom
     useEffect(() => {
-'
+
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })}, [messages]);
     // Track chatbot interactions
     const trackChatbotInteraction = useCallback((action, metadata) => {
-'
-        trackEvent('chatbot', action, 'chatbot_interaction', null, metadata)}, [trackEvent]);
+
+        trackEvent('chatbot', action,chatbot_interaction', null, metadata)}, [trackEvent]);
     // Add message to chat
     const addMessage = useCallback((message) => {
 
@@ -66,7 +67,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
     const addBotMessage = useCallback((content, metadata) => {
 
         const message = addMessage({
-'
+
             type: 'bot',
             content,
             metadata
@@ -88,18 +89,23 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         const input = userInput.toLowerCase();
         // Intent recognition'
         if (input.includes('service') || input.includes('offer')) {
+
 "
-            return "We offer a comprehensive range of services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, and Digital Transformation. What specific area are you interested in?"}'
+            return "We offer a comprehensive range of services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, and Digital Transformation. What specific area are you interested in?"}
         if (input.includes('quote') || input.includes('price') || input.includes('cost')) {
+
 '"
-            return "I'd be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate."}'
+            return "I'd be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate."}
         if (input.includes('contact') || input.includes('phone') || input.includes('email')) {
+
 "
-            return "You can reach us at:\n📧 kleber@ziontechgroup.com\n📞 +1 (302) 464-0950\n🌐 https://ziontechgroup.com\n\nWhen would be the best time to call you?"}'
+            return "You can reach us at:\n📧 kleber@ziontechgroup.com\n📞 +1 (302) 464-0950\n🌐 https://ziontechgroup.com\n\nWhen would be the best time to call you?"}
         if (input.includes('technology') || input.includes('tech') || input.includes('stack')) {
+
 "
-            return "We work with cutting-edge technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, and more. What technology stack are you currently using?"}'
+            return "We work with cutting-edge technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, and more. What technology stack are you currently using?"}
         if (input.includes('experience') || input.includes('portfolio') || input.includes('work')) {
+
 "
             return "We have extensive experience across various industries including healthcare, finance, e-commerce, and enterprise solutions. Would you like me to share some case studies?"}
         // Default response with suggestions'"
@@ -111,7 +117,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
             return;
         // Add user message
         const userMessage = addMessage({
-'
+
             type: 'user',
             content: input.trim()
         });
@@ -125,11 +131,12 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         setInputValue('');
         setIsTyping(true);
         try {
+
             // Get AI response
             const response = await simulateAIProcessing(input);
             // Add bot response
             addBotMessage(response, {
-'
+
                 intent: 'response',
                 confidence: 0.9,
                 suggestions[;"
@@ -146,14 +153,15 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                 responseLength: response.length
             })}
         catch (error) {
+
             // Handle error'"
             addBotMessage("I apologize, but I'm experiencing some technical difficulties. Please try again or contact our team directly.", {
-'
+
                 intent: 'error',
                 confidence: 0.8
-            });'
+            });
             trackChatbotInteraction('conversation_error', {
-'
+
                 error: error instanceof Error ? error.message : 'Unknown error'
             })}
         finally {
@@ -168,18 +176,21 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
     // Handle suggestion click
     const handleSuggestionClick = useCallback((suggestion) => {
 
-        handleUserInput(suggestion);'
+        handleUserInput(suggestion);
         trackChatbotInteraction('suggestion_clicked', { suggestion })}, [handleUserInput, trackChatbotInteraction]);
     // Toggle chatbot
     const toggleChatbot = useCallback(() => {
-        setIsOpen(!isOpen);'
+
+        setIsOpen(!isOpen);
         trackChatbotInteraction('chatbot_toggled', { action: !isOpen ? 'opened' : 'closed' })}, [isOpen, trackChatbotInteraction]);
     // Minimize/maximize
     const toggleMinimize = useCallback(() => {
-        setIsMinimized(!isMinimized);'
+
+        setIsMinimized(!isMinimized);
         trackChatbotInteraction('chatbot_minimized', { action: !isMinimized ? 'minimized' : 'maximized' })}, [isMinimized, trackChatbotInteraction]);
     // Clear conversation
     const clearConversation = useCallback(() => {
+
         setMessages([]);
         // setConversationContext([]); // This line was removed'
         trackChatbotInteraction('conversation_cleared')}, [trackChatbotInteraction]);
@@ -264,7 +275,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                 <div className="flex-1 p-4 space-y-4 overflow-y-auto max-h-80">
                   {messages.map((message) => (<motion.div key={message.id} initial = {
 
-  { opacity: 0,'
+  { opacity: 0,
   x: message.type === 'user' ? 20 : -20 
 
 }} animate = {
@@ -291,7 +302,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                               {message.metadata.intent && (<span>Intent: {message.metadata.intent}</span>)}
                             </div>)}
                           
-                          {/* Suggestions */}'
+                          {/* Suggestions */}
                           {message.type === 'bot' && message.metadata?.suggestions && enableSuggestions && (<MessageSuggestions suggestions={message.metadata.suggestions}/>)}
                         </div>
                       </div>

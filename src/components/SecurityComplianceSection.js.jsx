@@ -1,5 +1,5 @@
-import React, { useState } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Shield, Lock, Eye, CheckCircle, Users, Database, Network, ArrowRight, Award } from 'lucide-react';
 const securityStandards = [
     {
@@ -15,10 +15,11 @@ const securityStandards = [
         benefits["Enhanced Security Posture", "Regulatory Compliance", "Customer Trust", "Risk Mitigation"];
     },;
     {
+
 "
         name: "SOC 2 Type II","
         category: "Service Organization Control","
-        logo: "/logos/soc2.svg",'"
+        logo: "/logos/soc2.svg","
         description: "AICPA standard for service organizations' security, availability, and confidentiality","
         status: "Certified","
         validUntil: "2025-06-30","
@@ -27,10 +28,11 @@ const securityStandards = [
         benefits["Third-party Validation", "Customer Assurance", "Competitive Advantage", "Operational Excellence"];
     },;
     {
+
 "
         name: "GDPR Compliance","
         category: "Data Protection Regulation","
-        logo: "/logos/gdpr.svg",'"
+        logo: "/logos/gdpr.svg","
         description: "European Union's General Data Protection Regulation compliance","
         status: "Compliant","
         validUntil: "Ongoing","
@@ -39,6 +41,7 @@ const securityStandards = [
         benefits["Legal Compliance", "Customer Rights Protection", "Data Transparency", "Global Operations"];
     },;
     {
+
 "
         name: "HIPAA","
         category: "Healthcare Data Protection","
@@ -53,6 +56,7 @@ const securityStandards = [
 ];
 const complianceFrameworks = [
     {
+
 "
         name: "NIST Cybersecurity Framework","
         category: "Cybersecurity Standards","
@@ -63,6 +67,7 @@ const complianceFrameworks = [
         benefits["Risk-based Approach", "Industry Best Practices", "Continuous Improvement", "Stakeholder Confidence"];
     },;
     {
+
 "
         name: "OWASP Top 10","
         category: "Web Application Security","
@@ -73,6 +78,7 @@ const complianceFrameworks = [
         benefits["Secure Development", "Vulnerability Prevention", "Code Quality", "Security Training"];
     },;
     {
+
 "
         name: "PCI DSS","
         category: "Payment Card Security","
@@ -83,6 +89,7 @@ const complianceFrameworks = [
         benefits["Payment Processing", "Customer Trust", "Fraud Prevention", "Industry Standards"];
     },;
     {
+
 "
         name: "FedRAMP","
         category: "Federal Cloud Security","
@@ -292,6 +299,7 @@ const securityStats = ["
   y: 10 
 
 }} animate = {
+
 "
   { opacity: 1, height: "auto",
   y: 0 
@@ -434,6 +442,7 @@ const securityStats = ["
   y: 10 
 
 }} animate = {
+
 "
   { opacity: 1, height: "auto",
   y: 0 
@@ -553,6 +562,7 @@ const securityStats = ["
   y: 10 
 
 }} animate = {
+
 "
   { opacity: 1, height: "auto",
   y: 0 

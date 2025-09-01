@@ -1,16 +1,18 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "../ui/button";"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";"
-import { Badge } from "../ui/badge";'
+import { Badge } from "../ui/badge";
 import { Brain, Shield, Cloud, Database, Zap, Eye, Leaf, DollarSign, ArrowRight, Star, Clock, Globe } from 'lucide-react';
 // Mock data for enhanced services;
 const EnhancedServicesOverview = () => {
+
     // Get featured services (first 6)
     const featuredServices = ENHANCED_SERVICES.slice(0, 6);
     const getCategoryIcon = (category) => {
 
         switch (category) {
+
 '"
             case 'AI & Machine Learning': return <Brain className="w-6 h-6"/>;'"
             case 'Cybersecurity': return <Shield className="w-6 h-6"/>;'"
@@ -27,10 +29,10 @@ const EnhancedServicesOverview = () => {
     const getAvailabilityColor = (availability) => {
 
         switch (availability) {
-'
-            case 'immediate': return 'text-green-400';'
-            case 'within-week': return 'text-yellow-400';'
-            case 'within-month': return 'text-orange-400';'
+
+            case 'immediate': return 'text-green-400';
+            case 'within-week': return 'text-yellow-400';
+            case 'within-month': return 'text-orange-400';
             default: return 'text-gray-400'}
     };"
     return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">"
@@ -89,7 +91,7 @@ const EnhancedServicesOverview = () => {
                 <div className="flex items-center justify-between">"
                   <div className="text-xl font-bold text-zion-cyan">
                     ${service.price.toLocaleString()}"
-                    <span className="text-sm text-zion-slate-light font-normal">'
+                    <span className="text-sm text-zion-slate-light font-normal">
                       /{service.pricingModel === 'subscription' ? 'month' : 'project'}
                     </span>
                   </div>"
@@ -118,7 +120,7 @@ const EnhancedServicesOverview = () => {
                 <div className="flex items-center justify-between text-sm">
                   <div className={`flex items-center gap-2 ${getAvailabilityColor(service.availability)}`}>"
                     <Clock className="w-4 h-4"/>"
-                    <span className="font-medium">'
+                    <span className="font-medium">
                       {service.availability === 'immediate' ? 'Available Now' :'
                 service.availability === 'within-week' ? 'Within 1 Week' :'
                     service.availability === 'within-month' ? 'Within 1 Month' : 'Contact Us'}

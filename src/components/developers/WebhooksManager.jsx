@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { useState, useEffect } from "react";
+import { format } from "date-fns";
+import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X import { useWebhooks } from "@/hooks/useWebhooks";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
+import { Switch } from "@/components/ui/switch";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
+import { ScrollArea } from "@/components/ui/scroll-area";
+=======
 import { useState, useEffect } from "react";"
 import { format } from "date-fns";"
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X import { useWebhooks } from "@/hooks/useWebhooks";"
@@ -12,8 +29,10 @@ import { Switch } from "@/components/ui/switch";"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";"
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";"
 import { ScrollArea } from "@/components/ui/scroll-area";"
+>>>>>>> main
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 export function WebhooksManager() {
+
     const { webhooks, loading, testResult, fetchWebhooks, createWebhook, toggleWebhook, deleteWebhook, testWebhook, clearTestResult } = useWebhooks();
     const [showCreateDialog, setShowCreateDialog] = useState(false);
     const [showDeleteConfirm, setShowDeleteConfirm] = useState(null);
@@ -27,8 +46,10 @@ export function WebhooksManager() {
     const [testEventType, setTestEventType] = useState('new_application');
     // Load webhooks on mount
     useEffect(() => {
+
         fetchWebhooks()}, []);
     const handleCreateWebhook = async () => {
+
 "
         if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0)
             return;"
@@ -44,6 +65,7 @@ export function WebhooksManager() {
         await testWebhook(webhookId, testEventType);
         setShowTestResult(true)};
     const resetWebhookForm = () => {
+
 "
         setWebhookName("");"
         setWebhookUrl("");"
@@ -51,9 +73,9 @@ export function WebhooksManager() {
         setSelectedEvents([])};
     // Event type options
     const eventOptions = ['
-        { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' },'
-        { value: 'quote_received', label: 'Quote Received', description: 'When a quote is received from talent' },'
-        { value: 'milestone_approved', label: 'Milestone Approved', description: 'When a project milestone is approved' },'
+        { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' },
+        { value: 'quote_received', label: 'Quote Received', description: 'When a quote is received from talent' },
+        { value: 'milestone_approved', label: 'Milestone Approved', description: 'When a project milestone is approved' },
         { value: 'talent_hired', label: 'Talent Hired', description: 'When talent is hired for a project' },
     ];
     // Toggle an event selection
@@ -74,7 +96,7 @@ export function WebhooksManager() {
 
       <CardContent>"
         <div className="flex justify-between items-center mb-6">"
-          <p className="text-sm text-zinc-400">'
+          <p className="text-sm text-zinc-400">
             You have {webhooks.length} {webhooks.length === 1 ? 'webhook' : 'webhooks'}
           </p>
 
@@ -130,6 +152,7 @@ export function WebhooksManager() {
 
               <DialogFooter>"
                 <Button variant="outline" onClick={() => {
+
             setShowCreateDialog(false);
             resetWebhookForm()}}>
                   Cancel
@@ -167,6 +190,10 @@ export function WebhooksManager() {
   () => handleToggleStatus(webhook.id,
   webhook.is_active)
 
+<<<<<<< HEAD
+}/>
+                      <span className="ml-2 text-sm">
+=======
 
 
 
@@ -174,6 +201,7 @@ export function WebhooksManager() {
 
 }/>"
                       <span className="ml-2 text-sm">"
+>>>>>>> main
                         {webhook.is_active ? "Active" : "Inactive"}
                       </span>
                     </div>
@@ -202,9 +230,9 @@ export function WebhooksManager() {
                     </Badge>))}
                 </div>
 "
-                <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">'
-                  <span>Created: {format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>'
-                  {webhook.last_triggered_at && (<span>Last triggered: {format(new Date(webhook.last_triggered_at), 'MMM d, yyyy HH:mm')}</span>)}
+                <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">
+                  <span>Created: {format(new Date(webhook.created_at),MMM d, yyyy')}</span>
+                  {webhook.last_triggered_at && (<span>Last triggered: {format(new Date(webhook.last_triggered_at),MMM d, yyyy HH:mm')}</span>)}
                 </div>
               </div>)))}
         </div>
@@ -224,7 +252,7 @@ export function WebhooksManager() {
 
             if (!open) {
 
-                setShowTestDialog(null);'
+                setShowTestDialog(null);
                 setTestEventType('new_application');
                 if (showTestResult) {
 
@@ -274,7 +302,7 @@ export function WebhooksManager() {
                   <div className="flex items-center justify-between">
                     <Label>Response Status</Label>
                     <Badge className={testResult && testResult.status >= 200 && testResult.status < 300"
-                ? "bg-green-700""
+                ? "bg-green-700"
                 : "bg-red-700"}>
                       {testResult?.status} {testResult?.statusText}
                     </Badge>
@@ -293,12 +321,14 @@ export function WebhooksManager() {
 
               <DialogFooter>"
                 <Button variant="default" onClick={() => {
+
                 setShowTestDialog(null);
                 setShowTestResult(false);
                 clearTestResult()}}>
                   Close
                 </Button>"
                 <Button variant="outline" onClick={() => {
+
                 setShowTestResult(false);
                 clearTestResult()}}>
                   Test Another Event

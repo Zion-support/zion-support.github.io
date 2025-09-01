@@ -1,7 +1,16 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';
 import {
+
+<<<<<<< HEAD
+import { motion } from 'framer - motion';
+
+ * ServicesShowcase function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function ServicesShowcase () {
+
+=======
+>>>>>>> main
 
   Brain,
   Cloud,
@@ -15,119 +24,14 @@ import {
   MessageCircle,
   BookOpen,
   DollarSign,
-  Gauge,'
+  Gauge,
   HelpCircle} from 'lucide-react';
 
-  const services = [
-    {
-
-      icon: Brain,'
-      title: 'AI & Analytics','
-      description: 'Machine Learning & Data Science solutions','
-      href: '/services/ai-business-intelligence','
-      category: 'AI','
-      color: 'from-purple-500 to-pink-600'},
-    {
-
-      icon: Cloud,'
-      title: 'Cloud & DevOps','
-      description: 'Infrastructure & Automation','
-      href: '/services/cloud-devops','
-      category: 'Infrastructure','
-      color: 'from-blue-500 to-cyan-600'},
-    {
-
-      icon: Shield,'
-      title: 'Cybersecurity','
-      description: 'AI-Powered Security solutions','
-      href: '/services','
-      category: 'Security','
-      color: 'from-red-500 to-orange-600'},
-    {
-
-      icon: Cpu,'
-      title: 'IoT & Edge','
-      description: 'Smart Devices & Networks','
-      href: '/services','
-      category: 'IoT','
-      color: 'from-green-500 to-emerald-600'},
-    {
-
-      icon: Lock,'
-      title: 'Blockchain','
-      description: 'DeFi & Smart Contracts','
-      href: '/services','
-      category: 'Blockchain','
-      color: 'from-yellow-500 to-orange-600'},
-    {
-
-      icon: Users,'
-      title: 'Healthcare Tech','
-      description: 'AI Medicine & Diagnostics','
-      href: '/services','
-      category: 'Healthcare','
-      color: 'from-pink-500 to-rose-600'},
-    {
-
-      icon: Globe,'
-      title: 'Sustainability','
-      description: 'Green IT Solutions','
-      href: '/services','
-      category: 'Green IT','
-      color: 'from-emerald-500 to-teal-600'},
-    {
-
-      icon: ShoppingCart,'
-      title: 'Micro SaaS','
-      description: 'Productized SaaS for niches','
-      href: '/services/micro-saas-solutions','
-      category: 'SaaS','
-      color: 'from-indigo-500 to-purple-600'},
-    {
-
-      icon: MessageCircle,'
-      title: 'AI Auto Email','
-      description: 'Faster replies, CRM logging','
-      href: '/services/ai-auto-email-responder','
-      category: 'Automation','
-      color: 'from-cyan-500 to-blue-600'},
-    {
-
-      icon: Users,'
-      title: 'Mobile Surveys','
-      description: 'NPS/CSAT with AI insights','
-      href: '/services/mobile-survey','
-      category: 'Analytics','
-      color: 'from-teal-500 to-green-600'},
-  ];
-
-  const containerVariants = {
-
-    hidden: { opacity: 0 },
-    visible: {
-
-      opacity: 1,
-      transition: {
-
-        staggerChildren: 0.1}}};
-
-  const itemVariants = {
-
-    hidden: {
-
-      opacity: 0,
-      y: 20},
-    visible: {
-
-      opacity: 1,
-      y: 0,
-      transition: {
-
-        duration: 0.5}}};
-
+  
+  
+  
   return()
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
-      <div className="container mx-auto px-6">
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"      <div className="container mx-auto px-6">
         {/* Header */}
         <motion.div"
           className="text-center mb-16"
@@ -138,7 +42,7 @@ import {
         >"
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Our Comprehensive"
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">'
+            <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
               {' '}
               Services
             </span>
@@ -200,7 +104,7 @@ import {
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}"
-          initial="hidden""
+          initial="hidden"
           whileInView="visible"'
           viewport={{ once: true, margin: '-50px' }}"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
@@ -262,12 +166,10 @@ import {
               </p>"
               <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
                 Get Started Today"
-                <ArrowRight className="w-5 h-5" />
-              </button>
+                <ArrowRight className="w-5 h-5"  />              </button>
             </div>
           </div>
         </motion.div>
       </div>
-    </section>) ;
-}
+    </section>) }
 '"`

@@ -1,26 +1,28 @@
-import React, { useState, useEffect } from 'react';
 
 interface User {
 
   id: string;
   email: string;
-  name: string;'
+  name: string;
   role: 'user' | 'admin' | 'moderator';
   userType?: string;
   displayName?: string;
-  avatarUrl?: string;
-
-}
+:src/hooks/useAuth.tsx
+  avatarUrl?: string}
+  avatarUrl?: string}
 
 interface AuthState {
 
   user: User | null;
   isAuthenticated: boolean;
+:src/hooks/useAuth.tsx
   isLoading: boolean;
+  isLoading: boolean}
 
 }
 ;
 export function useAuth(...args: unknown[]): unknown {
+
   const [authState, setAuthState] = useState<AuthState>({
 
     user: null,
@@ -28,54 +30,52 @@ export function useAuth(...args: unknown[]): unknown {
     isLoading: true});
 
   useEffect(: unknown {
-    // Check if user is logged in (e.g., check localStorage, cookies, etc.)
-    const checkAuth = () => {
-'
-      const storedUser = localStorage.getItem('zion_user');'
-      const token = localStorage.getItem('authToken');
 
+    // Check if user is logged in (e.g., check localStorage, cookies, etc.)
+:src/hooks/useAuth.tsx
+    
+      
       if (storedUser && token) {
 
         try {
-          const user = JSON.parse(storedUser);
+
           setAuthState({
 
             user,
             isAuthenticated: true,
-            isLoading: false});
-        } catch (error) {
-'
-          // console.error('Error parsing stored user:', error);
+:src/hooks/useAuth.tsx
+            isLoading: false})} catch (error) {
+
+          // // // console.error('Error parsing stored user:', error);
+            isLoading: false})} catch (error) {
+
+          // // console.error('Error parsing stored user:', error);
           setAuthState({
 
             user: null,
             isAuthenticated: false,
-            isLoading: false});
-        }
+:src/hooks/useAuth.tsx
+            isLoading: false})}
+            isLoading: false})}
       } else {
 
         setAuthState({
 
           user: null,
           isAuthenticated: false,
-          isLoading: false});
-      }
+:src/hooks/useAuth.tsx
+          isLoading: false})}
     };
 
-    checkAuth();
-  }, []);
+    checkAuth()}, []);
 
-  const login = async (email: string, password: string) => {
+  
+          isLoading: false})}
+    };
 
-    // In a real app, you would make an API call to your backend
-    const mockUser: User = {
-'
-      id: '1',
-      email,'
-      name: 'John Doe','
-      role: 'user','
-      userType: 'creator'};
+    checkAuth()}, []);
 
+  
     setAuthState({
 
       user: mockUser,
@@ -83,35 +83,26 @@ export function useAuth(...args: unknown[]): unknown {
       isLoading: false});
 
     // Store user data in localStorage'
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));'
-    localStorage.setItem('authToken', 'mock-jwt-token');
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    localStorage.setItem('authToken',mock-jwt-token');
 
-    return { success: true, user: mockUser };
-  };
+:src/hooks/useAuth.tsx
+    return { success: true, user: mockUser }};
 
-  const logout = (...args: unknown[]): unknown => {
-    setAuthState({
-
-      user: null,
-      isAuthenticated: false,
-      isLoading: false});
-
+  
     // Clear localStorage'
-    localStorage.removeItem('zion_user');'
-    localStorage.removeItem('authToken');
-  };
+    localStorage.removeItem('zion_user');
+    localStorage.removeItem('authToken')};
 
-  const register = async (email: string, password: string, name: string) => {
+  
+    return { success: true, user: mockUser }};
 
-    // In a real app, you would make an API call to your backend
-    const mockUser: User = {
+  
+    // Clear localStorage
+    localStorage.removeItem('zion_user');
+    localStorage.removeItem('authToken')};
 
-      id: Date.now().toString(),
-      email,
-      name,'
-      role: 'user','
-      userType: 'creator'};
-
+  
     setAuthState({
 
       user: mockUser,
@@ -119,25 +110,23 @@ export function useAuth(...args: unknown[]): unknown {
       isLoading: false});
 
     // Store user data in localStorage'
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));'
-    localStorage.setItem('authToken', 'mock-jwt-token');
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    localStorage.setItem('authToken',mock-jwt-token');
 
-    return { success: true, user: mockUser };
-  };
+    return { success: true, user: mockUser }};
 
-  const updateProfile = (updates: Partial<User>) => {
-
-    if (authState.user) {
-
-      const updatedUser = { ...authState.user, ...updates };
+:src/hooks/useAuth.tsx
+  
       setAuthState(prev => ({
 
+:src/hooks/useAuth.tsx
         ...prev,
         user: updatedUser}));
 
       // Update localStorage'
-      localStorage.setItem('zion_user', JSON.stringify(updatedUser));
-    }
+      localStorage.setItem('zion_user', JSON.stringify(updatedUser))}
+      // Update localStorage
+      localStorage.setItem('zion_user', JSON.stringify(updatedUser))}
   };
 
   return {
@@ -146,6 +135,10 @@ export function useAuth(...args: unknown[]): unknown {
     login,
     logout,
     register,
-    updateProfile};
-}
+:src/hooks/useAuth.tsx
+    updateProfile}}
+<<<<<<< HEAD
+=======
 '
+    updateProfile}}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954

@@ -1,34 +1,37 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 export const AccessibilityPanel = ({ isOpen, onToggle }) => {
 
     const [settings, setSettings] = useState({
 
         highContrast: false,
-        fontSize: 100,'
+        fontSize: 100,
         colorBlindness: 'none',
         reducedMotion: false,
         screenReader: false,
         keyboardNavigation: false,
-        focusIndicator: true,'
+        focusIndicator: true,
         colorBlindness: 'none'
     });
-    const [accessibilityScore, setAccessibilityScore] = useState(85);'
+    const [accessibilityScore, setAccessibilityScore] = useState(85);
     const [activeTab, setActiveTab] = useState('general');
     useEffect(() => {
+
         // Load saved settings from localStorage'
         const savedSettings = localStorage.getItem('accessibility-settings');
         if (savedSettings) {
 
             try {
+
                 const parsed = JSON.parse(savedSettings);
                 setSettings(prev => ({ ...prev, ...parsed }))}
             catch (error) {
-'
-                // console.error('Failed to parse accessibility settings:', error)}
+
+                // // // console.error('Failed to parse accessibility settings:', error)}
         }
     }, []);
     useEffect(() => {
+
         // Apply settings to document
         applySettings(settings);
         // Save to localStorage'
@@ -38,46 +41,47 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
         const root = document.documentElement;
         // High contrast
         if (newSettings.highContrast) {
-'
-            root.style.setProperty('--high-contrast', '1');'
+
+            root.style.setProperty('--high-contrast',1');
             root.classList.add('high-contrast')}
         else {
-'
-            root.style.setProperty('--high-contrast', '0');'
+
+            root.style.setProperty('--high-contrast',0');
             root.classList.remove('high-contrast')}
         // Font size'
         root.style.setProperty('--font-size', `${newSettings.fontSize}%`);
         // Reduced motion
         if (newSettings.reducedMotion) {
-'
+
             root.classList.add('reduced-motion')}
         else {
-'
-            root.style.setProperty('--reduced-motion', 'no-preference')}
+
+            root.style.setProperty('--reduced-motion',no-preference')}
         // Apply focus indicator
         if (settings.focusIndicator) {
-'
-            root.style.setProperty('--focus-visible', 'auto')}
+
+            root.style.setProperty('--focus-visible',auto')}
         else {
-'
-            root.style.setProperty('--focus-visible', 'none')}
+
+            root.style.setProperty('--focus-visible',none')}
         // Color blindness'
-        root.classList.remove('protanopia', 'deuteranopia', 'tritanopia');'
+        root.classList.remove('protanopia',deuteranopia',tritanopia');
         if (newSettings.colorBlindness !== 'none') {
 
             root.classList.add(newSettings.colorBlindness)}
         // Focus indicator
         if (newSettings.focusIndicator) {
-'
+
             root.classList.add('focus-visible')}
         else {
-'
+
             root.classList.remove('focus-visible')}
     };
     const updateSetting = (key, value) => {
 
         setSettings(prev => ({ ...prev, [key]: value }))};
     const resetSettings = () => {
+
         const defaultSettings = {
 
   highContrast: false,
@@ -85,33 +89,33 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
             reducedMotion: false,
             screenReader: false,
             keyboardNavigation: false,
-            focusIndicator: true,'
+            focusIndicator: true,
   colorBlindness: 'none'
         
 
 };
         setSettings(defaultSettings)};
     const tabs = ['
-        { id: 'general', label: 'General', icon: '⚙️' },'
-        { id: 'visual', label: 'Visual', icon: '👁️' },'
-        { id: 'audio', label: 'Audio', icon: '🔊' },'
+        { id: 'general', label: 'General', icon: '⚙️' },
+        { id: 'visual', label: 'Visual', icon: '👁️' },
+        { id: 'audio', label: 'Audio', icon: '🔊' },
         { id: 'navigation', label: 'Navigation', icon: '⌨️' }
     ];
     const getScoreColor = (score) => {
 
-        if (score >= 90)'
+        if (score >= 90)
             return 'text-green-400';
-        if (score >= 70)'
-            return 'text-yellow-400';'
+        if (score >= 70)
+            return 'text-yellow-400';
         return 'text-red-400'};
     const getScoreLabel = (score) => {
 
-        if (score >= 90)'
+        if (score >= 90)
             return 'Excellent';
-        if (score >= 70)'
+        if (score >= 70)
             return 'Good';
-        if (score >= 50)'
-            return 'Needs Improvement';'
+        if (score >= 50)
+            return 'Needs Improvement';
         return 'Poor'};
     if (!isVisible)
         return null;
@@ -185,7 +189,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                     <div>"
                       <label className="flex items-center space-x-3">"
                         <input type="checkbox" checked={settings.highContrast} onChange = {
-'
+
   (e) => updateSetting('highContrast',
   e.target.checked)
 "
@@ -204,7 +208,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                         Font Size: {settings.fontSize}%
                       </label>"
                       <input type="range" min="50" max="200" step="10" value={settings.fontSize} onChange = {
-'
+
   (e) => updateSetting('fontSize',
   parseInt(e.target.value))
 "
@@ -214,7 +218,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                     <div>"
                       <label className="flex items-center space-x-3">"
                         <input type="checkbox" checked={settings.reducedMotion} onChange = {
-'
+
   (e) => updateSetting('reducedMotion',
   e.target.checked)
 "
@@ -250,7 +254,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                         Color Blindness Support
                       </label>
                       <select value={settings.colorBlindness} onChange = {
-'
+
   (e) => updateSetting('colorBlindness',
   e.target.value)
 "
@@ -265,7 +269,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                     <div>"
                       <label className="flex items-center space-x-3">"
                         <input type="checkbox" checked={settings.focusIndicator} onChange = {
-'
+
   (e) => updateSetting('focusIndicator',
   e.target.checked)
 "
@@ -299,7 +303,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                     <div>"
                       <label className="flex items-center space-x-3">"
                         <input type="checkbox" checked={settings.screenReader} onChange = {
-'
+
   (e) => updateSetting('screenReader',
   e.target.checked)
 "
@@ -345,7 +349,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                     <div>"
                       <label className="flex items-center space-x-3">"
                         <input type="checkbox" checked={settings.keyboardNavigation} onChange = {
-'
+
   (e) => updateSetting('keyboardNavigation',
   e.target.checked)
 "

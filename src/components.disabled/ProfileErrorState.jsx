@@ -1,9 +1,9 @@
-import React from 'react';'
-import { Card, CardContent, CardHeader } from '../ui/card';'
-import { Button } from '../ui/button';'
+import React from 'react';
+import { Card, CardContent, CardHeader } from '../ui/card';
+import { Button } from '../ui/button';
 import { AlertCircle, RefreshCw } from 'lucide-react';
 export const ProfileErrorState = ({
-'
+
   error = 'Failed to load profile',
   onRetry}) => {
 
@@ -21,7 +21,7 @@ export const ProfileErrorState = ({
         </CardHeader>"
         <CardContent className="text-center">"
           <div className="space-y-4">"
-            <p className="text-sm text-gray-500">'
+            <p className="text-sm text-gray-500">
               We're having trouble loading this profile. Please try again or
               contact support if the problem persists.
             </p>

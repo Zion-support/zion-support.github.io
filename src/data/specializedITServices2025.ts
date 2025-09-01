@@ -1,4 +1,5 @@
 export interface SpecializedITService {
+
   id: string;
   title: string;
   description: string;
@@ -85,25 +86,26 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
     roi: "300-500%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Cisco", "Palo Alto", "Fortinet", "VMware", "Microsoft"],;"
       integrations["Active Directory", "SIEM systems", "Firewalls", "VPN solutions", "Cloud platforms"],;
       apiEndpoints: 100,"
       uptime: "99.9%","
-      security["SOC 2", "ISO 27001", "NIST framework", "Zero trust principles"];
-    },;"
-    competitors["Cisco", "Palo Alto Networks", "Fortinet", "VMware"],;"
-    marketSize: "$51.6 billion by 2025"
+      security["SOC 2", "ISO 27001", "NIST framework", "Zero trust principles"]},;"
+    competitors["Cisco", "Palo Alto Networks", "Fortinet", "VMware"],;"    marketSize: "$51.6 billion by 2025"
   },
 
   // 5G Enterprise Network Solutions
   {
+
 "
     id: "five-g-enterprise-network","
     title: "5G Enterprise Network Solutions","
@@ -153,25 +155,26 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
     roi: "400-600%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["5G Core", "RAN equipment", "Edge computing", "Network slicing", "IoT platforms"],;"
       integrations["Existing network infrastructure", "Cloud platforms", "IoT devices", "Enterprise applications"],;
       apiEndpoints: 200,"
       uptime: "99.9%","
-      security["5G security standards", "Encryption", "Authentication", "Network isolation"];
-    },;"
-    competitors["Ericsson", "Nokia", "Huawei", "Cisco", "Verizon"],;"
-    marketSize: "$31.2 billion by 2025"
+      security["5G security standards", "Encryption", "Authentication", "Network isolation"]},;"
+    competitors["Ericsson", "Nokia", "Huawei", "Cisco", "Verizon"],;"    marketSize: "$31.2 billion by 2025"
   },
 
   // Cloud-Native Application Development
   {
+
 "
     id: "cloud-native-app-development","
     title: "Cloud-Native Application Development","
@@ -221,25 +224,26 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
     roi: "250-400%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Kubernetes", "Docker", "React", "Node.js", "PostgreSQL"],;"
       integrations["AWS", "Azure", "GCP", "GitHub", "CI/CD tools"],;
       apiEndpoints: 150,"
       uptime: "99.9%","
-      security["OWASP compliance", "Data encryption", "Access controls", "Security scanning"];
-    },;"
-    competitors["Thoughtworks", "Slalom", "Accenture", "Deloitte Digital"],;"
-    marketSize: "$22.5 billion by 2025"
+      security["OWASP compliance", "Data encryption", "Access controls", "Security scanning"]},;"
+    competitors["Thoughtworks", "Slalom", "Accenture", "Deloitte Digital"],;"    marketSize: "$22.5 billion by 2025"
   },
 
   // Data Center Modernization
   {
+
 "
     id: "data-center-modernization","
     title: "Data Center Modernization","
@@ -289,25 +293,26 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
     roi: "400-600%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["VMware", "Hyper-V", "Storage solutions", "Network equipment", "Automation tools"],;"
       integrations["Existing infrastructure", "Cloud platforms", "Management tools", "Monitoring systems"],;
       apiEndpoints: 100,"
       uptime: "99.9%","
-      security["Physical security", "Network security", "Data protection", "Access controls"];
-    },;"
-    competitors["Dell Technologies", "HPE", "Cisco", "IBM", "Accenture"],;"
-    marketSize: "$59.3 billion by 2025"
+      security["Physical security", "Network security", "Data protection", "Access controls"]},;"
+    competitors["Dell Technologies", "HPE", "Cisco", "IBM", "Accenture"],;"    marketSize: "$59.3 billion by 2025"
   },
 
   // IoT Edge Computing Platform
   {
+
 "
     id: "iot-edge-computing-platform","
     title: "IoT Edge Computing Platform","
@@ -357,20 +362,21 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
     roi: "300-500%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Edge computing platforms", "IoT protocols", "AI/ML frameworks", "Real-time databases", "Security protocols"],;"
       integrations["IoT devices", "Cloud platforms", "Enterprise systems", "Analytics tools"],;
       apiEndpoints: 300,"
       uptime: "99.9%","
-      security["Device authentication", "Data encryption", "Secure communication", "Access controls"];
-    },;"
+      security["Device authentication", "Data encryption", "Secure communication", "Access controls"]},;"
     competitors["AWS IoT Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "IBM Edge Application Manager"],;"
     marketSize: "$15.7 billion by 2025"
 
-];}}"
+]}}"

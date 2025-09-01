@@ -1,40 +1,41 @@
-import React from 'react';'
+<<<<<<< HEAD
+import React from 'react';
 import { motion } from 'framer-motion';
-;
+
 const features = [
   {
 
-    icon: "🚀","
-    title: "Cutting-Edge Technology","
+    icon: "🚀",
+    title: "Cutting-Edge Technology",
     description: "Leverage the latest advancements in AI, quantum computing, and blockchain technology"
   },
   {
-"
-    icon: "⚡","
-    title: "Lightning Fast Performance","
+
+    icon: "⚡",
+    title: "Lightning Fast Performance",
     description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs"
   },
   {
-"
-    icon: "🔒","
-    title: "Enterprise Security","
+
+    icon: "🔒",
+    title: "Enterprise Security",
     description: "Bank-level security protocols and compliance standards to protect your valuable data"
   },
   {
-"
-    icon: "🌐","
-    title: "Global Scalability","
+
+    icon: "🌐",
+    title: "Global Scalability",
     description: "Solutions that scale seamlessly from startup to enterprise across multiple regions"
   },
   {
-"
-    icon: "🤖","
-    title: "AI-Powered Intelligence","
+
+    icon: "🤖",
+    title: "AI-Powered Intelligence",
     description: "Smart automation and predictive analytics that adapt to your business requirements";
   },;
-  {;"
-    icon: "📊",;"
-    title: "Real-Time Analytics",;"
+  {;
+    icon: "📊",;
+    title: "Real-Time Analytics",;
     description: "Comprehensive insights and reporting to make data-driven decisions instantly";
   };
 ];
@@ -46,7 +47,7 @@ const features = [
   const itemVariants = {
 
   hidden: { opacity: 0, y: 30,
-  scale: 0.95 
+  scale: 0.95
 
 },
     visible: {
@@ -56,7 +57,7 @@ const features = [
       scale: 1,
       transition: {
 
-        duration: 0.6,"
+        duration: 0.6,
         ease: "easeOut"
       };
     };
@@ -65,7 +66,7 @@ const features = [
   const achievementVariants = {
 
   hidden: { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 },
     visible: {
@@ -79,7 +80,7 @@ const features = [
   const techVariants = {
 
   hidden: { opacity: 0,
-  x: -20 
+  x: -20
 
 },
     visible: {
@@ -90,40 +91,42 @@ const features = [
     };
   };
 
+=======
+},;
+  {;"
+    icon: "📊",;"
+    title: "Real-Time Analytics",;"
+    description: "Comprehensive insights and reporting to make data-driven decisions instantly"};
+]}}}}}}}}};
+>>>>>>> main
 export function FeatureHighlights() {
+
   return ("
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
+<<<<<<< HEAD
+        <motion.div
+=======
         <motion.div "
+>>>>>>> main
           className="text-center mb-16"
           initial = {
 
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >"
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-purple/10 border border-zion-purple/20 rounded-full text-zion-purple text-sm font-medium mb-6">"
-            <Award className="w-4 h-4" />
-            <span>Why Choose Zion</span>
+            <Award className="w-4 h-4"  />            <span>Why Choose Zion</span>
           </div>
 "
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -162,11 +165,19 @@ export function FeatureHighlights() {
                   {feature.description}
                 </p>
               </div>
+<<<<<<< HEAD
+
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">
+                {feature.title}
+              </h3>
+
+=======
               "
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">
                 {feature.title}
               </h3>
               "
+>>>>>>> main
               <p className="text-gray-400 text-sm leading-relaxed">
                 {feature.description}
               </p>
@@ -174,7 +185,11 @@ export function FeatureHighlights() {
           ))}
         </div>
 
+<<<<<<< HEAD
+        <motion.div
+=======
         <motion.div "
+>>>>>>> main
           className="mt-16 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -182,12 +197,7 @@ export function FeatureHighlights() {
           transition = {
 
   { duration: 0.6,
-  delay: 0.4 
-
-
-
-
-
+  delay: 0.4
 
 }}
         >"
@@ -198,8 +208,10 @@ export function FeatureHighlights() {
         </motion.div>;
       </div>;
     </section>;
-  );
-}
+  )}
 
+<<<<<<< HEAD
+=======
 
 '"`
+>>>>>>> main

@@ -1,19 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export const EnhancedSearchInput = () => {
-  const [isOpen, setIsOpen] = useState(false);'
+
+  const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeIndex, setActiveIndex] = useState(-1);
   const [recentSearches, setRecentSearches] = useState(['
-    'IT infrastructure setup','
-    'Network security','
-    'Cloud migration','
-    'Data backup solutions'
+    'IT infrastructure setup',Network security',Cloud migration',Data backup solutions'
   ]);
   const [trendingSearches, setTrendingSearches] = useState(['
-    'AI-powered IT management','
-    'Cybersecurity services','
-    'Remote IT support','
-    'Digital transformation'
+    'AI-powered IT management',Cybersecurity services',Remote IT support',Digital transformation'
   ]);
   const [suggestions, setSuggestions] = useState([]);
   const searchRef = useRef(null);
@@ -21,17 +16,18 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
 
   // Sample search suggestions
   const allSuggestions = ['
-    { type: 'service', text: 'IT Support Services', icon: Users, category: 'Services' },'
-    { type: 'service', text: 'Network Security', icon: Building, category: 'Security' },'
-    { type: 'service', text: 'Cloud Solutions', icon: Globe, category: 'Cloud' },'
-    { type: 'service', text: 'Data Recovery', icon: TrendingUp, category: 'Data' },'
-    { type: 'service', text: 'Hardware Installation', icon: Building, category: 'Hardware' },'
-    { type: 'service', text: 'Software Support', icon: Users, category: 'Software' },'
-    { type: 'service', text: 'IT Consulting', icon: TrendingUp, category: 'Consulting' },'
+    { type: 'service', text: 'IT Support Services', icon: Users, category: 'Services' },
+    { type: 'service', text: 'Network Security', icon: Building, category: 'Security' },
+    { type: 'service', text: 'Cloud Solutions', icon: Globe, category: 'Cloud' },
+    { type: 'service', text: 'Data Recovery', icon: TrendingUp, category: 'Data' },
+    { type: 'service', text: 'Hardware Installation', icon: Building, category: 'Hardware' },
+    { type: 'service', text: 'Software Support', icon: Users, category: 'Software' },
+    { type: 'service', text: 'IT Consulting', icon: TrendingUp, category: 'Consulting' },
     { type: 'service', text: 'Managed IT Services', icon: Building, category: 'Managed Services' }
   ];
 
   useEffect(() => {
+
     const handleClickOutside = (event) => {
 
       if (searchRef.current && !searchRef.current.contains(event.target)) {
@@ -39,11 +35,12 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
         setIsOpen(false);
         setActiveIndex(-1)}
     };
-'
-    document.addEventListener('mousedown', handleClickOutside);'
+
+    document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
 
   useEffect(() => {
+
     if (searchQuery.trim()) {
 
       const filtered = allSuggestions.filter(suggestion =>
@@ -60,7 +57,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
     setIsOpen(true)};
 
   const handleKeyDown = (e) => {
-'
+
     if (e.key === 'ArrowDown') {
 
       e.preventDefault();
@@ -68,7 +65,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
         prev < suggestions.length - 1 ? prev + 1 : prev'
       )} else if (e.key === 'ArrowUp') {
 
-      e.preventDefault();'
+      e.preventDefault();
       setActiveIndex(prev => prev > 0 ? prev - 1 : -1)} else if (e.key === 'Enter') {
 
       e.preventDefault();
@@ -76,7 +73,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
 
         handleSuggestionClick(suggestions[activeIndex])} else if (searchQuery.trim()) {
 
-        handleSearch(searchQuery)}'
+        handleSearch(searchQuery)}
     } else if (e.key === 'Escape') {
 
       setIsOpen(false);
@@ -101,8 +98,8 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
       // Store in localStorage'
       localStorage.setItem('recentSearches', JSON.stringify(newRecent));
 
-      // Perform search (in a real app, this would navigate to search results)'
-      // // // // // // // // console.log('Searching for:', query);
+      // Perform search (in a real app, this would navigate to search results)
+      // // // // // // // // // // console.log('Searching for:', query);
 
       // Close search
       setIsOpen(false);
@@ -120,7 +117,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
     handleSearch(search)};
 
   const clearSearch = () => {
-'
+
     setSearchQuery('');
     inputRef.current?.focus()};
 
@@ -128,7 +125,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
 
     e.stopPropagation();
     const newRecent = recentSearches.filter(s => s !== searchToRemove);
-    setRecentSearches(newRecent);'
+    setRecentSearches(newRecent);
     localStorage.setItem('recentSearches', JSON.stringify(newRecent))};
 
   return()
@@ -145,7 +142,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
           onChange={handleInputChange}
           onFocus={handleInputFocus}
           onKeyDown={handleKeyDown}"
-          placeholder="Search for IT services, solutions, or support...""
+          placeholder="Search for IT services, solutions, or support..."
           className="block w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         />
         {searchQuery && (
@@ -171,7 +168,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
                     key={index}
                     onClick={() => handleSuggestionClick(suggestion)}
                     className={`w-full flex items-center space-x-3 px-3 py-2 rounded-md text-left hover:bg-gray-50 ${
-'
+
                       index === activeIndex ? 'bg-blue-50 border border-blue-200' : ''`
                     }`}
 "
@@ -207,12 +204,16 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
   (e) => removeRecentSearch(search,
   e)
 
+<<<<<<< HEAD
+}
+=======
 
 
 
 
 
 }"
+>>>>>>> main
                       className="opacity-0 group-hover:opacity-100 p-1 hover:bg-gray-200 rounded"
 "
                       <X className="w-3 h-3 text-gray-400" />

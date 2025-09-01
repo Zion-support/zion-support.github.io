@@ -1,6 +1,6 @@
-import React, { useState } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { Star, Eye, Heart, ArrowRight, Clock, Users, Award } from 'lucide-react';'
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Star, Eye, Heart, ArrowRight, Clock, Users, Award } from 'lucide-react';
 import { Link } from 'react-router-dom'; // Added Link import
 
 const featuredListings = [
@@ -129,6 +129,7 @@ const categories = ["
     "All", "Web Development", "Mobile Development", "Cloud & DevOps", "AI & Machine Learning", "IoT Solutions", "Data Analytics"
 ];
 export function FeaturedListingsSection() {
+
 "
     const [selectedCategory, setSelectedCategory] = useState("All");
     const [hoveredListing, setHoveredListing] = useState(null);
@@ -151,7 +152,7 @@ export function FeaturedListingsSection() {
     };
     
     const renderStars = (rating) => {
-'
+
         return Array.from({ length: 5 }, (_, i) => (<span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
         ★
       </span>))};"
@@ -162,7 +163,7 @@ export function FeaturedListingsSection() {
 
   {
 
-            backgroundImage: `radial-gradient(circle at 75% 25%, currentColor 1px, transparent 1px)`,'
+            backgroundImage: `radial-gradient(circle at 75% 25%, currentColor 1px, transparent 1px)`,
   backgroundSize: '60px 60px'
 
 }}/>
@@ -342,6 +343,7 @@ export function FeaturedListingsSection() {
 
 }} 
                         animate = {
+
 "
   { opacity: 1, height: "auto",
   y: 0 

@@ -1,9 +1,14 @@
+<<<<<<< HEAD
+import React from "react";
+import Skeleton from "@/components/ui/skeleton";
+=======
 import React from "react";"
 import { BadgeDollarSign import { useWallet } from "@/hooks/useWallet";"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
-import { Button } from "@/components/ui/button";"
-import Skeleton from "@/components/ui/skeleton";
+import { Button } from "@/components/ui/button";"import Skeleton from "@/components/ui/skeleton";
+>>>>>>> main
 export function TokenDisplay() {
+
     const { wallet, loading } = useWallet();
     return (<Card>"
       <CardHeader className="flex flex-row items-center justify-between pb-2">

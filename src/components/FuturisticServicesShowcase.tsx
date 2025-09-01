@@ -1,6 +1,10 @@
-import React, { useState, useEffect } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import {
+
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer - motion';
+=======
+>>>>>>> main
 
 	Rocket,
 	Brain,
@@ -18,79 +22,80 @@ import {
 	Pause'
  } from 'lucide-react';
 interface ServiceShowcase {
+
 	id: string;
 	title: string;
 	description: string;
 	icon: React.ComponentType < any>;
 	color: string;
 	features: string[];
-	price: string;'
+	price: string;
 	status: 'active' | 'beta' | 'new'}
 const futuristicServices: ServiceShowcase[] = [
 	{
-'
-		id: 'quantum-ai-controller','
-		title: 'Quantum AI Controller','
+
+		id: 'quantum-ai-controller',
+		title: 'Quantum AI Controller',
 		description: 'Revolutionary AI controller using quantum computing for autonomous system management.',
-		icon: Brain,'
-		color: 'from-purple-500 to-cyan-500','
-		features['Quantum decision making', 'Autonomous learning', 'System optimization'],;'
-		price: '$32,000/month','
+		icon: Brain,
+		color: 'from-purple-500 to-cyan-500',
+		features['Quantum decision making',Autonomous learning',System optimization'],;
+		price: '$32,000/month',
 		status: 'new'
 	},
 	{
-'
-		id: 'satellite-ai-orchestrator','
-		title: 'Satellite AI Orchestrator','
+
+		id: 'satellite-ai-orchestrator',
+		title: 'Satellite AI Orchestrator',
 		description: 'AI-powered satellite constellation management for optimal orbital positioning.',
-		icon: Rocket,'
-		color: 'from-blue-500 to-indigo-600','
-		features['Autonomous orbital optimization', 'Real-time monitoring', 'Global coverage'],;'
-		price: '$15,000/month','
+		icon: Rocket,
+		color: 'from-blue-500 to-indigo-600',
+		features['Autonomous orbital optimization',Real-time monitoring',Global coverage'],;
+		price: '$15,000/month',
 		status: 'beta'
 	},
 	{
-'
-		id: 'quantum-metaverse-engine','
-		title: 'Quantum Metaverse Engine','
+
+		id: 'quantum-metaverse-engine',
+		title: 'Quantum Metaverse Engine',
 		description: 'Next-generation metaverse platform using quantum computing for infinite scalability.',
-		icon: Eye,'
-		color: 'from-green-500 to-emerald-600','
-		features['Quantum rendering', 'Infinite scalability', 'AI-powered NPCs'],;'
-		price: '$28,000/month','
+		icon: Eye,
+		color: 'from-green-500 to-emerald-600',
+		features['Quantum rendering',Infinite scalability',AI-powered NPCs'],;
+		price: '$28,000/month',
 		status: 'active'
 	},
 	{
-'
-		id: 'autonomous-defi-protocol','
-		title: 'Autonomous DeFi Protocol','
+
+		id: 'autonomous-defi-protocol',
+		title: 'Autonomous DeFi Protocol',
 		description: 'Self-managing DeFi protocol that automatically optimizes yields and manages risks.',
-		icon: DollarSign,'
-		color: 'from-yellow-500 to-orange-500','
-		features['Autonomous yield farming', 'Risk management', 'Strategy optimization'],;'
-		price: '$12,000/month','
+		icon: DollarSign,
+		color: 'from-yellow-500 to-orange-500',
+		features['Autonomous yield farming',Risk management',Strategy optimization'],;
+		price: '$12,000/month',
 		status: 'beta'
 	},
 	{
-'
-		id: 'quantum-genome-analyzer','
-		title: 'Quantum Genome Analyzer','
+
+		id: 'quantum-genome-analyzer',
+		title: 'Quantum Genome Analyzer',
 		description: 'Advanced genome analysis platform using quantum computing for personalized medicine.',
-		icon: Heart,'
-		color: 'from-pink-500 to-rose-600','
-		features['Quantum DNA sequencing', 'Personalized medicine', 'Disease prediction'],;'
-		price: '$18,000/month','
+		icon: Heart,
+		color: 'from-pink-500 to-rose-600',
+		features['Quantum DNA sequencing',Personalized medicine',Disease prediction'],;
+		price: '$18,000/month',
 		status: 'new'
 	},
 	{
-'
-		id: 'autonomous-robotics-platform','
-		title: 'Autonomous Robotics Platform','
+
+		id: 'autonomous-robotics-platform',
+		title: 'Autonomous Robotics Platform',
 		description: 'Complete robotics platform for autonomous manufacturing and logistics operations.',
-		icon: Bot,'
-		color: 'from-gray-500 to-slate-600','
-		features['Autonomous navigation', 'Task learning', 'Multi-robot coordination'],;'
-		price: '$22,000/month','
+		icon: Bot,
+		color: 'from-gray-500 to-slate-600',
+		features['Autonomous navigation',Task learning',Multi-robot coordination'],;
+		price: '$22,000/month',
 		status: 'active'
 
 ];
@@ -99,19 +104,21 @@ export default function FuturisticServicesShowcase(...args[]):  {
 	const [currentService, setCurrentService] = useState(0);
 	const [isPlaying, setIsPlaying] = useState(true);
 	useEffect(() => {
+
 		if (!isPlaying) return;
-		const interval = setInterval ( () => {;
-			setCurrentService ( (prev) => (prev + 1) % futuristicServices.length) ;
-		}, 5000) ;
-		return () => clearInterval (interval) ;
-	}, [isPlaying]) ;
-	const getStatusColor = (status: string) => {;
-		switch (status) {;'
-			case 'new': return 'bg-green-500';'
-			case 'beta': return 'bg-yellow-500';'
-			case 'active': return 'bg-blue-500';'
+		
+			setCurrentService ( (prev) => (prev + 1) % futuristicServices.length) }, 5000) ;
+		return () => clearInterval (interval) }, [isPlaying]) ;
+	
+		switch (status) {;
+			case 'new': return 'bg-green-500';
+			case 'beta': return 'bg-yellow-500';
+			case 'active': return 'bg-blue-500';
 			default: return 'bg-gray-500'}
+	};
+=======
 	};'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 			default: return 'UNKNOWN'}
 	};
 	return()
@@ -135,7 +142,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6, delay: 0.2 }}"
 						className="text-xl text-zion-slate-light max-w-3xl mx-auto"
-'
+
 						Experience the future of technology with our cutting-edge services that push the boundaries of what's possible.
 					</motion.p>
 				</div>
@@ -148,9 +155,8 @@ export default function FuturisticServicesShowcase(...args[]):  {
 								onClick={() => setIsPlaying(!isPlaying)}"
 								className="p-3 bg-white/20 hover:bg-white/30 rounded-full transition-colors"
 "
-								{isPlaying ? <Pause className="w-5 h-5 text-white" /> : <Play className="w-5 h-5 text-white" />}
-							</button>"
-							<div className="flex gap-2">
+								{isPlaying ? <Pause className="w-5 h-5 text-white"  /> : <Play className="w-5 h-5 text-white"  />}
+							</button>"							<div className="flex gap-2">
 								{futuristicServices.map((_, index) => (
 									<button
 										key={index}
@@ -172,19 +178,19 @@ export default function FuturisticServicesShowcase(...args[]):  {
 							initial = {
 
   { opacity: 0,
-  x: 100 
+  x: 100
 
 }}
 							animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
 							exit = {
 
   { opacity: 0,
-  x: -100 
+  x: -100
 
 }}
 							transition={{ duration: 0.5 }}"
@@ -218,32 +224,30 @@ export default function FuturisticServicesShowcase(...args[]):  {
 													initial = {
 
   { opacity: 0,
-  x: -20 
+  x: -20
 
 }}
 													animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
 													transition={{ delay: index * 0.1 }}"
 													className="flex items-center text-zion-slate-light"
 "
-													<Star className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-													{feature}
+													<Star className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0"  />													{feature}
 												</motion.li>;) ) }
 										</ul>
 									</div>
 									<a"
-										href="https://ziontechgroup.com/contact""
-										target="_blank""
-										rel="noopener noreferrer""
+										href="https://ziontechgroup.com/contact"
+										target="_blank"
+										rel="noopener noreferrer"
 										className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-purple hover:to-zion-cyan text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
 
 										Get Started"
-										<ArrowRight className="ml-2 w-5 h-5" />
-									</a>
+										<ArrowRight className="ml-2 w-5 h-5"  />									</a>
 								</div>
 								{/* Right Side - Visual Element */}"
 								<div className="relative">`
@@ -289,19 +293,19 @@ export default function FuturisticServicesShowcase(...args[]):  {
 								initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
 								whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
 								transition = {
 
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 
 
@@ -333,6 +337,5 @@ export default function FuturisticServicesShowcase(...args[]):  {
 					</div>;
 				</div>;
 			</div>;
-		</div>;) ;
-}
+		</div>;) }
 '"`

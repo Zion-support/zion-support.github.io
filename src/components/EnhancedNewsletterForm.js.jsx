@@ -1,10 +1,10 @@
-import { Button } from '@/components/ui/button';'
-import { Input } from '@/components/ui/input';'
-import { useState, useRef } from 'react';'
-import { Mail } from 'lucide-react';'
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { useState, useRef } from 'react';
+import { Mail } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 export function EnhancedNewsletterForm() {
-'
+
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -19,16 +19,16 @@ export function EnhancedNewsletterForm() {
     lastSubmit.current = now;
     const trimmed = email.trim();
     if (!EMAIL_REGEX.test(trimmed)) {
-'
+
       toast.error('Invalid email');
       return;
     }
     setIsSubmitting(true);
     try {
-'
+
       const res = await fetch('/api/newsletter', {
-'
-        method: 'POST','
+
+        method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: trimmed })});
       const data = await res.json().catch(() => ({}));
@@ -36,23 +36,23 @@ export function EnhancedNewsletterForm() {
 
         // Handle different success statuses'
         if (data.status === 'already_subscribed') {
-'
+
           toast.success(data.message || "You're already subscribed!");
         } else {
-'
+
           toast.success(data.message || 'Thanks for subscribing!');
         }
-        setIsSubmitted(true);'
+        setIsSubmitted(true);
         setEmail('');
       } else {
 
         // Handle error responses'
-        // console.error('Newsletter subscription failed:', data);'
+        // // // console.error('Newsletter subscription failed:', data);
         toast.error(data.error || 'Subscription failed. Please try again.');
       }
     } catch (err) {
-'
-      // console.error('Newsletter subscription error:', err);'
+
+      // // // console.error('Newsletter subscription error:', err);
       toast.error('Unable to subscribe right now. Please try again later.');
     } finally {
 
@@ -87,9 +87,9 @@ export function EnhancedNewsletterForm() {
           className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2"
         >
           <Input"
-            type="email""
-            name="email""
-            placeholder="Enter your email""
+            type="email"
+            name="email"
+            placeholder="Enter your email"
             className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
             value={email}
             onChange={e => setEmail(e.target.value)}
@@ -99,7 +99,7 @@ export function EnhancedNewsletterForm() {
             type="submit"
             disabled={isSubmitting}"
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple"
-          >'
+          >
             {isSubmitting ? 'Subscribing...' : 'Subscribe'}
           </Button>
         </form>

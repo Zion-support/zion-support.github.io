@@ -1,33 +1,35 @@
-import React, { useState } from 'react';'
-import { useState } from 'react';'
-import { Link } from 'react-router-dom';'
-import { useNavigate } from 'react-router-dom';'
-import { Logo } from '@/components/header/Logo';'
-import { PointsBadge } from '@/components/loyalty/PointsBadge';'
-import { UserMenu } from '@/components/header/UserMenu';'
-import { LanguageSelector } from '@/components/header/LanguageSelector';'
-import { ModeToggle } from '@/components/ModeToggle';'
-import { useAuth } from '@/hooks/useAuth';'
-import { useIsMobile } from '@/hooks/use-mobile';'
-import { useMessaging } from '@/context/MessagingContext';'
-import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';'
-import { generateSearchSuggestions } from '@/data/marketplaceData';'
-import { slugify } from '@/lib/slugify';'
-import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';'
-import { MobileMenu } from '@/components/header/MobileMenu';'
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';'
-import { Menu, X, ShoppingCart import { useTranslation } from 'react-i18next';'
+import React, { useState } from 'react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { Logo } from '@/components/header/Logo';
+import { PointsBadge } from '@/components/loyalty/PointsBadge';
+import { UserMenu } from '@/components/header/UserMenu';
+import { LanguageSelector } from '@/components/header/LanguageSelector';
+import { ModeToggle } from '@/components/ModeToggle';
+import { useAuth } from '@/hooks/useAuth';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { useMessaging } from '@/context/MessagingContext';
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';
+import { generateSearchSuggestions } from '@/data/marketplaceData';
+import { slugify } from '@/lib/slugify';
+import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
+import { MobileMenu } from '@/components/header/MobileMenu';
+import { MobileBottomNav } from '@/components/header/MobileBottomNav';
+import { Menu, X, ShoppingCart import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 export function PrimaryNav() {
+
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const { user } = useAuth();
     const isMobile = useIsMobile();
     const { t } = useTranslation();
-    const router = useNavigate();'
+    const router = useNavigate();
     const [query, setQuery] = useState('');
     const suggestions = generateSearchSuggestions();
     let unreadCount = 0;
     try {
+
         const messaging = useMessaging();
         unreadCount = messaging.unreadCount}
     catch {
@@ -39,15 +41,15 @@ export function PrimaryNav() {
 
         e.preventDefault();
         if (query.trim()) {
-'
-            // // // // // // // // console.log('PrimaryNav search submit:', query);
-            navigate(`/search/${slugify(query)}`);'
+
+            // // // // // // // // // // console.log('PrimaryNav search submit:', query);
+            navigate(`/search/${slugify(query)}`);
             setQuery('');
-'
-            // console.log('PrimaryNav search submit:', query);`
-            router(`/search/${slugify(query)}`);'
-            // console.log('PrimaryNav search submit:', query);`
-            navigate(`/search/${slugify(query)}`);'
+
+            // // // console.log('PrimaryNav search submit:', query);`
+            router(`/search/${slugify(query)}`);
+            // // // console.log('PrimaryNav search submit:', query);`
+            navigate(`/search/${slugify(query)}`);
             setQuery('');
         }
     };
@@ -63,19 +65,19 @@ export function PrimaryNav() {
 
           {/* Actions container with responsive layout */}"
           <div className="hidden md:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
-            {/* Search form with clamped width */}'
-            // // // // // // // // console.log('PrimaryNav search suggestion selected:', sugg);
+            {/* Search form with clamped width */}
+            // // // // // // // // // // console.log('PrimaryNav search suggestion selected:', sugg);
             // Handle different suggestion types with proper navigation
             if (sugg.id) {
 
                 // Product listings with IDs go to product detail page`
                 navigate(`/marketplace/listing/${sugg.id}`);
-'
+
             else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
 
                 // Documentation suggestions navigate directly to their path
                 navigate(sugg.slug);
-'
+
             else if (sugg.type === 'blog' && sugg.slug) {
 
                 // Blog posts navigate to blog detail page`
@@ -86,21 +88,25 @@ export function PrimaryNav() {
                 // Default: search results page with slug`
                 navigate(`/search/${sugg.slug || slugify(sugg.text)}`);"
             <form onSubmit={handleSubmit} className="flex-shrink-0" style = {
-'
-  { width: 'clamp(12rem, 20vw,'
-  16rem)' 
+
+  { width: 'clamp(12rem, 20vw,
+<<<<<<< HEAD
+  16rem)'
+=======
+  16rem)
 
 
 
 
 
+>>>>>>> main
 
 }}>
               <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion = {
 
   (sugg) => {
-'
-            // console.log('PrimaryNav search suggestion selected:',
+
+            // // // console.log('PrimaryNav search suggestion selected:',
   sugg);
             // Handle different suggestion types with proper navigation
             if (sugg.id) {
@@ -108,16 +114,19 @@ export function PrimaryNav() {
                 // Product listings with IDs go to product detail page`
                 router(`/marketplace/listing/${sugg.id
 
+<<<<<<< HEAD
+=======
 
 
 `
+>>>>>>> main
 }`);
-            }'
+            }
             else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
 
                 // Documentation suggestions navigate directly to their path
                 router(sugg.slug);
-            }'
+            }
             else if (sugg.type === 'blog' && sugg.slug) {
 
                 // Blog posts navigate to blog detail page`
@@ -127,12 +136,12 @@ export function PrimaryNav() {
 
                 // Default: search results page with slug`
                 router(`/search/${sugg.slug || slugify(sugg.text)}`);
-            }'
+            }
             setQuery('');
             // Track analytics event'
             if (typeof window !== 'null' && window.gtag) {
-'
-                window.gtag('event', 'search_suggestion_click', {
+
+                window.gtag('event',search_suggestion_click', {
 
                     search_term: sugg.text,
                     suggestion_type: sugg.type,
@@ -147,10 +156,13 @@ export function PrimaryNav() {
               <HoverCard openDelay={100}>
                 <HoverCardTrigger asChild>"
                   <Link href="/cart" className="relative p-1" aria-label = {
-'
-  t('nav.cart','
-  'Cart')
 
+  t('nav.cart',Cart')
+
+<<<<<<< HEAD
+}>
+                    <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary"/>
+=======
 
 
 
@@ -158,6 +170,7 @@ export function PrimaryNav() {
 
 }>"
                     <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary"/>"
+>>>>>>> main
                     {cartCount > 0 && (<span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
                         {cartCount}
                       </span>)}
@@ -178,18 +191,24 @@ export function PrimaryNav() {
             {/* Auth links - flex wrap for very small screens */}"
             <div className="flex items-center gap-1 flex-wrap">
               {!isLoggedIn && (<>"
-                  <Link href="/auth/login" className="text-sm hover:text-primary whitespace-nowrap" data-testid="login-link">'
+                  <Link href="/auth/login" className="text-sm hover:text-primary whitespace-nowrap" data-testid="login-link">
                     {t('auth.login')}
                   </Link>"
-                  <Link href="/signup" className="text-sm hover:text-primary whitespace-nowrap">'
+                  <Link href="/signup" className="text-sm hover:text-primary whitespace-nowrap">
                     {t('auth.signup')}
                   </Link>
                 </>)}
               {isLoggedIn && <UserMenu />}
             </div>
+<<<<<<< HEAD
+
+          {/* Mobile menu button */}
+          <button className="md:hidden p-2 rounded focus:outline-none flex-shrink-0" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-expanded={mobileMenuOpen} aria-label={t('general.toggle_mobile_menu')}>
+=======
           
           {/* Mobile menu button */}'"
           <button className="md:hidden p-2 rounded focus:outline-none flex-shrink-0" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-expanded={mobileMenuOpen} aria-label={t('general.toggle_mobile_menu')}>"
+>>>>>>> main
             {mobileMenuOpen ? (<X className="h-6 w-6"/>) : (<Menu className="h-6 w-6"/>)}
           </button>
         </div>

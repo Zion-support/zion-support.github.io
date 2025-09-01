@@ -1,4 +1,5 @@
 export interface InnovativeITInfrastructureService {
+
   id: string;
   title: string;
   description: string;
@@ -85,25 +86,26 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     roi: "300-500%","
     innovationLevel: "Cutting-edge",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Kubernetes", "Docker", "Terraform", "Python", "React"],;"
       integrations["AWS", "Azure", "Google Cloud", "DigitalOcean", "Vultr"],;
       apiEndpoints: 400,"
       uptime: "99.99%","
-      security["SOC 2", "ISO 27001", "Zero Trust", "End-to-end encryption"];
-    },;"
-    competitors["HashiCorp", "Pulumi", "CloudBees", "CircleCI", "GitLab"],;"
-    marketSize: "$832.1 billion by 2025"
+      security["SOC 2", "ISO 27001", "Zero Trust", "End-to-end encryption"]},;"
+    competitors["HashiCorp", "Pulumi", "CloudBees", "CircleCI", "GitLab"],;"    marketSize: "$832.1 billion by 2025"
   },
 
   // Edge Computing & IoT Platform
   {
+
 "
     id: "edge-computing-iot-platform","
     title: "Edge Computing & IoT Platform Enterprise","
@@ -153,25 +155,26 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     roi: "250-400%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Kubernetes Edge", "Docker Edge", "MQTT", "WebRTC", "Node.js"],;"
       integrations["IoT platforms", "Cloud services", "Network equipment", "Industrial systems", "Mobile networks"],;
       apiEndpoints: 300,"
       uptime: "99.9%","
-      security["Edge security", "Data encryption", "Device authentication", "Network isolation"];
-    },;"
-    competitors["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "Cisco Edge", "HPE Edge"],;"
-    marketSize: "$43.4 billion by 2025"
+      security["Edge security", "Data encryption", "Device authentication", "Network isolation"]},;"
+    competitors["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "Cisco Edge", "HPE Edge"],;"    marketSize: "$43.4 billion by 2025"
   },
 
   // Quantum-Ready Network Infrastructure
   {
+
 "
     id: "quantum-ready-network-infrastructure","
     title: "Quantum-Ready Network Infrastructure","
@@ -221,25 +224,26 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     roi: "400-800%","
     innovationLevel: "Revolutionary",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Quantum protocols", "Post-quantum crypto", "Quantum networks", "Python", "C++"],;"
       integrations["Quantum computers", "Classical networks", "Security systems", "Monitoring tools", "Research platforms"],;
       apiEndpoints: 150,"
       uptime: "99.9%","
-      security["Quantum security", "Post-quantum crypto", "Quantum key distribution", "Advanced encryption"];
-    },;"
-    competitors["IBM Quantum Network", "Microsoft Azure Quantum", "Google Quantum", "Rigetti", "IonQ"],;"
-    marketSize: "$89.2 billion by 2025"
+      security["Quantum security", "Post-quantum crypto", "Quantum key distribution", "Advanced encryption"]},;"
+    competitors["IBM Quantum Network", "Microsoft Azure Quantum", "Google Quantum", "Rigetti", "IonQ"],;"    marketSize: "$89.2 billion by 2025"
   },
 
   // AI-Powered Data Center Management
   {
+
 "
     id: "ai-powered-data-center-management","
     title: "AI-Powered Data Center Management Platform","
@@ -289,25 +293,26 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     roi: "200-350%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Python", "TensorFlow", "IoT sensors", "Machine Learning", "React"],;"
       integrations["Building management systems", "Power monitoring", "Cooling systems", "Server management", "Environmental sensors"],;
       apiEndpoints: 200,"
       uptime: "99.9%","
-      security["SOC 2", "Data encryption", "Access controls", "Audit logging"];
-    },;"
-    competitors["Schneider Electric", "Eaton", "Vertiv", "Emerson", "HPE"],;"
-    marketSize: "$59.7 billion by 2025"
+      security["SOC 2", "Data encryption", "Access controls", "Audit logging"]},;"
+    competitors["Schneider Electric", "Eaton", "Vertiv", "Emerson", "HPE"],;"    marketSize: "$59.7 billion by 2025"
   },
 
   // 5G & 6G Network Infrastructure
   {
+
 "
     id: "5g-6g-network-infrastructure","
     title: "5G & 6G Network Infrastructure Solutions","
@@ -357,20 +362,21 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     roi: "300-600%","
     innovationLevel: "Cutting-edge",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["5G NR", "Network slicing", "Edge computing", "AI/ML", "Python"],;"
       integrations["Core networks", "Radio access networks", "Edge computing", "Cloud services", "IoT platforms"],;
       apiEndpoints: 500,"
       uptime: "99.99%","
-      security["Network security", "Encryption", "Authentication", "Privacy protection"];
-    },;"
+      security["Network security", "Encryption", "Authentication", "Privacy protection"]},;"
     competitors["Ericsson", "Nokia", "Huawei", "Samsung", "Qualcomm"],;"
     marketSize: "$667.9 billion by 2025"
 
-];}}"
+]}}"

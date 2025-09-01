@@ -1,12 +1,12 @@
-import React, { useState } from 'react';'
-import { GradientHeading } from '@/components/GradientHeading';'
-import { Button } from '@/components/ui/button';'
-import { Input } from '@/components/ui/input';'
-import { useNavigate } from 'react-router-dom';'
-import { motion } from 'framer-motion';'
+import React, { useState } from 'react';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Clock, Globe, Shield, Zap, MapPin } from 'lucide-react';
 export function ITServiceRequestHero() {
-'
+
   const [location, setLocation] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
@@ -18,6 +18,7 @@ export function ITServiceRequestHero() {
       setIsSubmitting(true);
       // Simulate API call
       setTimeout(() => {
+
         setIsSubmitting(false);
         router(`/it-onsite-services?location=${encodeURIComponent(location)}`);
       }, 1000);
@@ -43,13 +44,13 @@ export function ITServiceRequestHero() {
       y: 0,
       transition: { duration: 0.5 }}};
   const features = ['
-    { icon: Clock, text: '24/7 Availability', color: 'text-zion-cyan' },'
+    { icon: Clock, text: '24/7 Availability', color: 'text-zion-cyan' },
     { icon: Globe, text: 'Global Coverage', color: 'text-zion-purple' },
     {
 
-      icon: Shield,'
-      text: 'Certified Technicians','
-      color: 'text-zion-cyan-light'},'
+      icon: Shield,
+      text: 'Certified Technicians',
+      color: 'text-zion-cyan-light'},
     { icon: Zap, text: 'Fast Response', color: 'text-zion-purple-light' },
   ];
   return()
@@ -63,7 +64,7 @@ export function ITServiceRequestHero() {
       <motion.div"
         className="container mx-auto px-4 relative z-10"
         variants={containerVariants}"
-        initial="hidden""
+        initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       >"
@@ -149,7 +150,7 @@ export function ITServiceRequestHero() {
                     <Input
                       value={location}
                       onChange={e => setLocation(e.target.value)}"
-                      placeholder="Enter service location (e.g., New York, NY)""
+                      placeholder="Enter service location (e.g., New York, NY)"
                       className="w-full bg-white/10 border-white/30 focus:border-zion-cyan focus:ring-zion-cyan text-white placeholder-zion-slate-light rounded-xl py-4 px-4 text-lg backdrop-blur-sm"
                       required
                     />"
@@ -157,7 +158,7 @@ export function ITServiceRequestHero() {
                   </div>
 
                   <Button"
-                    type="submit""
+                    type="submit"
                     className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-lg py-4 rounded-xl shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 group"
                   >"
                     <span className="flex items-center gap-2">

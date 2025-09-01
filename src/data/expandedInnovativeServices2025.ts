@@ -1,4 +1,5 @@
 export interface ExpandedInnovativeService {
+
   id: string;
   title: string;
   description: string;
@@ -83,23 +84,24 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     roi: "300-500%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["AI/ML", "Blockchain", "Zero Trust", "SIEM", "SOAR"],;"
       integrations["AWS", "Azure", "GCP", "Splunk", "QRadar"],;
       apiEndpoints: 150,"
       uptime: "99.99%","
-      security["SOC 2", "ISO 27001", "GDPR", "HIPAA", "FedRAMP"];
-    }
-  },
+      security["SOC 2", "ISO 27001", "GDPR", "HIPAA", "FedRAMP"]}  },
 
   // AI Sales Co-pilot for SMBs
   {
+
 "
     id: "ai-sales-copilot-smb","
     title: "AI Sales Co‑pilot for SMBs","
@@ -143,23 +145,24 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     roi: "200–350%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["LLM", "Vector DB", "RAG", "Webhooks"],;"
       integrations["Salesforce", "HubSpot", "Pipedrive", "Outlook", "Gmail"],;
       apiEndpoints: 42,"
       uptime: "99.9%","
-      security["SOC 2", "GDPR", "SAML SSO"];
-    }
-  },
+      security["SOC 2", "GDPR", "SAML SSO"]}  },
 
   // FinOps cost optimization for cloud
   {
+
 "
     id: "cloud-finops-optimizer","
     title: "Cloud FinOps Optimizer","
@@ -198,17 +201,17 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     innovationLevel: "Professional","
     contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
     technicalSpecs: {
+
 "
       technology["AWS CUR", "BigQuery", "Athena", "Prometheus"],;"
       integrations["AWS", "Azure", "GCP", "Datadog", "PagerDuty"],;
       apiEndpoints: 65,"
       uptime: "99.9%","
-      security["SOC 2", "ISO 27001", "SSO"];
-    }
-  },
+      security["SOC 2", "ISO 27001", "SSO"]}  },
 
   // Managed MLOps platform
   {
+
 "
     id: "managed-mlops-platform","
     title: "Managed MLOps Platform","
@@ -247,17 +250,17 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     innovationLevel: "Advanced","
     contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
     technicalSpecs: {
+
 "
       technology["Kubernetes", "Ray", "Feast", "MLflow", "Kafka"],;"
       integrations["SageMaker", "Vertex AI", "Databricks", "Snowflake"],;
       apiEndpoints: 93,"
       uptime: "99.95%","
-      security["SOC 2", "HIPAA", "GDPR"];
-    }
-  },
+      security["SOC 2", "HIPAA", "GDPR"]}  },
 
   // eCommerce personalization micro‑SaaS
   {
+
 "
     id: "ecommerce-personalization-engine","
     title: "eCommerce Personalization Engine","
@@ -299,6 +302,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
 
   // SOC2-in-a-box compliance automation
   {
+
 "
     id: "soc2-in-a-box","
     title: "SOC 2‑in‑a‑Box Compliance Automation","
@@ -340,6 +344,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
 
   // Data platform in a week (modern stack)
   {
+
 "
     id: "modern-data-platform-week","
     title: "Modern Data Platform in a Week","
@@ -378,17 +383,17 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     innovationLevel: "Advanced","
     contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
     technicalSpecs: {
+
 "
       technology["Fivetran", "Airbyte", "dbt", "BigQuery", "Snowflake"],;"
       integrations["GA4", "Salesforce", "HubSpot", "Stripe", "Postgres"],;
       apiEndpoints: 18,"
       uptime: "99.9%","
-      security["SSO", "Row‑level security"];
-    }
-  }
+      security["SSO", "Row‑level security"]}  }
 
   // Blockchain-Based Supply Chain Transparency
   {
+
 "
     id: "blockchain-supply-chain-transparency","
     title: "Blockchain Supply Chain Transparency Platform","
@@ -438,6 +443,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     roi: "250-400%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -447,6 +453,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
 
   // IoT Edge Computing Analytics Platform
   {
+
 "
     id: "iot-edge-computing-analytics","
     title: "IoT Edge Computing Analytics Platform","
@@ -496,6 +503,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     roi: "300-450%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -505,6 +513,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
 
   // AI-Powered Legal Document Analysis
   {
+
 "
     id: "ai-legal-document-analysis","
     title: "AI Legal Document Analysis Platform","
@@ -554,6 +563,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     roi: "200-350%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -563,6 +573,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
 
   // Quantum-Ready Cryptography Platform
   {
+
 "
     id: "quantum-ready-cryptography","
     title: "Quantum-Ready Cryptography Platform","
@@ -612,6 +623,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     roi: "400-600%","
     innovationLevel: "Cutting-edge",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -621,6 +633,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
 
   // AI-Powered Healthcare Diagnostics
   {
+
 "
     id: "ai-healthcare-diagnostics","
     title: "AI Healthcare Diagnostics Platform","
@@ -670,6 +683,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     roi: "350-500%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -679,6 +693,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
 
   // Sustainable Energy Management Platform
   {
+
 "
     id: "sustainable-energy-management","
     title: "Sustainable Energy Management Platform","
@@ -728,6 +743,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     roi: "250-400%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -737,6 +753,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
 
   // AI-Powered Financial Fraud Detection
   {
+
 "
     id: "ai-financial-fraud-detection","
     title: "AI Financial Fraud Detection Platform","
@@ -786,6 +803,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     roi: "300-500%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -795,6 +813,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
 
   // Autonomous Vehicle Fleet Management
   {
+
 "
     id: "autonomous-vehicle-fleet-management","
     title: "Autonomous Vehicle Fleet Management Platform","
@@ -844,6 +863,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     roi: "400-600%","
     innovationLevel: "Cutting-edge",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -853,6 +873,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
 
   // AI-Powered Content Creation Platform
   {
+
 "
     id: "ai-content-creation-platform","
     title: "AI Content Creation Platform","
@@ -902,6 +923,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     roi: "200-400%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -911,6 +933,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
 
   // AI Agent Helpdesk for ITSM
   {
+
 "
     id: "ai-agent-itsm-helpdesk","
     title: "AI Agent Helpdesk for ITSM","
@@ -953,6 +976,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     innovationLevel: "Advanced","
     contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
     technicalSpecs: {
+
 "
       technology: ["LLM", "Vector DB", "RAG", "Serverless Functions"],"
       integrations: ["ServiceNow", "Jira Service Management", "Zendesk", "Okta"],
@@ -964,6 +988,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
 
   // Data Governance & Quality as a Service
   {
+
 "
     id: "data-governance-quality-aas","
     title: "Data Governance & Quality as a Service","
@@ -1001,6 +1026,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     innovationLevel: "Professional","
     contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
     technicalSpecs: {
+
 "
       technology: ["dbt", "OpenLineage", "Great Expectations", "Airflow"],"
       integrations: ["Snowflake", "BigQuery", "Redshift", "Looker"],
@@ -1012,6 +1038,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
 
   // Cloud Landing Zone in 10 Days
   {
+
 "
     id: "cloud-landing-zone-10-days","
     title: "Cloud Landing Zone in 10 Days","
@@ -1049,6 +1076,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     innovationLevel: "Professional","
     contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
     technicalSpecs: {
+
 "
       technology: ["Terraform", "Crossplane", "AWS/Azure/GCP Org"],"
       integrations: ["Okta", "Datadog", "PagerDuty"],
@@ -1060,6 +1088,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
 
   // Marketing Content Ops Co-pilot
   {
+
 "
     id: "marketing-content-ops-copilot","
     title: "Marketing Content Ops Co‑pilot","
@@ -1100,6 +1129,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
   ,
   // Cloud Cost Optimization AI
   {
+
 "
     id: "cloud-cost-optimizer-ai","
     title: "Cloud Cost Optimizer AI","
@@ -1149,22 +1179,23 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     roi: "200-500%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Python", "dbt", "BigQuery", "Athena", "K8s"],;"
       integrations["AWS", "Azure", "GCP", "Datadog", "Snowflake"],;
       apiEndpoints: 85,"
       uptime: "99.9%","
-      security["SOC 2", "ISO 27001"];
-    }
-  },
+      security["SOC 2", "ISO 27001"]}  },
   // SOC 2 & ISO 27001 Compliance Copilot
   {
+
 "
     id: "soc2-iso-compliance-copilot","
     title: "Compliance Copilot for SOC 2 & ISO 27001","
@@ -1202,22 +1233,23 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     roi: "150-400%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Node.js", "PostgreSQL", "OpenAPI", "LLM"],;"
       integrations["Okta", "Google Workspace", "Azure AD", "AWS", "GitHub"],;
       apiEndpoints: 110,"
       uptime: "99.9%","
-      security["SOC 2", "ISO 27001", "SAML", "SCIM"];
-    }
-  },
+      security["SOC 2", "ISO 27001", "SAML", "SCIM"]}  },
   // Data Pipeline Observability Platform
   {
+
 "
     id: "data-pipeline-observability","
     title: "Data Pipeline Observability Platform","
@@ -1256,16 +1288,16 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     innovationLevel: "Advanced","
     contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
     technicalSpecs: {
+
 "
       technology["Python", "Airflow", "dbt", "Spark"],;"
       integrations["Fivetran", "Snowflake", "BigQuery", "Redshift", "Airbyte"],;
       apiEndpoints: 95,"
       uptime: "99.9%","
-      security["SOC 2", "Row-level security"];
-    }
-  },
+      security["SOC 2", "Row-level security"]}  },
   // AI Customer Support Agent Platform
   {
+
 "
     id: "ai-customer-support-agent","
     title: "AI Customer Support Agent Platform","
@@ -1304,16 +1336,16 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     innovationLevel: "Advanced","
     contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
     technicalSpecs: {
+
 "
       technology["Typescript", "Vector DB", "LLM", "gRPC"],;"
       integrations["Zendesk", "Intercom", "Salesforce", "HubSpot"],;
       apiEndpoints: 70,"
       uptime: "99.9%","
-      security["SOC 2", "PII redaction"];
-    }
-  },
+      security["SOC 2", "PII redaction"]}  },
   // Privacy Request Automation (DSAR)
   {
+
 "
     id: "privacy-request-automation","
     title: "Privacy Request Automation (DSAR)","
@@ -1354,6 +1386,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
   },
   // MLOps Continuous Delivery Platform
   {
+
 "
     id: "mlops-continuous-delivery","
     title: "MLOps Continuous Delivery Platform","
@@ -1392,18 +1425,17 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     innovationLevel: "Advanced","
     contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
     technicalSpecs: {
+
 "
       technology["Kubernetes", "Kafka", "Ray", "Feast"],;"
       integrations["SageMaker", "Vertex AI", "Databricks", "MLflow"],;
       apiEndpoints: 140,"
       uptime: "99.95%","
-      security["SOC 2", "RBAC", "IAM"];
-    }
-  }
+      security["SOC 2", "RBAC", "IAM"]}  }
 ];
 ;
 export { EXPANDED_INNOVATIVE_SERVICES_2025 };
-export default EXPANDED_INNOVATIVE_SERVICES_2025;}}
+export default EXPANDED_INNOVATIVE_SERVICES_2025}}
 
 
 
@@ -1423,4 +1455,4 @@ export default EXPANDED_INNOVATIVE_SERVICES_2025;}}
 
 }
 
-export default EXPANDED_INNOVATIVE_SERVICES_2025;}}"
+export default EXPANDED_INNOVATIVE_SERVICES_2025}}"

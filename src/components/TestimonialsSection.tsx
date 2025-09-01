@@ -1,11 +1,23 @@
-import React, { useState } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+import React, { useState } from 'react';
+export const TestimonialsSection: React.FC = () => {
+
+import {
+
+import { motion, AnimatePresence } from 'framer - motion';
+
+  Star,
+  Quote,
+  ChevronLeft,
+  ChevronRight,
+=======
 import {
 
   Star, 
   Quote, 
   ChevronLeft, 
   ChevronRight, 
+>>>>>>> main
   CheckCircle,
   Award,
   TrendingUp,
@@ -23,9 +35,7 @@ interface Testimonial {
   content: string;
   industry: string;
   results: string[];
-  verified: boolean;
-
-}
+  verified: boolean}
 ;
 const testimonials: Testimonial[] = [
   {
@@ -35,7 +45,7 @@ const testimonials: Testimonial[] = [
     position: "CTO","
     company: "TechFlow Solutions","
     avatar: "/images/testimonials/sarah-chen.jpg",
-    rating: 5,'"
+    rating: 5,"
     content: "Zion Tech Group's AI autonomous operations platform transformed our business. We've seen a 300% increase in efficiency and 40% reduction in operational costs. Their quantum computing solutions are truly revolutionary.","
     industry: "Technology","
     results: ["300% efficiency increase", "40% cost reduction", "24/7 autonomous operations"],
@@ -48,7 +58,7 @@ const testimonials: Testimonial[] = [
     position: "VP of Operations","
     company: "Global Manufacturing Corp","
     avatar: "/images/testimonials/marcus-rodriguez.jpg",
-    rating: 5,'"
+    rating: 5,"
     content: "The AI-powered cybersecurity suite has been a game-changer for our manufacturing operations. We've prevented 99.9% of cyber threats and achieved full compliance with industry standards.","
     industry: "Manufacturing","
     results: ["99.9% threat prevention", "Full compliance achieved", "Zero downtime incidents"],
@@ -61,7 +71,7 @@ const testimonials: Testimonial[] = [
     position: "Research Director","
     company: "Quantum Research Institute","
     avatar: "/images/testimonials/emily-watson.jpg",
-    rating: 5,'"
+    rating: 5,"
     content: "Working with Zion's quantum neural network platform has accelerated our research by orders of magnitude. We're solving problems that were previously impossible with classical computing.","
     industry: "Research","
     results: ["1000x speed improvement", "Breakthrough discoveries", "Patent applications filed"],
@@ -74,7 +84,7 @@ const testimonials: Testimonial[] = [
     position: "CEO","
     company: "FinTech Innovations","
     avatar: "/images/testimonials/james-thompson.jpg",
-    rating: 5,'"
+    rating: 5,"
     content: "The AI financial analytics platform has given us unprecedented insights into market trends. Our investment decisions are now data-driven and we've outperformed the market by 25%.","
     industry: "Finance","
     results: ["25% market outperformance", "Real-time analytics", "Risk reduction"],
@@ -87,7 +97,7 @@ const testimonials: Testimonial[] = [
     position: "Head of Marketing","
     company: "E-commerce Dynamics","
     avatar: "/images/testimonials/lisa-park.jpg",
-    rating: 5,'"
+    rating: 5,"
     content: "Zion's AI marketing automation tools have revolutionized our customer acquisition. We've seen a 150% increase in conversion rates and 80% reduction in marketing costs.","
     industry: "E-commerce","
     results: ["150% conversion increase", "80% cost reduction", "Personalized campaigns"],
@@ -97,55 +107,31 @@ const testimonials: Testimonial[] = [
     content: "The cloud infrastructure solution provided by Zion Tech Group has dramatically improved our system reliability and scalability.",;
     rating: 5,;"
     industry: "Healthcare",;"
-    project: "Cloud Migration & Optimization";
-  };
+    project: "Cloud Migration & Optimization"};
 ];
 
-const stats = ["
-  { icon: Users, value: "500+", label: "Happy Clients", description: "Trusted by businesses worldwide" },"
-  { icon: TrendingUp, value: "95%", label: "Success Rate", description: "Proven track record of delivery" },"
-  { icon: Award, value: "25+", label: "Industry Awards", description: "Recognition for excellence" },"
-  { icon: CheckCircle, value: "99.9%", label: "Uptime", description: "Reliable service delivery" }
-];
+
 ;
 export const TestimonialsSection: React.FC = props {
+
   const [currentTestimonial, setCurrentTestimonial] = useState<typeof 0>(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState<typeof true>(true);
 
   const [currentTestimonial, setCurrentTestimonial] = useState (0) ;
-  const [isAutoPlaying, setIsAutoPlaying] = useState (true) ;
-
-  const nextTestimonial = () => {
-    setCurrentTestimonial ( (prev) => (prev + 1) % testimonials.length) ;
-  };
-
-  const prevTestimonial = () => {
-    setCurrentTestimonial ( (prev) => (prev - 1 + testimonials.length) % testimonials.length) ;
-  };
-
-  const goToTestimonial = (index: number) => {
-
-    setCurrentTestimonial(index);
-  };
+  const [isAutoPlaying, setIsAutoPlaying] = useState (true) }}};
 
   // Auto - play functionality
   React.useEffect ( () => {
-    if (!isAutoPlaying) return;
 
-    const interval = setInterval ( () => {
-      nextTestimonial () ;
-    }, 5000) ;
+    if (!isAutoPlaying) return}, 5000) ;
 
-    return () => clearInterval (interval) ;
-  }, [isAutoPlaying, currentTestimonial]) ;
+    return () => clearInterval (interval) }, [isAutoPlaying, currentTestimonial]) ;
 
-  const current = testimonials[currentTestimonial];
-
+  
   return ("
     <section className = "py-20 bg-zion-blue-dark">"
       <div className="container mx-auto px-4">"
-        <div className="text-center mb-16">"
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="text-center mb-16">"          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             What Our Users Say
           </h2>"
           <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
@@ -160,13 +146,11 @@ export const TestimonialsSection: React.FC = props {
 
               {/* Quote icon */}"
               <div className="mb-4">"
-                <Quote className="w-8 h-8 text-zion-cyan opacity-60" />
-              </div>
+                <Quote className="w-8 h-8 text-zion-cyan opacity-60"  />              </div>
               {/* Rating */}"
               <div className="flex items-center mb-4">;
                 {[...Array(testimonial.rating)].map((_, i) => (;"
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"  />                ))}
               </div>
               {/* Content */}"
               <p className="text-zion-slate-light mb-6 leading-relaxed">"
@@ -256,14 +240,27 @@ export const TestimonialsSection: React.FC = props {
                 <div className="flex-1">"
                   <div className="flex items-center gap-2 mb-4">
                     {[...Array(current.rating)].map((_, i) => ("
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"  />
                     ))}
                   </div>
-                  "
-                  <Quote className="w-8 h-8 text-cyan-400 mb-4" />
-                  "
-                  <blockquote className="text-lg md:text-xl text-white mb-6 leading-relaxed">"
+<<<<<<< HEAD
+
+                  <Quote className="w - 8 h - 8 text - cyan - 400 mb - 4" />
+
+                  <blockquote className="text - lg md:text - xl text - white mb - 6 leading - relaxed">
                     "{current.content}"
+                  </blockquote>
+
+                  <div role="button" className="space - y-3">
+                    <h4 className="text - xl font - semibold text - white">{current.name}</h4>
+                    <p className="text - cyan - 400">{current.position}</p>
+                    <p className="text - gray - 300">{current.company}</p>
+                    <p className="text - sm text - gray - 400">{current.industry} Industry</p>
+=======
+                  "
+                  <Quote className="w-8 h-8 text-cyan-400 mb-4"  />
+                  "
+                  <blockquote className="text-lg md:text-xl text-white mb-6 leading-relaxed">"                    "{current.content}"
                   </blockquote>
                   "
                   <div className="space-y-3">"
@@ -271,6 +268,7 @@ export const TestimonialsSection: React.FC = props {
                     <p className="text-cyan-400">{current.position}</p>"
                     <p className="text-gray-300">{current.company}</p>"
                     <p className="text-sm text-gray-400">{current.industry} Industry</p>
+>>>>>>> main
                   </div>
                 </div>
 
@@ -279,8 +277,7 @@ export const TestimonialsSection: React.FC = props {
                   {/* Verification Badge */}
                   {current.verified && ("
                     <div className="flex items-center gap-2 bg-green-500/20 border border-green-500/30 rounded-lg p-3">"
-                      <CheckCircle className="w-5 h-5 text-green-400" />"
-                      <span className="text-green-400 text-sm font-medium">Verified Customer</span>
+                      <CheckCircle className="w-5 h-5 text-green-400"  />"                      <span className="text-green-400 text-sm font-medium">Verified Customer</span>
                     </div>
                   )}
 
@@ -290,8 +287,7 @@ export const TestimonialsSection: React.FC = props {
                     <ul className="space-y-2">
                       {current.results.map((result, index) => ("
                         <li key={index} className="flex items-center gap-2 text-sm text-gray-300">"
-                          <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                          {result}
+                          <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0"  />                          {result}
                         </li>) ) }
                     </ul>
                   </div>
@@ -309,11 +305,10 @@ export const TestimonialsSection: React.FC = props {
           <div className="flex items-center justify-center mt-8 gap-4">
             <button
               onClick={prevTestimonial}"
-              className="p-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover:scale-110""
+              className="p-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover:scale-110"
               aria-label="Previous testimonial"
             >"
-              <ChevronLeft className="w-5 h-5" />
-            </button>
+              <ChevronLeft className="w-5 h-5"  />            </button>
 
             {/* Dots */}"
             <div className="flex gap-2">
@@ -334,11 +329,10 @@ export const TestimonialsSection: React.FC = props {
 
             <button
               onClick={nextTestimonial}"
-              className="p-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover:scale-110""
+              className="p-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover:scale-110"
               aria-label="Next testimonial"
             >"
-              <ChevronRight className="w-5 h-5" />
-            </button>
+              <ChevronRight className="w-5 h-5"  />            </button>
           </div>
 
           {/* Auto-play Toggle */}"
@@ -351,7 +345,7 @@ export const TestimonialsSection: React.FC = props {
                   ? 'bg-cyan-500 text-white''
                   : 'bg-white/10 text-gray-300 hover:bg-white/20'`
               }`}
-            >'
+            >
               {isAutoPlaying ? 'Pause' : 'Play'} Auto-rotation
             </button>
           </div>
@@ -381,6 +375,5 @@ export const TestimonialsSection: React.FC = props {
           </div>;
         </motion.div>;
       </div>;
-    </section>;) ;
-};
+    </section>;) };
 '"`

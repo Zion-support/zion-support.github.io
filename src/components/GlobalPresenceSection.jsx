@@ -1,6 +1,13 @@
-import React, { useState } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState } from 'react';
+<<<<<<< HEAD
+export function GlobalPresenceSection () {
+
+import { motion, AnimatePresence } from 'framer - motion';
+
+=======
+import { motion, AnimatePresence } from 'framer-motion';
 import { Globe, MapPin, Users, Award, Star, TrendingUp, Building, ArrowRight, CheckCircle, Clock } from 'lucide-react';
+>>>>>>> main
 const globalStats = [
     { icon: <Globe className="w-6 h-6"/>, value: "25+", label: "Countries Served" },"
     { icon: <Building className="w-6 h-6"/>, value: "6", label: "Global Offices" },"
@@ -11,6 +18,7 @@ const globalStats = [
 ];
 const partnerships = [
     {
+
 "
         name: "Microsoft","
         type: "Technology Partner","
@@ -21,6 +29,7 @@ const partnerships = [
         status: "Active"
     },
     {
+
 "
         name: "AWS","
         type: "Cloud Partner","
@@ -31,6 +40,7 @@ const partnerships = [
         status: "Active"
     },
     {
+
 "
         name: "Google Cloud","
         type: "Cloud Partner","
@@ -41,6 +51,7 @@ const partnerships = [
         status: "Active"
     },
     {
+
 "
         name: "Salesforce","
         type: "Business Partner","
@@ -51,6 +62,7 @@ const partnerships = [
         status: "Active"
     },
     {
+
 "
         name: "Oracle","
         type: "Enterprise Partner","
@@ -61,6 +73,7 @@ const partnerships = [
         status: "Active"
     },
     {
+
 "
         name: "IBM","
         type: "Technology Partner","
@@ -97,7 +110,7 @@ const industries = ["
     const itemVariants = {
 
   hidden: { y: 30,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -124,12 +137,12 @@ const industries = ["
         <motion.div className="text-center mb-20" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -150,17 +163,17 @@ const industries = ["
             {globalStats.map((stat, index) => (<motion.div key={index} initial = {
 
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }} whileInView = {
 
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.4,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 
 
@@ -181,17 +194,17 @@ const industries = ["
         <motion.div className="mb-20" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 
 
@@ -207,17 +220,17 @@ const industries = ["
             {globalOffices.map((office, index) => (<motion.div key={office.id} initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.4,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 
 
@@ -278,17 +291,18 @@ const industries = ["
                     {selectedOffice === office.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
 
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 }} animate = {
+
 "
   { opacity: 1, height: "auto",
-  y: 0 
+  y: 0
 
 }} exit = {
 
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 
 
@@ -325,17 +339,17 @@ const industries = ["
         <motion.div className="mb-20" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.6,
-  delay: 0.3 
+  delay: 0.3
 
 
 
@@ -351,17 +365,17 @@ const industries = ["
             {partnerships.map((partnership, index) => (<motion.div key={index} initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.4,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 
 
@@ -403,17 +417,18 @@ const industries = ["
                     {selectedPartnership === index && (<motion.div className="mt-4 p-3 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
 
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 }} animate = {
+
 "
   { opacity: 1, height: "auto",
-  y: 0 
+  y: 0
 
 }} exit = {
 
   { opacity: 0, height: 0,
-  y: 10 
+  y: 10
 
 
 
@@ -436,17 +451,17 @@ const industries = ["
         <motion.div className="mb-20" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 
 
@@ -462,17 +477,17 @@ const industries = ["
             {industries.map((industry, index) => (<motion.div key={index} initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.4,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }} onHoverStart={ () => setHoveredIndustry (index) } onHoverEnd={ () => setHoveredIndustry (null) } whileHover={{ y: -4 }} className="p - 6 rounded - 2xl bg - gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 30 hover:border - zion - cyan / 50 transition - all duration - 300 hover:shadow - lg hover:shadow - zion - cyan / 20">
                 <h4 className="text - xl font - bold text - white mb - 4">{industry.name}</h4>
@@ -506,17 +521,17 @@ const industries = ["
         <motion.div className="text-center" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.6,
-  delay: 0.5 
+  delay: 0.5
 
 
 
@@ -529,7 +544,7 @@ const industries = ["
               <h3 className="text-2xl font-bold text-white mb-4">
                 Ready to Go Global with Zion?
               </h3>"
-              <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">'
+              <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
                 Whether you're in San Francisco or Singapore, our global team is ready to help you
                 scale your business worldwide with cutting-edge technology solutions.
               </p>"

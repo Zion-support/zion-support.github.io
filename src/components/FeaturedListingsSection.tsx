@@ -1,10 +1,20 @@
-import React, { useState } from 'react.ts';'
-import { motion, AnimatePresence  } from 'framer-motion.ts';'
-import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar  } from 'lucide-react';'
-import { Link  } from 'react-router-dom.ts';'
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+import { Link  } from 'react - router - dom.ts';
+import { Link } from 'react - router - dom';
+import React, { useState } from 'react';
+import React, { useState } from 'react.ts';
+export /**
+import { motion } from 'framer - motion';
+import { motion, AnimatePresence  } from 'framer - motion.ts';
+
+ * FeaturedListingsSection function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function FeaturedListingsSection () {
+
+=======
+>>>>>>> main
 
 const featuredListings = [
   {
@@ -25,9 +35,7 @@ const featuredListings = [
     location: "Remote",
     featured: true,"
     technologies["React", "Node.js", "MongoDB", "AI/ML", "AWS"],;"
-    highlights["AI Recommendations", "Real-time Analytics", "Mobile Responsive", "SEO Optimized"];
-  },;
-  {
+    highlights["AI Recommendations", "Real-time Analytics", "Mobile Responsive", "SEO Optimized"]},;  {
 
     id: 2,"
     title: "Mobile Banking Application","
@@ -45,9 +53,7 @@ const featuredListings = [
     location: "Hybrid",
     featured: true,"
     technologies["React Native", "Node.js", "PostgreSQL", "Biometrics", "Security"],;"
-    highlights["Biometric Auth", "Real-time Transactions", "Security Compliance", "Cross-platform"];
-  },;
-  {
+    highlights["Biometric Auth", "Real-time Transactions", "Security Compliance", "Cross-platform"]},;  {
 
     id: 3,"
     title: "Blockchain Supply Chain Platform","
@@ -57,11 +63,8 @@ const featuredListings = [
     image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400",
     rating: 4.7,"
     technologies["AWS", "Docker", "Kubernetes", "Jenkins", "Prometheus"],;"
-    highlights["Zero Downtime", "Auto-scaling", "Monitoring", "Security"];
-  }
-    reviews: 234;
-  },;
-  {
+    highlights["Zero Downtime", "Auto-scaling", "Monitoring", "Security"]}
+    reviews: 234},;  {
 
     id: 4,"
     title: "IoT Edge Computing Platform",;"
@@ -70,26 +73,33 @@ const featuredListings = [
     price: "$449/month",;"
     image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400",;
     rating: 4.6,;
-    reviews: 178;
-  };
+    reviews: 178};
 ];
 
+<<<<<<< HEAD
+  return (<section className = "py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
+      <div className="max - w-7xl mx - auto px - 6">
+        <motion.div
+          className="text - center mb - 16"
+=======
 export function FeaturedListingsSection() {
+
   return ("
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
+>>>>>>> main
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
@@ -114,6 +124,15 @@ export function FeaturedListingsSection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >"
               <div className="relative">
+<<<<<<< HEAD
+                <img
+                  src={listing.image}
+                  alt={listing.title}
+                  className="w - full h - 48 object - cover"
+                />
+                <div className="absolute top - 3 left - 3">
+                  <span className="px - 3 py - 1 bg - blue - 600 text - white text - xs font - semibold rounded - full">
+=======
                 <img 
                   src={listing.image} 
                   alt={listing.title}"
@@ -121,6 +140,7 @@ export function FeaturedListingsSection() {
                 />"
                 <div className="absolute top-3 left-3">"
                   <span className="px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
+>>>>>>> main
                     {listing.category}
                   </span>
                 </div>
@@ -170,30 +190,39 @@ export function FeaturedListingsSection() {
             </motion.div>) ) }
         </div>
 
+<<<<<<< HEAD
+        <motion.div
+          className="mt - 16 text - center"
+=======
         <motion.div "
           className="mt-16 text-center"
+>>>>>>> main
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
           transition = {
 
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}
         >
+<<<<<<< HEAD
+          <Link
+=======
           <Link "
-            to="/services""
+>>>>>>> main
+            to="/services"
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:scale-105"
           >
             View All Services"
@@ -201,6 +230,5 @@ export function FeaturedListingsSection() {
           </Link>;
         </motion.div>;
       </div>;
-    </section>;) ;
-}
+    </section>;) }
 '"

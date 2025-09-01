@@ -1,96 +1,100 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Quote, Star, ChevronLeft, ChevronRight, Play, Pause, MessageCircle, ThumbsUp, Share2 const testimonials = [
 
-
     {
-'
-        id: '1','
-        name: 'Sarah Chen','
-        role: 'CTO','
-        comp: 'TechFlow Solutions','
+
+        id: '1',
+        name: 'Sarah Chen',
+        role: 'CTO',
+        comp: 'TechFlow Solutions',
         avatar: 'SC',
-        rating: 5,'
-        content: 'Zion Tech Group transformed our AI infrastructure completely. The integration was seamless, and the results exceeded our expectations. We\'ve seen a 300% improvement in our AI model performance.','
-        category: 'AI Infrastructure','
+        rating: 5,
+        content: 'Zion Tech Group transformed our AI infrastructure completely. The integration was seamless, and the results exceeded our expectations. We\'ve seen a 300% improvement in our AI model performance.',
+        category: 'AI Infrastructure',
         date: '2 weeks ago',
         likes: 127,
         verified: true
     },
     {
-'
-        id: '2','
-        name: 'Marcus Rodriguez','
-        role: 'Head of Engineering','
-        comp: 'InnovateCorp','
+
+        id: '2',
+        name: 'Marcus Rodriguez',
+        role: 'Head of Engineering',
+        comp: 'InnovateCorp',
         avatar: 'MR',
-        rating: 5,'
-        content: 'The talent matching algorithm is incredible. We found our lead AI engineer in just 3 days, and the quality was outstanding. Zion has become our go-to platform for all tech talent needs.','
-        category: 'Talent Matching','
+        rating: 5,
+        content: 'The talent matching algorithm is incredible. We found our lead AI engineer in just 3 days, and the quality was outstanding. Zion has become our go-to platform for all tech talent needs.',
+        category: 'Talent Matching',
         date: '1 month ago',
         likes: 89,
         verified: true
     },
     {
-'
-        id: '3','
-        name: 'Dr. Emily Watson','
-        role: 'Research Director','
-        comp: 'Quantum Labs','
+
+        id: '3',
+        name: 'Dr. Emily Watson',
+        role: 'Research Director',
+        comp: 'Quantum Labs',
         avatar: 'EW',
-        rating: 5,'
-        content: 'Working with Zion\'s AI services has accelerated our research by months. The platform\'s capabilities and the team\'s expertise are unmatched in the industry.','
-        category: 'Research & Development','
+        rating: 5,
+        content: 'Working with Zion\'s AI services has accelerated our research by months. The platform\'s capabilities and the team\'s expertise are unmatched in the industry.',
+        category: 'Research & Development',
         date: '3 weeks ago',
         likes: 156,
         verified: true
     },
     {
-'
-        id: '4','
-        name: 'Alex Thompson','
-        role: 'Product Manager','
-        comp: 'StartupXYZ','
+
+        id: '4',
+        name: 'Alex Thompson',
+        role: 'Product Manager',
+        comp: 'StartupXYZ',
         avatar: 'AT',
-        rating: 5,'
-        content: 'As a startup, we needed cost-effective AI solutions. Zion delivered enterprise-grade tools at startup prices. The ROI was immediate and substantial.','
-        category: 'Startup Solutions','
+        rating: 5,
+        content: 'As a startup, we needed cost-effective AI solutions. Zion delivered enterprise-grade tools at startup prices. The ROI was immediate and substantial.',
+        category: 'Startup Solutions',
         date: '1 week ago',
         likes: 73,
         verified: true
     },
     {
-'
-        id: '5','
-        name: 'Lisa Park','
-        role: 'VP of Operations','
-        comp: 'GlobalTech Inc','
+
+        id: '5',
+        name: 'Lisa Park',
+        role: 'VP of Operations',
+        comp: 'GlobalTech Inc',
         avatar: 'LP',
-        rating: 5,'
-        content: 'The global network and 24/7 support are game-changers. We operate in multiple time zones, and Zion\'s support team is always available when we need them.','
-        category: 'Global Operations','
+        rating: 5,
+        content: 'The global network and 24/7 support are game-changers. We operate in multiple time zones, and Zion\'s support team is always available when we need them.',
+        category: 'Global Operations',
         date: '2 months ago',
         likes: 94,
         verified: true
 
-];'
-const categories = ['All', 'AI Infrastructure', 'Talent Matching', 'Research & Development', 'Startup Solutions', 'Global Operations'];
+];
+const categories = ['All',AI Infrastructure',Talent Matching',Research & Development',Startup Solutions',Global Operations'];
 export function InteractiveTestimonials() {
-    const [currentIndex, setCurrentIndex] = useState(0);'
+
+    const [currentIndex, setCurrentIndex] = useState(0);
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-    const [likedTestimonials, setLikedTestimonials] = useState(new Set());'
+    const [likedTestimonials, setLikedTestimonials] = useState(new Set());
     const filteredTestimonials = selectedCategory === 'All'
         ? testimonials
         : testimonials.filter (testimonial => testimonial.category === selectedCategory) ;
     useEffect ( () => {
+
         if (!isAutoPlaying) return;
         const interval = setInterval ( () => {
+
             setCurrentIndex ( (prev) => (prev + 1) % filteredTestimonials.length) }, 5000) ;
         return () => clearInterval (interval) }, [isAutoPlaying, filteredTestimonials.length]) ;
     const nextTestimonial = () => {
+
         setCurrentIndex ( (prev) => (prev + 1) % filteredTestimonials.length) };
     const prevTestimonial = () => {
+
         setCurrentIndex ( (prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length) };
     const toggleLike = (testimonialId) => {
 
@@ -105,7 +109,7 @@ export function InteractiveTestimonials() {
                 newSet.add(testimonialId)}
             return newSet})};
     const renderStars = (rating) => {
-'
+
         return Array.from({ length: 5 }, (_, i) => (<Star key={i} className={`w-5 h-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'}`}/>))};
     const containerVariants = {
 
@@ -122,7 +126,7 @@ export function InteractiveTestimonials() {
     const itemVariants = {
 
   hidden: { opacity: 0, y: 20,
-  scale: 0.95 
+  scale: 0.95
 
 },
         visible: {
@@ -150,12 +154,12 @@ export function InteractiveTestimonials() {
         <motion.div className="text-center mb-16" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -184,17 +188,17 @@ export function InteractiveTestimonials() {
         <motion.div className="flex flex-wrap justify-center gap-4 mb-12" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 
 
@@ -207,17 +211,17 @@ export function InteractiveTestimonials() {
                 : 'bg-white/10 text-zion-slate-light hover:bg-white/20 border border-white/20'}`} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}>
               {category}
@@ -230,17 +234,17 @@ export function InteractiveTestimonials() {
             <motion.div key={currentIndex} initial = {
 
   { opacity: 0,
-  x: 100 
+  x: 100
 
 }} animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }} exit = {
 
   { opacity: 0,
-  x: -100 
+  x: -100
 
 
 
@@ -292,7 +296,7 @@ export function InteractiveTestimonials() {
 
                 {/* Interactive elements */}"
                 <div className="flex items-center justify-center gap-6 mt-8">'`
-                  <motion.button onClick={() => toggleLike(filteredTestimonials[currentIndex]?.id || '')} className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${likedTestimonials.has(filteredTestimonials[currentIndex]?.id || '')'
+                  <motion.button onClick={() => toggleLike(filteredTestimonials[currentIndex]?.id || '')} className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${likedTestimonials.has(filteredTestimonials[currentIndex]?.id || '')
             ? 'bg-red-500/20 text-red-400 border border-red-500/30''`
             : 'bg-white/10 text-zion-slate-light border border-white/20 hover:bg-white/20'}`} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>'`
                     <ThumbsUp className={`w-4 h-4 ${likedTestimonials.has(filteredTestimonials[currentIndex]?.id || '') ? 'fill-current' : ''}`}/>
@@ -339,7 +343,7 @@ export function InteractiveTestimonials() {
 
                 y: -8,
                 scale: 1.02,
-  transition: { duration: 0.2 
+  transition: { duration: 0.2
 
 
 
@@ -390,17 +394,17 @@ export function InteractiveTestimonials() {
         <motion.div className="text-center mt-20" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 
 

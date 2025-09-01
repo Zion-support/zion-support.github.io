@@ -1,14 +1,14 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import {
 
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from '@/components/ui/card';'
-import { Badge } from '@/components/ui/badge';'
+  CardHeader,
+  CardTitle} from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { SERVICE_CATEGORIES } from '@/data/microSaasServices';
 import {
 
@@ -18,9 +18,10 @@ import {
   ArrowRight,
   Star,
   CheckCircle,
-  Globe,'
+  Globe,
   MessageCircle} from 'lucide-react';
 export function NewServicesShowcase() {
+
   // Get featured services from each category
   const featuredServices = SERVICE_CATEGORIES.map()
     category => category.services[0]
@@ -47,8 +48,8 @@ export function NewServicesShowcase() {
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
             Transform your business with cutting-edge AI solutions, professional
             IT services, and affordable micro SAAS tools."
-            <span className="text-zion-cyan font-semibold">'
-              {' '}'
+            <span className="text-zion-cyan font-semibold">
+              {' '}
               Save up to 55%{' '}
             </span>
             on enterprise-grade technology solutions.
@@ -68,7 +69,7 @@ export function NewServicesShowcase() {
               <CardHeader className="relative z-10">"
                 <div className="flex items-center justify-between mb-4">
                   <Badge"
-                    variant="secondary""
+                    variant="secondary"
                     className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30"
                   >
                     {service.category}
@@ -96,7 +97,7 @@ export function NewServicesShowcase() {
                   <div>"
                     <div className="text-2xl font-bold text-white">
                       ${service.zionPrice}"
-                      <span className="text-sm text-zion-slate-light ml-1">'
+                      <span className="text-sm text-zion-slate-light ml-1">
                         {service.pricingModel === 'monthly''
                           ? '/month''
                           : service.pricingModel === 'yearly''
@@ -184,7 +185,7 @@ export function NewServicesShowcase() {
                 {category.services.length}+ Services
               </div>
               <Button"
-                variant="outline""
+                variant="outline"
                 className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10"
                 asChild
               >"
@@ -211,7 +212,7 @@ export function NewServicesShowcase() {
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button"
-                size="lg""
+                size="lg"
                 className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3"
                 asChild
               >"
@@ -222,8 +223,8 @@ export function NewServicesShowcase() {
               </Button>
 
               <Button"
-                size="lg""
-                variant="outline""
+                size="lg"
+                variant="outline"
                 className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3"
                 asChild
               >"

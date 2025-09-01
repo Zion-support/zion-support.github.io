@@ -15,7 +15,7 @@ export default function EscalatePage(...args: unknown[]): unknown {
           method: 'POST',
           hostname: url.hostname,
           path: url.pathname + (url.search || ''),
-          headers: { 'Content-Type': 'application/json', 'Content-Length': data.length }
+          headers: { 'Content-Type': 'application/json',Content-Length': data.length }
         },
         res: unknown {
           res.on'data': unknown, (: unknown {});

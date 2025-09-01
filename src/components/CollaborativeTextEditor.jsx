@@ -1,18 +1,23 @@
-import React, { useState, useCallback, useEffect, useRef } from 'react';'
-import { motion } from 'framer-motion';'
+import React, { useState, useCallback, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 import { Users, MessageSquare, Sparkles, Save, Download, Loader2 } from 'lucide-react';
 import { useRealTimeCollaboration } from "../hooks/useRealTimeCollaboration";"
-import { useAnalytics } from "../hooks/useAnalytics";'
+import { useAnalytics } from "../hooks/useAnalytics";
 export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = '', enableAI = true, enableCollaboration = true, enableVersioning = true, className = '', onSave, onExport }) => {
 
+<<<<<<< HEAD
+    const { trackEvent } = useAnalytics ({
+
+=======
     const { trackEvent } = useAnalytics({
 
+>>>>>>> main
         enableTracking: true,
         enableUserBehaviorTracking: true
     });
     const [editorState, setEditorState] = useState({
 
-        content: initialContent,'
+        content: initialContent,
         selection: { start: 0, end: 0, text: '' },
         version: 0,
         changes[],;
@@ -34,7 +39,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         enablePresence: true,
         enableCursors: true,
         enableSelection: true,
-        enableTextSync: true,'
+        enableTextSync: true,
         conflictResolution: 'client',
         messageRetention: 1000
     }) ;
@@ -47,7 +52,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 
             const change = {
 
-                id: `change_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,'
+                id: `change_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
                 type: newContent.length > prev.content.length ? 'insert' : 'delete',
                 position: Math.min (selectionStart, prev.content.length) ,
                 text: newContent.length > prev.content.length ? newContent.slice (prev.content.length) : null,
@@ -68,14 +73,14 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         if (enableCollaboration && collaboration.isConnected) {
 
             collaboration.syncTextChange({
-'
+
                 type: 'text_change',
                 content: newContent,
                 selection: { start: selectionStart, end: selectionEnd },
                 version: editorState.version + 1
             })}
         // Track text change'
-        trackEvent('editor', 'text_changed', 'content_modified', newContent.length)}, [enableCollaboration, collaboration, editorState.version, trackEvent]);
+        trackEvent('editor',text_changed',content_modified', newContent.length)}, [enableCollaboration, collaboration, editorState.version, trackEvent]);
     // Handle selection change
     const handleSelectionChange = useCallback((event) => {
 
@@ -100,13 +105,15 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             return;
         const rect = event.currentTarget.getBoundingClientRect();
         const x = event.clientX - rect.left;
-        const y = event.clientY - rect.top;'
-        collaboration.updateCursor(x, y, 'editor')}, [enableCollaboration, collaboration]);
+        const y = event.clientY - rect.top;
+        collaboration.updateCursor(x, y,editor')}, [enableCollaboration, collaboration]);
     // Generate AI suggestions
     const generateAISuggestions = useCallback (async () => {
+
         if (!enableAI || !editorState.content.trim () ) return;
         setIsProcessing (true) ;
         try {
+
             // Simulate AI processing - in production, this would call an AI service
             await new Promise (resolve => setTimeout (resolve, 2000) ) ;
             const suggestions = [];
@@ -114,27 +121,29 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             if (editorState.content.includes('its')) {
 
                 suggestions.push({
+
 `
-                    id: `suggestion_${Date.now()}_1`,'
-                    type: 'grammar','"
+                    id: `suggestion_${Date.now()}_1`,
+                    type: 'grammar',"
                     text: "it's",
-                    confidence: 0.95,'
+                    confidence: 0.95,
                     position: editorState.content.indexOf('its'),
-                    length: 3,'"
-                    reason: "Consider using 'it's' (contraction of 'it is') instead of 'its' (possessive)",'"
+                    length: 3,"
+                    reason: "Consider using 'it's' (contraction of 'it is') instead of 'its' (possessive)","
                     alternatives["it's", "it is"];
                 })}
             // Style suggestions'
             if (editorState.content.includes('very')) {
 
                 suggestions.push({
+
 `
-                    id: `suggestion_${Date.now()}_2`,'
+                    id: `suggestion_${Date.now()}_2`,
                     type: 'style',"
                     text: "extremely",
-                    confidence: 0.88,'
+                    confidence: 0.88,
                     position: editorState.content.indexOf('very'),
-                    length: 4,'"
+                    length: 4,"
                     reason: "Consider using a more specific adjective instead of 'very'","
                     alternatives["extremely", "highly", "remarkably", "exceptionally"];
                 })}
@@ -142,8 +151,9 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             if (editorState.content.endsWith('The main benefits')) {
 
                 suggestions.push({
+
 `
-                    id: `suggestion_${Date.now()}_3`,'
+                    id: `suggestion_${Date.now()}_3`,
                     type: 'completion',"
                     text: " include improved efficiency, cost savings, and enhanced user experience.",
                     confidence: 0.92,
@@ -160,23 +170,23 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 
                 ...prev,
                 suggestions[...prev.suggestions, ...suggestions];
-            }));'
-            // // // // // // // // console.error('Failed to generate AI suggestions:', error);'
-            trackEvent('editor', 'ai_suggestions_failed', 'generation_error', undefined, {
-'
+            }));
+            // // // // // // // // // // console.error('Failed to generate AI suggestions:', error);
+            trackEvent('editor',ai_suggestions_failed',generation_error', undefined, {
+
                 error: error instanceof Error ? error.message : 'Unknown error'
             }) ;
 
         finally {
 
             setIsProcessing(false);
-'
-            trackEvent('editor', 'ai_suggestions_generated', 'suggestions_created', suggestions.length)}
+
+            trackEvent('editor',ai_suggestions_generated',suggestions_created', suggestions.length)}
         catch (error) {
-'
-            // console.error('Failed to generate AI suggestions:', error);'
-            trackEvent('editor', 'ai_suggestions_failed', 'generation_error', null, {
-'
+
+            // // // console.error('Failed to generate AI suggestions:', error);
+            trackEvent('editor',ai_suggestions_failed',generation_error', null, {
+
                 error: error instanceof Error ? error.message : 'Unknown error'
             }) }
         finally {
@@ -188,10 +198,10 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 
         setEditorState(prev => {
 
-            let newContent = prev.content;'
+            let newContent = prev.content;
             if (suggestion.type === 'completion') {
 
-                newContent = newContent.slice(0, suggestion.position) + suggestion.text + newContent.slice(suggestion.position)}'
+                newContent = newContent.slice(0, suggestion.position) + suggestion.text + newContent.slice(suggestion.position)}
             else if (suggestion.type === 'grammar' || suggestion.type === 'style') {
 
                 // For grammar and style, we need to find and replace the text
@@ -208,22 +218,25 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             editorRef.current.focus();
             const newPosition = suggestion.position + suggestion.text.length;
             editorRef.current.setSelectionRange(newPosition, newPosition);
-        }'
-        trackEvent('editor', 'ai_suggestion_applied', suggestion.type, null, { suggestionId: suggestion.id });
+        }
+        trackEvent('editor',ai_suggestion_applied', suggestion.type, null, { suggestionId: suggestion.id });
     }, [editorState.content, trackEvent]);
     // Save content
     const handleSave = useCallback(() => {
+
         onSave?.(editorState.content);
-        setLastSaved(new Date());'
-        trackEvent('editor', 'content_saved', 'save_completed')}, [editorState.content, onSave, trackEvent]);
+        setLastSaved(new Date());
+        trackEvent('editor',content_saved',save_completed')}, [editorState.content, onSave, trackEvent]);
     // Export content
     const handleExport = useCallback((format) => {
 
-        let exportContent = editorState.content;'
+        let exportContent = editorState.content;
         if (format === 'html') {
+
 `
-            exportContent = `<html><body><pre>${editorState.content}</pre></body></html>`}'
+            exportContent = `<html><body><pre>${editorState.content}</pre></body></html>`}
         else if (format === 'md') {
+
 `
             exportContent = `# Document\n\n${editorState.content}`}
         if (onExport) {
@@ -233,20 +246,21 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 
             // Default export behavior'
             const blob = new Blob([exportContent], { type: 'text/plain' });
-            const url = window.URL.createObjectURL(blob);'
+            const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;`
             a.download = `document.${format}`;
             a.click();
             window.URL.revokeObjectURL(url);
-        }'
-        trackEvent('editor', 'content_exported', format, null, { format });
+        }
+        trackEvent('editor',content_exported', format, null, { format });
     }, [editorState.content, onExport, trackEvent]);
     // Handle collaboration text changes
     useEffect ( () => {
+
         const handleCollaborationTextChange = (event) => {
 
-            const { message } = event.detail;'
+            const { message } = event.detail;
             if (message.type === 'text_change' && message.userId !== userId) {
 
                 // Handle incoming text changes from other users
@@ -259,22 +273,24 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                         content: message.payload.content,
                         version: Math.max(prev.version, message.payload.version)
                     };
-                });'
-                trackEvent('editor', 'collaboration_sync', 'text_synced', null, {
+                });
+                trackEvent('editor',collaboration_sync',text_synced', null, {
 
                     userId: message.userId,
                     version: message.payload.version
                 })}
-        };'
+        };
         window.addEventListener('collaborationTextChange', handleCollaborationTextChange);
         return () => {
-'
+
             window.removeEventListener('collaborationTextChange', handleCollaborationTextChange)}}, [userId, trackEvent]);
     // Auto-save functionality
     useEffect(() => {
+
         if (!enableVersioning)
             return;
         const autoSaveInterval = setInterval(() => {
+
             if (editorState.content !== initialContent) {
 
                 handleSave()}
@@ -282,8 +298,10 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         return () => clearInterval(autoSaveInterval)}, [editorState.content, initialContent, enableVersioning, handleSave]);
     // Generate suggestions when content changes significantly
     useEffect ( () => {
+
         if (!enableAI) return;
         const debounceTimer = setTimeout ( () => {
+
             if (editorState.content.length > 100) {
 
                 generateAISuggestions()}
@@ -355,12 +373,12 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 {editorState.suggestions.map(suggestion => (<motion.div key={suggestion.id} initial = {
 
   { opacity: 0,
-  x: 20 
+  x: 20
 
 }} animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 
 
@@ -455,17 +473,17 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
           {collaboration.activeCursors.map(({ x, y, user }) => (<motion.div key={user.id} initial = {
 
   { opacity: 0,
-  scale: 0 
+  scale: 0
 
 }} animate = {
 
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} exit = {
 
   { opacity: 0,
-  scale: 0 
+  scale: 0
 
 
 
@@ -477,9 +495,9 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
   {
 
                     left: x,
-                    top: y,'
-                    transform: 'translate(-50%,'
-  -50%)';
+                    top: y,
+                    transform: 'translate(-50%,
+  -50%);
                 
 
 

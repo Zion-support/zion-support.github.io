@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import {
+
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer - motion';
+=======
+>>>>>>> main
 
   Brain,
   Cloud,
@@ -22,6 +25,7 @@ import {
  } from 'lucide-react';
 
 interface Service {
+
   id: string;
   title: string;
   description: string;
@@ -38,169 +42,159 @@ icon: React.ComponentType<{ className?: string
 ;
 const services: Service[] = [
   {
-'
-    id: 'ai-business-intelligence','
-    title: 'AI Business Intelligence Platform','
+
+    id: 'ai-business-intelligence',
+    title: 'AI Business Intelligence Platform',
     description: 'Advanced analytics with AI-powered insights and predictive modeling',
-    icon: Brain,'
-    category: 'AI & Machine Learning','
-    features['Real-time analytics', 'Predictive modeling', 'Custom dashboards', 'API integration'],;'
+    icon: Brain,
+    category: 'AI & Machine Learning',
+    features['Real-time analytics',Predictive modeling',Custom dashboards',API integration'],;
     pricing: '$2,999/month',
     rating: 4.9,
-    reviews: 156,'
+    reviews: 156,
     color: 'from-blue-500 to-cyan-500',
-    popular: true,'
+    popular: true,
     link: '/ai-services/business-intelligence'
   },
   {
-'
-    id: 'quantum-computing-suite','
-    title: 'Quantum Computing Suite','
+
+    id: 'quantum-computing-suite',
+    title: 'Quantum Computing Suite',
     description: 'Next-generation quantum computing solutions for complex problem solving',
-    icon: Rocket,'
-    category: 'Emerging Tech','
-    features['Quantum algorithms', 'Hybrid classical-quantum', 'Scientific computing', 'Optimization'],;'
+    icon: Rocket,
+    category: 'Emerging Tech',
+    features['Quantum algorithms',Hybrid classical-quantum',Scientific computing',Optimization'],;
     pricing: '$5,000/month',
     rating: 4.8,
-    reviews: 89,'
-    color: 'from-purple-500 to-pink-500','
+    reviews: 89,
+    color: 'from-purple-500 to-pink-500',
     link: '/emerging-tech/quantum-computing'
   },
   {
-'
-    id: 'cybersecurity-platform','
-    title: 'AI-Powered Cybersecurity Platform','
+
+    id: 'cybersecurity-platform',
+    title: 'AI-Powered Cybersecurity Platform',
     description: 'Intelligent threat detection and response with zero-trust architecture',
-    icon: Shield,'
-    category: 'Cybersecurity','
-    features['AI threat detection', 'Zero-trust architecture', 'Compliance automation', '24/7 monitoring'],;'
+    icon: Shield,
+    category: 'Cybersecurity',
+    features['AI threat detection',Zero-trust architecture',Compliance automation',24/7 monitoring'],;
     pricing: '$2,500/month',
     rating: 4.9,
-    reviews: 234,'
+    reviews: 234,
     color: 'from-red-500 to-orange-500',
-    popular: true,'
+    popular: true,
     link: '/it-services/cybersecurity'
   },
   {
-'
-    id: 'cloud-devops-automation','
-    title: 'Cloud & DevOps Automation','
+
+    id: 'cloud-devops-automation',
+    title: 'Cloud & DevOps Automation',
     description: 'Scalable cloud infrastructure with intelligent automation',
-    icon: Cloud,'
-    category: 'Cloud & DevOps','
-    features['Multi-cloud management', 'CI/CD automation', 'Infrastructure as code', 'Cost optimization'],;'
+    icon: Cloud,
+    category: 'Cloud & DevOps',
+    features['Multi-cloud management',CI/CD automation',Infrastructure as code',Cost optimization'],;
     pricing: '$1,500/month',
     rating: 4.7,
-    reviews: 189,'
-    color: 'from-green-500 to-emerald-500','
+    reviews: 189,
+    color: 'from-green-500 to-emerald-500',
     link: '/it-services/cloud-devops'
   },
   {
-'
-    id: 'blockchain-defi-platform','
-    title: 'Blockchain & DeFi Platform','
+
+    id: 'blockchain-defi-platform',
+    title: 'Blockchain & DeFi Platform',
     description: 'Decentralized finance solutions with advanced blockchain technology',
-    icon: Globe,'
-    category: 'Blockchain & Web3','
-    features['DeFi protocols', 'Smart contracts', 'Yield optimization', 'Cross-chain support'],;'
+    icon: Globe,
+    category: 'Blockchain & Web3',
+    features['DeFi protocols',Smart contracts',Yield optimization',Cross-chain support'],;
     pricing: '$1,800/month',
     rating: 4.6,
-    reviews: 123,'
-    color: 'from-yellow-500 to-orange-500','
+    reviews: 123,
+    color: 'from-yellow-500 to-orange-500',
     link: '/emerging-tech/blockchain-defi'
   },
   {
-'
-    id: 'digital-transformation','
-    title: 'Digital Transformation Consulting','
+
+    id: 'digital-transformation',
+    title: 'Digital Transformation Consulting',
     description: 'End-to-end business transformation with cutting-edge technology',
-    icon: TrendingUp,'
-    category: 'Digital Transformation','
-    features['Strategy consulting', 'Process optimization', 'Change management', 'ROI tracking'],;'
+    icon: TrendingUp,
+    category: 'Digital Transformation',
+    features['Strategy consulting',Process optimization',Change management',ROI tracking'],;
     pricing: '$3,500/month',
     rating: 4.8,
-    reviews: 167,'
-    color: 'from-indigo-500 to-purple-500','
+    reviews: 167,
+    color: 'from-indigo-500 to-purple-500',
     link: '/services/digital-transformation'
   },
   {
-'
-    id: 'micro-saas-platform','
-    title: 'Micro SaaS Development Platform','
+
+    id: 'micro-saas-platform',
+    title: 'Micro SaaS Development Platform',
     description: 'Rapid development and deployment of SaaS applications',
-    icon: Code,'
-    category: 'Micro SAAS','
-    features['Rapid prototyping', 'Scalable architecture', 'Multi-tenancy', 'Analytics dashboard'],;'
+    icon: Code,
+    category: 'Micro SAAS',
+    features['Rapid prototyping',Scalable architecture',Multi-tenancy',Analytics dashboard'],;
     pricing: '$899/month',
     rating: 4.7,
-    reviews: 98,'
-    color: 'from-cyan-500 to-blue-500','
+    reviews: 98,
+    color: 'from-cyan-500 to-blue-500',
     link: '/micro-saas/development-platform'
   },
   {
-'
-    id: 'healthcare-ai','
-    title: 'Healthcare AI Solutions','
+
+    id: 'healthcare-ai',
+    title: 'Healthcare AI Solutions',
     description: 'AI-powered diagnostic and patient care optimization',
-    icon: Users,'
-    category: 'Healthcare AI','
-    features['Medical imaging AI', 'Predictive diagnostics', 'Patient monitoring', 'HIPAA compliant'],;'
+    icon: Users,
+    category: 'Healthcare AI',
+    features['Medical imaging AI',Predictive diagnostics',Patient monitoring',HIPAA compliant'],;
     pricing: '$4,500/month',
     rating: 4.9,
-    reviews: 78,'
-    color: 'from-emerald-500 to-teal-500','
+    reviews: 78,
+    color: 'from-emerald-500 to-teal-500',
     link: '/ai-services/healthcare'
 
 ];
 
-const categories = ['
-  'All Services','
-  'AI & Machine Learning','
-  'Emerging Tech',;'
-  'Cybersecurity',;'
-  'Cloud & DevOps',;'
-  'Blockchain & Web3',;'
-  'Digital Transformation',;'
-  'Micro SAAS',;'
-  'Healthcare AI';
-];
 
-        }
+  'Cybersecurity',;
+  'Cloud & DevOps',;
+  'Blockchain & Web3',;
+  'Digital Transformation',;
+  'Micro SAAS',;
+  'Healthcare AI';
+]}
+      },
+      { threshold: 0.1 }
+    );
+
+    
+    if (element) {
+
+=======
+]}
       },
       { threshold: 0.1 }
     );
 '
-    const element = document.getElementById('service-showcase');
-    if (element) {
+    const element = document.getElementById('service-showcase');    if (element) {
+
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       observer.observe(element)}
 
     return () => observer.disconnect()}, []);
-'
-  const filteredServices = selectedCategory === 'All Services'
-    ? services
-    : services.filter (service => service.category === selectedCategory) ;
 
-  const renderStars = (rating: number)  => {
-
-    return Array.from({ length: 5 }, (_, i)  => (
-      <Star
-        key={i}
-        className={`w-4 h-4 ${
-
-          i < Math.floor(rating)'
-            ? 'text-yellow-400 fill-current''
-            : 'text-gray-400'`
-        }`};
+  
+  
       />;
     ))};
-          i < Math.floor(rating) ;'
-            ? 'text-yellow-400 fill-current' ;'
+          i < Math.floor(rating) ;
+            ? 'text-yellow-400 fill-current' ;
             : 'text-gray-400';`
         }`};
-      />;) ) ;
-  };
-
+      />;) ) };
   return()
     <section id = "service-showcase" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"
       <div className="max-w-7xl mx-auto px-6">
@@ -209,13 +203,13 @@ const categories = ['
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
 
   isVisible ? { opacity: 1,
-  y: 0 
+  y: 0
 
 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}"
@@ -237,19 +231,19 @@ const categories = ['
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
 
   isVisible ? { opacity: 1,
-  y: 0 
+  y: 0
 
 } : { opacity: 0, y: 20 }}
           transition = {
 
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2
 
 
 
@@ -281,7 +275,7 @@ const categories = ['
           transition = {
 
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 
 
@@ -337,8 +331,7 @@ const categories = ['
                       <div className="space-y-2">
                         {service.features.slice(0, 3).map((feature, featureIndex) => ("
                           <div key={featureIndex} className="flex items-center text-sm text-gray-300">"
-                            <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
-                            {feature}
+                            <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0"  />                            {feature}
                           </div>
                         ))}
                         {service.features.length > 3 && ("
@@ -365,8 +358,7 @@ const categories = ['
                         <span className="text-sm text-zion-cyan font-semibold">
                           Learn More
                         </span>"
-                        <ArrowRight className="w-5 h-5 text-zion-cyan group-hover:translate-x-1 transition-transform duration-300" />
-                      </div>
+                        <ArrowRight className="w-5 h-5 text-zion-cyan group-hover:translate-x-1 transition-transform duration-300"  />                      </div>
                     </div>
                   </div>
                 </Link>
@@ -379,19 +371,19 @@ const categories = ['
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
 
   isVisible ? { opacity: 1,
-  y: 0 
+  y: 0
 
 } : { opacity: 0, y: 20 }}
           transition = {
 
   { duration: 0.6,
-  delay: 0.6 
+  delay: 0.6
 
 
 
@@ -411,23 +403,21 @@ const categories = ['
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hover:from-zion-cyan-dark hover:to-zion-blue-dark transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-zion-cyan/25"
 "
-                <Play className="w-5 h-5 mr-2" />
+                <Play className="w-5 h-5 mr-2"  />
                 Get Started Today
               </Link>
               <Link"
-                to="/enhanced-services""
+                to="/enhanced-services"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
 
                 View All Services"
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
+                <ArrowRight className="w-5 h-5 ml-2"  />              </Link>
             </div>;
           </div>;
         </motion.div>;
       </div>;
-    </section>;) ;
-};
+    </section>;) };
 '"`

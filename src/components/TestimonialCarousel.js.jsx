@@ -1,91 +1,94 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
   ChevronLeft,
   ChevronRight,
   Star,
-  Quote,'
+  Quote,
   ArrowRight} from 'lucide-react';
 const testimonials = [
   {
 
-    id: 1,'
-    name: 'Sarah Johnson','
-    role: 'CTO at TechCorp','
+    id: 1,
+    name: 'Sarah Johnson',
+    role: 'CTO at TechCorp',
     comp: 'TechCorp Inc.',
     content:'
-      "Zion Tech Group has revolutionized how we find AI talent. The platform is intuitive and the quality of candidates is exceptional. We've reduced our hiring time by 60% while improving candidate quality.",'
+      "Zion Tech Group has revolutionized how we find AI talent. The platform is intuitive and the quality of candidates is exceptional. We've reduced our hiring time by 60% while improving candidate quality.",
     avatar: '/avatars/sarah.jpg',
-    rating: 5,'
-    category: 'Enterprise','
+    rating: 5,
+    category: 'Enterprise',
     project: 'AI Talent Acquisition'},
   {
 
-    id: 2,'
-    name: 'Michael Chen','
-    role: 'AI Engineer','
+    id: 2,
+    name: 'Michael Chen',
+    role: 'AI Engineer',
     comp: 'Freelance',
     content:'"
-      "As a freelancer, Zion Tech Group has opened up incredible opportunities. The marketplace is well-organized and the clients are top-tier. I've doubled my income since joining the platform.",'
+      "As a freelancer, Zion Tech Group has opened up incredible opportunities. The marketplace is well-organized and the clients are top-tier. I've doubled my income since joining the platform.",
     avatar: '/avatars/michael.jpg',
-    rating: 5,'
-    category: 'Freelancer','
+    rating: 5,
+    category: 'Freelancer',
     project: 'Machine Learning Solutions'},
   {
 
-    id: 3,'
-    name: 'Dr. Emily Rodriguez','
-    role: 'Research Director','
+    id: 3,
+    name: 'Dr. Emily Rodriguez',
+    role: 'Research Director',
     comp: 'InnovateLab',
     content:'
-      'The AI services we found through Zion Tech Group exceeded our expectations. The team delivered cutting-edge solutions that accelerated our research by months. Highly recommended!','
+      'The AI services we found through Zion Tech Group exceeded our expectations. The team delivered cutting-edge solutions that accelerated our research by months. Highly recommended!',
     avatar: '/avatars/emily.jpg',
-    rating: 5,'
-    category: 'Research','
+    rating: 5,
+    category: 'Research',
     project: 'AI Research Platform'},
   {
 
-    id: 4,'
-    name: 'David Kim','
-    role: 'Startup Founder','
+    id: 4,
+    name: 'David Kim',
+    role: 'Startup Founder',
     comp: 'DataFlow',
     content:'
-      'Starting a tech comp is challenging, but Zion Tech Group made it so much easier. We found the perfect team and equipment to get our MVP to market in record time.','
+      'Starting a tech comp is challenging, but Zion Tech Group made it so much easier. We found the perfect team and equipment to get our MVP to market in record time.',
     avatar: '/avatars/david.jpg',
-    rating: 5,'
-    category: 'Startup','
+    rating: 5,
+    category: 'Startup',
     project: 'SaaS Platform'},
   {
 
-    id: 5,'
-    name: 'Lisa Thompson','
-    role: 'IT Manager','
+    id: 5,
+    name: 'Lisa Thompson',
+    role: 'IT Manager',
     comp: 'Global Retail Co.',
     content:'
-      'Our digital transformation project was a huge success thanks to Zion Tech Group. The comprehensive services and expert team delivered everything we needed on time and budget.','
+      'Our digital transformation project was a huge success thanks to Zion Tech Group. The comprehensive services and expert team delivered everything we needed on time and budget.',
     avatar: '/avatars/lisa.jpg',
-    rating: 5,'
-    category: 'Enterprise','
+    rating: 5,
+    category: 'Enterprise',
     project: 'Digital Transformation'},
   {
 
-    id: 6,'
-    name: 'Alex Patel','
-    role: 'DevOps Engineer','
+    id: 6,
+    name: 'Alex Patel',
+    role: 'DevOps Engineer',
     comp: 'CloudScale',
     content:'"
-      "The infrastructure solutions from Zion Tech Group are world-class. We've achieved 99.99% uptime and our performance has improved dramatically. The team is incredibly responsive.",'
+      "The infrastructure solutions from Zion Tech Group are world-class. We've achieved 99.99% uptime and our performance has improved dramatically. The team is incredibly responsive.",
     avatar: '/avatars/alex.jpg',
-    rating: 5,'
-    category: 'Infrastructure','
+    rating: 5,
+    category: 'Infrastructure',
     project: 'Cloud Infrastructure'},
 ];
 export function TestimonialCarousel() {
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   useEffect(() => {
+
     const timer = setInterval(() => {
+
       setDirection(1);
       setCurrentIndex(prev => (prev + 1) % testimonials.length);
     }, 5000);
@@ -125,7 +128,7 @@ export function TestimonialCarousel() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >"
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">'
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             What Our{' '}"
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Users Say
@@ -144,11 +147,11 @@ export function TestimonialCarousel() {
               key={currentIndex}
               custom={direction}
               variants={slideVariants}"
-              initial="enter""
-              animate="center""
+              initial="enter"
+              animate="center"
               exit="exit"
               transition={{
-'
+
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 }}}"
               drag="x"
@@ -201,7 +204,7 @@ export function TestimonialCarousel() {
                         <div className="font-semibold text-white text-lg">
                           {testimonials[currentIndex].name}
                         </div>"
-                        <div className="text-zion-slate-light">'
+                        <div className="text-zion-slate-light">
                           {testimonials[currentIndex].role} at{' '}
                           {testimonials[currentIndex].comp}
                         </div>

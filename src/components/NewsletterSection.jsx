@@ -1,6 +1,11 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
+
+<<<<<<< HEAD
+import { motion } from 'framer - motion';
+=======
+>>>>>>> main
 
   Mail,
   Send,
@@ -8,11 +13,11 @@ import {
   Star,
   Zap,
   Shield,
-  Users,'
+  Users,
   TrendingUp} from 'lucide-react';
 
 export function NewsletterSection() {
-'
+
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -26,37 +31,40 @@ export function NewsletterSection() {
     await new Promise(resolve => setTimeout(resolve, 1000));
 
     setIsSubscribed(true);
-    setIsLoading(false);'
+    setIsLoading(false);
     setEmail('');
   };
 
   const benefits = [
     {
 
-      icon: <Star className="w-6 h-6" />,'
-      title: 'Exclusive Content','
+      icon: <Star className="w-6 h-6" />,
+      title: 'Exclusive Content',
       description: 'Access to premium tech insights and industry reports'},
     {
+
 "
-      icon: <Zap className="w-6 h-6" />,'
-      title: 'Early Access','
+      icon: <Zap className="w-6 h-6" />,
+      title: 'Early Access',
       description: 'Be the first to know about new services and features'},
     {
+
 "
-      icon: <Shield className="w-6 h-6" />,'
-      title: 'Expert Tips','
+      icon: <Shield className="w-6 h-6" />,
+      title: 'Expert Tips',
       description: 'Weekly tips from our technology experts'},
     {
+
 "
-      icon: <Users className="w-6 h-6" />,'
-      title: 'Community Access','
+      icon: <Users className="w-6 h-6" />,
+      title: 'Community Access',
       description: 'Join our exclusive tech community'},
   ];
 
   const stats = ['
-    { value: '50K+', label: 'Subscribers' },'
-    { value: '95%', label: 'Satisfaction' },'
-    { value: '24/7', label: 'Support' },'
+    { value: '50K+', label: 'Subscribers' },
+    { value: '95%', label: 'Satisfaction' },
+    { value: '24/7', label: 'Support' },
     { value: '100%', label: 'Free' },
   ];
 
@@ -88,7 +96,7 @@ export function NewsletterSection() {
         <motion.div"
           className="container mx-auto px-4 relative z-10 text-center"
           variants={containerVariants}"
-          initial="hidden""
+          initial="hidden"
           animate="visible"
         >"
           <motion.div variants={itemVariants} className="mb-8">"
@@ -98,7 +106,7 @@ export function NewsletterSection() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Welcome to the Family!
             </h2>"
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">'
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               Thank you for subscribing! You're now part of our exclusive tech
               community.
             </p>
@@ -138,7 +146,7 @@ export function NewsletterSection() {
       <motion.div"
         className="container mx-auto px-4 relative z-10"
         variants={containerVariants}"
-        initial="hidden""
+        initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       >"
@@ -156,7 +164,7 @@ export function NewsletterSection() {
 "
             <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
               Stay Ahead with"
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-blue">'
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-blue">
                 {' '}
                 Tech Insights
               </span>
@@ -212,17 +220,17 @@ export function NewsletterSection() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label"
-                    htmlFor="email""
+                    htmlFor="email"
                     className="block text-sm font-medium text-zion-slate-light mb-2"
                   >
                     Email Address
                   </label>
                   <input"
-                    type="email""
+                    type="email"
                     id="email"
                     value={email}
                     onChange={e => setEmail(e.target.value)}"
-                    placeholder="Enter your email address""
+                    placeholder="Enter your email address"
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
                     required
                   />
@@ -248,7 +256,7 @@ export function NewsletterSection() {
               </form>
 "
               <div className="text-center mt-6">"
-                <p className="text-xs text-zion-slate-light">'
+                <p className="text-xs text-zion-slate-light">
                   By subscribing, you agree to our{' '}"
                   <a href="/privacy" className="text-zion-cyan hover:underline">
                     Privacy Policy

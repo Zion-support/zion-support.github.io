@@ -1,8 +1,7 @@
-import { ProductListing } from "@/types/listings";
-;
-export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
+;export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
   // AI-Powered Micro SAAS Services
   {
+
 "
     id: "ai-autonomous-code-reviewer","
     title: "AI Autonomous Code Reviewer & Quality Assurance Platform","
@@ -22,6 +21,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     availability: "2-3 Weeks",
     aiScore: 98,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -35,6 +35,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     integrations: ["GitHub", "GitLab", "Bitbucket", "Azure DevOps", "Jira", "Slack"]
   },
   {
+
 "
     id: "ai-powered-seo-optimization","
     title: "AI-Powered SEO Optimization & Content Strategy Platform","
@@ -54,6 +55,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     availability: "1-2 Weeks",
     aiScore: 95,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -67,6 +69,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     integrations: ["Google Analytics", "Google Search Console", "WordPress", "Shopify", "HubSpot"]
   },
   {
+
 "
     id: "ai-customer-support-automation","
     title: "AI Customer Support Automation & Chatbot Platform","
@@ -86,6 +89,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     availability: "2-3 Weeks",
     aiScore: 94,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -99,6 +103,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     integrations: ["Slack", "Microsoft Teams", "Zapier", "Salesforce", "HubSpot", "Shopify"]
   },
   {
+
 "
     id: "ai-financial-analytics-platform","
     title: "AI Financial Analytics & Predictive Modeling Platform","
@@ -118,6 +123,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     availability: "4-5 Weeks",
     aiScore: 97,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -131,6 +137,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     integrations: ["Bloomberg API", "Reuters API", "Excel", "Tableau", "Power BI", "Salesforce"]
   },
   {
+
 "
     id: "ai-marketing-automation-suite","
     title: "AI Marketing Automation & Campaign Optimization Suite","
@@ -150,6 +157,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     availability: "3-4 Weeks",
     aiScore: 96,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -163,6 +171,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     integrations: ["Salesforce", "HubSpot", "Mailchimp", "Facebook Ads", "Google Ads", "LinkedIn Ads"]
   },
   {
+
 "
     id: "ai-project-management-intelligence","
     title: "AI Project Management Intelligence & Resource Optimization Platform","
@@ -182,6 +191,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     availability: "2-3 Weeks",
     aiScore: 93,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -195,6 +205,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     integrations: ["Slack", "Microsoft Teams", "Jira", "Trello", "Notion", "Google Workspace"]
   },
   {
+
 "
     id: "ai-supply-chain-optimization","
     title: "AI Supply Chain Optimization & Demand Forecasting Platform","
@@ -214,6 +225,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     availability: "5-6 Weeks",
     aiScore: 96,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -227,6 +239,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     integrations: ["SAP", "Oracle", "NetSuite", "QuickBooks", "Shopify", "WooCommerce"]
   },
   {
+
 "
     id: "ai-content-marketing-suite","
     title: "AI Content Marketing Suite & Creative Intelligence Platform","
@@ -246,6 +259,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     availability: "1-2 Weeks",
     aiScore: 95,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -259,6 +273,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     integrations: ["WordPress", "Medium", "LinkedIn", "Facebook", "Twitter", "Google Docs"]
   },
   {
+
 "
     id: "ai-quantum-hybrid-platform","
     title: "AI-Quantum Hybrid Computing & Optimization Platform","
@@ -278,6 +293,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     availability: "8-10 Weeks",
     aiScore: 99,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -291,6 +307,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     integrations: ["IBM Quantum", "Google Quantum", "Microsoft Azure", "AWS", "Python", "Jupyter"]
   },
   {
+
 "
     id: "ai-cybersecurity-intelligence","
     title: "AI Cybersecurity Intelligence & Threat Prevention Platform","
@@ -310,6 +327,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     availability: "6-7 Weeks",
     aiScore: 97,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -323,6 +341,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     integrations: ["SIEM Systems", "EDR Solutions", "Firewall Management", "Cloud Security", "Identity Management"]
   },
   {
+
 "
     id: "ai-healthcare-diagnostics","
     title: "AI Healthcare Diagnostics & Medical Imaging Analysis Platform","
@@ -342,6 +361,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     availability: "7-8 Weeks",
     aiScore: 98,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -355,6 +375,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     integrations: ["PACS Systems", "EHR Systems", "DICOM", "HL7", "Medical Devices", "Telemedicine Platforms"]
   },
   {
+
 "
     id: "ai-business-intelligence","
     title: "AI Business Intelligence & Predictive Analytics Platform","
@@ -374,6 +395,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     availability: "4-5 Weeks",
     aiScore: 96,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -387,6 +409,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     integrations: ["Salesforce", "HubSpot", "QuickBooks", "Excel", "Google Analytics", "SQL Databases"]
   },
   {
+
 "
     id: "ai-autonomous-research-assistant","
     title: "AI Autonomous Research Assistant & Knowledge Discovery Platform","
@@ -406,6 +429,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     availability: "3-4 Weeks",
     aiScore: 95,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -420,6 +444,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
   },
   // Emerging Technology Services 2030
   {
+
 "
     id: "quantum-ai-hybrid-computing","
     title: "Quantum-AI Hybrid Computing & Optimization Platform","
@@ -439,6 +464,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     availability: "10-12 Weeks",
     aiScore: 99,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -452,6 +478,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     integrations: ["IBM Quantum", "Google Quantum", "Microsoft Azure", "AWS", "Python", "Jupyter"]
   },
   {
+
 "
     id: "neuromorphic-computing-platform","
     title: "Neuromorphic Computing & Brain-Inspired AI Platform","
@@ -471,6 +498,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     availability: "8-10 Weeks",
     aiScore: 98,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -484,6 +512,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     integrations: ["Intel Loihi", "IBM TrueNorth", "BrainChip", "Python", "TensorFlow", "PyTorch"]
   },
   {
+
 "
     id: "edge-ai-computing-platform","
     title: "Edge AI Computing & Distributed Intelligence Platform","
@@ -503,6 +532,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 96,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -517,6 +547,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
   },
   // IT Infrastructure Services
   {
+
 "
     id: "cloud-migration-automation","
     title: "Enterprise Cloud Migration & Automation Suite","
@@ -536,6 +567,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     availability: "8-10 Weeks",
     aiScore: 94,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -549,6 +581,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     integrations: ["AWS Services", "Azure Services", "Google Cloud", "Monitoring Tools", "CI/CD Pipelines"]
   },
   {
+
 "
     id: "devops-automation-platform","
     title: "DevOps Automation & CI/CD Platform","
@@ -568,6 +601,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     availability: "4-6 Weeks",
     aiScore: 93,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -581,6 +615,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     integrations: ["GitHub", "GitLab", "Bitbucket", "Docker", "Kubernetes", "AWS", "Azure"]
   },
   {
+
 "
     id: "cybersecurity-threat-intelligence","
     title: "Advanced Cybersecurity & Threat Intelligence Platform","
@@ -600,6 +635,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 96,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -613,6 +649,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     integrations: ["SIEM Systems", "EDR Solutions", "Firewall Management", "Cloud Security", "Identity Management"]
   },
   {
+
 "
     id: "data-analytics-platform","
     title: "Enterprise Data Analytics & Business Intelligence Platform","
@@ -632,6 +669,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     availability: "5-7 Weeks",
     aiScore: 95,
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -645,17 +683,24 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     integrations: ["SQL Databases", "NoSQL Databases", "Cloud Storage", "CRM Systems", "ERP Systems"]
   }
 ];
-export const getComprehensivePricingGuide2027 = : unknown comprehensivePricingGuide2027;
-export const getComprehensivePricingGuide2027ByCategory = category: string
-  comprehensivePricingGuide2027.filter(item => item.category === category);
-export const getComprehensivePricingGuide2027ById = id: string
-  comprehensivePricingGuide2027.find(item => item.id === id);
+export 
+export 
+export 
+<<<<<<< HEAD
+export 
+  'Metaverse Solutions',;
+  'Web3 Solutions',;
+  'Sustainable Tech',;
+  'NeuroTech Solutions',;
+  'Fusion Energy Solutions';
+=======
 export const pricingCategories2027 = [;'
   'Metaverse Solutions',;'
   'Web3 Solutions',;'
   'Sustainable Tech',;'
-  'NeuroTech Solutions',;'
-  'Fusion Energy Solutions';
+  'NeuroTech Solutions',;'  'Fusion Energy Solutions';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 export const pricingSubcategories2027 = {
+
 '"

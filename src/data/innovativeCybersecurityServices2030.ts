@@ -2,6 +2,7 @@
 // Advanced security solutions for the digital age
 ;
 export interface CybersecurityService {
+
   id: string;
   title: string;
   description: string;
@@ -55,23 +56,21 @@ const zionContact = {
 
   phone: "+1 302 464 0950","
   email: "kleber@ziontechgroup.com","
-  website: "https://ziontechgroup.com",;
-  ;
+  website: "https://ziontechgroup.com",;  ;
   ;
   ;
   ;"
-  address: "364 E Main St STE 1008 Middletown DE 19709";
+  address: "364 E Main St STE 1008 Middletown DE 19709"};
 ;
-
-
-
-
-
+<<<<<<< HEAD
 
 };
-;
+
+=======
+>>>>>>> main
 export const innovativeCybersecurityServices2030: CybersecurityService[] = [
   {
+
 "
     id: "quantum-resistant-encryption","
     title: "Zion Quantum-Resistant Encryption Platform","
@@ -167,6 +166,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
   },
 
   {
+
 "
     id: "ai-threat-hunting-platform","
     title: "Zion AI Threat Hunting Platform","
@@ -262,6 +262,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
   },
 
   {
+
 "
     id: "zero-trust-network-access","
     title: "Zion Zero Trust Network Access Platform","
@@ -357,6 +358,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
   },
 
   {
+
 "
     id: "ai-powered-vulnerability-management","
     title: "Zion AI-Powered Vulnerability Management","
@@ -452,6 +454,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
   },
 
   {
+
 "
     id: "blockchain-security-audit","
     title: "Zion Blockchain Security Audit Platform","
@@ -543,8 +546,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500",;"
     createdAt: "2030-01-15T10:00:00.000Z",;
     featured: true,;
-    trending: true;
-  };
+    trending: true};
 ];
 
-export default innovativeCybersecurityServices2030;}}"
+export default innovativeCybersecurityServices2030}}"

@@ -1,48 +1,49 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Brain, Globe, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Award } from 'lucide-react';
 const highlights = [
     {
 
-        icon: Brain,'
-        title: 'AI-Powered Intelligence','
-        description: 'Advanced machine learning algorithms that continuously learn and adapt to provide smarter solutions.','
-        features['Predictive Analytics', 'Smart Recommendations', 'Automated Workflows'],;'
-        color: 'from-zion-purple to-zion-purple-dark','
-        bgColor: 'bg-zion-purple/10','
+        icon: Brain,
+        title: 'AI-Powered Intelligence',
+        description: 'Advanced machine learning algorithms that continuously learn and adapt to provide smarter solutions.',
+        features['Predictive Analytics',Smart Recommendations',Automated Workflows'],;
+        color: 'from-zion-purple to-zion-purple-dark',
+        bgColor: 'bg-zion-purple/10',
         borderColor: 'border-zion-purple/20'
     },
     {
 
-        icon: Globe,'
-        title: 'Global Network','
-        description: 'Connect with professionals and businesses from over 150 countries worldwide.','
-        features['Multi-language Support', 'Local Expertise', '24/7 Availability'],;'
-        color: 'from-zion-cyan to-zion-cyan-dark','
-        bgColor: 'bg-zion-cyan/10','
+        icon: Globe,
+        title: 'Global Network',
+        description: 'Connect with professionals and businesses from over 150 countries worldwide.',
+        features['Multi-language Support',Local Expertise',24/7 Availability'],;
+        color: 'from-zion-cyan to-zion-cyan-dark',
+        bgColor: 'bg-zion-cyan/10',
         borderColor: 'border-zion-cyan/20'
     },
     {
 
-        icon: Shield,'
-        title: 'Enterprise Security','
-        description: 'Bank-grade security with SOC 2 compliance and end-to-end encryption.','
-        features['Data Protection', 'Access Control', 'Audit Trails'],;'
-        color: 'from-zion-blue to-zion-blue-dark','
-        bgColor: 'bg-zion-blue/10','
+        icon: Shield,
+        title: 'Enterprise Security',
+        description: 'Bank-grade security with SOC 2 compliance and end-to-end encryption.',
+        features['Data Protection',Access Control',Audit Trails'],;
+        color: 'from-zion-blue to-zion-blue-dark',
+        bgColor: 'bg-zion-blue/10',
         borderColor: 'border-zion-blue/20'
     }
 ];
 const achievements = ['
-    { icon: Award, number: '50+', label: 'Industry Awards', color: 'text-yellow-400' },'
-    { icon: Users, number: '1M+', label: 'Active Users', color: 'text-zion-cyan' },'
-    { icon: TrendingUp, number: '300%', label: 'Growth Rate', color: 'text-green-400' },'
+    { icon: Award, number: '50+', label: 'Industry Awards', color: 'text-yellow-400' },
+    { icon: Users, number: '1M+', label: 'Active Users', color: 'text-zion-cyan' },
+    { icon: TrendingUp, number: '300%', label: 'Growth Rate', color: 'text-green-400' },
     { icon: Star, number: '4.9/5', label: 'User Rating', color: 'text-zion-purple' }
 ];
 const technologies = ['
-    'Machine Learning', 'Blockchain', 'Cloud Computing', 'IoT', 'Cybersecurity', 'Data Analytics'
+    'Machine Learning',Blockchain',Cloud Computing',IoT',Cybersecurity',Data Analytics'
 ];
 export function FeatureHighlights() {
+
     const containerVariants = {
 
         hidden: { opacity: 0 },

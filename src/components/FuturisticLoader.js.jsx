@@ -1,23 +1,24 @@
 import React from 'react';
 export const FuturisticLoader = ({
-'
-  size = 'medium','
-  text = 'Loading...','
+
+  size = 'medium',
+  text = 'Loading...',
   variant = 'matrix'}) => {
 
   const sizeClasses = {
-'
-    small: 'w-8 h-8','
-    medium: 'w-16 h-16','
+
+    small: 'w-8 h-8',
+    medium: 'w-16 h-16',
     large: 'w-24 h-24'};
   const textSizes = {
-'
-    small: 'text-sm','
-    medium: 'text-lg','
+
+    small: 'text-sm',
+    medium: 'text-lg',
     large: 'text-xl'};
   const renderLoader = () => {
+
     switch (variant) {
-'
+
       case 'matrix':
         return()
           <div className="relative">
@@ -39,7 +40,7 @@ export const FuturisticLoader = ({
               style={{ animationDirection: 'reverse', animationDuration: '3s' }}
             ></div>
           </div>
-        );'
+        );
       case 'neural':
         return ("
           <div className="relative">
@@ -55,52 +56,52 @@ export const FuturisticLoader = ({
 
               {/* Connecting Lines */}
               <svg"
-                className="absolute inset-0 w-full h-full""
+                className="absolute inset-0 w-full h-full"
                 viewBox="0 0 100 100"
               >
                 <line"
-                  x1="50""
-                  y1="50""
-                  x2="50""
-                  y2="20""
-                  stroke="rgba(6, 182, 212, 0.3)""
-                  strokeWidth="1""
+                  x1="50"
+                  y1="50"
+                  x2="50"
+                  y2="20"
+                  stroke="rgba(6, 182, 212, 0.3)"
+                  strokeWidth="1"
                   className="animate-neural-network"
                 />
                 <line"
-                  x1="50""
-                  y1="50""
-                  x2="80""
-                  y2="30""
-                  stroke="rgba(147, 51, 234, 0.3)""
-                  strokeWidth="1""
+                  x1="50"
+                  y1="50"
+                  x2="80"
+                  y2="30"
+                  stroke="rgba(147, 51, 234, 0.3)"
+                  strokeWidth="1"
                   className="animate-neural-network"'
                   style={{ animationDelay: '0.5s' }}
                 />
                 <line"
-                  x1="50""
-                  y1="50""
-                  x2="20""
-                  y2="70""
-                  stroke="rgba(34, 197, 94, 0.3)""
-                  strokeWidth="1""
+                  x1="50"
+                  y1="50"
+                  x2="20"
+                  y2="70"
+                  stroke="rgba(34, 197, 94, 0.3)"
+                  strokeWidth="1"
                   className="animate-neural-network"'
                   style={{ animationDelay: '1s' }}
                 />
                 <line"
-                  x1="50""
-                  y1="50""
-                  x2="50""
-                  y2="80""
-                  stroke="rgba(239, 68, 68, 0.3)""
-                  strokeWidth="1""
+                  x1="50"
+                  y1="50"
+                  x2="50"
+                  y2="80"
+                  stroke="rgba(239, 68, 68, 0.3)"
+                  strokeWidth="1"
                   className="animate-neural-network"'
                   style={{ animationDelay: '1.5s' }}
                 />
               </svg>
             </div>
           </div>
-        );'
+        );
       case 'quantum':
         return ("
           <div className="relative">
@@ -131,7 +132,7 @@ export const FuturisticLoader = ({
               ></div>
             </div>
           </div>
-        );'
+        );
       case 'cyber':
         return ("
           <div className="relative">

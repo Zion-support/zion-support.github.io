@@ -16,12 +16,14 @@ import { AIListingGenerator } from "@/components/listing/AIListingGenerator";"
 import { Sparkles } from "lucide-react";
 // Define the form schema with zod
 const productSchema = z.object({
+
 "
     title: z.string().min(3, "Title must be at least 3 characters"),"
     description: z.string().min(10, "Description must be at least 10 characters"),
     price: z
         .string()
         .refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
+
 "
         message: "Price must be a valid number"}),"
     category: z.string().min(1, "Please select a category"),
@@ -30,6 +32,7 @@ const productSchema = z.object({
     model: z.instanceof(File).optional(),
     tags: z.string().optional()});
 export function ProductSubmissionForm() {
+
     const { user } = useAuth();
     const { toast } = useToast();
     const navigate = useNavigate();
@@ -41,6 +44,7 @@ export function ProductSubmissionForm() {
 
         resolver: zodResolver(productSchema),
         defaultValues: {
+
 "
             title: "","
             description: "","
@@ -54,10 +58,12 @@ export function ProductSubmissionForm() {
 
         const file = e.target.files?.[0];
         if (file) {
+
 "
             form.setValue("image", file);
             const reader = new FileReader();
             reader.onloadend = () => {
+
                 setImagePreview (reader.result) };
             reader.readAsDataURL (file) }
     };
@@ -65,6 +71,7 @@ export function ProductSubmissionForm() {
 
         const file = e.target.files?.[0];
         if (file) {
+
 "
             form.setValue("video", file)}
     };
@@ -72,11 +79,13 @@ export function ProductSubmissionForm() {
 
         const file = e.target.files?.[0];
         if (file) {
+
 "
             form.setValue("model", file)}
     };
     // Apply AI - generated content to the form
     const handleApplyGenerated = (content) => {
+
 "
         form.setValue("description", content.description);"
         form.setValue("tags", content.tags.join(", "));
@@ -91,6 +100,7 @@ export function ProductSubmissionForm() {
         if (!user) {
 
             toast({
+
 "
                 title: "Authentication Required","
                 description: "You must be logged in to publish products","
@@ -98,6 +108,7 @@ export function ProductSubmissionForm() {
             return}
         setIsSubmitting (true) ;
         try {
+
             // Create the product listing
             const productData = {
 
@@ -106,15 +117,16 @@ export function ProductSubmissionForm() {
                 price: parseFloat(values.price),
                 category: values.category,"
                 currency: "USD", // Default currency
-                tags: values.tags ? values.tags.split (',') .map (tag => tag.trim () ) [],;
+                tags: values.tags ? values.tags.split (',) .map (tag => tag.trim () ) [],;
                 author: {
+
 "
                     name: user.displayName || "Anonymous Creator",
                     id: user.id},
                 createdAt: new Date().toISOString()};
             const { data: productRecord, error: productError } = await supabase'
                 .from('product_listings')
-                .insert([productData])'
+                .insert([productData])
                 .select('id')
                 .single();
             if (productError) {
@@ -140,7 +152,7 @@ export function ProductSubmissionForm() {
                     .update({
 
                     images[publicUrlData.publicUrl];
-                });'
+                });
                     .eq('id', productRecord.id);
                 if (updateError) {
 
@@ -148,6 +160,7 @@ export function ProductSubmissionForm() {
             }
             // Upload video if provided
             if (values.video) {
+
 `
                 const videoPath = `product_videos/${productRecord.id}/${values.video.name}`;
                 const { error: uploadError } = await supabase.storage'
@@ -161,7 +174,7 @@ export function ProductSubmissionForm() {
                     .getPublicUrl(videoPath);
                 const { error: updateError } = await supabase'
                     .from('product_listings')
-                    .update({ video_url: publicUrlData.publicUrl })'
+                    .update({ video_url: publicUrlData.publicUrl })
                     .eq('id', productRecord.id);
                 if (updateError) {
 
@@ -169,6 +182,7 @@ export function ProductSubmissionForm() {
             }
             // Upload model if provided
             if (values.model) {
+
 `
                 const modelPath = `product_models/${productRecord.id}/${values.model.name}`;
                 const { error: uploadError } = await supabase.storage'
@@ -182,7 +196,7 @@ export function ProductSubmissionForm() {
                     .getPublicUrl(modelPath);
                 const { error: updateError } = await supabase'
                     .from('product_listings')
-                    .update({ model_url: publicUrlData.publicUrl })'
+                    .update({ model_url: publicUrlData.publicUrl })
                     .eq('id', productRecord.id);
                 if (updateError) {
 
@@ -190,13 +204,16 @@ export function ProductSubmissionForm() {
             }
             // Show success message
             toast({
+
 "
                 title: "Product Published!","
                 description: "Your product has been successfully published on Zion."});
             // Redirect to product page`
             router(`/marketplace/listing/${productRecord.id}`)}
         catch (error) {
+
             toast({
+
 "
                 title: "Publication Failed","
                 description: error instanceof Error ? error.message : "An unknown error occurred","
@@ -234,7 +251,7 @@ export function ProductSubmissionForm() {
                   <FormControl>"
                     <Textarea placeholder="Describe your product in detail..." className="min-h-32" {...field}/>
                   </FormControl>
-                  <FormDescription>'
+                  <FormDescription>
                     Provide a detailed description of what you're offering
                   </FormDescription>
                   <FormMessage />
@@ -330,6 +347,7 @@ export function ProductSubmissionForm() {
         <AIListingGenerator onApplyGenerated={handleApplyGenerated} initialValues = {
 
   {
+
 "
             title: form.getValues("title"),"
   category: form.getValues("category")

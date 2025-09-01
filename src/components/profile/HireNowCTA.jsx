@@ -1,17 +1,17 @@
-import React, { useState } from 'react';'
-import { Button } from '../ui/Button';'
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card';'
-import { Input } from '../ui/Input';'
-import { Textarea } from '../ui/Textarea';'
+import React, { useState } from 'react';
+import { Button } from '../ui/Button';
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card';
+import { Input } from '../ui/Input';
+import { Textarea } from '../ui/Textarea';
 import { DollarSign, MessageSquare } from 'lucide-react';
 export function HireNowCTA({ talentName, hourlyRate, onHire }) {
 
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [formData, setFormData] = useState({
-'
-    projectDescription: '','
-    budget: '','
-    startDate: '','
+
+    projectDescription: '',
+    budget: '',
+    startDate: '',
     message: ''});
   const handleSubmit = e => {
 
@@ -22,10 +22,10 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
     }
     // Reset form and close
     setFormData({
-'
-      projectDescription: '','
-      budget: '','
-      startDate: '','
+
+      projectDescription: '',
+      budget: '',
+      startDate: '',
       message: ''});
     setIsFormOpen(false);
   };
@@ -68,17 +68,17 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label"
-                htmlFor="projectDescription""
+                htmlFor="projectDescription"
                 className="block text-sm font-medium text-white mb-2"
               >
                 Project Description
               </label>
               <Textarea"
-                id="projectDescription""
+                id="projectDescription"
                 name="projectDescription"
                 value={formData.projectDescription}
                 onChange={handleChange}"
-                placeholder="Describe your project requirements...""
+                placeholder="Describe your project requirements..."
                 className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
                 required
               />
@@ -87,17 +87,17 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label"
-                  htmlFor="budget""
+                  htmlFor="budget"
                   className="block text-sm font-medium text-white mb-2"
                 >
                   Budget Range
                 </label>
                 <Input"
-                  id="budget""
+                  id="budget"
                   name="budget"
                   value={formData.budget}
                   onChange={handleChange}"
-                  placeholder="e.g., $1000-5000""
+                  placeholder="e.g., $1000-5000"
                   className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
                   required
                 />
@@ -105,14 +105,14 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
 
               <div>
                 <label"
-                  htmlFor="startDate""
+                  htmlFor="startDate"
                   className="block text-sm font-medium text-white mb-2"
                 >
                   Start Date
                 </label>
                 <Input"
-                  id="startDate""
-                  name="startDate""
+                  id="startDate"
+                  name="startDate"
                   type="date"
                   value={formData.startDate}
                   onChange={handleChange}"
@@ -124,17 +124,17 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
 
             <div>
               <label"
-                htmlFor="message""
+                htmlFor="message"
                 className="block text-sm font-medium text-white mb-2"
               >
                 Additional Message
               </label>
               <Textarea"
-                id="message""
+                id="message"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}"
-                placeholder="Any additional details or questions...""
+                placeholder="Any additional details or questions..."
                 className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
                 rows={3}
               />
@@ -142,13 +142,13 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
 "
             <div className="flex gap-3">
               <Button"
-                type="submit""
+                type="submit"
                 className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
               >
                 Send Message
               </Button>
               <Button"
-                type="button""
+                type="button"
                 variant="outline"
                 onClick={() => setIsFormOpen(false)}"
                 className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"

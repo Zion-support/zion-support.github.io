@@ -1,23 +1,32 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
+export default InnovativeServicesShowcase;
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data / innovativeMicroSaasServices2025";
+import { innovativeAIServices2025 } from "../data / innovativeAIServices2025";
+import { innovativeITServices2025 } from "../data / innovativeITServices2025";
+
+=======
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSaasServices2025";"
 import { innovativeITServices2025 } from "../data/innovativeITServices2025";"
 import { innovativeAIServices2025 } from "../data/innovativeAIServices2025";
+>>>>>>> main
 const InnovativeServicesShowcase = () => {
-'
+
     const [activeTab, setActiveTab] = useState('microsaas');
     const [selectedService, setSelectedService] = useState(null);
     const tabs = ['
-        { id: 'microsaas', name: 'Micro SAAS Services', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length },'
-        { id: 'it', name: 'IT Services', count: innovativeITServices2025.length },'
+        { id: 'microsaas', name: 'Micro SAAS Services', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length },
+        { id: 'it', name: 'IT Services', count: innovativeITServices2025.length },
         { id: 'ai', name: 'AI Services', count: innovativeAIServices2025.length }
     ];
     const getServicesByTab = () => {
+
         switch (activeTab) {
-'
+
             case 'microsaas':
-                return INNOVATIVE_MICRO_SAAS_SERVICES_2025;'
+                return INNOVATIVE_MICRO_SAAS_SERVICES_2025;
             case 'it':
-                return innovativeITServices2025;'
+                return innovativeITServices2025;
             case 'ai':
                 return innovativeAIServices2025;
             default:
@@ -27,6 +36,7 @@ const InnovativeServicesShowcase = () => {
 
         setSelectedService(service)};
     const closeModal = () => {
+
         setSelectedService(null)};"
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Header Section */}"
@@ -79,9 +89,9 @@ const InnovativeServicesShowcase = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
             {getServicesByTab().map((service, index) => (<div key={service.id} onClick={() => handleServiceClick(service)} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer group">"
                 <div className="flex justify-between items-start mb-4">"
-                  <div className="text-3xl">'
-                    {activeTab === 'microsaas' && '🚀'}'
-                    {activeTab === 'it' && '⚡'}'
+                  <div className="text-3xl">
+                    {activeTab === 'microsaas' && '🚀'}
+                    {activeTab === 'it' && '⚡'}
                     {activeTab === 'ai' && '🤖'}
                   </div>"
                   <div className="text-right">"
@@ -90,9 +100,9 @@ const InnovativeServicesShowcase = () => {
                       {activeTab === 'it' && `$${service.hourlyRate}/hr`}'`
                       {activeTab === 'ai' && `$${service.price}`}
                     </div>"
-                    <div className="text-sm text-gray-400">'
-                      {activeTab === 'microsaas' && service.pricingModel}'
-                      {activeTab === 'it' && 'Professional'}'
+                    <div className="text-sm text-gray-400">
+                      {activeTab === 'microsaas' && service.pricingModel}
+                      {activeTab === 'it' && 'Professional'}
                       {activeTab === 'ai' && service.pricingModel}
                     </div>
                   </div>
@@ -119,8 +129,8 @@ const InnovativeServicesShowcase = () => {
                 </div>
 "
                 <div className="flex justify-between items-center">"
-                  <div className="text-sm text-gray-400">'
-                    {activeTab === 'microsaas' && service.userLimit}'
+                  <div className="text-sm text-gray-400">
+                    {activeTab === 'microsaas' && service.userLimit}
                     {activeTab === 'it' && service.deliveryTime}'`
                     {activeTab === 'ai' && `${service.aiScore}% AI Score`}
                   </div>"
@@ -179,7 +189,7 @@ const InnovativeServicesShowcase = () => {
                           {activeTab === 'it' && `$${selectedService.hourlyRate}/hour`}'`
                           {activeTab === 'ai' && `$${selectedService.price}/${selectedService.pricingModel}`}
                         </span>
-                      </div>'
+                      </div>
                       {activeTab === 'microsaas' && (<>"
                           <div className="flex justify-between">"
                             <span className="text-gray-300">User Limit:</span>"
@@ -193,7 +203,7 @@ const InnovativeServicesShowcase = () => {
                             <span className="text-gray-300">ROI:</span>"
                             <span className="text-white text-green-400">{selectedService.roi}</span>
                           </div>
-                        </>)}'
+                        </>)}
                       {activeTab === 'it' && (<>"
                           <div className="flex justify-between">"
                             <span className="text-gray-300">Project Rate:</span>"
@@ -207,7 +217,7 @@ const InnovativeServicesShowcase = () => {
                             <span className="text-gray-300">SLA:</span>"
                             <span className="text-white">{selectedService.sla}</span>
                           </div>
-                        </>)}'
+                        </>)}
                       {activeTab === 'ai' && (<>"
                           <div className="flex justify-between">"
                             <span className="text-gray-300">AI Score:</span>"
@@ -266,7 +276,7 @@ const InnovativeServicesShowcase = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>"
-          <p className="text-xl text-gray-300 mb-8">'
+          <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our innovative services can drive your success in 2025 and beyond
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"

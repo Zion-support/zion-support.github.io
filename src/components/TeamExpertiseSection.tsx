@@ -1,6 +1,17 @@
-import React from 'react';'
-import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {
+
+<<<<<<< HEAD
+import { motion } from 'framer - motion';
+
+ * TeamExpertiseSection function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function TeamExpertiseSection () {
+
+=======
+>>>>>>> main
 
   Award,
   Users,
@@ -13,52 +24,15 @@ import {
   Globe,
   Rocket'
 } from 'lucide-react';
-'
-      projects: '50+';
-    };
-  ];
-const teamExpertise = [
-  {
 
-    icon: "🎓","
-    title: "Advanced Degrees","
-    description: "Our team holds advanced degrees in Computer Science, AI, and Engineering from top universities","
-    count: "95%"
-  },
-  {
-"
-    icon: "🏆","
-    title: "Industry Certifications","
-    description: "Certified professionals in AWS, Azure, Google Cloud, and specialized AI technologies","
-    count: "50+"
-  },
-  {
-"
-    icon: "🌍","
-    title: "Global Experience","
-    description: "Team members with experience working across 25+ countries and diverse industries","
-    count: "25+"
-  },
-  {
-"
-    icon: "⚡","
-    title: "Years of Experience","
-    description: "Combined experience of over 200 years in technology and business solutions","
-    count: "200+"
-  },
-  {
-"
-    icon: "🔬","
-    title: "Research Publications","
-    description: "Published research in leading AI, quantum computing, and blockchain journals","
-    count: "30+"
-  },;
+      projects: '50+'};
+  ];
+
   {;"
     icon: "🚀",;"
     title: "Successful Projects",;"
     description: "Successfully delivered complex technology solutions for Fortune 500 companies",;"
-    count: "500+";
-  };
+    count: "500+"};
 ];
 
 const coreExpertise = ["
@@ -70,24 +44,34 @@ const coreExpertise = ["
   "Data Science & Analytics",;"
   "IoT & Edge Computing",;"
   "Mobile & Web Development";
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 
+<<<<<<< HEAD
+  return (<section className = "py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
+      <div className="max - w-7xl mx - auto px - 6">
+        <motion.div
+          className="text - center mb - 16"
+=======
 export function TeamExpertiseSection() {
+
   return ("
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
+>>>>>>> main
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
@@ -105,31 +89,30 @@ export function TeamExpertiseSection() {
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition = {
 
   { duration: 0.6,
-  delay: 0.1 
+  delay: 0.1
 
 }}"
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
         >;
           {stats.map ( (stat, index) => {;
-            const IconComponent = stat.icon;
+            
             return ("
               <div key = {stat.label} className="text-center">"
                 <div className="flex justify-center mb-4">"
                   <div className="p-3 bg-blue-100 rounded-full">"
-                    <IconComponent className="h-8 w-8 text-blue-600" />
-                  </div>
+                    <IconComponent className="h-8 w-8 text-blue-600"  />                  </div>
                 </div>"
                 <div className="text-3xl font-bold text-gray-900 mb-2">
                   {stat.value}
@@ -148,6 +131,18 @@ export function TeamExpertiseSection() {
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">"
                 <span className="text-3xl">{expertise.icon}</span>
               </div>
+<<<<<<< HEAD
+
+              <div className="text - 4xl font - bold text - blue - 400 mb - 3 group - hover:text - blue - 300 transition - colors duration - 200">
+                {expertise.count}
+              </div>
+
+              <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - blue - 400 transition - colors duration - 200">
+                {expertise.title}
+              </h3>
+
+              <p className="text - gray - 400 text - sm leading - relaxed">
+=======
               "
               <div className="text-4xl font-bold text-blue-400 mb-3 group-hover:text-blue-300 transition-colors duration-200">
                 {expertise.count}
@@ -158,30 +153,36 @@ export function TeamExpertiseSection() {
               </h3>
               "
               <p className="text-gray-400 text-sm leading-relaxed">
+>>>>>>> main
                 {expertise.description}
               </p>
             </motion.div>) ) }
         </div>
 
+<<<<<<< HEAD
+        <motion.div
+          className="text - center mb - 12"
+=======
         <motion.div "
           className="text-center mb-12"
+>>>>>>> main
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
           transition = {
 
   { duration: 0.6,
-  delay: 0.3 
+  delay: 0.3
 
 }}
         >"
@@ -196,12 +197,11 @@ export function TeamExpertiseSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Schedule Consultation"
-                <Rocket className="ml-2 h-5 w-5" />
+                <Rocket className="ml-2 h-5 w-5"  />
               </button>"
               <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200">
                 View Team Profiles"
-                <Users className="ml-2 h-5 w-5" />
-              </button>
+                <Users className="ml-2 h-5 w-5"  />              </button>
             </div>
           </div>
         </motion.div>
@@ -213,9 +213,7 @@ export default TeamExpertiseSection;"
           </div>;
         </motion.div>;
       </div>;
-    </section>;) ;
-}
-
+    </section>;) }
 export default TeamExpertiseSection;
 export default TeamExpertiseSection;
 '"

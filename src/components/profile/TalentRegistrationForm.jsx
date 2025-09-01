@@ -16,6 +16,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";"
 import { useAuth } from "@/hooks/useAuth";
 // Define form schema;
 const talentProfileSchema = z.object({
+
 "
     name: z.string().min(2, "Name must be at least 2 characters long"),"
     title: z.string().min(5, "Professional title is required"),"
@@ -23,11 +24,13 @@ const talentProfileSchema = z.object({
     location: z.string().min(2, "Location is required"),"
     skills: z.string().min(2, "Enter at least one skill"),
     hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
+
 "
         message: "Hourly rate must be a number"}),"
     availability: z.enum(["available", "limited", "unavailable"]),
     enhancedProfile: z.boolean().default(true)});
 export function TalentRegistrationForm() {
+
     // Remove the useToast() hook since we're importing the toast function directly
     const { user } = useAuth();
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -40,6 +43,7 @@ export function TalentRegistrationForm() {
 
         resolver: zodResolver(talentProfileSchema),
         defaultValues: {
+
 "
             name: user?.displayName || "","
             title: "","
@@ -51,6 +55,7 @@ export function TalentRegistrationForm() {
             enhancedProfile: true}});
     // Handle adding skill tags
     const handleAddSkill = () => {
+
 "
         const skillInput = form.getValues("skills");
         if (skillInput && !skillTags.includes(skillInput)) {
@@ -64,6 +69,7 @@ export function TalentRegistrationForm() {
         setSkillTags(skillTags.filter((s) => s !== skill))};
     // Handle key press in skills input (add on enter)
     const handleSkillKeyPress = (e) => {
+
 "
         if (e.key === "Enter") {
 
@@ -78,20 +84,24 @@ export function TalentRegistrationForm() {
 
             const reader = new FileReader();
             reader.onloadend = () => {
+
                 setUploadedAvatar(reader.result)};
             reader.readAsDataURL(file)}
     };
     // Generate enhanced profile with AI
     const generateEnhancedProfile = async () => {
+
         const formData = form.getValues();
         if (!formData.bio || formData.bio.length < 20) {
 
             toast({
+
 "
                 title: "More information needed","
                 description: "Please provide at least a detailed bio before generating enhanced content."});
             return}
         try {
+
             setIsGenerating(true);
             // Call the Supabase Edge Function'
             const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
@@ -106,20 +116,22 @@ export function TalentRegistrationForm() {
                         skills: skillTags,
                         location: formData.location
 
-
             });
             if (error) {
 
                 throw new Error(error.message)}
             setGeneratedContent(data);
             toast({
+
 "
                 title: "Enhanced Profile Generated","
                 description: "AI has created a professional bio and suggested additional skills for your profile."})}
         catch (error) {
+
 "
-            // // // // // // // // console.error("Error generating enhanced profile:", error);
+            // // // // // // // // // // console.error("Error generating enhanced profile:", error);
             toast({
+
 "
                 title: "Generation failed","
                 description: error.message || "There was an error generating your enhanced profile. Please try again.","
@@ -130,7 +142,9 @@ export function TalentRegistrationForm() {
     };
     // Apply generated content to form
     const applyGeneratedContent = () => {
+
         if (generatedContent) {
+
 "
             form.setValue("bio", generatedContent.summary);
             // Extract all skills from categorized skills and properly type cast them
@@ -142,7 +156,7 @@ export function TalentRegistrationForm() {
                 if (Array.isArray(categorySkills)) {
 
                     categorySkills.forEach(skill => {
-'
+
                         if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {
 
                             newSkills.push(skill)}
@@ -157,19 +171,19 @@ export function TalentRegistrationForm() {
     const getCategoryColor = (category) => {
 
         switch (category) {
-'
-            case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500';'
-            case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500';'
-            case 'platforms': return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500';'
-            case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500';'
-            case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500';'
+
+            case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500';
+            case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500';
+            case 'platforms': return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500';
+            case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500';
+            case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500';
             default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple'}
     };
     // Send notification email
     const sendEnhancementNotification = async (userId, email) => {
 
         try {
-'
+
             await supabase.functions.invoke('send-email', {
 
                 body: {
@@ -178,8 +192,8 @@ export function TalentRegistrationForm() {
                     subject: "Your Zion Talent Profile Has Been Enhanced",
                     html: `"
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">"
-            <h2 style="color: #6D28D9;">Profile Enhancement Complete</h2>'
-            <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>'
+            <h2 style="color: #6D28D9;">Profile Enhancement Complete</h2>
+            <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>
             <p>We've added a professional summary and categorized your skills to help you stand out.</p>
             <p>You can review and edit these enhancements in your profile dashboard.</p>"
             <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">"
@@ -187,13 +201,14 @@ export function TalentRegistrationForm() {
             </div>
           </div>`
           `"
-            // // // // // // // // console.error("Failed to send notification email:", error);
+            // // // // // // // // // // console.error("Failed to send notification email:", error);
         }
                 }
             })}
         catch (error) {
+
 "
-            // console.error("Failed to send notification email:", error)}
+            // // // console.error("Failed to send notification email:", error)}
     };
     // Handle form submission
     const onSubmit = async (values) => {
@@ -201,6 +216,7 @@ export function TalentRegistrationForm() {
         if (skillTags.length === 0) {
 
             toast({
+
 "
                 title: "Skills required","
                 description: "Please add at least one skill to your profile.","
@@ -208,8 +224,10 @@ export function TalentRegistrationForm() {
             return}
         setIsSubmitting(true);
         try {
+
             // For actual implementation with Supabase
             if (!user?.id) {
+
 "
                 throw new Error("User not authenticated")}
             // Enhance profile if not already done
@@ -217,7 +235,7 @@ export function TalentRegistrationForm() {
             if (values.enhancedProfile && !generatedContent) {
 
                 try {
-'
+
                     const { data: aiData } = await supabase.functions.invoke('talent-profile-enhancer', {
 
                         body: {
@@ -230,21 +248,20 @@ export function TalentRegistrationForm() {
                                 skills: skillTags,
                                 location: values.location
 
-
                     });
                     if (aiData) {
 
                         finalSummary = aiData.summary;
                         // Safely merge AI suggested skills with user-provided skills
                         const categorizedSkills = aiData.categorizedSkills;
-                        const aiSkills = [];'
+                        const aiSkills = [];
                         // Extract skills from each category and ensure they're strings
                         Object.values(categorizedSkills).forEach(categorySkills => {
 
                             if (Array.isArray(categorySkills)) {
 
                                 categorySkills.forEach(skill => {
-'
+
                                     if (typeof skill === 'string' && skill) {
 
                                         aiSkills.push(skill)}
@@ -254,8 +271,9 @@ export function TalentRegistrationForm() {
                         finalSkills = [...new Set([...skillTags, ...aiSkills])]}
                 }
                 catch (error) {
+
 "
-                    // // // // // // // // console.error("Error enhancing profile:", error);
+                    // // // // // // // // // // console.error("Error enhancing profile:", error);
                     // Continue with submission even if enhancement fails"
                     finalSummary = ""}
             }
@@ -268,7 +286,9 @@ export function TalentRegistrationForm() {
             // Create the talent profile
             // In a real implementation, this would save to Supabase
             setTimeout(() => {
+
                 toast({
+
 "
                     title: "Profile Created Successfully","
                     description: "Your talent profile has been published and is now visible in the directory."});
@@ -299,9 +319,11 @@ export function TalentRegistrationForm() {
             */
 
         catch (error) {
+
 "
-            // // // // // // // // console.error("Error creating profile:", error);
+            // // // // // // // // // // console.error("Error creating profile:", error);
             toast({
+
 "
                 title: "Error Creating Profile","
                 description: error.message || "There was an error creating your profile. Please try again.","

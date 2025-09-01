@@ -4,13 +4,18 @@ function toCamelCase(str) {
   return str
     .replace(/^[0-9]/, (match) => {
       const numberWords = {
+<<<<<<< HEAD
+  '5': 'Five',4': 'Four',3': 'Three',2': 'Two',1': 'One',
+  <<<<<<< HEAD
+        '0': 'Zero'
+=======
   '5': 'Five',
         '4': 'Four',
         '3': 'Three',
         '2': 'Two',
         '1': 'One',
-  <<<<<<< HEAD
-        '0': 'Zero'
+          '0': 'Zero'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
 
 };
@@ -28,7 +33,7 @@ function toCamelCase(str) {
     .replace(/^(.)/, (match) => match.toUpperCase())};
 function fixFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath,utf8');
 
     // Extract filename without extension
     const filename = path.basename(filePath, path.extname(filePath));
@@ -36,18 +41,18 @@ function fixFile(filePath) {
 
     // Replace the variable declaration
     let newContent = content.replace(
-      new RegExp(`const\\s+${filename.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, '\\$&')}\\s*:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`, 'g'),
+      new RegExp(`const\\s+${filename.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g,\\$&')}\\s*:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,g'),
       `const ${camelCaseName}: NextPage = () => {`
     );
 
     // Replace the export statement
     newContent = newContent.replace(
-      new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, '\\$&')};`, 'g'),
+      new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g,\\$&')};`,g'),
       `export default ${camelCaseName};`
     );
 
     // Update title and meta description
-    const title = filename.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    const title = filename.replace(/-/g,).replace(/\b\w/g, l => l.toUpperCase());
     newContent = newContent.replace(
       /<title>.*?<\/title>/g,
       `<title>${title} - Zion Tech Solutions</title>`
@@ -65,7 +70,7 @@ function fixFile(filePath) {
     );
 
     if (newContent !== content) {
-      fs.writeFileSync(filePath, newContent, 'utf8');
+      fs.writeFileSync(filePath, newContent,utf8');
       // // // // // // // console.log(`Fixed: ${filePath}`);
       return true;
 

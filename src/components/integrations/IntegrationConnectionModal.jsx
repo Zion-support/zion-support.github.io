@@ -15,19 +15,23 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
         syncApplicantData: true
     });
     const handleConnectOAuth = () => {
+
         setIsConnecting(true);
         // Simulate OAuth flow
         setTimeout(() => {
+
             setIsConnecting(false);
             toast.success(`Connected to ${integration.name} successfully`);
             onClose()}, 2000);
         // In a real application, this would open a popup for OAuth authentication`
-        // window.open(`/api/oauth/${integration.id}`, 'oauth', 'width=600,height=600')};
+        // window.open(`/api/oauth/${integration.id}`,oauth',width=600,height=600')};
     const handleDisconnect = () => {
+
         // In a real application, this would revoke the OAuth token`
         toast.info(`Disconnected from ${integration.name}`);
         onClose()};
     const handleSaveSettings = () => {
+
         // In a real application, this would save the sync settings"
         toast.success("Integration settings saved");
         onClose()};
@@ -35,12 +39,13 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
       <DialogContent className="sm:max-w-md">"
         <DialogHeader className="flex flex-row items-center gap-4">"`
           <img loading="lazy" src={integration.logoUrl} alt={`${integration.name} logo`} className="h-12 w-12 rounded" onError={(e) => {
+
 "
             e.target.src = "/placeholder.svg"}}/>
           <div>
             <DialogTitle>{integration.name} Integration</DialogTitle>
             <DialogDescription>"
-              {integration.status === "connected" || integration.status === "warning""
+              {integration.status === "connected" || integration.status === "warning"
             ? "Manage your connection settings"`
             : `Connect your ${integration.name} account`}
             </DialogDescription>
@@ -56,12 +61,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
                   <Checkbox id="autoCreateContacts" checked={syncSettings.autoCreateContacts} onCheckedChange = {
 
   (checked) => setSyncSettings({ ...syncSettings,
-  autoCreateContacts: checked 
-
-
-
-
-
+  autoCreateContacts: checked
 
 })}/>"
                   <Label htmlFor="autoCreateContacts">Auto-create contacts in {integration.name}</Label>
@@ -71,12 +71,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
                   <Checkbox id="pushNotes" checked={syncSettings.pushNotes} onCheckedChange = {
 
   (checked) => setSyncSettings({ ...syncSettings,
-  pushNotes: checked 
-
-
-
-
-
+  pushNotes: checked
 
 })}/>"
                   <Label htmlFor="pushNotes">Push notes and comments</Label>
@@ -86,12 +81,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
                   <Checkbox id="syncJobDetails" checked={syncSettings.syncJobDetails} onCheckedChange = {
 
   (checked) => setSyncSettings({ ...syncSettings,
-  syncJobDetails: checked 
-
-
-
-
-
+  syncJobDetails: checked
 
 })}/>"
                   <Label htmlFor="syncJobDetails">Sync job details</Label>
@@ -101,12 +91,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
                   <Checkbox id="syncApplicantData" checked={syncSettings.syncApplicantData} onCheckedChange = {
 
   (checked) => setSyncSettings({ ...syncSettings,
-  syncApplicantData: checked 
-
-
-
-
-
+  syncApplicantData: checked
 
 })}/>"
                   <Label htmlFor="syncApplicantData">Sync applicant data</Label>

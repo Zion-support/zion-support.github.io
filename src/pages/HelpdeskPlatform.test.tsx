@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import HelpdeskPlatform from './HelpdeskPlatform';
 
-
 describe ('HelpdeskPlatform', () => {
   it ('renders without crashing', () => {
     render (<HelpdeskPlatform />) ;

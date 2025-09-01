@@ -1,9 +1,8 @@
-import React from 'react.ts';'
-import { Link } from 'react-router-dom.ts';'
-import { motion } from 'framer-motion.ts';'
-import { ArrowRight, CheckCircle, LucideIcon } from 'lucide-react.ts';
+export function ServicesGrid(...args: any[]): any {
 
+<<<<<<< HEAD
 interface Service {
+
   title: string;
   description: string;
   icon: LucideIcon;
@@ -13,15 +12,18 @@ interface Service {
 }
 
 interface ServicesGridProps extends React.PropsWithChildren<{}> {
+
   services: Service[];
 }
 
-export function ServicesGrid(...args: any[]): any {
-
+  return (<div className="grid grid - cols - 1 md: anygrid - cols - 2 gap - 8">
+      {services.map ( (service, index) => (<motion.div
+=======
   return()
     <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
       {services.map((service, index) => (
         <motion.div
+>>>>>>> main
           key={service.title}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -55,8 +57,7 @@ export function ServicesGrid(...args: any[]): any {
                 whileHover={{ x: 5 }}
                 transition={{ duration: 0.2 }}
               >"
-                <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />"
-                <span className="truncate">{feature}</span>
+                <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0"  />"                <span className="truncate">{feature}</span>
               </motion.div>) ) }
           </div>
 
@@ -67,12 +68,10 @@ export function ServicesGrid(...args: any[]): any {
           >
             <span>Learn More</span>"
             <motion.div className="group-hover/link:translate-x-1 transition-transform duration-200">"
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4"  />
             </motion.div>
           </Link>
         </motion.div>) ) }
-    </div>) ;
-}
-
+    </div>) }
 export default ServicesGrid;
 '"`

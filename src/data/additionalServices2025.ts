@@ -20,11 +20,8 @@ export interface AdditionalService {
 
     phone: string;
     email: string;
-    website: string;
-  
-};
-;
-export const ADDITIONAL_SPECIALIZED_SERVICES: AdditionalService[] = [;
+    website: string};
+;export const ADDITIONAL_SPECIALIZED_SERVICES: AdditionalService[] = [;
   {
 
     id: "ai-sales-outreach-accelerator","
@@ -35,6 +32,7 @@ export const ADDITIONAL_SPECIALIZED_SERVICES: AdditionalService[] = [;
     marketPrice: "$900 - $2,200/month"
   },
   {
+
 "
     id: "finops-cost-optimizer","
     title: "FinOps Cost Optimizer","
@@ -44,6 +42,7 @@ export const ADDITIONAL_SPECIALIZED_SERVICES: AdditionalService[] = [;
     marketPrice: "$700 - $2,000/month"
   },
   {
+
 "
     id: "genai-content-studio-pro","
     title: "GenAI Content Studio Pro","
@@ -52,6 +51,4 @@ export const ADDITIONAL_SPECIALIZED_SERVICES: AdditionalService[] = [;
     price: 999,"
     marketPrice: "$1,000 - $3,000/month"
 
-];
-
-}}}}}}}}"
+]}}}}}}}}"

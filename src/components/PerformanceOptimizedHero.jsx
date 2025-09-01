@@ -1,9 +1,18 @@
-import React, { memo, useEffect, useState } from 'react';'
+import React, { memo, useEffect, useState } from 'react';
+<<<<<<< HEAD
+export default PerformanceOptimizedHero;
+
+const HeroStats = memo ( ({ stats }) => (<div className="grid grid - cols - 1 md:grid - cols - 4 gap - 8 max - w-6xl mx - auto">
+    {stats.map ( (stat, index) => (<div key={index} className="text - center animate - fade - in - up group" style={{ animationDelay: `${index * 0.2}s` }} role="region" aria - label={`${stat.label} statistics`}>
+        <div className="relative mb - 4">
+          <div className="text - 5xl mb - 2 group - hover:scale - 110 transition - transform duration - 300" role="img" aria - label={stat.label}>
+=======
 import { Link } from 'react-router-dom';
 const HeroStats = memo(({ stats }) => (<div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">"
     {stats.map((stat, index) => (<div key={index} className="text-center animate-fade-in-up group" style={{ animationDelay: `${index * 0.2}s` }} role="region" aria-label={`${stat.label} statistics`}>"
         <div className="relative mb-4">"
           <div className="text-5xl mb-2 group-hover:scale-110 transition-transform duration-300" role="img" aria-label={stat.label}>
+>>>>>>> main
             {stat.icon}
           </div>`
           <div className={`absolute inset-0 bg-gradient-to-r ${stat.color} rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
@@ -15,12 +24,15 @@ const HeroStats = memo(({ stats }) => (<div className="grid grid-cols-1 md:grid-
       </div>))}
   </div>));
 const PerformanceOptimizedHero = memo(() => {
+
     const [isVisible, setIsVisible] = useState(false);
     const [isLoaded, setIsLoaded] = useState(false);
     useEffect(() => {
+
         const timer = setTimeout(() => setIsVisible(true), 100);
         const loadTimer = setTimeout(() => setIsLoaded(true), 500);
         return () => {
+
             clearTimeout(timer);
             clearTimeout(loadTimer)}}, []);
     const stats = ["
@@ -30,6 +42,7 @@ const PerformanceOptimizedHero = memo(() => {
         { number: "Global", label: "Service Coverage", icon: "🌍", color: "from-green-400 to-teal-400" }
     ];
     if (!isVisible) {
+
 "
         return (<section className="relative py-20 px-4 overflow-hidden min-h-[600px] flex items-center justify-center">"
         <div className="text-center">"
@@ -51,11 +64,12 @@ const PerformanceOptimizedHero = memo(() => {
       {/* Optimized Matrix Rain Effect - Only render when loaded */}"
       {isLoaded && (<div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">"
           {[...Array(10)].map((_, i) => (<div key={i} className="absolute text-cyan-400 text-xs animate-matrix-rain opacity-20" style={{
+
 `
                     left: `${Math.random() * 100}%`,`
                     animationDelay: `${Math.random() * 20}s`,`
                     animationDuration: `${20 + Math.random() * 10}s`
-                }}>'
+                }}>
               {Math.random() > 0.5 ? '1' : '0'}
             </div>))}
         </div>)}
@@ -96,7 +110,7 @@ const PerformanceOptimizedHero = memo(() => {
           <div className="absolute top-1/2 left-20 w-1 h-1 bg-purple-400 rounded-full animate-bounce" aria-hidden="true"></div>"
           <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-green-400 rounded-full animate-ping animation-delay-1000" aria-hidden="true"></div>
         </>)}
-    </section>)});'
+    </section>)});
 PerformanceOptimizedHero.displayName = 'PerformanceOptimizedHero';
 export default PerformanceOptimizedHero;
 }'"`

@@ -1,26 +1,37 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true, enableScrollEffects = true }) => {
-'
+
+<<<<<<< HEAD
+    const [theme, setTheme] = useState ('dark') ;
+    const [isParticleMode, setIsParticleMode] = useState (enableParticles) ;
+    const [showScrollToTop, setShowScrollToTop] = useState (false) ;
+    const [deviceType, setDeviceType] = useState ('desktop') ;
+    useEffect ( () => {
+
+=======
     const [theme, setTheme] = useState('dark');
     const [isParticleMode, setIsParticleMode] = useState(enableParticles);
-    const [showScrollToTop, setShowScrollToTop] = useState(false);'
+    const [showScrollToTop, setShowScrollToTop] = useState(false);
     const [deviceType, setDeviceType] = useState('desktop');
     useEffect(() => {
+
+>>>>>>> main
         // Detect device type
         const detectDevice = () => {
+
             const width = window.innerWidth;
             if (width < 768) {
-'
+
                 setDeviceType('mobile')}
             else if (width < 1024) {
-'
+
                 setDeviceType('tablet')}
             else {
-'
+
                 setDeviceType('desktop')}
         };
-        detectDevice();'
+        detectDevice();
         window.addEventListener('resize', detectDevice);
         // Load saved theme'
         const savedTheme = localStorage.getItem('ui-theme');
@@ -31,41 +42,44 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
         applyTheme(savedTheme || 'dark');
         // Scroll to top visibility
         const handleScroll = () => {
+
             setShowScrollToTop (window.scrollY > 300) };
         if (enableScrollEffects) {
-'
+
             window.addEventListener('scroll', handleScroll)}
         return () => {
-'
+
             window.removeEventListener('resize', detectDevice);
             if (enableScrollEffects) {
-'
+
                 window.removeEventListener('scroll', handleScroll)}
         }}, [enableScrollEffects]);
     const applyTheme = (newTheme) => {
 
-        const root = document.documentElement;'
+        const root = document.documentElement;
         if (newTheme === 'auto') {
-'
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;'
-            root.classList.toggle('dark', prefersDark);'
+
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)).matches;
+            root.classList.toggle('dark', prefersDark);
             root.classList.toggle('light', !prefersDark)}
         else {
-'
-            root.classList.remove('light', 'dark');
-            root.classList.add(newTheme)}'
+
+            root.classList.remove('light',dark');
+            root.classList.add(newTheme)}
         localStorage.setItem('ui-theme', newTheme)};
     const handleThemeChange = (newTheme) => {
 
         setTheme(newTheme);
         applyTheme(newTheme)};
     const scrollToTop = () => {
+
         window.scrollTo({
 
-            top: 0,'
+            top: 0,
             behavior: 'smooth'
         }) };
     const toggleParticleMode = () => {
+
         setIsParticleMode (!isParticleMode) };
     return (<>
       {/* Floating Action Buttons */}
@@ -92,19 +106,19 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
           <motion.div initial = {
 
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }} animate = {
 
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 
 
 
 
 "`
-}} className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full shadow-lg flex items-center justify-center text-white text-xs font-bold" title={`Current device: ${deviceType}`}>'
+}} className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full shadow-lg flex items-center justify-center text-white text-xs font-bold" title={`Current device: ${deviceType}`}>
             {deviceType === 'mobile' ? '📱' : deviceType === 'tablet' ? '📱' : '💻'}
           </motion.div>
         </div>) }
@@ -114,17 +128,17 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
         {showScrollToTop && enableScrollEffects && (<motion.button initial = {
 
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 }} animate = {
 
   { opacity: 1,
-  scale: 1 
+  scale: 1
 
 }} exit = {
 
   { opacity: 0,
-  scale: 0.8 
+  scale: 0.8
 
 
 
@@ -186,12 +200,12 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
       <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 

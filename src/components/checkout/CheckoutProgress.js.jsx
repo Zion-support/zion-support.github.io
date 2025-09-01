@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Steps, Step } from '@/components/ui/steps';
 export { function };
 export default function CheckoutProgress({ currentStep, className }) {

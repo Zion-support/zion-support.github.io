@@ -1,32 +1,33 @@
 import React from 'react';
 export { function };
 export default function ForumCategories() {
+
   const categories = [
     {
-'
-      id: '1','
-      name: 'General Discussion','
+
+      id: '1',
+      name: 'General Discussion',
       description: 'General topics and discussions',
       postCount: 150,
-      adminOnly: false,'
+      adminOnly: false,
       icon: 'message-circle',
       lastPost: {
-'
-        title: 'Welcome to the community!','
-        author: 'Admin','
+
+        title: 'Welcome to the community!',
+        author: 'Admin',
         date: '2024-01-15'}},
     {
-'
-      id: '2','
-      name: 'Technical Support','
+
+      id: '2',
+      name: 'Technical Support',
       description: 'Get help with technical issues',
       postCount: 89,
-      adminOnly: false,'
+      adminOnly: false,
       icon: 'code',
       lastPost: {
-'
-        title: 'API integration question','
-        author: 'Developer123','
+
+        title: 'API integration question',
+        author: 'Developer123',
         date: '2024-01-14'}},
   ];
   return()

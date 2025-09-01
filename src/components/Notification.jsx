@@ -1,13 +1,20 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
+export function Notification ({ id, type, title, message, duration = 5000, onClose }) {
+
+export function NotificationContainer ({ notifications, onClose }) {
+
+=======
 import { CheckCircle, XCircle, Info, X, AlertTriangle } from 'lucide-react';
+>>>>>>> main
 const notificationStyles = {
 
   success: {
 
-        icon: CheckCircle,'
-        bgColor: 'bg-zion-emerald/10','
-        borderColor: 'border-zion-emerald/20','
-        textColor: 'text-zion-emerald','
+        icon: CheckCircle,
+        bgColor: 'bg-zion-emerald/10',
+        borderColor: 'border-zion-emerald/20',
+        textColor: 'text-zion-emerald',
   iconColor: 'text-zion-emerald'
     
 
@@ -19,26 +26,26 @@ const notificationStyles = {
 },
     error: {
 
-        icon: XCircle,'
-        bgColor: 'bg-red-500/10','
-        borderColor: 'border-red-500/20','
-        textColor: 'text-red-500','
+        icon: XCircle,
+        bgColor: 'bg-red-500/10',
+        borderColor: 'border-red-500/20',
+        textColor: 'text-red-500',
         iconColor: 'text-red-500'
     },
     info: {
 
-        icon: Info,'
-        bgColor: 'bg-zion-blue/10','
-        borderColor: 'border-zion-blue/20','
-        textColor: 'text-zion-blue','
+        icon: Info,
+        bgColor: 'bg-zion-blue/10',
+        borderColor: 'border-zion-blue/20',
+        textColor: 'text-zion-blue',
         iconColor: 'text-zion-blue'
     },
     warning: {
 
-        icon: AlertTriangle,'
-        bgColor: 'bg-zion-gold/10','
-        borderColor: 'border-zion-gold/20','
-        textColor: 'text-zion-gold','
+        icon: AlertTriangle,
+        bgColor: 'bg-zion-gold/10',
+        borderColor: 'border-zion-gold/20',
+        textColor: 'text-zion-gold',
         iconColor: 'text-zion-gold'
 
 };
@@ -48,13 +55,16 @@ export function Notification({ id, type, title, message, duration = 5000, onClos
     const styles = notificationStyles[type];
     const Icon = styles.icon;
     useEffect ( () => {
+
         if (duration > 0) {
 
             const timer = setTimeout(() => {
+
                 handleClose()}, duration);
             return () => clearTimeout(timer)}
     }, [duration]);
     const handleClose = () => {
+
         setIsVisible(false);
         setTimeout(() => onClose(id), 300)};
     if (!isVisible)
@@ -72,6 +82,7 @@ export function Notification({ id, type, title, message, duration = 5000, onClos
       </div>
     </div>)}
 export function NotificationContainer({ notifications, onClose }) {
+
 "
     return (<div className="fixed top-20 right-4 z-50 space-y-2">
       {notifications.map((notification) => (<Notification key={notification.id} {...notification} onClose={onClose}/>))}

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Trophy, TrendingUp, Users, DollarSign, Clock, Star, ArrowRight, Building } from 'lucide-react';
 const successStories = [
     {
@@ -11,6 +11,7 @@ const successStories = [
         challenge: "Legacy system modernization and digital transformation for a growing fintech startup","
         solution: "Implemented cloud-native architecture with microservices, real-time data processing, and AI-powered fraud detection",
         results: {
+
 "
             performance: "300%","
             efficiency: "85%","
@@ -26,7 +27,7 @@ const successStories = [
         technologies["AWS", "Kubernetes", "React", "Node.js", "PostgreSQL", "Redis"],;"
         team: "12 developers","
         duration: "8 months","
-        budget: "$2.5M",'"
+        budget: "$2.5M","
         testimonial: "Zion Tech Group transformed our entire technology stack. The results exceeded our expectations - we're now processing 10x more transactions with better reliability than ever before.","
         author: "Sarah Chen","
         role: "CTO",
@@ -42,6 +43,7 @@ const successStories = [
         challenge: "Building a secure, HIPAA-compliant telemedicine platform with AI-powered diagnostics","
         solution: "Developed end-to-end telemedicine solution with advanced security, AI diagnostics, and seamless patient experience",
         results: {
+
 "
             performance: "250%","
             efficiency: "90%","
@@ -57,7 +59,7 @@ const successStories = [
         technologies["React Native", "Python", "TensorFlow", "AWS", "HIPAA Compliance", "WebRTC"],;"
         team: "15 developers","
         duration: "12 months","
-        budget: "$3.2M",'"
+        budget: "$3.2M","
         testimonial: "Zion's expertise in healthcare technology and security is unmatched. They delivered a platform that our doctors and patients love, while maintaining the highest security standards.","
         author: "Dr. Michael Rodriguez","
         role: "Chief Medical Officer",
@@ -73,6 +75,7 @@ const successStories = [
         challenge: "Creating an omnichannel retail experience with AI-powered inventory management and personalized recommendations","
         solution: "Built comprehensive omnichannel platform with AI inventory optimization, personalized shopping, and seamless integration",
         results: {
+
 "
             performance: "400%","
             efficiency: "80%","
@@ -104,6 +107,7 @@ const successStories = [
         challenge: "Implementing Industry 4.0 solutions with IoT sensors, predictive maintenance, and smart factory automation","
         solution: "Deployed comprehensive IoT infrastructure with predictive analytics, automation systems, and real-time monitoring",
         results: {
+
 "
             performance: "180%","
             efficiency: "75%","
@@ -119,7 +123,7 @@ const successStories = [
         technologies["IoT Sensors", "Python", "Machine Learning", "Azure", "React", "Real-time Analytics"],;"
         team: "20 developers","
         duration: "14 months","
-        budget: "$4.1M",'"
+        budget: "$4.1M","
         testimonial: "Zion's IoT and automation solutions have transformed our manufacturing process. We've seen dramatic improvements in efficiency, quality, and cost savings that exceeded our projections.","
         author: "David Kim","
         role: "Operations Director",
@@ -135,6 +139,7 @@ const successStories = [
         challenge: "Building a scalable online learning platform with AI-powered content recommendations and adaptive learning","
         solution: "Developed comprehensive LMS with AI content curation, adaptive learning paths, and advanced analytics",
         results: {
+
 "
             performance: "220%","
             efficiency: "85%","
@@ -150,7 +155,7 @@ const successStories = [
         technologies["React", "Node.js", "Python", "AI/ML", "AWS", "MongoDB"],;"
         team: "16 developers","
         duration: "11 months","
-        budget: "$2.9M",'"
+        budget: "$2.9M","
         testimonial: "Zion created an incredible learning platform that adapts to each student's needs. Our student engagement and learning outcomes have improved dramatically since the launch.","
         author: "Lisa Patel","
         role: "Chief Learning Officer",
@@ -166,6 +171,7 @@ const successStories = [
         challenge: "Developing smart grid management system with renewable energy integration and demand response optimization","
         solution: "Built intelligent grid management platform with renewable energy forecasting, demand optimization, and real-time monitoring",
         results: {
+
 "
             performance: "150%","
             efficiency: "70%","
@@ -181,7 +187,7 @@ const successStories = [
         technologies["Python", "Machine Learning", "IoT", "React", "AWS", "Real-time Analytics"],;"
         team: "22 developers","
         duration: "16 months","
-        budget: "$5.5M",'"
+        budget: "$5.5M","
         testimonial: "Zion's smart grid solution has revolutionized our energy management. We've significantly increased our renewable energy integration while improving grid reliability and reducing costs.","
         author: "Alex Johnson","
         role: "Chief Technology Officer",
@@ -455,6 +461,7 @@ const overallStats = ["
   y: 10 
 
 }} animate = {
+
 "
   { opacity: 1, height: "auto",
   y: 0 

@@ -1,25 +1,24 @@
-import React from 'react.ts';'
-import { Link  } from 'react-router-dom.ts';
 
-export function BlogSection(...args[]):  {
-
+<<<<<<< HEAD
   const blogPosts = [
     {
-'
-      id: '1','
-      title: 'The Future of AI in Technology','
-      excerpt: 'Exploring how artificial intelligence is reshaping the technology landscape...','
-      date: '2024-01-15','
+
+      id: '1',
+      title: 'The Future of AI in Technology',
+      excerpt: 'Exploring how artificial intelligence is reshaping the technology landscape...',
+      date: '2024 - 01 - 15',
       readTime: '8 min read'
     },
-    {;'
-      id: '2',;'
-      title: 'Building Scalable Web Applications',;'
-      excerpt: 'Best practices and architectural patterns for creating scalable web apps...',;'
-      date: '2024-01-10',;'
-      readTime: '12 min read';
-    };
-  ];
+    {;
+=======
+export function BlogSection(...args[]):  {
+
+>>>>>>> main
+      id: '2',;
+      title: 'Building Scalable Web Applications',;
+      excerpt: 'Best practices and architectural patterns for creating scalable web apps...',;
+      date: '2024-01-10',;
+      readTime: '12 min read'};  ];
 
   return()
     <section className = "py-16">"
@@ -46,6 +45,5 @@ export function BlogSection(...args[]):  {
             </article>;) ) };
         </div>;
       </div>;
-    </section>;) ;
-}
+    </section>;) }
 '"`

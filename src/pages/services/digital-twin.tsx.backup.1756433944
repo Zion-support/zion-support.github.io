@@ -1,0 +1,326 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+import { 
+  Globe, 
+  Cpu, 
+  Database, 
+  Network, 
+  Eye, 
+  BarChart3, 
+  Zap, 
+  Shield, 
+  Target, 
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Play,
+  Users,
+  Building,
+  Factory,
+  Car,
+  Home,
+  City,
+  Leaf
+} from 'lucide-react';
+
+const DigitalTwinPage: React.FC = () => {
+  const features = [
+    {
+      icon: Globe,
+      title: 'Virtual Replicas',
+      description: 'Create exact digital copies of physical assets, processes, and systems'
+    },
+    {
+      icon: Cpu,
+      title: 'Real-time Monitoring',
+      description: 'Continuous data collection and analysis for predictive insights'
+    },
+    {
+      icon: Database,
+      title: 'Data Integration',
+      description: 'Seamless connection with IoT sensors, SCADA systems, and databases'
+    },
+    {
+      icon: Network,
+      title: 'Predictive Analytics',
+      description: 'AI-powered forecasting for maintenance and optimization'
+    },
+    {
+      icon: Eye,
+      title: 'Visualization',
+      description: '3D models and dashboards for intuitive understanding'
+    },
+    {
+      icon: BarChart3,
+      title: 'Performance Metrics',
+      description: 'Comprehensive KPIs and reporting capabilities'
+    }
+  ];
+
+  const useCases = [
+    {
+      icon: Building,
+      title: 'Smart Buildings',
+      description: 'Energy optimization, HVAC management, and occupant comfort'
+    },
+    {
+      icon: Factory,
+      title: 'Manufacturing',
+      description: 'Production line optimization and predictive maintenance'
+    },
+    {
+      icon: Car,
+      title: 'Transportation',
+      description: 'Fleet management and infrastructure monitoring'
+    },
+    {
+      icon: Home,
+      title: 'Smart Cities',
+      description: 'Urban planning and infrastructure management'
+    },
+    {
+      icon: Leaf,
+      title: 'Environmental',
+      description: 'Climate monitoring and sustainability tracking'
+    },
+    {
+      icon: City,
+      title: 'Healthcare',
+      description: 'Patient monitoring and facility optimization'
+    }
+  ];
+
+  const benefits = [
+    'Reduce operational costs by 20-30%',
+    'Improve asset utilization by 15-25%',
+    'Extend equipment lifespan by 30-40%',
+    'Minimize downtime through predictive maintenance',
+    'Enhance decision-making with real-time insights',
+    'Optimize resource allocation and planning'
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Digital Twin Platform - Zion Tech Group"
+        description="Transform your physical assets into intelligent digital replicas with our advanced Digital Twin Platform. Real-time monitoring, predictive analytics, and optimization for smart operations."
+      />
+      
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-400/10 text-cyan-400 text-sm font-medium mb-6">
+              <Globe className="w-4 h-4 mr-2" />
+              Digital Twin Technology
+            </div>
+            <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
+              Digital Twin
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+                Platform
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Create intelligent digital replicas of your physical assets and systems. 
+              Monitor, analyze, and optimize operations in real-time with our advanced 
+              Digital Twin Platform.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200"
+              >
+                <Play className="w-5 h-5 mr-2" />
+                Watch Demo
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center px-8 py-4 border border-cyan-400/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
+              >
+                <ArrowRight className="w-5 h-5 mr-2" />
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Platform Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Comprehensive digital twin capabilities designed for enterprise-scale operations
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-400/50 hover:bg-slate-800/70 transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-400">
+                  {feature.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industry Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Transform operations across diverse industries with digital twin technology
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-400/50 hover:bg-slate-800/70 transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                  <useCase.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {useCase.title}
+                </h3>
+                <p className="text-gray-400">
+                  {useCase.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Business Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Measurable improvements in efficiency, cost reduction, and operational excellence
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-4"
+            >
+              {benefits.slice(0, 3).map((benefit, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                  <span className="text-gray-300">{benefit}</span>
+                </div>
+              ))}
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-4"
+            >
+              {benefits.slice(3).map((benefit, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                  <span className="text-gray-300">{benefit}</span>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Ready to Transform Your Operations?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Discover how our Digital Twin Platform can revolutionize your business processes
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200"
+              >
+                <Users className="w-5 h-5 mr-2" />
+                Schedule Consultation
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center px-8 py-4 border border-cyan-400/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
+              >
+                <ArrowRight className="w-5 h-5 mr-2" />
+                View Case Studies
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default DigitalTwinPage;

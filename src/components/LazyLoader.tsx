@@ -1,12 +1,14 @@
-import React, { Suspense, lazy } from 'react';'
-import { LoadingSpinner } from './ui/LoadingSpinner';
+<<<<<<< HEAD
+import React, { Suspense, lazy } from 'react';
+export const LazyPricing = lazy ( () => import ('../pages / Pricing') ) ;
+import { LoadingSpinner } from './ui / LoadingSpinner';
+=======
+>>>>>>> main
 
 interface LazyLoaderProps extends React.PropsWithChildren<{}> {
 
   component: React.ComponentType<any>;
   fallback?: React.ReactNode;
-  props?;
-}
-'
-export const LazyPricing = lazy(() => import('../pages/Pricing'));
-'
+  props?}
+
+export 

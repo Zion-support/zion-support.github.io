@@ -1,7 +1,7 @@
-import React from 'react';
-import { useEffect, useRef, useCallback, useMemo  } from 'react.ts';
+:src/hooks/usePerformanceOptimization.tsx
 
 interface PerformanceMetrics {
+
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
@@ -9,47 +9,53 @@ interface PerformanceMetrics {
 }
 
 interface UsePerformanceOptimizationOptions {
+
   enableLazyLoading?: boolean;
   enableIntersectionObserver?: boolean;
   enableMemoryManagement?: boolean;
   enableFPSMonitoring?: boolean;
+:src/hooks/usePerformanceOptimization.tsx
   threshold?: number
 }
 ;
-export const usePerformanceOptimization = (...args: unknown[]): unknown => {;
-  const {;
+export 
+  threshold?: number}
+
+export const {;
     enableLazyLoading = true,;
     enableIntersectionObserver = true,;
     enableMemoryManagement = true,;
     enableFPSMonitoring = true,;
-    threshold = 0.1;
-  } = options;
+:src/hooks/usePerformanceOptimization.tsx
+    threshold = 0.1} = options;
 ;
+    threshold = 0.1} = options;
+
 const metricsRef:  useRef<PerformanceMetrics>({;
     loadTime: 0,;
     renderTime: 0,;
     memoryUsage: 0,;
-    fps: 0;
-  });
+    fps: 0});
 
-  const observerRef = useRef<IntersectionObserver | null>(null);
-  const frameCountRef = useRef(0);
-  const lastTimeRef = useRef(performance.now());
-
+  
+  
+  
   // Measure initial load time
   useEffect(() => {
-'
+
     if (typeof window !== 'null') {
 
-      const loadTime = performance.now();
+:src/hooks/usePerformanceOptimization.tsx
+
+      
       metricsRef.current.loadTime = loadTime;
 
       // Report to analytics if available
       if (window.gtag) {
-'
-        window.gtag('event', 'performance_metric', {
-'
-          event_category: 'performance','
+
+        window.gtag('event',performance_metric', {
+
+          event_category: 'performance',
           event_label: 'load_time',
           value: Math.round(loadTime)
         })}
@@ -58,17 +64,22 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 
   // FPS monitoring
   useEffect(() => {
+
     if (!enableFPSMonitoring) return;
 
     let animationFrameId: number;
 
-    const measureFPS = (...args: unknown[]): unknown => {;
-      const currentTime = performance.now();
+:src/hooks/usePerformanceOptimization.tsx
+    
+      
       frameCountRef.current++;
 
       if (currentTime - lastTimeRef.current >= 1000) {
 
-        const fps = Math.round((frameCountRef.current * 1000) / (currentTime - lastTimeRef.current));
+      frameCountRef.current++;
+
+      if (currentTime - lastTimeRef.current >= 1000) {
+
         metricsRef.current.fps = fps;
 
         frameCountRef.current = 0;
@@ -77,9 +88,12 @@ const metricsRef:  useRef<PerformanceMetrics>({;
         // Log low FPS for debugging
         if (fps < 30) {
 
-          // // // // // // // // console.warn(`Low FPS detected: ${fps}`);
-        }`
-          // console.warn(`Low FPS detected: ${fps}`)}
+:src/hooks/usePerformanceOptimization.tsx
+
+          // // // // // // // // // // console.warn(`Low FPS detected: ${fps}`)}`
+          // // // console.warn(`Low FPS detected: ${fps}`)}
+          // // // // // // // // // console.warn(`Low FPS detected: ${fps}`)}
+          // // console.warn(`Low FPS detected: ${fps}`)}
       }
 
       animationFrameId = requestAnimationFrame(measureFPS)};
@@ -87,6 +101,7 @@ const metricsRef:  useRef<PerformanceMetrics>({;
     animationFrameId = requestAnimationFrame(measureFPS);
 
     return : unknown {
+
       if (animationFrameId) {
 
         cancelAnimationFrame(animationFrameId)}
@@ -94,23 +109,38 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 
   // Memory management
   useEffect(: unknown {
+
     if (!enableMemoryManagement) return;
 
+<<<<<<< HEAD
+    
+=======
+:src/hooks/usePerformanceOptimization.tsx
     const checkMemoryUsage = () => {;'
+    
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       if ('memory' in performance) {;
-        const memory = (performance as any).memory;
+        
         metricsRef.current.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
 
         // Warn if memory usage is high
+:src/hooks/usePerformanceOptimization.tsx
         if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB'
-          // // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB');
-        }'
-          // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}
+          // // // // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2),MB')}
+          // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2),MB')}
       }
     };
 
-    const intervalId = setInterval(checkMemoryUsage, 5000);
+    
     return : unknown clearInterval(intervalId)}, [enableMemoryManagement]);
+        if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
+          // // // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}
+          // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}
+      }
+    };
+
+    
+    return () => clearInterval(intervalId)}, [enableMemoryManagement]);
 
   // Intersection Observer for lazy loading
       return}
@@ -134,34 +164,43 @@ const metricsRef:  useRef<PerformanceMetrics>({;
       observerRef.current.observe(element)}
   }, [enableLazyLoading, createIntersectionObserver]);
 
+:src/hooks/usePerformanceOptimization.tsx
   // Performance monitoring'`
-        // // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms');
-      }'`
-        // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
+        // // // // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2),ms')}'`
+<<<<<<< HEAD
+        // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2),ms')}
+=======
+        // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
+  // Performance monitoring
+        // // // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
+        // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       // Report to analytics if available
       if (window.gtag) {
-'
-        window.gtag('event', 'performance_metric', {
-'
-          event_category: 'performance','
+
+        window.gtag('event',performance_metric', {
+
+          event_category: 'performance',
           event_label: 'render_time',
           value: Math.round(renderTime)
         })}
     }}, []);
 
   // Debounced function utility
-    
+
     return (...args: Parameters<T>)  => {
 
       clearTimeout(timeoutId);
       timeoutId = setTimeout(: unknown func(...args), delay)}}, []);
 
   // Throttled function utility
-    
+
     return (...args: Parameters<T>)  => {
 
-      const now = Date.now();
+:src/hooks/usePerformanceOptimization.tsx
+
+      
       if (now - lastCall >= delay) {
 
         lastCall = now;
@@ -173,18 +212,20 @@ const metricsRef:  useRef<PerformanceMetrics>({;
   }, []);
 
   // Get current metrics
-  const getMetrics = useCallback(: unknown ({ ...metricsRef.current }), []);
-
+:src/hooks/usePerformanceOptimization.tsx
+  
   // Memoized performance data
-  const performanceData = useMemo(: unknown ({;
+  
+  // Memoized performance data
+  
     metrics: getMetrics(),;
     isLowFPS: metricsRef.current.fps < 30,;
     isHighMemory: metricsRef.current.memoryUsage > 100,;
-    isSlowRender: metricsRef.current.renderTime > 16;
-  }), [getMetrics]);
+    isSlowRender: metricsRef.current.renderTime > 16}), [getMetrics]);
 
   // Cleanup on unmount
   useEffect(() => {
+
     return cleanup}, [cleanup]);
 
   return {
@@ -203,6 +244,7 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 declare global {
 
   interface Window {
+
     gtag?: (...args[])  => void}
 }
 '`

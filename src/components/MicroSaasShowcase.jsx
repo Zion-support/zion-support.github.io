@@ -1,122 +1,133 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Sparkles, ArrowRight, Star, TrendingUp, Users, Zap, Shield, BarChart3, Globe, Cpu, Database, Cloud export function MicroSaasShowcase() {
-'
+
+<<<<<<< HEAD
+    const [activeCategory, setActiveCategory] = useState ('all') ;
+    const categories = [
+        { id: 'all', name: 'All Services', icon: <Sparkles className="h - 5 w - 5"/> },
+        { id: 'ai - ml', name: 'AI & ML', icon: <Cpu className="h - 5 w - 5"/> },
+        { id: 'security', name: 'Security', icon: <Shield className="h - 5 w - 5"/> },
+        { id: 'analytics', name: 'Analytics', icon: <BarChart3 className="h - 5 w - 5"/> },
+        { id: 'automation', name: 'Automation', icon: <Zap className="h - 5 w - 5"/> },
+        { id: 'cloud', name: 'Cloud', icon: <Cloud className="h - 5 w - 5"/> }
+=======
     const [activeCategory, setActiveCategory] = useState('all');
     const categories = ['
-        { id: 'all', name: 'All Services', icon: <Sparkles className="h-5 w-5"/> },'"
-        { id: 'ai-ml', name: 'AI & ML', icon: <Cpu className="h-5 w-5"/> },'"
-        { id: 'security', name: 'Security', icon: <Shield className="h-5 w-5"/> },'"
-        { id: 'analytics', name: 'Analytics', icon: <BarChart3 className="h-5 w-5"/> },'"
-        { id: 'automation', name: 'Automation', icon: <Zap className="h-5 w-5"/> },'"
+        { id: 'all', name: 'All Services', icon: <Sparkles className="h-5 w-5"/> },"
+        { id: 'ai-ml', name: 'AI & ML', icon: <Cpu className="h-5 w-5"/> },"
+        { id: 'security', name: 'Security', icon: <Shield className="h-5 w-5"/> },"
+        { id: 'analytics', name: 'Analytics', icon: <BarChart3 className="h-5 w-5"/> },"
+        { id: 'automation', name: 'Automation', icon: <Zap className="h-5 w-5"/> },"
         { id: 'cloud', name: 'Cloud', icon: <Cloud className="h-5 w-5"/> }
+>>>>>>> main
     ];
     const microSaasServices = [
         {
-'
-            id: 'ai-content-optimizer','
-            title: 'AI Content Optimizer Pro','
+
+            id: 'ai-content-optimizer',
+            title: 'AI Content Optimizer Pro',
             description: 'Advanced AI-powered content optimization tool that analyzes, improves, and optimizes your content for SEO, readability, and engagement.',"
-            icon: <Cpu className="h-8 w-8"/>,'
-            category: 'ai-ml','
+            icon: <Cpu className="h-8 w-8"/>,
+            category: 'ai-ml',
             price: '$29/month',
-            rating: 4.9,'
-            features['SEO optimization', 'Readability scoring', 'Content suggestions', 'Performance analytics'],;'
-            badge: 'Popular','
+            rating: 4.9,
+            features['SEO optimization',Readability scoring',Content suggestions',Performance analytics'],;
+            badge: 'Popular',
             color: 'from-purple-500 to-cyan-500'
         },
         {
-'
-            id: 'cyber-threat-monitor','
-            title: 'Cyber Threat Monitor','
+
+            id: 'cyber-threat-monitor',
+            title: 'Cyber Threat Monitor',
             description: 'Real-time cybersecurity threat detection and monitoring system with AI-powered analysis and automated response capabilities.',"
-            icon: <Shield className="h-8 w-8"/>,'
-            category: 'security','
+            icon: <Shield className="h-8 w-8"/>,
+            category: 'security',
             price: '$99/month',
-            rating: 4.8,'
-            features['Real-time monitoring', 'AI threat detection', 'Automated response', 'Compliance reporting'],;'
-            badge: 'New','
+            rating: 4.8,
+            features['Real-time monitoring',AI threat detection',Automated response',Compliance reporting'],;
+            badge: 'New',
             color: 'from-blue-500 to-green-500'
         },
         {
-'
-            id: 'data-visualization-studio','
-            title: 'Data Visualization Studio','
+
+            id: 'data-visualization-studio',
+            title: 'Data Visualization Studio',
             description: 'Interactive data visualization platform that transforms complex datasets into actionable insights with customizable dashboards and reports.',"
-            icon: <BarChart3 className="h-8 w-8"/>,'
-            category: 'analytics','
+            icon: <BarChart3 className="h-8 w-8"/>,
+            category: 'analytics',
             price: '$49/month',
-            rating: 4.7,'
-            features['Interactive dashboards', 'Custom reports', 'Data integration', 'Real-time updates'],;'
-            badge: 'Pro','
+            rating: 4.7,
+            features['Interactive dashboards',Custom reports',Data integration',Real-time updates'],;
+            badge: 'Pro',
             color: 'from-green-500 to-teal-500'
         },
         {
-'
-            id: 'smart-email-marketing','
-            title: 'Smart Email Marketing Platform','
+
+            id: 'smart-email-marketing',
+            title: 'Smart Email Marketing Platform',
             description: 'AI-driven email marketing solution for personalized campaigns, automated workflows, and advanced audience segmentation.',"
-            icon: <Users className="h-8 w-8"/>,'
-            category: 'automation','
+            icon: <Users className="h-8 w-8"/>,
+            category: 'automation',
             price: '$39/month',
-            rating: 4.6,'
-            features['AI personalization', 'Automated workflows', 'Advanced segmentation', 'Performance tracking'],;'
-            badge: 'Featured','
+            rating: 4.6,
+            features['AI personalization',Automated workflows',Advanced segmentation',Performance tracking'],;
+            badge: 'Featured',
             color: 'from-red-500 to-orange-500'
         },
         {
-'
-            id: 'ai-customer-support','
-            title: 'AI Customer Support Assistant','
+
+            id: 'ai-customer-support',
+            title: 'AI Customer Support Assistant',
             description: 'Intelligent chatbot and virtual assistant for 24/7 customer support, automated query resolution, and personalized user experience.',"
-            icon: <Zap className="h-8 w-8"/>,'
-            category: 'ai-ml','
+            icon: <Zap className="h-8 w-8"/>,
+            category: 'ai-ml',
             price: '$59/month',
-            rating: 4.9,'
-            features['24/7 availability', 'AI-powered responses', 'Multi-language support', 'Integration APIs'],;'
-            badge: 'AI','
+            rating: 4.9,
+            features['24/7 availability',AI-powered responses',Multi-language support',Integration APIs'],;
+            badge: 'AI',
             color: 'from-pink-500 to-rose-500'
         },
         {
-'
-            id: 'smart-invoice-manager','
-            title: 'Smart Invoice Manager','
+
+            id: 'smart-invoice-manager',
+            title: 'Smart Invoice Manager',
             description: 'Automated invoicing and billing system with smart reminders, expense tracking, and financial reporting for small to medium businesses.',"
-            icon: <Database className="h-8 w-8"/>,'
-            category: 'automation','
+            icon: <Database className="h-8 w-8"/>,
+            category: 'automation',
             price: '$19/month',
-            rating: 4.5,'
-            features['Automated invoicing', 'Expense tracking', 'Financial reporting', 'Payment reminders'],;'
-            badge: 'Finance','
+            rating: 4.5,
+            features['Automated invoicing',Expense tracking',Financial reporting',Payment reminders'],;
+            badge: 'Finance',
             color: 'from-yellow-500 to-amber-500'
         },
         {
-'
-            id: 'cloud-infrastructure-manager','
-            title: 'Cloud Infrastructure Manager','
+
+            id: 'cloud-infrastructure-manager',
+            title: 'Cloud Infrastructure Manager',
             description: 'Comprehensive cloud infrastructure management platform with monitoring, optimization, and cost management capabilities.',"
-            icon: <Cloud className="h-8 w-8"/>,'
-            category: 'cloud','
+            icon: <Cloud className="h-8 w-8"/>,
+            category: 'cloud',
             price: '$79/month',
-            rating: 4.8,'
-            features['Multi-cloud support', 'Cost optimization', 'Performance monitoring', 'Security compliance'],;'
-            badge: 'Enterprise','
+            rating: 4.8,
+            features['Multi-cloud support',Cost optimization',Performance monitoring',Security compliance'],;
+            badge: 'Enterprise',
             color: 'from-indigo-500 to-purple-500'
         },
         {
-'
-            id: 'ai-seo-analyzer','
-            title: 'AI SEO Analyzer','
+
+            id: 'ai-seo-analyzer',
+            title: 'AI SEO Analyzer',
             description: 'Advanced SEO analysis tool powered by AI that provides actionable insights, competitor analysis, and optimization recommendations.',"
-            icon: <Globe className="h-8 w-8"/>,'
-            category: 'ai-ml','
+            icon: <Globe className="h-8 w-8"/>,
+            category: 'ai-ml',
             price: '$45/month',
-            rating: 4.7,'
-            features['AI-powered analysis', 'Competitor insights', 'Keyword research', 'Performance tracking'],;'
-            badge: 'SEO','
+            rating: 4.7,
+            features['AI-powered analysis',Competitor insights',Keyword research',Performance tracking'],;
+            badge: 'SEO',
             color: 'from-emerald-500 to-blue-500'
 
-    ];'
+    ];
     const filteredServices = activeCategory === 'all'
         ? microSaasServices
         : microSaasServices.filter(service => service.category === activeCategory);"

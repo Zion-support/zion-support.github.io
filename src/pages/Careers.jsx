@@ -1,320 +1,313 @@
-import { SEO } from '@/components/SEO';'
-import { GradientHeading } from '@/components/GradientHeading';'
-import { Button } from '@/components/ui/button';'
-import { Card, CardContent } from '@/components/ui/card';'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import React from 'react';
+import { Button } from '@/components / ui / button';
+import { Card, CardContent } from '@/components / ui / card';
+import { GradientHeading } from '@/components / GradientHeading';
+import { SEO } from '@/components / SEO';
+  import {
+export default function Careers () {
 
-export default function Careers() {
+    Tabs,
+    TabsContent,
+    TabsList,
+    TabsTrigger,
+  } from '@/components / ui / tabs';
   // Sample job listings
   const jobs = {
-
     engineering: [
       {
-'
-        title: 'Senior Frontend Engineer','
-        location: 'Remote','
-        type: 'Full-time','
+        title: 'Senior Frontend Engineer',
+        location: 'Remote',
+        type: 'Full - time',
         department: 'Engineering',
-        description:'
-          'Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace.'},
+        description:
+          'Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI - powered marketplace.',
+      },
       {
-'
-        title: 'AI Research Engineer','
-        location: 'San Francisco, CA','
-        type: 'Full-time','
+        title: 'AI Research Engineer',
+        location: 'San Francisco, CA',
+        type: 'Full - time',
         department: 'Engineering',
-        description:'
-          'Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems.'},
+        description:
+          'Work on cutting - edge AI technologies to power our matching algorithms and recommendation systems.',
+      },
       {
-'
-        title: 'Full Stack Developer','
-        location: 'Remote','
-        type: 'Full-time','
+        title: 'Full Stack Developer',
+        location: 'Remote',
+        type: 'Full - time',
         department: 'Engineering',
-        description:'
-          'Develop end-to-end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL.'},
+        description:
+          'Develop end - to - end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL.',
+      },
     ],
     product: [
       {
-'
-        title: 'Product Manager','
-        location: 'New York, NY','
-        type: 'Full-time','
+        title: 'Product Manager',
+        location: 'New York, NY',
+        type: 'Full - time',
         department: 'Product',
-        description:'
-          'Lead product development initiatives to enhance our marketplace experience for both talent and clients.'},
+        description:
+          'Lead product development initiatives to enhance our marketplace experience for both talent and clients.',
+      },
       {
-'
-        title: 'UX/UI Designer','
-        location: 'Remote','
-        type: 'Full-time','
+        title: 'UX / UI Designer',
+        location: 'Remote',
+        type: 'Full - time',
         department: 'Product',
-        description:'
-          'Create intuitive and engaging user experiences that make complex technology accessible to all users.'},
+        description:
+          'Create intuitive and engaging user experiences that make complex technology accessible to all users.',
+      },
     ],
     marketing: [
       {
-'
-        title: 'Growth Marketing Manager','
-        location: 'Remote','
-        type: 'Full-time','
+        title: 'Growth Marketing Manager',
+        location: 'Remote',
+        type: 'Full - time',
         department: 'Marketing',
-        description:'
-          'Drive user acquisition and engagement strategies across multiple channels to grow our marketplace.'},
+        description:
+          'Drive user acquisition and engagement strategies across multiple channels to grow our marketplace.',
+      },
       {
-'
-        title: 'Content Strategist','
-        location: 'London, UK','
-        type: 'Full-time','
+        title: 'Content Strategist',
+        location: 'London, UK',
+        type: 'Full - time',
         department: 'Marketing',
-        description:'
-          'Develop compelling content that educates and inspires our audience about the future of AI and technology.'},
+        description:
+          'Develop compelling content that educates and inspires our audience about the future of AI and technology.',
+      },
     ],
     operations: [
       {
-'
-        title: 'Community Manager','
-        location: 'Remote','
-        type: 'Full-time','
+        title: 'Community Manager',
+        location: 'Remote',
+        type: 'Full - time',
         department: 'Operations',
-        description:'
-          'Build and nurture our growing community of AI specialists, developers, and tech enthusiasts.'},
+        description:
+          'Build and nurture our growing community of AI specialists, developers, and tech enthusiasts.',
+      },
       {
-'
-        title: 'Talent Acquisition Specialist','
-        location: 'Remote','
-        type: 'Full-time','
+        title: 'Talent Acquisition Specialist',
+        location: 'Remote',
+        type: 'Full - time',
         department: 'Operations',
-        description:'
-          'Help connect the right talent with the right opportunities on our platform through personalized matching.'},
-    ]};
+        description:
+          'Help connect the right talent with the right opportunities on our platform through personalized matching.',
+      },
+    ],
+  };
 
   // Benefits list
   const benefits = [
     {
-'
       title: 'Flexible Work',
-      description:'
-        'Remote-first culture with flexible hours to support your productivity and work-life balance.',
-      icon: (
-        <svg
-          className="w-10 h-10 text-zion-cyan""
-          fill="none""
-          stroke="currentColor""
-          viewBox="0 0 24 24""
-          xmlns="http://www.w3.org/2000/svg"
+      description:
+        'Remote - first culture with flexible hours to support your productivity and work - life balance.',
+      icon: (<svg
+          className="w - 10 h - 10 text - zion - cyan"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org / 2000 / svg"
         >
-          <path"
-            strokeLinecap="round""
+          <path
+            strokeLinecap="round"
             strokeLinejoin="round"
-            strokeWidth={2}"
-            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+            strokeWidth={2}
+            d="M3 12l2 - 2m0 0l7 - 7 7 7M5 10v10a1 1 0 001 1h3m10 - 11l2 2m - 2-2v10a1 1 0 01 - 1 1h - 3m - 6 0a1 1 0 001 - 1v - 4a1 1 0 011 - 1h2a1 1 0 011 1v4a1 1 0 001 1m - 6 0h6"
           />
-        </svg>
-      )},
+        </svg>) ,
+    },
     {
-'
       title: 'Health & Wellness',
-      description:'
+      description:
         'Comprehensive health coverage, mental health support, and wellness programs to keep you at your best.',
-      icon: (
-        <svg"
-          className="w-10 h-10 text-zion-cyan""
-          fill="none""
-          stroke="currentColor""
-          viewBox="0 0 24 24""
-          xmlns="http://www.w3.org/2000/svg"
+      icon: (<svg
+          className="w - 10 h - 10 text - zion - cyan"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org / 2000 / svg"
         >
-          <path"
-            strokeLinecap="round""
+          <path
+            strokeLinecap="round"
             strokeLinejoin="round"
-            strokeWidth={2}"
-            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+            strokeWidth={2}
+            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682 - 7.682a4.5 4.5 0 00 - 6.364 - 6.364L12 7.636l - 1.318 - 1.318a4.5 4.5 0 00 - 6.364 0z"
           />
-        </svg>
-      )},
+        </svg>) ,
+    },
     {
-'
       title: 'Competitive Compensation',
-      description:'
+      description:
         'Salary packages that recognize your value, plus equity options to share in our success.',
-      icon: (
-        <svg"
-          className="w-10 h-10 text-zion-purple""
-          fill="none""
-          stroke="currentColor""
-          viewBox="0 0 24 24""
-          xmlns="http://www.w3.org/2000/svg"
+      icon: (<svg
+          className="w - 10 h - 10 text - zion - purple"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org / 2000 / svg"
         >
-          <path"
-            strokeLinecap="round""
+          <path
+            strokeLinecap="round"
             strokeLinejoin="round"
-            strokeWidth={2}"
-            d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            strokeWidth={2}
+            d="M12 8c - 1.657 0 - 3 .895 - 3 2s1.343 2 3 2 3 .895 3 2 - 1.343 2 - 3 2m0 - 8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0 - 1c - 1.11 0 - 2.08-.402 - 2.599 - 1M21 12a9 9 0 11 - 18 0 9 9 0 0118 0z"
           />
-        </svg>
-      )},
+        </svg>) ,
+    },
     {
-'
       title: 'Learning & Growth',
-      description:'
+      description:
         'Continuous learning opportunities, conference attendance, and career development support.',
-      icon: (
-        <svg"
-          className="w-10 h-10 text-zion-cyan""
-          fill="none""
-          stroke="currentColor""
-          viewBox="0 0 24 24""
-          xmlns="http://www.w3.org/2000/svg"
+      icon: (<svg
+          className="w - 10 h - 10 text - zion - cyan"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org / 2000 / svg"
         >
-          <path"
-            strokeLinecap="round""
+          <path
+            strokeLinecap="round"
             strokeLinejoin="round"
-            strokeWidth={2}"
-            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 5.477 5.754 5 7.5 5c1.747 0 3.332.477 4.5 1.253zm0 0C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C16.5 5 14.754 5 13.168 5.477L12 6.253z"
+            strokeWidth={2}
+            d="M12 6.253v13m0 - 13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 5.477 5.754 5 7.5 5c1.747 0 3.332.477 4.5 1.253zm0 0C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C16.5 5 14.754 5 13.168 5.477L12 6.253z"
           />
-        </svg>
-      )},
+        </svg>) ,
+    },
     {
-'
       title: 'Team & Culture',
-      description:'
+      description:
         'Collaborative environment with diverse perspectives and a culture of innovation and inclusion.',
-      icon: (
-        <svg"
-          className="w-10 h-10 text-zion-cyan""
-          fill="none""
-          stroke="currentColor""
-          viewBox="0 0 24 24""
-          xmlns="http://www.w3.org/2000/svg"
+      icon: (<svg
+          className="w - 10 h - 10 text - zion - cyan"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org / 2000 / svg"
         >
-          <path"
-            strokeLinecap="round""
+          <path
+            strokeLinecap="round"
             strokeLinejoin="round"
-            strokeWidth={2}"
-            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+            strokeWidth={2}
+            d="M17 20h5v - 2a3 3 0 00 - 5.356 - 1.857M17 20H7m10 0v - 2c0-.656-.126 - 1.283-.356 - 1.857M7 20H2v - 2a3 3 0 015.356 - 1.857M7 20v - 2c0-.656.126 - 1.283.356 - 1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11 - 6 0 3 3 0 016 0zm6 3a2 2 0 11 - 4 0 2 2 0 014 0zM7 10a2 2 0 11 - 4 0 2 2 0 014 0z"
           />
-        </svg>
-      )},
+        </svg>) ,
+    },
   ];
 
-  return ("
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO"
-        title="Careers at Zion Tech Group - Join Our Team""
-        description="Join our mission to revolutionize technology. Explore exciting career opportunities in AI, engineering, product, and more.""
+  return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
+      <SEO
+        title="Careers at Zion Tech Group - Join Our Team"
+        description="Join our mission to revolutionize technology. Explore exciting career opportunities in AI, engineering, product, and more."
         keywords="careers, jobs, employment, Zion Tech Group, AI, technology"
       />
-"
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}"
-        <div className="text-center mb-16">"
-          <GradientHeading className="text-5xl md:text-6xl mb-6">
+
+      <div className="container mx - auto px - 4 py - 16">
+        {/* Hero Section */}
+        <div className="text - center mb - 16">
+          <GradientHeading className="text - 5xl md:text - 6xl mb - 6">
             Join Our Mission
-          </GradientHeading>"
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
-            Help us build the future of AI-powered technology solutions. We're
+          </GradientHeading>
+          <p className="text - xl text - gray - 300 max - w-3xl mx - auto">
+            Help us build the future of AI - powered technology solutions. We're
             looking for passionate individuals who want to make a difference in
             the world.
           </p>
         </div>
 
-        {/* Benefits Section */}"
-        <div className="mb-16">"
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
+        {/* Benefits Section */}
+        <div className="mb - 16">
+          <h2 className="text - 3xl font - bold text - white text - center mb - 12">
             Why Work With Us
-          </h2>"
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <Card
-                key={index}"
-                className="bg-slate-800 border-slate-700 hover:border-slate-600 transition-colors"
-              >"
-                <CardContent className="p-6 text-center">"
-                  <div className="flex justify-center mb-4">{benefit.icon}</div>"
-                  <h3 className="text-xl font-semibold text-white mb-2">
+          </h2>
+          <div className="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
+            {benefits.map ( (benefit, index) => (<Card
+                key={index}
+                className="bg - slate - 800 border - slate - 700 hover:border - slate - 600 transition - colors"
+              >
+                <CardContent className="p - 6 text - center">
+                  <div className="flex justify - center mb - 4">
+                    {benefit.icon}
+                  </div>
+                  <h3 className="text - xl font - semibold text - white mb - 2">
                     {benefit.title}
-                  </h3>"
-                  <p className="text-gray-300">{benefit.description}</p>
+                  </h3>
+                  <p className="text - gray - 300">{benefit.description}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>) ) }
           </div>
         </div>
 
         {/* Job Listings */}
-        <div>"
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
+        <div>
+          <h2 className="text - 3xl font - bold text - white text - center mb - 12">
             Open Positions
-          </h2>"
-          <Tabs defaultValue="engineering" className="w-full">"
-            <TabsList className="grid w-full grid-cols-4 bg-slate-800">"
-              <TabsTrigger value="engineering" className="text-white">
+          </h2>
+          <Tabs defaultValue="engineering" className="w - full">
+            <TabsList className="grid w - full grid - cols - 4 bg - slate - 800">
+              <TabsTrigger value="engineering" className="text - white">
                 Engineering
-              </TabsTrigger>"
-              <TabsTrigger value="product" className="text-white">
+              </TabsTrigger>
+              <TabsTrigger value="product" className="text - white">
                 Product
-              </TabsTrigger>"
-              <TabsTrigger value="marketing" className="text-white">
+              </TabsTrigger>
+              <TabsTrigger value="marketing" className="text - white">
                 Marketing
-              </TabsTrigger>"
-              <TabsTrigger value="operations" className="text-white">
+              </TabsTrigger>
+              <TabsTrigger value="operations" className="text - white">
                 Operations
               </TabsTrigger>
             </TabsList>
 
-            {Object.entries(jobs).map(([department, departmentJobs]) => ("
-              <TabsContent key={department} value={department} className="mt-8">"
-                <div className="grid gap-6">
-                  {departmentJobs.map((job, index) => (
-                    <Card
-                      key={index}"
-                      className="bg-slate-800 border-slate-700 hover:border-slate-600 transition-colors"
-                    >"
-                      <CardContent className="p-6">"
-                        <div className="flex justify-between items-start mb-4">
-                          <div>"
-                            <h3 className="text-xl font-semibold text-white mb-2">
+            {Object.entries (jobs) .map ( ([department, departmentJobs]) => (<TabsContent
+                key={department}
+                value={department}
+                className="mt - 8"
+              >
+                <div className="grid gap - 6">
+                  {departmentJobs.map ( (job, index) => (<Card
+                      key={index}
+                      className="bg - slate - 800 border - slate - 700 hover:border - slate - 600 transition - colors"
+                    >
+                      <CardContent className="p - 6">
+                        <div className="flex justify - between items - start mb - 4">
+                          <div>
+                            <h3 className="text - xl font - semibold text - white mb - 2">
                               {job.title}
-                            </h3>"
-                            <div className="flex items-center gap-4 text-gray-300 text-sm">
+                            </h3>
+                            <div className="flex items - center gap - 4 text - gray - 300 text - sm">
                               <span>{job.location}</span>
                               <span>•</span>
                               <span>{job.type}</span>
                               <span>•</span>
                               <span>{job.department}</span>
                             </div>
-                          </div>"
-                          <Button className="bg-zion-cyan hover:bg-zion-cyan-dark text-white">
+                          </div>
+                          <Button className="bg - zion - cyan hover:bg - zion - cyan - dark text - white">
                             Apply Now
                           </Button>
-                        </div>"
-                        <p className="text-gray-300">{job.description}</p>
+                        </div>
+                        <p className="text - gray - 300">{job.description}</p>
                       </CardContent>
-                    </Card>
-                  ))}
+                    </Card>) ) }
                 </div>
-              </TabsContent>
-            ))}
+              </TabsContent>) ) }
           </Tabs>
         </div>
 
-        {/* CTA Section */}"
-        <div className="text-center mt-16">"
-          <h2 className="text-3xl font-bold text-white mb-6">'
+        {/* CTA Section */}
+        <div className="text - center mt - 16">
+          <h2 className="text - 3xl font - bold text - white mb - 6">
             Don't See the Right Role?
-          </h2>"
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">'
-            We're always looking for talented individuals to join our team. Send'
+          </h2>
+          <p className="text - gray - 300 mb - 8 max - w-2xl mx - auto">
+            We're always looking for talented individuals to join our team. Send
             us your resume and let's discuss how you can contribute to our
             mission.
-          </p>"
-          <Button className="bg-zion-cyan hover:bg-zion-cyan-dark text-white text-lg px-8 py-3">
+          </p>
+          <Button className="bg - zion - cyan hover:bg - zion - cyan - dark text - white text - lg px - 8 py - 3">
             Send Resume
           </Button>
         </div>
       </div>
-    </div>
-  );
+    </div>) ;
 }
-'"

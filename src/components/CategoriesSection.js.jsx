@@ -4,6 +4,7 @@ import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Sparkles, Zap, Shie
 import { motion } from "framer-motion";
 const categories = [
     {
+
 "
         title: "Comprehensive Services","
         description: "Micro SAAS, IT services, and AI solutions","
@@ -15,6 +16,7 @@ const categories = [
         stats: "500+ Services"
     },
     {
+
 "
         title: "Talents","
         description: "Connect with AI experts, developers, and tech specialists","
@@ -26,6 +28,7 @@ const categories = [
         stats: "10K+ Experts"
     },
     {
+
 "
         title: "Equipment","
         description: "Rent or buy specialized hardware, servers, and devices","
@@ -37,6 +40,7 @@ const categories = [
         stats: "1000+ Devices"
     },
     {
+
 "
         title: "Innovation","
         description: "Discover cutting-edge solutions and tech breakthroughs","
@@ -50,11 +54,13 @@ const categories = [
 ];
 const specialServices = [
     {
+
 "
         title: "Enhanced AI & IT Services","
         link: "/enhanced-services"
     },
     {
+
 "
         title: "IT Onsite Services","
         link: "/it-onsite-services","
@@ -62,6 +68,7 @@ const specialServices = [
         description: "Professional on-site technical support"
     },
     {
+
 "
         title: "Comprehensive Services","
         link: "/comprehensive-services","
@@ -69,6 +76,7 @@ const specialServices = [
         description: "End-to-end technology solutions"
     },
     {
+
 "
         title: "AI Integration","
         link: "/ai-integration","
@@ -76,6 +84,7 @@ const specialServices = [
         description: "Seamless AI implementation"
     },
     {
+
 "
         title: "Cloud Solutions","
         link: "/cloud-solutions","
@@ -161,6 +170,7 @@ export function CategoriesSection({ showTitle = true }) {
         "
         <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {categories.map((category, index) => (<motion.div key={category.title} variants={itemVariants} whileHover={{ y: -8 }} transition = {
+
 "
   { type: "spring",
   stiffness: 300 
@@ -168,6 +178,7 @@ export function CategoriesSection({ showTitle = true }) {
 }}>"
               <Link to={category.link} className="group block h-full">"
                 <motion.div className="rounded-2xl overflow-hidden h-full border border-zion-blue-light/30 bg-zion-blue-dark/80 backdrop-blur-sm p-8 transition-all duration-300 hover:border-zion-purple/50 hover:shadow-2xl hover:shadow-zion-purple/20 group-hover:bg-zion-blue-dark" variants={cardVariants} whileHover={{ scale: 1.02 }} transition = {
+
 "
   { type: "spring", stiffness: 400,
   damping: 10 

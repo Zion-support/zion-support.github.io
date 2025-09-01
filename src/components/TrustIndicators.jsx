@@ -1,5 +1,13 @@
 import React from 'react';
+<<<<<<< HEAD
+export function TrustIndicatorsCompact ({ className }) {
+
+import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export function TrustIndicators ({ className, showStats = true, showCertifications = true }) {
+
+=======
 import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export function TrustIndicators({ className, showStats = true, showCertifications = true }) {
+
+>>>>>>> main
 
     const indicators = [
         {
@@ -42,7 +50,7 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
         { label: "Countries", value: "100+", icon: Globe },"
         { label: "Projects", value: "$10M+", icon: Award },"
         { label: "Uptime", value: "99.9%", icon: Zap }
-    ];'
+    ];
     return (<section className={`py-16 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark ${className || ''}`}>"
       <div className="container mx-auto px-4">
         {/* Header */}"
@@ -119,6 +127,7 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
     </section>) }
 // Compact version for smaller spaces
 export function TrustIndicatorsCompact({ className }) {
+
 '`
     return (<div className={`flex flex-wrap justify-center gap-6 ${className || ''}`}>"
       <div className="flex items-center gap-2 text-zion-cyan text-sm">"

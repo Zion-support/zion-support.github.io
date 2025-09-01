@@ -5,7 +5,7 @@ import { useLocalStorage } from "../../hooks/useLocalStorage";"
 import { ChatMessage } from "./ChatMessage";"
 import { ChatInput } from "./ChatInput";"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";"
-import { Button } from "@/components/ui/button";'
+import { Button } from "@/components/ui/button";
 import { X import { focusManagement } from '@/utils/accessibility';
 export function ChatAssistant({ isOpen, onClose, recipient, conversationId, initialMessages = [], onSendMessage, contextHeader }) {
 
@@ -24,6 +24,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
     const [guestMessage, setGuestMessage] = useState(null);
     // Effect for guest user messages
     useEffect(() => {
+
         if (isGuest) {
 
             // Priority: initialMessages prop > localStorage > empty array
@@ -39,6 +40,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
     }, [isGuest, initialMessages, storedGuestMessages, setStoredGuestMessages, recipient.id]);
     // Effect for logged-in user messages
     useEffect(() => {
+
         if (!isGuest) {
 
             // Update state if initialMessages prop changes (e.g. new conversation loaded)
@@ -61,14 +63,16 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
     };
     const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000);
     useEffect(() => {
+
         if (debouncedApiCallParams) {
 
             onSendMessage(debouncedApiCallParams.message, debouncedApiCallParams.conversationId)}
     }, [debouncedApiCallParams, onSendMessage]);
     useEffect(() => {
+
         scrollToBottom()}, [currentMessages]); // currentMessages will correctly refer to either guest or logged-in state
     const scrollToBottom = () => {
-'
+
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};
     const handleSendMessage = async (messageContent) => {
 
@@ -77,15 +81,10 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
         if (!isGuest) { // Logged-in user
             const newMessage = {
 
-  id: Date.now().toString(),'
+  id: Date.now().toString(),
                 role: 'user',
                 message: messageContent,
   timestamp: new Date()
-            
-
-
-
-
 
 
 };
@@ -96,19 +95,15 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             setShowGuestModal(true)}
     };
     const handleModalSendConfirm = () => {
+
         if (!guestMessage)
             return;
         const newMessage = {
 
-  id: Date.now().toString(),'
+  id: Date.now().toString(),
             role: 'user',
             message: guestMessage,
   timestamp: new Date()
-        
-
-
-
-
 
 
 };
@@ -117,35 +112,38 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
         setShowGuestModal(false);
         setGuestMessage(null)};
     const handleModalCancel = () => {
+
         setShowGuestModal(false);
         setGuestMessage(null)};
     useEffect(() => {
+
         if (!showGuestModal)
             return;
         const handleKey = (e) => {
-'
+
             if (e.key === 'Escape') {
 
                 e.preventDefault();
                 handleModalCancel()}
         };
-        const removeTrap = guestModalRef.current ? focusManagement.trapFocus(guestModalRef.current) : null;'
+        const removeTrap = guestModalRef.current ? focusManagement.trapFocus(guestModalRef.current) : null;
         document.addEventListener('keydown', handleKey);
         return () => {
-'
+
             document.removeEventListener('keydown', handleKey);
             removeTrap && removeTrap()}}, [showGuestModal]);
     useEffect(() => {
+
         if (!isOpen)
             return;
         const handleKeyDown = (e) => {
-'
+
             if (e.key === 'Escape') {
 
                 e.preventDefault();
                 onClose()}
-        };'
-        document.addEventListener('keydown', handleKeyDown);'
+        };
+        document.addEventListener('keydown', handleKeyDown);
         return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, onClose]);
     if (!isOpen)
         return null;"

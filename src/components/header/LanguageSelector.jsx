@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import { ChevronDown, Globe export const LanguageSelector = () => {
-    const [isOpen, setIsOpen] = useState(false);'
+
+    const [isOpen, setIsOpen] = useState(false);
     const [currentLanguage, setCurrentLanguage] = useState('EN');
     const languages = ['
-        { code: 'EN', name: 'English', flag: '🇺🇸' },'
-        { code: 'ES', name: 'Español', flag: '🇪🇸' },'
-        { code: 'FR', name: 'Français', flag: '🇫🇷' },'
-        { code: 'DE', name: 'Deutsch', flag: '🇩🇪' },'
-        { code: 'IT', name: 'Italiano', flag: '🇮🇹' },'
-        { code: 'PT', name: 'Português', flag: '🇵🇹' },'
-        { code: 'RU', name: 'Русский', flag: '🇷🇺' },'
-        { code: 'ZH', name: '中文', flag: '🇨🇳' },'
-        { code: 'JA', name: '日本語', flag: '🇯🇵' },'
+        { code: 'EN', name: 'English', flag: '🇺🇸' },
+        { code: 'ES', name: 'Español', flag: '🇪🇸' },
+        { code: 'FR', name: 'Français', flag: '🇫🇷' },
+        { code: 'DE', name: 'Deutsch', flag: '🇩🇪' },
+        { code: 'IT', name: 'Italiano', flag: '🇮🇹' },
+        { code: 'PT', name: 'Português', flag: '🇵🇹' },
+        { code: 'RU', name: 'Русский', flag: '🇷🇺' },
+        { code: 'ZH', name: '中文', flag: '🇨🇳' },
+        { code: 'JA', name: '日本語', flag: '🇯🇵' },
         { code: 'KO', name: '한국어', flag: '🇰🇷' }
     ];
     const handleLanguageChange = (languageCode) => {
@@ -24,7 +25,7 @@ import { ChevronDown, Globe export const LanguageSelector = () => {
     return (<div className="relative">"
       <button onClick={() => setIsOpen(!isOpen)} className="flex items-center gap-2 px-3 py-2 text-white hover:text-zion-cyan transition-colors cursor-pointer">"
         <Globe className="w-4 h-4"/>"
-        <span className="text-sm font-medium">{currentLang?.code}</span>'
+        <span className="text-sm font-medium">{currentLang?.code}</span>
         <ChevronDown className={`w-3 h-3 transition-transform ${isOpen ? 'rotate-180' : ''}`}/>
       </button>
 "

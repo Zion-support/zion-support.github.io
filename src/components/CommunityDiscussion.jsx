@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+import React, { useState } from "react";
+import { Avatar, AvatarFallback } from "@/components / ui / avatar";
+import { Card, CardContent } from "@/components / ui / card";
+import { Input } from "@/components / ui / input";
+import { MessageCircle import { Button } from "@/components / ui / button";
+import { Separator } from "@/components / ui / separator";
+import { Textarea } from "@/components / ui / textarea";
+export const CommunityDiscussion = () => {
+
+=======
 import React, { useState } from "react";"
 import { MessageCircle import { Button } from "@/components/ui/button";"
 import { Input } from "@/components/ui/input";"
@@ -5,6 +16,7 @@ import { Textarea } from "@/components/ui/textarea";"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";"
 import { Card, CardContent } from "@/components/ui/card";"
 import { Separator } from "@/components/ui/separator";
+>>>>>>> main
 const initialPosts = [
     {
 
@@ -22,11 +34,13 @@ const initialPosts = [
         body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."},
 ];
 export const CommunityDiscussion = () => {
+
     const [posts, setPosts] = useState(initialPosts);
     const [showNew, setShowNew] = useState(false);"
     const [newTitle, setNewTitle] = useState("");"
     const [newBody, setNewBody] = useState("");
     const handleAddPost = () => {
+
         if (!newTitle.trim () || !newBody.trim () ) return;
         setPosts ([
             {

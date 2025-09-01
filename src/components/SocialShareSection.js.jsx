@@ -1,17 +1,18 @@
 import React from 'react';
 export function SocialShareSection() {
+
   const socialPlatforms = ['
     { name: 'Twitter', icon: '🐦', url: 'https://twitter.com/ziontechgroup' },
     {
-'
-      name: 'LinkedIn','
-      icon: '💼','
-      url: 'https://linkedin.com/company/ziontechgroup'},'
+
+      name: 'LinkedIn',
+      icon: '💼',
+      url: 'https://linkedin.com/company/ziontechgroup'},
     { name: 'Facebook', icon: '📘', url: 'https://facebook.com/ziontechgroup' },
     {
-'
-      name: 'Instagram','
-      icon: '📷','
+
+      name: 'Instagram',
+      icon: '📷',
       url: 'https://instagram.com/ziontechgroup'},
   ];
   return()
@@ -26,8 +27,8 @@ export function SocialShareSection() {
             <a
               key={platform.name}
               href={platform.url}"
-              target="_blank""
-              rel="noopener noreferrer""
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-4xl hover:scale-110 transition-transform"
               title={platform.name}
             >

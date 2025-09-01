@@ -1,32 +1,23 @@
-import React, { useState } from 'react.ts';'
-import { GradientHeading  } from '@/components/GradientHeading';'
-import { Button  } from '@/components/ui/button';'
-import { Input  } from '@/components/ui/input';'
-import { useNavigate  } from 'react-router-dom.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { Clock, Globe, Shield, Zap, MapPin, CheckCircle  } from 'lucide-react';
-;
-export function ITServiceRequestHero(...args[]):  {
+;export function ITServiceRequestHero(...args[]):  {
 
   const [location, setLocation] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const navigate = useNavigate();
-
-  const handleSubmit = async e: React.FormEvent {;
-    e.preventDefault();
+  
+  const handleSubmit = async e: React.FormEvent {;    e.preventDefault();
     if (location.trim()) {
 
       setIsSubmitting(true);
       // Simulate API call
       setTimeout(: unknown {
-        setIsSubmitting(false);
-        router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)};
-  };
 
+        setIsSubmitting(false);
+        router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}}}}}};
+
+<<<<<<< HEAD
   const containerVariants = {
 
   hidden: { opacity: 0,
-  y: 20 
+  y: 20
 
 },
     visible: {
@@ -44,7 +35,7 @@ export function ITServiceRequestHero(...args[]):  {
   const itemVariants = {
 
   hidden: { opacity: 0,
-  y: 20 
+  y: 20
 
 },
     visible: {
@@ -55,18 +46,28 @@ export function ITServiceRequestHero(...args[]):  {
     };
   };
 
+  const features = [
+    { icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },
+    { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },
+    { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },;
+    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
+  ];
+
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+
+=======
   const features = ["
     { icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },"
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },"
     { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },;"
     { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
   ];
-'
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';
 
+>>>>>>> main
 export function ITServiceRequestHero() {
+
   return ("
     <section className = "py-20 bg-gradient-to-br from-blue-900 via-slate-900 to-purple-900 relative overflow-hidden">
       {/* Background Elements */}"
@@ -78,7 +79,7 @@ export function ITServiceRequestHero() {
       <motion.div"
         className="container mx-auto px-4 relative z-10"
         variants={containerVariants}"
-        initial="hidden""
+        initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
 "
@@ -87,9 +88,8 @@ export function ITServiceRequestHero() {
           <motion.div variants={itemVariants} className="text-white">"
             <div className="flex items-center gap-3 mb-6">"
               <div className="p-2 bg-zion-cyan/20 rounded-lg">"
-                <Zap className="w-6 h-6 text-zion-cyan" />
-              </div>"
-              <span className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">
+                <Zap className="w-6 h-6 text-zion-cyan"  />
+              </div>"              <span className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">
                 Global IT Services
               </span>
             </div>
@@ -130,10 +130,9 @@ export function ITServiceRequestHero() {
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-dark hover:to-zion-blue-dark text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
 
                 Request Service Now"
-                <MapPin className="w-5 h-5 ml-2" />
-              </Button>
+                <MapPin className="w-5 h-5 ml-2"  />              </Button>
               <Button"
-                variant="outline""
+                variant="outline"
                 className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300"
 
                 Learn More
@@ -145,35 +144,20 @@ export function ITServiceRequestHero() {
             initial = {
 
   { opacity: 0,
-  x: 30 
-
-
-
-
-
+  x: 30
 
 }}
             whileInView = {
 
   { opacity: 1,
-  x: 0 
-
-
-
-
-
+  x: 0
 
 }}
             viewport={{ once: true }}
             transition = {
 
   { duration: 0.8,
-  delay: 0.2 
-
-
-
-
-
+  delay: 0.2
 
 }}"
             className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8"
@@ -181,10 +165,17 @@ export function ITServiceRequestHero() {
             <h3 className="text-2xl font-bold text-white mb-6 text-center">
               Contact Information
             </h3>
+<<<<<<< HEAD
+
+            <div className="space-y-6">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+=======
             "
             <div className="space-y-6">"
               <div className="flex items-center gap-4">"
                 <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">"
+>>>>>>> main
                   <span className="text-white text-xl">📞</span>
                 </div>
                 <div>"
@@ -192,9 +183,15 @@ export function ITServiceRequestHero() {
                   <p className="text-white font-semibold">+1 302 464 0950</p>
                 </div>
               </div>
+<<<<<<< HEAD
+
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
+=======
               "
               <div className="flex items-center gap-4">"
                 <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">"
+>>>>>>> main
                   <span className="text-white text-xl">✉️</span>
                 </div>
                 <div>"
@@ -202,9 +199,15 @@ export function ITServiceRequestHero() {
                   <p className="text-white font-semibold">kleber@ziontechgroup.com</p>
                 </div>
               </div>
+<<<<<<< HEAD
+
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
+=======
               "
               <div className="flex items-center gap-4">"
                 <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">"
+>>>>>>> main
                   <span className="text-white text-xl">📍</span>
                 </div>
                 <div>"
@@ -212,9 +215,15 @@ export function ITServiceRequestHero() {
                   <p className="text-white font-semibold text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
               </div>
+<<<<<<< HEAD
+
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-cyan-600 rounded-lg flex items-center justify-center">
+=======
               "
               <div className="flex items-center gap-4">"
                 <div className="w-12 h-12 bg-cyan-600 rounded-lg flex items-center justify-center">"
+>>>>>>> main
                   <span className="text-white text-xl">🌐</span>
                 </div>
                 <div>"
@@ -237,6 +246,5 @@ export function ITServiceRequestHero() {
         </div>;
       </div>;
     </section>;
-  );
-}
+  )}
 '"`

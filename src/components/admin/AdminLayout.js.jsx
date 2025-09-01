@@ -1,9 +1,9 @@
-import React from 'react';'
+import React from 'react';
 import Link from 'next/link';
 const navItems = ['
-    { title: 'Products', href: '/admin/products' },'
-    { title: 'Services', href: '/admin/services' },'
-    { title: 'Users', href: '/admin/users' },'
+    { title: 'Products', href: '/admin/products' },
+    { title: 'Services', href: '/admin/services' },
+    { title: 'Users', href: '/admin/users' },
     { title: 'Reports', href: '/admin/reports' },
 ];
 export function AdminLayout({ children }) {

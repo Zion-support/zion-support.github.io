@@ -1,32 +1,35 @@
-import React, { useState, useEffect } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { MessageCircle, X, ArrowUp, Star, Zap, Users } from 'lucide-react';'
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { MessageCircle, X, ArrowUp, Star, Zap, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 export function FloatingCTA({
-'
-  variant = 'default','
+
+  variant = 'default',
   position = 'bottom-right'}) {
 
   const [isExpanded, setIsExpanded] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
   useEffect(() => {
+
     const handleScroll = () => {
+
       setShowScrollTop(window.scrollY > 400);
-    };'
-    window.addEventListener('scroll', handleScroll);'
+    };
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   const scrollToTop = () => {
-'
+
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   const getPositionClasses = () => {
+
     switch (position) {
-'
+
       case 'bottom-left':'
-        return 'bottom-6 left-6';'
+        return 'bottom-6 left-6';
       case 'top-right':'
-        return 'top-6 right-6';'
+        return 'top-6 right-6';
       case 'top-left':'
         return 'top-6 left-6';
       default:'
@@ -34,18 +37,19 @@ export function FloatingCTA({
     }
   };
   const getExpandedPositionClasses = () => {
+
     switch (position) {
-'
+
       case 'bottom-left':'
-        return 'bottom-6 left-6';'
+        return 'bottom-6 left-6';
       case 'top-right':'
-        return 'top-6 right-6';'
+        return 'top-6 right-6';
       case 'top-left':'
         return 'top-6 left-6';
       default:'
         return 'bottom-6 right-6';
     }
-  };'
+  };
   if (variant === 'minimal') {
 
     return()
@@ -65,7 +69,7 @@ export function FloatingCTA({
         )}
       </AnimatePresence>
     );
-  }'
+  }
   if (variant === 'featured') {
 
     return()`
@@ -90,7 +94,7 @@ export function FloatingCTA({
               className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 w-80"
               initial={{ opacity: 0, scale: 0.8, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.8, y: 20 }}'
+              exit={{ opacity: 0, scale: 0.8, y: 20 }}
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
             >"
               <div className="flex items-center justify-between mb-4">"
@@ -107,7 +111,7 @@ export function FloatingCTA({
 "
               <div className="space-y-3">
                 <Link"
-                  to="/marketplace""
+                  to="/marketplace"
                   className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
                   onClick={() => setIsExpanded(false)}
                 >"
@@ -125,7 +129,7 @@ export function FloatingCTA({
                 </Link>
 
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
                   onClick={() => setIsExpanded(false)}
                 >"
@@ -139,7 +143,7 @@ export function FloatingCTA({
                 </Link>
 
                 <Link"
-                  to="/signup""
+                  to="/signup"
                   className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
                   onClick={() => setIsExpanded(false)}
                 >"
@@ -156,7 +160,7 @@ export function FloatingCTA({
               </div>
 "
               <div className="mt-4 pt-4 border-t border-gray-100">"
-                <div className="text-xs text-gray-500 text-center">'
+                <div className="text-xs text-gray-500 text-center">
                   Need help?{' '}"
                   <span className="text-zion-cyan cursor-pointer hover:underline">
                     Chat with us
@@ -192,7 +196,7 @@ export function FloatingCTA({
             className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 w-80"
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.8, y: 20 }}'
+            exit={{ opacity: 0, scale: 0.8, y: 20 }}
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
           >"
             <div className="flex items-center justify-between mb-4">"
@@ -209,7 +213,7 @@ export function FloatingCTA({
 "
             <div className="space-y-3">
               <Link"
-                to="/marketplace""
+                to="/marketplace"
                 className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
                 onClick={() => setIsExpanded(false)}
               >"
@@ -227,7 +231,7 @@ export function FloatingCTA({
               </Link>
 
               <Link"
-                to="/contact""
+                to="/contact"
                 className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
                 onClick={() => setIsExpanded(false)}
               >"

@@ -1,6 +1,16 @@
-import React, { useState, useEffect, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';
 import {
+
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer - motion';
+
+ * EnhancedAccessibilityPanel function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function EnhancedAccessibilityPanel () {
+
+=======
+>>>>>>> main
 
   Accessibility,
   Eye,
@@ -10,8 +20,7 @@ import {
   Type,
   Contrast,
   ZoomIn,
-  ZoomOut,
-  RotateCcw,
+  ZoomOut,  RotateCcw,
   CheckCircle,
   AlertTriangle,
   XCircle,
@@ -28,7 +37,7 @@ import {
   Play,
   Pause,
   SkipBack,
-  SkipForward,'
+  SkipForward,
   Volume1} from 'lucide-react';
 
 interface AccessibilitySettings {
@@ -37,24 +46,22 @@ interface AccessibilitySettings {
   largeText: boolean;
   reducedMotion: boolean;
   screenReader: boolean;
-  focusIndicator: boolean;'
+  focusIndicator: boolean;
   colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
   fontSize: number;
   lineHeight: number;
   letterSpacing: number;
-  wordSpacing: number;
-
-}
-
+  wordSpacing: number}
 interface AccessibilityIssue {
-  id: string;'
+
+  id: string;
   type: 'error' | 'warning' | 'info';
   message: string;
   element?: string;
-  recommendation: string;'
+  recommendation: string;
   severity: 'low' | 'medium' | 'high';
-
 export function EnhancedAccessibilityPanel() {
+
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
@@ -63,62 +70,50 @@ export function EnhancedAccessibilityPanel() {
     largeText: false,
     reducedMotion: false,
     screenReader: boolean,
-    focusIndicator: true,'
+    focusIndicator: true,
     colorBlindness: 'none',
     fontSize: 16,
     lineHeight: 1.5,
     letterSpacing: 0,
     wordSpacing: 0});
   const [issues, setIssues] = useState<AccessibilityIssue[]>([]);
-  const [isScanning, setIsScanning] = useState(false);'
+  const [isScanning, setIsScanning] = useState(false);
   const [currentFocus, setCurrentFocus] = useState<string>('');
   const [keyboardMode, setKeyboardMode] = useState(false);
 
   // Apply accessibility settings
-  const applySettings = useCallback()
-    (newSettings: Partial<AccessibilitySettings>) => {
-
-      const updatedSettings = { ...settings, ...newSettings };
+  
       setSettings(updatedSettings);
 
       // Apply high contrast
       if (updatedSettings.highContrast) {
-'
-        document.documentElement.classList.add('high-contrast');
-      } else {
-'
-        document.documentElement.classList.remove('high-contrast');
-      }
+
+        document.documentElement.classList.add('high-contrast')} else {
+
+        document.documentElement.classList.remove('high-contrast')}
 
       // Apply large text
       if (updatedSettings.largeText) {
-'
-        document.documentElement.style.fontSize = '18px';
-      } else {
-'
-        document.documentElement.style.fontSize = '16px';
-      }
+
+        document.documentElement.style.fontSize = '18px'} else {
+
+        document.documentElement.style.fontSize = '16px'}
 
       // Apply reduced motion
       if (updatedSettings.reducedMotion) {
 
         document.documentElement.style.setProperty('
-          '--reduced-motion','
-          'reduce'
-        );
-      } else {
-'
-        document.documentElement.style.removeProperty('--reduced-motion');
-      }
+          '--reduced-motion',reduce'
+        )} else {
+
+        document.documentElement.style.removeProperty('--reduced-motion')}
 
       // Apply focus indicator
       if (updatedSettings.focusIndicator) {
-'
-        document.documentElement.classList.add('focus-visible');
-      } else {
-'
-        document.documentElement.classList.remove('focus-visible');
-      }
+
+        document.documentElement.classList.add('focus-visible')} else {
+
+        document.documentElement.classList.remove('focus-visible')}
 
       // Apply color blindness simulation
       document.documentElement.style.setProperty('
@@ -148,260 +143,228 @@ export function EnhancedAccessibilityPanel() {
       localStorage.setItem('
         'accessibility-settings',
         JSON.stringify(updatedSettings)
-      );
-    },
+      )},
     [settings]
   );
 
   // Load settings from localStorage
   useEffect(() => {
-'
-    const saved = localStorage.getItem('accessibility-settings');
+
+<<<<<<< HEAD
+
+    
     if (saved) {
 
-      try {
-        const savedSettings = JSON.parse (saved) ;
-        setSettings (savedSettings) ;
-        applySettings (savedSettings) ;
-      } catch (error) {
+=======
 '
-        // console.warn('Failed to load accessibility settings:', error);
-      }
-    }
+    const saved = localStorage.getItem('accessibility-settings');    if (saved) {
+
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+
+      try {
+
+        setSettings (savedSettings) ;
+        applySettings (savedSettings) } catch (error) {
+
+        // // // console.warn('Failed to load accessibility settings:', error)}    }
   }, [applySettings]) ;
 
   // Keyboard navigation support
   useEffect ( () => {
-    const handleKeyDown = (event: KeyboardEvent) => {
 
-      // Tab key navigation'
-      if (event.key === 'Tab') {
-
-        setKeyboardMode(true);'
-        document.body.classList.add('keyboard-navigation');
-      }
-
+        document.body.classList.add('keyboard-navigation')}
       // Escape key to close panel'
       if (event.key === 'Escape' && isVisible) {
 
-        setIsVisible(false);
-      }
+        setIsVisible(false)}
 
       // Arrow keys for navigation
       if (keyboardMode) {
 
-        const focusableElements = document.querySelectorAll('
-          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-        );
-        const currentIndex = Array.from(focusableElements).findIndex()
-          el => el === document.activeElement
-        );
-
         switch (event.key) {
-'
+
           case 'ArrowDown':
             event.preventDefault();
-            const nextIndex = (currentIndex + 1) % focusableElements.length;
+            
             (focusableElements[nextIndex] as HTMLElement)?.focus();
-            break;'
+            break;
           case 'ArrowUp':
             event.preventDefault();
             const prevIndex =
               currentIndex > 0
                 ? currentIndex - 1
-                : focusableElements.length - 1;
-            (focusableElements[prevIndex] as HTMLElement)?.focus();
-            break;
-        }
+                : focusableElements.length - 1;            (focusableElements[prevIndex] as HTMLElement)?.focus();
+            break}
       }
     };
 
-    const handleMouseDown = () => {
-      setKeyboardMode(false);'
-      document.body.classList.remove('keyboard-navigation');
-    };
-'
-    document.addEventListener('keydown', handleKeyDown);'
+    
+      document.body.classList.remove('keyboard-navigation')};
+
+    document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
 
     return () => {
-'
-      document.removeEventListener('keydown', handleKeyDown);'
-      document.removeEventListener('mousedown', handleMouseDown);
-    };
-  }, [isVisible, keyboardMode]) ;
+
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown)}}, [isVisible, keyboardMode]) ;
 
   // Accessibility audit
-  const runAccessibilityAudit = useCallback (async () => {
-    setIsScanning (true) ;
+  
     const newIssues: AccessibilityIssue[] = [];
 
     try {
+
       // Check for missing alt text'
-      const images = document.querySelectorAll('img');
+<<<<<<< HEAD
+      
       images.forEach((img, index) => {
+
+=======
+      const images = document.querySelectorAll('img');      images.forEach((img, index) => {
+
 '
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         if (!img.alt && !img.getAttribute('aria-label')) {
 
           newIssues.push({
+
 `
-            id: `alt-${index}`,'
-            type: 'error','
+            id: `alt-${index}`,
+            type: 'error',
             message: 'Image missing alt text',
             element: img.tagName.toLowerCase(),
             recommendation:'
-              'Add descriptive alt text or aria-label for screen readers','
-            severity: 'high'});
-        }
+              'Add descriptive alt text or aria-label for screen readers',
+            severity: 'high'})}
       }) ;
 
       // Check for proper heading structure'
-      const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+      
       let previousLevel = 0;
       headings.forEach((heading, index) => {
 
-        const level = parseInt(heading.tagName.charAt(1));
-        if (level > previousLevel + 1) {
+        const level = parseInt(heading.tagName.charAt(1));        if (level > previousLevel + 1) {
 
           newIssues.push({
+
 `
-            id: `heading-${index}`,'
-            type: 'warning','
+            id: `heading-${index}`,
+            type: 'warning',
             message: 'Heading level skipped',
-            element: heading.tagName.toLowerCase(),'
-            recommendation: 'Maintain proper heading hierarchy (h1 → h2 → h3)','
-            severity: 'medium'});
-        }
-        previousLevel = level;
-      }) ;
+            element: heading.tagName.toLowerCase(),
+            recommendation: 'Maintain proper heading hierarchy (h1 → h2 → h3),
+            severity: 'medium'})}
+        previousLevel = level}) ;
 
       // Check for proper form labels'
-      const formInputs = document.querySelectorAll('input, select, textarea');
+      
       formInputs.forEach((input, index) => {
-'
+
         const id = input.getAttribute('id');"`
-        const label = document.querySelector(`label[for="${id}"]`);'
-        const ariaLabel = input.getAttribute('aria-label');
-'
+        
+        
         if (!label && !ariaLabel && !input.getAttribute('aria-labelledby')) {
 
           newIssues.push({
+
 `
-            id: `label-${index}`,'
-            type: 'error','
+            id: `label-${index}`,
+            type: 'error',
             message: 'Form input missing label',
-            element: input.tagName.toLowerCase(),'
-            recommendation: 'Add label element or aria-label attribute','
-            severity: 'high'});
-        }
+            element: input.tagName.toLowerCase(),
+            recommendation: 'Add label element or aria-label attribute',
+            severity: 'high'})}
       }) ;
 
       // Check for proper ARIA attributes'
-      const ariaElements = document.querySelectorAll('[aria-*]');
+      
       ariaElements.forEach((element, index) => {
-'
-        const ariaExpanded = element.getAttribute('aria-expanded');'
-        const ariaControls = element.getAttribute('aria-controls');'
-        const ariaOwns = element.getAttribute('aria-owns');
 
         if (ariaExpanded && !ariaControls && !ariaOwns) {
 
           newIssues.push({
+
 `
-            id: `aria-${index}`,'
+            id: `aria-${index}`,
             type: 'warning',
             message:'
               'aria-expanded without corresponding aria-controls or aria-owns',
             element: element.tagName.toLowerCase(),
             recommendation:'
-              'Add aria-controls or aria-owns to indicate controlled content','
-            severity: 'medium'});
-        }
+              'Add aria-controls or aria-owns to indicate controlled content',
+            severity: 'medium'})}
       }) ;
 
       // Check for sufficient color contrast (simplified)
-      const textElements = document.querySelectorAll('
-        'p, span, div, h1, h2, h3, h4, h5, h6'
-      );
+      
       textElements.forEach((element, index) => {
 
-        const style = window.getComputedStyle(element);
-        const color = style.color;
-        const backgroundColor = style.backgroundColor;
-'
+<<<<<<< HEAD
+
         // This is a simplified check - in production you'd want a proper contrast ratio calculation
+=======
+'        // This is a simplified check - in production you'd want a proper contrast ratio calculation
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         if (color === backgroundColor) {
 
           newIssues.push({
+
 `
-            id: `contrast-${index}`,'
-            type: 'warning','
+            id: `contrast-${index}`,
+            type: 'warning',
             message: 'Potential contrast issue',
             element: element.tagName.toLowerCase(),
             recommendation:'
-              'Ensure sufficient contrast between text and background colors','
-            severity: 'medium'});
-        }
+              'Ensure sufficient contrast between text and background colors',
+            severity: 'medium'})}
       }) ;
 
       // Check for keyboard navigation
-      const interactiveElements = document.querySelectorAll('
-        'button, a, input, select, textarea'
-      );
+      
       interactiveElements.forEach((element, index) => {
+
+=======
+      );      interactiveElements.forEach((element, index) => {
+
 '
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         if (element.tagName === 'BUTTON' && !element.getAttribute('type')) {
 
           newIssues.push({
+
 `
-            id: `button-${index}`,'
-            type: 'warning','
+            id: `button-${index}`,
+            type: 'warning',
             message: 'Button missing type attribute',
-            element: element.tagName.toLowerCase(),'"
-            recommendation: 'Add type="button" to prevent form submission','
-            severity: 'medium'});
-        }
-      });
-    } catch (error) {
-'
-      // console.error('Accessibility audit failed:', error);
-    }
+            element: element.tagName.toLowerCase(),"
+            recommendation: 'Add type="button" to prevent form submission',
+            severity: 'medium'})}
+      })} catch (error) {
+
+      // // // console.error('Accessibility audit failed:', error)}
 
     setIssues (newIssues) ;
-    setIsScanning (false) ;
-  }, []) ;
+    setIsScanning (false) }, []) ;
 
   // Get issue icon
-  const getIssueIcon = (type: string) => {
-
-    switch (type) {
-'
-      case 'error':"
-        return <XCircle className="w-4 h-4 text-red-500" />;'
+  
       case 'warning':"
-        return <AlertTriangle className="w-4 h-4 text-yellow-500" />;'
+        return <AlertTriangle className="w-4 h-4 text-yellow-500"  />;
       case 'info':"
-        return <Info className="w-4 h-4 text-blue-500" />;
+        return <Info className="w-4 h-4 text-blue-500"  />;
       default:"
-        return <Info className="w-4 h-4 text-gray-500" />;
-    }
+        return <Info className="w-4 h-4 text-gray-500"  />}
   };
 
   // Get severity color
-  const getSeverityColor = (severity: string) => {
-
-    switch (severity) {
-'
-      case 'high':'
-        return 'border-red-500 bg-red-50 dark:bg-red-900/20';'
+  
       case 'medium':'
-        return 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20';'
+        return 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20';
       case 'low':'
         return 'border-blue-500 bg-blue-50 dark:bg-blue-900/20';
       default:'
-        return 'border-gray-500 bg-gray-50 dark:bg-gray-900/20';
-    }
-  };
+        return 'border-gray-500 bg-gray-50 dark:bg-gray-900/20'}  };
 
   return()
     <>
@@ -411,11 +374,10 @@ export function EnhancedAccessibilityPanel() {
         onClick={() => setIsVisible(!isVisible)}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}"
-        title="Accessibility Panel""
+        title="Accessibility Panel"
         aria-label="Open accessibility panel"
       >"
-        <Accessibility className="w-6 h-6" />
-      </motion.button>
+        <Accessibility className="w-6 h-6"  />      </motion.button>
 
       {/* Accessibility Panel */}
       <AnimatePresence>
@@ -423,16 +385,15 @@ export function EnhancedAccessibilityPanel() {
             initial={{ opacity: 0, x: -300 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -300 }}"
-            className="fixed top-0 left-0 h-full w-96 bg-white dark:bg-gray-900 shadow-2xl z-40 overflow-y-auto""
-            role="dialog""
+            className="fixed top-0 left-0 h-full w-96 bg-white dark:bg-gray-900 shadow-2xl z-40 overflow-y-auto"
+            role="dialog"
             aria-label="Accessibility settings and tools"
           >"
             <div className="p-6">
               {/* Header */}"
               <div className="flex items-center justify-between mb-6">"
                 <div className="flex items-center space-x-2">"
-                  <Accessibility className="w-6 h-6 text-zion-blue" />"
-                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+                  <Accessibility className="w-6 h-6 text-zion-blue"  />"                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">
                     Accessibility
                   </h2>
                 </div>"
@@ -443,18 +404,16 @@ export function EnhancedAccessibilityPanel() {
                     aria-label={isExpanded ? 'Collapse panel' : 'Expand panel'}
                   >
                     {isExpanded ? ("
-                      <ChevronUp className="w-4 h-4" />
+                      <ChevronUp className="w-4 h-4"  />
                     ) : ("
-                      <ChevronDown className="w-4 h-4" />
-                    )}
-                  </button>
+                      <ChevronDown className="w-4 h-4"  />
+                    )}                  </button>
                   <button
                     onClick={() => setIsVisible(false)}"
-                    className="p-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200""
+                    className="p-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
                     aria-label="Close accessibility panel"
                   >"
-                    <X className="w-5 h-5" />
-                  </button>
+                    <X className="w-5 h-5"  />                  </button>
                 </div>
               </div>
 
@@ -476,8 +435,7 @@ export function EnhancedAccessibilityPanel() {
                     }`}
                     aria-pressed={settings.highContrast}
                   >"
-                    <Contrast className="w-4 h-4" />"
-                    <span className="text-sm">High Contrast</span>
+                    <Contrast className="w-4 h-4"  />"                    <span className="text-sm">High Contrast</span>
                   </button>
 
                   <button
@@ -492,8 +450,7 @@ export function EnhancedAccessibilityPanel() {
                     }`}
                     aria-pressed={settings.largeText}
                   >"
-                    <Type className="w-4 h-4" />"
-                    <span className="text-sm">Large Text</span>
+                    <Type className="w-4 h-4"  />"                    <span className="text-sm">Large Text</span>
                   </button>
 
                   <button
@@ -508,8 +465,7 @@ export function EnhancedAccessibilityPanel() {
                     }`}
                     aria-pressed={settings.reducedMotion}
                   >"
-                    <Pause className="w-4 h-4" />"
-                    <span className="text-sm">Reduced Motion</span>
+                    <Pause className="w-4 h-4"  />"                    <span className="text-sm">Reduced Motion</span>
                   </button>
 
                   <button
@@ -526,8 +482,7 @@ export function EnhancedAccessibilityPanel() {
                     }`}
                     aria-pressed={settings.focusIndicator}
                   >"
-                    <Keyboard className="w-4 h-4" />"
-                    <span className="text-sm">Focus Indicator</span>
+                    <Keyboard className="w-4 h-4"  />"                    <span className="text-sm">Focus Indicator</span>
                   </button>
                 </div>
               </div>
@@ -543,8 +498,8 @@ export function EnhancedAccessibilityPanel() {
                       Font Size: {settings.fontSize}px
                     </label>
                     <input"
-                      type="range""
-                      min="12""
+                      type="range"
+                      min="12"
                       max="24"
                       value={settings.fontSize}
                       onChange={e =>
@@ -559,9 +514,9 @@ export function EnhancedAccessibilityPanel() {
                       Line Height: {settings.lineHeight}
                     </label>
                     <input"
-                      type="range""
-                      min="1.2""
-                      max="2.0""
+                      type="range"
+                      min="1.2"
+                      max="2.0"
                       step="0.1"
                       value={settings.lineHeight}
                       onChange={e =>
@@ -582,20 +537,20 @@ export function EnhancedAccessibilityPanel() {
                 </h3>"
                 <div className="space-y-2">
                   {['
-                    { value: 'none', label: 'Normal Vision' },'
-                    { value: 'protanopia', label: 'Protanopia (Red-Blind)' },
+                    { value: 'none', label: 'Normal Vision' },
+                    { value: 'protanopia', label: 'Protanopia (Red-Blind)},
                     {
-'
-                      value: 'deuteranopia','
-                      label: 'Deuteranopia (Green-Blind)'},'
-                    { value: 'tritanopia', label: 'Tritanopia (Blue-Blind)' },
+
+                      value: 'deuteranopia',
+                      label: 'Deuteranopia (Green-Blind)},
+                    { value: 'tritanopia', label: 'Tritanopia (Blue-Blind)},
                   ].map(option => (
                     <label
                       key={option.value}"
                       className="flex items-center space-x-2"
                     >
                       <input"
-                        type="radio""
+                        type="radio"
                         name="colorBlindness"
                         value={option.value}
                         checked={settings.colorBlindness === option.value}
@@ -632,8 +587,7 @@ export function EnhancedAccessibilityPanel() {
                       </>
                     ) : (
                       <>"
-                        <Eye className="w-4 h-4" />
-                        <span>Run Audit</span>
+                        <Eye className="w-4 h-4"  />                        <span>Run Audit</span>
                       </>
                     )}
                   </button>
@@ -680,29 +634,27 @@ export function EnhancedAccessibilityPanel() {
 
               {/* Reset Button */}
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => {
+
                   const defaultSettings: AccessibilitySettings = {
 
                     highContrast: false,
                     largeText: false,
                     reducedMotion: false,
                     screenReader: false,
-                    focusIndicator: true,'
+                    focusIndicator: true,
                     colorBlindness: 'none',
                     fontSize: 16,
                     lineHeight: 1.5,
                     letterSpacing: 0,
                     wordSpacing: 0};
                   setSettings(defaultSettings);
-                  applySettings(defaultSettings);
-                }}"
+                  applySettings(defaultSettings)}}"
                 className="w-full flex items-center justify-center space-x-2 bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg transition-colors"
               >"
-                <RotateCcw className="w-4 h-4" />
-                <span>Reset to Defaults</span>
+                <RotateCcw className="w-4 h-4"  />                <span>Reset to Defaults</span>
               </button>
             </div>
           </motion.div>) }
       </AnimatePresence>
-    </>) ;
-}
+    </>) }
 '"`

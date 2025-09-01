@@ -17,7 +17,7 @@ console.log('🚀 Continuous Improvement Started');
 
 class ContinuousImprovement {
   constructor() {
-    this.projectRoot = path.resolve(__dirname, '..');
+    this.projectRoot = path.resolve(__dirname,..');
     this.improvements = [];
     this.issues = [];
   }
@@ -50,9 +50,9 @@ class ContinuousImprovement {
 
   async analyzePackageJson() {
     try {
-      const packagePath = path.join(this.projectRoot, 'package.json');
+      const packagePath = path.join(this.projectRoot,package.json');
       if (fs.existsSync(packagePath)) {
-        const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
+        const packageJson = JSON.parse(fs.readFileSync(packagePath,utf8'));
         
         // Check for outdated dependencies
         if (packageJson.dependencies) {
@@ -63,11 +63,11 @@ class ContinuousImprovement {
         }
         
         // Check for missing scripts
-        const requiredScripts = ['build', 'dev', 'test', 'lint'];
+        const requiredScripts = ['build',dev',test',lint'];
         const missingScripts = requiredScripts.filter(script => !packageJson.scripts[script]);
         
         if (missingScripts.length > 0) {
-          this.improvements.push(`Add missing scripts: ${missingScripts.join(', ')}`);
+          this.improvements.push(`Add missing scripts: ${missingScripts.join(',)}`);
         }
         
         // Check for security
@@ -83,9 +83,9 @@ class ContinuousImprovement {
 
   async analyzeTypeScriptConfig() {
     try {
-      const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json');
+      const tsConfigPath = path.join(this.projectRoot,tsconfig.json');
       if (fs.existsSync(tsConfigPath)) {
-        const tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'));
+        const tsConfig = JSON.parse(fs.readFileSync(tsConfigPath,utf8'));
         
         // Check for strict mode
         if (!tsConfig.compilerOptions?.strict) {
@@ -112,9 +112,9 @@ class ContinuousImprovement {
 
   async analyzeBuildConfig() {
     try {
-      const viteConfigPath = path.join(this.projectRoot, 'vite.config.ts');
+      const viteConfigPath = path.join(this.projectRoot,vite.config.ts');
       if (fs.existsSync(viteConfigPath)) {
-        const viteConfig = fs.readFileSync(viteConfigPath, 'utf8');
+        const viteConfig = fs.readFileSync(viteConfigPath,utf8');
         
         // Check for build optimizations
         if (!viteConfig.includes('build.rollupOptions')) {
@@ -133,20 +133,20 @@ class ContinuousImprovement {
 
   async analyzeCodeStructure() {
     try {
-      const srcDir = path.join(this.projectRoot, 'src');
+      const srcDir = path.join(this.projectRoot,src');
       if (fs.existsSync(srcDir)) {
         const items = fs.readdirSync(srcDir);
         
         // Check for proper directory structure
-        const expectedDirs = ['components', 'utils', 'types', 'hooks'];
+        const expectedDirs = ['components',utils',types',hooks'];
         const missingDirs = expectedDirs.filter(dir => !items.includes(dir));
         
         if (missingDirs.length > 0) {
-          this.improvements.push(`Consider organizing code into directories: ${missingDirs.join(', ')}`);
+          this.improvements.push(`Consider organizing code into directories: ${missingDirs.join(',)}`);
         }
         
         // Check for index files
-        if (!fs.existsSync(path.join(srcDir, 'index.ts')) && !fs.existsSync(path.join(srcDir, 'index.js'))) {
+        if (!fs.existsSync(path.join(srcDir,index.ts')) && !fs.existsSync(path.join(srcDir,index.js'))) {
           this.improvements.push('Consider adding index files for better module organization');
         }
         
@@ -168,7 +168,7 @@ class ContinuousImprovement {
     };
     
     // Save report to file
-    const reportPath = path.join(this.projectRoot, 'logs', 'continuous-improvement-report.json');
+    const reportPath = path.join(this.projectRoot,logs',continuous-improvement-report.json');
     try {
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
       console.log(`📊 Report saved to: ${reportPath}`);

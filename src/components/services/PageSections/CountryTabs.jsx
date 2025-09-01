@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = () => { const [activeCountry, setActiveCountry] = useState('us'); const currentCountry = countries.find(c => c.id === activeCountry); return ( <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Header */ }"
         <div className="text-center mb-16">"
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -170,13 +170,13 @@ import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = () => { co
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="#contact""
+                href="#contact"
                 className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
 
                 Contact Global Team
               </a>
               <a"
-                href="#locations""
+                href="#locations"
                 className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
 
                 View All Locations

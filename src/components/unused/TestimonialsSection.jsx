@@ -1,7 +1,8 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { StarIcon } from '@heroicons/react/24/solid';
 export function TestimonialsSection() {
+
     const testimonials = [
         {
 
@@ -13,24 +14,27 @@ export function TestimonialsSection() {
             avatar: "SJ"
         },
         {
+
 "
             name: "Michael Chen","
             role: "VP of Engineering","
-            comp: "InnovateCorp",'"
+            comp: "InnovateCorp","
             content: "The team's expertise in cloud migration was exceptional. They completed our transition in half the expected time with zero downtime.",
             rating: 5,"
             avatar: "MC"
         },
         {
+
 "
             name: "Emily Rodriguez","
             role: "Director of IT","
-            comp: "Global Manufacturing Inc.",'"
+            comp: "Global Manufacturing Inc.","
             content: "Their cybersecurity solutions gave us peace of mind. We're now SOC 2 compliant and have a robust security posture.",
             rating: 5,"
             avatar: "ER"
         },
         {
+
 "
             name: "David Thompson","
             role: "CEO","
@@ -50,17 +54,11 @@ export function TestimonialsSection() {
 
                 staggerChildren: 0.2
 
-
     };
     const itemVariants = {
 
   hidden: { y: 20,
-  opacity: 0 
-
-
-
-
-
+  opacity: 0
 
 },
         visible: {
@@ -71,8 +69,12 @@ export function TestimonialsSection() {
 
                 duration: 0.5
 
+<<<<<<< HEAD
+    };
+=======
 
     };"
+>>>>>>> main
     return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">;
       {/* Background Elements */}"
       <div className="absolute inset-0 bg-quantum-mesh opacity-20"></div>;"
@@ -84,16 +86,16 @@ export function TestimonialsSection() {
         <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
+<<<<<<< HEAD
+  y: 0
+
+}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
+=======
   y: 0 
 
 
@@ -102,10 +104,11 @@ export function TestimonialsSection() {
 
 "
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"
+>>>>>>> main
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             What Our Clients Say
           </h2>"
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">'
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             Don't just take our word for it. Here's what industry leaders have to say
             about their experience working with Zion Tech Group.
           </p>
@@ -143,26 +146,24 @@ export function TestimonialsSection() {
         <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.8,
+<<<<<<< HEAD
+  delay: 0.5
+
+}} className="mt-16 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-zion-cyan mb-2">98%</div>
+=======
   delay: 0.5 
 
 
@@ -174,6 +175,7 @@ export function TestimonialsSection() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
             <div className="text-center">"
               <div className="text-3xl font-bold text-zion-cyan mb-2">98%</div>"
+>>>>>>> main
               <div className="text-zion-slate-light">Client Satisfaction</div>
             </div>"
             <div className="text-center">"

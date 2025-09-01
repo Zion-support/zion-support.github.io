@@ -1,16 +1,13 @@
-import { render, screen } from '@testing - library / react';
-import React from 'react';
-import FuturisticFooter from './FuturisticFooter';
-
 
 describe ('FuturisticFooter', () => {
+
   it ('renders without crashing', () => {
-    render (<FuturisticFooter />) ;
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
-  }) ;
+
+    render (<FuturisticFooter  />) ;
+    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 
   it ('displays expected content', () => {
-    render (<FuturisticFooter />) ;
+
+    render (<FuturisticFooter  />) ;
     // Add specific test assertions based on component content
-  }) ;
-}) ;
+  }) }) ;

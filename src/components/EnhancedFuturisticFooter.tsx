@@ -1,6 +1,22 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import { Link } from 'react - router - dom';
+import React from 'react';
+export const EnhancedFuturisticFooter: React.FC = () => {
+
+export const EnhancedFuturisticFooter: React.FC = () => {
+
+import {
+
+import { motion } from 'framer - motion';
+
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Linkedin,
+  Twitter,
+  Facebook,
+=======
 import {
 
   Phone, 
@@ -10,6 +26,7 @@ import {
   Linkedin, 
   Twitter, 
   Facebook, 
+>>>>>>> main
   Instagram,
   Youtube,
   Github,
@@ -115,129 +132,21 @@ import {
   Settings'
 } from 'lucide-react';
 
-  const currentYear = new Date () .getFullYear () ;
-
-export function EnhancedFuturisticFooter() {
-  const currentYear = new Date().getFullYear();
   
-  const footerSections = [
-    {
-'
-      title: 'Services',
-      icon: Rocket,'
-      color: 'from-blue-600 to-cyan-600',
-      links: ['
-        { name: 'Services Overview', href: '/services-overview' },'
-        { name: 'AI Services', href: '/ai-services' },'
-        { name: 'IT Services', href: '/it-services' },'
-        { name: 'Micro SaaS', href: '/micro-saas' },'
-        { name: 'Services Catalog', href: '/services-catalog' },'
-        { name: 'Services Comparison', href: '/services-comparison' }
-      ]
-    },
-    {
-'
-      title: 'Core Technologies','
-      title: 'AI & Machine Learning Services',
-      featured: true,
-      icon: Brain,'
-      color: 'from-indigo-600 to-purple-600',
-      links: ['
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: true },'
-        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', featured: true },'
-        { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', featured: true },'
-        { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', featured: true },'
-        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', featured: true },'
-        { name: 'AI Financial Trading', href: '/services/ai-financial-trading', featured: true },'
-        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', featured: true },'
-        { name: 'AI Content Creation', href: '/services/ai-content-creation', featured: true },'
-        { name: 'AI HR Platform', href: '/services/ai-hr-platform', featured: true },'
-        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', featured: true },'
-        { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', featured: true },'
-        { name: 'AI Project Management', href: '/services/ai-project-management', featured: true },'
-        { name: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance', featured: true },'
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', featured: true }
-      ]
-    },
-    {
-'
-      title: 'Innovation Hub',
-      icon: Star,'
-      color: 'from-purple-600 to-pink-600',
-      links: ['
-        { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025' },'
-        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030' },'
-        { name: 'Comprehensive Services 2028', href: '/comprehensive-services-landing-2028' },'
-        { name: 'Emerging Tech 2030', href: '/emerging-tech-2030' },'
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },'
-        { name: 'AI Content Marketing', href: '/services/ai-content-marketing-automation' }
-      ]
-    },
-    {
-'
-        { name: 'Investor Relations', href: '/investors', featured: false },;'
-        { name: 'Press & Media', href: '/press', featured: false },;'
+export function EnhancedFuturisticFooter() {
+
+        { name: 'Press & Media', href: '/press', featured: false },;
         { name: 'Legal & Privacy', href: '/legal', featured: false };
-      ];
-    };
+      ]};
   ];
 
-  const quickLinks = ['
-    { name: 'Services', href: '/services' },'
-    { name: 'Pricing', href: '/pricing' },'
-    { name: 'About Us', href: '/about' },'
-    { name: 'Our Team', href: '/team' },'
-    { name: 'Careers', href: '/careers' },'
-    { name: 'Partners', href: '/partners' },'
-    { name: 'News & Events', href: '/news' },'
-    { name: 'Case Studies', href: '/case-studies' },'
-    { name: 'Blog', href: '/blog' },'
-    { name: 'Careers', href: '/careers' },'
-    { name: 'Marketplace', href: '/marketplace' }
-  ];
-
-  const socialLinks = ['
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },'
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-300' },'
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-500' },'
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },'
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' },'
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-300' }
-    }
-  ];
-
-  const contactInfo = {
-'
-    phone: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com','
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
-
-  const socialLinks = ['
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin, color: 'hover:text-blue-400' },'
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },'
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' },'
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },'
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' },'
-    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github, color: 'hover:text-gray-400' }
-  ];
-
-  const quickActions = ['
-    { name: 'Get Started', href: '/contact', icon: Rocket, color: 'from-cyan-500 to-blue-500' },'
-    { name: 'Request Quote', href: '/request-quote', icon: DollarSign, color: 'from-green-500 to-emerald-500' },'
-    { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar, color: 'from-purple-500 to-pink-500' },'
-    { name: 'View Pricing', href: '/pricing', icon: TrendingUp, color: 'from-orange-500 to-red-500' }
-  ];
-
-  const stats = ['
-    { value: '500+', label: 'Projects Delivered', icon: CheckCircle },'
-    { value: '50+', label: 'AI Solutions', icon: Brain },'
-    { value: '24/7', label: 'Support Available', icon: Clock },'
-    { value: '99.9%', label: 'Uptime Guarantee', icon: Award }
-  ];
-
-  return()
-    <footer className="relative bg-slate-950 border-t border-cyan-400/20 overflow-hidden">
+  
+  
+  
+  
+  
+  
+  return()    <footer className="relative bg-slate-950 border-t border-cyan-400/20 overflow-hidden">
       {/* Enhanced Animated Background */}"
       <div className="absolute inset-0 bg-futuristic-enhanced">"
         <div className="absolute inset-0 bg-cyber-grid animate-cyber-grid opacity-5"></div>"
@@ -252,36 +161,39 @@ export function EnhancedFuturisticFooter() {
         </div>
       </div>
 
-  const legalLinks = ['
+  
+    { name: 'Terms of Service', href: '/terms', description: 'Service terms' },;
+    { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },;
+    { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },;
+    { name: 'Security', href: '/security', description: 'Security practices' },;
+    { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' };
+=======
     { name: 'Privacy Policy', href: '/privacy', description: 'Data protection' },;'
     { name: 'Terms of Service', href: '/terms', description: 'Service terms' },;'
     { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },;'
     { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },;'
-    { name: 'Security', href: '/security', description: 'Security practices' },;'
-    { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' };
+    { name: 'Security', href: '/security', description: 'Security practices' },;'    { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' };
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   // Create missing pages for broken links
-  const createMissingPage = (name: anystring, href: string)  => {
-'
-    // For now, we'll create placeholder pages for missing routes
-    // These will be created as separate components
-    return()
-      <Link
-        key={name}
-        to={href}"
-        className="block text-sm text-slate-300 hover:text-cyan-400 transition-colors"
-      >
-        {name};
-      </Link>;) ;
-  };
-
+  
+      </Link>;) };
   return ("
           <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
         {/* Background Pattern */}"
         <div className="absolute inset-0 opacity-30">"
           <div className="absolute inset-0 bg-gradient-to-br from-slate-800/20 to-slate-900/20"></div>
         </div>
+<<<<<<< HEAD
+
+      <div role="button" className="relative">
+        {/* Main Footer Content */}
+        <div role="button" className="container - responsive py - 16">
+          {/* Stats Section */}
+          <motion.div
+            className="grid grid - cols - 2 md:grid - cols - 4 gap - 8 mb - 16"
+=======
       "
       <div className="relative">
         {/* Main Footer Content */}"
@@ -289,6 +201,7 @@ export function EnhancedFuturisticFooter() {
           {/* Stats Section */}
           <motion.div "
             className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
+>>>>>>> main
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -314,11 +227,19 @@ export function EnhancedFuturisticFooter() {
             ))}
           </motion.div>
 
+<<<<<<< HEAD
+          {/* Main Footer Grid */}
+          <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap - 8 mb - 12">
+            {/* Company Info */}
+            <div role="button" className="lg:col - span - 2">
+              <motion.div
+=======
           {/* Main Footer Grid */}"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 mb-12">
             {/* Company Info */}"
             <div className="lg:col-span-2">
               <motion.div 
+>>>>>>> main
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}"
@@ -326,35 +247,39 @@ export function EnhancedFuturisticFooter() {
               >"
                 <div className="relative">"
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center">"
-                    <Zap className="w-6 h-6 text-white" />
-                  </div>"
-                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl blur-lg opacity-50"></div>
+                    <Zap className="w-6 h-6 text-white"  />
+                  </div>"                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl blur-lg opacity-50"></div>
                 </div>
                 <div>"
                   <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>"
                   <p className="text-slate-400 text-sm">Future Technology Solutions</p>
                 </div>
+<<<<<<< HEAD
+              </div>
+              <p className="text - slate - 300 mb - 6 leading - relaxed">
+                Leading provider of cutting - edge AI solutions, cloud services, cybersecurity, and digital transformation expertise.
+=======
               </div>"
               <p className="text-slate-300 mb-6 leading-relaxed">
                 Leading provider of cutting-edge AI solutions, cloud services, cybersecurity, and digital transformation expertise. 
+>>>>>>> main
                 We help businesses innovate and thrive in the digital age.
               </p>"
               <div className="space-y-3">"
                 <div className="flex items-center space-x-3 text-slate-300">"
-                  <Phone className="w-4 h-4 text-cyan-400" />"
+                  <Phone className="w-4 h-4 text-cyan-400"  />"
                   <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
                     +1 302 464 0950
                   </a>
                 </div>"
                 <div className="flex items-center space-x-3 text-slate-300">"
-                  <Mail className="w-4 h-4 text-cyan-400" />"
+                  <Mail className="w-4 h-4 text-cyan-400"  />"
                   <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
                     kleber@ziontechgroup.com
                   </a>
                 </div>"
                 <div className="flex items-center space-x-3 text-slate-300">"
-                  <MapPin className="w-4 h-4 text-cyan-400" />
-                  <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                  <MapPin className="w-4 h-4 text-cyan-400"  />                  <span>364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
               </div>
             </div>
@@ -365,7 +290,7 @@ export function EnhancedFuturisticFooter() {
                   <a
                     key={social.name}
                     href={social.href}"
-                    target="_blank""
+                    target="_blank"
                     rel="noopener noreferrer"
                     className={`w-10 h-10 bg-slate-800/50 border border-slate-700/50 rounded-lg flex items-center justify-center text-slate-400 transition-all duration-200 hover:border-cyan-400/50 hover:bg-cyan-400/10 ${social.color}`}
                     aria-label={social.name}
@@ -375,9 +300,15 @@ export function EnhancedFuturisticFooter() {
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
+
+            <p className="text - gray - 300 mb - 6 max - w-md">
+              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure,
+=======
             "
             <p className="text-gray-300 mb-6 max-w-md">
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, 
+>>>>>>> main
               and digital transformation services. Transforming businesses with cutting - edge technology.
             </p>
 
@@ -397,8 +328,7 @@ export function EnhancedFuturisticFooter() {
                       >"
                         <div className="w-1 h-1 bg-slate-600 rounded-full mr-3 group-hover:bg-cyan-400 transition-colors duration-200"></div>
                         {link.name}"
-                        <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
-                      </Link>
+                        <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200"  />                      </Link>
                     </li>) ) }
                 </ul>
               </motion.div>) ) }
@@ -462,7 +392,7 @@ export function EnhancedFuturisticFooter() {
                   <a
                     key={social.name}
                     href={social.href}"
-                    target="_blank""
+                    target="_blank"
                     rel="noopener noreferrer"`
                     className={`w-10 h-10 bg-slate-800/50 border border-slate-600/50 rounded-lg flex items-center justify-center text-slate-400 ${social.color} hover:border-cyan-400/50 transition-all duration-200`}
                   >"
@@ -474,13 +404,12 @@ export function EnhancedFuturisticFooter() {
                 <p className="text-sm text-slate-400">Subscribe to our newsletter</p>"
                 <div className="flex">
                   <input"
-                    type="email""
-                    placeholder="Enter your email""
+                    type="email"
+                    placeholder="Enter your email"
                     className="flex-1 px-3 py-2 bg-slate-800/50 border border-slate-600/50 rounded-l-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                   />"
                   <button className="px-4 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-r-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200">"
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
+                    <ArrowRight className="w-4 h-4"  />                  </button>
                 </div>
               </div>
             </div>
@@ -494,114 +423,120 @@ export function EnhancedFuturisticFooter() {
               </div>"
               <div className="flex items-center space-x-6 text-sm text-slate-400">"
                 <span className="flex items-center">"
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2"  />
                   SOC 2 Compliant
                 </span>"
                 <span className="flex items-center">"
-                  <Shield className="w-4 h-4 text-blue-400 mr-2" />
+                  <Shield className="w-4 h-4 text-blue-400 mr-2"  />
                   ISO 27001 Certified
                 </span>"
                 <span className="flex items-center">"
-                  <Award className="w-4 h-4 text-yellow-400 mr-2" />
+<<<<<<< HEAD
+                  <Award className="w-4 h-4 text-yellow-400 mr-2"  />
                   AWS Partner
+                </span>
+=======
+                  <Award className="w-4 h-4 text-yellow-400 mr-2"  />                  AWS Partner
                 </span>'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       title: 'Pricing & Plans',
-      icon: DollarSign,'
+      icon: DollarSign,
       color: 'from-emerald-600 to-teal-600',
       links: ['
-        { name: 'Pricing Overview', href: '/pricing' },;'
-        { name: 'Pricing Guide', href: '/pricing-guide' },;'
-        { name: 'Comprehensive Pricing 2026', href: '/comprehensive-pricing-guide-2026' },;'
-        { name: 'Request Quote', href: '/request-quote' },;'
-        { name: 'Schedule Demo', href: '/schedule-demo' },;'
+        { name: 'Pricing Overview', href: '/pricing' },;
+        { name: 'Pricing Guide', href: '/pricing-guide' },;
+        { name: 'Comprehensive Pricing 2026', href: '/comprehensive-pricing-guide-2026' },;
+        { name: 'Request Quote', href: '/request-quote' },;
+        { name: 'Schedule Demo', href: '/schedule-demo' },;
         { name: 'Contact Sales', href: '/contact' }
       ]
     },
     {
-'
+
       title: 'Company',;
-      icon: Building,'
+      icon: Building,
       color: 'from-green-600 to-emerald-600',
       links: ['
-        { name: 'About Us', href: '/about' },;'
-        { name: 'Our Team', href: '/team' },;'
-        { name: 'Careers', href: '/careers' },;'
-        { name: 'Partners', href: '/partners' },;'
-        { name: 'News & Press', href: '/news' },;'
-        { name: 'Events', href: '/events' },;'
-        { name: 'Case Studies', href: '/case-studies' },;'
+        { name: 'About Us', href: '/about' },;
+        { name: 'Our Team', href: '/team' },;
+        { name: 'Careers', href: '/careers' },;
+        { name: 'Partners', href: '/partners' },;
+        { name: 'News & Press', href: '/news' },;
+        { name: 'Events', href: '/events' },;
+        { name: 'Case Studies', href: '/case-studies' },;
         { name: 'Marketplace', href: '/marketplace' }
       ]
     },
     {
-'
+
       title: 'Resources & Learning',;
-      icon: BookOpen,'
+      icon: BookOpen,
       color: 'from-orange-600 to-red-600',
       links: ['
-        { name: 'Help Center', href: '/help' },;'
-        { name: 'Documentation', href: '/documentation' },;'
-        { name: 'Training', href: '/training' },;'
-        { name: 'Blog', href: '/blog' },;'
-        { name: 'Webinars', href: '/webinars' },;'
-        { name: 'White Papers', href: '/white-papers' },;'
-        { name: 'FAQ', href: '/faq' },;'
-        { name: 'Support Center', href: '/support' },;'
+        { name: 'Help Center', href: '/help' },;
+        { name: 'Documentation', href: '/documentation' },;
+        { name: 'Training', href: '/training' },;
+        { name: 'Blog', href: '/blog' },;
+        { name: 'Webinars', href: '/webinars' },;
+        { name: 'White Papers', href: '/white-papers' },;
+        { name: 'FAQ', href: '/faq' },;
+        { name: 'Support Center', href: '/support' },;
         { name: 'Community', href: '/community' }
       ]
     },
     {
-'
+
       title: 'Platform & Tools',;
-      icon: Settings,'
+      icon: Settings,
       color: 'from-slate-600 to-gray-600',
       links: ['
-        { name: 'Dashboard', href: '/dashboard' },;'
-        { name: 'Login', href: '/login' },;'
-        { name: 'Sign Up', href: '/signup' },;'
-        { name: 'System Status', href: '/status' },;'
-        { name: 'API Documentation', href: '/documentation' },;'
+        { name: 'Dashboard', href: '/dashboard' },;
+        { name: 'Login', href: '/login' },;
+        { name: 'Sign Up', href: '/signup' },;
+        { name: 'System Status', href: '/status' },;
+        { name: 'API Documentation', href: '/documentation' },;
         { name: 'Developer Tools', href: '/documentation' }
       ]
     },
     {
-'
+
       title: 'Legal & Compliance',;
-      icon: Shield,'
+      icon: Shield,
       color: 'from-gray-600 to-slate-600',
       links: ['
-        { name: 'Privacy Policy', href: '/privacy' },;'
-        { name: 'Terms of Service', href: '/terms' },;'
-        { name: 'Cookie Policy', href: '/cookies' },;'
-        { name: 'Security', href: '/security' },;'
-        { name: 'Compliance', href: '/compliance' },;'
-        { name: 'Accessibility', href: '/accessibility' },;'
+        { name: 'Privacy Policy', href: '/privacy' },;
+        { name: 'Terms of Service', href: '/terms' },;
+        { name: 'Cookie Policy', href: '/cookies' },;
+        { name: 'Security', href: '/security' },;
+        { name: 'Compliance', href: '/compliance' },;
+        { name: 'Accessibility', href: '/accessibility' },;
         { name: 'Sitemap', href: '/sitemap' }
       ]
     }
   ];
 
-  const quickLinks = ['
-    { name: 'Get Quote', href: '/request-quote', icon: DollarSign },;'
-    { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar },;'
-    { name: 'Contact Support', href: '/support', icon: MessageCircle },;'
+  
+    { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar },;
+    { name: 'Contact Support', href: '/support', icon: MessageCircle },;
     { name: 'View Status', href: '/status', icon: Gauge }
   ];
 
-  const socialLinks = ['
-    { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-400' },;'
-    { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' },;'
-    { name: 'Facebook', href: '#', icon: Facebook, color: 'hover:text-blue-600' },;'
-    { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-400' },;'
-    { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-400' },;'
+  
+    { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' },;
+    { name: 'Facebook', href: '#', icon: Facebook, color: 'hover:text-blue-600' },;
+    { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-400' },;
+    { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-400' },;
     { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-400' }
   ];
 
-  const contactInfo = {
+  
+    email: 'info@ziontechgroup.com',
+    address: '123 Innovation Drive, Tech City, TC 12345'
+=======
 '
     phone: '+1 (555) 123-4567',;'
-    email: 'info@ziontechgroup.com','
-    address: '123 Innovation Drive, Tech City, TC 12345'
+    email: 'info@ziontechgroup.com','    address: '123 Innovation Drive, Tech City, TC 12345'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   };
 
   return ("
@@ -621,8 +556,7 @@ export function EnhancedFuturisticFooter() {
             <div className="lg:col-span-2">"
               <div className="flex items-center space-x-3 mb-6">"
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center">"
-                  <Crown className="w-7 h-7 text-white" />
-                </div>
+                  <Crown className="w-7 h-7 text-white"  />                </div>
                 <div>"
                   <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                     Zion Tech Group
@@ -650,20 +584,19 @@ export function EnhancedFuturisticFooter() {
             {/* Newsletter Signup */}"
             <div className="space-y-4">"
               <h3 className="text-lg font-semibold text-white flex items-center space-x-2">"
-                <MailIcon className="w-5 h-5 text-cyan-400" />
-                <span>Stay Updated</span>
+                <MailIcon className="w-5 h-5 text-cyan-400"  />                <span>Stay Updated</span>
               </h3>"
               <p className="text-slate-300 text-sm">
                 Get the latest insights on AI, quantum computing, and technology trends.
               </p>"
               <form className="space-y-3">
                 <input"
-                  type="email""
-                  placeholder="Enter your email""
+                  type="email"
+                  placeholder="Enter your email"
                   className="w-full px-4 py-2 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 transition-colors"
                 />
                 <button"
-                  type="submit""
+                  type="submit"
                   className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
                 >
                   <social.icon className="w-5 h-5" />
@@ -691,14 +624,22 @@ export function EnhancedFuturisticFooter() {
               </div>"
               <div className="flex items-center space-x-2 text-sm text-slate-400">
                 <span>Made with</span>"
-                <Heart className="w-4 h-4 text-red-400" />
-                <span>by Zion Tech Group</span>
+                <Heart className="w-4 h-4 text-red-400"  />                <span>by Zion Tech Group</span>
               </div>
             </div>
           </motion.div>
         </div>
       </div>
     </footer>
+<<<<<<< HEAD
+
+            {/* Additional Contact Methods */}
+            <div role="button" className="mt - 12 pt - 8 border - t border - slate - 700">
+              <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6 text - center">
+                <div>
+                  <h4 className="text - sm font - semibold text - slate - 400 mb - 2">Emergency Support</h4>
+                  <p className="text - sm text - slate - 500">Critical issues: +1 302 464 0950</p>
+=======
             
             {/* Additional Contact Methods */}"
             <div className="mt-12 pt-8 border-t border-slate-700">"
@@ -706,6 +647,7 @@ export function EnhancedFuturisticFooter() {
                 <div>"
                   <h4 className="text-sm font-semibold text-slate-400 mb-2">Emergency Support</h4>"
                   <p className="text-sm text-slate-500">Critical issues: +1 302 464 0950</p>
+>>>>>>> main
                 </div>
                 <div>"
                   <h4 className="text-sm font-semibold text-slate-400 mb-2">Business Hours</h4>"
@@ -735,19 +677,28 @@ export function EnhancedFuturisticFooter() {
               <Link to="/terms" className="hover:text-cyan-400 transition-colors">Terms of Service</Link>"
               <Link to="/cookies" className="hover:text-cyan-400 transition-colors">Cookie Policy</Link>
             </div>
+<<<<<<< HEAD
+
+            <div role="button" className="flex items - center space - x-4">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={scrollToTop}
+                className="p - 2 bg - slate - 700 / 50 rounded - lg text - gray - 400 hover:text - cyan - 400 hover:bg - slate - 600 / 50 transition - all duration - 300 transform hover:scale - 110"
+                aria - label="Scroll to top"
+              >
+                <ArrowUpRight className="w - 5 h - 5 rotate - 45" />;
+              </button>;
+=======
             "
             <div className="flex items-center space-x-4">
               <button
                 onClick={scrollToTop}"
-                className="p-2 bg-slate-700/50 rounded-lg text-gray-400 hover:text-cyan-400 hover:bg-slate-600/50 transition-all duration-300 transform hover:scale-110""
+                className="p-2 bg-slate-700/50 rounded-lg text-gray-400 hover:text-cyan-400 hover:bg-slate-600/50 transition-all duration-300 transform hover:scale-110"
                 aria-label="Scroll to top"
               >"
-                <ArrowUpRight className="w-5 h-5 rotate-45" />;
-              </button>;
+                <ArrowUpRight className="w-5 h-5 rotate-45"  />;              </button>;
+>>>>>>> main
             </div>;
           </div>;
         </div>;
       </div>;
-    </footer>;) ;
-};
+    </footer>;) };
 '"`

@@ -1,5 +1,5 @@
 export function Sonner({ position = 'bottom-right', richColors = true, closeButton = true }) {
-'
+
     return (<div className={`fixed ${position === 'top-left' ? 'top-4 left-4' :'
             position === 'top-right' ? 'top-4 right-4' :'
                 position === 'bottom-left' ? 'bottom-4 left-4' :'`
@@ -7,22 +7,23 @@ export function Sonner({ position = 'bottom-right', richColors = true, closeButt
       {/* Sonner toast container */}
     </div>)}
 export const toast = {
-'
-  success: (message) => // console.log('Success:', message),'
-    error: (message) => // console.log('Error:', message),'
-    info: (message) => // console.log('Info:', message),'
-    warning: (message) => // console.log('Warning:', message),'
-    loading: (message) => // console.log('Loading:', message),'
-    dismiss: (toastId) => // console.log('Dismiss:',
+
+  success: (message) => // // // console.log('Success:', message),
+    error: (message) => // // // console.log('Error:', message),
+    info: (message) => // // // console.log('Info:', message),
+    warning: (message) => // // // console.log('Warning:', message),
+    loading: (message) => // // // console.log('Loading:', message),
+    dismiss: (toastId) => // // // console.log('Dismiss:',
   toastId)
 
 
   position = 'bottom - right',
   richColors = true,
-  closeButton = true,
-}) {
+  closeButton = true}) {
+
   return (<div
       className={`fixed ${
+
         position === 'top - left'
           ? 'top - 4 left - 4'
           : position === 'top - right'
@@ -40,6 +41,5 @@ export const toast = {
   info: message => console.log ('Info:', message) ,
   warning: message => console.log ('Warning:', message) ,
   loading: message => console.log ('Loading:', message) ,
-  dismiss: toastId => console.log ('Dismiss:', toastId) ,
-};
+  dismiss: toastId => console.log ('Dismiss:', toastId) };
 '`

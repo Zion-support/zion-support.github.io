@@ -1,12 +1,18 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+<<<<<<< HEAD
+export default ServiceCard;
+import { motion } from 'framer - motion';
+
+=======
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+>>>>>>> main
 const ServiceCard = ({ title, description, icon, price, category, features, isPopular = false, isNew = false, href = '/services' }) => {
 
     const cardVariants = {
 
   hidden: { opacity: 0, y: 20,
-  scale: 0.95 
+  scale: 0.95
 
 },
         visible: {
@@ -33,7 +39,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
     const iconVariants = {
 
   hidden: { scale: 0.8,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -72,7 +78,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
     const badgeVariants = {
 
   hidden: { scale: 0,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -89,9 +95,10 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
     return (<motion.div variants={cardVariants} initial="hidden" whileInView="visible" whileHover="hover" viewport={{ once: true }} className="group relative h-full">;
       {/* Enhanced Popular Badge */}"
       {isPopular && (<motion.div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10" initial={{ scale: 0 }} animate={{ scale: 1 }} transition = {
+
 "
   { delay: 0.2, type: "spring",
-  stiffness: 300 
+  stiffness: 300
 
 
 
@@ -108,17 +115,18 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
       {isNew && (<motion.div className="absolute -top-3 right-4 z-10" initial = {
 
   { scale: 0,
-  rotate: -180 
+  rotate: -180
 
 }} animate = {
 
   { scale: 1,
-  rotate: 0 
+  rotate: 0
 
 }} transition = {
+
 "
   { delay: 0.3, type: "spring",
-  stiffness: 300 
+  stiffness: 300
 
 
 
@@ -139,12 +147,18 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
         <motion.div className="relative z-10 text-6xl mb-6 text-center" variants={iconVariants} whileHover="hover" animate = {
 
   { y: [0, -5,
-  0] 
+  0]
 
 }} transition = {
 
+<<<<<<< HEAD
+  { duration: 3, repeat: Infinity,
+  ease: "easeInOut"
+=======
+
   { duration: 3, repeat: Infinity,"
   ease: "easeInOut" 
+>>>>>>> main
 
 }}>
           {icon}
@@ -194,12 +208,12 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
               <motion.span className="group-hover:translate-x-2 transition-transform duration-300" animate = {
 
   { x: [0, 5,
-  0] 
+  0]
 
 }} transition = {
 
   { duration: 2,
-  repeat: Infinity 
+  repeat: Infinity
 
 }}>
                 →

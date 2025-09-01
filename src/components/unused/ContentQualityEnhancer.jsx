@@ -1,15 +1,16 @@
-import React, { useState, useEffect, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { DocumentTextIcon, CheckCircleIcon, ExclamationTriangleIcon, InformationCircleIcon, WrenchScrewdriverIcon, XMarkIcon, ArrowPathIcon } from '@heroicons/react/24/outline';'
-export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, autoAnalyze = true, targetElements = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div[class*="content"]', 'article', 'section'] }) => {
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { DocumentTextIcon, CheckCircleIcon, ExclamationTriangleIcon, InformationCircleIcon, WrenchScrewdriverIcon, XMarkIcon, ArrowPathIcon } from '@heroicons/react/24/outline';
+export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, autoAnalyze = true, targetElements = ['p',h1',h2',h3',h4',h5',h6',div[class*="content"]',article',section'] }) => {
 
     const [isOpen, setIsOpen] = useState(false);
     const [analysis, setAnalysis] = useState(null);
-    const [isAnalyzing, setIsAnalyzing] = useState(false);'
+    const [isAnalyzing, setIsAnalyzing] = useState(false);
     const [activeTab, setActiveTab] = useState('overview');
     const [selectedElement, setSelectedElement] = useState(null);
     // Analyze content quality
     const analyzeContent = useCallback(async () => {
+
         setIsAnalyzing(true);
         const issues = [];
         const suggestions = [];
@@ -18,9 +19,9 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         const seoScore = 100;
         const engagementScore = 100;
         // Get all content elements'
-        const contentElements = document.querySelectorAll(targetElements.join(', '));
+        const contentElements = document.querySelectorAll(targetElements.join(',));
         contentElements.forEach((element, index) => {
-'
+
             const text = element.textContent || '';
             const words = text.trim().split(/\s+/).filter(word => word.length > 0);
             wordCount += words.length;
@@ -29,14 +30,14 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
 
                 issues.push({
 
-                    id: `empty-content-${index}`,'
-                    type: 'error','
-                    title: 'Empty Content','
-                    description: 'Element contains no meaningful content','
+                    id: `empty-content-${index}`,
+                    type: 'error',
+                    title: 'Empty Content',
+                    description: 'Element contains no meaningful content',
                     severity: 'high',
                     element: element,
-                    fixable: true,'
-                    suggestion: 'Add relevant content or remove empty element','
+                    fixable: true,
+                    suggestion: 'Add relevant content or remove empty element',
                     impact: 'seo'
                 });
                 seoScore -= 10;
@@ -45,15 +46,16 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             if (words.length > 0 && words.length < 10) {
 
                 issues.push({
+
 `
-                    id: `short-content-${index}`,'
-                    type: 'warning','
+                    id: `short-content-${index}`,
+                    type: 'warning',
                     title: 'Very Short Content',`
-                    description: `Element contains only ${words.length} words`,'
+                    description: `Element contains only ${words.length} words`,
                     severity: 'medium',
                     element: element,
-                    fixable: true,'
-                    suggestion: 'Expand content to provide more value to users','
+                    fixable: true,
+                    suggestion: 'Expand content to provide more value to users',
                     impact: 'engagement'
                 });
                 engagementScore -= 5;
@@ -62,15 +64,16 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             if (words.length > 100) {
 
                 issues.push({
+
 `
-                    id: `long-paragraph-${index}`,'
-                    type: 'warning','
+                    id: `long-paragraph-${index}`,
+                    type: 'warning',
                     title: 'Very Long Paragraph',`
-                    description: `Paragraph contains ${words.length} words`,'
+                    description: `Paragraph contains ${words.length} words`,
                     severity: 'medium',
                     element: element,
-                    fixable: true,'
-                    suggestion: 'Break into smaller paragraphs for better readability','
+                    fixable: true,
+                    suggestion: 'Break into smaller paragraphs for better readability',
                     impact: 'readability'
                 });
                 readabilityScore -= 5;
@@ -86,15 +89,16 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                     if (level - lastLevel > 1) {
 
                         issues.push({
+
 `
-                            id: `heading-skip-${index}`,'
-                            type: 'warning','
+                            id: `heading-skip-${index}`,
+                            type: 'warning',
                             title: 'Heading Level Skipped',`
-                            description: `Heading level jumps from h${lastLevel} to h${level}`,'
+                            description: `Heading level jumps from h${lastLevel} to h${level}`,
                             severity: 'medium',
                             element: element,
-                            fixable: true,'
-                            suggestion: 'Ensure heading levels follow logical sequence','
+                            fixable: true,
+                            suggestion: 'Ensure heading levels follow logical sequence',
                             impact: 'accessibility'
                         });
                         seoScore -= 3}
@@ -114,15 +118,16 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                     if (density > 3) {
 
                         issues.push({
+
 `
-                            id: `keyword-stuffing-${index}-${word}`,'
-                            type: 'warning','
+                            id: `keyword-stuffing-${index}-${word}`,
+                            type: 'warning',
                             title: 'Potential Keyword Stuffing',"`
-                            description: `Word "${word}" appears ${count} times (${density.toFixed(1)}% density)`,'
+                            description: `Word "${word}" appears ${count} times (${density.toFixed(1)}% density)`,
                             severity: 'medium',
                             element: element,
-                            fixable: true,'
-                            suggestion: 'Reduce keyword density for more natural content','
+                            fixable: true,
+                            suggestion: 'Reduce keyword density for more natural content',
                             impact: 'seo'
                         });
                         seoScore -= 5}
@@ -130,75 +135,79 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             });
             // Check for proper meta descriptions'
             if (element.tagName === 'META' && element.getAttribute('name') === 'description') {
-'
+
                 const content = element.getAttribute('content') || '';
                 if (content.length < 50) {
 
                     issues.push({
+
 `
-                        id: `short-meta-${index}`,'
-                        type: 'warning','
+                        id: `short-meta-${index}`,
+                        type: 'warning',
                         title: 'Short Meta Description',`
-                        description: `Meta description is only ${content.length} characters`,'
+                        description: `Meta description is only ${content.length} characters`,
                         severity: 'medium',
                         element: element,
-                        fixable: true,'
-                        suggestion: 'Meta descriptions should be 150-160 characters for optimal display','
+                        fixable: true,
+                        suggestion: 'Meta descriptions should be 150-160 characters for optimal display',
                         impact: 'seo'
                     });
                     seoScore -= 5}
                 else if (content.length > 160) {
 
                     issues.push({
+
 `
-                        id: `long-meta-${index}`,'
-                        type: 'warning','
+                        id: `long-meta-${index}`,
+                        type: 'warning',
                         title: 'Long Meta Description',`
-                        description: `Meta description is ${content.length} characters`,'
+                        description: `Meta description is ${content.length} characters`,
                         severity: 'low',
                         element: element,
-                        fixable: true,'
-                        suggestion: 'Meta descriptions should be 150-160 characters for optimal display','
+                        fixable: true,
+                        suggestion: 'Meta descriptions should be 150-160 characters for optimal display',
                         impact: 'seo'
                     });
                     seoScore -= 2}
             }
             // Check for broken links'
             if (element.tagName === 'A') {
-'
-                const href = element.getAttribute('href');'
+
+                const href = element.getAttribute('href');
                 if (href && (href.startsWith('#') || href.startsWith('javascript:'))) {
 
                     issues.push({
+
 `
-                        id: `broken-link-${index}`,'
-                        type: 'warning','
+                        id: `broken-link-${index}`,
+                        type: 'warning',
                         title: 'Potential Broken Link',"`
-                        description: `Link "${href}" may not work properly`,'
+                        description: `Link "${href}" may not work properly`,
                         severity: 'medium',
                         element: element,
-                        fixable: true,'
-                        suggestion: 'Ensure link points to valid URL or page section','
+                        fixable: true,
+                        suggestion: 'Ensure link points to valid URL or page section',
                         impact: 'engagement'
                     });
                     engagementScore -= 3}
             }
             // Check for images without alt text'
             if (element.tagName === 'IMG') {
-'
-                const alt = element.getAttribute('alt');'
+
+                const alt = element.getAttribute('alt');
                 if (!alt || alt.trim() === '') {
 
                     issues.push({
+
 `
-                        id: `missing-alt-${index}`,'
-                        type: 'error','
-                        title: 'Missing Alt Text','
-                        description: 'Image has no alternative text for accessibility','
+                        id: `missing-alt-${index}`,
+                        type: 'error',
+                        title: 'Missing Alt Text',
+                        description: 'Image has no alternative text for accessibility',
                         severity: 'high',
                         element: element,
-                        fixable: true,'
-                        suggestion: 'Add descriptive alt text for better accessibility and SEO','
+                        fixable: true,
+                        suggestion: 'Add descriptive alt text for better accessibility and SEO',
                         impact: 'accessibility'
                     });
                     seoScore -= 8;
@@ -209,48 +218,48 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         if (wordCount < 300) {
 
             suggestions.push({
-'
-                id: 'increase-content','
-                type: 'improvement','
-                title: 'Increase Content Length','
-                description: 'Consider adding more content to improve SEO and user engagement','
-                priority: 'high','
+
+                id: 'increase-content',
+                type: 'improvement',
+                title: 'Increase Content Length',
+                description: 'Consider adding more content to improve SEO and user engagement',
+                priority: 'high',
                 implementation: 'Add relevant sections, expand existing content, include more examples',
                 expectedImpact: 15
             })}
         if (readabilityScore < 80) {
 
             suggestions.push({
-'
-                id: 'improve-readability','
-                type: 'optimization','
-                title: 'Improve Readability','
-                description: 'Content could be more readable for better user experience','
-                priority: 'medium','
+
+                id: 'improve-readability',
+                type: 'optimization',
+                title: 'Improve Readability',
+                description: 'Content could be more readable for better user experience',
+                priority: 'medium',
                 implementation: 'Use shorter sentences, break up long paragraphs, simplify complex language',
                 expectedImpact: 12
             })}
         if (seoScore < 80) {
 
             suggestions.push({
-'
-                id: 'seo-optimization','
-                type: 'enhancement','
-                title: 'SEO Optimization','
-                description: 'Several SEO improvements could boost search visibility','
-                priority: 'high','
+
+                id: 'seo-optimization',
+                type: 'enhancement',
+                title: 'SEO Optimization',
+                description: 'Several SEO improvements could boost search visibility',
+                priority: 'high',
                 implementation: 'Fix meta descriptions, add alt text, improve heading structure',
                 expectedImpact: 20
             })}
         if (engagementScore < 80) {
 
             suggestions.push({
-'
-                id: 'engagement-improvement','
-                type: 'improvement','
-                title: 'Improve User Engagement','
-                description: 'Content could be more engaging for visitors','
-                priority: 'medium','
+
+                id: 'engagement-improvement',
+                type: 'improvement',
+                title: 'Improve User Engagement',
+                description: 'Content could be more engaging for visitors',
+                priority: 'medium',
                 implementation: 'Add interactive elements, improve content structure, include calls-to-action',
                 expectedImpact: 10
             })}
@@ -266,11 +275,6 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             suggestions,
             overallScore: Math.max(0, Math.min(100,
   overallScore))
-        
-
-
-
-
 
 
 };
@@ -278,35 +282,36 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         setIsAnalyzing(false)}, [targetElements]);
     // Auto-fix content issues
     const autoFixIssues = useCallback(() => {
+
         if (!analysis)
             return;
         const fixedCount = 0;
         fixableIssues.forEach(issue => {
 
             if (issue.element) {
-'
+
                 switch (issue.id.split('-')[0]) {
-'
+
                     case 'empty-content':'
                         if (issue.element.textContent?.trim() === '') {
-'
-                            issue.element.innerHTML = '<em>Content placeholder - please add relevant information</em>';
+
+                            issue.element.innerHTML = '<em>Content placeholder - please add relevant information</em>;
                             fixedCount++}
-                        break;'
+                        break;
                     case 'missing-alt':'
                         if (issue.element.tagName === 'IMG') {
 
                             const img = issue.element;
                             if (!img.alt) {
-'
+
                                 img.alt = 'Image';
                                 fixedCount++}
                         }
-                        break;'
+                        break;
                     case 'short-meta':'
                     case 'long-meta':
                         // These would require more complex logic to fix
-                        break;'
+                        break;
                     case 'broken-link':
                         // These would require more complex logic to fix
                         break}
@@ -322,7 +327,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
 
         // Remove previous highlights'
         document.querySelectorAll('.content-highlight').forEach(el => {
-'
+
             el.classList.remove('content-highlight')});
         // Add highlight to selected element'
         element.classList.add('content-highlight');
@@ -331,11 +336,12 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         element.scrollIntoView({ behavior: 'smooth', block: 'center' });
         // Remove highlight after 3 seconds
         setTimeout(() => {
-'
+
             element.classList.remove('content-highlight');
             setSelectedElement(null)}, 3000)}, []);
     // Auto-analyze content
     useEffect(() => {
+
         if (autoAnalyze) {
 
             const timer = setTimeout(analyzeContent, 3000);
@@ -344,37 +350,37 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
     // Get score color
     const getScoreColor = (score) => {
 
-        if (score >= 80)'
+        if (score >= 80)
             return 'text-green-600';
-        if (score >= 60)'
-            return 'text-yellow-600';'
+        if (score >= 60)
+            return 'text-yellow-600';
         return 'text-red-600'};
     // Get score background color
     const getScoreBgColor = (score) => {
 
-        if (score >= 80)'
+        if (score >= 80)
             return 'bg-green-100 dark:bg-green-900/20';
-        if (score >= 60)'
-            return 'bg-yellow-100 dark:bg-yellow-900/20';'
+        if (score >= 60)
+            return 'bg-yellow-100 dark:bg-yellow-900/20';
         return 'bg-red-100 dark:bg-red-900/20'};
     // Get severity color
     const getSeverityColor = (severity) => {
 
         switch (severity) {
-'
-            case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/30';'
-            case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';'
-            case 'low': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/30';'
+
+            case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
+            case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';
+            case 'low': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/30';
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30'}
     };
     // Get priority color
     const getPriorityColor = (priority) => {
 
         switch (priority) {
-'
-            case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/30';'
-            case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';'
-            case 'low': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/30';'
+
+            case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
+            case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';
+            case 'low': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/30';
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30'}
     };
     return (<>
@@ -388,26 +394,20 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         {isOpen && (<motion.div initial = {
 
   { opacity: 0, scale: 0.8,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} animate = {
 
   { opacity: 1, scale: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} exit = {
 
   { opacity: 0, scale: 0.8,
+<<<<<<< HEAD
+  y: 20
+
+=======
   y: 20 
 
 
@@ -415,6 +415,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
 
 
 "
+>>>>>>> main
 }} className="fixed bottom-20 right-4 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
             {/* Header */}"
             <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">"
@@ -428,7 +429,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
 
             {/* Tabs */}"
             <div className="flex border-b border-gray-200 dark:border-gray-700">'`
-              {['overview', 'issues', 'suggestions', 'actions'].map((tab) => (<button key={tab} onClick={() => setActiveTab(tab)} className={`flex-1 px-4 py-2 text-sm font-medium transition-colors ${activeTab === tab'
+              {['overview',issues',suggestions',actions'].map((tab) => (<button key={tab} onClick={() => setActiveTab(tab)} className={`flex-1 px-4 py-2 text-sm font-medium transition-colors ${activeTab === tab'
                     ? 'text-purple-600 border-b-2 border-purple-600''`
                     : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'}`}>
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
@@ -514,7 +515,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                     </>)}
 
                   {/* Analyze Button */}"
-                  <button onClick={analyzeContent} disabled={isAnalyzing} className="w-full bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">'
+                  <button onClick={analyzeContent} disabled={isAnalyzing} className="w-full bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">
                     {isAnalyzing ? 'Analyzing...' : 'Analyze Content'}
                   </button>
                 </div>)}
@@ -612,7 +613,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
 
                   {/* Re-analyze Button */}"
                   <button onClick={analyzeContent} disabled={isAnalyzing} className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">"
-                    <ArrowPathIcon className="w-4 h-4 inline mr-2"/>'
+                    <ArrowPathIcon className="w-4 h-4 inline mr-2"/>
                     {isAnalyzing ? 'Analyzing...' : 'Re-analyze Content'}
                   </button>
 
@@ -620,19 +621,15 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                   {analysis && (<button onClick = {
 
   () => {
+
                         const report = JSON.stringify(analysis, null, 2);
-                        const blob = new Blob([report],'
-  { type: 'application/json' 
-
-
-
-
-
+                        const blob = new Blob([report],
+  { type: 'application/json'
 
 });
-                        const url = URL.createObjectURL(blob);'
+                        const url = URL.createObjectURL(blob);
                         const a = document.createElement('a');
-                        a.href = url;'
+                        a.href = url;
                         a.download = 'content-quality-report.json';
                         a.click();"
                         URL.revokeObjectURL(url)}} className="w-full bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors">

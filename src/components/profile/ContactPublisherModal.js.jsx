@@ -3,10 +3,10 @@ import {
 
   Dialog,
   DialogContent,
-  DialogHeader,'
-  DialogTitle} from '@/components/ui/dialog';'
-import { Button } from '@/components/ui/button';'
-import { Input } from '@/components/ui/input';'
+  DialogHeader,
+  DialogTitle} from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import {
 
@@ -14,21 +14,21 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormControl,'
-  FormMessage} from '@/components/ui/form';'
-import { useForm } from 'react-hook-form';'
-import { Mail, PaperPlane } from 'lucide-react';'
-import api from '@/services/apiClient';'
+  FormControl,
+  FormMessage} from '@/components/ui/form';
+import { useForm } from 'react-hook-form';
+import { Mail, PaperPlane } from 'lucide-react';
+import api from '@/services/apiClient';
 import { toast } from '@/hooks/use-toast';
 const schema = z.object({
 
   subject: z
-    .string()'
-    .min(5, 'Subject must be at least 5 characters')'
+    .string()
+    .min(5,Subject must be at least 5 characters')
     .nonempty('Subject is required'),
   message: z
-    .string()'
-    .min(20, 'Message must be at least 20 characters')'
+    .string()
+    .min(20,Message must be at least 20 characters')
     .nonempty('Message is required')});
 export function ContactPublisherModal({
 
@@ -40,24 +40,25 @@ export function ContactPublisherModal({
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const form = useForm({
 
-    resolver: zodResolver(schema),'
-    mode: 'onChange','
+    resolver: zodResolver(schema),
+    mode: 'onChange',
     defaultValues: { subject: '', message: '' }});
   const handleSend = async () => {
+
     const values = form.getValues();
     setIsSubmitting(true);
     try {
-'
+
       await api.post('/messages', {
 
         productId,
         subject: values.subject,
-        body: values.message});'
+        body: values.message});
       toast.success('Message sent!');
       form.reset();
       onClose();
     } catch (err) {
-'
+
       toast.error(err?.message || 'Failed to send message');
     } finally {
 
@@ -94,7 +95,7 @@ export function ContactPublisherModal({
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
                     <Input"
-                      placeholder="Subject""
+                      placeholder="Subject"
                       className="bg-zion-blue border-zion-blue-light text-white"
                       {...field}
                     />
@@ -126,7 +127,7 @@ export function ContactPublisherModal({
               className="w-full"
               disabled={!form.formState.isValid || isSubmitting}
             >"
-              <PaperPlane className="mr-1" />'
+              <PaperPlane className="mr-1" />
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </Button>
           </form>

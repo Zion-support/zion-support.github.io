@@ -1,43 +1,108 @@
+<<<<<<< HEAD
 /**
  * Cart utility functions for Zion Tech Group
  * Provides comprehensive cart management functionality
  */
 
 // Constants
-const CART_STORAGE_KEY = 'zion_cart_guest';
-const TAX_RATE = 0.08; // 8% tax rate
-const SHIPPING_THRESHOLD = 100; // Free shipping over $100
-const SHIPPING_COST = 9.99;
+const CART_STORAGE_KEY = 'zion_cart';
+const DEFAULT_TAX_RATE = 0.08; // 8% tax rate
+const MAX_QUANTITY = 99;
+const MIN_QUANTITY = 1;
 
 /**
  * Validate cart item structure
  * @param {Object} item - Cart item to validate
  * @returns {boolean} Whether item is valid
  */
-export const validateCartItem = item => {
-'
-  if (!item || typeof item !== 'object') return false;
-'
+export const validateCartItem = (item) => {
+
+  if (!item || typeof item !== 'object') {
+
+    return false;
+  }
+
   const requiredFields = ['id', 'name', 'price', 'quantity'];
-  return requiredFields.every()
-    field =>
-      item.hasOwnProperty(field) &&
-      item[field] !== null &&
-      item[field] !== undefined
-  );
+  for (const field of requiredFields) {
+
+    if (!(field in item)) {
+
+      return false;
+    }
+=======
+// Cart utility functions for Zion Tech Group application
+
+const CART_STORAGE_KEY = 'zion_cart';
+
+/**
+ * Get cart from localStorage
+ * @returns {Array} Cart items
+ */
+export const getCart = () => {
+
+  try {
+
+    const cartData = localStorage.getItem(CART_STORAGE_KEY);
+    return cartData ? JSON.parse(cartData) : [];
+  } catch (error) {
+
+    // // console.warn('Failed to get cart from localStorage:', error);
+    return [];
+  }
+};
+
+/**
+ * Save cart to localStorage
+ * @param {Array} cart - Cart items to save
+ */
+export const saveCart = (cart) => {
+
+  try {
+
+    localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
+    return true;
+  } catch (error) {
+
+    // // console.warn('Failed to save cart to localStorage:', error);
+    return false;
+>>>>>>> cursor/add-new-services-and-advertise-them-971c
+  }
+
+  if (typeof item.id !== 'string' && typeof item.id !== 'number') {
+
+    return false;
+  }
+
+  if (typeof item.name !== 'string' || item.name.trim() === '') {
+
+    return false;
+  }
+
+  if (typeof item.price !== 'number' || item.price < 0 || isNaN(item.price)) {
+
+    return false;
+  }
+
+  if (typeof item.quantity !== 'number' || item.quantity < MIN_QUANTITY || item.quantity > MAX_QUANTITY) {
+
+    return false;
+  }
+
+  return true;
 };
 
 /**
  * Add item to cart
+<<<<<<< HEAD
  * @param {Array} cart - Current cart array
  * @param {Object} newItem - Item to add
- * @returns {Array} Updated cart
+ * @returns {Array} Updated cart array
  */
 export const addToCart = (cart, newItem) => {
 
   if (!validateCartItem(newItem)) {
-'
-    // console.error('Invalid cart item:', newItem);
+
+    // // console.warn('Invalid cart item:', newItem);
     return cart;
   }
 
@@ -47,48 +112,142 @@ export const addToCart = (cart, newItem) => {
 
     // Update existing item quantity
     const updatedCart = [...cart];
-    updatedCart[existingItemIndex] = {
+    const existingItem = updatedCart[existingItemIndex];
+    const newQuantity = existingItem.quantity + newItem.quantity;
+    
+    if (newQuantity <= MAX_QUANTITY) {
 
-      ...updatedCart[existingItemIndex],
-      quantity: updatedCart[existingItemIndex].quantity + newItem.quantity};
+      updatedCart[existingItemIndex] = {
+
+        ...existingItem,
+        quantity: newQuantity
+      };
+    } else {
+
+      // Cap at max quantity
+      updatedCart[existingItemIndex] = {
+
+        ...existingItem,
+        quantity: MAX_QUANTITY
+      };
+    }
+    
     return updatedCart;
   } else {
 
     // Add new item
-    return [...cart, { ...newItem, addedAt: new Date().toISOString() }];
+    return [...cart, { ...newItem }];
   }
+=======
+ * @param {Object} item - Item to add
+ * @param {number} quantity - Quantity to add
+ * @returns {Array} Updated cart
+ */
+export const addToCart = (item, quantity = 1) => {
+
+  const cart = getCart();
+  const existingItemIndex = cart.findIndex(cartItem => cartItem.id === item.id);
+  
+  if (existingItemIndex > -1) {
+
+    cart[existingItemIndex].quantity += quantity;
+  } else {
+
+    cart.push({ ...item, quantity });
+  }
+  
+  saveCart(cart);
+  return cart;
+>>>>>>> cursor/add-new-services-and-advertise-them-971c
 };
 
 /**
  * Remove item from cart
+<<<<<<< HEAD
  * @param {Array} cart - Current cart array
- * @param {string} itemId - ID of item to remove
- * @returns {Array} Updated cart
+ * @param {string|number} itemId - ID of item to remove
+ * @returns {Array} Updated cart array
  */
 export const removeFromCart = (cart, itemId) => {
 
   return cart.filter(item => item.id !== itemId);
+=======
+ * @param {string} itemId - ID of item to remove
+ * @returns {Array} Updated cart
+ */
+export const removeFromCart = (itemId) => {
+
+  const cart = getCart();
+  const updatedCart = cart.filter(item => item.id !== itemId);
+  saveCart(updatedCart);
+  return updatedCart;
+>>>>>>> cursor/add-new-services-and-advertise-them-971c
 };
 
 /**
- * Update item quantity
+ * Update item quantity in cart
+<<<<<<< HEAD
  * @param {Array} cart - Current cart array
- * @param {string} itemId - ID of item to update
- * @param {number} quantity - New quantity
- * @returns {Array} Updated cart
+ * @param {string|number} itemId - ID of item to update
+ * @param {number} newQuantity - New quantity
+ * @returns {Array} Updated cart array
  */
-export const updateItemQuantity = (cart, itemId, quantity) => {
+export const updateCartItemQuantity = (cart, itemId, newQuantity) => {
 
-  if (quantity <= 0) {
+  if (newQuantity < MIN_QUANTITY) {
 
     return removeFromCart(cart, itemId);
   }
 
-  return cart.map(item =>
-    item.id === itemId
-      ? { ...item, quantity, updatedAt: new Date().toISOString() }
+  if (newQuantity > MAX_QUANTITY) {
+
+    newQuantity = MAX_QUANTITY;
+  }
+
+  return cart.map(item => 
+    item.id === itemId 
+      ? { ...item, quantity: newQuantity }
       : item
   );
+};
+
+/**
+ * Clear all items from cart
+ * @param {Array} cart - Current cart array
+ * @returns {Array} Empty cart array
+ */
+export const clearCart = (cart) => {
+
+  return [];
+};
+
+/**
+ * Check if cart is empty
+ * @param {Array} cart - Cart array to check
+ * @returns {boolean} Whether cart is empty
+=======
+ * @param {string} itemId - ID of item to update
+ * @param {number} quantity - New quantity
+ * @returns {Array} Updated cart
+ */
+export const updateCartItemQuantity = (itemId, quantity) => {
+
+  const cart = getCart();
+  const itemIndex = cart.findIndex(item => item.id === itemId);
+  
+  if (itemIndex > -1) {
+
+    if (quantity <= 0) {
+
+      cart.splice(itemIndex, 1);
+    } else {
+
+      cart[itemIndex].quantity = quantity;
+    }
+    saveCart(cart);
+  }
+  
+  return cart;
 };
 
 /**
@@ -96,84 +255,130 @@ export const updateItemQuantity = (cart, itemId, quantity) => {
  * @returns {Array} Empty cart
  */
 export const clearCart = () => {
-  return [];
+
+  const emptyCart = [];
+  saveCart(emptyCart);
+  return emptyCart;
 };
 
 /**
- * Check if cart is empty
- * @param {Array} cart - Cart array
- * @returns {boolean} Whether cart is empty
+ * Get cart total
+ * @returns {number} Total price of all items in cart
  */
-export const isCartEmpty = cart => {
+export const getCartTotal = () => {
 
-  return !Array.isArray(cart) || cart.length === 0;
+  const cart = getCart();
+  return cart.reduce((total, item) => {
+
+    return total + (item.price * item.quantity);
+  }, 0);
 };
 
 /**
  * Get cart item count
+ * @returns {number} Total number of items in cart
+ */
+export const getCartItemCount = () => {
+
+  const cart = getCart();
+  return cart.reduce((count, item) => {
+
+    return count + item.quantity;
+  }, 0);
+};
+
+/**
+ * Check if cart is empty
+ * @returns {boolean} True if cart is empty
+>>>>>>> cursor/add-new-services-and-advertise-them-971c
+ */
+export const isCartEmpty = () => {
+
+  return getCartItemCount() === 0;
+};
+
+/**
+<<<<<<< HEAD
+ * Get total number of items in cart
  * @param {Array} cart - Cart array
  * @returns {number} Total item count
  */
-export const getCartItemCount = cart => {
+export const getCartItemCount = (cart) => {
 
-  if (isCartEmpty(cart)) return 0;
-  return cart.reduce((total, item) => total + (item.quantity || 0), 0);
+  if (isCartEmpty(cart)) {
+
+    return 0;
+  }
+  
+  return cart.reduce((total, item) => total + item.quantity, 0);
+};
+
+/**
+ * Get unique item count in cart
+ * @param {Array} cart - Cart array
+ * @returns {number} Unique item count
+ */
+export const getUniqueItemCount = (cart) => {
+
+  if (isCartEmpty(cart)) {
+
+    return 0;
+  }
+  
+  return cart.length;
 };
 
 /**
  * Calculate cart subtotal
  * @param {Array} cart - Cart array
- * @returns {number} Subtotal amount
+ * @returns {number} Cart subtotal
  */
-export const calculateCartSubtotal = cart => {
+export const calculateCartSubtotal = (cart) => {
 
-  if (isCartEmpty(cart)) return 0;
-  return cart.reduce()
-    (total, item) => total + (item.price || 0) * (item.quantity || 0),
-    0
-  );
+  if (isCartEmpty(cart)) {
+
+    return 0;
+  }
+  
+  return cart.reduce((subtotal, item) => {
+
+    const itemTotal = item.price * item.quantity;
+    return subtotal + itemTotal;
+  }, 0);
 };
 
 /**
  * Calculate tax amount
  * @param {number} subtotal - Cart subtotal
+ * @param {number} taxRate - Tax rate (default: 8%)
  * @returns {number} Tax amount
  */
-export const calculateTax = subtotal => {
+export const calculateTax = (subtotal, taxRate = DEFAULT_TAX_RATE) => {
 
-  return subtotal * TAX_RATE;
+  return subtotal * taxRate;
 };
 
 /**
- * Calculate shipping cost
- * @param {number} subtotal - Cart subtotal
- * @returns {number} Shipping cost
- */
-export const calculateShipping = subtotal => {
-
-  return subtotal >= SHIPPING_THRESHOLD ? 0 : SHIPPING_COST;
-};
-
-/**
- * Calculate cart total
+ * Calculate cart total with tax
  * @param {Array} cart - Cart array
+ * @param {number} taxRate - Tax rate (default: 8%)
  * @returns {Object} Cart totals
  */
-export const calculateCartTotal = cart => {
+export const calculateCartTotal = (cart, taxRate = DEFAULT_TAX_RATE) => {
 
   const subtotal = calculateCartSubtotal(cart);
-  const tax = calculateTax(subtotal);
-  const shipping = calculateShipping(subtotal);
-  const total = subtotal + tax + shipping;
+  const tax = calculateTax(subtotal, taxRate);
+  const total = subtotal + tax;
+  const itemCount = getCartItemCount(cart);
 
   return {
 
     subtotal,
     tax,
-    shipping,
     total,
-    itemCount: getCartItemCount(cart),
-    uniqueItems: cart.length};
+    itemCount,
+    taxRate
+  };
 };
 
 /**
@@ -181,18 +386,19 @@ export const calculateCartTotal = cart => {
  * @param {number} price - Price to format
  * @param {string} currency - Currency code (default: USD)
  * @returns {string} Formatted price
- */'
+ */
 export const formatPrice = (price, currency = 'USD') => {
-'
+
   if (typeof price !== 'number' || isNaN(price)) {
-'
+
     return '$0.00';
   }
-'
+
   return new Intl.NumberFormat('en-US', {
-'
+
     style: 'currency',
-    currency: currency}).format(price);
+    currency: currency
+  }).format(price);
 };
 
 /**
@@ -200,7 +406,7 @@ export const formatPrice = (price, currency = 'USD') => {
  * @param {Array} cart - Cart items array
  * @returns {Object} Cart summary
  */
-export const getCartSummary = cart => {
+export const getCartSummary = (cart) => {
 
   const total = calculateCartTotal(cart);
 
@@ -210,9 +416,9 @@ export const getCartSummary = cart => {
     uniqueItems: cart.length,
     subtotal: formatPrice(total.subtotal),
     tax: formatPrice(total.tax),
-    shipping: formatPrice(total.shipping),
     total: formatPrice(total.total),
-    isEmpty: isCartEmpty(cart)};
+    isEmpty: isCartEmpty(cart)
+  };
 };
 
 /**
@@ -220,13 +426,14 @@ export const getCartSummary = cart => {
  * @param {Array} cart - Cart items array
  * @returns {string} JSON string of cart data
  */
-export const exportCartData = cart => {
+export const exportCartData = (cart) => {
 
   try {
+
     return JSON.stringify(cart, null, 2);
   } catch (error) {
-'
-    // console.error('Error exporting cart data:', error);'
+
+    // // console.error('Error exporting cart data:', error);
     return '[]';
   }
 };
@@ -236,9 +443,10 @@ export const exportCartData = cart => {
  * @param {string} cartData - JSON string of cart data
  * @returns {Array} Parsed cart array
  */
-export const importCartData = cartData => {
+export const importCartData = (cartData) => {
 
   try {
+
     const parsed = JSON.parse(cartData);
     if (Array.isArray(parsed)) {
 
@@ -246,8 +454,8 @@ export const importCartData = cartData => {
     }
     return [];
   } catch (error) {
-'
-    // console.error('Error importing cart data:', error);
+
+    // // console.error('Error importing cart data:', error);
     return [];
   }
 };
@@ -274,38 +482,70 @@ export const getCartKey = (userId = null) => {
  */
 export const mergeCarts = (cart1, cart2) => {
 
-  if (!Array.isArray(cart1) || !Array.isArray(cart2)) {
+  if (isCartEmpty(cart1)) {
 
-    return Array.isArray(cart1) ? cart1 : Array.isArray(cart2) ? cart2 : [];
+    return cart2;
+  }
+  
+  if (isCartEmpty(cart2)) {
+
+    return cart1;
   }
 
-  const merged = [...cart1];
-
+  const mergedCart = [...cart1];
+  
   cart2.forEach(item2 => {
 
-    if (validateCartItem(item2)) {
+    const existingItemIndex = mergedCart.findIndex(item1 => item1.id === item2.id);
+    
+    if (existingItemIndex !== -1) {
 
-      const existingIndex = merged.findIndex(item1 => item1.id === item2.id);
+      // Merge quantities
+      const existingItem = mergedCart[existingItemIndex];
+      const newQuantity = Math.min(existingItem.quantity + item2.quantity, MAX_QUANTITY);
+      
+      mergedCart[existingItemIndex] = {
 
-      if (existingIndex !== -1) {
+        ...existingItem,
+        quantity: newQuantity
+      };
+    } else {
 
-        // Merge quantities
-        merged[existingIndex] = {
-
-          ...merged[existingIndex],
-          quantity: merged[existingIndex].quantity + item2.quantity,
-          updatedAt: new Date().toISOString()};
-      } else {
-
-        // Add new item
-        merged.push({ ...item2, addedAt: new Date().toISOString() });
-      }
+      // Add new item
+      mergedCart.push(item2);
     }
   });
-
-  return merged;
+  
+  return mergedCart;
 };
 
+=======
+ * Merge two carts
+ * @param {Array} cart1 - First cart
+ * @param {Array} cart2 - Second cart
+ * @returns {Array} Merged cart
+ */
+export const mergeCarts = (cart1, cart2) => {
+
+  const mergedCart = [...cart1];
+  
+  cart2.forEach(item2 => {
+
+    const existingItemIndex = mergedCart.findIndex(item1 => item1.id === item2.id);
+    
+    if (existingItemIndex > -1) {
+
+      mergedCart[existingItemIndex].quantity += item2.quantity;
+    } else {
+
+      mergedCart.push(item2);
+    }
+  });
+  
+  return mergedCart;
+};
+
+>>>>>>> cursor/add-new-services-and-advertise-them-971c
 /**
  * Merge cart items (alias for mergeCarts for backward compatibility)
  * @param {Array} cart1 - First cart
@@ -316,4 +556,132 @@ export const mergeCartItems = (cart1, cart2) => {
 
   return mergeCarts(cart1, cart2);
 };
-'`
+
+/**
+<<<<<<< HEAD
+ * Get cart statistics
+ * @param {Array} cart - Cart array
+ * @returns {Object} Cart statistics
+ */
+export const getCartStats = (cart) => {
+
+  if (isCartEmpty(cart)) {
+
+    return {
+
+      totalItems: 0,
+      uniqueItems: 0,
+      averagePrice: 0,
+      highestPrice: 0,
+      lowestPrice: 0
+    };
+  }
+
+  const prices = cart.map(item => item.price);
+  const totalItems = getCartItemCount(cart);
+  const uniqueItems = getUniqueItemCount(cart);
+  const averagePrice = prices.reduce((sum, price) => sum + price, 0) / prices.length;
+  const highestPrice = Math.max(...prices);
+  const lowestPrice = Math.min(...prices);
+
+  return {
+
+    totalItems,
+    uniqueItems,
+    averagePrice: Math.round(averagePrice * 100) / 100,
+    highestPrice,
+    lowestPrice
+  };
+};
+
+/**
+ * Sort cart items by various criteria
+ * @param {Array} cart - Cart array
+ * @param {string} sortBy - Sort criteria ('name', 'price', 'quantity', 'date')
+ * @param {string} sortOrder - Sort order ('asc' or 'desc')
+ * @returns {Array} Sorted cart array
+ */
+export const sortCartItems = (cart, sortBy = 'name', sortOrder = 'asc') => {
+
+  if (isCartEmpty(cart)) {
+
+    return cart;
+  }
+
+  const sortedCart = [...cart];
+  
+  sortedCart.sort((a, b) => {
+
+    let aValue, bValue;
+    
+    switch (sortBy) {
+
+      case 'name':
+        aValue = a.name.toLowerCase();
+        bValue = b.name.toLowerCase();
+        break;
+      case 'price':
+        aValue = a.price;
+        bValue = b.price;
+        break;
+      case 'quantity':
+        aValue = a.quantity;
+        bValue = b.quantity;
+        break;
+      case 'date':
+        aValue = a.addedAt || 0;
+        bValue = b.addedAt || 0;
+        break;
+      default:
+        aValue = a.name.toLowerCase();
+        bValue = b.name.toLowerCase();
+    }
+    
+    if (sortOrder === 'desc') {
+
+      return bValue > aValue ? 1 : -1;
+    } else {
+
+      return aValue > bValue ? 1 : -1;
+    }
+  });
+  
+  return sortedCart;
+};
+
+export default {
+
+  validateCartItem,
+  addToCart,
+  removeFromCart,
+  updateCartItemQuantity,
+  clearCart,
+  isCartEmpty,
+  getCartItemCount,
+  getUniqueItemCount,
+  calculateCartSubtotal,
+  calculateTax,
+  calculateCartTotal,
+  formatPrice,
+  getCartSummary,
+  exportCartData,
+  importCartData,
+  getCartKey,
+  mergeCarts,
+  mergeCartItems,
+  getCartStats,
+  sortCartItems
+=======
+ * Get cart key for storage (useful for user-specific carts)
+ * @param {string} userId - User ID (optional)
+ * @returns {string} Cart storage key
+ */
+export const getCartKey = (userId = null) => {
+
+  if (userId) {
+
+    return `zion_cart_${userId}`;
+  }
+  return CART_STORAGE_KEY;
+>>>>>>> cursor/add-new-services-and-advertise-them-971c
+};

@@ -1,7 +1,7 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';
+<<<<<<< HEAD
 
 interface HeroFeature {
+
 icon: React.ComponentType<{ className?: string}>;
   title: string;
   description: string;
@@ -23,52 +23,32 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
       {features.map((feature, index (;
         <motion.div
           key={feature.title}"
-          className="group relative bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/20""
+          className="group relative bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/20"
           role="article"
           aria-labelledby={`feature-${index}-title`}
           whileHover={{
 
             y: -8,
-  transition: { duration: 0.3 
-
-
-
-
-
+  transition: { duration: 0.3
 
 }
           }}
           initial = {
 
   { opacity: 0,
-  y: 30 
-
-
-
-
-
+  y: 30
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }}
           transition = {
 
   { duration: 0.6,
-  delay: 0.6 + index * 0.1 
-
-
-
-
-
+  delay: 0.6 + index * 0.1
 
 }}
         >
@@ -101,7 +81,8 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
         </motion.div>;
       ))};
     </motion.div>;
-  );
-};
+  )};
 
-export default HeroFeatures;}}'"`
+export default HeroFeatures}}'"`
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954

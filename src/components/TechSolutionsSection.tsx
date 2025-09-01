@@ -1,7 +1,17 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import {
+
+<<<<<<< HEAD
+import { motion } from 'framer - motion';
+
+ * TechSolutionsSection function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function TechSolutionsSection () {
+
+=======
+>>>>>>> main
 
   Brain,
   Shield,
@@ -16,14 +26,19 @@ import {
   Code,
   Server'
 } from 'lucide-react';
-'
-      features['Emerging Tech', 'Prototype Development', 'Technology Consulting', 'Innovation Strategy'],'
-      color: 'from-indigo-500 to-purple-500';
-    };
+
+      features['Emerging Tech',Prototype Development',Technology Consulting',Innovation Strategy'],
+      color: 'from-indigo-500 to-purple-500'};
   ];
 const techSolutions = [
   {
 
+<<<<<<< HEAD
+  return (<section className = "py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
+      <div className="max - w-7xl mx - auto px - 6">
+        <motion.div
+          className="text - center mb - 16"
+=======
     icon: "🤖","
     title: "AI & Machine Learning","
     description: "Intelligent automation, predictive analytics, and cognitive computing solutions","
@@ -31,6 +46,7 @@ const techSolutions = [
     color: "from-purple-500 to-pink-500"
   },
   {
+
 "
     icon: "☁️","
     title: "Cloud Infrastructure","
@@ -39,6 +55,7 @@ const techSolutions = [
     color: "from-blue-500 to-cyan-500"
   },
   {
+
 "
     icon: "🔒","
     title: "Cybersecurity","
@@ -47,6 +64,7 @@ const techSolutions = [
     color: "from-red-500 to-orange-500"
   },
   {
+
 "
     icon: "📱","
     title: "Mobile Solutions","
@@ -55,6 +73,7 @@ const techSolutions = [
     color: "from-green-500 to-emerald-500"
   },
   {
+
 "
     icon: "🌐","
     title: "Web Development","
@@ -67,26 +86,29 @@ const techSolutions = [
     title: "Data Analytics",;"
     description: "Business intelligence and data-driven insights for strategic decision making",;"
     benefits: ["Real-time dashboards", "Predictive analytics", "Custom reporting"],;"
-    color: "from-yellow-500 to-orange-500";
-  };
+    color: "from-yellow-500 to-orange-500"};
 ];
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 export function TechSolutionsSection() {
+
   return ("
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
+>>>>>>> main
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
@@ -109,26 +131,46 @@ export function TechSolutionsSection() {
               initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               viewport={{ once: true }}
               transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
             >
               <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>"
                 <span className="text-3xl">{solution.icon}</span>
               </div>
+<<<<<<< HEAD
+
+              <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - blue - 400 transition - colors duration - 200">
+                {solution.title}
+              </h3>
+
+              <p className="text - gray - 400 text - sm mb - 6 leading - relaxed">
+                {solution.description}
+              </p>
+
+              <ul className="space - y-2">
+                {solution.benefits.map ( (benefit, benefitIndex) => (<li key={benefitIndex} className="flex items - center gap - 2 text - sm">
+                    <div className="w - 2 h - 2 bg - blue - 400 rounded - full"></div>
+                    <span className="text - gray - 300">{benefit}</span>
+                  </li>) ) }
+              </ul>
+
+              <div className="mt - 6 pt - 4 border - t border - slate - 700">
+                <div className="text - blue - 400 text - sm font - semibold group - hover:text - blue - 300 transition - colors duration - 200">
+=======
               "
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">
                 {solution.title}
@@ -149,6 +191,7 @@ export function TechSolutionsSection() {
               "
               <div className="mt-6 pt-4 border-t border-slate-700">"
                 <div className="text-blue-400 text-sm font-semibold group-hover:text-blue-300 transition-colors duration-200">
+>>>>>>> main
                   Learn More →
                 </div>
 "
@@ -165,34 +208,38 @@ export function TechSolutionsSection() {
                 </ul>
 
                 <Link"
-                  to="/services""
+                  to="/services"
                   className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200 group-hover:translate-x-1"
 
                   Learn More"
-                  <Rocket className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
-                </Link>
+                  <Rocket className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"  />                </Link>
               </motion.div>) }) }
         </div>
 
+<<<<<<< HEAD
+        <motion.div
+          className="mt - 16 text - center"
+=======
         <motion.div "
           className="mt-16 text-center"
+>>>>>>> main
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
           transition = {
 
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}
         >"
@@ -200,25 +247,24 @@ export function TechSolutionsSection() {
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Ready to Transform Your Business?
             </h3>"
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">'
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               Let's discuss how our technology solutions can help you achieve
               your business goals and stay ahead of the competition.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
 
                 Get Started"
-                <Rocket className="ml-2 h-5 w-5" />
+                <Rocket className="ml-2 h-5 w-5"  />
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200"
 
                 View All Services"
-                <Code className="ml-2 h-5 w-5" />
-              </Link>
+                <Code className="ml-2 h-5 w-5"  />              </Link>
             </div>
           </div>
         </motion.div>;
@@ -230,9 +276,7 @@ export default TechSolutionsSection;"
           </div>;
         </motion.div>;
       </div>;
-    </section>;) ;
-}
-
+    </section>;) }
 export default TechSolutionsSection;
 export default TechSolutionsSection;
 '"`

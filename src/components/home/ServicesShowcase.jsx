@@ -1,17 +1,19 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { Button } from '@/components/ui/button';'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';'
-import { Badge } from '@/components/ui/badge';'
+
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
-import { ArrowRight, Star } from "lucide-react";'
-import { FuturisticCard } from '@/components/ui/futuristic-card';'
+import { ArrowRight, Star } from "lucide-react";
+import { FuturisticCard } from '@/components/ui/futuristic-card';
 import { NeonText } from '@/components/ui/neon-text';
 export function ServicesShowcase() {
+
     const featuredServices = COMPREHENSIVE_SERVICES.slice(0, 6);
-    
+
     const emergingServices = [
         {
+
 "
             title: "AI Workflow Orchestrator","
             description: "Intelligent process automation with AI-driven optimization","
@@ -21,6 +23,7 @@ export function ServicesShowcase() {
             link: "/services/ai-workflow-orchestrator"
         },
         {
+
 "
             title: "AI Data Governance Platform","
             description: "Enterprise data protection and compliance automation","
@@ -30,6 +33,7 @@ export function ServicesShowcase() {
             link: "/services/ai-data-governance-platform"
         },
         {
+
 "
             title: "AI Customer Experience Analytics","
             description: "Intelligent analytics and insights for data-driven decisions","
@@ -39,6 +43,7 @@ export function ServicesShowcase() {
             link: "/services/ai-customer-experience-analytics"
         },
         {
+
 "
             title: "Cloud DevOps Platform","
             description: "Streamlined cloud infrastructure and deployment automation","

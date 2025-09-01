@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { SpeakerWaveIcon, AdjustmentsHorizontalIcon, ArrowUpIcon, ArrowDownIcon } from '@heroicons/react/24/outline';
 const EnhancedAccessibility = () => {
+
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
 
@@ -10,26 +11,28 @@ const EnhancedAccessibility = () => {
         reducedMotion: false,
         screenReader: false,
         keyboardNavigation: false,
-        focusIndicator: true,'
+        focusIndicator: true,
         colorBlindness: 'none'
     });
     useEffect(() => {
+
         // Load saved settings from localStorage'
         const savedSettings = localStorage.getItem('accessibility-settings');
         if (savedSettings) {
 
             try {
+
                 const parsed = JSON.parse(savedSettings);
-                setSettings(prev => ({ ...prev, ...parsed }));'
-                // // // // // // // // console.warn('Failed to load accessibility settings:', error);
+                setSettings(prev => ({ ...prev, ...parsed }));
+                // // // // // // // // // // console.warn('Failed to load accessibility settings:', error);
             }
                 applySettings({ ...settings, ...parsed })}
             catch (error) {
-'
-                // console.warn('Failed to load accessibility settings:', error)}
+
+                // // // console.warn('Failed to load accessibility settings:', error)}
         }
         // Check for user preferences'
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)).matches;
         if (prefersReducedMotion) {
 
             setSettings(prev => ({ ...prev, reducedMotion: true }))}
@@ -39,31 +42,31 @@ const EnhancedAccessibility = () => {
         const root = document.documentElement;
         // High contrast mode
         if (newSettings.highContrast) {
-'
+
             root.classList.add('high-contrast')}
         else {
-'
+
             root.classList.remove('high-contrast')}
         // Font size'
         root.style.setProperty('--font-size-multiplier', (newSettings.fontSize / 16).toString());
         // Reduced motion
         if (newSettings.reducedMotion) {
-'
+
             root.classList.add('reduced-motion')}
         else {
-'
+
             root.classList.remove('reduced-motion')}
         // Color blindness filters'
-        root.classList.remove('protanopia', 'deuteranopia', 'tritanopia');'
+        root.classList.remove('protanopia',deuteranopia',tritanopia');
         if (newSettings.colorBlindness !== 'none') {
 
             root.classList.add(newSettings.colorBlindness)}
         // Focus indicators
         if (newSettings.focusIndicator) {
-'
+
             root.classList.add('show-focus-indicator')}
         else {
-'
+
             root.classList.remove('show-focus-indicator')}
         // Save to localStorage'
         localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))};
@@ -72,26 +75,24 @@ const EnhancedAccessibility = () => {
         const newSettings = {
 
   ...settings,
-  [key]: value 
-
-
-
-
-
+  [key]: value
 
 };
         setSettings(newSettings);
         applySettings(newSettings)};
     const toggleHighContrast = () => {
-'
+
         updateSetting('highContrast', !settings.highContrast)};
     const increaseFontSize = () => {
-        const newSize = Math.min(settings.fontSize + 2, 24);'
+
+        const newSize = Math.min(settings.fontSize + 2, 24);
         updateSetting('fontSize', newSize)};
     const decreaseFontSize = () => {
-        const newSize = Math.max(settings.fontSize - 2, 12);'
+
+        const newSize = Math.max(settings.fontSize - 2, 12);
         updateSetting('fontSize', newSize)};
     const resetSettings = () => {
+
         const defaultSettings = {
 
   highContrast: false,
@@ -99,20 +100,15 @@ const EnhancedAccessibility = () => {
             reducedMotion: false,
             screenReader: false,
             keyboardNavigation: false,
-            focusIndicator: true,'
+            focusIndicator: true,
   colorBlindness: 'none'
-        
-
-
-
-
 
 
 };
         setSettings(defaultSettings);
         applySettings(defaultSettings)};
     const speakText = (text) => {
-'
+
         if ('speechSynthesis' in window) {
 
             const utterance = new SpeechSynthesisUtterance(text);
@@ -134,26 +130,23 @@ const EnhancedAccessibility = () => {
         {isOpen && (<motion.div initial = {
 
   { opacity: 0,
-  x: -20 
-
-
-
-
-
+  x: -20
 
 }} animate = {
 
   { opacity: 1,
-  x: 0 
-
-
-
-
-
+  x: 0
 
 }} exit = {
 
   { opacity: 0,
+<<<<<<< HEAD
+  x: -20
+
+}} transition={{ duration: 0.3 }} id="accessibility-panel" className="fixed bottom-24 left-6 z-50 w-80 bg-white dark:bg-slate-800 rounded-lg shadow-2xl border border-gray-200 dark:border-slate-700 max-h-96 overflow-y-auto" role="dialog" aria-labelledby="accessibility-title">
+            <div className="p-6">
+              <div className="flex items-center justify-between mb-4">
+=======
   x: -20 
 
 
@@ -164,6 +157,7 @@ const EnhancedAccessibility = () => {
 }} transition={{ duration: 0.3 }} id="accessibility-panel" className="fixed bottom-24 left-6 z-50 w-80 bg-white dark:bg-slate-800 rounded-lg shadow-2xl border border-gray-200 dark:border-slate-700 max-h-96 overflow-y-auto" role="dialog" aria-labelledby="accessibility-title">"
             <div className="p-6">"
               <div className="flex items-center justify-between mb-4">"
+>>>>>>> main
                 <h2 id="accessibility-title" className="text-lg font-semibold text-gray-900 dark:text-white">
                   Accessibility Settings
                 </h2>"
@@ -212,16 +206,20 @@ const EnhancedAccessibility = () => {
                     Reduced Motion
                   </span>
                   <button onClick = {
-'
+
   () => updateSetting('reducedMotion',
   !settings.reducedMotion)
 
+<<<<<<< HEAD
+} className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.reducedMotion ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.reducedMotion}>
+=======
 
 
 
 
 '"`
 } className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.reducedMotion ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.reducedMotion}>'`
+>>>>>>> main
                     <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'}`}/>
                   </button>
                 </label>"
@@ -237,16 +235,20 @@ const EnhancedAccessibility = () => {
                     Enhanced Focus Indicators
                   </span>
                   <button onClick = {
-'
+
   () => updateSetting('focusIndicator',
   !settings.focusIndicator)
 
+<<<<<<< HEAD
+} className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.focusIndicator ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.focusIndicator}>
+=======
 
 
 
 
 '"`
 } className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.focusIndicator ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.focusIndicator}>'`
+>>>>>>> main
                     <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.focusIndicator ? 'translate-x-6' : 'translate-x-1'}`}/>
                   </button>
                 </label>"
@@ -261,10 +263,16 @@ const EnhancedAccessibility = () => {
                   Color Blindness Support
                 </label>
                 <select value={settings.colorBlindness} onChange = {
-'
+
   (e) => updateSetting('colorBlindness',
   e.target.value)
 
+<<<<<<< HEAD
+} className="w-full p-2 border border-gray-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-700 text-gray-900 dark:text-white text-sm">
+                  <option value="none">None</option>
+                  <option value="protanopia">Protanopia (Red-Blind)</option>
+                  <option value="deuteranopia">Deuteranopia (Green-Blind)</option>
+=======
 
 
 
@@ -274,6 +282,7 @@ const EnhancedAccessibility = () => {
                   <option value="none">None</option>"
                   <option value="protanopia">Protanopia (Red-Blind)</option>"
                   <option value="deuteranopia">Deuteranopia (Green-Blind)</option>"
+>>>>>>> main
                   <option value="tritanopia">Tritanopia (Blue-Blind)</option>
                 </select>
               </div>
@@ -285,16 +294,20 @@ const EnhancedAccessibility = () => {
                     Screen Reader Announcements
                   </span>
                   <button onClick = {
-'
+
   () => updateSetting('screenReader',
   !settings.screenReader)
 
+<<<<<<< HEAD
+} className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.screenReader ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.screenReader}>
+=======
 
 
 
 
 '"`
 } className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.screenReader ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.screenReader}>'`
+>>>>>>> main
                     <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.screenReader ? 'translate-x-6' : 'translate-x-1'}`}/>
                   </button>
                 </label>"
@@ -310,16 +323,20 @@ const EnhancedAccessibility = () => {
                     Enhanced Keyboard Navigation
                   </span>
                   <button onClick = {
-'
+
   () => updateSetting('keyboardNavigation',
   !settings.keyboardNavigation)
 
+<<<<<<< HEAD
+} className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.keyboardNavigation ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.keyboardNavigation}>
+=======
 
 
 
 
 '"`
 } className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.keyboardNavigation ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.keyboardNavigation}>'`
+>>>>>>> main
                     <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-1'}`}/>
                   </button>
                 </label>"

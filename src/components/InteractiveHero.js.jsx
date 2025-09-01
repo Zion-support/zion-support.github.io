@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';'
-import { motion } from 'framer-motion';'
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 export const InteractiveHero = ({ title, subtitle, description, primaryAction, secondaryAction, stats = ['
-    { value: '500+', label: 'Happy Clients', color: 'text-blue-400' },'
-    { value: '1000+', label: 'Projects Delivered', color: 'text-green-400' },'
-    { value: '99.9%', label: 'Uptime SLA', color: 'text-purple-400' },'
+    { value: '500+', label: 'Happy Clients', color: 'text-blue-400' },
+    { value: '1000+', label: 'Projects Delivered', color: 'text-green-400' },
+    { value: '99.9%', label: 'Uptime SLA', color: 'text-purple-400' },
     { value: '24/7', label: 'Support Available', color: 'text-cyan-400' }
 ] }) => {
 
@@ -12,15 +12,17 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
     const [isHovered, setIsHovered] = useState(false);
     const [activeStat, setActiveStat] = useState(0);
     useEffect(() => {
+
         const handleMouseMove = (e) => {
 
-            setMousePosition({ x: e.clientX, y: e.clientY })};'
+            setMousePosition({ x: e.clientX, y: e.clientY })};
         window.addEventListener('mousemove', handleMouseMove);
         // Auto-rotate stats
         const interval = setInterval(() => {
+
             setActiveStat((prev) => (prev + 1) % stats.length)}, 3000);
         return () => {
-'
+
             window.removeEventListener('mousemove', handleMouseMove);
             clearInterval(interval)}}, [stats.length]);
     const containerVariants = {
@@ -136,7 +138,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             backgroundImage: `
             linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)`
-          `,'
+          `,
   backgroundSize: '50px 50px'
 
 }}/>
@@ -161,6 +163,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
           {/* Title */}"
           <motion.h1 variants={itemVariants} className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>'"
             {title.split(' ').map((word, index) => (<motion.span key={index} className="inline-block mr-4" whileHover={{ scale: 1.05 }} transition = {
+
 "
   { type: "spring",
   stiffness: 300 
@@ -260,6 +263,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
 }} transition = {
 
   {
+
 "
             type: "spring",
             stiffness: 500,

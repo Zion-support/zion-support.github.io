@@ -1,29 +1,30 @@
 import React from 'react';
 import { Download, Star, Users, Award export const AppStoreBanner = () => {
+
   const appStores = [
     {
-'
-      name: 'App Store','
+
+      name: 'App Store',
       icon: '🍎',
-      rating: 4.8,'
-      reviews: '2.4k','
-      downloadUrl: '#','
+      rating: 4.8,
+      reviews: '2.4k',
+      downloadUrl: '#',
       badge: 'Featured'
     },
     {
-'
-      name: 'Google Play','
+
+      name: 'Google Play',
       icon: '🤖',
-      rating: 4.7,'
-      reviews: '1.9k','
-      downloadUrl: '#','
+      rating: 4.7,
+      reviews: '1.9k',
+      downloadUrl: '#',
       badge: 'Top Rated'
 
   ];
 
   const features = ['
-    { icon: Star, text: '4.8/5 Rating', color: 'text-yellow-400' },'
-    { icon: Users, text: '10K+ Downloads', color: 'text-blue-400' },'
+    { icon: Star, text: '4.8/5 Rating', color: 'text-yellow-400' },
+    { icon: Users, text: '10K+ Downloads', color: 'text-blue-400' },
     { icon: Award, text: 'Editor\'s Choice', color: 'text-green-400' }
   ];
 
@@ -155,13 +156,13 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="#support""
+                href="#support"
                 className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
 
                 Get Support
               </a>
               <a"
-                href="#demo""
+                href="#demo"
                 className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
 
                 Watch Demo

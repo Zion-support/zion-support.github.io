@@ -1,5 +1,3 @@
-import React, { useState } from 'react';'
-import { Link, useLocation } from 'react-router-dom';
 import {
 
   Menu,
@@ -23,8 +21,7 @@ import {
   Star,
   Building,
   BookOpen,
-  HelpCircle,
-  ChevronRight,
+  HelpCircle,  ChevronRight,
   Menu,
   X,
   Users,
@@ -50,536 +47,591 @@ import {
   Plus,
   Scale,
   GraduationCap,
-  Package,'
+  Package,
   User} from 'lucide-react';
 
+<<<<<<< HEAD
+    Menu,
+    X,
+    Home,
+    Settings,
+    Brain,
+    Cloud,
+    Shield,
+    Rocket,
+    Heart,
+    Globe,
+    ShoppingCart,
+    BookOpen,
+    MessageCircle,
+    HelpCircle,
+    DollarSign,
+    Gauge,
+    Workflow,
+    Atom,
+    Star,
+    Building,
+    BookOpen,
+    HelpCircle,
+    ChevronRight,
+    Menu,
+    X,
+    Users,
+    Briefcase,
+    DollarSign,
+    FileText,
+    Calendar,
+    MessageCircle,
+    TrendingUp,
+    Award,
+    Zap,
+    Lock,
+    Cpu,
+    Database,
+    Smartphone,
+    Target,
+    BarChart3,
+    Search,
+    PhoneCall,
+    Mail,
+    ExternalLink,
+    ChevronDown,
+    Plus,
+    Scale,
+    GraduationCap,
+    Package,
+    User} from 'lucide - react';
+
+  interface SidebarProps {
+
+    isOpen: boolean;
+    onToggle: () => void;
+  }
+
+  const location = useLocation () ;
+  const [expandedSections, setExpandedSections] = useState < string[]> ([
+    'main',
+    'services',
+  ]) ;
+=======
 
 export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
 
-  const location = useLocation();
-  const [expandedSections, setExpandedSections] = useState<string[]>(['
-    'main','
-    'services',
-  ]);
+>>>>>>> main
 
+  
+  const [expandedSections, setExpandedSections] = useState<string[]>(['
+    'main',services',
+  ]);
   const navigation: SidebarItem[] = [
     {
-'
-      id: 'main','
+
+      id: 'main',
       title: 'Main Navigation',
       icon: Home,
       links: ['
         { name: 'Home', href: '/', icon: Home, description: 'Main dashboard' },
         {
-'
-          name: 'About Us','
+
+          name: 'About Us',
           href: '/about',
-          icon: Building,'
+          icon: Building,
           description: 'Our story and mission'},
         {
-'
-          name: 'Contact','
+
+          name: 'Contact',
           href: '/contact',
-          icon: PhoneCall,'
+          icon: PhoneCall,
           description: 'Get in touch'},
         {
-'
-          name: 'Get Quote','
+
+          name: 'Get Quote',
           href: '/request-quote',
-          icon: DollarSign,'
+          icon: DollarSign,
           description: 'Request pricing'},
         {
-'
-          name: 'Schedule Demo','
+
+          name: 'Schedule Demo',
           href: '/schedule-demo',
-          icon: Calendar,'
+          icon: Calendar,
           description: 'Book a demo'},
       ]},
     {
-'
-      id: 'services','
+
+      id: 'services',
       title: 'Services Portfolio',
       icon: Settings,
       links: [
         {
-'
-          name: 'Services Overview','
+
+          name: 'Services Overview',
           href: '/services-overview',
-          icon: BarChart3,'
+          icon: BarChart3,
           description: 'Complete service portfolio'},
         {
-'
-          name: 'Services Catalog','
+
+          name: 'Services Catalog',
           href: '/services-catalog',
-          icon: FileText,'
+          icon: FileText,
           description: 'Browse all services'},
         {
-'
-          name: 'Services Comparison','
+
+          name: 'Services Comparison',
           href: '/services-comparison',
-          icon: TrendingUp,'
+          icon: TrendingUp,
           description: 'Compare offerings'},
         {
-'
-          name: 'AI Services','
+
+          name: 'AI Services',
           href: '/ai-services',
-          icon: Brain,'
+          icon: Brain,
           description: 'Artificial Intelligence solutions'},
         {
-'
-          name: 'IT Services','
+
+          name: 'IT Services',
           href: '/it-services',
-          icon: Settings,'
+          icon: Settings,
           description: 'Information Technology services'},
         {
-'
-          name: 'Micro SaaS','
+
+          name: 'Micro SaaS',
           href: '/micro-saas',
-          icon: ShoppingCart,'
+          icon: ShoppingCart,
           description: 'Software-as-a-Service products'},
       ]},
     {
-'
-      id: 'ai-solutions','
+
+      id: 'ai-solutions',
       title: 'AI Solutions',
       icon: Brain,
       items: [
         {
-'
-          name: 'AI Business Intelligence','
+
+          name: 'AI Business Intelligence',
           path: '/services/ai-business-intelligence',
-          icon: Brain,'
+          icon: Brain,
           description: 'Machine Learning & Data Science'},
         {
-'
-          name: 'AI Workflow Orchestrator','
+
+          name: 'AI Workflow Orchestrator',
           path: '/services/ai-workflow-orchestrator',
-          icon: Workflow,'
+          icon: Workflow,
           description: 'Intelligent Process Automation'},
         {
-'
-          name: 'AI Data Governance Platform','
+
+          name: 'AI Data Governance Platform',
           path: '/services/ai-data-governance-platform',
-          icon: Shield,'
+          icon: Shield,
           description: 'Data Protection & Compliance'},
         {
-'
-          name: 'AI Customer Experience Analytics','
+
+          name: 'AI Customer Experience Analytics',
           path: '/services/ai-customer-experience-analytics',
-          icon: Users,'
+          icon: Users,
           description: 'Customer Insights & Analytics'},
         {
-'
-          name: 'AI Healthcare Analytics','
+
+          name: 'AI Healthcare Analytics',
           path: '/services/ai-healthcare-analytics',
-          icon: Brain,'
+          icon: Brain,
           description: 'Medical AI & Diagnostics'},
         {
-'
-          name: 'AI Financial Trading','
+
+          name: 'AI Financial Trading',
           path: '/services/ai-financial-trading',
-          icon: TrendingUp,'
+          icon: TrendingUp,
           description: 'FinTech AI Solutions'},
         {
-'
-          name: 'AI Supply Chain Optimization','
+
+          name: 'AI Supply Chain Optimization',
           path: '/services/ai-supply-chain-optimization',
-          icon: Workflow,'
+          icon: Workflow,
           description: 'Supply Chain AI'},
       ]},
     {
-'
-      id: 'enterprise-services','
+
+      id: 'enterprise-services',
       title: 'Enterprise Services',
       icon: Building,
       links: [
         {
-'
-          name: 'Cloud DevOps','
+
+          name: 'Cloud DevOps',
           href: '/services/cloud-devops',
-          icon: Cloud,'
+          icon: Cloud,
           description: 'Cloud infrastructure'},
         {
-'
-          name: 'Cybersecurity Suite','
+
+          name: 'Cybersecurity Suite',
           href: '/services/ai-compliance-copilot',
-          icon: Shield,'
+          icon: Shield,
           description: 'Security solutions'},
         {
-'
-          name: 'Digital Twin','
+
+          name: 'Digital Twin',
           href: '/services/digital-twin',
-          icon: Rocket,'
+          icon: Rocket,
           description: 'Digital simulation'},
         {
-'
-          name: 'IoT Edge Computing','
+
+          name: 'IoT Edge Computing',
           href: '/services/iot-edge',
-          icon: Cpu,'
+          icon: Cpu,
           description: 'Internet of Things'},
         {
-'
-          name: 'Data Analytics','
+
+          name: 'Data Analytics',
           href: '/services/data-analytics',
-          icon: Database,'
+          icon: Database,
           description: 'Data processing'},
         {
-'
-          name: 'IT Infrastructure','
+
+          name: 'IT Infrastructure',
           href: '/services/it-infrastructure',
-          icon: Settings,'
+          icon: Settings,
           description: 'Infrastructure management'},
         {
-'
-          name: 'Zero Trust Security','
+
+          name: 'Zero Trust Security',
           href: '/services/zero-trust-network-architecture',
-          icon: Lock,'
+          icon: Lock,
           description: 'Network security'},
       ]},
     {
-'
-      id: 'specialized-services','
+
+      id: 'specialized-services',
       title: 'Specialized Services',
       icon: Star,
       links: [
         {
-'
-          name: 'Healthcare Tech','
+
+          name: 'Healthcare Tech',
           href: '/services/healthcare-tech',
-          icon: Heart,'
+          icon: Heart,
           description: 'Medical technology'},
         {
-'
-          name: 'Blockchain Solutions','
+
+          name: 'Blockchain Solutions',
           href: '/services/blockchain-enterprise-solutions',
-          icon: Lock,'
+          icon: Lock,
           description: 'Blockchain technology'},
         {
-'
-          name: 'Quantum Computing','
+
+          name: 'Quantum Computing',
           href: '/services/quantum-computing',
-          icon: Zap,'
+          icon: Zap,
           description: 'Quantum solutions'},
         {
-'
-          name: 'Space Technology','
+
+          name: 'Space Technology',
           href: '/services/space-tech',
-          icon: Rocket,'
+          icon: Rocket,
           description: 'Aerospace solutions'},
         {
-'
-          name: 'Sustainability Tech','
+
+          name: 'Sustainability Tech',
           href: '/services/sustainability',
-          icon: Globe,'
+          icon: Globe,
           description: 'Green technology'},
         {
-'
-          name: 'Digital Transformation','
+
+          name: 'Digital Transformation',
           href: '/services/digital-transformation',
-          icon: TrendingUp,'
+          icon: TrendingUp,
           description: 'Business modernization'},
       ]},
     {
-'
-      id: 'micro-saas-products','
+
+      id: 'micro-saas-products',
       title: 'Micro SaaS Products',
       icon: ShoppingCart,
       links: [
         {
-'
-          name: 'Micro SaaS Solutions','
+
+          name: 'Micro SaaS Solutions',
           href: '/services/micro-saas-solutions',
-          icon: ShoppingCart,'
+          icon: ShoppingCart,
           description: 'All SaaS products'},
         {
-'
-          name: 'AI Lead Scoring','
+
+          name: 'AI Lead Scoring',
           href: '/services/ai-lead-scoring',
-          icon: Target,'
+          icon: Target,
           description: 'Lead qualification'},
         {
-'
-          name: 'Website AI Chatbot','
+
+          name: 'Website AI Chatbot',
           href: '/services/website-ai-chatbot',
-          icon: MessageCircle,'
+          icon: MessageCircle,
           description: 'Customer support'},
         {
-'
-          name: 'AI SEO Optimizer','
+
+          name: 'AI SEO Optimizer',
           href: '/services/ai-seo-optimizer',
-          icon: Search,'
+          icon: Search,
           description: 'SEO automation'},
         {
-'
-          name: 'SaaS Churn Predictor','
+
+          name: 'SaaS Churn Predictor',
           href: '/services/saas-churn-predictor',
-          icon: TrendingUp,'
+          icon: TrendingUp,
           description: 'Customer retention'},
         {
-'
-          name: 'API Monitoring','
+
+          name: 'API Monitoring',
           href: '/services/api-monitoring',
-          icon: Smartphone,'
+          icon: Smartphone,
           description: 'API health tracking'},
         {
-'
-          name: 'Returns Management','
+
+          name: 'Returns Management',
           href: '/services/returns-management',
-          icon: Package,'
+          icon: Package,
           description: 'E-commerce returns'},
       ]},
     {
-'
-      id: 'innovative-showcase','
+
+      id: 'innovative-showcase',
       title: 'Innovation Hub',
       icon: Star,
       links: [
         {
-'
-          name: 'Innovative Services 2025','
+
+          name: 'Innovative Services 2025',
           href: '/innovative-services-showcase-2025',
-          icon: Star,'
+          icon: Star,
           description: 'Latest innovations'},
         {
-'
-          name: 'Revolutionary Services 2030','
+
+          name: 'Revolutionary Services 2030',
           href: '/revolutionary-services-2030',
-          icon: Rocket,'
+          icon: Rocket,
           description: 'Future technologies'},
         {
-'
-          name: 'Comprehensive Services 2028','
+
+          name: 'Comprehensive Services 2028',
           href: '/comprehensive-services-landing-2028',
-          icon: BarChart3,'
+          icon: BarChart3,
           description: 'Complete portfolio'},
         {
-'
-          name: 'Emerging Tech 2030','
+
+          name: 'Emerging Tech 2030',
           href: '/emerging-tech-2030',
-          icon: Zap,'
+          icon: Zap,
           description: 'Emerging technologies'},
       ]},
     {
-'
-      id: 'pricing','
+
+      id: 'pricing',
       title: 'Pricing & Plans',
       icon: DollarSign,
       links: [
         {
-'
-          name: 'Pricing Overview','
+
+          name: 'Pricing Overview',
           href: '/pricing',
-          icon: DollarSign,'
+          icon: DollarSign,
           description: 'Service pricing'},
         {
-'
-          name: 'Pricing Guide','
+
+          name: 'Pricing Guide',
           href: '/pricing-guide',
-          icon: FileText,'
+          icon: FileText,
           description: 'Detailed pricing info'},
         {
-'
-          name: 'Comprehensive Pricing 2026','
+
+          name: 'Comprehensive Pricing 2026',
           href: '/comprehensive-pricing-guide-2026',
-          icon: BarChart3,'
+          icon: BarChart3,
           description: 'Future pricing'},
         {
-'
-          name: 'Pricing Guide 2025','
+
+          name: 'Pricing Guide 2025',
           href: '/pricing-guide-2025',
-          icon: TrendingUp,'
+          icon: TrendingUp,
           description: 'Current pricing'},
       ]},
     {
-'
-      id: 'resources','
+
+      id: 'resources',
       title: 'Resources & Learning',
       icon: BookOpen,
       links: [
         {
-'
-          name: 'Help Center','
+
+          name: 'Help Center',
           href: '/help',
-          icon: HelpCircle,'
+          icon: HelpCircle,
           description: 'Get support'},
         {
-'
-          name: 'Documentation','
+
+          name: 'Documentation',
           href: '/documentation',
-          icon: FileText,'
+          icon: FileText,
           description: 'Technical docs'},
         {
-'
-          name: 'Training','
+
+          name: 'Training',
           href: '/training',
-          icon: GraduationCap,'
+          icon: GraduationCap,
           description: 'Learning resources'},
         {
-'
-          name: 'Blog','
+
+          name: 'Blog',
           href: '/blog',
-          icon: BookOpen,'
+          icon: BookOpen,
           description: 'Latest insights'},
         {
-'
-          name: 'Webinars','
+
+          name: 'Webinars',
           href: '/webinars',
-          icon: Calendar,'
+          icon: Calendar,
           description: 'Educational events'},
         {
-'
-          name: 'Case Studies','
+
+          name: 'Case Studies',
           href: '/case-studies',
-          icon: Award,'
+          icon: Award,
           description: 'Success stories'},
         {
-'
-          name: 'White Papers','
+
+          name: 'White Papers',
           href: '/white-papers',
-          icon: FileText,'
+          icon: FileText,
           description: 'Research papers'},
         {
-'
-          name: 'FAQ','
+
+          name: 'FAQ',
           href: '/faq',
-          icon: HelpCircle,'
+          icon: HelpCircle,
           description: 'Common questions'},
       ]},
     {
-'
-      id: 'company','
+
+      id: 'company',
       title: 'Company',
       icon: Building,
       links: [
         {
-'
-          name: 'Our Team','
+
+          name: 'Our Team',
           href: '/team',
-          icon: Users,'
+          icon: Users,
           description: 'Meet our experts'},
         {
-'
-          name: 'Careers','
+
+          name: 'Careers',
           href: '/careers',
-          icon: Briefcase,'
+          icon: Briefcase,
           description: 'Join our team'},
         {
-'
-          name: 'Partners','
+
+          name: 'Partners',
           href: '/partners',
-          icon: Building,'
+          icon: Building,
           description: 'Strategic partnerships'},
         {
-'
-          name: 'News & Press','
+
+          name: 'News & Press',
           href: '/news',
-          icon: FileText,'
+          icon: FileText,
           description: 'Latest news'},
         {
-'
-          name: 'Events','
+
+          name: 'Events',
           href: '/events',
-          icon: Calendar,'
+          icon: Calendar,
           description: 'Upcoming events'},
         {
-'
-          name: 'Blog','
+
+          name: 'Blog',
           href: '/blog',
-          icon: BookOpen,'
+          icon: BookOpen,
           description: 'Latest insights'},
         {
-'
-          name: 'Marketplace','
+
+          name: 'Marketplace',
           href: '/marketplace',
-          icon: ShoppingCart,'
+          icon: ShoppingCart,
           description: 'Service marketplace'},
       ]},
     {
-'
-      id: 'platform','
+
+      id: 'platform',
       title: 'Platform',
       icon: Settings,
       links: [
         {
-'
-          name: 'Dashboard','
+
+          name: 'Dashboard',
           href: '/dashboard',
-          icon: BarChart3,'
+          icon: BarChart3,
           description: 'User dashboard'},
         {
-'
-          name: 'Support Center','
+
+          name: 'Support Center',
           href: '/support',
-          icon: HelpCircle,'
+          icon: HelpCircle,
           description: 'Technical support'},
         {
-'
-          name: 'Community','
+
+          name: 'Community',
           href: '/community',
-          icon: Users,'
-          description: 'User community'},'
+          icon: Users,
+          description: 'User community'},
         { name: 'Login', href: '/login', icon: User, description: 'Sign in' },
         {
-'
-          name: 'Sign Up','
+
+          name: 'Sign Up',
           href: '/signup',
-          icon: Plus,'
+          icon: Plus,
           description: 'Create account'},
       ]},
     {
-'
-      id: 'legal','
+
+      id: 'legal',
       title: 'Legal & Policies',
       icon: FileText,
       links: [
         {
-'
-          name: 'Privacy Policy','
+
+          name: 'Privacy Policy',
           href: '/privacy',
-          icon: Lock,'
+          icon: Lock,
           description: 'Privacy information'},
         {
-'
-          name: 'Terms of Service','
+
+          name: 'Terms of Service',
           href: '/terms',
-          icon: FileText,'
+          icon: FileText,
           description: 'Terms and conditions'},
         {
-'
-          name: 'Cookie Policy','
+
+          name: 'Cookie Policy',
           href: '/cookies',
-          icon: Shield,'
+          icon: Shield,
           description: 'Cookie usage'},
         {
-'
-          name: 'Security','
+
+          name: 'Security',
           href: '/security',
-          icon: Shield,'
+          icon: Shield,
           description: 'Security measures'},
         {
-'
-          name: 'Compliance','
+
+          name: 'Compliance',
           href: '/compliance',
-          icon: Award,'
+          icon: Award,
           description: 'Regulatory compliance'},
         {
-'
-          name: 'Accessibility','
+
+          name: 'Accessibility',
           href: '/accessibility',
-          icon: Heart,'
+          icon: Heart,
           description: 'Accessibility features'},
       ]},
-  ];
-
-  const isActive = (href: string) => {
-'
-    if (href === '/') {
-'
-      return location.pathname === '/';
-    }
-    return location.pathname.startsWith (href) ;
-  };
-
+  ]}
+    return location.pathname.startsWith (href) };
   if (!isOpen) {
 
     return()
@@ -587,22 +639,16 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
         <div className="flex flex-col items-center py-4 space-y-4">
           {navigationSections.slice(0, 6).map(section => {
 
-            const Icon = section.icon;
-            return()
-              <button
+            return()              <button
                 key={section.id}
                 onClick={onToggle}"
                 className="p-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
                 title={section.title}
               >"
-                <Icon className="w-5 h-5" />
-              </button>
-            );
-          })}
+                <Icon className="w-5 h-5"  />              </button>
+            )})}
         </div>
-      </div>) ;
-  }
-
+      </div>) }
   return ("
     <div className="fixed left-0 top-16 z-40 w-80 h-full bg-slate-900/95 backdrop-blur-md border-r border-slate-700/50 overflow-y-auto">"
       <div className="p-4">"
@@ -612,40 +658,30 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
             onClick={onToggle}"
             className="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
           >"
-            <X className="w-5 h-5" />
-          </button>
+            <X className="w-5 h-5"  />          </button>
         </div>
 "
         <div className="space-y-2">
           {navigationSections.map(section => {
 
-            const Icon = section.icon;
-            const isExpanded = expandedSections.includes (section.id) ;
-
-            return ("
-              <div key={section.id} className="space-y-1">
+            return ("              <div key={section.id} className="space-y-1">
                 <button
                   onClick={() => toggleSection(section.id)}"
                   className="w-full flex items-center justify-between p-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
                 >"
                   <div className="flex items-center space-x-3">"
-                    <Icon className="w-5 h-5" />"
+                    <Icon className="w-5 h-5"  />"
                     <span className="font-medium">{section.title}</span>
                   </div>
                   <ChevronDown'
                     className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
-                  />
-                </button>
+                  />                </button>
 
                 {isExpanded && ("
                   <div className="ml-4 space-y-1">
                     {section.links.map(link => {
 
-                      const LinkIcon = link.icon;
-                      const active = isActive (link.href) ;
-
-                      return()
-                        <Link
+                      return()                        <Link
                           key={link.href}
                           to={link.href}`
                           className={`block p-3 rounded-lg transition-colors group ${
@@ -656,9 +692,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
                           }`}
                         >"
                           <div className="flex items-center space-x-3">"
-                            <LinkIcon className="w-4 h-4" />"
-                            <div className="flex-1 min-w-0">"
-                              <div className="font-medium">{link.name}</div>
+                            <LinkIcon className="w-4 h-4"  />"
+                            <div className="flex-1 min-w-0">"                              <div className="font-medium">{link.name}</div>
                               {link.description && (
                                 <div'`
                                   className={`text-xs ${active ? 'text-cyan-100' : 'text-slate-400'}`}
@@ -667,14 +702,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
                                 </div>
                               )}
                             </div>"
-                            {active && <ChevronRight className="w-4 h-4" />}
+                            {active && <ChevronRight className="w-4 h-4"  />}
                           </div>
-                        </Link>) ;
-                    }) }
+                        </Link>) }) }
                   </div>) }
-              </div>) ;
-          }) }
-        </div>
+              </div>) }) }        </div>
 
         {/* Quick Actions */}"
         <div className="mt-8 pt-6 border-t border-slate-700">"
@@ -683,24 +715,22 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
           </div>"
           <div className="space-y-2">
             <Link"
-              to="/request-quote""
+              to="/request-quote"
               className="block p-3 rounded-lg bg-gradient-to-r from-cyan-600 to-blue-600 text-white hover:from-cyan-700 hover:to-blue-700 transition-colors"
             >"
               <div className="flex items-center space-x-3">"
-                <DollarSign className="w-4 h-4" />"
+                <DollarSign className="w-4 h-4"  />"
                 <span className="font-medium">Get Quote</span>"
-                <ExternalLink className="w-4 h-4 ml-auto" />
-              </div>
+                <ExternalLink className="w-4 h-4 ml-auto"  />              </div>
             </Link>
             <Link"
-              to="/schedule-demo""
+              to="/schedule-demo"
               className="block p-3 rounded-lg border border-slate-600 text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
             >"
               <div className="flex items-center space-x-3">"
-                <Calendar className="w-4 h-4" />"
+                <Calendar className="w-4 h-4"  />"
                 <span className="font-medium">Schedule Demo</span>"
-                <ExternalLink className="w-4 h-4 ml-auto" />
-              </div>
+                <ExternalLink className="w-4 h-4 ml-auto"  />              </div>
             </Link>
           </div>
         </div>
@@ -712,16 +742,14 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
           </div>"
           <div className="space-y-2 text-xs text-slate-400">"
             <div className="flex items-center space-x-2">"
-              <Mail className="w-3 h-3" />
+              <Mail className="w-3 h-3"  />
               <span>contact@ziontechgroup.com</span>
             </div>"
             <div className="flex items-center space-x-2">"
-              <PhoneCall className="w-3 h-3" />
-              <span>+1 (555) 123-4567</span>
+              <PhoneCall className="w-3 h-3"  />              <span>+1 (555) 123-4567</span>
             </div>
           </div>
         </div>
       </div>
-    </div>) ;
-};
+    </div>) };
 '"`

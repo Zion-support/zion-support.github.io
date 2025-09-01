@@ -1,13 +1,19 @@
-import React, { useEffect, useMemo, useCallback } from 'react';'
+import React, { useEffect, useMemo, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 
 export const PerformanceOptimizer = ({ children }) => {
 
+<<<<<<< HEAD
+  const location = useLocation () ;
+=======
   const location = useLocation();
+>>>>>>> main
 
   // Preload critical resources
   useEffect(() => {
+
     const preloadCriticalResources = () => {
+
       // Note: CSS is already handled by Vite build process
       // Fonts are loaded via Google Fonts CDN in index.html
     };
@@ -16,21 +22,22 @@ export const PerformanceOptimizer = ({ children }) => {
 
   // Optimize images on route change
   useEffect(() => {
+
     const optimizeImages = () => {
-'
+
       const images = document.querySelectorAll('img');
       images.forEach(img => {
 
         // Add loading="lazy" to images below the fold
         if (img.getBoundingClientRect().top > window.innerHeight) {
-'
+
           img.loading = 'lazy';
         }"
         // Add decoding="async" for better performance'
         img.decoding = 'async';
         // Add error handling
         img.onerror = () => {
-'
+
           img.style.display = 'none';
         };
       });
@@ -51,10 +58,12 @@ export const PerformanceOptimizer = ({ children }) => {
 
   // Optimize scroll performance
   const handleScroll = useCallback(() => {
+
     // Throttle scroll events for better performance
     if (!window.scrollTimeout) {
 
       window.scrollTimeout = setTimeout(() => {
+
         // Handle scroll-based optimizations here
         window.scrollTimeout = null;
       }, 16); // ~60fps
@@ -62,50 +71,52 @@ export const PerformanceOptimizer = ({ children }) => {
   }, []);
 
   useEffect(() => {
-'
-    window.addEventListener('scroll', handleScroll, { passive: true });'
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
   // Service Worker registration for caching
   useEffect(() => {
-'
+
     if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
 
       navigator.serviceWorker'
         .register('/sw.js')
         .then(registration => {
-'
-          // // console.log('SW registered: ', registration);
+
+          // // // // console.log('SW registered: ', registration);
 
           // Check for updates'
           registration.addEventListener('updatefound', () => {
+
             const newWorker = registration.installing;
             if (newWorker) {
-'
+
               newWorker.addEventListener('statechange', () => {
+
                 if ('
                   newWorker.state === 'installed' &&
                   navigator.serviceWorker.controller
                 ) {
 
                   // New service worker available'
-                  // // console.log('New service worker available');
+                  // // // // console.log('New service worker available');
                 }
               });
             }
           });
         })
         .catch(registrationError => {
-'
-          // // console.warn('SW registration failed: ', registrationError);
+
+          // // // // console.warn('SW registration failed: ', registrationError);
         });
     }
   }, []);
 
   // Intersection Observer for lazy loading
   useEffect(() => {
-'
+
     if ('IntersectionObserver' in window) {
 
       const observer = new IntersectionObserver()
@@ -118,7 +129,7 @@ export const PerformanceOptimizer = ({ children }) => {
               const target = entry.target;
               if (target.dataset.src) {
 
-                target.src = target.dataset.src;'
+                target.src = target.dataset.src;
                 target.removeAttribute('data-src');
                 observer.unobserve(target);
               }
@@ -126,7 +137,7 @@ export const PerformanceOptimizer = ({ children }) => {
           });
         },
         {
-'
+
           rootMargin: '50px',
           threshold: 0.1}
       );
@@ -150,8 +161,9 @@ if (typeof window !== 'undefined') {
 
     window.scheduler.postTask()
       () => {
+
         // Run non-critical tasks during idle time
-      },'
+      },
       { priority: 'background' }
     );
   }

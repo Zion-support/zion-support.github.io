@@ -17,7 +17,7 @@ export default async function handler(...args: unknown[]): unknown {
 ) {
   if (req.method !== 'GET') {
     res.setHeader('Allow', ['GET']);
-    return res.status(405).end(`Method ${req.method} Not Allowed`);
+    return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
   }
 
   const { productId } = req.query;
@@ -49,7 +49,7 @@ export default async function handler(...args: unknown[]): unknown {
       }
     });
 
-    const averageRating = reviewStats._avg.rating;
+    const averageRating = reviewStats._avg.rating; // This can be null if no reviews
     const reviewCount = reviewStats._count.id;
 
     const productWithStats: ProductWithReviewStats = {

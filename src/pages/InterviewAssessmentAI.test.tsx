@@ -2,7 +2,6 @@ import { render, screen } from '@testing - library / react';
 import React from 'react';
 import InterviewAssessmentAI from './InterviewAssessmentAI';
 
-
 describe ('InterviewAssessmentAI', () => {
   it ('renders without crashing', () => {
     render (<InterviewAssessmentAI />) ;

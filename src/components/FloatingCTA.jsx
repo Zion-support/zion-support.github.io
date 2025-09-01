@@ -1,36 +1,42 @@
-import React, { useState, useEffect } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { MessageCircle, X, ArrowUp, Star, Zap, Users } from 'lucide-react';'
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { MessageCircle, X, ArrowUp, Star, Zap, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+<<<<<<< HEAD
+=======
 export function FloatingCTA({
-'
-  variant = 'default','
+
+>>>>>>> main
+  variant = 'default',
   position = 'bottom-right'}) {
 
   const [isExpanded, setIsExpanded] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
+
     const handleScroll = () => {
+
       setShowScrollTop(window.scrollY > 400);
-    };'
-    window.addEventListener('scroll', handleScroll);'
+    };
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToTop = () => {
-'
+
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const getPositionClasses = () => {
+
     switch (position) {
-'
+
       case 'bottom-left':'
-        return 'bottom-6 left-6';'
+        return 'bottom-6 left-6';
       case 'top-right':'
-        return 'top-6 right-6';'
+        return 'top-6 right-6';
       case 'top-left':'
         return 'top-6 left-6';
       default:'
@@ -39,19 +45,20 @@ export function FloatingCTA({
   };
 
   const getExpandedPositionClasses = () => {
+
     switch (position) {
-'
+
       case 'bottom-left':'
-        return 'bottom-6 left-6';'
+        return 'bottom-6 left-6';
       case 'top-right':'
-        return 'top-6 right-6';'
+        return 'top-6 right-6';
       case 'top-left':'
         return 'top-6 left-6';
       default:'
         return 'bottom-6 right-6';
     }
   };
-'
+
   if (variant === 'minimal') {
 
     return()
@@ -72,7 +79,7 @@ export function FloatingCTA({
       </AnimatePresence>
     );
   }
-'
+
   if (variant === 'featured') {
 
     return()`
@@ -120,7 +127,7 @@ export function FloatingCTA({
               </div>
 
               <Link"
-                to="/contact""
+                to="/contact"
                 className="block w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white text-center py-2 px-4 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300"
               >
                 Get Started
@@ -172,13 +179,13 @@ export function FloatingCTA({
 "
             <div className="space-y-3 mb-4">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="block w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white text-center py-2 px-4 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300"
               >
                 Contact Us
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="block w-full bg-gray-100 text-gray-700 text-center py-2 px-4 rounded-lg hover:bg-gray-200 transition-all duration-300"
               >
                 View Services

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ADVANCED_MICRO_SERVICES } from "../data/advancedMicroServices";
 const ServiceCard = ({ service, index, isVisible }) => {
@@ -45,6 +45,7 @@ const ServiceCard = ({ service, index, isVisible }) => {
                 duration: 3 + Math.random() * 2,
                 repeat: Infinity,"
                 ease: "easeInOut"}} style={{
+
 `
                 left: `${20 + Math.random() * 60}%`,`
                 top: `${20 + Math.random() * 60}%`}}/>))}
@@ -153,10 +154,10 @@ const ServiceCard = ({ service, index, isVisible }) => {
       </div>
     </motion.div>)};
 export const FuturisticServicesShowcase = () => {
-'
-    const [selectedCategory, setSelectedCategory] = useState('all');'
+
+    const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
-    const [visibleServices, setVisibleServices] = useState(new Set());'
+    const [visibleServices, setVisibleServices] = useState(new Set());
     const categories = ['all', ...new Set(ADVANCED_MICRO_SERVICES.map(s => s.category))];
     const filteredServices = ADVANCED_MICRO_SERVICES.filter(service => {
 
@@ -166,6 +167,7 @@ export const FuturisticServicesShowcase = () => {
         return matchesCategory && matchesSearch});
     // Set all services as visible initially for better UX
     useEffect(() => {
+
         const allIndices = new Set(filteredServices.map((_, index) => index));
         setVisibleServices(allIndices)}, [filteredServices]);"
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20">
@@ -173,6 +175,7 @@ export const FuturisticServicesShowcase = () => {
       <div className="absolute inset-0 overflow-hidden">"
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5"></div>"
         {[...Array(20)].map((_, i) => (<div key={i} className="absolute w-2 h-2 bg-cyan-400/20 rounded-full animate-float" style={{
+
 `
                 left: `${Math.random() * 100}%`,`
                 top: `${Math.random() * 100}%`,`
@@ -216,7 +219,7 @@ export const FuturisticServicesShowcase = () => {
             <div className="flex flex-wrap justify-center gap-2">`
               {categories.map((category) => (<button key={category} onClick={() => setSelectedCategory(category)} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 ${selectedCategory === category'
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/30''`
-                : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20'}`}>'
+                : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20'}`}>
                   {category === 'all' ? 'All Services' : category}
                 </button>) ) }
             </div>

@@ -1,6 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';'
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { EnhancedLoading } from "./EnhancedLoading";'
+import { EnhancedLoading } from "./EnhancedLoading";
+<<<<<<< HEAD
+import { motion, useInView } from 'framer - motion';
+
+=======
+>>>>>>> main
 const LazyWrapper = ({ children, threshold = 0.1, className = '', loadingVariant = 'default', loadingText = 'Loading...', loadingSize = 'md' }) => {
 
     const [isLoaded, setIsLoaded] = useState(false);
@@ -8,11 +13,83 @@ const LazyWrapper = ({ children, threshold = 0.1, className = '', loadingVariant
     const ref = useRef(null);
     const inView = useInView(ref, { amount: threshold });
     useEffect(() => {
+
+  // TODO: Add dependencies if needed
+
+  return () => {
+
+    // Cleanup function
+  
+  return () => {
+
+    // Cleanup function
+  
+  return () => {
+
+    // Cleanup function
+  
+  return () => {
+
+    // Cleanup function
+  };
+
+
+
+}, []);, []);
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  return () => {
+
+    // Cleanup function
+  
+  return () => {
+
+    // Cleanup function
+  
+  return () => {
+
+    // Cleanup function
+  };
+
+
+}, []);, []);
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  return () => {
+
+    // Cleanup function
+  
+  return () => {
+
+    // Cleanup function
+  };
+
+}, []);, []);
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  return () => {
+
+    // Cleanup function
+  };
+}, []);, []);
         if (inView && !isInView) {
 
             setIsInView(true);
             // Simulate loading delay for better UX
             const timer = setTimeout ( () => {
+
                 setIsLoaded (true) }, 300) ;
             return () => clearTimeout (timer) }
     }, [inView, isInView]) ;
@@ -22,6 +99,7 @@ const LazyWrapper = ({ children, threshold = 0.1, className = '', loadingVariant
         <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize}/>
       </div>) }
     if (!isLoaded) {
+
 `
         return (<div className={`min-h-[200px] ${className}`}>
         <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize}/>
@@ -30,12 +108,12 @@ const LazyWrapper = ({ children, threshold = 0.1, className = '', loadingVariant
     return (<motion.div initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} transition={{ duration: 0.6 }} className={className}>
       {children}

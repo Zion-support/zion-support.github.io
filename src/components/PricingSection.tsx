@@ -1,15 +1,17 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';
 import { Check, Star, Zap, Shield, Brain, Cloud export const PricingSection: React.FC = () => {
-'
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { Link  } from 'react-router-dom.ts';'
-import { Check, Star, Zap, Shield, Brain, Cloud  } from 'lucide-react';
+
+<<<<<<< HEAD
+ * PricingSection function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function PricingSection () {
 
       icon: Shield;
     };
+=======
+      icon: Shield};
+>>>>>>> main
   ];
 const pricingTiers = [
   {
@@ -29,6 +31,7 @@ const pricingTiers = [
     color: "from-blue-500 to-cyan-500"
   },
   {
+
 "
     name: "Professional","
     price: "$299","
@@ -47,6 +50,7 @@ const pricingTiers = [
     color: "from-purple-500 to-pink-500"
   },
   {
+
 "
     name: "Enterprise","
     price: "$999","
@@ -63,26 +67,32 @@ const pricingTiers = [
       "SLA Guarantee";
     ],;
     popular: false,;"
-    color: "from-green-500 to-emerald-500";
-  };
-];
+    color: "from-green-500 to-emerald-500"};];
 
+<<<<<<< HEAD
+  return (<section className = "py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
+      <div className="max - w-7xl mx - auto px - 6">
+        <motion.div
+          className="text - center mb - 16"
+=======
 export function PricingSection() {
+
   return ("
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
+>>>>>>> main
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
@@ -100,25 +110,25 @@ export function PricingSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {pricingTiers.map((tier, index) => (
             <motion.div
-              key={tier.name}'
+              key={tier.name}
               className={`relative ${tier.popular ? 'scale-105' : ''}`}
               initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }}
               whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
               viewport={{ once: true }}
               transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
             >
@@ -132,8 +142,7 @@ export function PricingSection() {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <Check className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />"
-                      <span className="text-gray-700">{feature}</span>
+                      <Check className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"  />"                      <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -152,25 +161,30 @@ export function PricingSection() {
               </motion.div>;) }) }
         </div>
 
+<<<<<<< HEAD
+        <motion.div
+          className="mt - 16 text - center"
+=======
         <motion.div "
           className="mt-16 text-center"
+>>>>>>> main
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           viewport={{ once: true }}
           transition = {
 
   { duration: 0.6,
-  delay: 0.4 
+  delay: 0.4
 
 }}
         >"
@@ -178,7 +192,7 @@ export function PricingSection() {
             Need a custom solution? Contact us for a personalized quote.
           </p>
           <Link"
-            to="/contact""
+            to="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-200"
           >
             Contact Sales Team"
@@ -186,9 +200,7 @@ export function PricingSection() {
           </Link>;
         </motion.div>;
       </div>;
-    </section>;) ;
-}
-
+    </section>;) }
 export default PricingSection;
 export default PricingSection;
 '"`

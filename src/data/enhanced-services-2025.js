@@ -15,6 +15,7 @@ export const enhancedServices2025 = [
       "AI Strategy Consulting"
     ],
     pricing: {
+
 "
       starter: "$5,000","
       professional: "$15,000","
@@ -38,6 +39,7 @@ export const enhancedServices2025 = [
       "Quantum Strategy Planning"
     ],
     pricing: {
+
 "
       starter: "$10,000","
       professional: "$25,000","
@@ -61,6 +63,7 @@ export const enhancedServices2025 = [
       "Cryptocurrency Solutions"
     ],
     pricing: {
+
 "
       starter: "$8,000","
       professional: "$20,000","
@@ -84,6 +87,7 @@ export const enhancedServices2025 = [
       "Cloud Integration"
     ],
     pricing: {
+
 "
       starter: "$6,000","
       professional: "$18,000","
@@ -107,6 +111,7 @@ export const enhancedServices2025 = [
       "Compliance Management"
     ],
     pricing: {
+
 "
       starter: "$7,000","
       professional: "$22,000","
@@ -130,6 +135,7 @@ export const enhancedServices2025 = [
       "Cloud Migration"
     ],
     pricing: {
+
 "
       starter: "$4,000","
       professional: "$12,000","
@@ -153,6 +159,7 @@ export const enhancedServices2025 = [
       "Immersive Training"
     ],
     pricing: {
+
 "
       starter: "$9,000","
       professional: "$28,000","
@@ -176,6 +183,7 @@ export const enhancedServices2025 = [
       "Environmental Monitoring"
     ],
     pricing: {
+
 "
       starter: "$6,500","
       professional: "$19,000","

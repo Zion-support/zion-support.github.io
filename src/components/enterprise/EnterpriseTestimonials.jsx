@@ -2,6 +2,7 @@ import React from "react";"
 import { Quote import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
 const testimonials = [
     {
+
 "
         quote: "Implementing Zion's Enterprise solution has reduced our time-to-hire by 40% and significantly improved the quality of candidates we're seeing.","
         author: "Sarah Johnson","
@@ -9,6 +10,7 @@ const testimonials = [
         comp: "TechGlobal Inc.","
         image: "/placeholder.svg"},
     {
+
 "
         quote: "The admin tools give us incredible visibility into our hiring process across multiple departments. Our team loves the custom branding options.","
         author: "Michael Chen","
@@ -16,6 +18,7 @@ const testimonials = [
         comp: "InnovateCorp","
         image: "/placeholder.svg"},
     {
+
 "
         quote: "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.","
         author: "Elena Rodriguez","
@@ -24,6 +27,7 @@ const testimonials = [
         image: "/placeholder.svg"},
 ];
 export function EnterpriseTestimonials() {
+
 "
     return (<section id="testimonials" className="py-20 px-4 md:px-6">"
       <div className="container mx-auto max-w-6xl">"

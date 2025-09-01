@@ -1,6 +1,10 @@
-import React, { useState, useEffect, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import {
+
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer - motion';
+=======
+>>>>>>> main
 
   Loader2,
   CheckCircle,
@@ -15,35 +19,31 @@ import {
  } from 'lucide-react';
 
 interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
-'
+
   size?: 'sm' | 'md' | 'lg';
   text?: string;
   fullScreen?: boolean}
 
 export function LoadingSpinner({
-'
-  size = 'md','
-  text = 'Loading...',
-  fullScreen = false;
-}: LoadingSpinnerProps) {
 
-  const sizeClasses = {
-'
-  sm: 'w-8 h-8','
-    md: 'w-16 h-16',;
+  size = 'md',
+  text = 'Loading...',
+  fullScreen = false}: LoadingSpinnerProps) {
+
+  ;
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
-  ;'
   lg: 'w-32 h-32';
   ;
 
-  const containerClasses = fullScreen;'
+  
     ? 'fixed inset-0 flex items-center justify-center bg-zion-slate-dark/95 backdrop-blur-sm z-50''
     : 'flex items-center justify-center p-8';
 
-  return()
-    <div className = {containerClasses}>
+  return()    <div className = {containerClasses}>
       <div className="text-center">
         {/* Animated Logo */}
         <motion.div"
@@ -54,6 +54,7 @@ export function LoadingSpinner({
             scale: [1, 1.1, 1]
           }}
           transition={{
+
 "
             rotate: { duration: 2, repeat: Infinity, ease: "linear" },"
             scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
@@ -67,17 +68,15 @@ export function LoadingSpinner({
   {
 
                 background: ['
-                  'linear-gradient(45deg, #0ea5e9, #8b5cf6, #0ea5e9)','
-                  'linear-gradient(45deg, #8b5cf6, #0ea5e9, #8b5cf6)','
-                  'linear-gradient(45deg, #0ea5e9, #8b5cf6,'
-  #0ea5e9)';
+                  'linear-gradient(45deg, #0ea5e9, #8b5cf6, #0ea5e9),linear-gradient(45deg, #8b5cf6, #0ea5e9, #8b5cf6),linear-gradient(45deg, #0ea5e9, #8b5cf6,
+  #0ea5e9);
                 ]
 
 }}
               transition = {
 
   { duration: 3,
-  repeat: Infinity 
+  repeat: Infinity
 
 }}
             />"
@@ -90,13 +89,13 @@ export function LoadingSpinner({
             animate = {
 
   { opacity: [0.3, 0.6,
-  0.3] 
+  0.3]
 
 }}
             transition = {
 
   { duration: 2,
-  repeat: Infinity 
+  repeat: Infinity
 
 }}
           />
@@ -108,13 +107,13 @@ export function LoadingSpinner({
           animate = {
 
   { opacity: [0.5, 1,
-  0.5] 
+  0.5]
 
 }}
           transition = {
 
   { duration: 1.5,
-  repeat: Infinity 
+  repeat: Infinity
 
 }}
         >
@@ -144,14 +143,11 @@ export function LoadingSpinner({
                 repeat: Infinity,
   delay: index * 0.2
 
-;
 }};
             />;) ) };
         </div>;
       </div>;
-    </div>;) ;
-}
-
+    </div>;) }
 interface PageLoaderProps extends React.PropsWithChildren<{}> {
 
   pageName?: string}
@@ -177,7 +173,7 @@ export function PageLoader(...args[]):  {
             transition = {
 
   { duration: 4,
-  repeat: Infinity 
+  repeat: Infinity
 
 }}
           />
@@ -195,7 +191,7 @@ export function PageLoader(...args[]):  {
             transition = {
 
   { duration: 4, repeat: Infinity,
-  delay: 1 
+  delay: 1
 
 }}
           />
@@ -206,13 +202,13 @@ export function PageLoader(...args[]):  {
           initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
           transition={{ duration: 0.5 }}"
@@ -225,8 +221,14 @@ export function PageLoader(...args[]):  {
               animate={{ rotate: 360 }}
               transition = {
 
+<<<<<<< HEAD
+  { duration: 1, repeat: Infinity,
+  ease: "linear"
+=======
+
   { duration: 1, repeat: Infinity,"
   ease: "linear" 
+>>>>>>> main
 
 }}
             />"
@@ -240,13 +242,13 @@ export function PageLoader(...args[]):  {
             animate = {
 
   { opacity: [0.7, 1,
-  0.7] 
+  0.7]
 
 }}
             transition = {
 
   { duration: 2,
-  repeat: Infinity 
+  repeat: Infinity
 
 }}
           >
@@ -258,13 +260,13 @@ export function PageLoader(...args[]):  {
             animate = {
 
   { opacity: [0.5, 1,
-  0.5] 
+  0.5]
 
 }}
             transition = {
 
   { duration: 2, repeat: Infinity,
-  delay: 0.5 
+  delay: 0.5
 
 }}
           >
@@ -280,8 +282,14 @@ export function PageLoader(...args[]):  {
                 animate={{ width: "100%" }}
                 transition = {
 
+<<<<<<< HEAD
+  { duration: 3,
+  ease: "easeInOut"
+=======
+
   { duration: 3,"
   ease: "easeInOut" 
+>>>>>>> main
 
 }}
               />
@@ -289,9 +297,7 @@ export function PageLoader(...args[]):  {
           </div>;
         </motion.div>;
       </div>;
-    </div>;) ;
-}
-
+    </div>;) }
   lines?: number;
   className?: string}
 
@@ -307,9 +313,8 @@ export function SkeletonLoader(...args[]):  {
 
   {
 
-            opacity: [0.5, 1, 0.5],'
-            backgroundPosition: ['200% 0','
-  '-200% 0']
+            opacity: [0.5, 1, 0.5],
+            backgroundPosition: ['200% 0',-200% 0']
 
 }}
           transition = {
@@ -324,6 +329,5 @@ export function SkeletonLoader(...args[]):  {
           style = {
 
   {
-'
-            background: 'linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1), transparent)',
-'"`
+
+            background: 'linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1), transparent),"`

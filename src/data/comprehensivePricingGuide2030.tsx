@@ -2,15 +2,16 @@
 // Complete pricing information for all innovative services
 
 export interface PricingTier {
+
   name: string;
   price: number;
   billing: string;
   features: string[];
   recommended: boolean;
-  popular?: boolean;
-}
+  popular?: boolean}
 ;
 export interface ServicePricing {
+
   serviceId: string;
   serviceName: string;
   category: string;
@@ -20,24 +21,18 @@ export interface ServicePricing {
   roi: string;
   setupTime: string;
   contactInfo: {
+
     phone: string;
     email: string;
     website: string;
-    address: string;
-  };
-}
+    address: string}}
 
 // Zion Tech Group Contact Information
-const zionContact = {
-  phone: "+1 302 464 0950",
-  email: "kleber@ziontechgroup.com",
-  website: "https://ziontechgroup.com",
-  address: "364 E Main St STE 1008 Middletown DE 19709"
-};
 
 export const comprehensivePricingGuide2030: ServicePricing[] = [
   // Micro SaaS Services
   {
+
 "
     serviceId: "ai-autonomous-research-assistant","
     serviceName: "AI Autonomous Research Assistant","
@@ -45,6 +40,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
     basePrice: 8999,
     pricingTiers[;
       {
+
 "
         name: "Starter",
         price: 8999,
@@ -60,6 +56,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
         support: "Email support"
       },
       {
+
 "
         name: "Professional",
         price: 15999,
@@ -76,6 +73,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
         support: "Priority support + phone"
       },
       {
+
 "
         name: "Enterprise",
         price: 29999,
@@ -98,11 +96,11 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
     setupTime: "6-8 weeks","
     paymentOptions["One-time payment", "Annual subscription", "Monthly payment"],;"
     volumeDiscounts["10% off for 3+ licenses", "20% off for 10+ licenses", "Custom pricing for enterprise"],;"
-    enterpriseFeatures["Custom AI models", "On-premise deployment", "Dedicated support", "White-label solutions"];
-  },;
+    enterpriseFeatures["Custom AI models", "On-premise deployment", "Dedicated support", "White-label solutions"]},;
 
   // AI-Powered Metaverse Development Platform
   {
+
 "
     serviceId: "ai-metaverse-development-platform","
     serviceName: "AI Metaverse Development Platform","
@@ -110,6 +108,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
     basePrice: 12999,
     pricingTiers[;
       {
+
 "
         name: "Creator",
         price: 12999,
@@ -125,6 +124,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
         support: "Community support"
       },
       {
+
 "
         name: "Studio",
         price: 24999,
@@ -140,6 +140,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
         support: "Priority support"
       },
       {
+
 "
         name: "Enterprise",
         price: 49999,
@@ -161,11 +162,11 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
     setupTime: "8-10 weeks","
     paymentOptions["One-time payment", "Annual subscription", "Revenue sharing"],;"
     volumeDiscounts["15% off for 5+ licenses", "25% off for 20+ licenses", "Custom enterprise pricing"],;"
-    enterpriseFeatures["Custom AI models", "White-label solutions", "Enterprise support", "Custom integrations"];
-  },;
+    enterpriseFeatures["Custom AI models", "White-label solutions", "Enterprise support", "Custom integrations"]},;
 
   // Zero-Trust Network Access Platform
   {
+
 "
     serviceId: "zero-trust-network-access-platform","
     serviceName: "Zero-Trust Network Access Platform","
@@ -173,6 +174,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
     basePrice: 12999,
     pricingTiers[;
       {
+
 "
         name: "Basic",
         price: 12999,
@@ -188,6 +190,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
         support: "Email support"
       },
       {
+
 "
         name: "Professional",
         price: 21999,
@@ -203,6 +206,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
         support: "Priority support"
       },
       {
+
 "
         name: "Enterprise",
         price: 39999,
@@ -224,11 +228,11 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
     setupTime: "6-8 weeks","
     paymentOptions["One-time payment", "Annual subscription", "Per-user pricing"],;"
     volumeDiscounts["20% off for 100+ users", "30% off for 500+ users", "Custom enterprise pricing"],;"
-    enterpriseFeatures["Custom integrations", "White-label solutions", "Enterprise support", "Custom compliance"];
-  },;
+    enterpriseFeatures["Custom integrations", "White-label solutions", "Enterprise support", "Custom compliance"]},;
 
   // AI-Powered Medical Imaging Analysis
   {
+
 "
     serviceId: "ai-medical-imaging-analysis","
     serviceName: "AI Medical Imaging Analysis Platform","
@@ -236,6 +240,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
     basePrice: 24999,
     pricingTiers[;
       {
+
 "
         name: "Clinic",
         price: 24999,
@@ -251,6 +256,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
         support: "Email support"
       },
       {
+
 "
         name: "Hospital",
         price: 44999,
@@ -267,6 +273,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
         support: "Priority support"
       },
       {
+
 "
         name: "Medical Center",
         price: 79999,
@@ -288,11 +295,11 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
     setupTime: "10-12 weeks","
     paymentOptions["One-time payment", "Annual subscription", "Per-image pricing"],;"
     volumeDiscounts["25% off for 5+ licenses", "40% off for 20+ licenses", "Custom enterprise pricing"],;"
-    enterpriseFeatures["Custom AI models", "White-label solutions", "Enterprise support", "Custom integrations"];
-  },;
+    enterpriseFeatures["Custom AI models", "White-label solutions", "Enterprise support", "Custom integrations"]},;
 
   // AI-Powered Risk Assessment Platform
   {
+
 "
     serviceId: "ai-risk-assessment-platform","
     serviceName: "AI Risk Assessment Platform","
@@ -300,6 +307,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
     basePrice: 18999,
     pricingTiers[;
       {
+
 "
         name: "Basic",
         price: 18999,
@@ -315,6 +323,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
         support: "Email support"
       },
       {
+
 "
         name: "Professional",
         price: 32999,
@@ -331,6 +340,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
         support: "Priority support"
       },
       {
+
 "
         name: "Enterprise",
         price: 59999,
@@ -352,15 +362,15 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [
     setupTime: "8-10 weeks","
     paymentOptions["One-time payment", "Annual subscription", "Per-portfolio pricing"],;"
     volumeDiscounts["20% off for 10+ licenses", "35% off for 50+ licenses", "Custom enterprise pricing"],;"
-    enterpriseFeatures["Custom risk models", "White-label solutions", "Enterprise support", "Custom integrations"];
-  }
+    enterpriseFeatures["Custom risk models", "White-label solutions", "Enterprise support", "Custom integrations"]}
 ];
 
-// Pricing Analysis and Insights;
+<<<<<<< HEAD
+// Pricing Analysis and Insights
 export const PRICING_ANALYSIS_2030 = {
 
-  averagePrice: Math.round()
-    COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service)  => sum + service.basePrice, 0) / 
+  averagePrice: Math.round(
+    COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service)  => sum + service.basePrice, 0) /
     COMPREHENSIVE_PRICING_GUIDE_2030.length
   ),
   priceRange: {
@@ -368,28 +378,27 @@ export const PRICING_ANALYSIS_2030 = {
     min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice)),
   max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
   ;
+=======
+// Pricing Analysis and Insights;
+export 
+>>>>>>> main
 ;
 ;
-;
-
 },;
   categoryPricing: COMPREHENSIVE_PRICING_GUIDE_2030.reduce(acc: unknown, service: unknown {;
     if (!acc[service.category]) {;
-      acc[service.category] = [];
-    }
+      acc[service.category] = []}
     acc[service.category].push(service.basePrice);
-    return acc;
-  }, {} as Record<string, number[]>),
+    return acc}, {} as Record<string, number[]>),
   roiAnalysis: COMPREHENSIVE_PRICING_GUIDE_2030.map(service = > ({;
     serviceName: service.serviceName,;
     roi: service.roi,;
     setupTime: service.setupTime,;
-    price: service.basePrice;
-  }));
-};
+    price: service.basePrice}))};
 
 // Payment and Discount Information;
 export const PAYMENT_OPTIONS_2030 = {
+
 "
   paymentMethods["Credit Card", "Bank Transfer", "Wire Transfer", "Cryptocurrency"],;"
   installmentPlans["3-month plan", "6-month plan", "12-month plan"],;
@@ -410,34 +419,24 @@ export const PAYMENT_OPTIONS_2030 = {
   ;"
   "SLA guarantees";
   ];
+<<<<<<< HEAD
 ;
 
-
-
-
-
-
+=======
+>>>>>>> main
 };
 
 // Contact Information for Pricing Inquiries;
-export const PRICING_CONTACT_2030 = {
-"
-  phone: "+1 302 464 0950","
-  email: "kleber@ziontechgroup.com","
-  website: "https://ziontechgroup.com","
-  address: "364 E Main St STE 1008 Middletown DE 19709","
-  businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",;
+export 
   ;
   ;
   ;
   ;"
   responseTime: "Within 24 hours for pricing inquiries";
+<<<<<<< HEAD
 ;
 
-
-
-
-
-
+=======
+>>>>>>> main
 };
 '"

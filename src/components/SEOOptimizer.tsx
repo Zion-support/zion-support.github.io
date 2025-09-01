@@ -1,6 +1,10 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import {
+
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer - motion';
+=======
+>>>>>>> main
 
   Search,
   TrendingUp,
@@ -22,6 +26,7 @@ import {
  } from 'lucide-react';
 
 interface SEOAnalysis {
+
   score: number;
   issues: SEOIssue[];
   suggestions: SEOSuggestion[];
@@ -30,24 +35,27 @@ interface SEOAnalysis {
 }
 
 interface SEOIssue {
-  id: string;'
+
+  id: string;
   type: 'error' | 'warning' | 'info';
   title: string;
-  description: string;'
+  description: string;
   impact: 'high' | 'medium' | 'low';
-  fixable: boolean;'
+  fixable: boolean;
   category: 'content' | 'technical' | 'performance' | 'accessibility'}
 
 interface SEOSuggestion {
+
   id: string;
   title: string;
-  description: string;'
-  priority: 'high' | 'medium' | 'low';'
+  description: string;
+  priority: 'high' | 'medium' | 'low';
   effort: 'low' | 'medium' | 'high';
   estimatedImpact: number
 }
 
 interface SEOMetrics {
+
   pageSpeed: number;
   mobileFriendliness: number;
   accessibility: number;
@@ -72,12 +80,11 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   url,
 autoAnalyze:  true,;
   showDetails = false,;
-  onAnalysisComplete;
-}) => {;
+  onAnalysisComplete}) => {;
   const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [currentUrl, setCurrentUrl] = useState(url || window.location.href);
-  const [showAdvanced, setShowAdvanced] = useState(false);'
+  const [showAdvanced, setShowAdvanced] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
 
   // Mock SEO analysis data (in real app, this would come from actual analysis)
@@ -86,61 +93,61 @@ autoAnalyze:  true,;
     score: 87,
     issues[;
       {
-'
-        id: '1','
-        type: 'warning','
-        title: 'Missing Meta Description','
-        description: 'The page is missing a meta description tag, which is important for search engine snippets.','
+
+        id: '1',
+        type: 'warning',
+        title: 'Missing Meta Description',
+        description: 'The page is missing a meta description tag, which is important for search engine snippets.',
         impact: 'medium',
-        fixable: true,'
+        fixable: true,
         category: 'content'
       },
       {
-'
-        id: '2','
-        type: 'error','
-        title: 'Slow Page Load Time','
-        description: 'Page load time is above the recommended 3-second threshold.','
+
+        id: '2',
+        type: 'error',
+        title: 'Slow Page Load Time',
+        description: 'Page load time is above the recommended 3-second threshold.',
         impact: 'high',
-        fixable: true,'
+        fixable: true,
         category: 'performance'
       },
       {
-'
-        id: '3','
-        type: 'info','
-        title: 'Missing Alt Text','
-        description: 'Some images are missing alt text, which affects accessibility.','
+
+        id: '3',
+        type: 'info',
+        title: 'Missing Alt Text',
+        description: 'Some images are missing alt text, which affects accessibility.',
         impact: 'low',
-        fixable: true,'
+        fixable: true,
         category: 'accessibility'
 
     ],;
     suggestions[;
       {
-'
-        id: '1','
-        title: 'Optimize Images','
-        description: 'Compress and optimize images to improve page load speed.','
-        priority: 'high','
+
+        id: '1',
+        title: 'Optimize Images',
+        description: 'Compress and optimize images to improve page load speed.',
+        priority: 'high',
         effort: 'medium',
         estimatedImpact: 15
       },
       {
-'
-        id: '2','
-        title: 'Add Schema Markup','
-        description: 'Implement structured data to improve search engine understanding.','
-        priority: 'medium','
+
+        id: '2',
+        title: 'Add Schema Markup',
+        description: 'Implement structured data to improve search engine understanding.',
+        priority: 'medium',
         effort: 'low',
         estimatedImpact: 8
       },
       {
-'
-        id: '3','
-        title: 'Improve Internal Linking','
-        description: 'Add more internal links to improve page authority distribution.','
-        priority: 'low','
+
+        id: '3',
+        title: 'Improve Internal Linking',
+        description: 'Add more internal links to improve page authority distribution.',
+        priority: 'low',
         effort: 'low',
         estimatedImpact: 5
 
@@ -153,18 +160,18 @@ autoAnalyze:  true,;
       bestPractices: 88,
       seoScore: 87,
       coreWebVitals: {
+
         lcp: 2.8,;
         fid: 45,;
-        cls: 0.08;
-      };
-    },;
-    lastUpdated: new Date () ;
-  }) , []) ;
+        cls: 0.08}},;
+    lastUpdated: new Date () }) , []) ;
 
   // Analyze SEO
-  const analyzeSEO = useCallback (async () => {;
+  
     setIsAnalyzing (true) ;
 
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     // Simulate analysis delay
     await new Promise (resolve => setTimeout (resolve, 2000) ) ;
 
@@ -174,6 +181,7 @@ autoAnalyze:  true,;
 
   // Auto - analyze on mount
   useEffect ( () => {
+
     if (autoAnalyze) {
 
       analyzeSEO()}
@@ -188,52 +196,48 @@ autoAnalyze:  true,;
   };
 
   // Filter issues by category
-  const filteredIssues = useMemo(() => {;'
+<<<<<<< HEAD
+  
     if (selectedCategory === 'all') return analysis?.issues || [];
+=======
+  const filteredIssues = useMemo(() => {;'    if (selectedCategory === 'all') return analysis?.issues || [];
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     return analysis?.issues.filter (issue => issue.category === selectedCategory) || []}, [analysis, selectedCategory]) ;
 
   // Filter suggestions by priority
   const filteredSuggestions = useMemo(() => {
+
     return analysis?.suggestions.sort((a, b) => {
 
       const priorityOrder = {
 
-  high: 3, medium: 2,;
+  high: 3, medium: 2,;  ;
   ;
   ;
   ;
   ;
-  ;
-  low: 1 ;
-
-};
-      return priorityOrder[b.priority] - priorityOrder[a.priority];
-    }) || [];
-  }, [analysis]) ;
+  low: 1 };
+      return priorityOrder[b.priority] - priorityOrder[a.priority]}) || []}, [analysis]) ;
 
   if (!analysis && !isAnalyzing) {
 
     return()
       <div className = "text-center py-8">"
-        <Search className="w-12 h-12 text-zion-slate/40 mx-auto mb-4" />"
-        <p className="text-zion-slate/60">No SEO analysis available</p>
+        <Search className="w-12 h-12 text-zion-slate/40 mx-auto mb-4"  />"        <p className="text-zion-slate/60">No SEO analysis available</p>
         <button
           onClick={analyzeSEO}"
           className="mt-4 px-6 py-2 bg-zion-cyan hover:bg-zion-cyan/80 text-white rounded-lg transition-colors";
         >;
           Analyze SEO;
         </button>;
-      </div>;) ;
-  }
-
+      </div>;) }
   return ("
     <div className = "bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6">
       {/* Header */}"
       <div className="flex items-center justify-between mb-6">"
         <div className="flex items-center space-x-3">"
           <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">"
-            <Search className="w-6 h-6 text-white" />
-          </div>
+            <Search className="w-6 h-6 text-white"  />          </div>
           <div>"
             <h3 className="text-xl font-semibold text-zion-slate-dark">SEO Optimizer</h3>"
             <p className="text-sm text-zion-slate/60">Performance & optimization insights</p>
@@ -243,11 +247,10 @@ autoAnalyze:  true,;
         <div className="flex items-center space-x-2">
           <button
             onClick={() => setShowAdvanced(!showAdvanced)}"
-            className="p-2 hover:bg-zion-slate/10 rounded-lg transition-colors""
+            className="p-2 hover:bg-zion-slate/10 rounded-lg transition-colors"
             title="Advanced settings"
 "
-            <Settings className="w-5 h-5 text-zion-slate" />
-          </button>
+            <Settings className="w-5 h-5 text-zion-slate"  />          </button>
 
           <button
             onClick={analyzeSEO}
@@ -261,8 +264,7 @@ autoAnalyze:  true,;
               </>
             ) : (
               <>"
-                <RefreshCw className="w-4 h-4" />
-                <span>Refresh</span>
+                <RefreshCw className="w-4 h-4"  />                <span>Refresh</span>
               </>
             )}
           </button>
@@ -313,7 +315,7 @@ autoAnalyze:  true,;
             <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Core Web Vitals</h4>"
             <div className="grid grid-cols-3 gap-4">`
               <div className={`p-4 rounded-lg border ${
-'
+
                 analysis.metrics.coreWebVitals.lcp <= 2.5 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'`
               }`}>"
                 <div className="text-center">"
@@ -321,14 +323,14 @@ autoAnalyze:  true,;
                     {analysis.metrics.coreWebVitals.lcp}s
                   </div>"
                   <div className="text-sm text-zion-slate/60">LCP</div>"
-                  <div className="text-xs text-zion-slate/40">'
+                  <div className="text-xs text-zion-slate/40">
                     {analysis.metrics.coreWebVitals.lcp <= 2.5 ? 'Good' : 'Needs improvement'}
                   </div>
                 </div>
               </div>
 `
               <div className={`p-4 rounded-lg border ${
-'
+
                 analysis.metrics.coreWebVitals.fid <= 100 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'`
               }`}>"
                 <div className="text-center">"
@@ -336,14 +338,14 @@ autoAnalyze:  true,;
                     {analysis.metrics.coreWebVitals.fid}ms
                   </div>"
                   <div className="text-sm text-zion-slate/60">FID</div>"
-                  <div className="text-xs text-zion-slate/40">'
+                  <div className="text-xs text-zion-slate/40">
                     {analysis.metrics.coreWebVitals.fid <= 100 ? 'Good' : 'Needs improvement'}
                   </div>
                 </div>
               </div>
 `
               <div className={`p-4 rounded-lg border ${
-'
+
                 analysis.metrics.coreWebVitals.cls <= 0.1 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'`
               }`}>"
                 <div className="text-center">"
@@ -351,7 +353,7 @@ autoAnalyze:  true,;
                     {analysis.metrics.coreWebVitals.cls}
                   </div>"
                   <div className="text-sm text-zion-slate/60">CLS</div>"
-                  <div className="text-xs text-zion-slate/40">'
+                  <div className="text-xs text-zion-slate/40">
                     {analysis.metrics.coreWebVitals.cls <= 0.1 ? 'Good' : 'Needs improvement'}
                   </div>
                 </div>
@@ -364,8 +366,8 @@ autoAnalyze:  true,;
             <div className="flex items-center justify-between mb-4">"
               <h4 className="text-lg font-semibold text-zion-slate-dark">Issues Found</h4>
 "
-              <div className="flex space-x-1">'
-                {['all', 'content', 'technical', 'performance', 'accessibility'].map((category) => (
+              <div className="flex space-x-1">
+                {['all',content',technical',performance',accessibility'].map((category) => (
                   <button
                     key={category}
                     onClick={() => setSelectedCategory(category)}`
@@ -388,19 +390,19 @@ autoAnalyze:  true,;
                     initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                     animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                     exit = {
 
   { opacity: 0,
-  y: -20 
+  y: -20
 
 
 
@@ -409,20 +411,19 @@ autoAnalyze:  true,;
 
 }}`
                     className={`p-4 rounded-lg border-l-4 ${
-'
+
                       issue.type === 'error' ? 'border-red-500 bg-red-50' :'
                       issue.type === 'warning' ? 'border-yellow-500 bg-yellow-50' :'
                       'border-blue-500 bg-blue-50'`
                     }`}
 "
-                    <div className="flex items-start space-x-3">'
+                    <div className="flex items-start space-x-3">
                       {issue.type === 'error' ? ("
-                        <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5" />'
+                        <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5"  />
                       ) : issue.type === 'warning' ? ("
-                        <AlertTriangle className="w-5 h-5 text-yellow-500 mt-0.5" />
+                        <AlertTriangle className="w-5 h-5 text-yellow-500 mt-0.5"  />
                       ) : ("
-                        <Info className="w-5 h-5 text-blue-500 mt-0.5" />
-                      )}
+                        <Info className="w-5 h-5 text-blue-500 mt-0.5"  />                      )}
 "
                       <div className="flex-1">"
                         <div className="flex items-center justify-between mb-2">"
@@ -453,13 +454,13 @@ autoAnalyze:  true,;
                   initial = {
 
   { opacity: 0,
-  x: 20 
+  x: 20
 
 }}
                   animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 
 
@@ -481,8 +482,7 @@ autoAnalyze:  true,;
                     </div>
 "
                     <button className="p-2 hover:bg-zion-cyan/10 rounded-lg transition-colors">"
-                      <ArrowUpRight className="w-4 h-4 text-zion-cyan" />
-                    </button>
+                      <ArrowUpRight className="w-4 h-4 text-zion-cyan"  />                    </button>
                   </div>
                 </motion.div>;) ) }
             </div>
@@ -494,19 +494,19 @@ autoAnalyze:  true,;
                 initial = {
 
   { opacity: 0,
-  height: 0 
+  height: 0
 
 }}
                 animate = {
 
-  { opacity: 1,'
-  height: 'auto' 
+  { opacity: 1,
+  height: 'auto'
 
 }}
                 exit = {
 
   { opacity: 0,
-  height: 0 
+  height: 0
 
 
 
@@ -541,16 +541,14 @@ autoAnalyze:  true,;
         </>
       ) : null};
     </div>;
-  );
-};
+  )};
 
 // Hook for using SEO optimization
   const [analysis, setAnalysis] = useState < SEOAnalysis | null> (null) ;
   const [isOptimizing, setIsOptimizing] = useState (false) ;
 
-  const optimizePage = useCallback (async () => {;
-    setIsOptimizing (true) ;
-    // Implement actual optimization logic here
+  
+    setIsOptimizing (true) ;    // Implement actual optimization logic here
     await new Promise (resolve => setTimeout (resolve, 3000) ) ;
     setIsOptimizing (false) }, []) ;
 

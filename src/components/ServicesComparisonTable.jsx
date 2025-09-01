@@ -2,29 +2,39 @@ import { Check, X, Star, Clock, Phone, Mail } from 'lucide - react';
 import React from 'react';
 import {
 
+<<<<<<< HEAD
+import {
+
+import {
+
+import { Badge } from './ui / badge';
+import { Button } from './ui / button';
+=======
+>>>>>>> main
+
   Table,
   TableBody,
   TableCell,
   TableHead,
-  TableHeader,'
-  TableRow} from './ui/table';'
-import { Badge } from './ui/badge';'
+  TableHeader,
+  TableRow} from './ui/table';
+import { Badge } from './ui/badge';
 import { Button } from './ui/button';
 import {
 
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from './ui/card';'
+  CardHeader,
+  CardTitle} from './ui/card';
 import { Check, X, Star, Clock, Phone, Mail } from 'lucide-react';
 import {
 
-  COMPREHENSIVE_SERVICES,'
+  COMPREHENSIVE_SERVICES,
   CONTACT_INFO} from '@/data/comprehensiveServices';
 export function ServicesComparisonTable() {
-'
-  const serviceCategories = ['AI Services', 'IT Services', 'Micro SAAS'];
+
+  const serviceCategories = ['AI Services',IT Services',Micro SAAS'];
   const getFeatureIcon = hasFeature => {
 
     return hasFeature ? (
@@ -75,7 +85,7 @@ export function ServicesComparisonTable() {
                     Average starting price
                   </p>
                   <Button"
-                    variant="outline""
+                    variant="outline"
                     className="w-full border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white"
                   >
                     View {category}
@@ -254,7 +264,7 @@ export function ServicesComparisonTable() {
 "
           <div className="text-center">
             <Button"
-              size="lg""
+              size="lg"
               className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
             >"
               <Phone className="w-4 h-4 mr-2" />
@@ -301,7 +311,7 @@ export function ServicesComparisonTable() {
                         {service.price?.toLocaleString()}
                       </div>
                       <Badge"
-                        variant="outline""
+                        variant="outline"
                         className="border-blue-500 text-blue-600"
                       >
                         {service.category}

@@ -1,37 +1,37 @@
-import React, { useState, useEffect } from 'react';'
-import { Link } from 'react-router-dom';'
-import { Logo } from './Logo';'
-import { UserMenu } from './UserMenu';'
-import { LanguageSelector } from './LanguageSelector';'
-import { MainNavigation } from '@/layout/MainNavigation';'
-import { MobileMenu } from './MobileMenu';'
-import { useAuth } from '@/hooks/useAuth';'
-import { useWhitelabel } from '@/context/WhitelabelContext';'
-import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';'
-import { generateSearchSuggestions } from '@/data/marketplaceData';'
-import { useNavigate } from 'react-router-dom';'
-import { Button } from '@/components/ui/button';'
-import { Menu, X, Sparkles } from 'lucide-react';'
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Logo } from './Logo';
+import { UserMenu } from './UserMenu';
+import { LanguageSelector } from './LanguageSelector';
+import { MainNavigation } from '@/layout/MainNavigation';
+import { MobileMenu } from './MobileMenu';
+import { useAuth } from '@/hooks/useAuth';
+import { useWhitelabel } from '@/context/WhitelabelContext';
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';
+import { generateSearchSuggestions } from '@/data/marketplaceData';
+import { useNavigate } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { Menu, X, Sparkles } from 'lucide-react';
 import { Search as SearchIcon } from 'lucide-react';
 
 export function Header({ hideLogin = false, customLogo, customTheme }) {
 
   const { user } = useAuth();
   const { isWhitelabel, primaryColor } = useWhitelabel();
-  const navigate = useNavigate();'
+  const navigate = useNavigate();
   const [query, setQuery] = useState('');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const searchSuggestions = generateSearchSuggestions();
 
-  // If we have a white-label tenant and no specific customTheme is provided,'
+  // If we have a white-label tenant and no specific customTheme is provided,
   // use the tenant's primary color
   const effectiveTheme =
     customTheme ||
     (isWhitelabel
       ? {
 
-          primaryColor,'
+          primaryColor,
           backgroundColor: '#000000', // Default dark background'
           textColor: '#ffffff', // Default light text
         }
@@ -47,24 +47,97 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
 
   // Handle scroll effect
   useEffect(() => {
+
+  // TODO: Add dependencies if needed
+
+  return () => {
+
+    // Cleanup function
+  
+  return () => {
+
+    // Cleanup function
+  
+  return () => {
+
+    // Cleanup function
+  
+  return () => {
+
+    // Cleanup function
+  };
+
+
+
+}, []);, []);
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  return () => {
+
+    // Cleanup function
+  
+  return () => {
+
+    // Cleanup function
+  
+  return () => {
+
+    // Cleanup function
+  };
+
+
+}, []);, []);
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  return () => {
+
+    // Cleanup function
+  
+  return () => {
+
+    // Cleanup function
+  };
+
+}, []);, []);
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  return () => {
+
+    // Cleanup function
+  };
+}, []);, []);
     const handleScroll = () => {
+
       setIsScrolled(window.scrollY > 20);
-    };'
-    window.addEventListener('scroll', handleScroll);'
+    };
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const handleSubmit = e => {
 
     e.preventDefault();
     if (query.trim()) {
+
 `
-      navigate(`/search?q=${encodeURIComponent(query)}`);'
+      navigate(`/search?q=${encodeURIComponent(query)}`);
       setQuery('');
     }
   };
 
   const toggleMobileMenu = () => {
+
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
@@ -78,7 +151,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
       }`}
       style={headerStyle}
     >
-      {/* Animated background pattern */}'
+      {/* Animated background pattern */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30" />
 
       {/* Glowing border effect */}"
@@ -103,8 +176,9 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
               value={query}
               onChange={setQuery}
               onSelectSuggestion={text => {
+
 `
-                navigate(`/search?q=${encodeURIComponent(text)}`);'
+                navigate(`/search?q=${encodeURIComponent(text)}`);
                 setQuery('');
               }}
               searchSuggestions={searchSuggestions}
@@ -148,8 +222,9 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
               value={query}
               onChange={setQuery}
               onSelectSuggestion={text => {
+
 `
-                navigate(`/search?q=${encodeURIComponent(text)}`);'
+                navigate(`/search?q=${encodeURIComponent(text)}`);
                 setQuery('');
               }}
               searchSuggestions={searchSuggestions}"

@@ -1,119 +1,125 @@
-import React, { useState } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState } from 'react';
+<<<<<<< HEAD
+export default InteractiveServiceShowcase;
+import { motion, AnimatePresence } from 'framer - motion';
+
+=======
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+>>>>>>> main
 const InteractiveServiceShowcase = () => {
-'
+
     const [activeCategory, setActiveCategory] = useState('all');
     const [hoveredService, setHoveredService] = useState(null);
     const categories = ['
-        { id: 'all', name: 'All Services', icon: '🚀', count: 35 },'
-        { id: 'ai', name: 'AI & ML', icon: '🤖', count: 13 },'
-        { id: 'quantum', name: 'Quantum', icon: '🔮', count: 5 },'
-        { id: 'cloud', name: 'Cloud', icon: '☁️', count: 8 },'
-        { id: 'security', name: 'Security', icon: '🛡️', count: 6 },'
+        { id: 'all', name: 'All Services', icon: '🚀', count: 35 },
+        { id: 'ai', name: 'AI & ML', icon: '🤖', count: 13 },
+        { id: 'quantum', name: 'Quantum', icon: '🔮', count: 5 },
+        { id: 'cloud', name: 'Cloud', icon: '☁️', count: 8 },
+        { id: 'security', name: 'Security', icon: '🛡️', count: 6 },
         { id: 'automation', name: 'Automation', icon: '⚡', count: 3 }
     ];
     const services = [
         {
-'
-            id: 'ai-strategy','
-            title: 'AI Strategy Consulting','
-            description: 'Comprehensive AI strategy development and implementation consulting for enterprises','
-            icon: '🤖','
-            price: 'From $2,500','
-            category: 'ai','
-            features['Strategic Planning', 'Implementation Roadmap', 'ROI Analysis', 'Team Training'],;
-            isPopular: true,'
-            color: 'from-zion-cyan to-zion-blue','
+
+            id: 'ai-strategy',
+            title: 'AI Strategy Consulting',
+            description: 'Comprehensive AI strategy development and implementation consulting for enterprises',
+            icon: '🤖',
+            price: 'From $2,500',
+            category: 'ai',
+            features['Strategic Planning',Implementation Roadmap',ROI Analysis',Team Training'],;
+            isPopular: true,
+            color: 'from-zion-cyan to-zion-blue',
             href: '/services/ai'
         },
         {
-'
-            id: 'quantum-ai','
-            title: 'Quantum AI Fusion Platform','
-            description: 'Revolutionary platform combining quantum computing with artificial intelligence','
-            icon: '🔮','
-            price: 'From $25,000','
-            category: 'quantum','
-            features['Quantum Algorithms', 'AI Integration', 'Performance Optimization', 'Scalable Architecture'],;
-            isNew: true,'
-            color: 'from-zion-purple to-zion-cyan','
+
+            id: 'quantum-ai',
+            title: 'Quantum AI Fusion Platform',
+            description: 'Revolutionary platform combining quantum computing with artificial intelligence',
+            icon: '🔮',
+            price: 'From $25,000',
+            category: 'quantum',
+            features['Quantum Algorithms',AI Integration',Performance Optimization',Scalable Architecture'],;
+            isNew: true,
+            color: 'from-zion-purple to-zion-cyan',
             href: '/services/quantum'
         },
         {
-'
-            id: 'neuromorphic','
-            title: 'Neuromorphic Computing Platform','
-            description: 'Brain-inspired computing architecture for ultra-efficient AI processing','
-            icon: '🧠','
-            price: 'From $35,000','
-            category: 'ai','
-            features['Neural Networks', 'Efficient Processing', 'Scalable Architecture', 'Low Power Consumption'],;'
-            color: 'from-zion-blue to-zion-cyan','
+
+            id: 'neuromorphic',
+            title: 'Neuromorphic Computing Platform',
+            description: 'Brain-inspired computing architecture for ultra-efficient AI processing',
+            icon: '🧠',
+            price: 'From $35,000',
+            category: 'ai',
+            features['Neural Networks',Efficient Processing',Scalable Architecture',Low Power Consumption'],;
+            color: 'from-zion-blue to-zion-cyan',
             href: '/services/ai'
         },
         {
-'
-            id: 'edge-ai','
-            title: 'Edge AI Orchestration Platform','
-            description: 'Intelligent orchestration of AI workloads across distributed edge computing','
-            icon: '🌐','
-            price: 'From $15,000','
-            category: 'cloud','
-            features['Edge Deployment', 'Load Balancing', 'Real-time Processing', 'IoT Integration'],;'
-            color: 'from-zion-cyan to-zion-green','
+
+            id: 'edge-ai',
+            title: 'Edge AI Orchestration Platform',
+            description: 'Intelligent orchestration of AI workloads across distributed edge computing',
+            icon: '🌐',
+            price: 'From $15,000',
+            category: 'cloud',
+            features['Edge Deployment',Load Balancing',Real-time Processing',IoT Integration'],;
+            color: 'from-zion-cyan to-zion-green',
             href: '/services/cloud'
         },
         {
-'
-            id: 'federated-learning','
-            title: 'Federated Learning Platform','
-            description: 'Privacy-preserving AI training across distributed data sources','
-            icon: '🔒','
-            price: 'From $20,000','
-            category: 'security','
-            features['Data Privacy', 'Distributed Training', 'Secure Communication', 'Compliance Ready'],;'
-            color: 'from-zion-green to-zion-cyan','
+
+            id: 'federated-learning',
+            title: 'Federated Learning Platform',
+            description: 'Privacy-preserving AI training across distributed data sources',
+            icon: '🔒',
+            price: 'From $20,000',
+            category: 'security',
+            features['Data Privacy',Distributed Training',Secure Communication',Compliance Ready'],;
+            color: 'from-zion-green to-zion-cyan',
             href: '/services/security'
         },
         {
-'
-            id: 'ai-ethics','
-            title: 'AI Ethics & Governance Platform','
-            description: 'Comprehensive framework for ethical AI development and governance','
-            icon: '⚖️','
-            price: 'From $18,000','
-            category: 'ai','
-            features['Ethical Guidelines', 'Compliance Tools', 'Audit Trails', 'Risk Assessment'],;'
-            color: 'from-zion-yellow to-zion-orange','
+
+            id: 'ai-ethics',
+            title: 'AI Ethics & Governance Platform',
+            description: 'Comprehensive framework for ethical AI development and governance',
+            icon: '⚖️',
+            price: 'From $18,000',
+            category: 'ai',
+            features['Ethical Guidelines',Compliance Tools',Audit Trails',Risk Assessment'],;
+            color: 'from-zion-yellow to-zion-orange',
             href: '/services/ai'
         },
         {
-'
-            id: 'quantum-security','
-            title: 'Quantum-Safe Security Suite','
-            description: 'Next-generation security solutions resistant to quantum attacks','
-            icon: '🔐','
-            price: 'From $30,000','
-            category: 'security','
-            features['Post-Quantum Cryptography', 'Quantum Key Distribution', 'Threat Detection', 'Zero Trust'],;
-            isNew: true,'
-            color: 'from-zion-purple to-zion-red','
+
+            id: 'quantum-security',
+            title: 'Quantum-Safe Security Suite',
+            description: 'Next-generation security solutions resistant to quantum attacks',
+            icon: '🔐',
+            price: 'From $30,000',
+            category: 'security',
+            features['Post-Quantum Cryptography',Quantum Key Distribution',Threat Detection',Zero Trust'],;
+            isNew: true,
+            color: 'from-zion-purple to-zion-red',
             href: '/services/security'
         },
         {
-'
-            id: 'cloud-automation','
-            title: 'Cloud Infrastructure Automation','
-            description: 'Intelligent automation of cloud infrastructure deployment and management','
-            icon: '⚙️','
-            price: 'From $12,000','
-            category: 'automation','
-            features['Infrastructure as Code', 'Auto-scaling', 'Cost Optimization', 'Monitoring'],;'
-            color: 'from-zion-orange to-zion-yellow','
+
+            id: 'cloud-automation',
+            title: 'Cloud Infrastructure Automation',
+            description: 'Intelligent automation of cloud infrastructure deployment and management',
+            icon: '⚙️',
+            price: 'From $12,000',
+            category: 'automation',
+            features['Infrastructure as Code',Auto-scaling',Cost Optimization',Monitoring'],;
+            color: 'from-zion-orange to-zion-yellow',
             href: '/services/automation'
 
-    ];'
+    ];
     const filteredServices = activeCategory === 'all'
         ? services
         : services.filter (service => service.category === activeCategory) ;
@@ -131,7 +137,7 @@ const InteractiveServiceShowcase = () => {
     const itemVariants = {
 
   hidden: { y: 20,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -147,7 +153,7 @@ const InteractiveServiceShowcase = () => {
     const categoryVariants = {
 
   hidden: { scale: 0.8,
-  opacity: 0 
+  opacity: 0
 
 },
         visible: {
@@ -167,12 +173,12 @@ const InteractiveServiceShowcase = () => {
         <motion.div className="text-center mb-20" initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 
 
@@ -180,7 +186,7 @@ const InteractiveServiceShowcase = () => {
 
 
 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>"
-          <h2 className="text-5xl md:text-6xl font-black text-white mb-6">'
+          <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
             Explore Our{' '}"
             <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
               Innovative Services
@@ -196,12 +202,12 @@ const InteractiveServiceShowcase = () => {
         <motion.div className="flex flex-wrap justify-center gap-4 mb-16" initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           {categories.map((category) => (<button key={category.id} onClick={() => setActiveCategory(category.id)} className={`group flex items-center gap-3 px-6 py-4 rounded-2xl font-semibold transition-all duration-300 ${activeCategory === category.id'
@@ -226,7 +232,7 @@ const InteractiveServiceShowcase = () => {
                     {/* Popular/New Badge */}`
                     {(service.isPopular || service.isNew) && (<div className={`absolute -top-3 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded-full text-xs font-bold text-white ${service.isPopular'
                     ? 'bg-gradient-to-r from-zion-orange to-zion-yellow''`
-                    : 'bg-gradient-to-r from-zion-purple to-zion-cyan'}`}>'
+                    : 'bg-gradient-to-r from-zion-purple to-zion-cyan'}`}>
                         {service.isPopular ? '🔥 Popular' : '✨ New'}
                       </div>) }
 
@@ -279,17 +285,17 @@ const InteractiveServiceShowcase = () => {
         <motion.div className="text-center mt-20" initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 30
 
 }} whileInView = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.8,
-  delay: 0.2 
+  delay: 0.2
 
 
 
@@ -301,7 +307,7 @@ const InteractiveServiceShowcase = () => {
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h3>"
-            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">'
+            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
               Let's discuss how our innovative technology solutions can drive your business forward
               and give you a competitive edge in the market
             </p>"

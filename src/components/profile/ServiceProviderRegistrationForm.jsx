@@ -16,6 +16,7 @@ import { supabase } from "@/integrations/supabase/client";"
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 // Define form schema;
 const serviceProfileSchema = z.object({
+
 "
     name: z.string().min(2, "Name must be at least 2 characters long"),"
     title: z.string().min(5, "Business name/title is required"),"
@@ -23,12 +24,14 @@ const serviceProfileSchema = z.object({
     location: z.string().min(2, "Location is required"),"
     services: z.string().min(2, "Enter at least one service"),
     hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
+
 "
         message: "Rate must be a number"}),"
     availability: z.enum(["available", "limited", "unavailable"]),
     enhancedProfile: z.boolean().transform(val => !!val),"
     website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional()});
 export function ServiceProviderRegistrationForm() {
+
     const { user } = useAuth();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [serviceTags, setServiceTags] = useState([]);
@@ -40,6 +43,7 @@ export function ServiceProviderRegistrationForm() {
 
         resolver: zodResolver(serviceProfileSchema),
         defaultValues: {
+
 "
             name: user?.displayName || "","
             title: "","
@@ -52,6 +56,7 @@ export function ServiceProviderRegistrationForm() {
             website: ""}});
     // Handle adding service tags
     const handleAddService = () => {
+
 "
         const serviceInput = form.getValues("services");
         if (serviceInput && !serviceTags.includes(serviceInput)) {
@@ -65,6 +70,7 @@ export function ServiceProviderRegistrationForm() {
         setServiceTags(serviceTags.filter((s) => s !== service))};
     // Handle key press in services input (add on enter)
     const handleServiceKeyPress = (e) => {
+
 "
         if (e.key === "Enter") {
 
@@ -79,20 +85,24 @@ export function ServiceProviderRegistrationForm() {
 
             const reader = new FileReader();
             reader.onloadend = () => {
+
                 setUploadedAvatar(reader.result)};
             reader.readAsDataURL(file)}
     };
     // Generate enhanced profile with AI
     const generateEnhancedProfile = async () => {
+
         const formData = form.getValues();
         if (!formData.bio || formData.bio.length < 20) {
 
             toast({
+
 "
                 title: "More information needed","
                 description: "Please provide at least a detailed bio before generating enhanced content."});
             return}
         try {
+
             setIsGenerating(true);
             // Call the Supabase Edge Function
             const { data, error } = await supabase.functions.invoke('service-profile-enhancer', {
@@ -107,20 +117,22 @@ export function ServiceProviderRegistrationForm() {
                         services: serviceTags,
                         location: formData.location
 
-
             });
             if (error) {
 
                 throw new Error(error.message)}
             setGeneratedContent(data);
             toast({
+
 "
                 title: "Enhanced Profile Generated","
                 description: "AI has created a professional bio and suggested additional services for your profile."})}
         catch (error) {
+
 "
-            // // // // // // // // console.error("Error generating enhanced profile:", error);
+            // // // // // // // // // // console.error("Error generating enhanced profile:", error);
             toast({
+
 "
                 title: "Generation failed","
                 description: error.message || "There was an error generating your enhanced profile. Please try again.","
@@ -131,11 +143,13 @@ export function ServiceProviderRegistrationForm() {
     };
     // Apply generated content to form
     const applyGeneratedContent = () => {
+
         if (generatedContent) {
+
 "
             form.setValue("bio", generatedContent.summary);
             if (generatedContent.services && generatedContent.services.length > 0) {
-'
+
                 const newServices = generatedContent.services.filter(service => typeof service === 'string' && service && !serviceTags.includes(service));
                 if (newServices.length > 0) {
 
@@ -149,6 +163,7 @@ export function ServiceProviderRegistrationForm() {
         if (serviceTags.length === 0) {
 
             toast({
+
 "
                 title: "Services required","
                 description: "Please add at least one service to your profile.","
@@ -156,8 +171,10 @@ export function ServiceProviderRegistrationForm() {
             return}
         setIsSubmitting(true);
         try {
+
             // For actual implementation with Supabase
             if (!user?.id) {
+
 "
                 throw new Error("User not authenticated")}
             // Enhance profile if not already done
@@ -165,7 +182,7 @@ export function ServiceProviderRegistrationForm() {
             if (values.enhancedProfile && !generatedContent) {
 
                 try {
-'
+
                     const { data: aiData } = await supabase.functions.invoke('service-profile-enhancer', {
 
                         body: {
@@ -178,7 +195,6 @@ export function ServiceProviderRegistrationForm() {
                                 services: serviceTags,
                                 location: values.location
 
-
                     });
                     if (aiData) {
 
@@ -188,10 +204,10 @@ export function ServiceProviderRegistrationForm() {
                         finalServices = [...new Set([...serviceTags, ...aiServices])]}
                 }
                 catch (error) {
-"
-                    // // // // // // // // console.error("Error enhancing profile:", error);
-                    // Continue with submission even if enhancement fails
 
+"
+                    // // // // // // // // // // console.error("Error enhancing profile:", error);
+                    // Continue with submission even if enhancement fails
 
             else if (generatedContent) {
 
@@ -212,7 +228,7 @@ export function ServiceProviderRegistrationForm() {
                 updated_at: new Date().toISOString(),
                 headline: values.title,
                 // Additional fields that might be in profiles table
-            })'
+            })
                 .eq('id', user.id)
                 .select();
             if (error)
@@ -237,7 +253,7 @@ export function ServiceProviderRegistrationForm() {
             if (userEmail && values.enhancedProfile) {
 
                 try {
-'
+
                     await supabase.functions.invoke('send-email', {
 
                         body: {
@@ -247,7 +263,7 @@ export function ServiceProviderRegistrationForm() {
                             html: `"
               <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">"
                 <h2 style="color: #6D28D9;">Service Profile Created!</h2>
-                <p>Your service provider profile has been successfully created and published.</p>'
+                <p>Your service provider profile has been successfully created and published.</p>
                 <p>We've enhanced your profile with AI to help you stand out to potential clients.</p>
                 <p>You can now start receiving service requests and connecting with clients.</p>"
                 <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">"
@@ -258,23 +274,27 @@ export function ServiceProviderRegistrationForm() {
                         }
                     })}
                 catch (emailError) {
+
 "
-                    // // // // // // // // console.error("Failed to send notification email:", emailError);
+                    // // // // // // // // // // console.error("Failed to send notification email:", emailError);
                     // Continue with submission even if email fails
 
-
             toast({
+
 "
                 title: "Profile Created Successfully","
                 description: "Your service provider profile has been published and is now visible in the directory."});
             // Redirect to service provider dashboard or profile page
             setTimeout(() => {
+
 "
                 window.location.href = "/service-dashboard"}, 1500)}
         catch (error) {
+
 "
-            // // // // // // // // console.error("Error creating profile:", error);
+            // // // // // // // // // // console.error("Error creating profile:", error);
             toast({
+
 "
                 title: "Error Creating Profile","
                 description: error.message || "There was an error creating your profile. Please try again.","

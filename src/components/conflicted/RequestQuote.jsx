@@ -1,55 +1,60 @@
-import { useState } from 'react';'
+<<<<<<< HEAD
+import React, { useState } from 'react';
+=======
+>>>>>>> main
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin, Star, Users, Zap, Shield, Brain, Cloud, Smartphone, Globe, Database, BarChart3, Palette, Code, Server, Wifi, Briefcase export { function };
 export default function RequestQuote() {
+
     const [formData, setFormData] = useState({
-'
-        firstName: '','
-        lastName: '','
-        email: '','
-        phone: '','
-        comp: '','
-        projectType: '','
-        budget: '','
-        timeline: '','
-        description: '','
+
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        comp: '',
+        projectType: '',
+        budget: '',
+        timeline: '',
+        description: '',
         urgency: 'medium'
-    });'
+    });
     const [submissionStatus, setSubmissionStatus] = useState('idle');
     const projectTypes = ['
-        { value: 'web-development', label: 'Web Development', icon: Globe, description: 'Custom websites and web applications' },'
-        { value: 'mobile-app', label: 'Mobile App Development', icon: Smartphone, description: 'iOS and Android applications' },'
-        { value: 'ai-ml', label: 'AI & Machine Learning', icon: Brain, description: 'Intelligent automation and analytics' },'
-        { value: 'cloud-infrastructure', label: 'Cloud Infrastructure', icon: Cloud, description: 'AWS, Azure, GCP solutions' },'
-        { value: 'cybersecurity', label: 'Cybersecurity', icon: Shield, description: 'Security audits and implementation' },'
-        { value: 'data-analytics', label: 'Data Analytics', icon: BarChart3, description: 'Business intelligence and reporting' },'
-        { value: 'ui-ux-design', label: 'UI/UX Design', icon: Palette, description: 'User interface and experience design' },'
-        { value: 'software-development', label: 'Custom Software', icon: Code, description: 'Enterprise software solutions' },'
-        { value: 'devops', label: 'DevOps & CI/CD', icon: Server, description: 'Automation and deployment pipelines' },'
-        { value: 'network-infrastructure', label: 'Network Infrastructure', icon: Wifi, description: 'Network design and setup' },'
-        { value: 'database-design', label: 'Database Design', icon: Database, description: 'Database architecture and optimization' },'
+        { value: 'web-development', label: 'Web Development', icon: Globe, description: 'Custom websites and web applications' },
+        { value: 'mobile-app', label: 'Mobile App Development', icon: Smartphone, description: 'iOS and Android applications' },
+        { value: 'ai-ml', label: 'AI & Machine Learning', icon: Brain, description: 'Intelligent automation and analytics' },
+        { value: 'cloud-infrastructure', label: 'Cloud Infrastructure', icon: Cloud, description: 'AWS, Azure, GCP solutions' },
+        { value: 'cybersecurity', label: 'Cybersecurity', icon: Shield, description: 'Security audits and implementation' },
+        { value: 'data-analytics', label: 'Data Analytics', icon: BarChart3, description: 'Business intelligence and reporting' },
+        { value: 'ui-ux-design', label: 'UI/UX Design', icon: Palette, description: 'User interface and experience design' },
+        { value: 'software-development', label: 'Custom Software', icon: Code, description: 'Enterprise software solutions' },
+        { value: 'devops', label: 'DevOps & CI/CD', icon: Server, description: 'Automation and deployment pipelines' },
+        { value: 'network-infrastructure', label: 'Network Infrastructure', icon: Wifi, description: 'Network design and setup' },
+        { value: 'database-design', label: 'Database Design', icon: Database, description: 'Database architecture and optimization' },
         { value: 'consulting', label: 'IT Consulting', icon: Briefcase, description: 'Strategic technology guidance' }
     ];
     const budgetRanges = ['
-        { value: 'under-10k', label: 'Under $10,000', description: 'Small projects and MVPs' },'
-        { value: '10k-25k', label: '$10,000 - $25,000', description: 'Medium-sized applications' },'
-        { value: '25k-50k', label: '$25,000 - $50,000', description: 'Complex applications' },'
-        { value: '50k-100k', label: '$50,000 - $100,000', description: 'Enterprise solutions' },'
-        { value: '100k-plus', label: '$100,000+', description: 'Large-scale projects' },'
+        { value: 'under-10k', label: 'Under $10,000', description: 'Small projects and MVPs' },
+        { value: '10k-25k', label: '$10,000 - $25,000', description: 'Medium-sized applications' },
+        { value: '25k-50k', label: '$25,000 - $50,000', description: 'Complex applications' },
+        { value: '50k-100k', label: '$50,000 - $100,000', description: 'Enterprise solutions' },
+        { value: '100k-plus', label: '$100,000+', description: 'Large-scale projects' },
         { value: 'custom', label: 'Custom Pricing', description: 'Let\'s discuss your needs' }
     ];
     const timelineOptions = ['
-        { value: 'asap', label: 'ASAP', description: 'Immediate start required' },'
-        { value: '1-2-weeks', label: '1-2 Weeks', description: 'Quick turnaround needed' },'
-        { value: '1-month', label: '1 Month', description: 'Standard project timeline' },'
-        { value: '2-3-months', label: '2-3 Months', description: 'Complex project timeline' },'
-        { value: '3-plus-months', label: '3+ Months', description: 'Long-term project' },'
+        { value: 'asap', label: 'ASAP', description: 'Immediate start required' },
+        { value: '1-2-weeks', label: '1-2 Weeks', description: 'Quick turnaround needed' },
+        { value: '1-month', label: '1 Month', description: 'Standard project timeline' },
+        { value: '2-3-months', label: '2-3 Months', description: 'Complex project timeline' },
+        { value: '3-plus-months', label: '3+ Months', description: 'Long-term project' },
         { value: 'flexible', label: 'Flexible', description: 'Timeline can be discussed' }
     ];
     const urgencyLevels = ['
-        { value: 'low', label: 'Low', description: 'No immediate deadline', color: 'text-green-400' },'
-        { value: 'medium', label: 'Medium', description: 'Standard project timeline', color: 'text-yellow-400' },'
-        { value: 'high', label: 'High', description: 'Urgent delivery needed', color: 'text-orange-400' },'
+        { value: 'low', label: 'Low', description: 'No immediate deadline', color: 'text-green-400' },
+        { value: 'medium', label: 'Medium', description: 'Standard project timeline', color: 'text-yellow-400' },
+        { value: 'high', label: 'High', description: 'Urgent delivery needed', color: 'text-orange-400' },
         { value: 'critical', label: 'Critical', description: 'Emergency situation', color: 'text-red-400' }
     ];
     const handleInputChange = (e) => {
@@ -62,27 +67,28 @@ export default function RequestQuote() {
         }))};
     const handleSubmit = async (e) => {
 
-        e.preventDefault();'
+        e.preventDefault();
         setSubmissionStatus('submitting');
         // Simulate API call
         setTimeout(() => {
-'
+
             setSubmissionStatus('success');
             // Reset form after success
             setTimeout(() => {
+
                 setFormData({
-'
-                    firstName: '','
-                    lastName: '','
-                    email: '','
-                    phone: '','
-                    comp: '','
-                    projectType: '','
-                    budget: '','
-                    timeline: '','
-                    description: '','
+
+                    firstName: '',
+                    lastName: '',
+                    email: '',
+                    phone: '',
+                    comp: '',
+                    projectType: '',
+                    budget: '',
+                    timeline: '',
+                    description: '',
                     urgency: 'medium'
-                });'
+                });
                 setSubmissionStatus('idle')}, 3000)}, 2000)};
     const isFormValid = formData.firstName && formData.lastName && formData.email && formData.projectType;
     return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
@@ -92,22 +98,12 @@ export default function RequestQuote() {
           <motion.div initial = {
 
   { opacity: 0,
-  y: 30 
-
-
-
-
-
+  y: 30
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} transition={{ duration: 0.8 }}>"
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-2xl p-4 mb-8">"
@@ -126,26 +122,21 @@ export default function RequestQuote() {
               <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} transition = {
 
   { duration: 0.6,
+<<<<<<< HEAD
+  delay: 0.1
+
+}} className="flex items-center justify-center space-x-3 text-white/80">
+=======
   delay: 0.1 
 
 
@@ -154,32 +145,28 @@ export default function RequestQuote() {
 
 "
 }} className="flex items-center justify-center space-x-3 text-white/80">"
+>>>>>>> main
                 <Clock className="w-5 h-5 text-cyan-400"/>
                 <span>24-Hour Response</span>
               </motion.div>
               <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} transition = {
 
   { duration: 0.6,
+<<<<<<< HEAD
+  delay: 0.2
+
+}} className="flex items-center justify-center space-x-3 text-white/80">
+=======
   delay: 0.2 
 
 
@@ -188,32 +175,28 @@ export default function RequestQuote() {
 
 "
 }} className="flex items-center justify-center space-x-3 text-white/80">"
+>>>>>>> main
                 <CheckCircle className="w-5 h-5 text-green-400"/>
                 <span>Free Consultation</span>
               </motion.div>
               <motion.div initial = {
 
   { opacity: 0,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} animate = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} transition = {
 
   { duration: 0.6,
+<<<<<<< HEAD
+  delay: 0.3
+
+}} className="flex items-center justify-center space-x-3 text-white/80">
+=======
   delay: 0.3 
 
 
@@ -222,6 +205,7 @@ export default function RequestQuote() {
 
 "
 }} className="flex items-center justify-center space-x-3 text-white/80">"
+>>>>>>> main
                 <Calculator className="w-5 h-5 text-purple-400"/>
                 <span>Detailed Estimate</span>
               </motion.div>
@@ -239,16 +223,16 @@ export default function RequestQuote() {
               <motion.div initial = {
 
   { opacity: 0,
-  x: -30 
-
-
-
-
-
+  x: -30
 
 }} whileInView = {
 
   { opacity: 1,
+<<<<<<< HEAD
+  x: 0
+
+}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+=======
   x: 0 
 
 
@@ -257,6 +241,7 @@ export default function RequestQuote() {
 
 "
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">"
+>>>>>>> main
                 <h2 className="text-3xl font-bold text-white mb-8">Project Details</h2>
 "
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -356,10 +341,10 @@ export default function RequestQuote() {
                   {/* Submit Button */}'"`
                   <button type="submit" disabled={!isFormValid || submissionStatus === 'submitting'} className={`w-full py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center space-x-2 ${!isFormValid || submissionStatus === 'submitting''
             ? 'bg-gray-600 text-gray-400 cursor-not-allowed''`
-            : 'bg-gradient-to-r from-cyan-400 to-purple-600 text-white hover:from-cyan-500 hover:to-purple-700 hover:shadow-lg hover:shadow-cyan-400/25'}`}>'
+            : 'bg-gradient-to-r from-cyan-400 to-purple-600 text-white hover:from-cyan-500 hover:to-purple-700 hover:shadow-lg hover:shadow-cyan-400/25'}`}>
                     {submissionStatus === 'submitting' ? (<>"
                         <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                        <span>Submitting...</span>'
+                        <span>Submitting...</span>
                       </>) : submissionStatus === 'success' ? (<>"
                         <CheckCircle className="w-5 h-5"/>
                         <span>Quote Requested!</span>
@@ -369,20 +354,21 @@ export default function RequestQuote() {
                       </>)}
                   </button>
 
-                  {/* Status Messages */}'
+                  {/* Status Messages */}
                   {submissionStatus === 'success' && (<motion.div initial = {
 
   { opacity: 0,
-  y: 10 
-
-
-
-
-
+  y: 10
 
 }} animate = {
 
   { opacity: 1,
+<<<<<<< HEAD
+  y: 0
+
+}} className="flex items-center p-4 bg-green-500/20 border border-green-500/50 rounded-lg">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3"/>
+=======
   y: 0 
 
 
@@ -392,24 +378,26 @@ export default function RequestQuote() {
 "
 }} className="flex items-center p-4 bg-green-500/20 border border-green-500/50 rounded-lg">"
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3"/>"
-                      <span className="text-green-400">'
+>>>>>>> main
+                      <span className="text-green-400">
                         Thank you! We've received your quote request and will respond within 24 hours.
                       </span>
                     </motion.div>)}
-'
+
                   {submissionStatus === 'error' && (<motion.div initial = {
 
   { opacity: 0,
-  y: 10 
-
-
-
-
-
+  y: 10
 
 }} animate = {
 
   { opacity: 1,
+<<<<<<< HEAD
+  y: 0
+
+}} className="flex items-center p-4 bg-red-500/20 border border-red-500/50 rounded-lg">
+                      <AlertCircle className="w-5 h-5 text-red-400 mr-3"/>
+=======
   y: 0 
 
 
@@ -419,6 +407,7 @@ export default function RequestQuote() {
 "
 }} className="flex items-center p-4 bg-red-500/20 border border-red-500/50 rounded-lg">"
                       <AlertCircle className="w-5 h-5 text-red-400 mr-3"/>"
+>>>>>>> main
                       <span className="text-red-400">
                         Something went wrong. Please try again or contact us directly.
                       </span>
@@ -433,16 +422,19 @@ export default function RequestQuote() {
               <motion.div initial = {
 
   { opacity: 0,
-  x: 30 
-
-
-
-
-
+  x: 30
 
 }} whileInView = {
 
   { opacity: 1,
+<<<<<<< HEAD
+  x: 0
+
+}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-white mb-4">Get in Touch</h3>
+                <div className="space-y-4">
+                  <a href="tel:+13024640950" className="flex items-center text-white/80 hover:text-cyan-400 transition-colors">
+=======
   x: 0 
 
 
@@ -454,6 +446,7 @@ export default function RequestQuote() {
                 <h3 className="text-xl font-bold text-white mb-4">Get in Touch</h3>"
                 <div className="space-y-4">"
                   <a href="tel:+13024640950" className="flex items-center text-white/80 hover:text-cyan-400 transition-colors">"
+>>>>>>> main
                     <Phone className="w-5 h-5 mr-3 text-cyan-400"/>
                     +1 (302) 464-0950
                   </a>"
@@ -472,26 +465,24 @@ export default function RequestQuote() {
               <motion.div initial = {
 
   { opacity: 0,
-  x: 30 
-
-
-
-
-
+  x: 30
 
 }} whileInView = {
 
   { opacity: 1,
-  x: 0 
-
-
-
-
-
+  x: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.8,
+<<<<<<< HEAD
+  delay: 0.2
+
+}} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-white mb-4">Why Choose Us</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start">
+=======
   delay: 0.2 
 
 
@@ -503,6 +494,7 @@ export default function RequestQuote() {
                 <h3 className="text-xl font-bold text-white mb-4">Why Choose Us</h3>"
                 <div className="space-y-4">"
                   <div className="flex items-start">"
+>>>>>>> main
                     <Star className="w-5 h-5 text-yellow-400 mr-3 mt-1 flex-shrink-0"/>
                     <div>"
                       <div className="text-white font-medium">Expert Team</div>"
@@ -537,26 +529,24 @@ export default function RequestQuote() {
               <motion.div initial = {
 
   { opacity: 0,
-  x: 30 
-
-
-
-
-
+  x: 30
 
 }} whileInView = {
 
   { opacity: 1,
-  x: 0 
-
-
-
-
-
+  x: 0
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.8,
+<<<<<<< HEAD
+  delay: 0.4
+
+}} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-white mb-4">Our Process</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start">
+=======
   delay: 0.4 
 
 
@@ -568,6 +558,7 @@ export default function RequestQuote() {
                 <h3 className="text-xl font-bold text-white mb-4">Our Process</h3>"
                 <div className="space-y-4">"
                   <div className="flex items-start">"
+>>>>>>> main
                     <div className="w-6 h-6 bg-cyan-400 rounded-full flex items-center justify-center text-black text-xs font-bold mr-3 mt-1">1</div>
                     <div>"
                       <div className="text-white font-medium">Quote Request</div>"

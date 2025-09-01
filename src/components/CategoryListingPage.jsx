@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+import { useState, useEffect } from "react";
+import React, { useState } from 'react';
+import { Button } from "@/components / ui / button";
+import { Footer } from "@/components / Footer";
+import { GradientHeading } from "@/components / GradientHeading";
+import { Input } from "@/components / ui / input";
+import { ListingScoreCard } from "@/components / ListingScoreCard";
+import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components / ui / select";
+import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function CategoryListingPage ({ title, description, listings: initialListings, sortOptions = [;
+
+=======
 import { useState, useEffect } from "react";"
 import { Footer } from "@/components/Footer";"
 import { GradientHeading } from "@/components/GradientHeading";"
@@ -6,29 +18,32 @@ import { Button } from "@/components/ui/button";"
 import { Input } from "@/components/ui/input";"
 import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
 import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function CategoryListingPage({ title, description, listings: initialListings, sortOptions = [;
-    { label: 'Newest First', value: 'newest' },'
-    { label: 'Oldest First', value: 'oldest' },'
-    { label: 'Highest Rating', value: 'rating-high' },'
-    { label: 'Highest AI Match', value: 'ai-match' },'
-    { label: 'A-Z', value: 'a-z' },'
+>>>>>>> main
+    { label: 'Newest First', value: 'newest' },
+    { label: 'Oldest First', value: 'oldest' },
+    { label: 'Highest Rating', value: 'rating-high' },
+    { label: 'Highest AI Match', value: 'ai-match' },
+    { label: 'A-Z', value: 'a-z' },
     { label: 'Z-A', value: 'z-a' },
 ], filterOptions = ['
-    { label: 'All', value: 'all' },'
-    { label: 'Highly Rated', value: 'high-rating' },'
+    { label: 'All', value: 'all' },
+    { label: 'Highly Rated', value: 'high-rating' },
     { label: 'Best AI Match', value: 'best-match' },
 ] }) {
+
 "
-    const [searchQuery, setSearchQuery] = useState("");'
-    const [selectedSort, setSelectedSort] = useState(() => localStorage.getItem('category_selected_sort') || sortOptions[0].value);'
+    const [searchQuery, setSearchQuery] = useState("");
+    const [selectedSort, setSelectedSort] = useState(() => localStorage.getItem('category_selected_sort') || sortOptions[0].value);
     const [selectedFilter, setSelectedFilter] = useState(() => localStorage.getItem('category_selected_filter') || filterOptions[0].value);
     const [isLoading, setIsLoading] = useState(false);
     useEffect(() => {
-'
+
         localStorage.setItem('category_selected_sort', selectedSort)}, [selectedSort]);
     useEffect(() => {
-'
+
         localStorage.setItem('category_selected_filter', selectedFilter)}, [selectedFilter]);
     useEffect(() => {
+
         setIsLoading(true);
         const timeout = setTimeout(() => setIsLoading(false), 300);
         return () => clearTimeout(timeout)}, [searchQuery, selectedSort, selectedFilter]);
@@ -42,9 +57,9 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
             (listing.tags && listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
         // Apply category filters'
         if (selectedFilter === 'all')
-            return matchesSearch;'
+            return matchesSearch;
         if (selectedFilter === 'high-rating')
-            return matchesSearch && (listing.rating || 0) >= 4;'
+            return matchesSearch && (listing.rating || 0) >= 4;
         if (selectedFilter === 'best-match')
             return matchesSearch && (listing.aiScore || 0) >= 85;
         return matchesSearch})
@@ -52,17 +67,17 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
 
         // Apply sorting
         switch (selectedSort) {
-'
+
             case 'newest':
-                return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();'
+                return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
             case 'oldest':
-                return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();'
+                return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();
             case 'rating-high':
-                return (b.rating || 0) - (a.rating || 0);'
+                return (b.rating || 0) - (a.rating || 0);
             case 'ai-match':
-                return (b.aiScore || 0) - (a.aiScore || 0);'
+                return (b.aiScore || 0) - (a.aiScore || 0);
             case 'a-z':
-                return a.title.localeCompare(b.title);'
+                return a.title.localeCompare(b.title);
             case 'z-a':
                 return b.title.localeCompare(a.title);
             default:
@@ -90,7 +105,7 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">"
                   <div className="flex items-center">'"
                     {selectedSort === 'a-z' ? (<ArrowDownAZ className="mr-2 h-4 w-4"/>) : selectedSort === 'z-a' ? (<ArrowUpZA className="mr-2 h-4 w-4"/>) : null}
-                    <span>'
+                    <span>
                       {sortOptions.find(option => option.value === selectedSort)?.label || 'Sort By'}
                     </span>
                   </div>
@@ -106,7 +121,7 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">"
                   <div className="flex items-center">"
                     <Filter className="mr-2 h-4 w-4"/>
-                    <span>'
+                    <span>
                       {filterOptions.find(option => option.value === selectedFilter)?.label || 'Filter'}
                     </span>
                   </div>
@@ -137,6 +152,7 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
               <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>"
               <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>"
               <Button variant="outline" onClick={() => {
+
 "
                 setSearchQuery("");"
                 setSelectedFilter(filterOptions[0].value)}} className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">

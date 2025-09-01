@@ -1,7 +1,4 @@
-import React from 'react';
-import { LoginForm } from "./LoginForm";
-;
-export function LoginContent(...args[]):  {
+;export function LoginContent(...args[]):  {
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple flex items-center justify-center p-4">"
@@ -12,7 +9,7 @@ export function LoginContent(...args[]):  {
         </div>
 "
         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 shadow-2xl">
-          <LoginForm />
+          <LoginForm  />
         </div>
 "
         <div className="text-center mt-6">"
@@ -25,6 +22,5 @@ export function LoginContent(...args[]):  {
         </div>;
       </div>;
     </div>;
-  );
-}
+  )}
 '"

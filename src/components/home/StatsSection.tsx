@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react.ts';'
-import { motion, useInView  } from 'framer-motion.ts';'
-import { useRef  } from 'react.ts';'
-import { TrendingUp, Award, Users, Clock  } from 'lucide-react';
+<<<<<<< HEAD
 
 interface Stat {
+
   number: string;
   label: string;
   description: string;
@@ -18,35 +16,28 @@ interface StatsSectionProps extends React.PropsWithChildren<{}> {
 
 const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
 
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
   const [counts, setCounts] = useState<any>({});
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   useEffect(() => {
+
     if (isInView) {
-'
-      const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, ''));'
-          const suffix = stat.number.replace(/[0-9]/g, '');
 
           let current = 0;
-          const increment = targetNumber / 50;
-
+          
           const countTimer = setInterval(: unknown {
-            current += increment;
-            if (current >= targetNumber) {
+
+            current += increment;            if (current >= targetNumber) {
 
               current = targetNumber;
-              clearInterval(countTimer);
-            }
+              clearInterval(countTimer)}
 
             setCounts(prev => ({
 
               ...prev,
               [stat.label]: Math.floor(current)
-            }));
-          }, 50);
-        });
-      }, 500);
+            }))}, 50)})}, 500);
 
       return : unknown clearTimeout(timer)}
   }, [isInView, stats]);
@@ -59,23 +50,13 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
           initial = {
 
   { opacity: 0,
-  y: 30 
-
-
-
-
-
+  y: 30
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }}
           transition={{ duration: 0.8 }}
@@ -97,46 +78,26 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
               initial = {
 
   { opacity: 0,
-  y: 30 
-
-
-
-
-
+  y: 30
 
 }}
               whileInView = {
 
   { opacity: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }}
               transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
+  delay: index * 0.1
 
 }}
               viewport={{ once: true }}
               whileHover={{
 
                 y: -8,
-  transition: { duration: 0.3 
-
-
-
-
-
+  transition: { duration: 0.3
 
 }
               }}
@@ -159,17 +120,12 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
                 transition = {
 
   { duration: 0.5,
-  delay: index * 0.1 + 0.5 
-
-
-
-
-
+  delay: index * 0.1 + 0.5
 
 }}
                 viewport={{ once: true }}
 
-                {counts[stat.label] || 0}'
+                {counts[stat.label] || 0}
                 {stat.number.includes('%') ? '%' : stat.number.includes('+') ? '+' : ''}
               </motion.div>
 "
@@ -188,7 +144,6 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
         </div>;
       </div>;
     </section>;
-  );
-};
+  )};
 
-export default StatsSection;}}}}}'"`
+export default StatsSection}}}}}'"`

@@ -1,0 +1,286 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import {
+  Cloud,
+  Server,
+  Database,
+  Shield,
+  Zap,
+  Globe,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  MonitorSpeaker
+} from 'lucide-react';
+
+const CloudServices = () => {
+  const cloudServices = [
+    {
+      title: "Cloud DevOps Automation",
+      description: "Streamlined CI/CD pipelines and infrastructure automation for faster deployments",
+      path: "/services/cloud-devops",
+      icon: Zap,
+      featured: true,
+      tags: ["DevOps", "Automation", "CI/CD"]
+    },
+    {
+      title: "Digital Transformation",
+      description: "End-to-end digital transformation services for modern enterprises",
+      path: "/services/digital-transformation",
+      icon: Globe,
+      tags: ["Transformation", "Modernization", "Enterprise"]
+    },
+    {
+      title: "FinOps Optimization",
+      description: "Cloud financial operations and cost optimization strategies",
+      path: "/services/cloud-finops-optimizer",
+      icon: Database,
+      tags: ["FinOps", "Cost Optimization", "Financial Management"]
+    },
+    {
+      title: "IoT Edge Computing",
+      description: "Edge computing solutions for IoT devices and real-time processing",
+      path: "/services/iot-edge-computing",
+      icon: MonitorSpeaker,
+      tags: ["IoT", "Edge Computing", "Real-time"]
+    },
+    {
+      title: "Green IT Solutions",
+      description: "Sustainable cloud infrastructure and energy-efficient computing",
+      path: "/services/green-it",
+      icon: Shield,
+      tags: ["Sustainability", "Green Tech", "Energy Efficiency"]
+    },
+    {
+      title: "Micro SaaS Platform",
+      description: "Scalable micro-service architecture for SaaS applications",
+      path: "/services/micro-saas-solutions",
+      icon: Server,
+      tags: ["SaaS", "Microservices", "Scalability"]
+    }
+  ];
+
+  const benefits = [
+    { metric: "99.9%", label: "Uptime SLA" },
+    { metric: "60%", label: "Cost Reduction" },
+    { metric: "10x", label: "Faster Deployment" },
+    { metric: "24/7", label: "Monitoring" }
+  ];
+
+  const features = [
+    {
+      icon: Cloud,
+      title: "Multi-Cloud Strategy",
+      description: "Deploy across AWS, Azure, GCP with unified management"
+    },
+    {
+      icon: Shield,
+      title: "Security First",
+      description: "Enterprise-grade security with compliance certifications"
+    },
+    {
+      icon: Zap,
+      title: "Auto-Scaling",
+      description: "Intelligent scaling based on demand and performance metrics"
+    },
+    {
+      icon: Database,
+      title: "Data Management",
+      description: "Comprehensive data backup, recovery, and migration services"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24">
+      {/* Hero Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <Cloud className="w-12 h-12 text-cyan-400" />
+              <h1 className="text-5xl md:text-6xl font-bold">
+                Cloud & DevOps
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
+                  {' '}Services
+                </span>
+              </h1>
+            </div>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Accelerate your digital transformation with our comprehensive cloud solutions, 
+              DevOps automation, and modern infrastructure management services.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 px-4 bg-black/20">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
+                  {benefit.metric}
+                </div>
+                <div className="text-gray-300">{benefit.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-6">Cloud Infrastructure Features</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Enterprise-grade cloud solutions designed for scalability, security, and performance
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center hover:border-cyan-400/50 transition-all duration-300"
+              >
+                <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-20 px-4 bg-black/20">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-6">Our Cloud Solutions</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive cloud services to modernize your infrastructure and accelerate growth
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cloudServices.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 relative ${
+                  service.featured ? 'ring-2 ring-cyan-400/30' : ''
+                }`}
+              >
+                {service.featured && (
+                  <div className="absolute -top-3 left-6">
+                    <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
+                      <Star className="w-3 h-3" />
+                      Featured
+                    </span>
+                  </div>
+                )}
+
+                <service.icon className="w-12 h-12 text-cyan-400 mb-6" />
+                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {service.tags.map((tag, tagIndex) => (
+                    <span
+                      key={tagIndex}
+                      className="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-sm"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <Link
+                  to={service.path}
+                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-semibold"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-4xl text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold mb-6">
+              Ready to Move to the Cloud?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Let our cloud experts design and implement a scalable, secure, 
+              and cost-effective cloud strategy for your organization.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
+              >
+                Get Cloud Assessment
+              </motion.button>
+              <Link to="/contact">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                >
+                  Contact Us
+                </motion.button>
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default CloudServices;

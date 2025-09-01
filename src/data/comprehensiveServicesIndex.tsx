@@ -13,15 +13,20 @@ export type { EmergingTechService } from "./emergingTechServices2025";
 export { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from "./ultimateMicroSaasServices2025";"
 export type { UltimateMicroSaasService } from "./ultimateMicroSaasServices2025";
 
+:src/data/comprehensiveServicesIndex.tsx
 // Combined Services Array;
-export const ALL_COMPREHENSIVE_SERVICES = [;
+export 
+// Combined Services Array
+export 
   ...EXPANDED_INNOVATIVE_SERVICES_2025,;
   ...EMERGING_TECH_SERVICES_2025,;
   ...ULTIMATE_MICRO_SAAS_SERVICES_2025;
 ];
 
+:src/data/comprehensiveServicesIndex.tsx
 // Service Categories;
-export const SERVICE_CATEGORIES = [
+export 
+=======
   'AI & Analytics','
   'AI & Customer Experience','
   'AI & Supply Chain','
@@ -42,102 +47,139 @@ export const SERVICE_CATEGORIES = [
   'Synthetic Biology',;'
   'Brain-Computer Interface',;'
   'Sustainability & Energy',;'
+// Service Categories
+export 
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+  'Neuromorphic Computing',;
+  'Digital Twin & Simulation',;
+  'Synthetic Biology',;
+  'Brain-Computer Interface',;
+  'Sustainability & Energy',;
   'Autonomous Vehicles & Fleet Management';
 ];
 
 // Innovation Levels
+<<<<<<< HEAD
+export 
+=======
+:src/data/comprehensiveServicesIndex.tsx
 export const INNOVATION_LEVELS = [;'
   'Cutting-edge',;'
   'Advanced',;'
+export 
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+  'Cutting-edge',;
+  'Advanced',;
   'Professional';
 ];
 
 // Support Levels
+<<<<<<< HEAD
+export 
+=======
+:src/data/comprehensiveServicesIndex.tsx
 export const SUPPORT_LEVELS = [;'
   'enterprise',;'
   'professional',;'
+export 
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+  'enterprise',;
+  'professional',;
   'basic';
 ];
 
 // Pricing Models
+<<<<<<< HEAD
+export 
+  'monthly',;
+  'annual',;
+  'one-time',;
+=======
+:src/data/comprehensiveServicesIndex.tsx
 export const PRICING_MODELS = [;'
   'monthly',;'
   'annual',;'
   'one-time',;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   'usage-based';
 ];
 
 // Contact Information;
-export const CONTACT_INFO = {
-'
-  phone: '+1 302 464 0950','
-  email: 'kleber@ziontechgroup.com','
-  website: 'https://ziontechgroup.com','
-  address: '364 E Main St STE 1008,;
+export 
+export 
+  'monthly',;
+  'annual',;
+  'one-time',;
+  'usage-based';
+];
+
+// Contact Information
+export 
   ;
   ;
   ;
-  ;'
+  ;
+<<<<<<< HEAD
   Middletown DE 19709';
 ;
 
-
-
-
-
-
 };
+=======
+  Middletown DE 19709'};
+>>>>>>> main
 
+:src/data/comprehensiveServicesIndex.tsx
 // Service Statistics;
-export const SERVICE_STATS = {
-
-  totalServices: ALL_COMPREHENSIVE_SERVICES.length,
-  categories: SERVICE_CATEGORIES.length,
-  innovationLevels: INNOVATION_LEVELS.length,
-  supportLevels: SUPPORT_LEVELS.length,;
+export 
+// Service Statistics
+export 
   ;
   ;
   ;
   ;
-  pricingModels: PRICING_MODELS.length;
-;
+  pricingModels: PRICING_MODELS.length};
 
-
-
-
-
-
-};
-
+:src/data/comprehensiveServicesIndex.tsx
 // Helper Functions;
-export const getServicesByCategory = (...args: unknown[]): unknown => {;
-  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category);
+export 
+  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category)};
+;
+export 
+  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level)};
+
+<<<<<<< HEAD
+=======
+export 
+>>>>>>> main
 };
 ;
-export const getServicesByInnovationLevel = (...args: unknown[]): unknown => {;
-  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level);
-};
-
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-
-  return ALL_COMPREHENSIVE_SERVICES.filter(service =>
-    service.price >= minPrice && service.price <= maxPrice
-  );
-};
-;
-export const getServicesByTags = (...args: unknown[]): unknown => {;
+export 
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>;
     tags.some(tag => service.tags.includes(tag));
-  );
-};
+  )};
 ;
-export const searchTerm = query.toLowerCase();
+export 
+// Helper Functions
+export 
+  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category)};
+
+export 
+  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level)};
+
+export 
+};
+
+export 
+  return ALL_COMPREHENSIVE_SERVICES.filter(service =>;
+    tags.some(tag => service.tags.includes(tag));
+  )};
+
+export 
   return ALL_COMPREHENSIVE_SERVICES.filter(service = >;
     service.title.toLowerCase().includes(searchTerm) ||;
     service.description.toLowerCase().includes(searchTerm) ||;
     service.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||;
     service.category.toLowerCase().includes(searchTerm);
-  );
-};
+  )};
 
 export default ALL_COMPREHENSIVE_SERVICES;'"

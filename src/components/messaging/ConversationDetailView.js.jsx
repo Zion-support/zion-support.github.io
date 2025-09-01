@@ -1,36 +1,40 @@
-import React, { useState, useEffect, useRef } from 'react';'
-import { format } from 'date-fns';'
-import { MessageSquare } from 'lucide-react';'
-import { useMessaging } from '@/context/MessagingContext';'
-import { Button } from '@/components/ui/button';'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';'
-import { AspectRatio } from '@/components/ui/aspect-ratio';'
+import React, { useState, useEffect, useRef } from 'react';
+import { format } from 'date-fns';
+import { MessageSquare } from 'lucide-react';
+import { useMessaging } from '@/context/MessagingContext';
+import { Button } from '@/components/ui/button';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { useAuth } from '@/hooks/useAuth';
 import { MessageBubble } from "./MessageBubble";"
 import { DateDivider } from "./DateDivider";
 export function ConversationDetailView() {
+
     const { user } = useAuth();
-    const { activeConversation, activeMessages, sendMessage, loadMessages } = useMessaging();'
+    const { activeConversation, activeMessages, sendMessage, loadMessages } = useMessaging();
     const [messageText, setMessageText] = useState('');
     const messagesEndRef = useRef(null);
     useEffect(() => {
+
         if (activeConversation) {
 
             loadMessages(activeConversation.id)}
     }, [activeConversation?.id, loadMessages]);
     useEffect(() => {
+
         scrollToBottom()}, [activeMessages]);
     const scrollToBottom = () => {
-'
+
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};
     const handleSendMessage = async (e) => {
 
         e.preventDefault();
         if (!messageText.trim() || !activeConversation)
             return;
-        await sendMessage(activeConversation.id, messageText);'
+        await sendMessage(activeConversation.id, messageText);
         setMessageText('')};
     if (!activeConversation) {
+
 "
         return (<div className="flex-1 flex flex-col items-center justify-center p-8">"
         <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4"/>"
@@ -42,8 +46,8 @@ export function ConversationDetailView() {
     // Group messages by date
     const groupedMessages = [];
     activeMessages.forEach(message => {
-'
-        const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');
+
+        const messageDate = format(new Date(message.created_at),yyyy-MM-dd');
         const existingGroup = groupedMessages.find(group => group.date === messageDate);
         if (existingGroup) {
 
@@ -72,7 +76,7 @@ export function ConversationDetailView() {
             <div className="font-medium text-white">
               {activeConversation.other_user.name}
             </div>"
-            <div className="text-xs text-zion-slate">'
+            <div className="text-xs text-zion-slate">
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' :'
             activeConversation.other_user.user_type === 'employer' ? 'Employer' :'
                 activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
@@ -90,7 +94,7 @@ export function ConversationDetailView() {
                 </AspectRatio>
               </div>)}
             <div>"
-              <div className="font-medium text-white mb-1">'
+              <div className="font-medium text-white mb-1">
                 {activeConversation.context_type === 'job' ? 'Regarding Job:' :'
                 activeConversation.context_type === 'talent' ? 'Regarding Talent:' :'
                     'Regarding:'}

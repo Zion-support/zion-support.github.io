@@ -1,18 +1,18 @@
-import React, { useState } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { usePerformance } from '@/hooks/usePerformance';'
-import { Button } from '@/components/ui/button';'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';'
-import { Badge } from '@/components/ui/badge';'
-import Activity from 'lucide-react/dist/esm/icons/activity';'
-import Clock from 'lucide-react/dist/esm/icons/clock';'
-import MousePointer from 'lucide-react/dist/esm/icons/mouse-pointer';'
-import Eye from 'lucide-react/dist/esm/icons/eye';'
-import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';'
-import BarChart3 from 'lucide-react/dist/esm/icons/bar-chart-3';'
-import RefreshCw from 'lucide-react/dist/esm/icons/refresh-cw';'
-import X from 'lucide-react/dist/esm/icons/x';'
-import Info from 'lucide-react/dist/esm/icons/info';'
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { usePerformance } from '@/hooks/usePerformance';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import Activity from 'lucide-react/dist/esm/icons/activity';
+import Clock from 'lucide-react/dist/esm/icons/clock';
+import MousePointer from 'lucide-react/dist/esm/icons/mouse-pointer';
+import Eye from 'lucide-react/dist/esm/icons/eye';
+import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
+import BarChart3 from 'lucide-react/dist/esm/icons/bar-chart-3';
+import RefreshCw from 'lucide-react/dist/esm/icons/refresh-cw';
+import X from 'lucide-react/dist/esm/icons/x';
+import Info from 'lucide-react/dist/esm/icons/info';
 import { cn } from '@/lib/utils';
 export function PerformanceDashboard({
 
@@ -23,15 +23,15 @@ export function PerformanceDashboard({
   const { metrics, observers, performanceScore, logMetrics } = usePerformance();
   const [isExpanded, setIsExpanded] = useState(showDetails);
   const getScoreColor = score => {
-'
-    if (score >= 90) return 'text-green-500';'
-    if (score >= 70) return 'text-yellow-500';'
+
+    if (score >= 90) return 'text-green-500';
+    if (score >= 70) return 'text-yellow-500';
     return 'text-red-500';
   };
   const getScoreEmoji = score => {
-'
-    if (score >= 90) return '🚀';'
-    if (score >= 70) return '⚠️';'
+
+    if (score >= 90) return '🚀';
+    if (score >= 70) return '⚠️';
     return '🐌';
   };
   const getMetricIcon = metricName => {
@@ -50,19 +50,19 @@ export function PerformanceDashboard({
   const getMetricDescription = metricName => {
 
     const descriptions = {
-'
-      FCP: 'First Contentful Paint - Time to first content','
-      LCP: 'Largest Contentful Paint - Time to largest content','
-      FID: 'First Input Delay - Time to first interaction','
-      CLS: 'Cumulative Layout Shift - Visual stability','
-      TTFB: 'Time to First Byte - Server response time','
-      DOMLOAD: 'DOM Content Loaded - DOM ready time','
-      WINDOWLOAD: 'Window Load - Full page load time'};'
+
+      FCP: 'First Contentful Paint - Time to first content',
+      LCP: 'Largest Contentful Paint - Time to largest content',
+      FID: 'First Input Delay - Time to first interaction',
+      CLS: 'Cumulative Layout Shift - Visual stability',
+      TTFB: 'Time to First Byte - Server response time',
+      DOMLOAD: 'DOM Content Loaded - DOM ready time',
+      WINDOWLOAD: 'Window Load - Full page load time'};
     return descriptions[metricName] || 'Performance metric';
   };
   const formatMetricValue = (metricName, value) => {
-'
-    if (metricName === 'CLS') return value.toFixed(3);'
+
+    if (metricName === 'CLS') return value.toFixed(3);
     if (metricName === 'FID') return `${value.toFixed(0)}ms`;`
     return `${value.toFixed(0)}ms`;
   };
@@ -82,7 +82,7 @@ export function PerformanceDashboard({
             </CardTitle>"
             <div className="flex items-center gap-2">
               <Button"
-                variant="ghost""
+                variant="ghost"
                 size="sm"
                 onClick={() => setIsExpanded(!isExpanded)}"
                 className="p-1 h-8 w-8 text-zion-slate-light hover:text-zion-cyan"
@@ -91,7 +91,7 @@ export function PerformanceDashboard({
               </Button>
               {onClose && (
                 <Button"
-                  variant="ghost""
+                  variant="ghost"
                   size="sm"
                   onClick={onClose}"
                   className="p-1 h-8 w-8 text-zion-slate-light hover:text-zion-cyan"
@@ -117,7 +117,7 @@ export function PerformanceDashboard({
               <span className="text-lg">{getScoreEmoji(performanceScore)}</span>
             </div>
             <Button"
-              variant="ghost""
+              variant="ghost"
               size="sm"
               onClick={logMetrics}"
               className="text-zion-cyan hover:text-zion-cyan-light"
@@ -130,7 +130,7 @@ export function PerformanceDashboard({
         <AnimatePresence>
           {isExpanded && (
             <motion.div
-              initial={{ height: 0, opacity: 0 }}'
+              initial={{ height: 0, opacity: 0 }}
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3 }}
@@ -158,7 +158,7 @@ export function PerformanceDashboard({
                         </span>
                         <Badge
                           variant={
-'
+
                             rating === 'good''
                               ? 'default''
                               : rating === 'needs-improvement''
@@ -166,7 +166,7 @@ export function PerformanceDashboard({
                                 : 'destructive'
                           }
                           className={cn('
-                            'text-xs','
+                            'text-xs',
                             rating === 'good''
                               ? 'bg-green-500/20 text-green-400 border-green-500/30''
                               : rating === 'needs-improvement''

@@ -16,8 +16,10 @@ import { useInterviews } from "@/hooks/useInterviews";
 const formSchema = z.object({
 
     date: z.date({
+
 "
         required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {
+
 "
         message: "Interview date must be in the future"
     }),"
@@ -46,6 +48,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
         if (!userDetails?.id) {
 
             toast({
+
 "
                 title: "Authentication required","
                 description: "Please log in to schedule an interview","
@@ -53,8 +56,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
             return}
         setIsSubmitting(true);
         try {
+
             // Combine date and time`
-            const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`;
+            const dateTimeString = `${format(values.date,yyyy-MM-dd')}T${values.time}:00`;
             const scheduledDate = new Date(dateTimeString);
             // Calculate end time based on duration
             const durationMinutes = parseInt(values.duration);
@@ -71,14 +75,17 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 title: values.title
             });
             toast({
+
 "
                 title: "Interview requested",`
                 description: `Your interview request with ${talent.full_name} has been sent.`});
             onClose()}
         catch (error) {
+
 "
-            // // // // // // // // console.error("Failed to schedule interview:", error);
+            // // // // // // // // // // console.error("Failed to schedule interview:", error);
             toast({
+
 "
                 title: "Failed to schedule interview","
                 description: "An error occurred while scheduling the interview. Please try again.","
@@ -120,10 +127,15 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                   <PopoverTrigger asChild>
                     <FormControl>"
                       <Button variant="outline" className = {
+
 "
   cn("w-full pl-3 text-left font-normal","
   !field.value && "text-muted-foreground")
 
+<<<<<<< HEAD
+}>
+                        {field.value ? (format(field.value, "PPP")) : (<span>Pick a date</span>)}
+=======
 
 
 
@@ -131,6 +143,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
 
 }>"
                         {field.value ? (format(field.value, "PPP")) : (<span>Pick a date</span>)}"
+>>>>>>> main
                         <CalendarIcon className="ml-auto h-4 w-4 opacity-50"/>
                       </Button>
                     </FormControl>
@@ -141,11 +154,14 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
   (date) => date < new Date() || date > addDays(new Date(),
   90)
 
+<<<<<<< HEAD
+=======
 
 
 
 
 "
+>>>>>>> main
 } initialFocus className="p-3 pointer-events-auto"/>
                   </PopoverContent>
                 </Popover>

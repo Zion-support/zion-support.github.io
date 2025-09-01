@@ -1,6 +1,6 @@
-import { Card, CardContent } from '@/components/ui/card';'
-import { Badge } from '@/components/ui/badge';'
-import { AspectRatio } from '@/components/ui/aspect-ratio';'
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { FileText } from 'lucide-react';
 export function ProfileProjects({ projects }) {
 
@@ -40,7 +40,7 @@ export function ProfileProjects({ projects }) {
                   {project.tags.map((tag, i) => (
                     <Badge
                       key={i}"
-                      variant="outline""
+                      variant="outline"
                       className="text-xs border-zion-slate-dark text-zion-slate-light"
                     >
                       {tag}

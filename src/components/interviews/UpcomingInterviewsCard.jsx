@@ -8,21 +8,25 @@ import { Link } from 'react-router-dom';"
 import { Calendar, Clock, Video } from "lucide-react";"
 import { Avatar } from "@/components/ui/avatar";
 export function UpcomingInterviewsCard() {
+
     const { fetchInterviews } = useInterviews();
     const [upcomingInterviews, setUpcomingInterviews] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
+
         const loadInterviews = async () => {
+
             setIsLoading(true);
             try {
+
                 const interviews = await fetchInterviews();
                 // Filter for confirmed interviews in the future
-                const upcoming = interviews;'
+                const upcoming = interviews;
                     .filter(interview => interview.status === 'confirmed' &&
                     !isPast(parseISO(interview.scheduled_date)))
                     .sort((a, b) => parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime())
                     .slice(0, 3); // Take only the next 3 interviews"
-                // // // // // // // // console.error("Error loading upcoming interviews:", error);
+                // // // // // // // // // // console.error("Error loading upcoming interviews:", error);
             }
             finally {
 
@@ -30,14 +34,16 @@ export function UpcomingInterviewsCard() {
 
                 setUpcomingInterviews(upcoming)}
             catch (error) {
+
 "
-                // console.error("Error loading upcoming interviews:", error)}
+                // // // console.error("Error loading upcoming interviews:", error)}
             finally {
 
                 setIsLoading(false)}
         };
         loadInterviews()}, []);
     if (isLoading) {
+
 "
         return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">
         <CardHeader>"
@@ -59,6 +65,7 @@ export function UpcomingInterviewsCard() {
         </CardContent>
       </Card>)}
     if (upcomingInterviews.length === 0) {
+
 "
         return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">
         <CardHeader>"
@@ -88,8 +95,8 @@ export function UpcomingInterviewsCard() {
         <div className="space-y-4">
           {upcomingInterviews.map(interview => {
 
-            const interviewDate = parseISO(interview.scheduled_date);'
-            const formattedTime = format(interviewDate, 'h:mm a');
+            const interviewDate = parseISO(interview.scheduled_date);
+            const formattedTime = format(interviewDate,h:mm a');
             // Determine if interview is happening soon (within 30 minutes)
             const now = new Date();
             const isStartingSoon = interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&

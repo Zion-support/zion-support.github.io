@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 export default function ExpensiveComponent() {
+
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
+
     // Simulate expensive computation
     const timer = setTimeout(() => {
+
       const expensiveData = Array.from()
         { length: 10000 },
         (_, i) => Math.sqrt(i) * Math.PI * Math.random()
@@ -28,7 +31,7 @@ export default function ExpensiveComponent() {
       <h3 className="text-xl font-semibold text-zion-slate-light">
         Expensive Component Loaded
       </h3>"
-      <p className="text-zion-slate text-sm">'
+      <p className="text-zion-slate text-sm">
         This component was lazy loaded and contains{' '}
         {data.length.toLocaleString()} computed values.
       </p>"

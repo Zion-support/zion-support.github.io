@@ -1,4 +1,5 @@
 export interface UltimateInnovativeService {
+
   id: string;
   title: string;
   description: string;
@@ -33,7 +34,14 @@ contactInfo: {
   competitors?: string[];
   caseStudies?: string[]}
 ;
-export const SERVICE_CATEGORIES = [
+export 
+  'IoT & Edge Computing',;
+  'Metaverse & AR/VR',;
+  'Robotics & Automation',;
+  'Biotechnology',;
+  'Space Technology',;
+  'Green Technology';
+=======
   'AI & Automation','
   'Quantum Computing','
   'Blockchain & Web3','
@@ -42,9 +50,8 @@ export const SERVICE_CATEGORIES = [
   'Metaverse & AR/VR',;'
   'Robotics & Automation',;'
   'Biotechnology',;'
-  'Space Technology',;'
-  'Green Technology';
+  'Space Technology',;'  'Green Technology';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 ;
 export const SERVICE_SUBCATEGORIES = {
-'

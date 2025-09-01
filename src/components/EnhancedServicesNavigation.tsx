@@ -1,21 +1,14 @@
-import React, { useState } from 'react.ts';'
-import { Link  } from 'react-router-dom.ts';'
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-
+<<<<<<< HEAD
 
 const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
   const [isOpen, setIsOpen] = useState (false) ;
-  const [activeCategory, setActiveCategory] = useState < any> (null) ;
+  const [activeCategory, setActiveCategory] = useState<any> (null) ;
 
-  const serviceCategories = [
-    {
-
-      name: "AI-Powered Micro SAAS","
-      description: "Cutting-edge AI solutions","
-      icon: "🤖","
-      color: "from-blue-600 to-purple-600",
-      services[;
+  
         {
+
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 "
           title: "Code Review & Security","
           url: "/services/ai-code-review-security","
@@ -23,6 +16,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
           pricing: "From $49/month"
         },
         {
+
 "
           title: "Customer Experience Analytics","
           url: "/services/ai-customer-experience-analytics","
@@ -30,6 +24,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
           pricing: "From $299/month"
         },
         {
+
 "
           title: "DevOps Automation","
           url: "/services/ai-devops-automation-platform","
@@ -37,6 +32,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
           pricing: "From $199/month"
         },
         {
+
 "
           title: "IoT Edge Computing","
           url: "/services/ai-iot-edge-computing-platform","
@@ -46,6 +42,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
       ]
     },;
     {
+
 "
       name: "Cloud & Infrastructure","
       description: "Enterprise solutions","
@@ -53,6 +50,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
       color: "from-green-600 to-blue-600",
       services[;
         {
+
 "
           title: "Cloud DevOps","
           url: "/services/cloud-devops","
@@ -60,6 +58,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
           pricing: "Custom pricing"
         },
         {
+
 "
           title: "IT Infrastructure","
           url: "/services/it-infrastructure","
@@ -67,6 +66,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
           pricing: "Custom pricing"
         },
         {
+
 "
           title: "Digital Twin","
           url: "/services/digital-twin","
@@ -76,6 +76,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
       ]
     },;
     {
+
 "
       name: "Data & Analytics","
       description: "Business intelligence","
@@ -83,6 +84,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
       color: "from-purple-600 to-pink-600",
       services[;
         {
+
 "
           title: "Data Analytics","
           url: "/services/data-analytics","
@@ -90,6 +92,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
           pricing: "Custom pricing"
         },
         {
+
 "
           title: "AI Business Intelligence","
           url: "/services/ai-business-intelligence","
@@ -97,6 +100,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
           pricing: "Custom pricing"
         },
         {
+
 "
           title: "IoT Edge","
           url: "/services/iot-edge","
@@ -106,6 +110,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
       ]
     },;
     {
+
 "
       name: "Security & Compliance","
       description: "Enterprise security","
@@ -113,6 +118,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
       color: "from-red-600 to-orange-600",
       services[;
         {
+
 "
           title: "Zero Trust Architecture","
           url: "/services/zero-trust-network-architecture","
@@ -120,6 +126,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
           pricing: "Custom pricing"
         },
         {
+
 "
           title: "Cybersecurity Suite","
           url: "/services/ai-cybersecurity-suite","
@@ -127,46 +134,15 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
           pricing: "Custom pricing"
         },
         {
+
 "
           title: "Compliance Assistant","
           url: "/services/ai-compliance-assistant","
           description: "AI-powered compliance","
           pricing: "Custom pricing"
         }
-      ];
-    };
-  ];
-
-  const quickLinks = [
-    {
-"
-      title: "AI Services Showcase","
-      url: "/ai-services-showcase","
-      description: "Explore our AI solutions","
-      icon: "🚀"
-    },
-    {
-"
-      title: "Comprehensive Services","
-      url: "/comprehensive-services","
-      description: "View all services","
-      icon: "📋"
-    },
-    {
-"
-      title: "Pricing Guide","
-      url: "/pricing","
-      description: "Transparent pricing","
-      icon: "💰"
-    },
-    {
-"
-      title: "Contact Sales","
-      url: "/contact","
-      description: "Get expert advice","
-      icon: "📞";
-    };
-  ];
+      ]};
+  ]};  ];
 
   return ("
     <div className = "relative">
@@ -193,19 +169,19 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
             initial = {
 
   { opacity: 0, y: -10,
-  scale: 0.95 
+  scale: 0.95
 
 }}
             animate = {
 
   { opacity: 1, y: 0,
-  scale: 1 
+  scale: 1
 
 }}
             exit = {
 
   { opacity: 0, y: -10,
-  scale: 0.95 
+  scale: 0.95
 
 }}
             transition={{ duration: 0.2 }}"
@@ -230,19 +206,19 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
                     initial = {
 
   { opacity: 0,
-  x: categoryIndex % 2 === 0 ? -20 : 20 
+  x: categoryIndex % 2 === 0 ? -20 : 20
 
 }}
                     animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                     transition = {
 
   { duration: 0.3,
-  delay: categoryIndex * 0.1 
+  delay: categoryIndex * 0.1
 
 }}"
                     className="relative group"
@@ -257,27 +233,33 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
                           <p className="text-sm opacity-90">{category.description}</p>
                         </div>
                       </div>
+<<<<<<< HEAD
+
+                      <div role="button" className="space - y-2">
+                        {category.services.map ( (service, serviceIndex) => (<motion.div
+=======
                       "
                       <div className="space-y-2">
                         {category.services.map((service, serviceIndex) => (
                           <motion.div
+>>>>>>> main
                             key={service.title}
                             initial = {
 
   { opacity: 0,
-  x: -10 
+  x: -10
 
 }}
                             animate = {
 
   { opacity: 1,
-  x: 0 
+  x: 0
 
 }}
                             transition = {
 
   { duration: 0.2,
-  delay: serviceIndex * 0.05 
+  delay: serviceIndex * 0.05
 
 }}"
                             className="flex items-center justify-between p-2 rounded bg-white/20 hover:bg-white/30 transition-colors duration-200"
@@ -307,19 +289,19 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
                       initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 20
 
 }}
                       animate = {
 
   { opacity: 1,
-  y: 0 
+  y: 0
 
 }}
                       transition = {
 
   { duration: 0.3,
-  delay: index * 0.1 
+  delay: index * 0.1
 
 }}
                     >

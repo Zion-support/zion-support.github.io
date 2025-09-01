@@ -1,4 +1,4 @@
-import { TalentCard } from '@/components/talent/TalentCard';'
+import { TalentCard } from '@/components/talent/TalentCard';
 import { TalentSkeleton } from '@/components/talent/TalentSkeleton';
 export function TalentGrid({
 

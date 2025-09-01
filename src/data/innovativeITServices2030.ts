@@ -2,13 +2,14 @@
 // Cutting-edge IT infrastructure, cloud, and digital transformation services
 
 export interface ITServiceContact {
+
   phone: string;
   email: string;
   website: string;
-  address: string;
-}
+  address: string}
 
 export interface InnovativeITService {
+
   id: number;
   name: string;
   category: string;
@@ -34,11 +35,11 @@ export interface InnovativeITService {
   growthRate: string;
   useCases: string[];
   compliance: string[];
-  supportLevel: string;
-}
+  supportLevel: string}
 
 // Zion Tech Group Contact Information
 const zionContact: ITServiceContact = {
+
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
@@ -48,6 +49,7 @@ const zionContact: ITServiceContact = {
 // Innovative IT Services 2030
 export const innovativeITServices2030: InnovativeITService[] = [
   {
+
     id: 1,
     name: "Quantum-Enhanced Cloud Infrastructure & DevOps Platform",
     category: "Cloud & DevOps",
@@ -105,6 +107,7 @@ export const innovativeITServices2030: InnovativeITService[] = [
     supportLevel: "24/7 premium support"
   },
   {
+
     id: 2,
     name: "AI-Powered Digital Twin & IoT Integration Platform",
     category: "IoT & Digital Twins",
@@ -162,6 +165,7 @@ export const innovativeITServices2030: InnovativeITService[] = [
     supportLevel: "24/7 technical support"
   },
   {
+
     id: 3,
     name: "Zero-Trust Cybersecurity Architecture & Implementation",
     category: "Cybersecurity",
@@ -219,6 +223,7 @@ export const innovativeITServices2030: InnovativeITService[] = [
     supportLevel: "24/7 security operations center"
   },
   {
+
     id: 4,
     name: "Edge Computing & 5G Network Infrastructure Solutions",
     category: "Edge Computing & 5G",
@@ -276,6 +281,7 @@ export const innovativeITServices2030: InnovativeITService[] = [
     supportLevel: "24/7 network support"
   },
   {
+
     id: 5,
     name: "Blockchain & Web3 Enterprise Integration Platform",
     category: "Blockchain & Web3",

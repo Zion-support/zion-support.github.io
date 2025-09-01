@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import {
 
+<<<<<<< HEAD
+import { useAnalytics } from '../hooks / useAnalytics';
+=======
+>>>>>>> main
+
   BarChart3,
   TrendingUp,
   Activity,
   Eye,
   Clock,
-  Target,'
-  RefreshCw} from 'lucide-react';'
+  Target,
+  RefreshCw} from 'lucide-react';
 import { useAnalytics } from '../hooks/useAnalytics';
 export const AnalyticsDashboard = ({
-'
+
   className = '',
   showRealTime = true,
   refreshInterval = 5000}) => {
@@ -29,19 +34,22 @@ export const AnalyticsDashboard = ({
     enablePerformanceTracking: true,
     enableUserBehaviorTracking: true,
     enableHeatmapTracking: false});
-  const [isExpanded, setIsExpanded] = useState(false);'
+  const [isExpanded, setIsExpanded] = useState(false);
   const [selectedTimeRange, setSelectedTimeRange] = useState('24h');
   const [analyticsSummary, setAnalyticsSummary] = useState(null);
   // Auto-refresh analytics data
   useEffect(() => {
+
     if (!showRealTime) return;
     const interval = setInterval(() => {
+
       updateAnalyticsSummary();
     }, refreshInterval);
     return () => clearInterval(interval);
   }, [showRealTime, refreshInterval]);
   // Update analytics summary
   const updateAnalyticsSummary = () => {
+
     const summary = getAnalyticsSummary();
     if (summary) {
 
@@ -50,22 +58,24 @@ export const AnalyticsDashboard = ({
   };
   // Update summary when events change
   useEffect(() => {
+
     updateAnalyticsSummary();
   }, [events, currentSession]);
   // Track dashboard interactions
   const handleDashboardInteraction = (action, metadata) => {
-'
-    trackEvent('dashboard', action, 'dashboard_interaction', null, metadata);
+
+    trackEvent('dashboard', action,dashboard_interaction', null, metadata);
   };
   // Track conversion goal
   const handleTrackConversion = () => {
-'
+
     trackConversion('dashboard_engagement', 1, {
 
       timeRange: selectedTimeRange});
   };
   // Get events by category for chart
   const getEventsByCategory = () => {
+
     if (!analyticsSummary?.eventsByCategory) return [];
     return Object.entries(analyticsSummary.eventsByCategory).map()
       ([category, count]) => ({
@@ -76,6 +86,7 @@ export const AnalyticsDashboard = ({
   };
   // Get performance score
   const getPerformanceScore = () => {
+
     if (!performanceMetrics) return 0;
     const score = 100;
     // Deduct points for poor performance
@@ -97,6 +108,7 @@ export const AnalyticsDashboard = ({
   };
   // Format number with K/M suffix
   const formatNumber = num => {
+
 `
     if (num >= 1000000) return `${(num / 1000000).toFixed(1)}M`;`
     if (num >= 1000) return `${(num / 1000).toFixed(1)}K`;
@@ -120,7 +132,7 @@ export const AnalyticsDashboard = ({
             >
               <div'`
                 className={`w-2 h-2 rounded-full ${isTracking ? 'bg-green-400' : 'bg-red-400'}`}
-              ></div>'
+              ></div>
               {isTracking ? 'Tracking' : 'Stopped'}
             </div>
 
@@ -129,7 +141,7 @@ export const AnalyticsDashboard = ({
               value={selectedTimeRange}
               onChange={e => {
 
-                setSelectedTimeRange(e.target.value);'
+                setSelectedTimeRange(e.target.value);
                 handleDashboardInteraction('time_range_changed', {
 
                   timeRange: e.target.value});
@@ -146,10 +158,10 @@ export const AnalyticsDashboard = ({
               onClick={() => setIsExpanded(!isExpanded)}"
               className="p-1 hover:bg-white/20 rounded transition-colors"
               aria-label={
-'
+
                 isExpanded ? 'Collapse dashboard' : 'Expand dashboard'
               }
-            >'
+            >
               {isExpanded ? '−' : '+'}
             </button>
           </div>
@@ -166,7 +178,7 @@ export const AnalyticsDashboard = ({
             </div>"
             <div className="text-2xl font-bold text-gray-900 dark:text-white">
               {analyticsSummary
-                ? formatDuration(analyticsSummary.sessionDuration)'
+                ? formatDuration(analyticsSummary.sessionDuration)
                 : 'N/A'}
             </div>"
             <div className="text-xs text-gray-600 dark:text-gray-400">
@@ -237,7 +249,7 @@ export const AnalyticsDashboard = ({
                 <div className="flex items-center gap-2">
                   <span`
                     className={`w-2 h-2 rounded-full ${
-'
+
                       event.category === 'interaction''
                         ? 'bg-blue-500''
                         : event.category === 'performance''
@@ -329,14 +341,15 @@ export const AnalyticsDashboard = ({
                   key={item.category}"
                   className="flex items-center justify-between"
                 >"
-                  <span className="text-green-700 dark:text-green-300 text-sm capitalize">'
-                    {item.category.replace('_', ' ')}
+                  <span className="text-green-700 dark:text-green-300 text-sm capitalize">
+                    {item.category.replace('_',)}
                   </span>"
                   <div className="flex items-center gap-2">"
                     <div className="w-16 bg-green-200 dark:bg-green-700 rounded-full h-2">
                       <div"
                         className="bg-green-500 h-2 rounded-full transition-all duration-300"
                         style={{
+
 `
                           width: `${(item.count / Math.max(...getEventsByCategory().map(e => e.count))) * 100}%`}}
                       ></div>
@@ -386,7 +399,7 @@ export const AnalyticsDashboard = ({
                   <span className="text-purple-700 dark:text-purple-300">
                     Referrer:
                   </span>"
-                  <span className="font-medium text-xs max-w-32 truncate">'
+                  <span className="font-medium text-xs max-w-32 truncate">
                     {currentSession.referrer || 'Direct'}
                   </span>
                 </div>
@@ -401,7 +414,7 @@ export const AnalyticsDashboard = ({
         <div className="flex gap-2">
           <button
             onClick={() => {
-'
+
               handleDashboardInteraction('refresh_clicked');
               updateAnalyticsSummary();
             }}"
@@ -413,7 +426,8 @@ export const AnalyticsDashboard = ({
 
           <button
             onClick={() => {
-              handleTrackConversion();'
+
+              handleTrackConversion();
               handleDashboardInteraction('conversion_tracked');
             }}"
             className="px-3 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2"

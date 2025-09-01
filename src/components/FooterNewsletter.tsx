@@ -1,14 +1,19 @@
-import React, { useState } from 'react.ts';'
-import { Mail, Send, CheckCircle  } from 'lucide-react';
-'
-      // // // // // // // // console.error('Newsletter subscription failed:', error);
+
+<<<<<<< HEAD
+      // // // // // // // console.error ('Newsletter subscription failed:', error) ;
     } finally {
+
+      setIsSubmitting (false) ;
+=======
+      // // // // // // // // // // console.error('Newsletter subscription failed:', error)} finally {
 
       setIsSubmitting(false);
 
       setTimeout(() => setIsSubmitted(false), 3000)} catch (error) {
-'
-      // console.error('Newsletter subscription failed:', error)} finally {
+
+>>>>>>> main
+
+      // // // console.error('Newsletter subscription failed:', error)} finally {
 
       setIsSubmitting(false)}
   };
@@ -18,8 +23,7 @@ import { Mail, Send, CheckCircle  } from 'lucide-react';
       <div className="text-center">"
         <div className="flex justify-center mb-4">"
           <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-blue-500 rounded-full flex items-center justify-center">"
-            <Mail className="w-6 h-6 text-white" />
-          </div>
+            <Mail className="w-6 h-6 text-white"  />          </div>
         </div>
 "
         <h3 className="text-xl font-bold text-white mb-2">
@@ -31,8 +35,7 @@ import { Mail, Send, CheckCircle  } from 'lucide-react';
 
         {isSubmitted ? ("
           <div className="flex items-center justify-center gap-2 text-green-400">"
-            <CheckCircle className="w-5 h-5" />
-            <span>Successfully subscribed!</span>
+            <CheckCircle className="w-5 h-5"  />            <span>Successfully subscribed!</span>
           </div>
         ) : ("
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
@@ -40,7 +43,7 @@ import { Mail, Send, CheckCircle  } from 'lucide-react';
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}"
-              placeholder="Enter your email address""
+              placeholder="Enter your email address"
               className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
               required
             />
@@ -56,8 +59,7 @@ import { Mail, Send, CheckCircle  } from 'lucide-react';
                 </>
               ) : (
                 <>"
-                  <Send className="w-4 h-4" />
-                  Subscribe
+                  <Send className="w-4 h-4"  />                  Subscribe
                 </>) }
             </button>
           </form>;
@@ -67,6 +69,5 @@ import { Mail, Send, CheckCircle  } from 'lucide-react';
           We respect your privacy. Unsubscribe at any time.;
         </p>;
       </div>;
-    </div>;) ;
-};
+    </div>;) };
 '"

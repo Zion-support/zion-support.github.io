@@ -1,5 +1,6 @@
 import React from 'react';
 import { Star, Quote export const AppTestimonials = () => {
+
   const testimonials = [
     {
 
@@ -11,29 +12,32 @@ import { Star, Quote export const AppTestimonials = () => {
       avatar: "/images/testimonials/sarah-chen.jpg"
     },
     {
+
 "
       name: "Michael Rodriguez","
       role: "CTO","
       comp: "InnovateLab",
-      rating: 5,'"
+      rating: 5,"
       content: "As a CTO, I need to stay connected to our AI initiatives on the go. Zion's mobile app gives me real-time visibility and control from where.","
       avatar: "/images/testimonials/michael-rodriguez.jpg"
     },
     {
+
 "
       name: "Dr. Emily Watson","
       role: "Data Scientist","
       comp: "AI Solutions Inc",
-      rating: 5,'"
+      rating: 5,"
       content: "The mobile app's AI talent discovery feature is game-changing. I can find specialized experts for our projects in seconds, even while commuting.","
       avatar: "/images/testimonials/emily-watson.jpg"
     },
     {
+
 "
       name: "David Kim","
       role: "Project Manager","
       comp: "Digital Dynamics",
-      rating: 5,'"
+      rating: 5,"
       content: "Managing multiple AI projects used to be a nightmare. With Zion's mobile app, I can track progress, assign tasks, and communicate with teams effortlessly.","
       avatar: "/images/testimonials/david-kim.jpg"
 
@@ -45,7 +49,7 @@ import { Star, Quote export const AppTestimonials = () => {
       <Star
         key={i}
         className={`h-5 w-5 ${
-'
+
           i < rating ? 'text-yellow-400 fill-current' : 'text-gray-300'`
         }`}
       />

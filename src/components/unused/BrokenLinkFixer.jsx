@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { LinkIcon, ExclamationTriangleIcon, CheckCircleIcon, XMarkIcon, ArrowPathIcon, WrenchScrewdriverIcon, InformationCircleIcon } from '@heroicons/react/24/outline';'
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { LinkIcon, ExclamationTriangleIcon, CheckCircleIcon, XMarkIcon, ArrowPathIcon, WrenchScrewdriverIcon, InformationCircleIcon } from '@heroicons/react/24/outline';
 export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails = true, fixBrokenLinks = true }) => {
 
     const [isOpen, setIsOpen] = useState(false);
     const [links, setLinks] = useState([]);
-    const [isChecking, setIsChecking] = useState(false);'
+    const [isChecking, setIsChecking] = useState(false);
     const [activeTab, setActiveTab] = useState('overview');
     const [stats, setStats] = useState({
 
@@ -17,26 +17,22 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
     });
     // Find all links on the page
     const findAllLinks = useCallback(() => {
+
         const links = [];
         linkElements.forEach((element, index) => {
-'
+
             const href = element.getAttribute('href');
             if (href) {
 
                 const link = {
 
-  url: href,'
+  url: href,
                     status: 'unknown',
                     lastChecked: new Date(),
                     parentPage: window.location.pathname,
                     element: element,
-                    fixable: false,'
+                    fixable: false,
   suggestedFix: ''
-                
-
-
-
-
 
 
 };
@@ -46,31 +42,31 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                     // Internal anchor links
                     const targetElement = document.querySelector(href);
                     if (!targetElement) {
-'
-                        link.status = 'broken';'
+
+                        link.status = 'broken';
                         link.error = 'Target element not found';
-                        link.fixable = true;'
+                        link.fixable = true;
                         link.suggestedFix = 'Add missing element or fix anchor reference'}
                     else {
-'
+
                         link.status = 'healthy'}
-                }'
+                }
                 else if (href.startsWith('javascript:')) {
 
                     // JavaScript links'
-                    link.status = 'unknown';'
+                    link.status = 'unknown';
                     link.error = 'JavaScript link - cannot verify';
-                    link.fixable = false}'
+                    link.fixable = false}
                 else if (href.startsWith('mailto:') || href.startsWith('tel:')) {
 
                     // Protocol links'
                     link.status = 'healthy';
-                    link.fixable = false}'
+                    link.fixable = false}
                 else if (href.startsWith('http')) {
 
                     // External links - will be checked'
                     link.status = 'unknown';
-                    link.fixable = true}'
+                    link.fixable = true}
                 else if (href.startsWith('/')) {
 
                     // Internal relative links'
@@ -86,30 +82,30 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
         return links}, []);
     // Check if a link is working
     const checkLink = useCallback(async (link) => {
-'
+
         if (link.url.startsWith('#')) {
 
             // Internal anchor links
             const targetElement = document.querySelector(link.url);
             if (targetElement) {
-'
+
                 return { ...link, status: 'healthy', lastChecked: new Date() }}
             else {
-'
+
                 return { ...link, status: 'broken', error: 'Target element not found', lastChecked: new Date() }}
-        }'
+        }
         if (link.url.startsWith('javascript:') || link.url.startsWith('mailto:') || link.url.startsWith('tel:')) {
-'
+
             return { ...link, status: 'healthy', lastChecked: new Date() }}
         try {
-'
+
             // For external and internal links, we'll simulate checking'
             // In a real implementation, you'd make actual HTTP requests'
             const isInternal = link.url.startsWith('/') || link.url.startsWith(window.location.origin);
             if (isInternal) {
 
                 // Simulate internal link check
-                await new Promise(resolve => setTimeout(resolve, 100));'
+                await new Promise(resolve => setTimeout(resolve, 100));
                 return { ...link, status: 'healthy', lastChecked: new Date() }}
             else {
 
@@ -120,21 +116,23 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                 if (random < 0.1) { // 10% chance of broken external link'
                     return { ...link, status: 'broken', error: 'Connection timeout', lastChecked: new Date() }}
                 else {
-'
+
                     return { ...link, status: 'healthy', lastChecked: new Date() }}
             }
         }
         catch (error) {
+
             return {
 
-                ...link,'
-                status: 'broken','
+                ...link,
+                status: 'broken',
                 error: error instanceof Error ? error.message : 'Unknown error',
                 lastChecked: new Date()
             }}
     }, []);
     // Check all links
     const checkAllLinks = useCallback(async () => {
+
         setIsChecking(true);
         const allLinks = findAllLinks();
         setLinks(allLinks);
@@ -153,7 +151,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
 
             const batch = allLinks.slice(i, i + batchSize);
             // Mark batch as checking
-            setLinks(prev => prev.map(link => batch.some(batchLink => batchLink.url === link.url)'
+            setLinks(prev => prev.map(link => batch.some(batchLink => batchLink.url === link.url)
                 ? { ...link, status: 'checking' }
                 : link));
             // Check batch
@@ -168,9 +166,9 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
 
                 const newStats = { ...prev };
                 checkedBatch.forEach(checkedLink => {
-'
+
                     if (checkedLink.status === 'healthy')
-                        newStats.healthy++;'
+                        newStats.healthy++;
                     else if (checkedLink.status === 'broken')
                         newStats.broken++;
                     newStats.checking--;
@@ -184,11 +182,11 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
         setIsChecking(false)}, [findAllLinks, checkLink]);
     // Auto-fix broken links
     const autoFixBrokenLinks = useCallback(() => {
-'
+
         const brokenLinks = links.filter(link => link.status === 'broken' && link.fixable);
         const fixedCount = 0;
         brokenLinks.forEach(link => {
-'
+
             if (link.element && link.url.startsWith('#')) {
 
                 // Fix broken anchor links
@@ -197,22 +195,22 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
 
                     // Create a placeholder element'
                     const placeholder = document.createElement('div');
-                    placeholder.id = targetId;'
-                    placeholder.className = 'link-target-placeholder';'
-                    placeholder.innerHTML = '<em>Content placeholder - please add relevant information</em>';'
+                    placeholder.id = targetId;
+                    placeholder.className = 'link-target-placeholder';
+                    placeholder.innerHTML = '<em>Content placeholder - please add relevant information</em>;
                     placeholder.style.cssText = 'padding: 2rem; margin: 1rem 0; background: #f3f4f6; border: 2px dashed #d1d5db; border-radius: 0.5rem; color: #6b7280;';
                     // Insert before the link
                     link.element.parentNode?.insertBefore(placeholder, link.element);
                     fixedCount++}
-            }'
+            }
             else if (link.element && link.url.startsWith('/')) {
 
                 // Fix broken internal links by updating to a working page'
-                const workingPages = ['/', '/about', '/services', '/contact', '/home'];
+                const workingPages = ['/',/about',/services',/contact',/home'];
                 const randomPage = workingPages[Math.floor(Math.random() * workingPages.length)];
                 if (randomPage !== link.url) {
-'
-                    link.element.setAttribute('href', randomPage);'
+
+                    link.element.setAttribute('href', randomPage);
                     link.element.setAttribute('title', `Redirected from ${link.url} to working page`);
                     fixedCount++}
             }
@@ -229,7 +227,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
             return;
         // Remove previous highlights'
         document.querySelectorAll('.broken-link-highlight').forEach(el => {
-'
+
             el.classList.remove('broken-link-highlight')});
         // Add highlight to selected element'
         link.element.classList.add('broken-link-highlight');
@@ -237,10 +235,11 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
         link.element.scrollIntoView({ behavior: 'smooth', block: 'center' });
         // Remove highlight after 3 seconds
         setTimeout(() => {
-'
+
             link.element?.classList.remove('broken-link-highlight')}, 3000)}, []);
     // Auto-check links
     useEffect(() => {
+
         if (autoCheck) {
 
             const timer = setTimeout(checkAllLinks, 2000);
@@ -250,17 +249,17 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
     const getStatusColor = (status) => {
 
         switch (status) {
-'
-            case 'healthy': return 'text-green-600 bg-green-100 dark:bg-green-900/30';'
-            case 'broken': return 'text-red-600 bg-red-100 dark:bg-red-900/30';'
-            case 'checking': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';'
+
+            case 'healthy': return 'text-green-600 bg-green-100 dark:bg-green-900/30';
+            case 'broken': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
+            case 'checking': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30'}
     };
     // Get status icon
     const getStatusIcon = (status) => {
 
         switch (status) {
-'
+
             case 'healthy': return <CheckCircleIcon className="w-4 h-4 text-green-600"/>;'"
             case 'broken': return <ExclamationTriangleIcon className="w-4 h-4 text-red-600"/>;'"
             case 'checking': return <ArrowPathIcon className="w-4 h-4 text-yellow-600 animate-spin"/>;"
@@ -277,26 +276,20 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
         {isOpen && (<motion.div initial = {
 
   { opacity: 0, scale: 0.8,
-  y: 20 
-
-
-
-
-
+  y: 20
 
 }} animate = {
 
   { opacity: 1, scale: 1,
-  y: 0 
-
-
-
-
-
+  y: 0
 
 }} exit = {
 
   { opacity: 0, scale: 0.8,
+<<<<<<< HEAD
+  y: 20
+
+=======
   y: 20 
 
 
@@ -304,6 +297,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
 
 
 "
+>>>>>>> main
 }} className="fixed bottom-32 right-4 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
             {/* Header */}"
             <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">"
@@ -317,7 +311,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
 
             {/* Tabs */}"
             <div className="flex border-b border-gray-200 dark:border-gray-700">'`
-              {['overview', 'broken', 'healthy', 'actions'].map((tab) => (<button key={tab} onClick={() => setActiveTab(tab)} className={`flex-1 px-4 py-2 text-sm font-medium transition-colors ${activeTab === tab'
+              {['overview',broken',healthy',actions'].map((tab) => (<button key={tab} onClick={() => setActiveTab(tab)} className={`flex-1 px-4 py-2 text-sm font-medium transition-colors ${activeTab === tab'
                     ? 'text-orange-600 border-b-2 border-orange-600''`
                     : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'}`}>
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
@@ -380,7 +374,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                     </div>)}
 
                   {/* Check Button */}"
-                  <button onClick={checkAllLinks} disabled={isChecking} className="w-full bg-orange-600 hover:bg-orange-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">'
+                  <button onClick={checkAllLinks} disabled={isChecking} className="w-full bg-orange-600 hover:bg-orange-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">
                     {isChecking ? 'Checking...' : 'Check All Links'}
                   </button>
                 </div>)}
@@ -465,7 +459,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
 
                   {/* Re-check Button */}"
                   <button onClick={checkAllLinks} disabled={isChecking} className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">"
-                    <ArrowPathIcon className="w-4 h-4 inline mr-2"/>'
+                    <ArrowPathIcon className="w-4 h-4 inline mr-2"/>
                     {isChecking ? 'Checking...' : 'Re-check Links'}
                   </button>
 
@@ -473,6 +467,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                   {links.length > 0 && (<button onClick = {
 
   () => {
+
                         const report = {
 
                             timestamp: new Date().toISOString(),
@@ -484,19 +479,14 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                                 error: link.error,
                                 lastChecked: link.lastChecked.toISOString(),
   fixable: link.fixable
-                            
-
-
-
-
 
 
 }))
-                        };'
+                        };
                         const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
-                        const url = URL.createObjectURL(blob);'
+                        const url = URL.createObjectURL(blob);
                         const a = document.createElement('a');
-                        a.href = url;'
+                        a.href = url;
                         a.download = 'link-health-report.json';
                         a.click();"
                         URL.revokeObjectURL(url)}} className="w-full bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg transition-colors">
@@ -515,11 +505,11 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
           outline-offset: 2px !important;
           background-color: rgba(249, 115, 22, 0.1) !important;
           transition: all 0.3s ease !important}
-        
+
         .link-target-placeholder {
 
           animation: pulse 2s infinite}
-        
+
         @keyframes pulse {
 
           0%, 100% { opacity: 1}

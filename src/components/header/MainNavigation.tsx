@@ -1,7 +1,3 @@
-import React, { useState } from 'react';'
-import { Link } from 'react-router-dom';'
-import { cn } from '@/lib/utils';'
-import { NavLink } from 'react-router-dom';
 import {
 
   ChevronDown,
@@ -13,7 +9,8 @@ import {
   TrendingUp,
   Building2,
   FileText,
-  HelpCircle,'
+<<<<<<< HEAD
+  HelpCircle,
   BarChart3} from 'lucide-react';
 export function MainNavigation({ className }) {
 
@@ -27,7 +24,7 @@ export function MainNavigation({ className }) {
         to="/"
         className={({ isActive }) =>
           cn('
-            'text-sm font-medium transition-colors hover:text-primary','
+            'text-sm font-medium transition-colors hover:text-primary',
             isActive ? 'text-zion-cyan' : 'text-muted-foreground'
           )
         }
@@ -42,9 +39,13 @@ export function MainNavigation({ className }) {
           onMouseLeave={() => setIsServicesOpen(false)}"
           className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
         >"
-          <Zap className="w-4 h-4" />
+          <Zap className="w-4 h-4"  />
           <span>Services</span>"
-          <ChevronDown className="w-3 h-3" />
+          <ChevronDown className="w-3 h-3"  />
+=======
+  HelpCircle,'
+  BarChart3} from 'lucide-react';          <ChevronDown className="w-3 h-3"  />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         </button>
         {isServicesOpen && (
           <div
@@ -55,14 +56,13 @@ export function MainNavigation({ className }) {
             <div className="p-4">"
               <div className="grid grid-cols-3 gap-4">
                 <div>"
-                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">"
-                    <Zap className="w-4 h-4 mr-2" />
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">"                    <Zap className="w-4 h-4 mr-2"  />
                     Micro SAAS
                   </h4>"
                   <ul className="space-y-2 text-sm">
                     <li>
                       <Link"
-                        to="/services""
+                        to="/services"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         All Services
@@ -70,7 +70,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/services/ai-sales-copilot""
+                        to="/services/ai-sales-copilot"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         AI Sales Copilot
@@ -78,7 +78,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/services/cloud-finops-optimizer""
+                        to="/services/cloud-finops-optimizer"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         Cloud FinOps Optimizer
@@ -86,7 +86,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/services/ai-compliance-assistant""
+                        to="/services/ai-compliance-assistant"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         AI Compliance Assistant
@@ -94,7 +94,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/services/ai-business-intelligence""
+                        to="/services/ai-business-intelligence"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         AI Business Intelligence
@@ -102,7 +102,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/services/ai-customer-support-automation""
+                        to="/services/ai-customer-support-automation"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         AI Customer Support
@@ -111,14 +111,13 @@ export function MainNavigation({ className }) {
                   </ul>
                 </div>
                 <div>"
-                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">"
-                    <Shield className="w-4 h-4 mr-2" />
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">"                    <Shield className="w-4 h-4 mr-2"  />
                     IT Services
                   </h4>"
                   <ul className="space-y-2 text-sm">
                     <li>
                       <Link"
-                        to="/quantum-neural-network-platform""
+                        to="/quantum-neural-network-platform"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         Quantum Neural Network
@@ -126,7 +125,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/autonomous-business-operations-platform""
+                        to="/autonomous-business-operations-platform"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         Autonomous Operations
@@ -134,7 +133,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/ai-powered-it-asset-management""
+                        to="/ai-powered-it-asset-management"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         AI Asset Management
@@ -142,7 +141,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/enhanced-services""
+                        to="/enhanced-services"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         Enhanced Services
@@ -150,7 +149,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/it-onsite-services""
+                        to="/it-onsite-services"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         Onsite Support
@@ -158,7 +157,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/cloud-devops""
+                        to="/cloud-devops"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         Cloud & DevOps
@@ -167,14 +166,13 @@ export function MainNavigation({ className }) {
                   </ul>
                 </div>
                 <div>"
-                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">"
-                    <Brain className="w-4 h-4 mr-2" />
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">"                    <Brain className="w-4 h-4 mr-2"  />
                     AI Solutions
                   </h4>"
                   <ul className="space-y-2 text-sm">
                     <li>
                       <Link"
-                        to="/ai-services""
+                        to="/ai-services"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         AI Services
@@ -182,7 +180,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/ai-solutions""
+                        to="/ai-solutions"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         AI Solutions
@@ -190,7 +188,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/ai-cybersecurity-platform""
+                        to="/ai-cybersecurity-platform"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         AI Cybersecurity
@@ -198,7 +196,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/ai-healthcare-platform""
+                        to="/ai-healthcare-platform"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         AI Healthcare
@@ -206,7 +204,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/ai-supply-chain-optimization""
+                        to="/ai-supply-chain-optimization"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         AI Supply Chain
@@ -214,7 +212,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/ai-quantum-hybrid-platform""
+                        to="/ai-quantum-hybrid-platform"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         AI Quantum Hybrid
@@ -225,11 +223,10 @@ export function MainNavigation({ className }) {
               </div>"
               <div className="mt-4 pt-4 border-t border-zion-purple/20">
                 <Link"
-                  to="/enhanced-services""
+                  to="/enhanced-services"
                   className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center"
                 >
-                  View All Services"
-                  <TrendingUp className="w-4 h-4 ml-2" />
+                  View All Services"                  <TrendingUp className="w-4 h-4 ml-2"  />
                 </Link>
               </div>
             </div>
@@ -244,9 +241,8 @@ export function MainNavigation({ className }) {
           onMouseLeave={() => setIsSolutionsOpen(false)}"
           className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
         >"
-          <Brain className="w-4 h-4" />
-          <span>Solutions</span>"
-          <ChevronDown className="w-3 h-3" />
+          <Brain className="w-4 h-4"  />
+          <span>Solutions</span>"          <ChevronDown className="w-3 h-3"  />
         </button>
         {isSolutionsOpen && (
           <div
@@ -257,14 +253,13 @@ export function MainNavigation({ className }) {
             <div className="p-4">"
               <div className="grid grid-cols-2 gap-4">
                 <div>"
-                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">"
-                    <Users className="w-4 h-4 mr-2" />
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">"                    <Users className="w-4 h-4 mr-2"  />
                     Talent
                   </h4>"
                   <ul className="space-y-2 text-sm">
                     <li>
                       <Link"
-                        to="/talent""
+                        to="/talent"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         Find Experts
@@ -272,7 +267,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/zion-hire-ai""
+                        to="/zion-hire-ai"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         AI Hiring
@@ -280,7 +275,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/talent""
+                        to="/talent"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         Skill Matching
@@ -288,7 +283,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/talent""
+                        to="/talent"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         Project Teams
@@ -297,14 +292,13 @@ export function MainNavigation({ className }) {
                   </ul>
                 </div>
                 <div>"
-                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">"
-                    <HardDrive className="w-4 h-4 mr-2" />
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">"                    <HardDrive className="w-4 h-4 mr-2"  />
                     Resources
                   </h4>"
                   <ul className="space-y-2 text-sm">
                     <li>
                       <Link"
-                        to="/enterprise""
+                        to="/enterprise"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         Enterprise Solutions
@@ -312,7 +306,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/solutions""
+                        to="/solutions"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         Industry Solutions
@@ -320,7 +314,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/case-studies""
+                        to="/case-studies"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         Case Studies
@@ -328,7 +322,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/marketplace""
+                        to="/marketplace"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         Marketplace
@@ -339,11 +333,10 @@ export function MainNavigation({ className }) {
               </div>"
               <div className="mt-4 pt-4 border-t border-zion-purple/20">
                 <Link"
-                  to="/request-quote""
+                  to="/request-quote"
                   className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center"
                 >
-                  Get Custom Quote"
-                  <TrendingUp className="w-4 h-4 ml-2" />
+                  Get Custom Quote"                  <TrendingUp className="w-4 h-4 ml-2"  />
                 </Link>
               </div>
             </div>
@@ -360,8 +353,7 @@ export function MainNavigation({ className }) {
         >"
           <Building2 className="w-4 h-4" />
           <span>Company</span>"
-          <ChevronDown className="w-3 h-3" />
-        </button>
+          <ChevronDown className="w-3 h-3"  />        </button>
         {isCompanyOpen && (
           <div
             onMouseEnter={() => setIsCompanyOpen(true)}
@@ -372,7 +364,7 @@ export function MainNavigation({ className }) {
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link"
-                    to="/about""
+                    to="/about"
                     className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                   >
                     About Us
@@ -380,7 +372,7 @@ export function MainNavigation({ className }) {
                 </li>
                 <li>
                   <Link"
-                    to="/team""
+                    to="/team"
                     className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                   >
                     Our Team
@@ -388,7 +380,7 @@ export function MainNavigation({ className }) {
                 </li>
                 <li>
                   <Link"
-                    to="/careers""
+                    to="/careers"
                     className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                   >
                     Careers
@@ -396,7 +388,7 @@ export function MainNavigation({ className }) {
                 </li>
                 <li>
                   <Link"
-                    to="/news""
+                    to="/news"
                     className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                   >
                     News
@@ -404,7 +396,7 @@ export function MainNavigation({ className }) {
                 </li>
                 <li>
                   <Link"
-                    to="/events""
+                    to="/events"
                     className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                   >
                     Events
@@ -412,7 +404,7 @@ export function MainNavigation({ className }) {
                 </li>
                 <li>
                   <Link"
-                    to="/partners""
+                    to="/partners"
                     className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                   >
                     Partners
@@ -420,7 +412,7 @@ export function MainNavigation({ className }) {
                 </li>
                 <li>
                   <Link"
-                    to="/contact""
+                    to="/contact"
                     className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                   >
                     Contact
@@ -439,10 +431,9 @@ export function MainNavigation({ className }) {
           onMouseLeave={() => setIsResourcesOpen(false)}"
           className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
         >"
-          <FileText className="w-4 h-4" />
+          <FileText className="w-4 h-4"  />
           <span>Resources</span>"
-          <ChevronDown className="w-3 h-3" />
-        </button>
+          <ChevronDown className="w-3 h-3"  />        </button>
         {isResourcesOpen && (
           <div
             onMouseEnter={() => setIsResourcesOpen(true)}
@@ -453,7 +444,7 @@ export function MainNavigation({ className }) {
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link"
-                    to="/blog""
+                    to="/blog"
                     className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                   >
                     Blog
@@ -461,7 +452,7 @@ export function MainNavigation({ className }) {
                 </li>
                 <li>
                   <Link"
-                    to="/docs""
+                    to="/docs"
                     className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                   >
                     Documentation
@@ -469,7 +460,7 @@ export function MainNavigation({ className }) {
                 </li>
                 <li>
                   <Link"
-                    to="/white-papers""
+                    to="/white-papers"
                     className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                   >
                     White Papers
@@ -477,7 +468,7 @@ export function MainNavigation({ className }) {
                 </li>
                 <li>
                   <Link"
-                    to="/webinars""
+                    to="/webinars"
                     className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                   >
                     Webinars
@@ -485,7 +476,7 @@ export function MainNavigation({ className }) {
                 </li>
                 <li>
                   <Link"
-                    to="/events""
+                    to="/events"
                     className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                   >
                     Events
@@ -493,7 +484,7 @@ export function MainNavigation({ className }) {
                 </li>
                 <li>
                   <Link"
-                    to="/training""
+                    to="/training"
                     className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                   >
                     Training
@@ -501,7 +492,7 @@ export function MainNavigation({ className }) {
                 </li>
                 <li>
                   <Link"
-                    to="/research-development""
+                    to="/research-development"
                     className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                   >
                     Research
@@ -515,16 +506,15 @@ export function MainNavigation({ className }) {
 
       {/* Support */}
       <Link"
-        to="/help""
+        to="/help"
         className="text-zion-slate-light hover:text-white transition-colors flex items-center"
       >"
-        <HelpCircle className="w-4 h-4 mr-1" />
-        Support
+        <HelpCircle className="w-4 h-4 mr-1"  />        Support
       </Link>
 
       {/* Pricing */}
       <Link"
-        to="/pricing""
+        to="/pricing"
         className="text-zion-slate-light hover:text-white transition-colors flex items-center"
       >"
         <BarChart3 className="w-4 h-4 mr-1" />
@@ -535,15 +525,13 @@ export function MainNavigation({ className }) {
         to="/signup"
         className={({ isActive }) =>
           cn('
-            'text-sm font-medium transition-colors hover:text-primary','
-            isActive ? 'text-zion-cyan' : 'text-muted-foreground','
-            'bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-6 py-2 rounded-lg shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-300 hover:-translate-y-1'
+            'text-sm font-medium transition-colors hover:text-primary',
+            isActive ? 'text-zion-cyan' : 'text-muted-foreground',bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-6 py-2 rounded-lg shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-300 hover:-translate-y-1'
           )
         }
       >
         Get Started
       </NavLink>
     </nav>
-  );
-}
+  )}
 '"

@@ -1,7 +1,7 @@
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions', description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting-edge technology services.', keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical, ogImage = 'https://ziontechgroup.com/images/og-default.jpg', ogType = 'website', twitterCard = 'summary_large_image', structuredData, noindex = false, nofollow = false }) {
-'
+
     const currentUrl = typeof window !== 'null' ? window.location.href : canonical || 'https://ziontechgroup.com';
     // Default structured data for organization
     const defaultStructuredData = {
@@ -13,6 +13,7 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
         "logo": "https://ziontechgroup.com/images/logo.png","
         "description": description,"
         "address": {
+
 "
             "@type": "PostalAddress","
             "streetAddress": "364 E Main St STE 1008","
@@ -23,6 +24,7 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
 
 },"
         "contactPoint": {
+
 "
             "@type": "ContactPoint","
             "telephone": "+1-302-464-0950","
@@ -35,6 +37,7 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
             "https://github.com/Zion-Holdings"
         ],"
         "offers": {
+
 "
             "@type": "AggregateOffer","
             "priceCurrency": "USD","

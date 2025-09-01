@@ -1,8 +1,15 @@
-import React, { useState } from 'react';'
-import { innovativeServices2025 } from '../data/innovativeServices2025';'
-import { ULTIMATE_INNOVATIVE_SERVICES_2027 } from '../data/ultimateInnovativeServices2027';'
+import React, { useState } from 'react';
+import { innovativeServices2025 } from '../data/innovativeServices2025';
+import { ULTIMATE_INNOVATIVE_SERVICES_2027 } from '../data/ultimateInnovativeServices2027';
 import { motion } from 'framer-motion';
 import {
+
+<<<<<<< HEAD
+import { innovativeServices2025 } from '../data / innovativeServices2025';
+import { motion } from 'framer - motion';
+import { ULTIMATE_INNOVATIVE_SERVICES_2027 } from '../data / ultimateInnovativeServices2027';
+=======
+>>>>>>> main
 
   Brain,
   Cloud,
@@ -15,12 +22,12 @@ import {
   ArrowRight,
   CheckCircle,
   Phone,
-  Mail,'
+  Mail,
   MapPin} from 'lucide-react';
 
 const EnhancedComprehensiveServicesShowcase = () => {
-'
-  const [activeCategory, setActiveCategory] = useState('all');'
+
+  const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedService, setSelectedService] = useState(null);
 
@@ -39,15 +46,15 @@ const EnhancedComprehensiveServicesShowcase = () => {
       badge: service.badge})),
     ...ULTIMATE_INNOVATIVE_SERVICES_2027.map(service => ({
 
-      ...service,'
-      category: service.category || 'Innovation','
+      ...service,
+      category: service.category || 'Innovation',
       price: service.price || '$2,999',
       description:'
         service.description || service.tagline || 'Revolutionary service',
       features: service.features || [],
-      benefits: service.benefits || [],'
-      icon: service.icon || '🚀','
-      color: service.color || 'from-purple-600 to-indigo-700','
+      benefits: service.benefits || [],
+      icon: service.icon || '🚀',
+      color: service.color || 'from-purple-600 to-indigo-700',
       badge: service.badge || 'New'})),
   ];
 
@@ -62,63 +69,63 @@ const EnhancedComprehensiveServicesShowcase = () => {
 
   const serviceCategories = [
     {
-'
-      id: 'AI & Innovation Services','
+
+      id: 'AI & Innovation Services',
       name: 'AI & Innovation Services',
       count: innovativeServices2025.length},
     {
-'
-      id: 'Quantum Computing','
-      name: 'Quantum Computing','
+
+      id: 'Quantum Computing',
+      name: 'Quantum Computing',
       count: transformedServices.filter(s => s.category.includes('Quantum'))
         .length},
     {
-'
-      id: 'Blockchain & Web3','
-      name: 'Blockchain & Web3','
+
+      id: 'Blockchain & Web3',
+      name: 'Blockchain & Web3',
       count: transformedServices.filter(s => s.category.includes('Blockchain'))
         .length},
     {
-'
-      id: 'Space Technology','
-      name: 'Space Technology','
+
+      id: 'Space Technology',
+      name: 'Space Technology',
       count: transformedServices.filter(s => s.category.includes('Space'))
         .length},
     {
-'
-      id: 'Green Technology','
-      name: 'Green Technology','
+
+      id: 'Green Technology',
+      name: 'Green Technology',
       count: transformedServices.filter(s => s.category.includes('Green'))
         .length},
     {
-'
-      id: 'Cybersecurity','
+
+      id: 'Cybersecurity',
       name: 'Cybersecurity',
-      count: transformedServices.filter(s =>'
+      count: transformedServices.filter(s =>
         s.category.includes('Cybersecurity')
       ).length},
     {
-'
-      id: 'Micro SaaS','
-      name: 'Micro SaaS','
+
+      id: 'Micro SaaS',
+      name: 'Micro SaaS',
       count: transformedServices.filter(s => s.category.includes('Micro SaaS'))
         .length},
     {
-'
-      id: 'Data & Analytics','
-      name: 'Data & Analytics','
+
+      id: 'Data & Analytics',
+      name: 'Data & Analytics',
       count: transformedServices.filter(s => s.category.includes('Data'))
         .length},
     {
-'
-      id: 'Cloud & DevOps','
-      name: 'Cloud & DevOps','
+
+      id: 'Cloud & DevOps',
+      name: 'Cloud & DevOps',
       count: transformedServices.filter(s => s.category.includes('Cloud'))
         .length},
     {
-'
-      id: 'Digital Transformation','
-      name: 'Digital Transformation','
+
+      id: 'Digital Transformation',
+      name: 'Digital Transformation',
       count: transformedServices.filter(s => s.category.includes('Digital'))
         .length},
   ];
@@ -129,6 +136,7 @@ const EnhancedComprehensiveServicesShowcase = () => {
   };
 
   const closeModal = () => {
+
     setSelectedService(null);
   };
 
@@ -139,7 +147,7 @@ const EnhancedComprehensiveServicesShowcase = () => {
         <div className="max-w-7xl mx-auto text-center">"
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Zion Tech Group"
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
               {' '}
               Innovative Services 2025
             </span>
@@ -178,20 +186,20 @@ const EnhancedComprehensiveServicesShowcase = () => {
           <div className="max-w-2xl mx-auto mb-8">"
             <div className="relative">
               <input"
-                type="text""
+                type="text"
                 placeholder="Search services, features, or technologies..."
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}"
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400"
               />
               <svg"
-                className="absolute right-3 top-3 h-6 w-6 text-gray-400""
-                fill="none""
-                stroke="currentColor""
+                className="absolute right-3 top-3 h-6 w-6 text-gray-400"
+                fill="none"
+                stroke="currentColor"
                 viewBox="0 0 24 24"
               >
                 <path"
-                  strokeLinecap="round""
+                  strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}"
                   d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
@@ -242,7 +250,7 @@ const EnhancedComprehensiveServicesShowcase = () => {
                   <span className="px-3 py-1 bg-white/10 rounded-full text-sm text-white">
                     {service.category}
                   </span>"
-                  <span className="text-lg font-bold text-blue-400">'
+                  <span className="text-lg font-bold text-blue-400">
                     ${service.displayPrice?.toLocaleString() || 'Contact Us'}
                   </span>
                 </div>
@@ -326,19 +334,19 @@ const EnhancedComprehensiveServicesShowcase = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>"
-          <p className="text-xl text-gray-300 mb-8">'
+          <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our innovative services can help drive your
             digital transformation and competitive advantage
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
             >
               Get Custom Quote
             </a>
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
             >
               Call Us: +1 302 464 0950
@@ -359,13 +367,13 @@ const EnhancedComprehensiveServicesShowcase = () => {
                   className="text-white/60 hover:text-white transition-colors"
                 >
                   <svg"
-                    className="w-6 h-6""
-                    fill="none""
-                    stroke="currentColor""
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
                     <path"
-                      strokeLinecap="round""
+                      strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}"
                       d="M6 18L18 6M6 6l12 12"
@@ -441,13 +449,13 @@ const EnhancedComprehensiveServicesShowcase = () => {
                           className="flex items-center space-x-2"
                         >
                           <svg"
-                            className="w-4 h-4 text-green-400""
-                            fill="none""
-                            stroke="currentColor""
+                            className="w-4 h-4 text-green-400"
+                            fill="none"
+                            stroke="currentColor"
                             viewBox="0 0 24 24"
                           >
                             <path"
-                              strokeLinecap="round""
+                              strokeLinecap="round"
                               strokeLinejoin="round"
                               strokeWidth={2}"
                               d="M5 13l4 4L19 7"
@@ -470,13 +478,13 @@ const EnhancedComprehensiveServicesShowcase = () => {
                           className="flex items-center space-x-2"
                         >
                           <svg"
-                            className="w-4 h-4 text-blue-400""
-                            fill="none""
-                            stroke="currentColor""
+                            className="w-4 h-4 text-blue-400"
+                            fill="none"
+                            stroke="currentColor"
                             viewBox="0 0 24 24"
                           >
                             <path"
-                              strokeLinecap="round""
+                              strokeLinecap="round"
                               strokeLinejoin="round"
                               strokeWidth={2}"
                               d="M13 10V3L4 14h7v7l9-11h-7z"
@@ -497,7 +505,7 @@ const EnhancedComprehensiveServicesShowcase = () => {
                   Get Quote
                 </a>
                 <a"
-                  href="tel:+13024640950""
+                  href="tel:+13024640950"
                   className="flex-1 border-2 border-white/30 text-white py-4 px-6 rounded-lg font-semibold text-center hover:bg-white/10 transition-all duration-300"
                 >
                   Call Now

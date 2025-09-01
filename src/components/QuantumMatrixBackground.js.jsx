@@ -1,21 +1,22 @@
-import React, { useEffect, useRef } from 'react';'
-import { motion } from 'framer-motion';'
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = true, showGrid = true, showHolograms = true }) => {
 
     const canvasRef = useRef(null);
     const particlesRef = useRef(null);
     useEffect(() => {
+
         const canvas = canvasRef.current;
         if (!canvas)
-            return;'
+            return;
         const ctx = canvas.getContext('2d');
         if (!ctx)
             return;
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
         // Quantum particle system
-        const particles = [];'
-        const colors = ['#22ddd2', '#8b5cf6', '#3b82f6', '#22ddd2'];'
+        const particles = [];
+        const colors = ['#22ddd2',#8b5cf6',#3b82f6',#22ddd2'];
         const intensityMultiplier = intensity === 'high' ? 2 : intensity === 'medium' ? 1.5 : 1;
         // Initialize particles
         for (let i = 0; i < 50 * intensityMultiplier; i++) {
@@ -33,6 +34,7 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
             })}
         // Quantum entanglement effect
         const entangleParticles = () => {
+
             for (let i = 0; i < particles.length; i += 2) {
 
                 if (i + 1 < particles.length) {
@@ -54,6 +56,7 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
         };
         // Neural network connections
         const drawNeuralConnections = () => {
+
             for (let i = 0; i < particles.length; i++) {
 
                 for (let j = i + 1; j < particles.length; j++) {
@@ -74,6 +77,7 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
         };
         // Animation loop
         const animate = () => {
+
             ctx.clearRect (0, 0, canvas.width, canvas.height) ;
             // Update and draw particles
             particles.forEach((particle, index) => {
@@ -116,11 +120,12 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
         animate();
         // Handle resize
         const handleResize = () => {
+
             canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight};'
+            canvas.height = window.innerHeight};
         window.addEventListener('resize', handleResize);
         return () => {
-'
+
             window.removeEventListener('resize', handleResize)}}, [intensity, showParticles]);
     return (<div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
       {/* Quantum Matrix Canvas */}'"
@@ -135,10 +140,10 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
           <motion.div className="absolute top-20 left-20 w-32 h-32 rounded-full" style = {
 
   {
-'
-                background: 'radial-gradient(circle, rgba(34, 221, 210, 0.3) 0%, transparent 70%)','
-                border: '1px solid rgba(34, 221, 210,'
-  0.5)';
+
+                background: 'radial-gradient(circle, rgba(34, 221, 210, 0.3) 0%, transparent 70%),
+                border: '1px solid rgba(34, 221, 210,
+  0.5);
             
 
 }} animate = {
@@ -163,10 +168,10 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
           <motion.div className="absolute top-40 right-32 w-24 h-24" style = {
 
   {
-'
-                background: 'linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(59, 130, 246, 0.3))','
-                clipPath: 'polygon(50% 0%, 0% 100%,'
-  100% 100%)';
+
+                background: 'linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(59, 130, 246, 0.3)),
+                clipPath: 'polygon(50% 0%, 0% 100%,
+  100% 100%);
             
 
 }} animate = {
@@ -191,9 +196,9 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
           <motion.div className="absolute bottom-32 left-1/4 w-20 h-20 rounded-full" style = {
 
   {
-'
-                background: 'conic-gradient(from 0deg, rgba(34, 221, 210, 0.4), rgba(139, 92, 246, 0.4), rgba(59, 130, 246, 0.4), rgba(34, 221, 210,'
-  0.4))';
+
+                background: 'conic-gradient(from 0deg, rgba(34, 221, 210, 0.4), rgba(139, 92, 246, 0.4), rgba(59, 130, 246, 0.4), rgba(34, 221, 210,
+  0.4));
             
 
 }} animate = {
@@ -217,14 +222,15 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
           {/* Matrix Rain Effect */}"
           <div className="absolute inset-0 overflow-hidden">"
             {Array.from({ length: 20 }).map((_, i) => (<motion.div key={i} className="absolute text-zion-cyan text-xs font-mono" style={{
+
 `
                     left: `${Math.random() * 100}%`,`
                     animationDelay: `${Math.random() * 20}s`
                 }} animate = {
 
   {
-'
-                    y['-100vh',;'
+
+                    y['-100vh',;
   '100vh']
 
 }} transition = {
@@ -246,10 +252,10 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
         <motion.div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full" style = {
 
   {
-'
-            background: 'radial-gradient(circle, rgba(34, 221, 210, 0.1) 0%, transparent 70%)','
-            border: '1px solid rgba(34, 221, 210,'
-  0.2)';
+
+            background: 'radial-gradient(circle, rgba(34, 221, 210, 0.1) 0%, transparent 70%),
+            border: '1px solid rgba(34, 221, 210,
+  0.2);
         
 
 }} animate = {
@@ -273,10 +279,10 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
         <motion.div className="absolute bottom-1/4 right-1/4 w-48 h-48 rounded-full" style = {
 
   {
-'
-            background: 'radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%)','
-            border: '1px solid rgba(139, 92, 246,'
-  0.2)';
+
+            background: 'radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%),
+            border: '1px solid rgba(139, 92, 246,
+  0.2);
         
 
 }} animate = {
@@ -301,6 +307,7 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
       {/* Neural Network Nodes */}"
       <div className="absolute inset-0">"
         {Array.from({ length: 15 }).map((_, i) => (<motion.div key={i} className="absolute w-2 h-2 rounded-full bg-zion-cyan" style={{
+
 `
                 left: `${Math.random() * 100}%`,`
                 top: `${Math.random() * 100}%`

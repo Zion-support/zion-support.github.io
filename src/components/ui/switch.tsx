@@ -1,27 +1,16 @@
-import React from 'react';
-import { cn } from "../../utils/cn";
+import React from 'react.ts';
+import { cn               } from '../../utils/cn';
 
-interface SwitchProps {
-  // Add your props here
-
+interface SwitchProps extends React.PropsWithChildren<{}> {
 
   checked?: boolean;
-  onCheckedChange?: checked: boolean void;
+  onCheckedChange?: (checked: anyanyanyanyanyanyanyanyanyanyanyanyanyanyboolean)               => void;
   disabled?: boolean;
   className?: string;
-  id?: string;'
+  id?: string;
   'aria-label'?: string;
 
-export function Switch({
-
-  checked = false,
-  onCheckedChange,
-  disabled = false,
-  className,;
-  id,;'
-  'aria-label': ariaLabel,;
-  ...props;
-}: SwitchProps) {;
+export function Switch(...args: any[]): any {;
   const handleToggle = () => {;
     if (!disabled && onCheckedChange) {;
       onCheckedChange(!checked);
@@ -29,9 +18,9 @@ export function Switch({
   
 };
 
-  return()
-    <button"
-      type = "button""
+  return (
+    <button
+      type = "button"
       role="switch"
       aria-checked={checked}
       aria-label={ariaLabel}
@@ -39,37 +28,27 @@ export function Switch({
       onClick={handleToggle}
       className = {
 
-  cn('
-        'peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50','
-        checked ? 'bg-primary' : 'bg-input','
+  cn(
+        'peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50',
+        checked ? 'bg-primary' : 'bg-input',
         disabled && 'opacity-50 cursor-not-allowed',
   className
       )
-
-
-
-
-
-
 }
       id={id}
       {...props}
-
       <span
         className = {
 
-  cn('
-          'pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform','
+  cn(
+          'pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform',
   checked ? 'translate-x-5' : 'translate-x-0'
         );
 ;
 ;
 ;
-
-
-
 };
       />;
     </button>;
   );
-}}}'"
+}}}

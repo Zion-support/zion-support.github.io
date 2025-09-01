@@ -1,27 +1,28 @@
-import React, { useState } from 'react';'
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';'
-import { innovativeITServices2025 } from '../data/innovativeITServices2025';'
+import React, { useState } from 'react';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import { innovativeITServices2025 } from '../data/innovativeITServices2025';
 import { innovativeAIServices2025 } from '../data/innovativeAIServices2025';
 const InnovativeServicesShowcase = () => {
-'
+
   const [activeTab, setActiveTab] = useState('microsaas');
   const [selectedService, setSelectedService] = useState(null);
   const tabs = [
     {
-'
-      id: 'microsaas','
+
+      id: 'microsaas',
       name: 'Micro SAAS Services',
-      count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length},'
-    { id: 'it', name: 'IT Services', count: innovativeITServices2025.length },'
+      count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length},
+    { id: 'it', name: 'IT Services', count: innovativeITServices2025.length },
     { id: 'ai', name: 'AI Services', count: innovativeAIServices2025.length },
   ];
   const getServicesByTab = () => {
+
     switch (activeTab) {
-'
+
       case 'microsaas':
-        return INNOVATIVE_MICRO_SAAS_SERVICES_2025;'
+        return INNOVATIVE_MICRO_SAAS_SERVICES_2025;
       case 'it':
-        return innovativeITServices2025;'
+        return innovativeITServices2025;
       case 'ai':
         return innovativeAIServices2025;
       default:
@@ -33,6 +34,7 @@ const InnovativeServicesShowcase = () => {
     setSelectedService(service);
   };
   const closeModal = () => {
+
     setSelectedService(null);
   };
   return()
@@ -42,7 +44,7 @@ const InnovativeServicesShowcase = () => {
         <div className="max-w-7xl mx-auto text-center">"
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Innovative"
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
               {' '}
               Services 2025
             </span>
@@ -105,9 +107,9 @@ const InnovativeServicesShowcase = () => {
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer group"
               >"
                 <div className="flex justify-between items-start mb-4">"
-                  <div className="text-3xl">'
-                    {activeTab === 'microsaas' && '🚀'}'
-                    {activeTab === 'it' && '⚡'}'
+                  <div className="text-3xl">
+                    {activeTab === 'microsaas' && '🚀'}
+                    {activeTab === 'it' && '⚡'}
                     {activeTab === 'ai' && '🤖'}
                   </div>"
                   <div className="text-right">"
@@ -116,9 +118,9 @@ const InnovativeServicesShowcase = () => {
                       {activeTab === 'it' && `$${service.hourlyRate}/hr`}'`
                       {activeTab === 'ai' && `$${service.price}`}
                     </div>"
-                    <div className="text-sm text-gray-400">'
-                      {activeTab === 'microsaas' && service.pricingModel}'
-                      {activeTab === 'it' && 'Professional'}'
+                    <div className="text-sm text-gray-400">
+                      {activeTab === 'microsaas' && service.pricingModel}
+                      {activeTab === 'it' && 'Professional'}
                       {activeTab === 'ai' && service.pricingModel}
                     </div>
                   </div>
@@ -154,8 +156,8 @@ const InnovativeServicesShowcase = () => {
                 </div>
 "
                 <div className="flex justify-between items-center">"
-                  <div className="text-sm text-gray-400">'
-                    {activeTab === 'microsaas' && service.userLimit}'
+                  <div className="text-sm text-gray-400">
+                    {activeTab === 'microsaas' && service.userLimit}
                     {activeTab === 'it' && service.deliveryTime}'`
                     {activeTab === 'ai' && `${service.aiScore}% AI Score`}
                   </div>"
@@ -183,13 +185,13 @@ const InnovativeServicesShowcase = () => {
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   <svg"
-                    className="w-6 h-6""
-                    fill="none""
-                    stroke="currentColor""
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
                     <path"
-                      strokeLinecap="round""
+                      strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}"
                       d="M6 18L18 6M6 6l12 12"
@@ -240,15 +242,15 @@ const InnovativeServicesShowcase = () => {
                     <div className="space-y-3">"
                       <div className="flex justify-between">"
                         <span className="text-gray-300">Price:</span>"
-                        <span className="text-white font-semibold">'
+                        <span className="text-white font-semibold">
                           {activeTab === 'microsaas' &&`
-                            `$${selectedService.price}/${selectedService.pricingModel}`}'
+                            `$${selectedService.price}/${selectedService.pricingModel}`}
                           {activeTab === 'it' &&`
-                            `$${selectedService.hourlyRate}/hour`}'
+                            `$${selectedService.hourlyRate}/hour`}
                           {activeTab === 'ai' &&`
                             `$${selectedService.price}/${selectedService.pricingModel}`}
                         </span>
-                      </div>'
+                      </div>
                       {activeTab === 'microsaas' && (
                         <>"
                           <div className="flex justify-between">"
@@ -270,7 +272,7 @@ const InnovativeServicesShowcase = () => {
                             </span>
                           </div>
                         </>
-                      )}'
+                      )}
                       {activeTab === 'it' && (
                         <>"
                           <div className="flex justify-between">"
@@ -294,7 +296,7 @@ const InnovativeServicesShowcase = () => {
                             </span>
                           </div>
                         </>
-                      )}'
+                      )}
                       {activeTab === 'ai' && (
                         <>"
                           <div className="flex justify-between">"
@@ -327,13 +329,13 @@ const InnovativeServicesShowcase = () => {
                     <div className="space-y-3">"
                       <div className="flex items-center">
                         <svg"
-                          className="w-5 h-5 text-blue-400 mr-3""
-                          fill="none""
-                          stroke="currentColor""
+                          className="w-5 h-5 text-blue-400 mr-3"
+                          fill="none"
+                          stroke="currentColor"
                           viewBox="0 0 24 24"
                         >
                           <path"
-                            strokeLinecap="round""
+                            strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth={2}"
                             d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
@@ -345,13 +347,13 @@ const InnovativeServicesShowcase = () => {
                       </div>"
                       <div className="flex items-center">
                         <svg"
-                          className="w-5 h-5 text-blue-400 mr-3""
-                          fill="none""
-                          stroke="currentColor""
+                          className="w-5 h-5 text-blue-400 mr-3"
+                          fill="none"
+                          stroke="currentColor"
                           viewBox="0 0 24 24"
                         >
                           <path"
-                            strokeLinecap="round""
+                            strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth={2}"
                             d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
@@ -363,13 +365,13 @@ const InnovativeServicesShowcase = () => {
                       </div>"
                       <div className="flex items-center">
                         <svg"
-                          className="w-5 h-5 text-blue-400 mr-3""
-                          fill="none""
-                          stroke="currentColor""
+                          className="w-5 h-5 text-blue-400 mr-3"
+                          fill="none"
+                          stroke="currentColor"
                           viewBox="0 0 24 24"
                         >
                           <path"
-                            strokeLinecap="round""
+                            strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth={2}"
                             d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
@@ -403,19 +405,19 @@ const InnovativeServicesShowcase = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>"
-          <p className="text-xl text-gray-300 mb-8">'
+          <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our innovative services can drive your success in
             2025 and beyond
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
             >
               Contact Us Today
             </a>
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
             >
               Call Now: +1 302 464 0950
