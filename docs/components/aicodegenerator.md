@@ -13,12 +13,12 @@ AICodeGenerator is a React component that provides user interface functionality.
 ## Usage
 
 ```tsx
-import { AICodeGenerator } from './components/AICodeGenerator.jsx';
+import { AICodeGenerator } from './components/AICodeGenerator.js.jsx';
 
 function App() {
   return (
-    <AICodeGenerator
-    // Add your props here
+    <AICodeGenerator 
+      // Add your props here
     />
   );
 }
@@ -41,5 +41,4 @@ function App() {
 This component uses Tailwind CSS classes for styling. Custom styles can be added via the `className` prop.
 
 ---
-
-_Generated automatically by Smart Documentation Generator_
+*Generated automatically by Smart Documentation Generator*
