@@ -750,68 +750,49 @@ const HomePage = memo(function HomePage() {
 
           {/* Advanced Features Showcase */}
           <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🔧 Advanced Features & Capabilities</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              
-              {/* Component Library */}
-              <Link href="/component-library" className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-indigo-400/30 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-3xl">🧩</span>
-                </div>
-                <h3 className="text-xl font-bold text-indigo-400 mb-4 text-center">Component Library</h3>
-                <p className="text-white/80 text-sm mb-4">Explore our 12 reusable UI components with interactive demos and documentation.</p>
-                <div className="text-indigo-400 text-sm font-semibold">View Components →</div>
-              </Link>
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🤖 Advanced Automation Systems</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">🔄 Redundancy Systems</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Ultimate Redundancy V2</li>
+                  <li>• Comprehensive Redundancy</li>
+                  <li>• PM2 Process Management</li>
+                  <li>• GitHub Actions Redundancy</li>
+                  <li>• Netlify Functions Redundancy</li>
+                </ul>
+                <Link href="/services#redundancy" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  Explore Redundancy Systems →
+                </Link>
+              </div>
 
-              {/* Live Dashboard */}
-              <Link href="/live-dashboard" className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-emerald-400/30 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-3xl">📊</span>
-                </div>
-                <h3 className="text-xl font-bold text-emerald-400 mb-4 text-center">Live Dashboard</h3>
-                <p className="text-white/80 text-sm mb-4">Real-time monitoring of system health, performance metrics, and automation status.</p>
-                <div className="text-emerald-400 text-sm font-semibold">Open Dashboard →</div>
-              </Link>
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">🧠 AI Automation</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• AI Trends Research</li>
+                  <li>• Content Generation</li>
+                  <li>• Intelligent Orchestration</li>
+                  <li>• Autonomous Agents</li>
+                  <li>• Innovation Systems</li>
+                </ul>
+                <Link href="/services#ai-automation" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                  Explore AI Systems →
+                </Link>
+              </div>
 
-              {/* Content Hub */}
-              <Link href="/content-hub" className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-3xl">📚</span>
-                </div>
-                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">Content Hub</h3>
-                <p className="text-white/80 text-sm mb-4">Access 2960+ pages of content, documentation, and resources.</p>
-                <div className="text-cyan-400 text-sm font-semibold">Browse Content →</div>
-              </Link>
-
-              {/* API Documentation */}
-              <Link href="/api-documentation" className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-orange-400/30 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-3xl">🔌</span>
-                </div>
-                <h3 className="text-xl font-bold text-orange-400 mb-4 text-center">API Documentation</h3>
-                <p className="text-white/80 text-sm mb-4">Comprehensive API reference with examples and integration guides.</p>
-                <div className="text-orange-400 text-sm font-semibold">View APIs →</div>
-              </Link>
-
-              {/* Playground */}
-              <Link href="/playground" className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-pink-400/30 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-pink-400 to-rose-500 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-3xl">🎮</span>
-                </div>
-                <h3 className="text-xl font-bold text-pink-400 mb-4 text-center">Playground</h3>
-                <p className="text-white/80 text-sm mb-4">Interactive testing environment for our components and features.</p>
-                <div className="text-pink-400 text-sm font-semibold">Start Playing →</div>
-              </Link>
-
-              {/* Enhanced Navigation */}
-              <Link href="/enhanced-navigation" className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-violet-400/30 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-violet-400 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-xl">🧭</span>
-                </div>
-                <h3 className="text-xl font-bold text-violet-400 mb-4 text-center">Enhanced Navigation</h3>
-                <p className="text-white/80 text-sm mb-4">Advanced navigation system with smart search and discovery.</p>
-                <div className="text-violet-400 text-sm font-semibold">Explore →</div>
-              </Link>
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">⚡ Build & Deploy</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Smart Build Orchestration</li>
+                  <li>• Continuous Monitoring</li>
+                  <li>• Self-Healing Systems</li>
+                  <li>• Performance Optimization</li>
+                  <li>• Quality Assurance</li>
+                </ul>
+                <Link href="/services#build-systems" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  Explore Build Systems →
+                </Link>
+              </div>
             </div>
           </section>
 
