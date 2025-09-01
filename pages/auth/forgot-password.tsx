@@ -1,1 +1,1 @@
-export default function PlaceholderPage() { return null; }
+export default function AuthForgotPassword() { return null; }

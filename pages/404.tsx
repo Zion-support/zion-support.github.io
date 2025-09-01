@@ -1,1 +1,3 @@
-export default function Custom404() { return null; }
+export default function NotFound() {
+  return null;
+}

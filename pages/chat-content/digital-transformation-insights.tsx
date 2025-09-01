@@ -1,1 +1,1 @@
-export default function PlaceholderPage() { return null; }
+export default function ChatDigitalTransformationInsights() { return null; }
