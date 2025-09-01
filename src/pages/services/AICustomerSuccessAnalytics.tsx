@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  Activity, 
+  BarChart3, 
   Users, 
   TrendingUp, 
   Shield, 
@@ -12,7 +12,8 @@ import {
   Clock, 
   CheckCircle, 
   AlertTriangle,
-  BarChart3,
+  MessageSquare,
+  Activity,
   PieChart,
   LineChart,
   UserCheck,
@@ -30,94 +31,87 @@ import {
   Bell,
   Mail,
   Phone,
-  MapPin,
-  Building2,
-  Stethoscope,
-  Pill,
-  Microscope,
-  FileText,
-  Calendar,
-  AlertCircle
+  MapPin
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-export default function AIHealthcareAnalyticsPlatform() {
+export default function AICustomerSuccessAnalytics() {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Diagnostics",
-      description: "Advanced machine learning algorithms that analyze medical data to assist in diagnosis and treatment planning."
+      title: "AI-Powered Insights",
+      description: "Advanced machine learning algorithms that predict customer behavior and identify success opportunities."
     },
     {
       icon: BarChart3,
       title: "Real-time Analytics",
-      description: "Live dashboards and metrics that provide instant visibility into patient outcomes and healthcare performance."
+      description: "Live dashboards and metrics that provide instant visibility into customer success metrics and KPIs."
     },
     {
       icon: Users,
-      title: "Patient Journey Mapping",
-      description: "Comprehensive tracking of patient interactions across all healthcare touchpoints and care settings."
+      title: "Customer Journey Mapping",
+      description: "Comprehensive tracking of customer interactions across all touchpoints and channels."
     },
     {
       icon: TrendingUp,
       title: "Predictive Analytics",
-      description: "Forecast patient outcomes, identify risk factors, and predict healthcare trends with high accuracy."
+      description: "Forecast customer churn, expansion opportunities, and success milestones with high accuracy."
     },
     {
       icon: Shield,
-      title: "HIPAA Compliance",
-      description: "Enterprise-grade security with full HIPAA, GDPR, and SOC2 compliance for sensitive patient data."
+      title: "Data Security & Compliance",
+      description: "Enterprise-grade security with GDPR, SOC2, and HIPAA compliance for sensitive customer data."
     },
     {
       icon: Zap,
-      title: "Automated Insights",
-      description: "Intelligent automation of healthcare analytics, alerts, and clinical decision support."
+      title: "Automated Workflows",
+      description: "Intelligent automation of customer success tasks, alerts, and follow-up actions."
     }
   ];
 
   const analyticsModules = [
     {
       icon: Activity,
-      title: "Clinical Analytics",
-      description: "Real-time analysis of clinical data, patient outcomes, and treatment effectiveness"
+      title: "Health Score Monitoring",
+      description: "Real-time customer health scoring based on usage patterns, engagement, and satisfaction metrics"
     },
     {
       icon: LineChart,
-      title: "Population Health",
-      description: "Comprehensive population health analytics with risk stratification and intervention planning"
+      title: "Usage Analytics",
+      description: "Deep insights into product adoption, feature utilization, and user behavior patterns"
     },
     {
       icon: PieChart,
-      title: "Quality Metrics",
-      description: "Track and optimize healthcare quality indicators and performance metrics"
+      title: "Churn Prediction",
+      description: "AI-powered early warning system for customer churn with actionable retention strategies"
     },
     {
       icon: UserCheck,
-      title: "Patient Engagement",
-      description: "Analyze patient engagement patterns and optimize communication strategies"
+      title: "Success Milestone Tracking",
+      description: "Automated tracking of customer success milestones and achievement of business outcomes"
     },
     {
-      icon: BarChart3,
-      title: "Cost Analytics",
-      description: "Identify cost-saving opportunities and optimize healthcare resource allocation"
+      icon: MessageSquare,
+      title: "Sentiment Analysis",
+      description: "Natural language processing to analyze customer feedback, support tickets, and communication sentiment"
     },
     {
       icon: Target,
-      title: "Predictive Modeling",
-      description: "AI-powered models for predicting patient readmissions, complications, and outcomes"
+      title: "Expansion Opportunities",
+      description: "Identify upsell and cross-sell opportunities based on usage patterns and success indicators"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$399",
+      price: "$299",
       period: "/month",
-      description: "Perfect for small healthcare practices",
+      description: "Perfect for growing SaaS companies",
       features: [
-        "Up to 1,000 patient records",
-        "Basic AI analytics",
-        "Standard dashboards",
+        "Up to 1,000 customer profiles",
+        "Basic AI insights and predictions",
+        "Standard analytics dashboard",
         "Email support",
         "Basic integrations (5)",
         "Monthly reports"
@@ -126,11 +120,11 @@ export default function AIHealthcareAnalyticsPlatform() {
     },
     {
       name: "Professional",
-      price: "$999",
+      price: "$799",
       period: "/month",
-      description: "Ideal for growing healthcare organizations",
+      description: "Ideal for established businesses",
       features: [
-        "Up to 10,000 patient records",
+        "Up to 10,000 customer profiles",
         "Advanced AI algorithms",
         "Custom dashboards",
         "Priority support",
@@ -143,14 +137,14 @@ export default function AIHealthcareAnalyticsPlatform() {
     },
     {
       name: "Enterprise",
-      price: "$2,999",
+      price: "$2,499",
       period: "/month",
-      description: "For large healthcare systems",
+      description: "For large organizations",
       features: [
-        "Unlimited patient records",
+        "Unlimited customer profiles",
         "Custom AI models",
         "White-label solutions",
-        "Dedicated healthcare analyst",
+        "Dedicated success manager",
         "Advanced analytics",
         "Custom training",
         "On-premise options",
@@ -162,72 +156,72 @@ export default function AIHealthcareAnalyticsPlatform() {
 
   const benefits = [
     {
-      title: "Improve Patient Outcomes",
-      description: "AI-powered insights help healthcare providers make better clinical decisions and improve patient care.",
+      title: "Reduce Customer Churn",
+      description: "Predict and prevent customer churn with AI-powered early warning systems and proactive interventions.",
       icon: Heart
     },
     {
-      title: "Reduce Healthcare Costs",
-      description: "Identify inefficiencies, optimize resource allocation, and reduce unnecessary healthcare spending.",
+      title: "Increase Customer Lifetime Value",
+      description: "Identify expansion opportunities and optimize customer success strategies to maximize revenue per customer.",
       icon: TrendingUp
     },
     {
-      title: "Enhance Care Quality",
-      description: "Track quality metrics and implement evidence-based practices to improve overall care quality.",
+      title: "Improve Customer Satisfaction",
+      description: "Proactively address customer needs and optimize the customer experience based on real-time insights.",
       icon: Star
     },
     {
-      title: "Streamline Operations",
-      description: "Automate routine analytics tasks and focus your team on high-value clinical initiatives.",
-      icon: Zap
+      title: "Scale Success Operations",
+      description: "Automate routine tasks and focus your team on high-value customer relationships and strategic initiatives.",
+      icon: Users
     }
   ];
 
   const useCases = [
     {
-      icon: Stethoscope,
-      title: "Hospitals",
-      description: "Optimize patient care, reduce readmissions, and improve operational efficiency"
+      icon: Users,
+      title: "SaaS Companies",
+      description: "Monitor subscription health, predict churn, and optimize customer success strategies"
     },
     {
       icon: Building2,
-      title: "Clinics",
-      description: "Track patient outcomes, optimize workflows, and improve care quality"
+      title: "Enterprise B2B",
+      description: "Track complex customer journeys and manage multi-stakeholder relationships"
     },
     {
-      icon: Pill,
-      title: "Pharmaceuticals",
-      description: "Analyze drug effectiveness, track adverse events, and optimize clinical trials"
+      icon: Globe,
+      title: "E-commerce",
+      description: "Analyze customer behavior and optimize retention strategies"
     },
     {
-      icon: Microscope,
-      title: "Research Institutions",
-      description: "Conduct advanced healthcare research and develop new treatment protocols"
+      icon: Server,
+      title: "Technology Companies",
+      description: "Monitor product adoption and identify expansion opportunities"
     },
     {
-      icon: Users,
-      title: "Health Insurance",
-      description: "Analyze claims data, identify fraud, and optimize coverage policies"
+      icon: Award,
+      title: "Consulting Firms",
+      description: "Track client success metrics and optimize service delivery"
     },
     {
-      icon: FileText,
-      title: "Government Health",
-      description: "Monitor public health trends and optimize healthcare policy decisions"
+      icon: Target,
+      title: "Startups",
+      description: "Build data-driven customer success processes from the ground up"
     }
   ];
 
   return (
     <>
       <SEO 
-        title="AI Healthcare Analytics Platform - Zion Tech Group"
-        description="Advanced AI-powered healthcare analytics platform for improving patient outcomes, reducing costs, and optimizing healthcare operations with predictive analytics."
-        canonical="/services/ai-healthcare-analytics-platform"
+        title="AI Customer Success Analytics Platform - Zion Tech Group"
+        description="Advanced AI-powered customer success analytics platform for predicting churn, tracking success metrics, and optimizing customer relationships with real-time insights."
+        canonical="/services/ai-customer-success-analytics"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto px-6">
             <div className="text-center">
               <motion.div
@@ -236,24 +230,24 @@ export default function AIHealthcareAnalyticsPlatform() {
                 transition={{ duration: 0.6 }}
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                  <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
-                    AI Healthcare Analytics Platform
+                  <span className="bg-gradient-to-r from-green-400 via-blue-500 to-cyan-400 bg-clip-text text-transparent">
+                    AI Customer Success Analytics
                   </span>
                 </h1>
                 <p className="text-xl text-slate-300 mb-8 max-w-4xl mx-auto">
-                  Transform healthcare delivery with AI-powered analytics that improve patient outcomes, 
-                  reduce costs, and optimize clinical operations with predictive insights.
+                  Transform your customer success operations with AI-powered analytics that predict churn, 
+                  track success metrics, and optimize customer relationships in real-time.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
                     to="/request-quote"
-                    className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105"
+                    className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105"
                   >
                     Get Started
                   </Link>
                   <Link
                     to="/demo"
-                    className="border border-slate-600 text-slate-300 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:border-blue-500"
+                    className="border border-slate-600 text-slate-300 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:border-green-500"
                   >
                     Request Demo
                   </Link>
@@ -273,10 +267,10 @@ export default function AIHealthcareAnalyticsPlatform() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Powerful Features for Healthcare Analytics
+                Powerful Features for Customer Success
               </h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Our AI-powered platform provides comprehensive analytics and insights to transform healthcare delivery.
+                Our AI-powered platform provides comprehensive insights and automation to drive customer success.
               </p>
             </motion.div>
 
@@ -287,9 +281,9 @@ export default function AIHealthcareAnalyticsPlatform() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
+                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -310,10 +304,10 @@ export default function AIHealthcareAnalyticsPlatform() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Comprehensive Healthcare Analytics Modules
+                Comprehensive Analytics Modules
               </h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Get deep insights into every aspect of healthcare operations with our specialized analytics modules.
+                Get deep insights into every aspect of your customer success operations with our specialized analytics modules.
               </p>
             </motion.div>
 
@@ -324,9 +318,9 @@ export default function AIHealthcareAnalyticsPlatform() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300"
+                  className="bg-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
                     <module.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{module.title}</h3>
@@ -350,7 +344,7 @@ export default function AIHealthcareAnalyticsPlatform() {
                 Transparent Pricing Plans
               </h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Choose the plan that fits your healthcare organization's size and analytics needs.
+                Choose the plan that fits your business needs and scale as you grow.
               </p>
             </motion.div>
 
@@ -363,13 +357,13 @@ export default function AIHealthcareAnalyticsPlatform() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
                     plan.popular 
-                      ? 'border-blue-500/50 bg-blue-500/5' 
+                      ? 'border-green-500/50 bg-green-500/5' 
                       : 'border-slate-700/50'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -387,7 +381,7 @@ export default function AIHealthcareAnalyticsPlatform() {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature) => (
                       <li key={feature} className="flex items-center text-slate-300">
-                        <CheckCircle className="w-5 h-5 text-blue-500 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -397,7 +391,7 @@ export default function AIHealthcareAnalyticsPlatform() {
                     to="/request-quote"
                     className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white transform hover:scale-105'
+                        ? 'bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white transform hover:scale-105'
                         : 'bg-slate-700 hover:bg-slate-600 text-white'
                     }`}
                   >
@@ -419,10 +413,10 @@ export default function AIHealthcareAnalyticsPlatform() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Why Choose AI Healthcare Analytics?
+                Why Choose AI Customer Success Analytics?
               </h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Transform healthcare delivery with data-driven insights and AI-powered analytics.
+                Transform your customer success operations with data-driven insights and AI-powered automation.
               </p>
             </motion.div>
 
@@ -435,7 +429,7 @@ export default function AIHealthcareAnalyticsPlatform() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="flex items-start space-x-4"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -458,10 +452,10 @@ export default function AIHealthcareAnalyticsPlatform() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Perfect for Every Healthcare Organization
+                Perfect for Every Industry
               </h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Our platform is designed to meet the unique analytics needs of healthcare organizations across all sizes and specialties.
+                Our platform is designed to meet the unique needs of businesses across all industries.
               </p>
             </motion.div>
 
@@ -472,9 +466,9 @@ export default function AIHealthcareAnalyticsPlatform() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
+                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <useCase.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
@@ -486,7 +480,7 @@ export default function AIHealthcareAnalyticsPlatform() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
+        <section className="py-20 bg-gradient-to-r from-green-600/20 to-blue-600/20">
           <div className="max-w-7xl mx-auto px-6 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -494,21 +488,21 @@ export default function AIHealthcareAnalyticsPlatform() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Transform Healthcare Analytics?
+                Ready to Transform Your Customer Success?
               </h2>
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Join hundreds of healthcare organizations that have revolutionized their analytics with AI-powered insights.
+                Join hundreds of companies that have revolutionized their customer success operations with AI-powered analytics.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/request-quote"
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105"
+                  className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105"
                 >
                   Start Free Trial
                 </Link>
                 <Link
                   to="/contact"
-                  className="border border-slate-600 text-slate-300 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:border-blue-500"
+                  className="border border-slate-600 text-slate-300 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:border-green-500"
                 >
                   Contact Sales
                 </Link>
@@ -523,27 +517,27 @@ export default function AIHealthcareAnalyticsPlatform() {
             <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-8">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
-                  <a href="tel:+13024640950" className="text-slate-300 hover:text-blue-400 transition-colors">
+                  <a href="tel:+13024640950" className="text-slate-300 hover:text-green-400 transition-colors">
                     +1 302 464 0950
                   </a>
                 </div>
                 
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-                  <a href="mailto:kleber@ziontechgroup.com" className="text-slate-300 hover:text-blue-400 transition-colors">
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-slate-300 hover:text-green-400 transition-colors">
                     kleber@ziontechgroup.com
                   </a>
                 </div>
                 
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">Address</h3>

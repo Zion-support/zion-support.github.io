@@ -123,6 +123,11 @@ const AIContentGenerator = React.lazy(() => import('./pages/services/AIContentGe
 const AIBusinessIntelligencePlatform = React.lazy(() => import('./pages/services/AIBusinessIntelligencePlatform'));
 const AIFinancialTradingPlatform = React.lazy(() => import('./pages/services/AIFinancialTradingPlatform'));
 const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
+
+// New innovative AI services
+const AICustomerSuccessAnalytics = React.lazy(() => import('./pages/services/AICustomerSuccessAnalytics'));
+const AISupplyChainOptimizationPlatform = React.lazy(() => import('./pages/services/AISupplyChainOptimizationPlatform'));
+const AIHealthcareAnalyticsPlatform = React.lazy(() => import('./pages/services/AIHealthcareAnalyticsPlatform'));
 const AIHRPlatform = React.lazy(() => import('./pages/services/AIHRPlatform'));
 const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
 const AILegalResearchPlatform = React.lazy(() => import('./pages/services/AILegalResearchPlatform'));
@@ -131,7 +136,6 @@ const AIEducationPlatform = React.lazy(() => import('./pages/services/AIEducatio
 // Additional Innovative AI Services
 const AIProjectManagementPlatform = React.lazy(() => import('./pages/services/ai-project-management-platform'));
 const AICybersecurityThreatDetection = React.lazy(() => import('./pages/services/ai-cybersecurity-threat-detection'));
-const AIHealthcareAnalyticsPlatform = React.lazy(() => import('./pages/services/ai-healthcare-analytics-platform'));
 
 // New innovative services
 const AIContentGenerationPlatform = React.lazy(() => import('./pages/services/AIContentGenerationPlatform'));
@@ -320,6 +324,11 @@ function App() {
               <Route path="/services/ai-business-intelligence-platform" element={<AIBusinessIntelligencePlatform />} />
               <Route path="/services/ai-financial-trading-platform" element={<AIFinancialTradingPlatform />} />
               <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+              
+              {/* New Innovative AI Service Routes */}
+              <Route path="/services/ai-customer-success-analytics" element={<AICustomerSuccessAnalytics />} />
+              <Route path="/services/ai-supply-chain-optimization-platform" element={<AISupplyChainOptimizationPlatform />} />
+              <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcareAnalyticsPlatform />} />
               <Route path="/services/ai-hr-platform" element={<AIHRPlatform />} />
               <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
               <Route path="/services/ai-legal-research-platform" element={<AILegalResearchPlatform />} />
@@ -328,7 +337,6 @@ function App() {
               {/* Additional Innovative AI Service Routes */}
               <Route path="/services/ai-project-management-platform" element={<AIProjectManagementPlatform />} />
               <Route path="/services/ai-cybersecurity-threat-detection" element={<AICybersecurityThreatDetection />} />
-              <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcareAnalyticsPlatform />} />
               
               {/* New innovative service routes */}
               <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />

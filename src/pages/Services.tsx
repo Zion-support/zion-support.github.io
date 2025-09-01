@@ -51,17 +51,110 @@ export default function Services() {
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      id: 'ai-lead-scoring',
-      title: 'AI Lead Scoring Platform',
-      description: 'Intelligent lead qualification and scoring system that automatically ranks prospects based on behavior and engagement.',
-      category: 'micro-saas',
-      price: '$149/month',
-      features: ['Behavioral analysis', 'Predictive scoring', 'CRM integration', 'Real-time updates', 'Custom scoring models'],
-      benefits: ['Increase conversion rates by 35%', 'Reduce sales cycle time', 'Focus on high-value prospects', 'Automated lead nurturing'],
-      marketPrice: '$200-500/month',
-      href: '/services/ai-lead-scoring',
-      icon: Target,
-      color: 'from-green-500 to-emerald-500'
+      name: 'Innovative AI Micro SAAS',
+      icon: Zap,
+      description: 'Cutting-edge AI-powered micro software-as-a-service solutions for modern businesses',
+      color: 'from-emerald-600 to-teal-600',
+      services: [
+        {
+          name: 'AI Customer Success Analytics Platform',
+          description: 'AI-powered customer success analytics with predictive insights and automated workflows',
+          features: ['AI-Powered Insights', 'Real-time Analytics', 'Customer Journey Mapping', 'Predictive Analytics', 'Data Security & Compliance'],
+          href: '/services/ai-customer-success-analytics',
+          price: 'From $299/month',
+          rating: 4.9,
+          reviewCount: 156,
+          benefits: ['25% increase in customer retention', 'Automated success tracking', 'Predictive churn prevention']
+        },
+        {
+          name: 'AI Supply Chain Optimization Platform',
+          description: 'Intelligent supply chain optimization with AI-powered demand forecasting and route optimization',
+          features: ['AI-Powered Optimization', 'Global Visibility', 'Intelligent Route Optimization', 'Predictive Analytics', 'Risk Management'],
+          href: '/services/ai-supply-chain-optimization-platform',
+          price: 'From $499/month',
+          rating: 4.9,
+          reviewCount: 134,
+          benefits: ['30% reduction in logistics costs', 'Improved delivery times', 'Enhanced supply chain resilience']
+        },
+        {
+          name: 'AI Financial Trading Platform',
+          description: 'Advanced AI-powered trading algorithms with real-time market analysis and risk management',
+          features: ['AI-Powered Trading Algorithms', 'Real-time Market Analysis', 'Predictive Analytics', 'Risk Management', 'Automated Trading'],
+          href: '/services/ai-financial-trading-platform',
+          price: 'From $199/month',
+          rating: 4.9,
+          reviewCount: 189,
+          benefits: ['Improved trading performance', 'Reduced risk exposure', 'Automated portfolio management']
+        },
+        {
+          name: 'AI Healthcare Analytics Platform',
+          description: 'Comprehensive healthcare analytics with AI-powered diagnostics and patient insights',
+          features: ['AI-Powered Diagnostics', 'Real-time Analytics', 'Patient Journey Mapping', 'Predictive Analytics', 'HIPAA Compliance'],
+          href: '/services/ai-healthcare-analytics-platform',
+          price: 'From $399/month',
+          rating: 4.9,
+          reviewCount: 167,
+          benefits: ['Enhanced patient outcomes', 'Improved operational efficiency', 'Predictive healthcare insights']
+        }
+      ]
+    },
+    {
+      name: 'AI & Analytics',
+      icon: Brain,
+      description: 'Cutting-edge artificial intelligence and data analytics solutions',
+      color: 'from-blue-600 to-cyan-600',
+      services: [
+        {
+          name: 'AI Business Intelligence Platform',
+          description: 'Transform your data into actionable insights with advanced AI algorithms and predictive analytics',
+          features: ['Predictive Analytics', 'Real-time Dashboards', 'Machine Learning Models', 'Data Visualization', 'Automated Reporting'],
+          href: '/services/ai-business-intelligence',
+          price: 'From $5,000',
+          rating: 4.9,
+          reviewCount: 127,
+          benefits: ['20% increase in decision speed', '30% reduction in manual analysis', 'Real-time insights']
+        },
+        {
+          name: 'AI Sales Copilot',
+          description: 'AI-powered sales automation and customer relationship management with intelligent lead scoring',
+          features: ['Lead Scoring', 'Sales Forecasting', 'Customer Insights', 'Automated Follow-ups', 'Pipeline Optimization'],
+          href: '/services/ai-sales-copilot',
+          price: 'From $3,500',
+          rating: 4.8,
+          reviewCount: 89,
+          benefits: ['25% increase in conversion rates', '40% reduction in follow-up time', 'Predictive lead scoring']
+        },
+        {
+          name: 'AI Compliance Assistant',
+          description: 'Automated compliance monitoring and risk assessment for regulatory requirements',
+          features: ['Regulatory Monitoring', 'Risk Assessment', 'Automated Reporting', 'Audit Trails', 'Policy Management'],
+          href: '/services/ai-compliance-assistant',
+          price: 'From $4,200',
+          rating: 4.7,
+          reviewCount: 156,
+          benefits: ['90% reduction in compliance violations', 'Automated audit preparation', 'Real-time risk alerts']
+        },
+        {
+          name: 'AI Document Intelligence Hub',
+          description: 'Extract, classify, and analyze documents with AI-powered OCR and intelligent data extraction',
+          features: ['Document OCR', 'Data Extraction', 'Classification', 'Search & Retrieval', 'Compliance Monitoring'],
+          href: '/services/ai-document-intelligence',
+          price: 'From $2,800',
+          rating: 4.6,
+          reviewCount: 203,
+          benefits: ['80% faster document processing', '99% accuracy in data extraction', 'Automated workflows']
+        },
+        {
+          name: 'AI Customer Success Platform',
+          description: 'Intelligent customer success with predictive analytics, churn prevention, and automated engagement',
+          features: ['Churn Prediction', 'Customer Health Scoring', 'Automated Engagement', 'Success Metrics', 'Proactive Support'],
+          href: '/services/ai-customer-success',
+          price: 'From $2,500',
+          rating: 4.8,
+          reviewCount: 94,
+          benefits: ['15% reduction in churn', 'Improved customer satisfaction', 'Automated success tracking']
+        }
+      ]
     },
     {
       id: 'uptime-sla-monitor',
@@ -316,60 +409,85 @@ export default function Services() {
           </div>
         </motion.div>
 
-        {/* Contact Information */}
-        <motion.div
+        {/* New Innovative AI Micro SAAS Services Highlight */}
+        <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-gradient-to-r from-slate-800 to-slate-700 rounded-2xl p-6 mb-12 max-w-4xl mx-auto"
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="mb-16"
         >
-          <div className="grid md:grid-cols-3 gap-6 text-center">
-            <div className="flex flex-col items-center">
-              <Phone className="w-6 h-6 text-cyan-400 mb-2" />
-              <span className="text-white font-semibold">+1 302 464 0950</span>
+          <div className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-2xl border border-emerald-400/30 p-8 backdrop-blur-md">
+            <div className="text-center mb-8">
+              <h3 className="text-3xl font-bold text-emerald-300 mb-4">🚀 New: Innovative AI Micro SAAS Services</h3>
+              <p className="text-lg text-slate-300 max-w-4xl mx-auto">
+                Introducing our latest AI-powered micro software-as-a-service solutions designed for modern businesses. 
+                These cutting-edge platforms deliver enterprise-grade AI capabilities at accessible monthly pricing.
+              </p>
             </div>
-            <div className="flex flex-col items-center">
-              <Mail className="w-6 h-6 text-cyan-400 mb-2" />
-              <span className="text-white font-semibold">kleber@ziontechgroup.com</span>
+            
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+              <div className="bg-white/5 rounded-xl border border-emerald-400/20 p-6 text-center hover:border-emerald-400/40 transition-all duration-200">
+                <div className="text-2xl mb-3">📊</div>
+                <h4 className="text-lg font-semibold text-emerald-300 mb-2">AI Customer Success Analytics</h4>
+                <p className="text-sm text-slate-300 mb-3">AI-powered insights & automated workflows</p>
+                <div className="text-2xl font-bold text-emerald-300 mb-2">$299/month</div>
+                <a href="/services/ai-customer-success-analytics" className="text-sm text-emerald-400 hover:text-emerald-300 transition-colors">
+                  Learn More →
+                </a>
+              </div>
+              
+              <div className="bg-white/5 rounded-xl border border-emerald-400/20 p-6 text-center hover:border-emerald-400/40 transition-all duration-200">
+                <div className="text-2xl mb-3">🚚</div>
+                <h4 className="text-lg font-semibold text-emerald-300 mb-2">AI Supply Chain Optimization</h4>
+                <p className="text-sm text-slate-300 mb-3">Intelligent demand forecasting & route optimization</p>
+                <div className="text-2xl font-bold text-emerald-300 mb-2">$499/month</div>
+                <a href="/services/ai-supply-chain-optimization-platform" className="text-sm text-emerald-400 hover:text-emerald-300 transition-colors">
+                  Learn More →
+                </a>
+              </div>
+              
+              <div className="bg-white/5 rounded-xl border border-emerald-400/20 p-6 text-center hover:border-emerald-400/40 transition-all duration-200">
+                <div className="text-2xl mb-3">📈</div>
+                <h4 className="text-lg font-semibold text-emerald-300 mb-2">AI Financial Trading Platform</h4>
+                <p className="text-sm text-slate-300 mb-3">Advanced trading algorithms & risk management</p>
+                <div className="text-2xl font-bold text-emerald-300 mb-2">$199/month</div>
+                <a href="/services/ai-financial-trading-platform" className="text-sm text-emerald-400 hover:text-emerald-300 transition-colors">
+                  Learn More →
+                </a>
+              </div>
+              
+              <div className="bg-white/5 rounded-xl border border-emerald-400/20 p-6 text-center hover:border-emerald-400/40 transition-all duration-200">
+                <div className="text-2xl mb-3">🏥</div>
+                <h4 className="text-lg font-semibold text-emerald-300 mb-2">AI Healthcare Analytics</h4>
+                <p className="text-sm text-slate-300 mb-3">AI-powered diagnostics & patient insights</p>
+                <div className="text-2xl font-bold text-emerald-300 mb-2">$399/month</div>
+                <a href="/services/ai-healthcare-analytics-platform" className="text-sm text-emerald-400 hover:text-emerald-300 transition-colors">
+                  Learn More →
+                </a>
+              </div>
             </div>
-            <div className="flex flex-col items-center">
-              <MapPin className="w-6 h-6 text-cyan-400 mb-2" />
-              <span className="text-white font-semibold">364 E Main St STE 1008<br />Middletown DE 19709</span>
+            
+            <div className="text-center mt-8">
+              <p className="text-sm text-slate-400 mb-4">
+                All services include enterprise-grade security, 24/7 support, and seamless integration capabilities.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <a href="tel:+13024640950" className="text-sm text-emerald-400 hover:text-emerald-300 transition-colors">
+                  📱 +1 302 464 0950
+                </a>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-sm text-emerald-400 hover:text-emerald-300 transition-colors">
+                  📧 kleber@ziontechgroup.com
+                </a>
+                <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-sm text-emerald-400 hover:text-emerald-300 transition-colors">
+                  🌐 ziontechgroup.com
+                </a>
+              </div>
             </div>
           </div>
         </motion.div>
 
-        {/* Category Filter */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex flex-wrap justify-center gap-4 mb-12"
-        >
-          {serviceCategories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveCategory(category.id)}
-              className={`flex items-center px-6 py-3 rounded-full transition-all duration-300 ${
-                activeCategory === category.id
-                  ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
-                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
-              }`}
-            >
-              <category.icon className="w-5 h-5 mr-2" />
-              {category.name}
-            </button>
-          ))}
-        </motion.div>
-
-        {/* Services Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {filteredServices.map((service, index) => (
+        <div className="space-y-16">
+          {serviceCategories.map((category, categoryIndex) => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
@@ -443,14 +561,18 @@ export default function Services() {
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
               >
-                Get Free Consultation
+                📱 Call +1 302 464 0950
               </a>
-              <a
-                href="/request-quote"
-                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Request Custom Quote
-              </a>
+            </div>
+            <div className="mt-6 text-sm text-slate-400">
+              <p>📧 Email: kleber@ziontechgroup.com</p>
+              <p>📱 Mobile: +1 302 464 0950</p>
+              <p>📍 Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+              <p className="mt-2">
+                <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-200">
+                  🌐 Visit our website for more information →
+                </a>
+              </p>
             </div>
           </div>
         </motion.div>

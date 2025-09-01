@@ -55,29 +55,16 @@ export function EnhancedFuturisticFooter() {
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence-platform' },
         { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
         { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
+        { name: 'AI Customer Success Analytics', href: '/services/ai-customer-success-analytics' },
         { name: 'AI Data Governance', href: '/services/ai-data-governance' },
         { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics-platform' },
         { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform' },
         { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection' },
         { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform' },
-        { name: 'AI Content Marketing Automation', href: '/services/ai-content-marketing-automation' },
-        { name: 'AI HR Platform', href: '/services/ai-hr-platform' }
-      ]
-    },
-    {
-      title: 'Micro SaaS Solutions',
-      featured: true,
-      links: [
-        { name: 'AI Content Generator', href: '/services/ai-content-generator' },
-        { name: 'AI Lead Scoring Platform', href: '/services/ai-lead-scoring' },
-        { name: 'Uptime SLA Monitor', href: '/services/uptime-sla-monitor' },
-        { name: 'SOC2 Compliance Tracker', href: '/services/soc2-compliance-tracker' },
-        { name: 'AI Support Helpdesk', href: '/services/ai-support-helpdesk' },
-        { name: 'AI SEO Optimizer', href: '/services/ai-seo-optimizer' },
-        { name: 'AI Customer Churn Predictor', href: '/services/ai-customer-churn-prediction' },
-        { name: 'AI Financial Fraud Detection', href: '/services/ai-financial-fraud-detection' },
-        { name: 'AI HR Talent Acquisition', href: '/services/ai-hr-talent-acquisition' },
-        { name: 'AI Legal Document Automation', href: '/services/ai-legal-document-automation' }
+        { name: 'AI Supply Chain Optimization Platform', href: '/services/ai-supply-chain-optimization-platform' },
+        { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform' },
+        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio' }
       ]
     },
     {
