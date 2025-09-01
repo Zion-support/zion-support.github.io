@@ -52,11 +52,12 @@ export default function Footer() {
     { name: 'Media Kit', href: '/media-kit' }
   ];
 
-  const legal = [
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' },
-    { name: 'Security', href: '/security' }
+  const socialLinks = [
+    { name: 'X', href: 'https://x.com/ziontechgroup', icon: Twitter },
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+    { name: 'Instagram', href: 'https://www.instagram.com/ziontechgroup', icon: Instagram },
+    { name: 'YouTube', href: 'https://www.youtube.com/@ziontechgroup', icon: Youtube }
   ];
 
   const social = [

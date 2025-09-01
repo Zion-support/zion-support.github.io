@@ -9,9 +9,6 @@ import type { ProductListing } from '@/types/listings';
 
 import { real2029Q1Additions } from '../../data/real-2029-q1-additions';
 import { realMarketServices } from '../../data/real-market-services';
-import { real2029Q2Additions } from '../../data/real-2029-q2-additions';
-import { real2029Q3Additions } from '../../data/real-2029-q3-additions';
-import { real2029Q4Additions } from '../../data/real-2029-q4-additions';
 
   // Moved useMemo call before any early returns
   const service = React.useMemo(() => {
@@ -84,10 +81,7 @@ function getAllServices(): Service[] {
 		.concat(real2027Q2Additions as unknown as Service[])
 		.concat(real2028ServiceExpansions as unknown as Service[])
 		.concat(real2029Q1Additions as unknown as Service[])
-		.concat(realMarketServices as unknown as Service[])
-		.concat(real2029Q2Additions as unknown as Service[])
-		.concat(real2029Q3Additions as unknown as Service[])
-		.concat(real2029Q4Additions as unknown as Service[]);
+		.concat(realMarketServices as unknown as Service[]);
 }
 
 export default ServicePage;
