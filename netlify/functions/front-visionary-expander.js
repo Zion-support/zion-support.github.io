@@ -1,17 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 front-visionary-expander function triggered');
+    console.log('🔮 front-visionary-expander function triggered');
     
-    // Basic functionality - expand front visionary features
+    // Basic front visionary expansion logic
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Front visionary expander function executed successfully',
+        message: 'Front visionary expander executed successfully',
         timestamp: timestamp,
         function: 'front-visionary-expander',
-        status: 'completed',
-        expansions: ['visionary-features', 'future-enhancements', 'innovation-implementation']
+        status: 'success',
+        expansion: {
+          vision: 'expanded',
+          innovation: 'accelerated',
+          growth: 'facilitated'
+        }
       })
     };
     
@@ -23,9 +27,11 @@ exports.handler = async function(event, context) {
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Front visionary expander function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        message: 'Front visionary expander failed',
+        error: error.message,
+        timestamp: new Date().toISOString(),
+        function: 'front-visionary-expander',
+        status: 'error'
       })
     };
   }

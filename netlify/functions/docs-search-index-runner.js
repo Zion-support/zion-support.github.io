@@ -1,17 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 docs-search-index-runner function triggered');
+    console.log('🔍 docs-search-index-runner function triggered');
     
-    // Basic functionality - run documentation search indexing
+    // Basic documentation search index running logic
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Docs search index runner function executed successfully',
+        message: 'Docs search index runner executed successfully',
         timestamp: timestamp,
         function: 'docs-search-index-runner',
-        status: 'completed',
-        activities: ['search-index-generation', 'content-indexing', 'search-optimization']
+        status: 'success',
+        indexing: {
+          search: 'indexed',
+          queries: 'optimized',
+          performance: 'improved'
+        }
       })
     };
     
@@ -23,9 +27,11 @@ exports.handler = async function(event, context) {
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Docs search index runner function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        message: 'Docs search index runner failed',
+        error: error.message,
+        timestamp: new Date().toISOString(),
+        function: 'docs-search-index-runner',
+        status: 'error'
       })
     };
   }

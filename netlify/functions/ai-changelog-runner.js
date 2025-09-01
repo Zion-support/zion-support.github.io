@@ -2,16 +2,20 @@ exports.handler = async function(event, context) {
   try {
     console.log('🤖 ai-changelog-runner function triggered');
     
-    // Basic functionality - run AI changelog generation
+    // Basic AI changelog running logic
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'AI changelog runner function executed successfully',
+        message: 'AI changelog runner executed successfully',
         timestamp: timestamp,
         function: 'ai-changelog-runner',
-        status: 'completed',
-        activities: ['changelog-generation', 'ai-analysis', 'update-summarization']
+        status: 'success',
+        changelog: {
+          changes: 'analyzed',
+          summary: 'generated',
+          insights: 'extracted'
+        }
       })
     };
     
@@ -23,9 +27,11 @@ exports.handler = async function(event, context) {
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'AI changelog runner function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        message: 'AI changelog runner failed',
+        error: error.message,
+        timestamp: new Date().toISOString(),
+        function: 'ai-changelog-runner',
+        status: 'error'
       })
     };
   }

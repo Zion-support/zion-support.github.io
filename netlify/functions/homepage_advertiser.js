@@ -1,16 +1,16 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 homepage_advertiser function triggered');
+    console.log('🏠 homepage_advertiser function triggered');
     
-    // Basic functionality - advertise homepage features
+    // Basic homepage advertising logic
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Homepage advertiser function executed successfully',
+        message: 'Homepage advertiser executed successfully',
         timestamp: timestamp,
         function: 'homepage_advertiser',
-        status: 'completed'
+        status: 'success'
       })
     };
     
@@ -22,9 +22,11 @@ exports.handler = async function(event, context) {
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Homepage advertiser function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        message: 'Homepage advertiser failed',
+        error: error.message,
+        timestamp: new Date().toISOString(),
+        function: 'homepage_advertiser',
+        status: 'error'
       })
     };
   }

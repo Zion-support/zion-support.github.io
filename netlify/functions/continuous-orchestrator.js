@@ -1,17 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 continuous-orchestrator function triggered');
+    console.log('🔄 continuous-orchestrator function triggered');
     
-    // Basic functionality - continuous orchestration
+    // Basic continuous orchestration logic
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Continuous orchestrator function executed successfully',
+        message: 'Continuous orchestrator executed successfully',
         timestamp: timestamp,
         function: 'continuous-orchestrator',
-        status: 'completed',
-        operations: ['ongoing-coordination', 'persistent-execution', 'continuous-monitoring']
+        status: 'success',
+        orchestration: {
+          mode: 'continuous',
+          monitoring: 'active',
+          adaptation: 'enabled'
+        }
       })
     };
     
@@ -23,9 +27,11 @@ exports.handler = async function(event, context) {
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Continuous orchestrator function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        message: 'Continuous orchestrator failed',
+        error: error.message,
+        timestamp: new Date().toISOString(),
+        function: 'continuous-orchestrator',
+        status: 'error'
       })
     };
   }

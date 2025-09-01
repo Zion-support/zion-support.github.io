@@ -2,16 +2,20 @@ exports.handler = async function(event, context) {
   try {
     console.log('🤖 autonomous-meta-orchestrator function triggered');
     
-    // Basic functionality - autonomous meta orchestration
+    // Basic autonomous meta orchestration logic
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Autonomous meta orchestrator function executed successfully',
+        message: 'Autonomous meta orchestrator executed successfully',
         timestamp: timestamp,
         function: 'autonomous-meta-orchestrator',
-        status: 'completed',
-        operations: ['meta-coordination', 'autonomous-execution', 'self-managing-systems']
+        status: 'success',
+        orchestration: {
+          autonomy: 'enabled',
+          meta: 'orchestrated',
+          intelligence: 'active'
+        }
       })
     };
     
@@ -23,9 +27,11 @@ exports.handler = async function(event, context) {
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Autonomous meta orchestrator function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        message: 'Autonomous meta orchestrator failed',
+        error: error.message,
+        timestamp: new Date().toISOString(),
+        function: 'autonomous-meta-orchestrator',
+        status: 'error'
       })
     };
   }

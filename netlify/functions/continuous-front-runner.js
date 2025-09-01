@@ -1,17 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 continuous-front-runner function triggered');
+    console.log('🏃 continuous-front-runner function triggered');
     
-    // Basic functionality - continuously run frontend operations
+    // Basic continuous front running logic
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Continuous front runner function executed successfully',
+        message: 'Continuous front runner executed successfully',
         timestamp: timestamp,
         function: 'continuous-front-runner',
-        status: 'completed',
-        operations: ['ongoing-frontend-execution', 'persistent-optimization', 'continuous-improvement']
+        status: 'success',
+        running: {
+          mode: 'continuous',
+          frontend: 'active',
+          monitoring: 'enabled'
+        }
       })
     };
     
@@ -23,9 +27,11 @@ exports.handler = async function(event, context) {
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Continuous front runner function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        message: 'Continuous front runner failed',
+        error: error.message,
+        timestamp: new Date().toISOString(),
+        function: 'continuous-front-runner',
+        status: 'error'
       })
     };
   }

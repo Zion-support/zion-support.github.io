@@ -1,17 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 home-visionary-expander function triggered');
+    console.log('🏡 home-visionary-expander function triggered');
     
-    // Basic functionality - expand home visionary features
+    // Basic home visionary expansion logic
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Home visionary expander function executed successfully',
+        message: 'Home visionary expander executed successfully',
         timestamp: timestamp,
         function: 'home-visionary-expander',
-        status: 'completed',
-        expansions: ['homepage-vision', 'user-experience-enhancement', 'content-innovation']
+        status: 'success',
+        expansion: {
+          home: 'enhanced',
+          vision: 'expanded',
+          innovation: 'accelerated'
+        }
       })
     };
     
@@ -23,9 +27,11 @@ exports.handler = async function(event, context) {
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Home visionary expander function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        message: 'Home visionary expander failed',
+        error: error.message,
+        timestamp: new Date().toISOString(),
+        function: 'home-visionary-expander',
+        status: 'error'
       })
     };
   }

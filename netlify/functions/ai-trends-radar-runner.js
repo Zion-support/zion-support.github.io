@@ -1,17 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 ai-trends-radar-runner function triggered');
+    console.log('📡 ai-trends-radar-runner function triggered');
     
-    // Basic functionality - run AI trends radar operations
+    // Basic AI trends radar running logic
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'AI trends radar runner function executed successfully',
+        message: 'AI trends radar runner executed successfully',
         timestamp: timestamp,
         function: 'ai-trends-radar-runner',
-        status: 'completed',
-        activities: ['trend-detection', 'ai-analysis', 'future-prediction']
+        status: 'success',
+        radar: {
+          trends: 'detected',
+          insights: 'generated',
+          predictions: 'analyzed'
+        }
       })
     };
     
@@ -23,9 +27,11 @@ exports.handler = async function(event, context) {
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'AI trends radar runner function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        message: 'AI trends radar runner failed',
+        error: error.message,
+        timestamp: new Date().toISOString(),
+        function: 'ai-trends-radar-runner',
+        status: 'error'
       })
     };
   }

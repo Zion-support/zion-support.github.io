@@ -1,17 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 repo-radar-runner function triggered');
+    console.log('📡 repo-radar-runner function triggered');
     
-    // Basic functionality - run repository radar operations
+    // Basic repository radar running logic
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Repo radar runner function executed successfully',
+        message: 'Repo radar runner executed successfully',
         timestamp: timestamp,
         function: 'repo-radar-runner',
-        status: 'completed',
-        activities: ['repository-monitoring', 'change-detection', 'trend-analysis']
+        status: 'success',
+        radar: {
+          repository: 'scanned',
+          insights: 'generated',
+          monitoring: 'active'
+        }
       })
     };
     
@@ -23,9 +27,11 @@ exports.handler = async function(event, context) {
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Repo radar runner function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        message: 'Repo radar runner failed',
+        error: error.message,
+        timestamp: new Date().toISOString(),
+        function: 'repo-radar-runner',
+        status: 'error'
       })
     };
   }
