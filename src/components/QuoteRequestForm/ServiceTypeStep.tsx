@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
 import { ListingScoreCard } from "@/components/ListingScoreCard";
-import api from '@/lib/api';
+import { SAMPLE_SERVICES } from "@/data/sampleServices";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
@@ -15,46 +18,46 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
   const [listings, setListings] = useState<ListingItem[]>([]);
   const [loading, setLoading] = useState(false);
 
-  // Fetch services when the service type changes
-  useEffect(() => {
-    if (!formData.serviceType) {
-      setListings([]);
-      return;
+  const fetchServices = useCallback(async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const response = await fetch('/api/services');
+      if (!response.ok) throw new Error('Failed to fetch');
+      const data = await response.json();
+      setListings(data as ListingItem[]);
+    } catch (err) {
+      console.error('Failed to fetch services', err);
+      setError('Failed to load services');
+      setListings(SAMPLE_SERVICES);
+    } finally {
+      setLoading(false);
     }
+  }, []);
 
-    const fetchServices = async () => {
-      setLoading(true);
-      try {
-        const response = await api.get(
-          `/api/services?categoryId=${encodeURIComponent(formData.serviceType)}`
-        );
-        if (response.status < 200 || response.status >= 300) throw new Error('Failed to fetch');
-        const data = response.data;
-        setListings(data as ListingItem[]);
-      } catch (err) {
-        // Fallback to sample data on error
-        setListings(SAMPLE_LISTINGS.filter(item => item.category.toLowerCase() === formData.serviceType.toLowerCase()));
-      } finally {
-        setLoading(false);
-      }
-    };
-
+  // Fetch services once on mount
+  useEffect(() => {
     fetchServices();
-  }, [formData.serviceType]);
+  }, [fetchServices]);
   
-  const {
-    data: listings = [],
-    isPending: loading,
-    error,
-  } = useQuery({
-    queryKey: ['services', formData.serviceType, debouncedQuery],
-    queryFn: () =>
-      fetchServices(formData.serviceType, debouncedQuery),
-    enabled: !!formData.serviceType,
-    retry: 2,
-  })}};
-
-      if(!categoryMatch) return false}
+  const handleTypeSelect = (type: ServiceType) => {
+    updateFormData({ serviceType: type });
+  };
+  
+  const handleItemSelect = (item: ListingItem) => {
+    updateFormData({ 
+      specificItem: item,
+      serviceCategory: item.category,
+      serviceType: item.category.toLowerCase() as ServiceType
+    });
+  };
+  
+  const filteredListings = (listings.length ? listings : SAMPLE_SERVICES).filter(item => {
+    // Filter by category only when a service type has been selected
+    if (formData.serviceType !== "") {
+      const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase();
+      if (!categoryMatch) return false;
+    }
     
     if(searchQuery.trim() === "") return true;
     return item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
@@ -114,8 +117,14 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
           </div>
 
           {error && (
-            <div className="text-center text-red-400 text-sm">
-              {(error as Error).message || 'Failed to load services'}.Showing sample data.</div>
+            <Alert variant="destructive" className="text-center">
+              <AlertDescription>
+                {error}
+                <Button size="sm" className="ml-2" onClick={fetchServices}>
+                  Retry
+                </Button>
+              </AlertDescription>
+            </Alert>
           )}
           
           <div className="grid grid-cols-1 gap-4 mt-4">
