@@ -95,9 +95,13 @@
   schedule = "*/1 * * * *" # every minute
 
 [[scheduled.functions]]
-  name = "autonomous-research-inventor"
-  schedule = "*/7 * * * *" # every 7 minutes
+  name = "knowledge-and-innovation"
+  schedule = "0 */3 * * *" # every 3 hours
 
 [[scheduled.functions]]
-  name = "autonomous-quality-guardian"
-  schedule = "*/11 * * * *" # every 11 minutes
+  name = "guardian-security-fast"
+  schedule = "0 */6 * * *" # every 6 hours
+
+[[scheduled.functions]]
+  name = "autonomous-factory-expander"
+  schedule = "*/30 * * * *" # every 30 minutes
