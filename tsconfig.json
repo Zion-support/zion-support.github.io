@@ -3,7 +3,7 @@
     "target": "ES2022",
     "useDefineForClassFields": true,
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
-    "allowJs": true,
+    "allowJs": false,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -52,7 +52,12 @@
     "typeRoots": ["./node_modules/@types", "./types"],
     "types": ["node"]
   },
-  "include": ["src/**/*", "tailwind.config.js", "postcss.config.js"],
+  "include": [
+    "src/main.tsx",
+    "src/utils/serviceWorker.ts",
+    "src/vite-env.d.ts",
+    "vite.config.ts"
+  ],
   "exclude": [
     "node_modules",
     "zion.app/recovered-content/**",

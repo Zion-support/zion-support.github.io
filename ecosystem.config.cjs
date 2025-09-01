@@ -1,5 +1,40 @@
 module.exports = {
   apps: [
+    {
+      name: 'zion-app',
+      script: 'npm',
+      args: 'run preview',
+      cwd: '/workspace',
+      interpreter: 'none',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '300M',
+      env: {
+        NODE_ENV: 'production',
+        PORT: '4173'
+      },
+      out_file: 'logs/zion-app.out.log',
+      error_file: 'logs/zion-app.err.log'
+    },
+    {
+      name: 'zion-maintenance',
+      script: '/bin/bash',
+      args: '/workspace/scripts/maintenance.sh',
+      cwd: '/workspace',
+      interpreter: 'none',
+      instances: 1,
+      autorestart: false,
+      watch: false,
+      cron_restart: '0 */6 * * *',
+      out_file: 'logs/maintenance.out.log',
+      error_file: 'logs/maintenance.err.log'
+    }
+  ]
+};
+
+module.exports = {
+  apps: [
     // Console Error Fixer - Automatically fixes console errors
     {
       name: 'console-error-fixer',

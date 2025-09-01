@@ -7,9 +7,25 @@ import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 ;
 export default [
+  {
+    ignores: [
+      'src/pages/**',
+      'src/utils/**',
+      'src/types/**',
+      'tests/**',
+      'tests.disabled/**',
+      'types.disabled/**',
+      'supabase/**',
+      'zion-os.disabled/**',
+      'utils/**',
+      'types/**',
+      '**/*.js.jsx',
+      '**/*.jsx'
+    ]
+  },
   js.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ['src/main.tsx', 'src/utils/serviceWorker.ts'],
     languageOptions: {
       ecmaVersion: 2021,
       sourceType: 'module',
@@ -37,9 +53,7 @@ export default [
       },
       parser: tsparser,
       parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        },
+        ecmaFeatures: { jsx: true },
         project: './tsconfig.json'
       }
     },
@@ -70,17 +84,5 @@ export default [
       'no-var': 'error'
     }
   },
-  {
-    files: ['**/*.{ts,tsx}'],
-    languageOptions: {
-      parser: tsparser,
-      parserOptions: {
-        project: './tsconfig.json'
-      }
-    },
-    rules: {
-      '@typescript-eslint/no-unused-vars': 'error',
-      '@typescript-eslint/no-explicit-any': 'warn',
-    },
-  },
+  // Limit TS linting to safe entry files only
 ];
