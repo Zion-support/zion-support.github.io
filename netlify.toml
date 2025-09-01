@@ -368,13 +368,13 @@ schedule = "*/2 * * * *" # every 2 minutes
   schedule = "7 */12 * * *"
 
 [[scheduled.functions]]
-  name = "metadata-schema-runner"
-  schedule = "*/30 * * * *" # every 30 minutes
+  name = "unused-assets-scanner-runner"
+  schedule = "*/10 * * * *"
 
 [[scheduled.functions]]
-  name = "perf-budget-runner"
-  schedule = "*/30 * * * *" # every 30 minutes
+  name = "external-link-rel-auditor-runner"
+  schedule = "*/5 * * * *"
 
 [[scheduled.functions]]
-  name = "i18n-audit-runner"
-  schedule = "0 */6 * * *" # every 6 hours
+  name = "og-meta-audit-runner"
+  schedule = "*/15 * * * *"
