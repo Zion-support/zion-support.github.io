@@ -158,54 +158,6 @@ const HomePage = memo(function HomePage() {
             </div>
           </section>
           
-          {/* Technology Stack Section */}
-          <section className="mx-auto max-w-7xl px-6 pb-14">
-            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90 mb-8">Our Technology Stack</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-              <div className="bg-white/10 rounded-xl p-6 border border-white/20 text-center group hover:border-cyan-400/30 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl">🤖</span>
-                </div>
-                <h3 className="text-sm font-semibold text-cyan-400">AI/ML</h3>
-              </div>
-              
-              <div className="bg-white/10 rounded-xl p-6 border border-white/20 text-center group hover:border-fuchsia-400/30 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-fuchsia-400 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl">☁️</span>
-                </div>
-                <h3 className="text-sm font-semibold text-fuchsia-400">Cloud Native</h3>
-              </div>
-              
-              <div className="bg-white/10 rounded-xl p-6 border border-white/20 text-center group hover:border-blue-400/30 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl">🔗</span>
-                </div>
-                <h3 className="text-sm font-semibold text-blue-400">Blockchain</h3>
-              </div>
-              
-              <div className="bg-white/10 rounded-xl p-6 border border-white/20 text-center group hover:border-green-400/30 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl">📱</span>
-                </div>
-                <h3 className="text-sm font-semibold text-green-400">Mobile</h3>
-              </div>
-              
-              <div className="bg-white/10 rounded-xl p-6 border border-white/20 text-center group hover:border-yellow-400/30 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl">🔒</span>
-                </div>
-                <h3 className="text-sm font-semibold text-yellow-400">Security</h3>
-              </div>
-              
-              <div className="bg-white/10 rounded-xl p-6 border border-white/20 text-center group hover:border-purple-400/30 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl">📊</span>
-                </div>
-                <h3 className="text-sm font-semibold text-purple-400">Analytics</h3>
-              </div>
-            </div>
-          </section>
-          
           {/* Statistics Section */}
           <section className="mx-auto max-w-7xl px-6 pb-14">
             <h2 className="text-center text-2xl font-bold tracking-wide text-white/90 mb-8">Our Impact</h2>
