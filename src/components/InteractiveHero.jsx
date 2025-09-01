@@ -1,20 +1,15 @@
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
-export const InteractiveHero = ({ title, subtitle, description, primaryAction, secondaryAction, stats = [
-import { motion } from 'framer - motion';
+export const InteractiveHero = ({ title, subtitle, description, primaryAction, secondaryAction, stats = [import { motion  } from 'framer-motion';
 
-    { value: '500+', label: 'Happy Clients', color: 'text - blue - 400' },
-    { value: '1000+', label: 'Projects Delivered', color: 'text - green - 400' },
-    { value: '99.9%', label: 'Uptime SLA', color: 'text - purple - 400' },
-    { value: '24 / 7', label: 'Support Available', color: 'text - cyan - 400' }
+    { value: '500+', label: 'Happy Clients', color: 'text-blue - 400' },
+    { value: '1000+', label: 'Projects Delivered', color: 'text-green - 400' },
+    { value: '99.9%', label: 'Uptime SLA', color: 'text-purple - 400' },
+    { value: '24 / 7', label: 'Support Available', color: 'text-cyan - 400' }
 =======
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-export const InteractiveHero = ({ title, subtitle, description, primaryAction, secondaryAction, stats = ['
-    { value: '500+', label: 'Happy Clients', color: 'text-blue-400' },
-    { value: '1000+', label: 'Projects Delivered', color: 'text-green-400' },
-    { value: '99.9%', label: 'Uptime SLA', color: 'text-purple-400' },
-    { value: '24/7', label: 'Support Available', color: 'text-cyan-400' }
+import { motion  } from 'framer-motion';
+
+export default function Page() {
 >>>>>>> main
 ] }) => {
 

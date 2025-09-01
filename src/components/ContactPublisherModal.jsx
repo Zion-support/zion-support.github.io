@@ -1,51 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { focusManagement } from '@/utils/accessibility';
-import { sendMessage } from "../services/messages";
-import { toast } from '@/hooks/use-toast';
-export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) {
 
-<<<<<<< HEAD
-    const [subject, setSubject] = useState ('') ;
-    const [message, setMessage] = useState ('') ;
-    const [error, setError] = useState ('') ;
-    const [isLoading, setIsLoading] = useState (false) ; // New loading state
-    const firstInputRef = useRef (null) ;
-    const modalRef = useRef (null) ;
-    useEffect ( () => {
-        if (!isOpen) return;
-        function handleKeyDown (e) {
-=======
-    const [subject, setSubject] = useState('');
-    const [message, setMessage] = useState('');
-    const [error, setError] = useState('');
-    const [isLoading, setIsLoading] = useState(false); // New loading state
-    const firstInputRef = useRef(null);
-    const modalRef = useRef(null);
-    useEffect(() => {
-        if (!isOpen)
-            return;
-        function handleKeyDown(e) {
-
->>>>>>> main
-            if (e.key === 'Escape') {
-
-                e.preventDefault();
-                onClose()}
-        }
-        const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : null;
-        firstInputRef.current?.focus();
-        document.addEventListener('keydown', handleKeyDown);
-        return () => {
-
-            document.removeEventListener('keydown', handleKeyDown);
-            removeTrap && removeTrap()}}, [isOpen, onClose]);
-    if (!isOpen) {
+export default function Page() {
+}, [isOpen, onClose]);
+    if(!isOpen) {
 
         return null}
-    const handleSubmit = async (e) => {
+    const handleSubmit = async(e) => {
 
         e.preventDefault();
-        if (!subject.trim() || !message.trim()) {
+        if(!subject.trim() || !message.trim()) {
 
             setError('Subject and message are required.');
             return}
@@ -58,12 +22,12 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             setSubject(''); // Clear subject'
             setMessage(''); // Clear message
 
-        catch (err) {
+        catch(err) {
 
             // // // // // // // // console.error('Failed to send message:', err);
-            toast.error('Failed to send message. Please try again.');
+            toast.error('Failed to send message.Please try again.');
             // Optionally, set a specific error message state if needed'
-            // setError('Failed to send message. Please try again.')}
+            // setError('Failed to send message.Please try again.')}
         finally {
 
             setIsLoading(false); // Set loading false

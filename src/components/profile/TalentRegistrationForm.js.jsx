@@ -1,31 +1,21 @@
 import React, { useState } from "react";"
-import { useForm } from "react-hook-form";"
-import { zodResolver } from "@hookform/resolvers/zod";"
-import { z } from "zod";"
-import { Button } from "@/components/ui/button";"
-import { Input } from "@/components/ui/input";"
-import { Textarea } from "@/components/ui/textarea";"
-import { Switch } from "@/components/ui/switch";"
-import { Badge } from "@/components/ui/badge";"
-import { Separator } from "@/components/ui/separator";"
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";"
-import { X, Sparkles, Upload, Check, Briefcase, MapPin, UserRound } from "lucide-react";"
-import { toast } from "@/components/ui/use-toast";"
-import { supabase } from "@/integrations/supabase/client";"
-import { AspectRatio } from "@/components/ui/aspect-ratio";"
-import { useAuth } from "@/hooks/useAuth";
-// Define form schema
-const talentProfileSchema = z.object({
-"
-    name: z.string().min(2, "Name must be at least 2 characters long"),"
-    title: z.string().min(5, "Professional title is required"),"
-    bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),"
-    location: z.string().min(2, "Location is required"),"
-    skills: z.string().min(2, "Enter at least one skill"),
-    hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
-"
-        message: "Hourly rate must be a number"}),"
+import { useForm } from 'react-hook-form';"
+import { zodResolver } from '@hookform/resolvers/zod';"
+import { z } from 'zod';"
+import { Button } from '@/components/ui/button';"
+import { Input } from '@/components/ui/input';"
+import { Textarea } from '@/components/ui/textarea';"
+import { Switch } from '@/components/ui/switch';"
+import { Badge } from '@/components/ui/badge';"
+import { Separator } from '@/components/ui/separator';"
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';"
+import { X, Sparkles, Upload, Check, Briefcase, MapPin, UserRound  } from 'lucide-react';"
+import { toast } from '@/components/ui/use-toast';"
+import { supabase } from '@/integrations/supabase/client';"
+import { AspectRatio } from '@/components/ui/aspect-ratio';"
+import { useAuth } from '@/hooks/useAuth';
+),"
     availability: z.enum(["available", "limited", "unavailable"]),
     enhancedProfile: z.boolean().default(true)});
 export function TalentRegistrationForm() {
@@ -54,7 +44,7 @@ export function TalentRegistrationForm() {
     const handleAddSkill = () => {
 "
         const skillInput = form.getValues("skills");
-        if (skillInput && !skillTags.includes(skillInput)) {
+        if(skillInput && !skillTags.includes(skillInput)) {
 
             setSkillTags([...skillTags, skillInput]);"
             form.setValue("skills", "")}
@@ -63,10 +53,10 @@ export function TalentRegistrationForm() {
     const handleRemoveSkill = (skill) => {
 
         setSkillTags(skillTags.filter((s) => s !== skill))};
-    // Handle key press in skills input (add on enter)
+    // Handle key press in skills input(add on enter)
     const handleSkillKeyPress = (e) => {
 "
-        if (e.key === "Enter") {
+        if(e.key === "Enter") {
 
             e.preventDefault();
             handleAddSkill()}
@@ -75,7 +65,7 @@ export function TalentRegistrationForm() {
     const handleAvatarUpload = (e) => {
 
         const file = e.target.files?.[0];
-        if (file) {
+        if(file) {
 
             const reader = new FileReader();
             reader.onloadend = () => {
@@ -85,7 +75,7 @@ export function TalentRegistrationForm() {
     // Generate enhanced profile with AI
     const generateEnhancedProfile = async () => {
         const formData = form.getValues();
-        if (!formData.bio || formData.bio.length < 20) {
+        if(!formData.bio || formData.bio.length < 20) {
 
             toast({
 "
@@ -109,7 +99,7 @@ export function TalentRegistrationForm() {
                     }
                 }
             });
-            if (error) {
+            if(error) {
 
                 throw new Error(error.message)}
             setGeneratedContent(data);
@@ -117,13 +107,13 @@ export function TalentRegistrationForm() {
 "
                 title: "Enhanced Profile Generated","
                 description: "AI has created a professional bio and suggested additional skills for your profile."})}
-        catch (error) {
+        catch(error) {
 "
             // console.error("Error generating enhanced profile:", error);
             toast({
 "
                 title: "Generation failed","
-                description: error.message || "There was an error generating your enhanced profile. Please try again.","
+                description: error.message || "There was an error generating your enhanced profile.Please try again.","
                 variant: "destructive"})}
         finally {
 
@@ -131,7 +121,7 @@ export function TalentRegistrationForm() {
     };
     // Apply generated content to form
     const applyGeneratedContent = () => {
-        if (generatedContent) {
+        if(generatedContent) {
 "
             form.setValue("bio", generatedContent.summary);
             // Extract all skills from categorized skills and properly type cast them
@@ -149,7 +139,7 @@ export function TalentRegistrationForm() {
                             newSkills.push(skill)}
                     })}
             });
-            if (newSkills.length > 0) {
+            if(newSkills.length > 0) {
 
                 setSkillTags([...skillTags, ...newSkills])}
         }
@@ -157,7 +147,7 @@ export function TalentRegistrationForm() {
     // Get category color
     const getCategoryColor = (category) => {
 
-        switch (category) {
+        switch(category) {
 
             case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500';
             case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500';
@@ -167,7 +157,7 @@ export function TalentRegistrationForm() {
             default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple'}
     };
     // Send notification email
-    const sendEnhancementNotification = async (userId, email) => {
+    const sendEnhancementNotification = async(userId, email) => {
 
         try {
 
@@ -180,7 +170,7 @@ export function TalentRegistrationForm() {
                     html: `"
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">"
             <h2 style="color: #6D28D9;">Profile Enhancement Complete</h2>
-            <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>
+            <p>Your profile has been enhanced with AI.You're now more discoverable to recruiters and companies!</p>
             <p>We've added a professional summary and categorized your skills to help you stand out.</p>
             <p>You can review and edit these enhancements in your profile dashboard.</p>"
             <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">"
@@ -190,14 +180,14 @@ export function TalentRegistrationForm() {
           `
                 }
             })}
-        catch (error) {
+        catch(error) {
 "
             // console.error("Failed to send notification email:", error)}
     };
     // Handle form submission
-    const onSubmit = async (values) => {
+    const onSubmit = async(values) => {
 
-        if (skillTags.length === 0) {
+        if(skillTags.length === 0) {
 
             toast({
 "
@@ -208,12 +198,12 @@ export function TalentRegistrationForm() {
         setIsSubmitting(true);
         try {
             // For actual implementation with Supabase
-            if (!user?.id) {
+            if(!user?.id) {
 "
                 throw new Error("User not authenticated")}
             // Enhance profile if not already done
             let finalSkills = skillTags;
-            if (values.enhancedProfile && !generatedContent) {
+            if(values.enhancedProfile && !generatedContent) {
 
                 try {
 
@@ -231,7 +221,7 @@ export function TalentRegistrationForm() {
                             }
                         }
                     });
-                    if (aiData) {
+                    if(aiData) {
 
                         finalSummary = aiData.summary;
                         // Safely merge AI suggested skills with user-provided skills
@@ -252,13 +242,13 @@ export function TalentRegistrationForm() {
                         // Create a unique set of skills
                         finalSkills = [...new Set([...skillTags, ...aiSkills])]}
                 }
-                catch (error) {
+                catch(error) {
 "
                     // console.error("Error enhancing profile:", error);
                     // Continue with submission even if enhancement fails"
                     finalSummary = ""}
             }
-            else if (generatedContent) {
+            else if(generatedContent) {
 
                 finalSummary = generatedContent.summary}
             // Get user email for notification
@@ -272,7 +262,7 @@ export function TalentRegistrationForm() {
                     title: "Profile Created Successfully","
                     description: "Your talent profile has been published and is now visible in the directory."});
                 // Send notification email if we have user email
-                if (userEmail && values.enhancedProfile && user?.id) {
+                if(userEmail && values.enhancedProfile && user?.id) {
 
                     sendEnhancementNotification(user.id, userEmail)}
                 setIsSubmitting(false)}, 1500);
@@ -294,16 +284,16 @@ export function TalentRegistrationForm() {
                 // Other fields would be handled here
               });
       
-            if (error) throw error;
+            if(error) throw error;
             */
         }
-        catch (error) {
+        catch(error) {
 "
             // console.error("Error creating profile:", error);
             toast({
 "
                 title: "Error Creating Profile","
-                description: error.message || "There was an error creating your profile. Please try again.","
+                description: error.message || "There was an error creating your profile.Please try again.","
                 variant: "destructive"});
             setIsSubmitting(false)}
     };"
@@ -313,8 +303,7 @@ export function TalentRegistrationForm() {
           <CardTitle className="text-2xl text-white">Create Your Talent Profile</CardTitle>"
           <CardDescription className="text-zion-slate">
             Showcase your skills and experience to potential clients and
-            employers.
-          </CardDescription>
+            employers.</CardDescription>
         </CardHeader>
 
         <Form {...form}>
@@ -365,7 +354,7 @@ export function TalentRegistrationForm() {
 "
                   <div className="col-span-1">"
                     <FormField control={form.control} name="hourlyRate" render={({ field }) => (<FormItem>"
-                          <FormLabel className="text-zion-slate-light">Hourly Rate (USD)</FormLabel>
+                          <FormLabel className="text-zion-slate-light">Hourly Rate(USD)</FormLabel>
                           <FormControl>"
                             <div className="relative">"
                               <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span>"
@@ -397,8 +386,7 @@ export function TalentRegistrationForm() {
                   </div>"
                   <p className="text-sm text-zion-slate">
                     For best results, use an image at least 400x400 pixels in
-                    JPG, PNG, or GIF format.
-                  </p>
+                    JPG, PNG, or GIF format.</p>
                 </div>
               </div>
 "
@@ -431,7 +419,7 @@ export function TalentRegistrationForm() {
                         </FormDescription>
                       </div>
                       <FormControl>"
-                        <Switch aria-label="AI profile enhancement" checked={field.value} onCheckedChange={field.onChange} className="data-[state=checked]:bg-zion-purple"/>
+                        <Switch  checked={field.value} onCheckedChange={field.onChange} className="data-[state=checked]:bg-zion-purple"/>
                       </FormControl>
                     </FormItem>)}/>
                 "

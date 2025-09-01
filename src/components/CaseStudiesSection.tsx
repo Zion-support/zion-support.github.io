@@ -1,10 +1,7 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { motion } from 'framer - motion';
+import { <<<<<<< HEAD import { motion  } from 'framer-motion';
 
- * CaseStudiesSection function
- * @param {*} params - Function parameters
+ params - Function parameters
  * @returns {*} Function return value
  */
 function CaseStudiesSection () {
@@ -22,14 +19,13 @@ function CaseStudiesSection () {
 
       color: 'from-purple-500 to-pink-500'};
   ];
-const caseStudies = [
-  {
+const caseStudies = [{
 
 <<<<<<< HEAD
-  return (<section className = "py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
-      <div className="max - w-7xl mx - auto px - 6">
+  return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
+      <div className="max - w-7xl mx - auto px-6">
         <motion.div
-          className="text - center mb - 16"
+          className="text-center mb-16"
 =======
     id: 1,
     title: "AI-Powered Supply Chain Optimization","
@@ -82,7 +78,7 @@ const caseStudies = [
 
 export function CaseStudiesSection() {
   return ("
-    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
@@ -107,8 +103,7 @@ export function CaseStudiesSection() {
           </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover how we've helped businesses across industries achieve
-            remarkable results through innovative technology solutions.
-          </p>
+            remarkable results through innovative technology solutions.</p>
         </motion.div>
 "
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -178,7 +173,7 @@ export function CaseStudiesSection() {
 
 <<<<<<< HEAD
         <motion.div
-          className="mt - 16 text - center"
+          className="mt-16 text-center"
 =======
         <motion.div "
           className="mt-16 text-center"
@@ -209,8 +204,7 @@ export function CaseStudiesSection() {
             </h3>"
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Join hundreds of satisfied clients who have transformed their
-              businesses with our innovative technology solutions.
-            </p>"
+              businesses with our innovative technology solutions.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
                 to="/contact"

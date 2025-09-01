@@ -1,63 +1,6 @@
-import { Link } from 'react - router - dom';
-import React from 'react';
-export default AdvancedServices2025;
-
-const AdvancedServices2025 = () => {
-    const advancedServices = [
-        {
-            category: "Enterprise AI & Machine Learning",
-            description: "Advanced artificial intelligence solutions for enterprise - scale operations",
-            services[;
-                {
-                    title: "AI - Powered Enterprise Analytics",
-                    description: "Comprehensive enterprise analytics platform with real - time insights and predictive capabilities",
-                    icon: "📊",
-                    features["Real - time data processing", "Predictive modeling", "Custom dashboards", "API integrations", "Advanced reporting"],;
-                    pricing: "$5,000 - $35,000 / month",
-                    benefits["50% faster decision making", "Predictive insights", "Real - time monitoring", "Cost optimization"],;
-                    marketPosition: "Enterprise - grade analytics for Fortune 500 companies",
-                    competitors["Tableau", "Power BI", "QlikView"],;
-                    competitiveAdvantage: "AI - powered insights, real - time processing, and seamless enterprise integration"
-                },
-                {
-                    title: "AI - Driven Business Process Automation",
-                    description: "End - to - end business process automation using AI and machine learning",
-                    icon: "⚙️",
-                    features["Process mining", "Workflow automation", "Intelligent routing", "Performance optimization", "Compliance tracking"],;
-                    pricing: "$3,500 - $25,000 / month",
-                    benefits["70% process efficiency improvement", "Automated compliance", "Cost reduction", "Error elimination"],;
-                    marketPosition: "Leading BPA solution for large enterprises",
-                    competitors["UiPath", "Automation Anywhere", "Blue Prism"],;
-                    competitiveAdvantage: "AI - native approach, intelligent decision making, and comprehensive automation"
-                },
-                {
-                    title: "AI - Powered Customer Experience Platform",
-                    description: "Omnichannel customer experience optimization using AI and behavioral analytics",
-                    icon: "🎯",
-                    features["Customer journey mapping", "Behavioral analytics", "Personalization engine", "Sentiment analysis", "Predictive engagement"],;
-                    pricing: "$4,000 - $30,000 / month",
-                    benefits["40% increase in customer satisfaction", "Higher conversion rates", "Reduced churn", "Personalized experiences"],;
-                    marketPosition: "Next - generation CX platform for customer - centric businesses",
-                    competitors["Adobe Experience Cloud", "Salesforce Service Cloud", "Oracle CX"],;
-                    competitiveAdvantage: "AI - driven personalization, real - time optimization, and comprehensive analytics"
-
-            ];
-        },;
-        {
-            category: "Emerging Technology Solutions",
-            description: "Cutting - edge technology services for future - ready organizations",
-            services[;
-                {
-                    title: "AI - Powered Quantum Computing Consulting",
-                    description: "Strategic quantum computing implementation and optimization services",
-                    icon: "⚛️",
-                    features["Quantum strategy development", "Use case identification", "Algorithm optimization", "Performance benchmarking", "Implementation planning"],;
-                    pricing: "$8,000 - $50,000 / month",
-                    benefits["Future - ready technology advantage", "Competitive differentiation", "Innovation leadership", "Strategic positioning"],;
-                    marketPosition: "Premier quantum computing consultancy for Fortune 100 companies",
-                    competitors["IBM Quantum", "Google Quantum AI", "Microsoft Quantum"],;
-                    competitiveAdvantage: "Deep quantum expertise, practical implementation, and strategic business focus"
-                },
+import { Link  } from 'react-router-dom';
+export default function Page() {
+,
                 {
                     title: "Metaverse Development & Strategy",
                     description: "Complete metaverse ecosystem development and strategic implementation",
@@ -104,7 +47,7 @@ const AdvancedServices2025 = () => {
                     features["AI personalization", "Behavioral triggers", "A / B testing", "Predictive analytics", "Advanced segmentation"],;
                     pricing: "$199 - $1,299 / month",
                     benefits["40% higher open rates", "Better conversions", "Automated optimization", "ROI tracking"],;
-                    marketPosition: "AI - powered email marketing for growth - focused businesses",
+                    marketPosition: "AI - powered email marketing for growth-focused businesses",
                     competitors["Mailchimp", "Constant Contact", "ConvertKit"],;
                     competitiveAdvantage: "AI personalization, predictive analytics, and automated optimization"
                 },
@@ -299,73 +242,73 @@ const AdvancedServices2025 = () => {
             ];
 
     ];
-    return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text - white">
-      <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">
-        <div className="max - w-7xl mx - auto">
-          <div className="text - center mb - 16">
-            <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">
-              Advanced < span className="text - transparent bg - clip - text bg - gradient - to - r from - blue - 400 to - cyan - 400">
+    return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text-white">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max - w-7xl mx -auto">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font - bold mb-6">
+              Advanced < span className="text-transparent bg-clip - text bg-gradient - to - r from - blue - 400 to - cyan -400">
                 {" "}Services 2025
               </span>
             </h1>
-            <p className="text - xl text - gray - 300 max - w-3xl mx - auto">
+            <p className="text-xl text-gray - 300 max - w-3xl mx -auto">
               Cutting - edge technology solutions and innovative micro SaaS services designed to transform your business
             </p>
           </div>
 
-          {advancedServices.map ( (category, categoryIndex) => (<div key={categoryIndex} className="mb - 20">
-              <div className="text - center mb - 12">
-                <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">
+          {advancedServices.map ( (category, categoryIndex) => (<div key={categoryIndex} className="mb-20">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font - bold text-white mb-4">
                   {category.category}
                 </h2>
-                <p className="text - xl text - gray - 300 max - w-2xl mx - auto">
+                <p className="text-xl text-gray - 300 max - w-2xl mx -auto">
                   {category.description}
                 </p>
               </div>
 
-              <div className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap - 8">
-                {category.services.map ( (service, serviceIndex) => (<div key={serviceIndex} className="bg - white / 10 backdrop - blur - lg rounded - xl p - 6 border border - white / 20 hover:border - white / 40 transition - all duration - 300 hover:transform hover:scale - 105">
-                    <div className="text - 4xl mb - 4">{service.icon}</div>
-                    <h3 className="text - xl font - semibold text - white mb - 3">{service.title}</h3>
-                    <p className="text - gray - 300 mb - 4">{service.description}</p>
+              <div className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap-8">
+                {category.services.map((service, serviceIndex) => (<div key={serviceIndex} className="bg-white / 10 backdrop - blur - lg rounded-xl p - 6 border border-white / 20 hover:border-white / 40 transition - all duration - 300 hover:transform hover:scale -105">
+                    <div className="text-4xl mb-4">{service.icon}</div>
+                    <h3 className="text-xl font - semibold text-white mb-3">{service.title}</h3>
+                    <p className="text-gray - 300 mb-4">{service.description}</p>
 
-                    <div className="mb - 4">
-                      <h4 className="text - sm font - semibold text - blue - 400 mb - 2">Key Features:</h4>
+                    <div className="mb-4">
+                      <h4 className="text-sm font - semibold text-blue - 400 mb-2">Key Features:</h4>
                       <ul className="space - y-1">
-                        {service.features.map ( (feature, idx) => (<li key={idx} className="text - sm text - gray - 300 flex items - center">
-                            <span className="w - 2 h - 2 bg - blue - 400 rounded - full mr - 2"></span>
+                        {service.features.map((feature, idx) => (<li key={idx} className="text-sm text-gray - 300 flex items -center">
+                            <span className="w-2 h-2 bg-blue - 400 rounded-full mr-2"></span>
                             {feature}
                           </li>) ) }
                       </ul>
                     </div>
 
-                    <div className="mb - 4">
-                      <h4 className="text - sm font - semibold text - green - 400 mb - 2">Pricing:</h4>
-                      <p className="text - sm text - gray - 300">{service.pricing}</p>
+                    <div className="mb-4">
+                      <h4 className="text-sm font - semibold text-green - 400 mb-2">Pricing:</h4>
+                      <p className="text-sm text-gray -300">{service.pricing}</p>
                     </div>
 
-                    <div className="mb - 4">
-                      <h4 className="text - sm font - semibold text - yellow - 400 mb - 2">Key Benefits:</h4>
+                    <div className="mb-4">
+                      <h4 className="text-sm font - semibold text-yellow-400 mb-2">Key Benefits:</h4>
                       <ul className="space - y-1">
-                        {service.benefits.map ( (benefit, idx) => (<li key={idx} className="text - sm text - gray - 300 flex items - center">
-                            <span className="w - 2 h - 2 bg - yellow - 400 rounded - full mr - 2"></span>
+                        {service.benefits.map((benefit, idx) => (<li key={idx} className="text-sm text-gray - 300 flex items -center">
+                            <span className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></span>
                             {benefit}
                           </li>) ) }
                       </ul>
                     </div>
 
-                    <div className="mb - 4">
-                      <h4 className="text - sm font - semibold text - purple - 400 mb - 2">Market Position:</h4>
-                      <p className="text - sm text - gray - 300">{service.marketPosition}</p>
+                    <div className="mb-4">
+                      <h4 className="text-sm font - semibold text-purple - 400 mb-2">Market Position:</h4>
+                      <p className="text-sm text-gray -300">{service.marketPosition}</p>
                     </div>
 
-                    <div className="mb - 6">
-                      <h4 className="text - sm font - semibold text - cyan - 400 mb - 2">Competitive Advantage:</h4>
-                      <p className="text - sm text - gray - 300">{service.competitiveAdvantage}</p>
+                    <div className="mb-6">
+                      <h4 className="text-sm font - semibold text-cyan - 400 mb-2">Competitive Advantage:</h4>
+                      <p className="text-sm text-gray -300">{service.competitiveAdvantage}</p>
                     </div>
 
-                    <Link to="/contact" className="inline - flex items - center text - blue - 400 hover:text - blue - 300 transition - colors duration - 300">
-                      Get Started < svg className="ml - 2 h - 4 w - 4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <Link to="/contact" className="inline - flex items - center text-blue - 400 hover:text-blue - 300 transition - colors duration -300">
+                      Get Started < svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7 - 7 7"/>
                       </svg>
                     </Link>
@@ -376,30 +319,30 @@ const AdvancedServices2025 = () => {
       </section>
 
       {/* Enhanced CTA Section */}
-      <section className="py - 20 bg - gradient - to - r from - blue - 900 / 50 to - cyan - 900 / 50">
-        <div className="max - w-4xl mx - auto text - center">
-          <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 6">
+      <section className="py-20 bg-gradient - to - r from - blue - 900 / 50 to - cyan -900 / 50">
+        <div className="max - w-4xl mx - auto text-center">
+          <h2 className="text-3xl md:text-4xl font - bold text-white mb-6">
             Ready to Implement Advanced Solutions?
           </h2>
-          <p className="text - xl text - gray - 300 mb - 8">
+          <p className="text-xl text-gray - 300 mb-8">
             Let's discuss how our cutting - edge technology services can transform your business
           </p>
-          <div className="flex flex - col sm:flex - row gap - 4 justify - center mb - 6">
-            <Link to="/contact" className="inline - flex items - center px - 8 py - 3 bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white font - semibold rounded - lg hover:from - blue - 700 hover:to - cyan - 700 transition - all duration - 300">
+          <div className="flex flex - col sm:flex - row gap-4 justify - center mb-6">
+            <Link to="/contact" className="inline - flex items - center px-8 py-3 bg-gradient - to - r from - blue - 600 to - cyan - 600 text-white font - semibold rounded-lg hover:from - blue - 700 hover:to - cyan - 700 transition - all duration -300">
               Contact Us Today
             </Link>
-            <a href="tel:+13024640950" className="inline - flex items - center px - 8 py - 3 border border - gray - 600 text - white font - semibold rounded - lg hover:bg - gray - 800 transition - all duration - 300">
+            <a href="tel:+13024640950" className="inline - flex items - center px-8 py-3 border border-gray - 600 text-white font - semibold rounded-lg hover:bg-gray - 800 transition - all duration -300">
               Call: +1 302 464 0950
             </a>
           </div>
-          <div className="mb - 6">
-            <Link to="/services" className="inline - flex items - center px - 6 py - 2 text - blue - 400 hover:text - blue - 300 border border - blue - 400 rounded - lg transition - all duration - 300">
+          <div className="mb-6">
+            <Link to="/services" className="inline - flex items - center px-6 py-2 text-blue - 400 hover:text-blue - 300 border border-blue - 400 rounded-lg transition - all duration -300">
               View All Services →
             </Link>
           </div>
-          <div className="text - sm text - gray - 400">
+          <div className="text-sm text-gray -400">
             <p > Email: kleber@ziontechgroup.com</p>
-            <p > Website: <a href="https://ziontechgroup.com" className="text - blue - 400 hover:text - blue - 300">ziontechgroup.com</a></p>
+            <p > Website: <a href="https://ziontechgroup.com" className="text-blue - 400 hover:text-blue -300">ziontechgroup.com</a></p>
             <p > Address: 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
         </div>

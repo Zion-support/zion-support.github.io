@@ -1,19 +1,8 @@
 
-import { 
-  FormField, 
-  FormItem, 
-  FormLabel, 
-  FormControl, 
-  FormDescription, 
-  FormMessage 
-} from "@/components/ui/form";
-
-interface ProjectDetailsFieldsProps {
-  form: UseFormReturn<ContractFormValues>}
+import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from '@/components/ui/form';
 
 export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
-  return (
-    <>
+  return (<>
       <FormField
         control={form.control}
         name="projectTitle" // Renamed
@@ -69,8 +58,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                />
             </FormControl>
             <FormDescription>
-              Be very specific about what will be delivered.
-            </FormDescription>
+              Be very specific about what will be delivered.</FormDescription>
             <FormMessage  />
           </FormItem>
         )}
@@ -86,8 +74,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
               <Input placeholder="e.g., State of California, USA" {...field}  />
             </FormControl>
             <FormDescription>
-              The governing law for the contract.
-            </FormDescription>
+              The governing law for the contract.</FormDescription>
             <FormMessage  />
           </FormItem>
         )}
@@ -103,8 +90,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
               <Input placeholder="e.g., State of California, USA" {...field}  />
             </FormControl>
             <FormDescription>
-              The governing law for the contract.
-            </FormDescription>
+              The governing law for the contract.</FormDescription>
             <FormMessage  />
           </FormItem>
         )}
@@ -153,7 +139,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
           name="endDate"
           render={({ field }) => (
             <FormItem className="flex flex-col">
-              <FormLabel>End Date (Optional)</FormLabel>
+              <FormLabel>End Date(Optional)</FormLabel>
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>

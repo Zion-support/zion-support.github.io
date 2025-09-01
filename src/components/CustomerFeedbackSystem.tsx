@@ -1,37 +1,8 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
+import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
 
-  Star,
-  MessageCircle,
-  ThumbsUp,
-  ThumbsDown,
-  Send,
-  Heart,
-  Award,
-  TrendingUp,
-  Users,
-  Clock,
-  Flag,
-  Share2,
-  Download,
-  Filter,
-  Search'
- } from 'lucide-react';
-
-  verified: boolean}
-
-interface FeedbackStats {
-  totalFeedback: number;
-  averageRating: number;
-  positivePercentage: number;
-  responseRate: number;
-  topCategories: Array < any>}
-
-interface CustomerFeedbackSystemProps extends React.PropsWithChildren<{}> {
+export default function Page() {
+> {
 
   showStats?: boolean;
   showFilters?: boolean;
@@ -63,17 +34,16 @@ showStats:  true,;
     rating: 0,
     comment: '',
     category: 'overall' as Feedback['category']
-  }) ;
+  });
 
   // Sample feedback data
   useEffect(() => {
-    const sampleFeedback: Feedback[] = [
-      {
+    const sampleFeedback: Feedback[] = [{
 
         id: '1',
         customerName: 'Sarah Johnson',
         rating: 5,
-        comment: 'Exceptional AI consulting services! The team at Zion Tech Group delivered beyond our expectations. Their expertise in machine learning helped us optimize our processes significantly.',
+        comment: 'Exceptional AI consulting services! The team at Zion Tech Group delivered beyond our expectations.Their expertise in machine learning helped us optimize our processes significantly.',
         category: 'service',
         sentiment: 'positive',
         date: '2024-01-15',
@@ -87,7 +57,7 @@ showStats:  true,;
         id: '2',
         customerName: 'Michael Chen',
         rating: 4,
-        comment: 'Great cloud migration support. The team was professional and helped us transition smoothly to the cloud. Minor delays but overall excellent experience.',
+        comment: 'Great cloud migration support.The team was professional and helped us transition smoothly to the cloud.Minor delays but overall excellent experience.',
         category: 'support',
         sentiment: 'positive',
         date: '2024-01-12',
@@ -101,7 +71,7 @@ showStats:  true,;
         id: '3',
         customerName: 'Emily Rodriguez',
         rating: 5,
-        comment: 'Outstanding digital transformation project! Zion Tech Group helped us modernize our entire infrastructure. ROI was achieved within 6 months.',
+        comment: 'Outstanding digital transformation project! Zion Tech Group helped us modernize our entire infrastructure.ROI was achieved within 6 months.',
         category: 'product',
         sentiment: 'positive',
         date: '2024-01-10',
@@ -115,7 +85,7 @@ showStats:  true,;
         id: '4',
         customerName: 'David Kim',
         rating: 3,
-        comment: 'Good security services but communication could be improved. The technical work was solid but project updates were infrequent.',
+        comment: 'Good security services but communication could be improved.The technical work was solid but project updates were infrequent.',
         category: 'service',
         sentiment: 'neutral',
         date: '2024-01-08',
@@ -129,7 +99,7 @@ showStats:  true,;
         id: '5',
         customerName: 'Lisa Thompson',
         rating: 5,
-        comment: 'Amazing team! They helped us implement AI solutions that increased our efficiency by 40%. Highly recommend their services.',
+        comment: 'Amazing team! They helped us implement AI solutions that increased our efficiency by 40%.Highly recommend their services.',
         category: 'overall',
         sentiment: 'positive',
         date: '2024-01-05',
@@ -140,26 +110,22 @@ showStats:  true,;
 
     ];
 
-    setFeedback (sampleFeedback) ;
-    setFilteredFeedback (sampleFeedback) }, []) ;
+    setFeedback(sampleFeedback) ;
+    setFilteredFeedback(sampleFeedback) }, []) ;
 
   // Calculate stats
   useEffect(() => {
-    if (feedback.length > 0) {
+    if(feedback.length > 0) {
 
-      
-      
-      
       const responseRate = 95; // Simulated response rate
 
-      const categoryCounts = feedback.reduce ( (acc, f) => {;        acc[f.category] = (acc[f.category] || 0) + 1;
+      const categoryCounts = feedback.reduce((acc, f) => {;        acc[f.category] = (acc[f.category] || 0) + 1;
         return acc}, {} as Record < string, any>) ;
 
-      
           count,;
           percentage: (count / totalFeedback) * 100}) ) ;
-        .sort ( (a, b) => b.count - a.count) ;
-        .slice (0, 4) ;
+        .sort((a, b) => b.count - a.count) ;
+        .slice(0, 4) ;
       setStats({
 
         totalFeedback,
@@ -171,18 +137,18 @@ showStats:  true,;
   }, [feedback]) ;
 
   // Filter feedback
-  useEffect ( () => {
+  useEffect(() => {
     let filtered = feedback;
 
-    if (selectedCategory !== 'all') {
+    if(selectedCategory !== 'all') {
 
       filtered = filtered.filter(f => f.category === selectedCategory)}
 
-    if (selectedRating > 0) {
+    if(selectedRating > 0) {
 
       filtered = filtered.filter(f => f.rating === selectedRating)}
 
-    if (searchQuery) {
+    if(searchQuery) {
 
       filtered = filtered.filter(f =>
         f.comment.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -195,11 +161,11 @@ showStats:  true,;
         f.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       )}
 
-    setFilteredFeedback (filtered.slice (0, maxFeedback) ) }, [feedback, selectedCategory, selectedRating, searchQuery, maxFeedback]) ;
+    setFilteredFeedback(filtered.slice (0, maxFeedback) ) }, [feedback, selectedCategory, selectedRating, searchQuery, maxFeedback]) ;
 
   // Handle feedback submission
   
-    if (newFeedback.rating === 0 || !newFeedback.comment.trim () ) return;
+    if(newFeedback.rating === 0 || !newFeedback.comment.trim () ) return;
     const feedback: Feedback = {
 
   id: Date.now().toString(),
@@ -237,12 +203,12 @@ showStats:  true,;
   // Get sentiment color
   
 <<<<<<< HEAD
-    switch (sentiment) {;
+    switch(sentiment) {;
       case 'positive': return 'text-green-400 bg-green-400/20';
       case 'negative': return 'text-red-400 bg-red-400/20';
       default: return 'text-yellow-400 bg-yellow-400/20'}
 =======
-    switch (sentiment) {;'
+    switch(sentiment) {;'
       case 'positive': return 'text-green-400 bg-green-400/20';'
       case 'negative': return 'text-red-400 bg-red-400/20';'      default: return 'text-yellow-400 bg-yellow-400/20'}
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -262,8 +228,8 @@ showStats:  true,;
   'overall': 'text-zion-cyan bg-zion-cyan/20';
     };
     return colors[category as keyof typeof colors] || 'text-zinc-400 bg-zinc-400/20'};
-  return()
-    <div className = "w-full max-w-6xl mx-auto p-6">
+  return ()
+    <div className="w-full max-w-6xl mx-auto p-6">
       {/* Header */}"
       <div className="text-center mb-8">"
         <h1 className="text-4xl font-bold text-white mb-4">Customer Feedback</h1>"
@@ -284,11 +250,6 @@ showStats:  true,;
 
   { opacity: 1,
   y: 0
-
-
-
-
-
 
 }}"
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -318,9 +279,7 @@ showStats:  true,;
               <div className="flex">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <Star key={star}
-                    className={`w-5 h-5 ${
-
-                      star <= stats.averageRating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`
+                    className={`w-5 h-5 ${star <= stats.averageRating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`
                     }`}
                    />) ) }              </div>
             </div>"
@@ -480,10 +439,10 @@ showStats:  true,;
                 {/* Rating */}
 <<<<<<< HEAD
                 <div>
-                  <label className="block text - sm font - medium text - zinc - 300 mb - 2">Rating</label>
-                  <div role="button" className="flex gap - 2">
-                    {[1, 2, 3, 4, 5].map ( (star) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={star}
-                        onClick = { () => setNewFeedback (prev => ({ ...prev,
+                  <label className="block text-sm font - medium text-zinc - 300 mb-2">Rating</label>
+                  <div  className="flex gap-2">
+                    {[1, 2, 3, 4, 5].map((star) => (<button     key={star}
+                        onClick = { () => setNewFeedback(prev => ({ ...prev,
   rating: star
 =======
                 <div>"
@@ -498,18 +457,11 @@ showStats:  true,;
   rating: star 
 >>>>>>> main
 
-
-
-
-
-
 }))}"
                         className="p-2 hover:scale-110 transition-transform"
 
                         <Star`
-                          className={`w-8 h-8 ${
-
-                            star <= newFeedback.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`
+                          className={`w-8 h-8 ${star <= newFeedback.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`
                           }`}
                         />
                       </button>;) ) }                  </div>
@@ -521,7 +473,7 @@ showStats:  true,;
                   <select
                     value={newFeedback.category}
 <<<<<<< HEAD
-                    onChange = { (e) => setNewFeedback (prev => ({ ...prev,
+                    onChange = { (e) => setNewFeedback(prev => ({ ...prev,
   category: e.target.value as Feedback['category']
 =======
                     onChange = {
@@ -529,11 +481,6 @@ showStats:  true,;
   (e) => setNewFeedback(prev => ({ ...prev,
   category: e.target.value as Feedback['category'] 
 >>>>>>> main
-
-
-
-
-
 
 }))}"
                     className="w-full px-3 py-2 bg-zinc-800 border border-zinc-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
@@ -551,7 +498,7 @@ showStats:  true,;
                   <textarea
                     value={newFeedback.comment}
 <<<<<<< HEAD
-                    onChange = { (e) => setNewFeedback (prev => ({ ...prev,
+                    onChange = { (e) => setNewFeedback(prev => ({ ...prev,
   comment: e.target.value
 =======
                     onChange = {
@@ -559,11 +506,6 @@ showStats:  true,;
   (e) => setNewFeedback(prev => ({ ...prev,
   comment: e.target.value 
 >>>>>>> main
-
-
-
-
-
 
 }))}"
                     placeholder="Share your experience with Zion Tech Group..."
@@ -648,11 +590,8 @@ showStats:  true,;
                 <Star
 <<<<<<< HEAD
                   key={star}`
-                  className={`w-5 h-5 ${
-
-=======
-                  key={star}`                  className={`w-5 h-5 ${
-'
+                  className={`w-5 h-5 ${=======
+                  key={star}`                  className={`w-5 h-5 ${'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     star <= item.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`
                   }`}
@@ -683,11 +622,6 @@ showStats:  true,;
 
   () => handleVote(item.id,helpful')
 
-
-
-
-
-
 }"
                   className="flex items-center gap-2 text-zinc-400 hover:text-green-400 transition-colors"
 "
@@ -697,11 +631,6 @@ showStats:  true,;
                   onClick = {
 
   () => handleVote(item.id,unhelpful')
-
-
-
-
-
 
 }"
                   className="flex items-center gap-2 text-zinc-400 hover:text-red-400 transition-colors"

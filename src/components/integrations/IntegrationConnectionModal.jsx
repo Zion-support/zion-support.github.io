@@ -1,26 +1,11 @@
 import React, { useState } from "react";"
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";"
-import { Button } from "@/components/ui/button";"
-import { Label } from "@/components/ui/label";"
-import { Checkbox } from "@/components/ui/checkbox";"
-import { toast } from "sonner";
-export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
-
-    const [isConnecting, setIsConnecting] = useState(false);
-    const [syncSettings, setSyncSettings] = useState({
-
-        autoCreateContacts: true,
-        pushNotes: false,
-        syncJobDetails: true,
-        syncApplicantData: true
-    });
-    const handleConnectOAuth = () => {
-        setIsConnecting(true);
-        // Simulate OAuth flow
-        setTimeout(() => {
-            setIsConnecting(false);
-            toast.success(`Connected to ${integration.name} successfully`);
-            onClose()}, 2000);
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';"
+import { Button } from '@/components/ui/button';"
+import { Label } from '@/components/ui/label';"
+import { Checkbox } from '@/components/ui/checkbox';"
+import { toast } from 'sonner';
+export default function Page() {
+, 2000);
         // In a real application, this would open a popup for OAuth authentication`
         // window.open(`/api/oauth/${integration.id}`,oauth',width=600,height=600')};
     const handleDisconnect = () => {
@@ -115,8 +100,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
             <div className="space-y-4 py-4">"
               <p className="text-sm">
                 Connect your {integration.name} account to sync job contacts, applicants, and more.'
-                You'll be redirected to {integration.name} to authorize this connection.
-              </p>
+                You'll be redirected to {integration.name} to authorize this connection.</p>
 "
               <div className="space-y-4">"
                 <h3 className="text-sm font-medium">What will be synced:</h3>"

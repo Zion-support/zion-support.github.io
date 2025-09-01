@@ -1,19 +1,6 @@
 import { useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2 } from 'lucide-react';
-import { useBlockchainWeb3 } from "../hooks/useBlockchainWeb3";"
-import { useAnalytics } from "../hooks/useAnalytics";
-export const BlockchainWeb3Dashboard = ({ className = '' }) => {
-
-    const { trackEvent } = useAnalytics({
-
-        enableTracking: true,
-        enableUserBehaviorTracking: true
-    });
-    const [activeTab, setActiveTab] = useState('overview');
-    const [showMintNFT, setShowMintNFT] = useState(false);
-    const [showSendTransaction, setShowSendTransaction] = useState(false);
-    const { wallet, contracts, nfts, defiPositions, transactions, metrics, isConnecting, isProcessing, connectWallet, disconnectWallet, switchNetwork, addContract, mintNFT, sendTransaction, createDeFiPosition } = useBlockchainWeb3();
+export default function Page() {
+ = useBlockchainWeb3();
     const [nftForm, setNftForm] = useState({
 
         name: '',
@@ -25,17 +12,17 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
         to: '',
         value: '',
         data: ''
-    }) ;
-    const handleConnectWallet = useCallback (async () => {
+    });
+    const handleConnectWallet = useCallback(async () => {
         try {
             await connectWallet();
             trackEvent('blockchain',dashboard',wallet_connected')}
-        catch (error) {
+        catch(error) {
 
             // console.error('Failed to connect wallet:', error)}
     }, [connectWallet, trackEvent]);
     const handleMintNFT = useCallback(async () => {
-        if (nftForm.name.trim() && wallet) {
+        if(nftForm.name.trim() && wallet) {
 
             try {
                 const metadata = {
@@ -50,27 +37,27 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 setNftForm({ name: '', description: '', image: '' });
                 setShowMintNFT(false);
                 trackEvent('blockchain',dashboard',nft_minted')}
-            catch (error) {
+            catch(error) {
 
                 // console.error('Failed to mint NFT:', error)}
         }
     }, [nftForm, wallet, contracts, mintNFT, trackEvent]);
     const handleSendTransaction = useCallback(async () => {
-        if (transactionForm.to.trim() && transactionForm.value && wallet) {
+        if(transactionForm.to.trim() && transactionForm.value && wallet) {
 
             try {
                 await sendTransaction(transactionForm.to, transactionForm.value, transactionForm.data || null);
                 setTransactionForm({ to: '', value: '', data: '' });
                 setShowSendTransaction(false);
                 trackEvent('blockchain',dashboard',transaction_sent')}
-            catch (error) {
+            catch(error) {
 
                 // console.error('Failed to send transaction:', error)}
         }
     }, [transactionForm, wallet, sendTransaction, trackEvent]) ;
     const getStatusColor = (status) => {
 
-        switch (status) {
+        switch(status) {
 
             case 'confirmed': return 'text-green-600 bg-green-100';
             case 'pending': return 'text-yellow-600 bg-yellow-100';
@@ -507,7 +494,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 
                 <div>"
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    Image URL (optional)
+                    Image URL(optional)
                   </label>"
                   <input type="url" value={nftForm.image} onChange = {
 
@@ -567,7 +554,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 
                 <div>"
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    Amount (ETH)
+                    Amount(ETH)
                   </label>"
                   <input type="number" step="0.001" value={transactionForm.value} onChange = {
 
@@ -579,7 +566,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 
                 <div>"
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    Data (optional)
+                    Data(optional)
                   </label>
                   <textarea value={transactionForm.data} onChange = {
 

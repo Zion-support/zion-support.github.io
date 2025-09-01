@@ -1,18 +1,9 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown } from 'lucide-react';
-const Navigation = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isServicesOpen, setIsServicesOpen] = useState(false);
-    const location = useLocation();
-    const navigationItems = ['
-        { name: 'Home', href: '/', icon: Globe },
-        { name: 'Micro SAAS Services', href: '/micro-saas-services', icon: Zap },
-        { name: 'Comprehensive Services', href: '/comprehensive-services', icon: Brain },
-        { name: 'Pricing', href: '/pricing', icon: Building },
+import { Link, useLocation  } from 'react-router-dom';
+export default function Page() {
+,
     ];
-    const serviceCategories = [
-        {
+    const serviceCategories = [{
 
             name: 'AI & Machine Learning',
             services[;
@@ -42,7 +33,7 @@ const Navigation = () => {
     ];
     const isActive = (href) => {
 
-        if (href === '/') {
+        if(href === '/') {
 
             return location.pathname === '/'}
         return location.pathname.startsWith(href)};

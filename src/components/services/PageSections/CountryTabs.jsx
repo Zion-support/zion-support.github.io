@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = () => { const [activeCountry, setActiveCountry] = useState('us'); const currentCountry = countries.find(c => c.id === activeCountry); return ( <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Header */ }"
+import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = () => { const [activeCountry, setActiveCountry] = useState('us'); const currentCountry = countries.find(c => c.id === activeCountry); return (<section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Header */ }"
         <div className="text-center mb-16">"
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Global Service Coverage
           </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Zion provides professional IT services across multiple countries and regions.
-            Find your local team and get the support you need.
-          </p>
+            Zion provides professional IT services across multiple countries and regions.Find your local team and get the support you need.</p>
         </div>
 
         {/* Country Tabs */}"
@@ -16,9 +14,7 @@ import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = () => { co
             <button
               key={country.id}
               onClick={() => setActiveCountry(country.id)}
-              className={`flex items-center space-x-3 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
-
-                activeCountry === country.id'
+              className={`flex items-center space-x-3 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${activeCountry === country.id'
                   ? 'bg-blue-600 text-white shadow-lg''
                   : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'`
               }`}
@@ -166,8 +162,7 @@ import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = () => { co
               Need Service in Another Region?
             </h3>"
             <p className="text-blue-100 mb-6">
-              Contact our global team to discuss your IT service needs in  location.
-            </p>"
+              Contact our global team to discuss your IT service needs in  location.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
                 href="#contact"

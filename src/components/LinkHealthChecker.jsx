@@ -2,19 +2,19 @@ import React, { useState, useEffect } from 'react';
 import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthChecker = ({ links, className = '' }) => {
 
 <<<<<<< HEAD
-    const [linkStatuses, setLinkStatuses] = useState ([]) ;
-    const [isChecking, setIsChecking] = useState (false) ;
+    const [linkStatuses, setLinkStatuses] = useState([]);
+    const [isChecking, setIsChecking] = useState(false);
 =======
     const [linkStatuses, setLinkStatuses] = useState([]);
     const [isChecking, setIsChecking] = useState(false);
 >>>>>>> main
-    const checkLinkHealth = async (url) => {
+    const checkLinkHealth = async(url) => {
 
         const startTime = Date.now();
         try {
 
             // Check if it's an external link'
-            if (url.startsWith('http') && !url.includes('ziontechgroup.com')) {
+            if(url.startsWith('http') && !url.includes('ziontechgroup.com')) {
 
                 return {
 
@@ -23,7 +23,7 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
                     responseTime: Date.now() - startTime
                 }}
             // Check if it's a mailto or tel link'
-            if (url.startsWith('mailto:') || url.startsWith('tel:')) {
+            if(url.startsWith('mailto:') || url.startsWith('tel:')) {
 
                 return {
 
@@ -32,7 +32,7 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
                     responseTime: Date.now() - startTime
                 }}
             // For internal links, we'll assume they're healthy since they're part of our app'
-            if (url.startsWith('/') || url.includes('ziontechgroup.com')) {
+            if(url.startsWith('/') || url.includes('ziontechgroup.com')) {
 
                 return {
 
@@ -48,7 +48,7 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
                 status: 'external',
                 responseTime: Date.now () - startTime
             }}
-        catch (error) {
+        catch(error) {
             return {
 
                 url,
@@ -68,7 +68,7 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
         checkAllLinks()}, [links]);
     const getStatusIcon = (status) => {
 
-        switch (status) {
+        switch(status) {
 
             case 'healthy':
                 return <CheckCircle className="w-5 h-5 text-green-500"/>;
@@ -83,7 +83,7 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
     };
     const getStatusText = (status) => {
 
-        switch (status) {
+        switch(status) {
 
             case 'healthy':'
                 return 'Healthy';
@@ -98,7 +98,7 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
     };
     const getStatusColor = (status) => {
 
-        switch (status) {
+        switch(status) {
 
             case 'healthy':'
                 return 'text-green-500';
@@ -153,7 +153,7 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
         {links.map((link, index) => {
 
             const status = linkStatuses[index];
-            if (!status)
+            if(!status)
                 return null;"
             return (<div key={link.url} className="flex items-center justify-between p-3 bg-white/5 border border-white/10 rounded-lg hover:border-white/20 transition-colors duration-300">"
               <div className="flex items-center gap-3">
@@ -179,16 +179,13 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
       {brokenCount > 0 && (<div className="mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">"
           <h4 className="text-red-400 font-semibold mb-2">⚠️ Action Required</h4>"
           <p className="text-sm text-red-300">
-            {brokenCount} link{brokenCount !== 1 ? 's' : ''} {brokenCount !== 1 ? 'are' : 'is'} broken and need attention.
-            Please review and fix these links to improve user experience.
-          </p>
+            {brokenCount} link{brokenCount !== 1 ? 's' : ''} {brokenCount !== 1 ? 'are' : 'is'} broken and need attention.Please review and fix these links to improve user experience.</p>
         </div>)}
 "
       {healthyCount === links.length && (<div className="mt-6 p-4 bg-green-500/10 border border-green-500/20 rounded-lg">"
           <h4 className="text-green-400 font-semibold mb-2">✅ All Links Healthy</h4>"
           <p className="text-sm text-green-300">
-            Great job! All links are working properly. Your website is in excellent health.
-          </p>
+            Great job! All links are working properly.Your website is in excellent health.</p>
         </div>)}
     </div>)};
 export default LinkHealthChecker;

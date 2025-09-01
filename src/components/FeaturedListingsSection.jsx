@@ -1,126 +1,7 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
-
-  Star,
-  Eye,
-  Heart,
-  ArrowRight,
-  Clock,
-  Users,
-  Award,
-  Zap,
-  Shield,
-  Rocket,
-  Brain,
-  TrendingUp,
-  Phone,
-  CheckCircle} from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-
-const featuredListings = [
-  {
-
-    id: 1,
-    title: 'AI-Powered E-commerce Platform',
-    category: 'Web Development',
-    description:'
-      'Modern e-commerce platform with AI-powered product recommendations and real-time analytics',
-    rating: 4.9,
-    reviews: 234,
-    views: 4567,
-    likes: 156,
-    image:'
-      'https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-    price: '$15,000',
-    tags: ['React',Node.js',AI/ML',E-commerce'],
-    duration: '3-4 months',
-    team: '5 experts',
-    location: 'Remote',
-    featured: true,
-    technologies: ['React',Node.js',MongoDB',AI/ML',AWS'],
-    highlights: ['
-      'AI Recommendations',Real-time Analytics',Mobile Responsive',SEO Optimized',
-    ],
-    link: '/services/ai-ecommerce'},
-  {
-
-    id: 2,
-    title: 'Mobile Banking Application',
-    category: 'Mobile Development',
-    description:'
-      'Secure and user-friendly mobile banking app with biometric authentication and real-time transactions',
-    rating: 4.8,
-    reviews: 89,
-    views: 1956,
-    likes: 134,
-    image:'
-      'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-    price: '$22,000',
-    tags: ['React Native',Security',FinTech',Biometrics'],
-    duration: '4-5 months',
-    team: '6 experts',
-    location: 'Hybrid',
-    featured: true,
-    technologies: ['
-      'React Native',Node.js',PostgreSQL',Biometrics',Security',
-    ],
-    highlights: ['
-      'Biometric Auth',Real-time Transactions',Security Compliance',Cross-platform',
-    ],
-    link: '/services/mobile-banking'},
-  {
-
-    id: 3,
-    title: 'Cloud Infrastructure Migration',
-    category: 'Cloud & DevOps',
-    description:'
-      'Complete migration from on-premise to cloud with automated CI/CD pipelines and monitoring',
-    rating: 4.7,
-    reviews: 156,
-    views: 3241,
-    likes: 189,
-    image:'
-      'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80',
-    price: '$18,500',
-    tags: ['AWS',Docker',Kubernetes',CI/CD'],
-    duration: '2-3 months',
-    team: '4 experts',
-    location: 'On-site',
-    featured: true,
-    technologies: ['AWS',Docker',Kubernetes',Jenkins',Prometheus'],
-    highlights: ['Zero Downtime',Auto-scaling',Monitoring',Security'],
-    link: '/services/cloud-migration'},
-  {
-
-    id: 4,
-    title: 'Healthcare AI Diagnostic System',
-    category: 'AI & Machine Learning',
-    description:'
-      'Advanced medical diagnostic platform using computer vision and machine learning for accurate disease detection',
-    rating: 4.9,
-    reviews: 203,
-    views: 4567,
-    likes: 278,
-    image:'
-      'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    price: '$35,000',
-    tags: ['Python',TensorFlow',Computer Vision',Healthcare'],
-    duration: '6-8 months',
-    team: '8 experts',
-    location: 'Remote',
-    featured: true,
-    technologies: ['Python',TensorFlow',OpenCV',Docker',AWS'],
-    highlights: ['
-      'AI Diagnostics',Medical Imaging',HIPAA Compliant',Real-time Analysis',
-    ],
-    link: '/services/healthcare-ai'},
+import { motion, AnimatePresence  } from 'framer-motion';
+export default function Page() {
+,
   {
 
     id: 5,
@@ -149,7 +30,7 @@ const featuredListings = [
     link: '/services/iot-smart-city'},
 ];
 
-  const [hoveredListing, setHoveredListing] = useState (null) ;
+  const [hoveredListing, setHoveredListing] = useState(null);
 
   const containerVariants = {
 
@@ -172,7 +53,7 @@ const featuredListings = [
 
         duration: 0.5}}};
 
-  return()
+  return ()
     <section className="py-20 bg-gradient-to-br from-slate-50 to-slate-100">"
       <div className="container mx-auto px-4">"
         <div className="text-center mb-16">
@@ -202,7 +83,7 @@ const featuredListings = [
           viewport={{ once: true }}"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {featuredListings.map ( (listing, index) => (<motion.div
+          {featuredListings.map((listing, index) => (<motion.div
               key={listing.id}
               variants={itemVariants}"
               className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
@@ -293,7 +174,7 @@ const featuredListings = [
                     ))}
                     {listing.technologies.length > 3 && ("
                       <Badge variant="outline" className="text-xs">
-                        +{listing.technologies.length - 3} more
+                        +{listing.technologies.length-3} more
                       </Badge>) }
                   </div>
                 </div>

@@ -1,59 +1,8 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
+import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
 
-  Brain,
-  Cloud,
-  Shield,
-  Zap,
-  Users,
-  Globe,
-  Code,
-  Database,
-  Rocket,
-  TrendingUp,
-  Star,
-  ArrowRight,
-  Play,
-  Target,
-  Award,
-  CheckCircle'
- } from 'lucide-react';
-
-interface Service {
-  id: string;
-  title: string;
-  description: string;
-icon: React.ComponentType<{ className?: string
-}>;
-  category: string;
-  features: string[];
-  pricing: string;
-  rating: number;
-  reviews: number;
-  color: string;
-  popular?: boolean;
-  link: string}
-;
-const services: Service[] = [
-  {
-
-    id: 'ai-business-intelligence',
-    title: 'AI Business Intelligence Platform',
-    description: 'Advanced analytics with AI-powered insights and predictive modeling',
-    icon: Brain,
-    category: 'AI & Machine Learning',
-    features['Real-time analytics',Predictive modeling',Custom dashboards',API integration'],;
-    pricing: '$2,999/month',
-    rating: 4.9,
-    reviews: 156,
-    color: 'from-blue-500 to-cyan-500',
-    popular: true,
-    link: '/ai-services/business-intelligence'
-  },
+export default function Page() {
+,
   {
 
     id: 'quantum-computing-suite',
@@ -155,7 +104,6 @@ const services: Service[] = [
 
 ];
 
-
   'Cybersecurity',;
   'Cloud & DevOps',;
   'Blockchain & Web3',;
@@ -167,23 +115,20 @@ const services: Service[] = [
       { threshold: 0.1 }
     );
 
-    
-    if (element) {
+    if(element) {
 =======
 ]}
       },
       { threshold: 0.1 }
     );
 '
-    const element = document.getElementById('service-showcase');    if (element) {
+    const element = document.getElementById('service-showcase');    if(element) {
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       observer.observe(element)}
 
     return () => observer.disconnect()}, []);
 
-  
-  
       />;
     ))};
           i < Math.floor(rating) ;
@@ -191,7 +136,7 @@ const services: Service[] = [
             : 'text-gray-400';`
         }`};
       />;) ) };
-  return()
+  return ()
     <section id = "service-showcase" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
@@ -218,8 +163,7 @@ const services: Service[] = [
           </h2>"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Comprehensive technology solutions designed to drive your business forward with
-            cutting - edge AI, cybersecurity, and innovative digital transformation services.
-          </p>
+            cutting - edge AI, cybersecurity, and innovative digital transformation services.</p>
         </motion.div>
 
         {/* Category Filter */}
@@ -241,11 +185,6 @@ const services: Service[] = [
   { duration: 0.6,
   delay: 0.2
 
-
-
-
-
-
 }}"
           className="flex flex-wrap justify-center gap-3 mb-12"
 
@@ -253,9 +192,7 @@ const services: Service[] = [
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}`
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-
-                selectedCategory === category'
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === category'
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25''
                   : 'bg-zion-slate-light text-gray-300 hover:bg-zion-cyan/10 hover:text-zion-cyan border border-zion-slate'`
               }`}
@@ -273,16 +210,11 @@ const services: Service[] = [
   { duration: 0.6,
   delay: 0.4
 
-
-
-
-
-
 }}"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
 "
           <AnimatePresence mode="wait">
-            {filteredServices.map ( (service, index) => (<motion.div
+            {filteredServices.map((service, index) => (<motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -332,7 +264,7 @@ const services: Service[] = [
                         ))}
                         {service.features.length > 3 && ("
                           <div className="text-sm text-zion-cyan">
-                            +{service.features.length - 3} more features
+                            +{service.features.length-3} more features
                           </div>) }
                       </div>
 
@@ -381,11 +313,6 @@ const services: Service[] = [
   { duration: 0.6,
   delay: 0.6
 
-
-
-
-
-
 }}"
           className="text-center mt-16"
 "
@@ -395,8 +322,7 @@ const services: Service[] = [
             </h3>"
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Let our expert team help you implement cutting-edge technology solutions
-              that drive real business results and competitive advantage.
-            </p>"
+              that drive real business results and competitive advantage.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
                 to="/contact"

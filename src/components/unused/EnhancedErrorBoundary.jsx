@@ -1,47 +1,24 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from '@heroicons/react/24/outline';
-class EnhancedErrorBoundary extends Component {
+import { motion  } from 'framer-motion';
 
-    constructor(props) {
-
-        super(props);
-        this.state = {
-
-  hasError: false,
-            error: null,
-            errorInfo: null,
-            errorId: null,
-  showStackTrace: false
-
-
-}}
-    static getDerivedStateFromError(error) {
-
-        return {
-
-            hasError: true,
-            error,
-            errorId: this.generateErrorId()
-        }}
+export default function Page() {
     componentDidCatch(error, errorInfo) {
 
         this.setState({ errorInfo });
         // Log error to console'
         // // // // // // // // console.error('Error caught by boundary:', error, errorInfo);
         // Call custom error handler if provided
-        if (this.props.onError) {
+        if(this.props.onError) {
 
             this.props.onError(error, errorInfo)}
-        // Send error to error reporting service (if available)
+        // Send error to error reporting service(if available)
         this.reportError(error, errorInfo)}
     static generateErrorId() {
         return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
     reportError(error, errorInfo) {
 
         // In a real application, you would send this to your error reporting service
-        // For example: Sentry, LogRocket, Bugsnag, etc.
-        const errorReport = {
+        // For example: Sentry, LogRocket, Bugsnag, etc.const errorReport = {
 
   id: this.state.errorId,
             timestamp: new Date().toISOString(),
@@ -50,7 +27,6 @@ class EnhancedErrorBoundary extends Component {
                 name: error.name,
                 message: error.message,
   stack: error.stack
-
 
 },
             errorInfo: {
@@ -66,7 +42,7 @@ class EnhancedErrorBoundary extends Component {
 
         };
         // Log to console for development'
-        if (process.env.NODE_ENV === 'development') {
+        if(process.env.NODE_ENV === 'development') {
 
             console.group('Error Report');
             // // // // // // // // console.log('Error ID:', errorReport.id);
@@ -95,7 +71,7 @@ class EnhancedErrorBoundary extends Component {
         window.location.href = '/'};
     handleReportIssue = () => {
         const errorInfo = this.state.errorInfo;
-        if (error && errorInfo) {
+        if(error && errorInfo) {
 `
             const issueUrl = `https://github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`;
             window.open(issueUrl,_blank')}
@@ -141,7 +117,7 @@ class EnhancedErrorBoundary extends Component {
     };
   }, []);
 
-  if (hasError) {
+  if(hasError) {
 
     const defaultFallback = ("
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-red-100">
@@ -169,15 +145,13 @@ class EnhancedErrorBoundary extends Component {
 
           <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h1>
           <p className="text-gray-600 mb-6">
-            We're sorry, but something unexpected happened. Please try refreshing the page.
-          </p>
+            We're sorry, but something unexpected happened.Please try refreshing the page.</p>
 
 =======
           "
           <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h1>"
           <p className="text-gray-600 mb-6">
-            We're sorry, but something unexpected happened. Please try refreshing the page.
-          </p>
+            We're sorry, but something unexpected happened.Please try refreshing the page.</p>
           "
 >>>>>>> main
           <div className="space-y-3">
@@ -205,7 +179,7 @@ class EnhancedErrorBoundary extends Component {
             <details className="mt-6 text-left">"
 >>>>>>> main
               <summary className="cursor-pointer text-sm text-gray-600 hover:text-gray-800">
-                Error Details (Development)
+                Error Details(Development)
               </summary>"
               <div className="mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto">"
                 <div className="mb-2">

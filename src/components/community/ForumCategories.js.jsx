@@ -1,8 +1,8 @@
 import React from 'react';
 export { function };
 export default function ForumCategories() {
-  const categories = [
-    {
+
+  const categories = [{
 
       id: '1',
       name: 'General Discussion',
@@ -29,7 +29,7 @@ export default function ForumCategories() {
         author: 'Developer123',
         date: '2024-01-14'}},
   ];
-  return()
+  return ()
     <div className="space-y-4">
       {categories.map(category => (
         <div

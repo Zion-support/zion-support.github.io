@@ -1,32 +1,7 @@
 import React, { useState } from 'react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
-import { innovativeITServices2025 } from '../data/innovativeITServices2025';
-import { innovativeAIServices2025 } from '../data/innovativeAIServices2025';
-const InnovativeServicesShowcase = () => {
 
-  const [activeTab, setActiveTab] = useState('microsaas');
-  const [selectedService, setSelectedService] = useState(null);
-  const tabs = [
-    {
-
-      id: 'microsaas',
-      name: 'Micro SAAS Services',
-      count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length},
-    { id: 'it', name: 'IT Services', count: innovativeITServices2025.length },
-    { id: 'ai', name: 'AI Services', count: innovativeAIServices2025.length },
-  ];
-  const getServicesByTab = () => {
-    switch (activeTab) {
-
-      case 'microsaas':
-        return INNOVATIVE_MICRO_SAAS_SERVICES_2025;
-      case 'it':
-        return innovativeITServices2025;
-      case 'ai':
-        return innovativeAIServices2025;
-      default:
-        return [];
-    }
+export default function Page() {
   };
   const handleServiceClick = service => {
 
@@ -35,7 +10,7 @@ const InnovativeServicesShowcase = () => {
   const closeModal = () => {
     setSelectedService(null);
   };
-  return()
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Header Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
@@ -80,9 +55,7 @@ const InnovativeServicesShowcase = () => {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-
-                  activeTab === tab.id'
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === tab.id'
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white''
                     : 'bg-white/10 text-gray-300 hover:bg-white/20'`
                 }`}
@@ -147,7 +120,7 @@ const InnovativeServicesShowcase = () => {
                     ))}
                     {service.features.length > 3 && ("
                       <span className="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded-full">
-                        +{service.features.length - 3} more
+                        +{service.features.length-3} more
                       </span>
                     )}
                   </div>

@@ -1,14 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { CheckCircle, XCircle, Info, X, AlertTriangle } from 'lucide-react';
-const notificationStyles = {
-
-  success: {
-
-    icon: CheckCircle,
-    bgColor: 'bg-zion-emerald/10',
-    borderColor: 'border-zion-emerald/20',
-    textColor: 'text-zion-emerald',
-    iconColor: 'text-zion-emerald'},
+import { CheckCircle, XCircle, Info, X, AlertTriangle  } from 'lucide-react';
+,
   error: {
 
     icon: XCircle,
@@ -43,7 +35,7 @@ export function Notification({
   const styles = notificationStyles[type];
   const Icon = styles.icon;
   useEffect(() => {
-    if (duration > 0) {
+    if(duration > 0) {
 
       const timer = setTimeout(() => {
         handleClose();
@@ -55,8 +47,8 @@ export function Notification({
     setIsVisible(false);
     setTimeout(() => onClose(id), 300);
   };
-  if (!isVisible) return null;
-  return()
+  if(!isVisible) return null;
+  return ()
     <div
       className={`${styles.bgColor} ${styles.borderColor} border rounded-lg p-4 shadow-lg animate-fade-in max-w-sm`}
       role="alert"
@@ -71,7 +63,7 @@ export function Notification({
         <button
           onClick={handleClose}"
           className="text-muted-foreground hover:text-foreground transition-colors"
-          aria-label="Close notification"
+          
         >"
           <X className="w-4 h-4" />
         </button>

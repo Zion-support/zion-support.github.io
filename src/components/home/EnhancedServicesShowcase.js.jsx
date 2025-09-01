@@ -1,40 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link  } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import {
-
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle} from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import {
-
-  Brain,
-  Cloud,
-  Shield,
-  Database,
-  TrendingUp,
-  Code,
-  Zap,
-  Heart,
-  DollarSign,
-  Link as LinkIcon,
-  ArrowRight,
-  Star,
-  CheckCircle} from 'lucide-react';
+import { Brain, Cloud, Shield, Database, TrendingUp, Code, Zap, Heart, DollarSign, Link as LinkIcon, ArrowRight, Star, CheckCircle  } from 'lucide-react';
 import { ENHANCED_SERVICES } from '@/data/enhancedServices';
-const featuredServices = ENHANCED_SERVICES.filter()
-  service => service.featured
-).slice(0, 6);
-const serviceIcons = {
-
-  'AI Automation': Brain,Cloud Management': Cloud,
-  Cybersecurity: Shield,Data Engineering': Database,Business Intelligence': TrendingUp,Developer Tools': Code,Digital Transformation': Zap,Healthcare Technology': Heart,Financial Technology': DollarSign,
-  Blockchain: LinkIcon};
+;
 export function EnhancedServicesShowcase() {
-  return()
+  return ()
     <section className="py-20 bg-zion-blue-dark">"
       <div className="container mx-auto px-4">"
         <div className="text-center mb-16">"
@@ -53,7 +26,7 @@ export function EnhancedServicesShowcase() {
           {featuredServices.map(service => {
 
             const IconComponent = serviceIcons[service.category] || Code;
-            return()
+            return ()
               <Card
                 key={service.id}"
                 className="bg-zion-blue border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 hover:translate-y-[-5px]"

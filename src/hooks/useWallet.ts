@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from 'react'; // Added useCallback
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
-import type { Wallet, TokenTransaction } from '@/types/tokens';
+ from '@/types/tokens';
 
 export function useWallet() {
   const { user } = useAuth();
@@ -11,7 +11,7 @@ export function useWallet() {
   const [error, setError] = useState<string | null>(null);
 
   const fetchWallet = useCallback(async () => { // Wrapped in useCallback
-    if (!user?.id) {
+    if(!user?.id) {
       setWallet(null);
       // setLoading(false); // Loading state handled by calling function or initial useEffect
       return;
@@ -25,12 +25,12 @@ export function useWallet() {
         .eq('user_id', user.id)
         .single();
 
-      if (supabaseError && supabaseError.code !== 'PGRST116') { // PGRST116: single row not found, not an error for new users
+      if(supabaseError && supabaseError.code !== 'PGRST116') { // PGRST116: single row not found, not an error for new users
         throw supabaseError;
       }
       setWallet(data); // data will be null if not found, which is fine
       // setError(null); // setError will be handled by the useEffect calling this
-    } catch (err: any) {
+    } catch(err: any) {
       console.error('Error fetching wallet:', err);
       setError(err.message);
       setWallet(null); // Ensure wallet is null on error
@@ -39,7 +39,7 @@ export function useWallet() {
   }, [user?.id]); // Dependency for fetchWallet
 
   const fetchTransactions = useCallback(async () => { // Wrapped in useCallback
-    if (!user?.id) {
+    if(!user?.id) {
       setTransactions([]);
       return;
     }
@@ -50,9 +50,9 @@ export function useWallet() {
         .eq('user_id', user.id)
         .order('created_at', { ascending: false });
 
-      if (supabaseError) throw supabaseError;
+      if(supabaseError) throw supabaseError;
       setTransactions((data || []) as TokenTransaction[]);
-    } catch (err: any) {
+    } catch(err: any) {
       console.error('Error fetching transactions:', err);
       // setError(err.message); // Decide if this should set a general error
       setTransactions([]); // Ensure transactions are empty on error
@@ -60,11 +60,10 @@ export function useWallet() {
   }, [user?.id]); // Dependency for fetchTransactions
 
   async function earnTokens(amount: number, reason?: string) {
-    if (!user?.id) return;
+    if(!user?.id) return;
     // This is an optimistic update, actual logic might involve backend call
     setWallet(prev => prev ? { ...prev, balance: prev.balance + amount } : { balance: amount, user_id: user.id, id: crypto.randomUUID(), updated_at: new Date().toISOString() });
-    setTransactions(prev => [
-      {
+    setTransactions(prev => [{
         id: crypto.randomUUID(),
         user_id: user.id,
         amount,
@@ -78,13 +77,12 @@ export function useWallet() {
   }
 
   async function spendTokens(amount: number, reason?: string) {
-    if (!user?.id) return;
+    if(!user?.id) return;
     // This is an optimistic update
     setWallet(prev =>
       prev ? { ...prev, balance: Math.max(0, prev.balance - amount) } : null // Or handle case where wallet might not exist yet
     );
-    setTransactions(prev => [
-      {
+    setTransactions(prev => [{
         id: crypto.randomUUID(),
         user_id: user.id,
         amount: -amount, // Typically represent spending as negative delta or use a specific column
@@ -99,7 +97,7 @@ export function useWallet() {
 
   useEffect(() => {
     async function loadData() {
-      if (user?.id) {
+      if(user?.id) {
         setLoading(true);
         setError(null);
         await Promise.all([fetchWallet(), fetchTransactions()]);

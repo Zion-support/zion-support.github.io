@@ -14,8 +14,8 @@ interface ServicesOverviewProps extends React.PropsWithChildren<{}> {
 
 const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
 
-  return()
-    <section className = "py-20 bg-gradient-to-b from-zion-slate-dark/30 via-zion-slate-dark/20 to-zion-slate-dark/30" role="region" aria-labelledby="services-heading">"
+  return ()
+    <section className="py-20 bg-gradient-to-b from-zion-slate-dark/30 via-zion-slate-dark/20 to-zion-slate-dark/30" role="region" aria-labelledby="services-heading">"
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div"
           className="text-center mb-16"

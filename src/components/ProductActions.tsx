@@ -6,7 +6,6 @@ export function ProductActions({ onAddToCart }: ProductActionsProps) {
   const [loading, setLoading] = useState(false);
   const [label, setLabel] = useState('Add to Cart');
 
-  
     try {
       await onAddToCart();
       toast('2U Rack Mount Server added to cart');
@@ -15,8 +14,7 @@ export function ProductActions({ onAddToCart }: ProductActionsProps) {
       setLoading(false)}
   };
 
-  return (
-    <Button onClick={addToCart} disabled={loading}>
+  return (<Button onClick={addToCart} disabled={loading}>
       {loading ? (
         <span className="flex items-center gap-2">
           <Loader2 className="h-4 w-4 animate-spin" />

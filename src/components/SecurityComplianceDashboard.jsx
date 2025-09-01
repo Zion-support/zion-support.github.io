@@ -1,53 +1,7 @@
 import React, { useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-import { useAnalytics } from '../hooks / useAnalytics';
-import { useSecurityCompliance } from '../hooks / useSecurityCompliance';
-=======
->>>>>>> main
-
-  Shield,
-  AlertTriangle,
-  CheckCircle,
-  XCircle,
-  Download,
-  Settings,
-  RefreshCw,
-  Loader2,
-  FileText,
-  BarChart3,
-  Clock,
-  Play,
-  Square} from 'lucide-react';
-import { useSecurityCompliance } from '../hooks/useSecurityCompliance';
-import { useAnalytics } from '../hooks/useAnalytics';
-export const SecurityComplianceDashboard = ({ className = '' }) => {
-
-  const { trackEvent } = useAnalytics({
-
-    enableTracking: true,
-    enableUserBehaviorTracking: true});
-  const [activeTab, setActiveTab] = useState('overview');
-  const [showSettings, setShowSettings] = useState(false);
-  const [copied, setCopied] = useState(false);
-  const {
-
-    securityEvents,
-    complianceRules,
-    securityMetrics,
-    isMonitoring,
-    isComplianceChecking,
-    startMonitoring,
-    stopMonitoring,
-    addSecurityEvent,
-    updateEventStatus,
-    addComplianceRule,
-    checkCompliance,
-    generateSecurityReport,
-    exportAuditLog,
-    configureSecurity} = useSecurityCompliance();
+import { motion, AnimatePresence  } from 'framer-motion';
+export default function Page() {
+ = useSecurityCompliance();
   const handleStartMonitoring = useCallback(() => {
     startMonitoring();
     trackEvent('security',dashboard',monitoring_started');
@@ -92,7 +46,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
   }, [addComplianceRule, trackEvent]);
   const getSeverityColor = severity => {
 
-    switch (severity) {
+    switch(severity) {
 
       case 'critical':'
         return 'text-red-600 bg-red-100';
@@ -108,7 +62,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
   };
   const getStatusColor = status => {
 
-    switch (status) {
+    switch(status) {
 
       case 'compliant':'
         return 'text-green-600 bg-green-100';
@@ -122,7 +76,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
   };
   const getThreatLevelColor = level => {
 
-    switch (level) {
+    switch(level) {
 
       case 'critical':'
         return 'text-red-600 bg-red-100 border-red-200';
@@ -136,7 +90,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
         return 'text-gray-600 bg-gray-100 border-gray-200';
     }
   };
-  return()
+  return ()
     <div`
       className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}
     >
@@ -234,9 +188,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
           <button
             key={id}
             onClick={() => setActiveTab(id)}`
-            className={`flex items-center space-x-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${
-
-              activeTab === id'
+            className={`flex items-center space-x-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${activeTab === id'
                 ? 'border-blue-500 text-blue-600 dark:text-blue-400''
                 : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'`
             }`}
@@ -630,8 +582,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                   </h4>"
                   <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
                     Generate a comprehensive security report with current
-                    metrics and recommendations.
-                  </p>
+                    metrics and recommendations.</p>
                   <button
                     onClick={handleGenerateReport}"
                     className="w-full px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700"
@@ -656,8 +607,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                   </h4>"
                   <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
                     Export the complete security audit log for compliance and
-                    analysis purposes.
-                  </p>
+                    analysis purposes.</p>
                   <button
                     onClick={handleExportAuditLog}"
                     className="w-full px-4 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover:bg-green-700"

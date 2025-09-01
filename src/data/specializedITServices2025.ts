@@ -33,8 +33,7 @@ contactInfo: {
   competitors?: string[];
   marketSize?: string}
 ;
-export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
-  // Zero Trust Network Architecture
+export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [// Zero Trust Network Architecture
   {
 
     id: "zero-trust-network-architecture","
@@ -50,7 +49,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
       "Micro-segmentation and network isolation","
       "Continuous monitoring and threat detection","
       "Adaptive access control policies","
-      "Multi-factor authentication (MFA)","
+      "Multi-factor authentication(MFA)","
       "Privileged access management","
       "Network traffic analysis","
       "Compliance reporting and auditing","

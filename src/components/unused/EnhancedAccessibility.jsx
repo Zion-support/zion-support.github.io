@@ -1,36 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { SpeakerWaveIcon, AdjustmentsHorizontalIcon, ArrowUpIcon, ArrowDownIcon } from '@heroicons/react/24/outline';
-const EnhancedAccessibility = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [settings, setSettings] = useState({
+import { motion, AnimatePresence  } from 'framer-motion';
 
-        highContrast: false,
-        fontSize: 16,
-        reducedMotion: false,
-        screenReader: false,
-        keyboardNavigation: false,
-        focusIndicator: true,
-        colorBlindness: 'none'
-    });
-    useEffect(() => {
-        // Load saved settings from localStorage'
-        const savedSettings = localStorage.getItem('accessibility-settings');
-        if (savedSettings) {
-
-            try {
-                const parsed = JSON.parse(savedSettings);
-                setSettings(prev => ({ ...prev, ...parsed }));
-                // // // // // // // // console.warn('Failed to load accessibility settings:', error);
-            }
-                applySettings({ ...settings, ...parsed })}
-            catch (error) {
+export default function Page() {
+)}
+            catch(error) {
 
                 // console.warn('Failed to load accessibility settings:', error)}
         }
         // Check for user preferences'
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)).matches;
-        if (prefersReducedMotion) {
+        if(prefersReducedMotion) {
 
             setSettings(prev => ({ ...prev, reducedMotion: true }))}
     }, []);
@@ -38,7 +17,7 @@ const EnhancedAccessibility = () => {
 
         const root = document.documentElement;
         // High contrast mode
-        if (newSettings.highContrast) {
+        if(newSettings.highContrast) {
 
             root.classList.add('high-contrast')}
         else {
@@ -47,7 +26,7 @@ const EnhancedAccessibility = () => {
         // Font size'
         root.style.setProperty('--font-size-multiplier', (newSettings.fontSize / 16).toString());
         // Reduced motion
-        if (newSettings.reducedMotion) {
+        if(newSettings.reducedMotion) {
 
             root.classList.add('reduced-motion')}
         else {
@@ -55,11 +34,11 @@ const EnhancedAccessibility = () => {
             root.classList.remove('reduced-motion')}
         // Color blindness filters'
         root.classList.remove('protanopia',deuteranopia',tritanopia');
-        if (newSettings.colorBlindness !== 'none') {
+        if(newSettings.colorBlindness !== 'none') {
 
             root.classList.add(newSettings.colorBlindness)}
         // Focus indicators
-        if (newSettings.focusIndicator) {
+        if(newSettings.focusIndicator) {
 
             root.classList.add('show-focus-indicator')}
         else {
@@ -97,13 +76,12 @@ const EnhancedAccessibility = () => {
             focusIndicator: true,
   colorBlindness: 'none'
 
-
 };
         setSettings(defaultSettings);
         applySettings(defaultSettings)};
     const speakText = (text) => {
 
-        if ('speechSynthesis' in window) {
+        if('speechSynthesis' in window) {
 
             const utterance = new SpeechSynthesisUtterance(text);
             utterance.rate = 0.9;
@@ -115,7 +93,7 @@ const EnhancedAccessibility = () => {
         speakText(`Navigated to ${pageName}`)};
     return (<>
       {/* Accessibility Toggle Button */}
-      <button onClick={() => setIsOpen(!isOpen)} className="fixed bottom-6 left-6 z-50 p-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-opacity-50" aria-label="Toggle accessibility settings" aria-expanded={isOpen} aria-controls="accessibility-panel">"
+      <button onClick={() => setIsOpen(!isOpen)} className="fixed bottom-6 left-6 z-50 p-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-opacity-50"  aria-expanded={isOpen} aria-controls="accessibility-panel">"
         <AdjustmentsHorizontalIcon className="w-6 h-6"/>
       </button>
 
@@ -143,10 +121,6 @@ const EnhancedAccessibility = () => {
 =======
   x: -20 
 
-
-
-
-
 "
 }} transition={{ duration: 0.3 }} id="accessibility-panel" className="fixed bottom-24 left-6 z-50 w-80 bg-white dark:bg-slate-800 rounded-lg shadow-2xl border border-gray-200 dark:border-slate-700 max-h-96 overflow-y-auto" role="dialog" aria-labelledby="accessibility-title">"
             <div className="p-6">"
@@ -155,7 +129,7 @@ const EnhancedAccessibility = () => {
                 <h2 id="accessibility-title" className="text-lg font-semibold text-gray-900 dark:text-white">
                   Accessibility Settings
                 </h2>"
-                <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" aria-label="Close accessibility panel">
+                <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" >
                   ×
                 </button>
               </div>
@@ -181,13 +155,13 @@ const EnhancedAccessibility = () => {
                   Font Size: {settings.fontSize}px
                 </label>"
                 <div className="flex items-center space-x-2">"
-                  <button onClick={decreaseFontSize} className="p-2 bg-gray-100 dark:bg-slate-700 rounded-md hover:bg-gray-200 dark:hover:bg-slate-600 transition-colors" aria-label="Decrease font size">"
+                  <button onClick={decreaseFontSize} className="p-2 bg-gray-100 dark:bg-slate-700 rounded-md hover:bg-gray-200 dark:hover:bg-slate-600 transition-colors" >"
                     <ArrowDownIcon className="w-4 h-4"/>
                   </button>"
                   <div className="flex-1 bg-gray-200 dark:bg-slate-600 rounded-full h-2">"`
                     <div className="bg-purple-600 h-2 rounded-full transition-all duration-300" style={{ width: `${((settings.fontSize - 12) / 12) * 100}%` }}/>
                   </div>"
-                  <button onClick={increaseFontSize} className="p-2 bg-gray-100 dark:bg-slate-700 rounded-md hover:bg-gray-200 dark:hover:bg-slate-600 transition-colors" aria-label="Increase font size">"
+                  <button onClick={increaseFontSize} className="p-2 bg-gray-100 dark:bg-slate-700 rounded-md hover:bg-gray-200 dark:hover:bg-slate-600 transition-colors" >"
                     <ArrowUpIcon className="w-4 h-4"/>
                   </button>
                 </div>
@@ -207,9 +181,6 @@ const EnhancedAccessibility = () => {
 <<<<<<< HEAD
 } className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.reducedMotion ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.reducedMotion}>
 =======
-
-
-
 
 '"`
 } className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.reducedMotion ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.reducedMotion}>'`
@@ -237,9 +208,6 @@ const EnhancedAccessibility = () => {
 } className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.focusIndicator ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.focusIndicator}>
 =======
 
-
-
-
 '"`
 } className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.focusIndicator ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.focusIndicator}>'`
 >>>>>>> main
@@ -264,20 +232,17 @@ const EnhancedAccessibility = () => {
 <<<<<<< HEAD
 } className="w-full p-2 border border-gray-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-700 text-gray-900 dark:text-white text-sm">
                   <option value="none">None</option>
-                  <option value="protanopia">Protanopia (Red-Blind)</option>
-                  <option value="deuteranopia">Deuteranopia (Green-Blind)</option>
+                  <option value="protanopia">Protanopia(Red-Blind)</option>
+                  <option value="deuteranopia">Deuteranopia(Green-Blind)</option>
 =======
-
-
-
 
 "
 } className="w-full p-2 border border-gray-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-700 text-gray-900 dark:text-white text-sm">"
                   <option value="none">None</option>"
-                  <option value="protanopia">Protanopia (Red-Blind)</option>"
-                  <option value="deuteranopia">Deuteranopia (Green-Blind)</option>"
+                  <option value="protanopia">Protanopia(Red-Blind)</option>"
+                  <option value="deuteranopia">Deuteranopia(Green-Blind)</option>"
 >>>>>>> main
-                  <option value="tritanopia">Tritanopia (Blue-Blind)</option>
+                  <option value="tritanopia">Tritanopia(Blue-Blind)</option>
                 </select>
               </div>
 
@@ -295,9 +260,6 @@ const EnhancedAccessibility = () => {
 <<<<<<< HEAD
 } className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.screenReader ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.screenReader}>
 =======
-
-
-
 
 '"`
 } className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.screenReader ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.screenReader}>'`
@@ -325,9 +287,6 @@ const EnhancedAccessibility = () => {
 } className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.keyboardNavigation ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.keyboardNavigation}>
 =======
 
-
-
-
 '"`
 } className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.keyboardNavigation ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.keyboardNavigation}>'`
 >>>>>>> main
@@ -341,7 +300,7 @@ const EnhancedAccessibility = () => {
 
               {/* Action Buttons */}"
               <div className="space-y-2">'"
-                <button onClick={() => speakText('Accessibility settings panel opened. You can adjust various accessibility options here.')} className="w-full px-4 py-2 text-sm bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2">"
+                <button onClick={() => speakText('Accessibility settings panel opened.You can adjust various accessibility options here.')} className="w-full px-4 py-2 text-sm bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2">"
                   <SpeakerWaveIcon className="w-4 h-4"/>
                   <span>Test Screen Reader</span>
                 </button>

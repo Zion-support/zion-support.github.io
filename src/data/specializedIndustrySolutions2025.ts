@@ -25,13 +25,12 @@ pricing: {
   status: 'active' | 'beta' | 'coming-soon';
   compliance: string[];
   certifications: string[]};
-export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
-  {
+export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [{
 
     id: 'healthcare-ai-platform',
     title: 'Healthcare AI Platform',
     description: 'Comprehensive AI-powered healthcare solutions for hospitals and clinics',
-    longDescription: 'Transform healthcare delivery with our comprehensive AI platform. Features diagnostic assistance, patient monitoring, drug discovery, and personalized medicine.',
+    longDescription: 'Transform healthcare delivery with our comprehensive AI platform.Features diagnostic assistance, patient monitoring, drug discovery, and personalized medicine.',
     icon: 'Heart',
     color: 'from-red-500 to-pink-600',
     industry: 'healthcare',
@@ -65,7 +64,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     id: 'fintech-solutions',
     title: 'FinTech Solutions Platform',
     description: 'Advanced financial technology solutions for banks and financial institutions',
-    longDescription: 'Modernize your financial services with our comprehensive FinTech platform. Features fraud detection, risk assessment, automated trading, and regulatory compliance.',
+    longDescription: 'Modernize your financial services with our comprehensive FinTech platform.Features fraud detection, risk assessment, automated trading, and regulatory compliance.',
     icon: 'TrendingUp',
     color: 'from-emerald-500 to-green-600',
 =======
@@ -82,7 +81,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     id: 'fintech-solutions','
     title: 'FinTech Solutions Platform','
     description: 'Advanced financial technology solutions for banks and financial institutions','
-    longDescription: 'Modernize your financial services with our comprehensive FinTech platform. Features fraud detection, risk assessment, automated trading, and regulatory compliance.','
+    longDescription: 'Modernize your financial services with our comprehensive FinTech platform.Features fraud detection, risk assessment, automated trading, and regulatory compliance.','
     icon: 'TrendingUp','
     color: 'from-emerald-500 to-green-600','
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -117,7 +116,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     id: 'smart-manufacturing',
     title: 'Smart Manufacturing Platform',
     description: 'IoT and AI-powered manufacturing optimization and automation',
-    longDescription: 'Transform your manufacturing operations with our smart manufacturing platform. Features predictive maintenance, quality control, supply chain optimization, and real-time monitoring.',
+    longDescription: 'Transform your manufacturing operations with our smart manufacturing platform.Features predictive maintenance, quality control, supply chain optimization, and real-time monitoring.',
     icon: 'Factory',
     color: 'from-blue-500 to-indigo-600',
 =======
@@ -134,7 +133,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     id: 'smart-manufacturing','
     title: 'Smart Manufacturing Platform','
     description: 'IoT and AI-powered manufacturing optimization and automation','
-    longDescription: 'Transform your manufacturing operations with our smart manufacturing platform. Features predictive maintenance, quality control, supply chain optimization, and real-time monitoring.','
+    longDescription: 'Transform your manufacturing operations with our smart manufacturing platform.Features predictive maintenance, quality control, supply chain optimization, and real-time monitoring.','
     icon: 'Factory','
     color: 'from-blue-500 to-indigo-600','
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -169,7 +168,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     id: 'retail-ai-platform',
     title: 'Retail AI Platform',
     description: 'AI-powered retail solutions for customer experience and operations',
-    longDescription: 'Enhance your retail operations with our comprehensive AI platform. Features customer analytics, inventory optimization, personalized marketing, and fraud prevention.',
+    longDescription: 'Enhance your retail operations with our comprehensive AI platform.Features customer analytics, inventory optimization, personalized marketing, and fraud prevention.',
     icon: 'ShoppingCart',
     color: 'from-purple-500 to-pink-600',
 =======
@@ -186,7 +185,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     id: 'retail-ai-platform','
     title: 'Retail AI Platform','
     description: 'AI-powered retail solutions for customer experience and operations','
-    longDescription: 'Enhance your retail operations with our comprehensive AI platform. Features customer analytics, inventory optimization, personalized marketing, and fraud prevention.','
+    longDescription: 'Enhance your retail operations with our comprehensive AI platform.Features customer analytics, inventory optimization, personalized marketing, and fraud prevention.','
     icon: 'ShoppingCart','
     color: 'from-purple-500 to-pink-600','
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -221,7 +220,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     id: 'education-technology',
     title: 'Education Technology Platform',
     description: 'Comprehensive edtech solutions for schools and universities',
-    longDescription: 'Transform education with our comprehensive edtech platform. Features personalized learning, student analytics, content management, and virtual classrooms.',
+    longDescription: 'Transform education with our comprehensive edtech platform.Features personalized learning, student analytics, content management, and virtual classrooms.',
     icon: 'BookOpen',
     color: 'from-indigo-500 to-blue-600',
 =======
@@ -238,7 +237,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     id: 'education-technology','
     title: 'Education Technology Platform','
     description: 'Comprehensive edtech solutions for schools and universities','
-    longDescription: 'Transform education with our comprehensive edtech platform. Features personalized learning, student analytics, content management, and virtual classrooms.','
+    longDescription: 'Transform education with our comprehensive edtech platform.Features personalized learning, student analytics, content management, and virtual classrooms.','
     icon: 'BookOpen','
     color: 'from-indigo-500 to-blue-600','
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -273,7 +272,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     id: 'government-solutions',
     title: 'Government Technology Solutions',
     description: 'Secure and compliant technology solutions for government agencies',
-    longDescription: 'Modernize government operations with our secure and compliant technology solutions. Features citizen services, data analytics, cybersecurity, and process automation.',
+    longDescription: 'Modernize government operations with our secure and compliant technology solutions.Features citizen services, data analytics, cybersecurity, and process automation.',
     icon: 'Building',
     color: 'from-slate-500 to-gray-600',
 =======
@@ -290,7 +289,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     id: 'government-solutions','
     title: 'Government Technology Solutions','
     description: 'Secure and compliant technology solutions for government agencies','
-    longDescription: 'Modernize government operations with our secure and compliant technology solutions. Features citizen services, data analytics, cybersecurity, and process automation.','
+    longDescription: 'Modernize government operations with our secure and compliant technology solutions.Features citizen services, data analytics, cybersecurity, and process automation.','
     icon: 'Building','
     color: 'from-slate-500 to-gray-600','
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -325,7 +324,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     id: 'energy-optimization',
     title: 'Energy Optimization Platform',
     description: 'AI-powered energy management and optimization solutions',
-    longDescription: 'Optimize your energy operations with our comprehensive platform. Features smart grid management, renewable energy integration, demand forecasting, and energy analytics.',
+    longDescription: 'Optimize your energy operations with our comprehensive platform.Features smart grid management, renewable energy integration, demand forecasting, and energy analytics.',
     icon: 'Zap',
     color: 'from-yellow-500 to-orange-600',
 =======
@@ -342,7 +341,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     id: 'energy-optimization','
     title: 'Energy Optimization Platform','
     description: 'AI-powered energy management and optimization solutions','
-    longDescription: 'Optimize your energy operations with our comprehensive platform. Features smart grid management, renewable energy integration, demand forecasting, and energy analytics.','
+    longDescription: 'Optimize your energy operations with our comprehensive platform.Features smart grid management, renewable energy integration, demand forecasting, and energy analytics.','
     icon: 'Zap','
     color: 'from-yellow-500 to-orange-600','
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -377,7 +376,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     id: 'transportation-logistics',
     title: 'Transportation & Logistics Platform',
     description: 'Intelligent transportation and logistics optimization',
-    longDescription: 'Optimize your transportation and logistics operations with our intelligent platform. Features route optimization, fleet management, supply chain visibility, and predictive analytics.',
+    longDescription: 'Optimize your transportation and logistics operations with our intelligent platform.Features route optimization, fleet management, supply chain visibility, and predictive analytics.',
     icon: 'Truck',
     color: 'from-teal-500 to-cyan-600',
 =======
@@ -394,7 +393,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     id: 'transportation-logistics','
     title: 'Transportation & Logistics Platform','
     description: 'Intelligent transportation and logistics optimization','
-    longDescription: 'Optimize your transportation and logistics operations with our intelligent platform. Features route optimization, fleet management, supply chain visibility, and predictive analytics.','
+    longDescription: 'Optimize your transportation and logistics operations with our intelligent platform.Features route optimization, fleet management, supply chain visibility, and predictive analytics.','
     icon: 'Truck','
     color: 'from-teal-500 to-cyan-600','
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -429,7 +428,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     id: 'real-estate-tech',
     title: 'Real Estate Technology Platform',
     description: 'Comprehensive real estate technology solutions',
-    longDescription: 'Transform your real estate operations with our comprehensive technology platform. Features property management, market analytics, virtual tours, and transaction management.',
+    longDescription: 'Transform your real estate operations with our comprehensive technology platform.Features property management, market analytics, virtual tours, and transaction management.',
     icon: 'Home',
     color: 'from-amber-500 to-yellow-600',
 =======
@@ -446,7 +445,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     id: 'real-estate-tech','
     title: 'Real Estate Technology Platform','
     description: 'Comprehensive real estate technology solutions','
-    longDescription: 'Transform your real estate operations with our comprehensive technology platform. Features property management, market analytics, virtual tours, and transaction management.','
+    longDescription: 'Transform your real estate operations with our comprehensive technology platform.Features property management, market analytics, virtual tours, and transaction management.','
     icon: 'Home','
     color: 'from-amber-500 to-yellow-600','
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -481,7 +480,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     id: 'media-entertainment',
     title: 'Media & Entertainment Platform',
     description: 'AI-powered media and entertainment solutions',
-    longDescription: 'Revolutionize your media and entertainment operations with our AI-powered platform. Features content creation, audience analytics, recommendation engines, and content management.',
+    longDescription: 'Revolutionize your media and entertainment operations with our AI-powered platform.Features content creation, audience analytics, recommendation engines, and content management.',
     icon: 'Video',
     color: 'from-pink-500 to-rose-600',
 =======
@@ -498,7 +497,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     id: 'media-entertainment','
     title: 'Media & Entertainment Platform','
     description: 'AI-powered media and entertainment solutions','
-    longDescription: 'Revolutionize your media and entertainment operations with our AI-powered platform. Features content creation, audience analytics, recommendation engines, and content management.','
+    longDescription: 'Revolutionize your media and entertainment operations with our AI-powered platform.Features content creation, audience analytics, recommendation engines, and content management.','
     icon: 'Video','
     color: 'from-pink-500 to-rose-600','
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -529,7 +528,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     certifications['ISO 27001',SOC 2 Type II',Content Management']}
 ];
 export 
-  if (industry === 'All') {;
+  if(industry === 'All') {;
     return SPECIALIZED_INDUSTRY_SOLUTIONS_2025;
 
   return SPECIALIZED_INDUSTRY_SOLUTIONS_2025.filter(solution => solution.industry === industry)};

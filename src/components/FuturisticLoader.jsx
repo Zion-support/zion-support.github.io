@@ -6,15 +6,11 @@ export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant
   small: 'w-8 h-8',
         medium: 'w-16 h-16',
   large: 'w-24 h-24'
-    
-
-
-
 
     const sizeClasses = {
-  small: 'w - 8 h - 8',
-        medium: 'w - 16 h - 16',
-  large: 'w - 24 h - 24'
+  small: 'w-8 h-8',
+        medium: 'w-16 h-16',
+  large: 'w-24 h-24'
 
 };
     const textSizes = {
@@ -22,16 +18,10 @@ export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant
   small: 'text-sm',
         medium: 'text-lg',
   large: 'text-xl'
-    
-
-
-
-
-
 
 };
     const renderLoader = () => {
-        switch (variant) {
+        switch(variant) {
 
             case 'matrix':
                 return (<div className="relative">

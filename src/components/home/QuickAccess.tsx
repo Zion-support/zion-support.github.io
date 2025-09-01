@@ -1,117 +1,8 @@
 <<<<<<< HEAD
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-=======
-<<<<<<< HEAD
->>>>>>> main
-import {
-
-  Brain,
-  Shield,
-  Cloud,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users,
-  BarChart3,
-  FileImage,
-  TrendingUp,
-  MessageCircle,
-  Video,
-  FileText,
-  Heart,
-  ShoppingCart,
-  Settings,
-  HelpCircle,
-  BookOpen,
-  Briefcase,
-  Award,
-  Target,
-  Lightbulb,
-  ShieldCheck,
-  Server,
-  Smartphone,
-  Monitor,
-  Wifi,
-  Bluetooth,
-  Satellite,
-  Atom,
-  Dna,
-  Microscope,
-  Flask,
-  TestTube,
-  Syringe,
-  Stethoscope,
-  HeartPulse,
-  BrainCircuit,
-  Eye,
-  Ear,
-  Hand,
-  Foot,
-  Bone,
-  Tooth,
-  Pill,
-  Bandage,
-  Thermometer,
-  Scale,
-  Calculator,
-  ChartBar,
-  PieChart,
-  LineChart,
-  Activity,
-  TrendingDown,
-  Minus,
-  Plus,
-  Equal,
-  Divide,
-  Percent,
-  DollarSign,
-  Euro,
-  Pound,
-  Yen,
-  Bitcoin,
-  Ethereum,
-  CreditCard,
-  Wallet,
-  Banknote,
-  Coins,
-  PiggyBank,
-  Safe,
-  Vault,
-  LockKeyhole,
-  Key,
-  Fingerprint,
-  QrCode,
-  Barcode,
-  Scan,
-  Camera,
-  VideoOff,
-  Mic,
-  MicOff,
-  Volume2,
-  VolumeX'
-} from 'lucide-react';
-;
-const QuickAccess: React.FC = props {;
-  const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-;
-const QuickAccess: React.FC = (): JSX.Element => {
-
-  
-    };
-  ];
-
-  const categories = ["
-    { name: "Technology", count: 15, color: "from-purple-500 to-pink-500" },"
-    { name: "Security", count: 8, color: "from-red-500 to-orange-500" },"
-    { name: "Infrastructure", count: 12, color: "from-blue-500 to-cyan-500" },"
+import { motion  } from 'framer-motion';
+export default function Page() {
+,"
     { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },"
     { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },;"
     { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };
@@ -120,7 +11,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
   ];
 
   return ("
-    <section className = "py-16 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">"
+    <section className="py-16 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">"
       <div className="max-w-7xl mx-auto px-6">"
         <div className="text-center mb-12">
           <motion.h2
@@ -159,7 +50,6 @@ const QuickAccess: React.FC = (): JSX.Element => {
       stats: { solutions: "25+", deployment: "<1hr", success: "90%" }};
   ];
 
-  
     visible: {
       opacity: 1,;
       transition: {
@@ -208,7 +98,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
 =======
   return ("
 >>>>>>> main
-    <section className = "py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black relative overflow-hidden">
       {/* Background Elements */}"
       <div className="absolute inset-0 opacity-30">"
         <div className="absolute top-20 left-20 w-64 h-64 bg-zion-cyan/10 rounded-full blur-3xl"></div>"

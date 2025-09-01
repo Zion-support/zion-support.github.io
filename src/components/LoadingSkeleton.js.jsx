@@ -1,12 +1,6 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
-export function Skeleton({
-
-  className,
-  width,
-  height,
-  rounded = 'md',
-  animated = true}) {
+) {
 
   const roundedClasses = {
 
@@ -15,7 +9,7 @@ export function Skeleton({
     md: 'rounded-md',
     lg: 'rounded-lg',
     full: 'rounded-full'};
-  return()
+  return ()
     <div
       className={cn('
         'bg-muted',
@@ -143,7 +137,7 @@ export function GridSkeleton({
   showTitle = true,
   showDescription = true}) {
 
-  return()
+  return ()
     <div'
       className={cn('grid gap-4', className)}
       style={{
@@ -172,7 +166,7 @@ export function HeroSkeleton({
   showDescription = true,
   showActions = true}) {
 
-  return()
+  return ()
     <div'
       className={cn('flex flex-col lg:flex-row gap-8 items-center', className)}
     >

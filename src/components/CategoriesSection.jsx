@@ -1,33 +1,10 @@
 import { GradientHeading } from './GradientHeading';
-<<<<<<< HEAD
-import { motion } from 'framer - motion';
-=======
-import { Link } from 'react-router-dom';
-import {
->>>>>>> main
+ from 'framer-motion';
+ from 'react-router-dom';
+import { >>>>>>> main Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Sparkles, Zap, Shield, Rocket  } from 'lucide-react';
+import { motion  } from 'framer-motion';
 
-  Briefcase,
-  HardDrive,
-  Lightbulb,
-  Users,
-  ArrowRight,
-  Sparkles,
-  Zap,
-  Shield,
-  Rocket} from 'lucide-react';
-import { motion } from 'framer-motion';
-
-const categories = [
-  {
-
-    title: 'Comprehensive Services',
-    description: 'Micro SAAS, IT services, and AI solutions',
-    icon: <Briefcase className="w-10 h-10" />,
-    link: '/services',
-    color: 'from-zion-purple to-zion-purple-dark',
-    gradient: 'from-zion-purple/20 to-zion-purple-dark/20',
-    features: ['24/7 Support',Expert Team',Custom Solutions'],
-    stats: '500+ Services'},
+,
   {
 
     title: 'Talents',
@@ -60,8 +37,7 @@ const categories = [
     stats: '100+ Innovations'},
 ];
 ;
-const specialServices = [
-  {
+const specialServices = [{
 
     title: 'Enhanced AI & IT Services',
     link: '/enhanced-services'},

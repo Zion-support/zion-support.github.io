@@ -1,48 +1,19 @@
 <<<<<<< HEAD
-import { Link } from 'react - router - dom';
-import React, { useState } from 'react';
+import { Link  } from 'react-router-dom';
+ from 'react';
 export const EnhancedServicesShowcase: React.FC = () => {
-export default React.memo (/**
-import {
-import { motion } from 'framer - motion';
+export default React.memo(/**
+import { motion  } from 'framer-motion';
 
- * EnhancedServicesShowcase function
- * @param {*} params - Function parameters
+ params - Function parameters
  * @returns {*} Function return value
  */
 function EnhancedServicesShowcase () {
 =======
 <<<<<<< HEAD
-import {
->>>>>>> main
+import { >>>>>>> main Brain, Shield, Globe, Brain, Rocket, Target, Award, Sparkles, Clock, CheckCircle, Search'  } from 'lucide-react';
 
-  Brain,
-  Shield,
-  Globe,
-  Brain,
-  Rocket,
-  Target,
-  Award,
-  Sparkles,
-  Clock,
-  CheckCircle,
-  Search'
- } from 'lucide-react';
-
-  const services: Service[] = [
-    {
-
-      title: 'AI Workflow Automation',
-      description: 'Transform business operations with intelligent automation that learns and scales',
-      price: 'From $299/month',
-      path: '/services/ai-workflow-automation',
-              icon: GitFork,
-      category: 'AI & Automation',
-      features: ['Process optimization',AI-powered workflows',Real-time analytics',Scalable automation'],
-      benefits: ['Reduce manual work by 70-85%',Improve efficiency by 60%',Cut operational costs by 40-50%'],
-      color: 'from-cyan-500 to-blue-600',
-      glowColor: 'cyan'
-    },
+,
     {
 
       title: 'AI Cybersecurity',
@@ -109,12 +80,10 @@ import {
       glowColor: 'pink'};
   ];
 
-  
     visible: {
       opacity: 1,;
       transition: {
         staggerChildren: 0.1}}};
-
 
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -123,8 +92,7 @@ export default function EnhancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [hoveredService, setHoveredService] = useState<string | null>(null);
 
-  
-  return()    <section className = "py-24 bg-futuristic-enhanced relative overflow-hidden">
+  return ()    <section className="py-24 bg-futuristic-enhanced relative overflow-hidden">
       {/* Background Elements */}"
       <div className="absolute inset-0">"
         <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-float"></div>"
@@ -161,7 +129,7 @@ export default function EnhancedServicesShowcase() {
 
 <<<<<<< HEAD
         <motion.div
-          className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap - 8"
+          className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -182,7 +150,7 @@ export default function EnhancedServicesShowcase() {
 
 }}
         >
-          {services.map ( (service, index) => (<motion.div
+          {services.map((service, index) => (<motion.div
               key={index}
               variants={itemVariants}"
               className="group relative"
@@ -257,7 +225,7 @@ export default function EnhancedServicesShowcase() {
         {/* Services Grid */}"
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">;"
           <AnimatePresence mode="wait">
-            {filteredServices.map ( (service, index) => (<motion.div
+            {filteredServices.map((service, index) => (<motion.div
                 key={service.id}
                 layout
                 initial={{ opacity: 0, y: 30 }}
@@ -380,13 +348,11 @@ export default function EnhancedServicesShowcase() {
 
   { duration: 0.6,
   delay: 0.3 }}        >
-          {categories.map ( (category, index) => (;
+          {categories.map((category, index) => (;
             <motion.button
               key={category}
               onClick={() => setSelectedCategory(category)}`
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-
-                selectedCategory === category'
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${selectedCategory === category'
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25''
                   : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'`
               }`}
@@ -430,7 +396,7 @@ export default function EnhancedServicesShowcase() {
             >
 <<<<<<< HEAD
               View All Services;
-              <ArrowRight className="ml - 2 w - 5 h - 5" />;
+              <ArrowRight className="ml-2 w-5 h-5" />;
             </Link>
             <a
 =======

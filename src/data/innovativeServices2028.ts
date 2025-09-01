@@ -34,8 +34,7 @@ export interface InnovativeService2028 {
   aiCapabilities?: string[];
   complianceFeatures?: string[];
   scalabilityFeatures?: string[]}
-;export const INNOVATIVE_SERVICES_2028: InnovativeService2028[] = [
-  // AI-Powered Enterprise Solutions
+;export const INNOVATIVE_SERVICES_2028: InnovativeService2028[] = [// AI-Powered Enterprise Solutions
   {
 
     id: 'ai-enterprise-architecture-platform',
@@ -272,7 +271,7 @@ export interface InnovativeService2028 {
     currency: '$',
     pricingModel: 'monthly',
     features: ['
-      'AI-powered content generation and writing',Multi-format content creation (text, video, audio),SEO optimization and keyword research',Content performance analytics and optimization',Multi-language content generation',Brand voice and style consistency',Content calendar and scheduling',Social media content automation',Integration with CMS and marketing tools',Plagiarism detection and originality checking',
+      'AI-powered content generation and writing',Multi-format content creation(text, video, audio),SEO optimization and keyword research',Content performance analytics and optimization',Multi-language content generation',Brand voice and style consistency',Content calendar and scheduling',Social media content automation',Integration with CMS and marketing tools',Plagiarism detection and originality checking',
     ],
     benefits: ['
       'Increase content production by 10x',Improve SEO rankings by 40%',Reduce content creation costs by 60%',Increase engagement rates by 35%',Maintain consistent brand voice',

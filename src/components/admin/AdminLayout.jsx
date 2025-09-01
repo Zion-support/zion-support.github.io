@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-const navItems = ['
-    { title: 'Products', href: '/admin/products' },
+import { Link  } from 'react-router-dom';
+,
     { title: 'Services', href: '/admin/services' },
     { title: 'Users', href: '/admin/users' },
     { title: 'Reports', href: '/admin/reports' },

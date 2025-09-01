@@ -1,57 +1,21 @@
-import { useNavigate } from "react - router - dom";
-import { useState } from "react";
-import React, { useState } from 'react';
-import { Button } from "@/components / ui / button";
-import { ProfileSetup } from "@/components / onboarding / ProfileSetup";
-import { Steps, Step } from "@/components / ui / steps";
-import { supabase } from "@/integrations / supabase / client";
-import { toast } from "@/hooks / use - toast";
-import { useAuth } from "@/hooks / useAuth";
-import { UserTypeSelection } from "@/components / onboarding / UserTypeSelection";
-export default function Onboarding () {
+import { useNavigate  } from 'react-router-dom';
 
-    const { user, updateProfile, isLoading } = useAuth () ;
-    const [currentStep, setCurrentStep] = useState (0) ;
-    const [userType, setUserType] = useState (null) ;
-    const navigate = useNavigate () ;
-    // Convert our user types to match what's expected in the database
-    const mapUserTypeToDatabase = (type) => {
-        switch (type) {
-            case "serviceProvider":
-                return "creator";
-            case "talent":
-                return "jobSeeker";
-            case "client":
-                return "employer";
-            default:
-                return "buyer"}
-    };
-    const handleUserTypeSelect = (type) => {
-        setUserType (type) ;
-        // Direct to specific registration page based on user type
-        if (type === "serviceProvider") {
-            router ('/service - onboarding') ;
-            return;
-
-        else if (type === "talent") {
-            router ('/talent - onboarding') ;
-            return;
-        }
+export default function Page() {
         // Continue with the onboarding flow for clients
-        setCurrentStep (1) };
-    const handleProfileComplete = async (data) => {
-        if (!user || !userType) {
-            toast ({
+        setCurrentStep(1) };
+    const handleProfileComplete = async(data) => {
+        if(!user || !userType) {
+            toast({
                 title: "Authentication Error",
-                description: "Your session may have expired. Please log in again.",
+                description: "Your session may have expired.Please log in again.",
                 variant: "destructive",
             }) ;
-            router ('/login') ;
+            router('/login') ;
             return;
         }
-        const dbUserType = mapUserTypeToDatabase (userType) ;
+        const dbUserType = mapUserTypeToDatabase(userType) ;
         try {
-            await updateProfile ({
+            await updateProfile({
                 id: user.id,
                 displayName: data.displayName,
                 bio: data.bio, // This is now valid since we added bio to UserDetails
@@ -60,12 +24,12 @@ export default function Onboarding () {
                 profileComplete: true
             }) ;
             // Update onboarding milestone
-            await supabase.rpc ('update_onboarding_milestone', {
+            await supabase.rpc('update_onboarding_milestone', {
                 _user_id: user.id,
                 _milestone: 'profile_completed',
                 _status: true
             }) ;
-            toast ({
+            toast({
                 title: 'Profile completed!',
                 description: 'Your profile has been set up successfully.',
             }) ;
@@ -74,39 +38,38 @@ export default function Onboarding () {
                 ? "/client - dashboard"
                 : "/talent - dashboard";
             // Redirect to dashboard
-            router (dashboardRoute) ;
+            router(dashboardRoute) ;
         }
-        catch (error) {
-            // // // // // // // console.error ('Error updating profile:', error) ;
-            toast ({
+        catch(error) {
+            // // // // // // // console.error('Error updating profile:', error) ;
+            toast({
                 title: 'Error',
-                description: 'There was a problem updating your profile. Please try again.',
+                description: 'There was a problem updating your profile.Please try again.',
                 variant: 'destructive',
             }) }
     };
-    const steps = [
-        { label: "Select Role", description: "Choose how you'll use the platform" },
+    const steps = [{ label: "Select Role", description: "Choose how you'll use the platform" },
         { label: "Create Profile", description: "Tell us about yourself" },
     ];
-    if (!user) {
-        router ('/login') ;
+    if(!user) {
+        router('/login') ;
         return null;
     }
     return (<>
 
-      <div className="min - h-screen bg - zion - blue py - 12 px - 4">
-        <div className="max - w-4xl mx - auto">
-          <div className="text - center mb - 12">
-            <h1 className="text - 4xl font - bold text - white mb - 4">
+      <div className="min - h-screen bg-zion - blue py-12 px-4">
+        <div className="max - w-4xl mx -auto">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font - bold text-white mb-4">
               Welcome to Zion
             </h1>
-            <p className="text - zion - slate - light text - xl">
+            <p className="text-zion - slate - light text-xl">
               Complete your profile to get started
             </p>
           </div>
 
-          <div className="mb - 12">
-            <Steps currentStep={currentStep} className="max - w-xl mx - auto">
+          <div className="mb-12">
+            <Steps currentStep={currentStep} className="max - w-xl mx -auto">
               {steps.map ( (step, index) => (<Step key={index} status={currentStep > index
                 ? "complete"
                 : currentStep === index
@@ -115,11 +78,11 @@ export default function Onboarding () {
             </Steps>
           </div>
 
-          <div className="bg - zion - blue - dark rounded - xl p - 8 shadow - lg border border - zion - blue - light">
+          <div className="bg-zion - blue - dark rounded-xl p - 8 shadow-lg border border-zion - blue -light">
             {currentStep === 0 ? (<UserTypeSelection onSelect={handleUserTypeSelect} selectedType={userType}/>) : (<ProfileSetup onComplete={handleProfileComplete} userType={userType}/>) }
 
-            {currentStep === 1 && (<div className="mt - 6">
-                <Button variant="outline" className="w - full border - zion - blue - light text - white hover:bg - zion - blue - light" onClick={ () => setCurrentStep (0) }>
+            {currentStep === 1 && (<div className="mt-6">
+                <Button variant="outline" className="w-full border-zion - blue - light text-white hover:bg-zion - blue -light" onClick={ () => setCurrentStep(0) }>
                   Back to Role Selection
                 </Button>
               </div>) }

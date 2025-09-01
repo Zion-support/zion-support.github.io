@@ -8,7 +8,6 @@
   'Network Security Solution';
 ];
 
-
   'State-of-the-art quantum computing components for research and development.',;
   'Expert data science consulting services for machine learning and analytics projects.',;
   'Blockchain development and implementation services for decentralized applications.',;
@@ -16,7 +15,6 @@
   'DevOps automation tools for continuous integration and deployment pipelines.',;
   'Network security solution with advanced threat detection and prevention.';
 ];
-
 
   ['Quantum',Research',Hardware'],;
   ['Data Science',Machine Learning',Consulting'],;
@@ -48,14 +46,11 @@ const categories: Array<any> = ['
   'products',talent',equipment',services'
 ];
 
-
   '$500',$1,200',$2,500',$5,000',$8,500',$15,000',$25,000',$50,000';
 ];
 
-
   'San Francisco, CA',New York, NY',Austin, TX',Seattle, WA',Boston, MA',Remote';
 ];
-
 
   'QuantumTech Labs',;
   'CloudMasters Inc',;
@@ -76,11 +71,6 @@ const categories: Array<any> = ['
 
 export function generateRandomListing(): MarketplaceItem {
 
-  
-  
-  
-  
-  
   return {
 
     id: `listing-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
@@ -107,7 +97,7 @@ export function generateRandomListing(): MarketplaceItem {
 export function generateRandomListings(count: number): MarketplaceItem[] {
 
   const listings: MarketplaceItem[] = [];
-  for (let i = 0; i < count; i++) {
+  for(let i = 0; i < count; i++) {
 
     listings.push(generateRandomListing());
 

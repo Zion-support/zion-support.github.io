@@ -1,91 +1,51 @@
-import {
+import { <<<<<<< HEAD ======= Activity, Zap, Clock, <<<<<<< HEAD TrendingUp, AlertTriangle  } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
-  Activity,
-  Zap,
-  Clock,
-<<<<<<< HEAD
-  TrendingUp,
-  AlertTriangle} from 'lucide-react.ts';
-
->>>>>>> main
-interface PerformanceMetrics {
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-  fcp: number | null;
-  fmp: number | null;
-  si: number | null;
-  tti: number | null}
-
-interface PerformanceScore {
-  score: number;
-  rating: 'good' | 'needs-improvement' | 'poor';
-  color: string}
-
-const AdvancedPerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    fmp: null});
-
-  const [isVisible, setIsVisible] = useState(false);
-  const [overallScore, setOverallScore] = useState<PerformanceScore>({
-
-    score: 0,
-    rating: 'good',
-    color: 'text-green-500'});
+export default function Page() {
+);
 
   // Calculate performance score based on Core Web Vitals
   
       let validMetrics = 0;
 
-      // FCP scoring (0-100)
-      if (metrics.fcp !== null) {
+      // FCP scoring(0-100)
+      if(metrics.fcp !== null) {
 
         validMetrics++;
-        if (metrics.fcp < 1800) totalScore += 100;
-        else if (metrics.fcp < 3000) totalScore += 50;
+        if(metrics.fcp < 1800) totalScore += 100;
+        else if(metrics.fcp < 3000) totalScore += 50;
         else totalScore += 0}
 
-      // LCP scoring (0-100)
-      if (metrics.lcp !== null) {
+      // LCP scoring(0-100)
+      if(metrics.lcp !== null) {
 
         validMetrics++;
-        if (metrics.lcp < 2500) totalScore += 100;
-        else if (metrics.lcp < 4000) totalScore += 50;
+        if(metrics.lcp < 2500) totalScore += 100;
+        else if(metrics.lcp < 4000) totalScore += 50;
         else totalScore += 0}
 
-      // FID scoring (0-100)
-      if (metrics.fid !== null) {
+      // FID scoring(0-100)
+      if(metrics.fid !== null) {
 
         validMetrics++;
-        if (metrics.fid < 100) totalScore += 100;
-        else if (metrics.fid < 300) totalScore += 50;
+        if(metrics.fid < 100) totalScore += 100;
+        else if(metrics.fid < 300) totalScore += 50;
         else totalScore += 0}
 
-      // CLS scoring (0-100)
-      if (metrics.cls !== null) {
+      // CLS scoring(0-100)
+      if(metrics.cls !== null) {
 
         validMetrics++;
-        if (metrics.cls < 0.1) totalScore += 100;
-        else if (metrics.cls < 0.25) totalScore += 50;
+        if(metrics.cls < 0.1) totalScore += 100;
+        else if(metrics.cls < 0.25) totalScore += 50;
         else totalScore += 0}
 
-      
       let rating: 'good' | 'needs-improvement' | 'poor';
       let color: string;
 
-      if (averageScore >= 90) {
+      if(averageScore >= 90) {
 
         rating = 'good';
-        color = 'text-green-500'} else if (averageScore >= 50) {
+        color = 'text-green-500'} else if(averageScore >= 50) {
 
         rating = 'needs-improvement';
         color = 'text-yellow-500'} else {
@@ -94,21 +54,20 @@ const AdvancedPerformanceMonitor: React.FC = () => {
         color = 'text-red-500'}
     });
 
-    
 =======
   TrendingUp,'
-  AlertTriangle} from 'lucide-react.ts';    
+  AlertTriangle} from 'lucide-react';    
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     let grade: 'A' | 'B' | 'C' | 'D' | 'F';
     let color: string;
 
-    if (averageScore >= 90) {
+    if(averageScore >= 90) {
       grade = 'A';
-      color = 'text-green-500'} else if (averageScore >= 80) {
+      color = 'text-green-500'} else if(averageScore >= 80) {
       grade = 'B';
-      color = 'text-blue-500'} else if (averageScore >= 70) {
+      color = 'text-blue-500'} else if(averageScore >= 70) {
       grade = 'C';
-      color = 'text-yellow-500'} else if (averageScore >= 60) {
+      color = 'text-yellow-500'} else if(averageScore >= 60) {
       grade = 'D';
       color = 'text-orange-500'} else {
       grade = 'F';
@@ -121,21 +80,19 @@ const AdvancedPerformanceMonitor: React.FC = () => {
   // Measure Core Web Vitals
   useEffect(() => {
 
-    if ('PerformanceObserver' in window) {
+    if('PerformanceObserver' in window) {
 
       // First Contentful Paint
-      
-        
-        if (fcpEntry) {
+
+        if(fcpEntry) {
 
           setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }))}
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
 
       // Largest Contentful Paint
-      
-        
-        if (lastEntry) {
+
+        if(lastEntry) {
 
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))}
       });
@@ -148,8 +105,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
 
           if (entry.processingStart && entry.startTime) {
 
-            
-            setMetrics (prev => ({ ...prev, fid }) ) }
+            setMetrics(prev => ({ ...prev, fid }) ) }
         })});
       fidObserver.observe({ entryTypes: ['first-input'] });
 
@@ -158,7 +114,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
 
         let clsValue = 0;        list.getEntries().forEach((entry: any) => {
 
-          if (!entry.hadRecentInput) {
+          if(!entry.hadRecentInput) {
 
             clsValue += entry.value}
         });
@@ -181,7 +137,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
       setMetrics(prev => ({ ...prev, ttfb }))}
   }, []) ;
 
-      // First Meaningful Paint (FMP) - approximated
+      // First Meaningful Paint(FMP) - approximated
       
       setMetrics(prev => ({ ...prev, fmp }));
 
@@ -195,7 +151,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
 
   // Get metric rating
   
-    switch (metric) {
+    switch(metric) {
 
       case 'fcp':
         return value < 1800'
@@ -224,13 +180,13 @@ const AdvancedPerformanceMonitor: React.FC = () => {
       default:'
         return 'N/A'}  };
 
-  if (!isVisible) {
+  if(!isVisible) {
 
-    return()
+    return ()
       <button
         onClick={() => setIsVisible(true)}
         className="fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg hover:bg-zion-cyan/90 transition-all duration-300 z-50"
-        aria-label="Open Performance Monitor"
+        
       >"
         <Activity className="w-6 h-6"  />      </button>
     )}
@@ -256,7 +212,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
             {overallScore.score}
           </div>"
           <div className="text-sm text-zion-slate-light">
-            Overall Score ({overallScore.rating.replace('-',)})
+            Overall Score({overallScore.rating.replace('-',)})
           </div>
         </div>
       </div>

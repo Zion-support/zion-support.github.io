@@ -1,27 +1,10 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";"
-import { Link } from "react-router-dom";"
-import { useTranslation } from "react-i18next";"
-import { motion } from "framer-motion";"
-import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone, Sparkles, Zap } from "lucide-react";
-export function EnhancedQuickAccess() {
-    const { t } = useTranslation();
-    const quickLinks = [
-        {
-"
-            title: t('home.tool_ai_matcher') || "AI Matcher","
-            description: t('home.tool_ai_matcher_desc') || "Find perfect matches","
-            icon: _jsx(Search, { className: "h-7 w-7" }),"
-            link: "/match","
-            color: "from-zion-cyan to-zion-cyan-light","
-            bgColor: "bg-zion-cyan/10","
-            borderColor: "border-zion-cyan/20","
-            hoverColor: "hover:border-zion-cyan/40"
-        },
-        {
-'"
-            title: t('home.tool_talent') || "Talent Directory","
-            description: t('home.tool_talent_desc') || "Browse verified experts","
-            icon: _jsx(Users, { className: "h-7 w-7" }),"
+import { jsx as _jsx, jsxs as _jsxs } from 'react/jsx-runtime';"
+import { Link  } from 'react-router-dom';"
+import { useTranslation } from 'react-i18next';"
+import { motion  } from 'framer-motion';"
+import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone, Sparkles, Zap  } from 'lucide-react';
+export default function Page() {
+),"
             link: "/talent","
             color: "from-zion-purple to-zion-purple-light","
             bgColor: "bg-zion-purple/10","

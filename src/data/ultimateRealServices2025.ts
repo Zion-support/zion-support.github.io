@@ -1,29 +1,8 @@
 <<<<<<< HEAD
-import { ProductListing } from "@/types/listings";
+import { ProductListing } from '@/types/listings';
 
-export const ULTIMATE_SERVICE_CATEGORIES_2025 = {
-  "AI Development": {
-    icon: "🤖",
-    description: "Advanced artificial intelligence solutions and development platforms",
-  count: 4
-
-
-},
-  "Cybersecurity": {
-    icon: "🔒",
-    description: "Comprehensive security solutions and threat protection",
-    count: 2
-  },
-  "Cloud Services": {
-    icon: "☁️",
-    description: "Cloud infrastructure and migration solutions",
-    count: 1
-  },
-  "Blockchain": {
-    icon: "⛓️",
-    description: "Distributed ledger technology and smart contract solutions",
-    count: 1
-  },
+export default function Page() {
+,
   "Quantum Computing": {
     icon: "⚛️",
     description: "Quantum computing platforms and quantum-resistant solutions",
@@ -107,7 +86,6 @@ export const ULTIMATE_PRICING_TIERS_2025 = {
     description: "Essential solutions for small to medium businesses",
     features: ["Basic functionality", "Standard support", "Core integrations",
   "Documentation"]
-
 
 },
   "Professional": {

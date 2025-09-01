@@ -1,61 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Code, 
-  Shield, 
-  Cloud, 
-  Brain, 
-  Zap, 
-  Globe, 
-  Users, 
-  TrendingUp,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
-
-interface Service {
-  id: string;
-  name: string;
-  description: string;
-  icon: React.ReactNode;
-  category: string;
-  features: string[];
-  pricing: string;
-  popular?: boolean;
-}
-
-const EnhancedMainPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('all');
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const services: Service[] = [
-    {
-      id: 'ai-platform',
-      name: 'AI-Powered Platform',
-      description: 'Next-generation artificial intelligence solutions for enterprise',
-      icon: <Brain className="w-8 h-8" />,
-      category: 'ai',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      pricing: 'Starting at $2,999/month',
-      popular: true
-    },
-    {
-      id: 'cybersecurity',
-      name: 'Advanced Cybersecurity',
-      description: 'Comprehensive security solutions for modern threats',
-      icon: <Shield className="w-8 h-8" />,
-      category: 'security',
-      features: ['Threat Detection', 'Incident Response', 'Compliance Management', 'Security Training'],
-      pricing: 'Starting at $1,999/month'
-    },
+import { motion  } from 'framer-motion';
+export default function Page() {
+,
     {
       id: 'cloud-infrastructure',
       name: 'Cloud Infrastructure',
@@ -94,8 +40,7 @@ const EnhancedMainPage: React.FC = () => {
     }
   ];
 
-  const categories = [
-    { id: 'all', name: 'All Services', count: services.length },
+  const categories = [{ id: 'all', name: 'All Services', count: services.length },
     { id: 'ai', name: 'AI & Machine Learning', count: services.filter(s => s.category === 'ai').length },
     { id: 'security', name: 'Cybersecurity', count: services.filter(s => s.category === 'security').length },
     { id: 'infrastructure', name: 'Infrastructure', count: services.filter(s => s.category === 'infrastructure').length },
@@ -115,8 +60,7 @@ const EnhancedMainPage: React.FC = () => {
     website: 'https://ziontechgroup.com'
   };
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
       {/* Hero Section */}
       <motion.section 
         className="relative py-20 overflow-hidden"
@@ -145,9 +89,7 @@ const EnhancedMainPage: React.FC = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Pioneering the future with cutting-edge AI, cybersecurity, and quantum computing solutions. 
-            Transform your business with our innovative services and expert guidance.
-          </motion.p>
+            Pioneering the future with cutting-edge AI, cybersecurity, and quantum computing solutions.Transform your business with our innovative services and expert guidance.</motion.p>
 
           {/* Contact Information */}
           <motion.div 
@@ -217,8 +159,7 @@ const EnhancedMainPage: React.FC = () => {
               <button
                 key={category.id}
                 onClick={() => setActiveTab(category.id)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                  activeTab === category.id
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${activeTab === category.id
                     ? 'bg-blue-600 text-white'
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                 }`}
@@ -239,8 +180,7 @@ const EnhancedMainPage: React.FC = () => {
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                className={`bg-gray-800 rounded-xl p-6 border-2 transition-all duration-300 hover:scale-105 ${
-                  service.popular ? 'border-blue-500 bg-gray-800/80' : 'border-gray-700 hover:border-blue-500'
+                className={`bg-gray-800 rounded-xl p-6 border-2 transition-all duration-300 hover:scale-105 ${service.popular ? 'border-blue-500 bg-gray-800/80' : 'border-gray-700 hover:border-blue-500'
                 }`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -330,8 +270,7 @@ const EnhancedMainPage: React.FC = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join hundreds of companies already leveraging our cutting-edge solutions to stay ahead of the competition.
-            </p>
+              Join hundreds of companies already leveraging our cutting-edge solutions to stay ahead of the competition.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
                 Schedule a Consultation

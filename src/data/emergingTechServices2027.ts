@@ -35,20 +35,19 @@ author: {
   compliance: string[];
   support: string[]}
 ;
-export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
-  // Blockchain & DeFi Platform
+export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [// Blockchain & DeFi Platform
   {
 
     id: "blockchain-defi-platform","
     title: "Enterprise Blockchain & DeFi Platform","
-    description: "Advanced blockchain platform for enterprise applications including DeFi, smart contracts, and decentralized applications. Enables secure, transparent, and efficient business operations.","
+    description: "Advanced blockchain platform for enterprise applications including DeFi, smart contracts, and decentralized applications.Enables secure, transparent, and efficient business operations.","
     category: "Blockchain","
     subcategory: "DeFi & Smart Contracts",
     price: 1799,"
     currency: "$","
     pricingModel: "monthly",
     features[;"
-      "Multi-chain support (Ethereum, Polygon, Solana)","
+      "Multi-chain support(Ethereum, Polygon, Solana)","
       "Smart contract development & deployment","
       "DeFi protocol integration","
       "NFT marketplace","
@@ -94,7 +93,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
 "
     id: "advanced-iot-platform","
     title: "Advanced IoT & Edge Computing Platform","
-    description: "Comprehensive IoT platform with edge computing capabilities for real-time data processing, device management, and intelligent automation. Enables smart cities, industrial IoT, and connected ecosystems.","
+    description: "Comprehensive IoT platform with edge computing capabilities for real-time data processing, device management, and intelligent automation.Enables smart cities, industrial IoT, and connected ecosystems.","
     category: "IoT & Edge Computing","
     subcategory: "Platform Solutions",
     price: 1299,"
@@ -147,7 +146,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
 "
     id: "robotics-automation-platform","
     title: "Intelligent Robotics & Automation Platform","
-    description: "AI-powered robotics platform for industrial automation, collaborative robots, and intelligent manufacturing. Reduces production costs by 70% while improving quality and efficiency.","
+    description: "AI-powered robotics platform for industrial automation, collaborative robots, and intelligent manufacturing.Reduces production costs by 70% while improving quality and efficiency.","
     category: "Robotics","
     subcategory: "Industrial Automation",
     price: 2499,"
@@ -200,7 +199,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
 "
     id: "ar-vr-enterprise-platform","
     title: "Enterprise AR/VR & Mixed Reality Platform","
-    description: "Advanced augmented and virtual reality platform for enterprise applications including training, design, collaboration, and customer experiences. Transforms how businesses interact and operate.","
+    description: "Advanced augmented and virtual reality platform for enterprise applications including training, design, collaboration, and customer experiences.Transforms how businesses interact and operate.","
     category: "AR/VR","
     subcategory: "Enterprise Solutions",
     price: 999,"
@@ -253,7 +252,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
 "
     id: "digital-twin-platform","
     title: "Digital Twin & Simulation Platform","
-    description: "Comprehensive digital twin platform for creating virtual replicas of physical assets, processes, and systems. Enables predictive maintenance, optimization, and real-time monitoring.","
+    description: "Comprehensive digital twin platform for creating virtual replicas of physical assets, processes, and systems.Enables predictive maintenance, optimization, and real-time monitoring.","
     category: "Digital Twin","
     subcategory: "Simulation & Monitoring",
     price: 1899,"
@@ -306,7 +305,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
 "
     id: "biometric-security-platform","
     title: "Advanced Biometric Security Platform","
-    description: "Next-generation biometric security platform using AI-powered facial recognition, fingerprint scanning, and behavioral analysis. Provides enterprise-grade security with 99.99% accuracy.","
+    description: "Next-generation biometric security platform using AI-powered facial recognition, fingerprint scanning, and behavioral analysis.Provides enterprise-grade security with 99.99% accuracy.","
     category: "Biometric Security","
     subcategory: "Authentication & Access Control",
     price: 799,"
@@ -359,7 +358,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
 "
     id: "neuromorphic-computing-platform","
     title: "Neuromorphic Computing & Brain-Inspired AI","
-    description: "Revolutionary neuromorphic computing platform that mimics the human brain's neural structure for ultra-efficient AI processing. Enables edge AI with minimal power consumption.","
+    description: "Revolutionary neuromorphic computing platform that mimics the human brain's neural structure for ultra-efficient AI processing.Enables edge AI with minimal power consumption.","
     category: "Neuromorphic Computing","
     subcategory: "Brain-Inspired AI",
     price: 3999,"

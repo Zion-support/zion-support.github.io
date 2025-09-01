@@ -1,39 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import {
+import { CheckCircle, XCircle, AlertTriangle, ExternalLink  } from 'lucide-react';
 
-  CheckCircle,
-  XCircle,
-  AlertTriangle,
-  ExternalLink} from 'lucide-react';
-const LinkHealthChecker = ({ links, className = '' }) => {
-
-  const [linkStatuses, setLinkStatuses] = useState([]);
-  const [isChecking, setIsChecking] = useState(false);
-  const checkLinkHealth = async url => {
-
-    const startTime = Date.now();
-    try {
-
-      // Check if it's an external link'
-      if (url.startsWith('http') && !url.includes('ziontechgroup.com')) {
-
-        return {
-
-          url,
-          status: 'external',
-          responseTime: Date.now() - startTime};
-      }
-      // Check if it's a mailto or tel link'
-      if (url.startsWith('mailto:') || url.startsWith('tel:')) {
-
-        return {
-
-          url,
-          status: 'healthy',
-          responseTime: Date.now() - startTime};
+export default function Page() {
+;
       }
       // For internal links, we'll assume they're healthy since they're part of our app'
-      if (url.startsWith('/') || url.includes('ziontechgroup.com')) {
+      if(url.startsWith('/') || url.includes('ziontechgroup.com')) {
 
         return {
 
@@ -48,7 +20,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
         url,
         status: 'external',
         responseTime: Date.now() - startTime};
-    } catch (error) {
+    } catch(error) {
       return {
 
         url,
@@ -72,7 +44,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
   }, [links]);
   const getStatusIcon = status => {
 
-    switch (status) {
+    switch(status) {
 
       case 'healthy':
         return <CheckCircle className="w-5 h-5 text-green-500" />;
@@ -90,7 +62,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
   };
   const getStatusText = status => {
 
-    switch (status) {
+    switch(status) {
 
       case 'healthy':'
         return 'Healthy';
@@ -106,7 +78,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
   };
   const getStatusColor = status => {
 
-    switch (status) {
+    switch(status) {
 
       case 'healthy':'
         return 'text-green-500';
@@ -125,7 +97,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
   const externalCount = linkStatuses.filter('
     s => s.status === 'external'
   ).length;
-  return()
+  return ()
     <div
       className={`bg-white/5 backdrop-blur-sm border border-white/20 rounded-lg p-6 ${className}`}
     >
@@ -183,8 +155,8 @@ const LinkHealthChecker = ({ links, className = '' }) => {
         {links.map((link, index) => {
 
           const status = linkStatuses[index];
-          if (!status) return null;
-          return()
+          if(!status) return null;
+          return ()
             <div
               key={link.url}"
               className="flex items-center justify-between p-3 bg-white/5 border border-white/10 rounded-lg hover:border-white/20 transition-colors duration-300"
@@ -226,9 +198,8 @@ const LinkHealthChecker = ({ links, className = '' }) => {
           </h4>"
           <p className="text-sm text-red-300">
             {brokenCount} link{brokenCount !== 1 ? 's' : ''}{' '}
-            {brokenCount !== 1 ? 'are' : 'is'} broken and need attention. Please
-            review and fix these links to improve user experience.
-          </p>
+            {brokenCount !== 1 ? 'are' : 'is'} broken and need attention.Please
+            review and fix these links to improve user experience.</p>
         </div>
       )}
 
@@ -238,9 +209,8 @@ const LinkHealthChecker = ({ links, className = '' }) => {
             ✅ All Links Healthy
           </h4>"
           <p className="text-sm text-green-300">
-            Great job! All links are working properly. Your website is in
-            excellent health.
-          </p>
+            Great job! All links are working properly.Your website is in
+            excellent health.</p>
         </div>
       )}
     </div>

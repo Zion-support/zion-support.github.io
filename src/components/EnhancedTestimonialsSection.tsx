@@ -1,19 +1,6 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
-
-  Star,
-  Quote,
-  ChevronLeft,
-  ChevronRight,
-  Globe,
-  Building,
-  Users,
-  Award'
- } from 'lucide-react';
+import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+ from 'lucide-react';
 
 interface Testimonial {
   id: string;
@@ -28,15 +15,14 @@ interface Testimonial {
   avatar: string
 }
 ;
-const testimonials: Testimonial[] = [
-  {
+const testimonials: Testimonial[] = [{
 
     id: '1',
     name: 'Sarah Chen',
     position: 'CTO',
     comp: 'TechFlow Solutions',
     compLogo: '/images/company-logos/techflow.svg',
-    content: 'Zion Tech Group transformed our data infrastructure completely. Their AI-powered analytics platform increased our operational efficiency by 300% and provided insights we never had before. The ROI was incredible - we saw a 450% return within the first 6 months.',
+    content: 'Zion Tech Group transformed our data infrastructure completely.Their AI-powered analytics platform increased our operational efficiency by 300% and provided insights we never had before.The ROI was incredible - we saw a 450% return within the first 6 months.',
     rating: 5,
     industry: 'Technology',
     results['300% efficiency increase',450% ROI in 6 months',Real-time insights'],;
@@ -49,7 +35,7 @@ const testimonials: Testimonial[] = [
     position: 'VP of Operations',
     comp: 'Global Manufacturing Corp',
     compLogo: '/images/company-logos/gmc.svg',
-    content: 'Implementing Zion\'s quantum optimization suite revolutionized our supply chain. We solved complex logistics problems in minutes that used to take weeks. The cost savings were immediate and substantial - over $2M annually.',
+    content: 'Implementing Zion\'s quantum optimization suite revolutionized our supply chain.We solved complex logistics problems in minutes that used to take weeks.The cost savings were immediate and substantial - over $2M annually.',
     rating: 5,
     industry: 'Manufacturing',
     results['$2M annual savings',Weeks to minutes',Supply chain optimization'],;
@@ -58,11 +44,11 @@ const testimonials: Testimonial[] = [
   {
 
     id: '3',
-    name: 'Dr. Emily Watson',
+    name: 'Dr.Emily Watson',
     position: 'Chief Medical Officer',
     comp: 'HealthTech Innovations',
     compLogo: '/images/company-logos/healthtech.svg',
-    content: 'Zion\'s AI-powered healthcare platform has been a game-changer for our diagnostic accuracy. We\'ve seen a 95% improvement in early detection rates and significantly reduced false positives. This technology is saving lives.',
+    content: 'Zion\'s AI-powered healthcare platform has been a game-changer for our diagnostic accuracy.We\'ve seen a 95% improvement in early detection rates and significantly reduced false positives.This technology is saving lives.',
     rating: 5,
     industry: 'Healthcare',
     results['95% detection improvement',Reduced false positives',Lives saved'],;
@@ -75,7 +61,7 @@ const testimonials: Testimonial[] = [
     position: 'Head of Security',
     comp: 'FinSecure Bank',
     compLogo: '/images/company-logos/finsecure.svg',
-    content: 'The zero-trust security platform from Zion Tech Group has provided us with enterprise-grade protection that adapts to new threats in real-time. Our security incidents dropped by 80% in the first quarter.',
+    content: 'The zero-trust security platform from Zion Tech Group has provided us with enterprise-grade protection that adapts to new threats in real-time.Our security incidents dropped by 80% in the first quarter.',
     rating: 5,
     industry: 'Financial Services',
     results['80% fewer incidents',Real-time threat detection',Zero-trust security'],;
@@ -88,7 +74,7 @@ const testimonials: Testimonial[] = [
     position: 'Director of IT',
     comp: 'CloudScale Enterprises',
     compLogo: '/images/company-logos/cloudscale.svg',
-    content: 'Zion\'s multi-cloud orchestration platform streamlined our entire infrastructure. We reduced cloud costs by 40% while improving performance by 60%. The unified management interface is intuitive and powerful.',
+    content: 'Zion\'s multi-cloud orchestration platform streamlined our entire infrastructure.We reduced cloud costs by 40% while improving performance by 60%.The unified management interface is intuitive and powerful.',
     rating: 5,
     industry: 'Cloud Services',
     results['40% cost reduction',60% performance boost',Unified management'],;
@@ -101,23 +87,20 @@ export default function EnhancedTestimonialsSection(...args[]):  {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  useEffect ( () => {
-    if (!isAutoPlaying) return;
+  useEffect(() => {
+    if(!isAutoPlaying) return;
 
-    
-      setCurrentTestimonial ( (prev) => (prev + 1) % testimonials.length) }, 8000) ;
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length) }, 8000) ;
 
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    return () => clearInterval (interval) }, [isAutoPlaying, testimonials.length]) ;
+    return () => clearInterval(interval) }, [isAutoPlaying, testimonials.length]) ;
 
-  
-    setCurrentTestimonial ( (prev) => (prev + 1) % testimonials.length) ;
-    setIsAutoPlaying (false) };
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length) ;
+    setIsAutoPlaying(false) };
 
-  
-    setCurrentTestimonial ( (prev) => (prev - 1 + testimonials.length) % testimonials.length) ;
-    setIsAutoPlaying (false) };
+    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length) ;
+    setIsAutoPlaying(false) };
                   animate = {
 
   { rotate: [0,
@@ -129,7 +112,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
   { duration: 20,
   repeat: Infinity }}
                 >
-                  <Quote className="w - 8 h - 8 text - zion - cyan"  />                </motion.div>
+                  <Quote className="w-8 h-8 text-zion -cyan"  />                </motion.div>
 "
                 <div className="relative z-10">
                   {/* Rating */}"
@@ -213,9 +196,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
                 <motion.button
                   key={index}
                   onClick={() => goToTestimonial(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-
-                    index === currentTestimonial'
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial'
                       ? 'bg-zion-cyan w-8''
                       : 'bg-white/30 hover:bg-white/50'`
                   }`}
@@ -257,7 +238,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
                 { icon: Award, label: '15+ Awards', value: 'Industry Recognition' },
                 { icon: Globe, label: '50+ Countries', value: 'Worldwide Service' },
                 { icon: Building, label: '99.9% Uptime', value: 'Reliability' }
-              ].map ( (indicator, index) => (<motion.div
+              ].map((indicator, index) => (<motion.div
                   key={indicator.label}
                   initial = {
 
@@ -276,11 +257,6 @@ export default function EnhancedTestimonialsSection(...args[]):  {
 
   { duration: 0.6,
   delay: index * 0.1
-
-
-
-
-
 
 }}"
                   className="text-center"
@@ -315,8 +291,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
               Ready to Join Our Success Stories?
             </h3>"
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how Zion Tech Group can transform your business with cutting-edge technology solutions.
-            </p>"
+              Let's discuss how Zion Tech Group can transform your business with cutting-edge technology solutions.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
                 href="/contact"

@@ -1,8 +1,8 @@
-import { useState } from "react";"
-import { useLocalStorage } from "@/hooks";"
-import { Input } from "@/components/ui/input";"
-import { Textarea } from "@/components/ui/textarea";"
-import { Button } from "@/components/ui/button";"
+import { useState } from 'react';"
+import { useLocalStorage } from '@/hooks';"
+import { Input } from '@/components/ui/input';"
+import { Textarea } from '@/components/ui/textarea';"
+import { Button } from '@/components/ui/button';"
 import CodeBlock from "./CodeBlock";
 export function ApiPlayground({ method, path, params = [] }) {
 "
@@ -19,15 +19,15 @@ export function ApiPlayground({ method, path, params = [] }) {
         const baseUrl = process.env.NEXT_PUBLIC_API_URL || "";
         let url = `${baseUrl}${path}`;
         const searchParams = new URLSearchParams();"
-        if (method === "GET" || method === "DELETE") {
+        if(method === "GET" || method === "DELETE") {
 
             params.forEach((p) => {
 
                 const val = paramValues[p.name];
-                if (val)
+                if(val)
                     searchParams.append(p.name, val)});
             const query = searchParams.toString();
-            if (query)`
+            if(query)`
                 url += `?${query}`}
         const options = {
 
@@ -38,7 +38,7 @@ export function ApiPlayground({ method, path, params = [] }) {
 `
 }`,"
                 "Content-Type": "application/json"}};"
-        if (method !== "GET" && method !== "DELETE") {
+        if(method !== "GET" && method !== "DELETE") {
 
             try {
                 options.body = JSON.stringify(JSON.parse(body))}
@@ -52,7 +52,7 @@ export function ApiPlayground({ method, path, params = [] }) {
             const res = await fetch(url, options);
             const text = await res.text();
             setResponse(text)}
-        catch (err) {
+        catch(err) {
             setResponse(err.message)}
         finally {
 

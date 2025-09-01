@@ -1,27 +1,11 @@
 import React, { useState } from "react";"
-import { useWallet } from "@/hooks/useWallet";"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
-import { Button } from "@/components/ui/button";"
-import { Gift, ArrowRight, ExternalLink } from "lucide-react";"
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
-const RedeemTokensCard() {
-    const { wallet, spendTokens } = useWallet();
-    const [open, setOpen] = useState(false);
-    const handleRedeem = async (option) => {
-
-        if (!wallet || wallet.balance < option.cost)
-            return;
-        await spendTokens(option.cost, `Redeemed: ${option.title}`);
-        setOpen(false)};
-    return (<Card>
-      <CardHeader>"
-        <CardTitle className="flex items-center gap-2">"
-          <Gift aria-hidden="true" className="h-5 w-5"/> Redeem Rewards
-        </CardTitle>
-        <CardDescription>Exchange your ZION$ for rewards and perks</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <Dialog open={open} onOpenChange={setOpen}>
+import { useWallet } from '@/hooks/useWallet';"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';"
+import { Button } from '@/components/ui/button';"
+import { Gift, ArrowRight, ExternalLink  } from 'lucide-react';"
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+export default function Page() {
+ onOpenChange={setOpen}>
           <DialogTrigger asChild>"
             <Button className="w-full">View Available Rewards</Button>
           </DialogTrigger>
@@ -29,8 +13,7 @@ const RedeemTokensCard() {
             <DialogHeader>
               <DialogTitle>Available Rewards</DialogTitle>
               <DialogDescription>
-                Exchange your tokens for these rewards. You currently have {wallet?.balance || 0} ZION$.
-              </DialogDescription>
+                Exchange your tokens for these rewards.You currently have {wallet?.balance || 0} ZION$.</DialogDescription>
             </DialogHeader>"
             <div className="space-y-4 py-4">"
               {REWARD_OPTIONS.map((option) => (<div key={option.id} className="flex justify-between items-center border-b pb-4">

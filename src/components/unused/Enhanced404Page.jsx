@@ -1,24 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import {
+import { Link  } from 'react-router-dom';
 
-  HomeIcon,
-  MagnifyingGlassIcon,
-  ArrowLeftIcon,
-  ExclamationTriangleIcon} from '@heroicons/react/24/outline';
-export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
-
-  const defaultSuggestions = ['
-    '/services',/ai-solutions',/about',/contact',/case-studies',
-  ];
-  const suggestions =
-    suggestedRoutes.length > 0 ? suggestedRoutes : defaultSuggestions;
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+export default function Page() {
+}
         transition={{ duration: 0.6 }}"
         className="max-w-4xl mx-auto text-center"
       >
@@ -65,8 +49,7 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
             <code className="bg-gray-800 px-2 py-1 rounded text-red-300">
               {requestedPath}
             </code>{' '}
-            could not be found.
-          </motion.p>
+            could not be found.</motion.p>
         )}
 
         <motion.p
@@ -76,8 +59,7 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
           className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto"
         >
           Don't worry! This might be a temporary issue or the page might have'
-          been moved. Let us help you find what you're looking for.
-        </motion.p>
+          been moved.Let us help you find what you're looking for.</motion.p>
 
         {/* Action Buttons */}
         <motion.div

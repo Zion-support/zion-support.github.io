@@ -36,7 +36,7 @@ login: email: string, password: string Promise<any>;
 ;
 export 
   
-  if (context = == null) {;
+  if(context = == null) {;
     throw new Error('useAuth must be used within an AuthProvider');
 
   return context};

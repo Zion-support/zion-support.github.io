@@ -1,25 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-
-  ChevronLeft,
-  ChevronRight,
-  Star,
-  Quote,
-  ArrowRight} from 'lucide-react';
-const testimonials = [
-  {
-
-    id: 1,
-    name: 'Sarah Johnson',
-    role: 'CTO at TechCorp',
-    comp: 'TechCorp Inc.',
-    content:'
-      "Zion Tech Group has revolutionized how we find AI talent. The platform is intuitive and the quality of candidates is exceptional. We've reduced our hiring time by 60% while improving candidate quality.",
-    avatar: '/avatars/sarah.jpg',
-    rating: 5,
-    category: 'Enterprise',
-    project: 'AI Talent Acquisition'},
+import { motion, AnimatePresence  } from 'framer-motion';
+import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight  } from 'lucide-react';
+,
   {
 
     id: 2,
@@ -27,7 +9,7 @@ const testimonials = [
     role: 'AI Engineer',
     comp: 'Freelance',
     content:'"
-      "As a freelancer, Zion Tech Group has opened up incredible opportunities. The marketplace is well-organized and the clients are top-tier. I've doubled my income since joining the platform.",
+      "As a freelancer, Zion Tech Group has opened up incredible opportunities.The marketplace is well-organized and the clients are top-tier.I've doubled my income since joining the platform.",
     avatar: '/avatars/michael.jpg',
     rating: 5,
     category: 'Freelancer',
@@ -35,11 +17,11 @@ const testimonials = [
   {
 
     id: 3,
-    name: 'Dr. Emily Rodriguez',
+    name: 'Dr.Emily Rodriguez',
     role: 'Research Director',
     comp: 'InnovateLab',
     content:'
-      'The AI services we found through Zion Tech Group exceeded our expectations. The team delivered cutting-edge solutions that accelerated our research by months. Highly recommended!',
+      'The AI services we found through Zion Tech Group exceeded our expectations.The team delivered cutting-edge solutions that accelerated our research by months.Highly recommended!',
     avatar: '/avatars/emily.jpg',
     rating: 5,
     category: 'Research',
@@ -51,7 +33,7 @@ const testimonials = [
     role: 'Startup Founder',
     comp: 'DataFlow',
     content:'
-      'Starting a tech comp is challenging, but Zion Tech Group made it so much easier. We found the perfect team and equipment to get our MVP to market in record time.',
+      'Starting a tech comp is challenging, but Zion Tech Group made it so much easier.We found the perfect team and equipment to get our MVP to market in record time.',
     avatar: '/avatars/david.jpg',
     rating: 5,
     category: 'Startup',
@@ -63,7 +45,7 @@ const testimonials = [
     role: 'IT Manager',
     comp: 'Global Retail Co.',
     content:'
-      'Our digital transformation project was a huge success thanks to Zion Tech Group. The comprehensive services and expert team delivered everything we needed on time and budget.',
+      'Our digital transformation project was a huge success thanks to Zion Tech Group.The comprehensive services and expert team delivered everything we needed on time and budget.',
     avatar: '/avatars/lisa.jpg',
     rating: 5,
     category: 'Enterprise',
@@ -75,7 +57,7 @@ const testimonials = [
     role: 'DevOps Engineer',
     comp: 'CloudScale',
     content:'"
-      "The infrastructure solutions from Zion Tech Group are world-class. We've achieved 99.99% uptime and our performance has improved dramatically. The team is incredibly responsive.",
+      "The infrastructure solutions from Zion Tech Group are world-class.We've achieved 99.99% uptime and our performance has improved dramatically.The team is incredibly responsive.",
     avatar: '/avatars/alex.jpg',
     rating: 5,
     category: 'Infrastructure',
@@ -157,10 +139,10 @@ export function TestimonialCarousel() {
               onDragEnd={(e, { offset, velocity }) => {
 
                 const swipe = swipePower(offset.x, velocity.x);
-                if (swipe < -swipeConfidenceThreshold) {
+                if(swipe < -swipeConfidenceThreshold) {
 
                   paginate(1);
-                } else if (swipe > swipeConfidenceThreshold) {
+                } else if(swipe > swipeConfidenceThreshold) {
 
                   paginate(-1);
                 }
@@ -246,9 +228,7 @@ export function TestimonialCarousel() {
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-
-                index === currentIndex'
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex'
                   ? 'bg-zion-cyan scale-125''
                   : 'bg-zion-slate-light/40 hover:bg-zion-slate-light/60'`
               }`}

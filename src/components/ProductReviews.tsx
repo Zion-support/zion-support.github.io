@@ -1,11 +1,10 @@
 import React, { useEffect, useState, FormEvent, useCallback } from 'react'; // Added useCallback
 // import { Review } from '@/types/reviews'; // Assuming this path is correct from earlier exploration
 // For the purpose of this subtask, let's define a local Review type if the import path is uncertain or to ensure self-containment
-// In a real scenario, this would be imported from the shared types.
-export interface Review {
+// In a real scenario, this would be imported from the shared types.export interface Review {
   id: string;
   rating: number;
-  comment?: string | null; // Ensure this matches your actual type (e.g. review_text)
+  comment?: string | null; // Ensure this matches your actual type(e.g. review_text)
   review_text?: string | null; // Alternative field name for comment
   created_at: string; // Or Date
   user?: { // Assuming user is nested and might have a name
@@ -17,7 +16,6 @@ export interface Review {
   } | null;
   // Add any other fields that your Review type actually has
 }
-
 
 // import { useAuth } from '@/hooks/useAuth'; // Assuming an auth hook exists
 // For now, let's mock a basic useAuth hook if not available to allow component structure
@@ -32,10 +30,8 @@ const useAuth = () => {
   return { user, isAuthenticated: user?.isLoggedIn ?? false };
 };
 
-
 // Assuming RatingStars component exists as seen in ProductListingCard.tsx
-// If not, a simple display of rating number will be shown.
-// For actual stars, you'd import your RatingStars component:
+// If not, a simple display of rating number will be shown.// For actual stars, you'd import your RatingStars component:
 // import { RatingStars } from '@/components/RatingStars'; // Or its correct path
 
 interface RatingStarsProps {
@@ -72,7 +68,6 @@ const StarRatingInput: React.FC<Pick<RatingStarsProps, 'value' | 'onRate'>> = ({
   </div>
 );
 
-
 interface ProductReviewsProps {
   productId: string;
 }
@@ -94,13 +89,13 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {
     setError(null);
     try {
       const response = await fetch(`/api/reviews/${productId}`);
-      if (!response.ok) {
+      if(!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.error || `Failed to fetch reviews: ${response.statusText}`);
       }
       const data: Review[] = await response.json();
       setReviews(data);
-    } catch (err: any) {
+    } catch(err: any) {
       setError(err.message);
     } finally {
       setIsLoading(false);
@@ -108,14 +103,14 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {
   }, [productId]); // productId is a dependency of fetchReviews
 
   useEffect(() => {
-    if (productId) {
+    if(productId) {
       fetchReviews();
     }
   }, [productId, fetchReviews]); // Added fetchReviews to dependency array
 
-  const handleSubmitReview = async (e: FormEvent) => {
+  const handleSubmitReview = async(e: FormEvent) => {
     e.preventDefault();
-    if (newRating === 0) {
+    if(newRating === 0) {
       setSubmitError('Please select a rating.');
       return;
     }
@@ -130,7 +125,7 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {
         body: JSON.stringify({ productId, rating: newRating, comment: newComment }),
       });
 
-      if (!response.ok) {
+      if(!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.error || `Failed to submit review: ${response.statusText}`);
       }
@@ -139,22 +134,21 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {
       setNewRating(0);
       setNewComment('');
       fetchReviews(); // Refresh reviews list
-    } catch (err: any) {
+    } catch(err: any) {
       setSubmitError(err.message);
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  return (
-    <div className="mt-8">
+  return (<div className="mt-8">
       <h3 className="text-xl font-semibold mb-4">Product Reviews</h3>
 
       {isLoading && <p>Loading reviews...</p>}
       {error && <p className="text-red-500">Error: {error}</p>}
 
       {!isLoading && !error && reviews.length === 0 && (
-        <p>No reviews yet. Be the first to review!</p>
+        <p>No reviews yet.Be the first to review!</p>
       )}
 
       {!isLoading && !error && reviews.length > 0 && (
@@ -183,7 +177,7 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {
               <StarRatingInput value={newRating} onRate={setNewRating} />
             </div>
             <div className="mb-3">
-              <label htmlFor="comment" className="block text-sm font-medium text-gray-700 dark:text-gray-200">Your Comment (Optional):</label>
+              <label htmlFor="comment" className="block text-sm font-medium text-gray-700 dark:text-gray-200">Your Comment(Optional):</label>
               <textarea
                 id="comment"
                 value={newComment}
@@ -206,8 +200,7 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {
       )}
       {!isAuthenticated && (
         <p className="mt-6 text-sm text-gray-600 dark:text-gray-400">
-          Please <a href="/login" className="text-blue-500 hover:underline">login</a> to write a review.
-        </p>
+          Please <a href="/login" className="text-blue-500 hover:underline">login</a> to write a review.</p>
       )}
     </div>
   );

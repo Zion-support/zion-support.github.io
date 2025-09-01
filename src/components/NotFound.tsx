@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link
+import { Link  } from 'react-router-dom'; // Import Link
 
 const NotFound: React.FC = () => (
   <div className="flex flex-1 items-center justify-center bg-gray-100">

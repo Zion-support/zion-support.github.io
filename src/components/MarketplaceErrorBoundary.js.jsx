@@ -1,11 +1,10 @@
 import React from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
-import * as Sentry from '@sentry/nextjs';
-import { mutate } from 'swr';
+ from 'swr';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { RefreshCcw, AlertCircle } from 'lucide-react';
-function MarketplaceErrorFallback({ error, resetErrorBoundary }) {
+import { RefreshCcw, AlertCircle  } from 'lucide-react';
+) {
 
   const handleRetry = async () => {
     try {
@@ -13,13 +12,13 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }) {
       // Re-call SWR mutate('*') to refresh all cached data
       await mutate(() => true, null, { revalidate: true });
       resetErrorBoundary();
-    } catch (retryError) {
+    } catch(retryError) {
 
       // console.error('Error during retry:', retryError);
       Sentry.captureException(retryError);
     }
   };
-  return()
+  return ()
     <div className="flex items-center justify-center min-h-[400px] p-6">"
       <div className="max-w-md w-full space-y-4">"
         <Alert variant="destructive">"
@@ -75,7 +74,7 @@ export function MarketplaceErrorBoundary({ children }) {
       Sentry.captureException(error);
     });
   };
-  return()
+  return ()
     <ErrorBoundary
       FallbackComponent={MarketplaceErrorFallback}
       onError={handleError}

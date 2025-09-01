@@ -1,13 +1,7 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Send, CheckCircle, Bell, Zap, Shield, Users, X, Gift, Star, Award } from 'lucide-react';
-const benefits = [
-    {
-
-        icon: <Bell className="w-6 h-6"/>,"
-        title: "Early Access","
-        description: "Be the first to know about new features and services"
-    },
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Mail, Send, CheckCircle, Bell, Zap, Shield, Users, X, Gift, Star, Award  } from 'lucide-react';
+,
     {
 "
         icon: <Zap className="w-6 h-6"/>,"
@@ -110,9 +104,7 @@ export function NewsletterSection() {
             Stay <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Connected</span>
           </h2>"
           <p className="text-zion-slate-light text-lg md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
-            Get the latest updates on new services, tech insights, and exclusive offers delivered straight to your inbox. 
-            Join thousands of professionals staying ahead of the curve.
-          </p>
+            Get the latest updates on new services, tech insights, and exclusive offers delivered straight to your inbox.Join thousands of professionals staying ahead of the curve.</p>
 
           {/* Stats section */}"
           <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto" initial = {
@@ -308,8 +300,7 @@ export function NewsletterSection() {
 
 }}>"
             <p className="text-zion-slate-light/70 text-sm mb-4">
-              No spam, unsubscribe at  time. We respect your privacy.
-            </p>
+              No spam, unsubscribe at  time.We respect your privacy.</p>
             
             {/* Trust indicators */}"
             <div className="flex items-center justify-center gap-6 text-zion-slate-light/50 text-xs">"

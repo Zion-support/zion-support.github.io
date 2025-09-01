@@ -18,36 +18,30 @@ interface Props {
   toAddress: Address | null;
   onSelect?: (rate: ShippingRate) => void}
 
-
-
 export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
   const [rates, setRates] = useState<ShippingRate[]>([]);
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string>('');
 
   useEffect(() => {
-    if (!toAddress) return;
+    if(!toAddress) return;
     
       try {
-        
-        
-        if (res.ok) {
+
+        if(res.ok) {
           setRates(data.rates || [])} else {
           console.error('Rates error', data)}
-      } catch (err) {
+      } catch(err) {
         console.error('Rates error', err)} finally {
         setLoading(false)}
     };
     fetchRates()}, [toAddress]);
 
-  
-    
-    if (rate && onSelect) onSelect(rate)};
+    if(rate && onSelect) onSelect(rate)};
 
-  if (!toAddress) return null;
+  if(!toAddress) return null;
 
-  return (
-    <div className="my-4">
+  return (<div className="my-4">
       <h2 className="font-semibold mb-2">Shipping Options</h2>
       {loading && <p>Loading...</p>}
       {!loading && (

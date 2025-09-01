@@ -1,108 +1,61 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion  } from 'framer-motion';
 
-export const PerformanceMonitor = () => {
-  const [metrics, setMetrics] = useState({
-
-<<<<<<< HEAD
-  const [metrics, setMetrics] = useState ({
-=======
->>>>>>> main
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null
-  }) ;
-  const [score, setScore] = useState (0) ;
-  const [isVisible, setIsVisible] = useState (false) ;
-
-  useEffect(() => {
-    // Only run in browser environment'
-    if (typeof window === 'null') return;
-
-    const calculateScore = () => {
-      let totalScore = 0;
-      let validMetrics = 0;
-
-      // FCP scoring (0-100)
-      if (metrics.fcp !== null) {
+export default function Page() {
+      // CLS scoring(0-100)
+      if(metrics.cls !== null) {
 
         validMetrics++;
-        if (metrics.fcp <= 1800) totalScore += 100;
-        else if (metrics.fcp <= 3000) totalScore += 50;
+        if(metrics.cls <= 0.1) totalScore += 100;
+        else if(metrics.cls <= 0.25) totalScore += 50;
         else totalScore += 0}
 
-      // LCP scoring (0-100)
-      if (metrics.lcp !== null) {
+      // TTFB scoring(0-100)
+      if(metrics.ttfb !== null) {
 
         validMetrics++;
-        if (metrics.lcp <= 2500) totalScore += 100;
-        else if (metrics.lcp <= 4000) totalScore += 50;
+        if(metrics.ttfb <= 800) totalScore += 100;
+        else if(metrics.ttfb <= 1800) totalScore += 50;
         else totalScore += 0}
 
-      // FID scoring (0-100)
-      if (metrics.fid !== null) {
-
-        validMetrics++;
-        if (metrics.fid <= 100) totalScore += 100;
-        else if (metrics.fid <= 300) totalScore += 50;
-        else totalScore += 0}
-
-      // CLS scoring (0-100)
-      if (metrics.cls !== null) {
-
-        validMetrics++;
-        if (metrics.cls <= 0.1) totalScore += 100;
-        else if (metrics.cls <= 0.25) totalScore += 50;
-        else totalScore += 0}
-
-      // TTFB scoring (0-100)
-      if (metrics.ttfb !== null) {
-
-        validMetrics++;
-        if (metrics.ttfb <= 800) totalScore += 100;
-        else if (metrics.ttfb <= 1800) totalScore += 50;
-        else totalScore += 0}
-
-      return validMetrics > 0 ? Math.round (totalScore / validMetrics) : 0};
+      return validMetrics > 0 ? Math.round(totalScore / validMetrics) : 0};
 
     const newScore = calculateScore () ;
-    setScore (newScore) ;
+    setScore(newScore) ;
 
     // Show component after score calculation
-    if (newScore > 0) {
+    if(newScore > 0) {
 
       setTimeout(() => setIsVisible(true), 1000)}
   }, [metrics]);
 
   useEffect(() => {
     // Only run in browser environment'
-    if (typeof window === 'null') return;
+    if(typeof window === 'null') return;
 
     // Performance Observer for Core Web Vitals'
-    if ('PerformanceObserver' in window) {
+    if('PerformanceObserver' in window) {
 
       // First Contentful Paint
       try {
 
         const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
-          if (fcpEntry) {
+          if(fcpEntry) {
 
             setMetrics(prev => ({ ...prev, fcp: Math.round(fcpEntry.startTime) }))}
         });
-        fcpObserver.observe({ entryTypes['paint'] })} catch (e) {
+        fcpObserver.observe({ entryTypes['paint'] })} catch(e) {
 
         // console.warn('FCP observer failed:', e)}
 
       // Largest Contentful Paint
       try {
-        const lastEntry = entries[entries.length - 1];
-          if (lastEntry) {
+        const lastEntry = entries[entries.length-1];
+          if(lastEntry) {
 
             setMetrics(prev => ({ ...prev, lcp: Math.round(lastEntry.startTime) }))}
         });
-        lcpObserver.observe({ entryTypes['largest-contentful-paint'] })} catch (e) {
+        lcpObserver.observe({ entryTypes['largest-contentful-paint'] })} catch(e) {
 
         // console.warn('LCP observer failed:', e)}
 
@@ -113,12 +66,12 @@ export const PerformanceMonitor = () => {
           const entries = list.getEntries();
           entries.forEach((entry) => {
 
-            if (entry.processingStart && entry.processingStart > 0) {
+            if(entry.processingStart && entry.processingStart > 0) {
 
               const fid = entry.processingStart - entry.startTime;
               setMetrics(prev => ({ ...prev, fid: Math.round(fid) }))}
           })});
-        fidObserver.observe({ entryTypes['first-input'] })} catch (e) {
+        fidObserver.observe({ entryTypes['first-input'] })} catch(e) {
 
         // console.warn('FID observer failed:', e)}
 
@@ -127,39 +80,39 @@ export const PerformanceMonitor = () => {
         const clsValue = 0;
           list.getEntries().forEach((entry) => {
 
-            if (!entry.hadRecentInput) {
+            if(!entry.hadRecentInput) {
 
               clsValue += entry.value}
           });
           setMetrics(prev => ({ ...prev, cls: Math.round(clsValue * 1000) / 1000 }))});
-        clsObserver.observe({ entryTypes['layout-shift'] })} catch (e) {
+        clsObserver.observe({ entryTypes['layout-shift'] })} catch(e) {
 
         // console.warn('CLS observer failed:', e)}
     }
 
-    // Time to First Byte (from navigation timing)
+    // Time to First Byte(from navigation timing)
     const navigationEntry = performance.getEntriesByType('navigation')[0];
-    if (navigationEntry) {
+    if(navigationEntry) {
 
       const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-      setMetrics (prev => ({ ...prev, ttfb: Math.round (ttfb) }) ) }
+      setMetrics(prev => ({ ...prev, ttfb: Math.round (ttfb) }) ) }
   }, []) ;
 
-  if (!isVisible) return null;
+  if(!isVisible) return null;
 
   const getScoreColor = (score) => {
 
-    if (score >= 90) return 'text-green-400';
-    if (score >= 50) return 'text-yellow-400';
+    if(score >= 90) return 'text-green-400';
+    if(score >= 50) return 'text-yellow-400';
     return 'text-red-400'};
 
   const getScoreLabel = (score) => {
 
-    if (score >= 90) return 'Excellent';
-    if (score >= 50) return 'Good';
+    if(score >= 90) return 'Excellent';
+    if(score >= 50) return 'Good';
     return 'Poor'};
 
-  return()
+  return ()
     <motion.div
       initial = {
 
@@ -183,14 +136,14 @@ export const PerformanceMonitor = () => {
       </div>
 <<<<<<< HEAD
 
-      <div className="text - xs text - zinc - 300 mb - 2">
-        {getScoreLabel (score) } • Core Web Vitals
+      <div className="text-xs text-zinc - 300 mb-2">
+        {getScoreLabel(score) } • Core Web Vitals
       </div>
 
-      <div className="space - y-1 text - xs">
-        {metrics.fcp && (<div className="flex justify - between">
+      <div className="space - y-1 text-xs">
+        {metrics.fcp && (<div className="flex justify -between">
             <span > FCP:</span>
-            <span className={metrics.fcp <= 1800 ? 'text - green - 400' : 'text - yellow - 400'}>
+            <span className={metrics.fcp <= 1800 ? 'text-green - 400' : 'text-yellow-400'}>
 =======
       "
       <div className="text-xs text-zinc-300 mb-2">

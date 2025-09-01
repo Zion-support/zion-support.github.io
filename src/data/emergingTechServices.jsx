@@ -14,7 +14,6 @@ const emergingTechServices = {
     innovationLevel: "High","
   uniqueValue: "Hybrid classical-quantum approach"
 
-
 }
 };
 ;

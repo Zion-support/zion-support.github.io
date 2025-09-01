@@ -9,9 +9,9 @@ export const FuturisticAnimatedBackground = ({
   const animationRef = useRef();
   useEffect(() => {
     const canvas = canvasRef.current;
-    if (!canvas) return;
+    if(!canvas) return;
     const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    if(!ctx) return;
     // Set canvas size
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
@@ -26,7 +26,7 @@ export const FuturisticAnimatedBackground = ({
     const particleCount ='
       intensity === 'low' ? 50 : intensity === 'medium' ? 100 : 200;
     // Initialize particles
-    for (let i = 0; i < particleCount; i++) {
+    for(let i = 0; i < particleCount; i++) {
 
       particles.push({
 
@@ -52,7 +52,7 @@ export const FuturisticAnimatedBackground = ({
       ctx.strokeStyle = `rgba(0, 255, 255, ${gridOpacity})`;
       ctx.lineWidth = 1;
       // Vertical lines
-      for (let x = 0; x < canvas.width; x += gridSize) {
+      for(let x = 0; x < canvas.width; x += gridSize) {
 
         ctx.beginPath();
         ctx.moveTo(x, 0);
@@ -60,7 +60,7 @@ export const FuturisticAnimatedBackground = ({
         ctx.stroke();
       }
       // Horizontal lines
-      for (let y = 0; y < canvas.height; y += gridSize) {
+      for(let y = 0; y < canvas.height; y += gridSize) {
 
         ctx.beginPath();
         ctx.moveTo(0, y);
@@ -74,17 +74,17 @@ export const FuturisticAnimatedBackground = ({
         particle.x += particle.vx;
         particle.y += particle.vy;
         // Bounce off edges
-        if (particle.x <= 0 || particle.x >= canvas.width) {
+        if(particle.x <= 0 || particle.x >= canvas.width) {
 
           particle.vx *= -1;
         }
-        if (particle.y <= 0 || particle.y >= canvas.height) {
+        if(particle.y <= 0 || particle.y >= canvas.height) {
 
           particle.vy *= -1;
         }
         // Update life
         particle.life--;
-        if (particle.life <= 0) {
+        if(particle.life <= 0) {
 
           particle.life = particle.maxLife;
           particle.x = Math.random() * canvas.width;
@@ -122,12 +122,12 @@ export const FuturisticAnimatedBackground = ({
       // Draw connecting lines between nearby particles`
       ctx.strokeStyle = `rgba(0, 255, 255, ${gridOpacity * 0.5})`;
       ctx.lineWidth = 0.5;
-      for (let i = 0; i < particles.length; i++) {
+      for(let i = 0; i < particles.length; i++) {
 
-        for (let j = i + 1; j < particles.length; j++) {
+        for(let j = i + 1; j < particles.length; j++) {
 
           const distance = Math.sqrt(dx * dx + dy * dy);
-          if (distance < 100) {
+          if(distance < 100) {
 
             const alpha = (1 - distance / 100) * gridOpacity * 0.5;`
             ctx.strokeStyle = `rgba(0, 255, 255, ${alpha})`;
@@ -140,7 +140,7 @@ export const FuturisticAnimatedBackground = ({
       }
       // Draw floating orbs
       const time = Date.now() * 0.001;
-      for (let i = 0; i < 3; i++) {
+      for(let i = 0; i < 3; i++) {
 
         const x =
           Math.sin(time * 0.5 + i) * canvas.width * 0.3 + canvas.width * 0.5;
@@ -174,14 +174,14 @@ export const FuturisticAnimatedBackground = ({
     };
     animate();
     return () => {
-      if (animationRef.current) {
+      if(animationRef.current) {
 
         cancelAnimationFrame(animationRef.current);
       }
       window.removeEventListener('resize', resizeCanvas);
     };
   }, [intensity, colorScheme]);
-  return()
+  return ()
     <canvas
       ref={canvasRef}`
       className={`fixed inset-0 pointer-events-none ${className}`}

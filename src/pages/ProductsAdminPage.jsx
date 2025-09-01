@@ -1,40 +1,13 @@
 import React, { useState } from 'react';
 import { Input } from '@/components / ui / input';
-import { Switch } from '@/components / ui / switch';
-import AdminLayout from '@/components / admin / AdminLayout';
-  import {
-export default function ProductsAdminPage () {
 
-    Table,
-    TableHead,
-    TableHeader,
-    TableRow,
-    TableBody,
-    TableCell,
-  } from '@/components / ui / table';
-  const initialProducts = [
-    { id: 1, name: 'Alpha', category: 'Software', status: 'pending' },
-    { id: 2, name: 'Beta', category: 'Hardware', status: 'approved' },
-    { id: 3, name: 'Gamma', category: 'Service', status: 'rejected' },
-  ];
-  const [search, setSearch] = useState ('') ;
-  const [products, setProducts] = useState (initialProducts) ;
-  const filtered = products.filter (p =>
-    p.name.toLowerCase () .includes (search.toLowerCase () ) ) ;
-  const toggleApproval = id => {
-    setProducts (prev =>
-      prev.map (p =>
-        p.id === id
-          ? {
-              ...p,
-              status: p.status === 'approved' ? 'rejected' : 'approved',
-            }
+export default function Page() {
           : p) ) ;
   };
   return (<AdminLayout>
       <div className="space - y-4">
-        <div className="flex items - center justify - between">
-          <h1 className="text - 2xl font - bold">Products</h1>
+        <div className="flex items - center justify -between">
+          <h1 className="text-2xl font -bold">Products</h1>
           <Input
             placeholder="Search products..."
             value={search}
@@ -42,7 +15,7 @@ export default function ProductsAdminPage () {
             className="max - w-xs"
           />
         </div>
-        <div className="rounded - md border">
+        <div className="rounded-md border">
           <Table>
             <TableHeader>
               <TableRow>
@@ -50,19 +23,19 @@ export default function ProductsAdminPage () {
                 <TableHead > Name</TableHead>
                 <TableHead > Category</TableHead>
                 <TableHead > Status</TableHead>
-                <TableHead className="text - center">Approve</TableHead>
+                <TableHead className="text-center">Approve</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
-              {filtered.map (p => (<TableRow key={p.id}>
+              {filtered.map(p => (<TableRow key={p.id}>
                   <TableCell>{p.id}</TableCell>
                   <TableCell>{p.name}</TableCell>
                   <TableCell>{p.category}</TableCell>
                   <TableCell>{p.status}</TableCell>
-                  <TableCell className="text - center">
+                  <TableCell className="text-center">
                     <Switch
                       checked={p.status === 'approved'}
-                      onCheckedChange={ () => toggleApproval (p.id) }
+                      onCheckedChange={ () => toggleApproval(p.id) }
                     />
                   </TableCell>
                 </TableRow>) ) }

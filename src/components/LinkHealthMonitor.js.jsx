@@ -1,57 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import {
-
-  Link,
-  ExternalLink,
-  AlertTriangle,
-  CheckCircle,
-  RefreshCw,
-  Zap} from 'lucide-react';
-const LinkHealthMonitor = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const [linkStatuses, setLinkStatuses] = useState([]);
-  const [report, setReport] = useState(null);
-  const [selectedFilter, setSelectedFilter] = useState('all');
-  // Sample data based on the analysis report
-  const sampleLinks = [
-    {
-
-      url: 'https://linkedin.com/company/ziontechgroup',
-      status: 'broken',
-      statusCode: 404,
-      responseTime: 1200,
-      lastChecked: new Date(),
-      parentPage: 'Homepage',
-      linkText: 'LinkedIn'},
-    {
-
-      url: 'https://twitter.com/ziontechgroup',
-      status: 'external',
-      statusCode: 200,
-      responseTime: 800,
-      lastChecked: new Date(),
-      parentPage: 'Homepage',
-      linkText: 'Twitter'},
-    {
-
-      url: 'tel:+1 302 464 0950',
-      status: 'healthy',
-      statusCode: 200,
-      responseTime: 50,
-      lastChecked: new Date(),
-      parentPage: 'Contact',
-      linkText: 'Phone Number'},
-    {
-
-      url: 'mailto:kleber@ziontechgroup.com',
-      status: 'healthy',
-      statusCode: 200,
-      responseTime: 50,
-      lastChecked: new Date(),
-      parentPage: 'Contact',
-      linkText: 'Email'},
+import { motion  } from 'framer-motion';
+export default function Page() {
+,
   ];
   useEffect(() => {
     setLinkStatuses(sampleLinks);
@@ -82,7 +32,7 @@ const LinkHealthMonitor = () => {
   };
   const getStatusIcon = status => {
 
-    switch (status) {
+    switch(status) {
 
       case 'healthy':
         return <CheckCircle className="w-4 h-4 text-green-400" />;
@@ -96,7 +46,7 @@ const LinkHealthMonitor = () => {
   };
   const getStatusColor = status => {
 
-    switch (status) {
+    switch(status) {
 
       case 'healthy':'
         return 'text-green-400';
@@ -113,7 +63,7 @@ const LinkHealthMonitor = () => {
     if (selectedFilter === 'all') return true;
     return link.status === selectedFilter;
   });
-  return()
+  return ()
     <>
       {/* Floating Action Button */}
       <motion.button
@@ -197,9 +147,7 @@ const LinkHealthMonitor = () => {
                 <div className="flex space-x-2">
                   <button'
                     onClick={() => setSelectedFilter('all')}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-
-                      selectedFilter === 'all''
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'all''
                         ? 'bg-cyan-500 text-white''
                         : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`
                     }`}
@@ -208,9 +156,7 @@ const LinkHealthMonitor = () => {
                   </button>
                   <button'
                     onClick={() => setSelectedFilter('broken')}`
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-
-                      selectedFilter === 'broken''
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'broken''
                         ? 'bg-red-500 text-white''
                         : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`
                     }`}
@@ -219,9 +165,7 @@ const LinkHealthMonitor = () => {
                   </button>
                   <button'
                     onClick={() => setSelectedFilter('external')}`
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-
-                      selectedFilter === 'external''
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'external''
                         ? 'bg-blue-500 text-white''
                         : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`
                     }`}
@@ -230,9 +174,7 @@ const LinkHealthMonitor = () => {
                   </button>
                   <button'
                     onClick={() => setSelectedFilter('healthy')}`
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-
-                      selectedFilter === 'healthy''
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'healthy''
                         ? 'bg-green-500 text-white''
                         : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`
                     }`}

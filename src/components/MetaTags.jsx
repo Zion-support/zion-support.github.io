@@ -3,13 +3,9 @@ import React from 'react';
 export const MetaTags = ({ title, description, keywords = 'AI, artificial intelligence, machine learning, cybersecurity, cloud computing, IT services, enterprise solutions, Zion Tech Group', image = 'https://ziontechgroup.com / og - image.jpg', url = 'https://ziontechgroup.com', type = 'website', author = 'Zion Tech Group', publishedTime, modifiedTime }) => {
 =======
 import { Helmet } from 'react-helmet-async';
-export const MetaTags = ({ title, description, keywords = 'AI, artificial intelligence, machine learning, cybersecurity, cloud computing, IT services, enterprise solutions, Zion Tech Group', image = 'https://ziontechgroup.com/og-image.jpg', url = 'https://ziontechgroup.com', type = 'website', author = 'Zion Tech Group', publishedTime, modifiedTime }) => {
->>>>>>> main
 
-    const fullTitle = `${title} | Zion Tech Group - The Tech & AI Marketplace`;
-    return (<Helmet>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+export default function Page() {
+</title>
       <meta name="description" content={description}/>"
       <meta name="keywords" content={keywords}/>"
       <meta name="author" content={author}/>"

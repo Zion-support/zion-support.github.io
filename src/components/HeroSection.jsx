@@ -1,30 +1,28 @@
 import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowRight, Sparkles, Star, Zap, Shield, Users, Clock, Target, TrendingUp, Award } from 'lucide-react';
-import { Button } from "@/components/ui/button";"
-import { GradientHeading } from "@/components/GradientHeading";"
-import { Link } from "react-router-dom";"
-import { useTranslation } from "react-i18next";"
-import { motion, useScroll, useTransform } from "framer-motion";"
-import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield } from "lucide-react";"
-import { useRef } from "react";
-import { useTranslation } from "react - i18next";
-import React, { useRef } from 'react';
-import { Button } from "@/components / ui / button";
-import { GradientHeading } from "@/components / GradientHeading";
-export function HeroSection () {
-import { motion, useScroll, useTransform } from 'framer - motion';
-import { motion, useScroll, useTransform } from "framer - motion";
+import { motion, useScroll, useTransform  } from 'framer-motion';
+import { ArrowRight, Sparkles, Star, Zap, Shield, Users, Clock, Target, TrendingUp, Award  } from 'lucide-react';
+import { Button } from '@/components/ui/button';"
+import { GradientHeading } from '@/components/GradientHeading';"
+import { Link  } from 'react-router-dom';"
+import { useTranslation } from 'react-i18next';"
+import { motion, useScroll, useTransform  } from 'framer-motion';"
+import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield  } from 'lucide-react';"
+import { useRef } from 'react';
+import { useTranslation } from 'react -i18next';
+ from 'react';
+import { Button } from '@/components / ui / button';
+import { GradientHeading } from '@/components / GradientHeading';
+ from 'framer-motion';
+import { motion, useScroll, useTransform  } from 'framer-motion';
 
-<<<<<<< HEAD
-    const { t } = useTranslation () ;
-    const containerRef = useRef (null) ;
-    const { scrollYProgress } = useScroll ({
+ = useTranslation () ;
+    const containerRef = useRef(null) ;
+    const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start start", "end start"]
     }) ;
-    const y = useTransform (scrollYProgress, [0, 1], ["0%", "50%"]) ;
-    const opacity = useTransform (scrollYProgress, [0, 0.5], [1, 0]) ;
+    const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]) ;
+    const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]) ;
 
 =======
 
@@ -181,8 +179,7 @@ export function HeroSection() {
     }
   };
 
-  const features = [
-    {
+  const features = [{
 "
       icon: <Star className="w-6 h-6" />,"
       text: "AI-Powered Solutions","
@@ -217,9 +214,9 @@ export function HeroSection() {
 
 <<<<<<< HEAD
                 {/* New stats section */}
-                <motion.div variants={itemVariants} className="mt - 16 grid grid - cols - 1 md:grid - cols - 3 gap - 8 max - w-4xl mx - auto">
+                <motion.div variants={itemVariants} className="mt-16 grid grid - cols - 1 md:grid - cols - 3 gap-8 max - w-4xl mx -auto">
                     <motion.div
-                        className="text - center group"
+                        className="text-center group"
                         whileHover={{ y: -5 }}
 =======
                 {/* New stats section */}"
@@ -238,7 +235,7 @@ export function HeroSection() {
 <<<<<<< HEAD
 
                     <motion.div
-                        className="text - center group"
+                        className="text-center group"
                         whileHover={{ y: -5 }}
 =======
                     
@@ -256,7 +253,7 @@ export function HeroSection() {
 <<<<<<< HEAD
 
                     <motion.div
-                        className="text - center group"
+                        className="text-center group"
                         whileHover={{ y: -5 }}
 =======
                     

@@ -1,51 +1,30 @@
 import React, { useState, useEffect } from 'react';
 export default ContentQualityAnalyzer;
-import { motion } from 'framer - motion';
+import { motion  } from 'framer-motion';
 
-        const averageSeoScore = Math.round (pageMetrics.reduce ( (sum, page) => sum + page.seoScore, 0) / totalPages) ;
-        const pagesWithIssues = pageMetrics.filter (page => page.issues.length > 0) .length;
-        // Collect all issues and count frequency
-        const issueCounts = { /* empty */ };
-        pageMetrics.forEach(page => {
-
-            page.issues.forEach(issue => {
-
-                issueCounts[issue] = (issueCounts[issue] || 0) + 1;
-            }) ;
-        }) ;
-        const topIssues = Object.entries (issueCounts) .sort ( ([, a], [, b]) => b - a) .slice (0, 5) .map ( ([issue]) => issue) ;
-        const summary = this.generateSummary (pageMetrics, topIssues) ;
-        return {
-
-            totalPages,
-            averageWordCount,
-            averageSeoScore,
-            pagesWithIssues,
-            topIssues,
-            pageMetrics,
-            summary
-        };
+export default function Page() {
+;
 
     generateSummary(pageMetrics, topIssues) {
 
         const totalPages = pageMetrics.length;
-        const excellentPages = pageMetrics.filter (page => page.overallScore >= 80) .length;
-        const goodPages = pageMetrics.filter (page => page.overallScore >= 60) .length;
-        const poorPages = pageMetrics.filter (page => page.overallScore < 40) .length;
-        let summary = `Analyzed ${totalPages} pages. `;
-        if (excellentPages > 0) {
+        const excellentPages = pageMetrics.filter(page => page.overallScore >= 80) .length;
+        const goodPages = pageMetrics.filter(page => page.overallScore >= 60) .length;
+        const poorPages = pageMetrics.filter(page => page.overallScore < 40) .length;
+        let summary = `Analyzed ${totalPages} pages.`;
+        if(excellentPages > 0) {
 `
-            summary += `${excellentPages} pages have excellent content quality. `;
+            summary += `${excellentPages} pages have excellent content quality.`;
 
-        if (goodPages > 0) {
+        if(goodPages > 0) {
 `
-            summary += `${goodPages} pages have good content quality. `;
+            summary += `${goodPages} pages have good content quality.`;
 
-        if (poorPages > 0) {
+        if(poorPages > 0) {
 `
-            summary += `${poorPages} pages need significant improvement. `;
+            summary += `${poorPages} pages need significant improvement.`;
 
-        if (topIssues.length > 0) {
+        if(topIssues.length > 0) {
 `
             summary += `Top issues to address: ${topIssues.slice(0, 3).join(',)}.`;
 
@@ -56,65 +35,32 @@ import { motion } from 'framer - motion';
         return this.analyzedPages.get(pageUrl);
 
     getAllPageMetrics () {
-        return Array.from (this.analyzedPages.values () ) ;
+        return Array.from(this.analyzedPages.values () ) ;
 
     clearCache () {
         this.analyzedPages.clear () ;
     }
 }
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion  } from 'framer-motion';
 
-const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {
-
-  const [analysis, setAnalysis] = useState(null);
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-
-  const analyzeContent = async () => {
-    setIsAnalyzing (true) ;
-
-    // Simulate analysis process
-    setTimeout ( () => {
-      const wordCount = content.split (/\s+/) .length;
-      const sentenceCount = content.split (/[.!?]+/) .length;
-      const paragraphCount = content.split (/\n\s*\n/) .length;
-
-      const analysisResult = {
-
-  wordCount,
-        sentenceCount,
-        paragraphCount,
-        averageWordsPerSentence: Math.round (wordCount / sentenceCount) ,
-        readabilityScore: Math.min (100, Math.max (0, 100 - (wordCount / 10) ) ) ,
-  suggestions: []
-
-};
-
-      // Generate suggestions based on analysis
-      if (wordCount < 300) {
-
-        analysisResult.suggestions.push('Consider adding more content for better SEO');
-      }
-      if (analysisResult.averageWordsPerSentence > 25) {
-
-        analysisResult.suggestions.push('Break down long sentences for better readability');
-      }
-      if (paragraphCount < 3) {
+export default function Page() {
+      if(paragraphCount < 3) {
 
         analysisResult.suggestions.push('Add more paragraphs to improve content structure');
       }
 
-      setAnalysis (analysisResult) ;
-      setIsAnalyzing (false) ;
+      setAnalysis(analysisResult) ;
+      setIsAnalyzing(false) ;
 
-      if (onAnalysisComplete) {
+      if(onAnalysisComplete) {
 
         onAnalysisComplete(analysisResult);
       }
     }, 2000) ;
   };
 
-  return()
+  return ()
     <div className="space-y-4">
       <button
         onClick={analyzeContent}
@@ -135,11 +81,6 @@ const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {
 
   { opacity: 1,
   y: 0
-
-
-
-
-
 
 }}"
           className="space-y-4"
@@ -165,10 +106,10 @@ const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {
 <<<<<<< HEAD
 
           {analysis.suggestions.length > 0 && (<div>
-              <h3 className="text - lg font - semibold mb - 2">Suggestions:</h3>
+              <h3 className="text-lg font - semibold mb-2">Suggestions:</h3>
               <ul className="space - y-2">
-                {analysis.suggestions.map ( (suggestion, index) => (<li key={index} className="flex items - start space - x-2">
-                    <span className="text - green - 500 mt - 1">•</span>
+                {analysis.suggestions.map((suggestion, index) => (<li key={index} className="flex items - start space - x-2">
+                    <span className="text-green - 500 mt-1">•</span>
 =======
           
           {analysis.suggestions.length > 0 && (

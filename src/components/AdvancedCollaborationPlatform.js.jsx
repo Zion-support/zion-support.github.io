@@ -1,17 +1,6 @@
 import React, { useState, useRef } from 'react';
-import { Users, Video, Mic, MicOff, VideoOff, MessageSquare, FileText, Monitor, X, Maximize2, Minimize2, Plus, MoreVertical, PhoneOff, ScreenShare, Square, Hand, Clock, CheckCircle, UserPlus } from 'lucide-react';
-const mockMeetings = [
-    {
+import { Users, Video, Mic, MicOff, VideoOff, MessageSquare, FileText, Monitor, X, Maximize2, Minimize2, Plus, MoreVertical, PhoneOff, ScreenShare, Square, Hand, Clock, CheckCircle, UserPlus  } from 'lucide-react';
 
-        id: '1',
-        title: 'Q4 2024 Review Meeting',
-        startTime: '2024-01-15T10:00:00.000Z',
-        endTime: '2024-01-15T11:30:00.000Z',
-        participants: 3,
-        status: 'active',
-        recording: true,
-        password: 'Q4Review2024'
-    }
 ];
 export function AdvancedCollaborationPlatform() {
     const [isOpen, setIsOpen] = useState(false);
@@ -41,9 +30,9 @@ export function AdvancedCollaborationPlatform() {
         setIsScreenSharing(!isScreenSharing);
         setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, isScreenSharing: !isScreenSharing } : p))};
     const toggleRecording = () => {
-        setIsRecording (!isRecording) };
+        setIsRecording(!isRecording) };
     const sendChatMessage = () => {
-        if (chatMessage.trim()) {
+        if(chatMessage.trim()) {
 
             const newMessage = {
 
@@ -63,12 +52,12 @@ export function AdvancedCollaborationPlatform() {
 
         setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, hasRaisedHand: !p.hasRaisedHand } : p))};
     const filteredDocuments = documents.filter(d => d.name.toLowerCase().includes(searchQuery.toLowerCase()));
-    if (!isOpen) {
+    if(!isOpen) {
 
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-emerald to-zion-blue text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Collaboration Platform">"
         <Users className="w-6 h-6"/>
       </button>)}
-    if (isMinimized) {
+    if(isMinimized) {
 "
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">"
         <div className="flex items-center gap-2 p-3">"

@@ -3,7 +3,6 @@ interface ServiceTypeStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void}
 
-
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState("");
   
@@ -18,23 +17,19 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     enabled: !!formData.serviceType,
     retry: 2,
   })}};
-  
-  
-  
-      if (!categoryMatch) return false}
+
+      if(!categoryMatch) return false}
     
-    if (searchQuery.trim() === "") return true;
+    if(searchQuery.trim() === "") return true;
     return item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
            item.category.toLowerCase().includes(searchQuery.toLowerCase())});
 
-  return (
-    <div className="space-y-6">
+  return (<div className="space-y-6">
       <div>
         <h3 className="text-xl font-semibold text-white mb-4">What are you looking for?</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Card 
-            className={`p-4 cursor-pointer border-2 transition-colors ${
-              formData.serviceType === "service" 
+            className={`p-4 cursor-pointer border-2 transition-colors ${formData.serviceType === "service" 
                 ? "bg-zion-purple/20 border-zion-purple" 
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
             }`}
@@ -45,8 +40,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
           </Card>
           
           <Card 
-            className={`p-4 cursor-pointer border-2 transition-colors ${
-              formData.serviceType === "talent" 
+            className={`p-4 cursor-pointer border-2 transition-colors ${formData.serviceType === "talent" 
                 ? "bg-zion-purple/20 border-zion-purple" 
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
             }`}
@@ -57,8 +51,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
           </Card>
           
           <Card 
-            className={`p-4 cursor-pointer border-2 transition-colors ${
-              formData.serviceType === "equipment" 
+            className={`p-4 cursor-pointer border-2 transition-colors ${formData.serviceType === "equipment" 
                 ? "bg-zion-purple/20 border-zion-purple" 
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
             }`}
@@ -86,8 +79,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
 
           {error && (
             <div className="text-center text-red-400 text-sm">
-              {(error as Error).message || 'Failed to load services'}. Showing sample data.
-            </div>
+              {(error as Error).message || 'Failed to load services'}.Showing sample data.</div>
           )}
           
           <div className="grid grid-cols-1 gap-4 mt-4">
@@ -102,8 +94,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
                 <div
                   key={item.id}
                   onClick={() => handleItemSelect(item)}
-                  className={`cursor-pointer transition-all ${
-                    formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : ""
+                  className={`cursor-pointer transition-all ${formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : ""
                   }`}
                 >
                   <ListingScoreCard title={item.title}
@@ -118,8 +109,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
               ))
             ) : (
               <div className="text-center py-8 text-zion-slate-light">
-                No items found. Please try a different search.
-              </div>
+                No items found.Please try a different search.</div>
             )}
           </div>
         </div>

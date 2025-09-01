@@ -1,30 +1,8 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import {
+import { motion  } from 'framer-motion';
+import { Brain, Globe, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Award  } from 'lucide-react';
 
-  Brain,
-  Globe,
-  Shield,
-  Users,
-  TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Award} from 'lucide-react';
-
-const highlights = [
-  {
-
-    icon: Brain,
-    title: 'AI-Powered Intelligence',
-    description:'
-      'Advanced machine learning algorithms that continuously learn and adapt to provide smarter solutions.',
-    features: ['
-      'Predictive Analytics',Smart Recommendations',Automated Workflows',
-    ],
-    color: 'from-zion-purple to-zion-purple-dark',
-    bgColor: 'bg-zion-purple/10',
-    borderColor: 'border-zion-purple/20'},
+,
   {
 
     icon: Globe,
@@ -49,8 +27,7 @@ const highlights = [
     borderColor: 'border-zion-blue/20'},
 ];
 ;
-const achievements = [
-  {
+const achievements = [{
 
     icon: Award,
     number: '50+',
@@ -133,7 +110,7 @@ export function FeatureHighlights() {
       x: 0,
       transition: { duration: 0.5 }}};
 
-  return()
+  return ()
     <section className="py-20 bg-gradient-to-b from-zion-slate-dark to-zion-slate relative overflow-hidden">
       {/* Background decorative elements */}"
       <div className="absolute inset-0 opacity-5">"
@@ -158,8 +135,7 @@ export function FeatureHighlights() {
           </h2>"
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
             Experience the future of technology with our cutting-edge solutions,
-            backed by innovation, security, and global expertise.
-          </p>
+            backed by innovation, security, and global expertise.</p>
         </motion.div>
 
         {/* Feature Grid */}

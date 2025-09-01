@@ -29,11 +29,5 @@ export const toast = {
     dismiss: (toastId) => // console.log('Dismiss:',
   toastId)
 
-
-
-
-
-
-
 };
 }'`

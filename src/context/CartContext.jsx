@@ -3,17 +3,16 @@ import { safeStorage } from '@/utils/safeStorage';
 import { useAuth } from '@/hooks/useAuth';
 import { getCartKey, mergeCartItems } from '@/utils/cartUtils';
 ;
-const initialState = { items: [] };
 ;
 function cartReducer(state, action) {
 
-  switch (action.type) {
+  switch(action.type) {
 
     case 'ADD_ITEM': {
 
       const existing = state.items.find(i => i.id === action.payload.id);
       let items;
-      if (existing) {
+      if(existing) {
 
         items = state.items.map(i =>
           i.id === action.payload.id
@@ -54,7 +53,7 @@ const CartContext = createContext(null);
 ;
 export function useCart() {
   const ctx = useContext(CartContext);
-  if (!ctx) {
+  if(!ctx) {
 
     throw new Error('useCart must be used within a CartProvider');
   }
@@ -71,7 +70,7 @@ export function CartProvider({ children }) {
     let items = [];
     const stored = safeStorage.getItem(cartKey);
 
-    if (stored) {
+    if(stored) {
 
       try {
         items = JSON.parse(stored);
@@ -82,10 +81,10 @@ export function CartProvider({ children }) {
     }
 
     // Merge guest cart when user logs in
-    if (user?.id) {
+    if(user?.id) {
 
       const guestStored = safeStorage.getItem(getCartKey());
-      if (guestStored) {
+      if(guestStored) {
 
         try {
           const guestItems = JSON.parse(guestStored);
@@ -103,7 +102,7 @@ export function CartProvider({ children }) {
 
   // Save cart to storage whenever it changes
   useEffect(() => {
-    if (state.items.length > 0) {
+    if(state.items.length > 0) {
 
       safeStorage.setItem(cartKey, JSON.stringify(state.items));
     } else {
@@ -124,7 +123,7 @@ export function CartProvider({ children }) {
 
   const updateQuantity = (id, quantity) => {
 
-    if (quantity <= 0) {
+    if(quantity <= 0) {
 
       removeItem(id);
     } else {

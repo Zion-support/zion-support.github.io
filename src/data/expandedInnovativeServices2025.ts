@@ -31,8 +31,7 @@ contactInfo: {
     uptime: string;
     security: string[]}}
 ;
-export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
-  // AI-Powered Cybersecurity Threat Intelligence
+export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [// AI-Powered Cybersecurity Threat Intelligence
   {
 
     id: "ai-cybersecurity-threat-intelligence","
@@ -101,7 +100,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
 "
     id: "ai-sales-copilot-smb","
     title: "AI Sales Co‑pilot for SMBs","
-    description: "Conversational AI that prioritizes leads, drafts emails, summarizes calls, and updates your CRM automatically. Trains on your deals and playbooks for on‑brand outreach.","
+    description: "Conversational AI that prioritizes leads, drafts emails, summarizes calls, and updates your CRM automatically.Trains on your deals and playbooks for on‑brand outreach.","
     category: "AI & Customer Experience","
     subcategory: "Sales Enablement",
     price: 799,"
@@ -111,7 +110,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "Lead scoring with behavioral intent","
       "Auto‑generated email sequences","
       "Meeting transcription + action items","
-      "CRM sync (HubSpot, Salesforce, Pipedrive)","
+      "CRM sync(HubSpot, Salesforce, Pipedrive)","
       "Playbook and objection handling","
       "Multilingual outreach","
       "Calendar + dialer integrations","
@@ -169,7 +168,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "Rightsizing + scheduling","
       "Savings Plans/RIs recommendations","
       "Egress + storage tiering","
-      "Kubernetes cost allocation (Kubecost API)","
+      "Kubernetes cost allocation(Kubecost API)","
       "Anomaly detection","
       "Chargeback/showback","
       "Automated policy actions","
@@ -330,7 +329,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }
   },
 
-  // Data platform in a week (modern stack)
+  // Data platform in a week(modern stack)
   {
 "
     id: "modern-data-platform-week","
@@ -342,7 +341,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     currency: "$","
     pricingModel: "one-time",
     features[;"
-      "Ingestion (ELT) setup","
+      "Ingestion(ELT) setup","
       "Warehouse + role modeling","
       "dbt transformations","
       "Metrics/semantic layer","
@@ -911,7 +910,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     currency: "$","
     pricingModel: "monthly",
     features: ["
-      "Multi-channel intake (Slack/Teams/Email)","
+      "Multi-channel intake(Slack/Teams/Email)","
       "RAG over KBs and runbooks","
       "Automated ticket classification & routing","
       "Action execution via secure connectors","
@@ -957,7 +956,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
 "
     id: "data-governance-quality-aas","
     title: "Data Governance & Quality as a Service","
-    description: "Turnkey data governance with lineage, quality checks, SLAs, and incident workflows. We implement metrics layer, contracts, and alerting across your stack.","
+    description: "Turnkey data governance with lineage, quality checks, SLAs, and incident workflows.We implement metrics layer, contracts, and alerting across your stack.","
     category: "AI & Analytics","
     subcategory: "Data Governance",
     price: 2499,"
@@ -1105,9 +1104,9 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "Multi-cloud & multi-account support","
       "Unit economics & chargeback","
       "Cost anomaly detection","
-      "Kubernetes cost allocation (COSTaaS)","
+      "Kubernetes cost allocation(COSTaaS)","
       "Policy-based guardrails","
-      "Ticketing integrations (Jira, ServiceNow)","
+      "Ticketing integrations(Jira, ServiceNow)","
       "Slack/MS Teams notifications","
       "FinOps reports & forecasts"
     ],;
@@ -1253,14 +1252,14 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
 "
     id: "ai-customer-support-agent","
     title: "AI Customer Support Agent Platform","
-    description: "RAG-powered omnichannel support with secure retrieval over your docs, CRM, and tickets. Escalates with full context.","
+    description: "RAG-powered omnichannel support with secure retrieval over your docs, CRM, and tickets.Escalates with full context.","
     category: "AI & Customer Experience","
     subcategory: "Support Automation",
     price: 899,"
     currency: "$","
     pricingModel: "monthly",
     features[;"
-      "Omnichannel (chat, email, voice)","
+      "Omnichannel(chat, email, voice)","
       "Secure RAG over private data","
       "Hallucination guardrails","
       "CRM/ticketing sync","
@@ -1294,11 +1293,11 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       apiEndpoints: 70,"
       uptime: "99.9%","
       security["SOC 2", "PII redaction"]}  },
-  // Privacy Request Automation (DSAR)
+  // Privacy Request Automation(DSAR)
   {
 "
     id: "privacy-request-automation","
-    title: "Privacy Request Automation (DSAR)","
+    title: "Privacy Request Automation(DSAR)","
     description: "Automated data subject request intake, identity verification, and data discovery across SaaS and data lakes.","
     category: "AI & Legal Tech","
     subcategory: "Privacy Automation",
@@ -1385,21 +1384,11 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
 export { EXPANDED_INNOVATIVE_SERVICES_2025 };
 export default EXPANDED_INNOVATIVE_SERVICES_2025}}
 
-
-
-
+}
 
 }
 
-
-
-
 }
-
-
-
-}
-
 
 }
 

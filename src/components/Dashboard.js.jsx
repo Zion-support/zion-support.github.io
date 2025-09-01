@@ -1,52 +1,8 @@
-import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
-import { useState } from 'react';
-import { TrendingUp, Users, Briefcase, ShoppingCart, DollarSign, Activity, ArrowUpRight, ArrowDownRight, Calendar, Bell, Settings, BarChart3, PieChart, LineChart } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
-import { Button } from '@/components/ui/Button';
-export function Dashboard() {
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from 'react/jsx-runtime';
 
-    const [activeTab, setActiveTab] = useState('overview');
-    const metrics = [
-        {
-
-            title: 'Total Revenue',
-            value: '$124,563',
-            change: 12.5,
-            changeType: 'increase',
-            icon: DollarSign,
-            color: 'text-green-600'
-        },
-        {
-
-            title: 'Active Users',
-            value: '2,847',
-            change: 8.2,
-            changeType: 'increase',
-            icon: Users,
-            color: 'text-blue-600'
-        },
-        {
-
-            title: 'Services Delivered',
-            value: '156',
-            change: -2.1,
-            changeType: 'decrease',
-            icon: Briefcase,
-            color: 'text-purple-600'
-        },
-        {
-
-            title: 'Equipment Sales',
-            value: '89',
-            change: 15.3,
-            changeType: 'increase',
-            icon: ShoppingCart,
-            color: 'text-orange-600'
-        }
+export default function Page() {
     ];
-    const recentActivities = [
-        {
+    const recentActivities = [{
 
             id: '1',
             type: 'service',
@@ -85,7 +41,7 @@ export function Dashboard() {
     ];
     const getStatusColor = (status) => {
 
-        switch (status) {
+        switch(status) {
 
             case 'completed':'
                 return 'bg-green-100 text-green-800';
@@ -98,7 +54,7 @@ export function Dashboard() {
     };
     const getTypeIcon = (type) => {
 
-        switch (type) {
+        switch(type) {
 
             case 'service':"
                 return _jsx(Briefcase, { className: "h-4 w-4" });

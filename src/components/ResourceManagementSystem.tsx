@@ -1,63 +1,7 @@
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
+import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
 
-  Users,
-  Calendar,
-  Clock,
-  Target,
-  TrendingUp,
-  AlertCircle,
-  CheckCircle,
-  XCircle,
-  Plus,
-  Edit,
-  Trash2,
-  Eye,
-  Download,
-  Share2,
-  Filter,
-  Search,
-  BarChart3,
-  PieChart,
-  Activity,
-  Zap,
-  Brain,
-  Cloud,
-  Shield,
-  Globe,
-  Settings,
-  RefreshCw,
-  ArrowUp,
-  ArrowDown,
-  Minus,
-  Star,
-  Award,
-  Briefcase,
-  Home,
-  Building,
-  Wifi,
-  Server,
-  Database,
-  Lock,
-  Unlock'
- } from 'lucide-react';
-
-  utilization: number}
-
-interface ResourceStats {
-  totalResources: number;
-  availableResources: number;
-  allocatedResources: number;
-  maintenanceResources: number;
-  totalCapacity: number;
-  currentUtilization: number;
-  averageCost: number;
-  topDepartments: Array < any>}
-
-interface ResourceManagementSystemProps extends React.PropsWithChildren<{}> {
+export default function Page() {
+> {
 
   showStats?: boolean;
   showFilters?: boolean;
@@ -81,9 +25,8 @@ showStats:  true,;
   const [editingResource, setEditingResource] = useState<any>(null);
 
   // Sample resource data
-  useEffect ( () => {
-    const sampleResources: Resource[] = [
-      {
+  useEffect(() => {
+    const sampleResources: Resource[] = [{
 
         id: '1',
         name: 'AI Development Team',
@@ -180,26 +123,26 @@ showStats:  true,;
 
     ];
 
-    setResources (sampleResources) ;
-    setFilteredResources (sampleResources) }, []) ;
+    setResources(sampleResources) ;
+    setFilteredResources(sampleResources) }, []) ;
 
   // Filter resources
   useEffect(() => {
     let filtered = resources;
 
-    if (selectedType !== 'all') {
+    if(selectedType !== 'all') {
 
       filtered = filtered.filter(r => r.type === selectedType)}
 
-    if (selectedStatus !== 'all') {
+    if(selectedStatus !== 'all') {
 
       filtered = filtered.filter(r => r.status === selectedStatus)}
 
-    if (selectedPriority !== 'all') {
+    if(selectedPriority !== 'all') {
 
       filtered = filtered.filter(r => r.priority === selectedPriority)}
 
-    if (searchQuery) {
+    if(searchQuery) {
 
       filtered = filtered.filter(r =>
         r.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -214,7 +157,7 @@ showStats:  true,;
         r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       )}
 
-    setFilteredResources (filtered.slice (0, maxResources) ) }, [resources, selectedType, selectedStatus, selectedPriority, searchQuery, maxResources]) ;
+    setFilteredResources(filtered.slice (0, maxResources) ) }, [resources, selectedType, selectedStatus, selectedPriority, searchQuery, maxResources]) ;
 
   // Calculate resource stats
   const resourceStats = {

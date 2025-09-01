@@ -1,16 +1,15 @@
 <<<<<<< HEAD
 import React, { useState } from 'react';
-import { useState } from "react";
-import { BookOpen, Terminal import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Badge } from "@/components/ui/badge";
-=======
-import { useState } from "react";"
-import { BookOpen, Terminal import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
-import { Alert, AlertDescription } from "@/components/ui/alert";"
-import { Badge } from "@/components/ui/badge";"
+import { useState } from 'react';
+import { BookOpen, Terminal import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Badge } from '@/components/ui/badge';
+ from 'react';"
+import { BookOpen, Terminal import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';"
+import { Alert, AlertDescription } from '@/components/ui/alert';"
+import { Badge } from '@/components/ui/badge';"
 >>>>>>> main
 import CodeBlock from "./CodeBlock";
 export function ApiDocumentation() {
@@ -21,15 +20,13 @@ export function ApiDocumentation() {
           <BookOpen className="mr-2" size={20}/> API Documentation
         </CardTitle>"
         <CardDescription className="text-zinc-400">
-          Reference documentation for integrating with the Zion Marketplace API.
-        </CardDescription>
+          Reference documentation for integrating with the Zion Marketplace API.</CardDescription>
       </CardHeader>
       <CardContent>"
         <Alert className="bg-blue-900/30 border-blue-800 mb-6">"
           <Terminal className="h-4 w-4"/>
           <AlertDescription>
-            Make sure to include your API key in all requests as a Bearer token in the Authorization header.
-          </AlertDescription>
+            Make sure to include your API key in all requests as a Bearer token in the Authorization header.</AlertDescription>
         </Alert>"
         <Tabs defaultValue="jobs" className="space-y-4">"
           <TabsList className="bg-zinc-800 border-zinc-700">"
@@ -42,24 +39,23 @@ export function ApiDocumentation() {
           <TabsContent value="jobs" className="space-y-6">"
             <EndpointSection method="GET" endpoint="/api/jobs" description="List all available jobs with optional filtering." note="" params = {
 <<<<<<< HEAD
-  [
-            { name: "page", type: "integer",
+  [{ name: "page", type: "integer",
   description: "Page number for pagination (default: 1)"
 },
-            { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
+            { name: "limit", type: "integer", description: "Number of results per page(default: 20, max: 100)" },
             { name: "category", type: "string", description: "Filter by job category" },
-            { name: "skills", type: "string[]", description: "Filter by required skills (comma-separated)" },
+            { name: "skills", type: "string[]", description: "Filter by required skills(comma-separated)" },
 =======
 
   ["
             { name: "page", type: "integer","
-  description: "Page number for pagination (default: 1)" 
+  description: "Page number for pagination(default: 1)" 
 },"
-            { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },"
+            { name: "limit", type: "integer", description: "Number of results per page(default: 20, max: 100)" },"
             { name: "category", type: "string", description: "Filter by job category" },"
-            { name: "skills", type: "string[]", description: "Filter by required skills (comma-separated)" },"
+            { name: "skills", type: "string[]", description: "Filter by required skills(comma-separated)" },"
 >>>>>>> main
-            { name: "status", type: "string", description: "Filter by job status (new, active, closed)" }
+            { name: "status", type: "string", description: "Filter by job status(new, active, closed)" }
         ]} codeExamples = {
 
   {
@@ -98,8 +94,7 @@ print(data)`
 `
             success: `{
 "
-  "data"[
-    {
+  "data"[{
 "
       "id": "job_abc123","
       "title": "Senior React Developer","
@@ -199,7 +194,7 @@ print(data)`
             { name: "skills", type: "string[]", description: "Required skills", required: true },
             { name: "budget.min", type: "number", description: "Minimum budget" },
             { name: "budget.max", type: "number", description: "Maximum budget" },
-            { name: "budget.currency", type: "string", description: "Currency code (default: USD)" },
+            { name: "budget.currency", type: "string", description: "Currency code(default: USD)" },
 =======
   required: true 
 },"
@@ -208,9 +203,9 @@ print(data)`
             { name: "skills", type: "string[]", description: "Required skills", required: true },"
             { name: "budget.min", type: "number", description: "Minimum budget" },"
             { name: "budget.max", type: "number", description: "Maximum budget" },"
-            { name: "budget.currency", type: "string", description: "Currency code (default: USD)" },"
+            { name: "budget.currency", type: "string", description: "Currency code(default: USD)" },"
 >>>>>>> main
-            { name: "deadline", type: "string", description: "Job deadline (ISO date string)" }
+            { name: "deadline", type: "string", description: "Job deadline(ISO date string)" }
         ]} codeExamples = {
 
   {
@@ -304,20 +299,19 @@ print(data)`
           <TabsContent value="talent" className="space-y-6">"
             <EndpointSection method="GET" endpoint="/api/talent" description="List talent profiles with optional filtering." note="" params = {
 <<<<<<< HEAD
-  [
-            { name: "page", type: "integer",
-  description: "Page number for pagination (default: 1)"
+  [{ name: "page", type: "integer",
+  description: "Page number for pagination(default: 1)"
 },
-            { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
-            { name: "skills", type: "string[]", description: "Filter by skills (comma-separated)" },
+            { name: "limit", type: "integer", description: "Number of results per page(default: 20, max: 100)" },
+            { name: "skills", type: "string[]", description: "Filter by skills(comma-separated)" },
 =======
 
   ["
             { name: "page", type: "integer","
-  description: "Page number for pagination (default: 1)" 
+  description: "Page number for pagination(default: 1)" 
 },"
-            { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },"
-            { name: "skills", type: "string[]", description: "Filter by skills (comma-separated)" },"
+            { name: "limit", type: "integer", description: "Number of results per page(default: 20, max: 100)" },"
+            { name: "skills", type: "string[]", description: "Filter by skills(comma-separated)" },"
 >>>>>>> main
             { name: "availability", type: "string", description: "Filter by availability status" }
         ]} codeExamples = {
@@ -359,8 +353,7 @@ print(data)`
 `
             success: `{
 "
-  "data"[
-    {
+  "data"[{
 "
       "id": "talent_abc123","
       "display_name": "Jane Smith","
@@ -431,8 +424,7 @@ print(data)`
     "availability": "available","
     "average_rating": 4.8,"
     "rating_count": 15,"
-    "portfolio"[
-      {
+    "portfolio"[{
 "
         "id": "proj_123","
         "title": "E-commerce Platform","
@@ -441,8 +433,7 @@ print(data)`
   "image_url": "https://example.com/portfolio/123.jpg"
 }
     ],"
-    "certifications"[
-      {
+    "certifications"[{
 "
         "name": "AWS Certified Developer","
         "issuing_organization": "Amazon Web Services","
@@ -563,20 +554,19 @@ print(data)`
         }}/>'"
             <EndpointSection method="GET" endpoint="/api/quotes" description="List quote requests that you've created." note="" params = {
 <<<<<<< HEAD
-  [
-            { name: "page", type: "integer",
-  description: "Page number for pagination (default: 1)"
+  [{ name: "page", type: "integer",
+  description: "Page number for pagination(default: 1)"
 },
-            { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
+            { name: "limit", type: "integer", description: "Number of results per page(default: 20, max: 100)" },
 =======
 
   ["
             { name: "page", type: "integer","
-  description: "Page number for pagination (default: 1)" 
+  description: "Page number for pagination(default: 1)" 
 },"
-            { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },"
+            { name: "limit", type: "integer", description: "Number of results per page(default: 20, max: 100)" },"
 >>>>>>> main
-            { name: "status", type: "string", description: "Filter by status (new, viewed, replied, archived)" }
+            { name: "status", type: "string", description: "Filter by status(new, viewed, replied, archived)" }
         ]} codeExamples = {
 
   {
@@ -611,8 +601,7 @@ print(data)`
 `
             success: `{
 "
-  "data"[
-    {
+  "data"[{
 "
       "id": "quote_def456","
       "talent_id": "talent_abc123","
@@ -638,16 +627,11 @@ print(data)`
             <div className="prose prose-invert max-w-none">"
               <h3 className="text-lg font-semibold mb-2">Webhook Events</h3>"
               <p className="text-zinc-400 mb-4">
-                The Zion API can send webhook notifications when certain events occur in your account.
-                You can configure webhooks in the Webhooks tab of the Developer Dashboard.
-              </p>"
+                The Zion API can send webhook notifications when certain events occur in your account.You can configure webhooks in the Webhooks tab of the Developer Dashboard.</p>"
               <h4 className="text-md font-semibold mt-6 mb-2">Authentication</h4>"
               <p className="text-zinc-400 mb-4">
-                When you create a webhook, you can optionally provide a secret key.
-                If a secret is provided, each webhook request will include a signature in the"
-                <code className="bg-zinc-800 px-1 py-0.5 rounded">X-Zion-Signature</code> header.
-                This signature is an HMAC SHA-256 hash of the request body using your webhook secret as the key.
-              </p>
+                When you create a webhook, you can optionally provide a secret key.If a secret is provided, each webhook request will include a signature in the"
+                <code className="bg-zinc-800 px-1 py-0.5 rounded">X-Zion-Signature</code> header.This signature is an HMAC SHA-256 hash of the request body using your webhook secret as the key.</p>
               <CodeBlock code = {
 '`
   `import crypto from 'crypto';

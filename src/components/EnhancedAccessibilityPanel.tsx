@@ -1,9 +1,6 @@
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
+import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
 
- * EnhancedAccessibilityPanel function
- * @param {*} params - Function parameters
+ params - Function parameters
  * @returns {*} Function return value
  */
 function EnhancedAccessibilityPanel () {
@@ -82,21 +79,21 @@ export function EnhancedAccessibilityPanel() {
       setSettings(updatedSettings);
 
       // Apply high contrast
-      if (updatedSettings.highContrast) {
+      if(updatedSettings.highContrast) {
 
         document.documentElement.classList.add('high-contrast')} else {
 
         document.documentElement.classList.remove('high-contrast')}
 
       // Apply large text
-      if (updatedSettings.largeText) {
+      if(updatedSettings.largeText) {
 
         document.documentElement.style.fontSize = '18px'} else {
 
         document.documentElement.style.fontSize = '16px'}
 
       // Apply reduced motion
-      if (updatedSettings.reducedMotion) {
+      if(updatedSettings.reducedMotion) {
         document.documentElement.style.setProperty('
           '--reduced-motion',reduce'
         )} else {
@@ -104,7 +101,7 @@ export function EnhancedAccessibilityPanel() {
         document.documentElement.style.removeProperty('--reduced-motion')}
 
       // Apply focus indicator
-      if (updatedSettings.focusIndicator) {
+      if(updatedSettings.focusIndicator) {
 
         document.documentElement.classList.add('focus-visible')} else {
 
@@ -146,36 +143,33 @@ export function EnhancedAccessibilityPanel() {
   useEffect(() => {
 <<<<<<< HEAD
 
-    
-    if (saved) {
+    if(saved) {
 =======
 '
-    const saved = localStorage.getItem('accessibility-settings');    if (saved) {
+    const saved = localStorage.getItem('accessibility-settings');    if(saved) {
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       try {
         
-        setSettings (savedSettings) ;
-        applySettings (savedSettings) } catch (error) {
+        setSettings(savedSettings) ;
+        applySettings(savedSettings) } catch(error) {
 
         // console.warn('Failed to load accessibility settings:', error)}    }
   }, [applySettings]) ;
 
   // Keyboard navigation support
-  useEffect ( () => {
+  useEffect(() => {
     
         document.body.classList.add('keyboard-navigation')}
       // Escape key to close panel'
-      if (event.key === 'Escape' && isVisible) {
+      if(event.key === 'Escape' && isVisible) {
 
         setIsVisible(false)}
 
       // Arrow keys for navigation
-      if (keyboardMode) {
+      if(keyboardMode) {
 
-        
-        
-        switch (event.key) {
+        switch(event.key) {
 
           case 'ArrowDown':
             event.preventDefault();
@@ -187,12 +181,11 @@ export function EnhancedAccessibilityPanel() {
             const prevIndex =
               currentIndex > 0
                 ? currentIndex - 1
-                : focusableElements.length - 1;            (focusableElements[prevIndex] as HTMLElement)?.focus();
+                : focusableElements.length-1;            (focusableElements[prevIndex] as HTMLElement)?.focus();
             break}
       }
     };
 
-    
       document.body.classList.remove('keyboard-navigation')};
 
     document.addEventListener('keydown', handleKeyDown);
@@ -217,7 +210,7 @@ export function EnhancedAccessibilityPanel() {
       const images = document.querySelectorAll('img');      images.forEach((img, index) => {
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-        if (!img.alt && !img.getAttribute('aria-label')) {
+        if(!img.alt && !img.getAttribute('aria-label')) {
 
           newIssues.push({
 `
@@ -235,7 +228,7 @@ export function EnhancedAccessibilityPanel() {
       let previousLevel = 0;
       headings.forEach((heading, index) => {
 
-        const level = parseInt(heading.tagName.charAt(1));        if (level > previousLevel + 1) {
+        const level = parseInt(heading.tagName.charAt(1));        if(level > previousLevel + 1) {
 
           newIssues.push({
 `
@@ -243,7 +236,7 @@ export function EnhancedAccessibilityPanel() {
             type: 'warning',
             message: 'Heading level skipped',
             element: heading.tagName.toLowerCase(),
-            recommendation: 'Maintain proper heading hierarchy (h1 → h2 → h3),
+            recommendation: 'Maintain proper heading hierarchy(h1 → h2 → h3),
             severity: 'medium'})}
         previousLevel = level}) ;
 
@@ -252,9 +245,8 @@ export function EnhancedAccessibilityPanel() {
       formInputs.forEach((input, index) => {
 
         const id = input.getAttribute('id');"`
-        
-        
-        if (!label && !ariaLabel && !input.getAttribute('aria-labelledby')) {
+
+        if(!label && !ariaLabel && !input.getAttribute('aria-labelledby')) {
 
           newIssues.push({
 `
@@ -270,10 +262,7 @@ export function EnhancedAccessibilityPanel() {
       
       ariaElements.forEach((element, index) => {
 
-        
-        
-        
-        if (ariaExpanded && !ariaControls && !ariaOwns) {
+        if(ariaExpanded && !ariaControls && !ariaOwns) {
 
           newIssues.push({
 `
@@ -287,20 +276,17 @@ export function EnhancedAccessibilityPanel() {
             severity: 'medium'})}
       }) ;
 
-      // Check for sufficient color contrast (simplified)
+      // Check for sufficient color contrast(simplified)
       
       textElements.forEach((element, index) => {
 
-        
-        
-        
 <<<<<<< HEAD
 
         // This is a simplified check - in production you'd want a proper contrast ratio calculation
 =======
 '        // This is a simplified check - in production you'd want a proper contrast ratio calculation
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-        if (color === backgroundColor) {
+        if(color === backgroundColor) {
 
           newIssues.push({
 `
@@ -321,7 +307,7 @@ export function EnhancedAccessibilityPanel() {
       );      interactiveElements.forEach((element, index) => {
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-        if (element.tagName === 'BUTTON' && !element.getAttribute('type')) {
+        if(element.tagName === 'BUTTON' && !element.getAttribute('type')) {
 
           newIssues.push({
 `
@@ -331,12 +317,12 @@ export function EnhancedAccessibilityPanel() {
             element: element.tagName.toLowerCase(),"
             recommendation: 'Add type="button" to prevent form submission',
             severity: 'medium'})}
-      })} catch (error) {
+      })} catch(error) {
 
       // console.error('Accessibility audit failed:', error)}
 
-    setIssues (newIssues) ;
-    setIsScanning (false) }, []) ;
+    setIssues(newIssues) ;
+    setIsScanning(false) }, []) ;
 
   // Get issue icon
   
@@ -357,7 +343,7 @@ export function EnhancedAccessibilityPanel() {
       default:'
         return 'border-gray-500 bg-gray-50 dark:bg-gray-900/20'}  };
 
-  return()
+  return ()
     <>
       {/* Floating Action Button */}
       <motion.button"
@@ -366,7 +352,7 @@ export function EnhancedAccessibilityPanel() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}"
         title="Accessibility Panel"
-        aria-label="Open accessibility panel"
+        
       >"
         <Accessibility className="w-6 h-6"  />      </motion.button>
 
@@ -378,7 +364,7 @@ export function EnhancedAccessibilityPanel() {
             exit={{ opacity: 0, x: -300 }}"
             className="fixed top-0 left-0 h-full w-96 bg-white dark:bg-gray-900 shadow-2xl z-40 overflow-y-auto"
             role="dialog"
-            aria-label="Accessibility settings and tools"
+            
           >"
             <div className="p-6">
               {/* Header */}"
@@ -402,7 +388,7 @@ export function EnhancedAccessibilityPanel() {
                   <button
                     onClick={() => setIsVisible(false)}"
                     className="p-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
-                    aria-label="Close accessibility panel"
+                    
                   >"
                     <X className="w-5 h-5"  />                  </button>
                 </div>
@@ -418,9 +404,7 @@ export function EnhancedAccessibilityPanel() {
                     onClick={() =>
                       applySettings({ highContrast: !settings.highContrast })
                     }`
-                    className={`flex items-center justify-center space-x-2 p-3 rounded-lg border transition-colors ${
-
-                      settings.highContrast'
+                    className={`flex items-center justify-center space-x-2 p-3 rounded-lg border transition-colors ${settings.highContrast'
                         ? 'border-zion-blue bg-zion-blue text-white''
                         : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300'`
                     }`}
@@ -433,9 +417,7 @@ export function EnhancedAccessibilityPanel() {
                     onClick={() =>
                       applySettings({ largeText: !settings.largeText })
                     }`
-                    className={`flex items-center justify-center space-x-2 p-3 rounded-lg border transition-colors ${
-
-                      settings.largeText'
+                    className={`flex items-center justify-center space-x-2 p-3 rounded-lg border transition-colors ${settings.largeText'
                         ? 'border-zion-blue bg-zion-blue text-white''
                         : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300'`
                     }`}
@@ -448,9 +430,7 @@ export function EnhancedAccessibilityPanel() {
                     onClick={() =>
                       applySettings({ reducedMotion: !settings.reducedMotion })
                     }`
-                    className={`flex items-center justify-center space-x-2 p-3 rounded-lg border transition-colors ${
-
-                      settings.reducedMotion'
+                    className={`flex items-center justify-center space-x-2 p-3 rounded-lg border transition-colors ${settings.reducedMotion'
                         ? 'border-zion-blue bg-zion-blue text-white''
                         : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300'`
                     }`}
@@ -465,9 +445,7 @@ export function EnhancedAccessibilityPanel() {
 
                         focusIndicator: !settings.focusIndicator})
                     }`
-                    className={`flex items-center justify-center space-x-2 p-3 rounded-lg border transition-colors ${
-
-                      settings.focusIndicator'
+                    className={`flex items-center justify-center space-x-2 p-3 rounded-lg border transition-colors ${settings.focusIndicator'
                         ? 'border-zion-blue bg-zion-blue text-white''
                         : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300'`
                     }`}
@@ -529,12 +507,12 @@ export function EnhancedAccessibilityPanel() {
                 <div className="space-y-2">
                   {['
                     { value: 'none', label: 'Normal Vision' },
-                    { value: 'protanopia', label: 'Protanopia (Red-Blind)},
+                    { value: 'protanopia', label: 'Protanopia(Red-Blind)},
                     {
 
                       value: 'deuteranopia',
-                      label: 'Deuteranopia (Green-Blind)},
-                    { value: 'tritanopia', label: 'Tritanopia (Blue-Blind)},
+                      label: 'Deuteranopia(Green-Blind)},
+                    { value: 'tritanopia', label: 'Tritanopia(Blue-Blind)},
                   ].map(option => (
                     <label
                       key={option.value}"
@@ -624,7 +602,7 @@ export function EnhancedAccessibilityPanel() {
               </div>
 
               {/* Reset Button */}
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => {
+              <button      onClick={ () => {
                   const defaultSettings: AccessibilitySettings = {
 
                     highContrast: false,

@@ -10,13 +10,7 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { toast } from '@/hooks/use-toast';
 import { KanbanColumn } from './KanbanColumn';
 import { useIsMobile } from '@/hooks/use-mobile';
-// Define the kanban board columns based on application statuses
-const COLUMNS = [
-  {
-
-    id: 'new',
-    title: 'Applied',
-    description: 'New applications'},
+,
   {
 
     id: 'shortlisted',
@@ -49,7 +43,7 @@ export function KanbanBoard({ jobId }) {
   const isMobile = useIsMobile();
   // Initialize columns with applications based on their status
   useEffect(() => {
-    if (applications) {
+    if(applications) {
 
       // Group applications by status
       const groupedApplications = COLUMNS.reduce((acc, column) => {
@@ -75,7 +69,7 @@ export function KanbanBoard({ jobId }) {
     }
     // Get the application that was dragged
     const application = applications.find(app => app.id === draggableId);
-    if (!application) return;
+    if(!application) return;
     // Update the application status in the database
     const newStatus = destination.droppableId;
     // Optimistically update the UI
@@ -95,7 +89,7 @@ export function KanbanBoard({ jobId }) {
 
         title: 'Status updated',
         description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`});
-    } catch (error) {
+    } catch(error) {
       // Revert the UI changes if the database update fails
       toast({
 
@@ -104,9 +98,9 @@ export function KanbanBoard({ jobId }) {
         variant: 'destructive'});
     }
   };
-  if (isLoading) {
+  if(isLoading) {
 
-    return()
+    return ()
       <div'`
         className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}
       >
@@ -123,20 +117,19 @@ export function KanbanBoard({ jobId }) {
       </div>
     );
   }
-  if (!applications || applications.length === 0) {
+  if(!applications || applications.length === 0) {
 
     return ("
       <Card className="text-center py-16">
         <CardContent>"
           <h3 className="text-lg font-semibold mb-2">No applications yet</h3>"
           <p className="text-muted-foreground mb-6">
-            You haven't received applications for this job yet.
-          </p>
+            You haven't received applications for this job yet.</p>
         </CardContent>
       </Card>
     );
   }
-  return()
+  return ()
     <DragDropContext onDragEnd={handleDragEnd}>
       <div'`
         className={`grid ${isMobile ? 'grid-cols-1 gap-y-6' : 'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'} overflow-x-auto`}

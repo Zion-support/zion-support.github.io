@@ -1,63 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight const testimonials = [;
-import { motion, AnimatePresence } from 'framer - motion';
-
-    {
-
-        id: 1,
-        name: 'Sarah Johnson',
-        role: 'CTO at TechCorp',
-        comp: 'TechCorp Inc.',
-        content: 'Zion Tech Group has revolutionized how we find AI talent. The platform is intuitive and the quality of candidates is exceptional. We\'ve reduced our hiring time by 60% while improving candidate quality.',
-        avatar: '/avatars/sarah.jpg',
-        rating: 5,
-        category: 'Enterprise',
-        project: 'AI Talent Acquisition'
-    },
-    {
-
-        id: 2,
-        name: 'Michael Chen',
-        role: 'AI Engineer',
-        comp: 'Freelance',
-        content: 'As a freelancer, Zion Tech Group has opened up incredible opportunities. The marketplace is well-organized and the clients are top-tier. I\'ve doubled my income since joining the platform.',
-        avatar: '/avatars/michael.jpg',
-        rating: 5,
-        category: 'Freelancer',
-        project: 'Machine Learning Solutions'
-    },
-    {
-
-        id: 3,
-        name: 'Dr. Emily Rodriguez',
-        role: 'Research Director',
-        comp: 'InnovateLab',
-        content: 'The AI services we found through Zion Tech Group exceeded our expectations. The team delivered cutting-edge solutions that accelerated our research by months. Highly recommended!',
-        avatar: '/avatars/emily.jpg',
-        rating: 5,
-        category: 'Research',
-        project: 'AI Research Platform'
-    },
-    {
-
-        id: 4,
-        name: 'David Kim',
-        role: 'Startup Founder',
-        comp: 'DataFlow',
-        content: 'Starting a tech comp is challenging, but Zion Tech Group made it so much easier. We found the perfect team and equipment to get our MVP to market in record time.',
-        avatar: '/avatars/david.jpg',
-        rating: 5,
-        category: 'Startup',
-        project: 'SaaS Platform'
-    },
+import { motion, AnimatePresence  } from 'framer-motion';
+export default function Page() {
+,
     {
 
         id: 5,
         name: 'Lisa Thompson',
         role: 'IT Manager',
         comp: 'Global Retail Co.',
-        content: 'Our digital transformation project was a huge success thanks to Zion Tech Group. The comprehensive services and expert team delivered everything we needed on time and budget.',
+        content: 'Our digital transformation project was a huge success thanks to Zion Tech Group.The comprehensive services and expert team delivered everything we needed on time and budget.',
         avatar: '/avatars/lisa.jpg',
         rating: 5,
         category: 'Enterprise',
@@ -69,21 +20,21 @@ import { motion, AnimatePresence } from 'framer - motion';
         name: 'Alex Patel',
         role: 'DevOps Engineer',
         comp: 'CloudScale',
-        content: 'The infrastructure solutions from Zion Tech Group are world-class. We\'ve achieved 99.99% uptime and our performance has improved dramatically. The team is incredibly responsive.',
+        content: 'The infrastructure solutions from Zion Tech Group are world-class.We\'ve achieved 99.99% uptime and our performance has improved dramatically.The team is incredibly responsive.',
         avatar: '/avatars/alex.jpg',
         rating: 5,
         category: 'Infrastructure',
         project: 'Cloud Infrastructure'
 
 ];
-    const [currentIndex, setCurrentIndex] = useState (0) ;
-    const [direction, setDirection] = useState (0) ;
-    useEffect ( () => {
-        const timer = setInterval ( () => {
-            setDirection (1) ;
-            setCurrentIndex ( (prev) => (prev + 1) % testimonials.length) ;
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [direction, setDirection] = useState(0);
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setDirection(1) ;
+            setCurrentIndex((prev) => (prev + 1) % testimonials.length) ;
         }, 5000) ;
-        return () => clearInterval (timer) ;
+        return () => clearInterval(timer) ;
     }, []) ;
     const swipePower = (offset, velocity) => {
 
@@ -116,11 +67,6 @@ import { motion, AnimatePresence } from 'framer - motion';
   { opacity: 1,
   y: 0
 
-
-
-
-
-
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>"
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
             What Our <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Users Say</span>
@@ -152,10 +98,6 @@ import { motion, AnimatePresence } from 'framer - motion';
   velocity
 =======
 
-
-
-
-
 }} dragElastic={1} onDragEnd = {
 
   (e, { offset,
@@ -165,10 +107,10 @@ import { motion, AnimatePresence } from 'framer - motion';
 }) => {
 
             const swipe = swipePower(offset.x, velocity.x);
-            if (swipe < -swipeConfidenceThreshold) {
+            if(swipe < -swipeConfidenceThreshold) {
 
                 paginate(1)}
-            else if (swipe > swipeConfidenceThreshold) {
+            else if(swipe > swipeConfidenceThreshold) {
 
                 paginate(-1)}"
         }} className="absolute w-full">"
@@ -253,11 +195,6 @@ import { motion, AnimatePresence } from 'framer - motion';
 
   { duration: 0.6,
   delay: 0.3
-
-
-
-
-
 
 }}>"
           <div className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">"

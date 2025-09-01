@@ -1,64 +1,7 @@
 import React, { useState } from 'react';
-import {
-<<<<<<< HEAD
-import {
-import {
-import { Button } from './ui / Button';
-import { Checkbox } from './ui / checkbox';
-import { Input } from './ui / input';
-import { Textarea } from './ui / textarea';
-=======
->>>>>>> main
-
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle} from './ui/card';
-import { Button } from './ui/Button';
-import { Input } from './ui/input';
-import { Textarea } from './ui/textarea';
-import {
-
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue} from './ui/select';
-import { Checkbox } from './ui/checkbox';
-import {
-
-  Mail,
-  Phone,
-  Building,
-  Send,
-  CheckCircle,
-  AlertCircle} from 'lucide-react';
-
-export const QuoteRequestForm = () => {
-  const [formData, setFormData] = useState({
-
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    company: '',
-    serviceType: '',
-    projectDescription: '',
-    timeline: '',
-    budget: '',
-    urgency: 'medium',
-    contactMethod: 'email',
-    agreeToTerms: false,
-    agreeToMarketing: false});
-
-  const [isSubmitting, setIsSubmitting] = useState (false) ;
-  const [isSubmitted, setIsSubmitted] = useState (false) ;
-  const [errors, setErrors] = useState ({}) ;
-
-  const serviceTypes = ['
-    { value: 'ai-services', label: 'AI & Machine Learning Services' },
-    { value: 'it-solutions', label: 'IT Infrastructure & Solutions' },
+import { <<<<<<< HEAD import { import { Button } from './ui / Button';
+export default function Page() {
+,
     { value: 'talent-hiring', label: 'Talent Acquisition & Staffing' },
     { value: 'equipment', label: 'Equipment & Hardware' },
     { value: 'consulting', label: 'IT Consulting & Strategy' },
@@ -67,7 +10,7 @@ export const QuoteRequestForm = () => {
   ];
 
   const timelineOptions = ['
-    { value: 'asap', label: 'ASAP (Within 1 week)},
+    { value: 'asap', label: 'ASAP(Within 1 week)},
     { value: '1-2-weeks', label: '1-2 weeks' },
     { value: '1-month', label: '1 month' },
     { value: '2-3-months', label: '2-3 months' },
@@ -86,9 +29,9 @@ export const QuoteRequestForm = () => {
   ];
 
   const urgencyLevels = ['
-    { value: 'low', label: 'Low - Planning phase' },
+    { value: 'low', label: 'Low-Planning phase' },
     { value: 'medium', label: 'Medium - Ready to start soon' },
-    { value: 'high', label: 'High - Need to start immediately' },
+    { value: 'high', label: 'High-Need to start immediately' },
     { value: 'critical', label: 'Critical - Emergency situation' },
   ];
 
@@ -100,7 +43,7 @@ export const QuoteRequestForm = () => {
       [field]: value}));
 
     // Clear error when user starts typing
-    if (errors[field]) {
+    if(errors[field]) {
 
       setErrors(prev => ({
 
@@ -112,33 +55,33 @@ export const QuoteRequestForm = () => {
   const validateForm = () => {
     const newErrors = {};
 
-    if (!formData.firstName.trim())
+    if(!formData.firstName.trim())
       newErrors.firstName = 'First name is required';
-    if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
-    if (!formData.email.trim()) newErrors.email = 'Email is required';
-    if (!formData.company.trim())
+    if(!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
+    if(!formData.email.trim()) newErrors.email = 'Email is required';
+    if(!formData.company.trim())
       newErrors.company = 'Company name is required';
-    if (!formData.serviceType)
+    if(!formData.serviceType)
       newErrors.serviceType = 'Service type is required';
-    if (!formData.projectDescription.trim())
+    if(!formData.projectDescription.trim())
       newErrors.projectDescription = 'Project description is required';
-    if (!formData.agreeToTerms)
+    if(!formData.agreeToTerms)
       newErrors.agreeToTerms = 'You must agree to the terms and conditions';
 
-    setErrors (newErrors) ;
-    return Object.keys (newErrors) .length === 0;
+    setErrors(newErrors) ;
+    return Object.keys(newErrors) .length === 0;
   };
 
   const handleSubmit = async e => {
 
     e.preventDefault();
 
-    if (!validateForm()) {
+    if(!validateForm()) {
 
       return;
     }
 
-    setIsSubmitting (true) ;
+    setIsSubmitting(true) ;
 
     try {
       // Simulate API call
@@ -161,7 +104,7 @@ export const QuoteRequestForm = () => {
         contactMethod: 'email',
         agreeToTerms: false,
         agreeToMarketing: false});
-    } catch (error) {
+    } catch(error) {
 
       // console.error('Error submitting form:', error);
     } finally {
@@ -170,9 +113,9 @@ export const QuoteRequestForm = () => {
     }
   };
 
-  if (isSubmitted) {
+  if(isSubmitted) {
 
-    return()
+    return ()
       <Card className="max-w-2xl mx-auto">"
         <CardContent className="p-8 text-center">"
           <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />"
@@ -180,10 +123,9 @@ export const QuoteRequestForm = () => {
             Quote Request Submitted!
           </h2>"
           <p className="text-gray-600 mb-6">
-            Thank you for your interest. Our team will review your request and
-            get back to you within 24 hours.
-          </p>
-          <Button onClick={ () => setIsSubmitted (false) }>
+            Thank you for your interest.Our team will review your request and
+            get back to you within 24 hours.</p>
+          <Button onClick={ () => setIsSubmitted(false) }>
             Submit Another Request
           </Button>
         </CardContent>
@@ -259,7 +201,7 @@ export const QuoteRequestForm = () => {
               <Input
                 value={formData.phone}
                 onChange={e => handleChange('phone', e.target.value)}"
-                placeholder="+1 (555) 123-4567"
+                placeholder="+1(555) 123-4567"
               />
             </div>
           </div>

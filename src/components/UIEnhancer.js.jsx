@@ -1,51 +1,34 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true, enableScrollEffects = true }) => {
+import { motion, AnimatePresence  } from 'framer-motion';
 
-    const [theme, setTheme] = useState('dark');
-    const [isParticleMode, setIsParticleMode] = useState(enableParticles);
-    const [showScrollToTop, setShowScrollToTop] = useState(false);
-    const [deviceType, setDeviceType] = useState('desktop');
-    useEffect(() => {
-        // Detect device type
-        const detectDevice = () => {
-            const width = window.innerWidth;
-            if (width < 768) {
-
-                setDeviceType('mobile')}
-            else if (width < 1024) {
-
-                setDeviceType('tablet')}
-            else {
-
-                setDeviceType('desktop')}
+export default function Page() {
         };
         detectDevice();
         window.addEventListener('resize', detectDevice);
         // Load saved theme'
         const savedTheme = localStorage.getItem('ui-theme');
-        if (savedTheme) {
+        if(savedTheme) {
 
             setTheme(savedTheme)}
         // Apply theme'
         applyTheme(savedTheme || 'dark');
         // Scroll to top visibility
         const handleScroll = () => {
-            setShowScrollToTop (window.scrollY > 300) };
-        if (enableScrollEffects) {
+            setShowScrollToTop(window.scrollY > 300) };
+        if(enableScrollEffects) {
 
             window.addEventListener('scroll', handleScroll)}
         return () => {
 
             window.removeEventListener('resize', detectDevice);
-            if (enableScrollEffects) {
+            if(enableScrollEffects) {
 
                 window.removeEventListener('scroll', handleScroll)}
         }}, [enableScrollEffects]);
     const applyTheme = (newTheme) => {
 
         const root = document.documentElement;
-        if (newTheme === 'auto') {
+        if(newTheme === 'auto') {
 
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)).matches;
             root.classList.toggle('dark', prefersDark);
@@ -66,7 +49,7 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
             behavior: 'smooth'
         }) };
     const toggleParticleMode = () => {
-        setIsParticleMode (!isParticleMode) };
+        setIsParticleMode(!isParticleMode) };
     return (<>
       {/* Floating Action Buttons */}
       {showFloatingActions && (<div className="fixed bottom-4 right-4 z-40 space-y-3">
@@ -163,7 +146,7 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
       {/* Theme Auto Mode Button */}'`
       <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => handleThemeChange('auto')} className={`fixed top-4 left-4 z-40 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${theme === 'auto''
             ? 'bg-blue-600 text-white shadow-lg''"`
-            : 'bg-white/10 dark:bg-slate-800/50 text-gray-600 dark:text-gray-400 hover:bg-white/20 dark:hover:bg-slate-700/50'}`} title="Auto theme (follows system preference)">"
+            : 'bg-white/10 dark:bg-slate-800/50 text-gray-600 dark:text-gray-400 hover:bg-white/20 dark:hover:bg-slate-700/50'}`} title="Auto theme(follows system preference)">"
         <span className="flex items-center space-x-2">"
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>

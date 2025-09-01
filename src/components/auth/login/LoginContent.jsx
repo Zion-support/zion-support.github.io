@@ -1,36 +1,10 @@
 import React, { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
-import { useNavigate } from 'react-router-dom';
-import { Eye, EyeOff, Lock, Mail, Sparkles export function LoginContent() {
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
-  const [showPassword, setShowPassword] = useState(false);
-
-  const { login } = useAuth();
-  const navigate = useNavigate();
-
-  const handleSubmit = async (e) => {
-
-    e.preventDefault();
-    setIsLoading(true);
-    setError('');
-
-    try {
-      await login(email, password);
-      router('/dashboard');
-    } catch (err) {
-
-      setError('Login failed. Please try again.');
-    } finally {
-
-      setIsLoading(false);
-    }
+export default function Page() {
   };
 
-  return()
+  return ()
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light p-4">"
       <div className="max-w-md w-full space-y-8">
         {/* Header */}"

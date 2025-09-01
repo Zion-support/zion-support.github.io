@@ -1,5 +1,5 @@
 export function DisputeDashboard() {
-  return()
+  return ()
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6">"
       <h3 className="text-xl font-bold text-white mb-4">Dispute Overview</h3>"
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"

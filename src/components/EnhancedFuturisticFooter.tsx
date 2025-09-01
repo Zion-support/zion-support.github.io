@@ -1,149 +1,19 @@
 <<<<<<< HEAD
-import { Link } from 'react - router - dom';
-import React from 'react';
-export const EnhancedFuturisticFooter: React.FC = () => {
-export const EnhancedFuturisticFooter: React.FC = () => {
-import {
-import { motion } from 'framer - motion';
+import { Link  } from 'react-router-dom';
+ from 'framer-motion';
 
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  Linkedin,
-  Twitter,
-  Facebook,
-=======
-import {
-  Phone, 
-  Mail, 
-  MapPin, 
-  Globe, 
-  Linkedin, 
-  Twitter, 
-  Facebook, 
->>>>>>> main
-  Instagram,
-  Youtube,
-  Github,
-  ArrowRight,
-  Star,
-  Shield,
-  Zap,
-  Brain,
-  Rocket,
-  Heart,
-  Atom,
-  Crown,
-  Sparkles,
-  Flame,
-  Sun,
-  Moon,
-  Globe2,
-  ShieldCheck,
-  Leaf,
-  Scale,
-  Building2,
-  Car,
-  Home,
-  Factory,
-  City,
-  CheckCircle,
-  ArrowUpRight,
-  Play,
-  MailIcon,
-  Calendar,
-  User,
-  Handshake,
-  Briefcase,
-  FileText as FileTextIcon,
-  Users as UsersIcon,
-  Code as CodeIcon,
-  HelpCircle as HelpCircleIcon,
-  DollarSign as DollarSignIcon,
-  Users as UsersIcon2,
-  Calendar as CalendarIcon,
-  Shield as ShieldIcon,
-  BookOpen as BookOpenIcon,
-  Factory as FactoryIcon,
-  ShoppingCart as ShoppingCartIcon,
-  Heart as HeartIcon,
-  TrendingUp as TrendingUpIcon,
-  Building as BuildingIcon,
-  Rocket as RocketIcon,
-  Atom as AtomIcon,
-  Cloud as CloudIcon,
-  Shield as ShieldIcon2,
-  ShoppingCart as ShoppingCartIcon2,
-  Users as UsersIcon3,
-  BookOpen as BookOpenIcon2,
-  FileText as FileTextIcon2,
-  Users as UsersIcon4,
-  Code as CodeIcon2,
-  HelpCircle as HelpCircleIcon2,
-  DollarSign as DollarSignIcon2,
-  Users as UsersIcon5,
-  Calendar as CalendarIcon2,
-  Shield as ShieldIcon3,
-  BookOpen as BookOpenIcon3,
-  Factory as FactoryIcon2,
-  ShoppingCart as ShoppingCartIcon3,
-  Heart as HeartIcon2,
-  TrendingUp as TrendingUpIcon2,
-  Building as BuildingIcon2,
-  Rocket as RocketIcon2,
-  Atom as AtomIcon2,
-  Cloud as CloudIcon2,
-  Shield as ShieldIcon4,
-  ShoppingCart as ShoppingCartIcon4,
-  Users as UsersIcon6,
-  BookOpen as BookOpenIcon4,
-  FileText as FileTextIcon3,
-  Users as UsersIcon7,
-  Code as CodeIcon3,
-  HelpCircle as HelpCircleIcon3,
-  DollarSign as DollarSignIcon3,
-  Users as UsersIcon8,
-  Calendar as CalendarIcon3,
-  Shield as ShieldIcon5,
-  BookOpen as BookOpenIcon5'
-} from 'lucide-react';
+ from 'lucide-react';
 
-  Search,
-  BookOpen,
-  MessageCircle,
-  HelpCircle,
-  DollarSign,
-  Gauge,
-  GitFork,
-  Atom,
-  Target,
-  TrendingUp,
-  CheckCircle,
-  ShoppingCart,
-  Building,
-  MailIcon,
-  BookOpen,
-  Calendar,
-  Settings'
-} from 'lucide-react';
+ from 'lucide-react';
 
-  
 export function EnhancedFuturisticFooter() {
-  
-  
+
         { name: 'Press & Media', href: '/press', featured: false },;
         { name: 'Legal & Privacy', href: '/legal', featured: false };
       ]};
   ];
 
-  
-  
-  
-  
-  
-  
-  return()    <footer className="relative bg-slate-950 border-t border-cyan-400/20 overflow-hidden">
+  return ()    <footer className="relative bg-slate-950 border-t border-cyan-400/20 overflow-hidden">
       {/* Enhanced Animated Background */}"
       <div className="absolute inset-0 bg-futuristic-enhanced">"
         <div className="absolute inset-0 bg-cyber-grid animate-cyber-grid opacity-5"></div>"
@@ -158,7 +28,6 @@ export function EnhancedFuturisticFooter() {
         </div>
       </div>
 
-  
     { name: 'Terms of Service', href: '/terms', description: 'Service terms' },;
     { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },;
     { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },;
@@ -184,12 +53,12 @@ export function EnhancedFuturisticFooter() {
         </div>
 <<<<<<< HEAD
 
-      <div role="button" className="relative">
+      <div  className="relative">
         {/* Main Footer Content */}
-        <div role="button" className="container - responsive py - 16">
+        <div  className="container - responsive py-16">
           {/* Stats Section */}
           <motion.div
-            className="grid grid - cols - 2 md:grid - cols - 4 gap - 8 mb - 16"
+            className="grid grid - cols - 2 md:grid - cols - 4 gap-8 mb-16"
 =======
       "
       <div className="relative">
@@ -226,9 +95,9 @@ export function EnhancedFuturisticFooter() {
 
 <<<<<<< HEAD
           {/* Main Footer Grid */}
-          <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap - 8 mb - 12">
+          <div  className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap-8 mb-12">
             {/* Company Info */}
-            <div role="button" className="lg:col - span - 2">
+            <div  className="lg:col - span -2">
               <motion.div
 =======
           {/* Main Footer Grid */}"
@@ -253,15 +122,12 @@ export function EnhancedFuturisticFooter() {
                 </div>
 <<<<<<< HEAD
               </div>
-              <p className="text - slate - 300 mb - 6 leading - relaxed">
-                Leading provider of cutting - edge AI solutions, cloud services, cybersecurity, and digital transformation expertise.
-=======
+              <p className="text-slate - 300 mb-6 leading -relaxed">
+                Leading provider of cutting - edge AI solutions, cloud services, cybersecurity, and digital transformation expertise.=======
               </div>"
               <p className="text-slate-300 mb-6 leading-relaxed">
-                Leading provider of cutting-edge AI solutions, cloud services, cybersecurity, and digital transformation expertise. 
->>>>>>> main
-                We help businesses innovate and thrive in the digital age.
-              </p>"
+                Leading provider of cutting-edge AI solutions, cloud services, cybersecurity, and digital transformation expertise.>>>>>>> main
+                We help businesses innovate and thrive in the digital age.</p>"
               <div className="space-y-3">"
                 <div className="flex items-center space-x-3 text-slate-300">"
                   <Phone className="w-4 h-4 text-cyan-400"  />"
@@ -299,15 +165,14 @@ export function EnhancedFuturisticFooter() {
             </div>
 <<<<<<< HEAD
 
-            <p className="text - gray - 300 mb - 6 max - w-md">
+            <p className="text-gray - 300 mb-6 max - w-md">
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure,
 =======
             "
             <p className="text-gray-300 mb-6 max-w-md">
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, 
 >>>>>>> main
-              and digital transformation services. Transforming businesses with cutting - edge technology.
-            </p>
+              and digital transformation services.Transforming businesses with cutting - edge technology.</p>
 
             {/* Footer Sections */}
             {footerSections.map((section, index) => (
@@ -416,8 +281,7 @@ export function EnhancedFuturisticFooter() {
           <div className="pt-8 border-t border-slate-800/50">"
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">"
               <div className="text-slate-400 text-sm">
-                © {currentYear} Zion Tech Group. All rights reserved.
-              </div>"
+                © {currentYear} Zion Tech Group.All rights reserved.</div>"
               <div className="flex items-center space-x-6 text-sm text-slate-400">"
                 <span className="flex items-center">"
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2"  />
@@ -512,13 +376,11 @@ export function EnhancedFuturisticFooter() {
     }
   ];
 
-  
     { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar },;
     { name: 'Contact Support', href: '/support', icon: MessageCircle },;
     { name: 'View Status', href: '/status', icon: Gauge }
   ];
 
-  
     { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' },;
     { name: 'Facebook', href: '#', icon: Facebook, color: 'hover:text-blue-600' },;
     { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-400' },;
@@ -526,12 +388,11 @@ export function EnhancedFuturisticFooter() {
     { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-400' }
   ];
 
-  
     email: 'info@ziontechgroup.com',
     address: '123 Innovation Drive, Tech City, TC 12345'
 =======
 '
-    phone: '+1 (555) 123-4567',;'
+    phone: '+1(555) 123-4567',;'
     email: 'info@ziontechgroup.com','    address: '123 Innovation Drive, Tech City, TC 12345'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   };
@@ -562,8 +423,7 @@ export function EnhancedFuturisticFooter() {
                 </div>
               </div>"
               <p className="text-slate-300 mb-6 max-w-md">
-                Leading provider of innovative technology solutions, helping businesses transform and thrive in the digital age.
-              </p>"
+                Leading provider of innovative technology solutions, helping businesses transform and thrive in the digital age.</p>"
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
                   <a
@@ -584,8 +444,7 @@ export function EnhancedFuturisticFooter() {
                 <MailIcon className="w-5 h-5 text-cyan-400"  />                <span>Stay Updated</span>
               </h3>"
               <p className="text-slate-300 text-sm">
-                Get the latest insights on AI, quantum computing, and technology trends.
-              </p>"
+                Get the latest insights on AI, quantum computing, and technology trends.</p>"
               <form className="space-y-3">
                 <input"
                   type="email"
@@ -611,7 +470,7 @@ export function EnhancedFuturisticFooter() {
           >"
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">"
               <div className="flex items-center space-x-4 text-sm text-slate-400">
-                <span>&copy; {currentYear} Zion Tech Group. All rights reserved.</span>
+                <span>&copy; {currentYear} Zion Tech Group.All rights reserved.</span>
                 <span>•</span>"
                 <Link to="/privacy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link>
                 <span>•</span>"
@@ -631,11 +490,11 @@ export function EnhancedFuturisticFooter() {
 <<<<<<< HEAD
 
             {/* Additional Contact Methods */}
-            <div role="button" className="mt - 12 pt - 8 border - t border - slate - 700">
-              <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6 text - center">
+            <div  className="mt-12 pt - 8 border-t border-slate -700">
+              <div  className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap-6 text-center">
                 <div>
-                  <h4 className="text - sm font - semibold text - slate - 400 mb - 2">Emergency Support</h4>
-                  <p className="text - sm text - slate - 500">Critical issues: +1 302 464 0950</p>
+                  <h4 className="text-sm font - semibold text-slate - 400 mb-2">Emergency Support</h4>
+                  <p className="text-sm text-slate -500">Critical issues: +1 302 464 0950</p>
 =======
             
             {/* Additional Contact Methods */}"
@@ -669,19 +528,19 @@ export function EnhancedFuturisticFooter() {
         <div className="container-responsive py-6">;"
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">;"
             <div className="flex items-center space-x-6 text-sm text-gray-400">;
-              <span>&copy; {currentYear} Zion Tech Group. All rights reserved.</span>"
+              <span>&copy; {currentYear} Zion Tech Group.All rights reserved.</span>"
               <Link to = "/privacy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link>"
               <Link to="/terms" className="hover:text-cyan-400 transition-colors">Terms of Service</Link>"
               <Link to="/cookies" className="hover:text-cyan-400 transition-colors">Cookie Policy</Link>
             </div>
 <<<<<<< HEAD
 
-            <div role="button" className="flex items - center space - x-4">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={scrollToTop}
-                className="p - 2 bg - slate - 700 / 50 rounded - lg text - gray - 400 hover:text - cyan - 400 hover:bg - slate - 600 / 50 transition - all duration - 300 transform hover:scale - 110"
-                aria - label="Scroll to top"
+            <div  className="flex items - center space - x-4">
+              <button     onClick={scrollToTop}
+                className="p - 2 bg-slate - 700 / 50 rounded-lg text-gray - 400 hover:text-cyan - 400 hover:bg-slate - 600 / 50 transition - all duration - 300 transform hover:scale -110"
+                
               >
-                <ArrowUpRight className="w - 5 h - 5 rotate - 45" />;
+                <ArrowUpRight className="w-5 h-5 rotate -45" />;
               </button>;
 =======
             "
@@ -689,7 +548,7 @@ export function EnhancedFuturisticFooter() {
               <button
                 onClick={scrollToTop}"
                 className="p-2 bg-slate-700/50 rounded-lg text-gray-400 hover:text-cyan-400 hover:bg-slate-600/50 transition-all duration-300 transform hover:scale-110"
-                aria-label="Scroll to top"
+                
               >"
                 <ArrowUpRight className="w-5 h-5 rotate-45"  />;              </button>;
 >>>>>>> main

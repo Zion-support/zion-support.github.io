@@ -15,17 +15,13 @@ interface StatsSectionProps extends React.PropsWithChildren<{}> {
 
 const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
 
-  
-  
   const [counts, setCounts] = useState<any>({});
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   useEffect(() => {
-    if (isInView) {
+    if(isInView) {
 
-      
-          
           let current = 0;
           
           const countTimer = setInterval(: unknown {
@@ -43,8 +39,8 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
       return : unknown clearTimeout(timer)}
   }, [isInView, stats]);
 
-  return()
-    <section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/80 to-zion-slate-dark" role="region" aria-labelledby="stats-heading">"
+  return ()
+    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/80 to-zion-slate-dark" role="region" aria-labelledby="stats-heading">"
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div"
           className="text-center mb-16"

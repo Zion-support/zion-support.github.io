@@ -4,8 +4,7 @@ interface TalentProfileProps extends TalentProfileType {}
 export default function TalentProfile(props: TalentProfileProps) {
   const { profile_picture_url, full_name, bio, skills } = props;
 
-  return (
-    <div className="space-y-4" data-testid="talent-profile">
+  return (<div className="space-y-4" data-testid="talent-profile">
       <div className="flex items-center space-x-4">
         <Avatar className="h-20 w-20">
           <AvatarImage src={profile_picture_url} alt={full_name}  />

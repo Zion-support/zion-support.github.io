@@ -1,19 +1,7 @@
 import React, { useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Shield, AlertTriangle, CheckCircle, XCircle, Download, Settings, RefreshCw, Loader2, FileText, BarChart3, Clock, Play, Square } from 'lucide-react';
-import { useSecurityCompliance } from "../hooks/useSecurityCompliance";"
-import { useAnalytics } from "../hooks/useAnalytics";
-export const SecurityComplianceDashboard = ({ className = '' }) => {
-
-    const { trackEvent } = useAnalytics({
-
-        enableTracking: true,
-        enableUserBehaviorTracking: true
-    });
-    const [activeTab, setActiveTab] = useState('overview');
-    const [showSettings, setShowSettings] = useState(false);
-    const [copied, setCopied] = useState(false);
-    const { securityEvents, complianceRules, securityMetrics, isMonitoring, isComplianceChecking, startMonitoring, stopMonitoring, addSecurityEvent, updateEventStatus, addComplianceRule, checkCompliance, generateSecurityReport, exportAuditLog, configureSecurity } = useSecurityCompliance();
+import { motion, AnimatePresence  } from 'framer-motion';
+export default function Page() {
+ = useSecurityCompliance();
     const handleStartMonitoring = useCallback(() => {
         startMonitoring();
         trackEvent('security',dashboard',monitoring_started')}, [startMonitoring, trackEvent]);
@@ -54,7 +42,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
         trackEvent('security',dashboard',compliance_rule_added')}, [addComplianceRule, trackEvent]);
     const getSeverityColor = (severity) => {
 
-        switch (severity) {
+        switch(severity) {
 
             case 'critical': return 'text-red-600 bg-red-100';
             case 'high': return 'text-orange-600 bg-orange-100';
@@ -64,7 +52,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
     };
     const getStatusColor = (status) => {
 
-        switch (status) {
+        switch(status) {
 
             case 'compliant': return 'text-green-600 bg-green-100';
             case 'non_compliant': return 'text-red-600 bg-red-100';
@@ -73,7 +61,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
     };
     const getThreatLevelColor = (level) => {
 
-        switch (level) {
+        switch(level) {
 
             case 'critical': return 'text-red-600 bg-red-100 border-red-200';
             case 'high': return 'text-orange-600 bg-orange-100 border-orange-200';
@@ -465,8 +453,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">"
                   <h4 className="font-medium text-gray-900 dark:text-white mb-3">Security Report</h4>"
                   <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                    Generate a comprehensive security report with current metrics and recommendations.
-                  </p>"
+                    Generate a comprehensive security report with current metrics and recommendations.</p>"
                   <button onClick={handleGenerateReport} className="w-full px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">"
                     {copied ? (<span className="flex items-center justify-center space-x-2">"
                         <CheckCircle className="w-4 h-4"/>
@@ -481,8 +468,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">"
                   <h4 className="font-medium text-gray-900 dark:text-white mb-3">Audit Log Export</h4>"
                   <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                    Export the complete security audit log for compliance and analysis purposes.
-                  </p>"
+                    Export the complete security audit log for compliance and analysis purposes.</p>"
                   <button onClick={handleExportAuditLog} className="w-full px-4 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover:bg-green-700">"
                     <span className="flex items-center justify-center space-x-2">"
                       <Download className="w-4 h-4"/>

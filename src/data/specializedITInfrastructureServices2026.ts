@@ -33,8 +33,7 @@ export interface SpecializedITInfrastructureService2026 {
   marketSize?: string}
 
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastructureService2026[] =
-  [
-    // 5G Enterprise Network Solutions
+  [// 5G Enterprise Network Solutions
     {
 
       id: '5g-enterprise-network-solutions-2026',
@@ -50,7 +49,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
         '5G SA/NSA network deployment',Network slicing for QoS',Edge computing integration',IoT device management',Network security & monitoring',Performance optimization',Multi-site connectivity',Failover & redundancy',Analytics & reporting',24/7 support',
       ],
       benefits: ['
-        '10x faster data transfer',Ultra-low latency (<1ms),Massive IoT device support',Enhanced security features',Future-proof infrastructure',
+        '10x faster data transfer',Ultra-low latency(<1ms),Massive IoT device support',Enhanced security features',Future-proof infrastructure',
       ],
       useCases: ['
         'Smart manufacturing',Autonomous vehicles',Remote surgery',AR/VR applications',Industrial IoT',
@@ -187,11 +186,11 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
       competitors: ['AWS',Microsoft Azure',Google Cloud',VMware',IBM'],
       marketSize: '$145.8 billion by 2026'},
 
-    // Software-Defined Networking (SDN)
+    // Software-Defined Networking(SDN)
     {
 
       id: 'software-defined-networking-sdn-2026',
-      title: 'Software-Defined Networking (SDN) 2026',
+      title: 'Software-Defined Networking(SDN) 2026',
       description:'
         'Advanced SDN solution that centralizes network control, automates configuration, and provides programmatic network management for improved agility and efficiency.',
       category: 'IT & Infrastructure',
@@ -295,11 +294,11 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
       ],
       marketSize: '$43.4 billion by 2026'},
 
-    // Network Function Virtualization (NFV)
+    // Network Function Virtualization(NFV)
     {
 
       id: 'network-function-virtualization-nfv-2026',
-      title: 'Network Function Virtualization (NFV) 2026',
+      title: 'Network Function Virtualization(NFV) 2026',
       description:'
         'NFV platform that virtualizes network functions, enabling flexible deployment, scaling, and management of network services on standard hardware.',
       category: 'IT & Infrastructure',

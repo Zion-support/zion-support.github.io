@@ -3,18 +3,17 @@ import { MessageCircle, Mic, MicOff, Send, Bot, User, Sparkles, X, Minimize2, Ma
     "I'd be happy to help you with that! Let me provide you with some information about our AI development services.","
     "That's a great question! Our cloud infrastructure solutions are designed to scale with your business needs.","
     "Based on your requirements, I'd recommend starting with our cybersecurity assessment package.","
-    "We have extensive experience in that area. Let me connect you with one of our specialists.","
+    "We have extensive experience in that area.Let me connect you with one of our specialists.","
     "I can help you understand our pricing structure and find the best solution for your budget."
 ];
 export function AIChatAssistant() {
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
-    const [messages, setMessages] = useState([
-        {
+    const [messages, setMessages] = useState([{
 
             id: '1',
             type: 'assistant',"
-            content: "Hello! I'm Zion AI, your personal technology consultant. How can I help you today?",
+            content: "Hello! I'm Zion AI, your personal technology consultant.How can I help you today?",
             timestamp: new Date()
 
     ]);
@@ -29,7 +28,7 @@ export function AIChatAssistant() {
     useEffect(() => {
         scrollToBottom()}, [messages]);
     const handleSendMessage = async () => {
-        if (!inputValue.trim())
+        if(!inputValue.trim())
             return;
         const userMessage = {
 
@@ -37,7 +36,6 @@ export function AIChatAssistant() {
             type: 'user',
             content: inputValue,
   timestamp: new Date()
-        
 
 <<<<<<< HEAD
     MessageCircle,
@@ -55,9 +53,6 @@ export function AIChatAssistant() {
 
 >>>>>>> main
 
-
-
-
 };
         setMessages(prev => [...prev, userMessage]);
         setInputValue('');
@@ -71,18 +66,12 @@ export function AIChatAssistant() {
                 type: 'assistant',
                 content: randomResponse,
   timestamp: new Date()
-            
-
-
-
-
-
 
 };
             setMessages(prev => [...prev, aiMessage]);
             setIsTyping(false)}, 1500 + Math.random() * 1000)};
     const handleVoiceInput = () => {
-        if (!isListening) {
+        if(!isListening) {
 
             setIsListening(true);
             // Simulate voice recognition
@@ -97,13 +86,13 @@ export function AIChatAssistant() {
     };
     const handleKeyPress = (e) => {
 
-        if (e.key === 'Enter' && !e.shiftKey) {
+        if(e.key === 'Enter' && !e.shiftKey) {
 
             e.preventDefault();
             handleSendMessage()}
     };
     const toggleChat = () => {
-        if (isOpen) {
+        if(isOpen) {
 
             setIsMinimized(!isMinimized)}
         else {
@@ -111,13 +100,13 @@ export function AIChatAssistant() {
             setIsOpen(true);
             setIsMinimized(false)}
     };
-    if (!isOpen) {
+    if(!isOpen) {
 "
         return (<button onClick={toggleChat} className="fixed bottom-4 right-4 p-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 group" title="Chat with Zion AI">"
         <MessageCircle className="w-6 h-6"/>"
         <div className="absolute -top-1 -right-1 w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>
       </button>)}
-    if (isMinimized) {
+    if(isMinimized) {
 "
         return (<div className="fixed bottom-4 right-4 z-50">"
         <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">"

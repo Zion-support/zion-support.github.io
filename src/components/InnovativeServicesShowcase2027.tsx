@@ -1,54 +1,12 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from "../data / innovativeServices2027";
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
+import { <<<<<<< HEAD import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from '../data/innovativeServices2027';
 
-  Brain,
-  Atom,
-  Rocket,
-  Shield,
-  Dna,
-  Microscope,
-  Cpu,
-  Zap,
-  Globe,
-  Lock,
-  Eye,
-  Network,
-  TrendingUp,
-  Star,
-  ArrowRight,
-  ChevronDown,
-  ChevronUp,
-  ExternalLink,
-  Phone,
-  Mail,
-  MapPin'
-} from 'lucide-react';
-
-const categoryColors: { [key: string]: string } = {
-
-  'AI & Consciousness': 'from-purple-500 to-pink-500',Quantum AI': 'from-blue-500 to-cyan-500',Autonomous AI': 'from-green-500 to-emerald-500',Quantum Computing': 'from-indigo-500 to-purple-500',Quantum Finance': 'from-yellow-500 to-orange-500',Space Technology': 'from-purple-500 to-blue-500',Quantum Space': 'from-cyan-500 to-blue-500',Biotechnology': 'from-green-500 to-teal-500',Quantum Medicine': 'from-teal-500 to-blue-500',Quantum Security': 'from-red-500 to-pink-500',Nanotechnology': 'from-gray-500 to-slate-500',Neural Technology': 'from-violet-500 to-purple-500'
-};
-
-export const InnovativeServicesShowcase2027: React.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect ( () => {
-    const observer = new IntersectionObserver (; ([entry]) => {;
-        if (entry.isIntersecting) {;
-          setIsVisible (true) }
+export default function Page() {
       },
       { threshold: 0.1 }
     );
 
-    
-    if (element) {
+    if(element) {
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
@@ -56,11 +14,8 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
     return () => observer.disconnect()}, []);
 
-  
-  
-    setExpandedService (expandedService === serviceId ? null : serviceId) };
+    setExpandedService(expandedService === serviceId ? null : serviceId) };
 
-  
   ;
 =======
 '
@@ -113,8 +68,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 "
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Experience the future of technology with our cutting-edge 2027 services.'
-            From quantum computing to AI consciousness, we're pushing the boundaries of what's possible.
-          </p>
+            From quantum computing to AI consciousness, we're pushing the boundaries of what's possible.</p>
         </motion.div>
 
         {/* Category Filter */}
@@ -136,34 +90,25 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
   { duration: 0.8,
   delay: 0.2
 
-
-
-
-
-
 }}"
           className="mb-12"
 "
           <div className="flex flex-wrap justify-center gap-3">
             <button'
               onClick={() => setSelectedCategory('All')}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-
-                selectedCategory === 'All''
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === 'All''
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25''
                   : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white';`
               }`};
             >;
               All Categories;
             </button>;
-            {serviceCategories2027.map ( (category) => {;
+            {serviceCategories2027.map((category) => {;
               
-              return()                <button
+              return ()                <button
                   key = {category}
                   onClick={() => setSelectedCategory(category)}`
-                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 ${
-
-                    selectedCategory === category'
+                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 ${selectedCategory === category'
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25''
                       : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white'`
                   }`};
@@ -186,7 +131,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
   { duration: 0.8,
   delay: 0.4 }}"          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {filteredServices.map ( (service, index) => (;
+          {filteredServices.map((service, index) => (;
             <motion.div
               key={service.id}
               initial = {
@@ -205,11 +150,6 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
   { duration: 0.6,
   delay: index * 0.1
-
-
-
-
-
 
 }}"
               className="group relative"
@@ -239,7 +179,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
                   ))}
                   {service.technology.length > 3 && ("
                     <span className="px-3 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full border border-zion-purple/30">
-                      +{service.technology.length - 3} more
+                      +{service.technology.length-3} more
                     </span>) }
                 </div>
 
@@ -363,9 +303,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
               Ready to Transform Your Business?
             </h3>"
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Our expert team is ready to help you implement these cutting-edge solutions.
-              Get in touch to discuss your specific needs and discover how we can drive innovation in your organization.
-            </p>
+              Our expert team is ready to help you implement these cutting-edge solutions.Get in touch to discuss your specific needs and discover how we can drive innovation in your organization.</p>
 "
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">"
               <div className="flex items-center justify-center gap-3 text-zion-cyan">"

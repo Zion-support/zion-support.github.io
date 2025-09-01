@@ -1,75 +1,7 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Users, Award, Star, Globe, CheckCircle, ArrowRight, Linkedin, Github, Mail, Shield, Zap, Brain, Cloud, Database } from 'lucide-react';
-const teamMembers = [
-    {
-
-        id: 1,
-        name: "Dr. Sarah Chen","
-        role: "Chief Technology Officer","
-        expertise: "AI & Machine Learning","
-        experience: "15+ years","
-        avatar: "/avatars/sarah-chen.jpg","
-        bio: "Leading expert in artificial intelligence with PhD from MIT. Specializes in computer vision and natural language processing.","
-        skills["Machine Learning", "Computer Vision", "Deep Learning", "Python", "TensorFlow"],;"
-        achievements["50+ AI Projects", "15 Research Papers", "AI Innovation Award 2023"],;
-        rating: 4.9,
-        projects: 45,"
-        location: "San Francisco, CA","
-        linkedin: "https://linkedin.com/in/sarah-chen","
-        github: "https://github.com/sarahchen-ai"
-    },
-    {
-
-        id: 2,"
-        name: "Michael Rodriguez","
-        role: "Senior Software Architect","
-        expertise: "Cloud & Infrastructure","
-        experience: "12+ years","
-        avatar: "/avatars/michael-rodriguez.jpg","
-        bio: "Cloud infrastructure specialist with extensive experience in AWS, Azure, and Google Cloud. Expert in scalable architecture design.","
-        skills["AWS", "Docker", "Kubernetes", "Microservices", "DevOps"],;"
-        achievements["100+ Cloud Projects", "AWS Solutions Architect", "DevOps Excellence Award"],;
-        rating: 4.8,
-        projects: 78,"
-        location: "Austin, TX","
-        linkedin: "https://linkedin.com/in/michael-rodriguez","
-        github: "https://github.com/mrodriguez-cloud"
-    },
-    {
-
-        id: 3,"
-        name: "Emily Thompson","
-        role: "Lead Frontend Developer","
-        expertise: "Web & Mobile Development","
-        experience: "10+ years","
-        avatar: "/avatars/emily-thompson.jpg","
-        bio: "Frontend specialist with expertise in React, React Native, and modern web technologies. Passionate about user experience design.","
-        skills["React", "React Native", "TypeScript", "UI/UX", "Performance"],;"
-        achievements["80+ Web Apps", "Mobile App Store Featured", "UX Design Award"],;
-        rating: 4.9,
-        projects: 92,"
-        location: "New York, NY","
-        linkedin: "https://linkedin.com/in/emily-thompson","
-        github: "https://github.com/emilythompson-dev"
-    },
-    {
-
-        id: 4,"
-        name: "David Kim","
-        role: "Data Science Lead","
-        expertise: "Data Analytics & BI","
-        experience: "13+ years","
-        avatar: "/avatars/david-kim.jpg","
-        bio: "Data science expert specializing in big data analytics, business intelligence, and predictive modeling for enterprise clients.","
-        skills["Python", "SQL", "Tableau", "Apache Spark", "Machine Learning"],;"
-        achievements["60+ Analytics Projects", "Data Science Certification", "BI Innovation Award"],;
-        rating: 4.8,
-        projects: 67,"
-        location: "Seattle, WA","
-        linkedin: "https://linkedin.com/in/david-kim","
-        github: "https://github.com/davidkim-data"
-    },
+import { motion, AnimatePresence  } from 'framer-motion';
+export default function Page() {
+,
     {
 
         id: 5,"
@@ -105,8 +37,7 @@ const teamMembers = [
         github: "https://github.com/alexjohnson-devops"
     }
 ];
-const expertiseAreas = [
-    {
+const expertiseAreas = [{
 "
         name: "Artificial Intelligence","
         icon: <Brain className="w-8 h-8"/>,"
@@ -173,8 +104,8 @@ const stats = ["
     { icon: <Star className="w-6 h-6"/>, value: "4.9/5", label: "Average Rating" },"
     { icon: <Globe className="w-6 h-6"/>, value: "25+", label: "Countries Served" }
 ];
-    const [selectedMember, setSelectedMember] = useState (null) ;
-    const [hoveredExpertise, setHoveredExpertise] = useState (null) ;
+    const [selectedMember, setSelectedMember] = useState(null);
+    const [hoveredExpertise, setHoveredExpertise] = useState(null);
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -231,8 +162,7 @@ const stats = ["
           </h2>"
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
             Our world-class team of technology experts brings together decades of experience 
-            across all major technology domains. Get to know the minds behind our success.
-          </p>
+            across all major technology domains.Get to know the minds behind our success.</p>
 
           {/* Stats */}"
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
@@ -390,7 +320,7 @@ const stats = ["
                           {skill}
                         </span>))}"
                       {member.skills.length > 3 && (<span className="text-zion-cyan/60 text-xs">
-                          +{member.skills.length - 3} more
+                          +{member.skills.length-3} more
                         </span>) }
                     </div>
                   </div>
@@ -492,8 +422,7 @@ const stats = ["
                 Ready to Work with Our Experts?
               </h3>"
               <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-                Our team is ready to bring your vision to life. Let's discuss how we can help you achieve your technology goals.
-              </p>"
+                Our team is ready to bring your vision to life.Let's discuss how we can help you achieve your technology goals.</p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
                   Schedule Consultation

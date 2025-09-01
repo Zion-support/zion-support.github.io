@@ -1,118 +1,9 @@
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react.ts';
-import { INNOVATIVE_SERVICES_2025, INNOVATIVE_SERVICE_CATEGORIES_2025, INNOVATIVE_SERVICE_SUBCATEGORIES_2025, INNOVATIVE_PRICING_TIERS_2025, INNOVATIVE_CONTACT_INFO_2025, INNOVATIVE_SERVICE_GUARANTEES_2025  } from '@/data / innovativeServices2025';
-export default React.memo (function InnovativeServicesShowcase2025 (...args: any[]) : any {
-import { Brain,
-import { motion, AnimatePresence  } from 'framer - motion.ts';
-=======
-<<<<<<< HEAD
-import { Brain, 
->>>>>>> main
+import React, { useState, useEffect } from 'react';
+import { INNOVATIVE_SERVICES_2025, INNOVATIVE_SERVICE_CATEGORIES_2025, INNOVATIVE_SERVICE_SUBCATEGORIES_2025, INNOVATIVE_PRICING_TIERS_2025, INNOVATIVE_CONTACT_INFO_2025, INNOVATIVE_SERVICE_GUARANTEES_2025 } from '@/data / innovativeServices2025';
 
-  Shield,
-  Cloud,
-  Rocket,
-  BarChart3,
-  Briefcase,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Search,
-  Filter,
-  Grid,
-  List,
-  Zap,
-  Lock,
-  Database,
-  Users,
-  TrendingUp,
-  Globe,
-  Cpu,
-  Heart,
-  ShoppingCart,
-  BookOpen,
-  MessageCircle,
-  HelpCircle,
-  DollarSign,
-  Gauge,
-  Workflow,
-  Atom,
-  Target,
-  Award,
-  Code,
-  Truck,
-  Building,
-  PenTool,
-  Eye,
-  Server,
-  Smartphone,
-  Network,
-  Clock,
-  X'
- } from 'lucide-react.ts';
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-export default function InnovativeServicesShowcase2025(...args: any[]): any {
-
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [viewMode, setViewMode] = useState<any>('grid');
-  const [sortBy, setSortBy] = useState<any>('name');
-  const [sortOrder, setSortOrder] = useState<any>('desc');
-  const [selectedService, setSelectedService] = useState<any>(null);
-  const [showModal, setShowModal] = useState(false);
-
-<<<<<<< HEAD
-  const filteredServices = INNOVATIVE_SERVICES_2025.filter (service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
-                         service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
-                         service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
-    return matchesCategory && matchesSearch;
-  }) ;
-
-  const sortedServices = [...filteredServices].sort ( (a, b) => {
-    let aValue, bValue;
-
-=======
-  
-  
-    
-    return matchesCategory && matchesSearch}) ;
-
-  
-    return matchesCategory && matchesSearch});
-
-  
->>>>>>> main
-    switch (sortBy) {
-
-      case 'price':
-        aValue = a.price;
-        bValue = b.price;
-        break;
-      case 'rating':
-        aValue = a.rating;
-        bValue = b.rating;
-        break;
-      case 'aiScore':
-        aValue = a.aiScore;
-        bValue = b.aiScore;
-        break;
-      case 'name':
-        aValue = a.title;
-        bValue = b.title;
-        break;
-      default:
-        aValue = a.title;
-        bValue = b.title}
-
-    if (sortOrder === 'asc') {
+export default function Page() {
+    if(sortOrder === 'asc') {
 
       return aValue > bValue ? 1 : -1} else {
 
@@ -121,10 +12,10 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
 
 <<<<<<< HEAD
   const getCategoryIcon = (category: anystring) => {
-    if (category === 'all') return < Rocket className="w - 6 h - 6" />;
+    if(category === 'all') return < Rocket className="w-6 h-6" />;
     return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.icon ?
-      <span className="text - 2xl">{INNOVATIVE_SERVICE_CATEGORIES_2025[category].icon}</span> :
-      <Rocket className="w - 6 h - 6" />;
+      <span className="text-2xl">{INNOVATIVE_SERVICE_CATEGORIES_2025[category].icon}</span> :
+      <Rocket className="w-6 h-6" />;
   };
 =======
   
@@ -133,28 +24,26 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
       <Rocket className="w-6 h-6"  />};
 >>>>>>> main
 
-  
     return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.color || 'from-gray-500 to-slate-500'};
 
-  
     setShowModal(true)};
 
 <<<<<<< HEAD
   const closeModal = () => {
-    setShowModal (false) ;
-    setSelectedService (null) ;
+    setShowModal(false) ;
+    setSelectedService(null) ;
   };
 
-  return (<div role="button" className="min - h-screen futuristic - bg">
+  return (<div  className="min - h-screen futuristic -bg">
       {/* Matrix Rain Background Effect */}
-      <div role="button" className="matrix - rain"></div>
+      <div  className="matrix -rain"></div>
 
       {/* Hero Section */}
-      <div role="button" className="relative overflow - hidden">
-        <div role="button" className="absolute inset - 0 bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20"></div>
-        <div role="button" className="relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 24">
+      <div  className="relative overflow-hidden">
+        <div  className="absolute inset - 0 bg-gradient - to - r from - blue - 600 / 20 to - purple -600 / 20"></div>
+        <div  className="relative max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
-            className="text - center"
+            className="text-center"
 =======
   
     setSelectedService (null) };
@@ -184,8 +73,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
               </span>
             </h1>"
             <p className="futuristic-subheading text-xl md:text-2xl mb-12 max-w-4xl mx-auto">
-              Revolutionary AI-powered, quantum-secure, and autonomous business solutions that transform industries and drive unprecedented growth.
-            </p>"
+              Revolutionary AI-powered, quantum-secure, and autonomous business solutions that transform industries and drive unprecedented growth.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -265,9 +153,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setSelectedCategory(category)}`
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-
-                    selectedCategory === category'
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${selectedCategory === category'
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white''
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'`
                   }`}
@@ -284,17 +170,13 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
               <div className="flex bg-gray-800/50 rounded-lg p-1">
                 <button'
                   onClick={() => setViewMode('grid')}`
-                  className={`p-2 rounded-md transition-all duration-300 ${
-
-                    viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'`
+                  className={`p-2 rounded-md transition-all duration-300 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'`
                   }`}
                 >"
                   <Grid className="w-5 h-5"  />                </button>
                                   <button'
                     onClick={() => setViewMode('list')}`
-                    className={`p-2 rounded-md transition-all duration-300 ${
-
-                      viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'`
+                    className={`p-2 rounded-md transition-all duration-300 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'`
                     }`}
                   >"
                   <List className="w-5 h-5"  />                </button>
@@ -308,12 +190,12 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                   setSortBy(newSortBy as );
                   setSortOrder(newSortOrder as )}}"                className="px-3 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
               >"
-                <option value="name-desc">Name (A-Z)</option>"
-                <option value="name-asc">Name (Z-A)</option>"
-                <option value="price-asc">Price (Low-High)</option>"
-                <option value="price-desc">Price (High-Low)</option>"
-                <option value="rating-desc">Rating (High-Low)</option>"
-                <option value="aiScore-desc">AI Score (High-Low)</option>
+                <option value="name-desc">Name(A-Z)</option>"
+                <option value="name-asc">Name(Z-A)</option>"
+                <option value="price-asc">Price(Low-High)</option>"
+                <option value="price-desc">Price(High-Low)</option>"
+                <option value="rating-desc">Rating(High-Low)</option>"
+                <option value="aiScore-desc">AI Score(High-Low)</option>
               </select>
             </div>
           </div>
@@ -322,7 +204,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
         {/* Services Grid/List */}
         <div className={viewMode === 'grid' ? 'futuristic-grid' : 'space-y-4'}>
           <AnimatePresence>
-            {sortedServices.map ( (service, index) => (<motion.div
+            {sortedServices.map((service, index) => (<motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -367,14 +249,14 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                       </div>
 <<<<<<< HEAD
 
-                      <div role="button" className="flex items - center justify - between">
-                        <span className="text - sm text - gray - 400">Market Price:</span>
-                        <span className="text - sm text - green - 400">{service.marketPrice}</span>
+                      <div  className="flex items - center justify -between">
+                        <span className="text-sm text-gray -400">Market Price:</span>
+                        <span className="text-sm text-green -400">{service.marketPrice}</span>
                       </div>
 
-                      <div role="button" className="flex items - center justify - between">
-                        <span className="text - sm text - gray - 400">ROI:</span>
-                        <span className="text - sm text - yellow - 400">{service.roi}</span>
+                      <div  className="flex items - center justify -between">
+                        <span className="text-sm text-gray -400">ROI:</span>
+                        <span className="text-sm text-yellow-400">{service.roi}</span>
 =======
                       "
                       <div className="flex items-center justify-between">"
@@ -411,13 +293,13 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                     </div>
 <<<<<<< HEAD
 
-                    <div role="button" className="flex - 1">
-                      <div role="button" className="flex items - center gap - 4 mb - 2">
-                        <h3 className="text - xl font - bold text - white">{service.title}</h3>
-                        <span className="text - sm text - gray - 400 capitalize">{service.category}</span>
-                        <div role="button" className="flex items - center gap - 1">
-                          <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />
-                          <span className="text - sm text - gray - 300">{service.rating}</span>
+                    <div  className="flex -1">
+                      <div  className="flex items - center gap-4 mb-2">
+                        <h3 className="text-xl font - bold text-white">{service.title}</h3>
+                        <span className="text-sm text-gray -400 capitalize">{service.category}</span>
+                        <div  className="flex items - center gap-1">
+                          <Star className="w-4 h-4 text-yellow-400 fill -current" />
+                          <span className="text-sm text-gray -300">{service.rating}</span>
 =======
                     "
                     <div className="flex-1">"
@@ -438,8 +320,8 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                     </div>
 <<<<<<< HEAD
 
-                    <div role="button" className="text - right">
-                      <div role="button" className="text - 2xl font - bold text - cyan - 400 mb - 3">
+                    <div  className="text-right">
+                      <div  className="text-2xl font - bold text-cyan - 400 mb-3">
                         {service.currency}{service.price.toLocaleString () }
 =======
                     "
@@ -516,17 +398,17 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                 </div>
 <<<<<<< HEAD
 
-                <div role="button" className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">
+                <div  className="grid grid - cols - 1 lg:grid - cols - 2 gap-8">
                   <div>
-                    <h3 className="text - xl font - bold text - white mb - 4">Service Overview</h3>
-                    <p className="text - gray - 300 mb - 6">{selectedService.description}</p>
+                    <h3 className="text-xl font - bold text-white mb-4">Service Overview</h3>
+                    <p className="text-gray - 300 mb-6">{selectedService.description}</p>
 
-                    <div role="button" className="space - y-4 mb - 6">
-                      <div role="button" className="flex items - center justify - between">
-                        <span className="text - gray - 400">AI Score:</span>
-                        <div role="button" className="flex items - center gap - 2">
-                          <div role="button" className="w - 24 bg - gray - 700 rounded - full h - 3">
-                            <div role="button" className="bg - gradient - to - r from - cyan - 500 to - blue - 500 h - 3 rounded - full"
+                    <div  className="space - y-4 mb-6">
+                      <div  className="flex items - center justify -between">
+                        <span className="text-gray -400">AI Score:</span>
+                        <div  className="flex items - center gap-2">
+                          <div  className="w-24 bg-gray - 700 rounded-full h-3">
+                            <div  className="bg-gradient - to - r from - cyan - 500 to - blue - 500 h-3 rounded-full"
 =======
 "
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -550,19 +432,19 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                       </div>
 <<<<<<< HEAD
 
-                      <div role="button" className="flex items - center justify - between">
-                        <span className="text - gray - 400">Market Price:</span>
-                        <span className="text - green - 400 font - semibold">{selectedService.marketPrice}</span>
+                      <div  className="flex items - center justify -between">
+                        <span className="text-gray -400">Market Price:</span>
+                        <span className="text-green - 400 font -semibold">{selectedService.marketPrice}</span>
                       </div>
 
-                      <div role="button" className="flex items - center justify - between">
-                        <span className="text - gray - 400">ROI:</span>
-                        <span className="text - yellow - 400 font - semibold">{selectedService.roi}</span>
+                      <div  className="flex items - center justify -between">
+                        <span className="text-gray -400">ROI:</span>
+                        <span className="text-yellow-400 font -semibold">{selectedService.roi}</span>
                       </div>
 
-                      <div role="button" className="flex items - center justify - between">
-                        <span className="text - gray - 400">Setup Time:</span>
-                        <span className="text - white">{selectedService.setupTime}</span>
+                      <div  className="flex items - center justify -between">
+                        <span className="text-gray -400">Setup Time:</span>
+                        <span className="text-white">{selectedService.setupTime}</span>
 =======
                       "
                       <div className="flex items-center justify-between">"
@@ -598,13 +480,13 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
 
 <<<<<<< HEAD
                   <div>
-                    <div role="button" className="mb - 6">
-                      <h3 className="text - 2xl font - bold text - cyan - 400 mb - 2">
+                    <div  className="mb-6">
+                      <h3 className="text-2xl font - bold text-cyan - 400 mb-2">
                         {selectedService.currency}{selectedService.price.toLocaleString () }
                       </h3>
-                      <p className="text - gray - 400 mb - 4">One - time setup fee</p>
+                      <p className="text-gray - 400 mb-4">One - time setup fee</p>
 
-                      <div role="button" className="space - y-3">
+                      <div  className="space - y-3">
 =======
                   <div>"
                     <div className="mb-6">"
@@ -671,8 +553,8 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
         </div>
 <<<<<<< HEAD
 
-        <div role="button" className="grid grid - cols - 1 md: anygrid - cols - 2 lg:grid - cols - 3 gap - 6">
-          {Object.entries (INNOVATIVE_SERVICE_GUARANTEES_2025) .map ( ([key, value]) => (<motion.div
+        <div  className="grid grid - cols - 1 md: anygrid - cols - 2 lg:grid - cols - 3 gap-6">
+          {Object.entries(INNOVATIVE_SERVICE_GUARANTEES_2025) .map(([key, value]) => (<motion.div
 =======
         "
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
@@ -697,11 +579,10 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
         <div className="futuristic-card p-8 text-center">"
           <h2 className="futuristic-heading text-4xl mb-6">Ready to Transform Your Business?</h2>"
           <p className="futuristic-subheading text-xl mb-8 max-w-3xl mx-auto">
-            Contact us today to discuss how our innovative services can drive your business forward and deliver exceptional ROI.
-          </p>
+            Contact us today to discuss how our innovative services can drive your business forward and deliver exceptional ROI.</p>
 <<<<<<< HEAD
 
-          <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">
+          <div  className="flex flex - col sm:flex - row gap-4 justify -center">
             <motion.a
 =======
           "
@@ -732,9 +613,9 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
           </div>
 <<<<<<< HEAD
 
-          <div role="button" className="mt - 8 text - center">
-            <p className="text - gray - 400 mb - 2">{INNOVATIVE_CONTACT_INFO_2025.hours}</p>
-            <p className="text - cyan - 400 font - semibold">{INNOVATIVE_CONTACT_INFO_2025.emergency}</p>
+          <div  className="mt-8 text-center">
+            <p className="text-gray - 400 mb-2">{INNOVATIVE_CONTACT_INFO_2025.hours}</p>
+            <p className="text-cyan - 400 font -semibold">{INNOVATIVE_CONTACT_INFO_2025.emergency}</p>
 =======
           "
           <div className="mt-8 text-center">"

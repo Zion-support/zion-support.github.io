@@ -1,5 +1,4 @@
-export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
-    // AI-Powered Content Generation Suite
+export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [// AI-Powered Content Generation Suite
     {
 
         id: "ai-content-generation-suite-2025","

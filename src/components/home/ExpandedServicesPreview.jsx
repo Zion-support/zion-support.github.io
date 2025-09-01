@@ -1,30 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { ArrowRight, Star, Zap, TrendingUp import { SERVICE_CATEGORIES } from '@/data/expandedServices';
-export function ExpandedServicesPreview() {
-    const getCategoryIcon = (category) => {
+import { Link  } from 'react-router-dom';
 
-        switch (category) {
-
-            case 'AI Services': return '🤖';
-            case 'Micro SAAS': return '☁️';
-            case 'IT Services': return '💻';
-            case 'Digital Services': return '🚀';
-            default: return '⚡'}
-    };
-    const getCategoryColor = (category) => {
-
-        switch (category) {
-
-            case 'AI Services': return 'from-purple-500 to-indigo-600';
-            case 'Micro SAAS': return 'from-blue-500 to-cyan-600';
-            case 'IT Services': return 'from-green-500 to-emerald-600';
-            case 'Digital Services': return 'from-orange-500 to-red-600';
-            default: return 'from-gray-500 to-slate-600'}
-    };
+export default function Page() {
+;
     return (<section className="py-20 bg-gradient-to-b from-gray-50 to-white">"
       <div className="container mx-auto px-4">"
         <div className="text-center mb-16">"
@@ -33,8 +11,7 @@ export function ExpandedServicesPreview() {
           </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             From AI-powered automation to micro SAAS solutions, we offer a complete ecosystem of services
-            designed to accelerate your business growth and digital transformation.
-          </p>
+            designed to accelerate your business growth and digital transformation.</p>
         </div>
 
         {/* Service Categories Grid */}"

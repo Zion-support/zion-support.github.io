@@ -1,79 +1,8 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { Badge } from './ui / badge';
-import { Button } from './ui / button';
-import { Card, CardContent, CardHeader, CardTitle } from './ui / card';
-import { Progress } from './ui / progress';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui / tabs';
-=======
->>>>>>> main
+import { <<<<<<< HEAD import { Badge } from './ui / badge';
 
-  User,
-  Settings,
-  Palette,
-  Eye,
-  MousePointer,
-  Smartphone,
-  Monitor,
-  Zap,
-  Heart,
-  Star,
-  MessageCircle,
-  TrendingUp,
-  Accessibility,
-  Languages,
-  ShoppingCart,
-  Activity} from 'lucide-react';
-
-interface UserPreference {
-
-  id: string;
-  name: string;
-  value: string | boolean | number;
-  type: 'boolean' | 'string' | 'number' | 'select';
-  options?: string[];
-  category: 'appearance' | 'accessibility' | 'performance' | 'language';
-  description: string}
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-interface UserActivity {
-
-  id: string;
-  action: string;
-  timestamp: Date;
-  duration?: number;
-  success: boolean;
-  category: 'navigation' | 'interaction' | 'search' | 'purchase'}
-interface AccessibilityFeature {
-
-  id: string;
-  name: string;
-  enabled: boolean;
-  description: string;
-  impact: 'high' | 'medium' | 'low';
-const InteractiveUserExperience: React.FC = () => {
-  const [preferences, setPreferences] = useState<UserPreference[]>([]);
-  const [userActivities, setUserActivities] = useState<UserActivity[]>([]);
-  const [accessibilityFeatures, setAccessibilityFeatures] = useState<
-    AccessibilityFeature[]
-  >([]);
-  const [activeTab, setActiveTab] = useState('preferences');
-  const [isLoading, setIsLoading] = useState(true);
-
-  // Initialize sample data
-  useEffect ( () => {
-    const samplePreferences: UserPreference[] = [
-      {
-
-        id: '1',
-        name: 'Theme',
-        value: 'dark',
-        type: 'select',
-        options: ['light',dark',auto'],
-        category: 'appearance',
-        description: 'Choose your preferred color theme'},
+export default function Page() {
+,
       {
 
         id: '2',
@@ -102,12 +31,11 @@ const InteractiveUserExperience: React.FC = () => {
         description: 'Select your preferred language'},
     ];
 
-    const sampleActivities: UserActivity[] = [
-      {
+    const sampleActivities: UserActivity[] = [{
 
         id: '1',
         action: 'Page Navigation',
-        timestamp: new Date (Date.now () - 300000) ,
+        timestamp: new Date(Date.now () - 300000) ,
         duration: 2,
         success: true,
         category: 'navigation'},
@@ -115,7 +43,7 @@ const InteractiveUserExperience: React.FC = () => {
 
         id: '2',
         action: 'Form Submission',
-        timestamp: new Date (Date.now () - 600000) ,
+        timestamp: new Date(Date.now () - 600000) ,
         duration: 15,
         success: true,
         category: 'interaction'},
@@ -123,14 +51,13 @@ const InteractiveUserExperience: React.FC = () => {
 
         id: '3',
         action: 'Search Query',
-        timestamp: new Date (Date.now () - 900000) ,
+        timestamp: new Date(Date.now () - 900000) ,
         duration: 5,
         success: true,
         category: 'search'},
     ];
 
-    const sampleAccessibility: AccessibilityFeature[] = [
-      {
+    const sampleAccessibility: AccessibilityFeature[] = [{
 
         id: '1',
         name: 'Screen Reader Support',
@@ -167,7 +94,6 @@ const InteractiveUserExperience: React.FC = () => {
     []
   )}, []);
 
-  
       case 'accessibility':"
         return <Accessibility className="w-4 h-4"  />;
       case 'performance':"
@@ -178,7 +104,6 @@ const InteractiveUserExperience: React.FC = () => {
         return <Settings className="w-4 h-4"  />}
   };
 
-  
       case 'interaction':"
         return <User className="w-4 h-4"  />;
       case 'search':"
@@ -189,7 +114,6 @@ const InteractiveUserExperience: React.FC = () => {
         return <Activity className="w-4 h-4"  />}
   };
 
-  
       case 'medium':'
         return 'bg-yellow-500';
       case 'low':'
@@ -197,7 +121,7 @@ const InteractiveUserExperience: React.FC = () => {
       default:'
         return 'bg-gray-500'}  };
 
-  if (isLoading) {
+  if(isLoading) {
 
     return ("
       <div className="flex items-center justify-center min-h-[400px]">"

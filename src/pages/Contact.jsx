@@ -1,50 +1,8 @@
 import React, { useState } from 'react';
-export default function Contact () {
-import {
-import { motion } from 'framer - motion';
+import { motion  } from 'framer-motion';
 
-  Mail,
-  Phone,
-  MapPin,
-  Clock,
-  Send,
-  CheckCircle,
-  MessageSquare,
-  Building,
-  Globe,
-  Linkedin,
-  Twitter,
-  Facebook,
-  Instagram,
-  Github,
-} from 'lucide - react';
-
-const contactMethods = [
-  {
-    icon: Phone,
-    title: 'Phone',
-    value: '+1 302 464 0950',
-    description: 'Call us during business hours',
-    action: 'tel:+13024640950',
-    color: 'from - blue - 500 to - cyan - 500',
-  },
-  {
-    icon: Mail,
-    title: 'Email',
-    value: 'kleber@ziontechgroup.com',
-    description: 'Send us a message time',
-    action: 'mailto:kleber@ziontechgroup.com',
-    color: 'from - purple - 500 to - pink - 500',
-  },
-  {
-    icon: MapPin,
-    title: 'Address',
-    value: '364 E Main St STE 1008',
-    description: 'Middletown, DE 19709',
-    action:
-      'https://maps.google.com/?q = 364 + E+Main + St + STE + 1008 + Middletown + DE + 19709',
-    color: 'from - green - 500 to - emerald - 500',
-  },
+export default function Page() {
+,
   {
     icon: Clock,
     title: 'Business Hours',
@@ -55,41 +13,39 @@ const contactMethods = [
   },
 ];
 
-const socialLinks = [
-  {
+const socialLinks = [{
     name: 'LinkedIn',
     icon: Linkedin,
     url: 'https://linkedin.com / company / ziontechgroup',
-    color: 'hover:text - blue - 500',
+    color: 'hover:text-blue - 500',
   },
   {
     name: 'Twitter',
     icon: Twitter,
     url: 'https://twitter.com / ziontechgroup',
-    color: 'hover:text - sky - 500',
+    color: 'hover:text-sky - 500',
   },
   {
     name: 'Facebook',
     icon: Facebook,
     url: 'https://facebook.com / ziontechgroup',
-    color: 'hover:text - blue - 600',
+    color: 'hover:text-blue - 600',
   },
   {
     name: 'Instagram',
     icon: Instagram,
     url: 'https://instagram.com / ziontechgroup',
-    color: 'hover:text - pink - 500',
+    color: 'hover:text-pink - 500',
   },
   {
     name: 'GitHub',
     icon: Github,
     url: 'https://github.com / ziontechgroup',
-    color: 'hover:text - gray - 400',
+    color: 'hover:text-gray - 400',
   },
 ];
 
-const contactFormFields = [
-  {
+const contactFormFields = [{
     name: 'firstName',
     label: 'First Name',
     type: 'text',
@@ -115,14 +71,14 @@ const contactFormFields = [
     label: 'Phone',
     type: 'tel',
     required: false,
-    placeholder: 'Enter your phone number (optional) ',
+    placeholder: 'Enter your phone number(optional) ',
   },
   {
     name: 'comp',
     label: 'Comp',
     type: 'text',
     required: false,
-    placeholder: 'Enter your comp name (optional) ',
+    placeholder: 'Enter your comp name(optional) ',
   },
   {
     name: 'service',
@@ -142,7 +98,7 @@ const contactFormFields = [
   },
 ];
 
-  const [formData, setFormData] = useState ({
+  const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
@@ -150,13 +106,13 @@ const contactFormFields = [
     comp: '',
     service: '',
     message: '',
-  }) ;
-  const [isSubmitting, setIsSubmitting] = useState (false) ;
-  const [submitSuccess, setSubmitSuccess] = useState (false) ;
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
 
   const handleInputChange = e => {
     const { name, value } = e.target;
-    setFormData (prev => ({
+    setFormData(prev => ({
       ...prev,
       [name]: value,
     }) ) ;
@@ -164,18 +120,18 @@ const contactFormFields = [
 
   const handleSubmit = async e => {
     e.preventDefault () ;
-    setIsSubmitting (true) ;
+    setIsSubmitting(true) ;
 
     // Simulate form submission
-    await new Promise (resolve => setTimeout (resolve, 2000) ) ;
+    await new Promise(resolve => setTimeout (resolve, 2000) ) ;
 
-    setIsSubmitting (false) ;
-    setSubmitSuccess (true) ;
+    setIsSubmitting(false) ;
+    setSubmitSuccess(true) ;
 
     // Reset form after 3 seconds
-    setTimeout ( () => {
-      setSubmitSuccess (false) ;
-      setFormData ({
+    setTimeout(() => {
+      setSubmitSuccess(false) ;
+      setFormData({
         firstName: '',
         lastName: '',
         email: '',
@@ -187,97 +143,95 @@ const contactFormFields = [
     }, 3000) ;
   };
 
-  return (<div className="min - h-screen bg - futuristic">
+  return (<div className="min - h-screen bg-futuristic">
       {/* Hero Section */}
-      <section className="relative pt - 32 pb - 20 overflow - hidden">
-        <div className="absolute inset - 0 bg - gradient - to - br from - zion - cyan / 20 via - zion - purple / 20 to - zion - blue / 20"></div>
-        <div className="absolute inset - 0">
-          <div className="absolute top - 20 left - 20 w - 72 h - 72 bg - zion - cyan / 30 rounded - full blur - 3xl"></div>
-          <div className="absolute bottom - 20 right - 20 w - 96 h - 96 bg - zion - purple / 30 rounded - full blur - 3xl"></div>
+      <section className="relative pt - 32 pb - 20 overflow-hidden">
+        <div className="absolute inset - 0 bg-gradient - to - br from - zion - cyan / 20 via - zion - purple / 20 to - zion -blue / 20"></div>
+        <div className="absolute inset -0">
+          <div className="absolute top - 20 left - 20 w-72 h-72 bg-zion - cyan / 30 rounded-full blur -3xl"></div>
+          <div className="absolute bottom - 20 right - 20 w-96 h-96 bg-zion - purple / 30 rounded-full blur -3xl"></div>
         </div>
 
-        <div className="container - responsive relative z - 10">
+        <div className="container - responsive relative z -10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text - center max - w-4xl mx - auto"
+            className="text-center max - w-4xl mx -auto"
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="inline - flex items - center justify - center w - 20 h - 20 bg - gradient - to - br from - zion - cyan to - zion - purple rounded - 2xl mb - 8"
+              className="inline - flex items - center justify - center w-20 h-20 bg-gradient - to - br from - zion - cyan to - zion - purple rounded-2xl mb-8"
             >
-              <MessageSquare className="w - 10 h - 10 text - white" />
+              <MessageSquare className="w-10 h-10 text-white" />
             </motion.div>
 
-            <h1 className="text - 5xl md:text - 6xl font - bold text - white mb - 6">
-              Get in < span className="text - gradient block">Touch</span>
+            <h1 className="text-5xl md:text-6xl font - bold text-white mb-6">
+              Get in < span className="text-gradient block">Touch</span>
             </h1>
 
-            <p className="text - xl text - zion - slate - light leading - relaxed mb - 8">
+            <p className="text-xl text-zion - slate - light leading - relaxed mb-8">
               Ready to transform your business with cutting - edge technology?
               Let's discuss your project and explore how we can help you achieve
-              your goals.
-            </p>
+              your goals.</p>
           </motion.div>
         </div>
       </section>
 
       {/* Contact Methods */}
-      <section className="py - 20 bg - zion - blue - dark / 50">
-        <div className="container - responsive">
+      <section className="py-20 bg-zion - blue -dark / 50">
+        <div className="container -responsive">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text - center mb - 16"
+            className="text-center mb-16"
           >
-            <h2 className="text - 4xl font - bold text - white mb - 4">
+            <h2 className="text-4xl font - bold text-white mb-4">
               Contact Information
             </h2>
-            <p className="text - xl text - zion - slate - light max - w-3xl mx - auto">
-              Multiple ways to reach us. Choose the method that works best for
-              you.
-            </p>
+            <p className="text-xl text-zion - slate - light max - w-3xl mx -auto">
+              Multiple ways to reach us.Choose the method that works best for
+              you.</p>
           </motion.div>
 
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap-6">
             {contactMethods.map ( (method, index) => (<motion.div
                 key={method.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg - zion - blue - dark / 30 border border - zion - cyan / 20 rounded - 2xl p - 6 text - center hover:border - zion - cyan / 40 transition - all duration - 300 group"
+                className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 text-center hover:border-zion - cyan / 40 transition - all duration -300 group"
               >
                 <div
-                  className={`w - 16 h - 16 bg - gradient - to - br ${method.color} rounded - xl flex items - center justify - center mx - auto mb - 4 group - hover:scale - 110 transition - transform duration - 300`}
+                  className={`w-16 h-16 bg-gradient - to - br ${method.color} rounded-xl flex items - center justify - center mx - auto mb-4 group - hover:scale - 110 transition - transform duration - 300`}
                 >
-                  <method.icon className="w - 8 h - 8 text - white" />
+                  <method.icon className="w-8 h-8 text-white" />
                 </div>
 
-                <h3 className="text - lg font - bold text - white mb - 2">
+                <h3 className="text-lg font - bold text-white mb-2">
                   {method.title}
                 </h3>
-                <p className="text - zion - cyan font - semibold mb - 1">
+                <p className="text-zion - cyan font - semibold mb-1">
                   {method.value}
                 </p>
-                <p className="text - zion - slate - light text - sm mb - 4">
+                <p className="text-zion - slate - light text-sm mb-4">
                   {method.description}
                 </p>
 
                 {method.action && (<a
                     href={method.action}
-                    target={method.action.startsWith ('http') ? '_blank' : null}
+                    target={method.action.startsWith('http') ? '_blank' : null}
                     rel={
-                      method.action.startsWith ('http') ? 'noopener noreferrer'
+                      method.action.startsWith('http') ? 'noopener noreferrer'
                         : null
                     }
-                    className="inline - flex items - center gap - 2 text - zion - cyan hover:text - white transition - colors duration - 300"
+                    className="inline - flex items - center gap-2 text-zion - cyan hover:text-white transition - colors duration -300"
                   >
-                    <span className="text - sm font - medium">Contact</span>
-                    <Send className="w - 4 h - 4" />
+                    <span className="text-sm font -medium">Contact</span>
+                    <Send className="w-4 h-4" />
                   </a>) }
               </motion.div>) ) }
           </div>
@@ -285,46 +239,44 @@ const contactFormFields = [
       </section>
 
       {/* Contact Form */}
-      <section className="py - 20">
-        <div className="container - responsive">
-          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 16 items - start">
+      <section className="py-20">
+        <div className="container -responsive">
+          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap-16 items -start">
             {/* Form */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text - 3xl font - bold text - white mb - 6">
+              <h2 className="text-3xl font - bold text-white mb-6">
                 Send Us a Message
               </h2>
-              <p className="text - zion - slate - light mb - 8 leading - relaxed">
+              <p className="text-zion - slate - light mb-8 leading -relaxed">
                 Fill out the form below and we'll get back to you within 24
-                hours. We're excited to learn about your project and discuss how
-                we can help.
-              </p>
+                hours.We're excited to learn about your project and discuss how
+                we can help.</p>
 
               {submitSuccess ? (<motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="bg - green - 500 / 20 border border - green - 500 / 40 rounded - 2xl p - 8 text - center"
+                  className="bg-green - 500 / 20 border border-green - 500 / 40 rounded-2xl p - 8 text-center"
                 >
-                  <CheckCircle className="w - 16 h - 16 text - green - 400 mx - auto mb - 4" />
-                  <h3 className="text - 2xl font - bold text - white mb - 2">
+                  <CheckCircle className="w-16 h-16 text-green - 400 mx - auto mb-4" />
+                  <h3 className="text-2xl font - bold text-white mb-2">
                     Message Sent!
                   </h3>
-                  <p className="text - green - 200">
-                    Thank you for reaching out. We'll get back to you within 24
-                    hours.
-                  </p>
+                  <p className="text-green -200">
+                    Thank you for reaching out.We'll get back to you within 24
+                    hours.</p>
                 </motion.div>) : (<form onSubmit={handleSubmit} className="space - y-6">
-                  <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">
-                    {contactFormFields.slice (0, 2) .map (field => (<div key={field.name}>
+                  <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">
+                    {contactFormFields.slice(0, 2) .map(field => (<div key={field.name}>
                         <label
                           htmlFor={field.name}
-                          className="block text - white font - medium mb - 2"
+                          className="block text-white font - medium mb-2"
                         >
                           {field.label}{' '}
-                          {field.required && (<span className="text - red - 400">*</span>) }
+                          {field.required && (<span className="text-red -400">*</span>) }
                         </label>
                         <input
                           type={field.type}
@@ -334,19 +286,19 @@ const contactFormFields = [
                           onChange={handleInputChange}
                           required={field.required}
                           placeholder={field.placeholder}
-                          className="w - full px - 4 py - 3 bg - zion - blue - dark / 50 border border - zion - cyan / 20 rounded - xl text - white placeholder - zion - slate - light focus:border - zion - cyan focus:outline - none transition - colors duration - 300"
+                          className="w-full px-4 py-3 bg-zion - blue - dark / 50 border border-zion - cyan / 20 rounded-xl text-white placeholder - zion - slate - light focus:border-zion - cyan focus:outline - none transition - colors duration -300"
                         />
                       </div>) ) }
                   </div>
 
-                  <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">
-                    {contactFormFields.slice (2, 4) .map (field => (<div key={field.name}>
+                  <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">
+                    {contactFormFields.slice(2, 4) .map(field => (<div key={field.name}>
                         <label
                           htmlFor={field.name}
-                          className="block text - white font - medium mb - 2"
+                          className="block text-white font - medium mb-2"
                         >
                           {field.label}{' '}
-                          {field.required && (<span className="text - red - 400">*</span>) }
+                          {field.required && (<span className="text-red -400">*</span>) }
                         </label>
                         <input
                           type={field.type}
@@ -356,19 +308,19 @@ const contactFormFields = [
                           onChange={handleInputChange}
                           required={field.required}
                           placeholder={field.placeholder}
-                          className="w - full px - 4 py - 3 bg - zion - blue - dark / 50 border border - zion - cyan / 20 rounded - xl text - white placeholder - zion - slate - light focus:border - zion - cyan focus:outline - none transition - colors duration - 300"
+                          className="w-full px-4 py-3 bg-zion - blue - dark / 50 border border-zion - cyan / 20 rounded-xl text-white placeholder - zion - slate - light focus:border-zion - cyan focus:outline - none transition - colors duration -300"
                         />
                       </div>) ) }
                   </div>
 
-                  <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">
-                    {contactFormFields.slice (4, 6) .map (field => (<div key={field.name}>
+                  <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">
+                    {contactFormFields.slice(4, 6) .map(field => (<div key={field.name}>
                         <label
                           htmlFor={field.name}
-                          className="block text - white font - medium mb - 2"
+                          className="block text-white font - medium mb-2"
                         >
                           {field.label}{' '}
-                          {field.required && (<span className="text - red - 400">*</span>) }
+                          {field.required && (<span className="text-red -400">*</span>) }
                         </label>
                         {field.type === 'select' ? (<select
                             id={field.name}
@@ -376,10 +328,10 @@ const contactFormFields = [
                             value={formData[field.name]}
                             onChange={handleInputChange}
                             required={field.required}
-                            className="w - full px - 4 py - 3 bg - zion - blue - dark / 50 border border - zion - cyan / 20 rounded - xl text - white focus:border - zion - cyan focus:outline - none transition - colors duration - 300"
+                            className="w-full px-4 py-3 bg-zion - blue - dark / 50 border border-zion - cyan / 20 rounded-xl text-white focus:border-zion - cyan focus:outline - none transition - colors duration -300"
                           >
                             <option value="">Select a service</option>
-                            {field.options.map (option => (<option key={option} value={option}>
+                            {field.options.map(option => (<option key={option} value={option}>
                                 {option}
                               </option>) ) }
                           </select>) : (<input
@@ -390,7 +342,7 @@ const contactFormFields = [
                             onChange={handleInputChange}
                             required={field.required}
                             placeholder={field.placeholder}
-                            className="w - full px - 4 py - 3 bg - zion - blue - dark / 50 border border - zion - cyan / 20 rounded - xl text - white placeholder - zion - slate - light focus:border - zion - cyan focus:outline - none transition - colors duration - 300"
+                            className="w-full px-4 py-3 bg-zion - blue - dark / 50 border border-zion - cyan / 20 rounded-xl text-white placeholder - zion - slate - light focus:border-zion - cyan focus:outline - none transition - colors duration -300"
                           />) }
                       </div>) ) }
                   </div>
@@ -398,9 +350,9 @@ const contactFormFields = [
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text - white font - medium mb - 2"
+                      className="block text-white font - medium mb-2"
                     >
-                      Message < span className="text - red - 400">*</span>
+                      Message < span className="text-red -400">*</span>
                     </label>
                     <textarea
                       id="message"
@@ -410,14 +362,14 @@ const contactFormFields = [
                       required
                       rows={6}
                       placeholder="Tell us about your project, goals, and how we can help..."
-                      className="w - full px - 4 py - 3 bg - zion - blue - dark / 50 border border - zion - cyan / 20 rounded - xl text - white placeholder - zion - slate - light focus:border - zion - cyan focus:outline - none transition - colors duration - 300 resize - none"
+                      className="w-full px-4 py-3 bg-zion - blue - dark / 50 border border-zion - cyan / 20 rounded-xl text-white placeholder - zion - slate - light focus:border-zion - cyan focus:outline - none transition - colors duration - 300 resize -none"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w - full px - 8 py - 4 bg - gradient - to - r from - zion - cyan to - zion - purple text - white font - semibold rounded - xl hover:shadow - lg hover:shadow - zion - cyan / 25 transition - all duration - 300 transform hover:scale - 105 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none"
+                    className="w-full px-8 py-4 bg-gradient - to - r from - zion - cyan to - zion - purple text-white font - semibold rounded-xl hover:shadow-lg hover:shadow-zion - cyan / 25 transition - all duration - 300 transform hover:scale - 105 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform -none"
                   >
                     {isSubmitting ? 'Sending Message...' : 'Send Message'}
                   </button>
@@ -432,58 +384,56 @@ const contactFormFields = [
               className="space - y-8"
             >
               <div>
-                <h3 className="text - 2xl font - bold text - white mb - 4">
+                <h3 className="text-2xl font - bold text-white mb-4">
                   About Zion Tech Group
                 </h3>
-                <p className="text - zion - slate - light leading - relaxed mb - 6">
+                <p className="text-zion - slate - light leading - relaxed mb-6">
                   We are a leading technology company specializing in AI,
-                  cybersecurity, cloud solutions, and digital transformation.
-                  Our team of experts is dedicated to helping businesses
-                  leverage cutting - edge technology to achieve their goals.
-                </p>
-                <div className="flex items - center gap - 3 text - zion - cyan">
-                  <Building className="w - 5 h - 5" />
-                  <span className="font - medium">Established 2020</span>
+                  cybersecurity, cloud solutions, and digital transformation.Our team of experts is dedicated to helping businesses
+                  leverage cutting - edge technology to achieve their goals.</p>
+                <div className="flex items - center gap-3 text-zion -cyan">
+                  <Building className="w-5 h-5" />
+                  <span className="font -medium">Established 2020</span>
                 </div>
               </div>
 
               <div>
-                <h3 className="text - xl font - bold text - white mb - 4">
+                <h3 className="text-xl font - bold text-white mb-4">
                   Connect With Us
                 </h3>
-                <div className="flex gap - 4">
-                  {socialLinks.map (social => (<a
+                <div className="flex gap-4">
+                  {socialLinks.map(social => (<a
                       key={social.name}
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`p - 3 bg - zion - blue - dark / 30 border border - zion - cyan / 20 rounded - xl text - zion - slate - light ${social.color} hover:border - zion - cyan / 40 transition - all duration - 300`}
+                      className={`p - 3 bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-xl text-zion - slate - light ${social.color} hover:border-zion - cyan / 40 transition - all duration - 300`}
                       title={social.name}
                     >
-                      <social.icon className="w - 5 h - 5" />
+                      <social.icon className="w-5 h-5" />
                     </a>) ) }
                 </div>
               </div>
 
-              <div className="bg - gradient - to - r from - zion - cyan / 10 to - zion - purple / 10 border border - zion - cyan / 20 rounded - 2xl p - 6">
-                <h3 className="text - xl font - bold text - white mb - 4">
+              <div className="bg-gradient - to - r from - zion - cyan / 10 to - zion - purple / 10 border border-zion - cyan / 20 rounded-2xl p -6">
+                <h3 className="text-xl font - bold text-white mb-4">
                   Why Choose Us?
                 </h3>
-                <ul className="space - y-3 text - zion - slate - light">
-                  <li className="flex items - center gap - 3">
-                    <CheckCircle className="w - 5 h - 5 text - zion - cyan flex - shrink - 0" />
+                <ul className="space - y-3 text-zion - slate -light">
+                  <li className="flex items - center gap-3">
+                    <CheckCircle className="w-5 h-5 text-zion - cyan flex - shrink -0" />
                     <span > Expert team with 20 + years combined experience</span>
                   </li>
-                  <li className="flex items - center gap - 3">
-                    <CheckCircle className="w - 5 h - 5 text - zion - cyan flex - shrink - 0" />
+                  <li className="flex items - center gap-3">
+                    <CheckCircle className="w-5 h-5 text-zion - cyan flex - shrink -0" />
                     <span > Proven track record of successful projects</span>
                   </li>
-                  <li className="flex items - center gap - 3">
-                    <CheckCircle className="w - 5 h - 5 text - zion - cyan flex - shrink - 0" />
+                  <li className="flex items - center gap-3">
+                    <CheckCircle className="w-5 h-5 text-zion - cyan flex - shrink -0" />
                     <span > Cutting - edge technology solutions</span>
                   </li>
-                  <li className="flex items - center gap - 3">
-                    <CheckCircle className="w - 5 h - 5 text - zion - cyan flex - shrink - 0" />
+                  <li className="flex items - center gap-3">
+                    <CheckCircle className="w-5 h-5 text-zion - cyan flex - shrink -0" />
                     <span > 24 / 7 support and maintenance</span>
                   </li>
                 </ul>
@@ -494,40 +444,39 @@ const contactFormFields = [
       </section>
 
       {/* Map Section */}
-      <section className="py - 20 bg - zion - blue - dark / 50">
-        <div className="container - responsive">
+      <section className="py-20 bg-zion - blue -dark / 50">
+        <div className="container -responsive">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text - center mb - 16"
+            className="text-center mb-16"
           >
-            <h2 className="text - 4xl font - bold text - white mb - 4">
+            <h2 className="text-4xl font - bold text-white mb-4">
               Visit Our Office
             </h2>
-            <p className="text - xl text - zion - slate - light max - w-3xl mx - auto">
+            <p className="text-xl text-zion - slate - light max - w-3xl mx -auto">
               Located in the heart of Middletown, Delaware, our office is easily
               accessible and ready to welcome you for in - person meetings and
-              consultations.
-            </p>
+              consultations.</p>
           </motion.div>
 
-          <div className="bg - zion - blue - dark / 30 border border - zion - cyan / 20 rounded - 2xl p - 8 text - center">
-            <div className="w - full h - 64 bg - gradient - to - br from - zion - cyan / 20 to - zion - purple / 20 rounded - xl flex items - center justify - center mb - 6">
-              <div className="text - center">
-                <MapPin className="w - 16 h - 16 text - zion - cyan mx - auto mb - 4" />
-                <p className="text - zion - slate - light">
+          <div className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 8 text-center">
+            <div className="w-full h-64 bg-gradient - to - br from - zion - cyan / 20 to - zion - purple / 20 rounded-xl flex items - center justify - center mb-6">
+              <div className="text-center">
+                <MapPin className="w-16 h-16 text-zion - cyan mx - auto mb-4" />
+                <p className="text-zion - slate -light">
                   Interactive Map Coming Soon
                 </p>
               </div>
             </div>
-            <div className="text - center">
-              <h3 className="text - xl font - bold text - white mb - 2">
+            <div className="text-center">
+              <h3 className="text-xl font - bold text-white mb-2">
                 Zion Tech Group
               </h3>
-              <p className="text - zion - cyan">364 E Main St STE 1008</p>
-              <p className="text - zion - slate - light">Middletown, DE 19709</p>
-              <p className="text - zion - slate - light text - sm mt - 2">
+              <p className="text-zion -cyan">364 E Main St STE 1008</p>
+              <p className="text-zion - slate -light">Middletown, DE 19709</p>
+              <p className="text-zion - slate - light text-sm mt-2">
                 United States
               </p>
             </div>

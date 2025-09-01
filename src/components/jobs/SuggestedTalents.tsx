@@ -1,14 +1,9 @@
-import { useEffect, useState, useCallback } from "react"; // Added useCallback
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { EmptyMatchesCard } from "./EmptyMatchesCard";
-import { JobMatchCard } from "./JobMatchCard";
-
-interface SuggestedTalentsProps {
-  jobId: string;
-  jobTitle?: string;
-}
+import { useEffect, useState, useCallback } from 'react'; // Added useCallback
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from '@/hooks/use-toast';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { EmptyMatchesCard } from './EmptyMatchesCard';
+import { JobMatchCard } from './JobMatchCard';
 
 export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
   const [talents, setTalents] = useState<any[]>([]); // Added type for talents
@@ -40,13 +35,13 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
         `)
         .eq("job_id", jobId);
 
-      if (error) throw error;
+      if(error) throw error;
       setTalents(data || []);
-    } catch (error) {
+    } catch(error) {
       console.error("Error fetching suggested talents:", error);
       toast({
         title: "Error",
-        description: "Failed to load suggested talents. Please try again later.",
+        description: "Failed to load suggested talents.Please try again later.",
         variant: "destructive",
       });
     } finally {
@@ -78,7 +73,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
   };
 
   useEffect(() => {
-    if (jobId) {
+    if(jobId) {
       fetchSuggestedTalents();
     }
   }, [jobId, fetchSuggestedTalents]); // Added fetchSuggestedTalents
@@ -98,8 +93,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
     };
   });
 
-  return (
-    <Card className="border-zion-blue-light bg-zion-blue">
+  return (<Card className="border-zion-blue-light bg-zion-blue">
       <CardHeader>
         <CardTitle>{jobTitle ? `Talents for ${jobTitle}` : 'Suggested Talents'}</CardTitle>
       </CardHeader>

@@ -4,13 +4,10 @@ export function AdvancedBusinessIntelligence () {
 
         actions['Conduct market research', 'Develop localization strategy', 'Establish partnerships']
 =======
-import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity } from 'lucide-react';
-        actions['Conduct market research',Develop localization strategy',Establish partnerships']
->>>>>>> main
-    }
+import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity  } from 'lucide-react';
+
 ];
-const mockModels = [
-    {
+const mockModels = [{
 
         id: 'model-1',
         name: 'Customer Lifetime Value Predictor',
@@ -63,21 +60,21 @@ export function AdvancedBusinessIntelligence() {
     ];
     const filteredMetrics = selectedCategory === 'all'
         ? data
-        : data.filter (metric => metric.category === selectedCategory) ;
+        : data.filter(metric => metric.category === selectedCategory) ;
     const refreshData = async () => {
-        setIsRefreshing (true) ;
+        setIsRefreshing(true) ;
         // Simulate API call
-        await new Promise (resolve => setTimeout (resolve, 1500) ) ;
-        setIsRefreshing (false) };
-    useEffect ( () => {
-        if (autoRefresh) {
+        await new Promise(resolve => setTimeout (resolve, 1500) ) ;
+        setIsRefreshing(false) };
+    useEffect(() => {
+        if(autoRefresh) {
 
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
             return () => clearInterval(interval)}
     }, [autoRefresh]);
     const getTrendIcon = (trend) => {
 
-        switch (trend) {
+        switch(trend) {
 
             case 'up':
                 return <TrendingUp className="w-4 h-4 text-green-500"/>;
@@ -88,7 +85,7 @@ export function AdvancedBusinessIntelligence() {
     };
     const getPriorityColor = (priority) => {
 
-        switch (priority) {
+        switch(priority) {
 
             case 'high':'
                 return 'border-red-500 bg-red-50 dark:bg-red-900/20';
@@ -99,7 +96,7 @@ export function AdvancedBusinessIntelligence() {
     };
     const getInsightIcon = (type) => {
 
-        switch (type) {
+        switch(type) {
 
             case 'prediction':"
                 return <Brain className="w-5 h-5 text-blue-500"/>;
@@ -114,7 +111,7 @@ export function AdvancedBusinessIntelligence() {
     };
     const formatValue = (value, unit) => {
 
-        if (unit === 'USD') {
+        if(unit === 'USD') {
 
             return new Intl.NumberFormat('en-US', {
 
@@ -123,16 +120,16 @@ export function AdvancedBusinessIntelligence() {
                 minimumFractionDigits: 0,
                 maximumFractionDigits: 0
             }).format(value)}
-        if (unit === '%') {
+        if(unit === '%') {
 
             return `${value.toFixed(1)}%`}
         return new Intl.NumberFormat('en-US').format(value)};
-    if (!isOpen) {
+    if(!isOpen) {
 "
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Business Intelligence Dashboard">"
         <Brain className="w-6 h-6"/>
       </button>)}
-    if (isMinimized) {
+    if(isMinimized) {
 "
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">"
         <div className="flex items-center gap-2 p-3">"

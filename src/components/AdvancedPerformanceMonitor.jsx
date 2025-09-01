@@ -1,42 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
-import {
+import { <<<<<<< HEAD Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download,  } from 'lucide-react';
+ from 'lucide-react';
 
-<<<<<<< HEAD
-    Activity,
-    BarChart3,
-    TrendingUp,
-    Zap,
-    Database,
-    Network,
-    Cpu,
-    HardDrive,
-    X,
-    Maximize2,
-    Minimize2,
-    RefreshCw,
-    AlertTriangle,
-    CheckCircle,
-    Download,
-  } from 'lucide - react';
-=======
-  Activity,
-  BarChart3,
-  TrendingUp,
-  Zap,
-  Database,
-  Network,
-  Cpu,
-  HardDrive,
-  X,
-  Maximize2,
-  Minimize2,
-  RefreshCw,
-  AlertTriangle,
-  CheckCircle,
-  Download} from 'lucide-react';
-
-const mockSystemMetrics = [
-  {
+const mockSystemMetrics = [{
 >>>>>>> main
 
     id: '1',
@@ -111,8 +77,7 @@ const mockSystemMetrics = [
     lastUpdated: '2024-01-15T10:00:00.000Z'},
 ];
 
-const mockPerformanceAlerts = [
-  {
+const mockPerformanceAlerts = [{
 
     id: '1',
     type: 'performance',
@@ -155,28 +120,28 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
   const [systemHealth, setSystemHealth] = useState('good');
   const [optimizationSuggestions, setOptimizationSuggestions] = useState([]);
 
-  const containerRef = useRef (null) ;
+  const containerRef = useRef(null) ;
 
-  useEffect ( () => {
-    if (!enabled) return;
+  useEffect(() => {
+    if(!enabled) return;
 
-    const interval = setInterval ( () => {
+    const interval = setInterval(() => {
       refreshMetrics () ;
     }, refreshInterval) ;
 
-    return () => clearInterval (interval) ;
+    return () => clearInterval(interval) ;
   }, [enabled, refreshInterval]) ;
 
   const refreshMetrics = async () => {
-    setIsRefreshing (true) ;
+    setIsRefreshing(true) ;
     // Simulate API call
-    await new Promise (resolve => setTimeout (resolve, 1000) ) ;
-    setIsRefreshing (false) ;
+    await new Promise(resolve => setTimeout (resolve, 1000) ) ;
+    setIsRefreshing(false) ;
   };
 
   const getStatusColor = status => {
 
-    switch (status) {
+    switch(status) {
 
       case 'critical':'
         return 'text-red-500';
@@ -191,7 +156,7 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
 
   const getStatusIcon = status => {
 
-    switch (status) {
+    switch(status) {
 
       case 'critical':
         return <AlertTriangle className="w-4 h-4 text-red-500" />;
@@ -206,7 +171,7 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
 
   const getTrendIcon = trend => {
 
-    switch (trend) {
+    switch(trend) {
 
       case 'up':"
         return <TrendingUp className="w-4 h-4 text-red-500" />;
@@ -221,9 +186,9 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
     }
   };
 
-  if (!enabled) return null;
+  if(!enabled) return null;
 
-  if (isMinimized) {
+  if(isMinimized) {
 
     return ("
       <div className="fixed bottom-4 right-4 z-50">
@@ -236,12 +201,10 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
       </div>) ;
   }
 
-  return()
+  return ()
     <div
       ref={containerRef}
-      className={`fixed bottom-4 right-4 z-50 bg-white dark:bg-zion-slate-dark rounded-lg shadow-2xl border border-zion-slate-light/20 transition-all duration-300 ${
-
-        isExpanded ? 'w-96 h-96' : 'w-80 h-64'`
+      className={`fixed bottom-4 right-4 z-50 bg-white dark:bg-zion-slate-dark rounded-lg shadow-2xl border border-zion-slate-light/20 transition-all duration-300 ${isExpanded ? 'w-96 h-96' : 'w-80 h-64'`
       }`}
     >
       {/* Header */}"
@@ -252,9 +215,7 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
             Performance Monitor
           </h3>
           <div`
-            className={`w-2 h-2 rounded-full ${
-
-              systemHealth === 'good''
+            className={`w-2 h-2 rounded-full ${systemHealth === 'good''
                 ? 'bg-green-500''
                 : systemHealth === 'warning''
                   ? 'bg-yellow-500''
@@ -351,9 +312,7 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
             {mockPerformanceAlerts.map(alert => (
               <div
                 key={alert.id}`
-                className={`p-3 rounded-lg border-l-4 ${
-
-                  alert.severity === 'high''
+                className={`p-3 rounded-lg border-l-4 ${alert.severity === 'high''
                     ? 'border-red-500 bg-red-50 dark:bg-red-900/20''
                     : alert.severity === 'medium''
                       ? 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20''
@@ -370,9 +329,7 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
                     </p>
                   </div>
                   <span`
-                    className={`text-xs px-2 py-1 rounded-full ${
-
-                      alert.severity === 'high''
+                    className={`text-xs px-2 py-1 rounded-full ${alert.severity === 'high''
                         ? 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200''
                         : alert.severity === 'medium''
                           ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200''

@@ -1,20 +1,6 @@
 import { useEffect } from 'react';
-import { useUIContext } from '@/context/UIContext';
-
-export const useGlobalEventListeners = () => {
-  const { dispatch } = useUIContext();
-
-  useEffect(() => {
-    const handleGlobalError = (event: CustomEvent) => {
-      console.log('GlobalEventListener: Caught globalError event', event.detail);
-      dispatch({
-        type: 'SHOW_ERROR_MODAL',
-        payload: {
-          message: event.detail.message,
-          retryConfig: event.detail.retryConfig,
-        },
-      });
-    };
+export default function Page() {
+;
 
     const handleGlobalLoading = (event: CustomEvent) => {
       console.log('GlobalEventListener: Caught globalLoading event', event.detail);

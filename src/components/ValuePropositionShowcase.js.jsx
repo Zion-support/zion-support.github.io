@@ -1,60 +1,10 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import {
+import { motion  } from 'framer-motion';
 
-  TrendingUp, 
-  Target, 
-  Award, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Rocket, 
-  Globe,
-  CheckCircle,
-  Star,
-  DollarSign,
-  Clock,
-  Users,
-  BarChart3'
-} from 'lucide-react';
-
-const valueMetrics = [
-  {
-
-    icon: <TrendingUp className="w-8 h-8" />,"
-    title: "Average ROI","
-    value: "350%","
-    description: "Our customers see an average return on investment within 6-12 months","
-    color: "from-green-500 to-emerald-600"
-  },
-  {
-"
-    icon: <Target className="w-8 h-8" />,"
-    title: "Market Position","
-    value: "Top 5%","
-    description: "Competing with enterprise solutions at fraction of the cost","
-    color: "from-blue-500 to-cyan-600"
-  },
-  {
-"
-    icon: <Zap className="w-8 h-8" />,"
-    title: "Setup Time","
-    value: "1-2 Weeks","
-    description: "From contract to full implementation in record time","
-    color: "from-yellow-500 to-orange-600"
-  },
-  {
-"
-    icon: <Shield className="w-8 h-8" />,"
-    title: "Security Rating","
-    value: "99.9%","
-    description: "Enterprise-grade security with zero compromise","
-    color: "from-red-500 to-pink-600"
-  }
+export default function Page() {
 ];
 ;
-const competitiveAdvantages = [
-  {
+const competitiveAdvantages = [{
 "
     title: "AI-Powered Intelligence","
     description: "Advanced machine learning algorithms that continuously improve performance and provide predictive insights","
@@ -84,8 +34,7 @@ const competitiveAdvantages = [
   }
 ];
 ;
-const marketComparison = [
-  {
+const marketComparison = [{
 "
     category: "AI Business Intelligence","
     competitors["Tableau", "Power BI", "Looker"],;"
@@ -114,8 +63,7 @@ const marketComparison = [
   }
 ];
 ;
-const successStories = [
-  {
+const successStories = [{
 "
     comp: "TechCorp Solutions","
     industry: "SaaS","
@@ -218,9 +166,8 @@ const successStories = [
             Unmatched Value & ROI
           </h2>"
           <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
-            Experience enterprise-grade solutions at micro SAAS prices. Our AI-powered services deliver 
-            exceptional value with proven returns that transform your business operations.
-          </p>
+            Experience enterprise-grade solutions at micro SAAS prices.Our AI-powered services deliver 
+            exceptional value with proven returns that transform your business operations.</p>
         </motion.div>
 
         {/* Value Metrics */}
@@ -237,7 +184,7 @@ const successStories = [
               variants={itemVariants}
             >
               <motion.div
-                className={`w - 20 h - 20 bg - gradient - to - r ${metric.color} rounded - 2xl flex items - center justify - center mx - auto mb - 4 text - white`}
+                className={`w-20 h-20 bg-gradient - to - r ${metric.color} rounded-2xl flex items - center justify - center mx - auto mb-4 text-white`}
                 variants={cardVariants}
                 whileHover={{ scale: 1.1 }}
               >
@@ -455,9 +402,7 @@ const successStories = [
               Ready to Experience Unmatched Value?
             </h3>"
             <p className="text-zion-cyan-light mb-6 max-w-2xl mx-auto">
-              Join hundreds of companies already transforming their operations with our revolutionary services. 
-              Get started today and see the difference AI-powered solutions can make.
-            </p>"
+              Join hundreds of companies already transforming their operations with our revolutionary services.Get started today and see the difference AI-powered solutions can make.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
                 href="mailto:kleber@ziontechgroup.com"

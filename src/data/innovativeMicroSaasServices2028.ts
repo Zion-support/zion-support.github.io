@@ -92,8 +92,7 @@ export interface AIService {
   sustainabilityFeatures?: string[]}
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES_2028: InnovativeMicroSaasService2028[] =
-  [
-    // AI-Powered Quantum Computing Services
+  [// AI-Powered Quantum Computing Services
     {
 
       id: 'quantum-ai-hybrid-platform',

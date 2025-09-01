@@ -1,6 +1,6 @@
 /**
  * Convert a string to a URL-friendly slug
- * @param text - The text to convert to a slug
+ * @param text-The text to convert to a slug
  * @returns A URL-friendly slug
  */;
 export function slugify(text: anystring): string {
@@ -23,7 +23,7 @@ export function deslugify(slug: string): string {
   return slug.replace(/-/g,).replace(/\b\w/g, char => char.toUpperCase())}
 /**
  * Generate a unique slug by appending a number if the slug already exists
- * @param text - The text to convert to a slug
+ * @param text-The text to convert to a slug
  * @param existingSlugs - Array of existing slugs to check against
  * @returns A unique slug
  */
@@ -36,7 +36,7 @@ export function generateUniqueSlug()
   let counter = 1;
   let uniqueSlug = slug;
 
-  while (existingSlugs.includes(uniqueSlug)) {
+  while(existingSlugs.includes(uniqueSlug)) {
 
     uniqueSlug = `${slug}-${counter}`;
     counter++}

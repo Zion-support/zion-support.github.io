@@ -1,93 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import {
-
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle} from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import {
-
-  Brain,
-  Shield,
-  Users,
-  TrendingUp,
-  ArrowRight,
-  Star} from 'lucide-react';
-import { ADVANCED_SERVICES } from '@/data/advancedServices';
-// Featured services for the showcase
-const FEATURED_SERVICES = ADVANCED_SERVICES.filter()
-  service => service.featured
-).slice(0, 6);
-export function AdvancedServicesShowcase() {
-  return()
-    <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">"
-      <div className="container mx-auto px-4">
-        {/* Header */}"
-        <div className="text-center mb-16">"
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Advanced AI & IT Solutions
-          </h2>"
-          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Transform your business with cutting-edge artificial intelligence,
-            cybersecurity, and digital transformation services. Expert solutions
-            designed for the modern enterprise.
-          </p>
-
-          {/* Key Benefits */}"
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8 max-w-4xl mx-auto">"
-            <div className="text-center">"
-              <div className="w-12 h-12 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-3">"
-                <Brain className="w-6 h-6 text-zion-blue" />
-              </div>"
-              <h3 className="text-zion-cyan font-semibold">AI-Powered</h3>"
-              <p className="text-zion-slate-light text-sm">
-                Intelligent automation & insights
-              </p>
-            </div>
+import { Link  } from 'react-router-dom';
+export default function Page() {
 "
-            <div className="text-center">"
-              <div className="w-12 h-12 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-3">"
-                <Shield className="w-6 h-6 text-zion-blue" />
-              </div>"
-              <h3 className="text-zion-cyan font-semibold">
-                Enterprise Security
-              </h3>"
-              <p className="text-zion-slate-light text-sm">
-                Bank-level protection
-              </p>
-            </div>
-"
-            <div className="text-center">"
-              <div className="w-12 h-12 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-3">"
-                <TrendingUp className="w-6 h-6 text-zion-blue" />
-              </div>"
-              <h3 className="text-zion-cyan font-semibold">Proven Results</h3>"
-              <p className="text-zion-slate-light text-sm">
-                Track record of success
-              </p>
-            </div>
-"
-            <div className="text-center">"
-              <div className="w-12 h-12 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-3">"
-                <Users className="w-6 h-6 text-zion-blue" />
-              </div>"
-              <h3 className="text-zion-cyan font-semibold">Expert Team</h3>"
-              <p className="text-zion-slate-light text-sm">
-                Certified professionals
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Featured Services Grid */}"
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {FEATURED_SERVICES.map(service => (
-            <Card
-              key={service.id}"
               className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-cyan transition-all duration-300 hover:scale-105"
             >
               <CardHeader>"
@@ -201,8 +115,7 @@ export function AdvancedServicesShowcase() {
             <p className="text-zion-slate-light mb-6">
               Get in touch with our experts to discuss your specific needs and
               discover how our AI and IT solutions can drive your business
-              forward.
-            </p>
+              forward.</p>
 "
             <div className="flex flex-wrap justify-center gap-4 mb-6">
               <Button"

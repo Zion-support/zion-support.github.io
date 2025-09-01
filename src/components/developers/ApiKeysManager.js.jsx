@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
-import { useApiKeys } from "../../hooks/useApiKeys";"
-import { Button } from "../ui/button";"
-import { Checkbox } from "../ui/checkbox";"
-import { Label } from "../ui/label";"
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "../ui/dialog";"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../ui/dropdown-menu";"
-import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";"
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogHeader, AlertDialogTitle } from "../ui/alert-dialog";"
+import { useApiKeys } from '../../hooks/useApiKeys';"
+import { Button } from '../ui/button';"
+import { Checkbox } from '../ui/checkbox';"
+import { Label } from '../ui/label';"
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '../ui/dialog';"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '../ui/dropdown-menu';"
+import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover';"
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogHeader, AlertDialogTitle } from '../ui/alert-dialog';"
 import CodeBlock from "./CodeBlock";
-import { Copy, MoreHorizontal, Eye, EyeOff, RotateCcw, Trash2, Settings } from 'lucide-react';
-export { function };
+import { Copy, MoreHorizontal, Eye, EyeOff, RotateCcw, Trash2, Settings  } from 'lucide-react';
+;
 export default function ApiKeysManager() {
+
     const { apiKeys, loading, newApiKey, fetchApiKeys, createApiKey, deleteApiKey, toggleApiKey, updateApiKeyScopes, regenerateApiKey, revokeApiKey, clearNewApiKey } = useApiKeys();
     const [showCreateDialog, setShowCreateDialog] = useState(false);
     const [newKeyName, setNewKeyName] = useState('');
@@ -25,7 +26,7 @@ export default function ApiKeysManager() {
         { value: 'webhooks:manage', label: 'Manage Webhooks', description: 'Set up and manage webhook endpoints' }
     ];
     const handleCreateKey = async () => {
-        if (!newKeyName.trim() || selectedScopes.length === 0)
+        if(!newKeyName.trim() || selectedScopes.length === 0)
             return;
         await createApiKey(newKeyName.trim(), selectedScopes);
         setNewKeyName('');
@@ -41,7 +42,7 @@ export default function ApiKeysManager() {
         return `curl -X GET "https://ziontechgroup.com/api/v1/jobs" \\"
   -H "Authorization: Bearer ${apiKey}" \\"`
   -H "Content-Type: application/json"`};
-    if (loading) {
+    if(loading) {
 "
         return (<div className="flex items-center justify-center p-8">"
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-zion-cyan"></div>
@@ -99,8 +100,7 @@ export default function ApiKeysManager() {
       {newApiKey && (<div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4">"
           <h3 className="text-green-400 font-semibold mb-2">New API Key Created!</h3>"
           <p className="text-green-300 text-sm mb-3">
-            Copy this key now. You won't be able to see it again.
-          </p>"
+            Copy this key now.You won't be able to see it again.</p>"
           <CodeBlock code={newApiKey} className="mb-3"/>"
           <div className="space-y-2">"
             <p className="text-green-300 text-sm font-medium">Example Usage:</p>"
@@ -174,7 +174,7 @@ export default function ApiKeysManager() {
                 </PopoverTrigger>"
                 <PopoverContent className="bg-zinc-900 border-zinc-800 text-white w-64 p-3">"
                   <div className="space-y-2">"
-                    <p className="text-xs text-zinc-400">API Key (first 8 characters):</p>"
+                    <p className="text-xs text-zinc-400">API Key(first 8 characters):</p>"
                     <code className="text-zinc-300 text-sm">{apiKey.key.substring(0, 8)}...</code>"
                     <Button variant="ghost" size="sm" onClick={() => navigator.clipboard.writeText(apiKey.key)} className="w-full text-zinc-400 hover:text-white">"
                       <Copy className="h-4 w-4 mr-2"/>
@@ -193,15 +193,14 @@ export default function ApiKeysManager() {
           <AlertDialogHeader>
             <AlertDialogTitle>Regenerate API Key</AlertDialogTitle>"
             <AlertDialogDescription className="text-zinc-400">
-              This will invalidate the current key and create a new one. Any applications using the old key will stop working.
-            </AlertDialogDescription>
+              This will invalidate the current key and create a new one.Any applications using the old key will stop working.</AlertDialogDescription>
           </AlertDialogHeader>
           <DialogFooter>"
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">
               Cancel
             </AlertDialogCancel>
             <AlertDialogAction onClick={() => {
-            if (showRegenerateConfirm) {
+            if(showRegenerateConfirm) {
 
                 regenerateApiKey(showRegenerateConfirm);
                 setShowRegenerateConfirm(null)}"
@@ -218,15 +217,14 @@ export default function ApiKeysManager() {
           <AlertDialogHeader>
             <AlertDialogTitle>Delete API Key</AlertDialogTitle>"
             <AlertDialogDescription className="text-zinc-400">
-              This action cannot be undone. The API key will be permanently deleted and  applications using it will stop working.
-            </AlertDialogDescription>
+              This action cannot be undone.The API key will be permanently deleted and  applications using it will stop working.</AlertDialogDescription>
           </AlertDialogHeader>
           <DialogFooter>"
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">
               Cancel
             </AlertDialogCancel>
             <AlertDialogAction onClick={() => {
-            if (showDeleteConfirm) {
+            if(showDeleteConfirm) {
 
                 deleteApiKey(showDeleteConfirm);
                 setShowDeleteConfirm(null)}"

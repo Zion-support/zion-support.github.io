@@ -1,33 +1,14 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Trophy, TrendingUp, Users, DollarSign, Clock, Star, ArrowRight, Building } from 'lucide-react';
-const successStories = [
-    {
-
-        id: 1,
-        client: "TechFlow Solutions","
-        industry: "FinTech","
-        logo: "/logos/techflow.svg","
-        challenge: "Legacy system modernization and digital transformation for a growing fintech startup","
-        solution: "Implemented cloud-native architecture with microservices, real-time data processing, and AI-powered fraud detection",
-        results: {
-"
-            performance: "300%","
-            efficiency: "85%","
-            cost: "40%","
-            time: "60%"
-        },
-        metrics[;"
-            { label: "Transaction Processing", before: "1,000/sec", after: "10,000/sec", improvement: "900%" },"
-            { label: "System Uptime", before: "95%", after: "99.9%", improvement: "5.2%" },"
-            { label: "Customer Satisfaction", before: "3.2/5", after: "4.8/5", improvement: "50%" },"
+import { motion, AnimatePresence  } from 'framer-motion';
+export default function Page() {
+,"
             { label: "Development Speed", before: "6 months", after: "2 months", improvement: "67%" }
         ],;"
         technologies["AWS", "Kubernetes", "React", "Node.js", "PostgreSQL", "Redis"],;"
         team: "12 developers","
         duration: "8 months","
         budget: "$2.5M","
-        testimonial: "Zion Tech Group transformed our entire technology stack. The results exceeded our expectations - we're now processing 10x more transactions with better reliability than ever before.","
+        testimonial: "Zion Tech Group transformed our entire technology stack.The results exceeded our expectations - we're now processing 10x more transactions with better reliability than ever before.","
         author: "Sarah Chen","
         role: "CTO",
         rating: 5,
@@ -58,8 +39,8 @@ const successStories = [
         team: "15 developers","
         duration: "12 months","
         budget: "$3.2M","
-        testimonial: "Zion's expertise in healthcare technology and security is unmatched. They delivered a platform that our doctors and patients love, while maintaining the highest security standards.","
-        author: "Dr. Michael Rodriguez","
+        testimonial: "Zion's expertise in healthcare technology and security is unmatched.They delivered a platform that our doctors and patients love, while maintaining the highest security standards.","
+        author: "Dr.Michael Rodriguez","
         role: "Chief Medical Officer",
         rating: 5,
         featured: true
@@ -89,7 +70,7 @@ const successStories = [
         team: "18 developers","
         duration: "10 months","
         budget: "$2.8M","
-        testimonial: "The omnichannel platform Zion built for us has revolutionized our business. Our sales have increased dramatically, and our customers love the seamless experience across all channels.","
+        testimonial: "The omnichannel platform Zion built for us has revolutionized our business.Our sales have increased dramatically, and our customers love the seamless experience across all channels.","
         author: "Emily Thompson","
         role: "VP of Digital",
         rating: 5,
@@ -120,7 +101,7 @@ const successStories = [
         team: "20 developers","
         duration: "14 months","
         budget: "$4.1M","
-        testimonial: "Zion's IoT and automation solutions have transformed our manufacturing process. We've seen dramatic improvements in efficiency, quality, and cost savings that exceeded our projections.","
+        testimonial: "Zion's IoT and automation solutions have transformed our manufacturing process.We've seen dramatic improvements in efficiency, quality, and cost savings that exceeded our projections.","
         author: "David Kim","
         role: "Operations Director",
         rating: 5,
@@ -151,7 +132,7 @@ const successStories = [
         team: "16 developers","
         duration: "11 months","
         budget: "$2.9M","
-        testimonial: "Zion created an incredible learning platform that adapts to each student's needs. Our student engagement and learning outcomes have improved dramatically since the launch.","
+        testimonial: "Zion created an incredible learning platform that adapts to each student's needs.Our student engagement and learning outcomes have improved dramatically since the launch.","
         author: "Lisa Patel","
         role: "Chief Learning Officer",
         rating: 5,
@@ -182,7 +163,7 @@ const successStories = [
         team: "22 developers","
         duration: "16 months","
         budget: "$5.5M","
-        testimonial: "Zion's smart grid solution has revolutionized our energy management. We've significantly increased our renewable energy integration while improving grid reliability and reducing costs.","
+        testimonial: "Zion's smart grid solution has revolutionized our energy management.We've significantly increased our renewable energy integration while improving grid reliability and reducing costs.","
         author: "Alex Johnson","
         role: "Chief Technology Officer",
         rating: 5,
@@ -203,10 +184,10 @@ const overallStats = ["
     { icon: <Star className="w-6 h-6"/>, value: "4.9/5", label: "Client Rating" },"
     { icon: <TrendingUp className="w-6 h-6"/>, value: "95%", label: "Success Rate" },"
     { icon: <DollarSign className="w-6 h-6"/>, value: "320%", label: "Average ROI" },"
-    { icon: <Clock className="w-6 h-6"/>, value: "12 months", label: "Avg. Delivery Time" }
+    { icon: <Clock className="w-6 h-6"/>, value: "12 months", label: "Avg.Delivery Time" }
 ];
-    const [selectedStory, setSelectedStory] = useState (null) ;
-    const [hoveredIndustry, setHoveredIndustry] = useState (null) ;
+    const [selectedStory, setSelectedStory] = useState(null);
+    const [hoveredIndustry, setHoveredIndustry] = useState(null);
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -263,8 +244,7 @@ const overallStats = ["
           </h2>"
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
             Discover how Zion Tech Group has transformed businesses across industries, delivering 
-            exceptional results and measurable business impact through innovative technology solutions.
-          </p>
+            exceptional results and measurable business impact through innovative technology solutions.</p>
 
           {/* Overall stats */}"
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
@@ -534,9 +514,8 @@ const overallStats = ["
                 Ready to Write Your Success Story?
               </h3>"
               <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-                Join hundreds of successful companies that have transformed their business with Zion Tech Group. '
-                Let's discuss how we can help you achieve similar results.
-              </p>"
+                Join hundreds of successful companies that have transformed their business with Zion Tech Group.'
+                Let's discuss how we can help you achieve similar results.</p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
                   Start Your Project

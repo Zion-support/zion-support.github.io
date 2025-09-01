@@ -1,25 +1,20 @@
 <<<<<<< HEAD
-import { useState, useEffect } from "react";
-import React, { useState } from 'react';
-import { Button } from "@/components / ui / button";
-import { Footer } from "@/components / Footer";
-import { GradientHeading } from "@/components / GradientHeading";
-import { Input } from "@/components / ui / input";
-import { ListingScoreCard } from "@/components / ListingScoreCard";
-import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components / ui / select";
-import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function CategoryListingPage ({ title, description, listings: initialListings, sortOptions = [;
-
-=======
-import { useState, useEffect } from "react";"
-import { Footer } from "@/components/Footer";"
-import { GradientHeading } from "@/components/GradientHeading";"
-import { ListingScoreCard } from "@/components/ListingScoreCard";"
-import { Button } from "@/components/ui/button";"
-import { Input } from "@/components/ui/input";"
-import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function CategoryListingPage({ title, description, listings: initialListings, sortOptions = [;
->>>>>>> main
-    { label: 'Newest First', value: 'newest' },
+import { useState, useEffect } from 'react';
+ from 'react';
+import { Button } from '@/components / ui / button';
+import { Footer } from '@/components / Footer';
+import { GradientHeading } from '@/components / GradientHeading';
+import { Input } from '@/components / ui / input';
+import { ListingScoreCard } from '@/components / ListingScoreCard';
+import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components / ui / select';
+import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function CategoryListingPage({ title, description, listings: initialListings, sortOptions = [; ======= import { useState, useEffect } from 'react';"
+import { Footer } from '@/components/Footer';"
+import { GradientHeading } from '@/components/GradientHeading';"
+import { ListingScoreCard } from '@/components/ListingScoreCard';"
+import { Button } from '@/components/ui/button';"
+import { Input } from '@/components/ui/input';"
+import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components/ui/select';
+,
     { label: 'Oldest First', value: 'oldest' },
     { label: 'Highest Rating', value: 'rating-high' },
     { label: 'Highest AI Match', value: 'ai-match' },
@@ -54,17 +49,17 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
             listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
             (listing.tags && listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
         // Apply category filters'
-        if (selectedFilter === 'all')
+        if(selectedFilter === 'all')
             return matchesSearch;
-        if (selectedFilter === 'high-rating')
+        if(selectedFilter === 'high-rating')
             return matchesSearch && (listing.rating || 0) >= 4;
-        if (selectedFilter === 'best-match')
+        if(selectedFilter === 'best-match')
             return matchesSearch && (listing.aiScore || 0) >= 85;
         return matchesSearch})
         .sort((a, b) => {
 
         // Apply sorting
-        switch (selectedSort) {
+        switch(selectedSort) {
 
             case 'newest':
                 return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();

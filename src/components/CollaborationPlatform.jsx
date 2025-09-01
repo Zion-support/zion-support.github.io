@@ -35,11 +35,11 @@ export function CollaborationPlatform() {
             setMeetingDuration(prev => prev + 1)}, 1000);
         return () => clearInterval(interval)}, []);
     const toggleMute = () => {
-        setLocalUser (prev => ({ ...prev, isMuted: !prev.isMuted }) ) };
+        setLocalUser(prev => ({ ...prev, isMuted: !prev.isMuted }) ) };
     const toggleRecording = () => {
-        setIsRecording (!isRecording) };
+        setIsRecording(!isRecording) };
     const sendMessage = () => {
-        if (newMessage.trim()) {
+        if(newMessage.trim()) {
 
             const message = {
 
@@ -47,12 +47,6 @@ export function CollaborationPlatform() {
                 user: 'You',
                 message: newMessage,
   timestamp: new Date()
-            
-
-
-
-
-
 
 };
             setChatMessages(prev => [...prev, message]);
@@ -65,13 +59,13 @@ export function CollaborationPlatform() {
         const secs = seconds % 60;
         return `${hours.toString().padStart(2,0')}:${minutes.toString().padStart(2,0')}:${secs.toString().padStart(2,0')}`};
     const toggleChat = () => {
-        setActiveChat (!activeChat) };
-    if (!isOpen) {
+        setActiveChat(!activeChat) };
+    if(!isOpen) {
 
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-20 p-3 bg-zion-purple hover:bg-zion-purple-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50" title="Start Collaboration Session">"
         <Users className="w-5 h-5"/>
       </button>)}
-    if (isMinimized) {
+    if(isMinimized) {
 "
         return (<div className="fixed bottom-4 right-20 z-50">"
         <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">"

@@ -1,37 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { ClickableBadge } from "@/components/ui/clickable-badge";
-import { PlusCircle, Save, Trash, Play } from "lucide-react";
-import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { toast } from "sonner";
-
-export function WebhookManager() {
-  const { 
-    webhooks, 
-    loading, 
-    error,
-    testResult,
-    fetchWebhooks,
-    createWebhook,
-    toggleWebhook,
-    deleteWebhook,
-    testWebhook
-  } = useWebhooks();
-  
-  const [newWebhook, setNewWebhook] = useState({
-    name: "",
-    url: "",
-    selectedEvent: "" as WebhookEventType,
-    eventTypes: [] as WebhookEventType[],
-    secret: ""
-  });
-  
-  const eventOptions: { value: WebhookEventType; label: string }[] = [
-    { value: "new_application", label: "New Application Received" },
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+export default function Page() {
+,
     { value: "quote_received", label: "Quote Request Received" },
     { value: "milestone_approved", label: "Milestone Approved" },
     { value: "talent_hired", label: "Talent Hired" }
@@ -42,9 +12,9 @@ export function WebhookManager() {
   }, [fetchWebhooks]); // Added fetchWebhooks
   
   const handleAddEvent = () => {
-    if (!newWebhook.selectedEvent) return;
+    if(!newWebhook.selectedEvent) return;
     
-    if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
+    if(newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
       toast.error("This event is already added");
       return;
     }
@@ -64,13 +34,12 @@ export function WebhookManager() {
   };
   
   const handleCreateWebhook = async () => {
-    if (!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {
+    if(!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {
       toast.error("Please fill in all required fields");
       return;
     }
     
-    await createWebhook(
-      newWebhook.name, 
+    await createWebhook(newWebhook.name, 
       newWebhook.url, 
       newWebhook.eventTypes, 
       newWebhook.secret || undefined
@@ -86,18 +55,16 @@ export function WebhookManager() {
     });
   };
   
-  const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
+  const handleTestWebhook = async(webhookId: string, eventType: WebhookEventType) => {
     await testWebhook(webhookId, eventType);
   };
   
-  return (
-    <div className="space-y-8">
+  return (<div className="space-y-8">
       <Card>
         <CardHeader>
           <CardTitle>Create Webhook</CardTitle>
           <CardDescription>
-            Define webhooks to notify external systems when events occur in Zion.
-          </CardDescription>
+            Define webhooks to notify external systems when events occur in Zion.</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -157,7 +124,7 @@ export function WebhookManager() {
           </div>
           
           <div className="space-y-2">
-            <Label htmlFor="webhook-secret">Secret (optional)</Label>
+            <Label htmlFor="webhook-secret">Secret(optional)</Label>
             <Input 
               id="webhook-secret" 
               placeholder="A secret key to verify the webhook source"
@@ -165,8 +132,7 @@ export function WebhookManager() {
               onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
             />
             <p className="text-xs text-muted-foreground">
-              If provided, this secret will be used to sign the webhook payload.
-            </p>
+              If provided, this secret will be used to sign the webhook payload.</p>
           </div>
         </CardContent>
         <CardFooter>
@@ -184,7 +150,7 @@ export function WebhookManager() {
         ) : error ? (
           <p className="text-red-500">{error}</p>
         ) : webhooks.length === 0 ? (
-          <p>No webhooks configured yet. Create your first webhook above.</p>
+          <p>No webhooks configured yet.Create your first webhook above.</p>
         ) : (
           <div className="space-y-4">
             {webhooks.map(webhook => (
@@ -249,7 +215,7 @@ export function WebhookManager() {
                       <SelectValue placeholder="Test webhook" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="test_event">Test (generic)</SelectItem>
+                      <SelectItem value="test_event">Test(generic)</SelectItem>
                       {webhook.event_types.map(event => (
                         <SelectItem key={event} value={event}>
                           Test {eventOptions.find(e => e.value === event)?.label || event}

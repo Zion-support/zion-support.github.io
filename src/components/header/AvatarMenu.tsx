@@ -4,20 +4,17 @@ export interface AvatarMenuProps {
   onLogout?: () => void}
 
 export function AvatarMenu({ avatarUrl, onLogout }: AvatarMenuProps) {
-  
-  
-    
-    if (e.key === "ArrowDown") {
+
+    if(e.key === "ArrowDown") {
       e.preventDefault();
       
-      items[next]?.focus()} else if (e.key === "ArrowUp") {
+      items[next]?.focus()} else if(e.key === "ArrowUp") {
       e.preventDefault();
       
       items[prev]?.focus()}
   };
 
-  return (
-    <Popover className="relative">
+  return (<Popover className="relative">
       {({ open, close }) => (
         <>
           <Popover.Button as={Button} variant="ghost" className="h-8 w-8 rounded-full" aria-expanded={open}>

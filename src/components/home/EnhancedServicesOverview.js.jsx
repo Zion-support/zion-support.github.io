@@ -1,74 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '../ui/button';
-import {
+import { Link  } from 'react-router-dom';
 
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle} from '../ui/card';
-import { Badge } from '../ui/badge';
-import {
-
-  Brain,
-  Shield,
-  Cloud,
-  Database,
-  Zap,
-  Eye,
-  Leaf,
-  DollarSign,
-  ArrowRight,
-  Star,
-  Clock,
-  Globe} from 'lucide-react';
-// Mock data for enhanced services
-const EnhancedServicesOverview = () => {
-  // Get featured services (first 6)
-  const featuredServices = ENHANCED_SERVICES.slice(0, 6);
-  const getCategoryIcon = category => {
-
-    switch (category) {
-
-      case 'AI & Machine Learning':
-        return <Brain className="w-6 h-6" />;
-      case 'Cybersecurity':"
-        return <Shield className="w-6 h-6" />;
-      case 'Cloud & DevOps':"
-        return <Cloud className="w-6 h-6" />;
-      case 'Data & Analytics':"
-        return <Database className="w-6 h-6" />;
-      case 'Blockchain & Web3':"
-        return <Zap className="w-6 h-6" />;
-      case 'IoT & Edge Computing':"
-        return <Eye className="w-6 h-6" />;
-      case 'Quantum Computing':"
-        return <Brain className="w-6 h-6" />;
-      case 'AR/VR & Metaverse':"
-        return <Eye className="w-6 h-6" />;
-      case 'Green Tech & Sustainability':"
-        return <Leaf className="w-6 h-6" />;
-      case 'FinTech & Digital Banking':"
-        return <DollarSign className="w-6 h-6" />;
-      default:"
-        return <Zap className="w-6 h-6" />;
-    }
-  };
-  const getAvailabilityColor = availability => {
-
-    switch (availability) {
-
-      case 'immediate':'
-        return 'text-green-400';
-      case 'within-week':'
-        return 'text-yellow-400';
-      case 'within-month':'
-        return 'text-orange-400';
-      default:'
-        return 'text-gray-400';
-    }
-  };
+export default function Page() {
+;
   return ("
     <section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">"
       <div className="container mx-auto px-4">
@@ -82,10 +16,9 @@ const EnhancedServicesOverview = () => {
           </h2>"
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
             Transform your business with our comprehensive suite of
-            next-generation technology services. From AI and cybersecurity to
+            next-generation technology services.From AI and cybersecurity to
             blockchain and quantum computing, we deliver innovative solutions
-            that drive real business results.
-          </p>"
+            that drive real business results.</p>"
           <div className="flex flex-wrap justify-center gap-4">"
             <Link to="/enhanced-services">
               <Button"
@@ -229,7 +162,7 @@ const EnhancedServicesOverview = () => {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {ENHANCED_SERVICES.reduce((acc, service) => {
 
-              if (!acc.find(cat => cat.category === service.category)) {
+              if(!acc.find(cat => cat.category === service.category)) {
 
                 acc.push({
 
@@ -267,9 +200,8 @@ const EnhancedServicesOverview = () => {
             </h3>"
             <p className="text-zion-slate-light max-w-2xl mx-auto mb-6">
               Our team of technology experts is ready to help you implement
-              cutting-edge solutions that drive real business results. Contact
-              us today for a free consultation.
-            </p>"
+              cutting-edge solutions that drive real business results.Contact
+              us today for a free consultation.</p>"
             <div className="flex flex-wrap justify-center gap-4">
               <Button"
                 size="lg"

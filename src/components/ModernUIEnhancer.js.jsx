@@ -1,36 +1,17 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet } from 'lucide-react';
-export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = true, enableScrollEffects = true, enableThemeToggle = true, enableResponsiveDesign = true}) => {
+import { motion, AnimatePresence  } from 'framer-motion';
 
-    const [isVisible, setIsVisible] = useState(false);
-    const [currentTheme, setCurrentTheme] = useState('auto');
-    const [showScrollToTop, setShowScrollToTop] = useState(false);
-    const [deviceType, setDeviceType] = useState('desktop');
-    const scrollToTopRef = useRef(null);
-    // Detect device type
-    useEffect ( () => {
-        const updateDeviceType = () => {
-            const width = window.innerWidth;
-            if (width < 768) {
-
-                setDeviceType('mobile')}
-            else if (width < 1024) {
-
-                setDeviceType('tablet')}
-            else {
-
-                setDeviceType('desktop')}
+export default function Page() {
         };
         updateDeviceType();
         window.addEventListener('resize', updateDeviceType);
         return () => window.removeEventListener('resize', updateDeviceType)}, []);
     // Scroll effects
-    useEffect ( () => {
-        if (!enableScrollEffects) return;
+    useEffect(() => {
+        if(!enableScrollEffects) return;
         const handleScroll = () => {
             const scrollTop = window.pageYOffset;
-            setShowScrollToTop (scrollTop > 300) ;
+            setShowScrollToTop(scrollTop > 300) ;
             // Parallax effect for background elements
             const scrolled = window.pageYOffset;
             const parallaxElements = document.querySelectorAll('[data-parallax]');
@@ -45,7 +26,7 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 
                 const rect = element.getBoundingClientRect();
                 const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-                if (isVisible) {
+                if(isVisible) {
 
                     element.classList.add('fade-in-visible')}
             })};
@@ -60,7 +41,7 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
     const applyTheme = (theme) => {
 
         const root = document.documentElement;
-        if (theme === 'auto') {
+        if(theme === 'auto') {
 
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)).matches;
             root.classList.toggle('dark', prefersDark)}
@@ -69,10 +50,10 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
             root.classList.toggle('dark', theme === 'dark')}
         localStorage.setItem('theme', theme)};
     const themes = ['light',dark',auto'];
-        const currentIndex = themes.indexOf (currentTheme) ;
-        const nextTheme = themes[ (currentIndex + 1) % themes.length];
-        setCurrentTheme (nextTheme) ;
-        applyTheme (nextTheme) };
+        const currentIndex = themes.indexOf(currentTheme) ;
+        const nextTheme = themes[(currentIndex + 1) % themes.length];
+        setCurrentTheme(nextTheme) ;
+        applyTheme(nextTheme) };
     const scrollToTop = () => {
         window.scrollTo({
 
@@ -80,53 +61,53 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
             behavior: 'smooth'})};
     // Add CSS animations to the document
     useEffect(() => {
-        if (!enableAnimations)
+        if(!enableAnimations)
             return;
         const style = document.createElement('style');`
         style.textContent = `
       .fade-in {
 
         opacity: 0;
-        transform: translateY (30px) ;
+        transform: translateY(30px) ;
         transition: opacity 0.6s ease - out, transform 0.6s ease - out}
       
       .fade-in-visible {
 
         opacity: 1;
-        transform: translateY (0) }
+        transform: translateY(0) }
       
       .slide-in-left {
 
         opacity: 0;
-        transform: translateX (-50px) ;
+        transform: translateX(-50px) ;
         transition: opacity 0.6s ease - out, transform 0.6s ease - out}
       
       .slide-in-left-visible {
 
         opacity: 1;
-        transform: translateX (0) }
+        transform: translateX(0) }
       
       .slide-in-right {
 
         opacity: 0;
-        transform: translateX (50px) ;
+        transform: translateX(50px) ;
         transition: opacity 0.6s ease - out, transform 0.6s ease - out}
       
       .slide-in-right-visible {
 
         opacity: 1;
-        transform: translateX (0) }
+        transform: translateX(0) }
       
       .scale-in {
 
         opacity: 0;
-        transform: scale (0.8) ;
+        transform: scale(0.8) ;
         transition: opacity 0.6s ease - out, transform 0.6s ease - out}
       
       .scale-in-visible {
 
         opacity: 1;
-        transform: scale (1) }
+        transform: scale(1) }
       
       .bounce-in {
 
@@ -137,18 +118,18 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
         0% {
 
           opacity: 0;
-          transform: scale (0.3) }
+          transform: scale(0.3) }
         50% {
 
           opacity: 1;
-          transform: scale (1.05) }
+          transform: scale(1.05) }
         70% {
 
           transform: scale(0.9)}
         100% {
 
           opacity: 1;
-          transform: scale (1) }
+          transform: scale(1) }
       }
       
       .floating {
@@ -215,22 +196,22 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1)}`
     `;
-        document.head.appendChild (style) ;
+        document.head.appendChild(style) ;
         return () => {
-            document.head.removeChild (style) }}, [enableAnimations]) ;
+            document.head.removeChild(style) }}, [enableAnimations]) ;
     // Add intersection observer for scroll animations
     useEffect(() => {
-        if (!enableScrollEffects)
+        if(!enableScrollEffects)
             return;
         const observer = new IntersectionObserver((entries) => {
 
             entries.forEach((entry) => {
 
-                if (entry.isIntersecting) {
+                if(entry.isIntersecting) {
 
                     const element = entry.target;
                     const animationType = element.getAttribute('data-animation');
-                    if (animationType) {
+                    if(animationType) {
 `
                         element.classList.add(`${animationType}-visible`)}
                 }

@@ -1,46 +1,8 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
+import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
 
-  Search,
-  Filter,
-  X,
-  ChevronDown,
-  Check,
-  Star,
-  Tag,
-  MapPin,
-  Calendar,
-  Users,
-  Zap,
-  Brain,
-  Cloud,
-  Shield,
-  Globe'
- } from 'lucide-react';
-
-interface SearchResult {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  tags: string[];
-  location?: string;
-  date?: string;
-  rating?: number;
-  type: 'service' | 'article' | 'team' | 'technology'}
-
-interface FilterOption {
-  id: string;
-  label: string;
-  value: string;
-  count: number
-}
-
-interface SearchAndFilterSystemProps extends React.PropsWithChildren<{}> {
+export default function Page() {
+> {
 
   data: SearchResult[];
   onResultsChange?: (results: SearchResult[]) => void;
@@ -65,7 +27,6 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   
       return acc}, {} as Record < string, any>) ;
 
-    
       return acc}, {} as Record < string, any>) ;
 
 =======
@@ -75,14 +36,14 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       categories: Object.entries(categories).map(([key, count])  => ({
 
         id: key,
-        label: key.charAt (0) .toUpperCase () + key.slice (1) ,
+        label: key.charAt(0) .toUpperCase () + key.slice(1) ,
         value: key,
         count
       })),
       types: Object.entries(types).map(([key, count]) => ({
 
         id: key,
-        label: key.charAt (0) .toUpperCase () + key.slice (1) ,
+        label: key.charAt(0) .toUpperCase () + key.slice(1) ,
         value: key,
         count
       }) ) }}, [data]) ;
@@ -95,12 +56,12 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       
       return matchesSearch && matchesCategory && matchesFilters}) ;
     // Sort results
-    switch (sortBy) {
+    switch(sortBy) {
 
       case 'date':
         results = results.sort((a, b) => {
 
-          if (!a.date || !b.date) return 0;
+          if(!a.date || !b.date) return 0;
           return new Date(b.date).getTime() - new Date(a.date).getTime()});
 <<<<<<< HEAD
         break;
@@ -110,7 +71,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         results = results.sort((a, b) => {
 
-          if (!a.rating || !b.rating) return 0;
+          if(!a.rating || !b.rating) return 0;
           return b.rating - a.rating});
 <<<<<<< HEAD
         break;
@@ -118,7 +79,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 =======
         break;'      case 'name':
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-        results = results.sort ( (a, b) => a.title.localeCompare (b.title) ) ;
+        results = results.sort((a, b) => a.title.localeCompare(b.title) ) ;
         break;
       default: // relevance
         // Keep original order for relevance
@@ -127,18 +88,18 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
     return results}, [data, searchQuery, selectedCategory, activeFilters, sortBy]) ;
 
   // Update parent component with results
-  useEffect ( () => {
-    onResultsChange?. (filteredResults) }, [filteredResults, onResultsChange]) ;
+  useEffect(() => {
+    onResultsChange?.(filteredResults) }, [filteredResults, onResultsChange]) ;
 
   // Toggle filter
   
-    if (newFilters.has(filterId)) {
+    if(newFilters.has(filterId)) {
 
       newFilters.delete(filterId)} else {
 
       newFilters.add(filterId);
 
-    setActiveFilters (newFilters) };
+    setActiveFilters(newFilters) };
 
   // Clear all filters
   
@@ -148,7 +109,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   // Get icon for type
   const getTypeIcon = (type: string) => {
 
-    switch (type) {
+    switch(type) {
 '"
       case 'service': return <Zap className="w-4 h-4"  />;'"
       case 'article': return <Tag className="w-4 h-4"  />;'"
@@ -203,7 +164,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
                       <div className="text-sm font-medium text-white">{result.title}</div>"
                       <div className="text-xs text-zinc-400 truncate">{result.description}</div>
                     </div>
-                    <span className={`text - xs px - 2 py - 1 rounded - full bg - zinc - 800 / 50 ${getCategoryColor (result.category) }`}>
+                    <span className={`text-xs px-2 py-1 rounded-full bg-zinc - 800 / 50 ${getCategoryColor(result.category) }`}>
                       {result.category}
                     </span>
                   </div>
@@ -248,9 +209,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
           {/* Filter Toggle */}
           <button
             onClick={() => setShowFilterPanel(!showFilterPanel)}`
-className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-
-              showFilterPanel'
+className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${showFilterPanel'
                 ? 'bg-zion-cyan text-white''
                 : 'bg-zinc-900/50 text-zinc-300 hover:text-white border border-zinc-700/50'`
             }`}
@@ -298,11 +257,6 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
   { duration: 0.3,
   ease: 'easeOut'
 
-
-
-
-
-
 }}"
             className="mb-6 overflow-hidden"
 "
@@ -337,9 +291,7 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                       <button
                         key={tag}
                         onClick={() => toggleFilter(tag.toLowerCase())}`
-                        className={`px-3 py-1 text-xs rounded-full transition-all duration-300 ${
-
-                          activeFilters.has(tag.toLowerCase())
+                        className={`px-3 py-1 text-xs rounded-full transition-all duration-300 ${activeFilters.has(tag.toLowerCase())
                             ? 'bg-zion-cyan text-white''
                             : 'bg-zinc-800/50 text-zinc-300 hover:bg-zinc-700/50'`
                         }`}
@@ -393,11 +345,6 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
   { opacity: 1,
   y: 0
 
-
-
-
-
-
 }}"
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 cursor-pointer group"
 "
@@ -442,10 +389,10 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
 <<<<<<< HEAD
                     <Tag className="w-4 h-4"  />
                     {result.tags.slice(0, 3).join(',)}`
-                    {result.tags.length > 3 && ` +${result.tags.length - 3} more`}
+                    {result.tags.length > 3 && ` +${result.tags.length-3} more`}
 =======
                     <Tag className="w-4 h-4"  />'
-                    {result.tags.slice(0, 3).join(', ')}`                    {result.tags.length > 3 && ` +${result.tags.length - 3} more`}
+                    {result.tags.slice(0, 3).join(', ')}`                    {result.tags.length > 3 && ` +${result.tags.length-3} more`}
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   </div>
                 </div>
@@ -472,8 +419,6 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
           </button>
         </motion.div>) }
     </div>) }
-
-
 
 }
 

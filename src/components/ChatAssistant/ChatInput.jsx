@@ -1,23 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Button } from "../ui/Button";
-import { Send export function ChatInput({ onSend, disabled = false }) {
+import { Button } from '../ui/Button';
 
-    const [message, setMessage] = useState('');
-    const inputRef = useRef(null);
-    useEffect(() => {
-        // Focus input when component mounts
-        inputRef.current?.focus()}, []);
-    const handleSubmit = (e) => {
-
-        e.preventDefault();
-        if (message.trim() && !disabled) {
-
-            onSend(message);
-            setMessage('')}
-    };
+export default function Page() {
+;
     const handleKeyPress = (e) => {
 
-        if (e.key === 'Enter' && !e.shiftKey) {
+        if(e.key === 'Enter' && !e.shiftKey) {
 
             e.preventDefault();
             handleSubmit(e)}

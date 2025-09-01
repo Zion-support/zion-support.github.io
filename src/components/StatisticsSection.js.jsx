@@ -1,12 +1,6 @@
 import React from 'react';
-import { Users, Globe, TrendingUp, Award } from 'lucide-react';
-const stats = [
-  {
-
-    icon: <Users className="w-8 h-8" />,
-    value: '10K+',
-    label: 'Active Users',
-    description: 'Trusted by professionals worldwide'},
+import { Users, Globe, TrendingUp, Award  } from 'lucide-react';
+,
   {
 "
     icon: <Globe className="w-8 h-8" />,

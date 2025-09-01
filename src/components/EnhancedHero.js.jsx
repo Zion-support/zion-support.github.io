@@ -1,64 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX } from 'lucide-react';
-const EnhancedHero = () => {
-    const [currentSlide, setCurrentSlide] = useState (0) ;
-    const [isPlaying, setIsPlaying] = useState (true) ;
-    const [isMuted, setIsMuted] = useState (false) ;
-    const [isAutoPlaying, setIsAutoPlaying] = useState (true) ;
-    const heroSlides = [
-        {
+import { motion, AnimatePresence  } from 'framer-motion';
 
-            id: 1,
-            title: "Transform Your Business","
-            subtitle: "With Zion Tech Group","
-            description: "Discover our cutting-edge micro SAAS solutions designed to scale your business operations and drive growth.","
-            ctaText: "Explore Services","
-            ctaLink: "/micro-saas-services","
-            background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)","
-            icon: "🚀"
-        },
-        {
-
-            id: 2,"
-            title: "AI-Powered Solutions","
-            subtitle: "For Modern Enterprises","
-            description: "Leverage artificial intelligence to automate workflows, enhance productivity, and gain competitive advantages.","
-            ctaText: "Learn More","
-            ctaLink: "/ai-solutions","
-            background: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)","
-            icon: "🤖"
-        },
-        {
-
-            id: 3,"
-            title: "Cloud-Native Architecture","
-            subtitle: "Built for Scale","
-            description: "Enterprise-grade cloud solutions that grow with your business, ensuring reliability and performance.","
-            ctaText: "Get Started","
-            ctaLink: "/cloud-solutions","
-            background: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)","
-            icon: "☁️"
-        }
-    ];
-    useEffect ( () => {
-        if (!isAutoPlaying) return;
-        const interval = setInterval ( () => {
-            if (isPlaying) {
-
-                setCurrentSlide((prev) => (prev + 1) % heroSlides.length)}
+export default function Page() {
         }, 5000);
         return () => clearInterval(interval)}, [isPlaying, isAutoPlaying, heroSlides.length]);
     const nextSlide = () => {
-        setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) };
+        setCurrentSlide((prev) => (prev + 1) % heroSlides.length) };
     const prevSlide = () => {
-        setCurrentSlide ( (prev) => (prev - 1 + heroSlides.length) % heroSlides.length) };
+        setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length) };
     const goToSlide = (index) => {
 
         setCurrentSlide(index)};
     const toggleAutoPlay = () => {
-        setIsAutoPlaying (!isAutoPlaying) ;
-        if (!isAutoPlaying) {
+        setIsAutoPlaying(!isAutoPlaying) ;
+        if(!isAutoPlaying) {
 
             setIsPlaying(true)}
     };"
@@ -239,11 +194,11 @@ const EnhancedHero = () => {
       </div>
 
       {/* Navigation Arrows */}"
-      <button onClick={prevSlide} className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors duration-300" aria-label="Previous slide">"
+      <button onClick={prevSlide} className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors duration-300" >"
         <ChevronLeft className="w-6 h-6 text-white"/>
       </button>
 "
-      <button onClick={nextSlide} className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors duration-300" aria-label="Next slide">"
+      <button onClick={nextSlide} className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors duration-300" >"
         <ChevronRight className="w-6 h-6 text-white"/>
       </button>
 

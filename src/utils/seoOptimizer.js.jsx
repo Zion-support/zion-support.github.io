@@ -1,10 +1,9 @@
 export class SEOOptimizer {
 export const seoOptimizer = new SEOOptimizer () ;
 
-
     static DEFAULT_META_DESCRIPTIONS = {
 
-  '/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.',/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.',/ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation. Drive innovation with our cutting-edge AI technology.',/about': 'Learn about Zion Tech Group - a pioneering technology comp delivering innovative solutions and transforming businesses through cutting-edge technology.',/contact': 'Get in touch with Zion Tech Group. Contact our expert team for technology solutions, consultations, and partnership opportunities.',/pricing': 'Transparent pricing for our comprehensive technology services. Choose the perfect plan for your business needs and budget.',/careers': 'Join the Zion Tech Group team. Explore exciting career opportunities in technology, AI, and innovation.',/blog': 'Latest insights, industry trends, and technology news from Zion Tech Group. Stay ahead with our expert analysis and thought leadership.',/news': 'Breaking news and updates from Zion Tech Group. Stay informed about our latest innovations, partnerships, and industry developments.',/services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations. Intelligent automation for the future of enterprise.',/services/quantum-technology': 'Cutting-edge quantum technology solutions. Harness the power of quantum computing for unprecedented computational capabilities.',/services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets. Quantum-safe security and comprehensive threat protection.',/services/it-infrastructure': 'Robust IT infrastructure solutions. Scalable, secure, and high-performance technology foundations for your business.',/services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses. Scalable, cost-effective software-as-a-service platforms.',/solutions/enterprise': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.',/solutions/healthcare': 'Healthcare technology solutions. Secure, compliant,
+  '/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.Transform your business with Zion Tech Group.',/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services.Expert IT solutions for modern businesses.',/ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation.Drive innovation with our cutting-edge AI technology.',/about': 'Learn about Zion Tech Group - a pioneering technology comp delivering innovative solutions and transforming businesses through cutting-edge technology.',/contact': 'Get in touch with Zion Tech Group.Contact our expert team for technology solutions, consultations, and partnership opportunities.',/pricing': 'Transparent pricing for our comprehensive technology services.Choose the perfect plan for your business needs and budget.',/careers': 'Join the Zion Tech Group team.Explore exciting career opportunities in technology, AI, and innovation.',/blog': 'Latest insights, industry trends, and technology news from Zion Tech Group.Stay ahead with our expert analysis and thought leadership.',/news': 'Breaking news and updates from Zion Tech Group.Stay informed about our latest innovations, partnerships, and industry developments.',/services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations.Intelligent automation for the future of enterprise.',/services/quantum-technology': 'Cutting-edge quantum technology solutions.Harness the power of quantum computing for unprecedented computational capabilities.',/services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets.Quantum-safe security and comprehensive threat protection.',/services/it-infrastructure': 'Robust IT infrastructure solutions.Scalable, secure, and high-performance technology foundations for your business.',/services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses.Scalable, cost-effective software-as-a-service platforms.',/solutions/enterprise': 'Enterprise-grade technology solutions.Comprehensive IT services designed for large-scale business operations and growth.',/solutions/healthcare': 'Healthcare technology solutions.Secure, compliant,
   and innovative IT services for the healthcare industry.';
 
 };
@@ -32,14 +31,14 @@ export const seoOptimizer = new SEOOptimizer () ;
     static generateTitle(path) {
 
         const baseTitle = 'Zion Tech Group';
-        if (path === '/') {
+        if(path === '/') {
 
             return `${baseTitle} - Revolutionary Technology Solutions`;
         }
         const pathSegments = path.split('/').filter(Boolean);
-        if (pathSegments.length === 0)
+        if(pathSegments.length === 0)
             return baseTitle;
-        const lastSegment = pathSegments[pathSegments.length - 1];
+        const lastSegment = pathSegments[pathSegments.length-1];
         const formattedSegment = lastSegment;
             .split('-')
             .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -49,7 +48,7 @@ export const seoOptimizer = new SEOOptimizer () ;
     static generateDescription(path) {
 
         return this.DEFAULT_META_DESCRIPTIONS[path] ||'
-            'Professional technology solutions and services. Expert IT consulting, AI development, and digital transformation services for modern businesses.';
+            'Professional technology solutions and services.Expert IT consulting, AI development, and digital transformation services for modern businesses.';
     }
     static generateKeywords(path) {
 
@@ -76,12 +75,11 @@ export const seoOptimizer = new SEOOptimizer () ;
                 "name": "Zion Tech Group","
                 "url": "https://ziontechgroup.com","
   "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"
-            
 
 }
         };
         // Add specific structured data based on page type'
-        if (path === '/') {
+        if(path === '/') {
 
             return {
 
@@ -109,7 +107,7 @@ export const seoOptimizer = new SEOOptimizer () ;
                 }
             };
         }
-        if (path.startsWith('/services/')) {
+        if(path.startsWith('/services/')) {
 
             return {
 
@@ -129,7 +127,7 @@ export const seoOptimizer = new SEOOptimizer () ;
 
         const issues = [];
         // Check for missing or short title'
-        if (!content.includes('<title>) || content.includes('<title></title>)) {
+        if(!content.includes('<title>) || content.includes('<title></title>)) {
 
             issues.push({
 
@@ -140,7 +138,7 @@ export const seoOptimizer = new SEOOptimizer () ;
             }) ;
         }
         // Check for missing meta description'"
-        if (!content.includes('name="description"')) {
+        if(!content.includes('name="description"')) {
 
             issues.push({
 
@@ -152,7 +150,7 @@ export const seoOptimizer = new SEOOptimizer () ;
         }
         // Check for short meta description"
         const descMatch = content.match(/name="description" content="([^"]+)"/);
-        if (descMatch && descMatch[1].length < 120) {
+        if(descMatch && descMatch[1].length < 120) {
 
             issues.push({
 
@@ -163,7 +161,7 @@ export const seoOptimizer = new SEOOptimizer () ;
             });
         }
         // Check for missing headings'
-        if (!content.includes('<h1>) && !content.includes('<h2>) && !content.includes('<h3>)) {
+        if(!content.includes('<h1>) && !content.includes('<h2>) && !content.includes('<h3>)) {
 
             issues.push({
 
@@ -175,7 +173,7 @@ export const seoOptimizer = new SEOOptimizer () ;
         }
         // Check for minimal content'
         const textContent = content.replace(/<[^>]*>/g,).trim();
-        if (textContent.length < 300) {
+        if(textContent.length < 300) {
 
             issues.push({
 
@@ -195,7 +193,7 @@ export const seoOptimizer = new SEOOptimizer () ;
     <meta name="keywords" content="${seoData.keywords.join(',)}" />"
     <link rel="canonical" href="${seoData.canonicalUrl}" />
     
-    <!-- Open Graph -->"
+    <!-- Open Graph-->"
     <meta property="og:title" content="${seoData.title}" />"
     <meta property="og:description" content="${seoData.description}" />"
     <meta property="og:type" content="website" />"

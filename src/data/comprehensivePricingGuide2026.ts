@@ -42,8 +42,7 @@ export type PricingBenefit = {
   aiCapabilities: string[];
   complianceFeatures: string[];
   scalabilityFeatures: string[]}
-;export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
-  {
+;export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [{
 
     id: "ai-business-intelligence-platform-2026","
     title: "AI Business Intelligence Platform 2026","
@@ -64,7 +63,7 @@ export type PricingBenefit = {
           "Predictive analytics with 95% accuracy","
           "Custom dashboard creation with drag-and-drop interface","
           "Real-time data processing with sub-second latency","
-          "Multi-source data integration (100+ connectors)","
+          "Multi-source data integration(100+ connectors)","
           "Advanced visualization tools with 3D charts","
           "Automated reporting with AI-generated insights","
           "Mobile app access with offline capabilities"
@@ -190,8 +189,7 @@ export type PricingBenefit = {
     description: "Revolutionary cybersecurity platform leveraging quantum-resistant algorithms and quantum key distribution for unbreakable encryption and threat detection.","
     category: "Cybersecurity","
     subcategory: "Quantum Security",
-    pricingTiers: [
-      {
+    pricingTiers: [{
 "
         name: "Professional",
         price: 8999,"
@@ -199,12 +197,12 @@ export type PricingBenefit = {
         billing: "monthly",
         features: ["
           "Quantum-resistant encryption algorithms","
-          "Quantum key distribution (QKD)","
+          "Quantum key distribution(QKD)","
           "AI-powered threat detection with 99.99% accuracy","
           "Zero-trust architecture implementation","
           "Real-time threat intelligence feeds","
           "Automated incident response","
-          "Compliance automation (SOC 2, ISO 27001, NIST)","
+          "Compliance automation(SOC 2, ISO 27001, NIST)","
           "Quantum-safe certificate management","
           "Advanced behavioral analytics","
           "Cloud-native security architecture"
@@ -217,7 +215,7 @@ export type PricingBenefit = {
           "Cost reduction through automation"
         ],
         targetAudience: ["
-          "Chief Information Security Officers (CISOs)","
+          "Chief Information Security Officers(CISOs)","
           "Security architects and engineers","
           "Compliance officers","
           "IT directors and managers"
@@ -328,8 +326,7 @@ export const blockchainForgePricing: ServicePricing = {
   serviceId: 3,"
   serviceName: "BlockchainForge","
   category: "Blockchain Development",
-  pricingTiers: [
-    {
+  pricingTiers: [{
 "
       name: "Creator",
       price: 999,"
@@ -374,7 +371,7 @@ export const blockchainForgePricing: ServicePricing = {
       targetAudience: ["Fintech companies", "Medium enterprises", "DeFi projects"],"
       roi: "400% within 6 months","
       setupTime: "2-3 weeks","
-      support: "Priority support (6h response)","
+      support: "Priority support(6h response)","
       marketComparison: "30% below market average","
       volumeDiscounts: ["25% off annual billing", "Volume discounts available"]
     },
@@ -399,7 +396,7 @@ export const blockchainForgePricing: ServicePricing = {
       targetAudience: ["Large enterprises", "Banks", "Insurance companies"],"
       roi: "600% within 8 months","
       setupTime: "3-5 weeks","
-      support: "Dedicated support (1h response)","
+      support: "Dedicated support(1h response)","
       marketComparison: "Market leading pricing","
       volumeDiscounts: ["30% off annual billing", "Custom enterprise pricing"]
     }
@@ -415,7 +412,7 @@ export const blockchainForgePricing: ServicePricing = {
 "
     annualDiscount: "30% off annual billing","
     enterpriseDiscount: "Up to 45% off for enterprise contracts","
-    startupProgram: "70% off for qualified startups (first year)","
+    startupProgram: "70% off for qualified startups(first year)","
     referralProgram: "25% commission for successful referrals"
   }
 };
@@ -600,7 +597,7 @@ export
         billing: "monthly",
         features: ["
           "Quantum-powered market analysis","
-          "Ultra-fast trading execution (<1ms latency)","
+          "Ultra-fast trading execution(<1ms latency)","
           "AI-driven risk assessment","
           "Portfolio optimization algorithms","
           "Real-time market sentiment analysis","

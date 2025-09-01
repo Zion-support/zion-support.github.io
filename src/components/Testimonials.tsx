@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+export default function Testimonials() {
+=======
 import React from 'react';
 import { Star, Users } from 'lucide-react';
+>>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
 
 interface Testimonial {
   quote: string;
@@ -14,10 +18,22 @@ interface TestimonialsProps {
   testimonials: Testimonial[];
 }
 
+<<<<<<< HEAD
+  return (<section className="py-20 bg-gray -800">
+      <div className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <motion.h2
+            className="text-4xl font - bold text-white mb-4"
+=======
+  return ()
+    <section className="py-20 bg-gray-800">"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
+=======
 export function Testimonials({ testimonials }: TestimonialsProps) {
   return (
     <section className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
             What Our Clients Say

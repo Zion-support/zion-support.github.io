@@ -1,5 +1,4 @@
 import React from 'react';
-export function StatisticsSection () {
 import { Users, Globe, TrendingUp, Award const stats = [;
 
     {

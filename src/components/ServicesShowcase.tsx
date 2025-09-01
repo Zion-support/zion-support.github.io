@@ -1,36 +1,6 @@
-import {
-<<<<<<< HEAD
-import { motion } from 'framer - motion';
+import { <<<<<<< HEAD import { motion  } from 'framer-motion';
 
- * ServicesShowcase function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
- */
-function ServicesShowcase () {
-=======
->>>>>>> main
-
-  Brain,
-  Cloud,
-  Shield,
-  Zap,
-  Users,
-  Globe,
-  Cpu,
-  Lock,
-  ShoppingCart,
-  MessageCircle,
-  BookOpen,
-  DollarSign,
-  Gauge,
-  HelpCircle} from 'lucide-react';
-
-  
-  
-  
-  return()
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"      <div className="container mx-auto px-6">
-        {/* Header */}
+export default function Page() {
         <motion.div"
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
@@ -47,10 +17,9 @@ function ServicesShowcase () {
           </h2>"
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
             Discover our extensive collection of cutting-edge micro SAAS
-            solutions designed to transform your business. From AI-powered
+            solutions designed to transform your business.From AI-powered
             analytics to quantum computing, we offer innovative solutions across
-            all major technology domains.
-          </p>
+            all major technology domains.</p>
 
           {/* Quick Stats */}"
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-12">
@@ -107,7 +76,7 @@ function ServicesShowcase () {
           viewport={{ once: true, margin: '-50px' }}"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
         >
-          {services.map ( (service, index) => (<motion.div
+          {services.map((service, index) => (<motion.div
               key={index}
               variants={itemVariants}
               whileHover={{ y: -8, scale: 1.02 }}"

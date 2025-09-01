@@ -1,37 +1,6 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
-
-  Shield,
-  AlertTriangle,
-  CheckCircle,
-  XCircle,
-  Eye,
-  Lock,
-  Activity,
-  Zap,
-  Target,
-  AlertCircle,
-  Info,
-  Settings,
-  RefreshCw,
-  Download,
-  Share2,
-  Maximize2,
-  Minimize2,
-  X,
-  BarChart3,
-  TrendingUp,
-  TrendingDown,
-  Clock,
-  Database,
-  Network,
-  Server,
-  Smartphone,
-  Globe} from 'lucide-react';
+import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+ from 'lucide-react';
 
 interface SecurityThreat {
   id: string;
@@ -71,7 +40,6 @@ interface ComplianceStatus {
 interface SecurityMonitoringSystemProps {
   // Add your props here
 
-
   enabled?: boolean;
   showRealTime?: boolean;
   autoScan?: boolean;
@@ -101,11 +69,8 @@ export function SecurityMonitoringSystem({
   const [securityScore, setSecurityScore] = useState(0);
   const [targetScore, setTargetScore] = useState(95);
 
-  
   // Generate sample security threats
-  
-    
-    
+
     const newThreats: SecurityThreat[] = threatTypes.map((type, index) => ({
 
       id: `threat-${index}`,
@@ -128,9 +93,7 @@ export function SecurityMonitoringSystem({
     setThreats(newThreats)}, []);
 
   // Generate vulnerability assessments
-  
-    
-    
+
     const newVulnerabilities: VulnerabilityAssessment[] = categories.map()
       (category, index) => ({
 `
@@ -157,9 +120,6 @@ export function SecurityMonitoringSystem({
     const newCompliance: ComplianceStatus[] = frameworks.map()
       (framework, index) => {
 
-        
-        
-        
         return {
 
           framework,
@@ -194,12 +154,8 @@ export function SecurityMonitoringSystem({
       setScanComplete(true);
 
       // Calculate overall security score
-      
-      
-      
-      
-      setSecurityScore(overallScore)}, 3000)}, [
-    generateSecurityThreats,
+
+      setSecurityScore(overallScore)}, 3000)}, [generateSecurityThreats,
     generateVulnerabilities,
     generateComplianceStatus,
     complianceStatus,
@@ -208,13 +164,13 @@ export function SecurityMonitoringSystem({
   ]);
   // Auto-scan when component opens
   useEffect(() => {
-    if (autoScan && isOpen && !scanComplete) {
+    if(autoScan && isOpen && !scanComplete) {
 
       startSecurityScan()}
   }, [autoScan, isOpen, scanComplete, startSecurityScan]) ;
   // Setup real - time updates
-  useEffect ( () => {
-    if (showRealTime && isOpen && scanComplete) {
+  useEffect(() => {
+    if(showRealTime && isOpen && scanComplete) {
 
       scanIntervalRef.current = setInterval(() => {
         generateSecurityThreats();
@@ -222,12 +178,11 @@ export function SecurityMonitoringSystem({
         generateComplianceStatus()}, 60000); // Update every minute
 
       return () => {
-        if (scanIntervalRef.current) {
+        if(scanIntervalRef.current) {
 
           clearInterval(scanIntervalRef.current)}
       }}
-  }, [
-    showRealTime,
+  }, [showRealTime,
     isOpen,
     scanComplete,
     generateSecurityThreats,
@@ -252,9 +207,9 @@ export function SecurityMonitoringSystem({
   // Get compliance color
   
     return colors[status as keyof typeof colors] || colors.partial};
-  if (!enabled) return null;
+  if(!enabled) return null;
 
-  return()
+  return ()
     <>
       {/* Floating Security Monitoring Button */}
       <motion.button
@@ -279,9 +234,7 @@ export function SecurityMonitoringSystem({
             exit={{ opacity: 0 }}
           >
             <motion.div`
-              className={`bg-white dark:bg-gray-900 rounded-2xl shadow-2xl overflow-hidden ${
-
-                isFullscreen ? 'w-full h-full' : 'w-full max-w-7xl max-h-[90vh]'`
+              className={`bg-white dark:bg-gray-900 rounded-2xl shadow-2xl overflow-hidden ${isFullscreen ? 'w-full h-full' : 'w-full max-w-7xl max-h-[90vh]'`
               }`}
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -356,9 +309,7 @@ export function SecurityMonitoringSystem({
                       <div className="flex items-center space-x-6">"
                         <div className="text-center">
                           <div`
-                            className={`text-4xl font-bold mb-2 ${
-
-                              securityScore >= 90'
+                            className={`text-4xl font-bold mb-2 ${securityScore >= 90'
                                 ? 'text-green-600'
                                 : securityScore >= 70'
                                   ? 'text-yellow-600''
@@ -381,9 +332,7 @@ export function SecurityMonitoringSystem({
                           </div>"
                           <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
                             <div`
-                              className={`h-3 rounded-full transition-all duration-500 ${
-
-                                securityScore >= 90'
+                              className={`h-3 rounded-full transition-all duration-500 ${securityScore >= 90'
                                   ? 'bg-green-500'
                                   : securityScore >= 70'
                                     ? 'bg-yellow-500''
@@ -400,8 +349,7 @@ export function SecurityMonitoringSystem({
 
                     {/* Navigation Tabs */}"
                     <div className="flex space-x-1 bg-gray-100 dark:bg-gray-800 rounded-lg p-1">
-                      {[
-                        {
+                      {[{
 
                           key: 'threats',
                           label: 'Threats',
@@ -423,9 +371,7 @@ export function SecurityMonitoringSystem({
                         <button
                           key={key}
                           onClick={() => setSelectedView(key as any)}`
-                          className={`flex items-center space-x-2 px-4 py-2 rounded-md transition-colors ${
-
-                            selectedView === key'
+                          className={`flex items-center space-x-2 px-4 py-2 rounded-md transition-colors ${selectedView === key'
                               ? 'bg-white dark:bg-gray-700 text-red-600 dark:text-red-400 shadow-sm''
                               : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'`
                           }`}

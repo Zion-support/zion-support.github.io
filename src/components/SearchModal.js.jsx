@@ -1,54 +1,6 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { useState, useEffect, useRef } from 'react';
-import { Search, X, Clock, MapPin, Star, Users, Briefcase, ShoppingCart } from 'lucide-react';
-import { Button } from '@/components/ui/Button';
-import { Input } from '@/components/ui/Input';
-import { Badge } from '@/components/ui/Badge';
-import { Card, CardContent } from '@/components/ui/Card';
-export function SearchModal({ isOpen, onClose }) {
-
-    const [query, setQuery] = useState('');
-    const [results, setResults] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
-    const [activeFilter, setActiveFilter] = useState('all');
-    const [recentSearches, setRecentSearches] = useState([]);
-    const searchInputRef = useRef(null);
-    const mockSearchResults = [
-        {
-
-            id: '1',
-            type: 'service',
-            title: 'AI-Powered IT Solutions',
-            description: 'Comprehensive AI-driven IT infrastructure and consulting services',
-            url: '/services/ai-it-solutions',
-            category: 'IT Services',
-            tags['AI',IT',Infrastructure',Consulting'],;
-            rating: 4.8,
-            price: 'Starting at $5,000'
-        },
-        {
-
-            id: '2',
-            type: 'talent',
-            title: 'Senior AI Engineer',
-            description: 'Experienced AI engineer with 8+ years in machine learning and deep learning',
-            url: '/talent/ai-engineer-001',
-            category: 'Engineering',
-            tags['AI',Machine Learning',Python',TensorFlow'],;
-            rating: 4.9,
-            location: 'San Francisco, CA'
-        },
-        {
-
-            id: '3',
-            type: 'equipment',
-            title: 'High-Performance GPU Server',
-            description: 'Enterprise-grade GPU server for AI/ML workloads',
-            url: '/equipment/gpu-server-001',
-            category: 'Hardware',
-            tags['GPU',Server',AI',ML'],;
-            price: '$15,000'
-        },
+import { jsx as _jsx, jsxs as _jsxs } from 'react/jsx-runtime';
+export default function Page() {
+,
         {
 
             id: '4',
@@ -60,13 +12,13 @@ export function SearchModal({ isOpen, onClose }) {
             tags['Security',Cybersecurity',Enterprise',Protection'];
         }
     ];
-    useEffect ( () => {
-        if (isOpen && searchInputRef.current) {
+    useEffect(() => {
+        if(isOpen && searchInputRef.current) {
 
             searchInputRef.current.focus()}
     }, [isOpen]);
     useEffect(() => {
-        if (query.trim()) {
+        if(query.trim()) {
 
             performSearch()}
         else {
@@ -74,19 +26,19 @@ export function SearchModal({ isOpen, onClose }) {
             setResults([])}
     }, [query, activeFilter]);
     const performSearch = async () => {
-        setIsLoading (true) ;
+        setIsLoading(true) ;
         // Simulate API call delay
-        await new Promise (resolve => setTimeout (resolve, 300) ) ;
+        await new Promise(resolve => setTimeout (resolve, 300) ) ;
         // Filter results based on query and active filter
         const filteredResults = mockSearchResults.filter(result => {
 
             const matchesFilter = activeFilter === 'all' || result.type === activeFilter;
             return matchesQuery && matchesFilter}) ;
-        setResults (filteredResults) ;
-        setIsLoading (false) };
+        setResults(filteredResults) ;
+        setIsLoading(false) };
     const handleSearch = (searchQuery) => {
 
-        if (searchQuery.trim()) {
+        if(searchQuery.trim()) {
 
             setQuery(searchQuery);
             addToRecentSearches(searchQuery)}
@@ -99,7 +51,7 @@ export function SearchModal({ isOpen, onClose }) {
             return [searchQuery, ...filtered].slice(0, 5)})};
     const getTypeIcon = (type) => {
 
-        switch (type) {
+        switch(type) {
 
             case 'service':"
                 return _jsx(Briefcase, { className: "h-4 w-4" });
@@ -114,7 +66,7 @@ export function SearchModal({ isOpen, onClose }) {
     };
     const getTypeColor = (type) => {
 
-        switch (type) {
+        switch(type) {
 
             case 'service':'
                 return 'bg-blue-100 text-blue-700';
@@ -127,7 +79,7 @@ export function SearchModal({ isOpen, onClose }) {
             default:'
                 return 'bg-gray-100 text-gray-700'}
     };
-    if (!isOpen)
+    if(!isOpen)
         return null;"
     return (_jsx("div", { className: "fixed inset-0 z-50 bg-black/50 backdrop-blur-sm", children: _jsx("div", { className: "flex items-start justify-center pt-20 px-4", children: _jsxs("div", { className: "bg-white rounded-lg shadow-2xl w-full max-w-4xl max-h-[80vh] overflow-hidden", children[_jsxs("div", { className: "flex items-center justify-between p-6 border-b border-gray-200", children[_jsx("div", { className: "flex-1 max-w-2xl", children: _jsxs("div", { className: "relative", children[_jsx(Search, { className: "absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" }), _jsx(Input, { ref: searchInputRef, type: "text", placeholder: "Search for services, talent, equipment, or pages...", value: query, onChange: (e) => setQuery(e.target.value), className: "pl-10 pr-4 py-3 text-lg border-0 focus:ring-2 focus:ring-zion-blue" })] }) }), _jsx(Button, { variant: "ghost", size: "sm", onClick: onClose, className: "ml-4 p-2 hover:bg-gray-100", children: _jsx(X, { className: "h-6 w-6" }) })] }), _jsx("div", { className: "px-6 py-4 border-b border-gray-200", children: _jsxs("div", { className: "flex items-center space-x-4", children[_jsx("span", { className: "text-sm font-medium text-gray-700", children: "Filter by:" }), [;
                                     { key: 'all', label: 'All' },

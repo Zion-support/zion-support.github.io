@@ -1,76 +1,8 @@
 <<<<<<< HEAD
-import { Helmet } from 'react - helmet - async';
-import React from 'react';
-export const EnhancedSEO: React.FC < SEOProps> = ({
-=======
-<<<<<<< HEAD
->>>>>>> main
+import { Helmet } from 'react - helmet -async';
 
-interface SEOProps {
-  title: string;
-  description: string;
-  canonical?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product' | 'service';
-  tags?: string[];
-  services?: Array<{
-    name: string;
-    description: string;
-    url: string;
-    category: string}>;
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product' | 'service';
-  publishedTime?: string;
-  modifiedTime?: string;
-  author?: string;
-  section?: string;
-  tags?: string[];
-  canonical?: string;
-  noindex?: boolean;
-  nofollow?: boolean;
-  structuredData?: any}
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-export const EnhancedSEO: React.FC<SEOProps> = ({
-
-  title = 'Zion Tech Group - Leading AI Solutions & Technology Services',
-  description = 'Transform your business with cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Expert technology consulting and digital transformation.',
-  keywords = 'AI solutions, quantum computing, micro SAAS, digital transformation, technology consulting, machine learning, cybersecurity, cloud services',
-  image = '/images/zion-tech-group-og.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website',
-  image,
-  url,
-  author = 'Zion Tech Group',
-  publishedTime,
-  modifiedTime,
-  author = 'Zion Tech Group',
-  section,
-  tags = [],
-  
-    'AI solutions',cloud computing',cybersecurity',digital transformation',machine learning',quantum computing',IoT',blockchain',micro-SaaS',enterprise software',Zion Tech Group'
-  ];
-
-  
-  // Combine all structured data
-  
-  // Generate meta keywords
-  
-  const defaultStructuredData = {
-
-  "@context": "https://schema.org","
-    "@type": "Organization","
-    "name": "Zion Tech Group","
-    "url": "https://ziontechgroup.com","
-    "logo": "https://ziontechgroup.com/images/zion-logo.png","
-    "description": "Leading provider of AI-powered technology solutions, cloud computing, and cybersecurity services.",
-  noindex = false,
-<<<<<<< HEAD
-  canonical,
-}) => {
-  const fullTitle = title.includes ('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+export default function Page() {
+ | Zion Tech Group`;
   const fullUrl = canonical || `${url}${window.location.pathname}`;
 
 =======
@@ -128,8 +60,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
 "
       "@type": "OfferCatalog","
       "name": "Technology Services","
-      "itemListElement": [
-        {
+      "itemListElement": [{
 "
           "@type": "Offer","
           "itemOffered": {
@@ -164,27 +95,25 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
   };
 
     // Preload critical images
-    if (ogImage) {
+    if(ogImage) {
 
-      
       imageLink.rel = 'preload';
       imageLink.as = 'image';
       imageLink.href = ogImage;
-      document.head.appendChild (imageLink) }
+      document.head.appendChild(imageLink) }
 
     // DNS prefetch for external domains
     
     dnsPrefetchDomains.forEach(domain => {
 
-      
       link.rel = 'dns-prefetch';
       link.href = domain;
       document.head.appendChild(link)});
 <<<<<<< HEAD
   }, [ogImage]);
-  if (type === 'article') {
+  if(type === 'article') {
 =======
-  }, [ogImage]);'  if (type === 'article') {
+  }, [ogImage]);'  if(type === 'article') {
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     Object.assign(structuredData, {
@@ -214,7 +143,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
         "@id": fullUrl
       }
     }) }
-  return()
+  return ()
     <Helmet>
       {/* Basic Meta Tags */}"
       <meta name="author" content="Zion Tech Group" />"
@@ -257,7 +186,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       <meta property="og:description" content={description} />
       <meta property="og:type" content={type} />
       <meta property="og:url" content={fullUrl} />
-      <meta property="og:image" content={image.startsWith ('http') ? image : `${url}${image}`} />
+      <meta property="og:image" content={image.startsWith('http') ? image : `${url}${image}`} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
 
@@ -267,10 +196,10 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="twitter:creator" content="@ziontechgroup" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image.startsWith ('http') ? image : `${url}${image}`} />
+      <meta name="twitter:image" content={image.startsWith('http') ? image : `${url}${image}`} />
 
       {/* Additional Meta Tags */}
-      <meta name="viewport" content="width = device - width, initial - scale = 1.0" />
+      <meta name="viewport" content="width = device - width, initial-scale= 1.0" />
       <meta name="theme - color" content="#22ddd2" />
       <meta name="msapplication - TileColor" content="#22ddd2" />
 =======
@@ -314,13 +243,13 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
       {author && <meta property="article:author" content={author} />}
       {section && <meta property="article:section" content={section} />}
-      {tags.map ( (tag, index) => (<meta key={index} property="article:tag" content={tag} />) ) }
+      {tags.map((tag, index) => (<meta key={index} property="article:tag" content={tag} />) ) }
     </Helmet>) ;
 };}}}}
 
       {/* Favicon */}
       <link rel="icon" type="image / x-icon" href="/favicon.ico" />
-      <link rel="apple - touch - icon" sizes="180x180" href="/apple - touch - icon.png" />
+      <link rel="apple - touch-icon" sizes="180x180" href="/apple - touch-icon.png" />
       <link rel="icon" type="image / png" sizes="32x32" href="/favicon - 32x32.png" />
       <link rel="icon" type="image / png" sizes="16x16" href="/favicon - 16x16.png" />
 
@@ -329,7 +258,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
 
       {/* Structured Data */}
       <script type="application / ld + json">
-        {JSON.stringify (structuredData) }
+        {JSON.stringify(structuredData) }
       </script>
 
       {/* Additional SEO Meta Tags */}

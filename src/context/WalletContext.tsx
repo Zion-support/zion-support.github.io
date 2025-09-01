@@ -2,36 +2,13 @@ import React, { createContext, useState, useContext, ReactNode, useCallback, use
 import Web3Modal from 'web3modal';
 import { ethers } from 'ethers';
 
-interface WalletState {
-  provider: ethers.providers.Web3Provider | null;
-  signer: ethers.Signer | null;
-  address: string | null;
-  chainId: number | null;
-  isConnected: boolean;
-}
-
-interface WalletContextType extends WalletState {
-  connectWallet: () => Promise<void>;
-  disconnectWallet: () => void;
-  displayAddress: string | null; 
-}
-
-const initialWalletState: WalletState = {
-  provider: null,
-  signer: null,
-  address: null,
-  chainId: null,
-  isConnected: false,
-};
-
-const WalletContext = createContext<WalletContextType | undefined>(undefined);
-
-export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export default function Page() {
+> = ({ children }) => {
   const [wallet, setWallet] = useState<WalletState>(initialWalletState);
   const [web3ModalInstance, setWeb3ModalInstance] = useState<Web3Modal | null>(null);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if(typeof window !== 'undefined') {
         const providerOptions = {};
         const modal = new Web3Modal({
             network: 'mainnet', 
@@ -43,14 +20,14 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
   }, []);
 
   const disconnectWallet = useCallback(async () => {
-    if (web3ModalInstance?.cachedProvider) {
+    if(web3ModalInstance?.cachedProvider) {
         web3ModalInstance.clearCachedProvider();
     }
     setWallet(initialWalletState);
   }, [web3ModalInstance]); // Removed wallet.provider, setWallet is stable
 
   const connectWallet = useCallback(async () => {
-    if (!web3ModalInstance) {
+    if(!web3ModalInstance) {
         console.error('Web3Modal not initialized');
         return;
     }
@@ -70,7 +47,7 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
       });
 
       instance.on('accountsChanged', (accounts: string[]) => {
-        if (accounts.length > 0) {
+        if(accounts.length > 0) {
           // Re-fetch signer and network info as account change might imply network change in some wallets
           const newProvider = new ethers.providers.Web3Provider(instance);
           const newSigner = newProvider.getSigner();
@@ -109,7 +86,7 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
         disconnectWallet();
       });
 
-    } catch (error) {
+    } catch(error) {
       console.error('Error connecting wallet:', error);
       // If user closes modal, it might throw an error, so we ensure state is reset
       disconnectWallet();
@@ -117,11 +94,10 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
   }, [web3ModalInstance, disconnectWallet]); // Added disconnectWallet
 
   const displayAddress = wallet.address
-    ? `${wallet.address.substring(0, 6)}...${wallet.address.substring(wallet.address.length - 4)}`
+    ? `${wallet.address.substring(0, 6)}...${wallet.address.substring(wallet.address.length-4)}`
     : null;
 
-  return (
-    <WalletContext.Provider value={{ ...wallet, connectWallet, disconnectWallet, displayAddress }}>
+  return (<WalletContext.Provider value={{ ...wallet, connectWallet, disconnectWallet, displayAddress }}>
       {children}
     </WalletContext.Provider>
   );
@@ -129,7 +105,7 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
 
 export const useWallet = (): WalletContextType => {
   const context = useContext(WalletContext);
-  if (context === undefined) {
+  if(context === undefined) {
     throw new Error('useWallet must be used within a WalletProvider');
   }
   return context;

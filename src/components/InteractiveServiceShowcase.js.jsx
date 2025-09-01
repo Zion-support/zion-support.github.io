@@ -1,20 +1,11 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-const InteractiveServiceShowcase = () => {
-
-    const [activeCategory, setActiveCategory] = useState('all');
-    const [hoveredService, setHoveredService] = useState(null);
-    const categories = ['
-        { id: 'all', name: 'All Services', icon: '🚀', count: 35 },
-        { id: 'ai', name: 'AI & ML', icon: '🤖', count: 13 },
-        { id: 'quantum', name: 'Quantum', icon: '🔮', count: 5 },
-        { id: 'cloud', name: 'Cloud', icon: '☁️', count: 8 },
+import { motion, AnimatePresence  } from 'framer-motion';
+export default function Page() {
+,
         { id: 'security', name: 'Security', icon: '🛡️', count: 6 },
         { id: 'automation', name: 'Automation', icon: '⚡', count: 3 }
     ];
-    const services = [
-        {
+    const services = [{
 
             id: 'ai-strategy',
             title: 'AI Strategy Consulting',
@@ -116,7 +107,7 @@ const InteractiveServiceShowcase = () => {
     ];
     const filteredServices = activeCategory === 'all'
         ? services
-        : services.filter (service => service.category === activeCategory) ;
+        : services.filter(service => service.category === activeCategory) ;
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -253,7 +244,7 @@ const InteractiveServiceShowcase = () => {
                             {feature}
                           </div>))}"
                         {service.features.length > 3 && (<div className="text-zion-cyan/60 text-xs">
-                            +{service.features.length - 3} more features
+                            +{service.features.length-3} more features
                           </div>) }
                       </div>
 

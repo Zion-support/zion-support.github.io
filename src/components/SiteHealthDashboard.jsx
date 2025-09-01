@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, Eye, Users, TrendingUp, AlertTriangle export function SiteHealthDashboard () {
 
-    const [healthData, setHealthData] = useState ([]) ;
-    const [overallScore, setOverallScore] = useState (0) ;
-    const [isLoading, setIsLoading] = useState (true) ;
-    useEffect ( () => {
+    const [healthData, setHealthData] = useState([]);
+    const [overallScore, setOverallScore] = useState(0);
+    const [isLoading, setIsLoading] = useState(true);
+    useEffect(() => {
         // Simulate health check data collection
         const performHealthCheck = async () => {
-            setIsLoading (true) ;
+            setIsLoading(true) ;
             // Simulate API calls to various monitoring services
-            await new Promise (resolve => setTimeout (resolve, 2000) ) ;
-            const healthCategories = [
-                {
+            await new Promise(resolve => setTimeout (resolve, 2000) ) ;
+            const healthCategories = [{
 
                     name: 'Performance',
                     icon: Zap,
@@ -230,15 +229,15 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                     ]
 
             ];
-            setHealthData (healthCategories) ;
+            setHealthData(healthCategories) ;
             // Calculate overall score
-            const totalScore = healthCategories.reduce ( (sum, category) => sum + category.overallScore, 0) ;
-            setOverallScore (Math.round (totalScore / healthCategories.length) ) ;
-            setIsLoading (false) };
+            const totalScore = healthCategories.reduce((sum, category) => sum + category.overallScore, 0) ;
+            setOverallScore(Math.round (totalScore / healthCategories.length) ) ;
+            setIsLoading(false) };
         performHealthCheck () }, []) ;
     const getStatusColor = (status) => {
 
-        switch (status) {
+        switch(status) {
 
             case 'excellent': return 'text-green-500 bg-green-50 border-green-200';
             case 'good': return 'text-blue-500 bg-blue-50 border-blue-200';
@@ -248,7 +247,7 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
     };
     const getStatusIcon = (status) => {
 
-        switch (status) {
+        switch(status) {
 
             case 'excellent': return <CheckCircle className="w-4 h-4"/>;'"
             case 'good': return <CheckCircle className="w-4 h-4"/>;'"
@@ -258,14 +257,14 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
     };
     const getScoreColor = (score) => {
 
-        if (score >= 90)
+        if(score >= 90)
             return 'text-green-500';
-        if (score >= 75)
+        if(score >= 75)
             return 'text-blue-500';
-        if (score >= 60)
+        if(score >= 60)
             return 'text-yellow-500';
         return 'text-red-500'};
-    if (isLoading) {
+    if(isLoading) {
 "
         return (<div className="max-w-7xl mx-auto p-6">"
         <div className="text-center py-12">"

@@ -1,5 +1,4 @@
-export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
-    // AI-Powered Financial Services
+export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [// AI-Powered Financial Services
     {
 
         id: "ai-financial-advisory-platform","
@@ -74,7 +73,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         currency: "$","
         pricingModel: "monthly",
         features[;"
-            "Medical image analysis (X-rays, MRIs, CT scans)","
+            "Medical image analysis(X-rays, MRIs, CT scans)","
             "Symptom analysis and diagnosis","
             "Treatment recommendation engine","
             "Patient data integration","

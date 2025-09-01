@@ -1,22 +1,8 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan } from 'lucide-react';
-import { Link } from 'react-router-dom';
-const aiServices = [
-    {
-
-        id: 'ai-chat',
-        name: 'ZionGPT Pro',
-        description: 'Advanced conversational AI with enterprise-grade security and customization',
-        category: 'Conversational AI',
-        rating: 4.9,
-        users: 15420,
-        price: 'From $99/month',
-        features['Multi-language support',Custom training',API access',Analytics'],;
-        icon: Brain,
-        color: 'from-purple-500 to-purple-700',
-        status: 'active'
-    },
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan  } from 'lucide-react';
+import { Link  } from 'react-router-dom';
+,
     {
 
         id: 'ai-vision',
@@ -110,7 +96,7 @@ export function AIServicesShowcase() {
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
     const filteredServices = selectedCategory === 'All'
         ? aiServices
-        : aiServices.filter (service => service.category === selectedCategory) ;
+        : aiServices.filter(service => service.category === selectedCategory) ;
     const getStatusBadge = (status) => {
 
         const statusConfig = {
@@ -123,7 +109,7 @@ export function AIServicesShowcase() {
             new: { color: 'bg-blue-500', text: 'New' }
         };
         const config = statusConfig[status];
-        return (<span className={`${config.color} text - white text - xs px - 2 py - 1 rounded - full font - medium`}>
+        return (<span className={`${config.color} text-white text-xs px-2 py-1 rounded-full font - medium`}>
         {config.text}
       </span>) };
     const containerVariants = {
@@ -262,7 +248,7 @@ export function AIServicesShowcase() {
                         <div className="text-zion-slate-light text-sm">{service.category}</div>
                       </div>
                     </div>
-                    {getStatusBadge (service.status) }
+                    {getStatusBadge(service.status) }
                   </div>
 "
                   <p className="text-zion-slate-light mb-4">{service.description}</p>

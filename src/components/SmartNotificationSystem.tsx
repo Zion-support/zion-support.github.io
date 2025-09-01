@@ -1,31 +1,6 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
-
-  Bell,
-  X,
-  CheckCircle,
-  AlertTriangle,
-  Info,
-  XCircle,
-  Settings,
-  Volume2,
-  VolumeX,
-  Clock,
-  Star,
-  Archive,
-  Trash2,
-  Filter,
-  Search,
-  MoreVertical,
-  Eye,
-  EyeOff,
-  Zap,
-  Shield,
-  Globe} from 'lucide-react';
+import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+ from 'lucide-react';
 
   id: string;
   title: string;
@@ -84,11 +59,9 @@ export function SmartNotificationSystem({
     grouping: true,
     priority: true});
 
-  
-  
   // Initialize audio for notification sounds
-  useEffect ( () => {
-    if (settings.sound) {
+  useEffect(() => {
+    if(settings.sound) {
 
       audioRef.current = new Audio('/notification-sound.mp3');
       audioRef.current.volume = 0.3}
@@ -98,18 +71,17 @@ export function SmartNotificationSystem({
   
       setNotifications(prev => {
 
-        
         return updated.slice(0, maxNotifications)});
 
       // Play sound if enabled
-      if (settings.sound && audioRef.current) {
+      if(settings.sound && audioRef.current) {
 
         audioRef.current.play().catch(() => {
           // Ignore audio play errors
         })}
 
       // Auto-dismiss if enabled'
-      if (settings.autoDismiss && notification.priority !== 'critical') {
+      if(settings.autoDismiss && notification.priority !== 'critical') {
 
         setTimeout(() => {
           dismissNotification(newNotification.id)}, settings.autoDismissDelay)}
@@ -153,7 +125,7 @@ export function SmartNotificationSystem({
 
   // Filter notifications
   
-    if ('
+    if('
       filter === 'important' &&'
       notification.priority !== 'high' &&'
       notification.priority !== 'critical'
@@ -209,7 +181,7 @@ export function SmartNotificationSystem({
 
   // Request notification permission
   
-      if (permission === 'granted') {
+      if(permission === 'granted') {
 
         setSettings(prev => ({ ...prev, desktop: true }))}
     }
@@ -219,7 +191,7 @@ export function SmartNotificationSystem({
   
       markAsRead(notification.id);
 
-      if (onNotificationAction) {
+      if(onNotificationAction) {
 
         onNotificationAction(notification, action.label)}
     },
@@ -228,24 +200,24 @@ export function SmartNotificationSystem({
 
   // Group notifications by category
   
-          if (!groups[category]) groups[category] = [];
+          if(!groups[category]) groups[category] = [];
           groups[category].push(notification);
           return groups},
         {} as Record<string, Notification[]>
       )
     : { All: filteredNotifications };
 
-  if (!enabled) return null;
+  if(!enabled) return null;
 
-  return()
+  return ()
     <>
       {/* Notification Bell */}
       <motion.button
-        onClick={ () => setIsOpen (true) }
-        className="relative p - 2 text - gray - 600 dark:text - gray - 400 hover:text - gray - 900 dark:hover:text - white transition - colors"
+        onClick={ () => setIsOpen(true) }
+        className="relative p - 2 text-gray - 600 dark:text-gray - 400 hover:text-gray - 900 dark:hover:text-white transition -colors"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}"
-        aria-label="Open notifications"
+        
       >"
         <Bell className="w-6 h-6"  />
         {notificationCount > 0 && (
@@ -391,9 +363,7 @@ export function SmartNotificationSystem({
                         <button
                           key={filterType}
                           onClick={() => setFilter(filterType)}`
-                          className={`px-3 py-1 text-sm rounded-lg transition-colors ${
-
-                            filter === filterType'
+                          className={`px-3 py-1 text-sm rounded-lg transition-colors ${filter === filterType'
                               ? 'bg-blue-600 text-white''
                               : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'`
                           }`}
@@ -461,9 +431,7 @@ export function SmartNotificationSystem({
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -10 }}`
-                            className={`p-4 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors ${
-
-                              !notification.read'
+                            className={`p-4 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors ${!notification.read'
                                 ? 'bg-blue-50 dark:bg-blue-900/10''
                                 : ''`
                             }`}
@@ -480,9 +448,7 @@ export function SmartNotificationSystem({
                                 <div className="flex items-start justify-between">"
                                   <div className="flex-1">
                                     <h4`
-                                      className={`text-sm font-medium ${
-
-                                        !notification.read'
+                                      className={`text-sm font-medium ${!notification.read'
                                           ? 'text-gray-900 dark:text-white''
                                           : 'text-gray-700 dark:text-gray-300'`
                                       }`}
@@ -553,9 +519,7 @@ export function SmartNotificationSystem({
                                                 action
                                               )
                                             }`
-                                            className={`px-3 py-1 text-xs rounded-lg transition-colors ${
-
-                                              action.variant === 'primary''
+                                            className={`px-3 py-1 text-xs rounded-lg transition-colors ${action.variant === 'primary''
                                                 ? 'bg-blue-600 text-white hover:bg-blue-700''
                                                 : action.variant === 'danger''
                                                   ? 'bg-red-600 text-white hover:bg-red-700''
@@ -600,7 +564,7 @@ export
 };
 
 const SmartNotificationSystem: React.FC<SmartNotificationSystemProps> = ({ enabled = true }) => {
-  if (!enabled) return null;
+  if(!enabled) return null;
   return <div className="hidden" aria-hidden="true" />};
 
 export default SmartNotificationSystem;

@@ -1,85 +1,7 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { motion } from 'framer - motion';
-=======
->>>>>>> main
-
-  Activity,
-  TrendingUp,
-  TrendingDown,
-  Clock,
-  Zap,
-  AlertTriangle,
-  CheckCircle,
-  BarChart3,
-  Cpu,
-  HardDrive,
-  Network,
-  Monitor
-interface PerformanceMetric {
-
-  name: string;
-  value: number;
-  unit: string;
-  trend: 'up' | 'down' | 'stable';
-  status: 'good' | 'warning' | 'critical';
-  icon: React.ComponentType < any>;
-
-interface PerformanceData {
-  timestamp: number;
-  metrics: PerformanceMetric[];
-  alerts: string[];
-  recommendations: string[];
-
-const PerformanceAnalytics: React.FC = () => {;
-  const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null);
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const [selectedTimeframe, setSelectedTimeframe] = useState<'1h' | '24h' | '7d' | '30d'>('24h');
-
-  // Mock performance data - in real implementation, this would come from actual monitoring
-  
-    
-    const metrics: PerformanceMetric[] = [
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      {
-
-        name: 'Page Load Time',
-        value: Math.random() * 2000 + 500,
-        unit: 'ms',
-        trend: Math.random() > 0.5 ? 'up' : 'down',
-        status: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical',
-        icon: Clock
-      
-},
-      {
-
-        name: 'Memory Usage',
-        value: Math.random() * 40 + 60,
-        unit: '%',
-        trend: Math.random() > 0.5 ? 'up' : 'down',
-        status: Math.random() > 0.6 ? 'good' : 'warning',
-        icon: HardDrive
-      },
-      {
-
-        name: 'CPU Usage',
-        value: Math.random() * 30 + 20,
-        unit: '%',
-        trend: Math.random() > 0.5 ? 'up' : 'down',
-        status: Math.random() > 0.7 ? 'good' : 'warning',
-        icon: Cpu
-      },
-      {
-
-        name: 'Network Latency',
-        value: Math.random() * 100 + 20,
-        unit: 'ms',
-        trend: Math.random() > 0.5 ? 'up' : 'down',
-        status: Math.random() > 0.6 ? 'good' : 'warning',
-        icon: Network
-      },
+import { <<<<<<< HEAD import { motion  } from 'framer-motion';
+export default function Page() {
+,
       {
 
         name: 'Error Rate',
@@ -100,7 +22,6 @@ const PerformanceAnalytics: React.FC = () => {;
 
     ];
 
-    
       'High memory usage detected on server-01',;
       'Network latency increased by 15%',;
       'Error rate spike detected in last 5 minutes';
@@ -125,43 +46,37 @@ const PerformanceAnalytics: React.FC = () => {;
       alerts,
       recommendations
     }}, []) ;
-  useEffect ( () => {
-    if (isMonitoring) {
+  useEffect(() => {
+    if(isMonitoring) {
 
-      
         setPerformanceData(generateMockData())}, 5000); // Update every 5 seconds
 
-      return () => clearInterval (interval) }
+      return () => clearInterval(interval) }
   }, [isMonitoring, generateMockData]) ;
 
-  
-    switch (status) {;
+    switch(status) {;
       case 'good': return 'text-green-400';
       case 'warning': return 'text-yellow-400';
       case 'critical': return 'text-red-400';
       default: return 'text-gray-400'};
 
-  
-    switch (status) {;
+    switch(status) {;
       case 'good': return 'bg-green-500/20';
       case 'warning': return 'bg-yellow-500/20';
       case 'critical': return 'bg-red-500/20';
       default: return 'bg-gray-500/20'};
 
-  
-    switch (trend) {;
+    switch(trend) {;
       case 'up': return <TrendingUp className="w-4 h-4 text-red-400"  />;'"
       case 'down': return <TrendingDown className="w-4 h-4 text-green-400"  />;"
       default: return <Activity className="w-4 h-4 text-blue-400"  />};
 
-  
-    setIsMonitoring (true) ;
-    setPerformanceData (generateMockData () ) };
+    setIsMonitoring(true) ;
+    setPerformanceData(generateMockData () ) };
 
-  
-    setIsMonitoring (false) };
+    setIsMonitoring(false) };
   return ("
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 p-6">"
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 p-6">"
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -175,11 +90,6 @@ const PerformanceAnalytics: React.FC = () => {;
 
   { opacity: 1,
   y: 0
-
-
-
-
-
 
 }}"
           className="text-center mb-12"
@@ -213,9 +123,7 @@ const PerformanceAnalytics: React.FC = () => {;
             <button
               onClick={startMonitoring}
               disabled={isMonitoring}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${
-
-                isMonitoring'
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${isMonitoring'
                   ? 'bg-gray-600 text-gray-400 cursor-not-allowed''
                   : 'bg-green-600 hover:bg-green-700 text-white'`
               }`}
@@ -225,9 +133,7 @@ const PerformanceAnalytics: React.FC = () => {;
             <button
               onClick={stopMonitoring}
               disabled={!isMonitoring}`
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${
-
-                !isMonitoring'
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${!isMonitoring'
                   ? 'bg-gray-600 text-gray-400 cursor-not-allowed''
                   : 'bg-red-600 hover:bg-red-700 text-white'`
               }`}
@@ -265,7 +171,7 @@ const PerformanceAnalytics: React.FC = () => {;
             transition={{ delay: 0.3 }}"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
           >
-            {performanceData.metrics.map ( (metric, index) => (<motion.div
+            {performanceData.metrics.map((metric, index) => (<motion.div
                 key={metric.name}
                 initial = {
 
@@ -289,7 +195,7 @@ const PerformanceAnalytics: React.FC = () => {;
                     </div>"
                     <h3 className="text-lg font-semibold text-white">{metric.name}</h3>
                   </div>
-                  {getTrendIcon (metric.trend) }
+                  {getTrendIcon(metric.trend) }
                 </div>
 "
                 <div className="text-center">"
@@ -368,11 +274,11 @@ const PerformanceAnalytics: React.FC = () => {;
 }}
 <<<<<<< HEAD
           transition={{ delay: 0.6 }}
-          className="bg - white / 5 backdrop - blur - sm border border - white / 10 rounded - xl p - 8 text - center"
+          className="bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-xl p - 8 text-center"
         >
-          <BarChart3 className="w - 16 h - 16 text - gray - 400 mx - auto mb - 4" />
-          <h3 className="text - xl font - semibold text - white mb - 2">Performance Trends</h3>
-          <p className="text - gray - 400">
+          <BarChart3 className="w-16 h-16 text-gray - 400 mx - auto mb-4" />
+          <h3 className="text-xl font - semibold text-white mb-2">Performance Trends</h3>
+          <p className="text-gray -400">
             {isMonitoring
               ? 'Real - time performance data is being collected and analyzed...'
 =======

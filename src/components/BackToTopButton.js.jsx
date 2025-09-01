@@ -1,18 +1,7 @@
-import { ArrowUp } from 'lucide-react';
-import { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-export function BackToTopButton() {
-  const [visible, setVisible] = useState(false);
-  const { t } = useTranslation();
-  useEffect(() => {
-    const onScroll = () => {
-      setVisible(window.scrollY > 400);
-    };
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-  return()
+import { ArrowUp  } from 'lucide-react';
+export default function Page() {
+);
+  return ()
     <button'
       aria-label={t('general.back_to_top')}
       onClick={scrollToTop}

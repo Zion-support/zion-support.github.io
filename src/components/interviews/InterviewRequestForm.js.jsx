@@ -1,42 +1,20 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import {
-
-  Form,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage} from '@/components/ui/form';
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import {
-
-  Select,
-  SelectTrigger,
-  SelectValue,
-  SelectContent,
-  SelectItem} from '@/components/ui/select';
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
 import { Calendar } from '@/components/ui/calendar';
-import {
-
-  Popover,
-  PopoverTrigger,
-  PopoverContent} from '@/components/ui/popover';
+import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover';
 import { cn } from '@/lib/utils';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { format, addDays } from 'date-fns';
-import { CalendarIcon } from 'lucide-react';
+import { CalendarIcon  } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
 import { useInterviews } from '@/hooks/useInterviews';
-const formSchema = z.object({
-
-  date: z
-    .date({
-
-      required_error: 'Please select a date for the interview.'})
+)
     .refine(date => date > new Date(), {
 
       message: 'Interview date must be in the future'}),
@@ -62,7 +40,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
       meetingLink: ''}});
   async function onSubmit(values) {
 
-    if (!userDetails?.id) {
+    if(!userDetails?.id) {
 
       toast({
 
@@ -94,13 +72,13 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
         title: 'Interview requested',`
         description: `Your interview request with ${talent.full_name} has been sent.`});
       onClose();
-    } catch (error) {
+    } catch(error) {
       // console.error("Failed to schedule interview:", error);
       toast({
 
         title: 'Failed to schedule interview',
         description:'
-          'An error occurred while scheduling the interview. Please try again.',
+          'An error occurred while scheduling the interview.Please try again.',
         variant: 'destructive'});
     } finally {
 
@@ -110,7 +88,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
   const timeSlots = ['
     '09:00',09:30',10:00',10:30',11:00',11:30',12:00',12:30',13:00',13:30',14:00',14:30',15:00',15:30',16:00',16:30',17:00',17:30',18:00',18:30',19:00',19:30',20:00',
   ];
-  return()
+  return ()
     <Form {...form}>"
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">"
         <div className="flex items-center mb-6">"
@@ -281,7 +259,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
             name="meetingLink"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Meeting Link (Optional)</FormLabel>
+                <FormLabel>Meeting Link(Optional)</FormLabel>
                 <FormControl>
                   <Input'`
                     placeholder={`Add your ${form.watch('platform')} link here`}
@@ -299,7 +277,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
           name="notes"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Notes (Optional)</FormLabel>
+              <FormLabel>Notes(Optional)</FormLabel>
               <FormControl>
                 <Textarea'"
                   placeholder="Share what you'd like to discuss in this interview"

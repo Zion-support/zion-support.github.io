@@ -1,13 +1,12 @@
 import React from 'react';
 import { Star, Quote export const AppTestimonials = () => {
-  const testimonials = [
-    {
+  const testimonials = [{
 
       name: "Sarah Chen","
       role: "AI Research Director","
       comp: "TechCorp",
       rating: 5,"
-      content: "The Zion mobile app has revolutionized how we manage AI projects. The talent matching is incredibly accurate, and the mobile interface makes collaboration seamless.","
+      content: "The Zion mobile app has revolutionized how we manage AI projects.The talent matching is incredibly accurate, and the mobile interface makes collaboration seamless.","
       avatar: "/images/testimonials/sarah-chen.jpg"
     },
     {
@@ -16,16 +15,16 @@ import { Star, Quote export const AppTestimonials = () => {
       role: "CTO","
       comp: "InnovateLab",
       rating: 5,"
-      content: "As a CTO, I need to stay connected to our AI initiatives on the go. Zion's mobile app gives me real-time visibility and control from where.","
+      content: "As a CTO, I need to stay connected to our AI initiatives on the go.Zion's mobile app gives me real-time visibility and control from where.","
       avatar: "/images/testimonials/michael-rodriguez.jpg"
     },
     {
 "
-      name: "Dr. Emily Watson","
+      name: "Dr.Emily Watson","
       role: "Data Scientist","
       comp: "AI Solutions Inc",
       rating: 5,"
-      content: "The mobile app's AI talent discovery feature is game-changing. I can find specialized experts for our projects in seconds, even while commuting.","
+      content: "The mobile app's AI talent discovery feature is game-changing.I can find specialized experts for our projects in seconds, even while commuting.","
       avatar: "/images/testimonials/emily-watson.jpg"
     },
     {
@@ -34,7 +33,7 @@ import { Star, Quote export const AppTestimonials = () => {
       role: "Project Manager","
       comp: "Digital Dynamics",
       rating: 5,"
-      content: "Managing multiple AI projects used to be a nightmare. With Zion's mobile app, I can track progress, assign tasks, and communicate with teams effortlessly.","
+      content: "Managing multiple AI projects used to be a nightmare.With Zion's mobile app, I can track progress, assign tasks, and communicate with teams effortlessly.","
       avatar: "/images/testimonials/david-kim.jpg"
 
   ];
@@ -44,9 +43,7 @@ import { Star, Quote export const AppTestimonials = () => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star
         key={i}
-        className={`h-5 w-5 ${
-
-          i < rating ? 'text-yellow-400 fill-current' : 'text-gray-300'`
+        className={`h-5 w-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-300'`
         }`}
       />
     ))};
@@ -59,8 +56,7 @@ import { Star, Quote export const AppTestimonials = () => {
             What Our Users Say
           </h2>"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Join thousands of professionals who have transformed their AI workflows with the Zion mobile app.
-          </p>
+            Join thousands of professionals who have transformed their AI workflows with the Zion mobile app.</p>
         </div>
 "
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -100,8 +96,7 @@ import { Star, Quote export const AppTestimonials = () => {
               Join the Success Story
             </h3>"
             <p className="text-gray-300 mb-6">
-              See why thousands of professionals choose Zion for their AI talent and project management needs.
-            </p>"
+              See why thousands of professionals choose Zion for their AI talent and project management needs.</p>"
             <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
               Read More Reviews
             </button>

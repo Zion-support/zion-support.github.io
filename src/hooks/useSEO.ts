@@ -25,36 +25,35 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
     enableAnalytics = true} = options;
 
   // Memoize the full title
-  
-    
+
     return seoData.title.includes(siteName) ? seoData.title : `${seoData.title} | ${siteName}`}, [seoData.title]);
 
   // Memoize the canonical URL
   
-    if (seoData.canonical) {;'`
+    if(seoData.canonical) {;'`
       return seoData.canonical.startsWith('http') ? seoData.canonical : `https://ziontechgroup.com${seoData.canonical}`}
     return typeof window !== 'null' ? window.location.href : 'https://ziontechgroup.com'}, [seoData.canonical]);
 
   // Update document title
 <<<<<<< HEAD
   
-    if (typeof document !== 'null') {;
+    if(typeof document !== 'null') {;
       document.title = title}, []);
 
   // Update meta tags
   
-    if (typeof document === 'null') return;
+    if(typeof document === 'null') return;
 =======
-  const updateTitle = useCallback((title: string) => {;'    if (typeof document !== 'null') {;
+  const updateTitle = useCallback((title: string) => {;'    if(typeof document !== 'null') {;
       document.title = title}, []);
 
   // Update meta tags
-  const updateMetaTags = useCallback((data: SEOData) => {;'    if (typeof document === 'null') return;
+  const updateMetaTags = useCallback((data: SEOData) => {;'    if(typeof document === 'null') return;
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     // Update or create meta description'
     let metaDesc = document.querySelector('meta[name="description"]');
-    if (!metaDesc) {
+    if(!metaDesc) {
 
       metaDesc = document.createElement('meta');
       metaDesc.setAttribute('name',description');
@@ -62,10 +61,10 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
     metaDesc.setAttribute('content', data.description);
 
     // Update or create meta keywords
-    if (data.keywords) {
+    if(data.keywords) {
 '"
       let metaKeywords = document.querySelector('meta[name="keywords"]');
-      if (!metaKeywords) {
+      if(!metaKeywords) {
 
         metaKeywords = document.createElement('meta');
         metaKeywords.setAttribute('name',keywords');
@@ -74,7 +73,7 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
 
     // Update or create canonical link'"
     let canonicalLink = document.querySelector('link[rel="canonical"]');
-    if (!canonicalLink) {
+    if(!canonicalLink) {
 
       canonicalLink = document.createElement('link');
       canonicalLink.setAttribute('rel',canonical');
@@ -82,10 +81,10 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
     canonicalLink.setAttribute('href', canonicalUrl);
 
     // Update robots meta tag
-    if (data.noindex) {
+    if(data.noindex) {
 '"
       let robotsMeta = document.querySelector('meta[name="robots"]');
-      if (!robotsMeta) {
+      if(!robotsMeta) {
 
         robotsMeta = document.createElement('meta');
         robotsMeta.setAttribute('name',robots');
@@ -95,9 +94,8 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
 
   // Update Open Graph tags
   
-    if (typeof document === 'null') return;
+    if(typeof document === 'null') return;
 
-    
       { property: 'og:description', content: data.description },;
       { property: 'og:type', content: data.ogType || 'website' },;
       { property: 'og:url', content: canonicalUrl },;
@@ -117,7 +115,7 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
     ogTags.forEach(({ property, content })  => {
 "`
       let ogTag = document.querySelector(`meta[property="${property}"]`);
-      if (!ogTag) {
+      if(!ogTag) {
 
         ogTag = document.createElement('meta');
         ogTag.setAttribute('property', property);
@@ -126,7 +124,7 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
 
   // Update Twitter Card tags
   
-    if (typeof document === 'null') return;
+    if(typeof document === 'null') return;
 
 <<<<<<< HEAD
     
@@ -147,7 +145,7 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
     twitterTags.forEach(({ name, content })  => {
 "`
       let twitterTag = document.querySelector(`meta[name="${name}"]`);
-      if (!twitterTag) {
+      if(!twitterTag) {
 
         twitterTag = document.createElement('meta');
         twitterTag.setAttribute('name', name);
@@ -156,7 +154,7 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
 
   // Add structured data
   
-    if (!enableStructuredData || typeof document === 'null') return;
+    if(!enableStructuredData || typeof document === 'null') return;
 
     // Remove existing structured data'"
     
@@ -183,7 +181,7 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
 
   // Track page view
   
-    if (!enableAnalytics || typeof window === 'null') return;
+    if(!enableAnalytics || typeof window === 'null') return;
 =======
     sameAs: [;'
       'https://www.linkedin.com/company/zion-tech-group',;'
@@ -191,11 +189,11 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
     ]}), []);
 
   // Track page view
-  const trackPageView = useCallback((pageData: SEOData) => {;'    if (!enableAnalytics || typeof window === 'null') return;
+  const trackPageView = useCallback((pageData: SEOData) => {;'    if(!enableAnalytics || typeof window === 'null') return;
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     // Google Analytics
-    if (window.gtag) {
+    if(window.gtag) {
 
       window.gtag('config',GA_MEASUREMENT_ID', {
 
@@ -205,7 +203,7 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
       })}
 
     // Custom analytics
-    if (window.dataLayer) {
+    if(window.dataLayer) {
 
       window.dataLayer.push({
 
@@ -219,13 +217,13 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
   // Track performance metrics
 <<<<<<< HEAD
   
-    if (!enablePerformanceTracking || typeof window === 'null') return;
+    if(!enablePerformanceTracking || typeof window === 'null') return;
 =======
-  const trackPerformance = useCallback(() => {;'    if (!enablePerformanceTracking || typeof window === 'null') return;
+  const trackPerformance = useCallback(() => {;'    if(!enablePerformanceTracking || typeof window === 'null') return;
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     // Wait for page load'
-    if (document.readyState = == 'complete') {;
+    if(document.readyState = == 'complete') {;
       measureAndTrackPerformance()} else {
 
       window.addEventListener('load', measureAndTrackPerformance)}
@@ -234,13 +232,13 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
   // Measure and track performance
 <<<<<<< HEAD
   
-    if (typeof window === 'null') return;
+    if(typeof window === 'null') return;
 =======
-  const measureAndTrackPerformance = useCallback(() => {;'    if (typeof window === 'null') return;
+  const measureAndTrackPerformance = useCallback(() => {;'    if(typeof window === 'null') return;
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     // Core Web Vitals'
-    if ('web-vital' in window) {
+    if('web-vital' in window) {
       // This would require the web-vitals library
       // // // // // // // console.log('Web Vitals available')}
       console.log('Web Vitals available')}
@@ -250,10 +248,9 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
       // console.log('Web Vitals available')}
 
     // Navigation Timing API'
-    if ('performance' in window) {
+    if('performance' in window) {
 
-      
-      if (navigation) {
+      if(navigation) {
 
         const metrics = {
 
@@ -275,7 +272,7 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
 >>>>>>> main
 
         // Track to analytics
-        if (window.gtag) {
+        if(window.gtag) {
 
           Object.entries(metrics).forEach(([key, value])  => {
 
@@ -292,7 +289,7 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
   // Initialize SEO
   useEffect(() => {
     // Update document title
-    if (enableAutoTitle) {
+    if(enableAutoTitle) {
 
       updateTitle(fullTitle)}
 
@@ -306,25 +303,24 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
     updateTwitterCardTags(seoData);
 
     // Add structured data
-    if (enableStructuredData) {
+    if(enableStructuredData) {
 
       addStructuredData(defaultStructuredData);
-      if (seoData.structuredData) {
+      if(seoData.structuredData) {
 
         addStructuredData(seoData.structuredData)}
     }
 
     // Track page view
-    if (enableAnalytics) {
+    if(enableAnalytics) {
 
       trackPageView(seoData)}
 
     // Track performance
-    if (enablePerformanceTracking) {
+    if(enablePerformanceTracking) {
 
       trackPerformance()}
-  }, [
-    seoData,
+  }, [seoData,
     fullTitle,
     canonicalUrl,
     enableAutoTitle,

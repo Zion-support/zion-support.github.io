@@ -42,8 +42,7 @@ export interface PricingTier2031 {
       phone: string;
       email: string;
       website: string}}[]}
-;export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
-  {
+;export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [{
 
     id: 'ai-powered-micro-saas',
     name: 'AI-Powered Micro SAAS Services',
@@ -75,8 +74,7 @@ export interface PricingTier2031 {
             includedServices: ['
               'Core code review',Basic reporting',Standard integrations',
             ],
-            addOns: [
-              {
+            addOns: [{
 
                 name: 'Advanced Security Scanning',
                 price: 99,
@@ -108,8 +106,7 @@ export interface PricingTier2031 {
             includedServices: ['
               'Advanced security',Team collaboration',Custom rules',Priority support',
             ],
-            addOns: [
-              {
+            addOns: [{
 
                 name: 'Enterprise Integrations',
                 price: 199,
@@ -140,8 +137,7 @@ export interface PricingTier2031 {
             includedServices: ['
               'Enterprise features',Dedicated support',SLA guarantees',Custom training',
             ],
-            addOns: [
-              {
+            addOns: [{
 
                 name: 'White-label Solution',
                 price: 499,
@@ -183,8 +179,7 @@ export interface PricingTier2031 {
         name: 'AI Quantum Financial Trading Platform',
         description:'
           'Next-generation trading platform combining quantum computing algorithms with AI for optimal portfolio management.',
-        pricingTiers: [
-          {
+        pricingTiers: [{
 
             id: 'professional',
             name: 'Professional',
@@ -202,8 +197,7 @@ export interface PricingTier2031 {
             includedServices: ['
               'Core trading platform',Basic analytics',Standard support',
             ],
-            addOns: [
-              {
+            addOns: [{
 
                 name: 'Advanced Backtesting',
                 price: 499,
@@ -234,8 +228,7 @@ export interface PricingTier2031 {
             includedServices: ['
               'Advanced features',Custom development',Priority support',
             ],
-            addOns: [
-              {
+            addOns: [{
 
                 name: 'White-label Solution',
                 price: 1999,
@@ -281,8 +274,7 @@ export interface PricingTier2031 {
     description:'
       'Enterprise-grade infrastructure solutions for modern, scalable, and secure operations with project-based pricing.',
     icon: '☁️',
-    services: [
-      {
+    services: [{
 
         id: 'cloud-native-transformation',
         name: 'Cloud-Native Transformation & Migration',
@@ -305,8 +297,7 @@ export interface PricingTier2031 {
             includedServices: ['
               'Migration planning',Basic implementation',Documentation',
             ],
-            addOns: [
-              {
+            addOns: [{
 
                 name: 'Advanced Monitoring',
                 price: 5000,
@@ -338,8 +329,7 @@ export interface PricingTier2031 {
             includedServices: ['
               'Full transformation',Architecture design',Team training',Ongoing support',
             ],
-            addOns: [
-              {
+            addOns: [{
 
                 name: 'Custom Development',
                 price: 25000,
@@ -381,8 +371,7 @@ export interface PricingTier2031 {
         name: 'Zero Trust Security Implementation',
         description:'
           'Comprehensive zero trust security implementation with continuous verification and least-privilege access.',
-        pricingTiers: [
-          {
+        pricingTiers: [{
 
             id: 'basic',
             name: 'Basic Implementation',
@@ -400,8 +389,7 @@ export interface PricingTier2031 {
             includedServices: ['
               'Basic implementation',Policy setup',Documentation',
             ],
-            addOns: [
-              {
+            addOns: [{
 
                 name: 'Advanced Monitoring',
                 price: 10000,
@@ -433,8 +421,7 @@ export interface PricingTier2031 {
             includedServices: ['
               'Full implementation',Advanced features',Team training',Ongoing support',
             ],
-            addOns: [
-              {
+            addOns: [{
 
                 name: 'Custom Development',
                 price: 50000,
@@ -478,8 +465,7 @@ export interface PricingTier2031 {
     description:'
       'Cutting-edge AI solutions for specific industries and use cases with flexible pricing models.',
     icon: '🤖',
-    services: [
-      {
+    services: [{
 
         id: 'ai-strategy-consulting',
         name: 'AI Strategy & Digital Transformation Consulting',
@@ -504,8 +490,7 @@ export interface PricingTier2031 {
             includedServices: ['
               'Assessment',Roadmap',ROI analysis',Final report',
             ],
-            addOns: [
-              {
+            addOns: [{
 
                 name: 'Change Management',
                 price: 10000,
@@ -536,8 +521,7 @@ export interface PricingTier2031 {
             includedServices: ['
               'Full transformation',Implementation support',Ongoing guidance',
             ],
-            addOns: [
-              {
+            addOns: [{
 
                 name: 'Custom AI Development',
                 price: 25000,

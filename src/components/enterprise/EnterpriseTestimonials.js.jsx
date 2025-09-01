@@ -1,25 +1,11 @@
 import React from 'react';
-import { Quote } from 'lucide-react';
-import {
-
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious} from '@/components/ui/carousel';
-const testimonials = [
+import { Quote  } from 'lucide-react';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+,
   {
 
     quote:'
-      "Implementing Zion's Enterprise solution has reduced our time-to-hire by 40% and significantly improved the quality of candidates we're seeing.",
-    author: 'Sarah Johnson',
-    title: 'VP of Talent Acquisition',
-    comp: 'TechGlobal Inc.',
-    image: '/placeholder.svg'},
-  {
-
-    quote:'
-      'The admin tools give us incredible visibility into our hiring process across multiple departments. Our team loves the custom branding options.',
+      'The admin tools give us incredible visibility into our hiring process across multiple departments.Our team loves the custom branding options.',
     author: 'Michael Chen',
     title: 'Director of HR',
     comp: 'InnovateCorp',
@@ -27,7 +13,7 @@ const testimonials = [
   {
 
     quote:'
-      'The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.',
+      'The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions.The ROI has been tremendous.',
     author: 'Elena Rodriguez',
     title: 'CTO',
     comp: 'FutureTech Systems',

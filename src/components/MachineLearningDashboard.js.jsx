@@ -1,19 +1,7 @@
 import React, { useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 } from 'lucide-react';
-import { useMachineLearning } from "../hooks/useMachineLearning";"
-import { useAnalytics } from "../hooks/useAnalytics";
-export const MachineLearningDashboard = ({ className = '' }) => {
-
-    const { trackEvent } = useAnalytics({
-
-        enableTracking: true,
-        enableUserBehaviorTracking: true
-    });
-    const [activeTab, setActiveTab] = useState('overview');
-    const [showCreateModel, setShowCreateModel] = useState(false);
-    const [showImportModel, setShowImportModel] = useState(false);
-    const { models, trainingJobs, predictions, metrics, isPredicting, createModel, startTraining, stopTraining, deployModel, archiveModel, makePrediction, exportModel, importModel } = useMachineLearning();
+import { motion, AnimatePresence  } from 'framer-motion';
+export default function Page() {
+ = useMachineLearning();
     const [newModelForm, setNewModelForm] = useState({
 
         name: '',
@@ -26,7 +14,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
         input: ''
     });
     const handleCreateModel = useCallback(() => {
-        if (newModelForm.name.trim()) {
+        if(newModelForm.name.trim()) {
 
             createModel({
 
@@ -49,7 +37,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
         try {
             await startTraining(modelId, hyperparameters);
             trackEvent('ml',dashboard',training_started')}
-        catch (error) {
+        catch(error) {
 
             // console.error('Training failed:', error)}
     }, [startTraining, trackEvent]);
@@ -66,7 +54,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
         archiveModel(modelId);
         trackEvent('ml',dashboard',model_archived')}, [archiveModel, trackEvent]);
     const handleMakePrediction = useCallback(async () => {
-        if (predictionForm.modelId && predictionForm.input.trim()) {
+        if(predictionForm.modelId && predictionForm.input.trim()) {
 
             try {
                 const input = JSON.parse(predictionForm.input);
@@ -74,7 +62,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                 // console.log('Prediction result:', result);
                 setPredictionForm({ modelId: '', input: '' });
                 trackEvent('ml',dashboard',prediction_made')}
-            catch (error) {
+            catch(error) {
 
                 // console.error('Prediction failed:', error)}
         }
@@ -85,14 +73,14 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             const modelData = exportModel(modelId);
             navigator.clipboard.writeText(modelData);
             trackEvent('ml',dashboard',model_exported')}
-        catch (error) {
+        catch(error) {
 
             // console.error('Export failed:', error)}
     }, [exportModel, trackEvent]);
     const handleImportModel = useCallback((event) => {
 
         const file = event.target.files?.[0];
-        if (file) {
+        if(file) {
 
             const reader = new FileReader();
             reader.onload = (e) => {
@@ -102,15 +90,15 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                     importModel(modelData);
                     setShowImportModel(false);
                     trackEvent('ml',dashboard',model_imported')}
-                catch (error) {
+                catch(error) {
 
                     // console.error('Import failed:', error)}
             };
-            reader.readAsText (file) }
+            reader.readAsText(file) }
     }, [importModel, trackEvent]) ;
     const getStatusColor = (status) => {
 
-        switch (status) {
+        switch(status) {
 
             case 'deployed': return 'text-green-600 bg-green-100';
             case 'ready': return 'text-blue-600 bg-blue-100';
@@ -120,7 +108,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
     };
     const getJobStatusColor = (status) => {
 
-        switch (status) {
+        switch(status) {
 
             case 'running': return 'text-blue-600 bg-blue-100';
             case 'completed': return 'text-green-600 bg-green-100';
@@ -130,7 +118,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
     };
     const getModelTypeIcon = (type) => {
 
-        switch (type) {
+        switch(type) {
 '"
             case 'classification': return <Target className="w-4 h-4"/>;'"
             case 'regression': return <TrendingUp className="w-4 h-4"/>;'"
@@ -536,13 +524,13 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                           <div>"
                             <p className="text-sm text-gray-500 dark:text-gray-400">Latest Accuracy</p>"
                             <p className="font-medium text-gray-900 dark:text-white">
-                              {(job.metrics.accuracy[job.metrics.accuracy.length - 1] * 100).toFixed(1)}%
+                              {(job.metrics.accuracy[job.metrics.accuracy.length-1] * 100).toFixed(1)}%
                             </p>
                           </div>
                           <div>"
                             <p className="text-sm text-gray-500 dark:text-gray-400">Latest Loss</p>"
                             <p className="font-medium text-gray-900 dark:text-white">
-                              {job.metrics.loss[job.metrics.loss.length - 1]?.toFixed(4) || 'N/A'}
+                              {job.metrics.loss[job.metrics.loss.length-1]?.toFixed(4) || 'N/A'}
                             </p>
                           </div>
                         </div>)}
@@ -608,7 +596,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                     Make Prediction
                   </button>
                 </div>"
-                <textarea placeholder="Enter input data (JSON format)" value={predictionForm.input} onChange = {
+                <textarea placeholder="Enter input data(JSON format)" value={predictionForm.input} onChange = {
 
   (e) => setPredictionForm(prev => ({ ...prev,
   input: e.target.value 
@@ -702,7 +690,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                       <span className="text-sm text-gray-600 dark:text-gray-400">Success Rate</span>"
                       <span className="font-medium text-gray-900 dark:text-white">
                         {metrics.totalPredictions > 0
-                ? ( (metrics.successfulPredictions / metrics.totalPredictions) * 100) .toFixed (1) : 0}%
+                ? ( (metrics.successfulPredictions / metrics.totalPredictions) * 100) .toFixed(1) : 0}%
                       </span>
                     </div>"
                     <div className="flex justify-between">"

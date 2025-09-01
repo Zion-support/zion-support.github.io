@@ -23,7 +23,7 @@ const initialState: UIState = {
 
 // Reducer
 const uiReducer = (state: UIState, action: UIAction): UIState => {
-  switch (action.type) {
+  switch(action.type) {
     case 'SHOW_ERROR_MODAL':
       return {
         ...state,
@@ -70,7 +70,7 @@ export const UIProvider = ({ children }: UIProviderProps) => {
 // Hook
 export const useUIContext = () => {
   const context = useContext(UIContext);
-  if (context === undefined) {
+  if(context === undefined) {
     throw new Error('useUIContext must be used within a UIProvider');
   }
   return context;

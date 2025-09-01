@@ -36,8 +36,7 @@ export interface EmergingTechService2030 {
   aiCapabilities: string[];
   complianceFeatures: string[];
   scalabilityFeatures: string[]}
-;export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
-  {
+;export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [{
 
     id: 'quantum-consciousness-simulation-2030',
     title: 'Quantum Consciousness Simulation Platform 2030',
@@ -121,7 +120,7 @@ export interface EmergingTechService2030 {
       'Mars colony management',Lunar base operations',Space station optimization',Deep space mission support',Asteroid mining operations',Space tourism facilities',Research station management',Interplanetary travel support',
     ],
     targetAudience: ['
-      'Space agencies (NASA, ESA, CNSA),Private space companies',Space colony planners',Astronauts and space engineers',Space research institutions',Space tourism companies',Asteroid mining companies',Interplanetary mission planners',
+      'Space agencies(NASA, ESA, CNSA),Private space companies',Space colony planners',Astronauts and space engineers',Space research institutions',Space tourism companies',Asteroid mining companies',Interplanetary mission planners',
     ],
     tags: ['
       'Space Technology',AI',Colony Management',Life Support',Resource Management',Sustainability',Automation',

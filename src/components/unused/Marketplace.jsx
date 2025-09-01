@@ -1,16 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Network, Cloud, Smartphone, CheckCircle export default function Marketplace() {
-
-    const [searchTerm, setSearchTerm] = useState('');
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-    const [sortBy, setSortBy] = useState('featured');
-    const categories = ['
-        { id: 'all', name: 'All Products', icon: Globe, count: 24 },
-        { id: 'ai-solutions', name: 'AI Solutions', icon: Brain, count: 8 },
-        { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: 6 },
-        { id: 'cloud-infrastructure', name: 'Cloud & Infrastructure', icon: Cloud, count: 5 },
+import { Link  } from 'react-router-dom';
+export default function Page() {
+,
         { id: 'blockchain', name: 'Blockchain & Web3', icon: Network, count: 3 },
         { id: 'iot-platforms', name: 'IoT Platforms', icon: Smartphone, count: 2 }
     ];
@@ -30,8 +21,7 @@ import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Ne
         { id: 'popular', name: 'Most Popular' },
         { id: 'rating', name: 'Highest Rated' }
     ];
-    const marketplaceProducts = [
-        {
+    const marketplaceProducts = [{
 
             id: 1,
             name: 'AI Autonomous Business Manager',
@@ -206,22 +196,22 @@ import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Ne
         if (selectedPriceRange === 'free') {
 
             matchesPrice = product.price === 0}
-        else if (selectedPriceRange === 'under-100') {
+        else if(selectedPriceRange === 'under-100') {
 
             matchesPrice = product.price < 100}
-        else if (selectedPriceRange === '100-500') {
+        else if(selectedPriceRange === '100-500') {
 
             matchesPrice = product.price >= 100 && product.price <= 500}
-        else if (selectedPriceRange === '500-1000') {
+        else if(selectedPriceRange === '500-1000') {
 
             matchesPrice = product.price >= 500 && product.price <= 1000}
-        else if (selectedPriceRange === 'over-1000') {
+        else if(selectedPriceRange === 'over-1000') {
 
             matchesPrice = product.price > 1000}
         return matchesSearch && matchesCategory && matchesPrice});
     const sortedProducts = [...filteredProducts].sort((a, b) => {
 
-        switch (sortBy) {
+        switch(sortBy) {
 
             case 'price-low':
                 return a.price - b.price;
@@ -238,7 +228,7 @@ import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Ne
     });
     const formatPrice = (price, currency) => {
 
-        if (price === 0)
+        if(price === 0)
             return 'Free';
         return `${currency} ${price.toLocaleString()}`};
     const getCategoryIcon = (categoryId) => {
@@ -259,8 +249,7 @@ import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Ne
             </h1>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover cutting-edge technology solutions, AI platforms, and enterprise tools
-              from Zion Tech Group. Find the perfect solution for your business needs.
-            </p>
+              from Zion Tech Group.Find the perfect solution for your business needs.</p>
           </div>
         </div>
       </div>
@@ -448,8 +437,7 @@ import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Ne
             </h2>"
             <p className="text-xl text-gray-300 mb-6 max-w-2xl mx-auto">
               Can't find exactly what you're looking for? Our team can create custom
-              technology solutions tailored to your specific business requirements.
-            </p>"
+              technology solutions tailored to your specific business requirements.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link to="/contact" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200">
                 Contact Sales

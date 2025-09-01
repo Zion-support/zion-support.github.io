@@ -1,37 +1,9 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion  } from 'framer-motion';
 
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'secondary' | 'white' | 'cyan';
-  text?: string;
-  showText?: boolean;
-  className?: string;
-}
-
-const sizeClasses = {
-  sm: 'w-6 h-6',
-  md: 'w-8 h-8',
-  lg: 'w-12 h-12',
-  xl: 'w-32 h-32'
-};
-
-const colorClasses = {
-  primary: 'border-cyan-400',
-  secondary: 'border-blue-400',
-  white: 'border-white',
-  cyan: 'border-cyan-400'
-};
-
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
-  color = 'primary',
-  text = 'Loading...',
-  showText = true,
-  className = ''
-}) => {
-  return (
-    <div className={`flex flex-col items-center justify-center ${className}`} role="status" aria-label="Loading">
+export default function Page() {
+) => {
+  return (<div className={`flex flex-col items-center justify-center ${className}`} role="status" >
       <div className="relative">
         {/* Outer ring */}
         <div className={`${sizeClasses[size]} border-4 border-gray-200 rounded-full opacity-20`}></div>
@@ -77,7 +49,7 @@ export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }>
   size = 'sm',
   className = ''
 }) => (
-  <div className={`inline-flex items-center ${className}`} role="status" aria-label="Loading">
+  <div className={`inline-flex items-center ${className}`} role="status" >
     <motion.div
       className={`${size === 'sm' ? 'w-4 h-4' : 'w-6 h-6'} border-2 border-t-transparent border-cyan-400 rounded-full`}
       animate={{ rotate: 360 }}

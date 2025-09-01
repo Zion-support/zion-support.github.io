@@ -93,15 +93,15 @@ export const hasSpecialChars = (password) => {
 /**
  * Check password length
  * @param {string} password - Password to check
- * @returns {number} Length score (0-3)
+ * @returns {number} Length score(0-3)
  */
 export const getLengthScore = password => {
 
-  if (!password) return 0;
+  if(!password) return 0;
 
-  if (password.length < 8) return 0;
-  if (password.length < 12) return 1;
-  if (password.length < 16) return 2;
+  if(password.length < 8) return 0;
+  if(password.length < 12) return 1;
+  if(password.length < 16) return 2;
   return 3;
 };
 
@@ -112,16 +112,16 @@ export const getLengthScore = password => {
  */
 export const calculatePasswordScore = password => {
 
-  if (!password) return 0;
+  if(!password) return 0;
 
   let score = 0;
 
-  // Length score (0 - 25 points) score += getLengthScore (password) * 8.33;
+  // Length score(0 - 25 points) score += getLengthScore(password) * 8.33;
 
   // Bonus for complexity
-  const uniqueChars = new Set (password) .size;
-  if (uniqueChars > 8) score += 10;
-  if (uniqueChars > 12) score += 10;
+  const uniqueChars = new Set(password) .size;
+  if(uniqueChars > 8) score += 10;
+  if(uniqueChars > 12) score += 10;
 
   return Math.min(100, Math.round(score));
 };
@@ -135,10 +135,10 @@ export const getPasswordStrength = password => {
 
   const score = calculatePasswordScore(password);
 
-  if (score < 20) return PASSWORD_STRENGTH.VERY_WEAK;
-  if (score < 40) return PASSWORD_STRENGTH.WEAK;
-  if (score < 60) return PASSWORD_STRENGTH.MEDIUM;
-  if (score < 80) return PASSWORD_STRENGTH.STRONG;
+  if(score < 20) return PASSWORD_STRENGTH.VERY_WEAK;
+  if(score < 40) return PASSWORD_STRENGTH.WEAK;
+  if(score < 60) return PASSWORD_STRENGTH.MEDIUM;
+  if(score < 80) return PASSWORD_STRENGTH.STRONG;
   return PASSWORD_STRENGTH.VERY_STRONG;
 };
 
@@ -151,38 +151,38 @@ export const getPasswordFeedback = password => {
 
   const feedback = [];
 
-  if (!password) {
+  if(!password) {
 
     feedback.push('Enter a password');
     return feedback;
   }
 
-  if (password.length < 8) {
+  if(password.length < 8) {
 
     feedback.push('Password should be at least 8 characters long');
   }
 
-  if (!hasLowercase(password)) {
+  if(!hasLowercase(password)) {
 
     feedback.push('Include lowercase letters');
   }
 
-  if (!hasUppercase(password)) {
+  if(!hasUppercase(password)) {
 
     feedback.push('Include uppercase letters');
   }
 
-  if (!hasNumbers(password)) {
+  if(!hasNumbers(password)) {
 
     feedback.push('Include numbers');
   }
 
-  if (!hasSpecialChars(password)) {
+  if(!hasSpecialChars(password)) {
 
     feedback.push('Include special characters');
   }
 
-  if (feedback.length === 0) {
+  if(feedback.length === 0) {
 
     feedback.push('Password is strong!');
   }

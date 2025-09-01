@@ -3,8 +3,7 @@ const WIZARD_STEPS: WizardStep[] = ['Services', 'Details', 'Success'];
 
 function StepIndicator({ step }: { step: WizardStep }) {
   
-  return (
-    <div data-testid="step-indicator" className="text-sm text-muted-foreground">
+  return (<div data-testid="step-indicator" className="text-sm text-muted-foreground">
       Step {index + 1} of {WIZARD_STEPS.length}
     </div>
   )}
@@ -18,10 +17,9 @@ export function QuoteWizard() {
     error: unknown};
   const { data = [], isPending, error } = queryResult;
 
-  if (step === 'Services') {
+  if(step === 'Services') {
     
-    return (
-      <div className="space-y-6">
+    return (<div className="space-y-6">
         <StepIndicator step={step}  />
         {loading && (
           <div className="flex justify-center py-12">
@@ -33,8 +31,7 @@ export function QuoteWizard() {
           <Alert variant="destructive" data-testid="service-fetch-error-alert">
             <AlertTitle>Network Error</AlertTitle>
             <AlertDescription>
-              There was a problem fetching the services. Please check your internet connection and try again.
-            </AlertDescription>
+              There was a problem fetching the services.Please check your internet connection and try again.</AlertDescription>
           </Alert>
         )}
 
@@ -62,9 +59,8 @@ export function QuoteWizard() {
       </div>
     )}
 
-  if (step === 'Details') {
-    return (
-      <div data-testid="details-step" className="space-y-4">
+  if(step === 'Details') {
+    return (<div data-testid="details-step" className="space-y-4">
         <StepIndicator step={step}  />
         <Textarea
           value={message}
@@ -76,9 +72,8 @@ export function QuoteWizard() {
       </div>
     )}
 
-  if (step === 'Success') {
-    return (
-      <div data-testid="success-step" className="space-y-4">
+  if(step === 'Success') {
+    return (<div data-testid="success-step" className="space-y-4">
         <StepIndicator step={step}  />
         <div>Quote Submitted</div>
       </div>

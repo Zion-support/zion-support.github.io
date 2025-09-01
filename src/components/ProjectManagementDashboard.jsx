@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-export function ProjectManagementDashboard () {
 import { Calendar, Users, CheckCircle, Clock, AlertTriangle, TrendingUp, BarChart3, Search, Edit, Trash2, Eye, X const mockProjects = [;
 
     {
@@ -62,22 +61,10 @@ const statusColors = {
 
   'planning': 'bg-zion-blue text-white',in-progress': 'bg-zion-cyan text-white',review': 'bg-zion-gold text-white',completed': 'bg-zion-emerald text-white',on-hold': 'bg-zion-slate text-white'
 
-
-
-
-
-
-
 };
 const priorityColors = {
 
   'low': 'bg-zion-emerald text-white',medium': 'bg-zion-gold text-white',high': 'bg-zion-orange text-white',critical': 'bg-red-500 text-white'
-
-
-
-
-
-
 
 };
 export function ProjectManagementDashboard() {
@@ -91,12 +78,12 @@ export function ProjectManagementDashboard() {
 
         const statusMatch = filterStatus === 'all' || project.status === filterStatus;
         const priorityMatch = filterPriority === 'all' || project.priority === filterPriority;
-        const searchMatch = project.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
-            project.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
+        const searchMatch = project.name.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
+            project.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ;
         return statusMatch && priorityMatch && searchMatch}) ;
     const getStatusIcon = (status) => {
 
-        switch (status) {
+        switch(status) {
 
             case 'planning': return <Calendar className="w-4 h-4"/>;'"
             case 'in-progress': return <TrendingUp className="w-4 h-4"/>;'"
@@ -107,13 +94,13 @@ export function ProjectManagementDashboard() {
     };
     const getProgressColor = (progress) => {
 
-        if (progress >= 80)
+        if(progress >= 80)
             return 'bg-zion-emerald';
-        if (progress >= 60)
+        if(progress >= 60)
             return 'bg-zion-cyan';
-        if (progress >= 40)
+        if(progress >= 40)
             return 'bg-zion-gold';
-        if (progress >= 20)
+        if(progress >= 20)
             return 'bg-zion-orange';
         return 'bg-red-500'};
     const calculateProjectHealth = (project) => {
@@ -121,12 +108,12 @@ export function ProjectManagementDashboard() {
         const overdueTasks = project.tasks.filter(task => new Date(task.dueDate) < new Date() && task.status !== 'completed').length;
         const totalTasks = project.tasks.length;
         const budgetUtilization = (project.spent / project.budget) * 100;
-        if (overdueTasks > 0 || budgetUtilization > 90)
+        if(overdueTasks > 0 || budgetUtilization > 90)
             return 'critical';
-        if (overdueTasks > 0 || budgetUtilization > 75)
+        if(overdueTasks > 0 || budgetUtilization > 75)
             return 'warning';
         return 'healthy'};
-    if (!isVisible) {
+    if(!isVisible) {
 "
         return (<button onClick={() => setIsVisible(true)} className="fixed bottom-4 left-36 p-3 bg-zion-gold hover:bg-zion-orange text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50" title="Show Project Management Dashboard">"
         <BarChart3 className="w-5 h-5"/>
@@ -403,7 +390,7 @@ export function ProjectManagementDashboard() {
                         </div>"
                         <div className="flex items-center justify-between text-sm text-zion-slate-light">
                           <span>{task.assignee}</span>
-                          <span > Due: {new Date (task.dueDate) .toLocaleDateString () }</span>
+                          <span > Due: {new Date(task.dueDate) .toLocaleDateString () }</span>
                         </div>
                       </div>) ) }
                   </div>

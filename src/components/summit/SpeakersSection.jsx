@@ -1,6 +1,5 @@
 import React from 'react';
-const speakers = [
-  {
+const speakers = [{
 
     name: 'Alex Zion',
     title: 'Founder & CEO',
@@ -9,7 +8,7 @@ const speakers = [
     linkedin: '#'},
 ];
 export function SpeakersSection() {
-  return()
+  return ()
     <section className="py-12 bg-zion-blue-dark text-white" id="speakers">"
       <div className="container mx-auto px-4">"
         <h2 className="text-3xl font-bold mb-8 text-center">Speakers</h2>"
@@ -28,7 +27,7 @@ export function SpeakersSection() {
                 {sp.twitter && (
                   <a
                     href={sp.twitter}"
-                    aria-label="Twitter"
+                    
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -38,7 +37,7 @@ export function SpeakersSection() {
                 {sp.linkedin && (
                   <a
                     href={sp.linkedin}"
-                    aria-label="LinkedIn"
+                    
                     target="_blank"
                     rel="noopener noreferrer"
                   >

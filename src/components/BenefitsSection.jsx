@@ -1,22 +1,9 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
+import { motion, AnimatePresence  } from 'framer-motion';
+import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+ from 'lucide-react';
 
-  Zap,
-  Shield,
-  TrendingUp,
-  CheckCircle,
-  Users,
-  Clock,
-  Star,
-  Award} from 'lucide-react';
-
-const benefits = [
-  {
+const benefits = [{
 
     icon: <Zap className="w-10 h-10" />,
     title: 'Lightning Fast Delivery',
@@ -64,8 +51,7 @@ const benefits = [
     ]},
 ];
 ;
-const additionalStats = [
-  {
+const additionalStats = [{
 "
     icon: <Users className="w-8 h-8" />,
     value: '500+',
@@ -174,9 +160,8 @@ export function BenefitsSection() {
           </h2>"
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
             We combine cutting-edge technology with proven methodologies to
-            deliver exceptional results. Our commitment to excellence drives
-            every project to success.
-          </p>
+            deliver exceptional results.Our commitment to excellence drives
+            every project to success.</p>
         </motion.div>
 
         {/* Additional stats section */}

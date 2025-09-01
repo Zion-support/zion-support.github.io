@@ -2,90 +2,45 @@
 import React, { useEffect, useState, useCallback } from 'react';
 export const PerformanceMonitor: React.FC < PerformanceMonitorProps> = ({
 export default PerformanceMonitor;
-import { motion, AnimatePresence } from 'framer - motion';
+import { motion, AnimatePresence  } from 'framer-motion';
 
-=======
-import {
-
-  Activity,
-  Zap,
-  Clock,
-  TrendingUp,
-  AlertTriangle,
-  CheckCircle} from 'lucide-react';
->>>>>>> main
-interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  fcpScore: 'good' | 'needs-improvement' | 'poor';
-  lcpScore: 'good' | 'needs-improvement' | 'poor';
-  fidScore: 'good' | 'needs-improvement' | 'poor';
-  clsScore: 'good' | 'needs-improvement' | 'poor';
-  ttfbScore: 'good' | 'needs-improvement' | 'poor'}
-
-interface PerformanceMonitorProps {
-  // Add your props here
-
-
-  showDetails?: boolean;
-  threshold?: {
-
-    fcp: number;
-    lcp: number;
-    fid: number;
-    cls: number;
-    ttfb: number}}
-export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-
-  showDetails = false,
-  threshold = {
-
-    fcp: 1800,
-    lcp: 2500,
-    fid: 100,
-    cls: 0.1,
-    ttfb: 800}}) => {
+export default function Page() {
+}) => {
 
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [performanceScore, setPerformanceScore] = useState<number>(0);
 
-  
-      // FCP scoring (0-25 points)
-      if (metrics.fcp <= threshold.fcp) score -= 0;
-      else if (metrics.fcp <= threshold.fcp * 1.5) score -= 10;
+      // FCP scoring(0-25 points)
+      if(metrics.fcp <= threshold.fcp) score -= 0;
+      else if(metrics.fcp <= threshold.fcp * 1.5) score -= 10;
       else score -= 25;
 
-      // LCP scoring (0-25 points)
-      if (metrics.lcp <= threshold.lcp) score -= 0;
-      else if (metrics.lcp <= threshold.lcp * 1.5) score -= 10;
+      // LCP scoring(0-25 points)
+      if(metrics.lcp <= threshold.lcp) score -= 0;
+      else if(metrics.lcp <= threshold.lcp * 1.5) score -= 10;
       else score -= 25;
 
-      // FID scoring (0-25 points)
-      if (metrics.fid <= threshold.fid) score -= 0;
-      else if (metrics.fid <= threshold.fid * 1.5) score -= 10;
+      // FID scoring(0-25 points)
+      if(metrics.fid <= threshold.fid) score -= 0;
+      else if(metrics.fid <= threshold.fid * 1.5) score -= 10;
       else score -= 25;
 
-      // CLS scoring (0-25 points)
-      if (metrics.cls <= threshold.cls) score -= 0;
-      else if (metrics.cls <= threshold.cls * 1.5) score -= 10;
+      // CLS scoring(0-25 points)
+      if(metrics.cls <= threshold.cls) score -= 0;
+      else if(metrics.cls <= threshold.cls * 1.5) score -= 10;
       else score -= 25;
 
       return Math.max(0, score)},
     [threshold]
   );
 
-  
-      if (value <= thresholdValue) return 'good';
-      if (value <= thresholdValue * 1.5) return 'needs-improvement';
+      if(value <= thresholdValue) return 'good';
+      if(value <= thresholdValue * 1.5) return 'needs-improvement';
       return 'poor'},
     [threshold]
   );
 
-  
         case 'needs-improvement':'
           return 'text-yellow-400';
         case 'poor':'
@@ -96,7 +51,6 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     []
   );
 
-  
         case 'needs-improvement':"
           return <AlertTriangle className="w-4 h-4"  />;
         case 'poor':"
@@ -108,13 +62,11 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   );
   useEffect(() => {
 
-    if ('PerformanceObserver' in window) {
+    if('PerformanceObserver' in window) {
 
       // Observe FCP
 
-      
-        
-        if (fcpEntry) {
+        if(fcpEntry) {
 
           setMetrics(prev =>
             prev ? { ...prev, fcp: fcpEntry.startTime } : null
@@ -126,10 +78,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       });'      fcpObserver.observe({ entryTypes: ['paint'] });
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
-  
-      
-        
-        if (lcpEntry) {
+        if(lcpEntry) {
 
           setMetrics(prev =>
             prev ? { ...prev, lcp: lcpEntry.startTime } : null
@@ -143,9 +92,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
       // Observe FID
 
-      
-        
-        if (fidEntry) {
+        if(fidEntry) {
 
           setMetrics(prev =>
             prev
@@ -159,14 +106,14 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       });'      fidObserver.observe({ entryTypes: ['first-input'] });
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
-    if (tips.length === 0) {
+    if(tips.length === 0) {
       tips.push('Great performance! Keep monitoring for any regressions')}
 
       const clsObserver = new PerformanceObserver(list => {
 
         let clsValue = 0;        for (const entry of list.getEntries()) {
 
-          if (!entry.hadRecentInput) {
+          if(!entry.hadRecentInput) {
 
             clsValue += (entry as any).value}
         }
@@ -177,9 +124,8 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
       // Get TTFB from navigation timing
       
-      if (navigationEntry) {
+      if(navigationEntry) {
 
-        
         setMetrics(prev =>
           prev ? { ...prev, ttfb } : { fcp: 0, lcp: 0, fid: 0, cls: 0, ttfb }
         )}
@@ -191,18 +137,17 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         clsObserver.disconnect () }}  }, []);
 
   useEffect(() => {
-    if (metrics) {
+    if(metrics) {
 
-      
       setPerformanceScore(score)}
   }, [metrics, calculatePerformanceScore]) ;
-  useEffect ( () => {
+  useEffect(() => {
     // Show monitor after 3 seconds
     
-    return () => clearTimeout (timer) }, []) ;
-  if (!isVisible || !showDetails) return null;
+    return () => clearTimeout(timer) }, []) ;
+  if(!isVisible || !showDetails) return null;
 
-  return()
+  return ()
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}"
@@ -214,9 +159,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         </div>"
         <div className="flex items-center space-x-2">
           <div
-            className={`w-3 h-3 rounded-full ${
-
-              performanceScore >= 90'
+            className={`w-3 h-3 rounded-full ${performanceScore >= 90'
                 ? 'bg-green-400'
                 : performanceScore >= 50'
                   ? 'bg-yellow-400''
@@ -299,9 +242,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         <div className="flex items-center justify-between text-xs">"
           <span className="text-slate-400">Status</span>
           <span`
-            className={`text-xs font-medium ${
-
-              performanceScore >= 90'
+            className={`text-xs font-medium ${performanceScore >= 90'
                 ? 'text-green-400'
                 : performanceScore >= 50'
                   ? 'text-yellow-400''

@@ -1,7 +1,8 @@
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react.ts';
-import { api, ApiResponse  } from '@/services / api';
-export default ApiDemo;}}}}}}}
+import React, { useState, useEffect } from 'react';
+import { api, ApiResponse } from '@/services / api';
+export default function Page() {
+}}}
 =======
 <<<<<<< HEAD
 >>>>>>> main
@@ -20,56 +21,53 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
   const [healthStatus, setHealthStatus] = useState<any>('Checking...');
 
   // Check API health on component mount
-  useEffect ( () => {
+  useEffect(() => {
     checkHealth () ;
     fetchUsers () }, []) ;
 
-  
     try {;
       
-      setHealthStatus (`✅ API Healthy - ${response.data?.environment} mode`) } catch (err) {
+      setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {
 
       setHealthStatus('❌ API Unhealthy')};
 
-  
-    setLoading (true) ;
-    setError (null) ;
+    setLoading(true) ;
+    setError(null) ;
 
     try {
       
-      if (response.success && response.data) {
+      if(response.success && response.data) {
 
-        setUsers(response.data)} catch (err) {
+        setUsers(response.data)} catch(err) {
 
       setError(err instanceof Error ? err.message : 'Failed to fetch users')} finally {
 
       setLoading(false)};
 
-  
     e.preventDefault () ;
 
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    if (!newUser.name.trim() || !newUser.email.trim()) {
+    if(!newUser.name.trim() || !newUser.email.trim()) {
 
       setError('Name and email are required');
       return;
 
-    setLoading (true) ;
-    setError (null) ;
+    setLoading(true) ;
+    setError(null) ;
 
     try {
       
-      if (response.success && response.data) {
+      if(response.success && response.data) {
 
         setUsers(prev => [...prev, response.data!]);
-        setNewUser({ name: '', email: '' })} catch (err) {
+        setNewUser({ name: '', email: '' })} catch(err) {
 
       setError(err instanceof Error ? err.message : 'Failed to create user')} finally {
 
       setLoading(false)};
-  return()
-    <div className = "max-w-4xl mx-auto p-6 space-y-6">"
+  return ()
+    <div className="max-w-4xl mx-auto p-6 space-y-6">"
       <div className="bg-white rounded-lg shadow-md p-6">"
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
           🚀 Vite + Node.js Hybrid App Demo
@@ -91,7 +89,7 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
                 placeholder="Name"
                 value={newUser.name}
 <<<<<<< HEAD
-                onChange = { (e) => setNewUser (prev => ({ ...prev,
+                onChange = { (e) => setNewUser(prev => ({ ...prev,
   name: e.target.value
 =======
                 onChange = {
@@ -99,11 +97,6 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
   (e) => setNewUser(prev => ({ ...prev,
   name: e.target.value 
 >>>>>>> main
-
-
-
-
-
 
 }))}"
                 className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -114,7 +107,7 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
                 placeholder="Email"
                 value={newUser.email}
 <<<<<<< HEAD
-                onChange = { (e) => setNewUser (prev => ({ ...prev,
+                onChange = { (e) => setNewUser(prev => ({ ...prev,
   email: e.target.value
 =======
                 onChange = {
@@ -122,11 +115,6 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
   (e) => setNewUser(prev => ({ ...prev,
   email: e.target.value 
 >>>>>>> main
-
-
-
-
-
 
 }))}"
                 className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -153,7 +141,7 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
         {/* Users List */}"
         <div className="p-4 bg-gray-50 rounded-lg">"
           <div className="flex justify-between items-center mb-4">"
-            <h3 className="text-lg font-semibold text-gray-700">Users ({users.length})</h3>
+            <h3 className="text-lg font-semibold text-gray-700">Users({users.length})</h3>
             <button
               onClick={fetchUsers}
               disabled={loading}"
@@ -169,7 +157,7 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
               <p className="mt-2 text-gray-600">Loading users...</p>
             </div>
           ) : users.length === 0 ? ("
-            <p className="text-gray-500 text-center py-8">No users found. Create one above!</p>
+            <p className="text-gray-500 text-center py-8">No users found.Create one above!</p>
           ) : ("
             <div className="space-y-3">
               {users.map((user) => ("
@@ -194,8 +182,8 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
         <div className="mt-8 p-4 bg-green-50 rounded-lg">"
           <h3 className="text-lg font-semibold text-green-700 mb-2">🏗️ Architecture</h3>"
           <div className="text-sm text-green-700 space-y-1">
-            <p>• <strong>Frontend:</strong> Vite + React (Port 3000) - Fast HMR & optimized builds</p>
-            <p>• <strong>Backend:</strong> Node.js + Express (Port 5000) - API endpoints & business logic</p>;
+            <p>• <strong>Frontend:</strong> Vite + React(Port 3000) - Fast HMR & optimized builds</p>
+            <p>• <strong>Backend:</strong> Node.js + Express(Port 5000) - API endpoints & business logic</p>;
             <p>• <strong>Development:</strong> Vite proxy forwards /api calls to Node.js</p>;
             <p>• <strong>Production:</strong> Node.js serves built frontend + API</p>;
           </div>;

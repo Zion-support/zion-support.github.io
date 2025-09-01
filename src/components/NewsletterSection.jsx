@@ -1,19 +1,7 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-<<<<<<< HEAD
-import { motion } from 'framer - motion';
-=======
->>>>>>> main
-
-  Mail,
-  Send,
-  CheckCircle,
-  Star,
-  Zap,
-  Shield,
-  Users,
-  TrendingUp} from 'lucide-react';
+import { motion  } from 'framer-motion';
+import { <<<<<<< HEAD import { motion  } from 'framer-motion';
+ from 'lucide-react';
 
 export function NewsletterSection() {
 
@@ -34,8 +22,7 @@ export function NewsletterSection() {
     setEmail('');
   };
 
-  const benefits = [
-    {
+  const benefits = [{
 
       icon: <Star className="w-6 h-6" />,
       title: 'Exclusive Content',
@@ -80,7 +67,7 @@ export function NewsletterSection() {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }};
 
-  if (isSubscribed) {
+  if(isSubscribed) {
 
     return ("
       <section className="py-20 bg-gradient-to-br from-zion-purple via-zion-purple-dark to-zion-slate-dark relative overflow-hidden">"
@@ -104,8 +91,7 @@ export function NewsletterSection() {
             </h2>"
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               Thank you for subscribing! You're now part of our exclusive tech
-              community.
-            </p>
+              community.</p>
           </motion.div>
 "
           <motion.div variants={itemVariants} className="mb-8">"
@@ -168,8 +154,7 @@ export function NewsletterSection() {
 "
             <p className="text-lg md:text-xl text-zion-slate-light mb-8 max-w-lg leading-relaxed">
               Get the latest AI trends, tech updates, and exclusive insights
-              delivered straight to your inbox.
-            </p>
+              delivered straight to your inbox.</p>
 
             {/* Benefits */}"
             <div className="space-y-4 mb-8">

@@ -1,47 +1,24 @@
 
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
-import { useToast } from "@/hooks/use-toast";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import { Link, useNavigate  } from 'react-router-dom';
 
-export function UserMenu() {
-  const { user, logout } = useAuth();
-  const navigate = useNavigate();
-  const { toast } = useToast();
-  const [open, setOpen] = React.useState(false);
-
-  const handleIconClick = () => {
-    if (!user) {
-      navigate("/login");
-      return;
-    }
-    setOpen((prev) => !prev);
-  };
+export default function Page() {
+;
 
   const handleSignOut = async () => {
     try {
       await logout();
-    } catch (error) {
+    } catch(error) {
       toast({
         title: "Error signing out",
-        description: "There was an error signing you out. Please try again.",
+        description: "There was an error signing you out.Please try again.",
         variant: "destructive",
       });
     }
   };
 
-  if (!user) {
-    return (
-      <div className="hidden md:flex items-center space-x-4">
+  if(!user) {
+    return (<div className="hidden md:flex items-center space-x-4">
         <Link to="/login" className="text-zion-slate-light hover:text-white">Login</Link>
         <Link
           to="/signup"
@@ -53,8 +30,7 @@ export function UserMenu() {
     );
   }
 
-  return (
-    <DropdownMenu open={open} onOpenChange={setOpen}>
+  return (<DropdownMenu open={open} onOpenChange={setOpen}>
       <DropdownMenuTrigger asChild>
         <Button
           variant="ghost"

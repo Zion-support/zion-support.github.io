@@ -54,20 +54,19 @@ const zionContact: ServiceContact = {
 =======
 // Comprehensive IT Services 2030;
 >>>>>>> main
-export const comprehensiveITServices2030: ITService[] = [
-  {
+export const comprehensiveITServices2030: ITService[] = [{
 
     id: 1,"
     name: "Cloud Infrastructure & DevOps Engineering","
     category: "Cloud & DevOps","
-    description: "Comprehensive cloud infrastructure design, implementation, and DevOps automation services. We specialize in AWS, Azure, and Google Cloud with infrastructure-as-code, CI/CD pipelines, and automated deployment strategies.",
+    description: "Comprehensive cloud infrastructure design, implementation, and DevOps automation services.We specialize in AWS, Azure, and Google Cloud with infrastructure-as-code, CI/CD pipelines, and automated deployment strategies.",
     hourlyRate: 150,
     projectRate: 25000,
     features[;"
       "Multi-cloud architecture design","
-      "Infrastructure as Code (IaC)","
+      "Infrastructure as Code(IaC)","
       "CI/CD pipeline automation","
-      "Container orchestration (Kubernetes)","
+      "Container orchestration(Kubernetes)","
       "Microservices architecture","
       "Auto-scaling solutions","
       "Disaster recovery planning","
@@ -118,7 +117,7 @@ export const comprehensiveITServices2030: ITService[] = [
     id: 2,"
     name: "Cybersecurity & Zero Trust Architecture","
     category: "Security","
-    description: "Comprehensive cybersecurity services including zero trust architecture implementation, threat detection, incident response, and compliance management. We provide end-to-end security solutions for modern enterprises.",
+    description: "Comprehensive cybersecurity services including zero trust architecture implementation, threat detection, incident response, and compliance management.We provide end-to-end security solutions for modern enterprises.",
     hourlyRate: 175,
     projectRate: 35000,
     features[;"
@@ -176,7 +175,7 @@ export const comprehensiveITServices2030: ITService[] = [
     id: 3,"
     name: "Data Analytics & Business Intelligence","
     category: "Data & Analytics","
-    description: "Advanced data analytics and business intelligence services that transform raw data into actionable insights. We help organizations make data-driven decisions through modern analytics platforms and AI-powered insights.",
+    description: "Advanced data analytics and business intelligence services that transform raw data into actionable insights.We help organizations make data-driven decisions through modern analytics platforms and AI-powered insights.",
     hourlyRate: 140,
     projectRate: 28000,
     features[;"
@@ -234,7 +233,7 @@ export const comprehensiveITServices2030: ITService[] = [
     id: 4,"
     name: "Digital Transformation & Legacy Modernization","
     category: "Digital Transformation","
-    description: "End-to-end digital transformation services that modernize legacy systems, implement new technologies, and transform business processes. We help organizations become digital-first and future-ready.",
+    description: "End-to-end digital transformation services that modernize legacy systems, implement new technologies, and transform business processes.We help organizations become digital-first and future-ready.",
     hourlyRate: 160,
     projectRate: 40000,
     features[;"
@@ -292,7 +291,7 @@ export const comprehensiveITServices2030: ITService[] = [
     id: 5,"
     name: "AI & Machine Learning Implementation","
     category: "Artificial Intelligence","
-    description: "Comprehensive AI and machine learning services that help organizations implement intelligent solutions. From strategy to deployment, we deliver AI solutions that drive business value and competitive advantage.",
+    description: "Comprehensive AI and machine learning services that help organizations implement intelligent solutions.From strategy to deployment, we deliver AI solutions that drive business value and competitive advantage.",
     hourlyRate: 180,
     projectRate: 45000,
     features[;"
@@ -350,7 +349,7 @@ export const comprehensiveITServices2030: ITService[] = [
     id: 6,"
     name: "Network Infrastructure & SD-WAN Solutions","
     category: "Networking","
-    description: "Advanced networking solutions including SD-WAN implementation, network security, and infrastructure optimization. We design and implement scalable, secure, and high-performance network architectures.",
+    description: "Advanced networking solutions including SD-WAN implementation, network security, and infrastructure optimization.We design and implement scalable, secure, and high-performance network architectures.",
     hourlyRate: 130,
     projectRate: 30000,
     features[;"
@@ -408,7 +407,7 @@ export const comprehensiveITServices2030: ITService[] = [
     id: 7,"
     name: "Managed IT Services & Support","
     category: "Managed Services","
-    description: "Comprehensive managed IT services that provide 24/7 monitoring, support, and maintenance for your IT infrastructure. We act as your virtual IT department, ensuring optimal performance and security.",
+    description: "Comprehensive managed IT services that provide 24/7 monitoring, support, and maintenance for your IT infrastructure.We act as your virtual IT department, ensuring optimal performance and security.",
     hourlyRate: 120,
     projectRate: 20000,
     features[;"
@@ -466,7 +465,7 @@ export const comprehensiveITServices2030: ITService[] = [
     id: 8,"
     name: "Enterprise Software Development","
     category: "Software Development","
-    description: "Custom enterprise software development services that deliver scalable, secure, and high-performance applications. We specialize in modern development practices and cutting-edge technologies.",
+    description: "Custom enterprise software development services that deliver scalable, secure, and high-performance applications.We specialize in modern development practices and cutting-edge technologies.",
     hourlyRate: 140,
     projectRate: 35000,
     features[;"
@@ -524,7 +523,7 @@ export const comprehensiveITServices2030: ITService[] = [
     id: 9,"
     name: "Data Center & Colocation Services","
     category: "Infrastructure","
-    description: "Enterprise-grade data center services including colocation, cloud connectivity, and disaster recovery solutions. We provide secure, reliable, and scalable infrastructure for mission-critical applications.",
+    description: "Enterprise-grade data center services including colocation, cloud connectivity, and disaster recovery solutions.We provide secure, reliable, and scalable infrastructure for mission-critical applications.",
     hourlyRate: 125,
     projectRate: 25000,
     features[;"
@@ -582,7 +581,7 @@ export const comprehensiveITServices2030: ITService[] = [
     id: 10,"
     name: "IT Strategy & Digital Consulting","
     category: "Consulting","
-    description: "Strategic IT consulting services that help organizations align technology with business objectives. We provide roadmaps, assessments, and strategic guidance for digital transformation and technology adoption.",
+    description: "Strategic IT consulting services that help organizations align technology with business objectives.We provide roadmaps, assessments, and strategic guidance for digital transformation and technology adoption.",
     hourlyRate: 200,
     projectRate: 50000,
     features[;"

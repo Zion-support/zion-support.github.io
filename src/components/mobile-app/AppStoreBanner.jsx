@@ -1,7 +1,6 @@
 import React from 'react';
 import { Download, Star, Users, Award export const AppStoreBanner = () => {
-  const appStores = [
-    {
+  const appStores = [{
 
       name: 'App Store',
       icon: '🍎',
@@ -27,7 +26,7 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
     { icon: Award, text: 'Editor\'s Choice', color: 'text-green-400' }
   ];
 
-  return()
+  return ()
     <section className="py-20 bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900">"
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">"
         <div className="text-center mb-16">"
@@ -35,9 +34,7 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
             Download Zion Mobile App
           </h2>"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Transform your IT asset management experience with our powerful mobile app.
-            Available on iOS and Android devices.
-          </p>
+            Transform your IT asset management experience with our powerful mobile app.Available on iOS and Android devices.</p>
         </div>
 "
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -79,9 +76,7 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
                 Get Started Today
               </h3>"
               <p className="text-lg text-gray-300 mb-8">
-                Choose your platform and start managing your IT assets with ease.
-                Free download with no hidden costs.
-              </p>
+                Choose your platform and start managing your IT assets with ease.Free download with no hidden costs.</p>
             </div>
 "
             <div className="space-y-6">
@@ -151,8 +146,7 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
               Questions About the App?
             </h3>"
             <p className="text-gray-300 mb-6">
-              Our support team is here to help you get started and make the most of Zion mobile.
-            </p>"
+              Our support team is here to help you get started and make the most of Zion mobile.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
                 href="#support"

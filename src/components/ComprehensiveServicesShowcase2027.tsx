@@ -1,25 +1,12 @@
 <<<<<<< HEAD
-import { Link } from "react - router - dom";
-import React, { useState } from 'react';
-import { Badge } from "@/components / ui / badge";
-import { Button } from "@/components / ui / button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components / ui / card";
-export default ComprehensiveServicesShowcase2027;
-export default ComprehensiveServicesShowcase2027;
-export default ComprehensiveServicesShowcase2027;
-export default ComprehensiveServicesShowcase2027;
-export default ComprehensiveServicesShowcase2027;
-export default ComprehensiveServicesShowcase2027;
-export default ComprehensiveServicesShowcase2027;
-export default ComprehensiveServicesShowcase2027;
-export function ComprehensiveServicesShowcase2027 (...args[]) :  {
-import { cuttingEdgeComprehensiveServices2027 } from "../../data / 2027 - cutting - edge - comprehensive - services";
-import { specializedInnovativeServices2027 } from "../../data / 2027 - specialized - innovative - services";
-=======
-<<<<<<< HEAD
->>>>>>> main
-
-const categoryColors: { [key: string]: string } = {
+import { Link  } from 'react-router-dom';
+ from 'react';
+import { Badge } from '@/components / ui / badge';
+import { Button } from '@/components / ui / button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+ from '../../data / 2027 - cutting - edge - comprehensive -services';
+import { specializedInnovativeServices2027 } from '../../data / 2027 - specialized - innovative -services';
+ = {
 
   'AI & Autonomous Systems': 'from-purple-600 to-indigo-700',Quantum Computing & AI': 'from-blue-600 to-cyan-700',Blockchain & Web3': 'from-green-600 to-emerald-700',Cybersecurity & Privacy': 'from-red-600 to-pink-700',Healthcare & Biotech': 'from-purple-600 to-pink-700',Financial Technology': 'from-yellow-600 to-orange-700',IoT & Automation': 'from-blue-600 to-teal-700',Cloud & Infrastructure': 'from-gray-600 to-blue-700',Data Analytics & BI': 'from-green-600 to-blue-700',Digital Marketing & Automation': 'from-pink-600 to-purple-700',E-commerce & Retail': 'from-orange-600 to-red-700',Education & Learning Technology': 'from-teal-600 to-green-700',Space Technology & Earth Observation': 'from-indigo-600 to-purple-700',AR/VR & Immersive Technology': 'from-pink-600 to-rose-700',Robotics & Automation': 'from-gray-600 to-slate-700',Green Technology & Sustainability': 'from-green-600 to-emerald-700',Supply Chain & Logistics': 'from-blue-600 to-indigo-700',Human Resources & Talent Management': 'from-purple-600 to-violet-700',Legal Technology & Compliance': 'from-slate-600 to-gray-700',Real Estate & Property Technology': 'from-amber-600 to-orange-700',Sports Technology & Analytics': 'from-green-600 to-blue-700',Entertainment & Media Technology': 'from-purple-600 to-pink-700'
 };
@@ -68,13 +55,11 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
   // Get unique categories
   
   // Filter services based on selection and search
-  
-    
+
     return matchesCategory && matchesSearch}) ;
 
-  
   return ("
-    <div className = "py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">"
+    <div className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">"
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       <div className="container mx-auto px-4">
@@ -84,9 +69,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
             Revolutionary 2027 Micro SAAS Solutions
           </h2>"
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">
-            Transform your business with our cutting-edge micro SAAS services.
-            From AI automation to quantum computing, we provide innovative solutions that drive growth and innovation.
-          </p>"
+            Transform your business with our cutting-edge micro SAAS services.From AI automation to quantum computing, we provide innovative solutions that drive growth and innovation.</p>"
           <div className="flex flex-wrap justify-center gap-4">"
             <Link to="/contact">"
               <Button size="lg" className="bg-white text-zion-blue hover:bg-gray-100">"
@@ -130,7 +113,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
               placeholder="Search services..."
               className="flex-1 px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan"
               value={searchQuery}
-              onChange={ (e) => setSearchQuery (e.target.value) }
+              onChange={ (e) => setSearchQuery(e.target.value) }
             />
             <select"
               className="px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
@@ -138,7 +121,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
               onChange={(e) => setSelectedCategory(e.target.value)}
 "
               <option value="all">All Categories</option>
-              {categories.map (category => (<option key={category} value={category}>{category}</option>) ) }
+              {categories.map(category => (<option key={category} value={category}>{category}</option>) ) }
             </select>
           </div>
         </div>
@@ -199,7 +182,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
         {/* All Services Grid */}
         <div>"
           <h3 className="text-3xl font-bold text-white mb-8 text-center">
-            All Services ({filteredServices.length})
+            All Services({filteredServices.length})
           </h3>"
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredServices.map((service)  => ("
@@ -309,8 +292,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
             </h3>"
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
               Join thousands of businesses already using our innovative solutions to drive growth,
-              improve efficiency, and stay ahead of the competition.
-            </p>"
+              improve efficiency, and stay ahead of the competition.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link to="/contact">"
                 <Button size="lg" className="bg-zion-cyan text-white hover:bg-zion-cyan-dark px-8 py-3">"

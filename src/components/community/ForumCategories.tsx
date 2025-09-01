@@ -108,8 +108,8 @@ export default function ForumCategories(...args[]):  {
 
   ];
 
-  return()
-    <section className = "py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">;
+  return ()
+    <section className="py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">;
       {/* Background decorative elements */}"
       <div className="absolute inset-0 opacity-10">;"
         <div className="absolute top-10 right-10 w-64 h-64 bg-zion-cyan rounded-full blur-3xl"></div>"
@@ -182,8 +182,7 @@ export default function ForumCategories(...args[]):  {
               Join the Conversation
             </h3>"
             <p className="text-zion-slate-light mb-6">
-              Start contributing to discussions, ask questions, and share your expertise with the community.
-            </p>"
+              Start contributing to discussions, ask questions, and share your expertise with the community.</p>"
             <button className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-zion-blue-dark font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105">
               Start a Discussion
             </button>;

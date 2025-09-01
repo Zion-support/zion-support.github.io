@@ -1,33 +1,7 @@
 import React, { useState } from 'react';
 import { advancedInnovativeServicesExpansionV3 } from '../data/2025-advanced-innovative-services-expansion-v3';
-import { specializedEnterpriseSolutions2025 } from '../data/2025-specialized-enterprise-solutions';
-const EnhancedComprehensiveServicesShowcase = () => {
-
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedService, setSelectedService] = useState(null);
-  const allServices = [
-    ...advancedInnovativeServicesExpansionV3.map(service => ({
-
-      ...service,
-      type: 'Advanced AI & Innovation',
-      displayPrice: service.price})),
-    ...specializedEnterpriseSolutions2025.map(service => ({
-
-      ...service,
-      type: 'Specialized Enterprise',
-      displayPrice: service.price})),
-  ];
-  const filteredServices = allServices.filter(service => {
-
-    const matchesSearch =
-      service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-  const categories = ['
-    { id: 'all', name: 'All Services', count: allServices.length },
+export default function Page() {
+,
     {
 
       id: 'Advanced AI & Innovation',
@@ -46,7 +20,7 @@ const EnhancedComprehensiveServicesShowcase = () => {
   const closeModal = () => {
     setSelectedService(null);
   };
-  return()
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Header Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
@@ -120,9 +94,7 @@ const EnhancedComprehensiveServicesShowcase = () => {
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-
-                  activeCategory === category.id'
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeCategory === category.id'
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white''
                     : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hover:bg-white/20'`
                 }`}
@@ -182,7 +154,7 @@ const EnhancedComprehensiveServicesShowcase = () => {
                     {service.features.length > 3 && ("
                       <li className="text-sm text-gray-400 flex items-center">"
                         <span className="w-2 h-2 bg-gray-400 rounded-full mr-2"></span>
-                        +{service.features.length - 3} more features
+                        +{service.features.length-3} more features
                       </li>
                     )}
                   </ul>

@@ -4,17 +4,17 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('idle'); // idle, loading, success, error
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async(e) => {
 
     e.preventDefault();
-    if (!email) return;
+    if(!email) return;
 
     setStatus('loading');
 
     // Simulate API call
     setTimeout(() => {
 
-      if (email.includes('@')) {
+      if(email.includes('@')) {
 
         setStatus('success');
         setEmail('');
@@ -25,7 +25,7 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
     }, 1000)};
 
   const getStatusIcon = () => {
-    switch (status) {
+    switch(status) {
 
       case 'success':
         return <CheckCircle className="h-5 w-5 text-green-400" />;
@@ -36,7 +36,7 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
   };
 
   const getStatusText = () => {
-    switch (status) {
+    switch(status) {
 
       case 'success':'
         return 'Thank you! We\'ll notify you when the app launches.';
@@ -54,8 +54,7 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
             Be the First to Know
           </h2>"
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Get early access to the Zion mobile app and receive exclusive updates, features, and special offers.
-          </p>
+            Get early access to the Zion mobile app and receive exclusive updates, features, and special offers.</p>
         </div>
 "
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 max-w-2xl mx-auto">"
@@ -88,8 +87,7 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
                 </button>
               </div>"
               <p className="text-sm text-gray-400">
-                We respect your privacy. Unsubscribe at  time.
-              </p>
+                We respect your privacy.Unsubscribe at  time.</p>
             </form>;
           )}
 
@@ -114,7 +112,7 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
 
           {status === 'error' && ("
             <div className="text-center">"
-              <p className="text-red-400 mb-4">Invalid email address. Please try again.</p>
+              <p className="text-red-400 mb-4">Invalid email address.Please try again.</p>
               <button'
                 onClick={() => setStatus('idle')}"
                 className="px-6 py-2 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300"

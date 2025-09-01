@@ -1,34 +1,6 @@
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
+import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
 
-=======
->>>>>>> main
-  Brain,
-  Zap,
-  Target,
-  TrendingUp,
-  Search,
-  FileText,
-  Edit3,
-  Eye,
-  BarChart3,
-  Lightbulb,
-  CheckCircle,
-  AlertTriangle,
-  Info,
-  X,
-  Settings,
-  Download,
-  Share2,
-  RefreshCw,
-  Maximize2,
-  Minimize2,
-  Sparkles,
-  Globe,
-  Smartphone,
-  Monitor
-} from 'lucide-react';
+ from 'lucide-react';
 
 interface ContentAnalysis {
   id: string;
@@ -75,7 +47,6 @@ export function AIContentOptimizer({
   const [currentScore, setCurrentScore] = useState(0);
   const [targetScore, setTargetScore] = useState(95);
 
-  
   // Generate sample content analysis
   
     const analysis: ContentAnalysis[] = [];
@@ -113,28 +84,27 @@ export function AIContentOptimizer({
       setIsAnalyzing(false);
       setAnalysisComplete(true);
 
-      if (onOptimizationComplete) {
+      if(onOptimizationComplete) {
         onOptimizationComplete(optimizationSuggestions)}
-    }, 3000)}, [
-    generateContentAnalysis,
+    }, 3000)}, [generateContentAnalysis,
     generateOptimizationSuggestions,
     onOptimizationComplete,
   ]);
   // Auto - analyze when component opens
-  useEffect ( () => {
-    if (autoAnalyze && isOpen && !analysisComplete) {
+  useEffect(() => {
+    if(autoAnalyze && isOpen && !analysisComplete) {
 
       startAnalysis()}
   }, [autoAnalyze, isOpen, analysisComplete, startAnalysis]) ;
   // Setup real - time updates
-  useEffect ( () => {
-    if (showRealTime && isOpen && analysisComplete) {
+  useEffect(() => {
+    if(showRealTime && isOpen && analysisComplete) {
 
       analysisIntervalRef.current = setInterval(() => {
         generateContentAnalysis()}, 60000); // Update every minute
 
       return () => {
-        if (analysisIntervalRef.current) {
+        if(analysisIntervalRef.current) {
 
           clearInterval(analysisIntervalRef.current)}
       }}
@@ -150,10 +120,9 @@ export function AIContentOptimizer({
 
   // Filter suggestions by category
   
-  if (!enabled) return null;
+  if(!enabled) return null;
 
-  return (
-    <>
+  return (<>
       {/* Floating AI Content Optimizer Button */}
       <motion.button
         onClick={() => setIsOpen(true)}
@@ -178,8 +147,7 @@ export function AIContentOptimizer({
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className={`bg-white dark:bg-gray-900 rounded-2xl shadow-2xl overflow-hidden ${
-                isFullscreen ? 'w-full h-full' : 'w-full max-w-7xl max-h-[90vh]'
+              className={`bg-white dark:bg-gray-900 rounded-2xl shadow-2xl overflow-hidden ${isFullscreen ? 'w-full h-full' : 'w-full max-w-7xl max-h-[90vh]'
               }`}
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -308,8 +276,7 @@ export function AIContentOptimizer({
 
                           <div className="text-center">
                             <div
-                              className={`text-3xl font-bold mb-2 ${
-                                item.score >= 90
+                              className={`text-3xl font-bold mb-2 ${item.score >= 90
                                   ? 'text-green-600'
                                   : item.score >= 80
                                     ? 'text-yellow-600'
@@ -326,8 +293,7 @@ export function AIContentOptimizer({
                           <div className="mt-3">
                             <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                               <div
-                                className={`h-2 rounded-full transition-all duration-300 ${
-                                  item.score >= 90
+                                className={`h-2 rounded-full transition-all duration-300 ${item.score >= 90
                                     ? 'bg-green-500'
                                     : item.score >= 80
                                       ? 'bg-yellow-500'

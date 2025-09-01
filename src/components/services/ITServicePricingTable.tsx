@@ -1,36 +1,7 @@
-import { useState, useMemo } from "react";
-import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing";
-import { Input } from "@/components/ui/input";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Globe, Search, ArrowUpDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { useState, useMemo } from 'react';
 
-export function ITServicePricingTable() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [sortConfig, setSortConfig] = useState<{
-    key: keyof CountryPricing;
-    direction: "ascending" | "descending";
-  }>({
-    key: "country",
-    direction: "ascending",
-  });
-
-  const sortedData = useMemo(() => {
-    let filteredData = [...onsiteServicePricing];
-    
-    // Filter by search query
-    if (searchQuery) {
-      filteredData = filteredData.filter(item => 
-        item.country.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-    }
-    
-    // Sort data
-    filteredData.sort((a, b) => {
-      if (a[sortConfig.key] < b[sortConfig.key]) {
-        return sortConfig.direction === "ascending" ? -1 : 1;
-      }
-      if (a[sortConfig.key] > b[sortConfig.key]) {
+export default function Page() {
+      if(a[sortConfig.key] > b[sortConfig.key]) {
         return sortConfig.direction === "ascending" ? 1 : -1;
       }
       return 0;
@@ -49,8 +20,7 @@ export function ITServicePricingTable() {
     });
   };
 
-  return (
-    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
+  return (<div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
       <div className="flex items-center mb-6">
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />

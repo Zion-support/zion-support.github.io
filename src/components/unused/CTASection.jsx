@@ -1,34 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { RocketLaunchIcon, PhoneIcon, EnvelopeIcon, CalendarIcon } from '@heroicons/react/24/outline';
-export function CTASection() {
-    const containerVariants = {
-
-        hidden: { opacity: 0 },
-        visible: {
-
-            opacity: 1,
-            transition: {
-
-                staggerChildren: 0.1
-
-    };
-    const itemVariants = {
-
-  hidden: { y: 20,
-  opacity: 0
-
-},
-        visible: {
-
-            y: 0,
-            opacity: 1,
-            transition: {
-
-                duration: 0.5
-
-    };
+import { motion  } from 'framer-motion';
+export default function Page() {
+;
     return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-purple-dark to-zion-blue-dark relative overflow-hidden">;
       {/* Background Elements */}"
       <div className="absolute inset-0 bg-quantum-mesh opacity-30"></div>;"
@@ -53,10 +26,6 @@ export function CTASection() {
 =======
   y: 0 
 
-
-
-
-
 "
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/30 rounded-full text-zion-cyan text-sm font-medium mb-6">"
@@ -74,9 +43,8 @@ export function CTASection() {
 "
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
             Join hundreds of companies that have already transformed their operations'
-            with our cutting-edge technology solutions. Let's discuss how we can help
-            you achieve your goals.
-          </p>
+            with our cutting-edge technology solutions.Let's discuss how we can help
+            you achieve your goals.</p>
 "
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
             <Link to="/contact" className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/30 flex items-center justify-center gap-2">"
@@ -138,10 +106,6 @@ export function CTASection() {
             <div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
 =======
   delay: 0.5 
-
-
-
-
 
 "
 }} className="text-center mt-16">"

@@ -26,8 +26,7 @@ export interface ServicePricing {
   volumeDiscounts: string[];
   enterpriseFeatures: string[]}
 
-export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
-  // AI-Powered Autonomous Research Assistant
+export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [// AI-Powered Autonomous Research Assistant
   {
     serviceId: "ai-autonomous-research-assistant",
     serviceName: "AI Autonomous Research Assistant",
@@ -327,7 +326,7 @@ export
 ;
 },;
   categoryPricing: COMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service) => {;
-    if (!acc[service.category]) {;
+    if(!acc[service.category]) {;
       acc[service.category] = []}
     acc[service.category].push(service.basePrice);
     return acc}, {} as Record<string, number[]>),

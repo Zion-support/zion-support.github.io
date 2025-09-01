@@ -1,41 +1,10 @@
 import React from 'react';
 <<<<<<< HEAD
 export default ServiceCard;
-import { motion } from 'framer - motion';
+import { motion  } from 'framer-motion';
 
-=======
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
->>>>>>> main
-const ServiceCard = ({ title, description, icon, price, category, features, isPopular = false, isNew = false, href = '/services' }) => {
-
-    const cardVariants = {
-
-  hidden: { opacity: 0, y: 20,
-  scale: 0.95
-
-},
-        visible: {
-
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            transition: {
-
-                duration: 0.5,
-                ease: "easeOut"
-
-        },
-        hover: {
-
-            y: -12,
-            scale: 1.02,
-            transition: {
-
-                duration: 0.3,"
-                ease: "easeOut"
-
-    };
+export default function Page() {
+;
     const iconVariants = {
 
   hidden: { scale: 0.8,
@@ -90,7 +59,6 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
                 duration: 0.3,"
                 ease: "backOut"
 
-
     };"
     return (<motion.div variants={cardVariants} initial="hidden" whileInView="visible" whileHover="hover" viewport={{ once: true }} className="group relative h-full">;
       {/* Enhanced Popular Badge */}"
@@ -98,11 +66,6 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
 "
   { delay: 0.2, type: "spring",
   stiffness: 300
-
-
-
-
-
 
 }}>"
           <div className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg animate-pulse">
@@ -125,11 +88,6 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
 "
   { delay: 0.3, type: "spring",
   stiffness: 300
-
-
-
-
-
 
 }}>"
           <div className="bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg animate-bounce">

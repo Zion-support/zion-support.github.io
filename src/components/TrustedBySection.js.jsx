@@ -3,7 +3,7 @@ export function TrustedBySection() {
   const companies = ['
     'Microsoft',Google',Amazon',Meta',Apple',Netflix',
   ];
-  return()
+  return ()
     <section className="py-16 bg-white/5">"
       <div className="container mx-auto px-4 text-center">"
         <h3 className="text-lg font-medium text-zion-slate-light mb-8">

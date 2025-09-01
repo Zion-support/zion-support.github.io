@@ -44,8 +44,7 @@ const zionContact: ITServiceContact = {
 };
 
 // Innovative IT Services 2030
-export const innovativeITServices2030: InnovativeITService[] = [
-  {
+export const innovativeITServices2030: InnovativeITService[] = [{
     id: 1,
     name: "Quantum-Enhanced Cloud Infrastructure & DevOps Platform",
     category: "Cloud & DevOps",
@@ -64,8 +63,7 @@ export const innovativeITServices2030: InnovativeITService[] = [
       "Cost optimization engine",
       "Disaster recovery automation"
     ],
-    benefits: [
-      "80% faster deployment times",
+    benefits: ["80% faster deployment times",
       "60% reduction in infrastructure costs",
       "99.99% uptime guarantee",
       "Automated compliance management",
@@ -79,8 +77,7 @@ export const innovativeITServices2030: InnovativeITService[] = [
     competitors: ["AWS", "Microsoft Azure", "Google Cloud", "IBM Cloud"],
     roi: "400% within 12 months",
     implementationTime: "6-8 weeks",
-    technologies: [
-      "Quantum-inspired algorithms",
+    technologies: ["Quantum-inspired algorithms",
       "Kubernetes",
       "Terraform",
       "Docker",
@@ -92,8 +89,7 @@ export const innovativeITServices2030: InnovativeITService[] = [
     innovationLevel: "Breakthrough",
     marketSize: "$156.2 billion",
     growthRate: "38.7% annually",
-    useCases: [
-      "Digital transformation",
+    useCases: ["Digital transformation",
       "Cloud migration",
       "DevOps automation",
       "Infrastructure optimization",
@@ -111,8 +107,7 @@ export const innovativeITServices2030: InnovativeITService[] = [
     price: 899,
     pricingModel: "monthly per facility",
     scope: "Multi-asset digital twin ecosystem",
-    features: [
-      "Real-time asset monitoring",
+    features: ["Real-time asset monitoring",
       "Predictive maintenance alerts",
       "3D visualization dashboard",
       "IoT sensor integration",
@@ -121,8 +116,7 @@ export const innovativeITServices2030: InnovativeITService[] = [
       "Remote asset management",
       "Historical data analysis"
     ],
-    benefits: [
-      "35% reduction in maintenance costs",
+    benefits: ["35% reduction in maintenance costs",
       "50% fewer unplanned outages",
       "Improved asset utilization",
       "Enhanced operational efficiency",
@@ -136,8 +130,7 @@ export const innovativeITServices2030: InnovativeITService[] = [
     competitors: ["Siemens", "GE Digital", "PTC", "Dassault Systèmes"],
     roi: "300% within 10 months",
     implementationTime: "8-12 weeks",
-    technologies: [
-      "IoT sensors",
+    technologies: ["IoT sensors",
       "Machine Learning",
       "3D modeling",
       "Real-time analytics",
@@ -149,8 +142,7 @@ export const innovativeITServices2030: InnovativeITService[] = [
     innovationLevel: "Cutting-edge",
     marketSize: "$86.1 billion",
     growthRate: "42.8% annually",
-    useCases: [
-      "Predictive maintenance",
+    useCases: ["Predictive maintenance",
       "Asset optimization",
       "Remote monitoring",
       "Performance analysis",
@@ -168,8 +160,7 @@ export const innovativeITServices2030: InnovativeITService[] = [
     price: 3500,
     pricingModel: "monthly per organization",
     scope: "End-to-end security architecture",
-    features: [
-      "Identity verification system",
+    features: ["Identity verification system",
       "Micro-segmentation",
       "Continuous monitoring",
       "Threat detection & response",
@@ -178,8 +169,7 @@ export const innovativeITServices2030: InnovativeITService[] = [
       "Security analytics",
       "Incident response automation"
     ],
-    benefits: [
-      "99.9% threat prevention rate",
+    benefits: ["99.9% threat prevention rate",
       "Zero-trust compliance",
       "Reduced attack surface",
       "Enhanced user experience",
@@ -193,8 +183,7 @@ export const innovativeITServices2030: InnovativeITService[] = [
     competitors: ["Palo Alto Networks", "Cisco", "Fortinet", "Check Point"],
     roi: "350% within 8 months",
     implementationTime: "12-16 weeks",
-    technologies: [
-      "Identity providers",
+    technologies: ["Identity providers",
       "Network segmentation",
       "Behavioral analytics",
       "Machine learning",
@@ -206,8 +195,7 @@ export const innovativeITServices2030: InnovativeITService[] = [
     innovationLevel: "Advanced",
     marketSize: "$217.8 billion",
     growthRate: "31.2% annually",
-    useCases: [
-      "Enterprise security",
+    useCases: ["Enterprise security",
       "Compliance management",
       "Threat prevention",
       "Access control",
@@ -225,8 +213,7 @@ export const innovativeITServices2030: InnovativeITService[] = [
     price: 1200,
     pricingModel: "monthly per deployment",
     scope: "Multi-location edge infrastructure",
-    features: [
-      "5G network optimization",
+    features: ["5G network optimization",
       "Edge computing nodes",
       "Real-time data processing",
       "Low-latency applications",
@@ -235,8 +222,7 @@ export const innovativeITServices2030: InnovativeITService[] = [
       "Quality of service management",
       "Mobile edge computing"
     ],
-    benefits: [
-      "90% reduction in latency",
+    benefits: ["90% reduction in latency",
       "Enhanced application performance",
       "Improved user experience",
       "Cost-effective infrastructure",
@@ -250,8 +236,7 @@ export const innovativeITServices2030: InnovativeITService[] = [
     competitors: ["Ericsson", "Nokia", "Huawei", "Cisco"],
     roi: "280% within 12 months",
     implementationTime: "10-14 weeks",
-    technologies: [
-      "5G core networks",
+    technologies: ["5G core networks",
       "Edge computing platforms",
       "Network virtualization",
       "Software-defined networking",
@@ -263,8 +248,7 @@ export const innovativeITServices2030: InnovativeITService[] = [
     innovationLevel: "Cutting-edge",
     marketSize: "$67.2 billion",
     growthRate: "37.5% annually",
-    useCases: [
-      "Smart manufacturing",
+    useCases: ["Smart manufacturing",
       "Autonomous vehicles",
       "Remote healthcare",
       "Smart cities",
@@ -282,8 +266,7 @@ export const innovativeITServices2030: InnovativeITService[] = [
     price: 1800,
     pricingModel: "monthly per organization",
     scope: "Full blockchain ecosystem",
-    features: [
-      "Multi-blockchain support",
+    features: ["Multi-blockchain support",
       "Smart contract development",
       "DeFi integration",
       "NFT marketplace",
@@ -292,8 +275,7 @@ export const innovativeITServices2030: InnovativeITService[] = [
       "Cross-chain interoperability",
       "Regulatory compliance"
     ],
-    benefits: [
-      "Enhanced security & transparency",
+    benefits: ["Enhanced security & transparency",
       "Reduced operational costs",
       "Improved traceability",
       "New revenue streams",
@@ -307,8 +289,7 @@ export const innovativeITServices2030: InnovativeITService[] = [
     competitors: ["IBM Blockchain", "ConsenSys", "R3 Corda", "Hyperledger"],
     roi: "320% within 10 months",
     implementationTime: "16-20 weeks",
-    technologies: [
-      "Ethereum",
+    technologies: ["Ethereum",
       "Hyperledger",
       "Polkadot",
       "Smart contracts",
@@ -320,8 +301,7 @@ export const innovativeITServices2030: InnovativeITService[] = [
     innovationLevel: "Advanced",
     marketSize: "$94.6 billion",
     growthRate: "45.3% annually",
-    useCases: [
-      "Supply chain transparency",
+    useCases: ["Supply chain transparency",
       "Digital identity",
       "Financial services",
       "Asset tokenization",

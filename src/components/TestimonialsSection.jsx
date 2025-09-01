@@ -1,51 +1,7 @@
 import React from 'react';
-import { Star, Quote } from 'lucide-react';
-export const TestimonialsSection = () => {
-  const testimonials = [
-    {
-
-      id: 1,
-      name: 'Sarah Johnson',
-      comp: 'TechCorp Solutions',
-      role: 'CTO',
-      content:'
-        'Zion Tech Group transformed our AI infrastructure completely. Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.',
-      rating: 5,
-      avatar:'
-        'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face'},
-    {
-
-      id: 2,
-      name: 'Michael Chen',
-      comp: 'InnovateTech',
-      role: 'VP of Engineering',
-      content:'
-        'The team at Zion delivered exceptional results. Their AI-powered security solutions protected our systems from advanced threats while maintaining optimal performance.',
-      rating: 5,
-      avatar:'
-        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'},
-    {
-
-      id: 3,
-      name: 'Emily Rodriguez',
-      comp: 'DataFlow Systems',
-      role: 'Data Science Director',
-      content:'
-        'Working with Zion Tech Group was a game-changer. Their AI business intelligence platform gave us insights we never had before, driving 25% revenue growth.',
-      rating: 5,
-      avatar:'
-        'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face'},
-    {
-
-      id: 4,
-      name: 'David Kim',
-      comp: 'Quantum Industries',
-      role: 'Research Director',
-      content:'
-        "Zion's quantum computing expertise is unmatched. They helped us implement cutting-edge quantum algorithms that solved problems we thought were impossible.",
-      rating: 5,
-      avatar:'
-        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face'},
+import { Star, Quote  } from 'lucide-react';
+export default function Page() {
+,
     {
 
       id: 5,
@@ -53,7 +9,7 @@ export const TestimonialsSection = () => {
       comp: 'GreenTech Solutions',
       role: 'Sustainability Officer',
       content:'"
-        "Zion's Green IT solutions helped us reduce our carbon footprint by 30% while improving our technology infrastructure. Truly innovative approach.",
+        "Zion's Green IT solutions helped us reduce our carbon footprint by 30% while improving our technology infrastructure.Truly innovative approach.",
       rating: 5,
       avatar:'
         'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=face'},
@@ -64,7 +20,7 @@ export const TestimonialsSection = () => {
       comp: 'SpaceTech Ventures',
       role: 'CEO',
       content:'
-        'The space technology solutions from Zion Tech Group are revolutionary. They helped us develop satellite systems that exceeded all our expectations.',
+        'The space technology solutions from Zion Tech Group are revolutionary.They helped us develop satellite systems that exceeded all our expectations.',
       rating: 5,
       avatar:'
         'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face'},
@@ -82,8 +38,7 @@ export const TestimonialsSection = () => {
           </h2>"
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Discover how Zion Tech Group has transformed businesses across
-            industries with our cutting-edge technology solutions.
-          </p>
+            industries with our cutting-edge technology solutions.</p>
         </div>
 "
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -1,37 +1,9 @@
 import React, { useState } from 'react';
-export default React.memo (function Careers () {
-import {
-import { motion } from 'framer - motion';
+export default React.memo(function Careers () {
+import { motion  } from 'framer-motion';
 
-  Briefcase,
-  Users,
-  Heart,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Code,
-  Rocket,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Globe,
-  Award,
-  Lightbulb,
-  Mail,
-  Phone,
-  Search,
-} from 'lucide - react';
-
-  const [searchTerm, setSearchTerm] = useState ('') ;
-  const [selectedDepartment, setSelectedDepartment] = useState ('all') ;
-  const [selectedLocation, setSelectedLocation] = useState ('all') ;
-  const [expandedJob, setExpandedJob] = useState < string | null> (null) ;
-
-  const departments = [
-    { id: 'all', name: 'All Departments', icon: Briefcase },
-    { id: 'engineering', name: 'Engineering', icon: Code },
-    { id: 'ai - ml', name: 'AI & Machine Learning', icon: Brain },
+export default function Page() {
+,
     { id: 'sales', name: 'Sales & Business Development', icon: Target },
     { id: 'marketing', name: 'Marketing', icon: Lightbulb },
     { id: 'operations', name: 'Operations', icon: Settings },
@@ -41,25 +13,22 @@ import { motion } from 'framer - motion';
     { id: 'quantum', name: 'Quantum Computing', icon: Atom },
   ];
 
-  const locations = [
-    { id: 'all', name: 'All Locations', icon: Globe },
+  const locations = [{ id: 'all', name: 'All Locations', icon: Globe },
     { id: 'remote', name: 'Remote', icon: Wifi },
     { id: 'middletown', name: 'Middletown, DE', icon: MapPin },
-    { id: 'new - york', name: 'New York, NY', icon: MapPin },
+    { id: 'new-york', name: 'New York, NY', icon: MapPin },
     { id: 'san - francisco', name: 'San Francisco, CA', icon: MapPin },
     { id: 'london', name: 'London, UK', icon: MapPin },
     { id: 'singapore', name: 'Singapore', icon: MapPin },
   ];
 
-  const locationFilters = [
-    { id: 'all', name: 'All Locations', count: 12 },
+  const locationFilters = [{ id: 'all', name: 'All Locations', count: 12 },
     { id: 'remote', name: 'Remote', count: 8 },
     { id: 'middletown', name: 'Middletown, DE', count: 3 },
     { id: 'san - francisco', name: 'San Francisco, CA', count: 1 },
   ];
 
-  const jobListings = [
-    {
+  const jobListings = [{
       id: 'senior - ai - engineer',
       title: 'Senior AI Engineer',
       department: 'engineering',
@@ -73,15 +42,14 @@ import { motion } from 'framer - motion';
         'Strong background in machine learning and deep learning',
         'Experience with Python, TensorFlow, PyTorch',
         'Knowledge of computer vision and NLP',
-        'Experience with cloud platforms (AWS, Azure, GCP) ',
+        'Experience with cloud platforms(AWS, Azure, GCP) ',
         'PhD in Computer Science or related field preferred',
       ],
-      benefits: [
-        'Competitive salary and equity',
+      benefits: ['Competitive salary and equity',
         'Flexible work arrangements',
         'Professional development budget',
         'Health, dental, and vision insurance',
-        '401 (k) with company match',
+        '401(k) with company match',
       ],
       icon: Brain,
       color: 'from - purple - 500 to - pink - 500',
@@ -96,15 +64,13 @@ import { motion } from 'framer - motion';
       experience: '3 + years',
       description:
         'Research and develop quantum algorithms and quantum machine learning solutions.',
-      requirements: [
-        'PhD in Physics, Computer Science, or related field',
+      requirements: ['PhD in Physics, Computer Science, or related field',
         'Experience with quantum computing frameworks',
         'Knowledge of quantum algorithms and quantum ML',
         'Strong mathematical and analytical skills',
         'Experience with Qiskit, Cirq, or similar platforms',
       ],
-      benefits: [
-        'Competitive salary and equity',
+      benefits: ['Competitive salary and equity',
         'Research publication support',
         'Conference attendance funding',
         'Collaboration with leading quantum research institutions',
@@ -123,15 +89,13 @@ import { motion } from 'framer - motion';
       experience: '7 + years',
       description:
         'Design and implement enterprise - grade security solutions for our clients.',
-      requirements: [
-        'Expertise in security architecture and design',
+      requirements: ['Expertise in security architecture and design',
         'Experience with zero - trust security models',
-        'Knowledge of compliance frameworks (SOC 2, ISO 27001) ',
+        'Knowledge of compliance frameworks(SOC 2, ISO 27001) ',
         'Experience with cloud security and DevSecOps',
         'CISSP, CISM, or similar certifications preferred',
       ],
-      benefits: [
-        'Competitive salary and equity',
+      benefits: ['Competitive salary and equity',
         'Security certification support',
         'Professional development opportunities',
         'Health and wellness benefits',
@@ -150,15 +114,13 @@ import { motion } from 'framer - motion';
       experience: '4 + years',
       description:
         'Build and maintain scalable cloud infrastructure solutions.',
-      requirements: [
-        'Experience with AWS, Azure, or Google Cloud',
-        'Knowledge of infrastructure as code (Terraform, CloudFormation) ',
+      requirements: ['Experience with AWS, Azure, or Google Cloud',
+        'Knowledge of infrastructure as code(Terraform, CloudFormation) ',
         'Experience with containerization and Kubernetes',
         'Understanding of DevOps practices and CI / CD',
         'Experience with monitoring and logging tools',
       ],
-      benefits: [
-        'Competitive salary and equity',
+      benefits: ['Competitive salary and equity',
         'Cloud certification support',
         'Professional development budget',
         'Health and dental insurance',
@@ -176,16 +138,14 @@ import { motion } from 'framer - motion';
       salary: '$100,000 - $150,000',
       experience: '5 + years',
       description:
-        'Develop high - quality software solutions using modern technologies and best practices.',
-      requirements: [
-        'Strong programming skills in multiple languages',
+        'Develop high-quality software solutions using modern technologies and best practices.',
+      requirements: ['Strong programming skills in multiple languages',
         'Experience with modern web frameworks and APIs',
         'Knowledge of software design patterns and architecture',
         'Experience with testing and quality assurance',
         'Understanding of agile development methodologies',
       ],
-      benefits: [
-        'Competitive salary and equity',
+      benefits: ['Competitive salary and equity',
         'Professional development opportunities',
         'Health and wellness benefits',
         'Flexible work arrangements',
@@ -204,15 +164,13 @@ import { motion } from 'framer - motion';
       experience: '3 + years',
       description:
         'Drive business growth by identifying and developing strategic partnerships.',
-      requirements: [
-        'Experience in B2B sales and business development',
+      requirements: ['Experience in B2B sales and business development',
         'Knowledge of technology industry and trends',
         'Strong communication and negotiation skills',
         'Experience with CRM systems and sales processes',
         'Ability to build and maintain client relationships',
       ],
-      benefits: [
-        'Competitive base salary plus commission',
+      benefits: ['Competitive base salary plus commission',
         'Performance - based bonuses',
         'Professional development support',
         'Health and dental insurance',
@@ -223,38 +181,37 @@ import { motion } from 'framer - motion';
     },
   ];
 
-  const filteredJobs = jobListings.filter (job => {
-    const matchesSearch = job.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
-      job.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ;
+  const filteredJobs = jobListings.filter(job => {
+    const matchesSearch = job.title.toLowerCase () .includes(searchTerm.toLowerCase () ) ||
+      job.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ;
     const matchesDepartment = selectedDepartment === 'all' || job.department === selectedDepartment;
-    const matchesLocation = selectedLocation === 'all' || (selectedLocation === 'remote' && job.location.includes ('Remote') ) || (selectedLocation === 'middletown' &&
-        job.location.includes ('Middletown') ) || (selectedLocation === 'san - francisco' &&
-        job.location.includes ('San Francisco') ) ;
+    const matchesLocation = selectedLocation === 'all' || (selectedLocation === 'remote' && job.location.includes('Remote') ) || (selectedLocation === 'middletown' &&
+        job.location.includes('Middletown') ) || (selectedLocation === 'san - francisco' &&
+        job.location.includes('San Francisco') ) ;
 
     return matchesSearch && matchesDepartment && matchesLocation;
   }) ;
 
   const toggleJob = (jobId: string) => {
-    setExpandedJob (expandedJob === jobId ? null : jobId) ;
+    setExpandedJob(expandedJob === jobId ? null : jobId) ;
   };
 
-  return (<div role="button" className="min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - indigo - 900">
-      <div role="button" className="container mx - auto px - 4 py - 24">
+  return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - indigo -900">
+      <div  className="container mx - auto px-4 py-24">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text - center text - white mb - 16"
+          className="text-center text-white mb-16"
         >
-          <h1 className="text - 5xl md:text - 6xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 via - blue - 400 to - purple - 400 bg - clip - text text - transparent">
+          <h1 className="text-5xl md:text-6xl font - bold mb-6 bg-gradient - to - r from - cyan - 400 via - blue - 400 to - purple - 400 bg-clip - text text-transparent">
             Join Our Team
           </h1>
-          <p className="text - xl md:text - 2xl max - w-3xl mx - auto text - gray - 300 leading - relaxed">
-            Be part of a team that's shaping the future of technology. Work on
+          <p className="text-xl md:text-2xl max - w-3xl mx - auto text-gray - 300 leading -relaxed">
+            Be part of a team that's shaping the future of technology.Work on
             cutting - edge AI, quantum computing, and cybersecurity solutions that
-            transform businesses worldwide.
-          </p>
+            transform businesses worldwide.</p>
         </motion.div>
 
         {/* Search and Filters */}
@@ -262,36 +219,36 @@ import { motion } from 'framer - motion';
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="max - w-6xl mx - auto mb - 12"
+          className="max - w-6xl mx - auto mb-12"
         >
           {/* Search Bar */}
-          <div role="button" className="relative mb - 8">
+          <div  className="relative mb-8">
             <input
               type="text"
               placeholder="Search job titles, skills, or keywords..."
               value={searchTerm}
               onChange={e => setSearchTerm (e.target.value) }
-              className="w - full pl - 12 pr - 4 py - 4 bg - white / 10 backdrop - blur - lg border border - white / 20 rounded - xl text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 400 focus:border - transparent"
+              className="w-full pl - 12 pr - 4 py-4 bg-white / 10 backdrop - blur - lg border border-white / 20 rounded-xl text-white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 400 focus:border-transparent"
             />
-            <Search className="absolute left - 4 top - 1/2 transform - translate - y-1 / 2 text - gray - 400 w - 5 h - 5" />
+            <Search className="absolute left - 4 top - 1/2 transform - translate - y-1 / 2 text-gray - 400 w-5 h-5" />
           </div>
 
           {/* Filters */}
-          <div role="button" className="grid md:grid - cols - 2 gap - 6">
+          <div  className="grid md:grid - cols - 2 gap-6">
             {/* Department Filter */}
             <div>
-              <label className="block text - white font - medium mb - 3">
+              <label className="block text-white font - medium mb-3">
                 Department
               </label>
               <select
                 value={selectedDepartment}
-                onChange={e => setSelectedDepartment (e.target.value) }
-                className="w - full px - 4 py - 3 bg - white / 10 backdrop - blur - lg border border - white / 20 rounded - lg text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 400 focus:border - transparent"
+                onChange={e => setSelectedDepartment(e.target.value) }
+                className="w-full px-4 py-3 bg-white / 10 backdrop - blur - lg border border-white / 20 rounded-lg text-white focus:outline - none focus:ring - 2 focus:ring - cyan - 400 focus:border-transparent"
               >
-                {departments.map (dept => (<option
+                {departments.map(dept => (<option
                     key={dept.id}
                     value={dept.id}
-                    className="bg - gray - 800 text - white"
+                    className="bg-gray - 800 text-white"
                   >
                     {dept.name} ({dept.count}) </option>) ) }
               </select>
@@ -299,18 +256,18 @@ import { motion } from 'framer - motion';
 
             {/* Location Filter */}
             <div>
-              <label className="block text - white font - medium mb - 3">
+              <label className="block text-white font - medium mb-3">
                 Location
               </label>
               <select
                 value={selectedLocation}
-                onChange={e => setSelectedLocation (e.target.value) }
-                className="w - full px - 4 py - 3 bg - white / 10 backdrop - blur - lg border border - white / 20 rounded - lg text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 400 focus:border - transparent"
+                onChange={e => setSelectedLocation(e.target.value) }
+                className="w-full px-4 py-3 bg-white / 10 backdrop - blur - lg border border-white / 20 rounded-lg text-white focus:outline - none focus:ring - 2 focus:ring - cyan - 400 focus:border-transparent"
               >
-                {locationFilters.map (loc => (<option
+                {locationFilters.map(loc => (<option
                     key={loc.id}
                     value={loc.id}
-                    className="bg - gray - 800 text - white"
+                    className="bg-gray - 800 text-white"
                   >
                     {loc.name} ({loc.count}) </option>) ) }
               </select>
@@ -325,62 +282,61 @@ import { motion } from 'framer - motion';
           transition={{ duration: 0.8, delay: 0.4 }}
           className="max - w-6xl mx - auto space - y-6"
         >
-          {filteredJobs.length === 0 ? (<div role="button" className="text - center py - 16">
-              <Briefcase className="w - 16 h - 16 text - gray - 400 mx - auto mb - 4" />
-              <h3 className="text - xl font - semibold text - white mb - 2">
+          {filteredJobs.length === 0 ? (<div  className="text-center py-16">
+              <Briefcase className="w-16 h-16 text-gray - 400 mx - auto mb-4" />
+              <h3 className="text-xl font - semibold text-white mb-2">
                 No jobs found
               </h3>
-              <p className="text - gray - 400">
-                Try adjusting your search terms or filters.
-              </p>
-            </div>) : (filteredJobs.map ( (job, index) => (<motion.div
+              <p className="text-gray -400">
+                Try adjusting your search terms or filters.</p>
+            </div>) : (filteredJobs.map((job, index) => (<motion.div
                 key={job.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                className="bg - white / 10 backdrop - blur - lg border border - white / 20 rounded - xl overflow - hidden hover:border - cyan - 500 / 50 transition - all duration - 300"
+                className="bg-white / 10 backdrop - blur - lg border border-white / 20 rounded-xl overflow-hidden hover:border-cyan - 500 / 50 transition - all duration -300"
               >
-                <div role="button" className="p - 6">
+                <div  className="p -6">
                   {/* Job Header */}
-                  <div role="button" className="flex items - start justify - between mb - 4">
-                    <div role="button" className="flex items - start space - x-4">
-                      <div role="button" className={`w - 16 h - 16 bg - gradient - to - r ${job.color} rounded - xl flex items - center justify - center flex - shrink - 0`}
+                  <div  className="flex items - start justify - between mb-4">
+                    <div  className="flex items - start space - x-4">
+                      <div  className={`w-16 h-16 bg-gradient - to - r ${job.color} rounded-xl flex items - center justify - center flex - shrink - 0`}
                       >
-                        <job.icon className="w - 8 h - 8 text - white" />
+                        <job.icon className="w-8 h-8 text-white" />
                       </div>
-                      <div role="button" className="flex - 1">
-                        <h3 className="text - xl font - bold text - white mb - 2">
+                      <div  className="flex -1">
+                        <h3 className="text-xl font - bold text-white mb-2">
                           {job.title}
                         </h3>
-                        <div role="button" className="flex flex - wrap items - center gap - 4 text - sm text - gray - 300">
-                          <div role="button" className="flex items - center space - x-1">
-                            <Briefcase className="w - 4 h - 4" />
+                        <div  className="flex flex - wrap items - center gap-4 text-sm text-gray -300">
+                          <div  className="flex items - center space - x-1">
+                            <Briefcase className="w-4 h-4" />
                             <span>{job.department}</span>
                           </div>
-                          <div role="button" className="flex items - center space - x-1">
-                            <MapPin className="w - 4 h - 4" />
+                          <div  className="flex items - center space - x-1">
+                            <MapPin className="w-4 h-4" />
                             <span>{job.location}</span>
                           </div>
-                          <div role="button" className="flex items - center space - x-1">
-                            <Clock className="w - 4 h - 4" />
+                          <div  className="flex items - center space - x-1">
+                            <Clock className="w-4 h-4" />
                             <span>{job.type}</span>
                           </div>
-                          <div role="button" className="flex items - center space - x-1">
-                            <DollarSign className="w - 4 h - 4" />
+                          <div  className="flex items - center space - x-1">
+                            <DollarSign className="w-4 h-4" />
                             <span>{job.salary}</span>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleJob (job.id) }
-                      className="text - cyan - 400 hover:text - cyan - 300 transition - colors"
+                    <button     onClick={ () => toggleJob(job.id) }
+                      className="text-cyan - 400 hover:text-cyan - 300 transition -colors"
                     >
-                      {expandedJob === job.id ? (<ChevronUp className="w - 6 h - 6" />) : (<ChevronDown className="w - 6 h - 6" />) }
+                      {expandedJob === job.id ? (<ChevronUp className="w-6 h-6" />) : (<ChevronDown className="w-6 h-6" />) }
                     </button>
                   </div>
 
                   {/* Job Description */}
-                  <p className="text - gray - 300 mb - 4">{job.description}</p>
+                  <p className="text-gray - 300 mb-4">{job.description}</p>
 
                   {/* Expandable Content */}
                   {expandedJob === job.id && (<motion.div
@@ -388,20 +344,20 @@ import { motion } from 'framer - motion';
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="border - t border - white / 20 pt - 4 space - y-6"
+                      className="border-t border-white / 20 pt - 4 space - y-6"
                     >
                       {/* Requirements */}
                       <div>
-                        <h4 className="text - lg font - semibold text - white mb - 3 flex items - center">
-                          <CheckCircle className="w - 5 h - 5 text - cyan - 400 mr - 2" />
+                        <h4 className="text-lg font - semibold text-white mb-3 flex items -center">
+                          <CheckCircle className="w-5 h-5 text-cyan - 400 mr-2" />
                           Requirements
                         </h4>
                         <ul className="space - y-2">
-                          {job.requirements.map ( (req, idx) => (<li
+                          {job.requirements.map((req, idx) => (<li
                               key={idx}
-                              className="flex items - start space - x-2 text - gray - 300"
+                              className="flex items - start space - x-2 text-gray -300"
                             >
-                              <Star className="w - 4 h - 4 text - cyan - 400 mt - 0.5 flex - shrink - 0" />
+                              <Star className="w-4 h-4 text-cyan - 400 mt-0.5 flex - shrink -0" />
                               <span>{req}</span>
                             </li>) ) }
                         </ul>
@@ -409,24 +365,24 @@ import { motion } from 'framer - motion';
 
                       {/* Benefits */}
                       <div>
-                        <h4 className="text - lg font - semibold text - white mb - 3 flex items - center">
-                          <Heart className="w - 5 h - 5 text - cyan - 400 mr - 2" />
+                        <h4 className="text-lg font - semibold text-white mb-3 flex items -center">
+                          <Heart className="w-5 h-5 text-cyan - 400 mr-2" />
                           Benefits
                         </h4>
                         <ul className="space - y-2">
-                          {job.benefits.map ( (benefit, idx) => (<li
+                          {job.benefits.map((benefit, idx) => (<li
                               key={idx}
-                              className="flex items - start space - x-2 text - gray - 300"
+                              className="flex items - start space - x-2 text-gray -300"
                             >
-                              <Star className="w - 4 h - 4 text - cyan - 400 mt - 0.5 flex - shrink - 0" />
+                              <Star className="w-4 h-4 text-cyan - 400 mt-0.5 flex - shrink -0" />
                               <span>{benefit}</span>
                             </li>) ) }
                         </ul>
                       </div>
 
                       {/* Apply Button */}
-                      <div role="button" className="pt - 4">
-                        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white py - 3 px - 6 rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 transform hover:-translate - y-1 shadow - lg hover:shadow - xl">
+                      <div  className="pt -4">
+                        <button     className="w-full bg-gradient - to - r from - cyan - 500 to - blue - 500 text-white py-3 px-6 rounded-lg font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 transform hover:-translate - y-1 shadow-lg hover:shadow-xl">
                           Apply for this Position
                         </button>
                       </div>
@@ -440,54 +396,50 @@ import { motion } from 'framer - motion';
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt - 20"
+          className="mt-20"
         >
-          <div role="button" className="text - center mb - 12">
-            <h2 className="text - 4xl font - bold text - white mb - 6">
+          <div  className="text-center mb-12">
+            <h2 className="text-4xl font - bold text-white mb-6">
               Why Work With Zion Tech Group?
             </h2>
-            <p className="text - xl text - gray - 300 max - w-3xl mx - auto">
+            <p className="text-xl text-gray - 300 max - w-3xl mx -auto">
               Join a team that's passionate about innovation and making a real
-              impact in the world of technology.
-            </p>
+              impact in the world of technology.</p>
           </div>
 
-          <div role="button" className="grid md:grid - cols - 3 gap - 8 max - w-4xl mx - auto">
-            <div role="button" className="text - center">
-              <div role="button" className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - full flex items - center justify - center mx - auto mb - 4">
-                <Lightbulb className="w - 8 h - 8 text - white" />
+          <div  className="grid md:grid - cols - 3 gap-8 max - w-4xl mx -auto">
+            <div  className="text-center">
+              <div  className="w-16 h-16 bg-gradient - to - r from - cyan - 500 to - blue - 500 rounded-full flex items - center justify - center mx - auto mb-4">
+                <Lightbulb className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text - xl font - bold text - white mb - 2">
+              <h3 className="text-xl font - bold text-white mb-2">
                 Innovation First
               </h3>
-              <p className="text - gray - 300">
+              <p className="text-gray -300">
                 Work on cutting - edge technologies that are shaping the future of
-                business and society.
-              </p>
+                business and society.</p>
             </div>
-            <div role="button" className="text - center">
-              <div role="button" className="w - 16 h - 16 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - full flex items - center justify - center mx - auto mb - 4">
-                <Globe className="w - 8 h - 8 text - white" />
+            <div  className="text-center">
+              <div  className="w-16 h-16 bg-gradient - to - r from - blue - 500 to - purple - 500 rounded-full flex items - center justify - center mx - auto mb-4">
+                <Globe className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text - xl font - bold text - white mb - 2">
+              <h3 className="text-xl font - bold text-white mb-2">
                 Global Impact
               </h3>
-              <p className="text - gray - 300">
+              <p className="text-gray -300">
                 Your work will help businesses worldwide transform their
-                operations and achieve their goals.
-              </p>
+                operations and achieve their goals.</p>
             </div>
-            <div role="button" className="text - center">
-              <div role="button" className="w - 16 h - 16 bg - gradient - to - r from - purple - 500 to - pink - 500 rounded - full flex items - center justify - center mx - auto mb - 4">
-                <Rocket className="w - 8 h - 8 text - white" />
+            <div  className="text-center">
+              <div  className="w-16 h-16 bg-gradient - to - r from - purple - 500 to - pink - 500 rounded-full flex items - center justify - center mx - auto mb-4">
+                <Rocket className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text - xl font - bold text - white mb - 2">
+              <h3 className="text-xl font - bold text-white mb-2">
                 Career Growth
               </h3>
-              <p className="text - gray - 300">
+              <p className="text-gray -300">
                 Continuous learning opportunities and clear career progression
-                paths for ambitious professionals.
-              </p>
+                paths for ambitious professionals.</p>
             </div>
           </div>
         </motion.div>
@@ -497,30 +449,28 @@ import { motion } from 'framer - motion';
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt - 20 text - center"
+          className="mt-20 text-center"
         >
-          <div role="button" className="bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 backdrop - blur - lg rounded - 2xl p - 12 border border - cyan - 500 / 30">
-            <h2 className="text - 3xl font - bold text - white mb - 6">
+          <div  className="bg-gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 backdrop - blur - lg rounded-2xl p - 12 border border-cyan -500 / 30">
+            <h2 className="text-3xl font - bold text-white mb-6">
               Don't See the Right Role?
             </h2>
-            <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto">
-              We're always looking for talented individuals to join our team.
-              Send us your resume and let's discuss how you can contribute to
-              our mission.
-            </p>
+            <p className="text-xl text-gray - 300 mb-8 max - w-2xl mx -auto">
+              We're always looking for talented individuals to join our team.Send us your resume and let's discuss how you can contribute to
+              our mission.</p>
 
-            <div role="button" className="grid md:grid - cols - 2 gap - 6 mb - 8 max - w-2xl mx - auto">
-              <div role="button" className="flex items - center justify - center space - x-3 text - gray - 300">
-                <Mail className="w - 5 h - 5 text - cyan - 400" />
+            <div  className="grid md:grid - cols - 2 gap-6 mb-8 max - w-2xl mx -auto">
+              <div  className="flex items - center justify - center space - x-3 text-gray -300">
+                <Mail className="w-5 h-5 text-cyan -400" />
                 <span > careers@ziontechgroup.com</span>
               </div>
-              <div role="button" className="flex items - center justify - center space - x-3 text - gray - 300">
-                <Phone className="w - 5 h - 5 text - cyan - 400" />
+              <div  className="flex items - center justify - center space - x-3 text-gray -300">
+                <Phone className="w-5 h-5 text-cyan -400" />
                 <span>+1 302 464 0950</span>
               </div>
             </div>
 
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white px - 8 py - 4 rounded - lg font - semibold text - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 transform hover:-translate - y-1 shadow - lg hover:shadow - xl">
+            <button     className="bg-gradient - to - r from - cyan - 500 to - blue - 500 text-white px-8 py-4 rounded-lg font - semibold text-lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 transform hover:-translate - y-1 shadow-lg hover:shadow-xl">
               Send Your Resume
             </button>
           </div>

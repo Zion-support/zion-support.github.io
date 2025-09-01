@@ -1,13 +1,12 @@
 import React from 'react';
 <<<<<<< HEAD
-export function TrustIndicatorsCompact ({ className }) {
-import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export function TrustIndicators ({ className, showStats = true, showCertifications = true }) {
+export function TrustIndicatorsCompact({ className }) {
+import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export function TrustIndicators({ className, showStats = true, showCertifications = true }) {
 =======
 import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export function TrustIndicators({ className, showStats = true, showCertifications = true }) {
 >>>>>>> main
 
-    const indicators = [
-        {
+    const indicators = [{
 
             icon: Shield,
             title: "Enterprise Security","
@@ -57,8 +56,7 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
           </h2>"
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             Zion Tech Group maintains the highest standards of security, compliance, and reliability
-            to ensure your business operations remain secure and uninterrupted.
-          </p>
+            to ensure your business operations remain secure and uninterrupted.</p>
         </div>
 
         {/* Trust Indicators Grid */}"
@@ -116,7 +114,7 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
             {[...Array(5)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current"/>))}
           </div>"
           <p className="text-zion-slate-light mb-2">'"
-            "Zion Tech Group has transformed how we source tech talent. The platform's security and reliability give us complete confidence."
+            "Zion Tech Group has transformed how we source tech talent.The platform's security and reliability give us complete confidence."
           </p>"
           <p className="text-white font-medium">- Sarah Chen, CTO at TechCorp</p>
         </div>

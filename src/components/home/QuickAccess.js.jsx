@@ -1,43 +1,7 @@
 import React from 'react';
-import {
-
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Database,
-  Users,
-  ArrowRight} from 'lucide-react';
-export const QuickAccess = () => {
-  const quickLinks = [
-    {
-
-      title: 'AI Solutions',
-      description: 'Transform your business with AI',
-      icon: Brain,
-      href: '/services/ai-solutions',
-      color: 'from-purple-500 to-pink-500'},
-    {
-
-      title: 'Cybersecurity',
-      description: 'Protect your digital assets',
-      icon: Shield,
-      href: '/services/cybersecurity',
-      color: 'from-red-500 to-orange-500'},
-    {
-
-      title: 'Cloud & DevOps',
-      description: 'Scale your infrastructure',
-      icon: Cloud,
-      href: '/services/cloud-devops',
-      color: 'from-blue-500 to-cyan-500'},
-    {
-
-      title: 'Data Analytics',
-      description: 'Unlock insights from data',
-      icon: Database,
-      href: '/solutions/ai-business-intelligence',
-      color: 'from-green-500 to-teal-500'},
+import { Zap, Brain, Shield, Cloud, Database, Users, ArrowRight  } from 'lucide-react';
+export default function Page() {
+,
     {
 
       title: 'Team & Talent',
@@ -53,7 +17,7 @@ export const QuickAccess = () => {
       href: '/contact',
       color: 'from-yellow-500 to-orange-500'},
   ];
-  return()
+  return ()
     <section className="py-16 bg-slate-800/30">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
         <div className="text-center mb-12">"

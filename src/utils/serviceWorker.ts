@@ -1,15 +1,15 @@
 // Service Worker Registration Utility
 export function registerServiceWorker(): Promise<ServiceWorkerRegistration | undefined> {
-  if ('serviceWorker' in navigator) {
+  if('serviceWorker' in navigator) {
     const swUrl = '/sw.js';
     return navigator.serviceWorker
       .register(swUrl)
       .then((registration) => {
         registration.addEventListener('updatefound', () => {
           const newWorker = registration.installing;
-          if (newWorker) {
+          if(newWorker) {
             newWorker.addEventListener('statechange', () => {
-              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+              if(newWorker.state === 'installed' && navigator.serviceWorker.controller) {
                 // New content is available
               }
             });
@@ -26,7 +26,7 @@ export function registerServiceWorker(): Promise<ServiceWorkerRegistration | und
 }
 
 export function unregisterServiceWorker(): Promise<boolean | undefined> {
-  if ('serviceWorker' in navigator) {
+  if('serviceWorker' in navigator) {
     return navigator.serviceWorker.ready
       .then((registration) => {
         return registration.unregister();

@@ -1,15 +1,14 @@
 
 interface CartState { items: CartItem[]}
 
-
 const initialState: CartState = { items: [] };
 
 function cartReducer(state: CartState, action: CartAction): CartState {
-  switch (action.type) {
+  switch(action.type) {
     case 'ADD_ITEM': {
       
       let items;
-      if (existing) {
+      if(existing) {
         items = state.items.map(i =>
           i.id === action.payload.id
             ? { ...i, quantity: i.quantity + action.payload.quantity }
@@ -27,10 +26,9 @@ function cartReducer(state: CartState, action: CartAction): CartState {
       return state}
 }
 
-
 export function useCart(): CartContextType {
   
-  if (!ctx) throw new Error('useCart must be used within a CartProvider');
+  if(!ctx) throw new Error('useCart must be used within a CartProvider');
   return ctx}
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
@@ -38,12 +36,12 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const { user } = useAuth();
 
   useEffect(() => {
-    if (!user) {
+    if(!user) {
       
-      if (stored) {
+      if(stored) {
         try {
           
-          if (items.length) {
+          if(items.length) {
             dispatch({ type: 'SET_ITEMS', payload: items })}
         } catch {
           /* ignore */
@@ -51,8 +49,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       }
       return}
 
-    
-    if (storedGuest) {
+    if(storedGuest) {
       try {
         
         mergeGuestCart(items).catch(err => console.error('Cart merge failed', err));
@@ -64,7 +61,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   }, [user]);
 
   useEffect(() => {
-    if (!user) {
+    if(!user) {
       safeStorage.setItem(GUEST_CART_KEY, JSON.stringify(state.items))}
   }, [state.items, user]);
 

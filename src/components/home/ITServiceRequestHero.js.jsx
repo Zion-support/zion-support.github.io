@@ -1,28 +1,8 @@
 import React, { useState } from 'react';
 import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Clock, Globe, Shield, Zap, MapPin } from 'lucide-react';
-export function ITServiceRequestHero() {
 
-  const [location, setLocation] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const navigate = useNavigate();
-  const handleSubmit = async e => {
-
-    e.preventDefault();
-    if (location.trim()) {
-
-      setIsSubmitting(true);
-      // Simulate API call
-      setTimeout(() => {
-        setIsSubmitting(false);
-        router(`/it-onsite-services?location=${encodeURIComponent(location)}`);
-      }, 1000);
-    }
-  };
+export default function Page() {
+;
   const containerVariants = {
 
     hidden: { opacity: 0, y: 20 },
@@ -52,7 +32,7 @@ export function ITServiceRequestHero() {
       color: 'text-zion-cyan-light'},
     { icon: Zap, text: 'Fast Response', color: 'text-zion-purple-light' },
   ];
-  return()
+  return ()
     <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20 md:py-28 border-b border-zion-purple/20 relative overflow-hidden">
       {/* Background decorative elements */}"
       <div className="absolute inset-0 opacity-10">"
@@ -85,8 +65,7 @@ export function ITServiceRequestHero() {
 "
             <p className="text-lg md:text-xl text-zion-slate-light mb-8 max-w-lg leading-relaxed">
               Request professional technicians where in the world, time you need
-              them. Fast, reliable, and secure IT solutions for your business.
-            </p>
+              them.Fast, reliable, and secure IT solutions for your business.</p>
 
             {/* Feature highlights */}"
             <div className="space-y-4 mb-8">"
@@ -149,7 +128,7 @@ export function ITServiceRequestHero() {
                     <Input
                       value={location}
                       onChange={e => setLocation(e.target.value)}"
-                      placeholder="Enter service location (e.g., New York, NY)"
+                      placeholder="Enter service location(e.g., New York, NY)"
                       className="w-full bg-white/10 border-white/30 focus:border-zion-cyan focus:ring-zion-cyan text-white placeholder-zion-slate-light rounded-xl py-4 px-4 text-lg backdrop-blur-sm"
                       required
                     />"

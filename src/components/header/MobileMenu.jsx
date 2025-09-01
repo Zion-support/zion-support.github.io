@@ -1,25 +1,8 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import Menu from 'lucide-react/dist/esm/icons/menu';
-import X from 'lucide-react/dist/esm/icons/x';
-import User from 'lucide-react/dist/esm/icons/user';
-import MessageSquare from 'lucide-react/dist/esm/icons/message-square';
-import Home from 'lucide-react/dist/esm/icons/home';
-import Store from 'lucide-react/dist/esm/icons/store';
-import Users from 'lucide-react/dist/esm/icons/users';
-import Settings from 'lucide-react/dist/esm/icons/settings';
-import { useAuth } from '@/hooks/useAuth';
-import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
-export function MobileMenu({ className }) {
+import { Link, useLocation  } from 'react-router-dom';
 
-        navigationItems.push({ href: '/dashboard', label: t('nav.dashboard'), icon: Settings, matches: (path) => path.startsWith('/dashboard') })}
-    return (<div className = {
-
-  cn("md:hidden",
-  className)
-
-}>
+export default function Page() {
+>
   const { user, isAuthenticated } = useAuth();
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
@@ -27,8 +10,7 @@ export function MobileMenu({ className }) {
   const toggleMenu = () => setIsOpen(!isOpen);
 <<<<<<< HEAD
 
-  const navigationItems = [
-=======
+  const navigationItems = [=======
   
   const navigationItems = ['
 >>>>>>> main
@@ -40,7 +22,7 @@ export function MobileMenu({ className }) {
     { href: '/community', label: 'Community', icon: Users, matches: (path) => path.startsWith('/community') },;
   ];
 
-  if (isAuthenticated) {
+  if(isAuthenticated) {
 <<<<<<< HEAD
     navigationItems.push({
       href: '/dashboard',
@@ -50,8 +32,7 @@ export function MobileMenu({ className }) {
     });
   }
 
-  return (
-    <div className={cn("md:hidden", className)}>
+  return (<div className={cn("md:hidden", className)}>
       {/* Mobile menu button */}
       <Button
         variant="ghost"
@@ -113,13 +94,12 @@ export function MobileMenu({ className }) {
                 const Icon = item.icon;
                 const isActive = item.matches(location.pathname);
 <<<<<<< HEAD
-                return (
-                  <Link
+                return (<Link
                     key={item.href}
                     to={item.href}
                     onClick={toggleMenu}
 =======
-                return()
+                return ()
                   <Link 
                     key={item.href} 
                     to={item.href} 

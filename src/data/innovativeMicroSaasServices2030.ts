@@ -61,8 +61,7 @@ const zionContact: ServiceContact = {
 =======
 // Innovative Micro SAAS Services 2030;
 >>>>>>> main
-export const innovativeMicroSaasServices2030: MicroSaasService[] = [
-  {
+export const innovativeMicroSaasServices2030: MicroSaasService[] = [{
 
     id: 1,"
     name: "AI-Powered Legal Document Analysis Platform","

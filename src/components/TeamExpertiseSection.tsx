@@ -1,10 +1,7 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { motion } from 'framer - motion';
+import { <<<<<<< HEAD import { motion  } from 'framer-motion';
 
- * TeamExpertiseSection function
- * @param {*} params - Function parameters
+ params - Function parameters
  * @returns {*} Function return value
  */
 function TeamExpertiseSection () {
@@ -47,14 +44,14 @@ const coreExpertise = ["
 ];
 
 <<<<<<< HEAD
-  return (<section className = "py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
-      <div className="max - w-7xl mx - auto px - 6">
+  return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
+      <div className="max - w-7xl mx - auto px-6">
         <motion.div
-          className="text - center mb - 16"
+          className="text-center mb-16"
 =======
 export function TeamExpertiseSection() {
   return ("
-    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
@@ -79,8 +76,7 @@ export function TeamExpertiseSection() {
           </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Our team of certified professionals brings decades of combined experience
-            in cutting - edge technologies and proven methodologies.
-          </p>
+            in cutting - edge technologies and proven methodologies.</p>
         </motion.div>
 
           initial = {
@@ -130,15 +126,15 @@ export function TeamExpertiseSection() {
               </div>
 <<<<<<< HEAD
 
-              <div className="text - 4xl font - bold text - blue - 400 mb - 3 group - hover:text - blue - 300 transition - colors duration - 200">
+              <div className="text-4xl font - bold text-blue - 400 mb-3 group - hover:text-blue - 300 transition - colors duration -200">
                 {expertise.count}
               </div>
 
-              <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - blue - 400 transition - colors duration - 200">
+              <h3 className="text-xl font - bold text-white mb-3 group - hover:text-blue - 400 transition - colors duration -200">
                 {expertise.title}
               </h3>
 
-              <p className="text - gray - 400 text - sm leading - relaxed">
+              <p className="text-gray - 400 text-sm leading -relaxed">
 =======
               "
               <div className="text-4xl font-bold text-blue-400 mb-3 group-hover:text-blue-300 transition-colors duration-200">
@@ -158,7 +154,7 @@ export function TeamExpertiseSection() {
 
 <<<<<<< HEAD
         <motion.div
-          className="text - center mb - 12"
+          className="text-center mb-12"
 =======
         <motion.div "
           className="text-center mb-12"
@@ -189,8 +185,7 @@ export function TeamExpertiseSection() {
             </h3>"
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Our certified professionals are ready to bring their expertise
-              to your project and help you achieve exceptional results.
-            </p>"
+              to your project and help you achieve exceptional results.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Schedule Consultation"

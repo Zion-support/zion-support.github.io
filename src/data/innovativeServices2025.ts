@@ -37,8 +37,7 @@ export interface InnovativeService {
     apiEndpoints: number;
     uptime: string;
     security: string[]}}
-;export const innovativeServices2025: InnovativeService[] = [
-  // AI & Machine Learning Services
+;export const innovativeServices2025: InnovativeService[] = [// AI & Machine Learning Services
   {
 
     id: 'ai-autonomous-research-assistant',
@@ -73,8 +72,7 @@ export interface InnovativeService {
     technicalSpecs: ['
       'GPT-4 integration',Advanced NLP',Machine learning algorithms',Data visualization',API integration',
     ],
-    useCases: [
-      'Sales forecasting and pipeline optimization',Customer churn prediction',Inventory demand forecasting',Market trend analysis',Risk assessment and mitigation'
+    useCases: ['Sales forecasting and pipeline optimization',Customer churn prediction',Inventory demand forecasting',Market trend analysis',Risk assessment and mitigation'
     ],
     targetAudience: ['Enterprise businesses',Financial services',Retail chains',Manufacturing companies'],
     marketPrice: '$3,000 - $5,000/month',
@@ -129,8 +127,7 @@ export interface InnovativeService {
     technicalSpecs: ['
       'Quantum processors',AI algorithms',Hybrid computing',Quantum error correction',Cloud integration',
     ],
-    useCases: [
-      'E-commerce customer support',SaaS user onboarding',Financial services customer care',Healthcare patient engagement',Retail customer experience'
+    useCases: ['E-commerce customer support',SaaS user onboarding',Financial services customer care',Healthcare patient engagement',Retail customer experience'
     ],
     targetAudience: ['E-commerce platforms',SaaS companies',Financial institutions',Healthcare providers'],
     marketPrice: '$2,500 - $4,000/month',
@@ -160,7 +157,7 @@ export interface InnovativeService {
     price: '$2,999',
     billing: 'month',
     features: ['
-      'Smart contract development and deployment',Decentralized application (dApp) creation',Digital asset management',Supply chain transparency',Identity verification systems',Cross-chain interoperability',Enterprise security protocols',Scalable blockchain infrastructure',
+      'Smart contract development and deployment',Decentralized application(dApp) creation',Digital asset management',Supply chain transparency',Identity verification systems',Cross-chain interoperability',Enterprise security protocols',Scalable blockchain infrastructure',
     ],
     benefits: ['
       'Reduce operational costs by 30%',Enhance security and transparency',Automate complex business processes',Improve supply chain efficiency',Enable new business models',
@@ -184,8 +181,7 @@ export interface InnovativeService {
     technicalSpecs: ['
       'Ethereum compatibility',Smart contracts',Consensus algorithms',API integration',Cloud deployment',
     ],
-    useCases: [
-      'Manufacturing supply chains',Retail inventory management',Logistics optimization',E-commerce fulfillment',Healthcare supply chains'
+    useCases: ['Manufacturing supply chains',Retail inventory management',Logistics optimization',E-commerce fulfillment',Healthcare supply chains'
     ],
     targetAudience: ['Manufacturing companies',Retail chains',Logistics providers',E-commerce platforms'],
     marketPrice: '$4,000 - $6,000/month',
@@ -236,8 +232,7 @@ export interface InnovativeService {
     technicalSpecs: ['
       'Satellite technology',IoT integration',Data analytics',Cloud computing',AI algorithms',
     ],
-    useCases: [
-      'Enterprise security',Financial services protection',Healthcare data security',Government cybersecurity',Critical infrastructure protection'
+    useCases: ['Enterprise security',Financial services protection',Healthcare data security',Government cybersecurity',Critical infrastructure protection'
     ],
     targetAudience: ['Large enterprises',Financial institutions',Healthcare organizations',Government agencies'],
     marketPrice: '$3,500 - $5,500/month',
@@ -288,8 +283,7 @@ export interface InnovativeService {
     technicalSpecs: ['
       'IoT sensors',AI algorithms',Cloud platform',Mobile apps',Analytics dashboard',
     ],
-    useCases: [
-      'Drug discovery and development',Financial modeling',Logistics optimization',Climate modeling',Cryptography and security'
+    useCases: ['Drug discovery and development',Financial modeling',Logistics optimization',Climate modeling',Cryptography and security'
     ],
     targetAudience: ['Pharmaceutical companies',Financial institutions',Research institutions',Government agencies'],
     marketPrice: '$6,000 - $10,000/month',
@@ -340,8 +334,7 @@ export interface InnovativeService {
     technicalSpecs: ['
       'Machine learning',Behavioral analytics',Cloud security',API protection',Zero trust',
     ],
-    useCases: [
-      'IoT applications',Autonomous vehicles',Smart cities',Industrial automation',Gaming and entertainment'
+    useCases: ['IoT applications',Autonomous vehicles',Smart cities',Industrial automation',Gaming and entertainment'
     ],
     targetAudience: ['IoT companies',Automotive manufacturers',Smart city developers',Industrial companies'],
     marketPrice: '$2,800 - $4,500/month',
@@ -391,8 +384,7 @@ export interface InnovativeService {
     technicalSpecs: ['
       'Cloud-based',Mobile responsive',API integration',Data encryption',Backup systems',
     ],
-    useCases: [
-      'Supply chain management',Digital identity verification',Asset tokenization',Cross-border payments',Voting systems'
+    useCases: ['Supply chain management',Digital identity verification',Asset tokenization',Cross-border payments',Voting systems'
     ],
     targetAudience: ['Financial institutions',Supply chain companies',Government agencies',Healthcare organizations'],
     marketPrice: '$4,500 - $7,000/month',
@@ -441,8 +433,7 @@ export interface InnovativeService {
     technicalSpecs: ['
       'Big data processing',Machine learning',Real-time analytics',Cloud deployment',API integration',
     ],
-    useCases: [
-      'Blog content creation',Social media posts',Marketing copy',Product descriptions',Email campaigns'
+    useCases: ['Blog content creation',Social media posts',Marketing copy',Product descriptions',Email campaigns'
     ],
     targetAudience: ['Marketing agencies',E-commerce businesses',Content creators',Small to medium businesses'],
     marketPrice: '$399 - $599/month',
@@ -471,7 +462,7 @@ export interface InnovativeService {
     price: '$2,499',
     billing: 'month',
     features: ['
-      'Continuous integration/continuous deployment (CI/CD),Infrastructure as code (IaC),Automated testing and quality assurance',Container orchestration',Monitoring and alerting',Security scanning and compliance',Performance optimization',Multi-cloud management',
+      'Continuous integration/continuous deployment(CI/CD),Infrastructure as code(IaC),Automated testing and quality assurance',Container orchestration',Monitoring and alerting',Security scanning and compliance',Performance optimization',Multi-cloud management',
     ],
     benefits: ['
       'Deploy 10x faster',Reduce deployment failures by 80%',Improve code quality',Lower operational costs',Enhanced security',
@@ -492,8 +483,7 @@ export interface InnovativeService {
     technicalSpecs: ['
       'Docker support',Kubernetes integration',Cloud platforms',API management',Monitoring tools',
     ],
-    useCases: [
-      'B2B sales teams',E-commerce businesses',Real estate agencies',Insurance companies',Financial services'
+    useCases: ['B2B sales teams',E-commerce businesses',Real estate agencies',Insurance companies',Financial services'
     ],
     targetAudience: ['Sales teams',B2B companies',Real estate agencies',Financial services'],
     marketPrice: '$499 - $799/month',
@@ -543,8 +533,7 @@ export interface InnovativeService {
     technicalSpecs: ['
       'AI integration',Cloud platforms',API management',Data analytics',Mobile solutions',
     ],
-    useCases: [
-      'DeFi protocols',NFT marketplaces',Token sales',Blockchain applications',Smart contract development'
+    useCases: ['DeFi protocols',NFT marketplaces',Token sales',Blockchain applications',Smart contract development'
     ],
     targetAudience: ['DeFi protocols',NFT platforms',Blockchain developers',Crypto companies'],
     marketPrice: '$299 - $499/month',

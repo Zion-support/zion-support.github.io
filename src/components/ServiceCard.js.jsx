@@ -1,25 +1,8 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-const ServiceCard = ({ title, description, icon, price, category, features, isPopular = false, isNew = false, href = '/services' }) => {
+import { motion  } from 'framer-motion';
 
-    const cardVariants = {
-
-  hidden: { opacity: 0, y: 20,
-  scale: 0.95 
-
-},
-        visible: {
-
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            transition: {
-
-                duration: 0.5,
-                ease: "easeOut"
-            }
-        },
+export default function Page() {
+,
         hover: {
 
             y: -12,

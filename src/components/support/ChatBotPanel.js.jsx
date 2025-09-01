@@ -1,23 +1,20 @@
 import React, { useState, useRef, useEffect } from "react";"
-import { Button } from "@/components/ui/button";"
-import { Input } from "@/components/ui/input";"
-import { ScrollArea } from "@/components/ui/scroll-area";"
-import { toast } from "@/components/ui/use-toast";"
-import { apiClient } from "@/utils/apiClient";"
-import { cn } from "@/lib/utils";"
-import { ChatMessage } from "./ChatMessage";"
-import { QuickReplyButton } from "./QuickReplyButton";"
-import { Send, Loader2 } from "lucide-react";"
-import { useTheme } from "@/hooks/useTheme";
-// Define suggested quick replies
-const QUICK_REPLIES = ["
-    { id: "hire", text: "How do I hire?" },"
+import { Button } from '@/components/ui/button';"
+import { Input } from '@/components/ui/input';"
+import { ScrollArea } from '@/components/ui/scroll-area';"
+import { toast } from '@/components/ui/use-toast';"
+import { apiClient } from '@/utils/apiClient';"
+import { cn } from '@/lib/utils';"
+import { ChatMessage } from './ChatMessage';"
+import { QuickReplyButton } from './QuickReplyButton';"
+import { Send, Loader2  } from 'lucide-react';"
+import { useTheme } from '@/hooks/useTheme';
+,"
     { id: "match", text: "How do I get matched?" },"
     { id: "billing", text: "Billing help" },
 ];
 export function ChatBotPanel() {
-    const [messages, setMessages] = useState([
-        {
+    const [messages, setMessages] = useState([{
 "
             id: "welcome","
             content: "Hi! How can I help you?","
@@ -32,19 +29,19 @@ export function ChatBotPanel() {
     const { theme } = useTheme();
     // Auto-scroll to bottom when messages change
     useEffect(() => {
-        if (scrollAreaRef.current) {
+        if(scrollAreaRef.current) {
 
             scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight}
     }, [messages]);
     // Focus input when component mounts
     useEffect(() => {
-        if (inputRef.current) {
+        if(inputRef.current) {
 
             inputRef.current.focus()}
     }, []);
-    const handleSendMessage = async (text = inputValue) => {
+    const handleSendMessage = async(text = inputValue) => {
 
-        if (!text.trim())
+        if(!text.trim())
             return;
         const userMessage = {
 
@@ -61,16 +58,16 @@ export function ChatBotPanel() {
             const botMessage = {
 `
                 id: `bot-${Date.now()}`,"
-                content: response.message || "Sorry, I couldn't process your request. Please try again.","
+                content: response.message || "Sorry, I couldn't process your request.Please try again.","
                 sender: "bot",
                 timestamp: new Date()};
             setMessages((prev) => [...prev, botMessage]);
             // Check if the request was successful
-            if (!response.success) {
+            if(!response.success) {
 
                 setFailedAttempts((prev) => prev + 1);
                 // After 3 failed attempts, suggest escalation
-                if (failedAttempts >= 2) {
+                if(failedAttempts >= 2) {
 
                     suggestEscalation()}
             }
@@ -79,7 +76,7 @@ export function ChatBotPanel() {
                 // Reset failed attempts if successful
                 setFailedAttempts(0)}
         }
-        catch (error) {
+        catch(error) {
 "
             // console.error("Error in AI chat:", error);
             toast({
@@ -88,7 +85,7 @@ export function ChatBotPanel() {
                 title: "Communication Error","
                 description: "We're having trouble connecting to our support service."});
             setFailedAttempts((prev) => prev + 1);
-            if (failedAttempts >= 2) {
+            if(failedAttempts >= 2) {
 
                 suggestEscalation()}
         }
@@ -96,7 +93,7 @@ export function ChatBotPanel() {
 
             setIsLoading(false)}
     };
-    const sendToAIAssistant = async (message) => {
+    const sendToAIAssistant = async(message) => {
 
         try {
 "
@@ -111,7 +108,7 @@ export function ChatBotPanel() {
                     messages[{ role: "user", content: message }];
                 }),;
             });
-            if (!response.ok) {
+            if(!response.ok) {
 
                 return {
 
@@ -124,20 +121,20 @@ export function ChatBotPanel() {
                 success: true,
                 message: data.message
             }}
-        catch (error) {
+        catch(error) {
 "
             // console.error("Error in AI chat:", error);
             return {
 
                 success: false,"
-                message: "I'm experiencing technical difficulties. Please try again later."
+                message: "I'm experiencing technical difficulties.Please try again later."
             }}
     };
     const suggestEscalation = () => {
         const escalationMessage = {
 `
             id: `bot-escalation-${Date.now()}`,"
-            content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?","
+            content: "I'm having trouble understanding your request.Would you like to speak with a human support agent or send an email to our support team?","
             sender: "bot",
             timestamp: new Date()};
         setMessages((prev) => [...prev, escalationMessage]);
@@ -156,13 +153,12 @@ export function ChatBotPanel() {
                     timestamp: m.timestamp
                 }))
             })}
-        catch (error) {
+        catch(error) {
 "
             // console.error("Failed to log support escalation:", error)}
     };
     const handleEscalateToLiveAgent = () => {
-        setMessages((prev) => [
-            ...prev,
+        setMessages((prev) => [...prev,
             {
 `
                 id: `user-${Date.now()}`,"
@@ -173,7 +169,7 @@ export function ChatBotPanel() {
             {
 `
                 id: `bot-${Date.now()}`,"
-                content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.","
+                content: "I'm connecting you with a support agent.Please note that our support hours are Monday to Friday, 9AM to 6PM EST.If you're messaging outside these hours, a team member will follow up with you as soon as possible.","
                 sender: "bot",
                 timestamp: new Date()
             }
@@ -184,8 +180,7 @@ export function ChatBotPanel() {
             title: "Support request submitted","
             description: "A support agent will be with you shortly."})};
     const handleEmailSupport = () => {
-        setMessages((prev) => [
-            ...prev,
+        setMessages((prev) => [...prev,
             {
 `
                 id: `user-${Date.now()}`,"

@@ -1,27 +1,10 @@
 import React, { useState } from 'react';
 <<<<<<< HEAD
-export function AIServicesShowcase () {
-import { motion, AnimatePresence } from 'framer - motion';
+import { motion, AnimatePresence  } from 'framer-motion';
 
-=======
-import { motion, AnimatePresence } from 'framer-motion';
-import { Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan import { Link } from 'react-router-dom';
->>>>>>> main
-const aiServices = [
-    {
-
-        id: 'ai-chat',
-        name: 'ZionGPT Pro',
-        description: 'Advanced conversational AI with enterprise-grade security and customization',
-        category: 'Conversational AI',
-        rating: 4.9,
-        users: 15420,
-        price: 'From $99/month',
-        features['Multi-language support',Custom training',API access',Analytics'],
-        icon: Brain,
-        color: 'from-purple-500 to-purple-700',
-        status: 'active'
-    },
+ from 'framer-motion';
+import { Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan import { Link  } from 'react-router-dom';
+,
     {
 
         id: 'ai-vision',
@@ -115,12 +98,12 @@ export function AIServicesShowcase() {
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
     const filteredServices = selectedCategory === 'All'
         ? aiServices
-        : aiServices.filter (service => service.category === selectedCategory) ;
+        : aiServices.filter(service => service.category === selectedCategory) ;
     const getStatusBadge = (status) => {
 
         const statusConfig = {
 <<<<<<< HEAD
-  active: { color: 'bg - green - 500',
+  active: { color: 'bg-green - 500',
   text: 'Active'
 =======
 
@@ -128,17 +111,12 @@ export function AIServicesShowcase() {
   text: 'Active' 
 >>>>>>> main
 
-
-
-
-
-
 },
             beta: { color: 'bg-yellow-500', text: 'Beta' },
             new: { color: 'bg-blue-500', text: 'New' }
         };
         const config = statusConfig[status];
-        return (<span className={`${config.color} text - white text - xs px - 2 py - 1 rounded - full font - medium`}>
+        return (<span className={`${config.color} text-white text-xs px-2 py-1 rounded-full font - medium`}>
         {config.text}
       </span>) };
     const containerVariants = {
@@ -169,7 +147,6 @@ export function AIServicesShowcase() {
                 duration: 0.5,
                 ease: "easeOut"
 
-
     };"
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">
       {/* Enhanced background with animated gradients */}"
@@ -190,11 +167,6 @@ export function AIServicesShowcase() {
 
   { opacity: 1,
   y: 0
-
-
-
-
-
 
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>"
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6">"
@@ -233,11 +205,6 @@ export function AIServicesShowcase() {
   { duration: 0.6,
   delay: 0.2
 
-
-
-
-
-
 }}>`
           {categories.map((category, index) => (<motion.button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${selectedCategory === category'
                 ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white shadow-lg shadow-purple-500/25''`
@@ -272,11 +239,6 @@ export function AIServicesShowcase() {
                 scale: 1.02,
   transition: { duration: 0.2
 
-
-
-
-
-
 }"
             }} className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 overflow-hidden group">`
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-10 group-hover:opacity-20 transition-opacity duration-300`}/>"
@@ -291,7 +253,7 @@ export function AIServicesShowcase() {
                         <div className="text-zion-slate-light text-sm">{service.category}</div>
                       </div>
                     </div>
-                    {getStatusBadge (service.status) }
+                    {getStatusBadge(service.status) }
                   </div>
 "
                   <p className="text-zion-slate-light mb-4">{service.description}</p>

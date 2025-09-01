@@ -1,13 +1,11 @@
 import React from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
-import * as Sentry from '@sentry/nextjs';
-import { mutate } from 'swr';
-<<<<<<< HEAD
-import { RefreshCcw, AlertCircle function MarketplaceErrorFallback ({ error, resetErrorBoundary }) {
+ from 'swr';
+) {
 =======
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { RefreshCcw, AlertCircle function MarketplaceErrorFallback({ error, resetErrorBoundary }) {
+) {
 >>>>>>> main
 
     const handleRetry = async () => {
@@ -20,7 +18,7 @@ import { RefreshCcw, AlertCircle function MarketplaceErrorFallback({ error, rese
             Sentry.captureException(retryError);
 
         }
-        catch (retryError) {
+        catch(retryError) {
 
             // console.error('Error during retry:', retryError);
             Sentry.captureException(retryError)}

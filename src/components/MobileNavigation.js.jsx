@@ -1,25 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronDown, Search, User, Bell } from 'lucide-react';
-const MobileNavigation = ({ isOpen, onToggle }) => {
+import { Link, useLocation  } from 'react-router-dom';
 
-    const [activeDropdown, setActiveDropdown] = useState(null);
-    const [searchQuery, setSearchQuery] = useState('');
-    const location = useLocation();
-    const menuRef = useRef(null);
-    // Close menu when route changes
-    useEffect ( () => {
-        onToggle () }, [location.pathname]) ;
-    // Close menu when clicking outside
-    useEffect ( () => {
-        const handleClickOutside = (event) => {
-
-            if (menuRef.current && !menuRef.current.contains(event.target)) {
-
-                onToggle()}
-        };
-        if (isOpen) {
+export default function Page() {
+;
+        if(isOpen) {
 
             document.addEventListener('mousedown', handleClickOutside);
             document.body.style.overflow = 'hidden'}
@@ -27,8 +11,7 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
 
             document.removeEventListener('mousedown', handleClickOutside);
             document.body.style.overflow = 'unset'}}, [isOpen, onToggle]);
-    const navigationItems = [
-        {
+    const navigationItems = [{
 
             label: 'Services',
             href: '/services',
@@ -136,7 +119,7 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
     return (<AnimatePresence>
       {isOpen && (<>
           {/* Backdrop */}
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset - 0 bg - black / 50 backdrop - blur - sm z - 40" onClick={onToggle}/>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset - 0 bg-black / 50 backdrop - blur - sm z -40" onClick={onToggle}/>
 
           {/* Mobile Menu */}"
           <motion.div ref={menuRef} variants={menuVariants} initial="closed" animate="open" exit="closed" className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-zion-blue-dark border-l border-zion-cyan/30 z-50 overflow-hidden">
@@ -148,7 +131,7 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
                 </div>"
                 <span className="text-white font-semibold">Zion Tech</span>
               </div>"
-              <button onClick={onToggle} className="p-2 text-zion-slate-light hover:text-white transition-colors" aria-label="Close menu">
+              <button onClick={onToggle} className="p-2 text-zion-slate-light hover:text-white transition-colors" >
                 <X size={24}/>
               </button>
             </div>
@@ -167,7 +150,7 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
                 <User size={20}/>
                 <span>Sign In</span>
               </button>"
-              <button className="p-2 text-zion-slate-light hover:text-white transition-colors" aria-label="Notifications">
+              <button className="p-2 text-zion-slate-light hover:text-white transition-colors" >
                 <Bell size={20}/>
               </button>
             </div>

@@ -23,7 +23,6 @@ async function apiRequest<T>(endpoint: string,
   options: RequestInit = {}
 : any): Promise<ApiResponse<T>> {
 
-  
   const config: RequestInit = {
 
     method: options.method || 'GET',
@@ -35,15 +34,15 @@ async function apiRequest<T>(endpoint: string,
 
   try {
     
-    if (!response.ok) {
+    if(!response.ok) {
 
       throw new ApiError()
         response.status,`
         `HTTP error! status: ${response.status}`
       )}
     
-    return data} catch (error) {
-    if (error instanceof ApiError) {
+    return data} catch(error) {
+    if(error instanceof ApiError) {
 
       throw error}
     throw new ApiError()

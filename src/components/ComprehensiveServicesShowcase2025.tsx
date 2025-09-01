@@ -1,454 +1,21 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data / innovativeMicroSaasServices2025";
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
-
-  Search,
-  Filter,
-  Star,
-  ArrowRight,
-  ChevronDown,
-  Globe,
-  Zap,
-  Shield,
-  Brain,
-  Cloud,
-  Lock,
-  Users,
-  TrendingUp,
-  Award,
-  Clock,
-  DollarSign,
-  CheckCircle,
-  Rocket,
-  Target,
-  Handshake,
-  Lightbulb,
-  Cpu,
-  Database,
-  Network,
-  Smartphone,
-  BarChart3,
-  Code,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Globe2,
-  Bot,
-  GitFork,
-  Eye,
-  Sparkles,
-  Atom,
-  Blockchain,
-  Leaf,
-  Factory,
-  Car,
-  Building,
-  Heart,
-  ShoppingCart,
-  BookOpen,
-  MessageCircle,
-  HelpCircle,
-  Gauge,
-  PenTool,
-  Truck,
-  Building2,
-  Palette,
-  Camera,
-  Video,
-  Music,
-  Gamepad2,
-  CreditCard,
-  Wallet,
-  PiggyBank,
-  TrendingDown,
-  Activity,
-  PieChart,
-  LineChart,
-  ScatterChart,
-  BarChart,
-  AreaChart,
-  Layers,
-  Grid,
-  List,
-  Columns,
-  Rows,
-  Layout,
-  Monitor,
-  Smartphone2,
-  Tablet,
-  Watch,
-  Headphones,
-  Speaker,
-  Microphone,
-  Keyboard,
-  Mouse,
-  HardDrive,
-  Usb,
-  Bluetooth,
-  Wifi2,
-  Signal,
-  Battery,
-  Power,
-  Zap2,
-  Sun,
-  Moon,
-  Cloud2,
-  CloudRain,
-  CloudLightning,
-  CloudSnow,
-  Wind,
-  Thermometer,
-  Droplets,
-  Umbrella,
-  Snowflake,
-  Sunrise,
-  Sunset,
-  Moon2,
-  Star2,
-  Planet,
-  Satellite,
-  Telescope,
-  Microscope,
-  Flask,
-  TestTube,
-  Beaker,
-  Atom2,
-  Dna,
-  Pill,
-  Stethoscope,
-  HeartPulse,
-  Activity2,
-  Brain2,
-  Eye2,
-  Ear,
-  Nose,
-  Mouth,
-  Hand,
-  Foot,
-  Arm,
-  Leg,
-  Bone,
-  Muscle,
-  Nerve,
-  Cell,
-  Virus,
-  Bacteria,
-  Parasite,
-  Fungus,
-  Algae,
-  Moss,
-  Fern,
-  Tree,
-  Flower,
-  Seed,
-  Leaf2,
-  Root,
-  Bark,
-  Wood,
-  Paper,
-  Book,
-  Newspaper,
-  Magazine,
-  Document,
-  File,
-  Folder,
-  Archive,
-  Download,
-  Upload,
-  Share,
-  Link,
-  ExternalLink,
-  Copy,
-  Cut,
-  Paste,
-  Save,
-  Edit,
-  Trash,
-  Undo,
-  Redo,
-  Refresh,
-  RotateCcw,
-  RotateCw,
-  ZoomIn,
-  ZoomOut,
-  Move,
-  Crop,
-  Filter2,
-  Sliders,
-  Settings,
-  Tool,
-  Wrench,
-  Screwdriver,
-  Hammer,
-  Saw,
-  Drill,
-  Screw,
-  Nut,
-  Bolt,
-  Washer,
-  Nail,
-  Wire,
-  Cable,
-  Plug,
-  Socket,
-  Switch,
-  Button,
-  Knob,
-  Dial,
-  Gauge2,
-  Meter,
-  Scale,
-  Weight,
-  Timer,
-  Stopwatch,
-  Calendar,
-  Clock2,
-  Alarm,
-  Bell,
-  Notification,
-  Alert,
-  Warning,
-  Info,
-  Help,
-  Question,
-  Check,
-  X,
-  Plus,
-  Minus,
-  Divide,
-  Multiply,
-  Equal,
-  NotEqual,
-  GreaterThan,
-  LessThan,
-  GreaterThanOrEqual,
-  LessThanOrEqual,
-  Infinity,
-  Pi,
-  Sigma,
-  Sum,
-  Product,
-  Average,
-  Median,
-  Mode,
-  Range,
-  Variance,
-  StandardDeviation,
-  Correlation,
-  Regression,
-  Hypothesis,
-  Confidence,
-  PValue,
-  Significance,
-  Power,
-  EffectSize,
-  SampleSize,
-  Population,
-  Sample,
-  Random,
-  Systematic,
-  Stratified,
-  Cluster,
-  Convenience,
-  Snowball,
-  Purposive,
-  Quota,
-  Theoretical,
-  MaximumVariation,
-  Homogeneous,
-  Heterogeneous,
-  Representative,
-  Biased,
-  Unbiased,
-  Valid,
-  Reliable,
-  Accurate,
-  Precise,
-  Consistent,
-  Stable,
-  Robust,
-  Flexible,
-  Adaptable,
-  Scalable,
-  Extensible,
-  Maintainable,
-  Readable,
-  Testable,
-  Deployable,
-  Portable,
-  Interoperable,
-  Compatible,
-  Secure,
-  Private,
-  Confidential,
-  Anonymous,
-  Pseudonymous,
-  Transparent,
-  Accountable,
-  Traceable,
-  Auditable,
-  Verifiable,
-  Authentic,
-  Genuine,
-  Original,
-  Unique,
-  Distinct,
-  Different,
-  Similar,
-  Identical,
-  Equivalent,
-  Comparable,
-  Relative,
-  Absolute,
-  Objective,
-  Subjective,
-  Qualitative,
-  Quantitative,
-  Discrete,
-  Continuous,
-  Categorical,
-  Numerical,
-  Ordinal,
-  Nominal,
-  Interval,
-  Ratio,
-  Binary,
-  Ternary,
-  Quaternary,
-  Quinary,
-  Senary,
-  Septenary,
-  Octonary,
-  Nonary,
-  Decimal,
-  Duodecimal,
-  Hexadecimal,
-  Vigesimal,
-  Sexagesimal,
-  Centesimal,
-  Mille,
-  Million,
-  Billion,
-  Trillion,
-  Quadrillion,
-  Quintillion,
-  Sextillion,
-  Septillion,
-  Octillion,
-  Nonillion,
-  Decillion,
-  Undecillion,
-  Duodecillion,
-  Tredecillion,
-  Quattuordecillion,
-  Quindecillion,
-  Sexdecillion,
-  Septendecillion,
-  Octodecillion,
-  Novemdecillion,
-  Vigintillion,
-  Centillion,
-  Googol,
-  Googolplex,
-  Infinity2,
-  AlephNull,
-  AlephOne,
-  AlephOmega,
-  BethNull,
-  BethOne,
-  BethOmega,
-  Gimel,
-  Daleth,
-  He,
-  Vav,
-  Zayin,
-  Chet,
-  Tet,
-  Yod,
-  Kaf,
-  Lamed,
-  Mem,
-  Nun,
-  Samekh,
-  Ayin,
-  Pe,
-  Tsadi,
-  Qof,
-  Resh,
-  Shin,
-  Tav,
-  Alpha,
-  Beta,
-  Gamma,
-  Delta,
-  Epsilon,
-  Zeta,
-  Eta,
-  Theta,
-  Iota,
-  Kappa,
-  Lambda,
-  Mu,
-  Nu,
-  Xi,
-  Omicron,
-  Pi2,
-  Rho,
-  Sigma2,
-  Tau,
-  Upsilon,
-  Phi,
-  Chi,
-  Psi,
-  Omega,
-  Crown'
-} from 'lucide-react';
-
-interface ServiceContact {
-
-  mobile: string;
-  email: string;
-  address: string;
-  website: string;
-
-const ComprehensiveServicesShowcase2025: React.FC = () => {;
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedService, setSelectedService] = useState<any>(null);
-  const [sortBy, setSortBy] = useState('rating');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]);
-  const [innovationLevel, setInnovationLevel] = useState('all');
-
-  
-  
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥' },;
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️' },;
-    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗' },;
+import { <<<<<<< HEAD import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+export default function Page() {
+,;
     { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' },;
     { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' },;
     { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' };
   ];
 
-  
     { id: 'all', name: 'All Levels', icon: '🌟' },;
     { id: 'Advanced', name: 'Advanced', icon: '🚀' },;
     { id: 'Cutting-edge', name: 'Cutting-edge', icon: '⚡' },;
     { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' };
   ];
 
-  
-    
 =======
   ];
 
-  
-    
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -456,13 +23,12 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
     
     return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}) ;
 
-  
 <<<<<<< HEAD
-    switch (sortBy) {;
+    switch(sortBy) {;
       case 'price':;
         return a.price - b.price;
 =======
-    switch (sortBy) {;'      case 'price':;
+    switch(sortBy) {;'      case 'price':;
         return a.price - b.price;'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'name':;
@@ -489,7 +55,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'category':;
-        return a.category.localeCompare (b.category) ;
+        return a.category.localeCompare(b.category) ;
       default:;
         return 0}) ;
 
@@ -515,14 +81,12 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
       transition: {
         staggerChildren: 0.1}}};
 
-  
       opacity: 1,;
       transition: {
         duration: 0.5,;"
         ease: "easeOut"}}};
 
-  
-    switch (category) {;'"
+    switch(category) {;'"
       case 'AI & Automation': return <Bot className="w-5 h-5"  />;'"
       case 'AI & Analytics': return <BarChart3 className="w-5 h-5" />;'"
       case 'AI & Research': return <Search className="w-5 h-5"  />;'"
@@ -536,14 +100,13 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
       case 'Cybersecurity': return <Shield className="w-5 h-5"  />;"
       default: return <Zap className="w-5 h-5"  />};
 
-  
-    switch (level) {;'"
+    switch(level) {;'"
       case 'Advanced': return <Star className="w-4 h-4 text-yellow-500"  />;'"
       case 'Cutting-edge': return <Zap className="w-4 h-4 text-blue-500"  />;'"
       case 'Revolutionary': return <Crown className="w-4 h-4 text-purple-500"  />;"
       default: return <Star className="w-4 h-4 text-gray-400"  />};
   return ("
-    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">
       {/* Animated Background */}"
       <div className="absolute inset-0">"
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.03)_1px,transparent_1px)] bg-[size:100px_100px] animate-pulse" />"
@@ -611,11 +174,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   { duration: 0.8,
   delay: 0.2
 
-
-
-
-
-
 }}"
             className="bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-700 rounded-2xl p-6"
 
@@ -644,7 +202,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   onChange={(e) => setActiveCategory(e.target.value)}"
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
 
-                  {categories.map ( (category) => (;
+                  {categories.map((category) => (;
                     <option key={category.id} value={category.id}>
                       {category.icon} {category.name} ({category.count})
                     </option>
@@ -659,7 +217,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   onChange={(e) => setInnovationLevel(e.target.value)}"
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
 
-                  {innovationLevels.map ( (level) => (;
+                  {innovationLevels.map((level) => (;
                     <option key={level.id} value={level.id}>
                       {level.icon} {level.name}
                     </option>
@@ -685,9 +243,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
               <div className="flex bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl p-1">;
                 <button'
                   onClick={() => setViewMode('grid')}
-                  className={`flex-1 px-3 py-2 rounded-lg transition-all ${
-
-                    viewMode === 'grid''
+                  className={`flex-1 px-3 py-2 rounded-lg transition-all ${viewMode === 'grid''
                       ? 'bg-zion-cyan text-white''
                       : 'text-zion-slate-400 hover:text-white'`
                   }`}
@@ -695,9 +251,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   <Grid className="w-4 h-4 mx-auto"  />                </button>
                 <button'
                   onClick={() => setViewMode('list')}`
-                  className={`flex-1 px-3 py-2 rounded-lg transition-all ${
-
-                    viewMode === 'list''
+                  className={`flex-1 px-3 py-2 rounded-lg transition-all ${viewMode === 'list''
                       ? 'bg-zion-cyan text-white''
                       : 'text-zion-slate-400 hover:text-white'`
                   }`}
@@ -722,11 +276,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   (e) => setPriceRange([parseInt(e.target.value),
   priceRange[1]])
 
-
-
-
-
-
 }"
                   className="flex-1 h-2 bg-zion-slate-600 rounded-lg appearance-none cursor-pointer slider"
                 />
@@ -739,11 +288,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
   (e) => setPriceRange([priceRange[0],
   parseInt(e.target.value)])
-
-
-
-
-
 
 }"
                   className="flex-1 h-2 bg-zion-slate-600 rounded-lg appearance-none cursor-pointer slider"
@@ -773,13 +317,11 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
               ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6''
               : 'space-y-4'
 
-            {sortedServices.map ( (service) => (;
+            {sortedServices.map((service) => (;
               <motion.div
                 key={service.id}
                 variants={itemVariants}`
-                className={`bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-700 rounded-2xl p-6 hover:border-zion-cyan/50 hover:shadow-lg hover:shadow-zion-cyan/20 transition-all duration-300 cursor-pointer group ${
-
-                  viewMode === 'list' ? 'flex items-center gap-6' : ''`
+                className={`bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-700 rounded-2xl p-6 hover:border-zion-cyan/50 hover:shadow-lg hover:shadow-zion-cyan/20 transition-all duration-300 cursor-pointer group ${viewMode === 'list' ? 'flex items-center gap-6' : ''`
                 }`}
                 onClick={() => handleServiceClick(service)}
 
@@ -797,7 +339,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                           <p className="text-sm text-zion-slate-400">{service.category}</p>
                         </div>
                       </div>
-                      {getInnovationIcon (service.innovationLevel) }
+                      {getInnovationIcon(service.innovationLevel) }
                     </div>
 
                     {/* Description */}"
@@ -853,7 +395,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                             <p className="text-zion-slate-400">{service.category}</p>
                           </div>
                         </div>
-                        {getInnovationIcon (service.innovationLevel) }
+                        {getInnovationIcon(service.innovationLevel) }
                       </div>
 "
                       <p className="text-zion-slate-300 mb-3">
@@ -895,7 +437,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
               <p className="text-zion-slate-400 mb-6">
                 Try adjusting your search criteria or filters
               </p>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick = {;
+              <button      onClick = {;
   ;
   ;
   ;
@@ -905,7 +447,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   setActiveCategory('all');
                   setPriceRange([0,
   10000]);
-                  setInnovationLevel('all')}}"                className = "bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover:bg-zion-cyan/90 transition-colors"
+                  setInnovationLevel('all')}}"                className="bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover:bg-zion-cyan/90 transition-colors"
               >
                 Clear All Filters;
               </button>
@@ -939,11 +481,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
   { scale: 0.9,
   opacity: 0
-
-
-
-
-
 
 }}"
               className="bg-zion-slate-900 border border-zion-slate-700 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"

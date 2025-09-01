@@ -1,32 +1,8 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Check, X, Star, Zap, Shield, Users, ArrowRight, Crown, Rocket, Building const plans = [
-import { motion } from 'framer - motion';
+import { motion  } from 'framer-motion';
+import { Check, X, Star, Zap, Shield, Users, ArrowRight, Crown, Rocket, Building const plans = [import { motion  } from 'framer-motion';
 
-    {
-
-        name: "Starter",
-        price: 99,"
-        period: "month","
-        description: "Perfect for small businesses and startups","
-        icon: <Rocket className="w-8 h-8"/>,"
-        color: "from-zion-cyan to-zion-blue","
-        bgColor: "from-zion-cyan/20 to-zion-blue/20",
-        features = ["
-            "Up to 5 team members","
-            "Basic AI tools access","
-            "Email support","
-            "Standard templates","
-            "1 project at a time"
-        ],
-        notIncluded = ["
-            "Advanced analytics","
-            "Priority support","
-            "Custom integrations"
-        ],
-        popular: false,"
-        cta: "Get Started"
-    },
+,
     {
 "
         name: "Professional",
@@ -78,8 +54,7 @@ import { motion } from 'framer - motion';
         cta: "Contact Sales"
 
 ];
-const addons = [
-    {
+const addons = [{
 "
         name: "AI Model Training",
         price: 199,"
@@ -141,7 +116,6 @@ export function PricingSection() {
                 duration: 0.6,"
                 ease: "easeOut"
 
-
     };"
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}"
@@ -163,18 +137,12 @@ export function PricingSection() {
   { opacity: 1,
   y: 0
 
-
-
-
-
-
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>"
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
             Simple, <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Transparent</span> Pricing
           </h2>"
           <p className="text-zion-slate-light text-lg max-w-3xl mx-auto leading-relaxed mb-8">
-            Choose the perfect plan for your business. All plans include our core features with no hidden fees.
-          </p>
+            Choose the perfect plan for your business.All plans include our core features with no hidden fees.</p>
 
           {/* Billing toggle */}"
           <div className="inline-flex items-center bg-zion-blue-dark/40 rounded-xl p-1 border border-zion-blue-light/30">
@@ -200,10 +168,6 @@ export function PricingSection() {
 "
   { type: "spring",
   stiffness: 300
-
-
-
-
 
 "
 }} className="relative">
@@ -277,11 +241,6 @@ export function PricingSection() {
   { duration: 0.6,
   delay: 0.3
 
-
-
-
-
-
 }}>"
           <h3 className="text-3xl font-bold text-white mb-6">"
             Additional <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Services</span>
@@ -296,11 +255,6 @@ export function PricingSection() {
 "
   { type: "spring",
   stiffness: 300
-
-
-
-
-
 
 }}>"
               <div className="p-6 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">"
@@ -349,11 +303,6 @@ export function PricingSection() {
 
   { duration: 0.6,
   delay: 0.5
-
-
-
-
-
 
 }}>"
           <h3 className="text-2xl font-bold text-white mb-6">Have Questions?</h3>"

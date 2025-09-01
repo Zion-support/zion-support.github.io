@@ -1,63 +1,6 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-
-  Calculator,
-  Clock,
-  CheckCircle,
-  AlertCircle,
-  Send,
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  Users,
-  Zap,
-  Shield,
-  Brain,
-  Cloud,
-  Smartphone,
-  Globe,
-  Database,
-  BarChart3,
-  Palette,
-  Code,
-  Server,
-  Wifi,
-  Briefcase} from 'lucide-react';
-export default function RequestQuote() {
-  const [formData, setFormData] = useState({
-
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    comp: '',
-    projectType: '',
-    budget: '',
-    timeline: '',
-    description: '',
-    urgency: 'medium'});
-  const [submissionStatus, setSubmissionStatus] = useState('idle');
-  const projectTypes = [
-    {
-
-      value: 'web-development',
-      label: 'Web Development',
-      icon: Globe,
-      description: 'Custom websites and web applications'},
-    {
-
-      value: 'mobile-app',
-      label: 'Mobile App Development',
-      icon: Smartphone,
-      description: 'iOS and Android applications'},
-    {
-
-      value: 'ai-ml',
-      label: 'AI & Machine Learning',
-      icon: Brain,
-      description: 'Intelligent automation and analytics'},
+export default function Page() {
+,
     {
 
       value: 'cloud-infrastructure',
@@ -113,8 +56,7 @@ export default function RequestQuote() {
       icon: Briefcase,
       description: 'Strategic technology guidance'},
   ];
-  const budgetRanges = [
-    {
+  const budgetRanges = [{
 
       value: 'under-10k',
       label: 'Under $10,000',
@@ -173,8 +115,7 @@ export default function RequestQuote() {
       label: 'Flexible',
       description: 'Timeline can be discussed'},
   ];
-  const urgencyLevels = [
-    {
+  const urgencyLevels = [{
 
       value: 'low',
       label: 'Low',
@@ -255,9 +196,8 @@ export default function RequestQuote() {
               Request a Quote
             </h1>"
             <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
-              Get a personalized quote for your project. Our team will analyze
-              your requirements and provide a detailed estimate within 24 hours.
-            </p>
+              Get a personalized quote for your project.Our team will analyze
+              your requirements and provide a detailed estimate within 24 hours.</p>
 
             {/* Benefits */}"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -396,9 +336,7 @@ export default function RequestQuote() {
                       {projectTypes.map(type => (
                         <label
                           key={type.value}
-                          className={`flex items-start p-4 rounded-lg border cursor-pointer transition-all duration-300 ${
-
-                            formData.projectType === type.value'
+                          className={`flex items-start p-4 rounded-lg border cursor-pointer transition-all duration-300 ${formData.projectType === type.value'
                               ? 'border-cyan-400 bg-cyan-400/20''
                               : 'border-white/20 hover:border-cyan-400/50'`
                           }`}
@@ -478,9 +416,7 @@ export default function RequestQuote() {
                       {urgencyLevels.map(level => (
                         <label
                           key={level.value}`
-                          className={`flex items-center p-3 rounded-lg border cursor-pointer transition-all duration-300 ${
-
-                            formData.urgency === level.value'
+                          className={`flex items-center p-3 rounded-lg border cursor-pointer transition-all duration-300 ${formData.urgency === level.value'
                               ? 'border-cyan-400 bg-cyan-400/20''
                               : 'border-white/20 hover:border-cyan-400/50'`
                           }`}
@@ -526,9 +462,7 @@ export default function RequestQuote() {
                   <button"
                     type="submit"'
                     disabled={!isFormValid || submissionStatus === 'submitting'}`
-                    className={`w-full py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center space-x-2 ${
-
-                      !isFormValid || submissionStatus === 'submitting''
+                    className={`w-full py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center space-x-2 ${!isFormValid || submissionStatus === 'submitting''
                         ? 'bg-gray-600 text-gray-400 cursor-not-allowed''
                         : 'bg-gradient-to-r from-cyan-400 to-purple-600 text-white hover:from-cyan-500 hover:to-purple-700 hover:shadow-lg hover:shadow-cyan-400/25'`
                     }`}
@@ -561,8 +495,7 @@ export default function RequestQuote() {
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" />"
                       <span className="text-green-400">
                         Thank you! We've received your quote request and will
-                        respond within 24 hours.
-                      </span>
+                        respond within 24 hours.</span>
                     </motion.div>
                   )}
 
@@ -574,9 +507,8 @@ export default function RequestQuote() {
                     >"
                       <AlertCircle className="w-5 h-5 text-red-400 mr-3" />"
                       <span className="text-red-400">
-                        Something went wrong. Please try again or contact us
-                        directly.
-                      </span>
+                        Something went wrong.Please try again or contact us
+                        directly.</span>
                     </motion.div>
                   )}
                 </form>
@@ -602,7 +534,7 @@ export default function RequestQuote() {
                     className="flex items-center text-white/80 hover:text-cyan-400 transition-colors"
                   >"
                     <Phone className="w-5 h-5 mr-3 text-cyan-400" />
-                    +1 (302) 464-0950
+                    +1(302) 464-0950
                   </a>
                   <a"
                     href="mailto:kleber@ziontechgroup.com"

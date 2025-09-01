@@ -32,8 +32,7 @@ export interface UltimateInnovativeService {
   competitors?: string[];
   marketSize?: string;
   uniqueValue?: string}
-;export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
-  // Quantum AI Services
+;export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [// Quantum AI Services
   {
 
     id: 'quantum-ai-optimization-platform',

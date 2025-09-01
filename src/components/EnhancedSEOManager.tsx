@@ -1,6 +1,6 @@
 <<<<<<< HEAD
-import { Helmet } from 'react - helmet - async';
-import React, { useEffect } from 'react';
+import { Helmet } from 'react - helmet -async';
+ from 'react';
 export default EnhancedSEOManager;
 export default function
 
@@ -43,7 +43,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
 
       // Update meta description'
       let metaDesc = document.querySelector('meta[name="description"]');
-      if (!metaDesc) {
+      if(!metaDesc) {
 
         metaDesc = document.createElement('meta');
         metaDesc.setAttribute('name',description');
@@ -53,10 +53,10 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
 
       // Update keywords'"
       let metaKeywords = document.querySelector('meta[name="keywords"]');
-      if (!metaKeywords) {
+      if(!metaKeywords) {
 
 <<<<<<< HEAD
-      metaKeywords.setAttribute ('content', seoData.keywords.join (', ') ) ;
+      metaKeywords.setAttribute('content', seoData.keywords.join (', ') ) ;
 
 =======
         metaKeywords = document.createElement('meta');
@@ -68,20 +68,20 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
 >>>>>>> main
       // Update Open Graph tags
       const updateOGTag = (property: string, content: string) => {;"        let ogTag = document.querySelector(`meta[property="${property}"]`);
-        if (!ogTag) {
+        if(!ogTag) {
 <<<<<<< HEAD
-          ogTag = document.createElement ('meta') ;
-          ogTag.setAttribute ('property', property) ;
-          document.head.appendChild (ogTag) ;
+          ogTag = document.createElement('meta') ;
+          ogTag.setAttribute('property', property) ;
+          document.head.appendChild(ogTag) ;
         }
-        ogTag.setAttribute ('content', content) ;
+        ogTag.setAttribute('content', content) ;
       };
 
-      if (seoData.ogImage) updateOGTag ('og:image', seoData.ogImage) ;
-      if (seoData.ogType) updateOGTag ('og:type', seoData.ogType) ;
-      updateOGTag ('og:title', seoData.title) ;
-      updateOGTag ('og:description', seoData.description) ;
-      updateOGTag ('og:url', seoData.canonicalUrl || window.location.href) ;
+      if(seoData.ogImage) updateOGTag('og:image', seoData.ogImage) ;
+      if(seoData.ogType) updateOGTag('og:type', seoData.ogType) ;
+      updateOGTag('og:title', seoData.title) ;
+      updateOGTag('og:description', seoData.description) ;
+      updateOGTag('og:url', seoData.canonicalUrl || window.location.href) ;
 
 =======
 
@@ -90,8 +90,8 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
           document.head.appendChild(ogTag)}
         ogTag.setAttribute('content', content)};
       '
-      if (seoData.ogImage) updateOGTag('og:image', seoData.ogImage);
-      if (seoData.ogType) updateOGTag('og:type', seoData.ogType);
+      if(seoData.ogImage) updateOGTag('og:image', seoData.ogImage);
+      if(seoData.ogType) updateOGTag('og:type', seoData.ogType);
       updateOGTag('og:title', seoData.title);
       updateOGTag('og:description', seoData.description);
       updateOGTag('og:url', seoData.canonicalUrl || window.location.href);
@@ -99,19 +99,19 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
 >>>>>>> main
       // Update Twitter Card tags
       const updateTwitterTag = (name: string, content: string) => {;"`        let twitterTag = document.querySelector(`meta[name="${name}"]`);
-        if (!twitterTag) {
+        if(!twitterTag) {
 <<<<<<< HEAD
-          twitterTag = document.createElement ('meta') ;
-          twitterTag.setAttribute ('name', name) ;
-          document.head.appendChild (twitterTag) ;
+          twitterTag = document.createElement('meta') ;
+          twitterTag.setAttribute('name', name) ;
+          document.head.appendChild(twitterTag) ;
         }
-        twitterTag.setAttribute ('content', content) ;
+        twitterTag.setAttribute('content', content) ;
       };
 
-      updateTwitterTag ('twitter:card', 'summary_large_image') ;
-      updateTwitterTag ('twitter:title', seoData.title) ;
-      updateTwitterTag ('twitter:description', seoData.description) ;
-      if (seoData.ogImage) updateTwitterTag ('twitter:image', seoData.ogImage) ;
+      updateTwitterTag('twitter:card', 'summary_large_image') ;
+      updateTwitterTag('twitter:title', seoData.title) ;
+      updateTwitterTag('twitter:description', seoData.description) ;
+      if(seoData.ogImage) updateTwitterTag('twitter:image', seoData.ogImage) ;
 
 =======
 
@@ -124,25 +124,25 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       updateTwitterTag('twitter:card',summary_large_image');
       updateTwitterTag('twitter:title', seoData.title);
       updateTwitterTag('twitter:description', seoData.description);
-      if (seoData.ogImage) updateTwitterTag('twitter:image', seoData.ogImage);
+      if(seoData.ogImage) updateTwitterTag('twitter:image', seoData.ogImage);
 =======
       updateTwitterTag('twitter:card', 'summary_large_image');'
       updateTwitterTag('twitter:title', seoData.title);'
-      updateTwitterTag('twitter:description', seoData.description);'      if (seoData.ogImage) updateTwitterTag('twitter:image', seoData.ogImage);
+      updateTwitterTag('twitter:description', seoData.description);'      if(seoData.ogImage) updateTwitterTag('twitter:image', seoData.ogImage);
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
 >>>>>>> main
       // Add canonical URL
-      if (seoData.canonicalUrl) {
+      if(seoData.canonicalUrl) {
 '"
         let canonical = document.querySelector('link[rel="canonical"]');
-        if (!canonical) {
+        if(!canonical) {
 <<<<<<< HEAD
-          canonical = document.createElement ('link') ;
-          canonical.setAttribute ('rel', 'canonical') ;
-          document.head.appendChild (canonical) ;
+          canonical = document.createElement('link') ;
+          canonical.setAttribute('rel', 'canonical') ;
+          document.head.appendChild(canonical) ;
         }
-        canonical.setAttribute ('href', seoData.canonicalUrl) ;
+        canonical.setAttribute('href', seoData.canonicalUrl) ;
       }
 
 =======
@@ -153,16 +153,16 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
         canonical.setAttribute('href', seoData.canonicalUrl)}      
 >>>>>>> main
       // Add structured data
-      if (seoData.structuredData) {
+      if(seoData.structuredData) {
 '"
         let script = document.querySelector('script[type="application/ld+json"]');
-        if (!script) {
+        if(!script) {
 <<<<<<< HEAD
-          script = document.createElement ('script') ;
-          script.setAttribute ('type', 'application / ld + json') ;
-          document.head.appendChild (script) ;
+          script = document.createElement('script') ;
+          script.setAttribute('type', 'application / ld + json') ;
+          document.head.appendChild(script) ;
         }
-        script.textContent = JSON.stringify (seoData.structuredData) ;
+        script.textContent = JSON.stringify(seoData.structuredData) ;
       }
     };
 
@@ -171,7 +171,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
           script = document.createElement('script');
           script.setAttribute('type',application/ld+json');
           document.head.appendChild(script)}
-        script.textContent = JSON.stringify (seoData.structuredData) }    };
+        script.textContent = JSON.stringify(seoData.structuredData) }    };
     
 >>>>>>> main
     updateMetaTags () ;
@@ -180,8 +180,8 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
     return () => {
 <<<<<<< HEAD
       // Remove dynamically added meta tags on unmount
-      const dynamicTags = document.querySelectorAll ('meta[property^="og:"], meta[name^="twitter:"], link[rel="canonical"]') ;
-      dynamicTags.forEach (tag => tag.remove () ) ;
+      const dynamicTags = document.querySelectorAll('meta[property^="og:"], meta[name^="twitter:"], link[rel="canonical"]') ;
+      dynamicTags.forEach(tag => tag.remove () ) ;
     };
   }, [seoData]) ;
 
@@ -190,7 +190,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       // Remove dynamically added meta tags on unmount'"
       
       dynamicTags.forEach(tag => tag.remove())}}, [seoData]) ;  
-  return()
+  return ()
     <>
 >>>>>>> main
       <Helmet>
@@ -216,7 +216,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
 
         {/* Favicon and app icons */}
         <link rel="icon" type="image / x-icon" href="/favicon.ico" />
-        <link rel="apple - touch - icon" sizes="180x180" href="/apple - touch - icon.png" />
+        <link rel="apple - touch-icon" sizes="180x180" href="/apple - touch-icon.png" />
         <link rel="icon" type="image / png" sizes="32x32" href="/favicon - 32x32.png" />
         <link rel="icon" type="image / png" sizes="16x16" href="/favicon - 16x16.png" />
 =======

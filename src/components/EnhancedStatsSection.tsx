@@ -1,19 +1,6 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { motion, useAnimation } from 'framer - motion';
-=======
->>>>>>> main
-
-  Users,
-  Globe,
-  TrendingUp,
-  Star,
-  Zap,
-  Shield,
-  Award,
-  Rocket'
- } from 'lucide-react';
+import { <<<<<<< HEAD import { motion, useAnimation  } from 'framer-motion';
+ from 'lucide-react';
 
 interface Stat {
   id: string;
@@ -25,8 +12,7 @@ interface Stat {
   gradient: string
 }
 ;
-const stats: Stat[] = [
-  {
+const stats: Stat[] = [{
 
     id: 'clients',
     icon: Users,
@@ -101,40 +87,36 @@ export default function EnhancedStatsSection(...args[]):  {
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   useEffect(() => {
-    if (inView) {
+    if(inView) {
 
       controls.start('visible')}
   }, [controls, inView]);
 
-  
-    
-    
     const increment = numericValue / (duration / 16) ; // 60fps
 
     let current = start;
     
       current += increment;
-      if (current >= numericValue) {
+      if(current >= numericValue) {
 
         current = numericValue;
-        clearInterval (timer) }
-setCountedValues (prev:  > ({;
+        clearInterval(timer) }
+setCountedValues(prev:  > ({;
         ...prev,;
         [target]: Math.floor (current) }) ) }, 16) ;
 
     return timer};
 
-  useEffect ( () => {
-    if (inView) {
+  useEffect(() => {
+    if(inView) {
 
       stats.forEach((stat) => {
 
-        
           animateCount(stat.value)}, stats.indexOf(stat) * 200);
         return () => clearTimeout(timer)})}
   }, [inView]) ;
-  return()
-    <section className = "py-20 relative overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+  return ()
+    <section className="py-20 relative overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Background decoration */}"
       <div className="absolute inset-0">"
         <div className="absolute top-0 right-0 w-96 h-96 bg-zion-cyan/5 rounded-full blur-3xl"></div>"
@@ -216,12 +198,6 @@ setCountedValues (prev:  > ({;
                   scale: 1.02,
                   borderColor: `rgba(34, 221, 210,`
   0.5)`
-                
-
-
-
-
-
 
 }}
                 transition={{ duration: 0.3 }}
@@ -314,8 +290,7 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
               Industry Recognition & Awards
             </h3>"
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Consistently recognized as a leader in innovation, receiving prestigious awards for our groundbreaking technology solutions and exceptional client service.
-            </p>
+              Consistently recognized as a leader in innovation, receiving prestigious awards for our groundbreaking technology solutions and exceptional client service.</p>
 "
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">"
               <div className="text-center">"

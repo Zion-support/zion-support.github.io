@@ -1,48 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target } from 'lucide-react';
-export const EnhancedAbout = () => {
-import { motion } from 'framer - motion';
-
-    const compValues = [
-        {
-
-            icon: Brain,
-            title: 'Innovation First',
-            description: 'We push the boundaries of what\'s possible with cutting-edge technology',
-            color: 'zion-cyan'
-        },
-        {
-
-            icon: Shield,
-            title: 'Trust & Security',
-            description: 'Building secure, reliable solutions that protect our clients\' data',
-            color: 'zion-purple'
-        },
-        {
-
-            icon: Users,
-            title: 'Client Partnership',
-            description: 'Long-term relationships built on trust, transparency, and results',
-            color: 'zion-cyan'
-        },
-        {
-
-            icon: Rocket,
-            title: 'Excellence',
-            description: 'Delivering exceptional quality in every project we undertake',
-            color: 'zion-purple'
-
-    ];
-    const teamMembers = [
-        {
-
-            name: 'Kleber',
-            role: 'CEO & Founder',
-            expertise['AI/ML',Cloud Architecture',Digital Transformation'],;
-            avatar: '👨‍💼'
-        },
+import { motion  } from 'framer-motion';
+export default function Page() {
+,
         {
 
             name: 'AI Team',
@@ -65,8 +24,7 @@ import { motion } from 'framer - motion';
             avatar: '🔒'
 
     ];
-    const milestones = [
-        {
+    const milestones = [{
 
             year: '2020',
             title: 'Comp Founded',
@@ -170,7 +128,6 @@ import { motion } from 'framer - motion';
                 duration: 0.8,"
                 ease: "easeOut"
 
-
     };"
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">;
       {/* Hero Section */}"
@@ -183,9 +140,7 @@ import { motion } from 'framer - motion';
             </span>
           </motion.h1>"
           <motion.p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto" variants={itemVariants}>
-            Leading the future of technology innovation through AI-powered solutions, cloud expertise, and digital transformation.
-            We help businesses thrive in the digital age.
-          </motion.p>"
+            Leading the future of technology innovation through AI-powered solutions, cloud expertise, and digital transformation.We help businesses thrive in the digital age.</motion.p>"
           <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" variants={itemVariants}>"
             <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 group">
               Get Started"
@@ -210,8 +165,7 @@ import { motion } from 'framer - motion';
                 </h2>"
                 <p className="text-xl text-gray-300 leading-relaxed">
                   To democratize access to cutting-edge technology solutions, enabling businesses of all sizes to leverage
-                  the power of AI, cloud computing, and digital innovation to achieve unprecedented growth and success.
-                </p>
+                  the power of AI, cloud computing, and digital innovation to achieve unprecedented growth and success.</p>
               </div>
             </motion.div>
 
@@ -223,8 +177,7 @@ import { motion } from 'framer - motion';
                 </h2>"
                 <p className="text-xl text-gray-300 leading-relaxed">
                   To be the global leader in AI-powered technology solutions, driving the next wave of digital transformation
-                  and creating a future where technology empowers every business to reach its full potential.
-                </p>
+                  and creating a future where technology empowers every business to reach its full potential.</p>
               </div>
             </motion.div>
           </motion.div>

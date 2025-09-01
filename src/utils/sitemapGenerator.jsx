@@ -1,23 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion  } from 'framer-motion';
 
-<<<<<<< HEAD
-  outputPath: './public / sitemap.xml',
-=======
-  outputPath: './public/sitemap.xml',
->>>>>>> main
-  ...config
-
-};
-    }
-    /**
-     * Generate XML sitemap content
-     */
-    generateXML() {
-        const { baseUrl, urls } = this.config;
-        const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>;
-        const urlElement = `<url>
-        <loc>${baseUrl}${url.url}</loc>'`
+export default function Page() {
+${url.url}</loc>'`
         ${url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ''}'`
         ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''}'`
         ${url.priority ? `<priority>${url.priority}</priority>` : ''}`
@@ -53,20 +38,15 @@ Allow: /
 Sitemap: ${baseUrl}/sitemap.xml
 
   const generateSitemap = async () => {
-    setIsGenerating (true) ;
+    setIsGenerating(true) ;
 
     // Simulate sitemap generation
-    setTimeout ( () => {
+    setTimeout(() => {
       const sitemap = {
 
   pages: ['
           { url: '/', priority: '1.0',
   changefreq: 'daily'
-
-
-
-
-
 
 },
           { url: '/services', priority: '0.9', changefreq: 'weekly' },
@@ -84,10 +64,10 @@ Sitemap: ${baseUrl}/sitemap.xml
         totalUrls: 10,
         generatedAt: new Date () .toISOString () };
 
-      setSitemapData (sitemap) ;
-      setIsGenerating (false) ;
+      setSitemapData(sitemap) ;
+      setIsGenerating(false) ;
 
-      if (onGenerate) {
+      if(onGenerate) {
 
         onGenerate(sitemap);
       }
@@ -116,11 +96,6 @@ Sitemap: ${baseUrl}/sitemap.xml
   { opacity: 1,
   y: 0
 
-
-
-
-
-
 }}"
           className="space-y-4"
         >"
@@ -142,21 +117,21 @@ Sitemap: ${baseUrl}/sitemap.xml
 <<<<<<< HEAD
 
           <div>
-            <h4 className="font - medium mb - 2">Main Pages:</h4>
-            <div className="space - y-1 text - sm">
-              {sitemapData.pages.map ( (page, index) => (<div key={index} className="flex justify - between items - center">
-                  <span className="text - gray - 700">{page.url}</span>
-                  <span className="text - gray - 500">Priority: {page.priority}</span>
+            <h4 className="font - medium mb-2">Main Pages:</h4>
+            <div className="space - y-1 text-sm">
+              {sitemapData.pages.map((page, index) => (<div key={index} className="flex justify - between items -center">
+                  <span className="text-gray -700">{page.url}</span>
+                  <span className="text-gray -500">Priority: {page.priority}</span>
                 </div>) ) }
             </div>
           </div>
 
           <div>
-            <h4 className="font - medium mb - 2">Service Pages:</h4>
-            <div className="space - y-1 text - sm">
-              {sitemapData.services.map ( (service, index) => (<div key={index} className="flex justify - between items - center">
-                  <span className="text - gray - 700">{service.url}</span>
-                  <span className="text - gray - 500">Priority: {service.priority}</span>
+            <h4 className="font - medium mb-2">Service Pages:</h4>
+            <div className="space - y-1 text-sm">
+              {sitemapData.services.map((service, index) => (<div key={index} className="flex justify - between items -center">
+                  <span className="text-gray -700">{service.url}</span>
+                  <span className="text-gray -500">Priority: {service.priority}</span>
                 </div>) ) }
 =======
           

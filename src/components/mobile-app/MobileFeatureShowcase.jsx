@@ -1,7 +1,6 @@
 import React from 'react';
 import { Smartphone, Zap, Shield, Users, Globe, BarChart3 export const MobileFeatureShowcase = () => {
-  const features = [
-    {
+  const features = [{
 
       icon: Smartphone,
       title: "Mobile-First Design","
@@ -53,8 +52,7 @@ import { Smartphone, Zap, Shield, Users, Globe, BarChart3 export const MobileFea
             Powerful Mobile Features
           </h2>"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Experience the full power of Zion's AI marketplace in the palm of your hand with our feature-rich mobile app.
-          </p>
+            Experience the full power of Zion's AI marketplace in the palm of your hand with our feature-rich mobile app.</p>
         </div>
 "
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -78,8 +76,7 @@ import { Smartphone, Zap, Shield, Users, Globe, BarChart3 export const MobileFea
               Ready to Experience Mobile Excellence?
             </h3>"
             <p className="text-gray-300 mb-6">
-              Download the Zion mobile app today and transform how you work with AI talent and projects.
-            </p>"
+              Download the Zion mobile app today and transform how you work with AI talent and projects.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300">
                 Download for iOS

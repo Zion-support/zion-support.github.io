@@ -17,7 +17,6 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 interface EnhancedLoadingSpinnerProps {
   // Add your props here
 
-
   enabled?: boolean;
   showProgress?: boolean;
   showEstimatedTime?: boolean;
@@ -45,24 +44,23 @@ export function EnhancedLoadingSpinner({
     estimatedTime: 3
   }) ;
 
-  const [isVisible, setIsVisible] = useState (true) ;
-  const [currentStep, setCurrentStep] = useState (0) ;
+  const [isVisible, setIsVisible] = useState(true);
+  const [currentStep, setCurrentStep] = useState(0);
 
   // Size configurations
-  
-  
+
   // Loading steps for themed variant
   
   // Progress simulation
-  useEffect ( () => {
-    if (!enabled || !showProgress) return;
+  useEffect(() => {
+    if(!enabled || !showProgress) return;
 
     const interval = setInterval(() => {
       setLoadingState(prev => {
 
         if (prev.progress! >= 100) {
 
-          clearInterval(interval);          if (autoComplete) {
+          clearInterval(interval);          if(autoComplete) {
 
             setTimeout(() => {
               setLoadingState({
@@ -72,13 +70,11 @@ export function EnhancedLoadingSpinner({
                 progress: 100,
                 estimatedTime: 0
               }) ;
-              setTimeout ( () => {
-                setIsVisible (false) ;
-                onComplete?. () }, 1000) }, autoCompleteDelay) }
+              setTimeout(() => {
+                setIsVisible(false) ;
+                onComplete?.() }, 1000) }, autoCompleteDelay) }
           return prev}
 
-        
-        
         return {
 
           ...prev,
@@ -86,23 +82,22 @@ export function EnhancedLoadingSpinner({
           estimatedTime: newEstimatedTime
         }}) }, 200) ;
 
-    return () => clearInterval (interval) }, [enabled, showProgress, autoComplete, autoCompleteDelay, onComplete]) ;
+    return () => clearInterval(interval) }, [enabled, showProgress, autoComplete, autoCompleteDelay, onComplete]) ;
   // Step progression for themed variant
   useEffect(() => {
 
-    if (variant !== 'themed') return;
+    if(variant !== 'themed') return;
 
-    
           return prev}
         return prev + 1}) }, 1000) ;
 
-    return () => clearInterval (stepInterval) }, [variant]) ;
+    return () => clearInterval(stepInterval) }, [variant]) ;
   // Auto - complete effect
-  useEffect ( () => {
-    if (autoComplete && enabled) {
+  useEffect(() => {
+    if(autoComplete && enabled) {
 <<<<<<< HEAD
-      const timer = setTimeout ( () => {
-        setLoadingState ({
+      const timer = setTimeout(() => {
+        setLoadingState({
           type: 'success',
           message: 'Loading complete!',
           progress: 100,
@@ -111,47 +106,46 @@ export function EnhancedLoadingSpinner({
 
 =======
 
-      
 >>>>>>> main
-        setTimeout ( () => {
-          setIsVisible (false) ;
-          onComplete?. () }, 1000) }, autoCompleteDelay) ;
+        setTimeout(() => {
+          setIsVisible(false) ;
+          onComplete?.() }, 1000) }, autoCompleteDelay) ;
 
-      return () => clearTimeout (timer) }
+      return () => clearTimeout(timer) }
   }, [autoComplete, enabled, autoCompleteDelay, onComplete]) ;
 
-  if (!enabled || !isVisible) return null;
+  if(!enabled || !isVisible) return null;
 
 <<<<<<< HEAD
   const renderSpinner = () => {
-    switch (variant) {
+    switch(variant) {
       case 'futuristic':
         return (<div className="relative">
             {/* Outer ring */}
             <motion.div
-              className="absolute inset - 0 border - 4 border - zion - cyan / 20 rounded - full"
+              className="absolute inset - 0 border-4 border-zion - cyan / 20 rounded-full"
               animate={{ rotate: 360 }}
               transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
             />
 
             {/* Inner ring */}
             <motion.div
-              className="absolute inset - 2 border - 4 border - zion - purple / 40 rounded - full"
+              className="absolute inset - 2 border-4 border-zion - purple / 40 rounded-full"
               animate={{ rotate: -360 }}
               transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
             />
 
             {/* Center dot */}
             <motion.div
-              className="absolute inset - 4 bg - gradient - to - r from - zion - cyan to - zion - purple rounded - full"
+              className="absolute inset - 4 bg-gradient - to - r from - zion - cyan to - zion - purple rounded-full"
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 1, repeat: Infinity }}
             />
 
             {/* Orbiting particles */}
-            {[...Array (3) ].map ( (_, i) => (<motion.div
+            {[...Array (3) ].map((_, i) => (<motion.div
                 key={i}
-                className="absolute w - 2 h - 2 bg - zion - yellow rounded - full"
+                className="absolute w-2 h-2 bg-zion - yellow rounded-full"
                 style={{
                   top: '50%',
                   left: '50%',
@@ -180,7 +174,7 @@ export function EnhancedLoadingSpinner({
 =======
 '      case 'minimal':
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-        return()
+        return ()
           <motion.div"
             className="w-full h-full border-2 border-zion-cyan border-t-transparent rounded-full"
             animate={{ rotate: 360 }}"
@@ -210,14 +204,14 @@ export function EnhancedLoadingSpinner({
           </div>) ;
 
       default:
-        return()
+        return ()
           <motion.div"
             className="w-full h-full border-2 border-zion-cyan border-t-transparent rounded-full"
             animate={{ rotate: 360 }}"
             transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
           />) }
   }}
-    return()
+    return ()
       <motion.div
         key={loadingState.message}
         initial={{ opacity: 0 }}
@@ -227,7 +221,6 @@ export function EnhancedLoadingSpinner({
         {loadingState.message}
       </motion.div>) };
 
-  
     return ("
       <div className="w-full mt-4">"        <div className="flex justify-between text-xs text-zion-slate-500 mb-1">
           <span>Progress</span>
@@ -243,8 +236,7 @@ export function EnhancedLoadingSpinner({
         </div>
       </div>) };
 
-  
-    return()      <motion.div
+    return ()      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}"
         className="flex items-center justify-center space-x-2 mt-3 text-xs text-zion-slate-500"
@@ -253,14 +245,10 @@ export function EnhancedLoadingSpinner({
       </motion.div>
     )};
 
-  
-    
-    
-    if (!config) return null}}};
+    if(!config) return null}}};
 
-export function EnhancedLoadingSpinner(...args: any[]): any {
+export default function EnhancedLoadingSpinner() {
 
-  
   ;
 =======
 '
@@ -272,7 +260,6 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
   ;
   lg: 'w-16 h-16'}};
 
-  
   ;
 =======
 '
@@ -285,8 +272,7 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
   lg: 'text-lg';
   };
 
-  
-    switch (variant) {;
+    switch(variant) {;
       case 'ai':;"
         return <Brain className="w-full h-full text-cyan-400"  />;
       case 'quantum':;"
@@ -297,8 +283,7 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
         return <Loader2 className="w-full h-full text-gray-400" />}
   };
 
-  
-    switch (variant) {;
+    switch(variant) {;
       case 'ai':;
         return 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-400/30';
       case 'quantum':;
@@ -328,7 +313,7 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
               height: config.container
             }}"
             role="status"
-            aria-label="Loading content"
+            
             aria-live="polite"
           >
             {renderSpinner () }
@@ -353,9 +338,7 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
             {loadingSteps.map((step, index) => (
               <div
                 key={index}`
-                className={`w-2 h-2 rounded-full transition-colors duration-300 ${
-
-                  index <= currentStep ? 'bg-zion-cyan' : 'bg-zion-slate-300 dark:bg-zion-slate-600'`
+                className={`w-2 h-2 rounded-full transition-colors duration-300 ${index <= currentStep ? 'bg-zion-cyan' : 'bg-zion-slate-300 dark:bg-zion-slate-600'`
                 }`}
               />) ) }
           </div>) }

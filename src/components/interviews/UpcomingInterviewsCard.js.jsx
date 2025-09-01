@@ -1,36 +1,16 @@
 import React, { useEffect, useState } from "react";"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";"
-import { Button } from "@/components/ui/button";"
-import { useInterviews } from "@/hooks/useInterviews";"
-import { format, isPast, parseISO } from "date-fns";"
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';"
+import { Button } from '@/components/ui/button';"
+import { useInterviews } from '@/hooks/useInterviews';"
+import { format, isPast, parseISO } from 'date-fns';"
 import Link from "next/link";"
-import { Calendar, Clock, Video } from "lucide-react";"
-import { Avatar } from "@/components/ui/avatar";
-export function UpcomingInterviewsCard() {
-    const { fetchInterviews } = useInterviews();
-    const [upcomingInterviews, setUpcomingInterviews] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
-    useEffect(() => {
-        const loadInterviews = async () => {
-            setIsLoading(true);
-            try {
-                const interviews = await fetchInterviews();
-                // Filter for confirmed interviews in the future
-                const upcoming = interviews;
-                    .filter(interview => interview.status === 'confirmed' &&
-                    !isPast(parseISO(interview.scheduled_date)))
-                    .sort((a, b) => parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime())
-                    .slice(0, 3); // Take only the next 3 interviews
-                setUpcomingInterviews(upcoming)}
-            catch (error) {
-"
-                // console.error("Error loading upcoming interviews:", error)}
-            finally {
+import { Calendar, Clock, Video  } from 'lucide-react';"
+import { Avatar } from '@/components/ui/avatar';
 
-                setIsLoading(false)}
+export default function Page() {
         };
         loadInterviews()}, []);
-    if (isLoading) {
+    if(isLoading) {
 "
         return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">
         <CardHeader>"
@@ -52,7 +32,7 @@ export function UpcomingInterviewsCard() {
           </div>
         </CardContent>
       </Card>)}
-    if (upcomingInterviews.length === 0) {
+    if(upcomingInterviews.length === 0) {
 "
         return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">
         <CardHeader>"
@@ -84,7 +64,7 @@ export function UpcomingInterviewsCard() {
 
             const interviewDate = parseISO(interview.scheduled_date);
             const formattedTime = format(interviewDate,h:mm a');
-            // Determine if interview is happening soon (within 30 minutes)
+            // Determine if interview is happening soon(within 30 minutes)
             const now = new Date();
             const isStartingSoon = interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
                 interviewDate.getTime() > now.getTime();"

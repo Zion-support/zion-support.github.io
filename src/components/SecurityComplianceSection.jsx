@@ -1,58 +1,9 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Shield, Lock, Eye, CheckCircle, Users, Database, Network, ArrowRight, Award const securityStandards = [
+import { motion, AnimatePresence  } from 'framer-motion';
 
-    {
-
-        name: "ISO 27001","
-        category: "Information Security Management","
-        logo: "/logos/iso27001.svg","
-        description: "International standard for information security management systems","
-        status: "Certified","
-        validUntil: "2026-12-31","
-        scope: "Global Operations","
-        features["Risk Assessment", "Security Controls", "Incident Management", "Business Continuity"],"
-        benefits["Enhanced Security Posture", "Regulatory Compliance", "Customer Trust", "Risk Mitigation"]
-    },
-    {
-"
-        name: "SOC 2 Type II","
-        category: "Service Organization Control","
-        logo: "/logos/soc2.svg","
-        description: "AICPA standard for service organizations' security, availability, and confidentiality","
-        status: "Certified","
-        validUntil: "2025-06-30","
-        scope: "Cloud Services & Data Processing","
-        features["Security Controls", "Availability Monitoring", "Confidentiality Protection", "Privacy Controls"],"
-        benefits["Third-party Validation", "Customer Assurance", "Competitive Advantage", "Operational Excellence"]
-    },
-    {
-"
-        name: "GDPR Compliance","
-        category: "Data Protection Regulation","
-        logo: "/logos/gdpr.svg","
-        description: "European Union's General Data Protection Regulation compliance","
-        status: "Compliant","
-        validUntil: "Ongoing","
-        scope: "EU Data Processing","
-        features["Data Minimization", "Consent Management", "Right to Erasure", "Data Portability"],"
-        benefits["Legal Compliance", "Customer Rights Protection", "Data Transparency", "Global Operations"]
-    },
-    {
-"
-        name: "HIPAA","
-        category: "Healthcare Data Protection","
-        logo: "/logos/hipaa.svg","
-        description: "Health Insurance Portability and Accountability Act compliance","
-        status: "Compliant","
-        validUntil: "Ongoing","
-        scope: "Healthcare Solutions","
-        features["PHI Protection", "Access Controls", "Audit Logging", "Encryption Standards"],"
-        benefits["Healthcare Market Access", "Patient Privacy", "Regulatory Compliance", "Trust Building"]
-    }
+export default function Page() {
 ];
-const complianceFrameworks = [
-    {
+const complianceFrameworks = [{
 "
         name: "NIST Cybersecurity Framework","
         category: "Cybersecurity Standards","
@@ -105,9 +56,9 @@ const securityStats = ["
     { icon: <Users className="w-6 h-6"/>, value: "0", label: "Security Breaches" },"
     { icon: <Award className="w-6 h-6"/>, value: "100%", label: "Compliance" }
 ];
-    const [selectedStandard, setSelectedStandard] = useState (null) ;
-    const [selectedFramework, setSelectedFramework] = useState (null) ;
-    const [selectedFeature, setSelectedFeature] = useState (null) ;
+    const [selectedStandard, setSelectedStandard] = useState(null);
+    const [selectedFramework, setSelectedFramework] = useState(null);
+    const [selectedFeature, setSelectedFeature] = useState(null);
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -135,7 +86,6 @@ const securityStats = ["
                 duration: 0.6,"
                 ease: "easeOut"
 
-
     };"
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue to-zion-purple relative overflow-hidden">
       {/* Background decorative elements */}"
@@ -157,19 +107,13 @@ const securityStats = ["
   { opacity: 1,
   y: 0
 
-
-
-
-
-
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>"
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">"
             Security & <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Compliance</span>
           </h2>"
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
             Enterprise-grade security standards and compliance certifications that ensure your data,
-            applications, and infrastructure are protected by industry-leading security measures.
-          </p>
+            applications, and infrastructure are protected by industry-leading security measures.</p>
 
           {/* Security stats */}"
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
@@ -187,10 +131,6 @@ const securityStats = ["
 
   { duration: 0.4,
   delay: index * 0.1
-
-
-
-
 
 "
 }} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">"
@@ -219,11 +159,6 @@ const securityStats = ["
   { duration: 0.6,
   delay: 0.2
 
-
-
-
-
-
 }}>"
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Industry Certifications & Standards
@@ -243,10 +178,6 @@ const securityStats = ["
 
   { duration: 0.4,
   delay: index * 0.1
-
-
-
-
 
 "
 }} whileHover={{ y: -4 }} className="relative">"
@@ -294,7 +225,7 @@ const securityStats = ["
                           {feature}
                         </span>))}"
                       {standard.features.length > 2 && (<span className="text-zion-cyan/60 text-xs">
-                          +{standard.features.length - 2} more
+                          +{standard.features.length-2} more
                         </span>) }
                     </div>
                   </div>
@@ -371,11 +302,6 @@ const securityStats = ["
   { duration: 0.6,
   delay: 0.3
 
-
-
-
-
-
 }}>"
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Compliance Frameworks & Controls
@@ -395,10 +321,6 @@ const securityStats = ["
 
   { duration: 0.4,
   delay: index * 0.1
-
-
-
-
 
 "
 }} whileHover={{ y: -4 }} className="relative">"
@@ -446,7 +368,7 @@ const securityStats = ["
                           {control}
                         </span>))}"
                       {framework.controls.length > 2 && (<span className="text-zion-cyan/60 text-xs">
-                          +{framework.controls.length - 2} more
+                          +{framework.controls.length-2} more
                         </span>) }
                     </div>
                   </div>
@@ -523,11 +445,6 @@ const securityStats = ["
   { duration: 0.6,
   delay: 0.4
 
-
-
-
-
-
 }}>"
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Advanced Security Features
@@ -547,10 +464,6 @@ const securityStats = ["
 
   { duration: 0.4,
   delay: index * 0.1
-
-
-
-
 
 "
 }} whileHover={{ y: -4 }} className="relative">"
@@ -576,7 +489,7 @@ const securityStats = ["
                           {feat}
                         </span>))}"
                       {feature.features.length > 2 && (<span className="text-zion-cyan/60 text-xs">
-                          +{feature.features.length - 2} more
+                          +{feature.features.length-2} more
                         </span>) }
                     </div>
                   </div>
@@ -646,11 +559,6 @@ const securityStats = ["
   { duration: 0.6,
   delay: 0.5
 
-
-
-
-
-
 }}>"
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">"
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">"
@@ -659,8 +567,7 @@ const securityStats = ["
               </h3>"
               <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
                 Partner with Zion Tech Group for enterprise-grade security, compliance,
-                and data protection that meets the highest industry standards.
-              </p>"
+                and data protection that meets the highest industry standards.</p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
                   Security Assessment

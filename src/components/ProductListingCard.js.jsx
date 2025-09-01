@@ -1,34 +1,9 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { DollarSign } from 'lucide-react';
-import { RatingStars } from '@/components/RatingStars';
-import { FavoriteButton } from '@/components/FavoriteButton';
-// Using regular img tag instead of Next.js Image
-export function ProductListingCard({
-
-  listing,
-  view = 'grid',
-  onRequestQuote,
-  detailBasePath = '/marketplace/listing'}) {
-
-  const isGrid = view === 'grid';
-  const navigate = useNavigate();
-  const [loading, setLoading] = useState(false);
-  const [imageSrc, setImageSrc] = useState()
-    listing.images && listing.images.length > 0
-      ? listing.images[0]
-      : '/placeholder.svg'
-  );
-  const [imageError, setImageError] = useState(false);
-  const formatPrice = () => {
-
-    if (listing.price === null) return 'Custom pricing';
-    return `${listing.currency}${listing.price.toLocaleString()}`;
-  };
+import { useNavigate  } from 'react-router-dom';
+export default function Page() {
+;
   const handleImageError = () => {
-    if (!imageError) {
+    if(!imageError) {
 
       // Prevent infinite loops if placeholder also fails'
       setImageSrc('/placeholder.svg');
@@ -39,7 +14,7 @@ export function ProductListingCard({
 
     e.preventDefault();
     e.stopPropagation();
-    if (onRequestQuote) {
+    if(onRequestQuote) {
 
       onRequestQuote(listing.id);
     } else {
@@ -48,16 +23,16 @@ export function ProductListingCard({
     }
   };
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
-  return()
+  return ()
     <div
       data-testid="equipment-link"'`
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
       onClick={handleViewListing}
       tabIndex={0}"
-      role="button"
+      
       onKeyDown={e => {
 
-        if (e.key === 'Enter' || e.key === ' ') {
+        if(e.key === 'Enter' || e.key === ' ') {
 
           e.preventDefault();
           handleViewListing();
@@ -68,11 +43,11 @@ export function ProductListingCard({
       <div'
         className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
         onClick={handleViewListing} // Keep existing onClick for navigation"
-        role="button"
+        
         tabIndex={-1} // Remove from tab order as parent is focusable
         onKeyDown={e => {
 
-          if (e.key === 'Enter' || e.key === ' ') {
+          if(e.key === 'Enter' || e.key === ' ') {
 
             e.preventDefault();
             handleViewListing();

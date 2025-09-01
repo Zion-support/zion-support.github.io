@@ -1,12 +1,11 @@
 
 // Enhanced real micro SAAS services and solutions;
-export const ENHANCED_SERVICES: ProductListing[] = [
-  // AI & Machine Learning Services
+export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Services
   {
 
     id: "ai-automation-suite","
     title: "AI Process Automation Suite","
-    description: "Complete workflow automation solution using AI to streamline business processes, reduce manual tasks by 80%, and increase operational efficiency. Includes process mapping, RPA integration, and analytics dashboard.","
+    description: "Complete workflow automation solution using AI to streamline business processes, reduce manual tasks by 80%, and increase operational efficiency.Includes process mapping, RPA integration, and analytics dashboard.","
     category: "AI Automation",
     price: 2999,"
     currency: "$","
@@ -31,7 +30,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "ai-customer-insights","
     title: "AI-Powered Customer Insights Platform","
-    description: "Advanced customer behavior analysis using machine learning to predict churn, identify upsell opportunities, and personalize customer experiences. Integrates with CRM systems and provides actionable recommendations.","
+    description: "Advanced customer behavior analysis using machine learning to predict churn, identify upsell opportunities, and personalize customer experiences.Integrates with CRM systems and provides actionable recommendations.","
     category: "Customer Analytics",
     price: 1899,"
     currency: "$","
@@ -54,7 +53,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "ai-content-optimization","
     title: "AI Content Optimization Engine","
-    description: "Intelligent content optimization tool that analyzes and improves SEO, readability, and engagement metrics. Uses NLP to suggest improvements, keyword optimization, and content structure recommendations.","
+    description: "Intelligent content optimization tool that analyzes and improves SEO, readability, and engagement metrics.Uses NLP to suggest improvements, keyword optimization, and content structure recommendations.","
     category: "Content Marketing",
     price: 799,"
     currency: "$","
@@ -79,7 +78,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "multi-cloud-orchestration","
     title: "Multi-Cloud Orchestration Platform","
-    description: "Unified management platform for AWS, Azure, and Google Cloud with automated cost optimization, security compliance monitoring, and disaster recovery orchestration. Reduces cloud costs by 25-40%.","
+    description: "Unified management platform for AWS, Azure, and Google Cloud with automated cost optimization, security compliance monitoring, and disaster recovery orchestration.Reduces cloud costs by 25-40%.","
     category: "Cloud Management",
     price: 4499,"
     currency: "$","
@@ -103,7 +102,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "edge-computing-solution","
     title: "Edge Computing Infrastructure Solution","
-    description: "Distributed edge computing platform for IoT devices, reducing latency and bandwidth costs. Includes edge node management, data processing, and real-time analytics capabilities.","
+    description: "Distributed edge computing platform for IoT devices, reducing latency and bandwidth costs.Includes edge node management, data processing, and real-time analytics capabilities.","
     category: "Edge Computing",
     price: 5999,"
     currency: "$","
@@ -128,7 +127,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "ai-threat-detection","
     title: "AI-Powered Threat Detection System","
-    description: "Next-generation cybersecurity platform using machine learning to detect and respond to threats in real-time. Includes behavioral analysis, anomaly detection, and automated incident response.","
+    description: "Next-generation cybersecurity platform using machine learning to detect and respond to threats in real-time.Includes behavioral analysis, anomaly detection, and automated incident response.","
     category: "Cybersecurity",
     price: 6999,"
     currency: "$","
@@ -152,7 +151,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "zero-trust-security","
     title: "Zero Trust Security Implementation","
-    description: "Complete zero trust security framework implementation including identity verification, device trust scoring, and continuous monitoring. Reduces security breaches by 90% and simplifies compliance.","
+    description: "Complete zero trust security framework implementation including identity verification, device trust scoring, and continuous monitoring.Reduces security breaches by 90% and simplifies compliance.","
     category: "Security Framework",
     price: 8999,"
     currency: "$","
@@ -177,7 +176,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "real-time-data-pipeline","
     title: "Real-Time Data Pipeline Platform","
-    description: "Streaming data processing platform for real-time analytics, event processing, and data integration. Supports Apache Kafka, Apache Flink, and provides real-time dashboards and alerts.","
+    description: "Streaming data processing platform for real-time analytics, event processing, and data integration.Supports Apache Kafka, Apache Flink, and provides real-time dashboards and alerts.","
     category: "Data Engineering",
     price: 3499,"
     currency: "$","
@@ -200,7 +199,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "predictive-maintenance-ai","
     title: "AI-Powered Predictive Maintenance","
-    description: "Machine learning solution for predicting equipment failures and optimizing maintenance schedules. Reduces downtime by 60% and maintenance costs by 40% through intelligent scheduling.","
+    description: "Machine learning solution for predicting equipment failures and optimizing maintenance schedules.Reduces downtime by 60% and maintenance costs by 40% through intelligent scheduling.","
     category: "Predictive Analytics",
     price: 5499,"
     currency: "$","
@@ -225,7 +224,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "ai-business-intelligence","
     title: "AI-Enhanced Business Intelligence Suite","
-    description: "Advanced BI platform with natural language querying, automated insights generation, and predictive analytics. Includes customizable dashboards, automated reporting, and mobile access.","
+    description: "Advanced BI platform with natural language querying, automated insights generation, and predictive analytics.Includes customizable dashboards, automated reporting, and mobile access.","
     category: "Business Intelligence",
     price: 2499,"
     currency: "$","
@@ -251,7 +250,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "ai-code-review","
     title: "AI-Powered Code Review Assistant","
-    description: "Intelligent code review tool that analyzes code quality, security vulnerabilities, and performance issues. Integrates with GitHub, GitLab, and provides detailed recommendations and automated fixes.","
+    description: "Intelligent code review tool that analyzes code quality, security vulnerabilities, and performance issues.Integrates with GitHub, GitLab, and provides detailed recommendations and automated fixes.","
     category: "Developer Tools",
     price: 1299,"
     currency: "$","
@@ -274,7 +273,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "devops-automation","
     title: "DevOps Automation Platform","
-    description: "Complete CI/CD automation platform with infrastructure as code, automated testing, deployment orchestration, and monitoring. Reduces deployment time by 80% and improves reliability.","
+    description: "Complete CI/CD automation platform with infrastructure as code, automated testing, deployment orchestration, and monitoring.Reduces deployment time by 80% and improves reliability.","
     category: "DevOps",
     price: 3999,"
     currency: "$","
@@ -299,7 +298,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "digital-transformation-consulting","
     title: "Digital Transformation Strategy & Implementation","
-    description: "End-to-end digital transformation consulting including strategy development, technology assessment, change management, and implementation support. Helps businesses modernize operations and improve customer experience.","
+    description: "End-to-end digital transformation consulting including strategy development, technology assessment, change management, and implementation support.Helps businesses modernize operations and improve customer experience.","
     category: "Digital Transformation",
     price: 15999,"
     currency: "$","
@@ -325,7 +324,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "healthcare-ai-platform","
     title: "Healthcare AI Analytics Platform","
-    description: "HIPAA-compliant AI platform for healthcare analytics, patient outcome prediction, and operational optimization. Includes clinical decision support, resource allocation, and compliance monitoring.","
+    description: "HIPAA-compliant AI platform for healthcare analytics, patient outcome prediction, and operational optimization.Includes clinical decision support, resource allocation, and compliance monitoring.","
     category: "Healthcare Technology",
     price: 12999,"
     currency: "$","
@@ -348,7 +347,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "fintech-compliance-ai","
     title: "FinTech Compliance & Fraud Detection AI","
-    description: "AI-powered financial compliance monitoring and fraud detection system. Includes AML screening, KYC verification, transaction monitoring, and regulatory reporting automation.","
+    description: "AI-powered financial compliance monitoring and fraud detection system.Includes AML screening, KYC verification, transaction monitoring, and regulatory reporting automation.","
     category: "Financial Technology",
     price: 8999,"
     currency: "$","
@@ -373,7 +372,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "blockchain-enterprise","
     title: "Enterprise Blockchain Solutions","
-    description: "Custom blockchain development for supply chain transparency, smart contracts, and decentralized applications. Includes private blockchain networks, smart contract development, and integration services.","
+    description: "Custom blockchain development for supply chain transparency, smart contracts, and decentralized applications.Includes private blockchain networks, smart contract development, and integration services.","
     category: "Blockchain",
     price: 19999,"
     currency: "$","
@@ -397,7 +396,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "quantum-computing-readiness","
     title: "Quantum Computing Readiness Assessment","
-    description: "Comprehensive assessment of business readiness for quantum computing adoption. Includes use case identification, technology evaluation, and implementation roadmap for quantum advantage.","
+    description: "Comprehensive assessment of business readiness for quantum computing adoption.Includes use case identification, technology evaluation, and implementation roadmap for quantum advantage.","
     category: "Quantum Computing",
     price: 14999,"
     currency: "$","
@@ -422,7 +421,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "ai-video-generation","
     title: "AI Video Generation & Editing Suite","
-    description: "Professional AI-powered video creation platform with automated editing, scene generation, and content optimization. Includes voice synthesis, background music, and multi-format export capabilities.","
+    description: "Professional AI-powered video creation platform with automated editing, scene generation, and content optimization.Includes voice synthesis, background music, and multi-format export capabilities.","
     category: "AI & Machine Learning",
     price: 3999,"
     currency: "$","
@@ -446,7 +445,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "ai-code-review","
     title: "AI-Powered Code Review Assistant","
-    description: "Intelligent code analysis tool that automatically reviews code quality, identifies bugs, suggests improvements, and enforces coding standards. Integrates with GitHub, GitLab, and CI/CD pipelines.","
+    description: "Intelligent code analysis tool that automatically reviews code quality, identifies bugs, suggests improvements, and enforces coding standards.Integrates with GitHub, GitLab, and CI/CD pipelines.","
     category: "AI & Machine Learning",
     price: 1299,"
     currency: "$","
@@ -469,7 +468,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "ai-test-automation","
     title: "AI Test Automation Framework","
-    description: "Intelligent test automation platform that generates test cases, identifies test coverage gaps, and automatically maintains test scripts. Reduces testing time by 70% and improves quality.","
+    description: "Intelligent test automation platform that generates test cases, identifies test coverage gaps, and automatically maintains test scripts.Reduces testing time by 70% and improves quality.","
     category: "AI & Machine Learning",
     price: 2499,"
     currency: "$","
@@ -492,7 +491,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "ai-document-processing","
     title: "AI Document Processing & OCR Platform","
-    description: "Advanced document processing solution with intelligent OCR, form extraction, and data validation. Processes invoices, contracts, and forms with 99.5% accuracy and automated workflow routing.","
+    description: "Advanced document processing solution with intelligent OCR, form extraction, and data validation.Processes invoices, contracts, and forms with 99.5% accuracy and automated workflow routing.","
     category: "AI & Machine Learning",
     price: 1799,"
     currency: "$","
@@ -515,7 +514,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "ai-chatbot-platform","
     title: "Enterprise AI Chatbot Platform","
-    description: "Custom AI chatbot development with natural language processing, multi-language support, and seamless integration with CRM systems. Includes analytics dashboard and continuous learning capabilities.","
+    description: "Custom AI chatbot development with natural language processing, multi-language support, and seamless integration with CRM systems.Includes analytics dashboard and continuous learning capabilities.","
     category: "AI & Machine Learning",
     price: 3499,"
     currency: "$","
@@ -541,7 +540,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "kubernetes-orchestration","
     title: "Kubernetes Orchestration & Management","
-    description: "Enterprise-grade Kubernetes management platform with automated scaling, load balancing, and monitoring. Includes disaster recovery, backup solutions, and multi-cluster management.","
+    description: "Enterprise-grade Kubernetes management platform with automated scaling, load balancing, and monitoring.Includes disaster recovery, backup solutions, and multi-cluster management.","
     category: "Cloud & Infrastructure",
     price: 5999,"
     currency: "$","
@@ -564,7 +563,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "serverless-architecture","
     title: "Serverless Architecture Implementation","
-    description: "Complete serverless infrastructure design and implementation using AWS Lambda, Azure Functions, or Google Cloud Functions. Includes API Gateway setup, database integration, and monitoring.","
+    description: "Complete serverless infrastructure design and implementation using AWS Lambda, Azure Functions, or Google Cloud Functions.Includes API Gateway setup, database integration, and monitoring.","
     category: "Cloud & Infrastructure",
     price: 3999,"
     currency: "$","
@@ -587,7 +586,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "hybrid-cloud-solution","
     title: "Hybrid Cloud Integration Platform","
-    description: "Seamless integration between on-premises infrastructure and cloud services. Includes data synchronization, security policies, and unified management dashboard for hybrid environments.","
+    description: "Seamless integration between on-premises infrastructure and cloud services.Includes data synchronization, security policies, and unified management dashboard for hybrid environments.","
     category: "Cloud & Infrastructure",
     price: 7999,"
     currency: "$","
@@ -611,7 +610,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "cloud-cost-optimization","
     title: "Cloud Cost Optimization & Management","
-    description: "Intelligent cloud cost analysis and optimization platform that identifies waste, suggests right-sizing, and implements automated cost controls. Reduces cloud spending by 30-50%.","
+    description: "Intelligent cloud cost analysis and optimization platform that identifies waste, suggests right-sizing, and implements automated cost controls.Reduces cloud spending by 30-50%.","
     category: "Cloud & Infrastructure",
     price: 2499,"
     currency: "$","
@@ -634,7 +633,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "cloud-security-compliance","
     title: "Cloud Security & Compliance Framework","
-    description: "Comprehensive cloud security implementation including identity management, data encryption, compliance monitoring (SOC2, GDPR, HIPAA), and automated security audits.","
+    description: "Comprehensive cloud security implementation including identity management, data encryption, compliance monitoring(SOC2, GDPR, HIPAA), and automated security audits.","
     category: "Cloud & Infrastructure",
     price: 6499,"
     currency: "$","
@@ -660,7 +659,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "penetration-testing","
     title: "Advanced Penetration Testing & Security Assessment","
-    description: "Comprehensive security testing including network, web application, and social engineering assessments. Includes detailed reports, remediation guidance, and ongoing security monitoring.","
+    description: "Comprehensive security testing including network, web application, and social engineering assessments.Includes detailed reports, remediation guidance, and ongoing security monitoring.","
     category: "Cybersecurity",
     price: 4999,"
     currency: "$","
@@ -683,7 +682,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "incident-response","
     title: "Incident Response & Digital Forensics","
-    description: "24/7 incident response team with digital forensics capabilities, evidence preservation, and legal compliance. Includes incident documentation, recovery planning, and post-incident analysis.","
+    description: "24/7 incident response team with digital forensics capabilities, evidence preservation, and legal compliance.Includes incident documentation, recovery planning, and post-incident analysis.","
     category: "Cybersecurity",
     price: 8999,"
     currency: "$","
@@ -707,7 +706,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "security-awareness-training","
     title: "Security Awareness Training Platform","
-    description: "Interactive cybersecurity training platform with phishing simulations, security quizzes, and compliance tracking. Includes customizable content and automated reporting for regulatory compliance.","
+    description: "Interactive cybersecurity training platform with phishing simulations, security quizzes, and compliance tracking.Includes customizable content and automated reporting for regulatory compliance.","
     category: "Cybersecurity",
     price: 1299,"
     currency: "$","
@@ -730,7 +729,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "vulnerability-management","
     title: "Vulnerability Management & Patching","
-    description: "Automated vulnerability scanning, assessment, and patch management system. Integrates with existing security tools and provides prioritized remediation recommendations.","
+    description: "Automated vulnerability scanning, assessment, and patch management system.Integrates with existing security tools and provides prioritized remediation recommendations.","
     category: "Cybersecurity",
     price: 2999,"
     currency: "$","
@@ -753,7 +752,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "compliance-automation","
     title: "Compliance Automation & Audit Platform","
-    description: "Automated compliance monitoring for SOC2, ISO27001, PCI-DSS, and other standards. Includes continuous monitoring, automated reporting, and audit trail management.","
+    description: "Automated compliance monitoring for SOC2, ISO27001, PCI-DSS, and other standards.Includes continuous monitoring, automated reporting, and audit trail management.","
     category: "Cybersecurity",
     price: 4499,"
     currency: "$","
@@ -778,7 +777,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "data-warehouse-design","
     title: "Enterprise Data Warehouse Design & Implementation","
-    description: "Custom data warehouse architecture using modern cloud technologies (Snowflake, BigQuery, Redshift). Includes ETL pipeline design, data modeling, and business intelligence integration.","
+    description: "Custom data warehouse architecture using modern cloud technologies(Snowflake, BigQuery, Redshift).Includes ETL pipeline design, data modeling, and business intelligence integration.","
     category: "Data & Analytics",
     price: 12999,"
     currency: "$","
@@ -802,7 +801,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "machine-learning-pipeline","
     title: "Machine Learning Pipeline & MLOps","
-    description: "End-to-end ML pipeline development with automated model training, deployment, and monitoring. Includes feature engineering, model versioning, and A/B testing capabilities.","
+    description: "End-to-end ML pipeline development with automated model training, deployment, and monitoring.Includes feature engineering, model versioning, and A/B testing capabilities.","
     category: "Data & Analytics",
     price: 7999,"
     currency: "$","
@@ -825,7 +824,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "data-governance-platform","
     title: "Data Governance & Quality Management","
-    description: "Comprehensive data governance framework with data lineage tracking, quality monitoring, and compliance management. Includes data catalog, metadata management, and automated quality checks.","
+    description: "Comprehensive data governance framework with data lineage tracking, quality monitoring, and compliance management.Includes data catalog, metadata management, and automated quality checks.","
     category: "Data & Analytics",
     price: 5499,"
     currency: "$","
@@ -848,7 +847,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "real-time-analytics-dashboard","
     title: "Real-Time Analytics Dashboard Platform","
-    description: "Custom real-time analytics dashboards with interactive visualizations, automated alerts, and mobile-responsive design. Integrates with multiple data sources and provides drill-down capabilities.","
+    description: "Custom real-time analytics dashboards with interactive visualizations, automated alerts, and mobile-responsive design.Integrates with multiple data sources and provides drill-down capabilities.","
     category: "Data & Analytics",
     price: 3999,"
     currency: "$","
@@ -871,7 +870,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "data-migration-automation","
     title: "Data Migration & Integration Automation","
-    description: "Automated data migration between systems with validation, error handling, and rollback capabilities. Includes data mapping, transformation rules, and post-migration verification.","
+    description: "Automated data migration between systems with validation, error handling, and rollback capabilities.Includes data mapping, transformation rules, and post-migration verification.","
     category: "Data & Analytics",
     price: 6499,"
     currency: "$","
@@ -896,7 +895,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "bi-platform-development","
     title: "Custom Business Intelligence Platform","
-    description: "Tailored BI platform development with interactive dashboards, automated reporting, and advanced analytics. Includes data visualization, KPI tracking, and mobile access capabilities.","
+    description: "Tailored BI platform development with interactive dashboards, automated reporting, and advanced analytics.Includes data visualization, KPI tracking, and mobile access capabilities.","
     category: "Business Intelligence",
     price: 8999,"
     currency: "$","
@@ -920,7 +919,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "devops-automation","
     title: "DevOps Automation & CI/CD Pipeline","
-    description: "Complete DevOps transformation with automated CI/CD pipelines, infrastructure as code, and monitoring. Includes Docker containerization, Kubernetes deployment, and automated testing.","
+    description: "Complete DevOps transformation with automated CI/CD pipelines, infrastructure as code, and monitoring.Includes Docker containerization, Kubernetes deployment, and automated testing.","
     category: "Development & DevOps",
     price: 7499,"
     currency: "$","
@@ -943,7 +942,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "microservices-architecture","
     title: "Microservices Architecture Design & Implementation","
-    description: "Modern microservices architecture development with API gateway, service discovery, and load balancing. Includes container orchestration, monitoring, and automated scaling.","
+    description: "Modern microservices architecture development with API gateway, service discovery, and load balancing.Includes container orchestration, monitoring, and automated scaling.","
     category: "Development & DevOps",
     price: 9999,"
     currency: "$","
@@ -967,7 +966,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "api-development-platform","
     title: "Enterprise API Development & Management","
-    description: "Comprehensive API development platform with documentation, testing, and monitoring. Includes API gateway, rate limiting, authentication, and analytics dashboard.","
+    description: "Comprehensive API development platform with documentation, testing, and monitoring.Includes API gateway, rate limiting, authentication, and analytics dashboard.","
     category: "Development & DevOps",
     price: 3999,"
     currency: "$","
@@ -990,7 +989,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "performance-optimization","
     title: "Application Performance Optimization","
-    description: "Comprehensive performance analysis and optimization for web applications, databases, and APIs. Includes load testing, bottleneck identification, and optimization recommendations.","
+    description: "Comprehensive performance analysis and optimization for web applications, databases, and APIs.Includes load testing, bottleneck identification, and optimization recommendations.","
     category: "Development & DevOps",
     price: 2999,"
     currency: "$","
@@ -1015,7 +1014,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "digital-transformation-consulting","
     title: "Digital Transformation Strategy & Consulting","
-    description: "Comprehensive digital transformation roadmap development with technology assessment, change management, and implementation planning. Includes ROI analysis and success metrics tracking.","
+    description: "Comprehensive digital transformation roadmap development with technology assessment, change management, and implementation planning.Includes ROI analysis and success metrics tracking.","
     category: "Digital Transformation",
     price: 15999,"
     currency: "$","
@@ -1039,7 +1038,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "healthcare-ai-platform","
     title: "Healthcare AI & Analytics Platform","
-    description: "Specialized AI platform for healthcare with patient data analysis, predictive diagnostics, and treatment optimization. Includes HIPAA compliance, clinical decision support, and outcome tracking.","
+    description: "Specialized AI platform for healthcare with patient data analysis, predictive diagnostics, and treatment optimization.Includes HIPAA compliance, clinical decision support, and outcome tracking.","
     category: "Healthcare Technology",
     price: 24999,"
     currency: "$","
@@ -1063,7 +1062,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "fintech-payment-platform","
     title: "FinTech Payment & Banking Platform","
-    description: "Modern payment processing platform with multi-currency support, fraud detection, and regulatory compliance. Includes mobile banking, API integration, and real-time transaction monitoring.","
+    description: "Modern payment processing platform with multi-currency support, fraud detection, and regulatory compliance.Includes mobile banking, API integration, and real-time transaction monitoring.","
     category: "Financial Technology",
     price: 19999,"
     currency: "$","
@@ -1087,7 +1086,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "supply-chain-blockchain","
     title: "Supply Chain Blockchain & IoT Platform","
-    description: "End-to-end supply chain visibility platform using blockchain and IoT sensors. Includes real-time tracking, smart contracts, and automated compliance monitoring for global logistics.","
+    description: "End-to-end supply chain visibility platform using blockchain and IoT sensors.Includes real-time tracking, smart contracts, and automated compliance monitoring for global logistics.","
     category: "Blockchain",
     price: 29999,"
     currency: "$","
@@ -1111,7 +1110,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "quantum-cryptography","
     title: "Quantum Cryptography & Security Solutions","
-    description: "Next-generation quantum-resistant cryptography implementation for future-proof security. Includes quantum key distribution, post-quantum algorithms, and quantum-safe infrastructure.","
+    description: "Next-generation quantum-resistant cryptography implementation for future-proof security.Includes quantum key distribution, post-quantum algorithms, and quantum-safe infrastructure.","
     category: "Quantum Computing",
     price: 39999,"
     currency: "$","
@@ -1137,7 +1136,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "ai-voice-assistant","
     title: "Enterprise AI Voice Assistant Platform","
-    description: "Custom AI voice assistant development with natural language understanding, multi-language support, and enterprise integration. Includes voice analytics, custom skills, and security features.","
+    description: "Custom AI voice assistant development with natural language understanding, multi-language support, and enterprise integration.Includes voice analytics, custom skills, and security features.","
     category: "AI & Machine Learning",
     price: 5999,"
     currency: "$","
@@ -1160,7 +1159,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "iot-platform-development","
     title: "IoT Platform & Device Management","
-    description: "Comprehensive IoT platform development with device connectivity, data collection, and analytics. Includes edge computing, real-time monitoring, and automated device management.","
+    description: "Comprehensive IoT platform development with device connectivity, data collection, and analytics.Includes edge computing, real-time monitoring, and automated device management.","
     category: "Edge Computing",
     price: 8999,"
     currency: "$","
@@ -1184,7 +1183,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "ar-vr-development","
     title: "AR/VR Application Development","
-    description: "Custom augmented and virtual reality applications for training, marketing, and entertainment. Includes 3D modeling, interactive experiences, and cross-platform deployment.","
+    description: "Custom augmented and virtual reality applications for training, marketing, and entertainment.Includes 3D modeling, interactive experiences, and cross-platform deployment.","
     category: "Emerging Technology",
     price: 14999,"
     currency: "$","
@@ -1206,8 +1205,8 @@ export const ENHANCED_SERVICES: ProductListing[] = [
   {
 "
     id: "robotic-process-automation","
-    title: "Robotic Process Automation (RPA) Platform","
-    description: "Enterprise RPA platform for automating repetitive business processes. Includes process discovery, bot development, and workflow orchestration with AI-powered decision making.","
+    title: "Robotic Process Automation(RPA) Platform","
+    description: "Enterprise RPA platform for automating repetitive business processes.Includes process discovery, bot development, and workflow orchestration with AI-powered decision making.","
     category: "AI Automation",
     price: 7999,"
     currency: "$","
@@ -1231,7 +1230,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "ai-ethics-framework","
     title: "AI Ethics & Governance Framework","
-    description: "Comprehensive AI ethics framework development with bias detection, explainability tools, and governance policies. Includes compliance monitoring and ethical AI training programs.","
+    description: "Comprehensive AI ethics framework development with bias detection, explainability tools, and governance policies.Includes compliance monitoring and ethical AI training programs.","
     category: "AI & Machine Learning",
     price: 3999,"
     currency: "$","
@@ -1252,8 +1251,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
 ];
 
 // Append additional diversified, real micro SaaS, IT, and AI services;
-export const MORE_ENHANCED_SERVICES: ProductListing[] = [
-  {
+export const MORE_ENHANCED_SERVICES: ProductListing[] = [{
 "
     id: "ai-assistant-pro","
     title: "AI Assistant Pro","
@@ -1274,7 +1272,7 @@ export const MORE_ENHANCED_SERVICES: ProductListing[] = [
 "
     id: "cloud-cost-optimizer-pro","
     title: "Cloud Cost Optimizer Pro","
-    description: "Automated rightsizing, lifecycle policies, and anomaly detection for AWS, Azure, and GCP. Exports Terraform-ready savings plans.","
+    description: "Automated rightsizing, lifecycle policies, and anomaly detection for AWS, Azure, and GCP.Exports Terraform-ready savings plans.","
     category: "Cloud & Infrastructure",
     price: 99,"
     currency: "$","
@@ -1334,8 +1332,7 @@ export const MORE_ENHANCED_SERVICES: ProductListing[] = [
     reviewCount: 28,;"
     link: "https://ziontechgroup.com/services/pdf-render-api"};];
 ;
-export const ALL_ENHANCED_SERVICES: ProductListing[] = [
-  ...ENHANCED_SERVICES,
+export const ALL_ENHANCED_SERVICES: ProductListing[] = [...ENHANCED_SERVICES,
   ...MORE_ENHANCED_SERVICES
 ];
 

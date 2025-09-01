@@ -1,25 +1,6 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
-
-	Rocket,
-	Brain,
-	Zap,
-	Shield,
-	Globe,
-	TrendingUp,
-	Heart,
-	DollarSign,
-	Eye,
-	Bot,
-	ArrowRight,
-	Star,
-	Play,
-	Pause'
- } from 'lucide-react';
+import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+ from 'lucide-react';
 interface ServiceShowcase {
 	id: string;
 	title: string;
@@ -29,8 +10,7 @@ interface ServiceShowcase {
 	features: string[];
 	price: string;
 	status: 'active' | 'beta' | 'new'}
-const futuristicServices: ServiceShowcase[] = [
-	{
+const futuristicServices: ServiceShowcase[] = [{
 
 		id: 'quantum-ai-controller',
 		title: 'Quantum AI Controller',
@@ -102,12 +82,12 @@ export default function FuturisticServicesShowcase(...args[]):  {
 	const [currentService, setCurrentService] = useState(0);
 	const [isPlaying, setIsPlaying] = useState(true);
 	useEffect(() => {
-		if (!isPlaying) return;
+		if(!isPlaying) return;
 		
-			setCurrentService ( (prev) => (prev + 1) % futuristicServices.length) }, 5000) ;
-		return () => clearInterval (interval) }, [isPlaying]) ;
+			setCurrentService((prev) => (prev + 1) % futuristicServices.length) }, 5000) ;
+		return () => clearInterval(interval) }, [isPlaying]) ;
 	
-		switch (status) {;
+		switch(status) {;
 			case 'new': return 'bg-green-500';
 			case 'beta': return 'bg-yellow-500';
 			case 'active': return 'bg-blue-500';
@@ -118,8 +98,8 @@ export default function FuturisticServicesShowcase(...args[]):  {
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 			default: return 'UNKNOWN'}
 	};
-	return()
-		<div className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"
+	return ()
+		<div className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"
 			<div className="container mx-auto px-4">
 				{/* Header */}"
 				<div className="text-center mb-16">
@@ -140,8 +120,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 						transition={{ duration: 0.6, delay: 0.2 }}"
 						className="text-xl text-zion-slate-light max-w-3xl mx-auto"
 
-						Experience the future of technology with our cutting-edge services that push the boundaries of what's possible.
-					</motion.p>
+						Experience the future of technology with our cutting-edge services that push the boundaries of what's possible.</motion.p>
 				</div>
 				{/* Main Showcase */}"
 				<div className="relative">
@@ -158,9 +137,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 									<button
 										key={index}
 										onClick={() => setCurrentService(index)}
-										className={`w-3 h-3 rounded-full transition-all ${
-
-											index === currentService'
+										className={`w-3 h-3 rounded-full transition-all ${index === currentService'
 												? 'bg-zion-cyan scale-125''
 												: 'bg-white/30 hover:bg-white/50'`
 										}`}
@@ -303,11 +280,6 @@ export default function FuturisticServicesShowcase(...args[]):  {
 
   { duration: 0.5,
   delay: index * 0.1
-
-
-
-
-
 
 }}"
 								className="bg-white/5 hover:bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 transition-all duration-300 hover:border-zion-cyan/50 cursor-pointer group"

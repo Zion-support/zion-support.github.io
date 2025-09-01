@@ -1,13 +1,12 @@
 <<<<<<< HEAD
 import React, { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
-import { useAuth } from "@/hooks/useAuth";
-=======
-import React, { useState } from "react";"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
-import { Button } from "@/components/ui/button";"
-import { Wallet, Info, Check, ArrowUpRight import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";"
-import { useToast } from "@/hooks/use-toast";"import { useAuth } from "@/hooks/useAuth";
+import { useToast } from '@/hooks/use-toast';
+import { useAuth } from '@/hooks/useAuth';
+ from "react";"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';"
+import { Button } from '@/components/ui/button';"
+import { Wallet, Info, Check, ArrowUpRight import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';"
+import { useToast } from '@/hooks/use-toast';"import { useAuth } from '@/hooks/useAuth';
 >>>>>>> main
 export function OnChainExport() {
     const [isConnected, setIsConnected] = useState(false);
@@ -19,7 +18,7 @@ export function OnChainExport() {
         try {
             // Check if wallet is available
             const ethereum = window.ethereum;
-            if (!ethereum) {
+            if(!ethereum) {
 
                 toast({
 "
@@ -42,7 +41,7 @@ export function OnChainExport() {
 "
                 title: "Wallet connected",`
                 description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`})}
-        catch (error) {
+        catch(error) {
             toast({
 "
                 title: "Connection failed","
@@ -61,7 +60,7 @@ export function OnChainExport() {
 "
                 title: "Tokens exported","
                 description: "Your ZION$ tokens have been exported to your wallet"})}
-        catch (error) {
+        catch(error) {
 
             setExportStatus('error');
             toast({
@@ -82,7 +81,7 @@ export function OnChainExport() {
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>"
-                <Info aria-label="More info" className="h-4 w-4 text-muted-foreground cursor-help"/>
+                <Info  className="h-4 w-4 text-muted-foreground cursor-help"/>
               </TooltipTrigger>
               <TooltipContent>"
                 <p className="max-w-xs">Export your ZION$ tokens to an external blockchain wallet</p>
@@ -107,8 +106,7 @@ export function OnChainExport() {
               </Button>)}"
           </div>) : (<div className="space-y-2">"
             <p className="text-sm text-muted-foreground mb-3">
-              Connect your web3 wallet to export tokens to the blockchain.
-            </p>"
+              Connect your web3 wallet to export tokens to the blockchain.</p>"
             <Button onClick={handleConnectWallet} className="w-full">
               Connect Wallet
             </Button>

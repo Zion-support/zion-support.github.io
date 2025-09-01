@@ -1,27 +1,13 @@
 import { renderHook, waitFor, act } from '@testing-library/react';
-import { SWRConfig } from 'swr';
-import { useQuoteWizard, ServiceItem } from '../useQuoteWizard';
-
-// Mock Sentry's captureException
-jest.mock('@/utils/sentry', () => ({
-  captureException: jest.fn(),
-}));
-
-const mockFetcher = jest.fn();
-
-// Helper to wrap hook with SWRConfig and a clear cache
-const renderUseQuoteWizard = (category: string) => {
-  return renderHook(() => useQuoteWizard(category), {
-    wrapper: ({ children }) => (
-      <SWRConfig value={{ provider: () => new Map(), fetcher: mockFetcher }}>
+export default function Page() {
+>
         {children}
       </SWRConfig>
     ),
   });
 };
 
-const mockServiceItems: ServiceItem[] = [
-  { id: '1', name: 'Test Service 1', slug: 'test-service-1', price: 100 },
+const mockServiceItems: ServiceItem[] = [{ id: '1', name: 'Test Service 1', slug: 'test-service-1', price: 100 },
   { id: '2', name: 'Test Service 2', slug: 'test-service-2', price: 200 },
 ];
 
@@ -69,7 +55,6 @@ describe('useQuoteWizard', () => {
     mockFetcher.mockRejectedValueOnce(mockError); // Retry 2
     mockFetcher.mockRejectedValueOnce(mockError); // Retry 3
 
-
     const { result } = renderUseQuoteWizard('equipment');
 
     expect(result.current.isLoading).toBe(true);
@@ -82,10 +67,8 @@ describe('useQuoteWizard', () => {
 
     expect(result.current.error).toEqual(mockError);
     expect(result.current.data).toBeUndefined();
-     // SWR default is 1 initial + 3 retries = 4 calls for this setup.
-     // The hook's onErrorRetry is configured for 3 retries (retryCount >=3 then return)
-     // So, initial (retryCount=0), retry 1 (retryCount=1), retry 2 (retryCount=2).
-     // Total calls = 1 (initial) + 3 (retries) = 4
+     // SWR default is 1 initial + 3 retries = 4 calls for this setup.// The hook's onErrorRetry is configured for 3 retries(retryCount >=3 then return)
+     // So, initial(retryCount=0), retry 1(retryCount=1), retry 2(retryCount=2).// Total calls = 1(initial) + 3(retries) = 4
     expect(mockFetcher).toHaveBeenCalledTimes(4); // Initial + 3 retries
   });
 
@@ -118,28 +101,25 @@ describe('useQuoteWizard', () => {
 
       // Wait for first error and retry attempt scheduling
       await act(async () => {
-        jest.advanceTimersByTime(1000); // 1st retry delay (1s)
+        jest.advanceTimersByTime(1000); // 1st retry delay(1s)
       });
        await waitFor(() => expect(mockFetcher).toHaveBeenCalledTimes(2));
 
-
       await act(async () => {
-        jest.advanceTimersByTime(2000); // 2nd retry delay (2s)
+        jest.advanceTimersByTime(2000); // 2nd retry delay(2s)
       });
       await waitFor(() => expect(mockFetcher).toHaveBeenCalledTimes(3));
 
-
       await act(async () => {
-        jest.advanceTimersByTime(4000); // 3rd retry delay (4s)
+        jest.advanceTimersByTime(4000); // 3rd retry delay(4s)
       });
       await waitFor(() => expect(mockFetcher).toHaveBeenCalledTimes(4));
 
-      // After 3 retries (total 4 calls), it should stop
+      // After 3 retries(total 4 calls), it should stop
       await act(async () => {
         jest.advanceTimersByTime(8000); // Any further time
       });
       expect(mockFetcher).toHaveBeenCalledTimes(4);
-
 
       // Final state
       await waitFor(() => expect(result.current.isLoading).toBe(false));
@@ -149,8 +129,7 @@ describe('useQuoteWizard', () => {
 
     test('should not retry if error happens after retryCount >= 3', async () => {
         const mockError = new Error('Persistent Network Error');
-        // Let SWR handle retry counts. We just keep failing the fetcher.
-        mockFetcher.mockRejectedValue(mockError);
+        // Let SWR handle retry counts.We just keep failing the fetcher.mockFetcher.mockRejectedValue(mockError);
 
         const { result } = renderHook(() => useQuoteWizard('services'), {
           wrapper: ({ children }) => (
@@ -166,22 +145,22 @@ describe('useQuoteWizard', () => {
         await waitFor(() => expect(mockFetcher).toHaveBeenCalledTimes(1));
         await waitFor(() => !result.current.isLoading); // Wait for first load cycle to complete
 
-        // Retry 1 (retryCount = 0 internally before this retry)
+        // Retry 1(retryCount = 0 internally before this retry)
         act(() => { jest.advanceTimersByTime(1000); }); // Advance by 1s for first retry
         await waitFor(() => expect(mockFetcher).toHaveBeenCalledTimes(2));
         await waitFor(() => !result.current.isLoading);
 
-        // Retry 2 (retryCount = 1 internally before this retry)
+        // Retry 2(retryCount = 1 internally before this retry)
         act(() => { jest.advanceTimersByTime(2000); }); // Advance by 2s for second retry
         await waitFor(() => expect(mockFetcher).toHaveBeenCalledTimes(3));
         await waitFor(() => !result.current.isLoading);
 
-        // Retry 3 (retryCount = 2 internally before this retry)
+        // Retry 3(retryCount = 2 internally before this retry)
         act(() => { jest.advanceTimersByTime(4000); }); // Advance by 4s for third retry
         await waitFor(() => expect(mockFetcher).toHaveBeenCalledTimes(4));
         await waitFor(() => !result.current.isLoading);
 
-        // Should not retry further (retryCount = 3 internally, hook's condition is >= 3)
+        // Should not retry further(retryCount = 3 internally, hook's condition is >= 3)
         act(() => { jest.advanceTimersByTime(8000); }); // Advance by 8s
         expect(mockFetcher).toHaveBeenCalledTimes(4); // Still 4 calls
 

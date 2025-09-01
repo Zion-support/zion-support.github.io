@@ -1,48 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, Eye, Users, TrendingUp, AlertTriangle } from 'lucide-react';
-export function SiteHealthDashboard() {
-    const [healthData, setHealthData] = useState([]);
-    const [overallScore, setOverallScore] = useState(0);
-    const [isLoading, setIsLoading] = useState(true);
-    useEffect(() => {
-        // Simulate health check data collection
-        const performHealthCheck = async () => {
-            setIsLoading (true) ;
-            // Simulate API calls to various monitoring services
-            await new Promise (resolve => setTimeout (resolve, 2000) ) ;
-            const healthCategories = [
-                {
+import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, Eye, Users, TrendingUp, AlertTriangle  } from 'lucide-react';
 
-                    name: 'Performance',
-                    icon: Zap,
-                    overallScore: 88,
-                    metrics[;
-                        {
-
-                            name: 'Page Load Time',
-                            value: 2.1,
-                            status: 'good',
-                            description: 'Average page load time across all pages',
-                            recommendation: 'Optimize images and enable compression to reach < 2s'
-                        },
-                        {
-
-                            name: 'First Contentful Paint',
-                            value: 1.4,
-                            status: 'excellent',
-                            description: 'Time until first content appears'},
-                        {
-
-                            name: 'Largest Contentful Paint',
-                            value: 2.8,
-                            status: 'good',
-                            description: 'Time until largest content element loads'},
-                        {
-
-                            name: 'Core Web Vitals Score',
-                            value: 85,
-                            status: 'good',
-                            description: 'Overall Google Core Web Vitals performance'}
+export default function Page() {
                     ]
                 },;
                 {
@@ -224,15 +183,15 @@ export function SiteHealthDashboard() {
                     ]
                 }
             ];
-            setHealthData (healthCategories) ;
+            setHealthData(healthCategories) ;
             // Calculate overall score
-            const totalScore = healthCategories.reduce ( (sum, category) => sum + category.overallScore, 0) ;
-            setOverallScore (Math.round (totalScore / healthCategories.length) ) ;
-            setIsLoading (false) };
+            const totalScore = healthCategories.reduce((sum, category) => sum + category.overallScore, 0) ;
+            setOverallScore(Math.round (totalScore / healthCategories.length) ) ;
+            setIsLoading(false) };
         performHealthCheck () }, []) ;
     const getStatusColor = (status) => {
 
-        switch (status) {
+        switch(status) {
 
             case 'excellent': return 'text-green-500 bg-green-50 border-green-200';
             case 'good': return 'text-blue-500 bg-blue-50 border-blue-200';
@@ -242,7 +201,7 @@ export function SiteHealthDashboard() {
     };
     const getStatusIcon = (status) => {
 
-        switch (status) {
+        switch(status) {
 
             case 'excellent': return <CheckCircle className="w-4 h-4"/>;'"
             case 'good': return <CheckCircle className="w-4 h-4"/>;'"
@@ -252,14 +211,14 @@ export function SiteHealthDashboard() {
     };
     const getScoreColor = (score) => {
 
-        if (score >= 90)
+        if(score >= 90)
             return 'text-green-500';
-        if (score >= 75)
+        if(score >= 75)
             return 'text-blue-500';
-        if (score >= 60)
+        if(score >= 60)
             return 'text-yellow-500';
         return 'text-red-500'};
-    if (isLoading) {
+    if(isLoading) {
 "
         return (<div className="max-w-7xl mx-auto p-6">"
         <div className="text-center py-12">"

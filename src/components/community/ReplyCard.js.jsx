@@ -6,7 +6,7 @@ export default function ReplyCard({
   onMarkAnswer,
   canMarkAnswer}) {
 
-  return()
+  return ()
     <div
       className={`bg-white/5 backdrop-blur-sm rounded-lg p-4 mb-3 ml-8 ${className}`}
     >
@@ -33,7 +33,7 @@ export default function ReplyCard({
           <p className="text-zion-slate-light text-sm">{reply.content}</p>"
           <div className="flex items-center space-x-4 mt-2 text-xs text-zion-slate-light">"
             <button className="hover:text-zion-cyan">
-              Like ({reply.likes})
+              Like({reply.likes})
             </button>"
             <button className="hover:text-zion-cyan">Reply</button>
             {canMarkAnswer && onMarkAnswer && (

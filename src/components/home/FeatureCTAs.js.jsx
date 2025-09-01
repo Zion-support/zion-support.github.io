@@ -1,81 +1,7 @@
 import React from 'react';
-import {
-
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle} from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Link } from 'react-router-dom';
-import {
-
-  ArrowRight,
-  Users,
-  Zap,
-  Settings,
-  Search,
-  MessageSquare,
-  Building,
-  Clock,
-  Brain,
-  Server,
-  TrendingUp,
-  CheckCircle,
-  Play,
-  Download} from 'lucide-react';
-
-export function FeatureCTAs() {
-  const features = [
-    {
-
-      title: 'AI Services & Solutions',
-      description:'
-        'Comprehensive AI services from strategy to implementation, including custom model development and AI consulting.',
-      icon: (
-        <Brain className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />
-      ),
-      link: '/ai-services',
-      badge: 'New',
-      details:'
-        'Transform your business with cutting-edge AI solutions including machine learning, computer vision, NLP, and strategic AI consulting.'},
-    {
-
-      title: 'IT Services & Infrastructure',
-      description:'
-        'Complete IT solutions including cloud management, cybersecurity, DevOps, and infrastructure modernization.',
-      icon: ("
-        <Server className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />
-      ),
-      link: '/it-services',
-      badge: 'Popular',
-      details:'
-        'From cloud migration to cybersecurity, our IT experts help you build robust, scalable, and secure technology infrastructure.'},
-    {
-
-      title: 'Digital Marketing Services',
-      description:'
-        'Full-service digital marketing including SEO, PPC, social media, content marketing, and analytics.',
-      icon: ("
-        <TrendingUp className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700" />
-      ),
-      link: '/digital-marketing',
-      badge: 'Featured',
-      details:'
-        'Drive growth with data-driven marketing strategies, conversion optimization, and comprehensive digital marketing solutions.'},
-    {
-
-      title: 'Business Solutions & Consulting',
-      description:'
-        'Strategic business consulting, process optimization, and digital transformation services.',
-      icon: ("
-        <CheckCircle className="h-10 w-10 p-2 rounded-md bg-green-100 text-green-700" />
-      ),
-      link: '/business-solutions',
-      details:'
-        'Our business consultants help you optimize operations, implement automation, and achieve sustainable growth through strategic planning.'},
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+export default function Page() {
+,
     {
 
       title: 'AI Talent Matching',
@@ -154,8 +80,7 @@ export function FeatureCTAs() {
           </h2>"
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Explore our comprehensive suite of tools designed to transform how
-            you connect, collaborate, and create in the tech ecosystem.
-          </p>
+            you connect, collaborate, and create in the tech ecosystem.</p>
         </div>
 "
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

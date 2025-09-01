@@ -1,35 +1,13 @@
 import React from 'react';
-import {
-
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle} from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import {
-
-  Form,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage} from '@/components/ui/form';
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
 import { useForm } from 'react-hook-form';
-import { Mail, PaperPlane } from 'lucide-react';
-import api from '@/services/apiClient';
-import { toast } from '@/hooks/use-toast';
-const schema = z.object({
-
-  subject: z
-    .string()
-    .min(5,Subject must be at least 5 characters')
-    .nonempty('Subject is required'),
-  message: z
-    .string()
-    .min(20,Message must be at least 20 characters')
-    .nonempty('Message is required')});
+import { Mail, PaperPlane  } from 'lucide-react';
+ from '@/hooks/use-toast';
+);
 export function ContactPublisherModal({
 
   isOpen,
@@ -56,7 +34,7 @@ export function ContactPublisherModal({
       toast.success('Message sent!');
       form.reset();
       onClose();
-    } catch (err) {
+    } catch(err) {
 
       toast.error(err?.message || 'Failed to send message');
     } finally {
@@ -64,7 +42,7 @@ export function ContactPublisherModal({
       setIsSubmitting(false);
     }
   };
-  return()
+  return ()
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
         <DialogHeader>"

@@ -1,58 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import {
+import { Link  } from 'react-router-dom';
 
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle} from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { SERVICE_CATEGORIES } from '@/data/microSaasServices';
-import {
-
-  Sparkles,
-  Zap,
-  TrendingUp,
-  ArrowRight,
-  Star,
-  CheckCircle,
-  Globe,
-  MessageCircle} from 'lucide-react';
-export function NewServicesShowcase() {
-  // Get featured services from each category
-  const featuredServices = SERVICE_CATEGORIES.map()
-    category => category.services[0]
-  ).filter(Boolean);
-  return()
-    <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-blue-dark to-zion-slate relative overflow-hidden">
-      {/* Animated Background Elements */}"
-      <div className="absolute inset-0">"
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-zion-purple/10 rounded-full filter blur-3xl animate-pulse"></div>"
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-zion-cyan/10 rounded-full filter blur-3xl animate-pulse animation-delay-2000"></div>"
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-zion-blue/5 rounded-full filter blur-3xl animate-pulse animation-delay-4000"></div>
-      </div>
-"
-      <div className="container mx-auto px-4 relative z-10">
-        {/* Section Header */}"
-        <div className="text-center mb-16">"
-          <div className="flex items-center justify-center gap-2 mb-4">"
-            <Sparkles className="w-8 h-8 text-zion-cyan" />"
-            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
-              Revolutionary AI & Micro SAAS Services
-            </h2>"
-            <Sparkles className="w-8 h-8 text-zion-cyan" />
-          </div>"
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
-            Transform your business with cutting-edge AI solutions, professional
-            IT services, and affordable micro SAAS tools."
-            <span className="text-zion-cyan font-semibold">
-              {' '}
-              Save up to 55%{' '}
+export default function Page() {
             </span>
-            on enterprise-grade technology solutions.
-          </p>
+            on enterprise-grade technology solutions.</p>
         </div>
 
         {/* Featured Services Grid */}"
@@ -206,8 +157,7 @@ export function NewServicesShowcase() {
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
               Join thousands of businesses that have already revolutionized
               their operations with our AI-powered solutions and professional IT
-              services.
-            </p>
+              services.</p>
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button"

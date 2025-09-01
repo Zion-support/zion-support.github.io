@@ -1,32 +1,8 @@
 import React, { useState } from 'react';
 import { Button } from '../ui/Button';
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card';
-import { Input } from '../ui/Input';
-import { Textarea } from '../ui/Textarea';
-import { DollarSign, MessageSquare } from 'lucide-react';
-export function HireNowCTA({ talentName, hourlyRate, onHire }) {
 
-  const [isFormOpen, setIsFormOpen] = useState(false);
-  const [formData, setFormData] = useState({
-
-    projectDescription: '',
-    budget: '',
-    startDate: '',
-    message: ''});
-  const handleSubmit = e => {
-
-    e.preventDefault();
-    if (onHire) {
-
-      onHire(formData);
-    }
-    // Reset form and close
-    setFormData({
-
-      projectDescription: '',
-      budget: '',
-      startDate: '',
-      message: ''});
+export default function Page() {
+);
     setIsFormOpen(false);
   };
   const handleChange = e => {
@@ -36,7 +12,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
       ...prev,
       [e.target.name]: e.target.value}));
   };
-  return()
+  return ()
     <Card className="bg-zion-blue-light border-zion-blue-lighter">
       <CardHeader>"
         <CardTitle className="text-white flex items-center gap-2">"
@@ -55,8 +31,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
             )}"
             <p className="text-zion-slate-light text-sm">
               Ready to start your project? Send a message to discuss details and
-              get started.
-            </p>
+              get started.</p>
             <Button
               onClick={() => setIsFormOpen(true)}"
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"

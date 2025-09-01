@@ -1,19 +1,8 @@
-import { GradientHeading } from "./GradientHeading";"
-import { Link } from "react-router-dom";"
-import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Sparkles, Zap, Shield, Rocket } from "lucide-react";"
-import { motion } from "framer-motion";
-const categories = [
-    {
-"
-        title: "Comprehensive Services","
-        description: "Micro SAAS, IT services, and AI solutions","
-        icon: <Briefcase className="w-10 h-10"/>,"
-        link: "/services","
-        color: "from-zion-purple to-zion-purple-dark","
-        gradient: "from-zion-purple/20 to-zion-purple-dark/20","
-        features["24/7 Support", "Expert Team", "Custom Solutions"],;"
-        stats: "500+ Services"
-    },
+import { GradientHeading } from './GradientHeading';"
+import { Link  } from 'react-router-dom';"
+import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Sparkles, Zap, Shield, Rocket  } from 'lucide-react';"
+import { motion  } from 'framer-motion';
+,
     {
 "
         title: "Talents","
@@ -48,8 +37,7 @@ const categories = [
         stats: "100+ Innovations"
     },
 ];
-const specialServices = [
-    {
+const specialServices = [{
 "
         title: "Enhanced AI & IT Services","
         link: "/enhanced-services"
@@ -154,9 +142,7 @@ export function CategoriesSection({ showTitle = true }) {
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <GradientHeading>Explore Categories</GradientHeading>"
             <p className="text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto leading-relaxed">
-              Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation. 
-              Everything you need to accelerate your digital transformation in one place.
-            </p>
+              Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation.Everything you need to accelerate your digital transformation in one place.</p>
           </motion.div>)}
         "
         <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>

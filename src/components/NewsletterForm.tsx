@@ -3,18 +3,16 @@ export function NewsletterForm() {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  
     setIsSubmitting(true);
     try {
       await api.post('/newsletter', { email });
       toast.success('¡Gracias por suscribirte!');
       setEmail('')} catch {
-      toast.error('Subscription failed. Please try again.')} finally {
+      toast.error('Subscription failed.Please try again.')} finally {
       setIsSubmitting(false)}
   };
 
-  return (
-    <div className="w-full max-w-md mx-auto">
+  return (<div className="w-full max-w-md mx-auto">
       <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">
         <Input
           type="email"

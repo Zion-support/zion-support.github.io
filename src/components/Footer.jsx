@@ -1,44 +1,16 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import {
-  Mail,
-  Phone,
-  MapPin,
-  ArrowUp,
-  Heart,
-  CheckCircle,
-  Send,
-  Globe} from 'lucide-react';
+import { Link  } from 'react-router-dom';
+import { motion  } from 'framer-motion';
+import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe  } from 'lucide-react';
 
-export function FooterNewsletter() {
-
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubscribe = async e => {
-
-    e.preventDefault();
-    if (!email) return;
-    setIsLoading (true) ;
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubscribed(true);
-      setIsLoading(false);
-      setEmail('');
-      // Reset after 5 seconds
-      setTimeout(() => setIsSubscribed(false), 5000);
-    }, 1000);
+, 1000);
   };
 
-  return (
-    <div className="bg-zinc-900/30 p-6 rounded-xl border border-zinc-700/50">
+  return (<div className="bg-zinc-900/30 p-6 rounded-xl border border-zinc-700/50">
       <h3 className="text-xl font-semibold text-white mb-4">Stay Updated</h3>
       <p className="text-zinc-400 mb-4 text-sm">
         Get the latest insights on AI, cybersecurity, and technology trends
-        delivered to your inbox.
-      </p>
+        delivered to your inbox.</p>
 
       {isSubscribed ? (
         <motion.div
@@ -83,8 +55,7 @@ export function FooterNewsletter() {
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const socialLinks = [
-    {
+  const socialLinks = [{
       name: 'LinkedIn',
       url: 'https://www.linkedin.com/company/ziontechgroup',
       icon: '💼',
@@ -116,8 +87,7 @@ export function Footer() {
     }
   ];
 
-  const footerSections = [
-    {
+  const footerSections = [{
       title: 'Services',
       links: [
         { label: 'AI Solutions', path: '/services/ai' },
@@ -128,8 +98,7 @@ export function Footer() {
     },
     {
       title: 'Company',
-      links: [
-        { label: 'About Us', path: '/about' },
+      links: [{ label: 'About Us', path: '/about' },
         { label: 'Careers', path: '/careers' },
         { label: 'Partners', path: '/partners' },
         { label: 'Blog', path: '/blog' }
@@ -137,8 +106,7 @@ export function Footer() {
     },
     {
       title: 'Resources',
-      links: [
-        { label: 'FAQ', path: '/faq' },
+      links: [{ label: 'FAQ', path: '/faq' },
         { label: 'Sitemap', path: '/sitemap' },
         { label: 'Contact', path: '/contact' },
         { label: 'Pricing', path: '/pricing' }
@@ -146,8 +114,7 @@ export function Footer() {
     }
   ];
 
-  const contactInfo = [
-    {
+  const contactInfo = [{
       icon: Mail,
       label: 'Email',
       value: 'kleber@ziontechgroup.com',
@@ -178,8 +145,7 @@ export function Footer() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  return (
-    <footer className="bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white relative overflow-hidden">
+  return (<footer className="bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.05)_1px,transparent_1px)] bg-[size:50px_50px]" />
 
@@ -209,8 +175,7 @@ export function Footer() {
             </div>
             <p className="text-zinc-400 mb-6 text-lg leading-relaxed">
               Transforming businesses through cutting-edge technology and
-              strategic insights.
-            </p>
+              strategic insights.</p>
 
             {/* Social Links */}
             <div className="flex items-center space-x-4">
@@ -220,7 +185,7 @@ export function Footer() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w - 10 h - 10 bg - zinc - 800 / 50 border border - zinc - 700 / 50 rounded - lg flex items - center justify - center text - lg transition - all duration - 300 ${social.color} hover:scale - 110`}
+                  className={`w-10 h-10 bg-zinc - 800 / 50 border border-zinc - 700 / 50 rounded-lg flex items - center justify - center text-lg transition - all duration - 300 ${social.color} hover:scale - 110`}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -284,8 +249,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="flex items-center space-x-2 text-zinc-400 text-sm">
               <span>
-                © {currentYear} Zion Tech Group. All rights reserved.
-              </span>
+                © {currentYear} Zion Tech Group.All rights reserved.</span>
               <span>•</span>
               <Link
                 to="/privacy"

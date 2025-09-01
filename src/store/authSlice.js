@@ -1,27 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-// Async thunk for login
-export const loginUser = createAsyncThunk('
-  'auth/loginUser',
-  async (credentials, { rejectWithValue }) => {
-
-    try {
-      // Simulate API call
-      const response = await new Promise((resolve, reject) => {
-
-        setTimeout(() => {
-          if (credentials.email && credentials.password) {
-
-            resolve({
-
-              user: {
-
-                id: 1,
-                email: credentials.email,
-                name: 'John Doe',
-                role: 'user'},
-              token: 'mock-jwt-token'});
-          } else {
+export default function Page() {
+ else {
 
             reject(new Error('Invalid credentials'));
           }
@@ -33,7 +13,7 @@ export const loginUser = createAsyncThunk('
       localStorage.setItem('user', JSON.stringify(response.user));
 
       return response;
-    } catch (error) {
+    } catch(error) {
       return rejectWithValue(error.message);
     }
   }
@@ -49,7 +29,7 @@ export const signupUser = createAsyncThunk('
       const response = await new Promise((resolve, reject) => {
 
         setTimeout(() => {
-          if (userData.email && userData.password && userData.name) {
+          if(userData.email && userData.password && userData.name) {
 
             resolve({
 
@@ -72,7 +52,7 @@ export const signupUser = createAsyncThunk('
       localStorage.setItem('user', JSON.stringify(response.user));
 
       return response;
-    } catch (error) {
+    } catch(error) {
       return rejectWithValue(error.message);
     }
   }
@@ -95,7 +75,7 @@ export const logoutUser = createAsyncThunk('
       localStorage.removeItem('user');
 
       return null;
-    } catch (error) {
+    } catch(error) {
       return rejectWithValue(error.message);
     }
   }
@@ -111,7 +91,7 @@ export const checkAuthStatus = createAsyncThunk('
       const token = localStorage.getItem('token');
       const user = localStorage.getItem('user');
 
-      if (token && user) {
+      if(token && user) {
 
         return {
 
@@ -121,7 +101,7 @@ export const checkAuthStatus = createAsyncThunk('
 
         throw new Error('No auth data found');
       }
-    } catch (error) {
+    } catch(error) {
       return rejectWithValue(error.message);
     }
   }

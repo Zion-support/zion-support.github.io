@@ -1,14 +1,12 @@
 <<<<<<< HEAD
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 export /**
-import {
-import { motion, AnimatePresence } from 'framer - motion';
+import { motion, AnimatePresence  } from 'framer-motion';
 
- * AdvancedAnalytics function
- * @param {*} params - Function parameters
+ params - Function parameters
  * @returns {*} Function return value
  */
-function AdvancedAnalytics ({
+function AdvancedAnalytics({
 
   BarChart3,
   TrendingUp,
@@ -18,42 +16,9 @@ function AdvancedAnalytics ({
   Clock,
   TrendingUp,
 =======
-import {
-  BarChart3, 
-  TrendingUp, 
-  Users, 
-  Eye, 
-  MousePointer, 
-  Clock, 
-  TrendingUp, 
->>>>>>> main
-  TrendingDown,
-  Activity,
-  Zap,
-  Target,
-  MapPin,
-  Globe,
-  Smartphone,
-  Monitor,
-  Tablet,
-  Settings,
-  X,
-  Download,
-  Share2,
-  Filter,
-  Calendar,
-  RefreshCw'
-} from 'lucide-react';
+import { BarChart3, TrendingUp, Users, Eye, MousePointer, Clock, TrendingUp, >>>>>>> main TrendingDown, Activity, Zap, Target, MapPin, Globe, Smartphone, Monitor, Tablet, Settings, X, Download, Share2, Filter, Calendar, RefreshCw'  } from 'lucide-react';
 
-interface AnalyticsData {
-
-  pageViews: number;
-  uniqueVisitors: number;
-  sessionDuration: number;
-  bounceRate: number;
-  conversionRate: number;
-  topPages: { path: string; views: number 
-}[];
+[];
   userAgents: { device: string; count: number }[];
   locations: { country: string; count: number }[];
   performance: {
@@ -71,7 +36,6 @@ interface AnalyticsData {
 
 interface AdvancedAnalyticsProps {
   // Add your props here
-
 
   enabled: boolean;
   trackingId?: string;
@@ -114,7 +78,7 @@ export function AdvancedAnalytics({
   }) ;
 
 <<<<<<< HEAD
-  const [isTracking, setIsTracking] = useState (false) ;
+  const [isTracking, setIsTracking] = useState(false);
   const [sessionStart, setSessionStart] = useState < number> (Date.now () ) ;
   const [currentPage, setCurrentPage] = useState < string> (window.location.pathname) ;
   const [userSession, setUserSession] = useState < string> ('') ;
@@ -150,7 +114,7 @@ export function AdvancedAnalytics({
 
   // Track page views
   
-    setCurrentPage (path) ;
+    setCurrentPage(path) ;
     trackingRef.current.pageViews++;
 <<<<<<< HEAD
 
@@ -167,11 +131,10 @@ export function AdvancedAnalytics({
     };
 
     // Send to analytics service
-    this.sendAnalyticsData ('pageview', pageViewData) ;
+    this.sendAnalyticsData('pageview', pageViewData) ;
 
 =======
-    
-    
+
     // Send to analytics service'    this.sendAnalyticsData('pageview', pageViewData);
     
 >>>>>>> main
@@ -183,10 +146,9 @@ export function AdvancedAnalytics({
     }) ) }, [enabled, userSession]) ;
 
   // Track user interactions'
-  
-    
+
     // Update tracking ref
-    switch (type) {
+    switch(type) {
 
       case 'click':
         trackingRef.current.clicks++;
@@ -224,24 +186,21 @@ export function AdvancedAnalytics({
   // Track performance metrics
   
     // Use Performance API to get metrics'
-    if ('performance' in window) {
+    if('performance' in window) {
 <<<<<<< HEAD
-      const navigation = performance.getEntriesByType ('navigation') [0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType ('paint') ;
+      const navigation = performance.getEntriesByType('navigation') [0] as PerformanceNavigationTiming;
+      const paint = performance.getEntriesByType('paint') ;
 
       const performanceData = {
         sessionId: userSession,
         loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-        firstPaint: paint.find (entry => entry.name === 'first - paint') ?.startTime || 0,
-        firstContentfulPaint: paint.find (entry => entry.name === 'first - contentful - paint') ?.startTime || 0,
+        firstPaint: paint.find(entry => entry.name === 'first - paint') ?.startTime || 0,
+        firstContentfulPaint: paint.find(entry => entry.name === 'first - contentful - paint') ?.startTime || 0,
         largestContentfulPaint: 0, // Will be updated by observer
         timestamp: new Date () .toISOString () };
 =======
 >>>>>>> main
 
-      
-      
-      
       // Update local state
       setAnalyticsData(prev => ({
 
@@ -259,13 +218,13 @@ export function AdvancedAnalytics({
       this.sendAnalyticsData('performance', performanceData)}
   }, [enabled, userSession]) ;
   // Setup event listeners
-  useEffect ( () => {
-    if (!enabled) return;
+  useEffect(() => {
+    if(!enabled) return;
 
-    setIsTracking (true) ;
+    setIsTracking(true) ;
 
     // Track initial page view
-    trackPageView (window.location.pathname) ;
+    trackPageView(window.location.pathname) ;
 
     // Track performance metrics
     trackPerformance () ;
@@ -276,16 +235,15 @@ export function AdvancedAnalytics({
       const target = e.target as HTMLElement;
       const position = { x: e.clientX, y: e.clientY };
 
-      trackInteraction ('click', { target, position }) ;
+      trackInteraction('click', { target, position }) ;
 
 =======
-    
-      
+
       '      trackInteraction('click', { target, position });
       
 >>>>>>> main
       // Add to heatmap data
-      if (enableHeatmap) {
+      if(enableHeatmap) {
 
         setHeatmapData(prev => [...prev, { x: position.x, y: position.y, type: 'click' }])}    };
 
@@ -293,9 +251,9 @@ export function AdvancedAnalytics({
     let scrollTimeout: NodeJS.Timeout;
 <<<<<<< HEAD
     const handleScroll = () => {
-      clearTimeout (scrollTimeout) ;
-      scrollTimeout = setTimeout ( () => {
-        trackInteraction ('scroll', {
+      clearTimeout(scrollTimeout) ;
+      scrollTimeout = setTimeout(() => {
+        trackInteraction('scroll', {
           scrollY: window.scrollY,
           scrollHeight: document.documentElement.scrollHeight
         }) ;
@@ -305,7 +263,7 @@ export function AdvancedAnalytics({
     // Setup form submission tracking
     const handleFormSubmit = (e: Event) => {
       const form = e.target as HTMLFormElement;
-      trackInteraction ('form', {
+      trackInteraction('form', {
 =======
     
       scrollTimeout = setTimeout(() => {
@@ -348,7 +306,7 @@ export function AdvancedAnalytics({
 
     // Track page visibility changes
     const handleVisibilityChange = (...args: unknown[]): unknown => {
-      if (document.hidden) {
+      if(document.hidden) {
 
         // Page hidden - track session end
         const sessionDuration = Date.now() - sessionStart;        setAnalyticsData(prev => ({
@@ -358,7 +316,7 @@ export function AdvancedAnalytics({
         }) ) } else {
 
         // Page visible - track session resume
-        setSessionStart (Date.now () ) ;
+        setSessionStart(Date.now () ) ;
 <<<<<<< HEAD
       }
     };
@@ -382,11 +340,11 @@ export function AdvancedAnalytics({
   // Setup performance observer for LCP
   useEffect(() => {
 
-    if (!enabled || !('PerformanceObserver' in window)) return;
+    if(!enabled || !('PerformanceObserver' in window)) return;
 
     try {
       
-        const lastEntry = entries[entries.length - 1];        if (lastEntry) {
+        const lastEntry = entries[entries.length-1];        if(lastEntry) {
 
           setAnalyticsData(prev => ({
 
@@ -407,7 +365,7 @@ export function AdvancedAnalytics({
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-      return () => lcpObserver.disconnect () } catch (error) {
+      return () => lcpObserver.disconnect () } catch(error) {
 
       // console.warn('PerformanceObserver not supported:', error)}
   }, [enabled]) ;
@@ -428,13 +386,13 @@ export function AdvancedAnalytics({
         headers: {
 
           'Content-Type': 'application/json'},
-        body: JSON.stringify(analyticsPayload)})} catch (error) {
+        body: JSON.stringify(analyticsPayload)})} catch(error) {
 
       // console.warn('Failed to send analytics data:', error)}
   }, [trackingId, userSession]) ;
   // Generate mock data for demonstration
-  useEffect ( () => {
-    if (!enabled) return;
+  useEffect(() => {
+    if(!enabled) return;
 
     // Simulate data collection
     const mockData: AnalyticsData = {
@@ -477,18 +435,18 @@ export function AdvancedAnalytics({
       }
     };
 
-    setAnalyticsData (mockData) }, [enabled]) ;
-  if (!enabled) return null;
+    setAnalyticsData(mockData) }, [enabled]) ;
+  if(!enabled) return null;
 
-  return()
+  return ()
     <>
       {/* Analytics Toggle Button */}
       <motion.button
-        onClick={ () => setIsOpen (!isOpen) }
-        className="fixed bottom - 20 left - 4 z - 50 p - 3 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - full shadow - lg hover:shadow - xl transition - all duration - 300 text - white"
+        onClick={ () => setIsOpen(!isOpen) }
+        className="fixed bottom - 20 left - 4 z - 50 p - 3 bg-gradient - to - r from - blue - 500 to - purple - 500 rounded-full shadow-lg hover:shadow-xl transition - all duration - 300 text-white"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}"
-        aria-label="Analytics Dashboard"
+        
         aria-expanded={isOpen}"
         aria-controls="analytics-panel"
       >"
@@ -514,7 +472,7 @@ export function AdvancedAnalytics({
               <button
                 onClick={() => setIsOpen(false)}"
                 className="text-gray-400 hover:text-gray-600 transition-colors"
-                aria-label="Close analytics dashboard"
+                
               >"
                 <X className="w-5 h-5"  />
               </button>
@@ -530,28 +488,28 @@ export function AdvancedAnalytics({
               </div>
 <<<<<<< HEAD
 
-              <div className="bg - green - 50 p - 3 rounded - lg">
-                <div className="flex items - center gap - 2 mb - 1">
-                  <Users className="w - 4 h - 4 text - green - 500" />
-                  <span className="text - xs text - green - 600">Visitors</span>
+              <div className="bg-green - 50 p - 3 rounded-lg">
+                <div className="flex items - center gap-2 mb-1">
+                  <Users className="w-4 h-4 text-green -500" />
+                  <span className="text-xs text-green -600">Visitors</span>
                 </div>
-                <div className="text - lg font - bold text - green - 700">{analyticsData.uniqueVisitors.toLocaleString () }</div>
+                <div className="text-lg font - bold text-green -700">{analyticsData.uniqueVisitors.toLocaleString () }</div>
               </div>
 
-              <div className="bg - purple - 50 p - 3 rounded - lg">
-                <div className="flex items - center gap - 2 mb - 1">
-                  <Clock className="w - 4 h - 4 text - purple - 500" />
-                  <span className="text - xs text - purple - 600">Session</span>
+              <div className="bg-purple - 50 p - 3 rounded-lg">
+                <div className="flex items - center gap-2 mb-1">
+                  <Clock className="w-4 h-4 text-purple -500" />
+                  <span className="text-xs text-purple -600">Session</span>
                 </div>
-                <div className="text - lg font - bold text - purple - 700">{Math.round (analyticsData.sessionDuration) }s</div>
+                <div className="text-lg font - bold text-purple -700">{Math.round(analyticsData.sessionDuration) }s</div>
               </div>
 
-              <div className="bg - orange - 50 p - 3 rounded - lg">
-                <div className="flex items - center gap - 2 mb - 1">
-                  <Target className="w - 4 h - 4 text - orange - 500" />
-                  <span className="text - xs text - orange - 600">Conversion</span>
+              <div className="bg-orange - 50 p - 3 rounded-lg">
+                <div className="flex items - center gap-2 mb-1">
+                  <Target className="w-4 h-4 text-orange -500" />
+                  <span className="text-xs text-orange -600">Conversion</span>
                 </div>
-                <div className="text - lg font - bold text - orange - 700">{analyticsData.conversionRate.toFixed (1) }%</div>
+                <div className="text-lg font - bold text-orange -700">{analyticsData.conversionRate.toFixed(1) }%</div>
 =======
               "
               <div className="bg-green-50 p-3 rounded-lg">"

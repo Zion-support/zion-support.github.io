@@ -1,48 +1,16 @@
-import { Link } from 'react - router - dom';
-import React from 'react';
-import {
-
-  ENHANCED_SERVICES,
-  ENHANCED_SERVICE_CATEGORIES} from '@/data/enhancedServices';
+import { Link  } from 'react-router-dom';
+ from '@/data/enhancedServices';
 import { Button } from '@/components/ui/button';
-import {
-
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle} from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import {
-
-  Brain,
-  Shield,
-  Database,
-  Briefcase,
-  DollarSign,
-  Heart,
-  GraduationCap,
-  Truck,
-  Home,
-  Zap,
-  Users,
-  BarChart3,
-  Lock,
-  TrendingUp,
-  CheckCircle,
-  Star,
-  Globe,
-  Clock,
-  Mail,
-  Phone,
-  MapPin} from 'lucide-react';
-import { Link } from 'react-router-dom';
-const ServiceCategory = ({ category, services }) => {
+import { Brain, Shield, Database, Briefcase, DollarSign, Heart, GraduationCap, Truck, Home, Zap, Users, BarChart3, Lock, TrendingUp, CheckCircle, Star, Globe, Clock, Mail, Phone, MapPin  } from 'lucide-react';
+import { Link  } from 'react-router-dom';
+) => {
 
   const categoryServices = services.filter(service =>
     service.category.toLowerCase().includes(category.toLowerCase())
   );
-  if (categoryServices.length === 0) return null;
+  if(categoryServices.length === 0) return null;
   const getCategoryIcon = categoryName => {
 
     const iconMap = {
@@ -194,8 +162,7 @@ const BenefitsSection = () => ("
         <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
           Our comprehensive suite of micro SAAS services is designed to
           transform your business operations with cutting-edge technology and
-          proven solutions.
-        </p>
+          proven solutions.</p>
       </div>
 "
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
@@ -208,8 +175,7 @@ const BenefitsSection = () => ("
           </h3>"
           <p className="text-zion-slate-light">
             Leverage the latest artificial intelligence and machine learning
-            technologies to automate processes and gain valuable insights.
-          </p>
+            technologies to automate processes and gain valuable insights.</p>
         </div>
 "
         <div className="text-center">"
@@ -221,8 +187,7 @@ const BenefitsSection = () => ("
           </h3>"
           <p className="text-zion-slate-light">
             Built with enterprise-grade security and compliance standards to
-            protect your data and meet regulatory requirements.
-          </p>
+            protect your data and meet regulatory requirements.</p>
         </div>
 "
         <div className="text-center">"
@@ -234,8 +199,7 @@ const BenefitsSection = () => ("
           </h3>"
           <p className="text-zion-slate-light">
             Quick deployment and setup with minimal disruption to your existing
-            operations, delivering value in weeks, not months.
-          </p>
+            operations, delivering value in weeks, not months.</p>
         </div>
 "
         <div className="text-center">"
@@ -245,8 +209,7 @@ const BenefitsSection = () => ("
           <h3 className="text-xl font-bold text-white mb-3">Expert Support</h3>"
           <p className="text-zion-slate-light">
             24/7 technical support and dedicated account management to ensure
-            your success and maximize ROI.
-          </p>
+            your success and maximize ROI.</p>
         </div>
 "
         <div className="text-center">"
@@ -258,8 +221,7 @@ const BenefitsSection = () => ("
           </h3>"
           <p className="text-zion-slate-light">
             Cloud-native solutions that grow with your business, from startup to
-            enterprise, with flexible pricing options.
-          </p>
+            enterprise, with flexible pricing options.</p>
         </div>
 "
         <div className="text-center">"
@@ -269,8 +231,7 @@ const BenefitsSection = () => ("
           <h3 className="text-xl font-bold text-white mb-3">Proven Results</h3>"
           <p className="text-zion-slate-light">
             Trusted by thousands of businesses worldwide with proven track
-            records of improving efficiency and reducing costs.
-          </p>
+            records of improving efficiency and reducing costs.</p>
         </div>
       </div>
     </div>
@@ -284,8 +245,7 @@ const ContactSection = () => ("
       </h2>"
       <p className="text-zion-slate-light text-lg max-w-2xl mx-auto mb-8">
         Contact our team to discuss your specific needs and find the perfect
-        solution for your business transformation journey.
-      </p>
+        solution for your business transformation journey.</p>
 "
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">"
         <div className="flex items-center justify-center space-x-3 p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">"
@@ -359,6 +319,7 @@ const ContactSection = () => ("
   </section>
 );
 export default function EnhancedServicesOverview() {
+
   return ("
     <div className="space-y-16">
       {/* Hero Section */}"
@@ -368,9 +329,8 @@ export default function EnhancedServicesOverview() {
         </h1>"
         <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">
           Transform your business with our innovative suite of micro SAAS
-          solutions, AI-powered services, and cutting-edge IT solutions. From
-          startups to enterprises, we have the tools you need to succeed.
-        </p>"
+          solutions, AI-powered services, and cutting-edge IT solutions.From
+          startups to enterprises, we have the tools you need to succeed.</p>"
         <div className="flex flex-wrap justify-center gap-4">
           <Button"
             size="lg"

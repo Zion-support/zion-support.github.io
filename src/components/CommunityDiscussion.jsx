@@ -1,58 +1,13 @@
 <<<<<<< HEAD
 import React, { useState } from "react";
-import { Avatar, AvatarFallback } from "@/components / ui / avatar";
-import { Card, CardContent } from "@/components / ui / card";
-import { Input } from "@/components / ui / input";
-import { MessageCircle import { Button } from "@/components / ui / button";
-import { Separator } from "@/components / ui / separator";
-import { Textarea } from "@/components / ui / textarea";
-export const CommunityDiscussion = () => {
-
-=======
-import React, { useState } from "react";"
-import { MessageCircle import { Button } from "@/components/ui/button";"
-import { Input } from "@/components/ui/input";"
-import { Textarea } from "@/components/ui/textarea";"
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";"
-import { Card, CardContent } from "@/components/ui/card";"
-import { Separator } from "@/components/ui/separator";
->>>>>>> main
-const initialPosts = [
-    {
-
-        id: 1,"
-        author: "Anna Zhou","
-        time: "2h ago","
-        title: "What AI trends are you most excited for in 2025?","
-        body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},
-    {
-
-        id: 2,"
-        author: "David Kim","
-        time: "50m ago","
-        title: "Quick tip: How to rank your Zion listing higher","
-        body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."},
-];
-export const CommunityDiscussion = () => {
-    const [posts, setPosts] = useState(initialPosts);
-    const [showNew, setShowNew] = useState(false);"
-    const [newTitle, setNewTitle] = useState("");"
-    const [newBody, setNewBody] = useState("");
-    const handleAddPost = () => {
-        if (!newTitle.trim () || !newBody.trim () ) return;
-        setPosts ([
-            {
-
-                id: Date.now(),"
-                author: "You","
-                time: "Now",
-                title: newTitle,
-                body: newBody},
-            ...posts,
-        ]);"
-        setNewTitle("");"
-        setNewBody("");
-        setShowNew(false)};"
+import { Avatar, AvatarFallback } from '@/components / ui / avatar';
+export default function Page() {
+ from '@/components/ui/textarea';"
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';"
+import { Card, CardContent } from '@/components/ui/card';"
+import { Separator } from '@/components/ui/separator';
+export default function Page() {
+;"
     return (<div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">"
       <div className="flex items-center gap-3 mb-4">"
         <MessageCircle aria-hidden="true" size={28} className="text-zion-cyan"/>"
@@ -71,7 +26,7 @@ export const CommunityDiscussion = () => {
       </div>"
       {showNew && (<Card className="mb-6 animate-scale-in">"
           <CardContent className="py-5">"
-            <Input placeholder="Title (e.g., Share an AI tool, Ask for help...)" className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} maxLength={80}/>'"
+            <Input placeholder="Title(e.g., Share an AI tool, Ask for help...)" className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} maxLength={80}/>'"
             <Textarea placeholder="What's on your mind?" className="mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[70px]" value={newBody} onChange={(e) => setNewBody(e.target.value)} maxLength={400} rows={3}/>"
             <div className="flex gap-3 justify-end">"
               <Button variant="secondary" size="sm" className="bg-zion-blue text-white hover:bg-zion-blue-dark" onClick={() => setShowNew(false)}>
@@ -108,7 +63,6 @@ export const CommunityDiscussion = () => {
           </Card>))}
       </div>"
       <div className="mt-8 text-xs text-zion-slate-dark text-center">
-        🚀 Stay engaged! Top contributors are regularly featured on the homepage.
-      </div>
+        🚀 Stay engaged! Top contributors are regularly featured on the homepage.</div>
     </div>)};
 '"

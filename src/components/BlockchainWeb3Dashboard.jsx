@@ -1,24 +1,6 @@
 import { useState, useCallback } from 'react';
-<<<<<<< HEAD
-import { Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2 } from 'lucide - react';
-import React, { useState } from 'react';
-=======
-import { motion, AnimatePresence } from 'framer-motion';
-import { Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2 } from 'lucide-react';
-import { useBlockchainWeb3 } from "../hooks/useBlockchainWeb3";"
-import { useAnalytics } from "../hooks/useAnalytics";
->>>>>>> main
-export const BlockchainWeb3Dashboard = ({ className = '' }) => {
-
-<<<<<<< HEAD
-    const { trackEvent } = useAnalytics ({
-=======
-    const { trackEvent } = useAnalytics({
-
->>>>>>> main
-        enableTracking: true,
-        enableUserBehaviorTracking: true
-    });
+export default function Page() {
+);
     const [activeTab, setActiveTab] = useState('overview');
     const [showMintNFT, setShowMintNFT] = useState(false);
     const [showSendTransaction, setShowSendTransaction] = useState(false);
@@ -34,19 +16,19 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
         to: '',
         value: '',
         data: ''
-    }) ;
-    const handleConnectWallet = useCallback (async () => {
+    });
+    const handleConnectWallet = useCallback(async () => {
         try {
             await connectWallet();
             // // // // // // // // console.error('Failed to connect wallet:', error);
         }
             trackEvent('blockchain',dashboard',wallet_connected')}
-        catch (error) {
+        catch(error) {
 
             // console.error('Failed to connect wallet:', error)}
     }, [connectWallet, trackEvent]);
     const handleMintNFT = useCallback(async () => {
-        if (nftForm.name.trim() && wallet) {
+        if(nftForm.name.trim() && wallet) {
 
             try {
                 const metadata = {
@@ -54,10 +36,6 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
   name: nftForm.name,
                     description: nftForm.description,
   image: nftForm.image || `https://via.placeholder.com/300x300/6366f1/ffffff?text=${nftForm.name
-
-
-
-
 
 `
 }`
@@ -68,13 +46,13 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 // // // // // // // // console.error('Failed to mint NFT:', error);
             }
                 trackEvent('blockchain',dashboard',nft_minted')}
-            catch (error) {
+            catch(error) {
 
                 // console.error('Failed to mint NFT:', error)}
         }
     }, [nftForm, wallet, contracts, mintNFT, trackEvent]);
     const handleSendTransaction = useCallback(async () => {
-        if (transactionForm.to.trim() && transactionForm.value && wallet) {
+        if(transactionForm.to.trim() && transactionForm.value && wallet) {
 
             try {
                 await sendTransaction(transactionForm.to, transactionForm.value, transactionForm.data || null);
@@ -83,14 +61,14 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 // // // // // // // // console.error('Failed to send transaction:', error);
             }
                 trackEvent('blockchain',dashboard',transaction_sent')}
-            catch (error) {
+            catch(error) {
 
                 // console.error('Failed to send transaction:', error)}
         }
     }, [transactionForm, wallet, sendTransaction, trackEvent]) ;
     const getStatusColor = (status) => {
 
-        switch (status) {
+        switch(status) {
 
             case 'confirmed': return 'text-green-600 bg-green-100';
             case 'pending': return 'text-yellow-600 bg-yellow-100';
@@ -105,7 +83,6 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 abi: [],
                 functions: ['function1',function2'],
                 events: ['Event1',Event2']
-
 
 "
 })} className="px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">"
@@ -166,10 +143,6 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
 
   { opacity: 0,
   y: -20
-
-
-
-
 
 "
 }} className="space-y-4">"
@@ -233,10 +206,6 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
   { opacity: 0,
   y: -20
 
-
-
-
-
 "
 }} className="space-y-4">"
               <div className="flex items-center justify-between">"
@@ -251,7 +220,6 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 amount: '1000',
                 apy: 12.5,
   rewards: '125'
-
 
 "
 })} className="px-3 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover:bg-green-700">"
@@ -317,10 +285,6 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
 
   { opacity: 0,
   y: -20
-
-
-
-
 
 "
 }} className="space-y-4">"
@@ -418,11 +382,8 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
   { scale: 0.9,
   opacity: 0
 
-}} className="bg - white dark:bg - gray - 800 rounded - lg p - 6 w - full max - w-md mx - 4">
-              <h3 className="text - lg font - semibold text - gray - 900 dark:text - white mb - 4">Mint New NFT</h3>
-
-
-
+}} className="bg-white dark:bg-gray - 800 rounded-lg p - 6 w-full max - w-md mx -4">
+              <h3 className="text-lg font - semibold text-gray - 900 dark:text-white mb-4">Mint New NFT</h3>
 
 "
 }} className="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4">"
@@ -434,7 +395,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                     Name
 <<<<<<< HEAD
                   </label>
-                  <input type="text" value={nftForm.name} onChange = { (e) => setNftForm (prev => ({ ...prev,
+                  <input type="text" value={nftForm.name} onChange = { (e) => setNftForm(prev => ({ ...prev,
   name: e.target.value
 =======
                   </label>"
@@ -443,10 +404,6 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
   (e) => setNftForm(prev => ({ ...prev,
   name: e.target.value 
 >>>>>>> main
-
-
-
-
 
 "
 }))} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="NFT Name"/>
@@ -457,7 +414,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                     Description
                   </label>
 <<<<<<< HEAD
-                  <textarea value={nftForm.description} onChange = { (e) => setNftForm (prev => ({ ...prev,
+                  <textarea value={nftForm.description} onChange = { (e) => setNftForm(prev => ({ ...prev,
   description: e.target.value
 =======
                   <textarea value={nftForm.description} onChange = {
@@ -466,19 +423,15 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
   description: e.target.value 
 >>>>>>> main
 
-
-
-
-
 "
 }))} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="NFT Description" rows={3}/>
                 </div>
 
 <<<<<<< HEAD
                 <div>
-                  <label className="block text - sm font - medium text - gray - 700 dark:text - gray - 300 mb - 1">
-                    Image URL (optional) </label>
-                  <input type="url" value={nftForm.image} onChange = { (e) => setNftForm (prev => ({ ...prev,
+                  <label className="block text-sm font - medium text-gray - 700 dark:text-gray - 300 mb-1">
+                    Image URL(optional) </label>
+                  <input type="url" value={nftForm.image} onChange = { (e) => setNftForm(prev => ({ ...prev,
   image: e.target.value
 =======
                 <div>"
@@ -490,10 +443,6 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
   (e) => setNftForm(prev => ({ ...prev,
   image: e.target.value 
 >>>>>>> main
-
-
-
-
 
 "
 }))} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="https://example.com/image.jpg"/>
@@ -531,11 +480,8 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
   { scale: 0.9,
   opacity: 0
 
-}} className="bg - white dark:bg - gray - 800 rounded - lg p - 6 w - full max - w-md mx - 4">
-              <h3 className="text - lg font - semibold text - gray - 900 dark:text - white mb - 4">Send Transaction</h3>
-
-
-
+}} className="bg-white dark:bg-gray - 800 rounded-lg p - 6 w-full max - w-md mx -4">
+              <h3 className="text-lg font - semibold text-gray - 900 dark:text-white mb-4">Send Transaction</h3>
 
 "
 }} className="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4">"
@@ -547,7 +493,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                     To Address
 <<<<<<< HEAD
                   </label>
-                  <input type="text" value={transactionForm.to} onChange = { (e) => setTransactionForm (prev => ({ ...prev,
+                  <input type="text" value={transactionForm.to} onChange = { (e) => setTransactionForm(prev => ({ ...prev,
   to: e.target.value
 =======
                   </label>"
@@ -557,19 +503,15 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
   to: e.target.value 
 >>>>>>> main
 
-
-
-
-
 "
 }))} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="0x..."/>
                 </div>
 
 <<<<<<< HEAD
                 <div>
-                  <label className="block text - sm font - medium text - gray - 700 dark:text - gray - 300 mb - 1">
-                    Amount (ETH) </label>
-                  <input type="number" step="0.001" value={transactionForm.value} onChange = { (e) => setTransactionForm (prev => ({ ...prev,
+                  <label className="block text-sm font - medium text-gray - 700 dark:text-gray - 300 mb-1">
+                    Amount(ETH) </label>
+                  <input type="number" step="0.001" value={transactionForm.value} onChange = { (e) => setTransactionForm(prev => ({ ...prev,
   value: e.target.value
 =======
                 <div>"
@@ -582,19 +524,15 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
   value: e.target.value 
 >>>>>>> main
 
-
-
-
-
 "
 }))} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="0.1"/>
                 </div>
 
 <<<<<<< HEAD
                 <div>
-                  <label className="block text - sm font - medium text - gray - 700 dark:text - gray - 300 mb - 1">
-                    Data (optional) </label>
-                  <textarea value={transactionForm.data} onChange = { (e) => setTransactionForm (prev => ({ ...prev,
+                  <label className="block text-sm font - medium text-gray - 700 dark:text-gray - 300 mb-1">
+                    Data(optional) </label>
+                  <textarea value={transactionForm.data} onChange = { (e) => setTransactionForm(prev => ({ ...prev,
   data: e.target.value
 =======
                 <div>"
@@ -606,10 +544,6 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
   (e) => setTransactionForm(prev => ({ ...prev,
   data: e.target.value 
 >>>>>>> main
-
-
-
-
 
 "
 }))} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="0x..." rows={3}/>

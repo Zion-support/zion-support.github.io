@@ -45,8 +45,7 @@ export interface UltimateInnovativeService2027 {
     caseStudies?: string[]}}
 
 export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] =
-  [
-    // AI-Powered Quantum Computing Platform
+  [// AI-Powered Quantum Computing Platform
     {
 
       id: 'ai-quantum-computing-platform',
@@ -636,7 +635,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
 
         headline: 'Transform Your Business with Autonomous AI Operations',
         valueProposition:'
-          'Let AI run your business autonomously while you focus on innovation and growth. Achieve 95% cost reduction and 24/7 operations.',
+          'Let AI run your business autonomously while you focus on innovation and growth.Achieve 95% cost reduction and 24/7 operations.',
         keyFeatures: ['
           'Complete business process automation with AI intelligence',Autonomous decision-making for strategic planning',Predictive analytics for market opportunities',Automated customer service and support',Intelligent financial management and reporting',
         ],

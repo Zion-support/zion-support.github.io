@@ -1,25 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from './ui/Button';
-const ContactForm = () => {
-  const [formData, setFormData] = useState({
-
-    firstName: '',
-    lastName: '',
-    email: '',
-    comp: '',
-    phone: '',
-    service: '',
-    message: ''});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState('idle');
-  const handleInputChange = e => {
-
-    const { name, value } = e.target;
-    setFormData(prev => ({
-
-      ...prev,
-      [name]: value}));
-  };
+export default function Page() {
+;
   const handleSubmit = async e => {
 
     e.preventDefault();
@@ -40,7 +22,7 @@ const ContactForm = () => {
         message: ''});
       setSubmitStatus('success');
       setTimeout(() => setSubmitStatus('idle'), 5000);
-    } catch (error) {
+    } catch(error) {
 
       setSubmitStatus('error');
       setTimeout(() => setSubmitStatus('idle'), 5000);
@@ -54,7 +36,7 @@ const ContactForm = () => {
     formData.lastName &&
     formData.email &&
     formData.message;
-  return()
+  return ()
     <div className="max-w-2xl mx-auto">
       {submitStatus === 'success' && ("
         <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">"
@@ -70,9 +52,8 @@ const ContactForm = () => {
                 clipRule="evenodd"
               />
             </svg>
-            Thank you! Your message has been sent successfully. We'll get back
-            to you within 24 hours.
-          </div>
+            Thank you! Your message has been sent successfully.We'll get back
+            to you within 24 hours.</div>
         </div>
       )}
 
@@ -90,8 +71,7 @@ const ContactForm = () => {
                 clipRule="evenodd"
               />
             </svg>
-            Something went wrong. Please try again or contact us directly.
-          </div>
+            Something went wrong.Please try again or contact us directly.</div>
         </div>
       )}
 "
@@ -268,8 +248,7 @@ const ContactForm = () => {
           >
             Terms of Service
           </a>
-          .
-        </p>
+          .</p>
       </form>
     </div>
   );

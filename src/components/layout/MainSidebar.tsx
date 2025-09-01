@@ -1,91 +1,8 @@
 <<<<<<< HEAD
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import {
-  Menu,
-  X,
-  ChevronDown,
-=======
-import {
-  Menu, 
-  X, 
-  ChevronDown, 
->>>>>>> main
-  ChevronRight,
-  Home,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Cpu,
-  Users,
-  ShoppingCart,
-  BookOpen,
-  MessageCircle,
-  HelpCircle,
-  DollarSign,
-  Star,
-  Target,
-  TrendingUp,
-  Award,
-  Settings,
-  Globe,
-  Rocket,
-  Heart,
-  Lock,
-  Database,
-  Network,
-  Palette,
-  Video,
-  PenTool,
-  Atom,
-  Server,
-  Smartphone,
-  BarChart3,
-  Search,
-  FileText,
-  Calendar,
-  Briefcase,
-  Info,
-  Phone,
-  Mail,
-  MapPin,
-  Users'
-} from 'lucide-react';
-
-interface SidebarItem {
-
-  name: string;
-  href: string;
-  icon: React.ComponentType<any>;
-  children?: SidebarItem[];
-  featured?: boolean;
-  description?: string;
-
-export function MainSidebar() {
-  const [isOpen, setIsOpen] = useState(false);
-<<<<<<< HEAD
-  const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
-  const location = useLocation();
-
-  const toggleSection = (section: string) => {
-    setExpandedSections(prev =>
-      prev.includes(section)
-        ? prev.filter(s => s !== section)
-        : [...prev, section]
-    );
-  };
-
-=======
-  const [expandedSections, setExpandedSections] = useState<string[]>(['services'])};
->>>>>>> main
-  const navigation: SidebarItem[] = [
-    {
-
-      title: 'Main',
-      items[;
-        { name: 'Home', href: '/', icon: Home },
-        { name: 'About', href: '/about', icon: Building },
+import { Link, useLocation  } from 'react-router-dom';
+export default function Page() {
+,
         { name: 'Services', href: '/services', icon: Briefcase },
         { name: 'Solutions', href: '/solutions', icon: Target },
         { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
@@ -102,8 +19,7 @@ export function MainSidebar() {
       name: 'Core Services',
       href: '#',
       icon: Target,
-      children: [
-        {
+      children: [{
 
           name: 'Cloud & DevOps',
           href: '/services/cloud-devops',
@@ -138,8 +54,7 @@ export function MainSidebar() {
       name: 'AI Products',
       href: '#',
       icon: Brain,
-      children: [
-        {
+      children: [{
 
           name: 'AI Sales Copilot',
           href: '/services/ai-sales-copilot',
@@ -174,8 +89,7 @@ export function MainSidebar() {
       name: 'Emerging Tech',
       href: '#',
       icon: Rocket,
-      children: [
-        {
+      children: [{
 
           name: 'Quantum Computing',
           href: '/services/quantum-computing',
@@ -210,8 +124,7 @@ export function MainSidebar() {
       name: 'Business Solutions',
       href: '#',
       icon: Briefcase,
-      children: [
-        {
+      children: [{
 
           name: 'Marketplace',
           href: '/marketplace',
@@ -246,8 +159,7 @@ export function MainSidebar() {
       name: 'Company',
       href: '#',
       icon: Info,
-      children: [
-        {
+      children: [{
 
           name: 'About Us',
           href: '/about',
@@ -282,8 +194,7 @@ export function MainSidebar() {
       name: 'Resources',
       href: '#',
       icon: BookOpen,
-      children: [
-        {
+      children: [{
 
           name: 'Blog',
           href: '/blog',
@@ -321,17 +232,12 @@ export function MainSidebar() {
     }
   ];
 
-  
-    
-    
-    
-    return()      <div key={item.name} className="mb-1">
+    return ()      <div key={item.name} className="mb-1">
         {hasChildren ? (
           <div>
             <button
               onClick={(: unknown toggleSection(item.name.toLowerCase())}
-              className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
-<<<<<<< HEAD
+              className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${<<<<<<< HEAD
                 level === 0
                   ? 'text-slate-300 hover:text-white hover:bg-slate-700/50'
                   : 'text-slate-400 hover:text-slate-300'
@@ -370,9 +276,7 @@ export function MainSidebar() {
         ) : 
           <Link
             to={item.href}`
-            className={`flex items-center space-x-3 px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
-
-              isActive'
+            className={`flex items-center space-x-3 px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${isActive'
                 ? 'text-cyan-400 bg-cyan-400/10 border border-cyan-400/20'
                 : level === 0'
                 ? 'text-slate-300 hover:text-white hover:bg-slate-700/50''
@@ -389,7 +293,7 @@ export function MainSidebar() {
       </div>
     )};
 
-  return()
+  return ()
     <>
       {/* Mobile menu button */}
       <button

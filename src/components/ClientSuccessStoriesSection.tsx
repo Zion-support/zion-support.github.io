@@ -1,10 +1,7 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { motion } from 'framer - motion';
+import { <<<<<<< HEAD import { motion  } from 'framer-motion';
 
- * ClientSuccessStoriesSection function
- * @param {*} params - Function parameters
+ params - Function parameters
  * @returns {*} Function return value
  */
 function ClientSuccessStoriesSection () {
@@ -24,17 +21,15 @@ function ClientSuccessStoriesSection () {
       metrics['8 Week Launch',MVP Ready',Scalable Architecture']};
   ];
 
-  
     { label: 'Average Rating', value: '4.9/5', icon: Star };
   ];
-const successStories = [
-  {
+const successStories = [{
 
 <<<<<<< HEAD
-  return (<section className = "py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
-      <div className="max - w-7xl mx - auto px - 6">
+  return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
+      <div className="max - w-7xl mx - auto px-6">
         <motion.div
-          className="text - center mb - 16"
+          className="text-center mb-16"
 =======
     id: 1,
     client: "TechCorp Solutions","
@@ -46,7 +41,7 @@ const successStories = [
       "Reduced operational costs by 35%","
       "Improved customer satisfaction by 45%"
     ],"
-    testimonial: "Zion Tech Group transformed our entire operation. The results exceeded our expectations.","
+    testimonial: "Zion Tech Group transformed our entire operation.The results exceeded our expectations.","
     author: "Sarah Johnson","
     position: "CTO",
     rating: 5,"
@@ -64,7 +59,7 @@ const successStories = [
       "Zero security breaches","
       "Reduced audit time by 70%"
     ],"
-    testimonial: "Their security solutions are world-class. We feel completely protected now.","
+    testimonial: "Their security solutions are world-class.We feel completely protected now.","
     author: "Michael Chen","
     position: "CISO",
     rating: 5,"
@@ -83,7 +78,7 @@ const successStories = [
       "Enhanced data accuracy by 95%"
     ],;"
     testimonial: "The AI platform revolutionized how we handle patient data and make decisions.",;"
-    author: "Dr. Emily Rodriguez",;"
+    author: "Dr.Emily Rodriguez",;"
     position: "Chief Medical Officer",;
     rating: 5,;"
     image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400"};
@@ -93,7 +88,7 @@ const successStories = [
 
 export function ClientSuccessStoriesSection() {
   return ("
-    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
@@ -117,9 +112,8 @@ export function ClientSuccessStoriesSection() {
             Client Success Stories
           </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Real results from real clients. Discover how we've helped businesses
-            across industries achieve remarkable transformations and measurable success.
-          </p>
+            Real results from real clients.Discover how we've helped businesses
+            across industries achieve remarkable transformations and measurable success.</p>
         </motion.div>
 
           initial = {
@@ -205,33 +199,33 @@ export function ClientSuccessStoriesSection() {
               </div>
 <<<<<<< HEAD
 
-              <div className="p - 6">
-                <h3 className="text - xl font - bold text - white mb - 2">
+              <div className="p -6">
+                <h3 className="text-xl font - bold text-white mb-2">
                   {story.client}
                 </h3>
 
-                <div className="mb - 4">
-                  <h4 className="text - sm font - semibold text - gray - 300 mb - 2">Challenge:</h4>
-                  <p className="text - gray - 400 text - sm">{story.challenge}</p>
+                <div className="mb-4">
+                  <h4 className="text-sm font - semibold text-gray - 300 mb-2">Challenge:</h4>
+                  <p className="text-gray - 400 text-sm">{story.challenge}</p>
                 </div>
 
-                <div className="mb - 4">
-                  <h4 className="text - sm font - semibold text - gray - 300 mb - 2">Solution:</h4>
-                  <p className="text - gray - 400 text - sm">{story.solution}</p>
+                <div className="mb-4">
+                  <h4 className="text-sm font - semibold text-gray - 300 mb-2">Solution:</h4>
+                  <p className="text-gray - 400 text-sm">{story.solution}</p>
                 </div>
 
-                <div className="mb - 4">
-                  <h4 className="text - sm font - semibold text - gray - 300 mb - 2">Results:</h4>
+                <div className="mb-4">
+                  <h4 className="text-sm font - semibold text-gray - 300 mb-2">Results:</h4>
                   <ul className="space - y-1">
-                    {story.results.map ( (result, resultIndex) => (<li key={resultIndex} className="flex items - center gap - 2 text - sm">
-                        <div className="w - 2 h - 2 bg - green - 400 rounded - full"></div>
-                        <span className="text - gray - 300">{result}</span>
+                    {story.results.map((result, resultIndex) => (<li key={resultIndex} className="flex items - center gap-2 text-sm">
+                        <div className="w-2 h-2 bg-green - 400 rounded-full"></div>
+                        <span className="text-gray -300">{result}</span>
                       </li>) ) }
                   </ul>
                 </div>
 
-                <div className="border - t border - slate - 700 pt - 4">
-                  <blockquote className="text - gray - 300 text - sm italic mb - 3">
+                <div className="border-t border-slate - 700 pt -4">
+                  <blockquote className="text-gray - 300 text-sm italic mb-3">
 =======
               "
               <div className="p-6">"
@@ -285,7 +279,7 @@ export function ClientSuccessStoriesSection() {
         {/* Success Metrics */}
 <<<<<<< HEAD
         <motion.div
-          className="mb - 16";
+          className="mb-16";
 =======
         <motion.div "
           className="mb-16";
@@ -316,22 +310,22 @@ export function ClientSuccessStoriesSection() {
             </h3>
 <<<<<<< HEAD
 
-            <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 8">
-              <div className="text - center">
-                <div className="text - 4xl font - bold text - blue - 400 mb - 2">98%</div>
-                <div className="text - gray - 300 text - sm">Client Satisfaction</div>
+            <div className="grid grid - cols - 2 md:grid - cols - 4 gap-8">
+              <div className="text-center">
+                <div className="text-4xl font - bold text-blue - 400 mb-2">98%</div>
+                <div className="text-gray - 300 text-sm">Client Satisfaction</div>
               </div>
-              <div className="text - center">
-                <div className="text - 4xl font - bold text - green - 400 mb - 2">500+</div>
-                <div className="text - gray - 300 text - sm">Projects Delivered</div>
+              <div className="text-center">
+                <div className="text-4xl font - bold text-green - 400 mb-2">500+</div>
+                <div className="text-gray - 300 text-sm">Projects Delivered</div>
               </div>
-              <div className="text - center">
-                <div className="text - 4xl font - bold text - purple - 400 mb - 2">25+</div>
-                <div className="text - gray - 300 text - sm">Industries Served</div>
+              <div className="text-center">
+                <div className="text-4xl font - bold text-purple - 400 mb-2">25+</div>
+                <div className="text-gray - 300 text-sm">Industries Served</div>
               </div>
-              <div className="text - center">
-                <div className="text - 4xl font - bold text - orange - 400 mb - 2">99.9%</div>
-                <div className="text - gray - 300 text - sm">Uptime Guarantee</div>
+              <div className="text-center">
+                <div className="text-4xl font - bold text-orange - 400 mb-2">99.9%</div>
+                <div className="text-gray - 300 text-sm">Uptime Guarantee</div>
 =======
             "
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">"
@@ -358,7 +352,7 @@ export function ClientSuccessStoriesSection() {
 
 <<<<<<< HEAD
         <motion.div
-          className="text - center"
+          className="text-center"
 =======
         <motion.div "
           className="text-center"
@@ -389,8 +383,7 @@ export function ClientSuccessStoriesSection() {
             </h3>"
             <p className="text-green-100 mb-6 max-w-2xl mx-auto">
               Join hundreds of satisfied clients who have transformed their
-              businesses with our innovative technology solutions.
-            </p>"
+              businesses with our innovative technology solutions.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-green-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Start Your Project"

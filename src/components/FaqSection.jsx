@@ -1,5 +1,5 @@
 export function FaqSection() {
-  return()
+  return ()
     <div className="py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">"
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">"
         <div className="text-center mb-12">"
@@ -19,8 +19,7 @@ export function FaqSection() {
             <p className="text-zion-slate-light">
               We offer comprehensive AI solutions, cybersecurity services, cloud
               infrastructure, data analytics, blockchain development, and
-              innovative technology consulting.
-            </p>
+              innovative technology consulting.</p>
           </div>
 "
           <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-6">"
@@ -28,10 +27,9 @@ export function FaqSection() {
               How can I get started with your services?
             </h3>"
             <p className="text-zion-slate-light">
-              Contact us through our website or call us directly. We'll schedule
+              Contact us through our website or call us directly.We'll schedule
               a consultation to understand your needs and provide a customized
-              solution.
-            </p>
+              solution.</p>
           </div>
 "
           <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-6">"
@@ -39,10 +37,9 @@ export function FaqSection() {
               What is your typical project timeline?
             </h3>"
             <p className="text-zion-slate-light">
-              Project timelines vary based on complexity. Simple projects may
+              Project timelines vary based on complexity.Simple projects may
               take 2-4 weeks, while complex enterprise solutions can take 3-6
-              months or more.
-            </p>
+              months or more.</p>
           </div>
         </div>
       </div>

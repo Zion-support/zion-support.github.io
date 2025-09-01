@@ -1,5 +1,4 @@
-export const ADVANCED_MICRO_SERVICES = [
-    // AI-Powered Business Intelligence
+export const ADVANCED_MICRO_SERVICES = [// AI-Powered Business Intelligence
     {
 
         id: "ai-business-intelligence-suite","

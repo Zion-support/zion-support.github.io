@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { BarChart3, RefreshCw, X, Maximize2, Minimize2 } from 'lucide-react';
-const mockChartData = ['
-    { id: '1', name: 'Q1 Revenue', value: 1250000, category: 'Revenue', timestamp: new Date('2024-01-01') },
+import { BarChart3, RefreshCw, X, Maximize2, Minimize2  } from 'lucide-react';
+,
     { id: '2', name: 'Q2 Revenue', value: 1580000, category: 'Revenue', timestamp: new Date('2024-04-01') },
     { id: '3', name: 'Q3 Revenue', value: 1420000, category: 'Revenue', timestamp: new Date('2024-07-01') },
     { id: '4', name: 'Q4 Revenue', value: 1890000, category: 'Revenue', timestamp: new Date('2024-10-01') },
@@ -51,7 +50,7 @@ export function AdvancedDataVisualization() {
             setData(newData);
             setIsRefreshing(false)}, 1000)};
     useEffect(() => {
-        if (autoRefresh) {
+        if(autoRefresh) {
 
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
             return () => clearInterval(interval)}
@@ -61,7 +60,7 @@ export function AdvancedDataVisualization() {
         // Simulate chart download
         // console.log(`Downloading chart as ${format}`)};
     const renderChart = () => {
-        switch (selectedChartType) {
+        switch(selectedChartType) {
 
             case 'bar':
                 return renderBarChart();
@@ -100,10 +99,10 @@ export function AdvancedDataVisualization() {
           <polyline fill="none" stroke={colors[0]} strokeWidth="3" points = {
 
   filteredData.map((item,`
-  index) => `${(index / (filteredData.length - 1)) * 800
+  index) => `${(index / (filteredData.length-1)) * 800
 '`
 },${280 - (item.value / maxValue) * 280}`).join(' ')}/>"
-          {filteredData.map((item, index) => (<circle key={item.id} cx={(index / (filteredData.length - 1)) * 800} cy={280 - (item.value / maxValue) * 280} r="6" fill={colors[0]} className="cursor-pointer hover:r-8 transition-all duration-200"/>))}
+          {filteredData.map((item, index) => (<circle key={item.id} cx={(index / (filteredData.length-1)) * 800} cy={280 - (item.value / maxValue) * 280} r="6" fill={colors[0]} className="cursor-pointer hover:r-8 transition-all duration-200"/>))}
         </svg>"
         <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">
           {filteredData.map(item => (<span key={item.id}>{item.name}</span>))}
@@ -149,7 +148,7 @@ export function AdvancedDataVisualization() {
   `M 0,
   ${280
 '`
-} ${filteredData.map((item, index) => `L ${(index / (filteredData.length - 1)) * 800},${280 - (item.value / maxValue) * 280}`).join(' ')} L 800,${280} Z`}/>
+} ${filteredData.map((item, index) => `L ${(index / (filteredData.length-1)) * 800},${280 - (item.value / maxValue) * 280}`).join(' ')} L 800,${280} Z`}/>
         </svg>"
         <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">
           {filteredData.map(item => (<span key={item.id}>{item.name}</span>))}
@@ -160,18 +159,18 @@ export function AdvancedDataVisualization() {
         const colors = colorPalettes[selectedColorPalette];"
         return (<div className="h-80 p-6 relative">"
         <svg className="w-full h-full">"
-          {filteredData.map((item, index) => (<circle key={item.id} cx={(index / (filteredData.length - 1)) * 800} cy={280 - (item.value / maxValue) * 280} r="8" fill={colors[index % colors.length]} className="cursor-pointer hover:r-12 transition-all duration-200"/>))}
+          {filteredData.map((item, index) => (<circle key={item.id} cx={(index / (filteredData.length-1)) * 800} cy={280 - (item.value / maxValue) * 280} r="8" fill={colors[index % colors.length]} className="cursor-pointer hover:r-12 transition-all duration-200"/>))}
         </svg>"
         <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">
           {filteredData.map(item => (<span key={item.id}>{item.name}</span>))}
         </div>
       </div>)};
-    if (!isOpen) {
+    if(!isOpen) {
 "
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-68 p-3 bg-zion-cyan hover:bg-zion-cyan-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50" title="Advanced Data Visualization">"
         <BarChart3 className="w-5 h-5"/>
       </button>)}
-    if (isMinimized) {
+    if(isMinimized) {
 "
         return (<div className="fixed bottom-4 right-68 z-50">"
         <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">"

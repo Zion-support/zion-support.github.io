@@ -1,13 +1,8 @@
 <<<<<<< HEAD
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion  } from 'framer-motion';
 
-const features = [
-  {
-    icon: "🚀",
-    title: "Cutting-Edge Technology",
-    description: "Leverage the latest advancements in AI, quantum computing, and blockchain technology"
-  },
+,
   {
     icon: "⚡",
     title: "Lightning Fast Performance",
@@ -89,7 +84,7 @@ const features = [
 >>>>>>> main
 export function FeatureHighlights() {
   return ("
-    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
 <<<<<<< HEAD
         <motion.div
@@ -122,8 +117,7 @@ export function FeatureHighlights() {
 "
           <p className="text-lg md:text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
             Experience the next generation of talent marketplace with cutting-edge AI,
-            global reach, and enterprise-grade security.
-          </p>
+            global reach, and enterprise-grade security.</p>
         </motion.div>
 "
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

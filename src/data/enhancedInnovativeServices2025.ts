@@ -66,8 +66,7 @@ export interface AIService {
   aiScore: number;
   useCases: string[]
 };
-export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
-  // Advanced AI & Machine Learning Services
+export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [// Advanced AI & Machine Learning Services
   {
 
     id: "quantum-ai-processor","
@@ -133,9 +132,9 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     features[;"
       "Self-sovereign identity management","
       "Zero-knowledge proof verification","
-      "Multi-chain support (Ethereum, Polygon, Solana)","
+      "Multi-chain support(Ethereum, Polygon, Solana)","
       "Biometric authentication","
-      "Decentralized identifiers (DIDs)","
+      "Decentralized identifiers(DIDs)","
       "Verifiable credentials","
       "Privacy-preserving authentication","
       "Regulatory compliance tools"
@@ -240,7 +239,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Automated incident response","
       "Threat intelligence feeds","
       "Zero-day exploit detection","
-      "Advanced persistent threat (APT) detection","
+      "Advanced persistent threat(APT) detection","
       "Compliance reporting","
       "24/7 SOC monitoring"
     ],;
@@ -340,7 +339,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     pricingModel: "monthly",
     features[;"
       "AI-powered disease detection","
-      "Medical imaging analysis (X-ray, MRI, CT)","
+      "Medical imaging analysis(X-ray, MRI, CT)","
       "Early cancer detection algorithms","
       "Treatment recommendation engine","
       "Patient risk assessment","

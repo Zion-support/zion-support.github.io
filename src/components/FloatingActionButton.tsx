@@ -58,9 +58,8 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   // Detect theme
   useEffect(() => {
 
-    if (theme === 'auto') {
+    if(theme === 'auto') {
 
-      
       setCurrentTheme(mediaQuery.matches ? 'dark' : 'light')};
       '
       mediaQuery.addEventListener('change', handleChange);
@@ -70,7 +69,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   }, [theme]) ;
 
   // Show scroll to top button when scrolled down
-  useEffect ( () => {
+  useEffect(() => {
     
     };
 
@@ -78,8 +77,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     return () => window.removeEventListener('scroll', handleScroll)}, []);
 
   // Default actions
-  const defaultActions: FloatingAction[] = [
-    // Contact actions
+  const defaultActions: FloatingAction[] = [// Contact actions
     ...(showContactActions ? [
       {
 
@@ -88,8 +86,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         label: 'Contact Us',
         action: () => {
 
-          
-          if (contactSection) {
+          if(contactSection) {
 
             contactSection.scrollIntoView({ behavior: 'smooth' })}
         },
@@ -132,14 +129,13 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     ] : []),
     
     // Utility actions
-    ...(showUtilityActions ? [
-      {
+    ...(showUtilityActions ? [{
 
         id: 'bookmark',
         icon: Bookmark,
         label: 'Bookmark Page',
         action: () => {
-          if (navigator.share) {
+          if(navigator.share) {
 
             navigator.share({
 
@@ -162,7 +158,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         icon: Share2,
         label: 'Share Page',
         action: () => {
-          if (navigator.share) {
+          if(navigator.share) {
 
             navigator.share({
 
@@ -225,13 +221,13 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 
   // Show notification
   
-    notification.className = `
+    notification.className="
       fixed top-4 right-4 z-50 px-4 py-2 bg-green-500 text-white rounded-lg shadow-lg
-      transform translate-x-full transition-transform duration-300 ease-in-out`
+      transform translate-x-full transition-transform duration-300 ease-in-out"
     `;
     notification.textContent = message;
 
-    document.body.appendChild (notification) ;
+    document.body.appendChild(notification) ;
 
     // Animate in
     setTimeout(() => {
@@ -259,7 +255,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   
   };
 
-  return()
+  return ()
     <>
       {/* Main Floating Action Button */}`
       <div className={`fixed ${getPositionClasses()} z-50`}>
@@ -315,7 +311,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
             hover:scale-110 focus:outline-none focus:ring-4 focus:ring-zion-cyan/30
             animate-bounce`
           `}"
-          aria-label="Scroll to top"
+          
         >
           <ArrowUp size={24}  />
         </button>) }
@@ -327,11 +323,11 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           from {
 
             opacity: 0;
-            transform: translateY (20px) scale (0.75) }
+            transform: translateY(20px) scale(0.75) }
           to {
 
             opacity: 1;
-            transform: translateY (0) scale (1) }
+            transform: translateY(0) scale(1) }
         }
 
         @keyframes bounce {
@@ -363,12 +359,11 @@ type FloatingActionButtonProps = {
 
 const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = true }) => {
   const [open, setOpen] = useState(false);
-  if (!enabled) return null;
-  return (
-    <button
+  if(!enabled) return null;
+  return (<button
       onClick={() => setOpen(!open)}
       aria-expanded={open}
-      aria-label="Quick actions"
+      
       className="fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-lg bg-cyan-500 hover:bg-cyan-600 text-white"
     >
       <Plus size={24}  />

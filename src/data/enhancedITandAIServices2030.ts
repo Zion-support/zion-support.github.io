@@ -40,8 +40,7 @@ export interface EnhancedITService {
 // Zion Tech Group Contact Information
 
 // Enhanced IT and AI Services 2030
-export const enhancedITandAIServices2030: EnhancedITService[] = [
-  // IT INFRASTRUCTURE SERVICES
+export const enhancedITandAIServices2030: EnhancedITService[] = [// IT INFRASTRUCTURE SERVICES
   {
     id: "zero-trust-network-architecture",
     title: "Zero Trust Network Architecture Implementation",
@@ -61,22 +60,19 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
       "Compliance reporting",
       "Security analytics"
     ],
-    benefits: [
-      "Reduce security breaches by 90%",
+    benefits: ["Reduce security breaches by 90%",
       "Improve compliance posture",
       "Enhanced visibility and control",
       "Simplified security management",
       "Future-proof security architecture"
     ],
-    useCases: [
-      "Enterprise network security",
+    useCases: ["Enterprise network security",
       "Cloud migration security",
       "Remote work security",
       "Compliance requirements",
       "Digital transformation"
     ],
-    targetAudience: [
-      "CISOs",
+    targetAudience: ["CISOs",
       "IT directors",
       "Security architects",
       "Enterprise companies",
@@ -111,8 +107,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
     price: 15000,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Multi-cloud workload management",
+    features: ["Multi-cloud workload management",
       "Automated cost optimization",
       "Performance monitoring",
       "Security compliance",
@@ -121,22 +116,19 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
       "API management",
       "Governance policies"
     ],
-    benefits: [
-      "Reduce cloud costs by 30%",
+    benefits: ["Reduce cloud costs by 30%",
       "Improve performance by 40%",
       "Enhanced security and compliance",
       "Simplified cloud management",
       "Better disaster recovery"
     ],
-    useCases: [
-      "Multi-cloud strategy",
+    useCases: ["Multi-cloud strategy",
       "Cost optimization",
       "Performance improvement",
       "Compliance management",
       "Disaster recovery"
     ],
-    targetAudience: [
-      "Cloud architects",
+    targetAudience: ["Cloud architects",
       "DevOps engineers",
       "IT directors",
       "Enterprise companies",
@@ -171,8 +163,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
     price: 20000,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Edge node deployment",
+    features: ["Edge node deployment",
       "Data processing optimization",
       "Real-time analytics",
       "Security protocols",
@@ -181,22 +172,19 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
       "Integration services",
       "Performance optimization"
     ],
-    benefits: [
-      "Reduce latency by 80%",
+    benefits: ["Reduce latency by 80%",
       "Improve performance by 60%",
       "Lower bandwidth costs",
       "Enhanced security",
       "Real-time processing"
     ],
-    useCases: [
-      "IoT deployments",
+    useCases: ["IoT deployments",
       "Real-time analytics",
       "Content delivery",
       "Industrial automation",
       "Smart cities"
     ],
-    targetAudience: [
-      "IoT architects",
+    targetAudience: ["IoT architects",
       "Network engineers",
       "Data scientists",
       "Manufacturing companies",
@@ -231,8 +219,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
     price: 35000,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Quantum-safe cryptography",
+    features: ["Quantum-safe cryptography",
       "Hybrid encryption systems",
       "Post-quantum algorithms",
       "Key management",
@@ -241,22 +228,19 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
       "Training and education",
       "Compliance frameworks"
     ],
-    benefits: [
-      "Future-proof against quantum threats",
+    benefits: ["Future-proof against quantum threats",
       "Maintain data security for decades",
       "Meet regulatory requirements",
       "Competitive advantage",
       "Reduced security risks"
     ],
-    useCases: [
-      "Government agencies",
+    useCases: ["Government agencies",
       "Financial institutions",
       "Healthcare organizations",
       "Critical infrastructure",
       "Long-term data storage"
     ],
-    targetAudience: [
-      "CISOs",
+    targetAudience: ["CISOs",
       "Security architects",
       "Government agencies",
       "Financial institutions",
@@ -293,8 +277,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
     price: 5000,
     currency: "$",
     pricingModel: "per engagement",
-    features: [
-      "Digital maturity assessment",
+    features: ["Digital maturity assessment",
       "Technology roadmap planning",
       "Change management strategy",
       "ROI analysis",
@@ -303,22 +286,19 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
       "Stakeholder alignment",
       "Success metrics definition"
     ],
-    benefits: [
-      "Clear digital transformation path",
+    benefits: ["Clear digital transformation path",
       "Reduced implementation risks",
       "Improved stakeholder buy-in",
       "Better ROI outcomes",
       "Competitive advantage"
     ],
-    useCases: [
-      "Digital transformation initiatives",
+    useCases: ["Digital transformation initiatives",
       "Technology modernization",
       "Process optimization",
       "Customer experience improvement",
       "Operational efficiency"
     ],
-    targetAudience: [
-      "C-level executives",
+    targetAudience: ["C-level executives",
       "IT directors",
       "Digital transformation leaders",
       "Business strategists",
@@ -353,8 +333,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
     price: 7500,
     currency: "$",
     pricingModel: "per engagement",
-    features: [
-      "AI readiness assessment",
+    features: ["AI readiness assessment",
       "Use case identification",
       "Technology selection",
       "Implementation roadmap",
@@ -363,22 +342,19 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
       "Risk assessment",
       "Success metrics"
     ],
-    benefits: [
-      "Clear AI implementation path",
+    benefits: ["Clear AI implementation path",
       "Reduced implementation risks",
       "Better ROI outcomes",
       "Competitive advantage",
       "Future-proof technology choices"
     ],
-    useCases: [
-      "AI strategy development",
+    useCases: ["AI strategy development",
       "Process automation",
       "Customer experience improvement",
       "Data analytics enhancement",
       "Operational efficiency"
     ],
-    targetAudience: [
-      "C-level executives",
+    targetAudience: ["C-level executives",
       "IT directors",
       "Data scientists",
       "Business leaders",
@@ -413,8 +389,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
     price: 3000,
     currency: "$",
     pricingModel: "per assessment",
-    features: [
-      "Security posture evaluation",
+    features: ["Security posture evaluation",
       "Gap analysis",
       "Risk assessment",
       "Compliance review",
@@ -423,22 +398,19 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
       "Technology recommendations",
       "Training recommendations"
     ],
-    benefits: [
-      "Clear security improvement path",
+    benefits: ["Clear security improvement path",
       "Reduced security risks",
       "Better compliance posture",
       "Cost-effective security investments",
       "Enhanced security awareness"
     ],
-    useCases: [
-      "Security posture improvement",
+    useCases: ["Security posture improvement",
       "Compliance requirements",
       "Risk management",
       "Security strategy development",
       "Technology selection"
     ],
-    targetAudience: [
-      "CISOs",
+    targetAudience: ["CISOs",
       "Security directors",
       "IT directors",
       "Compliance officers",
@@ -475,8 +447,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
     price: 12000,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Process analysis and mapping",
+    features: ["Process analysis and mapping",
       "AI workflow automation",
       "Document processing",
       "Data extraction",
@@ -485,22 +456,19 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
       "Monitoring and analytics",
       "Continuous improvement"
     ],
-    benefits: [
-      "Reduce manual work by 70%",
+    benefits: ["Reduce manual work by 70%",
       "Improve accuracy by 90%",
       "Faster process execution",
       "Better compliance",
       "Cost savings"
     ],
-    useCases: [
-      "Invoice processing",
+    useCases: ["Invoice processing",
       "Customer service automation",
       "HR process automation",
       "Financial reporting",
       "Supply chain optimization"
     ],
-    targetAudience: [
-      "Operations managers",
+    targetAudience: ["Operations managers",
       "Process improvement teams",
       "IT directors",
       "Business analysts",
@@ -535,8 +503,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
     price: 18000,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Data preparation and cleaning",
+    features: ["Data preparation and cleaning",
       "Machine learning models",
       "Predictive algorithms",
       "Real-time scoring",
@@ -545,22 +512,19 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
       "Model monitoring",
       "Continuous learning"
     ],
-    benefits: [
-      "Improve decision making by 60%",
+    benefits: ["Improve decision making by 60%",
       "Reduce risks by 40%",
       "Identify new opportunities",
       "Better resource allocation",
       "Competitive advantage"
     ],
-    useCases: [
-      "Sales forecasting",
+    useCases: ["Sales forecasting",
       "Customer churn prediction",
       "Risk assessment",
       "Demand planning",
       "Quality prediction"
     ],
-    targetAudience: [
-      "Data scientists",
+    targetAudience: ["Data scientists",
       "Business analysts",
       "Operations managers",
       "Marketing teams",
@@ -595,8 +559,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
     price: 15000,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Text analysis and understanding",
+    features: ["Text analysis and understanding",
       "Sentiment analysis",
       "Language translation",
       "Chatbot development",
@@ -605,22 +568,19 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
       "API services",
       "Custom model training"
     ],
-    benefits: [
-      "Automate text processing by 80%",
+    benefits: ["Automate text processing by 80%",
       "Improve customer service by 50%",
       "Better content understanding",
       "Multilingual support",
       "Scalable language solutions"
     ],
-    useCases: [
-      "Customer service automation",
+    useCases: ["Customer service automation",
       "Content analysis",
       "Document processing",
       "Market research",
       "Compliance monitoring"
     ],
-    targetAudience: [
-      "Customer service teams",
+    targetAudience: ["Customer service teams",
       "Content managers",
       "Data analysts",
       "Marketing teams",

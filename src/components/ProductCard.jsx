@@ -1,62 +1,15 @@
 import Link from 'next/link';
-import { Link } from 'react-router-dom';
-import { Heart } from 'lucide-react';
-import { useWishlist } from '@/hooks/useWishlist';
-import { Button } from '@/components/ui/button';
-import {
-<<<<<<< HEAD
-import { useMediaQuery } from 'usehooks - ts';
-import { useRouter } from 'next / router';
-import Image from 'next / image';
-import Link from 'next / link';
-=======
->>>>>>> main
-
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger} from '@/components/ui/tooltip';
-import { useDispatch } from 'react-redux';
-import { addItem } from '@/store/cartSlice';
-import Image from 'next/image';
-import React, { useState } from 'react';
-import { useAuth } from '@/context/auth/AuthProvider';
-import { useRouter } from 'next/router';
-// import Image from 'next/image'; // TODO: Replace with regular img or custom Image component'
-import React, { useState } from 'react';
-import { useAuth } from '@/context/auth/AuthProvider';
-import { useNavigate } from 'react-router-dom';
-import { useMediaQuery } from 'usehooks-ts';
-import { useEnqueueSnackbar } from '@/context/SnackbarContext';
-import { captureException } from '@/utils/sentry';
-export default function ProductCard({ product, onBuy, buyDisabled = false }) {
-
-  const { isAuthenticated } = useAuth();
-  const { isWishlisted, toggle } = useWishlist();
-  const [imageError, setImageError] = useState(false);
-  const router = useNavigate();
-  const enqueueSnackbar = useEnqueueSnackbar();
-  if()
-    !product ||'
-    typeof product.id !== 'string' ||'
-    typeof product.title !== 'string' ||'
-    product.title.trim() === ''
-  ) {
-
-    captureException('
-      new Error('Invalid product data received by ProductCard'),
-      {
-
-        extra: { product }}
+import { Link  } from 'react-router-dom';
+export default function Page() {
+}
     );
-    return()
+    return ()
       <div
         className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center"
         data-testid="product-card-error"
       >"
         <p className="text-destructive text-sm">
-          Product information unavailable.
-        </p>
+          Product information unavailable.</p>
         {/* Optionally, provide more details if product ID is known */}"
         {/* {product && product.id && <p className="text-xs text-muted-foreground">ID: {product.id}</p>} */}
       </div>
@@ -64,8 +17,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
   }
   const active = isWishlisted(product.id);
   const dispatch = useDispatch();
-  // Title is now guaranteed to be a non-empty string by the check above.
-  const productTitle = product.title;
+  // Title is now guaranteed to be a non-empty string by the check above.const productTitle = product.title;
   const addToCart = () => {
     dispatch()
       addItem({
@@ -79,7 +31,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
   const imageAltText = productTitle;
   const handleImageError = error => {
 
-    if (!imageError) {
+    if(!imageError) {
 
       setImageError(true);
       captureException(error, {
@@ -89,7 +41,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
     }
   };
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
-  return()
+  return ()
     <div"
       className="relative border rounded-lg bg-card p-4"
       data-testid="product-card"

@@ -1,21 +1,6 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
-
-  Loader2,
-  CheckCircle,
-  AlertCircle,
-  Zap,
-  Sparkles,
-  TrendingUp,
-  Cpu,
-  Database,
-  Network,
-  Shield'
- } from 'lucide-react';
+import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+ from 'lucide-react';
 
 interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 
@@ -29,7 +14,6 @@ export function LoadingSpinner({
   text = 'Loading...',
   fullScreen = false}: LoadingSpinnerProps) {
 
-  
   ;
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -39,11 +23,10 @@ export function LoadingSpinner({
   lg: 'w-32 h-32';
   ;
 
-  
     ? 'fixed inset-0 flex items-center justify-center bg-zion-slate-dark/95 backdrop-blur-sm z-50''
     : 'flex items-center justify-center p-8';
 
-  return()    <div className = {containerClasses}>
+  return ()    <div className = {containerClasses}>
       <div className="text-center">
         {/* Animated Logo */}
         <motion.div"
@@ -154,7 +137,7 @@ interface PageLoaderProps extends React.PropsWithChildren<{}> {
 export function PageLoader(...args[]):  {
 
   return ("
-    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center">;"
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center">;"
       <div className="text-center">
         {/* Animated Background */}"
         <div className="absolute inset-0 overflow-hidden">
@@ -300,7 +283,7 @@ export function PageLoader(...args[]):  {
 
 export function SkeletonLoader(...args[]):  {
 
-  return()`
+  return ()`
 <div className:  {`space-y-3 ${className}`}>;
       {Array.from({ length: lines }).map((_, index)  => (;
         <motion.div

@@ -1,33 +1,12 @@
 <<<<<<< HEAD
-import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react.ts';
+import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({ children }) => {
 export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = ({
 export const useAccessibility = () => {;
-import { motion, AnimatePresence  } from 'framer - motion.ts';
-=======
->>>>>>> main
+import { motion, AnimatePresence  } from 'framer-motion';
 
-interface AccessibilityContextType {
-  highContrast: boolean;
-  toggleHighContrast: () => void;
-  reducedMotion: boolean;
-  toggleReducedMotion: () => void;
-  fontSize: number;
-  increaseFontSize: () => void;
-  decreaseFontSize: () => void;
-  resetFontSize: () => void;
-  showSkipLinks: boolean;
-  setShowSkipLinks: (show: boolean) => void;
-  voiceNavigation: boolean;
-  toggleVoiceNavigation: () => void}
-
-
-export 
-  if (!context) {
-    throw new Error('useAccessibility must be used within an AccessibilityProvider')}
-  return context};
-
-interface AccessibilityProviderProps extends React.PropsWithChildren<{}> {
+export default function Page() {
+> {
   children: ReactNode}
 
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
@@ -39,10 +18,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
   // Load accessibility preferences from localStorage
   useEffect(() => {
-    
-    
-    
-    
+
     setHighContrast(savedHighContrast);
     setReducedMotion(savedReducedMotion);
     setFontSize(savedFontSize ? parseInt(savedFontSize) : 16);
@@ -52,12 +28,12 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   useEffect(() => {
     
     // Apply high contrast
-    if (highContrast) {
+    if(highContrast) {
       root.classList.add('high-contrast')} else {
       root.classList.remove('high-contrast')}
 
     // Apply reduced motion
-    if (reducedMotion) {
+    if(reducedMotion) {
       root.classList.add('reduce-motion')} else {
       root.classList.remove('reduce-motion')}
 
@@ -69,16 +45,16 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     
         setTimeout(() => setShowSkipLinks(false), 5000)}
 
-      // High contrast toggle (Alt + H)
-      if (event.altKey && event.key === 'h') {
+      // High contrast toggle(Alt + H)
+      if(event.altKey && event.key === 'h') {
         event.preventDefault();
         toggleHighContrast()}
 
-      // Font size controls (Alt + Plus/Minus)
-      if (event.altKey && event.key === '+') {
+      // Font size controls(Alt + Plus/Minus)
+      if(event.altKey && event.key === '+') {
         event.preventDefault();
         increaseFontSize()}
-      if (event.altKey && event.key === '-') {
+      if(event.altKey && event.key === '-') {
         event.preventDefault();
         decreaseFontSize()}
     };
@@ -86,26 +62,20 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, []);
 
-  
     setHighContrast(newValue);
     localStorage.setItem('zion-high-contrast', newValue.toString())};
 
-  
     setReducedMotion(newValue);
     localStorage.setItem('zion-reduced-motion', newValue.toString())};
 
-  
     setFontSize(newSize);
     localStorage.setItem('zion-font-size', newSize.toString())};
 
-  
     setFontSize(newSize);
     localStorage.setItem('zion-font-size', newSize.toString())};
 
-  
     localStorage.setItem('zion-font-size', '16')};
 
-  
     setVoiceNavigation(newValue);
     localStorage.setItem('zion-voice-navigation', newValue.toString())};
 
@@ -124,8 +94,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     toggleVoiceNavigation,
   };
 
-  return (
-    <AccessibilityContext.Provider value={contextValue}>
+  return (<AccessibilityContext.Provider value={contextValue}>
       {children}
       
       {/* Skip Links */}
@@ -147,12 +116,12 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   y: -20
 
 }}
-            className="fixed top - 0 left - 0 right - 0 z - 50 bg - zion - cyan text - black p - 4 text - center"
+            className="fixed top - 0 left - 0 right - 0 z - 50 bg-zion - cyan text-black p - 4 text-center"
 
-            <div role="button" className="max - w-4xl mx - auto flex flex - wrap justify - center gap - 4">
+            <div  className="max - w-4xl mx - auto flex flex - wrap justify - center gap-4">
               <a
                 href="#main - content"
-                className="px - 4 py - 2 bg - white rounded - lg font - semibold hover:bg - gray - 100 focus:outline - none focus:ring - 2 focus:ring - black"
+                className="px-4 py-2 bg-white rounded-lg font - semibold hover:bg-gray - 100 focus:outline - none focus:ring - 2 focus:ring -black"
 
 =======
         {showSkipLinks && (
@@ -180,7 +149,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
       {/* Accessibility Controls */}
 <<<<<<< HEAD
-      <div role="button" className="fixed bottom - 4 left - 4 z - 40">;
+      <div  className="fixed bottom - 4 left - 4 z -40">;
         <motion.div
           initial = {
   { opacity: 0,
@@ -196,8 +165,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           onClick={toggleHighContrast}
-          className={`p-3 rounded-full shadow-lg transition-colors ${
-            highContrast ? 'bg-yellow-500 text-black' : 'bg-gray-700 text-white'
+          className={`p-3 rounded-full shadow-lg transition-colors ${highContrast ? 'bg-yellow-500 text-black' : 'bg-gray-700 text-white'
           }`}
           title="Toggle high contrast"
         >
@@ -208,8 +176,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           onClick={toggleReducedMotion}
-          className={`p-3 rounded-full shadow-lg transition-colors ${
-            reducedMotion ? 'bg-green-500 text-white' : 'bg-gray-700 text-white'
+          className={`p-3 rounded-full shadow-lg transition-colors ${reducedMotion ? 'bg-green-500 text-white' : 'bg-gray-700 text-white'
           }`}
           title="Toggle reduced motion"
         >
@@ -221,8 +188,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           onClick={toggleVoiceNavigation}
-          className={`p-3 rounded-full shadow-lg transition-colors ${
-            voiceNavigation ? 'bg-blue-500 text-white' : 'bg-gray-700 text-white'
+          className={`p-3 rounded-full shadow-lg transition-colors ${voiceNavigation ? 'bg-blue-500 text-white' : 'bg-gray-700 text-white'
           }`}
           title="Toggle voice navigation"
         >

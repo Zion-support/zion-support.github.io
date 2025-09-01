@@ -1,8 +1,7 @@
 export function ContactSection(...args[]):  {
 
 <<<<<<< HEAD
-  const contactInfo = [
-    {
+  const contactInfo = [{
       icon: Phone,
       title: "Phone",
       value: "+1 302 464 0950",
@@ -23,7 +22,7 @@ export function ContactSection(...args[]):  {
       value: "364 E Main St STE 1008 Middletown DE 19709",;"
       link: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"};  ];
   return ("
-    <section className = "py-16 px-4 sm:px-6 lg:px-8">"
+    <section className="py-16 px-4 sm:px-6 lg:px-8">"
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial = {

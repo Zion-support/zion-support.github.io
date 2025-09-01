@@ -44,8 +44,7 @@ export interface EnterprisePricing {
 // Zion Tech Group Contact Information;
 
 // Revolutionary Micro SAAS Services Pricing;
-export const revolutionaryMicroSaasPricing: ServicePricing[] = [
-  {
+export const revolutionaryMicroSaasPricing: ServicePricing[] = [{
 "
     serviceId: "neuralflow-enterprise","
     serviceName: "NeuralFlow Enterprise","
@@ -69,7 +68,7 @@ export const revolutionaryMicroSaasPricing: ServicePricing[] = [
         limitations: ["
           "Limited to 5 concurrent workflows","
           "Basic AI model training","
-          "Standard response time (24 hours)"
+          "Standard response time(24 hours)"
         ],"
         recommendedFor: ["Small teams", "Startups", "Individual professionals"]
       },
@@ -92,7 +91,7 @@ export const revolutionaryMicroSaasPricing: ServicePricing[] = [
         ],
         limitations: ["
           "Limited to 25 concurrent workflows","
-          "Advanced AI model training (additional cost)"
+          "Advanced AI model training(additional cost)"
         ],"
         recommendedFor: ["Growing businesses", "Medium teams", "Professional services"]
       },
@@ -163,8 +162,7 @@ export const revolutionaryMicroSaasPricing: ServicePricing[] = [
     serviceId: "quantumsync-pro","
     serviceName: "QuantumSync Pro","
     category: "Quantum Computing Integration",
-    tiers: [
-      {
+    tiers: [{
 "
         id: "researcher","
         name: "Researcher",
@@ -273,8 +271,7 @@ export const revolutionaryMicroSaasPricing: ServicePricing[] = [
 ];
 
 // Revolutionary IT Services Pricing;
-export const revolutionaryITServicesPricing: ServicePricing[] = [
-  {
+export const revolutionaryITServicesPricing: ServicePricing[] = [{
 "
     serviceId: "quantum-infrastructure-consulting","
     serviceName: "Quantum Infrastructure Consulting","
@@ -365,8 +362,7 @@ export const revolutionaryITServicesPricing: ServicePricing[] = [
 ];
 
 // Revolutionary AI Services Pricing;
-export const revolutionaryAIServicesPricing: ServicePricing[] = [
-  {
+export const revolutionaryAIServicesPricing: ServicePricing[] = [{
 "
     serviceId: "multimodal-ai-orchestration","
     serviceName: "Multimodal AI Orchestration","

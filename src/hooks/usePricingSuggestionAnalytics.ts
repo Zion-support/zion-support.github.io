@@ -1,11 +1,7 @@
 import { useState, useEffect } from 'react';
-import { supabase } from "@/integrations/supabase/client";
+import { supabase } from '@/integrations/supabase/client';
 
-interface PricingSuggestionAnalytics {
-  totalSuggestions: number;
-  acceptanceRate: number;
-  averagePriceGap: number;
-  suggestionsByCategory: { category: string; count: number; acceptanceRate: number }[];
+[];
   recentSuggestions: {
     id: string;
     userId: string;
@@ -40,8 +36,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
         totalSuggestions: 256,
         acceptanceRate: 0.72,
         averagePriceGap: 12.5,
-        suggestionsByCategory: [
-          { category: 'development', count: 120, acceptanceRate: 0.75 },
+        suggestionsByCategory: [{ category: 'development', count: 120, acceptanceRate: 0.75 },
           { category: 'design', count: 65, acceptanceRate: 0.82 },
           { category: 'marketing', count: 42, acceptanceRate: 0.64 },
           { category: 'content', count: 18, acceptanceRate: 0.56 },
@@ -65,7 +60,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
         error: null
       });
 
-    } catch (error) {
+    } catch(error) {
       console.error("Error fetching pricing suggestion analytics:", error);
       setAnalytics(prev => ({ 
         ...prev, 

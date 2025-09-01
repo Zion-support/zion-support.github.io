@@ -1,21 +1,7 @@
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
 import { safeStorage } from '@/utils/safeStorage';
-import { useTranslation } from 'react-i18next';
-import { supabase } from '../integrations/supabase/client';
-import { toast } from '../components/ui/use-toast';
-
-export type SupportedLanguage = 'en' | 'es' | 'pt' | 'ar';
-
-export type LanguageContextType = {
-  currentLanguage: SupportedLanguage;
-  changeLanguage: (lang: SupportedLanguage) => Promise<void>;
-  isRTL: boolean;
-  supportedLanguages: { code: SupportedLanguage; name: string; flag: string }[];
-};
-
-const supportedLanguages = [
-  { code: 'en' as SupportedLanguage, name: 'English', flag: '🇺🇸' },
-  { code: 'es' as SupportedLanguage, name: 'Español', flag: '🇪🇸' },
+export default function Page() {
+,
   { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' },
   { code: 'ar' as SupportedLanguage, name: 'العربية', flag: '🇸🇦' }
 ];
@@ -52,8 +38,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   
   useEffect(() => {
     const savedLang = safeStorage.getItem('i18n_lang') as SupportedLanguage;
-    if (savedLang && supportedLanguages.some(lang => lang.code === savedLang)) {
-      if (i18n.language !== savedLang) { // Only change if different
+    if(savedLang && supportedLanguages.some(lang => lang.code === savedLang)) {
+      if(i18n.language !== savedLang) { // Only change if different
         i18n.changeLanguage(savedLang);
       }
       setCurrentLanguage(savedLang);
@@ -65,7 +51,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     document.documentElement.dir = i18n.dir();
     document.documentElement.lang = currentLanguage;
     
-    if (i18n.dir() === 'rtl') {
+    if(i18n.dir() === 'rtl') {
       document.documentElement.classList.add('rtl');
     } else {
       document.documentElement.classList.remove('rtl');
@@ -74,17 +60,17 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   
   useEffect(() => {
     const syncLanguageWithProfile = async () => {
-      if (isAuthenticated && user?.id && currentLanguage) { // ensure currentLanguage is also checked
+      if(isAuthenticated && user?.id && currentLanguage) { // ensure currentLanguage is also checked
         try {
           const { error } = await supabase
             .from('profiles')
             .update({ preferred_language: currentLanguage })
             .eq('id', user.id);
             
-          if (error) {
+          if(error) {
             console.error('Error updating language preference:', error);
           }
-        } catch (err) {
+        } catch(err) {
           console.error('Error syncing language with profile:', err);
         }
       }
@@ -93,8 +79,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     syncLanguageWithProfile();
   }, [currentLanguage, isAuthenticated, user]); // Correct dependencies
   
-  const changeLanguage = async (lang: SupportedLanguage) => {
-    if (lang === currentLanguage) return;
+  const changeLanguage = async(lang: SupportedLanguage) => {
+    if(lang === currentLanguage) return;
     
     try {
       await i18n.changeLanguage(lang);
@@ -107,14 +93,12 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       });
       
       // The language preference sync will be handled by the useEffect above
-      // that depends on currentLanguage, isAuthenticated, and user.
-    } catch (err) {
+      // that depends on currentLanguage, isAuthenticated, and user.} catch(err) {
       console.error('Error changing language:', err);
     }
   };
   
-  return (
-    <LanguageContext.Provider 
+  return (<LanguageContext.Provider 
       value={{ 
         currentLanguage, 
         changeLanguage, 

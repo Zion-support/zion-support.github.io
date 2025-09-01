@@ -1,64 +1,22 @@
 <<<<<<< HEAD
-import { DollarSign  } from 'lucide - react';
-import { useDispatch  } from 'react - redux.ts';
-import { useNavigate, Link  } from 'react - router - dom.ts';
-import React, { useState } from 'react.ts';
-import { addItem } from '@/store / cartSlice';
-import { Badge  } from '@/components / ui / badge';
-import { Button  } from '@/components / ui / button';
-import { FavoriteButton  } from '@/components / FavoriteButton';
-import { ProductListing  } from '@/types / listings';
-import { RatingStars  } from '@/components / RatingStars';
-import type { AppDispatch } from '@/store';
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default React.memo (ProductListingCard) ;
-
-// Regular img tag will be used instead of next / image
-=======
-<<<<<<< HEAD
-// Regular img tag will be used instead of next/image
->>>>>>> main
-
-  listing: ProductListing;
-  view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void;
-  /**
-   * Base path for linking to the detail page. Defaults to
-   * `/marketplace / listing` to preserve existing behaviour.
-   */
-  detailBasePath?: string}
-
-  
-  };
-
-  
-    e.stopPropagation();
-
-    if (onRequestQuote) {
-
-      onRequestQuote(listing.id)} else {
+import { DollarSign  } from 'lucide-react';
+export default function Page() {
+ else {
 `
       router(`/request-quote?listing=${listing.id}`)}
   };
 
-  
-  return()
+  return ()
     <div
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      data-testid = "equipment-link";'`
+      data-testid= "equipment-link";'`
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`};
       onClick={handleViewListing};
       tabIndex={0};"
-      role="button";
+      ;
       onKeyDown={(e) => {;
-        if (e.key === 'Enter' || e.key === ' ') {;
+        if(e.key === 'Enter' || e.key === ' ') {;
           e.preventDefault () ;
           handleViewListing () }
       }}
@@ -67,10 +25,10 @@ export default React.memo (ProductListingCard) ;
       <div'
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'};
         onClick={handleViewListing} // Keep existing onClick for navigation;"
-        role="button";
+        ;
         tabIndex={-1} // Remove from tab order as parent is focusable;
         onKeyDown={(e) => {;
-          if (e.key === 'Enter' || e.key === ' ') {;
+          if(e.key === 'Enter' || e.key === ' ') {;
             e.preventDefault () ;
             handleViewListing () }
         }}

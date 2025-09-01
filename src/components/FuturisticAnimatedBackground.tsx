@@ -6,14 +6,12 @@ export default FuturisticAnimatedBackground;
 
 =======
 
-  
 >>>>>>> main
-  useEffect ( () => {
+  useEffect(() => {
     
-    if (!canvas) return;
+    if(!canvas) return;
 
-    
-    if (!ctx) return;
+    if(!ctx) return;
 
     // Set canvas size
     
@@ -24,12 +22,11 @@ export default FuturisticAnimatedBackground;
 
     // Add enhanced grid background'
 <<<<<<< HEAD
-    
-    
-    if (gridCtx) {
+
+    if(gridCtx) {
 =======
     const gridCanvas = document.createElement('canvas');'
-    const gridCtx = gridCanvas.getContext('2d');    if (gridCtx) {
+    const gridCtx = gridCanvas.getContext('2d');    if(gridCtx) {
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       gridCanvas.width = canvas.width;
@@ -37,7 +34,7 @@ export default FuturisticAnimatedBackground;
 <<<<<<< HEAD
 
       // Draw enhanced grid
-      gridCtx.strokeStyle = 'rgba (6, 182, 212, 0.1) ';
+      gridCtx.strokeStyle = 'rgba(6, 182, 212, 0.1) ';
 =======
       
       // Draw enhanced grid'
@@ -45,11 +42,11 @@ export default FuturisticAnimatedBackground;
 >>>>>>> main
       gridCtx.lineWidth = 1;
 
-      for (let x = 0; x < gridCanvas.width; x += 40) {
+      for(let x = 0; x < gridCanvas.width; x += 40) {
 <<<<<<< HEAD
         gridCtx.beginPath () ;
-        gridCtx.moveTo (x, 0) ;
-        gridCtx.lineTo (x, gridCanvas.height) ;
+        gridCtx.moveTo(x, 0) ;
+        gridCtx.lineTo(x, gridCanvas.height) ;
         gridCtx.stroke () ;
       }
 
@@ -61,7 +58,7 @@ export default FuturisticAnimatedBackground;
         gridCtx.stroke()}
       
 >>>>>>> main
-      for (let y = 0; y < gridCanvas.height; y += 40) {
+      for(let y = 0; y < gridCanvas.height; y += 40) {
 
         gridCtx.beginPath();
         gridCtx.moveTo(0, y);
@@ -85,19 +82,15 @@ export default FuturisticAnimatedBackground;
       maxLife: number}[] = [];
 
     // Create particles
-    
-      
-      
-      
-      
+
       particles.push({
 
         x,
         y,
         vx: Math.cos (angle) * speed,
-        vy: Math.sin (angle) * speed,
+        vy: Math.sin(angle) * speed,
         size: Math.random () * 3 + 1,
-        color: `hsl (${200 + Math.random () * 60}, 70%, 60%) `,
+        color: `hsl(${200 + Math.random () * 60}, 70%, 60%) `,
         life: 1,
         maxLife: Math.random () * 100 + 50
       }) };
@@ -110,42 +103,40 @@ export default FuturisticAnimatedBackground;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       // Create new particles
-      if (particles.length < 100) {
+      if(particles.length < 100) {
 
         createParticle();
 
       // Update and draw particles
-      for (let i = particles.length - 1; i >= 0; i--) {
+      for(let i = particles.length-1; i >= 0; i--) {
 
-        
         // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
         particle.life += 1;
 
         // Remove dead particles
-        if (particle.life > particle.maxLife) {
+        if(particle.life > particle.maxLife) {
 
           particles.splice(i, 1);
           continue;
 
         // Draw particle with glow effect
-        
-        
+
         // Outer glow
         ctx.shadowColor = particle.color;
         ctx.shadowBlur = 20;
         ctx.fillStyle = particle.color;
         ctx.globalAlpha = alpha * 0.3;
         ctx.beginPath () ;
-        ctx.arc (particle.x, particle.y, size * 3, 0, Math.PI * 2) ;
+        ctx.arc(particle.x, particle.y, size * 3, 0, Math.PI * 2) ;
         ctx.fill () ;
 
         // Inner particle
         ctx.shadowBlur = 10;
         ctx.globalAlpha = alpha;
         ctx.beginPath () ;
-        ctx.arc (particle.x, particle.y, size, 0, Math.PI * 2) ;
+        ctx.arc(particle.x, particle.y, size, 0, Math.PI * 2) ;
         ctx.fill () ;
 
       // Draw grid pattern'
@@ -153,10 +144,8 @@ export default FuturisticAnimatedBackground;
       ctx.lineWidth = 1;
       ctx.globalAlpha = 0.3;
 
-      
-      
       // Vertical lines
-      for (let x = offsetX; x < canvas.width; x += gridSize) {
+      for(let x = offsetX; x < canvas.width; x += gridSize) {
 
         ctx.beginPath();
         ctx.moveTo(x, 0);
@@ -164,7 +153,7 @@ export default FuturisticAnimatedBackground;
         ctx.stroke();
 
       // Horizontal lines
-      for (let y = offsetY; y < canvas.height; y += gridSize) {
+      for(let y = offsetY; y < canvas.height; y += gridSize) {
 
         ctx.beginPath();
         ctx.moveTo(0, y);
@@ -177,16 +166,14 @@ export default FuturisticAnimatedBackground;
       ctx.lineWidth = 2;
 
       // Rotating triangle
-      
-      
-      
+
       ctx.save () ;
-      ctx.translate (centerX, centerY) ;
-      ctx.rotate (rotation) ;
+      ctx.translate(centerX, centerY) ;
+      ctx.rotate(rotation) ;
       ctx.beginPath () ;
-      ctx.moveTo (0, -triangleSize) ;
-      ctx.lineTo (triangleSize * 0.866, triangleSize * 0.5) ;
-      ctx.lineTo (-triangleSize * 0.866, triangleSize * 0.5) ;
+      ctx.moveTo(0, -triangleSize) ;
+      ctx.lineTo(triangleSize * 0.866, triangleSize * 0.5) ;
+      ctx.lineTo(-triangleSize * 0.866, triangleSize * 0.5) ;
       ctx.closePath () ;
       ctx.stroke () ;
       ctx.restore () ;
@@ -210,26 +197,25 @@ export default FuturisticAnimatedBackground;
       ctx.strokeStyle = 'rgba(56, 189, 248, 0.2);
       ctx.lineWidth = 3;
 
-      for (let i = 0; i < 3; i++) {
+      for(let i = 0; i < 3; i++) {
 
-        
         ctx.beginPath () ;
-        ctx.moveTo (waveOffset - 100, waveY) ;
-        ctx.lineTo (waveOffset, waveY + 20) ;
-        ctx.lineTo (waveOffset + 100, waveY) ;
+        ctx.moveTo(waveOffset - 100, waveY) ;
+        ctx.lineTo(waveOffset, waveY + 20) ;
+        ctx.lineTo(waveOffset + 100, waveY) ;
         ctx.stroke () ;
 
-      animationId = requestAnimationFrame (animate) };
+      animationId = requestAnimationFrame(animate) };
     animate () ;
 
     return () => {
 
       window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationId)}}, []) ;
-  return()
+  return ()
     <canvas
       ref = {canvasRef}
-      className="fixed inset - 0 w - full h - full pointer - events - none z - 0"
+      className="fixed inset - 0 w-full h-full pointer - events - none z -0"
       style = {
 
   { background: 'radial-gradient(1200px 600px at 10% -10%, rgba(56,189,248,0.05), transparent 60%), radial-gradient(900px 500px at 110% 10%, rgba(168,85,247,0.03),;

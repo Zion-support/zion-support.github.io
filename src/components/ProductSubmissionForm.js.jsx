@@ -1,29 +1,20 @@
 import React from "react";"
-import { useForm } from "react-hook-form";"
-import { zodResolver } from "@hookform/resolvers/zod";"
+import { useForm } from 'react-hook-form';"
+import { zodResolver } from '@hookform/resolvers/zod';"
 import z from "zod";"
-import { supabase } from "@/integrations/supabase/client";"
-import { useAuth } from "@/hooks/useAuth";"
-import { useToast } from "@/hooks/use-toast";"
-import { useNavigate } from "react-router-dom";"
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";"
-import { Input } from "@/components/ui/input";"
-import { Button } from "@/components/ui/button";"
-import { Textarea } from "@/components/ui/textarea";"
-import { AspectRatio } from "@/components/ui/aspect-ratio";"
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";"
-import { AIListingGenerator } from "@/components/listing/AIListingGenerator";"
-import { Sparkles } from "lucide-react";
-// Define the form schema with zod
-const productSchema = z.object({
-"
-    title: z.string().min(3, "Title must be at least 3 characters"),"
-    description: z.string().min(10, "Description must be at least 10 characters"),
-    price: z
-        .string()
-        .refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
-"
-        message: "Price must be a valid number"}),"
+import { supabase } from '@/integrations/supabase/client';"
+import { useAuth } from '@/hooks/useAuth';"
+import { useToast } from '@/hooks/use-toast';"
+import { useNavigate  } from 'react-router-dom';"
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';"
+import { Input } from '@/components/ui/input';"
+import { Button } from '@/components/ui/button';"
+import { Textarea } from '@/components/ui/textarea';"
+import { AspectRatio } from '@/components/ui/aspect-ratio';"
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';"
+import { AIListingGenerator } from '@/components/listing/AIListingGenerator';"
+import { Sparkles  } from 'lucide-react';
+),"
     category: z.string().min(1, "Please select a category"),
     image: z.instanceof(File).optional(),
     video: z.instanceof(File).optional(),
@@ -53,25 +44,25 @@ export function ProductSubmissionForm() {
     const handleImageChange = (e) => {
 
         const file = e.target.files?.[0];
-        if (file) {
+        if(file) {
 "
             form.setValue("image", file);
             const reader = new FileReader();
             reader.onloadend = () => {
-                setImagePreview (reader.result) };
-            reader.readAsDataURL (file) }
+                setImagePreview(reader.result) };
+            reader.readAsDataURL(file) }
     };
     const handleVideoChange = (e) => {
 
         const file = e.target.files?.[0];
-        if (file) {
+        if(file) {
 "
             form.setValue("video", file)}
     };
     const handleModelChange = (e) => {
 
         const file = e.target.files?.[0];
-        if (file) {
+        if(file) {
 "
             form.setValue("model", file)}
     };
@@ -86,9 +77,9 @@ export function ProductSubmissionForm() {
         // Switch to the manual tab to show applied content"
         setActiveTab("manual")};
     // Handle form submission
-    const onSubmit = async (values) => {
+    const onSubmit = async(values) => {
 
-        if (!user) {
+        if(!user) {
 
             toast({
 "
@@ -96,7 +87,7 @@ export function ProductSubmissionForm() {
                 description: "You must be logged in to publish products","
                 variant: "destructive"});
             return}
-        setIsSubmitting (true) ;
+        setIsSubmitting(true) ;
         try {
             // Create the product listing
             const productData = {
@@ -106,7 +97,7 @@ export function ProductSubmissionForm() {
                 price: parseFloat(values.price),
                 category: values.category,"
                 currency: "USD", // Default currency
-                tags: values.tags ? values.tags.split (',) .map (tag => tag.trim () ) [],;
+                tags: values.tags ? values.tags.split(',) .map(tag => tag.trim () ) [],;
                 author: {
 "
                     name: user.displayName || "Anonymous Creator",
@@ -117,17 +108,17 @@ export function ProductSubmissionForm() {
                 .insert([productData])
                 .select('id')
                 .single();
-            if (productError) {
+            if(productError) {
 
                 throw new Error(productError.message)}
             // If we have an image, upload it
-            if (values.image) {
+            if(values.image) {
 
                 const imagePath = `product_images/${productRecord.id}/${values.image.name}`;
                 const { error: uploadError } = await supabase.storage'
                     .from('products')
                     .upload(imagePath, values.image);
-                if (uploadError) {
+                if(uploadError) {
 
                     throw new Error(uploadError.message)}
                 // Get the public URL for the image
@@ -142,18 +133,18 @@ export function ProductSubmissionForm() {
                     images[publicUrlData.publicUrl];
                 });
                     .eq('id', productRecord.id);
-                if (updateError) {
+                if(updateError) {
 
                     throw new Error(updateError.message)}
             }
             // Upload video if provided
-            if (values.video) {
+            if(values.video) {
 `
                 const videoPath = `product_videos/${productRecord.id}/${values.video.name}`;
                 const { error: uploadError } = await supabase.storage'
                     .from('products')
                     .upload(videoPath, values.video);
-                if (uploadError) {
+                if(uploadError) {
 
                     throw new Error(uploadError.message)}
                 const { data: publicUrlData } = supabase.storage'
@@ -163,18 +154,18 @@ export function ProductSubmissionForm() {
                     .from('product_listings')
                     .update({ video_url: publicUrlData.publicUrl })
                     .eq('id', productRecord.id);
-                if (updateError) {
+                if(updateError) {
 
                     throw new Error(updateError.message)}
             }
             // Upload model if provided
-            if (values.model) {
+            if(values.model) {
 `
                 const modelPath = `product_models/${productRecord.id}/${values.model.name}`;
                 const { error: uploadError } = await supabase.storage'
                     .from('products')
                     .upload(modelPath, values.model);
-                if (uploadError) {
+                if(uploadError) {
 
                     throw new Error(uploadError.message)}
                 const { data: publicUrlData } = supabase.storage'
@@ -184,7 +175,7 @@ export function ProductSubmissionForm() {
                     .from('product_listings')
                     .update({ model_url: publicUrlData.publicUrl })
                     .eq('id', productRecord.id);
-                if (updateError) {
+                if(updateError) {
 
                     throw new Error(updateError.message)}
             }
@@ -195,7 +186,7 @@ export function ProductSubmissionForm() {
                 description: "Your product has been successfully published on Zion."});
             // Redirect to product page`
             router(`/marketplace/listing/${productRecord.id}`)}
-        catch (error) {
+        catch(error) {
             toast({
 "
                 title: "Publication Failed","
@@ -242,7 +233,7 @@ export function ProductSubmissionForm() {
 "
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
               <FormField control={form.control} name="price" render={({ field }) => (<FormItem>
-                    <FormLabel>Price (USD)</FormLabel>
+                    <FormLabel>Price(USD)</FormLabel>
                     <FormControl>"
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field}/>
                     </FormControl>
@@ -273,7 +264,7 @@ export function ProductSubmissionForm() {
                   <FormControl>"
                     <Input placeholder="Enter tags separated by commas" {...field}/>
                   </FormControl>
-                  <FormDescription > Add relevant tags to help users find your product (e.g., ai, productivity, design) </FormDescription>
+                  <FormDescription > Add relevant tags to help users find your product(e.g., ai, productivity, design) </FormDescription>
                   <FormMessage />
                 </FormItem>)}/>
 "
@@ -282,7 +273,7 @@ export function ProductSubmissionForm() {
                   <FormControl>"
                     <Input type="file" accept="image/*" onChange={handleImageChange} className="cursor-pointer"/>
                   </FormControl>
-                  <FormDescription > Upload a high - quality image of your product (recommended size: 1200x800px) </FormDescription>
+                  <FormDescription > Upload a high-quality image of your product(recommended size: 1200x800px) </FormDescription>
                   <FormMessage />
                   "
                   {imagePreview && (<div className="mt-2 w-full max-w-md border rounded overflow-hidden">
@@ -293,7 +284,7 @@ export function ProductSubmissionForm() {
                 </FormItem>)}/>
 "
             <FormField control={form.control} name="video" render={() => (<FormItem>
-                  <FormLabel>Product Video (MP4)</FormLabel>
+                  <FormLabel>Product Video(MP4)</FormLabel>
                   <FormControl>"
                     <Input type="file" accept="video/mp4" onChange={handleVideoChange} className="cursor-pointer"/>
                   </FormControl>
@@ -305,7 +296,7 @@ export function ProductSubmissionForm() {
             <FormField control={form.control} name="model" render = {
 
   () => (<FormItem>
-                  <FormLabel>3D Model (glb)</FormLabel>
+                  <FormLabel>3D Model(glb)</FormLabel>
                   <FormControl>"
                     <Input type="file" accept="model/gltf-binary,"
   .glb" onChange={handleModelChange
@@ -333,7 +324,6 @@ export function ProductSubmissionForm() {
 "
             title: form.getValues("title"),"
   category: form.getValues("category")
-        
 
 }}/>
       </TabsContent>

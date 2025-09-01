@@ -1,623 +1,8 @@
 import React, { useState } from 'react';
-export default function SOC2ComplianceAutomation () {
-import {
-import { motion } from 'framer - motion';
+import { motion  } from 'framer-motion';
 
-  Brain,
-  Zap,
-  Shield,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Users,
-  Award,
-  Globe,
-  Lock,
-  Activity,
-  Clock,
-  Eye,
-  Database,
-  Code,
-  FileText,
-  Wrench,
-  Cpu,
-  Target,
-  Rocket,
-  Lightbulb,
-  Gauge,
-  Network,
-  Server,
-  Building,
-  Car,
-  Plane,
-  Factory,
-  Cog,
-  BarChart3,
-  TrendingUp,
-  MapPin,
-  Layers,
-  RefreshCw,
-  AlertTriangle,
-  Package,
-  Warehouse,
-  Route,
-  Navigation,
-  Box,
-  Ship,
-  Train,
-  Plane,
-  Car,
-  Truck,
-  Cloud,
-  Settings,
-  Palette,
-  Smartphone,
-  Tablet,
-  Monitor,
-  Smartphone,
-  Globe,
-  Shield,
-  Zap,
-  Users,
-  Settings,
-  Palette,
-  Database,
-  Server,
-  Network,
-  Wifi,
-  Bluetooth,
-  Battery,
-  Signal,
-  Wifi,
-  Bluetooth,
-  Battery,
-  Signal,
-  Wifi,
-  Bluetooth,
-  Battery,
-  Signal,
-  HardDrive,
-  MemoryStick,
-  Router,
-  Switch,
-  Hub,
-  Modem,
-  Firewall,
-  LoadBalancer,
-  Gateway,
-  Proxy,
-  VPN,
-  SSL,
-  TLS,
-  SSH,
-  FTP,
-  HTTP,
-  HTTPS,
-  DNS,
-  DHCP,
-  NTP,
-  SMTP,
-  POP3,
-  IMAP,
-  LDAP,
-  Kerberos,
-  OAuth,
-  JWT,
-  SAML,
-  OpenID,
-  Radius,
-  Tacacs,
-  Syslog,
-  SNMP,
-  NetFlow,
-  sFlow,
-  IPFIX,
-  BGP,
-  OSPF,
-  EIGRP,
-  RIP,
-  VLAN,
-  VXLAN,
-  GRE,
-  IPSec,
-  MPLS,
-  SDN,
-  NFV,
-  VNF,
-  Container,
-  Pod,
-  Service,
-  Ingress,
-  Egress,
-  Cluster,
-  Node,
-  Namespace,
-  ConfigMap,
-  Secret,
-  PersistentVolume,
-  StorageClass,
-  StatefulSet,
-  DaemonSet,
-  Job,
-  CronJob,
-  HorizontalPodAutoscaler,
-  VerticalPodAutoscaler,
-  NetworkPolicy,
-  PodSecurityPolicy,
-  Role,
-  RoleBinding,
-  ClusterRole,
-  ClusterRoleBinding,
-  ServiceAccount,
-  Token,
-  Certificate,
-  CSR,
-  CRL,
-  OCSP,
-  HSM,
-  TPM,
-  SecureEnclave,
-  TrustZone,
-  SGX,
-  SEV,
-  TDX,
-  ARM,
-  x86,
-  RISC,
-  CISC,
-  GPU,
-  TPU,
-  FPGA,
-  ASIC,
-  SoC,
-  SiP,
-  PCB,
-  Motherboard,
-  Backplane,
-  Chassis,
-  Rack,
-  Cabinet,
-  Datacenter,
-  Colocation,
-  Edge,
-  Fog,
-  Cloud,
-  Hybrid,
-  Multi,
-  Public,
-  Private,
-  Community,
-  Government,
-  Financial,
-  Healthcare,
-  Education,
-  Retail,
-  Manufacturing,
-  Transportation,
-  Energy,
-  Utilities,
-  Telecommunications,
-  Media,
-  Entertainment,
-  Gaming,
-  Social,
-  Ecommerce,
-  Fintech,
-  Insurtech,
-  Healthtech,
-  Edtech,
-  Proptech,
-  Legaltech,
-  Regtech,
-  Adtech,
-  MarTech,
-  HRTech,
-  SalesTech,
-  SupportTech,
-  SecurityTech,
-  PrivacyTech,
-  ComplianceTech,
-  GovernanceTech,
-  RiskTech,
-  AuditTech,
-  MonitoringTech,
-  ObservabilityTech,
-  LoggingTech,
-  TracingTech,
-  MetricsTech,
-  AlertingTech,
-  IncidentTech,
-  ChangeTech,
-  ReleaseTech,
-  DeploymentTech,
-  CI,
-  CD,
-  DevOps,
-  GitOps,
-  SecOps,
-  DataOps,
-  MLOps,
-  AIOps,
-  NoOps,
-  SRE,
-  Platform,
-  Infrastructure,
-  Application,
-  Data,
-  Security,
-  Network,
-  Storage,
-  Compute,
-  Memory,
-  Cache,
-  Buffer,
-  Queue,
-  Stream,
-  Batch,
-  RealTime,
-  NearRealTime,
-  Offline,
-  Online,
-  Hybrid,
-  Multi,
-  Single,
-  Distributed,
-  Centralized,
-  Decentralized,
-  Federated,
-  Hierarchical,
-  Flat,
-  Mesh,
-  Star,
-  Ring,
-  Bus,
-  Tree,
-  Graph,
-  Matrix,
-  Vector,
-  Scalar,
-  Tensor,
-  Array,
-  List,
-  Stack,
-  Queue,
-  Deque,
-  PriorityQueue,
-  Heap,
-  Tree,
-  Graph,
-  HashTable,
-  BloomFilter,
-  SkipList,
-  Trie,
-  BTree,
-  RedBlackTree,
-  AVLTree,
-  SplayTree,
-  Treap,
-  SplayTree,
-  RedBlackTree,
-  AVLTree,
-  BTree,
-  Trie,
-  SkipList,
-  BloomFilter,
-  HashTable,
-  Graph,
-  Tree,
-  Heap,
-  PriorityQueue,
-  Deque,
-  Queue,
-  Stack,
-  List,
-  Array,
-  Tensor,
-  Scalar,
-  Vector,
-  Matrix,
-  Graph,
-  Tree,
-  Ring,
-  Star,
-  Mesh,
-  Flat,
-  Hierarchical,
-  Federated,
-  Decentralized,
-  Centralized,
-  Distributed,
-  Single,
-  Multi,
-  Hybrid,
-  Online,
-  Offline,
-  NearRealTime,
-  RealTime,
-  Batch,
-  Stream,
-  Queue,
-  Buffer,
-  Cache,
-  Memory,
-  Compute,
-  Storage,
-  Network,
-  Security,
-  Data,
-  Application,
-  Infrastructure,
-  Platform,
-  SRE,
-  NoOps,
-  AIOps,
-  MLOps,
-  DataOps,
-  SecOps,
-  GitOps,
-  DevOps,
-  CD,
-  CI,
-  DeploymentTech,
-  ReleaseTech,
-  ChangeTech,
-  IncidentTech,
-  AlertingTech,
-  MetricsTech,
-  TracingTech,
-  LoggingTech,
-  ObservabilityTech,
-  MonitoringTech,
-  AuditTech,
-  RiskTech,
-  GovernanceTech,
-  ComplianceTech,
-  PrivacyTech,
-  SecurityTech,
-  SupportTech,
-  SalesTech,
-  HRTech,
-  MarTech,
-  Adtech,
-  Regtech,
-  Legaltech,
-  Proptech,
-  Edtech,
-  Healthtech,
-  Insurtech,
-  Fintech,
-  Ecommerce,
-  Social,
-  Gaming,
-  Entertainment,
-  Media,
-  Telecommunications,
-  Utilities,
-  Energy,
-  Transportation,
-  Manufacturing,
-  Retail,
-  Education,
-  Healthcare,
-  Financial,
-  Government,
-  Community,
-  Private,
-  Public,
-  Multi,
-  Hybrid,
-  Cloud,
-  Fog,
-  Edge,
-  Colocation,
-  Datacenter,
-  Cabinet,
-  Rack,
-  Chassis,
-  Backplane,
-  Motherboard,
-  PCB,
-  SiP,
-  SoC,
-  ASIC,
-  FPGA,
-  TPU,
-  GPU,
-  CISC,
-  RISC,
-  x86,
-  ARM,
-  TDX,
-  SEV,
-  SGX,
-  TrustZone,
-  SecureEnclave,
-  TPM,
-  HSM,
-  OCSP,
-  CRL,
-  CSR,
-  Certificate,
-  Token,
-  ServiceAccount,
-  ClusterRoleBinding,
-  ClusterRole,
-  RoleBinding,
-  Role,
-  PodSecurityPolicy,
-  NetworkPolicy,
-  VerticalPodAutoscaler,
-  HorizontalPodAutoscaler,
-  CronJob,
-  Job,
-  DaemonSet,
-  StatefulSet,
-  StorageClass,
-  PersistentVolume,
-  Secret,
-  ConfigMap,
-  Namespace,
-  Node,
-  Cluster,
-  Egress,
-  Ingress,
-  Service,
-  Pod,
-  Container,
-  VNF,
-  NFV,
-  SDN,
-  MPLS,
-  IPSec,
-  GRE,
-  VXLAN,
-  VLAN,
-  RIP,
-  EIGRP,
-  OSPF,
-  BGP,
-  IPFIX,
-  sFlow,
-  NetFlow,
-  SNMP,
-  Syslog,
-  Tacacs,
-  Radius,
-  OpenID,
-  SAML,
-  JWT,
-  OAuth,
-  Kerberos,
-  LDAP,
-  IMAP,
-  POP3,
-  SMTP,
-  NTP,
-  DHCP,
-  DNS,
-  HTTPS,
-  HTTP,
-  FTP,
-  SSH,
-  TLS,
-  SSL,
-  VPN,
-  Proxy,
-  Gateway,
-  LoadBalancer,
-  Firewall,
-  Modem,
-  Hub,
-  Switch,
-  Router,
-  MemoryStick,
-  HardDrive,
-  Signal,
-  Battery,
-  Bluetooth,
-  Wifi,
-  Network,
-  Server,
-  Database,
-  Palette,
-  Settings,
-  Users,
-  Zap,
-  Shield,
-  Globe,
-  Smartphone,
-  Monitor,
-  Tablet,
-  Smartphone,
-  Palette,
-  Settings,
-  Cloud,
-  Truck,
-  Car,
-  Plane,
-  Train,
-  Ship,
-  Box,
-  Navigation,
-  Route,
-  Warehouse,
-  Package,
-  AlertTriangle,
-  RefreshCw,
-  Layers,
-  MapPin,
-  TrendingUp,
-  BarChart3,
-  Cog,
-  Factory,
-  Plane,
-  Car,
-  Building,
-  Server,
-  Network,
-  Gauge,
-  Lightbulb,
-  Rocket,
-  Target,
-  Brain,
-  Cpu,
-  Wrench,
-  FileText,
-  Code,
-  Database,
-  Eye,
-  Clock,
-  Activity,
-  Lock,
-  Globe,
-  Award,
-  Users,
-  Star,
-  ArrowRight,
-  CheckCircle,
-  Shield,
-  Zap,
-  Brain
-} from 'lucide - react';
-
-const successStories = [
-  {
-    id: 1,
-    comp: "Financial Services Corp",
-    industry: "Finance",
-    challenge: "Needed automated SOC2 compliance monitoring for regulatory requirements",
-    solution: "Built comprehensive SOC2 compliance automation platform with monitoring and reporting",
-    results: "80% faster compliance checks, 90% reduced manual effort, 100% audit success, better security",
-    logo: "FSC"
-  },
-  {
-    id: 2,
-    comp: "Healthcare Technology Ltd",
-    industry: "Healthcare",
-    challenge: "Required automated SOC2 policy management and enforcement",
-    solution: "Implemented AI - driven SOC2 policy automation system",
-    results: "70% faster policy updates, 85% improved compliance, better risk management, reduced violations",
-    logo: "HTL"
-  },
-  {
-    id: 3,
-    comp: "Cloud Services Provider",
-    industry: "Technology",
-    challenge: "Needed automated SOC2 audit preparation and security controls",
-    solution: "Built AI - powered SOC2 audit preparation and security automation system",
-    results: "75% faster audit preparation, 90% automated security controls, better compliance, improved security",
-    logo: "CSP"
-
-];
-
-const processSteps = [
-  {
-    step: 1,
-    title: "Compliance Assessment",
-    description: "Evaluate current SOC2 compliance status and identify automation opportunities",
-    icon: FileText,
-    duration: "2 - 4 weeks"
-  },
+export default function Page() {
+,
   {
     step: 2,
     title: "Automation Strategy",
@@ -641,8 +26,7 @@ const processSteps = [
 
 ];
 
-const soc2Benefits = [
-  {
+const soc2Benefits = [{
     title: "Automated Compliance",
     description: "AI - powered automation reduces manual compliance effort",
     icon: Zap,
@@ -668,25 +52,25 @@ const soc2Benefits = [
   }
 ];
 
-  const [selectedCategory, setSelectedCategory] = useState ('All') ;
-  const [selectedSolution, setSelectedSolution] = useState (null) ;
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedSolution, setSelectedSolution] = useState(null);
 
   const categories = ['All', 'Monitoring', 'Policy Management', 'Risk Management', 'Audit Preparation', 'Security Controls', 'Reporting'];
 
   const filteredSolutions = selectedCategory === 'All'
     ? soc2Solutions
-    : soc2Solutions.filter (solution => solution.category === selectedCategory) ;
+    : soc2Solutions.filter(solution => solution.category === selectedCategory) ;
 
-  return (<div className="min - h-screen bg - futuristic">
+  return (<div className="min - h-screen bg-futuristic">
       {/* Hero Section */}
-      <section className="relative pt - 32 pb - 20 overflow - hidden">
-        <div className="absolute inset - 0 bg - gradient - to - br from - zion - cyan / 20 via - zion - purple / 20 to - zion - blue / 20"></div>
-        <div className="absolute inset - 0">
-          <div className="absolute top - 20 left - 20 w - 72 h - 72 bg - zion - cyan / 30 rounded - full blur - 3xl"></div>
-          <div className="absolute bottom - 20 right - 20 w - 96 h - 96 bg - zion - purple / 30 rounded - full blur - 3xl"></div>
+      <section className="relative pt - 32 pb - 20 overflow-hidden">
+        <div className="absolute inset - 0 bg-gradient - to - br from - zion - cyan / 20 via - zion - purple / 20 to - zion -blue / 20"></div>
+        <div className="absolute inset -0">
+          <div className="absolute top - 20 left - 20 w-72 h-72 bg-zion - cyan / 30 rounded-full blur -3xl"></div>
+          <div className="absolute bottom - 20 right - 20 w-96 h-96 bg-zion - purple / 30 rounded-full blur -3xl"></div>
         </div>
 
-        <div className="container - responsive relative z - 10">
+        <div className="container - responsive relative z -10">
           <motion.div
             initial = {
   { opacity: 0,
@@ -699,7 +83,7 @@ const soc2Benefits = [
 
 }}
             transition={{ duration: 0.8 }}
-            className="text - center max - w-4xl mx - auto"
+            className="text-center max - w-4xl mx -auto"
 
             <motion.div
               initial = {
@@ -717,32 +101,31 @@ const soc2Benefits = [
   delay: 0.2
 
 }}
-              className="inline - flex items - center justify - center w - 20 h - 20 bg - gradient - to - br from - zion - cyan to - zion - purple rounded - 2xl mb - 8"
+              className="inline - flex items - center justify - center w-20 h-20 bg-gradient - to - br from - zion - cyan to - zion - purple rounded-2xl mb-8"
 
-              <Shield className="w - 10 h - 10 text - white" />
+              <Shield className="w-10 h-10 text-white" />
             </motion.div>
 
-            <h1 className="text - 5xl md:text - 6xl font - bold text - white mb - 6">
+            <h1 className="text-5xl md:text-6xl font - bold text-white mb-6">
               SOC2 Compliance &
-              <span className="text - gradient block">Automation</span>
+              <span className="text-gradient block">Automation</span>
             </h1>
 
-            <p className="text - xl text - zion - slate - light leading - relaxed mb - 8">
-              Transform SOC2 compliance with intelligent automation systems. From monitoring
-              to audit preparation, we help you achieve and maintain SOC2 compliance efficiently.
-            </p>
+            <p className="text-xl text-zion - slate - light leading - relaxed mb-8">
+              Transform SOC2 compliance with intelligent automation systems.From monitoring
+              to audit preparation, we help you achieve and maintain SOC2 compliance efficiently.</p>
 
-            <div className="flex flex - wrap justify - center gap - 4 text - sm">
-              <div className="flex items - center gap - 2 text - zion - cyan">
-                <Shield className="w - 4 h - 4" />
+            <div className="flex flex - wrap justify - center gap-4 text-sm">
+              <div className="flex items - center gap-2 text-zion -cyan">
+                <Shield className="w-4 h-4" />
                 <span > Compliance Monitoring</span>
               </div>
-              <div className="flex items - center gap - 2 text - zion - purple">
-                <FileText className="w - 4 h - 4" />
+              <div className="flex items - center gap-2 text-zion -purple">
+                <FileText className="w-4 h-4" />
                 <span > Policy Automation</span>
               </div>
-              <div className="flex items - center gap - 2 text - zion - blue">
-                <CheckCircle className="w - 4 h - 4" />
+              <div className="flex items - center gap-2 text-zion -blue">
+                <CheckCircle className="w-4 h-4" />
                 <span > Audit Preparation</span>
               </div>
             </div>
@@ -751,8 +134,8 @@ const soc2Benefits = [
       </section>;
 
       {/* SOC2 Benefits */}
-      <section className="py - 20 bg - zion - blue - dark / 50">;
-        <div className="container - responsive">
+      <section className="py-20 bg-zion - blue -dark / 50">;
+        <div className="container -responsive">
           <motion.div
             initial = {
   { opacity: 0,
@@ -765,15 +148,15 @@ const soc2Benefits = [
 
 }}
             transition={{ duration: 0.8 }}
-            className="text - center mb - 16"
+            className="text-center mb-16"
 
-            <h2 className="text - 4xl font - bold text - white mb - 4">SOC2 Compliance Automation Benefits</h2>
-            <p className="text - xl text - zion - slate - light max - w-3xl mx - auto">
+            <h2 className="text-4xl font - bold text-white mb-4">SOC2 Compliance Automation Benefits</h2>
+            <p className="text-xl text-zion - slate - light max - w-3xl mx -auto">
               Understanding the fundamental advantages that make SOC2 automation essential
             </p>
           </motion.div>
 
-          <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">
+          <div className="grid grid - cols - 1 md:grid - cols - 2 gap-8">
             {soc2Benefits.map ( (benefit, index) => (<motion.div
                 key={benefit.title}
                 initial = {
@@ -791,20 +174,20 @@ const soc2Benefits = [
   delay: index * 0.1
 
 }}
-                className="bg - zion - blue - dark / 30 border border - zion - cyan / 20 rounded - 2xl p - 8 hover:border - zion - cyan / 40 transition - all duration - 300"
+                className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 8 hover:border-zion - cyan / 40 transition - all duration -300"
 
-                <div className="w - 16 h - 16 bg - gradient - to - br from - zion - cyan to - zion - purple rounded - 2xl flex items - center justify - center mx - auto mb - 6">
-                  <benefit.icon className="w - 8 h - 8 text - white" />
+                <div className="w-16 h-16 bg-gradient - to - br from - zion - cyan to - zion - purple rounded-2xl flex items - center justify - center mx - auto mb-6">
+                  <benefit.icon className="w-8 h-8 text-white" />
                 </div>
 
-                <h3 className="text - 2xl font - bold text - white mb - 4 text - center">{benefit.title}</h3>
-                <p className="text - zion - slate - light mb - 6 leading - relaxed text - center">{benefit.description}</p>
+                <h3 className="text-2xl font - bold text-white mb-4 text-center">{benefit.title}</h3>
+                <p className="text-zion - slate - light mb-6 leading - relaxed text-center">{benefit.description}</p>
 
                 <div className="space - y-2">
-                  <h4 className="text - zion - cyan font - semibold mb - 3">Examples:</h4>
-                  {benefit.examples.map ( (example, exampleIndex) => (<div key={exampleIndex} className="flex items - center gap - 3">
-                      <CheckCircle className="w - 4 h - 4 text - zion - cyan flex - shrink - 0" />
-                      <span className="text - zion - slate - light text - sm">{example}</span>
+                  <h4 className="text-zion - cyan font - semibold mb-3">Examples:</h4>
+                  {benefit.examples.map((example, exampleIndex) => (<div key={exampleIndex} className="flex items - center gap-3">
+                      <CheckCircle className="w-4 h-4 text-zion - cyan flex - shrink -0" />
+                      <span className="text-zion - slate - light text-sm">{example}</span>
                     </div>) ) }
                 </div>
               </motion.div>;) ) }
@@ -813,8 +196,8 @@ const soc2Benefits = [
       </section>
 
       {/* SOC2 Technologies */}
-      <section className="py - 20">;
-        <div className="container - responsive">
+      <section className="py-20">;
+        <div className="container -responsive">
           <motion.div
             initial = {
   { opacity: 0,
@@ -827,16 +210,16 @@ const soc2Benefits = [
 
 }}
             transition={{ duration: 0.8 }}
-            className="text - center mb - 16"
+            className="text-center mb-16"
 
-            <h2 className="text - 4xl font - bold text - white mb - 4">SOC2 Compliance Technologies We Support</h2>
-            <p className="text - xl text - zion - slate - light max - w-3xl mx - auto">
+            <h2 className="text-4xl font - bold text-white mb-4">SOC2 Compliance Technologies We Support</h2>
+            <p className="text-xl text-zion - slate - light max - w-3xl mx -auto">
               Comprehensive support for leading SOC2 compliance automation technologies
             </p>
           </motion.div>
 
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
-            {soc2Technologies.map ( (technology, index) => (<motion.div
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap-8">
+            {soc2Technologies.map((technology, index) => (<motion.div
                 key={technology.name}
                 initial = {
   { opacity: 0,
@@ -853,22 +236,21 @@ const soc2Benefits = [
   delay: index * 0.1
 
 }}
-                className="bg - zion - blue - dark / 30 border border - zion - cyan / 20 rounded - 2xl p - 6 text - center hover:border - zion - cyan / 40 transition - all duration - 300"
+                className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 text-center hover:border-zion - cyan / 40 transition - all duration -300"
 
-                <div className="w - 16 h - 16 bg - gradient - to - br from - zion - cyan to - zion - purple rounded - 2xl flex items - center justify - center mx - auto mb - 6">
-                  <technology.icon className="w - 8 h - 8 text - white" />
+                <div className="w-16 h-16 bg-gradient - to - br from - zion - cyan to - zion - purple rounded-2xl flex items - center justify - center mx - auto mb-6">
+                  <technology.icon className="w-8 h-8 text-white" />
                 </div>
 
-                <h3 className="text - xl font - bold text - white mb - 3">{technology.name}</h3>
-                <p className="text - zion - slate - light mb - 4 leading - relaxed">{technology.description}</p>
-                <p className="text - zion - cyan font - semibold mb - 2">{technology.useCase}</p>
+                <h3 className="text-xl font - bold text-white mb-3">{technology.name}</h3>
+                <p className="text-zion - slate - light mb-4 leading -relaxed">{technology.description}</p>
+                <p className="text-zion - cyan font - semibold mb-2">{technology.useCase}</p>
 
-                <span className={`inline - block px - 3 py - 1 rounded - full text - sm font - semibold ${
-                  technology.reliability === 'Critical'
-                    ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30'
+                <span className={`inline - block px-3 py-1 rounded-full text-sm font - semibold ${technology.reliability === 'Critical'
+                    ? 'bg-red - 500 / 20 text-red - 400 border border-red - 500 / 30'
                     : technology.reliability === 'High'
-                    ? 'bg - yellow - 500 / 20 text - yellow - 400 border border - yellow - 500 / 30'
-                    : 'bg - green - 500 / 20 text - green - 400 border border - green - 500 / 30'
+                    ? 'bg-yellow-500 / 20 text-yellow-400 border border-yellow-500 / 30'
+                    : 'bg-green - 500 / 20 text-green - 400 border border-green - 500 / 30'
                 }`}>
                   {technology.reliability} Reliability
                 </span>
@@ -878,8 +260,8 @@ const soc2Benefits = [
       </section>
 
       {/* Process Section */}
-      <section className="py - 20 bg - zion - blue - dark / 50">;
-        <div className="container - responsive">
+      <section className="py-20 bg-zion - blue -dark / 50">;
+        <div className="container -responsive">
           <motion.div
             initial = {
   { opacity: 0,
@@ -892,16 +274,16 @@ const soc2Benefits = [
 
 }}
             transition={{ duration: 0.8 }}
-            className="text - center mb - 16"
+            className="text-center mb-16"
 
-            <h2 className="text - 4xl font - bold text - white mb - 4">Our SOC2 Compliance Automation Implementation Process</h2>
-            <p className="text - xl text - zion - slate - light max - w-3xl mx - auto">
+            <h2 className="text-4xl font - bold text-white mb-4">Our SOC2 Compliance Automation Implementation Process</h2>
+            <p className="text-xl text-zion - slate - light max - w-3xl mx -auto">
               A proven methodology that ensures successful SOC2 compliance automation
             </p>
           </motion.div>
 
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
-            {processSteps.map ( (step, index) => (<motion.div
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap-8">
+            {processSteps.map((step, index) => (<motion.div
                 key={step.step}
                 initial = {
   { opacity: 0,
@@ -918,20 +300,20 @@ const soc2Benefits = [
   delay: index * 0.1
 
 }}
-                className="text - center"
+                className="text-center"
 
-                <div className="relative mb - 6">
-                  <div className="w - 16 h - 16 bg - gradient - to - br from - zion - cyan to - zion - purple rounded - 2xl flex items - center justify - center mx - auto">
-                    <step.icon className="w - 8 h - 8 text - white" />
+                <div className="relative mb-6">
+                  <div className="w-16 h-16 bg-gradient - to - br from - zion - cyan to - zion - purple rounded-2xl flex items - center justify - center mx -auto">
+                    <step.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div className="absolute - top - 2 -right - 2 w - 8 h - 8 bg - zion - blue rounded - full flex items - center justify - center text - white text - sm font - bold">
+                  <div className="absolute - top - 2 -right - 2 w-8 h-8 bg-zion - blue rounded-full flex items - center justify - center text-white text-sm font -bold">
                     {step.step}
                   </div>
                 </div>
 
-                <h3 className="text - xl font - bold text - white mb - 3">{step.title}</h3>
-                <p className="text - zion - slate - light mb - 4 leading - relaxed">{step.description}</p>
-                <span className="inline - block px - 3 py - 1 bg - zion - cyan / 20 text - zion - cyan text - sm rounded - full border border - zion - cyan / 30">
+                <h3 className="text-xl font - bold text-white mb-3">{step.title}</h3>
+                <p className="text-zion - slate - light mb-4 leading -relaxed">{step.description}</p>
+                <span className="inline - block px-3 py-1 bg-zion - cyan / 20 text-zion - cyan text-sm rounded-full border border-zion -cyan / 30">
                   {step.duration}
                 </span>
               </motion.div>;) ) }
@@ -940,8 +322,8 @@ const soc2Benefits = [
       </section>
 
       {/* Solutions Section */}
-      <section className="py - 20">;
-        <div className="container - responsive">
+      <section className="py-20">;
+        <div className="container -responsive">
           <motion.div
             initial = {
   { opacity: 0,
@@ -954,31 +336,30 @@ const soc2Benefits = [
 
 }}
             transition={{ duration: 0.8 }}
-            className="text - center mb - 16"
+            className="text-center mb-16"
 
-            <h2 className="text - 4xl font - bold text - white mb - 4">SOC2 Compliance Automation Solutions</h2>
-            <p className="text - xl text - zion - slate - light max - w-3xl mx - auto">
+            <h2 className="text-4xl font - bold text-white mb-4">SOC2 Compliance Automation Solutions</h2>
+            <p className="text-xl text-zion - slate - light max - w-3xl mx -auto">
               Comprehensive solutions designed for intelligent SOC2 compliance automation
             </p>
           </motion.div>
 
           {/* Category Filter */}
-          <div className="flex flex - wrap justify - center gap - 4 mb - 12">
-            {categories.map ( (category) => (<button
+          <div className="flex flex - wrap justify - center gap-4 mb-12">
+            {categories.map((category) => (<button
                 key={category}
-                onClick={ () => setSelectedCategory (category) }
-                className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
-                  selectedCategory === category
-                    ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg shadow - zion - cyan / 25'
-                    : 'bg - zion - blue - dark / 30 text - zion - slate - light border border - zion - cyan / 20 hover:border - zion - cyan / 40'
+                onClick={ () => setSelectedCategory(category) }
+                className={`px-6 py-3 rounded-xl font - semibold transition - all duration - 300 ${selectedCategory === category
+                    ? 'bg-gradient - to - r from - zion - cyan to - zion - purple text-white shadow-lg shadow-zion - cyan / 25'
+                    : 'bg-zion - blue - dark / 30 text-zion - slate - light border border-zion - cyan / 20 hover:border-zion - cyan / 40'
                 }`}
 
                 {category}
               </button>) ) }
           </div>
 
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
-            {filteredSolutions.map ( (solution, index) => (<motion.div
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">
+            {filteredSolutions.map((solution, index) => (<motion.div
                 key={solution.id}
                 initial = {
   { opacity: 0,
@@ -995,44 +376,44 @@ const soc2Benefits = [
   delay: index * 0.1
 
 }}
-                className="bg - zion - blue - dark / 30 border border - zion - cyan / 20 rounded - 2xl p - 6 hover:border - zion - cyan / 40 transition - all duration - 300 cursor - pointer"
-                onClick={ () => setSelectedSolution (solution) }
+                className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer"
+                onClick={ () => setSelectedSolution(solution) }
 
-                <div className="w - 16 h - 16 bg - gradient - to - br from - zion - cyan to - zion - purple rounded - 2xl flex items - center justify - center mb - 6">
-                  <solution.icon className="w - 8 h - 8 text - white" />
+                <div className="w-16 h-16 bg-gradient - to - br from - zion - cyan to - zion - purple rounded-2xl flex items - center justify - center mb-6">
+                  <solution.icon className="w-8 h-8 text-white" />
                 </div>
 
-                <h3 className="text - 2xl font - bold text - white mb - 3">{solution.title}</h3>
-                <p className="text - zion - slate - light mb - 6 leading - relaxed">{solution.description}</p>
+                <h3 className="text-2xl font - bold text-white mb-3">{solution.title}</h3>
+                <p className="text-zion - slate - light mb-6 leading -relaxed">{solution.description}</p>
 
-                <div className="space - y-3 mb - 6">
-                  {solution.features.map ( (feature, featureIndex) => (<div key={featureIndex} className="flex items - center gap - 3">
-                      <CheckCircle className="w - 5 h - 5 text - zion - cyan flex - shrink - 0" />
-                      <span className="text - zion - slate - light text - sm">{feature}</span>
+                <div className="space - y-3 mb-6">
+                  {solution.features.map((feature, featureIndex) => (<div key={featureIndex} className="flex items - center gap-3">
+                      <CheckCircle className="w-5 h-5 text-zion - cyan flex - shrink -0" />
+                      <span className="text-zion - slate - light text-sm">{feature}</span>
                     </div>) ) }
                 </div>
 
-                <div className="flex flex - wrap gap - 2 mb - 4">
-                  {solution.technologies.slice (0, 2) .map ( (tech, techIndex) => (<span
+                <div className="flex flex - wrap gap-2 mb-4">
+                  {solution.technologies.slice(0, 2) .map((tech, techIndex) => (<span
                       key={techIndex}
-                      className="px - 2 py - 1 bg - zion - purple / 20 text - zion - purple text - xs rounded border border - zion - purple / 30"
+                      className="px-2 py-1 bg-zion - purple / 20 text-zion - purple text-xs rounded border border-zion -purple / 30"
 
                       {tech}
                     </span>) ) }
                 </div>
 
-                <div className="flex items - center justify - between mb - 4">
-                  <span className="text - zion - cyan font - semibold">{solution.price}</span>
-                  <span className="text - zion - slate - light text - sm">{solution.timeline}</span>
+                <div className="flex items - center justify - between mb-4">
+                  <span className="text-zion - cyan font -semibold">{solution.price}</span>
+                  <span className="text-zion - slate - light text-sm">{solution.timeline}</span>
                 </div>
 
-                <div className="flex items - center justify - between">
-                  <span className="px - 3 py - 1 bg - zion - cyan / 20 text - zion - cyan text - xs rounded - full border border - zion - cyan / 30">
+                <div className="flex items - center justify -between">
+                  <span className="px-3 py-1 bg-zion - cyan / 20 text-zion - cyan text-xs rounded-full border border-zion -cyan / 30">
                     {solution.category}
                   </span>
-                  <button className="inline - flex items - center gap - 2 text - zion - cyan hover:text - white transition - colors duration - 300">
-                    <span className="text - sm font - medium">Learn More</span>
-                    <ArrowRight className="w - 4 h - 4" />
+                  <button className="inline - flex items - center gap-2 text-zion - cyan hover:text-white transition - colors duration -300">
+                    <span className="text-sm font -medium">Learn More</span>
+                    <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
               </motion.div>) ) }
@@ -1041,8 +422,8 @@ const soc2Benefits = [
       </section>
 
       {/* Success Stories */}
-      <section className="py - 20 bg - zion - blue - dark / 50">;
-        <div className="container - responsive">
+      <section className="py-20 bg-zion - blue -dark / 50">;
+        <div className="container -responsive">
           <motion.div
             initial = {
   { opacity: 0,
@@ -1055,16 +436,16 @@ const soc2Benefits = [
 
 }}
             transition={{ duration: 0.8 }}
-            className="text - center mb - 16"
+            className="text-center mb-16"
 
-            <h2 className="text - 4xl font - bold text - white mb - 4">SOC2 Compliance Automation Success Stories</h2>
-            <p className="text - xl text - zion - slate - light max - w-3xl mx - auto">
+            <h2 className="text-4xl font - bold text-white mb-4">SOC2 Compliance Automation Success Stories</h2>
+            <p className="text-xl text-zion - slate - light max - w-3xl mx -auto">
               Organizations that have transformed their operations with SOC2 compliance automation
             </p>
           </motion.div>
 
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
-            {successStories.map ( (story, index) => (<motion.div
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">
+            {successStories.map((story, index) => (<motion.div
                 key={story.id}
                 initial = {
   { opacity: 0,
@@ -1081,36 +462,36 @@ const soc2Benefits = [
   delay: index * 0.1
 
 }}
-                className="bg - zion - blue - dark / 30 border border - zion - cyan / 20 rounded - 2xl p - 6 hover:border - zion - cyan / 40 transition - all duration - 300"
+                className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration -300"
 
-                <div className="flex items - center gap - 4 mb - 6">
-                  <div className="w - 12 h - 12 bg - gradient - to - br from - zion - cyan to - zion - purple rounded - xl flex items - center justify - center text - white font - bold text - lg">
+                <div className="flex items - center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient - to - br from - zion - cyan to - zion - purple rounded-xl flex items - center justify - center text-white font - bold text-lg">
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text - xl font - bold text - white">{story.comp}</h3>
-                    <p className="text - zion - slate - light text - sm">{story.industry}</p>
+                    <h3 className="text-xl font - bold text-white">{story.comp}</h3>
+                    <p className="text-zion - slate - light text-sm">{story.industry}</p>
                   </div>
                 </div>
 
-                <div className="space - y-4 mb - 6">
+                <div className="space - y-4 mb-6">
                   <div>
-                    <h4 className="text - zion - cyan font - semibold mb - 2">Challenge</h4>
-                    <p className="text - zion - slate - light text - sm">{story.challenge}</p>
+                    <h4 className="text-zion - cyan font - semibold mb-2">Challenge</h4>
+                    <p className="text-zion - slate - light text-sm">{story.challenge}</p>
                   </div>
                   <div>
-                    <h4 className="text - zion - cyan font - semibold mb - 2">Solution</h4>
-                    <p className="text - zion - slate - light text - sm">{story.solution}</p>
+                    <h4 className="text-zion - cyan font - semibold mb-2">Solution</h4>
+                    <p className="text-zion - slate - light text-sm">{story.solution}</p>
                   </div>
                   <div>
-                    <h4 className="text - zion - cyan font - semibold mb - 2">Results</h4>
-                    <p className="text - zion - slate - light text - sm">{story.results}</p>
+                    <h4 className="text-zion - cyan font - semibold mb-2">Results</h4>
+                    <p className="text-zion - slate - light text-sm">{story.results}</p>
                   </div>
                 </div>
 
-                <div className="flex items - center gap - 2">
-                  {[...Array (5) ].map ( (_, i) => (<Star key={i} className="w - 4 h - 4 text - yellow - 400 fill - current" />) ) }
-                  <span className="text - zion - slate - light text - sm ml - 2">5.0 Rating</span>
+                <div className="flex items - center gap-2">
+                  {[...Array(5) ].map((_, i) => (<Star key={i} className="w-4 h-4 text-yellow-400 fill -current" />) ) }
+                  <span className="text-zion - slate - light text-sm ml-2">5.0 Rating</span>
                 </div>
               </motion.div>;) ) }
           </div>
@@ -1118,8 +499,8 @@ const soc2Benefits = [
       </section>
 
       {/* CTA Section */}
-      <section className="py - 20 bg - gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion - blue / 10">;
-        <div className="container - responsive">
+      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">;
+        <div className="container -responsive">
           <motion.div
             initial = {
   { opacity: 0,
@@ -1132,24 +513,23 @@ const soc2Benefits = [
 
 }}
             transition={{ duration: 0.8 }}
-            className="text - center max - w-4xl mx - auto"
+            className="text-center max - w-4xl mx -auto"
 
-            <h2 className="text - 4xl font - bold text - white mb - 6">Ready to Automate SOC2 Compliance?</h2>
-            <p className="text - xl text - zion - slate - light mb - 8 leading - relaxed">
+            <h2 className="text-4xl font - bold text-white mb-6">Ready to Automate SOC2 Compliance?</h2>
+            <p className="text-xl text-zion - slate - light mb-8 leading -relaxed">
               Let's discuss how SOC2 compliance automation can revolutionize your operations,
-              improve security, and ensure regulatory compliance.
-            </p>
+              improve security, and ensure regulatory compliance.</p>
 
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center">
+            <div className="flex flex - col sm:flex - row gap-4 justify -center">
               <a
                 href="/contact"
-                className="px - 8 py - 4 bg - gradient - to - r from - zion - cyan to - zion - purple text - white font - semibold rounded - xl hover:shadow - lg hover:shadow - zion - cyan / 25 transition - all duration - 300 transform hover:scale - 105"
+                className="px-8 py-4 bg-gradient - to - r from - zion - cyan to - zion - purple text-white font - semibold rounded-xl hover:shadow-lg hover:shadow-zion - cyan / 25 transition - all duration - 300 transform hover:scale -105"
 
                 Start SOC2 Automation Project
               </a>
               <a
                 href="/contact"
-                className="px - 8 py - 4 border border - zion - cyan text - zion - cyan font - semibold rounded - xl hover:bg - zion - cyan hover:text - white transition - all duration - 300"
+                className="px-8 py-4 border border-zion - cyan text-zion - cyan font - semibold rounded-xl hover:bg-zion - cyan hover:text-white transition - all duration -300"
 
                 SOC2 Automation Consultation
               </a>

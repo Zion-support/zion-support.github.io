@@ -21,7 +21,7 @@ const LoadingSpinner = ({
     blue: 'text-blue-500',
     white: 'text-white',
     gray: 'text-gray-500'};
-  return()
+  return ()
     <div className={`flex flex-col items-center justify-center ${className}`}>
       <div`
         className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`}

@@ -10,7 +10,6 @@ maxServices:  6,;
   showViewAllButton = true}) => {;
   const [activeTab, setActiveTab] = useState('featured');
 
-  
     { id: 'featured', label: 'Featured', count: 3 },;
     { id: 'ai', label: 'AI Services', count: getServicesByCategory('AI Services').length },;
     { id: 'it', label: 'IT Services', count: getServicesByCategory('IT Services').length },;
@@ -25,7 +24,7 @@ maxServices:  6,;
 
       services = getServicesByCategory(category)} else {
 
-      switch (activeTab) {;
+      switch(activeTab) {;
         case 'featured':;
           services = INNOVATIVE_SERVICES_2025.filter(service => service.rating >= 4.5).slice(0, 3);
           break;
@@ -51,7 +50,7 @@ maxServices:  6,;
     return services.slice(0, maxServices)}, [activeTab, category, maxServices]);
 
   const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0] }> = ({ service }) => ("
-    <div className = "bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">"
+    <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">"
       <div className="flex items-start justify-between mb-3">"
         <h3 className="text-lg font-semibold text-gray-900">{service.title}</h3>"
         <div className="flex items-center space-x-1">"
@@ -99,16 +98,13 @@ maxServices:  6,;
     </div>;
   );
 
-  
-  
   return ("
-    <div className = "bg-gray-50 py-16">"      <div className="container mx-auto px-4">
+    <div className="bg-gray-50 py-16">"      <div className="container mx-auto px-4">
         {/* Header Section */}"
         <div className="text-center mb-12">"
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Innovative Services 2025</h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Discover Zion Tech Group's comprehensive suite of cutting-edge AI, IT, and Micro SAAS solutions designed to transform your business operations and drive innovation.
-          </p>
+            Discover Zion Tech Group's comprehensive suite of cutting-edge AI, IT, and Micro SAAS solutions designed to transform your business operations and drive innovation.</p>
 
           {/* Statistics */}"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">"
@@ -158,9 +154,7 @@ maxServices:  6,;
               {tabs.map((tab: unknown <button
                   key={tab.id}
                   onClick={(: unknown setActiveTab(tab.id)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-
-                    activeTab === tab.id'
+                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${activeTab === tab.id'
                       ? 'bg-blue-600 text-white''
                       : 'bg-white text-gray-700 hover:bg-gray-100'`
                   }`}
@@ -183,8 +177,7 @@ maxServices:  6,;
         <div className="text-center">"
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Business?</h3>"
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Our innovative services are designed to give you a competitive edge in today's rapidly evolving technology landscape.
-          </p>
+            Our innovative services are designed to give you a competitive edge in today's rapidly evolving technology landscape.</p>
 "
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">"
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">

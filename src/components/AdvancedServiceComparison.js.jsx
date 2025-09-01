@@ -1,79 +1,10 @@
 import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { Check, X, Star, TrendingUp, Zap, Shield, Clock, DollarSign, BarChart3, Target, Users, Globe, Mail, Phone } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";"
-import { Button } from "./ui/button";"
-import { Badge } from "./ui/badge";"
-import { Input } from "./ui/input";
-const COMPLEXITY_LEVELS = ['Basic',Intermediate',Advanced',Enterprise'];
-const PRICE_RANGES = ['Under $10K',$10K-$50K',$50K-$100K',$100K+'];
-export const AdvancedServiceComparison = () => {
-    const [selectedServices, setSelectedServices] = useState([]);
-    const [filters, setFilters] = useState({
-
-        category: 'all',
-        complexity: 'all',
-        priceRange: 'all',
-        technology: 'all'
-    });
-    const [searchTerm, setSearchTerm] = useState('');
-    const [viewMode, setViewMode] = useState('grid');
-    // Mock data - in real app this would come from props or API
-    const mockServices = [
-        {
-
-            id: 'ai-crm-basic',
-            name: 'AI CRM Basic',
-            category: 'ai',
-            price: '$5,000/month',
-            duration: '3-6 months',
-            features['Basic AI insights',Customer segmentation',Email automation'],;
-            benefits['Improved customer retention',Automated workflows',Basic analytics'],;
-            technology['AI/ML',CRM',Automation'],;
-            targetAudience['Small Business',Startups'],;
-            rating: 4.2,
-            complexity: 'Basic',
-            popularity: 'Medium',
-            contactInfo: '+1 302 464 0950',
-            email: 'kleber@ziontechgroup.com',
-            link: 'https://ziontechgroup.com/services/ai-crm-basic'
-        },
-        {
-
-            id: 'ai-crm-enterprise',
-            name: 'AI CRM Enterprise',
-            category: 'ai',
-            price: '$25,000/month',
-            duration: '12-18 months',
-            features['Advanced AI insights',Predictive analytics',Multi-channel integration',Custom AI models'],;
-            benefits['Predictive customer behavior',Advanced automation',Enterprise scalability'],;
-            technology['AI/ML',Big Data',Predictive Analytics',Enterprise Integration'],;
-            targetAudience['Enterprise',Large Corporations'],;
-            rating: 4.8,
-            complexity: 'Enterprise',
-            popularity: 'High',
-            contactInfo: '+1 302 464 0950',
-            email: 'kleber@ziontechgroup.com',
-            link: 'https://ziontechgroup.com/services/ai-crm-enterprise'
-        },
-        {
-
-            id: 'quantum-basic',
-            name: 'Quantum Computing Basic',
-            category: 'quantum',
-            price: '$50,000/month',
-            duration: '6-12 months',
-            features['Basic quantum algorithms',Cloud access',Documentation'],;
-            benefits['Quantum computing access',Algorithm development',Research capabilities'],;
-            technology['Quantum Computing',Cloud Platform',Basic Algorithms'],;
-            targetAudience['Research Institutions',Universities'],;
-            rating: 4.5,
-            complexity: 'Intermediate',
-            popularity: 'Medium',
-            contactInfo: '+1 302 464 0950',
-            email: 'kleber@ziontechgroup.com',
-            link: 'https://ziontechgroup.com/services/quantum-basic'
-        },
+import { motion  } from 'framer-motion';
+export default function Page() {
+ from './ui/badge';"
+import { Input } from './ui/input';
+export default function Page() {
+,
         {
 
             id: 'quantum-enterprise',
@@ -105,7 +36,7 @@ export const AdvancedServiceComparison = () => {
             [...prev, serviceId])};
     const getComplexityColor = (complexity) => {
 
-        switch (complexity) {
+        switch(complexity) {
 
             case 'Basic': return 'bg-green-100 text-green-800';
             case 'Intermediate': return 'bg-blue-100 text-blue-800';
@@ -115,7 +46,7 @@ export const AdvancedServiceComparison = () => {
     };
     const getPopularityIcon = (popularity) => {
 
-        switch (popularity) {
+        switch(popularity) {
 '"
             case 'Trending': return <TrendingUp className="w-4 h-4 text-red-500"/>;'"
             case 'High': return <Star className="w-4 h-4 text-yellow-500"/>;'"
@@ -140,8 +71,7 @@ export const AdvancedServiceComparison = () => {
           Advanced Service Comparison
         </h1>"
         <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-          Compare our cutting-edge services across different tiers, complexity levels, and pricing to find the perfect solution for your business needs.
-        </p>
+          Compare our cutting-edge services across different tiers, complexity levels, and pricing to find the perfect solution for your business needs.</p>
       </motion.div>
 
       {/* Filters and Controls */}
@@ -182,7 +112,7 @@ export const AdvancedServiceComparison = () => {
 "
 }))} className="w-full p-2 border border-zion-slate-light rounded-md">"
               <option value="all">All Levels</option>
-              {COMPLEXITY_LEVELS.map (level => (<option key={level} value={level}>{level}</option>) ) }
+              {COMPLEXITY_LEVELS.map(level => (<option key={level} value={level}>{level}</option>) ) }
             </select>
           </div>
 
@@ -195,7 +125,7 @@ export const AdvancedServiceComparison = () => {
 "
 }))} className="w-full p-2 border border-zion-slate-light rounded-md">"
               <option value="all">All Prices</option>
-              {PRICE_RANGES.map (range => (<option key={range} value={range}>{range}</option>) ) }
+              {PRICE_RANGES.map(range => (<option key={range} value={range}>{range}</option>) ) }
             </select>
           </div>
 
@@ -351,7 +281,7 @@ export const AdvancedServiceComparison = () => {
 "
 }} transition={{ delay: 0.3 }} className="mt-8 bg-white rounded-lg shadow-lg p-6">"
           <h3 className="text-2xl font-bold text-zion-blue-dark mb-4">
-            Comparison Summary ({selectedServices.length} services selected)
+            Comparison Summary({selectedServices.length} services selected)
           </h3>"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">"
             <div className="text-center p-4 bg-zion-blue-light/10 rounded-lg">"
@@ -401,9 +331,7 @@ export const AdvancedServiceComparison = () => {
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"
           <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h3>"
           <p className="text-xl mb-6 max-w-2xl mx-auto">
-            Our cutting-edge services are designed to give you a competitive advantage in the digital age. 
-            Contact us today to discuss your specific needs and find the perfect solution.
-          </p>"
+            Our cutting-edge services are designed to give you a competitive advantage in the digital age.Contact us today to discuss your specific needs and find the perfect solution.</p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {
 

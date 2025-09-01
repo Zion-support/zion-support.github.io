@@ -1,35 +1,9 @@
 import React, { useState } from 'react';
 <<<<<<< HEAD
 export default InnovativeServicesShowcase;
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data / innovativeMicroSaasServices2025";
-import { innovativeAIServices2025 } from "../data / innovativeAIServices2025";
-import { innovativeITServices2025 } from "../data / innovativeITServices2025";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 
-=======
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSaasServices2025";"
-import { innovativeITServices2025 } from "../data/innovativeITServices2025";"
-import { innovativeAIServices2025 } from "../data/innovativeAIServices2025";
->>>>>>> main
-const InnovativeServicesShowcase = () => {
-
-    const [activeTab, setActiveTab] = useState('microsaas');
-    const [selectedService, setSelectedService] = useState(null);
-    const tabs = ['
-        { id: 'microsaas', name: 'Micro SAAS Services', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length },
-        { id: 'it', name: 'IT Services', count: innovativeITServices2025.length },
-        { id: 'ai', name: 'AI Services', count: innovativeAIServices2025.length }
-    ];
-    const getServicesByTab = () => {
-        switch (activeTab) {
-
-            case 'microsaas':
-                return INNOVATIVE_MICRO_SAAS_SERVICES_2025;
-            case 'it':
-                return innovativeITServices2025;
-            case 'ai':
-                return innovativeAIServices2025;
-            default:
-                return []}
+export default function Page() {
     };
     const handleServiceClick = (service) => {
 
@@ -121,7 +95,7 @@ const InnovativeServicesShowcase = () => {
                         {feature}
                       </span>))}"
                     {service.features.length > 3 && (<span className="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded-full">
-                        +{service.features.length - 3} more
+                        +{service.features.length-3} more
                       </span>) }
                   </div>
                 </div>

@@ -16,14 +16,12 @@ export const toast = {
     dismiss: (toastId) => // console.log('Dismiss:',
   toastId)
 
-
   position = 'bottom - right',
   richColors = true,
   closeButton = true,
 }) {
   return (<div
-      className={`fixed ${
-        position === 'top - left'
+      className={`fixed ${position === 'top - left'
           ? 'top - 4 left - 4'
           : position === 'top - right'
             ? 'top - 4 right - 4'
@@ -35,11 +33,11 @@ export const toast = {
       {/* Sonner toast container */}
     </div>) ;
 }
-  success: message => console.log ('Success:', message) ,
-  error: message => console.log ('Error:', message) ,
-  info: message => console.log ('Info:', message) ,
-  warning: message => console.log ('Warning:', message) ,
-  loading: message => console.log ('Loading:', message) ,
-  dismiss: toastId => console.log ('Dismiss:', toastId) ,
+  success: message => console.log('Success:', message) ,
+  error: message => console.log('Error:', message) ,
+  info: message => console.log('Info:', message) ,
+  warning: message => console.log('Warning:', message) ,
+  loading: message => console.log('Loading:', message) ,
+  dismiss: toastId => console.log('Dismiss:', toastId) ,
 };
 '`

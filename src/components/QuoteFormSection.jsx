@@ -12,9 +12,9 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
     comp: '',
     service: '',
     message: ''
-  }) ;
-  const [isSubmitting, setIsSubmitting] = useState (false) ;
-  const [isSubmitted, setIsSubmitted] = useState (false) ;
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const services = ['
     'IT Support & Maintenance',Network Setup & Security',Hardware Installation',Data Recovery',Cloud Migration',Custom Solution'
@@ -29,16 +29,16 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
       [name]: value
     }) ) };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async(e) => {
 
     e.preventDefault();
     setIsSubmitting(true);
 
     // Simulate API call
-    await new Promise (resolve => setTimeout (resolve, 2000) ) ;
+    await new Promise(resolve => setTimeout (resolve, 2000) ) ;
 
-    setIsSubmitting (false) ;
-    setIsSubmitted (true) ;
+    setIsSubmitting(false) ;
+    setIsSubmitted(true) ;
 
     // Reset form after 5 seconds
     setTimeout(() => {
@@ -53,9 +53,9 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
         message: ''
       }) }, 5000) };
 
-  if (isSubmitted) {
+  if(isSubmitted) {
 
-    return()
+    return ()
       <section className="py-20 bg-gradient-to-br from-green-50 to-blue-50">"
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">"
           <div className="bg-white rounded-3xl p-12 shadow-2xl">"
@@ -66,8 +66,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
               Thank You for Your Request!
             </h2>"
             <p className="text-xl text-gray-600 mb-8">
-              We've received your quote request and will get back to you within 24 hours with a detailed proposal.
-            </p>"
+              We've received your quote request and will get back to you within 24 hours with a detailed proposal.</p>"
             <div className="bg-gray-50 rounded-2xl p-6">"
               <h3 className="font-semibold text-gray-900 mb-3">What happens next?</h3>"
               <div className="space-y-2 text-sm text-gray-600">
@@ -92,8 +91,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
             </h2>"
             <p className="text-xl text-gray-600 mb-8">
               Tell us about your IT needs and we'll provide you with a detailed,
-              no - obligation quote tailored to your business requirements.
-            </p>
+              no - obligation quote tailored to your business requirements.</p>
 "
             <div className="space-y-6">"
               <div className="flex items-start space-x-4">"
@@ -195,7 +193,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                     value={formData.phone}
                     onChange={handleChange}"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="+1 (555) 123-4567"
+                    placeholder="+1(555) 123-4567"
                   />
                 </div>
 
@@ -228,7 +226,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
 "
                   <option value="">Select a service</option>
-                  {services.map ( (service, index) => (<option key={index} value={service}>{service}</option>) ) }
+                  {services.map((service, index) => (<option key={index} value={service}>{service}</option>) ) }
                 </select>
               </div>
 
@@ -267,8 +265,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
 "
               <p className="text-xs text-gray-500 text-center">
                 By submitting this form, you agree to our privacy policy and terms of service.'
-                We'll never share your information with third parties.
-              </p>
+                We'll never share your information with third parties.</p>
             </form>
           </div>
         </div>;

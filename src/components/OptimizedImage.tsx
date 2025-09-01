@@ -1,67 +1,7 @@
 <<<<<<< HEAD
-import { ImageIcon, AlertCircle, Loader2  } from 'lucide - react.ts';
-import React, { useState, useRef, useEffect } from 'react.ts';
-export const AvatarImage: React.FC < Omit < OptimizedImageProps, 'rounded' | 'objectFit'> & { size?: 'sm' | 'md' | 'lg' | 'xl' }> = ({
-export const CardImage: React.FC < OptimizedImageProps> = (props) => (<OptimizedImage
-export const HeroImage: React.FC < OptimizedImageProps> = (props) => (<OptimizedImage
-export const OptimizedImage: React.FC < OptimizedImageProps> = ({
-export default OptimizedImage;
-import { motion, AnimatePresence  } from 'framer - motion.ts';
-=======
-<<<<<<< HEAD
->>>>>>> main
-
-interface OptimizedImageProps extends React.PropsWithChildren<{}> {
-
-  src: anystring;
-  alt: string;
-  width?: number | string;
-  height?: number | string;
-  className?: string;
-  priority?: boolean;
-  placeholder?: 'blur' | 'shimmer' | 'none';
-  fallbackSrc?: string;
-  onLoad?: () => void;
-  onError?: (error: anyError) => void;
-  lazy?: boolean;
-  quality?: number;
-  sizes?: string;
-  objectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down';
-  rounded?: boolean;
-  shadow?: boolean;
-  hover?: boolean}
-
-export const OptimizedImage: React.FC<OptimizedImageProps> = ({
-
-  src,
-  alt,
-  width,
-  height,
-  className = '',
-  priority = false,
-  placeholder = 'shimmer',
-  fallbackSrc = '/images/placeholder.jpg',
-  onLoad,
-  onError,
-  lazy = true,
-  quality = 75,
-  sizes = '100vw',
-  objectFit = 'cover',
-  rounded = false,
-  shadow = false,
-<<<<<<< HEAD
-  hover = false
-}) => {
-  const [imageSrc, setImageSrc] = useState < any> (src) ;
-  const [isLoading, setIsLoading] = useState (true) ;
-  const [hasError, setHasError] = useState (false) ;
-  const [isIntersecting, setIsIntersecting] = useState (priority) ;
-  const [isLoaded, setIsLoaded] = useState (false) ;
-
-  const imgRef = useRef < HTMLImageElement> (null) ;
-  const observerRef = useRef < IntersectionObserver | null> (null) ;
-=======
-  hover = false}) => {
+import { ImageIcon, AlertCircle, Loader2  } from 'lucide-react';
+export default function Page() {
+) => {
 >>>>>>> main
 
   const [imageSrc, setImageSrc] = useState<any>(src);
@@ -69,24 +9,22 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const [hasError, setHasError] = useState(false);
   const [isIntersecting, setIsIntersecting] = useState(priority);
   const [isLoaded, setIsLoaded] = useState(false);
-  
-  
-  
+
   // Intersection Observer for lazy loading
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  useEffect ( () => {
-    if (priority || !lazy) {
+  useEffect(() => {
+    if(priority || !lazy) {
 
       setIsIntersecting(true);
       return}
 
-    if (!imgRef.current) return;
+    if(!imgRef.current) return;
 
     observerRef.current = new IntersectionObserver()
       ([entry]) => {
 
-        if (entry.isIntersecting) {
+        if(entry.isIntersecting) {
 
           setIsIntersecting(true);
           observerRef.current?.disconnect()}
@@ -102,18 +40,18 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       }) ;
 
-    observerRef.current.observe (imgRef.current) ;
+    observerRef.current.observe(imgRef.current) ;
 
     return () => {
-      if (observerRef.current) {
+      if(observerRef.current) {
 
         observerRef.current.disconnect()}
     }}, [priority, lazy]) ;
 
   // Handle image load
   
-    setIsLoaded (true) ;
-    onLoad?. () };
+    setIsLoaded(true) ;
+    onLoad?.() };
 
   // Handle image error
   
@@ -127,7 +65,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   // Cleanup on unmount
   useEffect(() => {
     return () => {
-      if (observerRef.current) {
+      if(observerRef.current) {
 
         observerRef.current.disconnect()}
     }}, []) ;
@@ -135,14 +73,14 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   // Generate optimized src with quality parameter
 <<<<<<< HEAD
   const getOptimizedSrc = (src: anystring) => {
-    if (src.startsWith ('data:') || src.startsWith ('blob:') ) {
+    if(src.startsWith ('data:') || src.startsWith('blob:') ) {
       return src;
     }
 
 =======
   const getOptimizedSrc = (src: anystring)  => {
 
-    if (src.startsWith('data:') || src.startsWith('blob:')) {
+    if(src.startsWith('data:') || src.startsWith('blob:')) {
 
       return src}
     
@@ -150,7 +88,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     // Add quality parameter for external images if possible
     try {
       
-      if (url.searchParams.has('quality')) {
+      if(url.searchParams.has('quality')) {
 
         return src}
       url.searchParams.set('quality', quality.toString());
@@ -159,17 +97,16 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
       return src}
   };
 
-  
   // Base classes
   
   // Loading skeleton
-  if (!isIntersecting) {
+  if(!isIntersecting) {
 <<<<<<< HEAD
     return (<div
-        className={`${baseClasses} bg - gray - 200 dark:bg - gray - 700 animate - pulse`}
+        className={`${baseClasses} bg-gray - 200 dark:bg-gray - 700 animate - pulse`}
 =======
 
-    return()
+    return ()
       <div `
         className={`${baseClasses} bg-gray-200 dark:bg-gray-700 animate-pulse`}
 >>>>>>> main
@@ -180,22 +117,22 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         </div>
       </div>) }
   // Error state
-  if (hasError) {
+  if(hasError) {
 <<<<<<< HEAD
     return (<div
-        className={`${baseClasses} bg - gray - 100 dark:bg - gray - 800 flex items - center justify - center`}
+        className={`${baseClasses} bg-gray - 100 dark:bg-gray - 800 flex items - center justify - center`}
         style={{ width, height }}
       >
-        <div className="text - center">
-          <AlertCircle className="w - 12 h - 12 text - gray - 400 mx - auto mb - 2" />
-          <p className="text - sm text - gray - 500 dark:text - gray - 400">Image failed to load</p>
+        <div className="text-center">
+          <AlertCircle className="w-12 h-12 text-gray - 400 mx - auto mb-2" />
+          <p className="text-sm text-gray - 500 dark:text-gray -400">Image failed to load</p>
         </div>
       </div>) ;
   }
 =======
 >>>>>>> main
 
-    return()
+    return ()
       <div `
         className={`${baseClasses} bg-gray-100 dark:bg-gray-800 flex items-center justify-center`}
         style={{ width, height }}
@@ -263,8 +200,7 @@ export const AvatarImage: React.FC<Omit<OptimizedImageProps,rounded' | 'objectFi
 >>>>>>> main
 }) => {
 
-  
-  return()
+  return ()
     <OptimizedImage {...props}'`      className={`${sizeClasses[size]} rounded-full object-cover ${props.className || ''}`}
       rounded={false}"
       objectFit="cover"

@@ -1,4 +1,4 @@
-export function ServiceWorker(...args: any[]): any {
+export default function ServiceWorker() {
 
 <<<<<<< HEAD
 interface ServiceWorkerState {
@@ -22,7 +22,7 @@ interface ServiceWorkerState {
   }) ;
 
   useEffect(() => {
-    // Check if service worker is supported'    if ('serviceWorker' in navigator) {
+    // Check if service worker is supported'    if('serviceWorker' in navigator) {
 
       // Register service worker
       navigator.serviceWorker'
@@ -34,7 +34,7 @@ interface ServiceWorkerState {
 
           // Check for updates'
           registration.addEventListener('updatefound', () => {
-            const newWorker = registration.installing;            if (newWorker) {
+            const newWorker = registration.installing;            if(newWorker) {
 
               setSwState(prev => ({ ...prev, isInstalling: anytrue }));
               '
@@ -42,16 +42,16 @@ interface ServiceWorkerState {
 
 <<<<<<< HEAD
           // Check for updates
-          registration.addEventListener ('updatefound', () => {
+          registration.addEventListener('updatefound', () => {
             const newWorker = registration.installing;
-            if (newWorker) {
-              setSwState (prev => ({ ...prev, isInstalling: anytrue }) ) ;
+            if(newWorker) {
+              setSwState(prev => ({ ...prev, isInstalling: anytrue }) ) ;
 
-              newWorker.addEventListener ('statechange', () => {
+              newWorker.addEventListener('statechange', () => {
 =======
 >>>>>>> main
-                if (newWorker.state = == 'installed') {;
-setSwState (prev: > ({ ;
+                if(newWorker.state = == 'installed') {;
+setSwState(prev: > ({ ;
                     ...prev, ;
                     isInstalling: anyfalse,;
                     hasUpdate: true }) ) }
@@ -75,14 +75,13 @@ setSwState (prev: > ({ ;
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline)}}, []) ;
 
-  
-    if ('serviceWorker' in navigator) {;
+    if('serviceWorker' in navigator) {;
       navigator.serviceWorker.ready.then((registration) => {;
         registration.waiting?.postMessage({ type: 'SKIP_WAITING' })})}  };
 
-  if (!swState.isInstalled) return null;
+  if(!swState.isInstalled) return null;
 
-  return()
+  return ()
     <AnimatePresence>
       {swState.hasUpdate && (
         <motion.div

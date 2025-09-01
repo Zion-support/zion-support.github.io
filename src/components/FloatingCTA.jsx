@@ -1,34 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, X, ArrowUp, Star, Zap, Users } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
-<<<<<<< HEAD
-=======
-export function FloatingCTA({
-
->>>>>>> main
-  variant = 'default',
-  position = 'bottom-right'}) {
-
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [showScrollTop, setShowScrollTop] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 400);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollToTop = () => {
-
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+import { motion, AnimatePresence  } from 'framer-motion';
+export default function Page() {
+);
   };
 
   const getPositionClasses = () => {
-    switch (position) {
+    switch(position) {
 
       case 'bottom-left':'
         return 'bottom-6 left-6';
@@ -42,7 +19,7 @@ export function FloatingCTA({
   };
 
   const getExpandedPositionClasses = () => {
-    switch (position) {
+    switch(position) {
 
       case 'bottom-left':'
         return 'bottom-6 left-6';
@@ -55,9 +32,9 @@ export function FloatingCTA({
     }
   };
 
-  if (variant === 'minimal') {
+  if(variant === 'minimal') {
 
-    return()
+    return ()
       <AnimatePresence>
         {showScrollTop && (
           <motion.button
@@ -76,9 +53,9 @@ export function FloatingCTA({
     );
   }
 
-  if (variant === 'featured') {
+  if(variant === 'featured') {
 
-    return()`
+    return ()`
       <div className={`fixed ${getPositionClasses()} z-40`}>
         <AnimatePresence>
           {!isExpanded ? (
@@ -136,7 +113,7 @@ export function FloatingCTA({
   }
 
   // Default variant
-  return()`
+  return ()`
     <div className={`fixed ${getPositionClasses()} z-40`}>
       <AnimatePresence>
         {!isExpanded ? (
@@ -170,8 +147,7 @@ export function FloatingCTA({
             </div>
 "
             <p className="text-gray-600 mb-4">
-              Our team is here to help you with any questions or concerns.
-            </p>
+              Our team is here to help you with any questions or concerns.</p>
 "
             <div className="space-y-3 mb-4">
               <Link"

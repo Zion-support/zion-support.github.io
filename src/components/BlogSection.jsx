@@ -3,18 +3,8 @@ import React from 'react';
 export function BlogSection () {
 
 =======
-import { Link } from 'react-router-dom';
-export function BlogSection() {
->>>>>>> main
-    const blogPosts = [
-        {
-
-            id: '1',
-            title: 'The Future of AI in Technology',
-            excerpt: 'Exploring how artificial intelligence is reshaping the technology landscape...',
-            date: '2024-01-15',
-            readTime: '8 min read'
-        },
+import { Link  } from 'react-router-dom';
+,
         {
 
             id: '2',

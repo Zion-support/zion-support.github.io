@@ -11,12 +11,11 @@ const CommunityVerifiedBadge: React.FC<CommunityVerifiedBadgeProps> = ({
   threshold = 3,
   className = ''
 }) => {
-  if (endorsementCount < threshold) {
+  if(endorsementCount < threshold) {
     return null; // Don't render if below threshold
   }
 
-  return (
-    <div
+  return (<div
       className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800 shadow-sm ${className}`}
       title={`Verified by the community with ${endorsementCount} endorsements.`}
     >

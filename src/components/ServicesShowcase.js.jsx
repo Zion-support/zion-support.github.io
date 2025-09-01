@@ -1,51 +1,15 @@
-import { Link } from 'react - router - dom';
-import React from 'react';
-import {
-
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle} from '@/components/ui/card';
+import { Link  } from 'react-router-dom';
+ from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import {
-
-  MICRO_SAAS_SERVICES,
-  MICRO_SAAS_CATEGORIES,
-  CONTACT_INFO} from '@/data/microSaasServices';
-import {
-
-  Brain,
-  Cloud,
-  Shield,
-  BarChart3,
-  Code,
-  DollarSign,
-  Heart,
-  ShoppingCart,
-  GraduationCap,
-  Star,
-  TrendingUp,
-  Zap,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  Globe} from 'lucide-react';
-import { Link } from 'react-router-dom';
-const categoryColors = {
-
-  'AI Business Solutions': 'from-purple-500 to-indigo-600',IT Infrastructure': 'from-blue-500 to-cyan-600',Data Analytics': 'from-green-500 to-emerald-600',AI Development': 'from-orange-500 to-red-600',
-  FinTech: 'from-yellow-500 to-orange-600',
-  HealthTech: 'from-pink-500 to-rose-600',E-commerce': 'from-indigo-500 to-purple-600',
-  EdTech: 'from-teal-500 to-green-600'};
+import { MICRO_SAAS_SERVICES, MICRO_SAAS_CATEGORIES, CONTACT_INFO } from '@/data/microSaasServices';
+import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe  } from 'lucide-react';
+import { Link  } from 'react-router-dom';
+;
 const features = ['
   'AI-Powered Automation',Real-time Analytics',Multi-cloud Support',API-First Architecture',Scalable Infrastructure',Custom Integrations',White-label Solutions',Comprehensive Documentation',24/7 Technical Support',99.9% Uptime Guarantee',SOC 2 Type II Compliant',30-Day Money Back Guarantee',
 ];
-const benefits = [
-  {
+const benefits = [{
 
     icon: <Zap className="h-6 w-6" />,
     title: 'Immediate Deployment',
@@ -82,9 +46,8 @@ export function ServicesShowcase() {
           </h2>"
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">
             Transform your business with our enterprise-grade micro SAAS
-            services. From AI automation to infrastructure management, we
-            provide solutions that scale with your growth.
-          </p>"
+            services.From AI automation to infrastructure management, we
+            provide solutions that scale with your growth.</p>"
           <div className="flex flex-wrap justify-center gap-4">"
             <Link to="/micro-saas-services">
               <Button"
@@ -114,7 +77,7 @@ export function ServicesShowcase() {
 
             const IconComponent = categoryIcons[category.label];
             const colorClass = categoryColors[category.label];
-            return()
+            return ()
               <Card
                 key={category.value}"
                 className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-purple/50 transition-all duration-300 hover:scale-105"

@@ -1,40 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import {
-
-  Award,
-  Users,
-  Globe,
-  Target,
-  TrendingUp,
-  Shield,
-  CheckCircle,
-  ArrowRight} from 'lucide-react';
-export function AboutSection() {
-  const achievements = [
-    {
-
-      number: '10+',
-      label: 'Years of Experience',
-      icon: <Award className="w-6 h-6" />},
-    {
-
-      number: '500+',
-      label: 'Projects Delivered',"
-      icon: <Target className="w-6 h-6" />},
-    {
-
-      number: '50+',
-      label: 'Enterprise Clients',"
-      icon: <Users className="w-6 h-6" />},
-    {
-
-      number: '25+',
-      label: 'Countries Served',"
-      icon: <Globe className="w-6 h-6" />},
+import { Link  } from 'react-router-dom';
+export default function Page() {
+,
   ];
-  const values = [
-    {
+  const values = [{
 
       title: 'Innovation First',
       description:'"
@@ -44,7 +13,7 @@ export function AboutSection() {
 
       title: 'Client Success',
       description:'
-        'Your success is our success. We measure our achievements by the impact we create for your business.',"
+        'Your success is our success.We measure our achievements by the impact we create for your business.',"
       icon: <Target className="w-8 h-8" />},
     {
 
@@ -78,22 +47,19 @@ export function AboutSection() {
             <p className="text-lg text-zion-slate-light mb-6 leading-relaxed">
               Founded in 2015, Zion Tech Group has emerged as a leading force in
               the technology industry, pioneering innovative solutions that
-              transform how businesses operate in the digital age.
-            </p>
+              transform how businesses operate in the digital age.</p>
 "
             <p className="text-lg text-zion-slate-light mb-6 leading-relaxed">
               Our mission is to democratize cutting-edge technology, making
               advanced AI, quantum computing, and autonomous systems accessible
-              to organizations of all sizes. We believe that innovation should
-              drive progress, not complexity.
-            </p>
+              to organizations of all sizes.We believe that innovation should
+              drive progress, not complexity.</p>
 "
             <p className="text-lg text-zion-slate-light mb-8 leading-relaxed">
               Today, we serve clients across 25+ countries, from startups to
               Fortune 500 companies, helping them navigate the complexities of
               digital transformation and emerge stronger, more efficient, and
-              future-ready.
-            </p>
+              future-ready.</p>
 
             <Link"
               to="/about"
@@ -166,8 +132,7 @@ export function AboutSection() {
             <p className="text-lg text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
               Our team of experts spans across cutting-edge technologies,
               ensuring we can deliver comprehensive solutions for digital
-              challenge your business faces.
-            </p>
+              challenge your business faces.</p>
           </div>
 "
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
@@ -204,8 +169,7 @@ export function AboutSection() {
           <p className="text-lg text-zion-slate-light mb-8 max-w-2xl mx-auto">
             Our diverse team of engineers, designers, and consultants brings
             together decades of combined experience in technology and business
-            transformation.
-          </p>
+            transformation.</p>
           <Link"
             to="/team"
             className="inline-flex items-center gap-2 px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"

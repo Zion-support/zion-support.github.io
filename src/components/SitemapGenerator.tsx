@@ -1,146 +1,31 @@
-import {
+import { <<<<<<< HEAD FileText, Download, Globe, Zap, Brain, Shield, Cloud, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, Star, Atom, Network, Eye, PenTool, TrendingUp, Rocket, Heart, Crown, Sparkles, Flame, DollarSign, Workflow, Settings, Lock, BarChart3, Cpu, Building, Server, Activity, GraduationCap, Newspaper, Target, Briefcase, Phone, MapPin, Mail,  } from 'lucide-react';
 
-<<<<<<< HEAD
-    FileText,
-    Download,
-    Globe,
-    Zap,
-    Brain,
-    Shield,
-    Cloud,
-    Users,
-    ShoppingCart,
-    BookOpen,
-    MessageCircle,
-    HelpCircle,
-    Star,
-    Atom,
-    Network,
-    Eye,
-    PenTool,
-    TrendingUp,
-    Rocket,
-    Heart,
-    Crown,
-    Sparkles,
-    Flame,
-    DollarSign,
-    Workflow,
-    Settings,
-    Lock,
-    BarChart3,
-    Cpu,
-    Building,
-    Server,
-    Activity,
-    GraduationCap,
-    Newspaper,
-    Target,
-    Briefcase,
-    Phone,
-    MapPin,
-    Mail,
-  } from 'lucide - react.ts';
-=======
-  FileText,
-  Download,
-  Globe,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Users,
-  ShoppingCart,
-  BookOpen,
-  MessageCircle,
-  HelpCircle,  Star,
-  Atom,
-  Network,
-  Eye,
-  PenTool,
-  TrendingUp,
-  Rocket,
-  Heart,
-  Crown,
-  Sparkles,
-  Flame,
-  DollarSign,
-  Workflow,
-  Settings,
-  Lock,
-  BarChart3,
-  Cpu,
-  Building,
-  Server,
-  Activity,
-  GraduationCap,
-  Newspaper,
-  Target,
-  Briefcase,
-  Phone,
-  MapPin,
-  Mail} from 'lucide-react.ts';
+export default function Page() {
+, []);
 
-interface SitemapSection {
-  title: string;
-  icon: React.ComponentType<any>;
-  description: string;
-  routes: SitemapRoute[];
-  featured?: boolean}
-interface SitemapRoute {
-  path: string;
-  name: string;
-  description: string;
-  icon: React.ComponentType<any>;
-  category: string;
-  featured?: boolean;
-  external?: boolean}
-export const SitemapGenerator: React.FC = (): JSX.Element => {
->>>>>>> main
+    setSitemapData(sitemap) };
 
-  const [sitemapData, setSitemapData] = useState<any>([]);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');
-
-  useEffect(() => {
-    generateSitemap()}, []);
-
-  
-    setSitemapData (sitemap) };
-
-  
     .map(section => ({
 
       ...section,
       routes: anysection.routes.filter(route => {
 
-        
-        
         return matchesSearch && matchesCategory})}))
     .filter(section => section.routes.length > 0);
 
-  
-  
-    
-    
-    
     a.href = url;
     a.download = 'sitemap.xml';
-    document.body.appendChild (a) ;
+    document.body.appendChild(a) ;
     a.click () ;
-    document.body.removeChild (a) ;
-    URL.revokeObjectURL (url) };
+    document.body.removeChild(a) ;
+    URL.revokeObjectURL(url) };
 
-  
-    
-    
-    
     a.href = url;
     a.download = 'sitemap.csv';
-    document.body.appendChild (a) ;
+    document.body.appendChild(a) ;
     a.click () ;
-    document.body.removeChild (a) ;
-    URL.revokeObjectURL (url) };
+    document.body.removeChild(a) ;
+    URL.revokeObjectURL(url) };
   return ("
     <div className="max-w-7xl mx-auto p-6 space-y-6">"
       <div className="bg-white rounded-lg shadow-lg p-6">"
@@ -220,18 +105,14 @@ export const SitemapGenerator: React.FC = (): JSX.Element => {
                 {section.routes.map((route, routeIndex) => (
                   <div
                     key={routeIndex}`
-                    className={`p-4 border rounded-lg transition-all duration-200 hover:shadow-md ${
-
-                      route.featured'
+                    className={`p-4 border rounded-lg transition-all duration-200 hover:shadow-md ${route.featured'
                         ? 'border-blue-300 bg-blue-50''
                         : 'border-gray-200 bg-white'`
                     }`}
                   >"
                     <div className="flex items-start space-x-3">
                       <div`
-                        className={`p-2 rounded-lg ${
-
-                          route.featured'
+                        className={`p-2 rounded-lg ${route.featured'
                             ? 'bg-blue-100 text-blue-600''
                             : 'bg-gray-100 text-gray-600'`
                         }`}

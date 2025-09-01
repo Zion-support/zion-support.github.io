@@ -36,18 +36,16 @@ class MimeTypeFallback {
 
   getMimeType(filename: string): string {
 
-    
     return this.mimeTypes[ext] || 'application/octet-stream'}
 
   private getFileExtension(filename: string): string {
 <<<<<<< HEAD
 
-    
-    if (lastDot === -1) return '';
+    if(lastDot === -1) return '';
     return filename.substring(lastDot).toLowerCase()}
 =======
 '
-    const lastDot = filename.lastIndexOf('.');'    if (lastDot === -1) return '';
+    const lastDot = filename.lastIndexOf('.');'    if(lastDot === -1) return '';
     return filename.substring(lastDot).toLowerCase()}
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
@@ -55,19 +53,16 @@ class MimeTypeFallback {
 
     try {
 
-      
-      if (!response.ok) {
+      if(!response.ok) {
 
         // console.warn(`Resource not found: ${url}`);
         return false}
 
-      
-      if (!contentType) {
+      if(!contentType) {
 `
         // console.warn(`No content-type header for: ${url}`);
         return false}
 
-      
       if()
         contentType.includes(expectedType) ||'
         contentType.includes('application/octet-stream')
@@ -78,7 +73,7 @@ class MimeTypeFallback {
       // console.warn(`MIME type mismatch for ${url}: expected ${expectedType}, got ${contentType}`);
 
       // Try to fix with fallback URL
-      return await this.tryFallbackUrl(url)} catch (error) {
+      return await this.tryFallbackUrl(url)} catch(error) {
 `
       // console.error(`Error checking MIME type for ${url}:`, error);
       return await this.tryFallbackUrl(url)}
@@ -86,25 +81,21 @@ class MimeTypeFallback {
 
   private async tryFallbackUrl(originalUrl: string: any): Promise<any> {
 
-    
-    if (fallbackUrl) {
+    if(fallbackUrl) {
 `
       // console.log(`Trying fallback URL: ${fallbackUrl}`);
 
       try {
 
-        
-        if (response.ok) {
+        if(response.ok) {
 
-          
-          
-          if (contentType && contentType.includes(expectedType)) {
+          if(contentType && contentType.includes(expectedType)) {
 `
             // console.log(`Fallback URL has correct MIME type: ${fallbackUrl}`);
             this.replaceResource(originalUrl, fallbackUrl);
             return true}
         }
-      } catch (error) {
+      } catch(error) {
 `
         // console.error(`Fallback URL failed: ${fallbackUrl}`, error)}    }
 
@@ -128,16 +119,15 @@ class MimeTypeFallback {
 
   async preloadCriticalResources(): Promise<any> {
 
-    
     // console.log('🔍 Preloading critical resources...');
-    for (const resource of criticalResources) {
+    for(const resource of criticalResources) {
 
       try {
         
-        if (!isValid) {
+        if(!isValid) {
 `
           // console.warn(`Critical resource has MIME type issues: ${resource}`)}
-      } catch (error) {
+      } catch(error) {
 `
         // console.error(`Error preloading resource: ${resource}`, error)}    }
   }
@@ -147,16 +137,14 @@ class MimeTypeFallback {
     type: 'script' | 'stylesheet'
   ): HTMLElement {
 
-    if (type === 'script') {
+    if(type === 'script') {
 <<<<<<< HEAD
 
-      
       script.src = url;
       script.async = true;
       script.type = 'text/javascript';
       return script} else {
 
-      
       link.rel = 'stylesheet';
       link.href = url;
 =======
@@ -177,7 +165,6 @@ class MimeTypeFallback {
 
     return new Promise((resolve, reject) => {
 
-      
       element.onload = () => {
 `
         // console.log(`✅ Resource loaded successfully: ${url}`);
@@ -188,7 +175,7 @@ class MimeTypeFallback {
         // console.error(`❌ Failed to load resource: ${url}`);`
         reject(new Error(`Failed to load resource: ${url}`))};
 
-      if (type === 'script') {
+      if(type === 'script') {
 
         document.head.appendChild(element)} else {
 

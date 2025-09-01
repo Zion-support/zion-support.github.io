@@ -29,8 +29,7 @@ export type ServiceCategory = {
   name: string;
   slug: string;
   items: ServiceItem[]};
-;export const servicesCatalog: ServiceCategory[] = [
-  {
+;export const servicesCatalog: ServiceCategory[] = [{
 
     name: 'Micro SaaS',
     slug: 'micro-saas',
@@ -68,8 +67,7 @@ export type ServiceCategory = {
 
     name: 'AI Solutions',
     slug: 'ai-solutions',
-    items: [
-      {
+    items: [{
 
         id: 'autonomous-business-manager',
         title: 'Autonomous Business Manager',
@@ -142,7 +140,7 @@ export type ServiceCategory = {
       {
 
         id: 'agentic-copilot-suite',
-        title: 'Agentic Copilot Suite (Sales, Support, DevOps),
+        title: 'Agentic Copilot Suite(Sales, Support, DevOps),
         description:'
           'Task-driven AI agents that execute workflows across CRM, ticketing, CI/CD, and cloud.',
         category: 'AI Solutions',
@@ -228,8 +226,7 @@ export type ServiceCategory = {
 
     name: 'IT Services',
     slug: 'it-services',
-    items: [
-      {
+    items: [{
 
         id: 'zero-trust-architecture',
         title: 'Zero Trust Network Architecture',
@@ -281,7 +278,7 @@ export type ServiceCategory = {
         price: '$40,000',
         billing: 'project',
         features: ['
-          'Backstage developer portal',GitOps with Argo CD or Flux',Policy-as-code (OPA/Gatekeeper),Multi-cluster and multi-cloud',SRE playbooks and training',
+          'Backstage developer portal',GitOps with Argo CD or Flux',Policy-as-code(OPA/Gatekeeper),Multi-cluster and multi-cloud',SRE playbooks and training',
         ],
         ctaLabel: 'Build Your IDP',
         href: 'https://ziontechgroup.com/services'},
@@ -332,8 +329,7 @@ export type ServiceCategory = {
 
     name: 'Cybersecurity',
     slug: 'cybersecurity',
-    items: [
-      {
+    items: [{
 
         id: 'ai-threat-intelligence',
         title: 'AI Threat Intelligence Suite',
@@ -364,7 +360,7 @@ export type ServiceCategory = {
       {
 
         id: 'managed-detection-response',
-        title: 'Managed Detection & Response (MDR),
+        title: 'Managed Detection & Response(MDR),
         description:'
           '24/7 monitoring, threat hunting, and incident response with SIEM/SOAR integration.',
         category: 'Cybersecurity',
@@ -378,7 +374,7 @@ export type ServiceCategory = {
       {
 
         id: 'sase-rollout',
-        title: 'Secure Access Service Edge (SASE) Rollout',
+        title: 'Secure Access Service Edge(SASE) Rollout',
         description:'
           'Consolidate network and security with ZTNA, SWG, CASB, and SD-WAN.',
         category: 'Cybersecurity',
@@ -427,7 +423,7 @@ export type ServiceCategory = {
         price: '$29',
         billing: 'month',
         features: ['
-          'Chromium renderer with fonts',Async rendering and webhooks',Templates and asset hosting',Storage destinations (S3/GCS/Azure),Usage analytics and quotas',
+          'Chromium renderer with fonts',Async rendering and webhooks',Templates and asset hosting',Storage destinations(S3/GCS/Azure),Usage analytics and quotas',
         ],
         ctaLabel: 'Generate PDFs',
         href: 'https://ziontechgroup.com/services/pdf-render-api'},
@@ -436,8 +432,7 @@ export type ServiceCategory = {
 
     name: 'Data & Analytics',
     slug: 'data-analytics',
-    items: [
-      {
+    items: [{
 
         id: 'quantum-data-analytics',
         title: 'Quantum Data Analytics Platform',
@@ -498,8 +493,7 @@ export type ServiceCategory = {
 
     name: 'Cloud & DevOps',
     slug: 'cloud-devops',
-    items: [
-      {
+    items: [{
 
         id: 'autonomous-devops-platform',
         title: 'Autonomous DevOps Platform',
@@ -544,7 +538,7 @@ export type ServiceCategory = {
       {
 
         id: 'disaster-recovery-blueprints',
-        title: 'Disaster Recovery Blueprints (RTO/RPO),
+        title: 'Disaster Recovery Blueprints(RTO/RPO),
         description:'
           'Design and test DR strategies with automated failover and periodic game days.',
         category: 'Cloud & DevOps',
@@ -574,8 +568,7 @@ export type ServiceCategory = {
 
     name: 'Quantum Computing',
     slug: 'quantum-computing',
-    items: [
-      {
+    items: [{
 
         id: 'quantum-cybersecurity-suite-2026',
         title: 'Quantum Cybersecurity Suite 2026',
@@ -585,7 +578,7 @@ export type ServiceCategory = {
         price: '$8,999',
         billing: 'month',
         features: ['
-          'Quantum-resistant encryption algorithms',Quantum key distribution (QKD),AI-powered threat detection with 99.99% accuracy',Zero-trust architecture implementation',Real-time threat intelligence feeds',Automated incident response',Compliance automation (SOC 2, ISO 27001, NIST),Quantum-safe certificate management',Advanced behavioral analytics',Cloud-native security architecture',
+          'Quantum-resistant encryption algorithms',Quantum key distribution(QKD),AI-powered threat detection with 99.99% accuracy',Zero-trust architecture implementation',Real-time threat intelligence feeds',Automated incident response',Compliance automation(SOC 2, ISO 27001, NIST),Quantum-safe certificate management',Advanced behavioral analytics',Cloud-native security architecture',
         ],
         ctaLabel: 'Quantum Security',
         href: 'https://ziontechgroup.com/contact'},
@@ -599,7 +592,7 @@ export type ServiceCategory = {
         price: '$15,999',
         billing: 'month',
         features: ['
-          'Quantum-powered market analysis',Ultra-fast trading execution (<1ms latency),AI-driven risk assessment',Portfolio optimization algorithms',Real-time market sentiment analysis',Automated trading strategies',Regulatory compliance automation',Multi-asset class support',Advanced risk management',Performance analytics dashboard',
+          'Quantum-powered market analysis',Ultra-fast trading execution(<1ms latency),AI-driven risk assessment',Portfolio optimization algorithms',Real-time market sentiment analysis',Automated trading strategies',Regulatory compliance automation',Multi-asset class support',Advanced risk management',Performance analytics dashboard',
         ],
         ctaLabel: 'Quantum Trading',
         href: 'https://ziontechgroup.com/contact'},
@@ -636,8 +629,7 @@ export type ServiceCategory = {
 
     name: 'Blockchain & Web3',
     slug: 'blockchain-web3',
-    items: [
-      {
+    items: [{
 
         id: 'decentralized-ai-marketplace',
         title: 'Decentralized AI Marketplace',
@@ -670,8 +662,7 @@ export type ServiceCategory = {
 
     name: 'IoT & Edge',
     slug: 'iot-edge',
-    items: [
-      {
+    items: [{
 
         id: 'quantum-iot-platform',
         title: 'Quantum IoT Platform',
@@ -709,7 +700,7 @@ export type ServiceCategory = {
         price: '$2,499',
         billing: 'month',
         features: ['
-          'Edge telemetry ingestion',ML failure prediction',Work order integration (EAM/CMMS),Kitting and rollout playbooks',Dashboards and alerts',
+          'Edge telemetry ingestion',ML failure prediction',Work order integration(EAM/CMMS),Kitting and rollout playbooks',Dashboards and alerts',
         ],
         ctaLabel: 'Reduce Downtime',
         href: 'https://ziontechgroup.com/services'},
@@ -732,8 +723,7 @@ export type ServiceCategory = {
 
     name: 'Green Tech',
     slug: 'green-tech',
-    items: [
-      {
+    items: [{
 
         id: 'quantum-energy-optimization',
         title: 'Quantum Energy Optimization',
@@ -771,7 +761,7 @@ export type ServiceCategory = {
         price: '$999',
         billing: 'month',
         features: ['
-          'GHG Protocol-aligned factors',Automated data pipelines',Supplier questionnaires',Assurance-ready exports',Target tracking (SBTi),
+          'GHG Protocol-aligned factors',Automated data pipelines',Supplier questionnaires',Assurance-ready exports',Target tracking(SBTi),
         ],
         ctaLabel: 'Start ESG Tracking',
         href: 'https://ziontechgroup.com/services'},
@@ -780,8 +770,7 @@ export type ServiceCategory = {
 
     name: 'Space Tech',
     slug: 'space-tech',
-    items: [
-      {
+    items: [{
 
         id: 'satellite-ai-orchestrator',
         title: 'Satellite AI Orchestrator',
@@ -828,8 +817,7 @@ export type ServiceCategory = {
 
     name: 'BioTech & Health',
     slug: 'biotech-health',
-    items: [
-      {
+    items: [{
 
         id: 'ai-drug-discovery-platform',
         title: 'AI Drug Discovery Platform',
@@ -876,8 +864,7 @@ export type ServiceCategory = {
 
     name: 'FinTech & DeFi',
     slug: 'fintech-defi',
-    items: [
-      {
+    items: [{
 
         id: 'quantum-trading-algorithm',
         title: 'Quantum Trading Algorithm',
@@ -924,8 +911,7 @@ export type ServiceCategory = {
 
     name: 'Metaverse & AR/VR',
     slug: 'metaverse-ar-vr',
-    items: [
-      {
+    items: [{
 
         id: 'quantum-metaverse-engine',
         title: 'Quantum Metaverse Engine',
@@ -972,8 +958,7 @@ export type ServiceCategory = {
 
     name: 'Autonomous Systems',
     slug: 'autonomous-systems',
-    items: [
-      {
+    items: [{
 
         id: 'quantum-ai-controller',
         title: 'Quantum AI Controller',
@@ -1022,8 +1007,7 @@ export type ServiceCategory = {
 
     name: 'Supply Chain & Logistics',
     slug: 'supply-chain-logistics',
-    items: [
-      {
+    items: [{
 
         id: 'autonomous-supply-chain-platform-2026',
         title: 'Autonomous Supply Chain Platform 2026',
@@ -1043,8 +1027,7 @@ export type ServiceCategory = {
 
     name: 'Energy Management',
     slug: 'energy-management',
-    items: [
-      {
+    items: [{
 
         id: 'autonomous-energy-management-2026',
         title: 'Autonomous Energy Management Platform 2026',
@@ -1064,8 +1047,7 @@ export type ServiceCategory = {
 
     name: 'Manufacturing Intelligence',
     slug: 'manufacturing-intelligence',
-    items: [
-      {
+    items: [{
 
         id: 'autonomous-manufacturing-intelligence-2026',
         title: 'Autonomous Manufacturing Intelligence Platform 2026',
@@ -1085,8 +1067,7 @@ export type ServiceCategory = {
 
     name: 'Data Center Management',
     slug: 'data-center-management',
-    items: [
-      {
+    items: [{
 
         id: 'autonomous-data-center-manager-2026',
         title: 'Autonomous Data Center Manager 2026',

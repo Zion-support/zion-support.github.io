@@ -1,129 +1,10 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
+import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
 
-  Home,
-  Brain,
-  Cloud,
-  Server,
-  Rocket,
-  Users,
-  Briefcase,
-  FileText,
-  HelpCircle,
-  MessageCircle,
-  Settings,
-  BarChart3,
-  Shield,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
-  ShoppingCart,
-  Target,
-  Lightbulb,
-  Award,
-  TrendingUp,
-  BookOpen,
-  Calendar,
-  MapPin,
-  Phone,
-  Mail,
-  ChevronRight,
-  ChevronDown,
-  Handshake,
-  Atom,
-  Link as LinkIcon,
-  Wifi,
-  HeartPulse,
-  DollarSign,
-  Leaf,
-  Building} from 'lucide-react';
-  User,
-  Factory,
-  Heart,
-  PenTool,
-  Eye,
-  Smartphone,
-  Truck,
-  Car,
-  City,
-  CheckCircle,
-  ArrowUpRight,
-  Play,
-  MailIcon,
-  User as UserIcon,
-  Handshake as HandshakeIcon,
-  Briefcase as BriefcaseIcon,
-  FileText as FileTextIcon,
-  HelpCircle as HelpCircleIcon,
-  MessageCircle as MessageCircleIcon,
-  Settings as SettingsIcon,
-  BarChart3 as BarChart3Icon,
-  Shield as ShieldIcon,
-  Zap as ZapIcon,
-  Globe as GlobeIcon,
-  Cpu as CpuIcon,
-  Database as DatabaseIcon,
-  Network as NetworkIcon,
-  Lock as LockIcon,
-  Code as CodeIcon,
-  ShoppingCart as ShoppingCartIcon,
-  Target as TargetIcon,
-  Lightbulb as LightbulbIcon,
-  Award as AwardIcon,
-  TrendingUp as TrendingUpIcon,
-  BookOpen as BookOpenIcon,
-  Calendar as CalendarIcon,
-  MapPin as MapPinIcon,
-  Phone as PhoneIcon,
-  Mail as MailIcon,
-  ChevronRight as ChevronRightIcon,
-  ChevronDown as ChevronDownIcon,
-  Handshake as HandshakeIcon2,
-  Atom as AtomIcon,
-  Link as LinkIcon2,
-  Wifi as WifiIcon,
-  HeartPulse as HeartPulseIcon,
-  DollarSign as DollarSignIcon,
-  Leaf as LeafIcon,
-  Building as BuildingIcon,
-  User as UserIcon2,
-  Factory as FactoryIcon,
-  Heart as HeartIcon,
-  PenTool as PenToolIcon,
-  Eye as EyeIcon,
-  Smartphone as SmartphoneIcon,
-  Truck as TruckIcon,
-  Car as CarIcon,
-  City as CityIcon,
-  CheckCircle as CheckCircleIcon,
-  ArrowUpRight as ArrowUpRightIcon,
-  Play as PlayIcon,
-  MailIcon as MailIcon2'
-} from 'lucide-react';
-
-export const EnhancedSidebar: React.FC = () => {;
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
-  
-  
-    
-    if (newExpanded.has(section)) {
-
-      newExpanded.delete(section)} else {
-
-      newExpanded.add(section)}
+export default function Page() {
     setExpandedSections(newExpanded)};
 
-  
-  const navigationSections = [
-    {
+  const navigationSections = [{
 
       title: "Main Navigation",
       icon: Home,
@@ -177,9 +58,8 @@ export const EnhancedSidebar: React.FC = () => {;
 
   ];
 
-  
   return ("
-    <div className = "w-64 bg-slate-900/95 backdrop-blur-xl border-r border-slate-700/50 h-screen overflow-y-auto">"      <div className="p-6">
+    <div className="w-64 bg-slate-900/95 backdrop-blur-xl border-r border-slate-700/50 h-screen overflow-y-auto">"      <div className="p-6">
         {/* Logo */}"
         <div className="mb-8">;"
         { name: "Sitemap", href: "/sitemap", icon: Globe },;"
@@ -194,7 +74,7 @@ export const EnhancedSidebar: React.FC = () => {;
   ];
 
   return ("
-    <aside className = "hidden lg:block w-80 min-h-screen bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 overflow-y-auto">"
+    <aside className="hidden lg:block w-80 min-h-screen bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 overflow-y-auto">"
       <div className="p-6">
         {/* Logo Section */}
         <motion.div"
@@ -269,9 +149,7 @@ export const EnhancedSidebar: React.FC = () => {;
 }}
               >
                 <Link to={action.href}
-                  className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 group ${
-
-                    action.variant === 'primary''
+                  className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 group ${action.variant === 'primary''
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan/90 hover:to-zion-blue/90 shadow-lg shadow-zion-cyan/25''
                       : 'bg-zion-slate-dark/50 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 border border-zion-cyan/20 hover:border-zion-cyan/40'`
                   }`}
@@ -318,14 +196,12 @@ export const EnhancedSidebar: React.FC = () => {;
                 </div>
 <<<<<<< HEAD
                 <ChevronDown
-                  className={`w - 4 h - 4 text - slate - 400 transition - transform duration - 200 ${
-                    expandedSections.has (section.title) ? 'rotate - 180' : ''
+                  className={`w-4 h-4 text-slate - 400 transition - transform duration - 200 ${expandedSections.has(section.title) ? 'rotate - 180' : ''
                   }`}
                 />
 =======
                 <ChevronDown `
-                  className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
-<<<<<<< HEAD
+                  className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${<<<<<<< HEAD
 
                     expandedSections.has(section.title) ? 'rotate-180' : ''`
                   }`} 
@@ -339,7 +215,7 @@ export const EnhancedSidebar: React.FC = () => {;
               </button>
 
               <AnimatePresence>
-                {expandedSections.has (section.title) && (<motion.div
+                {expandedSections.has(section.title) && (<motion.div
                     initial = {
 
   { opacity: 0,
@@ -361,7 +237,7 @@ export const EnhancedSidebar: React.FC = () => {;
                     transition={{ duration: 0.3 }}"
                     className="ml-7 mt-2 space-y-1"
                   >
-                    {section.items.map ( (item) => (<Link
+                    {section.items.map((item) => (<Link
                         key={item.name}
                         initial = {
 
@@ -427,7 +303,7 @@ export const EnhancedSidebar: React.FC = () => {;
               <Mail className="w-4 h-4"  />
               <span>kleber@ziontechgroup.com</span>
             </div>"
-            <div className = "flex items-center space-x-2">"
+            <div className="flex items-center space-x-2">"
               <MapPin className="w-3 h-3"  />;              <span>Middletown, DE</span>;
             </div>;
           </div>;

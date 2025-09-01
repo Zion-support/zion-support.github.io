@@ -1,12 +1,10 @@
 <<<<<<< HEAD
 import { useState, useEffect } from 'react';
-import React, { useState } from 'react';
+ from 'react';
 export /**
-import {
-import { motion, AnimatePresence } from 'framer - motion';
+import { motion, AnimatePresence  } from 'framer-motion';
 
- * Accessibility function
- * @param {*} params - Function parameters
+ params - Function parameters
  * @returns {*} Function return value
  */
 function Accessibility () {
@@ -17,28 +15,7 @@ function Accessibility () {
   Volume2,
   Keyboard,
 =======
-import {
-  Accessibility as AccessibilityIcon, 
-  Type, 
-  Eye, 
-  Volume2, 
-  Keyboard, 
->>>>>>> main
-  X,
-  Plus,
-  Minus,
-  Contrast,
-  Sun,
-  Moon,
-  Settings
-} from 'lucide-react';
-
-interface AccessibilitySettings {
-  fontSize: number;
-  highContrast: boolean;
-  reducedMotion: boolean;
-  soundEnabled: boolean;
-  theme: 'light' | 'dark' | 'auto'}
+import { Accessibility as AccessibilityIcon, Type, Eye, Volume2, Keyboard, >>>>>>> main X, Plus, Minus, Contrast, Sun, Moon, Settings  } from 'lucide-react';
 
 export function Accessibility() {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,7 +30,7 @@ export function Accessibility() {
   useEffect(() => {
     // Load settings from localStorage
     
-    if (savedSettings) {
+    if(savedSettings) {
       
       setSettings(parsed);
       applySettings(parsed)}
@@ -76,48 +53,44 @@ export function Accessibility() {
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, []);
 
-  
     // Apply font size
     root.style.fontSize = `${newSettings.fontSize}px`;
 
     // Apply high contrast
-    if (newSettings.highContrast) {
+    if(newSettings.highContrast) {
       root.classList.add('high-contrast')} else {
       root.classList.remove('high-contrast')}
 
     // Apply reduced motion
-    if (newSettings.reducedMotion) {
+    if(newSettings.reducedMotion) {
       root.classList.add('reduced-motion')} else {
       root.classList.remove('reduced-motion')}
 
     // Apply theme
-    if (newSettings.theme === 'light') {
+    if(newSettings.theme === 'light') {
       root.classList.add('light-theme');
-      root.classList.remove('dark-theme')} else if (newSettings.theme === 'dark') {
+      root.classList.remove('dark-theme')} else if(newSettings.theme === 'dark') {
       root.classList.add('dark-theme');
       root.classList.remove('light-theme')} else {
       root.classList.remove('light-theme', 'dark-theme')}
   };
 
-  
     setSettings(newSettings);
     applySettings(newSettings);
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))}}
   }}
   };
 
-  
     setSettings(defaultSettings);
     applySettings(defaultSettings);
     localStorage.removeItem('accessibility-settings')};
 
-  return (
-    <>
+  return (<>
       {/* Accessibility Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-4 left-4 z-50 p-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full shadow-lg transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
-        aria-label="Accessibility Settings"
+        
         title="Accessibility Settings"
       >
         <AccessibilityIcon className="w-6 h-6"  />
@@ -147,9 +120,9 @@ export function Accessibility() {
   ease: "easeOut"
 
 }}
-            className="fixed left - 4 bottom - 20 z - 50 w - 80 bg - slate - 900 border border - cyan - 400 / 20 rounded - lg shadow - 2xl backdrop - blur - xl"
+            className="fixed left - 4 bottom - 20 z - 50 w-80 bg-slate - 900 border border-cyan - 400 / 20 rounded-lg shadow-2xl backdrop - blur -xl"
 
-            <div role="button" className="p - 6">
+            <div  className="p -6">
 =======
         {isOpen && (
           <motion.div
@@ -170,7 +143,7 @@ export function Accessibility() {
                 <button
                   onClick={() => setIsOpen(false)}
                   className="text-gray-400 hover:text-white transition-colors"
-                  aria-label="Close accessibility panel"
+                  
                 >
                   <X className="w-5 h-5"  />
                 </button>
@@ -187,7 +160,7 @@ export function Accessibility() {
                     onClick={decreaseFontSize}
                     disabled={settings.fontSize <= 12}
                     className="p-2 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-md transition-colors"
-                    aria-label="Decrease font size"
+                    
                   >
                     <Minus className="w-4 h-4 text-white"  />
                   </button>
@@ -198,7 +171,7 @@ export function Accessibility() {
                     onClick={increaseFontSize}
                     disabled={settings.fontSize >= 24}
                     className="p-2 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-md transition-colors"
-                    aria-label="Increase font size"
+                    
                   >
                     <Plus className="w-4 h-4 text-white"  />
                   </button>
@@ -218,11 +191,9 @@ export function Accessibility() {
                     onChange={(e) => updateSetting('highContrast', e.target.checked)}
                     className="sr-only"
                   />
-                  <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    settings.highContrast ? 'bg-cyan-500' : 'bg-slate-700'
+                  <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.highContrast ? 'bg-cyan-500' : 'bg-slate-700'
                   }`}>
-                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                      settings.highContrast ? 'translate-x-6' : 'translate-x-1'
+                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.highContrast ? 'translate-x-6' : 'translate-x-1'
                     }`} />
                   </div>
                 </label>
@@ -241,11 +212,9 @@ export function Accessibility() {
                     onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
                     className="sr-only"
                   />
-                  <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    settings.reducedMotion ? 'bg-cyan-500' : 'bg-slate-700'
+                  <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.reducedMotion ? 'bg-cyan-500' : 'bg-slate-700'
                   }`}>
-                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                      settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'
+                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'
                     }`} />
                   </div>
                 </label>
@@ -262,8 +231,7 @@ export function Accessibility() {
                     <button
                       key={theme}
                       onClick={() => updateSetting('theme', theme)}
-                      className={`p-2 rounded-md text-xs font-medium transition-colors ${
-                        settings.theme === theme
+                      className={`p-2 rounded-md text-xs font-medium transition-colors ${settings.theme === theme
                           ? 'bg-cyan-500 text-white'
                           : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
                       }`}
@@ -289,11 +257,9 @@ export function Accessibility() {
                     onChange={(e) => updateSetting('soundEnabled', e.target.checked)}
                     className="sr-only"
                   />
-                  <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    settings.soundEnabled ? 'bg-cyan-500' : 'bg-slate-700'
+                  <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.soundEnabled ? 'bg-cyan-500' : 'bg-slate-700'
                   }`}>
-                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                      settings.soundEnabled ? 'translate-x-6' : 'translate-x-1'
+                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.soundEnabled ? 'translate-x-6' : 'translate-x-1'
                     }`} />
                   </div>
                 </label>

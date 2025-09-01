@@ -1,5 +1,4 @@
-export const comprehensiveServices = [
-  {
+export const comprehensiveServices = [{
 
     id: 1,
     name: 'IT Infrastructure Management',
@@ -12,7 +11,7 @@ export const comprehensiveServices = [
       'Network infrastructure design and implementation',Server setup and configuration',Cloud infrastructure management',Backup and disaster recovery',24/7 monitoring and alerting',Performance optimization',Security hardening',Compliance management',
     ],
     included: ['
-      'Unlimited support tickets',Monthly health reports',Quarterly security audits',Annual infrastructure review',Emergency response (4hr),Remote and on-site support',
+      'Unlimited support tickets',Monthly health reports',Quarterly security audits',Annual infrastructure review',Emergency response(4hr),Remote and on-site support',
     ],
     notIncluded: ['
       'Hardware procurement',Software licensing',Custom development',Staff training',
@@ -128,8 +127,7 @@ export const comprehensiveServices = [
     sla: '95% first-call resolution'},
 ];
 ;
-export const serviceCategories = [
-  {
+export const serviceCategories = [{
 
     name: 'Infrastructure',
     description: 'Core IT infrastructure services',
@@ -169,8 +167,7 @@ export const serviceCategories = [
     services: comprehensiveServices.filter(s => s.category === 'Support')},
 ];
 ;
-export const pricingTiers = [
-  {
+export const pricingTiers = [{
 
     name: 'Starter',
     description: 'Perfect for small businesses',
@@ -214,7 +211,7 @@ export const calculateServiceCost = (
 ) => {
 
   const service = getServiceById(serviceId);
-  if (!service) return 0;
+  if(!service) return 0;
 
   let baseCost = service.basePrice * months;
 
@@ -224,7 +221,7 @@ export const calculateServiceCost = (
     if (customization.type === 'addon') {
 
       baseCost += customization.price * months;
-    } else if (customization.type === 'oneTime') {
+    } else if(customization.type === 'oneTime') {
 
       baseCost += customization.price;
     }
@@ -238,12 +235,12 @@ export const getServiceRecommendations = (businessSize, industry, budget) => {
   let recommendations = comprehensiveServices;
 
   // Filter by business size'
-  if (businessSize === 'small') {
+  if(businessSize === 'small') {
 
     recommendations = recommendations.filter(service =>
       ['Support',Data'].includes(service.category)
     );
-  } else if (businessSize === 'medium') {
+  } else if(businessSize === 'medium') {
 
     recommendations = recommendations.filter(service =>
       ['Support',Data',Networking',Security'].includes(service.category)
@@ -251,12 +248,12 @@ export const getServiceRecommendations = (businessSize, industry, budget) => {
   }
 
   // Filter by budget'
-  if (budget === 'low') {
+  if(budget === 'low') {
 
     recommendations = recommendations.filter()
       service => service.basePrice <= 1500
     );
-  } else if (budget === 'medium') {
+  } else if(budget === 'medium') {
 
     recommendations = recommendations.filter()
       service => service.basePrice <= 3000

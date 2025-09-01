@@ -1,38 +1,12 @@
 import React, { useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2 } from 'lucide-react';
-import { useAICodeGeneration } from "../hooks/useAICodeGeneration";"
-import { useAnalytics } from "../hooks/useAnalytics";
-export const AICodeGenerator = () => {
-    const { trackEvent } = useAnalytics({
-
-        enableTracking: true,
-        enableUserBehaviorTracking: true
-    });
-    const [activeTab, setActiveTab] = useState('generate');
-    const [showAdvanced, setShowAdvanced] = useState(false);
-    const [customCode, setCustomCode] = useState('');
-    const [copied, setCopied] = useState(false);
-    const { isGenerating, isAnalyzing, generatedCode, codeAnalysis, suggestions, history, generateCode, analyzeCode, applySuggestion, optimizeCode, generateTests, generateDocs, clearHistory, exportCode } = useAICodeGeneration();
-    const [form, setForm] = useState({
-
-        prompt: '',
-        language: 'typescript',
-        framework: 'react',
-        style: 'functional',
-        target: 'web',
-        quality: 'development',
-        includeTests: false,
-        includeDocs: false,
-        includeErrorHandling: false,
-        includeLogging: false,
-        includeMetrics: false
-    });
+import { motion, AnimatePresence  } from 'framer-motion';
+export default function Page() {
+);
     // Handle form submission
     const handleSubmit = useCallback(async (e) => {
 
         e.preventDefault();
-        if (!form.prompt.trim())
+        if(!form.prompt.trim())
             return;
         await generateCode(form.prompt, form);
         trackEvent('ai_code_generator',form_submitted', form.language, null, {
@@ -44,18 +18,18 @@ export const AICodeGenerator = () => {
         })}, [form, generateCode, trackEvent]);
     // Handle custom code analysis
     const handleAnalyzeCustomCode = useCallback(async () => {
-        if (!customCode.trim())
+        if(!customCode.trim())
             return;
         await analyzeCode(customCode, form.language);
         trackEvent('ai_code_generator',custom_code_analyzed', form.language, customCode.length)}, [customCode, form.language, analyzeCode, trackEvent]);
     // Handle code optimization
     const handleOptimizeCode = useCallback(async (focus) => {
 
-        if (!generatedCode && !customCode)
+        if(!generatedCode && !customCode)
             return;
         const codeToOptimize = generatedCode || customCode;
         const optimizedCode = await optimizeCode(codeToOptimize, focus);
-        if (generatedCode) {
+        if(generatedCode) {
 
             // Update generated code'
             // Note: In a real implementation, you'd want to update the state properly
@@ -63,7 +37,7 @@ export const AICodeGenerator = () => {
         trackEvent('ai_code_generator',code_optimized', focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent]);
     // Handle test generation
     const handleGenerateTests = useCallback(async () => {
-        if (!generatedCode && !customCode)
+        if(!generatedCode && !customCode)
             return;
         const codeToTest = generatedCode || customCode;
         const testCode = await generateTests(codeToTest, form.language);
@@ -72,7 +46,7 @@ export const AICodeGenerator = () => {
         trackEvent('ai_code_generator',tests_generated', form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent]);
     // Handle documentation generation
     const handleGenerateDocs = useCallback(async () => {
-        if (!generatedCode && !customCode)
+        if(!generatedCode && !customCode)
             return;
         const codeToDoc = generatedCode || customCode;
         const docs = await generateDocs(codeToDoc, form.language);
@@ -87,7 +61,7 @@ export const AICodeGenerator = () => {
             setCopied(true);
             setTimeout(() => setCopied(false), 2000);
             trackEvent('ai_code_generator',code_copied',clipboard', code.length)}
-        catch (error) {
+        catch(error) {
 
             // console.error('Failed to copy code:', error)}
     }, [trackEvent]);
@@ -400,7 +374,7 @@ export const AICodeGenerator = () => {
                 ].map(({ key, label, icon: Icon, color }) => {
 
                     const value = codeAnalysis[key];
-                    if (typeof value === 'number') {
+                    if(typeof value === 'number') {
 "
                         return (<div key={key} className="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">`
                             <Icon className={`w-8 h-8 mx-auto mb-2 text-${color}-500`}/>"
@@ -566,7 +540,7 @@ export const AICodeGenerator = () => {
 "
 }} className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-6">"
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              AI Suggestions ({suggestions.length})
+              AI Suggestions({suggestions.length})
             </h3>"
             <div className="grid gap-4">
               {suggestions.map((suggestion) => (<motion.div key={suggestion.id} initial = {
@@ -636,7 +610,7 @@ export const AICodeGenerator = () => {
 }} className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-6">"
             <div className="flex items-center justify-between mb-4">"
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                Generation History ({history.length})
+                Generation History({history.length})
               </h3>"
               <button onClick={handleClearHistory} className="px-3 py-1 bg-red-100 hover:bg-red-200 dark:bg-red-900/30 dark:hover:bg-red-900/50 text-red-700 dark:text-red-300 rounded text-sm transition-colors flex items-center gap-2">"
                 <Trash2 className="w-4 h-4"/>

@@ -1,23 +1,7 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-
-  Globe,
-  MapPin,
-  Users,
-  Award,
-  Star,
-  TrendingUp,
-  Building,
-  ArrowRight,
-  CheckCircle,
-  Clock} from 'lucide-react';
-const globalStats = [
-  {
-
-    icon: <Globe className="w-6 h-6" />,
-    value: '25+',
-    label: 'Countries Served'},
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Globe, MapPin, Users, Award, Star, TrendingUp, Building, ArrowRight, CheckCircle, Clock  } from 'lucide-react';
+,
   {
 "
     icon: <Building className="w-6 h-6" />,
@@ -40,8 +24,7 @@ const globalStats = [
     value: '98%',
     label: 'Client Satisfaction'},
 ];
-const partnerships = [
-  {
+const partnerships = [{
 
     name: 'Microsoft',
     type: 'Technology Partner',
@@ -100,8 +83,7 @@ const partnerships = [
     projects: 12,
     status: 'Active'},
 ];
-const industries = [
-  {
+const industries = [{
 
     name: 'Financial Services',
     projects: 120,
@@ -170,8 +152,7 @@ export function GlobalPresenceSection() {
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
             From Silicon Valley to Singapore, Zion Tech Group operates across
             six continents, serving clients worldwide with localized expertise
-            and global innovation.
-          </p>
+            and global innovation.</p>
 
           {/* Global stats */}"
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
@@ -250,7 +231,7 @@ export function GlobalPresenceSection() {
                         {office.region}
                       </div>"
                       <div className="text-zion-slate-light text-xs">
-                        Est. {office.established}
+                        Est.{office.established}
                       </div>
                     </div>
                   </div>
@@ -511,8 +492,7 @@ export function GlobalPresenceSection() {
               <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
                 Whether you're in San Francisco or Singapore, our global team is
                 ready to help you scale your business worldwide with
-                cutting-edge technology solutions.
-              </p>"
+                cutting-edge technology solutions.</p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
                   Find Your Local Office

@@ -28,7 +28,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
   useEffect(() => {
     const handleClickOutside = (event) => {
 
-      if (searchRef.current && !searchRef.current.contains(event.target)) {
+      if(searchRef.current && !searchRef.current.contains(event.target)) {
 
         setIsOpen(false);
         setActiveIndex(-1)}
@@ -38,7 +38,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
 
   useEffect(() => {
-    if (searchQuery.trim()) {
+    if(searchQuery.trim()) {
 
       const filtered = allSuggestions.filter(suggestion =>
         suggestion.text.toLowerCase().includes(searchQuery.toLowerCase())
@@ -55,23 +55,23 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
 
   const handleKeyDown = (e) => {
 
-    if (e.key === 'ArrowDown') {
+    if(e.key === 'ArrowDown') {
 
       e.preventDefault();
       setActiveIndex(prev =>
-        prev < suggestions.length - 1 ? prev + 1 : prev'
-      )} else if (e.key === 'ArrowUp') {
+        prev < suggestions.length-1 ? prev + 1 : prev'
+      )} else if(e.key === 'ArrowUp') {
 
       e.preventDefault();
-      setActiveIndex(prev => prev > 0 ? prev - 1 : -1)} else if (e.key === 'Enter') {
+      setActiveIndex(prev => prev > 0 ? prev - 1 : -1)} else if(e.key === 'Enter') {
 
       e.preventDefault();
-      if (activeIndex >= 0 && suggestions[activeIndex]) {
+      if(activeIndex >= 0 && suggestions[activeIndex]) {
 
-        handleSuggestionClick(suggestions[activeIndex])} else if (searchQuery.trim()) {
+        handleSuggestionClick(suggestions[activeIndex])} else if(searchQuery.trim()) {
 
         handleSearch(searchQuery)}
-    } else if (e.key === 'Escape') {
+    } else if(e.key === 'Escape') {
 
       setIsOpen(false);
       setActiveIndex(-1)}
@@ -86,7 +86,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
 
   const handleSearch = (query) => {
 
-    if (query.trim()) {
+    if(query.trim()) {
 
       // Add to recent searches
       const newRecent = [query, ...recentSearches.filter(s => s !== query)].slice(0, 5);
@@ -95,7 +95,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
       // Store in localStorage'
       localStorage.setItem('recentSearches', JSON.stringify(newRecent));
 
-      // Perform search (in a real app, this would navigate to search results)
+      // Perform search(in a real app, this would navigate to search results)
       // // // // // // // // console.log('Searching for:', query);
 
       // Close search
@@ -125,7 +125,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
     setRecentSearches(newRecent);
     localStorage.setItem('recentSearches', JSON.stringify(newRecent))};
 
-  return()
+  return ()
     <div className="relative flex-1 max-w-2xl" ref={searchRef}>
       {/* Search Input */}"
       <div className="relative">"
@@ -164,9 +164,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
                   <button
                     key={index}
                     onClick={() => handleSuggestionClick(suggestion)}
-                    className={`w-full flex items-center space-x-3 px-3 py-2 rounded-md text-left hover:bg-gray-50 ${
-
-                      index === activeIndex ? 'bg-blue-50 border border-blue-200' : ''`
+                    className={`w-full flex items-center space-x-3 px-3 py-2 rounded-md text-left hover:bg-gray-50 ${index === activeIndex ? 'bg-blue-50 border border-blue-200' : ''`
                     }`}
 "
                     <suggestion.icon className="w-4 h-4 text-gray-400" />"
@@ -204,10 +202,6 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
 <<<<<<< HEAD
 }
 =======
-
-
-
-
 
 }"
 >>>>>>> main

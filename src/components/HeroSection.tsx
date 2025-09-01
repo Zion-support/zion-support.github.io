@@ -1,47 +1,10 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
+import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
 
- * HeroSection function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
- */
-function HeroSection () {
-=======
->>>>>>> main
-
-  ArrowRight,
-  Play,
-  Star,
-  CheckCircle,
-  ChevronLeft,
-  ChevronRight,
-  Zap,
-  Shield,
-  Globe,
-  Brain,
-  Rocket,
-  Target,
-  TrendingUp,
-  Pause} from 'lucide-react';
-
-interface HeroSlide {
-
-  id: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  image: string;
-  cta: string;
-  path: string;
-  features: string[];
-  gradient: string;
-  icon: React.ComponentType < any>;
-  stats: { label: string; value: string; icon: React.ComponentType < any> }[]}
+export default function Page() {
+[]}
 ;
-const heroSlides: HeroSlide[] = [
-=======
+const heroSlides: HeroSlide[] = [=======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   {
 
@@ -50,7 +13,7 @@ const heroSlides: HeroSlide[] = [
     subtitle:'
       'Transform your business with cutting-edge artificial intelligence',
     description:'
-      'Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization. Our solutions are designed to scale with your business needs.',
+      'Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization.Our solutions are designed to scale with your business needs.',
     image: '/images/hero-ai-solutions.jpg',
     cta: 'Explore AI Solutions',
     path: '/services/ai-business-intelligence',
@@ -106,10 +69,10 @@ const heroSlides: HeroSlide[] = [
     ]},
 ];
 };
-  const [currentSlide, setCurrentSlide] = useState (0) ;
-  const [isAutoPlaying, setIsAutoPlaying] = useState (true) ;
-  const [direction, setDirection] = useState (0) ;
-  const [isLoading, setIsLoading] = useState (true) ;
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [direction, setDirection] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Memoize slides to prevent unnecessary re - renders
   
@@ -118,35 +81,32 @@ const heroSlides: HeroSlide[] = [
     setCurrentSlide(prev => (prev + 1) % memoizedSlides.length);
     setIsAutoPlaying(false)}, [memoizedSlides.length]);
 
-  
     setCurrentSlide()
       prev => (prev - 1 + memoizedSlides.length) % memoizedSlides.length
     );
     setIsAutoPlaying(false)}, [memoizedSlides.length]);
 
-  
       setCurrentSlide(index);
       setIsAutoPlaying(false)},
     [currentSlide]
   );
   // Auto-play functionality with pause on hover
   useEffect(() => {
-    if (!isAutoPlaying) return;
+    if(!isAutoPlaying) return;
 
-    
       setCurrentSlide(prev => (prev + 1) % memoizedSlides.length)}, 6000);
 
-    return () => clearInterval (interval) }, [isAutoPlaying, memoizedSlides.length]) ;
+    return () => clearInterval(interval) }, [isAutoPlaying, memoizedSlides.length]) ;
 
   // Handle keyboard navigation
-  useEffect ( () => {
+  useEffect(() => {
     
-      if (e.key === 'ArrowRight') nextSlide();
-      if (e.key === ' ') {
+      if(e.key === 'ArrowRight') nextSlide();
+      if(e.key === ' ') {
 =======
 '
-      if (e.key === 'ArrowLeft') prevSlide();'
-      if (e.key === 'ArrowRight') nextSlide();'      if (e.key === ' ') {
+      if(e.key === 'ArrowLeft') prevSlide();'
+      if(e.key === 'ArrowRight') nextSlide();'      if(e.key === ' ') {
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
         e.preventDefault();
@@ -157,19 +117,18 @@ const heroSlides: HeroSlide[] = [
     return () => window.removeEventListener('keydown', handleKeyDown)}, [prevSlide, nextSlide, isAutoPlaying]);
 
   // Handle image loading
-  useEffect ( () => {
+  useEffect(() => {
     
           img.onload = resolve;
           img.onerror = resolve;
           img.src = slide.image}) }) ;
 
-      await Promise.all (imagePromises) ;
-      setIsLoading (false) };
+      await Promise.all(imagePromises) ;
+      setIsLoading(false) };
 
     preloadImages () }, [memoizedSlides]) ;
 
-  
-  if (isLoading) {
+  if(isLoading) {
 
     return ("
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">"
@@ -331,9 +290,7 @@ const heroSlides: HeroSlide[] = [
             <button
               key={index}
               onClick={() => goToSlide(index)}`
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-
-                index === currentSlide'
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide'
                   ? 'bg-cyan-400 scale-125''
                   : 'bg-slate-600 hover:bg-slate-500'`
               }`}`
@@ -347,14 +304,14 @@ const heroSlides: HeroSlide[] = [
       <button
         onClick={prevSlide}"
         className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-slate-800/50 hover:bg-slate-700/70 text-slate-300 hover:text-white transition-all duration-300 backdrop-blur-sm"
-        aria-label="Previous slide"
+        
       >"
         <ChevronLeft className="w-6 h-6"  />      </button>
 
       <button
         onClick={nextSlide}"
         className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-slate-800/50 hover:bg-slate-700/70 text-slate-300 hover:text-white transition-all duration-300 backdrop-blur-sm"
-        aria-label="Next slide"
+        
       >"
         <ChevronRight className="w-6 h-6"  />
       </button>

@@ -1,96 +1,7 @@
 import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import {
-
-  BarChart3,
-  PieChart,
-  TrendingUp,
-  DollarSign,
-  Users,
-  Target,
-  Rocket,
-  Brain,
-  Zap,
-  Star,
-  Filter,
-  Download,
-  Eye,
-  Award,
-  ArrowUpRight,
-  ArrowDownRight} from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { Input } from './ui/input';
-const AdvancedServicePortfolioDashboard = () => {
-
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedStatus, setSelectedStatus] = useState('all');
-  const [selectedComplexity, setSelectedComplexity] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [viewMode, setViewMode] = useState('overview');
-  // Mock data - in real app this would come from API
-  const portfolioData = [
-    {
-
-      id: 'ai-consciousness',
-      title: 'Advanced AI Consciousness Platform',
-      category: 'ai',
-      price: '$300,000/month',
-      duration: '24-36 months',
-      status: 'Active',
-      performance: 95,
-      clientCount: 8,
-      revenue: 2400000,
-      growth: 28.5,
-      complexity: 'Enterprise',
-      marketDemand: 'Exploding',
-      technologyMaturity: 'Leading'},
-    {
-
-      id: 'space-mining',
-      title: 'Space Mining & Resource Extraction',
-      category: 'space-tech',
-      price: '$1,000,000/month',
-      duration: '36-48 months',
-      status: 'Development',
-      performance: 88,
-      clientCount: 3,
-      revenue: 3000000,
-      growth: 45.2,
-      complexity: 'Enterprise',
-      marketDemand: 'High',
-      technologyMaturity: 'Emerging'},
-    {
-
-      id: 'quantum-teleportation',
-      title: 'Quantum Teleportation Network',
-      category: 'quantum',
-      price: '$800,000/month',
-      duration: '36-48 months',
-      status: 'Planning',
-      performance: 0,
-      clientCount: 0,
-      revenue: 0,
-      growth: 0,
-      complexity: 'Enterprise',
-      marketDemand: 'Exploding',
-      technologyMaturity: 'Emerging'},
-    {
-
-      id: 'fusion-energy',
-      title: 'Fusion Energy Generation Platform',
-      category: 'green-tech',
-      price: '$2,000,000/month',
-      duration: '48-60 months',
-      status: 'Development',
-      performance: 92,
-      clientCount: 2,
-      revenue: 4000000,
-      growth: 67.8,
-      complexity: 'Enterprise',
-      marketDemand: 'High',
-      technologyMaturity: 'Growing'},
+import { motion  } from 'framer-motion';
+export default function Page() {
+,
     {
 
       id: 'nanotechnology',
@@ -128,7 +39,7 @@ const AdvancedServicePortfolioDashboard = () => {
       const matchesSearch = service.title
         .toLowerCase()
         .includes(searchTerm.toLowerCase());
-      return()
+      return ()
         matchesCategory && matchesStatus && matchesComplexity && matchesSearch
       );
     });
@@ -162,7 +73,7 @@ const AdvancedServicePortfolioDashboard = () => {
   }, [portfolioData]);
   const getStatusColor = status => {
 
-    switch (status) {
+    switch(status) {
 
       case 'Active':'
         return 'bg-green-100 text-green-800';
@@ -178,7 +89,7 @@ const AdvancedServicePortfolioDashboard = () => {
   };
   const getComplexityColor = complexity => {
 
-    switch (complexity) {
+    switch(complexity) {
 
       case 'Basic':'
         return 'bg-green-100 text-green-800';
@@ -194,7 +105,7 @@ const AdvancedServicePortfolioDashboard = () => {
   };
   const getMarketDemandColor = demand => {
 
-    switch (demand) {
+    switch(demand) {
 
       case 'Low':'
         return 'bg-gray-100 text-gray-800';
@@ -210,7 +121,7 @@ const AdvancedServicePortfolioDashboard = () => {
   };
   const getTechnologyMaturityColor = maturity => {
 
-    switch (maturity) {
+    switch(maturity) {
 
       case 'Emerging':'
         return 'bg-blue-100 text-blue-800';
@@ -252,7 +163,7 @@ const AdvancedServicePortfolioDashboard = () => {
       name: 'Green Technology',
       count: portfolioData.filter(s => s.category === 'green-tech').length},
   ];
-  return()
+  return ()
     <div className="max-w-7xl mx-auto p-6">
       {/* Header */}
       <motion.div
@@ -638,9 +549,7 @@ const AdvancedServicePortfolioDashboard = () => {
                   >"
                     <div className="flex items-center gap-3">
                       <div`
-                        className={`w-4 h-4 rounded-full ${
-
-                          index === 0'
+                        className={`w-4 h-4 rounded-full ${index === 0'
                             ? 'bg-blue-500'
                             : index === 1'
                               ? 'bg-purple-500'
@@ -660,9 +569,7 @@ const AdvancedServicePortfolioDashboard = () => {
                     <div className="flex items-center gap-2">"
                       <div className="w-20 bg-zion-slate-light/20 rounded-full h-2">
                         <div`
-                          className={`h-2 rounded-full ${
-
-                            index === 0'
+                          className={`h-2 rounded-full ${index === 0'
                               ? 'bg-blue-500'
                               : index === 1'
                                 ? 'bg-purple-500'
@@ -760,9 +667,8 @@ const AdvancedServicePortfolioDashboard = () => {
           </h3>"
           <p className="text-xl mb-6 max-w-2xl mx-auto">
             Our comprehensive service portfolio offers cutting-edge solutions
-            across all major technology sectors. Contact us to discuss how we
-            can help you achieve your business goals.
-          </p>"
+            across all major technology sectors.Contact us to discuss how we
+            can help you achieve your business goals.</p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button"
               className="bg-white text-zion-purple hover:bg-zion-slate-light"

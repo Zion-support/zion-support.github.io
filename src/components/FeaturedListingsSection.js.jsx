@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Star, Eye, Heart, ArrowRight, Clock, Users, Award } from 'lucide-react';
-import { Link } from 'react-router-dom'; // Added Link import
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Star, Eye, Heart, ArrowRight, Clock, Users, Award  } from 'lucide-react';
+import { Link  } from 'react-router-dom'; // Added Link import
 
-const featuredListings = [
-    {
+const featuredListings = [{
 
         id: 1,
         title: "AI-Powered E-commerce Platform","
@@ -135,7 +134,7 @@ export function FeaturedListingsSection() {
     const [showFilters, setShowFilters] = useState(false);"
     const filteredListings = selectedCategory === "All"
         ? featuredListings
-        : featuredListings.filter (listing => listing.category === selectedCategory) ;
+        : featuredListings.filter(listing => listing.category === selectedCategory) ;
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -211,9 +210,7 @@ export function FeaturedListingsSection() {
             Featured <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Projects</span>
           </h2>"
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
-            Discover our most popular and highly-rated projects that showcase our expertise and innovation. 
-            Each project represents our commitment to excellence and cutting-edge technology.
-          </p>
+            Discover our most popular and highly-rated projects that showcase our expertise and innovation.Each project represents our commitment to excellence and cutting-edge technology.</p>
         </motion.div>
 
         {/* Category filters */}"
@@ -296,7 +293,7 @@ export function FeaturedListingsSection() {
                         {tag}
                       </span>))}"
                     {listing.tags.length > 3 && (<span className="text-zion-cyan/60 text-xs">
-                        +{listing.tags.length - 3} more
+                        +{listing.tags.length-3} more
                       </span>) }
                   </div>
                   

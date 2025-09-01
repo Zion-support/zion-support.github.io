@@ -8,7 +8,7 @@ import { Search, X, ArrowDown export const EnhancedSearchInput = ({ placeholder 
     const inputRef = useRef(null);
     const suggestionsRef = useRef(null);
     useEffect(() => {
-        if (query.trim()) {
+        if(query.trim()) {
 
             const filtered = suggestions.filter(suggestion => suggestion.title.toLowerCase().includes(query.toLowerCase()) ||
                 suggestion.description?.toLowerCase().includes(query.toLowerCase()));
@@ -23,7 +23,7 @@ import { Search, X, ArrowDown export const EnhancedSearchInput = ({ placeholder 
     useEffect(() => {
         const handleClickOutside = (event) => {
 
-            if (suggestionsRef.current && !suggestionsRef.current.contains(event.target)) {
+            if(suggestionsRef.current && !suggestionsRef.current.contains(event.target)) {
 
                 setShowSuggestions(false)}
         };
@@ -37,7 +37,7 @@ import { Search, X, ArrowDown export const EnhancedSearchInput = ({ placeholder 
     const handleSubmit = (e) => {
 
         e.preventDefault();
-        if (query.trim() && onSearch) {
+        if(query.trim() && onSearch) {
 
             onSearch(query.trim());
             setShowSuggestions(false)}
@@ -46,19 +46,19 @@ import { Search, X, ArrowDown export const EnhancedSearchInput = ({ placeholder 
 
         setQuery(suggestion.title);
         setShowSuggestions(false);
-        if (onSearch) {
+        if(onSearch) {
 
             onSearch(suggestion.title)}
     };
     const handleKeyDown = (e) => {
 
-        if (!showSuggestions)
+        if(!showSuggestions)
             return;
-        switch (e.key) {
+        switch(e.key) {
 
             case 'ArrowDown':
                 e.preventDefault();
-                setSelectedIndex(prev => prev < filteredSuggestions.length - 1 ? prev + 1 : prev);
+                setSelectedIndex(prev => prev < filteredSuggestions.length-1 ? prev + 1 : prev);
                 break;
             case 'ArrowUp':
                 e.preventDefault();
@@ -66,10 +66,10 @@ import { Search, X, ArrowDown export const EnhancedSearchInput = ({ placeholder 
                 break;
             case 'Enter':
                 e.preventDefault();
-                if (selectedIndex >= 0 && filteredSuggestions[selectedIndex]) {
+                if(selectedIndex >= 0 && filteredSuggestions[selectedIndex]) {
 
                     handleSuggestionClick(filteredSuggestions[selectedIndex])}
-                else if (query.trim()) {
+                else if(query.trim()) {
 
                     handleSubmit(e)}
                 break;

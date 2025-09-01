@@ -1,34 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import {
+import { <<<<<<< HEAD AlertTriangle, RefreshCw, Home, ArrowLeft, Bug, Shield, Zap,  } from 'lucide-react';
+ from 'lucide-react';
+import { Link, useNavigate  } from 'react-router-dom';
 
-<<<<<<< HEAD
-        AlertTriangle,
-        RefreshCw,
-        Home,
-        ArrowLeft,
-        Bug,
-        Shield,
-        Zap,
-      } from 'lucide - react';
-=======
-  AlertTriangle,
-  RefreshCw,
-  Home,
-  ArrowLeft,
-  Bug,
-  Shield,
-  Zap} from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
-
-function ErrorFallback({ error, resetError, retryCount = 0 }) {
+) {
 >>>>>>> main
 
   const navigate = useNavigate();
   const maxRetries = 3;
 
   const handleRetry = () => {
-    if (retryCount < maxRetries) {
+    if(retryCount < maxRetries) {
 
       resetError();
     } else {
@@ -40,15 +23,15 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
 
   const getErrorType = error => {
 
-    if (error?.name === 'NetworkError' || error?.message?.includes('network')) {
+    if(error?.name === 'NetworkError' || error?.message?.includes('network')) {
 
       return 'network';
     }
-    if (error?.name === 'TypeError' || error?.message?.includes('undefined')) {
+    if(error?.name === 'TypeError' || error?.message?.includes('undefined')) {
 
       return 'runtime';
     }
-    if (error?.name === 'ReferenceError') {
+    if(error?.name === 'ReferenceError') {
 
       return 'reference';
     }
@@ -61,25 +44,25 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
 
     network: {
       title: 'Connection Error',
-      description: "We're having trouble connecting to our servers. Please check your internet connection and try again.",
+      description: "We're having trouble connecting to our servers.Please check your internet connection and try again.",
       icon: Shield,
       color: 'text-orange-400'
     },
     runtime: {
       title: 'Runtime Error',
-      description: 'Something unexpected happened while processing your request. Our team has been notified.',
+      description: 'Something unexpected happened while processing your request.Our team has been notified.',
       icon: Bug,
       color: 'text-red-400'
     },
     reference: {
       title: 'Reference Error',
-      description: 'There was an issue with the page resources. Please refresh and try again.',
+      description: 'There was an issue with the page resources.Please refresh and try again.',
       icon: AlertTriangle,
       color: 'text-yellow-400'
     },
     general: {
       title: 'Something went wrong',
-      description: "We encountered an unexpected error. Don't worry, our team has been notified.",
+      description: "We encountered an unexpected error.Don't worry, our team has been notified.",
       icon: AlertTriangle,
       color: 'text-zion-purple'
     }
@@ -88,8 +71,7 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
   const currentError = errorMessages[errorType];
   const IconComponent = currentError.icon;
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center p-4">
+  return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center p-4">
       <div className="max-w-md w-full text-center">
         <div className="mb-8">
           <div className="w-24 h-24 bg-zion-purple/10 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -115,7 +97,7 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
           <details className="mb-6 text-left">
             <summary className="cursor-pointer text-zion-cyan hover:text-zion-cyan-light mb-3 flex items-center">
               <Bug className="w-4 h-4 mr-2" />
-              Error Details (Development)
+              Error Details(Development)
             </summary>
             <div className="bg-zion-slate-dark p-4 rounded-lg text-xs text-zion-slate-light overflow-auto max-h-40">
               <div className="mb-2">
@@ -199,13 +181,13 @@ export function ErrorBoundary({ children, fallback, onError }) {
 
       setHasError(true);
       setError(event.error);
-      if (onError) {
+      if(onError) {
 
         onError(event.error, { componentStack: event.error?.stack });
       }
 
       // Log error to console in development
-      if (process.env.NODE_ENV === 'development') {
+      if(process.env.NODE_ENV === 'development') {
         // console.error('ErrorBoundary caught an error:', event.error);
       }
     };
@@ -214,7 +196,7 @@ export function ErrorBoundary({ children, fallback, onError }) {
 
       setHasError(true);
       setError(new Error(event.reason));
-      if (onError) {
+      if(onError) {
 
         onError(new Error(event.reason), {
 
@@ -222,7 +204,7 @@ export function ErrorBoundary({ children, fallback, onError }) {
       }
 
       // Log error to console in development
-      if (process.env.NODE_ENV === 'development') {
+      if(process.env.NODE_ENV === 'development') {
         // console.error('ErrorBoundary caught an unhandled rejection:', event.reason);
       }
     };
@@ -243,14 +225,13 @@ export function ErrorBoundary({ children, fallback, onError }) {
     setRetryCount(prev => prev + 1);
   };
 
-  if (hasError) {
+  if(hasError) {
 
-    if (fallback) {
+    if(fallback) {
 
       return fallback;
     }
-    return (
-      <ErrorFallback
+    return (<ErrorFallback
         error={error || undefined}
         resetError={resetError}
         retryCount={retryCount}
@@ -283,8 +264,7 @@ export function withErrorBoundary(Component, fallback = null) {
 
   return function WrappedComponent(props) {
 
-    return (
-      <ErrorBoundary fallback={fallback}>
+    return (<ErrorBoundary fallback={fallback}>
         <Component {...props} />
       </ErrorBoundary>
     );

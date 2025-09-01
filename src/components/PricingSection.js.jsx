@@ -1,31 +1,7 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Check, X, Star, Zap, Shield, Users, ArrowRight, Crown, Rocket, Building } from 'lucide-react';
-const plans = [
-    {
-
-        name: "Starter",
-        price: 99,"
-        period: "month","
-        description: "Perfect for small businesses and startups","
-        icon: <Rocket className="w-8 h-8"/>,"
-        color: "from-zion-cyan to-zion-blue","
-        bgColor: "from-zion-cyan/20 to-zion-blue/20",
-        features[;"
-            "Up to 5 team members","
-            "Basic AI tools access","
-            "Email support","
-            "Standard templates","
-            "1 project at a time"
-        ],;
-        notIncluded[;"
-            "Advanced analytics","
-            "Priority support","
-            "Custom integrations"
-        ],;
-        popular: false,"
-        cta: "Get Started"
-    },
+import { motion  } from 'framer-motion';
+import { Check, X, Star, Zap, Shield, Users, ArrowRight, Crown, Rocket, Building  } from 'lucide-react';
+,
     {
 "
         name: "Professional",
@@ -77,8 +53,7 @@ const plans = [
         cta: "Contact Sales"
     }
 ];
-const addons = [
-    {
+const addons = [{
 "
         name: "AI Model Training",
         price: 199,"
@@ -168,8 +143,7 @@ export function PricingSection() {
             Simple, <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Transparent</span> Pricing
           </h2>"
           <p className="text-zion-slate-light text-lg max-w-3xl mx-auto leading-relaxed mb-8">
-            Choose the perfect plan for your business. All plans include our core features with no hidden fees.
-          </p>
+            Choose the perfect plan for your business.All plans include our core features with no hidden fees.</p>
 
           {/* Billing toggle */}"
           <div className="inline-flex items-center bg-zion-blue-dark/40 rounded-xl p-1 border border-zion-blue-light/30">

@@ -1,9 +1,8 @@
 import React from 'react';
-import { Shield, Lock, CheckCircle, AlertTriangle } from 'lucide-react';
-export function SecurityHeaders({ className }) {
+import { Shield, Lock, CheckCircle, AlertTriangle  } from 'lucide-react';
+) {
 
-  const securityFeatures = [
-    {
+  const securityFeatures = [{
 
       icon: Shield,
       title: 'SOC 2 Type II Certified',
@@ -39,7 +38,7 @@ export function SecurityHeaders({ className }) {
     { name: 'CCPA', status: 'Compliant', year: '2024', icon: CheckCircle },
     { name: 'HIPAA', status: 'Ready', year: '2024', icon: AlertTriangle },
   ];
-  return()
+  return ()
     <section'
       className={`py-16 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark ${className || ''}`}
     >
@@ -52,8 +51,7 @@ export function SecurityHeaders({ className }) {
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             Zion Tech Group maintains the highest standards of security and
             compliance to protect your business data and ensure regulatory
-            adherence.
-          </p>
+            adherence.</p>
         </div>
 
         {/* Security Features Grid */}"
@@ -96,17 +94,13 @@ export function SecurityHeaders({ className }) {
                 className="text-center p-4 bg-white/5 rounded-lg border border-white/10"
               >
                 <div`
-                  className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 ${
-
-                    badge.status === 'Certified' || badge.status === 'Compliant''
+                  className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 ${badge.status === 'Certified' || badge.status === 'Compliant''
                       ? 'bg-zion-cyan/20''
                       : 'bg-yellow-500/20'`
                   }`}
                 >
                   <badge.icon`
-                    className={`w-6 h-6 ${
-
-                      badge.status === 'Certified' ||'
+                    className={`w-6 h-6 ${badge.status === 'Certified' ||'
                       badge.status === 'Compliant''
                         ? 'text-zion-cyan''
                         : 'text-yellow-500'`
@@ -115,9 +109,7 @@ export function SecurityHeaders({ className }) {
                 </div>"
                 <h4 className="font-semibold text-white mb-1">{badge.name}</h4>
                 <div`
-                  className={`text-sm font-medium mb-1 ${
-
-                    badge.status === 'Certified' || badge.status === 'Compliant''
+                  className={`text-sm font-medium mb-1 ${badge.status === 'Certified' || badge.status === 'Compliant''
                       ? 'text-zion-cyan''
                       : 'text-yellow-500'`
                   }`}
@@ -171,10 +163,10 @@ export function SecurityHeaders({ className }) {
   }
   // Compact version for smaller spaces
   return (<div
-      className={`flex flex - wrap justify - center gap - 6 ${className || ''}`}
+      className={`flex flex - wrap justify - center gap-6 ${className || ''}`}
     >
-      <div className="flex items - center gap - 2 text - zion - cyan text - sm">
-        <Shield className="w - 4 h - 4" />
+      <div className="flex items - center gap-2 text-zion - cyan text-sm">
+        <Shield className="w-4 h-4" />
         <span > SOC 2 Certified</span>
       </div>
     </section>

@@ -2,8 +2,7 @@
 // Comprehensive Services Index 2030 - Zion Tech Group
 // This file combines all services for easy access and management
 ;
-export const COMPREHENSIVE_SERVICES_INDEX_2030: ProductListing[] = [
-  ...REVOLUTIONARY_SERVICES_2030
+export const COMPREHENSIVE_SERVICES_INDEX_2030: ProductListing[] = [...REVOLUTIONARY_SERVICES_2030
 ];
 
 // Service Categories for easy filtering
@@ -62,8 +61,7 @@ export const SERVICE_STATISTICS_2030 = {
     COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)  => sum + service.price, 0) /
     COMPREHENSIVE_SERVICES_INDEX_2030.length
   ),
-  averageRating: Math.round(
-    (COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)  => sum + service.rating, 0) /
+  averageRating: Math.round((COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)  => sum + service.rating, 0) /
     COMPREHENSIVE_SERVICES_INDEX_2030.length) * 10
   ) / 10,
   featuredServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => service.featured).length,
@@ -89,7 +87,7 @@ export
 // Featured Services
 export const FEATURED_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => service.featured);
 
-// High-ROI Services (ROI > 500%)
+// High-ROI Services(ROI > 500%)
 export const HIGH_ROI_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {;
   const roi = service.roi;
 =======
@@ -100,30 +98,30 @@ export
 export 
   
 >>>>>>> main
-  if (typeof roi = == 'string') {;
+  if(typeof roi = == 'string') {;
     
     return roiNumber > 500}
   return false});
 
-// Quick Setup Services (< 8 weeks);
+// Quick Setup Services(< 8 weeks);
 export 
   
-  if (typeof setupTime = == 'string') {;
+  if(typeof setupTime = == 'string') {;
     
 // Featured Services
 export 
-// High-ROI Services (ROI > 500%)
+// High-ROI Services(ROI > 500%)
 export 
   
-  if (typeof roi = == 'string') {;
+  if(typeof roi = == 'string') {;
     
     return roiNumber > 500}
   return false});
 
-// Quick Setup Services (< 8 weeks)
+// Quick Setup Services(< 8 weeks)
 export 
   
-  if (typeof setupTime = == 'string') {;
+  if(typeof setupTime = == 'string') {;
     
     return weeks < 8}
   return false});

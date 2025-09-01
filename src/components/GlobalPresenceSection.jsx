@@ -1,22 +1,13 @@
 import React, { useState } from 'react';
 <<<<<<< HEAD
-export function GlobalPresenceSection () {
-import { motion, AnimatePresence } from 'framer - motion';
+import { motion, AnimatePresence  } from 'framer-motion';
 
-=======
-import { motion, AnimatePresence } from 'framer-motion';
-import { Globe, MapPin, Users, Award, Star, TrendingUp, Building, ArrowRight, CheckCircle, Clock } from 'lucide-react';
->>>>>>> main
-const globalStats = [
-    { icon: <Globe className="w-6 h-6"/>, value: "25+", label: "Countries Served" },"
-    { icon: <Building className="w-6 h-6"/>, value: "6", label: "Global Offices" },"
-    { icon: <Users className="w-6 h-6"/>, value: "170+", label: "Global Team" },"
-    { icon: <Award className="w-6 h-6"/>, value: "500+", label: "Projects Delivered" },"
+export default function Page() {
+,"
     { icon: <Star className="w-6 h-6"/>, value: "4.8/5", label: "Global Rating" },"
     { icon: <TrendingUp className="w-6 h-6"/>, value: "98%", label: "Client Satisfaction" }
 ];
-const partnerships = [
-    {
+const partnerships = [{
 "
         name: "Microsoft","
         type: "Technology Partner","
@@ -85,9 +76,9 @@ const industries = ["
     { name: "Technology", projects: 150, countries: 25, satisfaction: "99%" },"
     { name: "Education", projects: 65, countries: 12, satisfaction: "96%" }
 ];
-    const [selectedOffice, setSelectedOffice] = useState (null) ;
-    const [selectedPartnership, setSelectedPartnership] = useState (null) ;
-    const [hoveredIndustry, setHoveredIndustry] = useState (null) ;
+    const [selectedOffice, setSelectedOffice] = useState(null);
+    const [selectedPartnership, setSelectedPartnership] = useState(null);
+    const [hoveredIndustry, setHoveredIndustry] = useState(null);
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -115,7 +106,6 @@ const industries = ["
                 duration: 0.6,"
                 ease: "easeOut"
 
-
     };"
     return (<section className="py-20 bg-gradient-to-br from-zion-purple via-zion-slate-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}"
@@ -137,19 +127,13 @@ const industries = ["
   { opacity: 1,
   y: 0
 
-
-
-
-
-
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>"
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">"
             Global <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Presence</span>
           </h2>"
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
             From Silicon Valley to Singapore, Zion Tech Group operates across six continents,
-            serving clients worldwide with localized expertise and global innovation.
-          </p>
+            serving clients worldwide with localized expertise and global innovation.</p>
 
           {/* Global stats */}"
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
@@ -167,10 +151,6 @@ const industries = ["
 
   { duration: 0.4,
   delay: index * 0.1
-
-
-
-
 
 "
 }} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">"
@@ -199,11 +179,6 @@ const industries = ["
   { duration: 0.6,
   delay: 0.2
 
-
-
-
-
-
 }}>"
           <h3 className="text-3xl font-bold text-white text-center mb-12">"
             Our <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Global Offices</span>
@@ -225,10 +200,6 @@ const industries = ["
   { duration: 0.4,
   delay: index * 0.1
 
-
-
-
-
 "
 }} whileHover={{ y: -4 }} className="relative">"
                 <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedOffice(selectedOffice === office.id ? null : office.id)}>
@@ -245,7 +216,7 @@ const industries = ["
                     </div>"
                     <div className="text-right">"
                       <div className="text-zion-purple-light text-xs">{office.region}</div>"
-                      <div className="text-zion-slate-light text-xs">Est. {office.established}</div>
+                      <div className="text-zion-slate-light text-xs">Est.{office.established}</div>
                     </div>
                   </div>
 
@@ -296,11 +267,6 @@ const industries = ["
   { opacity: 0, height: 0,
   y: 10
 
-
-
-
-
-
 }} transition={{ duration: 0.3 }}>"
                         <div className="space-y-3 mb-4">"
                           <div className="flex items-center gap-2 text-zion-slate-light/80 text-sm">"
@@ -343,11 +309,6 @@ const industries = ["
   { duration: 0.6,
   delay: 0.3
 
-
-
-
-
-
 }}>"
           <h3 className="text-3xl font-bold text-white text-center mb-12">"
             Strategic <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Partnerships</span>
@@ -368,10 +329,6 @@ const industries = ["
 
   { duration: 0.4,
   delay: index * 0.1
-
-
-
-
 
 "
 }} whileHover={{ y: -4 }} className="relative">"
@@ -421,11 +378,6 @@ const industries = ["
   { opacity: 0, height: 0,
   y: 10
 
-
-
-
-
-
 }} transition={{ duration: 0.3 }}>"
                         <div className="flex items-center gap-2 text-zion-cyan text-sm">"
                           <CheckCircle className="w-4 h-4"/>
@@ -454,11 +406,6 @@ const industries = ["
   { duration: 0.6,
   delay: 0.4
 
-
-
-
-
-
 }}>"
           <h3 className="text-3xl font-bold text-white text-center mb-12">"
             Industry <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Presence</span>
@@ -480,11 +427,8 @@ const industries = ["
   { duration: 0.4,
   delay: index * 0.1
 
-}} onHoverStart={ () => setHoveredIndustry (index) } onHoverEnd={ () => setHoveredIndustry (null) } whileHover={{ y: -4 }} className="p - 6 rounded - 2xl bg - gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 30 hover:border - zion - cyan / 50 transition - all duration - 300 hover:shadow - lg hover:shadow - zion - cyan / 20">
-                <h4 className="text - xl font - bold text - white mb - 4">{industry.name}</h4>
-
-
-
+}} onHoverStart={ () => setHoveredIndustry(index) } onHoverEnd={ () => setHoveredIndustry(null) } whileHover={{ y: -4 }} className="p - 6 rounded-2xl bg-gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue - light / 30 hover:border-zion - cyan / 50 transition - all duration - 300 hover:shadow-lg hover:shadow-zion -cyan / 20">
+                <h4 className="text-xl font - bold text-white mb-4">{industry.name}</h4>
 
 "
 }} onHoverStart={() => setHoveredIndustry(index)} onHoverEnd={() => setHoveredIndustry(null)} whileHover={{ y: -4 }} className="p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">"
@@ -524,11 +468,6 @@ const industries = ["
   { duration: 0.6,
   delay: 0.5
 
-
-
-
-
-
 }}>"
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">"
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">"
@@ -537,8 +476,7 @@ const industries = ["
               </h3>"
               <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
                 Whether you're in San Francisco or Singapore, our global team is ready to help you
-                scale your business worldwide with cutting-edge technology solutions.
-              </p>"
+                scale your business worldwide with cutting-edge technology solutions.</p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
                   Find Your Local Office

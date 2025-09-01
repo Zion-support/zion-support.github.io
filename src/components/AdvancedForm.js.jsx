@@ -1,15 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from 'lucide-react';
-import { useAnalytics } from "../hooks/useAnalytics";
-export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = true, showProgressBar = true }) => {
-
-    const { trackEvent, trackConversion } = useAnalytics({
-
-        enableTracking: enableAnalytics,
-        enableUserBehaviorTracking: true
-    });
-    const [formData, setFormData] = useState({});
+export default function Page() {
+);
     const [validation, setValidation] = useState({});
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -39,58 +30,58 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
     const validateField = useCallback((name, value) => {
 
         const field = fields.find(f => f.name === name);
-        if (!field)
+        if(!field)
             return null;
         // Required field validation
-        if (field.required) {
+        if(field.required) {
 
-            if (typeof value === 'boolean' && !value) {
+            if(typeof value === 'boolean' && !value) {
 
                 return 'This field is required'}
-            if (typeof value === 'string' && value.trim() === '') {
+            if(typeof value === 'string' && value.trim() === '') {
 
                 return 'This field is required'}
         }
         // Skip validation for empty non-required fields'
-        if (!field.required && (typeof value === 'string' && value.trim() === '')) {
+        if(!field.required && (typeof value === 'string' && value.trim() === '')) {
 
             return null}
         // Type-specific validation'
-        if (typeof value === 'string') {
+        if(typeof value === 'string') {
 
             const stringValue = value.trim();
             // Email validation'
-            if (field.type === 'email' && stringValue) {
+            if(field.type === 'email' && stringValue) {
 
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailPattern.test(stringValue)) {
+                if(!emailPattern.test(stringValue)) {
 
                     return 'Please enter a valid email address'}
             }
             // Phone validation'
-            if (field.type === 'tel' && stringValue) {
+            if(field.type === 'tel' && stringValue) {
 
                 const phonePattern = /^[\+]?[1-9][\d]{0,15}$/;
-                if (!phonePattern.test(stringValue.replace(/[\s\-\(\)]/g,))) {
+                if(!phonePattern.test(stringValue.replace(/[\s\-\(\)]/g,))) {
 
                     return 'Please enter a valid phone number'}
             }
             // Length validation
-            if (field.validation?.minLength && stringValue.length < field.validation.minLength) {
+            if(field.validation?.minLength && stringValue.length < field.validation.minLength) {
 
                 return `Minimum length is ${field.validation.minLength} characters`}
-            if (field.validation?.maxLength && stringValue.length > field.validation.maxLength) {
+            if(field.validation?.maxLength && stringValue.length > field.validation.maxLength) {
 `
                 return `Maximum length is ${field.validation.maxLength} characters`}
             // Pattern validation
-            if (field.validation?.pattern && !field.validation.pattern.test(stringValue)) {
+            if(field.validation?.pattern && !field.validation.pattern.test(stringValue)) {
 
                 return 'Please enter a valid value'}
             // Custom validation
-            if (field.validation?.custom) {
+            if(field.validation?.custom) {
 
                 const customError = field.validation.custom(stringValue);
-                if (customError)
+                if(customError)
                     return customError}
         }
         return null}, [fields]);
@@ -111,7 +102,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             }
         }));
         // Track form interaction
-        if (enableAnalytics) {
+        if(enableAnalytics) {
 
             trackEvent('form',field_changed', name, null, { fieldName: name, value: String(value) })}
     }, [validateField, enableAnalytics, trackEvent]);
@@ -138,10 +129,10 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
     const handleSubmit = useCallback(async (e) => {
 
         e.preventDefault();
-        if (!isFormValid()) {
+        if(!isFormValid()) {
 
             // Track validation error
-            if (enableAnalytics) {
+            if(enableAnalytics) {
 
                 trackEvent('form',validation_error',form_submission_failed', null, {
 
@@ -151,12 +142,12 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         setIsSubmitting(true);
         try {
             // Track form submission start
-            if (enableAnalytics) {
+            if(enableAnalytics) {
 
                 trackEvent('form',submission_started',form_submitted')}
             await onSubmit(formData);
             // Track successful submission
-            if (enableAnalytics) {
+            if(enableAnalytics) {
 
                 trackEvent('form',submission_success',form_completed');
                 trackConversion('form_submission', 1, { formType: title })}
@@ -167,9 +158,9 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                 setFormData({});
                 setValidation({});
                 setProgress(0)}, 5000)}
-        catch (error) {
+        catch(error) {
             // Track submission error
-            if (enableAnalytics) {
+            if(enableAnalytics) {
 
                 trackEvent('form',submission_error',form_failed', null, {
 
@@ -187,7 +178,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
     // Get field icon
     const getFieldIcon = useCallback((field) => {
 
-        switch (field.type) {
+        switch(field.type) {
 '"
             case 'email': return <Mail className="w-4 h-4"/>;'"
             case 'tel': return <Phone className="w-4 h-4"/>;'"
@@ -293,7 +284,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             {fieldValidation.message}
           </motion.p>)}
       </motion.div>)}, [formData, validation, showPassword, getFieldIcon, handleFieldChange, handleFieldBlur, togglePasswordVisibility]);
-    if (isSubmitted) {
+    if(isSubmitted) {
 
         return (<motion.div initial = {
 
@@ -311,7 +302,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
           Thank You!
         </h3>"
         <p className="text-green-600 dark:text-green-300">
-          Your message has been sent successfully. We'll get back to you soon!
+          Your message has been sent successfully.We'll get back to you soon!
         </p>
       </motion.div>)}
     return (<motion.div initial = {
@@ -380,8 +371,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 "
 }} className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg">"
               <p className="text-sm text-red-600 dark:text-red-400">
-                Please fix the errors above before submitting the form.
-              </p>
+                Please fix the errors above before submitting the form.</p>
             </motion.div>) }
         </AnimatePresence>
       </form>

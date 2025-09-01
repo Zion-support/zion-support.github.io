@@ -1,32 +1,7 @@
 import React from 'react';
 import { Skeleton } from '@/components/ui/skeleton';
-export function HomePageSkeleton() {
-  return()
-    <div className="min-h-screen bg-background">
-      {/* Hero Section Skeleton */}"
-      <section className="relative overflow-hidden py-20 md:py-32">"
-        <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80"></div>"
-        <div className="container relative z-10 px-4 mx-auto text-center">"
-          <Skeleton className="h-16 md:h-20 w-3/4 mx-auto mb-6 bg-white/20" />"
-          <Skeleton className="h-8 md:h-10 w-2/3 mx-auto mb-10 bg-white/20" />"
-          <div className="flex flex-col sm:flex-row justify-center gap-4">"
-            <Skeleton className="h-14 w-32 bg-white/20" />"
-            <Skeleton className="h-14 w-40 bg-white/20" />
-          </div>
-        </div>
-      </section>
-
-      {/* Quick Access Skeleton */}"
-      <section className="py-12 bg-zion-blue-dark">"
-        <div className="container mx-auto px-4">"
-          <div className="text-center mb-8">"
-            <Skeleton className="h-8 w-48 mx-auto mb-2 bg-white/20" />"
-            <Skeleton className="h-6 w-64 mx-auto bg-white/20" />
-          </div>"
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
-            {Array.from({ length: 6 }).map((_, index) => (
-              <div
-                key={index}"
+export default function Page() {
+"
                 className="bg-zion-blue border border-zion-blue-light rounded-lg p-4"
               >"
                 <Skeleton className="w-12 h-12 rounded-full mx-auto mb-3 bg-white/20" />"

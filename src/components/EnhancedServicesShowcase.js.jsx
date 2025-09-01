@@ -1,16 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { enhancedServices2025 } from '../data/enhanced-services-2025';
-const EnhancedServicesShowcase = () => {
-
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const categories = ['
-    { id: 'all', name: 'All Services', icon: '🌟' },
-    { id: 'micro-saas', name: 'Micro SAAS', icon: '💻' },
-    { id: 'it-services', name: 'IT Services', icon: '🖥️' },
-    { id: 'ai-services', name: 'AI Services', icon: '🤖' },
+import { Link  } from 'react-router-dom';
+export default function Page() {
+,
     { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀' },
   ];
   const filteredServices = enhancedServices2025.filter(service => {
@@ -39,7 +30,7 @@ const EnhancedServicesShowcase = () => {
       opacity: 1,
       y: 0,
       transition: { duration: 0.5 }}};
-  return()
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
@@ -64,8 +55,7 @@ const EnhancedServicesShowcase = () => {
           >
             Discover our extensive portfolio of innovative micro SAAS services,
             enterprise IT solutions, cutting-edge AI services, and emerging
-            technology solutions designed to transform your business.
-          </motion.p>
+            technology solutions designed to transform your business.</motion.p>
 
           {/* Contact Information */}
           <motion.div"
@@ -109,9 +99,7 @@ const EnhancedServicesShowcase = () => {
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`px-4 py-2 rounded-lg border transition-all duration-300 ${
-
-                    selectedCategory === category.id'
+                  className={`px-4 py-2 rounded-lg border transition-all duration-300 ${selectedCategory === category.id'
                       ? 'bg-blue-600 border-blue-400 text-white''
                       : 'bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hover:border-white/40'`
                   }`}
@@ -257,8 +245,7 @@ const EnhancedServicesShowcase = () => {
               animate={{ opacity: 1 }}
             >"
               <p className="text-gray-400 text-lg">
-                No services found matching your criteria.
-              </p>
+                No services found matching your criteria.</p>
               <button
                 onClick={() => {
 

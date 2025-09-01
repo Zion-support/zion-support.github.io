@@ -1,7 +1,6 @@
 ;
 const CTASection: React.FC = (): JSX.Element => {
 
-  
     },;
     {;
       icon: Star,;"
@@ -9,7 +8,7 @@ const CTASection: React.FC = (): JSX.Element => {
       description: "Trusted by industry leaders worldwide"};  ];
 
   return ("
-    <section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/90 to-zion-slate-dark relative overflow-hidden" role="region" aria-labelledby="cta-heading">
+    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/90 to-zion-slate-dark relative overflow-hidden" role="region" aria-labelledby="cta-heading">
       {/* Background Elements */}"
       <div className="absolute inset-0">"
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-zion-cyan/5 via-zion-blue/5 to-zion-purple/5" />"
@@ -89,8 +88,7 @@ const CTASection: React.FC = (): JSX.Element => {
             viewport={{ once: true }}"
             className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed mb-8"
 
-            Join hundreds of companies that have already revolutionized their operations with Zion Tech Group's cutting-edge solutions.
-          </motion.p>
+            Join hundreds of companies that have already revolutionized their operations with Zion Tech Group's cutting-edge solutions.</motion.p>
         </div>;
 
         {/* Feature Grid */}

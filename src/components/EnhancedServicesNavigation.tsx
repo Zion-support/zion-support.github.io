@@ -1,10 +1,9 @@
 <<<<<<< HEAD
 
 const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
-  const [isOpen, setIsOpen] = useState (false) ;
+  const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<any> (null) ;
 
-  
         {
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -206,8 +205,8 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
 
 }}"
                     className="relative group"
-                    onMouseEnter={ () => setActiveCategory (category.name) }
-                    onMouseLeave={ () => setActiveCategory (null) }
+                    onMouseEnter={ () => setActiveCategory(category.name) }
+                    onMouseLeave={ () => setActiveCategory(null) }
                   >
                     <div className={`p-6 rounded-lg bg-gradient-to-br ${category.color} text-white transition-all duration-300 group-hover:scale-105`}>"
                       <div className="flex items-center gap-3 mb-4">"
@@ -219,8 +218,8 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
                       </div>
 <<<<<<< HEAD
 
-                      <div role="button" className="space - y-2">
-                        {category.services.map ( (service, serviceIndex) => (<motion.div
+                      <div  className="space - y-2">
+                        {category.services.map((service, serviceIndex) => (<motion.div
 =======
                       "
                       <div className="space-y-2">

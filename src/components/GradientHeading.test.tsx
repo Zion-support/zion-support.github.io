@@ -1,10 +1,10 @@
 
-describe ('GradientHeading', () => {
-  it ('renders without crashing', () => {
-    render (<GradientHeading  />) ;
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
+describe('GradientHeading', () => {
+  it('renders without crashing', () => {
+    render(<GradientHeading  />) ;
+    expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ;
 
-  it ('displays expected content', () => {
-    render (<GradientHeading  />) ;
+  it('displays expected content', () => {
+    render(<GradientHeading  />) ;
     // Add specific test assertions based on component content
   }) }) ;

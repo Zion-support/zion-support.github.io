@@ -3,60 +3,8 @@ import React, { useState } from 'react';
 export /**
 export default BenefitsSection;}}}}</motion.div></motion.div></motion.div>}
 import { GradientHeading } from './ui / GradientHeading';
-import { motion, AnimatePresence } from 'framer - motion';
-
- * BenefitsSection function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
- */
-function BenefitsSection () {
-=======
-<<<<<<< HEAD
->>>>>>> main
-
-interface Benefit {
-
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  color: string;
-  bgColor: string;
-  stats: string;
-  features: string[];
-;
-const benefits: Benefit[] = [;
-  {
-
-    title: "AI-Powered Matchmaking","
-    description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.","
-    icon: <Bot className="w-8 h-8"  />,"
-    color: "from-zion-cyan to-zion-cyan-dark","
-    bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20","
-    stats: "95% Match Rate",
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    features: ["
-      "Intelligent service matching","
-      "Real-time availability","
-      "Expert talent matching","
-      "Personalized recommendations"
-    ]
-  
-},
-  {
-"
-    title: "Global Availability","
-    description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.","
-    icon: <Globe className="w-8 h-8"  />,"
-    color: "from-zion-purple to-zion-purple-dark","
-    bgColor: "from-zion-purple/20 to-zion-purple-dark/20","    stats: "150+ Countries",
-    features: ["
-      "Worldwide talent pool","
-      "24/7 availability","
-      "Multi-language support","
-      "Local expertise access"
-    ]
-  },
+export default function Page() {
+,
   {
 "
     title: "24/7 Support","
@@ -89,9 +37,6 @@ const benefits: Benefit[] = [;
 
   const [hoveredIndex, setHoveredIndex] = useState < number | null> (null) ;
 
-  
-  
-  
   const stats = [;"
     { value: "500+", label: "Projects Delivered", icon: <Rocket className="w-6 h-6"  /> },"
     { value: "50+", label: "Expert Team Members", icon: <Users className="w-6 h-6"  /> },"
@@ -152,7 +97,7 @@ const benefits: Benefit[] = [;
           whileInView="visible"
           viewport={{ once: true }}
 
-          {stats.map ( (stat, index) => (;
+          {stats.map((stat, index) => (;
             <motion.div
               key={index}
               variants={statsVariants}"
@@ -189,8 +134,8 @@ const benefits: Benefit[] = [;
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                onHoverStart={ () => setHoveredIndex (index) }
-                onHoverEnd={ () => setHoveredIndex (null) }
+                onHoverStart={ () => setHoveredIndex(index) }
+                onHoverEnd={ () => setHoveredIndex(null) }
               >
                 {/* Connection point */}"
                 <div className="absolute top-1/2 left-1/2 w-4 h-4 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full transform -translate-x-1/2 -translate-y-1/2 hidden lg:block">"

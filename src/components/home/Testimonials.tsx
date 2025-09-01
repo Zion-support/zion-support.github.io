@@ -1,5 +1,5 @@
-  return()
-    <section className = "py-20 bg-gradient-to-b from-zion-slate to-zion-slate-dark" role="region" aria-labelledby="testimonials-heading">"
+  return ()
+    <section className="py-20 bg-gradient-to-b from-zion-slate to-zion-slate-dark" role="region" aria-labelledby="testimonials-heading">"
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div"
           className="text-center mb-16"
@@ -27,8 +27,7 @@
           </h2>
 "
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Real results from real businesses. See how Zion Tech Group is transforming industries worldwide.
-          </p>
+            Real results from real businesses.See how Zion Tech Group is transforming industries worldwide.</p>
         </motion.div>
 
         {/* Testimonial Carousel */}"
@@ -97,14 +96,14 @@
           <button
             onClick={prevTestimonial}"
             className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
-            aria-label="Previous testimonial"
+            
 "
             <ChevronLeft className="w-6 h-6"  />          </button>
 
           <button
             onClick={nextTestimonial}"
             className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
-            aria-label="Next testimonial"
+            
 "
             <ChevronRight className="w-6 h-6"  />          </button>;
         </div>
@@ -115,9 +114,7 @@
             <button
               key={index}
               onClick={(: unknown goToTestimonial(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-
-                index === currentIndex'
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex'
                   ? 'bg-zion-cyan scale-125''
                   : 'bg-zion-slate-light hover:bg-zion-cyan/50'`
               }`}`

@@ -12,8 +12,7 @@ export default function TalentProfile({
   skills = [],
   profile_picture_url,
 }: TalentProfileProps) {
-  return (
-    <main className="min-h-screen bg-zion-blue py-8 text-white" data-testid="talent-details">
+  return (<main className="min-h-screen bg-zion-blue py-8 text-white" data-testid="talent-details">
       <div className="container mx-auto px-4 flex flex-col items-center space-y-4">
         <Avatar className="h-24 w-24">
           {profile_picture_url ? (
