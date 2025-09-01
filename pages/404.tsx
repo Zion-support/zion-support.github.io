@@ -1,11 +1,20 @@
-import React from 'react';
-export default function Page() {
+import type { NextPage } from 'next';
+import Head from 'next/head';
+
+const NotFound: NextPage = () => {
   return (
-    <main className="min-h-screen bg-black text-zinc-100 p-8">
-      <section className="prose prose-invert max-w-3xl mx-auto">
+    <div>
+      <Head>
+        <title>404 - Zion Tech Solutions</title>
+        <meta name="description" content="404 page" />
+      </Head>
+      
+      <main>
         <h1>404</h1>
-        <p>Auto-healed placeholder. Replace with real content.</p>
-      </section>
-    </main>
+        <p>This page is under construction.</p>
+      </main>
+    </div>
   );
-}
+};
+
+export default NotFound;
