@@ -3729,18 +3729,20 @@ const HomePage = memo(function HomePage() {
             </div>
           </section>
 
-          {/* Project Documentation & Resources */}
+          {/* Explore Pages & Resources */}
           <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📚 Project Documentation & Resources</h2>
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🔎 Explore Pages & Resources</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-blue-400 mb-4 text-center">📖 Core Documentation</h3>
+                <h3 className="text-xl font-bold text-blue-400 mb-4 text-center">📖 Core Pages</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <a href="/README.md" className="text-blue-400 hover:text-blue-300">Main README</a> - Project overview</li>
-                  <li>• <a href="/ARCHITECTURE.md" className="text-blue-400 hover:text-blue-300">Architecture Guide</a> - System design</li>
-                  <li>• <a href="/API.md" className="text-blue-400 hover:text-blue-300">API Documentation</a> - Integration guide</li>
-                  <li>• <a href="/DEPLOYMENT.md" className="text-blue-400 hover:text-blue-300">Deployment Guide</a> - Setup instructions</li>
-                  <li>• <a href="/CONTRIBUTING.md" className="text-blue-400 hover:text-blue-300">Contributing Guide</a> - Development workflow</li>
+                  <li>• <Link href="/about" className="text-blue-400 hover:text-blue-300">About Us</Link> — Mission & vision</li>
+                  <li>• <Link href="/services" className="text-blue-400 hover:text-blue-300">AI Services</Link> — Offerings & solutions</li>
+                  <li>• <Link href="/resources" className="text-blue-400 hover:text-blue-300">Resources</Link> — Tools & insights</li>
+                  <li>• <Link href="/case-studies" className="text-blue-400 hover:text-blue-300">Case Studies</Link> — Success stories</li>
+                  <li>• <Link href="/blog" className="text-blue-400 hover:text-blue-300">Blog</Link> — Latest insights</li>
+                  <li>• <Link href="/contact" className="text-blue-400 hover:text-blue-300">Contact</Link> — Get in touch</li>
+                  <li>• <Link href="/privacy" className="text-blue-400 hover:text-blue-300">Privacy Policy</Link> — Data protection</li>
                 </ul>
                 <Link href="/ARCHITECTURE.md" className="text-blue-400 hover:text-blue-300 text-xs font-semibold">
                   View Architecture →
@@ -3748,13 +3750,14 @@ const HomePage = memo(function HomePage() {
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-purple-400 mb-4 text-center">🔧 Automation Guides</h3>
+                <h3 className="text-xl font-bold text-purple-400 mb-4 text-center">✍️ Featured Articles</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <a href="/README_ULTIMATE_REDUNDANCY.md" className="text-purple-400 hover:text-purple-300">Ultimate Redundancy</a> - System overview</li>
-                  <li>• <a href="/README_COMPREHENSIVE_REDUNDANCY.md" className="text-purple-400 hover:text-purple-300">Comprehensive Redundancy</a> - Advanced features</li>
-                  <li>• <a href="/README_PM2_REDUNDANCY_COMPLETE.md" className="text-purple-400 hover:text-purple-300">PM2 Redundancy</a> - Process management</li>
-                  <li>• <a href="/README_GITHUB_ACTIONS.md" className="text-purple-400 hover:text-purple-300">GitHub Actions</a> - CI/CD automation</li>
-                  <li>• <a href="/README_CONTINUOUS_OPERATION.md" className="text-purple-400 hover:text-purple-300">Continuous Operation</a> - Zero-downtime</li>
+                  <li>• <Link href="/blog/ai-automation-trends-2025" className="text-purple-400 hover:text-purple-300">AI Automation Trends 2025</Link></li>
+                  <li>• <Link href="/blog/ai-ethics-automation" className="text-purple-400 hover:text-purple-300">AI Ethics in Automation</Link></li>
+                  <li>• <Link href="/blog/autonomous-content-generation" className="text-purple-400 hover:text-purple-300">Autonomous Content Generation</Link></li>
+                  <li>• <Link href="/blog/cloud-native-automation" className="text-purple-400 hover:text-purple-300">Cloud-Native Automation</Link></li>
+                  <li>• <Link href="/blog/future-of-work" className="text-purple-400 hover:text-purple-300">The Future of Work</Link></li>
+                  <li>• <Link href="/blog/performance-optimization" className="text-purple-400 hover:text-purple-300">Performance Optimization</Link></li>
                 </ul>
                 <Link href="/API.md" className="text-green-400 hover:text-green-300 text-xs font-semibold">
                   View API Docs →
@@ -3762,94 +3765,14 @@ const HomePage = memo(function HomePage() {
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">🚀 Advanced Features</h3>
+                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">📈 Reports & Updates</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <a href="/SECURITY.md" className="text-green-400 hover:text-green-300">Security Guide</a> - Protection measures</li>
-                  <li>• <a href="/TESTING.md" className="text-green-400 hover:text-green-300">Testing Guide</a> - Quality assurance</li>
-                  <li>• <a href="/SERVICE_GENERATION_README.md" className="text-green-400 hover:text-green-300">Service Generation</a> - Auto-creation</li>
-                  <li>• <a href="/ULTIMATE_REDUNDANCY_AUTOMATION_README.md" className="text-green-400 hover:text-green-300">Automation README</a> - System details</li>
-                  <li>• <a href="/EXPONENTIAL_GROWTH_AUTOMATION.md" className="text-green-400 hover:text-green-300">Growth Automation</a> - Scaling systems</li>
-                </ul>
-                <Link href="/README.md" className="text-purple-400 hover:text-purple-300 text-xs font-semibold">
-                  View Guides →
-                </Link>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-lg font-bold text-yellow-400 mb-3 text-center">🚀 Deployment</h3>
-                <ul className="text-white/80 text-xs space-y-1 mb-3">
-                  <li>• Netlify Deployment</li>
-                  <li>• PM2 Process Management</li>
-                  <li>• Docker Configuration</li>
-                  <li>• Environment Setup</li>
-                </ul>
-                <Link href="/DEPLOYMENT.md" className="text-yellow-400 hover:text-yellow-300 text-xs font-semibold">
-                  View Deployment →
-                </Link>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-lg font-bold text-red-400 mb-3 text-center">🔒 Security</h3>
-                <ul className="text-white/80 text-xs space-y-1 mb-3">
-                  <li>• Security Best Practices</li>
-                  <li>• Vulnerability Management</li>
-                  <li>• Compliance Guidelines</li>
-                  <li>• Threat Protection</li>
-                </ul>
-                <Link href="/SECURITY.md" className="text-red-400 hover:text-red-300 text-xs font-semibold">
-                  View Security →
-                </Link>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-lg font-bold text-cyan-400 mb-3 text-center">📊 Performance</h3>
-                <ul className="text-white/80 text-xs space-y-1 mb-3">
-                  <li>• Performance Metrics</li>
-                  <li>• Optimization Strategies</li>
-                  <li>• Monitoring Tools</li>
-                  <li>• Benchmarking</li>
-                </ul>
-                <Link href="/PERFORMANCE.md" className="text-cyan-400 hover:text-cyan-300 text-xs font-semibold">
-                  View Performance →
-                </Link>
-              </div>
-            </div>
-          </section>
-
-          {/* NPM Scripts & Automation Commands */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🔧 NPM Scripts & Automation Commands</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-blue-400 mb-4 text-center">🚀 Development & Build</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <code className="bg-white/10 px-2 py-1 rounded">npm run dev</code> - Development server</li>
-                  <li>• <code className="bg-white/10 px-2 py-1 rounded">npm run build</code> - Production build</li>
-                  <li>• <code className="bg-white/10 px-2 py-1 rounded">npm run build:smart</code> - Smart build with recovery</li>
-                  <li>• <code className="bg-white/10 px-2 py-1 rounded">npm run build:orchestrator</code> - Master build orchestration</li>
-                  <li>• <code className="bg-white/10 px-2 py-1 rounded">npm run type-check</code> - TypeScript validation</li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-purple-400 mb-4 text-center">🤖 AI & Automation</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <code className="bg-white/10 px-2 py-1 rounded">npm run autonomous</code> - Launch AI systems</li>
-                  <li>• <code className="bg-white/10 px-2 py-1 rounded">npm run auto:intel</code> - Intelligent orchestration</li>
-                  <li>• <code className="bg-white/10 px-2 py-1 rounded">npm run content:fix</code> - Content quality automation</li>
-                  <li>• <code className="bg-white/10 px-2 py-1 rounded">npm run linkedin:run</code> - Marketing automation</li>
-                  <li>• <code className="bg-white/10 px-2 py-1 rounded">npm run mcp:start</code> - MCP integration</li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">🔄 Redundancy & Monitoring</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <code className="bg-white/10 px-2 py-1 rounded">npm run redundancy:start</code> - Start redundancy systems</li>
-                  <li>• <code className="bg-white/10 px-2 py-1 rounded">npm run pm2:start</code> - PM2 process management</li>
-                  <li>• <code className="bg-white/10 px-2 py-1 rounded">npm run build:monitor</code> - Continuous monitoring</li>
-                  <li>• <code className="bg-white/10 px-2 py-1 rounded">npm run security:scan</code> - Security scanning</li>
-                  <li>• <code className="bg-white/10 px-2 py-1 rounded">npm run deps:maintain</code> - Dependency management</li>
+                  <li>• <Link href="/reports/updates/update-2025-08-15-0406" className="text-green-400 hover:text-green-300">Autonomous Update — 2025-08-15 04:06</Link></li>
+                  <li>• <Link href="/reports/updates/update-2025-08-15-0405" className="text-green-400 hover:text-green-300">Autonomous Update — 2025-08-15 04:05</Link></li>
+                  <li>• <Link href="/reports/updates/update-2025-08-15-0404" className="text-green-400 hover:text-green-300">Autonomous Update — 2025-08-15 04:04</Link></li>
+                  <li>• <Link href="/reports/updates/update-2025-08-15-0403" className="text-green-400 hover:text-green-300">Autonomous Update — 2025-08-15 04:03</Link></li>
+                  <li>• <Link href="/reports/updates/update-2025-08-15-0402" className="text-green-400 hover:text-green-300">Autonomous Update — 2025-08-15 04:02</Link></li>
+                  <li>• <Link href="/reports/updates/update-2025-08-15-0111" className="text-green-400 hover:text-green-300">Autonomous Update — 2025-08-15 01:11</Link></li>
                 </ul>
               </div>
             </div>
@@ -3861,19 +3784,37 @@ const HomePage = memo(function HomePage() {
             <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               <Link href="/reports/updates/update-2025-08-15-0406" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 15: 0406</h3>
+                <h3 className="text-lg font-semibold">Autonomous Update — 2025-08-15 04:06</h3>
                 <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
                 <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
               </Link>
               <Link href="/reports/updates/update-2025-08-15-0405" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 15: 0405</h3>
+                <h3 className="text-lg font-semibold">Autonomous Update — 2025-08-15 04:05</h3>
                 <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
                 <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
               </Link>
               <Link href="/reports/updates/update-2025-08-15-0404" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 15: 0404</h3>
+                <h3 className="text-lg font-semibold">Autonomous Update — 2025-08-15 04:04</h3>
+                <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+              </Link>
+              <Link href="/reports/updates/update-2025-08-15-0403" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                <h3 className="text-lg font-semibold">Autonomous Update — 2025-08-15 04:03</h3>
+                <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+              </Link>
+              <Link href="/reports/updates/update-2025-08-15-0402" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                <h3 className="text-lg font-semibold">Autonomous Update — 2025-08-15 04:02</h3>
+                <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+              </Link>
+              <Link href="/reports/updates/update-2025-08-15-0111" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                <h3 className="text-lg font-semibold">Autonomous Update — 2025-08-15 01:11</h3>
                 <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
                 <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
               </Link>
