@@ -1,164 +1,132 @@
 #!/usr/bin/env node
 
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
-const glob = require('glob');
 
 class CodeQualityMonitor {
   constructor() {
     this.projectRoot = process.cwd();
-    this.automationInterval = parseInt(process.env.AUTOMATION_INTERVAL) || 2400000; // 40 minutes default
+    this.logFile = path.join(this.projectRoot, 'error-reports', 'code-quality-monitor-report.json');
+    this.fixesApplied = [];
+    this.errorsFound = [];
+    this.startTime = Date.now();
   }
 
-  log(message) {
-    console.log(`[${new Date().toISOString()}] [CodeQualityMonitor] ${message}`);
+  log(message, type = 'info') {
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`);
   }
 
-  async run() {
-    this.log('Starting code quality monitoring...');
-    
-    try {
-      await this.monitorCodeQuality();
-      this.log('Code quality monitoring completed.');
-    } catch (error) {
-      this.log(`Error during code quality monitoring: ${error.message}`);
+  async ensureDirectoryExists(dirPath) {
+    if (!fs.existsSync(dirPath)) {
+      fs.mkdirSync(dirPath, { recursive: true });
     }
   }
 
-  async monitorCodeQuality() {
-    this.log('Monitoring code quality...');
+  async runCommand(command, options = {}) {
+    try {
+      const result = execSync(command, { 
+        encoding: 'utf8', 
+        cwd: this.projectRoot,
+        stdio: 'pipe',
+        ...options 
+      });
+      return { success: true, output: result };
+    } catch (error) {
+      return { success: false, output: error.message, code: error.status };
+    }
+  }
+
+  async checkCodeQuality() {
+    this.log('Checking code quality...');
+    
+    // Run ESLint
+    const eslintResult = await this.runCommand('npx eslint src/ --format=json');
+    if (eslintResult.success) {
+      this.log('ESLint passed', 'success');
+    } else {
+      try {
+        const eslintData = JSON.parse(eslintResult.output);
+        const errorCount = eslintData.reduce((total, file) => total + file.errorCount, 0);
+        const warningCount = eslintData.reduce((total, file) => total + file.warningCount, 0);
+        
+        if (errorCount > 0 || warningCount > 0) {
+          this.log(`ESLint found ${errorCount} errors and ${warningCount} warnings`, 'warn');
+          this.errorsFound.push(`ESLint: ${errorCount} errors, ${warningCount} warnings`);
+        }
+      } catch (error) {
+        this.log('ESLint check failed', 'error');
+        this.errorsFound.push('ESLint check failed');
+      }
+    }
+    
+    // Run Prettier check
+    const prettierResult = await this.runCommand('npx prettier --check src/');
+    if (prettierResult.success) {
+      this.log('Prettier formatting is correct', 'success');
+    } else {
+      this.log('Prettier formatting issues found', 'warn');
+      this.errorsFound.push('Prettier formatting issues detected');
+    }
+  }
+
+  async checkUnusedCode() {
+    this.log('Checking for unused code...');
+    
+    // This is a simplified check - in a real implementation you might use tools like ts-prune
+    const srcFiles = this.findFiles('src/**/*.{js,jsx,ts,tsx}');
+    this.log(`Found ${srcFiles.length} source files to analyze`);
+  }
+
+  findFiles(pattern) {
+    const glob = require('glob');
+    try {
+      return glob.sync(pattern, { cwd: this.projectRoot });
+    } catch (error) {
+      this.log('Error finding files', 'error');
+      return [];
+    }
+  }
+
+  async generateReport() {
+    this.log('Generating code quality monitor report...');
     
     const report = {
       timestamp: new Date().toISOString(),
-      metrics: {},
-      issues: [],
-      recommendations: []
+      duration: Date.now() - this.startTime,
+      errorsFound: this.errorsFound,
+      fixesApplied: this.fixesApplied,
+      summary: {
+        codeQualityGood: this.errorsFound.length === 0,
+        totalIssues: this.errorsFound.length,
+        totalFixes: this.fixesApplied.length
+      }
     };
+
+    await this.ensureDirectoryExists(path.dirname(this.logFile));
+    fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2));
+    
+    this.log(`Code quality monitor report generated: ${this.logFile}`);
+  }
+
+  async run() {
+    this.log('Starting code quality monitoring process...');
     
     try {
-      // Count files and lines
-      const files = glob.sync('**/*.{js,jsx,ts,tsx}', { 
-        ignore: ['node_modules/**', '.git/**', 'dist/**', 'build/**', 'out/**'] 
-      });
+      await this.checkCodeQuality();
+      await this.checkUnusedCode();
+      await this.generateReport();
       
-      let totalLines = 0;
-      let totalFiles = files.length;
-      
-      for (const file of files) {
-        try {
-          const content = fs.readFileSync(file, 'utf8');
-          totalLines += content.split('\n').length;
-        } catch (error) {
-          // Skip files that can't be read
-        }
-      }
-      
-      report.metrics = {
-        totalFiles,
-        totalLines,
-        averageLinesPerFile: Math.round(totalLines / totalFiles)
-      };
-      
-      // Check for code quality issues
-      report.issues = await this.detectCodeQualityIssues(files);
-      
-      // Generate recommendations
-      report.recommendations = this.generateRecommendations(report);
-      
-      // Save report
-      const timestamp = Date.now();
-      const reportPath = path.join(this.projectRoot, 'error-reports', `code-quality-report-${timestamp}.json`);
-      
-      const dir = path.dirname(reportPath);
-      if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
-      }
-      
-      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-      this.log(`Code quality report saved to: ${reportPath}`);
-      
+      this.log('Code quality monitoring completed', 'success');
     } catch (error) {
-      this.log(`Error monitoring code quality: ${error.message}`);
+      this.log(`Error during code quality monitoring: ${error.message}`, 'error');
+      this.errorsFound.push(`Process error: ${error.message}`);
+      await this.generateReport();
     }
-  }
-
-  async detectCodeQualityIssues(files) {
-    const issues = [];
-    
-    for (const file of files) {
-      try {
-        const content = fs.readFileSync(file, 'utf8');
-        const lines = content.split('\n');
-        
-        // Check for long functions
-        const functionMatches = content.match(/function\s+\w+\s*\([^)]*\)\s*\{/g) || [];
-        if (functionMatches.length > 0) {
-          // Simple heuristic for function length
-          const functionBlocks = content.split(/function\s+\w+\s*\([^)]*\)\s*\{/);
-          for (let i = 1; i < functionBlocks.length; i++) {
-            const block = functionBlocks[i];
-            const linesInFunction = block.split('\n').length;
-            if (linesInFunction > 50) {
-              issues.push({
-                type: 'long_function',
-                file,
-                severity: 'warning',
-                message: `Function with ${linesInFunction} lines detected`
-              });
-            }
-          }
-        }
-        
-        // Check for large files
-        if (lines.length > 500) {
-          issues.push({
-            type: 'large_file',
-            file,
-            severity: 'warning',
-            message: `File has ${lines.length} lines`
-          });
-        }
-        
-        // Check for TODO comments
-        const todoMatches = content.match(/TODO:/g) || [];
-        if (todoMatches.length > 0) {
-          issues.push({
-            type: 'todo_comments',
-            file,
-            severity: 'info',
-            message: `${todoMatches.length} TODO comments found`
-          });
-        }
-        
-      } catch (error) {
-        // Skip files that can't be read
-      }
-    }
-    
-    return issues;
-  }
-
-  generateRecommendations(report) {
-    const recommendations = [];
-    
-    if (report.metrics.averageLinesPerFile > 200) {
-      recommendations.push('Consider breaking down large files into smaller modules');
-    }
-    
-    const longFunctions = report.issues.filter(issue => issue.type === 'long_function');
-    if (longFunctions.length > 0) {
-      recommendations.push('Refactor long functions to improve readability and maintainability');
-    }
-    
-    const todoComments = report.issues.filter(issue => issue.type === 'todo_comments');
-    if (todoComments.length > 0) {
-      recommendations.push('Address TODO comments to improve code completeness');
-    }
-    
-    return recommendations;
   }
 }
 
+// Run the code quality monitor
 const monitor = new CodeQualityMonitor();
 monitor.run().catch(console.error);
