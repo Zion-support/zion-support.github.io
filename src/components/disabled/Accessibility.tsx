@@ -13,6 +13,8 @@ import {
   Sun,
   Moon,
   Settings
+} from 'lucide-react';
+
 interface AccessibilitySettings {
   fontSize: number;
   highContrast: boolean;

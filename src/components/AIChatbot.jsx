@@ -20,7 +20,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
             addBotMessage(welcomeMessage, {
                 intent: 'greeting',
                 confidence: 1.0,
-                suggestions[;
+                suggestions: [
                     "Tell me about your services",
                     "How can I get a quote?",
                     "What technologies do you use?",
@@ -39,14 +39,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
     const addMessage = useCallback((message) => {
         const newMessage = {
   ...message,
-  id: `msg_${Date.now()
-
-
-
-
-
-
-}_${Math.random().toString(36).substr(2, 9)}`,
+  id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
             timestamp: new Date()
         };
         setMessages(prev => {
@@ -115,7 +108,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
             addBotMessage(response, {
                 intent: 'response',
                 confidence: 0.9,
-                suggestions[;
+                suggestions: [
                     "Tell me more",
                     "Get a quote",
                     "View services",

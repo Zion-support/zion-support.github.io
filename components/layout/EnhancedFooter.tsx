@@ -36,12 +36,12 @@ const EnhancedFooter: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-blue-400">Services</h3>
             <ul className="text-gray-300 space-y-2">
-              <li><Link href="/services/ai-development"><a className="hover:text-blue-400 transition-colors">AI Development</a></Link></li>
-              <li><Link href="/services/cloud-services"><a className="hover:text-blue-400 transition-colors">Cloud Services</a></Link></li>
-              <li><Link href="/services/web-development"><a className="hover:text-blue-400 transition-colors">Web Development</a></Link></li>
-              <li><Link href="/services/mobile-development"><a className="hover:text-blue-400 transition-colors">Mobile Development</a></Link></li>
-              <li><Link href="/services/blockchain-solutions"><a className="hover:text-blue-400 transition-colors">Blockchain Solutions</a></Link></li>
-              <li><Link href="/services/data-analytics"><a className="hover:text-blue-400 transition-colors">Data Analytics</a></Link></li>
+              <li><Link href="/services/ai-development" className="hover:text-blue-400 transition-colors">AI Development</Link></li>
+              <li><Link href="/services/cloud-services" className="hover:text-blue-400 transition-colors">Cloud Services</Link></li>
+              <li><Link href="/services/web-development" className="hover:text-blue-400 transition-colors">Web Development</Link></li>
+              <li><Link href="/services/mobile-development" className="hover:text-blue-400 transition-colors">Mobile Development</Link></li>
+              <li><Link href="/services/blockchain-solutions" className="hover:text-blue-400 transition-colors">Blockchain Solutions</Link></li>
+              <li><Link href="/services/data-analytics" className="hover:text-blue-400 transition-colors">Data Analytics</Link></li>
             </ul>
           </div>
 
@@ -49,11 +49,11 @@ const EnhancedFooter: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-blue-400">Solutions</h3>
             <ul className="text-gray-300 space-y-2">
-              <li><Link href="/solutions/enterprise"><a className="hover:text-blue-400 transition-colors">Enterprise Solutions</a></Link></li>
-              <li><Link href="/solutions/startup"><a className="hover:text-blue-400 transition-colors">Startup Solutions</a></Link></li>
-              <li><Link href="/solutions/iot-platforms"><a className="hover:text-blue-400 transition-colors">IoT Platforms</a></Link></li>
-              <li><Link href="/solutions/digital-transformation"><a className="hover:text-blue-400 transition-colors">Digital Transformation</a></Link></li>
-              <li><Link href="/solutions/cybersecurity"><a className="hover:text-blue-400 transition-colors">Cybersecurity</a></Link></li>
+              <li><Link href="/solutions/enterprise" className="hover:text-blue-400 transition-colors">Enterprise Solutions</Link></li>
+              <li><Link href="/solutions/startup" className="hover:text-blue-400 transition-colors">Startup Solutions</Link></li>
+              <li><Link href="/solutions/iot-platforms" className="hover:text-blue-400 transition-colors">IoT Platforms</Link></li>
+              <li><Link href="/solutions/digital-transformation" className="hover:text-blue-400 transition-colors">Digital Transformation</Link></li>
+              <li><Link href="/solutions/cybersecurity" className="hover:text-blue-400 transition-colors">Cybersecurity</Link></li>
             </ul>
           </div>
 
@@ -61,12 +61,12 @@ const EnhancedFooter: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-blue-400">Contact & Company</h3>
             <ul className="text-gray-300 space-y-2">
-              <li><Link href="/about"><a className="hover:text-blue-400 transition-colors">About Us</a></Link></li>
-              <li><Link href="/contact"><a className="hover:text-blue-400 transition-colors">Contact</a></Link></li>
-              <li><Link href="/talent"><a className="hover:text-blue-400 transition-colors">Join Our Team</a></Link></li>
-              <li><Link href="/blog"><a className="hover:text-blue-400 transition-colors">Blog</a></Link></li>
-              <li><Link href="/privacy-policy"><a className="hover:text-blue-400 transition-colors">Privacy Policy</a></Link></li>
-              <li><Link href="/terms-of-service"><a className="hover:text-blue-400 transition-colors">Terms of Service</a></Link></li>
+              <li><Link href="/about" className="hover:text-blue-400 transition-colors">About Us</Link></li>
+              <li><Link href="/contact" className="hover:text-blue-400 transition-colors">Contact</Link></li>
+              <li><Link href="/talent" className="hover:text-blue-400 transition-colors">Join Our Team</Link></li>
+              <li><Link href="/blog" className="hover:text-blue-400 transition-colors">Blog</Link></li>
+              <li><Link href="/privacy-policy" className="hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms-of-service" className="hover:text-blue-400 transition-colors">Terms of Service</Link></li>
             </ul>
             <div className="mt-4 pt-4 border-t border-gray-700">
               <p className="text-sm text-gray-400">Email: info@ziontechgroup.com</p>

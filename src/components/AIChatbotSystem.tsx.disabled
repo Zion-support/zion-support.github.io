@@ -51,11 +51,11 @@ interface AIChatbotSystemProps extends React.PropsWithChildren<{}> {
   autoScroll?: boolean}
 
 export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
-showHeader:  true,;
-  showSettings = true,;
-  maxMessages = 50,;
-  autoScroll = true;
-}) => {;
+  showHeader = true,
+  showSettings = true,
+  maxMessages = 50,
+  autoScroll = true
+}) => {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
@@ -74,7 +74,7 @@ showHeader:  true,;
 
   // Sample welcome message
   useEffect(() => {
-    if (isOpen && messages.length = == 0) {
+    if (isOpen && messages.length === 0) {
       const welcomeMessage: ChatMessage = {
   id: 'welcome',
         content: "Hello! I'm Zion AI, your intelligent assistant. I can help you with:\n\n• Information about our services\n• Technical support and guidance\n• Project inquiries and quotes\n• General questions about Zion Tech Group\n\nHow can I assist you today?",
@@ -84,15 +84,10 @@ showHeader:  true,;
         status: 'sent',
         metadata: {
           confidence: 0.95,
-          suggestions: ['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],;
-          relatedServices: ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],;
-  estimatedResponseTime: 2;
-        ;
-;
-
-
-
-};
+          suggestions: ['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],
+          relatedServices: ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],
+          estimatedResponseTime: 2
+        }
       };
       setMessages([welcomeMessage])}
   }, [isOpen, messages.length]);

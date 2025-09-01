@@ -65,8 +65,6 @@ export const AICodeGenerator = () => {
         // // // // // // // console.log('Generated tests:', testCode);
         trackEvent('ai_code_generator', 'tests_generated', form.language, testCode.length);
     }, [generatedCode, customCode, generateTests, form.language, trackEvent]);
-        console.log('Generated tests:', testCode);
-        trackEvent('ai_code_generator', 'tests_generated', form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent]);
     // Handle documentation generation
     const handleGenerateDocs = useCallback(async () => {
         if (!generatedCode && !customCode)
@@ -77,19 +75,16 @@ export const AICodeGenerator = () => {
         // // // // // // // console.log('Generated docs:', docs);
         trackEvent('ai_code_generator', 'docs_generated', form.language, docs.length);
     }, [generatedCode, customCode, generateDocs, form.language, trackEvent]);
-        console.log('Generated docs:', docs);
-        trackEvent('ai_code_generator', 'docs_generated', form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent]);
     // Copy code to clipboard
     const copyToClipboard = useCallback(async (code) => {
         try {
             await navigator.clipboard.writeText(code);
             setCopied(true);
             setTimeout(() => setCopied(false), 2000);
-            // // // // // // // console.error('Failed to copy code:', error);
+            trackEvent('ai_code_generator', 'code_copied', 'clipboard', code.length);
+        } catch (error) {
+            console.error('Failed to copy code:', error);
         }
-            trackEvent('ai_code_generator', 'code_copied', 'clipboard', code.length)}
-        catch (error) {
-            console.error('Failed to copy code:', error)}
     }, [trackEvent]);
     // Apply suggestion
     const handleApplySuggestion = useCallback((suggestion) => {
@@ -97,11 +92,13 @@ export const AICodeGenerator = () => {
         trackEvent('ai_code_generator', 'suggestion_applied', suggestion.type, null, {
             suggestionId: suggestion.id,
             impact: suggestion.impact
-        })}, [applySuggestion, trackEvent]);
+        });
+    }, [applySuggestion, trackEvent]);
     // Clear history
     const handleClearHistory = useCallback(() => {
         clearHistory();
-        trackEvent('ai_code_generator', 'history_cleared', 'manual')}, [clearHistory, trackEvent]);
+        trackEvent('ai_code_generator', 'history_cleared', 'manual');
+    }, [clearHistory, trackEvent]);
     return (<div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
       {/* Header */}
       <div className="bg-gradient-to-r from-purple-500 to-blue-500 p-6 text-white">

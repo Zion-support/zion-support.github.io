@@ -8,38 +8,20 @@ const EnhancedNavigation: React.FC = () => {
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <Link href="/">
-            <a className="text-2xl font-bold text-blue-600 hover:text-blue-800 transition-colors">
-              Zion Tech Group
-            </a>
+          <Link href="/" className="text-2xl font-bold text-blue-600 hover:text-blue-800 transition-colors">
+            Zion Tech Group
           </Link>
           
           {/* Desktop Navigation */}
           <div className="hidden lg:flex space-x-8">
-            <Link href="/">
-              <a className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Home</a>
-            </Link>
-            <Link href="/services">
-              <a className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Services</a>
-            </Link>
-            <Link href="/products">
-              <a className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Products</a>
-            </Link>
-            <Link href="/solutions">
-              <a className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Solutions</a>
-            </Link>
-            <Link href="/blog">
-              <a className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Blog</a>
-            </Link>
-            <Link href="/about">
-              <a className="text-gray-600 hover:text-blue-600 transition-colors font-medium">About</a>
-            </Link>
-            <Link href="/contact">
-              <a className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Contact</a>
-            </Link>
-            <Link href="/talent">
-              <a className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Join Our Team</a>
-            </Link>
+            <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Home</Link>
+            <Link href="/services" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Services</Link>
+            <Link href="/products" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Products</Link>
+            <Link href="/solutions" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Solutions</Link>
+            <Link href="/blog" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Blog</Link>
+            <Link href="/about" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">About</Link>
+            <Link href="/contact" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Contact</Link>
+            <Link href="/talent" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Join Our Team</Link>
           </div>
 
           {/* Mobile menu button */}
@@ -61,30 +43,14 @@ const EnhancedNavigation: React.FC = () => {
         {isMenuOpen && (
           <div className="lg:hidden pb-4">
             <div className="flex flex-col space-y-4">
-              <Link href="/">
-                <a className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Home</a>
-              </Link>
-              <Link href="/services">
-                <a className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Services</a>
-              </Link>
-              <Link href="/products">
-                <a className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Products</a>
-              </Link>
-              <Link href="/solutions">
-                <a className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Solutions</a>
-              </Link>
-              <Link href="/blog">
-                <a className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Blog</a>
-              </Link>
-              <Link href="/about">
-                <a className="text-gray-600 hover:text-blue-600 transition-colors font-medium">About</a>
-              </Link>
-              <Link href="/contact">
-                <a className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Contact</a>
-              </Link>
-              <Link href="/talent">
-                <a className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Join Our Team</a>
-              </Link>
+              <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Home</Link>
+              <Link href="/services" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Services</Link>
+              <Link href="/products" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Products</Link>
+              <Link href="/solutions" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Solutions</Link>
+              <Link href="/blog" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Blog</Link>
+              <Link href="/about" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">About</Link>
+              <Link href="/contact" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Contact</Link>
+              <Link href="/talent" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Join Our Team</Link>
             </div>
           </div>
         )}
