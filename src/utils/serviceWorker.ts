@@ -26,7 +26,6 @@ export function registerServiceWorker(...args: any[]): any {
         .catch((registrationError) => {
           console.error('SW registration failed: ', registrationError);
         });
-    });
   }
 }
 
