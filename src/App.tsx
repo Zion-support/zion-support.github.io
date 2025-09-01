@@ -5,18 +5,19 @@ import { Footer } from './components/Footer';'
 import { Sidebar } from './components/Sidebar';'
 import { ErrorBoundary } from 'react-error-boundary';'
 import { LoadingSpinner } from './components/ui/loading-spinner';
-// Enhanced Layout Components'
-import { EnhancedHeader } from './components/EnhancedHeader';'
+// Enhanced Layout Components
+import { EnhancedHeader } from './components/EnhancedHeader';
 import { EnhancedFooter } from './components/EnhancedFooter';
-// Enhanced Components'
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';'
-import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';'
-import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';'
-import { SEO } from './components/SEO';'
-import { FloatingActionButton } from './components/FloatingActionButton';'
-import { AdvancedAnalytics } from './components/AdvancedAnalytics';'
-import { SmartNotificationSystem } from './components/SmartNotificationSystem';'
+// Enhanced Components
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
+import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
+import { SEO } from './components/SEO';
+import { FloatingActionButton } from './components/FloatingActionButton';
+import { AdvancedAnalytics } from './components/AdvancedAnalytics';
+import { SmartNotificationSystem } from './components/SmartNotificationSystem';
 import { ChatAssistant } from './components/ChatAssistant';
+
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (
   importFn: () => Promise<any>,
@@ -30,7 +31,9 @@ const createLazyComponent = (
     </Suspense>
   );
 };
+
 // Lazy load pages for better performance
+
 const HomePage = lazy(() =>'
   import('./pages/HomePage').then(module => ({ default: module.HomePage }))
 );
@@ -230,3 +233,5 @@ function App() {
 }
 export default App;
 '"
+
+

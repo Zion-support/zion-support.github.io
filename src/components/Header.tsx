@@ -87,17 +87,20 @@ export function Header({ className }: HeaderProps) {
       name: 'Services','
       href: '/services',
       icon: Zap,
-      dropdown: ['
-        { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain },'
-        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },'
-        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },'
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cpu },'
-        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Rocket },'
-        { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },'
-        { name: 'IoT & Edge Computing', href: '/services/iot-edge-computing', icon: Activity },'
-        { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },'
-        { name: 'Comprehensive Portfolio', href: '/comprehensive-services', icon: Globe },'
-        { name: 'Services Showcase', href: '/services-showcase', icon: Sparkles },'
+      dropdown: [
+        { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cpu },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Rocket },
+        { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
+        { name: 'IoT & Edge Computing', href: '/services/iot-edge-computing', icon: Activity },
+        { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },
+        { name: 'Comprehensive Portfolio', href: '/comprehensive-services', icon: Globe },
+        { name: 'Services Showcase', href: '/services-showcase', icon: Sparkles },
+        { name: 'Revolutionary Services', href: '/revolutionary-services', icon: Sparkles },
+        { name: 'New Services 2025', href: '/new-services-2025', icon: Star },
+        { name: 'Enhanced Services 2025', href: '/enhanced-new-services-2025', icon: Star },
         { name: 'Pricing', href: '/pricing', icon: DollarSign }
       ]
     },

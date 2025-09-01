@@ -74,8 +74,8 @@ export function Footer() {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 400);
     };
-'
-    window.addEventListener('scroll', handleScroll);'
+
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
