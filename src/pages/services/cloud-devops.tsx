@@ -1,187 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Cloud, 
-  TrendingUp, 
-  BarChart3, 
-  Settings, 
-  Users, 
-  Shield, 
-  ArrowRight, 
-  CheckCircle, 
-  Play, 
-  Target, 
-  Activity, 
-  Database, 
-  Calculator, 
-  PieChart, 
-  Globe, 
-  Clock, 
-  Zap, 
-  Eye, 
-  Brain, 
-  Cpu, 
-  GitBranch, 
-  Server 
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
-
-export default function CloudDevOps() {
-  const features = [
-    {
-      icon: GitBranch,
-      title: "CI/CD Pipelines",
-      description: "Automated build, test, and deployment pipelines for rapid delivery."
-    },
-    {
-      icon: Cloud,
-      title: "Cloud Infrastructure",
-      description: "Scalable cloud infrastructure with infrastructure as code (IaC)."
-    },
-    {
-      icon: Settings,
-      title: "Automation",
-      description: "Comprehensive automation of development and operations processes."
-    },
-    {
-      icon: Users,
-      title: "Team Collaboration",
-      description: "Enhanced collaboration between development and operations teams."
-    },
-    {
-      icon: Shield,
-      title: "Security & Compliance",
-      description: "Built-in security and compliance for cloud-native applications."
-    },
-    {
-      icon: TrendingUp,
-      title: "Monitoring & Analytics",
-      description: "Real-time monitoring and analytics for application performance."
-    }
-  ];
-
-  const serviceAreas = [
-    {
-      title: "Continuous Integration",
-      description: "Automated code integration and testing workflows.",
-      icon: GitBranch,
-      benefits: ["Automated builds", "Code quality checks", "Test automation"]
-    },
-    {
-      title: "Continuous Deployment",
-      description: "Automated deployment to production environments.",
-      icon: Server,
-      benefits: ["Blue-green deployments", "Rollback capabilities", "Environment management"]
-    },
-    {
-      title: "Infrastructure as Code",
-      description: "Manage infrastructure through code and automation.",
-      icon: Cpu,
-      benefits: ["Terraform", "CloudFormation", "Ansible automation"]
-    },
-    {
-      title: "Containerization",
-      description: "Container-based application deployment and management.",
-      icon: Cloud,
-      benefits: ["Docker containers", "Kubernetes orchestration", "Microservices"]
-    },
-    {
-      title: "Monitoring & Observability",
-      description: "Comprehensive application and infrastructure monitoring.",
-      icon: BarChart3,
-      benefits: ["Real-time metrics", "Log aggregation", "Alert management"]
-    },
-    {
-      title: "Security & Compliance",
-      description: "Built-in security scanning and compliance automation.",
-      icon: Shield,
-      benefits: ["Vulnerability scanning", "Compliance checks", "Security policies"]
-    }
-  ];
-
-  const techStack = [
-    {
-      title: "CI/CD Tools",
-      description: "Jenkins, GitLab CI, GitHub Actions, and Azure DevOps.",
-      icon: GitBranch,
-      features: ["Pipeline automation", "Build automation", "Deployment automation"]
-    },
-    {
-      title: "Container Platforms",
-      description: "Docker, Kubernetes, and container orchestration tools.",
-      icon: Cloud,
-      features: ["Container management", "Orchestration", "Service mesh"]
-    },
-    {
-      title: "Infrastructure Tools",
-      description: "Terraform, CloudFormation, and Ansible for IaC.",
-      icon: Cpu,
-      features: ["Infrastructure automation", "Configuration management", "Provisioning"]
-    },
-    {
-      title: "Cloud Platforms",
-      description: "AWS, Azure, Google Cloud, and multi-cloud solutions.",
-      icon: Server,
-      features: ["Multi-cloud strategy", "Cloud-native services", "Scalability"]
-    },
-    {
-      title: "Monitoring Tools",
-      description: "Prometheus, Grafana, and ELK stack for observability.",
-      icon: BarChart3,
-      features: ["Metrics collection", "Log aggregation", "Visualization"]
-    },
-    {
-      title: "Security Tools",
-      description: "Security scanning, compliance, and vulnerability management.",
-      icon: Shield,
-      features: ["Vulnerability scanning", "Compliance automation", "Security policies"]
-    }
-  ];
-
-  const benefits = [
-    "50-80% faster deployment frequency",
-    "60-90% reduction in lead time",
-    "40-70% improvement in recovery time",
-    "Enhanced team collaboration and communication",
-    "Improved code quality and reliability",
-    "Better resource utilization and cost optimization"
-  ];
-
-  const implementationSteps = [
-    {
-      step: "01",
-      title: "Assessment",
-      description: "Evaluate current development and operations processes."
-    },
-    {
-      step: "02",
-      title: "Strategy",
-      description: "Develop comprehensive DevOps strategy and roadmap."
-    },
-    {
-      step: "03",
-      title: "Implementation",
-      description: "Implement DevOps tools and establish new workflows."
-    },
-    {
-      step: "04",
-      title: "Optimization",
-      description: "Continuously monitor, optimize, and improve processes."
-    }
-  ];
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Helmet              } from 'react-helmet-async.ts';
-import { Cloud, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, GitBranch, Server import { Link              } from 'react-router-dom.ts';
-=======
 import React from 'react.ts';
 import { Helmet               } from 'react-helmet-async.ts';
 import { Cloud, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, GitBranch, Server               } from 'lucide-react.ts';
 import { Link               } from 'react-router-dom.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <>
@@ -243,12 +63,6 @@ import { Link               } from 'react-router-dom.ts';
               </p>
             </div>
 
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 group">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-=======
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -280,16 +94,10 @@ import { Link               } from 'react-router-dom.ts';
                   icon: TrendingUp,
                   title: "Monitoring & Analytics",
                   description: "Real-time monitoring and analytics for application performance."
-<<<<<<< HEAD
-
-              ].map((feature, index)              => (
-=======
                 }
               ].map((feature, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -312,12 +120,6 @@ import { Link               } from 'react-router-dom.ts';
               </p>
             </div>
 
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {serviceAreas.map((area, index) => (
-                <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 group">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-=======
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -355,16 +157,10 @@ import { Link               } from 'react-router-dom.ts';
                   description: "Built-in security scanning and compliance automation.",
                   icon: Shield,
                   benefits: ["Vulnerability scanning", "Compliance checks", "Security policies"]
-<<<<<<< HEAD
-
-              ].map((area, index)              => (
-=======
                 }
               ].map((area, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <area.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{area.title}</h3>
@@ -395,12 +191,6 @@ import { Link               } from 'react-router-dom.ts';
               </p>
             </div>
 
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {techStack.map((tech, index) => (
-                <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 group">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-=======
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -438,16 +228,10 @@ import { Link               } from 'react-router-dom.ts';
                   description: "Security scanning, compliance, and vulnerability management.",
                   icon: Shield,
                   features: ["Vulnerability scanning", "Compliance automation", "Security policies"]
-<<<<<<< HEAD
-
-              ].map((tech, index)              => (
-=======
                 }
               ].map((tech, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <tech.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{tech.title}</h3>
@@ -498,11 +282,7 @@ import { Link               } from 'react-router-dom.ts';
                     { metric: "60-90%", label: "Lead Time", description: "Reduction" },
                     { metric: "40-70%", label: "Recovery Time", description: "Improvement" },
                     { metric: "99.9%+", label: "Uptime", description: "Availability" }
-<<<<<<< HEAD
-                  ].map((item, index) => (
-=======
                   ].map((item, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">
                       <div className="text-2xl font-bold text-cyan-400 mb-1">{item.metric}</div>
                       <div className="text-sm text-slate-300">{item.label}</div>
@@ -527,10 +307,6 @@ import { Link               } from 'react-router-dom.ts';
               </p>
             </div>
 
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {implementationSteps.map((step, index) => (
-=======
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
@@ -552,14 +328,8 @@ import { Link               } from 'react-router-dom.ts';
                   step: "04",
                   title: "Optimization",
                   description: "Continuously monitor, optimize, and improve processes."
-<<<<<<< HEAD
-
-              ].map((step, index)              => (
-=======
                 }
               ].map((step, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>

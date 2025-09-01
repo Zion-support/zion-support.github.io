@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { SEO              } from '@/components/SEO';
-import { Brain,
-  PenTool,
-  TrendingUp,
-  Target,
-  Users,
-  BarChart3,
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import React from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 import { SEO               } from '@/components/SEO';
@@ -39,18 +25,9 @@ import { Brain,
   Shield,
   Headphones,
   Rocket
-<<<<<<< HEAD
- } from 'lucide-react';
-export default function AIContentMarketingAutomation(...args[]):  {
-=======
-<<<<<<< HEAD
-export default function AIContentMarketingAutomation(...args: any[]): any {
-=======
               } from 'lucide-react.ts';
 
 export default function AIContentMarketingAutomation(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     "AI-powered content generation for multiple formats",
     "Multi-channel content distribution automation",
@@ -203,14 +180,9 @@ export default function AIContentMarketingAutomation(...args[]: any):  {
               Everything you need to automate and optimize your content marketing strategy
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -256,14 +228,9 @@ export default function AIContentMarketingAutomation(...args[]: any):  {
               See measurable improvements in your content marketing performance
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -309,14 +276,9 @@ export default function AIContentMarketingAutomation(...args[]: any):  {
               Choose the plan that fits your business needs and scale as you grow
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {pricing.map((plan, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricing.map((plan, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -395,14 +357,9 @@ export default function AIContentMarketingAutomation(...args[]: any):  {
               From startups to enterprises, our platform adapts to your business requirements
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {

@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react.ts';
-import { Link            } from 'react-router-dom.ts';
-import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight export default function EnhancedNavigation2025(...args: any[]): any {
-=======
 import React, { useState, useEffect            } from 'react.ts';
 import Link from 'next/link.ts';
 import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight             } from 'lucide-react.ts';
 
 export default function EnhancedNavigation2025(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	const [isOpen, setIsOpen] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [activeDropdown, setActiveDropdown] = useState<any>(null);
@@ -22,39 +16,22 @@ export default function EnhancedNavigation2025(...args[]: any):  {
 		{
 			name: 'Services',
 			href: '/services',
-<<<<<<< HEAD
-			children: [
-				{ name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Predictive analytics and insights' },
-				{ name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', description: 'Advanced threat detection' },
-				{ name: 'Micro SAAS Platform', href: '/services/micro-saas-platform', description: 'Rapid application development' },
-				{ name: 'AI Content Creation', href: '/services/ai-content-creation-suite', description: 'Automated content generation' },
-				{ name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Intelligent sales automation' },
-=======
 			children[
 				{ name: 'AI Solutions', href: '/services/ai-solutions', description: 'Autonomous AI systems and workflows' },
 				{ name: 'Cloud & DevOps', href: '/services/cloud', description: 'Scalable infrastructure and automation' },
 				{ name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Zero-trust security frameworks' },
 				{ name: 'Data & Analytics', href: '/services/data', description: 'Data pipelines and ML ops' },
 				{ name: 'Micro SaaS', href: '/services/micro-saas', description: 'Rapid product development' },
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 			]
 		},
 		{
 			name: 'Solutions',
 			href: '/solutions',
-<<<<<<< HEAD
-			children: [
-				{ name: 'Financial Services', href: '/solutions/financial', description: 'AI risk management & compliance' },
-				{ name: 'Healthcare', href: '/solutions/healthcare', description: 'Patient data security & AI diagnostics' },
-				{ name: 'Manufacturing', href: '/solutions/manufacturing', description: 'IoT & predictive maintenance' },
-				{ name: 'Retail & E-commerce', href: '/solutions/retail', description: 'Customer analytics & personalization' },
-=======
 			children[
 				{ name: 'Enterprise', href: '/solutions/enterprise', description: 'Large-scale implementations' },
 				{ name: 'SMB', href: '/solutions/smb', description: 'Small business focused' },
 				{ name: 'Startup', href: '/solutions/startup', description: 'Growth acceleration' },
 				{ name: 'Government', href: '/solutions/government', description: 'Public sector expertise' },
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 			]
 		},
 		{
@@ -71,14 +48,9 @@ export default function EnhancedNavigation2025(...args[]: any):  {
 		{ name: 'Pricing', href: '/pricing' },;
 	];
 
-<<<<<<< HEAD
-	const toggleDropdown = (name: anyanyanyanyanyanyanyanyanyanyanystring)             => {;
-		setActiveDropdown(activeDropdown === name ? null : name)};
-=======
 	const toggleDropdown = (name: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
 		setActiveDropdown(activeDropdown === name ? null : name);
 	};
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 	const closeMobileMenu = () => {;
 		setIsOpen(false);
@@ -255,23 +227,10 @@ export default function EnhancedNavigation2025(...args[]: any):  {
 									Request a quote
 								</button>
 							</Link>
-<<<<<<< HEAD
-						</div>
-					</div>
-				</div>
-			)}
-		</nav>
-	)};
-=======;
 						</div>;
 					</div>;
 				</div>;
 			)};
 		</nav>;
 	);
-<<<<<<< HEAD
-}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

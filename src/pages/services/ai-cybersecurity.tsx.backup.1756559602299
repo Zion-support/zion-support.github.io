@@ -16,15 +16,6 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
     {
       icon: Lock,
       title: 'Intelligent Access Control',
-<<<<<<< HEAD
-      description: 'AI-driven authentication and authorization systems'
-    },
-    {
-      icon: Eye,
-      title: 'Behavioral Analytics',
-      description: 'Monitor and analyze user behavior for suspicious activity'
-
-=======
       description: 'AI-driven authentication and authorization systems';
     },;
     {;
@@ -32,7 +23,6 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
       title: 'Behavioral Analytics',;
       description: 'Monitor and analyze user behavior for suspicious activity';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const services = [
@@ -49,15 +39,6 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
     {
       title: 'Vulnerability Assessment',
       description: 'AI-powered vulnerability scanning and assessment',
-<<<<<<< HEAD
-      icon: '🛡️'
-    },
-    {
-      title: 'Security Automation',
-      description: 'Automate security operations and responses',
-      icon: '⚡'
-
-=======
       icon: '🛡️';
     },;
     {;
@@ -65,7 +46,6 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
       description: 'Automate security operations and responses',;
       icon: '⚡';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [;
@@ -78,13 +58,8 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI Cybersecurity Services - Zion Tech Group"
         description="Advanced AI-powered cybersecurity solutions for threat detection, prevention, and response. Protect your business with intelligent security systems."
       />

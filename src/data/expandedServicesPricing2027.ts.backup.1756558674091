@@ -1169,44 +1169,6 @@ export const ALL_EXPANDED_SERVICES_PRICING = [;
 ];
 
 // Helper functions
-<<<<<<< HEAD:data/expandedServicesPricing2027.ts
-export const getPricingByServiceId = (serviceId: string): ExpandedServicePricing | null => {;
-  return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId);
-};
-
-export const getPricingByCategory = (category: string): ExpandedServicePricing[] => {;
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category);
-};
-
-export const getPricingBySubcategory = (subcategory: string): ExpandedServicePricing[] => {;
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory);
-};
-
-export const searchPricing = (query: string): ExpandedServicePricing[] => {;
-  const lowercaseQuery = query.toLowerCase();
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing = > ;
-    pricing.serviceName.toLowerCase().includes(lowercaseQuery) ||;
-    pricing.category.toLowerCase().includes(lowercaseQuery) ||;
-    pricing.subcategory.toLowerCase().includes(lowercaseQuery);
-=======
-<<<<<<< HEAD
-export const getPricingByServiceId = (serviceId: anyanyanyanyanyanyanyanyanystring): ExpandedServicePricing | null           => {;
-  return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId)};
-
-export const getPricingByCategory = (category: anyanyanyanyanyanyanyanyanystring): ExpandedServicePricing[]           => {;
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category)};
-
-export const getPricingBySubcategory = (subcategory: anyanyanyanyanyanyanyanyanystring): ExpandedServicePricing[]           => {;
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory)};
-
-export const searchPricing = (query: anyanyanyanyanyanyanyanyanystring): ExpandedServicePricing[]           => {;
-  const lowercaseQuery = query.toLowerCase();
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing = > 
-    pricing.serviceName.toLowerCase().includes(lowercaseQuery) ||
-    pricing.category.toLowerCase().includes(lowercaseQuery) ||;
-    pricing.subcategory.toLowerCase().includes(lowercaseQuery);
-  )};
-=======
 export const getPricingByServiceId = (serviceId: anyanyanyanyanyanyanyanyanystring): ExpandedServicePricing | null          => {;
   return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId);
 };
@@ -1225,6 +1187,5 @@ export const searchPricing = (query: anyanyanyanyanyanyanyanyanystring): Expande
     pricing.serviceName.toLowerCase().includes(lowercaseQuery) ||
     pricing.category.toLowerCase().includes(lowercaseQuery) ||
     pricing.subcategory.toLowerCase().includes(lowercaseQuery)
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894:src/data/expandedServicesPricing2027.ts.backup.1756558674091
   );
 };

@@ -33,15 +33,6 @@ import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phon
       price: '$1,299/mo',
       features: ['Up to 50 digital twins', 'Advanced AI analytics', 'Real-time monitoring', 'Priority support', 'Custom dashboards', 'API access'],
       popular: true
-<<<<<<< HEAD
-    },
-    {
-      name: 'Enterprise',
-      price: '$3,999/mo',
-      features: ['Unlimited digital twins', 'Full AI suite', 'Custom models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
-      popular: false
-
-=======
     },;
     { ;
       name: 'Enterprise', ;
@@ -49,7 +40,6 @@ import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phon
       features: ['Unlimited digital twins', 'Full AI suite', 'Custom models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],;
       popular: false;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [;
@@ -291,19 +281,6 @@ import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phon
           <p className="text-gray-600 mb-4">
             Learn more about our complete suite of AI-powered business solutions
           </p>
-<<<<<<< HEAD
-          <a
-            href="https://ziontechgroup.com"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
-
-            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
-          </a>
-        </div>
-      </section>
-    </div>
-=======
           <a 
             href="https://ziontechgroup.com" 
             target="_blank" 
@@ -315,6 +292,5 @@ import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phon
         </div>;
       </section>;
     </div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}

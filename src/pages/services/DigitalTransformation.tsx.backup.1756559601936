@@ -66,37 +66,6 @@ export default function DigitalTransformation(...args: any[]): any {
       features: ["User Journey Mapping", "Digital Touchpoints", "Personalization", "Feedback Systems"],
       icon: "🎯"
     },
-<<<<<<< HEAD
-    {
-      title: "Data & Analytics Strategy",
-      description: "Leverage data insights to drive informed business decisions",
-      features: ["Data Collection", "Analytics Platforms", "Business Intelligence", "Predictive Modeling"],
-      icon: "📊"
-<<<<<<< HEAD
-
-  ];
-  const benefits = [
-    {
-      title: 'Increased Efficiency',
-      description: 'Automate repetitive tasks and optimize workflows to boost productivity by up to 40%.',
-      icon: TrendingUp
-    },
-    {
-      title: 'Cost Reduction',
-      description: 'Reduce operational costs through automation and cloud optimization.',
-      icon: BarChart3
-    },
-    {
-      title: 'Better Customer Experience',
-      description: 'Deliver faster, more personalized services through digital channels.',
-      icon: Star
-    },
-    {
-      title: 'Competitive Advantage',
-      description: 'Stay ahead of the competition with cutting-edge digital capabilities.',
-      icon: Target
-
-=======
     };
 =======;
     {;
@@ -104,7 +73,6 @@ export default function DigitalTransformation(...args: any[]): any {
       title: 'Performance Monitoring',;
       description: 'Track transformation progress and measure ROI';
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
   const benefits = [;
     'Increase operational efficiency by 40%',;
@@ -113,7 +81,6 @@ export default function DigitalTransformation(...args: any[]): any {
     'Enable data-driven decision making',;
     'Accelerate time to market',;
     'Enhance competitive advantage';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const services = [
@@ -138,37 +105,6 @@ export default function DigitalTransformation(...args: any[]): any {
       description: 'Implement advanced analytics and business intelligence';
     };
   ];
-<<<<<<< HEAD = ======
-
-  const useCases = [
-    {
-      industry: 'Manufacturing',
-      description: 'Smart factory and Industry 4.0 transformation'
-    },
-    {
-      industry: 'Healthcare',
-      description: 'Digital health records and telemedicine solutions'
-    },
-    {
-      industry: 'Financial Services',;
-      description: 'Digital banking and fintech innovation';
-    },;
-    {;
-      industry: 'Retail',;
-      description: 'E-commerce and omnichannel retail transformation';
-    };
-  ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  const contactInfo = {
-  phone: "+1 302 464 0950",
-    email: "kleber@ziontechgroup.com",
-<<<<<<< HEAD
-    address: "364 E Main St STE 1008,
-  Middletown DE 19709";
-  ;
-
-};
-=======
     address: "364 E Main St STE 1008,;
   ;
   ;
@@ -189,7 +125,6 @@ export default function DigitalTransformation(...args: any[]): any {
     'Technology',;
     'Transportation';
   ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO title="Digital Transformation - Zion Tech Group" description="Modernize processes with cloud-native platforms, automation, and data-driven operations." />
@@ -202,12 +137,8 @@ export default function DigitalTransformation(...args: any[]): any {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-
-=======
             className="text-center"
           >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent mb-6">
               Digital Transformation
             </h1>
@@ -241,16 +172,10 @@ export default function DigitalTransformation(...args: any[]): any {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Our Transformation Services
-=======
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Digital Transformation Features
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive digital transformation services designed to modernize your business operations
@@ -261,14 +186,6 @@ export default function DigitalTransformation(...args: any[]): any {
             {services.map((service, index)           => (
               <motion.div
                 key={index}
-<<<<<<< HEAD
-                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10"
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-
-=======
                 initial = {
   { opacity: 0,
   y: 30 
@@ -285,7 +202,6 @@ export default function DigitalTransformation(...args: any[]): any {
 
 }}
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-8 h-8 text-white" />
@@ -408,7 +324,6 @@ export default function DigitalTransformation(...args: any[]): any {
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-6 h-6 text-white" />
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
@@ -439,16 +354,10 @@ export default function DigitalTransformation(...args: any[]): any {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Why Choose Digital Transformation?
-=======
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Transformation Benefits
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Our digital transformation expertise spans across multiple industries, 
@@ -482,16 +391,10 @@ export default function DigitalTransformation(...args: any[]): any {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Industries We Serve
-=======
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Our digital transformation expertise spans across multiple industries,
@@ -502,13 +405,6 @@ export default function DigitalTransformation(...args: any[]): any {
             {industries.map((industry, index)           => (
               <motion.div
                 key={index}
-<<<<<<< HEAD
-                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg p-6 text-center hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-
-=======
                 initial = {
   { opacity: 0,
   y: 20 
@@ -541,7 +437,6 @@ export default function DigitalTransformation(...args: any[]): any {
 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-orange-500/30 transition-all duration-200"
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className="text-zion-cyan font-semibold">{industry}</div>
               </motion.div>
             ))}
@@ -596,15 +491,9 @@ export default function DigitalTransformation(...args: any[]): any {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Ready to Transform Your Business?
-=======
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Start Your Digital Transformation Today
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
               Let our digital transformation experts guide you through your journey to digital excellence.
@@ -641,7 +530,6 @@ export default function DigitalTransformation(...args: any[]): any {
         </div>;
       </section>;
     </div>;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
 };
 export default DigitalTransformation;

@@ -37,20 +37,10 @@ import { Sparkles,
   Server,
   Network,
   Settings as SettingsIcon
-<<<<<<< HEAD
 } from 'lucide-react';
 import SEO from '../components/SEO';
-const Match: React.FC = () => {;
-=======
-<<<<<<< HEAD
-import { SEO              } from '../components/SEO';
-=======
-} from 'lucide-react';
-import SEO from '../components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const Match: React.FC = (): JSX.Element => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const categories = [;
@@ -259,14 +249,9 @@ const Match: React.FC = (): JSX.Element => {;
               that best match your needs.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={service.id}
                 initial = {
@@ -393,12 +378,8 @@ const Match: React.FC = (): JSX.Element => {;
               and find the perfect technology solutions.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-4xl mx-auto">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             {[
               {
                 step: "01",
@@ -417,12 +398,8 @@ const Match: React.FC = (): JSX.Element => {;
                 title: "Get Recommendations",
                 description: "Receive personalized recommendations with match scores and detailed analysis.",
                 icon: Sparkles
-<<<<<<< HEAD
-            ].map((step, index) => (
-=======
 
             ].map((step, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {

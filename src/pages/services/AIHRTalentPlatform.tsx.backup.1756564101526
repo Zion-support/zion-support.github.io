@@ -31,15 +31,6 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
       price: '$399/mo',
       features: ['Up to 200 employees', 'Advanced AI analytics', 'Custom workflows', 'Priority support', 'Integration APIs'],
       popular: true
-<<<<<<< HEAD
-    },
-    {
-      name: 'Enterprise',
-      price: '$999/mo',
-      features: ['Unlimited employees', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'White-label solutions', 'Advanced compliance'],
-      popular: false
-
-=======
     },;
     { ;
       name: 'Enterprise', ;
@@ -47,7 +38,6 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
       features: ['Unlimited employees', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'White-label solutions', 'Advanced compliance'],;
       popular: false;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [;
@@ -315,19 +305,6 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           <p className="text-gray-600 mb-4">
             Learn more about our complete suite of AI-powered business solutions
           </p>
-<<<<<<< HEAD
-          <a
-            href="https://ziontechgroup.com"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold"
-
-            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
-          </a>
-        </div>
-      </section>
-    </div>
-=======
           <a 
             href="https://ziontechgroup.com" 
             target="_blank" 
@@ -339,6 +316,5 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
         </div>;
       </section>;
     </div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}

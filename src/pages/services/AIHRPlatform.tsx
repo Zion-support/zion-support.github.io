@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { SEO              } from '@/components/SEO';
-import { Brain,
-  Users,
-  TrendingUp,
-  Target,
-  BarChart3,
-=======
 import React from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 import { SEO               } from '@/components/SEO';
@@ -16,7 +6,6 @@ import { Brain,
   TrendingUp, 
   Target, 
   BarChart3, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Calendar,
   Zap,
   CheckCircle,
@@ -42,13 +31,9 @@ import { Brain,
   Award,
   Heart,
   Building
-<<<<<<< HEAD
-export default function AIHRPlatform(...args: any[]): any {
-=======
               } from 'lucide-react.ts';
 
 export default function AIHRPlatform(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     "AI-powered candidate screening and matching",
     "Intelligent resume parsing and analysis",
@@ -127,20 +112,6 @@ export default function AIHRPlatform(...args[]: any):  {
         "Advanced workforce planning",
         "White-label solutions",
         "Custom integrations",
-<<<<<<< HEAD
-        "Dedicated account manager",
-        "24/7 phone support",
-        "Unlimited employees"
-      ],
-      cta: "Contact Sales",
-      popular: false
-
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
         "Dedicated account manager",;
         "24/7 phone support",;
         "Unlimited employees";
@@ -153,7 +124,6 @@ export default function AIHRPlatform(...args[]: any):  {
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI HR Platform - Zion Tech Group"
         description="Transform your HR operations with AI-powered recruitment, performance management, and employee engagement. Streamline hiring and improve retention."
       />
@@ -642,23 +612,10 @@ export default function AIHRPlatform(...args[]: any):  {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400">
             <span>📞 +1 302 464 0950</span>
             <span>📧 kleber@ziontechgroup.com</span>
-<<<<<<< HEAD
-            <span>🌐 https://ziontechgroup.com</span>
-          </div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             <span>🌐 https://ziontechgroup.com</span>;
           </div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

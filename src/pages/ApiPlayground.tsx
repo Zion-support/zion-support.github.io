@@ -38,14 +38,6 @@ import {
   Star, 
   Terminal, 
   Settings, 
-<<<<<<< HEAD
-  RefreshCw, 
-  CheckCircle2, 
-  AlertCircle, 
-  Info
-} from 'lucide-react';
-
-=======
   Zap as ZapIcon, 
   RefreshCw, 
   CheckCircle2, 
@@ -153,7 +145,6 @@ interface Method {
   color: string;
 }
 
->>>>>>> cursor/add-new-services-and-advertise-them-650b
 export default function ApiPlayground() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
@@ -164,13 +155,8 @@ export default function ApiPlayground() {
   const [isLoading, setIsLoading] = useState(false);
   const [activeTab, setActiveTab] = useState('playground');
 
-<<<<<<< HEAD
-  const categories = [
-    { id: 'all', name: 'All Categories', icon: Code, count: 0 },
-=======
   const categories: Category[] = [
     { id: 'all', name: 'All Categories', icon: Code, count: 30 },
->>>>>>> cursor/add-new-services-and-advertise-them-650b
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 8 },
     { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, count: 6 },
     { id: 'security', name: 'Cybersecurity', icon: Shield, count: 5 },
@@ -178,21 +164,12 @@ export default function ApiPlayground() {
     { id: 'iot', name: 'IoT & Edge', icon: Network, count: 4 }
   ];
 
-<<<<<<< HEAD
-  const methods = [
-    { id: 'all', name: 'All Methods', count: 0 },
-    { id: 'GET', name: 'GET', count: 0, color: 'text-green-400' },
-    { id: 'POST', name: 'POST', count: 0, color: 'text-blue-400' },
-    { id: 'PUT', name: 'PUT', count: 0, color: 'text-yellow-400' },
-    { id: 'DELETE', name: 'DELETE', count: 0, color: 'text-red-400' }
-=======
   const methods: Method[] = [
     { id: 'all', name: 'All Methods', count: 30 },
     { id: 'GET', name: 'GET', count: 12, color: 'text-green-400' },
     { id: 'POST', name: 'POST', count: 10, color: 'text-blue-400' },
     { id: 'PUT', name: 'PUT', count: 4, color: 'text-yellow-400' },
     { id: 'DELETE', name: 'DELETE', count: 4, color: 'text-red-400' }
->>>>>>> cursor/add-new-services-and-advertise-them-650b
   ];
 
   const apis: ApiEndpoint[] = [
@@ -343,90 +320,6 @@ export default function ApiPlayground() {
         dataset: "user_analytics"
       },
       documentation: 'https://docs.ziontechgroup.com/api/data-query',
-<<<<<<< HEAD
-      sdk: 'https://github.com/ziontechgroup/data-sdk',
-      featured: false
-    },
-    {
-      id: 5,
-      name: 'IoT Device Management',
-      description: 'Manage IoT devices, monitor sensors, and control actuators.',
-      category: 'iot',
-      method: 'GET',
-      endpoint: '/api/v1/iot/devices',
-      baseUrl: 'https://api.ziontechgroup.com',
-      version: '1.0.0',
-      status: 'stable',
-      rateLimit: '300 requests/hour',
-      authentication: 'API Key',
-      parameters: [
-        { name: 'location', type: 'string', required: false, description: 'Device location' },
-        { name: 'type', type: 'string', required: false, description: 'Device type' },
-        { name: 'status', type: 'string', required: false, description: 'Device status' }
-      ],
-      requestExample: {
-        location: "building-a",
-        type: "sensor",
-        status: "active"
-      },
-      responseExample: {
-        devices: [
-          {
-            id: "sensor-001",
-            name: "Temperature Sensor A1",
-            type: "sensor",
-            location: "building-a",
-            status: "active",
-            last_reading: 22.5
-          }
-        ],
-        total: 1
-      },
-      documentation: 'https://docs.ziontechgroup.com/api/iot-devices',
-      sdk: 'https://github.com/ziontechgroup/iot-sdk',
-      featured: false
-    }
-  ];
-
-  // Update counts
-  categories.forEach(cat => {
-    cat.count = apis.filter(api => api.category === cat.id).length;
-  });
-
-  methods.forEach(method => {
-    method.count = apis.filter(api => api.method === method.id).length;
-  });
-
-  const filteredApis = apis.filter(api => {
-    const matchesSearch = api.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         api.description.toLowerCase().includes(searchQuery.toLowerCase());
-
-    const matchesCategory = activeCategory === 'all' || api.category === activeCategory;
-    const matchesMethod = activeMethod === 'all' || api.method === activeMethod;
-
-    return matchesSearch && matchesCategory && matchesMethod;
-  });
-
-  const getCategoryIcon = (categoryId: string) => {
-    const category = categories.find(c => c.id === categoryId);
-    return category ? category.icon : Code;
-  };
-
-  const getMethodColor = (method: string) => {
-    return methods.find(m => m.id === method)?.color || 'text-gray-400';
-  };
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'stable': return 'text-green-400';
-      case 'beta': return 'text-yellow-400';
-      case 'alpha': return 'text-red-400';
-      default: return 'text-gray-400';
-    }
-  };
-
-  const handleApiSelect = (api: any) => {
-=======
       sdk: 'https://github.com/ziontechgroup/data-sdk'
     }
   ];
@@ -444,7 +337,6 @@ export default function ApiPlayground() {
   });
 
   const handleApiSelect = (api: ApiEndpoint) => {
->>>>>>> cursor/add-new-services-and-advertise-them-650b
     setSelectedApi(api);
     setRequestBody(JSON.stringify(api.requestExample, null, 2));
     setResponseData('');
@@ -468,20 +360,6 @@ export default function ApiPlayground() {
     navigator.clipboard.writeText(text);
   };
 
-<<<<<<< HEAD
-  const downloadResponse = () => {
-    if (!responseData) return;
-
-    const blob = new Blob([responseData], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `${selectedApi?.name.toLowerCase().replace(/\s+/g, '-')}-response.json`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-=======
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'stable':
@@ -510,140 +388,12 @@ export default function ApiPlayground() {
       default:
         return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
     }
->>>>>>> cursor/add-new-services-and-advertise-them-650b
   };
 
   return (
     <>
       <SEO 
         title="API Playground - Zion Tech Group"
-<<<<<<< HEAD
-        description="Explore, test, and integrate with our powerful APIs. Build amazing applications with our comprehensive developer tools."
-        keywords="API playground, developer tools, API testing, integration, Zion Tech Group"
-        canonicalUrl="https://ziontechgroup.com/api-playground"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-          <div className="container mx-auto px-4 text-center">
-            <div className="flex justify-center mb-6">
-              <div className="p-4 bg-blue-500/20 rounded-full">
-                <Code className="w-16 h-16 text-blue-400" />
-              </div>
-            </div>
-            <h1 className="text-5xl font-bold text-white mb-6">
-              API Playground
-            </h1>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-              Explore, test, and integrate with our powerful APIs. Build amazing applications with our comprehensive developer tools.
-            </p>
-          </div>
-        </div>
-
-        <div className="py-12">
-          <div className="container mx-auto px-4">
-            <div className="max-w-7xl mx-auto">
-              {/* Search and Filters */}
-              <div className="mb-8">
-                <div className="relative mb-6">
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
-                    type="text"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Search APIs..."
-                    className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
-                </div>
-
-                <div className="flex flex-wrap gap-4">
-                  {/* Categories */}
-                  <div className="flex flex-wrap gap-2">
-                    {categories.map((category) => (
-                      <button
-                        key={category.id}
-                        onClick={() => setActiveCategory(category.id)}
-                        className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
-                          activeCategory === category.id
-                            ? 'bg-blue-500 text-white'
-                            : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700 hover:text-white'
-                        }`}
-                      >
-                        <category.icon className="w-4 h-4" />
-                        {category.name} ({category.count})
-                      </button>
-                    ))}
-                  </div>
-
-                  {/* Methods */}
-                  <div className="flex flex-wrap gap-2">
-                    {methods.map((method) => (
-                      <button
-                        key={method.id}
-                        onClick={() => setActiveMethod(method.id)}
-                        className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                          activeMethod === method.id
-                            ? 'bg-purple-500 text-white'
-                            : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700 hover:text-white'
-                        }`}
-                      >
-                        {method.name} ({method.count})
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                {/* API List */}
-                <div className="lg:col-span-1">
-                  <h2 className="text-2xl font-bold text-white mb-6">Available APIs</h2>
-                  <div className="space-y-4">
-                    {filteredApis.map((api) => (
-                      <div
-                        key={api.id}
-                        onClick={() => handleApiSelect(api)}
-                        className={`bg-slate-800/50 border border-slate-600/50 rounded-lg p-4 cursor-pointer hover:border-blue-500 transition-colors ${
-                          selectedApi?.id === api.id ? 'border-blue-500 ring-2 ring-blue-500/20' : ''
-                        }`}
-                      >
-                        <div className="flex items-start justify-between mb-3">
-                          <div className="flex items-center gap-2">
-                            <getCategoryIcon categoryId={api.category} className="w-5 h-5" />
-                            <span className="text-sm text-gray-300 bg-gray-600/20 px-2 py-1 rounded-full">
-                              {categories.find(c => c.id === api.category)?.name}
-                            </span>
-                          </div>
-                          <div className="text-right">
-                            <div className={`text-sm font-medium ${getMethodColor(api.method)}`}>
-                              {api.method}
-                            </div>
-                            <div className={`text-xs ${getStatusColor(api.status)}`}>
-                              {api.status}
-                            </div>
-                          </div>
-                        </div>
-
-                        <h3 className="text-lg font-semibold text-white mb-2">{api.name}</h3>
-                        <p className="text-gray-300 text-sm mb-3">{api.description}</p>
-
-                        <div className="flex items-center justify-between text-xs text-gray-300">
-                          <span>v{api.version}</span>
-                          <span>{api.rateLimit}</span>
-                        </div>
-
-                        {api.featured && (
-                          <div className="mt-3">
-                            <span className="px-2 py-1 bg-blue-500 text-white rounded-full text-xs font-medium">
-                              Featured
-                            </span>
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-=======
         description="Test and explore our APIs in real-time. Interactive playground for AI, cloud, security, and data analytics endpoints with live examples."
         keywords="API playground, API testing, REST API, AI API, cloud API, security API, Zion Tech Group"
       />
@@ -795,139 +545,8 @@ export default function ApiPlayground() {
                       </p>
                     </div>
                   )}
->>>>>>> cursor/add-new-services-and-advertise-them-650b
                 </div>
 
-<<<<<<< HEAD
-                {/* API Playground */}
-                <div className="lg:col-span-2">
-                  {selectedApi ? (
-                    <div className="bg-slate-800/50 border border-slate-600/50 rounded-lg">
-                      {/* API Header */}
-                      <div className="p-6 border-b border-slate-600/50">
-                        <div className="flex items-center justify-between mb-4">
-                          <div>
-                            <h2 className="text-2xl font-bold text-white">{selectedApi.name}</h2>
-                            <p className="text-gray-300">{selectedApi.description}</p>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <span className={`px-3 py-1 rounded-full text-sm font-medium ${getMethodColor(selectedApi.method)}`}>
-                              {selectedApi.method}
-                            </span>
-                            <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(selectedApi.status)}`}>
-                              {selectedApi.status}
-                            </span>
-                          </div>
-                        </div>
-
-                        <div className="bg-slate-900 p-4 rounded-lg font-mono text-sm">
-                          <div className="text-gray-300 mb-2">Endpoint:</div>
-                          <div className="text-white">{selectedApi.baseUrl}{selectedApi.endpoint}</div>
-                        </div>
-                      </div>
-
-                      {/* Tabs */}
-                      <div className="flex border-b border-slate-600/50">
-                        <button
-                          onClick={() => setActiveTab('playground')}
-                          className={`px-6 py-3 font-medium transition-colors ${
-                            activeTab === 'playground'
-                              ? 'text-blue-400 border-b-2 border-blue-400'
-                              : 'text-gray-300 hover:text-white'
-                          }`}
-                        >
-                          Playground
-                        </button>
-                        <button
-                          onClick={() => setActiveTab('docs')}
-                          className={`px-6 py-3 font-medium transition-colors ${
-                            activeTab === 'docs'
-                              ? 'text-blue-400 border-b-2 border-blue-400'
-                              : 'text-gray-300 hover:text-white'
-                          }`}
-                        >
-                          Documentation
-                        </button>
-                        <button
-                          onClick={() => setActiveTab('sdk')}
-                          className={`px-6 py-3 font-medium transition-colors ${
-                            activeTab === 'sdk'
-                              ? 'text-blue-400 border-b-2 border-blue-400'
-                              : 'text-gray-300 hover:text-white'
-                          }`}
-                        >
-                          SDK
-                        </button>
-                      </div>
-
-                      {/* Tab Content */}
-                      <div className="p-6">
-                        {activeTab === 'playground' && (
-                          <div className="space-y-6">
-                            {/* Request */}
-                            <div>
-                              <h3 className="text-lg font-semibold text-white mb-3">Request</h3>
-                              <div className="bg-slate-900 p-4 rounded-lg">
-                                <div className="flex items-center justify-between mb-2">
-                                  <span className="text-gray-300 text-sm">Request Body (JSON)</span>
-                                  <button
-                                    onClick={() => copyToClipboard(requestBody)}
-                                    className="text-blue-400 hover:text-blue-300 transition-colors"
-                                  >
-                                    <Copy className="w-4 h-4" />
-                                  </button>
-                                </div>
-                                <textarea
-                                  value={requestBody}
-                                  onChange={(e) => setRequestBody(e.target.value)}
-                                  className="w-full h-32 bg-slate-800 border border-slate-600 rounded p-3 text-white font-mono text-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                  placeholder="Enter request body..."
-                                />
-                              </div>
-                            </div>
-
-                            {/* Test Button */}
-                            <div className="flex justify-center">
-                              <button
-                                onClick={handleTestApi}
-                                disabled={isLoading}
-                                className="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center gap-2"
-                              >
-                                {isLoading ? (
-                                  <>
-                                    <RefreshCw className="w-5 h-5 animate-spin" />
-                                    Testing...
-                                  </>
-                                ) : (
-                                  <>
-                                    <Play className="w-5 h-5" />
-                                    Test API
-                                  </>
-                                )}
-                              </button>
-                            </div>
-
-                            {/* Response */}
-                            {responseData && (
-                              <div>
-                                <h3 className="text-lg font-semibold text-white mb-3">Response</h3>
-                                <div className="bg-slate-900 p-4 rounded-lg">
-                                  <div className="flex items-center justify-between mb-2">
-                                    <span className="text-gray-300 text-sm">Response Data</span>
-                                    <div className="flex items-center gap-2">
-                                      <button
-                                        onClick={() => copyToClipboard(responseData)}
-                                        className="text-blue-400 hover:text-blue-300 transition-colors"
-                                      >
-                                        <Copy className="w-4 h-4" />
-                                      </button>
-                                      <button
-                                        onClick={downloadResponse}
-                                        className="text-blue-400 hover:text-blue-300 transition-colors"
-                                      >
-                                        <Download className="w-4 h-4" />
-                                      </button>
-=======
               {/* API Playground */}
               <div className="lg:col-span-2">
                 {selectedApi ? (
@@ -1079,16 +698,9 @@ export default function ApiPlayground() {
                                           Required
                                         </span>
                                       )}
->>>>>>> cursor/add-new-services-and-advertise-them-650b
                                     </div>
                                     <p className="text-gray-300 text-sm">{param.description}</p>
                                   </div>
-<<<<<<< HEAD
-                                  <pre className="text-white font-mono text-sm overflow-x-auto">
-                                    {responseData}
-                                  </pre>
-=======
->>>>>>> cursor/add-new-services-and-advertise-them-650b
                                 </div>
                               </div>
                             )}
@@ -1131,31 +743,6 @@ export default function ApiPlayground() {
                               </a>
                             </div>
                           </div>
-<<<<<<< HEAD
-                        )}
-
-                        {activeTab === 'sdk' && (
-                          <div className="space-y-6">
-                            <div>
-                              <h3 className="text-lg font-semibold text-white mb-3">SDK & Libraries</h3>
-                              <div className="bg-slate-900 p-6 rounded-lg">
-                                <div className="text-center">
-                                  <Code className="w-16 h-16 text-blue-400 mx-auto mb-4" />
-                                  <h4 className="text-xl font-semibold text-white mb-2">Official SDK</h4>
-                                  <p className="text-gray-300 mb-4">
-                                    Get started quickly with our official SDKs and libraries
-                                  </p>
-                                  <a
-                                    href={selectedApi.sdk}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors inline-flex items-center gap-2"
-                                  >
-                                    <ExternalLink className="w-5 h-5" />
-                                    View SDK
-                                  </a>
-                                </div>
-=======
                         </div>
 
                         {/* Examples */}
@@ -1171,7 +758,6 @@ export default function ApiPlayground() {
                                 >
                                   <Copy className="w-4 h-4" />
                                 </button>
->>>>>>> cursor/add-new-services-and-advertise-them-650b
                               </div>
                               <pre className="text-sm text-blue-400 font-mono overflow-x-auto">
                                 {JSON.stringify(selectedApi.requestExample, null, 2)}
@@ -1196,43 +782,6 @@ export default function ApiPlayground() {
                               </pre>
                             </div>
                           </div>
-<<<<<<< HEAD
-                        )}
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="bg-slate-800/50 border border-slate-600/50 rounded-lg p-12 text-center">
-                      <Code className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                      <h3 className="text-xl font-semibold text-white mb-2">Select an API</h3>
-                      <p className="text-gray-300">
-                        Choose an API from the list to start testing and exploring
-                      </p>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Ready to Build Something Amazing?
-            </h2>
-            <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-              Get your API keys, explore our documentation, and start building with our powerful APIs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <button className="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors">
-                Get API Keys
-              </button>
-              <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                View Documentation
-              </button>
-            </div>
-=======
                         </div>
 
                         {/* Links */}
@@ -1310,7 +859,6 @@ export default function ApiPlayground() {
                 </a>
               </div>
             </motion.div>
->>>>>>> cursor/add-new-services-and-advertise-them-650b
           </div>
         </section>
       </div>

@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Shield, 
-  Zap, 
-  TrendingUp, 
-  Cloud, 
-  Atom, 
-  Globe, 
-=======
 import React, { useState } from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 import Link from 'next/link.ts';
@@ -44,19 +32,12 @@ import { FlaskConical,
   Target,
   BookOpen,
   GraduationCap,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Lightbulb,
   Microscope,
   TestTube,
   Satellite,
   Telescope
-<<<<<<< HEAD
-} from 'lucide-react';
-=======
-<<<<<<< HEAD
-=======
               } from 'lucide-react.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 const researchAreas = [
   {
@@ -270,11 +251,6 @@ const ResearchDevelopment = () => {
     ? researchAreas 
     : researchAreas.filter(area => area.id === selectedArea);
 
-<<<<<<< HEAD
-  const filteredProjects = selectedArea === 'all' 
-    ? researchProjects 
-    : researchProjects.filter(project => project.area.toLowerCase().includes(selectedArea));
-=======
 const patents = [
   {
     id: 1,
@@ -319,15 +295,6 @@ const patents = [
   {
     id: 5,
     title: 'Cloud Security Architecture Pattern',
-<<<<<<< HEAD
-    inventors: ['Dr. Lisa Garcia'],
-    filingDate: '2026-02-15',
-    status: 'Pending',
-    patentNumber: 'US 2026/0098765',
-    area: 'Cloud-Native',
-    description: 'A security architecture pattern for cloud-native applications.'
-
-=======
     inventors['Dr. Lisa Garcia'],;
     filingDate: '2026-02-15',;
     status: 'Pending',;
@@ -335,7 +302,6 @@ const patents = [
     area: 'Cloud-Native',;
     description: 'A security architecture pattern for cloud-native applications.';
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function ResearchDevelopment(...args[]: any):  {
@@ -353,34 +319,8 @@ export default function ResearchDevelopment(...args[]: any):  {
     return matchesArea && matchesStatus && matchesSearch;
   });
 
-<<<<<<< HEAD
-  const getAreaIcon = (areaName: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const area = researchAreas.find(a => a.name === areaName);
-    return area ? area.icon : FlaskConical};
-
-<<<<<<< HEAD
-  const getAreaColor = (areaName: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const area = researchAreas.find(a => a.name === areaName);
-    return area ? area.color : 'from-gray-500 to-slate-600'};
-
-<<<<<<< HEAD
-  const getStatusBadge = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    if (status === 'Active') {;
-      return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Active</span>;
-    } else if (status = == 'Completed') {;
-      return <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30">Completed</span>;
-    } else {
-      return <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">Planning</span>;
-<<<<<<< HEAD
-
-=======
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -395,28 +335,6 @@ export default function ResearchDevelopment(...args[]: any):  {
           >
             <Lightbulb className="w-10 h-10 text-white" />
           </motion.div>
-<<<<<<< HEAD
-          
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-6xl font-bold text-white mb-6"
-          >
-            Research &
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Development</span>
-          </motion.h1>
-          
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto"
-          >
-            Pushing the boundaries of technology through cutting-edge research, 
-            innovative solutions, and breakthrough discoveries that shape the future.
-          </motion.p>
-=======
         </div>
       </section>
 
@@ -444,15 +362,9 @@ export default function ResearchDevelopment(...args[]: any):  {
                 <select
                   value={selectedArea}
                   onChange={(e) => setSelectedArea(e.target.value)}
-<<<<<<< HEAD
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
-
-                  {areas.map(area              => (
-=======
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {areas.map(area               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={area} value={area}>{area}</option>
                   ))}
                 </select>
@@ -463,22 +375,15 @@ export default function ResearchDevelopment(...args[]: any):  {
                 <select
                   value={selectedStatus}
                   onChange={(e) => setSelectedStatus(e.target.value)}
-<<<<<<< HEAD
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
-
-                  {statuses.map(status              => (
-=======
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {statuses.map(status               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={status} value={status}>{status}</option>
                   ))}
                 </select>
               </div>
             </div>
           </div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         </div>
       </section>
 
@@ -489,32 +394,15 @@ export default function ResearchDevelopment(...args[]: any):  {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-            className="text-3xl md:text-4xl font-bold text-white text-center mb-16"
-          >
-            Research Focus Areas
-          </motion.h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredAreas.map((area, index) => (
-=======
             viewport={{ once: true }}
             className="mb-12 text-center"
 
             <h2 className="text-3xl font-bold text-white mb-4">Research Areas</h2>
-<<<<<<< HEAD
-            <p className="text-zion-slate-light text-lg">Explore our diverse research domains and cutting-edge initiatives</p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {researchAreas.map((area, index)               => {;
-=======;
             <p className="text-zion-slate-light text-lg">Explore our diverse research domains and cutting-edge initiatives</p>;
           </motion.div>;
 ;
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">;
             {researchAreas.map((area, index)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const IconComponent = area.icon;
               return (
                 <motion.div
@@ -580,14 +468,6 @@ export default function ResearchDevelopment(...args[]: any):  {
                       <div className="text-xs text-zion-slate-light">Patents</div>
                     </div>
                     <div>
-<<<<<<< HEAD
-                      <div className="text-2xl font-bold text-zion-cyan">{area.projects}</div>
-                      <div className="text-xs text-zion-slate-light">Projects</div>
-                    </div>
-                  </div>
-                </motion.div>
-              )})};
-=======;
                       <div className="text-2xl font-bold text-zion-cyan">{area.projects}</div>;
                       <div className="text-xs text-zion-slate-light">Projects</div>;
                     </div>;
@@ -595,7 +475,6 @@ export default function ResearchDevelopment(...args[]: any):  {
                 </motion.div>;
               );
             })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
@@ -629,19 +508,11 @@ export default function ResearchDevelopment(...args[]: any):  {
             className="mb-12 text-center"
 
             <h2 className="text-3xl font-bold text-white mb-4">Active Research Projects</h2>
-<<<<<<< HEAD
-            <p className="text-zion-slate-light text-lg">Discover our ongoing research initiatives and their impact</p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {filteredProjects.map((project, index)               => {;
-=======;
             <p className="text-zion-slate-light text-lg">Discover our ongoing research initiatives and their impact</p>;
           </motion.div>;
 ;
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">;
             {filteredProjects.map((project, index)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const IconComponent = getAreaIcon(project.area);
               const areaColor = getAreaColor(project.area);
               return (
@@ -750,14 +621,6 @@ export default function ResearchDevelopment(...args[]: any):  {
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                     <div className="text-right">
-<<<<<<< HEAD
-                      <div className="text-sm text-zion-slate-light">Contact us for collaboration</div>
-                      <div className="text-zion-cyan font-medium">+1 302 464 0950</div>
-                    </div>
-                  </div>
-                </motion.div>
-              )})};
-=======;
                       <div className="text-sm text-zion-slate-light">Contact us for collaboration</div>;
                       <div className="text-zion-cyan font-medium">+1 302 464 0950</div>;
                     </div>;
@@ -765,7 +628,6 @@ export default function ResearchDevelopment(...args[]: any):  {
                 </motion.div>;
               );
             })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
@@ -804,7 +666,6 @@ export default function ResearchDevelopment(...args[]: any):  {
 
           <div className="space-y-6">
             {publications.map((pub, index) => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={area.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -859,15 +720,6 @@ export default function ResearchDevelopment(...args[]: any):  {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-            className="text-3xl md:text-4xl font-bold text-white text-center mb-16"
-          >
-            Active Research Projects
-          </motion.h2>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredProjects.map((project, index) => (
-=======
             viewport={{ once: true }}
             className="mb-12 text-center"
 
@@ -877,7 +729,6 @@ export default function ResearchDevelopment(...args[]: any):  {
 
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {patents.map((patent, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 20 }}

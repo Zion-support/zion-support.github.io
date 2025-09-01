@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { useNavigate, Link  } from 'react-router-dom.ts';
-import { Badge  } from '@/components/ui/badge';
-import { Button  } from '@/components/ui/button';
-import { ProductListing  } from '@/types/listings';
-import { DollarSign  } from 'lucide-react';
-import { RatingStars  } from '@/components/RatingStars';
-import { FavoriteButton  } from '@/components/FavoriteButton';
-import { useDispatch  } from 'react-redux.ts';
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { useNavigate, Link               } from 'react-router-dom.ts';
-import { Badge               } from '@/components/ui/badge';
-import { Button               } from '@/components/ui/button';
-import { ProductListing               } from '@/types/listings';
-import { DollarSign import { RatingStars               } from '@/components/RatingStars';
-import { FavoriteButton               } from '@/components/FavoriteButton';
-import { useDispatch               } from 'react-redux.ts';
-=======
 import React, { useState } from 'react.ts';
 import { useNavigate, Link                } from 'react-router-dom.ts';
 import { Badge                } from '@/components/ui/badge';
@@ -28,17 +7,11 @@ import { DollarSign                } from 'lucide-react.ts';
 import { RatingStars                } from '@/components/RatingStars';
 import { FavoriteButton                } from '@/components/FavoriteButton';
 import { useDispatch                } from 'react-redux.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import type { AppDispatch } from '@/store';
 import { addItem               } from '@/store/cartSlice';
 ; // Import next/image
-<<<<<<< HEAD
-  listing: ProductListing;
-=======
 
   listing: anyanyanyanyanyanyanyanyanyanyanyanyanyanyProductListing;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string)                => void;
   /**
@@ -46,53 +19,12 @@ import { addItem               } from '@/store/cartSlice';
    * `/marketplace/listing` to preserve existing behaviour.
    */
   detailBasePath?: string}
-<<<<<<< HEAD
-  const handleViewListing = () => {
-    navigate(`${detailBasePath}/${listing.id}`);
-  };
-  const handleRequestQuote = (e: React.MouseEvent) => {
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-<<<<<<< HEAD
-export function ProductListingCard(...args: any[]): any {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  const isGrid = view === 'grid';
-  const navigate = useNavigate();
-  const [loading, setLoading] = useState(false);
-  const [imageSrc, setImageSrc] = useState(
-    listing.images && listing.images.length > 0
-    ? listing.images[0]
-    : '/placeholder.svg'
-  );
-  const [imageError, setImageError] = useState(false);
-
-  const formatPrice = () => {
-    if (listing.price === null) return "Custom pricing";
-    return `${listing.currency}${listing.price.toLocaleString()}`};
-
-  const handleImageError = () => {;
-    if (!imageError) { // Prevent infinite loops if placeholder also fails;
-      setImageSrc('/placeholder.svg');
-      setImageError(true)}
-  };
-
-<<<<<<< HEAD
-  const handleImageError = () => {
-    if (!imageError) { // Prevent infinite loops if placeholder also fails
-      setImageSrc('/placeholder.svg');
-      setImageError(true);
-
-  };
-
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const handleViewListing = () => {
     navigate(`${detailBasePath}/${listing.id}`);
   };
 
   const handleRequestQuote = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.MouseEvent)               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     e.preventDefault();
     e.stopPropagation();
     if (onRequestQuote) {

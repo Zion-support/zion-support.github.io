@@ -1,60 +1,4 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { Link, useLocation               } from 'react-router-dom.ts';
-import { motion, AnimatePresence               } from 'framer-motion.ts';
-import { Home,
-  Brain,
-  Cloud,
-  Server,
-  Rocket,
-  Users,
-  Briefcase,
-  FileText,
-  HelpCircle,
-  MessageCircle,
-  Settings,
-  BarChart3,
-  Shield,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
-  ShoppingCart,
-  Target,
-  Lightbulb,
-  Award,
-  TrendingUp,
-  BookOpen,
-  Calendar,
-  MapPin,
-  Phone,
-  Mail,
-  ChevronRight,
-  ChevronDown,
-  Handshake,
-  Atom,
-  Link as LinkIcon,
-  Wifi,
-  HeartPulse,
-  DollarSign,
-  Leaf,
-  Building,
-  User
-<<<<<<< HEAD
- } from 'lucide-react';
-export const EnhancedSidebar: React.FC = () => {;
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
-  const location = useLocation();
-  const toggleSection = (section: string) => {;
-=======
-<<<<<<< HEAD
-export const EnhancedSidebar: React.FC = (): JSX.Element => {
-=======
                } from 'lucide-react.ts';
-=======
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -67,7 +11,6 @@ import {
   Database, Network, Lock, BarChart3, PenTool,
   Eye, Sparkles, Phone, Mail, MapPin
 } from 'lucide-react';
->>>>>>> cursor/add-new-services-and-advertise-them-650b
 
 interface SidebarProps {
   isOpen: boolean;
@@ -76,34 +19,21 @@ interface SidebarProps {
 
 export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {
   const location = useLocation();
-<<<<<<< HEAD
-
-  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {;
-=======;
 export const EnhancedSidebar: React.FC = (): JSX.Element => {;
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
   const location = useLocation();
 
   const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
       newExpanded.delete(section)} else {
       newExpanded.add(section)}
     setExpandedSections(newExpanded)};
-<<<<<<< HEAD
-  const isActive = (path: string)  => location.pathname === path;
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => location.pathname === path;
-=======
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
->>>>>>> cursor/add-new-services-and-advertise-them-650b
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const navigationSections = [
     {
       id: 'main',
@@ -153,8 +83,6 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {;
         { name: 'Education Solutions', href: '/solutions/education', icon: BookOpen, description: 'Educational technology' },
         { name: 'Retail Solutions', href: '/solutions/retail', icon: ShoppingCart, description: 'E-commerce & retail tech' },
       ]
-<<<<<<< HEAD
-=======
     },
     {
       id: 'resources',
@@ -201,7 +129,6 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {;
         { name: 'Sitemap', href: '/sitemap', icon: Globe, description: 'Site navigation structure' },
       ]
     }
->>>>>>> cursor/add-new-services-and-advertise-them-650b
   ];
   const quickActions = [
     { name: 'Request Quote', href: '/request-quote', icon: DollarSign, color: 'bg-blue-500' },
@@ -209,119 +136,6 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {;
     { name: 'Contact Sales', href: '/contact', icon: Phone, color: 'bg-purple-500' },
     { name: 'Support Chat', href: '/chat', icon: MessageCircle, color: 'bg-orange-500' },
   ];
-<<<<<<< HEAD
-  return (
-    <div className = "w-64 bg-slate-900/95 backdrop-blur-xl border-r border-slate-700/50 h-screen overflow-y-auto">
-      <div className="p-6">
-        {/* Logo */}
-        <div className="mb-8">;
-        { name: "Sitemap", href: "/sitemap", icon: Globe },;
-        { name: "Dashboard", href: "/dashboard", icon: BarChart3 },;
-        { name: "Login", href: "/login", icon: User };
-      ];
-    };
-  ];
-  const quickActions = [;
-    { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },;
-    { name: "Book Demo", href: "/enterprise-demo", icon: Calendar, variant: "secondary" },;
-    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" };
-  ];
-  return (
-    <aside className = "hidden lg:block w-80 min-h-screen bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 overflow-y-auto">
-      <div className="p-6">
-        {/* Logo Section */}
-        <motion.div
-          className="mb-8"
-          initial = {
-  { opacity: 0,
-  y: -20 
-}}
-          animate = {
-  { opacity: 1,
-  y: 0 
-}}
-          transition={{ duration: 0.5 }}
-        >
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <Zap className="w-6 h-6 text-white" />
-            </div>
-            <h1 className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
-              Zion Tech Group
-            </h1>
-          </Link>
-        </div>
-        {/* Quick Actions */}
-        <motion.div
-          className="mb-8"
-          initial = {
-  { opacity: 0,
-  y: -20 
-}}
-          animate = {
-  { opacity: 1,
-  y: 0 
-}}
-          transition = {
-  { duration: 0.5,
-  delay: 0.1 
-}}
-        >
-          <h3 className="text-sm font-semibold text-zion-slate-light mb-3 uppercase tracking-wide">Quick Actions</h3>
-          <div className="space-y-2">
-            {quickActions.map((action, index) => (
-              <motion.div
-                key={action.name}
-                initial = {
-  { opacity: 0,
-  x: -20 
-}}
-                animate = {
-  { opacity: 1,
-  x: 0 
-}}
-                transition = {
-  { duration: 0.3,
-  delay: index * 0.1 
-}}
-              >
-                <Link
-                  to={action.href}
-                  className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 group ${
-                    action.variant === 'primary'
-                      ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan/90 hover:to-zion-blue/90 shadow-lg shadow-zion-cyan/25'
-                      : 'bg-zion-slate-dark/50 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 border border-zion-cyan/20 hover:border-zion-cyan/40'
-                  }`}
-                  <action.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
-                  <span className="font-medium">{action.name}</span>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-        {/* Navigation Sections */}
-        <div className="space-y-6">
-          {navigationSections.map((section, sectionIndex) => (
-            <motion.div
-              key={section.title}
-              initial = {
-  { opacity: 0,
-  y: -20 
-}}
-              animate = {
-  { opacity: 1,
-  y: 0 
-}}
-              transition = {
-  { duration: 0.5,
-  delay: sectionIndex * 0.1 
-}}
-            >
-              <button
-                onClick={() => toggleSection(section.title)}
-                className="flex items-center justify-between w-full text-left p-3 rounded-lg hover:bg-slate-800/50 transition-colors duration-200 group"
-              >
-=======
 
   const toggleSection = (sectionId: string) => {
     setExpandedSections(prev => 
@@ -386,7 +200,6 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {;
             {/* Header */}
             <div className="sticky top-0 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6">
               <div className="flex items-center justify-between mb-6">
->>>>>>> cursor/add-new-services-and-advertise-them-650b
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
                     <Zap className="w-6 h-6" />
@@ -414,92 +227,6 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {;
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white/50"
                 />
-<<<<<<< HEAD
-              </button>
-              <AnimatePresence>
-                {expandedSections.has(section.title) && (
-                  <motion.div
-                    initial = {
-  { opacity: 0,
-  height: 0 
-}}
-                    animate = {
-  { opacity: 1,
-  height: 'auto' 
-}}
-                    exit = {
-  { opacity: 0,
-  height: 0 
-}}
-                    transition={{ duration: 0.3 }}
-                    className="ml-7 mt-2 space-y-1"
-                  >
-                    {section.items.map((item) => (
-                      <Link
-                        key={item.name}
-                        initial = {
-  { opacity: 0,
-  x: -20 
-}}
-                        animate = {
-  { opacity: 1,
-  x: 0 
-}}
-                        transition = {
-  { duration: 0.2,
-  delay: itemIndex * 0.05 
-}}
-                      >
-                        <item.icon className="w-4 h-4" />
-                        <span>{item.name}</span>
-                        {isActive(item.href) && (
-                          <div className="w-2 h-2 bg-cyan-400 rounded-full ml-auto"></div>
-                        )}
-                      </Link>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          ))}
-        </nav>
-        {/* Contact Info */}
-        <motion.div
-          className="mt-8 p-4 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg"
-          initial = {
-  { opacity: 0,
-  y: 20 
-}}
-          animate = {
-  { opacity: 1,
-  y: 0 
-}}
-          transition = {
-  { duration: 0.5,
-  delay: 0.5 
-}}
-        >
-          <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?</h3>
-          <div className="space-y-2 text-xs text-zion-slate-light">
-            <div className="flex items-center space-x-2">
-              <Phone className="w-3 h-3" />
-              <span>+1 302 464 0950</span>
-            </div>
-            <div className="flex items-center space-x-3 text-sm text-slate-400">
-              <Mail className="w-4 h-4" />
-              <span>kleber@ziontechgroup.com</span>
-            </div>
-            <div className = "flex items-center space-x-2">
-              <MapPin className="w-3 h-3" />;
-              <span>Middletown, DE</span>;
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </aside>;
-  );
-};
-=======
               </div>
             </div>
 
@@ -635,4 +362,3 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {;
     </AnimatePresence>
   );
 }
->>>>>>> cursor/add-new-services-and-advertise-them-650b

@@ -49,12 +49,8 @@ import { Menu,
   Satellite,
   FileText,
   Sparkles as SparklesIcon
-<<<<<<< HEAD
-import { enhancedServicesCatalog2025              } from '../data/enhancedServicesCatalog2025';
-=======
 } from 'lucide-react';
 import { enhancedServicesCatalog2025              } from '../data/enhancedServicesCatalog2025';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function EnhancedHeader(...args: any[]): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -100,14 +96,6 @@ export function EnhancedHeader(...args: any[]): any {
     { name: 'Contact', href: '/contact', current: location.pathname === '/contact' },
     { name: 'Blog', href: '/blog', current: location.pathname === '/blog' },
     { name: 'Careers', href: '/careers', current: location.pathname === '/careers' },
-<<<<<<< HEAD
-    { name: 'Partners', href: '/partners', current: location.pathname === '/partners' },
-    { name: 'News', href: '/news', current: location.pathname === '/news' },
-    { name: 'Case Studies', href: '/case-studies', current: location.pathname === '/case-studies' },
-    { name: 'Help', href: '/help', current: location.pathname === '/help' },
-    { name: 'FAQ', href: '/faq', current: location.pathname === '/faq' },
-    { name: 'Pricing', href: '/pricing', current: location.pathname === '/pricing' },
-=======
     { name: 'Partners', href: '/partners', current: location.pathname === '/partners' },;
     { name: 'News', href: '/news', current: location.pathname === '/news' },;
     { name: 'Case Studies', href: '/case-studies', current: location.pathname === '/case-studies' },;
@@ -115,7 +103,6 @@ export function EnhancedHeader(...args: any[]): any {
     { name: 'FAQ', href: '/faq', current: location.pathname === '/faq' },;
     { name: 'Pricing', href: '/pricing', current: location.pathname === '/pricing' },;
     { name: 'Marketplace', href: '/marketplace', current: location.pathname === '/marketplace' },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   // Enhanced services by category with better organization
@@ -292,46 +279,6 @@ export function EnhancedHeader(...args: any[]): any {
       color: 'from-slate-600 to-gray-700',
       badge: 'Featured'
     },
-<<<<<<< HEAD
-    {
-      name: 'Digital Twin',
-      href: '/services/digital-twin',
-      icon: Eye,
-      description: 'Digital twin technology',
-      category: 'Emerging Tech',
-      color: 'from-cyan-600 to-blue-700',
-      badge: 'New'
-    },
-
-    // Micro SaaS
-    {
-      name: 'Micro CRM',
-      href: '/services/micro-crm',
-      icon: Users,
-      description: 'Customer relationship management',
-      category: 'Micro SaaS',
-      color: 'from-blue-600 to-cyan-700',
-      badge: 'Popular'
-    },
-    {
-      name: 'Helpdesk Platform',
-      href: '/services/helpdesk',
-      icon: HelpCircle,
-      description: 'Support ticketing system',
-      category: 'Micro SaaS',
-      color: 'from-green-600 to-emerald-700',
-      badge: 'Popular'
-    },
-    {
-      name: 'Website Analytics',
-      href: '/services/website-analytics',
-      icon: BarChart3,
-      description: 'Web analytics platform',
-      category: 'Micro SaaS',
-      color: 'from-purple-600 to-pink-700',
-      badge: 'Popular'
-
-=======
     { 
       name: 'Biotech AI Drug Discovery', 
       href: '/services/biotech-ai-drug-discovery', ;
@@ -341,19 +288,13 @@ export function EnhancedHeader(...args: any[]): any {
       color: 'from-emerald-600 to-green-700',;
       badge: 'New';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
     <>
       {/* Matrix Rain Background */}
-<<<<<<< HEAD
-      <div className="matrix-rain"></div>
-
-=======
       <div className = "matrix-rain"></div>
       
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       {/* Enhanced Header */}
       <motion.header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -363,10 +304,6 @@ export function EnhancedHeader(...args: any[]): any {
         }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-<<<<<<< HEAD
-        transition={{ duration: 0.8, ease: "easeOut" }}
-
-=======
         transition = {
   { duration: 0.8,
   ease: "easeOut" 
@@ -378,7 +315,6 @@ export function EnhancedHeader(...args: any[]): any {
 
 }}
       >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* Enhanced Logo */}
@@ -728,9 +664,6 @@ export function EnhancedHeader(...args: any[]): any {
   );
 </div>}
 
-<<<<<<< HEAD
-export default EnhancedHeader;}}}}
-=======
 export default EnhancedHeader;
 export default EnhancedHeader;
 export default EnhancedHeader;
@@ -739,4 +672,3 @@ export default EnhancedHeader;
 export default EnhancedHeader;
 export default EnhancedHeader;
 export default EnhancedHeader;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

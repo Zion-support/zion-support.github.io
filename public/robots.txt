@@ -16,14 +16,6 @@ Allow: /services/
 Allow: /solutions/
 Allow: /about/
 Allow: /contact/
-<<<<<<< HEAD
-Allow: /blog/
-Allow: /pricing/
-
-# Crawl delay for better server performance
-Crawl-delay: 1
-
-=======
 Allow: /careers/
 Allow: /partners/
 Allow: /blog/
@@ -35,4 +27,3 @@ Allow: /documentation/
 
 # Crawl delay
 Crawl-delay: 1
->>>>>>> cursor/add-new-services-and-advertise-them-650b

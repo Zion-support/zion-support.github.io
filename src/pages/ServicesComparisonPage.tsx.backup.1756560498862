@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO             } from '../components/SEO';
-=======
 import React from 'react.ts';
 import { SEO            } from '../components/SEO';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default function ServicesComparisonPage(...args[]: any):  {
   return (
@@ -28,14 +23,6 @@ export default function ServicesComparisonPage(...args[]: any):  {
           </div>
 
           <div className="mt-16 text-center text-white">
-<<<<<<< HEAD
-            <p className="text-lg">This page is under development. Please check back soon for detailed service comparisons.</p>
-          </div>
-        </div>
-      </div>
-    </>
-  )};
-=======;
             <p className="text-lg">This page is under development. Please check back soon for detailed service comparisons.</p>;
           </div>;
         </div>;
@@ -43,4 +30,3 @@ export default function ServicesComparisonPage(...args[]: any):  {
     </>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

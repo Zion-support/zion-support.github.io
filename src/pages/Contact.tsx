@@ -1,19 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Phone, 
-=======
 import { 
->>>>>>> cursor/add-new-services-and-advertise-them-650b
   Mail, 
   Phone, 
   MapPin, 
   Clock, 
   Send, 
   MessageSquare,
-<<<<<<< HEAD
-  Building
-=======
   Building2,
   Globe,
   Users,
@@ -25,7 +18,6 @@ import {
   Facebook,
   Instagram,
   Youtube
->>>>>>> cursor/add-new-services-and-advertise-them-650b
 } from 'lucide-react';
 
 export default function Contact() {
@@ -42,10 +34,6 @@ export default function Contact() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-<<<<<<< HEAD
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-=======
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
   const departments = [
@@ -131,7 +119,6 @@ export default function Contact() {
     }
   ];
 
->>>>>>> cursor/add-new-services-and-advertise-them-650b
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -167,11 +154,6 @@ export default function Contact() {
     }, 5000);
   };
 
-<<<<<<< HEAD
-  const isFormValid = formData.name && formData.email && formData.message;
-
-=======
->>>>>>> cursor/add-new-services-and-advertise-them-650b
   return (
     <div className="min-h-screen bg-zion-slate-dark text-white">
       {/* Hero Section */}
@@ -183,270 +165,6 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-<<<<<<< HEAD
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
-              <p className="text-gray-300 mb-8">
-                We're here to help you navigate the future of technology. Reach out to us through any of these channels.
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-1">Phone</h3>
-                  <p className="text-gray-300">+1 302 464 0950</p>
-                  <p className="text-sm text-gray-400">Available Mon-Fri, 9AM-6PM EST</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
-                  <p className="text-gray-300">kleber@ziontechgroup.com</p>
-                  <p className="text-sm text-gray-400">We'll respond within 24 hours</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-1">Address</h3>
-                  <p className="text-gray-300">364 E Main St STE 1008</p>
-                  <p className="text-gray-300">Middletown, DE 19709</p>
-                  <p className="text-sm text-gray-400">United States</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Clock className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-1">Business Hours</h3>
-                  <p className="text-gray-300">Monday - Friday: 9:00 AM - 6:00 PM EST</p>
-                  <p className="text-gray-300">Saturday: 10:00 AM - 2:00 PM EST</p>
-                  <p className="text-sm text-gray-400">Sunday: Closed</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Quick Actions */}
-            <div className="pt-6 border-t border-gray-700">
-              <h3 className="text-xl font-semibold text-white mb-4">Quick Actions</h3>
-              <div className="space-y-3">
-                <button className="w-full text-left p-4 bg-gradient-to-r from-slate-800 to-slate-700 rounded-lg border border-gray-600 hover:border-cyan-500 transition-all duration-300 group">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <Building className="w-5 h-5 text-cyan-400" />
-                      <span className="text-white">Schedule a Demo</span>
-                    </div>
-                    <div className="text-cyan-400 group-hover:translate-x-1 transition-transform duration-300">
-                      →
-                    </div>
-                  </div>
-                </button>
-                
-                <button className="w-full text-left p-4 bg-gradient-to-r from-slate-800 to-slate-700 rounded-lg border border-gray-600 hover:border-purple-500 transition-all duration-300 group">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <MessageSquare className="w-5 h-5 text-purple-400" />
-                      <span className="text-white">Live Chat Support</span>
-                    </div>
-                    <div className="text-purple-400 group-hover:translate-x-1 transition-transform duration-300">
-                      →
-                    </div>
-                  </div>
-                </button>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20"
-          >
-            <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
-            
-            {submitStatus === 'success' && (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg"
-              >
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-green-400" />
-                  <div>
-                    <h3 className="text-green-400 font-semibold">Message Sent Successfully!</h3>
-                    <p className="text-green-300 text-sm">We'll get back to you within 24 hours.</p>
-                  </div>
-                </div>
-              </motion.div>
-            )}
-
-            {submitStatus === 'error' && (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg"
-              >
-                <div className="flex items-center space-x-3">
-                  <AlertCircle className="w-6 h-6 text-red-400" />
-                  <div>
-                    <h3 className="text-red-400 font-semibold">Something went wrong</h3>
-                    <p className="text-red-300 text-sm">Please try again or contact us directly.</p>
-                  </div>
-                </div>
-              </motion.div>
-            )}
-
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                    Full Name *
-                  </label>
-                  <div className="relative">
-                    <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full pl-10 pr-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                      placeholder="Enter your full name"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                    Email Address *
-                  </label>
-                  <div className="relative">
-                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full pl-10 pr-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                      placeholder="Enter your email"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                    Company
-                  </label>
-                  <div className="relative">
-                    <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      className="w-full pl-10 pr-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                      placeholder="Enter company name"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                    Phone Number
-                  </label>
-                  <div className="relative">
-                    <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full pl-10 pr-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                      placeholder="Enter phone number"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                  Service of Interest
-                </label>
-                <select
-                  id="service"
-                  name="service"
-                  value={formData.service}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                >
-                  {serviceOptions.map((option) => (
-                    <option key={option.value} value={option.value} className="bg-slate-800 text-white">
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required
-                  rows={5}
-                  className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
-                  placeholder="Tell us about your project or inquiry..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={!isFormValid || isSubmitting}
-                className="w-full py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
-              >
-                {isSubmitting ? (
-                  <>
-                    <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                    <span>Sending Message...</span>
-                  </>
-                ) : (
-                  <>
-                    <Send className="w-5 h-5" />
-                    <span>Send Message</span>
-                  </>
-                )}
-              </button>
-            </form>
-          </motion.div>
-        </div>
-      </div>
-=======
             <h1 className="text-4xl md:text-6xl font-bold text-zion-cyan mb-6">
               Get in Touch
             </h1>
@@ -881,7 +599,6 @@ export default function Contact() {
           </motion.div>
         </div>
       </section>
->>>>>>> cursor/add-new-services-and-advertise-them-650b
     </div>
   );
 }

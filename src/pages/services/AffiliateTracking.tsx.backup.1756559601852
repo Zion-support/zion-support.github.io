@@ -63,15 +63,6 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
       price: 599,
       unit: 'month',
       bestFor: 'Global programs, agencies and marketplaces',
-<<<<<<< HEAD
-      bullets: [
-        'Unlimited partners and campaigns',
-        'SAML SSO and audit trails',
-        'Custom data retention + warehouse sync',
-        'Dedicated CSM and 99.9% SLA'
-      ]
-
-=======
       bullets: [;
         'Unlimited partners and campaigns',;
         'SAML SSO and audit trails',;
@@ -79,7 +70,6 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
         'Dedicated CSM and 99.9% SLA';
       ];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (

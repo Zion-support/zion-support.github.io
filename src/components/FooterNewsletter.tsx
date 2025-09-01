@@ -1,45 +1,6 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { Mail, Send, CheckCircle  } from 'lucide-react';
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { Mail, Send, CheckCircle export const FooterNewsletter: React.FC = (): JSX.Element => {
-=======
 import React, { useState               } from 'react.ts';
 import { Mail, Send, CheckCircle                } from 'lucide-react.ts';
 
-<<<<<<< HEAD
-export const FooterNewsletter: React.FC = (): JSX.Element => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-<<<<<<< HEAD
-  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)               => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    e.preventDefault();
-    if (!email.trim()) return;
-
-    setIsSubmitting(true);
-
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-
-      setIsSubmitted(true);
-      setEmail('');
-
-      // Reset after 3 seconds
-<<<<<<< HEAD
-      setTimeout(() => setIsSubmitted(false), 3000);
-    } catch (error) {
-<<<<<<< HEAD
-      // // // console.error('Newsletter subscription failed:', error);
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       // // // // // // // console.error('Newsletter subscription failed:', error);
     } finally {
       setIsSubmitting(false);

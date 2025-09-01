@@ -1,60 +1,4 @@
-<<<<<<< HEAD
-export interface InnovativeService2025 {
-
-
-
-
-
-
-
-
-
-
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  roi: string;
-  innovationLevel: string;
-contactInfo: {;
-    phone: string;
-    email: string;
-    website: string;
-  
-
-
-
-
-
-
-
-
-
-};
-  technicalSpecs?: {
-    technology: string[];
-    integrations: string[];
-    apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
-  competitors?: string[];
-  marketSize?: string;
-=======
 import { ProductListing           } from '@/types/listings';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const INNOVATIVE_SERVICES_2025: ProductListing[] = [
   // AI-Powered Business Solutions
@@ -632,90 +576,12 @@ export const INNOVATIVE_SERVICES_2025: ProductListing[] = [
       website: "https://ziontechgroup.com/micro-project-management",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-<<<<<<< HEAD
-    technicalSpecs: {
-      technology: ["Solidity", "Rust", "JavaScript", "Python", "Ethereum", "Polkadot"],
-      integrations: ["MetaMask", "WalletConnect", "OpenSea", "Uniswap", "Chainlink"],
-      apiEndpoints: 100,
-      uptime: "99.9%",
-      security: ["Smart contract auditing", "Multi-signature wallets", "Zero-knowledge proofs"]
-    },
-    competitors: ["ConsenSys", "Alchemy", "Infura", "QuickNode"],
-    marketSize: "$19.9 billion by 2025"
-  },
-
-  // Sustainable Technology Solutions
-  {
-    id: "sustainable-technology",
-    title: "Sustainable Technology Solutions Platform",
-    description: "Innovative platform that combines technology and sustainability to help businesses reduce their environmental impact, optimize resource usage, and achieve sustainability goals.",
-    category: "Sustainability & Technology",
-    subcategory: "Environmental Solutions",
-    price: 1799,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Carbon Footprint Tracking",
-      "Energy Optimization",
-      "Waste Management",
-      "Sustainable Supply Chain",
-      "ESG Reporting",
-      "Green Technology Integration",
-      "Sustainability Analytics",
-      "Compliance Monitoring",
-      "Resource Optimization",
-      "Impact Measurement"
-    ],
-    benefits: [
-      "Reduce environmental impact",
-      "Lower operational costs",
-      "Meet sustainability goals",
-      "Enhance brand reputation",
-      "Compliance with regulations"
-    ],
-    useCases: [
-      "Corporate sustainability",
-      "Energy management",
-      "Supply chain optimization",
-      "ESG compliance",
-      "Green building management"
-    ],
-    targetAudience: [
-      "Sustainability officers",
-      "Facility managers",
-      "Supply chain managers",
-      "Corporate executives",
-      "Government agencies"
-    ],
-    tags: ["Sustainability", "ESG", "Green Technology", "Carbon Tracking", "Energy Management"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "professional",
-    marketPrice: "$1,799 - $4,999/month",
-    roi: "200-400%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["Python", "IoT", "Machine Learning", "React", "Node.js", "PostgreSQL"],
-      integrations: ["Energy management systems", "IoT sensors", "ERP systems", "Sustainability platforms"],
-      apiEndpoints: 120,
-      uptime: "99.9%",
-      security: ["SOC 2", "ISO 14001", "End-to-end encryption"]
-    },
-    competitors: ["Watershed", "Normative", "Persefoni", "Sweep"],
-    marketSize: "$8.5 billion by 2025"
-
-=======
     marketPrice: "$1,500-3,500",
     competitors: ["Asana", "Trello", "Monday.com", "ClickUp"],
     roi: "150% within 3 months",
     setupTime: "2-3 weeks",
     integrations: ["Calendar", "File Storage", "Communication Tools", "Time Tracking", "Reporting"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export const INNOVATIVE_SERVICE_CATEGORIES_2025 = {
@@ -809,11 +675,6 @@ export const INNOVATIVE_PRICING_TIERS_2025 = {
   }
 };
 
-<<<<<<< HEAD
-export const getServicesByAIScore = (minScore: anyanyanyanyanyanyanyanyanyanynumber): InnovativeService2025[]           => {
-  return INNOVATIVE_SERVICES_2025.filter(service => service.aiScore >= minScore);
-};}}
-=======
 export const INNOVATIVE_CONTACT_INFO_2025 = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
@@ -831,4 +692,3 @@ export const INNOVATIVE_SERVICE_GUARANTEES_2025 = {
   "Updates": "Regular feature updates and security patches included",
   "Training": "Comprehensive onboarding and training included"
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

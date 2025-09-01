@@ -1,46 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, XCircle, AlertTriangle, Clock, Activity, Server, Database, Cloud, Shield } from 'lucide-react';
-
-interface ServiceStatus {
-  name: string;
-  status: 'operational' | 'degraded' | 'outage' | 'maintenance';
-  uptime: string;
-  responseTime: string;
-  lastUpdated: string;
-}
-
-export default function Status() {
-  const [services, setServices] = useState<ServiceStatus[]>([
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO              } from '@/components/SEO';
-import {
-  CheckCircle,
-  AlertTriangle,
-  XCircle,
-  Clock,
-  Server,
-  Database,
-  Globe,
-  Zap,
-  Shield,
-  Activity
-const Status: React.FC = (): JSX.Element => (
-	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-		<SEO title="Status - Zion Tech Group" description="System status and uptime information." />
-		<div className="text-center text-white">
-			<h1 className="text-4xl font-bold mb-4">System Status</h1>
-			<p className="text-xl text-gray-300">All systems are operational.</p>
-		</div>
-	</div>
-);
-
-export default Status;
-}
-=======
 import React, { useState, useEffect } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { SEO              } from '../components/SEO';
@@ -75,7 +32,6 @@ export default function Status(...args: any[]): any {
   };
 
   const services = [
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     {
       name: 'AI Services Platform',
       status: 'operational',
@@ -120,10 +76,6 @@ export default function Status(...args: any[]): any {
     }
   ]);
 
-<<<<<<< HEAD
-  const [overallStatus, setOverallStatus] = useState<'operational' | 'degraded' | 'outage'>('operational');
-  const [lastIncident, setLastIncident] = useState<string>('No incidents reported in the last 90 days');
-=======
   const recentIncidents = [
     {
       id: 'INC-2024-001',
@@ -218,7 +170,6 @@ export default function Status(...args: any[]): any {
         return 'text-gray-400 bg-gray-500/20';
     }
   };
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   const getStatusIcon = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     switch (status) {
@@ -235,18 +186,6 @@ export default function Status(...args: any[]): any {
     }
   };
 
-<<<<<<< HEAD
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'operational':
-        return 'text-green-500';
-      case 'degraded':
-        return 'text-yellow-500';
-      case 'outage':
-        return 'text-red-500';
-      case 'maintenance':
-        return 'text-blue-500';
-=======
   const getSeverityColor = (severity: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     switch (severity) {
       case 'low':
@@ -257,7 +196,6 @@ export default function Status(...args: any[]): any {
         return 'bg-red-500/20 text-red-400';
       case 'critical':
         return 'bg-red-600/20 text-red-500';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default:
         return 'text-green-500';
     }
@@ -325,8 +263,6 @@ export default function Status(...args: any[]): any {
                 <div className="text-gray-400">Active Incidents</div>
               </div>
             </div>
-<<<<<<< HEAD
-=======
           </motion.div>
         </div>
       </section>
@@ -369,15 +305,8 @@ export default function Status(...args: any[]): any {
                 <div className="text-gray-400 text-xs">{metric.period}</div>
               </motion.div>
             ))}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           </div>
 
-<<<<<<< HEAD
-          {/* Service Status Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {services.map((service, index) => (
-              <div key={index} className={`bg-zinc-800/50 rounded-lg p-6 border ${getStatusBgColor(service.status)}`}>
-=======
       {/* Service Status */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -402,7 +331,6 @@ export default function Status(...args: any[]): any {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50"
               >
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-lg font-semibold text-white">{service.name}</h3>
                   {getStatusIcon(service.status)}
@@ -432,17 +360,6 @@ export default function Status(...args: any[]): any {
             ))}
           </div>
 
-<<<<<<< HEAD
-          {/* Recent Incidents */}
-          <div className="bg-zinc-800/50 rounded-lg p-8 border border-zinc-700/50 mb-12">
-            <h2 className="text-3xl font-bold text-white mb-6">Recent Incidents</h2>
-            <div className="bg-zinc-900 rounded-lg p-6">
-              <div className="flex items-center space-x-3 mb-4">
-                <CheckCircle className="w-6 h-6 text-green-500" />
-                <span className="text-green-400 font-medium">No Active Incidents</span>
-              </div>
-              <p className="text-gray-300">{lastIncident}</p>
-=======
       {/* Regional Status */}
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
@@ -597,7 +514,6 @@ export default function Status(...args: any[]): any {
                 <AlertCircle className="w-5 h-5 mr-2" />
                 Report an Issue
               </a>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             </div>
           </div>
 

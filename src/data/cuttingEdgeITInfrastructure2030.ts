@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import { ProductListing  } from '@/types/listings';
-=======
 import { ProductListing               } from '@/types/listings';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // Cutting Edge IT Infrastructure Services 2030 - Zion Tech Group
 // Advanced infrastructure solutions for modern enterprises
 export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [

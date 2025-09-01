@@ -16,18 +16,6 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
       price: '$199/mo',
       details: ['Up to 100 properties', 'Basic AI analysis', 'Standard reports', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Small Agency',
-      price: '$599/mo',
-      details: ['Up to 500 properties', 'Advanced AI features', 'Custom reports', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$1,499/mo',
-      details: ['Unlimited properties', 'Custom AI models', 'Full platform integration', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Small Agency', 
       price: '$599/mo', 
@@ -38,7 +26,6 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
       price: '$1,499/mo', ;
       details: ['Unlimited properties', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [;

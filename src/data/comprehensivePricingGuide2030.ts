@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-import { ProductListing  } from '@/types/listings';
-import { COMPREHENSIVE_SERVICES_INDEX_2030  } from "./comprehensiveServicesIndex2030";
-=======
 import { ProductListing               } from '@/types/listings';
 import { COMPREHENSIVE_SERVICES_INDEX_2030               } from './comprehensiveServicesIndex2030';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // Comprehensive Pricing Guide 2030 - Zion Tech Group
 // Complete pricing information for all services with market analysis and ROI projections
 export interface PricingTier {
-<<<<<<< HEAD
-=======
 
 
 
@@ -25,19 +18,11 @@ export interface PricingTier {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   name: string;
   price: number;
   features: string[];
   bestFor: string;
   setupTime: string;
-<<<<<<< HEAD
-  support: string}
-export interface ServicePricing {
-=======
-<<<<<<< HEAD
-  support: string;
-=======
 support: string;
 
 
@@ -52,7 +37,6 @@ support: string;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface ServicePricing {
 
@@ -69,7 +53,6 @@ export interface ServicePricing {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   serviceId: string;
   serviceName: string;
   category: string;
@@ -81,12 +64,6 @@ export interface ServicePricing {
   setupTime: string;
   paymentOptions: string[];
   volumeDiscounts: string[];
-<<<<<<< HEAD
-  enterpriseFeatures: string[]}
-=======
-<<<<<<< HEAD
-  enterpriseFeatures: string[];
-=======
 enterpriseFeatures: string[];
 
 
@@ -101,9 +78,7 @@ enterpriseFeatures: string[];
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
   // AI-Powered Autonomous Research Assistant
   {
@@ -397,59 +372,13 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
 ];
 // Pricing Analysis and Insights
 export const PRICING_ANALYSIS_2030 = {
-<<<<<<< HEAD
-  averagePrice: Math.round(
-    COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service)  => sum + service.basePrice, 0) / 
-    COMPREHENSIVE_PRICING_GUIDE_2030.length
-  ),
-  priceRange: {
-    min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice)),
-  max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
-=======
   averagePrice: anyanyanyanyanyanyanyanyanyanyanyanyanyMath.round(
-<<<<<<< HEAD
-    COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service)              => sum + service.basePrice, 0) /
-    COMPREHENSIVE_PRICING_GUIDE_2030.length
-  ),
-  priceRange: anyanyanyanyanyanyanyanyanyanyanyanyany{
-    min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s              => s.basePrice)),
-    max: anyanyanyanyanyanyanyanyanyanyanyanyanyMath.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s              => s.basePrice))
-  },
-  categoryPricing: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service)              => {
-    if (!acc[service.category]) {
-      acc[service.category] = [];
-
-    acc[service.category].push(service.basePrice);
-    return acc;
-  }, { /* empty */ } as Record<string, any>),
-  roiAnalysis: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_PRICING_GUIDE_2030.map(service              => ({
-=======
     COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service)  => sum + service.basePrice, 0) / 
     COMPREHENSIVE_PRICING_GUIDE_2030.length
   ),
   priceRange: anyanyanyanyanyanyanyanyanyanyanyanyany{
-<<<<<<< HEAD
-    min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s               => s.basePrice)),
-  max: anyanyanyanyanyanyanyanyanyanyanyanyanyMath.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s               => s.basePrice))
-  
-
-},
-  categoryPricing: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service)               => {
-    if (!acc[service.category]) {;
-      acc[service.category] = []};
-    acc[service.category].push(service.basePrice);
-    return acc}, {} as Record<string, any>),
-  roiAnalysis: COMPREHENSIVE_PRICING_GUIDE_2030.map(service = > ({
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    serviceName: service.serviceName,
-    roi: service.roi,
-    setupTime: service.setupTime,
-    price: service.basePrice
-  }))
-=======
     min: anyanyanyanyanyanyanyanyanyanyanyanyanyMath.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s              => s.basePrice)),
   max: anyanyanyanyanyanyanyanyanyanyanyanyanyMath.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s              => s.basePrice))
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ;
 ;
 ;

@@ -16,18 +16,6 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
       price: '$399/mo',
       details: ['Up to 25 vehicles', 'Basic AI features', 'Standard reports', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Medium Fleet',
-      price: '$999/mo',
-      details: ['Up to 100 vehicles', 'Advanced AI features', 'Custom reports', 'Priority support']
-    },
-    {
-      name: 'Large Fleet',
-      price: '$2,499/mo',
-      details: ['Unlimited vehicles', 'Custom AI models', 'Full system integration', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Medium Fleet', 
       price: '$999/mo', 
@@ -38,7 +26,6 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
       price: '$2,499/mo', ;
       details: ['Unlimited vehicles', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [;

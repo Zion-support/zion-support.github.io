@@ -24,13 +24,9 @@ interface HeroProps extends React.PropsWithChildren<{}> {
 features?: Array<any>;
     text: string;
     color: string;
-<<<<<<< HEAD
-  }>;
-=======
   
 }>;
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const PerformanceOptimizedHero: React.FC<HeroProps> = ({
   title = "Revolutionary AI & Technology Solutions",
   subtitle = "2025-2026 Innovation Hub",

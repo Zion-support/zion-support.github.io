@@ -1,40 +1,13 @@
 {
-<<<<<<< HEAD
-  "name": "Zion Tech Group - Innovative AI & IT Solutions",
-  "short_name": "Zion Tech",
-  "description": "Leading provider of AI-powered solutions, quantum computing, edge computing, and comprehensive IT services. Transform your business with cutting-edge technology.",
-=======
   "name": "Zion Tech Group - AI & Quantum Computing Solutions",
   "short_name": "Zion Tech",
   "description": "Leading provider of AI, quantum computing, cybersecurity, and digital transformation solutions for enterprises worldwide.",
->>>>>>> cursor/add-new-services-and-advertise-them-650b
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#3b82f6",
   "orientation": "portrait-primary",
   "scope": "/",
-<<<<<<< HEAD
-  "lang": "en-US",
-  "categories": ["business", "productivity", "technology"],
-  "icons": [
-    {
-      "src": "/favicon.ico",
-      "sizes": "16x16 32x32",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "/logo192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/logo512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-=======
   "lang": "en",
   "dir": "ltr",
   "categories": ["business", "productivity", "technology", "education"],
@@ -65,20 +38,10 @@
       "src": "/favicon-16x16.png",
       "sizes": "16x16",
       "type": "image/png"
->>>>>>> cursor/add-new-services-and-advertise-them-650b
     }
   ],
   "shortcuts": [
     {
-<<<<<<< HEAD
-      "name": "AI Services",
-      "short_name": "AI",
-      "description": "Explore our AI-powered solutions",
-      "url": "/services/ai-solutions",
-      "icons": [
-        {
-          "src": "/favicon.ico",
-=======
       "name": "Services",
       "short_name": "Services",
       "description": "View our AI and technology services",
@@ -86,15 +49,11 @@
       "icons": [
         {
           "src": "/icon-services.png",
->>>>>>> cursor/add-new-services-and-advertise-them-650b
           "sizes": "96x96"
         }
       ]
     },
     {
-<<<<<<< HEAD
-      "name": "Contact Us",
-=======
       "name": "Solutions",
       "short_name": "Solutions",
       "description": "Industry-specific solutions",
@@ -108,31 +67,17 @@
     },
     {
       "name": "Contact",
->>>>>>> cursor/add-new-services-and-advertise-them-650b
       "short_name": "Contact",
       "description": "Get in touch with us",
       "url": "/contact",
       "icons": [
         {
-<<<<<<< HEAD
-          "src": "/favicon.ico",
-=======
           "src": "/icon-contact.png",
->>>>>>> cursor/add-new-services-and-advertise-them-650b
           "sizes": "96x96"
         }
       ]
     },
     {
-<<<<<<< HEAD
-      "name": "Pricing",
-      "short_name": "Pricing",
-      "description": "View our service pricing",
-      "url": "/pricing",
-      "icons": [
-        {
-          "src": "/favicon.ico",
-=======
       "name": "Marketplace",
       "short_name": "Marketplace",
       "description": "Browse our marketplace",
@@ -140,26 +85,12 @@
       "icons": [
         {
           "src": "/icon-marketplace.png",
->>>>>>> cursor/add-new-services-and-advertise-them-650b
           "sizes": "96x96"
         }
       ]
     }
   ],
   "screenshots": [
-<<<<<<< HEAD
-    {
-      "src": "/screenshot-wide.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide"
-    },
-    {
-      "src": "/screenshot-narrow.png",
-      "sizes": "750x1334",
-      "type": "image/png",
-      "form_factor": "narrow"
-=======
     {
       "src": "/screenshot-desktop.png",
       "sizes": "1280x720",
@@ -179,7 +110,6 @@
     {
       "platform": "webapp",
       "url": "https://ziontechgroup.com/manifest.json"
->>>>>>> cursor/add-new-services-and-advertise-them-650b
     }
   ],
   "related_applications": [],
@@ -196,8 +126,6 @@
       "protocol": "web+zion",
       "url": "/?protocol=%s"
     }
-<<<<<<< HEAD
-=======
   ],
   "file_handlers": [
     {
@@ -208,6 +136,5 @@
         "image/*": [".png", ".jpg", ".jpeg", ".gif", ".webp"]
       }
     }
->>>>>>> cursor/add-new-services-and-advertise-them-650b
   ]
 }

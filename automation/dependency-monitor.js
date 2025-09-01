@@ -4,21 +4,11 @@ const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
 const cron = require('node-cron');
-<<<<<<< HEAD
-
-class DependencyMonitor {
-  constructor() {
-=======
 ;
-<<<<<<< HEAD;
-// // // // // console.log('📦 Dependency Monitor Starting...\n');
-=======;
 // // // // // // // // console.log('📦 Dependency Monitor Starting...\n');
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
 ;
 class DependencyMonitor {;
   constructor() {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     this.projectRoot = process.cwd();
     this.vulnerabilitiesFound = 0;
     this.dependenciesUpdated = 0;
@@ -30,60 +20,27 @@ class DependencyMonitor {;
 ;
     // Initialize monitoring;
     this.startMonitoring();
-<<<<<<< HEAD
-  }
-
-  ensureLogsDirectory() {
-=======
 ;
   ensureLogsDirectory() {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {;
       fs.mkdirSync(logsDir, { recursive: true });
-<<<<<<< HEAD
-    }
-  }
-
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logEntry = `[${timestamp}] [${level}] ${message}\n`;
-
-    try {
-      fs.appendFileSync(this.logFile, logEntry);
-    } catch (error) {
-      console.error('Failed to write to log file:', error.message);
-    }
-  }
-
-  async startMonitoring() {
-=======
 ;
 ;
   log(message, level = 'INFO') {;
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 ;
-<<<<<<< HEAD;
-    // // // // // console.log(logEntry.trim());
-=======;
     // // // // // // // // console.log(logEntry.trim());
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
 ;
     try {;
       fs.appendFileSync(this.logFile, logEntry);
     } catch (error) {;
-<<<<<<< HEAD;
-      // // // console.error('Failed to write to log file:', error.message);
-;
-=======;
       // // // // // // // console.error('Failed to write to log file:', error.message);
     };
   };
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
 ;
   async startMonitoring() {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     this.log('Starting dependency monitoring...');
 ;
     // Schedule regular dependency checks;
@@ -107,14 +64,8 @@ class DependencyMonitor {;
     }, 15000);
 ;
     this.log('Dependency monitoring started successfully');
-<<<<<<< HEAD
-  }
-
-  async performDependencyCheck() {
-=======
 ;
   async performDependencyCheck() {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (this.monitoring) return;
 ;
     this.monitoring = true;
@@ -128,109 +79,11 @@ class DependencyMonitor {;
         await this.autoFixDependencyIssues(issues);
       } else {;
         this.log('No dependency issues detected, all packages are up to date');
-<<<<<<< HEAD
-      }
-    } catch (error) {
-=======
 ;
     } catch (error) {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       this.log(`Dependency check failed: ${error.message}`, 'ERROR');
     } finally {;
       this.monitoring = false;
-<<<<<<< HEAD
-    }
-  }
-
-  async detectDependencyIssues() {
-    const issues = [];
-    
-    try {
-      // Check for outdated packages
-      const outdatedResult = execSync('npm outdated --json', { encoding: 'utf8' });
-      const outdated = JSON.parse(outdatedResult);
-      
-      if (Object.keys(outdated).length > 0) {
-        issues.push({
-          type: 'outdated',
-          packages: Object.keys(outdated),
-          severity: 'medium'
-        });
-      }
-    } catch (error) {
-      // No outdated packages found
-    }
-
-    try {
-      // Check for security vulnerabilities
-      const auditResult = execSync('npm audit --json', { encoding: 'utf8' });
-      const audit = JSON.parse(auditResult);
-      
-      if (audit.vulnerabilities && Object.keys(audit.vulnerabilities).length > 0) {
-        issues.push({
-          type: 'vulnerability',
-          packages: Object.keys(audit.vulnerabilities),
-          severity: 'high'
-        });
-      }
-    } catch (error) {
-      // No vulnerabilities found
-    }
-
-    return issues;
-  }
-
-  async autoFixDependencyIssues(issues) {
-    for (const issue of issues) {
-      try {
-        if (issue.type === 'vulnerability') {
-          this.log(`Attempting to fix vulnerability in ${issue.packages.join(', ')}`);
-          execSync('npm audit fix', { stdio: 'inherit' });
-          this.vulnerabilitiesFound++;
-        } else if (issue.type === 'outdated') {
-          this.log(`Updating outdated packages: ${issue.packages.join(', ')}`);
-          execSync('npm update', { stdio: 'inherit' });
-          this.dependenciesUpdated++;
-        }
-      } catch (error) {
-        this.log(`Failed to fix issue ${issue.type}: ${error.message}`, 'ERROR');
-      }
-    }
-  }
-
-  async performSecurityAudit() {
-    this.log('Performing security audit...');
-    
-    try {
-      execSync('npm audit', { stdio: 'inherit' });
-      this.log('Security audit completed');
-    } catch (error) {
-      this.log(`Security audit failed: ${error.message}`, 'ERROR');
-    }
-  }
-
-  async performWeeklyUpdates() {
-    this.log('Performing weekly dependency updates...');
-    
-    try {
-      execSync('npm update', { stdio: 'inherit' });
-      this.log('Weekly updates completed');
-    } catch (error) {
-      this.log(`Weekly updates failed: ${error.message}`, 'ERROR');
-    }
-  }
-
-  getStats() {
-    return {
-      vulnerabilitiesFound: this.vulnerabilitiesFound,
-      dependenciesUpdated: this.dependenciesUpdated,
-      isMonitoring: this.monitoring,
-      lastCheck: new Date().toISOString()
-    };
-  }
-
-  stop() {
-=======
 ;
 ;
   async detectDependencyIssues() {;
@@ -458,12 +311,7 @@ class DependencyMonitor {;
 ;
     try {;
       // Create a report of what will be updated;
-<<<<<<< HEAD;
-      const reportPath = path.join(this.projectRoot, 'logs', 'dependency-update-report.txt');
       const reportContent = `Dependency Update Report - ${new Date().toISOString()}\n\n${outdatedPackages.map(pkg =>;
-=======;
-      const reportContent = `Dependency Update Report - ${new Date().toISOString()}\n\n${outdatedPackages.map(pkg =>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
         `${pkg.name}: ${pkg.current} → ${pkg.latest}`;
       ).join('\n')}\n\nUpdating packages...`;
 ;
@@ -600,12 +448,7 @@ class DependencyMonitor {;
         this.log(`Found ${majorUpdates.length} packages with major updates available`);
 ;
         // Create a report for major updates;
-<<<<<<< HEAD;
-        const reportPath = path.join(this.projectRoot, 'logs', 'major-updates-report.txt');
         const reportContent = `Major Updates Report - ${new Date().toISOString()}\n\n${majorUpdates.map(pkg =>;
-=======;
-        const reportContent = `Major Updates Report - ${new Date().toISOString()}\n\n${majorUpdates.map(pkg =>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
           `${pkg.name}: ${pkg.current} → ${pkg.latest} (MAJOR)`;
         ).join('\n')}\n\nReview these updates carefully as they may contain breaking changes.`;
 ;
@@ -670,15 +513,8 @@ class DependencyMonitor {;
         const files = fs.readdirSync(logsDir);
         const now = Date.now();
         const maxAge = 30 * 24 * 60 * 60 * 1000; // 30 days;
-<<<<<<< HEAD;
-;
-        for (const file of files) {;
-          if (file.includes('-report.txt') || file.includes('-audit-report.txt')) {;
-            const filePath = path.join(logsDir, file);
-=======;
 ;
         for (const filePath = path.join(logsDir, file);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
             const stats = fs.statSync(filePath);
 ;
             if (now - stats.mtime.getTime() > maxAge) {;
@@ -702,7 +538,6 @@ class DependencyMonitor {;
 ;
   async stop() {;
     this.log('Stopping dependency monitor...');
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     this.monitoring = false;
     this.log('Dependency monitoring stopped');
   }
@@ -720,16 +555,6 @@ if (require.main === module) {
     monitor.log('Shutting down Dependency Monitor...');
     monitor.stop();
     process.exit(0);
-<<<<<<< HEAD
-  });
-  
-  process.on('SIGTERM', () => {
-    monitor.log('Shutting down Dependency Monitor...');
-    monitor.stop();
-    process.exit(0);
-  });
-}
-=======
 ;
 ;
 // Handle graceful shutdown;
@@ -755,4 +580,3 @@ setInterval(() => {;
   monitor.log(`Monitor heartbeat - Vulnerabilities: ${stats.vulnerabilitiesFound}, Dependencies Updated: ${stats.dependenciesUpdated}, Uptime: ${Math.round(stats.uptime)}s`);
 }, 900000); // Every 15 minutes;
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

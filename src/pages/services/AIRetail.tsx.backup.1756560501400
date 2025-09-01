@@ -16,18 +16,6 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
       price: '$299/mo',
       details: ['Up to 1,000 products', 'Basic AI features', 'Standard reports', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Medium Retailer',
-      price: '$799/mo',
-      details: ['Up to 10,000 products', 'Advanced AI features', 'Custom reports', 'Priority support']
-    },
-    {
-      name: 'Large Retailer',
-      price: '$1,999/mo',
-      details: ['Unlimited products', 'Custom AI models', 'Full platform integration', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Medium Retailer', 
       price: '$799/mo', 
@@ -38,7 +26,6 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
       price: '$1,999/mo', ;
       details: ['Unlimited products', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [;

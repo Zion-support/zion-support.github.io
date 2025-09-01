@@ -212,24 +212,9 @@ export function AppHeader() {
         {mobileMenuOpen && (
           <motion.div
             className="lg:hidden bg-zinc-900/95 backdrop-blur-xl border-t border-zinc-700/50"
-<<<<<<< HEAD
-            initial={{
-              opacity: 0,
-              height: 0
-            }}
-            animate={{
-              opacity: 1,
-              height: 'auto'
-            }}
-            exit={{
-              opacity: 0,
-              height: 0
-            }}
-=======
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
->>>>>>> cursor/add-new-services-and-advertise-them-650b
             transition={{ duration: 0.3 }}
           >
             <div className="container mx-auto px-4 py-4">

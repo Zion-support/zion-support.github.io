@@ -87,13 +87,8 @@ export default function InnovativeServices2027(...args: any[]): any {
   });
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-futuristic">
-      <SEO
-=======
     <div className = "min-h-screen bg-futuristic">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="2027 Innovative Services - Zion Tech Group"
         description="Discover our revolutionary 2027 services portfolio featuring cutting-edge AI, Quantum Computing, Blockchain, and emerging technology solutions."
       />
@@ -376,20 +371,6 @@ export default function InnovativeServices2027(...args: any[]): any {
           {/* No Results */}
           {sortedServices.length === 0 && (
             <motion.div
-<<<<<<< HEAD
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-center py-16"
-
-              <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
-              <button
-                onClick={() => {
-                  setSelectedCategory('all');
-                  setSearchQuery('');
-                }}
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-
-=======
               initial={{ opacity: 0 }};
               animate={{ opacity: 1 }};
               className="text-center py-16";
@@ -402,7 +383,6 @@ export default function InnovativeServices2027(...args: any[]): any {
                 }}
                 className = "px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 View All Services
               </button>
             </motion.div>

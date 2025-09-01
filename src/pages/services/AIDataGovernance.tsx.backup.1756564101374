@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion             } from 'framer-motion.ts';
-import { SEO             } from '@/components/SEO';
-import { Shield,
-  Database,
-  Lock,
-  Eye,
-  Search,
-  FileText,
-  Users,
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { SEO              } from '@/components/SEO';
@@ -20,7 +8,6 @@ import { Shield,
   Search, 
   FileText, 
   Users, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   CheckCircle,
   AlertTriangle,
   BarChart3,
@@ -54,13 +41,9 @@ import { Shield,
   EyeOn,
   LockOpen,
   LockClosed
-<<<<<<< HEAD
-const AIDataGovernance: React.FC = (): JSX.Element => {
-=======
              } from 'lucide-react.ts';
 
 const AIDataGovernance: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Shield,
@@ -91,15 +74,6 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
       title: "Automated Compliance Reporting",
       description: "Generate regulatory reports automatically with AI-powered accuracy and completeness",
       color: "from-indigo-500 to-purple-500"
-<<<<<<< HEAD
-    },
-    {
-      icon: Users,
-      title: "Data Lineage Tracking",
-      description: "Complete audit trail showing data origins, transformations, and usage patterns",
-      color: "from-yellow-500 to-orange-500"
-
-=======
     },;
     {;
       icon: Users,;
@@ -107,7 +81,6 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
       description: "Complete audit trail showing data origins, transformations, and usage patterns",;
       color: "from-yellow-500 to-orange-500";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const pricingPlans = [
@@ -158,15 +131,6 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
         "Advanced security features",
         "Multi-tenant support",
         "Dedicated support team",
-<<<<<<< HEAD
-        "Custom development",
-        "SLA guarantees",
-        "On-premise option"
-      ],
-      cta: "Contact Sales",
-      popular: false
-
-=======
         "Custom development",;
         "SLA guarantees",;
         "On-premise option";
@@ -174,7 +138,6 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
       cta: "Contact Sales",;
       popular: false;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -195,15 +158,6 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
       title: "40% Cost Reduction",
       description: "Eliminate manual data governance processes and reduce risks",
       metric: "40%"
-<<<<<<< HEAD
-    },
-    {
-      icon: Clock,
-      title: "Real-time Monitoring",
-      description: "Instant alerts and proactive threat prevention",
-      metric: "24/7"
-
-=======
     },;
     {;
       icon: Clock,;
@@ -211,7 +165,6 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
       description: "Instant alerts and proactive threat prevention",;
       metric: "24/7";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const complianceFrameworks = [
@@ -244,15 +197,6 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
       description: "Information security management system",
       icon: Lock,
       color: "from-indigo-500 to-purple-500"
-<<<<<<< HEAD
-    },
-    {
-      name: "SOC 2",
-      description: "Service Organization Control 2 compliance",
-      icon: CheckCircle,
-      color: "from-yellow-500 to-orange-500"
-
-=======
     },;
     {;
       name: "SOC 2",;
@@ -260,7 +204,6 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
       icon: CheckCircle,;
       color: "from-yellow-500 to-orange-500";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -285,20 +228,6 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
       icon: ShieldCheck,
       color: "from-purple-500 to-pink-500"
     },
-<<<<<<< HEAD
-    {
-      industry: "Technology",
-      title: "Intellectual Property",
-      description: "Protect trade secrets and proprietary data with advanced classification",
-      icon: Cpu,
-      color: "from-orange-500 to-red-500"
-
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     {;
       industry: "Technology",;
       title: "Intellectual Property",;
@@ -311,7 +240,6 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI Data Governance - Zion Tech Group"
         description="Protect your data with AI-powered governance solutions. Automated classification, access control, and compliance management for enterprise data security."
       />
@@ -383,15 +311,9 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
               Everything you need to secure, classify, and govern your data with AI intelligence
             </p>
           </div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)             => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)              => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
                 initial = {
@@ -450,15 +372,9 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
               See how AI Data Governance transforms data security and compliance
             </p>
           </div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)             => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index)              => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
                 initial = {
@@ -516,15 +432,9 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
               Built-in compliance for major regulatory frameworks and industry standards
             </p>
           </div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {complianceFrameworks.map((framework, index)             => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {complianceFrameworks.map((framework, index)              => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
                 initial = {
@@ -583,15 +493,9 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
               Tailored data governance for your industry's unique requirements
             </p>
           </div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)             => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {useCases.map((useCase, index)              => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
                 initial = {
@@ -655,15 +559,9 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
               Choose the plan that fits your data governance needs
             </p>
           </div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)             => (
-=======
           
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricingPlans.map((plan, index)              => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
                 initial = {
@@ -780,14 +678,6 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
               <button className="px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300">
                 Schedule Demo
               </button>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </div>;
           </motion.div>;
         </div>;
@@ -795,6 +685,5 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default AIDataGovernance;}}}}}}

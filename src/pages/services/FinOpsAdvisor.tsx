@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO               } from '@/components/SEO';
-=======
 import React from 'react.ts';
 import SEO from '@/components/SEO';
 
@@ -147,11 +143,6 @@ export default function FinOpsAdvisor(...args: []):  {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>
-  );
-}
-=======
 
       {/* Services Section */}
       <section className="py-20 bg-slate-800/30">
@@ -496,4 +487,3 @@ export default function FinOpsAdvisor(...args: []):  {
 
 export default FinOpsAdvisor;
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

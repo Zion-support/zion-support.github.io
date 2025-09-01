@@ -18,124 +18,6 @@ const loginSchema = z.object({
 });
 
 function LoginForm() {
-<<<<<<< HEAD
-    const { login, isLoading } = useAuth();
-    const navigate = useNavigate();
-    const [showPassword, setShowPassword] = useState(false);
-    const [isSubmitting, setIsSubmitting] = useState(false);
-
-    const form = useForm({
-        resolver: zodResolver(loginSchema),
-        defaultValues: {
-            email: "",
-            password: "",
-        },
-    });
-
-    const onSubmit = async (data) => {
-        if (isSubmitting) return;
-        
-        try {
-            setIsSubmitting(true);
-            await login(data.email, data.password);
-            navigate("/");
-        } catch (error) {
-            form.setError("root", { message: error.message || "Login failed" });
-        } finally {
-            setIsSubmitting(false);
-        }
-    };
-
-    return (
-        <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" autoComplete="off">
-                {form.formState.errors.root && (
-                    <p className="text-red-400 text-sm" role="alert">
-                        {form.formState.errors.root.message}
-                    </p>
-                )}
-
-                <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                        <FormItem>
-                            <FormLabel className="text-gray-300">Email address</FormLabel>
-                            <FormControl>
-                                <div className="relative">
-                                    <Input
-                                        placeholder="you@example.com"
-                                        className="bg-slate-800 pl-10 placeholder:text-gray-400 border-slate-600 focus:border-blue-500"
-                                        {...field}
-                                        autoComplete="off"
-                                    />
-                                    <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
-                                </div>
-                            </FormControl>
-                            <FormMessage className="text-red-400" />
-                        </FormItem>
-                    )}
-                />
-
-                <FormField
-                    control={form.control}
-                    name="password"
-                    render={({ field }) => (
-                        <FormItem>
-                            <FormLabel className="text-gray-300">Password</FormLabel>
-                            <FormControl>
-                                <div className="relative">
-                                    <Input
-                                        type={showPassword ? "text" : "password"}
-                                        placeholder="••••••••"
-                                        className="bg-slate-800 pl-10 pr-12 border-slate-600 focus:border-blue-500"
-                                        {...field}
-                                        autoComplete="off"
-                                    />
-                                    <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
-                                    <Button
-                                        type="button"
-                                        variant="ghost"
-                                        size="sm"
-                                        className="absolute right-1 top-1/2 transform -translate-y-1/2 text-gray-400 h-8 hover:text-blue-400"
-                                        onClick={() => setShowPassword(!showPassword)}
-                                    >
-                                        {showPassword ? (
-                                            <EyeOff className="h-4 w-4" />
-                                        ) : (
-                                            <Eye className="h-4 w-4" />
-                                        )}
-                                        <span className="sr-only">
-                                            {showPassword ? "Hide password" : "Show password"}
-                                        </span>
-                                    </Button>
-                                </div>
-                            </FormControl>
-                            <FormMessage className="text-red-400" />
-                        </FormItem>
-                    )}
-                />
-
-                <div className="flex items-center justify-between">
-                    <div className="text-sm">
-                        <Link to="/forgot-password" className="font-medium text-blue-400 hover:text-blue-300">
-                            Forgot your password?
-                        </Link>
-                    </div>
-                </div>
-
-                <Button
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
-                    disabled={isLoading || isSubmitting}
-                >
-                    {isLoading || isSubmitting ? "Logging in..." : "Login"}
-                </Button>
-            </form>
-            <LoadingOverlay visible={isLoading || isSubmitting} />
-        </Form>
-    );
-=======
   const { login, isLoading } = useAuth();
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
@@ -289,7 +171,6 @@ function LoginForm() {
       </form>
     </Form>
   );
->>>>>>> cursor/add-new-services-and-advertise-them-650b
 }
 
 export default LoginForm;

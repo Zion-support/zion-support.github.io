@@ -13,11 +13,7 @@ export const FormItem = ({ children, className = '' }) => {
 };
 
 export const FormControl = ({ children }) => {
-<<<<<<< HEAD
-  return <div>{children}</div>;
-=======
   return <>{children}</>;
->>>>>>> cursor/add-new-services-and-advertise-them-650b
 };
 
 export const FormLabel = ({ children, className = '' }) => {

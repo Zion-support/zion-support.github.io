@@ -80,12 +80,8 @@ import { Brain,
   Cpu as CpuIcon2,
   Network as NetworkIcon,
   Leaf as LeafIcon
-<<<<<<< HEAD
-import { SEO            } from '@/components/SEO';
-=======
 } from 'lucide-react';
 import SEO from "@/components/SEO";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import { ULTIMATE_INNOVATIVE_SERVICES_2026            } from '@/data/ultimateInnovativeServices2026';
 
 export default function ComprehensiveServicesOverview2026(...args[]: any):  {
@@ -209,17 +205,8 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
       description: 'AI solutions for environmental sustainability and green innovation',
       icon: LeafIcon,
       color: 'from-green-500 to-blue-500',
-<<<<<<< HEAD
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s             => s.category === 'Sustainable Technology'),
-      marketSize: '$1.2 trillion by 2027',
-      avgROI: '300-800%',
-<<<<<<< HEAD
-      innovationLevel: 'Advanced'
-
-=======
       innovationLevel: 'Advanced';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const filteredCategories = selectedCategory === 'all'
@@ -228,7 +215,6 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
   const toggleCategoryExpansion = (categoryId: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
     setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const totalMarketSize = '$3.2+ trillion';
   const avgROI = '400-1500%';
@@ -515,15 +501,9 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
 }}
                         transition={{ duration: 0.3 }}
                         className="mt-6 pt-6 border-t border-zion-slate-600/30"
-<<<<<<< HEAD
-
-                        <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6">
-                          {category.services.map((service, serviceIndex)            => (
-=======
                       >
                         <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6">
                           {category.services.map((service, serviceIndex)             => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                             <div key={service.id} className="bg-zion-slate-800/30 rounded-lg p-6 border border-zion-slate-600/30">
                               <div className="flex items-start justify-between mb-4">
                                 <h4 className="text-lg font-semibold text-white">{service.title}</h4>
@@ -638,23 +618,10 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
             <div className="mt-8 text-zion-slate-400">
               <p>Mobile: +1 302 464 0950 | Email: kleber@ziontechgroup.com</p>
               <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -16,18 +16,6 @@ import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChar
       price: '$299/mo',
       details: ['Up to 5 facilities', 'Basic energy monitoring', 'Standard reporting', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Professional',
-      price: '$799/mo',
-      details: ['Up to 25 facilities', 'Advanced AI optimization', 'Custom analytics', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$1,999/mo',
-      details: ['Unlimited facilities', 'Custom AI models', 'Full system integration', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Professional', 
       price: '$799/mo', 
@@ -38,7 +26,6 @@ import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChar
       price: '$1,999/mo', ;
       details: ['Unlimited facilities', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [;

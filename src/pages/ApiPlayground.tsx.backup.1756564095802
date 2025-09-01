@@ -1,11 +1,7 @@
 import React, { useState } from 'react.ts';
-<<<<<<< HEAD
-import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info export default function ApiPlayground(...args: any[]): any {
-=======
 import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info              } from 'lucide-react.ts';
 
 export default function ApiPlayground(...args: any[]): any {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [activeMethod, setActiveMethod] = useState('all');
@@ -206,16 +202,6 @@ export default function ApiPlayground(...args: any[]): any {
             location: "building-a",
             status: "active",
             last_reading: 22.5
-<<<<<<< HEAD
-
-        ],
-        total: 1
-      },
-      documentation: 'https://docs.ziontechgroup.com/api/iot-devices',
-      sdk: 'https://github.com/ziontechgroup/iot-sdk',
-      featured: false
-
-=======
           }
         ],;
         total: 1;
@@ -224,17 +210,9 @@ export default function ApiPlayground(...args: any[]): any {
       sdk: 'https://github.com/ziontechgroup/iot-sdk',;
       featured: false;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   // Update counts
-<<<<<<< HEAD
-  categories.forEach(cat = > {;
-    cat.count = apis.filter(api => api.category === cat.id).length});
-
-  methods.forEach(method = > {;
-    method.count = apis.filter(api => api.method === method.id).length});
-=======
   categories.forEach(cat = > {;
     cat.count = apis.filter(api => api.category === cat.id).length;
   });
@@ -242,7 +220,6 @@ export default function ApiPlayground(...args: any[]): any {
   methods.forEach(method = > {;
     method.count = apis.filter(api => api.method === method.id).length;
   });
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const filteredApis = apis.filter(api => {;
     const matchesSearch = api.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -254,61 +231,12 @@ export default function ApiPlayground(...args: any[]): any {
     return matchesSearch && matchesCategory && matchesMethod;
   });
 
-<<<<<<< HEAD
-  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    return categories.find(c => c.id === categoryId)?.icon || <Code className="w-5 h-5" />};
-
-  const getMethodColor = (method: anyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    return methods.find(m => m.id === method)?.color || 'text-zion-slate-light'};
-
-  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
-    return categories.find(c => c.id === categoryId)?.icon || <Code className="w-5 h-5" />;
-  };
-
-  const getMethodColor = (method: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
-    return methods.find(m => m.id === method)?.color || 'text-zion-slate-light';
-  };
-
-  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
-    switch (status) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'stable': return 'text-green-400';
-      case 'beta': return 'text-yellow-400';
-      case 'alpha': return 'text-red-400';
-<<<<<<< HEAD
-      default: return 'text-zion-slate-light';
-
-=======
       default: return 'text-zion-slate-light'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-<<<<<<< HEAD
-  const handleApiSelect = (api: anyanyanyanyanyanyanyanyanyanyanyany)             => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    setSelectedApi(api);
-    setRequestBody(JSON.stringify(api.requestExample, null, 2));
-    setResponseData('');
-    setActiveTab('playground')};
-
-  const handleTestApi = async () => {;
-    if (!selectedApi) return;
-
-    setIsLoading(true);
-
-    // Simulate API call
-    setTimeout(() => {
-      setResponseData(JSON.stringify(selectedApi.responseExample, null, 2));
-      setIsLoading(false)}, 1500)};
-
-<<<<<<< HEAD
-  const copyToClipboard = (text: anyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    navigator.clipboard.writeText(text)};
-=======
   const copyToClipboard = (text: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
     navigator.clipboard.writeText(text);
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const downloadResponse = () => {;
     if (!responseData) return;
@@ -680,23 +608,10 @@ export default function ApiPlayground(...args: any[]): any {
             </button>
             <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-zion-slate-dark transition-colors">
               View Documentation
-<<<<<<< HEAD
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  )};
-=======;
             </button>;
           </div>;
         </div>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

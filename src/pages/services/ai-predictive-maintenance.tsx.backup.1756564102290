@@ -16,15 +16,6 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
     {
       icon: AlertTriangle,
       title: 'Early Warning System',
-<<<<<<< HEAD
-      description: 'Proactive alerts before equipment failure'
-    },
-    {
-      icon: BarChart3,
-      title: 'Performance Analytics',
-      description: 'Data-driven insights for optimization'
-
-=======
       description: 'Proactive alerts before equipment failure';
     },;
     {;
@@ -32,7 +23,6 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
       title: 'Performance Analytics',;
       description: 'Data-driven insights for optimization';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const applications = [
@@ -49,15 +39,6 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
     {
       title: 'Transportation',
       description: 'Fleet maintenance and vehicle optimization',
-<<<<<<< HEAD
-      icon: '🚚'
-    },
-    {
-      title: 'Healthcare',
-      description: 'Medical equipment maintenance and reliability',
-      icon: '🏥'
-
-=======
       icon: '🚚';
     },;
     {;
@@ -65,7 +46,6 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
       description: 'Medical equipment maintenance and reliability',;
       icon: '🏥';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [;
@@ -78,13 +58,8 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI Predictive Maintenance Services - Zion Tech Group"
         description="Transform your maintenance operations with AI-powered predictive maintenance. Prevent equipment failures and optimize performance with intelligent monitoring."
       />

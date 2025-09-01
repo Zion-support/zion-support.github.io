@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Server, Network, Database, Shield, Cpu, HardDrive, Zap, BarChart3 const InfrastructureServices = () => {
-=======
 import React from 'react.ts';
 import { Server, Network, Database, Shield, Cpu, HardDrive, Zap, BarChart3             } from 'lucide-react.ts';
 
 const InfrastructureServices = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const infrastructureServices = [
     {
       title: "Network Design & Management",
@@ -22,15 +17,6 @@ const InfrastructureServices = () => {
       features: ["Server management", "Performance tuning", "Backup & recovery", "Security updates"],
       icon: Server
     },
-<<<<<<< HEAD
-    {
-      title: "Data Center Solutions",
-      description: "Reliable hosting, colocation, and data center management.",
-      price: "From $8,000/month",
-      features: ["Colocation services", "Managed hosting", "Disaster recovery", "Compliance support"],
-      icon: Database
-
-=======
     {;
       title: "Data Center Solutions",;
       description: "Reliable hosting, colocation, and data center management.",;
@@ -38,7 +24,6 @@ const InfrastructureServices = () => {
       features: ["Colocation services", "Managed hosting", "Disaster recovery", "Compliance support"],;
       icon: Database;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const technologies = [
@@ -53,15 +38,6 @@ const InfrastructureServices = () => {
       description: "Enterprise storage and backup systems",
       icon: HardDrive,
       features: ["SAN/NAS systems", "Backup solutions", "Data replication", "Disaster recovery"]
-<<<<<<< HEAD
-    },
-    {
-      name: "Network Security",
-      description: "Advanced network protection and monitoring",
-      icon: Shield,
-      features: ["Firewall management", "Intrusion detection", "VPN solutions", "Security monitoring"]
-
-=======
     },;
     {;
       name: "Network Security",;
@@ -69,7 +45,6 @@ const InfrastructureServices = () => {
       icon: Shield,;
       features: ["Firewall management", "Intrusion detection", "VPN solutions", "Security monitoring"];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [;

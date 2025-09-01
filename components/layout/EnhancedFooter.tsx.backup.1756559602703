@@ -21,29 +21,12 @@ import { Twitter,
   HelpCircle,
   Lock,
   Award
-<<<<<<< HEAD
-=======
            } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const footerNavigation = {
   services: {
 		title: 'Services',
-<<<<<<< HEAD
-		items[
-			{ name: 'AI Solutions',
-  href: '/services/ai-solutions' 
-
-},
-=======
 		items: [
-<<<<<<< HEAD
-			{ name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
-			{ name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform' },
-			{ name: 'Micro SAAS Platform', href: '/services/micro-saas-platform' },
-			{ name: 'AI Content Creation', href: '/services/ai-content-creation-suite' },
-			{ name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
-=======
 			{ name: 'AI Solutions',
   href: '/services/ai-solutions' 
 
@@ -51,27 +34,21 @@ const footerNavigation = {
 
 
 },
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 			{ name: 'Cloud & DevOps', href: '/services/cloud' },
 			{ name: 'Cybersecurity', href: '/services/cybersecurity' },
 			{ name: 'Data & Analytics', href: '/services/data' },
 			{ name: 'Micro SaaS', href: '/services/micro-saas' },
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 			{ name: 'Digital Transformation', href: '/services/transformation' },
 		],
 	},
 	solutions: {
 		title: 'Solutions',
-<<<<<<< HEAD
-		items: [
-=======
 		items[
 			{ name: 'Enterprise', href: '/solutions/enterprise' },
 			{ name: 'SMB', href: '/solutions/smb' },
 			{ name: 'Startup', href: '/solutions/startup' },
 			{ name: 'Government', href: '/solutions/government' },
 			{ name: 'Healthcare', href: '/solutions/healthcare' },
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 			{ name: 'Financial Services', href: '/solutions/financial' },
 			{ name: 'Healthcare', href: '/solutions/healthcare' },
 			{ name: 'Manufacturing', href: '/solutions/manufacturing' },
@@ -119,16 +96,10 @@ const quickLinks = [;
 	{ name: 'Status', href: '/status', icon: Cloud },;
 ];
 
-<<<<<<< HEAD
-const EnhancedFooter: React.FC = (): JSX.Element => {;
-	const scrollToTop = () => {;
-		window.scrollTo({ top: 0, behavior: 'smooth' })};
-=======
 const EnhancedFooter: React.FC = (): JSX.Element => {;
 	const scrollToTop = () => {;
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	};
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 	return (
 		<footer className = "bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark border-t border-zion-blue-light pt-16 pb-8 relative overflow-hidden">
@@ -301,14 +272,6 @@ const EnhancedFooter: React.FC = (): JSX.Element => {;
 			<button
 				onClick={scrollToTop}
 				className="fixed bottom-6 right-6 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-3 rounded-full shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 z-40 hover:scale-110"
-<<<<<<< HEAD
-				aria-label="Scroll to top"
-
-				<ArrowUp className="w-5 h-5" />
-			</button>;
-		</footer>;
-	)};
-=======
 				aria-label="Scroll to top";
 			>;
 				<ArrowUp className="w-5 h-5" />;
@@ -316,7 +279,6 @@ const EnhancedFooter: React.FC = (): JSX.Element => {;
 		</footer>;
 	);
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default EnhancedFooter;
 }

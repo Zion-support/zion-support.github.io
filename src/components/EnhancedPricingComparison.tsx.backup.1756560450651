@@ -81,14 +81,6 @@ export const EnhancedPricingComparison = () => {
             </ul>
             <Link to="/pricing" className="block w-full text-center bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
               Contact Sales
-<<<<<<< HEAD
-            </Link>
-          </div>
-        </div>
-      </div>;
-    </section>;
-  )};
-=======
             </Link>;
           </div>;
         </div>;
@@ -96,6 +88,5 @@ export const EnhancedPricingComparison = () => {
     </section>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default EnhancedPricingComparison;

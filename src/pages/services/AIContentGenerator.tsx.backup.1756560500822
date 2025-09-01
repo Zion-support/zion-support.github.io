@@ -1,15 +1,5 @@
 import React from 'react.ts';
 import { motion            } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { SEO            } from '@/components/SEO';
-import { PenTool,
-  FileText,
-  Image,
-  Video,
-  Globe,
-  Zap,
-  Brain,
-=======
 import SEO from '@/components/SEO';
 import { 
   PenTool, 
@@ -19,7 +9,6 @@ import {
   Globe, 
   Zap, 
   Brain, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Shield,
   CheckCircle,
   TrendingUp,
@@ -29,13 +18,9 @@ import {
   BarChart3,
   Users,
   Sparkles
-<<<<<<< HEAD
-export default function AIContentGenerator(...args: any[]): any {
-=======
            } from 'lucide-react.ts';
 
 export default function AIContentGenerator(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: PenTool,
@@ -92,30 +77,9 @@ export default function AIContentGenerator(...args[]: any):  {
     },
     {
       icon: Video,
-<<<<<<< HEAD
-      title: 'Video Content Creation',
-      description: 'Generate video scripts, storyboards, and even short video clips with AI technology'
-    },
-    {
-      icon: Search,
-      title: 'SEO-Optimized Content',
-      description: 'AI automatically optimizes content for search engines with keyword research and semantic analysis'
-    },
-    {
-      icon: Target,
-      title: 'Audience Targeting',
-      description: 'Content tailored to specific demographics, industries, and customer personas'
-    },
-    {
-      icon: BarChart3,
-      title: 'Performance Analytics',
-      description: 'Track content performance with AI-powered insights and optimization recommendations'
-
-=======
       title: "Video Scripts",
       description: "Scripts for YouTube, TikTok, and marketing videos";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const pricingPlans = [
@@ -151,23 +115,6 @@ export default function AIContentGenerator(...args[]: any):  {
       popular: true
     },
     {
-<<<<<<< HEAD
-      name: "Content Enterprise",
-      price: "$299",
-      period: "/month",
-      description: "For large organizations with high-volume content needs",
-      features[
-        "Unlimited content generation",
-        "Custom AI models",
-        "White-label solutions",
-        "Dedicated content manager",
-        "Advanced analytics",
-        "Custom training",
-        "On-premise options"
-      ],
-      popular: false
-    }
-=======
       icon: Target,
       title: 'Audience Targeting',
       description: 'Content tailored to specific demographics, industries, and customer personas';
@@ -177,7 +124,6 @@ export default function AIContentGenerator(...args[]: any):  {
       title: 'Performance Analytics',;
       description: 'Track content performance with AI-powered insights and optimization recommendations';
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const benefits = [;
@@ -235,15 +181,6 @@ export default function AIContentGenerator(...args[]: any):  {
         'Custom AI model training',
         'White-label solution',
         'Dedicated account manager',
-<<<<<<< HEAD
-        'SLA guarantees',
-        'Advanced security features',
-        'Custom integrations'
-      ],
-      cta: 'Contact Sales',
-      popular: false
-
-=======
         'SLA guarantees',;
         'Advanced security features',;
         'Custom integrations';
@@ -251,18 +188,12 @@ export default function AIContentGenerator(...args[]: any):  {
       cta: 'Contact Sales',;
       popular: false;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
     <>
-<<<<<<< HEAD
-      <SEO
-        title="AI Content Generator - Create Engaging Content with AI"
-=======
       <SEO 
         title = "AI Content Generator - Create Engaging Content with AI"
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         description="Generate high-quality, SEO-optimized content 10x faster with AI. Create articles, images, videos, and more for blogs, social media, and marketing campaigns."
         canonical="/services/ai-content-generator"
       />
@@ -300,13 +231,8 @@ export default function AIContentGenerator(...args[]: any):  {
                 AI Content Generator
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
-<<<<<<< HEAD
-                Create engaging, SEO-optimized content 10x faster with artificial intelligence.
-                Generate articles, images, videos, and more for any platform.
-=======
                 Create engaging, SEO-optimized content 10x faster with artificial intelligence. 
                 Generate articles, images, videos, and more for  platform.
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
@@ -728,23 +654,10 @@ export default function AIContentGenerator(...args[]: any):  {
                   Schedule Demo
                 </button>
               </div>
-<<<<<<< HEAD
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
-  )};
-=======;
             </motion.div>;
           </div>;
         </section>;
       </div>;
     </>;
   );
-<<<<<<< HEAD
-}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

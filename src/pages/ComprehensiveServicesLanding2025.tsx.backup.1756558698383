@@ -1,197 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react.ts';
-import { motion           } from 'framer-motion.ts';
-import { Link           } from 'react-router-dom.ts';
-import { Search, Filter, Star, TrendingUp, Zap, Brain, Shield, Cloud, Rocket, Heart, Globe, Cpu, Lock, Users, DollarSign, Clock, Target, Award, CheckCircle, ArrowRight, Phone, Mail, MapPin, ExternalLink, ChevronRight, Sparkles, Flame, Lightning, Sun, Moon, Planet, Galaxy, Universe, Infinity, Alpha, Beta, Gamma, Delta, Epsilon, Zeta, Eta, Theta, Iota, Kappa, Lambda, Mu, Nu, Xi, Omicron, Pi, Rho, Sigma, Tau, Upsilon, Phi, Chi, Psi, Omega           } from 'lucide-react.ts';
-import { SEO           } from '@/components/SEO';
-
-const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {;
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-
-  const serviceCategories = [
-    {
-      id: 'ai-services',
-      title: 'AI & Machine Learning',
-      description: 'Cutting-edge artificial intelligence solutions for business transformation',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-      services[
-        'AI Business Intelligence Platform',
-        'AI Sales Copilot',
-        'AI Compliance Assistant',
-        'AI Auto Email Responder',
-        'AI Compliance Copilot',
-        'LLM Content Studio'
-      ],
-      href: '/ai-services',
-      featured: true
-    },
-    {
-      id: 'quantum-services',
-      title: 'Quantum Computing',
-      description: 'Next-generation quantum solutions for complex problem solving',
-      icon: Zap,
-      color: 'from-cyan-500 to-blue-500',
-      services[
-        'Quantum AI Hybrid Platform',
-        'Quantum Financial Trading',
-        'Quantum Internet Security',
-        'Quantum Neural Networks',
-        'Quantum Edge Computing',
-        'Quantum Cloud Infrastructure'
-      ],
-      href: '/revolutionary-services-2030',
-      featured: true
-    },
-    {
-      id: 'cybersecurity',
-      title: 'Cybersecurity',
-      description: 'Advanced security solutions for the digital age',
-      icon: Shield,
-      color: 'from-red-500 to-orange-500',
-      services[
-        'AI-Powered Cybersecurity Platform',
-        'Zero Trust Architecture',
-        'Threat Intelligence',
-        'Incident Response',
-        'Compliance Automation',
-        'Security Analytics'
-      ],
-      href: '/services',
-      featured: true
-    },
-    {
-      id: 'cloud-devops',
-      title: 'Cloud & DevOps',
-      description: 'Scalable cloud infrastructure and automation solutions',
-      icon: Cloud,
-      color: 'from-blue-500 to-indigo-500',
-      services[
-        'Cloud Infrastructure Management',
-        'DevOps Automation',
-        'Container Orchestration',
-        'Serverless Architecture',
-        'Cloud Migration',
-        'Performance Optimization'
-      ],
-      href: '/services/cloud-devops',
-      featured: false
-    },
-    {
-      id: 'it-infrastructure',
-      title: 'IT Infrastructure',
-      description: 'Enterprise-grade infrastructure and support services',
-      icon: Cpu,
-      color: 'from-green-500 to-emerald-500',
-      services[
-        'Network Infrastructure',
-        'Data Center Management',
-        'Onsite IT Support',
-        'Green IT Solutions',
-        '5G Network Solutions',
-        'IoT Edge Computing'
-      ],
-      href: '/services/it-infrastructure',
-      featured: false
-    },
-    {
-      id: 'micro-saas',
-      title: 'Micro SaaS Solutions',
-      description: 'Productized software solutions for specific business needs',
-      icon: Rocket,
-      color: 'from-yellow-500 to-orange-500',
-      services[
-        'Customer Feedback Surveys',
-        'FinOps Advisor',
-        'Business Intelligence Tools',
-        'Process Automation',
-        'Analytics Dashboards',
-        'Integration Platforms'
-      ],
-      href: '/micro-saas',
-      featured: true
-    },
-    {
-      id: 'healthcare-tech',
-      title: 'Healthcare Technology',
-      description: 'AI-powered healthcare solutions and diagnostics',
-      icon: Heart,
-      color: 'from-pink-500 to-rose-500',
-      services[
-        'AI Healthcare Diagnostics',
-        'Medical Imaging Analysis',
-        'Patient Care Optimization',
-        'Telemedicine Platforms',
-        'Clinical Decision Support',
-        'Healthcare Analytics'
-      ],
-      href: '/revolutionary-services-2030',
-      featured: false
-    },
-    {
-      id: 'smart-cities',
-      title: 'Smart Cities & IoT',
-      description: 'Sustainable urban infrastructure and IoT solutions',
-      icon: Globe,
-      color: 'from-teal-500 to-cyan-500',
-      services[
-        'Sustainable Smart City Platform',
-        'IoT Infrastructure Management',
-        'Energy Grid Optimization',
-        'Traffic Management',
-        'Environmental Monitoring',
-        'Public Safety Systems'
-      ],
-      href: '/revolutionary-services-2030',
-      featured: false
-    },
-    {
-      id: 'education-tech',
-      title: 'Education Technology',
-      description: 'AI-powered learning and educational platforms',
-      icon: Users,
-      color: 'from-indigo-500 to-purple-500',
-      services[
-        'AI Education Platform',
-        'Personalized Learning',
-        'Intelligent Tutoring',
-        'Student Analytics',
-        'Content Management',
-        'Assessment Tools'
-      ],
-      href: '/revolutionary-services-2030',
-      featured: false
-    },
-    {
-      id: 'manufacturing',
-      title: 'Manufacturing & Industry 4.0',
-      description: 'Smart manufacturing and industrial automation',
-      icon: Cpu,
-      color: 'from-slate-500 to-gray-500',
-      services[
-        'AI Manufacturing Platform',
-        'Predictive Maintenance',
-        'Quality Control Automation',
-        'Supply Chain Optimization',
-        'Industrial IoT',
-        'Smart Factory Solutions'
-      ],
-      href: '/revolutionary-services-2030',
-      featured: false;
-    };
-  };
-
-  const filteredCategories = useMemo(() => {;
-    if (!searchQuery.trim()) return serviceCategories;
-    
-    const query = searchQuery.toLowerCase();
-    return serviceCategories.filter(category = >
-      category.title.toLowerCase().includes(query) ||
-      category.description.toLowerCase().includes(query) ||;
-      category.services.some(service => service.toLowerCase().includes(query));
-    )}, [searchQuery]);
-=======
 import React from 'react.ts';
 import { motion          } from 'framer-motion.ts';
 import { Link          } from 'react-router-dom.ts';
@@ -231,12 +37,8 @@ import { Search,
   MapPin,
   Globe as GlobeIcon,
   ExternalLink
-<<<<<<< HEAD
-import { SEO          } from '../components/SEO';
-=======
 } from 'lucide-react';
 import SEO from '../components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import { INNOVATIVE_SERVICES_2025          } from '../data/innovativeServices2025';
 
 const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {;
@@ -293,7 +95,6 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {;
         return 'from-gray-500 to-slate-500';
 
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const categories = Array.from(new Set(INNOVATIVE_SERVICES_2025.map(service => service.category)));
   const servicesByCategory = categories.map(category => ({;
@@ -310,13 +111,8 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {;
   }, 0) / totalServices;
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Comprehensive Services Landing 2025 - Zion Tech Group"
         description="Discover our complete portfolio of innovative technology services. From AI and Quantum Computing to IoT and Blockchain solutions - transform your business with cutting-edge technology."
       />
@@ -456,12 +252,6 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {;
                       <div className={`text-${categoryData.color.split('-')[1]}-400`}>
                         {categoryData.icon}
                       </div>
-<<<<<<< HEAD
-                    </div>
-
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
-                      {categoryData.category}
-=======
                     ))}
                     {category.services.length > 3 && (
                       <div className="text-xs text-slate-400">
@@ -523,7 +313,6 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {;
                   <div className="flex-1 min-w-0">
                     <h3 className="font-semibold mb-2 group-hover:text-cyan-300 transition-colors">
                       {category.title}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     </h3>
 
                     <p className="text-gray-300 mb-6">
@@ -823,14 +612,6 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {;
             <div className="mt-6 text-sm text-gray-400">
               <p>364 E Main St STE 1008, Middletown DE 19709</p>
               <p>Visit us at: <a href="https://ziontechgroup.com" className="text-blue-400 hover:underline">ziontechgroup.com</a></p>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </div>;
           </motion.div>;
         </div>;
@@ -838,6 +619,5 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default ComprehensiveServicesLanding2025;}}}}

@@ -36,18 +36,6 @@ import { Wrench, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, AlertT
       price: '$399/mo',
       details: ['Up to 50 assets', 'Basic AI prediction', 'Standard monitoring', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Maintenance Professional',
-      price: '$999/mo',
-      details: ['Up to 500 assets', 'Advanced AI features', 'Custom dashboards', 'Priority support']
-    },
-    {
-      name: 'Enterprise Maintenance',
-      price: '$2,999/mo',
-      details: ['Unlimited assets', 'Full AI suite', 'White-label options', '24/7 support']
-    },
-=======
     { 
       name: 'Maintenance Professional', 
       price: '$999/mo', 
@@ -58,7 +46,6 @@ import { Wrench, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, AlertT
       price: '$2,999/mo', ;
       details: ['Unlimited assets', 'Full AI suite', 'White-label options', '24/7 support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (

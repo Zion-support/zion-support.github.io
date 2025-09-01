@@ -20,13 +20,9 @@ import { Brain,
   Lightbulb,
   Target,
   Award
-<<<<<<< HEAD
-const InnovativeServices: React.FC = (): JSX.Element => {
-=======
            } from 'lucide-react.ts';
 
 const InnovativeServices: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const innovations = [
     {
       id: 'ai-automation',
@@ -135,14 +131,6 @@ const InnovativeServices: React.FC = (): JSX.Element => {
         'Renewable energy optimization',
         'Carbon footprint tracking',
         'Sustainable infrastructure',
-<<<<<<< HEAD
-        'Green data centers'
-      ],
-      benefits['Environmental impact', 'Cost savings', 'Regulatory compliance'],
-      color: 'from-zion-blue to-zion-green'
-<<<<<<< HEAD
-
-=======
     };
 =======;
         'Green data centers';
@@ -150,8 +138,6 @@ const InnovativeServices: React.FC = (): JSX.Element => {
       benefits: ['Environmental impact', 'Cost savings', 'Regulatory compliance'],;
       color: 'from-zion-blue to-zion-green';
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const stats = [;
@@ -438,14 +424,6 @@ const InnovativeServices: React.FC = (): JSX.Element => {
 
                 Contact Our Team
               </motion.button>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </div>;
           </motion.div>;
         </div>;
@@ -453,6 +431,5 @@ const InnovativeServices: React.FC = (): JSX.Element => {
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default InnovativeServices;}}

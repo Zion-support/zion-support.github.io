@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { SEO              } from '@/components/SEO';
-import { Shield,
-  Database,
-  Lock,
-  Eye,
-  Search,
-  FileText,
-  Users,
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import React from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 import { SEO               } from '@/components/SEO';
@@ -56,15 +41,8 @@ import { Shield,
   EyeOn,
   LockOpen,
   LockClosed
-<<<<<<< HEAD
- } from 'lucide-react';
-=======
-<<<<<<< HEAD
-const AIDataGovernance: React.FC = (): JSX.Element => {
-=======
               } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const AIDataGovernance: React.FC = (): JSX.Element => {
   const features = [
     {
@@ -310,20 +288,9 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
               Everything you need to secure, classify, and govern your data with AI intelligence
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
-=======
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)              => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -362,20 +329,9 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
               See how AI Data Governance transforms data security and compliance
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)  => (
-=======
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)              => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -413,20 +369,9 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
               Built-in compliance for major regulatory frameworks and industry standards
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {complianceFrameworks.map((framework, index)  => (
-=======
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {complianceFrameworks.map((framework, index)              => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {complianceFrameworks.map((framework, index)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -465,20 +410,9 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
               Tailored data governance for your industry's unique requirements
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
-=======
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)              => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {useCases.map((useCase, index)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -522,20 +456,9 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
               Choose the plan that fits your data governance needs
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)  => (
-=======
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)              => (
-=======
           
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricingPlans.map((plan, index)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {

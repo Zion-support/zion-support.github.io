@@ -16,15 +16,6 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
     {
       icon: Target,
       title: 'Performance Analytics',
-<<<<<<< HEAD
-      description: 'Data-driven insights for better decisions'
-    },
-    {
-      icon: Shield,
-      title: 'Compliance Automation',
-      description: 'Automated HR compliance and reporting'
-
-=======
       description: 'Data-driven insights for better decisions';
     },;
     {;
@@ -32,7 +23,6 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
       title: 'Compliance Automation',;
       description: 'Automated HR compliance and reporting';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const modules = [
@@ -49,15 +39,6 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
     {
       title: 'Learning & Development',
       description: 'Personalized training and skill development',
-<<<<<<< HEAD
-      icon: '🎓'
-    },
-    {
-      title: 'Employee Engagement',
-      description: 'Monitor and improve workplace satisfaction',
-      icon: '❤️'
-
-=======
       icon: '🎓';
     },;
     {;
@@ -65,7 +46,6 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
       description: 'Monitor and improve workplace satisfaction',;
       icon: '❤️';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [;
@@ -78,13 +58,8 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI HR Platform Services - Zion Tech Group"
         description="Transform your HR operations with AI-powered recruitment, talent management, and performance analytics. Streamline HR processes and improve employee experience."
       />

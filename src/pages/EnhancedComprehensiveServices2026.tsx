@@ -55,26 +55,11 @@ import { Brain,
   Zap as ZapIcon,
   Grid,
   List
-<<<<<<< HEAD
- } from 'lucide-react';
-// Import our existing service data
-import { ultimateInnovativeServices2026 } from "../data/ultimateInnovativeServices2026";
-import { zion2026ComprehensiveServices } from "../data/zion2026ComprehensiveServices";
-interface Service {
-=======
-<<<<<<< HEAD
-=======
               } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Import our existing service data
-<<<<<<< HEAD
-import { ultimateInnovativeServices2026               } from '../data/ultimateInnovativeServices2026';
-import { zion2026ComprehensiveServices               } from '../data/zion2026ComprehensiveServices';
-=======
 import { ultimateInnovativeServices2026              } from '../data/ultimateInnovativeServices2026';
 import { zion2026ComprehensiveServices              } from '../data/zion2026ComprehensiveServices';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 interface Service {
 
@@ -91,7 +76,6 @@ interface Service {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   category: string;
@@ -132,54 +116,7 @@ billingCycle: string;
   marketSize?: string;
   growthRate?: string;
   roi?: string}
-<<<<<<< HEAD
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-<<<<<<< HEAD
-const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<any>('All');
-  const [sortBy, setSortBy] = useState<any>('name');
-  const [selectedService, setSelectedService] = useState<any>(null);
-  const [viewMode, setViewMode] = useState<any>('grid');
-
-  // Combine services from multiple sources
-  const allServices: Service[] = useMemo(() => {
-    const services: Service[] = [];
-
-    // Add services from ultimateInnovativeServices2026
-    ultimateInnovativeServices2026.forEach(service = > {
-      services.push({
-        id: service.id,
-        name: service.name,
-        category: service.category,
-        description: service.description,
-        features: service.features,
-        benefits: service.benefits,
-        pricing: {
-          starter: service.pricing.starter,
-          professional: service.pricing.professional,
-          enterprise: service.pricing.enterprise,
-          currency: service.pricing.currency,
-          billingCycle: service.pricing.billingCycle
-        },
-        rating: service.rating,
-        reviewCount: service.reviewCount,
-        launchDate: service.launchDate,
-<<<<<<< HEAD
-        status: service.status,
-        marketPrice: service.marketPrice,
-        estimatedDelivery: service.estimatedDelivery,
-        website: service.website,;
-        contactInfo: service.contactInfo;
-      })});
-
-    // Add services from zion2026ComprehensiveServices
-    zion2026ComprehensiveServices.forEach(service = > {;
-=======;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         status: service.status,;
         marketPrice: service.marketPrice,;
         estimatedDelivery: service.estimatedDelivery,;
@@ -242,77 +179,14 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {;
         filtered.sort((a, b) => (b.innovationLevel || b.rating.toString()).localeCompare(a.innovationLevel || a.rating.toString()));
         break}
     return filtered}, [allServices, searchTerm, selectedCategory, sortBy]);
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    switch (category) {;
-      case 'Artificial Intelligence':;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-        return <Brain className="w-6 h-6" />;
-      case 'Quantum Computing':
-        return <Atom className="w-6 h-6" />;
-      case 'Neuromorphic Computing':
-        return <Cpu className="w-6 h-6" />;
-      case 'Synthetic Biology':
-        return <Heart className="w-6 h-6" />;
-      case 'Blockchain':
-        return <Blockchain className="w-6 h-6" />;
-      case 'Cybersecurity':
-        return <Shield className="w-6 h-6" />;
-      case 'Internet of Things':
-        return <Network className="w-6 h-6" />;
-      case 'Metaverse':
-        return <Globe className="w-6 h-6" />;
-      case 'Robotics':
-        return <Factory className="w-6 h-6" />;
-      case 'Space Technology':
-        return <Satellite className="w-6 h-6" />;
-      default:
-<<<<<<< HEAD
-        return <Lightbulb className="w-6 h-6" />;
-
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return <Lightbulb className = "w-6 h-6" />};
   };
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    switch (status.toLowerCase()) {;
-      case 'live':;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-        return 'bg-green-100 text-green-800';
-      case 'beta':
-        return 'bg-blue-100 text-blue-800';
-      case 'coming soon':
-        return 'bg-yellow-100 text-yellow-800';
-      case 'preview':
-        return 'bg-purple-100 text-purple-800';
-      default:
-<<<<<<< HEAD
-        return 'bg-gray-100 text-gray-800';
-
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return 'bg-gray-100 text-gray-800'}
   };
-<<<<<<< HEAD
-  const getInnovationBadge = (service: Service) => {;
-=======
 
-<<<<<<< HEAD
-  const getInnovationBadge = (service: anyanyanyanyanyanyanyanyanyanyanyanyanyService)               => {
-    if (service.innovationLevel === 'Revolutionary') {
-      return <span className="px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><Sparkles className="w-3 h-3" /> Revolutionary</span>} else if (service.innovationLevel === 'Cutting-Edge') {;
-      return <span className="px-2 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><ZapIcon className="w-3 h-3" /> Cutting-Edge</span>};
-    return null};
-=======
   const getInnovationBadge = (service: anyanyanyanyanyanyanyanyanyanyanyanyanyService)              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (service.innovationLevel === 'Revolutionary') {;
       return <span className="px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><Sparkles className="w-3 h-3" /> Revolutionary</span>;
     } else if (service.innovationLevel = == 'Cutting-Edge') {;
@@ -384,21 +258,9 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {;
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-500"
-              >
-                {categories.map(category  => (
-=======
-<<<<<<< HEAD
-                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-purple-500"
-
-                {categories.map(category              => (
-=======
                 className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-purple-500"
               >
                 {categories.map(category               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <option key={category} value={category}>{category}</option>
                 ))}
               </select>

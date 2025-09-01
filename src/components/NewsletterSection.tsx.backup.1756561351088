@@ -1,52 +1,7 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { motion             } from 'framer-motion.ts';
-import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap const NewsletterSection: React.FC = (): JSX.Element => {
-=======
 import React, { useState             } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap              } from 'lucide-react.ts';
 
-<<<<<<< HEAD
-const NewsletterSection: React.FC = (): JSX.Element => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-<<<<<<< HEAD
-  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)             => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    e.preventDefault();
-    if (!email) return;
-
-    setIsLoading(true);
-
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubscribed(true);
-      setIsLoading(false);
-      setEmail('')}, 1500)};
-
-  const benefits = [
-    {
-      icon: Bell,
-      title: "Latest Updates",
-      description: "Stay informed about new services and features"
-    },
-    {
-      icon: TrendingUp,
-      title: "Industry Insights",
-<<<<<<< HEAD
-      description: "Get exclusive access to tech trends and analysis"
-    },
-    {
-      icon: Zap,
-      title: "Early Access",
-      description: "Be the first to know about beta programs and launches"
-
-=======
       description: "Get exclusive access to tech trends and analysis";
     },;
     {;
@@ -54,7 +9,6 @@ const NewsletterSection: React.FC = (): JSX.Element => {;
       title: "Early Access",;
       description: "Be the first to know about beta programs and launches";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   if (isSubscribed) {
@@ -96,30 +50,14 @@ const NewsletterSection: React.FC = (): JSX.Element => {;
             <button
               onClick={() => setIsSubscribed(false)}
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
-<<<<<<< HEAD
-
-=======
             >
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-              Subscribe Another Email
-            </button>
-          </motion.div>
-        </div>
-      </section>
-    )};
-=======;
               Subscribe Another Email;
             </button>;
           </motion.div>;
         </div>;
       </section>;
     );
-<<<<<<< HEAD
-=======
   }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">
@@ -212,12 +150,6 @@ const NewsletterSection: React.FC = (): JSX.Element => {;
 
           {/* Right Column - Newsletter Form */}
           <motion.div
-<<<<<<< HEAD
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-
-=======
             initial = {
   { opacity: 0,
   x: 30 
@@ -249,7 +181,6 @@ const NewsletterSection: React.FC = (): JSX.Element => {;
 
 }}
           >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-3xl p-8 border border-slate-500">
               <div className="text-center mb-6">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4">
@@ -306,14 +237,6 @@ const NewsletterSection: React.FC = (): JSX.Element => {;
                   </a>
                 </p>
               </div>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </div>;
-    </section>;
-  )};
-=======
             </div>;
           </motion.div>;
         </div>;
@@ -321,6 +244,5 @@ const NewsletterSection: React.FC = (): JSX.Element => {;
     </section>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default NewsletterSection;}}}

@@ -1,25 +1,7 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Users, 
-  Linkedin, 
-=======
-<<<<<<< HEAD
-const Team: React.FC = (): JSX.Element => (
-	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-		<div className="text-center text-white">
-			<h1 className="text-4xl font-bold mb-4">Our Team</h1>
-			<p className="text-xl text-gray-300">Meet the people behind Zion Tech Group.</p>
-		</div>
-	</div>
-);
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { SEO              } from '../components/SEO';
 import { Linkedin, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Twitter, 
   Mail, 
   Globe, 
@@ -53,56 +35,10 @@ import { Linkedin,
   Eye,
   Sparkles,
   Heart,
-<<<<<<< HEAD
-  Target,
-  Lightbulb,
-  TrendingUp,
-  Building2,
-  Briefcase,
-  GraduationCap,
-  Globe2,
-  Users2,
-  Handshake,
-  Trophy,
-  Clock,
-  MapPin
-} from 'lucide-react';
-
-export default function Team() {
-  const [selectedDepartment, setSelectedDepartment] = useState('all');
-  const [selectedLocation, setSelectedLocation] = useState('all');
-
-  const departments = [
-    { id: 'all', name: 'All Departments', icon: Users, count: 0 },
-    { id: 'leadership', name: 'Leadership', icon: Building2, count: 8 },
-    { id: 'engineering', name: 'Engineering', icon: Code, count: 25 },
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 18 },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: 12 },
-    { id: 'cloud-devops', name: 'Cloud & DevOps', icon: Cloud, count: 15 },
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 8 },
-    { id: 'data-science', name: 'Data Science', icon: BarChart, count: 14 },
-    { id: 'sales', name: 'Sales & Business Development', icon: Target, count: 10 },
-    { id: 'marketing', name: 'Marketing', icon: Lightbulb, count: 8 },
-    { id: 'operations', name: 'Operations', icon: Settings, count: 6 },
-    { id: 'research', name: 'Research & Development', icon: Rocket, count: 12 }
-  ];
-
-  const locations = [
-    { id: 'all', name: 'All Locations', icon: Globe2, count: 0 },
-    { id: 'middletown', name: 'Middletown, DE', icon: MapPin, count: 45 },
-    { id: 'new-york', name: 'New York, NY', icon: MapPin, count: 28 },
-    { id: 'san-francisco', name: 'San Francisco, CA', icon: MapPin, count: 32 },
-    { id: 'london', name: 'London, UK', icon: MapPin, count: 18 },
-    { id: 'singapore', name: 'Singapore', icon: MapPin, count: 15 },
-    { id: 'remote', name: 'Remote', icon: Wifi, count: 42 }
-  ];
-
-=======
   ArrowRight
              } from 'lucide-react.ts';
 
 export default function Team(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const teamMembers = [
     {
       id: 1,
@@ -376,11 +312,6 @@ export default function Team(...args: any[]): any {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Company Values */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark">
-        <div className="max-w-7xl mx-auto">
-=======
       {/* Stats Section */}
       <section className="py-16">
         <div className="container mx-auto px-6">
@@ -496,7 +427,6 @@ export default function Team(...args: any[]): any {
       {/* Team Members Grid */}
       <section className="py-20">
         <div className="container mx-auto px-6">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -512,10 +442,6 @@ export default function Team(...args: any[]): any {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {companyValues.map((value, index) => (
-=======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.filter(member              => !member.featured).map((member, index) => (
               <motion.div
@@ -605,7 +531,6 @@ export default function Team(...args: any[]): any {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={value.title}
                 initial={{ opacity: 0, y: 20 }}

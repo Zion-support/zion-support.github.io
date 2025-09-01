@@ -65,23 +65,6 @@ const features = [
     description: "Solutions that scale seamlessly from startup to enterprise across multiple regions"
   },
   {
-<<<<<<< HEAD
-    icon: Clock,
-    title: 'Instant Response',
-    description: 'Get responses within minutes, not days',
-    color: 'from-zion-orange to-zion-orange-dark',
-    bgColor: 'bg-zion-orange/10',
-    iconColor: 'text-zion-orange'
-  },
-  {
-    icon: TrendingUp,
-    title: 'Performance Analytics',
-    description: 'Track your success with detailed insights and metrics',
-    color: 'from-zion-pink to-zion-pink-dark',
-    bgColor: 'bg-zion-pink/10',
-    iconColor: 'text-zion-pink'
-
-=======
     icon: "🤖",
     title: "AI-Powered Intelligence",
     description: "Smart automation and predictive analytics that adapt to your business requirements";
@@ -91,7 +74,6 @@ const features = [
     title: "Real-Time Analytics",;
     description: "Comprehensive insights and reporting to make data-driven decisions instantly";
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const achievements = [
@@ -113,13 +95,8 @@ export function FeatureHighlights(...args[]: any):  {
       transition: {
         staggerChildren: 0.15,
         delayChildren: 0.1
-<<<<<<< HEAD
-
-
-=======
       };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const itemVariants = {
@@ -134,13 +111,8 @@ export function FeatureHighlights(...args[]: any):  {
       transition: {
         duration: 0.6,
         ease: "easeOut"
-<<<<<<< HEAD
-
-
-=======
       };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const achievementVariants = {
@@ -151,13 +123,8 @@ export function FeatureHighlights(...args[]: any):  {
     visible: {
       opacity: 1,
       scale: 1,
-<<<<<<< HEAD
-      transition: { duration: 0.5 }
-
-=======
       transition: { duration: 0.5 };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const techVariants = {
@@ -168,13 +135,8 @@ export function FeatureHighlights(...args[]: any):  {
     visible: {
       opacity: 1,
       x: 0,
-<<<<<<< HEAD
-      transition: { duration: 0.5 }
-
-=======
       transition: { duration: 0.5 };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
@@ -204,12 +166,7 @@ export function FeatureHighlights(...args[]: any):  {
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-          className="text-center mb-20"
-
-=======
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-purple/10 border border-zion-purple/20 rounded-full text-zion-purple text-sm font-medium mb-6">
             <Award className="w-4 h-4" />
             <span>Why Choose Zion</span>
@@ -388,25 +345,6 @@ export function FeatureHighlights(...args[]: any):  {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
-          transition={{ duration: 0.6 }}
-          className="text-center"
-
-          <div className="bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 border border-white/10 rounded-3xl p-12 backdrop-blur-sm">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Ready to Experience the Future?
-            </h3>
-            <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Join thousands of organizations already transforming their business with Zion Tech Group's innovative solutions.
-            </p>
-            <a
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple-dark hover:to-zion-cyan-dark transition-all duration-300 shadow-lg hover:shadow-xl"
-
-              Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </a>
-=======
           transition = {
   { duration: 0.6,
   delay: 0.4 
@@ -420,25 +358,12 @@ export function FeatureHighlights(...args[]: any):  {
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
             <span>Experience the difference</span>
-<<<<<<< HEAD
-            <span className="text-2xl">→</span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  )};
-=======;
             <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-}}}}}}}}}}
-=======
 }
 
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

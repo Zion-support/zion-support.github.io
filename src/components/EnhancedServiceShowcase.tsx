@@ -17,15 +17,8 @@ import { Brain,
   Target,
   Award,
   CheckCircle
-<<<<<<< HEAD
- } from 'lucide-react';
-interface Service {
-=======
-<<<<<<< HEAD
-=======
                } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Service {
 
 
@@ -42,7 +35,6 @@ interface Service {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -187,26 +179,7 @@ const categories = [
   'Micro SAAS',;
   'Healthcare AI';
 ];
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  const [selectedCategory, setSelectedCategory] = useState('All Services');
-  const [hoveredService, setHoveredService] = useState<any>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-<<<<<<< HEAD
-    const observer = new IntersectionObserver(;
-      ([entry]) => {;
-        if (entry.isIntersecting) {;
-          setIsVisible(true);
-<<<<<<< HEAD
-
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         }
       },
       { threshold: 0.1 }
@@ -216,18 +189,10 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {;
       observer.observe(element)}
     return () => observer.disconnect()}, []);
   const filteredServices = selectedCategory === 'All Services'
-<<<<<<< HEAD
-    ? services
-    : services.filter(service => service.category === selectedCategory);
-  const renderStars = (rating: number)  => {
-    return Array.from({ length: 5 }, (_, i)  => (
-=======
     ? services: anyanyanyanyanyanyanyanyanyanyanyanyanyanyservices.filter(service               => service.category === selectedCategory);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const renderStars = (rating: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)                => {
     return Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyany5 }, (_, i)                => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       <Star
         key={i}
         className={`w-4 h-4 ${

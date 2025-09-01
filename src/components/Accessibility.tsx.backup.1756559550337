@@ -1,20 +1,11 @@
 import { useState, useEffect           } from 'react.ts';
 import { motion, AnimatePresence           } from 'framer-motion.ts';
-<<<<<<< HEAD
-import {
-  Accessibility,
-  Type,
-  Eye,
-  Volume2,
-  Keyboard,
-=======
 import { 
   Accessibility as AccessibilityIcon, 
   Type, 
   Eye, 
   Volume2, 
   Keyboard, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   X,
   Plus,
   Minus,
@@ -122,14 +113,6 @@ theme: 'auto';
 
   };
 
-<<<<<<< HEAD
-  const updateSetting = (key: anyanyanyanyanyanyanyanyanyanykeyof AccessibilitySettings, value: )           => {
-    const newSettings = {
-  ...settings,;
-  [key]: value ;
-
-};
-=======
   const updateSetting = (key: anyanyanyanyanyanyanyanyanyanykeyof AccessibilitySettings, value: )           => {
     const newSettings = {
   ...settings,;
@@ -146,7 +129,6 @@ theme: 'auto';
 
 
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setSettings(newSettings);
     applySettings(newSettings);
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
@@ -196,13 +178,8 @@ theme: 'auto';
         className="fixed bottom-4 left-4 z-50 p-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full shadow-lg transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
         aria-label="Accessibility Settings"
         title="Accessibility Settings"
-<<<<<<< HEAD
-
-        <Accessibility className="w-6 h-6" />
-=======
       >
         <AccessibilityIcon className="w-6 h-6" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       </button>
 
       {/* Accessibility Panel */}
@@ -452,16 +429,6 @@ theme: 'auto';
               <button
                 onClick={resetSettings}
                 className="w-full px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-md transition-colors text-sm font-medium"
-<<<<<<< HEAD
-
-                Reset to Defaults
-              </button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
-=======
               >
                 Reset to Defaults;
               </button>;
@@ -470,6 +437,5 @@ theme: 'auto';
         )};
       </AnimatePresence>;
     </>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}}}}}}}}}

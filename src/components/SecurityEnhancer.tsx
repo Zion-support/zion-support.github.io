@@ -1,70 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect, useState, useCallback } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { Button } from "./ui/button";
-import { Badge } from "./ui/badge";
-import { Alert, AlertDescription } from "./ui/alert";
-import { Progress } from "./ui/progress";
-import { 
-  Shield, 
-=======
-<<<<<<< HEAD
-import React, { useEffect, useState, useCallback } from 'react.ts';
-import { Card, CardContent, CardHeader, CardTitle                } from './ui/card';
-import { Button                } from './ui/button';
-import { Badge                } from './ui/badge';
-import { Alert, AlertDescription                } from './ui/alert';
-import { Progress                } from './ui/progress';
-import { Shield, 
-=======
 import React, { useEffect, useState, useCallback               } from 'react.ts';
-<<<<<<< HEAD
-import { Card, CardContent, CardHeader, CardTitle               } from './ui/card';
-import { Button               } from './ui/button';
-import { Badge               } from './ui/badge';
-import { Alert, AlertDescription               } from './ui/alert';
-import { Progress               } from './ui/progress';
-import { Shield,
-  Lock,
-  AlertTriangle,
-  CheckCircle,
-  Eye,
-=======
 import { Card, CardContent, CardHeader, CardTitle               } from './ui/card';
 import { Button               } from './ui/button';
 import { Badge               } from './ui/badge';
 import { Alert, AlertDescription               } from './ui/alert';
 import { Progress               } from './ui/progress';
 import { Shield, 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-=======
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Shield, 
->>>>>>> cursor/add-new-services-and-advertise-them-650b
   Lock, 
   AlertTriangle, 
   CheckCircle, 
   Eye, 
-<<<<<<< HEAD
-  EyeOff,
-  RefreshCw,
-  Zap,
-  ShieldCheck,
-  Bug,
-  Network,
-  Database
-<<<<<<< HEAD
- } from 'lucide-react';
-interface SecurityThreat {
-=======
-<<<<<<< HEAD
-=======
                } from 'lucide-react.ts';
-=======
   EyeOff, 
   Settings,
   X,
@@ -88,44 +37,11 @@ interface SecurityStatus {
   referrerPolicy: boolean;
   permissionsPolicy: boolean;
 }
->>>>>>> cursor/add-new-services-and-advertise-them-650b
 
 interface SecurityThreat {
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-  id: string;
-  type: 'xss' | 'csrf' | 'injection' | 'authentication' | 'authorization' | 'data-leak';
-  severity: 'critical' | 'high' | 'medium' | 'low';
-  description: string;
-  location: string;
-  timestamp: Date;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  status: 'active' | 'mitigated' | 'resolved'}
-=======
   status: 'active' | 'mitigated' | 'resolved';
 }
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 interface SecurityMetrics {
-=======
-<<<<<<< HEAD
-  status: 'active' | 'mitigated' | 'resolved';
-=======
 status: 'active' | 'mitigated' | 'resolved';
 
 
@@ -141,7 +57,6 @@ status: 'active' | 'mitigated' | 'resolved';
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SecurityMetrics {
 
@@ -159,24 +74,14 @@ interface SecurityMetrics {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   overallScore: number;
   vulnerabilities: number;
   threatsBlocked: number;
   lastScan: Date;
   complianceScore: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  encryptionStrength: number}
-=======
   encryptionStrength: number;
 }
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 interface SecurityCheck {
-=======
-<<<<<<< HEAD
-  encryptionStrength: number;
-=======
 encryptionStrength: number;
 
 
@@ -192,7 +97,6 @@ encryptionStrength: number;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SecurityCheck {
 
@@ -210,26 +114,15 @@ interface SecurityCheck {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   status: 'pass' | 'fail' | 'warning';
-=======
   id: string;
   type: 'high' | 'medium' | 'low';
   category: 'injection' | 'xss' | 'csrf' | 'authentication' | 'authorization' | 'data-exposure';
->>>>>>> cursor/add-new-services-and-advertise-them-650b
   description: string;
   impact: string;
   recommendation: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  category: 'authentication' | 'data-protection' | 'network-security' | 'compliance'}
-=======
-<<<<<<< HEAD
-  category: 'authentication' | 'data-protection' | 'network-security' | 'compliance';
-=======
 category: 'authentication' | 'data-protection' | 'network-security' | 'compliance';
 
 
@@ -244,18 +137,12 @@ category: 'authentication' | 'data-protection' | 'network-security' | 'complianc
 
 
 
-=======
   status: 'detected' | 'mitigated' | 'resolved';
   timestamp: Date;
->>>>>>> cursor/add-new-services-and-advertise-them-650b
 }
 
-<<<<<<< HEAD
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-=======
   category: 'authentication' | 'data-protection' | 'network-security' | 'compliance';
 }
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 const SecurityEnhancer: React.FC = (): JSX.Element => {
   const [metrics, setMetrics] = useState<any>({
     overallScore: 85,
@@ -305,11 +192,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
   }, []);
   
   // Generate security checks
-<<<<<<< HEAD
-  useEffect(() => {
-=======
   useEffect(()                => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const checks: SecurityCheck[] = [
       {
         id: '1',
@@ -367,12 +250,6 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
       threatsBlocked: prev.threatsBlocked + Math.floor(Math.random() * 10),
       lastScan: new Date()
     }));
-<<<<<<< HEAD
-    setIsScanning(false)}, []);
-<<<<<<< HEAD
-  const mitigateThreat = useCallback((threatId: string) => {;
-=======
-=======
 interface SecurityEnhancerProps {
   enabled?: boolean;
   showPanel?: boolean;
@@ -648,7 +525,6 @@ export const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
       referrerPolicy: true,
       permissionsPolicy: true
     };
->>>>>>> cursor/add-new-services-and-advertise-them-650b
 
     setSecurityStatus(newStatus);
     
@@ -656,59 +532,24 @@ export const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
     const score = Object.values(newStatus).filter(Boolean).length * (100 / Object.keys(newStatus).length);
     setSecurityScore(score);
 
-<<<<<<< HEAD
-  const resolveThreat = useCallback((threatId: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
-    setThreats(prev => prev.map(threat =>
-      threat.id === threatId
-        ? { ...threat, status: 'resolved' as const }
-        : threat
-=======
-<<<<<<< HEAD
-  const mitigateThreat = useCallback((threatId: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {
-    setThreats(prev => prev.map(threat => 
-      threat.id === threatId 
-        ? { ...threat, status: 'mitigated' as const };
-        : threat;
-    ))}, []);
-
-  const resolveThreat = useCallback((threatId: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {
-    setThreats(prev => prev.map(threat => 
-      threat.id === threatId 
-        ? { ...threat, status: 'resolved' as const };
-        : threat;
-    ))}, []);
-
-  const getThreatIcon = (type: anyanyanyanyanyanyanyanyanyanyanyanyanyanySecurityThreat['type'])                => {
-    switch (type) {;
-=======;
   const mitigateThreat = useCallback((threatId: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setThreats(prev => prev.map(threat => ;
       threat.id === threatId ;
         ? { ...threat, status: 'mitigated' as const };
         : threat;
     ));
   }, []);
-<<<<<<< HEAD
-  const resolveThreat = useCallback((threatId: string) => {;
-=======
 
   const resolveThreat = useCallback((threatId: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setThreats(prev => prev.map(threat => ;
       threat.id === threatId ;
         ? { ...threat, status: 'resolved' as const };
         : threat;
     ));
   }, []);
-<<<<<<< HEAD
-  const getThreatIcon = (type: SecurityThreat['type']) => {;
-=======
 
   const getThreatIcon = (type: anyanyanyanyanyanyanyanyanyanyanyanyanyanySecurityThreat['type'])               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (type) {;
-=======
     setIsScanning(false);
   }, []);
   const mitigateThreat = useCallback((threatId: string) => {
@@ -727,7 +568,6 @@ export const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
   }, []);
   const getThreatIcon = (type: SecurityThreat['type']) => {
     switch (type) {
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
       case 'xss': return <Bug className="h-4 w-4" />;
       case 'csrf': return <Network className="h-4 w-4" />;
       case 'injection': return <Database className="h-4 w-4" />;
@@ -736,86 +576,26 @@ export const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
       case 'data-leak': return <Eye className="h-4 w-4" />;
       default: return <AlertTriangle className="h-4 w-4" />;
     }
-=======
     setIsScanning(false);
->>>>>>> cursor/add-new-services-and-advertise-them-650b
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const getSeverityColor = (severity: anyanyanyanyanyanyanyanyanyanyanyanyanyanySecurityThreat['severity'])               => {;
-    switch (severity) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'critical': return 'bg-red-500';
-      case 'high': return 'bg-orange-500';
-      case 'medium': return 'bg-yellow-500';
-      case 'low': return 'bg-blue-500';
-<<<<<<< HEAD
-      default: return 'bg-gray-500';
-
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'bg-gray-500'}
-=======
   // Get threat count by type
   const getThreatCount = (type: 'high' | 'medium' | 'low') => {
     return threats.filter(threat => threat.type === type).length;
->>>>>>> cursor/add-new-services-and-advertise-them-650b
   };
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyanySecurityThreat['status'])               => {;
-    switch (status) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'active': return 'bg-red-100 text-red-800';
-      case 'mitigated': return 'bg-yellow-100 text-yellow-800';
-      case 'resolved': return 'bg-green-100 text-green-800';
-<<<<<<< HEAD
-      default: return 'bg-gray-100 text-gray-800';
-
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'bg-gray-100 text-gray-800'}
-=======
   // Get threat count by status
   const getThreatCountByStatus = (status: 'detected' | 'mitigated' | 'resolved') => {
     return threats.filter(threat => threat.status === status).length;
->>>>>>> cursor/add-new-services-and-advertise-them-650b
   };
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const getCheckStatusIcon = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyanySecurityCheck['status'])               => {;
-    switch (status) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'pass': return <CheckCircle className="h-4 w-4 text-green-600" />;
-      case 'fail': return <AlertTriangle className="h-4 w-4 text-red-600" />;
-      case 'warning': return <AlertTriangle className="h-4 w-4 text-yellow-600" />;
-<<<<<<< HEAD
-      default: return <AlertTriangle className="h-4 w-4 text-gray-600" />;
-
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return <AlertTriangle className = "h-4 w-4 text-gray-600" />};
   };
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  const getSecurityScoreColor = (score: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-=======
   // Get security score color
   const getSecurityScoreColor = (score: number) => {
->>>>>>> cursor/add-new-services-and-advertise-them-650b
     if (score >= 90) return 'text-green-600';
     if (score >= 70) return 'text-yellow-600';
     if (score >= 50) return 'text-orange-600';
@@ -989,37 +769,12 @@ export const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
                 </div>
               )}
             </div>
-<<<<<<< HEAD
-          )}
-        </CardContent>
-      </Card>
-
-      {/* Security Alerts */}
-      {metrics.vulnerabilities > 0 && (
-        <Alert>
-          <AlertTriangle className="h-4 w-4" />
-          <AlertDescription>
-            <strong>Security Alert:</strong> {metrics.vulnerabilities} active vulnerability(ies) detected.
-            Please review and address these security issues immediately.
-          </AlertDescription>
-        </Alert>
-      )}
-
-      {metrics.overallScore < 70 && (
-        <Alert>
-          <AlertTriangle className="h-4 w-4" />
-          <AlertDescription>
-<<<<<<< HEAD
-            <strong>Security Warning:</strong> Your security score is below the recommended threshold.
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <strong>Security Warning:</strong> Your security score is below the recommended threshold. 
             Consider running a comprehensive security audit and implementing the suggested improvements.;
           </AlertDescription>;
         </Alert>;
       )};
     </div>;
-=======
   const getStatusColor = (status: SecurityThreat['status']) => {
     switch (status) {
       case 'active': return 'bg-red-500';
@@ -1183,15 +938,12 @@ export const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
         </CardContent>
       </Card>
     </div>
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   );
 };
 export default SecurityEnhancer;
-=======
           </motion.div>
         )}
       </AnimatePresence>
     </>
   );
 };
->>>>>>> cursor/add-new-services-and-advertise-them-650b

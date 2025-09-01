@@ -1085,32 +1085,7 @@ export const EXPANDED_SERVICE_CATEGORIES = [
 ];
 
 // Helper function to get services by category
-<<<<<<< HEAD:data/expandedInnovativeServices2027.ts
-export const getExpandedServicesByCategory = (category: string): ExpandedService2027[] => {;
-=======
-<<<<<<< HEAD
-export const getExpandedServicesByCategory = (category: anyanyanyanyanyanyanyanyanystring): ExpandedService2027[]           => {
-  if (category === 'All') {;
-    return ALL_EXPANDED_SERVICES_2027};
-  return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category)};
-
-// Helper function to get services by subcategory
-export const getExpandedServicesBySubcategory = (subcategory: anyanyanyanyanyanyanyanyanystring): ExpandedService2027[]           => {;
-  return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory)};
-
-// Helper function to search services
-export const searchExpandedServices = (query: anyanyanyanyanyanyanyanyanystring): ExpandedService2027[]           => {;
-  const lowercaseQuery = query.toLowerCase();
-  return ALL_EXPANDED_SERVICES_2027.filter(service = > 
-    service.name.toLowerCase().includes(lowercaseQuery) ||
-    service.description.toLowerCase().includes(lowercaseQuery) ||
-    service.category.toLowerCase().includes(lowercaseQuery) ||
-    service.subcategory.toLowerCase().includes(lowercaseQuery) ||;
-    service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery));
-  )};
-=======
 export const getExpandedServicesByCategory = (category: anyanyanyanyanyanyanyanyanystring): ExpandedService2027[]          => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894:src/data/expandedInnovativeServices2027.ts.backup.1756558673395
   if (category === 'All') {;
     return ALL_EXPANDED_SERVICES_2027;
 
@@ -1125,21 +1100,11 @@ export const getExpandedServicesBySubcategory = (subcategory: anyanyanyanyanyany
 // Helper function to search services
 export const searchExpandedServices = (query: anyanyanyanyanyanyanyanyanystring): ExpandedService2027[]          => {;
   const lowercaseQuery = query.toLowerCase();
-<<<<<<< HEAD:data/expandedInnovativeServices2027.ts
-  return ALL_EXPANDED_SERVICES_2027.filter(service = > 
-    service.name.toLowerCase().includes(lowercaseQuery) ||
-    service.description.toLowerCase().includes(lowercaseQuery) ||;
-    service.category.toLowerCase().includes(lowercaseQuery) ||;
-    service.subcategory.toLowerCase().includes(lowercaseQuery) ||;
-    service.category.toLowerCase().includes(lowercaseQuery) ||;
-    service.subcategory.toLowerCase().includes(lowercaseQuery);
-=======
   return ALL_EXPANDED_SERVICES_2027.filter(service =>
     service.name.toLowerCase().includes(lowercaseQuery) ||
     service.description.toLowerCase().includes(lowercaseQuery) ||
     service.category.toLowerCase().includes(lowercaseQuery) ||
     service.subcategory.toLowerCase().includes(lowercaseQuery) ||
     service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894:src/data/expandedInnovativeServices2027.ts.backup.1756558673395
   );
 };
