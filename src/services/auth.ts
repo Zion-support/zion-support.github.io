@@ -1,28 +1,23 @@
 import axios from 'axios';
 
-// Axios instance
-export const api = axios.create();
+// Axios instance used for API calls
+export const api = axios.create({ baseURL: '/api/auth' });
 
-// Attach token from localStorage to each request
+// Attach Authorization header if token stored
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
-  if (token) {
-    config.headers = config.headers || {};
-    (config.headers as any)['Authorization'] = `Bearer ${token}`;
+  if (token && config.headers) {
+    config.headers['Authorization'] = `Bearer ${token}`;
   }
   return config;
 });
 
 export async function login(email: string, password: string) {
-  const response = await api.post('/api/auth/login', { email, password });
-  if (response.status === 200 && response.data?.token) {
-    localStorage.setItem('token', response.data.token);
+  const response = await api.post('/login', { email, password });
+  const token = response.data?.token;
+  if (response.status === 200 && token) {
+    localStorage.setItem('token', token);
+    api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
   }
   return response;
 }
-
-export const auth = {
-  login,
-};
-
-export default auth;

@@ -1,33 +1,14 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter, Routes, Route } from 'react-router-dom';
 import { vi } from 'vitest';
-import { LoginForm } from '@/components/auth/login';
-import * as authHook from '@/hooks/useAuth';
-import axios from 'axios';
-
-vi.mock('axios', () => {
-  const instance = { post: vi.fn(), interceptors: { request: { use: vi.fn() } } };
-  return { default: { create: () => instance } };
-}, { virtual: true });
-
-vi.mock('axios', () => {
-  const instance = { post: vi.fn(), interceptors: { request: { use: vi.fn() } } };
-  return { default: { create: () => instance } };
-}, { virtual: true });
+import Login from '@/pages/auth/Login';
+import * as authApi from '@/services/auth';
 
 vi.mock('@/services/auth');
 
-// Get the mocked axios instance
-const mockedAxios: any = (axios as any).create();
-
-// Get the mocked axios instance
-const mockedAxios: any = (axios as any).create();
-
-describe('LoginForm', () => {
-  it('redirects to dashboard on successful login', async () => {
-    mockedAxios.post.mockResolvedValue({ status: 200, data: { token: 'abc' } });
-    const navigateMock = vi.fn();
-    vi.spyOn(require('react-router-dom'), 'useNavigate').mockReturnValue(navigateMock);
+describe('Login page', () => {
+  it('redirects to /dashboard on successful login', async () => {
+    vi.spyOn(authApi, 'login').mockResolvedValue({ status: 200, data: { token: 'x' } } as any);
 
     render(
       <MemoryRouter initialEntries={['/login']}>
@@ -42,8 +23,6 @@ describe('LoginForm', () => {
     fireEvent.input(screen.getByLabelText(/password/i), { target: { value: 'secret' } });
     fireEvent.click(screen.getByRole('button', { name: /login/i }));
 
-    await waitFor(() => {
-      expect(navigateMock).toHaveBeenCalledWith('/dashboard');
-    });
+    await waitFor(() => expect(screen.getByText('Dashboard')).toBeInTheDocument());
   });
 });
