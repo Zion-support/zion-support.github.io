@@ -13,7 +13,7 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "types": ["vite/client", "react"],
+    "typeRoots": ["./src/types"],
 
     /* Bundler mode */
     "moduleResolution": "node",

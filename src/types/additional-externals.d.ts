@@ -22,4 +22,3 @@ declare module 'semver';
 declare module 'ws';
 
 declare module 'vite/client';
-declare module 'react-router-dom';
