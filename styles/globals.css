@@ -649,7 +649,53 @@ body {
   transform: translateY(-2px);
 } 
 
-/* Global reset/additions for wiki/docs */
-.prose pre { white-space: pre-wrap; }
-.prose table { display: table; width: 100%; }
-.prose thead th { font-weight: 600; } 
+/* Animation utilities */
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Tilt on hover effect */
+.tilt-on-hover {
+  transition: transform 0.2s ease-in-out;
+}
+
+.tilt-on-hover:hover {
+  transform: rotate(1deg) scale(1.02);
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .mobile-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .desktop-hidden {
+    display: none;
+  }
+}
