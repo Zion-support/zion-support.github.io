@@ -1159,7 +1159,7 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Error prevention</li>
                   <li>• Predictive analytics</li>
                 </ul>
-                <Link href="/docs/comprehensive-redundancy" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <Link href="/COMPREHENSIVE_REDUNDANCY_README.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
@@ -1826,10 +1826,10 @@ export default function HomePage({ pageLinks }: HomePageProps) {
               <div>
                 <h3 className="text-lg font-semibold text-yellow-400 mb-4">Automation & Systems</h3>
                 <ul className="space-y-2 text-sm text-white/70">
-                  <li><Link href="/docs/comprehensive-redundancy" className="hover:text-yellow-300 transition-colors">Redundancy Systems</Link></li>
-                  <li><Link href="/docs/ultimate-redundancy" className="hover:text-yellow-300 transition-colors">Ultimate Redundancy</Link></li>
-                  <li><Link href="/docs/pm2-redundancy" className="hover:text-yellow-300 transition-colors">PM2 Orchestration</Link></li>
-                  <li><Link href="/docs/automation-completion-report" className="hover:text-yellow-300 transition-colors">Automation Status</Link></li>
+                  <li><Link href="/COMPREHENSIVE_REDUNDANCY_README.md" className="hover:text-yellow-300 transition-colors">Redundancy Systems</Link></li>
+                  <li><Link href="/README_ULTIMATE_REDUNDANCY.md" className="hover:text-yellow-300 transition-colors">Ultimate Redundancy</Link></li>
+                  <li><Link href="/README_PM2_REDUNDANCY_COMPLETE.md" className="hover:text-yellow-300 transition-colors">PM2 Orchestration</Link></li>
+                  <li><Link href="/AUTOMATION_COMPLETION_REPORT.md" className="hover:text-yellow-300 transition-colors">Automation Status</Link></li>
                 </ul>
               </div>
             </div>
