@@ -1,8 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import App from './App';
 import './index.css';
 import { registerServiceWorker } from './utils/serviceWorker';
 import { ErrorBoundary } from 'react-error-boundary';
@@ -21,13 +18,14 @@ const renderApp = (): void => {
   const root = ReactDOM.createRoot(container);
   root.render(
     <React.StrictMode>
-      <Router>
-        <HelmetProvider>
-          <ErrorBoundary>
-            <App />
-          </ErrorBoundary>
-        </HelmetProvider>
-      </Router>
+      <ErrorBoundary>
+        <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ textAlign: 'center', padding: 16 }}>
+            <h1>Zion Tech Group</h1>
+            <p>Build stabilization in progress. Site content will load after components cleanup.</p>
+          </div>
+        </div>
+      </ErrorBoundary>
     </React.StrictMode>
   );
 };
