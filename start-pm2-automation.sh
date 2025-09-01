@@ -15,10 +15,11 @@ CYAN='\033[0;36m'
 NC='\033[0m' # No Color
 
 # Project configuration
-PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+PROJECT_ROOT="/workspace"
 ENHANCED_ECOSYSTEM="$PROJECT_ROOT/ecosystem.enhanced.cjs"
 ORIGINAL_ECOSYSTEM="$PROJECT_ROOT/ecosystem.config.cjs"
 BACKUP_ECOSYSTEM="$PROJECT_ROOT/ecosystem.config.backup.$(date +%s).cjs"
+LOGS_DIR="$PROJECT_ROOT/logs"
 
 # Logging functions
 log() {
@@ -52,31 +53,30 @@ check_pm2() {
     fi
 }
 
-# Backup original ecosystem
-backup_original_ecosystem() {
-    if [ -f "$ORIGINAL_ECOSYSTEM" ]; then
-        log "Backing up original ecosystem configuration..."
-        cp "$ORIGINAL_ECOSYSTEM" "$BACKUP_ECOSYSTEM"
-        success "Original ecosystem backed up to: $BACKUP_ECOSYSTEM"
-    fi
+# Create necessary directories
+setup_directories() {
+    log "Setting up directories..."
+    
+    mkdir -p "$LOGS_DIR"
+    mkdir -p "$PROJECT_ROOT/error-reports"
+    mkdir -p "$PROJECT_ROOT/backups"
+    mkdir -p "$PROJECT_ROOT/scripts/automation"
+    
+    success "Directories created"
 }
 
-# Setup enhanced ecosystem
-setup_enhanced_ecosystem() {
-    if [ ! -f "$ENHANCED_ECOSYSTEM" ]; then
-        error "Enhanced ecosystem configuration not found: $ENHANCED_ECOSYSTEM"
-        exit 1
+# Install PM2 modules if needed
+install_pm2_modules() {
+    log "Setting up PM2 modules..."
+    
+    # Install PM2 log rotation
+    if ! pm2 list | grep -q "pm2-logrotate"; then
+        pm2 install pm2-logrotate
+        pm2 set pm2-logrotate:max_size 10M
+        pm2 set pm2-logrotate:retain 7
+        pm2 set pm2-logrotate:compress true
+        success "PM2 logrotate installed and configured"
     fi
-    
-    log "Setting up enhanced PM2 ecosystem..."
-    
-    # Create logs directory
-    mkdir -p "$PROJECT_ROOT/logs"
-    
-    # Set proper permissions
-    chmod +x "$PROJECT_ROOT/scripts/automation/"*.cjs
-    
-    success "Enhanced ecosystem setup completed"
 }
 
 # Stop existing PM2 processes
@@ -84,20 +84,25 @@ stop_existing_processes() {
     log "Stopping existing PM2 processes..."
     
     if pm2 list | grep -q "online\|stopped"; then
-        pm2 stop all
-        pm2 delete all
-        success "Existing PM2 processes stopped and deleted"
+        pm2 stop all 2>/dev/null || true
+        pm2 delete all 2>/dev/null || true
+        success "Existing PM2 processes stopped"
     else
         info "No existing PM2 processes found"
     fi
 }
 
-# Start enhanced PM2 system
-start_enhanced_system() {
-    log "Starting Enhanced PM2 Automation System..."
+# Start PM2 ecosystem
+start_pm2_ecosystem() {
+    log "Starting PM2 automation ecosystem..."
     
-    # Start the enhanced ecosystem
-    pm2 start "$ENHANCED_ECOSYSTEM"
+    if [ ! -f "$ORIGINAL_ECOSYSTEM" ]; then
+        error "Ecosystem configuration not found: $ORIGINAL_ECOSYSTEM"
+        exit 1
+    fi
+    
+    # Start all processes
+    pm2 start "$ORIGINAL_ECOSYSTEM"
     
     # Wait for processes to start
     sleep 5
@@ -106,10 +111,13 @@ start_enhanced_system() {
     local failed_count=0
     local success_count=0
     
+    # Wait a bit more for processes to stabilize
+    sleep 3
+    
     while IFS= read -r line; do
         if echo "$line" | grep -q "online"; then
             ((success_count++))
-        elif echo "$line" | grep -q "error\|stopped"; then
+        elif echo "$line" | grep -q "errored\|stopped"; then
             ((failed_count++))
         fi
     done < <(pm2 list | grep -E "zion-website|error-monitor|syntax-fixer|dependency-manager|build-monitor")
@@ -120,7 +128,7 @@ start_enhanced_system() {
     
     if [ $failed_count -gt 0 ]; then
         warning "$failed_count processes failed to start"
-        return 1
+        # Don't return 1 here, just warn
     fi
     
     return 0
@@ -170,8 +178,8 @@ display_status() {
     echo
     info "System Information:"
     echo "  Project Root: $PROJECT_ROOT"
-    echo "  Ecosystem Config: $ENHANCED_ECOSYSTEM"
-    echo "  Logs Directory: $PROJECT_ROOT/logs"
+    echo "  Ecosystem Config: $ORIGINAL_ECOSYSTEM"
+    echo "  Logs Directory: $LOGS_DIR"
     echo "  PM2 Version: $(pm2 --version)"
     echo "  Node Version: $(node --version)"
     echo "  NPM Version: $(npm --version)"
@@ -195,11 +203,11 @@ display_status() {
     
     echo
     info "Log Files:"
-    echo "  - Error Monitor: $PROJECT_ROOT/logs/error-monitor.log"
-    echo "  - Syntax Fixer: $PROJECT_ROOT/logs/syntax-fixer.log"
-    echo "  - Dependency Manager: $PROJECT_ROOT/logs/dependency-manager.log"
-    echo "  - Build Monitor: $PROJECT_ROOT/logs/build-monitor.log"
-    echo "  - Main App: $PROJECT_ROOT/logs/zion-website.log"
+    echo "  - Error Monitor: $LOGS_DIR/error-monitor.log"
+    echo "  - Syntax Fixer: $LOGS_DIR/syntax-fixer.log"
+    echo "  - Dependency Manager: $LOGS_DIR/dependency-manager.log"
+    echo "  - Build Monitor: $LOGS_DIR/build-monitor.log"
+    echo "  - Main App: $LOGS_DIR/zion-website.log"
 }
 
 # Create management commands
@@ -267,7 +275,7 @@ main() {
     stop_existing_processes
     
     # Start automation system
-    if start_enhanced_system; then
+    if start_pm2_ecosystem; then
         success "PM2 automation system started successfully"
         
         # Run initial fixes

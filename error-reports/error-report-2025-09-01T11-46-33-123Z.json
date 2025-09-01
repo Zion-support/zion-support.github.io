@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-09-01T12:00:00.500Z",
-  "reportId": "2025-09-01T12-00-00-500Z",
+  "timestamp": "2025-09-01T11:46:33.123Z",
+  "reportId": "2025-09-01T11-46-33-123Z",
   "summary": {
     "totalErrors": 0,
     "lintErrors": 0,
@@ -24,7 +24,7 @@
     "build": {
       "hasErrors": false,
       "buildSuccess": true,
-      "output": "\n> zion-tech-group@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n   - Environments: .env\n   - Experiments (use with caution):\n     ✓ optimizeCss\n     · optimizePackageImports\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully in 2.5s\n   Collecting page data ...\n   Generating static pages (0/3) ...\n ✓ Generating static pages (3/3)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (pages)                                Size  First Load JS\n┌ ○ /                                       597 B        82.3 kB\n├   /_app                                     0 B        81.7 kB\n└ ○ /404                                    180 B        81.9 kB\n+ First Load JS shared by all               84 kB\n  ├ chunks/framework-a6e0b7e30f98059a.js  44.8 kB\n  ├ chunks/main-850da7952efed1f7.js       35.9 kB\n  └ other shared chunks (total)           3.26 kB\n\nƒ Middleware                              34.2 kB\n\n○  (Static)  prerendered as static content\n\n"
+      "output": "\n> zion-tech-group@0.1.0 build\n> next build\n\nAttention: Next.js now collects completely anonymous telemetry regarding usage.\nThis information is used to shape Next.js' roadmap and prioritize features.\nYou can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:\nhttps://nextjs.org/telemetry\n\n   ▲ Next.js 15.5.2\n   - Environments: .env\n   - Experiments (use with caution):\n     ✓ optimizeCss\n     · optimizePackageImports\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully in 2.3s\n   Collecting page data ...\n   Generating static pages (0/3) ...\n ✓ Generating static pages (3/3)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (pages)                                Size  First Load JS\n┌ ○ /                                       597 B        82.3 kB\n├   /_app                                     0 B        81.7 kB\n└ ○ /404                                    180 B        81.9 kB\n+ First Load JS shared by all               84 kB\n  ├ chunks/framework-a6e0b7e30f98059a.js  44.8 kB\n  ├ chunks/main-850da7952efed1f7.js       35.9 kB\n  └ other shared chunks (total)           3.26 kB\n\nƒ Middleware                              34.2 kB\n\n○  (Static)  prerendered as static content\n\n"
     },
     "corruptedFiles": []
   },
