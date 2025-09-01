@@ -563,7 +563,7 @@ export default function Blog() {
                     {allPosts.filter(post => post.category === category.id).length} articles
                   </span>
                 </div>
-              </button>
+              </motion.div>
             ))}
           </div>
         </div>

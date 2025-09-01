@@ -702,10 +702,11 @@ export default function ApiPlayground() {
                                     <p className="text-gray-300 text-sm">{param.description}</p>
                                   </div>
                                 </div>
-                              </div>
-                            )}
+                              ))}
+                            </div>
                           </div>
-                        )}
+                        </div>
+                      )}
 
                         {activeTab === 'docs' && (
                           <div className="space-y-6">
@@ -743,7 +744,7 @@ export default function ApiPlayground() {
                               </a>
                             </div>
                           </div>
-                        </div>
+                        )}
 
                         {/* Examples */}
                         <div className="grid md:grid-cols-2 gap-6">
