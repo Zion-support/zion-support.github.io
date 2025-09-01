@@ -30,23 +30,27 @@ const createLazyComponent = (
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
-const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.default })));
+const ServicesPage = lazy(() => import('./pages/ServicesPage'));
 const SolutionsPage = lazy(() => import('./pages/SolutionsPage').then(module => ({ default: module.SolutionsPage })));
-const AboutPage = lazy(() => import('./pages/AboutPage').then(module => ({ default: module.AboutPage })));
-const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ default: module.ContactPage })));
-const BlogPage = lazy(() => import('./pages/BlogPage').then(module => ({ default: module.BlogPage })));
-const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(module => ({ default: module.NotFoundPage })));
-const ComprehensiveServicesPage = lazy(() => import('./pages/ComprehensiveServicesPage').then(module => ({ default: module.ComprehensiveServicesPage })));
-const Sitemap = lazy(() => import('./pages/Sitemap').then(module => ({ default: module.default })));
-const ComprehensiveSitemap = lazy(() => import('./pages/ComprehensiveSitemap').then(module => ({ default: module.ComprehensiveSitemap })));
-const Support = lazy(() => import('./pages/Support').then(module => ({ default: module.default })));
-const Training = lazy(() => import('./pages/Training').then(module => ({ default: module.default })));
-const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default: module.default })));
-const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
+const AboutPage = lazy(() => import('./pages/AboutPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+const BlogPage = lazy(() => import('./pages/BlogPage'));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
+const ComprehensiveServicesPage = lazy(() => import('./pages/ComprehensiveServicesPage'));
+const Sitemap = lazy(() => import('./pages/Sitemap'));
+const ComprehensiveSitemap = lazy(() => import('./pages/ComprehensiveSitemap'));
+const SupportPage = lazy(() => import('./pages/Support'));
+const Training = lazy(() => import('./pages/Training'));
+const Helpdesk = lazy(() => import('./pages/Helpdesk'));
+const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServicesPage'));
+const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025'));
+const EnhancedNewServices2025 = lazy(() => import('./pages/EnhancedNewServices2025'));
+const PricingPage = lazy(() => import('./pages/PricingPage'));
 
-<<<<<<< HEAD
-=======
-// Service Pages - Removed backup-pages references
+// Service Pages
+const AISolutions = lazy(() => import('./pages/services/ai-business-intelligence'));
+const QuantumComputing = lazy(() => import('./pages/services/quantum-computing-solutions'));
+const Cybersecurity = lazy(() => import('./pages/services/cybersecurity'));
 
 >>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
 // Loading component
@@ -127,7 +131,7 @@ function App() {
                 <Route path="/help" element={<Helpdesk />} />
                 <Route path="/training" element={<Training />} />
                 <Route path="/community" element={<BlogPage />} />
-                <Route path="/support" element={<Support />} />
+                <Route path="/support" element={<SupportPage />} />
                 <Route path="/sitemap" element={<Sitemap />} />
                 <Route path="/comprehensive-sitemap" element={<ComprehensiveSitemap />} />
                 <Route path="/privacy-policy" element={<BlogPage />} />

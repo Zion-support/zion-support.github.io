@@ -17,7 +17,8 @@ export default function Page() {
 
                 intent: 'greeting',
                 confidence: 1.0,
-                suggestions: ["Tell me about your services",
+                suggestions: [
+                    "Tell me about your services",
                     "How can I get a quote?",
                     "What technologies do you use?",
                     "Contact information"
@@ -126,7 +127,8 @@ export default function Page() {
 
                 intent: 'response',
                 confidence: 0.9,
-                suggestions: ["Tell me more",
+                suggestions: [
+                    "Tell me more",
                     "Get a quote",
                     "View services",
                     "Contact sales"

@@ -1,11 +1,54 @@
-<<<<<<< HEAD
-import { Link  } from 'react-router-dom';
-export default function Page() {
-}}}
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Brain,
+  Zap,
+  Shield,
+  TrendingUp,
+  Users,
+  Globe,
+  Cpu,
+  Database,
+  ArrowRight,
+  Star,
+  CheckCircle,
+  Rocket
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-export default function Page() {
-,
+interface AIService {
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+  features: string[];
+  pricing: {
+    starter: number;
+    professional: number;
+    enterprise: number;
+  };
+  icon: React.ComponentType<any>;
+  route: string;
+  status: 'active' | 'beta' | 'coming-soon';
+}
+
+const AdvancedAIServicesHub: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('popularity');
+
+  const aiServices: AIService[] = [
+    {
+      id: 'ai-project-management',
+      name: 'AI-Powered Project Management',
+      description: 'Intelligent project planning, resource allocation, and predictive analytics for optimal project delivery.',
+      category: 'project-management',
+      features: ['AI Task Prioritization', 'Smart Resource Allocation', 'Predictive Analytics', 'Risk Assessment'],
+      pricing: { starter: 99, professional: 299, enterprise: 599 },
+      icon: Brain,
+      route: '/services/ai-project-management',
+      status: 'active'
+    },
     {
       id: 'ai-customer-support',
       name: 'AI Customer Support Automation',
@@ -63,150 +106,95 @@ export default function Page() {
     }
   ];
 
-    return matchesCategory && matchesSearch});
+  const categories = [
+    { id: 'all', name: 'All Services', icon: Cpu },
+    { id: 'project-management', name: 'Project Management', icon: Brain },
+    { id: 'customer-support', name: 'Customer Support', icon: Users },
+    { id: 'finance', name: 'Financial Analytics', icon: TrendingUp },
+    { id: 'marketing', name: 'Marketing Automation', icon: Globe },
+    { id: 'analytics', name: 'Data Analytics', icon: Database },
+    { id: 'security', name: 'Cybersecurity', icon: Shield }
+  ];
 
+  const filteredServices = aiServices.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'name':
+        return a.name.localeCompare(b.name);
       case 'price':
         return a.pricing.starter - b.pricing.starter;
       case 'popularity':
-        return 0; // Default sorting
+        return b.pricing.starter - a.pricing.starter; // Higher price = more popular for demo
       default:
-        return 0}
+        return 0;
+    }
   });
 
-      case 'beta':
-        return 'bg-yellow-100 text-yellow-800';
-      case 'coming-soon':
-        return 'bg-gray-100 text-gray-800';
-      default:
-        return 'bg-gray-100 text-gray-800'}
-  };
-
-      case 'beta':
-        return 'Beta';
-      case 'coming-soon':
-        return 'Coming Soon';
-      default:
-        return 'Unknown'}
-  };
-
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
 <<<<<<< HEAD
         <motion.div
-          initial = {
-  { opacity: 0,
-  y: 20
-
-}}
-          animate = {
-  { opacity: 1,
-  y: 0
-
-}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl md:text-7xl font - bold text-white mb-6">
-            AI Services Hub
-=======
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-slate-900 mb-4">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Advanced AI Services Hub
->>>>>>> main
           </h1>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Discover our cutting-edge AI-powered solutions designed to transform your business operations
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover our comprehensive suite of AI-powered solutions designed to transform your business operations and drive innovation.
           </p>
         </div>
 
-        {/* Search and Filters */}
-<<<<<<< HEAD
+        {/* Filters */}
         <motion.div
-          initial = {
-  { opacity: 0,
-  y: 20
-
-}}
-          animate = {
-  { opacity: 1,
-  y: 0
-
-}}
-          transition={{ delay: 0.2 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
           className="mb-12"
         >
-          <div  className="flex flex - col lg:flex - row gap-6 items - center justify -between">
-            {/* Search Bar */}
-            <div  className="relative flex - 1 max - w-md">
-=======
-        <div className="mb-8">
-          <div className="flex flex-col sm:flex-row gap-4">
-            <div className="flex-1 relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
->>>>>>> main
-              <input
-                type="text"
-                placeholder="Search AI services..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+            {/* Category Filter */}
+            <div className="flex flex-wrap gap-2">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 ${
+                    selectedCategory === category.id
+                      ? 'bg-purple-600 text-white shadow-lg shadow-purple-500/25'
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                  }`}
+                >
+                  <category.icon className="w-4 h-4" />
+                  {category.name}
+                </button>
+              ))}
             </div>
 <<<<<<< HEAD
 
-            {/* Sort Options */}
-            <select
-              value={sortBy}
-              onChange={ (e) => setSortBy(e.target.value as 'name' | 'price' | 'popularity') }
-              className="px-4 py-3 bg-white / 10 backdrop - blur - sm border border-white / 20 rounded-lg text-white focus:outline - none focus:ring - 2 focus:ring - purple -500"
-            >
-              <option value="popularity">Most Popular</option>
-              <option value="name">Name A - Z</option>
-              <option value="price">Price: Low to High</option>
-            </select>
-          </div>
-        </motion.div>
-
-        {/* Category Filters */}
-        <motion.div
-          initial = {
-  { opacity: 0,
-  y: 20
-
-}}
-          animate = {
-  { opacity: 1,
-  y: 0
-
-}}
-          transition={{ delay: 0.3 }}
-          className="mb-12"
-        >
-          <div  className="flex flex - wrap gap-4 justify -center">
-            {categories.map((category) => (<button     key={category.id}
-                onClick={ () => setSelectedCategory(category.id) }
-                className={`flex items - center gap-2 px-6 py-3 rounded-full border transition - all duration - 300 ${selectedCategory === category.id
-                    ? 'bg-purple - 600 border-purple - 500 text-white'
-                    : 'bg-white / 10 border-white / 20 text-gray - 300 hover:bg-white / 20'
-                }`}
-=======
-            <div className="flex gap-2">
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
->>>>>>> main
-              >
-                {categories.map(category => (
-                  <option key={category.id} value={category.id}>
-                    {category.name}
-                  </option>
-                ))}
-              </select>
+            {/* Search and Sort */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <input
+                type="text"
+                placeholder="Search services..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              />
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
-                className="px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'popularity')}
+                className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
                 <option value="popularity">Sort by Popularity</option>
                 <option value="name">Sort by Name</option>
@@ -219,47 +207,28 @@ export default function Page() {
         {/* Services Grid */}
 <<<<<<< HEAD
         <motion.div
-          initial = {
-  { opacity: 0,
-  y: 20
-
-}}
-          animate = {
-  { opacity: 1,
-  y: 0
-
-}}
-          transition={{ delay: 0.4 }}
-          className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence>
             {sortedServices.map((service, index) => (<motion.div
                 key={service.id}
-                initial = {
-  { opacity: 0,
-  y: 20
-
-}}
-                animate = {
-  { opacity: 1,
-  y: 0
-
-}}
-                exit = {
-  { opacity: 0,
-  y: -20
-
-}}
-                transition={{ delay: index * 0.1 }}
-                className="group relative bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-2xl p - 6 hover:bg-white / 10 transition - all duration - 300 hover:border-purple -500 / 50"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ delay: index * 0.1, duration: 0.6 }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-purple-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/10"
               >
                 {/* Status Badge */}
-                <div  className="absolute top - 4 right -4">
-                  <span className={`px-3 py-1 rounded-full text-xs font - medium ${service.status === 'active' ? 'bg-green - 500 / 20 text-green - 400' :
-                    service.status === 'beta' ? 'bg-yellow-500 / 20 text-yellow-400' :
-                    'bg-gray - 500 / 20 text-gray - 400'
+                <div className="absolute top-4 right-4">
+                  <span className={`px-3 py-1 text-xs rounded-full font-medium ${
+                    service.status === 'active' ? 'bg-green-500/20 text-green-400' :
+                    service.status === 'beta' ? 'bg-yellow-500/20 text-yellow-400' :
+                    'bg-gray-500/20 text-gray-400'
                   }`}>
-                    {service.status === 'active' ? 'Active' : service.status === 'beta' ? 'Beta' : 'Coming Soon'}
+                    {service.status}
                   </span>
                 </div>
 
@@ -329,16 +298,8 @@ export default function Page() {
 <<<<<<< HEAD
         {/* Call to Action */}
         <motion.div
-          initial = {
-  { opacity: 0,
-  y: 20
-
-}}
-          animate = {
-  { opacity: 1,
-  y: 0
-
-}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
           className="text-center mt-20"
         >
@@ -353,14 +314,15 @@ export default function Page() {
                 <Rocket className="w-5 h-5" />
                 Get Started
               </button>
-              <button     className="px-8 py-4 bg-white / 10 backdrop - blur - sm border border-white / 20 text-white font - semibold rounded-lg hover:bg-white / 20 transition - all duration -300">
-                Schedule Demo;
-              </button>;
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </div>;) ;
+              <button className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300">
+                Schedule Demo
+              </button>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
 };
 =======
         {/* Empty State */}
@@ -378,4 +340,3 @@ export default function Page() {
   )};
 
 export default AdvancedAIServicesHub;
->>>>>>> main

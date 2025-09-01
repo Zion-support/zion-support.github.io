@@ -1,7 +1,30 @@
 <<<<<<< HEAD
 import React, { useEffect, useState, useCallback, useRef } from 'react';
-export /**
-import { motion, AnimatePresence  } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  BarChart3, 
+  TrendingUp, 
+  Users, 
+  Eye, 
+  MousePointer, 
+  Clock, 
+  TrendingDown,
+  Activity,
+  Zap,
+  Target,
+  MapPin,
+  Globe,
+  Smartphone,
+  Monitor,
+  Tablet,
+  Settings,
+  X,
+  Download,
+  Share2,
+  Filter,
+  Calendar,
+  RefreshCw
+} from 'lucide-react';
 
  params - Function parameters
  * @returns {*} Function return value
@@ -131,11 +154,7 @@ export function AdvancedAnalytics({
     };
 
     // Send to analytics service
-    this.sendAnalyticsData('pageview', pageViewData) ;
-
-=======
-
-    // Send to analytics service'    this.sendAnalyticsData('pageview', pageViewData);
+    // this.sendAnalyticsData('pageview', pageViewData);
     
 >>>>>>> main
     // Update local state
@@ -163,25 +182,27 @@ export function AdvancedAnalytics({
         trackingRef.current.errors++;
         break}
 
-    // Send to analytics service'
-    this.sendAnalyticsData('interaction', interactionData);
+    // Send to analytics service
+    // this.sendAnalyticsData('interaction', interactionData);
 
     // Update local state
-    setAnalyticsData(prev => ({
-
-      ...prev,
-      interactions: {
-<<<<<<< HEAD
-        ...prev.interactions,
-        [type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`]:
-=======
-
-        ...prev.interactions,`
-        [type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`]: '`
->>>>>>> main
-          prev.interactions[type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`] + 1
+    setAnalyticsData(prev => {
+      const newInteractions = { ...prev.interactions };
+      if (type === 'form') {
+        newInteractions.formSubmissions++;
+      } else if (type === 'error') {
+        newInteractions.errors++;
+      } else if (type === 'click') {
+        newInteractions.clicks++;
+      } else if (type === 'scroll') {
+        newInteractions.scrolls++;
       }
-    }) ) }, [enabled, userSession, currentPage]) ;
+      return {
+        ...prev,
+        interactions: newInteractions
+      };
+    });
+  }, [enabled, userSession, currentPage]);
 
   // Track performance metrics
   
@@ -212,7 +233,12 @@ export function AdvancedAnalytics({
           firstContentfulPaint: performanceData.firstContentfulPaint,
           largestContentfulPaint: performanceData.largestContentfulPaint
         }
-      }) ) ;
+      }));
+
+      // Send to analytics service
+      // this.sendAnalyticsData('performance', performanceData);
+    }
+  }, [enabled, userSession]);
 
       // Send to analytics service'
       this.sendAnalyticsData('performance', performanceData)}
@@ -605,4 +631,5 @@ export function AdvancedAnalytics({
           </motion.div>) }
       </AnimatePresence>
     </>
-  )}}}}}}}}}}}}}'"`
+  );
+}

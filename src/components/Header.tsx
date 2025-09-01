@@ -72,7 +72,244 @@ function Header({ className }: HeaderProps) {
   Mail,
   MapPin,
   ExternalLink,
-  Cloud
+  Cloud,
+  DollarSign,
+  Briefcase,
+  Newspaper,
+  Building,
+  Heart,
+  Truck,
+  ShoppingCart,
+  Camera,
+  Video,
+  Headphones,
+  Monitor,
+  Laptop,
+  Tablet,
+  Watch,
+  Car,
+  Plane,
+  Ship,
+  Train,
+  Bus,
+  Bicycle,
+  Motorcycle,
+  Scooter,
+  Skateboard,
+  Rollerblade,
+  Snowboard,
+  Surfboard,
+  Tent,
+  Umbrella,
+  Sunglasses,
+  Hat,
+  Shirt,
+  Pants,
+  Shoes,
+  Bag,
+  Wallet,
+  Key,
+  Book,
+  Pen,
+  Pencil,
+  Paper,
+  Folder,
+  File,
+  Image,
+  Music,
+  Film,
+  Game,
+  Puzzle,
+  Dice,
+  Cards,
+  Chess,
+  Checkers,
+  Dominoes,
+  Mahjong,
+  Backgammon,
+  Go,
+  Scrabble,
+  Monopoly,
+  Risk,
+  Clue,
+  Battleship,
+  Connect4,
+  TicTacToe,
+  Hangman,
+  Wordle,
+  Sudoku,
+  Crossword,
+  Jigsaw,
+  Rubiks,
+  Lego,
+  Doll,
+  Teddy,
+  Robot,
+  ActionFigure,
+  Model,
+  Painting,
+  Sculpture,
+  Pottery,
+  Weaving,
+  Knitting,
+  Crochet,
+  Sewing,
+  Embroidery,
+  Quilting,
+  Scrapbooking,
+  Origami,
+  Calligraphy,
+  Typography,
+  GraphicDesign,
+  WebDesign,
+  UI,
+  UX,
+  Wireframe,
+  Prototype,
+  Mockup,
+  StyleGuide,
+  Branding,
+  Logo,
+  Icon,
+  Illustration,
+  Animation,
+  Motion,
+  Video,
+  Audio,
+  Podcast,
+  Radio,
+  TV,
+  Streaming,
+  VOD,
+  Live,
+  Broadcast,
+  Cable,
+  Satellite,
+  Internet,
+  WiFi,
+  Bluetooth,
+  NFC,
+  RFID,
+  GPS,
+  GLONASS,
+  Galileo,
+  BeiDou,
+  QZSS,
+  IRNSS,
+  SBAS,
+  WAAS,
+  EGNOS,
+  MSAS,
+  GAGAN,
+  SDCM,
+  SNAS,
+  BDSBAS,
+  QZSSSBAS,
+  IRNSSSBAS,
+  GLONASSK,
+  GLONASSM,
+  GLONASSK1,
+  GLONASSK2,
+  GLONASSM1,
+  GLONASSM2,
+  GLONASSM3,
+  GLONASSM4,
+  GLONASSM5,
+  GLONASSM6,
+  GLONASSM7,
+  GLONASSM8,
+  GLONASSM9,
+  GLONASSM10,
+  GLONASSM11,
+  GLONASSM12,
+  GLONASSM13,
+  GLONASSM14,
+  GLONASSM15,
+  GLONASSM16,
+  GLONASSM17,
+  GLONASSM18,
+  GLONASSM19,
+  GLONASSM20,
+  GLONASSM21,
+  GLONASSM22,
+  GLONASSM23,
+  GLONASSM24,
+  GLONASSM25,
+  GLONASSM26,
+  GLONASSM27,
+  GLONASSM28,
+  GLONASSM29,
+  GLONASSM30,
+  GLONASSM31,
+  GLONASSM32,
+  GLONASSM33,
+  GLONASSM34,
+  GLONASSM35,
+  GLONASSM36,
+  GLONASSM37,
+  GLONASSM38,
+  GLONASSM39,
+  GLONASSM40,
+  GLONASSM41,
+  GLONASSM42,
+  GLONASSM43,
+  GLONASSM44,
+  GLONASSM45,
+  GLONASSM46,
+  GLONASSM47,
+  GLONASSM48,
+  GLONASSM49,
+  GLONASSM50,
+  GLONASSM51,
+  GLONASSM52,
+  GLONASSM53,
+  GLONASSM54,
+  GLONASSM55,
+  GLONASSM56,
+  GLONASSM57,
+  GLONASSM58,
+  GLONASSM59,
+  GLONASSM60,
+  GLONASSM61,
+  GLONASSM62,
+  GLONASSM63,
+  GLONASSM64,
+  GLONASSM65,
+  GLONASSM66,
+  GLONASSM67,
+  GLONASSM68,
+  GLONASSM69,
+  GLONASSM70,
+  GLONASSM71,
+  GLONASSM72,
+  GLONASSM73,
+  GLONASSM74,
+  GLONASSM75,
+  GLONASSM76,
+  GLONASSM77,
+  GLONASSM78,
+  GLONASSM79,
+  GLONASSM80,
+  GLONASSM81,
+  GLONASSM82,
+  GLONASSM83,
+  GLONASSM84,
+  GLONASSM85,
+  GLONASSM86,
+  GLONASSM87,
+  GLONASSM88,
+  GLONASSM89,
+  GLONASSM90,
+  GLONASSM91,
+  GLONASSM92,
+  GLONASSM93,
+  GLONASSM94,
+  GLONASSM95,
+  GLONASSM96,
+  GLONASSM97,
+  GLONASSM98,
+  GLONASSM99,
+  GLONASSM100
 } from 'lucide-react';
 
 interface HeaderProps {
@@ -91,7 +328,117 @@ export function Header({ className }: HeaderProps) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [searchQuery, setSearchQuery] = useState('');
-  const location = useLocation();
+
+  const navigation = [
+    {
+      name: 'Services',
+      href: '/services',
+      icon: Zap,
+      dropdown: [
+        // AI & Analytics Services
+        { name: 'AI Customer Experience Platform', href: '/services/ai-customer-experience-platform', icon: Brain, price: '$2,499/month' },
+        { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection', icon: Shield, price: '$3,999/month' },
+        { name: 'Autonomous Business Operations', href: '/services/autonomous-business-operations', icon: Bot, price: '$5,999/month' },
+        { name: 'AI Content Generation Platform', href: '/services/ai-content-generation-platform', icon: FileText, price: '$1,999/month' },
+        { name: 'AI Healthcare Diagnostics', href: '/services/ai-healthcare-diagnostics', icon: Heart, price: '$4,999/month' },
+        
+        // Quantum Computing Services
+        { name: 'Quantum AI Trading Platform', href: '/services/quantum-ai-trading-platform', icon: Atom, price: '$8,999/month' },
+        { name: 'Quantum Neural Network Platform', href: '/services/quantum-neural-network-platform', icon: Sparkles, price: '$12,999/month' },
+        
+        // Blockchain & IoT Services
+        { name: 'Blockchain Enterprise Solutions', href: '/services/blockchain-enterprise-solutions', icon: Lock, price: '$3,999/month' },
+        { name: 'IoT Edge Computing Platform', href: '/services/iot-edge-computing-platform', icon: Activity, price: '$2,499/month' },
+        
+        // Supply Chain & Logistics
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', icon: Truck, price: '$3,499/month' },
+        
+        // Comprehensive Service Pages
+        { name: 'All AI Services', href: '/services/ai-solutions', icon: Brain },
+        { name: 'All Cybersecurity Services', href: '/services/cybersecurity', icon: Shield },
+        { name: 'All Quantum Services', href: '/services/quantum-computing', icon: Atom },
+        { name: 'Comprehensive Services', href: '/comprehensive-services', icon: Globe },
+        { name: 'Revolutionary Services', href: '/revolutionary-services', icon: Sparkles },
+        { name: 'New Services 2025', href: '/new-services-2025', icon: Star },
+        { name: 'Enhanced Services 2025', href: '/enhanced-new-services-2025', icon: Star },
+        { name: 'Pricing', href: '/pricing', icon: DollarSign }
+      ]
+    },
+    {
+      name: 'Solutions',
+      href: '/solutions',
+      icon: Target,
+      dropdown: [
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building },
+        { name: 'AI Business Intelligence', href: '/solutions/ai-business-intelligence', icon: Brain },
+        { name: 'Quantum AI Platform', href: '/solutions/quantum-ai-platform', icon: Atom },
+        { name: 'Digital Twin Solutions', href: '/solutions/digital-twin', icon: Eye },
+        { name: 'Zero Trust Security', href: '/solutions/zero-trust-security', icon: Shield },
+        { name: 'Smart City Solutions', href: '/solutions/smart-cities', icon: Building2 },
+        { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: Heart },
+        { name: 'Financial Solutions', href: '/solutions/financial', icon: DollarSign },
+        { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', icon: Cpu },
+        { name: 'Retail Solutions', href: '/solutions/retail', icon: ShoppingCart }
+      ]
+    },
+    {
+      name: 'Industries',
+      href: '/industries',
+      icon: Building2,
+      dropdown: [
+        { name: 'Healthcare & Life Sciences', href: '/industries/healthcare', icon: Heart },
+        { name: 'Financial Services', href: '/industries/financial', icon: DollarSign },
+        { name: 'Manufacturing', href: '/industries/manufacturing', icon: Cpu },
+        { name: 'Retail & E-commerce', href: '/industries/retail', icon: ShoppingCart },
+        { name: 'Energy & Utilities', href: '/industries/energy', icon: Zap },
+        { name: 'Transportation & Logistics', href: '/industries/transportation', icon: Truck },
+        { name: 'Government & Public Sector', href: '/industries/government', icon: Building },
+        { name: 'Education', href: '/industries/education', icon: GraduationCap },
+        { name: 'Media & Entertainment', href: '/industries/media', icon: Video },
+        { name: 'Real Estate', href: '/industries/real-estate', icon: Building2 }
+      ]
+    },
+    {
+      name: 'About',
+      href: '/about',
+      icon: Users,
+      dropdown: [
+        { name: 'Our Story', href: '/about/story', icon: FileText },
+        { name: 'Team', href: '/about/team', icon: Users },
+        { name: 'Careers', href: '/careers', icon: Briefcase },
+        { name: 'Partners', href: '/partners', icon: Network },
+        { name: 'Press', href: '/press', icon: Newspaper },
+        { name: 'Awards & Recognition', href: '/about/awards', icon: Award },
+        { name: 'Leadership', href: '/about/leadership', icon: Users2 },
+        { name: 'Culture', href: '/about/culture', icon: Heart }
+      ]
+    },
+    {
+      name: 'Resources',
+      href: '/resources',
+      icon: FileText,
+      dropdown: [
+        { name: 'Blog', href: '/blog', icon: Newspaper },
+        { name: 'Case Studies', href: '/case-studies', icon: FileText },
+        { name: 'Research & Development', href: '/research-development', icon: Activity },
+        { name: 'White Papers', href: '/white-papers', icon: FileText },
+        { name: 'Webinars', href: '/webinars', icon: Video },
+        { name: 'Events', href: '/events', icon: Calendar },
+        { name: 'Documentation', href: '/docs', icon: FileText },
+        { name: 'API Reference', href: '/api', icon: Cpu },
+        { name: 'Sitemap', href: '/sitemap', icon: FileText },
+        { name: 'Support', href: '/support', icon: HelpCircle },
+        { name: 'Training', href: '/training', icon: GraduationCap },
+        { name: 'Helpdesk', href: '/help', icon: HelpCircle },
+        { name: 'FAQ', href: '/faq', icon: HelpCircle }
+      ]
+    },
+    {
+      name: 'Contact',
+      href: '/contact',
+      icon: Phone
+    }
+  ];
 
   useEffect(() => {
 <<<<<<< HEAD
@@ -113,7 +460,27 @@ export function Header({ className }: HeaderProps) {
     // Add search logic here'
     // console.log('Searching for:', searchQuery)};
 
-  return ()
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Add search logic here
+    console.log('Searching for:', searchQuery);
+  };
+
+  const quickLinks = [
+    { name: 'AI Services', href: '/services/ai-solutions', icon: Brain },
+    { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+    { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
+    { name: 'Blockchain', href: '/services/blockchain-enterprise-solutions', icon: Lock },
+    { name: 'IoT & Edge', href: '/services/iot-edge-computing-platform', icon: Activity },
+    { name: 'Healthcare AI', href: '/services/ai-healthcare-diagnostics', icon: Heart },
+    { name: 'Contact', href: '/contact', icon: Phone }
+  ];
+
+  return (
     <header 
       className={cn()
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
@@ -126,48 +493,62 @@ export function Header({ className }: HeaderProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
         <div className="flex items-center justify-between h-16 lg:h-20">
           
-          {/* Logo */}"
-          <Link to="/" className="flex items-center space-x-3 group">"
-            <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">"
-              <Zap className="w-6 h-6 lg:w-7 lg:h-7 text-white"  />
-            </div>"
-            <div className="hidden sm:block">"
-              <h1 className="text-xl lg:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
-=======
-  const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-  };
-
-  const navigation = [
-    { name: 'Home', href: '/', current: location.pathname === '/' },
-    { name: 'Services', href: '/services', current: location.pathname.startsWith('/services') },
-    { name: 'Solutions', href: '/solutions', current: location.pathname.startsWith('/solutions') },
-    { name: 'About', href: '/about', current: location.pathname.startsWith('/about') },
-    { name: 'Contact', href: '/contact', current: location.pathname === '/contact' },
-    { name: 'Blog', href: '/blog', current: location.pathname.startsWith('/blog') },
-    { name: 'Pricing', href: '/pricing', current: location.pathname === '/pricing' }
-  ];
-
-  return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-800' 
-        : 'bg-transparent'
-    } ${className || ''}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                <Zap className="w-5 h-5 text-white" />
+          <Link to="/" className="flex items-center space-x-3">
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 lg:w-10 lg:h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <Zap className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
               </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
+              <span className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Zion Tech Group
               </span>
-            </Link>
-          </div>
+            </div>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center space-x-8">
+            {navigation.map((item) => (
+              <div key={item.name} className="relative group">
+                <Link
+                  to={item.href}
+                  className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+                >
+                  <item.icon className="w-4 h-4" />
+                  <span>{item.name}</span>
+                  {item.dropdown && <ChevronDown className="w-3 h-3" />}
+                </Link>
+                
+                {/* Dropdown Menu */}
+                {item.dropdown && (
+                  <div className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div className="p-4">
+                      <div className="grid gap-2">
+                        {item.dropdown.map((subItem) => (
+                          <Link
+                            key={subItem.name}
+                            to={subItem.href}
+                            className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group/item"
+                          >
+                            <div className="flex items-center space-x-3">
+                              <subItem.icon className="w-4 h-4 text-blue-400" />
+                              <span className="text-gray-300 group-hover/item:text-white transition-colors duration-200">
+                                {subItem.name}
+                              </span>
+                            </div>
+                            {subItem.price && (
+                              <span className="text-sm text-green-400 font-medium">
+                                {subItem.price}
+                              </span>
+                            )}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </nav>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
@@ -190,15 +571,8 @@ export function Header({ className }: HeaderProps) {
           <div className="flex items-center space-x-4">
             {/* Search */}
             <button
-<<<<<<< HEAD
-              onClick={() => setIsSearchOpen(!isSearchOpen)}"
-              className="p-2 text-gray-300 hover:text-blue-400 transition-colors"
-              
-            >"
-              <Search className="w-5 h-5"  />
-=======
               onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-md transition-colors duration-200"
+              className="p-2 text-gray-400 hover:text-white transition-colors duration-200"
             >
               <Search className="w-5 h-5" />
 >>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
@@ -206,109 +580,21 @@ export function Header({ className }: HeaderProps) {
 
             {/* Theme toggle */}
             <button
-<<<<<<< HEAD
-              onClick={toggleTheme}"
-              className="p-2 text-gray-300 hover:text-blue-400 transition-colors"
-              
-            >'"
-              {theme === 'dark' ? <Sun className="w-5 h-5"  /> : <Moon className="w-5 h-5"  />}
-=======
               onClick={toggleTheme}
-              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-md transition-colors duration-200"
+              className="p-2 text-gray-400 hover:text-white transition-colors duration-200"
             >
               {theme === 'light' ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
 >>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
             </button>
 
-            {/* User menu */}
-            <div className="relative">
-              <button
-                onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
-                className="flex items-center space-x-2 p-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-md transition-colors duration-200"
-              >
-                <User className="w-5 h-5" />
-                <ChevronDown className="w-4 h-4" />
-              </button>
-
-<<<<<<< HEAD
-              <AnimatePresence>
-                {isUserMenuOpen && (<motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}"
-                    className="absolute right-0 mt-2 w-64 bg-gray-900 border border-gray-700 rounded-lg shadow-xl z-50"
-                  >"
-                    <div className="p-4 border-b border-gray-700">"
-                      <div className="flex items-center space-x-3">"
-                        <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">"
-                          <User className="w-5 h-5 text-white"  />
-                        </div>
-                        <div>"
-                          <p className="text-white font-medium">John Doe</p>"
-                          <p className="text-gray-400 text-sm">john@ziontech.com</p>
-                        </div>
-                      </div>
-                    </div>"
-                    <div className="py-2">
-                      <Link"
-                        to="/profile"
-                        className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-blue-400 hover:bg-gray-800 transition-colors"
-                        onClick={() => setIsUserMenuOpen(false)}
-                      >"
-                        <User className="w-4 h-4"  />
-                        <span>Profile</span>
-                      </Link>
-                      <Link"
-                        to="/dashboard"
-                        className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-blue-400 hover:bg-gray-800 transition-colors"
-                        onClick={() => setIsUserMenuOpen(false)}
-                      >"
-                        <BarChart3 className="w-4 h-4" />
-                        <span>Dashboard</span>
-                      </Link>
-                      <Link"
-                        to="/settings"
-                        className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-blue-400 hover:bg-gray-800 transition-colors"
-                        onClick={() => setIsUserMenuOpen(false)}
-                      >"
-                        <Settings className="w-4 h-4"  />
-                        <span>Settings</span>
-                      </Link>"
-                      <div className="border-t border-gray-700 my-2"></div>
-                      <button"
-                        className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-red-400 hover:bg-gray-800 transition-colors w-full text-left"
-                        onClick={() => {
-                          // Add logout logic here
-                          setIsUserMenuOpen(false) }}
-                      >"
-                        <LogOut className="w-4 h-4"  />
-                        <span>Logout</span>
-                      </button>
-                    </div>
-                  </motion.div>) }
-              </AnimatePresence>
-=======
-              {isUserMenuOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50">
-                  <Link
-                    to="/profile"
-                    className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-cyan-400"
-                  >
-                    Profile
-                  </Link>
-                  <Link
-                    to="/settings"
-                    className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-cyan-400"
-                  >
-                    Settings
-                  </Link>
-                  <button className="block w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-cyan-400">
-                    Sign out
-                  </button>
-                </div>
-              )}
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
-            </div>
+            {/* Contact Button */}
+            <Link
+              to="/contact"
+              className="hidden sm:inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
+            >
+              <Phone className="w-4 h-4 mr-2" />
+              Contact Us
+            </Link>
 
             {/* CTA Button */}
             <Link
@@ -320,15 +606,8 @@ export function Header({ className }: HeaderProps) {
 
             {/* Mobile menu button */}
             <button
-<<<<<<< HEAD
-              onClick={toggleMobileMenu}"
-              className="lg:hidden p-2 text-gray-300 hover:text-blue-400 transition-colors"
-              
-            >"
-              {isMobileMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
-=======
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-md transition-colors duration-200"
+              onClick={toggleMobileMenu}
+              className="lg:hidden p-2 text-gray-400 hover:text-white transition-colors duration-200"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 >>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
@@ -336,248 +615,132 @@ export function Header({ className }: HeaderProps) {
           </div>
         </div>
 
-        {/* Search bar */}
-        {isSearchOpen && (
-          <div className="pb-4">
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Search services, solutions, or content..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-3 pl-12 bg-gray-800 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              />
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
-            </div>
-          </div>
-        )}
+        {/* Search Bar */}
+        <AnimatePresence>
+          {isSearchOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="py-4 border-t border-gray-700"
+            >
+              <form onSubmit={handleSearch} className="relative">
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search services, solutions, or resources..."
+                  className="w-full px-4 py-3 pl-12 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+              </form>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
-      {/* Mobile Navigation */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden bg-gray-900 border-t border-gray-800">
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
-                  item.current
-                    ? 'text-cyan-400 bg-gray-800/50'
-                    : 'text-gray-300 hover:text-cyan-400 hover:bg-gray-800/30'
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
-            <div className="pt-4">
-              <Link
-                to="/request-quote"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block w-full text-center px-4 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-              >
-                Get Quote
-              </Link>
-            </div>
-          </div>
-        </div>
-      )}
-    </header>
-  );
-}
-
-<<<<<<< HEAD
-      {/* Enhanced Mobile Menu */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}"
-            className="lg:hidden bg-gray-900 border-t border-gray-700"
-          >"
+            exit={{ opacity: 0, height: 0 }}
+            className="lg:hidden bg-gray-900/95 backdrop-blur-md border-t border-gray-700"
+          >
             <div className="px-4 py-6 space-y-6">
-              
-              {/* Mobile Navigation Links */}"
+              {/* Quick Links */}
+              <div>
+                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+                  Quick Links
+                </h3>
+                <div className="grid grid-cols-2 gap-3">
+                  {quickLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      to={link.href}
+                      onClick={closeMobileMenu}
+                      className="flex items-center space-x-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors duration-200"
+                    >
+                      <link.icon className="w-5 h-5 text-blue-400" />
+                      <span className="text-gray-300">{link.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Main Navigation */}
               <div className="space-y-4">
-                <Link"
-                  to="/"
-                  className="block text-white hover:text-blue-400 transition-colors text-lg font-medium"
-                  onClick={closeMobileMenu}
-                >
-                  Home
-                </Link>
-                "
-                <div className="space-y-2">"
-                  <h3 className="text-blue-400 font-semibold text-sm uppercase tracking-wider">Services</h3>"
-                  <div className="pl-4 space-y-2">
-                    <Link"
-                      to="/ai-services"
-                      className="block text-gray-300 hover:text-blue-400 transition-colors"
+                {navigation.map((item) => (
+                  <div key={item.name}>
+                    <Link
+                      to={item.href}
                       onClick={closeMobileMenu}
+                      className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200"
                     >
-                      AI Services
+                      <div className="flex items-center space-x-3">
+                        <item.icon className="w-5 h-5 text-blue-400" />
+                        <span className="text-gray-300 font-medium">{item.name}</span>
+                      </div>
+                      {item.dropdown && <ChevronRight className="w-4 h-4 text-gray-400" />}
                     </Link>
-                    <Link"
-                      to="/it-services"
-                      className="block text-gray-300 hover:text-blue-400 transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      IT Services
-                    </Link>
-                    <Link"
-                      to="/micro-saas"
-                      className="block text-gray-300 hover:text-blue-400 transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Micro SAAS
-                    </Link>
-                    <Link"
-                      to="/cloud-devops"
-                      className="block text-gray-300 hover:text-blue-400 transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Cloud & DevOps
-                    </Link>
-                    <Link"
-                      to="/cybersecurity"
-                      className="block text-gray-300 hover:text-blue-400 transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Cybersecurity
-                    </Link>
+                    
+                    {/* Mobile Dropdown */}
+                    {item.dropdown && (
+                      <div className="ml-8 mt-2 space-y-1">
+                        {item.dropdown.slice(0, 5).map((subItem) => (
+                          <Link
+                            key={subItem.name}
+                            to={subItem.href}
+                            onClick={closeMobileMenu}
+                            className="flex items-center justify-between p-2 rounded hover:bg-gray-800/30 transition-colors duration-200"
+                          >
+                            <span className="text-sm text-gray-400">{subItem.name}</span>
+                            {subItem.price && (
+                              <span className="text-xs text-green-400">{subItem.price}</span>
+                            )}
+                          </Link>
+                        ))}
+                        {item.dropdown.length > 5 && (
+                          <Link
+                            to={item.href}
+                            onClick={closeMobileMenu}
+                            className="text-sm text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                          >
+                            View all {item.name.toLowerCase()} →
+                          </Link>
+                        )}
+                      </div>
+                    )}
                   </div>
-                </div>
-"
-                <div className="space-y-2">"
-                  <h3 className="text-blue-400 font-semibold text-sm uppercase tracking-wider">Solutions</h3>"
-                  <div className="pl-4 space-y-2">
-                    <Link"
-                      to="/enterprise"
-                      className="block text-gray-300 hover:text-blue-400 transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Enterprise
-                    </Link>
-                    <Link"
-                      to="/healthcare"
-                      className="block text-gray-300 hover:text-blue-400 transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Healthcare
-                    </Link>
-                    <Link"
-                      to="/financial"
-                      className="block text-gray-300 hover:text-blue-400 transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Financial
-                    </Link>
-                    <Link"
-                      to="/government"
-                      className="block text-gray-300 hover:text-blue-400 transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Government
-                    </Link>
-                  </div>
-                </div>
-"
-                <div className="space-y-2">"
-                  <h3 className="text-blue-400 font-semibold text-sm uppercase tracking-wider">Company</h3>"
-                  <div className="pl-4 space-y-2">
-                    <Link"
-                      to="/about"
-                      className="block text-gray-300 hover:text-blue-400 transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      About Us
-                    </Link>
-                    <Link"
-                      to="/contact"
-                      className="block text-gray-300 hover:text-blue-400 transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Contact
-                    </Link>
-                    <Link"
-                      to="/careers"
-                      className="block text-gray-300 hover:text-blue-400 transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Careers
-                    </Link>
-                    <Link"
-                      to="/blog"
-                      className="block text-gray-300 hover:text-blue-400 transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Blog
-                    </Link>
-                  </div>
-                </div>
-"
-                <div className="space-y-2">"
-                  <h3 className="text-blue-400 font-semibold text-sm uppercase tracking-wider">Support</h3>"
-                  <div className="pl-4 space-y-2">
-                    <Link"
-                      to="/help"
-                      className="block text-gray-300 hover:text-blue-400 transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Help Center
-                    </Link>
-                    <Link"
-                      to="/documentation"
-                      className="block text-gray-300 hover:text-blue-400 transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Documentation
-                    </Link>
-                    <Link"
-                      to="/api"
-                      className="block text-gray-300 hover:text-blue-400 transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      API Reference
-                    </Link>
-                  </div>
-                </div>
+                ))}
               </div>
 
-              {/* Contact Info */}"
-              <div className="pt-4 border-t border-gray-700 space-y-3">"
-                <div className="flex items-center space-x-3 text-gray-300">"
-                  <Phone className="w-4 h-4"  />"
-                  <span className="text-sm">+1(555) 123-4567</span>
-                </div>"
-                <div className="flex items-center space-x-3 text-gray-300">"
-                  <Mail className="w-4 h-4"  />"
-                  <span className="text-sm">contact@ziontechgroup.com</span>
-                </div>"
-                <div className="flex items-center space-x-3 text-gray-300">"
-                  <MapPin className="w-4 h-4"  />"
-                  <span className="text-sm">San Francisco, CA</span>
+              {/* Contact Information */}
+              <div className="pt-6 border-t border-gray-700">
+                <div className="space-y-3">
+                  <a
+                    href="tel:+13024640950"
+                    className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200"
+                  >
+                    <Phone className="w-5 h-5 text-blue-400" />
+                    <span>+1 302 464 0950</span>
+                  </a>
+                  <a
+                    href="mailto:kleber@ziontechgroup.com"
+                    className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200"
+                  >
+                    <Mail className="w-5 h-5 text-blue-400" />
+                    <span>kleber@ziontechgroup.com</span>
+                  </a>
+                  <div className="flex items-start space-x-3 text-gray-300">
+                    <MapPin className="w-5 h-5 text-blue-400 mt-0.5" />
+                    <span className="text-sm">
+                      364 E Main St STE 1008<br />
+                      Middletown DE 19709
+                    </span>
+                  </div>
                 </div>
-              </div>
-
-              {/* Mobile CTA */}"
-              <div className="pt-4 border-t border-gray-700 space-y-3">
-                <Link"
-                  to="/contact"
-                  className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-3 px-6 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-                  onClick={closeMobileMenu}
-                >
-                  Get Started
-                </Link>
-                <Link"
-                  to="/demo"
-                  className="block w-full border border-gray-600 text-white text-center py-3 px-6 rounded-lg font-medium hover:bg-gray-800 transition-all duration-300"
-                  onClick={closeMobileMenu}
-                >
-                  Request Demo
-                </Link>
               </div>
             </div>
           </motion.div>) }

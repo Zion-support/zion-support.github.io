@@ -1,8 +1,21 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan  } from 'lucide-react';
-import { Link  } from 'react-router-dom';
-,
+import { motion, AnimatePresence } from 'framer-motion';
+import { Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan } from 'lucide-react';
+import { Link } from 'react-router-dom';
+const aiServices = [
+    {
+        id: 'ai-chat',
+        name: 'ZionGPT Pro',
+        description: 'Advanced conversational AI with enterprise-grade security and customization',
+        category: 'Conversational AI',
+        rating: 4.9,
+        users: 15420,
+        price: 'From $99/month',
+        features: ['Multi-language support', 'Custom training', 'API access', 'Analytics'],
+        icon: Brain,
+        color: 'from-purple-500 to-purple-700',
+        status: 'active'
+    },
     {
 
         id: 'ai-vision',
@@ -12,7 +25,7 @@ import { Link  } from 'react-router-dom';
         rating: 4.8,
         users: 8920,
         price: 'From $149/month',
-        features['Real-time processing',Custom models',Batch processing',SDK'],;
+        features: ['Real-time processing', 'Custom models', 'Batch processing', 'SDK'],
         icon: Cpu,
         color: 'from-blue-500 to-blue-700',
         status: 'beta'
@@ -26,7 +39,7 @@ import { Link  } from 'react-router-dom';
         rating: 4.7,
         users: 12340,
         price: 'From $199/month',
-        features['Predictive analytics',Real-time insights',Custom dashboards',API'],;
+        features: ['Predictive analytics', 'Real-time insights', 'Custom dashboards', 'API'],
         icon: Database,
         color: 'from-green-500 to-green-700',
         status: 'active'
@@ -40,7 +53,7 @@ import { Link  } from 'react-router-dom';
         rating: 4.6,
         users: 5670,
         price: 'From $299/month',
-        features['Global deployment',Auto-scaling',Load balancing',Monitoring'],;
+        features: ['Global deployment', 'Auto-scaling', 'Load balancing', 'Monitoring'],
         icon: Globe,
         color: 'from-orange-500 to-orange-700',
         status: 'new'
@@ -54,7 +67,7 @@ import { Link  } from 'react-router-dom';
         rating: 4.8,
         users: 7420,
         price: 'From $199/month',
-        features['PR annotations',OWASP checks',Refactor suggestions'],;
+        features: ['PR annotations', 'OWASP checks', 'Refactor suggestions'],
         icon: Code,
         color: 'from-cyan-500 to-blue-600',
         status: 'active'
@@ -68,7 +81,7 @@ import { Link  } from 'react-router-dom';
         rating: 4.7,
         users: 6120,
         price: 'From $299/month',
-        features['Policy-aware retrieval',Redaction',Human-in-the-loop'],;
+        features: ['Policy-aware retrieval', 'Redaction', 'Human-in-the-loop'],
         icon: Bot,
         color: 'from-purple-600 to-fuchsia-600',
         status: 'active'
@@ -82,7 +95,7 @@ import { Link  } from 'react-router-dom';
         rating: 4.6,
         users: 3180,
         price: 'From $499/month',
-        features['Offline inference',Model drift alerts',Web dashboard'],;
+        features: ['Offline inference', 'Model drift alerts', 'Web dashboard'],
         icon: Scan,
         color: 'from-emerald-500 to-teal-600',
         status: 'beta'

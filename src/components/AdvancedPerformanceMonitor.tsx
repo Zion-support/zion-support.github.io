@@ -1,4 +1,5 @@
-import { <<<<<<< HEAD ======= Activity, Zap, Clock, <<<<<<< HEAD TrendingUp, AlertTriangle  } from 'lucide-react';
+import React, { useEffect, useState, useCallback } from 'react';
+import { Activity, Zap, Clock, TrendingUp, AlertTriangle } from 'lucide-react';
 
 export default function Page() {
 );
@@ -99,10 +100,9 @@ export default function Page() {
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
       // First Input Delay
-      const fidObserver = new PerformanceObserver(list => {
-
-        const entries = list.getEntries();        entries.forEach(entry => {
-
+      const fidObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry: any) => {
           if (entry.processingStart && entry.startTime) {
 
             setMetrics(prev => ({ ...prev, fid }) ) }

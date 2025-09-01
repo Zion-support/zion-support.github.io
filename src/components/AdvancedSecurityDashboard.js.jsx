@@ -1,387 +1,437 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, Minimize2, Activity, BarChart3, TrendingUp, Users, Server, FileText, Bug  } from 'lucide-react';
-,
-    {
+import { 
+  Shield, 
+  AlertTriangle, 
+  CheckCircle, 
+  Download, 
+  RefreshCw, 
+  X, 
+  Maximize2, 
+  Minimize2, 
+  Activity, 
+  BarChart3, 
+  TrendingUp, 
+  Users, 
+  Server, 
+  FileText, 
+  Bug 
+} from 'lucide-react';
 
-        id: '2',
-        threatType: 'Phishing Attack',
-        description: 'Sophisticated phishing campaign using executive impersonation.',
-        riskScore: 7.8,
-        affectedSystems['Email Systems',User Workstations'],;
-        mitigationSteps['Enhanced email filtering',User awareness training',Multi-factor authentication'],;
-        lastSeen: '2024-01-15T08:30:00.000Z',
-        frequency: 8
-    }
+const mockThreatIntelligence = [
+  {
+    id: '1',
+    threatType: 'Ransomware Campaign',
+    description: 'Active ransomware campaign targeting healthcare organizations in the region.',
+    riskScore: 9.2,
+    affectedSystems: ['Windows Servers', 'File Shares', 'Backup Systems'],
+    mitigationSteps: ['Update endpoint protection', 'Enable advanced threat protection', 'Review backup procedures'],
+    lastSeen: '2024-01-15T09:00:00.000Z',
+    frequency: 15
+  },
+  {
+    id: '2',
+    threatType: 'Phishing Attack',
+    description: 'Sophisticated phishing campaign using executive impersonation.',
+    riskScore: 7.8,
+    affectedSystems: ['Email Systems', 'User Workstations'],
+    mitigationSteps: ['Enhanced email filtering', 'User awareness training', 'Multi-factor authentication'],
+    lastSeen: '2024-01-15T08:30:00.000Z',
+    frequency: 8
+  }
 ];
+
+const mockSecurityEvents = [
+  {
+    id: '1',
+    type: 'threat',
+    severity: 'critical',
+    title: 'Suspicious Login Attempt',
+    description: 'Multiple failed login attempts from unknown IP address',
+    timestamp: '2024-01-15T10:30:00.000Z',
+    status: 'investigating'
+  },
+  {
+    id: '2',
+    type: 'vulnerability',
+    severity: 'high',
+    title: 'Outdated SSL Certificate',
+    description: 'SSL certificate expired on production server',
+    timestamp: '2024-01-15T09:15:00.000Z',
+    status: 'resolved'
+  }
+];
+
+const mockComplianceRequirements = [
+  {
+    id: '1',
+    framework: 'SOC 2',
+    requirement: 'Access Control',
+    description: 'Implement proper access controls for all systems',
+    status: 'compliant',
+    lastAudit: '2024-01-10T00:00:00.000Z'
+  },
+  {
+    id: '2',
+    framework: 'GDPR',
+    requirement: 'Data Encryption',
+    description: 'Encrypt all personal data at rest and in transit',
+    status: 'in_progress',
+    lastAudit: '2024-01-08T00:00:00.000Z'
+  }
+];
+
+const mockSecurityMetrics = {
+  threatScore: 7.2,
+  vulnerabilityCount: 15,
+  complianceScore: 85,
+  incidentResponseTime: 2.5,
+  userTrainingCompletion: 92
+};
+
 export function AdvancedSecurityDashboard() {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isMinimized, setIsMinimized] = useState(false);
-    const [isFullscreen, setIsFullscreen] = useState(false);
-    const [activeTab, setActiveTab] = useState('overview');
-    const [selectedSeverity, setSelectedSeverity] = useState('all');
-    const [selectedFramework, setSelectedFramework] = useState('all');
-    const [autoRefresh, setAutoRefresh] = useState(true);
-    const [showResolved, setShowResolved] = useState(false);
-    const [securityEvents, setSecurityEvents] = useState(mockSecurityEvents);
-    const [complianceRequirements, setComplianceRequirements] = useState(mockComplianceRequirements);
-    const [securityMetrics, setSecurityMetrics] = useState(mockSecurityMetrics);
-    const [threatIntelligence, setThreatIntelligence] = useState(mockThreatIntelligence);
-    const [isRefreshing, setIsRefreshing] = useState(false);
-    const containerRef = useRef(null);
-    const severities = ['all',critical',high',medium',low',info'];
-    const filteredCompliance = selectedFramework === 'all'
-        ? complianceRequirements
-        : complianceRequirements.filter(req => req.framework === selectedFramework) ;
-    const refreshData = async () => {
-        setIsRefreshing(true) ;
-        // Simulate API call
-        await new Promise(resolve => setTimeout (resolve, 1500) ) ;
-        setIsRefreshing(false) };
-    useEffect(() => {
-        if(autoRefresh) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMinimized, setIsMinimized] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [activeTab, setActiveTab] = useState('overview');
+  const [selectedSeverity, setSelectedSeverity] = useState('all');
+  const [selectedFramework, setSelectedFramework] = useState('all');
+  const [autoRefresh, setAutoRefresh] = useState(true);
+  const [showResolved, setShowResolved] = useState(false);
+  const [securityEvents, setSecurityEvents] = useState(mockSecurityEvents);
+  const [complianceRequirements, setComplianceRequirements] = useState(mockComplianceRequirements);
+  const [securityMetrics, setSecurityMetrics] = useState(mockSecurityMetrics);
+  const [threatIntelligence, setThreatIntelligence] = useState(mockThreatIntelligence);
+  const [isRefreshing, setIsRefreshing] = useState(false);
+  
+  const containerRef = useRef(null);
+  const severities = ['all', 'critical', 'high', 'medium', 'low', 'info'];
+  
+  const filteredCompliance = selectedFramework === 'all'
+    ? complianceRequirements
+    : complianceRequirements.filter(req => req.framework === selectedFramework);
 
-            const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
-            return () => clearInterval(interval)}
-    }, [autoRefresh]);
-    const getSeverityColor = (severity) => {
+  const refreshData = async () => {
+    setIsRefreshing(true);
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    setIsRefreshing(false);
+  };
 
-        switch(severity) {
+  useEffect(() => {
+    if (autoRefresh) {
+      const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
+      return () => clearInterval(interval);
+    }
+  }, [autoRefresh]);
 
-            case 'critical':'
-                return 'bg-red-500 text-white';
-            case 'high':'
-                return 'bg-orange-500 text-white';
-            case 'medium':'
-                return 'bg-yellow-500 text-white';
-            case 'low':'
-                return 'bg-blue-500 text-white';
-            default:'
-                return 'bg-gray-500 text-white'}
-    };
-    const getStatusColor = (status) => {
+  const getSeverityColor = (severity) => {
+    switch (severity) {
+      case 'critical':
+        return 'bg-red-500 text-white';
+      case 'high':
+        return 'bg-orange-500 text-white';
+      case 'medium':
+        return 'bg-yellow-500 text-white';
+      case 'low':
+        return 'bg-blue-500 text-white';
+      default:
+        return 'bg-gray-500 text-white';
+    }
+  };
 
-        switch(status) {
+  const getStatusColor = (status) => {
+    switch (status) {
+      case 'compliant':
+        return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300';
+      case 'non_compliant':
+        return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300';
+      case 'in_progress':
+        return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
+      default:
+        return 'bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-300';
+    }
+  };
 
-            case 'compliant':'
-                return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300';
-            case 'non_compliant':'
-                return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300';
-            case 'in_progress':'
-                return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
-            default:'
-                return 'bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-300'}
-    };
-    const getRiskLevelColor = (riskLevel) => {
+  const getRiskLevelColor = (riskLevel) => {
+    switch (riskLevel) {
+      case 'high':
+        return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300';
+      case 'medium':
+        return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
+      default:
+        return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300';
+    }
+  };
 
-        switch(riskLevel) {
+  const getTrendIcon = (trend) => {
+    switch (trend) {
+      case 'up':
+        return <TrendingUp className="w-4 h-4 text-green-500" />;
+      case 'down':
+        return <TrendingUp className="w-4 h-4 text-red-500 rotate-180" />;
+      default:
+        return <Activity className="w-4 h-4 text-gray-500" />;
+    }
+  };
 
-            case 'high':'
-                return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300';
-            case 'medium':'
-                return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
-            default:'
-                return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'}
-    };
-    const getTrendIcon = (trend) => {
+  const getEventIcon = (type) => {
+    switch (type) {
+      case 'threat':
+        return <AlertTriangle className="w-5 h-5 text-red-500" />;
+      case 'vulnerability':
+        return <Bug className="w-5 h-5 text-orange-500" />;
+      case 'compliance':
+        return <Shield className="w-5 h-5 text-blue-500" />;
+      default:
+        return <Activity className="w-5 h-5 text-gray-500" />;
+    }
+  };
 
-        switch(trend) {
-
-            case 'up':
-                return <TrendingUp className="w-4 h-4 text-green-500"/>;
-            case 'down':"
-                return <TrendingUp className="w-4 h-4 text-red-500 rotate-180"/>;
-            default:"
-                return <Activity className="w-4 h-4 text-gray-500"/>}
-    };
-    const getEventIcon = (type) => {
-
-        switch(type) {
-
-            case 'threat':"
-                return <AlertTriangle className="w-5 h-5 text-red-500"/>;
-            case 'vulnerability':"
-                return <Bug className="w-5 h-5 text-orange-500"/>;
-            case 'compliance':"
-                return <FileText className="w-5 h-5 text-blue-500"/>;
-            case 'access':"
-                return <Users className="w-5 h-5 text-purple-500"/>;
-            default:"
-                return <Server className="w-5 h-5 text-gray-500"/>}
-    };
-    if(!isOpen) {
-"
-        return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Security Dashboard">"
-        <Shield className="w-6 h-6"/>
-      </button>)}
-    if(isMinimized) {
-"
-        return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">"
-        <div className="flex items-center gap-2 p-3">"
-          <Shield className="w-5 h-5 text-zion-red"/>"
-          <span className="text-sm font-medium text-zion-slate">Security</span>"
-          <button onClick={() => setIsMinimized(false)} className="ml-auto p-1 hover:bg-zion-slate-light rounded">"
-            <Maximize2 className="w-4 h-4"/>
+  return (
+    <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
+      {/* Header */}
+      <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
+        <div className="flex items-center gap-3">
+          <Shield className="w-6 h-6 text-blue-600" />
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
+            Security Dashboard
+          </h2>
+        </div>
+        
+        <div className="flex items-center gap-2">
+          <button
+            onClick={refreshData}
+            disabled={isRefreshing}
+            className="p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
+            title="Refresh Data"
+          >
+            <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`} />
+          </button>
+          
+          <button
+            onClick={() => setIsMinimized(!isMinimized)}
+            className="p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
+            title={isMinimized ? 'Expand' : 'Minimize'}
+          >
+            {isMinimized ? <Maximize2 className="w-4 h-4" /> : <Minimize2 className="w-4 h-4" />}
+          </button>
+          
+          <button
+            onClick={() => setIsOpen(false)}
+            className="p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
+            title="Close"
+          >
+            <X className="w-4 h-4" />
           </button>
         </div>
-      </div>)}
-    return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`} ref={containerRef}>
-      {/* Header */}"
-      <div className="bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 flex items-center justify-between">"
-        <div className="flex items-center gap-3">"
-          <Shield className="w-6 h-6"/>
-          <div>"
-            <h2 className="text-lg font-bold">Advanced Security & Compliance Dashboard</h2>"
-            <p className="text-sm opacity-90">Real-time Threat Monitoring & Compliance Tracking</p>
+      </div>
+
+      {/* Content */}
+      {!isMinimized && (
+        <div className="p-4">
+          {/* Tabs */}
+          <div className="flex space-x-1 mb-4">
+            {['overview', 'threats', 'compliance', 'events'].map(tab => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                  activeTab === tab
+                    ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'
+                    : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200'
+                }`}
+              >
+                {tab.charAt(0).toUpperCase() + tab.slice(1)}
+              </button>
+            ))}
           </div>
-        </div>"
-        <div className="flex items-center gap-2">'`
-          <button onClick={() => setAutoRefresh(!autoRefresh)} className={`p-2 rounded-lg transition-colors ${autoRefresh ? 'bg-white/20' : 'hover:bg-white/10'}`} title={autoRefresh ? 'Auto-refresh enabled' : 'Auto-refresh disabled'}>'`
-            <RefreshCw className={`w-4 h-4 ${autoRefresh ? 'animate-spin' : ''}`}/>
-          </button>"
-          <button onClick={() => setIsMinimized(true)} className="p-2 hover:bg-white/10 rounded-lg transition-colors">"
-            <Minimize2 className="w-4 h-4"/>
-          </button>"
-          <button onClick={() => setIsFullscreen(!isFullscreen)} className="p-2 hover:bg-white/10 rounded-lg transition-colors">"
-            {isFullscreen ? <Minimize2 className="w-4 h-4"/> : <Maximize2 className="w-4 h-4"/>}
-          </button>"
-          <button onClick={() => setIsOpen(false)} className="p-2 hover:bg-white/10 rounded-lg transition-colors">"
-            <X className="w-4 h-4"/>
-          </button>
-        </div>
-      </div>
 
-      {/* Controls */}"
-      <div className="bg-zion-slate-light/50 p-4 border-b border-zion-slate-light">"
-        <div className="flex items-center justify-between">"
-          <div className="flex items-center gap-4">"
-            <select value={selectedSeverity} onChange={(e) => setSelectedSeverity(e.target.value)} className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate">
-              {severities.map(severity => (<option key={severity} value={severity}>
-                  {severity === 'all' ? 'All Severities' : severity.charAt(0).toUpperCase() + severity.slice(1)}
-                </option>))}
-            </select>"
-            <select value={selectedFramework} onChange={(e) => setSelectedFramework(e.target.value)} className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate">
-              {frameworks.map(framework => (<option key={framework} value={framework}>
-                  {framework === 'all' ? 'All Frameworks' : framework}
-                </option>))}
-            </select>"
-            <button onClick={refreshData} disabled={isRefreshing} className="px-4 py-2 bg-zion-red text-white rounded-lg hover:bg-zion-red/90 transition-colors disabled:opacity-50 flex items-center gap-2">'`
-              <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`}/>
-              Refresh
-            </button>
-          </div>"
-          <div className="flex items-center gap-4">"
-            <label className="flex items-center gap-2 text-sm text-zion-slate">"
-              <input type="checkbox" checked={showResolved} onChange={(e) => setShowResolved(e.target.checked)} className="rounded"/>
-              Show Resolved
-            </label>"
-            <button className="px-4 py-2 bg-zion-orange text-white rounded-lg hover:bg-zion-orange/90 transition-colors flex items-center gap-2">"
-              <Download className="w-4 h-4"/>
-              Export Report
-            </button>
-          </div>
-        </div>
-      </div>
+          {/* Overview Tab */}
+          {activeTab === 'overview' && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border border-red-200 dark:border-red-800">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-sm font-medium text-red-600 dark:text-red-400">Threat Score</p>
+                    <p className="text-2xl font-bold text-red-700 dark:text-red-300">
+                      {securityMetrics.threatScore}
+                    </p>
+                  </div>
+                  <AlertTriangle className="w-8 h-8 text-red-500" />
+                </div>
+              </div>
 
-      {/* Tabs */}"
-      <div className="flex border-b border-zion-slate-light">
-        {['
-            { id: 'overview', label: 'Overview', icon: BarChart3 },
-            { id: 'events', label: 'Security Events', icon: AlertTriangle },
-            { id: 'compliance', label: 'Compliance', icon: CheckCircle },
-            { id: 'threats', label: 'Threat Intel', icon: Shield },
-            { id: 'analytics', label: 'Analytics', icon: TrendingUp }
-        ].map(tab => {
+              <div className="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-lg border border-orange-200 dark:border-orange-800">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-sm font-medium text-orange-600 dark:text-orange-400">Vulnerabilities</p>
+                    <p className="text-2xl font-bold text-orange-700 dark:text-orange-300">
+                      {securityMetrics.vulnerabilityCount}
+                    </p>
+                  </div>
+                  <Bug className="w-8 h-8 text-orange-500" />
+                </div>
+              </div>
 
-            const Icon = tab.icon;`
-            return (<button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${activeTab === tab.id'
-                    ? 'border-zion-red text-zion-red bg-zion-red/5''`
-                    : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'}`}>"
-              <Icon className="w-4 h-4"/>
-              {tab.label}
-            </button>) }) }
-      </div>
+              <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-200 dark:border-green-800">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-sm font-medium text-green-600 dark:text-green-400">Compliance</p>
+                    <p className="text-2xl font-bold text-green-700 dark:text-green-300">
+                      {securityMetrics.complianceScore}%
+                    </p>
+                  </div>
+                  <CheckCircle className="w-8 h-8 text-green-500" />
+                </div>
+              </div>
 
-      {/* Content */}"
-      <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">'"
-        {activeTab === 'overview' && (<div className="space-y-6">
-            {/* Security Metrics Grid */}"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">"
-              {securityMetrics.map(metric => (<div key={metric.id} className="p-4 rounded-xl border border-zion-slate-light bg-white dark:bg-zion-slate hover:shadow-lg transition-all duration-300">"
-                  <div className="flex items-center justify-between mb-3">"
-                    <h3 className="font-semibold text-zion-slate">{metric.name}</h3>
-                    {getTrendIcon(metric.trend)}
-                  </div>"
-                  <div className="text-2xl font-bold text-zion-slate mb-2">
-                    {metric.value}{metric.unit}
-                  </div>"
-                  <div className="flex items-center justify-between text-sm">'`
-                    <span className={`font-medium ${metric.trend === 'up' ? 'text-green-600' :'`
-                    metric.trend === 'down' ? 'text-red-600' : 'text-gray-600'}`}>
-                      {metric.trend === 'up' ? '+' : ''}{metric.change}%
-                    </span>"
-                    <span className="text-zion-slate-light">
-                      Target: {metric.target}{metric.unit}
+              <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-sm font-medium text-blue-600 dark:text-blue-400">Response Time</p>
+                    <p className="text-2xl font-bold text-blue-700 dark:text-blue-300">
+                      {securityMetrics.incidentResponseTime}h
+                    </p>
+                  </div>
+                  <Activity className="w-8 h-8 text-blue-500" />
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Threats Tab */}
+          {activeTab === 'threats' && (
+            <div className="space-y-4">
+              {threatIntelligence.map(threat => (
+                <div key={threat.id} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+                  <div className="flex items-start justify-between mb-3">
+                    <div>
+                      <h3 className="font-medium text-gray-900 dark:text-white">{threat.threatType}</h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">{threat.description}</p>
+                    </div>
+                    <span className={`px-2 py-1 text-xs font-medium rounded-full ${getRiskLevelColor(threat.riskScore > 8 ? 'high' : 'medium')}`}>
+                      Risk: {threat.riskScore}
                     </span>
                   </div>
-                </div>) ) }
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <p className="font-medium text-gray-700 dark:text-gray-300 mb-1">Affected Systems:</p>
+                      <ul className="list-disc list-inside text-gray-600 dark:text-gray-400">
+                        {threat.affectedSystems.map(system => (
+                          <li key={system}>{system}</li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <p className="font-medium text-gray-700 dark:text-gray-300 mb-1">Mitigation Steps:</p>
+                      <ul className="list-disc list-inside text-gray-600 dark:text-gray-400">
+                        {threat.mitigationSteps.map(step => (
+                          <li key={step}>{step}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
+          )}
 
-            {/* Quick Security Status */}"
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">"
-              <div className="bg-gradient-to-r from-zion-red/10 to-zion-orange/10 p-6 rounded-xl border border-zion-red/20">"
-                <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">"
-                  <AlertTriangle className="w-5 h-5 text-zion-red"/>
-                  Active Security Events
-                </h3>"
-                <div className="space-y-3">"
-                  {securityEvents.slice(0, 3).map(event => (<div key={event.id} className="flex items-center gap-3 p-3 bg-white dark:bg-zion-slate rounded-lg">
-                      {getEventIcon(event.type)}"
-                      <div className="flex-1">"
-                        <h4 className="font-medium text-zion-slate text-sm">{event.title}</h4>"
-                        <p className="text-xs text-zion-slate-light">{event.description}</p>
-                      </div>`
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(event.severity)}`}>
-                        {event.severity}
-                      </span>
-                    </div>) ) }
-                </div>
+          {/* Compliance Tab */}
+          {activeTab === 'compliance' && (
+            <div className="space-y-4">
+              <div className="flex items-center gap-4 mb-4">
+                <select
+                  value={selectedFramework}
+                  onChange={(e) => setSelectedFramework(e.target.value)}
+                  className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                >
+                  <option value="all">All Frameworks</option>
+                  <option value="SOC 2">SOC 2</option>
+                  <option value="GDPR">GDPR</option>
+                  <option value="HIPAA">HIPAA</option>
+                  <option value="ISO 27001">ISO 27001</option>
+                </select>
               </div>
-"
-              <div className="bg-gradient-to-r from-zion-blue/10 to-zion-cyan/10 p-6 rounded-xl border border-zion-blue/20">"
-                <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">"
-                  <CheckCircle className="w-5 h-5 text-zion-blue"/>
-                  Compliance Status
-                </h3>"
-                <div className="space-y-3">"
-                  {complianceRequirements.slice(0, 3).map(req => (<div key={req.id} className="flex items-center gap-3 p-3 bg-white dark:bg-zion-slate rounded-lg">"
-                      <div className="w-8 h-8 bg-zion-blue/20 rounded-lg flex items-center justify-center">"
-                        <FileText className="w-4 h-4 text-zion-blue"/>
-                      </div>"
-                      <div className="flex-1">"
-                        <h4 className="font-medium text-zion-slate text-sm">{req.requirement}</h4>"
-                        <p className="text-xs text-zion-slate-light">{req.framework}</p>
-                      </div>`
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.status)}`}>
-                        {req.status.replace('_',)}
-                      </span>
-                    </div>) ) }
+
+              {filteredCompliance.map(requirement => (
+                <div key={requirement.id} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+                  <div className="flex items-start justify-between">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="text-sm font-medium text-gray-900 dark:text-white">
+                          {requirement.framework}
+                        </span>
+                        <span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(requirement.status)}`}>
+                          {requirement.status.replace('_', ' ')}
+                        </span>
+                      </div>
+                      <h3 className="font-medium text-gray-900 dark:text-white mb-1">
+                        {requirement.requirement}
+                      </h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        {requirement.description}
+                      </p>
+                    </div>
+                  </div>
                 </div>
+              ))}
+            </div>
+          )}
+
+          {/* Events Tab */}
+          {activeTab === 'events' && (
+            <div className="space-y-4">
+              <div className="flex items-center gap-4 mb-4">
+                <select
+                  value={selectedSeverity}
+                  onChange={(e) => setSelectedSeverity(e.target.value)}
+                  className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                >
+                  {severities.map(severity => (
+                    <option key={severity} value={severity}>
+                      {severity.charAt(0).toUpperCase() + severity.slice(1)}
+                    </option>
+                  ))}
+                </select>
+                
+                <label className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={showResolved}
+                    onChange={(e) => setShowResolved(e.target.checked)}
+                    className="rounded border-gray-300 dark:border-gray-600"
+                  />
+                  <span className="text-sm text-gray-700 dark:text-gray-300">Show Resolved</span>
+                </label>
               </div>
+
+              {securityEvents.map(event => (
+                <div key={event.id} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+                  <div className="flex items-start gap-3">
+                    {getEventIcon(event.type)}
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-1">
+                        <h3 className="font-medium text-gray-900 dark:text-white">{event.title}</h3>
+                        <span className={`px-2 py-1 text-xs font-medium rounded-full ${getSeverityColor(event.severity)}`}>
+                          {event.severity}
+                        </span>
+                      </div>
+                      <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                        {event.description}
+                      </p>
+                      <div className="flex items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
+                        <span>{new Date(event.timestamp).toLocaleString()}</span>
+                        <span className="capitalize">{event.status}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-          </div>)}
-'"
-        {activeTab === 'events' && (<div className="space-y-4">"
-            {filteredEvents.map(event => (<div key={event.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">"
-                <div className="flex items-start gap-3">
-                  {getEventIcon(event.type)}"
-                  <div className="flex-1">"
-                    <div className="flex items-center gap-3 mb-2">"
-                      <h3 className="font-semibold text-zion-slate">{event.title}</h3>`
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(event.severity)}`}>
-                        {event.severity}
-                      </span>'`
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${event.priority === 'immediate' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :'
-                    event.priority === 'high' ? 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300' :'`
-                        'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'}`}>
-                        {event.priority}
-                      </span>
-                    </div>"
-                    <p className="text-zion-slate-light mb-3">{event.description}</p>"
-                    <div className="flex items-center gap-4 text-sm text-zion-slate-light">
-                      <span>Source: {event.source}</span>
-                      <span>Status: {event.status.replace('_',)}</span>
-                      {event.assignedTo && <span>Assigned: {event.assignedTo}</span>}
-                      <span>Time: {new Date(event.timestamp).toLocaleString()}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>))}
-          </div>)}
-'"
-        {activeTab === 'compliance' && (<div className="space-y-4">"
-            {filteredCompliance.map(req => (<div key={req.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">"
-                <div className="flex items-start gap-3">"
-                  <div className="w-12 h-12 bg-zion-blue/20 rounded-lg flex items-center justify-center">"
-                    <FileText className="w-6 h-6 text-zion-blue"/>
-                  </div>"
-                  <div className="flex-1">"
-                    <div className="flex items-center gap-3 mb-2">"
-                      <h3 className="font-semibold text-zion-slate">{req.requirement}</h3>`
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.status)}`}>
-                        {req.status.replace('_',)}
-                      </span>`
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getRiskLevelColor(req.riskLevel)}`}>
-                        {req.riskLevel} Risk
-                      </span>
-                    </div>"
-                    <p className="text-zion-slate-light mb-3">{req.description}</p>"
-                    <div className="mb-3">"
-                      <h4 className="font-medium text-zion-slate mb-2">Controls:</h4>"
-                      <div className="flex flex-wrap gap-2">"
-                        {req.controls.map((control, index) => (<span key={index} className="px-2 py-1 bg-zion-blue/10 text-zion-blue rounded-full text-xs border border-zion-blue/20">
-                            {control}
-                          </span>) ) }
-                      </div>
-                    </div>"
-                    <div className="flex items-center gap-4 text-sm text-zion-slate-light">
-                      <span>Framework: {req.framework}</span>
-                      <span>Last Audit: {new Date(req.lastAudit).toLocaleDateString()}</span>
-                      <span>Next Audit: {new Date(req.nextAudit).toLocaleDateString()}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>))}
-          </div>)}
-'"
-        {activeTab === 'threats' && (<div className="space-y-4">"
-            {threatIntelligence.map(threat => (<div key={threat.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">"
-                <div className="flex items-start gap-3">"
-                  <div className="w-12 h-12 bg-zion-red/20 rounded-lg flex items-center justify-center">"
-                    <Shield className="w-6 h-6 text-zion-red"/>
-                  </div>"
-                  <div className="flex-1">"
-                    <div className="flex items-center gap-3 mb-2">"
-                      <h3 className="font-semibold text-zion-slate">{threat.threatType}</h3>'`
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${threat.riskScore >= 8 ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :'
-                    threat.riskScore >= 6 ? 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300' :'`
-                        'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300'}`}>
-                        Risk: {threat.riskScore}/10
-                      </span>
-                    </div>"
-                    <p className="text-zion-slate-light mb-3">{threat.description}</p>"
-                    <div className="mb-3">"
-                      <h4 className="font-medium text-zion-slate mb-2">Affected Systems:</h4>"
-                      <div className="flex flex-wrap gap-2">"
-                        {threat.affectedSystems.map((system, index) => (<span key={index} className="px-2 py-1 bg-zion-red/10 text-zion-red rounded-full text-xs border border-zion-red/20">
-                            {system}
-                          </span>) ) }
-                      </div>
-                    </div>"
-                    <div className="mb-3">"
-                      <h4 className="font-medium text-zion-slate mb-2">Mitigation Steps:</h4>"
-                      <div className="space-y-1">"
-                        {threat.mitigationSteps.map((step, index) => (<div key={index} className="flex items-center gap-2 text-sm text-zion-slate-light">"
-                            <span className="w-1.5 h-1.5 bg-zion-red rounded-full"></span>
-                            {step}
-                          </div>) ) }
-                      </div>
-                    </div>"
-                    <div className="flex items-center gap-4 text-sm text-zion-slate-light">
-                      <span>Last Seen: {new Date(threat.lastSeen).toLocaleString()}</span>
-                      <span>Frequency: {threat.frequency} detections</span>
-                    </div>
-                  </div>
-                </div>
-              </div>))}
-          </div>)}
-'"
-        {activeTab === 'analytics' && (<div className="space-y-6">"
-            <div className="text-center text-zion-slate-light">"
-              <TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50"/>"
-              <h3 className="text-lg font-semibold mb-2">Security Analytics</h3>
-              <p>Advanced security analytics and threat intelligence reports coming soon...</p>
-            </div>
-          </div>) }
-      </div>
-    </div>)}
-'"`
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
