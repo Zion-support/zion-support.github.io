@@ -1,13 +1,18 @@
-import { createClient } from '@supabase/supabase-js';
+import { createClient, SupabaseClient, PostgrestError } from '@supabase/supabase-js';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-// Basic types so this handler works in Node or Next.js
-type Req = { method?: string; query?: any };
-interface JsonRes {
-  statusCode?: number;
-  setHeader: (name: string, value: string) => void;
-  end: (data?: any) => void;
-  status: (code: number) => JsonRes;
-  json: (data: any) => void;
+// Define the structure of a Service item based on your DB schema and select query
+interface ServiceItem {
+  id: string;
+  name: string; // Aliased from 'title' in the query
+  slug: string;
+  price: number;
+  // Add other fields if selected and returned
+}
+
+interface ErrorResponse {
+  error: string;
+  details?: string;
 }
 
 const supabaseUrl =
@@ -24,6 +29,7 @@ const serviceKey =
 if (!supabaseUrl || !serviceKey) {
   console.error('Missing database connection string');
 }
+const supabase: SupabaseClient = createClient(supabaseUrl, serviceKey);
 
 const supabase = createClient(supabaseUrl, serviceKey);
 

@@ -50,7 +50,7 @@ const sendPasswordResetEmail = async (to: string, token: string, userId: string)
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', ['POST']);
-    return res.status(405).end(`Method ${req.method} Not Allowed`);
+    return res.status(405).json({ message: `Method ${req.method} Not Allowed` });
   }
 
   const { email } = req.body;
@@ -66,6 +66,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     if (!user) {
       console.log(`Forgot password attempt for non-existent email: ${email}`);
+      // Important: Always return a generic message to prevent email enumeration
       return res.status(200).json({ message: 'If your email address exists in our system, you will receive a password reset link.' });
     }
 

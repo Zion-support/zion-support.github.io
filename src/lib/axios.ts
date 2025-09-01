@@ -1,21 +1,34 @@
-export interface AxiosError extends Error {
-  response?: { status: number; data?: any };
+export interface AxiosErrorData {
+  message?: string;
+  // Add other common error properties if known
+  [key: string]: unknown;
 }
 
-type FulfilledFn = (value: any) => any | Promise<any>;
-type RejectedFn = (error: any) => any | Promise<any>;
+export interface AxiosError extends Error {
+  response?: { status: number; data?: AxiosErrorData | unknown }; // data changed from any
+}
 
-class InterceptorManager {
-  handlers: { fulfilled?: FulfilledFn; rejected?: RejectedFn }[] = [];
-  use(fulfilled?: FulfilledFn, rejected?: RejectedFn) {
+// V for value/response type of fulfilled, R for return type of fulfilled
+// E for error type of rejected
+type FulfilledFn<V = unknown, R = unknown> = (value: V) => R | Promise<R>;
+type RejectedFn<E = unknown> = (error: E) => unknown | Promise<unknown>; // Return of rejected can be anything or throw
+
+class InterceptorManager<V_FULFILL = unknown, R_FULFILL = unknown, E_REJECT = unknown> {
+  handlers: { fulfilled?: FulfilledFn<V_FULFILL, R_FULFILL>; rejected?: RejectedFn<E_REJECT> }[] = [];
+
+  use(fulfilled?: FulfilledFn<V_FULFILL, R_FULFILL>, rejected?: RejectedFn<E_REJECT>) {
     this.handlers.push({ fulfilled, rejected });
   }
 }
 
+// T for response data type, D for request data type (for POST)
 export interface AxiosInstance {
-  interceptors: { response: InterceptorManager };
-  get(url: string, config?: { params?: Record<string, any> } & RequestInit): Promise<any>;
-  post(url: string, data?: any, config?: RequestInit): Promise<any>;
+  interceptors: { 
+    response: InterceptorManager<{ data: unknown; status: number }, { data: unknown; status: number }, AxiosError> 
+  };
+  get<T = unknown>(url: string, config?: { params?: Record<string, string | number | boolean | undefined> } & Omit<RequestInit, 'body' | 'method'>): Promise<T>;
+  post<T = unknown, D = unknown>(url: string, data?: D, config?: Omit<RequestInit, 'body' | 'method'>): Promise<T>;
+  // Add other methods like delete, put, patch as needed with generics
 }
 
 export function create(config: { baseURL?: string; withCredentials?: boolean } = {}): AxiosInstance {
@@ -23,20 +36,22 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
   const withCreds = !!config.withCredentials;
 
   const instance: AxiosInstance = {
-    interceptors: { response: new InterceptorManager() },
-    async get(url, init = {}) {
-      const params = (init as any).params
-        ? '?' + new URLSearchParams((init as any).params).toString()
+    interceptors: { 
+      response: new InterceptorManager<{ data: unknown; status: number }, { data: unknown; status: number }, AxiosError>() 
+    },
+    async get<T = unknown>(url: string, init: { params?: Record<string, string | number | boolean | undefined> } & Omit<RequestInit, 'body' | 'method'> = {}) {
+      const params = init.params
+        ? '?' + new URLSearchParams(init.params as Record<string, string>).toString() // URLSearchParams expects string values
         : '';
       const opts = { ...init } as RequestInit & { _originalData?: any };
       delete (opts as any).params;
       // For GET, _originalData is not applicable, but we ensure consistent shape for init in request function
       return request(baseURL + url + params, 'GET', opts);
     },
-    async post(url, data = {}, init = {}) {
-      const headers = {
+    async post<T = unknown, D = unknown>(url: string, data?: D, init: Omit<RequestInit, 'body' | 'method'> = {}) {
+      const headers: HeadersInit = {
         'Content-Type': 'application/json',
-        ...(init as any).headers,
+        ...(init as { headers?: HeadersInit }).headers,
       };
       // Add _originalData for retry purposes
       const opts = { ...init, body: JSON.stringify(data), headers, _originalData: data } as RequestInit & { _originalData?: any };
