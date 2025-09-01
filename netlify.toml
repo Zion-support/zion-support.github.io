@@ -230,6 +230,18 @@ schedule = "*/30 * * * *" # every 30 minutes
   name = "content-staleness-runner"
   schedule = "13 */12 * * *" # every 12 hours
 
+[[scheduled.functions]]
+  name = "content-freshness-runner"
+  schedule = "*/30 * * * *" # every 30 minutes
+
+[[scheduled.functions]]
+  name = "internal-anchor-audit-runner"
+  schedule = "*/30 * * * *" # every 30 minutes
+
+[[scheduled.functions]]
+  name = "orphan-asset-report-runner"
+  schedule = "17 */6 * * *" # every 6 hours
+
 # From main (keep)
 [[scheduled.functions]]
 name = "autonomous-innovation-generator"

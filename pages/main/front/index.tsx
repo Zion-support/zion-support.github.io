@@ -442,9 +442,9 @@ export default function FrontLanding() {
               { label: 'Changelog Publisher', desc: 'Publishes AI-generated changelog updates.', href: '/.netlify/functions/changelog-publisher' },
               { label: 'Smart Redirect Manager', desc: 'Fixes internal 404s; updates public/_redirects and report.', href: '/.netlify/functions/redirect-manager' },
               { label: 'A11y Alt‑Text Auditor', desc: 'Scans for missing alt attributes and publishes reports.', href: '/.netlify/functions/a11y-audit-runner' },
-              { label: 'Content Freshness', desc: 'Analyzes staleness and curates updates.', href: '/.netlify/functions/content-freshness-runner' },
-              { label: 'Internal Link Graph', desc: 'Builds link graph for navigation and SEO.', href: '/.netlify/functions/internal-link-graph-runner' },
-              { label: 'Roadmap Auto-Generator', desc: 'Synthesizes roadmap from TODOs and changelogs.', href: '/.netlify/functions/roadmap-auto-generator' },
+              { label: 'Content Freshness Auditor', desc: 'Analyzes repo content freshness and publishes a report.', href: '/.netlify/functions/content-freshness-runner' },
+              { label: 'Internal Anchor Auditor', desc: 'Detects broken in-page anchors across TSX/MD content.', href: '/.netlify/functions/internal-anchor-audit-runner' },
+              { label: 'Orphan Asset Scanner', desc: 'Finds unreferenced files in public/ for cleanup planning.', href: '/.netlify/functions/orphan-asset-report-runner' },
             ].map((f) => (
               <a key={f.label} href={f.href} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
