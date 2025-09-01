@@ -1,79 +1,79 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ; Menu,; X,; ChevronDown,; Phone,; Mail,; MapPin,; Globe,; Shield,; Zap,; Users,; Building2; } from 'lucide-react';
+import { Menu, X, ChevronDown, Phone, Mail, MapPin, Globe, Shield, Zap, Users, Building2 } from 'lucide-react';
 import { contactInfo } from '../data/services';
-;
-const Header: React.FC = () => {;
+
+const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
-;
-  useEffect(() => {;
-    const handleScroll = () => {;
+
+  useEffect(() => {
+    const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-;
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-;
-  const navigation = [;
-    { name: 'Home', href: '/' },;
-    {;
-      name: 'Services',;
-      href: '/services',;
-      dropdown: [;
-        { name: 'AI Services', href: '/services/ai', icon: Zap, description: 'Cutting-edge AI solutions' },;
-        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Enterprise security' },;
-        { name: 'Cloud & DevOps', href: '/services/cloud', icon: Globe, description: 'Scalable infrastructure' },;
-        { name: 'Digital Transformation', href: '/services/transformation', icon: Building2, description: 'Business modernization' };
-      ];
-    },;
-    { name: 'Solutions', href: '/solutions' },;
-    { name: 'About', href: '/about' },;
-    { name: 'Contact', href: '/contact' };
+
+  const navigation = [
+    { name: 'Home', href: '/' },
+    {
+      name: 'Services',
+      href: '/services',
+      dropdown: [
+        { name: 'AI Services', href: '/services/ai', icon: Zap, description: 'Cutting-edge AI solutions' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Enterprise security' },
+        { name: 'Cloud & DevOps', href: '/services/cloud', icon: Globe, description: 'Scalable infrastructure' },
+        { name: 'Digital Transformation', href: '/services/transformation', icon: Building2, description: 'Business modernization' }
+      ]
+    },
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' }
   ];
 ;
-  const handleDropdownToggle = (name: string) => {;
+  const handleDropdownToggle = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
   };
-;
-  const closeMobileMenu = () => {;
+
+  const closeMobileMenu = () => {
     setIsOpen(false);
     setActiveDropdown(null);
   };
-;
-  return (;
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${;
-      isScrolled;
-        ? 'bg-slate-900/95 backdrop-blur-md border-b border-white/10';
-        : 'bg-transparent';
-    }`}>;
+
+  return (
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled
+        ? 'bg-slate-900/95 backdrop-blur-md border-b border-white/10'
+        : 'bg-transparent'
+    }`}>
       {/* Top Bar */};
       <div className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-2">";"
         <div className="container mx-auto px-4">";"
           <div className="flex items-center justify-between text-sm">";"
             <div className="flex items-center gap-6">";"
               <div className="flex items-center gap-2">";"
-                <Phone className="w-4 h-4" />;
-                <span>{contactInfo.mobile}</span>;"
-              </div>";"
-              <div className="flex items-center gap-2">";"
-                <Mail className="w-4 h-4" />;
-                <span>{contactInfo.email}</span>;
-              </div>;"
-            </div>";"
-            <div className="flex items-center gap-4">";"
-              <span className="flex items-center gap-2">";"
-                <MapPin className="w-4 h-4" />;
-                Middletown, DE;
-              </span>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;"
+                <Phone className="w-4 h-4" />
+                <span>{contactInfo.mobile}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4" />
+                <span>{contactInfo.email}</span>
+              </div>
+            </div>
+            <div className="flex items-center gap-4">
+              <span className="flex items-center gap-2">
+                <MapPin className="w-4 h-4" />
+                Middletown, DE
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
       {/* Main Navigation */}";"
       <nav className="py-4">";"
         <div className="container mx-auto px-4">";"

@@ -44,16 +44,20 @@ const nextConfig = {
   // Bundle analyzer
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
-      const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-      config.plugins.push(
-        new BundleAnalyzerPlugin({
-          analyzerMode: 'static',
-          openAnalyzer: false,
-        })
-      );
+      // Dynamic import for webpack-bundle-analyzer
+      import('webpack-bundle-analyzer').then(({ BundleAnalyzerPlugin }) => {
+        config.plugins.push(
+          new BundleAnalyzerPlugin({
+            analyzerMode: 'static',
+            openAnalyzer: false,
+          })
+        );
+      }).catch(() => {
+        // Silently fail if bundle analyzer is not available
+      });
     }
     return config;
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
