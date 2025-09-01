@@ -1,240 +1,71 @@
 module.exports = {
   apps: [
-    // Ultimate Redundancy System V2 - Core
     {
-      name: 'ultimate-redundancy-v2-core',
-      script: './automation/ultimate-redundancy-system-v2.cjs',
+      name: 'ultimate-redundancy-v2',
+      script: './automation/ultimate-redundancy-v2-system.cjs',
       instances: 1,
-      exec_mode: 'fork',
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        REDUNDANCY_MODE: 'ultimate-v2',
-        LOG_LEVEL: 'info'
+        REDUNDANCY_LEVEL: 'ultimate-v2',
+        AUTO_RECOVERY: 'true'
       },
       env_production: {
         NODE_ENV: 'production',
-        REDUNDANCY_MODE: 'ultimate-v2',
-        LOG_LEVEL: 'info'
+        REDUNDANCY_LEVEL: 'ultimate-v2',
+        AUTO_RECOVERY: 'true'
       },
-      error_file: './automation/logs/ultimate-redundancy-v2-core-error.log',
-      out_file: './automation/logs/ultimate-redundancy-v2-core-out.log',
-      log_file: './automation/logs/ultimate-redundancy-v2-core-combined.log',
-      time: true,
-      max_memory_restart: '1G',
-      min_uptime: '10s',
-      max_restarts: 10,
-      restart_delay: 4000,
-      watch: false,
-      ignore_watch: ['node_modules', 'logs', '.git'],
-      autorestart: true,
-      cron_restart: '0 2 * * *', // Daily restart at 2 AM
+      log_file: './automation/logs/ultimate-redundancy-v2.log',
+      out_file: './automation/logs/ultimate-redundancy-v2-out.log',
+      error_file: './automation/logs/ultimate-redundancy-v2-error.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
       merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
-    },
-
-    // Ultimate Redundancy System V2 - Automation
-    {
-      name: 'ultimate-redundancy-v2-automation',
-      script: './automation/ultimate-redundancy-automation-system.cjs',
-      instances: 1,
-      exec_mode: 'fork',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_MODE: 'ultimate-v2',
-        LOG_LEVEL: 'info'
-      },
-      env_production: {
-        NODE_ENV: 'production',
-        AUTOMATION_MODE: 'ultimate-v2',
-        LOG_LEVEL: 'info'
-      },
-      error_file: './automation/logs/ultimate-redundancy-v2-automation-error.log',
-      out_file: './automation/logs/ultimate-redundancy-v2-automation-out.log',
-      log_file: './automation/logs/ultimate-redundancy-v2-automation-combined.log',
-      time: true,
-      max_memory_restart: '1G',
-      min_uptime: '10s',
       max_restarts: 10,
-      restart_delay: 4000,
-      watch: false,
-      ignore_watch: ['node_modules', 'logs', '.git'],
-      autorestart: true,
-      cron_restart: '0 3 * * *', // Daily restart at 3 AM
-      merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
-    },
-
-    // Ultimate Redundancy System V2 - Orchestrator
-    {
-      name: 'ultimate-redundancy-v2-orchestrator',
-      script: './automation/ultimate-redundancy-orchestrator.cjs',
-      instances: 1,
-      exec_mode: 'fork',
-      env: {
-        NODE_ENV: 'production',
-        ORCHESTRATOR_MODE: 'ultimate-v2',
-        LOG_LEVEL: 'info'
-      },
-      env_production: {
-        NODE_ENV: 'production',
-        ORCHESTRATOR_MODE: 'ultimate-v2',
-        LOG_LEVEL: 'info'
-      },
-      error_file: './automation/logs/ultimate-redundancy-v2-orchestrator-error.log',
-      out_file: './automation/logs/ultimate-redundancy-v2-orchestrator-out.log',
-      log_file: './automation/logs/ultimate-redundancy-v2-orchestrator-combined.log',
-      time: true,
-      max_memory_restart: '1G',
       min_uptime: '10s',
-      max_restarts: 10,
       restart_delay: 4000,
-      watch: false,
-      ignore_watch: ['node_modules', 'logs', '.git'],
-      autorestart: true,
-      cron_restart: '0 4 * * *', // Daily restart at 4 AM
-      merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      exp_backoff_restart_delay: 100
     },
-
-    // Ultimate Redundancy System V2 - Master
     {
-      name: 'ultimate-redundancy-v2-master',
-      script: './automation/ultimate-redundancy-master-v2.cjs',
-      instances: 1,
-      exec_mode: 'fork',
-      env: {
-        NODE_ENV: 'production',
-        MASTER_MODE: 'ultimate-v2',
-        LOG_LEVEL: 'info'
-      },
-      env_production: {
-        NODE_ENV: 'production',
-        MASTER_MODE: 'ultimate-v2',
-        LOG_LEVEL: 'info'
-      },
-      error_file: './automation/logs/ultimate-redundancy-v2-master-error.log',
-      out_file: './automation/logs/ultimate-redundancy-v2-master-out.log',
-      log_file: './automation/logs/ultimate-redundancy-v2-master-combined.log',
-      time: true,
-      max_memory_restart: '1G',
-      min_uptime: '10s',
-      max_restarts: 10,
-      restart_delay: 4000,
-      watch: false,
-      ignore_watch: ['node_modules', 'logs', '.git'],
-      autorestart: true,
-      cron_restart: '0 5 * * *', // Daily restart at 5 AM
-      merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
-    },
-
-    // Ultimate Redundancy System V2 - Status Reporter
-    {
-      name: 'ultimate-redundancy-v2-status-reporter',
+      name: 'ultimate-redundancy-monitor',
       script: './automation/ultimate-redundancy-status-reporter.cjs',
       instances: 1,
-      exec_mode: 'fork',
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        STATUS_MODE: 'ultimate-v2',
-        LOG_LEVEL: 'info'
+        MONITORING_INTERVAL: '30000'
       },
-      env_production: {
-        NODE_ENV: 'production',
-        STATUS_MODE: 'ultimate-v2',
-        LOG_LEVEL: 'info'
-      },
-      error_file: './automation/logs/ultimate-redundancy-v2-status-reporter-error.log',
-      out_file: './automation/logs/ultimate-redundancy-v2-status-reporter-out.log',
-      log_file: './automation/logs/ultimate-redundancy-v2-status-reporter-combined.log',
-      time: true,
-      max_memory_restart: '512M',
-      min_uptime: '10s',
-      max_restarts: 10,
-      restart_delay: 4000,
-      watch: false,
-      ignore_watch: ['node_modules', 'logs', '.git'],
-      autorestart: true,
-      cron_restart: '0 6 * * *', // Daily restart at 6 AM
+      log_file: './automation/logs/ultimate-redundancy-monitor.log',
+      out_file: './automation/logs/ultimate-redundancy-monitor-out.log',
+      error_file: './automation/logs/ultimate-redundancy-monitor-error.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
       merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      max_restarts: 5,
+      min_uptime: '5s',
+      restart_delay: 2000
     },
-
-    // Ultimate Redundancy System V2 - Health Monitor
     {
-      name: 'ultimate-redundancy-v2-health-monitor',
-      script: './automation/redundancy-health-monitor.cjs',
+      name: 'ultimate-build-guardian',
+      script: './netlify/functions/ultimate-build-guardian.js',
       instances: 1,
-      exec_mode: 'fork',
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '256M',
       env: {
         NODE_ENV: 'production',
-        MONITOR_MODE: 'ultimate-v2',
-        LOG_LEVEL: 'info'
+        FUNCTION_TYPE: 'build-guardian'
       },
-      env_production: {
-        NODE_ENV: 'production',
-        MONITOR_MODE: 'ultimate-v2',
-        LOG_LEVEL: 'info'
-      },
-      error_file: './automation/logs/ultimate-redundancy-v2-health-monitor-error.log',
-      out_file: './automation/logs/ultimate-redundancy-v2-health-monitor-out.log',
-      log_file: './automation/logs/ultimate-redundancy-v2-health-monitor-combined.log',
-      time: true,
-      max_memory_restart: '512M',
-      min_uptime: '10s',
-      max_restarts: 10,
-      restart_delay: 4000,
-      watch: false,
-      ignore_watch: ['node_modules', 'logs', '.git'],
-      autorestart: true,
-      cron_restart: '0 7 * * *', // Daily restart at 7 AM
+      log_file: './automation/logs/ultimate-build-guardian.log',
+      out_file: './automation/logs/ultimate-build-guardian-out.log',
+      error_file: './automation/logs/ultimate-build-guardian-error.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
       merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
-    },
-
-    // Ultimate Redundancy System V2 - Build Monitor
-    {
-      name: 'ultimate-redundancy-v2-build-monitor',
-      script: './automation/continuous-build-monitor.cjs',
-      instances: 1,
-      exec_mode: 'fork',
-      env: {
-        NODE_ENV: 'production',
-        BUILD_MONITOR_MODE: 'ultimate-v2',
-        LOG_LEVEL: 'info'
-      },
-      env_production: {
-        NODE_ENV: 'production',
-        BUILD_MONITOR_MODE: 'ultimate-v2',
-        LOG_LEVEL: 'info'
-      },
-      error_file: './automation/logs/ultimate-redundancy-v2-build-monitor-error.log',
-      out_file: './automation/logs/ultimate-redundancy-v2-build-monitor-out.log',
-      log_file: './automation/logs/ultimate-redundancy-v2-build-monitor-combined.log',
-      time: true,
-      max_memory_restart: '512M',
-      min_uptime: '10s',
-      max_restarts: 10,
-      restart_delay: 4000,
-      watch: false,
-      ignore_watch: ['node_modules', 'logs', '.git'],
-      autorestart: true,
-      cron_restart: '0 8 * * *', // Daily restart at 8 AM
-      merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      max_restarts: 3,
+      min_uptime: '5s',
+      restart_delay: 1000
     }
-  ],
-
-  deploy: {
-    production: {
-      user: 'node',
-      host: 'localhost',
-      ref: 'origin/main',
-      repo: 'https://github.com/Zion-Holdings/zion.app.git',
-      path: '/workspace',
-      'pre-deploy-local': '',
-      'post-deploy': 'npm install && pm2 reload ecosystem.ultimate-redundancy-v2.pm2.cjs',
-      'pre-setup': ''
-    }
-  }
+  ]
 };
