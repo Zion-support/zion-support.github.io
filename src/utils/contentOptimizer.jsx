@@ -110,7 +110,7 @@ export class ContentOptimizer {
             score -= 10;
 
         // Check for internal links
-        const internalLinks = content.match(/href="\/[^"]*"/g) || [];
+        const internalLinks = content.match(/href="/[^"]*"/g) || [];
         if (internalLinks.length < 2)
             score -= 10;
 
