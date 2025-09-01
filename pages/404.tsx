@@ -1,20 +1,11 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import React from 'react';
+import Link from 'next/link';
 
-const NotFound404: NextPage = () => {
+export default function Custom404() {
   return (
-    <div>
-      <Head>
-        <title>404 - Zion Tech Solutions</title>
-        <meta name="description" content="404 page" />
-      </Head>
-      
-      <main>
-        <h1>404</h1>
-        <p>This page is under construction.</p>
-      </main>
+    <div className="space-y-4">
+      <h1 className="text-2xl font-semibold">Page not found</h1>
+      <Link href="/"><a className="underline">Return home</a></Link>
     </div>
   );
-};
-
-export default NotFound404;
+}

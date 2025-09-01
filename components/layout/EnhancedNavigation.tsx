@@ -45,7 +45,8 @@ export default function EnhancedNavigation() {
           <Link href="/blog"><a>Blog</a></Link>
           <Link href="/book-builder"><a>Book Builder</a></Link>
           <Link href="/contact"><a>Contact</a></Link>
-          <Link href="/simulator/2040"><a className="font-medium">Simulator</a></Link>
+          <Link href="/sim/work-futures"><a>Work Futures</a></Link>
+          <Link href="/academy/futurescape"><a>Futurescape</a></Link>
         </div>
         <div className="flex items-center gap-4 text-sm">
           <Link href="/services"><a>Services</a></Link>
