@@ -137,11 +137,7 @@ module.exports = {
       max_restarts: 3,
       min_uptime: '10s',
       restart_delay: 5000,
-<<<<<<< HEAD
-      // Run every 30 minutes
-      cron_restart: '*/30 * * * *'
-=======
-      cron_restart: '0 */2 * * *', // Run every 2 hours
+      cron_restart: '*/30 * * * *', // Run every 30 minutes
       pmx: true
     },
 
@@ -283,6 +279,146 @@ module.exports = {
       error_file: 'logs/sitemap-runner-error.log'
     },
 
+    // NEW: Git Automation Manager - Handles repository operations
+    {
+      name: 'git-automation-manager',
+      script: './scripts/automation/git-automation-manager.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '500M',
+      env: {
+        NODE_ENV: 'production',
+        GIT_AUTO_COMMIT: 'true',
+        GIT_AUTO_PUSH: 'true',
+        GIT_AUTO_MERGE: 'true'
+      },
+      cron_restart: '0 */3 * * *', // Restart every 3 hours
+      log_file: './logs/git-automation-manager.log',
+      out_file: './logs/git-automation-manager-out.log',
+      error_file: './logs/git-automation-manager-error.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true
+    },
+
+    // NEW: Intelligent Deployment Pipeline
+    {
+      name: 'intelligent-deployment-pipeline',
+      script: './scripts/automation/intelligent-deployment-pipeline.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTO_DEPLOY: 'true',
+        DEPLOY_STRATEGY: 'intelligent'
+      },
+      cron_restart: '0 */2 * * *', // Restart every 2 hours
+      log_file: './logs/intelligent-deployment-pipeline.log',
+      out_file: './logs/intelligent-deployment-pipeline-out.log',
+      error_file: './logs/intelligent-deployment-pipeline-error.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true
+    },
+
+    // NEW: Code Quality Automation
+    {
+      name: 'code-quality-automation',
+      script: './scripts/automation/code-quality-automation.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '800M',
+      env: {
+        NODE_ENV: 'production',
+        AUTO_LINT: 'true',
+        AUTO_FORMAT: 'true',
+        AUTO_TEST: 'true'
+      },
+      cron_restart: '0 */4 * * *', // Restart every 4 hours
+      log_file: './logs/code-quality-automation.log',
+      out_file: './logs/code-quality-automation-out.log',
+      error_file: './logs/code-quality-automation-error.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true
+    },
+
+    // NEW: Performance Optimization Automation
+    {
+      name: 'performance-optimization-automation',
+      script: './scripts/automation/performance-optimization-automation.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTO_OPTIMIZE: 'true',
+        BUNDLE_ANALYSIS: 'true'
+      },
+      cron_restart: '0 9 * * *', // Restart daily at 9 AM
+      log_file: './logs/performance-optimization-automation.log',
+      out_file: './logs/performance-optimization-automation-out.log',
+      error_file: './logs/performance-optimization-automation-error.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true
+    },
+
+    // NEW: Security Automation
+    {
+      name: 'security-automation',
+      script: './scripts/automation/security-automation.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '600M',
+      env: {
+        NODE_ENV: 'production',
+        AUTO_SECURITY_SCAN: 'true',
+        VULNERABILITY_CHECK: 'true'
+      },
+      cron_restart: '0 10 * * *', // Restart daily at 10 AM
+      log_file: './logs/security-automation.log',
+      out_file: './logs/security-automation-out.log',
+      error_file: './logs/security-automation-error.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true
+    },
+
+    // NEW: Repository Health Monitor
+    {
+      name: 'repository-health-monitor',
+      script: './scripts/automation/repository-health-monitor.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '400M',
+      env: {
+        NODE_ENV: 'production',
+        REPO_HEALTH_CHECK: 'true',
+        BRANCH_ANALYSIS: 'true'
+      },
+      cron_restart: '0 */6 * * *', // Restart every 6 hours
+      log_file: './logs/repository-health-monitor.log',
+      out_file: './logs/repository-health-monitor-out.log',
+      error_file: './logs/repository-health-monitor-error.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true
+    },
+
     // Automated Build & Lint fixer
     {
       name: 'auto-fix-and-build',
@@ -312,7 +448,6 @@ module.exports = {
       log_file: 'logs/dev-watch-build.log',
       out_file: 'logs/dev-watch-build-out.log',
       error_file: 'logs/dev-watch-build-error.log'
->>>>>>> cursor/migrate-ci-to-pm2-and-clean-up-github-actions-430a
     }
   ],
 
@@ -324,13 +459,8 @@ module.exports = {
       repo: 'https://github.com/Zion-Holdings/zion.app.git',
       path: '/workspace',
       'pre-deploy-local': '',
-<<<<<<< HEAD
-      'post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.cjs --env production',
-      'pre-setup': ''
-=======
       'post-deploy': 'npm install --legacy-peer-deps && npm run build && pm2 reload ecosystem.config.cjs --env production',
       'pre-setup': 'mkdir -p /var/www/zion.app/logs'
->>>>>>> cursor/migrate-ci-to-pm2-and-clean-up-github-actions-430a
     }
   }
 };
