@@ -1,21 +1,19 @@
-name: marketing-sync
-'on':
+name: Backup Marketing Sync (Redundancy)
+
+on:
   schedule:
-    - cron: 0 2 * * *
-  workflow_dispatch: null
+    - cron: '0 */12 * * *'
+  workflow_dispatch:
+
 permissions:
-  contents: read
-  actions: read
-concurrency:
-  group: marketing-sync-${{ github.ref }}
-  cancel-in-progress: true
+  contents: write
+
 jobs:
-  main:
-    name: Main Job
+  run-marketing-sync:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4

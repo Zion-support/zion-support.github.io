@@ -52,11 +52,18 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
 }
 
 .text-high-contrast-secondary {
@@ -814,41 +821,4 @@ body {
   .desktop-hidden {
     display: none;
   }
-}
-
-/* Enhanced color utilities for better compatibility */
-.text-cyan-300\/90 {
-  color: rgb(34 211 238 / 0.9);
-}
-
-.text-white\/80 {
-  color: rgb(255 255 255 / 0.8);
-}
-
-.text-white\/75 {
-  color: rgb(255 255 255 / 0.75);
-}
-
-.text-white\/70 {
-  color: rgb(255 255 255 / 0.7);
-}
-
-.text-white\/90 {
-  color: rgb(255 255 255 / 0.9);
-}
-
-.border-white\/10 {
-  border-color: rgb(255 255 255 / 0.1);
-}
-
-.border-white\/20 {
-  border-color: rgb(255 255 255 / 0.2);
-}
-
-.bg-white\/10 {
-  background-color: rgb(255 255 255 / 0.1);
-}
-
-.bg-white\/5 {
-  background-color: rgb(255 255 255 / 0.05);
 }
