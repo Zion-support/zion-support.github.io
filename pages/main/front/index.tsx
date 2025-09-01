@@ -281,11 +281,12 @@ export default function FrontLanding() {
               { label: 'Homepage Advertiser', desc: 'Curates and updates the home explore section.', href: '/.netlify/functions/homepage_advertiser' },
               { label: 'Cloud Orchestrator', desc: 'Runs fast improvement cycle and git sync.', href: '/.netlify/functions/cloud_orchestrator' },
               { label: 'Sitemap Runner', desc: 'Keeps sitemap fresh for SEO visibility.', href: '/.netlify/functions/sitemap_runner' },
-              { label: 'Auto Reports Suite (5m)', desc: 'SEO audit, search index, AI trends, docs and repo intel.', href: '/.netlify/functions/auto-reports-suite' },
-              { label: 'AI Changelog Broadcaster (2h)', desc: 'Refreshes AI changelog and newsroom content.', href: '/.netlify/functions/ai-changelog-broadcaster' },
-              { label: 'Guardian Ultra (3m)', desc: 'Auto-healing, image optimization, broken-image scanning.', href: '/.netlify/functions/guardian-ultra' },
-              { label: 'Newsroom Auto (30m)', desc: 'Regenerates newsroom updates automatically.', href: '/.netlify/functions/newsroom-auto' },
-              { label: 'OG Image Refresh (20m)', desc: 'Regenerates page OG images on a cadence.', href: '/.netlify/functions/og-image-refresh' },
+              { label: 'Repo Knowledge Graph', desc: 'Builds a repo knowledge graph and artifacts.', href: '/.netlify/functions/repo-knowledge-graph' },
+              { label: 'Dead Code Scanner', desc: 'Finds unused code and suggests removals.', href: '/.netlify/functions/dead-code-scanner' },
+              { label: 'External Link Checker', desc: 'Detects broken outbound links.', href: '/.netlify/functions/external-link-checker' },
+              { label: 'Image Optimizer', desc: 'Optimizes images/pipelines automatically.', href: '/.netlify/functions/image-optimizer' },
+              { label: 'Newsroom Publisher', desc: 'Publishes newsroom updates.', href: '/.netlify/functions/newsroom-publisher' },
+              { label: 'AI Changelog Updater', desc: 'Updates the AI-authored changelog.', href: '/.netlify/functions/ai-changelog-updater' },
             ].map((f) => (
               <a key={f.label} href={f.href} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
