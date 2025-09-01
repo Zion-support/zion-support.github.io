@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';'
-import { Search, Star, Phone, Mail, Globe, CheckCircle, TrendingUp, Users, Shield, Zap import { Button } from '@/components/ui/button';'
-import { Input } from '@/components/ui/input';'
-import { Badge } from '@/components/ui/badge';'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';'
-import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';'
+import React, { useState, useEffect } from 'react';
+import { Search, Star, Phone, Mail, Globe, CheckCircle, TrendingUp, Users, Shield, Zap import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';
 import { TrustedBySection } from '@/components/TrustedBySection';
 export default function ExpandedServicesPage() {
-'
-    const [searchQuery, setSearchQuery] = useState('');'
+
+    const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
-    const [filteredServices, setFilteredServices] = useState(EXPANDED_SERVICES);'
+    const [filteredServices, setFilteredServices] = useState(EXPANDED_SERVICES);
     const [sortBy, setSortBy] = useState('rating');
     useEffect(() => {
         let filtered = EXPANDED_SERVICES;
@@ -25,11 +25,11 @@ export default function ExpandedServicesPage() {
             filtered = filtered.filter(service => service.category === selectedCategory)}
         // Sort services
         filtered.sort((a, b) => {
-'
+
             if (sortBy === 'rating')
-                return b.rating - a.rating;'
+                return b.rating - a.rating;
             if (sortBy === 'price')
-                return a.price - b.price;'
+                return a.price - b.price;
             if (sortBy === 'aiScore')
                 return b.aiScore - a.aiScore;
             return 0});
@@ -37,21 +37,21 @@ export default function ExpandedServicesPage() {
     const getCategoryIcon = (category) => {
 
         switch (category) {
-'
-            case 'AI Services': return '🤖';'
-            case 'Micro SAAS': return '☁️';'
-            case 'IT Services': return '💻';'
-            case 'Digital Services': return '🚀';'
+
+            case 'AI Services': return '🤖';
+            case 'Micro SAAS': return '☁️';
+            case 'IT Services': return '💻';
+            case 'Digital Services': return '🚀';
             default: return '⚡'}
     };
     const getPricingModelColor = (model) => {
 
         switch (model) {
-'
-            case 'subscription': return 'bg-blue-100 text-blue-800';'
-            case 'project-based': return 'bg-purple-100 text-purple-800';'
-            case 'one-time': return 'bg-green-100 text-green-800';'
-            case 'usage-based': return 'bg-orange-100 text-orange-800';'
+
+            case 'subscription': return 'bg-blue-100 text-blue-800';
+            case 'project-based': return 'bg-purple-100 text-purple-800';
+            case 'one-time': return 'bg-green-100 text-green-800';
+            case 'usage-based': return 'bg-orange-100 text-orange-800';
             default: return 'bg-gray-100 text-gray-800'}
     };
     return (<div className="min-h-screen bg-background">
@@ -116,8 +116,8 @@ export default function ExpandedServicesPage() {
                 <CardHeader className="pb-4">"
                   <div className="flex items-start justify-between mb-2">"
                     <div className="text-3xl">{getCategoryIcon(service.category)}</div>
-                    <Badge className={getPricingModelColor(service.pricingModel)}>'
-                      {service.pricingModel.replace('-', ' ')}
+                    <Badge className={getPricingModelColor(service.pricingModel)}>
+                      {service.pricingModel.replace('-',)}
                     </Badge>
                   </div>"
                   <CardTitle className="text-xl text-zion-blue-dark">{service.title}</CardTitle>"

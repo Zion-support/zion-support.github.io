@@ -1,5 +1,50 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import {
+
+  Atom,
+  Cpu,
+  Zap,
+  Brain,
+  CheckCircle,
+  ArrowRight,
+  Target,
+  Network,
+  Database,
+  Shield,
+  Globe,
+  Rocket,
+  Lightbulb,
+  Code,
+  BarChart3,
+  Clock,
+  TrendingUp,
+  Users,
+  Monitor,
+  Server,
+  Cloud,
+  Lock,
+  Eye'
+ } from 'lucide-react';
+
+export default function QuantumTechnology(...args[]):  {
+
+  const [selectedApplication, setSelectedApplication] = useState('all');
+  const [activeTab, setActiveTab] = useState('overview');
+
+  const quantumServices = [
+    {
+
+      icon: Atom,
+      title: "Quantum Computing","
+      description: "Leverage quantum algorithms for complex computational problems","
+      features["Quantum Algorithms", "Optimization Problems", "Cryptography", "Machine Learning"],;"
+      color: "from-zion-cyan to-zion-blue"
+=======
 import React, { useState } from 'react';'
 import { motion } from 'framer-motion';      color: "from-zion-cyan to-zion-blue"
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
 
@@ -43,12 +88,12 @@ import { motion } from 'framer-motion';      color: "from-zion-cyan to-zion-blue
     };
   ];
 
-  const applications = [;'
-    { id: 'all', name: 'All Applications', icon: Globe },;'
-    { id: 'finance', name: 'Financial Services', icon: BarChart3 },;'
-    { id: 'healthcare', name: 'Healthcare', icon: Monitor },;'
-    { id: 'logistics', name: 'Logistics', icon: Network },;'
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },;'
+  const applications = [;
+    { id: 'all', name: 'All Applications', icon: Globe },;
+    { id: 'finance', name: 'Financial Services', icon: BarChart3 },;
+    { id: 'healthcare', name: 'Healthcare', icon: Monitor },;
+    { id: 'logistics', name: 'Logistics', icon: Network },;
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },;
     { id: 'research', name: 'Research', icon: Lightbulb };
   ];
 
@@ -176,7 +221,7 @@ import { motion } from 'framer-motion';      color: "from-zion-cyan to-zion-blue
       transition: { duration: 0.6 };
     };
   };
-'
+
   const filteredApplications = selectedApplication === 'all'
     ? quantumApplications
     : quantumApplications.filter (app => app.category === selectedApplication) ;
@@ -210,7 +255,7 @@ import { motion } from 'framer-motion';      color: "from-zion-cyan to-zion-blue
                 <Atom className="w-12 h-12 text-white" />              </div>
             </div>
 "
-            <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">'
+            <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
               Quantum{' '}"
               <span className="bg-gradient-to-r from-zion-purple to-zion-pink bg-clip-text text-transparent">
                 Technology
@@ -269,7 +314,7 @@ import { motion } from 'framer-motion';      color: "from-zion-cyan to-zion-blue
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 
@@ -374,7 +419,7 @@ import { motion } from 'framer-motion';      color: "from-zion-cyan to-zion-blue
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 
@@ -446,7 +491,7 @@ import { motion } from 'framer-motion';      color: "from-zion-cyan to-zion-blue
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 
@@ -516,7 +561,7 @@ import { motion } from 'framer-motion';      color: "from-zion-cyan to-zion-blue
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 
@@ -569,7 +614,7 @@ import { motion } from 'framer-motion';      color: "from-zion-cyan to-zion-blue
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 
@@ -649,7 +694,7 @@ import { motion } from 'framer-motion';      color: "from-zion-cyan to-zion-blue
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Explore Quantum Technology?
             </h2>"
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">'
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
               Let's discuss how quantum computing and quantum technologies can
               transform your business and solve previously impossible challenges.
             </p>

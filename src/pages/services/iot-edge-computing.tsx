@@ -38,12 +38,7 @@ export default function IoTEdgeComputing() {
   ];
 
   const benefits = [
-    'Reduce latency by up to 90%',
-    'Lower bandwidth costs by 60%',
-    'Improve reliability with offline capabilities',
-    'Enable real-time decision making',
-    'Scale IoT deployments efficiently',
-    'Reduce cloud dependency and costs'
+    'Reduce latency by up to 90%',Lower bandwidth costs by 60%',Improve reliability with offline capabilities',Enable real-time decision making',Scale IoT deployments efficiently',Reduce cloud dependency and costs'
   ];
 
   const useCases = [
@@ -69,22 +64,22 @@ export default function IoTEdgeComputing() {
     {
       icon: CircuitBoard,
       title: 'Edge Hardware',
-      items: ['Custom edge devices', 'Gateway solutions', 'Sensor integration', 'Power management']
+      items: ['Custom edge devices',Gateway solutions',Sensor integration',Power management']
     },
     {
       icon: Cloud,
       title: 'Edge Software',
-      items: ['Edge operating systems', 'Containerization', 'Orchestration', 'Application deployment']
+      items: ['Edge operating systems',Containerization',Orchestration',Application deployment']
     },
     {
       icon: Network,
       title: 'Connectivity',
-      items: ['5G integration', 'WiFi 6', 'LoRaWAN', 'Satellite connectivity']
+      items: ['5G integration',WiFi 6',LoRaWAN',Satellite connectivity']
     },
     {
       icon: Database,
       title: 'Data Management',
-      items: ['Local storage', 'Data synchronization', 'Real-time analytics', 'Edge databases']
+      items: ['Local storage',Data synchronization',Real-time analytics',Edge databases']
     }
   ];
 

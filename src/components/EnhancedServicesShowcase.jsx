@@ -1,16 +1,16 @@
-import React, { useState } from 'react';'
-import { Link } from 'react-router-dom';'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { enhancedServices2025 } from "../data/enhanced-services-2025";
 const EnhancedServicesShowcase = () => {
-'
-    const [selectedCategory, setSelectedCategory] = useState('all');'
+
+    const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const categories = ['
-        { id: 'all', name: 'All Services', icon: '🌟' },'
-        { id: 'micro-saas', name: 'Micro SAAS', icon: '💻' },'
-        { id: 'it-services', name: 'IT Services', icon: '🖥️' },'
-        { id: 'ai-services', name: 'AI Services', icon: '🤖' },'
+        { id: 'all', name: 'All Services', icon: '🌟' },
+        { id: 'micro-saas', name: 'Micro SAAS', icon: '💻' },
+        { id: 'it-services', name: 'IT Services', icon: '🖥️' },
+        { id: 'ai-services', name: 'AI Services', icon: '🤖' },
         { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀' }
     ];
     const filteredServices = enhancedServices2025.filter(service => {
@@ -168,7 +168,7 @@ const EnhancedServicesShowcase = () => {
                     {service.icon}
                   </div>"
                   <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>'"
-                  <p className="text-sm text-blue-400 font-medium">{service.category.replace('-', ' ').toUpperCase()}</p>
+                  <p className="text-sm text-blue-400 font-medium">{service.category.replace('-',).toUpperCase()}</p>
                 </div>
 
                 {/* Tagline */}"
@@ -230,7 +230,7 @@ const EnhancedServicesShowcase = () => {
           {filteredServices.length === 0 && (<motion.div className="text-center py-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>"
               <p className="text-gray-400 text-lg">No services found matching your criteria.</p>
               <button onClick={() => {
-'
+
                 setSelectedCategory('all');'"
                 setSearchTerm('')}} className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300">
                 View All Services
@@ -275,7 +275,7 @@ const EnhancedServicesShowcase = () => {
 
 
 
-}}>'
+}}>
             Let's discuss how our innovative services can help drive your success and competitive advantage
           </motion.p>
           "

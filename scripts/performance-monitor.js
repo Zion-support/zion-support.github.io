@@ -17,7 +17,7 @@ console.log('📊 Performance Monitor Started');
 
 class PerformanceMonitor {
   constructor() {
-    this.projectRoot = path.resolve(__dirname, '..');
+    this.projectRoot = path.resolve(__dirname,..');
     this.metrics = {
       timestamp: new Date().toISOString(),
       system: {},
@@ -94,21 +94,21 @@ class PerformanceMonitor {
       console.log('📱 Collecting application metrics...');
       
       // Check file sizes
-      const distPath = path.join(this.projectRoot, 'dist');
+      const distPath = path.join(this.projectRoot,dist');
       if (fs.existsSync(distPath)) {
         const distSize = this.getDirectorySize(distPath);
         this.metrics.application.buildSize = Math.round(distSize / 1024 / 1024); // MB
       }
       
       // Check node_modules size
-      const nodeModulesPath = path.join(this.projectRoot, 'node_modules');
+      const nodeModulesPath = path.join(this.projectRoot,node_modules');
       if (fs.existsSync(nodeModulesPath)) {
         const nodeModulesSize = this.getDirectorySize(nodeModulesPath);
         this.metrics.application.dependenciesSize = Math.round(nodeModulesSize / 1024 / 1024); // MB
       }
       
       // Check source code size
-      const srcPath = path.join(this.projectRoot, 'src');
+      const srcPath = path.join(this.projectRoot,src');
       if (fs.existsSync(srcPath)) {
         const srcSize = this.getDirectorySize(srcPath);
         this.metrics.application.sourceSize = Math.round(srcSize / 1024); // KB
@@ -116,9 +116,9 @@ class PerformanceMonitor {
       
       // Count files
       this.metrics.application.fileCounts = {
-        source: this.countFiles(srcPath, ['.ts', '.tsx', '.js', '.jsx']),
-        styles: this.countFiles(path.join(this.projectRoot, 'styles'), ['.css', '.scss', '.sass']),
-        tests: this.countFiles(path.join(this.projectRoot, 'tests'), ['.test.js', '.test.ts', '.spec.js', '.spec.ts'])
+        source: this.countFiles(srcPath, ['.ts',.tsx',.js',.jsx']),
+        styles: this.countFiles(path.join(this.projectRoot,styles'), ['.css',.scss',.sass']),
+        tests: this.countFiles(path.join(this.projectRoot,tests'), ['.test.js',.test.ts',.spec.js',.spec.ts'])
       };
       
     } catch (error) {
@@ -132,10 +132,7 @@ class PerformanceMonitor {
       
       // Check if build artifacts exist
       const buildFiles = [
-        'dist/index.html',
-        'dist/css',
-        'dist/js',
-        'dist/assets'
+        'dist/index.html',dist/css',dist/js',dist/assets'
       ];
       
       this.metrics.build.artifacts = {};
@@ -145,9 +142,9 @@ class PerformanceMonitor {
       });
       
       // Check build configuration
-      const viteConfigPath = path.join(this.projectRoot, 'vite.config.ts');
+      const viteConfigPath = path.join(this.projectRoot,vite.config.ts');
       if (fs.existsSync(viteConfigPath)) {
-        const viteConfig = fs.readFileSync(viteConfigPath, 'utf8');
+        const viteConfig = fs.readFileSync(viteConfigPath,utf8');
         this.metrics.build.config = {
           hasVite: true,
           hasBuildOptimizations: viteConfig.includes('build.rollupOptions'),
@@ -207,7 +204,7 @@ class PerformanceMonitor {
   }
 
   async saveMetrics() {
-    const metricsPath = path.join(this.projectRoot, 'logs', 'performance-metrics.json');
+    const metricsPath = path.join(this.projectRoot,logs',performance-metrics.json');
     try {
       fs.writeFileSync(metricsPath, JSON.stringify(this.metrics, null, 2));
       console.log(`📊 Metrics saved to: ${metricsPath}`);

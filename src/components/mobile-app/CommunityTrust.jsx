@@ -1,66 +1,66 @@
 import React from 'react';
 import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTrust = () => {
   const stats = ['
-    { icon: Users, value: '50K+', label: 'Active Users', color: 'text-blue-400' },'
-    { icon: Star, value: '4.8/5', label: 'User Rating', color: 'text-yellow-400' },'
-    { icon: TrendingUp, value: '99.9%', label: 'Uptime', color: 'text-green-400' },'
+    { icon: Users, value: '50K+', label: 'Active Users', color: 'text-blue-400' },
+    { icon: Star, value: '4.8/5', label: 'User Rating', color: 'text-yellow-400' },
+    { icon: TrendingUp, value: '99.9%', label: 'Uptime', color: 'text-green-400' },
     { icon: Shield, value: 'SOC 2', label: 'Certified', color: 'text-purple-400' }
   ];
 
   const testimonials = [
     {
-'
-      name: 'Sarah Chen','
-      role: 'IT Director','
-      comp: 'TechCorp Inc.','
+
+      name: 'Sarah Chen',
+      role: 'IT Director',
+      comp: 'TechCorp Inc.',
       content: 'Zion mobile app has transformed how our team manages IT assets in the field. The offline capability is a game-changer.',
-      rating: 5,'
+      rating: 5,
       avatar: '👩‍💼'
     },
     {
-'
-      name: 'Marcus Rodriguez','
-      role: 'Systems Administrator','
-      comp: 'Global Solutions','
+
+      name: 'Marcus Rodriguez',
+      role: 'Systems Administrator',
+      comp: 'Global Solutions',
       content: 'Intuitive interface and powerful features. Our asset tracking accuracy improved by 95% since switching to Zion.',
-      rating: 5,'
+      rating: 5,
       avatar: '👨‍💻'
     },
     {
-'
-      name: 'Emily Watson','
-      role: 'IT Manager','
-      comp: 'InnovateTech','
+
+      name: 'Emily Watson',
+      role: 'IT Manager',
+      comp: 'InnovateTech',
       content: 'The real-time synchronization and mobile-first approach make Zion the perfect solution for our distributed team.',
-      rating: 5,'
+      rating: 5,
       avatar: '👩‍🔧'
 
   ];
 
   const certifications = ['
-    { name: 'SOC 2 Type II', icon: '🔒', description: 'Security & compliance certified' },'
-    { name: 'ISO 27001', icon: '🛡️', description: 'Information security management' },'
-    { name: 'GDPR Compliant', icon: '🇪🇺', description: 'Data protection regulation' },'
+    { name: 'SOC 2 Type II', icon: '🔒', description: 'Security & compliance certified' },
+    { name: 'ISO 27001', icon: '🛡️', description: 'Information security management' },
+    { name: 'GDPR Compliant', icon: '🇪🇺', description: 'Data protection regulation' },
     { name: 'HIPAA Ready', icon: '🏥', description: 'Healthcare data standards' }
   ];
 
   const features = [
     {
 
-      icon: Shield,'
-      title: 'Enterprise Security','
+      icon: Shield,
+      title: 'Enterprise Security',
       description: 'Bank-level encryption and multi-factor authentication'
     },
     {
 
-      icon: Globe,'
-      title: 'Global Infrastructure','
+      icon: Globe,
+      title: 'Global Infrastructure',
       description: '99.9% uptime with data centers worldwide'
     },
     {
 
-      icon: Award,'
-      title: 'Industry Recognition','
+      icon: Award,
+      title: 'Industry Recognition',
       description: 'Award-winning solution trusted by Fortune 500 companies'
 
   ];
@@ -204,13 +204,13 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="#download""
+                href="#download"
                 className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
 
                 Download Now
               </a>
               <a"
-                href="#demo""
+                href="#demo"
                 className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
 
                 Request Demo

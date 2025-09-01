@@ -1,21 +1,50 @@
-import React, { useState, useMemo } from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React, { useState, useMemo } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import { Helmet  } from 'react-helmet-async.ts';
+<<<<<<< HEAD
+import { Search, 
+
+
+    Filter, 
+    TrendingUp, 
+    Shield, 
+    Zap, 
+    Globe, 
+    Users, 
+    BarChart3,
+    DollarSign,
+    Heart,
+    GraduationCap,
+    Target,
+    Settings,
+    Package,
+    CheckCircle,
+    Star,
+    ArrowRight,
+    Phone,
+    Mail,
+    MapPin,
+    ExternalLink'
+ } from 'lucide-react.ts';
+import { comprehensiveServices2025Enhanced, EnhancedService  } from '../data/comprehensive-services-2025-enhanced';
+
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
-'
-    const [searchTerm, setSearchTerm] = useState('');'
-    const [selectedCategory, setSelectedCategory] = useState<any>('all');'
+
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState<any>('all');
     const [sortBy, setSortBy] = useState<any>('name');
 
     const categories = ['
-        { id: any'all', name: 'All Services', icon: Globe, count: comprehensiveServices2025Enhanced.length },;'
-        { id: 'fintech', name: 'Financial Tech', icon: DollarSign, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'fintech').length },'
-        { id: any'healthtech', name: 'Healthcare Tech', icon: Heart, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'healthtech').length },;'
-        { id: any'edutech', name: 'Education Tech', icon: GraduationCap, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'edutech').length },;'
-        { id: any'martech', name: 'Marketing Tech', icon: Target, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'martech').length },;'
-        { id: any'micro-saas', name: 'Micro SaaS', icon: Settings, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'micro-saas').length },;'
-        { id: any'ai-services', name: 'AI Services', icon: Zap, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'ai-services').length },;'
-        { id: any'it-services', name: 'IT Services', icon: Shield, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'it-services').length },;'
+        { id: any'all', name: 'All Services', icon: Globe, count: comprehensiveServices2025Enhanced.length },;
+        { id: 'fintech', name: 'Financial Tech', icon: DollarSign, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'fintech').length },
+        { id: any'healthtech', name: 'Healthcare Tech', icon: Heart, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'healthtech').length },;
+        { id: any'edutech', name: 'Education Tech', icon: GraduationCap, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'edutech').length },;
+        { id: any'martech', name: 'Marketing Tech', icon: Target, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'martech').length },;
+        { id: any'micro-saas', name: 'Micro SaaS', icon: Settings, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'micro-saas').length },;
+        { id: any'ai-services', name: 'AI Services', icon: Zap, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'ai-services').length },;
+        { id: any'it-services', name: 'IT Services', icon: Shield, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'it-services').length },;
         { id: any'emerging-tech', name: 'Emerging Tech', icon: TrendingUp, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'emerging-tech').length }
     ];
 
@@ -29,7 +58,7 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
                 service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
             );
         }
-'
+
         if (selectedCategory !== 'all') {
 
             filtered = filtered.filter(service => service.category === selectedCategory);
@@ -38,11 +67,11 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
         filtered.sort((a, b) => {
 
             switch (sortBy) {
-'
+
                 case 'price':'
-                    const priceA = parseFloat(a.pricing.monthly.replace(/[^0-9.]/g, ''));'
-                    const priceB = parseFloat(b.pricing.monthly.replace(/[^0-9.]/g, ''));
-                    return priceA - priceB;'
+                    const priceA = parseFloat(a.pricing.monthly.replace(/[^0-9.]/g,));
+                    const priceB = parseFloat(b.pricing.monthly.replace(/[^0-9.]/g,));
+                    return priceA - priceB;
                 case 'popularity':
                     return b.trialDays - a.trialDays; // More trial days = more popular
                 default:
@@ -56,30 +85,23 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
     const getCategoryColor = (category: anystring)  => {
 
         const colors: { [key: string]: string } = {
-'
-            'fintech': 'from-green-500 to-emerald-600','
-            'healthtech': 'from-red-500 to-pink-600','
-            'edutech': 'from-purple-500 to-violet-600','
-            'martech': 'from-pink-500 to-rose-600','
-            'micro-saas': 'from-blue-500 to-indigo-600','
-            'ai-services': 'from-cyan-500 to-blue-600','
-            'it-services': 'from-slate-500 to-gray-600','
-            'emerging-tech': 'from-orange-500 to-yellow-600'
-        };'
+
+            'fintech': 'from-green-500 to-emerald-600',healthtech': 'from-red-500 to-pink-600',edutech': 'from-purple-500 to-violet-600',martech': 'from-pink-500 to-rose-600',micro-saas': 'from-blue-500 to-indigo-600',ai-services': 'from-cyan-500 to-blue-600',it-services': 'from-slate-500 to-gray-600',emerging-tech': 'from-orange-500 to-yellow-600'
+        };
         return colors[category] || 'from-gray-500 to-gray-600';
     };
 
     const getCategoryIcon = (category: anystring)  => {
 
         const icons: { [key: string]: React.ReactNode } = {
-'
-            'fintech': <DollarSign className="w-5 h-5" />,'"
-            'healthtech': <Heart className="w-5 h-5" />,'"
-            'edutech': <GraduationCap className="w-5 h-5" />,'"
-            'martech': <Target className="w-5 h-5" />,'"
-            'micro-saas': <Settings className="w-5 h-5" />,'"
-            'ai-services': <Zap className="w-5 h-5" />,'"
-            'it-services': <Shield className="w-5 h-5" />,'"
+
+            'fintech': <DollarSign className="w-5 h-5" />,"
+            'healthtech': <Heart className="w-5 h-5" />,"
+            'edutech': <GraduationCap className="w-5 h-5" />,"
+            'martech': <Target className="w-5 h-5" />,"
+            'micro-saas': <Settings className="w-5 h-5" />,"
+            'ai-services': <Zap className="w-5 h-5" />,"
+            'it-services': <Shield className="w-5 h-5" />,"
             'emerging-tech': <TrendingUp className="w-5 h-5" />
         };"
         return icons[category] || <Globe className="w-5 h-5" />;
@@ -143,9 +165,9 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
                             </div>
                         </div>
                         <a"
-                            href="https://ziontechgroup.com""
-                            target="_blank""
-                            rel="noopener noreferrer""
+                            href="https://ziontechgroup.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium"
                         >
                             <span>Visit Our Website</span>"
@@ -163,7 +185,12 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
                             <div className="relative">"
                                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                                 <input"
+<<<<<<< HEAD
+                                    type="text"
+                                    placeholder="Search services..."
+=======
                                     type="text""                                    placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}"
                                     className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -186,7 +213,7 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
                         {/* Sort */}"
                         <div className="flex-shrink-0">
                             <select
-                                value={sortBy}'
+                                value={sortBy}
                                 onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'popularity')}"
                                 className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                             >"
@@ -303,13 +330,13 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
                     </p>"
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a"
-                            href="tel:+13024640950""
+                            href="tel:+13024640950"
                             className="inline-flex items-center space-x-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
                         >"
                             <Phone className="w-5 h-5" />                            <span>Call +1 302 464 0950</span>
                         </a>
                         <a"
-                            href="mailto:kleber@ziontechgroup.com""
+                            href="mailto:kleber@ziontechgroup.com"
                             className="inline-flex items-center space-x-2 bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors"
                         >"
                             <Mail className="w-5 h-5" />                            <span>Email Us</span>

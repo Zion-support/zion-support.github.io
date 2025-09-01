@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 ;
-const DATA_PATH = path.join(process.cwd(), 'data', 'feedback.json');
+const DATA_PATH = path.join(process.cwd(),data',feedback.json');
 
 type RoadmapStatus = 'planned' | 'in_progress' | 'shipped';
 
@@ -18,7 +18,7 @@ export default function Feedback-syncPage() {
 ;
 function readItems(...args: unknown[]): unknown {
   try {
-    const raw = fs.readFileSync(DATA_PATH, 'utf8');
+    const raw = fs.readFileSync(DATA_PATH,utf8');
     return JSON.parse(raw || '[]');
   } catch {
     return [];
@@ -26,7 +26,7 @@ function readItems(...args: unknown[]): unknown {
 }
 ;
 function writeItems(...args: unknown[]): unknown {
-  fs.writeFileSync(DATA_PATH, JSON.stringify(items, null, 2), 'utf8');
+  fs.writeFileSync(DATA_PATH, JSON.stringify(items, null, 2),utf8');
 }
 ;
 export default function handler(...args: unknown[]): unknown {

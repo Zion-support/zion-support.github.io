@@ -1,6 +1,6 @@
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';'
-import { SEO } from '../components/SEO';'
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
 import { Link } from 'react-router-dom';
 import {
 
@@ -461,236 +461,182 @@ import {
   YellowIndianBean,
   YellowWaxBean,
   YellowEyeBean,
-  YellowIndianBean,'
+  YellowIndianBean,
   YellowWaxBean} from 'lucide-react';
 
 export default function Talent() {
-'
-  const [searchQuery, setSearchQuery] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
-  const [selectedExperience, setSelectedExperience] = useState('all');'
+
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedExperience, setSelectedExperience] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [expandedTalent, setExpandedTalent] = useState<string | null>(null)};
 
   const categories = ['
-    { id: 'all', name: 'All Categories', count: 45 },'
-    { id: 'ai-ml', name: 'AI & Machine Learning', count: 12 },'
-    { id: 'cloud', name: 'Cloud & DevOps', count: 8 },'
-    { id: 'security', name: 'Security & Compliance', count: 6 },'
-    { id: 'data', name: 'Data & Analytics', count: 7 },'
+    { id: 'all', name: 'All Categories', count: 45 },
+    { id: 'ai-ml', name: 'AI & Machine Learning', count: 12 },
+    { id: 'cloud', name: 'Cloud & DevOps', count: 8 },
+    { id: 'security', name: 'Security & Compliance', count: 6 },
+    { id: 'data', name: 'Data & Analytics', count: 7 },
     { id: 'development', name: 'Software Development', count: 12 },
   ];
 
   const experienceLevels = ['
-    { id: 'all', name: 'All Levels', count: 45 },'
-    { id: 'junior', name: 'Junior (0-2 years)', count: 15 },'
-    { id: 'mid', name: 'Mid-Level (3-5 years)', count: 18 },'
-    { id: 'senior', name: 'Senior (6-10 years)', count: 8 },'
-    { id: 'lead', name: 'Lead/Architect (10+ years)', count: 4 },
+    { id: 'all', name: 'All Levels', count: 45 },
+    { id: 'junior', name: 'Junior (0-2 years), count: 15 },
+    { id: 'mid', name: 'Mid-Level (3-5 years), count: 18 },
+    { id: 'senior', name: 'Senior (6-10 years), count: 8 },
+    { id: 'lead', name: 'Lead/Architect (10+ years), count: 4 },
   ];
 
   const talentPool = [
     // AI & ML
     {
-'
-      id: 'ai-engineer-senior','
-      name: 'Dr. Sarah Chen','
-      title: 'Senior AI Engineer','
-      category: 'ai-ml','
+
+      id: 'ai-engineer-senior',
+      name: 'Dr. Sarah Chen',
+      title: 'Senior AI Engineer',
+      category: 'ai-ml',
       experience: 'senior',
       avatar:'
-        'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face','
-      location: 'San Francisco, CA','
-      rate: '$120-150/hr','
+        'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face',
+      location: 'San Francisco, CA',
+      rate: '$120-150/hr',
       availability: 'Available',
       skills: ['
-        'Machine Learning','
-        'Deep Learning','
-        'Python','
-        'TensorFlow','
-        'PyTorch','
-        'NLP','
-        'Computer Vision',
-      ],'
+        'Machine Learning',Deep Learning',Python',TensorFlow',PyTorch',NLP',Computer Vision',
+      ],
       bio: 'PhD in Computer Science with 8+ years of experience in AI/ML. Led teams developing production ML systems for Fortune 500 companies.',
       certifications: ['
-        'AWS Machine Learning Specialty','
-        'Google Cloud ML Engineer','
-        'Microsoft Azure AI Engineer',
+        'AWS Machine Learning Specialty',Google Cloud ML Engineer',Microsoft Azure AI Engineer',
       ],
       projects: ['
-        'Fraud Detection System','
-        'Recommendation Engine','
-        'Computer Vision Platform',
+        'Fraud Detection System',Recommendation Engine',Computer Vision Platform',
       ],
       rating: 4.9,
       reviews: 23,
       featured: true},
     {
-'
-      id: 'ml-engineer-mid','
-      name: 'Alex Rodriguez','
-      title: 'ML Engineer','
-      category: 'ai-ml','
+
+      id: 'ml-engineer-mid',
+      name: 'Alex Rodriguez',
+      title: 'ML Engineer',
+      category: 'ai-ml',
       experience: 'mid',
       avatar:'
-        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face','
-      location: 'Austin, TX','
-      rate: '$80-100/hr','
+        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face',
+      location: 'Austin, TX',
+      rate: '$80-100/hr',
       availability: 'Available',
       skills: ['
-        'Machine Learning','
-        'Python','
-        'Scikit-learn','
-        'Data Engineering','
-        'SQL','
-        'AWS','
-        'Docker',
-      ],'
+        'Machine Learning',Python',Scikit-learn',Data Engineering',SQL',AWS',Docker',
+      ],
       bio: 'Experienced ML engineer with strong background in data engineering and production ML systems.',
       certifications: ['
-        'AWS Solutions Architect','
-        'Google Cloud Professional Data Engineer',
+        'AWS Solutions Architect',Google Cloud Professional Data Engineer',
       ],
       projects: ['
-        'Customer Segmentation Model','
-        'Predictive Analytics Platform','
-        'Data Pipeline Optimization',
+        'Customer Segmentation Model',Predictive Analytics Platform',Data Pipeline Optimization',
       ],
       rating: 4.7,
       reviews: 18,
       featured: false},
     // Cloud & DevOps
     {
-'
-      id: 'devops-architect','
-      name: 'Michael Thompson','
-      title: 'DevOps Architect','
-      category: 'cloud','
+
+      id: 'devops-architect',
+      name: 'Michael Thompson',
+      title: 'DevOps Architect',
+      category: 'cloud',
       experience: 'lead',
       avatar:'
-        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face','
-      location: 'Seattle, WA','
-      rate: '$140-180/hr','
+        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
+      location: 'Seattle, WA',
+      rate: '$140-180/hr',
       availability: 'Available',
       skills: ['
-        'AWS','
-        'Kubernetes','
-        'Docker','
-        'Terraform','
-        'Jenkins','
-        'GitLab CI/CD','
-        'Monitoring',
-      ],'
+        'AWS',Kubernetes',Docker',Terraform',Jenkins',GitLab CI/CD',Monitoring',
+      ],
       bio: '15+ years of experience designing and implementing cloud-native architectures and CI/CD pipelines.',
       certifications: ['
-        'AWS Solutions Architect Professional','
-        'Kubernetes Administrator','
-        'Terraform Associate',
+        'AWS Solutions Architect Professional',Kubernetes Administrator',Terraform Associate',
       ],
       projects: ['
-        'Multi-cloud Migration','
-        'Microservices Architecture','
-        'DevOps Transformation',
+        'Multi-cloud Migration',Microservices Architecture',DevOps Transformation',
       ],
       rating: 4.9,
       reviews: 31,
       featured: true},
     // Security
     {
-'
-      id: 'security-engineer','
-      name: 'Jennifer Park','
-      title: 'Security Engineer','
-      category: 'security','
+
+      id: 'security-engineer',
+      name: 'Jennifer Park',
+      title: 'Security Engineer',
+      category: 'security',
       experience: 'senior',
       avatar:'
-        'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face','
-      location: 'New York, NY','
-      rate: '$100-130/hr','
+        'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face',
+      location: 'New York, NY',
+      rate: '$100-130/hr',
       availability: 'Available',
       skills: ['
-        'Penetration Testing','
-        'Security Auditing','
-        'Compliance','
-        'SIEM','
-        'Firewall','
-        'VPN','
-        'IAM',
-      ],'
-      bio: 'Certified security professional with expertise in enterprise security, compliance, and threat detection.','
-      certifications: ['CISSP', 'CEH', 'OSCP', 'CompTIA Security+'],
+        'Penetration Testing',Security Auditing',Compliance',SIEM',Firewall',VPN',IAM',
+      ],
+      bio: 'Certified security professional with expertise in enterprise security, compliance, and threat detection.',
+      certifications: ['CISSP',CEH',OSCP',CompTIA Security+'],
       projects: ['
-        'Security Infrastructure Design','
-        'Compliance Framework Implementation','
-        'Incident Response',
+        'Security Infrastructure Design',Compliance Framework Implementation',Incident Response',
       ],
       rating: 4.8,
       reviews: 25,
       featured: false},
     // Data & Analytics
     {
-'
-      id: 'data-scientist','
-      name: 'David Kim','
-      title: 'Data Scientist','
-      category: 'data','
+
+      id: 'data-scientist',
+      name: 'David Kim',
+      title: 'Data Scientist',
+      category: 'data',
       experience: 'mid',
       avatar:'
-        'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face','
-      location: 'Chicago, IL','
-      rate: '$90-110/hr','
+        'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face',
+      location: 'Chicago, IL',
+      rate: '$90-110/hr',
       availability: 'Available',
       skills: ['
-        'Python','
-        'R','
-        'SQL','
-        'Statistics','
-        'Data Visualization','
-        'Tableau','
-        'Power BI',
-      ],'
+        'Python',R',SQL',Statistics',Data Visualization',Tableau',Power BI',
+      ],
       bio: 'Data scientist with strong statistical background and experience in business intelligence and analytics.',
       certifications: ['
-        'Google Data Analytics','
-        'Microsoft Power BI Data Analyst',
+        'Google Data Analytics',Microsoft Power BI Data Analyst',
       ],
       projects: ['
-        'Customer Analytics Dashboard','
-        'Predictive Modeling','
-        'Business Intelligence Platform',
+        'Customer Analytics Dashboard',Predictive Modeling',Business Intelligence Platform',
       ],
       rating: 4.6,
       reviews: 16,
       featured: false},
     // Software Development
     {
-'
-      id: 'fullstack-developer','
-      name: 'Emily Watson','
-      title: 'Full Stack Developer','
-      category: 'development','
+
+      id: 'fullstack-developer',
+      name: 'Emily Watson',
+      title: 'Full Stack Developer',
+      category: 'development',
       experience: 'mid',
       avatar:'
-        'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face','
-      location: 'Denver, CO','
-      rate: '$75-95/hr','
+        'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face',
+      location: 'Denver, CO',
+      rate: '$75-95/hr',
       availability: 'Available',
       skills: ['
-        'React','
-        'Node.js','
-        'TypeScript','
-        'Python','
-        'PostgreSQL','
-        'AWS','
-        'Docker',
-      ],'
-      bio: 'Versatile full-stack developer with experience building scalable web applications and APIs.','
-      certifications: ['AWS Developer Associate', 'MongoDB Developer'],
+        'React',Node.js',TypeScript',Python',PostgreSQL',AWS',Docker',
+      ],
+      bio: 'Versatile full-stack developer with experience building scalable web applications and APIs.',
+      certifications: ['AWS Developer Associate',MongoDB Developer'],
       projects: ['
-        'E-commerce Platform','
-        'API Development','
-        'Real-time Chat Application',
+        'E-commerce Platform',API Development',Real-time Chat Application',
       ],
       rating: 4.7,
       reviews: 19,
@@ -703,7 +649,7 @@ export default function Talent() {
   };
 
   const filteredTalent = talentPool.filter(talent => {
-'
+
     if (selectedCategory !== 'all' && talent.category !== selectedCategory)
       return false;
     if ('
@@ -727,15 +673,15 @@ export default function Talent() {
   const getCategoryColor = (category: string) => {
 
     switch (category) {
-'
+
       case 'ai-ml':'
-        return 'bg-purple-500/20 text-purple-400';'
+        return 'bg-purple-500/20 text-purple-400';
       case 'cloud':'
-        return 'bg-blue-500/20 text-blue-400';'
+        return 'bg-blue-500/20 text-blue-400';
       case 'security':'
-        return 'bg-red-500/20 text-red-400';'
+        return 'bg-red-500/20 text-red-400';
       case 'data':'
-        return 'bg-green-500/20 text-green-400';'
+        return 'bg-green-500/20 text-green-400';
       case 'development':'
         return 'bg-orange-500/20 text-orange-400';
       default:'
@@ -746,13 +692,13 @@ export default function Talent() {
   const getExperienceColor = (experience: string) => {
 
     switch (experience) {
-'
+
       case 'junior':'
-        return 'bg-green-500/20 text-green-400';'
+        return 'bg-green-500/20 text-green-400';
       case 'mid':'
-        return 'bg-blue-500/20 text-blue-400';'
+        return 'bg-blue-500/20 text-blue-400';
       case 'senior':'
-        return 'bg-purple-500/20 text-purple-400';'
+        return 'bg-purple-500/20 text-purple-400';
       case 'lead':'
         return 'bg-orange-500/20 text-orange-400';
       default:'
@@ -761,7 +707,7 @@ export default function Talent() {
   };
 
   const getAvailabilityColor = (availability: string) => {
-'
+
     return availability === 'Available''
       ? 'bg-green-500/20 text-green-400''
       : 'bg-red-500/20 text-red-400';
@@ -774,7 +720,7 @@ export default function Talent() {
         key={i}
         className={`w-4 h-4 ${
 
-          i < Math.floor(rating)'
+          i < Math.floor(rating)
             ? 'text-yellow-400 fill-current''
             : 'text-gray-400'`
         }`}
@@ -783,7 +729,7 @@ export default function Talent() {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-        title="Talent Pool - Zion Tech Group""
+        title="Talent Pool - Zion Tech Group"
         description="Access our curated network of top-tier technology professionals. Find skilled developers, engineers, and specialists for your projects."
       />
 
@@ -799,7 +745,7 @@ export default function Talent() {
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl mb-6">"
               <Users className="w-10 h-10 text-blue-400" />
             </div>"
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">'
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Elite{' '}"
               <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-green-600 bg-clip-text text-transparent">
                 Talent'
@@ -824,7 +770,12 @@ export default function Talent() {
                 <div className="relative">"
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                   <input"
+<<<<<<< HEAD
+                    type="text"
+                    placeholder="Search by name, skills, or expertise..."
+=======
                     type="text""                    placeholder="Search by name, skills, or expertise..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     value={searchQuery}
                     onChange={e => setSearchQuery(e.target.value)}"
                     className="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200"
@@ -867,7 +818,7 @@ export default function Talent() {
                 <button'
                   onClick={() => setViewMode('grid')}`
                   className={`p-2 rounded-lg transition-all duration-200 ${
-'
+
                     viewMode === 'grid''
                       ? 'bg-blue-400/20 text-blue-400''
                       : 'bg-slate-800/50 text-gray-400 hover:text-white'`
@@ -877,7 +828,7 @@ export default function Talent() {
                 <button'
                   onClick={() => setViewMode('list')}`
                   className={`p-2 rounded-lg transition-all duration-200 ${
-'
+
                     viewMode === 'list''
                       ? 'bg-blue-400/20 text-blue-400''
                       : 'bg-slate-800/50 text-gray-400 hover:text-white'`
@@ -1013,7 +964,7 @@ export default function Talent() {
 
                       {expandedTalent === talent.id && (
                         <motion.div
-                          initial={{ opacity: 0, height: 0 }}'
+                          initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.3 }}"
@@ -1077,7 +1028,7 @@ export default function Talent() {
               Browse our complete network of skilled professionals
             </p>
           </motion.div>
-'
+
           {viewMode === 'grid' ? ("
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredTalent.map((talent, index) => (
@@ -1271,7 +1222,7 @@ export default function Talent() {
                               {
 
                                 experienceLevels
-                                  .find(e => e.id === talent.experience)'
+                                  .find(e => e.id === talent.experience)
                                   ?.name.split(' ')[0]
                               }
                             </div>
@@ -1310,7 +1261,7 @@ export default function Talent() {
                 Hire Talent
               </button>
               <a"
-                href="mailto:talent@ziontechgroup.com""
+                href="mailto:talent@ziontechgroup.com"
                 className="px-8 py-3 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-200"
               >
                 Contact Talent Team

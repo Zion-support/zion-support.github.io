@@ -1,6 +1,6 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { Link  } from 'react-router-dom.ts';'
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
 import { ArrowRight, Rocket, MessageCircle, Calendar, Star  } from 'lucide-react';
 ;
 const CTASection: React.FC = (): JSX.Element => {
@@ -150,7 +150,7 @@ const CTASection: React.FC = (): JSX.Element => {
 }}
             viewport={{ once: true }}"
             className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed mb-8"
-'
+
             Join hundreds of companies that have already revolutionized their operations with Zion Tech Group's cutting-edge solutions.
           </motion.p>
         </div>;
@@ -239,7 +239,7 @@ const CTASection: React.FC = (): JSX.Element => {
           viewport={{ once: true }}
 
           <Link"
-            to="/contact""
+            to="/contact"
             className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-bold text-lg rounded-2xl hover:from-zion-blue hover:to-zion-purple transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/30 focus:outline-none focus:ring-4 focus:ring-zion-cyan/30 focus:ring-offset-2 focus:ring-offset-zion-slate-dark"
 
             Start Your Journey"
@@ -247,7 +247,7 @@ const CTASection: React.FC = (): JSX.Element => {
           </Link>
 
           <Link"
-            to="/services""
+            to="/services"
             className="group inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-bold text-lg rounded-2xl hover:bg-zion-cyan hover:text-zion-slate-dark transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-zion-cyan/30 focus:ring-offset-2 focus:ring-offset-zion-slate-dark"
 
             Explore Services"

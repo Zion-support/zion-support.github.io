@@ -1,8 +1,54 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';'
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+import {
+
+  Shield,
+  AlertTriangle,
+  CheckCircle,
+  XCircle,
+  Eye,
+  Lock,
+  Activity,
+  Zap,
+  Target,
+  AlertCircle,
+  Info,
+  Settings,
+  RefreshCw,
+  Download,
+  Share2,
+  Maximize2,
+  Minimize2,
+  X,
+  BarChart3,
+  TrendingUp,
+  TrendingDown,
+  Clock,
+  Database,
+  Network,
+  Server,
+  Smartphone,
+  Globe} from 'lucide-react';
+
+interface SecurityThreat {
+  id: string;
+  type: 'critical' | 'high' | 'medium' | 'low';
+  severity: number;
+  description: string;
+  source: string;
+  timestamp: Date;
+  status: 'active' | 'resolved' | 'investigating';
+  affectedSystems: string[];
+  recommendations: string[];
+
+}
+
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface VulnerabilityAssessment {
-  id: string;'
-  category: 'network' | 'application' | 'infrastructure' | 'data';'
+  id: string;
+  category: 'network' | 'application' | 'infrastructure' | 'data';
   risk: 'critical' | 'high' | 'medium' | 'low';
   score: number;
   description: string;
@@ -13,7 +59,7 @@ interface VulnerabilityAssessment {
 
 }
 interface ComplianceStatus {
-  framework: string;'
+  framework: string;
   status: 'compliant' | 'non-compliant' | 'partial';
   score: number;
   lastAudit: Date;
@@ -64,21 +110,13 @@ export function SecurityMonitoringSystem({
 
   // Generate sample security threats
   const generateSecurityThreats = useCallback(() => {
-'
-    const threatTypes = ['critical', 'high', 'medium', 'low'];
+
+    const threatTypes = ['critical',high',medium',low'];
     const threatSources = ['
-      'External Attack','
-      'Internal Breach','
-      'Malware','
-      'Phishing','
-      'DDoS',
+      'External Attack',Internal Breach',Malware',Phishing',DDoS',
     ];
     const systems = ['
-      'Web Server','
-      'Database','
-      'API Gateway','
-      'Load Balancer','
-      'CDN',
+      'Web Server',Database',API Gateway',Load Balancer',CDN',
     ];
     const newThreats: SecurityThreat[] = threatTypes.map((type, index) => ({
 
@@ -96,10 +134,7 @@ export function SecurityMonitoringSystem({
             : 'active',
       affectedSystems: systems.slice(0, Math.floor(Math.random() * 3) + 1),
       recommendations: ['
-        'Implement additional authentication layers','
-        'Update security policies','
-        'Conduct security training','
-        'Review access controls',
+        'Implement additional authentication layers',Update security policies',Conduct security training',Review access controls',
       ]}));
 
     setThreats(newThreats);
@@ -107,15 +142,11 @@ export function SecurityMonitoringSystem({
 
   // Generate vulnerability assessments
   const generateVulnerabilities = useCallback(() => {
-'
-    const categories = ['network', 'application', 'infrastructure', 'data'];'
-    const risks = ['critical', 'high', 'medium', 'low'];
+
+    const categories = ['network',application',infrastructure',data'];
+    const risks = ['critical',high',medium',low'];
     const components = ['
-      'Firewall','
-      'Web App','
-      'Database','
-      'API','
-      'Load Balancer',
+      'Firewall',Web App',Database',API',Load Balancer',
     ];
 
     const newVulnerabilities: VulnerabilityAssessment[] = categories.map()
@@ -128,7 +159,7 @@ export function SecurityMonitoringSystem({
         description: `${category} vulnerability detected in ${components[Math.floor(Math.random() * components.length)]}`,`
         cveId: `CVE-2025-${Math.floor(Math.random() * 9999)
           .toString()'`
-          .padStart(4, '0')}`,
+          .padStart(4,0')}`,
         affectedComponents: components.slice()
           0,
           Math.floor(Math.random() * 2) + 1
@@ -142,8 +173,8 @@ export function SecurityMonitoringSystem({
 
   // Generate compliance status
   const generateComplianceStatus = useCallback(() => {
-'
-    const frameworks = ['SOC 2', 'ISO 27001', 'GDPR', 'HIPAA', 'PCI DSS'];
+
+    const frameworks = ['SOC 2',ISO 27001',GDPR',HIPAA',PCI DSS'];
 
     const newCompliance: ComplianceStatus[] = frameworks.map()
       (framework, index) => {
@@ -192,7 +223,7 @@ export function SecurityMonitoringSystem({
         complianceStatus.reduce((sum, item) => sum + item.score, 0) /
         complianceStatus.length;
       const threatScore = Math.max()
-        0,'
+        0,
         100 - threats.filter(t => t.status === 'active').length * 10
       );
       const vulnScore = Math.max()
@@ -254,11 +285,11 @@ export function SecurityMonitoringSystem({
   const getThreatColor = (type: string) => {
 
     const colors = {
-'
-      critical: 'text-red-600 bg-red-100 dark:bg-red-900/30 dark:text-red-400','
+
+      critical: 'text-red-600 bg-red-100 dark:bg-red-900/30 dark:text-red-400',
       high: 'text-orange-600 bg-orange-100 dark:bg-orange-900/30 dark:text-orange-400',
       medium:'
-        'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400','
+        'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400',
       low: 'text-green-600 bg-green-100 dark:bg-green-900/30 dark:text-green-400'};
     return colors[type as keyof typeof colors] || colors.low;
   };
@@ -282,8 +313,7 @@ export function SecurityMonitoringSystem({
       compliant:'
         'text-green-600 bg-green-100 dark:bg-green-900/30 dark:text-green-400',
       partial:'
-        'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400','
-      'non-compliant':'
+        'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400',non-compliant':'
         'text-red-600 bg-red-100 dark:bg-red-900/30 dark:text-red-400'};
     return colors[status as keyof typeof colors] || colors.partial;
   };
@@ -315,12 +345,12 @@ export function SecurityMonitoringSystem({
           >
             <motion.div`
               className={`bg-white dark:bg-gray-900 rounded-2xl shadow-2xl overflow-hidden ${
-'
+
                 isFullscreen ? 'w-full h-full' : 'w-full max-w-7xl max-h-[90vh]'`
               }`}
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}'
+              exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
             >
               {/* Header */}"
@@ -437,20 +467,20 @@ export function SecurityMonitoringSystem({
                     <div className="flex space-x-1 bg-gray-100 dark:bg-gray-800 rounded-lg p-1">
                       {[
                         {
-'
-                          key: 'threats','
+
+                          key: 'threats',
                           label: 'Threats',
                           icon: AlertTriangle,
                           count: threats.length},
                         {
-'
-                          key: 'vulnerabilities','
+
+                          key: 'vulnerabilities',
                           label: 'Vulnerabilities',
                           icon: Zap,
                           count: vulnerabilities.length},
                         {
-'
-                          key: 'compliance','
+
+                          key: 'compliance',
                           label: 'Compliance',
                           icon: CheckCircle,
                           count: complianceStatus.length},
@@ -472,7 +502,7 @@ export function SecurityMonitoringSystem({
                         </button>) ) }
                     </div>
 
-                    {/* Threats View */}'
+                    {/* Threats View */}
                     {selectedView === 'threats' && ("
                       <div className="space-y-4">"
                         <div className="flex items-center justify-between">"
@@ -482,7 +512,7 @@ export function SecurityMonitoringSystem({
                           <button
                             onClick={() => setShowAdvanced(!showAdvanced)}"
                             className="px-3 py-1 text-sm bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors"
-                          >'
+                          >
                             {showAdvanced ? 'Hide' : 'Show'} Advanced
                           </button>
                         </div>
@@ -520,7 +550,7 @@ export function SecurityMonitoringSystem({
                                   <div className="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400 mb-3">
                                     <span>Source: {threat.source}</span>
                                     <span>Severity: {threat.severity}/100</span>
-                                    <span>'
+                                    <span>
                                       Affected: {threat.affectedSystems.length}{' '}
                                       systems
                                     </span>
@@ -559,7 +589,7 @@ export function SecurityMonitoringSystem({
                         </div>
                       </div>) }
 
-                    {/* Vulnerabilities View */}'
+                    {/* Vulnerabilities View */}
                     {selectedView === 'vulnerabilities' && ("
                       <div className="space-y-4">"
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -615,7 +645,7 @@ export function SecurityMonitoringSystem({
                         </div>
                       </div>) }
 
-                    {/* Compliance View */}'
+                    {/* Compliance View */}
                     {selectedView === 'compliance' && ("
                       <div className="space-y-4">"
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -638,8 +668,8 @@ export function SecurityMonitoringSystem({
                                 </h4>
                                 <div`
                                   className={`px-3 py-1 rounded-full text-sm font-medium ${getComplianceColor(compliance.status)}`}
-                                >'
-                                  {compliance.status.replace('-', ' ')}
+                                >
+                                  {compliance.status.replace('-',)}
                                 </div>
                               </div>
 "

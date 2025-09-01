@@ -1,6 +1,6 @@
 import React from 'react';
-import { SEO } from "../../components/SEO";'
-import { motion } from 'framer-motion';'
+import { SEO } from "../../components/SEO";
+import { motion } from 'framer-motion';
 import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Eye, Key, Fingerprint, ShieldCheck } from 'lucide-react';
 
 export default function ZeroTrustNetworkArchitecture(...args: []):  {
@@ -8,90 +8,106 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
   const features = [
     {
 
-      icon: Shield,'
-      title: 'Never Trust, Always Verify','
-      description: 'Continuous verification of every user, device, and network request','
+      icon: Shield,
+      title: 'Never Trust, Always Verify',
+      description: 'Continuous verification of every user, device, and network request',
       color: 'from-red-500 to-pink-500'
     },
     {
 
-      icon: Lock,'
-      title: 'Least Privilege Access','
-      description: 'Users and systems only get access to what they absolutely need','
+      icon: Lock,
+      title: 'Least Privilege Access',
+      description: 'Users and systems only get access to what they absolutely need',
       color: 'from-blue-500 to-cyan-500'
     },
     {
 
-      icon: Eye,'
-      title: 'Continuous Monitoring','
-      description: 'Real-time monitoring and analysis of all network activities','
+      icon: Eye,
+      title: 'Continuous Monitoring',
+      description: 'Real-time monitoring and analysis of all network activities',
       color: 'from-green-500 to-emerald-500'
     },
     {
 
-      icon: Key,'
-      title: 'Multi-Factor Authentication','
-      description: 'Multiple layers of identity verification and access control','
+      icon: Key,
+      title: 'Multi-Factor Authentication',
+      description: 'Multiple layers of identity verification and access control',
       color: 'from-yellow-500 to-orange-500'
     },
     {
 
-      icon: Fingerprint,'
-      title: 'Identity-Based Security','
-      description: 'Security policies based on user identity and context','
+      icon: Fingerprint,
+      title: 'Identity-Based Security',
+      description: 'Security policies based on user identity and context',
       color: 'from-purple-500 to-pink-500'
     },;
     {;
-      icon: ShieldCheck,;'
-      title: 'Micro-Segmentation',;'
-      description: 'Network segmentation at the application and workload level',;'
+      icon: ShieldCheck,;
+      title: 'Micro-Segmentation',;
+      description: 'Network segmentation at the application and workload level',;
       color: 'from-indigo-500 to-purple-500';
     };
   ];
 
   const services = [
     {
-'
-      title: 'Zero Trust Assessment','
-      description: 'Comprehensive evaluation of current security posture','
-      price: 'From $5,000','
-      features: ['Security audit', 'Gap analysis', 'Risk assessment', 'Implementation roadmap']
+
+      title: 'Zero Trust Assessment',
+      description: 'Comprehensive evaluation of current security posture',
+      price: 'From $5,000',
+      features: ['Security audit',Gap analysis',Risk assessment',Implementation roadmap']
     },
     {
-'
-      title: 'Identity & Access Management','
-      description: 'Modern IAM solutions with multi-factor authentication','
-      price: 'From $15,000','
-      features: ['Single sign-on', 'MFA implementation', 'Role-based access', 'Identity governance']
+
+      title: 'Identity & Access Management',
+      description: 'Modern IAM solutions with multi-factor authentication',
+      price: 'From $15,000',
+      features: ['Single sign-on',MFA implementation',Role-based access',Identity governance']
     },
     {
-'
-      title: 'Network Segmentation','
-      description: 'Micro-segmentation and network isolation strategies','
-      price: 'From $20,000','
-      features: ['Network design', 'Segmentation policies', 'Traffic monitoring', 'Security controls']
+
+      title: 'Network Segmentation',
+      description: 'Micro-segmentation and network isolation strategies',
+      price: 'From $20,000',
+      features: ['Network design',Segmentation policies',Traffic monitoring',Security controls']
     },;
-    {;'
-      title: 'Continuous Monitoring',;'
-      description: 'Real-time security monitoring and threat detection',;'
-      price: 'From $12,000',;'
-      features: ['SIEM implementation', 'Threat detection', 'Incident response', 'Security analytics'];
+    {;
+      title: 'Continuous Monitoring',;
+      description: 'Real-time security monitoring and threat detection',;
+      price: 'From $12,000',;
+      features: ['SIEM implementation',Threat detection',Incident response',Security analytics'];
     };
   ];
 
+<<<<<<< HEAD
+  const benefits = [;
+    { name: 'Enhanced Security', icon: Shield, description: 'Reduce attack surface and improve threat detection' },;
+    { name: 'Compliance', icon: CheckCircle, description: 'Meet regulatory requirements and industry standards' },;
+    { name: 'Cost Reduction', icon: TrendingUp, description: 'Lower security costs and reduce breach impact' },;
+    { name: 'User Experience', icon: Users, description: 'Seamless access while maintaining security' },;
+    { name: 'Scalability', icon: Cloud, description: 'Security that grows with your business' },;
+    { name: 'Visibility', icon: Eye, description: 'Complete visibility into network activities' };
+=======
   const benefits = [;'
     { name: 'Enhanced Security', icon: Shield, description: 'Reduce attack surface and improve threat detection' },;'
     { name: 'Compliance', icon: CheckCircle, description: 'Meet regulatory requirements and industry standards' },;'
     { name: 'Cost Reduction', icon: TrendingUp, description: 'Lower security costs and reduce breach impact' },;'
     { name: 'User Experience', icon: Users, description: 'Seamless access while maintaining security' },;'
     { name: 'Scalability', icon: Cloud, description: 'Security that grows with your business' },;'    { name: 'Visibility', icon: Eye, description: 'Complete visibility into network activities' };
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
+        title="Zero Trust Network Architecture - Zion Tech Group"
+        description="Transform your security with Zero Trust Network Architecture. Never trust, always verify with our comprehensive security solutions."
+      />
+=======
         title="Zero Trust Network Architecture - Zion Tech Group""        description="Transform your security with Zero Trust Network Architecture. Never trust, always verify with our comprehensive security solutions."
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
@@ -465,8 +481,8 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Secure Your Network?
             </h2>"
-            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">'
-              Let's discuss how Zero Trust Network Architecture can protect your business,'
+            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
+              Let's discuss how Zero Trust Network Architecture can protect your business,
               improve compliance, and provide peace of mind in today's threat landscape.
             </p>"
             <div className="flex flex-wrap justify-center gap-4">

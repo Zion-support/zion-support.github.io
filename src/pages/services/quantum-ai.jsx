@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 const QuantumAIServices = () => {
   return()
@@ -17,13 +17,13 @@ const QuantumAIServices = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
               >
                 Get Started
               </Link>
               <Link"
-                to="/quantum-neural-network-platform""
+                to="/quantum-neural-network-platform"
                 className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg"
               >
                 Learn More
@@ -52,7 +52,7 @@ const QuantumAIServices = () => {
                 computing, enabling faster training and superior performance.
               </p>
               <Link"
-                to="/quantum-neural-network-platform""
+                to="/quantum-neural-network-platform"
                 className="text-blue-400 hover:text-blue-300 transition-colors"
               >
                 Learn More →
@@ -69,7 +69,7 @@ const QuantumAIServices = () => {
                 learning, and quantum optimization techniques.
               </p>
               <Link"
-                to="/research-development""
+                to="/research-development"
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"
               >
                 Learn More →
@@ -88,7 +88,7 @@ const QuantumAIServices = () => {
                 logistics, finance, and scientific research.
               </p>
               <Link"
-                to="/services/consulting""
+                to="/services/consulting"
                 className="text-purple-400 hover:text-purple-300 transition-colors"
               >
                 Learn More →
@@ -168,13 +168,13 @@ const QuantumAIServices = () => {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
+              to="/contact"
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
             >
               Schedule a Consultation
             </Link>
             <Link"
-              to="/quantum-neural-network-platform""
+              to="/quantum-neural-network-platform"
               className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg"
             >
               Explore Platform

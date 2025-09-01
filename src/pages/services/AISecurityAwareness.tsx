@@ -1,60 +1,59 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAwareness() {
   const features = [
-    'AI-powered security awareness optimization','
-    'Intelligent awareness strategy management and execution',;'
-    'Automated security behavior assessment and training',;'
-    'Predictive analytics for awareness needs',;'
-    'Smart awareness framework management',;'
-    'AI-driven awareness automation and orchestration',;'
-    'Real-time awareness performance tracking',;'
+    'AI-powered security awareness optimization',Intelligent awareness strategy management and execution',;
+    'Automated security behavior assessment and training',;
+    'Predictive analytics for awareness needs',;
+    'Smart awareness framework management',;
+    'AI-driven awareness automation and orchestration',;
+    'Real-time awareness performance tracking',;
     'Custom AI models for awareness applications';
   ];
 
   const tiers = [
     {
-'
-      name: 'Developer','
-      price: '$149/mo','
-      details: ['Up to 50 employees', 'Basic AI features', 'Standard awareness', 'Email support']
+
+      name: 'Developer',
+      price: '$149/mo',
+      details: ['Up to 50 employees',Basic AI features',Standard awareness',Email support']
     },
     {
-'
-      name: 'Business', '
-      price: '$449/mo', '
-      details: ['Up to 200 employees', 'Advanced AI features', 'Enhanced awareness', 'Priority support'] ;
+
+      name: 'Business',
+      price: '$449/mo',
+      details: ['Up to 200 employees',Advanced AI features',Enhanced awareness',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,199/mo', ;'
-      details: ['Unlimited employees', 'Custom AI models', 'Full awareness suite', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$1,199/mo', ;
+      details: ['Unlimited employees',Custom AI models',Full awareness suite',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Security awareness optimization',;'
-    'Awareness strategy management and execution',;'
-    'Security behavior assessment and training',;'
-    'Awareness framework management and automation',;'
-    'Awareness automation and orchestration',;'
+  const useCases = [;
+    'Security awareness optimization',;
+    'Awareness strategy management and execution',;
+    'Security behavior assessment and training',;
+    'Awareness framework management and automation',;
+    'Awareness automation and orchestration',;
     'Awareness scaling and management';
   ];
 
-  const benefits = [;'
-    'Improve security awareness performance by 50-80%',;'
-    'Reduce awareness training time by 40-70%',;'
-    'Cut security awareness costs by 35-65%',;'
-    'Enhance security awareness reliability and scalability',;'
-    'Optimize resource utilization',;'
+  const benefits = [;
+    'Improve security awareness performance by 50-80%',;
+    'Reduce awareness training time by 40-70%',;
+    'Cut security awareness costs by 35-65%',;
+    'Enhance security awareness reliability and scalability',;
+    'Optimize resource utilization',;
     'Scale security awareness operations efficiently';
   ];
 
-  const industries = [;'
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
     'Technology & SaaS';
   ];
 
@@ -107,8 +106,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['50-80% performance improvement', '40-70% training time reduction', '35-65% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['50-80% performance improvement',40-70% training time reduction',35-65% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-indigo-600 mb-3" />"              <div className="text-gray-900 font-semibold">{t}</div>
             </div>

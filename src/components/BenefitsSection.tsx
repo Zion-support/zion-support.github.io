@@ -1,7 +1,34 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star } from 'lucide-react';
+import { GradientHeading } from './ui/GradientHeading';
+
+interface Benefit {
+
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  color: string;
+  bgColor: string;
+  stats: string;
+  features: string[];
+;
+const benefits: Benefit[] = [;
+  {
+
+    title: "AI-Powered Matchmaking","
+    description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.","
+    icon: <Bot className="w-8 h-8" />,"
+    color: "from-zion-cyan to-zion-cyan-dark","
+    bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20","
+    stats: "95% Match Rate",
+=======
 import React, { useState } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';'
 import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star } from 'lucide-react';'
 import { GradientHeading } from './ui/GradientHeading';    stats: "95% Match Rate",
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     features: ["
       "Intelligent service matching","
       "Real-time availability","
@@ -93,7 +120,7 @@ import { GradientHeading } from './ui/GradientHeading';    stats: "95% Match Rat
       <div className="absolute inset-0 opacity-5">;"
         <div className="absolute inset-0" style={{
 
-          backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,'
+          backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,
           backgroundSize: '40px 40px'
         }} />
       </div>;
@@ -137,7 +164,7 @@ import { GradientHeading } from './ui/GradientHeading';    stats: "95% Match Rat
         <motion.div"
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto"
           variants={containerVariants}"
-          initial="hidden""
+          initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
 
@@ -159,7 +186,7 @@ import { GradientHeading } from './ui/GradientHeading';    stats: "95% Match Rat
         <motion.div"
           className="relative"
           variants={containerVariants}"
-          initial="hidden""
+          initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
 

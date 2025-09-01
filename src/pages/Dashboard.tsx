@@ -1,7 +1,33 @@
+<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+  DollarSign,
+  Activity,
+  DollarSign,
+  Activity,
+  Shield,
+  Zap,
+  Settings,
+  Bell,
+  Search,
+  Calendar,
+  FileText,
+  MessageSquare,
+  Star,
+  ArrowRight'
+ } from 'lucide-react';
+
+export default function Dashboard(...args[]):  {
+
+  const stats = [
+      icon: <TrendingUp className="h - 6 w - 6 text - orange - 500" />;
+    };
+=======
 import React from 'react';'
 import { motion } from 'framer-motion';    };
   ]};
   ]};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   const recentProjects = [
@@ -98,36 +124,36 @@ import { motion } from 'framer-motion';    };
       description: "Submit support request","
       icon: <MessageSquare className="h-8 w-8 text-zion-purple" />,"
       color: "bg-zion-purple/10 border-zion-purple/20"
-    }'
-    { name: 'Active Services', value: '12', icon: Zap, change: '+2', changeType: 'positive', color: 'from-blue-500 to-cyan-500' },;'
-    { name: 'AI Solutions', value: '8', icon: Brain, change: '+3', changeType: 'positive', color: 'from-purple-500 to-pink-500' },;'
-    { name: 'Cloud Services', value: '5', icon: Cloud, change: '+1', changeType: 'positive', color: 'from-indigo-500 to-blue-500' },;'
-    { name: 'Security Score', value: '98%', icon: Shield, change: '+2%', changeType: 'positive', color: 'from-green-500 to-emerald-500' },;'
-    { name: 'Monthly Usage', value: '2.4TB', icon: Database, change: '+15%', changeType: 'positive', color: 'from-orange-500 to-red-500' },;'
+    }
+    { name: 'Active Services', value: '12', icon: Zap, change: '+2', changeType: 'positive', color: 'from-blue-500 to-cyan-500' },;
+    { name: 'AI Solutions', value: '8', icon: Brain, change: '+3', changeType: 'positive', color: 'from-purple-500 to-pink-500' },;
+    { name: 'Cloud Services', value: '5', icon: Cloud, change: '+1', changeType: 'positive', color: 'from-indigo-500 to-blue-500' },;
+    { name: 'Security Score', value: '98%', icon: Shield, change: '+2%', changeType: 'positive', color: 'from-green-500 to-emerald-500' },;
+    { name: 'Monthly Usage', value: '2.4TB', icon: Database, change: '+15%', changeType: 'positive', color: 'from-orange-500 to-red-500' },;
     { name: 'Response Time', value: '45ms', icon: Activity, change: '-12ms', changeType: 'negative', color: 'from-teal-500 to-green-500' };
   ];
 
-  const recentServices = [;'
-    { name: 'AI Business Intelligence', status: 'Active', lastUsed: '2 hours ago', usage: '85%', icon: Brain, color: 'from-blue-500 to-indigo-500' },;'
-    { name: 'Cloud DevOps Platform', status: 'Active', lastUsed: '1 day ago', usage: '92%', icon: Cloud, color: 'from-indigo-500 to-blue-500' },;'
-    { name: 'AI Cybersecurity Suite', status: 'Active', lastUsed: '3 days ago', usage: '78%', icon: Shield, color: 'from-red-500 to-orange-500' },;'
-    { name: 'Quantum Computing Lab', status: 'Active', lastUsed: '1 week ago', usage: '45%', icon: Atom, color: 'from-purple-500 to-indigo-500' },;'
+  const recentServices = [;
+    { name: 'AI Business Intelligence', status: 'Active', lastUsed: '2 hours ago', usage: '85%', icon: Brain, color: 'from-blue-500 to-indigo-500' },;
+    { name: 'Cloud DevOps Platform', status: 'Active', lastUsed: '1 day ago', usage: '92%', icon: Cloud, color: 'from-indigo-500 to-blue-500' },;
+    { name: 'AI Cybersecurity Suite', status: 'Active', lastUsed: '3 days ago', usage: '78%', icon: Shield, color: 'from-red-500 to-orange-500' },;
+    { name: 'Quantum Computing Lab', status: 'Active', lastUsed: '1 week ago', usage: '45%', icon: Atom, color: 'from-purple-500 to-indigo-500' },;
     { name: 'IoT Edge Platform', status: 'Active', lastUsed: '2 weeks ago', usage: '67%', icon: Network, color: 'from-cyan-500 to-blue-500' };
   ];
 
-  const upcomingEvents = [;'
-    { title: 'AI Strategy Workshop', date: 'Dec 15, 2024', time: '10:00 AM', type: 'Workshop', icon: Brain },;'
-    { title: 'Security Audit Review', date: 'Dec 18, 2024', time: '2:00 PM', type: 'Review', icon: Shield },;'
-    { title: 'Cloud Migration Planning', date: 'Dec 22, 2024', time: '11:00 AM', type: 'Planning', icon: Cloud },;'
+  const upcomingEvents = [;
+    { title: 'AI Strategy Workshop', date: 'Dec 15, 2024', time: '10:00 AM', type: 'Workshop', icon: Brain },;
+    { title: 'Security Audit Review', date: 'Dec 18, 2024', time: '2:00 PM', type: 'Review', icon: Shield },;
+    { title: 'Cloud Migration Planning', date: 'Dec 22, 2024', time: '11:00 AM', type: 'Planning', icon: Cloud },;
     { title: 'Quantum Computing Demo', date: 'Dec 25, 2024', time: '3:00 PM', type: 'Demo', icon: Atom };
   ];
 
-  const quickActions = [;'
-    { name: 'Add New Service', icon: Plus, href: '/services', color: 'from-green-500 to-emerald-500' },;'
-    { name: 'View Analytics', icon: BarChart3, href: '/analytics', color: 'from-blue-500 to-indigo-500' },;'
-    { name: 'Security Settings', icon: Shield, href: '/security', color: 'from-red-500 to-orange-500' },;'
-    { name: 'Support Request', icon: HelpCircle, href: '/help', color: 'from-purple-500 to-pink-500' },;'
-    { name: 'Billing & Plans', icon: DollarSign, href: '/pricing', color: 'from-yellow-500 to-orange-500' },;'
+  const quickActions = [;
+    { name: 'Add New Service', icon: Plus, href: '/services', color: 'from-green-500 to-emerald-500' },;
+    { name: 'View Analytics', icon: BarChart3, href: '/analytics', color: 'from-blue-500 to-indigo-500' },;
+    { name: 'Security Settings', icon: Shield, href: '/security', color: 'from-red-500 to-orange-500' },;
+    { name: 'Support Request', icon: HelpCircle, href: '/help', color: 'from-purple-500 to-pink-500' },;
+    { name: 'Billing & Plans', icon: DollarSign, href: '/pricing', color: 'from-yellow-500 to-orange-500' },;
     { name: 'API Documentation', icon: Code, href: '/api-docs', color: 'from-gray-500 to-slate-500' };
   ];
 
@@ -225,35 +251,44 @@ import {
 
 export default function Dashboard() {
   const stats = ['
-    { name: 'Active Services', value: '12', icon: Zap, change: '+2', changeType: 'positive', color: 'from-blue-500 to-cyan-500' },;'
-    { name: 'AI Solutions', value: '8', icon: Brain, change: '+3', changeType: 'positive', color: 'from-purple-500 to-pink-500' },;'
-    { name: 'Cloud Services', value: '5', icon: Cloud, change: '+1', changeType: 'positive', color: 'from-indigo-500 to-blue-500' },;'
-    { name: 'Security Score', value: '98%', icon: Shield, change: '+2%', changeType: 'positive', color: 'from-green-500 to-emerald-500' },;'
-    { name: 'Monthly Usage', value: '2.4TB', icon: Database, change: '+15%', changeType: 'positive', color: 'from-orange-500 to-red-500' },;'
+    { name: 'Active Services', value: '12', icon: Zap, change: '+2', changeType: 'positive', color: 'from-blue-500 to-cyan-500' },;
+    { name: 'AI Solutions', value: '8', icon: Brain, change: '+3', changeType: 'positive', color: 'from-purple-500 to-pink-500' },;
+    { name: 'Cloud Services', value: '5', icon: Cloud, change: '+1', changeType: 'positive', color: 'from-indigo-500 to-blue-500' },;
+    { name: 'Security Score', value: '98%', icon: Shield, change: '+2%', changeType: 'positive', color: 'from-green-500 to-emerald-500' },;
+    { name: 'Monthly Usage', value: '2.4TB', icon: Database, change: '+15%', changeType: 'positive', color: 'from-orange-500 to-red-500' },;
     { name: 'Response Time', value: '45ms', icon: Activity, change: '-12ms', changeType: 'negative', color: 'from-teal-500 to-green-500' }
   ];
 
   const recentServices = ['
-    { name: 'AI Business Intelligence', status: 'Active', lastUsed: '2 hours ago', usage: '85%', icon: Brain, color: 'from-blue-500 to-indigo-500' },;'
-    { name: 'Cloud DevOps Platform', status: 'Active', lastUsed: '1 day ago', usage: '92%', icon: Cloud, color: 'from-indigo-500 to-blue-500' },;'
-    { name: 'AI Cybersecurity Suite', status: 'Active', lastUsed: '3 days ago', usage: '78%', icon: Shield, color: 'from-red-500 to-orange-500' },;'
-    { name: 'Quantum Computing Lab', status: 'Active', lastUsed: '1 week ago', usage: '45%', icon: Atom, color: 'from-purple-500 to-indigo-500' },;'
+    { name: 'AI Business Intelligence', status: 'Active', lastUsed: '2 hours ago', usage: '85%', icon: Brain, color: 'from-blue-500 to-indigo-500' },;
+    { name: 'Cloud DevOps Platform', status: 'Active', lastUsed: '1 day ago', usage: '92%', icon: Cloud, color: 'from-indigo-500 to-blue-500' },;
+    { name: 'AI Cybersecurity Suite', status: 'Active', lastUsed: '3 days ago', usage: '78%', icon: Shield, color: 'from-red-500 to-orange-500' },;
+    { name: 'Quantum Computing Lab', status: 'Active', lastUsed: '1 week ago', usage: '45%', icon: Atom, color: 'from-purple-500 to-indigo-500' },;
     { name: 'IoT Edge Platform', status: 'Active', lastUsed: '2 weeks ago', usage: '67%', icon: Network, color: 'from-cyan-500 to-blue-500' }
   ];
 
   const upcomingEvents = ['
-    { title: 'AI Strategy Workshop', date: 'Dec 15, 2024', time: '10:00 AM', type: 'Workshop', icon: Brain },;'
-    { title: 'Security Audit Review', date: 'Dec 18, 2024', time: '2:00 PM', type: 'Review', icon: Shield },;'
-    { title: 'Cloud Migration Planning', date: 'Dec 22, 2024', time: '11:00 AM', type: 'Planning', icon: Cloud },;'
+    { title: 'AI Strategy Workshop', date: 'Dec 15, 2024', time: '10:00 AM', type: 'Workshop', icon: Brain },;
+    { title: 'Security Audit Review', date: 'Dec 18, 2024', time: '2:00 PM', type: 'Review', icon: Shield },;
+    { title: 'Cloud Migration Planning', date: 'Dec 22, 2024', time: '11:00 AM', type: 'Planning', icon: Cloud },;
     { title: 'Quantum Computing Demo', date: 'Dec 25, 2024', time: '3:00 PM', type: 'Demo', icon: Atom }
   ];
 
   const quickActions = ['
+<<<<<<< HEAD
+    { name: 'Add New Service', icon: Plus, href: '/services', color: 'from-green-500 to-emerald-500' },;
+    { name: 'View Analytics', icon: BarChart3, href: '/analytics', color: 'from-blue-500 to-indigo-500' },;
+    { name: 'Security Settings', icon: Shield, href: '/security', color: 'from-red-500 to-orange-500' },;
+    { name: 'Support Request', icon: HelpCircle, href: '/help', color: 'from-purple-500 to-pink-500' },;
+    { name: 'Billing & Plans', icon: DollarSign, href: '/pricing', color: 'from-yellow-500 to-orange-500' },;
+    { name: 'API Documentation', icon: Code, href: '/api-docs', color: 'from-gray-500 to-slate-500' }
+=======
     { name: 'Add New Service', icon: Plus, href: '/services', color: 'from-green-500 to-emerald-500' },;'
     { name: 'View Analytics', icon: BarChart3, href: '/analytics', color: 'from-blue-500 to-indigo-500' },;'
     { name: 'Security Settings', icon: Shield, href: '/security', color: 'from-red-500 to-orange-500' },;'
     { name: 'Support Request', icon: HelpCircle, href: '/help', color: 'from-purple-500 to-pink-500' },;'
     { name: 'Billing & Plans', icon: DollarSign, href: '/pricing', color: 'from-yellow-500 to-orange-500' },;'    { name: 'API Documentation', icon: Code, href: '/api-docs', color: 'from-gray-500 to-slate-500' }
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
@@ -343,7 +378,7 @@ export default function Dashboard() {
                   <p className="text-sm font-medium text-gray-600">{stat.name}</p>"
                   <p className="text-2xl font-bold text-gray-900 mt-1">{stat.value}</p>`
                   <div className={`flex items-center mt-2 text-sm ${
-'
+
                     stat.changeType === 'positive' ? 'text-green-600' : 'text-red-600'`
                   }`}>
                     <span>{stat.change}</span>"

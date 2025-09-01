@@ -28,7 +28,7 @@ export default function ExpensiveComponent() {
       <h3 className="text-xl font-semibold text-zion-slate-light">
         Expensive Component Loaded
       </h3>"
-      <p className="text-zion-slate text-sm">'
+      <p className="text-zion-slate text-sm">
         This component was lazy loaded and contains{' '}
         {data.length.toLocaleString()} computed values.
       </p>"

@@ -31,12 +31,12 @@ export default function Onboarding() {
         setUserType(type);
         // Direct to specific registration page based on user type"
         if (type === "serviceProvider") {
-'
+
             router('/service-onboarding');
             return;
 "
         else if (type === "talent") {
-'
+
             router('/talent-onboarding');
             return;
         }
@@ -50,7 +50,7 @@ export default function Onboarding() {
 "
                 title: "Authentication Error","
                 description: "Your session may have expired. Please log in again.","
-                variant: "destructive"});'
+                variant: "destructive"});
             router('/login');
             return;
         }
@@ -68,28 +68,28 @@ export default function Onboarding() {
             // Update onboarding milestone'
             await supabase.rpc('update_onboarding_milestone', {
 
-                _user_id: user.id,'
+                _user_id: user.id,
                 _milestone: 'profile_completed',
                 _status: true
             });
             toast({
-'
-                title: 'Profile completed!','
+
+                title: 'Profile completed!',
                 description: 'Your profile has been set up successfully.'});
             // Get the appropriate dashboard route based on user type"
-            const dashboardRoute = userType === "client""
-                ? "/client-dashboard""
+            const dashboardRoute = userType === "client"
+                ? "/client-dashboard"
                 : "/talent-dashboard";
             // Redirect to dashboard
             router (dashboardRoute) ;
         }
         catch (error) {
-'
+
             // // // // // // // // console.error('Error updating profile:', error);
             toast({
-'
-                title: 'Error','
-                description: 'There was a problem updating your profile. Please try again.','
+
+                title: 'Error',
+                description: 'There was a problem updating your profile. Please try again.',
                 variant: 'destructive'})}
     };
     const steps = ['"
@@ -97,7 +97,7 @@ export default function Onboarding() {
         { label: "Create Profile", description: "Tell us about yourself" },
     ];
     if (!user) {
-'
+
         router('/login');
         return null;
     }
@@ -119,7 +119,7 @@ export default function Onboarding() {
               {steps.map((step, index) => (<Step key={index} status={currentStep > index"
                 ? "complete"
                 : currentStep === index"
-                    ? "current""
+                    ? "current"
                     : "incomplete"} label={step.label} description={step.description}/>))}
             </Steps>
           </div>

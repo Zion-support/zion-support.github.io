@@ -1,5 +1,5 @@
-import React from 'react';'
-import Link from 'next/link';'
+import React from 'react';
+import Link from 'next/link';
 import { Users, Award, Target, Zap, Linkedin, Mail } from 'lucide-react';
 const Leadership = () => {
     const leadershipTeam = [
@@ -121,7 +121,7 @@ const Leadership = () => {
     const compValues = [
         {
 "
-            title: "Innovation First",'"
+            title: "Innovation First","
             description: "We push the boundaries of what's possible, constantly exploring new technologies and approaches.",
             icon: Zap
         },
@@ -164,7 +164,7 @@ const Leadership = () => {
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Leadership Team
           </h1>"
-          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">'
+          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
             Meet the visionary leaders who guide our comp's mission and drive 
             innovation in technology and business transformation.
           </p>"
@@ -213,7 +213,7 @@ const Leadership = () => {
             </p>
           </div>
           "
-          <div className="space-y-16">'
+          <div className="space-y-16">
             {leadershipTeam.map((leader, index) => (<div key={index} className={`bg-white rounded-2xl shadow-lg p-8 border border-slate-100 ${index % 2 === 0 ? '' : 'md:flex-row-reverse'}`}>"
                 <div className="grid md:grid-cols-3 gap-8 items-start">"
                   <div className="text-center md:text-left">"
@@ -308,7 +308,7 @@ const Leadership = () => {
           <h2 className="text-4xl font-bold mb-6">
             Join Our Mission
           </h2>"
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">'
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Be part of a team that's shaping the future of technology and 
             transforming businesses around the world.
           </p>"

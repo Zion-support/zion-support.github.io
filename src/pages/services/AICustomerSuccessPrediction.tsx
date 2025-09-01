@@ -1,40 +1,196 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import {
+
+  Brain,
+  TrendingUp,
+  Users,
+  Zap,
+  Shield,
+  Globe,
+  Database,
+  Cloud,
+  Lock,
+  Rocket,
+  CheckCircle,
+  ArrowRight,
+  PieChart,
+  LineChart,
+  Activity,
+  Target,
+  Lightbulb,
+  Eye,
+  Search,
+  Filter,
+  Download,
+  Share2,
+  Phone,
+  Mail,
+  MapPin,
+  BarChart3,
+  MessageCircle,
+  Calendar,
+  AlertTriangle,
+  Star'
+} from 'lucide-react';
+import { SEO } from "../../components/SEO";
+;
+const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
+
+  const features = [
+    {
+
+      icon: Brain,
+      title: 'AI-Powered Prediction Engine',
+      description: 'Advanced machine learning algorithms that predict customer churn, upsell opportunities, and success probability with 95%+ accuracy.'
+    },
+    {
+
+      icon: TrendingUp,
+      title: 'Real-time Risk Scoring',
+      description: 'Continuous monitoring and scoring of customer health, engagement, and satisfaction levels in real-time.'
+    },
+    {
+
+      icon: Users,
+      title: 'Behavioral Analytics',
+      description: 'Deep analysis of customer behavior patterns, usage trends, and interaction history to predict future actions.';
+    },;
+    {;
+      icon: Zap,;
+      title: 'Automated Alerts',;
+      description: 'Intelligent notification system that alerts your team to at-risk customers and opportunities before they become critical.';
+    };
+  ];
+
+  const capabilities = [
+    {
+
+      title: 'Predictive Analytics',
+      description: 'Machine learning models that forecast customer behavior and business outcomes',
+      icon: Brain,
+      benefits: ['Churn prediction',Upsell opportunities',Customer lifetime value',Engagement scoring']
+    },
+    {
+
+      title: 'Customer Health Monitoring',
+      description: 'Comprehensive dashboard showing real-time customer health metrics',
+      icon: Activity,
+      benefits: ['Health scoring',Risk assessment',Trend analysis',Performance tracking']
+    },
+    {
+
+      title: 'Automated Interventions',
+      description: 'AI-driven recommendations for customer success actions',
+      icon: Zap,
+      benefits: ['Actionable insights',Timing optimization',Resource allocation',Success probability']
+    },;
+    {;
+      title: 'Integration Hub',;
+      description: 'Seamless integration with your existing CRM, support, and analytics tools',;
+      icon: Database,;
+      benefits: ['API-first design',Real-time sync',Custom connectors',Data validation'];
+    };
+  ];
+
+  const useCases = [
+    {
+
+      industry: 'SaaS & Technology',
+      description: 'Predict subscription renewals, identify expansion opportunities, and reduce churn through proactive engagement',
+      icon: Users,
+      metrics: ['Churn Rate Reduction',Expansion Revenue',Customer Satisfaction',Lifetime Value']
+    },
+    {
+
+      industry: 'E-commerce & Retail',
+      description: 'Forecast customer purchasing behavior, optimize retention campaigns, and increase repeat purchases',
+      icon: ShoppingCart,
+      metrics: ['Repeat Purchase Rate',Customer Retention',Average Order Value',Loyalty Score']
+    },
+    {
+
+      industry: 'Financial Services',
+      description: 'Predict loan defaults, identify high-value customers, and optimize product recommendations',
+      icon: DollarSign,
+      metrics: ['Default Risk Score',Customer Value',Product Adoption',Risk Mitigation']
+    },;
+    {;
+      industry: 'Healthcare',;
+      description: 'Predict patient outcomes, optimize care plans, and improve treatment adherence',;
+      icon: Heart,;
+      metrics: ['Patient Outcomes',Treatment Adherence',Care Plan Success',Resource Optimization'];
+    };
+  ];
+
+  const benefits = [
+    {
+
+      icon: TrendingUp,
+      title: 'Increase Customer Retention',
+      description: 'Reduce churn by up to 40% through proactive intervention and personalized engagement strategies.'
+    },
+    {
+
+      icon: DollarSign,
+      title: 'Boost Revenue Growth',
+      description: 'Identify and capitalize on upsell opportunities, increasing average customer value by 25-35%.'
+    },
+    {
+
+      icon: Users,
+      title: 'Improve Customer Satisfaction',
+      description: 'Proactive customer success management leads to 30% higher satisfaction scores and NPS ratings.';
+    },;
+    {;
+      icon: Zap,;
+      title: 'Optimize Resource Allocation',;
+      description: 'Focus your team\'s efforts on high-impact activities and customers who need attention most.';
+    };
+  ];
+
+  const pricingPlans = [
+    {
+
+      name: 'Starter',
+      price: '$299',
+      period: '/month',
+      description: 'Perfect for growing SaaS companies',
+      features[;
+        'Up to 1,000 customers',Basic prediction models',Email alerts',Standard integrations',Email support'
+      ],;
+=======
 import React, { useState } from 'react';'
 import { motion } from 'framer-motion';        'Email support'
       ],;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Start Free Trial',
       popular: false
     },
     {
-'
-      name: 'Professional','
-      price: '$799','
-      period: '/month','
+
+      name: 'Professional',
+      price: '$799',
+      period: '/month',
       description: 'Ideal for established businesses',
-      features[;'
-        'Up to 10,000 customers','
-        'Advanced AI models','
-        'Real-time dashboards','
-        'Custom integrations','
-        'Priority support','
-        'Advanced analytics'
-      ],;'
+      features[;
+        'Up to 10,000 customers',Advanced AI models',Real-time dashboards',Custom integrations',Priority support',Advanced analytics'
+      ],;
       cta: 'Start Free Trial',
       popular: true
     },
     {
-'
-      name: 'Enterprise','
-      price: '$1,999','
-      period: '/month','
+
+      name: 'Enterprise',
+      price: '$1,999',
+      period: '/month',
       description: 'For large-scale operations',
-      features[;'
-        'Unlimited customers','
-        'Custom AI models','
-        'White-label solution','
-        'Dedicated support',;'
-        'Custom development',;'
+      features[;
+        'Unlimited customers',Custom AI models',White-label solution',Dedicated support',;
+        'Custom development',;
         'Advanced security';
-      ],;'
+      ],;
       cta: 'Contact Sales',;
       popular: false;
     };
@@ -42,35 +198,47 @@ import { motion } from 'framer-motion';        'Email support'
 
   const useCases = [
     {
-'
-      title: 'SaaS Companies','
-      description: 'Predict churn, identify expansion opportunities, and optimize customer success operations','
-      metrics['Reduce churn by 25%', 'Increase expansion revenue by 40%', 'Improve NPS scores'];
+
+      title: 'SaaS Companies',
+      description: 'Predict churn, identify expansion opportunities, and optimize customer success operations',
+      metrics['Reduce churn by 25%',Increase expansion revenue by 40%',Improve NPS scores'];
     },;
     {
-'
-      title: 'E-commerce','
-      description: 'Customer lifetime value prediction, personalized recommendations, and retention strategies','
-      metrics['Increase CLV by 35%', 'Reduce cart abandonment by 20%', 'Boost repeat purchases'];
+
+      title: 'E-commerce',
+      description: 'Customer lifetime value prediction, personalized recommendations, and retention strategies',
+      metrics['Increase CLV by 35%',Reduce cart abandonment by 20%',Boost repeat purchases'];
     },;
     {
-'
-      title: 'Financial Services','
-      description: 'Risk assessment, product adoption prediction, and customer satisfaction monitoring','
-      metrics['Reduce risk by 30%', 'Increase product adoption by 45%', 'Improve satisfaction scores'];
+
+      title: 'Financial Services',
+      description: 'Risk assessment, product adoption prediction, and customer satisfaction monitoring',
+      metrics['Reduce risk by 30%',Increase product adoption by 45%',Improve satisfaction scores'];
     };
   ];
 
   const integrations = ['
+<<<<<<< HEAD
+    'Salesforce',HubSpot',Intercom',Zendesk',Slack',Microsoft Teams',;
+    'Google Analytics',Mixpanel',Amplitude',Segment',Zapier',Webhooks';
+=======
     'Salesforce', 'HubSpot', 'Intercom', 'Zendesk', 'Slack', 'Microsoft Teams',;'    'Google Analytics', 'Mixpanel', 'Amplitude', 'Segment', 'Zapier', 'Webhooks';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO "
+<<<<<<< HEAD
+        title="AI Customer Success Prediction Platform | Zion Tech Group"
+        description="Predict customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting."
+        keywords="AI customer success, churn prediction, customer analytics, predictive analytics, customer retention, upsell optimization"
+      />
+=======
         title="AI Customer Success Prediction Platform | Zion Tech Group""
         description="Predict customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting.""        keywords="AI customer success, churn prediction, customer analytics, predictive analytics, customer retention, upsell optimization"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 overflow-hidden">"
@@ -717,27 +885,27 @@ import { motion } from 'framer-motion';        'Email support'
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
               {
-'
-                step: '01','
-                title: 'Assessment','
+
+                step: '01',
+                title: 'Assessment',
                 description: 'Evaluate your current customer success processes and data infrastructure'
               },
               {
-'
-                step: '02','
-                title: 'Integration','
+
+                step: '02',
+                title: 'Integration',
                 description: 'Connect your existing systems and configure data pipelines'
               },
               {
-'
-                step: '03','
-                title: 'Training','
+
+                step: '03',
+                title: 'Training',
                 description: 'Train your team on the platform and best practices'
               },
               {
-'
-                step: '04','
-                title: 'Launch','
+
+                step: '04',
+                title: 'Launch',
                 description: 'Go live with monitoring and ongoing optimization support'
 
             ].map(phase: unknown, index: unknown (;
@@ -829,7 +997,7 @@ import { motion } from 'framer-motion';        'Email support'
                 Start Free Trial"
                 <ArrowRight className="ml-2 w-5 h-5" />              </a>
               <a "
-                href="tel:+13024640950" "
+                href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600"
               >"
                 <Phone className="w-5 h-5 mr-2" />

@@ -1,16 +1,50 @@
-import React, { useState, useEffect, useCallback } from 'react';'
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';'
-import { Button } from './ui/button';'
-import { Badge } from './ui/badge';'
-import { Progress } from './ui/progress';'
+import React, { useState, useEffect, useCallback } from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { Button } from './ui/button';
+import { Badge } from './ui/badge';
+import { Progress } from './ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
+<<<<<<< HEAD
+import {
+
+  User,
+  Settings,
+  Palette,
+  Eye,
+  MousePointer,
+  Smartphone,
+  Monitor,
+  Zap,
+  Heart,
+  Star,
+  MessageCircle,
+  TrendingUp,
+  Accessibility,
+  Languages,
+  ShoppingCart,
+  Activity} from 'lucide-react';
+
+interface UserPreference {
+
+  id: string;
+  name: string;
+  value: string | boolean | number;
+  type: 'boolean' | 'string' | 'number' | 'select';
+  options?: string[];
+  category: 'appearance' | 'accessibility' | 'performance' | 'language';
+  description: string;
+
+}
+
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface UserActivity {
 
   id: string;
   action: string;
   timestamp: Date;
   duration?: number;
-  success: boolean;'
+  success: boolean;
   category: 'navigation' | 'interaction' | 'search' | 'purchase';
 
 }
@@ -19,14 +53,14 @@ interface AccessibilityFeature {
   id: string;
   name: string;
   enabled: boolean;
-  description: string;'
+  description: string;
   impact: 'high' | 'medium' | 'low';
 const InteractiveUserExperience: React.FC = () => {
   const [preferences, setPreferences] = useState<UserPreference[]>([]);
   const [userActivities, setUserActivities] = useState<UserActivity[]>([]);
   const [accessibilityFeatures, setAccessibilityFeatures] = useState<
     AccessibilityFeature[]
-  >([]);'
+  >([]);
   const [activeTab, setActiveTab] = useState('preferences');
   const [isLoading, setIsLoading] = useState(true);
 
@@ -34,97 +68,97 @@ const InteractiveUserExperience: React.FC = () => {
   useEffect ( () => {
     const samplePreferences: UserPreference[] = [
       {
-'
-        id: '1','
-        name: 'Theme','
-        value: 'dark','
-        type: 'select','
-        options: ['light', 'dark', 'auto'],'
-        category: 'appearance','
+
+        id: '1',
+        name: 'Theme',
+        value: 'dark',
+        type: 'select',
+        options: ['light',dark',auto'],
+        category: 'appearance',
         description: 'Choose your preferred color theme'},
       {
-'
-        id: '2','
-        name: 'Font Size','
-        value: 'medium','
-        type: 'select','
-        options: ['small', 'medium', 'large'],'
-        category: 'accessibility','
+
+        id: '2',
+        name: 'Font Size',
+        value: 'medium',
+        type: 'select',
+        options: ['small',medium',large'],
+        category: 'accessibility',
         description: 'Adjust text size for better readability'},
       {
-'
-        id: '3','
+
+        id: '3',
         name: 'Animations',
-        value: true,'
-        type: 'boolean','
-        category: 'performance','
+        value: true,
+        type: 'boolean',
+        category: 'performance',
         description: 'Enable or disable UI animations'},
       {
-'
-        id: '4','
-        name: 'Language','
-        value: 'en','
-        type: 'select','
-        options: ['en', 'es', 'fr', 'de'],'
-        category: 'language','
+
+        id: '4',
+        name: 'Language',
+        value: 'en',
+        type: 'select',
+        options: ['en',es',fr',de'],
+        category: 'language',
         description: 'Select your preferred language'},
     ];
 
     const sampleActivities: UserActivity[] = [
       {
-'
-        id: '1','
+
+        id: '1',
         action: 'Page Navigation',
         timestamp: new Date (Date.now () - 300000) ,
         duration: 2,
-        success: true,'
+        success: true,
         category: 'navigation'},
       {
-'
-        id: '2','
+
+        id: '2',
         action: 'Form Submission',
         timestamp: new Date (Date.now () - 600000) ,
         duration: 15,
-        success: true,'
+        success: true,
         category: 'interaction'},
       {
-'
-        id: '3','
+
+        id: '3',
         action: 'Search Query',
         timestamp: new Date (Date.now () - 900000) ,
         duration: 5,
-        success: true,'
+        success: true,
         category: 'search'},
     ];
 
     const sampleAccessibility: AccessibilityFeature[] = [
       {
-'
-        id: '1','
+
+        id: '1',
         name: 'Screen Reader Support',
-        enabled: true,'
-        description: 'Full compatibility with screen readers','
+        enabled: true,
+        description: 'Full compatibility with screen readers',
         impact: 'high'},
       {
-'
-        id: '2','
+
+        id: '2',
         name: 'Keyboard Navigation',
-        enabled: true,'
-        description: 'Complete keyboard navigation support','
+        enabled: true,
+        description: 'Complete keyboard navigation support',
         impact: 'high'},
       {
-'
-        id: '3','
+
+        id: '3',
         name: 'High Contrast Mode',
-        enabled: false,'
-        description: 'Enhanced contrast for better visibility','
+        enabled: false,
+        description: 'Enhanced contrast for better visibility',
         impact: 'medium'},
       {
-'
-        id: '4','
+
+        id: '4',
         name: 'Voice Commands',
-        enabled: false,'
-        description: 'Control the app with voice commands','
+        enabled: false,
+        description: 'Control the app with voice commands',
         impact: 'low'},
     ];
 
@@ -155,13 +189,13 @@ const InteractiveUserExperience: React.FC = () => {
   const getCategoryIcon = (category: string) => {
 
     switch (category) {
-'
+
       case 'appearance':
-        return <Palette className="w-4 h-4" />;'
+        return <Palette className="w-4 h-4" />;
       case 'accessibility':"
-        return <Accessibility className="w-4 h-4" />;'
+        return <Accessibility className="w-4 h-4" />;
       case 'performance':"
-        return <Zap className="w-4 h-4" />;'
+        return <Zap className="w-4 h-4" />;
       case 'language':"
         return <Languages className="w-4 h-4" />;
       default:"
@@ -172,13 +206,13 @@ const InteractiveUserExperience: React.FC = () => {
   const getActivityIcon = (category: string) => {
 
     switch (category) {
-'
+
       case 'navigation':"
-        return <MousePointer className="w-4 h-4" />;'
+        return <MousePointer className="w-4 h-4" />;
       case 'interaction':"
-        return <User className="w-4 h-4" />;'
+        return <User className="w-4 h-4" />;
       case 'search':"
-        return <Eye className="w-4 h-4" />;'
+        return <Eye className="w-4 h-4" />;
       case 'purchase':"
         return <ShoppingCart className="w-4 h-4" />;
       default:"
@@ -189,11 +223,11 @@ const InteractiveUserExperience: React.FC = () => {
   const getImpactColor = (impact: string) => {
 
     switch (impact) {
-'
+
       case 'high':'
-        return 'bg-red-500';'
+        return 'bg-red-500';
       case 'medium':'
-        return 'bg-yellow-500';'
+        return 'bg-yellow-500';
       case 'low':'
         return 'bg-blue-500';
       default:'
@@ -247,17 +281,17 @@ const InteractiveUserExperience: React.FC = () => {
                   <p className="text-sm text-gray-600 mb-4">
                     {pref.description}
                   </p>
-'
+
                   {pref.type === 'boolean' && (
                     <Button'
                       variant={pref.value ? 'default' : 'outline'}
                       onClick={() => updatePreference(pref.id, !pref.value)}"
                       className="w-full"
-                    >'
+                    >
                       {pref.value ? 'Enabled' : 'Disabled'}
                     </Button>
                   )}
-'
+
                   {pref.type === 'select' && pref.options && (
                     <select
                       value={pref.value as string}
@@ -271,7 +305,7 @@ const InteractiveUserExperience: React.FC = () => {
                       ))}
                     </select>
                   )}
-'
+
                   {pref.type === 'number' && (
                     <input"
                       type="number"
@@ -314,7 +348,7 @@ const InteractiveUserExperience: React.FC = () => {
                     <div className="text-right">
                       <Badge'
                         variant={activity.success ? 'default' : 'destructive'}
-                      >'
+                      >
                         {activity.success ? 'Success' : 'Failed'}
                       </Badge>
                       {activity.duration && ("
@@ -349,7 +383,7 @@ const InteractiveUserExperience: React.FC = () => {
                       variant={feature.enabled ? 'default' : 'outline'}"
                       size="sm"
                       onClick={() => toggleAccessibilityFeature(feature.id)}
-                    >'
+                    >
                       {feature.enabled ? 'Enabled' : 'Disabled'}
                     </Button>
                   </div>

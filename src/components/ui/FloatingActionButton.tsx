@@ -1,10 +1,48 @@
+<<<<<<< HEAD
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Plus, MessageCircle, Phone, Mail, ArrowUp, X  } from 'lucide-react';
+
+interface FloatingActionButtonProps extends React.PropsWithChildren<{}> {
+
+  className?: string}
+
+export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ className = '' }) => {;
+  const [isOpen, setIsOpen] = useState(false);
+
+  const actions = [
+    {
+
+      icon: MessageCircle,
+      label: 'Live Chat',
+      href: '/chat',
+      color: 'from-blue-500 to-cyan-500',
+      delay: 0.1
+    },
+    {
+
+      icon: Phone,
+      label: 'Call Us',
+      href: 'tel:+1-800-ZION-TECH',
+      color: 'from-green-500 to-emerald-500',
+      delay: 0.2
+    },
+    {;
+      icon: Mail,;
+      label: 'Email',;
+      href: 'mailto:info@ziontechgroup.com',;
+      color: 'from-purple-500 to-pink-500',;
+      delay: 0.3;
+    };
+=======
 import React, { useState } from 'react.ts';'
 import { motion, AnimatePresence  } from 'framer-motion.ts';'
 import { Plus, MessageCircle, Phone, Mail, ArrowUp, X  } from 'lucide-react';      color: 'from-purple-500 to-pink-500',;
       delay: 0.3};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
-  const scrollToTop = () => {;'
+  const scrollToTop = () => {;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   return()

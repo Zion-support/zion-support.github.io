@@ -12,11 +12,11 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
   const getComplexityColor = (complexity) => {
 
     switch (complexity.toLowerCase()) {
-'
+
       case 'low':'
-        return 'text-green-600 bg-green-100';'
+        return 'text-green-600 bg-green-100';
       case 'medium':'
-        return 'text-yellow-600 bg-yellow-100';'
+        return 'text-yellow-600 bg-yellow-100';
       case 'high':'
         return 'text-red-600 bg-red-100';
       default:'
@@ -179,13 +179,13 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="#contact""
+                href="#contact"
                 className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
 
                 Discuss Requirements
               </a>
               <a"
-                href="#consultation""
+                href="#consultation"
                 className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
 
                 Schedule Consultation

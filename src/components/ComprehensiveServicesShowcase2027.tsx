@@ -6,12 +6,100 @@ import { Button } from "@/components/ui/button";"
 import { cuttingEdgeComprehensiveServices2027 } from "../../data/2027-cutting-edge-comprehensive-services";"
 import { specializedInnovativeServices2027 } from "../../data/2027-specialized-innovative-services";"
 import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film } from "lucide-react";"
+<<<<<<< HEAD
+import { Link } from "react-router-dom";
+
+const categoryColors: { [key: string]: string } = {
+
+  'AI & Autonomous Systems': 'from-purple-600 to-indigo-700',Quantum Computing & AI': 'from-blue-600 to-cyan-700',Blockchain & Web3': 'from-green-600 to-emerald-700',Cybersecurity & Privacy': 'from-red-600 to-pink-700',Healthcare & Biotech': 'from-purple-600 to-pink-700',Financial Technology': 'from-yellow-600 to-orange-700',IoT & Automation': 'from-blue-600 to-teal-700',Cloud & Infrastructure': 'from-gray-600 to-blue-700',Data Analytics & BI': 'from-green-600 to-blue-700',Digital Marketing & Automation': 'from-pink-600 to-purple-700',E-commerce & Retail': 'from-orange-600 to-red-700',Education & Learning Technology': 'from-teal-600 to-green-700',Space Technology & Earth Observation': 'from-indigo-600 to-purple-700',AR/VR & Immersive Technology': 'from-pink-600 to-rose-700',Robotics & Automation': 'from-gray-600 to-slate-700',Green Technology & Sustainability': 'from-green-600 to-emerald-700',Supply Chain & Logistics': 'from-blue-600 to-indigo-700',Human Resources & Talent Management': 'from-purple-600 to-violet-700',Legal Technology & Compliance': 'from-slate-600 to-gray-700',Real Estate & Property Technology': 'from-amber-600 to-orange-700',Sports Technology & Analytics': 'from-green-600 to-blue-700',Entertainment & Media Technology': 'from-purple-600 to-pink-700'
+};
+
+const features = ["
+  "AI-Powered Automation","
+  "Real-time Analytics","
+  "Multi-cloud Support","
+  "API-First Architecture","
+  "Scalable Infrastructure","
+  "Custom Integrations",;"
+  "White-label Solutions",;"
+  "Comprehensive Documentation",;"
+  "24/7 Technical Support",;"
+  "99.9% Uptime Guarantee",;"
+  "SOC 2 Type II Compliant",;"
+  "30-Day Money Back Guarantee";
+];
+;
+const benefits = [
+  {
+"
+    icon: <Zap className="h-6 w-6"/>,"
+    title: "Immediate Deployment","
+    description: "All services are ready for immediate deployment with no setup delays"
+  },
+  {
+"
+    icon: <Shield className="h-6 w-6"/>,"
+    title: "Enterprise Security","
+    description: "Bank-level security with SOC 2 compliance and 24/7 monitoring"
+  },
+  {
+"
+    icon: <TrendingUp className="h-6 w-6"/>,"
+    title: "Proven ROI","
+    description: "Average 300% ROI within 6 months of implementation";
+  },;
+  {;"
+    icon: <CheckCircle className="h-6 w-6"/>,;"
+    title: "Quality Guaranteed",;"
+    description: "30-day money-back guarantee with free migration support";
+  };
+];
+;
+const contactInfo = {
+
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+=======
 import { Link } from "react-router-dom";  ;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
-  ;'
+  ;
   website: 'https://ziontechgroup.com';
 ;
+<<<<<<< HEAD
+
+};
+
+export function ComprehensiveServicesShowcase2027(...args[]):  {
+
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [searchQuery, setSearchQuery] = useState<any>('');
+
+  // Combine all services
+  const allServices = [...cuttingEdgeComprehensiveServices2027, ...specializedInnovativeServices2027];
+
+  // Get unique categories
+  const categories = Array.from (new Set (allServices.map (service => service.category) ) ) ;
+
+  // Filter services based on selection and search
+  const filteredServices = allServices.filter(service => {
+
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesSearch = searchQuery === '' ||
+      service.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
+      service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
+      service.category.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
+    return matchesCategory && matchesSearch}) ;
+
+  const featuredServices = allServices.filter (service => service.popular) .slice (0, 8) ;
+
+  return ("
+    <div className = "py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">"
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       <div className="container mx-auto px-4">
         {/* Header */}"
         <div className="text-center mb-16">"
@@ -61,8 +149,8 @@ import { Link } from "react-router-dom";  ;
         <div className="mb-16">"
           <div className="flex flex-col md:flex-row gap-4 mb-6">
             <input"
-              type="text""
-              placeholder="Search services...""
+              type="text"
+              placeholder="Search services..."
               className="flex-1 px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan"
               value={searchQuery}
               onChange={ (e) => setSearchQuery (e.target.value) }
@@ -84,7 +172,7 @@ import { Link } from "react-router-dom";  ;
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredServices.map((service)  => ("
               <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">"
-                <CardHeader className="text-center">'
+                <CardHeader className="text-center">
                   <div className={`mx-auto w-16 h-16 bg-gradient-to-br ${categoryColors[service.category] || 'from-gray-500 to-gray-600'} rounded-full flex items-center justify-center mb-4 text-2xl`}>
                     {service.icon}
                   </div>"

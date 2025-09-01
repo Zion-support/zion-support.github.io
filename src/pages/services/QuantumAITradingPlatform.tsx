@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react.ts';'
+import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence } from 'framer-motion.ts';
 import {
 
@@ -36,11 +36,11 @@ import {
   Brain,
   Gauge,
   BarChart,
-  LineChart,'
+  LineChart,
   PieChart} from 'lucide-react.ts';
 
 export default function QuantumAITradingPlatform(...args: any[]): any {
-'
+
   const [activeTab, setActiveTab] = useState('overview');
   const [isVisible, setIsVisible] = useState(false);
 
@@ -49,60 +49,34 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
   }, []);
 
   const features = ['
-    'Quantum-powered market analysis','
-    'AI-driven trading algorithms','
-    'Real-time market prediction','
-    'Risk assessment automation','
-    'Portfolio optimization','
-    'High-frequency trading capabilities','
-    'Multi-exchange integration','
-    'Advanced security protocols','
-    'Performance analytics','
-    'Custom trading strategies',
+    'Quantum-powered market analysis',AI-driven trading algorithms',Real-time market prediction',Risk assessment automation',Portfolio optimization',High-frequency trading capabilities',Multi-exchange integration',Advanced security protocols',Performance analytics',Custom trading strategies',
   ];
 
   const benefits = ['
-    '1000x faster market analysis','
-    '95% prediction accuracy','
-    'Real-time risk management','
-    'Automated portfolio rebalancing','
-    'Quantum advantage in trading',
+    '1000x faster market analysis',95% prediction accuracy',Real-time risk management',Automated portfolio rebalancing',Quantum advantage in trading',
   ];
 
   const useCases = ['
-    'Algorithmic trading','
-    'Portfolio management','
-    'Risk assessment','
-    'Market analysis','
-    'High-frequency trading',
+    'Algorithmic trading',Portfolio management',Risk assessment',Market analysis',High-frequency trading',
   ];
 
   const technicalSpecs = {
 
     technology: ['
-      'IBM Qiskit','
-      'Google Cirq','
-      'Python','
-      'TensorFlow','
-      'React','
-      'Node.js',
-    ],'
-    integrations: ['Bloomberg', 'Reuters', 'NYSE', 'NASDAQ', 'LSE'],
-    apiEndpoints: 500,'
-    uptime: '99.999%','
-    security: ['SOC 2', 'PCI DSS', 'FINRA compliance', 'Quantum encryption']};
+      'IBM Qiskit',Google Cirq',Python',TensorFlow',React',Node.js',
+    ],
+    integrations: ['Bloomberg',Reuters',NYSE',NASDAQ',LSE'],
+    apiEndpoints: 500,
+    uptime: '99.999%',
+    security: ['SOC 2',PCI DSS',FINRA compliance',Quantum encryption']};
 
   const pricing = {
-'
-    monthly: '$9,999','
-    yearly: '$99,999','
+
+    monthly: '$9,999',
+    yearly: '$99,999',
     enterprise: 'Custom',
     features: ['
-      'Full quantum trading capabilities','
-      'Unlimited trading volume','
-      'Priority support','
-      'Custom integrations','
-      'Advanced analytics',
+      'Full quantum trading capabilities',Unlimited trading volume',Priority support',Custom integrations',Advanced analytics',
     ]};
 
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">
@@ -127,7 +101,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
 
                 duration: 3 + i * 0.2,
                 repeat: Infinity,
-                delay: i * 0.1,'
+                delay: i * 0.1,
                 ease: 'easeInOut'}}
               style={{
 
@@ -147,7 +121,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
           transition={{
 
             duration: 4,
-            repeat: Infinity,'
+            repeat: Infinity,
             ease: 'easeInOut'}}
         />
 
@@ -160,7 +134,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
           transition={{
 
             duration: 5,
-            repeat: Infinity,'
+            repeat: Infinity,
             ease: 'easeInOut',
             delay: 1}}
         />
@@ -181,7 +155,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Quantum AI Hybrid Trading Platform
             </h1>"
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">'
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               The world's first quantum-powered trading platform combining
               quantum computing with AI algorithms for ultra-fast, intelligent
               trading decisions and market prediction.
@@ -238,8 +212,8 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
       {/* Navigation Tabs */}"
       <section className="relative py-8 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">"
-          <div className="flex flex-wrap justify-center gap-2 mb-8">'
-            {['overview', 'features', 'pricing', 'technical', 'contact'].map()
+          <div className="flex flex-wrap justify-center gap-2 mb-8">
+            {['overview',features',pricing',technical',contact'].map()
               tab => (
                 <button
                   key={tab}
@@ -262,7 +236,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
       {/* Content Sections */}"
       <section className="relative py-12 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">"
-          <AnimatePresence mode="wait">'
+          <AnimatePresence mode="wait">
             {activeTab === 'overview' && (
               <motion.div"
                 key="overview"
@@ -347,7 +321,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
                 </div>
               </motion.div>
             )}
-'
+
             {activeTab === 'features' && (
               <motion.div"
                 key="features"
@@ -390,7 +364,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
                 </div>
               </motion.div>
             )}
-'
+
             {activeTab === 'pricing' && (
               <motion.div"
                 key="pricing"
@@ -505,7 +479,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
                 </div>
               </motion.div>
             )}
-'
+
             {activeTab === 'technical' && (
               <motion.div"
                 key="technical"
@@ -609,7 +583,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
                 </div>
               </motion.div>
             )}
-'
+
             {activeTab === 'contact' && (
               <motion.div"
                 key="contact"

@@ -33,18 +33,18 @@ export function ServiceTypeStep({ formData, updateFormData }) {
                         throw new Error('Failed to fetch');
                     const data = await response.json();
                     const parsed = listingsSchema.safeParse(data);
-                    if (!parsed.success)'
+                    if (!parsed.success)
                         throw new Error('Invalid response');
                     setListings(parsed.data);
                     setError(null);
-                    setLoading(false);'
+                    setLoading(false);
                             // // // // // // // // console.error('Failed to load services:', err);
                         }
                         else {
 
                             captureException(err);
 
-                        setListings([]);'
+                        setListings([]);
                         setError('Failed to load services');
                         setLoading(false);
 
@@ -57,14 +57,14 @@ export function ServiceTypeStep({ formData, updateFormData }) {
                     return}
                 catch (err) {
                     if (attempt === maxRetries - 1) {
-'
+
                         if (process.env.NODE_ENV === 'development') {
-'
+
                             // console.error('Failed to load services:', err)}
                         else {
 
                             captureException(err)}
-                        setListings([]);'
+                        setListings([]);
                         setError('Failed to load services');
                         setLoading(false)}
                     else {
@@ -99,21 +99,21 @@ export function ServiceTypeStep({ formData, updateFormData }) {
       <div>"
         <h3 className="text-xl font-semibold text-white mb-4">What are you looking for?</h3>"
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">"`
-          <Card className={`p-4 cursor-pointer border-2 transition-colors ${formData.serviceType === "service""
+          <Card className={`p-4 cursor-pointer border-2 transition-colors ${formData.serviceType === "service"
             ? "bg-zion-purple/20 border-zion-purple""`
             : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"}`} onClick={() => handleTypeSelect("service")}>"
             <h4 className="font-medium text-white">Services</h4>"
             <p className="text-sm text-zion-slate-light">AI solutions, consulting, development</p>
           </Card>
 "`
-          <Card className={`p-4 cursor-pointer border-2 transition-colors ${formData.serviceType === "talent""
+          <Card className={`p-4 cursor-pointer border-2 transition-colors ${formData.serviceType === "talent"
             ? "bg-zion-purple/20 border-zion-purple""`
             : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"}`} onClick={() => handleTypeSelect("talent")}>"
             <h4 className="font-medium text-white">Talent</h4>"
             <p className="text-sm text-zion-slate-light">AI specialists, developers, consultants</p>
           </Card>
 "`
-          <Card className={`p-4 cursor-pointer border-2 transition-colors ${formData.serviceType === "equipment""
+          <Card className={`p-4 cursor-pointer border-2 transition-colors ${formData.serviceType === "equipment"
             ? "bg-zion-purple/20 border-zion-purple""`
             : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"}`} onClick={() => handleTypeSelect("equipment")}>"
             <h4 className="font-medium text-white">Equipment</h4>"

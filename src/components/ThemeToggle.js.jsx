@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';
 import { SunIcon, MoonIcon } from '@heroicons/react/24/outline';
 const ThemeToggle = () => {
   const [isDark, setIsDark] = useState(true);
@@ -6,22 +6,22 @@ const ThemeToggle = () => {
     // Check for saved theme preference or default to dark'
     const savedTheme = localStorage.getItem('zion-theme');
     if (savedTheme) {
-'
+
       setIsDark(savedTheme === 'dark');
     }
   }, []);
   const toggleTheme = () => {
     const newTheme = !isDark;
-    setIsDark(newTheme);'
+    setIsDark(newTheme);
     localStorage.setItem('zion-theme', newTheme ? 'dark' : 'light');
     // Apply theme to document
     if (newTheme) {
-'
-      document.documentElement.classList.add('dark');'
+
+      document.documentElement.classList.add('dark');
       document.documentElement.classList.remove('light');
     } else {
-'
-      document.documentElement.classList.add('light');'
+
+      document.documentElement.classList.add('light');
       document.documentElement.classList.remove('dark');
     }
   };

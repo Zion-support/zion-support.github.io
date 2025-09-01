@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
 
@@ -8,95 +8,92 @@ import {
   Server,
   GitFork,
   Cpu,
-  Globe,'
-  Shield} from 'lucide-react';'
+  Globe,
+  Shield} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 ;
 const CloudDevOps = () => {
   const cloudServices = [
     {
 
-      icon: Cloud,'
+      icon: Cloud,
       title: 'Cloud Migration',
       description:'
         'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
       features: ['
-        'Assessment & Planning','
-        'Data Migration','
-        'Application Modernization','
-        'Performance Optimization',
+        'Assessment & Planning',Data Migration',Application Modernization',Performance Optimization',
       ]},
     {
 
-      icon: Server,'
+      icon: Server,
       title: 'Infrastructure as Code',
       description:'
-        'Automated infrastructure provisioning and management using modern DevOps practices.','
-      features: ['Terraform', 'AWS CloudFormation', 'Azure ARM', 'Kubernetes']},
+        'Automated infrastructure provisioning and management using modern DevOps practices.',
+      features: ['Terraform',AWS CloudFormation',Azure ARM',Kubernetes']},
     {
 
-      icon: GitFork,'
+      icon: GitFork,
       title: 'CI/CD Pipelines',
       description:'
-        'Automated build, test, and deployment pipelines for faster, more reliable releases.','
-      features: ['Jenkins', 'GitHub Actions', 'GitLab CI', 'Azure DevOps']},
+        'Automated build, test, and deployment pipelines for faster, more reliable releases.',
+      features: ['Jenkins',GitHub Actions',GitLab CI',Azure DevOps']},
     {
 
-      icon: Database,'
+      icon: Database,
       title: 'Database Management',
       description:'
-        'Scalable database solutions with high availability and disaster recovery.','
-      features: ['AWS RDS', 'Azure SQL', 'MongoDB Atlas', 'Redis']},
+        'Scalable database solutions with high availability and disaster recovery.',
+      features: ['AWS RDS',Azure SQL',MongoDB Atlas',Redis']},
   ];
 
   const platforms = [
     {
-'
-      name: 'AWS','
-      description: 'Amazon Web Services cloud platform solutions','
+
+      name: 'AWS',
+      description: 'Amazon Web Services cloud platform solutions',
       icon: '☁️'},
     {
-'
-      name: 'Azure','
-      description: 'Microsoft Azure cloud services and solutions','
+
+      name: 'Azure',
+      description: 'Microsoft Azure cloud services and solutions',
       icon: '🔷'},
     {
-'
-      name: 'Google Cloud','
-      description: 'Google Cloud Platform infrastructure and services','
+
+      name: 'Google Cloud',
+      description: 'Google Cloud Platform infrastructure and services',
       icon: '🔵'},
     {
-'
-      name: 'Multi-Cloud','
-      description: 'Hybrid and multi-cloud strategy implementation','
+
+      name: 'Multi-Cloud',
+      description: 'Hybrid and multi-cloud strategy implementation',
       icon: '🌐'},
   ];
 
   const devOpsTools = [
     {
-'
-      category: 'CI/CD','
-      tools: ['Jenkins', 'GitLab CI', 'GitHub Actions', 'CircleCI', 'ArgoCD']},
+
+      category: 'CI/CD',
+      tools: ['Jenkins',GitLab CI',GitHub Actions',CircleCI',ArgoCD']},
     {
-'
-      category: 'Infrastructure','
-      tools: ['Terraform', 'Ansible', 'Puppet', 'Chef', 'CloudFormation']},
+
+      category: 'Infrastructure',
+      tools: ['Terraform',Ansible',Puppet',Chef',CloudFormation']},
     {
-'
-      category: 'Monitoring','
-      tools: ['Prometheus', 'Grafana', 'ELK Stack', 'Datadog', 'New Relic']},
+
+      category: 'Monitoring',
+      tools: ['Prometheus',Grafana',ELK Stack',Datadog',New Relic']},
     {
-'
-      category: 'Security','
-      tools: ['Vault', 'AWS IAM', 'Azure AD', 'Google IAM', 'Prisma Cloud']},
+
+      category: 'Security',
+      tools: ['Vault',AWS IAM',Azure AD',Google IAM',Prisma Cloud']},
   ];
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
         title="Cloud & DevOps — Zion Tech Group | Cloud Migration & DevOps Services"'"
-        description="Transform your infrastructure with Zion Tech Group's cloud migration and DevOps services. AWS, Azure, GCP expertise with modern DevOps practices.""
-        keywords="cloud migration, DevOps, AWS, Azure, GCP, infrastructure as code, CI/CD""
+        description="Transform your infrastructure with Zion Tech Group's cloud migration and DevOps services. AWS, Azure, GCP expertise with modern DevOps practices."
+        keywords="cloud migration, DevOps, AWS, Azure, GCP, infrastructure as code, CI/CD"
         canonical="https://ziontechgroup.com/services/cloud-devops"
       />
 
@@ -110,7 +107,7 @@ const CloudDevOps = () => {
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Transform Your Infrastructure with"
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 {' '}
                 Modern DevOps
               </span>
@@ -222,20 +219,20 @@ const CloudDevOps = () => {
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Transform Your Infrastructure?
           </h2>"
-          <p className="text-xl text-gray-300 mb-8">'
+          <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our cloud migration and DevOps services can help
             you achieve faster deployments, better scalability, and improved
             security.
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105"
             >
               📞 Call +1 (302) 464-0950
             </a>
             <a"
-              href="/contact""
+              href="/contact"
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all"
             >
               Get Started

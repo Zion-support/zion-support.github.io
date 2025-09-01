@@ -1,6 +1,183 @@
+<<<<<<< HEAD
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '../../components/SEO';
+import { Users, 
+  TrendingUp, 
+  BarChart3, 
+  Zap, 
+  Globe, 
+  Lock, 
+  Eye,
+  Star,
+  Cpu,
+  Database,
+  Search,
+  Filter,
+  Download,
+  Share2,
+  Play,
+  ArrowRight,
+  CheckCircle,
+  AlertTriangle,
+  FileText,
+  Clock,
+  Award,
+  Brain,
+  Target,
+  PieChart,
+  Activity,
+  UserCheck,
+  Shield,
+  Settings,
+  DollarSign,
+  AlertCircle,
+  Calendar,
+  MapPin,
+  GraduationCap,
+  Heart,
+  TrendingDown,
+  Lightbulb'
+ } from 'lucide-react.ts';
+
+export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
+
+  const features = [
+    {
+
+      icon: Brain,
+      title: "AI Performance Scoring","
+      description: "Advanced algorithms analyze multiple performance indicators to provide comprehensive employee scoring and insights."
+    },
+    {
+
+      icon: BarChart3,"
+      title: "Real-time Analytics Dashboard","
+      description: "Live performance metrics, productivity trends, and engagement scores with customizable KPIs and reporting."
+    },
+    {
+
+      icon: Users,"
+      title: "360-Degree Feedback Analysis","
+      description: "Comprehensive feedback collection and analysis from peers, managers, and self-assessments."
+    },
+    {
+
+      icon: Target,"
+      title: "Goal Tracking & Alignment","
+      description: "Monitor individual and team goal progress, identify alignment issues, and suggest performance improvements."
+    },
+    {
+
+      icon: PieChart,"
+      title: "Predictive Performance Insights","
+      description: "AI-powered predictions for employee potential, retention risk, and career development opportunities.";
+    },;
+    {;
+      icon: Activity,;"
+      title: "Engagement & Wellness Monitoring",;"
+      description: "Track employee engagement, burnout indicators, and wellness metrics to support employee well-being.";
+    };
+  ];
+
+  const benefits = [
+    {
+
+      icon: Zap,"
+      title: "Improved Performance","
+      description: "Identify performance gaps and provide targeted coaching to enhance individual and team productivity."
+    },
+    {
+
+      icon: DollarSign,"
+      title: "Increased Retention","
+      description: "Predict and prevent employee turnover by identifying at-risk employees and implementing retention strategies."
+    },
+    {
+
+      icon: Globe,"
+      title: "Data-Driven Decisions","
+      description: "Make informed HR decisions based on comprehensive performance analytics and predictive insights."
+    },
+    {
+
+      icon: Lock,"
+      title: "Privacy & Compliance","
+      description: "Enterprise-grade security with GDPR compliance and role-based access control for sensitive performance data."
+    },
+    {
+
+      icon: TrendingUp,"
+      title: "Enhanced Productivity","
+      description: "Optimize team performance through data-driven insights and targeted development programs.";
+    },;
+    {;
+      icon: Clock,;"
+      title: "Time Savings",;"
+      description: "Automate performance reviews and analytics, saving HR teams hours of manual work each month.";
+    };
+  ];
+
+  const pricingPlans = [
+    {
+"
+      name: "Starter","
+      price: "$399","
+      period: "/month","
+      description: "Perfect for small teams and startups beginning their performance analytics journey",
+      features: ["
+        "Up to 50 employees","
+        "Basic performance scoring","
+        "Email support","
+        "Standard integrations","
+        "Basic reporting","
+        "Goal tracking","
+        "Mobile app access"
+      ],"
+      cta: "Start Free Trial",
+      popular: false
+    },
+    {
+"
+      name: "Professional","
+      price: "$999","
+      period: "/month","
+      description: "Ideal for growing companies with advanced performance management needs",
+      features: ["
+        "Up to 500 employees","
+        "Advanced AI analytics","
+        "Priority support","
+        "Custom integrations","
+        "Advanced reporting & dashboards","
+        "Predictive insights","
+        "API access","
+        "360-degree feedback","
+        "Engagement monitoring"
+      ],"
+      cta: "Start Free Trial",
+      popular: true
+    },
+    {
+"
+      name: "Enterprise","
+      price: "$2,999","
+      period: "/month","
+      description: "For large organizations requiring enterprise-grade performance analytics",
+      features: ["
+        "Unlimited employees","
+        "Custom AI models","
+        "Dedicated account manager","
+        "White-label solutions","
+        "Advanced security features","
+        "Custom reporting","
+        "On-premise deployment",;"
+        "SLA guarantees",;"
+        "24/7 support";
+=======
 import React from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
 import { SEO  } from '../../components/SEO';        "24/7 support";
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Contact Sales",;
       popular: false;
@@ -125,8 +302,14 @@ import { SEO  } from '../../components/SEO';        "24/7 support";
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
+<<<<<<< HEAD
+        title="AI Employee Performance Analytics - Zion Tech Group"
+        description="Transform employee performance management with AI-powered analytics. Track productivity, predict retention, and optimize team performance."
+      />
+=======
         title="AI Employee Performance Analytics - Zion Tech Group""        description="Transform employee performance management with AI-powered analytics. Track productivity, predict retention, and optimize team performance."
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
@@ -163,7 +346,7 @@ import { SEO  } from '../../components/SEO';        "24/7 support";
             </div>"
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
               AI Employee Performance"
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 {' '}Analytics
               </span>
             </h1>"
@@ -575,7 +758,7 @@ import { SEO  } from '../../components/SEO';        "24/7 support";
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Transparent Pricing
             </h2>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that fits your organization's needs. All plans include a 14-day free trial.
             </p>
           </motion.div>

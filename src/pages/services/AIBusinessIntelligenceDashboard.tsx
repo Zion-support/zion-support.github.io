@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -23,45 +23,45 @@ import {
   Monitor,
   Play,
   Phone,
-  Mail,'
-  MapPin} from 'lucide-react.ts';'
+  Mail,
+  MapPin} from 'lucide-react.ts';
 import { SEO } from '../../components/SEO';
 
 const AIBusinessIntelligenceDashboard = () => {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI-Powered Insights',
       description:'
         'Advanced machine learning algorithms that automatically identify trends, anomalies, and opportunities in your data'},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Real-time Analytics',
       description:'
         'Live dashboards with real-time data updates from multiple sources including CRM, ERP, and external APIs'},
     {
 
-      icon: TrendingUp,'
+      icon: TrendingUp,
       title: 'Predictive Analytics',
       description:'
         'Forecast future trends and outcomes using historical data and AI models with 95%+ accuracy'},
     {
 
-      icon: Zap,'
+      icon: Zap,
       title: 'Automated Reporting',
       description:'
         'Intelligent report generation that adapts to your business needs and automatically highlights key insights'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Enterprise Security',
       description:'
         'Bank-grade security with role-based access control, data encryption, and compliance with GDPR, HIPAA, and SOC 2'},
     {
 
-      icon: Globe,'
+      icon: Globe,
       title: 'Multi-platform Access',
       description:'
         'Access your dashboards from anywhere - web, mobile apps, and integrate with existing business tools'},
@@ -69,77 +69,58 @@ const AIBusinessIntelligenceDashboard = () => {
 
   const pricingPlans = [
     {
-'
-      name: 'Starter','
-      price: '$299','
-      period: '/month','
+
+      name: 'Starter',
+      price: '$299',
+      period: '/month',
       description: 'Perfect for small businesses and startups',
       features: ['
-        'Up to 5 data sources','
-        'Basic AI insights','
-        '5 user licenses','
-        'Standard reports','
-        'Email support','
-        'Basic integrations',
+        'Up to 5 data sources',Basic AI insights',5 user licenses',Standard reports',Email support',Basic integrations',
       ],
       popular: false},
     {
-'
-      name: 'Professional','
-      price: '$799','
-      period: '/month','
+
+      name: 'Professional',
+      price: '$799',
+      period: '/month',
       description: 'Ideal for growing businesses and teams',
       features: ['
-        'Up to 20 data sources','
-        'Advanced AI analytics','
-        '25 user licenses','
-        'Custom dashboards','
-        'Priority support','
-        'API access','
-        'Advanced integrations','
-        'White-label options',
+        'Up to 20 data sources',Advanced AI analytics',25 user licenses',Custom dashboards',Priority support',API access',Advanced integrations',White-label options',
       ],
       popular: true},
     {
-'
-      name: 'Enterprise','
-      price: '$2,499','
-      period: '/month','
+
+      name: 'Enterprise',
+      price: '$2,499',
+      period: '/month',
       description: 'For large organizations with complex needs',
       features: ['
-        'Unlimited data sources','
-        'Custom AI models','
-        'Unlimited users','
-        'Advanced security','
-        'Dedicated support','
-        'Custom development','
-        'On-premise options','
-        'SLA guarantees',
+        'Unlimited data sources',Custom AI models',Unlimited users',Advanced security',Dedicated support',Custom development',On-premise options',SLA guarantees',
       ],
       popular: false},
   ];
 
   const useCases = [
     {
-'
+
       title: 'Sales Performance Analytics',
       description:'
         'Track sales metrics, pipeline analysis, and revenue forecasting with AI-powered insights',
       icon: TrendingUp},
     {
-'
+
       title: 'Customer Behavior Analysis',
       description:'
         'Understand customer patterns, churn prediction, and lifetime value optimization',
       icon: Users},
     {
-'
+
       title: 'Financial Performance Tracking',
       description:'
         'Monitor KPIs, budget vs actual, and financial forecasting with automated alerts',
       icon: BarChart3},
     {
-'
+
       title: 'Operational Efficiency',
       description:'
         'Identify bottlenecks, optimize processes, and improve productivity across teams',
@@ -148,25 +129,25 @@ const AIBusinessIntelligenceDashboard = () => {
 
   const testimonials = [
     {
-'
-      name: 'Sarah Johnson','
-      role: 'VP of Operations','
+
+      name: 'Sarah Johnson',
+      role: 'VP of Operations',
       company: 'TechFlow Solutions',
       content:'
         "The AI insights have transformed how we make decisions. We've increased efficiency by 40% and reduced costs significantly.",
       rating: 5},
     {
-'
-      name: 'Michael Chen','
-      role: 'Data Scientist','
+
+      name: 'Michael Chen',
+      role: 'Data Scientist',
       company: 'InnovateCorp',
       content:'
         'The predictive analytics capabilities are incredible. We can now forecast trends with remarkable accuracy.',
       rating: 5},
     {
-'
-      name: 'Emily Rodriguez','
-      role: 'CEO','
+
+      name: 'Emily Rodriguez',
+      role: 'CEO',
       company: 'StartupXYZ',
       content:'
         'This dashboard has given us enterprise-level insights at a fraction of the cost. Game-changer for our business.',
@@ -176,7 +157,7 @@ const AIBusinessIntelligenceDashboard = () => {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO"
-        title="AI-Powered Business Intelligence Dashboard - Zion Tech Group""
+        title="AI-Powered Business Intelligence Dashboard - Zion Tech Group"
         description="Transform your business with AI-powered BI dashboards. Real-time analytics, predictive insights, and automated reporting. Start from $299/month."
       />
 
@@ -209,13 +190,13 @@ const AIBusinessIntelligenceDashboard = () => {
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a"
-                href="https://ziontechgroup.com/contact""
+                href="https://ziontechgroup.com/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 flex items-center group"
               >
                 Start Free Trial"
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />              </a>
               <a"
-                href="#demo""
+                href="#demo"
                 className="border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center group"
               >"
                 <Play className="w-5 h-5 mr-2" />                Watch Demo
@@ -355,7 +336,7 @@ const AIBusinessIntelligenceDashboard = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}'
+                viewport={{ once: true }}
                 className={`relative ${plan.popular ? 'lg:-mt-8' : ''}`}
               >
                 {plan.popular && ("
@@ -487,13 +468,13 @@ const AIBusinessIntelligenceDashboard = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a"
-                href="https://ziontechgroup.com/contact""
+                href="https://ziontechgroup.com/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 flex items-center group"
               >
                 Start Free Trial"
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />              </a>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center group"
               >"
                 <Phone className="w-5 h-5 mr-2" />                Call +1 302 464 0950
@@ -511,7 +492,7 @@ const AIBusinessIntelligenceDashboard = () => {
             <div className="flex flex-col items-center">"
               <Phone className="w-8 h-8 text-cyan-400 mb-4" />"              <div className="text-white font-semibold">Phone</div>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"
               >
                 +1 302 464 0950
@@ -520,7 +501,7 @@ const AIBusinessIntelligenceDashboard = () => {
             <div className="flex flex-col items-center">"
               <Mail className="w-8 h-8 text-cyan-400 mb-4" />"              <div className="text-white font-semibold">Email</div>
               <a"
-                href="mailto:kleber@ziontechgroup.com""
+                href="mailto:kleber@ziontechgroup.com"
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"
               >
                 kleber@ziontechgroup.com

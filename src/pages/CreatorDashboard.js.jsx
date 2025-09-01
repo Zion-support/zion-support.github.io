@@ -1,4 +1,4 @@
-import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';'
+import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
 import { AppSidebar } from '@/components/creator/CreatorSidebar';
 export default function CreatorDashboard() {
   return()
@@ -26,7 +26,7 @@ export default function CreatorDashboard() {
                     Analytics
                   </span>
                 </div>"
-                <div className="text-3xl text-white font-bold">'
+                <div className="text-3xl text-white font-bold">
                   23,400{' '}"
                   <span className="text-zion-cyan text-lg font-normal">
                     Views

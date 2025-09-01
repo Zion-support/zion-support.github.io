@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -11,106 +11,88 @@ import {
   Network,
   Eye,
   Brain,
-  Cloud,'
-  Star} from 'lucide-react.ts';'
+  Cloud,
+  Star} from 'lucide-react.ts';
 import { Link } from 'react-router-dom.ts';
 
 const ManufacturingSolutions: React.FC = (): JSX.Element => {
 
   const solutions = [
     {
-'
+
       title: 'Smart Factory Automation',
       description:'
         'Intelligent automation systems that optimize production processes and increase efficiency.',
       icon: Bot,
       features: ['
-        'Process optimization','
-        'Real-time monitoring','
-        'Predictive maintenance','
-        'Quality control',
+        'Process optimization',Real-time monitoring',Predictive maintenance',Quality control',
       ]},
     {
-'
+
       title: 'Industrial IoT Integration',
       description:'
         'Seamless integration of IoT devices for comprehensive manufacturing intelligence.',
       icon: Network,
       features: ['
-        'Sensor networks','
-        'Data collection','
-        'Remote monitoring','
-        'Predictive analytics',
+        'Sensor networks',Data collection',Remote monitoring',Predictive analytics',
       ]},
     {
-'
+
       title: 'AI-Powered Quality Control',
       description:'
         'Advanced AI systems for automated quality inspection and defect detection.',
       icon: Eye,
       features: ['
-        'Visual inspection','
-        'Defect detection','
-        'Quality assurance','
-        'Compliance monitoring',
+        'Visual inspection',Defect detection',Quality assurance',Compliance monitoring',
       ]},
     {
-'
+
       title: 'Predictive Maintenance',
       description:'
         'AI-driven maintenance systems that prevent equipment failures and reduce downtime.',
       icon: TrendingUp,
       features: ['
-        'Equipment monitoring','
-        'Failure prediction','
-        'Maintenance scheduling','
-        'Cost optimization',
+        'Equipment monitoring',Failure prediction',Maintenance scheduling',Cost optimization',
       ]},
     {
-'
+
       title: 'Supply Chain Optimization',
       description:'
         'Intelligent supply chain management with AI-powered forecasting and optimization.',
       icon: Cog,
       features: ['
-        'Demand forecasting','
-        'Inventory optimization','
-        'Route planning','
-        'Supplier management',
+        'Demand forecasting',Inventory optimization',Route planning',Supplier management',
       ]},
     {
-'
+
       title: 'Digital Twin Technology',
       description:'
         'Virtual replicas of physical manufacturing systems for simulation and optimization.',
       icon: Cloud,
       features: ['
-        'System simulation','
-        'Performance optimization','
-        'Scenario testing','
-        'Real-time monitoring',
+        'System simulation',Performance optimization',Scenario testing',Real-time monitoring',
       ]},
   ];
 
   const benefits = [
     {
-'
-      title: 'Increased Efficiency','
+
+      title: 'Increased Efficiency',
       description: 'Optimize production processes and reduce waste',
       icon: TrendingUp},
     {
-'
-      title: 'Cost Reduction','
+
+      title: 'Cost Reduction',
       description: 'Lower operational costs through intelligent automation',
       icon: BarChart3},
     {
-'
-      title: 'Quality Improvement','
+
+      title: 'Quality Improvement',
       description: 'Enhanced product quality and consistency',
       icon: Star},
     {
-'
-      title: 'Predictive Capabilities','
+
+      title: 'Predictive Capabilities',
       description: 'Anticipate and prevent issues before they occur',
       icon: Brain},
   ];
@@ -134,7 +116,7 @@ const ManufacturingSolutions: React.FC = (): JSX.Element => {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Manufacturing Solutions
             </h1>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">'
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Transform your manufacturing operations with Zion Tech Group's
               cutting-edge technology solutions. From smart automation to
               AI-powered quality control, we help manufacturers achieve
@@ -250,19 +232,19 @@ const ManufacturingSolutions: React.FC = (): JSX.Element => {
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Transform Your Manufacturing?
           </h2>"
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">'
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Let's discuss how our manufacturing solutions can optimize your
             operations and drive growth.
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
+              to="/contact"
               className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:scale-105"
             >
               Get Started
             </Link>
             <Link"
-              to="/services""
+              to="/services"
               className="px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
             >
               View All Services

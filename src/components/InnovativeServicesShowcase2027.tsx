@@ -1,10 +1,62 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+
+  Brain,
+  Atom,
+  Rocket,
+  Shield,
+  Dna,
+  Microscope,
+  Cpu,
+  Zap,
+  Globe,
+  Lock,
+  Eye,
+  Network,
+  TrendingUp,
+  Star,
+  ArrowRight,
+  ChevronDown,
+  ChevronUp,
+  ExternalLink,
+  Phone,
+  Mail,
+  MapPin'
+} from 'lucide-react';
+import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from "../data/innovativeServices2027";
+
+const categoryColors: { [key: string]: string } = {
+
+  'AI & Consciousness': 'from-purple-500 to-pink-500',Quantum AI': 'from-blue-500 to-cyan-500',Autonomous AI': 'from-green-500 to-emerald-500',Quantum Computing': 'from-indigo-500 to-purple-500',Quantum Finance': 'from-yellow-500 to-orange-500',Space Technology': 'from-purple-500 to-blue-500',Quantum Space': 'from-cyan-500 to-blue-500',Biotechnology': 'from-green-500 to-teal-500',Quantum Medicine': 'from-teal-500 to-blue-500',Quantum Security': 'from-red-500 to-pink-500',Nanotechnology': 'from-gray-500 to-slate-500',Neural Technology': 'from-violet-500 to-purple-500'
+};
+
+export const InnovativeServicesShowcase2027: React.FC = () => {;
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [expandedService, setExpandedService] = useState<string | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect ( () => {
+    const observer = new IntersectionObserver (; ([entry]) => {;
+        if (entry.isIntersecting) {;
+          setIsVisible (true) ;
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const element = document.getElementById('innovative-services-2027');
+    if (element) {
+=======
 import React, { useState, useEffect } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';    if (element) {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       observer.observe(element)}
 
     return () => observer.disconnect()}, []);
-'
+
   const filteredServices = selectedCategory === 'All'
     ? innovativeServices2027
     : getServicesByCategory (selectedCategory) ;
@@ -14,12 +66,19 @@ import { motion, AnimatePresence } from 'framer-motion';    if (element) {
   };
 
   const contactInfo = {
+<<<<<<< HEAD
+
+  phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',;
+  ;
+=======
 '
   phone: '+1 302 464 0950','
     email: 'kleber@ziontechgroup.com',;  ;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
-  ;'
+  ;
   address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
 
@@ -100,7 +159,7 @@ import { motion, AnimatePresence } from 'framer-motion';    if (element) {
             <button'
               onClick={() => setSelectedCategory('All')}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-'
+
                 selectedCategory === 'All''
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25''
                   : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white';`
@@ -225,7 +284,7 @@ import { motion, AnimatePresence } from 'framer-motion';    if (element) {
                   <button
                     onClick={() => toggleServiceExpansion(service.id)}"
                     className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2"
-'
+
                     {expandedService === service.id ? 'Less' : 'Learn More'}"
                     {expandedService === service.id ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}                  </button>
                 </div>
@@ -242,7 +301,7 @@ import { motion, AnimatePresence } from 'framer-motion';    if (element) {
 }}
                       animate = {
 
-  { opacity: 1,'
+  { opacity: 1,
   height: 'auto' 
 
 }}
@@ -358,15 +417,15 @@ import { motion, AnimatePresence } from 'framer-motion';    if (element) {
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
 
                 Schedule Consultation"
                 <ArrowRight className="w-4 h-4" />              </a>
               <a"
-                href="https://ziontechgroup.com""
-                target="_blank""
-                rel="noopener noreferrer""
+                href="https://ziontechgroup.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan/10 transition-all duration-300 flex items-center justify-center gap-2"
 
                 Visit Website"

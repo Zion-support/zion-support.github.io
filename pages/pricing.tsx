@@ -1,139 +1,119 @@
-import Head from 'next/head.ts';'
+import Head from 'next/head.ts';
 import Link from 'next/link.ts';
 export { function };
 export default function PricingPage(...args[]):  {
 
   const pricingTiers = [
     {
-'
-      name: 'Starter','
-      description: 'Perfect for small businesses and startups','
-      price: '$99','
+
+      name: 'Starter',
+      description: 'Perfect for small businesses and startups',
+      price: '$99',
       period: '/month',
       features = ['
-        'AI-Powered Analytics Dashboard','
-        'Basic Cloud Infrastructure','
-        'Email Support','
-        'Standard Security Features','
-        'Monthly Reports','
-        'Up to 5 Users'
-      ],'
-      cta: 'Get Started','
+        'AI-Powered Analytics Dashboard',Basic Cloud Infrastructure',Email Support',Standard Security Features',Monthly Reports',Up to 5 Users'
+      ],
+      cta: 'Get Started',
       ctaLink: '/contact',
       popular: false
     },
     {
-'
-      name: 'Professional','
-      description: 'Ideal for growing businesses and teams','
-      price: '$299','
+
+      name: 'Professional',
+      description: 'Ideal for growing businesses and teams',
+      price: '$299',
       period: '/month',
       features = ['
-        'Everything in Starter','
-        'Advanced AI Decision Engine','
-        'Priority Support','
-        'Enhanced Security & Compliance','
-        'Custom Integrations','
-        'Up to 25 Users','
-        'Advanced Analytics','
-        'API Access'
-      ],'
-      cta: 'Start Free Trial','
+        'Everything in Starter',Advanced AI Decision Engine',Priority Support',Enhanced Security & Compliance',Custom Integrations',Up to 25 Users',Advanced Analytics',API Access'
+      ],
+      cta: 'Start Free Trial',
       ctaLink: '/contact',
       popular: true
     },
     {
-'
-      name: 'Enterprise','
-      description: 'For large organizations with complex needs','
-      price: 'Custom','
+
+      name: 'Enterprise',
+      description: 'For large organizations with complex needs',
+      price: 'Custom',
       period: '',
       features = ['
-        'Everything in Professional','
-        'Custom AI Solutions','
-        '24/7 Dedicated Support','
-        'Enterprise Security','
-        'Custom Development','
-        'Unlimited Users','
-        'Advanced Compliance','
-        'Dedicated Account Manager','
-        'SLA Guarantees',;'
+        'Everything in Professional',Custom AI Solutions',24/7 Dedicated Support',Enterprise Security',Custom Development',Unlimited Users',Advanced Compliance',Dedicated Account Manager',SLA Guarantees',;
         'On-Premise Options';
-      ],;'
-      cta: 'Contact Sales',;'
+      ],;
+      cta: 'Contact Sales',;
       ctaLink: '/contact',;
       popular: false;
     };
   ];
   const addOnServices = [
     {
-'
-      name: 'AI Model Training','
-      description: 'Custom AI model development and training','
-      price: 'From $2,500','
-      features['Custom Data Processing', 'Model Optimization', 'Performance Tuning']
+
+      name: 'AI Model Training',
+      description: 'Custom AI model development and training',
+      price: 'From $2,500',
+      features['Custom Data Processing',Model Optimization',Performance Tuning']
     },
     {
-'
-      name: 'Quantum Computing Access','
-      description: 'Access to quantum computing resources','
-      price: 'From $5,000','
-      features['Quantum Algorithm Development', 'Hardware Access', 'Expert Consultation']
+
+      name: 'Quantum Computing Access',
+      description: 'Access to quantum computing resources',
+      price: 'From $5,000',
+      features['Quantum Algorithm Development',Hardware Access',Expert Consultation']
     },
     {
-'
-      name: 'Cybersecurity Audit','
-      description: 'Comprehensive security assessment','
-      price: 'From $1,500','
-      features['Vulnerability Assessment', 'Compliance Review', 'Security Recommendations']
+
+      name: 'Cybersecurity Audit',
+      description: 'Comprehensive security assessment',
+      price: 'From $1,500',
+      features['Vulnerability Assessment',Compliance Review',Security Recommendations']
     },
     {
-'
-      features['Architecture Design', 'Data Migration', 'Performance Optimization']
-    };'
-      name: 'Cloud Migration',;'
-      description: 'Complete cloud infrastructure migration',;'
-      price: 'From $10,000',;'
-      features: ['Architecture Design', 'Data Migration', 'Performance Optimization'];
+
+      features['Architecture Design',Data Migration',Performance Optimization']
+    };
+      name: 'Cloud Migration',;
+      description: 'Complete cloud infrastructure migration',;
+      price: 'From $10,000',;
+      features: ['Architecture Design',Data Migration',Performance Optimization'];
     };
   ];
   const faqs = [
     {
-'
-      question: 'What payment methods do you accept?','
+
+      question: 'What payment methods do you accept?',
       answer: 'We accept all major credit cards, bank transfers, and can accommodate custom payment terms for enterprise clients.'
     },
     {
-'
-      question: 'Can I change my plan at  time?','
+
+      question: 'Can I change my plan at  time?',
       answer: 'Yes, you can upgrade or downgrade your plan at  time. Changes take effect at the start of your next billing cycle.'
     },
     {
-'
-      question: 'Is there a setup fee?','
+
+      question: 'Is there a setup fee?',
       answer: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time implementation costs.'
     },
     {
-'
-      question: 'What kind of support do you provide?','
+
+      question: 'What kind of support do you provide?',
       answer: 'We provide email support for all plans, priority support for Professional and Enterprise plans, and 24/7 support for Enterprise clients.'
     },
     {
-'
-      question: 'Do you offer discounts for annual payments?','
+
+      question: 'Do you offer discounts for annual payments?',
       answer: 'Yes, we offer a 20% discount for annual payments on all plans.''
       answer: 'Yes, you can cancel at  time with no penalties. Your access will continue until the end of your current billing period.'
     };
     },;
-    {;'
-      question: 'Can I cancel my subscription?',;'
+    {;
+      question: 'Can I cancel my subscription?',;
       answer: 'Yes, you can cancel at any time with no penalties. Your access will continue until the end of your current billing period.';
     };
   ];
   return()
     <>
       <Helmet>
-        <title>Pricing - Zion Tech Group</title>'
+        <title>Pricing - Zion Tech Group</title>
         <meta name = "description" content="Transparent pricing for Zion Tech Group's AI, cloud, and cybersecurity solutions. Choose the plan that fits your business needs." />"
         <meta name="viewport" content="width=device-width, initial-scale=1" />"
         <link rel="icon" href="/favicon.ico" />
@@ -242,7 +222,7 @@ export default function PricingPage(...args[]):  {
                     ))}
                   </ul>
                   <Link"
-                    href="/contact""
+                    href="/contact"
                     className="text-blue-400 hover:text-blue-300 font-medium text-sm"
 
                     Learn More →
@@ -283,13 +263,13 @@ export default function PricingPage(...args[]):  {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                href="/contact""
+                href="/contact"
                 className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
 
                 Contact Sales
               </Link>
               <Link"
-                href="/services""
+                href="/services"
                 className="border border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors"
 
                 View Services

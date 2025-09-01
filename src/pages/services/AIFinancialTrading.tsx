@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
   Brain, 
@@ -32,7 +32,7 @@ import {
   DollarSign as DollarIcon,
   BarChart,
   PieChart as PieChartIcon'
-} from 'lucide-react';'
+} from 'lucide-react';
 import { SEO } from '../../components/SEO';
 ;
 export { function };
@@ -164,8 +164,14 @@ export default function AIFinancialTrading(...args: unknown[]): unknown {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
+        title="AI Financial Trading Platform - Zion Tech Group"
+        description="Revolutionary AI-powered financial trading platform with advanced algorithms, predictive analytics, and automated risk management."
+      />
+=======
         title="AI Financial Trading Platform - Zion Tech Group""        description="Revolutionary AI-powered financial trading platform with advanced algorithms, predictive analytics, and automated risk management."
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"

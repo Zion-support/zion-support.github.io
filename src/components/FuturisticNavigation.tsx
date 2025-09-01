@@ -1,3 +1,202 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { MobileSidebarToggle } from './MobileSidebarToggle';
+import {
+
+  Menu,
+  X,
+  Search,
+  User,
+  Bell,
+  ChevronDown,
+  Brain,
+  Shield,
+  Cloud,
+  Zap,
+  Globe,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  Code,
+  Rocket,
+  Users,
+  BarChart3,
+  FileImage,
+  TrendingUp,
+  MessageCircle,
+  Video,
+  FileText,
+  Heart,
+  PanelLeft,
+  ShoppingCart,
+  Settings,
+  HelpCircle,
+  BookOpen,
+  Briefcase,
+  Award,
+  Target,
+  Lightbulb,
+  ShieldCheck,
+  Server,
+  Smartphone,
+  Monitor,
+  Wifi,
+  Bluetooth,
+  Satellite,
+  Atom,
+  Dna,
+  Microscope,
+  Flask,
+  TestTube,
+  Syringe,
+  Stethoscope,
+  HeartPulse,
+  BrainCircuit,
+  Eye,
+  Ear,
+  Hand,
+  Foot,
+  Bone,
+  Tooth,
+  Pill,
+  Bandage,
+  Thermometer,
+  Scale,
+  Calculator,
+  ChartBar,
+  PieChart,
+  LineChart,
+  Activity,
+  TrendingDown,
+  Minus,
+  Plus,
+  Equal,
+  Divide,
+  Percent,
+  DollarSign,
+  Euro,
+  Pound,
+  Yen,
+  Bitcoin,
+  Ethereum,
+  CreditCard,
+  Wallet,
+  Banknote,
+  Coins,
+  PiggyBank,
+  Safe,
+  Vault,
+  LockKeyhole,
+  Key,
+  Fingerprint,
+  QrCode,
+  Barcode,
+  Scan,
+  Camera,
+  VideoOff,
+  Mic,
+  MicOff,
+  Volume2,
+  VolumeX,
+  Handshake,
+  Play,
+  Pause,
+  Stop,
+  SkipBack,
+  SkipForward,
+  Rewind,
+  FastForward,
+  Shuffle,
+  Repeat,
+  Repeat1,
+  Shuffle2,
+  SkipBack2,
+  SkipForward2,
+  PlayCircle,
+  PauseCircle,
+  StopCircle,
+  SkipBackCircle,
+  SkipForwardCircle,
+  RewindCircle,
+  FastForwardCircle,
+  ShuffleCircle,
+  RepeatCircle,
+  Repeat1Circle,
+  Shuffle2Circle,
+  SkipBack2Circle,
+  SkipForward2Circle,
+  PlaySquare,
+  PauseSquare,
+  StopSquare,
+  SkipBackSquare,
+  SkipForwardSquare,
+  RewindSquare,
+  FastForwardSquare,
+  ShuffleSquare,
+  RepeatSquare,
+  Repeat1Square,
+  Shuffle2Square,
+  SkipBack2Square,
+  SkipForward2Square,
+  PlayTriangle,
+  PauseTriangle,
+  StopTriangle,
+  SkipBackTriangle,
+  SkipForwardTriangle,
+  RewindTriangle,
+  FastForwardTriangle,
+  ShuffleTriangle,
+  RepeatTriangle,
+  Repeat1Triangle,
+  Shuffle2Triangle,
+  SkipBack2Triangle,
+  SkipForward2Triangle,
+  PlayOctagon,
+  PauseOctagon,
+  StopOctagon,
+  SkipBackOctagon,
+  SkipForwardOctagon,
+  RewindOctagon,
+  FastForwardOctagon,
+  ShuffleOctagon,
+  RepeatOctagon,
+  Repeat1Octagon,
+  Shuffle2Octagon,
+  SkipBack2Octagon,
+  SkipForward2Octagon,
+  PlayDodecagon,
+  PauseDodecagon,
+  StopDodecagon,
+  SkipBackDodecagon,
+  SkipForwardDodecagon,
+  RewindDodecagon,
+  FastForwardDodecagon,
+  ShuffleDodecagon,
+  RepeatDodecagon,
+  Repeat1Dodecagon,
+  Shuffle2Dodecagon,
+  SkipBack2Dodecagon,
+  SkipForward2Dodecagon'
+} from 'lucide-react';
+export const FuturisticNavigation: React.FC = () => {;
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeDropdown, setActiveDropdown] = useState<any>(null);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  useEffect(() => {
+    const handleScroll = () => {;
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
+  useEffect(() => {
+    setActiveDropdown(null);
+  }, [location.pathname]);
+  const handleSearch = (e: React.FormEvent) => {;
+=======
 import React, { useState, useEffect } from 'react';'
 import { Link, useLocation } from 'react-router-dom';'
 import { motion, AnimatePresence } from 'framer-motion';'
@@ -5,6 +204,7 @@ import { MobileSidebarToggle } from './MobileSidebarToggle';    return () => win
   useEffect(() => {
     setActiveDropdown(null)}, [location.pathname]);
   
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     e.preventDefault();
     if (searchQuery.trim()) {
 
@@ -21,8 +221,19 @@ import { MobileSidebarToggle } from './MobileSidebarToggle';    return () => win
     {
 
       name: "AI & Machine Learning",
-      icon: Brain,'
+      icon: Brain,
       color: 'from-zion-cyan to-zion-blue',
+<<<<<<< HEAD
+      dropdown[;
+        { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSign, description: 'AI-powered financial trading platform' },
+        { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Quantum AI consciousness research' },
+        { name: 'AI Business Operations', href: '/ai-services/business-operations', icon: Building, description: 'Autonomous business management' },
+        { name: 'AI Healthcare Diagnosis', href: '/ai-services/healthcare-diagnosis', icon: Heart, description: 'AI-powered medical diagnosis' },
+        { name: 'AI Content Creation', href: '/ai-services/content-creation', icon: FileText, description: 'Autonomous content generation' },
+        { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' },
+        { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' },
+        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' }
+=======
       dropdown[;'
         { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSign, description: 'AI-powered financial trading platform' },'
         { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Quantum AI consciousness research' },'
@@ -31,6 +242,7 @@ import { MobileSidebarToggle } from './MobileSidebarToggle';    return () => win
         { name: 'AI Content Creation', href: '/ai-services/content-creation', icon: FileText, description: 'Autonomous content generation' },'
         { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' },'
         { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' },'        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' }
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ]
     },;
     {
@@ -73,15 +285,15 @@ import { MobileSidebarToggle } from './MobileSidebarToggle';    return () => win
       ]
     },;
     {
-'
-      name: '2028 Services','
+
+      name: '2028 Services',
       href: '/innovative-services-2028',
-      icon: Crown,'
+      icon: Crown,
       color: 'from-zion-cyan to-zion-purple',
-      dropdown[;'
-        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' },;'
-        { name: 'Micro SAAS 2028', href: '/micro-saas-2028', icon: Zap, description: 'Advanced micro SAAS solutions' },;'
-        { name: 'IT Services 2028', href: '/it-services-2028', icon: Server, description: 'Next-generation IT services' },;'
+      dropdown[;
+        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' },;
+        { name: 'Micro SAAS 2028', href: '/micro-saas-2028', icon: Zap, description: 'Advanced micro SAAS solutions' },;
+        { name: 'IT Services 2028', href: '/it-services-2028', icon: Server, description: 'Next-generation IT services' },;
         { name: 'Pricing Guide 2028', href: '/comprehensive-pricing-guide-2028', icon: Calculator, description: 'Complete pricing and ROI analysis' };
       ]};
   ];
@@ -152,7 +364,7 @@ import { MobileSidebarToggle } from './MobileSidebarToggle';    return () => win
 }}
               >
                 <Link"
-                  to="/about""
+                  to="/about"
                   className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10"
 "
                   <Users className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />"                  <span className="font-medium">About</span>
@@ -179,7 +391,7 @@ import { MobileSidebarToggle } from './MobileSidebarToggle';    return () => win
 }}
               >
                 <Link"
-                  to="/partners""
+                  to="/partners"
                   className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10"
 "
                   <Handshake className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />"                  <span className="font-medium">Partners</span>
@@ -218,7 +430,7 @@ import { MobileSidebarToggle } from './MobileSidebarToggle';    return () => win
                     <category.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />"
                     <span className="font-medium">{category.name}</span>`
                     <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${
-'
+
                       activeDropdown === category.name ? 'rotate-180' : ''`
                     }`} />                  </motion.button>
                   {/* Enhanced Dropdown Menu */}
@@ -299,7 +511,7 @@ import { MobileSidebarToggle } from './MobileSidebarToggle';    return () => win
               <form onSubmit={handleSearch} className="hidden md:block">;"
                 <div className="relative">
                   <input"
-                    type="text""
+                    type="text"
                     placeholder="Search services..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}"

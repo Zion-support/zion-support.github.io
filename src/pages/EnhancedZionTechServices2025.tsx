@@ -1,9 +1,33 @@
 import React, { useState } from 'react';
 export default EnhancedZionTechServices2025;}
+<<<<<<< HEAD
+import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnhancedServicesByCategory } from "../data / enhancedZionTechServices2025";
+
+
+const EnhancedZionTechServices2025: React.FC = () => {;
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [searchTerm, setSearchTerm] = useState<string>('');
+  const [sortBy, setSortBy] = useState<string>('name');
+
+  const categories = ['All', ...getEnhancedServiceCategories()];
+  
+  const filteredServices = ENHANCED_ZION_TECH_SERVICES_2025.filter (service => {;
+    const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
+                         service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
+                         service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
+    return matchesCategory && matchesSearch;
+  }) ;
+
+  const sortedServices = [...filteredServices].sort((a, b) => {;
+    switch (sortBy) {;
+      case 'price':;
+        return a.price - b.price;
+=======
 import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnhancedServicesByCategory } from "../data / enhancedZionTechServices2025";      case 'price':;
         return a.price - b.price;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'rating':;
-        return b.rating - a.rating;'
+        return b.rating - a.rating;
       case 'aiScore':;
         return b.aiScore - a.aiScore;
       default:;
@@ -81,7 +105,7 @@ import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnha
         <div className="flex flex-col lg:flex-row gap-6 mb-12">"
           <div className="flex-1">
             <input"
-              type="text""
+              type="text"
               placeholder="Search services..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}"
@@ -194,8 +218,8 @@ import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnha
               <div className="space-y-3">
                 <a
                   href={service.link}"
-                  target="_blank""
-                  rel="noopener noreferrer""
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block w-full text-center px-4 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-semibold"
 
                   Learn More

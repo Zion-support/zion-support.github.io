@@ -1,5 +1,71 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+
+  Search,
+  Filter,
+  Grid3X3,
+  List,
+  ChevronDown,
+  ChevronUp,
+  Star,
+  Users,
+  Globe,
+  Lock,
+  Code,
+  BarChart3,
+  Target,
+  Rocket,
+  Lightbulb,
+  Award,
+  Clock,
+  DollarSign,
+  TrendingUp,
+  Eye,
+  Handshake,
+  Building,
+  ShieldCheck,
+  Network2,
+  Smartphone as Mobile,
+  Server as Infrastructure,
+  Monitor as Analytics,
+  Zap as Lightning,
+  Users2,
+  Award as Trophy,
+  Clock as Time,
+  DollarSign as Money,
+  TrendingUp as Growth,
+  Eye as Vision,
+  Handshake as Partnership,
+  Building as Enterprise,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  CheckCircle,
+  ArrowRight,
+  Shield,
+  Brain,
+  Cloud,
+  Database,
+  Smartphone,
+  Server,
+  Monitor,
+  Cpu,
+  Network,
+  Smartphone as IoT,
+  Server as Edge,
+  Monitor as Healthcare,
+  Cpu as FinTech'
+import { SEO } from '@/components/SEO';
+import {
+
+  ALL_EXPANDED_SERVICES_2027,
+=======
 import React, { useState, useEffect } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_2027,
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   EXPANDED_SERVICE_CATEGORIES,
   getExpandedServicesByCategory,
   searchExpandedServices,
@@ -11,12 +77,12 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
 
         return Rocket}
   };
-'
+
         return 'from-gray-500 to-slate-600'}
   };
-'
-  const formatPrice = (pricing: ExpandedService2027['pricing']) => {;'
-    if (pricing.model === 'Transaction Fees + Governance') {;'
+
+  const formatPrice = (pricing: ExpandedService2027['pricing']) => {;
+    if (pricing.model === 'Transaction Fees + Governance') {;
       return 'Free + Transaction Fees';
 
     return `$${pricing.basePrice.toLocaleString () }/month`;
@@ -115,7 +181,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
 }}
                 animate = {
 
-  { opacity: 1,'
+  { opacity: 1,
   height: 'auto' 
 
 }}
@@ -190,7 +256,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
                 <Phone className="w-4 h-4" />                <span>{service.contactInfo.phone}</span>
               </div>`
               <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
-'
+
                 service.status === 'active' ? 'bg-green-100 text-green-800' :'
                 service.status === 'beta' ? 'bg-yellow-100 text-yellow-800' :'
                 'bg-gray-100 text-gray-800'`
@@ -208,8 +274,8 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
               </a>
               <a
                 href={service.contactInfo.website}"
-                target="_blank""
-                rel="noopener noreferrer""
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex-1 bg-gray-100 hover:bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 text-center py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
 "
                 <ExternalLink className="w-4 h-4" />                <span>Learn More</span>
@@ -280,7 +346,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
               <div>"
                 <p className="text-gray-500 dark:text-gray-400">Status</p>`
                 <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
-'
+
                   service.status === 'active' ? 'bg-green-100 text-green-800' :'
                   service.status === 'beta' ? 'bg-yellow-100 text-yellow-800' :'
                   'bg-gray-100 text-gray-800'`
@@ -300,8 +366,8 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
               </a>
               <a
                 href={service.contactInfo.website}"
-                target="_blank""
-                rel="noopener noreferrer""
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-gray-100 hover:bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg transition-colors duration-200 flex items-center space-x-2"
 "
                 <ExternalLink className="w-4 h-4" />                <span>Learn More</span>
@@ -314,9 +380,16 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <SEO"
+<<<<<<< HEAD
+        title="Expanded Innovative Services 2027 - Zion Tech Group"
+        description="Discover our comprehensive portfolio of advanced micro SAAS, IT infrastructure, and AI services. From quantum cybersecurity to healthcare AI, explore cutting-edge solutions."
+        keywords="micro SAAS, IT services, AI services, cybersecurity, data analytics, cloud DevOps, IoT, fintech, healthcare technology"
+      />
+=======
         title="Expanded Innovative Services 2027 - Zion Tech Group""
         description="Discover our comprehensive portfolio of advanced micro SAAS, IT infrastructure, and AI services. From quantum cybersecurity to healthcare AI, explore cutting-edge solutions.""        keywords="micro SAAS, IT services, AI services, cybersecurity, data analytics, cloud DevOps, IoT, fintech, healthcare technology"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <div className="relative overflow-hidden">"
@@ -438,7 +511,12 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
+<<<<<<< HEAD
+                  type="text"
+                  placeholder="Search services..."
+=======
                   type="text""                  placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
@@ -463,7 +541,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
                 <button'
                   onClick={() => setViewMode('grid')}`
                   className={`p-2 rounded-md transition-colors duration-200 ${
-'
+
                     viewMode === 'grid''
                       ? 'bg-white dark:bg-slate-600 text-gray-900 dark:text-white shadow-sm''
                       : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'`
@@ -474,7 +552,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
                 <button'
                   onClick={() => setViewMode('list')}`
                   className={`p-2 rounded-md transition-colors duration-200 ${
-'
+
                     viewMode === 'list''
                       ? 'bg-white dark:bg-slate-600 text-gray-900 dark:text-white shadow-sm''
                       : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'`
@@ -496,7 +574,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
         {/* Services Grid/List */}
         {filteredServices.length > 0 ? ('
           <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
-            {filteredServices.map((service) =>'
+            {filteredServices.map((service) =>
               viewMode === 'grid' ? renderServiceCard(service) : renderServiceList(service)
             )}
           </div>
@@ -523,13 +601,13 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
           </p>"
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center space-x-2"
 "
               <Mail className="w-5 h-5" />              <span>Get Started</span>
             </a>
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200 flex items-center space-x-2"
 "
               <Phone className="w-5 h-5" />              <span>Call Now</span>

@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import {
 
-  EXPANDED_SERVICES,'
-  EXPANDED_SERVICE_CATEGORIES} from '@/data/expandedServices';'
+  EXPANDED_SERVICES,
+  EXPANDED_SERVICE_CATEGORIES} from '@/data/expandedServices';
 import { Button } from '@/components/ui/button';
 import {
 
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from '@/components/ui/card';'
+  CardHeader,
+  CardTitle} from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import {
 
@@ -26,31 +26,31 @@ import {
   Globe,
   Phone,
   Mail,
-  MapPin,'
-  Clock} from 'lucide-react';'
+  MapPin,
+  Clock} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 export default function PricingGuide() {
-'
+
   const [selectedCategory, setSelectedCategory] = useState('all');
   const filteredServices ='
     selectedCategory === 'all'
       ? EXPANDED_SERVICES
       : EXPANDED_SERVICES.filter()
-          service =>'
-            service.category.toLowerCase().replace(/\s+/g, '-') ===
+          service =>
+            service.category.toLowerCase().replace(/\s+/g,-') ===
             selectedCategory
         );
   const getCategoryIcon = category => {
 
     const icons = {
-'
-      'AI Development': <Brain className="w-6 h-6" />,'"
+
+      'AI Development': <Brain className="w-6 h-6" />,"
       'Cloud Services': <Cloud className="w-6 h-6" />,"
       DevOps: <Zap className="w-6 h-6" />,"
-      Cybersecurity: <Shield className="w-6 h-6" />,'"
-      'Data & Analytics': <Database className="w-6 h-6" />,'"
-      'Digital Transformation': <TrendingUp className="w-6 h-6" />,'"
-      'Emerging Tech': <Globe className="w-6 h-6" />,'"
+      Cybersecurity: <Shield className="w-6 h-6" />,"
+      'Data & Analytics': <Database className="w-6 h-6" />,"
+      'Digital Transformation': <TrendingUp className="w-6 h-6" />,"
+      'Emerging Tech': <Globe className="w-6 h-6" />,"
       'Managed Services': <Lock className="w-6 h-6" />};"
     return icons[category] || <Star className="w-6 h-6" />;
   };
@@ -65,23 +65,18 @@ export default function PricingGuide() {
   const getMarketComparison = (price, category) => {
 
     const comparisons = {
-'
-      'AI Development': { avg: price * 1.3, savings: 23 },'
-      'Cloud Services': { avg: price * 1.25, savings: 20 },
+
+      'AI Development': { avg: price * 1.3, savings: 23 },Cloud Services': { avg: price * 1.25, savings: 20 },
       DevOps: { avg: price * 1.35, savings: 26 },
-      Cybersecurity: { avg: price * 1.4, savings: 29 },'
-      'Data & Analytics': { avg: price * 1.3, savings: 23 },'
-      'Digital Transformation': { avg: price * 1.45, savings: 31 },'
-      'Emerging Tech': { avg: price * 1.5, savings: 33 },'
-      'Managed Services': { avg: price * 1.2, savings: 17 }};
+      Cybersecurity: { avg: price * 1.4, savings: 29 },Data & Analytics': { avg: price * 1.3, savings: 23 },Digital Transformation': { avg: price * 1.45, savings: 31 },Emerging Tech': { avg: price * 1.5, savings: 33 },Managed Services': { avg: price * 1.2, savings: 17 }};
     return comparisons[category] || { avg: price * 1.3, savings: 23 };
   };
   return ("
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
       <SEO"
-        title="IT Services Pricing Guide - Zion Tech Group""
-        description="Comprehensive pricing guide for enterprise IT services, AI development, cybersecurity, cloud migration, and digital transformation. Competitive rates with guaranteed ROI.""
-        keywords="IT services pricing, AI development cost, cybersecurity pricing, cloud migration cost, digital transformation pricing, managed services pricing""
+        title="IT Services Pricing Guide - Zion Tech Group"
+        description="Comprehensive pricing guide for enterprise IT services, AI development, cybersecurity, cloud migration, and digital transformation. Competitive rates with guaranteed ROI."
+        keywords="IT services pricing, AI development cost, cybersecurity pricing, cloud migration cost, digital transformation pricing, managed services pricing"
         canonical="https://ziontechgroup.com/pricing-guide"
       />
 
@@ -98,15 +93,15 @@ export default function PricingGuide() {
           </p>"
           <div className="flex flex-wrap justify-center gap-4">
             <Button"
-              size="lg""
+              size="lg"
               className="bg-white text-zion-purple hover:bg-zion-cyan hover:text-white"
             >"
               <Phone className="w-5 h-5 mr-2" />
               Get Custom Quote
             </Button>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-white text-white hover:bg-white hover:text-zion-purple"
             >"
               <Mail className="w-5 h-5 mr-2" />
@@ -199,7 +194,7 @@ export default function PricingGuide() {
           {/* Category Filter */}"
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <Button'
-              variant={selectedCategory === 'all' ? 'default' : 'outline'}'
+              variant={selectedCategory === 'all' ? 'default' : 'outline'}
               onClick={() => setSelectedCategory('all')}"
               className="bg-zion-purple hover:bg-zion-purple-dark"
             >
@@ -209,7 +204,7 @@ export default function PricingGuide() {
               <Button
                 key={category.value}
                 variant={
-'
+
                   selectedCategory === category.value ? 'default' : 'outline'
                 }
                 onClick={() => setSelectedCategory(category.value)}
@@ -322,7 +317,7 @@ export default function PricingGuide() {
                       {service.tags.slice(0, 4).map(tag => (
                         <Badge
                           key={tag}"
-                          variant="secondary""
+                          variant="secondary"
                           className="bg-zion-blue-light text-zion-cyan"
                         >
                           {tag}
@@ -333,15 +328,15 @@ export default function PricingGuide() {
                     {/* CTA Buttons */}"
                     <div className="flex gap-2">
                       <Button"
-                        size="sm""
-                        variant="outline""
+                        size="sm"
+                        variant="outline"
                         className="border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white flex-1"
                       >"
                         <Mail className="w-4 h-4 mr-1" />
                         Get Quote
                       </Button>
                       <Button"
-                        size="sm""
+                        size="sm"
                         className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple flex-1"
                       >
                         Learn More
@@ -357,7 +352,7 @@ export default function PricingGuide() {
             <div className="text-center py-16">"
               <div className="text-zion-slate-light text-xl mb-4">
                 No services found in this category
-              </div>'
+              </div>
               <Button onClick={() => setSelectedCategory('all')}>
                 View All Services
               </Button>
@@ -456,15 +451,15 @@ export default function PricingGuide() {
           </p>"
           <div className="flex flex-wrap justify-center gap-4">
             <Button"
-              size="lg""
+              size="lg"
               className="bg-white text-zion-purple hover:bg-zion-cyan hover:text-white"
             >"
               <Phone className="w-5 h-5 mr-2" />
               Call +1 302 464 0950
             </Button>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-white text-white hover:bg-white hover:text-zion-purple"
             >"
               <Mail className="w-5 h-5 mr-2" />
@@ -473,10 +468,10 @@ export default function PricingGuide() {
           </div>"
           <div className="mt-8 text-zion-cyan">
             <p>Visit us: 364 E Main St STE 1008, Middletown DE 19709</p>
-            <p>'
+            <p>
               Website:{' '}
               <a"
-                href="https://ziontechgroup.com""
+                href="https://ziontechgroup.com"
                 className="underline hover:text-white"
               >
                 https://ziontechgroup.com

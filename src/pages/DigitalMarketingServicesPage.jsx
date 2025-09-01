@@ -1,14 +1,14 @@
-import React from 'react';'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';'
-import { Button } from '@/components/ui/button';'
-import { Badge } from '@/components/ui/badge';'
+import React from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
 import { Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Users, Globe, Eye, Video, MessageSquare, Zap, Monitor, ShoppingCart const MarketingServices = [;
 
 
     {
 
-        title: "Search Engine Optimization (SEO)",'"
+        title: "Search Engine Optimization (SEO)","
         description: "Improve your website's visibility and rank higher in search results","
         price: "$1,500 - $8,000/month","
         features["Keyword research", "On-page optimization", "Technical SEO", "Link building"],;"
@@ -70,7 +70,7 @@ import { Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Use
     },
     {
 "
-        title: "Conversion Rate Optimization",'"
+        title: "Conversion Rate Optimization","
         description: "Improve your website's ability to convert visitors into customers","
         price: "$1,500 - $6,000/month","
         features["A/B testing", "User experience", "Landing page optimization", "Funnel analysis"],;"

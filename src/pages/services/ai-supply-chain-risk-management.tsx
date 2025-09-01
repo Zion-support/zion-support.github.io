@@ -1,5 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import {
 
@@ -33,44 +33,44 @@ import {
   AlertCircle,
   FileText,
   Database,
-  Cloud,'
+  Cloud,
   Server} from 'lucide-react';
 
 const AISupplyChainRiskManagement = () => {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI-Powered Risk Detection',
       description:'
         'Advanced machine learning algorithms identify potential supply chain disruptions before they occur'},
     {
 
-      icon: Globe,'
+      icon: Globe,
       title: 'Global Supply Chain Mapping',
       description:'
         'Real-time visualization of your entire supply network with risk hotspots and vulnerability analysis'},
     {
 
-      icon: AlertTriangle,'
+      icon: AlertTriangle,
       title: 'Early Warning System',
       description:'
         'Proactive alerts for potential disruptions, delays, and supply chain vulnerabilities'},
     {
 
-      icon: TrendingUp,'
+      icon: TrendingUp,
       title: 'Predictive Analytics',
       description:'
         'Forecast supply chain risks using historical data and external factors like weather, politics, and economics'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Compliance Monitoring',
       description:'
         'Automated tracking of regulatory requirements and industry standards across your supply chain'},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Risk Scoring Dashboard',
       description:'
         'Comprehensive risk assessment with real-time scoring and actionable insights'},
@@ -78,77 +78,58 @@ const AISupplyChainRiskManagement = () => {
 
   const pricingPlans = [
     {
-'
-      name: 'Starter','
-      price: '$149','
-      period: '/month','
+
+      name: 'Starter',
+      price: '$149',
+      period: '/month',
       description: 'Perfect for small businesses with basic supply chain needs',
       features: ['
-        'Up to 50 suppliers','
-        'Basic risk monitoring','
-        'Email alerts','
-        'Standard reporting','
-        'Email support',
+        'Up to 50 suppliers',Basic risk monitoring',Email alerts',Standard reporting',Email support',
       ],
       popular: false},
     {
-'
-      name: 'Professional','
-      price: '$399','
-      period: '/month','
+
+      name: 'Professional',
+      price: '$399',
+      period: '/month',
       description: 'Ideal for growing companies with complex supply chains',
       features: ['
-        'Up to 500 suppliers','
-        'Advanced AI risk detection','
-        'Real-time alerts','
-        'Custom risk scoring','
-        'Priority support','
-        'API access','
-        'Advanced analytics','
-        'Multi-user access',
+        'Up to 500 suppliers',Advanced AI risk detection',Real-time alerts',Custom risk scoring',Priority support',API access',Advanced analytics',Multi-user access',
       ],
       popular: true},
     {
-'
-      name: 'Enterprise','
-      price: '$1,299','
-      period: '/month','
+
+      name: 'Enterprise',
+      price: '$1,299',
+      period: '/month',
       description: 'For large corporations with global supply networks',
       features: ['
-        'Unlimited suppliers','
-        'Custom AI models','
-        'White-label solution','
-        'Dedicated support','
-        'Advanced analytics','
-        'Custom integrations','
-        'On-premise deployment','
-        'SLA guarantees','
-        'Custom training',
+        'Unlimited suppliers',Custom AI models',White-label solution',Dedicated support',Advanced analytics',Custom integrations',On-premise deployment',SLA guarantees',Custom training',
       ],
       popular: false},
   ];
 
   const useCases = [
     {
-'
+
       title: 'Manufacturing',
       description:'
         'Monitor supplier performance and identify potential disruptions in manufacturing supply chains',
       icon: Factory},
     {
-'
+
       title: 'Retail & E-commerce',
       description:'
         'Ensure product availability and manage inventory risks across retail networks',
       icon: Truck},
     {
-'
+
       title: 'Healthcare',
       description:'
         'Maintain critical medical supply chains and ensure patient safety',
       icon: Shield},
     {
-'
+
       title: 'Logistics',
       description:'
         'Optimize transportation routes and manage carrier risks in global logistics',
@@ -157,40 +138,48 @@ const AISupplyChainRiskManagement = () => {
 
   const riskTypes = [
     {
-'
+
       title: 'Supplier Risk',
       description:'
         'Financial stability, operational capacity, and geographic location risks',
-      icon: Factory,'
+      icon: Factory,
       color: 'from-red-500 to-orange-500'},
     {
-'
-      title: 'Geopolitical Risk','
+
+      title: 'Geopolitical Risk',
       description: 'Political instability, trade wars, and regulatory changes',
-      icon: Globe,'
+      icon: Globe,
       color: 'from-blue-500 to-purple-500'},
     {
-'
+
       title: 'Environmental Risk',
       description:'
         'Natural disasters, climate change, and sustainability issues',
-      icon: AlertTriangle,'
+      icon: AlertTriangle,
       color: 'from-green-500 to-emerald-500'},
     {
-'
-      title: 'Financial Risk','
+
+      title: 'Financial Risk',
       description: 'Currency fluctuations, inflation, and economic instability',
-      icon: DollarSign,'
+      icon: DollarSign,
       color: 'from-yellow-500 to-orange-500'},
   ];
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
+<<<<<<< HEAD
+        title="AI Supply Chain Risk Management - Zion Tech Group"
+        description="Protect your supply chain with AI-powered risk detection, predictive analytics, and real-time monitoring. Identify and mitigate risks before they impact your business."
+        keywords="AI supply chain risk management, supply chain monitoring, risk detection, predictive analytics, supply chain optimization"
+        canonical="https://ziontechgroup.com/services/ai-supply-chain-risk-management"
+      />
+=======
         title="AI Supply Chain Risk Management - Zion Tech Group""
         description="Protect your supply chain with AI-powered risk detection, predictive analytics, and real-time monitoring. Identify and mitigate risks before they impact your business.""
         keywords="AI supply chain risk management, supply chain monitoring, risk detection, predictive analytics, supply chain optimization""        canonical="https://ziontechgroup.com/services/ai-supply-chain-risk-management"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -222,13 +211,13 @@ const AISupplyChainRiskManagement = () => {
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="#pricing""
+                href="#pricing"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-xl hover:from-green-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 View Pricing"
                 <ArrowRight className="ml-2 w-5 h-5" />              </a>
               <a"
-                href="mailto:kleber@ziontechgroup.com""
+                href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border border-slate-600 text-white font-semibold rounded-xl hover:border-slate-500 transition-all duration-200"
               >
                 Schedule Demo
@@ -521,7 +510,7 @@ const AISupplyChainRiskManagement = () => {
             viewport={{ once: true }}
           >
             <a"
-              href="mailto:kleber@ziontechgroup.com?subject=AI Supply Chain Risk Management Demo Request""
+              href="mailto:kleber@ziontechgroup.com?subject=AI Supply Chain Risk Management Demo Request"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-xl hover:from-green-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               Request Demo"

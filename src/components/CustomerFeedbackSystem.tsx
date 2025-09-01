@@ -1,12 +1,69 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+
+  Star,
+  MessageCircle,
+  ThumbsUp,
+  ThumbsDown,
+  Send,
+  Heart,
+  Award,
+  TrendingUp,
+  Users,
+  Clock,
+  Flag,
+  Share2,
+  Download,
+  Filter,
+  Search'
+ } from 'lucide-react';
+
+  verified: boolean}
+
+interface FeedbackStats {
+  totalFeedback: number;
+  averageRating: number;
+  positivePercentage: number;
+  responseRate: number;
+  topCategories: Array < any>}
+
+interface CustomerFeedbackSystemProps extends React.PropsWithChildren<{}> {
+
+  showStats?: boolean;
+  showFilters?: boolean;
+  maxFeedback?: number}
+
+export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
+
+showStats:  true,;
+  showFilters = true,;
+  maxFeedback = 10;
+}) => {;
+  const [feedback, setFeedback] = useState<Feedback[]>([]);
+  const [filteredFeedback, setFilteredFeedback] = useState<Feedback[]>([]);
+  const [stats, setStats] = useState<FeedbackStats>({
+
+    totalFeedback: 0,
+    averageRating: 0,
+    positivePercentage: 0,
+    responseRate: 0,
+    topCategories[];
+  });
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [selectedRating, setSelectedRating] = useState<any>(0);
+=======
 import React, { useState, useEffect } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';  const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [selectedRating, setSelectedRating] = useState<any>(0);'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [searchQuery, setSearchQuery] = useState('');
   const [showFeedbackForm, setShowFeedbackForm] = useState(false);
   const [newFeedback, setNewFeedback] = useState({
 
-    rating: 0,'
-    comment: '','
+    rating: 0,
+    comment: '',
     category: 'overall' as Feedback['category']
   }) ;
 
@@ -14,73 +71,73 @@ import { motion, AnimatePresence } from 'framer-motion';  const [selectedCategor
   useEffect(() => {
     const sampleFeedback: Feedback[] = [
       {
-'
-        id: '1','
+
+        id: '1',
         customerName: 'Sarah Johnson',
-        rating: 5,'
-        comment: 'Exceptional AI consulting services! The team at Zion Tech Group delivered beyond our expectations. Their expertise in machine learning helped us optimize our processes significantly.','
-        category: 'service','
-        sentiment: 'positive','
+        rating: 5,
+        comment: 'Exceptional AI consulting services! The team at Zion Tech Group delivered beyond our expectations. Their expertise in machine learning helped us optimize our processes significantly.',
+        category: 'service',
+        sentiment: 'positive',
         date: '2024-01-15',
         helpful: 24,
-        unhelpful: 1,'
-        tags['AI', 'Consulting', 'Machine Learning'],;
+        unhelpful: 1,
+        tags['AI',Consulting',Machine Learning'],;
         verified: true
       },
       {
-'
-        id: '2','
+
+        id: '2',
         customerName: 'Michael Chen',
-        rating: 4,'
-        comment: 'Great cloud migration support. The team was professional and helped us transition smoothly to the cloud. Minor delays but overall excellent experience.','
-        category: 'support','
-        sentiment: 'positive','
+        rating: 4,
+        comment: 'Great cloud migration support. The team was professional and helped us transition smoothly to the cloud. Minor delays but overall excellent experience.',
+        category: 'support',
+        sentiment: 'positive',
         date: '2024-01-12',
         helpful: 18,
-        unhelpful: 2,'
-        tags['Cloud', 'Migration', 'Support'],;
+        unhelpful: 2,
+        tags['Cloud',Migration',Support'],;
         verified: true
       },
       {
-'
-        id: '3','
+
+        id: '3',
         customerName: 'Emily Rodriguez',
-        rating: 5,'
-        comment: 'Outstanding digital transformation project! Zion Tech Group helped us modernize our entire infrastructure. ROI was achieved within 6 months.','
-        category: 'product','
-        sentiment: 'positive','
+        rating: 5,
+        comment: 'Outstanding digital transformation project! Zion Tech Group helped us modernize our entire infrastructure. ROI was achieved within 6 months.',
+        category: 'product',
+        sentiment: 'positive',
         date: '2024-01-10',
         helpful: 31,
-        unhelpful: 0,'
-        tags['Digital Transformation', 'Infrastructure', 'ROI'],;
+        unhelpful: 0,
+        tags['Digital Transformation',Infrastructure',ROI'],;
         verified: true
       },
       {
-'
-        id: '4','
+
+        id: '4',
         customerName: 'David Kim',
-        rating: 3,'
-        comment: 'Good security services but communication could be improved. The technical work was solid but project updates were infrequent.','
-        category: 'service','
-        sentiment: 'neutral','
+        rating: 3,
+        comment: 'Good security services but communication could be improved. The technical work was solid but project updates were infrequent.',
+        category: 'service',
+        sentiment: 'neutral',
         date: '2024-01-08',
         helpful: 12,
-        unhelpful: 5,'
-        tags['Security', 'Communication', 'Project Management'],;
+        unhelpful: 5,
+        tags['Security',Communication',Project Management'],;
         verified: true
       },
       {
-'
-        id: '5','
+
+        id: '5',
         customerName: 'Lisa Thompson',
-        rating: 5,'
-        comment: 'Amazing team! They helped us implement AI solutions that increased our efficiency by 40%. Highly recommend their services.','
-        category: 'overall','
-        sentiment: 'positive','
+        rating: 5,
+        comment: 'Amazing team! They helped us implement AI solutions that increased our efficiency by 40%. Highly recommend their services.',
+        category: 'overall',
+        sentiment: 'positive',
         date: '2024-01-05',
         helpful: 28,
-        unhelpful: 1,'
-        tags['AI', 'Efficiency', 'Implementation'],;
+        unhelpful: 1,
+        tags['AI',Efficiency',Implementation'],;
         verified: true
 
     ];
@@ -93,7 +150,7 @@ import { motion, AnimatePresence } from 'framer-motion';  const [selectedCategor
     if (feedback.length > 0) {
 
       const totalFeedback = feedback.length;
-      const averageRating = feedback.reduce((sum, f) => sum + f.rating, 0) / totalFeedback;'
+      const averageRating = feedback.reduce((sum, f) => sum + f.rating, 0) / totalFeedback;
       const positivePercentage = (feedback.filter(f => f.sentiment === 'positive').length / totalFeedback) * 100;
       const responseRate = 95; // Simulated response rate
 
@@ -122,7 +179,7 @@ import { motion, AnimatePresence } from 'framer-motion';  const [selectedCategor
   // Filter feedback
   useEffect ( () => {
     let filtered = feedback;
-'
+
     if (selectedCategory !== 'all') {
 
       filtered = filtered.filter(f => f.category === selectedCategory)}
@@ -151,12 +208,12 @@ import { motion, AnimatePresence } from 'framer-motion';  const [selectedCategor
     if (newFeedback.rating === 0 || !newFeedback.comment.trim () ) return;
     const feedback: Feedback = {
 
-  id: Date.now().toString(),'
+  id: Date.now().toString(),
       customerName: 'Anonymous Customer',
       rating: newFeedback.rating,
       comment: newFeedback.comment,
-      category: newFeedback.category,'
-      sentiment: newFeedback.rating >= 4 ? 'positive' : newFeedback.rating >= 3 ? 'neutral' : 'negative','
+      category: newFeedback.category,
+      sentiment: newFeedback.rating >= 4 ? 'positive' : newFeedback.rating >= 3 ? 'neutral' : 'negative',
       date: new Date().toISOString().split('T')[0],
       helpful: 0,
       unhelpful: 0,
@@ -167,7 +224,12 @@ import { motion, AnimatePresence } from 'framer-motion';  const [selectedCategor
     ;
 
 };
+<<<<<<< HEAD
+
+    setFeedback(prev  => [feedback, ...prev]);
+=======
     setFeedback(prev  => [feedback, ...prev]);'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     setNewFeedback({ rating: 0, comment: '', category: 'overall' });
     setShowFeedbackForm(false)};
 
@@ -178,8 +240,8 @@ import { motion, AnimatePresence } from 'framer-motion';  const [selectedCategor
 
       if (f.id === feedbackId) {;
         return {;
-          ...f,;'
-          helpful: type === 'helpful' ? f.helpful + 1 : f.helpful,;'
+          ...f,;
+          helpful: type === 'helpful' ? f.helpful + 1 : f.helpful,;
           unhelpful: type === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful;
         };
 
@@ -189,27 +251,41 @@ import { motion, AnimatePresence } from 'framer-motion';  const [selectedCategor
 
   // Get sentiment color
   const getSentimentColor = (sentiment: string) => {;
+<<<<<<< HEAD
+    switch (sentiment) {;
+      case 'positive': return 'text-green-400 bg-green-400/20';
+      case 'negative': return 'text-red-400 bg-red-400/20';
+      default: return 'text-yellow-400 bg-yellow-400/20'}
+=======
     switch (sentiment) {;'
       case 'positive': return 'text-green-400 bg-green-400/20';'
       case 'negative': return 'text-red-400 bg-red-400/20';'      default: return 'text-yellow-400 bg-yellow-400/20'}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   };
 
   // Get category color
   const getCategoryColor = (category: string)  => {
 
     const colors = {
+<<<<<<< HEAD
+
+  'service': 'text-blue-400 bg-blue-400/20',product': 'text-green-400 bg-green-400/20',support': 'text-purple-400 bg-purple-400/20',;
+  ;
+  ;
+=======
 '
   'service': 'text-blue-400 bg-blue-400/20','
       'product': 'text-green-400 bg-green-400/20','
       'support': 'text-purple-400 bg-purple-400/20',;  ;
   ;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   'overall': 'text-zion-cyan bg-zion-cyan/20';
     ;
 
 
 
 
-};'
+};
     return colors[category as keyof typeof colors] || 'text-zinc-400 bg-zinc-400/20';
   };
   return()
@@ -269,7 +345,7 @@ import { motion, AnimatePresence } from 'framer-motion';  const [selectedCategor
                 {[1, 2, 3, 4, 5].map((star) => (
                   <Star key={star}
                     className={`w-5 h-5 ${
-'
+
                       star <= stats.averageRating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`
                     }`}
                   />) ) }              </div>
@@ -385,7 +461,7 @@ import { motion, AnimatePresence } from 'framer-motion';  const [selectedCategor
             <input"              type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}"
-              placeholder="Search feedback...""
+              placeholder="Search feedback..."
               className="w-full pl-10 pr-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
             />
           </div>
@@ -409,7 +485,7 @@ import { motion, AnimatePresence } from 'framer-motion';  const [selectedCategor
 
 }}
             animate = {
-'
+
   { height: 'auto',
   opacity: 1 
 
@@ -449,7 +525,7 @@ import { motion, AnimatePresence } from 'framer-motion';  const [selectedCategor
 
                         <Star`
                           className={`w-8 h-8 ${
-'
+
                             star <= newFeedback.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`
                           }`}
                         />
@@ -463,7 +539,7 @@ import { motion, AnimatePresence } from 'framer-motion';  const [selectedCategor
                     value={newFeedback.category}
                     onChange = {
 
-  (e) => setNewFeedback(prev => ({ ...prev,'
+  (e) => setNewFeedback(prev => ({ ...prev,
   category: e.target.value as Feedback['category'] 
 
 
@@ -577,8 +653,14 @@ import { motion, AnimatePresence } from 'framer-motion';  const [selectedCategor
             <div className="flex items-center gap-2 mb-3">;
               {[1, 2, 3, 4, 5].map((star) => (;
                 <Star
+<<<<<<< HEAD
+                  key={star}`
+                  className={`w-5 h-5 ${
+
+=======
                   key={star}`                  className={`w-5 h-5 ${
 '
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     star <= item.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`
                   }`}
                 />
@@ -606,8 +688,7 @@ import { motion, AnimatePresence } from 'framer-motion';  const [selectedCategor
                 <button
                   onClick = {
 
-  () => handleVote(item.id,'
-  'helpful')
+  () => handleVote(item.id,helpful')
 
 
 
@@ -622,8 +703,7 @@ import { motion, AnimatePresence } from 'framer-motion';  const [selectedCategor
                 <button
                   onClick = {
 
-  () => handleVote(item.id,'
-  'unhelpful')
+  () => handleVote(item.id,unhelpful')
 
 
 

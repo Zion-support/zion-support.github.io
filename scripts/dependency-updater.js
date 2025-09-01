@@ -18,7 +18,7 @@ console.log('📦 Dependency Updater Started');
 
 class DependencyUpdater {
   constructor() {
-    this.projectRoot = path.resolve(__dirname, '..');
+    this.projectRoot = path.resolve(__dirname,..');
     this.updates = [];
     this.vulnerabilities = [];
     this.outdatedPackages = [];
@@ -54,7 +54,7 @@ class DependencyUpdater {
       const result = execSync('npm outdated --json', { 
         cwd: this.projectRoot,
         encoding: 'utf8',
-        stdio: ['pipe', 'pipe', 'pipe']
+        stdio: ['pipe',pipe',pipe']
       });
       
       if (result.trim()) {
@@ -73,7 +73,7 @@ class DependencyUpdater {
     } catch (error) {
       if (error.status === 1) {
         // npm outdated returns 1 when there are outdated packages
-        console.log('📦 Found outdated packages (details above)');
+        console.log('📦 Found outdated packages (details above));
       } else {
         console.warn('⚠️  Could not check outdated packages:', error.message);
       }
@@ -87,7 +87,7 @@ class DependencyUpdater {
       const result = execSync('npm audit --audit-level moderate --json', { 
         cwd: this.projectRoot,
         encoding: 'utf8',
-        stdio: ['pipe', 'pipe', 'pipe']
+        stdio: ['pipe',pipe',pipe']
       });
       
       const audit = JSON.parse(result);
@@ -108,7 +108,7 @@ class DependencyUpdater {
     } catch (error) {
       if (error.status === 1) {
         // npm audit returns 1 when vulnerabilities are found
-        console.log('⚠️  Security vulnerabilities found (details above)');
+        console.log('⚠️  Security vulnerabilities found (details above));
       } else {
         console.warn('⚠️  Could not run security audit:', error.message);
       }
@@ -120,7 +120,7 @@ class DependencyUpdater {
       console.log('🔄 Checking for available updates...');
       
       // Check if package-lock.json exists
-      const lockPath = path.join(this.projectRoot, 'package-lock.json');
+      const lockPath = path.join(this.projectRoot,package-lock.json');
       if (fs.existsSync(lockPath)) {
         const lockStats = fs.statSync(lockPath);
         const lockAge = Date.now() - lockStats.mtime.getTime();
@@ -161,7 +161,7 @@ class DependencyUpdater {
     };
     
     // Save report to file
-    const reportPath = path.join(this.projectRoot, 'logs', 'dependency-update-report.json');
+    const reportPath = path.join(this.projectRoot,logs',dependency-update-report.json');
     try {
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
       console.log(`📊 Report saved to: ${reportPath}`);

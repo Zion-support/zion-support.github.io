@@ -1,60 +1,59 @@
 import React from 'react';
 import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, BookOpen, BarChart3 export default function AIEducation() {
   const features = [
-    'AI-powered personalized learning paths and recommendations','
-    'Intelligent assessment and adaptive testing',;'
-    'Automated content generation and curriculum optimization',;'
-    'Predictive analytics for student performance',;'
-    'Smart tutoring and homework assistance',;'
-    'Learning analytics and progress tracking',;'
-    'Integration with major LMS and educational platforms',;'
+    'AI-powered personalized learning paths and recommendations',Intelligent assessment and adaptive testing',;
+    'Automated content generation and curriculum optimization',;
+    'Predictive analytics for student performance',;
+    'Smart tutoring and homework assistance',;
+    'Learning analytics and progress tracking',;
+    'Integration with major LMS and educational platforms',;
     'Custom AI models for subject-specific learning';
   ];
 
   const tiers = [
     {
-'
-      name: 'Individual Teacher','
-      price: '$99/mo','
-      details: ['Up to 50 students', 'Basic AI features', 'Standard content', 'Email support']
+
+      name: 'Individual Teacher',
+      price: '$99/mo',
+      details: ['Up to 50 students',Basic AI features',Standard content',Email support']
     },
     {
-'
-      name: 'School District', '
-      price: '$399/mo', '
-      details: ['Up to 1,000 students', 'Advanced AI features', 'Custom content', 'Priority support'] ;
+
+      name: 'School District',
+      price: '$399/mo',
+      details: ['Up to 1,000 students',Advanced AI features',Custom content',Priority support'] ;
     },;
-    { ;'
-      name: 'University', ;'
-      price: '$999/mo', ;'
-      details: ['Unlimited students', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
+    { ;
+      name: 'University', ;
+      price: '$999/mo', ;
+      details: ['Unlimited students',Custom AI models',Full platform integration',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'K-12 personalized learning and tutoring',;'
-    'Higher education course optimization',;'
-    'Corporate training and skill development',;'
-    'Language learning and proficiency testing',;'
-    'Special education and accessibility',;'
+  const useCases = [;
+    'K-12 personalized learning and tutoring',;
+    'Higher education course optimization',;
+    'Corporate training and skill development',;
+    'Language learning and proficiency testing',;
+    'Special education and accessibility',;
     'Professional certification and licensing';
   ];
 
-  const benefits = [;'
-    'Improve student performance by 25-40%',;'
-    'Reduce learning time by 30-50%',;'
-    'Increase engagement and retention by 40-60%',;'
-    'Optimize curriculum and teaching methods',;'
-    'Provide personalized learning experiences',;'
+  const benefits = [;
+    'Improve student performance by 25-40%',;
+    'Reduce learning time by 30-50%',;
+    'Increase engagement and retention by 40-60%',;
+    'Optimize curriculum and teaching methods',;
+    'Provide personalized learning experiences',;
     'Scale educational programs without additional staff';
   ];
 
-  const industries = [;'
-    'K-12 Education',;'
-    'Higher Education',;'
-    'Corporate Training',;'
-    'Online Learning',;'
-    'Special Education',;'
+  const industries = [;
+    'K-12 Education',;
+    'Higher Education',;
+    'Corporate Training',;
+    'Online Learning',;
+    'Special Education',;
     'Professional Development';
   ];
 
@@ -107,8 +106,8 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['25-40% performance improvement', '30-50% faster learning', '40-60% engagement increase'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['25-40% performance improvement',30-50% faster learning',40-60% engagement increase'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-blue-600 mb-3" />"              <div className="text-gray-900 font-semibold">{t}</div>
             </div>

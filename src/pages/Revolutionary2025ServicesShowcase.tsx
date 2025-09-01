@@ -1,13 +1,19 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import {
+=======
 import React, { useState, useEffect } from 'react';'
 import { motion } from 'framer-motion';// Combine all services
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 const Revolutionary2025ServicesShowcase: React.FC = () => {;
-  const [services, setServices] = useState<any[]>(ALL_SERVICES);'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');'
-  const [selectedROI, setSelectedROI] = useState('all');'
-  const [sortBy, setSortBy] = useState('title');'
+  const [services, setServices] = useState<any[]>(ALL_SERVICES);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+  const [selectedROI, setSelectedROI] = useState('all');
+  const [sortBy, setSortBy] = useState('title');
   const [viewMode, setViewMode] = useState<any>('grid');
   const [selectedServices, setSelectedServices] = useState<any>([]);
   // Filter services based on search and filters
@@ -20,21 +26,38 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.category.toLowerCase().includes(searchTerm.toLowerCase());
       );
+<<<<<<< HEAD
+    }
+    if (selectedCategory !== 'all') {
+=======
     }'    if (selectedCategory !== 'all') {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
-      filtered = filtered.filter(service => service.category === selectedCategory)};'
-    if (selectedPriceRange !== 'all') {;'
+      filtered = filtered.filter(service => service.category === selectedCategory)};
+    if (selectedPriceRange !== 'all') {;
       const [min, max] = selectedPriceRange.split('-').map(Number);
+<<<<<<< HEAD
+      filtered = filtered.filter(service => {;
+        const price = parseInt(service.price.replace(/[^0-9]/g,));
+        if (max) {
+=======
       filtered = filtered.filter(service => {;'
         const price = parseInt(service.price.replace(/[^0-9]/g, ''));        if (max) {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
           return price >= min && price <= max}
-        return price >= min})}'
+        return price >= min})}
     if (selectedROI !== 'all') {
-'
+
       const [min, max] = selectedROI.split('-').map(Number);
+<<<<<<< HEAD
+      filtered = filtered.filter(service => {;
+        const roi = parseInt(service.roi.match(/\d+/)?.[0] || '0');
+        if (max) {
+=======
       filtered = filtered.filter(service => {;'
         const roi = parseInt(service.roi.match(/\d+/)?.[0] || '0');        if (max) {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
           return roi >= min && roi <= max}
         return roi >= min}) }
@@ -42,11 +65,11 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
     filtered.sort((a, b) => {
 
       switch (sortBy) {
-'
+
         case 'price':'
-          return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));'
+          return parseInt(a.price.replace(/[^0-9]/g,)) - parseInt(b.price.replace(/[^0-9]/g,));
         case 'rating':
-          return b.rating - a.rating;'
+          return b.rating - a.rating;
         case 'customers':
           return b.customers - a.customers;
         default:
@@ -94,7 +117,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <div className="relative flex-1 max-w-md">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input"
+<<<<<<< HEAD
+                type="text"
+                placeholder="Search services..."
+=======
                 type="text""                placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
@@ -148,7 +176,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               <button'
                 onClick={() => setViewMode('grid')}
                 className={`p-3 rounded-lg transition-colors ${
-'
+
                   viewMode === 'grid''
                     ? 'bg-cyan-500 text-white''
                     : 'bg-slate-800 text-gray-400 hover:text-white'`
@@ -158,7 +186,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               <button'
                 onClick={() => setViewMode('list')}`
                 className={`p-3 rounded-lg transition-colors ${
-'
+
                   viewMode === 'list''
                     ? 'bg-cyan-500 text-white''
                     : 'bg-slate-800 text-gray-400 hover:text-white'`
@@ -168,7 +196,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               <button'
                 onClick={() => setViewMode('comparison')}`
                 className={`p-3 rounded-lg transition-colors ${
-'
+
                   viewMode === 'comparison''
                     ? 'bg-cyan-500 text-white''
                     : 'bg-slate-800 text-gray-400 hover:text-white'`
@@ -570,7 +598,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Explore our cutting-edge solutions designed to transform your business operations
             </p>
-          </div>'
+          </div>
           {viewMode === 'grid' && ("
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index)  => (
@@ -624,8 +652,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                     <span className="text-sm text-gray-400">{service.category}</span>
                     <a
                       href={service.link}"
-                      target="_blank""
-                      rel="noopener noreferrer""
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-semibold"
 "
                       Learn More <ArrowRight className="w-4 h-4 ml-1" />                    </a>
@@ -633,7 +661,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                 </motion.div>;
               ))}
             </div>
-          )}'
+          )}
           {viewMode === 'list' && ("
             <div className="space-y-6">
               {services.map((service, index) => (
@@ -691,8 +719,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                         </div>
                         <a
                           href={service.link}"
-                          target="_blank""
-                          rel="noopener noreferrer""
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-semibold"
 "
                           Learn More <ArrowRight className="w-4 h-4 ml-1" />                        </a>
@@ -702,7 +730,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                 </motion.div>;
               ))}
             </div>
-          )}'
+          )}
           {viewMode === 'comparison' && ("
             <div className="space-y-8">"
               <div className="text-center mb-8">"
@@ -1620,7 +1648,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                 Explore All Services
               </button>
               <a"
-                href="mailto:kleber@ziontechgroup.com?subject=Revolutionary 2025 Services Consultation""
+                href="mailto:kleber@ziontechgroup.com?subject=Revolutionary 2025 Services Consultation"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
 
                 Get Free Consultation
@@ -2165,15 +2193,15 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
           </div>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
 
               Get Started
             </a>
             <a"
-              href="https://ziontechgroup.com""
-              target="_blank""
-              rel="noopener noreferrer""
+              href="https://ziontechgroup.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
 
               Visit Website

@@ -16,7 +16,7 @@ console.log('🚀 Front Maximizer Started');
 
 class FrontMaximizer {
   constructor() {
-    this.projectRoot = path.resolve(__dirname, '..');
+    this.projectRoot = path.resolve(__dirname,..');
     this.optimizations = [];
     this.issues = [];
   }
@@ -51,9 +51,9 @@ class FrontMaximizer {
     try {
       console.log('⚙️  Analyzing build configuration...');
       
-      const viteConfigPath = path.join(this.projectRoot, 'vite.config.ts');
+      const viteConfigPath = path.join(this.projectRoot,vite.config.ts');
       if (fs.existsSync(viteConfigPath)) {
-        const viteConfig = fs.readFileSync(viteConfigPath, 'utf8');
+        const viteConfig = fs.readFileSync(viteConfigPath,utf8');
         
         // Check for build optimizations
         if (!viteConfig.includes('build.rollupOptions')) {
@@ -94,10 +94,10 @@ class FrontMaximizer {
     try {
       console.log('📦 Analyzing bundle size...');
       
-      const distPath = path.join(this.projectRoot, 'dist');
+      const distPath = path.join(this.projectRoot,dist');
       if (fs.existsSync(distPath)) {
-        const jsFiles = this.findFiles(distPath, '.js');
-        const cssFiles = this.findFiles(distPath, '.css');
+        const jsFiles = this.findFiles(distPath,.js');
+        const cssFiles = this.findFiles(distPath,.css');
         
         let totalJsSize = 0;
         let totalCssSize = 0;
@@ -145,9 +145,9 @@ class FrontMaximizer {
     try {
       console.log('🔀 Analyzing code splitting...');
       
-      const distPath = path.join(this.projectRoot, 'dist');
+      const distPath = path.join(this.projectRoot,dist');
       if (fs.existsSync(distPath)) {
-        const jsFiles = this.findFiles(distPath, '.js');
+        const jsFiles = this.findFiles(distPath,.js');
         
         if (jsFiles.length <= 2) {
           this.optimizations.push('Consider implementing code splitting to reduce initial bundle size');
@@ -176,9 +176,9 @@ class FrontMaximizer {
     try {
       console.log('🖼️  Analyzing asset optimization...');
       
-      const distPath = path.join(this.projectRoot, 'dist');
+      const distPath = path.join(this.projectRoot,dist');
       if (fs.existsSync(distPath)) {
-        const assetFiles = this.findFiles(distPath, ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp']);
+        const assetFiles = this.findFiles(distPath, ['.png',.jpg',.jpeg',.gif',.svg',.webp']);
         
         let totalAssetSize = 0;
         const largeAssets = [];
@@ -194,12 +194,12 @@ class FrontMaximizer {
         });
         
         if (largeAssets.length > 0) {
-          this.optimizations.push(`Large assets detected: ${largeAssets.join(', ')} - consider compression or format conversion`);
+          this.optimizations.push(`Large assets detected: ${largeAssets.join(',)} - consider compression or format conversion`);
         }
         
         // Check for image optimization
         const imageFiles = assetFiles.filter(file => 
-          ['.png', '.jpg', '.jpeg', '.gif'].some(ext => file.endsWith(ext))
+          ['.png',.jpg',.jpeg',.gif'].some(ext => file.endsWith(ext))
         );
         
         if (imageFiles.length > 0) {
@@ -208,7 +208,7 @@ class FrontMaximizer {
         }
         
         // Check for font optimization
-        const fontFiles = this.findFiles(distPath, ['.woff', '.woff2', '.ttf', '.otf']);
+        const fontFiles = this.findFiles(distPath, ['.woff',.woff2',.ttf',.otf']);
         if (fontFiles.length > 0) {
           this.optimizations.push('Consider using WOFF2 format for better font compression');
           this.optimizations.push('Implement font display swap for better performance');
@@ -261,7 +261,7 @@ class FrontMaximizer {
     };
     
     // Save report to file
-    const reportPath = path.join(this.projectRoot, 'logs', 'front-maximizer-report.json');
+    const reportPath = path.join(this.projectRoot,logs',front-maximizer-report.json');
     try {
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
       console.log(`📊 Report saved to: ${reportPath}`);

@@ -1,252 +1,220 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Network, Cloud, Smartphone, CheckCircle export default function Marketplace() {
-'
-    const [searchTerm, setSearchTerm] = useState('');'
-    const [selectedCategory, setSelectedCategory] = useState('all');'
-    const [selectedPriceRange, setSelectedPriceRange] = useState('all');'
+
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [selectedPriceRange, setSelectedPriceRange] = useState('all');
     const [sortBy, setSortBy] = useState('featured');
     const categories = ['
-        { id: 'all', name: 'All Products', icon: Globe, count: 24 },'
-        { id: 'ai-solutions', name: 'AI Solutions', icon: Brain, count: 8 },'
-        { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: 6 },'
-        { id: 'cloud-infrastructure', name: 'Cloud & Infrastructure', icon: Cloud, count: 5 },'
-        { id: 'blockchain', name: 'Blockchain & Web3', icon: Network, count: 3 },'
+        { id: 'all', name: 'All Products', icon: Globe, count: 24 },
+        { id: 'ai-solutions', name: 'AI Solutions', icon: Brain, count: 8 },
+        { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: 6 },
+        { id: 'cloud-infrastructure', name: 'Cloud & Infrastructure', icon: Cloud, count: 5 },
+        { id: 'blockchain', name: 'Blockchain & Web3', icon: Network, count: 3 },
         { id: 'iot-platforms', name: 'IoT Platforms', icon: Smartphone, count: 2 }
     ];
     const priceRanges = ['
-        { id: 'all', name: 'All Prices' },'
-        { id: 'free', name: 'Free' },'
-        { id: 'under-100', name: 'Under $100' },'
-        { id: '100-500', name: '$100 - $500' },'
-        { id: '500-1000', name: '$500 - $1,000' },'
+        { id: 'all', name: 'All Prices' },
+        { id: 'free', name: 'Free' },
+        { id: 'under-100', name: 'Under $100' },
+        { id: '100-500', name: '$100 - $500' },
+        { id: '500-1000', name: '$500 - $1,000' },
         { id: 'over-1000', name: 'Over $1,000' }
     ];
     const sortOptions = ['
-        { id: 'featured', name: 'Featured' },'
-        { id: 'price-low', name: 'Price: Low to High' },'
-        { id: 'price-high', name: 'Price: High to Low' },'
-        { id: 'newest', name: 'Newest' },'
-        { id: 'popular', name: 'Most Popular' },'
+        { id: 'featured', name: 'Featured' },
+        { id: 'price-low', name: 'Price: Low to High' },
+        { id: 'price-high', name: 'Price: High to Low' },
+        { id: 'newest', name: 'Newest' },
+        { id: 'popular', name: 'Most Popular' },
         { id: 'rating', name: 'Highest Rated' }
     ];
     const marketplaceProducts = [
         {
 
-            id: 1,'
-            name: 'AI Autonomous Business Manager','
-            description: 'Complete AI-powered business management platform with autonomous decision-making capabilities.','
+            id: 1,
+            name: 'AI Autonomous Business Manager',
+            description: 'Complete AI-powered business management platform with autonomous decision-making capabilities.',
             category: 'ai-solutions',
             price: 2999,
-            originalPrice: 3999,'
+            originalPrice: 3999,
             currency: 'USD',
             rating: 4.9,
-            reviewCount: 127,'
+            reviewCount: 127,
             image: '/images/marketplace/ai-business-manager.jpg',
-            features[;'
-                'Autonomous decision making','
-                'Business process automation','
-                'Real-time analytics','
-                'Multi-tenant support','
-                'API integration'
-            ],;'
-            tags['AI', 'Business Automation', 'Enterprise', 'Cloud'],;
+            features[;
+                'Autonomous decision making',Business process automation',Real-time analytics',Multi-tenant support',API integration'
+            ],;
+            tags['AI',Business Automation',Enterprise',Cloud'],;
             featured: true,
             new: false,
-            discount: 25,'
+            discount: 25,
             type: 'software'
         },
         {
 
-            id: 2,'
-            name: 'Quantum Neural Network Framework','
-            description: 'Advanced quantum computing framework for neural network development and optimization.','
+            id: 2,
+            name: 'Quantum Neural Network Framework',
+            description: 'Advanced quantum computing framework for neural network development and optimization.',
             category: 'ai-solutions',
             price: 1499,
-            originalPrice: 1999,'
+            originalPrice: 1999,
             currency: 'USD',
             rating: 4.8,
-            reviewCount: 89,'
+            reviewCount: 89,
             image: '/images/marketplace/quantum-framework.jpg',
-            features[;'
-                'Quantum algorithm optimization','
-                'Neural network training','
-                'GPU acceleration','
-                'Python SDK','
-                'Documentation & examples'
-            ],;'
-            tags['Quantum Computing', 'AI', 'Research', 'Python'],;
+            features[;
+                'Quantum algorithm optimization',Neural network training',GPU acceleration',Python SDK',Documentation & examples'
+            ],;
+            tags['Quantum Computing',AI',Research',Python'],;
             featured: true,
             new: true,
-            discount: 25,'
+            discount: 25,
             type: 'software'
         },
         {
 
-            id: 3,'
-            name: 'SOC2 Compliance Automation Suite','
-            description: 'Comprehensive security and compliance automation platform for enterprise organizations.','
+            id: 3,
+            name: 'SOC2 Compliance Automation Suite',
+            description: 'Comprehensive security and compliance automation platform for enterprise organizations.',
             category: 'cybersecurity',
             price: 899,
-            originalPrice: 1199,'
+            originalPrice: 1199,
             currency: 'USD',
             rating: 4.7,
-            reviewCount: 156,'
+            reviewCount: 156,
             image: '/images/marketplace/soc2-suite.jpg',
-            features[;'
-                'Automated compliance checks','
-                'Security assessment tools','
-                'Audit trail management','
-                'Risk assessment','
-                'Reporting dashboard'
-            ],;'
-            tags['Cybersecurity', 'Compliance', 'SOC2', 'Enterprise'],;
+            features[;
+                'Automated compliance checks',Security assessment tools',Audit trail management',Risk assessment',Reporting dashboard'
+            ],;
+            tags['Cybersecurity',Compliance',SOC2',Enterprise'],;
             featured: false,
             new: false,
-            discount: 25,'
+            discount: 25,
             type: 'software'
         },
         {
 
-            id: 4,'
-            name: '5G Enterprise Network Kit','
-            description: 'Complete 5G networking solution for enterprise environments with advanced security.','
+            id: 4,
+            name: '5G Enterprise Network Kit',
+            description: 'Complete 5G networking solution for enterprise environments with advanced security.',
             category: 'cloud-infrastructure',
             price: 2499,
-            originalPrice: 2999,'
+            originalPrice: 2999,
             currency: 'USD',
             rating: 4.6,
-            reviewCount: 73,'
+            reviewCount: 73,
             image: '/images/marketplace/5g-kit.jpg',
-            features[;'
-                '5G network infrastructure','
-                'Enterprise security','
-                'Load balancing','
-                'Monitoring tools','
-                '24/7 support'
-            ],;'
-            tags['5G', 'Networking', 'Enterprise', 'Infrastructure'],;
+            features[;
+                '5G network infrastructure',Enterprise security',Load balancing',Monitoring tools',24/7 support'
+            ],;
+            tags['5G',Networking',Enterprise',Infrastructure'],;
             featured: false,
             new: false,
-            discount: 17,'
+            discount: 17,
             type: 'hardware'
         },
         {
 
-            id: 5,'
-            name: 'AI Workflow Templates Pack','
-            description: 'Collection of 50+ pre-built AI workflow templates for common business processes.','
+            id: 5,
+            name: 'AI Workflow Templates Pack',
+            description: 'Collection of 50+ pre-built AI workflow templates for common business processes.',
             category: 'ai-solutions',
             price: 199,
-            originalPrice: 299,'
+            originalPrice: 299,
             currency: 'USD',
             rating: 4.5,
-            reviewCount: 234,'
+            reviewCount: 234,
             image: '/images/marketplace/workflow-templates.jpg',
-            features[;'
-                '50+ workflow templates','
-                'Customizable designs','
-                'Integration guides','
-                'Best practices','
-                'Community support'
-            ],;'
-            tags['AI', 'Workflows', 'Templates', 'Business'],;
+            features[;
+                '50+ workflow templates',Customizable designs',Integration guides',Best practices',Community support'
+            ],;
+            tags['AI',Workflows',Templates',Business'],;
             featured: false,
             new: false,
-            discount: 33,'
+            discount: 33,
             type: 'template'
         },
         {
 
-            id: 6,'
-            name: 'Blockchain DeFi Development Kit','
-            description: 'Complete toolkit for building decentralized finance applications on blockchain.','
+            id: 6,
+            name: 'Blockchain DeFi Development Kit',
+            description: 'Complete toolkit for building decentralized finance applications on blockchain.',
             category: 'blockchain',
             price: 599,
-            originalPrice: 799,'
+            originalPrice: 799,
             currency: 'USD',
             rating: 4.4,
-            reviewCount: 98,'
+            reviewCount: 98,
             image: '/images/marketplace/blockchain-defi.jpg',
-            features[;'
-                'Smart contract templates','
-                'DeFi protocol examples','
-                'Security best practices','
-                'Testing framework','
-                'Deployment guides'
-            ],;'
-            tags['Blockchain', 'DeFi', 'Smart Contracts', 'Development'],;
+            features[;
+                'Smart contract templates',DeFi protocol examples',Security best practices',Testing framework',Deployment guides'
+            ],;
+            tags['Blockchain',DeFi',Smart Contracts',Development'],;
             featured: false,
             new: true,
-            discount: 25,'
+            discount: 25,
             type: 'development-kit'
         },
         {
 
-            id: 7,'
-            name: 'IoT Data Analytics Platform','
-            description: 'Enterprise IoT platform with advanced analytics and machine learning capabilities.','
+            id: 7,
+            name: 'IoT Data Analytics Platform',
+            description: 'Enterprise IoT platform with advanced analytics and machine learning capabilities.',
             category: 'iot-platforms',
             price: 1799,
-            originalPrice: 2299,'
+            originalPrice: 2299,
             currency: 'USD',
             rating: 4.3,
-            reviewCount: 67,'
+            reviewCount: 67,
             image: '/images/marketplace/iot-platform.jpg',
-            features[;'
-                'IoT device management','
-                'Real-time analytics','
-                'ML-powered insights','
-                'Scalable architecture','
-                'Multi-cloud support'
-            ],;'
-            tags['IoT', 'Analytics', 'Machine Learning', 'Enterprise'],;
+            features[;
+                'IoT device management',Real-time analytics',ML-powered insights',Scalable architecture',Multi-cloud support'
+            ],;
+            tags['IoT',Analytics',Machine Learning',Enterprise'],;
             featured: false,
             new: false,
-            discount: 22,'
+            discount: 22,
             type: 'platform'
         },
         {
 
-            id: 8,'
-            name: 'Cybersecurity Threat Intelligence','
-            description: 'Real-time threat intelligence and security monitoring service.','
+            id: 8,
+            name: 'Cybersecurity Threat Intelligence',
+            description: 'Real-time threat intelligence and security monitoring service.',
             category: 'cybersecurity',
             price: 399,
-            originalPrice: 599,'
+            originalPrice: 599,
             currency: 'USD',
             rating: 4.8,
-            reviewCount: 189,'
+            reviewCount: 189,
             image: '/images/marketplace/threat-intelligence.jpg',
-            features[;'
-                'Real-time threat feeds','
-                'Security alerts','
-                'Vulnerability scanning','
-                'Incident response','
-                'Expert support'
-            ],;'
-            tags['Cybersecurity', 'Threat Intelligence', 'Monitoring', 'Security'],;
+            features[;
+                'Real-time threat feeds',Security alerts',Vulnerability scanning',Incident response',Expert support'
+            ],;
+            tags['Cybersecurity',Threat Intelligence',Monitoring',Security'],;
             featured: false,
             new: false,
-            discount: 33,'
+            discount: 33,
             type: 'service'
 
     ];
     const filteredProducts = marketplaceProducts.filter(product => {
 
-        const matchesPrice = true;'
+        const matchesPrice = true;
         if (selectedPriceRange === 'free') {
 
-            matchesPrice = product.price === 0}'
+            matchesPrice = product.price === 0}
         else if (selectedPriceRange === 'under-100') {
 
-            matchesPrice = product.price < 100}'
+            matchesPrice = product.price < 100}
         else if (selectedPriceRange === '100-500') {
 
-            matchesPrice = product.price >= 100 && product.price <= 500}'
+            matchesPrice = product.price >= 100 && product.price <= 500}
         else if (selectedPriceRange === '500-1000') {
 
-            matchesPrice = product.price >= 500 && product.price <= 1000}'
+            matchesPrice = product.price >= 500 && product.price <= 1000}
         else if (selectedPriceRange === 'over-1000') {
 
             matchesPrice = product.price > 1000}
@@ -254,15 +222,15 @@ import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Ne
     const sortedProducts = [...filteredProducts].sort((a, b) => {
 
         switch (sortBy) {
-'
+
             case 'price-low':
-                return a.price - b.price;'
+                return a.price - b.price;
             case 'price-high':
-                return b.price - a.price;'
+                return b.price - a.price;
             case 'newest':
-                return b.new ? 1 : -1;'
+                return b.new ? 1 : -1;
             case 'popular':
-                return b.reviewCount - a.reviewCount;'
+                return b.reviewCount - a.reviewCount;
             case 'rating':
                 return b.rating - a.rating;
             default:
@@ -270,7 +238,7 @@ import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Ne
     });
     const formatPrice = (price, currency) => {
 
-        if (price === 0)'
+        if (price === 0)
             return 'Free';
         return `${currency} ${price.toLocaleString()}`};
     const getCategoryIcon = (categoryId) => {
@@ -279,7 +247,7 @@ import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Ne
         return category ? category.icon : Globe};
     const getCategoryName = (categoryId) => {
 
-        const category = categories.find(cat => cat.id === categoryId);'
+        const category = categories.find(cat => cat.id === categoryId);
         return category ? category.name : 'Unknown'};
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Header */}"
@@ -478,7 +446,7 @@ import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Ne
             <h2 className="text-3xl font-bold text-white mb-4">
               Need a Custom Solution?
             </h2>"
-            <p className="text-xl text-gray-300 mb-6 max-w-2xl mx-auto">'
+            <p className="text-xl text-gray-300 mb-6 max-w-2xl mx-auto">
               Can't find exactly what you're looking for? Our team can create custom
               technology solutions tailored to your specific business requirements.
             </p>"

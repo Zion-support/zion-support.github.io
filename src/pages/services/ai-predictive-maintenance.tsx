@@ -1,72 +1,88 @@
-import React from 'react';'
-import SEO from '../../components/SEO';'
+import React from 'react';
+import SEO from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, Gauge, Database, Shield, Zap, Users, Settings, BarChart3, Activity const AIPredictiveMaintenance: React.FC = props {
   const features = [
     {
 
-      icon: Brain,'
-      title: 'AI-Powered Analytics','
+      icon: Brain,
+      title: 'AI-Powered Analytics',
       description: 'Machine learning algorithms predict equipment failures'
     },
     {
 
-      icon: Gauge,'
-      title: 'Real-time Monitoring','
+      icon: Gauge,
+      title: 'Real-time Monitoring',
       description: 'Continuous monitoring of equipment performance'
     },
     {
 
-      icon: AlertTriangle,'
-      title: 'Early Warning System','
+      icon: AlertTriangle,
+      title: 'Early Warning System',
       description: 'Proactive alerts before equipment failure';
     },;
     {;
-      icon: BarChart3,;'
-      title: 'Performance Analytics',;'
+      icon: BarChart3,;
+      title: 'Performance Analytics',;
       description: 'Data-driven insights for optimization';
     };
   ];
 
   const applications = [
     {
-'
-      title: 'Manufacturing','
-      description: 'Predictive maintenance for production equipment','
+
+      title: 'Manufacturing',
+      description: 'Predictive maintenance for production equipment',
       icon: '🏭'
     },
     {
-'
-      title: 'Energy & Utilities','
-      description: 'Monitor power plants and distribution systems','
+
+      title: 'Energy & Utilities',
+      description: 'Monitor power plants and distribution systems',
       icon: '⚡'
     },
     {
-'
-      title: 'Transportation','
-      description: 'Fleet maintenance and vehicle optimization','
+
+      title: 'Transportation',
+      description: 'Fleet maintenance and vehicle optimization',
       icon: '🚚';
     },;
-    {;'
-      title: 'Healthcare',;'
-      description: 'Medical equipment maintenance and reliability',;'
+    {;
+      title: 'Healthcare',;
+      description: 'Medical equipment maintenance and reliability',;
       icon: '🏥';
     };
   ];
 
+<<<<<<< HEAD
+  const benefits = [;
+    'Reduce unplanned downtime by up to 75%',;
+    'Extend equipment lifespan and reliability',;
+    'Lower maintenance costs and labor requirements',;
+    'Improve safety and compliance standards',;
+    'Optimize spare parts inventory management',;
+    'Increase overall operational efficiency';
+=======
   const benefits = [;'
     'Reduce unplanned downtime by up to 75%',;'
     'Extend equipment lifespan and reliability',;'
     'Lower maintenance costs and labor requirements',;'
     'Improve safety and compliance standards',;'
     'Optimize spare parts inventory management',;'    'Increase overall operational efficiency';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
+        title="AI Predictive Maintenance Services - Zion Tech Group"
+        description="Transform your maintenance operations with AI-powered predictive maintenance. Prevent equipment failures and optimize performance with intelligent monitoring."
+      />
+=======
         title="AI Predictive Maintenance Services - Zion Tech Group""        description="Transform your maintenance operations with AI-powered predictive maintenance. Prevent equipment failures and optimize performance with intelligent monitoring."
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="pt-20 pb-16 px-4">"

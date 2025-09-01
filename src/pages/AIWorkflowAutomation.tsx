@@ -1,5 +1,296 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import {
+
+  Brain,
+  Zap,
+  Shield,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Users,
+  Award,
+  Globe,
+  Lock,
+  Activity,
+  Clock,
+  Eye,
+  Database,
+  Code,
+  FileText,
+  Wrench,
+  Cpu,
+  Target,
+  Rocket,
+  Lightbulb,
+  Gauge,
+  Network,
+  Server,
+  Building,
+  Car,
+  Plane,
+  Factory,
+  Cog,
+  BarChart3,
+  TrendingUp,
+  MapPin,
+  Layers,
+  RefreshCw,
+  AlertTriangle,
+  Package,
+  Warehouse,
+  Route,
+  Navigation,
+  Box,
+  Ship,
+  Train,
+  Truck,
+  Cloud,
+  Settings,
+  Palette,
+  Smartphone,
+  Tablet,
+  Monitor,
+  Wifi,
+  Bluetooth,
+  Battery,
+  Signal,
+  HardDrive,
+  MemoryStick,
+  Router,
+  Switch,
+  Hub,
+  Modem,
+  Firewall,
+  LoadBalancer,
+  Gateway,
+  Proxy,
+  VPN,
+  SSL,
+  TLS,
+  SSH,
+  FTP,
+  HTTP,
+  HTTPS,
+  DNS,
+  DHCP,
+  NTP,
+  SMTP,
+  POP3,
+  IMAP,
+  LDAP,
+  Kerberos,
+  OAuth,
+  JWT,
+  SAML,
+  OpenID,
+  Radius,
+  Tacacs,
+  Syslog,
+  SNMP,
+  NetFlow,
+  sFlow,
+  IPFIX,
+  BGP,
+  OSPF,
+  EIGRP,
+  RIP,
+  VLAN,
+  VXLAN,
+  GRE,
+  IPSec,
+  MPLS,
+  SDN,
+  NFV,
+  VNF,
+  Container,
+  Pod,
+  Service,
+  Ingress,
+  Egress,
+  Cluster,
+  Node,
+  Namespace,
+  ConfigMap,
+  Secret,
+  PersistentVolume,
+  StorageClass,
+  StatefulSet,
+  DaemonSet,
+  Job,
+  CronJob,
+  HorizontalPodAutoscaler,
+  VerticalPodAutoscaler,
+  NetworkPolicy,
+  PodSecurityPolicy,
+  Role,
+  RoleBinding,
+  ClusterRole,
+  ClusterRoleBinding,
+  ServiceAccount,
+  Token,
+  Certificate,
+  CSR,
+  CRL,
+  OCSP,
+  HSM,
+  TPM,
+  SecureEnclave,
+  TrustZone,
+  SGX,
+  SEV,
+  TDX,
+  ARM,
+  x86,
+  RISC,
+  CISC,
+  GPU,
+  TPU,
+  FPGA,
+  ASIC,
+  SoC,
+  SiP,
+  PCB,
+  Motherboard,
+  Backplane,
+  Chassis,
+  Rack,
+  Cabinet,
+  Datacenter,
+  Colocation,
+  Edge,
+  Fog,
+  Public,
+  Private,
+  Community,
+  Government,
+  Financial,
+  Healthcare,
+  Education,
+  Retail,
+  Manufacturing,
+  Transportation,
+  Energy,
+  Utilities,
+  Telecommunications,
+  Media,
+  Entertainment,
+  Gaming,
+  Social,
+  Ecommerce,
+  Fintech,
+  Insurtech,
+  Healthtech,
+  Edtech,
+  Proptech,
+  Legaltech,
+  Regtech,
+  Adtech,
+  MarTech,
+  HRTech,
+  SalesTech,
+  SupportTech,
+  SecurityTech,
+  PrivacyTech,
+  ComplianceTech,
+  GovernanceTech,
+  RiskTech,
+  AuditTech,
+  MonitoringTech,
+  ObservabilityTech,
+  LoggingTech,
+  TracingTech,
+  MetricsTech,
+  AlertingTech,
+  IncidentTech,
+  ChangeTech,
+  ReleaseTech,
+  DeploymentTech,
+  CI,
+  CD,
+  DevOps,
+  GitOps,
+  SecOps,
+  DataOps,
+  MLOps,
+  AIOps,
+  NoOps,
+  SRE,
+  Platform,
+  Infrastructure,
+  Application,
+  Data,
+  Security,
+  Storage,
+  Compute,
+  Memory,
+  Cache,
+  Buffer,
+  Queue,
+  Stream,
+  Batch,
+  RealTime,
+  NearRealTime,
+  Offline,
+  Online,
+  Hybrid,
+  Multi,
+  Single,
+  Distributed,
+  Centralized,
+  Decentralized,
+  Federated,
+  Hierarchical,
+  Flat,
+  Mesh,
+  Ring,
+  Bus,
+  Tree,
+  Graph,
+  Matrix,
+  Vector,
+  Scalar,
+  Tensor,
+  Array,
+  List,
+  Stack,
+  Deque,
+  PriorityQueue,
+  Heap,
+  HashTable,
+  BloomFilter,
+  SkipList,
+  Trie,
+  BTree,
+  RedBlackTree,
+  AVLTree,
+  SplayTree,
+  Treap} from 'lucide-react';
+
+const workflowSolutions = [
+  {
+
+    id: 1,
+    title: "AI Process Automation","
+    description: "Intelligent automation of business processes using AI and machine learning.",
+    icon: Cog,
+    features[;"
+      "Process automation","
+      "AI decision making","
+      "Workflow optimization","
+      "Performance monitoring"
+    ],;"
+    price: "From $200,000","
+    timeline: "24-36 weeks","
+    category: "Process Automation","
+    technologies["AI", "RPA", "Workflow Engines", "Machine Learning"];
+  },;
+  {
+=======
 import React, { useState } from 'react';'
 import { motion } from 'framer-motion';  {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     id: 2,"
     title: "Intelligent Document Processing","
@@ -216,12 +507,12 @@ const workflowBenefits = [
   };];
 
 export default function AIWorkflowAutomation(...args[]):  {
-'
+
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
-'
-  const categories = ['All', 'Process Automation', 'Document Processing', 'Workflow Orchestration', 'Decision Automation', 'Analytics', 'Task Management'];
-'
+
+  const categories = ['All',Process Automation',Document Processing',Workflow Orchestration',Decision Automation',Analytics',Task Management'];
+
   const filteredSolutions = selectedCategory === 'All'
     ? workflowSolutions
     : workflowSolutions.filter (solution => solution.category === selectedCategory) ;
@@ -444,7 +735,7 @@ export default function AIWorkflowAutomation(...args[]):  {
                 <p className="text-zion-cyan font-semibold mb-2">{technology.useCase}</p>
 
                 <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${
-'
+
                   technology.reliability === 'Critical''
                     ? 'bg-red-500/20 text-red-400 border border-red-500/30''
                     : technology.reliability === 'High''
@@ -755,20 +1046,20 @@ export default function AIWorkflowAutomation(...args[]):  {
             className="text-center max-w-4xl mx-auto"
 "
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Automate Your Workflows?</h2>"
-            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">'
+            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Let's discuss how AI workflow automation can revolutionize your operations,
               improve efficiency, and create competitive advantages.
             </p>
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
 
                 Start Workflow Project
               </a>
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
 
                 Workflow Consultation

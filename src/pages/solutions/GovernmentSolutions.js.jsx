@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
 
@@ -10,103 +10,80 @@ import {
   Zap,
   ArrowRight,
   CheckCircle,
-  Star,'
+  Star,
   TrendingUp} from 'lucide-react';
 export default function GovernmentSolutions() {
   const solutions = [
     {
 
-      icon: Building2,'
-      title: 'Digital Government','
+      icon: Building2,
+      title: 'Digital Government',
       description: 'Modern digital government platforms and citizen services',
       features: ['
-        'Citizen Portals','
-        'Digital Services','
-        'E-Government','
-        'Service Automation',
+        'Citizen Portals',Digital Services',E-Government',Service Automation',
       ]},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Government Security',
       description:'
         'Comprehensive cybersecurity and compliance solutions for government',
       features: ['
-        'FedRAMP Compliance','
-        'Zero-Trust Security','
-        'Data Protection','
-        'Incident Response',
+        'FedRAMP Compliance',Zero-Trust Security',Data Protection',Incident Response',
       ]},
     {
 
-      icon: Users,'
-      title: 'Citizen Experience','
+      icon: Users,
+      title: 'Citizen Experience',
       description: 'AI-powered citizen engagement and service delivery',
       features: ['
-        'Smart Chatbots','
-        'Personalized Services','
-        'Multi-channel Support','
-        'Accessibility',
+        'Smart Chatbots',Personalized Services',Multi-channel Support',Accessibility',
       ]},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Government Analytics',
       description:'
         'Advanced analytics and insights for government decision-making',
       features: ['
-        'Performance Metrics','
-        'Data Visualization','
-        'Predictive Analytics','
-        'Reporting',
+        'Performance Metrics',Data Visualization',Predictive Analytics',Reporting',
       ]},
     {
 
-      icon: Lock,'
-      title: 'Compliance & Audit','
+      icon: Lock,
+      title: 'Compliance & Audit',
       description: 'Automated compliance monitoring and regulatory reporting',
       features: ['
-        'Regulatory Compliance','
-        'Audit Trails','
-        'Risk Management','
-        'Policy Enforcement',
+        'Regulatory Compliance',Audit Trails',Risk Management',Policy Enforcement',
       ]},
     {
 
-      icon: Zap,'
+      icon: Zap,
       title: 'Process Automation',
       description:'
         'Intelligent automation for government operations and workflows',
       features: ['
-        'Workflow Automation','
-        'Document Processing','
-        'Approval Systems','
-        'Resource Management',
+        'Workflow Automation',Document Processing',Approval Systems',Resource Management',
       ]},
   ];
   const benefits = ['
-    'Improved citizen satisfaction and engagement','
-    'Enhanced operational efficiency and cost savings','
-    'Better compliance and risk management','
-    'Increased transparency and accountability','
-    'Faster service delivery and response times','
-    'Enhanced data security and privacy protection',
+    'Improved citizen satisfaction and engagement',Enhanced operational efficiency and cost savings',Better compliance and risk management',Increased transparency and accountability',Faster service delivery and response times',Enhanced data security and privacy protection',
   ];
   const caseStudies = [
     {
-'
-      organization: 'State Government Agency','
-      specialty: 'Digital Services','
+
+      organization: 'State Government Agency',
+      specialty: 'Digital Services',
       challenge: 'Outdated citizen services and long processing times',
       solution:'
         'Implemented modern digital government platform with AI automation',
       results:'
         '70% reduction in processing times, 85% improvement in citizen satisfaction'},
     {
-'
-      organization: 'Federal Department','
-      specialty: 'Security & Compliance','
-      challenge: 'Cybersecurity vulnerabilities and compliance gaps','
+
+      organization: 'Federal Department',
+      specialty: 'Security & Compliance',
+      challenge: 'Cybersecurity vulnerabilities and compliance gaps',
       solution: 'Comprehensive security framework with FedRAMP compliance',
       results:'
         '100% compliance achievement, 90% reduction in security incidents'},
@@ -126,13 +103,13 @@ export default function GovernmentSolutions() {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105"
               >
                 Get Government Quote
               </Link>
               <Link"
-                to="/services/ai-autonomous-systems""
+                to="/services/ai-autonomous-systems"
                 className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300"
               >
                 Explore AI Solutions
@@ -270,7 +247,7 @@ export default function GovernmentSolutions() {
                   </div>
                 </div>
                 <Link"
-                  to="/case-studies""
+                  to="/case-studies"
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
                 >
                   Read Full Case Study"
@@ -288,19 +265,19 @@ export default function GovernmentSolutions() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Modernize Government?
           </h2>"
-          <p className="text-xl text-gray-300 mb-8">'
+          <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our government solutions can improve citizen
             services, enhance security, and drive efficiency
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
+              to="/contact"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105"
             >
               Schedule Consultation
             </Link>
             <Link"
-              to="/services-overview""
+              to="/services-overview"
               className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300"
             >
               View All Services

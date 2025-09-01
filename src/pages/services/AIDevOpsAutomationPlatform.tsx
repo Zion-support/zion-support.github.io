@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion } from 'framer-motion.ts';
 import { SEO } from '@/components/SEO';
 import {
 
@@ -27,127 +27,86 @@ import {
   BarChart3,
   Settings,
   Play,
-  Pause,'
+  Pause,
   RefreshCw} from 'lucide-react.ts';
 
 export default function AIDevOpsAutomationPlatform(...args: any[]): any {
 
   const features = ['
-    'AI-Powered Code Review & Analysis','
-    'Intelligent CI/CD Pipeline Optimization','
-    'Automated Security Vulnerability Detection','
-    'Smart Resource Scaling & Management','
-    'Predictive Performance Monitoring','
-    'Automated Testing & Quality Assurance','
-    'Intelligent Deployment Strategies','
-    'Real-time Incident Response & Recovery',
+    'AI-Powered Code Review & Analysis',Intelligent CI/CD Pipeline Optimization',Automated Security Vulnerability Detection',Smart Resource Scaling & Management',Predictive Performance Monitoring',Automated Testing & Quality Assurance',Intelligent Deployment Strategies',Real-time Incident Response & Recovery',
   ];
 
   const benefits = ['
-    'Reduce deployment time by 80% through intelligent automation','
-    'Eliminate 95% of human errors in deployment processes','
-    'Cut infrastructure costs by 40% with smart resource management','
-    'Improve code quality by 60% with AI-powered analysis','
-    'Achieve 99.9% uptime with predictive monitoring','
-    'Reduce security incidents by 90% with automated scanning','
-    'Accelerate time-to-market by 3x','
-    'Enable 24/7 autonomous operations',
+    'Reduce deployment time by 80% through intelligent automation',Eliminate 95% of human errors in deployment processes',Cut infrastructure costs by 40% with smart resource management',Improve code quality by 60% with AI-powered analysis',Achieve 99.9% uptime with predictive monitoring',Reduce security incidents by 90% with automated scanning',Accelerate time-to-market by 3x',Enable 24/7 autonomous operations',
   ];
 
   const capabilities = [
     {
-'
+
       category: 'Code Management',
       items: ['
-        'AI-powered code review and suggestions','
-        'Automated code quality analysis','
-        'Intelligent refactoring recommendations','
-        'Security vulnerability scanning','
-        'Performance optimization suggestions',
+        'AI-powered code review and suggestions',Automated code quality analysis',Intelligent refactoring recommendations',Security vulnerability scanning',Performance optimization suggestions',
       ]},
     {
-'
+
       category: 'Build & Deploy',
       items: ['
-        'Smart CI/CD pipeline orchestration','
-        'Automated testing and validation','
-        'Intelligent deployment strategies','
-        'Rollback automation','
-        'Multi-environment management',
+        'Smart CI/CD pipeline orchestration',Automated testing and validation',Intelligent deployment strategies',Rollback automation',Multi-environment management',
       ]},
     {
-'
+
       category: 'Infrastructure',
       items: ['
-        'Auto-scaling based on demand','
-        'Cost optimization algorithms','
-        'Resource allocation intelligence','
-        'Cloud provider optimization','
-        'Disaster recovery automation',
+        'Auto-scaling based on demand',Cost optimization algorithms',Resource allocation intelligence',Cloud provider optimization',Disaster recovery automation',
       ]},
     {
-'
+
       category: 'Monitoring & Operations',
       items: ['
-        'Predictive performance monitoring','
-        'Automated incident response','
-        'Intelligent alerting systems','
-        'Root cause analysis automation','
-        'Performance trend analysis',
+        'Predictive performance monitoring',Automated incident response',Intelligent alerting systems',Root cause analysis automation',Performance trend analysis',
       ]},
   ];
 
   const pricing = [
     {
-'
-      name: 'Starter','
-      price: '$29,999','
+
+      name: 'Starter',
+      price: '$29,999',
       period: 'one-time setup',
       features: ['
-        'Basic AI DevOps automation','
-        'Up to 10 applications','
-        'Standard CI/CD pipelines','
-        'Basic monitoring & alerting','
-        'Email support','
-        'Cloud deployment',
+        'Basic AI DevOps automation',Up to 10 applications',Standard CI/CD pipelines',Basic monitoring & alerting',Email support',Cloud deployment',
       ]},
     {
-'
-      name: 'Professional','
-      price: '$59,999','
+
+      name: 'Professional',
+      price: '$59,999',
       period: 'one-time setup',
       features: ['
-        'Advanced AI automation','
-        'Up to 50 applications','
-        'Custom CI/CD workflows','
-        'Advanced monitoring & analytics','
-        'Priority support','
-        'On-premise deployment option','
-        'Advanced security features',
+        'Advanced AI automation',Up to 50 applications',Custom CI/CD workflows',Advanced monitoring & analytics',Priority support',On-premise deployment option',Advanced security features',
       ]},
     {
-'
-      name: 'Enterprise','
-      price: '$119,999','
+
+      name: 'Enterprise',
+      price: '$119,999',
       period: 'one-time setup',
       features: ['
-        'Full AI DevOps platform','
-        'Unlimited applications','
-        'Custom automation workflows','
-        '24/7 dedicated support','
-        'Hybrid deployment options','
-        'Advanced analytics & reporting','
-        'Custom integrations','
-        'White-label solutions',
+        'Full AI DevOps platform',Unlimited applications',Custom automation workflows',24/7 dedicated support',Hybrid deployment options',Advanced analytics & reporting',Custom integrations',White-label solutions',
       ]},
   ];
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <SEO"
+<<<<<<< HEAD
+        title="AI DevOps Automation Platform | Zion Tech Group"
+        description="Revolutionary AI-powered DevOps automation platform that transforms software development, deployment, and operations with intelligent automation."
+        keywords="AI DevOps, automation platform, CI/CD, deployment automation, intelligent operations, Zion Tech Group"
+      />
+=======
         title="AI DevOps Automation Platform | Zion Tech Group""
         description="Revolutionary AI-powered DevOps automation platform that transforms software development, deployment, and operations with intelligent automation.""        keywords="AI DevOps, automation platform, CI/CD, deployment automation, intelligent operations, Zion Tech Group"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
@@ -178,13 +137,13 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
               >"
                 <Phone className="w-5 h-5 mr-2" />                Get Started Today
               </a>
               <a"
-                href="mailto:kleber@ziontechgroup.com""
+                href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >"
                 <Mail className="w-5 h-5 mr-2" />                Contact Us
@@ -360,12 +319,12 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
-'
+
                   plan.name === 'Professional''
                     ? 'border-blue-400/50 bg-gradient-to-b from-blue-500/10 to-transparent''
                     : 'border-blue-400/20'`
                 } hover:border-blue-400/40 transition-all duration-300`}
-              >'
+              >
                 {plan.name === 'Professional' && ("
                   <div className="text-center mb-4">"
                     <span className="inline-block bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-semibold px-3 py-1 rounded-full">
@@ -393,7 +352,7 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
                   ))}
                 </ul>
                 <a"
-                  href="tel:+13024640950""
+                  href="tel:+13024640950"
                   className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Started"
@@ -436,7 +395,7 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
               </div>"
               <h3 className="text-xl font-bold text-white mb-2">Phone</h3>"              <p className="text-gray-300 mb-4">+1 302 464 0950</p>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="text-blue-400 hover:text-blue-300 transition-colors duration-300"
               >
                 Call Now
@@ -455,7 +414,7 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
               </div>"
               <h3 className="text-xl font-bold text-white mb-2">Email</h3>"              <p className="text-gray-300 mb-4">kleber@ziontechgroup.com</p>
               <a"
-                href="mailto:kleber@ziontechgroup.com""
+                href="mailto:kleber@ziontechgroup.com"
                 className="text-blue-400 hover:text-blue-300 transition-colors duration-300"
               >
                 Send Email
@@ -477,9 +436,16 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
                 364 E Main St STE 1008, Middletown DE 19709
               </p>
               <a"
+<<<<<<< HEAD
+                href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:text-blue-300 transition-colors duration-300"
+=======
                 href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709""
                 target="_blank""
                 rel="noopener noreferrer""                className="text-blue-400 hover:text-blue-300 transition-colors duration-300"
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               >
                 View on Map
               </a>

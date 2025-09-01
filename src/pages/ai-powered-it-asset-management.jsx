@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 const AIPoweredITAssetManagement = () => {
   return()
@@ -17,13 +17,13 @@ const AIPoweredITAssetManagement = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 text-lg"
               >
                 Get Started
               </Link>
               <Link"
-                to="/services/infrastructure""
+                to="/services/infrastructure"
                 className="border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg"
               >
                 Learn More
@@ -202,13 +202,13 @@ const AIPoweredITAssetManagement = () => {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
+              to="/contact"
               className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 text-lg"
             >
               Schedule a Demo
             </Link>
             <Link"
-              to="/services/infrastructure""
+              to="/services/infrastructure"
               className="border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg"
             >
               Explore Services

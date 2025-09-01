@@ -1,5 +1,5 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Brain, Shield, ArrowRight, Star, BarChart3, Clock, TrendingUp, FileText, Search, CheckCircle } from 'lucide-react';
 const AIAutonomousLegalResearchAssistant = () => {
     const features = [

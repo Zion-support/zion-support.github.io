@@ -1,6 +1,6 @@
-import { FileText } from 'lucide-react';'
-import { Link } from 'react-router-dom';'
-import { useAuth } from '@/hooks/useAuth';'
+import { FileText } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
 import { useGetOrdersQuery } from '@/hooks/useOrders';
 import {
 
@@ -8,9 +8,9 @@ import {
   TableBody,
   TableCell,
   TableHead,
-  TableHeader,'
-  TableRow} from '@/components/ui/table';'
-import { Skeleton } from '@/components/ui/skeleton';'
+  TableHeader,
+  TableRow} from '@/components/ui/table';
+import { Skeleton } from '@/components/ui/skeleton';
 import { EmptyState } from '@/components/ui/empty-state';
 export default function OrdersPage() {
   const { user } = useAuth();

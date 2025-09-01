@@ -2,10 +2,10 @@ import React from 'react';
 const speakers = [
   {
 
-    name: 'Alex Zion','
-    title: 'Founder & CEO','
-    avatar: 'https://placehold.co/100x100','
-    twitter: '#','
+    name: 'Alex Zion',
+    title: 'Founder & CEO',
+    avatar: 'https://placehold.co/100x100',
+    twitter: '#',
     linkedin: '#'},
 ];
 export function SpeakersSection() {
@@ -28,8 +28,8 @@ export function SpeakersSection() {
                 {sp.twitter && (
                   <a
                     href={sp.twitter}"
-                    aria-label="Twitter""
-                    target="_blank""
+                    aria-label="Twitter"
+                    target="_blank"
                     rel="noopener noreferrer"
                   >
                     T
@@ -38,8 +38,8 @@ export function SpeakersSection() {
                 {sp.linkedin && (
                   <a
                     href={sp.linkedin}"
-                    aria-label="LinkedIn""
-                    target="_blank""
+                    aria-label="LinkedIn"
+                    target="_blank"
                     rel="noopener noreferrer"
                   >
                     in

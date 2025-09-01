@@ -1,4 +1,4 @@
-import { useState } from 'react';'
+import { useState } from 'react';
 import { CldUploadButton } from 'next-cloudinary';
 export function AvatarUpload({ value, onChange }) {
 
@@ -18,7 +18,7 @@ export function AvatarUpload({ value, onChange }) {
         <img"
           loading="lazy"
           src={url}"
-          alt="Avatar preview""
+          alt="Avatar preview"
           className="h-20 w-20 rounded-full"
         />
       )}

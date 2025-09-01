@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -19,8 +19,8 @@ import {
   Globe,
   Cpu,
   Database,
-  Workflow,'
-  Gauge} from 'lucide-react.ts';'
+  Workflow,
+  Gauge} from 'lucide-react.ts';
 import { Link } from 'react-router-dom.ts';
 
 const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
@@ -28,72 +28,67 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI-Powered Process Analysis',
       description:'
         'Advanced machine learning algorithms analyze your business processes to identify inefficiencies, bottlenecks, and optimization opportunities in real-time.'},
     {
 
-      icon: Workflow,'
+      icon: Workflow,
       title: 'Intelligent Workflow Automation',
       description:'
         'Automatically design and implement optimized workflows that adapt to changing business conditions and learn from user behavior patterns.'},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Predictive Performance Analytics',
       description:'
         'Forecast process performance, resource requirements, and potential issues before they impact your operations using AI-driven predictive modeling.'},
     {
 
-      icon: Zap,'
+      icon: Zap,
       title: 'Real-Time Optimization',
       description:'
         'Continuously monitor and optimize processes in real-time, automatically adjusting parameters and workflows for maximum efficiency.'},
     {
 
-      icon: Users,'
+      icon: Users,
       title: 'Human-AI Collaboration',
       description:'
         'Seamless integration between human workers and AI systems, with intelligent task allocation and decision support for optimal team performance.'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Compliance & Risk Management',
       description:'
         'Built-in compliance monitoring and risk assessment, ensuring all process optimizations meet regulatory requirements and industry standards.'},
   ];
 
   const benefits = ['
-    'Reduce process execution time by 40-60%','
-    'Cut operational costs by 25-35%','
-    'Improve process accuracy by 95%','
-    'Increase employee productivity by 30%','
-    'Reduce manual errors by 90%','
-    'Achieve 99.9% process uptime',
+    'Reduce process execution time by 40-60%',Cut operational costs by 25-35%',Improve process accuracy by 95%',Increase employee productivity by 30%',Reduce manual errors by 90%',Achieve 99.9% process uptime',
   ];
 
   const useCases = [
     {
-'
+
       title: 'Manufacturing & Production',
       description:'
         'Optimize production lines, inventory management, and quality control processes for maximum efficiency and minimal waste.',
       icon: Cpu},
     {
-'
+
       title: 'Financial Services',
       description:'
         'Streamline loan processing, risk assessment, compliance workflows, and customer onboarding for faster service delivery.',
       icon: DollarSign},
     {
-'
+
       title: 'Healthcare & Life Sciences',
       description:'
         'Optimize patient care workflows, clinical trial processes, and administrative operations for better patient outcomes.',
       icon: Users},
     {
-'
+
       title: 'Retail & E-commerce',
       description:'
         'Streamline order fulfillment, inventory management, customer service, and supply chain operations for seamless customer experiences.',
@@ -102,80 +97,63 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
 
   const pricing = [
     {
-'
-      name: 'Starter','
-      price: '$799','
+
+      name: 'Starter',
+      price: '$799',
       period: '/month',
       description:'
         'Perfect for small businesses starting their process optimization journey',
       features: ['
-        'Up to 10 process workflows','
-        'Basic AI analysis and recommendations','
-        'Standard reporting and dashboards','
-        'Email support','
-        'Basic integration capabilities',
-      ],'
+        'Up to 10 process workflows',Basic AI analysis and recommendations',Standard reporting and dashboards',Email support',Basic integration capabilities',
+      ],
       cta: 'Start Free Trial',
       popular: false},
     {
-'
-      name: 'Professional','
-      price: '$1,999','
+
+      name: 'Professional',
+      price: '$1,999',
       period: '/month',
       description:'
         'Ideal for growing companies with complex process optimization needs',
       features: ['
-        'Up to 50 process workflows','
-        'Advanced AI optimization algorithms','
-        'Real-time monitoring and alerts','
-        'Custom dashboards and reports','
-        'Priority support','
-        'Advanced integrations','
-        'Process simulation and testing',
-      ],'
+        'Up to 50 process workflows',Advanced AI optimization algorithms',Real-time monitoring and alerts',Custom dashboards and reports',Priority support',Advanced integrations',Process simulation and testing',
+      ],
       cta: 'Start Free Trial',
       popular: true},
     {
-'
-      name: 'Enterprise','
-      price: '$4,999','
+
+      name: 'Enterprise',
+      price: '$4,999',
       period: '/month',
       description:'
         'Comprehensive solution for large enterprises with complex operations',
       features: ['
-        'Unlimited process workflows','
-        'Custom AI model training','
-        'Advanced analytics and insights','
-        'White-label solutions','
-        'Dedicated account manager','
-        'Custom integrations and APIs','
-        'On-premise deployment options','
-        'Advanced security and compliance',
-      ],'
+        'Unlimited process workflows',Custom AI model training',Advanced analytics and insights',White-label solutions',Dedicated account manager',Custom integrations and APIs',On-premise deployment options',Advanced security and compliance',
+      ],
       cta: 'Contact Sales',
       popular: false},
   ];
 
   const roi = [
     {
-'
-      metric: 'Process Efficiency','
-      improvement: '40-60%','
+
+      metric: 'Process Efficiency',
+      improvement: '40-60%',
       description: 'Faster execution and reduced cycle times'},
     {
-'
-      metric: 'Cost Reduction','
-      improvement: '25-35%','
+
+      metric: 'Cost Reduction',
+      improvement: '25-35%',
       description: 'Lower operational and labor costs'},
     {
-'
-      metric: 'Error Reduction','
-      improvement: '90%','
+
+      metric: 'Error Reduction',
+      improvement: '90%',
       description: 'Minimal manual errors and rework'},
     {
-'
-      metric: 'Productivity Gain','
-      improvement: '30%','
+
+      metric: 'Productivity Gain',
+      improvement: '30%',
       description: 'Increased employee output and satisfaction'},
   ];
 
@@ -201,13 +179,13 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-900"
               >
                 Start Optimizing Today"
                 <ArrowRight className="w-5 h-5 ml-2 inline-block group-hover:translate-x-1 transition-transform duration-200" />              </Link>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="group px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 text-white font-bold text-lg rounded-xl transition-all duration-300 hover:bg-white/20 hover:border-blue-400/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-900"
               >"
                 <Phone className="w-5 h-5 mr-2 inline-block" />                Call Now
@@ -469,7 +447,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Optimize Your Business Processes?
             </h2>"
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">'
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Let's discuss how our AI-powered process optimization can
               transform your operations and drive measurable results for your
               business.
@@ -491,13 +469,13 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
               >
                 Schedule a Consultation"
                 <ArrowRight className="w-5 h-5 ml-2 inline-block group-hover:translate-x-1 transition-transform duration-200" />              </Link>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="group px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 text-white font-bold text-lg rounded-xl transition-all duration-300 hover:bg-white/20 hover:border-blue-400/50"
               >"
                 <Phone className="w-5 h-5 mr-2 inline-block" />                Call Now
@@ -520,7 +498,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
           </p>"
           <div className="mt-4 text-sm text-gray-500">
             <a"
-              href="https://ziontechgroup.com""
+              href="https://ziontechgroup.com"
               className="hover:text-blue-400 transition-colors"
             >
               ziontechgroup.com

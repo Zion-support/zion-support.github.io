@@ -1,5 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { StarIcon } from '@heroicons/react/24/solid';
 export function TestimonialsSection() {
     const testimonials = [
@@ -16,7 +16,7 @@ export function TestimonialsSection() {
 "
             name: "Michael Chen","
             role: "VP of Engineering","
-            comp: "InnovateCorp",'"
+            comp: "InnovateCorp","
             content: "The team's expertise in cloud migration was exceptional. They completed our transition in half the expected time with zero downtime.",
             rating: 5,"
             avatar: "MC"
@@ -25,7 +25,7 @@ export function TestimonialsSection() {
 "
             name: "Emily Rodriguez","
             role: "Director of IT","
-            comp: "Global Manufacturing Inc.",'"
+            comp: "Global Manufacturing Inc.","
             content: "Their cybersecurity solutions gave us peace of mind. We're now SOC 2 compliant and have a robust security posture.",
             rating: 5,"
             avatar: "ER"
@@ -105,7 +105,7 @@ export function TestimonialsSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             What Our Clients Say
           </h2>"
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">'
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             Don't just take our word for it. Here's what industry leaders have to say
             about their experience working with Zion Tech Group.
           </p>

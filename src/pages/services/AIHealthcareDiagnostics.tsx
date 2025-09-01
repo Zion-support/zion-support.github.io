@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -27,8 +27,8 @@ import {
   Microscope,
   Pill,
   Syringe,
-  Thermometer,'
-  BrainCircuit} from 'lucide-react.ts';'
+  Thermometer,
+  BrainCircuit} from 'lucide-react.ts';
 import { SEO } from '../../components/SEO';
 
 export default function AIHealthcareDiagnostics(...args: any[]): any {
@@ -36,25 +36,25 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI-Powered Diagnosis',
       description:'
         'Advanced machine learning algorithms for accurate disease detection and diagnosis'},
     {
 
-      icon: Eye,'
+      icon: Eye,
       title: 'Medical Imaging AI',
       description:'
         'Computer vision for X-rays, MRIs, CT scans, and ultrasound analysis'},
     {
 
-      icon: Heart,'
+      icon: Heart,
       title: 'Predictive Analytics',
       description:'
         'Early disease prediction and risk assessment using patient data'},
     {
 
-      icon: Stethoscope,'
+      icon: Stethoscope,
       title: 'Clinical Decision Support',
       description:'
         'AI-powered recommendations for treatment plans and medication'},
@@ -62,114 +62,79 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
 
   const diagnosticCapabilities = [
     {
-'
+
       category: 'Radiology',
       services: ['
-        'X-ray Analysis','
-        'MRI Interpretation','
-        'CT Scan Review','
-        'Ultrasound Assessment',
-      ],'
+        'X-ray Analysis',MRI Interpretation',CT Scan Review',Ultrasound Assessment',
+      ],
       accuracy: '98.5%',
       icon: Eye},
     {
-'
+
       category: 'Cardiology',
       services: ['
-        'ECG Analysis','
-        'Heart Disease Detection','
-        'Arrhythmia Detection','
-        'Risk Assessment',
-      ],'
+        'ECG Analysis',Heart Disease Detection',Arrhythmia Detection',Risk Assessment',
+      ],
       accuracy: '97.8%',
       icon: Heart},
     {
-'
+
       category: 'Oncology',
       services: ['
-        'Tumor Detection','
-        'Cancer Screening','
-        'Treatment Response','
-        'Prognosis Analysis',
-      ],'
+        'Tumor Detection',Cancer Screening',Treatment Response',Prognosis Analysis',
+      ],
       accuracy: '96.9%',
       icon: Microscope},
     {
-'
+
       category: 'Neurology',
       services: ['
-        'Brain Scan Analysis','
-        'Stroke Detection','
-        "Alzheimer's Screening",'
-        'Seizure Detection',
-      ],'
+        'Brain Scan Analysis',Stroke Detection',
+        "Alzheimer's Screening",Seizure Detection',
+      ],
       accuracy: '97.2%',
       icon: BrainCircuit},
   ];
 
   const benefits = ['
-    'Reduce diagnostic errors by up to 85%','
-    'Improve early detection rates by 60%','
-    'Cut diagnosis time by 70%','
-    'Enhance treatment accuracy by 75%','
-    'Reduce healthcare costs by 40%','
-    'Enable remote diagnostics and telemedicine',
+    'Reduce diagnostic errors by up to 85%',Improve early detection rates by 60%',Cut diagnosis time by 70%',Enhance treatment accuracy by 75%',Reduce healthcare costs by 40%',Enable remote diagnostics and telemedicine',
   ];
 
   const pricing = [
     {
-'
-      name: 'Basic','
-      price: '$3,500','
+
+      name: 'Basic',
+      price: '$3,500',
       period: '/month',
       features: ['
-        'Up to 1,000 scans/month','
-        'Basic AI diagnosis','
-        'Standard reporting','
-        'Email support','
-        'Basic integrations',
+        'Up to 1,000 scans/month',Basic AI diagnosis',Standard reporting',Email support',Basic integrations',
       ]},
     {
-'
-      name: 'Professional','
-      price: '$7,500','
+
+      name: 'Professional',
+      price: '$7,500',
       period: '/month',
       features: ['
-        'Up to 10,000 scans/month','
-        'Advanced AI algorithms','
-        'Custom reporting','
-        'Priority support','
-        'API access','
-        'Custom integrations',
+        'Up to 10,000 scans/month',Advanced AI algorithms',Custom reporting',Priority support',API access',Custom integrations',
       ]},
     {
-'
-      name: 'Enterprise','
-      price: '$18,000','
+
+      name: 'Enterprise',
+      price: '$18,000',
       period: '/month',
       features: ['
-        'Unlimited scans','
-        'Custom AI models','
-        'White-label solution','
-        '24/7 dedicated support','
-        'On-premise deployment','
-        'Custom development',
+        'Unlimited scans',Custom AI models',White-label solution',24/7 dedicated support',On-premise deployment',Custom development',
       ]},
   ];
 
   const complianceFeatures = ['
-    'HIPAA Compliant','
-    'FDA Approved Algorithms','
-    'SOC 2 Type II Certified','
-    'GDPR Compliant','
-    'ISO 27001 Certified','
-    'End-to-end Encryption',
+    'HIPAA Compliant',FDA Approved Algorithms',SOC 2 Type II Certified',GDPR Compliant',ISO 27001 Certified',End-to-end Encryption',
   ];
 
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-        title="AI Healthcare Diagnostics - Zion Tech Group""
+        title="AI Healthcare Diagnostics - Zion Tech Group"
         description="Revolutionary AI-powered healthcare diagnostics platform for accurate disease detection, medical imaging analysis, and clinical decision support."
       />
 
@@ -391,7 +356,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Flexible Pricing Plans
             </h2>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that fits your healthcare facility's needs. All
               plans include our core AI diagnostic capabilities.
             </p>

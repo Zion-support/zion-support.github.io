@@ -8,27 +8,27 @@ export default function ResearchDevelopment(...args[]):  {
 
 	const researchAreas = [
 		{
-'
-			title: 'AI & Machine Learning','
-			description: 'Advancing autonomous systems, neural networks, and intelligent automation technologies.','
-			projects['Multi-agent AI systems', 'Federated learning', 'Explainable AI'],
-			icon: FlaskConical,'
+
+			title: 'AI & Machine Learning',
+			description: 'Advancing autonomous systems, neural networks, and intelligent automation technologies.',
+			projects['Multi-agent AI systems',Federated learning',Explainable AI'],
+			icon: FlaskConical,
 			color: 'blue'
 		},
 		{
-'
-			title: 'Quantum Computing','
-			description: 'Exploring quantum algorithms and their applications in business and scientific computing.','
-			projects['Quantum neural networks', 'Quantum cryptography', 'Quantum optimization'],
-			icon: Microscope,'
+
+			title: 'Quantum Computing',
+			description: 'Exploring quantum algorithms and their applications in business and scientific computing.',
+			projects['Quantum neural networks',Quantum cryptography',Quantum optimization'],
+			icon: Microscope,
 			color: 'purple'
 		},
 		{
-'
-			title: 'Edge Computing','
-			description: 'Developing next-generation edge computing platforms for IoT and real-time applications.','
-			projects['Edge AI deployment', '5G integration', 'Autonomous edge systems'],
-			icon: Rocket,'
+
+			title: 'Edge Computing',
+			description: 'Developing next-generation edge computing platforms for IoT and real-time applications.',
+			projects['Edge AI deployment',5G integration',Autonomous edge systems'],
+			icon: Rocket,
 			color: 'green'
 
 	]
@@ -40,4 +40,3 @@ export default function ResearchDevelopment(...args[]):  {
 		</>
 	);
 };
-'

@@ -1,60 +1,59 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAnalytics() {
   const features = [
-    'AI-powered security analytics optimization','
-    'Intelligent threat intelligence and analysis',;'
-    'Automated security data processing and insights',;'
-    'Predictive analytics for security trends',;'
-    'Smart security reporting and visualization',;'
-    'AI-driven security data correlation and analysis',;'
-    'Real-time security performance metrics',;'
+    'AI-powered security analytics optimization',Intelligent threat intelligence and analysis',;
+    'Automated security data processing and insights',;
+    'Predictive analytics for security trends',;
+    'Smart security reporting and visualization',;
+    'AI-driven security data correlation and analysis',;
+    'Real-time security performance metrics',;
     'Custom AI models for security applications';
   ];
 
   const tiers = [
     {
-'
-      name: 'Developer','
-      price: '$499/mo','
-      details: ['Up to 100GB data/month', 'Basic AI features', 'Standard analytics', 'Email support']
+
+      name: 'Developer',
+      price: '$499/mo',
+      details: ['Up to 100GB data/month',Basic AI features',Standard analytics',Email support']
     },
     {
-'
-      name: 'Business', '
-      price: '$1,299/mo', '
-      details: ['Up to 1TB data/month', 'Advanced AI features', 'Enhanced analytics', 'Priority support'] ;
+
+      name: 'Business',
+      price: '$1,299/mo',
+      details: ['Up to 1TB data/month',Advanced AI features',Enhanced analytics',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$3,499/mo', ;'
-      details: ['Unlimited data', 'Custom AI models', 'Full analytics suite', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$3,499/mo', ;
+      details: ['Unlimited data',Custom AI models',Full analytics suite',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Security analytics optimization',;'
-    'Threat intelligence and analysis',;'
-    'Security data processing and insights',;'
-    'Security reporting and visualization',;'
-    'Security data correlation and analysis',;'
+  const useCases = [;
+    'Security analytics optimization',;
+    'Threat intelligence and analysis',;
+    'Security data processing and insights',;
+    'Security reporting and visualization',;
+    'Security data correlation and analysis',;
     'Security analytics scaling and management';
   ];
 
-  const benefits = [;'
-    'Improve security analytics performance by 50-80%',;'
-    'Reduce data processing time by 40-70%',;'
-    'Cut security analytics costs by 35-65%',;'
-    'Enhance security analytics reliability and scalability',;'
-    'Optimize resource utilization',;'
+  const benefits = [;
+    'Improve security analytics performance by 50-80%',;
+    'Reduce data processing time by 40-70%',;
+    'Cut security analytics costs by 35-65%',;
+    'Enhance security analytics reliability and scalability',;
+    'Optimize resource utilization',;
     'Scale security analytics operations efficiently';
   ];
 
-  const industries = [;'
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
     'Technology & SaaS';
   ];
 
@@ -107,8 +106,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['50-80% performance improvement', '40-70% processing time reduction', '35-65% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['50-80% performance improvement',40-70% processing time reduction',35-65% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-violet-600 mb-3" />"              <div className="text-gray-900 font-semibold">{t}</div>
             </div>

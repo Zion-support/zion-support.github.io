@@ -10,15 +10,8 @@ import { MICRO_SAAS_SERVICES, getMicroSaasCategories } from "@/data/microSaasSer
 import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Phone, Mail, MapPin, Globe, CheckCircle, Star, TrendingUp, Zap, Users } from "lucide-react";"
 import { Link } from "react-router-dom";
 const categoryIcons = {
-'
-  'AI Business Solutions': Brain,'
-    'IT Infrastructure': Cloud,'
-    'Data Analytics': BarChart3,'
-    'AI Development': Code,'
-    'FinTech': DollarSign,'
-    'HealthTech': Heart,'
-    'E-commerce': ShoppingCart,'
-  'EdTech': GraduationCap
+
+  'AI Business Solutions': Brain,IT Infrastructure': Cloud,Data Analytics': BarChart3,AI Development': Code,FinTech': DollarSign,HealthTech': Heart,E-commerce': ShoppingCart,EdTech': GraduationCap
 
 };
 const benefits = [
@@ -58,11 +51,11 @@ const features = ["
     "Comprehensive Documentation"
 ];
 export default function MicroSaasServices() {
-'
-    const [selectedCategory, setSelectedCategory] = useState('all');'
+
+    const [selectedCategory, setSelectedCategory] = useState('all');
     const filteredServices = selectedCategory === 'all'
         ? MICRO_SAAS_SERVICES'
-        : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory);"
+        : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g,-') === selectedCategory);"
     return (<div className="min-h-screen bg-background">
       {/* Hero Section */}"
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white py-20">"

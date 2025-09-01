@@ -25,7 +25,7 @@ app.use(
         defaultSrc: ["'self'"],
         styleSrc: ["'self'", "'unsafe-inline'"],
         scriptSrc: ["'self'"],
-        imgSrc: ["'self'", 'data:', 'https:'],
+        imgSrc: ["'self'",data:',https:'],
       },
     },
   })
@@ -35,7 +35,7 @@ app.use(
   cors({
     origin:
       NODE_ENV === 'development'
-        ? ['http://localhost:3000', 'http://localhost:5000']
+        ? ['http://localhost:3000',http://localhost:5000']
         : process.env.FRONTEND_URL || 'http://localhost:3000',
     credentials: true,
   })
@@ -65,12 +65,12 @@ app.use('/api', apiRoutes);
 
 // Serve static files from the built Vite frontend
 if (NODE_ENV === 'production') {
-  const frontendPath = path.join(__dirname, '../../dist');
+  const frontendPath = path.join(__dirname,../../dist');
   app.use(express.static(frontendPath));
 
   // Handle client-side routing
   app.get'*': unknown, (_req: unknown, res: unknown {
-    res.sendFile(path.join(frontendPath, 'index.html'));
+    res.sendFile(path.join(frontendPath,index.html'));
   });
 }
 

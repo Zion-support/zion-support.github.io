@@ -6,25 +6,25 @@ const InnovationServicesMarketing = () => {
     const categories = Array.from (new Set (allServices.map (service => service.category) ) ) ;
     const industries = Array.from (new Set (specializedIndustrySolutions2025.map (service => service.industry) ) ) ;
     const formatPrice = (price, model) => {
-'
+
         if (model === 'percentage of revenue') {
 
-            return `${price}% of revenue`}'
+            return `${price}% of revenue`}
         else if (model === 'per device per day') {
 `
-            return `$${price.toFixed(2)}/device/day`}'
+            return `$${price.toFixed(2)}/device/day`}
         else if (model === 'per kWh managed') {
 `
-            return `$${price.toFixed(3)}/kWh`}'
+            return `$${price.toFixed(3)}/kWh`}
         else if (model === 'per acre') {
 `
-            return `$${price.toFixed(2)}/acre/month`}'
+            return `$${price.toFixed(2)}/acre/month`}
         else if (model === 'per inference') {
 `
-            return `$${price.toFixed(3)}/inference`}'
+            return `$${price.toFixed(3)}/inference`}
         else if (model === 'monthly per student') {
 `
-            return `$${price}/student/month`}'
+            return `$${price}/student/month`}
         else if (model === 'monthly per attorney') {
 `
             return `$${price}/attorney/month`}

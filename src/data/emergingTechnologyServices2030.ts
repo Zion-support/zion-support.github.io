@@ -40,7 +40,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
   {
 "
     id: "neuromorphic-computing-platform","
-    title: "Neuromorphic Computing Platform",'"
+    title: "Neuromorphic Computing Platform","
     description: "Advanced neuromorphic computing platform that mimics the human brain's neural structure for ultra-efficient AI processing. Achieves 1000x better energy efficiency than traditional computing.","
     category: "Emerging Technology","
     subcategory: "Neuromorphic Computing",

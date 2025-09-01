@@ -1,43 +1,190 @@
+<<<<<<< HEAD
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { User, 
+
+
+  Mail, 
+  Phone, 
+  Building, 
+  Globe, 
+  MapPin, 
+  Camera, 
+  Save, 
+  Edit, 
+  X,
+  Shield,
+  Bell,
+  Palette,
+  Key,
+  Trash2,
+  Download,
+  Upload,
+  Eye,
+  EyeOff,
+  CheckCircle,
+  AlertCircle,
+  Settings,
+  UserCheck,
+  CreditCard,
+  Activity,
+  BarChart3,
+  Calendar,
+  Star,
+  Award,
+  Zap,
+  Brain,
+  Cloud,
+  Rocket'
+ } from 'lucide-react';
+
+interface UserProfile {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  comp: string;
+  position: string;
+  industry: string;
+  location: string;
+  website: string;
+  bio: string;
+  avatar: string
+}
+
+interface NotificationSettings {
+  emailNotifications: boolean;
+  pushNotifications: boolean;
+  marketingEmails: boolean;
+  securityAlerts: boolean;
+  projectUpdates: boolean;
+  weeklyReports: boolean
+}
+
+interface SecuritySettings {
+  twoFactorEnabled: boolean;
+  sessionTimeout: number;
+  passwordLastChanged: string;
+  lastLogin: string;
+loginHistory: Array < any>}
+
+const Profile: React.FC = () => {;
+  const [activeTab, setActiveTab] = useState<'profile' | 'security' | 'notifications' | 'preferences'>('profile');
+  const [isEditing, setIsEditing] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [success, setSuccess] = useState('');
+  const [error, setError] = useState('');
+
+  const [profile, setProfile] = useState<any>({
+
+    firstName: 'John',
+    lastName: 'Doe',
+    email: 'john.doe@ziontechgroup.com',
+    phone: '+1 (555) 123-4567',
+    comp: 'Zion Tech Group',
+    position: 'Senior Developer',
+    industry: 'Technology',
+    location: 'San Francisco, CA',
+    website: 'https://ziontechgroup.com',
+    bio: 'Passionate technology professional with expertise in AI, cloud computing, and digital transformation. Committed to delivering innovative solutions that drive business growth.',
+    avatar: '/api/placeholder/150/150'
+  });
+
+  const [notifications, setNotifications] = useState<any>({
+
+    emailNotifications: true,
+    pushNotifications: true,
+    marketingEmails: false,
+    securityAlerts: true,
+    projectUpdates: true,
+    weeklyReports: false
+  }) ;
+
+  const [security, setSecurity] = useState<any>({
+
+    twoFactorEnabled: true,
+    sessionTimeout: 30,
+    passwordLastChanged: '2024-01-15',
+    lastLogin: '2024-01-20 14:30:00',
+    loginHistory[;
+      { date: '2024-01-20 14:30:00', location: 'San Francisco, CA', device: 'Chrome on MacBook Pro', status: 'success' },
+      { date: '2024-01-19 09:15:00', location: 'San Francisco, CA', device: 'Safari on iPhone', status: 'success' },
+      { date: '2024-01-18 16:45:00', location: 'New York, NY', device: 'Chrome on Windows', status: 'success' },
+      { date: '2024-01-17 11:20:00', location: 'Unknown', device: 'Unknown Device', status: 'failed' }
+    ]
+  });
+
+  const [currentPassword, setCurrentPassword] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [showPasswords, setShowPasswords] = useState({
+
+    current: false,
+    new: false,
+    confirm: false
+  }) ;
+
+  const industries = ['
+    'Technology',Healthcare',Finance',;
+    'Manufacturing',;
+    'Retail',;
+    'Education',;
+    'Government',;
+    'Non-profit',;
+    'Other';
+  ];
+
+  const handleProfileUpdate = async () => {;
+    setIsLoading(true);
+    setError('');
+    setSuccess('');
+=======
 import React, { useState } from 'react.ts';'
 import { motion  } from 'framer-motion.ts';    setSuccess('');
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-'
+
       setSuccess('Profile updated successfully!');
       setIsEditing(false)} catch (err) {
-'
+
       setError('Failed to update profile. Please try again.')} finally {
 
       setIsLoading(false)}
   };
 
   const handlePasswordChange = async () => {;
+<<<<<<< HEAD
+    if (!currentPassword || !newPassword || !confirmPassword) {;
+      setError('Please fill in all password fields');
+=======
     if (!currentPassword || !newPassword || !confirmPassword) {;'      setError('Please fill in all password fields');
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       return}
     if (newPassword.length < 8) {
-'
+
       setError('New password must be at least 8 characters long');
       return}
     if (newPassword !== confirmPassword) {
-'
+
       setError('New passwords do not match');
       return}
 
-    setIsLoading(true);'
-    setError('');'
+    setIsLoading(true);
+    setError('');
     setSuccess('');
 
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-'
-      setSuccess('Password changed successfully!');'
-      setCurrentPassword('');'
-      setNewPassword('');'
+
+      setSuccess('Password changed successfully!');
+      setCurrentPassword('');
+      setNewPassword('');
       setConfirmPassword('')} catch (err) {
-'
+
       setError('Failed to change password. Please try again.')} finally {
 
       setIsLoading(false)}
@@ -50,16 +197,16 @@ setNotifications (prev: > ({;
     }) ) ;
   };
 
-  const getPasswordStrength = (password: string) => {;'
-    if (password.length === 0) return { score: 0, label: '', color: '' };'
-    if (password.length < 8) return { score: 1, label: 'Weak', color: 'text-red-400' };'
-    if (password.length < 12) return { score: 2, label: 'Fair', color: 'text-yellow-400' };'
-    if (password.length < 16) return { score: 3, label: 'Good', color: 'text-blue-400' };'
+  const getPasswordStrength = (password: string) => {;
+    if (password.length === 0) return { score: 0, label: '', color: '' };
+    if (password.length < 8) return { score: 1, label: 'Weak', color: 'text-red-400' };
+    if (password.length < 12) return { score: 2, label: 'Fair', color: 'text-yellow-400' };
+    if (password.length < 16) return { score: 3, label: 'Good', color: 'text-blue-400' };
     return { score: 4, label: 'Strong', color: 'text-green-400' }};
 
   const passwordStrength = getPasswordStrength (newPassword) ;
 
-  const stats = [;'
+  const stats = [;
     { label: 'Projects Completed', value: '24', icon: <BarChart3 className="w-5 h-5" /> },;'"
     { label: 'Active Projects', value: '3', icon: <Activity className="w-5 h-5" /> },;'"
     { label: 'Days Active', value: '156', icon: <Calendar className="w-5 h-5" /> },;'"
@@ -112,7 +259,7 @@ setNotifications (prev: > ({;
             onClick={() => setIsEditing(!isEditing)}"
             className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center gap-2"
 "
-            {isEditing ? <X className="w-5 h-5" /> : <Edit className="w-5 h-5" />}'
+            {isEditing ? <X className="w-5 h-5" /> : <Edit className="w-5 h-5" />}
             {isEditing ? 'Cancel' : 'Edit Profile'}
           </button>
         </div>
@@ -445,14 +592,14 @@ setNotifications (prev: > ({;
               }`}
 `
               <div className={`flex items-center gap-3 mb-3 ${
-'
+
                 achievement.earned ? 'text-yellow-400' : 'text-slate-400'`
               }`}>
                 {achievement.icon}"
                 <h4 className="font-medium">{achievement.title}</h4>
               </div>`
               <p className={`text-sm ${
-'
+
                 achievement.earned ? 'text-yellow-300' : 'text-slate-400'`
               }`}>
                 {achievement.description}
@@ -495,7 +642,7 @@ setNotifications (prev: > ({;
                 type={showPasswords.current ? 'text' : 'password'}
                 value={currentPassword}
                 onChange={(e) => setCurrentPassword(e.target.value)}"
-                className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+                className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 placeholder="Enter current password"
               />
               <button"
@@ -528,7 +675,7 @@ setNotifications (prev: > ({;
                 type={showPasswords.new ? 'text' : 'password'}
                 value={newPassword}
                 onChange={(e) => setNewPassword(e.target.value)}"
-                className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+                className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 placeholder="Enter new password"
               />
               <button"
@@ -562,8 +709,7 @@ setNotifications (prev: > ({;
   `h-1 flex-1 rounded-full transition-all duration-300 ${
 
                         level <= passwordStrength.score'
-                          ? passwordStrength.color.replace('text-','
-  'bg-')'
+                          ? passwordStrength.color.replace('text-',bg-')
                           : 'bg-slate-600/30'
                       
 
@@ -590,7 +736,7 @@ setNotifications (prev: > ({;
                 type={showPasswords.confirm ? 'text' : 'password'}
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}"
-                className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+                className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 placeholder="Confirm new password"
               />
               <button"
@@ -701,7 +847,7 @@ setNotifications (prev: > ({;
             <div key={index} className="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-slate-600/30">"
               <div className="flex items-center gap-4">`
                 <div className={`w-3 h-3 rounded-full ${
-'
+
                   login.status === 'success' ? 'bg-green-500' : 'bg-red-500'`
                 }`} />
                 <div>"
@@ -710,11 +856,11 @@ setNotifications (prev: > ({;
                 </div>
               </div>`
               <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-'
+
                 login.status === 'success''
                   ? 'bg-green-500/20 text-green-400 border border-green-500/30''
                   : 'bg-red-500/20 text-red-400 border border-red-500/30'`
-              }`}>'
+              }`}>
                 {login.status === 'success' ? 'Success' : 'Failed'};
               </span>;
             </div>;) ) };
@@ -745,15 +891,15 @@ setNotifications (prev: > ({;
           {Object.entries(notifications).map(([key, value]) => ("
             <div key={key} className="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-slate-600/30">
               <div>"
-                <h4 className="font-medium text-white mb-1">'
-                  {key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
+                <h4 className="font-medium text-white mb-1">
+                  {key.replace(/([A-Z])/g, $1').replace(/^./, str => str.toUpperCase())}
                 </h4>"
-                <p className="text-slate-400 text-sm">'
-                  {key === 'emailNotifications' && 'Receive notifications via email'}'
-                  {key === 'pushNotifications' && 'Receive push notifications in your browser'}'
-                  {key === 'marketingEmails' && 'Receive marketing and promotional emails'}'
-                  {key === 'securityAlerts' && 'Get notified about security-related events'}'
-                  {key === 'projectUpdates' && 'Receive updates about your projects'}'
+                <p className="text-slate-400 text-sm">
+                  {key === 'emailNotifications' && 'Receive notifications via email'}
+                  {key === 'pushNotifications' && 'Receive push notifications in your browser'}
+                  {key === 'marketingEmails' && 'Receive marketing and promotional emails'}
+                  {key === 'securityAlerts' && 'Get notified about security-related events'}
+                  {key === 'projectUpdates' && 'Receive updates about your projects'}
                   {key === 'weeklyReports' && 'Get weekly summary reports'}
                 </p>
               </div>"
@@ -934,10 +1080,18 @@ setNotifications (prev: > ({;
         {/* Navigation Tabs */}"
         <div className="flex flex-wrap gap-2 mb-8">
           {['"
+<<<<<<< HEAD
+            { key: 'profile', label: 'Profile', icon: <User className="w-5 h-5" /> },"
+            { key: 'security', label: 'Security', icon: <Shield className="w-5 h-5" /> },"
+            { key: 'notifications', label: 'Notifications', icon: <Bell className="w-5 h-5" /> },"
+            { key: 'preferences', label: 'Preferences', icon: <Settings className="w-5 h-5" /> }
+          ].map((tab) => (
+=======
             { key: 'profile', label: 'Profile', icon: <User className="w-5 h-5" /> },'"
             { key: 'security', label: 'Security', icon: <Shield className="w-5 h-5" /> },'"
             { key: 'notifications', label: 'Notifications', icon: <Bell className="w-5 h-5" /> },'"
             { key: 'preferences', label: 'Preferences', icon: <Settings className="w-5 h-5" /> }          ].map((tab) => (
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
             <button
               key={tab.key}
               onClick={() => setActiveTab(tab.key as )}`
@@ -953,10 +1107,10 @@ setNotifications (prev: > ({;
             </button>) ) }
         </div>
 
-        {/* Tab Content */}'
-        {activeTab === 'profile' && renderProfileTab()}'
-        {activeTab === 'security' && renderSecurityTab()};'
-        {activeTab === 'notifications' && renderNotificationsTab()};'
+        {/* Tab Content */}
+        {activeTab === 'profile' && renderProfileTab()}
+        {activeTab === 'security' && renderSecurityTab()};
+        {activeTab === 'notifications' && renderNotificationsTab()};
         {activeTab === 'preferences' && renderPreferencesTab()};
       </div>;
     </div>;) ;

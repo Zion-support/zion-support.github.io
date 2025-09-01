@@ -1,5 +1,5 @@
-import React from 'react';'
-import { useNotifications } from '@/context/notifications/NotificationContext';'
+import React from 'react';
+import { useNotifications } from '@/context/notifications/NotificationContext';
 import { formatDistanceToNow } from 'date-fns';
 import {
 
@@ -11,49 +11,49 @@ import {
   AlertCircle,
   MessageCircle,
   Briefcase,
-  UserCheck,'
-  Settings} from 'lucide-react';'
-import { Button } from '@/components/ui/button';'
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';'
-import { Badge } from '@/components/ui/badge';'
-import { Skeleton } from '@/components/ui/skeleton';'
-import { SEO } from '@/components/SEO';'
-import { useNavigate } from 'react-router-dom';'
-import { cn } from '@/lib/utils';'
+  UserCheck,
+  Settings} from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { Badge } from '@/components/ui/badge';
+import { Skeleton } from '@/components/ui/skeleton';
+import { SEO } from '@/components/SEO';
+import { useNavigate } from 'react-router-dom';
+import { cn } from '@/lib/utils';
 const getNotificationIcon = (type, className = 'h-5 w-5') => {
 
   switch (type) {
-'
+
     case 'message':'
-      return <MessageCircle className={cn(className, 'text-blue-500')} />;'
+      return <MessageCircle className={cn(className,text-blue-500')} />;
     case 'quote_request':'
-      return <Briefcase className={cn(className, 'text-purple-500')} />;'
+      return <Briefcase className={cn(className,text-purple-500')} />;
     case 'booking_confirmation':'
-      return <CheckCircle className={cn(className, 'text-green-500')} />;'
+      return <CheckCircle className={cn(className,text-green-500')} />;
     case 'hire_request':'
-      return <UserCheck className={cn(className, 'text-zion-purple')} />;'
+      return <UserCheck className={cn(className,text-zion-purple')} />;
     case 'onboarding':'
-      return <Settings className={cn(className, 'text-zion-cyan')} />;'
+      return <Settings className={cn(className,text-zion-cyan')} />;
     case 'system':'
-      return <AlertCircle className={cn(className, 'text-yellow-500')} />;
+      return <AlertCircle className={cn(className,text-yellow-500')} />;
     default:'
-      return <Bell className={cn(className, 'text-gray-500')} />;
+      return <Bell className={cn(className,text-gray-500')} />;
   }
 };
 const getNotificationTypeBadge = type => {
 
   switch (type) {
-'
+
     case 'message':
-      return <Badge className="bg-blue-500">Message</Badge>;'
+      return <Badge className="bg-blue-500">Message</Badge>;
     case 'quote_request':"
-      return <Badge className="bg-purple-500">Quote Request</Badge>;'
+      return <Badge className="bg-purple-500">Quote Request</Badge>;
     case 'booking_confirmation':"
-      return <Badge className="bg-green-500">Booking</Badge>;'
+      return <Badge className="bg-green-500">Booking</Badge>;
     case 'hire_request':"
-      return <Badge className="bg-zion-purple">Hire Request</Badge>;'
+      return <Badge className="bg-zion-purple">Hire Request</Badge>;
     case 'onboarding':"
-      return <Badge className="bg-zion-cyan">Onboarding</Badge>;'
+      return <Badge className="bg-zion-cyan">Onboarding</Badge>;
     case 'system':"
       return <Badge className="bg-yellow-500">System</Badge>;
     default:"
@@ -83,8 +83,8 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
       )}
     >"
       <div className="flex items-start gap-4">"
-        <div className="mt-1">'
-          {getNotificationIcon(notification.type, 'h-6 w-6')}
+        <div className="mt-1">
+          {getNotificationIcon(notification.type,h-6 w-6')}
         </div>"
         <div className="flex-1">"
           <div className="flex justify-between">"
@@ -99,7 +99,7 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
                 </span>
                 {!notification.read && (
                   <Badge"
-                    variant="outline""
+                    variant="outline"
                     className="bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs"
                   >
                     New
@@ -111,8 +111,8 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
             <div className="flex items-center gap-2">
               {!notification.read && (
                 <Button"
-                  variant="ghost""
-                  size="sm""
+                  variant="ghost"
+                  size="sm"
                   className="h-8 w-8 p-0"
                   onClick={() => onMarkAsRead(notification.id)}
                 >"
@@ -121,8 +121,8 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
                 </Button>
               )}
               <Button"
-                variant="ghost""
-                size="sm""
+                variant="ghost"
+                size="sm"
                 className="h-8 w-8 p-0"
                 onClick={() => onDismiss(notification.id)}
               >"
@@ -136,8 +136,8 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
 
           {notification.action_url && notification.action_text && (
             <Button"
-              variant="outline""
-              size="sm""
+              variant="outline"
+              size="sm"
               className="mt-1 text-zion-cyan border-zion-cyan hover:bg-zion-cyan hover:text-black"
               onClick={handleAction}
             >
@@ -164,7 +164,7 @@ export default function NotificationsPage() {
   return()
     <>
       <SEO"
-        title="Notifications | Zion AI Marketplace""
+        title="Notifications | Zion AI Marketplace"
         description="View and manage your notifications on the Zion AI Marketplace."
       />
 "
@@ -214,7 +214,7 @@ export default function NotificationsPage() {
                   <h3 className="text-xl font-medium">
                     No notifications found
                   </h3>"
-                  <p className="text-muted-foreground mt-1">'
+                  <p className="text-muted-foreground mt-1">
                     {filter === 'all''"
                       ? "You don't have  notifications yet"'
                       : `You don't have  ${filter} notifications`}

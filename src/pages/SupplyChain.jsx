@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -49,150 +49,114 @@ import {
   Tablet,
   Monitor,
   Cloud,
-  Settings,'
+  Settings,
   Palette} from 'lucide-react';
 
 const SupplyChain = () => {
   const supplyChainSolutions = [
     {
 
-      id: 1,'
+      id: 1,
       title: 'Supply Chain Visibility',
       description:'
         'Real-time tracking and monitoring of goods across the entire supply chain network.',
       icon: Eye,
       features: ['
-        'End-to-end tracking','
-        'Real-time monitoring','
-        'Status updates','
-        'Exception alerts',
-      ],'
-      price: 'From $100,000','
-      timeline: '20-32 weeks','
+        'End-to-end tracking',Real-time monitoring',Status updates',Exception alerts',
+      ],
+      price: 'From $100,000',
+      timeline: '20-32 weeks',
       category: 'Visibility',
       technologies: ['
-        'IoT Sensors','
-        'GPS Tracking','
-        'Real-time Analytics','
-        'Cloud Platforms',
+        'IoT Sensors',GPS Tracking',Real-time Analytics',Cloud Platforms',
       ]},
     {
 
-      id: 2,'
+      id: 2,
       title: 'Inventory Management',
       description:'
         'Intelligent inventory optimization and demand forecasting systems.',
       icon: Warehouse,
       features: ['
-        'Demand forecasting','
-        'Stock optimization','
-        'Automated reordering','
-        'Inventory analytics',
-      ],'
-      price: 'From $80,000','
-      timeline: '16-24 weeks','
+        'Demand forecasting',Stock optimization',Automated reordering',Inventory analytics',
+      ],
+      price: 'From $80,000',
+      timeline: '16-24 weeks',
       category: 'Inventory',
       technologies: ['
-        'AI/ML','
-        'Predictive Analytics','
-        'ERP Integration','
-        'Real-time Data',
+        'AI/ML',Predictive Analytics',ERP Integration',Real-time Data',
       ]},
     {
 
-      id: 3,'
+      id: 3,
       title: 'Route Optimization',
       description:'
         'AI-powered route planning and optimization for transportation and delivery.',
       icon: Route,
       features: ['
-        'Dynamic routing','
-        'Traffic optimization','
-        'Fuel efficiency','
-        'Delivery scheduling',
-      ],'
-      price: 'From $60,000','
-      timeline: '12-20 weeks','
+        'Dynamic routing',Traffic optimization',Fuel efficiency',Delivery scheduling',
+      ],
+      price: 'From $60,000',
+      timeline: '12-20 weeks',
       category: 'Routing',
       technologies: ['
-        'AI Algorithms','
-        'GPS Integration','
-        'Traffic Data','
-        'Optimization Engines',
+        'AI Algorithms',GPS Integration',Traffic Data',Optimization Engines',
       ]},
     {
 
-      id: 4,'
+      id: 4,
       title: 'Warehouse Management',
       description:'
         'Automated warehouse operations and inventory control systems.',
       icon: Building,
       features: ['
-        'Automated picking','
-        'Space optimization','
-        'Order fulfillment','
-        'Quality control',
-      ],'
-      price: 'From $120,000','
-      timeline: '24-36 weeks','
+        'Automated picking',Space optimization',Order fulfillment',Quality control',
+      ],
+      price: 'From $120,000',
+      timeline: '24-36 weeks',
       category: 'Warehouse',
       technologies: ['
-        'WMS','
-        'Automation','
-        'IoT Sensors','
-        'Robotics Integration',
+        'WMS',Automation',IoT Sensors',Robotics Integration',
       ]},
     {
 
-      id: 5,'
+      id: 5,
       title: 'Supplier Management',
       description:'
         'Comprehensive supplier relationship and performance management platforms.',
       icon: Users,
       features: ['
-        'Supplier onboarding','
-        'Performance tracking','
-        'Risk assessment','
-        'Compliance monitoring',
-      ],'
-      price: 'From $70,000','
-      timeline: '16-24 weeks','
+        'Supplier onboarding',Performance tracking',Risk assessment',Compliance monitoring',
+      ],
+      price: 'From $70,000',
+      timeline: '16-24 weeks',
       category: 'Supplier Management',
       technologies: ['
-        'SRM Platforms','
-        'Analytics','
-        'Risk Management','
-        'Compliance Tools',
+        'SRM Platforms',Analytics',Risk Management',Compliance Tools',
       ]},
     {
 
-      id: 6,'
+      id: 6,
       title: 'Logistics Analytics',
       description:'
         'Advanced analytics and reporting for supply chain performance optimization.',
       icon: BarChart3,
       features: ['
-        'Performance metrics','
-        'Cost analysis','
-        'Trend identification','
-        'Predictive insights',
-      ],'
-      price: 'From $90,000','
-      timeline: '16-24 weeks','
+        'Performance metrics',Cost analysis',Trend identification',Predictive insights',
+      ],
+      price: 'From $90,000',
+      timeline: '16-24 weeks',
       category: 'Analytics',
       technologies: ['
-        'Business Intelligence','
-        'Data Visualization','
-        'Predictive Models','
-        'Real-time Dashboards',
+        'Business Intelligence',Data Visualization',Predictive Models',Real-time Dashboards',
       ]},
   ];
 
   const successStories = [
     {
-'
-      logo: '🚛','
-      comp: 'Global Logistics Corp','
+
+      logo: '🚛',
+      comp: 'Global Logistics Corp',
       industry: 'Logistics & Transportation',
       challenge:'
         'Complex supply chain with poor visibility and high operational costs.',
@@ -201,9 +165,9 @@ const SupplyChain = () => {
       results:'
         '30% reduction in operational costs, 40% improvement in delivery times, 25% increase in customer satisfaction.'},
     {
-'
-      logo: '🏭','
-      comp: 'Manufacturing Solutions Inc.','
+
+      logo: '🏭',
+      comp: 'Manufacturing Solutions Inc.',
       industry: 'Manufacturing',
       challenge:'
         'Inefficient inventory management leading to stockouts and excess inventory.',
@@ -212,9 +176,9 @@ const SupplyChain = () => {
       results:'
         '35% reduction in inventory costs, 50% decrease in stockouts, 20% improvement in order fulfillment.'},
     {
-'
-      logo: '📦','
-      comp: 'E-commerce Express','
+
+      logo: '📦',
+      comp: 'E-commerce Express',
       industry: 'E-commerce',
       challenge:'
         'Poor route optimization causing delayed deliveries and high fuel costs.',
@@ -236,7 +200,7 @@ const SupplyChain = () => {
           >"
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Supply Chain"
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                 {' '}
                 Optimization
               </span>
@@ -248,13 +212,13 @@ const SupplyChain = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
               >
                 Optimize Supply Chain
               </a>
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-4 border border-blue-500 text-blue-400 font-semibold rounded-xl hover:bg-blue-500 hover:text-white transition-all duration-300"
               >
                 Supply Chain Consultation
@@ -406,7 +370,7 @@ const SupplyChain = () => {
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Optimize Your Supply Chain?
             </h2>"
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">'
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Let's discuss how intelligent supply chain technology can
               transform your operations, reduce costs, and improve customer
               satisfaction.
@@ -414,13 +378,13 @@ const SupplyChain = () => {
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
               >
                 Start Supply Chain Project
               </a>
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-4 border border-blue-500 text-blue-400 font-semibold rounded-xl hover:bg-blue-500 hover:text-white transition-all duration-300"
               >
                 Supply Chain Consultation

@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -11,108 +11,90 @@ import {
   Eye,
   Cloud,
   Star,
-  Calculator,'
-  PieChart} from 'lucide-react.ts';'
+  Calculator,
+  PieChart} from 'lucide-react.ts';
 import { Link } from 'react-router-dom.ts';
 
 const FinancialSolutions: React.FC = (): JSX.Element => {
 
   const solutions = [
     {
-'
+
       title: 'AI Financial Analytics',
       description:'
         'Advanced AI-powered analytics for comprehensive financial insights and decision-making.',
       icon: BarChart3,
       features: ['
-        'Real-time analytics','
-        'Predictive modeling','
-        'Risk assessment','
-        'Performance tracking',
+        'Real-time analytics',Predictive modeling',Risk assessment',Performance tracking',
       ]},
     {
-'
+
       title: 'AI Financial Risk Management',
       description:'
         'Intelligent risk assessment and management systems for financial institutions.',
       icon: Shield,
       features: ['
-        'Risk modeling','
-        'Compliance monitoring','
-        'Fraud detection','
-        'Portfolio optimization',
+        'Risk modeling',Compliance monitoring',Fraud detection',Portfolio optimization',
       ]},
     {
-'
+
       title: 'AI Financial Trading',
       description:'
         'AI-driven trading algorithms and market analysis for optimal investment decisions.',
       icon: TrendingUp,
       features: ['
-        'Algorithmic trading','
-        'Market analysis','
-        'Portfolio management','
-        'Risk mitigation',
+        'Algorithmic trading',Market analysis',Portfolio management',Risk mitigation',
       ]},
     {
-'
+
       title: 'FinOps Advisor',
       description:'
         'Cloud financial operations optimization for cost management and efficiency.',
       icon: Calculator,
       features: ['
-        'Cost optimization','
-        'Resource management','
-        'Budget planning','
-        'ROI analysis',
+        'Cost optimization',Resource management',Budget planning',ROI analysis',
       ]},
     {
-'
+
       title: 'Cloud FinOps Optimizer',
       description:'
         'Comprehensive cloud financial operations management and optimization.',
       icon: Cloud,
       features: ['
-        'Cloud cost management','
-        'Resource optimization','
-        'Budget tracking','
-        'Efficiency metrics',
+        'Cloud cost management',Resource optimization',Budget tracking',Efficiency metrics',
       ]},
     {
-'
+
       title: 'AI Compliance Assistant',
       description:'
         'Automated compliance monitoring and reporting for financial regulations.',
       icon: Lock,
       features: ['
-        'Regulatory compliance','
-        'Automated reporting','
-        'Audit trails','
-        'Risk monitoring',
+        'Regulatory compliance',Automated reporting',Audit trails',Risk monitoring',
       ]},
   ];
 
   const benefits = [
     {
-'
+
       title: 'Risk Mitigation',
       description:'
         'Advanced AI algorithms identify and mitigate financial risks',
       icon: Shield},
     {
-'
+
       title: 'Cost Optimization',
       description:'
         'Intelligent systems optimize financial operations and reduce costs',
       icon: TrendingUp},
     {
-'
+
       title: 'Compliance Assurance',
       description:'
         'Automated compliance monitoring ensures regulatory adherence',
       icon: Lock},
     {
-'
+
       title: 'Data-Driven Decisions',
       description:'
         'AI-powered insights enable better financial decision-making',
@@ -138,7 +120,7 @@ const FinancialSolutions: React.FC = (): JSX.Element => {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Financial Solutions
             </h1>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">'
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Revolutionize your financial operations with Zion Tech Group's
               AI-powered financial technology solutions. From risk management to
               trading algorithms, we help financial institutions achieve
@@ -254,19 +236,19 @@ const FinancialSolutions: React.FC = (): JSX.Element => {
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Transform Your Financial Operations?
           </h2>"
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">'
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Let's discuss how our financial solutions can optimize your
             operations and drive growth.
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
+              to="/contact"
               className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:scale-105"
             >
               Get Started
             </Link>
             <Link"
-              to="/services""
+              to="/services"
               className="px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
             >
               View All Services

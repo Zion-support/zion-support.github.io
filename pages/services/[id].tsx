@@ -1,12 +1,12 @@
 import { GetStaticPaths, GetStaticProps } from 'next''
-import { Helmet } from 'react-helmet-async';'
-import { Link } from 'react-router-dom';'
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import React from 'react';
-import { innovativeRealMicroSaasServices2025 } from "../../data/2025-innovative-real-micro-saas-services""
-import { advancedITServices } from "../../data/advanced-it-services""
-import { innovativeAIServices } from "../../data/innovative-ai-services""
-import { addedMicroSaaS2025 } from "../../data/2025-added-micro-saas""
-import { addedITServices2025 } from "../../data/2025-added-it-services""
+import { innovativeRealMicroSaasServices2025 } from "../../data/2025-innovative-real-micro-saas-services"
+import { advancedITServices } from "../../data/advanced-it-services"
+import { innovativeAIServices } from "../../data/innovative-ai-services"
+import { addedMicroSaaS2025 } from "../../data/2025-added-micro-saas"
+import { addedITServices2025 } from "../../data/2025-added-it-services"
 import { addedAIServices2025 } from "../../data/2025-added-ai-services"
 interface ServiceItem {
 id: string;

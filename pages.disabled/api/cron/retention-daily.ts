@@ -117,7 +117,7 @@ export default function Retention-dailyPage() {
         const incompleteProfile = u.profile_complete === false;
         const contextParts = [
           `User inactive ${days} days`,
-          incompleteProfile ? "Profile incomplete" : ""
+          incompleteProfile ? "Profile incomplete" : "
         ].filter(Boolean);
 
         const copy = await generateEmailCopy({

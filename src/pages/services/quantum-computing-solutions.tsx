@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { SEO } from '../../components/SEO';'
+import React from 'react.ts';
+import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -13,7 +13,7 @@ import {
   CheckCircle,
   Lightbulb,
   Database,
-  Cloud,'
+  Cloud,
   Cpu} from 'lucide-react.ts';
 
 export default function QuantumComputingSolutions(...args: any[]): any {
@@ -21,72 +21,67 @@ export default function QuantumComputingSolutions(...args: any[]): any {
   const features = [
     {
 
-      icon: Atom,'
+      icon: Atom,
       title: 'Quantum Processing',
       description:'
         'Advanced quantum computing solutions for complex computational problems and simulations.'},
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'Quantum Machine Learning',
       description:'
         'Quantum-enhanced ML algorithms that outperform classical approaches for specific applications.'},
     {
 
-      icon: Target,'
+      icon: Target,
       title: 'Optimization Solutions',
       description:'
         'Quantum optimization algorithms for logistics, finance, and complex system design.'},
     {
 
-      icon: TrendingUp,'
+      icon: TrendingUp,
       title: 'Performance Analytics',
       description:'
         'Real-time monitoring and analysis of quantum computing performance and results.'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Quantum Security',
       description:'
         'Quantum-resistant cryptography and quantum key distribution for enhanced security.'},
     {
 
-      icon: Users,'
+      icon: Users,
       title: 'Expert Consultation',
       description:'
         'Access to quantum computing experts and specialized implementation support.'},
   ];
 
   const benefits = ['
-    'Solve previously intractable problems','
-    'Exponential speedup for specific algorithms','
-    'Enhanced machine learning capabilities','
-    'Improved optimization and simulation','
-    'Future-proof security solutions','
-    'Competitive advantage in research',
+    'Solve previously intractable problems',Exponential speedup for specific algorithms',Enhanced machine learning capabilities',Improved optimization and simulation',Future-proof security solutions',Competitive advantage in research',
   ];
 
   const solutions = [
     {
-'
+
       title: 'Quantum Algorithm Development',
       description:'
         'Custom quantum algorithms designed for your specific business challenges and use cases.',
       icon: Brain},
     {
-'
+
       title: 'Quantum Cloud Access',
       description:'
         'Access to leading quantum computing platforms through our managed cloud services.',
       icon: Cloud},
     {
-'
+
       title: 'Quantum Software Integration',
       description:'
         'Seamless integration of quantum computing capabilities into existing software systems.',
       icon: Cpu},
     {
-'
+
       title: 'Quantum Research & Development',
       description:'
         'Collaborative R&D programs to explore quantum computing applications for your industry.',
@@ -96,7 +91,7 @@ export default function QuantumComputingSolutions(...args: any[]): any {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-        title="Quantum Computing Solutions - Zion Tech Group""
+        title="Quantum Computing Solutions - Zion Tech Group"
         description="Harness the power of quantum computing with our advanced solutions. Solve complex problems, enhance machine learning, and gain competitive advantages."
       />
 

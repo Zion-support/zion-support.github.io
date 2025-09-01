@@ -1,10 +1,10 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { Button } from '@/components/ui/button';'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';'
-import { Badge } from '@/components/ui/badge';'
-import { Check, Phone, Mail, MapPin, Globe, DollarSign, Star, Users, Shield, Zap, Building } from 'lucide-react';'
-import { COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from '@/data/comprehensiveServices';'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Check, Phone, Mail, MapPin, Globe, DollarSign, Star, Users, Shield, Zap, Building } from 'lucide-react';
+import { COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from '@/data/comprehensiveServices';
 import SEO from '@/components/SEO';
 export default function ServicesPricingPage() {
     // Group services by category for pricing table
@@ -82,7 +82,7 @@ export default function ServicesPricingPage() {
             </p>
           </div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">'
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {Object.entries(PRICING_TIERS).map(([tierName, tier], index) => (<Card key={tierName} className={`bg-zion-blue border-zion-blue-light ${index === 1 ? 'ring-2 ring-zion-cyan scale-105' : ''}`}>"
                 <CardHeader className="text-center pb-6">"
                   <CardTitle className="text-2xl text-white">{tierName}</CardTitle>"

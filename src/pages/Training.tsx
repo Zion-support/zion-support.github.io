@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -45,65 +45,65 @@ import {
   BarChart3,
   Palette,
   Smartphone,
-  Eye,'
-  Star as StarIcon} from 'lucide-react';'
+  Eye,
+  Star as StarIcon} from 'lucide-react';
 import { SEO } from '../components/SEO';
 const Training: React.FC = () => {
-'
-  const [searchQuery, setSearchQuery] = useState('');'
-  const [activeCategory, setActiveCategory] = useState('all');'
-  const [activeLevel, setActiveLevel] = useState('all');'
+
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeLevel, setActiveLevel] = useState('all');
   const [activeFormat, setActiveFormat] = useState('all');
 
   const categories = ['
-    { id: 'all', name: 'All Categories', icon: GraduationCap, count: 0 },'
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 8 },'
-    { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, count: 6 },'
-    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 5 },'
-    { id: 'data', name: 'Data & Analytics', icon: Database, count: 7 },'
-    { id: 'emerging', name: 'Emerging Technologies', icon: Zap, count: 4 },'
+    { id: 'all', name: 'All Categories', icon: GraduationCap, count: 0 },
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 8 },
+    { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, count: 6 },
+    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 5 },
+    { id: 'data', name: 'Data & Analytics', icon: Database, count: 7 },
+    { id: 'emerging', name: 'Emerging Technologies', icon: Zap, count: 4 },
     { id: 'strategy', name: 'Digital Strategy', icon: Target, count: 3 },
     {
-'
-      id: 'leadership','
+
+      id: 'leadership',
       name: 'Leadership & Management',
       icon: Users,
       count: 4},
   ];
 
   const levels = ['
-    { id: 'all', name: 'All Levels', count: 0 },'
-    { id: 'beginner', name: 'Beginner', count: 0 },'
-    { id: 'intermediate', name: 'Intermediate', count: 0 },'
-    { id: 'advanced', name: 'Advanced', count: 0 },'
+    { id: 'all', name: 'All Levels', count: 0 },
+    { id: 'beginner', name: 'Beginner', count: 0 },
+    { id: 'intermediate', name: 'Intermediate', count: 0 },
+    { id: 'advanced', name: 'Advanced', count: 0 },
     { id: 'expert', name: 'Expert', count: 0 },
   ];
 
   const formats = ['
-    { id: 'all', name: 'All Formats', count: 0 },'
-    { id: 'online', name: 'Online', count: 0 },'
-    { id: 'in-person', name: 'In-Person', count: 0 },'
-    { id: 'hybrid', name: 'Hybrid', count: 0 },'
+    { id: 'all', name: 'All Formats', count: 0 },
+    { id: 'online', name: 'Online', count: 0 },
+    { id: 'in-person', name: 'In-Person', count: 0 },
+    { id: 'hybrid', name: 'Hybrid', count: 0 },
     { id: 'self-paced', name: 'Self-Paced', count: 0 },
   ];
 
   const featuredCourses = [
     {
 
-      id: 1,'
+      id: 1,
       title: 'AI Fundamentals & Machine Learning',
       description:'
-        'Master the basics of artificial intelligence and machine learning algorithms','
-      category: 'ai-ml','
-      level: 'beginner','
-      format: 'online','
-      duration: '8 weeks','
+        'Master the basics of artificial intelligence and machine learning algorithms',
+      category: 'ai-ml',
+      level: 'beginner',
+      format: 'online',
+      duration: '8 weeks',
       instructor: 'Dr. Sarah Chen',
       rating: 4.9,
       students: 1250,
       price: '$1,299',
       originalPrice: '$1,599',
-      features: ['Live Sessions', 'Project Portfolio', 'Certificate', '1-on-1 Mentoring'],
+      features: ['Live Sessions',Project Portfolio',Certificate',1-on-1 Mentoring'],
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
       link: '/training/ai-business-intelligence'
@@ -117,99 +117,84 @@ const Training: React.FC = () => {
       format: 'Hybrid',
       instructor: 'Mike Rodriguez',
       rating: 4.8,
-      students: 1247,'
-      price: '$299','
-      image: '/images/training/ai-fundamentals.jpg','
-      tags: ['Python', 'TensorFlow', 'Neural Networks', 'Data Science'],
+      students: 1247,
+      price: '$299',
+      image: '/images/training/ai-fundamentals.jpg',
+      tags: ['Python',TensorFlow',Neural Networks',Data Science'],
       features: ['
-        'Hands-on projects with real datasets','
-        'Live Q&A sessions with experts','
-        'Certificate upon completion','
-        'Lifetime access to materials',
+        'Hands-on projects with real datasets',Live Q&A sessions with experts',Certificate upon completion',Lifetime access to materials',
       ]},
     {
 
-      id: 2,'
+      id: 2,
       title: 'Advanced Cloud Architecture',
       description:'
-        'Design and implement scalable cloud solutions for enterprise applications','
-      category: 'cloud','
-      level: 'advanced','
-      format: 'hybrid','
-      duration: '12 weeks','
+        'Design and implement scalable cloud solutions for enterprise applications',
+      category: 'cloud',
+      level: 'advanced',
+      format: 'hybrid',
+      duration: '12 weeks',
       instructor: 'Michael Rodriguez',
       rating: 4.9,
-      students: 892,'
-      price: '$499','
-      image: '/images/training/cloud-architecture.jpg','
-      tags: ['AWS', 'Azure', 'Kubernetes', 'Microservices'],
+      students: 892,
+      price: '$499',
+      image: '/images/training/cloud-architecture.jpg',
+      tags: ['AWS',Azure',Kubernetes',Microservices'],
       features: ['
-        'Real-world case studies','
-        'Architecture design workshops','
-        'Industry best practices','
-        'Networking opportunities',
+        'Real-world case studies',Architecture design workshops',Industry best practices',Networking opportunities',
       ]},
     {
 
-      id: 3,'
+      id: 3,
       title: 'Cybersecurity Masterclass',
       description:'
-        'Comprehensive security training covering threat detection and prevention','
-      category: 'security','
-      level: 'intermediate','
-      format: 'in-person','
-      duration: '6 weeks','
+        'Comprehensive security training covering threat detection and prevention',
+      category: 'security',
+      level: 'intermediate',
+      format: 'in-person',
+      duration: '6 weeks',
       instructor: 'Lisa Thompson',
       rating: 4.7,
-      students: 1563,'
-      price: '$399','
+      students: 1563,
+      price: '$399',
       image: '/images/training/cybersecurity.jpg',
       tags: ['
-        'Penetration Testing','
-        'Incident Response','
-        'Compliance','
-        'Risk Management',
+        'Penetration Testing',Incident Response',Compliance',Risk Management',
       ],
       features: ['
-        'Hands-on security labs','
-        'Industry certifications','
-        'Expert-led workshops','
-        'Career guidance',
+        'Hands-on security labs',Industry certifications',Expert-led workshops',Career guidance',
       ]},
     {
 
-      id: 4,'
+      id: 4,
       title: 'Data Science & Analytics',
       description:'
-        'Learn data analysis, visualization, and statistical modeling techniques','
-      category: 'data','
-      level: 'intermediate','
-      format: 'online','
-      duration: '10 weeks','
+        'Learn data analysis, visualization, and statistical modeling techniques',
+      category: 'data',
+      level: 'intermediate',
+      format: 'online',
+      duration: '10 weeks',
       instructor: 'Dr. James Wilson',
       rating: 4.6,
-      students: 2034,'
-      price: '$349','
-      image: '/images/training/data-science.jpg','
-      tags: ['R', 'Python', 'SQL', 'Tableau'],
+      students: 2034,
+      price: '$349',
+      image: '/images/training/data-science.jpg',
+      tags: ['R',Python',SQL',Tableau'],
       features: ['
-        'Real-world data projects','
-        'Statistical analysis tools','
-        'Data visualization skills','
-        'Portfolio development',
+        'Real-world data projects',Statistical analysis tools',Data visualization skills',Portfolio development',
       ]},
   ];
 
   const getLevelColor = (level: string) => {
 
     switch (level) {
-'
+
       case 'beginner':'
-        return 'bg-green-500/20 text-green-400';'
+        return 'bg-green-500/20 text-green-400';
       case 'intermediate':'
-        return 'bg-yellow-500/20 text-yellow-400';'
+        return 'bg-yellow-500/20 text-yellow-400';
       case 'advanced':'
-        return 'bg-orange-500/20 text-orange-400';'
+        return 'bg-orange-500/20 text-orange-400';
       case 'expert':'
         return 'bg-red-500/20 text-red-400';
       default:'
@@ -220,13 +205,13 @@ const Training: React.FC = () => {
   const getFormatColor = (format: string) => {
 
     switch (format) {
-'
+
       case 'online':'
-        return 'bg-blue-500/20 text-blue-400';'
+        return 'bg-blue-500/20 text-blue-400';
       case 'in-person':'
-        return 'bg-purple-500/20 text-purple-400';'
+        return 'bg-purple-500/20 text-purple-400';
       case 'hybrid':'
-        return 'bg-indigo-500/20 text-indigo-400';'
+        return 'bg-indigo-500/20 text-indigo-400';
       case 'self-paced':'
         return 'bg-teal-500/20 text-teal-400';
       default:'
@@ -244,7 +229,7 @@ const Training: React.FC = () => {
       );
 
     const matchesCategory ='
-      activeCategory === 'all' || program.category === activeCategory;'
+      activeCategory === 'all' || program.category === activeCategory;
     const matchesLevel = activeLevel === 'all' || program.level === activeLevel;
     const matchesFormat ='
       activeFormat === 'all' || program.format === activeFormat;
@@ -253,7 +238,7 @@ const Training: React.FC = () => {
   }) ;
   // Update counts
   categories.forEach(cat => {
-'
+
     if (cat.id === 'all') {
 
       cat.count = trainingPrograms.length;
@@ -265,7 +250,7 @@ const Training: React.FC = () => {
     }
   ];
   levels.forEach(level => {
-'
+
     if (level.id === 'all') {
 
       level.count = trainingPrograms.length;
@@ -277,7 +262,7 @@ const Training: React.FC = () => {
     }
   }) ;
   formats.forEach(format => {
-'
+
     if (format.id === 'all') {
 
       format.count = trainingPrograms.length;
@@ -293,8 +278,8 @@ const Training: React.FC = () => {
   return()
     <>
       <SEO
-        title="Training & Education - Zion Tech Group""
-        description="Comprehensive training programs and educational resources in AI, cloud computing, cybersecurity, data analytics, and emerging technologies.""
+        title="Training & Education - Zion Tech Group"
+        description="Comprehensive training programs and educational resources in AI, cloud computing, cybersecurity, data analytics, and emerging technologies."
         keywords="training, education, courses, AI training, cloud computing, cybersecurity, data analytics, Zion Tech Group"
       />
 "      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
@@ -330,7 +315,12 @@ const Training: React.FC = () => {
               <div className="relative mb-6">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
+<<<<<<< HEAD
+                  type="text"
+                  placeholder="Search training programs..."
+=======
                   type="text""                  placeholder="Search training programs..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -476,10 +466,10 @@ const Training: React.FC = () => {
                       className={`px-2 py-1 rounded-full text-xs font-medium ${getFormatColor(program.format)}`}
                     >
                       {program.format'
-                        .replace('-', ' ')
+                        .replace('-',)
                         .charAt(0)
                         .toUpperCase() +'
-                        program.format.replace('-', ' ').slice(1)}
+                        program.format.replace('-',).slice(1)}
                     </span>
                   </div>
 
@@ -517,7 +507,7 @@ const Training: React.FC = () => {
 
                   {/* Features */}"
                   <div className="mb-4">"
-                    <h4 className="text-white font-medium text-sm mb-2">'
+                    <h4 className="text-white font-medium text-sm mb-2">
                       What you'll learn:
                     </h4>"
                     <ul className="space-y-1">

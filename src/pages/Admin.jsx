@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const Admin = () => {
   return()
@@ -6,7 +6,7 @@ const Admin = () => {
       <Helmet>
         <title>Admin - Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Administrative dashboard for Zion Tech Group. Manage users, services, and system configurations."
         />
       </Helmet>
@@ -24,7 +24,7 @@ const Admin = () => {
           </div>
 "
           <div className="bg-white rounded-lg shadow-lg p-8">"
-            <p className="text-gray-600 text-center">'
+            <p className="text-gray-600 text-center">
               Admin dashboard coming soon. We're building comprehensive
               administrative tools.
             </p>

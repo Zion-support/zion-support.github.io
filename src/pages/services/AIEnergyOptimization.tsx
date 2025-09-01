@@ -1,60 +1,59 @@
 import React from 'react';
 import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChart3, Target, Shield, Globe export default function AIEnergyOptimization() {
   const features = [
-    'AI-powered energy consumption forecasting and optimization','
-    'Real-time monitoring of energy usage across facilities',;'
-    'Predictive maintenance for energy infrastructure',;'
-    'Smart grid integration and demand response optimization',;'
-    'Renewable energy integration and storage optimization',;'
-    'Carbon footprint tracking and sustainability reporting',;'
-    'Custom AI models for industry-specific energy patterns',;'
+    'AI-powered energy consumption forecasting and optimization',Real-time monitoring of energy usage across facilities',;
+    'Predictive maintenance for energy infrastructure',;
+    'Smart grid integration and demand response optimization',;
+    'Renewable energy integration and storage optimization',;
+    'Carbon footprint tracking and sustainability reporting',;
+    'Custom AI models for industry-specific energy patterns',;
     'Integration with major building management systems';
   ];
 
   const tiers = [
     {
-'
-      name: 'Basic','
-      price: '$299/mo','
-      details: ['Up to 5 facilities', 'Basic energy monitoring', 'Standard reporting', 'Email support']
+
+      name: 'Basic',
+      price: '$299/mo',
+      details: ['Up to 5 facilities',Basic energy monitoring',Standard reporting',Email support']
     },
     {
-'
-      name: 'Professional', '
-      price: '$799/mo', '
-      details: ['Up to 25 facilities', 'Advanced AI optimization', 'Custom analytics', 'Priority support'] ;
+
+      name: 'Professional',
+      price: '$799/mo',
+      details: ['Up to 25 facilities',Advanced AI optimization',Custom analytics',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,999/mo', ;'
-      details: ['Unlimited facilities', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$1,999/mo', ;
+      details: ['Unlimited facilities',Custom AI models',Full system integration',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Commercial building energy optimization',;'
-    'Manufacturing facility energy management',;'
-    'Data center power efficiency',;'
-    'Retail chain energy optimization',;'
-    'Healthcare facility energy management',;'
+  const useCases = [;
+    'Commercial building energy optimization',;
+    'Manufacturing facility energy management',;
+    'Data center power efficiency',;
+    'Retail chain energy optimization',;
+    'Healthcare facility energy management',;
     'Educational campus energy systems';
   ];
 
-  const benefits = [;'
-    'Reduce energy costs by 20-40%',;'
-    'Improve energy efficiency by 25-45%',;'
-    'Cut carbon emissions by 30-50%',;'
-    'Optimize renewable energy utilization',;'
-    'Enhance equipment lifespan and reliability',;'
+  const benefits = [;
+    'Reduce energy costs by 20-40%',;
+    'Improve energy efficiency by 25-45%',;
+    'Cut carbon emissions by 30-50%',;
+    'Optimize renewable energy utilization',;
+    'Enhance equipment lifespan and reliability',;
     'Achieve sustainability and ESG goals';
   ];
 
-  const industries = [;'
-    'Commercial Real Estate',;'
-    'Manufacturing & Industrial',;'
-    'Data Centers & IT',;'
-    'Healthcare & Hospitals',;'
-    'Retail & Shopping Centers',;'
+  const industries = [;
+    'Commercial Real Estate',;
+    'Manufacturing & Industrial',;
+    'Data Centers & IT',;
+    'Healthcare & Hospitals',;
+    'Retail & Shopping Centers',;
     'Education & Universities';
   ];
 
@@ -107,8 +106,8 @@ import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChar
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['20-40% cost reduction', '25-45% efficiency gain', '30-50% emission cut'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['20-40% cost reduction',25-45% efficiency gain',30-50% emission cut'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-green-600 mb-3" />"              <div className="text-gray-900 font-semibold">{t}</div>
             </div>

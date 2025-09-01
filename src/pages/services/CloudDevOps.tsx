@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -38,99 +38,94 @@ import {
   Workflow,
   Rocket,
   RefreshCw,
-  Shield,'
+  Shield,
   Lock} from 'lucide-react';
 
 const CloudDevOps = () => {
   const features = [
     {
 
-      icon: Cloud,'
+      icon: Cloud,
       title: 'Cloud Infrastructure',
       description:'
         'Design and implement scalable cloud architectures on AWS, Azure, and GCP'},
     {
 
-      icon: Code,'
+      icon: Code,
       title: 'CI/CD Pipelines',
       description:'
         'Automated build, test, and deployment pipelines for rapid delivery'},
     {
 
-      icon: Docker,'
+      icon: Docker,
       title: 'Containerization',
       description:'
         'Docker and Kubernetes implementation for scalable application deployment'},
     {
 
-      icon: GitBranch,'
-      title: 'GitOps Workflows','
+      icon: GitBranch,
+      title: 'GitOps Workflows',
       description: 'Infrastructure as code and automated deployment management'},
     {
 
-      icon: Monitor,'
+      icon: Monitor,
       title: 'Monitoring & Logging',
       description:'
         'Comprehensive monitoring, alerting, and centralized logging solutions'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Security & Compliance',
       description:'
         'DevSecOps practices and compliance automation for cloud environments'},
   ];
 
   const benefits = ['
-    'Deploy 10x faster with automated pipelines','
-    'Reduce infrastructure costs by 40%','
-    'Achieve 99.9% uptime with monitoring','
-    'Scale applications automatically','
-    'Improve team productivity by 60%','
-    'Ensure security and compliance',
+    'Deploy 10x faster with automated pipelines',Reduce infrastructure costs by 40%',Achieve 99.9% uptime with monitoring',Scale applications automatically',Improve team productivity by 60%',Ensure security and compliance',
   ];
 
   const services = [
     {
 
-      icon: Server,'
+      icon: Server,
       title: 'Infrastructure as Code',
       description:'
         'Terraform, CloudFormation, and ARM templates for automated infrastructure'},
     {
 
-      icon: Workflow,'
+      icon: Workflow,
       title: 'CI/CD Automation',
       description:'
         'Jenkins, GitHub Actions, and GitLab CI for seamless deployments'},
     {
 
-      icon: Kubernetes,'
-      title: 'Container Orchestration','
+      icon: Kubernetes,
+      title: 'Container Orchestration',
       description: 'Kubernetes clusters with Helm charts and automated scaling'},
     {
 
-      icon: Database,'
-      title: 'Database Management','
+      icon: Database,
+      title: 'Database Management',
       description: 'Automated database provisioning, backups, and scaling'},
   ];
 
   const pricing = [
     {
-'
-      industry: 'E-commerce','
+
+      industry: 'E-commerce',
       description: 'Scalable infrastructure for high-traffic online stores'},
     {
-'
-      industry: 'SaaS Platforms','
+
+      industry: 'SaaS Platforms',
       description: 'Multi-tenant applications with automated scaling'},
     {
-'
+
       industry: 'Financial Services',
       description:'
         'Secure, compliant cloud infrastructure for banking applications'},
     {
-'
-      industry: 'Healthcare','
+
+      industry: 'Healthcare',
       description: 'HIPAA-compliant cloud solutions for medical applications'},
   ];
 
@@ -151,7 +146,7 @@ const CloudDevOps = () => {
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Cloud"
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
                 {' '}
                 DevOps
               </span>

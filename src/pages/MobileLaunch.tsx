@@ -1,7 +1,139 @@
+<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+
+  Smartphone,
+  Download,
+  Zap,
+  Shield,
+  Cloud,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Globe,
+  Lock,
+  Wifi,
+  Battery,
+  Settings,
+  Bell,
+  Search,
+  Home,
+  User,
+  BarChart3,
+  MessageCircle,
+  ShoppingCart,
+  Calendar,
+  FileText,
+  Heart,
+  Bookmark,
+  Share2,
+  Play,
+  Pause,
+  SkipBack,
+  SkipForward,
+  Volume2,
+  Maximize2,
+  RotateCcw,
+  Wifi as WifiIcon,
+  Battery as BatteryIcon,
+  Signal'
+} from 'lucide-react';
+import SEO from '../components/SEO';
+
+const MobileLaunch: React.FC = () => {
+  const features = [
+    {
+
+      title: "AI-Powered Insights","
+      description: "Get intelligent recommendations and insights powered by our advanced AI algorithms",
+      icon: Zap,"
+      color: "from-cyan-400 to-blue-500"
+    },
+    {
+"
+      title: "Real-time Sync","
+      description: "Seamlessly sync data across all your devices with cloud-based synchronization",
+      icon: Cloud,"
+      color: "from-blue-400 to-purple-500"
+    },
+    {
+"
+      title: "Secure & Private","
+      description: "Enterprise-grade security with end-to-end encryption and privacy controls",
+      icon: Shield,"
+      color: "from-green-400 to-emerald-500"
+    },;
+    {;"
+      title: "Smart Notifications",;"
+      description: "Intelligent alerts that adapt to your preferences and schedule",;
+      icon: Bell,;"
+      color: "from-orange-400 to-red-500";
+    };
+  ];
+
+  const appScreens = [
+    {
+"
+      name: "Dashboard","
+      description: "Overview of your business metrics and key performance indicators",
+      icon: Home,"
+      features: ["Real-time metrics", "Customizable widgets", "Quick actions"]
+    },
+    {
+"
+      name: "AI Assistant","
+      description: "Your personal AI companion for business insights and automation",
+      icon: Zap,"
+      features: ["Natural language queries", "Smart recommendations", "Automated tasks"]
+    },
+    {
+"
+      name: "Analytics","
+      description: "Comprehensive data visualization and business intelligence tools",
+      icon: BarChart3,"
+      features: ["Interactive charts", "Custom reports", "Data export"]
+    },;
+    {;"
+      name: "Services",;"
+      description: "Access to all Zion Tech Group services and solutions",;
+      icon: Settings,;"
+      features: ["Service catalog", "Quick setup", "Support access"];
+    };
+  ];
+
+  const downloadOptions = [
+    {
+"
+      platform: "iOS App Store","
+      icon: "🍎","
+      description: "Download for iPhone and iPad","
+      link: "#",
+      featured: true
+    },
+    {
+"
+      platform: "Google Play Store","
+      icon: "🤖","
+      description: "Download for Android devices","
+      link: "#",
+      featured: true
+    },
+    {;"
+      platform: "Web App",;"
+      icon: "🌐",;"
+      description: "Access via browser",;"
+      link: "/",;
+      featured: false;
+    };
+=======
 import React from 'react';'
 import { motion } from 'framer-motion';'
 import { Link } from 'react-router-dom';      link: "/",;
       featured: false};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   const systemRequirements = [;"
@@ -14,9 +146,16 @@ import { Link } from 'react-router-dom';      link: "/",;
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
+        title="Mobile App - Zion Tech Group"
+        description="Take Zion Tech Group with you on the go! Download our mobile app for iOS and Android to access AI services, analytics, and business solutions anywhere."
+        keywords="mobile app, iOS app, Android app, Zion Tech Group mobile, business app"
+      />
+=======
         title="Mobile App - Zion Tech Group""
         description="Take Zion Tech Group with you on the go! Download our mobile app for iOS and Android to access AI services, analytics, and business solutions anywhere.""        keywords="mobile app, iOS app, Android app, Zion Tech Group mobile, business app"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -58,14 +197,14 @@ import { Link } from 'react-router-dom';      link: "/",;
 "
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link"
-                  to="#download""
+                  to="#download"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
 "
                   <Download className="mr-2 w-5 h-5" />
                   Download Now
                 </Link>
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
 
                   Learn More"
@@ -175,7 +314,7 @@ import { Link } from 'react-router-dom';      link: "/",;
             <h2 className="text-4xl font-bold text-white mb-6">"
               Powerful <span className="text-cyan-400">Mobile Features</span>
             </h2>"
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">'
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Experience the full power of Zion Tech Group's services in the palm of your hand
               with our feature - rich mobile application.
             </p>
@@ -318,7 +457,7 @@ import { Link } from 'react-router-dom';      link: "/",;
             <h2 className="text-4xl font-bold text-white mb-6">"
               Download <span className="text-cyan-400">Now</span>
             </h2>"
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">'
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Get started with Zion Tech Group's mobile app today. Available on all major platforms.
             </p>
           </motion.div>
@@ -351,7 +490,7 @@ import { Link } from 'react-router-dom';      link: "/",;
 
 }}`
                 className={`bg-slate-800/50 border rounded-xl p-8 text-center hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 ${
-'
+
                   option.featured ? 'border-cyan-400/30 bg-gradient-to-br from-cyan-400/5 to-blue-500/5' : 'border-slate-700/50'`
                 }`}
 
@@ -461,21 +600,21 @@ import { Link } from 'react-router-dom';      link: "/",;
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Go Mobile?
             </h2>"
-            <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">'
+            <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
               Download our mobile app today and take Zion Tech Group's powerful solutions
               with you wherever you go.
             </p>
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="#download""
+                to="#download"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
 "
                 <Download className="mr-2 w-5 h-5" />
                 Download App
               </Link>
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
 
                 Get Support"

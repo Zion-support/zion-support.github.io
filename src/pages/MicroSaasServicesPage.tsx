@@ -1,12 +1,12 @@
-import React from 'react';'
+import React from 'react';
 import SEO from '@/components/SEO';
 
 const MicroSAASServicesPage = () => {
   return()
     <>
       <SEO
-        title="Micro SAAS Services - Zion Tech Group""
-        description="Specialized micro SAAS solutions for niche business needs and targeted industry solutions.""
+        title="Micro SAAS Services - Zion Tech Group"
+        description="Specialized micro SAAS solutions for niche business needs and targeted industry solutions."
         keywords="micro SAAS, specialized solutions, niche services, business software"
       />
 "
@@ -53,7 +53,7 @@ const MicroSAASServicesPage = () => {
                 className={`${
 
                   selectedCategory === category"
-                    ? "bg-zion-purple text-white""
+                    ? "bg-zion-purple text-white"
                     : "border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"`
                 }`}
               >
@@ -123,7 +123,7 @@ const MicroSAASServicesPage = () => {
                     <span className="text-3xl font-bold text-zion-cyan">'`
                       {service.price === 0 ? 'Free' : `${service.currency}${service.price}`}
                     </span>"
-                    <span className="text-zion-slate-light">'
+                    <span className="text-zion-slate-light">
                       {service.price === 0 ? '' : '/month'}
                     </span>
                   </div>

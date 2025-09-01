@@ -93,6 +93,8 @@ export const SERVICE_CATEGORIES = ["
 
 // Service pricing tiers;
 export const PRICING_TIERS = [;
+<<<<<<< HEAD
+=======
   { id: 'budget', name: 'Budget', range: '$100 - $1,000/month', count: 0 },;'
   { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000/month', count: 0 },;'
 export 
@@ -106,27 +108,38 @@ export
 
 // Service pricing tiers
 export 
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   { id: 'budget', name: 'Budget', range: '$100 - $1,000/month', count: 0 },;
   { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000/month', count: 0 },;
   { id: 'enterprise', name: 'Enterprise', range: '$5,000+/month', count: 0 };
 ];
 
 // Innovation levels
+<<<<<<< HEAD
+export const INNOVATION_LEVELS = [;
+=======
 :src/data/comprehensiveServicesCatalog2025.tsx
 export const INNOVATION_LEVELS = [;'
   { id: 'advanced', name: 'Advanced', count: 0 },;'
   { id: 'cutting-edge', name: 'Cutting-edge', count: 0 },;'
 export 
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   { id: 'advanced', name: 'Advanced', count: 0 },;
   { id: 'cutting-edge', name: 'Cutting-edge', count: 0 },;
   { id: 'revolutionary', name: 'Revolutionary', count: 0 };
 ];
 
 // Support levels
+<<<<<<< HEAD
+export const SUPPORT_LEVELS = [;
+  { id: 'standard', name: 'Standard', count: 0 },;
+  { id: 'premium', name: 'Premium', count: 0 },;
+=======
 :src/data/comprehensiveServicesCatalog2025.tsx
 export const SUPPORT_LEVELS = [;'
   { id: 'standard', name: 'Standard', count: 0 },;'
   { id: 'premium', name: 'Premium', count: 0 },;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   { id: 'enterprise', name: 'Enterprise', count: 0 };
 ];
 
@@ -149,9 +162,9 @@ export
   ;
   ;
   ;
-  count: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => {;'
-        if (tier.id === 'budget') return service.price <= 1000;'
-        if (tier.id === 'mid-range') return service.price > 1000 && service.price <= 5000;'
+  count: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => {;
+        if (tier.id === 'budget') return service.price <= 1000;
+        if (tier.id === 'mid-range') return service.price > 1000 && service.price <= 5000;
         if (tier.id === 'enterprise') return service.price > 5000;
         return false}).length
     })),;
@@ -174,8 +187,8 @@ export
 :src/data/comprehensiveServicesCatalog2025.tsx
 export const getServicesByCategory = (category: string) => {
 
-  return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>'
-    service.category.toLowerCase().includes(category.toLowerCase().replace('-', ' '))
+  return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
+    service.category.toLowerCase().includes(category.toLowerCase().replace('-',))
   );
 };
 
@@ -236,6 +249,11 @@ export
 // Get featured services (high ROI and innovation);
 export const getFeaturedServices = (...args: unknown[]): unknown => {;
   return COMPREHENSIVE_SERVICES_CATALOG_2025;
+<<<<<<< HEAD
+    .sort((a, b) => {;
+      const aScore = parseInt(a.roi.replace(/\D/g,)) + (a.innovationLevel === 'Cutting-edge' ? 100 : 0);
+      const bScore = parseInt(b.roi.replace(/\D/g,)) + (b.innovationLevel === 'Cutting-edge' ? 100 : 0);
+=======
     .sort((a, b) => {;'
       const aScore = parseInt(a.roi.replace(/\D/g, '')) + (a.innovationLevel === 'Cutting-edge' ? 100 : 0);'
       const bScore = parseInt(b.roi.replace(/\D/g, '')) + (b.innovationLevel === 'Cutting-edge' ? 100 : 0);
@@ -245,13 +263,14 @@ export
     .sort((a, b) => {;
       
       
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       return bScore - aScore})
     .slice(0, limit)};
 
 // Get trending services (recent and popular)
 :src/data/comprehensiveServicesCatalog2025.tsx
 export const getTrendingServices = (limit: number = 10) => {;
-  return COMPREHENSIVE_SERVICES_CATALOG_2025;'
+  return COMPREHENSIVE_SERVICES_CATALOG_2025;
     .filter(service => service.betaAccess || service.launchDate?.includes('2025'));
     .sort(a: unknown, b: unknown b.price - a.price) // Higher price often indicates more demand;
     .slice(0, limit);
@@ -261,23 +280,12 @@ export const getTrendingServices = (limit: number = 10) => {;
 export const getServicesByIndustry = (industry: string)  => {
 
   const industryMap: { [key: string]: string[] } = {
-'
-    'healthcare': ['AI & Healthcare', 'Medical Diagnostics', 'Healthcare AI'],'
-    'finance': ['AI & FinTech', 'Quantum Finance', 'Financial Planning'],'
-    'legal': ['AI & Legal Tech', 'Legal Research'],'
-    'education': ['AI & Education', 'Personalized Learning'],'
-    'real-estate': ['AI & Real Estate', 'Property Management'],'
-    'marketing': ['AI & Marketing', 'Marketing Automation'],'
-    'manufacturing': ['AI & Manufacturing', 'Manufacturing Optimization'],'
-    'retail': ['AI & Retail', 'Retail Analytics'],'
-    'energy': ['AI & Energy', 'Energy Management'],'
-    'transportation': ['AI & Transportation', 'Transportation & Logistics'],'
-    'logistics': ['AI & Supply Chain', 'Logistics Optimization', 'Transportation & Logistics'],'
-    'cybersecurity': ['Cybersecurity', 'AI Security', 'Quantum Security'],;'
-    'blockchain': ['Blockchain', 'DeFi & NFTs', 'Supply Chain & Sustainability'],;'
-    'quantum': ['Quantum Computing', 'Quantum AI', 'Quantum Security', 'Quantum Finance', 'Quantum Chemistry'],;'
-    'iot': ['IoT & Edge Computing', 'Edge AI'],;'
-    'ai': ['AI & Analytics', 'AI & Customer Experience', 'AI & Business Automation', 'AI & Robotics'];
+
+    'healthcare': ['AI & Healthcare',Medical Diagnostics',Healthcare AI'],finance': ['AI & FinTech',Quantum Finance',Financial Planning'],legal': ['AI & Legal Tech',Legal Research'],education': ['AI & Education',Personalized Learning'],real-estate': ['AI & Real Estate',Property Management'],marketing': ['AI & Marketing',Marketing Automation'],manufacturing': ['AI & Manufacturing',Manufacturing Optimization'],retail': ['AI & Retail',Retail Analytics'],energy': ['AI & Energy',Energy Management'],transportation': ['AI & Transportation',Transportation & Logistics'],logistics': ['AI & Supply Chain',Logistics Optimization',Transportation & Logistics'],cybersecurity': ['Cybersecurity',AI Security',Quantum Security'],;
+    'blockchain': ['Blockchain',DeFi & NFTs',Supply Chain & Sustainability'],;
+    'quantum': ['Quantum Computing',Quantum AI',Quantum Security',Quantum Finance',Quantum Chemistry'],;
+    'iot': ['IoT & Edge Computing',Edge AI'],;
+    'ai': ['AI & Analytics',AI & Customer Experience',AI & Business Automation',AI & Robotics'];
   };
 export 
   return COMPREHENSIVE_SERVICES_CATALOG_2025;
@@ -339,10 +347,16 @@ export
     )}
 
   return recommendations.sort((a, b) => {
+<<<<<<< HEAD
+
+    const aScore = parseInt(a.roi.replace(/\D/g,));
+    const bScore = parseInt(b.roi.replace(/\D/g,));
+=======
 :src/data/comprehensiveServicesCatalog2025.tsx
 '
     const aScore = parseInt(a.roi.replace(/\D/g, ''));'
     const bScore = parseInt(b.roi.replace(/\D/g, ''));
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     return bScore - aScore})};
 
 export default COMPREHENSIVE_SERVICES_CATALOG_2025;}}}}}'"

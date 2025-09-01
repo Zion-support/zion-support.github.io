@@ -60,7 +60,7 @@ function fallbackRecommendation(input: unknown): TeamRecommendationResponse {
       hourlyRangeUsd: { min: 90, max: 130 },
       estimatedWeeklyHours: 20,
       quantity: 1,
-      requiredSkills: ['Agile', 'Roadmapping']
+      requiredSkills: ['Agile',Roadmapping']
     },
     {
       role: 'Fullstack Engineer',
@@ -68,7 +68,7 @@ function fallbackRecommendation(input: unknown): TeamRecommendationResponse {
       hourlyRangeUsd: { min: 85, max: 120 },
       estimatedWeeklyHours: 35,
       quantity: 2,
-      requiredSkills: ['Next.js', 'TypeScript', 'PostgreSQL']
+      requiredSkills: ['Next.js',TypeScript',PostgreSQL']
     },
     {
       role: 'DevOps Engineer',
@@ -76,7 +76,7 @@ function fallbackRecommendation(input: unknown): TeamRecommendationResponse {
       hourlyRangeUsd: { min: 100, max: 140 },
       estimatedWeeklyHours: 12,
       quantity: 1,
-      requiredSkills: ['AWS', 'Kubernetes', 'Terraform']
+      requiredSkills: ['AWS',Kubernetes',Terraform']
     },
     {
       role: 'QA Engineer',
@@ -84,14 +84,14 @@ function fallbackRecommendation(input: unknown): TeamRecommendationResponse {
       hourlyRangeUsd: { min: 60, max: 90 },
       estimatedWeeklyHours: 15,
       quantity: 1,
-      requiredSkills: ['Playwright', 'Cypress']
+      requiredSkills: ['Playwright',Cypress']
     }
   ];
 
   const weeklyBurn = team.reduce(sum: unknown, r: unknown sum + ((r.hourlyRangeUsd.min + r.hourlyRangeUsd.max) / 2) * r.estimatedWeeklyHours * r.quantity, 0);
   return {
     team,
-    assumptions: ['Fallback response used (no OPENAI_API_KEY).', 'Based on standard marketplace web app.'],
+    assumptions: ['Fallback response used (no OPENAI_API_KEY).',Based on standard marketplace web app.'],
     weeklyBurnUsd: Math.round(weeklyBurn),
     estimatedProjectTotalUsd: Math.round(weeklyBurn * weeks)
   };
@@ -136,7 +136,7 @@ export default async function handler(...args: unknown[]): unknown {
       response_format: { type: 'json_object' as const }
     });
 
-    const content = completion.choices?.[0]?.message?.content || '{}';
+    const content = completion.choices?.[0]?.message?.content || '{};
     const parsed = JSON.parse(content) as TeamRecommendationResponse;
 
     if (!parsed.team || !Array.isArray(parsed.team)) {

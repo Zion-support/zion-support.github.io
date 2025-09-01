@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';'
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -18,15 +18,15 @@ import {
   Clock,
   Star,
   MessageSquare,
-  Volume2,'
+  Volume2,
   VolumeX} from 'lucide-react';
 
 interface Notification {
 
   id: string;
   title: string;
-  message: string;'
-  type: 'success' | 'warning' | 'error' | 'info';'
+  message: string;
+  type: 'success' | 'warning' | 'error' | 'info';
   priority: 'low' | 'medium' | 'high' | 'critical';
   timestamp: Date;
   read: boolean;
@@ -45,7 +45,7 @@ interface AdvancedNotificationCenterProps {
   autoDismiss?: boolean;
   dismissDelay?: number;
   showUnreadCount?: boolean;
-  enableSound?: boolean;'
+  enableSound?: boolean;
   position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
 
 const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
@@ -54,40 +54,29 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
   autoDismiss = true,
   dismissDelay = 5000,
   showUnreadCount = true,
-  enableSound = false,'
+  enableSound = false,
   position = 'top-right'}) => {
 
   const [notifications, setNotifications] = useState<Notification[]>([]);
-  const [isOpen, setIsOpen] = useState(false);'
+  const [isOpen, setIsOpen] = useState(false);
   const [filter, setFilter] = useState<'all' | 'unread' | 'high-priority'>('
     'all'
-  );'
+  );
   const [searchQuery, setSearchQuery] = useState('');
   const [showArchived, setShowArchived] = useState(false);
   const [soundEnabled, setSoundEnabled] = useState(enableSound);
 
   // Generate mock notifications
   const generateMockNotifications = useCallback(() => {
-'
+
     const types: Notification['type'][] = ['
-      'success','
-      'warning','
-      'error','
-      'info',
-    ];'
+      'success',warning',error',info',
+    ];
     const priorities: Notification['priority'][] = ['
-      'low','
-      'medium','
-      'high','
-      'critical',
+      'low',medium',high',critical',
     ];
     const categories = ['
-      'System','
-      'Security','
-      'Performance','
-      'User','
-      'Integration','
-      'Backup',
+      'System',Security',Performance',User',Integration',Backup',
     ];
 
     const mockNotifications: Notification[] = [];
@@ -114,7 +103,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
         actionUrl:`
           Math.random() > 0.5 ? `https://example.com/action-${i}` : undefined,
         metadata: {
-'
+
           source: 'system',
           userId: Math.floor(Math.random() * 1000),`
           sessionId: `session-${Math.random().toString(36).substr(2, 9)}`}});
@@ -151,7 +140,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
   // Add new notification
   const addNotification = useCallback()
     ('
-      notification: Omit<Notification, 'id' | 'timestamp' | 'read' | 'archived'>
+      notification: Omit<Notification,id' | 'timestamp' | 'read' | 'archived'>
     ) => {
 
       const newNotification: Notification = {
@@ -223,11 +212,11 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
 
   // Filter notifications
   const filteredNotifications = notifications.filter(notification => {
-'
+
     if (filter === 'unread' && notification.read) return false;
     if ('
       filter === 'high-priority' &&'
-      !['high', 'critical'].includes(notification.priority)
+      !['high',critical'].includes(notification.priority)
     )
       return false;
     if()
@@ -241,37 +230,37 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
   });
 
   const unreadCount = notifications.filter(n => !n.read).length;
-  const highPriorityCount = notifications.filter(n =>'
-    ['high', 'critical'].includes(n.priority)
+  const highPriorityCount = notifications.filter(n =>
+    ['high',critical'].includes(n.priority)
   ).length;
-'
+
   const getPriorityColor = (priority: Notification['priority']) => {
 
     switch (priority) {
-'
+
       case 'critical':'
-        return 'text-red-500 bg-red-500/10 border-red-500/20';'
+        return 'text-red-500 bg-red-500/10 border-red-500/20';
       case 'high':'
-        return 'text-orange-500 bg-orange-500/10 border-orange-500/20';'
+        return 'text-orange-500 bg-orange-500/10 border-orange-500/20';
       case 'medium':'
-        return 'text-yellow-500 bg-yellow-500/10 border-yellow-500/20';'
+        return 'text-yellow-500 bg-yellow-500/10 border-yellow-500/20';
       case 'low':'
         return 'text-blue-500 bg-blue-500/10 border-blue-500/20';
       default:'
         return 'text-gray-500 bg-gray-500/10 border-gray-500/20';
     }
   };
-'
+
   const getTypeIcon = (type: Notification['type']) => {
 
     switch (type) {
-'
+
       case 'success':
-        return <CheckCircle className="w-5 h-5 text-green-500" />;'
+        return <CheckCircle className="w-5 h-5 text-green-500" />;
       case 'warning':"
-        return <AlertTriangle className="w-5 h-5 text-yellow-500" />;'
+        return <AlertTriangle className="w-5 h-5 text-yellow-500" />;
       case 'error':"
-        return <XCircle className="w-5 h-5 text-red-500" />;'
+        return <XCircle className="w-5 h-5 text-red-500" />;
       case 'info':"
         return <Info className="w-5 h-5 text-blue-500" />;
       default:"
@@ -281,13 +270,13 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
 
   const getPositionClasses = (...args: unknown[]): unknown => {
     switch (position) {
-'
+
       case 'top-left':'
-        return 'top-4 left-4';'
+        return 'top-4 left-4';
       case 'top-right':'
-        return 'top-4 right-4';'
+        return 'top-4 right-4';
       case 'bottom-left':'
-        return 'bottom-4 left-4';'
+        return 'bottom-4 left-4';
       case 'bottom-right':'
         return 'bottom-4 right-4';
       default:'
@@ -310,7 +299,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}"
             className="absolute -top-1 -right-1 w-6 h-6 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold"
-          >'
+          >
             {unreadCount > 99 ? '99+' : unreadCount}
           </motion.div>
         )}
@@ -369,7 +358,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
                 <div className="relative">"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
                   <input"
-                    type="text""
+                    type="text"
                     placeholder="Search notifications..."
                     value={searchQuery}
                     onChange={e => setSearchQuery(e.target.value)}"
@@ -423,7 +412,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: 20 }}`
                       className={`p-4 hover:bg-gray-800 transition-colors ${
-'
+
                         !notification.read ? 'bg-gray-800/50' : ''`
                       }`}
                     >"
@@ -461,8 +450,8 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
                             {notification.actionUrl && (
                               <a
                                 href={notification.actionUrl}"
-                                className="text-xs text-blue-400 hover:text-blue-300 underline""
-                                target="_blank""
+                                className="text-xs text-blue-400 hover:text-blue-300 underline"
+                                target="_blank"
                                 rel="noopener noreferrer"
                               >
                                 View Details

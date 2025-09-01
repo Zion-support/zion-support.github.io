@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -16,7 +16,7 @@ import {
   Clock,
   Target,
   Award'
-} from 'lucide-react';'
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Import the new service data
@@ -26,33 +26,33 @@ import { revolutionary2027AIInnovationServices } from "../../data/revolutionary-
 
 const serviceCategories = [
   {
-'
-    id: 'micro-saas','
+
+    id: 'micro-saas',
     name: 'Micro SAAS Solutions',"
-    icon: <Rocket className="w-6 h-6" />,'
+    icon: <Rocket className="w-6 h-6" />,
     color: 'from-purple-600 to-pink-600',
     services: revolutionary2027AdvancedMicroSaasServices
   },
   {
-'
-    id: 'it-infrastructure','
+
+    id: 'it-infrastructure',
     name: 'IT Infrastructure & Cybersecurity',"
-    icon: <Shield className="w-6 h-6" />,'
+    icon: <Shield className="w-6 h-6" />,
     color: 'from-red-600 to-orange-600',
     services: revolutionary2027ITInfrastructureCybersecurityServices
   },
   {
-'
-    id: 'ai-innovation','
+
+    id: 'ai-innovation',
     name: 'AI Innovation Services',"
-    icon: <Brain className="w-6 h-6" />,'
+    icon: <Brain className="w-6 h-6" />,
     color: 'from-blue-600 to-cyan-600',
     services: revolutionary2027AIInnovationServices
   }
 ];
 
 export function ComprehensiveServicesShowcase() {
-'
+
   const [selectedCategory, setSelectedCategory] = useState('micro-saas');
   const [selectedService, setSelectedService] = useState(null);
 
@@ -203,7 +203,7 @@ export function ComprehensiveServicesShowcase() {
         <motion.div"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}"
-          initial="hidden""
+          initial="hidden"
           animate="visible"
         >
           {currentServices.map((service) => (
@@ -337,13 +337,13 @@ export function ComprehensiveServicesShowcase() {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
               >
                 Schedule Consultation
               </Link>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="bg-zion-slate-dark text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover:bg-zion-slate hover:border-zion-cyan/50 transition-all duration-300"
               >
                 Call Now: +1 302 464 0950
@@ -452,7 +452,7 @@ export function ComprehensiveServicesShowcase() {
                     Get Started Now
                   </Link>
                   <a"
-                    href="tel:+13024640950""
+                    href="tel:+13024640950"
                     className="bg-zion-slate text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover:bg-zion-slate-dark transition-all duration-300 text-center"
                   >
                     Call for Consultation

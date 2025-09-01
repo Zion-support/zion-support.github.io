@@ -1,60 +1,59 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityMaintenance() {
   const features = [
-    'AI-powered security maintenance optimization','
-    'Intelligent maintenance strategy management and execution',;'
-    'Automated security updates and patch management',;'
-    'Predictive analytics for maintenance needs',;'
-    'Smart maintenance framework management',;'
-    'AI-driven maintenance automation and orchestration',;'
-    'Real-time maintenance performance tracking',;'
+    'AI-powered security maintenance optimization',Intelligent maintenance strategy management and execution',;
+    'Automated security updates and patch management',;
+    'Predictive analytics for maintenance needs',;
+    'Smart maintenance framework management',;
+    'AI-driven maintenance automation and orchestration',;
+    'Real-time maintenance performance tracking',;
     'Custom AI models for maintenance applications';
   ];
 
   const tiers = [
     {
-'
-      name: 'Developer','
-      price: '$399/mo','
-      details: ['Up to 10 systems', 'Basic AI features', 'Standard maintenance', 'Email support']
+
+      name: 'Developer',
+      price: '$399/mo',
+      details: ['Up to 10 systems',Basic AI features',Standard maintenance',Email support']
     },
     {
-'
-      name: 'Business', '
-      price: '$999/mo', '
-      details: ['Up to 50 systems', 'Advanced AI features', 'Enhanced maintenance', 'Priority support'] ;
+
+      name: 'Business',
+      price: '$999/mo',
+      details: ['Up to 50 systems',Advanced AI features',Enhanced maintenance',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$2,499/mo', ;'
-      details: ['Unlimited systems', 'Custom AI models', 'Full maintenance suite', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$2,499/mo', ;
+      details: ['Unlimited systems',Custom AI models',Full maintenance suite',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Security maintenance optimization',;'
-    'Maintenance strategy management and execution',;'
-    'Security updates and patch management',;'
-    'Maintenance framework management and automation',;'
-    'Maintenance automation and orchestration',;'
+  const useCases = [;
+    'Security maintenance optimization',;
+    'Maintenance strategy management and execution',;
+    'Security updates and patch management',;
+    'Maintenance framework management and automation',;
+    'Maintenance automation and orchestration',;
     'Maintenance scaling and management';
   ];
 
-  const benefits = [;'
-    'Improve security maintenance performance by 50-80%',;'
-    'Reduce maintenance completion time by 40-70%',;'
-    'Cut security maintenance costs by 35-65%',;'
-    'Enhance security maintenance reliability and scalability',;'
-    'Optimize resource utilization',;'
+  const benefits = [;
+    'Improve security maintenance performance by 50-80%',;
+    'Reduce maintenance completion time by 40-70%',;
+    'Cut security maintenance costs by 35-65%',;
+    'Enhance security maintenance reliability and scalability',;
+    'Optimize resource utilization',;
     'Scale security maintenance operations efficiently';
   ];
 
-  const industries = [;'
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
     'Technology & SaaS';
   ];
 
@@ -107,8 +106,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['50-80% performance improvement', '40-70% completion time reduction', '35-65% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['50-80% performance improvement',40-70% completion time reduction',35-65% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-rose-600 mb-3" />"              <div className="text-gray-900 font-semibold">{t}</div>
             </div>

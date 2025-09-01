@@ -1,5 +1,169 @@
+<<<<<<< HEAD
+import React from 'react';
+import { Link } from 'react-router-dom';
+import {
+
+  Eye,
+  Shield,
+  CheckCircle,
+  AlertTriangle,
+  BarChart3,
+  Users,
+  Globe,
+  ArrowRight,
+  Star,
+  Heart,
+  Users,
+  Zap,
+  Lock,
+  FileText,
+  Phone,
+  Mail,
+  MessageCircle'
+} from 'lucide-react';
+
+  const currentYear = new Date () .getFullYear () ;
+
+  const accessibilityFeatures = [
+    {
+
+      category: 'Visual Accessibility',
+      icon: Eye,
+      features: ['
+        'High contrast mode support',Adjustable font sizes',Color-blind friendly design',Clear typography and spacing',Alternative text for images',Focus indicators for navigation'
+      ]
+    },
+    {
+
+      category: 'Auditory Accessibility',
+      icon: Ear,
+      features: ['
+        'Closed captions for videos',Audio descriptions',Volume controls',Visual alerts and notifications',Transcripts for audio content'
+      ]
+    },
+    {
+
+      category: 'Motor Accessibility',
+      icon: Hand,
+      features: ['
+        'Keyboard navigation support',Voice control compatibility',Large click targets',Customizable timing',Alternative input methods'
+      ]
+    },
+    {
+
+      category: 'Cognitive Accessibility',
+      icon: Brain,
+      features: ['
+        'Clear and simple language',Consistent navigation structure',Logical content organization',Reduced distractions',Step-by-step instructions'
+      ]
+    }
+  ];
+
+  const complianceStandards = [
+    {
+
+      standard: 'WCAG 2.1 AA',
+      status: 'Compliant',
+      icon: CheckCircle,
+      description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',
+      color: 'text-green-500'
+    },
+    {
+
+      standard: 'Section 508',
+      status: 'Compliant',
+      icon: CheckCircle,
+      description: 'Federal accessibility requirements for electronic and information technology',
+      color: 'text-green-500'
+    },
+    {
+
+      standard: 'ADA Title III',
+      status: 'Compliant',
+      icon: CheckCircle,
+      description: 'Americans with Disabilities Act requirements for public accommodations',
+      color: 'text-green-500'
+    },
+    {
+
+      standard: 'EN 301 549',
+      status: 'Compliant',
+      icon: CheckCircle,
+      description: 'European accessibility requirements for ICT products and services',
+      color: 'text-green-500'
+    }
+      items: ["Alt text for images", "Semantic HTML", "ARIA labels", "Form accessibility"];
+    },;
+    {;"
+      category: "Technical Accessibility",;"
+      items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"];
+    };
+  ];
+
+  const accessibilityTools = [
+    {
+
+      name: 'Screen Reader Support',
+      description: 'Full compatibility with popular screen readers including JAWS, NVDA, and VoiceOver',
+      icon: Monitor
+    },
+    {
+
+      name: 'Mobile Accessibility',
+      description: 'Optimized for mobile devices with touch-friendly interfaces and responsive design',
+      icon: Smartphone
+    },
+    {
+
+      name: 'Voice Navigation',
+      description: 'Voice control support for hands-free navigation and interaction',
+      icon: Globe
+    },
+    {
+
+      name: 'Customizable Interface',
+      description: 'Personalizable themes, fonts, and layout options to meet individual needs',
+      icon: Zap
+    }
+  ];
+
+  const containerVariants = {
+
+    hidden: { opacity: 0 },
+    visible: {
+
+      opacity: 1,
+      transition: {
+
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+
+      opacity: 1,
+      y: 0,
+      transition: {
+
+        duration: 0.5
+      }
+    }
+  };
+
+  return ("
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"
+      <section className="py-20 px-4 sm:px-6 lg:px-8">"
+        <div className="max-w-7xl mx-auto">"
+          <div className="text-center mb-16">"
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+=======
 import React from 'react';'
 import { Link } from 'react-router-dom';            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               Accessibility"
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">"
                 {" "}Auditor
@@ -156,13 +320,13 @@ import { Link } from 'react-router-dom';            <h1 className="text-4xl md:t
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
 
                   Get Accessibility Audit
                 </Link>
                 <Link"
-                  to="/services""
+                  to="/services"
                   className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
 
                   View All Services

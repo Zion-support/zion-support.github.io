@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-'
+
 import { motion } from 'framer-motion';
 import {
 
@@ -15,7 +15,7 @@ import {
   Moon,
   Cloud,
   Users,
-  Database,'
+  Database,
   Shield} from 'lucide-react';
 
 export function AppHeader() {
@@ -29,8 +29,8 @@ export function AppHeader() {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
-    };'
-    window.addEventListener('scroll', handleScroll);'
+    };
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -48,68 +48,68 @@ export function AppHeader() {
   const navigationItems = ['
     { name: 'Home', path: '/', icon: null },
     {
-'
-      name: 'Services','
+
+      name: 'Services',
       path: '/services',
       icon: null,
       dropdown: [
         {
-'
-          name: 'AI & Machine Learning','
+
+          name: 'AI & Machine Learning',
           path: '/services?category=ai-ml',
-          icon: Brain,'
+          icon: Brain,
           color: 'from-purple-500 to-pink-500'},
         {
-'
-          name: 'Quantum Computing','
+
+          name: 'Quantum Computing',
           path: '/services?category=quantum',
-          icon: Zap,'
+          icon: Zap,
           color: 'from-blue-500 to-cyan-500'},
         {
-'
-          name: 'Blockchain & Web3','
+
+          name: 'Blockchain & Web3',
           path: '/services?category=blockchain',
-          icon: Lock,'
+          icon: Lock,
           color: 'from-green-500 to-emerald-500'},
         {
-'
-          name: 'IoT & Edge Computing','
+
+          name: 'IoT & Edge Computing',
           path: '/services?category=iot',
-          icon: Cloud,'
+          icon: Cloud,
           color: 'from-orange-500 to-red-500'},
         {
-'
-          name: 'AR/VR Development','
+
+          name: 'AR/VR Development',
           path: '/services?category=ar-vr',
-          icon: Users,'
+          icon: Users,
           color: 'from-indigo-500 to-purple-500'},
         {
-'
-          name: 'FinTech Solutions','
+
+          name: 'FinTech Solutions',
           path: '/services?category=fintech',
-          icon: Database,'
+          icon: Database,
           color: 'from-yellow-500 to-orange-500'},
         {
-'
-          name: 'Green Technology','
+
+          name: 'Green Technology',
           path: '/services?category=green-tech',
-          icon: Shield,'
+          icon: Shield,
           color: 'from-green-400 to-teal-500'},
         {
-'
-          name: 'Cybersecurity','
+
+          name: 'Cybersecurity',
           path: '/services?category=cybersecurity',
-          icon: Lock,'
+          icon: Lock,
           color: 'from-red-500 to-pink-500'},
-      ]},'
-    { name: 'About', path: '/about', icon: null },'
+      ]},
+    { name: 'About', path: '/about', icon: null },
     { name: 'Contact', path: '/contact', icon: null },
   ];
 
   const isActiveRoute = path => {
-'
+
     if (path === '/') {
-'
+
       return location.pathname === '/';
     }
     return location.pathname.startsWith(path);
@@ -133,7 +133,7 @@ export function AppHeader() {
           <Link to="/" className="flex items-center space-x-3 group">
             <motion.div"
               className="relative"
-              whileHover={{ scale: 1.1 }}'
+              whileHover={{ scale: 1.1 }}
               transition={{ type: 'spring', stiffness: 400, damping: 10 }}
             >"
               <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">"
@@ -163,7 +163,7 @@ export function AppHeader() {
                   <Link
                     to={item.path}`
                     className={`text-white hover:text-zion-cyan transition-colors ${
-'
+
                       isActiveRoute(item.path) ? 'text-zion-cyan' : ''`
                     }`}
                   >
@@ -220,7 +220,7 @@ export function AppHeader() {
 
             {/* CTA Button */}
             <Link"
-              to="/contact""
+              to="/contact"
               className="hidden sm:inline-flex items-center px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-cyan-dark hover:to-zion-blue-dark transition-all duration-200 font-medium"
             >
               Get Started
@@ -245,7 +245,7 @@ export function AppHeader() {
       {mobileMenuOpen && (
         <motion.div"
           className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-zion-cyan/30"
-          initial={{ opacity: 0, height: 0 }}'
+          initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.3 }}

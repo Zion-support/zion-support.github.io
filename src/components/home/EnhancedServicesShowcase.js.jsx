@@ -1,13 +1,13 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import {
 
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from '@/components/ui/card';'
+  CardHeader,
+  CardTitle} from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import {
 
@@ -22,23 +22,16 @@ import {
   DollarSign,
   Link as LinkIcon,
   ArrowRight,
-  Star,'
-  CheckCircle} from 'lucide-react';'
+  Star,
+  CheckCircle} from 'lucide-react';
 import { ENHANCED_SERVICES } from '@/data/enhancedServices';
 const featuredServices = ENHANCED_SERVICES.filter()
   service => service.featured
 ).slice(0, 6);
 const serviceIcons = {
-'
-  'AI Automation': Brain,'
-  'Cloud Management': Cloud,
-  Cybersecurity: Shield,'
-  'Data Engineering': Database,'
-  'Business Intelligence': TrendingUp,'
-  'Developer Tools': Code,'
-  'Digital Transformation': Zap,'
-  'Healthcare Technology': Heart,'
-  'Financial Technology': DollarSign,
+
+  'AI Automation': Brain,Cloud Management': Cloud,
+  Cybersecurity: Shield,Data Engineering': Database,Business Intelligence': TrendingUp,Developer Tools': Code,Digital Transformation': Zap,Healthcare Technology': Heart,Financial Technology': DollarSign,
   Blockchain: LinkIcon};
 export function EnhancedServicesShowcase() {
   return()
@@ -107,7 +100,7 @@ export function EnhancedServicesShowcase() {
                     {service.tags.slice(0, 3).map((tag, index) => (
                       <Badge
                         key={index}"
-                        variant="outline""
+                        variant="outline"
                         className="text-xs border-zion-purple/30 text-zion-purple"
                       >
                         {tag}
@@ -121,8 +114,8 @@ export function EnhancedServicesShowcase() {
                       AI Score: {service.aiScore}
                     </div>
                     <Button"
-                      size="sm""
-                      variant="outline""
+                      size="sm"
+                      variant="outline"
                       className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
                       asChild
                     >"
@@ -249,7 +242,7 @@ export function EnhancedServicesShowcase() {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button"
-              size="lg""
+              size="lg"
               className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light"
               asChild
             >"
@@ -259,8 +252,8 @@ export function EnhancedServicesShowcase() {
               </Link>
             </Button>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
               asChild
             >"

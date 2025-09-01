@@ -26,8 +26,8 @@ describe'AccessibilityEnhancer': unknown, (: unknown {
     );
 
     const element = screen.getByRole('button');
-    expect(element).toHaveAttribute('aria-label', 'Test Button');
-    expect(element).toHaveAttribute('tabindex', '0');
+    expect(element).toHaveAttribute('aria-label',Test Button');
+    expect(element).toHaveAttribute('tabindex',0');
   });
 
   it'handles keyboard events correctly': unknown, (: unknown {
@@ -54,9 +54,7 @@ describe'AccessibilityEnhancer': unknown, (: unknown {
 
     const element = screen.getByText('Content').parentElement;
     expect(element).toHaveClass(
-      'focus:outline-none',
-      'focus:ring-2',
-      'focus:ring-blue-500'
+      'focus:outline-none',focus:ring-2',focus:ring-blue-500'
     );
   });
 
@@ -68,6 +66,6 @@ describe'AccessibilityEnhancer': unknown, (: unknown {
     );
 
     const element = screen.getByText('Content').parentElement;
-    expect(element).toHaveAttribute('tabindex', '-1');
+    expect(element).toHaveAttribute('tabindex',-1');
   });
 });

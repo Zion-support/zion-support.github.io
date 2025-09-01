@@ -1,5 +1,5 @@
 // import type { NextApiRequest, NextApiResponse } from 'next.ts'; // Removed'
-import { supabase } from '@/integrations/supabase/client';'
+import { supabase } from '@/integrations/supabase/client';
 import { TeamInvite } from '@/types';
 
 // TODO: This API route was written for a Next.js environment.
@@ -7,9 +7,9 @@ import { TeamInvite } from '@/types';
 // potentially into a Supabase Function or a backend handler compatible with Vite.
 /*
 export default async function handler(...args[]: any):  {
-'
+
   if (req.method !== 'POST') {
-'
+
     // res.setHeader('Allow', ['POST']); // Placeholder
     return res.status(405).json({ error: `Method ${req.method} Not Allowed` })}
 
@@ -23,13 +23,13 @@ export default async function handler(...args[]: any):  {
     } = req.body;
 
     if (!talentId || !roleTitle) {
-'
+
       return res.status(400).json({ error: 'Missing required fields: talentId and roleTitle are required.' })}
 
     const newInviteData: Partial<TeamInvite> = {
 
       talent_id: talentId,
-      role_title: roleTitle,'
+      role_title: roleTitle,
       status: 'pending'};
 
     if (projectBriefId) {
@@ -46,16 +46,16 @@ export default async function handler(...args[]: any):  {
       .single();
 
     if (error) {
-'
+
       // console.error('Error inserting team invite:', error);
       throw error}
 
     if (!data) {
-'
+
       return res.status(500).json({ error: 'Failed to create team invite: No data returned.' })}
 
     res.status(201).json(data as TeamInvite)} catch (error) {
-'
+
     // console.error('Error in /api/team-builder/invite:', error);'`
     return res.status(500).json({ error: `Failed to create team invite: ${error.message || 'Unknown error'}` })}
 }

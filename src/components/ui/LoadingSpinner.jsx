@@ -1,29 +1,29 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
 export function LoadingSpinner({
-'
-  size = 'md','
+
+  size = 'md',
   color = 'primary',
-  showText = false,'
-  text = 'Loading...','
-  className = '','
+  showText = false,
+  text = 'Loading...',
+  className = '',
   customColor = ''}) {
 
   const sizeClasses = {
-'
-    xs: 'w-4 h-4','
-    sm: 'w-6 h-6','
-    md: 'w-8 h-8','
-    lg: 'w-12 h-12','
+
+    xs: 'w-4 h-4',
+    sm: 'w-6 h-6',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
     xl: 'w-16 h-16'};
 
   const colorClasses = {
-'
-    primary: 'border-zion-purple','
-    secondary: 'border-zion-cyan','
-    white: 'border-white','
+
+    primary: 'border-zion-purple',
+    secondary: 'border-zion-cyan',
+    white: 'border-white',
     custom: ''};
 
   const borderColor = customColor || colorClasses[color];
@@ -40,9 +40,9 @@ export function LoadingSpinner({
         transition={{
 
           duration: 1,
-          repeat: Infinity,'
+          repeat: Infinity,
           ease: 'linear'}}
-        role="status""
+        role="status"
         aria-label="Loading"
       />
 
@@ -67,7 +67,7 @@ export function SkeletonLoader({ className, lines = 3, height = 'h-4' }) {
     <div className={cn('space-y-3', className)}>
       {Array.from({ length: lines }).map((_, index) => (
         <motion.div
-          key={index}'
+          key={index}
           className={cn('bg-zion-slate-light/20 rounded animate-pulse', height)}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

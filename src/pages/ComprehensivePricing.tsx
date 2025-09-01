@@ -5,11 +5,11 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from '@/components/ui/card';'
-import { Badge } from '@/components/ui/badge';'
-import { Button } from '@/components/ui/button';'
-import { cuttingEdgeComprehensiveServices2027 } from '../../data/2027-cutting-edge-comprehensive-services';'
+  CardHeader,
+  CardTitle} from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { cuttingEdgeComprehensiveServices2027 } from '../../data/2027-cutting-edge-comprehensive-services';
 import { specializedInnovativeServices2027 } from '../../data/2027-specialized-innovative-services';
 import {
 
@@ -21,67 +21,52 @@ import {
   ArrowRight,
   TrendingUp,
   Users,
-  Shield,'
-  Zap} from 'lucide-react';'
+  Shield,
+  Zap} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const contactInfo = {
-'
-  mobile: '+1 302 464 0950','
-  email: 'kleber@ziontechgroup.com','
-  address: '364 E Main St STE 1008 Middletown DE 19709','
+
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'};
 
 const pricingTiers = [
   {
-'
-    name: 'Starter','
-    price: '$999','
-    period: '/month','
+
+    name: 'Starter',
+    price: '$999',
+    period: '/month',
     description: 'Perfect for small businesses and startups',
     features: ['
-      'Basic AI automation','
-      'Standard support','
-      'Core integrations','
-      'Basic analytics','
-      'Email support',
+      'Basic AI automation',Standard support',Core integrations',Basic analytics',Email support',
     ],
     popular: false},
   {
-'
-    name: 'Professional','
-    price: '$2,999','
-    period: '/month','
+
+    name: 'Professional',
+    price: '$2,999',
+    period: '/month',
     description: 'Ideal for growing businesses',
     features: ['
-      'Advanced AI features','
-      'Priority support','
-      'Custom integrations','
-      'Advanced analytics','
-      'Phone & email support','
-      'Training sessions',
+      'Advanced AI features',Priority support',Custom integrations',Advanced analytics',Phone & email support',Training sessions',
     ],
     popular: true},
   {
-'
-    name: 'Enterprise','
-    price: '$7,999','
-    period: '/month','
+
+    name: 'Enterprise',
+    price: '$7,999',
+    period: '/month',
     description: 'For large organizations',
     features: ['
-      'Full AI suite','
-      '24/7 dedicated support','
-      'Custom development','
-      'Enterprise analytics','
-      'Dedicated account manager','
-      'Custom training programs','
-      'SLA guarantees',
+      'Full AI suite',24/7 dedicated support',Custom development',Enterprise analytics',Dedicated account manager',Custom training programs',SLA guarantees',
     ],
     popular: false},
 ];
 export default function ComprehensivePricing() {
-'
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');'
+
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<any>('all');
 
   // Combine all services
@@ -101,20 +86,27 @@ export default function ComprehensivePricing() {
     const matchesCategory ='
       selectedCategory === 'all' || service.category === selectedCategory;
 
-    let matchesPrice = true;'
+    let matchesPrice = true;
     if (selectedPriceRange !== 'all') {
+<<<<<<< HEAD
+
+      const price = parseInt(service.price.replace(/[^0-9]/g,));
+      switch (selectedPriceRange) {
+
+=======
 '
       const price = parseInt(service.price.replace(/[^0-9]/g, ''));      switch (selectedPriceRange) {
 '
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         case 'under-1000':
           matchesPrice = price < 1000;
-          break;'
+          break;
         case '1000-3000':
           matchesPrice = price >= 1000 && price < 3000;
-          break;'
+          break;
         case '3000-5000':
           matchesPrice = price >= 3000 && price < 5000;
-          break;'
+          break;
         case 'over-5000':
           matchesPrice = price >= 5000;
           break;
@@ -175,7 +167,7 @@ export default function ComprehensivePricing() {
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingTiers.map((tier, index) => (
               <Card
-                key={index}'
+                key={index}
                 className={`relative ${tier.popular ? 'ring-2 ring-zion-cyan scale-105' : ''}`}
               >
                 {tier.popular && ("
@@ -328,7 +320,7 @@ export default function ComprehensivePricing() {
                         ({service.reviews})
                       </span>                    </div>
                     <Badge"
-                      variant="outline""
+                      variant="outline"
                       className="border-zion-cyan text-zion-cyan"
                     >
                       {service.customers} customers
@@ -344,7 +336,7 @@ export default function ComprehensivePricing() {
                     </Link>"
                     <Link to="/contact" className="w-full">
                       <Button"
-                        variant="outline""
+                        variant="outline"
                         className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white"
                       >"                        <Phone className="h-4 w-4 mr-2" />
                         Get Quote
@@ -362,8 +354,8 @@ export default function ComprehensivePricing() {
               </p>
               <Button
                 onClick={() => {
-'
-                  setSelectedCategory('all');'
+
+                  setSelectedCategory('all');
                   setSelectedPriceRange('all');
                 }}"
                 className="mt-4 bg-zion-cyan text-white hover:bg-zion-cyan-dark"              >
@@ -439,7 +431,7 @@ export default function ComprehensivePricing() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">"
               <Link to="/contact">
                 <Button"
-                  size="lg""
+                  size="lg"
                   className="bg-white text-zion-blue hover:bg-gray-100 px-8 py-3"
                 >"                  <Phone className="h-5 w-5 mr-2" />
                   Get Free Consultation
@@ -447,8 +439,8 @@ export default function ComprehensivePricing() {
               </Link>"
               <Link to="/contact">
                 <Button"
-                  size="lg""
-                  variant="outline""
+                  size="lg"
+                  variant="outline"
                   className="border-white text-white hover:bg-white hover:text-zion-blue px-8 py-3"
                 >"                  <Mail className="h-5 w-5 mr-2" />
                   Request Demo

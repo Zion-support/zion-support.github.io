@@ -1,33 +1,27 @@
-import { useState, useEffect } from 'react';'
-import { Link } from 'react-router-dom';'
-import { GradientHeading } from '@/components/GradientHeading';'
-import { SEO } from '@/components/SEO';'
-import { Card, CardContent, CardFooter } from '@/components/ui/card';'
-import { Button } from '@/components/ui/button';'
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { GradientHeading } from '@/components/GradientHeading';
+import { SEO } from '@/components/SEO';
+import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
 
   Select,
   SelectValue,
   SelectTrigger,
-  SelectContent,'
-  SelectItem} from '@/components/ui/select';'
-import { generateRandomBlogPost } from '@/utils/generateRandomBlogPost';'
-import { BLOG_POSTS } from '@/data/blog-posts';'
+  SelectContent,
+  SelectItem} from '@/components/ui/select';
+import { generateRandomBlogPost } from '@/utils/generateRandomBlogPost';
+import { BLOG_POSTS } from '@/data/blog-posts';
 import { Search } from 'lucide-react';
 // Categories for filtering
 const CATEGORIES = ['
-  'All Categories','
-  'Trends','
-  'Marketing','
-  'Sustainability','
-  'Ethics','
-  'Recruitment','
-  'Infrastructure',
+  'All Categories',Trends',Marketing',Sustainability',Ethics',Recruitment',Infrastructure',
 ];
 export default function Blog() {
-'
-  const [searchQuery, setSearchQuery] = useState('');'
+
+  const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All Categories');
   const [posts, setPosts] = useState([...BLOG_POSTS]);
   useEffect(() => {
@@ -49,9 +43,9 @@ export default function Blog() {
   return()
     <>
       <SEO
-        title="Blog - AI & Tech Insights""
-        description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation.""
-        keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT""
+        title="Blog - AI & Tech Insights"
+        description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation."
+        keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT"
         canonical="https://ziontechgroup.com/blog"
       />"
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">"
@@ -77,7 +71,7 @@ export default function Blog() {
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
                     onError={e => {
 
-                      const target = e.currentTarget;'
+                      const target = e.currentTarget;
                       target.src = '/images/blog-placeholder.svg';
                     }}
                   />
@@ -99,7 +93,7 @@ export default function Blog() {
                       className="w-10 h-10 rounded-full mr-3"
                       onError={e => {
 
-                        const target = e.currentTarget;'
+                        const target = e.currentTarget;
                         target.src = '/images/blog-placeholder.svg';
                       }}
                     />
@@ -107,7 +101,7 @@ export default function Blog() {
                       <p className="text-white font-medium">
                         {featuredPosts[0].author.name}
                       </p>"
-                      <p className="text-sm text-zion-slate-light">'
+                      <p className="text-sm text-zion-slate-light">
                         {featuredPosts[0].publishedDate} •{' '}
                         {featuredPosts[0].readTime}
                       </p>
@@ -131,7 +125,7 @@ export default function Blog() {
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />
                 <Input"
-                  type="text""
+                  type="text"
                   placeholder="Search articles..."
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}"
@@ -174,7 +168,7 @@ export default function Blog() {
                       className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
                       onError={e => {
 
-                        const target = e.currentTarget;'
+                        const target = e.currentTarget;
                         target.src = '/images/blog-placeholder.svg';
                       }}
                     />
@@ -201,7 +195,7 @@ export default function Blog() {
                         className="w-8 h-8 rounded-full mr-2"
                         onError={e => {
 
-                          const target = e.currentTarget;'
+                          const target = e.currentTarget;
                           target.src = '/images/blog-placeholder.svg';
                         }}
                       />"
@@ -212,7 +206,7 @@ export default function Blog() {
                   </CardContent>"
                   <CardFooter className="p-6 pt-0">
                     <Button"
-                      variant="link""
+                      variant="link"
                       className="text-zion-cyan p-0 hover:text-zion-purple"
                       asChild
                     >`
@@ -233,8 +227,8 @@ export default function Blog() {
               <Button"
                 variant="outline"
                 onClick={() => {
-'
-                  setSearchQuery('');'
+
+                  setSearchQuery('');
                   setSelectedCategory('All Categories');
                 }}"
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"

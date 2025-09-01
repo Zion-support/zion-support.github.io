@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousFinance = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousFinance = () => {
       <Helmet>
         <title>AI Autonomous Finance Platform | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous finance platform that provides intelligent financial analysis, automated trading, risk management, and investment optimization with advanced AI capabilities."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI finance, autonomous trading, financial analysis, investment AI, risk management, fintech AI"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-finance"
         />
       </Helmet>
@@ -171,14 +171,7 @@ const AIAutonomousFinance = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Algorithmic Trading','
-                'Credit Scoring','
-                'Insurance Analytics','
-                'Wealth Management','
-                'Market Research','
-                'Tax Optimization','
-                'Financial Planning','
-                'Risk Assessment',
+                'Algorithmic Trading',Credit Scoring',Insurance Analytics',Wealth Management',Market Research',Tax Optimization',Financial Planning',Risk Assessment',
               ].map(service => (
                 <div
                   key={service}"

@@ -1,60 +1,59 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecuritySupport() {
   const features = [
-    'AI-powered security support optimization','
-    'Intelligent support strategy management and execution',;'
-    'Automated security issue resolution and assistance',;'
-    'Predictive analytics for support needs',;'
-    'Smart support framework management',;'
-    'AI-driven support automation and orchestration',;'
-    'Real-time support performance tracking',;'
+    'AI-powered security support optimization',Intelligent support strategy management and execution',;
+    'Automated security issue resolution and assistance',;
+    'Predictive analytics for support needs',;
+    'Smart support framework management',;
+    'AI-driven support automation and orchestration',;
+    'Real-time support performance tracking',;
     'Custom AI models for support applications';
   ];
 
   const tiers = [
     {
-'
-      name: 'Developer','
-      price: '$299/mo','
-      details: ['Up to 50 support tickets/month', 'Basic AI features', 'Standard support', 'Email support']
+
+      name: 'Developer',
+      price: '$299/mo',
+      details: ['Up to 50 support tickets/month',Basic AI features',Standard support',Email support']
     },
     {
-'
-      name: 'Business', '
-      price: '$799/mo', '
-      details: ['Up to 200 support tickets/month', 'Advanced AI features', 'Enhanced support', 'Priority support'] ;
+
+      name: 'Business',
+      price: '$799/mo',
+      details: ['Up to 200 support tickets/month',Advanced AI features',Enhanced support',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,999/mo', ;'
-      details: ['Unlimited support tickets', 'Custom AI models', 'Full support suite', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$1,999/mo', ;
+      details: ['Unlimited support tickets',Custom AI models',Full support suite',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Security support optimization',;'
-    'Support strategy management and execution',;'
-    'Security issue resolution and assistance',;'
-    'Support framework management and automation',;'
-    'Support automation and orchestration',;'
+  const useCases = [;
+    'Security support optimization',;
+    'Support strategy management and execution',;
+    'Security issue resolution and assistance',;
+    'Support framework management and automation',;
+    'Support automation and orchestration',;
     'Support scaling and management';
   ];
 
-  const benefits = [;'
-    'Improve security support performance by 50-80%',;'
-    'Reduce support resolution time by 40-70%',;'
-    'Cut security support costs by 35-65%',;'
-    'Enhance security support reliability and scalability',;'
-    'Optimize resource utilization',;'
+  const benefits = [;
+    'Improve security support performance by 50-80%',;
+    'Reduce support resolution time by 40-70%',;
+    'Cut security support costs by 35-65%',;
+    'Enhance security support reliability and scalability',;
+    'Optimize resource utilization',;
     'Scale security support operations efficiently';
   ];
 
-  const industries = [;'
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
     'Technology & SaaS';
   ];
 
@@ -107,8 +106,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['50-80% performance improvement', '40-70% resolution time reduction', '35-65% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['50-80% performance improvement',40-70% resolution time reduction',35-65% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-amber-600 mb-3" />"              <div className="text-gray-900 font-semibold">{t}</div>
             </div>

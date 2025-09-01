@@ -1,30 +1,30 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { Target, ArrowRight } from 'lucide-react';'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Target, ArrowRight } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 ;
 const MicroCRM: React.FC = props {
   const services = [
     {
-'
+
       title: 'Contact Management',
       description:'
         'Organize and track customer information, interactions, and history in one centralized location.',
       icon: Target},
     {
-'
+
       title: 'Sales Pipeline',
       description:'
         'Visualize and manage your sales process from lead to close with customizable stages.',
       icon: Target},
     {
-'
+
       title: 'Task Management',
       description:'
         'Set reminders, track follow-ups, and manage customer-related tasks efficiently.',
       icon: Target},
     {
-'
+
       title: 'Communication Tools',
       description:'
         'Integrated email, SMS, and phone tools for seamless customer communication.',
@@ -33,22 +33,22 @@ const MicroCRM: React.FC = props {
 
   const useCases = [
     {
-'
+
       industry: 'Local Services',
       description:'
         'Perfect for plumbers, electricians, and contractors who need to track jobs and customers.'},
     {
-'
+
       industry: 'Small Retail',
       description:'
         'Ideal for boutique shops and local stores managing customer relationships and sales.'},
     {
-'
+
       industry: 'Professional Services',
       description:'
         'Great for consultants, lawyers, and accountants tracking client interactions.'},
     {
-'
+
       industry: 'Healthcare',
       description:'
         'Suitable for small medical practices managing patient relationships and appointments.'},
@@ -57,7 +57,7 @@ const MicroCRM: React.FC = props {
   return()
     <div className="min-h-screen bg-futuristic text-white">
       <SEO"
-        title="Micro CRM for Local Businesses""
+        title="Micro CRM for Local Businesses"
         description="Lightweight customer tracking, reminders, invoices, and reviews for local SMBs."
       />"
       <section className="container-responsive section-padding">"
@@ -85,7 +85,7 @@ const MicroCRM: React.FC = props {
               <li>Business: $199/mo with custom fields and roles</li>
             </ul>
             <a"
-              href="/request-quote""
+              href="/request-quote"
               className="btn-futuristic mt-4 inline-block"
             >
               Get started

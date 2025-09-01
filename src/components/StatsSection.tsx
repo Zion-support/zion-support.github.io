@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion } from 'framer-motion.ts';
 import { LucideIcon } from 'lucide-react.ts';
 export function StatsSection(...args: any[]): any {
 

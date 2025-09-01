@@ -138,7 +138,7 @@ import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, User
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>"
                 <h2 className="text-3xl font-bold text-white mb-6">The Zion Ecosystem</h2>"
-                <p className="text-zion-slate-light text-lg mb-6">'
+                <p className="text-zion-slate-light text-lg mb-6">
                   Zion is more than just a marketplace – it's a complete ecosystem designed to facilitate
                   meaningful connections between AI and tech professionals and the clients who need their expertise.
                 </p>"

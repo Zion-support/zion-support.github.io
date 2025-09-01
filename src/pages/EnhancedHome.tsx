@@ -1,5 +1,5 @@
-import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
   Users, 
@@ -54,8 +54,8 @@ import {
   Users2,
   Settings,
   Palette'
-} from 'lucide-react';'
-import { EnhancedSEO } from '../components/EnhancedSEO';'
+} from 'lucide-react';
+import { EnhancedSEO } from '../components/EnhancedSEO';
 import { LazyLoadWrapper, OptimizedImage } from '../components/PerformanceOptimizer';
 
 // Optimized futuristic animated background component
@@ -101,7 +101,7 @@ const FuturisticBackground = React.memo(() => {
     </div>
   );
 });
-'
+
 FuturisticBackground.displayName = 'FuturisticBackground';
 
 // Enhanced hero section component
@@ -177,15 +177,15 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
           {/* CTA Buttons */}"
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link"
-              to="/services""
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-zion-slate-dark""
+              to="/services"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-zion-slate-dark"
               aria-label="Explore our services"
             >
               <span>Explore Services</span>"
               <ArrowRight className="w-5 h-5" />            </Link>
             <button
               onClick={onGetStarted}"
-              className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-cyan-400/50 flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-zion-slate-dark""
+              className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-cyan-400/50 flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-zion-slate-dark"
               aria-label="Get started with Zion Tech"
             >
               <span>Get Started</span>"
@@ -234,13 +234,13 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
             {/* Navigation Arrows */}
             <button
               onClick={prevSlide}"
-              className="absolute left-0 top-1/2 -translate-y-1/2 p-2 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400""
+              className="absolute left-0 top-1/2 -translate-y-1/2 p-2 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400"
               aria-label="Previous slide"
             >"
               <ChevronLeft className="w-6 h-6" />            </button>
             <button
               onClick={nextSlide}"
-              className="absolute right-0 top-1/2 -translate-y-1/2 p-2 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400""
+              className="absolute right-0 top-1/2 -translate-y-1/2 p-2 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400"
               aria-label="Next slide"
             >"
               <ChevronRight className="w-6 h-6" />            </button>
@@ -252,7 +252,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
                   key={index}
                   onClick={() => setCurrentSlide(index)}`
                   className={`w-3 h-3 rounded-full transition-colors ${
-'
+
                     index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'`
                   }`}`
                   aria-label={`Go to slide ${index + 1}`}
@@ -265,7 +265,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
     </section>
   );
 });
-'
+
 HeroSection.displayName = 'HeroSection';
 
 // Enhanced features section
@@ -341,7 +341,7 @@ const FeaturesSection = React.memo ( () => {
     </section>
   );
 });
-'
+
 FeaturesSection.displayName = 'FeaturesSection';
 
 // Enhanced stats section
@@ -377,7 +377,7 @@ const StatsSection = React.memo(() => {
     </section>
   );
 });
-'
+
 StatsSection.displayName = 'StatsSection';
 
 // Enhanced CTA section
@@ -394,19 +394,19 @@ const CTASection = React.memo(() => {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>"
-          <p className="text-xl text-gray-300 mb-8">'
+          <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our innovative solutions can help you achieve your goals.
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
+              to="/contact"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center space-x-2"
             >
               <span>Get Started Today</span>"
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link"
-              to="/schedule-demo""
+              to="/schedule-demo"
               className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-cyan-400/50 flex items-center justify-center space-x-2"
             >
               <span>Schedule Demo</span>"
@@ -416,8 +416,14 @@ const CTASection = React.memo(() => {
         </motion.div>
       </div>
     </section>
+<<<<<<< HEAD
+  );
+});
+
+=======
   );});
 '
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 CTASection.displayName = 'CTASection';
 
 // Main EnhancedHome component
@@ -432,7 +438,7 @@ const EnhancedHome: React.FC = () => {
     // Scroll to services section or navigate'
     const servicesSection = document.getElementById('services');
     if (servicesSection) {
-'
+
       servicesSection.scrollIntoView({ behavior: 'smooth' });
     }
   }, []) ;
@@ -447,10 +453,18 @@ const EnhancedHome: React.FC = () => {
   return()
     <>
       <EnhancedSEO "
+<<<<<<< HEAD
+        title="Zion Tech Group - Leading AI Solutions & Technology Services"
+        description="Transform your business with cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Expert technology consulting and digital transformation."
+        keywords="AI solutions, quantum computing, micro SAAS, digital transformation, technology consulting, machine learning, cybersecurity, cloud services"
+        type="website"
+      />
+=======
         title="Zion Tech Group - Leading AI Solutions & Technology Services""
         description="Transform your business with cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Expert technology consulting and digital transformation.""
         keywords="AI solutions, quantum computing, micro SAAS, digital transformation, technology consulting, machine learning, cybersecurity, cloud services""        type="website"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       <FuturisticBackground />
       "      <div className="relative z-10">

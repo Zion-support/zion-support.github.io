@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -42,98 +42,93 @@ import {
   Palette,
   Calculator,
   PieChart,
-  Target,'
+  Target,
   AlertTriangle} from 'lucide-react';
 
 export default function CloudFinOpsOptimizer() {
   const features = [
     {
 
-      icon: Calculator,'
+      icon: Calculator,
       title: 'Cost Optimization Engine',
       description:'
         'AI-powered cost analysis and optimization recommendations for cloud resources'},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Real-time Cost Monitoring',
       description:'
         'Live tracking of cloud spending with instant alerts and notifications'},
     {
 
-      icon: Target,'
+      icon: Target,
       title: 'Budget Management',
       description:'
         'Set and enforce budgets with automated cost controls and forecasting'},
     {
 
-      icon: TrendingUp,'
+      icon: TrendingUp,
       title: 'Performance Analytics',
       description:'
         'Comprehensive insights into resource utilization and performance metrics'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Compliance Tracking',
       description:'
         'Monitor and ensure compliance with financial and regulatory requirements'},
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'Predictive Cost Modeling',
       description:'
         'Machine learning models to forecast future costs and optimize spending'},
   ];
 
   const benefits = ['
-    'Reduce cloud costs by up to 40% through intelligent optimization','
-    'Improve resource utilization efficiency by 60%','
-    'Eliminate waste with automated cost anomaly detection','
-    'Achieve better budget predictability and control','
-    'Streamline financial operations and reporting','
-    'Ensure compliance with cost governance policies',
+    'Reduce cloud costs by up to 40% through intelligent optimization',Improve resource utilization efficiency by 60%',Eliminate waste with automated cost anomaly detection',Achieve better budget predictability and control',Streamline financial operations and reporting',Ensure compliance with cost governance policies',
   ];
 
   const useCases = [
     {
-'
+
       title: 'Enterprise Cloud Users',
       description:'
         'Large organizations managing complex multi-cloud environments'},
     {
-'
+
       title: 'Startups & Scale-ups',
       description:'
         'Growing companies optimizing cloud costs during rapid expansion'},
     {
-'
+
       title: 'Financial Services',
       description:'
         'Banks and fintech companies with strict cost compliance requirements'},
     {
-'
-      title: 'E-commerce & SaaS','
+
+      title: 'E-commerce & SaaS',
       description: 'Digital businesses with variable cloud usage patterns'},
   ];
 
   const optimizationStrategies = [
     {
-'
+
       title: 'Resource Right-sizing',
       description:'
         'Automatically adjust resource allocation based on actual usage patterns'},
     {
-'
+
       title: 'Reserved Instance Optimization',
       description:'
         'Maximize savings through strategic reserved instance purchases'},
     {
-'
+
       title: 'Spot Instance Management',
       description:'
         'Leverage spot instances for non-critical workloads to reduce costs'},
     {
-'
+
       title: 'Storage Tier Optimization',
       description:'
         'Move data to appropriate storage tiers based on access patterns'},
@@ -340,7 +335,7 @@ export default function CloudFinOpsOptimizer() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Perfect For Your Organization
             </h2>"
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">'
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               Whether you're a startup or enterprise, our FinOps solution scales
               with your needs
             </p>

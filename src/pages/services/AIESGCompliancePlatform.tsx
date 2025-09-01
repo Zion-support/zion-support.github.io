@@ -19,86 +19,46 @@ import {
 
 export default function AIESGCompliancePlatform() {
   const features = ['
-    'AI-powered ESG data collection and analysis','
-    'Automated compliance reporting and monitoring','
-    'Real-time sustainability performance tracking','
-    'Carbon footprint calculation and optimization','
-    'Social responsibility metrics and reporting','
-    'Governance risk assessment and monitoring','
-    'Regulatory compliance automation','
-    'Stakeholder engagement tracking','
-    'ESG scoring and benchmarking','
-    'Custom sustainability dashboard creation',
+    'AI-powered ESG data collection and analysis',Automated compliance reporting and monitoring',Real-time sustainability performance tracking',Carbon footprint calculation and optimization',Social responsibility metrics and reporting',Governance risk assessment and monitoring',Regulatory compliance automation',Stakeholder engagement tracking',ESG scoring and benchmarking',Custom sustainability dashboard creation',
   ];
 
   const benefits = ['
-    'Reduce ESG reporting time by 85%','
-    'Improve compliance accuracy by 90%','
-    'Cut carbon emissions tracking costs by 70%','
-    'Real-time sustainability performance insights','
-    'Automated regulatory compliance updates','
-    'Enhanced stakeholder transparency and trust',
+    'Reduce ESG reporting time by 85%',Improve compliance accuracy by 90%',Cut carbon emissions tracking costs by 70%',Real-time sustainability performance insights',Automated regulatory compliance updates',Enhanced stakeholder transparency and trust',
   ];
 
   const pricing = [
     {
-'
-      name: 'Starter','
+
+      name: 'Starter',
       price: '$399/mo',
       features: ['
-        'Up to 50 ESG metrics','
-        'Basic compliance reporting','
-        'Standard dashboards','
-        'Email support','
-        'Monthly sustainability reports',
+        'Up to 50 ESG metrics',Basic compliance reporting',Standard dashboards',Email support',Monthly sustainability reports',
       ],
       popular: false},
     {
-'
-      name: 'Professional','
+
+      name: 'Professional',
       price: '$899/mo',
       features: ['
-        'Up to 200 ESG metrics','
-        'Advanced AI analytics','
-        'Real-time monitoring','
-        'Priority support','
-        'Custom dashboards','
-        'API access',
+        'Up to 200 ESG metrics',Advanced AI analytics',Real-time monitoring',Priority support',Custom dashboards',API access',
       ],
       popular: true},
     {
-'
-      name: 'Enterprise','
+
+      name: 'Enterprise',
       price: '$2,999/mo',
       features: ['
-        'Unlimited ESG metrics','
-        'Full AI suite','
-        'Custom compliance models','
-        'Dedicated support','
-        'White-label solutions','
-        'Advanced integrations',
+        'Unlimited ESG metrics',Full AI suite',Custom compliance models',Dedicated support',White-label solutions',Advanced integrations',
       ],
       popular: false},
   ];
 
   const useCases = ['
-    'Corporate sustainability reporting','
-    'ESG investment portfolio analysis','
-    'Supply chain sustainability tracking','
-    'Regulatory compliance automation','
-    'Stakeholder ESG communication','
-    'Sustainability performance benchmarking',
+    'Corporate sustainability reporting',ESG investment portfolio analysis',Supply chain sustainability tracking',Regulatory compliance automation',Stakeholder ESG communication',Sustainability performance benchmarking',
   ];
 
   const esgCategories = ['
-    'Environmental Impact Assessment','
-    'Carbon Footprint Management','
-    'Renewable Energy Tracking','
-    'Waste Management Analytics','
-    'Social Responsibility Metrics','
-    'Diversity & Inclusion Tracking','
-    'Governance Risk Assessment','
-    'Compliance Monitoring',
+    'Environmental Impact Assessment',Carbon Footprint Management',Renewable Energy Tracking',Waste Management Analytics',Social Responsibility Metrics',Diversity & Inclusion Tracking',Governance Risk Assessment',Compliance Monitoring',
   ];
 
   return()
@@ -119,15 +79,15 @@ export default function AIESGCompliancePlatform() {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="#pricing""
+              href="#pricing"
               className="px-8 py-4 bg-white text-green-600 rounded-lg font-semibold hover:bg-green-50 transition-colors"
             >
               View Pricing
             </a>
             <a"
-              href="https://ziontechgroup.com""
-              target="_blank""
-              rel="noreferrer""
+              href="https://ziontechgroup.com"
+              target="_blank"
+              rel="noreferrer"
               className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors"
             >
               Learn More
@@ -250,7 +210,7 @@ export default function AIESGCompliancePlatform() {
               <div
                 key={index}
                 className={`relative bg-white rounded-2xl shadow-lg border-2 ${
-'
+
                   plan.popular ? 'border-green-500' : 'border-gray-200'`
                 } p-8`}
               >
@@ -299,7 +259,7 @@ export default function AIESGCompliancePlatform() {
               Need a custom plan? Contact us for enterprise pricing
             </p>
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="text-green-600 hover:text-green-700 font-semibold"
             >
               Contact Sales Team
@@ -343,13 +303,13 @@ export default function AIESGCompliancePlatform() {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="px-8 py-4 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors"
             >
               Start Free Trial
             </a>
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors"
             >
               Call Us
@@ -360,7 +320,7 @@ export default function AIESGCompliancePlatform() {
 
       {/* Contact Section */}"
       <section className="py-16 max-w-4xl mx-auto px-6 text-center">"
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">'
+        <h2 className="text-3xl font-bold text-gray-900 mb-8">
           Questions? We're Here to Help
         </h2>"
         <div className="grid md:grid-cols-2 gap-8">"
@@ -373,7 +333,7 @@ export default function AIESGCompliancePlatform() {
               Speak with our ESG compliance experts
             </p>
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="text-green-600 hover:text-green-700 font-semibold"
             >
               +1 302 464 0950
@@ -389,7 +349,7 @@ export default function AIESGCompliancePlatform() {
               Get detailed information and pricing
             </p>
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="text-green-600 hover:text-green-700 font-semibold"
             >              kleber@ziontechgroup.com
             </a>
@@ -404,9 +364,9 @@ export default function AIESGCompliancePlatform() {
             Learn more about our complete suite of AI-powered business solutions
           </p>
           <a"
-            href="https://ziontechgroup.com""
-            target="_blank""
-            rel="noreferrer""
+            href="https://ziontechgroup.com"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
           >"
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />          </a>

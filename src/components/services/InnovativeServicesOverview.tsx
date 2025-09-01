@@ -8,15 +8,15 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
 maxServices:  6,;
   category,;
   showViewAllButton = true;
-}) => {;'
+}) => {;
   const [activeTab, setActiveTab] = useState('featured');
 
-  const tabs = [;'
-    { id: 'featured', label: 'Featured', count: 3 },;'
-    { id: 'ai', label: 'AI Services', count: getServicesByCategory('AI Services').length },;'
-    { id: 'it', label: 'IT Services', count: getServicesByCategory('IT Services').length },;'
-    { id: 'saas', label: 'Micro SAAS', count: getServicesByCategory('Micro SAAS').length },;'
-    { id: 'business', label: 'Business', count: getServicesByCategory('Business').length },;'
+  const tabs = [;
+    { id: 'featured', label: 'Featured', count: 3 },;
+    { id: 'ai', label: 'AI Services', count: getServicesByCategory('AI Services').length },;
+    { id: 'it', label: 'IT Services', count: getServicesByCategory('IT Services').length },;
+    { id: 'saas', label: 'Micro SAAS', count: getServicesByCategory('Micro SAAS').length },;
+    { id: 'business', label: 'Business', count: getServicesByCategory('Business').length },;
     { id: 'development', label: 'Development', count: getServicesByCategory('Development').length };
   ];
 
@@ -26,23 +26,23 @@ maxServices:  6,;
 
       services = getServicesByCategory(category)} else {
 
-      switch (activeTab) {;'
+      switch (activeTab) {;
         case 'featured':;
           services = INNOVATIVE_SERVICES_2025.filter(service => service.rating >= 4.5).slice(0, 3);
-          break;'
-        case 'ai':;'
+          break;
+        case 'ai':;
           services = getServicesByCategory('AI Services');
-          break;'
-        case 'it':;'
+          break;
+        case 'it':;
           services = getServicesByCategory('IT Services');
-          break;'
-        case 'saas':;'
+          break;
+        case 'saas':;
           services = getServicesByCategory('Micro SAAS');
-          break;'
-        case 'business':;'
+          break;
+        case 'business':;
           services = getServicesByCategory('Business');
-          break;'
-        case 'development':;'
+          break;
+        case 'development':;
           services = getServicesByCategory('Development');
           break;
         default:
@@ -108,7 +108,7 @@ maxServices:  6,;
         {/* Header Section */}"
         <div className="text-center mb-12">"
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Innovative Services 2025</h2>"
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">'
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Discover Zion Tech Group's comprehensive suite of cutting-edge AI, IT, and Micro SAAS solutions designed to transform your business operations and drive innovation.
           </p>
 
@@ -184,7 +184,7 @@ maxServices:  6,;
         {/* CTA Section */}"
         <div className="text-center">"
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Business?</h3>"
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">'
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
             Our innovative services are designed to give you a competitive edge in today's rapidly evolving technology landscape.
           </p>
 "
@@ -202,7 +202,7 @@ maxServices:  6,;
         {showViewAllButton && ("
           <div className="text-center mt-8">
             <a"
-              href="/innovative-services-2025""
+              href="/innovative-services-2025"
               className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
 
               View All {totalServices} Services;"

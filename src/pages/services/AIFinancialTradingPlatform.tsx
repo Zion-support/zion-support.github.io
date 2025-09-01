@@ -1,6 +1,91 @@
+<<<<<<< HEAD
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Brain, 
+  TrendingUp, 
+  DollarSign, 
+  BarChart3, 
+  Shield, 
+  Zap, 
+  Brain, 
+  Target, 
+  Clock, 
+  CheckCircle, 
+  AlertTriangle,
+  Activity,
+  PieChart,
+  LineChart,
+  UserCheck,
+  Heart,
+  Star,
+  Award,
+  Globe,
+  Smartphone,
+  Database,
+  Cloud,
+  Server,
+  Lock,
+  Eye,
+  AlertTriangle'
+ } from 'lucide-react';
+;
+export { function };
+export default function AIFinancialTradingPlatform(...args[]):  {
+
+  const features = [
+    "AI-powered market analysis and prediction","
+    "Real-time algorithmic trading execution","
+    "Risk management and portfolio optimization","
+    "Multi-asset class trading (stocks, forex, crypto)","
+    "Advanced technical and fundamental analysis","
+    "Automated trading strategies and backtesting",;"
+    "Real-time market data and news feeds",;"
+    "Portfolio performance tracking and analytics",;"
+    "Compliance and regulatory monitoring",;"
+    "Custom trading algorithm development",;"
+    "High-frequency trading capabilities",;"
+    "Secure and encrypted trading infrastructure";
+  ];
+
+  const benefits = [;"
+    "Increase trading returns by 25-40%",;"
+    "Reduce trading risks by 30-50%",;"
+    "24/7 automated trading operations",;"
+    "Eliminate emotional trading decisions",;"
+    "Access to institutional-grade tools";
+  ];
+
+  const useCases = ["
+    "Individual retail traders","
+    "Professional day traders",;"
+    "Hedge funds and asset managers",;"
+    "Institutional investors",;"
+    "Cryptocurrency traders",;"
+    "Forex trading professionals",;"
+    "Options and derivatives traders",;"
+    "Quantitative trading firms";
+  ];
+
+  const pricingPlans = [
+    {
+"
+      name: "Starter","
+      price: "$199","
+      period: "/month","
+      description: "Perfect for individual traders and beginners",
+      features[;"
+        "AI market analysis (5 strategies)","
+        "Basic algorithmic trading","
+        "Real-time market data","
+        "Portfolio tracking","
+        "Basic risk management","
+        "Email support"
+=======
 import React from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
 import { SEO  } from '@/components/SEO';        "Email support"
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Start Free Trial",
       popular: false
@@ -45,8 +130,14 @@ import { SEO  } from '@/components/SEO';        "Email support"
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
+        title="AI Financial Trading Platform - Zion Tech Group"
+        description="Revolutionize your trading with AI-powered market analysis, algorithmic trading, and risk management. Increase returns and reduce risks."
+      />
+=======
         title="AI Financial Trading Platform - Zion Tech Group""        description="Revolutionize your trading with AI-powered market analysis, algorithmic trading, and risk management. Increase returns and reduce risks."
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"

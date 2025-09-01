@@ -1,24 +1,73 @@
-import React, { useState, useEffect } from 'react.ts';'
+import React, { useState, useEffect } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
+<<<<<<< HEAD
+import { Brain, 
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025  } from '../data / innovativeMicroSaasServices2025';
+import { motion  } from 'framer - motion.ts';
+
+
+  Zap, 
+  Shield, 
+  TrendingUp, 
+  Users, 
+  BarChart3, 
+  Globe, 
+  Cpu, 
+  Database, 
+  Workflow,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Search,
+  Filter,
+  Grid3X3,
+  List,
+  ChevronDown,
+  ChevronUp,
+  X,
+  Plus,
+  Minus,
+  Target,
+  Clock,
+  Award,
+  DollarSign,
+  BarChart,
+  Settings,
+  Lock,
+  Server,
+  Smartphone,
+  Cloud,
+  Database as DatabaseIcon,
+  Shield as ShieldIcon,
+  Zap as ZapIcon'
+ } from 'lucide-react.ts';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025  } from '../data/innovativeMicroSaasServices2025';
+
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
-  const [selectedServices, setSelectedServices] = useState<any>([]);'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
+  const [selectedServices, setSelectedServices] = useState<any>([]);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<any>('matrix');
-  const [expandedFeatures, setExpandedFeatures] = useState<any>([]);'
+  const [expandedFeatures, setExpandedFeatures] = useState<any>([]);
   const [sortBy, setSortBy] = useState<any>('innovation');
 
   const categories = ['
-    { id: any'all', name: 'All Services', icon: Globe, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length },;'
-    { id: 'AI & Business Intelligence', name: 'AI & BI', icon: Brain, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Business Intelligence').length },'
-    { id: any'AI & Customer Experience', name: 'AI & CX', icon: Users, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Customer Experience').length },;'
-    { id: any'AI & Finance', name: 'AI & Finance', icon: TrendingUp, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Finance').length },;'
-    { id: any'AI & Logistics', name: 'AI & Logistics', icon: Globe, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Logistics').length },;'
-    { id: any'AI & Marketing', name: 'AI & Marketing', icon: BarChart3, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Marketing').length },;'
-    { id: any'AI & Project Management', name: 'AI & PM', icon: Workflow, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Project Management').length },;'
-    { id: any'AI & Human Resources', name: 'AI & HR', icon: Users, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Human Resources').length },;'
-    { id: any'AI & Cybersecurity', name: 'AI & Security', icon: Shield, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Cybersecurity').length },;'
-    { id: any'AI & Data Management', name: 'AI & Data', icon: Database, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Data Management').length },;'
+    { id: any'all', name: 'All Services', icon: Globe, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length },;
+    { id: 'AI & Business Intelligence', name: 'AI & BI', icon: Brain, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Business Intelligence').length },
+    { id: any'AI & Customer Experience', name: 'AI & CX', icon: Users, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Customer Experience').length },;
+    { id: any'AI & Finance', name: 'AI & Finance', icon: TrendingUp, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Finance').length },;
+    { id: any'AI & Logistics', name: 'AI & Logistics', icon: Globe, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Logistics').length },;
+    { id: any'AI & Marketing', name: 'AI & Marketing', icon: BarChart3, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Marketing').length },;
+    { id: any'AI & Project Management', name: 'AI & PM', icon: Workflow, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Project Management').length },;
+    { id: any'AI & Human Resources', name: 'AI & HR', icon: Users, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Human Resources').length },;
+    { id: any'AI & Cybersecurity', name: 'AI & Security', icon: Shield, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Cybersecurity').length },;
+    { id: any'AI & Data Management', name: 'AI & Data', icon: Database, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Data Management').length },;
     { id: any'AI & Business Process', name: 'AI & Process', icon: Cpu, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Business Process').length },;
   ];
 
@@ -27,19 +76,19 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
 
       const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));'
+                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       return matchesSearch && matchesCategory;
     })    .sort((a, b) => {
 
       switch (sortBy) {
-'
+
         case 'name':
-          return a.title.localeCompare(b.title);'
+          return a.title.localeCompare(b.title);
         case 'price':
-          return a.price - b.price;'
+          return a.price - b.price;
         case 'innovation':'
-          return a.innovationLevel === 'Revolutionary' ? -1 : 1;'
+          return a.innovationLevel === 'Revolutionary' ? -1 : 1;
         case 'roi':'
           return parseInt(a.roi.split('-')[0]) - parseInt(b.roi.split('-')[0]);
         default:
@@ -70,30 +119,30 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
 
   const getInnovationColor = (level: anystring)  => {
 
-    switch (level) {;'
-      case 'Revolutionary':;'
-        return 'text-purple-600 bg-purple-100 border-purple-200';'
-      case 'Advanced':;'
-        return 'text-blue-600 bg-blue-100 border-blue-200';'
-      case 'Cutting-edge':;'
+    switch (level) {;
+      case 'Revolutionary':;
+        return 'text-purple-600 bg-purple-100 border-purple-200';
+      case 'Advanced':;
+        return 'text-blue-600 bg-blue-100 border-blue-200';
+      case 'Cutting-edge':;
         return 'text-green-600 bg-green-100 border-green-200';
-      default:;'
+      default:;
         return 'text-gray-600 bg-gray-100 border-gray-200';
     }
   };
 
-  const getROIColor = (roi: anystring)  => {;'
-    const minROI = parseInt(roi.split('-')[0]);'
-    if (minROI >= 500) return 'text-green-600 bg-green-100 border-green-200';'
-    if (minROI >= 300) return 'text-blue-600 bg-blue-100 border-blue-200';'
-    if (minROI >= 200) return 'text-yellow-600 bg-yellow-100 border-yellow-200';'
+  const getROIColor = (roi: anystring)  => {;
+    const minROI = parseInt(roi.split('-')[0]);
+    if (minROI >= 500) return 'text-green-600 bg-green-100 border-green-200';
+    if (minROI >= 300) return 'text-blue-600 bg-blue-100 border-blue-200';
+    if (minROI >= 200) return 'text-yellow-600 bg-yellow-100 border-yellow-200';
     return 'text-gray-600 bg-gray-100 border-gray-200';
   };
 
-  const getPriceTier = (price: anynumber)  => {;'
-    if (price <= 500) return 'text-green-600 bg-green-100 border-green-200';'
-    if (price <= 1000) return 'text-blue-600 bg-blue-100 border-blue-200';'
-    if (price <= 2000) return 'text-yellow-600 bg-yellow-100 border-yellow-200';'
+  const getPriceTier = (price: anynumber)  => {;
+    if (price <= 500) return 'text-green-600 bg-green-100 border-green-200';
+    if (price <= 1000) return 'text-blue-600 bg-blue-100 border-blue-200';
+    if (price <= 2000) return 'text-yellow-600 bg-yellow-100 border-yellow-200';
     return 'text-purple-600 bg-purple-100 border-purple-200';
   };
 
@@ -149,13 +198,13 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
             </div>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="#comparison""
+                href="#comparison"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
               >
                 Start Comparing"
                 <ArrowRight className="w-5 h-5" />              </a>
               <a"
-                href="#contact""
+                href="#contact"
                 className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-gray-100 hover:text-blue-900 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300"
               >
                 Contact Sales"
@@ -201,7 +250,12 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
+<<<<<<< HEAD
+                  type="text"
+                  placeholder="Search services..."
+=======
                   type="text""                  placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}"
                   className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -220,7 +274,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
               </select>
               
               <select
-                value={sortBy}'
+                value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'innovation' | 'roi')}"
                 className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >"
@@ -234,7 +288,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                 <button'
                   onClick={() => setViewMode('matrix')}
                   className={`p-2 rounded-lg transition-colors ${
-'
+
                     viewMode === 'matrix' '
                       ? 'bg-blue-100 text-blue-600' '
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'`
@@ -245,7 +299,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                 <button'
                   onClick={() => setViewMode('list')}`
                   className={`p-2 rounded-lg transition-colors ${
-'
+
                     viewMode === 'list' '
                       ? 'bg-blue-100 text-blue-600' '
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'`
@@ -309,7 +363,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                 transition={{ duration: 0.3 }}`
                 className={`p-4 border rounded-lg cursor-pointer transition-all duration-200 ${
 
-                  selectedServices.includes(service.id)'
+                  selectedServices.includes(service.id)
                     ? 'border-blue-500 bg-blue-50 shadow-md''
                     : 'border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm'`
                 }`}
@@ -356,7 +410,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
               Compare {selectedServices.length} selected services across key features and metrics
             </p>
           </div>
-'
+
           {viewMode === 'matrix' ? ("
             <div className="overflow-x-auto">"
               <div className="min-w-[1200px]">"
@@ -462,8 +516,8 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                             <div>
                               <strong > API Endpoints:</strong> {service.technicalSpecs.apiEndpoints}
                             </div>
-                            <div>'
-                              <strong>Security:</strong> {service.technicalSpecs.security.slice(0, 2).join(', ')}
+                            <div>
+                              <strong>Security:</strong> {service.technicalSpecs.security.slice(0, 2).join(',)}
                             </div>
                           </div>
                         ) : ("
@@ -499,14 +553,14 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                       <div className="space-y-2">
                         <a'`
                           href={`https://ziontechgroup.com/contact?service=${encodeURIComponent(service?.title || '')}`}"
-                          target="_blank""
-                          rel="noopener noreferrer""
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="w-full inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg text-xs font-medium transition-colors duration-200"
                         >
                           Get Started"
                           <ExternalLink className="w-3 h-3" />                        </a>
                         <a"
-                          href="tel:+13024640950""
+                          href="tel:+13024640950"
                           className="w-full inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-xs font-medium transition-colors duration-200"
                         >
                           Call Sales"
@@ -610,14 +664,14 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                     <div className="mt-6 flex flex-col sm:flex-row gap-3">
                       <a'`
                         href={`https://ziontechgroup.com/contact?service=${encodeURIComponent(service?.title || '')}`}"
-                        target="_blank""
-                        rel="noopener noreferrer""
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
                       >
                         Get Started"
                         <ExternalLink className="w-4 h-4" />                      </a>
                       <a"
-                        href="tel:+13024640950""
+                        href="tel:+13024640950"
                         className="flex-1 inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
                       >
                         Call Sales: +1 302 464 0950"
@@ -656,15 +710,15 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="https://ziontechgroup.com/contact""
-                target="_blank""
-                rel="noopener noreferrer""
+                href="https://ziontechgroup.com/contact"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
               >
                 Get Expert Advice"
                 <Mail className="w-5 h-5" />              </a>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300"
               >
                 Call Now: +1 302 464 0950"
@@ -686,9 +740,9 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
               </p>"
               <div className="flex items-center gap-4">
                 <a"
-                  href="https://ziontechgroup.com""
-                  target="_blank""
-                  rel="noopener noreferrer""
+                  href="https://ziontechgroup.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
                 >
                   Visit Website"
@@ -710,25 +764,25 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>"
               <div className="space-y-2">
                 <a"
-                  href="https://ziontechgroup.com/services""
-                  target="_blank""
-                  rel="noopener noreferrer""
+                  href="https://ziontechgroup.com/services"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block text-gray-300 hover:text-white transition-colors duration-200"
                 >
                   Services
                 </a>
                 <a"
-                  href="https://ziontechgroup.com/about""
-                  target="_blank""
-                  rel="noopener noreferrer""
+                  href="https://ziontechgroup.com/about"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block text-gray-300 hover:text-white transition-colors duration-200"
                 >
                   About Us
                 </a>
                 <a"
-                  href="https://ziontechgroup.com/contact""
-                  target="_blank""
-                  rel="noopener noreferrer""
+                  href="https://ziontechgroup.com/contact"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block text-gray-300 hover:text-white transition-colors duration-200"
                 >
                   Contact

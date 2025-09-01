@@ -4,15 +4,15 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from '../components/ui/card';'
-import { Badge } from '../components/ui/badge';'
+  CardHeader,
+  CardTitle} from '../components/ui/card';
+import { Badge } from '../components/ui/badge';
 import { Button } from '../components/ui/button';
 import {
 
   Tabs,
   TabsContent,
-  TabsList,'
+  TabsList,
   TabsTrigger} from '../components/ui/tabs';
 import {
 
@@ -37,71 +37,71 @@ import {
   MapPin,
   ExternalLink,
   DollarSign,
-  Target,'
-  Award} from 'lucide-react';'
-import enhancedMicroSaasServices2025 from '../data/enhancedMicroSaasServices2025';'
-import enhancedAIServices2025 from '../data/enhancedAIServices2025';'
+  Target,
+  Award} from 'lucide-react';
+import enhancedMicroSaasServices2025 from '../data/enhancedMicroSaasServices2025';
+import enhancedAIServices2025 from '../data/enhancedAIServices2025';
 import enhancedITServices2025 from '../data/enhancedITServices2025';
 const ComprehensivePricing = () => {
-'
-  const [activeTab, setActiveTab] = useState('microsaas');'
+
+  const [activeTab, setActiveTab] = useState('microsaas');
   const [billingCycle, setBillingCycle] = useState('monthly');
   const getCategoryIcon = category => {
 
     switch (category.toLowerCase()) {
-'
+
       case 'productivity':
-        return <Users className="h-5 w-5" />;'
+        return <Users className="h-5 w-5" />;
       case 'finance':"
-        return <DollarSign className="h-5 w-5" />;'
+        return <DollarSign className="h-5 w-5" />;
       case 'marketing':"
-        return <TrendingUp className="h-5 w-5" />;'
+        return <TrendingUp className="h-5 w-5" />;
       case 'development':"
-        return <Code className="h-5 w-5" />;'
+        return <Code className="h-5 w-5" />;
       case 'data & analytics':"
-        return <BarChart3 className="h-5 w-5" />;'
+        return <BarChart3 className="h-5 w-5" />;
       case 'cybersecurity':"
-        return <Shield className="h-5 w-5" />;'
+        return <Shield className="h-5 w-5" />;
       case 'cloud & devops':"
-        return <Cloud className="h-5 w-5" />;'
+        return <Cloud className="h-5 w-5" />;
       case 'human resources':"
-        return <Users className="h-5 w-5" />;'
+        return <Users className="h-5 w-5" />;
       case 'education':"
-        return <Globe className="h-5 w-5" />;'
+        return <Globe className="h-5 w-5" />;
       case 'healthcare':"
-        return <Award className="h-5 w-5" />;'
+        return <Award className="h-5 w-5" />;
       case 'computer vision':"
-        return <Target className="h-5 w-5" />;'
+        return <Target className="h-5 w-5" />;
       case 'natural language processing':"
-        return <Brain className="h-5 w-5" />;'
+        return <Brain className="h-5 w-5" />;
       case 'predictive analytics':"
-        return <TrendingUp className="h-5 w-5" />;'
+        return <TrendingUp className="h-5 w-5" />;
       case 'conversational ai':"
-        return <Users className="h-5 w-5" />;'
+        return <Users className="h-5 w-5" />;
       case 'content generation':"
-        return <Code className="h-5 w-5" />;'
+        return <Code className="h-5 w-5" />;
       case 'data science':"
-        return <Database className="h-5 w-5" />;'
+        return <Database className="h-5 w-5" />;
       case 'voice ai':"
-        return <Smartphone className="h-5 w-5" />;'
+        return <Smartphone className="h-5 w-5" />;
       case 'recommendation systems':"
-        return <TrendingUp className="h-5 w-5" />;'
+        return <TrendingUp className="h-5 w-5" />;
       case 'security ai':"
-        return <Shield className="h-5 w-5" />;'
+        return <Shield className="h-5 w-5" />;
       case 'process automation':"
-        return <Settings className="h-5 w-5" />;'
+        return <Settings className="h-5 w-5" />;
       case 'cloud services':"
-        return <Cloud className="h-5 w-5" />;'
+        return <Cloud className="h-5 w-5" />;
       case 'infrastructure':"
-        return <Server className="h-5 w-5" />;'
+        return <Server className="h-5 w-5" />;
       case 'network security':"
-        return <Lock className="h-5 w-5" />;'
+        return <Lock className="h-5 w-5" />;
       case 'mobile development':"
-        return <Smartphone className="h-5 w-5" />;'
+        return <Smartphone className="h-5 w-5" />;
       case 'consulting':"
-        return <Users className="h-5 w-5" />;'
+        return <Users className="h-5 w-5" />;
       case 'managed services':"
-        return <Settings className="h-5 w-5" />;'
+        return <Settings className="h-5 w-5" />;
       case 'web development':"
         return <Globe className="h-5 w-5" />;
       default:"
@@ -111,59 +111,59 @@ const ComprehensivePricing = () => {
   const getCategoryColor = category => {
 
     switch (category.toLowerCase()) {
-'
+
       case 'productivity':'
-        return 'from-green-500 to-emerald-500';'
+        return 'from-green-500 to-emerald-500';
       case 'finance':'
-        return 'from-blue-500 to-cyan-500';'
+        return 'from-blue-500 to-cyan-500';
       case 'marketing':'
-        return 'from-purple-500 to-pink-500';'
+        return 'from-purple-500 to-pink-500';
       case 'development':'
-        return 'from-orange-500 to-red-500';'
+        return 'from-orange-500 to-red-500';
       case 'data & analytics':'
-        return 'from-indigo-500 to-purple-500';'
+        return 'from-indigo-500 to-purple-500';
       case 'cybersecurity':'
-        return 'from-red-500 to-orange-500';'
+        return 'from-red-500 to-orange-500';
       case 'cloud & devops':'
-        return 'from-blue-500 to-indigo-500';'
+        return 'from-blue-500 to-indigo-500';
       case 'human resources':'
-        return 'from-teal-500 to-green-500';'
+        return 'from-teal-500 to-green-500';
       case 'education':'
-        return 'from-yellow-500 to-orange-500';'
+        return 'from-yellow-500 to-orange-500';
       case 'healthcare':'
-        return 'from-pink-500 to-red-500';'
+        return 'from-pink-500 to-red-500';
       case 'computer vision':'
-        return 'from-purple-500 to-pink-500';'
+        return 'from-purple-500 to-pink-500';
       case 'natural language processing':'
-        return 'from-blue-500 to-cyan-500';'
+        return 'from-blue-500 to-cyan-500';
       case 'predictive analytics':'
-        return 'from-indigo-500 to-purple-500';'
+        return 'from-indigo-500 to-purple-500';
       case 'conversational ai':'
-        return 'from-green-500 to-teal-500';'
+        return 'from-green-500 to-teal-500';
       case 'content generation':'
-        return 'from-yellow-500 to-orange-500';'
+        return 'from-yellow-500 to-orange-500';
       case 'data science':'
-        return 'from-indigo-500 to-blue-500';'
+        return 'from-indigo-500 to-blue-500';
       case 'voice ai':'
-        return 'from-pink-500 to-purple-500';'
+        return 'from-pink-500 to-purple-500';
       case 'recommendation systems':'
-        return 'from-teal-500 to-green-500';'
+        return 'from-teal-500 to-green-500';
       case 'security ai':'
-        return 'from-red-500 to-pink-500';'
+        return 'from-red-500 to-pink-500';
       case 'process automation':'
-        return 'from-orange-500 to-yellow-500';'
+        return 'from-orange-500 to-yellow-500';
       case 'cloud services':'
-        return 'from-blue-500 to-indigo-500';'
+        return 'from-blue-500 to-indigo-500';
       case 'infrastructure':'
-        return 'from-gray-500 to-slate-500';'
+        return 'from-gray-500 to-slate-500';
       case 'network security':'
-        return 'from-red-500 to-orange-500';'
+        return 'from-red-500 to-orange-500';
       case 'mobile development':'
-        return 'from-green-500 to-blue-500';'
+        return 'from-green-500 to-blue-500';
       case 'consulting':'
-        return 'from-purple-500 to-indigo-500';'
+        return 'from-purple-500 to-indigo-500';
       case 'managed services':'
-        return 'from-teal-500 to-cyan-500';'
+        return 'from-teal-500 to-cyan-500';
       case 'web development':'
         return 'from-blue-500 to-green-500';
       default:'
@@ -171,28 +171,28 @@ const ComprehensivePricing = () => {
     }
   };
   const formatPrice = (price, pricingModel) => {
-'
+
     if (pricingModel === 'per API call') {
 
-      return `$${price.toFixed(3)} per call`;'
+      return `$${price.toFixed(3)} per call`;
     } else if (pricingModel === 'per word') {
 `
-      return `$${price.toFixed(2)} per word`;'
+      return `$${price.toFixed(2)} per word`;
     } else if (pricingModel === 'per recommendation') {
 `
-      return `$${price.toFixed(3)} per recommendation`;'
+      return `$${price.toFixed(3)} per recommendation`;
     } else if (pricingModel === 'per employee/month') {
 `
-      return `$${price}/employee/month`;'
+      return `$${price}/employee/month`;
     } else if (pricingModel === 'monthly') {
 `
-      return `$${price}/month`;'
+      return `$${price}/month`;
     } else if (pricingModel === 'usage-based') {
 `
-      return `$${price} per unit`;'
+      return `$${price} per unit`;
     } else if (pricingModel === 'tiered') {
 `
-      return `$${price}/month starting`;'
+      return `$${price}/month starting`;
     } else if (pricingModel === 'enterprise') {
 `
       return `$${price}/month`;
@@ -216,7 +216,7 @@ const ComprehensivePricing = () => {
                 {getCategoryIcon(service.category)}
               </div>
               <Badge"
-                variant="outline""
+                variant="outline"
                 className="border-blue-500 text-blue-300"
               >
                 {service.category}
@@ -304,17 +304,17 @@ const ComprehensivePricing = () => {
 "
               <div className="flex gap-2">
                 <Button"
-                  size="sm""
+                  size="sm"
                   className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold transition-all duration-300"
-                  onClick={() =>'
-                    window.open(service.contactInfo.website, '_blank')
+                  onClick={() =>
+                    window.open(service.contactInfo.website,_blank')
                   }
                 >
                   Get Started
                 </Button>
                 <Button"
-                  size="sm""
-                  variant="outline""
+                  size="sm"
+                  variant="outline"
                   className="border-blue-500 text-blue-300 hover:border-indigo-500 hover:text-indigo-400"
                   onClick={() =>`
                     window.open(`mailto:${service.contactInfo.email}`)
@@ -336,7 +336,7 @@ const ComprehensivePricing = () => {
         <div className="max-w-7xl mx-auto text-center">"
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Comprehensive"
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
               {' '}
               Pricing
             </span>
@@ -353,7 +353,7 @@ const ComprehensivePricing = () => {
               <button'
                 onClick={() => setBillingCycle('monthly')}`
                 className={`px-4 py-2 rounded-md transition-all duration-300 ${
-'
+
                   billingCycle === 'monthly''
                     ? 'bg-blue-600 text-white''
                     : 'text-gray-300 hover:text-white'`
@@ -364,7 +364,7 @@ const ComprehensivePricing = () => {
               <button'
                 onClick={() => setBillingCycle('annual')}`
                 className={`px-4 py-2 rounded-md transition-all duration-300 ${
-'
+
                   billingCycle === 'annual''
                     ? 'bg-blue-600 text-white''
                     : 'text-gray-300 hover:text-white'`
@@ -387,21 +387,21 @@ const ComprehensivePricing = () => {
           >"
             <TabsList className="grid w-full grid-cols-3 bg-slate-800/50 border border-slate-600/30 mb-12">
               <TabsTrigger"
-                value="microsaas""
+                value="microsaas"
                 className="data-[state=active]:bg-blue-600 data-[state=active]:text-white"
               >"
                 <Zap className="h-4 w-4 mr-2" />
                 Micro SAAS Services
               </TabsTrigger>
               <TabsTrigger"
-                value="ai""
+                value="ai"
                 className="data-[state=active]:bg-purple-600 data-[state=active]:text-white"
               >"
                 <Brain className="h-4 w-4 mr-2" />
                 AI Services
               </TabsTrigger>
               <TabsTrigger"
-                value="it""
+                value="it"
                 className="data-[state=active]:bg-indigo-600 data-[state=active]:text-white"
               >"
                 <Server className="h-4 w-4 mr-2" />
@@ -448,16 +448,16 @@ const ComprehensivePricing = () => {
 "
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button"
-              size="lg""
+              size="lg"
               className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold px-8 py-3"'
-              onClick={() => window.open('https://ziontechgroup.com', '_blank')}
+              onClick={() => window.open('https://ziontechgroup.com',_blank')}
             >
               Visit Our Website"
               <ExternalLink className="ml-2 h-4 w-4" />
             </Button>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-slate-500 text-slate-300 hover:border-blue-500 hover:text-blue-400 px-8 py-3"`
               onClick={() => window.open(`mailto:kleber@ziontechgroup.com`)}
             >

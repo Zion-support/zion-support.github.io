@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import Head from 'next/head.ts';
 import { innovativeMicroSaasServices2031, 
   innovativeITInfrastructureServices2031, 
@@ -23,7 +23,7 @@ import {
  } from 'lucide-react';
 
 const InnovativeServicesShowcase2031: React.FC = () => {;
-  const scrollToContact = () => {;'
+  const scrollToContact = () => {;
     document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -54,7 +54,7 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Starts Here</span>
             </h1>
 "
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">'
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Experience Zion Tech Group's cutting-edge portfolio of innovative micro SAAS, IT infrastructure, and AI services designed to revolutionize your business in 2031 and beyond.
             </p>
 "
@@ -285,7 +285,7 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>"
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Let's discuss how our innovative services can revolutionize your operations and drive unprecedented growth.
               </p>
             </div>
@@ -364,8 +364,8 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                   <div>"
                     <label className="block text-white font-medium mb-2">Name</label>
                     <input"
-                      type="text""
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500""
+                      type="text"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
                       placeholder="Your full name"
                     />
                   </div>
@@ -373,8 +373,8 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                   <div>"
                     <label className="block text-white font-medium mb-2">Email</label>
                     <input"
-                      type="email""
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500""
+                      type="email"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
                       placeholder="your.email@comp.com"
                     />
                   </div>
@@ -382,8 +382,8 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                   <div>"
                     <label className="block text-white font-medium mb-2">Company</label>
                     <input"
-                      type="text""
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500""
+                      type="text"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
                       placeholder="Your comp name"
                     />
                   </div>
@@ -403,13 +403,13 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                     <label className="block text-white font-medium mb-2">Message</label>
                     <textarea
                       rows={4}"
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500""
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
                       placeholder="Tell us about your project or requirements..."
                     ></textarea>
                   </div>
 
                   <button"
-                    type="submit""
+                    type="submit"
                     className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
 
                     Send Message
@@ -423,10 +423,10 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
         {/* CTA Section */}"
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600/20 to-pink-600/20">"
           <div className="max-w-4xl mx-auto text-center">"
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">'
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Don't Wait for the Future
             </h2>"
-            <p className="text-xl text-gray-300 mb-8">'
+            <p className="text-xl text-gray-300 mb-8">
               The future of technology is here, and it's waiting for you. Join the companies already transforming their operations with Zion Tech Group's innovative services.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -438,7 +438,7 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </button>
               <a"
-                href="https://ziontechgroup.com""
+                href="https://ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
 
                 Visit Our Website

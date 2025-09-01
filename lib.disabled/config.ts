@@ -3,7 +3,7 @@ import { z } from 'zod';
 // Environment variable schemas;
 const EnvironmentSchema = z.object({
   NODE_ENV: z
-    .enum(['development', 'production', 'test'])
+    .enum(['development',production',test'])
     .default('development'),
   NEXT_PUBLIC_APP_URL: z.string().url().default('http://localhost:3000'),
   NEXT_PUBLIC_APP_NAME: z.string().default('Zion Tech Group'),
@@ -47,7 +47,7 @@ const EnvironmentSchema = z.object({
 
   // Monitoring
   SENTRY_DSN: z.string().url().optional(),
-  LOG_LEVEL: z.enum(['error', 'warn', 'info', 'debug']).default('info'),
+  LOG_LEVEL: z.enum(['error',warn',info',debug']).default('info'),
 
   // Feature Flags
   NEXT_PUBLIC_ENABLE_ANALYTICS: z
@@ -105,7 +105,7 @@ const AppConfigSchema = z.object({
   name: z.string(),
   version: z.string(),
   url: z.string().url(),
-  environment: z.enum(['development', 'production', 'test']),
+  environment: z.enum(['development',production',test']),
   debug: z.boolean(),
   features: FeatureFlagsSchema
 });
@@ -147,7 +147,7 @@ class Configuration {
       if (error instanceof z.ZodError) {
         const missingVars = error.issues
           .map(err => err.path.join('.'))
-          .join(', ');
+          .join(',);
         throw new Error(
           `Environment validation failed. Missing or invalid variables: ${missingVars}`
         );

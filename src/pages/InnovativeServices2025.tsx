@@ -1,7 +1,453 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Brain, 
+import { motion, AnimatePresence  } from 'framer - motion.ts';
+
+
+  Shield, 
+  Cloud, 
+  Rocket, 
+  Globe, 
+  Cpu, 
+  Lock, 
+  Heart, 
+  Users, 
+  ShoppingCart, 
+  BookOpen, 
+  MessageCircle, 
+  HelpCircle, 
+  DollarSign, 
+  Gauge, 
+  Workflow, 
+  Atom, 
+  Star, 
+  Target, 
+  TrendingUp, 
+  Award, 
+  Code, 
+  Truck, 
+  Building, 
+  BarChart3, 
+  PenTool, 
+  Eye, 
+  Server, 
+  Smartphone, 
+  Database, 
+  Network, 
+  Clock, 
+  ArrowRight, 
+  Sparkles, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Satellite, 
+  FileText,
+  Zap,
+  Palette,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Car,
+  Plane,
+  Ship,
+  Train,
+  Leaf,
+  Sun,
+  Wind,
+  Droplets,
+  Mountain,
+  TreePine,
+  Recycle,
+  Lightbulb,
+  Battery,
+  Wifi,
+  Bluetooth,
+  Radio,
+  Satellite,
+  Telescope,
+  Microscope,
+  Flask,
+  TestTube,
+  Beaker,
+  Pill,
+  Stethoscope,
+  Syringe,
+  HeartPulse,
+  Activity,
+  Thermometer,
+  Droplet,
+  EyeOff,
+  Eye,
+  Key,
+  Fingerprint,
+  Scan,
+  QrCode,
+  CreditCard,
+  Wallet,
+  PiggyBank,
+  TrendingDown,
+  BarChart,
+  PieChart,
+  LineChart,
+  ScatterChart,
+  AreaChart,
+  CandlestickChart,
+  GanttChart,
+  Kanban,
+  Calendar,
+  Clock,
+  Timer,
+  Stopwatch,
+  Hourglass,
+  CalendarDays,
+  CalendarCheck,
+  CalendarX,
+  CalendarPlus,
+  CalendarMinus,
+  CalendarRange,
+  CalendarSearch,
+  CalendarClock,
+  CalendarHeart,
+  CalendarStar,
+  CalendarUser,
+  CalendarSettings,
+  CalendarEdit,
+  CalendarTrash,
+  CalendarOff,
+  CalendarEvent,
+  CalendarTime,
+  CalendarWeek,
+  CalendarMonth,
+  CalendarYear,
+  CalendarDays2,
+  CalendarCheck2,
+  CalendarX2,
+  CalendarPlus2,
+  CalendarMinus2,
+  CalendarRange2,
+  CalendarSearch2,
+  CalendarClock2,
+  CalendarHeart2,
+  CalendarStar2,
+  CalendarUser2,
+  CalendarSettings2,
+  CalendarEdit2,
+  CalendarTrash2,
+  CalendarOff2,
+  CalendarEvent2,
+  CalendarTime2,
+  CalendarWeek2,
+  CalendarMonth2,
+  CalendarYear2'
+ } from 'lucide-react.ts';
+
+export default function InnovativeServices2025(...args: any[]): any {
+
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sortBy, setSortBy] = useState('popularity');
+
+  // Enhanced Services Catalog 2025
+  const services = [
+    // AI & Machine Learning Services
+    {
+
+      id: 'ai-business-intelligence',
+      name: 'AI Business Intelligence Platform',
+      description: 'Advanced AI-powered business analytics and insights platform with predictive modeling and real-time dashboards.',
+      category: 'AI & ML',
+      price: '$2,500/month',
+      features: ['Predictive Analytics',Real-time Dashboards',Custom Reports',API Integration',24/7 Support'],
+      icon: Brain,
+      badge: 'Popular',
+      color: 'from-purple-600 to-indigo-700',
+      link: '/services/ai-business-intelligence',
+      marketPrice: '$3,200/month',
+      savings: '22%',
+      rating: 4.9,
+      reviews: 127
+    },
+    {
+
+      id: 'ai-compliance-assistant',
+      name: 'AI Compliance Automation Suite',
+      description: 'Automated compliance monitoring and reporting for regulatory requirements across industries.',
+      category: 'AI & ML',
+      price: '$1,800/month',
+      features: ['Regulatory Monitoring',Automated Reporting',Risk Assessment',Audit Trails',Compliance Dashboard'],
+      icon: Shield,
+      badge: 'New',
+      color: 'from-green-600 to-emerald-700',
+      link: '/services/ai-compliance-assistant',
+      marketPrice: '$2,400/month',
+      savings: '25%',
+      rating: 4.8,
+      reviews: 89
+    },
+    {
+
+      id: 'ai-sales-copilot',
+      name: 'AI Sales Copilot Platform',
+      description: 'Intelligent sales automation with lead scoring, customer insights, and sales forecasting.',
+      category: 'AI & ML',
+      price: '$2,200/month',
+      features: ['Lead Scoring',Customer Insights',Sales Forecasting',CRM Integration',Performance Analytics'],
+      icon: TrendingUp,
+      badge: 'Featured',
+      color: 'from-blue-600 to-cyan-700',
+      link: '/services/ai-sales-copilot',
+      marketPrice: '$2,800/month',
+      savings: '21%',
+      rating: 4.9,
+      reviews: 156
+    },
+    {
+
+      id: 'ai-content-marketing-suite',
+      name: 'AI Content Marketing Suite',
+      description: 'Complete content creation, optimization, and distribution platform powered by advanced AI.',
+      category: 'AI & ML',
+      price: '$1,900/month',
+      features: ['Content Creation',SEO Optimization',Social Media Management',Analytics Dashboard',Multi-platform Publishing'],
+      icon: PenTool,
+      badge: 'New',
+      color: 'from-pink-600 to-rose-700',
+      link: '/services/ai-content-marketing-suite',
+      marketPrice: '$2,500/month',
+      savings: '24%',
+      rating: 4.7,
+      reviews: 94
+    },
+    {
+
+      id: 'ai-customer-support-automation',
+      name: 'AI Customer Support Automation',
+      description: 'Intelligent customer service automation with chatbots, ticket routing, and sentiment analysis.',
+      category: 'AI & ML',
+      price: '$1,600/month',
+      features: ['Smart Chatbots',Ticket Routing',Sentiment Analysis',Knowledge Base',Performance Metrics'],
+      icon: MessageCircle,
+      badge: 'Popular',
+      color: 'from-cyan-600 to-blue-700',
+      link: '/services/ai-customer-support-automation',
+      marketPrice: '$2,100/month',
+      savings: '24%',
+      rating: 4.8,
+      reviews: 203
+    },
+    {
+
+      id: 'ai-project-management',
+      name: 'AI Project Management Platform',
+      description: 'Intelligent project planning, resource allocation, and risk management with AI insights.',
+      category: 'AI & ML',
+      price: '$2,300/month',
+      features: ['Smart Planning',Resource Optimization',Risk Management',Team Collaboration',Progress Tracking'],
+      icon: Workflow,
+      badge: 'Featured',
+      color: 'from-orange-600 to-red-700',
+      link: '/services/ai-project-management',
+      marketPrice: '$2,900/month',
+      savings: '21%',
+      rating: 4.9,
+      reviews: 178
+    },
+
+    // IT Infrastructure Services
+    {
+
+      id: 'cloud-devops-platform',
+      name: 'Cloud DevOps Automation Platform',
+      description: 'Comprehensive DevOps automation with CI/CD pipelines, infrastructure as code, and monitoring.',
+      category: 'IT Infrastructure',
+      price: '$3,200/month',
+      features: ['CI/CD Pipelines',Infrastructure as Code',Monitoring & Alerting',Security Scanning',Auto-scaling'],
+      icon: Cloud,
+      badge: 'Popular',
+      color: 'from-blue-600 to-indigo-700',
+      link: '/services/cloud-devops',
+      marketPrice: '$4,100/month',
+      savings: '22%',
+      rating: 4.9,
+      reviews: 234
+    },
+    {
+
+      id: 'it-infrastructure-management',
+      name: 'IT Infrastructure Management Suite',
+      description: 'Complete IT infrastructure monitoring, management, and optimization platform.',
+      category: 'IT Infrastructure',
+      price: '$2,800/month',
+      features: ['Infrastructure Monitoring',Performance Optimization',Capacity Planning',Security Management',Backup & Recovery'],
+      icon: Server,
+      badge: 'Featured',
+      color: 'from-gray-600 to-slate-700',
+      link: '/services/it-infrastructure',
+      marketPrice: '$3,500/month',
+      savings: '20%',
+      rating: 4.8,
+      reviews: 167
+    },
+    {
+
+      id: 'cybersecurity-platform',
+      name: 'AI-Powered Cybersecurity Platform',
+      description: 'Advanced threat detection, vulnerability assessment, and security automation platform.',
+      category: 'IT Infrastructure',
+      price: '$3,500/month',
+      features: ['Threat Detection',Vulnerability Assessment',Security Automation',Incident Response',Compliance Reporting'],
+      icon: Lock,
+      badge: 'Popular',
+      color: 'from-red-600 to-pink-700',
+      link: '/services/ai-cybersecurity-platform',
+      marketPrice: '$4,400/month',
+      savings: '20%',
+      rating: 4.9,
+      reviews: 289
+    },
+
+    // Micro SaaS Solutions
+    {
+
+      id: 'finops-advisor',
+      name: 'FinOps Cloud Cost Optimizer',
+      description: 'Cloud cost optimization and financial operations management platform for enterprises.',
+      category: 'Micro SaaS',
+      price: '$1,200/month',
+      features: ['Cost Optimization',Budget Management',Resource Tracking',Cost Allocation',Savings Recommendations'],
+      icon: DollarSign,
+      badge: 'New',
+      color: 'from-green-600 to-emerald-700',
+      link: '/services/finops-advisor',
+      marketPrice: '$1,600/month',
+      savings: '25%',
+      rating: 4.7,
+      reviews: 76
+    },
+    {
+
+      id: 'zero-trust-network',
+      name: 'Zero Trust Network Access Platform',
+      description: 'Secure network access control with identity verification and continuous monitoring.',
+      category: 'Micro SaaS',
+      price: '$2,100/month',
+      features: ['Identity Verification',Access Control',Continuous Monitoring',Threat Detection',Compliance Reporting'],
+      icon: Shield,
+      badge: 'Featured',
+      color: 'from-indigo-600 to-purple-700',
+      link: '/services/zero-trust-network-access',
+      marketPrice: '$2,700/month',
+      savings: '22%',
+      rating: 4.8,
+      reviews: 134
+    },
+    {
+
+      id: 'dsr-portal',
+      name: 'Data Subject Rights Portal',
+      description: 'GDPR compliance platform for managing data subject requests and privacy rights.',
+      category: 'Micro SaaS',
+      price: '$900/month',
+      features: ['Request Management',Data Mapping',Consent Management',Privacy Impact Assessment',Compliance Reporting'],
+      icon: FileText,
+      badge: 'New',
+      color: 'from-teal-600 to-cyan-700',
+      link: '/services/dsr-portal',
+      marketPrice: '$1,200/month',
+      savings: '25%',
+      rating: 4.6,
+      reviews: 89
+    },
+
+    // Emerging Technology Services
+    {
+
+      id: 'quantum-computing-platform',
+      name: 'Quantum Computing Solutions',
+      description: 'Quantum computing services for optimization, cryptography, and scientific computing.',
+      category: 'Emerging Tech',
+      price: '$5,000/month',
+      features: ['Quantum Algorithms',Optimization Problems',Cryptography',Scientific Computing',Research Support'],
+      icon: Atom,
+      badge: 'Future',
+      color: 'from-purple-600 to-pink-700',
+      link: '/services/quantum-computing',
+      marketPrice: '$6,500/month',
+      savings: '23%',
+      rating: 4.9,
+      reviews: 45
+    },
+    {
+
+      id: 'edge-computing-platform',
+      name: 'Edge Computing Platform',
+      description: 'Distributed edge computing platform for IoT, real-time processing, and low-latency applications.',
+      category: 'Emerging Tech',
+      price: '$2,800/month',
+      features: ['Edge Nodes',Real-time Processing',IoT Integration',Low Latency',Scalable Architecture'],
+      icon: Cpu,
+      badge: 'Featured',
+      color: 'from-blue-600 to-cyan-700',
+      link: '/services/edge-computing',
+      marketPrice: '$3,600/month',
+      savings: '22%',
+      rating: 4.8,
+      reviews: 123
+    },
+    {
+
+      id: 'blockchain-platform',
+      name: 'Enterprise Blockchain Platform',
+      description: 'Scalable blockchain solutions for supply chain, finance, and digital identity management.',
+      category: 'Emerging Tech',
+      price: '$3,200/month',
+      features: ['Smart Contracts',Supply Chain Tracking',Digital Identity',Token Management',Consensus Mechanisms'],
+      icon: Link,
+      badge: 'Popular',
+      color: 'from-green-600 to-blue-700',
+      link: '/services/blockchain',
+      marketPrice: '$4,100/month',
+      savings: '22%',
+      rating: 4.7,
+      reviews: 167
+    }
+  ];
+
+  const categories = ['
+    { id: any'all', name: 'All Services', icon: Star, count: services.length },;
+    { id: 'AI & ML', name: 'AI & Machine Learning', icon: Brain, count: services.filter(s  => s.category === 'AI & ML').length },
+    { id: any'IT Infrastructure', name: 'IT Infrastructure', icon: Server, count: services.filter(s  => s.category === 'IT Infrastructure').length },;
+    { id: any'Micro SaaS', name: 'Micro SaaS', icon: Rocket, count: services.filter(s  => s.category === 'Micro SaaS').length },;
+    { id: any'Emerging Tech', name: 'Emerging Technology', icon: Atom, count: services.filter(s  => s.category === 'Emerging Tech').length }
+  ];
+
+  const filteredServices = services.filter(service => {
+
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesSearch = service.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
+                         service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
+    return matchesCategory && matchesSearch;
+  }) ;
+
+  const sortedServices = [...filteredServices].sort((a, b) => {
+
+    switch (sortBy) {
+
+      case 'price-low':'
+        return parseFloat(a.price.replace(/[^0-9.]/g,)) - parseFloat(b.price.replace(/[^0-9.]/g,));
+      case 'price-high':'
+        return parseFloat(b.price.replace(/[^0-9.]/g,)) - parseFloat(a.price.replace(/[^0-9.]/g,));
+      case 'rating':
+        return b.rating - a.rating;
+=======
 import React, { useState, useEffect } from 'react.ts';'
 import { Link  } from 'react-router-dom.ts';'
 import { motion, AnimatePresence  } from 'framer-motion.ts';      case 'rating':
         return b.rating - a.rating;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'popularity':
       default:
         return b.reviews - a.reviews;
@@ -36,13 +482,13 @@ import { motion, AnimatePresence  } from 'framer-motion.ts';      case 'rating':
             className="flex flex-wrap justify-center gap-4"
           >
             <Link"
-              to="/contact""
+              to="/contact"
               className="bg-white text-zion-blue-dark px-8 py-3 rounded-full font-semibold hover:bg-zion-blue-light transition-colors duration-300"
             >
               Get Started Today
             </Link>
             <Link"
-              to="/pricing""
+              to="/pricing"
               className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-zion-blue-dark transition-colors duration-300"
             >
               View Pricing
@@ -99,7 +545,7 @@ import { motion, AnimatePresence  } from 'framer-motion.ts';      case 'rating':
             <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">"
               <div className="relative">
                 <input"
-                  type="text""
+                  type="text"
                   placeholder="Search services..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
@@ -144,7 +590,7 @@ import { motion, AnimatePresence  } from 'framer-motion.ts';      case 'rating':
                   {service.badge && ("
                     <div className="absolute top-4 right-4">`
                       <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-'
+
                         service.badge === 'New' ? 'bg-green-500 text-white' :'
                         service.badge === 'Popular' ? 'bg-blue-500 text-white' :'
                         service.badge === 'Featured' ? 'bg-purple-500 text-white' :'
@@ -192,7 +638,7 @@ import { motion, AnimatePresence  } from 'framer-motion.ts';      case 'rating':
                           <Star
                             key={i}`                            className={`w-4 h-4 ${
 
-                              i < Math.floor(service.rating)'
+                              i < Math.floor(service.rating)
                                 ? 'text-yellow-400 fill-current''
                                 : 'text-zion-slate-light'`
                             }`}
@@ -258,13 +704,13 @@ import { motion, AnimatePresence  } from 'framer-motion.ts';      case 'rating':
             className="flex flex-wrap justify-center gap-4"
           >
             <Link"
-              to="/contact""
+              to="/contact"
               className="bg-white text-zion-blue-dark px-8 py-4 rounded-full font-semibold hover:bg-zion-blue-light transition-colors duration-300 text-lg"
             >
               Schedule a Demo
             </Link>
             <Link"
-              to="/pricing""
+              to="/pricing"
               className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-zion-blue-dark transition-colors duration-300 text-lg"
             >
               View Full Pricing

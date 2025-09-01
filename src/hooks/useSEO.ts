@@ -25,7 +25,7 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
     enableAnalytics = true} = options;
 
   // Memoize the full title
-  const fullTitle = useMemo(() => {;'
+  const fullTitle = useMemo(() => {;
     const siteName = 'Zion Tech Group';
     return seoData.title.includes(siteName) ? seoData.title : `${seoData.title} | ${siteName}`}, [seoData.title]);
 
@@ -33,24 +33,36 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
   const canonicalUrl = useMemo(() => {;
     if (seoData.canonical) {;'`
       return seoData.canonical.startsWith('http') ? seoData.canonical : `https://ziontechgroup.com${seoData.canonical}`;
-    }'
+    }
     return typeof window !== 'null' ? window.location.href : 'https://ziontechgroup.com';
   }, [seoData.canonical]);
 
   // Update document title
+<<<<<<< HEAD
+  const updateTitle = useCallback((title: string) => {;
+    if (typeof document !== 'null') {;
+      document.title = title;
+
+  }, []);
+
+  // Update meta tags
+  const updateMetaTags = useCallback((data: SEOData) => {;
+    if (typeof document === 'null') return;
+=======
   const updateTitle = useCallback((title: string) => {;'    if (typeof document !== 'null') {;
       document.title = title}, []);
 
   // Update meta tags
   const updateMetaTags = useCallback((data: SEOData) => {;'    if (typeof document === 'null') return;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     // Update or create meta description'
     let metaDesc = document.querySelector('meta[name="description"]');
     if (!metaDesc) {
-'
-      metaDesc = document.createElement('meta');'
-      metaDesc.setAttribute('name', 'description');
-      document.head.appendChild(metaDesc)}'
+
+      metaDesc = document.createElement('meta');
+      metaDesc.setAttribute('name',description');
+      document.head.appendChild(metaDesc)}
     metaDesc.setAttribute('content', data.description);
 
     // Update or create meta keywords
@@ -58,19 +70,19 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
 '"
       let metaKeywords = document.querySelector('meta[name="keywords"]');
       if (!metaKeywords) {
-'
-        metaKeywords = document.createElement('meta');'
-        metaKeywords.setAttribute('name', 'keywords');
-        document.head.appendChild(metaKeywords)}'
+
+        metaKeywords = document.createElement('meta');
+        metaKeywords.setAttribute('name',keywords');
+        document.head.appendChild(metaKeywords)}
       metaKeywords.setAttribute('content', data.keywords)}
 
     // Update or create canonical link'"
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     if (!canonicalLink) {
-'
-      canonicalLink = document.createElement('link');'
-      canonicalLink.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonicalLink)}'
+
+      canonicalLink = document.createElement('link');
+      canonicalLink.setAttribute('rel',canonical');
+      document.head.appendChild(canonicalLink)}
     canonicalLink.setAttribute('href', canonicalUrl);
 
     // Update robots meta tag
@@ -78,59 +90,78 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
 '"
       let robotsMeta = document.querySelector('meta[name="robots"]');
       if (!robotsMeta) {
-'
-        robotsMeta = document.createElement('meta');'
-        robotsMeta.setAttribute('name', 'robots');
-        document.head.appendChild(robotsMeta)}'
-      robotsMeta.setAttribute('content', 'noindex, nofollow')}
+
+        robotsMeta = document.createElement('meta');
+        robotsMeta.setAttribute('name',robots');
+        document.head.appendChild(robotsMeta)}
+      robotsMeta.setAttribute('content',noindex, nofollow')}
   }, [canonicalUrl]);
 
   // Update Open Graph tags
-  const updateOpenGraphTags = useCallback((data: SEOData) => {;'
+  const updateOpenGraphTags = useCallback((data: SEOData) => {;
     if (typeof document === 'null') return;
 
     const ogTags = ['
+<<<<<<< HEAD
+      { property: 'og:title', content: fullTitle },;
+      { property: 'og:description', content: data.description },;
+      { property: 'og:type', content: data.ogType || 'website' },;
+      { property: 'og:url', content: canonicalUrl },;
+      { property: 'og:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;
+      { property: 'og:site_name', content: 'Zion Tech Group' },;
+      { property: 'og:locale', content: 'en_US' };
+=======
       { property: 'og:title', content: fullTitle },;'
       { property: 'og:description', content: data.description },;'
       { property: 'og:type', content: data.ogType || 'website' },;'
       { property: 'og:url', content: canonicalUrl },;'
       { property: 'og:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;'
       { property: 'og:site_name', content: 'Zion Tech Group' },;'      { property: 'og:locale', content: 'en_US' };
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ];
 
     ogTags.forEach(({ property, content })  => {
 "`
       let ogTag = document.querySelector(`meta[property="${property}"]`);
       if (!ogTag) {
-'
-        ogTag = document.createElement('meta');'
+
+        ogTag = document.createElement('meta');
         ogTag.setAttribute('property', property);
-        document.head.appendChild(ogTag)}'
+        document.head.appendChild(ogTag)}
       ogTag.setAttribute('content', content)})}, [fullTitle, canonicalUrl]);
 
   // Update Twitter Card tags
-  const updateTwitterCardTags = useCallback((data: SEOData) => {;'
+  const updateTwitterCardTags = useCallback((data: SEOData) => {;
     if (typeof document === 'null') return;
 
+<<<<<<< HEAD
+    const twitterTags = [;
+      { name: 'twitter:card', content: data.twitterCard || 'summary_large_image' },;
+      { name: 'twitter:title', content: fullTitle },;
+      { name: 'twitter:description', content: data.description },;
+      { name: 'twitter:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;
+      { name: 'twitter:site', content: '@ziontechgroup' };
+=======
     const twitterTags = [;'
       { name: 'twitter:card', content: data.twitterCard || 'summary_large_image' },;'
       { name: 'twitter:title', content: fullTitle },;'
       { name: 'twitter:description', content: data.description },;'
       { name: 'twitter:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;'      { name: 'twitter:site', content: '@ziontechgroup' };
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ];
 
     twitterTags.forEach(({ name, content })  => {
 "`
       let twitterTag = document.querySelector(`meta[name="${name}"]`);
       if (!twitterTag) {
-'
-        twitterTag = document.createElement('meta');'
+
+        twitterTag = document.createElement('meta');
         twitterTag.setAttribute('name', name);
-        document.head.appendChild(twitterTag)}'
+        document.head.appendChild(twitterTag)}
       twitterTag.setAttribute('content', content)})}, [fullTitle]);
 
   // Add structured data
-  const addStructuredData = useCallback((data: object) => {;'
+  const addStructuredData = useCallback((data: object) => {;
     if (!enableStructuredData || typeof document === 'null') return;
 
     // Remove existing structured data'"
@@ -140,35 +171,51 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
     });
 
     // Add new structured data'
+<<<<<<< HEAD
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+=======
     const script = document.createElement('script');'    script.type = 'application/ld+json';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     script.textContent = JSON.stringify(data);
     document.head.appendChild(script)}, [enableStructuredData]);
 
   // Default organization structured data
   const defaultStructuredData = useMemo(() => ({
-'
-    '@context': 'https://schema.org','
-    '@type': 'Organization','
-    name: 'Zion Tech Group','
-    url: 'https://ziontechgroup.com','
-    logo: 'https://ziontechgroup.com/images/logo.png','
+
+    '@context': 'https://schema.org',@type': 'Organization',
+    name: 'Zion Tech Group',
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/images/logo.png',
     description: 'Leading technology solutions provider specializing in AI, cybersecurity, cloud computing, and digital transformation.',
     address: {
-'
-      '@type': 'PostalAddress','
-      streetAddress: '364 E Main St STE 1008','
-      addressLocality: 'Middletown','
-      addressRegion: 'DE','
-      postalCode: '19709','
+
+      '@type': 'PostalAddress',
+      streetAddress: '364 E Main St STE 1008',
+      addressLocality: 'Middletown',
+      addressRegion: 'DE',
+      postalCode: '19709',
       addressCountry: 'US'
     },
     contactPoint: {
-'
-      '@type': 'ContactPoint','
-      telephone: '+1-302-464-0950','
-      contactType: 'customer service','
+
+      '@type': 'ContactPoint',
+      telephone: '+1-302-464-0950',
+      contactType: 'customer service',
       email: 'kleber@ziontechgroup.com'
     },
+<<<<<<< HEAD
+    sameAs: [;
+      'https://www.linkedin.com/company/zion-tech-group',;
+      'https://twitter.com/ziontechgroup',;
+      'https://www.facebook.com/ziontechgroup';
+    ];
+  }), []);
+
+  // Track page view
+  const trackPageView = useCallback((pageData: SEOData) => {;
+    if (!enableAnalytics || typeof window === 'null') return;
+=======
     sameAs: [;'
       'https://www.linkedin.com/company/zion-tech-group',;'
       'https://twitter.com/ziontechgroup',;'      'https://www.facebook.com/ziontechgroup';
@@ -176,11 +223,12 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
 
   // Track page view
   const trackPageView = useCallback((pageData: SEOData) => {;'    if (!enableAnalytics || typeof window === 'null') return;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     // Google Analytics
     if (window.gtag) {
-'
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
+
+      window.gtag('config',GA_MEASUREMENT_ID', {
 
         page_title: pageData.title,
         page_location: canonicalUrl,
@@ -191,28 +239,38 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
     if (window.dataLayer) {
 
       window.dataLayer.push({
-'
+
         event: 'page_view',
         page_title: pageData.title,
-        page_url: canonicalUrl,'
+        page_url: canonicalUrl,
         page_type: pageData.ogType || 'website'
       })}
   }, [canonicalUrl, enableAnalytics]);
 
   // Track performance metrics
+<<<<<<< HEAD
+  const trackPerformance = useCallback(() => {;
+    if (!enablePerformanceTracking || typeof window === 'null') return;
+=======
   const trackPerformance = useCallback(() => {;'    if (!enablePerformanceTracking || typeof window === 'null') return;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     // Wait for page load'
     if (document.readyState = == 'complete') {;
       measureAndTrackPerformance();
     } else {
-'
+
       window.addEventListener('load', measureAndTrackPerformance);
     }
   }, [enablePerformanceTracking]);
 
   // Measure and track performance
+<<<<<<< HEAD
+  const measureAndTrackPerformance = useCallback(() => {;
+    if (typeof window === 'null') return;
+=======
   const measureAndTrackPerformance = useCallback(() => {;'    if (typeof window === 'null') return;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     // Core Web Vitals'
     if ('web-vital' in window) {
@@ -222,12 +280,12 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
 
       // This would require the web-vitals library'
       // // // // // // // // console.log('Web Vitals available');
-    }'
+    }
       // console.log('Web Vitals available')}
 
     // Navigation Timing API'
     if ('performance' in window) {
-'
+
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
 
@@ -247,9 +305,9 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
         if (window.gtag) {
 
           Object.entries(metrics).forEach(([key, value])  => {
-'
-            window.gtag('event', 'performance_metric', {
-'
+
+            window.gtag('event',performance_metric', {
+
               event_category: 'performance',
               event_label: key,
               value: Math.round(value)

@@ -1,10 +1,10 @@
-import React from 'react';'
-import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';'
-import { Button } from '@/components/ui/button';'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';'
-import { Badge } from '@/components/ui/badge';'
-import { Cloud, Users, TrendingUp, Phone, Mail, Globe, ArrowRight, Zap, Clock, Star, Shield, Smartphone, Settings, PieChart, FileText import Target from 'lucide-react/dist/esm/icons/target';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Cloud, Users, TrendingUp, Phone, Mail, Globe, ArrowRight, Zap, Clock, Star, Shield, Smartphone, Settings, PieChart, FileText import Target from 'lucide-react/dist/esm/icons/target';
+import { Link } from 'react-router-dom';
 const microSAASServices = COMPREHENSIVE_SERVICES.filter(service => service.category === 'Micro SAAS');
 export default function MicroSAASShowcase() {
     return (<div className="min-h-screen bg-background">
@@ -126,7 +126,7 @@ export default function MicroSAASShowcase() {
                       <span>({service.reviewCount})</span>
                     </div>"
                     <div className="flex items-center gap-1">"
-                      <Clock className="w-4 h-4"/>'
+                      <Clock className="w-4 h-4"/>
                       <span>{service.availability || '2-4 weeks'}</span>
                     </div>
                   </div>

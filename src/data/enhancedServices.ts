@@ -1342,19 +1342,19 @@ export const ALL_ENHANCED_SERVICES: ProductListing[] = [
 
 // Service categories for filtering
 export const ENHANCED_SERVICE_CATEGORIES = ['
-  { label: 'AI & Machine Learning', value: 'ai-ml' },'
-  { label: 'Cloud & Infrastructure', value: 'cloud-infrastructure' },'
-  { label: 'Cybersecurity', value: 'cybersecurity' },'
-  { label: 'Data & Analytics', value: 'data-analytics' },'
-  { label: 'Business Intelligence', value: 'business-intelligence' },'
-  { label: 'Development & DevOps', value: 'development-devops' },'
-  { label: 'Digital Transformation', value: 'digital-transformation' },'
-  { label: 'Healthcare Technology', value: 'healthcare-tech' },;'
-  { label: 'Financial Technology', value: 'fintech' },;'
-  { label: 'Blockchain', value: 'blockchain' },;'
-  { label: 'Quantum Computing', value: 'quantum-computing' },;'
-  { label: 'Edge Computing', value: 'edge-computing' },;'
-  { label: 'Emerging Technology', value: 'emerging-tech' },;'
+  { label: 'AI & Machine Learning', value: 'ai-ml' },
+  { label: 'Cloud & Infrastructure', value: 'cloud-infrastructure' },
+  { label: 'Cybersecurity', value: 'cybersecurity' },
+  { label: 'Data & Analytics', value: 'data-analytics' },
+  { label: 'Business Intelligence', value: 'business-intelligence' },
+  { label: 'Development & DevOps', value: 'development-devops' },
+  { label: 'Digital Transformation', value: 'digital-transformation' },
+  { label: 'Healthcare Technology', value: 'healthcare-tech' },;
+  { label: 'Financial Technology', value: 'fintech' },;
+  { label: 'Blockchain', value: 'blockchain' },;
+  { label: 'Quantum Computing', value: 'quantum-computing' },;
+  { label: 'Edge Computing', value: 'edge-computing' },;
+  { label: 'Emerging Technology', value: 'emerging-tech' },;
   { label: 'AI Automation', value: 'ai-automation' };
 ];
 

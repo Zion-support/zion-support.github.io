@@ -54,8 +54,11 @@ export const SERVICE_STATISTICS_2030 = {
     COMPREHENSIVE_SERVICES_INDEX_2030.length) * 10
   ) / 10,
   featuredServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => service.featured).length,
-  aiServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => '
+  aiServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  =>
     service.category.includes('AI') || service.aiScore > 90
+<<<<<<< HEAD
+  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => ;
+=======
   emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => ;'
 export 
   "Blockchain & Web3",;
@@ -68,12 +71,13 @@ export
 
 // Service Statistics
 export 
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     service.category === 'Emerging Technology'
   ).length
   ).length,;
   ;
   ;
-  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => ;'
+  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => ;
     service.category === 'Emerging Technology';
   ).length;
 };
@@ -84,16 +88,16 @@ export const FEATURED_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(s
 
 // High-ROI Services (ROI > 500%);
 export const HIGH_ROI_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {;
-  const roi = service.roi;'
-  if (typeof roi = == 'string') {;'
+  const roi = service.roi;
+  if (typeof roi = == 'string') {;
     const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
     return roiNumber > 500}
   return false});
 
 // Quick Setup Services (< 8 weeks);
 export const QUICK_SETUP_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {;
-  const setupTime = service.setupTime;'
-  if (typeof setupTime = == 'string') {;'
+  const setupTime = service.setupTime;
+  if (typeof setupTime = == 'string') {;
     const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
 // Featured Services
 export 

@@ -1,12 +1,12 @@
 import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
-import SEO from "@/components/SEO";'
+import SEO from "@/components/SEO";
 import { Link } from 'react-router-dom';
 export default function UltimateServicesShowcase2025() {
-'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
+
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-'
+
   const categories = ['all', ...Object.keys(ULTIMATE_SERVICE_CATEGORIES_2025)];
 
   const filteredServices = ULTIMATE_REAL_SERVICES_2025.filter (service => {;
@@ -25,9 +25,16 @@ export default function UltimateServicesShowcase2025() {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO "
+<<<<<<< HEAD
+        title="Ultimate Innovative Services 2025 | Zion Tech Group"
+        description="Discover our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Transform your business with cutting-edge technology."
+        keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group"
+      />
+=======
         title="Ultimate Innovative Services 2025 | Zion Tech Group""
         description="Discover our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Transform your business with cutting-edge technology.""        keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <div className="relative overflow-hidden">"
@@ -48,13 +55,13 @@ export default function UltimateServicesShowcase2025() {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
 "
                 <Rocket className="w-5 h-5 mr-2" />                Get Started Today
               </Link>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
 "
                 <Phone className="w-5 h-5 mr-2" />                Call Now
@@ -104,7 +111,7 @@ export default function UltimateServicesShowcase2025() {
             <div className="flex-1">"
               <div className="relative">
                 <input"
-                  type="text""
+                  type="text"
                   placeholder="Search innovative services..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}"
@@ -123,7 +130,7 @@ export default function UltimateServicesShowcase2025() {
                 className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
 
                 {categories.map(category => (;"
-                  <option key={category} value={category} className="bg-slate-800 text-white">'
+                  <option key={category} value={category} className="bg-slate-800 text-white">
                     {category === 'all' ? 'All Categories' : category}
                   </option>) ) }
               </select>
@@ -173,7 +180,12 @@ export default function UltimateServicesShowcase2025() {
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-green-600/20 rounded-lg mb-4">"
                   <CheckCircle className="w-6 h-6 text-green-400" />
                 </div>"
+<<<<<<< HEAD
+                <h3 className="text-lg font-semibold text-white mb-2 capitalize">
+                  {key.replace(/([A-Z])/g, $1').trim()}
+=======
                 <h3 className="text-lg font-semibold text-white mb-2 capitalize">'                  {key.replace(/([A-Z])/g, ' $1').trim()}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 </h3>"
                 <p className="text-gray-300 text-sm">{value}</p>
               </div>
@@ -203,7 +215,7 @@ export default function UltimateServicesShowcase2025() {
                   ))}
                 </ul>
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
 
                   Get Started
@@ -317,8 +329,8 @@ export default function UltimateServicesShowcase2025() {
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />                </Link>
                 <a
                   href={service.contactInfo.website}"
-                  target="_blank""
-                  rel="noopener noreferrer""
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-4 py-3 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
 "
                   <ExternalLink className="w-4 h-4" />                </a>
@@ -330,13 +342,13 @@ export default function UltimateServicesShowcase2025() {
                   <p className="text-sm text-gray-400 mb-2">Ready to get started?</p>"
                   <div className="flex flex-col sm:flex-row gap-2 text-sm">
                     <a"
-                      href="tel:+13024640950""
+                      href="tel:+13024640950"
                       className="inline-flex items-center justify-center px-3 py-2 bg-green-600/20 text-green-300 rounded-md border border-green-400/30 hover:bg-green-600/30 transition-colors"
 "
                       <Phone className="w-3 h-3 mr-1" />                      Call Now
                     </a>
                     <a"
-                      href="mailto:kleber@ziontechgroup.com""
+                      href="mailto:kleber@ziontechgroup.com"
                       className="inline-flex items-center justify-center px-3 py-2 bg-blue-600/20 text-blue-300 rounded-md border border-blue-400/30 hover:bg-blue-600/30 transition-colors"
 "
                       <Mail className="w-3 h-3 mr-1" />                      Email Us
@@ -354,8 +366,8 @@ export default function UltimateServicesShowcase2025() {
               No services found matching your criteria;
             </div>;
             <button;
-              onClick={() => {;'
-                setSearchTerm('');'
+              onClick={() => {;
+                setSearchTerm('');
                 setSelectedCategory('all');
               }}"              className = "px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
@@ -377,13 +389,13 @@ export default function UltimateServicesShowcase2025() {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
 "
                 <Rocket className="w-5 h-5 mr-2" />                Start Your Transformation
               </Link>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
 "
                 <Phone className="w-5 h-5 mr-2" />                Speak with an Expert

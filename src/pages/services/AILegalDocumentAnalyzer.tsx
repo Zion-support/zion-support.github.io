@@ -1,4 +1,4 @@
-import React, { useState } from 'react.ts';'
+import React, { useState } from 'react.ts';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -17,92 +17,61 @@ import {
   Globe,
   Phone,
   Mail,
-  MapPin,'
+  MapPin,
   ExternalLink} from 'lucide-react.ts';
 
 const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
-'
+
   const [activeTab, setActiveTab] = useState('overview');
 
   const features = ['
-    'Contract risk assessment','
-    'Compliance violation detection','
-    'Legal clause analysis','
-    'Automated contract review','
-    'Regulatory compliance checking','
-    'Document comparison tools','
-    'Legal precedent matching','
-    'Risk scoring algorithms','
-    'Multi-language support','
-    'Integration with legal databases',
+    'Contract risk assessment',Compliance violation detection',Legal clause analysis',Automated contract review',Regulatory compliance checking',Document comparison tools',Legal precedent matching',Risk scoring algorithms',Multi-language support',Integration with legal databases',
   ];
 
   const benefits = ['
-    'Reduce legal review time by 90%','
-    'Identify 95% of compliance risks','
-    'Save $50K+ annually on legal fees','
-    'Improve contract negotiation outcomes','
-    'Ensure regulatory compliance',
+    'Reduce legal review time by 90%',Identify 95% of compliance risks',Save $50K+ annually on legal fees',Improve contract negotiation outcomes',Ensure regulatory compliance',
   ];
 
   const useCases = ['
-    'Contract review and analysis','
-    'Regulatory compliance checking','
-    'Legal risk assessment','
-    'Due diligence processes','
-    'Legal document automation',
+    'Contract review and analysis',Regulatory compliance checking',Legal risk assessment',Due diligence processes',Legal document automation',
   ];
 
   const pricingPlans = [
     {
-'
-      name: 'Starter','
-      price: '$1,499','
-      period: '/month','
+
+      name: 'Starter',
+      price: '$1,499',
+      period: '/month',
       description: 'Perfect for small law firms and legal departments',
       features: ['
-        'Up to 100 documents/month','
-        'Basic risk assessment','
-        'Compliance checking','
-        'Email support','
-        'Standard integrations',
+        'Up to 100 documents/month',Basic risk assessment',Compliance checking',Email support',Standard integrations',
       ],
       popular: false},
     {
-'
-      name: 'Professional','
-      price: '$2,499','
-      period: '/month','
+
+      name: 'Professional',
+      price: '$2,499',
+      period: '/month',
       description: 'Ideal for growing legal practices',
       features: ['
-        'Up to 500 documents/month','
-        'Advanced risk assessment','
-        'Multi-language support','
-        'Priority support','
-        'Advanced integrations','
-        'Custom workflows',
+        'Up to 500 documents/month',Advanced risk assessment',Multi-language support',Priority support',Advanced integrations',Custom workflows',
       ],
       popular: true},
     {
-'
-      name: 'Enterprise','
-      price: '$3,999','
-      period: '/month','
+
+      name: 'Enterprise',
+      price: '$3,999',
+      period: '/month',
       description: 'For large legal organizations',
       features: ['
-        'Unlimited documents','
-        'Custom AI models','
-        'White-label solution','
-        'Dedicated support','
-        'Full API access','
-        'Custom security features',
+        'Unlimited documents',Custom AI models',White-label solution',Dedicated support',Full API access',Custom security features',
       ],
       popular: false},
   ];
 
   const competitors = ['
-    { name: 'Kira Systems', price: '$2,500+/month', rating: 4.2 },'
-    { name: 'Luminance', price: '$3,000+/month', rating: 4.0 },'
+    { name: 'Kira Systems', price: '$2,500+/month', rating: 4.2 },
+    { name: 'Luminance', price: '$3,000+/month', rating: 4.0 },
     { name: 'ContractPodAi', price: '$2,800+/month', rating: 4.1 },
   ];
 
@@ -181,8 +150,8 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
       {/* Navigation Tabs */}"
       <section className="px-4 sm:px-6 lg:px-8 mb-16">"
         <div className="max-w-7xl mx-auto">"
-          <div className="flex flex-wrap justify-center gap-2">'
-            {['overview', 'features', 'pricing', 'competitors', 'contact'].map()
+          <div className="flex flex-wrap justify-center gap-2">
+            {['overview',features',pricing',competitors',contact'].map()
               tab => (
                 <button
                   key={tab}
@@ -205,7 +174,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
       {/* Content Sections */}"
       <div className="px-4 sm:px-6 lg:px-8 mb-20">"
         <div className="max-w-7xl mx-auto">
-          {/* Overview Tab */}'
+          {/* Overview Tab */}
           {activeTab === 'overview' && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -271,7 +240,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
             </motion.div>
           )}
 
-          {/* Features Tab */}'
+          {/* Features Tab */}
           {activeTab === 'features' && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -330,10 +299,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
                   <h3 className="text-2xl font-bold mb-6">Integrations</h3>"
                   <div className="grid grid-cols-2 gap-4">
                     {['
-                      'DocuSign','
-                      'Adobe Acrobat','
-                      'Microsoft Office','
-                      'Legal databases',
+                      'DocuSign',Adobe Acrobat',Microsoft Office',Legal databases',
                     ].map((integration, index) => (
                       <div
                         key={index}"
@@ -348,7 +314,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
             </motion.div>
           )}
 
-          {/* Pricing Tab */}'
+          {/* Pricing Tab */}
           {activeTab === 'pricing' && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -419,7 +385,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
             </motion.div>
           )}
 
-          {/* Competitors Tab */}'
+          {/* Competitors Tab */}
           {activeTab === 'competitors' && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -483,7 +449,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
             </motion.div>
           )}
 
-          {/* Contact Tab */}'
+          {/* Contact Tab */}
           {activeTab === 'contact' && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -500,7 +466,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
                   <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />"
                   <h3 className="text-xl font-semibold mb-2">Call Us</h3>"                  <p className="text-gray-300 mb-4">Speak with our experts</p>
                   <a"
-                    href="tel:+13024640950""
+                    href="tel:+13024640950"
                     className="text-cyan-400 font-semibold hover:text-cyan-300"
                   >
                     +1 302 464 0950
@@ -511,7 +477,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
                   <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />"
                   <h3 className="text-xl font-semibold mb-2">Email Us</h3>"                  <p className="text-gray-300 mb-4">Get detailed information</p>
                   <a"
-                    href="mailto:kleber@ziontechgroup.com""
+                    href="mailto:kleber@ziontechgroup.com"
                     className="text-purple-400 font-semibold hover:text-purple-300"
                   >
                     kleber@ziontechgroup.com
@@ -525,9 +491,9 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
                     Learn more about our services
                   </p>
                   <a"
-                    href="https://ziontechgroup.com""
-                    target="_blank""
-                    rel="noopener noreferrer""
+                    href="https://ziontechgroup.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-green-400 font-semibold hover:text-green-300 flex items-center justify-center gap-2"
                   >
                     ziontechgroup.com"

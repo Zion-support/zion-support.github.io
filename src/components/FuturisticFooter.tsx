@@ -1,6 +1,55 @@
+<<<<<<< HEAD
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import {
+
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Instagram,
+  ArrowUp,
+  Heart,
+  Shield,
+  Zap,
+  Brain,
+  Cloud,
+  Server,
+  Rocket,
+  Users,
+  Briefcase,
+  FileText,
+  HelpCircle,
+  MessageCircle,
+  Zap as ZapIcon'
+} from 'lucide-react';
+export const FuturisticFooter: React.FC = () => {;
+  const scrollToTop = () => {;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+  const currentYear = new Date () .getFullYear () ;
+  const footerSections = [
+    {
+
+      title: "Services",
+      links[;"
+        { name: "AI & Machine Learning", href: "/ai-services" },"
+        { name: "Micro SAAS Solutions", href: "/micro-saas" },"
+        { name: "IT Infrastructure", href: "/it-services" },"
+        { name: "Emerging Technologies", href: "/emerging-tech" },"
+        { name: "Cybersecurity", href: "/it-services/cybersecurity" },"
+        { name: "Cloud Solutions", href: "/it-services/cloud" },"
+        { name: "DevOps & Automation", href: "/it-services/devops" },"
+        { name: "Data Management", href: "/it-services/data" }
+=======
 import React from 'react';'
 import { Link } from 'react-router-dom';'
 import { motion } from 'framer-motion';        { name: "Data Management", href: "/it-services/data" }
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ]
     },;
     {
@@ -186,7 +235,7 @@ import { motion } from 'framer-motion';        { name: "Data Management", href: 
                 <ul className="space-y-2">
                   <li>
                     <Link"
-                      to="/request-quote""
+                      to="/request-quote"
                       className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 inline-block"
 
                       Request Quote
@@ -194,7 +243,7 @@ import { motion } from 'framer-motion';        { name: "Data Management", href: 
                   </li>
                   <li>
                     <Link"
-                      to="/demo""
+                      to="/demo"
                       className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 inline-block"
 
                       Book Demo
@@ -202,7 +251,7 @@ import { motion } from 'framer-motion';        { name: "Data Management", href: 
                   </li>
                   <li>
                     <Link"
-                      to="/support""
+                      to="/support"
                       className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 inline-block"
 
                       Get Support
@@ -210,7 +259,7 @@ import { motion } from 'framer-motion';        { name: "Data Management", href: 
                   </li>
                   <li>
                     <Link"
-                      to="/status""
+                      to="/status"
                       className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 inline-block"
 
                       System Status
@@ -258,8 +307,8 @@ import { motion } from 'framer-motion';        { name: "Data Management", href: 
                   <a
                     key={social.name}
                     href={social.href}"
-                    target="_blank""
-                    rel="noopener noreferrer""
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 bg-zion-slate-dark/50 border border-zion-slate/30 rounded-lg flex items-center justify-center text-zion-slate-light hover:text-zion-cyan hover:border-zion-cyan/50 hover:bg-zion-cyan/10 transition-all duration-300"
 "
                     <social.icon className="w-5 h-5" />

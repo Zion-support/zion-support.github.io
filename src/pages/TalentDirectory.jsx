@@ -1,6 +1,6 @@
 import { Search, MapPin, Briefcase, Star } from 'lucide - react';
 import React from 'react';
-import SEO from "@/components/SEO";'
+import SEO from "@/components/SEO";
 import { Search, MapPin, Briefcase, Star } from 'lucide-react';
 const TalentDirectory = () => {
     const talents = [
@@ -241,7 +241,7 @@ const TalentDirectory = () => {
                 </div>
 
                 {/* CTA */}"
-                <button className="w-full bg-gradient-to-r from-violet-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-violet-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">'
+                <button className="w-full bg-gradient-to-r from-violet-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-violet-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                   Connect with {talent.name.split(' ')[0]}
                 </button>
               </motion.div>) ) }

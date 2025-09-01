@@ -16,66 +16,38 @@ import {
 export default function AIBusinessProcessOptimizer(...args: any[]): any {
 
   const features = ['
-    'AI-powered process mining and discovery','
-    'Real-time performance monitoring and alerts','
-    'Predictive analytics for process bottlenecks','
-    'Automated workflow optimization recommendations','
-    'Resource allocation optimization','
-    'ROI tracking and performance metrics','
-    'Integration with 50+ business tools','
-    'Custom AI model training for your industry','
-    '24/7 process monitoring and alerting','
-    'Executive dashboard with KPI tracking',
+    'AI-powered process mining and discovery',Real-time performance monitoring and alerts',Predictive analytics for process bottlenecks',Automated workflow optimization recommendations',Resource allocation optimization',ROI tracking and performance metrics',Integration with 50+ business tools',Custom AI model training for your industry',24/7 process monitoring and alerting',Executive dashboard with KPI tracking',
   ];
 
   const benefits = ['
-    'Reduce process costs by 30-50%','
-    'Improve efficiency by 40-70%','
-    'Eliminate manual bottlenecks','
-    'Real-time visibility into operations','
-    'Data-driven decision making','
-    'Scalable process optimization',
+    'Reduce process costs by 30-50%',Improve efficiency by 40-70%',Eliminate manual bottlenecks',Real-time visibility into operations',Data-driven decision making',Scalable process optimization',
   ];
 
   const useCases = ['
-    'Manufacturing process optimization','
-    'Customer service workflow automation','
-    'Supply chain process improvement','
-    'Financial operations streamlining','
-    'HR process automation','
-    'Sales process optimization',
+    'Manufacturing process optimization',Customer service workflow automation',Supply chain process improvement',Financial operations streamlining',HR process automation',Sales process optimization',
   ];
 
   const tiers = [
     {
-'
-      name: 'Starter','
+
+      name: 'Starter',
       price: '$1,999/mo',
       details: ['
-        'Up to 10 processes','
-        'Basic AI insights','
-        'Email support','
-        'Standard integrations',
+        'Up to 10 processes',Basic AI insights',Email support',Standard integrations',
       ]},
     {
-'
-      name: 'Professional','
+
+      name: 'Professional',
       price: '$4,999/mo',
       details: ['
-        'Up to 50 processes','
-        'Advanced AI analytics','
-        'Priority support','
-        'Custom integrations',
+        'Up to 50 processes',Advanced AI analytics',Priority support',Custom integrations',
       ]},
     {
-'
-      name: 'Enterprise','
+
+      name: 'Enterprise',
       price: '$12,999/mo',
       details: ['
-        'Unlimited processes','
-        'Custom AI models','
-        'Dedicated support','
-        'White-label solution',
+        'Unlimited processes',Custom AI models',Dedicated support',White-label solution',
       ]},
   ];
 
@@ -136,15 +108,15 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {
             </div>"
             <div className="mt-6 flex flex-wrap gap-3">
               <a"
-                href="/pricing""
+                href="/pricing"
                 className="px-5 py-3 bg-zion-cyan/10 text-zion-slate-dark rounded-lg hover:bg-zion-cyan/20 transition-colors inline-flex items-center"
               >"
                 View Full Pricing <ExternalLink className="w-4 h-4 ml-2" />
               </a>
               <a"
-                href="https://ziontechgroup.com""
-                target="_blank""
-                rel="noreferrer""
+                href="https://ziontechgroup.com"
+                target="_blank"
+                rel="noreferrer"
                 className="px-5 py-3 border border-zion-slate-light/40 rounded-lg inline-flex items-center"
               >"
                 Learn More <ExternalLink className="w-4 h-4 ml-2" />              </a>
@@ -181,9 +153,7 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {
 "
         <div className="mt-12 grid md: anygrid-cols-3 gap-6">
           {['
-            'Real-time monitoring','
-            'AI-powered insights','
-            'Process automation',
+            'Real-time monitoring',AI-powered insights',Process automation',
           ].map(t => (
             <div
               key={t}"
@@ -201,24 +171,24 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {
           </div>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg"
             >"
               <Phone className="w-4 h-4 mr-2" /> +1 302 464 0950
             </a>
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg"
             >"
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com
             </a>
           </div>"
-          <div className="mt-4 text-sm text-zion-slate-light">'
+          <div className="mt-4 text-sm text-zion-slate-light">
             Visit us at:{' '}
             <a"
-              href="https://ziontechgroup.com""
-              target="_blank""
-              rel="noreferrer""
+              href="https://ziontechgroup.com"
+              target="_blank"
+              rel="noreferrer"
               className="text-zion-cyan hover:underline"
             >
               https://ziontechgroup.com            </a>

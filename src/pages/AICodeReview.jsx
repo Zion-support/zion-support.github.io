@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Code, Shield, Zap, Users, BarChart3, Target, CheckCircle export default function AICodeReview() {
     const features = [

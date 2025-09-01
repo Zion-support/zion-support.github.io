@@ -7,7 +7,7 @@ const { execSync } = require('child_process');
 class PerformanceOptimizer {
   constructor() {
     this.optimizations = [];
-    this.logFile = path.join(__dirname, 'logs', 'performance-optimizer.log');
+    this.logFile = path.join(__dirname,logs',performance-optimizer.log');
     this.ensureLogDirectory();
   }
 
@@ -51,7 +51,7 @@ class PerformanceOptimizer {
       this.log('Performance optimization completed');
       return report;
     } catch (error) {
-      this.log(`Performance optimization failed: ${error.message}`, 'ERROR');
+      this.log(`Performance optimization failed: ${error.message}`,ERROR');
       return null;
     }
   }
@@ -63,8 +63,7 @@ class PerformanceOptimizer {
         totalSize: '2.1MB',
         gzippedSize: '650KB',
         recommendations: [
-          'Consider code splitting',
-          'Remove unused dependencies',
+          'Consider code splitting',Remove unused dependencies',
         ],
       };
     } catch (error) {
@@ -78,7 +77,7 @@ class PerformanceOptimizer {
       return {
         optimized: 0,
         totalImages: 0,
-        recommendations: ['Use WebP format', 'Implement lazy loading'],
+        recommendations: ['Use WebP format',Implement lazy loading'],
       };
     } catch (error) {
       return { error: error.message };
@@ -91,7 +90,7 @@ class PerformanceOptimizer {
       return {
         totalDependencies: 0,
         unusedDependencies: 0,
-        recommendations: ['Remove unused packages', 'Update outdated packages'],
+        recommendations: ['Remove unused packages',Update outdated packages'],
       };
     } catch (error) {
       return { error: error.message };
@@ -100,25 +99,19 @@ class PerformanceOptimizer {
 
   generateRecommendations() {
     return [
-      'Implement code splitting for better initial load times',
-      'Use dynamic imports for route-based code splitting',
-      'Optimize images and use modern formats',
-      'Remove unused dependencies and code',
-      'Implement proper caching strategies',
+      'Implement code splitting for better initial load times',Use dynamic imports for route-based code splitting',Optimize images and use modern formats',Remove unused dependencies and code',Implement proper caching strategies',
     ];
   }
 
   saveReport(report) {
     try {
       const reportPath = path.join(
-        __dirname,
-        'logs',
-        'performance-report.json'
+        __dirname,logs',performance-report.json'
       );
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
       this.log(`Performance report saved to: ${reportPath}`);
     } catch (error) {
-      this.log(`Failed to save report: ${error.message}`, 'ERROR');
+      this.log(`Failed to save report: ${error.message}`,ERROR');
     }
   }
 

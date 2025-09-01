@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousOptimization = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousOptimization = () => {
       <Helmet>
         <title>AI Autonomous Optimization Platform | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous optimization platform that continuously optimizes systems, processes, and performance with advanced AI capabilities and autonomous operation."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI optimization, autonomous optimization, system optimization, performance optimization, autonomous operations, AI optimization platform"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-optimization"
         />
       </Helmet>
@@ -184,14 +184,7 @@ const AIAutonomousOptimization = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Performance Optimization','
-                'Process Optimization','
-                'Resource Optimization','
-                'Algorithm Optimization','
-                'System Optimization','
-                'Network Optimization','
-                'Database Optimization','
-                'Code Optimization',
+                'Performance Optimization',Process Optimization',Resource Optimization',Algorithm Optimization',System Optimization',Network Optimization',Database Optimization',Code Optimization',
               ].map(type => (
                 <div
                   key={type}"

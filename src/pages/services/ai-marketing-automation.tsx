@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion } from 'framer-motion.ts';
 import { SEO } from '../../components/SEO';
 import {
 
@@ -25,7 +25,7 @@ import {
   ShoppingCart,
   Settings,
   Monitor,
-  Filter,'
+  Filter,
   PieChart} from 'lucide-react.ts';
 
 export default function AIMarketingAutomation(...args: any[]): any {
@@ -33,37 +33,37 @@ export default function AIMarketingAutomation(...args: any[]): any {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'Intelligent Audience Segmentation',
       description:'
         'AI-powered customer segmentation based on behavior, preferences, and engagement patterns.'},
     {
 
-      icon: Target,'
+      icon: Target,
       title: 'Personalized Campaigns',
       description:'
         'Dynamic content and messaging that adapts to individual customer preferences and behavior.'},
     {
 
-      icon: Zap,'
+      icon: Zap,
       title: 'Automated Workflows',
       description:'
         'Set up complex marketing workflows that trigger automatically based on customer actions.'},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Predictive Analytics',
       description:'
         'Forecast customer behavior and optimize campaigns for maximum ROI and engagement.'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Compliance & Privacy',
       description:'
         'Built-in GDPR, CCPA, and other privacy compliance features for secure marketing operations.'},
     {
 
-      icon: Cloud,'
+      icon: Cloud,
       title: 'Multi-Channel Integration',
       description:'
         'Seamlessly integrate with email, social media, SMS, and other marketing channels.'},
@@ -72,75 +72,68 @@ export default function AIMarketingAutomation(...args: any[]): any {
   const marketingChannels = [
     {
 
-      icon: Mail,'
+      icon: Mail,
       title: 'Email Marketing',
       description:'
         'Automated email campaigns with intelligent timing, personalization, and A/B testing.'},
     {
 
-      icon: MessageCircle,'
+      icon: MessageCircle,
       title: 'Social Media',
       description:'
         'Automated social media posting, engagement monitoring, and audience interaction.'},
     {
 
-      icon: Globe,'
+      icon: Globe,
       title: 'Web Personalization',
       description:'
         'Dynamic website content that adapts to visitor behavior and preferences.'},
     {
 
-      icon: ShoppingCart,'
+      icon: ShoppingCart,
       title: 'E-commerce Automation',
       description:'
         'Abandoned cart recovery, product recommendations, and purchase follow-ups.'},
     {
 
-      icon: Calendar,'
+      icon: Calendar,
       title: 'Event Marketing',
       description:'
         'Automated event promotion, registration, and follow-up communications.'},
     {
 
-      icon: Monitor,'
+      icon: Monitor,
       title: 'Retargeting Campaigns',
       description:'
         'Intelligent retargeting based on user behavior and engagement patterns.'},
   ];
 
   const benefits = ['
-    'Increase conversion rates by up to 50%','
-    'Reduce marketing costs by 30%','
-    'Improve customer engagement and retention','
-    'Personalize customer experiences at scale','
-    'Automate repetitive marketing tasks','
-    'Optimize campaigns in real-time','
-    'Gain deeper customer insights','
-    'Scale marketing operations efficiently',
+    'Increase conversion rates by up to 50%',Reduce marketing costs by 30%',Improve customer engagement and retention',Personalize customer experiences at scale',Automate repetitive marketing tasks',Optimize campaigns in real-time',Gain deeper customer insights',Scale marketing operations efficiently',
   ];
 
   const useCases = [
     {
 
-      icon: Users,'
+      icon: Users,
       title: 'Lead Nurturing',
       description:'
         'Automated lead scoring and nurturing campaigns based on engagement behavior.'},
     {
 
-      icon: Heart,'
+      icon: Heart,
       title: 'Customer Retention',
       description:'
         'Personalized retention campaigns and loyalty programs for existing customers.'},
     {
 
-      icon: TrendingUp,'
+      icon: TrendingUp,
       title: 'Revenue Optimization',
       description:'
         'Cross-selling and upselling automation based on customer purchase history.'},
     {
 
-      icon: Target,'
+      icon: Target,
       title: 'Market Expansion',
       description:'
         'Automated campaigns for new market segments and geographic expansion.'},
@@ -149,8 +142,8 @@ export default function AIMarketingAutomation(...args: any[]): any {
   return()
     <>
       <SEO
-        title="AI Marketing Automation - Zion Tech Group""
-        description="Transform your marketing with AI-powered automation. Personalize campaigns, optimize ROI, and scale your marketing operations with intelligent automation.""
+        title="AI Marketing Automation - Zion Tech Group"
+        description="Transform your marketing with AI-powered automation. Personalize campaigns, optimize ROI, and scale your marketing operations with intelligent automation."
         keywords="AI marketing automation, marketing automation, personalized marketing, customer segmentation, marketing ROI, AI campaigns"
       />
 "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

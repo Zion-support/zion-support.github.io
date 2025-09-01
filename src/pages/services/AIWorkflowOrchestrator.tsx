@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -22,45 +22,45 @@ import {
   Star,
   Award,
   Phone,
-  Mail,'
-  MapPin} from 'lucide-react';'
+  Mail,
+  MapPin} from 'lucide-react';
 import { Link } from 'react-router-dom';
 ;
 const AIWorkflowOrchestrator: React.FC = props {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI-Powered Workflow Intelligence',
       description:'
         'Machine learning algorithms that continuously optimize your business processes based on performance data and outcomes.'},
     {
 
-      icon: Workflow,'
+      icon: Workflow,
       title: 'Visual Workflow Designer',
       description:'
         'Drag-and-drop interface for creating complex workflows with conditional logic, parallel processing, and error handling.'},
     {
 
-      icon: Zap,'
+      icon: Zap,
       title: 'Real-time Automation',
       description:'
         'Instant execution of workflows with sub-second response times and 99.9% uptime guarantee.'},
     {
 
-      icon: Users,'
+      icon: Users,
       title: 'Team Collaboration',
       description:'
         'Multi-user access with role-based permissions, approval workflows, and real-time collaboration tools.'},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Advanced Analytics',
       description:'
         'Comprehensive reporting on workflow performance, bottlenecks, and optimization opportunities.'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Enterprise Security',
       description:'
         'SOC 2 Type II compliant with end-to-end encryption, audit trails, and compliance reporting.'},
@@ -68,56 +68,37 @@ const AIWorkflowOrchestrator: React.FC = props {
 
   const pricingTiers = [
     {
-'
-      name: 'Starter','
-      price: '$299','
-      period: '/month','
+
+      name: 'Starter',
+      price: '$299',
+      period: '/month',
       description: 'Perfect for small teams and basic workflow automation',
       features: ['
-        'Up to 10 workflows','
-        'Basic AI optimization','
-        'Standard integrations','
-        'Email support','
-        'Basic analytics','
-        'Up to 5 team members',
-      ],'
+        'Up to 10 workflows',Basic AI optimization',Standard integrations',Email support',Basic analytics',Up to 5 team members',
+      ],
       cta: 'Start Free Trial',
       popular: false},
     {
-'
-      name: 'Professional','
-      price: '$799','
-      period: '/month','
+
+      name: 'Professional',
+      price: '$799',
+      period: '/month',
       description: 'Ideal for growing businesses with complex automation needs',
       features: ['
-        'Up to 50 workflows','
-        'Advanced AI optimization','
-        'Custom integrations','
-        'Priority support','
-        'Advanced analytics','
-        'Up to 25 team members','
-        'Custom templates','
-        'API access',
-      ],'
+        'Up to 50 workflows',Advanced AI optimization',Custom integrations',Priority support',Advanced analytics',Up to 25 team members',Custom templates',API access',
+      ],
       cta: 'Start Free Trial',
       popular: true},
     {
-'
-      name: 'Enterprise','
-      price: '$1,999','
+
+      name: 'Enterprise',
+      price: '$1,999',
       period: '/month',
       description:'
         'For large organizations with enterprise-scale automation requirements',
       features: ['
-        'Unlimited workflows','
-        'Custom AI models','
-        'White-label solution','
-        'Dedicated support','
-        'Custom reporting','
-        'Unlimited team members','
-        'On-premise deployment','
-        'Custom SLA',
-      ],'
+        'Unlimited workflows',Custom AI models',White-label solution',Dedicated support',Custom reporting',Unlimited team members',On-premise deployment',Custom SLA',
+      ],
       cta: 'Contact Sales',
       popular: false},
   ];
@@ -125,23 +106,23 @@ const AIWorkflowOrchestrator: React.FC = props {
   const benefits = [
     {
 
-      icon: TrendingUp,'
+      icon: TrendingUp,
       title: 'Increase Efficiency',
       description:'
         'Automate repetitive tasks and reduce manual work by up to 80%'},
     {
 
-      icon: Clock,'
-      title: 'Save Time','
+      icon: Clock,
+      title: 'Save Time',
       description: 'Reduce process execution time from hours to minutes'},
     {
 
-      icon: Users,'
-      title: 'Improve Collaboration','
+      icon: Users,
+      title: 'Improve Collaboration',
       description: 'Streamline team communication and task coordination'},
     {
 
-      icon: Target,'
+      icon: Target,
       title: 'Reduce Errors',
       description:'
         'Minimize human error with intelligent automation and validation'},
@@ -172,13 +153,13 @@ const AIWorkflowOrchestrator: React.FC = props {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
               >"
                 <Play className="w-5 h-5 mr-2" />                Start Free Trial
               </Link>
               <Link"
-                to="/demo""
+                to="/demo"
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >"
                 <ArrowRight className="w-5 h-5 mr-2" />                Watch Demo
@@ -367,13 +348,13 @@ const AIWorkflowOrchestrator: React.FC = props {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
               >"
                 <Rocket className="w-5 h-5 mr-2" />                Start Free Trial
               </Link>
               <Link"
-                to="/demo""
+                to="/demo"
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >"
                 <Play className="w-5 h-5 mr-2" />                Schedule Demo

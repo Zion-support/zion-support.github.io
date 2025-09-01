@@ -1,60 +1,59 @@
 import React from 'react';
 import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarChart3, Target, Zap, Shield, Users export default function AIPredictiveAnalytics() {
   const features = [
-    'Advanced machine learning algorithms for pattern recognition','
-    'Real-time data processing and predictive modeling',;'
-    'Custom AI models trained on your industry data',;'
-    'Automated feature engineering and model selection',;'
-    'Predictive insights with confidence intervals',;'
-    'Interactive dashboards and visualization tools',;'
-    'API integration with existing business systems',;'
+    'Advanced machine learning algorithms for pattern recognition',Real-time data processing and predictive modeling',;
+    'Custom AI models trained on your industry data',;
+    'Automated feature engineering and model selection',;
+    'Predictive insights with confidence intervals',;
+    'Interactive dashboards and visualization tools',;
+    'API integration with existing business systems',;
     'Automated model retraining and performance monitoring';
   ];
 
   const tiers = [
     {
-'
-      name: 'Starter','
-      price: '$299/mo','
-      details: ['Up to 5 predictive models', '10GB data processing', 'Basic ML algorithms', 'Email support']
+
+      name: 'Starter',
+      price: '$299/mo',
+      details: ['Up to 5 predictive models',10GB data processing',Basic ML algorithms',Email support']
     },
     {
-'
-      name: 'Professional', '
-      price: '$799/mo', '
-      details: ['Up to 20 predictive models', '100GB data processing', 'Advanced ML algorithms', 'Priority support'] ;
+
+      name: 'Professional',
+      price: '$799/mo',
+      details: ['Up to 20 predictive models',100GB data processing',Advanced ML algorithms',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,999/mo', ;'
-      details: ['Unlimited models', 'Unlimited data', 'Custom ML algorithms', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$1,999/mo', ;
+      details: ['Unlimited models',Unlimited data',Custom ML algorithms',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Sales forecasting and demand prediction',;'
-    'Customer churn prediction and retention',;'
-    'Inventory optimization and supply chain forecasting',;'
-    'Risk assessment and fraud detection',;'
-    'Predictive maintenance for equipment',;'
+  const useCases = [;
+    'Sales forecasting and demand prediction',;
+    'Customer churn prediction and retention',;
+    'Inventory optimization and supply chain forecasting',;
+    'Risk assessment and fraud detection',;
+    'Predictive maintenance for equipment',;
     'Market trend analysis and investment insights';
   ];
 
-  const benefits = [;'
-    'Improve forecast accuracy by 40-60%',;'
-    'Reduce operational costs by 25-35%',;'
-    'Increase revenue through better predictions',;'
-    'Optimize resource allocation and planning',;'
-    'Identify opportunities before competitors',;'
+  const benefits = [;
+    'Improve forecast accuracy by 40-60%',;
+    'Reduce operational costs by 25-35%',;
+    'Increase revenue through better predictions',;
+    'Optimize resource allocation and planning',;
+    'Identify opportunities before competitors',;
     'Make data-driven decisions with confidence';
   ];
 
-  const industries = [;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Pharmaceuticals',;'
-    'Manufacturing & Logistics',;'
-    'Real Estate & Construction',;'
+  const industries = [;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Pharmaceuticals',;
+    'Manufacturing & Logistics',;
+    'Real Estate & Construction',;
     'Energy & Utilities';
   ];
 
@@ -107,8 +106,8 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['40-60% accuracy improvement', 'Real-time predictions', 'Custom ML models'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['40-60% accuracy improvement',Real-time predictions',Custom ML models'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-indigo-600 mb-3" />"              <div className="text-gray-900 font-semibold">{t}</div>
             </div>

@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
   Workflow, 
@@ -26,7 +26,7 @@ import {
   GitBranch,
   Code,
   Terminal'
-} from 'lucide-react';'
+} from 'lucide-react';
 import { SEO } from '../../components/SEO';
 ;
 export { function };
@@ -35,142 +35,126 @@ export default function AIWorkflowAutomation(...args[]):  {
   const features = [
     {
 
-      icon: Brain,'
-      title: 'AI-Powered Decision Making','
+      icon: Brain,
+      title: 'AI-Powered Decision Making',
       description: 'Intelligent workflows that automatically make decisions based on data patterns and business rules.'
     },
     {
 
-      icon: Workflow,'
-      title: 'Visual Workflow Designer','
+      icon: Workflow,
+      title: 'Visual Workflow Designer',
       description: 'Drag-and-drop interface to create complex workflows without coding knowledge.'
     },
     {
 
-      icon: Zap,'
-      title: 'Real-time Automation','
+      icon: Zap,
+      title: 'Real-time Automation',
       description: 'Instant execution of workflows triggered by events, schedules, or conditions.'
     },
     {
 
-      icon: TrendingUp,'
-      title: 'Performance Analytics','
+      icon: TrendingUp,
+      title: 'Performance Analytics',
       description: 'Comprehensive insights into workflow efficiency, bottlenecks, and optimization opportunities.'
     }
   ];
 
   const capabilities = [
     {
-'
-      title: 'Workflow Orchestration','
+
+      title: 'Workflow Orchestration',
       description: 'Coordinate complex multi-step processes across different systems and platforms',
-      icon: GitBranch,'
-      benefits: ['Multi-system integration', 'Conditional branching', 'Error handling']
+      icon: GitBranch,
+      benefits: ['Multi-system integration',Conditional branching',Error handling']
     },
     {
-'
-      title: 'AI Decision Engine','
+
+      title: 'AI Decision Engine',
       description: 'Machine learning models that make intelligent decisions within workflows',
-      icon: Brain,'
-      benefits: ['Predictive decisions', 'Pattern recognition', 'Continuous learning']
+      icon: Brain,
+      benefits: ['Predictive decisions',Pattern recognition',Continuous learning']
     },
     {
-'
-      title: 'Real-time Monitoring','
+
+      title: 'Real-time Monitoring',
       description: 'Live visibility into workflow execution and performance metrics',
-      icon: Monitor,'
-      benefits: ['Live dashboards', 'Alert system', 'Performance tracking']
+      icon: Monitor,
+      benefits: ['Live dashboards',Alert system',Performance tracking']
     },
     {
-'
-      title: 'Integration Hub','
+
+      title: 'Integration Hub',
       description: 'Connect to 500+ applications and services via pre-built connectors',
-      icon: Database,'
-      benefits: ['API integration', 'Webhook support', 'Custom connectors']
+      icon: Database,
+      benefits: ['API integration',Webhook support',Custom connectors']
     }
   ];
 
   const useCases = [
     {
-'
-      industry: 'E-commerce','
+
+      industry: 'E-commerce',
       description: 'Automated order processing, inventory management, and customer service workflows',
-      icon: ShoppingCart,'
-      metrics: ['Order Processing Time', 'Inventory Accuracy', 'Customer Satisfaction']
+      icon: ShoppingCart,
+      metrics: ['Order Processing Time',Inventory Accuracy',Customer Satisfaction']
     },
     {
-'
-      industry: 'Finance','
+
+      industry: 'Finance',
       description: 'Automated loan processing, compliance checks, and risk assessment workflows',
-      icon: Shield,'
-      metrics: ['Processing Speed', 'Compliance Rate', 'Risk Detection']
+      icon: Shield,
+      metrics: ['Processing Speed',Compliance Rate',Risk Detection']
     },
     {
-'
-      industry: 'Healthcare','
+
+      industry: 'Healthcare',
       description: 'Patient intake, appointment scheduling, and medical record management workflows',
-      icon: Activity,'
-      metrics: ['Patient Wait Time', 'Appointment Efficiency', 'Record Accuracy']
+      icon: Activity,
+      metrics: ['Patient Wait Time',Appointment Efficiency',Record Accuracy']
     },
     {
-'
-      industry: 'Manufacturing','
+
+      industry: 'Manufacturing',
       description: 'Production scheduling, quality control, and maintenance workflows',
-      icon: Settings,'
-      metrics: ['Production Efficiency', 'Quality Score', 'Downtime Reduction']
+      icon: Settings,
+      metrics: ['Production Efficiency',Quality Score',Downtime Reduction']
     }
   ];
 
   const pricingPlans = [
     {
-'
-      name: 'Starter','
-      price: '$99','
-      period: '/month','
+
+      name: 'Starter',
+      price: '$99',
+      period: '/month',
       description: 'Perfect for small teams getting started with automation',
       features: ['
-        'Up to 10 workflows','
-        '5 user accounts','
-        'Basic integrations','
-        'Email support','
-        'Standard templates'
-      ],'
+        'Up to 10 workflows',5 user accounts',Basic integrations',Email support',Standard templates'
+      ],
       cta: 'Start Free Trial',
       popular: false
     },
     {
-'
-      name: 'Professional','
-      price: '$299','
-      period: '/month','
+
+      name: 'Professional',
+      price: '$299',
+      period: '/month',
       description: 'Ideal for growing businesses with complex automation needs',
       features: ['
-        'Up to 100 workflows','
-        '25 user accounts','
-        'Advanced integrations','
-        'Priority support','
-        'Custom templates','
-        'Advanced analytics','
-        'API access'
-      ],'
+        'Up to 100 workflows',25 user accounts',Advanced integrations',Priority support',Custom templates',Advanced analytics',API access'
+      ],
       cta: 'Start Free Trial',
       popular: true
     },
     {
-'
-      name: 'Enterprise','
-      price: 'Custom','
-      period: '','
+
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
       description: 'For large organizations requiring enterprise-grade automation',
       features: ['
-        'Unlimited workflows','
-        'Unlimited users','
-        'All integrations','
-        '24/7 support','
-        'Custom development','
-        'Advanced security','
-        'SLA guarantees'
-      ],'
+        'Unlimited workflows',Unlimited users',All integrations',24/7 support',Custom development',Advanced security',SLA guarantees'
+      ],
       cta: 'Contact Sales',
       popular: false
     }
@@ -179,26 +163,26 @@ export default function AIWorkflowAutomation(...args[]):  {
   const benefits = [
     {
 
-      icon: Clock,'
-      title: 'Save 40+ Hours Weekly','
+      icon: Clock,
+      title: 'Save 40+ Hours Weekly',
       description: 'Automate repetitive tasks and focus on strategic work that drives growth.'
     },
     {
 
-      icon: TrendingUp,'
-      title: 'Increase Efficiency by 300%','
+      icon: TrendingUp,
+      title: 'Increase Efficiency by 300%',
       description: 'Streamline processes and eliminate bottlenecks for faster delivery.'
     },
     {
 
-      icon: Shield,'
-      title: 'Reduce Errors by 95%','
+      icon: Shield,
+      title: 'Reduce Errors by 95%',
       description: 'AI-powered validation ensures accuracy and consistency across all workflows.'
     },
     {
 
-      icon: Users,'
-      title: 'Improve Team Productivity','
+      icon: Users,
+      title: 'Improve Team Productivity',
       description: 'Empower teams with self-service automation tools and real-time insights.'
     }
   ];
@@ -206,9 +190,16 @@ export default function AIWorkflowAutomation(...args[]):  {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO "
+<<<<<<< HEAD
+        title="AI Workflow Automation - Zion Tech Group"
+        description="Transform your business with AI-powered workflow automation. Streamline processes, reduce errors, and increase efficiency by 300%."
+        keywords="AI workflow automation, business process automation, workflow orchestration, AI decision engine, process optimization"
+      />
+=======
         title="AI Workflow Automation - Zion Tech Group""
         description="Transform your business with AI-powered workflow automation. Streamline processes, reduce errors, and increase efficiency by 300%.""        keywords="AI workflow automation, business process automation, workflow orchestration, AI decision engine, process optimization"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"

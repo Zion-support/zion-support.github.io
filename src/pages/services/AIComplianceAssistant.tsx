@@ -1,5 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import {
   Shield, 
@@ -26,12 +26,7 @@ import {
 
 export default function AIComplianceAssistant() {
   const frameworks = ['
-    'SOC 2','
-    'ISO 27001','
-    'HIPAA','
-    'GDPR','
-    'PCI DSS','
-    'NIST CSF',
+    'SOC 2',ISO 27001',HIPAA',GDPR',PCI DSS',NIST CSF',
   ];
 
   const features = [
@@ -193,8 +188,14 @@ export default function AIComplianceAssistant() {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
+<<<<<<< HEAD
+        title="AI Compliance Assistant - Zion Tech Group"
+        description="Automate regulatory compliance with our AI-powered compliance assistant. Monitor, assess, and maintain compliance across multiple regulatory frameworks."
+      />
+=======
         title="AI Compliance Assistant - Zion Tech Group""        description="Automate regulatory compliance with our AI-powered compliance assistant. Monitor, assess, and maintain compliance across multiple regulatory frameworks."
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
@@ -211,7 +212,7 @@ export default function AIComplianceAssistant() {
             </div>"
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
               AI Compliance"
-              <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
                 {' '}Assistant
               </span>
             </h1>"
@@ -506,7 +507,7 @@ export default function AIComplianceAssistant() {
             </ul>"
             <div className="mt-6 text-sm text-slate-400">
               References: {links.map((l, i) => ('"
-                <a key={l.label} href={l.url} target="_blank" rel="noreferrer" className="text-rose-300 hover:underline mr-2">{l.label}{i < links.length - 1 ? ',' : ''}</a>
+                <a key={l.label} href={l.url} target="_blank" rel="noreferrer" className="text-rose-300 hover:underline mr-2">{l.label}{i < links.length - 1 ? ', : ''}</a>
               ))}
             </div>
           </div>

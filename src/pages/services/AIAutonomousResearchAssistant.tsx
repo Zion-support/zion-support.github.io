@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Brain, 
@@ -22,6 +22,185 @@ import {
   Award,
   Rocket,
 import {
+<<<<<<< HEAD
+
+  Brain, 
+  Search, 
+  BookOpen, 
+  FileText, 
+  TrendingUp, 
+  Users, 
+  Globe, 
+  Cpu,
+  Database,
+  Lock,
+  BarChart3,
+  Rocket,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  DollarSign,
+  Clock,
+  Award,
+  Target,
+  Workflow,
+  Lightbulb,
+  Zap,
+  Shield,
+  Eye,
+  Code,
+  GitFork,
+  MessageCircle,
+  Phone,
+  Mail,
+  MapPin'
+} from 'lucide-react';
+import { SEO } from '../../components/SEO';
+;
+export { function };
+export default function AIAutonomousResearchAssistant(...args: unknown[]): unknown {
+  const features = [
+    {
+
+      icon: Brain,
+      title: "Autonomous Research Discovery","
+      description: "AI that independently discovers, analyzes, and synthesizes research from multiple sources"
+    },
+    {
+
+      icon: Search,"
+      title: "Intelligent Literature Review","
+      description: "Automated systematic literature reviews with comprehensive coverage and analysis"
+    },
+    {
+
+      icon: FileText,"
+      title: "Research Paper Generation","
+      description: "AI-powered research paper writing with proper citations and academic standards"
+    },
+    {
+
+      icon: TrendingUp,"
+      title: "Trend Analysis & Prediction","
+      description: "Identify emerging research trends and predict future research directions"
+    },
+    {
+
+      icon: Database,"
+      title: "Multi-Source Data Integration","
+      description: "Seamlessly integrate data from academic databases, journals, and research repositories"
+    },
+    {
+
+      icon: Workflow,"
+      title: "Research Workflow Automation","
+      description: "Automate repetitive research tasks and streamline the research process"
+    }
+  ];
+
+  const pricingTiers = [
+    {
+"
+      name: "Research Starter","
+      price: "$299","
+      period: "monthly","
+      description: "Perfect for individual researchers and small research teams",
+      features: ["
+        "Up to 100 research queries per month","
+        "Basic literature review generation","
+        "Standard citation management","
+        "Email support","
+        "Basic research analytics","
+        "Access to major academic databases"
+      ],"
+      bestFor: "Individual researchers, graduate students, small research teams"
+    },
+    {
+"
+      name: "Research Professional","
+      price: "$799","
+      period: "monthly","
+      description: "Advanced features for growing research organizations",
+      features: ["
+        "Up to 1,000 research queries per month","
+        "Advanced literature review generation","
+        "Custom research workflows","
+        "Priority support","
+        "Advanced analytics and reporting","
+        "API access","
+        "Custom research templates","
+        "Collaborative research tools"
+      ],"
+      bestFor: "Research institutions, universities, corporate R&D teams"
+    },
+    {
+"
+      name: "Research Enterprise","
+      price: "$1,999","
+      period: "monthly","
+      description: "Full-scale research automation platform for large organizations",
+      features: ["
+        "Unlimited research queries","
+        "Custom research algorithm development","
+        "Advanced AI model training","
+        "24/7 dedicated support","
+        "Custom integrations","
+        "White-label solutions","
+        "On-premise deployment options","
+        "Research consulting services"
+      ],"
+      bestFor: "Large research institutions, government agencies, pharmaceutical companies"
+    }
+  ];
+
+  const useCases = [
+    {
+"
+      title: "Academic Research","
+      description: "Automated literature reviews, research gap analysis, and academic paper generation",
+      icon: BookOpen
+    },
+    {
+"
+      title: "Market Research","
+      description: "Competitive analysis, market trend identification, and industry insights",
+      icon: TrendingUp
+    },
+    {
+"
+      title: "Scientific Discovery","
+      description: "Cross-disciplinary research connections and hypothesis generation",
+      icon: Lightbulb
+    },
+    {
+"
+      title: "Patent Research","
+      description: "Patent landscape analysis and prior art research automation",
+      icon: Shield
+    },
+    {
+"
+      title: "Clinical Research","
+      description: "Medical literature analysis and clinical trial research automation",
+      icon: Eye
+    },
+    {
+"
+      title: "Policy Research",
+  Sparkles,
+  Eye,
+  Workflow,
+  Database,
+  Network,
+  Smartphone,
+  Server,
+  Chip,
+  Wifi,
+  ShieldCheck,
+  Bot,
+  Workflow as WorkflowIcon,;
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   Eye as EyeIcon,;
   Sparkles as SparklesIcon,;
   Zap as ZapIcon,;
@@ -35,7 +214,7 @@ export default function AIAutonomousResearchAssistant(...args: unknown[]): unkno
   const [isVisible, setIsVisible] = useState<typeof false>(false);
 
 export default function AIAutonomousResearchAssistant() {
-'
+
   const [activeTab, setActiveTab] = useState('overview');
   const [isVisible, setIsVisible] = useState(false);
 
@@ -52,7 +231,7 @@ export default function AIAutonomousResearchAssistant() {
     "Trend prediction algorithms","
     "Natural language output","
     "API integration capabilities","
-    "Custom research templates""
+    "Custom research templates"
       description: "Government policy analysis and regulatory research automation",;
       icon: Globe;
     }
@@ -148,9 +327,16 @@ export default function AIAutonomousResearchAssistant() {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <SEO "
+<<<<<<< HEAD
+        title="AI Autonomous Research Assistant - Zion Tech Group"
+        description="Revolutionary AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously."
+        keywords="AI research assistant, research automation, literature review, academic research, research AI, autonomous research"
+      />
+=======
         title="AI Autonomous Research Assistant - Zion Tech Group""
         description="Revolutionary AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously.""        keywords="AI research assistant, research automation, literature review, academic research, research AI, autonomous research"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
@@ -166,7 +352,7 @@ export default function AIAutonomousResearchAssistant() {
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
               AI Autonomous Research Assistant
             </h1>"
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">'
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               The world's first fully autonomous AI research platform that conducts comprehensive research, 
               analyzes data, and generates insights across multiple domains without human intervention.
             </p>
@@ -190,13 +376,13 @@ export default function AIAutonomousResearchAssistant() {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <a"
-              href="/contact""
+              href="/contact"
               className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
             >
               Start Researching"
               <ArrowRight className="ml-2 w-5 h-5" />            </a>
             <a"
-              href="#demo""
+              href="#demo"
               className="inline-flex items-center px-8 py-4 border border-blue-500 text-blue-300 hover:bg-blue-500/20 font-semibold rounded-lg transition-colors"
             >
               Request Demo
@@ -337,7 +523,7 @@ export default function AIAutonomousResearchAssistant() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
-'
+
                   index === 1 ? 'border-blue-500/50 bg-blue-500/10' : 'border-white/10'`
                 } hover:border-blue-500/50 transition-all`}
               >
@@ -456,8 +642,8 @@ export default function AIAutonomousResearchAssistant() {
                   <CheckCircle className="w-5 h-5 text-blue-400" />
                 </div>"                <p className="text-lg text-gray-300">{benefit}</p>
               </motion.div>"
-          <div className="flex flex-wrap justify-center gap-2 mb-8">'
-            {['overview', 'features', 'pricing', 'technical', 'contact'].map((tab) => (
+          <div className="flex flex-wrap justify-center gap-2 mb-8">
+            {['overview',features',pricing',technical',contact'].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}`
@@ -478,7 +664,7 @@ export default function AIAutonomousResearchAssistant() {
       {/* Content Sections */}"
       <section className="relative py-12 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">"
-          <AnimatePresence mode="wait">'
+          <AnimatePresence mode="wait">
             {activeTab === 'overview' && (
               <motion.div"
                 key="overview"
@@ -542,7 +728,7 @@ export default function AIAutonomousResearchAssistant() {
                 </div>
               </motion.div>
             )}
-'
+
             {activeTab === 'features' && (
               <motion.div"
                 key="features"
@@ -581,7 +767,7 @@ export default function AIAutonomousResearchAssistant() {
                 </div>
               </motion.div>
             )}
-'
+
             {activeTab === 'pricing' && (
               <motion.div"
                 key="pricing"
@@ -675,7 +861,7 @@ export default function AIAutonomousResearchAssistant() {
                 </div>
               </motion.div>
             )}
-'
+
             {activeTab === 'technical' && (
               <motion.div"
                 key="technical"
@@ -760,7 +946,7 @@ export default function AIAutonomousResearchAssistant() {
                 </div>
               </motion.div>
             )}
-'
+
             {activeTab === 'contact' && (
               <motion.div"
                 key="contact"
@@ -841,13 +1027,13 @@ export default function AIAutonomousResearchAssistant() {
               <Phone className="h-8 w-8 text-blue-400 mb-4" />"
               <h3 className="text-lg font-semibold mb-2">Phone</h3>"              <p className="text-gray-300">+1 302 464 0950</p>
               <a"
-                href="/contact""
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
               >
                 Start Researching with AI"
                 <ArrowRight className="ml-2 w-5 h-5" />              </a>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border border-blue-500 text-blue-300 hover:bg-blue-500/20 font-semibold rounded-lg transition-colors"
               >"
                 <Phone className="mr-2 w-5 h-5" />

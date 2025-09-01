@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
 
@@ -7,39 +7,39 @@ import {
   Search,
   Users,
   Brain,
-  Shield,'
+  Shield,
   Zap} from 'lucide-react';
 const NotFoundPage = () => {
   const popularServices = [
     {
-'
-      name: 'AI Solutions','
+
+      name: 'AI Solutions',
       path: '/ai-solutions',
-      icon: Brain,'
+      icon: Brain,
       description: 'Transform your business with AI'},
     {
-'
-      name: 'Cybersecurity','
+
+      name: 'Cybersecurity',
       path: '/services/cybersecurity',
-      icon: Shield,'
+      icon: Shield,
       description: 'Protect your digital assets'},
     {
-'
-      name: 'Cloud & DevOps','
+
+      name: 'Cloud & DevOps',
       path: '/cloud-devops',
-      icon: Zap,'
+      icon: Zap,
       description: 'Scale your infrastructure'},
     {
-'
-      name: 'Enterprise Solutions','
+
+      name: 'Enterprise Solutions',
       path: '/enterprise-solutions',
-      icon: Users,'
+      icon: Users,
       description: 'Enterprise-grade technology'},
   ];
   const quickLinks = ['
-    { name: 'Home', path: '/', icon: Home },'
-    { name: 'Services', path: '/services', icon: Search },'
-    { name: 'About Us', path: '/about', icon: Users },'
+    { name: 'Home', path: '/', icon: Home },
+    { name: 'Services', path: '/services', icon: Search },
+    { name: 'About Us', path: '/about', icon: Users },
     { name: 'Contact', path: '/contact', icon: Users },
   ];
   return()
@@ -53,7 +53,7 @@ const NotFoundPage = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Page Not Found
           </h2>"
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">'
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             The page you're looking for doesn't exist or has been moved. Let us
             help you find what you need.
           </p>
@@ -103,7 +103,7 @@ const NotFoundPage = () => {
         {/* Call to Action */}"
         <div className="mb-8">
           <Link"
-            to="/""
+            to="/"
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
           >"
             <ArrowLeft className="w-5 h-5 mr-2" />
@@ -114,18 +114,18 @@ const NotFoundPage = () => {
         {/* Help Section */}"
         <div className="bg-gray-800/30 rounded-lg p-6 border border-gray-700">"
           <h3 className="text-lg font-semibold text-white mb-3">Need Help?</h3>"
-          <p className="text-gray-300 mb-4">'
+          <p className="text-gray-300 mb-4">
             Can't find what you're looking for? Our team is here to help.
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
+              to="/contact"
               className="px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors"
             >
               Contact Support
             </Link>
             <Link"
-              to="/help""
+              to="/help"
               className="px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-medium rounded-lg transition-colors"
             >
               Help Center
@@ -135,10 +135,10 @@ const NotFoundPage = () => {
 
         {/* Search Suggestion */}"
         <div className="mt-8 text-gray-400">"
-          <p className="text-sm">'
+          <p className="text-sm">
             Try searching for what you need or browse our{' '}
             <Link"
-              to="/services""
+              to="/services"
               className="text-cyan-400 hover:text-cyan-300 underline"
             >
               services directory

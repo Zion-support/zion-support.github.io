@@ -8,7 +8,7 @@ class AutomationDashboard {
     this.automationSystems = new Map();
     this.metrics = new Map();
     this.alerts = [];
-    this.logFile = path.join(__dirname, 'logs', 'automation-dashboard.log');
+    this.logFile = path.join(__dirname,logs',automation-dashboard.log');
     this.ensureLogDirectory();
     this.loadAutomationSystems();
     this.startMetricsCollection();

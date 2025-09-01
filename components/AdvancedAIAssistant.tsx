@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -41,15 +41,15 @@ import {
   AlertCircle,
   Clock,
   Users,
-  TrendingUp,'
+  TrendingUp,
   DollarSign} from 'lucide-react';
 
 interface AIConversation {
-  id: string;'
+  id: string;
   type: 'chat' | 'task' | 'analysis' | 'recommendation';
   title: string;
-  description: string;'
-  status: 'active' | 'completed' | 'archived';'
+  description: string;
+  status: 'active' | 'completed' | 'archived';
   priority: 'low' | 'medium' | 'high' | 'critical';
   createdAt: string;
   lastUpdated: string;
@@ -60,7 +60,7 @@ interface AIConversation {
 }
 
 interface AIMessage {
-  id: string;'
+  id: string;
   type: 'user' | 'assistant' | 'system';
   content: string;
   timestamp: string;
@@ -73,8 +73,8 @@ interface AIInsight {
 
   id: string;
   title: string;
-  description: string;'
-  type: 'positive' | 'warning' | 'critical' | 'info';'
+  description: string;
+  type: 'positive' | 'warning' | 'critical' | 'info';
   impact: 'high' | 'medium' | 'low';
   confidence: number;
   data: Record<string, string | number | boolean>;
@@ -86,8 +86,8 @@ interface AIAction {
 
   id: string;
   name: string;
-  description: string;'
-  type: 'automation' | 'recommendation' | 'alert' | 'optimization';'
+  description: string;
+  type: 'automation' | 'recommendation' | 'alert' | 'optimization';
   status: 'pending' | 'executing' | 'completed' | 'failed';
   priority: number;
   estimatedTime: number;
@@ -100,7 +100,7 @@ interface AIFeature {
   id: string;
   name: string;
   description: string;
-  icon: React.ReactNode;'
+  icon: React.ReactNode;
   status: 'active' | 'beta' | 'coming-soon';
   usage: number;
   accuracy: number;
@@ -109,184 +109,180 @@ interface AIFeature {
 ;
 const aiConversations: AIConversation[] = [
   {
-'
-    id: '1','
-    type: 'chat','
+
+    id: '1',
+    type: 'chat',
     title: 'Project Optimization Analysis',
     description:'
-      'AI-powered analysis of project performance and optimization recommendations','
-    status: 'active','
-    priority: 'high','
-    createdAt: '2025-01-27 10:00','
+      'AI-powered analysis of project performance and optimization recommendations',
+    status: 'active',
+    priority: 'high',
+    createdAt: '2025-01-27 10:00',
     lastUpdated: '2025-01-27 15:30',
     messages: [
       {
-'
-        id: '1','
+
+        id: '1',
         type: 'user',
         content:'
-          'Analyze our current project portfolio and identify optimization opportunities','
+          'Analyze our current project portfolio and identify optimization opportunities',
         timestamp: '2025-01-27 10:00'},
       {
-'
-        id: '2','
+
+        id: '2',
         type: 'assistant',
         content:'
-          "I've analyzed your project portfolio and identified several optimization opportunities. Based on the data, I recommend focusing on resource allocation optimization and timeline compression for the E-commerce Platform project.",'
+          "I've analyzed your project portfolio and identified several optimization opportunities. Based on the data, I recommend focusing on resource allocation optimization and timeline compression for the E-commerce Platform project.",
         timestamp: '2025-01-27 10:02',
         confidence: 0.94,
         suggestions: ['
-          'Optimize team allocation','
-          'Compress timeline by 15%','
-          'Implement automated testing',
+          'Optimize team allocation',Compress timeline by 15%',Implement automated testing',
         ]},
       {
-'
-        id: '3','
+
+        id: '3',
         type: 'user',
         content:'
-          'What specific actions should we take for the E-commerce project?','
+          'What specific actions should we take for the E-commerce project?',
         timestamp: '2025-01-27 15:30'},
     ],
     insights: [
       {
-'
-        id: '1','
+
+        id: '1',
         title: 'Resource Utilization Optimization',
         description:'
-          'Current resource utilization is at 78%, with potential to increase to 92% through better allocation','
-        type: 'positive','
+          'Current resource utilization is at 78%, with potential to increase to 92% through better allocation',
+        type: 'positive',
         impact: 'high',
         confidence: 0.91,
-        data: { current: 78, potential: 92, improvement: 14 },'
+        data: { current: 78, potential: 92, improvement: 14 },
         createdAt: '2025-01-27 10:05'},
     ],
     actions: [
       {
-'
-        id: '1','
+
+        id: '1',
         name: 'Resource Reallocation',
         description:'
-          'Automatically redistribute team members based on project priorities and skills','
-        type: 'automation','
+          'Automatically redistribute team members based on project priorities and skills',
+        type: 'automation',
         status: 'pending',
         priority: 1,
-        estimatedTime: 30,'
+        estimatedTime: 30,
         createdAt: '2025-01-27 10:10'},
     ]},
   {
-'
-    id: '2','
-    type: 'task','
+
+    id: '2',
+    type: 'task',
     title: 'Client Communication Automation',
     description:'
-      'Intelligent automation of client communication and status updates','
-    status: 'active','
-    priority: 'medium','
-    createdAt: '2025-01-27 09:00','
+      'Intelligent automation of client communication and status updates',
+    status: 'active',
+    priority: 'medium',
+    createdAt: '2025-01-27 09:00',
     lastUpdated: '2025-01-27 14:00',
     messages: [
       {
-'
-        id: '1','
-        type: 'user','
-        content: 'Set up automated client communication for project milestones','
+
+        id: '1',
+        type: 'user',
+        content: 'Set up automated client communication for project milestones',
         timestamp: '2025-01-27 09:00'},
       {
-'
-        id: '2','
+
+        id: '2',
         type: 'assistant',
         content:'"
-          "I've configured automated client communication for all active projects. The system will now send personalized updates when milestones are reached, with smart timing based on client preferences.",'
+          "I've configured automated client communication for all active projects. The system will now send personalized updates when milestones are reached, with smart timing based on client preferences.",
         timestamp: '2025-01-27 09:05',
         confidence: 0.97,
         suggestions: ['
-          'Customize message templates','
-          'Set up escalation rules','
-          'Configure delivery preferences',
+          'Customize message templates',Set up escalation rules',Configure delivery preferences',
         ]},
     ],
     insights: [
       {
-'
-        id: '1','
+
+        id: '1',
         title: 'Communication Efficiency',
         description:'
-          'Automated communication reduces manual effort by 65% while improving client satisfaction','
-        type: 'positive','
+          'Automated communication reduces manual effort by 65% while improving client satisfaction',
+        type: 'positive',
         impact: 'medium',
         confidence: 0.89,
-        data: { effortReduction: 65, satisfactionImprovement: 23 },'
+        data: { effortReduction: 65, satisfactionImprovement: 23 },
         createdAt: '2025-01-27 09:10'},
     ],
     actions: [
       {
-'
-        id: '1','
+
+        id: '1',
         name: 'Template Customization',
         description:'
-          'Create personalized communication templates for each client','
-        type: 'automation','
+          'Create personalized communication templates for each client',
+        type: 'automation',
         status: 'executing',
         priority: 2,
-        estimatedTime: 45,'
+        estimatedTime: 45,
         createdAt: '2025-01-27 09:15'},
     ]},
 ];
 ;
 const aiFeatures: AIFeature[] = [
   {
-'
-    id: '1','
-    name: 'Natural Language Processing','
+
+    id: '1',
+    name: 'Natural Language Processing',
     description: 'Advanced NLP for understanding complex queries and context',"
-    icon: <Brain className="w-6 h-6" />,'
+    icon: <Brain className="w-6 h-6" />,
     status: 'active',
     usage: 95,
     accuracy: 94},
   {
-'
-    id: '2','
+
+    id: '2',
     name: 'Predictive Analytics',
     description:'
       'AI-powered predictions for project outcomes and resource needs',"
-    icon: <TrendingUp className="w-6 h-6" />,'
+    icon: <TrendingUp className="w-6 h-6" />,
     status: 'active',
     usage: 87,
     accuracy: 89},
   {
-'
-    id: '3','
-    name: 'Intelligent Automation','
+
+    id: '3',
+    name: 'Intelligent Automation',
     description: 'Smart automation of repetitive tasks and workflows',"
-    icon: <Zap className="w-6 h-6" />,'
+    icon: <Zap className="w-6 h-6" />,
     status: 'active',
     usage: 92,
     accuracy: 91},
   {
-'
-    id: '4','
-    name: 'Sentiment Analysis','
+
+    id: '4',
+    name: 'Sentiment Analysis',
     description: 'Real-time analysis of client and team sentiment',"
-    icon: <MessageCircle className="w-6 h-6" />,'
+    icon: <MessageCircle className="w-6 h-6" />,
     status: 'beta',
     usage: 73,
     accuracy: 87},
   {
-'
-    id: '5','
-    name: 'Resource Optimization','
+
+    id: '5',
+    name: 'Resource Optimization',
     description: 'AI-driven resource allocation and optimization',"
-    icon: <Users className="w-6 h-6" />,'
+    icon: <Users className="w-6 h-6" />,
     status: 'active',
     usage: 89,
     accuracy: 93},
   {
-'
-    id: '6','
-    name: 'Risk Assessment','
+
+    id: '6',
+    name: 'Risk Assessment',
     description: 'Intelligent risk identification and mitigation strategies',"
-    icon: <Shield className="w-6 h-6" />,'
+    icon: <Shield className="w-6 h-6" />,
     status: 'beta',
     usage: 68,
     accuracy: 85},
@@ -294,69 +290,69 @@ const aiFeatures: AIFeature[] = [
 ;
 const aiInsights: AIInsight[] = [
   {
-'
-    id: '1','
+
+    id: '1',
     title: 'Project Timeline Optimization',
     description:'
-      'AI analysis suggests 15% timeline compression is possible for the E-commerce project through parallel development and resource optimization.','
-    type: 'positive','
+      'AI analysis suggests 15% timeline compression is possible for the E-commerce project through parallel development and resource optimization.',
+    type: 'positive',
     impact: 'high',
-    confidence: 0.91,'
-    data: { compression: 15, savings: '2 weeks', risk: 'low' },'
+    confidence: 0.91,
+    data: { compression: 15, savings: '2 weeks', risk: 'low' },
     createdAt: '2025-01-27 16:00'},
   {
-'
-    id: '2','
+
+    id: '2',
     title: 'Resource Allocation Warning',
     description:'
-      'Current resource allocation shows 23% underutilization in the Mobile App project, indicating potential efficiency improvements.','
-    type: 'warning','
+      'Current resource allocation shows 23% underutilization in the Mobile App project, indicating potential efficiency improvements.',
+    type: 'warning',
     impact: 'medium',
     confidence: 0.87,
     data: {
 
-      underutilization: 23,'
-      potentialSavings: '$8,500','
-      timeframe: '2 weeks'},'
+      underutilization: 23,
+      potentialSavings: '$8,500',
+      timeframe: '2 weeks'},
     createdAt: '2025-01-27 15:45'},
   {
-'
-    id: '3','
+
+    id: '3',
     title: 'Client Satisfaction Trend',
     description:'
-      'Client satisfaction scores have increased by 12% over the last quarter, with AI-powered communication contributing to 8% of this improvement.','
-    type: 'positive','
+      'Client satisfaction scores have increased by 12% over the last quarter, with AI-powered communication contributing to 8% of this improvement.',
+    type: 'positive',
     impact: 'high',
-    confidence: 0.94,'
-    data: { improvement: 12, aiContribution: 8, trend: 'positive' },'
+    confidence: 0.94,
+    data: { improvement: 12, aiContribution: 8, trend: 'positive' },
     createdAt: '2025-01-27 15:30'},
 ];
 ;
 const statusColors = {
-'
-  active: 'from-green-500 to-emerald-500','
-  completed: 'from-blue-500 to-cyan-500','
+
+  active: 'from-green-500 to-emerald-500',
+  completed: 'from-blue-500 to-cyan-500',
   archived: 'from-gray-500 to-gray-600'};
 
 const priorityColors = {
-'
-  low: 'bg-gray-500','
-  medium: 'bg-yellow-500','
-  high: 'bg-orange-500','
+
+  low: 'bg-gray-500',
+  medium: 'bg-yellow-500',
+  high: 'bg-orange-500',
   critical: 'bg-red-500'};
 
 const insightTypeColors = {
-'
-  positive: 'from-green-500 to-emerald-500','
-  warning: 'from-yellow-500 to-orange-500','
-  critical: 'from-red-500 to-pink-500','
+
+  positive: 'from-green-500 to-emerald-500',
+  warning: 'from-yellow-500 to-orange-500',
+  critical: 'from-red-500 to-pink-500',
   info: 'from-blue-500 to-cyan-500'};
 
 const actionStatusColors = {
-'
-  pending: 'from-gray-500 to-gray-600','
-  executing: 'from-yellow-500 to-orange-500','
-  completed: 'from-green-500 to-emerald-500','
+
+  pending: 'from-gray-500 to-gray-600',
+  executing: 'from-yellow-500 to-orange-500',
+  completed: 'from-green-500 to-emerald-500',
   failed: 'from-red-500 to-pink-500'};
 
 const AdvancedAIAssistant: React.FC = () => {
@@ -364,8 +360,8 @@ const AdvancedAIAssistant: React.FC = () => {
     'overview' | 'conversations' | 'insights' | 'features''
   >('overview');
   const [selectedConversation, setSelectedConversation] =
-    useState<AIConversation | null>(null);'
-  const [searchQuery, setSearchQuery] = useState('');'
+    useState<AIConversation | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
   const [selectedFilter, setSelectedFilter] = useState<string>('all');
 
   const filteredConversations = aiConversations.filter(conversation => {
@@ -392,11 +388,11 @@ const AdvancedAIAssistant: React.FC = () => {
   const getStatusIcon = (status: string) => {
 
     switch (status) {
-'
+
       case 'active':"
-        return <CheckCircle className="w-4 h-4 text-green-400" />;'
+        return <CheckCircle className="w-4 h-4 text-green-400" />;
       case 'completed':"
-        return <CheckCircle className="w-4 h-4 text-blue-400" />;'
+        return <CheckCircle className="w-4 h-4 text-blue-400" />;
       case 'archived':"
         return <Clock className="w-4 h-4 text-gray-400" />;
       default:"
@@ -407,11 +403,11 @@ const AdvancedAIAssistant: React.FC = () => {
   const getInsightIcon = (type: string) => {
 
     switch (type) {
-'
+
       case 'positive':"
-        return <CheckCircle className="w-6 h-6 text-white" />;'
+        return <CheckCircle className="w-6 h-6 text-white" />;
       case 'warning':"
-        return <AlertCircle className="w-6 h-6 text-white" />;'
+        return <AlertCircle className="w-6 h-6 text-white" />;
       case 'critical':"
         return <AlertCircle className="w-6 h-6 text-white" />;
       default:"
@@ -439,7 +435,7 @@ const AdvancedAIAssistant: React.FC = () => {
       opacity: 1,
       transition: {
 
-        duration: 0.6,'
+        duration: 0.6,
         ease: 'easeOut' as const}}};
 
   return ("
@@ -537,8 +533,8 @@ const AdvancedAIAssistant: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}"
           className="flex items-center gap-1 mb-8 bg-gray-800/50 rounded-lg p-1 max-w-lg mx-auto"
-        >'
-          {(['overview', 'conversations', 'insights', 'features'] as const).map()
+        >
+          {(['overview',conversations',insights',features'] as const).map()
             view => (
               <button
                 key={view}
@@ -550,13 +546,13 @@ const AdvancedAIAssistant: React.FC = () => {
                     : 'text-gray-300 hover:text-white hover:bg-white/10'`
                 }`}
               >'"
-                {view === 'overview' && <Bot className="w-4 h-4 inline mr-2" />}'
+                {view === 'overview' && <Bot className="w-4 h-4 inline mr-2" />}
                 {view === 'conversations' && ("
                   <MessageCircle className="w-4 h-4 inline mr-2" />
-                )}'
+                )}
                 {view === 'insights' && ("
                   <Lightbulb className="w-4 h-4 inline mr-2" />
-                )}'
+                )}
                 {view === 'features' && ("
                   <Sparkles className="w-4 h-4 inline mr-2" />
                 )}
@@ -578,14 +574,14 @@ const AdvancedAIAssistant: React.FC = () => {
             <div className="relative">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input"
-                type="text""
+                type="text"
                 placeholder="Search conversations, insights, or features..."
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}"
                 className="pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all duration-300"
               />
             </div>
-'
+
             {selectedView === 'conversations' && (
               <select
                 value={selectedFilter}
@@ -623,7 +619,7 @@ const AdvancedAIAssistant: React.FC = () => {
         </motion.div>
 
         {/* Content */}
-        <AnimatePresence>'
+        <AnimatePresence>
           {selectedView === 'overview' && (
             <motion.div"
               key="overview"
@@ -634,7 +630,7 @@ const AdvancedAIAssistant: React.FC = () => {
             >
               <motion.div
                 variants={containerVariants}"
-                initial="hidden""
+                initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}"
                 className="grid grid-cols-1 lg:grid-cols-2 gap-8"
@@ -669,13 +665,13 @@ const AdvancedAIAssistant: React.FC = () => {
                             {feature.description}
                           </p>"
                           <div className="flex items-center gap-4 text-sm">"
-                            <span className="text-gray-400">'
+                            <span className="text-gray-400">
                               Usage:{' '}"
                               <span className="text-white">
                                 {feature.usage}%
                               </span>
                             </span>"
-                            <span className="text-gray-400">'
+                            <span className="text-gray-400">
                               Accuracy:{' '}"
                               <span className="text-white">
                                 {feature.accuracy}%
@@ -720,7 +716,7 @@ const AdvancedAIAssistant: React.FC = () => {
                             {insight.description}
                           </p>"
                           <div className="flex items-center justify-between text-sm">"
-                            <span className="text-gray-400">'
+                            <span className="text-gray-400">
                               Confidence:{' '}"
                               <span className="text-white">
                                 {(insight.confidence * 100).toFixed(0)}%
@@ -738,7 +734,7 @@ const AdvancedAIAssistant: React.FC = () => {
               </motion.div>
             </motion.div>
           )}
-'
+
           {selectedView === 'insights' && (
             <motion.div"
               key="insights"
@@ -749,7 +745,7 @@ const AdvancedAIAssistant: React.FC = () => {
             >
               <motion.div
                 variants={containerVariants}"
-                initial="hidden""
+                initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}"
                 className="space-y-6"
@@ -794,8 +790,8 @@ const AdvancedAIAssistant: React.FC = () => {
                             {Object.entries(insight.data).map()
                               ([key, value]) => (
                                 <div key={key}>"
-                                  <div className="text-gray-400 text-xs capitalize">'
-                                    {key.replace(/([A-Z])/g, ' $1')}
+                                  <div className="text-gray-400 text-xs capitalize">
+                                    {key.replace(/([A-Z])/g, $1')}
                                   </div>"
                                   <div className="text-white font-medium">
                                     {String(value)}
@@ -836,7 +832,7 @@ const AdvancedAIAssistant: React.FC = () => {
               decision-making.
             </p>
             <motion.a"
-              href="/contact""
+              href="/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-500/50"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

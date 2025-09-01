@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud const CybersecurityServices = () => {
     const securityServices = [
@@ -242,7 +242,7 @@ import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud const
           <h2 className="text-4xl font-bold mb-6">
             Ready to Secure Your Business?
           </h2>"
-          <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">'
+          <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
             Don't wait for a security breach. Let's discuss how our cybersecurity
             services can protect your organization.
           </p>"

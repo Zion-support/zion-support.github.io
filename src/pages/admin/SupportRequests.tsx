@@ -135,8 +135,8 @@ export default function SupportRequests() {
     return true});
 
   // Count by status for the summary dashboard'
-  const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;'
-  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;'
+  const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
+  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
   const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
   const totalCount = MOCK_SUPPORT_REQUESTS.length;
 
@@ -148,7 +148,7 @@ export default function SupportRequests() {
 
   return()
       <SEO"
-        title="Support Requests | Admin Dashboard""
+        title="Support Requests | Admin Dashboard"
         description="Manage and track user support requests and issues"
       />"
       <div className="container mx-auto px-4 py-8">"        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
@@ -284,7 +284,7 @@ export default function SupportRequests() {
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>
                         <TableCell>
                           <Badge variant={
-'
+
                             request.status === 'open''
                               ? 'default''
                               : request.status === 'in-progress''
@@ -296,7 +296,7 @@ export default function SupportRequests() {
                         </TableCell>
                         <TableCell>
                           <Badge variant={
-'
+
                             request.priority === 'high''
                               ? 'destructive''
                               : request.priority === 'medium''

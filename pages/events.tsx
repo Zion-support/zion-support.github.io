@@ -9,50 +9,50 @@ export default function Events(...args[]):  {
 	const upcomingEvents = [
 		{
 
-			id: 1,'
-			title: 'AI in Enterprise: A Practical Guide','
-			date: '2025-02-15','
-			time: '10:00 AM - 12:00 PM PST','
+			id: 1,
+			title: 'AI in Enterprise: A Practical Guide',
+			date: '2025-02-15',
+			time: '10:00 AM - 12:00 PM PST',
 			location: 'Virtual Event',
-			attendees: 150,'
-			type: 'Webinar','
-			description: 'Learn how to implement AI solutions in your enterprise environment with real-world case studies and best practices.','
+			attendees: 150,
+			type: 'Webinar',
+			description: 'Learn how to implement AI solutions in your enterprise environment with real-world case studies and best practices.',
 			speaker: 'Dr. Sarah Chen, AI Solutions Architect'
 		},
 		{
 
-			id: 2,'
-			title: 'Cloud Security Summit 2025','
-			date: '2025-02-22','
-			time: '9:00 AM - 5:00 PM PST','
+			id: 2,
+			title: 'Cloud Security Summit 2025',
+			date: '2025-02-22',
+			time: '9:00 AM - 5:00 PM PST',
 			location: 'San Francisco, CA',
-			attendees: 300,'
-			type: 'Conference','
-			description: 'Join industry experts for a comprehensive look at the latest cloud security threats and defense strategies.','
+			attendees: 300,
+			type: 'Conference',
+			description: 'Join industry experts for a comprehensive look at the latest cloud security threats and defense strategies.',
 			speaker: 'Alex Thompson, Chief Security Officer'
 		},
 		{
 
-			id: 3,'
-			title: 'Micro SaaS Workshop','
-			date: '2025-03-01','
-			time: '2:00 PM - 4:00 PM PST','
+			id: 3,
+			title: 'Micro SaaS Workshop',
+			date: '2025-03-01',
+			time: '2:00 PM - 4:00 PM PST',
 			location: 'Virtual Event',
-			attendees: 75,'
-			type: 'Workshop','
-			description: 'Hands-on workshop on building and scaling micro SaaS solutions for modern businesses.','
+			attendees: 75,
+			type: 'Workshop',
+			description: 'Hands-on workshop on building and scaling micro SaaS solutions for modern businesses.',
 			speaker: 'Michael Rodriguez, SaaS Solutions Lead'
 		},
 		{
 
-			id: 4,'
-			title: 'Quantum Computing in Business','
-			date: '2025-03-08','
-			time: '11:00 AM - 1:00 PM PST','
+			id: 4,
+			title: 'Quantum Computing in Business',
+			date: '2025-03-08',
+			time: '11:00 AM - 1:00 PM PST',
 			location: 'Virtual Event',
-			attendees: 120,'
-			type: 'Webinar','
-			description: 'Explore the potential of quantum computing and how it will transform business operations.','
+			attendees: 120,
+			type: 'Webinar',
+			description: 'Explore the potential of quantum computing and how it will transform business operations.',
 			speaker: 'Dr. Emily Watson, Quantum Research Lead'
 
 	]
@@ -60,20 +60,20 @@ export default function Events(...args[]):  {
 	const pastEvents = [
 		{
 
-			id: 5,'
-			title: 'AI Automation Workshop','
+			id: 5,
+			title: 'AI Automation Workshop',
 			date: '2025-01-20',
 			recording: true,
-			attendees: 200,'
+			attendees: 200,
 			type: 'Workshop'
 		},
 		{
 
-			id: 6,'
-			title: 'Cloud Migration Strategies','
+			id: 6,
+			title: 'Cloud Migration Strategies',
 			date: '2025-01-15',
 			recording: true,
-			attendees: 180,'
+			attendees: 180,
 			type: 'Webinar'
 
 	]
@@ -248,7 +248,7 @@ export default function Events(...args[]):  {
 			{/* CTA */}"
 			<section className="py-24 sm:py-32 bg-gradient-to-r from-blue-600 to-purple-600">"
 				<div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">"
-					<h2 className="text-3xl font-bold tracking-tight text-white mb-6">'
+					<h2 className="text-3xl font-bold tracking-tight text-white mb-6">
 						Can't Make It to an Event?
 					</h2>"
 					<p className="text-xl text-blue-100 mb-8">
@@ -256,13 +256,13 @@ export default function Events(...args[]):  {
 					</p>"
 					<div className="flex items-center justify-center gap-x-6">
 						<Link"
-							to="/contact""
+							to="/contact"
 							className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-colors"
 
 							Schedule Consultation
 						</Link>
 						<Link"
-							to="/services""
+							to="/services"
 							className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
 "
 							View Services <span aria-hidden="true">→</span>

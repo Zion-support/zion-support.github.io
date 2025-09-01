@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { SEO } from '../../components/SEO';
 import {
 
@@ -6,14 +6,80 @@ import {
   BarChart3,
   Search,
   Zap,
+<<<<<<< HEAD
+  CheckCircle2,
+  Link as LinkIcon} from 'lucide-react.ts';
+
+export default function SEOAuditor(...args: any[]): any {
+
+  const features = [
+    {
+
+      icon: Search,
+      title: 'AI Crawl & Indexing',
+      desc: 'Automated site crawl, index status checks, and AI summaries of issues.'},
+    {
+
+      icon: BarChart3,
+      title: 'Page-level Scores',
+      desc: 'On-page SEO, Core Web Vitals, schema markup and accessibility scoring.'},
+    {
+
+      icon: LinkIcon,
+      title: 'Backlink Monitor',
+      desc: 'Backlink profile, toxic link detection, and anchor text analysis.'},
+    {
+
+      icon: Shield,
+      title: 'Security & Compliance',
+      desc: 'HTTPS, HSTS, mixed content, cookie, and privacy policy checks.'},
+    {
+
+      icon: Zap,
+      title: 'Quick Fixes',
+      desc: 'Auto-fix robots.txt, sitemap, meta tags, and structured data templates.'},
+  ];
+
+  const pricing = [
+    {
+
+      tier: 'Starter',
+      price: '$49/mo',
+      items: ['100 pages crawl',Weekly report',Basic fixes']},
+    {
+
+      tier: 'Growth',
+      price: '$149/mo',
+      items: ['2,500 pages crawl',Daily report',Auto-fix templates']},
+    {
+
+      tier: 'Pro',
+      price: '$399/mo',
+      items: ['25,000 pages',API access',Custom rules and alerts']},
+  ];
+
+  return()
+    <div className="min-h-screen bg-futuristic">
+      <SEO"
+        title="AI SEO Auditor - Zion Tech Group"
+        description="AI-powered SEO auditing with CWV, schema, accessibility, and backlink insights plus auto-fix templates."
+        canonical="https://ziontechgroup.com/services/ai-seo-auditor"
+      />
+"
+      <section className="relative pt-28 pb-16">"
+        <div className="container-responsive">"
+          <h1 className="heading-responsive text-gradient">AI SEO Auditor</h1>"
+          <p className="text-responsive text-zion-blue-light/80 max-w-2xl mt-4">
+=======
   CheckCircle2,'
   Link as LinkIcon} from 'lucide-react.ts';          <p className="text-responsive text-zion-blue-light/80 max-w-2xl mt-4">
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
             Ship faster with AI-driven audits, clear priorities, and one-click
             fixes.
           </p>"
           <div className="mt-8 flex gap-4">
             <a"
-              href="https://ziontechgroup.com/contact""
+              href="https://ziontechgroup.com/contact"
               className="btn-futuristic"
             >
               Request Demo

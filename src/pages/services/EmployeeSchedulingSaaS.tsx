@@ -1,7 +1,7 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { Link  } from 'react-router-dom.ts';'
-import { Calendar, Users, Clock, CheckCircle, Shield, Zap, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen  } from 'lucide-react';'
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Calendar, Users, Clock, CheckCircle, Shield, Zap, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen  } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
 ;
 export { function };
@@ -202,8 +202,8 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
   return()
     <>
       <SEO "
-        title = "Employee Scheduling SaaS - Zion Tech Group""
-        description="Professional employee scheduling platform with AI-powered automation, time tracking, and comprehensive workforce management tools.""
+        title = "Employee Scheduling SaaS - Zion Tech Group"
+        description="Professional employee scheduling platform with AI-powered automation, time tracking, and comprehensive workforce management tools."
         canonical="/services/employee-scheduling-saas"
       />
 "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -248,13 +248,13 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                 </p>"
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link"
-                    to="/request-quote""
+                    to="/request-quote"
                     className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
 
                     Start Free Trial
                   </Link>
                   <Link"
-                    to="/contact""
+                    to="/contact"
                     className="px-8 py-4 border-2 border-orange-500 text-orange-400 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300"
 
                     Schedule Demo
@@ -649,13 +649,13 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link"
-                  to="/request-quote""
+                  to="/request-quote"
                   className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
 
                   Start Free Trial
                 </Link>
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="px-8 py-4 border-2 border-orange-500 text-orange-400 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300"
 
                   Contact Sales

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 interface AnalyticsData {
@@ -29,7 +29,7 @@ export default function AnalyticsDashboard() {
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(
     null
   );
-  const [isLoading, setIsLoading] = useState(true);'
+  const [isLoading, setIsLoading] = useState(true);
   const [timeRange, setTimeRange] = useState<'24h' | '7d' | '30d' | '90d'>('
     '7d'
   );
@@ -48,10 +48,10 @@ export default function AnalyticsDashboard() {
         bounceRate: 32.5,
         avgSessionDuration: 245,
         topPages: ['
-          { path: '/', views: 6540 },'
-          { path: '/about', views: 2340 },'
-          { path: '/contact', views: 1890 },'
-          { path: '/services', views: 1560 },'
+          { path: '/', views: 6540 },
+          { path: '/about', views: 2340 },
+          { path: '/contact', views: 1890 },
+          { path: '/services', views: 1560 },
           { path: '/technologies', views: 890 },
         ],
         performance: {
@@ -66,10 +66,9 @@ export default function AnalyticsDashboard() {
           deviceType: { mobile: 45, desktop: 48, tablet: 7 },
           browser: { Chrome: 65, Safari: 20, Firefox: 10, Edge: 5 },
           country: {
-'
+
             'United States': 60,
-            Canada: 15,'
-            'United Kingdom': 10,
+            Canada: 15,United Kingdom': 10,
             Germany: 8,
             Other: 7}}});
       setIsLoading(false);
@@ -77,7 +76,7 @@ export default function AnalyticsDashboard() {
 
     fetchAnalytics();
   }, [timeRange]);
-'
+
   const getPerformanceScore = (metrics: AnalyticsData['performance']) => {
 
     const scores = {
@@ -98,9 +97,9 @@ export default function AnalyticsDashboard() {
   };
 
   const getPerformanceColor = (score: number) => {
-'
-    if (score >= 90) return 'text-green-500';'
-    if (score >= 70) return 'text-yellow-500';'
+
+    if (score >= 90) return 'text-green-500';
+    if (score >= 70) return 'text-yellow-500';
     return 'text-red-500';
   };
 
@@ -189,7 +188,7 @@ export default function AnalyticsDashboard() {
 "
           <div className="bg-gray-800 rounded-lg p-6">"
             <h3 className="text-gray-400 text-sm mb-2">Avg Session Duration</h3>"
-            <p className="text-3xl font-bold">'
+            <p className="text-3xl font-bold">
               {Math.round(analyticsData.avgSessionDuration / 60)}m{' '}
               {analyticsData.avgSessionDuration % 60}s
             </p>"

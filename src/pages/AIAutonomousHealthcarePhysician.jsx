@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousHealthcarePhysician = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousHealthcarePhysician = () => {
       <Helmet>
         <title>AI Autonomous Healthcare Physician | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous healthcare physician that provides 24/7 medical consultation, diagnosis support, and health monitoring with advanced medical AI capabilities."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI healthcare, autonomous physician, AI diagnosis, medical AI, healthcare automation, AI medical consultation"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-healthcare-physician"
         />
       </Helmet>
@@ -184,14 +184,7 @@ const AIAutonomousHealthcarePhysician = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'General Medicine','
-                'Cardiology','
-                'Dermatology','
-                'Pediatrics','
-                'Mental Health','
-                'Nutrition','
-                'Emergency Care','
-                'Preventive Medicine',
+                'General Medicine',Cardiology',Dermatology',Pediatrics',Mental Health',Nutrition',Emergency Care',Preventive Medicine',
               ].map(specialty => (
                 <div
                   key={specialty}"

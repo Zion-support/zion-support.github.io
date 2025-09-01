@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { Link } from 'react-router-dom.ts';'
+import React from 'react.ts';
+import { Link } from 'react-router-dom.ts';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -7,16 +7,16 @@ import {
   ArrowLeft,
   Zap,
   Brain,
-  Shield,'
+  Shield,
   Cpu} from 'lucide-react.ts';
 
 export function NotFoundPage(...args: any[]): any {
 
   const popularPages = ['
-    { name: 'Home', href: '/', icon: Home },'
-    { name: 'Services', href: '/services', icon: Zap },'
-    { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain },'
-    { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },'
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'Services', href: '/services', icon: Zap },
+    { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain },
+    { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
     { name: 'Contact', href: '/contact', icon: Cpu },
   ];
 
@@ -37,7 +37,7 @@ export function NotFoundPage(...args: any[]): any {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Page Not Found
           </h1>"
-          <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">'
+          <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
             The page you're looking for doesn't exist or has been moved. Don't'
             worry, we're here to help you find what you need.
           </p>
@@ -47,8 +47,14 @@ export function NotFoundPage(...args: any[]): any {
             <div className="relative">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
               <input"
+<<<<<<< HEAD
+                type="text"
+                placeholder="Search our website..."
+                className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+=======
                 type="text""
                 placeholder="Search our website...""                className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               />
             </div>
           </div>
@@ -86,7 +92,7 @@ export function NotFoundPage(...args: any[]): any {
           {/* Action Buttons */}"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/""
+              to="/"
               className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
             >"
               <Home className="w-5 h-5" />              <span>Go Home</span>
@@ -104,18 +110,18 @@ export function NotFoundPage(...args: any[]): any {
           <div className="mt-16">"
             <div className="bg-gray-800 rounded-xl p-8 border border-gray-700">"
               <h3 className="text-2xl font-bold text-white mb-4">Need Help?</h3>"
-              <p className="text-gray-400 mb-6">'
+              <p className="text-gray-400 mb-6">
                 Can't find what you're looking for? Our team is here to help.
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="inline-flex items-center space-x-2 px-6 py-3 bg-cyan-500/20 text-cyan-400 rounded-lg hover:bg-cyan-500/30 transition-colors border border-cyan-500/30"
                 >
                   <span > Contact Support</span>
                 </Link>
                 <a"
-                  href="mailto:contact@ziontechgroup.com""
+                  href="mailto:contact@ziontechgroup.com"
                   className="inline-flex items-center space-x-2 px-6 py-3 bg-gray-700 text-gray-300 rounded-lg hover:bg-gray-600 transition-colors"
                 >
                   <span > Send Email</span>

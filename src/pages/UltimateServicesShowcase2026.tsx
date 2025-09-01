@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -43,161 +43,128 @@ import {
   Activity,
   Briefcase,
   Newspaper,
-  BookOpen,'
+  BookOpen,
   ExternalLink} from 'lucide-react.ts';
 
 export default function UltimateServicesShowcase2026(...args: any[]): any {
 
   const services = [
     {
-'
+
       category: 'AI & Machine Learning',
       icon: Brain,
       services: [
         {
-'
-          name: 'AI Workflow Orchestrator','
-          description: 'Intelligent process automation and workflow management','
+
+          name: 'AI Workflow Orchestrator',
+          description: 'Intelligent process automation and workflow management',
           href: '/services/ai-workflow-orchestrator',
           features: ['
-            'Process Automation','
-            'Workflow Optimization','
-            'AI Decision Making','
-            'Integration Hub',
+            'Process Automation',Workflow Optimization',AI Decision Making',Integration Hub',
           ]},
         {
-'
-          name: 'AI Data Governance Platform','
-          description: 'Comprehensive data management and compliance','
+
+          name: 'AI Data Governance Platform',
+          description: 'Comprehensive data management and compliance',
           href: '/services/ai-data-governance-platform',
           features: ['
-            'Data Quality','
-            'Compliance Management','
-            'Privacy Protection','
-            'Audit Trails',
+            'Data Quality',Compliance Management',Privacy Protection',Audit Trails',
           ]},
         {
-'
-          name: 'AI Customer Experience Analytics','
-          description: 'Deep insights into customer behavior and satisfaction','
+
+          name: 'AI Customer Experience Analytics',
+          description: 'Deep insights into customer behavior and satisfaction',
           href: '/services/ai-customer-experience-analytics',
           features: ['
-            'Behavior Analysis','
-            'Sentiment Analysis','
-            'Predictive Insights','
-            'Personalization',
+            'Behavior Analysis',Sentiment Analysis',Predictive Insights',Personalization',
           ]},
       ]},
     {
-'
+
       category: 'Cloud & Infrastructure',
       icon: Cloud,
       services: [
         {
-'
-          name: 'Cloud DevOps','
-          description: 'Streamlined development and operations','
+
+          name: 'Cloud DevOps',
+          description: 'Streamlined development and operations',
           href: '/services/cloud-devops',
           features: ['
-            'CI/CD Pipelines','
-            'Infrastructure as Code','
-            'Monitoring','
-            'Automation',
+            'CI/CD Pipelines',Infrastructure as Code',Monitoring',Automation',
           ]},
         {
-'
-          name: 'FinOps Advisor','
-          description: 'Cloud cost optimization and management','
+
+          name: 'FinOps Advisor',
+          description: 'Cloud cost optimization and management',
           href: '/services/finops-advisor',
           features: ['
-            'Cost Analysis','
-            'Resource Optimization','
-            'Budget Management','
-            'ROI Tracking',
+            'Cost Analysis',Resource Optimization',Budget Management',ROI Tracking',
           ]},
       ]},
     {
-'
+
       category: 'Cybersecurity',
       icon: Shield,
       services: [
         {
-'
-          name: 'AI Cybersecurity Platform','
-          description: 'AI-powered threat detection and response','
+
+          name: 'AI Cybersecurity Platform',
+          description: 'AI-powered threat detection and response',
           href: '/services/ai-cybersecurity-platform',
           features: ['
-            'Threat Detection','
-            'Automated Response','
-            'Risk Assessment','
-            'Compliance',
+            'Threat Detection',Automated Response',Risk Assessment',Compliance',
           ]},
         {
-'
-          name: 'Zero Trust Network Access','
-          description: 'Secure access control and network security','
+
+          name: 'Zero Trust Network Access',
+          description: 'Secure access control and network security',
           href: '/services/zero-trust-network-access',
           features: ['
-            'Identity Verification','
-            'Access Control','
-            'Network Segmentation','
-            'Monitoring',
+            'Identity Verification',Access Control',Network Segmentation',Monitoring',
           ]},
       ]},
     {
-'
+
       category: 'Emerging Technologies',
       icon: Atom,
       services: [
         {
-'
-          name: 'Quantum Computing Solutions','
-          description: 'Next-generation quantum computing services','
+
+          name: 'Quantum Computing Solutions',
+          description: 'Next-generation quantum computing services',
           href: '/services/quantum-computing',
           features: ['
-            'Quantum Algorithms','
-            'Optimization','
-            'Simulation','
-            'Research',
+            'Quantum Algorithms',Optimization',Simulation',Research',
           ]},
         {
-'
-          name: 'IoT Edge Computing','
-          description: 'Smart device networks and edge processing','
+
+          name: 'IoT Edge Computing',
+          description: 'Smart device networks and edge processing',
           href: '/services/iot-edge-computing',
           features: ['
-            'Device Management','
-            'Edge Processing','
-            'Real-time Analytics','
-            'Connectivity',
+            'Device Management',Edge Processing',Real-time Analytics',Connectivity',
           ]},
       ]},
     {
-'
+
       category: 'Micro SaaS Solutions',
       icon: ShoppingCart,
       services: [
         {
-'
-          name: 'Micro CRM','
-          description: 'Customer relationship management for small businesses','
+
+          name: 'Micro CRM',
+          description: 'Customer relationship management for small businesses',
           href: '/services/micro-crm',
           features: ['
-            'Contact Management','
-            'Sales Tracking','
-            'Customer Insights','
-            'Automation',
+            'Contact Management',Sales Tracking',Customer Insights',Automation',
           ]},
         {
-'
-          name: 'Website Analytics','
-          description: 'Privacy-first analytics for small businesses','
+
+          name: 'Website Analytics',
+          description: 'Privacy-first analytics for small businesses',
           href: '/services/website-analytics',
           features: ['
-            'Visitor Tracking','
-            'Performance Metrics','
-            'Privacy Compliance','
-            'Insights',
+            'Visitor Tracking',Performance Metrics',Privacy Compliance',Insights',
           ]},
       ]},
   ];

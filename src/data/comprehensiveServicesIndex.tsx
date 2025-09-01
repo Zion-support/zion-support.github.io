@@ -26,6 +26,9 @@ export
 :src/data/comprehensiveServicesIndex.tsx
 // Service Categories;
 export const SERVICE_CATEGORIES = [
+<<<<<<< HEAD
+  'AI & Analytics',AI & Customer Experience',AI & Supply Chain',AI & Legal Tech',AI & Healthcare',AI & Financial Services',AI & Content Marketing',Cybersecurity & AI',Cybersecurity & Quantum',Blockchain & Supply Chain',IoT & Edge Computing',Quantum Computing',AR/VR & Immersive Tech',5G & Telecommunications',Space Technology',;
+=======
   'AI & Analytics','
   'AI & Customer Experience','
   'AI & Supply Chain','
@@ -48,6 +51,7 @@ export const SERVICE_CATEGORIES = [
   'Sustainability & Energy',;'
 // Service Categories
 export 
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   'Neuromorphic Computing',;
   'Digital Twin & Simulation',;
   'Synthetic Biology',;
@@ -57,42 +61,57 @@ export
 ];
 
 // Innovation Levels
+<<<<<<< HEAD
+export const INNOVATION_LEVELS = [;
+=======
 :src/data/comprehensiveServicesIndex.tsx
 export const INNOVATION_LEVELS = [;'
   'Cutting-edge',;'
   'Advanced',;'
 export 
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   'Cutting-edge',;
   'Advanced',;
   'Professional';
 ];
 
 // Support Levels
+<<<<<<< HEAD
+export const SUPPORT_LEVELS = [;
+=======
 :src/data/comprehensiveServicesIndex.tsx
 export const SUPPORT_LEVELS = [;'
   'enterprise',;'
   'professional',;'
 export 
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   'enterprise',;
   'professional',;
   'basic';
 ];
 
 // Pricing Models
+<<<<<<< HEAD
+export const PRICING_MODELS = [;
+  'monthly',;
+  'annual',;
+  'one-time',;
+=======
 :src/data/comprehensiveServicesIndex.tsx
 export const PRICING_MODELS = [;'
   'monthly',;'
   'annual',;'
   'one-time',;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   'usage-based';
 ];
 
 // Contact Information;
 export const CONTACT_INFO = {
-'
-  phone: '+1 302 464 0950','
-  email: 'kleber@ziontechgroup.com','
-  website: 'https://ziontechgroup.com','
+
+  phone: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  website: 'https://ziontechgroup.com',
   address: '364 E Main St STE 1008,;
 export 
   'monthly',;
@@ -106,7 +125,7 @@ export
   ;
   ;
   ;
-  ;'
+  ;
   Middletown DE 19709';
 };
 

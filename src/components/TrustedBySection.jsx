@@ -1,11 +1,6 @@
 export function TrustedBySection() {
   const companies = [
-    'Microsoft','
-    'Google','
-    'Amazon','
-    'Meta','
-    'Apple','
-    'Netflix',
+    'Microsoft',Google',Amazon',Meta',Apple',Netflix',
   ];
   return()
     <section className="py-16 bg-white/5">"

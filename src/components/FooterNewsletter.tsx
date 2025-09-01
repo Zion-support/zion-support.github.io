@@ -1,12 +1,12 @@
-import React, { useState } from 'react.ts';'
+import React, { useState } from 'react.ts';
 import { Mail, Send, CheckCircle  } from 'lucide-react';
-'
+
       // // // // // // // // console.error('Newsletter subscription failed:', error);
     } finally {
       setIsSubmitting(false);
 
       setTimeout(() => setIsSubmitted(false), 3000)} catch (error) {
-'
+
       // console.error('Newsletter subscription failed:', error)} finally {
 
       setIsSubmitting(false)}
@@ -37,7 +37,7 @@ import { Mail, Send, CheckCircle  } from 'lucide-react';
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}"
-              placeholder="Enter your email address""
+              placeholder="Enter your email address"
               className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
               required
             />

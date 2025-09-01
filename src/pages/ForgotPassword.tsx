@@ -1,6 +1,167 @@
+<<<<<<< HEAD
+import React, { useState } from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Mail, 
+import { motion  } from 'framer - motion.ts';
+
+
+  ArrowLeft, 
+  CheckCircle, 
+  AlertCircle, 
+  Shield, 
+  Lock, 
+  Zap,
+  Brain,
+  Cloud,
+  Rocket,
+  ArrowRight,
+  RefreshCw'
+ } from 'lucide-react';
+
+      return}
+
+    setIsLoading(true);
+    setError('');
+
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000));
+
+      setSuccess('Verification code sent to your email!');
+      setStep('verification')} catch (err) {
+
+      setError('Failed to send verification code. Please try again.')} finally {
+
+      setIsLoading(false)}
+  };
+
+      return}
+
+    setIsLoading(true);
+    setError('');
+
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1500));
+
+      setSuccess('Code verified! Please set your new password.');
+      setStep('reset')} catch (err) {
+
+      setError('Invalid verification code. Please try again.')} finally {
+
+      setIsLoading(false)}
+  };
+
+      return}
+    if (newPassword !== confirmPassword) {
+
+      setError('Passwords do not match');
+      return}
+
+    setIsLoading(true);
+    setError('');
+
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000));
+
+      setSuccess('Password reset successfully! Redirecting to login...');
+      setTimeout(() => {
+
+        window.location.href = '/login'}, 2000)} catch (err) {
+
+      setError('Failed to reset password. Please try again.')} finally {;
+      setIsLoading(false)};
+  };
+
+      description: 'Enhanced security with verification codes';
+    },;
+    {;
+      icon: <RefreshCw className="w-6 h-6" />,;
+      title: 'Secure Reset Process',;
+      description: 'Time-limited verification codes for safety';
+    };
+  ];
+
+  const benefits = [
+    {
+"
+      icon: <Brain className="w-6 h-6" />,
+      title: 'AI-Powered Solutions',
+      description: 'Access cutting-edge AI and machine learning technologies'
+    },
+    {
+"
+      icon: <Cloud className="w-6 h-6" />,
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud solutions for your business needs';
+    },;
+    {;"
+      icon: <Rocket className="w-6 h-6" />,;
+      title: 'Digital Transformation',;
+      description: 'Transform your business with modern technology';
+    };
+  ];
+
+  const renderEmailStep = () => (<motion.div
+      initial = {
+
+  { opacity: 0,
+  y: 20 
+
+}}
+      animate = {
+
+  { opacity: 1,
+  y: 0 
+
+}}
+      transition={{ duration: 0.6 }}
+"
+      <div className="text-center mb-8">"
+        <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">"
+          <Lock className="w-10 h-10 text-white" />
+        </div>"
+        <h1 className="text-3xl font-bold text-white mb-4">
+          Forgot Your Password?
+        </h1>"
+        <p className="text-slate-300 text-lg">
+          No worries! Enter your email address and we'll send you a verification code to reset your password.
+        </p>
+      </div>
+"
+      <form onSubmit={handleEmailSubmit} className="space-y-6">
+        <div>"
+          <label className="block text-white font-medium mb-2">
+            Email Address
+          </label>"
+          <div className="relative">"
+            <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+            <input"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}"
+              className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              placeholder="Enter your email address"
+              required
+            />
+          </div>
+        </div>
+
+        <button"
+          type="submit"
+          disabled={isLoading}"
+          className="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
+
+          {isLoading ? (;
+            <>"
+              <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+=======
 import React, { useState } from 'react.ts';'
 import { Link  } from 'react-router-dom.ts';'
 import { motion  } from 'framer-motion.ts';              <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               Sending Code...
             </>
           ) : (
@@ -48,8 +209,8 @@ import { motion  } from 'framer-motion.ts';              <div className="animate
             type="text"
             value={verificationCode}
             onChange = {
-'
-  (e) => setVerificationCode(e.target.value.replace(/\D/g, '').slice(0,
+
+  (e) => setVerificationCode(e.target.value.replace(/\D/g,).slice(0,
   6))
 
 
@@ -58,7 +219,7 @@ import { motion  } from 'framer-motion.ts';              <div className="animate
 
 
 }"
-            className="w-full text-center text-2xl font-mono py-4 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent tracking-widest""
+            className="w-full text-center text-2xl font-mono py-4 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent tracking-widest"
             placeholder="000000"
             maxLength={6}
             required
@@ -99,7 +260,7 @@ import { motion  } from 'framer-motion.ts';              <div className="animate
             type="button"
             onClick={handleEmailSubmit}"
             className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors duration-200";
-          >;'
+          >;
             Didn't receive the code? Resend;
           </button>;
         </div>;
@@ -144,7 +305,7 @@ import { motion  } from 'framer-motion.ts';              <div className="animate
               type={showPassword ? 'text' : 'password'}
               value={newPassword}
               onChange={(e) => setNewPassword(e.target.value)}"
-              className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+              className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               placeholder="Enter new password"
               required
             />
@@ -152,7 +313,7 @@ import { motion  } from 'framer-motion.ts';              <div className="animate
               type="button"
               onClick={() => setShowPassword(!showPassword)}"
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
-'
+
               {showPassword ? 'Hide' : 'Show'}
             </button>
           </div>
@@ -167,8 +328,7 @@ import { motion  } from 'framer-motion.ts';              <div className="animate
   `h-1 flex-1 rounded-full transition-all duration-300 ${
 
                       level <= passwordStrength.score'
-                        ? passwordStrength.color.replace('text-','
-  'bg-')'
+                        ? passwordStrength.color.replace('text-',bg-')
                         : 'bg-slate-600/30'
                     
 
@@ -197,7 +357,7 @@ import { motion  } from 'framer-motion.ts';              <div className="animate
               type={showConfirmPassword ? 'text' : 'password'}
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}"
-              className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+              className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               placeholder="Confirm new password"
               required
             />
@@ -205,7 +365,7 @@ import { motion  } from 'framer-motion.ts';              <div className="animate
               type="button"
               onClick={() => setShowConfirmPassword(!showConfirmPassword)}"
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
-'
+
               {showConfirmPassword ? 'Hide' : 'Show'}
             </button>
           </div>
@@ -304,9 +464,9 @@ import { motion  } from 'framer-motion.ts';              <div className="animate
             </motion.div>) }
 
           {/* Form Container */}"
-          <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">'
-            {step === 'email' && renderEmailStep()}'
-            {step === 'verification' && renderVerificationStep()}'
+          <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
+            {step === 'email' && renderEmailStep()}
+            {step === 'verification' && renderVerificationStep()}
             {step === 'reset' && renderResetStep()}
           </div>
 

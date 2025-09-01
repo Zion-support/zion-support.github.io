@@ -1,5 +1,43 @@
+<<<<<<< HEAD
+import React from 'react.ts';
+import { cn } from '../../utils/cn';
+
+interface SkeletonProps extends React.PropsWithChildren<{}> {
+  className?: string;
+  width?: string | number;
+  height?: string | number;
+  variant?: 'text' | 'circular' | 'rectangular' | 'rounded';
+  animation?: 'pulse' | 'wave' | 'none';
+}
+
+export function Skeleton(...args: any[]): any {
+
+  const baseClasses = 'bg-gray-300 dark:bg-gray-700';
+
+  const variantClasses = {
+
+    text: 'h-4 rounded',
+    circular: 'rounded-full',
+    rectangular: '',
+    rounded: 'rounded-lg'};
+
+  const animationClasses = {
+
+    pulse: 'animate-pulse',
+    wave: 'animate-pulse bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700',
+    none: ''};
+
+  const style = {
+
+    width: typeof width === 'number' ? `${width}px` : width,`
+    height: typeof height === 'number' ? `${height}px` : height};
+
+  return()
+    <div
+=======
 import React from 'react.ts';'
 import { cn } from '../../utils/cn';    <div
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       className={cn()
         baseClasses,
         variantClasses[variant],
@@ -73,10 +111,10 @@ export function SkeletonGrid(...args: any[]): any {
   return()
     <div
       className={cn('
-        'grid gap-6','
-        columns === 1 && 'grid-cols-1','
-        columns === 2 && 'grid-cols-1 md:grid-cols-2','
-        columns === 3 && 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3','
+        'grid gap-6',
+        columns === 1 && 'grid-cols-1',
+        columns === 2 && 'grid-cols-1 md:grid-cols-2',
+        columns === 3 && 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
         columns === 4 && 'grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4',
         className
       )}

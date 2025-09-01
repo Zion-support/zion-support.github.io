@@ -1,10 +1,10 @@
-import React, { useState } from 'react';'
-import { Button } from '@/components/ui/button';'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';'
-import { Badge } from '@/components/ui/badge';'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';'
-import { CheckCircle, Brain, Shield, Users, Phone, Mail, MapPin, ExternalLink, TrendingUp } from 'lucide-react';'
-import { SEO } from '@/components/SEO';'
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { CheckCircle, Brain, Shield, Users, Phone, Mail, MapPin, ExternalLink, TrendingUp } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 import { PRICING_TIERS } from '@/data/advancedServices';
 // Service comparison data
 const SERVICE_COMPARISONS = [
@@ -134,7 +134,7 @@ export default function ServicesComparisonPage() {
             </p>
           </div>
           "
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">'
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {PRICING_TIERS.map((tier, index) => (<Card key={tier.name} className={`bg-zion-blue-dark border-zion-blue-light text-white ${index === 1 ? 'border-zion-cyan scale-105' : ''}`}>"
                 <CardHeader className="text-center">"
                   <CardTitle className="text-2xl">{tier.name}</CardTitle>"

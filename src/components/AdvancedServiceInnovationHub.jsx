@@ -1,101 +1,101 @@
-import React, { useState, useMemo } from 'react';'
-import { motion } from 'framer-motion';'
+import React, { useState, useMemo } from 'react';
+import { motion } from 'framer-motion';
 import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCircle, Cpu, Atom, Satellite, Dna, Shield, Leaf } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";"
 import { Button } from "./ui/button";"
 import { Badge } from "./ui/badge";"
 import { Input } from "./ui/input";
 const AdvancedServiceInnovationHub = () => {
-'
-    const [selectedCategory, setSelectedCategory] = useState('all');'
-    const [selectedImpact, setSelectedImpact] = useState('all');'
-    const [selectedStatus, setSelectedStatus] = useState('all');'
-    const [searchTerm, setSearchTerm] = useState('');'
+
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [selectedImpact, setSelectedImpact] = useState('all');
+    const [selectedStatus, setSelectedStatus] = useState('all');
+    const [searchTerm, setSearchTerm] = useState('');
     const [viewMode, setViewMode] = useState('trends');
     // Mock data - in real app this would come from API
     const innovationTrends = [
         {
-'
-            id: 'quantum-supremacy','
-            title: 'Quantum Supremacy & Commercialization','
-            description: 'The transition from quantum research to practical commercial applications across industries.','
-            category: 'quantum','
-            impact: 'High','
+
+            id: 'quantum-supremacy',
+            title: 'Quantum Supremacy & Commercialization',
+            description: 'The transition from quantum research to practical commercial applications across industries.',
+            category: 'quantum',
+            impact: 'High',
             timeline: '2025-2030',
-            adoption: 85,'
-            investment: '$50B+','
-            keyPlayers['IBM', 'Google', 'Microsoft', 'Startups'],;'
-            technologies['Quantum Computing', 'Quantum Algorithms', 'Quantum Software'],;'
+            adoption: 85,
+            investment: '$50B+',
+            keyPlayers['IBM',Google',Microsoft',Startups'],;
+            technologies['Quantum Computing',Quantum Algorithms',Quantum Software'],;
             status: 'Emerging'
         },
         {
-'
-            id: 'ai-consciousness','
-            title: 'AI Consciousness & General Intelligence','
-            description: 'Development of self-aware AI systems with human-like reasoning and consciousness.','
-            category: 'ai','
-            impact: 'High','
+
+            id: 'ai-consciousness',
+            title: 'AI Consciousness & General Intelligence',
+            description: 'Development of self-aware AI systems with human-like reasoning and consciousness.',
+            category: 'ai',
+            impact: 'High',
             timeline: '2030-2040',
-            adoption: 45,'
-            investment: '$100B+','
-            keyPlayers['OpenAI', 'Anthropic', 'Research Labs', 'Universities'],;'
-            technologies['AI Consciousness', 'General AI', 'Neural Networks'],;'
+            adoption: 45,
+            investment: '$100B+',
+            keyPlayers['OpenAI',Anthropic',Research Labs',Universities'],;
+            technologies['AI Consciousness',General AI',Neural Networks'],;
             status: 'Emerging'
         },
         {
-'
-            id: 'space-mining','
-            title: 'Space Mining & Resource Extraction','
-            description: 'Commercial extraction of valuable resources from asteroids and celestial bodies.','
-            category: 'space-tech','
-            impact: 'High','
+
+            id: 'space-mining',
+            title: 'Space Mining & Resource Extraction',
+            description: 'Commercial extraction of valuable resources from asteroids and celestial bodies.',
+            category: 'space-tech',
+            impact: 'High',
             timeline: '2030-2040',
-            adoption: 30,'
-            investment: '$200B+','
-            keyPlayers['SpaceX', 'Blue Origin', 'Asteroid Mining Companies'],;'
-            technologies['Space Robotics', 'Resource Processing', 'Space Logistics'],;'
+            adoption: 30,
+            investment: '$200B+',
+            keyPlayers['SpaceX',Blue Origin',Asteroid Mining Companies'],;
+            technologies['Space Robotics',Resource Processing',Space Logistics'],;
             status: 'Emerging'
         },
         {
-'
-            id: 'fusion-energy','
-            title: 'Fusion Energy Commercialization','
-            description: 'Breakthrough in controlled nuclear fusion for unlimited clean energy.','
-            category: 'green-tech','
-            impact: 'High','
+
+            id: 'fusion-energy',
+            title: 'Fusion Energy Commercialization',
+            description: 'Breakthrough in controlled nuclear fusion for unlimited clean energy.',
+            category: 'green-tech',
+            impact: 'High',
             timeline: '2030-2040',
-            adoption: 60,'
-            investment: '$500B+','
-            keyPlayers['ITER', 'Private Fusion Companies', 'Government Labs'],;'
-            technologies['Fusion Physics', 'Plasma Confinement', 'Energy Conversion'],;'
+            adoption: 60,
+            investment: '$500B+',
+            keyPlayers['ITER',Private Fusion Companies',Government Labs'],;
+            technologies['Fusion Physics',Plasma Confinement',Energy Conversion'],;
             status: 'Growing'
         },
         {
-'
-            id: 'synthetic-biology','
-            title: 'Synthetic Biology Revolution','
-            description: 'Engineering of custom organisms and biological systems for industrial applications.','
-            category: 'biotech-ai','
-            impact: 'High','
+
+            id: 'synthetic-biology',
+            title: 'Synthetic Biology Revolution',
+            description: 'Engineering of custom organisms and biological systems for industrial applications.',
+            category: 'biotech-ai',
+            impact: 'High',
             timeline: '2025-2035',
-            adoption: 70,'
-            investment: '$150B+','
-            keyPlayers['Ginkgo Bioworks', 'Twist Bioscience', 'Research Institutions'],;'
-            technologies['DNA Programming', 'Genetic Engineering', 'Bio-Manufacturing'],;'
+            adoption: 70,
+            investment: '$150B+',
+            keyPlayers['Ginkgo Bioworks',Twist Bioscience',Research Institutions'],;
+            technologies['DNA Programming',Genetic Engineering',Bio-Manufacturing'],;
             status: 'Growing'
         },
         {
-'
-            id: 'brain-computer-interfaces','
-            title: 'Brain-Computer Interface Revolution','
-            description: 'Direct neural control of computers and digital systems for enhanced human capabilities.','
-            category: 'biotech-ai','
-            impact: 'High','
+
+            id: 'brain-computer-interfaces',
+            title: 'Brain-Computer Interface Revolution',
+            description: 'Direct neural control of computers and digital systems for enhanced human capabilities.',
+            category: 'biotech-ai',
+            impact: 'High',
             timeline: '2030-2040',
-            adoption: 40,'
-            investment: '$80B+','
-            keyPlayers['Neuralink', 'Kernel', 'Medical Device Companies'],;'
-            technologies['Neural Interfaces', 'Signal Processing', 'AI/ML'],;'
+            adoption: 40,
+            investment: '$80B+',
+            keyPlayers['Neuralink',Kernel',Medical Device Companies'],;
+            technologies['Neural Interfaces',Signal Processing',AI/ML'],;
             status: 'Emerging'
 
     ];
@@ -108,20 +108,20 @@ const AdvancedServiceInnovationHub = () => {
     const getImpactColor = (impact) => {
 
         switch (impact) {
-'
-            case 'High': return 'bg-red-100 text-red-800';'
-            case 'Medium': return 'bg-yellow-100 text-yellow-800';'
-            case 'Low': return 'bg-green-100 text-green-800';'
+
+            case 'High': return 'bg-red-100 text-red-800';
+            case 'Medium': return 'bg-yellow-100 text-yellow-800';
+            case 'Low': return 'bg-green-100 text-green-800';
             default: return 'bg-gray-100 text-gray-800'}
     };
     const getStatusColor = (status) => {
 
         switch (status) {
-'
-            case 'Emerging': return 'bg-blue-100 text-blue-800';'
-            case 'Growing': return 'bg-green-100 text-green-800';'
-            case 'Mature': return 'bg-orange-100 text-orange-800';'
-            case 'Disruptive': return 'bg-purple-100 text-purple-800';'
+
+            case 'Emerging': return 'bg-blue-100 text-blue-800';
+            case 'Growing': return 'bg-green-100 text-green-800';
+            case 'Mature': return 'bg-orange-100 text-orange-800';
+            case 'Disruptive': return 'bg-purple-100 text-purple-800';
             default: return 'bg-gray-100 text-gray-800'}
     };
     const getCategoryIcon = (category) => {
@@ -136,11 +136,11 @@ const AdvancedServiceInnovationHub = () => {
             default: return <Cpu className="w-5 h-5"/>}
     };
     const categories = ['"
-        { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4"/> },'"
-        { id: 'quantum', name: 'Quantum Technology', icon: <Atom className="w-4 h-4"/> },'"
-        { id: 'ai', name: 'Artificial Intelligence', icon: <Brain className="w-4 h-4"/> },'"
-        { id: 'space-tech', name: 'Space Technology', icon: <Satellite className="w-4 h-4"/> },'"
-        { id: 'green-tech', name: 'Green Technology', icon: <Leaf className="w-4 h-4"/> },'"
+        { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4"/> },"
+        { id: 'quantum', name: 'Quantum Technology', icon: <Atom className="w-4 h-4"/> },"
+        { id: 'ai', name: 'Artificial Intelligence', icon: <Brain className="w-4 h-4"/> },"
+        { id: 'space-tech', name: 'Space Technology', icon: <Satellite className="w-4 h-4"/> },"
+        { id: 'green-tech', name: 'Green Technology', icon: <Leaf className="w-4 h-4"/> },"
         { id: 'biotech-ai', name: 'Biotech AI', icon: <Dna className="w-4 h-4"/> }
     ];"
     return (<div className="max-w-7xl mx-auto p-6">
@@ -172,7 +172,7 @@ const AdvancedServiceInnovationHub = () => {
           </div>
 "
           <div className="flex gap-2">'"
-            {['trends', 'roadmap', 'insights'].map((mode) => (<Button key={mode} variant={viewMode === mode ? 'default' : 'outline'} size="sm" onClick={() => setViewMode(mode)}>'"
+            {['trends',roadmap',insights'].map((mode) => (<Button key={mode} variant={viewMode === mode ? 'default' : 'outline'} size="sm" onClick={() => setViewMode(mode)}>'"
                 {mode === 'trends' && <TrendingUp className="w-4 h-4 mr-2"/>}'"
                 {mode === 'roadmap' && <Rocket className="w-4 h-4 mr-2"/>}'"
                 {mode === 'insights' && <Lightbulb className="w-4 h-4 mr-2"/>}
@@ -182,7 +182,7 @@ const AdvancedServiceInnovationHub = () => {
         </div>
       </motion.div>
 
-      {/* Innovation Trends View */}'
+      {/* Innovation Trends View */}
       {viewMode === 'trends' && (<>
           {/* Filters */}
           <motion.div initial = {
@@ -346,7 +346,7 @@ const AdvancedServiceInnovationHub = () => {
           </motion.div>
         </>) }
 
-      {/* Future Roadmap View */}'
+      {/* Future Roadmap View */}
       {viewMode === 'roadmap' && (<motion.div initial = {
 
   { opacity: 0,
@@ -456,7 +456,7 @@ const AdvancedServiceInnovationHub = () => {
             </motion.div>) ) }
         </motion.div>) }
 
-      {/* Strategic Insights View */}'
+      {/* Strategic Insights View */}
       {viewMode === 'insights' && (<motion.div initial = {
 
   { opacity: 0,
@@ -637,9 +637,8 @@ const AdvancedServiceInnovationHub = () => {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {
-'
-  () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation','
-  '_blank')
+
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation',_blank')
 
 
 
@@ -651,9 +650,8 @@ const AdvancedServiceInnovationHub = () => {
               Get Innovation Strategy
             </Button>"
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {
-'
-  () => window.open('tel:+13024640950','
-  '_blank')
+
+  () => window.open('tel:+13024640950',_blank')
 
 
 

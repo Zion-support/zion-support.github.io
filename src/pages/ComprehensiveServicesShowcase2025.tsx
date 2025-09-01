@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
   Zap, 
@@ -75,7 +75,7 @@ import {
   Database as DatabaseIcon,
   Users as UsersIcon,
   X'
-} from 'lucide-react';'
+} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 interface Service {
 
@@ -94,371 +94,289 @@ interface Service {
 };
   benefits: string[];
   useCases: string[];
-  link: string;'
+  link: string;
   status: 'available' | 'coming-soon' | 'beta';
 }
 ;const services: Service[] = [
   // AI Services
   {
-'
-    id: 'ai-autonomous-research-assistant','
-    name: 'AI Autonomous Research Assistant','
-    description: 'Advanced AI-powered research platform that autonomously conducts comprehensive research, analyzes data, and generates insights across multiple domains.','
+
+    id: 'ai-autonomous-research-assistant',
+    name: 'AI Autonomous Research Assistant',
+    description: 'Advanced AI-powered research platform that autonomously conducts comprehensive research, analyzes data, and generates insights across multiple domains.',
     category: 'AI & Research',
     icon: Brain,
     features: ['
-      'Autonomous research execution','
-      'Multi-source data analysis','
-      'Intelligent insight generation','
-      'Real-time collaboration tools','
-      'Custom research workflows','
-      'Advanced analytics dashboard'
+      'Autonomous research execution',Multi-source data analysis',Intelligent insight generation',Real-time collaboration tools',Custom research workflows',Advanced analytics dashboard'
     ],
     pricing: {
-'
-      starter: '$299/month','
-      professional: '$799/month','
+
+      starter: '$299/month',
+      professional: '$799/month',
       enterprise: 'Custom'
     },
     benefits: ['
-      'Reduce research time by 80%','
-      'Improve accuracy with AI validation','
-      'Scale research operations','
-      'Generate actionable insights','
-      'Maintain research quality standards'
+      'Reduce research time by 80%',Improve accuracy with AI validation',Scale research operations',Generate actionable insights',Maintain research quality standards'
     ],
     useCases: ['
-      'Market research and analysis','
-      'Academic research projects','
-      'Competitive intelligence','
-      'Product development research','
-      'Scientific research collaboration'
-    ],'
-    link: '/services/ai-autonomous-research-assistant','
+      'Market research and analysis',Academic research projects',Competitive intelligence',Product development research',Scientific research collaboration'
+    ],
+    link: '/services/ai-autonomous-research-assistant',
     status: 'available'
   },
   {
-'
-    id: 'ai-cybersecurity-platform','
-    name: 'AI Cybersecurity Platform','
-    description: 'Next-generation cybersecurity solution powered by artificial intelligence for real-time threat detection, automated response, and predictive security.','
+
+    id: 'ai-cybersecurity-platform',
+    name: 'AI Cybersecurity Platform',
+    description: 'Next-generation cybersecurity solution powered by artificial intelligence for real-time threat detection, automated response, and predictive security.',
     category: 'AI & Security',
     icon: Shield,
     features: ['
-      'AI-powered threat detection','
-      'Automated incident response','
-      'Predictive security analytics','
-      'Zero-day vulnerability detection','
-      'Behavioral analysis','
-      'Security orchestration'
+      'AI-powered threat detection',Automated incident response',Predictive security analytics',Zero-day vulnerability detection',Behavioral analysis',Security orchestration'
     ],
     pricing: {
-'
-      starter: '$499/month','
-      professional: '$1,299/month','
+
+      starter: '$499/month',
+      professional: '$1,299/month',
       enterprise: 'Custom'
     },
     benefits: ['
-      'Detect threats 10x faster','
-      'Reduce false positives by 90%','
-      'Automate security responses','
-      'Predict and prevent attacks','
-      'Compliance automation'
+      'Detect threats 10x faster',Reduce false positives by 90%',Automate security responses',Predict and prevent attacks',Compliance automation'
     ],
     useCases: ['
-      'Enterprise security operations','
-      'Financial institutions','
-      'Healthcare organizations','
-      'Government agencies','
-      'Critical infrastructure'
-    ],'
-    link: '/services/ai-cybersecurity-platform','
+      'Enterprise security operations',Financial institutions',Healthcare organizations',Government agencies',Critical infrastructure'
+    ],
+    link: '/services/ai-cybersecurity-platform',
     status: 'available'
   },
   {
-'
-    id: 'ai-healthcare-platform','
-    name: 'AI Healthcare Platform','
-    description: 'Comprehensive AI platform for healthcare providers offering diagnostic assistance, patient monitoring, and predictive healthcare analytics.','
+
+    id: 'ai-healthcare-platform',
+    name: 'AI Healthcare Platform',
+    description: 'Comprehensive AI platform for healthcare providers offering diagnostic assistance, patient monitoring, and predictive healthcare analytics.',
     category: 'AI & Healthcare',
     icon: Heart,
     features: ['
-      'AI diagnostic assistance','
-      'Patient monitoring systems','
-      'Predictive health analytics','
-      'Medical image analysis','
-      'Drug interaction checking','
-      'Healthcare workflow automation'
+      'AI diagnostic assistance',Patient monitoring systems',Predictive health analytics',Medical image analysis',Drug interaction checking',Healthcare workflow automation'
     ],
     pricing: {
-'
-      starter: '$399/month','
-      professional: '$999/month','
+
+      starter: '$399/month',
+      professional: '$999/month',
       enterprise: 'Custom'
     },
     benefits: ['
-      'Improve diagnostic accuracy','
-      'Reduce healthcare costs','
-      'Enhance patient outcomes','
-      'Streamline workflows','
-      'Enable preventive care'
+      'Improve diagnostic accuracy',Reduce healthcare costs',Enhance patient outcomes',Streamline workflows',Enable preventive care'
     ],
     useCases: ['
-      'Hospitals and clinics','
-      'Medical imaging centers','
-      'Pharmaceutical companies','
-      'Health insurance providers','
-      'Research institutions'
-    ],'
-    link: '/services/ai-healthcare-platform','
+      'Hospitals and clinics',Medical imaging centers',Pharmaceutical companies',Health insurance providers',Research institutions'
+    ],
+    link: '/services/ai-healthcare-platform',
     status: 'available'
   },
   {
-'
-    id: 'ai-supply-chain-optimization','
-    name: 'AI Supply Chain Optimization','
-    description: 'Intelligent supply chain management platform that optimizes operations, predicts disruptions, and automates decision-making processes.','
+
+    id: 'ai-supply-chain-optimization',
+    name: 'AI Supply Chain Optimization',
+    description: 'Intelligent supply chain management platform that optimizes operations, predicts disruptions, and automates decision-making processes.',
     category: 'AI & Operations',
     icon: Workflow,
     features: ['
-      'Demand forecasting','
-      'Inventory optimization','
-      'Route optimization','
-      'Risk assessment','
-      'Supplier management','
-      'Real-time monitoring'
+      'Demand forecasting',Inventory optimization',Route optimization',Risk assessment',Supplier management',Real-time monitoring'
     ],
     pricing: {
-'
-      starter: '$599/month','
-      professional: '$1,499/month','
+
+      starter: '$599/month',
+      professional: '$1,499/month',
       enterprise: 'Custom'
     },
     benefits: ['
-      'Reduce costs by 15-25%','
-      'Improve delivery times','
-      'Minimize inventory waste','
-      'Enhance supplier relationships','
-      'Increase operational efficiency'
+      'Reduce costs by 15-25%',Improve delivery times',Minimize inventory waste',Enhance supplier relationships',Increase operational efficiency'
     ],
     useCases: ['
-      'Manufacturing companies','
-      'Retail chains','
-      'Logistics providers','
-      'E-commerce platforms','
-      'Distribution networks'
-    ],'
-    link: '/services/ai-supply-chain-optimization','
+      'Manufacturing companies',Retail chains',Logistics providers',E-commerce platforms',Distribution networks'
+    ],
+    link: '/services/ai-supply-chain-optimization',
     status: 'available'
   },
   {
-'
-    id: 'ai-quantum-hybrid-platform','
-    name: 'AI Quantum Hybrid Platform','
-    description: 'Revolutionary platform combining AI and quantum computing for solving complex optimization problems and advanced simulations.','
+
+    id: 'ai-quantum-hybrid-platform',
+    name: 'AI Quantum Hybrid Platform',
+    description: 'Revolutionary platform combining AI and quantum computing for solving complex optimization problems and advanced simulations.',
     category: 'AI & Quantum',
     icon: Atom,
     features: ['
-      'Quantum-AI hybrid algorithms','
-      'Complex optimization solving','
-      'Advanced simulations','
-      'Quantum machine learning','
-      'Hybrid computing workflows','
-      'Performance benchmarking'
+      'Quantum-AI hybrid algorithms',Complex optimization solving',Advanced simulations',Quantum machine learning',Hybrid computing workflows',Performance benchmarking'
     ],
     pricing: {
-'
-      starter: '$1,999/month','
-      professional: '$4,999/month','
+
+      starter: '$1,999/month',
+      professional: '$4,999/month',
       enterprise: 'Custom'
     },
     benefits: ['
-      'Solve previously intractable problems','
-      'Exponential performance improvements','
-      'Advanced research capabilities','
-      'Competitive advantage','
-      'Future-proof technology'
+      'Solve previously intractable problems',Exponential performance improvements',Advanced research capabilities',Competitive advantage',Future-proof technology'
     ],
     useCases: ['
-      'Research institutions','
-      'Financial services','
-      'Pharmaceutical research','
-      'Climate modeling','
-      'Cryptography and security'
-    ],'
-    link: '/services/ai-quantum-hybrid-platform','
+      'Research institutions',Financial services',Pharmaceutical research',Climate modeling',Cryptography and security'
+    ],
+    link: '/services/ai-quantum-hybrid-platform',
     status: 'beta'
   },
   // IT Services
   {
-'
-    id: 'cloud-devops-automation','
-    name: 'Cloud DevOps Automation Platform','
-    description: 'Comprehensive DevOps automation platform for cloud-native applications with CI/CD pipelines, infrastructure as code, and monitoring.','
+
+    id: 'cloud-devops-automation',
+    name: 'Cloud DevOps Automation Platform',
+    description: 'Comprehensive DevOps automation platform for cloud-native applications with CI/CD pipelines, infrastructure as code, and monitoring.',
     category: 'IT & Cloud',
     icon: Cloud,
     features: ['
-      'Automated CI/CD pipelines','
-      'Infrastructure as Code','
-      'Multi-cloud management','
-      'Monitoring and alerting','
-      'Security automation','
-      'Cost optimization'
+      'Automated CI/CD pipelines',Infrastructure as Code',Multi-cloud management',Monitoring and alerting',Security automation',Cost optimization'
     ],
     pricing: {
-'
-      starter: '$299/month','
-      professional: '$799/month','
+
+      starter: '$299/month',
+      professional: '$799/month',
       enterprise: 'Custom'
     },
     benefits: ['
-      'Deploy 10x faster','
-      'Reduce operational costs','
-      'Improve reliability','
-      'Enhance security','
-      'Scale efficiently'
+      'Deploy 10x faster',Reduce operational costs',Improve reliability',Enhance security',Scale efficiently'
     ],
     useCases: ['
-      'Software development teams','
-      'DevOps engineers','
-      'Cloud architects','
-      'System administrators','
-      'Startup companies'
-    ],'
-    link: '/services/cloud-devops-automation','
+      'Software development teams',DevOps engineers',Cloud architects',System administrators',Startup companies'
+    ],
+    link: '/services/cloud-devops-automation',
     status: 'available'
   },
   {
-'
-    id: 'it-infrastructure-management','
-    name: 'IT Infrastructure Management','
-    description: 'Comprehensive IT infrastructure management solution for enterprise environments with monitoring, automation, and optimization.','
+
+    id: 'it-infrastructure-management',
+    name: 'IT Infrastructure Management',
+    description: 'Comprehensive IT infrastructure management solution for enterprise environments with monitoring, automation, and optimization.',
     category: 'IT & Infrastructure',
     icon: Server,
     features: ['
-      'Infrastructure monitoring','
-      'Automated provisioning','
-      'Performance optimization','
-      'Security management','
-      'Backup and recovery','
-      'Capacity planning'
+      'Infrastructure monitoring',Automated provisioning',Performance optimization',Security management',Backup and recovery',Capacity planning'
     ],
     pricing: {
-'
-      starter: '$199/month','
-      professional: '$599/month','
+
+      starter: '$199/month',
+      professional: '$599/month',
       enterprise: 'Custom'
     },
     benefits: ['
-      'Reduce downtime by 99.9%','
-      'Lower operational costs','
-      'Improve performance','
-      'Enhance security posture','
-      'Streamline management'
+      'Reduce downtime by 99.9%',Lower operational costs',Improve performance',Enhance security posture',Streamline management'
     ],
     useCases: ['
-      'Enterprise IT departments','
-      'Data centers','
-      'Managed service providers','
-      'Educational institutions','
-      'Healthcare organizations'
-    ],'
-    link: '/services/it-infrastructure','
+      'Enterprise IT departments',Data centers',Managed service providers',Educational institutions',Healthcare organizations'
+    ],
+    link: '/services/it-infrastructure',
     status: 'available'
   },
   // Micro SAAS Services
   {
-'
-    id: 'micro-crm-platform','
-    name: 'Micro CRM Platform','
-    description: 'Lightweight, powerful CRM solution designed for small to medium businesses with essential features and easy customization.','
+
+    id: 'micro-crm-platform',
+    name: 'Micro CRM Platform',
+    description: 'Lightweight, powerful CRM solution designed for small to medium businesses with essential features and easy customization.',
     category: 'Micro SAAS',
     icon: Users,
     features: ['
-      'Contact management','
-      'Lead tracking','
-      'Sales pipeline','
-      'Email integration','
-      'Reporting and analytics','
-      'Mobile app access'
+      'Contact management',Lead tracking',Sales pipeline',Email integration',Reporting and analytics',Mobile app access'
     ],
     pricing: {
-'
-      starter: '$29/month','
-      professional: '$79/month','
+
+      starter: '$29/month',
+      professional: '$79/month',
       enterprise: '$199/month'
     },
     benefits: ['
-      'Affordable pricing','
-      'Easy to implement','
-      'Scalable solution','
-      'Improve customer relationships','
-      'Increase sales efficiency'
+      'Affordable pricing',Easy to implement',Scalable solution',Improve customer relationships',Increase sales efficiency'
     ],
     useCases: ['
-      'Small businesses','
-      'Sales teams','
-      'Real estate agents','
-      'Consultants','
-      'Startups'
-    ],'
-    link: '/services/micro-crm','
+      'Small businesses',Sales teams',Real estate agents',Consultants',Startups'
+    ],
+    link: '/services/micro-crm',
     status: 'available'
   },
   {
-'
-    id: 'ai-business-intelligence','
-    name: 'AI Business Intelligence','
-    description: 'Intelligent business analytics platform that transforms data into actionable insights using advanced AI and machine learning.','
+
+    id: 'ai-business-intelligence',
+    name: 'AI Business Intelligence',
+    description: 'Intelligent business analytics platform that transforms data into actionable insights using advanced AI and machine learning.',
     category: 'AI & Analytics',
     icon: BarChart3,
     features: ['
-      'AI-powered analytics','
-      'Predictive modeling','
-      'Interactive dashboards','
-      'Data visualization','
-      'Automated reporting','
-      'Real-time insights'
+      'AI-powered analytics',Predictive modeling',Interactive dashboards',Data visualization',Automated reporting',Real-time insights'
     ],
     pricing: {
-'
-      starter: '$399/month','
-      professional: '$999/month','
+
+      starter: '$399/month',
+      professional: '$999/month',
       enterprise: 'Custom'
     },
     benefits: ['
-      'Make data-driven decisions','
-      'Identify trends and patterns','
-      'Predict future outcomes','
-      'Improve operational efficiency','
-      'Gain competitive advantage'
+      'Make data-driven decisions',Identify trends and patterns',Predict future outcomes',Improve operational efficiency',Gain competitive advantage'
     ],
     useCases: ['
-      'Business analysts','
-      'Executives and managers','
-      'Marketing teams','
-      'Operations teams','
-      'Financial analysts'
-    ],'
-    link: '/services/ai-business-intelligence','
+      'Business analysts',Executives and managers',Marketing teams',Operations teams',Financial analysts'
+    ],
+    link: '/services/ai-business-intelligence',
     status: 'available'
   }
 ];
 
 const categories = ['
-  { id: 'all', name: 'All Services', icon: Globe, count: services.length },'
-  { id: 'ai', name: 'AI Services', icon: Brain, count: services.filter(s => s.category.includes('AI')).length },'
-  { id: 'it', name: 'IT Services', icon: Cpu, count: services.filter(s => s.category.includes('IT')).length },'
-  { id: 'micro-saas', name: 'Micro SAAS', icon: Zap, count: services.filter(s => s.category.includes('Micro SAAS')).length },'
-  { id: 'security', name: 'Security', icon: Shield, count: services.filter(s => s.category.includes('Security')).length },'
+  { id: 'all', name: 'All Services', icon: Globe, count: services.length },
+  { id: 'ai', name: 'AI Services', icon: Brain, count: services.filter(s => s.category.includes('AI')).length },
+  { id: 'it', name: 'IT Services', icon: Cpu, count: services.filter(s => s.category.includes('IT')).length },
+  { id: 'micro-saas', name: 'Micro SAAS', icon: Zap, count: services.filter(s => s.category.includes('Micro SAAS')).length },
+  { id: 'security', name: 'Security', icon: Shield, count: services.filter(s => s.category.includes('Security')).length },
   { id: 'healthcare', name: 'Healthcare', icon: Heart, count: services.filter(s => s.category.includes('Healthcare')).length }
 ];
+<<<<<<< HEAD
+
+export default function ComprehensiveServicesShowcase2025() {
+
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
+
+  const filteredServices = services.filter(service => {
+
+    const matchesCategory = selectedCategory === 'all' || '
+      service.category.toLowerCase().includes(selectedCategory.replace('-',));
+    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      service.description.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  }) ;
+
+  const handleServiceClick = (service: Service) => {
+
+    setSelectedService(service);
+  };
+
+  const closeModal = () => {
+    setSelectedService (null) ;
+  };
+
+  return()
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO "
+        title="Comprehensive Services Showcase 2025 | Zion Tech Group"
+        description="Explore our comprehensive portfolio of AI, IT, and Micro SAAS services. Discover innovative solutions designed to transform your business in 2025 and beyond."
+        keywords="AI services, IT services, Micro SAAS, cybersecurity, healthcare AI, quantum computing, cloud DevOps, business intelligence"
+      />
+=======
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
         title="Comprehensive Services Showcase 2025 | Zion Tech Group""
         description="Explore our comprehensive portfolio of AI, IT, and Micro SAAS services. Discover innovative solutions designed to transform your business in 2025 and beyond.""        keywords="AI services, IT services, Micro SAAS, cybersecurity, healthcare AI, quantum computing, cloud DevOps, business intelligence"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 overflow-hidden">"
@@ -481,13 +399,13 @@ const categories = ['
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Get Started Today
               </Link>
               <Link"
-                to="/pricing""
+                to="/pricing"
                 className="border-2 border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
               >
                 View Pricing
@@ -506,7 +424,12 @@ const categories = ['
               <div className="relative max-w-2xl mx-auto">"
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-zion-slate-light" />
                 <input"
+<<<<<<< HEAD
+                  type="text"
+                  placeholder="Search for services, features, or use cases..."
+=======
                   type="text""                  placeholder="Search for services, features, or use cases..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-full pl-12 pr-4 py-4 bg-zion-blue-darker border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent text-lg"
@@ -532,7 +455,7 @@ const categories = ['
                 <button'
                   onClick={() => setViewMode('list')}`
                   className={`flex-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-'
+
                     viewMode === 'list' '
                       ? 'bg-zion-cyan text-white' '
                       : 'text-zion-slate-light hover:text-white'`
@@ -553,16 +476,16 @@ const categories = ['
               </label>"
               <div className="flex gap-2">
                 <input"
-                  type="range""
-                  min="0""
+                  type="range"
+                  min="0"
                   max="10000"
                   value={priceRange[0]}
                   onChange={(e) => setPriceRange([parseInt(e.target.value), priceRange[1]])}"
                   className="flex-1"
                 />
                 <input"
-                  type="range""
-                  min="0""
+                  type="range"
+                  min="0"
                   max="10000"
                   value={priceRange[1]}
                   onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}"
@@ -640,11 +563,11 @@ const categories = ['
                     <service.icon className="w-6 h-6 text-white" />
                   </div>`
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-'
+
                     service.status === 'available' ? 'bg-green-500/20 text-green-400' :'
                     service.status === 'beta' ? 'bg-blue-500/20 text-blue-400' :'
                     'bg-yellow-500/20 text-yellow-400'`
-                  }`}>'
+                  }`}>
                     {service.status === 'available' ? 'Available' :'
                      service.status === 'beta' ? 'Beta' : 'Coming Soon'}
                   </span>
@@ -723,13 +646,13 @@ const categories = ['
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Schedule a Consultation
               </Link>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="border-2 border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
               >
                 Call + 1 302 464 0950
@@ -845,7 +768,7 @@ const categories = ['
                   Learn More
                 </Link>
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="border-2 border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 text-center"
                   onClick={closeModal}
                 >

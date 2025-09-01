@@ -29,7 +29,7 @@ function isLocalStorageAvailable () {
     }
 
     const testKey = '__localStorage_test__';
-    localStorage.setItem (testKey, 'test') ;
+    localStorage.setItem (testKey,test') ;
     localStorage.removeItem (testKey) ;
     localStorageAvailable = true;
     return true;

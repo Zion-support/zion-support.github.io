@@ -1,5 +1,5 @@
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 export const MetaTags = ({ title, description, keywords = 'AI, artificial intelligence, machine learning, cybersecurity, cloud computing, IT services, enterprise solutions, Zion Tech Group', image = 'https://ziontechgroup.com/og-image.jpg', url = 'https://ziontechgroup.com', type = 'website', author = 'Zion Tech Group', publishedTime, modifiedTime }) => {
 
     const fullTitle = `${title} | Zion Tech Group - The Tech & AI Marketplace`;
@@ -46,7 +46,7 @@ export const MetaTags = ({ title, description, keywords = 'AI, artificial intell
       <script type="application/ld+json">
         {JSON.stringify({
 "
-            "@context": "https://schema.org",'"
+            "@context": "https://schema.org","
             "@type": type === 'article' ? 'Article' : 'Organization',"
             "name": "Zion Tech Group","
             "url": "https://ziontechgroup.com","

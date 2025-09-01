@@ -1,99 +1,96 @@
-import React, { useEffect } from 'react';'
-import { Helmet } from 'react-helmet-async';'
-export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology Solutions', description = 'Leading provider of innovative technology solutions, AI-powered services, and digital transformation expertise. We help businesses thrive in the digital age.', keywords = ['AI solutions', 'technology consulting', 'digital transformation', 'cloud computing', 'cybersecurity', 'machine learning'], image = '/images/zion-tech-group-og.jpg', url = 'https://ziontechgroup.com', type = 'website', author = 'Zion Tech Group', publishedTime, modifiedTime, section = 'Technology Services', tags = ['AI', 'Technology', 'Digital Transformation'] }) => {
+import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology Solutions', description = 'Leading provider of innovative technology solutions, AI-powered services, and digital transformation expertise. We help businesses thrive in the digital age.', keywords = ['AI solutions',technology consulting',digital transformation',cloud computing',cybersecurity',machine learning'], image = '/images/zion-tech-group-og.jpg', url = 'https://ziontechgroup.com', type = 'website', author = 'Zion Tech Group', publishedTime, modifiedTime, section = 'Technology Services', tags = ['AI',Technology',Digital Transformation'] }) => {
 
     useEffect(() => {
         // Add structured data to the page
         const structuredData = {
-'
-  '@context': 'https://schema.org','
-            '@type': type === 'article' ? 'Article' : 'Organization','
-            name: 'Zion Tech Group','
-            url: 'https://ziontechgroup.com','
+
+  '@context': 'https://schema.org',@type': type === 'article' ? 'Article' : 'Organization',
+            name: 'Zion Tech Group',
+            url: 'https://ziontechgroup.com',
             logo: 'https://ziontechgroup.com/images/zion-tech-group-logo.png',
             description: description,
             address: {
-'
-                '@type': 'PostalAddress','
-                streetAddress: '123 Technology Drive','
-                addressLocality: 'Wilmington','
-                addressRegion: 'DE','
-                postalCode: '19801','
+
+                '@type': 'PostalAddress',
+                streetAddress: '123 Technology Drive',
+                addressLocality: 'Wilmington',
+                addressRegion: 'DE',
+                postalCode: '19801',
   addressCountry: 'US'
 
 },
             contactPoint: {
-'
-                '@type': 'ContactPoint','
-                telephone: '+1-302-464-0950','
-                email: 'info@ziontechgroup.com','
-                contactType: 'customer service','
+
+                '@type': 'ContactPoint',
+                telephone: '+1-302-464-0950',
+                email: 'info@ziontechgroup.com',
+                contactType: 'customer service',
                 availableLanguage: 'English'
             },
-            sameAs[;'
-                'https://linkedin.com/company/ziontechgroup','
-                'https://twitter.com/ziontechgroup','
-                'https://github.com/ziontechgroup'
-            ],;'
+            sameAs[;
+                'https://linkedin.com/company/ziontechgroup',https://twitter.com/ziontechgroup',https://github.com/ziontechgroup'
+            ],;
             ...(type === 'article' && {
 
                 headline: title,
                 author: {
-'
+
                     '@type': 'Person',
                     name: author
                 },
                 publisher: {
-'
-                    '@type': 'Organization','
+
+                    '@type': 'Organization',
                     name: 'Zion Tech Group',
                     logo: {
-'
-                        '@type': 'ImageObject','
+
+                        '@type': 'ImageObject',
                         url: 'https://ziontechgroup.com/images/zion-tech-group-logo.png'
                     }
                 },
                 datePublished: publishedTime,
                 dateModified: modifiedTime,
-                articleSection: section,'
-                keywords: tags.join(', ')
-            }),'
+                articleSection: section,
+                keywords: tags.join(',)
+            }),
             ...(type === 'service' && {
 
-                serviceType: title,'
+                serviceType: title,
                 areaServed: 'Worldwide',
                 hasOfferCatalog: {
-'
-                    '@type': 'OfferCatalog','
+
+                    '@type': 'OfferCatalog',
                     name: 'Technology Services',
                     itemListElement[;
                         {
-'
+
                             '@type': 'Offer',
                             itemOffered: {
-'
-                                '@type': 'Service','
-                                name: 'AI Solutions','
+
+                                '@type': 'Service',
+                                name: 'AI Solutions',
                                 description: 'Machine learning, natural language processing, and computer vision solutions'
                             }
                         },
                         {
-'
+
                             '@type': 'Offer',
                             itemOffered: {
-'
-                                '@type': 'Service','
-                                name: 'Cloud & DevOps','
+
+                                '@type': 'Service',
+                                name: 'Cloud & DevOps',
                                 description: 'Cloud migration, infrastructure automation, and DevOps practices'
                             }
                         },
                         {
-'
+
                             '@type': 'Offer',
                             itemOffered: {
-'
-                                '@type': 'Service','
-                                name: 'Cybersecurity','
+
+                                '@type': 'Service',
+                                name: 'Cybersecurity',
                                 description: 'Comprehensive security solutions including threat detection and compliance'
                             }
                         }
@@ -107,35 +104,35 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
 
             existingScript.remove()}
         // Add new structured data'
-        const script = document.createElement('script');'
+        const script = document.createElement('script');
         script.type = 'application/ld+json';
         script.text = JSON.stringify(structuredData);
         document.head.appendChild(script);
         // Add performance meta tags
         const performanceMeta = ['
-            { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },'
-            { name: 'theme-color', content: '#1e40af' },'
-            { name: 'msapplication-TileColor', content: '#1e40af' },'
-            { name: 'apple-mobile-web-app-capable', content: 'yes' },'
-            { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },'
-            { name: 'apple-mobile-web-app-title', content: 'Zion Tech Group' },'
+            { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
+            { name: 'theme-color', content: '#1e40af' },
+            { name: 'msapplication-TileColor', content: '#1e40af' },
+            { name: 'apple-mobile-web-app-capable', content: 'yes' },
+            { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
+            { name: 'apple-mobile-web-app-title', content: 'Zion Tech Group' },
             { name: 'format-detection', content: 'telephone=no' }
         ];
         performanceMeta.forEach(meta => {
-'
+
             const metaTag = document.createElement('meta');
             metaTag.name = meta.name;
             metaTag.content = meta.content;
             document.head.appendChild (metaTag) }) ;
         // Add resource hints
         const resourceHints = ['
-            { rel: 'preconnect', href: 'https://fonts.googleapis.com' },'
-            { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },'
-            { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },'
+            { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+            { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+            { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
             { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' }
         ];
         resourceHints.forEach(hint => {
-'
+
             const link = document.createElement('link');
             link.rel = hint.rel;
             link.href = hint.href;
@@ -161,9 +158,8 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
       <title>{title}</title>"
       <meta name="description" content={description}/>"
       <meta name="keywords" content = {
-'
-  keywords.join(','
-  ');
+
+  keywords.join(',);
 
 }/>;"
       <meta name="author" content={author}/>"

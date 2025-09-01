@@ -1,6 +1,6 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { Routes, Route, useLocation } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { Home, ArrowLeft, AlertTriangle } from 'lucide-react';
 const NotFound = () => {
   return()
@@ -14,7 +14,7 @@ const NotFound = () => {
           <h2 className="text-2xl font-semibold text-zion-blue-dark mb-4">
             Page Not Found
           </h2>"
-          <p className="text-zion-slate mb-8">'
+          <p className="text-zion-slate mb-8">
             The page you're looking for doesn't exist or has been moved. Let's
             get you back on track.
           </p>
@@ -22,7 +22,7 @@ const NotFound = () => {
 "
         <div className="space-y-4">
           <Link"
-            to="/""
+            to="/"
             className="inline-flex items-center px-6 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
           >"
             <Home className="w-5 h-5 mr-2" />
@@ -46,25 +46,25 @@ const NotFound = () => {
           </h3>"
           <div className="grid grid-cols-2 gap-4">
             <Link"
-              to="/services""
+              to="/services"
               className="text-zion-slate hover:text-zion-cyan transition-colors text-sm"
             >
               Services
             </Link>
             <Link"
-              to="/about""
+              to="/about"
               className="text-zion-slate hover:text-zion-cyan transition-colors text-sm"
             >
               About
             </Link>
             <Link"
-              to="/contact""
+              to="/contact"
               className="text-zion-slate hover:text-zion-cyan transition-colors text-sm"
             >
               Contact
             </Link>
             <Link"
-              to="/blog""
+              to="/blog"
               className="text-zion-slate hover:text-zion-cyan transition-colors text-sm"
             >
               Blog
@@ -87,7 +87,7 @@ const ServerError = () => {
           <h2 className="text-2xl font-semibold text-zion-blue-dark mb-4">
             Server Error
           </h2>"
-          <p className="text-zion-slate mb-8">'
+          <p className="text-zion-slate mb-8">
             Something went wrong on our end. We're working to fix it. Please try
             again later.
           </p>
@@ -95,7 +95,7 @@ const ServerError = () => {
 "
         <div className="space-y-4">
           <Link"
-            to="/""
+            to="/"
             className="inline-flex items-center px-6 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
           >"
             <Home className="w-5 h-5 mr-2" />
@@ -116,7 +116,7 @@ const ServerError = () => {
   );
 };
 const ErrorRoutes = () => {
-  const location = useLocation();'
+  const location = useLocation();
   // Check if it's a 500 error (you can implement your own logic here)
   const isServerError ='
     location.pathname === '/500' || location.state?.error === 'server';

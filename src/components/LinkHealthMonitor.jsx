@@ -1,51 +1,51 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const LinkHealthMonitor = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isMonitoring, setIsMonitoring] = useState(false);
     const [linkStatuses, setLinkStatuses] = useState([]);
-    const [report, setReport] = useState(null);'
+    const [report, setReport] = useState(null);
     const [selectedFilter, setSelectedFilter] = useState('all');
     // Sample data based on the analysis report
     const sampleLinks = [
         {
-'
-            url: 'https://linkedin.com/company/ziontechgroup','
+
+            url: 'https://linkedin.com/company/ziontechgroup',
             status: 'broken',
             statusCode: 404,
             responseTime: 1200,
-            lastChecked: new Date(),'
-            parentPage: 'Homepage','
+            lastChecked: new Date(),
+            parentPage: 'Homepage',
             linkText: 'LinkedIn'
         },
         {
-'
-            url: 'https://twitter.com/ziontechgroup','
+
+            url: 'https://twitter.com/ziontechgroup',
             status: 'external',
             statusCode: 200,
             responseTime: 800,
-            lastChecked: new Date(),'
-            parentPage: 'Homepage','
+            lastChecked: new Date(),
+            parentPage: 'Homepage',
             linkText: 'Twitter'
         },
         {
-'
-            url: 'tel:+1 302 464 0950','
+
+            url: 'tel:+1 302 464 0950',
             status: 'healthy',
             statusCode: 200,
             responseTime: 50,
-            lastChecked: new Date(),'
-            parentPage: 'Contact','
+            lastChecked: new Date(),
+            parentPage: 'Contact',
             linkText: 'Phone Number'
         },
         {
-'
-            url: 'mailto:kleber@ziontechgroup.com','
+
+            url: 'mailto:kleber@ziontechgroup.com',
             status: 'healthy',
             statusCode: 200,
             responseTime: 50,
-            lastChecked: new Date(),'
-            parentPage: 'Contact','
+            lastChecked: new Date(),
+            parentPage: 'Contact',
             linkText: 'Email'
 
     ];
@@ -54,9 +54,9 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
         generateReport (sampleLinks) }, []) ;
     const generateReport = (links) => {
 
-        const totalLinks = links.length;'
-        const healthyLinks = links.filter(l => l.status === 'healthy').length;'
-        const brokenLinks = links.filter(l => l.status === 'broken').length;'
+        const totalLinks = links.length;
+        const healthyLinks = links.filter(l => l.status === 'healthy').length;
+        const brokenLinks = links.filter(l => l.status === 'broken').length;
         const externalLinks = links.filter(l => l.status === 'external').length;
         const avgResponseTime = links.reduce((sum, l) => sum + (l.responseTime || 0), 0) / totalLinks;
         setReport({
@@ -75,11 +75,11 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
     const getStatusIcon = (status) => {
 
         switch (status) {
-'
+
             case 'healthy':
-                return <CheckCircle className="w-4 h-4 text-green-400"/>;'
+                return <CheckCircle className="w-4 h-4 text-green-400"/>;
             case 'broken':"
-                return <AlertTriangle className="w-4 h-4 text-red-400"/>;'
+                return <AlertTriangle className="w-4 h-4 text-red-400"/>;
             case 'external':"
                 return <ExternalLink className="w-4 h-4 text-blue-400"/>;
             default:"
@@ -88,18 +88,18 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
     const getStatusColor = (status) => {
 
         switch (status) {
-'
+
             case 'healthy':'
-                return 'text-green-400';'
+                return 'text-green-400';
             case 'broken':'
-                return 'text-red-400';'
+                return 'text-red-400';
             case 'external':'
                 return 'text-blue-400';
             default:'
                 return 'text-yellow-400'}
     };
     const filteredLinks = linkStatuses.filter(link => {
-'
+
         if (selectedFilter === 'all')
             return true;
         return link.status === selectedFilter});
@@ -172,7 +172,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
 
               {/* Actions */}"
               <div className="flex items-center justify-between">"
-                <div className="flex space-x-2">'
+                <div className="flex space-x-2">
                   <button onClick={() => setSelectedFilter('all')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'all''
                 ? 'bg-cyan-500 text-white''`
                 : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}>
@@ -196,7 +196,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                 </div>
 "
                 <button onClick={startMonitoring} disabled={isMonitoring} className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2">"
-                  {isMonitoring ? (<RefreshCw className="w-4 h-4 animate-spin"/>) : (<Zap className="w-4 h-4"/>)}'
+                  {isMonitoring ? (<RefreshCw className="w-4 h-4 animate-spin"/>) : (<Zap className="w-4 h-4"/>)}
                   <span>{isMonitoring ? 'Checking...' : 'Check All Links'}</span>
                 </button>
               </div>
@@ -245,7 +245,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                                 </div>) }
                             </div>
                           </td>"
-                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">'
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
                             {link.parentPage || 'Unknown'}
                           </td>"
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">'`

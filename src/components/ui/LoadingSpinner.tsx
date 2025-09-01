@@ -1,28 +1,44 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
 import { cn } from '../../utils/cn';
-export default function LoadingSpinner({
-'
-  size = 'md','
-  color = 'primary','
-  className = '',
-  showText = false,'
-  text = 'Loading...'
-  className?: string}
 
+interface LoadingSpinnerProps {
+
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  color?: 'primary' | 'secondary' | 'white';
+  text?: string;
+
+export default function LoadingSpinner({
+
+  size = 'md',
+  color = 'primary',
+  className = '',
+  showText = false,
+  text = 'Loading...'
+=======
+
+type LoadingSpinnerProps = {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+  className?: string;
+  text?: string;
+};
+
+<<<<<<< HEAD
 export function LoadingSpinner({
-'
-  size = 'md', '
+
+  size = 'md',
   color = 'text-cyan-400',
-  text,'
+  text,
   className = '' 
 }: LoadingSpinnerProps) {
 
   const sizeClasses = {
-'
-    sm: 'w-8 h-8','
-    md: 'w-12 h-12','
-    lg: 'w-16 h-16','
+
+    sm: 'w-8 h-8',
+    md: 'w-12 h-12',
+    lg: 'w-16 h-16',
     xl: 'w-20 h-20'
   };
 
@@ -33,14 +49,15 @@ export function LoadingSpinner({
   };
 
   const textSizes = {
-'
-    sm: 'text-sm','
-    md: 'text-base','
-    lg: 'text-lg','
+
+    sm: 'text-sm',
+    md: 'text-base',
+    lg: 'text-lg',
     xl: 'text-xl'
   };
 
-  return()    <div className={`flex flex-col items-center justify-center ${className}`}>
+  return()
+    <div className={`flex flex-col items-center justify-center ${className}`}>
       <motion.div`
         className={`${sizeClasses[size]} border-2 border-gray-300 border-t-2 border-t-current rounded-full ${color}`}
         animate={{ rotate: 360 }}
@@ -50,7 +67,7 @@ export function LoadingSpinner({
           repeat: Infinity,
           ease: "linear"
         }}"
-        role="status""
+        role="status"
         aria-label="Loading"
       />
       
@@ -71,31 +88,32 @@ export function LoadingSpinner({
 
 // Enhanced loading spinner with dots
 export function LoadingDots({
-'
-  size = 'md','
+
+  size = 'md',
   color = 'text-cyan-400',
-  text,'
+  text,
   className = ''
 }: LoadingSpinnerProps) {
 
   const dotSizes = {
-'
-    sm: 'w-2 h-2','
-    md: 'w-3 h-3','
-    lg: 'w-4 h-4','
+
+    sm: 'w-2 h-2',
+    md: 'w-3 h-3',
+    lg: 'w-4 h-4',
     xl: 'w-5 h-5'
   };
 
   const textSizes = {
-'
-    sm: 'text-sm','
-    md: 'text-base','
-    lg: 'text-lg','
+
+    sm: 'text-sm',
+    md: 'text-base',
+    lg: 'text-lg',
     xl: 'text-xl'
   };
 
   return()`
-    <div className={`flex flex-col items-center justify-center ${className}`}>"      <div className="flex space-x-2">
+    <div className={`flex flex-col items-center justify-center ${className}`}>"
+      <div className="flex space-x-2">
         {[0: unknown, 1: unknown, 2].map((index: unknown (
           <motion.div
             key={index}`
@@ -129,12 +147,13 @@ export function LoadingDots({
       "
       <span className="sr-only">Loading...</span>
     </div>
-  )}
+  );
+}
 
 // Skeleton loading component
 export function LoadingSkeleton({
 
-  lines = 3,'
+  lines = 3,
   className = ''
 }: {
 
@@ -142,7 +161,8 @@ export function LoadingSkeleton({
   className?: string;
 }) {
 
-  return()`    <div className={`space-y-3 ${className}`}>
+  return()`
+    <div className={`space-y-3 ${className}`}>
       {Array.from({ length: lines }).map(_: unknown, index: unknown (
         <motion.div
           key={index}"
@@ -161,25 +181,26 @@ export function LoadingSkeleton({
 
 // Button loading state
 export function ButtonLoader({
-'
-  size = 'md','
+
+  size = 'md',
   className = '' 
 }: {
-'
+
   size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
 }) {
 
   return ('
     <div className={cn('inline-flex items-center', className)}>"
-      <LoadingSpinner size={size} color="white" />"      <span className="ml-2">Loading...</span>
+      <LoadingSpinner size={size} color="white" />"
+      <span className="ml-2">Loading...</span>
     </div>
   );
 
 // Page loading overlay
 export function PageLoaderOverlay({
 "
-  text = "Loading...",'
+  text = "Loading...",
   className = '' 
 }: {
 
@@ -190,14 +211,16 @@ export function PageLoaderOverlay({
   return()`
     <div className={`fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 ${className}`}>"
       <div className="bg-white rounded-lg p-6 shadow-xl">"
-        <LoadingSpinner size="lg" text={text} />      </div>
+        <LoadingSpinner size="lg" text={text} />
+      </div>
     </div>
-  )}
+  );
+}
 
 // Full page loading component
 export function FullPageLoader({
 "
-  text = "Loading Zion Tech Group...",'
+  text = "Loading Zion Tech Group...",
   className = ''
 }: {
 
@@ -206,7 +229,8 @@ export function FullPageLoader({
 }) {
 
   return()`
-    <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center ${className}`}>"      <div className="text-center text-white">
+    <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center ${className}`}>"
+      <div className="text-center text-white">
         <motion.div"
           className="w-32 h-32 border-4 border-gray-700 border-t-cyan-400 rounded-full mx-auto mb-6"
           animate={{ rotate: 360 }}
@@ -240,25 +264,26 @@ export function FullPageLoader({
 
 // Content loading placeholder
 export function ContentPlaceholder({
-'
-  className = '','
+
+  className = '',
   variant = 'default'
 }: {
 
-  className?: string;'
+  className?: string;
   variant?: 'default' | 'card' | 'list' | 'grid';
 }) {
 
   const variants = {
-'
-    default: 'space-y-4','
-    card: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6','
-    list: 'space-y-3','
+
+    default: 'space-y-4',
+    card: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6',
+    list: 'space-y-3',
     grid: 'grid grid-cols-2 md:grid-cols-4 gap-4'
   };
 
   return()`
-    <div className={`${variants[variant]} ${className}`}>'      {variant === 'card' ? (
+    <div className={`${variants[variant]} ${className}`}>
+      {variant === 'card' ? (
         // Card placeholders
         Array.from({ length: 6 }).map(_: unknown, index: unknown (
           <motion.div
@@ -272,7 +297,7 @@ export function ContentPlaceholder({
             <div className="h-3 bg-white/10 rounded mb-2 animate-pulse" />"
             <div className="h-3 bg-white/10 rounded w-2/3 animate-pulse" />
           </motion.div>;
-        ));'
+        ));
       ) : variant === 'list' ? (
         // List placeholders
         Array.from({ length: 5 }).map(_: unknown, index: unknown (
@@ -286,7 +311,7 @@ export function ContentPlaceholder({
             <div className="w-4 h-4 bg-white/10 rounded-full animate-pulse" />"
             <div className="h-3 bg-white/10 rounded flex-1 animate-pulse" />
           </motion.div>;
-        ))'
+        ))
       ) : variant === 'grid' ? (;
         // Grid placeholders
         Array.from({ length: 8 }).map(_: unknown, index: unknown (
@@ -318,11 +343,12 @@ export function ContentPlaceholder({
 
 // Enhanced app loading spinner for main app loading
 export function AppLoadingSpinner() {
-'
-  const icons = ['🤖', '☁️', '🔒', '💡'];
+
+  const icons = ['🤖',☁️',🔒',💡'];
 
   return ("
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"      <div className="relative">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
+      <div className="relative">
         {/* Main spinning ring */}"
         <div className="w-32 h-32 border-4 border-slate-700 rounded-full relative">"
           <div className="absolute inset-0 border-4 border-transparent border-t-cyan-400 rounded-full animate-spin"></div>'"
@@ -336,10 +362,10 @@ export function AppLoadingSpinner() {
             key={index}"
             className="absolute text-2xl"
             style={{
-'
-              top: '50%','
-              left: '50%','
-              transform: 'translate(-50%, -50%)'
+
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)
             }}
             animate={{
 
@@ -356,7 +382,7 @@ export function AppLoadingSpinner() {
 
             <span
               style={{
-'
+
                 position: 'absolute',`
                 top: `${Math.cos(index * Math.PI / 2) * 60}px`,`
                 left: `${Math.sin(index * Math.PI / 2) * 60}px`
@@ -403,3 +429,19 @@ export function AppLoadingSpinner() {
   );
 }
 '"`
+=======
+export default function LoadingSpinner({ size = 'md', className = '', text }: LoadingSpinnerProps) {
+  const sizeClasses: Record<string, string> = {
+    sm: 'w-6 h-6',
+    md: 'w-10 h-10',
+    lg: 'w-14 h-14',
+    xl: 'w-20 h-20'
+  };
+  return (
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      <div className={`${sizeClasses[size]} border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin`} aria-label="Loading" />
+      {text ? <p className="mt-3 text-sm text-gray-400">{text}</p> : null}
+    </div>
+  );
+}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954

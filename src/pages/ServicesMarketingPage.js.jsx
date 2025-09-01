@@ -1,6 +1,6 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { REVOLUTIONARY_2025_ADVANCED_SERVICES } from '../../data/revolutionary-2025-advanced-services';'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { REVOLUTIONARY_2025_ADVANCED_SERVICES } from '../../data/revolutionary-2025-advanced-services';
 import { EMERGING_TECH_2025_SPECIALIZED_SERVICES } from '../../data/emerging-tech-2025-specialized-services';
 const ServicesMarketingPage = () => {
   const allServices = [
@@ -8,24 +8,17 @@ const ServicesMarketingPage = () => {
     ...EMERGING_TECH_2025_SPECIALIZED_SERVICES,
   ];
   const serviceCategories = {
-'
-    'Micro SAAS': allServices.filter(s => s.category === 'Micro SAAS'),'
-    'IT Services': allServices.filter(s => s.category === 'IT Services'),'
-    'AI Solutions': allServices.filter(s => s.category === 'AI Solutions'),'
-    'Blockchain & Web3': allServices.filter('
+
+    'Micro SAAS': allServices.filter(s => s.category === 'Micro SAAS'),IT Services': allServices.filter(s => s.category === 'IT Services'),AI Solutions': allServices.filter(s => s.category === 'AI Solutions'),Blockchain & Web3': allServices.filter('
       s => s.category === 'Blockchain & Web3'
-    ),'
-    'IoT & Edge Computing': allServices.filter('
+    ),IoT & Edge Computing': allServices.filter('
       s => s.category === 'IoT & Edge Computing'
-    ),'
-    'Sustainable Technology': allServices.filter('
+    ),Sustainable Technology': allServices.filter('
       s => s.category === 'Sustainable Technology'
-    ),'
-    'Space Technology': allServices.filter('
+    ),Space Technology': allServices.filter('
       s => s.category === 'Space Technology'
-    ),'
-    Biotechnology: allServices.filter(s => s.category === 'Biotechnology'),'
-    'Quantum Technology': allServices.filter('
+    ),
+    Biotechnology: allServices.filter(s => s.category === 'Biotechnology'),Quantum Technology': allServices.filter('
       s => s.category === 'Quantum Technology'
     )};
   return()
@@ -72,13 +65,13 @@ const ServicesMarketingPage = () => {
           {/* Call to Action */}"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/revolutionary-services-2025""
+              to="/revolutionary-services-2025"
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Explore All Services
             </Link>
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-xl hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Call Now: +1 302 464 0950
@@ -94,7 +87,7 @@ const ServicesMarketingPage = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose Zion Tech Group?
             </h2>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We're not just another technology company. We're pioneers in
               revolutionary solutions that combine cutting-edge AI, quantum
               computing, and autonomous systems.
@@ -358,7 +351,7 @@ const ServicesMarketingPage = () => {
 "
             <div className="text-center">
               <a"
-                href="mailto:kleber@ziontechgroup.com?subject=ROI%20Calculation%20Request""
+                href="mailto:kleber@ziontechgroup.com?subject=ROI%20Calculation%20Request"
                 className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-xl hover:from-green-700 hover:to-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 Request Custom ROI Analysis
@@ -409,19 +402,19 @@ const ServicesMarketingPage = () => {
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-xl hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 📞 Call Now: +1 302 464 0950
               </a>
               <a"
-                href="mailto:kleber@ziontechgroup.com""
+                href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-xl hover:bg-white/10 transition-all duration-300"
               >
                 ✉️ Email Us
               </a>
               <Link"
-                to="/revolutionary-services-2025""
+                to="/revolutionary-services-2025"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Explore All Services

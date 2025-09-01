@@ -502,17 +502,17 @@ export const EXPANDED_SERVICES = [
 ];
 // Service categories for filtering;
 export const EXPANDED_SERVICE_CATEGORIES = [
-    { label: 'AI Development', value: 'ai-development' },'
-    { label: 'Cloud Services', value: 'cloud-services' },'
-    { label: 'DevOps', value: 'devops' },'
-    { label: 'Cybersecurity', value: 'cybersecurity' },'
-    { label: 'Data Analytics', value: 'data-analytics' },'
-    { label: 'Web Development', value: 'web-development' },'
-    { label: 'Mobile Development', value: 'mobile-development' },'
-    { label: 'Blockchain', value: 'blockchain' },'
-    { label: 'IoT', value: 'iot' },'
-    { label: 'Hardware', value: 'hardware' },'
-    { label: 'Business Automation', value: 'business-automation' },'
+    { label: 'AI Development', value: 'ai-development' },
+    { label: 'Cloud Services', value: 'cloud-services' },
+    { label: 'DevOps', value: 'devops' },
+    { label: 'Cybersecurity', value: 'cybersecurity' },
+    { label: 'Data Analytics', value: 'data-analytics' },
+    { label: 'Web Development', value: 'web-development' },
+    { label: 'Mobile Development', value: 'mobile-development' },
+    { label: 'Blockchain', value: 'blockchain' },
+    { label: 'IoT', value: 'iot' },
+    { label: 'Hardware', value: 'hardware' },
+    { label: 'Business Automation', value: 'business-automation' },
     { label: 'Business Solutions', value: 'business-solutions' }
 ];
 // Service subcategories for detailed filtering;

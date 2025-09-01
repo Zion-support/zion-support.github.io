@@ -1,6 +1,28 @@
-import React, { useState, useEffect, memo } from 'react.ts';'
-import { motion, AnimatePresence  } from 'framer-motion.ts';'
+import React, { useState, useEffect, memo } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
+<<<<<<< HEAD
+import { ArrowRight, 
+import { motion, AnimatePresence  } from 'framer - motion.ts';
+
+
+  Play, 
+  Star, 
+  CheckCircle, 
+  ChevronLeft, 
+  ChevronRight,
+  Zap,
+  Shield,
+  Globe,
+  Brain,
+  Rocket,
+  Target,
+  TrendingUp'
+ } from 'lucide-react';
+} from 'lucide-react';
+
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface HeroSlide {
   title: string;
   subtitle: string;
@@ -40,7 +62,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
     {
 "
       title: "Comprehensive IT Services","
-      subtitle: "End-to-end technology solutions for modern businesses",'"
+      subtitle: "End-to-end technology solutions for modern businesses","
       description: "From infrastructure management to digital transformation, we provide the expertise you need to succeed in today's competitive landscape.","
       image: "/images/hero-it-services.jpg","
       cta: "View Our Services","

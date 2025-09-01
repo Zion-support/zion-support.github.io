@@ -1,6 +1,66 @@
+<<<<<<< HEAD
+import React, { useState, useRef, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { ImageIcon, AlertCircle, Loader2  } from 'lucide-react.ts';
+
+interface OptimizedImageProps extends React.PropsWithChildren<{}> {
+
+  src: anystring;
+  alt: string;
+  width?: number | string;
+  height?: number | string;
+  className?: string;
+  priority?: boolean;
+  placeholder?: 'blur' | 'shimmer' | 'none';
+  fallbackSrc?: string;
+  onLoad?: () => void;
+  onError?: (error: anyError) => void;
+  lazy?: boolean;
+  quality?: number;
+  sizes?: string;
+  objectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down';
+  rounded?: boolean;
+  shadow?: boolean;
+  hover?: boolean;
+
+}
+
+export const OptimizedImage: React.FC<OptimizedImageProps> = ({
+
+  src,
+  alt,
+  width,
+  height,
+  className = '',
+  priority = false,
+  placeholder = 'shimmer',
+  fallbackSrc = '/images/placeholder.jpg',
+  onLoad,
+  onError,
+  lazy = true,
+  quality = 75,
+  sizes = '100vw',
+  objectFit = 'cover',
+  rounded = false,
+  shadow = false,
+  hover = false;
+}) => {
+
+  const [imageSrc, setImageSrc] = useState<any>(src);
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
+  const [isIntersecting, setIsIntersecting] = useState(priority);
+  const [isLoaded, setIsLoaded] = useState(false);
+  
+  const imgRef = useRef < HTMLImageElement> (null) ;
+  const observerRef = useRef < IntersectionObserver | null> (null) ;
+
+  // Intersection Observer for lazy loading
+=======
 import React, { useState, useRef, useEffect } from 'react.ts';'
 import { motion, AnimatePresence  } from 'framer-motion.ts';'
 import { ImageIcon, AlertCircle, Loader2  } from 'lucide-react.ts';  // Intersection Observer for lazy loading
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   useEffect ( () => {
     if (priority || !lazy) {
 
@@ -18,8 +78,14 @@ import { ImageIcon, AlertCircle, Loader2  } from 'lucide-react.ts';  // Intersec
           observerRef.current?.disconnect()}
       },
       {
+<<<<<<< HEAD
+
+        rootMargin: any'50px',;
+        threshold: 0.1
+=======
 '
         rootMargin: any'50px',;        threshold: 0.1
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       }) ;
 
     observerRef.current.observe (imgRef.current) ;
@@ -64,18 +130,18 @@ import { ImageIcon, AlertCircle, Loader2  } from 'lucide-react.ts';  // Intersec
 
   // Generate optimized src with quality parameter
   const getOptimizedSrc = (src: anystring)  => {
-'
+
     if (src.startsWith('data:') || src.startsWith('blob:')) {
 
       return src;    }
     
     // Add quality parameter for external images if possible
     try {
-      const url = new URL(src);'
+      const url = new URL(src);
       if (url.searchParams.has('quality')) {
 
         return src;
-      }'
+      }
       url.searchParams.set('quality', quality.toString());
       return url.toString();
     } catch {
@@ -88,14 +154,14 @@ import { ImageIcon, AlertCircle, Loader2  } from 'lucide-react.ts';  // Intersec
 
   // Base classes
   const baseClasses = ['
-    'transition-all duration-300','
-    rounded ? 'rounded-lg' : '','
-    shadow ? 'shadow-lg' : '','
-    hover ? 'hover:scale-105 hover:shadow-xl' : '','
-    objectFit === 'cover' ? 'object-cover' : '','
-    objectFit === 'contain' ? 'object-contain' : '','
-    objectFit === 'fill' ? 'object-fill' : '','
-    objectFit === 'none' ? 'object-none' : '','
+    'transition-all duration-300',
+    rounded ? 'rounded-lg' : '',
+    shadow ? 'shadow-lg' : '',
+    hover ? 'hover:scale-105 hover:shadow-xl' : '',
+    objectFit === 'cover' ? 'object-cover' : '',
+    objectFit === 'contain' ? 'object-contain' : '',
+    objectFit === 'fill' ? 'object-fill' : '',
+    objectFit === 'none' ? 'object-none' : '',
     objectFit === 'scale-down' ? 'object-scale-down' : '',
     className'
   ].filter(Boolean).join(' ');
@@ -142,7 +208,7 @@ import { ImageIcon, AlertCircle, Loader2  } from 'lucide-react.ts';  // Intersec
           </motion.div>) }
       </AnimatePresence>
 
-      {/* Placeholder */}'
+      {/* Placeholder */}
       {placeholder === 'shimmer' && !isLoaded && ("
         <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700 animate-pulse" />
       )}
@@ -152,8 +218,8 @@ import { ImageIcon, AlertCircle, Loader2  } from 'lucide-react.ts';  // Intersec
         ref={imgRef}
         src={optimizedSrc}
         alt={alt}
-        className={baseClasses}'
-        style={{ width: '100%', height: '100%' }}'
+        className={baseClasses}
+        style={{ width: '100%', height: '100%' }}
         loading={lazy ? 'lazy' : 'eager'}
         sizes={sizes}
         onLoad={handleImageLoad}
@@ -172,17 +238,17 @@ import { ImageIcon, AlertCircle, Loader2  } from 'lucide-react.ts';  // Intersec
   )};
 
 // Specialized image components'
-export const AvatarImage: React.FC<Omit<OptimizedImageProps, 'rounded' | 'objectFit'> & { size?: 'sm' | 'md' | 'lg' | 'xl' }> = ({
-'
+export const AvatarImage: React.FC<Omit<OptimizedImageProps,rounded' | 'objectFit'> & { size?: 'sm' | 'md' | 'lg' | 'xl' }> = ({
+
   size = 'md', 
   ...props 
 }) => {
 
   const sizeClasses = {
-'
-    sm: 'w-8 h-8','
-    md: 'w-12 h-12','
-    lg: 'w-16 h-16','
+
+    sm: 'w-8 h-8',
+    md: 'w-12 h-12',
+    lg: 'w-16 h-16',
     xl: 'w-24 h-24'
   };
 

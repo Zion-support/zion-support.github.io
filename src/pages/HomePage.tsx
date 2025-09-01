@@ -1,5 +1,5 @@
-import React, { Suspense, lazy } from 'react.ts';'
-import { Link } from 'react-router-dom.ts';'
+import React, { Suspense, lazy } from 'react.ts';
+import { Link } from 'react-router-dom.ts';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -34,12 +34,12 @@ import {
   GraduationCap,
   HelpCircle,
   Search,
-  Menu,'
+  Menu,
   X} from 'lucide-react.ts';
 
 // Lazy load components for better performance'
-const LazyTestimonials = lazy(() => import('../components/Testimonials'));'
-const LazyServicesGrid = lazy(() => import('../components/ServicesGrid'));'
+const LazyTestimonials = lazy(() => import('../components/Testimonials'));
+const LazyServicesGrid = lazy(() => import('../components/ServicesGrid'));
 const LazyStatsSection = lazy(() => import('../components/StatsSection'));
 
 // Loading skeleton components
@@ -63,25 +63,25 @@ export function HomePage(...args: any[]): any {
   const heroFeatures = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       text: 'AI-Powered Solutions',
       description:'
         'Transform your business with cutting-edge artificial intelligence'},
     {
 
-      icon: Atom,'
+      icon: Atom,
       text: 'Quantum Computing',
       description:'
         'Harness the power of quantum mechanics for unprecedented computational capabilities'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       text: 'Advanced Security',
       description:'
         'Protect your digital assets with AI-powered security solutions'},
     {
 
-      icon: Rocket,'
+      icon: Rocket,
       text: 'Space Technology',
       description:'
         'Pioneering innovations in space exploration and satellite technology'},
@@ -89,87 +89,75 @@ export function HomePage(...args: any[]): any {
 
   const services = [
     {
-'
+
       title: 'AI Solutions',
       description:'
         'Transform your business with cutting-edge artificial intelligence',
-      icon: Brain,'
+      icon: Brain,
       href: '/services/ai-solutions',
       features: ['
-        'Machine Learning','
-        'Natural Language Processing','
-        'Computer Vision','
-        'Predictive Analytics',
-      ],'
+        'Machine Learning',Natural Language Processing',Computer Vision',Predictive Analytics',
+      ],
       color: 'from-cyan-500 to-blue-600'},
     {
-'
+
       title: 'Quantum Computing',
       description:'
         'Harness the power of quantum mechanics for unprecedented computational capabilities',
-      icon: Atom,'
+      icon: Atom,
       href: '/services/quantum-computing',
       features: ['
-        'Quantum Algorithms','
-        'Quantum AI Hybrid','
-        'Quantum Security','
-        'Quantum Optimization',
-      ],'
+        'Quantum Algorithms',Quantum AI Hybrid',Quantum Security',Quantum Optimization',
+      ],
       color: 'from-purple-500 to-pink-600'},
     {
-'
+
       title: 'Cybersecurity',
       description:'
         'Protect your digital assets with AI-powered security solutions',
-      icon: Shield,'
+      icon: Shield,
       href: '/services/cybersecurity',
       features: ['
-        'Zero Trust Security','
-        'AI Threat Detection','
-        'Security Headers','
-        'Compliance Management',
-      ],'
+        'Zero Trust Security',AI Threat Detection',Security Headers',Compliance Management',
+      ],
       color: 'from-green-500 to-emerald-600'},
     {
-'
+
       title: 'Digital Transformation',
       description:'
         'Modernize your infrastructure and processes for the digital age',
-      icon: Rocket,'
+      icon: Rocket,
       href: '/services/digital-transformation',
       features: ['
-        'Cloud Migration','
-        'DevOps Automation','
-        'API Development','
-        'Data Analytics',
-      ],'
+        'Cloud Migration',DevOps Automation',API Development',Data Analytics',
+      ],
       color: 'from-orange-500 to-red-600'},
   ];
 
   const stats = [
     {
-'
-      number: '1000+','
+
+      number: '1000+',
       label: 'Companies Served',
-      icon: Building,'
+      icon: Building,
       description: 'Trusted by leading organizations worldwide'},
     {
-'
-      number: '99.9%','
+
+      number: '99.9%',
       label: 'Uptime Guarantee',
-      icon: Shield,'
+      icon: Shield,
       description: 'Reliable infrastructure you can count on'},
     {
-'
-      number: '24/7','
+
+      number: '24/7',
       label: 'Support Available',
-      icon: Users,'
+      icon: Users,
       description: 'Round-the-clock expert assistance'},
     {
-'
-      number: 'ISO 27001','
+
+      number: 'ISO 27001',
       label: 'Security Certified',
-      icon: Award,'
+      icon: Award,
       description: 'Enterprise-grade security standards'},
   ];
 
@@ -177,9 +165,9 @@ export function HomePage(...args: any[]): any {
     {
 
       quote:'
-        'Zion Tech Group transformed our business with their AI solutions. The results exceeded our expectations.','
-      author: 'Sarah Johnson','
-      role: 'CTO, TechCorp','
+        'Zion Tech Group transformed our business with their AI solutions. The results exceeded our expectations.',
+      author: 'Sarah Johnson',
+      role: 'CTO, TechCorp',
       company: 'TechCorp Inc.',
       rating: 5,
       avatar:'
@@ -187,9 +175,9 @@ export function HomePage(...args: any[]): any {
     {
 
       quote:'
-        'Their quantum computing expertise gave us a competitive edge in the market. Highly recommended!','
-      author: 'Michael Chen','
-      role: 'VP Engineering','
+        'Their quantum computing expertise gave us a competitive edge in the market. Highly recommended!',
+      author: 'Michael Chen',
+      role: 'VP Engineering',
       company: 'Quantum Solutions',
       rating: 5,
       avatar:'
@@ -197,9 +185,9 @@ export function HomePage(...args: any[]): any {
     {
 
       quote:'
-        'The cybersecurity platform is robust and reliable. Our data has never been safer.','
-      author: 'Emily Rodriguez','
-      role: 'Security Director','
+        'The cybersecurity platform is robust and reliable. Our data has never been safer.',
+      author: 'Emily Rodriguez',
+      role: 'Security Director',
       company: 'SecureNet',
       rating: 5,
       avatar:'
@@ -246,15 +234,15 @@ export function HomePage(...args: any[]): any {
             {/* CTA Buttons */}"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
-                className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900""
+                to="/contact"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900"
                 aria-label="Get started with Zion Tech Group"
               >
                 <span>Get Started</span>"
                 <ArrowRight className="w-5 h-5" />              </Link>
               <Link"
-                to="/services""
-                className="inline-flex items-center space-x-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg hover:bg-white/20 transition-all duration-200 font-semibold text-lg border border-white/20 hover:border-white/40 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-gray-900""
+                to="/services"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg hover:bg-white/20 transition-all duration-200 font-semibold text-lg border border-white/20 hover:border-white/40 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-gray-900"
                 aria-label="Explore our services"
               >
                 <span>Explore Services</span>"
@@ -320,8 +308,8 @@ export function HomePage(...args: any[]): any {
 "
           <div className="text-center mt-12">
             <Link"
-              to="/services""
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-semibold focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900""
+              to="/services"
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-semibold focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900"
               aria-label="View all our services"
             >
               <span>View All Services</span>"
@@ -365,13 +353,13 @@ export function HomePage(...args: any[]): any {
 "
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/new-services-2025""
+              to="/new-services-2025"
               className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               <span>Explore New Services</span>"
               <ArrowRight className="w-5 h-5" />            </Link>
             <Link"
-              to="/contact""
+              to="/contact"
               className="inline-flex items-center space-x-2 px-8 py-4 bg-transparent text-white rounded-lg hover:bg-white/10 transition-all duration-200 font-semibold text-lg border-2 border-white"
             >
               <span > Get Early Access</span>
@@ -403,15 +391,15 @@ export function HomePage(...args: any[]): any {
 "
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-cyan-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-cyan-600""
+              to="/contact"
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-cyan-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-cyan-600"
               aria-label="Get started today with Zion Tech Group"
             >
               <span>Get Started Today</span>"
               <ArrowRight className="w-5 h-5" />            </Link>
             <Link"
-              to="/request-quote""
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-transparent text-white rounded-lg hover:bg-white/10 transition-all duration-200 font-semibold text-lg border-2 border-white hover:border-white/80 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-cyan-600""
+              to="/request-quote"
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-transparent text-white rounded-lg hover:bg-white/10 transition-all duration-200 font-semibold text-lg border-2 border-white hover:border-white/80 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-cyan-600"
               aria-label="Request a custom quote"
             >
               <span>Request a Quote</span>"

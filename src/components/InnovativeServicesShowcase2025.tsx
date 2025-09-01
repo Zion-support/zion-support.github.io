@@ -1,19 +1,73 @@
-import React, { useState, useEffect } from 'react.ts';'
+import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
+<<<<<<< HEAD
+import { Brain, 
+import { motion, AnimatePresence  } from 'framer - motion.ts';
+
+
+  Shield, 
+  Cloud, 
+  Rocket, 
+  BarChart3, 
+  Briefcase,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  Search,
+  Filter,
+  Grid,
+  List,
+  Zap,
+  Lock,
+  Database,
+  Users,
+  TrendingUp,
+  Globe,
+  Cpu,
+  Heart,
+  ShoppingCart,
+  BookOpen,
+  MessageCircle,
+  HelpCircle,
+  DollarSign,
+  Gauge,
+  Workflow,
+  Atom,
+  Target,
+  Award,
+  Code,
+  Truck,
+  Building,
+  PenTool,
+  Eye,
+  Server,
+  Smartphone,
+  Network,
+  Clock,
+  X'
+ } from 'lucide-react.ts';
+import { INNOVATIVE_SERVICES_2025, INNOVATIVE_SERVICE_CATEGORIES_2025, INNOVATIVE_SERVICE_SUBCATEGORIES_2025, INNOVATIVE_PRICING_TIERS_2025, INNOVATIVE_CONTACT_INFO_2025, INNOVATIVE_SERVICE_GUARANTEES_2025  } from '@/data/innovativeServices2025';
+
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export default function InnovativeServicesShowcase2025(...args: any[]): any {
-'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [viewMode, setViewMode] = useState<any>('grid');'
-  const [sortBy, setSortBy] = useState<any>('name');'
+
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [sortBy, setSortBy] = useState<any>('name');
   const [sortOrder, setSortOrder] = useState<any>('desc');
   const [selectedService, setSelectedService] = useState<any>(null);
   const [showModal, setShowModal] = useState(false);
-'
+
   const categories = ['all', ...Object.keys(INNOVATIVE_SERVICE_CATEGORIES_2025)];
 
   const filteredServices = INNOVATIVE_SERVICES_2025.filter(service => {
-'
+
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
                          service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
@@ -28,19 +82,19 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
 
   
     switch (sortBy) {
-'
+
       case 'price':
         aValue = a.price;
         bValue = b.price;
-        break;'
+        break;
       case 'rating':
         aValue = a.rating;
         bValue = b.rating;
-        break;'
+        break;
       case 'aiScore':
         aValue = a.aiScore;
         bValue = b.aiScore;
-        break;'
+        break;
       case 'name':
         aValue = a.title;
         bValue = b.title;
@@ -49,7 +103,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
         aValue = a.title;
         bValue = b.title;
     }
-'
+
     if (sortOrder === 'asc') {
 
       return aValue > bValue ? 1 : -1;
@@ -60,7 +114,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
   }) ;
 
   const getCategoryIcon = (category: anystring)  => {
-'
+
     if (category === 'all') return <Rocket className="w-6 h-6" />;
     return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.icon ? "
       <span className="text-2xl">{INNOVATIVE_SERVICE_CATEGORIES_2025[category].icon}</span> : "
@@ -68,8 +122,8 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
   };
 
   const getCategoryColor = (category: anystring)  => {
-'
-    if (category === 'all') return 'from-cyan-500 to-blue-500';'
+
+    if (category === 'all') return 'from-cyan-500 to-blue-500';
     return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.color || 'from-gray-500 to-slate-500';
   };
 
@@ -169,7 +223,12 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
             <div className="relative flex-1 max-w-md">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input"
+<<<<<<< HEAD
+                type="text"
+                placeholder="Search services..."
+=======
                 type="text""                placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
@@ -204,7 +263,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                 <button'
                   onClick={() => setViewMode('grid')}`
                   className={`p-2 rounded-md transition-all duration-300 ${
-'
+
                     viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'`
                   }`}
                 >"
@@ -212,7 +271,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                                   <button'
                     onClick={() => setViewMode('list')}`
                     className={`p-2 rounded-md transition-all duration-300 ${
-'
+
                       viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'`
                     }`}
                   >"
@@ -222,7 +281,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
               <select`
                 value={`${sortBy}-${sortOrder}`}
                 onChange={(e) => {
-'
+
                   const [newSortBy, newSortOrder] = e.target.value.split('-');
                   setSortBy(newSortBy as );
                   setSortOrder(newSortOrder as );
@@ -239,7 +298,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
           </div>
         </div>
 
-        {/* Services Grid/List */}'
+        {/* Services Grid/List */}
         <div className={viewMode === 'grid' ? 'futuristic-grid' : 'space-y-4'}>
           <AnimatePresence>
             {sortedServices.map ( (service, index) => (<motion.div
@@ -247,9 +306,9 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -50 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}'
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={viewMode === 'grid' ? 'futuristic-card p-6' : 'futuristic-card p-6'}
-              >'
+              >
                 {viewMode === 'grid' ? (
                   // Grid View"
                   <div className="h-full flex flex-col">"
@@ -466,7 +525,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}"
                           className="w-full futuristic-btn py-3"'`
-                          onClick={() => window.open(`mailto:${INNOVATIVE_CONTACT_INFO_2025.email}?subject=Inquiry about ${selectedService.title}`, '_blank')}
+                          onClick={() => window.open(`mailto:${INNOVATIVE_CONTACT_INFO_2025.email}?subject=Inquiry about ${selectedService.title}`,_blank')}
                         >
                           Get Started
                         </motion.button>
@@ -475,7 +534,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}"
                           className="w-full px-6 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"'`
-                          onClick={() => window.open(`tel:${INNOVATIVE_CONTACT_INFO_2025.phone}`, '_blank')}
+                          onClick={() => window.open(`tel:${INNOVATIVE_CONTACT_INFO_2025.phone}`,_blank')}
                         >
                           Call for Quote
                         </motion.button>

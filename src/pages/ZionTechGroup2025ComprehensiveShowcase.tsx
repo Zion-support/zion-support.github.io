@@ -1,9 +1,38 @@
-import React, { useState, useMemo } from 'react.ts';'
+import React, { useState, useMemo } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
+<<<<<<< HEAD
+import { Search, 
+import { zionTechGroup2025Services, ZionService, getServicesByCategory, getServicesByPriceRange, searchServices  } from '../data / zionTechGroup2025ComprehensiveServices';
+
+
+  Filter, 
+  Star, 
+  Shield, 
+  Cloud, 
+  Brain, 
+  Zap, 
+  Globe,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  ChevronDown,
+  CheckCircle,
+  TrendingUp,
+  Users,
+  Target,
+  Lightbulb'
+ } from 'lucide-react.ts';
+import { zionTechGroup2025Services, ZionService, getServicesByCategory, getServicesByPriceRange, searchServices  } from '../data/zionTechGroup2025ComprehensiveServices';
+
+const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
+  const [searchQuery, setSearchQuery] = useState('');
+=======
 const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
   const [searchQuery, setSearchQuery] = useState('');'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
-  const [priceRange, setPriceRange] = useState<any>([0, 10000]);'
+  const [priceRange, setPriceRange] = useState<any>([0, 10000]);
   const [sortBy, setSortBy] = useState<any>('name');
   const [expandedService, setExpandedService] = useState<any>(null);
 
@@ -16,7 +45,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
     }
     // Apply category filter'
     if (selectedCategory !== 'all') {
-'
+
       services = getServicesByCategory(selectedCategory as ZionService['category']);
     }
     // Apply price filter
@@ -24,9 +53,9 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
 
     // Apply sorting
     services = [...services].sort((a, b) => {;
-      switch (sortBy) {;'
-        case 'price':;'
-          return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));'
+      switch (sortBy) {;
+        case 'price':;
+          return parseInt(a.price.replace(/[^0-9]/g,)) - parseInt(b.price.replace(/[^0-9]/g,));
         case 'category':;
           return a.category.localeCompare (b.category) ;
         default:;
@@ -38,12 +67,12 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
   }, [searchQuery, selectedCategory, priceRange, sortBy]) ;
 
   const categories = ['
-    { id: 'all', name: 'All Services', icon: Globe, color: 'bg-gray-500' },;'
-    { id: 'AI Solutions', name: 'AI Solutions', icon: Brain, color: 'bg-purple-500' },;'
-    { id: 'Micro SaaS', name: 'Micro SaaS', icon: Zap, color: 'bg-blue-500' },;'
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'bg-red-500' },;'
-    { id: 'Cloud & DevOps', name: 'Cloud & DevOps', icon: Cloud, color: 'bg-green-500' },;'
-    { id: 'Industry Specific', name: 'Industry Specific', icon: Target, color: 'bg-orange-500' },;'
+    { id: 'all', name: 'All Services', icon: Globe, color: 'bg-gray-500' },;
+    { id: 'AI Solutions', name: 'AI Solutions', icon: Brain, color: 'bg-purple-500' },;
+    { id: 'Micro SaaS', name: 'Micro SaaS', icon: Zap, color: 'bg-blue-500' },;
+    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'bg-red-500' },;
+    { id: 'Cloud & DevOps', name: 'Cloud & DevOps', icon: Cloud, color: 'bg-green-500' },;
+    { id: 'Industry Specific', name: 'Industry Specific', icon: Target, color: 'bg-orange-500' },;
     { id: 'Emerging Tech', name: 'Emerging Tech', icon: Lightbulb, color: 'bg-indigo-500' };
   ];
 
@@ -58,7 +87,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
   };
 
   const getCategoryColor = (category: anystring)  => {;
-    const categoryData = categories.find(cat => cat.id === category);'
+    const categoryData = categories.find(cat => cat.id === category);
     return categoryData?.color || 'bg-gray-500';
   };
   return ("
@@ -171,7 +200,12 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
+<<<<<<< HEAD
+                  type="text"
+                  placeholder="Search services..."
+=======
                   type="text""                  placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -196,7 +230,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
               {/* Price Range */}"
               <div className="flex space-x-2">
                 <input"
-                  type="number""
+                  type="number"
                   placeholder="Min Price"
                   value={priceRange[0]}
                   onChange = {
@@ -213,7 +247,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
                   className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
                 <input"
-                  type="number""
+                  type="number"
                   placeholder="Max Price"
                   value={priceRange[1]}
                   onChange = {
@@ -234,7 +268,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
               {/* Sort */}"
               <div className="relative">
                 <select
-                  value={sortBy}'
+                  value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'category')}"
                   className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none"
                 >"
@@ -350,7 +384,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
                   <button
                     onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}"
                     className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:transform hover:scale-105 mb-4"
-                  >'
+                  >
                     {expandedService === service.id ? 'Show Less' : service.ctaLabel}
                   </button>
 
@@ -379,7 +413,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
 }}
                         animate = {
 
-  { opacity: 1,'
+  { opacity: 1,
   height: 'auto' 
 
 }}
@@ -444,8 +478,8 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
                             <div className="flex items-center space-x-2">"
                               <ExternalLink className="w-4 h-4 text-purple-400" />                              <a 
                                 href={service.contactInfo.website} "
-                                target="_blank" "
-                                rel="noopener noreferrer""
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="text-blue-400 hover:text-blue-300 underline"
                               >
                                 {service.contactInfo.website}
@@ -473,8 +507,8 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
   ;
   ;
   ;
-  () => {;'
-                  setSearchQuery('');'
+  () => {;
+                  setSearchQuery('');
                   setSelectedCategory('all');
                   setPriceRange([0,
   10000]);
@@ -500,19 +534,19 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>"
-            <p className="text-xl text-gray-300 mb-8">'
+            <p className="text-xl text-gray-300 mb-8">
               Let's discuss how our innovative services can drive your business forward. 
               Contact us today for a personalized consultation and demo.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
               >"
                 <Phone className="w-5 h-5" />                <span>Call Now: +1 302 464 0950</span>
               </a>
               <a"
-                href="mailto:kleber@ziontechgroup.com""
+                href="mailto:kleber@ziontechgroup.com"
                 className="flex items-center justify-center space-x-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
               >"
                 <Mail className="w-5 h-5" />                <span>Email Us</span>

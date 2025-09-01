@@ -68,7 +68,7 @@ export default function ITOnsiteServicesPage() {
 
           {/* How It Works Section */}
           <ServiceProcessSteps />
-'
+
           {/* What's Included Section */}
           <ServiceIncludes />
 

@@ -1,5 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
 
@@ -11,45 +11,45 @@ import {
   CheckCircle,
   Star,
   ArrowRight,
-  Cpu,'
-  Database} from 'lucide-react';'
+  Cpu,
+  Database} from 'lucide-react';
 import { SEO } from '../components/SEO';
 const testimonials = [
   {
 
     content:'
-      "Zion's digital transformation approach was game-changing. They didn't just implement technology - they transformed our entire business model.",'
-    name: 'Carlos Rodriguez','
+      "Zion's digital transformation approach was game-changing. They didn't just implement technology - they transformed our entire business model.",
+    name: 'Carlos Rodriguez',
     role: 'CEO, InnovateCorp',
     rating: 5},
   {
 
     content:'
-      'The process automation they implemented saved us 40 hours per week and improved our customer satisfaction scores significantly.','
-    name: 'Lisa Chang','
+      'The process automation they implemented saved us 40 hours per week and improved our customer satisfaction scores significantly.',
+    name: 'Lisa Chang',
     role: 'COO, TechFlow Solutions',
     rating: 5},
   {
 
     content:'"
-      "Working with Zion transformed our comp culture. We're now more agile, data-driven, and customer-focused than ever before.",'
-    name: 'Marcus Johnson','
+      "Working with Zion transformed our comp culture. We're now more agile, data-driven, and customer-focused than ever before.",
+    name: 'Marcus Johnson',
     role: 'CTO, DigitalFirst Inc',
     rating: 5},
 ];
 const stats = ['
-  { label: 'Transformations Completed', value: '75+', icon: Rocket },'
-  { label: 'Average ROI', value: '300%', icon: TrendingUp },'
-  { label: 'Process Efficiency Gain', value: '60%', icon: Zap },'
+  { label: 'Transformations Completed', value: '75+', icon: Rocket },
+  { label: 'Average ROI', value: '300%', icon: TrendingUp },
+  { label: 'Process Efficiency Gain', value: '60%', icon: Zap },
   { label: 'Customer Satisfaction', value: '95%', icon: Users },
 ];
 export default function DigitalTransformation() {
   return ("
     <div className="min-h-screen bg-background relative overflow-hidden">
       <SEO"
-        title="Digital Transformation Services - Zion Tech Group""
-        description="End-to-end business modernization strategies and implementation services that drive innovation and competitive advantage.""
-        keywords="digital transformation, business modernization, process automation, technology modernization, change management""
+        title="Digital Transformation Services - Zion Tech Group"
+        description="End-to-end business modernization strategies and implementation services that drive innovation and competitive advantage."
+        keywords="digital transformation, business modernization, process automation, technology modernization, change management"
         canonical="https://ziontechgroup.com/digital-transformation"
       />
       {/* Hero Section */}"
@@ -81,7 +81,7 @@ export default function DigitalTransformation() {
                 Start Your Transformation
               </motion.button>
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
               >
                 Free Assessment
@@ -174,7 +174,7 @@ export default function DigitalTransformation() {
                     ))}
                   </ul>
                   <Link"
-                    to="/contact""
+                    to="/contact"
                     className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors group-hover:translate-x-1 transition-transform duration-300"
                   >
                     Learn More"
@@ -249,25 +249,25 @@ export default function DigitalTransformation() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-'
+
                 title: 'Operational Efficiency',
                 description:'
                   'Streamlined processes and automation reduce costs and improve productivity by up to 60%.',
                 icon: Zap},
               {
-'
+
                 title: 'Customer Experience',
                 description:'
                   'Enhanced digital touchpoints and personalized experiences increase customer satisfaction and loyalty.',
                 icon: Users},
               {
-'
+
                 title: 'Data-Driven Insights',
                 description:'
                   'Real-time analytics and business intelligence enable informed decision-making and strategic planning.',
                 icon: TrendingUp},
               {
-'
+
                 title: 'Competitive Advantage',
                 description:'
                   'Innovation and agility position your business ahead of competitors in the digital marketplace.',
@@ -314,7 +314,7 @@ export default function DigitalTransformation() {
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               Success Stories
             </h2>"
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">'
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               See how we've helped organizations transform their business
               through digital innovation.
             </p>
@@ -378,7 +378,7 @@ export default function DigitalTransformation() {
                   Start Transformation
                 </motion.button>
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
                 >
                   Schedule Consultation

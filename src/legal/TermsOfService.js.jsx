@@ -10,7 +10,7 @@ export default function TermsOfService() {
           <h2 className="text-xl font-semibold text-white mb-3">
             1. Acceptance of Terms
           </h2>
-          <p>'
+          <p>
             By accessing and using Zion Tech Group's services, you accept and
             agree to be bound by the terms and provision of this agreement.
           </p>
@@ -31,7 +31,7 @@ export default function TermsOfService() {
           <h2 className="text-xl font-semibold text-white mb-3">
             3. Disclaimer
           </h2>
-          <p>'
+          <p>
             The materials on Zion Tech Group's website are provided on an 'as'
             is' basis. Zion Tech Group makes no warranties, expressed or
             implied, and hereby disclaims and negates all other warranties
@@ -61,7 +61,7 @@ export default function TermsOfService() {
           <h2 className="text-xl font-semibold text-white mb-3">
             5. Revisions and Errata
           </h2>
-          <p>'
+          <p>
             The materials appearing on Zion Tech Group's website could include
             technical, typographical, or photographic errors. Zion Tech Group
             does not warrant that of the materials on its website are accurate,

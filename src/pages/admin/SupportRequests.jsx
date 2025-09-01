@@ -126,8 +126,8 @@ export default function SupportRequests() {
             return false}
         return true});
     // Count by status for the summary dashboard
-    const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;'
-    const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;'
+    const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
+    const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
     const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
     const totalCount = MOCK_SUPPORT_REQUESTS.length;
     const resetFilters = () => {
@@ -269,7 +269,7 @@ export default function SupportRequests() {
                         <TableCell className="font-medium">{request.id}</TableCell>
                         <TableCell>{request.user}</TableCell>"
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>
-                        <TableCell>'
+                        <TableCell>
                           <Badge variant={request.status === 'open''
                         ? 'default''
                         : request.status === 'in-progress''
@@ -278,7 +278,7 @@ export default function SupportRequests() {
                             {request.status}
                           </Badge>
                         </TableCell>
-                        <TableCell>'
+                        <TableCell>
                           <Badge variant={request.priority === 'high''
                         ? 'destructive''
                         : request.priority === 'medium''

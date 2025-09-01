@@ -1,60 +1,59 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIIdentityManagement() {
   const features = [
-    'AI-powered identity management optimization','
-    'Intelligent authentication and authorization',;'
-    'Automated identity verification and validation',;'
-    'Predictive analytics for identity threats',;'
-    'Smart compliance and governance monitoring',;'
-    'AI-driven identity automation and orchestration',;'
-    'Real-time identity analytics and insights',;'
+    'AI-powered identity management optimization',Intelligent authentication and authorization',;
+    'Automated identity verification and validation',;
+    'Predictive analytics for identity threats',;
+    'Smart compliance and governance monitoring',;
+    'AI-driven identity automation and orchestration',;
+    'Real-time identity analytics and insights',;
     'Custom AI models for identity applications';
   ];
 
   const tiers = [
     {
-'
-      name: 'Developer','
-      price: '$299/mo','
-      details: ['Up to 1,000 users', 'Basic AI features', 'Standard monitoring', 'Email support']
+
+      name: 'Developer',
+      price: '$299/mo',
+      details: ['Up to 1,000 users',Basic AI features',Standard monitoring',Email support']
     },
     {
-'
-      name: 'Business', '
-      price: '$799/mo', '
-      details: ['Up to 10,000 users', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
+
+      name: 'Business',
+      price: '$799/mo',
+      details: ['Up to 10,000 users',Advanced AI features',Enhanced monitoring',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,999/mo', ;'
-      details: ['Unlimited users', 'Custom AI models', 'Full identity suite', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$1,999/mo', ;
+      details: ['Unlimited users',Custom AI models',Full identity suite',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Identity management optimization',;'
-    'Authentication and authorization',;'
-    'Identity verification and validation',;'
-    'Compliance and governance monitoring',;'
-    'Identity automation and orchestration',;'
+  const useCases = [;
+    'Identity management optimization',;
+    'Authentication and authorization',;
+    'Identity verification and validation',;
+    'Compliance and governance monitoring',;
+    'Identity automation and orchestration',;
     'Identity scaling and management';
   ];
 
-  const benefits = [;'
-    'Improve identity management performance by 50-80%',;'
-    'Reduce authentication time by 40-70%',;'
-    'Cut identity operational costs by 35-65%',;'
-    'Enhance identity security reliability and scalability',;'
-    'Optimize resource utilization',;'
+  const benefits = [;
+    'Improve identity management performance by 50-80%',;
+    'Reduce authentication time by 40-70%',;
+    'Cut identity operational costs by 35-65%',;
+    'Enhance identity security reliability and scalability',;
+    'Optimize resource utilization',;
     'Scale identity operations efficiently';
   ];
 
-  const industries = [;'
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
     'Technology & SaaS';
   ];
 
@@ -107,8 +106,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['50-80% performance improvement', '40-70% authentication time reduction', '35-65% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['50-80% performance improvement',40-70% authentication time reduction',35-65% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-indigo-600 mb-3" />"              <div className="text-gray-900 font-semibold">{t}</div>
             </div>

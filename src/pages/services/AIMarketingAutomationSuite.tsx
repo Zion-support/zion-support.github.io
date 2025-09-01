@@ -16,85 +16,47 @@ import {
 export default function AIMarketingAutomationSuite(...args: any[]): any {
 
   const features = ['
-    'AI-powered audience segmentation and targeting','
-    'Predictive customer behavior modeling','
-    'Automated content generation and optimization','
-    'Multi-channel campaign orchestration','
-    'Real-time performance analytics and optimization','
-    'Personalized customer journey mapping','
-    'A/B testing with AI-driven insights','
-    'Social media automation and scheduling','
-    'Email marketing with smart personalization','
-    'ROI tracking and attribution modeling',
+    'AI-powered audience segmentation and targeting',Predictive customer behavior modeling',Automated content generation and optimization',Multi-channel campaign orchestration',Real-time performance analytics and optimization',Personalized customer journey mapping',A/B testing with AI-driven insights',Social media automation and scheduling',Email marketing with smart personalization',ROI tracking and attribution modeling',
   ];
 
   const benefits = ['
-    'Increase conversion rates by 40-80%','
-    'Reduce customer acquisition costs by 30-50%','
-    'Improve customer lifetime value by 25-60%','
-    'Automate 70% of marketing tasks','
-    'Real-time campaign optimization','
-    'Data-driven marketing decisions',
+    'Increase conversion rates by 40-80%',Reduce customer acquisition costs by 30-50%',Improve customer lifetime value by 25-60%',Automate 70% of marketing tasks',Real-time campaign optimization',Data-driven marketing decisions',
   ];
 
   const useCases = ['
-    'E-commerce marketing automation','
-    'B2B lead generation campaigns','
-    'Customer retention programs','
-    'Product launch campaigns','
-    'Seasonal marketing campaigns','
-    'Account-based marketing (ABM)',
+    'E-commerce marketing automation',B2B lead generation campaigns',Customer retention programs',Product launch campaigns',Seasonal marketing campaigns',Account-based marketing (ABM),
   ];
 
   const tiers = [
     {
-'
-      name: 'Growth','
+
+      name: 'Growth',
       price: '$1,499/mo',
       details: ['
-        'Up to 10,000 contacts','
-        'Basic AI insights','
-        'Email support','
-        'Standard integrations',
+        'Up to 10,000 contacts',Basic AI insights',Email support',Standard integrations',
       ]},
     {
-'
-      name: 'Professional','
+
+      name: 'Professional',
       price: '$3,999/mo',
       details: ['
-        'Up to 100,000 contacts','
-        'Advanced AI analytics','
-        'Priority support','
-        'Custom integrations',
+        'Up to 100,000 contacts',Advanced AI analytics',Priority support',Custom integrations',
       ]},
     {
-'
-      name: 'Enterprise','
+
+      name: 'Enterprise',
       price: '$9,999/mo',
       details: ['
-        'Unlimited contacts','
-        'Custom AI models','
-        'Dedicated support','
-        'White-label solution',
+        'Unlimited contacts',Custom AI models',Dedicated support',White-label solution',
       ]},
   ];
 
   const marketingChannels = ['
-    'Email Marketing','
-    'Social Media','
-    'SMS Marketing','
-    'Push Notifications','
-    'Web Push','
-    'Retargeting Ads',
+    'Email Marketing',Social Media',SMS Marketing',Push Notifications',Web Push',Retargeting Ads',
   ];
 
   const aiCapabilities = ['
-    'Predictive analytics','
-    'Content optimization','
-    'Audience targeting','
-    'Campaign automation','
-    'Performance optimization','
-    'Customer insights',
+    'Predictive analytics',Content optimization',Audience targeting',Campaign automation',Performance optimization',Customer insights',
   ];
 
   return()
@@ -154,15 +116,15 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {
             </div>"
             <div className="mt-6 flex flex-wrap gap-3">
               <a"
-                href="/pricing""
+                href="/pricing"
                 className="px-5 py-3 bg-purple-600/10 text-purple-600 rounded-lg hover:bg-purple-600/20 transition-colors inline-flex items-center"
               >"
                 View Full Pricing <ExternalLink className="w-4 h-4 ml-2" />
               </a>
               <a"
-                href="https://ziontechgroup.com""
-                target="_blank""
-                rel="noreferrer""
+                href="https://ziontechgroup.com"
+                target="_blank"
+                rel="noreferrer"
                 className="px-5 py-3 border border-purple-600 text-purple-600 rounded-lg inline-flex items-center"
               >"
                 Learn More <ExternalLink className="w-4 h-4 ml-2" />              </a>
@@ -287,24 +249,24 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {
           </div>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="inline-flex items-center px-5 py-3 bg-purple-600 text-white rounded-lg"
             >"
               <Phone className="w-4 h-4 mr-2" /> +1 302 464 0950
             </a>
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="inline-flex items-center px-5 py-3 border border-purple-600 text-purple-600 rounded-lg"
             >"
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com
             </a>
           </div>"
-          <div className="mt-4 text-sm text-zion-slate-light">'
+          <div className="mt-4 text-sm text-zion-slate-light">
             Visit us at:{' '}
             <a"
-              href="https://ziontechgroup.com""
-              target="_blank""
-              rel="noreferrer""
+              href="https://ziontechgroup.com"
+              target="_blank"
+              rel="noreferrer"
               className="text-purple-600 hover:underline"
             >
               https://ziontechgroup.com            </a>

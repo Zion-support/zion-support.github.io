@@ -1,5 +1,88 @@
+<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+import {
+
+  Server,
+  Shield,
+  Cloud,
+  Database,
+  Network,
+  Lock,
+  Zap,
+  Globe,
+  Cpu,
+  HardDrive,
+  Check} from 'lucide-react';
+
+const ITInfrastructure = () => {
+  const services = [
+    {
+
+      icon: <Server className="w-8 h-8" />,
+      title: 'Server Infrastructure',
+      description:'
+        'Enterprise-grade server solutions with high availability and performance optimization.',
+      features: ['
+        'Load balancing',Auto-scaling',High availability',Performance monitoring',
+      ]},
+    {
+"
+      icon: <Cloud className="w-8 h-8" />,
+      title: 'Cloud Infrastructure',
+      description:'
+        'Multi-cloud infrastructure management and optimization services.',
+      features: ['
+        'Multi-cloud strategy',Cost optimization',Security compliance',Migration support',
+      ]},
+    {
+"
+      icon: <Database className="w-8 h-8" />,
+      title: 'Database Management',
+      description:'
+        'Comprehensive database infrastructure and management solutions.',
+      features: ['
+        'Performance tuning',Backup & recovery',Security hardening',Monitoring',
+      ]},
+    {
+"
+      icon: <Network className="w-8 h-8" />,
+      title: 'Network Infrastructure',
+      description:'
+        'Robust network design and implementation for enterprise environments.',
+      features: ['
+        'Network design',Security implementation',Performance optimization',24/7 monitoring',
+      ]},
+    {
+"
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Security Infrastructure',
+      description:'
+        'Advanced security infrastructure and threat protection systems.',
+      features: ['
+        'Firewall management',Intrusion detection',Vulnerability assessment',Incident response',
+      ]},
+    {
+"
+      icon: <Zap className="w-8 h-8" />,
+      title: 'Performance Optimization',
+      description:'
+        'Infrastructure performance tuning and optimization services.',
+      features: ['
+        'Performance analysis',Capacity planning',Optimization strategies',Continuous monitoring',
+      ]},
+  ];
+
+  const benefits = ['
+    '99.9% uptime guarantee',24/7 monitoring and support',Scalable architecture',Security-first approach',Cost optimization',Compliance ready',
+  ];
+
+  return ("
+    <div className="min-h-screen bg-zion-slate-dark">
+=======
 import React from 'react';'
 import { motion } from 'framer-motion';    <div className="min-h-screen bg-zion-slate-dark">
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       {/* Hero Section */}"
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">"
         <div className="container mx-auto px-4 text-center">

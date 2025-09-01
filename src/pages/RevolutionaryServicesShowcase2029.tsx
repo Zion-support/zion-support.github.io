@@ -1,4 +1,4 @@
-import React, { useState } from 'react.ts';'
+import React, { useState } from 'react.ts';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -25,17 +25,62 @@ import {
   Plane,
   Dna,
   Atom,
+<<<<<<< HEAD
+  Link,
+  Box} from 'lucide-react.ts';
+import { SEO } from '@/components/SEO';
+import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES } from '../../data/revolutionary-2029-cutting-edge-services';
+import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from '../../data/revolutionary-2029-emerging-tech-services';
+
+export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('popularity');
+
+  const allServices = [
+    ...REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES,
+    ...REVOLUTIONARY_2029_EMERGING_TECH_SERVICES,
+  ];
+
+  const categories = ['
+    'all',AI & Analytics',AI & Automation',AI & Cybersecurity',AI & Marketing',AI & Healthcare',AI & Development',AI & Supply Chain',AI & FinTech',AI & Legal Tech',AI & Customer Success',Space Technology & AI',Quantum Technology & Security',Neurotechnology & AI',AI & Autonomous Systems',AI & Biotechnology',Quantum Computing & AI',AI & Autonomous Vehicles',AI & Digital Twins',AI & Blockchain',AI & Metaverse',
+  ];
+
+  const filteredServices = allServices.filter(service => {
+
+    const matchesSearch =
+      service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.category.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory ='
+      selectedCategory === 'all' || service.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  }) ;
+
+  const sortedServices = [...filteredServices].sort((a, b) => {
+
+    switch (sortBy) {
+
+      case 'price-low':
+        return ('
+          parseFloat(a.price.replace('$',).replace(',,)) -'
+          parseFloat(b.price.replace('$',).replace(',,))
+        );
+      case 'price-high':
+=======
   Link,'
   Box} from 'lucide-react.ts';'
 import { SEO } from '@/components/SEO';'
 import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES } from '../../data/revolutionary-2029-cutting-edge-services';'
 import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from '../../data/revolutionary-2029-emerging-tech-services';      case 'price-high':
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         return ('
-          parseFloat(b.price.replace('$', '').replace(',', '')) -'
-          parseFloat(a.price.replace('$', '').replace(',', ''))
-        );'
+          parseFloat(b.price.replace('$',).replace(',,)) -'
+          parseFloat(a.price.replace('$',).replace(',,))
+        );
       case 'rating':
-        return b.rating - a.rating;'
+        return b.rating - a.rating;
       case 'customers':
         return b.customers - a.customers;
       default:
@@ -46,33 +91,33 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from '../../data/revolution
   const getCategoryIcon = (category: anystring) => {
 
     const iconMap: { [key: string]: React.ReactNode } = {
-'
-      'AI & Analytics': <BarChart3 className="w-5 h-5" />,'"
-      'AI & Automation': <Zap className="w-5 h-5" />,'"
-      'AI & Cybersecurity': <Shield className="w-5 h-5" />,'"
-      'AI & Marketing': <Target className="w-5 h-5" />,'"
-      'AI & Healthcare': <Brain className="w-5 h-5" />,'"
-      'AI & Development': <Code className="w-5 h-5" />,'"
-      'AI & Supply Chain': <Truck className="w-5 h-5" />,'"
-      'AI & FinTech': <TrendingUp className="w-5 h-5" />,'"
-      'AI & Legal Tech': <Shield className="w-5 h-5" />,'"
-      'AI & Customer Success': <Users className="w-5 h-5" />,'"
-      'Space Technology & AI': <Rocket className="w-5 h-5" />,'"
-      'Quantum Technology & Security': <Atom className="w-5 h-5" />,'"
-      'Neurotechnology & AI': <Brain className="w-5 h-5" />,'"
-      'AI & Autonomous Systems': <Plane className="w-5 h-5" />,'"
-      'AI & Biotechnology': <Dna className="w-5 h-5" />,'"
-      'Quantum Computing & AI': <Atom className="w-5 h-5" />,'"
-      'AI & Autonomous Vehicles': <Car className="w-5 h-5" />,'"
-      'AI & Digital Twins': <Box className="w-5 h-5" />,'"
-      'AI & Blockchain': <Link className="w-5 h-5" />,'"
+
+      'AI & Analytics': <BarChart3 className="w-5 h-5" />,"
+      'AI & Automation': <Zap className="w-5 h-5" />,"
+      'AI & Cybersecurity': <Shield className="w-5 h-5" />,"
+      'AI & Marketing': <Target className="w-5 h-5" />,"
+      'AI & Healthcare': <Brain className="w-5 h-5" />,"
+      'AI & Development': <Code className="w-5 h-5" />,"
+      'AI & Supply Chain': <Truck className="w-5 h-5" />,"
+      'AI & FinTech': <TrendingUp className="w-5 h-5" />,"
+      'AI & Legal Tech': <Shield className="w-5 h-5" />,"
+      'AI & Customer Success': <Users className="w-5 h-5" />,"
+      'Space Technology & AI': <Rocket className="w-5 h-5" />,"
+      'Quantum Technology & Security': <Atom className="w-5 h-5" />,"
+      'Neurotechnology & AI': <Brain className="w-5 h-5" />,"
+      'AI & Autonomous Systems': <Plane className="w-5 h-5" />,"
+      'AI & Biotechnology': <Dna className="w-5 h-5" />,"
+      'Quantum Computing & AI': <Atom className="w-5 h-5" />,"
+      'AI & Autonomous Vehicles': <Car className="w-5 h-5" />,"
+      'AI & Digital Twins': <Box className="w-5 h-5" />,"
+      'AI & Blockchain': <Link className="w-5 h-5" />,"
       'AI & Metaverse': <Globe className="w-5 h-5" />};"
     return iconMap[category] || <Cpu className="w-5 h-5" />;
   };
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-        title="Revolutionary 2029 Services Showcase - Zion Tech Group""
+        title="Revolutionary 2029 Services Showcase - Zion Tech Group"
         description="Discover our cutting-edge AI, quantum computing, space technology, and emerging tech services that are revolutionizing industries worldwide."
       />
 
@@ -87,7 +132,7 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from '../../data/revolution
           >"
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Revolutionary"
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 {' '}
                 2029
               </span>
@@ -170,7 +215,12 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from '../../data/revolution
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
+<<<<<<< HEAD
+                  type="text"
+                  placeholder="Search revolutionary services..."
+=======
                   type="text""                  placeholder="Search revolutionary services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -190,7 +240,7 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from '../../data/revolution
                     key={category}
                     value={category}"
                     className="bg-slate-800 text-white"
-                  >'
+                  >
                     {category === 'all' ? 'All Categories' : category}
                   </option>) ) }
               </select>

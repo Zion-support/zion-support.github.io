@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';'
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface SearchResult {
 
   id: string;
   title: string;
-  description: string;'
+  description: string;
   type: 'service' | 'technology' | 'page' | 'content';
   url: string;
   tags: string[];
@@ -26,12 +26,12 @@ interface SearchFilter {
 }
 
 interface SearchSuggestion {
-  text: string;'
+  text: string;
   type: 'recent' | 'popular' | 'related';
   count?: number;
 
 export default function AdvancedSearch() {
-'
+
   const [query, setQuery] = useState('');
   const [isSearching, setIsSearching] = useState(false);
   const [results, setResults] = useState<SearchResult[]>([]);
@@ -48,76 +48,76 @@ export default function AdvancedSearch() {
   // Mock data - in production, this would come from your backend
   const mockData = useMemo<SearchResult[]>(: unknown [
     {
-'
-      id: '1','
-      title: 'Micro SaaS Development','
-      description: 'Custom micro SaaS solutions for specific business needs','
-      type: 'service','
-      url: '/services/micro-saas','
-      tags: ['SaaS', 'Development', 'Custom'],
+
+      id: '1',
+      title: 'Micro SaaS Development',
+      description: 'Custom micro SaaS solutions for specific business needs',
+      type: 'service',
+      url: '/services/micro-saas',
+      tags: ['SaaS',Development',Custom'],
       relevance: 0.95
     },
     {
-'
-      id: '2','
-      title: 'AI & Machine Learning','
-      description: 'Cutting-edge artificial intelligence solutions','
-      type: 'service','
-      url: '/services/ai-ml','
-      tags: ['AI', 'Machine Learning', 'Automation'],
+
+      id: '2',
+      title: 'AI & Machine Learning',
+      description: 'Cutting-edge artificial intelligence solutions',
+      type: 'service',
+      url: '/services/ai-ml',
+      tags: ['AI',Machine Learning',Automation'],
       relevance: 0.92
     },
     {
-'
-      id: '3','
-      title: 'Cloud Infrastructure','
-      description: 'Scalable cloud solutions for modern businesses','
-      type: 'service','
-      url: '/services/cloud','
-      tags: ['Cloud', 'AWS', 'Azure', 'GCP'],
+
+      id: '3',
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud solutions for modern businesses',
+      type: 'service',
+      url: '/services/cloud',
+      tags: ['Cloud',AWS',Azure',GCP'],
       relevance: 0.88
     },
     {
-'
-      id: '4','
-      title: 'React & Next.js','
-      description: 'Modern frontend development technologies','
-      type: 'technology','
-      url: '/technologies/frontend','
-      tags: ['React', 'Next.js', 'Frontend'],
+
+      id: '4',
+      title: 'React & Next.js',
+      description: 'Modern frontend development technologies',
+      type: 'technology',
+      url: '/technologies/frontend',
+      tags: ['React',Next.js',Frontend'],
       relevance: 0.85
     },
     {
-'
-      id: '5','
-      title: 'Cybersecurity Solutions','
-      description: 'Advanced security for digital assets','
-      type: 'service','
-      url: '/services/security','
-      tags: ['Security', 'Cybersecurity', 'Protection'],
+
+      id: '5',
+      title: 'Cybersecurity Solutions',
+      description: 'Advanced security for digital assets',
+      type: 'service',
+      url: '/services/security',
+      tags: ['Security',Cybersecurity',Protection'],
       relevance: 0.82
     }
   ], []);
 
   // Search suggestions
   const searchSuggestions = useMemo<SearchSuggestion[]>(() => ['
-    { text: 'SaaS', type: 'popular', count: 45 },'
-    { text: 'AI', type: 'popular', count: 32 },'
-    { text: 'Cloud', type: 'popular', count: 28 },'
-    { text: 'Security', type: 'popular', count: 25 },'
-    { text: 'Development', type: 'popular', count: 22 },'
-    { text: 'Machine Learning', type: 'recent' },'
-    { text: 'Micro Services', type: 'recent' },'
-    { text: 'DevOps', type: 'recent' },'
-    { text: 'Blockchain', type: 'related' },'
+    { text: 'SaaS', type: 'popular', count: 45 },
+    { text: 'AI', type: 'popular', count: 32 },
+    { text: 'Cloud', type: 'popular', count: 28 },
+    { text: 'Security', type: 'popular', count: 25 },
+    { text: 'Development', type: 'popular', count: 22 },
+    { text: 'Machine Learning', type: 'recent' },
+    { text: 'Micro Services', type: 'recent' },
+    { text: 'DevOps', type: 'recent' },
+    { text: 'Blockchain', type: 'related' },
     { text: 'IoT', type: 'related' }
   ], []);
 
   // Filter options
   const filterOptions = {
-'
-    types: ['service', 'technology', 'page', 'content'],'
-    tags: ['SaaS', 'AI', 'Cloud', 'Security', 'Development', 'React', 'Next.js', 'AWS', 'Azure', 'GCP']
+
+    types: ['service',technology',page',content'],
+    tags: ['SaaS',AI',Cloud',Security',Development',React',Next.js',AWS',Azure',GCP']
   };
 
   const performSearch = useCallbackasync (: unknown {
@@ -128,7 +128,7 @@ export default function AdvancedSearch() {
     
     // Filter and search through mock data
     const filteredResults = mockData.filter(item => {
-'
+
       const matchesQuery = query.toLowerCase().split(' ').every(word =>
         item.title.toLowerCase().includes(word) ||
         item.description.toLowerCase().includes(word) ||
@@ -179,17 +179,17 @@ export default function AdvancedSearch() {
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
-'
+
     if (e.key === 'ArrowDown') {
 
       e.preventDefault();
       setSelectedResult(prev => 
         prev < results.length - 1 ? prev + 1 : prev
-      );'
+      );
     } else if (e.key === 'ArrowUp') {
 
       e.preventDefault();
-      setSelectedResult(prev => prev > 0 ? prev - 1 : -1);'
+      setSelectedResult(prev => prev > 0 ? prev - 1 : -1);
     } else if (e.key === 'Enter' && selectedResult >= 0) {
 
       e.preventDefault();
@@ -197,16 +197,16 @@ export default function AdvancedSearch() {
       if (result) {
 
         window.location.href = result.url;
-      }'
+      }
     } else if (e.key === 'Escape') {
-'
+
       setQuery('');
       setResults([]);
       setSuggestions([]);
       setSelectedResult(-1);
     }
   };
-'
+
   const toggleFilter = (filterType: 'type' | 'tags', value: string) => {
 
     setFilters(prev => ({
@@ -230,11 +230,11 @@ export default function AdvancedSearch() {
   const getResultIcon = (type: string) => {
 
     switch (type) {
-'
-      case 'service': return '🔧';'
-      case 'technology': return '⚡';'
-      case 'page': return '📄';'
-      case 'content': return '📝';'
+
+      case 'service': return '🔧';
+      case 'technology': return '⚡';
+      case 'page': return '📄';
+      case 'content': return '📝';
       default: return '🔍';
     }
   };
@@ -250,7 +250,7 @@ export default function AdvancedSearch() {
             onChange={(e: unknown setQuery(e.target.value)}
             onKeyDown={handleKeyDown}
             onFocus={() => setShowFilters(true)}"
-            placeholder="Search for services, technologies, or content...""
+            placeholder="Search for services, technologies, or content..."
             className="w-full px-4 py-3 pl-12 pr-20 text-lg bg-white border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200"
           />"
           <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">
@@ -259,7 +259,7 @@ export default function AdvancedSearch() {
           <button
             onClick={() => setShowFilters(!showFilters)}"
             className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 transition-colors"
-          >'
+          >
             {showFilters ? '✕' : '⚙️'}
           </button>
         </div>
@@ -281,7 +281,7 @@ export default function AdvancedSearch() {
                   <span>{suggestion.text}</span>"
                   <div className="flex items-center space-x-2 text-sm text-gray-500">
                     <span className={`px-2 py-1 rounded text-xs ${
-'
+
                       suggestion.type === 'popular' ? 'bg-blue-100 text-blue-800' :'
                       suggestion.type === 'recent' ? 'bg-green-100 text-green-800' :'
                       'bg-gray-100 text-gray-800'`
@@ -303,7 +303,7 @@ export default function AdvancedSearch() {
       <AnimatePresence>
         {showFilters && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}'
+            initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}"
             className="mt-4 bg-white border border-gray-200 rounded-lg p-4 shadow-sm"
@@ -327,7 +327,7 @@ export default function AdvancedSearch() {
                     <label key={type} className="flex items-center space-x-2">
                       <input"
                         type="checkbox"
-                        checked={filters.type.includes(type)}'
+                        checked={filters.type.includes(type)}
                         onChange={() => toggleFilter('type', type)}"
                         className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                       />"
@@ -345,7 +345,7 @@ export default function AdvancedSearch() {
                     <label key={tag} className="flex items-center space-x-2">
                       <input"
                         type="checkbox"
-                        checked={filters.tags.includes(tag)}'
+                        checked={filters.tags.includes(tag)}
                         onChange={() => toggleFilter('tags', tag)}"
                         className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                       />"

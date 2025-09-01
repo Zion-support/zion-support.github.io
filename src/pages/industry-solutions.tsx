@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -11,115 +11,97 @@ import {
   Star,
   Brain,
   Cloud,
-  Shield,'
-  TrendingUp} from 'lucide-react.ts';'
+  Shield,
+  TrendingUp} from 'lucide-react.ts';
 import { Link } from 'react-router-dom.ts';
 
 const IndustrySolutions: React.FC = (): JSX.Element => {
 
   const industries = [
     {
-'
+
       title: 'Healthcare',
       description:'
         'AI-powered healthcare solutions for improved patient care and operational efficiency.',
-      icon: Heart,'
+      icon: Heart,
       path: '/solutions/healthcare',
       solutions: ['
-        'AI Healthcare Analytics','
-        'Predictive Diagnostics','
-        'Patient Care Optimization','
-        'Compliance Management',
+        'AI Healthcare Analytics',Predictive Diagnostics',Patient Care Optimization',Compliance Management',
       ]},
     {
-'
+
       title: 'Manufacturing',
       description:'
         'Smart manufacturing solutions with IoT, AI, and automation technologies.',
-      icon: Factory,'
+      icon: Factory,
       path: '/manufacturing-solutions',
       solutions: ['
-        'Smart Factory Automation','
-        'Predictive Maintenance','
-        'Quality Control','
-        'Supply Chain Optimization',
+        'Smart Factory Automation',Predictive Maintenance',Quality Control',Supply Chain Optimization',
       ]},
     {
-'
+
       title: 'Financial Services',
       description:'
         'Advanced financial technology solutions for risk management and operational efficiency.',
-      icon: DollarSign,'
+      icon: DollarSign,
       path: '/financial-solutions',
       solutions: ['
-        'AI Financial Analytics','
-        'Risk Management','
-        'Trading Algorithms','
-        'Compliance Automation',
+        'AI Financial Analytics',Risk Management',Trading Algorithms',Compliance Automation',
       ]},
     {
-'
+
       title: 'Automotive',
       description:'
         'Connected vehicle solutions and automotive technology innovations.',
-      icon: Car,'
+      icon: Car,
       path: '/automotive-solutions',
       solutions: ['
-        'Connected Vehicles','
-        'Predictive Maintenance','
-        'Fleet Management','
-        'Safety Systems',
+        'Connected Vehicles',Predictive Maintenance',Fleet Management',Safety Systems',
       ]},
     {
-'
+
       title: 'Energy & Utilities',
       description:'
         'Smart grid and energy management solutions for sustainability and efficiency.',
-      icon: Zap,'
+      icon: Zap,
       path: '/energy-solutions',
       solutions: ['
-        'Smart Grid Management','
-        'Energy Optimization','
-        'Predictive Maintenance','
-        'Sustainability Analytics',
+        'Smart Grid Management',Energy Optimization',Predictive Maintenance',Sustainability Analytics',
       ]},
     {
-'
+
       title: 'Retail & E-commerce',
       description:'
         'Digital transformation solutions for modern retail and e-commerce operations.',
-      icon: Globe,'
+      icon: Globe,
       path: '/retail-solutions',
       solutions: ['
-        'Customer Analytics','
-        'Inventory Management','
-        'Personalization','
-        'Supply Chain Optimization',
+        'Customer Analytics',Inventory Management',Personalization',Supply Chain Optimization',
       ]},
   ];
 
   const benefits = [
     {
-'
+
       title: 'Industry Expertise',
       description:'
         'Deep understanding of industry-specific challenges and requirements',
       icon: Brain},
     {
-'
+
       title: 'Customized Solutions',
       description:'
         'Tailored technology solutions for your specific industry needs',
       icon: Building},
     {
-'
+
       title: 'Proven Results',
       description:'
         'Track record of successful implementations across industries',
       icon: Star},
     {
-'
-      title: 'Future-Ready','
+
+      title: 'Future-Ready',
       description: 'Scalable solutions that grow with your business',
       icon: TrendingUp},
   ];
@@ -266,19 +248,19 @@ const IndustrySolutions: React.FC = (): JSX.Element => {
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Transform Your Industry?
           </h2>"
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">'
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Let's discuss how our industry-specific solutions can address your
             unique challenges and drive growth.
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
+              to="/contact"
               className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:scale-105"
             >
               Get Started
             </Link>
             <Link"
-              to="/services""
+              to="/services"
               className="px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
             >
               View All Services

@@ -16,7 +16,7 @@ import { Handshake,
 ;
 export { function };
 export default function Partners(...args[]):  {
-'
+
   const title = 'Partners — Zion Tech Group''
   const description = 'Strategic partnerships with leading technology providers, cloud platforms, and cybersecurity experts to deliver comprehensive solutions.'
   
@@ -248,7 +248,7 @@ export default function Partners(...args[]):  {
               className="text-center mb-16"
 "
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Partner Ecosystem</h2>"
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">'
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 We've built strategic relationships across the technology landscape
                 to provide comprehensive solutions for our clients.
               </p>
@@ -348,7 +348,7 @@ export default function Partners(...args[]):  {
                         <h4 className="font-semibold mb-1">{partner.name}</h4>"
                         <p className="text-sm text-gray-600 mb-2">{partner.description}</p>
                         <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
-'
+
                           partner.tier === 'Platinum' ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white' :'
                           partner.tier === 'Gold' ? 'bg-gradient-to-r from-yellow-500 to-orange-500 text-white' :'
                           'bg-gray-500 text-white'`
@@ -573,13 +573,13 @@ export default function Partners(...args[]):  {
               className="flex flex-col sm:flex-row gap-4 justify-center"
 
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-3 bg-white text-zion-blue-dark rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
 
                 Contact Us
               </a>
               <a"
-                href="mailto:partnerships@ziontechgroup.com""
+                href="mailto:partnerships@ziontechgroup.com"
                 className="px-8 py-3 border-2 border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold"
 
                 partnerships@ziontechgroup.com

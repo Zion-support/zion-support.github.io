@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';'
-import { Link } from 'react-router-dom';'
+import React, { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { User, Settings, LogOut, ChevronDown, Bell, ShoppingCart } from 'lucide-react';
 import { useAuth } from "../../hooks/useAuth";
 export const UserMenu = () => {
@@ -12,12 +12,12 @@ export const UserMenu = () => {
             if (menuRef.current && !menuRef.current.contains(event.target)) {
 
                 setIsOpen(false)}
-        };'
-        document.addEventListener('mousedown', handleClickOutside);'
+        };
+        document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
     const handleLogout = async () => {
         try {
-            await logout();'
+            await logout();
             // // // // // // // // console.error('Logout failed:', error);
         }
     };
@@ -27,7 +27,7 @@ export const UserMenu = () => {
 
             setIsOpen(false)}
         catch (error) {
-'
+
             // console.error('Logout failed:', error)}
     };
     if (!user) {
@@ -38,7 +38,7 @@ export const UserMenu = () => {
         <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">"
           <User className="w-4 h-4 text-black"/>
         </div>"
-        <span className="text-sm font-medium hidden sm:block">{user.name || user.email}</span>'
+        <span className="text-sm font-medium hidden sm:block">{user.name || user.email}</span>
         <ChevronDown className={`w-3 h-3 transition-transform ${isOpen ? 'rotate-180' : ''}`}/>
       </button>
 "

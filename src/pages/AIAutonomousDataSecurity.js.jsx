@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousDataSecurity = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousDataSecurity = () => {
       <Helmet>
         <title>AI Autonomous Data Security Platform | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous data security platform that continuously protects data, detects breaches, and ensures privacy with advanced AI capabilities and autonomous operation."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI data security, autonomous data security, data protection, breach detection, autonomous operations, AI data security platform"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-data-security"
         />
       </Helmet>
@@ -187,14 +187,7 @@ const AIAutonomousDataSecurity = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Data Encryption','
-                'Data Loss Prevention','
-                'Data Access Control','
-                'Data Backup Security','
-                'Data Privacy Protection','
-                'Data Compliance Security','
-                'Data Breach Detection','
-                'Data Recovery Security',
+                'Data Encryption',Data Loss Prevention',Data Access Control',Data Backup Security',Data Privacy Protection',Data Compliance Security',Data Breach Detection',Data Recovery Security',
               ].map(type => (
                 <div
                   key={type}"

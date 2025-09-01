@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import {
   Menu, 
@@ -32,7 +32,7 @@ interface NavigationItem {
   label: string;
   path: string;
   icon: React.ComponentType<{ size?: number; className?: string 
-}>;'
+}>;
 } from 'lucide-react';
 
 interface NavigationItem {
@@ -45,109 +45,109 @@ interface NavigationItem {
 ;
 const navigationItems: NavigationItem[] = [
   {
-'
-    label: 'Home','
+
+    label: 'Home',
     path: '/',
-    icon: Home,'
+    icon: Home,
     description: 'Welcome to Zion Tech Group'
   },
   {
-'
-    label: 'About','
+
+    label: 'About',
     path: '/about',
-    icon: Info,'
+    icon: Info,
     description: 'Learn about our comp and mission'
   },
   {
-'
-    label: 'Services','
+
+    label: 'Services',
     path: '/services',
     icon: Briefcase,
     children[;
       {
-'
-        label: 'AI & Machine Learning','
+
+        label: 'AI & Machine Learning',
         path: '/services/ai',
-        icon: Brain,'
+        icon: Brain,
         description: 'Cutting-edge AI solutions'
       },
       {
-'
-        label: 'Cybersecurity','
+
+        label: 'Cybersecurity',
         path: '/services/cybersecurity',
-        icon: Shield,'
+        icon: Shield,
         description: 'Advanced security services'
       },
       {
-'
-        label: 'Cloud Services','
+
+        label: 'Cloud Services',
         path: '/services/cloud',
-        icon: Cloud,'
+        icon: Cloud,
         description: 'Scalable cloud solutions'
       },
       {
-'
-        label: 'Digital Transformation','
+
+        label: 'Digital Transformation',
         path: '/services/transformation',
-        icon: Zap,'
+        icon: Zap,
         description: 'Business transformation services'
       },
       {
-'
-        label: 'Infrastructure','
+
+        label: 'Infrastructure',
         path: '/services/infrastructure',
-        icon: Server,'
+        icon: Server,
         description: 'IT infrastructure solutions'
       },
       {
-'
-        label: 'Consulting','
+
+        label: 'Consulting',
         path: '/services/consulting',
-        icon: Users,'
+        icon: Users,
         description: 'Strategic IT consulting'
 
     ]},;
   {
-'
-    label: 'Solutions','
+
+    label: 'Solutions',
     path: '/solutions',
-    icon: Rocket,'
+    icon: Rocket,
     description: 'Industry-specific solutions'
   },
   {
-'
-    label: 'Contact','
+
+    label: 'Contact',
     path: '/contact',
-    icon: Phone,'
+    icon: Phone,
     description: 'Get in touch with us'
 
 ];
 ;
 const quickActions = [
   {
-'
-    label: 'Get Quote','
+
+    label: 'Get Quote',
     path: '/request-quote',
-    icon: MessageCircle,'
+    icon: MessageCircle,
     color: 'bg-zion-cyan'
   },
   {
-'
-    label: 'Support','
+
+    label: 'Support',
     path: '/help',
-    icon: HelpCircle,'
+    icon: HelpCircle,
     color: 'bg-zion-purple'
   },;
-  {;'
-    label: 'Documentation',;'
+  {;
+    label: 'Documentation',;
     path: '/docs',;
-    icon: FileText,;'
+    icon: FileText,;
     color: 'bg-zion-blue';
   };];
 
 export const EnhancedMobileNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());'
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
   const [activePath, setActivePath] = useState('/');
   
   
@@ -213,12 +213,12 @@ export default function EnhancedMobileNavigation() {
   // Prevent body scroll when menu is open
   useEffect(() => {
     if (isOpen) {
-'
-      document.addEventListener('mousedown', handleClickOutside);'
+
+      document.addEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'hidden'}
 ;
-    return () => {;'
-      document.removeEventListener('mousedown', handleClickOutside);'
+    return () => {;
+      document.removeEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'unset'}}, [isOpen]);
 
   const toggleExpanded = (label: string) => {
@@ -237,12 +237,12 @@ export default function EnhancedMobileNavigation() {
     setIsOpen(false);
     setExpandedItems(new Set())};
 
-  const isActive = (path: string) => {;'
+  const isActive = (path: string) => {;
     if (path === '/') {;
   const isActive = (path: string) => {
-'
+
     if (path === '/') {
-'
+
       return activePath === '/';
 
   const toggleSubmenu = (label: string) => {
@@ -258,8 +258,8 @@ export default function EnhancedMobileNavigation() {
         <motion.div
           initial={false}
           animate = {
-'
-  { backgroundColor: isItemActive ? 'rgba(34, 221, 210,'
+
+  { backgroundColor: isItemActive ? 'rgba(34, 221, 210,
   0.1)' : 'transparent' ;
 
 
@@ -267,7 +267,12 @@ export default function EnhancedMobileNavigation() {
 
 
 
+<<<<<<< HEAD
+}}
+          className={`relative ${depth > 0 ? 'ml-4' : ''}`}
+=======
 }}'          className={`relative ${depth > 0 ? 'ml-4' : ''}`}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
           <Link
             to={item.path}
@@ -281,7 +286,7 @@ export default function EnhancedMobileNavigation() {
 "
             <div className="flex items-center gap-3">
               <item.icon
-                size={20}'
+                size={20}
                 className={isItemActive ? 'text-zion-cyan' : 'text-zion-slate-light'}
               />
               <div>"
@@ -293,8 +298,14 @@ export default function EnhancedMobileNavigation() {
             </div>
             {hasChildren && (
               <ChevronDown
+<<<<<<< HEAD
+                size={16}`
+                className={`transition-transform duration-200 ${
+
+=======
                 size={16}`                className={`transition-transform duration-200 ${
 '
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   isExpanded ? 'rotate-180' : ''`
                 }`}
               />) }          </Link>
@@ -306,8 +317,14 @@ export default function EnhancedMobileNavigation() {
               aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${item.label} submenu`}
 
               <ChevronDown
+<<<<<<< HEAD
+                size={16}`
+                className={`transition-transform duration-200 ${
+
+=======
                 size={16}`                className={`transition-transform duration-200 ${
 '
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   isExpanded ? 'rotate-180' : ''`
                 }`}
               />
@@ -323,7 +340,7 @@ export default function EnhancedMobileNavigation() {
 
 }}
                 animate = {
-'
+
   { height: 'auto',
   opacity: 1 
 
@@ -336,7 +353,7 @@ export default function EnhancedMobileNavigation() {
 }}
                 transition = {
 
-  { duration: 0.3,'
+  { duration: 0.3,
   ease: 'easeInOut' 
 
 
@@ -359,7 +376,7 @@ export default function EnhancedMobileNavigation() {
       {/* Mobile Menu Toggle */}
       <button
         onClick = {() => setIsOpen(true)}"
-        className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 rounded-lg""
+        className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 rounded-lg"
         aria-label="Open mobile navigation menu"
 
         <Menu size={24}  />
@@ -375,13 +392,13 @@ export default function EnhancedMobileNavigation() {
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 lg:hidden"
 
             <motion.div
-              ref={menuRef}'
+              ref={menuRef}
               initial={{ x: '100%' }}
-              animate={{ x: 0 }}'
+              animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition = {
 
-  { duration: 0.3,'
+  { duration: 0.3,
   ease: 'easeOut' 
 
 
@@ -405,7 +422,7 @@ export default function EnhancedMobileNavigation() {
                 </div>
                 <button
                   onClick={() => setIsOpen(false)}"
-                  className="p-2 text-zion-slate-light hover:text-white transition-colors rounded-lg hover:bg-zion-slate-light/10""
+                  className="p-2 text-zion-slate-light hover:text-white transition-colors rounded-lg hover:bg-zion-slate-light/10"
                   aria-label="Close mobile navigation menu"
 
                   <X size={24}  />

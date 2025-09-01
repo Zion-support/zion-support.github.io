@@ -42,7 +42,7 @@ function files = fs.readdirSync(dir);
 
     if (stat.isDirectory()) {
       fixEmptyFiles(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      const content = fs.readFileSync(filePath, 'utf8').trim();
+      const content = fs.readFileSync(filePath,utf8').trim();
 
       if (!content) {
         // // // // // // // console.log(`Fixing empty file: ${filePath}`);

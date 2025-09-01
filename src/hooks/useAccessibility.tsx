@@ -35,7 +35,7 @@ export
   // Detect accessibility preferences
 :src/hooks/useAccessibility.tsx
   const accessibilityFeatures = useMemo((): AccessibilityFeatures => {
-'
+
     if (typeof window === 'null') {;
   
       return {;
@@ -46,11 +46,18 @@ export
 
 :src/hooks/useAccessibility.tsx
     const mediaQueries = {
+<<<<<<< HEAD
+
+  highContrast: window.matchMedia('(prefers-contrast: high)),
+      reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)),
+      largeText: window.matchMedia('(prefers-reduced-motion: reduce)),;
+=======
 '
   highContrast: window.matchMedia('(prefers-contrast: high)'),'
       reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)'),'
       largeText: window.matchMedia('(prefers-reduced-motion: reduce)'),;
     
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
@@ -69,27 +76,27 @@ export
   // Keyboard navigation'
           navigateFocus('forward', currentElement)}
         break;
-'
+
       case 'Escape':;
         // Close modals, dropdowns, etc.
         closeActiveElements();
         break;
-'
-      case 'Enter':;'
+
+      case 'Enter':;
       case ' ':;
         // Activate buttons, links, etc.'
         if (currentElement.tagName = == 'BUTTON' || currentElement.tagName === 'A') {;
           event.preventDefault();
           currentElement.click()}
         break;
-'
-      case 'ArrowUp':;'
+
+      case 'ArrowUp':;
       case 'ArrowDown':;
         // Navigate through lists, dropdowns, etc.'
         navigateVertical(key === 'ArrowUp' ? 'up' : 'down', currentElement);
         break;
-'
-      case 'ArrowLeft':;'
+
+      case 'ArrowLeft':;
       case 'ArrowRight':;
         // Navigate through horizontal lists, tabs, etc.'
         navigateHorizontal(key === 'ArrowLeft' ? 'left' : 'right', currentElement);
@@ -107,7 +114,7 @@ export
 
     // Remove focus indicator after animation
     setTimeout(() => {
-'
+
       element.classList.remove('focus-visible')}, 2000)}, [enableFocusManagement]);
 
   // Focus trap for modals
@@ -130,6 +137,16 @@ export
   const getFocusableElements = useCallback((container: HTMLElement): HTMLElement[]  => {
 
     const selector = ['
+<<<<<<< HEAD
+      'button:not([disabled]),;
+      'input:not([disabled]),;
+      'select:not([disabled]),;
+      'textarea:not([disabled]),;
+      'a[href]',;
+      '[tabindex]:not([tabindex="-1"]),;'"
+      '[contenteditable="true"]';
+    ].join(',);
+=======
       'button:not([disabled])',;'
       'input:not([disabled])',;'
       'select:not([disabled])',;'
@@ -145,6 +162,7 @@ export
       '[tabindex]:not([tabindex="-1"])',;
       '[contenteditable="true"]';
     ].join(', ');
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     return Array.from(container.querySelectorAll(selector)) as HTMLElement[]}, []);
 
@@ -198,9 +216,9 @@ export
   // Close active elements
 :src/hooks/useAccessibility.tsx
   const closeActiveElements = useCallback(() => {;
-    // Close modals, dropdowns, etc.;'
+    // Close modals, dropdowns, etc.;
     const activeElements = document.querySelectorAll('.modal.active, .dropdown.active, .popup.active');
-activeElements.forEach(element:  > {;'
+activeElements.forEach(element:  > {;
       element.classList.remove('active');
     });
   
@@ -216,6 +234,12 @@ activeElements.forEach(element:  > {;
   // Screen reader announcements'
   const announceToScreenReader = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {;
     if (!enableScreenReaderSupport) return;
+<<<<<<< HEAD
+
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-live', priority);
+    announcement.setAttribute('aria-atomic',true');
+=======
 '
     const announcement = document.createElement('div');'
     announcement.setAttribute('aria-live', priority);'
@@ -227,6 +251,7 @@ activeElements.forEach(element:  > {;
     
     announcement.setAttribute('aria-live', priority);
     announcement.setAttribute('aria-atomic', 'true');
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     announcement.className = 'sr-only';
     announcement.textContent = message;
 
@@ -240,8 +265,8 @@ activeElements.forEach(element:  > {;
 :src/hooks/useAccessibility.tsx
   const toggleHighContrast = useCallback(: unknown {;
     if (!enableHighContrast) return;
-'
-    document.documentElement.classList.toggle('high-contrast');'
+
+    document.documentElement.classList.toggle('high-contrast');
     const isEnabled = document.documentElement.classList.contains('high-contrast');
 
     // Announce change to screen reader'
@@ -260,8 +285,8 @@ activeElements.forEach(element:  > {;
 :src/hooks/useAccessibility.tsx
   const toggleReducedMotion = useCallback(: unknown {;
     if (!enableReducedMotion) return;
-'
-    document.documentElement.classList.toggle('reduced-motion');'
+
+    document.documentElement.classList.toggle('reduced-motion');
     const isEnabled = document.documentElement.classList.contains('reduced-motion');
 
     // Announce change to screen reader'`
@@ -280,8 +305,8 @@ activeElements.forEach(element:  > {;
 :src/hooks/useAccessibility.tsx
   const toggleLargeText = useCallback(: unknown {;
     if (!enableLargeText) return;
-'
-    document.documentElement.classList.toggle('large-text');'
+
+    document.documentElement.classList.toggle('large-text');
     const isEnabled = document.documentElement.classList.contains('large-text');
 
     // Announce change to screen reader'`
@@ -300,9 +325,12 @@ activeElements.forEach(element:  > {;
   useEffect(() => {
 :src/hooks/useAccessibility.tsx
     // Load saved preferences'
-    const highContrast = localStorage.getItem('highContrast') === 'true';'
-    const reducedMotion = localStorage.getItem('reducedMotion') === 'true';'
+    const highContrast = localStorage.getItem('highContrast') === 'true';
+    const reducedMotion = localStorage.getItem('reducedMotion') === 'true';
     const largeText = localStorage.getItem('largeText') === 'true';
+<<<<<<< HEAD
+
+=======
 '
     if (highContrast) document.documentElement.classList.add('high-contrast');'
     if (reducedMotion) document.documentElement.classList.add('reduced-motion');'
@@ -310,18 +338,19 @@ activeElements.forEach(element:  > {;
     
     
     
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     if (highContrast) document.documentElement.classList.add('high-contrast');
     if (reducedMotion) document.documentElement.classList.add('reduced-motion');
     if (largeText) document.documentElement.classList.add('large-text');
 
     // Add keyboard event listener
     if (enableKeyboardNavigation) {
-'
+
       document.addEventListener('keydown', handleKeyboardNavigation)}
 
     // Cleanup
     return () => {
-'
+
       document.removeEventListener('keydown', handleKeyboardNavigation)}}, [enableKeyboardNavigation, handleKeyboardNavigation]);
 
   return {

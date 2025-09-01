@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';'
-import { Sun, Moon, Monitor type Theme = 'dark' | 'light' | 'system';'
-import React, { useState, useEffect } from 'react.ts';'
+import React, { useState, useEffect } from 'react';
+import { Sun, Moon, Monitor type Theme = 'dark' | 'light' | 'system';
+import React, { useState, useEffect } from 'react.ts';
 import { Sun, Moon, Monitor  } from 'lucide-react';
-'
+
 type Theme = 'dark' | 'light' | 'system';
 
 interface ThemeToggleProps {
@@ -11,12 +11,18 @@ interface ThemeToggleProps {
 
   className?: string;
 }
+<<<<<<< HEAD
+
+export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {;
+  const [theme, setTheme] = useState<Theme>('system');
+=======
 '
 export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {;'  const [theme, setTheme] = useState<Theme>('system');
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);'
+    setMounted(true);
     const savedTheme = localStorage.getItem('theme') as Theme;
     if (savedTheme) {
 
@@ -25,7 +31,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
   }, []) ;
   useEffect ( () => {
     if (!mounted) return;
-'
+
       root.classList.toggle('dark', theme === 'dark');
     }
     '
@@ -38,8 +44,8 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     )}
 
   const themes: { value: Theme; label: string; icon: React.ComponentType<any> }[] = ['
-    { value: 'light', label: 'Light', icon: Sun },'
-    { value: 'dark', label: 'Dark', icon: Moon },'
+    { value: 'light', label: 'Light', icon: Sun },
+    { value: 'dark', label: 'Dark', icon: Moon },
     { value: 'system', label: 'System', icon: Monitor }
   ];
 
@@ -47,11 +53,11 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}"
-        className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors""
+        className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
         aria-label="Select theme"
         aria-expanded={isOpen}"
         aria-haspopup="true"
-      >'
+      >
         {themes.find(t => t.value === theme)?.icon({ className: 'w-4 h-4' })}"
         <span className="text-sm font-medium">{themes.find(t => t.value === theme)?.label}</span>
       </button>
@@ -82,27 +88,32 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
       </AnimatePresence>
     </div>) ;
 };
-    const root = document.documentElement;'
-    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';'
+    const root = document.documentElement;
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)).matches ? 'dark' : 'light';
     const effectiveTheme = theme === 'system' ? systemTheme : theme;
+<<<<<<< HEAD
+
+    root.classList.remove('light',dark');
+=======
 '    root.classList.remove('light', 'dark');
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     root.classList.add(effectiveTheme);
     
     // Update CSS custom properties for smooth transitions'
     if (effectiveTheme === 'dark') {
-'
-      root.style.setProperty('--zion-bg-primary', '#0f172a');'
-      root.style.setProperty('--zion-bg-secondary', '#1e293b');'
-      root.style.setProperty('--zion-text-primary', '#f8fafc');'
-      root.style.setProperty('--zion-text-secondary', '#cbd5e1');
+
+      root.style.setProperty('--zion-bg-primary',#0f172a');
+      root.style.setProperty('--zion-bg-secondary',#1e293b');
+      root.style.setProperty('--zion-text-primary',#f8fafc');
+      root.style.setProperty('--zion-text-secondary',#cbd5e1');
     } else {
-'
-      root.style.setProperty('--zion-bg-primary', '#ffffff');'
-      root.style.setProperty('--zion-bg-secondary', '#f1f5f9');'
-      root.style.setProperty('--zion-text-primary', '#0f172a');'
-      root.style.setProperty('--zion-text-secondary', '#475569');
+
+      root.style.setProperty('--zion-bg-primary',#ffffff');
+      root.style.setProperty('--zion-bg-secondary',#f1f5f9');
+      root.style.setProperty('--zion-text-primary',#0f172a');
+      root.style.setProperty('--zion-text-secondary',#475569');
     }
-'
+
     localStorage.setItem('zion-theme', theme);
   }, [theme, mounted]);
 
@@ -111,8 +122,8 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     setTheme(newTheme);
   };
   const themes: { value: Theme; label: string; icon: React.ComponentType<any> }[] = ['
-    { value: 'light', label: 'Light theme', icon: Sun },'
-    { value: 'dark', label: 'Dark theme', icon: Moon },'
+    { value: 'light', label: 'Light theme', icon: Sun },
+    { value: 'dark', label: 'Dark theme', icon: Moon },
     { value: 'system', label: 'System theme', icon: Monitor }
   ];
 
@@ -151,8 +162,8 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
             >"
               <Icon className="w-4 h-4" />              {isActive && (
                 <motion.div"
-                  className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500""
-                  layoutId="activeTheme""
+                  className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500"
+                  layoutId="activeTheme"
                   transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                 />) }
             </motion.button>) ;

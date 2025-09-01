@@ -11,7 +11,7 @@ class DependencyMonitor {
     this.vulnerabilitiesFound = 0;
     this.dependenciesUpdated = 0;
     this.monitoring = false;
-    this.logFile = path.join(this.projectRoot, 'logs', 'dependency.log');
+    this.logFile = path.join(this.projectRoot,logs',dependency.log');
 
     // Ensure logs directory exists
     this.ensureLogsDirectory();
@@ -82,7 +82,7 @@ class DependencyMonitor {
         this.log('No dependency issues detected, all packages are up to date');
       }
     } catch (error) {
-      this.log(`Dependency check failed: ${error.message}`, 'ERROR');
+      this.log(`Dependency check failed: ${error.message}`,ERROR');
     } finally {
       this.monitoring = false;
     }
@@ -136,19 +136,18 @@ class DependencyMonitor {
       try {
         if (issue.type === 'vulnerability') {
           this.log(
-            `Attempting to fix vulnerability in ${issue.packages.join(', ')}`
+            `Attempting to fix vulnerability in ${issue.packages.join(',)}`
           );
           execSync('npm audit fix', { stdio: 'inherit' });
           this.vulnerabilitiesFound++;
         } else if (issue.type === 'outdated') {
-          this.log(`Updating outdated packages: ${issue.packages.join(', ')}`);
+          this.log(`Updating outdated packages: ${issue.packages.join(',)}`);
           execSync('npm update', { stdio: 'inherit' });
           this.dependenciesUpdated++;
         }
       } catch (error) {
         this.log(
-          `Failed to fix issue ${issue.type}: ${error.message}`,
-          'ERROR'
+          `Failed to fix issue ${issue.type}: ${error.message}`,ERROR'
         );
       }
     }
@@ -161,7 +160,7 @@ class DependencyMonitor {
       execSync('npm audit', { stdio: 'inherit' });
       this.log('Security audit completed');
     } catch (error) {
-      this.log(`Security audit failed: ${error.message}`, 'ERROR');
+      this.log(`Security audit failed: ${error.message}`,ERROR');
     }
   }
 
@@ -172,7 +171,7 @@ class DependencyMonitor {
       execSync('npm update', { stdio: 'inherit' });
       this.log('Weekly updates completed');
     } catch (error) {
-      this.log(`Weekly updates failed: ${error.message}`, 'ERROR');
+      this.log(`Weekly updates failed: ${error.message}`,ERROR');
     }
   }
 

@@ -1,160 +1,160 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Sitemap = () => {
   const sitemapSections = [
     {
-'
+
       title: 'Main Pages',
       links: ['
         { name: 'Home', path: '/', description: 'Welcome to Zion Tech Group' },
         {
-'
-          name: 'About','
-          path: '/about','
+
+          name: 'About',
+          path: '/about',
           description: 'Learn about our company'},
         {
-'
-          name: 'Contact','
-          path: '/contact','
+
+          name: 'Contact',
+          path: '/contact',
           description: 'Get in touch with us'},
         {
-'
-          name: 'Partners','
-          path: '/partners','
-          description: 'Our business partners'},'
+
+          name: 'Partners',
+          path: '/partners',
+          description: 'Our business partners'},
         { name: 'Careers', path: '/careers', description: 'Job opportunities' },
       ]},
     {
-'
+
       title: 'Services',
       links: [
         {
-'
-          name: 'All Services','
-          path: '/services','
+
+          name: 'All Services',
+          path: '/services',
           description: 'Complete service catalog'},
         {
-'
-          name: 'AI Solutions','
-          path: '/services/ai','
+
+          name: 'AI Solutions',
+          path: '/services/ai',
           description: 'Artificial intelligence services'},
         {
-'
-          name: 'Cybersecurity','
-          path: '/services/cybersecurity','
+
+          name: 'Cybersecurity',
+          path: '/services/cybersecurity',
           description: 'Security and compliance'},
         {
-'
-          name: 'Cloud & DevOps','
-          path: '/services/cloud-devops','
+
+          name: 'Cloud & DevOps',
+          path: '/services/cloud-devops',
           description: 'Cloud infrastructure'},
         {
-'
-          name: 'Digital Transformation','
-          path: '/services/digital-transformation','
+
+          name: 'Digital Transformation',
+          path: '/services/digital-transformation',
           description: 'Business transformation'},
       ]},
     {
-'
+
       title: 'Marketplace',
       links: [
         {
-'
-          name: 'Marketplace','
-          path: '/marketplace','
+
+          name: 'Marketplace',
+          path: '/marketplace',
           description: 'Browse our marketplace'},
         {
-'
-          name: 'Products','
-          path: '/marketplace/products','
+
+          name: 'Products',
+          path: '/marketplace/products',
           description: 'Available products'},
         {
-'
-          name: 'Services','
-          path: '/marketplace/services','
+
+          name: 'Services',
+          path: '/marketplace/services',
           description: 'Marketplace services'},
         {
-'
-          name: 'Talent','
-          path: '/marketplace/talent','
+
+          name: 'Talent',
+          path: '/marketplace/talent',
           description: 'Find talent'},
       ]},
     {
-'
+
       title: 'Support & Resources',
       links: [
         {
-'
-          name: 'Blog','
-          path: '/blog','
+
+          name: 'Blog',
+          path: '/blog',
           description: 'Latest insights and news'},
         {
-'
-          name: 'FAQ','
-          path: '/faq','
+
+          name: 'FAQ',
+          path: '/faq',
           description: 'Frequently asked questions'},
         {
-'
-          name: 'Sitemap','
-          path: '/sitemap','
+
+          name: 'Sitemap',
+          path: '/sitemap',
           description: 'Complete site navigation'},
         {
-'
-          name: 'Help Center','
-          path: '/help','
+
+          name: 'Help Center',
+          path: '/help',
           description: 'Self-service support'},
         {
-'
-          name: 'System Status','
-          path: '/status','
+
+          name: 'System Status',
+          path: '/status',
           description: 'Service status and uptime'},
         {
-'
-          name: 'Security','
-          path: '/security','
+
+          name: 'Security',
+          path: '/security',
           description: 'Security and compliance information'},
       ]},
     {
-'
+
       title: 'Legal & Compliance',
       links: [
         {
-'
-          name: 'Privacy Policy','
-          path: '/privacy','
+
+          name: 'Privacy Policy',
+          path: '/privacy',
           description: 'Data protection and privacy'},
         {
-'
-          name: 'Terms of Service','
-          path: '/terms','
+
+          name: 'Terms of Service',
+          path: '/terms',
           description: 'Terms and conditions'},
         {
-'
-          name: 'Cookie Policy','
-          path: '/cookies','
+
+          name: 'Cookie Policy',
+          path: '/cookies',
           description: 'Cookie usage information'},
         {
-'
-          name: 'Accessibility','
-          path: '/accessibility','
+
+          name: 'Accessibility',
+          path: '/accessibility',
           description: 'Accessibility information'},
       ]},
     {
-'
+
       title: 'User Account',
       links: ['
-        { name: 'Login', path: '/login', description: 'User authentication' },'
+        { name: 'Login', path: '/login', description: 'User authentication' },
         { name: 'Sign Up', path: '/signup', description: 'Create new account' },
         {
-'
-          name: 'Dashboard','
-          path: '/dashboard','
+
+          name: 'Dashboard',
+          path: '/dashboard',
           description: 'User dashboard'},
         {
-'
-          name: 'Forgot Password','
-          path: '/forgot-password','
+
+          name: 'Forgot Password',
+          path: '/forgot-password',
           description: 'Password recovery'},
       ]},
   ];
@@ -166,7 +166,7 @@ const Sitemap = () => {
         <div className="text-center mb-16">"
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Site"
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
               {' '}
               Map
             </span>
@@ -211,19 +211,19 @@ const Sitemap = () => {
           <h2 className="text-2xl font-bold text-white mb-8">Quick Links</h2>"
           <div className="flex flex-wrap justify-center gap-4">
             <Link"
-              to="/contact""
+              to="/contact"
               className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-medium hover:scale-105 transition-transform"
             >
               Get Started
             </Link>
             <Link"
-              to="/services""
+              to="/services"
               className="px-6 py-3 border-2 border-zion-cyan text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-colors"
             >
               View Services
             </Link>
             <Link"
-              to="/help""
+              to="/help"
               className="px-6 py-3 border-2 border-zion-purple text-zion-purple rounded-lg font-medium hover:bg-zion-purple hover:text-white transition-colors"
             >
               Get Help

@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousVision = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousVision = () => {
       <Helmet>
         <title>AI Autonomous Vision Platform | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous vision platform that continuously analyzes visual data, recognizes objects, and processes images with advanced AI capabilities and autonomous operation."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI vision, autonomous vision, computer vision, image recognition, autonomous operations, AI vision platform"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-vision"
         />
       </Helmet>
@@ -181,14 +181,7 @@ const AIAutonomousVision = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Object Recognition','
-                'Image Classification','
-                'Face Detection','
-                'Text Recognition','
-                'Pattern Detection','
-                'Quality Inspection','
-                'Motion Detection','
-                'Scene Understanding',
+                'Object Recognition',Image Classification',Face Detection',Text Recognition',Pattern Detection',Quality Inspection',Motion Detection',Scene Understanding',
               ].map(type => (
                 <div
                   key={type}"

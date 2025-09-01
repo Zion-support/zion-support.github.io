@@ -1,6 +1,96 @@
+<<<<<<< HEAD
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Brain, 
+  GraduationCap, 
+  TrendingUp, 
+  Target, 
+  Users, 
+  BarChart3, 
+  Calendar,
+  Zap,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Globe,
+  Smartphone,
+  Monitor,
+  BookOpen,
+  MessageSquare,
+  Share2,
+  Analytics,
+  Palette,
+  Clock,
+  DollarSign,
+  Shield,
+  Headphones,
+  Rocket,
+  BookOpen as BookOpenIcon,
+  Video,
+  Mic,
+  PenTool,
+  Users as UsersIcon,
+  Award,
+  Lightbulb'
+ } from 'lucide-react';
+;
+export { function };
+export default function AIEducationPlatform(...args[]):  {
+
+  const features = [
+    "AI-powered personalized learning paths","
+    "Intelligent content recommendation","
+    "Automated assessment and grading","
+    "Real-time student progress tracking","
+    "Adaptive learning algorithms","
+    "Interactive virtual classrooms",;"
+    "AI tutoring and homework help",;"
+    "Content creation and curation",;"
+    "Student engagement analytics",;"
+    "Parent and teacher dashboards",;"
+    "Multi-language support",;"
+    "Accessibility and inclusion tools";
+  ];
+
+  const benefits = [;"
+    "Improve learning outcomes by 40%",;"
+    "Reduce teacher workload by 50%",;"
+    "Increase student engagement by 60%",;"
+    "Personalize education for every student",;"
+    "Scale quality education globally";
+  ];
+
+  const useCases = ["
+    "K-12 schools and districts","
+    "Higher education institutions",;"
+    "Corporate training programs",;"
+    "Online learning platforms",;"
+    "Special education programs",;"
+    "Language learning schools",;"
+    "Professional certification",;"
+    "Skills development programs";
+  ];
+
+  const pricing = [
+    {
+"
+      name: "School","
+      price: "$299","
+      period: "/month","
+      description: "Perfect for individual schools and small districts",
+      features[;"
+        "AI learning paths (up to 500 students)","
+        "Basic content recommendation","
+        "Assessment tools","
+        "Progress tracking","
+        "Email support","
+        "Up to 50 teachers"
+=======
 import React from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
 import { SEO  } from '@/components/SEO';        "Up to 50 teachers"
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Start Free Trial",
       popular: false
@@ -45,8 +135,14 @@ import { SEO  } from '@/components/SEO';        "Up to 50 teachers"
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
+        title="AI Education Platform - Zion Tech Group"
+        description="Transform education with AI-powered personalized learning, intelligent content, and adaptive teaching. Improve outcomes and engage every student."
+      />
+=======
         title="AI Education Platform - Zion Tech Group""        description="Transform education with AI-powered personalized learning, intelligent content, and adaptive teaching. Improve outcomes and engage every student."
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"

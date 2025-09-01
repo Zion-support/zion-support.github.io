@@ -1,5 +1,5 @@
-import React, { useState } from 'react.ts';'
-import { Link } from 'react-router-dom.ts';'
+import React, { useState } from 'react.ts';
+import { Link } from 'react-router-dom.ts';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -129,104 +129,104 @@ import {
   ScrewdriverIcon4,
   WrenchIcon5,
   ToolIcon5,
-  HammerIcon5,'
-  ScrewdriverIcon5} from 'lucide-react.ts';'
-import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025 } from '../data/revolutionaryMicroSaasServices2025';'
+  HammerIcon5,
+  ScrewdriverIcon5} from 'lucide-react.ts';
+import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025 } from '../data/revolutionaryMicroSaasServices2025';
 import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data/comprehensivePricingGuide2025';
 export function RevolutionaryServicesPage(...args: any[]): any {
-'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
-  const [priceRange, setPriceRange] = useState('all');'
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [priceRange, setPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('name');
 
   const categories = [
     {
-'
-      id: 'all','
+
+      id: 'all',
       name: 'All Categories',
-      icon: Globe,'
+      icon: Globe,
       color: 'from-blue-500 to-cyan-600'},
     {
-'
-      id: 'AI & Analytics','
+
+      id: 'AI & Analytics',
       name: 'AI & Analytics',
-      icon: Brain,'
+      icon: Brain,
       color: 'from-purple-500 to-pink-600'},
     {
-'
-      id: 'Quantum Computing','
+
+      id: 'Quantum Computing',
       name: 'Quantum Computing',
-      icon: Atom,'
+      icon: Atom,
       color: 'from-cyan-500 to-blue-600'},
     {
-'
-      id: 'Cybersecurity','
+
+      id: 'Cybersecurity',
       name: 'Cybersecurity',
-      icon: Shield,'
+      icon: Shield,
       color: 'from-red-500 to-orange-600'},
     {
-'
-      id: 'IoT & Edge Computing','
+
+      id: 'IoT & Edge Computing',
       name: 'IoT & Edge Computing',
-      icon: Cpu,'
+      icon: Cpu,
       color: 'from-green-500 to-teal-600'},
     {
-'
-      id: 'Blockchain & Web3','
+
+      id: 'Blockchain & Web3',
       name: 'Blockchain & Web3',
-      icon: Code,'
+      icon: Code,
       color: 'from-yellow-500 to-orange-600'},
     {
-'
-      id: 'Marketing & Sales','
+
+      id: 'Marketing & Sales',
       name: 'Marketing & Sales',
-      icon: TrendingUp,'
+      icon: TrendingUp,
       color: 'from-indigo-500 to-purple-600'},
     {
-'
-      id: 'Cloud & DevOps','
+
+      id: 'Cloud & DevOps',
       name: 'Cloud & DevOps',
-      icon: Cloud,'
+      icon: Cloud,
       color: 'from-blue-500 to-indigo-600'},
     {
-'
-      id: 'Customer Service','
+
+      id: 'Customer Service',
       name: 'Customer Service',
-      icon: Users,'
+      icon: Users,
       color: 'from-green-500 to-emerald-600'},
     {
-'
-      id: 'Compliance & Governance','
+
+      id: 'Compliance & Governance',
       name: 'Compliance & Governance',
-      icon: Lock,'
+      icon: Lock,
       color: 'from-gray-500 to-slate-600'},
     {
-'
-      id: 'Business Operations','
+
+      id: 'Business Operations',
       name: 'Business Operations',
-      icon: Briefcase,'
+      icon: Briefcase,
       color: 'from-amber-500 to-yellow-600'},
     {
-'
-      id: 'Financial Services','
+
+      id: 'Financial Services',
       name: 'Financial Services',
-      icon: DollarSign,'
+      icon: DollarSign,
       color: 'from-emerald-500 to-green-600'},
   ];
 
   const priceRanges = ['
-    { id: 'all', name: 'All Prices', range: 'All' },'
-    { id: 'low', name: 'Under $1,500', range: '< $1,500' },'
-    { id: 'medium', name: '$1,500 - $3,000', range: '$1,500 - $3,000' },'
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $1,500', range: '< $1,500' },
+    { id: 'medium', name: '$1,500 - $3,000', range: '$1,500 - $3,000' },
     { id: 'high', name: 'Over $3,000', range: '> $3,000' },
   ];
 
   const sortOptions = ['
-    { id: 'name', name: 'Name A-Z' },'
-    { id: 'price-low', name: 'Price: Low to High' },'
-    { id: 'price-high', name: 'Price: High to Low' },'
-    { id: 'category', name: 'Category' },'
+    { id: 'name', name: 'Name A-Z' },
+    { id: 'price-low', name: 'Price: Low to High' },
+    { id: 'price-high', name: 'Price: High to Low' },
+    { id: 'category', name: 'Category' },
     { id: 'innovation', name: 'Innovation Level' },
   ];
 
@@ -244,13 +244,13 @@ export function RevolutionaryServicesPage(...args: any[]): any {
       const matchesCategory ='
         selectedCategory === 'all' || service.category === selectedCategory;
 
-      let matchesPrice = true;'
+      let matchesPrice = true;
       if (priceRange === 'low') {
 
-        matchesPrice = service.price < 1500;'
+        matchesPrice = service.price < 1500;
       } else if (priceRange === 'medium') {
 
-        matchesPrice = service.price >= 1500 && service.price <= 3000;'
+        matchesPrice = service.price >= 1500 && service.price <= 3000;
       } else if (priceRange === 'high') {
 
         matchesPrice = service.price > 3000;
@@ -263,14 +263,20 @@ export function RevolutionaryServicesPage(...args: any[]): any {
   const sortedServices = [...filteredServices].sort((a, b) => {
 
     switch (sortBy) {
-'
+
       case 'name':
+<<<<<<< HEAD
+        return a.title.localeCompare(b.title);
+      case 'price-low':
+        return a.price - b.price;
+=======
         return a.title.localeCompare(b.title);'      case 'price-low':
         return a.price - b.price;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'price-high':
-        return b.price - a.price;'
+        return b.price - a.price;
       case 'category':
-        return a.category.localeCompare(b.category);'
+        return a.category.localeCompare(b.category);
       case 'innovation':
         const innovationOrder = { Revolutionary: 3, Advanced: 2, Standard: 1 };
         return()
@@ -292,14 +298,14 @@ export function RevolutionaryServicesPage(...args: any[]): any {
 
   const getCategoryColor = (category: anystring) => {
 
-    const categoryData = categories.find(cat => cat.id === category);'
+    const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.color : 'from-gray-500 to-slate-600';
   };
 
   const getPriceRange = (price: anynumber) => {
-'
-    if (price < 1500) return 'low';'
-    if (price <= 3000) return 'medium';'
+
+    if (price < 1500) return 'low';
+    if (price <= 3000) return 'medium';
     return 'high';
   };
 
@@ -307,11 +313,11 @@ export function RevolutionaryServicesPage(...args: any[]): any {
 
     const range = getPriceRange(price);
     switch (range) {
-'
+
       case 'low':'
-        return 'text-green-400';'
+        return 'text-green-400';
       case 'medium':'
-        return 'text-yellow-400';'
+        return 'text-yellow-400';
       case 'high':'
         return 'text-red-400';
       default:'
@@ -323,11 +329,11 @@ export function RevolutionaryServicesPage(...args: any[]): any {
 
     const range = getPriceRange(price);
     switch (range) {
-'
+
       case 'low':'
-        return 'bg-green-500/20 text-green-400';'
+        return 'bg-green-500/20 text-green-400';
       case 'medium':'
-        return 'bg-yellow-500/20 text-yellow-400';'
+        return 'bg-yellow-500/20 text-yellow-400';
       case 'high':'
         return 'bg-red-500/20 text-red-400';
       default:'
@@ -338,11 +344,11 @@ export function RevolutionaryServicesPage(...args: any[]): any {
   const getInnovationColor = (level: anystring) => {
 
     switch (level) {
-'
+
       case 'Revolutionary':'
-        return 'text-purple-400';'
+        return 'text-purple-400';
       case 'Advanced':'
-        return 'text-blue-400';'
+        return 'text-blue-400';
       case 'Standard':'
         return 'text-green-400';
       default:'
@@ -353,11 +359,11 @@ export function RevolutionaryServicesPage(...args: any[]): any {
   const getInnovationBgColor = (level: anystring) => {
 
     switch (level) {
-'
+
       case 'Revolutionary':'
-        return 'bg-purple-500/20';'
+        return 'bg-purple-500/20';
       case 'Advanced':'
-        return 'bg-blue-500/20';'
+        return 'bg-blue-500/20';
       case 'Standard':'
         return 'bg-green-500/20';
       default:'
@@ -419,7 +425,12 @@ export function RevolutionaryServicesPage(...args: any[]): any {
             <div className="relative">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input"
+<<<<<<< HEAD
+                type="text"
+                placeholder="Search services..."
+=======
                 type="text""                placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
@@ -481,13 +492,13 @@ export function RevolutionaryServicesPage(...args: any[]): any {
                 <div className="flex items-center justify-between mb-4">"
                   <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center">
                     {React.createElement(getCategoryIcon(service.category), {
-'
+
                       className: 'w-8 h-8 text-white'})}
                   </div>"
                   <div className="text-right">
                     <div`
                       className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${getPriceRangeColor(service.price)}`}
-                    >'
+                    >
                       {getPriceRange(service.price) === 'low''
                         ? 'Affordable''
                         : getPriceRange(service.price) === 'medium''
@@ -646,7 +657,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
                     {package_.description}
                   </p>
                 </div>
-'
+
                 {package_.pricing === 'Custom pricing based on requirements' ? ("
                   <div className="text-center mb-6">"
                     <div className="text-2xl font-bold text-cyan-400 mb-2">
@@ -671,7 +682,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
                 )}
 "
                 <div className="mb-6">"
-                  <h4 className="text-sm font-semibold text-gray-300 mb-3">'
+                  <h4 className="text-sm font-semibold text-gray-300 mb-3">
                     What's Included:
                   </h4>"
                   <div className="space-y-2">
@@ -734,8 +745,8 @@ export function RevolutionaryServicesPage(...args: any[]): any {
               <a
                 href={CONTACT_INFORMATION.website}"
                 className="text-green-400 hover:text-green-300 transition-colors"
-              >'
-                {CONTACT_INFORMATION.website.replace('https://', '')}
+              >
+                {CONTACT_INFORMATION.website.replace('https://',)}
               </a>
             </div>
 "
@@ -770,8 +781,8 @@ export function RevolutionaryServicesPage(...args: any[]): any {
               </a>
               <a
                 href={CONTACT_INFORMATION.website}"
-                target="_blank""
-                rel="noopener noreferrer""
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25"
               >
                 Visit Website

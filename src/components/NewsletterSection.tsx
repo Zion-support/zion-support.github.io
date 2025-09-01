@@ -1,6 +1,21 @@
+<<<<<<< HEAD
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-react';
+
+      description: "Get exclusive access to tech trends and analysis";
+    },;
+    {;
+      icon: Zap,;"
+      title: "Early Access",;"
+      description: "Be the first to know about beta programs and launches";
+    };
+  ];
+=======
 import React, { useState } from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
 import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-react';  ];
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   if (isSubscribed) {
 
@@ -27,7 +42,12 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
               <CheckCircle className="w-10 h-10 text-white" />
             </div>"
             <h2 className="text-3xl font-bold text-white mb-4">Welcome to the Zion Tech Group Community!</h2>"
+<<<<<<< HEAD
+            <p className="text-gray-300 text-lg mb-6">
+              You're now subscribed to our newsletter. We'll keep you updated with the latest technology insights,
+=======
             <p className="text-gray-300 text-lg mb-6">'              You're now subscribed to our newsletter. We'll keep you updated with the latest technology insights,
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               service announcements, and exclusive content.
             </p>
             <button
@@ -147,11 +167,11 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
                     Email Address
                   </label>
                   <input"
-                    type="email""
+                    type="email"
                     id="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}"
-                    placeholder="Enter your email address""
+                    placeholder="Enter your email address"
                     className="w-full px-4 py-3 bg-slate-800 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300"
                     required
                   />
@@ -176,11 +196,11 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
               </form>
 "
               <div className="mt-6 text-center">"
-                <p className="text-xs text-gray-400">'
+                <p className="text-xs text-gray-400">
                   By subscribing, you agree to our{' '}"
                   <a href="/privacy" className="text-cyan-400 hover:text-cyan-300 underline">
                     Privacy Policy'
-                  </a>{' '}'
+                  </a>{' '}
                   and{' '}"
                   <a href="/terms" className="text-cyan-400 hover:text-cyan-300 underline">
                     Terms of Service

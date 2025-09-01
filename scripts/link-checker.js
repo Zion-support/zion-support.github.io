@@ -17,7 +17,7 @@ console.log('🔗 Link Checker Started');
 
 class LinkChecker {
   constructor() {
-    this.projectRoot = path.resolve(__dirname, '..');
+    this.projectRoot = path.resolve(__dirname,..');
     this.brokenLinks = [];
     this.checkedLinks = 0;
   }
@@ -55,7 +55,7 @@ class LinkChecker {
     const htmlFiles = this.findFiles('.html');
     
     for (const file of htmlFiles) {
-      const content = fs.readFileSync(file, 'utf8');
+      const content = fs.readFileSync(file,utf8');
       const links = this.extractLinks(content);
       
       for (const link of links) {
@@ -71,7 +71,7 @@ class LinkChecker {
     const mdFiles = this.findFiles('.md');
     
     for (const file of mdFiles) {
-      const content = fs.readFileSync(file, 'utf8');
+      const content = fs.readFileSync(file,utf8');
       const links = this.extractMarkdownLinks(content);
       
       for (const link of links) {
@@ -85,9 +85,9 @@ class LinkChecker {
 
   async checkPackageLinks() {
     try {
-      const packagePath = path.join(this.projectRoot, 'package.json');
+      const packagePath = path.join(this.projectRoot,package.json');
       if (fs.existsSync(packagePath)) {
-        const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
+        const packageJson = JSON.parse(fs.readFileSync(packagePath,utf8'));
         
         if (packageJson.repository) {
           this.checkedLinks++;

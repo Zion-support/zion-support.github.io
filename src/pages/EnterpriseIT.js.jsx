@@ -1,5 +1,5 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
 
@@ -8,7 +8,7 @@ import {
   Shield,
   Zap,
   Users,
-  Globe,'
+  Globe,
   ArrowRight} from 'lucide-react';
 export default function EnterpriseIT() {
   return()
@@ -157,21 +157,21 @@ export default function EnterpriseIT() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Enterprise IT?
           </h2>"
-          <p className="text-xl text-gray-300 mb-8">'
+          <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our enterprise IT solutions can drive your
             business forward with cutting-edge technology and unparalleled
             support.
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
+              to="/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-400 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-500 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
               Get Started"
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link"
-              to="/services""
+              to="/services"
               className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-white transition-all duration-300"
             >
               View All Services

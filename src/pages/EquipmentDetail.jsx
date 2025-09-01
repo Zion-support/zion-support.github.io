@@ -48,10 +48,10 @@ export default function EquipmentDetail() {
         }
         setIsAdding (true) ;
         try {
-'
+
             const response = await fetch('/checkout/create-session', {
-'
-                method: 'POST','
+
+                method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ productId: equipmentId })});
             const { url } = await response.json();
@@ -60,7 +60,7 @@ export default function EquipmentDetail() {
                 window.location.href = url}
         }
         catch (err) {
-'
+
             toast({ title: 'Payment error', description: 'Could not start checkout.' })}
         finally {
 

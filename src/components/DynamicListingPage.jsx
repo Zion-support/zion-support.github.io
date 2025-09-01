@@ -244,13 +244,13 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 </div>
 "
                 <div className="flex items-center gap-2 ml-auto">"`
-                  <Button variant="outline" size="icon" onClick={() => setView("grid")} aria-pressed={view === "grid"} aria-label="Grid view" title="Grid view" className={`${view === "grid""
+                  <Button variant="outline" size="icon" onClick={() => setView("grid")} aria-pressed={view === "grid"} aria-label="Grid view" title="Grid view" className={`${view === "grid"
             ? "bg-zion-purple/30 border-zion-purple text-zion-purple""`
             : "border-zion-blue-light text-zion-slate-light"} focus-visible:ring-zion-purple`}>"
                     <LayoutGrid className="h-4 w-4"/>"
                     <span className="sr-only">Grid view</span>
                   </Button>"`
-                  <Button variant="outline" size="icon" onClick={() => setView("list")} aria-pressed={view === "list"} aria-label="List view" title="List view" className={`${view === "list""
+                  <Button variant="outline" size="icon" onClick={() => setView("list")} aria-pressed={view === "list"} aria-label="List view" title="List view" className={`${view === "list"
             ? "bg-zion-purple/30 border-zion-purple text-zion-purple""`
             : "border-zion-blue-light text-zion-slate-light"} focus-visible:ring-zion-purple`}>"
                     <List className="h-4 w-4"/>"
@@ -269,8 +269,8 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
             </div>
 
             {isLoading ? ("
-              <div className={view === "grid""
-                ? "grid grid-cols-1 md:grid-cols-2 gap-6""
+              <div className={view === "grid"
+                ? "grid grid-cols-1 md:grid-cols-2 gap-6"
                 : "flex flex-col gap-6"}>
                 {[1, 2, 3, 4].map((i) => ("
                   <div key={i} className="rounded-lg overflow-hidden border border-zion-blue-light">"
@@ -289,8 +289,8 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 ))}
               </div>
             ) : filteredListings.length > 0 ? ("
-              <div className={view === "grid""
-                ? "grid grid-cols-1 md:grid-cols-2 gap-6""
+              <div className={view === "grid"
+                ? "grid grid-cols-1 md:grid-cols-2 gap-6"
                 : "flex flex-col gap-6"}>
                 {paginatedListings.map((listing) => (
                   <ProductListingCard

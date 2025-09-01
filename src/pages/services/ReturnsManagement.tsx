@@ -1,5 +1,21 @@
+<<<<<<< HEAD
+import React from 'react';
+import SEO from '@/components/SEO';
+
+function ReturnsManagement() {
+  return()
+    <div className="min-h-screen bg-futuristic text-white">
+      <SEO"
+        title="E‑commerce Returns Management SaaS"
+        description="Automate return labels, RMA approvals, and refunds with branded portals and carrier integrations."
+      />"
+      <section className="container-responsive section-padding">"
+        <h1 className="heading-responsive text-gradient">E‑commerce Returns Management</h1>"
+        <p className="mt-4 max-w-3xl text-zion-slate-light text-responsive">
+=======
 import React from 'react';'
 import SEO from '@/components/SEO';        <p className="mt-4 max-w-3xl text-zion-slate-light text-responsive">
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           Reduce support workload and increase customer satisfaction with a self‑serve, branded
           returns portal that automates labels, RMAs, inspections, and refunds while syncing
           with your e‑commerce and shipping providers.
@@ -30,14 +46,14 @@ import SEO from '@/components/SEO';        <p className="mt-4 max-w-3xl text-zio
 "
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           {[{
-'
-            plan: 'Starter', price: '$99/mo', features: ['Up to 500 returns', '1 brand portal', '1 store integration']
+
+            plan: 'Starter', price: '$99/mo', features: ['Up to 500 returns',1 brand portal',1 store integration']
           },{
-'
-            plan: 'Growth', price: '$299/mo', features: ['Up to 5,000 returns', '3 brand portals', 'All major carriers']
+
+            plan: 'Growth', price: '$299/mo', features: ['Up to 5,000 returns',3 brand portals',All major carriers']
           },{
-'
-            plan: 'Scale', price: 'Custom', features: ['Unlimited returns', 'SLA + SSO', 'Dedicated success manager']
+
+            plan: 'Scale', price: 'Custom', features: ['Unlimited returns',SLA + SSO',Dedicated success manager']
           }].map(({ plan, price, features }) => ("
             <div key={plan} className="card-futuristic">"
               <h3 className="text-lg font-semibold">{plan}</h3>"

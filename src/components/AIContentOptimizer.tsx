@@ -1,12 +1,53 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';'
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+import {
+
+  Brain,
+  Zap,
+  Target,
+  TrendingUp,
+  Search,
+  FileText,
+  Edit3,
+  Eye,
+  BarChart3,
+  Lightbulb,
+  CheckCircle,
+  AlertTriangle,
+  Info,
+  X,
+  Settings,
+  Download,
+  Share2,
+  RefreshCw,
+  Maximize2,
+  Minimize2,
+  Sparkles,
+  Globe,
+  Smartphone,
+  Monitor} from 'lucide-react';
+
+interface ContentAnalysis {
+  id: string;
+  type: 'seo' | 'performance' | 'accessibility' | 'user-experience';
+  score: number;
+  suggestions: string[];
+  priority: 'high' | 'medium' | 'low';
+  impact: number;
+  category: string;
+
+}
+
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface OptimizationSuggestion {
 
   id: string;
   title: string;
-  description: string;'
-  category: 'seo' | 'performance' | 'accessibility' | 'ux';'
-  priority: 'high' | 'medium' | 'low';'
+  description: string;
+  category: 'seo' | 'performance' | 'accessibility' | 'ux';
+  priority: 'high' | 'medium' | 'low';
   effort: 'low' | 'medium' | 'high';
   impact: number;
   implementation: string;
@@ -35,7 +76,7 @@ export function AIContentOptimizer({
   const [contentAnalysis, setContentAnalysis] = useState<ContentAnalysis[]>([]);
   const [optimizationSuggestions, setOptimizationSuggestions] = useState<
     OptimizationSuggestion[]
-  >([]);'
+  >([]);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [showAdvanced, setShowAdvanced] = useState(false);
   const [currentScore, setCurrentScore] = useState(0);
@@ -46,11 +87,17 @@ export function AIContentOptimizer({
   // Generate sample content analysis
   const generateContentAnalysis = useCallback(() => {
     const categories = ['
+<<<<<<< HEAD
+      'seo',performance',accessibility',user-experience',
+    ];
+    const analysis: ContentAnalysis[] = [];
+=======
       'seo','
       'performance','
       'accessibility','
       'user-experience',
     ];    const analysis: ContentAnalysis[] = [];
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     categories.forEach(category => {
 
@@ -65,7 +112,7 @@ export function AIContentOptimizer({
         id: category,
         type: category as any,
         score,
-        suggestions,'
+        suggestions,
         priority: score < 70 ? 'high' : score < 85 ? 'medium' : 'low',
         impact: Math.floor(Math.random() * 30) + 10,
         category});
@@ -83,50 +130,50 @@ export function AIContentOptimizer({
   const generateOptimizationSuggestions = useCallback ( () => {
     const suggestions: OptimizationSuggestion[] = [
       {
-'
-        id: 'seo-1','
+
+        id: 'seo-1',
         title: 'Optimize Meta Tags',
         description:'
-          'Improve meta title and description for better search engine visibility','
-        category: 'seo','
-        priority: 'high','
+          'Improve meta title and description for better search engine visibility',
+        category: 'seo',
+        priority: 'high',
         effort: 'low',
         impact: 25,
         implementation:'
-          'Update meta tags with relevant keywords and compelling descriptions','
+          'Update meta tags with relevant keywords and compelling descriptions',
         estimatedTime: '15 minutes'},
       {
-'
-        id: 'performance-1','
-        title: 'Optimize Images','
-        description: 'Compress and optimize images for faster loading times','
-        category: 'performance','
-        priority: 'medium','
+
+        id: 'performance-1',
+        title: 'Optimize Images',
+        description: 'Compress and optimize images for faster loading times',
+        category: 'performance',
+        priority: 'medium',
         effort: 'medium',
-        impact: 20,'
-        implementation: 'Use WebP format and implement lazy loading','
+        impact: 20,
+        implementation: 'Use WebP format and implement lazy loading',
         estimatedTime: '1 hour'},
       {
-'
-        id: 'accessibility-1','
-        title: 'Improve ARIA Labels','
-        description: 'Add proper ARIA labels for better screen reader support','
-        category: 'accessibility','
-        priority: 'high','
+
+        id: 'accessibility-1',
+        title: 'Improve ARIA Labels',
+        description: 'Add proper ARIA labels for better screen reader support',
+        category: 'accessibility',
+        priority: 'high',
         effort: 'low',
-        impact: 30,'
-        implementation: 'Add descriptive ARIA labels to interactive elements','
+        impact: 30,
+        implementation: 'Add descriptive ARIA labels to interactive elements',
         estimatedTime: '30 minutes'},
       {
-'
-        id: 'ux-1','
-        title: 'Enhance Navigation','
-        description: 'Improve user navigation and reduce cognitive load','
-        category: 'ux','
-        priority: 'medium','
+
+        id: 'ux-1',
+        title: 'Enhance Navigation',
+        description: 'Improve user navigation and reduce cognitive load',
+        category: 'ux',
+        priority: 'medium',
         effort: 'medium',
-        impact: 18,'
-        implementation: 'Simplify navigation structure and add breadcrumbs','
+        impact: 18,
+        implementation: 'Simplify navigation structure and add breadcrumbs',
         estimatedTime: '2 hours'},
     ];
 
@@ -181,10 +228,10 @@ export function AIContentOptimizer({
   const getPriorityColor = (priority: string) => {
 
     const colors = {
-'
+
       high: 'text-red-600 bg-red-100 dark:bg-red-900/30 dark:text-red-400',
       medium:'
-        'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400','
+        'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400',
       low: 'text-green-600 bg-green-100 dark:bg-green-900/30 dark:text-green-400'};
     return colors[priority as keyof typeof colors] || colors.low;
   };
@@ -196,7 +243,7 @@ export function AIContentOptimizer({
 
       seo: <Search className="w-5 h-5" />,"
       performance: <Zap className="w-5 h-5" />,"
-      accessibility: <Eye className="w-5 h-5" />,'"
+      accessibility: <Eye className="w-5 h-5" />,"
       'user-experience': <Target className="w-5 h-5" />};"
     return icons[category] || <Info className="w-5 h-5" />;
   };
@@ -234,12 +281,12 @@ export function AIContentOptimizer({
           >
             <motion.div`
               className={`bg-white dark:bg-gray-900 rounded-2xl shadow-2xl overflow-hidden ${
-'
+
                 isFullscreen ? 'w-full h-full' : 'w-full max-w-7xl max-h-[90vh]'`
               }`}
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}'
+              exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
             >
               {/* Header */}"
@@ -350,8 +397,8 @@ export function AIContentOptimizer({
                               {getCategoryIcon(item.category)}
                             </div>
                             <div>"
-                              <h4 className="font-medium text-gray-900 dark:text-white capitalize">'
-                                {item.category.replace('-', ' ')}
+                              <h4 className="font-medium text-gray-900 dark:text-white capitalize">
+                                {item.category.replace('-',)}
                               </h4>"
                               <p className="text-sm text-gray-500 dark:text-gray-400">
                                 {item.suggestions.length} suggestions
@@ -423,7 +470,7 @@ export function AIContentOptimizer({
                             <button
                               onClick={() => setShowAdvanced(!showAdvanced)}"
                               className="px-3 py-1 text-sm bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors"
-                            >'
+                            >
                               {showAdvanced ? 'Hide' : 'Show'} Advanced
                             </button>
                           </div>

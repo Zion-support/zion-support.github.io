@@ -1,3 +1,69 @@
+<<<<<<< HEAD
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { comprehensiveNewServices2025  } from '../data/comprehensiveNewServices2025';
+import { Search,
+  Filter,
+  Star,
+  TrendingUp,
+  Users,
+  Shield,
+  Zap,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  CheckCircle,
+  DollarSign,
+  Clock,
+  Target,
+  Award,
+  Rocket,
+  Brain,
+  Atom,
+  Lock,
+  Heart,
+  GraduationCap,
+  BarChart3,
+  Satellite,
+  Cpu'
+ } from 'lucide-react.ts';
+
+export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('featured');
+
+  const categories = ['
+    { id: 'all', name: 'All Services', icon: Globe },
+    { id: 'ai-services', name: 'AI Services', icon: Brain },
+    { id: 'quantum-computing', name: 'Quantum Computing', icon: Atom },
+    { id: 'blockchain-web3', name: 'Blockchain & Web3', icon: Lock },
+    { id: 'biotech-ai', name: 'HealthTech & BioTech', icon: Heart },
+    { id: 'fintech', name: 'FinTech', icon: DollarSign },
+    { id: 'edutech', name: 'EduTech', icon: GraduationCap },
+    { id: 'martech', name: 'MarTech', icon: BarChart3 },
+    { id: 'space-tech', name: 'Space Tech', icon: Satellite },
+    { id: 'emerging-tech', name: 'Emerging Tech', icon: Cpu }
+  ];
+
+  const filteredServices = comprehensiveNewServices2025;
+    .filter(service => {
+
+      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+      return matchesSearch && matchesCategory;
+    })
+    .sort((a, b) => {
+
+      if (sortBy === 'featured') return b.featured ? 1 : -1;
+      if (sortBy === 'price-low') return parseFloat(a.pricing.monthly.replace(/[^0-9]/g,)) - parseFloat(b.pricing.monthly.replace(/[^0-9]/g,));
+      if (sortBy === 'price-high') return parseFloat(b.pricing.monthly.replace(/[^0-9]/g,)) - parseFloat(a.pricing.monthly.replace(/[^0-9]/g,));
+=======
 import React, { useState } from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
 import { comprehensiveNewServices2025  } from '../data/comprehensiveNewServices2025';    .sort((a, b) => {
@@ -5,6 +71,7 @@ import { comprehensiveNewServices2025  } from '../data/comprehensiveNewServices2
       if (sortBy === 'featured') return b.featured ? 1 : -1;'
       if (sortBy === 'price-low') return parseFloat(a.pricing.monthly.replace(/[^0-9]/g, '')) - parseFloat(b.pricing.monthly.replace(/[^0-9]/g, ''));'
       if (sortBy === 'price-high') return parseFloat(b.pricing.monthly.replace(/[^0-9]/g, '')) - parseFloat(a.pricing.monthly.replace(/[^0-9]/g, ''));
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       return 0;
     }) ;
 
@@ -17,17 +84,9 @@ import { comprehensiveNewServices2025  } from '../data/comprehensiveNewServices2
   const getCategoryColor = (category: anystring)  => {
 
     const colors: { [key: string]: string } = {
-'
-      'ai-services': 'from-purple-500 to-pink-600','
-      'quantum-computing': 'from-indigo-500 to-purple-600','
-      'blockchain-web3': 'from-green-500 to-teal-600','
-      'biotech-ai': 'from-red-500 to-pink-600','
-      'fintech': 'from-orange-500 to-red-600','
-      'edutech': 'from-blue-500 to-indigo-600','
-      'martech': 'from-green-500 to-emerald-600','
-      'space-tech': 'from-purple-500 to-indigo-600','
-      'emerging-tech': 'from-teal-500 to-cyan-600'
-    };'
+
+      'ai-services': 'from-purple-500 to-pink-600',quantum-computing': 'from-indigo-500 to-purple-600',blockchain-web3': 'from-green-500 to-teal-600',biotech-ai': 'from-red-500 to-pink-600',fintech': 'from-orange-500 to-red-600',edutech': 'from-blue-500 to-indigo-600',martech': 'from-green-500 to-emerald-600',space-tech': 'from-purple-500 to-indigo-600',emerging-tech': 'from-teal-500 to-cyan-600'
+    };
     return colors[category] || 'from-gray-500 to-gray-600';
   };
   return()
@@ -57,7 +116,12 @@ import { comprehensiveNewServices2025  } from '../data/comprehensiveNewServices2
             <div className="relative flex-1 max-w-md">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input"
+<<<<<<< HEAD
+                type="text"
+                placeholder="Search services..."
+=======
                 type="text""                placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
@@ -208,8 +272,8 @@ import { comprehensiveNewServices2025  } from '../data/comprehensiveNewServices2
               <div className="space-y-2">
                 <a
                   href={service.link}"
-                  target="_blank""
-                  rel="noopener noreferrer""
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block w-full text-center bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all duration-200 group-hover:scale-105"
                 >
                   Learn More"
@@ -271,9 +335,9 @@ import { comprehensiveNewServices2025  } from '../data/comprehensiveNewServices2
 "
           <div className="text-center mt-8">
             <a"
-              href="https://ziontechgroup.com""
-              target="_blank""
-              rel="noopener noreferrer""
+              href="https://ziontechgroup.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-cyan-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
             >"
               <Globe className="w-5 h-5" />              <span>Visit Our Website</span>

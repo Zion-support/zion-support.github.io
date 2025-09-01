@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import { Server, Network, Shield, Zap, ArrowRight, Cloud, Database, Cpu, Users, BarChart3, CheckCircle, Globe  } from 'lucide-react';
 ;
 export { function };
@@ -8,51 +8,59 @@ export default function Infrastructure(...args[]):  {
   const features = [
     {
 
-      icon: Server,'
-      title: 'Scalable Infrastructure','
+      icon: Server,
+      title: 'Scalable Infrastructure',
       description: 'Build robust systems that grow with your business'
     },
     {
 
-      icon: Network,'
-      title: 'Network Management','
+      icon: Network,
+      title: 'Network Management',
       description: 'Optimize connectivity and performance'
     },
     {
 
-      icon: Shield,'
-      title: 'Security First','
+      icon: Shield,
+      title: 'Security First',
       description: 'Protect your infrastructure with enterprise-grade security';
     },;
     {;
-      icon: Zap,;'
-      title: 'High Performance',;'
+      icon: Zap,;
+      title: 'High Performance',;
       description: 'Lightning-fast systems and applications';
     };
   ];
 
   const services = [
     {
-'
-      title: 'Server Management','
+
+      title: 'Server Management',
       description: 'Comprehensive server administration and optimization',
       icon: Server
     },
     {
-'
-      title: 'Network Design','
+
+      title: 'Network Design',
       description: 'Custom network architecture and implementation',
       icon: Network
     },
     {
-'
-      title: 'Cloud Migration','
+
+      title: 'Cloud Migration',
       description: 'Seamless transition to cloud infrastructure',
       icon: Cloud;
     },;
+<<<<<<< HEAD
+    {;
+      title: 'Disaster Recovery',;
+      description: 'Business continuity and backup solutions',;
+      icon: Shield;
+    };
+=======
     {;'
       title: 'Disaster Recovery',;'      description: 'Business continuity and backup solutions',;
       icon: Shield};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()

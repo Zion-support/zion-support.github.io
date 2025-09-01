@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { Settings, FileText, Eye, Zap, Volume2, VolumeX } from 'lucide-react';'
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Settings, FileText, Eye, Zap, Volume2, VolumeX } from 'lucide-react';
 import { Button } from './button';
 export function AccessibilityMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState({
-'
+
     fontSize: 'medium',
     highContrast: false,
     reducedMotion: false,
@@ -29,7 +29,7 @@ export function AccessibilityMenu() {
     const root = document.documentElement;
     // Font size
     root.style.setProperty('
-      '--font-size-multiplier','
+      '--font-size-multiplier',
       newSettings.fontSize === 'small''
         ? '0.875''
         : newSettings.fontSize === 'large''
@@ -38,18 +38,18 @@ export function AccessibilityMenu() {
     );
     // High contrast
     if (newSettings.highContrast) {
-'
+
       root.classList.add('high-contrast');
     } else {
-'
+
       root.classList.remove('high-contrast');
     }
     // Reduced motion
     if (newSettings.reducedMotion) {
-'
+
       root.classList.add('reduced-motion');
     } else {
-'
+
       root.classList.remove('reduced-motion');
     }
   };
@@ -66,7 +66,7 @@ export function AccessibilityMenu() {
   };
   const resetSettings = () => {
     const defaultSettings = {
-'
+
       fontSize: 'medium',
       highContrast: false,
       reducedMotion: false,
@@ -94,7 +94,7 @@ export function AccessibilityMenu() {
             className="fixed bottom-32 right-8 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-md rounded-2xl border border-zion-purple/20 shadow-2xl"
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: 20 }}'
+            exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
           >"
             <div className="p-6">"
@@ -103,7 +103,7 @@ export function AccessibilityMenu() {
                   Accessibility
                 </h3>
                 <Button"
-                  variant="ghost""
+                  variant="ghost"
                   size="sm"
                   onClick={resetSettings}"
                   className="text-zion-cyan hover:text-zion-cyan-light text-sm"
@@ -118,12 +118,12 @@ export function AccessibilityMenu() {
                   <FileText className="h-4 w-4 text-zion-cyan" />"
                   <span className="text-sm font-medium">Font Size</span>
                 </label>"
-                <div className="flex gap-2">'
-                  {['small', 'medium', 'large'].map(size => (
+                <div className="flex gap-2">
+                  {['small',medium',large'].map(size => (
                     <Button
                       key={size}
                       variant={
-'
+
                         settings.fontSize === size ? 'default' : 'outline'
                       }"
                       size="sm"
@@ -157,7 +157,7 @@ export function AccessibilityMenu() {
                       ? 'bg-zion-cyan text-zion-blue-dark''
                       : 'text-zion-slate-light hover:text-white'`
                   }`}
-                >'
+                >
                   {settings.highContrast ? 'Enabled' : 'Disabled'}
                 </Button>
               </div>
@@ -178,7 +178,7 @@ export function AccessibilityMenu() {
                       ? 'bg-zion-cyan text-zion-blue-dark''
                       : 'text-zion-slate-light hover:text-white'`
                   }`}
-                >'
+                >
                   {settings.reducedMotion ? 'Enabled' : 'Disabled'}
                 </Button>
               </div>
@@ -203,7 +203,7 @@ export function AccessibilityMenu() {
                       ? 'bg-zion-cyan text-zion-blue-dark''
                       : 'text-zion-slate-light hover:text-white'`
                   }`}
-                >'
+                >
                   {settings.soundEnabled ? 'Enabled' : 'Disabled'}
                 </Button>
               </div>

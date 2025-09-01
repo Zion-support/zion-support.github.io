@@ -7,4 +7,3 @@ export function logErrorToProduction(message: string, error?: Error): void {
     // console.error(message, error);
   }  // TODO: Implement production error logging service
 }
-'

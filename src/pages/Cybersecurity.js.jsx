@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { SEO } from '@/components/SEO';
 import {
 
@@ -10,37 +10,37 @@ import {
   Network,
   Zap,
   Target,
-  CheckCircle,'
+  CheckCircle,
   BarChart3} from 'lucide-react';
 const Cybersecurity = () => {
   const securityFeatures = [
     {
 
-      icon: CheckCircle,'
-      title: '24/7 Monitoring','
+      icon: CheckCircle,
+      title: '24/7 Monitoring',
       description: 'Continuous security monitoring and threat detection'},
     {
 
-      icon: Zap,'
-      title: 'Real-time Response','
+      icon: Zap,
+      title: 'Real-time Response',
       description: 'Instant automated response to security incidents'},
     {
 
-      icon: Target,'
-      title: 'Proactive Defense','
+      icon: Target,
+      title: 'Proactive Defense',
       description: 'Predictive security using AI and machine learning'},
     {
 
-      icon: BarChart3,'
-      title: 'Comprehensive Reporting','
+      icon: BarChart3,
+      title: 'Comprehensive Reporting',
       description: 'Detailed security analytics and compliance reporting'},
   ];
   return()
     <div className="min-h-screen bg-background pt-20">
       <SEO"
-        title="Cybersecurity Solutions - Zion Tech Group""
-        description="Comprehensive cybersecurity solutions including threat detection, compliance automation, zero trust architecture, and advanced security services from Zion Tech Group.""
-        keywords="cybersecurity, threat detection, SOC2 compliance, zero trust, network security, data protection""
+        title="Cybersecurity Solutions - Zion Tech Group"
+        description="Comprehensive cybersecurity solutions including threat detection, compliance automation, zero trust architecture, and advanced security services from Zion Tech Group."
+        keywords="cybersecurity, threat detection, SOC2 compliance, zero trust, network security, data protection"
         canonical="https://ziontechgroup.com/cybersecurity"
       />
 
@@ -50,7 +50,7 @@ const Cybersecurity = () => {
           <div className="max-w-4xl mx-auto">"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Cybersecurity for the"
-              <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
                 {' '}
                 Digital Age
               </span>
@@ -256,7 +256,7 @@ const Cybersecurity = () => {
           <h2 className="text-4xl font-bold text-white mb-4">
             Ready to Secure Your Digital Future?
           </h2>"
-          <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">'
+          <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
             Don't wait for a security breach. Protect your organization with our
             comprehensive cybersecurity solutions today.
           </p>"

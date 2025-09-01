@@ -2,45 +2,45 @@ export function StatsSection() {
   const stats = [
     {
 
-      number: '500+','
-      label: 'Happy Clients','
-      description: 'Satisfied customers across industries','
-      icon: '👥','
+      number: '500+',
+      label: 'Happy Clients',
+      description: 'Satisfied customers across industries',
+      icon: '👥',
       color: 'from-blue-500 to-cyan-500'},
     {
-'
-      number: '1000+','
-      label: 'Projects Delivered','
-      description: 'Successful implementations completed','
-      icon: '🚀','
+
+      number: '1000+',
+      label: 'Projects Delivered',
+      description: 'Successful implementations completed',
+      icon: '🚀',
       color: 'from-purple-500 to-pink-500'},
     {
-'
-      number: '99.9%','
-      label: 'Uptime Guarantee','
-      description: 'Reliable service availability','
-      icon: '⚡','
+
+      number: '99.9%',
+      label: 'Uptime Guarantee',
+      description: 'Reliable service availability',
+      icon: '⚡',
       color: 'from-green-500 to-emerald-500'},
     {
-'
-      number: '24/7','
-      label: 'Support Available','
-      description: 'Round-the-clock technical assistance','
-      icon: '🔄','
+
+      number: '24/7',
+      label: 'Support Available',
+      description: 'Round-the-clock technical assistance',
+      icon: '🔄',
       color: 'from-yellow-500 to-orange-500'},
     {
-'
-      number: '50+','
-      label: 'Expert Team','
-      description: 'Certified professionals','
-      icon: '💡','
+
+      number: '50+',
+      label: 'Expert Team',
+      description: 'Certified professionals',
+      icon: '💡',
       color: 'from-indigo-500 to-purple-500'},
     {
-'
-      number: '15+','
-      label: 'Years Experience','
-      description: 'Industry expertise and knowledge','
-      icon: '🏆','
+
+      number: '15+',
+      label: 'Years Experience',
+      description: 'Industry expertise and knowledge',
+      icon: '🏆',
       color: 'from-red-500 to-pink-500'},
   ];
   return()
@@ -93,13 +93,13 @@ export function StatsSection() {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="inline-flex items-center px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-300"
               >
                 Start Your Project
               </a>
               <a"
-                href="/about""
+                href="/about"
                 className="inline-flex items-center px-8 py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300"
               >
                 Learn More About Us

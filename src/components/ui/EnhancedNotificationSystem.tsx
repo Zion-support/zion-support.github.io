@@ -1,7 +1,12 @@
-import React, { useState, useEffect, createContext, useContext } from 'react.ts';'
-import { motion, AnimatePresence  } from 'framer-motion.ts';'
+import React, { useState, useEffect, createContext, useContext } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle, Bell  } from 'lucide-react';
+<<<<<<< HEAD
+
+export type NotificationType = 'success' | 'error' | 'warning' | 'info';
+=======
 'export type NotificationType = 'success' | 'error' | 'warning' | 'info';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ;
 export interface Notification {
   id: string;
@@ -16,13 +21,13 @@ action?: {
 }}
 
 interface NotificationContextType {
-  notifications: Notification[];'
-  addNotification: (notification: Omit<Notification, 'id'>)  => void;
+  notifications: Notification[];
+  addNotification: (notification: Omit<Notification,id'>)  => void;
   removeNotification: (id: string)  => void;
   clearAll: ()  => void}
 
   notifications: Notification[];
-  addNotification: notification: Omit<Notification, 'id'> void;
+  addNotification: notification: Omit<Notification,id'> void;
   removeNotification: id: string void;
   clearAll: : unknown void
 }
@@ -30,8 +35,14 @@ interface NotificationContextType {
 const NotificationContext = createContext<NotificationContextType | null>(null);
 ;
 export const useNotifications = (...args: unknown[]): unknown => {;
+<<<<<<< HEAD
+  const context = useContext(NotificationContext);
+  if (!context) {
+
+=======
   const context = useContext(NotificationContext);  if (!context) {
 '
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     throw new Error('useNotifications must be used within a NotificationProvider')}
   return context};
 
@@ -142,9 +153,14 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
 "
         return <Info className = "w-5 h-5 text-blue-400" />};
   };
+<<<<<<< HEAD
+
+        return 'border-blue-500/30'}
+=======
 '        return 'border-blue-500/30'}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   };
-'
+
         return 'bg-blue-500/10'}
   };
 
@@ -196,43 +212,49 @@ export const notify = {
 
 })},
   error: (title: string, message: string, options?: Partial<Notification>)  => {
-'
+
     // console.log('Error notification: ', { title, message, ...options })},
   warning: (title: string, message: string, options?: Partial<Notification>)  => {
-'
+
     // console.log('Warning notification: ', { title, message, ...options })},
   info: (title: string, message: string, options?: Partial<Notification>)  => {
+<<<<<<< HEAD
+
+    // console.log('Info notification:', { title, message, ...options })};
+    // console.log('Success notification:', { title, message,;
+=======
 '
     // console.log('Info notification:', { title, message, ...options })};'
     // console.log('Success notification:', { title, message,;  ;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ...options })},
   error: (title: string, message: string, options?: Partial<Notification>) => {
-'
+
     // // // // console.log('Error notification:', { title, message, ...options });
   },
   warning: (title: string, message: string, options?: Partial<Notification>) => {
-'
+
     // // // // console.log('Warning notification:', { title, message, ...options });
   },
   info: (title: string, message: string, options?: Partial<Notification>) => {
-'
+
     // // // // console.log('Info notification:', { title, message, ...options });
 
-};}}}}}}}}}}}'
+};}}}}}}}}}}}
     // // // // // // // // console.log('Success notification:', { title, message, ...options });
   },
   error: (title: string, message: string, options?: Partial<Notification>) => {
-'
+
     // // // // // // // // console.log('Error notification:', { title, message, ...options });
   },
   warning: (title: string, message: string, options?: Partial<Notification>) => {
-'
+
     // // // // // // // // console.log('Warning notification:', { title, message, ...options });
   },
   info: (title: string, message: string, options?: Partial<Notification>) => {
-'
+
     // // // // // // // // console.log('Info notification:', { title, message, ...options });
   }};
 '"`

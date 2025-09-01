@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const Resources = () => {
   return()
@@ -6,7 +6,7 @@ const Resources = () => {
       <Helmet>
         <title>Resources - Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Access valuable resources, tools, and insights from Zion Tech Group. Download whitepapers, guides, and more."
         />
       </Helmet>
@@ -22,7 +22,7 @@ const Resources = () => {
           </div>
 "
           <div className="bg-white rounded-lg shadow-lg p-8">"
-            <p className="text-gray-600 text-center">'
+            <p className="text-gray-600 text-center">
               Resources section coming soon. We're building a comprehensive
               library of valuable content.
             </p>

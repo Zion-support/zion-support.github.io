@@ -38,12 +38,7 @@ export default function AIHealthcarePlatform() {
   ];
 
   const benefits = [
-    'Reduce diagnostic errors by up to 40%',
-    'Improve patient outcomes and satisfaction',
-    'Streamline clinical workflows and reduce administrative burden',
-    'Enable data-driven decision making',
-    'Ensure regulatory compliance and security',
-    'Scale healthcare operations efficiently'
+    'Reduce diagnostic errors by up to 40%',Improve patient outcomes and satisfaction',Streamline clinical workflows and reduce administrative burden',Enable data-driven decision making',Ensure regulatory compliance and security',Scale healthcare operations efficiently'
   ];
 
   const useCases = [

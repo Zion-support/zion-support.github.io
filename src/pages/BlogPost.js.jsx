@@ -37,9 +37,9 @@ export default function BlogPost() {
     // Helper function title = encodeURIComponent(post.title);
         switch (platform) {
             case 'facebook':
-                return `https://www.facebook.com/sharer/sharer.php?u=${url}`;'
+                return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
             case 'twitter':`
-                return `https://twitter.com/intent/tweet?url=${url}&text=${title}`;'
+                return `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
             case 'linkedin':`
                 return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
             default:'

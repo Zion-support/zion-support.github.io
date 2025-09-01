@@ -1,86 +1,142 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import {
+
+  Brain,
+  Shield,
+  Cpu,
+  Rocket,
+  Zap,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  BarChart3,
+  Heart,
+  Eye,
+  Atom,
+  Activity,
+  Code,
+  Database,
+  Server,
+  Network,
+  Lock,
+  Cloud,
+  Target,
+  TrendingUp,
+  Briefcase,
+  Globe,
+  Phone,
+  Mail,
+  MapPin,
+  Search,
+  Filter,
+  DollarSign,
+  Clock,
+  Award,
+  TrendingDown,
+  Sparkles,
+  Lightbulb,
+  Zap as ZapIcon,
+  Shield as ShieldIcon,
+  Cpu as CpuIcon,
+  Rocket as RocketIcon,
+  Brain as BrainIcon,
+  Atom as AtomIcon,
+  Eye as EyeIcon,
+  Code as CodeIcon,
+  BarChart3 as BarChartIcon,
+  Users as UsersIcon,
+  Heart as HeartIcon,
+  Globe as GlobeIcon,
+  TrendingUp as TrendingUpIcon} from 'lucide-react';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data/comprehensivePricingGuide2025';
+
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export function ServicesShowcasePage() {
-'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
-  const [priceRange, setPriceRange] = useState('all');'
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [priceRange, setPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('innovation');
 
   const categories = [
     {
-'
-      id: 'all','
+
+      id: 'all',
       name: 'All Categories',
-      icon: Globe,'
+      icon: Globe,
       color: 'from-blue-500 to-cyan-600'},
     {
-'
-      id: 'AI & Analytics','
+
+      id: 'AI & Analytics',
       name: 'AI & Analytics',
-      icon: Brain,'
+      icon: Brain,
       color: 'from-purple-500 to-pink-600'},
     {
-'
-      id: 'Quantum Computing','
+
+      id: 'Quantum Computing',
       name: 'Quantum Computing',
-      icon: Atom,'
+      icon: Atom,
       color: 'from-cyan-500 to-blue-600'},
     {
-'
-      id: 'Cybersecurity','
+
+      id: 'Cybersecurity',
       name: 'Cybersecurity',
-      icon: Shield,'
+      icon: Shield,
       color: 'from-red-500 to-orange-600'},
     {
-'
-      id: 'Blockchain & Web3','
+
+      id: 'Blockchain & Web3',
       name: 'Blockchain & Web3',
-      icon: Code,'
+      icon: Code,
       color: 'from-green-500 to-emerald-600'},
     {
-'
-      id: 'Marketing & Sales','
+
+      id: 'Marketing & Sales',
       name: 'Marketing & Sales',
-      icon: TrendingUp,'
+      icon: TrendingUp,
       color: 'from-yellow-500 to-orange-600'},
     {
-'
-      id: 'IoT & Edge Computing','
+
+      id: 'IoT & Edge Computing',
       name: 'IoT & Edge Computing',
-      icon: Cpu,'
+      icon: Cpu,
       color: 'from-indigo-500 to-purple-600'},
     {
-'
-      id: 'Cloud & DevOps','
+
+      id: 'Cloud & DevOps',
       name: 'Cloud & DevOps',
-      icon: Cloud,'
+      icon: Cloud,
       color: 'from-teal-500 to-green-600'},
     {
-'
-      id: 'Customer Service','
+
+      id: 'Customer Service',
       name: 'Customer Service',
-      icon: Users,'
+      icon: Users,
       color: 'from-pink-500 to-red-600'},
     {
-'
-      id: 'Compliance & Governance','
+
+      id: 'Compliance & Governance',
       name: 'Compliance & Governance',
-      icon: Lock,'
+      icon: Lock,
       color: 'from-gray-500 to-slate-600'},
   ];
 
   const priceRanges = ['
-    { id: 'all', name: 'All Prices', range: 'All' },'
-    { id: 'low', name: 'Under $1,000', range: '< $1,000' },'
-    { id: 'medium', name: '$1,000 - $3,000', range: '$1,000 - $3,000' },'
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $1,000', range: '< $1,000' },
+    { id: 'medium', name: '$1,000 - $3,000', range: '$1,000 - $3,000' },
     { id: 'high', name: 'Over $3,000', range: '> $3,000' },
   ];
 
   const sortOptions = ['
-    { id: 'innovation', name: 'Innovation Level', icon: Sparkles },'
-    { id: 'price', name: 'Price', icon: DollarSign },'
-    { id: 'roi', name: 'ROI', icon: TrendingUp },'
+    { id: 'innovation', name: 'Innovation Level', icon: Sparkles },
+    { id: 'price', name: 'Price', icon: DollarSign },
+    { id: 'roi', name: 'ROI', icon: TrendingUp },
     { id: 'delivery', name: 'Delivery Time', icon: Clock },
   ];
 
@@ -95,13 +151,13 @@ export function ServicesShowcasePage() {
       const matchesCategory ='
         selectedCategory === 'all' || service.category === selectedCategory;
 
-      let matchesPrice = true;'
+      let matchesPrice = true;
       if (priceRange === 'low') {
 
-        matchesPrice = service.price < 1000;'
+        matchesPrice = service.price < 1000;
       } else if (priceRange === 'medium') {
 
-        matchesPrice = service.price >= 1000 && service.price <= 3000;'
+        matchesPrice = service.price >= 1000 && service.price <= 3000;
       } else if (priceRange === 'high') {
 
         matchesPrice = service.price > 3000;
@@ -114,27 +170,26 @@ export function ServicesShowcasePage() {
   const sortedServices = [...filteredServices].sort((a, b) => {
 
     switch (sortBy) {
-'
+
       case 'innovation':
         const innovationOrder = {
 
-          Revolutionary: 3,'
-          'Cutting-edge': 2,
+          Revolutionary: 3,Cutting-edge': 2,
           Advanced: 1};
         return()
           (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] ||
             0) -
           (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] ||
             0)
-        );'
+        );
       case 'price':
-        return a.price - b.price;'
+        return a.price - b.price;
       case 'roi':'
-        const aRoi = parseInt(a.roi.split('-')[0]);'
+        const aRoi = parseInt(a.roi.split('-')[0]);
         const bRoi = parseInt(b.roi.split('-')[0]);
-        return bRoi - aRoi;'
+        return bRoi - aRoi;
       case 'delivery':'
-        const aDelivery = parseInt(a.estimatedDelivery.split('-')[0]);'
+        const aDelivery = parseInt(a.estimatedDelivery.split('-')[0]);
         const bDelivery = parseInt(b.estimatedDelivery.split('-')[0]);
         return aDelivery - bDelivery;
       default:
@@ -150,14 +205,14 @@ export function ServicesShowcasePage() {
 
   const getCategoryColor = (category: string) => {
 
-    const categoryData = categories.find(cat => cat.id === category);'
+    const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.color : 'from-gray-500 to-slate-600';
   };
 
   const getPriceRange = (price: number) => {
-'
-    if (price < 1000) return 'low';'
-    if (price <= 3000) return 'medium';'
+
+    if (price < 1000) return 'low';
+    if (price <= 3000) return 'medium';
     return 'high';
   };
 
@@ -165,11 +220,11 @@ export function ServicesShowcasePage() {
 
     const range = getPriceRange(price);
     switch (range) {
-'
+
       case 'low':'
-        return 'text-green-400';'
+        return 'text-green-400';
       case 'medium':'
-        return 'text-yellow-400';'
+        return 'text-yellow-400';
       case 'high':'
         return 'text-red-400';
       default:'
@@ -180,11 +235,11 @@ export function ServicesShowcasePage() {
   const getInnovationColor = (level: string) => {
 
     switch (level) {
-'
+
       case 'Revolutionary':'
-        return 'text-purple-400';'
+        return 'text-purple-400';
       case 'Cutting-edge':'
-        return 'text-blue-400';'
+        return 'text-blue-400';
       case 'Advanced':'
         return 'text-green-400';
       default:'
@@ -233,7 +288,12 @@ export function ServicesShowcasePage() {
             <div className="relative">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input"
+<<<<<<< HEAD
+                type="text"
+                placeholder="Search services..."
+=======
                 type="text""                placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
@@ -294,7 +354,7 @@ export function ServicesShowcasePage() {
                   className={`w-16 h-16 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-xl flex items-center justify-center`}
                 >
                   {React.createElement(getCategoryIcon(service.category), {
-'
+
                     className: 'w-8 h-8 text-white'})}
                 </div>"
                 <div className="text-right">
@@ -381,8 +441,8 @@ export function ServicesShowcasePage() {
               <div className="flex space-x-2">
                 <a
                   href={service.demoUrl}"
-                  target="_blank""
-                  rel="noopener noreferrer""
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-center"
                 >
                   View Demo
@@ -432,13 +492,13 @@ export function ServicesShowcasePage() {
             </p>"
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <a"
-                href="mailto:kleber@ziontechgroup.com?subject=Business Transformation Inquiry""
+                href="mailto:kleber@ziontechgroup.com?subject=Business Transformation Inquiry"
                 className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
               >
                 Get Started Today
               </a>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
               >
                 Call Now: +1 302 464 0950

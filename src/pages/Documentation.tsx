@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -17,131 +17,131 @@ import {
   Shield,
   Database,
   Cloud,
-  Brain,'
-  TrendingUp} from 'lucide-react';'
+  Brain,
+  TrendingUp} from 'lucide-react';
 import { SEO } from '../components/SEO';
 const Documentation: React.FC = () => {
-'
-  const [searchQuery, setSearchQuery] = useState('');'
+
+  const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
 
   const categories = ['
-    { id: 'all', name: 'All Documentation', count: 0 },'
-    { id: 'getting-started', name: 'Getting Started', count: 0 },'
-    { id: 'api', name: 'API Reference', count: 0 },'
-    { id: 'tutorials', name: 'Tutorials', count: 0 },'
-    { id: 'examples', name: 'Examples', count: 0 },'
+    { id: 'all', name: 'All Documentation', count: 0 },
+    { id: 'getting-started', name: 'Getting Started', count: 0 },
+    { id: 'api', name: 'API Reference', count: 0 },
+    { id: 'tutorials', name: 'Tutorials', count: 0 },
+    { id: 'examples', name: 'Examples', count: 0 },
     { id: 'guides', name: 'Guides', count: 0 },
   ];
 
   const docCategories = [
     {
 
-      id: 1,'
+      id: 1,
       title: 'Quick Start Guide',
       description:'
-        'Get up and running with Zion Tech Group services in minutes','
-      category: 'getting-started','
-      type: 'guide','
-      difficulty: 'beginner','
-      readTime: '10 min','
+        'Get up and running with Zion Tech Group services in minutes',
+      category: 'getting-started',
+      type: 'guide',
+      difficulty: 'beginner',
+      readTime: '10 min',
       lastUpdated: '2025-01-15',
       views: 15420,
       rating: 4.8,
-      featured: true,'
-      tags: ['quick-start', 'setup', 'beginner']},
+      featured: true,
+      tags: ['quick-start',setup',beginner']},
     {
 
-      id: 2,'
-      title: 'API Authentication','
-      description: 'Learn how to authenticate and authorize API requests','
-      category: 'api','
-      type: 'reference','
-      difficulty: 'intermediate','
-      readTime: '15 min','
+      id: 2,
+      title: 'API Authentication',
+      description: 'Learn how to authenticate and authorize API requests',
+      category: 'api',
+      type: 'reference',
+      difficulty: 'intermediate',
+      readTime: '15 min',
       lastUpdated: '2025-01-12',
       views: 12340,
       rating: 4.7,
-      featured: true,'
-      tags: ['authentication', 'api', 'security']},
+      featured: true,
+      tags: ['authentication',api',security']},
     {
 
-      id: 3,'
-      title: 'Building Your First AI Model','
-      description: 'Step-by-step tutorial for creating and deploying AI models','
-      category: 'tutorials','
-      type: 'tutorial','
-      difficulty: 'intermediate','
-      readTime: '45 min','
+      id: 3,
+      title: 'Building Your First AI Model',
+      description: 'Step-by-step tutorial for creating and deploying AI models',
+      category: 'tutorials',
+      type: 'tutorial',
+      difficulty: 'intermediate',
+      readTime: '45 min',
       lastUpdated: '2025-01-10',
       views: 9870,
       rating: 4.6,
-      featured: true,'
-      tags: ['ai', 'machine-learning', 'tutorial']},
+      featured: true,
+      tags: ['ai',machine-learning',tutorial']},
     {
 
-      id: 4,'
-      title: 'Cloud Deployment Guide','
-      description: 'Deploy your applications to cloud infrastructure','
-      category: 'guides','
-      type: 'guide','
-      difficulty: 'advanced','
-      readTime: '60 min','
+      id: 4,
+      title: 'Cloud Deployment Guide',
+      description: 'Deploy your applications to cloud infrastructure',
+      category: 'guides',
+      type: 'guide',
+      difficulty: 'advanced',
+      readTime: '60 min',
       lastUpdated: '2025-01-08',
       views: 7890,
       rating: 4.6,
-      featured: false,'
-      tags: ['cloud', 'deployment', 'infrastructure']},
+      featured: false,
+      tags: ['cloud',deployment',infrastructure']},
     {
 
-      id: 5,'
-      title: 'Micro-SaaS Platform Setup','
-      description: 'Complete guide to setting up a micro-SaaS platform','
-      category: 'examples','
-      type: 'example','
-      difficulty: 'advanced','
-      readTime: '90 min','
+      id: 5,
+      title: 'Micro-SaaS Platform Setup',
+      description: 'Complete guide to setting up a micro-SaaS platform',
+      category: 'examples',
+      type: 'example',
+      difficulty: 'advanced',
+      readTime: '90 min',
       lastUpdated: '2025-01-10',
       views: 5670,
       rating: 4.5,
-      featured: false,'
-      tags: ['micro-saas', 'platform', 'setup']},
+      featured: false,
+      tags: ['micro-saas',platform',setup']},
     {
 
-      id: 6,'
-      title: 'Python SDK Examples','
-      description: 'Code examples and best practices for using our Python SDK','
-      category: 'examples','
-      type: 'examples','
-      difficulty: 'intermediate','
-      readTime: '30 min','
+      id: 6,
+      title: 'Python SDK Examples',
+      description: 'Code examples and best practices for using our Python SDK',
+      category: 'examples',
+      type: 'examples',
+      difficulty: 'intermediate',
+      readTime: '30 min',
       lastUpdated: '2025-01-08',
       views: 5670,
       rating: 4.5,
-      featured: false,'
-      tags: ['python', 'sdk', 'examples']},
+      featured: false,
+      tags: ['python',sdk',examples']},
   ];
 
   const documentationResources = [
     {
-'
-      title: 'Zion Tech Group Developer Portal','
-      description: 'Access our comprehensive developer resources and tools','
-      type: 'portal','
+
+      title: 'Zion Tech Group Developer Portal',
+      description: 'Access our comprehensive developer resources and tools',
+      type: 'portal',
       link: 'https://developers.ziontechgroup.com',
       featured: true},
     {
-'
-      title: 'API Playground','
-      description: 'Interactive API testing and exploration environment','
-      type: 'tool','
+
+      title: 'API Playground',
+      description: 'Interactive API testing and exploration environment',
+      type: 'tool',
       link: '/api-playground',
       featured: true},
     {
-'
-      title: 'Community Forum','
-      description: 'Connect with other developers and get help','
-      type: 'community','
+
+      title: 'Community Forum',
+      description: 'Connect with other developers and get help',
+      type: 'community',
       link: '/community',
       featured: false},
   ];
@@ -149,11 +149,11 @@ const Documentation: React.FC = () => {
   const getDifficultyColor = (difficulty: string) => {
 
     switch (difficulty) {
-'
+
       case 'beginner':'
-        return 'bg-green-500';'
+        return 'bg-green-500';
       case 'intermediate':'
-        return 'bg-yellow-500';'
+        return 'bg-yellow-500';
       case 'advanced':'
         return 'bg-red-500';
       default:'
@@ -164,11 +164,11 @@ const Documentation: React.FC = () => {
   const getDifficultyText = (difficulty: string) => {
 
     switch (difficulty) {
-'
+
       case 'beginner':'
-        return 'Beginner';'
+        return 'Beginner';
       case 'intermediate':'
-        return 'Intermediate';'
+        return 'Intermediate';
       case 'advanced':'
         return 'Advanced';
       default:'
@@ -192,7 +192,7 @@ const Documentation: React.FC = () => {
   }) ;
   // Update counts
   categories.forEach(cat => {
-'
+
     if (cat.id === 'all') {
 
       cat.count = documentationItems.length;
@@ -207,7 +207,7 @@ const Documentation: React.FC = () => {
     <>
       <SEO
         title="Documentation & Resources - Zion Tech Group"'"
-        description="Comprehensive documentation, tutorials, and resources to help you succeed with Zion Tech Group's innovative solutions.""
+        description="Comprehensive documentation, tutorials, and resources to help you succeed with Zion Tech Group's innovative solutions."
         keywords="documentation, tutorials, API reference, guides, examples, developer resources, Zion Tech Group"
       />
 "      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
@@ -242,7 +242,12 @@ const Documentation: React.FC = () => {
               <div className="relative mb-6">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
+<<<<<<< HEAD
+                  type="text"
+                  placeholder="Search documentation..."
+=======
                   type="text""                  placeholder="Search documentation..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"

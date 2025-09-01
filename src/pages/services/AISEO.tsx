@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -21,7 +21,7 @@ import {
   MessageSquare,
   Share2,
   Brain,
-  Zap,'
+  Zap,
   Shield} from 'lucide-react.ts';
 
 const AISEO: React.FC = (): JSX.Element => {
@@ -29,48 +29,43 @@ const AISEO: React.FC = (): JSX.Element => {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI-Powered Keyword Research',
       description:'
         'Advanced algorithms to discover high-value keywords and search opportunities'},
     {
 
-      icon: Target,'
+      icon: Target,
       title: 'Content Optimization',
       description:'
         'AI-driven recommendations to improve content relevance and search rankings'},
     {
 
-      icon: TrendingUp,'
+      icon: TrendingUp,
       title: 'Performance Tracking',
       description:'
         'Real-time monitoring of SEO metrics and ranking improvements'},
     {
 
-      icon: Shield,'
-      title: 'Technical SEO Audit','
+      icon: Shield,
+      title: 'Technical SEO Audit',
       description: 'Automated detection and fixing of technical SEO issues'},
     {
 
-      icon: Zap,'
+      icon: Zap,
       title: 'Competitive Analysis',
       description:'
         'AI-powered insights into competitor strategies and opportunities'},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Ranking Predictions',
       description:'
         'Predict future ranking changes based on current optimization efforts'},
   ];
 
   const benefits = ['
-    'Improve search rankings by 40%','
-    'Increase organic traffic by 60%','
-    'Reduce SEO audit time by 80%','
-    'Boost conversion rates by 25%','
-    'Identify new keyword opportunities','
-    'Automate technical SEO fixes',
+    'Improve search rankings by 40%',Increase organic traffic by 60%',Reduce SEO audit time by 80%',Boost conversion rates by 25%',Identify new keyword opportunities',Automate technical SEO fixes',
   ];
 
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -88,7 +83,7 @@ const AISEO: React.FC = (): JSX.Element => {
 "
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Dominate Search Rankings with"
-              <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
                 {' '}
                 AI-Powered SEO
               </span>

@@ -1,5 +1,5 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Cloud, Server, Database, Shield, GitBranch, ArrowRight, CheckCircle, Monitor } from 'lucide-react';
 const CloudDevOpsServices = () => {
     const cloudServices = [
@@ -261,7 +261,7 @@ const CloudDevOpsServices = () => {
           <h2 className="text-4xl font-bold mb-6">
             Ready to Modernize Your Infrastructure?
           </h2>"
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">'
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Let's discuss how our cloud and DevOps expertise can transform your '
             organization's technology landscape.
           </p>"

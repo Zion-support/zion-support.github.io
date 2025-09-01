@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -20,64 +20,45 @@ import {
   Smartphone,
   ShoppingCart,
   Heart,
-  GraduationCap,'
-  Truck} from 'lucide-react';'
+  GraduationCap,
+  Truck} from 'lucide-react';
 import { SEO } from '../components/SEO';
 const ServicesPricingPage: React.FC = () => {
-'
-  const [selectedPlan, setSelectedPlan] = useState('starter');'
+
+  const [selectedPlan, setSelectedPlan] = useState('starter');
   const [billingCycle, setBillingCycle] = useState('monthly');
 
   const pricingPlans = [
     {
-'
-      id: 'starter','
-      name: 'Starter','
+
+      id: 'starter',
+      name: 'Starter',
       description: 'Perfect for small businesses getting started with AI',
       price: { monthly: 299, annual: 2999 },
       features: ['
-        'AI Business Intelligence Dashboard','
-        'Basic Machine Learning Models','
-        'Email Support','
-        '5 User Licenses','
-        'Standard Security Features','
-        'Monthly Reports',
+        'AI Business Intelligence Dashboard',Basic Machine Learning Models',Email Support',5 User Licenses',Standard Security Features',Monthly Reports',
       ],
       popular: false,
       icon: Brain},
     {
-'
-      id: 'professional','
-      name: 'Professional','
+
+      id: 'professional',
+      name: 'Professional',
       description: 'Advanced features for growing businesses',
       price: { monthly: 799, annual: 7999 },
       features: ['
-        'Everything in Starter','
-        'Advanced AI Analytics','
-        'Custom Machine Learning Models','
-        'Priority Support','
-        '25 User Licenses','
-        'Advanced Security Features','
-        'Weekly Reports','
-        'API Access',
+        'Everything in Starter',Advanced AI Analytics',Custom Machine Learning Models',Priority Support',25 User Licenses',Advanced Security Features',Weekly Reports',API Access',
       ],
       popular: true,
       icon: Shield},
     {
-'
-      id: 'enterprise','
-      name: 'Enterprise','
+
+      id: 'enterprise',
+      name: 'Enterprise',
       description: 'Complete solution for large organizations',
       price: { monthly: 1999, annual: 19999 },
       features: ['
-        'Everything in Professional','
-        'Custom AI Solutions','
-        'Dedicated Support Team','
-        'Unlimited User Licenses','
-        'Enterprise Security','
-        'Real-time Analytics','
-        'Custom Integrations','
-        'On-site Training',
+        'Everything in Professional',Custom AI Solutions',Dedicated Support Team',Unlimited User Licenses',Enterprise Security',Real-time Analytics',Custom Integrations',On-site Training',
       ],
       popular: false,
       icon: Cloud},
@@ -85,86 +66,74 @@ const ServicesPricingPage: React.FC = () => {
 
   const serviceCategories = [
     {
-'
-      id: 'ai-automation','
+
+      id: 'ai-automation',
       name: 'AI Automation',
-      icon: Zap,'
+      icon: Zap,
       description: 'Intelligent automation solutions',
       services: ['
-        'Process Automation','
-        'Workflow Optimization','
-        'Intelligent Document Processing','
-        'Predictive Analytics',
+        'Process Automation',Workflow Optimization',Intelligent Document Processing',Predictive Analytics',
       ]},
     {
-'
-      id: 'cybersecurity','
+
+      id: 'cybersecurity',
       name: 'Cybersecurity',
-      icon: Shield,'
+      icon: Shield,
       description: 'Advanced security solutions',
       services: ['
-        'Threat Detection','
-        'Vulnerability Assessment','
-        'Security Monitoring','
-        'Incident Response',
+        'Threat Detection',Vulnerability Assessment',Security Monitoring',Incident Response',
       ]},
     {
-'
-      id: 'cloud-management','
+
+      id: 'cloud-management',
       name: 'Cloud Management',
-      icon: Cloud,'
+      icon: Cloud,
       description: 'Cloud infrastructure solutions',
       services: ['
-        'Cloud Migration','
-        'Infrastructure Management','
-        'Cost Optimization','
-        'Performance Monitoring',
+        'Cloud Migration',Infrastructure Management',Cost Optimization',Performance Monitoring',
       ]},
     {
-'
-      id: 'data-analytics','
+
+      id: 'data-analytics',
       name: 'Data Analytics',
-      icon: Database,'
+      icon: Database,
       description: 'Data-driven insights',
       services: ['
-        'Business Intelligence','
-        'Data Visualization','
-        'Predictive Modeling','
-        'Real-time Analytics',
+        'Business Intelligence',Data Visualization',Predictive Modeling',Real-time Analytics',
       ]},
   ];
 
   const getCategoryIcon = (category: string) => {
 
     const categoryIcons: { [key: string]: React.ReactNode } = {
-'
-      'AI Automation': <Zap className="h-5 w-5" />,'"
-      'Customer Intelligence': <Users className="h-5 w-5" />,'"
+
+      'AI Automation': <Zap className="h-5 w-5" />,"
+      'Customer Intelligence': <Users className="h-5 w-5" />,"
       'Content Marketing': <TrendingUp className="h-5 w-5" />,"
-      Cybersecurity: <Shield className="h-5 w-5" />,'"
-      'Threat Intelligence': <Shield className="h-5 w-5" />,'"
+      Cybersecurity: <Shield className="h-5 w-5" />,"
+      'Threat Intelligence': <Shield className="h-5 w-5" />,"
       'Cloud Management': <Globe className="h-5 w-5" />,"
-      DevOps: <Zap className="h-5 w-5" />,'"
-      'Data Analytics': <TrendingUp className="h-5 w-5" />,'"
-      'IoT & Predictive Analytics': <Zap className="h-5 w-5" />,'"
-      'Business Intelligence': <TrendingUp className="h-5 w-5" />,'"
-      'Digital Transformation': <Building className="h-5 w-5" />,'"
-      'Edge Computing': <Globe className="h-5 w-5" />,'"
-      'API Management': <Zap className="h-5 w-5" />,'"
-      'Blockchain & Web3': <Zap className="h-5 w-5" />,'"
-      'Mobile Development': <Smartphone className="h-5 w-5" />,'"
-      'E-commerce': <ShoppingCart className="h-5 w-5" />,'"
+      DevOps: <Zap className="h-5 w-5" />,"
+      'Data Analytics': <TrendingUp className="h-5 w-5" />,"
+      'IoT & Predictive Analytics': <Zap className="h-5 w-5" />,"
+      'Business Intelligence': <TrendingUp className="h-5 w-5" />,"
+      'Digital Transformation': <Building className="h-5 w-5" />,"
+      'Edge Computing': <Globe className="h-5 w-5" />,"
+      'API Management': <Zap className="h-5 w-5" />,"
+      'Blockchain & Web3': <Zap className="h-5 w-5" />,"
+      'Mobile Development': <Smartphone className="h-5 w-5" />,"
+      'E-commerce': <ShoppingCart className="h-5 w-5" />,"
       'Healthcare Technology': <Heart className="h-5 w-5" />,"
-      FinTech: <TrendingUp className="h-5 w-5" />,'"
-      'Education Technology': <GraduationCap className="h-5 w-5" />,'"
+      FinTech: <TrendingUp className="h-5 w-5" />,"
+      'Education Technology': <GraduationCap className="h-5 w-5" />,"
       'Supply Chain': <Truck className="h-5 w-5" />};"
     return categoryIcons[category] || <Zap className="h-5 w-5" />;
   };
   return()
     <>
       <SEO"
-        title="Services & Pricing - Zion Tech Group""
-        description="Comprehensive technology services and flexible pricing plans designed to accelerate your digital transformation journey.""
+        title="Services & Pricing - Zion Tech Group"
+        description="Comprehensive technology services and flexible pricing plans designed to accelerate your digital transformation journey."
         keywords="services, pricing, AI solutions, cybersecurity, cloud management, data analytics, Zion Tech Group"
       />
 "      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
@@ -210,7 +179,7 @@ const ServicesPricingPage: React.FC = () => {
                 <button'
                   onClick={() => setBillingCycle('monthly')}
                   className={`px-6 py-2 rounded-md text-sm font-medium transition-colors ${
-'
+
                     billingCycle === 'monthly''
                       ? 'bg-blue-500 text-white''
                       : 'text-gray-300 hover:text-white'`
@@ -221,7 +190,7 @@ const ServicesPricingPage: React.FC = () => {
                 <button'
                   onClick={() => setBillingCycle('annual')}`
                   className={`px-6 py-2 rounded-md text-sm font-medium transition-colors ${
-'
+
                     billingCycle === 'annual''
                       ? 'bg-blue-500 text-white''
                       : 'text-gray-300 hover:text-white'`
@@ -273,7 +242,7 @@ const ServicesPricingPage: React.FC = () => {
                       <span className="text-4xl font-bold text-white">
                         ${plan.price[billingCycle as keyof typeof plan.price]}
                       </span>"
-                      <span className="text-gray-400 ml-2">'
+                      <span className="text-gray-400 ml-2">
                         /{billingCycle === 'monthly' ? 'month' : 'year'}
                       </span>
                     </div>

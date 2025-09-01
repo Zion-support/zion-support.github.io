@@ -1,6 +1,6 @@
 import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
-'
+
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -14,8 +14,8 @@ import {
   Brain,
   MessageCircle,
   Phone,
-  Mail,'
-  Globe} from 'lucide-react';'
+  Mail,
+  Globe} from 'lucide-react';
 import { Link } from 'react-router-dom';
 interface FAQItem {
 
@@ -29,103 +29,122 @@ interface FAQItem {
 ;
 const faqData: FAQItem[] = [
   {
-'
-    id: 'ai-services','
+
+    id: 'ai-services',
     question: 'What AI services does Zion Tech Group offer?',
     answer:'
-      'We offer comprehensive AI services including machine learning, natural language processing, computer vision, predictive analytics, AI-powered cybersecurity, and custom AI solution development for businesses.','
+      'We offer comprehensive AI services including machine learning, natural language processing, computer vision, predictive analytics, AI-powered cybersecurity, and custom AI solution development for businesses.',
     category: 'AI Services',
     icon: Brain},
   {
-'
-    id: 'cybersecurity','
+
+    id: 'cybersecurity',
     question: 'How does Zion Tech Group ensure cybersecurity?',
     answer:'
-      'We implement enterprise-grade security measures including zero-trust architecture, AI-powered threat detection, regular security audits, compliance with industry standards, and 24/7 monitoring.','
+      'We implement enterprise-grade security measures including zero-trust architecture, AI-powered threat detection, regular security audits, compliance with industry standards, and 24/7 monitoring.',
     category: 'Security',
     icon: Shield},
   {
-'
-    id: 'cloud-solutions','
+
+    id: 'cloud-solutions',
     question: 'What cloud solutions are available?',
     answer:'
-      'Our cloud services include cloud migration, infrastructure as code, container orchestration, serverless computing, multi-cloud strategy, and cloud security implementation.','
+      'Our cloud services include cloud migration, infrastructure as code, container orchestration, serverless computing, multi-cloud strategy, and cloud security implementation.',
     category: 'Cloud',
     icon: Cloud},
   {
-'
-    id: 'pricing','
+
+    id: 'pricing',
     question: 'How is pricing structured for your services?',
     answer:'
-      'We offer flexible pricing models including project-based pricing, subscription plans, and custom enterprise solutions. Contact us for a personalized quote based on your specific needs.','
+      'We offer flexible pricing models including project-based pricing, subscription plans, and custom enterprise solutions. Contact us for a personalized quote based on your specific needs.',
     category: 'General',
     icon: Zap},
   {
-'
-    id: 'support','
+
+    id: 'support',
     question: 'What kind of support do you provide?',
     answer:'
-      'We offer 24/7 technical support, dedicated account managers, comprehensive documentation, training programs, and ongoing maintenance and updates.','
+      'We offer 24/7 technical support, dedicated account managers, comprehensive documentation, training programs, and ongoing maintenance and updates.',
     category: 'Support',
     icon: HelpCircle},
   {
-'
-    id: 'implementation','
+
+    id: 'implementation',
     question: 'How long does it take to implement your solutions?',
     answer:'
-      'Implementation timelines vary based on project complexity. Simple solutions can be deployed in weeks, while complex enterprise systems may take several months. We provide detailed project timelines during planning.','
+      'Implementation timelines vary based on project complexity. Simple solutions can be deployed in weeks, while complex enterprise systems may take several months. We provide detailed project timelines during planning.',
     category: 'General',
     icon: Zap},
   {
-'
-    id: 'customization','
+
+    id: 'customization',
     question: 'Can you customize solutions for our specific needs?',
     answer:'
-      'Absolutely! We specialize in custom development and can tailor any solution to meet your unique business requirements, industry standards, and compliance needs.','
+      'Absolutely! We specialize in custom development and can tailor any solution to meet your unique business requirements, industry standards, and compliance needs.',
     category: 'General',
     icon: Zap},
   {
-'
-    id: 'maintenance','
+
+    id: 'maintenance',
     question: 'Do you provide ongoing maintenance and updates?',
     answer:'
-      'Yes, we offer comprehensive maintenance packages including regular updates, security patches, performance monitoring, and continuous improvement of your solutions.','
+      'Yes, we offer comprehensive maintenance packages including regular updates, security patches, performance monitoring, and continuous improvement of your solutions.',
     category: 'Support',
     icon: HelpCircle},
   {
-'
-    id: 'quantum-computing','
+
+    id: 'quantum-computing',
     question: 'What quantum computing services do you offer?',
     answer:'
-      'Our quantum computing services include quantum algorithm development, quantum machine learning, quantum cryptography, quantum simulation, and quantum optimization solutions for complex problems.','
+      'Our quantum computing services include quantum algorithm development, quantum machine learning, quantum cryptography, quantum simulation, and quantum optimization solutions for complex problems.',
     category: 'AI Services',
     icon: Brain},
   {
-'
-    id: 'compliance','
+
+    id: 'compliance',
     question: 'How do you handle compliance and regulatory requirements?',
     answer:'
-      'We ensure compliance with industry standards including HIPAA, SOC 2, GDPR, and other regulatory frameworks. Our solutions are built with compliance in mind from the ground up.','
+      'We ensure compliance with industry standards including HIPAA, SOC 2, GDPR, and other regulatory frameworks. Our solutions are built with compliance in mind from the ground up.',
     category: 'Security',
     icon: Shield},
   {
-'
-    id: 'scalability','
+
+    id: 'scalability',
     question: 'How scalable are your solutions?',
     answer:'
-      'All our solutions are designed with scalability in mind. We use cloud-native architectures, microservices, and containerization to ensure your systems can grow with your business needs.','
+      'All our solutions are designed with scalability in mind. We use cloud-native architectures, microservices, and containerization to ensure your systems can grow with your business needs.',
     category: 'Cloud',
     icon: Cloud},
 ];
 
 const categories = ['
-  'All','
-  'AI Services','
-  'Security','
-  'Cloud','
-  'Support','
-  'General',
+  'All',AI Services',Security',Cloud',Support',General',
 ];
+<<<<<<< HEAD
+
+export default function FAQ() {
+  const [activeItem, setActiveItem] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const filteredFAQs = faqData.filter(faq => {
+
+    const matchesCategory ='
+      selectedCategory === 'All' || faq.category === selectedCategory;
+    const matchesSearch =
+      faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      faq.answer.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  }) ;
+
+  const toggleItem = (id: string) => {
+
+    setActiveItem(activeItem === id ? null : id);
+  };
+
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">"
       <div className="container mx-auto px-4 py-24">
@@ -156,7 +175,12 @@ const categories = ['
           <div className="relative mb-8">"
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <input"
+<<<<<<< HEAD
+              type="text"
+              placeholder="Search questions..."
+=======
               type="text""              placeholder="Search questions..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}"
               className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
@@ -224,7 +248,7 @@ const categories = ['
                 <AnimatePresence>
                   {activeItem === faq.id && (
                     <motion.div
-                      initial={{ height: 0, opacity: 0 }}'
+                      initial={{ height: 0, opacity: 0 }}
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3 }}"
@@ -254,7 +278,7 @@ const categories = ['
             <h2 className="text-3xl font-bold text-white mb-6">
               Still Have Questions?
             </h2>"
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">'
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Can't find the answer you're looking for? Our team is here to
               help. Get in touch with us for personalized assistance.
             </p>
@@ -275,13 +299,13 @@ const categories = ['
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
               >
                 Contact Us
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="border-2 border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
               >
                 Explore Services

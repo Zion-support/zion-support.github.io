@@ -1,75 +1,126 @@
+<<<<<<< HEAD
+import React from 'react.ts';
+import { motion   } from 'framer-motion.ts';
+import { Link   } from 'react-router-dom.ts';
+import { Bot, 
+import { motion   } from 'framer - motion.ts';
+
+
+  Zap, 
+  Shield, 
+  TrendingUp, 
+  Users, 
+  Globe, 
+  ArrowRight, 
+  Cpu, 
+  Network,
+  Settings,
+  BarChart3,
+  Clock,
+  CheckCircle,
+  Play,
+  Download,
+  BookOpen,
+  MessageSquare,
+  Workflow,
+  Target,
+  Database,
+  Rocket,
+  Star'
+  } from 'lucide-react.ts';
+import { SEO   } from '@/components/SEO';
+
+const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
+
+  const features = [
+    {
+
+      icon: Bot,
+      title: 'Intelligent Automation',
+      description: 'AI-powered automation that learns from your business processes and continuously improves efficiency.'
+    },
+    {
+
+      icon: Workflow,
+      title: 'Process Orchestration',
+      description: 'Seamlessly orchestrate complex business workflows across multiple systems and departments.'
+    },
+    {
+
+      icon: Zap,
+      title: 'Real-time Optimization',
+      description: 'Dynamic optimization of business operations based on real-time data and market conditions.'
+    },
+    {
+
+      icon: Shield,
+      title: 'Secure Operations',
+      description: 'Enterprise-grade security with role-based access control and audit trails for all operations.';
+    };
+=======
 import React from 'react.ts';'
 import { motion   } from 'framer-motion.ts';'
 import { Link   } from 'react-router-dom.ts';    };
   ]};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   const useCases = [
     {
-'
-      title: 'Supply Chain Management','
+
+      title: 'Supply Chain Management',
       description: 'Automated inventory management, demand forecasting, and supplier coordination.',
       icon: Workflow
     },
     {
-'
-      title: 'Customer Service','
+
+      title: 'Customer Service',
       description: 'Intelligent chatbots, ticket routing, and automated customer support workflows.',
       icon: Users
     },
     {
-'
-      title: 'Financial Operations','
+
+      title: 'Financial Operations',
       description: 'Automated invoicing, expense management, and financial reporting.',
       icon: BarChart3
     },
     {
-'
-      title: 'HR & Recruitment','
+
+      title: 'HR & Recruitment',
       description: 'Automated candidate screening, onboarding processes, and performance management.',
       icon: Users;
     };
   ];
 
   const benefits = ['
-    'Reduce operational costs by up to 40%','
-    'Improve process efficiency by 60%','
-    'Eliminate manual errors and delays','
-    '24/7 automated operations','
-    'Scalable infrastructure for growth',;'
+    'Reduce operational costs by up to 40%',Improve process efficiency by 60%',Eliminate manual errors and delays',24/7 automated operations',Scalable infrastructure for growth',;
     'Real-time monitoring and analytics';
   ];
 
   const industries = ['
-    'Manufacturing','
-    'Healthcare','
-    'Finance','
-    'Retail','
-    'Logistics','
-    'Technology','
-    'Energy',;'
+    'Manufacturing',Healthcare',Finance',Retail',Logistics',Technology',Energy',;
     'Education';
   ];
 
   const testimonials = [
     {
-'
-      name: 'Sarah Chen','
-      role: 'CTO, TechFlow Industries','
+
+      name: 'Sarah Chen',
+      role: 'CTO, TechFlow Industries',
       content: 'The autonomous operations platform has transformed our business processes. We\'ve seen a 45% reduction in operational costs.',
       rating: 5
     },
     {
-'
-      name: 'Michael Rodriguez','
-      role: 'Operations Director, Global Logistics Co.','
+
+      name: 'Michael Rodriguez',
+      role: 'Operations Director, Global Logistics Co.',
       content: 'Real-time optimization and automated workflows have increased our efficiency by 60%. Game-changing technology.',
       rating: 5
     },
     {
-'
-      name: 'Dr. Emily Watson','
-      role: 'CEO, HealthTech Solutions','
+
+      name: 'Dr. Emily Watson',
+      role: 'CEO, HealthTech Solutions',
       content: 'The AI-powered automation has streamlined our healthcare operations while maintaining the highest standards of care.',
       rating: 5;
     };  ];
@@ -77,8 +128,8 @@ import { Link   } from 'react-router-dom.ts';    };
   return()
     <>
       <SEO 
-        title = "AI Autonomous Business Operations Platform | Zion Tech Group""
-        description="Transform your business with AI-powered autonomous operations. Reduce costs by 40%, improve efficiency by 60%, and achieve 24/7 automated operations.""
+        title = "AI Autonomous Business Operations Platform | Zion Tech Group"
+        description="Transform your business with AI-powered autonomous operations. Reduce costs by 40%, improve efficiency by 60%, and achieve 24/7 automated operations."
         keywords="AI autonomous operations, business automation, process optimization, intelligent workflows, enterprise automation"
       />
       "

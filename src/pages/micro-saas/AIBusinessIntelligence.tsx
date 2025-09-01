@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users, TrendingUp, Target  } from 'lucide-react';
 ;
 export { function };
@@ -8,51 +8,59 @@ export default function AIBusinessIntelligence(...args[]):  {
   const features = [
     {
 
-      icon: Brain,'
-      title: 'AI-Powered Insights','
+      icon: Brain,
+      title: 'AI-Powered Insights',
       description: 'Intelligent analysis and predictive modeling'
     },
     {
 
-      icon: BarChart3,'
-      title: 'Real-time Analytics','
+      icon: BarChart3,
+      title: 'Real-time Analytics',
       description: 'Live data visualization and reporting'
     },
     {
 
-      icon: Zap,'
-      title: 'Automated Intelligence','
+      icon: Zap,
+      title: 'Automated Intelligence',
       description: 'Smart automation of business processes';
     },;
     {;
-      icon: Eye,;'
-      title: 'Predictive Analytics',;'
+      icon: Eye,;
+      title: 'Predictive Analytics',;
       description: 'Forecast trends and identify opportunities';
     };
   ];
 
   const capabilities = [
     {
-'
-      title: 'Business Intelligence Dashboard','
+
+      title: 'Business Intelligence Dashboard',
       description: 'Comprehensive view of all business metrics and KPIs',
       icon: BarChart3
     },
     {
-'
-      title: 'Predictive Modeling','
+
+      title: 'Predictive Modeling',
       description: 'AI algorithms to forecast business outcomes',
       icon: TrendingUp
     },
     {
-'
-      title: 'Natural Language Query','
+
+      title: 'Natural Language Query',
       description: 'Ask questions in plain English and get instant answers',
       icon: Database;
     },;
+<<<<<<< HEAD
+    {;
+      title: 'Automated Reporting',;
+      description: 'Generate reports automatically with AI insights',;
+      icon: Target;
+    };
+=======
     {;'
       title: 'Automated Reporting',;'      description: 'Generate reports automatically with AI insights',;
       icon: Target};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()

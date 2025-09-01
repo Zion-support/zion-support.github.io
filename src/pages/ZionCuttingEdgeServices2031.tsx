@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';'
+import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -41,13 +41,13 @@ import {
   Code,
   BookOpen,
   Truck,
-  ChevronDown,'
-  ChevronUp} from 'lucide-react';'
+  ChevronDown,
+  ChevronUp} from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2031 } from '../data/innovativeMicroSaasServices2031';
 const ZionCuttingEdgeServices2031: React.FC = () => {
-'
-  const [searchQuery, setSearchQuery] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');'
+
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'innovation'>('name');
   const [expandedService, setExpandedService] = useState<number | null>(null);
 
@@ -79,7 +79,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
           )
       );
     }
-'
+
     if (selectedCategory !== 'All') {
 
       filtered = filtered.filter()
@@ -90,14 +90,13 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
     filtered.sort((a, b) => {
 
       switch (sortBy) {
-'
+
         case 'price':
-          return a.price - b.price;'
+          return a.price - b.price;
         case 'innovation':
           const innovationOrder = {
 
-            Revolutionary: 3,'
-            'Cutting-edge': 2,
+            Revolutionary: 3,Cutting-edge': 2,
             Advanced: 1,
             Breakthrough: 3};
           return()
@@ -119,28 +118,18 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
   const getCategoryIcon = (category: string) => {
 
     const iconMap: { [key: string]: React.ComponentType<any> } = {
-'
-      'FinTech & Trading': Coins,'
-      'Healthcare & AI': Heart,'
-      'Blockchain & Security': Lock,'
-      'Supply Chain & Logistics': Truck,'
-      'Content Creation & AI': BookOpen,'
-      'Cybersecurity & AI': Shield,'
-      'IoT & Predictive Analytics': Network,'
-      'Customer Experience & AI': Users,'
-      'Research & AI': Code,'
-      'Business Intelligence & AI': BarChart3};
+
+      'FinTech & Trading': Coins,Healthcare & AI': Heart,Blockchain & Security': Lock,Supply Chain & Logistics': Truck,Content Creation & AI': BookOpen,Cybersecurity & AI': Shield,IoT & Predictive Analytics': Network,Customer Experience & AI': Users,Research & AI': Code,Business Intelligence & AI': BarChart3};
     return iconMap[category] || Globe;
   };
 
   const getInnovationColor = (level: string) => {
 
     const colorMap: { [key: string]: string } = {
-'
-      Revolutionary: 'from-purple-500 to-pink-500','
-      'Cutting-edge': 'from-blue-500 to-indigo-500','
-      Advanced: 'from-green-500 to-teal-500','
-      Breakthrough: 'from-red-500 to-orange-500'};'
+
+      Revolutionary: 'from-purple-500 to-pink-500',Cutting-edge': 'from-blue-500 to-indigo-500',
+      Advanced: 'from-green-500 to-teal-500',
+      Breakthrough: 'from-red-500 to-orange-500'};
     return colorMap[level] || 'from-gray-500 to-slate-500';
   };
 
@@ -204,9 +193,9 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
               </div>
             </div>
             <a"
-              href="https://ziontechgroup.com""
-              target="_blank""
-              rel="noopener noreferrer""
+              href="https://ziontechgroup.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
             >
               <span>Visit Website</span>"
@@ -223,7 +212,12 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
             <div className="relative flex-1 max-w-md">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input"
+<<<<<<< HEAD
+                type="text"
+                placeholder="Search services..."
+=======
                 type="text""                placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-transparent"
@@ -252,7 +246,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
               <span className="text-gray-400 text-sm">Sort by:</span>
               <select
                 value={sortBy}
-                onChange={e =>'
+                onChange={e =>
                   setSortBy(e.target.value as 'name' | 'price' | 'innovation')
                 }"
                 className="bg-white/10 border border-cyan-400/20 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400/50"
@@ -358,7 +352,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
                   {/* Expanded Content */}
                   {expandedService === service.id && (
                     <motion.div
-                      initial={{ opacity: 0, height: 0 }}'
+                      initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3 }}"
@@ -423,7 +417,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
                             <div className="text-gray-400">Free Tier</div>
                             <div'`
                               className={`font-medium ${service.freeTier ? 'text-green-400' : 'text-red-400'}`}
-                            >'
+                            >
                               {service.freeTier ? 'Yes' : 'No'}
                             </div>
                           </div>
@@ -501,21 +495,21 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>"
-            <p className="text-xl text-gray-300 mb-8">'
+            <p className="text-xl text-gray-300 mb-8">
               Join the future of technology with Zion Tech Group's cutting-edge
               AI solutions. Our revolutionary services are designed to drive
               unprecedented growth and innovation.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="mailto:kleber@ziontechgroup.com?subject=Inquiry about Zion Tech Group Services""
+                href="mailto:kleber@ziontechgroup.com?subject=Inquiry about Zion Tech Group Services"
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold py-4 px-8 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group"
               >"
                 <Mail className="w-5 h-5" />
                 <span>Contact Us</span>"
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />              </a>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="bg-white/10 border border-cyan-400/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
               >"
                 <Phone className="w-5 h-5" />                <span>Call Now</span>

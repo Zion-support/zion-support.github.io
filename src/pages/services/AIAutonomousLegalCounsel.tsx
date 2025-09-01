@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -21,7 +21,7 @@ import {
   Share2,
   TrendingUp,
   Zap,
-  Shield,'
+  Shield,
   BookOpen} from 'lucide-react.ts';
 
 const AIAutonomousLegalCounsel: React.FC = (): JSX.Element => {
@@ -29,46 +29,41 @@ const AIAutonomousLegalCounsel: React.FC = (): JSX.Element => {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI-Powered Legal Counsel',
       description:'
         'Advanced machine learning for autonomous legal advice and consultation'},
     {
 
-      icon: Scale,'
+      icon: Scale,
       title: 'Legal Analysis',
       description:'
         'Intelligent legal document analysis and case evaluation with AI-driven insights'},
     {
 
-      icon: Target,'
-      title: 'Contract Review','
+      icon: Target,
+      title: 'Contract Review',
       description: 'AI-powered contract review and risk assessment'},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Legal Analytics',
       description:'
         'Real-time analytics and insights into legal performance and trends'},
     {
 
-      icon: BookOpen,'
-      title: 'Legal Research','
+      icon: BookOpen,
+      title: 'Legal Research',
       description: 'AI-driven legal research and precedent analysis'},
     {
 
-      icon: TrendingUp,'
-      title: 'Compliance Monitoring','
+      icon: TrendingUp,
+      title: 'Compliance Monitoring',
       description: 'Continuous monitoring and optimization of legal compliance'},
   ];
 
   const benefits = ['
-    'Improve legal efficiency by 70%','
-    'Reduce legal costs by 60%','
-    'Enhance legal accuracy by 85%','
-    'Automate legal processes','
-    '24/7 autonomous operation','
-    'Real-time legal insights',
+    'Improve legal efficiency by 70%',Reduce legal costs by 60%',Enhance legal accuracy by 85%',Automate legal processes',24/7 autonomous operation',Real-time legal insights',
   ];
 
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -86,7 +81,7 @@ const AIAutonomousLegalCounsel: React.FC = (): JSX.Element => {
 "
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Transform Your Legal Operations with"
-              <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
                 {' '}
                 AI Intelligence
               </span>

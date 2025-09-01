@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { SEO } from '@/components/SEO';
 
   const { slug } = useParams () ;
@@ -6,7 +6,7 @@ import { SEO } from '@/components/SEO';
   // Mock blog post data - in a real app, this would come from an API
   const blogPost = {
 
-    id: slug,'
+    id: slug,
     title: 'The Future of AI-Powered Business Intelligence in 2024',
     excerpt:'
       'Discover how artificial intelligence is revolutionizing business intelligence and decision-making processes across industries.',
@@ -117,21 +117,17 @@ import { SEO } from '@/components/SEO';
         stack, and ensuring proper change management. Organizations that take these steps will be 
         well-positioned to thrive in an increasingly data-driven business landscape.
       </p>`
-    `,'
-    author: 'Kleber Santos','
+    `,
+    author: 'Kleber Santos',
     authorRole: 'CEO & AI Strategist',
     authorBio:'
-      'Kleber Santos is the CEO and founder of Zion Tech Group, with over 15 years of experience in AI strategy and business transformation.','
-    date: '2024-01-15','
-    readTime: '8 min read','
+      'Kleber Santos is the CEO and founder of Zion Tech Group, with over 15 years of experience in AI strategy and business transformation.',
+    date: '2024-01-15',
+    readTime: '8 min read',
     category: 'ai',
     tags: ['
-      'AI','
-      'Business Intelligence','
-      'Machine Learning','
-      'Data Analytics','
-      'Digital Transformation',
-    ],'
+      'AI',Business Intelligence',Machine Learning',Data Analytics',Digital Transformation',
+    ],
     image: '/api/placeholder/800/400',
     featured: true,
     views: 2847,
@@ -139,41 +135,41 @@ import { SEO } from '@/components/SEO';
     comments: 23,
     relatedPosts: [
       {
-'
-        id: 'quantum-computing-business','
+
+        id: 'quantum-computing-business',
         title: 'Quantum Computing: Breaking Down the Hype vs. Reality',
         excerpt:'"
-          "A comprehensive analysis of quantum computing's current state and its practical applications in business.",'
-        category: 'quantum','
-        date: '2024-01-12','
+          "A comprehensive analysis of quantum computing's current state and its practical applications in business.",
+        category: 'quantum',
+        date: '2024-01-12',
         readTime: '12 min read'},
       {
-'
+
         id: 'zero-trust-security',
         title:'
           'Zero Trust Security: The New Standard for Enterprise Protection',
         excerpt:'
-          'Learn why zero trust architecture is becoming essential for modern enterprise security and how to implement it.','
-        category: 'security','
-        date: '2024-01-10','
+          'Learn why zero trust architecture is becoming essential for modern enterprise security and how to implement it.',
+        category: 'security',
+        date: '2024-01-10',
         readTime: '10 min read'},
       {
-'
-        id: 'micro-saas-future','
+
+        id: 'micro-saas-future',
         title: 'Micro SaaS: The Future of Niche Software Solutions',
         excerpt:'"
-          "Exploring the rise of micro SaaS platforms and how they're changing the software industry landscape.",'
-        category: 'business','
-        date: '2024-01-08','
+          "Exploring the rise of micro SaaS platforms and how they're changing the software industry landscape.",
+        category: 'business',
+        date: '2024-01-08',
         readTime: '6 min read'},
     ]};
 
   const formatDate = (dateString: string) => {
-'
+
     return new Date(dateString).toLocaleDateString('en-US', {
-'
-      year: 'numeric','
-      month: 'long','
+
+      year: 'numeric',
+      month: 'long',
       day: 'numeric'});
   };
 
@@ -194,14 +190,14 @@ import { SEO } from '@/components/SEO';
   const getCategoryName = (category: string) => {
 
     const categoryNames: { [key: string]: string } = {
-'
-      ai: 'Artificial Intelligence','
-      quantum: 'Quantum Computing','
-      security: 'Cybersecurity','
-      cloud: 'Cloud & DevOps','
-      business: 'Business Insights','
-      iot: 'IoT & Edge','
-      emerging: 'Emerging Tech'};'
+
+      ai: 'Artificial Intelligence',
+      quantum: 'Quantum Computing',
+      security: 'Cybersecurity',
+      cloud: 'Cloud & DevOps',
+      business: 'Business Insights',
+      iot: 'IoT & Edge',
+      emerging: 'Emerging Tech'};
     return categoryNames[category] || 'Uncategorized';
   };
   return ("
@@ -214,7 +210,7 @@ import { SEO } from '@/components/SEO';
       {/* Navigation */}"
       <section className="py-6 bg-slate-800/50">"        <div className="container mx-auto px-4">
           <Link"
-            to="/blog""
+            to="/blog"
             className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
           >"
             <ArrowLeft className="w-4 h-4" />            <span>Back to Blog</span>
@@ -235,7 +231,7 @@ import { SEO } from '@/components/SEO';
             <div className="flex items-center space-x-3 mb-6">"
               <span className="px-4 py-2 bg-cyan-500/20 text-cyan-400 text-sm rounded-full font-medium flex items-center space-x-2">
                 {React.createElement(getCategoryIcon(blogPost.category), {
-'
+
                   className: 'w-4 h-4'})}
                 <span>{getCategoryName(blogPost.category)}</span>
               </span>
@@ -444,19 +440,19 @@ import { SEO } from '@/components/SEO';
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>"
-            <p className="text-xl text-gray-300 mb-8">'
+            <p className="text-xl text-gray-300 mb-8">
               Let's discuss how our AI-powered solutions can drive innovation
               and growth for your organization.
             </p>"
             <div className="flex flex-wrap justify-center gap-4">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
               >
                 Get Started Today
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >
                 Explore Our Services

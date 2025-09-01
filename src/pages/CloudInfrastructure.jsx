@@ -1,65 +1,65 @@
-import React, { useState } from 'react';'
-import { Link } from 'react-router-dom';'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, BarChart3, MessageSquare, Phone, Mail, Lock, Cpu, HardDrive, Wifi, TrendingUp, DollarSign export default function CloudInfrastructure() {
-'
+
     const [selectedProvider, setSelectedProvider] = useState('aws');
     const cloudServices = [
         {
-'
-            title: 'Infrastructure as Code','
+
+            title: 'Infrastructure as Code',
             description: 'Automate cloud infrastructure deployment and management',
-            icon: Code,'
-            features['Terraform', 'CloudFormation', 'ARM Templates', 'Deployment Automation'];
+            icon: Code,
+            features['Terraform',CloudFormation',ARM Templates',Deployment Automation'];
         },;
         {
-'
-            title: 'Container Orchestration','
+
+            title: 'Container Orchestration',
             description: 'Manage and scale containerized applications',
-            icon: Cpu,'
-            features['Kubernetes', 'Docker', 'ECS/EKS', 'Azure AKS', 'GKE'];
+            icon: Cpu,
+            features['Kubernetes',Docker',ECS/EKS',Azure AKS',GKE'];
         },;
         {
-'
-            title: 'Serverless Computing','
+
+            title: 'Serverless Computing',
             description: 'Build and run applications without managing servers',
-            icon: Zap,'
-            features['AWS Lambda', 'Azure Functions', 'Cloud Functions', 'Event-driven Architecture'];
+            icon: Zap,
+            features['AWS Lambda',Azure Functions',Cloud Functions',Event-driven Architecture'];
         },;
         {
-'
-            title: 'Database Solutions','
+
+            title: 'Database Solutions',
             description: 'Managed database services for optimal performance',
-            icon: Database,'
-            features['RDS, Aurora', 'Azure SQL', 'Cloud SQL', 'NoSQL Options'];
+            icon: Database,
+            features['RDS, Aurora',Azure SQL',Cloud SQL',NoSQL Options'];
         },;
         {
-'
-            title: 'Security & Compliance','
+
+            title: 'Security & Compliance',
             description: 'Enterprise-grade security and compliance features',
-            icon: Shield,'
-            features['IAM & Access Control', 'Encryption', 'Compliance Frameworks', 'Security Monitoring'];
+            icon: Shield,
+            features['IAM & Access Control',Encryption',Compliance Frameworks',Security Monitoring'];
         },;
         {
-'
-            title: 'Monitoring & Analytics','
+
+            title: 'Monitoring & Analytics',
             description: 'Comprehensive monitoring and observability',
-            icon: BarChart3,'
-            features['CloudWatch', 'Azure Monitor', 'Stackdriver', 'Log Management'];
+            icon: BarChart3,
+            features['CloudWatch',Azure Monitor',Stackdriver',Log Management'];
         }
     ];
     const benefits = ['
-        { title: 'Scalability', description: 'Scale resources up or down based on demand', icon: TrendingUp },'
-        { title: 'Cost Optimization', description: 'Pay only for what you use with smart resource management', icon: DollarSign },'
-        { title: 'High Availability', description: '99.9%+ uptime with multi-region deployments', icon: Shield },'
-        { title: 'Security', description: 'Enterprise-grade security with compliance certifications', icon: Lock },'
-        { title: 'Performance', description: 'Global CDN and edge computing for optimal speed', icon: Zap },'
+        { title: 'Scalability', description: 'Scale resources up or down based on demand', icon: TrendingUp },
+        { title: 'Cost Optimization', description: 'Pay only for what you use with smart resource management', icon: DollarSign },
+        { title: 'High Availability', description: '99.9%+ uptime with multi-region deployments', icon: Shield },
+        { title: 'Security', description: 'Enterprise-grade security with compliance certifications', icon: Lock },
+        { title: 'Performance', description: 'Global CDN and edge computing for optimal speed', icon: Zap },
         { title: 'Disaster Recovery', description: 'Automated backup and recovery solutions', icon: HardDrive }
     ];
     const stats = ['
-        { number: '99.9%', label: 'Uptime SLA', icon: Shield },'
-        { number: '50%', label: 'Cost Reduction', icon: TrendingUp },'
-        { number: '10x', label: 'Faster Deployment', icon: Zap },'
+        { number: '99.9%', label: 'Uptime SLA', icon: Shield },
+        { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
+        { number: '10x', label: 'Faster Deployment', icon: Zap },
         { number: '24/7', label: 'Monitoring', icon: Wifi }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
@@ -89,7 +89,7 @@ import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, Ba
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Cloud Infrastructure"
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
                 {' '}That Scales{' '}
               </span>
               With Your Business
@@ -331,7 +331,7 @@ import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, Ba
 
 }} viewport={{ once: true }}>"
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Move to the Cloud?</h2>"
-            <p className="text-xl text-gray-300 mb-8">'
+            <p className="text-xl text-gray-300 mb-8">
               Let's design and implement a cloud infrastructure that grows with your business
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"

@@ -1,60 +1,59 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityRiskManagement() {
   const features = [
-    'AI-powered security risk management optimization','
-    'Intelligent risk assessment and analysis',;'
-    'Automated risk identification and prioritization',;'
-    'Predictive analytics for risk prediction',;'
-    'Smart risk framework management',;'
-    'AI-driven risk automation and orchestration',;'
-    'Real-time risk performance tracking',;'
+    'AI-powered security risk management optimization',Intelligent risk assessment and analysis',;
+    'Automated risk identification and prioritization',;
+    'Predictive analytics for risk prediction',;
+    'Smart risk framework management',;
+    'AI-driven risk automation and orchestration',;
+    'Real-time risk performance tracking',;
     'Custom AI models for risk applications';
   ];
 
   const tiers = [
     {
-'
-      name: 'Developer','
-      price: '$449/mo','
-      details: ['Up to 100 risk assessments/month', 'Basic AI features', 'Standard risk management', 'Email support']
+
+      name: 'Developer',
+      price: '$449/mo',
+      details: ['Up to 100 risk assessments/month',Basic AI features',Standard risk management',Email support']
     },
     {
-'
-      name: 'Business', '
-      price: '$1,199/mo', '
-      details: ['Up to 500 risk assessments/month', 'Advanced AI features', 'Enhanced risk management', 'Priority support'] ;
+
+      name: 'Business',
+      price: '$1,199/mo',
+      details: ['Up to 500 risk assessments/month',Advanced AI features',Enhanced risk management',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$2,999/mo', ;'
-      details: ['Unlimited risk assessments', 'Custom AI models', 'Full risk management suite', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$2,999/mo', ;
+      details: ['Unlimited risk assessments',Custom AI models',Full risk management suite',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Security risk management optimization',;'
-    'Risk assessment and analysis',;'
-    'Risk identification and prioritization',;'
-    'Risk framework management and automation',;'
-    'Risk automation and orchestration',;'
+  const useCases = [;
+    'Security risk management optimization',;
+    'Risk assessment and analysis',;
+    'Risk identification and prioritization',;
+    'Risk framework management and automation',;
+    'Risk automation and orchestration',;
     'Risk scaling and management';
   ];
 
-  const benefits = [;'
-    'Improve security risk management performance by 50-80%',;'
-    'Reduce risk assessment time by 40-70%',;'
-    'Cut security risk management costs by 35-65%',;'
-    'Enhance security risk management reliability and scalability',;'
-    'Optimize resource utilization',;'
+  const benefits = [;
+    'Improve security risk management performance by 50-80%',;
+    'Reduce risk assessment time by 40-70%',;
+    'Cut security risk management costs by 35-65%',;
+    'Enhance security risk management reliability and scalability',;
+    'Optimize resource utilization',;
     'Scale security risk management operations efficiently';
   ];
 
-  const industries = [;'
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
     'Technology & SaaS';
   ];
 
@@ -107,8 +106,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['50-80% performance improvement', '40-70% assessment time reduction', '35-65% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['50-80% performance improvement',40-70% assessment time reduction',35-65% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-red-600 mb-3" />"              <div className="text-gray-900 font-semibold">{t}</div>
             </div>

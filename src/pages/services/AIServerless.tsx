@@ -1,60 +1,59 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIServerless() {
   const features = [
-    'AI-powered serverless optimization','
-    'Intelligent serverless management',;'
-    'Automated serverless monitoring and alerting',;'
-    'Predictive analytics for serverless scaling',;'
-    'Smart serverless security and compliance',;'
-    'AI-driven serverless automation and orchestration',;'
-    'Real-time serverless analytics and insights',;'
+    'AI-powered serverless optimization',Intelligent serverless management',;
+    'Automated serverless monitoring and alerting',;
+    'Predictive analytics for serverless scaling',;
+    'Smart serverless security and compliance',;
+    'AI-driven serverless automation and orchestration',;
+    'Real-time serverless analytics and insights',;
     'Custom AI models for serverless applications';
   ];
 
   const tiers = [
     {
-'
-      name: 'Developer','
-      price: '$299/mo','
-      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support']
+
+      name: 'Developer',
+      price: '$299/mo',
+      details: ['Up to 100GB storage',Basic AI features',Standard monitoring',Email support']
     },
     {
-'
-      name: 'Business', '
-      price: '$799/mo', '
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
+
+      name: 'Business',
+      price: '$799/mo',
+      details: ['Up to 1TB storage',Advanced AI features',Enhanced monitoring',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,999/mo', ;'
-      details: ['Unlimited storage', 'Custom AI models', 'Full serverless suite', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$1,999/mo', ;
+      details: ['Unlimited storage',Custom AI models',Full serverless suite',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Serverless optimization',;'
-    'Serverless management',;'
-    'Performance monitoring and analytics',;'
-    'Security and compliance monitoring',;'
-    'Automation and orchestration',;'
+  const useCases = [;
+    'Serverless optimization',;
+    'Serverless management',;
+    'Performance monitoring and analytics',;
+    'Security and compliance monitoring',;
+    'Automation and orchestration',;
     'Serverless scaling and management';
   ];
 
-  const benefits = [;'
-    'Improve serverless performance by 50-80%',;'
-    'Reduce serverless costs by 40-70%',;'
-    'Cut operational costs by 35-65%',;'
-    'Enhance serverless reliability and scalability',;'
-    'Optimize resource utilization',;'
+  const benefits = [;
+    'Improve serverless performance by 50-80%',;
+    'Reduce serverless costs by 40-70%',;
+    'Cut operational costs by 35-65%',;
+    'Enhance serverless reliability and scalability',;
+    'Optimize resource utilization',;
     'Scale serverless operations efficiently';
   ];
 
-  const industries = [;'
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
     'Technology & SaaS';
   ];
 
@@ -107,8 +106,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['50-80% performance improvement', '40-70% cost reduction', '35-65% operational cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['50-80% performance improvement',40-70% cost reduction',35-65% operational cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-teal-600 mb-3" />"              <div className="text-gray-900 font-semibold">{t}</div>
             </div>

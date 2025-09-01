@@ -1,7 +1,7 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { Link  } from 'react-router-dom.ts';'
-import { MessageCircle, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Mail, Phone  } from 'lucide-react';'
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { MessageCircle, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Mail, Phone  } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
 ;
 export { function };
@@ -201,8 +201,8 @@ export default function AISupportHelpdesk(...args[]):  {
   return()
     <>
       <SEO "
-        title = "AI Support Helpdesk - Zion Tech Group""
-        description="Professional AI-powered support helpdesk platform with intelligent chatbots, multi-channel support, and advanced analytics for exceptional customer service.""
+        title = "AI Support Helpdesk - Zion Tech Group"
+        description="Professional AI-powered support helpdesk platform with intelligent chatbots, multi-channel support, and advanced analytics for exceptional customer service."
         canonical="/services/ai-support-helpdesk"
       />
 "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -247,13 +247,13 @@ export default function AISupportHelpdesk(...args[]):  {
                 </p>"
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link"
-                    to="/request-quote""
+                    to="/request-quote"
                     className="px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
 
                     Start Free Trial
                   </Link>
                   <Link"
-                    to="/contact""
+                    to="/contact"
                     className="px-8 py-4 border-2 border-teal-500 text-teal-400 rounded-lg font-semibold hover:bg-teal-500 hover:text-white transition-all duration-300"
 
                     Schedule Demo
@@ -648,13 +648,13 @@ export default function AISupportHelpdesk(...args[]):  {
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link"
-                  to="/request-quote""
+                  to="/request-quote"
                   className="px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
 
                   Start Free Trial
                 </Link>
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="px-8 py-4 border-2 border-teal-500 text-teal-400 rounded-lg font-semibold hover:bg-teal-500 hover:text-white transition-all duration-300"
 
                   Contact Sales

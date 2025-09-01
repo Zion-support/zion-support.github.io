@@ -1,5 +1,34 @@
+<<<<<<< HEAD
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+
+interface SkeletonProps extends React.PropsWithChildren<{}> {
+
+  className?: string;
+  count?: number;
+  height?: string;
+  width?: string;
+  rounded?: string | boolean;
+  animated?: boolean;
+
+}
+
+export const Skeleton: React.FC<SkeletonProps> = ({
+
+  className = '', 
+  count = 1,
+  height = 'h-4',
+  width = 'w-full',
+  rounded = 'rounded',
+  animated = true;
+}) => {
+
+  const baseClasses = `bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 ${height} ${width} ${rounded} ${className}`;
+  
+=======
 import React from 'react.ts';'
 import { motion  } from 'framer-motion.ts';  
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   if (animated) {
 
     return()

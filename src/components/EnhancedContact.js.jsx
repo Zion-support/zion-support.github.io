@@ -1,7 +1,7 @@
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';'
-import { Button } from '@/components/ui/button';'
-import { Input } from '@/components/ui/input';'
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/Textarea';
 import {
 
@@ -12,57 +12,51 @@ import {
   Send,
   CheckCircle,
   Building,
-  Users,'
+  Users,
   Globe} from 'lucide-react';
 export const EnhancedContact = () => {
   const [formData, setFormData] = useState({
-'
-    name: '','
-    email: '','
-    comp: '','
-    phone: '','
-    service: '','
+
+    name: '',
+    email: '',
+    comp: '',
+    phone: '',
+    service: '',
     message: ''});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const contactMethods = [
     {
 
-      icon: Mail,'
-      title: 'Email Us','
-      description: 'Send us a detailed message','
-      action: 'kleber@ziontechgroup.com','
+      icon: Mail,
+      title: 'Email Us',
+      description: 'Send us a detailed message',
+      action: 'kleber@ziontechgroup.com',
       href: 'mailto:kleber@ziontechgroup.com'},
     {
 
-      icon: Phone,'
-      title: 'Call Us','
-      description: 'Speak with our team directly','
-      action: '+1 302 464 0950','
+      icon: Phone,
+      title: 'Call Us',
+      description: 'Speak with our team directly',
+      action: '+1 302 464 0950',
       href: 'tel:+13024640950'},
     {
 
-      icon: MapPin,'
-      title: 'Visit Us','
-      description: 'Our office location','
-      action: '364 E Main St STE 1008, Middletown DE 19709','
+      icon: MapPin,
+      title: 'Visit Us',
+      description: 'Our office location',
+      action: '364 E Main St STE 1008, Middletown DE 19709',
       href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'},
     {
 
-      icon: Clock,'
-      title: 'Business Hours','
-      description: "When we're available",'
-      action: 'Mon-Fri: 9AM-6PM EST','
+      icon: Clock,
+      title: 'Business Hours',
+      description: "When we're available",
+      action: 'Mon-Fri: 9AM-6PM EST',
       href: '#'},
   ];
   const services = ['
-    'AI Solutions','
-    'Cloud & DevOps','
-    'Cybersecurity','
-    'Digital Transformation','
-    'IT Infrastructure','
-    'Consulting','
-    'Other',
+    'AI Solutions',Cloud & DevOps',Cybersecurity',Digital Transformation',IT Infrastructure',Consulting',Other',
   ];
   const containerVariants = {
 
@@ -82,7 +76,7 @@ export const EnhancedContact = () => {
       opacity: 1,
       transition: {
 
-        duration: 0.6,'
+        duration: 0.6,
         ease: 'easeOut'}}};
   const cardVariants = {
 
@@ -93,7 +87,7 @@ export const EnhancedContact = () => {
       opacity: 1,
       transition: {
 
-        duration: 0.5,'
+        duration: 0.5,
         ease: 'easeOut'}},
     hover: {
 
@@ -101,7 +95,7 @@ export const EnhancedContact = () => {
       y: -5,
       transition: {
 
-        duration: 0.3,'
+        duration: 0.3,
         ease: 'easeOut'}}};
   const handleInputChange = e => {
 
@@ -123,12 +117,12 @@ export const EnhancedContact = () => {
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
-'
-        name: '','
-        email: '','
-        comp: '','
-        phone: '','
-        service: '','
+
+        name: '',
+        email: '',
+        comp: '',
+        phone: '',
+        service: '',
         message: ''});
     }, 3000);
   };
@@ -144,7 +138,7 @@ export const EnhancedContact = () => {
         <div className="text-center max-w-md mx-auto px-4">"
           <CheckCircle className="h-24 w-24 text-green-400 mx-auto mb-6" />"
           <h1 className="text-3xl font-bold text-white mb-4">Thank You!</h1>"
-          <p className="text-xl text-gray-300 mb-6">'
+          <p className="text-xl text-gray-300 mb-6">
             Your message has been sent successfully. We'll get back to you
             within 24 hours.
           </p>
@@ -165,14 +159,14 @@ export const EnhancedContact = () => {
         <motion.div"
           className="max-w-7xl mx-auto text-center"
           variants={containerVariants}"
-          initial="hidden""
+          initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
           <motion.h1"
             className="text-4xl md:text-6xl font-bold mb-6"
             variants={itemVariants}
-          >'
+          >
             Get in{' '}"
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
               Touch
@@ -181,7 +175,7 @@ export const EnhancedContact = () => {
           <motion.p"
             className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
             variants={itemVariants}
-          >'
+          >
             Ready to transform your business? Let's discuss how our technology
             solutions can drive your success.
           </motion.p>
@@ -194,17 +188,17 @@ export const EnhancedContact = () => {
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
             {contactMethods.map((method, index) => (
               <motion.a
                 key={index}
-                href={method.href}'
+                href={method.href}
                 target={method.href.startsWith('http') ? '_blank' : null}
                 rel={
-'
+
                   method.href.startsWith('http') ? 'noopener noreferrer' : null
                 }"
                 className="group"
@@ -237,14 +231,14 @@ export const EnhancedContact = () => {
           <motion.div"
             className="text-center mb-12"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Send Us a Message
             </h2>"
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">'
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Fill out the form below and we'll get back to you as soon as
               possible
             </p>
@@ -254,20 +248,20 @@ export const EnhancedContact = () => {
             onSubmit={handleSubmit}"
             className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >"
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <motion.div variants={itemVariants}>
                 <label"
-                  htmlFor="name""
+                  htmlFor="name"
                   className="block text-sm font-medium text-gray-300 mb-2"
                 >
                   Full Name *
                 </label>
                 <Input"
-                  type="text""
+                  type="text"
                   placeholder="Enter your full name"
                   value={formData.name}
                   onChange={handleInputChange}"
@@ -278,13 +272,13 @@ export const EnhancedContact = () => {
 
               <motion.div variants={itemVariants}>
                 <label"
-                  htmlFor="email""
+                  htmlFor="email"
                   className="block text-sm font-medium text-gray-300 mb-2"
                 >
                   Email Address *
                 </label>
                 <Input"
-                  type="email""
+                  type="email"
                   placeholder="Enter your email address"
                   value={formData.email}
                   onChange={handleInputChange}"
@@ -297,13 +291,13 @@ export const EnhancedContact = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <motion.div variants={itemVariants}>
                 <label"
-                  htmlFor="comp""
+                  htmlFor="comp"
                   className="block text-sm font-medium text-gray-300 mb-2"
-                >'
+                >
                   Comp{' '}
                 </label>
                 <Input"
-                  type="text""
+                  type="text"
                   placeholder="Enter your comp name"
                   value={formData.comp}
                   onChange={handleInputChange}"
@@ -314,13 +308,13 @@ export const EnhancedContact = () => {
 
               <motion.div variants={itemVariants}>
                 <label"
-                  htmlFor="phone""
+                  htmlFor="phone"
                   className="block text-sm font-medium text-gray-300 mb-2"
                 >
                   Phone Number
                 </label>
                 <Input"
-                  type="tel""
+                  type="tel"
                   placeholder="Enter your phone number"
                   value={formData.phone}
                   onChange={handleInputChange}"
@@ -332,13 +326,13 @@ export const EnhancedContact = () => {
 "
             <motion.div className="mb-6" variants={itemVariants}>
               <label"
-                htmlFor="service""
+                htmlFor="service"
                 className="block text-sm font-medium text-gray-300 mb-2"
               >
                 Service of Interest
               </label>
               <select"
-                id="service""
+                id="service"
                 name="service"
                 value={formData.service}
                 onChange={handleInputChange}"
@@ -359,7 +353,7 @@ export const EnhancedContact = () => {
 "
             <motion.div className="mb-8" variants={itemVariants}>
               <label"
-                htmlFor="message""
+                htmlFor="message"
                 className="block text-sm font-medium text-gray-300 mb-2"
               >
                 Message *
@@ -403,7 +397,7 @@ export const EnhancedContact = () => {
           <motion.div"
             className="text-center mb-12"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >"
@@ -420,7 +414,7 @@ export const EnhancedContact = () => {
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >"

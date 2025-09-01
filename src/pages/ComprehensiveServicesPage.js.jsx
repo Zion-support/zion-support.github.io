@@ -1,32 +1,30 @@
-import React, { useState, useMemo } from 'react';'
-import { Link } from 'react-router-dom';'
-import { Button } from '@/components/ui/button';'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';'
-import { Badge } from '@/components/ui/badge';'
-import { Input } from '@/components/ui/input';'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';'
-import { Shield, Zap, Eye, Phone, Mail, MapPin, Globe, Star, DollarSign, Clock, Users, Search, Building import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, PRICING_TIERS } from '@/data/comprehensiveServices';'
+import React, { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Input } from '@/components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Shield, Zap, Eye, Phone, Mail, MapPin, Globe, Star, DollarSign, Clock, Users, Search, Building import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, PRICING_TIERS } from '@/data/comprehensiveServices';
 import { SEO } from '@/components/SEO';
 export default function ComprehensiveServicesPage() {
-'
-    const [searchTerm, setSearchTerm] = useState('');'
-    const [selectedCategory, setSelectedCategory] = useState('all');'
+
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPricingTier, setSelectedPricingTier] = useState('all');
     const filteredServices = useMemo(() => {
         return COMPREHENSIVE_SERVICES.filter(service => {
-'
+
             const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === selectedPricingTier;
             return matchesSearch && matchesCategory && matchesPricing}) }, [searchTerm, selectedCategory, selectedPricingTier]) ;
     const getServiceTypeColor = (type) => {
 
         const colorMap = {
-'
-  'Micro SAAS': 'bg-blue-100 text-blue-800','
-            'IT Services': 'bg-green-100 text-green-800','
-  'AI Services': 'bg-purple-100 text-purple-800'
+
+  'Micro SAAS': 'bg-blue-100 text-blue-800',IT Services': 'bg-green-100 text-green-800',AI Services': 'bg-purple-100 text-purple-800'
         
 
-};'
+};
         return colorMap[type] || 'bg-gray-100 text-gray-800'};
     return (<div className="min-h-screen bg-zion-blue-dark">"
               <SEO title="Comprehensive Micro SAAS Solutions - Zion Tech Group" description="Discover our extensive portfolio of innovative micro SAAS, IT, and AI services designed to transform your business operations and drive growth" keywords="micro SAAS, IT services, AI solutions, Zion Tech Group" url="https://ziontechgroup.com/comprehensive-services"/>
@@ -197,8 +195,8 @@ export default function ComprehensiveServicesPage() {
                 No services found matching your criteria
               </div>
               <Button onClick={() => {
-'
-                setSearchTerm('');'
+
+                setSearchTerm('');
                 setSelectedCategory('all');'"
                 setSelectedPricingTier('all')}} variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
                 Clear Filters
@@ -262,7 +260,7 @@ export default function ComprehensiveServicesPage() {
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Transform Your Business?
           </h2>"
-          <p className="text-zion-cyan text-lg mb-8 max-w-2xl mx-auto">'
+          <p className="text-zion-cyan text-lg mb-8 max-w-2xl mx-auto">
             Let's discuss how our micro SAAS solutions can drive innovation, efficiency, and growth for your organization
           </p>"
           <div className="flex flex-wrap justify-center gap-4">"

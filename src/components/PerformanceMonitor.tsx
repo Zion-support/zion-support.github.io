@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';'
+import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -6,7 +6,7 @@ import {
   Zap,
   Clock,
   TrendingUp,
-  AlertTriangle,'
+  AlertTriangle,
   CheckCircle} from 'lucide-react';
 interface PerformanceMetrics {
   fcp: number;
@@ -87,9 +87,9 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       value: number'
     ): 'good' | 'needs-improvement' | 'poor' => {
 
-      const thresholdValue = threshold[metric];'
-      if (value <= thresholdValue) return 'good';'
-      if (value <= thresholdValue * 1.5) return 'needs-improvement';'
+      const thresholdValue = threshold[metric];
+      if (value <= thresholdValue) return 'good';
+      if (value <= thresholdValue * 1.5) return 'needs-improvement';
       return 'poor';
     },
     [threshold]
@@ -99,11 +99,11 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     (status: 'good' | 'needs-improvement' | 'poor'): string => {
 
       switch (status) {
-'
+
         case 'good':'
-          return 'text-green-400';'
+          return 'text-green-400';
         case 'needs-improvement':'
-          return 'text-yellow-400';'
+          return 'text-yellow-400';
         case 'poor':'
           return 'text-red-400';
         default:'
@@ -117,11 +117,11 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     (status: 'good' | 'needs-improvement' | 'poor') => {
 
       switch (status) {
-'
+
         case 'good':
-          return <CheckCircle className="w-4 h-4" />;'
+          return <CheckCircle className="w-4 h-4" />;
         case 'needs-improvement':"
-          return <AlertTriangle className="w-4 h-4" />;'
+          return <AlertTriangle className="w-4 h-4" />;
         case 'poor':"
           return <AlertTriangle className="w-4 h-4" />;
         default:"
@@ -131,7 +131,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     []
   );
   useEffect(() => {
-'
+
     if ('PerformanceObserver' in window) {
 
       // Observe FCP
@@ -148,7 +148,12 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             prev ? { ...prev, fcp: fcpEntry.startTime } : null
           );
         }
+<<<<<<< HEAD
+      });
+      fcpObserver.observe({ entryTypes: ['paint'] });
+=======
       });'      fcpObserver.observe({ entryTypes: ['paint'] });
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   const generatePerformanceTips = (currentMetrics: PerformanceMetrics) => {
     const tips: string[] = [];
@@ -163,7 +168,12 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             prev ? { ...prev, lcp: lcpEntry.startTime } : null
           );
         }
+<<<<<<< HEAD
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+=======
       });'      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       // Observe FID
 
@@ -179,7 +189,12 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               : null
           );
         }
+<<<<<<< HEAD
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+=======
       });'      fidObserver.observe({ entryTypes: ['first-input'] });
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     if (tips.length === 0) {
       tips.push('Great performance! Keep monitoring for any regressions');
@@ -197,7 +212,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       });
 
         setMetrics(prev => (prev ? { ...prev, cls: clsValue } : null));
-      });'
+      });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
 
       // Get TTFB from navigation timing
@@ -266,7 +281,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         <div className="space-y-2">"
           <div className="flex items-center justify-between text-xs">"
             <span className="text-slate-300">FCP</span>"
-            <div className="flex items-center space-x-1">'
+            <div className="flex items-center space-x-1">
               {getMetricIcon(getMetricStatus('fcp', metrics.fcp))}
               <span'
                 className={getMetricColor(getMetricStatus('fcp', metrics.fcp))}
@@ -278,7 +293,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 "
           <div className="flex items-center justify-between text-xs">"
             <span className="text-slate-300">LCP</span>"
-            <div className="flex items-center space-x-1">'
+            <div className="flex items-center space-x-1">
               {getMetricIcon(getMetricStatus('lcp', metrics.lcp))}
               <span'
                 className={getMetricColor(getMetricStatus('lcp', metrics.lcp))}
@@ -290,7 +305,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 "
           <div className="flex items-center justify-between text-xs">"
             <span className="text-slate-300">FID</span>"
-            <div className="flex items-center space-x-1">'
+            <div className="flex items-center space-x-1">
               {getMetricIcon(getMetricStatus('fid', metrics.fid))}
               <span'
                 className={getMetricColor(getMetricStatus('fid', metrics.fid))}
@@ -302,7 +317,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 "
           <div className="flex items-center justify-between text-xs">"
             <span className="text-slate-300">CLS</span>"
-            <div className="flex items-center space-x-1">'
+            <div className="flex items-center space-x-1">
               {getMetricIcon(getMetricStatus('cls', metrics.cls))}
               <span'
                 className={getMetricColor(getMetricStatus('cls', metrics.cls))}
@@ -314,7 +329,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 "
           <div className="flex items-center justify-between text-xs">"
             <span className="text-slate-300">TTFB</span>"
-            <div className="flex items-center space-x-1">'
+            <div className="flex items-center space-x-1">
               {getMetricIcon(getMetricStatus('ttfb', metrics.ttfb))}
               <span
                 className={getMetricColor('

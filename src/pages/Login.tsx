@@ -1,5 +1,5 @@
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';'
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
   Mail,
@@ -33,7 +33,7 @@ import {
   Apple,
   Smartphone,
   Monitor,
-  Tablet,'
+  Tablet,
   Laptop} from 'lucide-react';
 
 export default function Login() {
@@ -41,13 +41,13 @@ export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [formData, setFormData] = useState({
-'
-    email: '','
-    password: '','
-    confirmPassword: '','
-    firstName: '','
-    lastName: '','
-    company: '','
+
+    email: '',
+    password: '',
+    confirmPassword: '',
+    firstName: '',
+    lastName: '',
+    company: '',
     phone: '',
     acceptTerms: false,
     acceptMarketing: false});
@@ -59,7 +59,7 @@ export default function Login() {
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
 
-      ...prev,'
+      ...prev,
       [name]: type === 'checkbox' ? checked : value}));
   };
 
@@ -77,13 +77,13 @@ export default function Login() {
     setTimeout(() => {
       setSubmitted(false);
       setFormData({
-'
-        email: '','
-        password: '','
-        confirmPassword: '','
-        firstName: '','
-        lastName: '','
-        company: '','
+
+        email: '',
+        password: '',
+        confirmPassword: '',
+        firstName: '',
+        lastName: '',
+        company: '',
         phone: '',
         acceptTerms: false,
         acceptMarketing: false});
@@ -91,13 +91,13 @@ export default function Login() {
   };
   
     setFormData({
-'
-      email: '','
-      password: '','
-      confirmPassword: '','
-      firstName: '','
-      lastName: '','
-      company: '','
+
+      email: '',
+      password: '',
+      confirmPassword: '',
+      firstName: '',
+      lastName: '',
+      company: '',
       phone: '',
       acceptTerms: false,
       acceptMarketing: false});
@@ -132,10 +132,10 @@ export default function Login() {
           <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
             <span className="text-white font-bold text-2xl">Z</span>
           </div>"
-          <h1 className="text-3xl font-bold text-white mb-2">'
+          <h1 className="text-3xl font-bold text-white mb-2">
             {isLogin ? 'Welcome Back' : 'Create Account'}
           </h1>"
-          <p className="text-gray-300">'
+          <p className="text-gray-300">
             {isLogin ? 'Sign in to your account' : 'Join Zion Tech Group today'}
           </p>
         </motion.div>
@@ -166,37 +166,37 @@ export default function Login() {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label"
-                    htmlFor="firstName""
+                    htmlFor="firstName"
                     className="block text-white font-medium mb-2"
                   >"
                     <User className="w-4 h-4 inline mr-2" />                    First Name *
                   </label>
                   <input"
-                    type="text""
-                    id="firstName""
+                    type="text"
+                    id="firstName"
                     name="firstName"
                     value={formData.firstName}
                     onChange={handleInputChange}
                     required"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent""
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
                     placeholder="Enter first name"
                   />
                 </div>
                 <div>
                   <label"
-                    htmlFor="lastName""
+                    htmlFor="lastName"
                     className="block text-white font-medium mb-2"
                   >"
                     <User className="w-4 h-4 inline mr-2" />                    Last Name *
                   </label>
                   <input"
-                    type="text""
-                    id="lastName""
+                    type="text"
+                    id="lastName"
                     name="lastName"
                     value={formData.lastName}
                     onChange={handleInputChange}
                     required"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent""
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
                     placeholder="Enter last name"
                   />
                 </div>
@@ -204,19 +204,19 @@ export default function Login() {
 
             <div>
               <label"
-                htmlFor="email""
+                htmlFor="email"
                 className="block text-white font-medium mb-2"
               >"
                 <Mail className="w-4 h-4 inline mr-2" />                Email Address *
               </label>
               <input"
-                type="email""
-                id="email""
+                type="email"
+                id="email"
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
                 required"
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent""
+                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
                 placeholder="Enter your email"
               />
             </div>
@@ -224,25 +224,25 @@ export default function Login() {
             {!isLogin && (
               <div>
                 <label"
-                  htmlFor="company""
+                  htmlFor="company"
                   className="block text-white font-medium mb-2"
                 >"
                   <Building className="w-4 h-4 inline mr-2" />                  Company
                 </label>
                 <input"
-                  type="text""
-                  id="company""
+                  type="text"
+                  id="company"
                   name="company"
                   value={formData.company}
                   onChange={handleInputChange}"
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent""
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
                   placeholder="Enter company name"
                 />
               </div>) }
 
             <div>
               <label"
-                htmlFor="password""
+                htmlFor="password"
                 className="block text-white font-medium mb-2"
               >"
                 <Lock className="w-4 h-4 inline mr-2" />                Password *
@@ -250,12 +250,12 @@ export default function Login() {
               <div className="relative">
                 <input'
                   type={showPassword ? 'text' : 'password'}"
-                  id="password""
+                  id="password"
                   name="password"
                   value={formData.password}
                   onChange={handleInputChange}
                   required"
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent pr-12""
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent pr-12"
                   placeholder="Enter your password"
                 />
                 <button"
@@ -274,7 +274,7 @@ export default function Login() {
             {!isLogin && (
               <div>
                 <label"
-                  htmlFor="confirmPassword""
+                  htmlFor="confirmPassword"
                   className="block text-white font-medium mb-2"
                 >"
                   <Lock className="w-4 h-4 inline mr-2" />                  Confirm Password *
@@ -282,12 +282,12 @@ export default function Login() {
                 <div className="relative">
                   <input'
                     type={showConfirmPassword ? 'text' : 'password'}"
-                    id="confirmPassword""
+                    id="confirmPassword"
                     name="confirmPassword"
                     value={formData.confirmPassword}
                     onChange={handleInputChange}
                     required"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent pr-12""
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent pr-12"
                     placeholder="Confirm your password"
                   />
                   <button"
@@ -307,24 +307,24 @@ export default function Login() {
               <div className="space-y-3">"
                 <label className="flex items-center space-x-3">
                   <input"
-                    type="checkbox""
+                    type="checkbox"
                     name="acceptTerms"
                     checked={formData.acceptTerms}
                     onChange={handleInputChange}
                     required"
                     className="w-4 h-4 text-cyan-500 bg-white/10 border-white/20 rounded focus:ring-cyan-400 focus:ring-2"
                   />"
-                  <span className="text-white text-sm">'
+                  <span className="text-white text-sm">
                     I agree to the{' '}
                     <Link"
-                      to="/terms""
+                      to="/terms"
                       className="text-cyan-400 hover:text-cyan-300 underline"
                     >
                       Terms of Service'
-                    </Link>{' '}'
+                    </Link>{' '}
                     and{' '}
                     <Link"
-                      to="/privacy""
+                      to="/privacy"
                       className="text-cyan-400 hover:text-cyan-300 underline"
                     >
                       Privacy Policy
@@ -333,7 +333,7 @@ export default function Login() {
                 </label>"
                 <label className="flex items-center space-x-3">
                   <input"
-                    type="checkbox""
+                    type="checkbox"
                     name="acceptMarketing"
                     checked={formData.acceptMarketing}
                     onChange={handleInputChange}"
@@ -358,12 +358,12 @@ export default function Login() {
               {isSubmitting ? (
                 <>"
                   <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-white"></div>
-                  <span>'
+                  <span>
                     {isLogin ? 'Signing In...' : 'Creating Account...'}
                   </span>
                 </>
               ) : (
-                <>'
+                <>
                   <span>{isLogin ? 'Sign In' : 'Create Account'}</span>"
                   <ArrowRight className="w-5 h-5" />                </>
               )}
@@ -379,7 +379,7 @@ export default function Login() {
               <button
                 onClick={toggleForm}"
                 className="text-cyan-400 hover:text-cyan-300 font-medium underline"
-              >'
+              >
                 {isLogin ? 'Sign up' : 'Sign in'}
               </button>
             </p>
@@ -418,13 +418,13 @@ export default function Login() {
         >"
           <div className="space-y-2">
             <Link"
-              to="/forgot-password""
+              to="/forgot-password"
               className="block hover:text-white transition-colors"
             >
               Forgot your password?
             </Link>
             <Link"
-              to="/contact""
+              to="/contact"
               className="block hover:text-white transition-colors"
             >
               Need help? Contact support

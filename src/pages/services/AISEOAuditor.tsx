@@ -1,12 +1,32 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { SEO } from '@/components/SEO';
 import {
 
   DollarSign,
   CheckCircle2,
   ExternalLink,
+<<<<<<< HEAD
+  Phone,
+  Mail} from 'lucide-react.ts';
+
+const AISEOAuditor: React.FC = (): JSX.Element => {
+
+  return()
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+      <SEO"
+        title="AI SEO Auditor - Zion Tech Group"
+        description="Autonomous on-site SEO audits, fixes, and monitoring with AI."
+      />
+"
+      <section className="container mx-auto px-4 py-16">"
+        <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
+          AI SEO Auditor
+        </h1>"
+        <p className="mt-4 max-w-3xl text-slate-300">
+=======
   Phone,'
   Mail} from 'lucide-react.ts';        <p className="mt-4 max-w-3xl text-slate-300">
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           Identify SEO issues, generate prioritized fixes, and ship updates
           automatically with guardrails. Nightly crawls, Core Web Vitals checks,
           structured data validation, and content suggestions.
@@ -14,12 +34,7 @@ import {
 "
         <div className="mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">
           {['
-            'Automated site crawl and issues triage','
-            'Core Web Vitals & Lighthouse monitoring','
-            'Schema.org and OpenGraph validation','
-            'Internal linking and orphan page detection','
-            'AI-generated meta tags and headings','
-            'CI-ready fix PRs with human-in-the-loop',
+            'Automated site crawl and issues triage',Core Web Vitals & Lighthouse monitoring',Schema.org and OpenGraph validation',Internal linking and orphan page detection',AI-generated meta tags and headings',CI-ready fix PRs with human-in-the-loop',
           ].map(b => (
             <div
               key={b}"
@@ -41,22 +56,22 @@ import {
             <li>Setup projects: $2k–$10k (one-time)</li>
           </ul>
           <a"
-            className="mt-3 inline-flex items-center text-cyan-300 hover:text-cyan-200""
-            href="https://ziontechgroup.com/services""
-            target="_blank""
+            className="mt-3 inline-flex items-center text-cyan-300 hover:text-cyan-200"
+            href="https://ziontechgroup.com/services"
+            target="_blank"
             rel="noreferrer"
           >"
             Learn more <ExternalLink className="ml-1 h-3 w-3" />
           </a>"
           <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-slate-300">
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="inline-flex items-center gap-2 hover:text-cyan-200"
             >"
               <Phone className="h-4 w-4" /> +1 302 464 0950
             </a>
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="inline-flex items-center gap-2 hover:text-cyan-200"
             >"
               <Mail className="h-4 w-4" /> kleber@ziontechgroup.com

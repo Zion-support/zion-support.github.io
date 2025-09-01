@@ -1,6 +1,170 @@
+<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+
+  Brain,
+  Shield,
+  Cloud,
+  Zap,
+  Globe,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  Code,
+  Rocket,
+  Users,
+  BarChart3,
+  FileImage,
+  TrendingUp,
+  MessageCircle,
+  Video,
+  FileText,
+  Heart,
+  ShoppingCart,
+  Settings,
+  HelpCircle,
+  BookOpen,
+  Briefcase,
+  Award,
+  Target,
+  Lightbulb,
+  ShieldCheck,
+  Server,
+  Smartphone,
+  Monitor,
+  Wifi,
+  Bluetooth,
+  Satellite,
+  Atom,
+  Dna,
+  Microscope,
+  Flask,
+  TestTube,
+  Syringe,
+  Stethoscope,
+  HeartPulse,
+  BrainCircuit,
+  Eye,
+  Ear,
+  Hand,
+  Foot,
+  Bone,
+  Tooth,
+  Pill,
+  Bandage,
+  Thermometer,
+  Scale,
+  Calculator,
+  ChartBar,
+  PieChart,
+  LineChart,
+  Activity,
+  TrendingDown,
+  Minus,
+  Plus,
+  Equal,
+  Divide,
+  Percent,
+  DollarSign,
+  Euro,
+  Pound,
+  Yen,
+  Bitcoin,
+  Ethereum,
+  CreditCard,
+  Wallet,
+  Banknote,
+  Coins,
+  PiggyBank,
+  Safe,
+  Vault,
+  LockKeyhole,
+  Key,
+  Fingerprint,
+  QrCode,
+  Barcode,
+  Scan,
+  Camera,
+  VideoOff,
+  Mic,
+  MicOff,
+  Volume2,
+  VolumeX'
+} from 'lucide-react';
+;
+const QuickAccess: React.FC = props {;
+  const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+;
+const QuickAccess: React.FC = (): JSX.Element => {
+
+  const quickLinks = [
+    {
+
+      title: "AI Services","
+      description: "Machine Learning & Analytics",
+      icon: Brain,"
+      color: "from-purple-500 to-pink-500","
+      link: "/ai-services","
+      category: "Technology"
+    },
+    {
+"
+      title: "Cybersecurity","
+      description: "Protection & Compliance",
+      icon: Shield,"
+      color: "from-red-500 to-orange-500","
+      link: "/cybersecurity","
+      category: "Security"
+    },
+    {
+"
+      title: "Cloud Solutions","
+      description: "Migration & Optimization",
+      icon: Cloud,"
+      color: "from-blue-500 to-cyan-500","
+      link: "/cloud-solutions","
+      category: "Infrastructure"
+    },
+    {
+"
+      title: "Digital Transformation","
+      description: "Business Process Automation",
+      icon: Zap,"
+      color: "from-yellow-500 to-orange-500","
+      link: "/digital-transformation","
+      category: "Consulting"
+    },
+    {
+"
+      title: "IoT & Blockchain","
+      description: "Emerging Technologies",
+      icon: Globe,"
+      color: "from-green-500 to-teal-500","
+      link: "/emerging-tech","
+      category: "Innovation"
+    },
+    {
+"
+      category: "Business";
+    };
+  ];
+
+  const categories = ["
+    { name: "Technology", count: 15, color: "from-purple-500 to-pink-500" },"
+    { name: "Security", count: 8, color: "from-red-500 to-orange-500" },"
+    { name: "Infrastructure", count: 12, color: "from-blue-500 to-cyan-500" },"
+    { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },"
+    { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },;"
+    { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };
+=======
 import React from 'react';'
 import { motion } from 'framer-motion';'
 import { Link } from 'react-router-dom';    { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
@@ -33,7 +197,7 @@ import { Link } from 'react-router-dom';    { name: "Business", count: 14, color
 
 }}
             transition={{ duration: 0.6 }}"
-            className="text-3xl md:text-4xl font-bold text-white mb-4""
+            className="text-3xl md:text-4xl font-bold text-white mb-4"
       title: "Micro SaaS","
       description: "Ready-to-Deploy Solutions",;
       icon: Code,;"
@@ -374,13 +538,13 @@ import { Link } from 'react-router-dom';    { name: "Business", count: 14, color
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
               >
                 Contact Our Team
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >
                 Browse All Services
@@ -419,13 +583,13 @@ import { Link } from 'react-router-dom';    { name: "Business", count: 14, color
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link "
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
 
                 Contact Our Team
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300"
 
                 Browse All Services

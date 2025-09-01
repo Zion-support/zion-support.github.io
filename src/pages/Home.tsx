@@ -1,5 +1,5 @@
-import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 import {
@@ -111,15 +111,15 @@ const FloatingActionButton = React.memo ( () => {
         setIsVisible(false);
       }
     };
-'
-    window.addEventListener('scroll', toggleVisibility);'
+
+    window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
 
-      top: 0,'
+      top: 0,
       behavior: 'smooth'
     }) ;
   };
@@ -164,7 +164,7 @@ const FloatingActionButton = React.memo ( () => {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}"
                     className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200"'
-                    onClick={() => window.open('/help', '_blank')}"
+                    onClick={() => window.open('/help',_blank')}"
                     aria-label="Get help"
                   >"
                     <HelpCircle className="h-5 w-5" />
@@ -192,7 +192,7 @@ const FloatingActionButton = React.memo ( () => {
     </AnimatePresence>
   );
 });
-'
+
 FloatingActionButton.displayName = 'FloatingActionButton';
 
 // Enhanced hero section component
@@ -223,13 +223,13 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       color: "from-blue-500 to-cyan-500"
     },
     {
-'
-      name: 'AI Healthcare Analytics','
+
+      name: 'AI Healthcare Analytics',
       description: 'Predictive diagnostics and care optimization powered by AI',
-      icon: Heart,'
-      href: '/services/ai-healthcare-analytics','
-      color: 'from-green-600 to-emerald-600','
-      features: ['Predictive analytics', 'Diagnostic support', 'Care optimization']
+      icon: Heart,
+      href: '/services/ai-healthcare-analytics',
+      color: 'from-green-600 to-emerald-600',
+      features: ['Predictive analytics',Diagnostic support',Care optimization']
     }
   ], []) ;
 
@@ -248,19 +248,19 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
 
   const serviceCategories = [
     {
-'
+
       name: 'AI & Analytics',
-      icon: Brain,'
+      icon: Brain,
       color: 'from-purple-600 to-pink-600',
       services: ['
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },'
-        { name: 'AI Content Generation', href: '/services/ai-content-generation-platform' },'
-        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation' },'
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Content Generation', href: '/services/ai-content-generation-platform' },
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation' },
         { name: 'AI Project Management', href: '/services/ai-project-management-platform' }
       ]
     },
     {
-'
+
       name: 'Cybersecurity',
       icon: Shield,"
       color: "from-red-500 to-orange-500"
@@ -275,9 +275,9 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
   }, [heroSlides.length]) ;
 
   const heroStats = ['
-    { label: 'AI Solutions', value: '50+', icon: Brain, description: 'Cutting-edge AI services' },'
-    { label: 'Micro SaaS', value: '25+', icon: Rocket, description: 'Innovative products' },'
-    { label: 'Enterprise Clients', value: '100+', icon: Building, description: 'Trusted partnerships' },'
+    { label: 'AI Solutions', value: '50+', icon: Brain, description: 'Cutting-edge AI services' },
+    { label: 'Micro SaaS', value: '25+', icon: Rocket, description: 'Innovative products' },
+    { label: 'Enterprise Clients', value: '100+', icon: Building, description: 'Trusted partnerships' },
     { label: 'Success Rate', value: '99%', icon: CheckCircle, description: 'Proven results' }
   ];
 
@@ -316,9 +316,16 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
                 Explore Services
               </Link>
               <Link"
+<<<<<<< HEAD
+                to="/contact"
+                className="border-2 border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
+              >
+                Get Started
+=======
                 to="/contact""
                 className="border-2 border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"              >
                 View Pricing
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               </Link>
             </div>
           </motion.div>
@@ -331,10 +338,145 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
               key={index}
               onClick={() => setCurrentSlide(index)}`
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-'
+
                 index === currentSlide ? 'bg-cyan-400 w-8' : 'bg-white/30'`
               }`}
+<<<<<<< HEAD
+            />) ) }
+        </div>
+
+        {/* Enhanced Stats with animations */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}"
+          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
+        >
+          {heroStats.map((stat, index) => (
+            <motion.div 
+              key={stat.label} "
+              className="text-center"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            >"
+              <div className="flex justify-center mb-3">"
+                <div className="p-3 rounded-lg bg-gradient-to-r from-blue-600/20 to-purple-600/20">"
+                  <stat.icon className="h-8 w-8 text-blue-400" />
+                </div>
+              </div>"
+              <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>"
+              <div className="text-gray-400">{stat.label}</div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Slide indicators */}"
+        <div className="flex justify-center mt-8 space-x-2">
+          {heroSlides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}`
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+
+                index === currentSlide ? 'bg-blue-400 scale-125' : 'bg-gray-600 hover:bg-gray-500'`
+              }`}`
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+          <button
+            onClick={togglePlayPause}"
+            className="ml-4 p-2 text-gray-400 hover:text-white transition-colors duration-200"'
+            aria-label={isPlaying ? 'Pause slideshow' : 'Play slideshow'}
+          >"
+            {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
+          </button>
+        </div>
+      </div>
+    </section>) ;
+};
+
+// Features Section Component
+const FeaturesSection = () => {
+  const features = [
+    {
+
+      icon: Brain,"
+      title: "AI & Machine Learning","
+      description: "Cutting-edge artificial intelligence solutions that learn, adapt, and evolve with your business needs.","
+      color: "from-purple-500 to-pink-500","
+      link: "/services/ai-solutions"
+    },
+    {
+
+      icon: Atom,"
+      title: "Quantum Computing","
+      description: "Revolutionary quantum algorithms and computing platforms for solving complex computational problems.","
+      color: "from-blue-500 to-cyan-500","
+      link: "/services/quantum-computing"
+    },
+    {
+
+      icon: Shield,"
+      title: "Cybersecurity","
+      description: "Advanced security solutions with zero-trust architecture and real-time threat detection.","
+      color: "from-red-500 to-orange-500","
+      link: "/services/cybersecurity"
+    },
+    {
+
+      icon: Cloud,"
+      title: "Cloud Infrastructure","
+      description: "Scalable cloud solutions designed for modern enterprise needs and digital transformation.","
+      color: "from-green-500 to-emerald-500","
+      link: "/services/cloud-infrastructure"
+    },
+    {
+
+      icon: Lock,"
+      title: "Blockchain & Web3","
+      description: "Secure, decentralized solutions for the next generation of digital applications.","
+      color: "from-indigo-500 to-purple-500","
+      link: "/services/blockchain-web3"
+    },
+    {
+
+      icon: Zap,"
+      title: "Digital Transformation","
+      description: "End-to-end digital transformation services to modernize your business operations.","
+      color: "from-yellow-500 to-orange-500","
+      link: "/services/digital-transformation"
+
+    }
+  ];
+
+  return()
+"
+    <section className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">"
+      <div className="container mx-auto px-4">
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}"
+          className="text-center mb-16"
+        >"
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+
+            Our Core Services
+          </h2>"
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Comprehensive technology solutions designed to drive innovation and accelerate your business growth
+          </p>
+        </motion.div>
+"
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <motion.div
+              key={feature.title}
+=======
             />) ) }            <motion.div
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -468,7 +610,7 @@ const CTASection = () => {
               Get Started Today
             </Link>
             <Link"
-              to="/services""
+              to="/services"
               className="border-2 border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
             >
               Call Now: +1 302 464 0950

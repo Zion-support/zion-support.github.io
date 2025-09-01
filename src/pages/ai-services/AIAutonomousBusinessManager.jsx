@@ -1,7 +1,7 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';'
-import { Brain, TrendingUp, Zap, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Star } from 'lucide-react';'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Brain, TrendingUp, Zap, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Star } from 'lucide-react';
 import SEO from '@/components/SEO';
 const features = [
     {
@@ -396,7 +396,7 @@ export default function AIAutonomousBusinessManager() {
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               What Our Clients Say
             </h2>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Don't just take our word for it. Here's what business leaders have to say about our AI system.
             </p>
           </motion.div>

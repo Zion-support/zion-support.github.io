@@ -1,14 +1,14 @@
-import React from 'react.ts';'
-import { SEO   } from '../../components/SEO';'
+import React from 'react.ts';
+import { SEO   } from '../../components/SEO';
 import { motion   } from 'framer-motion.ts';
 ;const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
 
   return()
     <>
       <SEO
-        title="AI-Powered DevOps Automation Platform | Zion Tech Group""
-        description="Advanced AI-driven DevOps automation platform. Reduce deployment time by 80%, decrease failures by 90%, and optimize CI/CD pipelines with intelligent automation and GitOps workflows.""
-        keywords="AI DevOps, CI/CD automation, GitOps, infrastructure as code, multi-cloud orchestration, deployment automation, pipeline optimization""
+        title="AI-Powered DevOps Automation Platform | Zion Tech Group"
+        description="Advanced AI-driven DevOps automation platform. Reduce deployment time by 80%, decrease failures by 90%, and optimize CI/CD pipelines with intelligent automation and GitOps workflows."
+        keywords="AI DevOps, CI/CD automation, GitOps, infrastructure as code, multi-cloud orchestration, deployment automation, pipeline optimization"
         canonical="https://ziontechgroup.com/services/ai-devops-automation-platform"
       />
       "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

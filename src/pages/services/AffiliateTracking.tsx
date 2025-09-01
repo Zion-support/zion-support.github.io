@@ -1,90 +1,100 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';'
-import SEO from '@/components/SEO';'
-import { Button } from '@/components/ui/button';'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail export { function };
 export default function AffiliateTracking(...args: unknown[]): unknown {  const features: { title: string; description: string }[] = [
     {
-'
-      title: 'Multi-channel attribution','
+
+      title: 'Multi-channel attribution',
       description: 'Track referrals across links, coupons, QR codes, and partner portals with UTM auto-tagging.'
     },
     {
-'
-      title: 'Real-time fraud prevention','
+
+      title: 'Real-time fraud prevention',
       description: 'Auto-flag suspicious clicks, proxy traffic and cookie stuffing using device fingerprinting.'
     },
     {
-'
-      title: 'Payout automation','
+
+      title: 'Payout automation',
       description: 'Automate tiered commissions, bonuses, holds and mass payouts via Stripe, PayPal and ACH.'
     },
     {
-'
-      title: 'Partner CRM','
+
+      title: 'Partner CRM',
       description: 'Manage applications, onboarding, contracts, and partner lifecycle with nurture workflows.'
     },
     {
-'
-      title: 'E‑commerce integrations','
+
+      title: 'E‑commerce integrations',
       description: 'Native integrations for Shopify, WooCommerce, BigCommerce and custom checkouts via webhooks.'
     },
     {
-'
-      title: 'Analytics & BI','
+
+      title: 'Analytics & BI',
       description: 'Cohort LTV, ROAS by partner, incremental lift analysis, and predictive recruiting scoring.'
 
   ];
 
   const plans = [
     {
-'
+
       name: 'Starter',
-      price: 49,'
-      unit: 'month','
+      price: 49,
+      unit: 'month',
       bestFor: 'Founders validating their first affiliate program',
       bullets: ['
-        'Up to 200 partners','
-        'Basic tracking links and coupons','
-        'Manual approvals and payouts','
-        'Email support'
+        'Up to 200 partners',Basic tracking links and coupons',Manual approvals and payouts',Email support'
       ]
     },
     {
-'
+
       name: 'Growth',
-      price: 199,'
-      unit: 'month','
+      price: 199,
+      unit: 'month',
       bestFor: 'Scaling DTC and SaaS brands with multiple campaigns',
       bullets: ['
-        'Up to 2,500 partners','
-        'Attribution across links, QR and coupons','
-        'Fraud prevention + sandbox','
-        'Automated Stripe/PayPal payouts','
-        'Slack alerts and webhooks'
+        'Up to 2,500 partners',Attribution across links, QR and coupons',Fraud prevention + sandbox',Automated Stripe/PayPal payouts',Slack alerts and webhooks'
       ]
     },
     {
-'
+
       name: 'Enterprise',
-      price: 599,'
-      unit: 'month','
+      price: 599,
+      unit: 'month',
       bestFor: 'Global programs, agencies and marketplaces',
+<<<<<<< HEAD
+      bullets: [;
+        'Unlimited partners and campaigns',;
+        'SAML SSO and audit trails',;
+        'Custom data retention + warehouse sync',;
+        'Dedicated CSM and 99.9% SLA';
+      ];
+    };
+=======
       bullets: [;'
         'Unlimited partners and campaigns',;'
         'SAML SSO and audit trails',;'
         'Custom data retention + warehouse sync',;'        'Dedicated CSM and 99.9% SLA';
       ]};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO"
+<<<<<<< HEAD
+        title="Affiliate Tracking Platform - Zion Tech Group"
+        description="Launch and scale a high-performing affiliate program with advanced attribution, fraud prevention, automated payouts, and partner CRM."
+        keywords="affiliate tracking, partner marketing, attribution, coupons, referral tracking, payouts"
+      />
+=======
         title="Affiliate Tracking Platform - Zion Tech Group""
         description="Launch and scale a high-performing affiliate program with advanced attribution, fraud prevention, automated payouts, and partner CRM.""        keywords="affiliate tracking, partner marketing, attribution, coupons, referral tracking, payouts"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">"
@@ -196,7 +206,7 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
               <Badge variant="outline" className="text-white border-white/20">B2B</Badge>
             </div>
           </div>"
-          <p className="text-zion-slate-light mt-3 text-sm">'
+          <p className="text-zion-slate-light mt-3 text-sm">
             Typical affiliate platforms range from $49–$299/month for SMBs and $500–$1,500+/month for enterprise, depending on partner counts and features. For reference, see pricing from providers like{' '}'"
             <a className="text-zion-cyan hover:text-zion-cyan-light" href="https://tapfiliate.com/pricing/" target="_blank" rel="noreferrer">Tapfiliate</a>,{' '}'"
             <a className="text-zion-cyan hover:text-zion-cyan-light" href="https://firstpromoter.com/pricing" target="_blank" rel="noreferrer">FirstPromoter</a> and{' '}"
@@ -245,7 +255,7 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
 
 
 
-}}'
+}}
                 className={`relative rounded-2xl p-8 ${i === 1 ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-purple' : 'bg-zion-slate-dark/30 border border-zion-blue-light/20'}`}
 
                 {i === 1 && (;"

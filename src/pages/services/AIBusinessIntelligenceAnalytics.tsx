@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion } from 'framer-motion.ts';
 import { SEO } from '@/components/SEO';
 import {
 
@@ -30,137 +30,89 @@ import {
   Settings,
   Bell,
   Calendar,
-  DollarSign,'
+  DollarSign,
   Percent} from 'lucide-react.ts';
 
 const AIBusinessIntelligenceAnalytics = () => {
   const features = ['
-    'AI-Powered Predictive Analytics','
-    'Real-time Data Visualization','
-    'Intelligent Business Insights','
-    'Automated Report Generation','
-    'Advanced Data Mining','
-    'Natural Language Query Interface','
-    'Multi-Source Data Integration','
-    'Custom Dashboard Creation',
+    'AI-Powered Predictive Analytics',Real-time Data Visualization',Intelligent Business Insights',Automated Report Generation',Advanced Data Mining',Natural Language Query Interface',Multi-Source Data Integration',Custom Dashboard Creation',
   ];
 
   const benefits = ['
-    'Increase revenue by 25% through data-driven insights','
-    'Reduce decision-making time by 70% with instant analytics','
-    'Improve operational efficiency by 40%','
-    'Identify new business opportunities with predictive modeling','
-    'Reduce costs by 30% through optimization insights','
-    'Enhance customer satisfaction by 35%','
-    'Achieve 95% forecast accuracy','
-    'Enable real-time business monitoring',
+    'Increase revenue by 25% through data-driven insights',Reduce decision-making time by 70% with instant analytics',Improve operational efficiency by 40%',Identify new business opportunities with predictive modeling',Reduce costs by 30% through optimization insights',Enhance customer satisfaction by 35%',Achieve 95% forecast accuracy',Enable real-time business monitoring',
   ];
 
   const capabilities = [
     {
-'
+
       category: 'Data Analytics',
       items: ['
-        'Real-time data processing and analysis','
-        'Advanced statistical modeling','
-        'Machine learning algorithms','
-        'Predictive analytics and forecasting','
-        'Anomaly detection and alerting',
+        'Real-time data processing and analysis',Advanced statistical modeling',Machine learning algorithms',Predictive analytics and forecasting',Anomaly detection and alerting',
       ]},
     {
-'
+
       category: 'Business Intelligence',
       items: ['
-        'Interactive dashboards and reports','
-        'KPI tracking and monitoring','
-        'Performance benchmarking','
-        'Trend analysis and insights','
-        'Competitive intelligence',
+        'Interactive dashboards and reports',KPI tracking and monitoring',Performance benchmarking',Trend analysis and insights',Competitive intelligence',
       ]},
     {
-'
+
       category: 'Data Integration',
       items: ['
-        'Multi-source data connectors','
-        'ETL/ELT data pipelines','
-        'Real-time data streaming','
-        'Data quality management','
-        'Master data management',
+        'Multi-source data connectors',ETL/ELT data pipelines',Real-time data streaming',Data quality management',Master data management',
       ]},
     {
-'
+
       category: 'AI & Machine Learning',
       items: ['
-        'Natural language processing','
-        'Automated insights generation','
-        'Intelligent recommendations','
-        'Pattern recognition','
-        'Cognitive analytics',
+        'Natural language processing',Automated insights generation',Intelligent recommendations',Pattern recognition',Cognitive analytics',
       ]},
   ];
 
   const useCases = ['
-    'Financial Performance Analysis','
-    'Customer Behavior Insights','
-    'Supply Chain Optimization','
-    'Sales Forecasting & Planning','
-    'Marketing Campaign Analytics','
-    'Operational Performance Monitoring','
-    'Risk Assessment & Management','
-    'Product Performance Analysis',
+    'Financial Performance Analysis',Customer Behavior Insights',Supply Chain Optimization',Sales Forecasting & Planning',Marketing Campaign Analytics',Operational Performance Monitoring',Risk Assessment & Management',Product Performance Analysis',
   ];
 
   const pricing = [
     {
-'
-      name: 'Starter','
-      price: '$19,999','
+
+      name: 'Starter',
+      price: '$19,999',
       period: 'one-time setup',
       features: ['
-        'Basic AI analytics platform','
-        'Up to 5 data sources','
-        'Standard dashboards','
-        'Basic reporting','
-        'Email support','
-        'Cloud deployment',
+        'Basic AI analytics platform',Up to 5 data sources',Standard dashboards',Basic reporting',Email support',Cloud deployment',
       ]},
     {
-'
-      name: 'Professional','
-      price: '$39,999','
+
+      name: 'Professional',
+      price: '$39,999',
       period: 'one-time setup',
       features: ['
-        'Advanced AI analytics','
-        'Up to 20 data sources','
-        'Custom dashboards','
-        'Advanced reporting','
-        'Priority support','
-        'On-premise deployment option','
-        'Advanced security features',
+        'Advanced AI analytics',Up to 20 data sources',Custom dashboards',Advanced reporting',Priority support',On-premise deployment option',Advanced security features',
       ]},
     {
-'
-      name: 'Enterprise','
-      price: '$79,999','
+
+      name: 'Enterprise',
+      price: '$79,999',
       period: 'one-time setup',
       features: ['
-        'Full AI BI platform','
-        'Unlimited data sources','
-        'Custom analytics workflows','
-        '24/7 dedicated support','
-        'Hybrid deployment options','
-        'Advanced analytics & ML','
-        'Custom integrations','
-        'White-label solutions',
+        'Full AI BI platform',Unlimited data sources',Custom analytics workflows',24/7 dedicated support',Hybrid deployment options',Advanced analytics & ML',Custom integrations',White-label solutions',
       ]},
   ];
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 text-white">
       <SEO"
+<<<<<<< HEAD
+        title="AI Business Intelligence Analytics | Zion Tech Group"
+        description="Revolutionary AI-powered business intelligence and analytics platform that transforms data into actionable insights and predictive business intelligence."
+        keywords="AI business intelligence, analytics platform, data insights, predictive analytics, business analytics, Zion Tech Group"
+      />
+=======
         title="AI Business Intelligence Analytics | Zion Tech Group""
         description="Revolutionary AI-powered business intelligence and analytics platform that transforms data into actionable insights and predictive business intelligence.""        keywords="AI business intelligence, analytics platform, data insights, predictive analytics, business analytics, Zion Tech Group"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
@@ -191,13 +143,13 @@ const AIBusinessIntelligenceAnalytics = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105"
               >"
                 <Phone className="w-5 h-5 mr-2" />                Get Started Today
               </a>
               <a"
-                href="mailto:kleber@ziontechgroup.com""
+                href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300"
               >"
                 <Mail className="w-5 h-5 mr-2" />                Contact Us
@@ -413,12 +365,12 @@ const AIBusinessIntelligenceAnalytics = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
-'
+
                   plan.name === 'Professional''
                     ? 'border-green-400/50 bg-gradient-to-b from-green-500/10 to-transparent''
                     : 'border-green-400/20'`
                 } hover:border-green-400/40 transition-all duration-300`}
-              >'
+              >
                 {plan.name === 'Professional' && ("
                   <div className="text-center mb-4">"
                     <span className="inline-block bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-semibold px-3 py-1 rounded-full">
@@ -446,7 +398,7 @@ const AIBusinessIntelligenceAnalytics = () => {
                   ))}
                 </ul>
                 <a"
-                  href="tel:+13024640950""
+                  href="tel:+13024640950"
                   className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Started"
@@ -489,7 +441,7 @@ const AIBusinessIntelligenceAnalytics = () => {
               </div>"
               <h3 className="text-xl font-bold text-white mb-2">Phone</h3>"              <p className="text-gray-300 mb-4">+1 302 464 0950</p>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="text-green-400 hover:text-green-300 transition-colors duration-300"
               >
                 Call Now
@@ -508,7 +460,7 @@ const AIBusinessIntelligenceAnalytics = () => {
               </div>"
               <h3 className="text-xl font-bold text-white mb-2">Email</h3>"              <p className="text-gray-300 mb-4">kleber@ziontechgroup.com</p>
               <a"
-                href="mailto:kleber@ziontechgroup.com""
+                href="mailto:kleber@ziontechgroup.com"
                 className="text-green-400 hover:text-green-300 transition-colors duration-300"
               >
                 Send Email
@@ -530,9 +482,16 @@ const AIBusinessIntelligenceAnalytics = () => {
                 364 E Main St STE 1008, Middletown DE 19709
               </p>
               <a"
+<<<<<<< HEAD
+                href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-400 hover:text-green-300 transition-colors duration-300"
+=======
                 href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709""
                 target="_blank""
                 rel="noopener noreferrer""                className="text-green-400 hover:text-green-300 transition-colors duration-300"
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               >
                 View on Map
               </a>

@@ -38,8 +38,7 @@ export default function Payments() {
                     </p>
                     <Button onClick = {
 
-  () => window.open('https://stripe.com','
-  '_blank')
+  () => window.open('https://stripe.com',_blank')
 
 
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -23,103 +23,92 @@ import {
   Eye,
   Download,
   Share2,
-  ArrowRight,'
-  CheckCircle} from 'lucide-react';'
+  ArrowRight,
+  CheckCircle} from 'lucide-react';
 import { SEO } from '../components/SEO';
 const Webinars: React.FC = () => {
-'
-  const [searchQuery, setSearchQuery] = useState('');'
-  const [activeCategory, setActiveCategory] = useState('all');'
+
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategory, setActiveCategory] = useState('all');
   const [filterType, setFilterType] = useState('all');
 
   const categories = ['
-    { id: 'all', name: 'All Categories', icon: Video, count: 0 },'
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 6 },'
-    { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, count: 4 },'
-    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 3 },'
-    { id: 'data', name: 'Data & Analytics', icon: Database, count: 5 },'
-    { id: 'emerging', name: 'Emerging Technologies', icon: Zap, count: 2 },'
+    { id: 'all', name: 'All Categories', icon: Video, count: 0 },
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 6 },
+    { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, count: 4 },
+    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 3 },
+    { id: 'data', name: 'Data & Analytics', icon: Database, count: 5 },
+    { id: 'emerging', name: 'Emerging Technologies', icon: Zap, count: 2 },
     { id: 'strategy', name: 'Digital Strategy', icon: Target, count: 4 },
   ];
 
   const filterTypes = ['
-    { id: 'all', name: 'All Webinars', count: 0 },'
-    { id: 'upcoming', name: 'Upcoming', count: 0 },'
-    { id: 'on-demand', name: 'On-Demand', count: 0 },'
+    { id: 'all', name: 'All Webinars', count: 0 },
+    { id: 'upcoming', name: 'Upcoming', count: 0 },
+    { id: 'on-demand', name: 'On-Demand', count: 0 },
     { id: 'live', name: 'Live Now', count: 0 },
   ];
 
   const upcomingWebinars = [
     {
 
-      id: 1,'
+      id: 1,
       title: 'AI-Powered Business Transformation: Real-World Success Stories',
       description:'
-        'Join industry experts as they share real-world case studies of successful AI implementations and the lessons learned along the way.','
-      category: 'ai-ml','
-      type: 'upcoming','
-      date: '2025-02-10T14:00:00Z','
-      duration: '75 min','
-      speakers: ['Dr. Sarah Chen', 'Dr. Michael Rodriguez', 'AI Research Team'],
+        'Join industry experts as they share real-world case studies of successful AI implementations and the lessons learned along the way.',
+      category: 'ai-ml',
+      type: 'upcoming',
+      date: '2025-02-10T14:00:00Z',
+      duration: '75 min',
+      speakers: ['Dr. Sarah Chen',Dr. Michael Rodriguez',AI Research Team'],
       maxAttendees: 600,
       currentAttendees: 487,
       featured: true,
       tags: ['
-        'AI Research','
-        'Autonomous Systems','
-        'Business Intelligence','
-        'Innovation',
-      ],'
+        'AI Research',Autonomous Systems',Business Intelligence',Innovation',
+      ],
       thumbnail: '/images/webinars/ai-autonomous-research-2025.jpg',
       registrationRequired: true,
       recordingAvailable: false},
     {
 
-      id: 2,'
+      id: 2,
       title: 'AI Supply Chain Optimization: Reducing Costs by Up to 30%',
       description:'
-        'Learn how AI-powered supply chain optimization can predict demand, optimize inventory, and reduce costs significantly for your organization.','
-      category: 'ai-ml','
-      type: 'upcoming','
-      date: '2025-02-12T15:00:00Z','
+        'Learn how AI-powered supply chain optimization can predict demand, optimize inventory, and reduce costs significantly for your organization.',
+      category: 'ai-ml',
+      type: 'upcoming',
+      date: '2025-02-12T15:00:00Z',
       duration: '60 min',
       speakers: ['
-        'Michael Rodriguez','
-        'Supply Chain Experts','
-        'AI Implementation Team',
+        'Michael Rodriguez',Supply Chain Experts',AI Implementation Team',
       ],
       maxAttendees: 400,
       currentAttendees: 298,
       featured: true,
       tags: ['
-        'Supply Chain','
-        'AI Optimization','
-        'Cost Reduction','
-        'Predictive Analytics',
-      ],'
+        'Supply Chain',AI Optimization',Cost Reduction',Predictive Analytics',
+      ],
       thumbnail: '/images/webinars/ai-supply-chain-2025.jpg',
       registrationRequired: true,
       recordingAvailable: false},
     {
 
-      id: 3,'
+      id: 3,
       title: 'Cloud-Native Security: Protecting Modern Applications',
       description:'
-        'Explore best practices for securing cloud-native applications and implementing zero-trust security models.','
-      category: 'security','
-      type: 'upcoming','
-      date: '2025-02-15T16:00:00Z','
-      duration: '90 min','
-      speakers: ['Security Experts', 'Cloud Architecture Team'],
+        'Explore best practices for securing cloud-native applications and implementing zero-trust security models.',
+      category: 'security',
+      type: 'upcoming',
+      date: '2025-02-15T16:00:00Z',
+      duration: '90 min',
+      speakers: ['Security Experts',Cloud Architecture Team'],
       maxAttendees: 350,
       currentAttendees: 245,
       featured: false,
       tags: ['
-        'Cloud Security','
-        'Zero Trust','
-        'Application Security','
-        'DevSecOps',
-      ],'
+        'Cloud Security',Zero Trust',Application Security',DevSecOps',
+      ],
       thumbnail: '/images/webinars/cloud-security-2025.jpg',
       registrationRequired: true,
       recordingAvailable: false},
@@ -128,42 +117,39 @@ const Webinars: React.FC = () => {
   const onDemandWebinars = [
     {
 
-      id: 4,'
+      id: 4,
       title: 'Data-Driven Decision Making: From Insights to Action',
       description:'
-        'Learn how to transform raw data into actionable insights that drive business decisions and growth.','
-      category: 'data','
-      type: 'on-demand','
-      date: '2024-12-15T10:00:00Z','
-      duration: '60 min','
-      speakers: ['Data Science Team', 'Business Intelligence Experts'],
+        'Learn how to transform raw data into actionable insights that drive business decisions and growth.',
+      category: 'data',
+      type: 'on-demand',
+      date: '2024-12-15T10:00:00Z',
+      duration: '60 min',
+      speakers: ['Data Science Team',Business Intelligence Experts'],
       views: 1247,
       featured: true,
       tags: ['
-        'Data Analytics','
-        'Business Intelligence','
-        'Decision Making','
-        'Data Strategy',
-      ],'
+        'Data Analytics',Business Intelligence',Decision Making',Data Strategy',
+      ],
       thumbnail: '/images/webinars/data-driven-decisions-2024.jpg',
-      recordingAvailable: true,'
+      recordingAvailable: true,
       watchUrl: '/webinars/data-driven-decision-making'},
     {
 
-      id: 5,'
+      id: 5,
       title: 'Digital Twin Technology: Measuring ROI in Manufacturing',
       description:'
-        'Explore practical applications of digital twin technology and how to measure return on investment.','
-      category: 'emerging','
-      type: 'on-demand','
-      date: '2024-11-20T14:00:00Z','
-      duration: '75 min','
-      speakers: ['IoT Specialists', 'Manufacturing Experts'],
+        'Explore practical applications of digital twin technology and how to measure return on investment.',
+      category: 'emerging',
+      type: 'on-demand',
+      date: '2024-11-20T14:00:00Z',
+      duration: '75 min',
+      speakers: ['IoT Specialists',Manufacturing Experts'],
       views: 892,
-      featured: false,'
-      tags: ['Digital Twin', 'IoT', 'ROI', 'Digital Transformation'],'
+      featured: false,
+      tags: ['Digital Twin',IoT',ROI',Digital Transformation'],
       thumbnail: '/images/webinars/digital-twin-2024.jpg',
-      recordingAvailable: true,'
+      recordingAvailable: true,
       watchUrl: '/webinars/digital-twin-technology-roi'},
   ];
 
@@ -173,7 +159,7 @@ const Webinars: React.FC = () => {
         webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         webinar.description.toLowerCase().includes(searchQuery.toLowerCase());
       const matchesCategory ='
-        activeCategory === 'all' || webinar.category === activeCategory;'
+        activeCategory === 'all' || webinar.category === activeCategory;
       const matchesType = filterType === 'all' || webinar.type === filterType;
 
       return matchesSearch && matchesCategory && matchesType;
@@ -183,8 +169,8 @@ const Webinars: React.FC = () => {
   return()
     <>
       <SEO
-        title="Webinars - Zion Tech Group""
-        description="Join our expert-led webinars on AI, cloud computing, cybersecurity, and emerging technologies. Learn from industry leaders and stay ahead of the curve.""
+        title="Webinars - Zion Tech Group"
+        description="Join our expert-led webinars on AI, cloud computing, cybersecurity, and emerging technologies. Learn from industry leaders and stay ahead of the curve."
         keywords="webinars, AI, machine learning, cloud computing, cybersecurity, digital transformation, Zion Tech Group"
       />
 "      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
@@ -220,7 +206,12 @@ const Webinars: React.FC = () => {
               <div className="relative mb-6">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
+<<<<<<< HEAD
+                  type="text"
+                  placeholder="Search webinars..."
+=======
                   type="text""                  placeholder="Search webinars..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -300,8 +291,14 @@ const Webinars: React.FC = () => {
                     </div>
                     {webinar.featured && ("
                       <div className="absolute top-3 left-3">"
+<<<<<<< HEAD
+                        <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                      </div>
+                    )}
+=======
                         <Star className="w-5 h-5 text-yellow-400 fill-current" />                      </div>
                     )}'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     {webinar.type === 'live' && ("
                       <div className="absolute top-3 right-3 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-medium">
                         LIVE
@@ -313,14 +310,14 @@ const Webinars: React.FC = () => {
                     <div className="flex items-center gap-2 mb-3">
                       <span`
                         className={`px-2 py-1 rounded-full text-xs font-medium ${
-'
+
                           webinar.type === 'upcoming''
                             ? 'bg-blue-500/20 text-blue-400''
                             : webinar.type === 'on-demand''
                               ? 'bg-green-500/20 text-green-400''
                               : 'bg-red-500/20 text-red-400'`
                         }`}
-                      >'
+                      >
                         {webinar.type === 'upcoming''
                           ? 'Upcoming''
                           : webinar.type === 'on-demand''
@@ -342,9 +339,16 @@ const Webinars: React.FC = () => {
 
                     {/* Speakers */}"
                     <div className="flex items-center gap-2 mb-4">"
+<<<<<<< HEAD
+                      <Users className="w-4 h-4 text-gray-400" />"
+                      <span className="text-gray-400 text-sm">
+                        {Array.isArray(webinar.speakers)
+                          ? webinar.speakers.join(',)
+=======
                       <Users className="w-4 h-4 text-gray-400" />"                      <span className="text-gray-400 text-sm">
                         {Array.isArray(webinar.speakers)'
                           ? webinar.speakers.join(', ')
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                           : webinar.speakers}
                       </span>
                     </div>
@@ -361,11 +365,17 @@ const Webinars: React.FC = () => {
                     </div>
 
                     {/* Action Button */}"
-                    <button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 px-4 rounded-lg font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center gap-2">'
+                    <button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 px-4 rounded-lg font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center gap-2">
                       {webinar.type === 'upcoming' ? (
                         <>"
+<<<<<<< HEAD
+                          <Calendar className="w-4 h-4" />
+                          Register Now
+                        </>
+=======
                           <Calendar className="w-4 h-4" />                          Register Now
                         </>'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                       ) : webinar.type === 'on-demand' ? (
                         <>"
                           <Play className="w-4 h-4" />

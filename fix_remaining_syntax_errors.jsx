@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Function to recursively find all files;
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
+function findFiles(dir, extensions = ['.ts',.tsx',.js',.jsx']) {
   let results = [];
   const list = fs.readdirSync(dir);
 
@@ -28,7 +28,7 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
 // Function to fix syntax errors in a file;
 function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath,utf8');
     let originalContent = content;
     let fixed = false;
 
@@ -36,13 +36,13 @@ function fixFile(filePath) {
     const patterns = [
       // Fix useState syntax
       { from: /useState\('([^']*)'\)/g, to: "useState('$1')" },
-      { from: /useState\(false\)/g, to: 'useState(false)' },
-      { from: /useState\(null\)/g, to: 'useState(null)' },
-      { from: /useState<any>/g, to: 'useState<any>' },
+      { from: /useState\(false\)/g, to: 'useState(false)},
+      { from: /useState\(null\)/g, to: 'useState(null)},
+      { from: /useState<any>/g, to: 'useState<any>},
 
       // Fix JSX syntax
-      { from: /<>\s*<\/>/g, to: '<></>' },
-      { from: /<Routes>\s*<\/Routes>/g, to: '<Routes></Routes>' },
+      { from: /<>\s*<\/>/g, to: '<></>},
+      { from: /<Routes>\s*<\/Routes>/g, to: '<Routes></Routes>},
 
       // Fix function syntax
       {
@@ -51,9 +51,9 @@ function fixFile(filePath) {
       },
 
       // Fix type annotations
-      { from: /:\s*\)/g, to: ')' },
+      { from: /:\s*\)/g, to: ')},
       { from: /:\s*;/g, to: ';' },
-      { from: /:\s*}/g, to: '}' },
+      { from: /:\s*}/g, to: '}},
       { from: /:\s*\[/g, to: '[' },
 
       // Fix missing semicolons
@@ -61,7 +61,7 @@ function fixFile(filePath) {
 
       // Fix object syntax
       { from: /{\s*;/g, to: '{' },
-      { from: /;\s*}/g, to: '}' },
+      { from: /;\s*}/g, to: '}},
     ];
 
     patterns.forEach(pattern => {
@@ -72,7 +72,7 @@ function fixFile(filePath) {
     });
 
     if (fixed) {
-      fs.writeFileSync(filePath, content, 'utf8');
+      fs.writeFileSync(filePath, content,utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }

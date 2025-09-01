@@ -1,5 +1,5 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { MessageCircle, Brain, Shield, Users, BarChart3, Clock, DollarSign, Smartphone, Globe, Zap, CheckCircle, TrendingUp, Phone, Mail, MessageSquare, Bot } from 'lucide-react';
 export { function };
 export default function AICustomerServiceAutomation() {

@@ -1,9 +1,44 @@
+<<<<<<< HEAD
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { cn  } from '@/lib/utils';
+
+interface SkeletonProps extends React.PropsWithChildren<{}> {
+
+  className?: string;
+  variant?: 'default' | 'circular' | 'rectangular' | 'text' | 'avatar' | 'card';
+  width?: string | number;
+  height?: string | number;
+  lines?: number;
+  animated?: boolean}
+
+const Skeleton: React.FC<SkeletonProps> = ({
+
+  className,
+variant:  'default',;
+  width,;
+  height,;
+  lines = 1,;
+  animated = true,;
+}) => {;
+  const baseClasses = 'bg-slate-200 dark:bg-slate-700 rounded';
+
+  const variants = {
+
+  default: 'h-4 w-full',
+    circular: 'rounded-full',
+    rectangular: 'w-full',
+    text: 'h-4 w-full',
+    avatar: 'rounded-full w-12 h-12',;
+  ;
+=======
 import React from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
 import { cn  } from '@/lib/utils';  ;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
-  ;'
+  ;
   card: 'w-full h-32 rounded-lg';
   };
 
@@ -12,7 +47,7 @@ import { cn  } from '@/lib/utils';  ;
     variants[variant],;
     className;
   );
-'
+
   if (variant = == 'text' && lines > 1) {
 
     return()
@@ -23,8 +58,7 @@ import { cn  } from '@/lib/utils';  ;
             className = {
 
   cn()
-              baseClasses,'
-              'h-4','
+              baseClasses,h-4',
   index === lines - 1 ? 'w-3/4' : 'w-full'
             )
 
@@ -51,7 +85,7 @@ import { cn  } from '@/lib/utils';  ;
   {
 
               duration: 1.5,
-              repeat: Infinity,'
+              repeat: Infinity,
               ease: 'easeInOut',
   delay: index * 0.1
             
@@ -64,7 +98,7 @@ import { cn  } from '@/lib/utils';  ;
       </div>;
     )}
 
-  const style: React.CSSProperties = { /* empty */ };'
+  const style: React.CSSProperties = { /* empty */ };
   if (width) style.width = typeof width === 'number' ? `${width}px` : width;'`
   if (height) style.height = typeof height === 'number' ? `${height}px` : height;
 
@@ -89,7 +123,7 @@ import { cn  } from '@/lib/utils';  ;
   {
 
         duration: 1.5,
-        repeat: Infinity,;'
+        repeat: Infinity,;
   ease: 'easeInOut';
       ;
 ;
@@ -100,7 +134,7 @@ import { cn  } from '@/lib/utils';  ;
 // Specialized skeleton components;
 export const CardSkeleton: React.FC<{ className?: string }> = { className }: unknown (
   <div className = {
-'
+
   cn('p-6 space-y-4',
   className)
 
@@ -126,7 +160,7 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number; classNam
   className
 }) => (
   <div className = {
-'
+
   cn('space-y-3',
   className)
 
@@ -157,7 +191,7 @@ export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
   className
 }) => (
   <div className = {
-'
+
   cn('space-y-4',
   className)
 
@@ -191,7 +225,7 @@ export const GridSkeleton: React.FC<{
   itemHeight = 120;
 }) => (
   <div className = {
-'
+
   cn('grid gap-4',
   className)
 

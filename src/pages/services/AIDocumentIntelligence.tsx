@@ -1,51 +1,50 @@
 import React from 'react';
 import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, Shield, Zap, BarChart3 export default function AIDocumentIntelligence() {
   const features = [
-    'Advanced OCR with 99.5% accuracy across 50+ languages','
-    'Intelligent document classification and routing',;'
-    'AI-powered data extraction from complex forms',;'
-    'Automated compliance checking and validation',;'
-    'Real-time document processing and indexing',;'
-    'Secure cloud storage with enterprise-grade encryption',;'
-    'Custom workflow automation for document approval',;'
+    'Advanced OCR with 99.5% accuracy across 50+ languages',Intelligent document classification and routing',;
+    'AI-powered data extraction from complex forms',;
+    'Automated compliance checking and validation',;
+    'Real-time document processing and indexing',;
+    'Secure cloud storage with enterprise-grade encryption',;
+    'Custom workflow automation for document approval',;
     'Integration with major business applications';
   ];
 
   const tiers = [
     {
-'
-      name: 'Basic','
-      price: '$149/mo','
-      details: ['Up to 1,000 pages/month', '5 user accounts', 'Basic OCR & extraction', 'Email support']
+
+      name: 'Basic',
+      price: '$149/mo',
+      details: ['Up to 1,000 pages/month',5 user accounts',Basic OCR & extraction',Email support']
     },
     {
-'
-      name: 'Professional', '
-      price: '$399/mo', '
-      details: ['Up to 10,000 pages/month', '25 user accounts', 'Advanced AI features', 'Priority support'] ;
+
+      name: 'Professional',
+      price: '$399/mo',
+      details: ['Up to 10,000 pages/month',25 user accounts',Advanced AI features',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$999/mo', ;'
-      details: ['Unlimited pages', 'Unlimited users', 'Custom AI models', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$999/mo', ;
+      details: ['Unlimited pages',Unlimited users',Custom AI models',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Invoice processing and expense management',;'
-    'Contract analysis and legal document review',;'
-    'Insurance claims processing and validation',;'
-    'Healthcare records and medical documentation',;'
-    'Financial statements and compliance reports',;'
+  const useCases = [;
+    'Invoice processing and expense management',;
+    'Contract analysis and legal document review',;
+    'Insurance claims processing and validation',;
+    'Healthcare records and medical documentation',;
+    'Financial statements and compliance reports',;
     'HR documents and employee onboarding';
   ];
 
-  const benefits = [;'
-    'Reduce manual data entry by 80-90%',;'
-    'Improve processing accuracy by 95%',;'
-    'Cut document processing costs by 60%',;'
-    'Accelerate approval workflows by 5x',;'
-    'Ensure 100% compliance with regulations',;'
+  const benefits = [;
+    'Reduce manual data entry by 80-90%',;
+    'Improve processing accuracy by 95%',;
+    'Cut document processing costs by 60%',;
+    'Accelerate approval workflows by 5x',;
+    'Ensure 100% compliance with regulations',;
     'Scale operations without additional headcount';
   ];
 
@@ -98,8 +97,8 @@ import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, 
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['99.5% OCR accuracy', 'Real-time processing', 'Enterprise security'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['99.5% OCR accuracy',Real-time processing',Enterprise security'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-emerald-600 mb-3" />"              <div className="text-gray-900 font-semibold">{t}</div>
             </div>

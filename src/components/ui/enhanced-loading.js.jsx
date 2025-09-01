@@ -1,24 +1,24 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Sparkles, Zap, Shield, Rocket } from 'lucide-react';
 const sizeClasses = {
-'
-  sm: 'w-8 h-8','
-    md: 'w-12 h-12','
-    lg: 'w-16 h-16','
+
+  sm: 'w-8 h-8',
+    md: 'w-12 h-12',
+    lg: 'w-16 h-16',
   xl: 'w-24 h-24'
 
 
 };
 const iconSizes = {
-'
-  sm: 'w-4 h-4','
-    md: 'w-6 h-6','
-    lg: 'w-8 h-8','
+
+  sm: 'w-4 h-4',
+    md: 'w-6 h-6',
+    lg: 'w-8 h-8',
   xl: 'w-12 h-12'
 
 
-};'
+};
 export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Loading...', showIcons = true, className = '' }) {
 
     const containerVariants = {
@@ -107,7 +107,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
 }
         }
     };
-    const icons = [Sparkles, Zap, Shield, Rocket];'
+    const icons = [Sparkles, Zap, Shield, Rocket];
     if (variant === 'pulse') {
 "
         return (<motion.div className={`flex flex-col items-center justify-center ${className}`} variants={containerVariants} initial="hidden" animate="visible">"`
@@ -117,7 +117,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
         {text && (<motion.p variants={iconVariants} className="mt-4 text-zion-slate-light text-center font-medium">
             {text}
           </motion.p>)}
-      </motion.div>)}'
+      </motion.div>)}
     if (variant === 'bounce') {
 "`
         return (<motion.div className={`flex flex-col items-center justify-center ${className}`} variants={containerVariants} initial="hidden" animate="visible">"`
@@ -127,7 +127,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
         {text && (<motion.p variants={iconVariants} className="mt-4 text-zion-slate-light text-center font-medium">
             {text}
           </motion.p>)}
-      </motion.div>)}'
+      </motion.div>)}
     if (variant === 'wave') {
 "`
         return (<motion.div className={`flex flex-col items-center justify-center ${className}`} variants={containerVariants} initial="hidden" animate="visible">"
@@ -155,10 +155,10 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
             {icons.map((Icon, index) => (<motion.div key={index} className="absolute" style = {
 
   {
-'
-                    top: '50%','
-                    left: '50%','
-                    transform: 'translate(-50%, -50%)',
+
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%),
                     width: sizeClasses[size],
   height: sizeClasses[size]
                 

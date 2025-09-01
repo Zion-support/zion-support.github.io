@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -23,7 +23,7 @@ import {
   TrendingUp,
   Zap,
   Shield,
-  Users,'
+  Users,
   Fingerprint} from 'lucide-react.ts';
 
 const AIAutonomousForensics: React.FC = (): JSX.Element => {
@@ -31,48 +31,43 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI-Powered Investigation',
       description:'
         'Advanced machine learning for autonomous incident investigation and evidence analysis'},
     {
 
-      icon: Search,'
+      icon: Search,
       title: 'Evidence Collection',
       description:'
         'Automated collection and preservation of digital evidence across multiple sources'},
     {
 
-      icon: Target,'
+      icon: Target,
       title: 'Pattern Recognition',
       description:'
         'AI-driven pattern recognition to identify connections and anomalies in evidence'},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Forensic Analytics',
       description:'
         'Comprehensive analysis and reporting of forensic findings with AI insights'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Chain of Custody',
       description:'
         'Secure chain of custody tracking with blockchain verification'},
     {
 
-      icon: Fingerprint,'
-      title: 'Digital Fingerprinting','
+      icon: Fingerprint,
+      title: 'Digital Fingerprinting',
       description: 'Advanced digital fingerprinting and evidence correlation'},
   ];
 
   const benefits = ['
-    'Reduce investigation time by 70%','
-    'Improve evidence discovery by 80%','
-    'Enhance forensic accuracy by 90%','
-    'Automate routine forensics tasks','
-    '24/7 autonomous operation','
-    'Real-time incident response',
+    'Reduce investigation time by 70%',Improve evidence discovery by 80%',Enhance forensic accuracy by 90%',Automate routine forensics tasks',24/7 autonomous operation',Real-time incident response',
   ];
 
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -90,7 +85,7 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
 "
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Revolutionize Digital Forensics with"
-              <span className="bg-gradient-to-r from-indigo-400 to-blue-500 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-indigo-400 to-blue-500 bg-clip-text text-transparent">
                 {' '}
                 AI Intelligence
               </span>

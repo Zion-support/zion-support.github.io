@@ -1,11 +1,11 @@
-import React, { useState } from 'react';'
-import { useAuth } from '@/hooks/useAuth';'
+import React, { useState } from 'react';
+import { useAuth } from '@/hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
 import { Eye, EyeOff, Lock, Mail, Sparkles export function LoginContent() {
-'
-  const [email, setEmail] = useState('');'
+
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [isLoading, setIsLoading] = useState(false);'
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const [showPassword, setShowPassword] = useState(false);
 
@@ -15,14 +15,14 @@ import { Eye, EyeOff, Lock, Mail, Sparkles export function LoginContent() {
   const handleSubmit = async (e) => {
 
     e.preventDefault();
-    setIsLoading(true);'
+    setIsLoading(true);
     setError('');
 
     try {
-      await login(email, password);'
+      await login(email, password);
       router('/dashboard');
     } catch (err) {
-'
+
       setError('Login failed. Please try again.');
     } finally {
 
@@ -69,14 +69,14 @@ import { Eye, EyeOff, Lock, Mail, Sparkles export function LoginContent() {
                   <Mail className="h-5 w-5 text-zion-cyan" />
                 </div>
                 <input"
-                  id="email""
-                  name="email""
-                  type="email""
+                  id="email"
+                  name="email"
+                  type="email"
                   autoComplete="email"
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}"
-                  className="block w-full pl-10 pr-3 py-3 border border-zion-purple/30 rounded-lg bg-zion-blue-dark/50 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 focus-ring""
+                  className="block w-full pl-10 pr-3 py-3 border border-zion-purple/30 rounded-lg bg-zion-blue-dark/50 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 focus-ring"
                   placeholder="Enter your email"
                 />
               </div>
@@ -92,14 +92,14 @@ import { Eye, EyeOff, Lock, Mail, Sparkles export function LoginContent() {
                   <Lock className="h-5 w-5 text-zion-cyan" />
                 </div>
                 <input"
-                  id="password""
-                  name="password""
+                  id="password"
+                  name="password"
                   type={showPassword ? "text" : "password"}"
                   autoComplete="current-password"
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}"
-                  className="block w-full pl-10 pr-12 py-3 border border-zion-purple/30 rounded-lg bg-zion-blue-dark/50 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 focus-ring""
+                  className="block w-full pl-10 pr-12 py-3 border border-zion-purple/30 rounded-lg bg-zion-blue-dark/50 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 focus-ring"
                   placeholder="Enter your password"
                 />
                 <button"
@@ -120,13 +120,13 @@ import { Eye, EyeOff, Lock, Mail, Sparkles export function LoginContent() {
             <div className="flex items-center justify-between">"
               <label className="flex items-center">
                 <input"
-                  type="checkbox""
+                  type="checkbox"
                   className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-purple/30 rounded focus:ring-zion-cyan focus-ring"
                 />"
                 <span className="ml-2 text-sm text-zion-slate-light">Remember me</span>
               </label>
               <a"
-                href="/forgot-password""
+                href="/forgot-password"
                 className="text-zion-cyan hover:text-zion-cyan-light text-sm transition-colors duration-200 hover:underline"
 
                 Forgot password?
@@ -195,11 +195,11 @@ import { Eye, EyeOff, Lock, Mail, Sparkles export function LoginContent() {
 
         {/* Sign Up Link */}"
         <div className="text-center">;"
-          <span className="text-zion-slate-light text-sm">'
+          <span className="text-zion-slate-light text-sm">
             Don't have an account?{' '}
           </span>
           <a"
-            href="/register""
+            href="/register"
             className="text-zion-cyan hover:text-zion-cyan-light text-sm font-medium transition-colors duration-200 hover:underline"
 
             Sign up for free

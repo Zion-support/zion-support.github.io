@@ -1,53 +1,51 @@
-import React from 'react';'
+import React from 'react';
 import { Globe, Brain, Zap, Shield, TrendingUp, Users, ArrowRight, CheckCircle, Star, Eye, Sparkles } from 'lucide-react';
 import { SEO } from "../../components/SEO";
 
 export default function AIMetaverseDevelopmentPlatform() {
-  const features = [;'
-    'AI-powered 3D world generation and design',;'
-    'Intelligent avatar creation and customization',;'
-    'Real-time virtual environment optimization',;'
-    'Advanced spatial computing and AR/VR integration',;'
-    'AI-driven social interaction and engagement',;'
+  const features = [;
+    'AI-powered 3D world generation and design',;
+    'Intelligent avatar creation and customization',;
+    'Real-time virtual environment optimization',;
+    'Advanced spatial computing and AR/VR integration',;
+    'AI-driven social interaction and engagement',;
     'Metaverse economy and NFT marketplace tools';
   ];
 
   const tiers = [
     {
-'
-      name: 'Developer','
-      price: '$1,799/mo','
+
+      name: 'Developer',
+      price: '$1,799/mo',
       description: 'Perfect for indie developers and small studios',
       details: ['
-        'Up to 3 virtual worlds','
-        'Basic AI avatar system','
-        'Standard support (8/5)','
-        'API access and documentation','
-        'Community forum access','
-        'Basic 3D asset library'
+        'Up to 3 virtual worlds',Basic AI avatar system',Standard support (8/5),API access and documentation',Community forum access',Basic 3D asset library'
       ]
     },
     {
-'
-      name: 'Business','
-      price: '$4,499/mo','
+
+      name: 'Business',
+      price: '$4,499/mo',
       description: 'Ideal for growing metaverse companies',
       details: ['
-        'Up to 15 virtual worlds','
-        'Advanced AI avatar system','
-        'Priority support (12/7)','
-        'Custom 3D world generation','
-        'Dedicated account manager','
-        'Metaverse analytics dashboard','
-        'Multi-user collaboration tools'
+        'Up to 15 virtual worlds',Advanced AI avatar system',Priority support (12/7),Custom 3D world generation',Dedicated account manager',Metaverse analytics dashboard',Multi-user collaboration tools'
       ]
     },
     {
-'
-      name: 'Enterprise','
-      price: '$11,999/mo','
+
+      name: 'Enterprise',
+      price: '$11,999/mo',
       description: 'Full-scale metaverse development platform',
       details: ['
+<<<<<<< HEAD
+        'Unlimited virtual worlds',Custom AI algorithms',24/7 dedicated support',;
+        'On-premise deployment options',;
+        'Custom integrations and APIs',;
+        'White-label solutions available',;
+        'Enterprise security features';
+      ];
+    };
+=======
         'Unlimited virtual worlds','
         'Custom AI algorithms','
         '24/7 dedicated support',;'
@@ -55,38 +53,49 @@ export default function AIMetaverseDevelopmentPlatform() {
         'Custom integrations and APIs',;'
         'White-label solutions available',;'        'Enterprise security features';
       ]};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
-  const useCases = [;'
-    'Virtual events and conferences',;'
-    'Gaming and entertainment platforms',;'
-    'Virtual real estate and architecture',;'
-    'Remote work and collaboration spaces',;'
-    'Education and training environments',;'
+  const useCases = [;
+    'Virtual events and conferences',;
+    'Gaming and entertainment platforms',;
+    'Virtual real estate and architecture',;
+    'Remote work and collaboration spaces',;
+    'Education and training environments',;
     'Social networking and communities';
   ];
 
-  const benefits = [;'
-    'Reduce development time by 50-70% with AI automation',;'
-    'Create immersive experiences that increase user engagement',;'
-    'Scale virtual worlds efficiently with intelligent optimization',;'
-    'Enable cross-platform compatibility and accessibility',;'
+  const benefits = [;
+    'Reduce development time by 50-70% with AI automation',;
+    'Create immersive experiences that increase user engagement',;
+    'Scale virtual worlds efficiently with intelligent optimization',;
+    'Enable cross-platform compatibility and accessibility',;
     'Build sustainable metaverse economies and ecosystems';
   ];
 
+<<<<<<< HEAD
+  const industries = [;
+    'Gaming and Entertainment',;
+    'Real Estate and Architecture',;
+    'Education and Training',;
+    'Healthcare and Telemedicine',;
+    'Retail and E-commerce',;
+    'Corporate and Enterprise';
+=======
   const industries = [;'
     'Gaming and Entertainment',;'
     'Real Estate and Architecture',;'
     'Education and Training',;'
     'Healthcare and Telemedicine',;'
     'Retail and E-commerce',;'    'Corporate and Enterprise';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
     <>
       <SEO "
-        title = "AI Metaverse Development Platform | Zion Tech Group""
-        description="Revolutionary AI-powered metaverse development platform for creating immersive virtual worlds. AI-driven 3D generation, avatar systems, and spatial computing.""
+        title = "AI Metaverse Development Platform | Zion Tech Group"
+        description="Revolutionary AI-powered metaverse development platform for creating immersive virtual worlds. AI-driven 3D generation, avatar systems, and spatial computing."
         keywords="AI metaverse, virtual reality, 3D world generation, avatar creation, spatial computing, VR development, AR development"
       />
 "
@@ -107,13 +116,13 @@ export default function AIMetaverseDevelopmentPlatform() {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="https://ziontechgroup.com/contact""
+                href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200"
 
                 Get Started"
                 <ArrowRight className="ml-2 w-5 h-5" />              </a>
               <a"
-                href="#pricing""
+                href="#pricing"
                 className="inline-flex items-center px-8 py-3 border border-indigo-400 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-200"
 
                 View Pricing
@@ -159,7 +168,7 @@ export default function AIMetaverseDevelopmentPlatform() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {tiers.map(tier: unknown, index: unknown (
                 <div key={index} className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
-'
+
                   index === 1 ? 'border-indigo-400/50 scale-105' : 'border-white/10'`
                 } hover:border-indigo-400/50 transition-all duration-300`}>
                   {index === 1 && ("
@@ -178,7 +187,7 @@ export default function AIMetaverseDevelopmentPlatform() {
                     ))}
                   </ul>
                   <a"
-                    href="https://ziontechgroup.com/contact""
+                    href="https://ziontechgroup.com/contact"
                     className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200"
 
                     Get Started
@@ -292,7 +301,7 @@ export default function AIMetaverseDevelopmentPlatform() {
               </div>
             </div>
             <a"
-              href="https://ziontechgroup.com/contact""
+              href="https://ziontechgroup.com/contact"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200"
             >
               Get Started Today;"

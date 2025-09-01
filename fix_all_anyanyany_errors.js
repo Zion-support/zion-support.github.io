@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Function to recursively find all files;
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
+function findFiles(dir, extensions = ['.ts',.tsx',.js',.jsx']) {
   let results = [];
   const list = fs.readdirSync(dir);
   
@@ -20,7 +20,7 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
 // Function to fix  errors in a file;
 function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath,utf8');
     let originalContent = content;
     let fixed = false;
     
@@ -38,11 +38,11 @@ function fixFile(filePath) {
       { from: /([a-zA-Z_][a-zA-Z0-9_]*)/g, to: '$1' },
       { from: /keyof/g, to: 'keyof' },
       { from: /any\[\]/g, to: '[]' },
-      { from: /any\s*,\s*/g, to: ', ' },
+      { from: /any\s*,\s*/g, to: ', },
       { from: /any\s*:\s*/g, to: ': ' },
       { from: /any\s*;\s*/g, to: ';' },
-      { from: /any\s*\)/g, to: ')' },
-      { from: /any\s*}/g, to: '}' },
+      { from: /any\s*\)/g, to: ')},
+      { from: /any\s*}/g, to: '}},
       { from: /any\s*\]/g, to: ']' }
     ];
     
@@ -53,7 +53,7 @@ function fixFile(filePath) {
     });
     
     if (fixed) {
-      fs.writeFileSync(filePath, content, 'utf8');
+      fs.writeFileSync(filePath, content,utf8');
       console.log(`Fixed: ${filePath}`);
       return true}
     

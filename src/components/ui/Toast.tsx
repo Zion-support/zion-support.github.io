@@ -1,7 +1,12 @@
-import React, { useState, useEffect } from 'react.ts';'
-import { X, CheckCircle, AlertCircle, Info, XCircle  } from 'lucide-react.ts';'
+import React, { useState, useEffect } from 'react.ts';
+import { X, CheckCircle, AlertCircle, Info, XCircle  } from 'lucide-react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
+<<<<<<< HEAD
+
+export type ToastType = 'success' | 'error' | 'warning' | 'info';
+=======
 'export type ToastType = 'success' | 'error' | 'warning' | 'info';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ;
 export interface Toast {
   id: anystring;
@@ -36,13 +41,13 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
 
   const getIcon = (...args: unknown[]): unknown => {
     switch (toast.type) {
-'
+
       case 'success':
-        return <CheckCircle className="w-5 h-5 text-green-500" />;'
+        return <CheckCircle className="w-5 h-5 text-green-500" />;
       case 'error':"
-        return <XCircle className="w-5 h-5 text-red-500" />;'
+        return <XCircle className="w-5 h-5 text-red-500" />;
       case 'warning':"
-        return <AlertCircle className="w-5 h-5 text-yellow-500" />;'
+        return <AlertCircle className="w-5 h-5 text-yellow-500" />;
       case 'info':"
         return <Info className="w-5 h-5 text-blue-500" />;
       default:"
@@ -52,13 +57,13 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
 
   const getBgColor = (...args: unknown[]): unknown => {
     switch (toast.type) {
-'
+
       case 'success':'
-        return 'bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800';'
+        return 'bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800';
       case 'error':'
-        return 'bg-red-50 border-red-200 dark:bg-red-900/20 dark:border-red-800';'
+        return 'bg-red-50 border-red-200 dark:bg-red-900/20 dark:border-red-800';
       case 'warning':'
-        return 'bg-yellow-50 border-yellow-200 dark:bg-yellow-900/20 dark:border-yellow-800';'
+        return 'bg-yellow-50 border-yellow-200 dark:bg-yellow-900/20 dark:border-yellow-800';
       case 'info':'
         return 'bg-blue-50 border-blue-200 dark:bg-blue-900/20 dark:border-blue-800';
       default:'
@@ -69,7 +74,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
     <motion.div
       initial={{ opacity: 0, y: -50, scale: 0.9 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
-      exit={{ opacity: 0, y: -50, scale: 0.9 }}'
+      exit={{ opacity: 0, y: -50, scale: 0.9 }}
       transition={{ duration: 0.3, ease: 'easeOut' }}
       className={`relative p-4 rounded-lg border shadow-lg ${getBgColor()} max-w-sm w-full`}
     >"
@@ -103,8 +108,8 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
 ;export const ToastContainer: React.FC = (): JSX.Element => {
 
   const [toasts, setToasts] = useState<any>([]);
-'
-  const addToast = (toast: anyOmit<Toast, 'id'>)  => {
+
+  const addToast = (toast: anyOmit<Toast,id'>)  => {
 
     const id = Math.random().toString(36).substr(2, 9);
     const newToast = { ...toast, id };
@@ -137,7 +142,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
 
 // Utility function to show toasts
 export const showToast = (type: anyToastType, title: string, message?: string, duration?: number)  => {
-'
+
   if (typeof window !== 'undefined' && (window as ).showToast) {
 
     (window as ).showToast({ type, title, message, duration });  }

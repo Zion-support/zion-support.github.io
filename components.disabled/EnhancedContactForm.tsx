@@ -91,13 +91,13 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
     }
 
     // Phone validation (optional but if provided, must be valid)
-    if (formData.phone && !/^[\+]?[1-9][\d]{0,15}$/.test(formData.phone.replace(/[\s\-\(\)]/g, ''))) {
+    if (formData.phone && !/^[\+]?[1-9][\d]{0,15}$/.test(formData.phone.replace(/[\s\-\(\)]/g,))) {
       newErrors.phone = 'Please enter a valid phone number';
     }
 
     // Website validation (optional but if provided, must be valid)
     if (formData.website && !/^https?:\/\/.+/.test(formData.website)) {
-      newErrors.website = 'Please enter a valid website URL (include http:// or https://)';
+      newErrors.website = 'Please enter a valid website URL (include http:// or https://);
     }
     if (!formData.company.trim()) newErrors.company = 'Company name is required';
     if (!formData.service) newErrors.service = 'Please select a service';
@@ -202,32 +202,17 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
 
   // Service options
   const serviceOptions = [
-    'AI Consciousness Evolution',
-    'Quantum Cybersecurity',
-    'Autonomous Systems',
-    'Space Technology',
-    'Cloud Infrastructure',
-    'Custom Solution',
-    'Other'
+    'AI Consciousness Evolution',Quantum Cybersecurity',Autonomous Systems',Space Technology',Cloud Infrastructure',Custom Solution',Other'
   ];
 
   // Budget options
   const budgetOptions = [
-    'Under $10,000',
-    '$10,000 - $50,000',
-    '$50,000 - $100,000',
-    '$100,000 - $500,000',
-    '$500,000+',
-    'To be discussed'
+    'Under $10,000',$10,000 - $50,000',$50,000 - $100,000',$100,000 - $500,000',$500,000+',To be discussed'
   ];
 
   // Timeline options
   const timelineOptions = [
-    'Immediate (1-2 weeks)',
-    'Quick (1-2 months)',
-    'Standard (3-6 months)',
-    'Extended (6+ months)',
-    'Flexible'
+    'Immediate (1-2 weeks),Quick (1-2 months),Standard (3-6 months),Extended (6+ months),Flexible'
   ];
 
   if (isSubmitted) {

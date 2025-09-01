@@ -41,7 +41,7 @@ const featuredPosts = [
     {
 "
         id: "2","
-        title: "How to build an effective AI talent profile?",'"
+        title: "How to build an effective AI talent profile?","
         content: "I'm looking to improve my profile to get more client attention. What are the key elements I should focus on?",
         author: {
 "
@@ -75,7 +75,7 @@ const recentPosts = [
     {
 "
         id: "3","
-        title: "Looking for feedback on my automated testing approach",'"
+        title: "Looking for feedback on my automated testing approach","
         content: "I've set up a CI/CD pipeline with the following testing strategy...",
         author: {
 "
@@ -137,7 +137,7 @@ const recentPosts = [
     {
 "
         id: "5","
-        title: "How to handle client scope creep?",'"
+        title: "How to handle client scope creep?","
         content: "I'm working on a project where the client keeps adding requirements...",
         author: {
 "

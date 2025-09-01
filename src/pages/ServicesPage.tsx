@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
 
@@ -28,93 +28,93 @@ import {
   MessageCircle,
   Phone,
   Mail,
-  MapPin,'
-  Globe as GlobeIcon} from 'lucide-react';'
-import { SEO } from '@/components/SEO';'
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '@/data/innovativeMicroSaasServices2025';'
+  MapPin,
+  Globe as GlobeIcon} from 'lucide-react';
+import { SEO } from '@/components/SEO';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '@/data/innovativeMicroSaasServices2025';
 import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from '@/data/additionalInnovativeServices2025';
 export default function ServicesPage() {
-'
-  const [searchQuery, setSearchQuery] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');'
+
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
 
   const categories = [
     {
-'
-      id: 'all','
+
+      id: 'all',
       name: 'All Services',
-      icon: Zap,'
+      icon: Zap,
       color: 'from-zion-cyan to-zion-blue'},
     {
-'
-      id: 'ai','
+
+      id: 'ai',
       name: 'AI & Analytics',
-      icon: Brain,'
+      icon: Brain,
       color: 'from-zion-cyan to-zion-purple'},
     {
-'
-      id: 'quantum','
+
+      id: 'quantum',
       name: 'Quantum Computing',
-      icon: Rocket,'
+      icon: Rocket,
       color: 'from-zion-blue to-zion-cyan'},
     {
-'
-      id: 'blockchain','
+
+      id: 'blockchain',
       name: 'Blockchain',
-      icon: Lock,'
+      icon: Lock,
       color: 'from-zion-purple to-zion-blue'},
     {
-'
-      id: 'iot','
+
+      id: 'iot',
       name: 'IoT & Edge',
-      icon: Cpu,'
+      icon: Cpu,
       color: 'from-zion-green to-zion-cyan'},
     {
-'
-      id: 'cybersecurity','
+
+      id: 'cybersecurity',
       name: 'Cybersecurity',
-      icon: Shield,'
+      icon: Shield,
       color: 'from-zion-purple to-zion-red'},
     {
-'
-      id: 'healthcare','
+
+      id: 'healthcare',
       name: 'Healthcare',
-      icon: Users,'
+      icon: Users,
       color: 'from-zion-pink to-zion-purple'},
     {
-'
-      id: 'finance','
+
+      id: 'finance',
       name: 'Finance',
-      icon: DollarSign,'
+      icon: DollarSign,
       color: 'from-zion-green to-zion-blue'},
     {
-'
-      id: 'manufacturing','
+
+      id: 'manufacturing',
       name: 'Manufacturing',
-      icon: Server,'
+      icon: Server,
       color: 'from-zion-blue to-zion-purple'},
     {
-'
-      id: 'sustainability','
+
+      id: 'sustainability',
       name: 'Sustainability',
-      icon: Globe,'
+      icon: Globe,
       color: 'from-zion-orange to-zion-green'},
   ];
 
   const priceRanges = ['
-    { id: 'all', name: 'All Prices', range: 'All' },'
-    { id: 'budget', name: 'Budget', range: '$100 - $1,000' },'
-    { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000' },'
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'budget', name: 'Budget', range: '$100 - $1,000' },
+    { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000' },
     { id: 'enterprise', name: 'Enterprise', range: '$5,000+' },
   ];
 
   const sortOptions = ['
-    { id: 'featured', name: 'Featured' },'
-    { id: 'price-low', name: 'Price: Low to High' },'
-    { id: 'price-high', name: 'Price: High to Low' },'
-    { id: 'newest', name: 'Newest' },'
+    { id: 'featured', name: 'Featured' },
+    { id: 'price-low', name: 'Price: Low to High' },
+    { id: 'price-high', name: 'Price: High to Low' },
+    { id: 'newest', name: 'Newest' },
     { id: 'popular', name: 'Most Popular' },
   ];
 
@@ -125,7 +125,7 @@ export default function ServicesPage() {
   ];
 
   const filteredServices = allServices.filter(service => {
-'
+
     const title = service.title || service.name || '';
     const matchesSearch =
       title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -154,10 +154,16 @@ export default function ServicesPage() {
   const sortedServices = [...filteredServices].sort((a, b) => {
 
     switch (sortBy) {
-'
+
       case 'price-low':
+<<<<<<< HEAD
+        return a.price - b.price;
+      case 'price-high':
+        return b.price - a.price;
+=======
         return a.price - b.price;'      case 'price-high':
         return b.price - a.price;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'newest':
         return ('
           new Date(b.createdAt || '2025-01-01').getTime() -'
@@ -171,7 +177,7 @@ export default function ServicesPage() {
   const getCategoryIcon = (category: string) => {
 
     const cat = categories.find('
-      c => c.id === category.toLowerCase().replace(' ', '-')
+      c => c.id === category.toLowerCase().replace(' ',-')
     );
     return cat ? cat.icon : Zap;
   };
@@ -179,16 +185,16 @@ export default function ServicesPage() {
   const getCategoryColor = (category: string) => {
 
     const cat = categories.find('
-      c => c.id === category.toLowerCase().replace(' ', '-')
-    );'
+      c => c.id === category.toLowerCase().replace(' ',-')
+    );
     return cat ? cat.color : 'from-zion-cyan to-zion-blue';
   };
   return()
     <>
       <SEO
-        title="Innovative Micro SAAS Services - Zion Tech Group""
-        description="Discover cutting-edge micro SAAS solutions including AI, Quantum Computing, Blockchain, IoT, and more. Transform your business with our innovative technology services.""
-        canonical="/services""
+        title="Innovative Micro SAAS Services - Zion Tech Group"
+        description="Discover cutting-edge micro SAAS solutions including AI, Quantum Computing, Blockchain, IoT, and more. Transform your business with our innovative technology services."
+        canonical="/services"
         url="https://ziontechgroup.com/services"
       />
 
@@ -224,7 +230,12 @@ export default function ServicesPage() {
               <div className="relative">"
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
                 <input"
+<<<<<<< HEAD
+                  type="text"
+                  placeholder="Search for services, technologies, or solutions..."
+=======
                   type="text""                  placeholder="Search for services, technologies, or solutions..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}"
                   className="w-full bg-zion-slate-light/10 border border-zion-cyan/20 rounded-xl px-12 py-4 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent text-lg"
@@ -341,7 +352,7 @@ export default function ServicesPage() {
               </div>
             </div>
 "
-            <div className="text-zion-slate-light">'
+            <div className="text-zion-slate-light">
               Showing {sortedServices.length} of{' '}
               {INNOVATIVE_MICRO_SAAS_SERVICES_2025.length} services
             </div>
@@ -378,7 +389,7 @@ export default function ServicesPage() {
                         >
                           {getCategoryIcon(service.category) &&
                             React.createElement()
-                              getCategoryIcon(service.category),'
+                              getCategoryIcon(service.category),
                               { className: 'w-6 h-6 text-white' }
                             )}
                         </div>"
@@ -410,7 +421,7 @@ export default function ServicesPage() {
                         </span>
                         <span`
                           className={`px-2 py-1 rounded-full text-xs font-medium ${
-'
+
                             service.innovationLevel === 'Cutting-edge''
                               ? 'bg-zion-cyan/20 text-zion-cyan''
                               : 'bg-zion-purple/20 text-zion-purple'`
@@ -485,9 +496,9 @@ export default function ServicesPage() {
                 </p>
                 <button
                   onClick={() => {
-'
-                    setSearchQuery('');'
-                    setSelectedCategory('all');'
+
+                    setSearchQuery('');
+                    setSelectedCategory('all');
                     setSelectedPriceRange('all');
                   }}"                  className="btn-futuristic px-6 py-3"
                 >
@@ -584,21 +595,21 @@ export default function ServicesPage() {
               <p className="mb-2">
                 📍 364 E Main St STE 1008, Middletown DE 19709
               </p>
-              <p>'
+              <p>
                 📧{' '}
                 <a"
-                  href="mailto:kleber@ziontechgroup.com""
+                  href="mailto:kleber@ziontechgroup.com"
                   className="text-zion-cyan hover:underline"
                 >
                   kleber@ziontechgroup.com
                 </a>
               </p>
-              <p>'
+              <p>
                 🌐{' '}
                 <a"
-                  href="https://ziontechgroup.com""
-                  target="_blank""
-                  rel="noopener noreferrer""
+                  href="https://ziontechgroup.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-zion-cyan hover:underline"
                 >
                   ziontechgroup.com

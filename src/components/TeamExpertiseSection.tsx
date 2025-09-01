@@ -1,5 +1,80 @@
+<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+import {
+
+  Award,
+  Users,
+  Brain,
+  Shield,
+  Cloud,
+  Zap,
+  Star,
+  CheckCircle,
+  Globe,
+  Rocket'
+} from 'lucide-react';
+
+      projects: '50+';
+    };
+  ];
+const teamExpertise = [
+  {
+
+    icon: "🎓","
+    title: "Advanced Degrees","
+    description: "Our team holds advanced degrees in Computer Science, AI, and Engineering from top universities","
+    count: "95%"
+  },
+  {
+"
+    icon: "🏆","
+    title: "Industry Certifications","
+    description: "Certified professionals in AWS, Azure, Google Cloud, and specialized AI technologies","
+    count: "50+"
+  },
+  {
+"
+    icon: "🌍","
+    title: "Global Experience","
+    description: "Team members with experience working across 25+ countries and diverse industries","
+    count: "25+"
+  },
+  {
+"
+    icon: "⚡","
+    title: "Years of Experience","
+    description: "Combined experience of over 200 years in technology and business solutions","
+    count: "200+"
+  },
+  {
+"
+    icon: "🔬","
+    title: "Research Publications","
+    description: "Published research in leading AI, quantum computing, and blockchain journals","
+    count: "30+"
+  },;
+  {;"
+    icon: "🚀",;"
+    title: "Successful Projects",;"
+    description: "Successfully delivered complex technology solutions for Fortune 500 companies",;"
+    count: "500+";
+  };
+];
+
+const coreExpertise = ["
+  "Artificial Intelligence & Machine Learning","
+  "Quantum Computing & Algorithms",;"
+  "Blockchain & Web3 Technologies",;"
+  "Cloud Infrastructure & DevOps",;"
+  "Cybersecurity & Compliance",;"
+  "Data Science & Analytics",;"
+  "IoT & Edge Computing",;"
+  "Mobile & Web Development";
+=======
 import React from 'react';'
 import { motion } from 'framer-motion';  "Mobile & Web Development";
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 
 export function TeamExpertiseSection() {

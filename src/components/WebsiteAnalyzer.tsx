@@ -1,5 +1,26 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react.ts';
+import { LinkChecker, LinkInfo, PageInfo  } from '../utils/linkChecker';
+import { CheckCircle, 
+import { LinkChecker, LinkInfo, PageInfo  } from '../utils / linkChecker';
+
+
+  XCircle, 
+  AlertTriangle, 
+  ExternalLink, 
+  Search, 
+  FileText, 
+  Link as LinkIcon,
+  Download,
+  RefreshCw'
+ } from 'lucide-react.ts';
+
+interface AnalysisResult {
+summary: {
+=======
 import React, { useState, useEffect } from 'react.ts';'
 import { LinkChecker, LinkInfo, PageInfo  } from '../utils/linkChecker';summary: {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     totalLinks: number;
     brokenLinks: number;
     missingPages: number;
@@ -13,59 +34,12 @@ import { LinkChecker, LinkInfo, PageInfo  } from '../utils/linkChecker';summary:
 export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
 
   const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResult, setAnalysisResult] = useState<any>(null);'
+  const [analysisResult, setAnalysisResult] = useState<any>(null);
   const [currentPage, setCurrentPage] = useState('');
   const [progress, setProgress] = useState(0);
 
   const pagesToAnalyze = ['
-    '/','
-    '/about','
-    '/contact','
-    '/services','
-    '/services2026','
-    '/services2027','
-    '/ai-services','
-    '/ai-solutions','
-    '/it-services','
-    '/micro-saas','
-    '/comprehensive-services','
-    '/careers','
-    '/blog','
-    '/partners','
-    '/pricing','
-    '/solutions','
-    '/research-development','
-    '/case-studies','
-    '/news','
-    '/events','
-    '/team','
-    '/help-center','
-    '/support','
-    '/privacy','
-    '/terms','
-    '/cookies','
-    '/sitemap','
-    '/marketplace','
-    '/talent','
-    '/equipment','
-    '/green-it','
-    '/security','
-    '/training','
-    '/webinars','
-    '/white-papers','
-    '/documentation','
-    '/developers','
-    '/api','
-    '/status','
-    '/system-status','
-    '/request-quote','
-    '/dashboard','
-    '/login','
-    '/faq','
-    '/search','
-    '/match','
-    '/analytics','
-    '/mobile-launch'
+    '/',/about',/contact',/services',/services2026',/services2027',/ai-services',/ai-solutions',/it-services',/micro-saas',/comprehensive-services',/careers',/blog',/partners',/pricing',/solutions',/research-development',/case-studies',/news',/events',/team',/help-center',/support',/privacy',/terms',/cookies',/sitemap',/marketplace',/talent',/equipment',/green-it',/security',/training',/webinars',/white-papers',/documentation',/developers',/api',/status',/system-status',/request-quote',/dashboard',/login',/faq',/search',/match',/analytics',/mobile-launch'
   ];
 
   const analyzeWebsite = async () => {
@@ -110,12 +84,12 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
         missingPages
       }) ;
     } catch (error) {
-'
+
       // console.error('Analysis failed:', error);
     } finally {
 
       setIsAnalyzing(false);
-      setProgress(100);'
+      setProgress(100);
       setCurrentPage('');
     }
   };
@@ -131,11 +105,16 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
       missingPages: analysisResult.missingPages,
       pages: analysisResult.pages
     };
-'
+
     const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);'
+    const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
+<<<<<<< HEAD
+    a.href = url;
+    a.download = 'zion-website-analysis.json';
+=======
     a.href = url;'    a.download = 'zion-website-analysis.json';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -144,13 +123,13 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
   const getStatusIcon = (status: anystring)  => {
 
     switch (status) {
-'
+
       case 'working':"
-        return <CheckCircle className="w-4 h-4 text-green-500" />;'
+        return <CheckCircle className="w-4 h-4 text-green-500" />;
       case 'broken':"
-        return <XCircle className="w-4 h-4 text-red-500" />;'
+        return <XCircle className="w-4 h-4 text-red-500" />;
       case 'missing':"
-        return <AlertTriangle className="w-4 h-4 text-yellow-500" />;'
+        return <AlertTriangle className="w-4 h-4 text-yellow-500" />;
       case 'external':"
         return <ExternalLink className="w-4 h-4 text-blue-500" />;
       default:"
@@ -161,13 +140,13 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
   const getStatusColor = (status: anystring)  => {
 
     switch (status) {
-'
+
       case 'working':'
-        return 'text-green-600 bg-green-100';'
+        return 'text-green-600 bg-green-100';
       case 'broken':'
-        return 'text-red-600 bg-red-100';'
+        return 'text-red-600 bg-red-100';
       case 'missing':'
-        return 'text-yellow-600 bg-yellow-100';'
+        return 'text-yellow-600 bg-yellow-100';
       case 'external':'
         return 'text-blue-600 bg-blue-100';
       default:'
@@ -194,7 +173,12 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
                 <RefreshCw className="w-4 h-4 mr-2 animate-spin" />
               ) : ("
                 <Search className="w-4 h-4 mr-2" />
+<<<<<<< HEAD
+              )}
+              {isAnalyzing ? 'Analyzing...' : 'Start Analysis'}
+=======
               )}'              {isAnalyzing ? 'Analyzing...' : 'Start Analysis'}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
             </button>
             {analysisResult && (
               <button

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';'
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 interface Service {
   id: string;
@@ -39,20 +39,28 @@ contactInfo: {
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;'
-  innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging';'
+  reviews: number;
+  innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging';
   patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
   aiCapabilities: string[];
   marketDisruption: string}
 ;
 const contact = {
+<<<<<<< HEAD
+
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+=======
 '
   mobile: '+1 302 464 0950','
   email: 'kleber@ziontechgroup.com','
   address: '364 E Main St STE 1008 Middletown DE 19709',;  ;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
-  ;'
+  ;
   website: 'https://ziontechgroup.com';
 ;
 
@@ -60,28 +68,41 @@ const contact = {
 ;
 const categories = [
   {
-'
-    id: 'ai-services','
-    name: 'AI & Autonomous Systems','
+
+    id: 'ai-services',
+    name: 'AI & Autonomous Systems',
     description: 'Revolutionary AI solutions that transform business operations',"
-    icon: <Brain className="w-8 h-8" />,'
-    color: 'from-purple-600 to-pink-700','
+    icon: <Brain className="w-8 h-8" />,
+    color: 'from-purple-600 to-pink-700',
     services: ultimateInnovativeServices2025.filter(s  => s.category.includes('AI'))
   },
   {
-'
-    id: 'it-infrastructure','
-    name: 'IT Infrastructure & Enterprise','
+
+    id: 'it-infrastructure',
+    name: 'IT Infrastructure & Enterprise',
     description: 'Cutting-edge infrastructure solutions for modern businesses',"
-    icon: <Cloud className="w-8 h-8" />,'
+    icon: <Cloud className="w-8 h-8" />,
     color: 'from-blue-600 to-cyan-700',
     services: enterpriseITInfrastructureServices2025
   },
   {
-'
-    id: 'micro-saas',;'
-    name: 'Micro SAAS Solutions',;'
+
+    id: 'micro-saas',;
+    name: 'Micro SAAS Solutions',;
     description: 'Innovative software solutions for small businesses',;"
+<<<<<<< HEAD
+    icon: <Code className="w-8 h-8" />,;
+    color: 'from-green-600 to-emerald-700',;
+    services: innovativeMicroSaasSolutions2025;
+  };
+];
+;
+const innovationLevelColors = {
+
+  'Revolutionary': 'from-red-600 to-pink-700',Breakthrough': 'from-purple-600 to-violet-700',Advanced': 'from-blue-600 to-cyan-700',;
+  ;
+  ;
+=======
     icon: <Code className="w-8 h-8" />,;'    color: 'from-green-600 to-emerald-700',;
     services: innovativeMicroSaasSolutions2025};
 ];
@@ -91,24 +112,56 @@ const innovationLevelColors = {
   'Revolutionary': 'from-red-600 to-pink-700','
   'Breakthrough': 'from-purple-600 to-violet-700','
   'Advanced': 'from-blue-600 to-cyan-700',;  ;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
-  ;'
   'Emerging': 'from-green-600 to-emerald-700';
 ;
 
 };
 ;
 const patentStatusColors = {
+<<<<<<< HEAD
+
+  'Patented': 'from-green-600 to-emerald-700',Patent Pending': 'from-yellow-600 to-orange-700',Trade Secret': 'from-blue-600 to-indigo-700',;
+  ;
+  ;
+=======
 '
   'Patented': 'from-green-600 to-emerald-700','
   'Patent Pending': 'from-yellow-600 to-orange-700','
   'Trade Secret': 'from-blue-600 to-indigo-700',;  ;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
-  ;'
   'Open Source': 'from-purple-600 to-violet-700';
 ;
+<<<<<<< HEAD
+
+};
+
+export function UltimateServicesShowcase(...args[]):  {
+
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedService, setSelectedService] = useState<any>(null);
+
+  const allServices = [;
+    ...ultimateInnovativeServices2025,;
+    ...enterpriseITInfrastructureServices2025,;
+    ...innovativeMicroSaasSolutions2025;
+  ];
+
+  const filteredServices = selectedCategory === 'all'
+    ? allServices
+    : categories.find (cat => cat.id === selectedCategory) ?.services || [];
+
+  const containerVariants = {
+
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,;
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       transition: {
         staggerChildren: 0.1,;
         delayChildren: 0.2}}};
@@ -202,7 +255,7 @@ const patentStatusColors = {
           <button'
             onClick={() => setSelectedCategory('all')}
             className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-'
+
               selectedCategory === 'all''
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25''
                 : 'bg-zion-slate-light text-zion-gray-light hover: bg-zion-slate hover:text-white'`
@@ -229,7 +282,7 @@ const patentStatusColors = {
         <motion.div"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}"
-          initial="hidden""
+          initial="hidden"
           animate="visible"
 
           {filteredServices.map ( (service) => (<motion.div
@@ -361,15 +414,15 @@ const patentStatusColors = {
             </p>"
             <div className="flex flex-wrap justify-center gap-4">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-semibold hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2"
 
                 Get Started Today"
                 <ArrowRight className="w-5 h-5" />              </Link>
               <a`
                 href={`tel:${contact.mobile}`'
-                  .replace(/\s/g, '')'
-                  .replace(/[^\d+]/g, '')}"
+                  .replace(/\s/g,)
+                  .replace(/[^\d+]/g,)}"
                 className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2"
 "
                 <Phone className="w-5 h-5" />                Call Now
@@ -478,8 +531,8 @@ const patentStatusColors = {
                     </Link>
                     <a`
                       href={`tel:${contact.mobile}`'
-                        .replace(/\s/g, '')'
-                        .replace(/[^\d+]/g, '')}"
+                        .replace(/\s/g,)
+                        .replace(/[^\d+]/g,)}"
                       className="bg-zion-slate border border-zion-cyan text-zion-cyan px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center"
 "
                       <Phone className="w-5 h-5" />                    </a>

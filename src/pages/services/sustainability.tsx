@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { SEO  } from "../../components/SEO";'
-import { motion  } from 'framer-motion.ts';'
+import { SEO  } from "../../components/SEO";
+import { motion  } from 'framer-motion.ts';
 import { Globe, Leaf, Zap, Shield, Database, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Sun, Wind, Battery, Recycle  } from 'lucide-react';
 
 export default function Sustainability(...args: []):  {
@@ -8,52 +8,52 @@ export default function Sustainability(...args: []):  {
   const features = [
     {
 
-      icon: Heart,'
-      title: 'Eco-Friendly Solutions','
+      icon: Heart,
+      title: 'Eco-Friendly Solutions',
       description: 'Reduce environmental impact with green technology'
     },
     {
 
-      icon: Leaf,'
-      title: 'Energy Efficiency','
+      icon: Leaf,
+      title: 'Energy Efficiency',
       description: 'Optimize power consumption and reduce carbon footprint'
     },
     {
 
-      icon: Zap,'
-      title: 'Renewable Energy','
+      icon: Zap,
+      title: 'Renewable Energy',
       description: 'Integrate solar, wind, and sustainable power sources'
     },
     {
 
-      icon: Globe,'
-      title: 'Carbon Neutral','
+      icon: Globe,
+      title: 'Carbon Neutral',
       description: 'Achieve net-zero emissions through smart technology';
     };
   ];
 
   const services = [
     {
-'
-      title: 'Green IT Infrastructure','
+
+      title: 'Green IT Infrastructure',
       description: 'Energy-efficient data centers and computing systems',
       icon: Cpu
     },
     {
-'
-      title: 'Sustainable Software','
+
+      title: 'Sustainable Software',
       description: 'Eco-friendly application development and optimization',
       icon: Database
     },
     {
-'
-      title: 'Energy Monitoring','
+
+      title: 'Energy Monitoring',
       description: 'Real-time tracking and optimization of power usage',
       icon: BarChart3
     },
     {
-'
-      title: 'Carbon Footprint Analysis','
+
+      title: 'Carbon Footprint Analysis',
       description: 'Comprehensive environmental impact assessment',
       icon: Globe;    };
   ]};

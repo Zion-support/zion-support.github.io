@@ -1,14 +1,14 @@
-import React from 'react.ts';'
-import { SEO   } from '../../components/SEO';'
+import React from 'react.ts';
+import { SEO   } from '../../components/SEO';
 import { motion   } from 'framer-motion.ts';
 ;const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
 
   return()
     <>
       <SEO
-        title="AI-Powered IoT Edge Computing Platform | Zion Tech Group""
-        description="Advanced AI-driven IoT edge computing platform. Reduce latency by 90%, lower bandwidth costs by 70%, and process data at the edge with sub-millisecond response times.""
-        keywords="AI IoT, edge computing, real-time processing, distributed computing, hybrid cloud, edge intelligence, IoT analytics, edge AI""
+        title="AI-Powered IoT Edge Computing Platform | Zion Tech Group"
+        description="Advanced AI-driven IoT edge computing platform. Reduce latency by 90%, lower bandwidth costs by 70%, and process data at the edge with sub-millisecond response times."
+        keywords="AI IoT, edge computing, real-time processing, distributed computing, hybrid cloud, edge intelligence, IoT analytics, edge AI"
         canonical="https://ziontechgroup.com/services/ai-iot-edge-computing-platform"
       />
       "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

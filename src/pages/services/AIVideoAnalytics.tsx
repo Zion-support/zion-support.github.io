@@ -1,60 +1,59 @@
 import React from 'react';
 import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, Shield, Users, BarChart3 export default function AIVideoAnalytics() {
   const features = [
-    'Real-time video analysis with AI-powered object detection','
-    'Advanced facial recognition and person tracking',;'
-    'Behavioral analysis and anomaly detection',;'
-    'Automated video summarization and highlights',;'
-    'Multi-camera synchronization and analytics',;'
-    'Custom AI models for industry-specific use cases',;'
-    'Cloud-based processing with edge computing options',;'
+    'Real-time video analysis with AI-powered object detection',Advanced facial recognition and person tracking',;
+    'Behavioral analysis and anomaly detection',;
+    'Automated video summarization and highlights',;
+    'Multi-camera synchronization and analytics',;
+    'Custom AI models for industry-specific use cases',;
+    'Cloud-based processing with edge computing options',;
     'Integration with major security and analytics platforms';
   ];
 
   const tiers = [
     {
-'
-      name: 'Basic','
-      price: '$199/mo','
-      details: ['Up to 10 cameras', 'Basic AI detection', '7-day storage', 'Email support']
+
+      name: 'Basic',
+      price: '$199/mo',
+      details: ['Up to 10 cameras',Basic AI detection',7-day storage',Email support']
     },
     {
-'
-      name: 'Professional', '
-      price: '$599/mo', '
-      details: ['Up to 50 cameras', 'Advanced AI analytics', '30-day storage', 'Priority support'] ;
+
+      name: 'Professional',
+      price: '$599/mo',
+      details: ['Up to 50 cameras',Advanced AI analytics',30-day storage',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,499/mo', ;'
-      details: ['Unlimited cameras', 'Custom AI models', '90-day storage', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$1,499/mo', ;
+      details: ['Unlimited cameras',Custom AI models',90-day storage',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Retail analytics and customer behavior tracking',;'
-    'Security surveillance and threat detection',;'
-    'Manufacturing quality control and safety monitoring',;'
-    'Traffic analysis and smart city applications',;'
-    'Healthcare patient monitoring and safety',;'
+  const useCases = [;
+    'Retail analytics and customer behavior tracking',;
+    'Security surveillance and threat detection',;
+    'Manufacturing quality control and safety monitoring',;
+    'Traffic analysis and smart city applications',;
+    'Healthcare patient monitoring and safety',;
     'Sports analytics and performance tracking';
   ];
 
-  const benefits = [;'
-    'Reduce security incidents by 60-80%',;'
-    'Improve operational efficiency by 30-50%',;'
-    'Cut manual monitoring costs by 70-90%',;'
-    'Enhance safety compliance and reporting',;'
-    'Gain actionable insights from video data',;'
+  const benefits = [;
+    'Reduce security incidents by 60-80%',;
+    'Improve operational efficiency by 30-50%',;
+    'Cut manual monitoring costs by 70-90%',;
+    'Enhance safety compliance and reporting',;
+    'Gain actionable insights from video data',;
     'Scale security operations without additional staff';
   ];
 
-  const industries = [;'
-    'Retail & Shopping Centers',;'
-    'Manufacturing & Industrial',;'
-    'Healthcare & Hospitals',;'
-    'Transportation & Logistics',;'
-    'Education & Universities',;'
+  const industries = [;
+    'Retail & Shopping Centers',;
+    'Manufacturing & Industrial',;
+    'Healthcare & Hospitals',;
+    'Transportation & Logistics',;
+    'Education & Universities',;
     'Government & Public Safety';
   ];
 
@@ -107,8 +106,8 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['60-80% incident reduction', 'Real-time detection', 'AI-powered insights'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['60-80% incident reduction',Real-time detection',AI-powered insights'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-blue-600 mb-3" />"              <div className="text-gray-900 font-semibold">{t}</div>
             </div>

@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+import { createSlice, PayloadAction  } from '@reduxjs/toolkit';
+=======
 :src/store/cartSlice.tsx
 import { createSlice, PayloadAction  } from '@reduxjs/toolkit';'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 import { CartItem  } from '@/types/listings';
 
 interface CartState {
@@ -24,8 +28,12 @@ const initialState: CartState = {
   ;
   };
 
+<<<<<<< HEAD
+const cartSlice:  createSlice({;
+=======
 :src/store/cartSlice.tsx
 const cartSlice:  createSlice({;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   name: any'cart',;
 const cartSlice:  createSlice({;
   name: anycart',;
@@ -86,4 +94,3 @@ const cartSlice:  createSlice({;
 export const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.actions;
 export { cartSlice };
 export default cartSlice.reducer;
-'

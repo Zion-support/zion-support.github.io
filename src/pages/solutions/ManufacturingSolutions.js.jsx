@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -10,82 +10,70 @@ import {
   Shield,
   ArrowRight,
   CheckCircle,
-  Factory,'
+  Factory,
   Cog} from 'lucide-react';
 export default function ManufacturingSolutions() {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI-Powered Predictive Maintenance',
       description:'
         'Machine learning models to predict equipment failures and optimize maintenance schedules'},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Real-time Production Analytics',
       description:'
         'Live monitoring and analysis of production metrics and KPIs'},
     {
 
-      icon: Target,'
-      title: 'Quality Control Automation','
+      icon: Target,
+      title: 'Quality Control Automation',
       description: 'AI-driven quality inspection and defect detection systems'},
     {
 
-      icon: Zap,'
+      icon: Zap,
       title: 'Smart Supply Chain Management',
       description:'
         'Intelligent inventory optimization and supply chain automation'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Industrial Cybersecurity',
       description:'
         'Advanced security for connected manufacturing systems and IoT devices'},
     {
 
-      icon: Settings,'
-      title: 'Process Optimization','
+      icon: Settings,
+      title: 'Process Optimization',
       description: 'AI-powered process improvement and efficiency optimization'},
   ];
   const benefits = ['
-    'Reduce downtime by 40-60%','
-    'Improve product quality by 25-35%','
-    'Lower production costs by 20-30%','
-    'Increase production efficiency','
-    'Better resource utilization','
-    'Enhanced safety and compliance',
+    'Reduce downtime by 40-60%',Improve product quality by 25-35%',Lower production costs by 20-30%',Increase production efficiency',Better resource utilization',Enhanced safety and compliance',
   ];
   const solutions = [
     {
-'
+
       title: 'Smart Manufacturing',
       description:'
         'IoT-enabled connected manufacturing with real-time monitoring'},
     {
-'
+
       title: 'Predictive Analytics',
       description:'
         'AI-powered forecasting and predictive maintenance solutions'},
     {
-'
-      title: 'Quality Management','
+
+      title: 'Quality Management',
       description: 'Automated quality control and defect prevention systems'},
     {
-'
-      title: 'Supply Chain Optimization','
+
+      title: 'Supply Chain Optimization',
       description: 'Intelligent inventory and supply chain management'},
   ];
   const industries = ['
-    'Automotive','
-    'Electronics','
-    'Pharmaceuticals','
-    'Food & Beverage','
-    'Aerospace','
-    'Textiles','
-    'Chemicals','
-    'Heavy Machinery',
+    'Automotive',Electronics',Pharmaceuticals',Food & Beverage',Aerospace',Textiles',Chemicals',Heavy Machinery',
   ];
   return()
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">

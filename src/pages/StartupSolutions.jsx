@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -16,113 +16,95 @@ import {
   Star,
   Users,
   TrendingUp,
-  Zap,'
+  Zap,
   Award} from 'lucide-react';
 
 const startupSolutions = [
   {
 
-    id: 1,'
+    id: 1,
     title: 'MVP Development',
     description:'
       'Rapidly build and launch your minimum viable product to test market fit and gather user feedback.',
     icon: Rocket,
     features: ['
-      'Quick prototype development','
-      'User experience optimization','
-      'Market validation testing','
-      'Iterative improvement cycles',
-    ],'
-    price: 'From $15,000','
-    timeline: '4-8 weeks','
+      'Quick prototype development',User experience optimization',Market validation testing',Iterative improvement cycles',
+    ],
+    price: 'From $15,000',
+    timeline: '4-8 weeks',
     category: 'Development'},
   {
 
-    id: 2,'
+    id: 2,
     title: 'AI-Powered Analytics',
     description:'
       'Leverage artificial intelligence to gain deep insights into your business performance and user behavior.',
     icon: Brain,
     features: ['
-      'Predictive analytics','
-      'User behavior tracking','
-      'Performance optimization','
-      'Real-time insights',
-    ],'
-    price: 'From $8,000','
-    timeline: '2-4 weeks','
+      'Predictive analytics',User behavior tracking',Performance optimization',Real-time insights',
+    ],
+    price: 'From $8,000',
+    timeline: '2-4 weeks',
     category: 'AI & Analytics'},
   {
 
-    id: 3,'
+    id: 3,
     title: 'Cloud Infrastructure',
     description:'
       'Scalable cloud solutions that grow with your startup from day one to enterprise scale.',
     icon: Cloud,
     features: ['
-      'Auto-scaling infrastructure','
-      'Cost optimization','
-      'Security compliance','
-      '24/7 monitoring',
-    ],'
-    price: 'From $5,000','
-    timeline: '1-3 weeks','
+      'Auto-scaling infrastructure',Cost optimization',Security compliance',24/7 monitoring',
+    ],
+    price: 'From $5,000',
+    timeline: '1-3 weeks',
     category: 'Infrastructure'},
   {
 
-    id: 4,'
+    id: 4,
     title: 'Cybersecurity Framework',
     description:'
       "Protect your startup's data and systems with enterprise-grade security solutions.",
     icon: Shield,
     features: ['
-      'Threat detection','
-      'Data encryption','
-      'Compliance management','
-      'Security audits',
-    ],'
-    price: 'From $12,000','
-    timeline: '3-6 weeks','
+      'Threat detection',Data encryption',Compliance management',Security audits',
+    ],
+    price: 'From $12,000',
+    timeline: '3-6 weeks',
     category: 'Security'},
   {
 
-    id: 5,'
+    id: 5,
     title: 'Mobile App Development',
     description:'
       'Native and cross-platform mobile applications that engage users and drive growth.',
     icon: Smartphone,
     features: ['
-      'iOS & Android development','
-      'Cross-platform solutions','
-      'Performance optimization','
-      'App store optimization',
-    ],'
-    price: 'From $20,000','
-    timeline: '6-12 weeks','
+      'iOS & Android development',Cross-platform solutions',Performance optimization',App store optimization',
+    ],
+    price: 'From $20,000',
+    timeline: '6-12 weeks',
     category: 'Development'},
   {
 
-    id: 6,'
+    id: 6,
     title: 'Digital Marketing Platform',
     description:'
       'Comprehensive marketing tools to acquire, engage, and retain customers effectively.',
     icon: Target,
     features: ['
-      'Multi-channel campaigns','
-      'Automation workflows','
-      'Analytics & reporting','
-      'A/B testing tools',
-    ],'
-    price: 'From $10,000','
-    timeline: '3-5 weeks','
+      'Multi-channel campaigns',Automation workflows',Analytics & reporting',A/B testing tools',
+    ],
+    price: 'From $10,000',
+    timeline: '3-5 weeks',
     category: 'Marketing'},
 ];
 ;
 const successStories = [
   {
-'
-    logo: '🚀','
-    comp: 'TechStart Inc.','
+
+    logo: '🚀',
+    comp: 'TechStart Inc.',
     industry: 'SaaS',
     challenge:'
       'Needed to launch MVP quickly to secure funding and validate market fit.',
@@ -131,9 +113,9 @@ const successStories = [
     results:'
       'Launched in 6 weeks, secured $500K funding, 1000+ beta users in first month.'},
   {
-'
-    logo: '💡','
-    comp: 'InnovateLabs','
+
+    logo: '💡',
+    comp: 'InnovateLabs',
     industry: 'FinTech',
     challenge:'
       'Required secure, scalable platform for financial services with compliance.',
@@ -142,10 +124,10 @@ const successStories = [
     results:'
       'Achieved SOC2 compliance in 4 months, 99.9% uptime, zero security incidents.'},
   {
-'
-    logo: '📱','
-    comp: 'MobileFirst','
-    industry: 'E-commerce','
+
+    logo: '📱',
+    comp: 'MobileFirst',
+    industry: 'E-commerce',
     challenge: 'Needed mobile app to compete in mobile-first market segment.',
     solution:'
       'Developed cross-platform mobile app with integrated analytics and marketing tools.',
@@ -154,16 +136,11 @@ const successStories = [
 ];
 ;
 const StartupSolutions = () => {
-'
+
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const categories = ['
-    'All','
-    'Development','
-    'AI & Analytics','
-    'Infrastructure','
-    'Security','
-    'Marketing',
+    'All',Development',AI & Analytics',Infrastructure',Security',Marketing',
   ];
 
   const filteredSolutions ='
@@ -185,25 +162,25 @@ const StartupSolutions = () => {
           >"
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Startup"
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">'
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
                 {' '}
                 Solutions
               </span>
             </h1>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">'
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Accelerate your startup's growth with cutting-edge technology
               solutions designed for rapid development, scalability, and market
               success
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105"
               >
                 Start Your Project
               </a>
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-4 border border-purple-500 text-purple-400 font-semibold rounded-xl hover:bg-purple-500 hover:text-white transition-all duration-300"
               >
                 Startup Consultation
@@ -370,7 +347,7 @@ const StartupSolutions = () => {
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Launch Your Startup?
             </h2>"
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">'
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Let's discuss how our startup solutions can accelerate your
               growth, reduce time to market, and help you achieve your business
               goals.
@@ -378,13 +355,13 @@ const StartupSolutions = () => {
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105"
               >
                 Start Your Startup Project
               </a>
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-4 border border-purple-500 text-purple-400 font-semibold rounded-xl hover:bg-purple-500 hover:text-white transition-all duration-300"
               >
                 Startup Consultation

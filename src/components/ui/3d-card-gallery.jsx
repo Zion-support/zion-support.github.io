@@ -1,11 +1,11 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';'
-import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';'
+import React, { useState, useRef, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { Eye, Heart, Share2, Play, Pause, RotateCcw, Grid, List, Search, Star, Zap, Shield, Globe, Rocket, Brain, Settings, TrendingUp, X } from 'lucide-react';
 import { Button } from "./button";"
 import { Badge } from "./badge";"
 export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = false, showFilters = true, onCardClick, onAction, className = "" }) {
 
-    const [selectedItem, setSelectedItem] = useState(null);'
+    const [selectedItem, setSelectedItem] = useState(null);
     const [viewMode, setViewMode] = useState('grid');
     const [filters, setFilters] = useState({
 
@@ -14,9 +14,9 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
         complexity[],;
         verified: false,
         featured: false
-    });'
-    const [searchQuery, setSearchQuery] = useState('');'
-    const [sortBy, setSortBy] = useState('rating');'
+    });
+    const [searchQuery, setSearchQuery] = useState('');
+    const [sortBy, setSortBy] = useState('rating');
     const [sortOrder, setSortOrder] = useState('desc');
     const [isPlaying, setIsPlaying] = useState(autoPlay);
     const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0);
@@ -31,25 +31,25 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
 
         let aValue, bValue;
         switch (sortBy) {
-'
+
             case 'rating':
                 aValue = a.rating;
                 bValue = b.rating;
-                break;'
+                break;
             case 'downloads':
                 aValue = a.metadata.downloads;
                 bValue = b.metadata.downloads;
-                break;'
+                break;
             case 'lastUpdated':
                 aValue = new Date(a.metadata.lastUpdated);
                 bValue = new Date(b.metadata.lastUpdated);
-                break;'
+                break;
             case 'title':
                 aValue = a.title.toLowerCase();
                 bValue = b.title.toLowerCase();
                 break;
             default:
-                return 0}'
+                return 0}
         if (sortOrder === 'asc') {
 
             return aValue > bValue ? 1 : -1}
@@ -59,7 +59,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
     });
     // Auto-play carousel
     useEffect(() => {
-'
+
         if (!isPlaying || viewMode !== 'carousel' || filteredAndSortedItems.length === 0)
             return;
         const interval = setInterval(() => {
@@ -78,13 +78,13 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
     const getStatusColor = (status) => {
 
         switch (status) {
-'
+
             case 'active':'
-                return 'border-green-500/50 bg-green-500/10 text-green-400';'
+                return 'border-green-500/50 bg-green-500/10 text-green-400';
             case 'beta':'
-                return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';'
+                return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';
             case 'coming-soon':'
-                return 'border-blue-500/50 bg-blue-500/10 text-blue-400';'
+                return 'border-blue-500/50 bg-blue-500/10 text-blue-400';
             case 'deprecated':'
                 return 'border-red-500/50 bg-red-500/10 text-red-400';
             default:'
@@ -94,13 +94,13 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
     const getComplexityColor = (complexity) => {
 
         switch (complexity) {
-'
+
             case 'beginner':'
-                return 'border-green-500/50 bg-green-500/10 text-green-400';'
+                return 'border-green-500/50 bg-green-500/10 text-green-400';
             case 'intermediate':'
-                return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';'
+                return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';
             case 'advanced':'
-                return 'border-orange-500/50 bg-orange-500/10 text-orange-400';'
+                return 'border-orange-500/50 bg-orange-500/10 text-orange-400';
             case 'expert':'
                 return 'border-red-500/50 bg-red-500/10 text-red-400';
             default:'
@@ -110,11 +110,5 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
     const getCategoryIcon = (category) => {
 
         const iconMap = {
-'
-  'AI & ML': Brain,'
-            'Cybersecurity': Shield,'
-            'Cloud': Globe,'
-            'Development': Rocket,'
-            'Analytics': Zap,'
-            'Infrastructure': Settings,
-'"
+
+  'AI & ML': Brain,Cybersecurity': Shield,Cloud': Globe,Development': Rocket,Analytics': Zap,Infrastructure': Settings,"

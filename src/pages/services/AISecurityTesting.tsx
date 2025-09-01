@@ -1,60 +1,59 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityTesting() {
   const features = [
-    'AI-powered security testing optimization','
-    'Intelligent testing strategy management and execution',;'
-    'Automated security vulnerability detection and assessment',;'
-    'Predictive analytics for testing needs',;'
-    'Smart testing framework management',;'
-    'AI-driven testing automation and orchestration',;'
-    'Real-time testing performance tracking',;'
+    'AI-powered security testing optimization',Intelligent testing strategy management and execution',;
+    'Automated security vulnerability detection and assessment',;
+    'Predictive analytics for testing needs',;
+    'Smart testing framework management',;
+    'AI-driven testing automation and orchestration',;
+    'Real-time testing performance tracking',;
     'Custom AI models for testing applications';
   ];
 
   const tiers = [
     {
-'
-      name: 'Developer','
-      price: '$399/mo','
-      details: ['Up to 10 applications', 'Basic AI features', 'Standard testing', 'Email support']
+
+      name: 'Developer',
+      price: '$399/mo',
+      details: ['Up to 10 applications',Basic AI features',Standard testing',Email support']
     },
     {
-'
-      name: 'Business', '
-      price: '$999/mo', '
-      details: ['Up to 50 applications', 'Advanced AI features', 'Enhanced testing', 'Priority support'] ;
+
+      name: 'Business',
+      price: '$999/mo',
+      details: ['Up to 50 applications',Advanced AI features',Enhanced testing',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$2,499/mo', ;'
-      details: ['Unlimited applications', 'Custom AI models', 'Full testing suite', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$2,499/mo', ;
+      details: ['Unlimited applications',Custom AI models',Full testing suite',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Security testing optimization',;'
-    'Testing strategy management and execution',;'
-    'Security vulnerability detection and assessment',;'
-    'Testing framework management and automation',;'
-    'Testing automation and orchestration',;'
+  const useCases = [;
+    'Security testing optimization',;
+    'Testing strategy management and execution',;
+    'Security vulnerability detection and assessment',;
+    'Testing framework management and automation',;
+    'Testing automation and orchestration',;
     'Testing scaling and management';
   ];
 
-  const benefits = [;'
-    'Improve security testing performance by 50-80%',;'
-    'Reduce testing completion time by 40-70%',;'
-    'Cut security testing costs by 35-65%',;'
-    'Enhance security testing reliability and scalability',;'
-    'Optimize resource utilization',;'
+  const benefits = [;
+    'Improve security testing performance by 50-80%',;
+    'Reduce testing completion time by 40-70%',;
+    'Cut security testing costs by 35-65%',;
+    'Enhance security testing reliability and scalability',;
+    'Optimize resource utilization',;
     'Scale security testing operations efficiently';
   ];
 
-  const industries = [;'
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
     'Technology & SaaS';
   ];
 
@@ -107,8 +106,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['50-80% performance improvement', '40-70% completion time reduction', '35-65% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['50-80% performance improvement',40-70% completion time reduction',35-65% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-violet-600 mb-3" />"              <div className="text-gray-900 font-semibold">{t}</div>
             </div>

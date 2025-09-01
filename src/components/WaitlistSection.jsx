@@ -1,14 +1,14 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 export function WaitlistSection() {
-'
+
   const [email, setEmail] = useState('');
   const handleSubmit = e => {
 
     e.preventDefault();
     // Handle waitlist signup'
     // // // // // // // // console.log('Waitlist signup:', email);
-  };'
+  };
   // console.log('Waitlist signup:', email)};
   return()
     <section className="py-16 bg-gradient-to-r from-zion-purple to-zion-cyan">"
@@ -24,12 +24,12 @@ export function WaitlistSection() {
             type="email"
             value={email}
             onChange={e => setEmail(e.target.value)}"
-            placeholder="Enter your email""
+            placeholder="Enter your email"
             className="flex-1 px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-white"
             required
           />
           <Button"
-            type="submit""
+            type="submit"
             className="bg-white text-zion-purple hover:bg-gray-100"
           >
             Join

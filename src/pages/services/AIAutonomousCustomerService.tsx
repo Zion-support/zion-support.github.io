@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -22,7 +22,7 @@ import {
   Share2,
   TrendingUp,
   Zap,
-  Shield,'
+  Shield,
   Headphones} from 'lucide-react.ts';
 
 const AIAutonomousCustomerService: React.FC = (): JSX.Element => {
@@ -30,49 +30,44 @@ const AIAutonomousCustomerService: React.FC = (): JSX.Element => {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI-Powered Customer Service',
       description:'
         'Advanced machine learning for autonomous customer support and issue resolution'},
     {
 
-      icon: MessageCircle,'
+      icon: MessageCircle,
       title: 'Intelligent Chat Support',
       description:'
         'AI-driven chat support with natural language processing and context awareness'},
     {
 
-      icon: Target,'
+      icon: Target,
       title: 'Issue Resolution',
       description:'
         'Automated issue identification and resolution with intelligent routing'},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Service Analytics',
       description:'
         'Real-time analytics and insights into customer service performance'},
     {
 
-      icon: Headphones,'
+      icon: Headphones,
       title: 'Voice Support',
       description:'
         'AI-powered voice support with speech recognition and natural responses'},
     {
 
-      icon: TrendingUp,'
+      icon: TrendingUp,
       title: 'Customer Satisfaction',
       description:'
         'Continuous monitoring and improvement of customer satisfaction metrics'},
   ];
 
   const benefits = ['
-    'Improve customer satisfaction by 80%','
-    'Reduce response time by 90%','
-    'Increase issue resolution by 70%','
-    'Automate customer support','
-    '24/7 autonomous operation','
-    'Real-time customer insights',
+    'Improve customer satisfaction by 80%',Reduce response time by 90%',Increase issue resolution by 70%',Automate customer support',24/7 autonomous operation',Real-time customer insights',
   ];
 
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -90,7 +85,7 @@ const AIAutonomousCustomerService: React.FC = (): JSX.Element => {
 "
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Transform Your Customer Service with"
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 {' '}
                 AI Intelligence
               </span>

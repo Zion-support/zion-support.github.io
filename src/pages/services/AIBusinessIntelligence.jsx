@@ -1,5 +1,5 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
 
@@ -12,136 +12,108 @@ import {
   Zap,
   Brain,
   Globe,
-  Shield,'
+  Shield,
   Clock} from 'lucide-react';
 
 const AIBusinessIntelligence = () => {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI-Powered Analytics',
       description:'
         'Advanced machine learning algorithms that automatically identify patterns, trends, and insights from your data',
       benefits: ['
-        'Predictive modeling','
-        'Anomaly detection','
-        'Pattern recognition','
-        'Automated insights',
+        'Predictive modeling',Anomaly detection',Pattern recognition',Automated insights',
       ]},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Real-time Dashboards',
       description:'
         'Interactive, customizable dashboards that provide instant visibility into key business metrics',
       benefits: ['
-        'Live data updates','
-        'Customizable views','
-        'Role-based access','
-        'Mobile responsive',
+        'Live data updates',Customizable views',Role-based access',Mobile responsive',
       ]},
     {
 
-      icon: TrendingUp,'
+      icon: TrendingUp,
       title: 'Predictive Analytics',
       description:'
         'Forecast future trends and outcomes using historical data and advanced statistical models',
       benefits: ['
-        'Sales forecasting','
-        'Demand planning','
-        'Risk assessment','
-        'Trend prediction',
+        'Sales forecasting',Demand planning',Risk assessment',Trend prediction',
       ]},
     {
 
-      icon: Target,'
+      icon: Target,
       title: 'Performance Tracking',
       description:'
         'Monitor and measure business performance against goals and benchmarks in real-time',
       benefits: ['
-        'KPI monitoring','
-        'Goal tracking','
-        'Benchmarking','
-        'Performance alerts',
+        'KPI monitoring',Goal tracking',Benchmarking',Performance alerts',
       ]},
   ];
   const solutions = [
     {
-'
+
       category: 'Sales & Marketing',
       icon: Users,
       solutions: ['
-        'Customer behavior analysis','
-        'Lead scoring and qualification','
-        'Campaign performance optimization','
-        'Market trend analysis','
-        'Customer lifetime value prediction',
+        'Customer behavior analysis',Lead scoring and qualification',Campaign performance optimization',Market trend analysis',Customer lifetime value prediction',
       ]},
     {
-'
+
       category: 'Operations & Supply Chain',
       icon: Activity,
       solutions: ['
-        'Inventory optimization','
-        'Supply chain risk assessment','
-        'Operational efficiency analysis','
-        'Quality control monitoring','
-        'Resource allocation optimization',
+        'Inventory optimization',Supply chain risk assessment',Operational efficiency analysis',Quality control monitoring',Resource allocation optimization',
       ]},
     {
-'
+
       category: 'Financial Analytics',
       icon: TrendingUp,
       solutions: ['
-        'Revenue forecasting','
-        'Cost analysis and optimization','
-        'Profitability analysis','
-        'Cash flow prediction','
-        'Investment decision support',
+        'Revenue forecasting',Cost analysis and optimization',Profitability analysis',Cash flow prediction',Investment decision support',
       ]},
     {
-'
+
       category: 'Human Resources',
       icon: Users,
       solutions: ['
-        'Employee performance analytics','
-        'Talent acquisition insights','
-        'Workforce planning','
-        'Employee retention prediction','
-        'Training effectiveness analysis',
+        'Employee performance analytics',Talent acquisition insights',Workforce planning',Employee retention prediction',Training effectiveness analysis',
       ]},
   ];
   const technologies = [
     {
-'
+
       name: 'Machine Learning',
       description:'
         'Advanced ML algorithms for pattern recognition and prediction',
       icon: Brain},
     {
-'
-      name: 'Big Data Processing','
+
+      name: 'Big Data Processing',
       description: 'Scalable data processing for large datasets',
       icon: Database},
     {
-'
-      name: 'Real-time Analytics','
+
+      name: 'Real-time Analytics',
       description: 'Instant data processing and insights delivery',
       icon: Zap},
     {
-'
-      name: 'Cloud Infrastructure','
+
+      name: 'Cloud Infrastructure',
       description: 'Scalable cloud-based BI platform',
       icon: Globe},
     {
-'
-      name: 'Data Security','
+
+      name: 'Data Security',
       description: 'Enterprise-grade security and compliance',
       icon: Shield},
     {
-'
-      name: '24/7 Monitoring','
+
+      name: '24/7 Monitoring',
       description: 'Continuous monitoring and alerting',
       icon: Clock},
   ];
@@ -196,13 +168,13 @@ const AIBusinessIntelligence = () => {
             </p>"
             <div className="flex flex-wrap justify-center gap-4">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
               >
                 Get Started
               </Link>
               <Link"
-                to="/services-showcase""
+                to="/services-showcase"
                 className="border border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
               >
                 View All Services
@@ -216,7 +188,7 @@ const AIBusinessIntelligence = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <motion.div
           variants={containerVariants}"
-          initial="hidden""
+          initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}"
           className="text-center mb-16"
@@ -387,13 +359,13 @@ const AIBusinessIntelligence = () => {
             </p>"
             <div className="flex flex-wrap justify-center gap-4">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
               >
                 Schedule Consultation
               </Link>
               <Link"
-                to="/case-studies""
+                to="/case-studies"
                 className="border border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
               >
                 View Case Studies

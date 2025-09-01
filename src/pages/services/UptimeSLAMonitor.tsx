@@ -1,7 +1,7 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { Link  } from 'react-router-dom.ts';'
-import { Activity, AlertTriangle, Clock, CheckCircle, Shield, Zap, BarChart3, Globe, Smartphone, Monitor, Server, Wifi, Database, Cloud, Bell, TrendingUp, Users, Target  } from 'lucide-react';'
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Activity, AlertTriangle, Clock, CheckCircle, Shield, Zap, BarChart3, Globe, Smartphone, Monitor, Server, Wifi, Database, Cloud, Bell, TrendingUp, Users, Target  } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
 ;
 export { function };
@@ -163,8 +163,8 @@ export default function UptimeSLAMonitor(...args: []):  {
   return()
     <>
       <SEO "
-        title = "Uptime SLA Monitor - Zion Tech Group""
-        description="Professional uptime monitoring and SLA tracking platform. Monitor websites, APIs, servers, and infrastructure with real-time alerts and comprehensive reporting.""
+        title = "Uptime SLA Monitor - Zion Tech Group"
+        description="Professional uptime monitoring and SLA tracking platform. Monitor websites, APIs, servers, and infrastructure with real-time alerts and comprehensive reporting."
         canonical="/services/uptime-sla-monitor"
       />
 "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -209,13 +209,13 @@ export default function UptimeSLAMonitor(...args: []):  {
                 </p>"
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link"
-                    to="/request-quote""
+                    to="/request-quote"
                     className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
 
                     Start Monitoring
                   </Link>
                   <Link"
-                    to="/contact""
+                    to="/contact"
                     className="px-8 py-4 border-2 border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300"
 
                     Schedule Demo
@@ -548,13 +548,13 @@ export default function UptimeSLAMonitor(...args: []):  {
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link"
-                  to="/request-quote""
+                  to="/request-quote"
                   className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
 
                   Start Free Trial
                 </Link>
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="px-8 py-4 border-2 border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300"
 
                   Contact Sales

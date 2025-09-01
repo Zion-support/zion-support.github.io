@@ -1,81 +1,69 @@
-import { motion } from 'framer-motion';'
-import { Bot, TrendingUp, Zap, Shield, Users, Globe, BarChart3, Settings } from 'lucide-react';'
-import { Building, Brain, ArrowRight, Star, Rocket, Cpu, Database } from 'lucide-react';'
-import { Link } from 'react-router-dom';'
+import { motion } from 'framer-motion';
+import { Bot, TrendingUp, Zap, Shield, Users, Globe, BarChart3, Settings } from 'lucide-react';
+import { Building, Brain, ArrowRight, Star, Rocket, Cpu, Database } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Network } from 'lucide-react';
-import SEOHead from "../components/SEOHead";'
-import { Target, CheckCircle, Lightbulb, Code, Cloud } from 'lucide-react';'
+import SEOHead from "../components/SEOHead";
+import { Target, CheckCircle, Lightbulb, Code, Cloud } from 'lucide-react';
 import { Clock, Workflow, BarChart } from 'lucide-react';
 const AutonomousBusinessOperationsPlatform = () => {
     const features = [
                                             {
 
-                                                icon: Bot,'
-                                                title: 'Intelligent Automation','
+                                                icon: Bot,
+                                                title: 'Intelligent Automation',
                                                 description: 'AI-powered automation that learns from your business processes and continuously improves efficiency.'
                                             },
                                             {
 
-                                                icon: Workflow,'
-                                                title: 'Process Orchestration','
+                                                icon: Workflow,
+                                                title: 'Process Orchestration',
                                                 description: 'Seamlessly orchestrate complex business workflows across multiple systems and departments.'
                                             },
                                             {
 
-                                                icon: Zap,'
-                                                title: 'Real-time Optimization','
+                                                icon: Zap,
+                                                title: 'Real-time Optimization',
                                                 description: 'Dynamic optimization of business operations based on real-time data and market conditions.'
                                             },
                                             {
 
-                                                icon: Shield,'
-                                                title: 'Secure Operations','
+                                                icon: Shield,
+                                                title: 'Secure Operations',
                                                 description: 'Enterprise-grade security with role-based access control and audit trails for all operations.'
                                             }
                                         ];
                                         const useCases = [
                                             {
-'
-                                                title: 'Supply Chain Management','
+
+                                                title: 'Supply Chain Management',
                                                 description: 'Automated inventory management, demand forecasting, and supplier coordination.',
                                                 icon: Workflow
                                             },
                                             {
-'
-                                                title: 'Customer Service','
+
+                                                title: 'Customer Service',
                                                 description: 'Intelligent chatbots, ticket routing, and automated customer support workflows.',
                                                 icon: Users
                                             },
                                             {
-'
-                                                title: 'Financial Operations','
+
+                                                title: 'Financial Operations',
                                                 description: 'Automated invoicing, expense management, and financial reporting.',
                                                 icon: BarChart3
                                             },
                                             {
-'
-                                                title: 'HR & Recruitment','
+
+                                                title: 'HR & Recruitment',
                                                 description: 'Automated candidate screening, onboarding processes, and performance management.',
                                                 icon: Users
                                             }
                                         ];
                                         const benefits = ['
-                                            'Reduce operational costs by up to 40%','
-                                            'Improve process efficiency by 60%','
-                                            'Eliminate manual errors and delays','
-                                            '24/7 automated operations','
-                                            'Scalable infrastructure for growth','
-                                            'Real-time monitoring and analytics'
+                                            'Reduce operational costs by up to 40%',Improve process efficiency by 60%',Eliminate manual errors and delays',24/7 automated operations',Scalable infrastructure for growth',Real-time monitoring and analytics'
                                         ];
                                         const industries = ['
-                                            'Manufacturing','
-                                            'Healthcare','
-                                            'Finance','
-                                            'Retail','
-                                            'Logistics','
-                                            'Technology','
-                                            'Energy','
-                                            'Education'
+                                            'Manufacturing',Healthcare',Finance',Retail',Logistics',Technology',Energy',Education'
                                         ];"
                                         return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}"
@@ -88,7 +76,7 @@ const AutonomousBusinessOperationsPlatform = () => {
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Autonomous Business"
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">'
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
                 {' '}Operations Platform
               </span>
             </h1>"
@@ -701,7 +689,7 @@ export default function AutonomousBusinessOperationsPlatform() {}
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {["
                                                             "Salesforce", "HubSpot", "Slack", "Microsoft 365", "Google Workspace", "Zapier","
-                                                            "QuickBooks", "Shopify", "WooCommerce", "Magento", "AWS", "Azure""
+                                                            "QuickBooks", "Shopify", "WooCommerce", "Magento", "AWS", "Azure"
                                                         ].map((tool, index) => (<div key={index} className="bg-gray-800/50 rounded-lg p-4 text-center border border-gray-700/50 hover:border-green-500/50 transition-colors duration-200">"
                 <div className="text-gray-300 font-medium">{tool}</div>
               </div>))}
@@ -1084,21 +1072,21 @@ export default function AutonomousBusinessOperationsPlatform() {}
   const testimonials = ["
     {name}: "Operations Director","
       role: "Chief Operations Officer","
-      comp: "Global Manufacturing Co.",'"
+      comp: "Global Manufacturing Co.","
       content: "The autonomous operations platform has transformed our business. We've achieved 60% efficiency gains and 24/7 operations.",
       rating: 5,"
       avatar: "👨‍💼"
     },"
     {name}: "Sarah Operations","
       role: "VP of Operations","
-      comp: "Tech Solutions Inc.",'"
+      comp: "Tech Solutions Inc.","
       content: "The platform's autonomous decision-making capabilities have revolutionized how we manage our operations.",
       rating: 5,"
       avatar: "👩‍💼"
     },"
     {name}: "Michael Operations","
       role: "Operations Manager","
-      comp: "Innovation Corp",'"
+      comp: "Innovation Corp","
       content: "We've seen unprecedented improvements in efficiency and cost reduction with this platform.",
       rating: 5,"
       avatar: "👨‍💻"

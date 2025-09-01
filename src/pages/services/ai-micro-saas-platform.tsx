@@ -1,6 +1,174 @@
+<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+
+  Brain,
+  Zap,
+  Shield,
+  Users,
+  BarChart3,
+  Rocket,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Globe,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  TrendingUp,
+  Target,
+  Heart,
+  Eye,
+  Activity,
+  Code,
+  Server,
+  Network,
+  Phone,
+  Mail,
+  MapPin,
+  DollarSign,
+  Clock,
+  Award,
+  Lightbulb,
+  Sparkles} from 'lucide-react';
+
+export function AIMicroSaaSPlatform() {
+  const features = [
+    {
+
+      icon: Brain,
+      title: 'AI-Powered Automation',
+      description:'
+        'Intelligent workflow automation with machine learning capabilities',
+      benefits: ['
+        'Reduce manual tasks by 80%',Smart decision making',Predictive analytics',
+      ]},
+    {
+
+      icon: Shield,
+      title: 'Enterprise Security',
+      description:'
+        'Bank-grade security with SOC2 compliance and zero-trust architecture',
+      benefits: ['
+        'End-to-end encryption',Multi-factor authentication',Regular security audits',
+      ]},
+    {
+
+      icon: Users,
+      title: 'Multi-Tenant Architecture',
+      description:'
+        'Scalable platform supporting unlimited users and organizations',
+      benefits: ['
+        'Role-based access control',Custom branding options',White-label solutions',
+      ]},
+    {
+
+      icon: BarChart3,
+      title: 'Advanced Analytics',
+      description:'
+        'Real-time insights and predictive analytics for business growth',
+      benefits: ['
+        'Custom dashboards',AI-powered insights',Performance tracking',
+      ]},
+    {
+
+      icon: Rocket,
+      title: 'Rapid Deployment',
+      description: 'Deploy your SaaS solution in minutes, not months',
+      benefits: ['
+        'Pre-built templates',One-click deployment',Instant scaling',
+      ]},
+    {
+
+      icon: Cloud,
+      title: 'Cloud-Native',
+      description:'
+        'Built for the cloud with automatic scaling and high availability',
+      benefits: ['
+        '99.9% uptime guarantee',Global CDN',Auto-scaling infrastructure',
+      ]},
+  ];
+
+  const pricingPlans = [
+    {
+
+      name: 'Starter',
+      price: '$99',
+      period: '/month',
+      description: 'Perfect for small businesses and startups',
+      features: ['
+        'Up to 100 users',Basic AI automation',Standard security',Email support',5GB storage',Basic analytics',
+      ],
+      cta: 'Start Free Trial',
+      popular: false},
+    {
+
+      name: 'Professional',
+      price: '$299',
+      period: '/month',
+      description: 'Ideal for growing businesses',
+      features: ['
+        'Up to 1,000 users',Advanced AI features',Enhanced security',Priority support',50GB storage',Advanced analytics',Custom integrations',White-label options',
+      ],
+      cta: 'Start Free Trial',
+      popular: true},
+    {
+
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
+      description: 'For large organizations with custom needs',
+      features: ['
+        'Unlimited users',Full AI capabilities',Enterprise security',24/7 dedicated support',Unlimited storage',Custom AI models',On-premise options',SLA guarantees',
+      ],
+      cta: 'Contact Sales',
+      popular: false},
+  ];
+
+  const useCases = [
+    {
+
+      title: 'E-commerce Platforms',
+      description:'
+        'Build intelligent online stores with AI-powered recommendations',
+      icon: ShoppingCart,
+      benefits: ['
+        'Smart product suggestions',Inventory optimization',Customer behavior analysis',
+      ]},
+    {
+
+      title: 'CRM Systems',
+      description: 'AI-enhanced customer relationship management',
+      icon: Users,
+      benefits: ['Lead scoring',Sales forecasting',Customer insights']},
+    {
+
+      title: 'Project Management',
+      description: 'Intelligent project planning and resource allocation',
+      icon: Target,
+      benefits: ['
+        'Risk assessment',Resource optimization',Timeline predictions',
+      ]},
+    {
+
+      title: 'Marketing Automation',
+      description: 'AI-driven marketing campaigns and customer engagement',
+      icon: TrendingUp,
+      benefits: ['
+        'Personalized content',Campaign optimization',ROI tracking',
+      ]},
+  ];
+
+  return()
+    <div className="min-h-screen bg-gray-900 text-white">
+=======
 import React from 'react';'
 import { motion } from 'framer-motion';'
 import { Link } from 'react-router-dom';    <div className="min-h-screen bg-gray-900 text-white">
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       {/* Hero Section */}"
       <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
@@ -23,13 +191,13 @@ import { Link } from 'react-router-dom';    <div className="min-h-screen bg-gray
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Building Today"
                 <ArrowRight className="ml-2 w-5 h-5" />              </Link>
               <Link"
-                to="/pricing""
+                to="/pricing"
                 className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >
                 View Pricing
@@ -233,13 +401,13 @@ import { Link } from 'react-router-dom';    <div className="min-h-screen bg-gray
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Your Free Trial"
                 <ArrowRight className="ml-2 w-5 h-5" />              </Link>
               <Link"
-                to="/pricing""
+                to="/pricing"
                 className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >
                 View Full Pricing

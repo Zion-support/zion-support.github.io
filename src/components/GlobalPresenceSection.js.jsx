@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -10,112 +10,112 @@ import {
   TrendingUp,
   Building,
   ArrowRight,
-  CheckCircle,'
+  CheckCircle,
   Clock} from 'lucide-react';
 const globalStats = [
   {
 
-    icon: <Globe className="w-6 h-6" />,'
-    value: '25+','
+    icon: <Globe className="w-6 h-6" />,
+    value: '25+',
     label: 'Countries Served'},
   {
 "
-    icon: <Building className="w-6 h-6" />,'
-    value: '6','
-    label: 'Global Offices'},'"
+    icon: <Building className="w-6 h-6" />,
+    value: '6',
+    label: 'Global Offices'},"
   { icon: <Users className="w-6 h-6" />, value: '170+', label: 'Global Team' },
   {
 "
-    icon: <Award className="w-6 h-6" />,'
-    value: '500+','
+    icon: <Award className="w-6 h-6" />,
+    value: '500+',
     label: 'Projects Delivered'},
   {
 "
-    icon: <Star className="w-6 h-6" />,'
-    value: '4.8/5','
+    icon: <Star className="w-6 h-6" />,
+    value: '4.8/5',
     label: 'Global Rating'},
   {
 "
-    icon: <TrendingUp className="w-6 h-6" />,'
-    value: '98%','
+    icon: <TrendingUp className="w-6 h-6" />,
+    value: '98%',
     label: 'Client Satisfaction'},
 ];
 const partnerships = [
   {
-'
-    name: 'Microsoft','
-    type: 'Technology Partner','
+
+    name: 'Microsoft',
+    type: 'Technology Partner',
     logo: '/logos/microsoft.svg',
     description:'
-      'Strategic partnership for Azure cloud solutions and enterprise services','
+      'Strategic partnership for Azure cloud solutions and enterprise services',
     established: '2020',
-    projects: 25,'
+    projects: 25,
     status: 'Active'},
   {
-'
-    name: 'AWS','
-    type: 'Cloud Partner','
+
+    name: 'AWS',
+    type: 'Cloud Partner',
     logo: '/logos/aws.svg',
     description:'
-      'Premier consulting partner for AWS cloud infrastructure and solutions','
+      'Premier consulting partner for AWS cloud infrastructure and solutions',
     established: '2019',
-    projects: 42,'
+    projects: 42,
     status: 'Active'},
   {
-'
-    name: 'Google Cloud','
-    type: 'Cloud Partner','
-    logo: '/logos/google-cloud.svg','
-    description: 'Partner for AI/ML solutions and cloud-native applications','
+
+    name: 'Google Cloud',
+    type: 'Cloud Partner',
+    logo: '/logos/google-cloud.svg',
+    description: 'Partner for AI/ML solutions and cloud-native applications',
     established: '2021',
-    projects: 18,'
+    projects: 18,
     status: 'Active'},
   {
-'
-    name: 'Salesforce','
-    type: 'Business Partner','
+
+    name: 'Salesforce',
+    type: 'Business Partner',
     logo: '/logos/salesforce.svg',
     description:'
-      'Consulting partner for CRM implementations and custom solutions','
+      'Consulting partner for CRM implementations and custom solutions',
     established: '2020',
-    projects: 31,'
+    projects: 31,
     status: 'Active'},
   {
-'
-    name: 'Oracle','
-    type: 'Enterprise Partner','
-    logo: '/logos/oracle.svg','
-    description: 'Partner for enterprise database and business applications','
+
+    name: 'Oracle',
+    type: 'Enterprise Partner',
+    logo: '/logos/oracle.svg',
+    description: 'Partner for enterprise database and business applications',
     established: '2021',
-    projects: 15,'
+    projects: 15,
     status: 'Active'},
   {
-'
-    name: 'IBM','
-    type: 'Technology Partner','
+
+    name: 'IBM',
+    type: 'Technology Partner',
     logo: '/logos/ibm.svg',
     description:'
-      'Strategic partner for AI, blockchain, and enterprise solutions','
+      'Strategic partner for AI, blockchain, and enterprise solutions',
     established: '2022',
-    projects: 12,'
+    projects: 12,
     status: 'Active'},
 ];
 const industries = [
   {
-'
+
     name: 'Financial Services',
     projects: 120,
-    countries: 18,'
-    satisfaction: '99%'},'
-  { name: 'Healthcare', projects: 85, countries: 15, satisfaction: '98%' },'
+    countries: 18,
+    satisfaction: '99%'},
+  { name: 'Healthcare', projects: 85, countries: 15, satisfaction: '98%' },
   { name: 'Manufacturing', projects: 95, countries: 22, satisfaction: '97%' },
   {
-'
+
     name: 'Retail & E-commerce',
     projects: 110,
-    countries: 20,'
-    satisfaction: '98%'},'
-  { name: 'Technology', projects: 150, countries: 25, satisfaction: '99%' },'
+    countries: 20,
+    satisfaction: '98%'},
+  { name: 'Technology', projects: 150, countries: 25, satisfaction: '99%' },
   { name: 'Education', projects: 65, countries: 12, satisfaction: '96%' },
 ];
 export function GlobalPresenceSection() {
@@ -141,7 +141,7 @@ export function GlobalPresenceSection() {
       opacity: 1,
       transition: {
 
-        duration: 0.6,'
+        duration: 0.6,
         ease: 'easeOut'}}};
   return ("
     <section className="py-20 bg-gradient-to-br from-zion-purple via-zion-slate-dark to-zion-blue relative overflow-hidden">
@@ -161,7 +161,7 @@ export function GlobalPresenceSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >"
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">'
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Global{' '}"
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Presence
@@ -206,7 +206,7 @@ export function GlobalPresenceSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >"
-          <h3 className="text-3xl font-bold text-white text-center mb-12">'
+          <h3 className="text-3xl font-bold text-white text-center mb-12">
             Our{' '}"
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Global Offices
@@ -303,7 +303,7 @@ export function GlobalPresenceSection() {
                     {selectedOffice === office.id && (
                       <motion.div"
                         className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30"
-                        initial={{ opacity: 0, height: 0, y: 10 }}'
+                        initial={{ opacity: 0, height: 0, y: 10 }}
                         animate={{ opacity: 1, height: 'auto', y: 0 }}
                         exit={{ opacity: 0, height: 0, y: 10 }}
                         transition={{ duration: 0.3 }}
@@ -343,7 +343,7 @@ export function GlobalPresenceSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >"
-          <h3 className="text-3xl font-bold text-white text-center mb-12">'
+          <h3 className="text-3xl font-bold text-white text-center mb-12">
             Strategic{' '}"
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Partnerships
@@ -414,7 +414,7 @@ export function GlobalPresenceSection() {
                     {selectedPartnership === index && (
                       <motion.div"
                         className="mt-4 p-3 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30"
-                        initial={{ opacity: 0, height: 0, y: 10 }}'
+                        initial={{ opacity: 0, height: 0, y: 10 }}
                         animate={{ opacity: 1, height: 'auto', y: 0 }}
                         exit={{ opacity: 0, height: 0, y: 10 }}
                         transition={{ duration: 0.3 }}
@@ -440,7 +440,7 @@ export function GlobalPresenceSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >"
-          <h3 className="text-3xl font-bold text-white text-center mb-12">'
+          <h3 className="text-3xl font-bold text-white text-center mb-12">
             Industry{' '}"
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Presence
@@ -508,7 +508,7 @@ export function GlobalPresenceSection() {
               <h3 className="text-2xl font-bold text-white mb-4">
                 Ready to Go Global with Zion?
               </h3>"
-              <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">'
+              <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
                 Whether you're in San Francisco or Singapore, our global team is
                 ready to help you scale your business worldwide with
                 cutting-edge technology solutions.

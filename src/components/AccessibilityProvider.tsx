@@ -1,7 +1,33 @@
+<<<<<<< HEAD
+import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon  } from 'lucide-react';
+
+interface AccessibilityContextType {
+  highContrast: boolean;
+  toggleHighContrast: () => void;
+  reducedMotion: boolean;
+  toggleReducedMotion: () => void;
+  fontSize: number;
+  increaseFontSize: () => void;
+  decreaseFontSize: () => void;
+  resetFontSize: () => void;
+  showSkipLinks: boolean;
+  setShowSkipLinks: (show: boolean) => void;
+  voiceNavigation: boolean;
+  toggleVoiceNavigation: () => void}
+
+const AccessibilityContext = createContext < AccessibilityContextType | null> (null) ;
+
+  const context = useContext (AccessibilityContext) ;
+  if (!context) {
+
+=======
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react.ts';'
 import { motion, AnimatePresence  } from 'framer-motion.ts';'
 import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon  } from 'lucide-react';  if (!context) {
 '
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     throw new Error('useAccessibility must be used within an AccessibilityProvider')}
   return context};
 
@@ -19,7 +45,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
   // Load accessibility preferences from localStorage
   useEffect(() => {
-'
+
     const savedVoiceNavigation = localStorage.getItem('zion-voice-navigation') === 'true';
 
     setHighContrast (savedHighContrast) ;
@@ -32,16 +58,16 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     const root = document.documentElement;
     // Apply high contrast
     if (highContrast) {
-'
+
       root.classList.add('high-contrast')} else {
-'
+
       root.classList.remove('high-contrast')}
 
     // Apply reduced motion
     if (reducedMotion) {
-'
+
       root.classList.add('reduce-motion')} else {
-'
+
       root.classList.remove('reduce-motion')}
 
     // Apply font size
@@ -51,50 +77,55 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   useEffect(() => {
         setTimeout(() => setShowSkipLinks(false), 5000)}
 
-      // High contrast toggle (Alt + H)'
+      // High contrast toggle (Alt + H)
       if (event.altKey && event.key = == 'h') {;
         event.preventDefault();
         toggleHighContrast()}
 
-      // Font size controls (Alt + Plus/Minus)'
+      // Font size controls (Alt + Plus/Minus)
       if (event.altKey && event.key = == '+') {;
         event.preventDefault();
         increaseFontSize();
+<<<<<<< HEAD
+      }
+      if (event.altKey && event.key = == '-') {;
+=======
       }'      if (event.altKey && event.key = == '-') {;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         event.preventDefault () ;
         decreaseFontSize () }
     };
-'
-    document.addEventListener('keydown', handleKeyDown);'
+
+    document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, []);
 
   const toggleHighContrast = (...args: unknown[]): unknown => {;
     const newValue = !highContrast;
-    setHighContrast(newValue);'
+    setHighContrast(newValue);
     localStorage.setItem('zion-high-contrast', newValue.toString())};
 
   const toggleReducedMotion = (...args: unknown[]): unknown => {;
     const newValue = !reducedMotion;
-    setReducedMotion(newValue);'
+    setReducedMotion(newValue);
     localStorage.setItem('zion-reduced-motion', newValue.toString())};
 
   const increaseFontSize = () => {;
     const newSize = Math.min(fontSize + 2, 24);
-    setFontSize(newSize);'
+    setFontSize(newSize);
     localStorage.setItem('zion-font-size', newSize.toString())};
 
   const decreaseFontSize = () => {;
     const newSize = Math.max(fontSize - 2, 12);
-    setFontSize(newSize);'
+    setFontSize(newSize);
     localStorage.setItem('zion-font-size', newSize.toString())};
 
   const resetFontSize = () => {;
-    setFontSize(16);'
-    localStorage.setItem('zion-font-size', '16')};
+    setFontSize(16);
+    localStorage.setItem('zion-font-size',16')};
 
   const toggleVoiceNavigation = (...args: unknown[]): unknown => {;
     const newValue = !voiceNavigation;
-    setVoiceNavigation(newValue);'
+    setVoiceNavigation(newValue);
     localStorage.setItem('zion-voice-navigation', newValue.toString())};
 
   const value = {
@@ -145,13 +176,13 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 "
             <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-4">
               <a"
-                href="#main-content""
+                href="#main-content"
                 className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black"
 
                 Skip to main content
               </a>
               <a"
-                href="#navigation""
+                href="#navigation"
                 className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black"
 
                 Skip to navigation
@@ -192,10 +223,10 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
             <button
               onClick={toggleHighContrast}`
               className={`p-2 rounded-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
-'
+
                 highContrast ? 'bg-zion-cyan text-black' : 'bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10'`
               }`}"
-              aria-label="Toggle high contrast""
+              aria-label="Toggle high contrast"
               title="Toggle high contrast (Alt + H)"
 "
               <Braille className="w-4 h-4" />            </button>
@@ -203,18 +234,18 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
             <button
               onClick={toggleReducedMotion}`
               className={`p-2 rounded-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
-'
+
                 reducedMotion ? 'bg-zion-cyan text-black' : 'bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10'`
               }`}"
-              aria-label="Toggle reduced motion""
+              aria-label="Toggle reduced motion"
               title="Toggle reduced motion"
 "
               {reducedMotion ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}            </button>
 
             <button
               onClick={increaseFontSize}"
-              className="p-2 rounded-md bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan""
-              aria-label="Increase font size""
+              className="p-2 rounded-md bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+              aria-label="Increase font size"
               title="Increase font size (Alt + +)"
 
               A+
@@ -222,8 +253,8 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
             <button
               onClick={decreaseFontSize}"
-              className="p-2 rounded-md bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan""
-              aria-label="Decrease font size""
+              className="p-2 rounded-md bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+              aria-label="Decrease font size"
               title="Decrease font size (Alt + -)"
 
               A-
@@ -231,8 +262,8 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
             <button
               onClick={resetFontSize}"
-              className="p-2 rounded-md bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan""
-              aria-label="Reset font size""
+              className="p-2 rounded-md bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+              aria-label="Reset font size"
               title="Reset font size"
 
               A
@@ -257,7 +288,7 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
     if (!isActive) return;
 
     const focusableElements = document.querySelectorAll(;'"
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]);
     );
 
     const firstElement = focusableElements[0] as HTMLElement;
@@ -270,8 +301,8 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
           firstElement.focus () }
       }
     };
-'
-    document.addEventListener('keydown', handleKeyDown);'
+
+    document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, [isActive]);
 
   return <>{children}</>};

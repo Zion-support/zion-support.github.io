@@ -1,6 +1,78 @@
+<<<<<<< HEAD
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { TrendingDown, 
+  Brain, 
+  BarChart3, 
+  Shield, 
+  Zap, 
+  Users, 
+  Target, 
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Clock,
+  DollarSign'
+ } from 'lucide-react';
+;
+const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
+
+  const features = [
+    {
+
+      icon: Brain,
+      title: "AI-Powered Predictions","
+      description: "Advanced machine learning models that predict customer churn with 95%+ accuracy using behavioral patterns and engagement metrics."
+    },
+    {
+
+      icon: BarChart3,"
+      title: "Real-time Analytics","
+      description: "Live dashboards showing customer health scores, risk factors, and predictive insights updated every 15 minutes."
+    },
+    {
+
+      icon: Target,"
+      title: "Proactive Interventions","
+      description: "Automated alerts and recommended actions to prevent churn before it happens, with success rate tracking.";
+    },;
+    {;
+      icon: Users,;"
+      title: "Customer Segmentation",;"
+      description: "Intelligent clustering of customers by risk level, value, and behavior patterns for targeted retention strategies.";
+    };
+  ];
+
+  const benefits = [;"
+    "Reduce customer churn by 40-60%",;"
+    "Increase customer lifetime value by 35%",;"
+    "Save $50K+ annually on customer acquisition",;"
+    "Improve customer satisfaction scores by 25%",;"
+    "Automate 80% of retention workflows";
+  ];
+
+  const integrations = [;"
+    "Salesforce, HubSpot, Pipedrive",;"
+    "Stripe, PayPal, Square",;"
+    "Intercom, Zendesk, Freshdesk",;"
+    "Google Analytics, Mixpanel, Amplitude",;"
+    "Slack, Microsoft Teams, Email";
+  ];
+
+  const pricing = [
+    {
+"
+      plan: "Starter","
+      price: "$299","
+      period: "/month","
+      features["Up to 1,000 customers", "Basic churn predictions", "Email alerts", "Standard support"],;
+      popular: false
+=======
 import React from 'react.ts';'
 import { SEO  } from '@/components/SEO';'
 import { motion  } from 'framer-motion.ts';      popular: false
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
 "
@@ -22,10 +94,18 @@ import { motion  } from 'framer-motion.ts';      popular: false
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO "
+<<<<<<< HEAD
+        title="AI Customer Churn Prediction Platform - Zion Tech Group"
+        description="Predict and prevent customer churn with AI-powered analytics. Reduce churn by 40-60% and increase customer lifetime value with our advanced machine learning platform."
+        keywords="customer churn prediction, AI analytics, customer retention, machine learning, predictive analytics, customer success"
+        canonical="https://ziontechgroup.com/services/ai-customer-churn-prediction"
+      />
+=======
         title="AI Customer Churn Prediction Platform - Zion Tech Group""
         description="Predict and prevent customer churn with AI-powered analytics. Reduce churn by 40-60% and increase customer lifetime value with our advanced machine learning platform.""
         keywords="customer churn prediction, AI analytics, customer retention, machine learning, predictive analytics, customer success""        canonical="https://ziontechgroup.com/services/ai-customer-churn-prediction"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -502,13 +582,13 @@ import { motion  } from 'framer-motion.ts';      popular: false
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
 
                 Start Free Trial"
                 <ArrowRight className="w-5 h-5 ml-2" />              </a>
               <a"
-                href="/contact""
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300"
 
                 Schedule Demo

@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';'
-import { cn } from '@/lib/utils';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState, useRef, useEffect } from 'react';
+import { cn } from '@/lib/utils';
+import { motion, AnimatePresence } from 'framer-motion';
 export function OptimizedImage({ src, alt, width, height, className, placeholder = '/images/placeholder.svg', fallback = '/images/fallback.svg', priority = false, sizes = '100vw', loading = 'lazy', onLoad, onError, aspectRatio = 'auto', objectFit = 'cover', blur = false, quality = 75 }) {
 
     const [isLoaded, setIsLoaded] = useState(false);
@@ -19,7 +19,7 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
                 setIsInView(true);
                 observerRef.current?.disconnect()}
         }, {
-'
+
             rootMargin: '50px',
             threshold: 0.1
         });
@@ -36,14 +36,14 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
         setHasError(true);
         onError?.()};
     const getAspectRatioClass = () => {
-'
+
         if (typeof aspectRatio === 'number') {
 
             return `aspect-[${aspectRatio}]`}
         switch (aspectRatio) {
-'
+
             case 'square':'
-                return 'aspect-square';'
+                return 'aspect-square';
             case 'video':'
                 return 'aspect-video';
             default:'
@@ -51,15 +51,15 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
     };
     const getObjectFitClass = () => {
         switch (objectFit) {
-'
+
             case 'cover':'
-                return 'object-cover';'
+                return 'object-cover';
             case 'contain':'
-                return 'object-contain';'
+                return 'object-contain';
             case 'fill':'
-                return 'object-fill';'
+                return 'object-fill';
             case 'none':'
-                return 'object-none';'
+                return 'object-none';
             case 'scale-down':'
                 return 'object-scale-down';
             default:'
@@ -67,31 +67,31 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
     };
     // Generate responsive image sources
     const generateSrcSet = (imageSrc) => {
-'
+
         if (!imageSrc.includes('http'))
-            return imageSrc;'
-        const baseUrl = imageSrc.split('?')[0];'
+            return imageSrc;
+        const baseUrl = imageSrc.split('?')[0];
         const params = new URLSearchParams(imageSrc.split('?')[1] || '');
         const widths = [320, 640, 768, 1024, 1280, 1920];
         const srcSet = widths;
             .filter(w => !width || w <= width)
             .map(w => {
-'
-            params.set('w', w.toString());'
+
+            params.set('w', w.toString());
             params.set('q', quality.toString());`
-            return `${baseUrl}?${params.toString()} ${w}w`})'
-            .join(', ');
+            return `${baseUrl}?${params.toString()} ${w}w`})
+            .join(',);
         return srcSet};
     const currentSrc = hasError ? fallback : (isInView ? src : placeholder);
     const srcSet = generateSrcSet(currentSrc);
     return (<div className = {
-'
+
   cn('relative overflow-hidden', getAspectRatioClass(),
   className)
 
 } style={{
 '`
-            width: width ? `${width}px` : 'auto','`
+            width: width ? `${width}px` : 'auto',`
             height: height ? `${height}px` : 'auto'
         }}>
       <AnimatePresence mode="wait">"
@@ -99,12 +99,12 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
       </AnimatePresence>
 
       <img ref={imgRef} src={currentSrc} alt={alt} width={width} height={height} className = {
-'
-  cn('w-full h-full transition-opacity duration-300', getObjectFitClass(),'
+
+  cn('w-full h-full transition-opacity duration-300', getObjectFitClass(),
   isLoaded ? 'opacity-100' : 'opacity-0')
 
 } loading={loading} sizes={sizes} srcSet={srcSet} onLoad={handleLoad} onError={handleError} style={{
-'
+
             filter: blur && !isLoaded ? 'blur(10px)' : 'none'
         }}/>
 
@@ -127,17 +127,17 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
 export function AvatarImage({ src, alt, size = 'md', className, ...props }) {
 
     const sizeClasses = {
-'
-  sm: 'w-8 h-8','
-        md: 'w-10 h-10','
-        lg: 'w-12 h-12','
+
+  sm: 'w-8 h-8',
+        md: 'w-10 h-10',
+        lg: 'w-12 h-12',
   xl: 'w-16 h-16'
     
 
 };"
     return (<OptimizedImage src={src} alt={alt} aspectRatio="square" objectFit="cover" className = {
-'
-  cn(sizeClasses[size], 'rounded-full',
+
+  cn(sizeClasses[size],rounded-full',
   className)
 
 } {...props}/>)}
@@ -145,7 +145,7 @@ export function AvatarImage({ src, alt, size = 'md', className, ...props }) {
 export function HeroImage({ src, alt, className, ...props }) {
 "
     return (<OptimizedImage src={src} alt={alt} aspectRatio="video" objectFit="cover" className = {
-'
+
   cn('w-full',
   className)
 

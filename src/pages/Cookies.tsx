@@ -1,5 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import {
   Cookie, 
@@ -18,8 +18,8 @@ import {
   Globe,
   BarChart3,
   Users'
-} from 'lucide-react';'
-import { Shield, Cookie, Settings, Eye, EyeOff, CheckCircle, XCircle, Info, ExternalLink } from 'lucide-react';'
+} from 'lucide-react';
+import { Shield, Cookie, Settings, Eye, EyeOff, CheckCircle, XCircle, Info, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 export default function Cookies() {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
@@ -33,111 +33,99 @@ export default function Cookies() {
 
   const cookieTypes = [
     {
-'
-      id: 'essential','
-      name: 'Essential Cookies','
+
+      id: 'essential',
+      name: 'Essential Cookies',
       description: 'These cookies are necessary for the website to function and cannot be switched off.',
       examples: ['
-        'Authentication cookies','
-        'Security cookies','
-        'Session management','
-        'Load balancing'
+        'Authentication cookies',Security cookies',Session management',Load balancing'
       ],
-      icon: Shield,'
+      icon: Shield,
       color: 'from-blue-500 to-cyan-500',
       alwaysActive: true
     },
     {
-'
-      id: 'analytics','
-      name: 'Analytics Cookies','
+
+      id: 'analytics',
+      name: 'Analytics Cookies',
       description: 'These cookies help us understand how visitors interact with our website.',
       examples: ['
-        'Page views and navigation','
-        'User behavior patterns','
-        'Performance metrics','
-        'Error tracking'
+        'Page views and navigation',User behavior patterns',Performance metrics',Error tracking'
       ],
-      icon: BarChart3,'
+      icon: BarChart3,
       color: 'from-purple-500 to-pink-500'
     },
     {
-'
-      id: 'marketing','
-      name: 'Marketing Cookies','
+
+      id: 'marketing',
+      name: 'Marketing Cookies',
       description: 'These cookies are used to deliver personalized advertisements.',
       examples: ['
-        'Ad targeting','
-        'Campaign performance','
-        'User preferences','
-        'Conversion tracking'
+        'Ad targeting',Campaign performance',User preferences',Conversion tracking'
       ],
-      icon: Users,'
+      icon: Users,
       color: 'from-orange-500 to-red-500'
     },
     {
-'
-      id: 'functional','
-      name: 'Functional Cookies','
+
+      id: 'functional',
+      name: 'Functional Cookies',
       description: 'These cookies enable enhanced functionality and personalization.',
       examples: ['
-        'Language preferences','
-        'Theme settings','
-        'Form data storage','
-        'Social media integration'
+        'Language preferences',Theme settings',Form data storage',Social media integration'
       ],
-      icon: Settings,'
+      icon: Settings,
       color: 'from-green-500 to-emerald-500'
     }
   ];
 
   const cookieDetails = [
     {
-'
-      name: '_ga','
-      purpose: 'Google Analytics - Used to distinguish unique users','
-      duration: '2 years','
-      provider: 'Google LLC','
+
+      name: '_ga',
+      purpose: 'Google Analytics - Used to distinguish unique users',
+      duration: '2 years',
+      provider: 'Google LLC',
       type: 'analytics'
     },
     {
-'
-      name: '_gid','
-      purpose: 'Google Analytics - Used to distinguish users','
-      duration: '24 hours','
-      provider: 'Google LLC','
+
+      name: '_gid',
+      purpose: 'Google Analytics - Used to distinguish users',
+      duration: '24 hours',
+      provider: 'Google LLC',
       type: 'analytics'
     },
     {
-'
-      name: '_gat','
-      purpose: 'Google Analytics - Used to throttle request rate','
-      duration: '1 minute','
-      provider: 'Google LLC','
+
+      name: '_gat',
+      purpose: 'Google Analytics - Used to throttle request rate',
+      duration: '1 minute',
+      provider: 'Google LLC',
       type: 'analytics'
     },
     {
-'
-      name: 'session_id','
-      purpose: 'Maintains user session state','
-      duration: 'Session','
-      provider: 'Zion Tech Group','
+
+      name: 'session_id',
+      purpose: 'Maintains user session state',
+      duration: 'Session',
+      provider: 'Zion Tech Group',
       type: 'essential'
     },
     {
-'
-      name: 'csrf_token','
-      purpose: 'Cross-site request forgery protection','
-      duration: 'Session','
-      provider: 'Zion Tech Group','
+
+      name: 'csrf_token',
+      purpose: 'Cross-site request forgery protection',
+      duration: 'Session',
+      provider: 'Zion Tech Group',
       type: 'essential'
     },
     {
-'
-      name: 'user_preferences','
-      purpose: 'Stores user interface preferences','
-      duration: '1 year','
-      provider: 'Zion Tech Group','
+
+      name: 'user_preferences',
+      purpose: 'Stores user interface preferences',
+      duration: '1 year',
+      provider: 'Zion Tech Group',
       type: 'functional'
     }
   ];
@@ -147,7 +135,7 @@ export default function Cookies() {
     setExpandedSection(expandedSection === sectionId ? null : sectionId);
   };
   const updateCookiePreference = (type: string, enabled: boolean) => {
-'
+
     if (type === 'essential') return; // Essential cookies cannot be disabled
     
     setCookiePreferences(prev => ({
@@ -429,7 +417,7 @@ export default function Cookies() {
                       <div className="text-gray-300">{cookie.provider}</div>
                       <div>`
                         <span className={`px-2 py-1 rounded text-xs font-medium ${
-'
+
                           cookie.type === 'essential' ? 'bg-blue-500/20 text-blue-400' :'
                           cookie.type === 'analytics' ? 'bg-purple-500/20 text-purple-400' :'
                           cookie.type === 'marketing' ? 'bg-orange-500/20 text-orange-400' :'
@@ -473,7 +461,7 @@ export default function Cookies() {
                   Most browsers allow you to control cookies through their settings menu
                 </p>
                 <a"
-                  href="#""
+                  href="#"
                   className="text-cyan-400 hover:text-cyan-300 text-sm font-medium"
                 >
                   Learn More →
@@ -495,7 +483,7 @@ export default function Cookies() {
                   Use privacy tools and browser extensions to manage cookies
                 </p>
                 <a"
-                  href="#""
+                  href="#"
                   className="text-purple-400 hover:text-purple-300 text-sm font-medium"
                 >
                   Learn More →
@@ -517,7 +505,7 @@ export default function Cookies() {
                   Configure global privacy settings for all websites
                 </p>
                 <a"
-                  href="#""
+                  href="#"
                   className="text-green-400 hover:text-green-300 text-sm font-medium"
                 >
                   Learn More →
@@ -540,18 +528,18 @@ export default function Cookies() {
               Questions About Cookies?
             </h2>"
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              If you have any questions about our cookie policy or how we use cookies, '
+              If you have any questions about our cookie policy or how we use cookies,
               please don't hesitate to contact us.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="mailto:privacy@ziontechgroup.com""
+                href="mailto:privacy@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-orange-400 to-red-500 text-white font-semibold rounded-lg hover:from-orange-500 hover:to-red-600 transition-all duration-200 hover:scale-105"
               >"
                 <Info className="w-5 h-5 mr-2" />                Contact Privacy Team
               </a>
               <a"
-                href="/privacy""
+                href="/privacy"
                 className="inline-flex items-center px-8 py-3 border border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-white transition-all duration-200"
               >"
                 <Shield className="w-5 h-5 mr-2" />                Privacy Policy
@@ -608,7 +596,7 @@ export default function Cookies() {
                       onClick={() => handleCookieToggle(category.id)}`
                       className={`flex items-center px-4 py-2 rounded-lg transition-colors ${
 
-                        cookiePreferences[category.id as keyof typeof cookiePreferences]'
+                        cookiePreferences[category.id as keyof typeof cookiePreferences]
                           ? 'bg-green-600 hover:bg-green-700 text-white''
                           : 'bg-gray-600 hover:bg-gray-700 text-white'`
                       }`}
@@ -681,7 +669,7 @@ export default function Cookies() {
               Our cookie usage complies with applicable data protection laws and regulations.
             </p>
             <Link"
-              to="/privacy""
+              to="/privacy"
               className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium"
             >
               Read Privacy Policy"
@@ -768,13 +756,13 @@ export default function Cookies() {
           "
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
+              to="/contact"
               className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors"
             >"
               <Shield className="w-5 h-5 mr-2" />              Contact Privacy Team
             </Link>
             <Link"
-              to="/privacy""
+              to="/privacy"
               className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors"
             >"
               <Info className="w-5 h-5 mr-2" />              Privacy Policy

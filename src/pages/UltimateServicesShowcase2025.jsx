@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 // import { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from "../data/ultimateMicroSaasServices2025";"
 // import { INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 } from "../data/innovativeEnterpriseSolutions2025";"
-// import { EMERGING_TECHNOLOGY_SOLUTIONS_2025 } from "../data/emergingTechnologySolutions2025";'
-// import { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from '../data/ultimateMicroSaasServices2025';'
-// import { INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 } from '../data/innovativeEnterpriseSolutions2025';'
+// import { EMERGING_TECHNOLOGY_SOLUTIONS_2025 } from "../data/emergingTechnologySolutions2025";
+// import { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from '../data/ultimateMicroSaasServices2025';
+// import { INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 } from '../data/innovativeEnterpriseSolutions2025';
 // import { EMERGING_TECHNOLOGY_SOLUTIONS_2025 } from '../data/emergingTechnologySolutions2025';
 const UltimateServicesShowcase2025 = () => {
-'
-    const [selectedCategory, setSelectedCategory] = useState('all');'
-    const [selectedPriceRange, setSelectedPriceRange] = useState('all');'
-    const [searchTerm, setSearchTerm] = useState('');'
+
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+    const [searchTerm, setSearchTerm] = useState('');
     const [sortBy, setSortBy] = useState('name');
     // Combine all services
     const allServices = [
@@ -22,8 +22,8 @@ const UltimateServicesShowcase2025 = () => {
     // Filter and sort services
     const filteredServices = allServices;
         .filter(service => {
-'
-        const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;'
+
+        const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
         const priceMatch = selectedPriceRange === 'all' ||'
             (selectedPriceRange === 'low' && service.price < 5000) ||'
             (selectedPriceRange === 'medium' && service.price >= 5000 && service.price < 15000) ||'
@@ -35,11 +35,11 @@ const UltimateServicesShowcase2025 = () => {
         .sort((a, b) => {
 
         switch (sortBy) {
-'
+
             case 'price':
-                return a.price - b.price;'
+                return a.price - b.price;
             case 'name':
-                return a.title.localeCompare(b.title);'
+                return a.title.localeCompare(b.title);
             case 'category':
                 return a.category.localeCompare (b.category) ;
             default:
@@ -54,9 +54,9 @@ const UltimateServicesShowcase2025 = () => {
     const getSupportLevelColor = (level) => {
 
         switch (level) {
-'
+
             case 'enterprise':'
-                return 'bg-purple-600';'
+                return 'bg-purple-600';
             case 'premium':'
                 return 'bg-blue-600';
             default:'
@@ -107,7 +107,7 @@ const UltimateServicesShowcase2025 = () => {
             <div>"
               <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>"
               <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-                {categories.map(category => (<option key={category} value={category}>'
+                {categories.map(category => (<option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category}
                   </option>) ) }
               </select>

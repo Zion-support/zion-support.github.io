@@ -52,8 +52,7 @@ class ResourceMonitor {
       if (event.reason &&
         typeof event.reason === 'string' &&
         event.reason.includes ('MIME') ) {
-        this.handleResourceError ('unknown',
-          'other',
+        this.handleResourceError ('unknown',other',
           `MIME type error: ${event.reason}`) ;
       }
     }) ;
@@ -92,27 +91,20 @@ class ResourceMonitor {
 
   private monitorScript (script: anyHTMLScriptElement) {
     script.addEventListener ('error', () => {
-      this.handleResourceError (script.src, 'script', 'Script loading failed') ;
+      this.handleResourceError (script.src,script',Script loading failed') ;
     }) ;
   }
 
   private monitorStylesheet (link: anyHTMLLinkElement) {
     link.addEventListener ('error', () => {
-      this.handleResourceError (link.href,
-        'stylesheet',
-        'Stylesheet loading failed') ;
+      this.handleResourceError (link.href,stylesheet',Stylesheet loading failed') ;
     }) ;
   }
 
   private monitorCriticalResources () {
     // Monitor critical CSS and JS files
     const criticalResources = [
-      '/css / index - RK9lga5l.css',
-      '/js / index - C64WnLOI.js',
-      '/js / react - vendor - ClxMxoJB.js',
-      '/js / router - vendor - 9KcRWrrL.js',
-      '/js / ui - vendor - B31yGDq-.js',
-      '/js / utils - vendor - CrFdsnXa.js',
+      '/css / index - RK9lga5l.css',/js / index - C64WnLOI.js',/js / react - vendor - ClxMxoJB.js',/js / router - vendor - 9KcRWrrL.js',/js / ui - vendor - B31yGDq-.js',/js / utils - vendor - CrFdsnXa.js',
     ];
 
     criticalResources.forEach (resource => {
@@ -125,30 +117,27 @@ class ResourceMonitor {
       const response = await fetch (url, { method: 'HEAD' }) ;
 
       if (!response.ok) {
-        this.handleResourceError (url,
-          'other',
+        this.handleResourceError (url,other',
           `HTTP ${response.status}: ${response.statusText}`) ;
         return;
       }
 
       const contentType = response.headers.get ('content - type') ;
       if (!contentType) {
-        this.handleResourceError (url, 'other', 'No content - type header') ;
+        this.handleResourceError (url,other',No content - type header') ;
         return;
       }
 
       // Check for MIME type issues
       if (url.endsWith ('.js') && !contentType.includes ('javascript') ) {
-        this.handleResourceError (url,
-          'script',
+        this.handleResourceError (url,script',
           `Incorrect MIME type: ${contentType} (expected javascript) `) ;
       } else if (url.endsWith ('.css') && !contentType.includes ('css') ) {
-        this.handleResourceError (url,
-          'stylesheet',
+        this.handleResourceError (url,stylesheet',
           `Incorrect MIME type: ${contentType} (expected css) `) ;
       }
     } catch (error) {
-      this.handleResourceError (url, 'other', `Fetch error: ${error}`) ;
+      this.handleResourceError (url,other', `Fetch error: ${error}`) ;
     }
   }
 

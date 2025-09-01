@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -11,103 +11,82 @@ import {
   Shield,
   Cloud,
   Globe,
-  Rocket,'
-  Star} from 'lucide-react.ts';'
+  Rocket,
+  Star} from 'lucide-react.ts';
 import { Link } from 'react-router-dom.ts';
 
 const EmergingTech: React.FC = (): JSX.Element => {
 
   const technologies = [
     {
-'
+
       title: 'Quantum Computing',
       description:'
         'Revolutionary quantum computing solutions for complex problem-solving and optimization.',
-      icon: Atom,'
+      icon: Atom,
       path: '/services/quantum-computing',
       features: ['
-        'Quantum algorithms','
-        'Optimization problems','
-        'Cryptography','
-        'Machine learning',
+        'Quantum algorithms',Optimization problems',Cryptography',Machine learning',
       ]},
     {
-'
+
       title: 'IoT Edge Computing',
       description:'
         'Next-generation IoT solutions with edge computing capabilities for real-time processing.',
-      icon: Network,'
+      icon: Network,
       path: '/services/iot-edge-computing',
       features: ['
-        'Real-time processing','
-        'Low latency','
-        'Edge AI','
-        'Smart sensors',
+        'Real-time processing',Low latency',Edge AI',Smart sensors',
       ]},
     {
-'
+
       title: 'AI Quantum Hybrid Platform',
       description:'
         'Combining AI and quantum computing for unprecedented computational power.',
-      icon: Brain,'
+      icon: Brain,
       path: '/services/ai-quantum-hybrid-platform',
       features: ['
-        'Hybrid algorithms','
-        'Quantum ML','
-        'AI optimization','
-        'Quantum AI',
+        'Hybrid algorithms',Quantum ML',AI optimization',Quantum AI',
       ]},
     {
-'
+
       title: 'Space Technology',
       description:'
         'Cutting-edge space technology solutions for satellite and aerospace applications.',
-      icon: Satellite,'
+      icon: Satellite,
       path: '/space-tech',
       features: ['
-        'Satellite systems','
-        'Aerospace solutions','
-        'Space data','
-        'Orbital mechanics',
+        'Satellite systems',Aerospace solutions',Space data',Orbital mechanics',
       ]},
     {
-'
+
       title: 'Quantum Machine Learning',
       description:'
         'Quantum-enhanced machine learning algorithms for superior pattern recognition.',
-      icon: Atom,'
+      icon: Atom,
       path: '/services/quantum-machine-learning',
       features: ['
-        'Quantum neural networks','
-        'Pattern recognition','
-        'Optimization','
-        'Quantum algorithms',
+        'Quantum neural networks',Pattern recognition',Optimization',Quantum algorithms',
       ]},
     {
-'
+
       title: 'AI Predictive Maintenance',
       description:'
         'AI-powered predictive maintenance systems for industrial equipment and machinery.',
-      icon: TrendingUp,'
+      icon: TrendingUp,
       path: '/services/ai-predictive-maintenance',
       features: ['
-        'Equipment monitoring','
-        'Predictive analytics','
-        'Maintenance scheduling','
-        'Cost optimization',
+        'Equipment monitoring',Predictive analytics',Maintenance scheduling',Cost optimization',
       ]},
     {
-'
+
       title: 'Sustainable Technology',
       description:'
         'Green technology solutions for environmental sustainability and energy efficiency.',
-      icon: Leaf,'
+      icon: Leaf,
       path: '/services/sustainable-technology',
       features: ['
-        'Energy efficiency','
-        'Green computing','
-        'Carbon reduction','
-        'Sustainable AI',
+        'Energy efficiency',Green computing',Carbon reduction',Sustainable AI',
       ]},
   ];
 
@@ -130,7 +109,7 @@ const EmergingTech: React.FC = (): JSX.Element => {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Emerging Technologies
             </h1>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">'
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Discover the future of technology with Zion Tech Group's
               cutting-edge emerging technology solutions. From quantum computing'
               to sustainable AI, we're pushing the boundaries of what's
@@ -200,19 +179,19 @@ const EmergingTech: React.FC = (): JSX.Element => {
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Explore the Future?
           </h2>"
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">'
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Let's discuss how these emerging technologies can transform your
             business and give you a competitive edge.
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
+              to="/contact"
               className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:scale-105"
             >
               Get Started
             </Link>
             <Link"
-              to="/services""
+              to="/services"
               className="px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
             >
               View All Services

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';'
-import { motion } from 'framer-motion';'
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
 
@@ -64,11 +64,11 @@ import {
   Stopwatch,
   Microscope,
   Flask,
-  TestTube,'
+  TestTube,
   Beaker} from 'lucide-react';
 
 const AIHealthcarePlatform: React.FC = () => {
-'
+
   const [activeTab, setActiveTab] = useState('overview');
   const [isVisible, setIsVisible] = useState(false);
 
@@ -79,37 +79,37 @@ const AIHealthcarePlatform: React.FC = () => {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI Diagnostic Assistant',
       description:'
         'Advanced AI algorithms for accurate disease diagnosis and treatment recommendations'},
     {
 
-      icon: Heart,'
+      icon: Heart,
       title: 'Predictive Healthcare',
       description:'
         'Predict patient outcomes and identify health risks before they become critical'},
     {
 
-      icon: Stethoscope,'
+      icon: Stethoscope,
       title: 'Virtual Health Monitoring',
       description:'
         'Real-time health monitoring with AI-powered insights and alerts'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'HIPAA Compliant Security',
       description:'
         'Enterprise-grade security ensuring patient data privacy and compliance'},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Healthcare Analytics',
       description:'
         'Comprehensive analytics for population health and treatment effectiveness'},
     {
 
-      icon: Zap,'
+      icon: Zap,
       title: 'Automated Workflows',
       description:'
         'Streamlined healthcare processes with intelligent automation'},
@@ -117,203 +117,153 @@ const AIHealthcarePlatform: React.FC = () => {
 
   const healthcareModules = [
     {
-'
+
       name: 'Clinical Decision Support',
       features: ['
-        'Evidence-based recommendations','
-        'Drug interaction checking','
-        'Treatment protocols','
-        'Clinical guidelines',
+        'Evidence-based recommendations',Drug interaction checking',Treatment protocols',Clinical guidelines',
       ]},
     {
-'
+
       name: 'Medical Imaging AI',
       features: ['
-        'Radiology analysis','
-        'Pathology detection','
-        'Image enhancement','
-        'Automated reporting',
+        'Radiology analysis',Pathology detection',Image enhancement',Automated reporting',
       ]},
     {
-'
+
       name: 'Patient Management',
       features: ['
-        'Electronic health records','
-        'Appointment scheduling','
-        'Patient portals','
-        'Care coordination',
+        'Electronic health records',Appointment scheduling',Patient portals',Care coordination',
       ]},
     {
-'
+
       name: 'Telemedicine Platform',
       features: ['
-        'Video consultations','
-        'Remote monitoring','
-        'Secure messaging','
-        'Mobile apps',
+        'Video consultations',Remote monitoring',Secure messaging',Mobile apps',
       ]},
     {
-'
+
       name: 'Population Health',
       features: ['
-        'Disease surveillance','
-        'Risk stratification','
-        'Preventive care','
-        'Health trends',
+        'Disease surveillance',Risk stratification',Preventive care',Health trends',
       ]},
     {
-'
+
       name: 'Research & Analytics',
       features: ['
-        'Clinical trials','
-        'Data mining','
-        'Outcome analysis','
-        'Research insights',
+        'Clinical trials',Data mining',Outcome analysis',Research insights',
       ]},
   ];
 
   const pricingTiers = [
     {
-'
-      name: 'Clinic','
-      price: '$3,500','
-      period: '/month','
+
+      name: 'Clinic',
+      price: '$3,500',
+      period: '/month',
       description: 'Perfect for small clinics and medical practices',
       features: ['
-        'AI Diagnostic Support (up to 100 patients/month)','
-        'Basic Patient Management','
-        'Telemedicine Platform','
-        'HIPAA Compliance','
-        'Email Support','
-        'Standard Analytics','
-        'Mobile App Access',
-      ],'
-      marketPrice: '$4,500','
+        'AI Diagnostic Support (up to 100 patients/month),Basic Patient Management',Telemedicine Platform',HIPAA Compliance',Email Support',Standard Analytics',Mobile App Access',
+      ],
+      marketPrice: '$4,500',
       savings: '22%',
       popular: false},
     {
-'
-      name: 'Hospital','
-      price: '$8,500','
-      period: '/month','
+
+      name: 'Hospital',
+      price: '$8,500',
+      period: '/month',
       description: 'Ideal for hospitals and larger healthcare facilities',
       features: ['
-        'Advanced AI Diagnostics','
-        'Comprehensive Patient Management','
-        'Medical Imaging AI','
-        'Population Health Analytics','
-        'Clinical Decision Support','
-        'Priority Support','
-        'Custom Integration','
-        'Advanced Security','
-        'Training & Certification',
-      ],'
-      marketPrice: '$11,000','
+        'Advanced AI Diagnostics',Comprehensive Patient Management',Medical Imaging AI',Population Health Analytics',Clinical Decision Support',Priority Support',Custom Integration',Advanced Security',Training & Certification',
+      ],
+      marketPrice: '$11,000',
       savings: '23%',
       popular: true},
     {
-'
-      name: 'Enterprise','
-      price: '$18,000','
-      period: '/month','
+
+      name: 'Enterprise',
+      price: '$18,000',
+      period: '/month',
       description: 'For large healthcare systems and research institutions',
       features: ['
-        'Enterprise AI Platform','
-        'Unlimited Patient Capacity','
-        'Custom AI Models','
-        'Advanced Analytics','
-        'Research Tools','
-        '24/7 Dedicated Support','
-        'White-label Solutions','
-        'Custom Development','
-        'Compliance Consulting','
-        'Staff Training',
-      ],'
-      marketPrice: '$24,000','
+        'Enterprise AI Platform',Unlimited Patient Capacity',Custom AI Models',Advanced Analytics',Research Tools',24/7 Dedicated Support',White-label Solutions',Custom Development',Compliance Consulting',Staff Training',
+      ],
+      marketPrice: '$24,000',
       savings: '25%',
       popular: false},
   ];
 
   const benefits = [
     {
-'
+
       title: 'Improved Patient Outcomes',
       description:'
         'AI-powered diagnostics improve accuracy by 30% and reduce diagnostic errors by 50%',
       icon: Heart},
     {
-'
+
       title: 'Cost Reduction',
       description:'
         'Reduce healthcare costs by 25% through automation and predictive care',
       icon: TrendingUp},
     {
-'
+
       title: 'Enhanced Efficiency',
       description:'
         'Streamline workflows and reduce administrative burden by 40%',
       icon: Zap},
     {
-'
-      title: 'Better Care Coordination','
+
+      title: 'Better Care Coordination',
       description: 'Seamless integration across departments and care teams',
       icon: Users},
   ];
 
   const healthcareStats = [
     {
-'
-      metric: 'Diagnostic Accuracy','
-      value: '95%','
+
+      metric: 'Diagnostic Accuracy',
+      value: '95%',
       description: 'AI-powered diagnostic accuracy rate'},
     {
-'
-      metric: 'Response Time','
-      value: '< 2 minutes','
+
+      metric: 'Response Time',
+      value: '< 2 minutes',
       description: 'Average time for AI diagnosis'},
     {
-'
-      metric: 'Cost Savings','
-      value: '25%','
+
+      metric: 'Cost Savings',
+      value: '25%',
       description: 'Average reduction in healthcare costs'},
     {
-'
-      metric: 'Patient Satisfaction','
-      value: '94%','
+
+      metric: 'Patient Satisfaction',
+      value: '94%',
       description: 'Patient satisfaction with AI-enhanced care'},
   ];
 
   const useCases = [
     {
-'
+
       industry: 'Primary Care',
       applications: ['
-        'Preventive Care','
-        'Chronic Disease Management','
-        'Screening Programs','
-        'Health Education',
+        'Preventive Care',Chronic Disease Management',Screening Programs',Health Education',
       ]},
     {
-'
-      industry: 'Specialty Medicine','
-      applications: ['Oncology', 'Cardiology', 'Neurology', 'Radiology']},
+
+      industry: 'Specialty Medicine',
+      applications: ['Oncology',Cardiology',Neurology',Radiology']},
     {
-'
+
       industry: 'Emergency Care',
       applications: ['
-        'Triage','
-        'Critical Care','
-        'Trauma Assessment','
-        'Emergency Response',
+        'Triage',Critical Care',Trauma Assessment',Emergency Response',
       ]},
     {
-'
+
       industry: 'Research & Development',
       applications: ['
-        'Clinical Trials','
-        'Drug Discovery','
-        'Medical Research','
-        'Population Studies',
+        'Clinical Trials',Drug Discovery',Medical Research',Population Studies',
       ]},
   ];
 
@@ -347,13 +297,13 @@ const AIHealthcarePlatform: React.FC = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <Link"
-              to="/contact""
+              to="/contact"
               className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >"
               <Heart className="w-5 h-5 mr-2" />              Transform Healthcare
             </Link>
             <Link"
-              to="#demo""
+              to="#demo"
               className="inline-flex items-center px-8 py-4 rounded-lg border-2 border-green-500 text-green-300 font-semibold text-lg hover:bg-green-500 hover:text-white transition-all duration-300"
             >"
               <Eye className="w-5 h-5 mr-2" />              Watch Demo
@@ -696,13 +646,13 @@ const AIHealthcarePlatform: React.FC = () => {
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >"
                 <Heart className="w-5 h-5 mr-2" />                Schedule Healthcare Demo
               </Link>
               <Link"
-                to="https://ziontechgroup.com""
+                to="https://ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 rounded-lg border-2 border-green-500 text-green-300 font-semibold text-lg hover:bg-green-500 hover:text-white transition-all duration-300"
               >"
                 <Globe className="w-5 h-5 mr-2" />                Visit Our Website

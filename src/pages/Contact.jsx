@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -14,141 +14,134 @@ import {
   Linkedin,
   Twitter,
   Facebook,
-  Instagram,'
+  Instagram,
   Github} from 'lucide-react';
 
 const contactMethods = [
   {
 
-    icon: Phone,'
-    title: 'Phone','
-    value: '+1 302 464 0950','
-    description: 'Call us during business hours','
-    action: 'tel:+13024640950','
+    icon: Phone,
+    title: 'Phone',
+    value: '+1 302 464 0950',
+    description: 'Call us during business hours',
+    action: 'tel:+13024640950',
     color: 'from-blue-500 to-cyan-500'},
   {
 
-    icon: Mail,'
-    title: 'Email','
-    value: 'kleber@ziontechgroup.com','
-    description: 'Send us a message time','
-    action: 'mailto:kleber@ziontechgroup.com','
+    icon: Mail,
+    title: 'Email',
+    value: 'kleber@ziontechgroup.com',
+    description: 'Send us a message time',
+    action: 'mailto:kleber@ziontechgroup.com',
     color: 'from-purple-500 to-pink-500'},
   {
 
-    icon: MapPin,'
-    title: 'Address','
-    value: '364 E Main St STE 1008','
+    icon: MapPin,
+    title: 'Address',
+    value: '364 E Main St STE 1008',
     description: 'Middletown, DE 19709',
     action:'
-      'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709','
+      'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',
     color: 'from-green-500 to-emerald-500'},
   {
 
-    icon: Clock,'
-    title: 'Business Hours','
-    value: 'Mon - Fri: 9:00 AM - 6:00 PM','
+    icon: Clock,
+    title: 'Business Hours',
+    value: 'Mon - Fri: 9:00 AM - 6:00 PM',
     description: 'Eastern Time Zone',
-    action: null,'
+    action: null,
     color: 'from-orange-500 to-red-500'},
 ];
 ;
 const socialLinks = [
   {
-'
+
     name: 'LinkedIn',
-    icon: Linkedin,'
-    url: 'https://linkedin.com/company/ziontechgroup','
+    icon: Linkedin,
+    url: 'https://linkedin.com/company/ziontechgroup',
     color: 'hover:text-blue-500'},
   {
-'
+
     name: 'Twitter',
-    icon: Twitter,'
-    url: 'https://twitter.com/ziontechgroup','
+    icon: Twitter,
+    url: 'https://twitter.com/ziontechgroup',
     color: 'hover:text-sky-500'},
   {
-'
+
     name: 'Facebook',
-    icon: Facebook,'
-    url: 'https://facebook.com/ziontechgroup','
+    icon: Facebook,
+    url: 'https://facebook.com/ziontechgroup',
     color: 'hover:text-blue-600'},
   {
-'
+
     name: 'Instagram',
-    icon: Instagram,'
-    url: 'https://instagram.com/ziontechgroup','
+    icon: Instagram,
+    url: 'https://instagram.com/ziontechgroup',
     color: 'hover:text-pink-500'},
   {
-'
+
     name: 'GitHub',
-    icon: Github,'
-    url: 'https://github.com/ziontechgroup','
+    icon: Github,
+    url: 'https://github.com/ziontechgroup',
     color: 'hover:text-gray-400'},
 ];
 ;
 const contactFormFields = [
   {
-'
-    name: 'firstName','
-    label: 'First Name','
+
+    name: 'firstName',
+    label: 'First Name',
     type: 'text',
-    required: true,'
+    required: true,
     placeholder: 'Enter your first name'},
   {
-'
-    name: 'lastName','
-    label: 'Last Name','
+
+    name: 'lastName',
+    label: 'Last Name',
     type: 'text',
-    required: true,'
+    required: true,
     placeholder: 'Enter your last name'},
   {
-'
-    name: 'email','
-    label: 'Email','
+
+    name: 'email',
+    label: 'Email',
     type: 'email',
-    required: true,'
+    required: true,
     placeholder: 'Enter your email address'},
   {
-'
-    name: 'phone','
-    label: 'Phone','
+
+    name: 'phone',
+    label: 'Phone',
     type: 'tel',
-    required: false,'
-    placeholder: 'Enter your phone number (optional)'},
+    required: false,
+    placeholder: 'Enter your phone number (optional)},
   {
-'
-    name: 'comp','
-    label: 'Comp','
+
+    name: 'comp',
+    label: 'Comp',
     type: 'text',
-    required: false,'
-    placeholder: 'Enter your comp name (optional)'},
+    required: false,
+    placeholder: 'Enter your comp name (optional)},
   {
-'
-    name: 'service','
-    label: 'Service Interest','
+
+    name: 'service',
+    label: 'Service Interest',
     type: 'select',
     required: true,
     options: ['
-      'AI & Analytics','
-      'Cybersecurity','
-      'Cloud & DevOps','
-      'IoT & Edge Computing','
-      'Digital Transformation','
-      'Mobile Development','
-      'Micro SaaS Solutions','
-      'Other',
+      'AI & Analytics',Cybersecurity',Cloud & DevOps',IoT & Edge Computing',Digital Transformation',Mobile Development',Micro SaaS Solutions',Other',
     ]},
 ];
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-'
-    firstName: '','
-    lastName: '','
-    email: '','
-    phone: '','
-    comp: '','
-    service: '','
+
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    comp: '',
+    service: '',
     message: ''});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
@@ -177,13 +170,13 @@ export default function Contact() {
     setTimeout(() => {
       setSubmitSuccess(false);
       setFormData({
-'
-        firstName: '','
-        lastName: '','
-        email: '','
-        phone: '','
-        comp: '','
-        service: '','
+
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        comp: '',
+        service: '',
         message: ''});
     }, 3000);
   };
@@ -273,11 +266,11 @@ export default function Contact() {
 
                 {method.action && (
                   <a
-                    href={method.action}'
+                    href={method.action}
                     target={method.action.startsWith('http') ? '_blank' : null}
                     rel={
-'
-                      method.action.startsWith('http')'
+
+                      method.action.startsWith('http')
                         ? 'noopener noreferrer'
                         : null
                     }"
@@ -306,7 +299,7 @@ export default function Contact() {
               <h2 className="text-3xl font-bold text-white mb-6">
                 Send Us a Message
               </h2>"
-              <p className="text-zion-slate-light mb-8 leading-relaxed">'
+              <p className="text-zion-slate-light mb-8 leading-relaxed">
                 Fill out the form below and we'll get back to you within 24'
                 hours. We're excited to learn about your project and discuss how
                 we can help.
@@ -321,7 +314,7 @@ export default function Contact() {
                   <h3 className="text-2xl font-bold text-white mb-2">
                     Message Sent!
                   </h3>"
-                  <p className="text-green-200">'
+                  <p className="text-green-200">
                     Thank you for reaching out. We'll get back to you within 24
                     hours.
                   </p>
@@ -334,7 +327,7 @@ export default function Contact() {
                         <label
                           htmlFor={field.name}"
                           className="block text-white font-medium mb-2"
-                        >'
+                        >
                           {field.label}{' '}
                           {field.required && ("
                             <span className="text-red-400">*</span>
@@ -359,7 +352,7 @@ export default function Contact() {
                         <label
                           htmlFor={field.name}"
                           className="block text-white font-medium mb-2"
-                        >'
+                        >
                           {field.label}{' '}
                           {field.required && ("
                             <span className="text-red-400">*</span>
@@ -384,12 +377,12 @@ export default function Contact() {
                         <label
                           htmlFor={field.name}"
                           className="block text-white font-medium mb-2"
-                        >'
+                        >
                           {field.label}{' '}
                           {field.required && ("
                             <span className="text-red-400">*</span>
                           )}
-                        </label>'
+                        </label>
                         {field.type === 'select' ? (
                           <select
                             id={field.name}
@@ -424,19 +417,19 @@ export default function Contact() {
 
                   <div>
                     <label"
-                      htmlFor="message""
+                      htmlFor="message"
                       className="block text-white font-medium mb-2"
                     >"
                       Message <span className="text-red-400">*</span>
                     </label>
                     <textarea"
-                      id="message""
+                      id="message"
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
                       required
                       rows={6}"
-                      placeholder="Tell us about your project, goals, and how we can help...""
+                      placeholder="Tell us about your project, goals, and how we can help..."
                       className="w-full px-4 py-3 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none transition-colors duration-300 resize-none"
                     />
                   </div>
@@ -445,7 +438,7 @@ export default function Contact() {
                     type="submit"
                     disabled={isSubmitting}"
                     className="w-full px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                  >'
+                  >
                     {isSubmitting ? 'Sending Message...' : 'Send Message'}
                   </button>
                 </form>) }
@@ -483,7 +476,7 @@ export default function Contact() {
                     <a
                       key={social.name}
                       href={social.url}"
-                      target="_blank""
+                      target="_blank"
                       rel="noopener noreferrer"`
                       className={`p-3 bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-xl text-zion-slate-light ${social.color} hover:border-zion-cyan/40 transition-all duration-300`}
                       title={social.name}

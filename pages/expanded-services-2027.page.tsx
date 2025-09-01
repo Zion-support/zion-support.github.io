@@ -1,22 +1,22 @@
-import type { NextPage } from 'next';'
-import { Helmet } from 'react-helmet-async';'
+import type { NextPage } from 'next';
+import { Helmet } from 'react-helmet-async';
 import { useState, useMemo } from 'react';
 import { ALL_EXPANDED_SERVICES_2027 } from "../data/expandedInnovativeServices2027";
 
-const ExpandedServicesShowcase2027: NextPage = () => {;'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
-  const [selectedSubcategory, setSelectedSubcategory] = useState('all');'
+const ExpandedServicesShowcase2027: NextPage = () => {;
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedSubcategory, setSelectedSubcategory] = useState('all');
   const [viewMode, setViewMode] = useState<any>('grid');
 
   // Get unique categories and subcategories'
   const cats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.category)))];
     return cats;
   }, []);
-'
+
   const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.subcategory)))];
       return subcats;
-    }'
+    }
     const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.filter(s => s.category === selectedCategory).map(s => s.subcategory)))];
     return subcats}, [selectedCategory]);
 
@@ -32,9 +32,9 @@ const ExpandedServicesShowcase2027: NextPage = () => {;'
       
       return matchesSearch && matchesCategory && matchesSubcategory})}, [searchTerm, selectedCategory, selectedSubcategory]);
 
-  const resetFilters = () => {;'
-    setSearchTerm('');'
-    setSelectedCategory('all');'
+  const resetFilters = () => {;
+    setSearchTerm('');
+    setSelectedCategory('all');
     setSelectedSubcategory('all')};
 
   return ("
@@ -85,7 +85,7 @@ const ExpandedServicesShowcase2027: NextPage = () => {;'
         <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8">"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
             <input"
-              type="text""
+              type="text"
               placeholder="Search services..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)};"
@@ -95,13 +95,13 @@ const ExpandedServicesShowcase2027: NextPage = () => {;'
             <select;
               value={selectedCategory};
               onChange={(e) => {;
-                setSelectedCategory(e.target.value);'
+                setSelectedCategory(e.target.value);
                 setSelectedSubcategory('all');
               }}"
               className = "px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
             >
               {categories.map(cat  => ("
-                <option key={cat} value={cat} className="bg-gray-800 text-white">'
+                <option key={cat} value={cat} className="bg-gray-800 text-white">
                   {cat === 'all' ? 'All Categories' : cat}
                 </option>
               ))}
@@ -113,7 +113,7 @@ const ExpandedServicesShowcase2027: NextPage = () => {;'
               className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none focus:ring-2 focus:ring-blue-400"
             >
               {subcategories.map(subcat  => ("
-                <option key={subcat} value={subcat} className="bg-gray-800 text-white">'
+                <option key={subcat} value={subcat} className="bg-gray-800 text-white">
                   {subcat === 'all' ? 'All Subcategories' : subcat}
                 </option>
               ))}
@@ -135,7 +135,7 @@ const ExpandedServicesShowcase2027: NextPage = () => {;'
             <div className="flex items-center space-x-2">"
               <span className="text-white text-sm">View:</span>
               <button'
-                onClick={() => setViewMode('grid')}'
+                onClick={() => setViewMode('grid')}
                 className={`px-3 py-1 rounded ${viewMode === 'grid' ? 'bg-blue-600 text-white' : 'bg-white/20 text-white'}`}
 
                 Grid
@@ -156,21 +156,21 @@ const ExpandedServicesShowcase2027: NextPage = () => {;'
             <div
               key={service.id}`
               className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-blue-400 transition-all duration-300 ${
-'
+
                 viewMode === 'list' ? 'flex items-start space-x-4' : ''`
               }`}
-'
+
               {viewMode === 'list' && ("
                 <div className="flex-shrink-0 w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center text-white text-2xl font-bold">
                   {service.name.charAt(0)}
                 </div>
               )}
-'
+
               <div className={viewMode === 'list' ? 'flex-1' : ''}>"
                 <div className="flex items-start justify-between mb-3">"
                   <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>`
                   <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
-'
+
                     service.status === 'active' ? 'bg-green-600 text-white' :'
                     service.status === 'beta' ? 'bg-yellow-600 text-white' :'
                     'bg-gray-600 text-white'`
@@ -244,13 +244,13 @@ const ExpandedServicesShowcase2027: NextPage = () => {;'
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
 
                 Get Started Today
               </a>
               <a"
-                href="/expanded-services-pricing-2027""
+                href="/expanded-services-pricing-2027"
                 className="px-8 py-3 bg-white/20 hover:bg-white/30 text-white rounded-lg font-semibold transition-colors"
 
                 View Detailed Pricing

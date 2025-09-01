@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -38,74 +38,69 @@ import {
   Search,
   BarChart,
   Users2,
-  Settings,'
+  Settings,
   Palette} from 'lucide-react';
 
 export default function AISalesCopilot() {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'Intelligent Lead Scoring',
       description:'
         'AI-powered lead qualification and prioritization for maximum conversion rates'},
     {
 
-      icon: Target,'
+      icon: Target,
       title: 'Predictive Analytics',
       description:'
         'Forecast sales outcomes and identify high-value opportunities with machine learning'},
     {
 
-      icon: Users,'
+      icon: Users,
       title: 'Customer Behavior Analysis',
       description:'
         'Deep insights into customer preferences and buying patterns'},
     {
 
-      icon: TrendingUp,'
+      icon: TrendingUp,
       title: 'Sales Performance Optimization',
       description:'
         'Real-time recommendations to improve sales team effectiveness'},
     {
 
-      icon: Zap,'
-      title: 'Automated Follow-ups','
+      icon: Zap,
+      title: 'Automated Follow-ups',
       description: 'Smart scheduling and personalized follow-up sequences'},
     {
 
-      icon: BarChart3,'
-      title: 'Advanced Reporting','
+      icon: BarChart3,
+      title: 'Advanced Reporting',
       description: 'Comprehensive dashboards and actionable insights'},
   ];
 
   const benefits = ['
-    'Increase sales conversion rates by up to 300%','
-    'Reduce sales cycle time by 40%','
-    'Improve lead qualification accuracy by 85%','
-    'Boost sales team productivity by 60%','
-    'Enhance customer engagement and retention','
-    'Real-time performance monitoring and optimization',
+    'Increase sales conversion rates by up to 300%',Reduce sales cycle time by 40%',Improve lead qualification accuracy by 85%',Boost sales team productivity by 60%',Enhance customer engagement and retention',Real-time performance monitoring and optimization',
   ];
 
   const useCases = [
     {
-'
+
       title: 'Enterprise Sales Teams',
       description:'
         'Large organizations with complex sales processes and multiple stakeholders'},
     {
-'
+
       title: 'B2B SaaS Companies',
       description:'
         'Software companies selling to businesses with long sales cycles'},
     {
-'
+
       title: 'Consulting Firms',
       description:'
         'Professional services companies managing multiple client relationships'},
     {
-'
+
       title: 'Manufacturing & Distribution',
       description:'
         'Companies with complex product catalogs and pricing structures'},
@@ -268,7 +263,7 @@ export default function AISalesCopilot() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Perfect For Your Business
             </h2>"
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">'
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               Whether you're a startup or enterprise, our AI Sales Copilot
               adapts to your needs
             </p>

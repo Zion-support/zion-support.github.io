@@ -1,6 +1,81 @@
+<<<<<<< HEAD
+import React from 'react.ts';
+import { motion   } from 'framer-motion.ts';
+import { Link   } from 'react-router-dom.ts';
+import { Brain, 
+  Link as LinkIcon, 
+  Shield, 
+  Clock, 
+  CheckCircle, 
+  Zap,
+  Globe,
+  TrendingUp,
+  ArrowRight,
+  Target,
+  Database,
+  Activity,
+  BarChart3,
+  Network'
+  } from 'lucide-react.ts';
+import { SEO   } from '../../components/SEO';
+;
+const AIBlockchainSupplyChain = (...args: unknown[]): unknown => {
+  const features = [
+    {
+
+      icon: Brain,
+      title: "AI-Powered Analytics","
+      description: "Advanced machine learning algorithms analyze supply chain data for predictive insights and optimization opportunities"
+    },
+    {
+
+      icon: LinkIcon,"
+      title: "Blockchain Transparency","
+      description: "Immutable blockchain records provide complete transparency and traceability across the entire supply chain"
+    },
+    {
+
+      icon: Shield,"
+      title: "Smart Contracts","
+      description: "Automated smart contracts execute business logic and ensure compliance with predefined rules"
+    },
+    {
+
+      icon: Clock,"
+      title: "Real-Time Tracking","
+      description: "Live monitoring of goods movement with instant alerts for delays, quality issues, or compliance violations"
+    },
+    {
+
+      icon: Zap,"
+      title: "Automated Compliance","
+      description: "AI-driven compliance monitoring with automatic reporting and regulatory adherence"
+    },
+    {
+
+      icon: Globe,"
+      title: "Global Integration","
+      description: "Seamless integration with existing ERP systems and global trading partners";
+    };
+  ];
+
+  const services = [
+    {
+"
+      name: "Starter Plan","
+      price: "$5,999","
+      period: "/month",
+      features[;"
+        "Basic blockchain tracking","
+        "AI analytics dashboard","
+        "Standard compliance","
+        "Up to 1000 transactions/month","
+        "Basic reporting"
+=======
 import React from 'react.ts';'
 import { motion   } from 'framer-motion.ts';'
 import { Link   } from 'react-router-dom.ts';        "Basic reporting"
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;
       popular: false
     },
@@ -76,9 +151,16 @@ import { Link   } from 'react-router-dom.ts';        "Basic reporting"
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark">
       <SEO "
+<<<<<<< HEAD
+        title="AI-Powered Blockchain Supply Chain | Zion Tech Group"
+        description="Revolutionize your supply chain with AI-driven insights and blockchain transparency. Get real-time tracking, smart contracts, and automated compliance."
+        keywords="AI Supply Chain, Blockchain Supply Chain, Smart Contracts, Supply Chain Transparency, AI Analytics, Compliance Monitoring"
+      />
+=======
         title="AI-Powered Blockchain Supply Chain | Zion Tech Group""
         description="Revolutionize your supply chain with AI-driven insights and blockchain transparency. Get real-time tracking, smart contracts, and automated compliance.""        keywords="AI Supply Chain, Blockchain Supply Chain, Smart Contracts, Supply Chain Transparency, AI Analytics, Compliance Monitoring"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -108,7 +190,7 @@ import { Link   } from 'react-router-dom.ts';        "Basic reporting"
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
               >
                 Transform Your Supply Chain"
@@ -445,7 +527,7 @@ import { Link   } from 'react-router-dom.ts';        "Basic reporting"
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
                 >
                   Start Your Transformation"

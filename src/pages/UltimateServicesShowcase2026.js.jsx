@@ -1,39 +1,19 @@
-import React, { useState } from 'react';'
-import { Link } from 'react-router-dom';'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ultimateInnovativeServices2026 } from "../data/2026-ultimate-innovative-services";"
 import { enterpriseITInfrastructureServices2026 } from "../data/2026-enterprise-it-infrastructure-services";
 const UltimateServicesShowcase2026 = () => {
-'
-    const [selectedCategory, setSelectedCategory] = useState('all');'
-    const [searchTerm, setSearchTerm] = useState('');'
+
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [searchTerm, setSearchTerm] = useState('');
     const [sortBy, setSortBy] = useState('name');
     // Combine all services
     const allServices = [...ultimateInnovativeServices2026, ...enterpriseITInfrastructureServices2026];
     const categories = ['
-        'all','
-        'Business Intelligence','
-        'Marketing Automation','
-        'Customer Service','
-        'Supply Chain Management','
-        'Financial Technology','
-        'Healthcare Technology','
-        'Legal Technology','
-        'Workflow Automation','
-        'Blockchain Technology','
-        'Internet of Things','
-        'Quantum Computing','
-        'Cybersecurity','
-        'Cloud Infrastructure','
-        'DevOps','
-        'Data Center Management','
-        'Network Security','
-        'Storage Management','
-        'Virtualization','
-        'IT Asset Management','
-        'Performance Monitoring'
+        'all',Business Intelligence',Marketing Automation',Customer Service',Supply Chain Management',Financial Technology',Healthcare Technology',Legal Technology',Workflow Automation',Blockchain Technology',Internet of Things',Quantum Computing',Cybersecurity',Cloud Infrastructure',DevOps',Data Center Management',Network Security',Storage Management',Virtualization',IT Asset Management',Performance Monitoring'
     ];
-    const filteredServices = allServices;'
+    const filteredServices = allServices;
         .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
         .filter(service => service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -41,13 +21,13 @@ const UltimateServicesShowcase2026 = () => {
         .sort((a, b) => {
 
         switch (sortBy) {
-'
+
             case 'price':'
-                return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));'
+                return parseInt(a.price.replace(/[^0-9]/g,)) - parseInt(b.price.replace(/[^0-9]/g,));
             case 'category':
-                return a.category.localeCompare(b.category);'
+                return a.category.localeCompare(b.category);
             case 'rating':
-                return b.rating - a.rating;'
+                return b.rating - a.rating;
             case 'name':
             default:
                 return a.name.localeCompare(b.name)}
@@ -55,30 +35,11 @@ const UltimateServicesShowcase2026 = () => {
     const getCategoryIcon = (category) => {
 
         const icons = {
-'
-  'Business Intelligence': '📊','
-            'Marketing Automation': '🎯','
-            'Customer Service': '🤖','
-            'Supply Chain Management': '📦','
-            'Financial Technology': '💰','
-            'Healthcare Technology': '🏥','
-            'Legal Technology': '⚖️','
-            'Workflow Automation': '⚡','
-            'Blockchain Technology': '🔗','
-            'Internet of Things': '🌐','
-            'Quantum Computing': '🔮','
-            'Cybersecurity': '🛡️','
-            'Cloud Infrastructure': '☁️','
-            'DevOps': '⚡','
-            'Data Center Management': '🏢','
-            'Network Security': '🌐','
-            'Storage Management': '💾','
-            'Virtualization': '🖥️','
-            'IT Asset Management': '📱','
-  'Performance Monitoring': '📊'
+
+  'Business Intelligence': '📊',Marketing Automation': '🎯',Customer Service': '🤖',Supply Chain Management': '📦',Financial Technology': '💰',Healthcare Technology': '🏥',Legal Technology': '⚖️',Workflow Automation': '⚡',Blockchain Technology': '🔗',Internet of Things': '🌐',Quantum Computing': '🔮',Cybersecurity': '🛡️',Cloud Infrastructure': '☁️',DevOps': '⚡',Data Center Management': '🏢',Network Security': '🌐',Storage Management': '💾',Virtualization': '🖥️',IT Asset Management': '📱',Performance Monitoring': '📊'
         
 
-};'
+};
         return icons[category] || '🚀'};
     const containerVariants = {
 
@@ -212,7 +173,7 @@ const UltimateServicesShowcase2026 = () => {
             {/* Category Filter */}"
             <div className="flex-1 max-w-md">"
               <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400">"
-                {categories.map(category => (<option key={category} value={category} className="bg-slate-800 text-white">'
+                {categories.map(category => (<option key={category} value={category} className="bg-slate-800 text-white">
                     {category === 'all' ? 'All Categories' : category}
                   </option>) ) }
               </select>
@@ -354,7 +315,7 @@ const UltimateServicesShowcase2026 = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
               Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Transform</span> Your Business?
             </h2>"
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">'
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Let's discuss how our innovative technology solutions can drive your business forward. 
               Contact us today for a personalized consultation and demo.
             </p>"

@@ -1,6 +1,6 @@
-import React from 'react.ts';'
-import { Helmet  } from 'react-helmet-async.ts';'
-import { Cpu, Wifi, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Shield  } from 'lucide-react';'
+import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { Cpu, Wifi, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Shield  } from 'lucide-react';
 import { Link  } from 'react-router-dom.ts';
 ;
 export { function };export default function IoTEdge(...args: []):  {
@@ -35,7 +35,7 @@ export { function };export default function IoTEdge(...args: []):  {
 "
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
 
                   Get Started"
@@ -348,13 +348,13 @@ export { function };export default function IoTEdge(...args: []):  {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-purple-700 transition-all duration-200"
 
                 Schedule a Consultation"
                 <ArrowRight className="ml-2 w-5 h-5" />              </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="inline-flex items-center px-8 py-4 border border-indigo-500/30 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500/10 transition-all duration-200"
               >
                 Explore All Services;

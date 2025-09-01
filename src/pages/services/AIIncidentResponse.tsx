@@ -1,60 +1,59 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIIncidentResponse() {
   const features = [
-    'AI-powered incident response optimization','
-    'Intelligent threat detection and analysis',;'
-    'Automated incident triage and prioritization',;'
-    'Predictive analytics for incident prevention',;'
-    'Smart response automation and orchestration',;'
-    'AI-driven incident investigation and forensics',;'
-    'Real-time incident analytics and insights',;'
+    'AI-powered incident response optimization',Intelligent threat detection and analysis',;
+    'Automated incident triage and prioritization',;
+    'Predictive analytics for incident prevention',;
+    'Smart response automation and orchestration',;
+    'AI-driven incident investigation and forensics',;
+    'Real-time incident analytics and insights',;
     'Custom AI models for incident applications';
   ];
 
   const tiers = [
     {
-'
-      name: 'Developer','
-      price: '$599/mo','
-      details: ['Up to 100 incidents/month', 'Basic AI features', 'Standard monitoring', 'Email support']
+
+      name: 'Developer',
+      price: '$599/mo',
+      details: ['Up to 100 incidents/month',Basic AI features',Standard monitoring',Email support']
     },
     {
-'
-      name: 'Business', '
-      price: '$1,599/mo', '
-      details: ['Up to 500 incidents/month', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
+
+      name: 'Business',
+      price: '$1,599/mo',
+      details: ['Up to 500 incidents/month',Advanced AI features',Enhanced monitoring',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$3,999/mo', ;'
-      details: ['Unlimited incidents', 'Custom AI models', 'Full incident suite', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$3,999/mo', ;
+      details: ['Unlimited incidents',Custom AI models',Full incident suite',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Incident response optimization',;'
-    'Threat detection and analysis',;'
-    'Incident triage and prioritization',;'
-    'Response automation and orchestration',;'
-    'Incident investigation and forensics',;'
+  const useCases = [;
+    'Incident response optimization',;
+    'Threat detection and analysis',;
+    'Incident triage and prioritization',;
+    'Response automation and orchestration',;
+    'Incident investigation and forensics',;
     'Incident scaling and management';
   ];
 
-  const benefits = [;'
-    'Improve incident response performance by 50-80%',;'
-    'Reduce incident resolution time by 40-70%',;'
-    'Cut incident operational costs by 35-65%',;'
-    'Enhance incident response reliability and scalability',;'
-    'Optimize resource utilization',;'
+  const benefits = [;
+    'Improve incident response performance by 50-80%',;
+    'Reduce incident resolution time by 40-70%',;
+    'Cut incident operational costs by 35-65%',;
+    'Enhance incident response reliability and scalability',;
+    'Optimize resource utilization',;
     'Scale incident response operations efficiently';
   ];
 
-  const industries = [;'
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
     'Technology & SaaS';
   ];
 
@@ -107,8 +106,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['50-80% performance improvement', '40-70% resolution time reduction', '35-65% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['50-80% performance improvement',40-70% resolution time reduction',35-65% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-red-600 mb-3" />"              <div className="text-gray-900 font-semibold">{t}</div>
             </div>

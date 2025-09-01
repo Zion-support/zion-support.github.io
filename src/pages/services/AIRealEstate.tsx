@@ -1,60 +1,59 @@
 import React from 'react';
 import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Building, BarChart3 export default function AIRealEstate() {
   const features = [
-    'AI-powered property valuation and market analysis','
-    'Intelligent property matching and recommendations',;'
-    'Automated market trend forecasting',;'
-    'Predictive analytics for investment opportunities',;'
-    'Smart contract automation and management',;'
-    'Virtual property tours and 3D visualization',;'
-    'Integration with major real estate platforms',;'
+    'AI-powered property valuation and market analysis',Intelligent property matching and recommendations',;
+    'Automated market trend forecasting',;
+    'Predictive analytics for investment opportunities',;
+    'Smart contract automation and management',;
+    'Virtual property tours and 3D visualization',;
+    'Integration with major real estate platforms',;
     'Custom AI models for local market insights';
   ];
 
   const tiers = [
     {
-'
-      name: 'Individual Agent','
-      price: '$199/mo','
-      details: ['Up to 100 properties', 'Basic AI analysis', 'Standard reports', 'Email support']
+
+      name: 'Individual Agent',
+      price: '$199/mo',
+      details: ['Up to 100 properties',Basic AI analysis',Standard reports',Email support']
     },
     {
-'
-      name: 'Small Agency', '
-      price: '$599/mo', '
-      details: ['Up to 500 properties', 'Advanced AI features', 'Custom reports', 'Priority support'] ;
+
+      name: 'Small Agency',
+      price: '$599/mo',
+      details: ['Up to 500 properties',Advanced AI features',Custom reports',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,499/mo', ;'
-      details: ['Unlimited properties', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$1,499/mo', ;
+      details: ['Unlimited properties',Custom AI models',Full platform integration',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Residential property valuation and sales',;'
-    'Commercial real estate investment analysis',;'
-    'Property management and optimization',;'
-    'Market research and trend analysis',;'
-    'Investment portfolio management',;'
+  const useCases = [;
+    'Residential property valuation and sales',;
+    'Commercial real estate investment analysis',;
+    'Property management and optimization',;
+    'Market research and trend analysis',;
+    'Investment portfolio management',;
     'Development project feasibility studies';
   ];
 
-  const benefits = [;'
-    'Improve property valuation accuracy by 25-40%',;'
-    'Reduce time-to-sale by 30-50%',;'
-    'Increase commission revenue by 20-35%',;'
-    'Optimize pricing strategies for maximum profit',;'
-    'Enhance client satisfaction and retention',;'
+  const benefits = [;
+    'Improve property valuation accuracy by 25-40%',;
+    'Reduce time-to-sale by 30-50%',;
+    'Increase commission revenue by 20-35%',;
+    'Optimize pricing strategies for maximum profit',;
+    'Enhance client satisfaction and retention',;
     'Scale operations without additional staff';
   ];
 
-  const industries = [;'
-    'Residential Real Estate',;'
-    'Commercial Real Estate',;'
-    'Property Management',;'
-    'Real Estate Investment',;'
-    'Development & Construction',;'
+  const industries = [;
+    'Residential Real Estate',;
+    'Commercial Real Estate',;
+    'Property Management',;
+    'Real Estate Investment',;
+    'Development & Construction',;
     'Property Technology';
   ];
 
@@ -107,8 +106,8 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['25-40% accuracy improvement', '30-50% faster sales', '20-35% revenue increase'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['25-40% accuracy improvement',30-50% faster sales',20-35% revenue increase'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-amber-600 mb-3" />"              <div className="text-gray-900 font-semibold">{t}</div>
             </div>

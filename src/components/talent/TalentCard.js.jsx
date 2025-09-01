@@ -1,8 +1,8 @@
-import React from 'react';'
-import { Button } from '@/components/ui/button';'
-import { Card } from '@/components/ui/card';'
-import { MapPin, Clock, CheckCircle2 } from 'lucide-react';'
-import { FavoriteButton } from '@/components/FavoriteButton';'
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { MapPin, Clock, CheckCircle2 } from 'lucide-react';
+import { FavoriteButton } from '@/components/FavoriteButton';
 import { useNavigate } from 'react-router-dom';
 const TalentCardComponent = ({
 
@@ -54,7 +54,7 @@ const TalentCardComponent = ({
                   className="w-full h-full object-cover"
                 />
               ) : ("
-                <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">'
+                <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
                   {talent.full_name?.charAt(0) || 'T'}
                 </div>
               )}
@@ -74,7 +74,7 @@ const TalentCardComponent = ({
               </h3>
               <FavoriteButton
                 itemId={talent.id}"
-                itemType="talent""
+                itemType="talent"
                 className="-mt-1"
               />
             </div>"
@@ -137,7 +137,7 @@ const TalentCardComponent = ({
           <div className="flex items-center gap-2">
             {isAuthenticated && (
               <Button"
-                size="sm""
+                size="sm"
                 variant="secondary"
                 onClick={handleBook}"
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
@@ -146,7 +146,7 @@ const TalentCardComponent = ({
               </Button>
             )}
             <Button"
-              size="sm""
+              size="sm"
               variant="ghost"
               onClick={handleMessage}"
               className="text-zion-cyan hover:text-white hover:bg-zion-blue-light"
@@ -159,6 +159,6 @@ const TalentCardComponent = ({
     </Card>
   );
 };
-export const TalentCard = React.memo(TalentCardComponent);'
+export const TalentCard = React.memo(TalentCardComponent);
 TalentCard.displayName = 'TalentCard';
 '"`

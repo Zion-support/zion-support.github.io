@@ -4,8 +4,114 @@ import {
   Activity,
   Zap,
   Clock,
+<<<<<<< HEAD
+  TrendingUp,
+  AlertTriangle} from 'lucide-react.ts';
+
+interface PerformanceMetrics {
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
+  fcp: number | null;
+  fmp: number | null;
+  si: number | null;
+  tti: number | null;
+}
+
+interface PerformanceScore {
+  score: number;
+  rating: 'good' | 'needs-improvement' | 'poor';
+  color: string;
+}
+
+const AdvancedPerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
+    fmp: null});
+
+  const [isVisible, setIsVisible] = useState(false);
+  const [overallScore, setOverallScore] = useState<PerformanceScore>({
+
+    score: 0,
+    rating: 'good',
+    color: 'text-green-500'});
+
+  // Calculate performance score based on Core Web Vitals
+  const calculateScore = useCallback()
+    (metrics: PerformanceMetrics): PerformanceScore => {
+
+      let totalScore = 0;
+      let validMetrics = 0;
+
+      // FCP scoring (0-100)
+      if (metrics.fcp !== null) {
+
+        validMetrics++;
+        if (metrics.fcp < 1800) totalScore += 100;
+        else if (metrics.fcp < 3000) totalScore += 50;
+        else totalScore += 0;
+      }
+
+      // LCP scoring (0-100)
+      if (metrics.lcp !== null) {
+
+        validMetrics++;
+        if (metrics.lcp < 2500) totalScore += 100;
+        else if (metrics.lcp < 4000) totalScore += 50;
+        else totalScore += 0;
+      }
+
+      // FID scoring (0-100)
+      if (metrics.fid !== null) {
+
+        validMetrics++;
+        if (metrics.fid < 100) totalScore += 100;
+        else if (metrics.fid < 300) totalScore += 50;
+        else totalScore += 0;
+      }
+
+      // CLS scoring (0-100)
+      if (metrics.cls !== null) {
+
+        validMetrics++;
+        if (metrics.cls < 0.1) totalScore += 100;
+        else if (metrics.cls < 0.25) totalScore += 50;
+        else totalScore += 0;
+      }
+
+      const averageScore =
+        validMetrics > 0 ? Math.round(totalScore / validMetrics) : 0;
+
+      let rating: 'good' | 'needs-improvement' | 'poor';
+      let color: string;
+
+      if (averageScore >= 90) {
+
+        rating = 'good';
+        color = 'text-green-500';
+      } else if (averageScore >= 50) {
+
+        rating = 'needs-improvement';
+        color = 'text-yellow-500';
+      } else {
+
+        rating = 'poor';
+        color = 'text-red-500';
+      }
+    });
+
+    const averageScore = metricCount > 0 ? totalScore / metricCount : 0;
+    
+=======
   TrendingUp,'
   AlertTriangle} from 'lucide-react.ts';    
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     let grade: 'A' | 'B' | 'C' | 'D' | 'F';
     let color: string;
 
@@ -33,7 +139,7 @@ import {
   );
   // Measure Core Web Vitals
   useEffect(() => {
-'
+
     if ('PerformanceObserver' in window) {
 
       // First Contentful Paint
@@ -47,7 +153,7 @@ import {
 
           setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
         }
-      });'
+      });
       fcpObserver.observe({ entryTypes: ['paint'] });
 
       // Largest Contentful Paint
@@ -59,7 +165,7 @@ import {
 
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
         }
-      });'
+      });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
       // First Input Delay
@@ -73,7 +179,7 @@ import {
             setMetrics (prev => ({ ...prev, fid }) ) ;
           }
         });
-      });'
+      });
       fidObserver.observe({ entryTypes: ['first-input'] });
 
       // Layout Shift
@@ -87,7 +193,12 @@ import {
           }
         });
         setMetrics(prev => ({ ...prev, cls: clsValue }));
+<<<<<<< HEAD
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+=======
       });'      clsObserver.observe({ entryTypes: ['layout-shift'] });
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       return () => {
         lcpObserver.disconnect();
@@ -111,42 +222,42 @@ import {
 
   // Format time values
   const formatTime = (time: number | null): string => {
-'
+
     if (time === null) return 'N/A';
     return `${Math.round(time)}ms`;
   };
 
   // Format CLS value
   const formatCLS = (cls: number | null): string => {
-'
+
     if (cls === null) return 'N/A';
     return cls.toFixed(3);
   };
 
   // Get metric rating
   const getMetricRating = (metric: string, value: number | null): string => {
-'
+
     if (value === null) return 'N/A';
     switch (metric) {
-'
+
       case 'fcp':
         return value < 1800'
           ? '🟢 Good'
           : value < 3000'
             ? '🟡 Needs Improvement''
-            : '🔴 Poor';'
+            : '🔴 Poor';
       case 'lcp':
         return value < 2500'
           ? '🟢 Good'
           : value < 4000'
             ? '🟡 Needs Improvement''
-            : '🔴 Poor';'
+            : '🔴 Poor';
       case 'fid':
         return value < 100'
           ? '🟢 Good'
           : value < 300'
             ? '🟡 Needs Improvement''
-            : '🔴 Poor';'
+            : '🔴 Poor';
       case 'cls':
         return value < 0.1'
           ? '🟢 Good'
@@ -162,7 +273,7 @@ import {
     return()
       <button
         onClick={() => setIsVisible(true)}
-        className="fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg hover:bg-zion-cyan/90 transition-all duration-300 z-50""
+        className="fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg hover:bg-zion-cyan/90 transition-all duration-300 z-50"
         aria-label="Open Performance Monitor"
       >"
         <Activity className="w-6 h-6" />      </button>
@@ -188,8 +299,8 @@ import {
           <div className={`text-3xl font-bold ${overallScore.color}`}>
             {overallScore.score}
           </div>"
-          <div className="text-sm text-zion-slate-light">'
-            Overall Score ({overallScore.rating.replace('-', ' ')})
+          <div className="text-sm text-zion-slate-light">
+            Overall Score ({overallScore.rating.replace('-',)})
           </div>
         </div>
       </div>
@@ -202,7 +313,7 @@ import {
             <div className="text-white font-mono">
               {formatTime(metrics.fcp)}
             </div>"
-            <div className="text-xs text-zion-slate-light">'
+            <div className="text-xs text-zion-slate-light">
               {getMetricRating('fcp', metrics.fcp)}
             </div>
             <button
@@ -220,7 +331,7 @@ import {
             <div className="text-white font-mono">
               {formatTime(metrics.lcp)}
             </div>"
-            <div className="text-xs text-zion-slate-light">'
+            <div className="text-xs text-zion-slate-light">
               {getMetricRating('lcp', metrics.lcp)}
             </div>
           </div>
@@ -232,7 +343,7 @@ import {
             <div className="text-white font-mono">
               {formatTime(metrics.fid)}
             </div>"
-            <div className="text-xs text-zion-slate-light">'
+            <div className="text-xs text-zion-slate-light">
               {getMetricRating('fid', metrics.fid)}
             </div>
           </div>
@@ -242,7 +353,7 @@ import {
           <span className="text-sm text-zion-slate-light">CLS</span>"
           <div className="text-right">"
             <div className="text-white font-mono">{formatCLS(metrics.cls)}</div>"
-            <div className="text-xs text-zion-slate-light">'
+            <div className="text-xs text-zion-slate-light">
               {getMetricRating('cls', metrics.cls)}
             </div>
           </div>
@@ -258,7 +369,7 @@ import {
         </div>
       </div>
 
-      {/* Recommendations */}'
+      {/* Recommendations */}
       {overallScore.rating !== 'good' && ("
         <div className="mt-4 p-3 bg-yellow-500/20 border border-yellow-500/30 rounded-lg">"
           <div className="flex items-center text-yellow-400 mb-2">"

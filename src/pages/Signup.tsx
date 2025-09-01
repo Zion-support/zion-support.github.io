@@ -1,5 +1,5 @@
-import React, { useState } from 'react';'
-import { Link, useNavigate } from 'react-router-dom';'
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
 
@@ -20,7 +20,7 @@ import {
   Globe,
   Users,
   Star,
-  TrendingUp,'
+  TrendingUp,
   Award} from 'lucide-react';
 
 interface SignupForm {
@@ -39,44 +39,31 @@ interface SignupForm {
 const Signup: React.FC = () => {
   
   const [formData, setFormData] = useState<SignupForm>({
-'
-    firstName: '','
-    lastName: '','
-    email: '','
-    company: '','
-    phone: '','
-    industry: '','
-    companySize: '','
-    password: '','
+
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    phone: '',
+    industry: '',
+    companySize: '',
+    password: '',
     confirmPassword: '',
     agreeToTerms: false,
     agreeToMarketing: false});
 
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);'
-  const [error, setError] = useState('');'
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
   const industries = ['
-    'Technology','
-    'Healthcare','
-    'Finance','
-    'Manufacturing','
-    'Retail','
-    'Education','
-    'Government','
-    'Non-profit','
-    'Other',
+    'Technology',Healthcare',Finance',Manufacturing',Retail',Education',Government',Non-profit',Other',
   ];
 
   const companySizes = ['
-    '1-10 employees','
-    '11-50 employees','
-    '51-200 employees','
-    '201-500 employees','
-    '501-1000 employees','
-    '1000+ employees',
+    '1-10 employees',11-50 employees',51-200 employees',201-500 employees',501-1000 employees',1000+ employees',
   ];
 
   const handleInputChange = (
@@ -87,7 +74,7 @@ const Signup: React.FC = () => {
     setFormData(prev => ({
 
       ...prev,
-      [field]: value}));'
+      [field]: value}));
     setError('');
   };
 
@@ -100,23 +87,29 @@ const Signup: React.FC = () => {
       !formData.password ||
       !formData.confirmPassword
     ) {
-'
+
       setError('Please fill in all required fields');
       return false;
+<<<<<<< HEAD
+    }
+    if (!/\S+@\S+\.\S+/.test(formData.email)) {
+
+=======
     }    if (!/\S+@\S+\.\S+/.test(formData.email)) {
 '
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       setError('Please enter a valid email address');
       return false}
     if (formData.password.length < 8) {
-'
+
       setError('Password must be at least 8 characters long');
       return false}
     if (formData.password !== formData.confirmPassword) {
-'
+
       setError('Passwords do not match');
       return false}
     if (!formData.agreeToTerms) {
-'
+
       setError('Please agree to the terms and conditions');
       return false}
     return true};
@@ -125,7 +118,7 @@ const Signup: React.FC = () => {
 
     e.preventDefault();    if (!validateForm()) return;
 
-    setIsLoading(true);'
+    setIsLoading(true);
     setError('');
 
     try {
@@ -135,11 +128,11 @@ const Signup: React.FC = () => {
       // Mock successful signup'
       setSuccess('Account created successfully! Welcome to Zion Tech Group.');
       setTimeout(() => {
-'
+
         navigate('/dashboard');
       }, 2000);
     } catch (err) {
-'
+
       setError('Failed to create account. Please try again.');
     } finally {
 
@@ -148,14 +141,14 @@ const Signup: React.FC = () => {
   };
 
   const getPasswordStrength = (password: string) => {
-'
+
     if (password.length === 0) return { score: 0, label: '', color: '' };
-    if (password.length < 8)'
+    if (password.length < 8)
       return { score: 1, label: 'Weak', color: 'text-red-400' };
-    if (password.length < 12)'
+    if (password.length < 12)
       return { score: 2, label: 'Fair', color: 'text-yellow-400' };
-    if (password.length < 16)'
-      return { score: 3, label: 'Good', color: 'text-blue-400' };'
+    if (password.length < 16)
+      return { score: 3, label: 'Good', color: 'text-blue-400' };
     return { score: 4, label: 'Strong', color: 'text-green-400' };
   };
 
@@ -164,30 +157,30 @@ const Signup: React.FC = () => {
   const benefits = [
     {
 
-      icon: <Brain className="w-6 h-6" />,'
-      title: 'AI-Powered Solutions','
+      icon: <Brain className="w-6 h-6" />,
+      title: 'AI-Powered Solutions',
       description: 'Access cutting-edge AI and machine learning technologies'},
     {
 "
-      icon: <Cloud className="w-6 h-6" />,'
-      title: 'Cloud Infrastructure','
+      icon: <Cloud className="w-6 h-6" />,
+      title: 'Cloud Infrastructure',
       description: 'Scalable cloud solutions for your business needs'},
     {
 "
-      icon: <Shield className="w-6 h-6" />,'
-      title: 'Enterprise Security','
+      icon: <Shield className="w-6 h-6" />,
+      title: 'Enterprise Security',
       description: 'Bank-level security and compliance standards'},
     {
 "
-      icon: <Rocket className="w-6 h-6" />,'
-      title: 'Digital Transformation','
+      icon: <Rocket className="w-6 h-6" />,
+      title: 'Digital Transformation',
       description: 'Transform your business with modern technology'},
   ];
 
   const stats = ['
-    { number: '500+', label: 'Happy Clients' },'
-    { number: '99.9%', label: 'Uptime' },'
-    { number: '24/7', label: 'Support' },'
+    { number: '500+', label: 'Happy Clients' },
+    { number: '99.9%', label: 'Uptime' },
+    { number: '24/7', label: 'Support' },
     { number: '50+', label: 'Services' },
   ];
 
@@ -248,10 +241,10 @@ const Signup: React.FC = () => {
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
                   <input"                    type="text"
                     value={formData.firstName}
-                    onChange={e =>'
+                    onChange={e =>
                       handleInputChange('firstName', e.target.value)
                     }"
-                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Enter your first name"
                     required
                   />
@@ -266,10 +259,10 @@ const Signup: React.FC = () => {
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
                   <input"                    type="text"
                     value={formData.lastName}
-                    onChange={e =>'
+                    onChange={e =>
                       handleInputChange('lastName', e.target.value)
                     }"
-                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Enter your last name"
                     required
                   />
@@ -284,10 +277,16 @@ const Signup: React.FC = () => {
                 </label>"
                 <div className="relative">"
                   <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+<<<<<<< HEAD
+                  <input"
+                    type="email"
+                    value={formData.email}
+=======
                   <input"                    type="email"
                     value={formData.email}'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     onChange={e => handleInputChange('email', e.target.value)}"
-                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Enter your email"
                     required
                   />
@@ -300,10 +299,16 @@ const Signup: React.FC = () => {
                 </label>"
                 <div className="relative">"
                   <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+<<<<<<< HEAD
+                  <input"
+                    type="tel"
+                    value={formData.phone}
+=======
                   <input"                    type="tel"
                     value={formData.phone}'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     onChange={e => handleInputChange('phone', e.target.value)}"
-                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Enter your phone number"
                   />
                 </div>
@@ -317,10 +322,16 @@ const Signup: React.FC = () => {
                 </label>"
                 <div className="relative">"
                   <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+<<<<<<< HEAD
+                  <input"
+                    type="text"
+                    value={formData.company}
+=======
                   <input"                    type="text"
                     value={formData.company}'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     onChange={e => handleInputChange('company', e.target.value)}"
-                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Enter your company name"
                     required
                   />
@@ -334,7 +345,7 @@ const Signup: React.FC = () => {
                 <div className="relative">"
                   <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />                  <select
                     value={formData.industry}
-                    onChange={e =>'
+                    onChange={e =>
                       handleInputChange('industry', e.target.value)
                     }"
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
@@ -357,7 +368,7 @@ const Signup: React.FC = () => {
               <div className="relative">"
                 <Users className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />                <select
                   value={formData.companySize}
-                  onChange={e =>'
+                  onChange={e =>
                     handleInputChange('companySize', e.target.value)
                   }"
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
@@ -381,10 +392,10 @@ const Signup: React.FC = () => {
                   <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
                   <input'                    type={showPassword ? 'text' : 'password'}
                     value={formData.password}
-                    onChange={e =>'
+                    onChange={e =>
                       handleInputChange('password', e.target.value)
                     }"
-                    className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+                    className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Create a password"
                     required
                   />
@@ -408,7 +419,7 @@ const Signup: React.FC = () => {
                           className={`h-1 flex-1 rounded-full transition-all duration-300 ${
 
                             level <= passwordStrength.score'
-                              ? passwordStrength.color.replace('text-', 'bg-')'
+                              ? passwordStrength.color.replace('text-',bg-')
                               : 'bg-slate-600/30'`
                           }`}
                         />
@@ -428,10 +439,10 @@ const Signup: React.FC = () => {
                   <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
                   <input'                    type={showConfirmPassword ? 'text' : 'password'}
                     value={formData.confirmPassword}
-                    onChange={e =>'
+                    onChange={e =>
                       handleInputChange('confirmPassword', e.target.value)
                     }"
-                    className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+                    className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Confirm your password"
                     required
                   />
@@ -454,23 +465,23 @@ const Signup: React.FC = () => {
                 <input"
                   type="checkbox"
                   checked={formData.agreeToTerms}
-                  onChange={e =>'
+                  onChange={e =>
                     handleInputChange('agreeToTerms', e.target.checked)
                   }"
                   className="mt-1 w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500 focus:ring-2"
                   required
                 />"
-                <span className="text-slate-300 text-sm">'
+                <span className="text-slate-300 text-sm">
                   I agree to the{' '}
                   <Link"
-                    to="/terms""
+                    to="/terms"
                     className="text-cyan-400 hover:text-cyan-300"
                   >
                     Terms of Service'
-                  </Link>{' '}'
+                  </Link>{' '}
                   and{' '}
                   <Link"
-                    to="/privacy""
+                    to="/privacy"
                     className="text-cyan-400 hover:text-cyan-300"
                   >
                     Privacy Policy'
@@ -483,7 +494,7 @@ const Signup: React.FC = () => {
                 <input"
                   type="checkbox"
                   checked={formData.agreeToMarketing}
-                  onChange={e =>'
+                  onChange={e =>
                     handleInputChange('agreeToMarketing', e.target.checked)
                   }"
                   className="mt-1 w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500 focus:ring-2"
@@ -513,10 +524,10 @@ const Signup: React.FC = () => {
             </button>
 "
             <div className="text-center mt-6">"
-              <p className="text-slate-400">'
+              <p className="text-slate-400">
                 Already have an account?{' '}
                 <Link"
-                  to="/login""
+                  to="/login"
                   className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-200"
                 >
                   Sign in here

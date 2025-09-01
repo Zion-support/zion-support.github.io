@@ -1,60 +1,59 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPenetrationTesting() {
   const features = [
-    'AI-powered penetration testing optimization','
-    'Intelligent vulnerability discovery and exploitation',;'
-    'Automated security assessment and reporting',;'
-    'Predictive analytics for security risks',;'
-    'Smart testing methodology and planning',;'
-    'AI-driven testing automation and orchestration',;'
-    'Real-time testing analytics and insights',;'
+    'AI-powered penetration testing optimization',Intelligent vulnerability discovery and exploitation',;
+    'Automated security assessment and reporting',;
+    'Predictive analytics for security risks',;
+    'Smart testing methodology and planning',;
+    'AI-driven testing automation and orchestration',;
+    'Real-time testing analytics and insights',;
     'Custom AI models for testing applications';
   ];
 
   const tiers = [
     {
-'
-      name: 'Developer','
-      price: '$799/mo','
-      details: ['Up to 5 applications', 'Basic AI features', 'Standard testing', 'Email support']
+
+      name: 'Developer',
+      price: '$799/mo',
+      details: ['Up to 5 applications',Basic AI features',Standard testing',Email support']
     },
     {
-'
-      name: 'Business', '
-      price: '$1,999/mo', '
-      details: ['Up to 20 applications', 'Advanced AI features', 'Enhanced testing', 'Priority support'] ;
+
+      name: 'Business',
+      price: '$1,999/mo',
+      details: ['Up to 20 applications',Advanced AI features',Enhanced testing',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$4,999/mo', ;'
-      details: ['Unlimited applications', 'Custom AI models', 'Full testing suite', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$4,999/mo', ;
+      details: ['Unlimited applications',Custom AI models',Full testing suite',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Penetration testing optimization',;'
-    'Vulnerability discovery and exploitation',;'
-    'Security assessment and reporting',;'
-    'Testing methodology and planning',;'
-    'Testing automation and orchestration',;'
+  const useCases = [;
+    'Penetration testing optimization',;
+    'Vulnerability discovery and exploitation',;
+    'Security assessment and reporting',;
+    'Testing methodology and planning',;
+    'Testing automation and orchestration',;
     'Testing scaling and management';
   ];
 
-  const benefits = [;'
-    'Improve penetration testing performance by 50-80%',;'
-    'Reduce testing completion time by 40-70%',;'
-    'Cut testing operational costs by 35-65%',;'
-    'Enhance testing reliability and scalability',;'
-    'Optimize resource utilization',;'
+  const benefits = [;
+    'Improve penetration testing performance by 50-80%',;
+    'Reduce testing completion time by 40-70%',;
+    'Cut testing operational costs by 35-65%',;
+    'Enhance testing reliability and scalability',;
+    'Optimize resource utilization',;
     'Scale testing operations efficiently';
   ];
 
-  const industries = [;'
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
     'Technology & SaaS';
   ];
 
@@ -107,8 +106,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['50-80% performance improvement', '40-70% testing time reduction', '35-65% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['50-80% performance improvement',40-70% testing time reduction',35-65% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-gray-600 mb-3" />"              <div className="text-gray-900 font-semibold">{t}</div>
             </div>

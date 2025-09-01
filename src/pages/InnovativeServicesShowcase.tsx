@@ -1,6 +1,32 @@
 import React, { useState, useMemo } from 'react';
 export default InnovativeServicesShowcase;}}}}}
+<<<<<<< HEAD
+import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices } from "../data / innovativeServices2025";
+
+
+const InnovativeServicesShowcase: React.FC = () => {;
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [priceRange, setPriceRange] = useState('all');
+  const [sortBy, setSortBy] = useState('rating');
+
+  const categories = ['all',AI Services',IT Services',Micro SAAS',Business',Development'];
+  const priceRanges = [;
+    { label: 'All Prices', value: 'all' },;
+    { label: 'Under $100', value: '0-100' },;
+    { label: '$100 - $500', value: '100-500' },;
+    { label: '$500 - $1000', value: '500-1000' },;
+    { label: '$1000 - $3000', value: '1000-3000' },;
+    { label: 'Over $3000', value: '3000+' };
+  ];
+  const sortOptions = [;
+    { label: 'Highest Rated', value: 'rating' },;
+    { label: 'Highest AI Score', value: 'aiScore' },;
+    { label: 'Lowest Price', value: 'price' },;
+    { label: 'Newest Launch', value: 'launchDate' };
+=======
 import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices } from "../data / innovativeServices2025";    { label: 'Newest Launch', value: 'launchDate' };
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   
@@ -18,9 +44,9 @@ import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRang
 
       filtered = filtered.filter(service => service.category === selectedCategory)}
 
-    // Filter by price range;'
-    if (priceRange !== 'all') {;'
-      const [min, max] = priceRange.split('-').map(Number);'
+    // Filter by price range;
+    if (priceRange !== 'all') {;
+      const [min, max] = priceRange.split('-').map(Number);
       if (priceRange = == '3000+') {;
         filtered = filtered.filter (service => service.price >= 3000) ;
       } else {
@@ -30,16 +56,16 @@ import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRang
 
     // Sort services
     switch (sortBy) {
-'
+
       case 'rating':
         filtered.sort((a, b) => b.rating - a.rating);
-        break;'
+        break;
       case 'aiScore':
         filtered.sort((a, b) => b.aiScore - a.aiScore);
-        break;'
+        break;
       case 'price':
         filtered.sort((a, b) => a.price - b.price);
-        break;'
+        break;
       case 'launchDate':
         filtered.sort ( (a, b) => new Date (b.launchDate) .getTime () - new Date (a.launchDate) .getTime () ) ;
         break}
@@ -121,7 +147,7 @@ import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRang
       <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">"
         <div className="container mx-auto px-4 text-center">"
           <h1 className="text-5xl font-bold mb-6">Innovative Services 2025</h1>"
-          <p className="text-xl mb-8 max-w-3xl mx-auto">'
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
             Discover Zion Tech Group's cutting-edge AI, IT, and Micro SAAS solutions designed to transform your business and drive innovation.
           </p>"
           <div className="flex justify-center space-x-4">"
@@ -168,7 +194,7 @@ import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRang
             <div>"
               <label className="block text-sm font-medium text-gray-700 mb-2">Search Services</label>
               <input"
-                type="text""
+                type="text"
                 placeholder="Search by name, description, or category..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
@@ -184,7 +210,7 @@ import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRang
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-500"
               >
                 {categories.map(category  => (
-                  <option key={category} value={category}>'
+                  <option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category}
                   </option>) ) }
               </select>
@@ -241,7 +267,7 @@ import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRang
       <div className="bg-blue-600 text-white py-16">"
         <div className="container mx-auto px-4 text-center">"
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>"
-          <p className="text-xl mb-8 max-w-2xl mx-auto">'
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
             Our innovative services are designed to give you a competitive edge in today's rapidly evolving technology landscape.
           </p>"
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">"

@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   Search, 
@@ -32,70 +32,70 @@ import {
 } from 'lucide-react';
 
 export default function Help() {
-'
+
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
   const helpCategories = [
     {
-'
+
       title: 'Getting Started',
-      icon: Rocket,'
+      icon: Rocket,
       color: 'from-blue-600 to-cyan-600',
       items: ['
-        { name: 'Quick Start Guide', href: '/help/quick-start', description: 'Get up and running in minutes' },'
-        { name: 'Account Setup', href: '/help/account-setup', description: 'Configure your account and preferences' },'
-        { name: 'First Project', href: '/help/first-project', description: 'Create your first project with Zion Tech' },'
+        { name: 'Quick Start Guide', href: '/help/quick-start', description: 'Get up and running in minutes' },
+        { name: 'Account Setup', href: '/help/account-setup', description: 'Configure your account and preferences' },
+        { name: 'First Project', href: '/help/first-project', description: 'Create your first project with Zion Tech' },
         { name: 'API Keys', href: '/help/api-keys', description: 'Generate and manage your API keys' }
       ]
     },
     {
-'
+
       title: 'Core Services',
-      icon: Settings,'
+      icon: Settings,
       color: 'from-green-600 to-emerald-600',
       items: ['
-        { name: 'AI Business Intelligence', href: '/help/ai-business-intelligence', description: 'AI-powered analytics and insights' },'
-        { name: 'Cloud DevOps', href: '/help/cloud-devops', description: 'Infrastructure and automation' },'
-        { name: 'Cybersecurity', href: '/help/cybersecurity', description: 'Security and compliance solutions' },'
-        { name: 'Digital Twin', href: '/help/digital-twin', description: 'Simulation and monitoring' },'
-        { name: 'IoT Edge', href: '/help/iot-edge', description: 'IoT and edge computing' },'
+        { name: 'AI Business Intelligence', href: '/help/ai-business-intelligence', description: 'AI-powered analytics and insights' },
+        { name: 'Cloud DevOps', href: '/help/cloud-devops', description: 'Infrastructure and automation' },
+        { name: 'Cybersecurity', href: '/help/cybersecurity', description: 'Security and compliance solutions' },
+        { name: 'Digital Twin', href: '/help/digital-twin', description: 'Simulation and monitoring' },
+        { name: 'IoT Edge', href: '/help/iot-edge', description: 'IoT and edge computing' },
         { name: 'Micro SaaS', href: '/help/micro-saas', description: 'Scalable software solutions' }
       ]
     },
     {
-'
-      id: 'billing-account','
+
+      id: 'billing-account',
       title: 'Billing & Account',
-      icon: Users,'
+      icon: Users,
       description: 'Account management and billing information',
       articles: [
         {
-'
-          title: 'Billing Overview','
-          description: 'Understanding your billing structure and charges','
-          url: '/help/billing/overview','
+
+          title: 'Billing Overview',
+          description: 'Understanding your billing structure and charges',
+          url: '/help/billing/overview',
           type: 'guide'
         },
         {
-'
-          title: 'Payment Methods','
-          description: 'Adding and managing payment methods','
-          url: '/help/billing/payment-methods','
+
+          title: 'Payment Methods',
+          description: 'Adding and managing payment methods',
+          url: '/help/billing/payment-methods',
           type: 'guide'
         },
         {
-'
-          title: 'Invoice Management','
-          description: 'Accessing and managing your invoices','
-          url: '/help/billing/invoices','
+
+          title: 'Invoice Management',
+          description: 'Accessing and managing your invoices',
+          url: '/help/billing/invoices',
           type: 'guide'
         },
         {
-'
-          title: 'Account Settings','
-          description: 'Managing your account preferences and settings','
-          url: '/help/billing/account-settings','
+
+          title: 'Account Settings',
+          description: 'Managing your account preferences and settings',
+          url: '/help/billing/account-settings',
           type: 'guide'
         }
       ]
@@ -124,25 +124,25 @@ export default function Help() {
       answer: 'Yes, we provide comprehensive training programs, workshops, and ongoing support to ensure your team can effectively use our solutions.'
     },
     {
-'
+
       name: 'Live Chat',
-      icon: MessageCircle,'
-      description: 'Chat with our support team','
-      response: 'Usually responds in 2 minutes','
+      icon: MessageCircle,
+      description: 'Chat with our support team',
+      response: 'Usually responds in 2 minutes',
       href: '/help/live-chat'
     },
     {
-'
+
       name: 'Email Support',
-      icon: Mail,'
-      url: 'mailto:support@ziontechgroup.com','
+      icon: Mail,
+      url: 'mailto:support@ziontechgroup.com',
       color: 'from-orange-500 to-orange-600'
     }
   ];
 
   const supportHours = ['
-    { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM EST', available: true },'
-    { day: 'Saturday', hours: '10:00 AM - 4:00 PM EST', available: true },'
+    { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM EST', available: true },
+    { day: 'Saturday', hours: '10:00 AM - 4:00 PM EST', available: true },
     { day: 'Sunday', hours: 'Emergency Support Only', available: false }
   ];
 
@@ -173,7 +173,12 @@ export default function Help() {
               <div className="relative">"
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
                 <input"
+<<<<<<< HEAD
+                  type="text"
+                  placeholder="Search for help articles, guides, and solutions..."
+=======
                   type="text""                  placeholder="Search for help articles, guides, and solutions..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-full pl-12 pr-4 py-4 bg-slate-800 border border-slate-600 rounded-lg focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white placeholder-slate-400"
@@ -256,7 +261,7 @@ export default function Help() {
                 <div
                   key={index}`
                   className={`flex items-center justify-between p-4 ${
-'
+
                     index !== supportHours.length - 1 ? 'border-b border-slate-700/50' : ''`
                   }`}
                 >"
@@ -300,7 +305,7 @@ export default function Help() {
                 className="bg-slate-800/50 rounded-xl border border-slate-700/50 overflow-hidden"
               >
                 <button"
-                  type="submit""
+                  type="submit"
                   className="absolute right-2 top-1/2 -translate-y-1/2 px-4 py-2 bg-cyan-500 hover:bg-cyan-600 text-white rounded-md transition-colors"
                 >"
                   <div className="flex items-center justify-between">"
@@ -342,26 +347,26 @@ export default function Help() {
             {[
               {
 
-                icon: BookOpen,'
-                title: 'Documentation','
-                description: 'Comprehensive technical documentation and API references','
-                url: '/help/documentation','
+                icon: BookOpen,
+                title: 'Documentation',
+                description: 'Comprehensive technical documentation and API references',
+                url: '/help/documentation',
                 color: 'from-blue-500 to-blue-600'
               },
               {
 
-                icon: Video,'
-                title: 'Video Tutorials','
-                description: 'Step-by-step video guides for common tasks','
-                url: '/help/videos','
+                icon: Video,
+                title: 'Video Tutorials',
+                description: 'Step-by-step video guides for common tasks',
+                url: '/help/videos',
                 color: 'from-green-500 to-green-600'
               },
               {
 
-                icon: Download,'
-                title: 'Downloads','
-                description: 'Software, tools, and resources for your projects','
-                url: '/help/downloads','
+                icon: Download,
+                title: 'Downloads',
+                description: 'Software, tools, and resources for your projects',
+                url: '/help/downloads',
                 color: 'from-purple-500 to-purple-600'
               }
             ].map ( (resource, index) => (<motion.a
@@ -399,13 +404,13 @@ export default function Help() {
             </p>"
             <div className="flex flex-wrap justify-center gap-4">
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 hover:scale-105"
               >
                 Contact Support
               </a>
               <a"
-                href="mailto:support@ziontechgroup.com""
+                href="mailto:support@ziontechgroup.com"
                 className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >
                 <Phone className="w-4 h-4" />

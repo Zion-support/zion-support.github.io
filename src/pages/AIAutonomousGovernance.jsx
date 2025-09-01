@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousGovernance = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousGovernance = () => {
       <Helmet>
         <title>AI Autonomous Governance Platform | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous governance platform that continuously manages policies, enforces rules, and ensures compliance with advanced AI capabilities and autonomous operation."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI governance, autonomous governance, policy management, rule enforcement, autonomous operations, AI governance platform"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-governance"
         />
       </Helmet>
@@ -181,14 +181,7 @@ const AIAutonomousGovernance = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Policy Governance','
-                'Compliance Governance','
-                'Risk Governance','
-                'Data Governance','
-                'IT Governance','
-                'Security Governance','
-                'Quality Governance','
-                'Performance Governance',
+                'Policy Governance',Compliance Governance',Risk Governance',Data Governance',IT Governance',Security Governance',Quality Governance',Performance Governance',
               ].map(type => (
                 <div
                   key={type}"

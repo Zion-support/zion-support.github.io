@@ -1,5 +1,5 @@
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';'
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import {
   Calculator, 
@@ -41,19 +41,19 @@ import {
 
 export default function RequestQuote() {
   const [formData, setFormData] = useState({
-'
-    companyName: '','
-    contactName: '','
-    email: '','
-    phone: '','
-    companySize: '','
-    industry: '','
-    projectType: '','
-    budget: '','
-    timeline: '','
+
+    companyName: '',
+    contactName: '',
+    email: '',
+    phone: '',
+    companySize: '',
+    industry: '',
+    projectType: '',
+    budget: '',
+    timeline: '',
     description: '',
-    services: [] as string[],'
-    urgency: 'medium','
+    services: [] as string[],
+    urgency: 'medium',
     preferredContact: 'email'
   }) ;
 
@@ -63,210 +63,141 @@ export default function RequestQuote() {
   const [submitted, setSubmitted] = useState (false) ;
 
   const companySizes = ['
-    '1-10 employees','
-    '11-50 employees','
-    '51-200 employees','
-    '201-500 employees','
-    '500+ employees'
+    '1-10 employees',11-50 employees',51-200 employees',201-500 employees',500+ employees'
   ];
 
   const industries = ['
-    'Technology','
-    'Healthcare','
-    'Finance','
-    'Manufacturing','
-    'Retail','
-    'Education','
-    'Real Estate','
-    'Consulting','
-    'Non-profit','
-    'Other'
+    'Technology',Healthcare',Finance',Manufacturing',Retail',Education',Real Estate',Consulting',Non-profit',Other'
   ];
 
   const projectTypes = ['
-    'New Development','
-    'System Upgrade','
-    'Integration','
-    'Consulting','
-    'Support & Maintenance','
-    'Training','
-    'Other'
+    'New Development',System Upgrade',Integration',Consulting',Support & Maintenance',Training',Other'
   ];
 
   const budgets = ['
-    'Under $10,000','
-    '$10,000 - $25,000','
-    '$25,000 - $50,000','
-    '$50,000 - $100,000','
-    '$100,000 - $250,000','
-    '$250,000+'
+    'Under $10,000',$10,000 - $25,000',$25,000 - $50,000',$50,000 - $100,000',$100,000 - $250,000',$250,000+'
   ];
 
   const timelines = ['
-    'ASAP','
-    '1-2 weeks','
-    '1-2 months','
-    '3-6 months','
-    '6+ months','
-    'Flexible'
+    'ASAP',1-2 weeks',1-2 months',3-6 months',6+ months',Flexible'
   ];
 
   const urgencyLevels = ['
-    { value: 'low', label: 'Low', description: 'No immediate deadline', color: 'text-green-400' },'
-    { value: 'medium', label: 'Medium', description: 'Standard timeline', color: 'text-yellow-400' },'
-    { value: 'high', label: 'High', description: 'Urgent deadline', color: 'text-orange-400' },'
+    { value: 'low', label: 'Low', description: 'No immediate deadline', color: 'text-green-400' },
+    { value: 'medium', label: 'Medium', description: 'Standard timeline', color: 'text-yellow-400' },
+    { value: 'high', label: 'High', description: 'Urgent deadline', color: 'text-orange-400' },
     { value: 'critical', label: 'Critical', description: 'Emergency situation', color: 'text-red-400' }
   ];
 
   const contactMethods = ['
-    { value: 'email', label: 'Email', icon: Mail, description: 'Best for detailed responses' },'
-    { value: 'phone', label: 'Phone Call', icon: Phone, description: 'Best for immediate discussion' },'
+    { value: 'email', label: 'Email', icon: Mail, description: 'Best for detailed responses' },
+    { value: 'phone', label: 'Phone Call', icon: Phone, description: 'Best for immediate discussion' },
     { value: 'video', label: 'Video Call', icon: Users, description: 'Best for complex discussions' }
   ];
 
   const services = [
     {
-'
-      id: 'ai-ml','
+
+      id: 'ai-ml',
       name: 'AI & Machine Learning',
-      icon: Bot,'
+      icon: Bot,
       description: 'Custom AI solutions, ML models, and intelligent automation',
       features: ['
-        'Custom AI model development','
-        'Machine learning pipelines','
-        'Natural language processing','
-        'Computer vision solutions','
-        'Predictive analytics','
-        'AI-powered automation'
-      ],'
-      pricing: 'Starting from $25,000','
-      timeline: '4-12 weeks','
+        'Custom AI model development',Machine learning pipelines',Natural language processing',Computer vision solutions',Predictive analytics',AI-powered automation'
+      ],
+      pricing: 'Starting from $25,000',
+      timeline: '4-12 weeks',
       category: 'AI Services'
     },
     {
-'
-      id: 'cloud-devops','
+
+      id: 'cloud-devops',
       name: 'Cloud & DevOps',
-      icon: Cloud,'
+      icon: Cloud,
       description: 'Cloud infrastructure, CI/CD pipelines, and infrastructure automation',
       features: ['
-        'AWS/Azure/GCP setup','
-        'Kubernetes orchestration','
-        'CI/CD pipeline development','
-        'Infrastructure as Code','
-        'Monitoring & logging','
-        'Security & compliance'
-      ],'
-      pricing: 'Starting from $15,000','
-      timeline: '2-8 weeks','
+        'AWS/Azure/GCP setup',Kubernetes orchestration',CI/CD pipeline development',Infrastructure as Code',Monitoring & logging',Security & compliance'
+      ],
+      pricing: 'Starting from $15,000',
+      timeline: '2-8 weeks',
       category: 'IT Services'
     },
     {
-'
-      id: 'web-development','
+
+      id: 'web-development',
       name: 'Web Development',
-      icon: Monitor,'
+      icon: Monitor,
       description: 'Modern web applications, e-commerce, and custom web solutions',
       features: ['
-        'React/Next.js applications','
-        'E-commerce platforms','
-        'Custom web portals','
-        'API development','
-        'Performance optimization','
-        'SEO & accessibility'
-      ],'
-      pricing: 'Starting from $10,000','
-      timeline: '3-10 weeks','
+        'React/Next.js applications',E-commerce platforms',Custom web portals',API development',Performance optimization',SEO & accessibility'
+      ],
+      pricing: 'Starting from $10,000',
+      timeline: '3-10 weeks',
       category: 'IT Services'
     },
     {
-'
-      id: 'mobile-apps','
+
+      id: 'mobile-apps',
       name: 'Mobile Applications',
-      icon: Smartphone,'
+      icon: Smartphone,
       description: 'iOS and Android apps with cross-platform solutions',
       features: ['
-        'Native iOS development','
-        'Native Android development','
-        'React Native apps','
-        'Flutter applications','
-        'App store optimization','
-        'Push notifications'
-      ],'
-      pricing: 'Starting from $20,000','
-      timeline: '6-16 weeks','
+        'Native iOS development',Native Android development',React Native apps',Flutter applications',App store optimization',Push notifications'
+      ],
+      pricing: 'Starting from $20,000',
+      timeline: '6-16 weeks',
       category: 'IT Services'
     },
     {
-'
-      id: 'data-analytics','
+
+      id: 'data-analytics',
       name: 'Data & Analytics',
-      icon: BarChart3,'
+      icon: BarChart3,
       description: 'Data warehousing, business intelligence, and advanced analytics',
       features: ['
-        'Data warehouse design','
-        'ETL pipeline development','
-        'Business intelligence dashboards','
-        'Advanced analytics','
-        'Data visualization','
-        'Predictive modeling'
-      ],'
-      pricing: 'Starting from $18,000','
-      timeline: '4-12 weeks','
+        'Data warehouse design',ETL pipeline development',Business intelligence dashboards',Advanced analytics',Data visualization',Predictive modeling'
+      ],
+      pricing: 'Starting from $18,000',
+      timeline: '4-12 weeks',
       category: 'AI Services'
     },
     {
-'
-      id: 'cybersecurity','
+
+      id: 'cybersecurity',
       name: 'Cybersecurity',
-      icon: Shield,'
+      icon: Shield,
       description: 'Security audits, compliance, and threat protection',
       features: ['
-        'Security assessments','
-        'Penetration testing','
-        'Compliance frameworks','
-        'Threat detection','
-        'Incident response','
-        'Security training'
-      ],'
-      pricing: 'Starting from $12,000','
-      timeline: '2-6 weeks','
+        'Security assessments',Penetration testing',Compliance frameworks',Threat detection',Incident response',Security training'
+      ],
+      pricing: 'Starting from $12,000',
+      timeline: '2-6 weeks',
       category: 'Security'
     },
     {
-'
-      id: 'micro-saas','
+
+      id: 'micro-saas',
       name: 'Micro SaaS Solutions',
-      icon: Package,'
+      icon: Package,
       description: 'Custom SaaS applications and business automation tools',
       features: ['
-        'Custom SaaS platforms','
-        'Business process automation','
-        'Workflow management','
-        'User management systems','
-        'Subscription billing','
-        'Analytics & reporting'
-      ],'
-      pricing: 'Starting from $30,000','
-      timeline: '8-20 weeks','
+        'Custom SaaS platforms',Business process automation',Workflow management',User management systems',Subscription billing',Analytics & reporting'
+      ],
+      pricing: 'Starting from $30,000',
+      timeline: '8-20 weeks',
       category: 'Micro SaaS'
     },
     {
-'
-      id: 'integration','
+
+      id: 'integration',
       name: 'System Integration',
-      icon: Settings,'
+      icon: Settings,
       description: 'API development, third-party integrations, and data synchronization',
       features: ['
-        'API development','
-        'Third-party integrations','
-        'Data synchronization','
-        'Webhook implementation','
-        'Custom connectors','
-        'Integration testing'
-      ],'
-      pricing: 'Starting from $15,000','
-      timeline: '3-8 weeks','
+        'API development',Third-party integrations',Data synchronization',Webhook implementation',Custom connectors',Integration testing'
+      ],
+      pricing: 'Starting from $15,000',
+      timeline: '3-8 weeks',
       category: 'IT Services'
     }
   ];
@@ -274,26 +205,26 @@ export default function RequestQuote() {
   const benefits = [
     {
 
-      icon: Calculator,'
-      title: 'Transparent Pricing','
+      icon: Calculator,
+      title: 'Transparent Pricing',
       description: 'Clear, upfront pricing with no hidden fees'
     },
     {
 
-      icon: Clock,'
-      title: 'Fast Response','
+      icon: Clock,
+      title: 'Fast Response',
       description: 'Get a detailed quote within 24-48 hours'
     },
     {
 
-      icon: FileText,'
-      title: 'Detailed Proposals','
+      icon: FileText,
+      title: 'Detailed Proposals',
       description: 'Comprehensive project breakdowns and timelines'
     },
     {
 
-      icon: CheckCircle,'
-      title: 'Quality Guarantee','
+      icon: CheckCircle,
+      title: 'Quality Guarantee',
       description: 'We stand behind our work with satisfaction guarantees'
     }
   ];
@@ -347,19 +278,19 @@ export default function RequestQuote() {
 
   const resetForm = () => {
     setFormData({
-'
-      companyName: '','
-      contactName: '','
-      email: '','
-      phone: '','
-      companySize: '','
-      industry: '','
-      projectType: '','
-      budget: '','
-      timeline: '','
+
+      companyName: '',
+      contactName: '',
+      email: '',
+      phone: '',
+      companySize: '',
+      industry: '',
+      projectType: '',
+      budget: '',
+      timeline: '',
       description: '',
-      services: [],'
-      urgency: 'medium','
+      services: [],
+      urgency: 'medium',
       preferredContact: 'email'
     }) ;
     setFormStep (1) ;
@@ -427,7 +358,7 @@ export default function RequestQuote() {
               Request Another Quote
             </button>
             <a"
-              href="mailto:info@ziontechgroup.com""
+              href="mailto:info@ziontechgroup.com"
               className="px-8 py-3 border border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-200"
             >
               Contact Us
@@ -439,8 +370,14 @@ export default function RequestQuote() {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
+        title="Request Quote - Zion Tech Group"
+        description="Get a custom quote for your technology project. Our team will provide detailed pricing and timelines for your specific needs."
+      />
+=======
         title="Request Quote - Zion Tech Group""        description="Get a custom quote for your technology project. Our team will provide detailed pricing and timelines for your specific needs."
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -457,7 +394,7 @@ export default function RequestQuote() {
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"              Get Your <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Custom Quote</span>
             </h1>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">'
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Tell us about your project and we'll provide a detailed quote with pricing, 
               timeline, and implementation plan tailored to your specific needs.
             </p>
@@ -515,7 +452,7 @@ export default function RequestQuote() {
                         </div>
                         {step < 3 && (`
                           <div className={`w-16 h-1 mx-2 ${
-'
+
                             formStep > step ? 'bg-gradient-to-r from-green-400 to-blue-500' : 'bg-slate-700'`
                           }`}></div>
                         )}
@@ -552,9 +489,9 @@ export default function RequestQuote() {
                             <input"
                               type="text"
                               required
-                              value={formData.companyName}'
+                              value={formData.companyName}
                               onChange={(e) => handleInputChange('companyName', e.target.value)}"
-                              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200""
+                              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                               placeholder="Your company name"
                             />
                           </div>
@@ -564,9 +501,9 @@ export default function RequestQuote() {
                             <input"
                               type="text"
                               required
-                              value={formData.contactName}'
+                              value={formData.contactName}
                               onChange={(e) => handleInputChange('contactName', e.target.value)}"
-                              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200""
+                              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                               placeholder="Your full name"
                             />
                           </div>
@@ -578,9 +515,9 @@ export default function RequestQuote() {
                             <input"
                               type="email"
                               required
-                              value={formData.email}'
+                              value={formData.email}
                               onChange={(e) => handleInputChange('email', e.target.value)}"
-                              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200""
+                              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                               placeholder="your.email@company.com"
                             />
                           </div>
@@ -589,9 +526,9 @@ export default function RequestQuote() {
                             <label className="block text-white font-medium mb-2">Phone</label>
                             <input"
                               type="tel"
-                              value={formData.phone}'
+                              value={formData.phone}
                               onChange={(e) => handleInputChange('phone', e.target.value)}"
-                              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200""
+                              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                               placeholder="+1 (555) 123-4567"
                             />
                           </div>
@@ -601,7 +538,7 @@ export default function RequestQuote() {
                           <div>"
                             <label className="block text-white font-medium mb-2">Company Size</label>
                             <select
-                              value={formData.companySize}'
+                              value={formData.companySize}
                               onChange={(e) => handleInputChange('companySize', e.target.value)}"
                               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                             >"
@@ -613,7 +550,7 @@ export default function RequestQuote() {
                           <div>"
                             <label className="block text-white font-medium mb-2">Industry</label>
                             <select
-                              value={formData.industry}'
+                              value={formData.industry}
                               onChange={(e) => handleInputChange('industry', e.target.value)}"
                               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                             >"
@@ -637,7 +574,7 @@ export default function RequestQuote() {
                           <div>"
                             <label className="block text-white font-medium mb-2">Project Type</label>
                             <select
-                              value={formData.projectType}'
+                              value={formData.projectType}
                               onChange={(e) => handleInputChange('projectType', e.target.value)}"
                               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                             >"
@@ -649,7 +586,7 @@ export default function RequestQuote() {
                           <div>"
                             <label className="block text-white font-medium mb-2">Budget Range</label>
                             <select
-                              value={formData.budget}'
+                              value={formData.budget}
                               onChange={(e) => handleInputChange('budget', e.target.value)}"
                               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                             >"
@@ -663,7 +600,7 @@ export default function RequestQuote() {
                           <div>"
                             <label className="block text-white font-medium mb-2">Timeline</label>
                             <select
-                              value={formData.timeline}'
+                              value={formData.timeline}
                               onChange={(e) => handleInputChange('timeline', e.target.value)}"
                               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                             >"
@@ -675,7 +612,7 @@ export default function RequestQuote() {
                           <div>"
                             <label className="block text-white font-medium mb-2">Urgency Level</label>
                             <select
-                              value={formData.urgency}'
+                              value={formData.urgency}
                               onChange={(e) => handleInputChange('urgency', e.target.value)}"
                               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                             >
@@ -691,9 +628,9 @@ export default function RequestQuote() {
                           <textarea
                             required
                             rows={4}
-                            value={formData.description}'
+                            value={formData.description}
                             onChange={(e) => handleInputChange('description', e.target.value)}"
-                            className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200""
+                            className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                             placeholder="Describe your project requirements, goals, and any specific features you need..."
                           />
                         </div>
@@ -724,7 +661,7 @@ export default function RequestQuote() {
                                   htmlFor={service.id}`
                                   className={`block p-4 rounded-lg border-2 cursor-pointer transition-all duration-200 ${
 
-                                    formData.services.includes(service.id)'
+                                    formData.services.includes(service.id)
                                       ? 'border-green-400 bg-green-400/10''
                                       : 'border-slate-600 hover:border-slate-500 bg-slate-800/30'`
                                   }`}
@@ -754,7 +691,7 @@ export default function RequestQuote() {
                                   id={method.value}"
                                   name="preferredContact"
                                   value={method.value}
-                                  checked={formData.preferredContact === method.value}'
+                                  checked={formData.preferredContact === method.value}
                                   onChange={(e) => handleInputChange('preferredContact', e.target.value)}"
                                   className="sr-only"
                                 />
@@ -804,7 +741,7 @@ export default function RequestQuote() {
                             type="submit"
                             disabled={isSubmitting}"
                             className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-                          >'
+                          >
                             {isSubmitting ? 'Submitting...' : 'Submit Quote Request'}
                           </button>) }
                       </div>
@@ -848,7 +785,7 @@ export default function RequestQuote() {
                           
                           {expandedService === service.id && (
                             <motion.div
-                              initial={{ opacity: 0, height: 0 }}'
+                              initial={{ opacity: 0, height: 0 }}
                               animate={{ opacity: 1, height: 'auto' }}
                               exit={{ opacity: 0, height: 0 }}
                               transition={{ duration: 0.3 }}"
@@ -932,7 +869,7 @@ export default function RequestQuote() {
                 </div>"
                 <h3 className="text-lg font-bold text-white mb-2">Email Us</h3>"                <p className="text-gray-300 text-sm mb-3">Get a quick response</p>
                 <a"
-                  href="mailto:info@ziontechgroup.com""
+                  href="mailto:info@ziontechgroup.com"
                   className="text-green-400 hover:text-green-300 transition-colors duration-200"
                 >
                   info@ziontechgroup.com
@@ -945,7 +882,7 @@ export default function RequestQuote() {
                 </div>"
                 <h3 className="text-lg font-bold text-white mb-2">Call Us</h3>"                <p className="text-gray-300 text-sm mb-3">Speak with an expert</p>
                 <a"
-                  href="tel:+13024640950""
+                  href="tel:+13024640950"
                   className="text-green-400 hover:text-green-300 transition-colors duration-200"
                 >
                   +1 (302) 464 - 0950

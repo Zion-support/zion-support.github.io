@@ -1,12 +1,12 @@
-import React, { useState, useMemo } from 'react';'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';'
-import { Button } from '@/components/ui/button';'
-import { Badge } from '@/components/ui/badge';'
-import { Input } from '@/components/ui/input';'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';'
-import { Search, Users, Zap, Shield, Code, BarChart3, Bot, Building, CheckCircle, Sparkles, Brain, Database, Cloud, Smartphone, FileText, Settings, DollarSign, Clock, Target, Cpu, Heart, Eye, ExternalLink, Play, BookOpen, Mail, Phone, MapPin import { ENHANCED_INNOVATIVE_SERVICES } from '@/data/enhancedInnovativeServices';'
-import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';'
-import { INNOVATIVE_MICRO_SAAS_SERVICES } from '@/data/innovativeMicroSaasServices';'
+import React, { useState, useMemo } from 'react';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Input } from '@/components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Search, Users, Zap, Shield, Code, BarChart3, Bot, Building, CheckCircle, Sparkles, Brain, Database, Cloud, Smartphone, FileText, Settings, DollarSign, Clock, Target, Cpu, Heart, Eye, ExternalLink, Play, BookOpen, Mail, Phone, MapPin import { ENHANCED_INNOVATIVE_SERVICES } from '@/data/enhancedInnovativeServices';
+import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
+import { INNOVATIVE_MICRO_SAAS_SERVICES } from '@/data/innovativeMicroSaasServices';
 import { motion } from 'framer-motion';
 // Combine all services
 const ALL_SERVICES = [
@@ -15,31 +15,8 @@ const ALL_SERVICES = [
     ...INNOVATIVE_MICRO_SAAS_SERVICES
 ];
 const categoryColors = {
-'
-  'AI & Legal Tech': 'from-blue-500 to-indigo-500','
-    'AI & FinTech': 'from-green-500 to-emerald-500','
-    'AI & Healthcare': 'from-red-500 to-pink-500','
-    'Cybersecurity & Quantum': 'from-purple-500 to-violet-500','
-    'AI & Supply Chain': 'from-orange-500 to-red-500','
-    'AI & Energy': 'from-yellow-500 to-orange-500','
-    'AI & Customer Experience': 'from-pink-500 to-rose-500','
-    'Quantum & AI': 'from-cyan-500 to-blue-500','
-    'AI & Data Governance': 'from-indigo-500 to-purple-500','
-    'AI & HR Tech': 'from-teal-500 to-green-500','
-    'AI & Machine Learning': 'from-purple-500 to-pink-500','
-    'AI & Business Intelligence': 'from-indigo-500 to-purple-500','
-    'AI & Marketing Automation': 'from-pink-500 to-rose-500','
-    'AI & CRM': 'from-blue-500 to-cyan-500','
-    'AI & ERP': 'from-green-500 to-emerald-500','
-    'AI & Project Management': 'from-orange-500 to-red-500','
-    'AI & Autonomous Systems': 'from-purple-500 to-violet-500','
-    'AI & Research': 'from-cyan-500 to-blue-500','
-    'AI & Content Generation': 'from-indigo-500 to-purple-500','
-    'AI & Voice Technology': 'from-teal-500 to-green-500','
-    'AI & Video Generation': 'from-pink-500 to-rose-500','
-    'AI & Threat Intelligence': 'from-red-500 to-pink-500','
-    'AI & Cloud Management': 'from-blue-500 to-cyan-500','
-  'AI & DevOps': 'from-orange-500 to-red-500'
+
+  'AI & Legal Tech': 'from-blue-500 to-indigo-500',AI & FinTech': 'from-green-500 to-emerald-500',AI & Healthcare': 'from-red-500 to-pink-500',Cybersecurity & Quantum': 'from-purple-500 to-violet-500',AI & Supply Chain': 'from-orange-500 to-red-500',AI & Energy': 'from-yellow-500 to-orange-500',AI & Customer Experience': 'from-pink-500 to-rose-500',Quantum & AI': 'from-cyan-500 to-blue-500',AI & Data Governance': 'from-indigo-500 to-purple-500',AI & HR Tech': 'from-teal-500 to-green-500',AI & Machine Learning': 'from-purple-500 to-pink-500',AI & Business Intelligence': 'from-indigo-500 to-purple-500',AI & Marketing Automation': 'from-pink-500 to-rose-500',AI & CRM': 'from-blue-500 to-cyan-500',AI & ERP': 'from-green-500 to-emerald-500',AI & Project Management': 'from-orange-500 to-red-500',AI & Autonomous Systems': 'from-purple-500 to-violet-500',AI & Research': 'from-cyan-500 to-blue-500',AI & Content Generation': 'from-indigo-500 to-purple-500',AI & Voice Technology': 'from-teal-500 to-green-500',AI & Video Generation': 'from-pink-500 to-rose-500',AI & Threat Intelligence': 'from-red-500 to-pink-500',AI & Cloud Management': 'from-blue-500 to-cyan-500',AI & DevOps': 'from-orange-500 to-red-500'
 
 
 
@@ -49,10 +26,8 @@ const categoryColors = {
 
 };
 const supportLevelColors = {
-'
-  'premium': 'bg-gradient-to-r from-blue-500 to-cyan-500','
-    'enterprise': 'bg-gradient-to-r from-purple-500 to-pink-500','
-  'basic': 'bg-gradient-to-r from-green-500 to-emerald-500'
+
+  'premium': 'bg-gradient-to-r from-blue-500 to-cyan-500',enterprise': 'bg-gradient-to-r from-purple-500 to-pink-500',basic': 'bg-gradient-to-r from-green-500 to-emerald-500'
 
 
 
@@ -62,10 +37,10 @@ const supportLevelColors = {
 
 };
 export default function ComprehensiveServicesOverview() {
-'
-    const [searchQuery, setSearchQuery] = useState('');'
-    const [selectedCategory, setSelectedCategory] = useState('all');'
-    const [priceRange, setPriceRange] = useState('all');'
+
+    const [searchQuery, setSearchQuery] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [priceRange, setPriceRange] = useState('all');
     const [selectedSupportLevel, setSelectedSupportLevel] = useState('all');
     const filtered = ALL_SERVICES;
         // Search filter
@@ -83,29 +58,29 @@ export default function ComprehensiveServicesOverview() {
         if (priceRange !== 'all') {
 
             switch (priceRange) {
-'
+
                 case 'low':
                     filtered = filtered.filter(service => {
-'
+
                         const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
                         return price <= 1000});
-                    break;'
+                    break;
                 case 'medium':
                     filtered = filtered.filter(service => {
-'
+
                         const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
                         return price > 1000 && price <= 3000});
-                    break;'
+                    break;
                 case 'high':
                     filtered = filtered.filter(service => {
-'
+
                         const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
                         return price > 3000}) ;
                     break}
         }
     }) ;
     const getServicePrice = (service) => {
-'
+
         if (typeof service.price === 'number') {
 
             return service.price}
@@ -253,7 +228,7 @@ export default function ComprehensiveServicesOverview() {
 }} transition={{ delay: index * 0.05 }}>"
                     <Card className="bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300 group">
                       <CardHeader>"
-                        <div className="flex items-start justify-between mb-4">'
+                        <div className="flex items-start justify-between mb-4">
                           <div className={`p-3 rounded-xl ${categoryColors[service.category] || 'from-gray-500 to-gray-600'}`}>
                             {React.createElement(categoryIcons[service.category] || Settings, {
 "

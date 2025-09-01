@@ -1,35 +1,102 @@
+<<<<<<< HEAD
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import {
+
+  Code,
+  Smartphone,
+  Globe,
+  Database,
+  Zap,
+  Shield,
+  Users,
+  Target,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Lightbulb,
+  TrendingUp,
+  Settings,
+  Workflow,
+  FileText,
+  Monitor,
+  BarChart3,
+  Rocket,
+  Building2,
+  Cpu,
+  Network'
+ } from 'lucide-react';
+;
+export { function };
+export default function CustomDevelopment(...args[]):  {
+
+  const services = [
+    {
+
+      title: 'Web Applications',
+      description: 'Custom web applications built with modern technologies and best practices for optimal performance and user experience.',
+      icon: Globe,
+      features['Responsive Design',Progressive Web Apps',E-commerce Solutions',Content Management Systems'];
+    },;
+=======
 import React from 'react';'
 import { Link } from 'react-router-dom';'
 import { motion } from 'framer-motion';    },;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     {
-'
-      title: 'Mobile Applications','
+
+      title: 'Mobile Applications',
       description: 'Native and cross-platform mobile applications for iOS and Android that deliver exceptional user experiences.',
+<<<<<<< HEAD
+      icon: Smartphone,
+      features['iOS Development',Android Development',Cross-platform Apps',App Store Optimization'];
+    },;
+    {
+
+      title: 'API Development',
+=======
       icon: Smartphone,'
       features['iOS Development', 'Android Development', 'Cross-platform Apps', 'App Store Optimization'];
     },;    {
 '
       title: 'API Development','
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       description: 'Robust and scalable APIs that enable seamless integration between systems and services.',
-      icon: Network,'
-      features['RESTful APIs', 'GraphQL APIs', 'API Documentation', 'Integration Support'];
+      icon: Network,
+      features['RESTful APIs',GraphQL APIs',API Documentation',Integration Support'];
     },;
     {
-'
-      features['Legacy System Integration', 'Third-party APIs', 'Data Synchronization', 'Workflow Automation'];
-    };'
-      title: 'System Integration',;'
+
+      features['Legacy System Integration',Third-party APIs',Data Synchronization',Workflow Automation'];
+    };
+      title: 'System Integration',;
       description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',;
-              icon: GitFork,;'
-      features: ['Legacy System Integration', 'Third-party APIs', 'Data Synchronization', 'Workflow Automation'];
+              icon: GitFork,;
+      features: ['Legacy System Integration',Third-party APIs',Data Synchronization',Workflow Automation'];
     };
   ];
 
   const technologies = [
     {
-'
-      title: 'Frontend','
+
+      title: 'Frontend',
       description: 'Modern frontend frameworks and libraries for responsive and interactive user interfaces.',
+<<<<<<< HEAD
+      icon: Monitor,
+      stack['React',Vue.js',Angular',TypeScript',Tailwind CSS'];
+    },;
+    {
+
+      title: 'Backend',
+      description: 'Robust backend technologies for scalable and secure applications.',
+      icon: Cpu, // Changed from Server to Cpu'
+      stack['Node.js',Python',Java',C#',Go'];
+    },;
+    {
+
+      title: 'Mobile',
+=======
       icon: Monitor,'
       stack['React', 'Vue.js', 'Angular', 'TypeScript', 'Tailwind CSS'];
     },;    {
@@ -41,46 +108,59 @@ import { motion } from 'framer-motion';    },;
     },;    {
 '
       title: 'Mobile','
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       description: 'Cross-platform and native mobile development technologies.',
-      icon: Smartphone,'
-      stack['React Native', 'Flutter', 'Swift', 'Kotlin', 'Xamarin'];
+      icon: Smartphone,
+      stack['React Native',Flutter',Swift',Kotlin',Xamarin'];
     },;
     {
-'
-      stack['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch'];
-    };'
-      title: 'Database',;'
+
+      stack['PostgreSQL',MongoDB',MySQL',Redis',Elasticsearch'];
+    };
+      title: 'Database',;
       description: 'Modern database solutions for data storage and management.',;
-      icon: Database,;'
-      stack: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch'];
+      icon: Database,;
+      stack: ['PostgreSQL',MongoDB',MySQL',Redis',Elasticsearch'];
     };
   ];
 
   const benefits = [
     {
-'
-      title: 'Custom Solutions','
+
+      title: 'Custom Solutions',
       description: 'Tailored software solutions designed specifically for your business needs and workflows.',
       icon: Target
     },
     {
-'
-      title: 'Scalability','
+
+      title: 'Scalability',
       description: 'Applications built to grow with your business and handle increasing demands.',
       icon: TrendingUp
     },
     {
-'
-      title: 'Security','
+
+      title: 'Security',
       description: 'Enterprise-grade security measures built into every application.',
       icon: Shield;
     },;
+<<<<<<< HEAD
+    {;
+      title: 'Support & Maintenance',;
+      description: 'Ongoing support and maintenance to ensure your applications run smoothly.',;
+      icon: Settings;
+    };
+  ];
+
+  const industries = [;
+    'Healthcare',Finance',Manufacturing',Retail',Government',Education',Transportation',Energy';
+=======
     {;'
       title: 'Support & Maintenance',;'      description: 'Ongoing support and maintenance to ensure your applications run smoothly.',;
       icon: Settings};
   ];
 
   const industries = [;'    'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Government', 'Education', 'Transportation', 'Energy';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
@@ -124,13 +204,13 @@ import { motion } from 'framer-motion';    },;
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
 
                 Start Your Project
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
 
                 View All Services
@@ -548,9 +628,9 @@ import { motion } from 'framer-motion';    },;
 "
           <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
             {['
-              { step: '01', title: 'Discovery', description: 'Understand requirements and plan the solution architecture' },'
-              { step: '02', title: 'Design', description: 'Create detailed designs and user experience mockups' },'
-              { step: '03', title: 'Development', description: 'Build the application using agile development practices' },'
+              { step: '01', title: 'Discovery', description: 'Understand requirements and plan the solution architecture' },
+              { step: '02', title: 'Design', description: 'Create detailed designs and user experience mockups' },
+              { step: '03', title: 'Development', description: 'Build the application using agile development practices' },
               { step: '04', title: 'Deployment', description: 'Deploy and launch with ongoing support and maintenance' }
             ].map(phase: unknown, index: unknown (
               <motion.div
@@ -639,13 +719,13 @@ import { motion } from 'framer-motion';    },;
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
 
                 Start Your Project
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
 
                 Explore Services

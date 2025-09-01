@@ -1,6 +1,6 @@
-import React from 'react';'
-import Link from 'next/link';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Factory, Cpu, Zap, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Network } from 'lucide-react';
 export default function ManufacturingSolutions() {
     const solutions = [
@@ -208,7 +208,7 @@ export default function ManufacturingSolutions() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Manufacturing?
           </h2>"
-          <p className="text-xl text-gray-300 mb-8">'
+          <p className="text-xl text-gray-300 mb-8">
             Join the Industry 4.0 revolution with Zion Tech Group's smart manufacturing solutions
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"

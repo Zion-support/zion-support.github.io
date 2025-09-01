@@ -1,29 +1,29 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { BarChart3, RefreshCw, X, Maximize2, Minimize2 const mockChartData = [;'
-    { id: '1', name: 'Q1 Revenue', value: 1250000, category: 'Revenue', timestamp: new Date('2024-01-01') },'
-    { id: '2', name: 'Q2 Revenue', value: 1580000, category: 'Revenue', timestamp: new Date('2024-04-01') },'
-    { id: '3', name: 'Q3 Revenue', value: 1420000, category: 'Revenue', timestamp: new Date('2024-07-01') },'
-    { id: '4', name: 'Q4 Revenue', value: 1890000, category: 'Revenue', timestamp: new Date('2024-10-01') },'
-    { id: '5', name: 'Q1 Users', value: 45000, category: 'Users', timestamp: new Date('2024-01-01') },'
-    { id: '6', name: 'Q2 Users', value: 62000, category: 'Users', timestamp: new Date('2024-04-01') },'
-    { id: '7', name: 'Q3 Users', value: 58000, category: 'Users', timestamp: new Date('2024-07-01') },'
-    { id: '8', name: 'Q4 Users', value: 75000, category: 'Users', timestamp: new Date('2024-10-01') },'
-    { id: '9', name: 'Q1 Conversion', value: 3.2, category: 'Conversion', timestamp: new Date('2024-01-01') },'
-    { id: '10', name: 'Q2 Conversion', value: 3.8, category: 'Conversion', timestamp: new Date('2024-04-01') },'
-    { id: '11', name: 'Q3 Conversion', value: 3.5, category: 'Conversion', timestamp: new Date('2024-07-01') },'
+import { BarChart3, RefreshCw, X, Maximize2, Minimize2 const mockChartData = [;
+    { id: '1', name: 'Q1 Revenue', value: 1250000, category: 'Revenue', timestamp: new Date('2024-01-01') },
+    { id: '2', name: 'Q2 Revenue', value: 1580000, category: 'Revenue', timestamp: new Date('2024-04-01') },
+    { id: '3', name: 'Q3 Revenue', value: 1420000, category: 'Revenue', timestamp: new Date('2024-07-01') },
+    { id: '4', name: 'Q4 Revenue', value: 1890000, category: 'Revenue', timestamp: new Date('2024-10-01') },
+    { id: '5', name: 'Q1 Users', value: 45000, category: 'Users', timestamp: new Date('2024-01-01') },
+    { id: '6', name: 'Q2 Users', value: 62000, category: 'Users', timestamp: new Date('2024-04-01') },
+    { id: '7', name: 'Q3 Users', value: 58000, category: 'Users', timestamp: new Date('2024-07-01') },
+    { id: '8', name: 'Q4 Users', value: 75000, category: 'Users', timestamp: new Date('2024-10-01') },
+    { id: '9', name: 'Q1 Conversion', value: 3.2, category: 'Conversion', timestamp: new Date('2024-01-01') },
+    { id: '10', name: 'Q2 Conversion', value: 3.8, category: 'Conversion', timestamp: new Date('2024-04-01') },
+    { id: '11', name: 'Q3 Conversion', value: 3.5, category: 'Conversion', timestamp: new Date('2024-07-01') },
     { id: '12', name: 'Q4 Conversion', value: 4.1, category: 'Conversion', timestamp: new Date('2024-10-01') }
 ];
 const colorPalettes = ['
-    ['#06b6d4', '#7c3aed', '#10b981', '#f59e0b', '#ef4444'],'
-    ['#3b82f6', '#8b5cf6', '#06b6d4', '#10b981', '#f59e0b'],'
-    ['#ef4444', '#f97316', '#eab308', '#84cc16', '#22c55e'],'
-    ['#8b5cf6', '#ec4899', '#f97316', '#eab308', '#84cc16']
+    ['#06b6d4',#7c3aed',#10b981',#f59e0b',#ef4444'],
+    ['#3b82f6',#8b5cf6',#06b6d4',#10b981',#f59e0b'],
+    ['#ef4444',#f97316',#eab308',#84cc16',#22c55e'],
+    ['#8b5cf6',#ec4899',#f97316',#eab308',#84cc16']
 ];
 export function AdvancedDataVisualization() {
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
-    const [isFullscreen, setIsFullscreen] = useState(false);'
-    const [selectedChartType, setSelectedChartType] = useState('bar');'
+    const [isFullscreen, setIsFullscreen] = useState(false);
+    const [selectedChartType, setSelectedChartType] = useState('bar');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedColorPalette, setSelectedColorPalette] = useState(0);
     const [chartConfig, setChartConfig] = useState({
@@ -35,8 +35,8 @@ export function AdvancedDataVisualization() {
     });
     const [data, setData] = useState(mockChartData);
     const [isRefreshing, setIsRefreshing] = useState(false);
-    const [autoRefresh, setAutoRefresh] = useState(false);'
-    const categories = ['all', ...Array.from(new Set(data.map(item => item.category)))];'
+    const [autoRefresh, setAutoRefresh] = useState(false);
+    const categories = ['all', ...Array.from(new Set(data.map(item => item.category)))];
     const filteredData = data.filter(item => selectedCategory === 'all' || item.category === selectedCategory);
     const refreshData = async () => {
         setIsRefreshing (true) ;
@@ -62,15 +62,15 @@ export function AdvancedDataVisualization() {
         // console.log(`Downloading chart as ${format}`)};
     const renderChart = () => {
         switch (selectedChartType) {
-'
+
             case 'bar':
-                return renderBarChart();'
+                return renderBarChart();
             case 'line':
-                return renderLineChart();'
+                return renderLineChart();
             case 'pie':
-                return renderPieChart();'
+                return renderPieChart();
             case 'area':
-                return renderAreaChart();'
+                return renderAreaChart();
             case 'scatter':
                 return renderScatterChart () ;
             default:
@@ -248,7 +248,7 @@ export function AdvancedDataVisualization() {
             <div>"
               <h3 className="text-sm font-medium text-zion-slate mb-3">Data Filter</h3>"
               <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="w-full px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate focus:ring-2 focus:ring-zion-cyan focus:border-transparent">
-                {categories.map(category => (<option key={category} value={category}>'
+                {categories.map(category => (<option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category}
                   </option>) ) }
               </select>

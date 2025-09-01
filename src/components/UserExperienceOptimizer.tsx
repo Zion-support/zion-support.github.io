@@ -1,16 +1,66 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';'
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'react';
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 export function UserExperienceOptimizer ({
+<<<<<<< HEAD
+import {
+
+  Users,
+  TrendingUp,
+  MousePointer,
+  Eye,
+  Clock,
+  Target,
+  BarChart3,
+  PieChart,
+  Activity,
+  Zap,
+  Lightbulb,
+  CheckCircle,
+  AlertTriangle,
+  Info,
+  Settings,
+  RefreshCw,
+  Download,
+  Share2,
+  Maximize2,
+  Minimize2,
+  X,
+  Search,
+  Filter,
+  Calendar,
+  Smartphone,
+  Monitor,
+  Globe,
+  Heart,
+  Star,
+  ThumbsUp} from 'lucide-react';
+
+interface UserBehavior {
+
+  id: string;
+  action: string;
+  timestamp: Date;
+  duration: number;
+  success: boolean;
+  userType: 'new' | 'returning' | 'power';
+  device: 'desktop' | 'mobile' | 'tablet';
+  location: string;
+  sessionId: string;
+
+}
+
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface UXMetric {
 
   id: string;
   name: string;
   value: number;
   target: number;
-  unit: string;'
+  unit: string;
   trend: 'up' | 'down' | 'stable';
-  change: number;'
+  change: number;
   category: 'engagement' | 'performance' | 'conversion' | 'satisfaction';
 
 }
@@ -18,9 +68,9 @@ interface OptimizationSuggestion {
 
   id: string;
   title: string;
-  description: string;'
-  impact: 'high' | 'medium' | 'low';'
-  effort: 'low' | 'medium' | 'high';'
+  description: string;
+  impact: 'high' | 'medium' | 'low';
+  effort: 'low' | 'medium' | 'high';
   category: 'ui' | 'ux' | 'performance' | 'accessibility';
   priority: number;
   estimatedImprovement: number;
@@ -65,16 +115,11 @@ export function UserExperienceOptimizer({
   // Generate sample user behaviors
   const generateUserBehaviors = useCallback(() => {
     const actions = ['
-      'Page View','
-      'Button Click','
-      'Form Submit','
-      'Navigation','
-      'Search','
-      'Purchase',
-    ];'
-    const userTypes = ['new', 'returning', 'power'];'
-    const devices = ['desktop', 'mobile', 'tablet'];'
-    const locations = ['US', 'UK', 'CA', 'AU', 'DE', 'FR'];
+      'Page View',Button Click',Form Submit',Navigation',Search',Purchase',
+    ];
+    const userTypes = ['new',returning',power'];
+    const devices = ['desktop',mobile',tablet'];
+    const locations = ['US',UK',CA',AU',DE',FR'];
 
     const newBehaviors: UserBehavior[] = Array.from()
       { length: 50 },
@@ -100,64 +145,64 @@ export function UserExperienceOptimizer({
   const generateUXMetrics = useCallback ( () => {
     const metrics: UXMetric[] = [
       {
-'
-        id: 'engagement','
+
+        id: 'engagement',
         name: 'User Engagement Rate',
         value: Math.floor(Math.random() * 30) + 60,
-        target: 80,'
-        unit: '%','
+        target: 80,
+        unit: '%',
         trend: 'up',
-        change: Math.floor(Math.random() * 15) + 5,'
+        change: Math.floor(Math.random() * 15) + 5,
         category: 'engagement'},
       {
-'
-        id: 'bounce','
+
+        id: 'bounce',
         name: 'Bounce Rate',
         value: Math.floor(Math.random() * 20) + 20,
-        target: 25,'
-        unit: '%','
+        target: 25,
+        unit: '%',
         trend: 'down',
-        change: Math.floor(Math.random() * 10) + 2,'
+        change: Math.floor(Math.random() * 10) + 2,
         category: 'engagement'},
       {
-'
-        id: 'conversion','
+
+        id: 'conversion',
         name: 'Conversion Rate',
         value: Math.floor(Math.random() * 5) + 2,
-        target: 5,'
-        unit: '%','
+        target: 5,
+        unit: '%',
         trend: 'up',
-        change: Math.floor(Math.random() * 2) + 1,'
+        change: Math.floor(Math.random() * 2) + 1,
         category: 'conversion'},
       {
-'
-        id: 'satisfaction','
+
+        id: 'satisfaction',
         name: 'User Satisfaction',
         value: Math.floor(Math.random() * 20) + 70,
-        target: 85,'
-        unit: '/100','
+        target: 85,
+        unit: '/100',
         trend: 'up',
-        change: Math.floor(Math.random() * 10) + 2,'
+        change: Math.floor(Math.random() * 10) + 2,
         category: 'satisfaction'},
       {
-'
-        id: 'loadTime','
+
+        id: 'loadTime',
         name: 'Page Load Time',
         value: Math.floor(Math.random() * 2) + 1,
-        target: 2,'
-        unit: 's','
+        target: 2,
+        unit: 's',
         trend: 'down',
-        change: Math.floor(Math.random() * 0.5) + 0.1,'
+        change: Math.floor(Math.random() * 0.5) + 0.1,
         category: 'performance'},
       {
-'
-        id: 'sessionDuration','
+
+        id: 'sessionDuration',
         name: 'Session Duration',
         value: Math.floor(Math.random() * 3) + 2,
-        target: 5,'
-        unit: 'min','
+        target: 5,
+        unit: 'min',
         trend: 'up',
-        change: Math.floor(Math.random() * 1) + 0.2,'
+        change: Math.floor(Math.random() * 1) + 0.2,
         category: 'engagement'},
     ];
 
@@ -168,49 +213,49 @@ export function UserExperienceOptimizer({
   const generateOptimizationSuggestions = useCallback ( () => {
     const suggestions: OptimizationSuggestion[] = [
       {
-'
-        id: 'ui-1','
+
+        id: 'ui-1',
         title: 'Improve Button Contrast',
         description:'
-          'Increase button contrast for better visibility and accessibility','
-        impact: 'high','
-        effort: 'low','
+          'Increase button contrast for better visibility and accessibility',
+        impact: 'high',
+        effort: 'low',
         category: 'ui',
         priority: 1,
         estimatedImprovement: 15,
         implementation:'
           'Update CSS variables for button colors and ensure WCAG AA compliance'},
       {
-'
-        id: 'ux-1','
-        title: 'Add Progress Indicators','
-        description: 'Implement progress bars for multi-step processes','
-        impact: 'medium','
-        effort: 'medium','
+
+        id: 'ux-1',
+        title: 'Add Progress Indicators',
+        description: 'Implement progress bars for multi-step processes',
+        impact: 'medium',
+        effort: 'medium',
         category: 'ux',
         priority: 2,
         estimatedImprovement: 12,
         implementation:'
           'Create reusable progress component and integrate with form flows'},
       {
-'
-        id: 'perf-1','
-        title: 'Optimize Image Loading','
-        description: 'Implement lazy loading and WebP format for images','
-        impact: 'high','
-        effort: 'medium','
+
+        id: 'perf-1',
+        title: 'Optimize Image Loading',
+        description: 'Implement lazy loading and WebP format for images',
+        impact: 'high',
+        effort: 'medium',
         category: 'performance',
         priority: 1,
         estimatedImprovement: 20,
         implementation:'
           'Add lazy loading attributes and convert images to WebP format'},
       {
-'
-        id: 'acc-1','
-        title: 'Enhance Screen Reader Support','
-        description: 'Add ARIA labels and improve semantic HTML structure','
-        impact: 'medium','
-        effort: 'low','
+
+        id: 'acc-1',
+        title: 'Enhance Screen Reader Support',
+        description: 'Add ARIA labels and improve semantic HTML structure',
+        impact: 'medium',
+        effort: 'low',
         category: 'accessibility',
         priority: 3,
         estimatedImprovement: 10,
@@ -292,9 +337,9 @@ export function UserExperienceOptimizer({
   const getTrendDisplay = (trend: string, change: number) => {
 
     const colors = {
-'
-      up: 'text-green-600','
-      down: 'text-red-600','
+
+      up: 'text-green-600',
+      down: 'text-red-600',
       stable: 'text-gray-600'};
 
     const icons = {
@@ -315,10 +360,10 @@ export function UserExperienceOptimizer({
   const getImpactColor = (impact: string) => {
 
     const colors = {
-'
+
       high: 'text-red-600 bg-red-100 dark:bg-red-900/30 dark:text-red-400',
       medium:'
-        'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400','
+        'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400',
       low: 'text-green-600 bg-green-100 dark:bg-green-900/30 dark:text-green-400'};
     return colors[impact as keyof typeof colors] || colors.low;
   };
@@ -327,10 +372,10 @@ export function UserExperienceOptimizer({
   const getEffortColor = (effort: string) => {
 
     const colors = {
-'
+
       high: 'text-red-600 bg-red-100 dark:bg-red-900/30 dark:text-red-400',
       medium:'
-        'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400','
+        'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400',
       low: 'text-green-600 bg-green-100 dark:bg-green-900/30 dark:text-green-400'};
     return colors[effort as keyof typeof colors] || colors.low;
   };
@@ -339,11 +384,8 @@ export function UserExperienceOptimizer({
   const getFilteredBehaviors = () => {
     const now = Date.now () ;
     const timeframes = {
-'
-      '1h': 3600000,'
-      '24h': 86400000,'
-      '7d': 604800000,'
-      '30d': 2592000000};
+
+      '1h': 3600000,24h': 86400000,7d': 604800000,30d': 2592000000};
 
     return userBehaviors.filter()
       behavior =>
@@ -378,12 +420,12 @@ export function UserExperienceOptimizer({
           >
             <motion.div`
               className={`bg-white dark:bg-gray-900 rounded-2xl shadow-2xl overflow-hidden ${
-'
+
                 isFullscreen ? 'w-full h-full' : 'w-full max-w-7xl max-h-[90vh]'`
               }`}
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}'
+              exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
             >
               {/* Header */}"
@@ -499,20 +541,20 @@ export function UserExperienceOptimizer({
                     <div className="flex space-x-1 bg-gray-100 dark:bg-gray-800 rounded-lg p-1">
                       {[
                         {
-'
-                          key: 'metrics','
+
+                          key: 'metrics',
                           label: 'UX Metrics',
                           icon: BarChart3,
                           count: uxMetrics.length},
                         {
-'
-                          key: 'behaviors','
+
+                          key: 'behaviors',
                           label: 'User Behaviors',
                           icon: MousePointer,
                           count: getFilteredBehaviors().length},
                         {
-'
-                          key: 'suggestions','
+
+                          key: 'suggestions',
                           label: 'Optimizations',
                           icon: Lightbulb,
                           count: optimizationSuggestions.length},
@@ -534,7 +576,7 @@ export function UserExperienceOptimizer({
                         </button>) ) }
                     </div>
 
-                    {/* UX Metrics View */}'
+                    {/* UX Metrics View */}
                     {selectedView === 'metrics' && ("
                       <div className="space-y-4">"
                         <div className="flex items-center justify-between">"
@@ -604,7 +646,7 @@ export function UserExperienceOptimizer({
                         </div>
                       </div>) }
 
-                    {/* User Behaviors View */}'
+                    {/* User Behaviors View */}
                     {selectedView === 'behaviors' && ("
                       <div className="space-y-4">"
                         <div className="flex items-center justify-between">"
@@ -614,7 +656,7 @@ export function UserExperienceOptimizer({
                           <button
                             onClick={() => setShowAdvanced(!showAdvanced)}"
                             className="px-3 py-1 text-sm bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
-                          >'
+                          >
                             {showAdvanced ? 'Hide' : 'Show'} Advanced
                           </button>
                         </div>
@@ -678,7 +720,7 @@ export function UserExperienceOptimizer({
                         </div>
                       </div>) }
 
-                    {/* Optimization Suggestions View */}'
+                    {/* Optimization Suggestions View */}
                     {selectedView === 'suggestions' && ("
                       <div className="space-y-4">"
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">

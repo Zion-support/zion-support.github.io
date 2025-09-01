@@ -156,7 +156,7 @@ class IntegratedMonitor {
 
       };
       
-      const reportPath = path.join(this.browserMonitor.CONFIG.logDir, 'integrated-monitor-report.json');
+      const reportPath = path.join(this.browserMonitor.CONFIG.logDir,integrated-monitor-report.json');
       await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
       
       // console.log(`📄 Integrated report generated: ${reportPath}`);
@@ -219,7 +219,7 @@ process.on('uncaughtException', async (error) => {
 });
 
 process.on('unhandledRejection', async (reason, promise) => {
-  console.error('❌ Unhandled Rejection at:', promise, 'reason:', reason);
+  console.error('❌ Unhandled Rejection at:', promise,reason:', reason);
   await integratedMonitor.stop();
   process.exit(1);
 });

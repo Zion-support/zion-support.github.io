@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity  } from 'lucide-react';
 
 const QuantumTechnology = () => {
@@ -241,7 +241,7 @@ const QuantumTechnology = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready for the Quantum Future?
           </h2>"
-          <p className="text-xl text-gray-300 mb-8">'
+          <p className="text-xl text-gray-300 mb-8">
             Let's discuss how quantum technology can solve your most
             complex computational challenges.
           </p>"

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import {
 
@@ -7,8 +7,8 @@ import {
   Home,
   ArrowLeft,
   Bug,
-  Shield,'
-  Zap} from 'lucide-react';'
+  Shield,
+  Zap} from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 
 function ErrorFallback({ error, resetError, retryCount = 0 }) {
@@ -28,19 +28,19 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
   };
 
   const getErrorType = error => {
-'
+
     if (error?.name === 'NetworkError' || error?.message?.includes('network')) {
-'
+
       return 'network';
-    }'
+    }
     if (error?.name === 'TypeError' || error?.message?.includes('undefined')) {
-'
+
       return 'runtime';
-    }'
+    }
     if (error?.name === 'ReferenceError') {
-'
+
       return 'reference';
-    }'
+    }
     return 'general';
   };
 
@@ -49,32 +49,32 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
   const errorMessages = {
 
     network: {
-'
+
       title: 'Connection Error',
       description:'
         "We're having trouble connecting to our servers. Please check your internet connection and try again.",
-      icon: Shield,'
+      icon: Shield,
       color: 'text-orange-400'},
     runtime: {
-'
+
       title: 'Runtime Error',
       description:'
         'Something unexpected happened while processing your request. Our team has been notified.',
-      icon: Bug,'
+      icon: Bug,
       color: 'text-red-400'},
     reference: {
-'
+
       title: 'Reference Error',
       description:'
         'There was an issue with the page resources. Please refresh and try again.',
-      icon: AlertTriangle,'
+      icon: AlertTriangle,
       color: 'text-yellow-400'},
     general: {
-'
+
       title: 'Something went wrong',
       description:'"
         "We encountered an unexpected error. Don't worry, our team has been notified.",
-      icon: AlertTriangle,'
+      icon: AlertTriangle,
       color: 'text-zion-purple'}};
 
   const currentError = errorMessages[errorType];
@@ -102,7 +102,7 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
             </div>
           )}
         </div>
-'
+
         {error && process.env.NODE_ENV === 'development' && ("
           <details className="mb-6 text-left">"
             <summary className="cursor-pointer text-zion-cyan hover:text-zion-cyan-light mb-3 flex items-center">"
@@ -110,11 +110,11 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
               Error Details (Development)
             </summary>"
             <div className="bg-zion-slate-dark p-4 rounded-lg text-xs text-zion-slate-light overflow-auto max-h-40">"
-              <div className="mb-2">'
+              <div className="mb-2">
                 <strong>Error:</strong> {error.name || 'Unknown Error'}
               </div>"
-              <div className="mb-2">'
-                <strong>Message:</strong>{' '}'
+              <div className="mb-2">
+                <strong>Message:</strong>{' '}
                 {error.message || 'No message available'}
               </div>
               {error.stack && (
@@ -158,7 +158,7 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
           </Button>
 
           <Link"
-            to="/""
+            to="/"
             className="block w-full px-4 py-2 text-center border border-zion-purple text-zion-purple rounded-md hover:bg-zion-purple hover:text-white transition-all duration-200"
           >"
             <Home className="w-4 h-4 inline mr-2" />
@@ -168,7 +168,7 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
 "
         <div className="mt-8 text-xs text-zion-slate-light">
           <p>If this problem persists, please contact our support team.</p>"
-          <p className="mt-2">'
+          <p className="mt-2">
             Error ID: {error?.name || 'Unknown'} - {new Date().toISOString()}
           </p>"
           <p className="mt-1">
@@ -198,7 +198,7 @@ export function ErrorBoundary({ children, fallback, onError }) {
 
       // Log error to console in development'
       if (process.env.NODE_ENV === 'development') {
-'
+
         // // console.error('ErrorBoundary caught an error:', event.error);
       }
     };
@@ -216,16 +216,16 @@ export function ErrorBoundary({ children, fallback, onError }) {
 
       // Log error to console in development'
       if (process.env.NODE_ENV === 'development') {
-'
+
         // // console.error('ErrorBoundary caught an unhandled rejection:', event.reason);
       }
     };
-'
-    window.addEventListener('error', handleError);'
+
+    window.addEventListener('error', handleError);
     window.addEventListener('unhandledrejection', handleUnhandledRejection);
 
     return () => {
-'
+
       window.removeEventListener('error', handleError);
       window.removeEventListener('
         'unhandledrejection',
@@ -264,7 +264,7 @@ export function useErrorHandler() {
 
   const handleError = error => {
 
-    setError(error);'
+    setError(error);
     // console.error('useErrorHandler caught an error:', error);
   };
 

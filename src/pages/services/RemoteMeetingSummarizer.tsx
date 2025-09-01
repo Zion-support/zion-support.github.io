@@ -55,9 +55,9 @@ import React from 'react.ts';
               <ul className="list-disc ml-6 space-y-2 text-cyan-300">
                 <li>
                   <a"
-                    className="hover:underline""
-                    href="https://marketplace.zoom.us/""
-                    target="_blank""
+                    className="hover:underline"
+                    href="https://marketplace.zoom.us/"
+                    target="_blank"
                     rel="noreferrer"
                   >
                     Zoom App Marketplace
@@ -65,9 +65,9 @@ import React from 'react.ts';
                 </li>
                 <li>
                   <a"
-                    className="hover:underline""
-                    href="https://developers.google.com/calendar""
-                    target="_blank""
+                    className="hover:underline"
+                    href="https://developers.google.com/calendar"
+                    target="_blank"
                     rel="noreferrer"
                   >
                     Google Calendar/Meet APIs
@@ -75,9 +75,9 @@ import React from 'react.ts';
                 </li>
                 <li>
                   <a"
-                    className="hover:underline""
-                    href="https://platform.openai.com/docs""
-                    target="_blank""
+                    className="hover:underline"
+                    href="https://platform.openai.com/docs"
+                    target="_blank"
                     rel="noreferrer"
                   >
                     OpenAI Platform docs
@@ -91,7 +91,7 @@ import React from 'react.ts';
             <div className="rounded-2xl border border-emerald-400/20 bg-slate-900/60 p-6">"
               <h3 className="text-xl font-semibold">Book a Demo</h3>
               <a"
-                href="/contact""
+                href="/contact"
                 className="mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-400 to-emerald-400 text-white hover:from-cyan-500 hover:to-emerald-500"
               >
                 Schedule

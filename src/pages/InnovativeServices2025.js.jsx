@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 const InnovativeServices2025 = () => {
     const innovativeServices = [
@@ -323,7 +323,7 @@ const InnovativeServices2025 = () => {
         </div>
       </section>
 
-      {/* Services Categories */}'
+      {/* Services Categories */}
       {innovativeServices.map((category, categoryIndex) => (<section key={categoryIndex} className={`py-20 px-4 sm:px-6 lg:px-8 ${categoryIndex % 2 === 0 ? 'bg-white/5' : ''}`}>"
           <div className="max-w-7xl mx-auto">"
             <div className="text-center mb-16">"
@@ -410,7 +410,7 @@ const InnovativeServices2025 = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business with Innovation?
           </h2>"
-          <p className="text-xl text-gray-300 mb-8">'
+          <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our cutting-edge services can position your business for success in 2025 and beyond
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">"

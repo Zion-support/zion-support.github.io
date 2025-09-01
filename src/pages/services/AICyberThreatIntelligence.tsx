@@ -1,6 +1,81 @@
+<<<<<<< HEAD
+import React from 'react.ts';
+import { motion   } from 'framer-motion.ts';
+import { Link   } from 'react-router-dom.ts';
+import { Brain, 
+  Shield, 
+  Eye, 
+  Clock, 
+  CheckCircle, 
+  Zap,
+  Globe,
+  TrendingUp,
+  ArrowRight,
+  Target,
+  AlertTriangle,
+  Activity,
+  BarChart3,
+  Lock'
+  } from 'lucide-react.ts';
+import { SEO   } from '../../components/SEO';
+;
+const AICyberThreatIntelligence = (...args: unknown[]): unknown => {
+  const features = [
+    {
+
+      icon: Brain,
+      title: "AI-Powered Threat Detection","
+      description: "Advanced machine learning algorithms analyze network traffic and identify sophisticated cyber threats in real-time"
+    },
+    {
+
+      icon: Eye,"
+      title: "24/7 Monitoring","
+      description: "Continuous surveillance of your digital infrastructure with instant alerts for  suspicious activity"
+    },
+    {
+
+      icon: Shield,"
+      title: "Predictive Defense","
+      description: "AI-driven threat prediction that identifies potential attacks before they happen"
+    },
+    {
+
+      icon: Clock,"
+      title: "Real-Time Response","
+      description: "Automated threat response with human-in-the-loop validation for critical decisions"
+    },
+    {
+
+      icon: Zap,"
+      title: "Intelligent Automation","
+      description: "Smart automation of security workflows and incident response procedures"
+    },
+    {
+
+      icon: Globe,"
+      title: "Global Threat Intelligence","
+      description: "Access to worldwide threat data and collaborative security intelligence sharing";
+    };
+  ];
+
+  const services = [
+    {
+"
+      name: "Basic Protection","
+      price: "$4,999","
+      period: "/month",
+      features[;"
+        "Core threat detection","
+        "Basic AI analytics","
+        "Standard monitoring","
+        "Up to 100 endpoints","
+        "Basic reporting"
+=======
 import React from 'react.ts';'
 import { motion   } from 'framer-motion.ts';'
 import { Link   } from 'react-router-dom.ts';        "Basic reporting"
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;
       popular: false
     },
@@ -76,9 +151,16 @@ import { Link   } from 'react-router-dom.ts';        "Basic reporting"
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark">
       <SEO "
+<<<<<<< HEAD
+        title="AI-Powered Cyber Threat Intelligence | Zion Tech Group"
+        description="Advanced AI-driven cyber threat detection and intelligence. Get real-time monitoring, predictive defense, and automated response to protect your digital assets."
+        keywords="AI Cybersecurity, Threat Intelligence, Cyber Defense, AI Security, Threat Detection, Cybersecurity AI"
+      />
+=======
         title="AI-Powered Cyber Threat Intelligence | Zion Tech Group""
         description="Advanced AI-driven cyber threat detection and intelligence. Get real-time monitoring, predictive defense, and automated response to protect your digital assets.""        keywords="AI Cybersecurity, Threat Intelligence, Cyber Defense, AI Security, Threat Detection, Cybersecurity AI"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -108,7 +190,7 @@ import { Link   } from 'react-router-dom.ts';        "Basic reporting"
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
               >
                 Secure Your Digital Assets"
@@ -445,7 +527,7 @@ import { Link   } from 'react-router-dom.ts';        "Basic reporting"
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
                 >
                   Start Your Security Transformation"

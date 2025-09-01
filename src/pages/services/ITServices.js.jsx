@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
 
@@ -6,7 +6,7 @@ import {
   ServerIcon,
   ShieldCheckIcon,
   CogIcon,
-  WrenchScrewdriverIcon,'
+  WrenchScrewdriverIcon,
   CloudIcon} from '@heroicons/react/24/outline';
 const ITServices = () => {
   return()
@@ -30,13 +30,13 @@ const ITServices = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
               >
                 Get IT Support
               </Link>
               <Link"
-                to="/case-studies""
+                to="/case-studies"
                 className="border border-gray-600 text-gray-300 px-8 py-4 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg"
               >
                 View Success Stories
@@ -458,7 +458,7 @@ const ITServices = () => {
                   <h3 className="text-xl font-semibold mb-2">
                     Proactive Approach
                   </h3>"
-                  <p className="text-gray-300">'
+                  <p className="text-gray-300">
                     We don't just fix problems - we prevent them through
                     proactive monitoring, maintenance, and strategic planning.
                   </p>
@@ -542,13 +542,13 @@ const ITServices = () => {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
+              to="/contact"
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
             >
               Get IT Support Today
             </Link>
             <Link"
-              to="/pricing""
+              to="/pricing"
               className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg"
             >
               View Pricing Plans

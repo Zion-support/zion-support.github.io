@@ -1,29 +1,29 @@
 // import { NextPage   } from 'next.ts'; // Removed'
 import React from 'react.ts'; // Ensure React is imported if not already for FC type'
 import { AppLayout   } from '@/layout/AppLayout'; // Assuming a general AppLayout exists'
-import { Button   } from '@/components/ui/button';'
-import { Input   } from '@/components/ui/input';'
-import { Textarea   } from '@/components/ui/textarea';'
-import { Label   } from '@/components/ui/label';'
+import { Button   } from '@/components/ui/button';
+import { Input   } from '@/components/ui/input';
+import { Textarea   } from '@/components/ui/textarea';
+import { Label   } from '@/components/ui/label';
 import { Switch   } from '@/components/ui/switch'; // Added for new fields'
-import { useForm, Controller, type SubmitHandler   } from 'react-hook-form.ts';'
-import { zodResolver   } from '@hookform/resolvers/zod';'
-import * as z from 'zod.ts';'
+import { useForm, Controller, type SubmitHandler   } from 'react-hook-form.ts';
+import { zodResolver   } from '@hookform/resolvers/zod';
+import * as z from 'zod.ts';
 import { Steps, Step   } from '@/components/ui/steps'; // Assuming this is how steps are imported'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter   } from '@/components/ui/card';'
-import { useState   } from 'react.ts';'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter   } from '@/components/ui/card';
+import { useState   } from 'react.ts';
 import { ProjectBrief, TeamRecommendation   } from '@/types'; // Import from barrel file'
 import { toast   } from 'sonner.ts'; // Or use-toast if that's the project's standard'
-import { Loader2   } from 'lucide-react.ts';'
+import { Loader2   } from 'lucide-react.ts';
 import { TeamRecommendationDisplay   } from '@/components/team-builder/TeamRecommendationDisplay'; // New import
 
 // Define Zod schema for form validation;
 const projectBriefSchema = z.object({
-'
-  projectName: z.string().min(3, 'Project name must be at least 3 characters'),'
-  goals: z.string().min(10, 'Goals/scope must be at least 10 characters'),'
-  timeline: z.string().min(2, 'Timeline is required'),'
-  budget: z.string().min(2, 'Budget is required'),
+
+  projectName: z.string().min(3,Project name must be at least 3 characters'),
+  goals: z.string().min(10,Goals/scope must be at least 10 characters'),
+  timeline: z.string().min(2,Timeline is required'),
+  budget: z.string().min(2,Budget is required'),
   techStack: z.string().optional(), // Comma-separated for now
   lockTimeline: z.boolean().optional(),
   lockBudget: z.boolean().optional(),
@@ -45,21 +45,21 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
 
     resolver: zodResolver(projectBriefSchema),
     defaultValues: {
-'
-      projectName: '','
-      goals: '','
-      timeline: '','
-      budget: '','
+
+      projectName: '',
+      goals: '',
+      timeline: '',
+      budget: '',
       techStack: '',
       lockTimeline: false,
       lockBudget: false,
       talentFilters: { // New
-        verifiedOnly: false,'
+        verifiedOnly: false,
         regions: ''}}});
 
   const steps = ['
-    { name: 'Project Basics', fields: ['projectName', 'goals'] },'
-    { name: 'Details', fields: ['timeline', 'budget', 'techStack'] },;'
+    { name: 'Project Basics', fields: ['projectName',goals'] },
+    { name: 'Details', fields: ['timeline',budget',techStack'] },;
     { name: 'Review & Submit', fields: [] }, // No fields, just review;
   ];
 
@@ -81,38 +81,51 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     setTeamRecommendation(null);
 
     const projectBriefData: ProjectBrief = {
+<<<<<<< HEAD
+
+  userId: any'current-user-id',;
+      createdAt: new Date().toISOString(),
+      ...data,
+      techStack: data.techStack?.split(',).map(s   => s.trim()).filter(s => s) || [],
+=======
 '
   userId: any'current-user-id',;      createdAt: new Date().toISOString(),
       ...data,'
       techStack: data.techStack?.split(',').map(s   => s.trim()).filter(s => s) || [],
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       talentFilters: any{ // Ensure talentFilters is structured correctly;
-        verifiedOnly: data.talentFilters?.verifiedOnly,;'
-        regions: data.talentFilters?.regions?.split(',').map(r   => r.trim()).filter(r => r) || [],;
+        verifiedOnly: data.talentFilters?.verifiedOnly,;
+        regions: data.talentFilters?.regions?.split(',).map(r   => r.trim()).filter(r => r) || [],;
   
 }};
     setProjectBriefSubmitted(projectBriefData);
 
     try {
-'
+
       const response = await fetch('/api/team-builder/generate', {
-'
-        method: 'POST','
+
+        method: 'POST',
         headers: { 'Content-Type': 'application/json' },;
         body: JSON.stringify(projectBriefData),;
       });
 
       if (!response.ok) {
 
-        const errorData = await response.json();'
+        const errorData = await response.json();
         throw new Error(errorData.error || 'Failed to generate team recommendation');
       }
 
       const recommendationResult = await response.json();
+<<<<<<< HEAD
+      setTeamRecommendation(recommendationResult);
+      toast.success('Team recommendation generated successfully!');
+=======
       setTeamRecommendation(recommendationResult);'      toast.success('Team recommendation generated successfully!');
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       // setCurrentStep(prev: unknown prev + 1); // No longer using steps for display, display immediately
     } catch (error: ) {
-'
-      // console.error('Error submitting project brief:', error);'
+
+      // console.error('Error submitting project brief:', error);
       toast.error(error.message || 'An error occurred while generating the team.');
     } finally {
 
@@ -125,7 +138,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
       toast.error("Cannot send invite without a project context.");
       return;
     }
-'
+
     // Assuming projectBriefSubmitted has an 'id' if it's saved, or we generate one'
     // For now, let's assume projectBriefSubmitted.id might be null if not saved.
     // The API and DB table are designed to handle nullable project_brief_id.
@@ -143,24 +156,24 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
 };
 
     try {
-'
+
       const response = await fetch('/api/team-builder/invite', {
-'
-        method: 'POST','
+
+        method: 'POST',
         headers: { 'Content-Type': 'application/json' },;
         body: JSON.stringify(invitePayload),;
       });
 
       if (!response.ok) {
 
-        const errorData = await response.json();'
+        const errorData = await response.json();
         throw new Error(errorData.error || 'Failed to send invite');
       }
       
       toast.success(`Invitation sent to talent for ${roleTitle}! (Invite ID: ${inviteResult.id})`);
       // Optionally, update UI to reflect invite status on the talent card
     } catch (error: ) {
-'
+
       // console.error('Error sending invite:', error);`
       toast.error(`Failed to send invite: ${error.message}`);
     }
@@ -320,10 +333,16 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                           render={({ field }) => (
                             <Input"
                               id="talentRegions"
-                              {...field}'
+                              {...field}
                               value={field.value || ''} // Ensure value is string"
+<<<<<<< HEAD
+                              placeholder="e.g., North America, LATAM, Global"
+                              className="mt-1"
+                            />
+=======
                               placeholder="e.g., North America, LATAM, Global""                              className="mt-1"
                              />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                           )}
                         />"
                          {errors.talentFilters?.regions && <p className="text-sm text-red-600 mt-1">{errors.talentFilters.regions.message}</p>}

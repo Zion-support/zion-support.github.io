@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 
@@ -22,13 +22,13 @@ import { motion, AnimatePresence } from 'framer-motion';
                 else {
 
                     setIsVisible(false)}
-            };'
-            window.addEventListener('scroll', toggleVisibility);'
+            };
+            window.addEventListener('scroll', toggleVisibility);
             return () => window.removeEventListener('scroll', toggleVisibility)}, []);
         const scrollToTop = () => {
             window.scrollTo({
 
-                top: 0,'
+                top: 0,
                 behavior: 'smooth'})};
         return (className = "fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center z-50");
         aria - label;"
@@ -40,15 +40,15 @@ import { motion, AnimatePresence } from 'framer-motion';
             0, y;
             20}
     };
-'
-    window.addEventListener('scroll', toggleVisibility);'
+
+    window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
 
-      top: 0,'
+      top: 0,
       behavior: 'smooth'});
   };
 
@@ -57,7 +57,7 @@ import { motion, AnimatePresence } from 'framer-motion';
       {isVisible && (
         <motion.button
           onClick={scrollToTop}"
-          className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2""
+          className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           aria-label="Scroll to top"
           initial = {
 

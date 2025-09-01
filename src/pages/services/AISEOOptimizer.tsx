@@ -53,9 +53,9 @@ import React from 'react.ts';
               <ul className="list-disc ml-6 space-y-2 text-cyan-300">
                 <li>
                   <a"
-                    className="hover:underline""
-                    href="https://developers.google.com/search/docs""
-                    target="_blank""
+                    className="hover:underline"
+                    href="https://developers.google.com/search/docs"
+                    target="_blank"
                     rel="noreferrer"
                   >
                     Google Search Central
@@ -63,9 +63,9 @@ import React from 'react.ts';
                 </li>
                 <li>
                   <a"
-                    className="hover:underline""
-                    href="https://pagespeed.web.dev/""
-                    target="_blank""
+                    className="hover:underline"
+                    href="https://pagespeed.web.dev/"
+                    target="_blank"
                     rel="noreferrer"
                   >
                     PageSpeed Insights
@@ -73,9 +73,9 @@ import React from 'react.ts';
                 </li>
                 <li>
                   <a"
-                    className="hover:underline""
-                    href="https://schema.org/docs/""
-                    target="_blank""
+                    className="hover:underline"
+                    href="https://schema.org/docs/"
+                    target="_blank"
                     rel="noreferrer"
                   >
                     Schema.org
@@ -89,7 +89,7 @@ import React from 'react.ts';
             <div className="rounded-2xl border border-amber-400/20 bg-slate-900/60 p-6">"
               <h3 className="text-xl font-semibold">Request an Audit</h3>
               <a"
-                href="/contact""
+                href="/contact"
                 className="mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-amber-400 to-pink-400 text-white hover:from-amber-500 hover:to-pink-500"
               >
                 Get Started

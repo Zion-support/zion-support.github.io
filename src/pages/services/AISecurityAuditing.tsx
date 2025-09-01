@@ -1,60 +1,59 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAuditing() {
   const features = [
-    'AI-powered security auditing optimization','
-    'Intelligent auditing strategy management and execution',;'
-    'Automated security compliance verification and reporting',;'
-    'Predictive analytics for auditing needs',;'
-    'Smart auditing framework management',;'
-    'AI-driven auditing automation and orchestration',;'
-    'Real-time auditing performance tracking',;'
+    'AI-powered security auditing optimization',Intelligent auditing strategy management and execution',;
+    'Automated security compliance verification and reporting',;
+    'Predictive analytics for auditing needs',;
+    'Smart auditing framework management',;
+    'AI-driven auditing automation and orchestration',;
+    'Real-time auditing performance tracking',;
     'Custom AI models for auditing applications';
   ];
 
   const tiers = [
     {
-'
-      name: 'Developer','
-      price: '$599/mo','
-      details: ['Up to 5 audits/month', 'Basic AI features', 'Standard auditing', 'Email support']
+
+      name: 'Developer',
+      price: '$599/mo',
+      details: ['Up to 5 audits/month',Basic AI features',Standard auditing',Email support']
     },
     {
-'
-      name: 'Business', '
-      price: '$1,499/mo', '
-      details: ['Up to 20 audits/month', 'Advanced AI features', 'Enhanced auditing', 'Priority support'] ;
+
+      name: 'Business',
+      price: '$1,499/mo',
+      details: ['Up to 20 audits/month',Advanced AI features',Enhanced auditing',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$3,999/mo', ;'
-      details: ['Unlimited audits', 'Custom AI models', 'Full auditing suite', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$3,999/mo', ;
+      details: ['Unlimited audits',Custom AI models',Full auditing suite',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Security auditing optimization',;'
-    'Auditing strategy management and execution',;'
-    'Security compliance verification and reporting',;'
-    'Auditing framework management and automation',;'
-    'Auditing automation and orchestration',;'
+  const useCases = [;
+    'Security auditing optimization',;
+    'Auditing strategy management and execution',;
+    'Security compliance verification and reporting',;
+    'Auditing framework management and automation',;
+    'Auditing automation and orchestration',;
     'Auditing scaling and management';
   ];
 
-  const benefits = [;'
-    'Improve security auditing performance by 50-80%',;'
-    'Reduce auditing completion time by 40-70%',;'
-    'Cut security auditing costs by 35-65%',;'
-    'Enhance security auditing reliability and scalability',;'
-    'Optimize resource utilization',;'
+  const benefits = [;
+    'Improve security auditing performance by 50-80%',;
+    'Reduce auditing completion time by 40-70%',;
+    'Cut security auditing costs by 35-65%',;
+    'Enhance security auditing reliability and scalability',;
+    'Optimize resource utilization',;
     'Scale security auditing operations efficiently';
   ];
 
-  const industries = [;'
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
     'Technology & SaaS';
   ];
 
@@ -107,8 +106,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['50-80% performance improvement', '40-70% completion time reduction', '35-65% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['50-80% performance improvement',40-70% completion time reduction',35-65% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-orange-600 mb-3" />"              <div className="text-gray-900 font-semibold">{t}</div>
             </div>

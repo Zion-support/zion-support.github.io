@@ -4,43 +4,11 @@ interface MimeTypeMapping {
 class MimeTypeFallback {
   private mimeTypes: MimeTypeMapping = {
 
-    '.js': 'application/javascript','
-    '.mjs': 'application/javascript','
-    '.css': 'text/css','
-    '.html': 'text/html','
-    '.htm': 'text/html','
-    '.xml': 'application/xml','
-    '.json': 'application/json','
-    '.svg': 'image/svg+xml','
-    '.ico': 'image/x-icon','
-    '.png': 'image/png','
-    '.jpg': 'image/jpeg','
-    '.jpeg': 'image/jpeg','
-    '.gif': 'image/gif','
-    '.webp': 'image/webp','
-    '.bmp': 'image/bmp','
-    '.tiff': 'image/tiff','
-    '.woff': 'font/woff','
-    '.woff2': 'font/woff2','
-    '.ttf': 'font/ttf','
-    '.otf': 'font/otf','
-    '.eot': 'application/vnd.ms-fontobject','
-    '.pdf': 'application/pdf','
-    '.zip': 'application/zip','
-    '.tar': 'application/x-tar','
-    '.gz': 'application/gzip','
-    '.mp4': 'video/mp4','
-    '.webm': 'video/webm','
-    '.ogg': 'video/ogg','
-    '.mp3': 'audio/mpeg','
-    '.wav': 'audio/wav','
-    '.flac': 'audio/flac'};
+    '.js': 'application/javascript',.mjs': 'application/javascript',.css': 'text/css',.html': 'text/html',.htm': 'text/html',.xml': 'application/xml',.json': 'application/json',.svg': 'image/svg+xml',.ico': 'image/x-icon',.png': 'image/png',.jpg': 'image/jpeg',.jpeg': 'image/jpeg',.gif': 'image/gif',.webp': 'image/webp',.bmp': 'image/bmp',.tiff': 'image/tiff',.woff': 'font/woff',.woff2': 'font/woff2',.ttf': 'font/ttf',.otf': 'font/otf',.eot': 'application/vnd.ms-fontobject',.pdf': 'application/pdf',.zip': 'application/zip',.tar': 'application/x-tar',.gz': 'application/gzip',.mp4': 'video/mp4',.webm': 'video/webm',.ogg': 'video/ogg',.mp3': 'audio/mpeg',.wav': 'audio/wav',.flac': 'audio/flac'};
 
   private fallbackUrls: Map<string, string> = new Map();
   private cdnFallbacks = ['
-    'https://cdn.jsdelivr.net','
-    'https://unpkg.com','
-    'https://cdnjs.cloudflare.com',
+    'https://cdn.jsdelivr.net',https://unpkg.com',https://cdnjs.cloudflare.com',
   ];
 
   constructor() {
@@ -49,46 +17,48 @@ class MimeTypeFallback {
   private setupFallbackUrls() {
     // Map problematic URLs to CDN fallbacks
     this.fallbackUrls.set('
-      '/js/index-C64WnLOI.js','
-      'https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/index-C64WnLOI.js'
+      '/js/index-C64WnLOI.js',https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/index-C64WnLOI.js'
     );
     this.fallbackUrls.set('
-      '/css/index-RK9lga5l.css','
-      'https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/css/index-RK9lga5l.css'
+      '/css/index-RK9lga5l.css',https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/css/index-RK9lga5l.css'
     );
     this.fallbackUrls.set('
-      '/js/react-vendor-ClxMxoJB.js','
-      'https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/react-vendor-ClxMxoJB.js'
+      '/js/react-vendor-ClxMxoJB.js',https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/react-vendor-ClxMxoJB.js'
     );
     this.fallbackUrls.set('
-      '/js/router-vendor-9KcRWrrL.js','
-      'https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/router-vendor-9KcRWrrL.js'
+      '/js/router-vendor-9KcRWrrL.js',https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/router-vendor-9KcRWrrL.js'
     );
     this.fallbackUrls.set('
-      '/js/ui-vendor-B31yGDq-.js','
-      'https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/ui-vendor-B31yGDq-.js'
+      '/js/ui-vendor-B31yGDq-.js',https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/ui-vendor-B31yGDq-.js'
     );
     this.fallbackUrls.set('
-      '/js/utils-vendor-CrFdsnXa.js','
-      'https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/utils-vendor-CrFdsnXa.js'
+      '/js/utils-vendor-CrFdsnXa.js',https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/utils-vendor-CrFdsnXa.js'
     );
   }
 
   getMimeType(filename: string): string {
 
-    const ext = this.getFileExtension(filename);'
+    const ext = this.getFileExtension(filename);
     return this.mimeTypes[ext] || 'application/octet-stream';
   }
 
   private getFileExtension(filename: string): string {
+<<<<<<< HEAD
+
+    const lastDot = filename.lastIndexOf('.');
+    if (lastDot === -1) return '';
+    return filename.substring(lastDot).toLowerCase();
+  }
+=======
 '
     const lastDot = filename.lastIndexOf('.');'    if (lastDot === -1) return '';
     return filename.substring(lastDot).toLowerCase()}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   async checkAndFixMimeType(url: string): Promise<any> {
 
     try {
-'
+
       const response = await fetch(url, { method: 'HEAD' });
 
       if (!response.ok) {
@@ -96,7 +66,7 @@ class MimeTypeFallback {
         // console.warn(`Resource not found: ${url}`);
         return false;
       }
-'
+
       const contentType = response.headers.get('content-type');
       if (!contentType) {
 `
@@ -131,10 +101,10 @@ class MimeTypeFallback {
       // console.log(`Trying fallback URL: ${fallbackUrl}`);
 
       try {
-'
+
         const response = await fetch(fallbackUrl, { method: 'HEAD' });
         if (response.ok) {
-'
+
           const contentType = response.headers.get('content-type');
           const expectedType = this.getMimeType(originalUrl);
           if (contentType && contentType.includes(expectedType)) {
@@ -172,14 +142,9 @@ class MimeTypeFallback {
   async preloadCriticalResources(): Promise<any> {
 
     const criticalResources = ['
-      '/css/index-RK9lga5l.css','
-      '/js/index-C64WnLOI.js','
-      '/js/react-vendor-ClxMxoJB.js','
-      '/js/router-vendor-9KcRWrrL.js','
-      '/js/ui-vendor-B31yGDq-.js','
-      '/js/utils-vendor-CrFdsnXa.js',
+      '/css/index-RK9lga5l.css',/js/index-C64WnLOI.js',/js/react-vendor-ClxMxoJB.js',/js/router-vendor-9KcRWrrL.js',/js/ui-vendor-B31yGDq-.js',/js/utils-vendor-CrFdsnXa.js',
     ];
-'
+
     // console.log('🔍 Preloading critical resources...');
     for (const resource of criticalResources) {
 
@@ -196,11 +161,24 @@ class MimeTypeFallback {
   }
 
   createResourceElement()
-    url: string,'
+    url: string,
     type: 'script' | 'stylesheet'
   ): HTMLElement {
-'
+
     if (type === 'script') {
+<<<<<<< HEAD
+
+      const script = document.createElement('script');
+      script.src = url;
+      script.async = true;
+      script.type = 'text/javascript';
+      return script;
+    } else {
+
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = url;
+=======
 '
       const script = document.createElement('script');      script.src = url;
       script.async = true;'
@@ -210,10 +188,11 @@ class MimeTypeFallback {
 '
       const link = document.createElement('link');'      link.rel = 'stylesheet';
       link.href = url;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       link.type = 'text/css';
       return link}
   }
-'
+
   injectResource(url: anystring, type: 'script' | 'stylesheet'): Promise<any> {
 
     return new Promise((resolve, reject) => {
@@ -231,7 +210,7 @@ class MimeTypeFallback {
         // console.error(`❌ Failed to load resource: ${url}`);`
         reject(new Error(`Failed to load resource: ${url}`));
       };
-'
+
       if (type === 'script') {
 
         document.head.appendChild(element);

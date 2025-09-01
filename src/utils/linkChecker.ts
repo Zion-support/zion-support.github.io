@@ -16,7 +16,7 @@ export class LinkChecker {
   private visitedUrls: Set<string> = new Set();
   private brokenLinks: LinkInfo[] = [];
   private missingPages: string[] = [];
-'
+
   constructor(baseUrl: string = 'https://ziontechgroup.com') {
 
     this.baseUrl = baseUrl;
@@ -36,15 +36,15 @@ export class LinkChecker {
   normalizeUrl(url: string, basePage: string): string {
 
     try {
-'
+
       if (url.startsWith('http')) {
 
         return url;
-      }'
+      }
       if (url.startsWith('/')) {
 
         return `${this.baseUrl}${url}`;
-      }'
+      }
       if (url.startsWith('#')) {
 `
         return `${this.baseUrl}${basePage}${url}`;
@@ -75,9 +75,9 @@ export class LinkChecker {
 
         const normalizedUrl = this.normalizeUrl(url, pagePath);        links.push({
 
-          url: normalizedUrl,'
+          url: normalizedUrl,
           status: 'working',
-          page: pagePath,'
+          page: pagePath,
           anchor: url.startsWith('#') ? url : undefined});
       }
     }
@@ -86,12 +86,12 @@ export class LinkChecker {
     const srcRegex = /(src|href)=["']([^"']+)["']/g;
     while ((match = srcRegex.exec(pageContent)) !== null) {
 
-      const url = match[2];'
+      const url = match[2];
       if (url && !url.startsWith('data:') && !url.startsWith('blob:')) {
 
         const normalizedUrl = this.normalizeUrl(url, pagePath);        links.push({
 
-          url: normalizedUrl,'
+          url: normalizedUrl,
           status: 'working',
           page: pagePath});
       }    }
@@ -102,7 +102,7 @@ export class LinkChecker {
   async checkPageExists(url: string): Promise<any> {
 
     try {
-'
+
       const response = await fetch(url, { method: 'HEAD' });
       return response.ok;
     } catch {
@@ -128,13 +128,20 @@ export class LinkChecker {
 
         const exists = await this.checkPageExists(link.url);
         if (exists) {
-'
+
           link.status = 'working';
         } else {
+<<<<<<< HEAD
+
+          link.status = 'missing';
+          this.missingPages.push(link.url);
+        }
+=======
 '          link.status = 'missing';
           this.missingPages.push(link.url)}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       } else {
-'
+
         link.status = 'external';
       }
       checkedLinks.push(link)}
@@ -150,7 +157,7 @@ export class LinkChecker {
   // Extract page title
   private extractPageTitle(content: string): string {
 
-    const titleMatch = content.match(/<title[^>]*>([^<]+)<\/title>/i);'
+    const titleMatch = content.match(/<title[^>]*>([^<]+)<\/title>/i);
     return titleMatch ? titleMatch[1].trim() : 'Untitled';
   }
   // Get analysis summary

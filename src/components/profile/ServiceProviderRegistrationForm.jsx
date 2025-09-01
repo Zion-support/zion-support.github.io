@@ -135,7 +135,7 @@ export function ServiceProviderRegistrationForm() {
 "
             form.setValue("bio", generatedContent.summary);
             if (generatedContent.services && generatedContent.services.length > 0) {
-'
+
                 const newServices = generatedContent.services.filter(service => typeof service === 'string' && service && !serviceTags.includes(service));
                 if (newServices.length > 0) {
 
@@ -165,7 +165,7 @@ export function ServiceProviderRegistrationForm() {
             if (values.enhancedProfile && !generatedContent) {
 
                 try {
-'
+
                     const { data: aiData } = await supabase.functions.invoke('service-profile-enhancer', {
 
                         body: {
@@ -212,7 +212,7 @@ export function ServiceProviderRegistrationForm() {
                 updated_at: new Date().toISOString(),
                 headline: values.title,
                 // Additional fields that might be in profiles table
-            })'
+            })
                 .eq('id', user.id)
                 .select();
             if (error)
@@ -237,7 +237,7 @@ export function ServiceProviderRegistrationForm() {
             if (userEmail && values.enhancedProfile) {
 
                 try {
-'
+
                     await supabase.functions.invoke('send-email', {
 
                         body: {
@@ -247,7 +247,7 @@ export function ServiceProviderRegistrationForm() {
                             html: `"
               <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">"
                 <h2 style="color: #6D28D9;">Service Profile Created!</h2>
-                <p>Your service provider profile has been successfully created and published.</p>'
+                <p>Your service provider profile has been successfully created and published.</p>
                 <p>We've enhanced your profile with AI to help you stand out to potential clients.</p>
                 <p>You can now start receiving service requests and connecting with clients.</p>"
                 <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">"

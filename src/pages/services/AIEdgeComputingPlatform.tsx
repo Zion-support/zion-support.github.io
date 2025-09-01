@@ -20,84 +20,46 @@ import {
 
 export default function AIEdgeComputingPlatform() {
   const features = ['
-    'AI-powered edge device management and optimization','
-    'Real-time data processing at the edge','
-    'Distributed AI model deployment and inference','
-    'Edge-to-cloud synchronization and analytics','
-    'Automatic load balancing and failover','
-    'Edge security and threat detection','
-    'IoT device integration and management','
-    'Custom edge computing workflows','
-    'Edge analytics and reporting tools','
-    'Scalable edge infrastructure management',
+    'AI-powered edge device management and optimization',Real-time data processing at the edge',Distributed AI model deployment and inference',Edge-to-cloud synchronization and analytics',Automatic load balancing and failover',Edge security and threat detection',IoT device integration and management',Custom edge computing workflows',Edge analytics and reporting tools',Scalable edge infrastructure management',
   ];
 
   const benefits = ['
-    'Reduce latency by 80-90%','
-    'Cut bandwidth costs by 60-70%','
-    'Improve data privacy and security','
-    'Real-time edge processing','
-    'Enhanced offline capabilities','
-    'Scalable edge infrastructure',
+    'Reduce latency by 80-90%',Cut bandwidth costs by 60-70%',Improve data privacy and security',Real-time edge processing',Enhanced offline capabilities',Scalable edge infrastructure',
   ];
 
   const pricing = [
     {
-'
-      name: 'Starter','
+
+      name: 'Starter',
       price: '$499/mo',
       features: ['
-        'Up to 50 edge devices','
-        'Basic edge processing','
-        'Standard monitoring','
-        'Email support','
-        'Monthly reports',
+        'Up to 50 edge devices',Basic edge processing',Standard monitoring',Email support',Monthly reports',
       ],
       popular: false},
     {
-'
-      name: 'Professional','
+
+      name: 'Professional',
       price: '$1,199/mo',
       features: ['
-        'Up to 200 edge devices','
-        'Advanced AI analytics','
-        'Real-time processing','
-        'Priority support','
-        'Custom workflows','
-        'API access',
+        'Up to 200 edge devices',Advanced AI analytics',Real-time processing',Priority support',Custom workflows',API access',
       ],
       popular: true},
     {
-'
-      name: 'Enterprise','
+
+      name: 'Enterprise',
       price: '$3,499/mo',
       features: ['
-        'Unlimited edge devices','
-        'Full AI suite','
-        'Custom edge models','
-        'Dedicated support','
-        'White-label solutions','
-        'Advanced integrations',
+        'Unlimited edge devices',Full AI suite',Custom edge models',Dedicated support',White-label solutions',Advanced integrations',
       ],
       popular: false},
   ];
 
   const useCases = ['
-    'Smart city infrastructure','
-    'Industrial IoT monitoring','
-    'Autonomous vehicle systems','
-    'Healthcare edge computing','
-    'Retail edge analytics','
-    'Energy grid optimization',
+    'Smart city infrastructure',Industrial IoT monitoring',Autonomous vehicle systems',Healthcare edge computing',Retail edge analytics',Energy grid optimization',
   ];
 
   const industries = ['
-    'Smart Cities & Infrastructure','
-    'Manufacturing & Industry 4.0','
-    'Transportation & Logistics','
-    'Healthcare & Medical Devices','
-    'Retail & E-commerce','
-    'Energy & Utilities',
+    'Smart Cities & Infrastructure',Manufacturing & Industry 4.0',Transportation & Logistics',Healthcare & Medical Devices',Retail & E-commerce',Energy & Utilities',
   ];
 
   return()
@@ -117,15 +79,15 @@ export default function AIEdgeComputingPlatform() {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="#pricing""
+              href="#pricing"
               className="px-8 py-4 bg-white text-teal-600 rounded-lg font-semibold hover:bg-teal-50 transition-colors"
             >
               View Pricing
             </a>
             <a"
-              href="https://ziontechgroup.com""
-              target="_blank""
-              rel="noreferrer""
+              href="https://ziontechgroup.com"
+              target="_blank"
+              rel="noreferrer"
               className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors"
             >
               Learn More
@@ -246,7 +208,7 @@ export default function AIEdgeComputingPlatform() {
               <div
                 key={index}
                 className={`relative bg-white rounded-2xl shadow-lg border-2 ${
-'
+
                   plan.popular ? 'border-teal-500' : 'border-gray-200'`
                 } p-8`}
               >
@@ -295,7 +257,7 @@ export default function AIEdgeComputingPlatform() {
               Need a custom plan? Contact us for enterprise pricing
             </p>
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="text-teal-600 hover:text-teal-700 font-semibold"
             >
               Contact Sales Team
@@ -345,13 +307,13 @@ export default function AIEdgeComputingPlatform() {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="px-8 py-4 bg-teal-600 text-white rounded-lg font-semibold hover:bg-teal-700 transition-colors"
             >
               Start Free Trial
             </a>
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors"
             >
               Call Us
@@ -362,7 +324,7 @@ export default function AIEdgeComputingPlatform() {
 
       {/* Contact Section */}"
       <section className="py-16 max-w-4xl mx-auto px-6 text-center">"
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">'
+        <h2 className="text-3xl font-bold text-gray-900 mb-8">
           Questions? We're Here to Help
         </h2>"
         <div className="grid md:grid-cols-2 gap-8">"
@@ -375,7 +337,7 @@ export default function AIEdgeComputingPlatform() {
               Speak with our edge computing experts
             </p>
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="text-teal-600 hover:text-teal-700 font-semibold"
             >
               +1 302 464 0950
@@ -391,7 +353,7 @@ export default function AIEdgeComputingPlatform() {
               Get detailed information and pricing
             </p>
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="text-teal-600 hover:text-teal-700 font-semibold"
             >              kleber@ziontechgroup.com
             </a>
@@ -406,9 +368,9 @@ export default function AIEdgeComputingPlatform() {
             Learn more about our complete suite of AI-powered business solutions
           </p>
           <a"
-            href="https://ziontechgroup.com""
-            target="_blank""
-            rel="noreferrer""
+            href="https://ziontechgroup.com"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold"
           >"
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />          </a>

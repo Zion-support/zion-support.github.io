@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';'
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -31,7 +31,7 @@ import {
   Clock,
   UserCheck,
   Activity,
-  ChevronUp,'
+  ChevronUp,
   ChevronDown} from 'lucide-react';
 
 interface SecurityStatus {
@@ -46,11 +46,11 @@ interface SecurityStatus {
 
 }
 interface SecurityEvent {
-  id: string;'
+  id: string;
   type: 'info' | 'warning' | 'error' | 'success';
   message: string;
   timestamp: Date;
-  source: string;'
+  source: string;
   severity: 'low' | 'medium' | 'high' | 'critical';
   details?: string;
 
@@ -73,7 +73,7 @@ export function SecurityEnhancer() {
   const [securityMetrics, setSecurityMetrics] =
     useState<SecurityMetrics | null>(null);
   const [isScanning, setIsScanning] = useState(false);
-  const [activeFilters, setActiveFilters] = useState<string[]>([]);'
+  const [activeFilters, setActiveFilters] = useState<string[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
 
   // Initialize security monitoring
@@ -102,25 +102,29 @@ export function SecurityEnhancer() {
   // Set security headers
   const setSecurityHeaders = useCallback(() => {
     // Content Security Policy'
+<<<<<<< HEAD
+    const cspMeta = document.createElement('meta');
+    cspMeta.httpEquiv = 'Content-Security-Policy';
+=======
     const cspMeta = document.createElement('meta');'    cspMeta.httpEquiv = 'Content-Security-Policy';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     cspMeta.content = ['
-      "default-src 'self'",'"
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",'"
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",'"
-      "font-src 'self' https://fonts.gstatic.com",'"
-      "img-src 'self' data: https:",'"
-      "connect-src 'self' https://www.google-analytics.com https://api.ziontechgroup.com",'"
-      "frame-src 'self'",'"
-      "object-src 'none'",'"
-      "base-uri 'self'",'"
-      "form-action 'self'",'"
-      "frame-ancestors 'none'",'
-      'upgrade-insecure-requests','
+      "default-src 'self'","
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com","
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com","
+      "font-src 'self' https://fonts.gstatic.com","
+      "img-src 'self' data: https:","
+      "connect-src 'self' https://www.google-analytics.com https://api.ziontechgroup.com","
+      "frame-src 'self'","
+      "object-src 'none'","
+      "base-uri 'self'","
+      "form-action 'self'","
+      "frame-ancestors 'none'",upgrade-insecure-requests',
     ].join('; ');
 
     // Remove existing CSP meta tag if present
     const existingCSP = document.querySelector('"
-      'meta[http-equiv="Content-Security-Policy"]'
+      'meta[http-equiv="Content-Security-Policy"]
     );
     if (existingCSP) {
 
@@ -130,18 +134,18 @@ export function SecurityEnhancer() {
 
     // Add security-related meta tags
     const securityMetaTags = ['
-      { name: 'X-Content-Type-Options', content: 'nosniff' },'
-      { name: 'X-Frame-Options', content: 'DENY' },'
-      { name: 'X-XSS-Protection', content: '1; mode=block' },'
+      { name: 'X-Content-Type-Options', content: 'nosniff' },
+      { name: 'X-Frame-Options', content: 'DENY' },
+      { name: 'X-XSS-Protection', content: '1; mode=block' },
       { name: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
       {
-'
-        name: 'Permissions-Policy','
-        content: 'camera=(), microphone=(), geolocation=(), interest-cohort=()'},
+
+        name: 'Permissions-Policy',
+        content: 'camera=(), microphone=(), geolocation=(), interest-cohort=()},
     ];
 
     securityMetaTags.forEach(tag => {
-'
+
       const metaTag = document.createElement('meta');
       metaTag.name = tag.name;
       metaTag.content = tag.content;
@@ -157,14 +161,11 @@ export function SecurityEnhancer() {
 
       if ('
         typeof value === 'string' &&'
-        (value.includes('<script>') || value.includes('javascript:'))
+        (value.includes('<script>) || value.includes('javascript:'))
       ) {
 
         logSecurityEvent('
-          'warning','
-          'Potential XSS attempt detected','
-          'DOM Manipulation','
-          'medium'
+          'warning',Potential XSS attempt detected',DOM Manipulation',medium'
         );
       }
       return originalInnerHTML.call (this, value) ;
@@ -173,16 +174,13 @@ export function SecurityEnhancer() {
     // Monitor for suspicious network requests
     const originalFetch = window.fetch;
     window.fetch = function (input: RequestInfo | URL, init?: RequestInit) {
-'
-      const url = typeof input === 'string' ? input : input.toString();'
+
+      const url = typeof input === 'string' ? input : input.toString();
       if (url.includes('javascript:') || url.includes('data:text/html')) {
 
         logSecurityEvent('
-          'error','
-          'Suspicious fetch request blocked','
-          'Network Request','
-          'high'
-        );'
+          'error',Suspicious fetch request blocked',Network Request',high'
+        );
         return Promise.reject(new Error('Suspicious request blocked'));
       }
       return originalFetch.call (this, input, init) ;
@@ -197,10 +195,7 @@ export function SecurityEnhancer() {
       ) {
 
         logSecurityEvent('
-          'warning','
-          'Potential sensitive data logging detected','
-          'Console Access','
-          'medium'
+          'warning',Potential sensitive data logging detected',Console Access',medium'
         );
       }
       return originalConsoleLog.apply (this, args) ;
@@ -231,24 +226,24 @@ export function SecurityEnhancer() {
       const status: SecurityStatus = {
 
         csp: !!document.querySelector('"
-          'meta[http-equiv="Content-Security-Policy"]'
+          'meta[http-equiv="Content-Security-Policy"]
         ),
         hsts: true, // Would check actual response headers in production'"
-        xss: !!document.querySelector('meta[name="X-XSS-Protection"]'),'"
+        xss: !!document.querySelector('meta[name="X-XSS-Protection"]'),"
         frameOptions: !!document.querySelector('meta[name="X-Frame-Options"]'),
         contentType: !!document.querySelector('"
-          'meta[name="X-Content-Type-Options"]'
+          'meta[name="X-Content-Type-Options"]
         ),
         referrerPolicy: !!document.querySelector('"
-          'meta[name="Referrer-Policy"]'
+          'meta[name="Referrer-Policy"]
         ),
         permissionsPolicy: !!document.querySelector('"
-          'meta[name="Permissions-Policy"]'
+          'meta[name="Permissions-Policy"]
         )};
 
       setSecurityStatus(status);
     } catch (error) {
-'
+
       // console.error('Failed to check security status:', error);
     }
   }, []) ;
@@ -274,17 +269,11 @@ export function SecurityEnhancer() {
 
       // Log scan completion
       logSecurityEvent('
-        'success','
-        'Security scan completed successfully','
-        'Security Scanner','
-        'low'
+        'success',Security scan completed successfully',Security Scanner',low'
       );
     } catch (error) {
       logSecurityEvent('
-        'error','
-        'Security scan failed','
-        'Security Scanner','
-        'high'
+        'error',Security scan failed',Security Scanner',high'
       );
     } finally {
 
@@ -317,13 +306,13 @@ export function SecurityEnhancer() {
   const getEventIcon = (type: string) => {
 
     switch (type) {
-'
+
       case 'info':"
-        return <Info className="w-4 h-4 text-blue-500" />;'
+        return <Info className="w-4 h-4 text-blue-500" />;
       case 'warning':"
-        return <AlertTriangle className="w-4 h-4 text-yellow-500" />;'
+        return <AlertTriangle className="w-4 h-4 text-yellow-500" />;
       case 'error':"
-        return <XCircle className="w-4 h-4 text-red-500" />;'
+        return <XCircle className="w-4 h-4 text-red-500" />;
       case 'success':"
         return <CheckCircle className="w-4 h-4 text-green-500" />;
       default:"
@@ -335,13 +324,13 @@ export function SecurityEnhancer() {
   const getSeverityColor = (severity: string) => {
 
     switch (severity) {
-'
+
       case 'critical':'
-        return 'border-red-600 bg-red-50 dark:bg-red-900/20';'
+        return 'border-red-600 bg-red-50 dark:bg-red-900/20';
       case 'high':'
-        return 'border-red-500 bg-red-50 dark:bg-red-900/20';'
+        return 'border-red-500 bg-red-50 dark:bg-red-900/20';
       case 'medium':'
-        return 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20';'
+        return 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20';
       case 'low':'
         return 'border-blue-500 bg-blue-50 dark:bg-blue-900/20';
       default:'
@@ -356,7 +345,7 @@ export function SecurityEnhancer() {
         onClick={() => setIsVisible(!isVisible)}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}"
-        title="Security Panel""
+        title="Security Panel"
         aria-label="Open security panel"
       >"
         <Shield className="w-6 h-6" />      </motion.button>
@@ -367,8 +356,8 @@ export function SecurityEnhancer() {
             initial={{ opacity: 0, x: 300 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 300 }}"
-            className="fixed top-0 right-0 h-full w-96 bg-white dark:bg-gray-900 shadow-2xl z-40 overflow-y-auto""
-            role="dialog""
+            className="fixed top-0 right-0 h-full w-96 bg-white dark:bg-gray-900 shadow-2xl z-40 overflow-y-auto"
+            role="dialog"
             aria-label="Security monitoring and settings"
           >"
             <div className="p-6">
@@ -392,7 +381,7 @@ export function SecurityEnhancer() {
                     )}                  </button>
                   <button
                     onClick={() => setIsVisible(false)}"
-                    className="p-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200""
+                    className="p-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
                     aria-label="Close security panel"
                   >"
                     <X className="w-5 h-5" />                  </button>
@@ -407,12 +396,12 @@ export function SecurityEnhancer() {
                   </h3>"
                   <div className="space-y-2">
                     {['
-                      { key: 'csp', label: 'Content Security Policy' },'
-                      { key: 'hsts', label: 'HTTP Strict Transport Security' },'
-                      { key: 'xss', label: 'XSS Protection' },'
-                      { key: 'frameOptions', label: 'Frame Options' },'
-                      { key: 'contentType', label: 'Content Type Options' },'
-                      { key: 'referrerPolicy', label: 'Referrer Policy' },'
+                      { key: 'csp', label: 'Content Security Policy' },
+                      { key: 'hsts', label: 'HTTP Strict Transport Security' },
+                      { key: 'xss', label: 'XSS Protection' },
+                      { key: 'frameOptions', label: 'Frame Options' },
+                      { key: 'contentType', label: 'Content Type Options' },
+                      { key: 'referrerPolicy', label: 'Referrer Policy' },
                       { key: 'permissionsPolicy', label: 'Permissions Policy' },
                     ].map(item => (
                       <div
@@ -498,8 +487,8 @@ export function SecurityEnhancer() {
 
                 {/* Filters and Search */}"
                 <div className="mb-3 space-y-2">"
-                  <div className="flex space-x-2">'
-                    {['info', 'warning', 'error', 'success'].map(type => (
+                  <div className="flex space-x-2">
+                    {['info',warning',error',success'].map(type => (
                       <button
                         key={type}
                         onClick={() => {
@@ -510,7 +499,7 @@ export function SecurityEnhancer() {
                           );
                         }}`                        className={`px-2 py-1 text-xs rounded ${
 
-                          activeFilters.includes(type)'
+                          activeFilters.includes(type)
                             ? 'bg-zion-blue text-white''
                             : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'`
                         }`}
@@ -519,7 +508,7 @@ export function SecurityEnhancer() {
                       </button>) ) }
                   </div>
                   <input"
-                    type="text""
+                    type="text"
                     placeholder="Search events..."
                     value={searchTerm}
                     onChange={e => setSearchTerm(e.target.value)}"
@@ -576,10 +565,7 @@ export function SecurityEnhancer() {
                   <button
                     onClick={() =>
                       logSecurityEvent('
-                        'info','
-                        'Manual security check initiated','
-                        'User Action','
-                        'low'
+                        'info',Manual security check initiated',User Action',low'
                       )
                     }"
                     className="flex items-center justify-center space-x-2 p-3 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/40 transition-colors"

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -8,78 +8,66 @@ import {
   CheckCircle,
   Users,
   Clock,
-  Star,'
+  Star,
   Award} from 'lucide-react';
 
 const benefits = [
   {
 
-    icon: <Zap className="w-10 h-10" />,'
+    icon: <Zap className="w-10 h-10" />,
     title: 'Lightning Fast Delivery',
     description:'
-      'Get your projects delivered in record time with our streamlined development process.','
-    stats: '50% Faster','
-    color: 'from-yellow-500 to-orange-500','
+      'Get your projects delivered in record time with our streamlined development process.',
+    stats: '50% Faster',
+    color: 'from-yellow-500 to-orange-500',
     bgColor: 'from-yellow-500/20 to-orange-500/20',
     features: ['
-      'Agile development methodology','
-      'Parallel development teams','
-      'Automated testing pipeline','
-      'Continuous deployment',
+      'Agile development methodology',Parallel development teams',Automated testing pipeline',Continuous deployment',
     ]},
   {
 "
-    icon: <Shield className="w-10 h-10" />,'
+    icon: <Shield className="w-10 h-10" />,
     title: 'Enterprise Security',
     description:'
-      'Bank-level security with SOC 2 compliance and 24/7 monitoring.','
-    stats: '99.9% Secure','
-    color: 'from-blue-500 to-cyan-500','
+      'Bank-level security with SOC 2 compliance and 24/7 monitoring.',
+    stats: '99.9% Secure',
+    color: 'from-blue-500 to-cyan-500',
     bgColor: 'from-blue-500/20 to-cyan-500/20',
     features: ['
-      'SOC 2 Type II compliant','
-      'End-to-end encryption','
-      'Regular security audits','
-      'GDPR compliance',
+      'SOC 2 Type II compliant',End-to-end encryption',Regular security audits',GDPR compliance',
     ]},
   {
 "
-    icon: <TrendingUp className="w-10 h-10" />,'
-    title: 'Proven ROI','
-    description: 'Average 300% ROI within 6 months of implementation.','
-    stats: '300% ROI','
-    color: 'from-green-500 to-emerald-500','
+    icon: <TrendingUp className="w-10 h-10" />,
+    title: 'Proven ROI',
+    description: 'Average 300% ROI within 6 months of implementation.',
+    stats: '300% ROI',
+    color: 'from-green-500 to-emerald-500',
     bgColor: 'from-green-500/20 to-emerald-500/20',
     features: ['
-      'Performance optimization','
-      'Cost reduction strategies','
-      'Revenue growth solutions','
-      'Efficiency improvements',
+      'Performance optimization',Cost reduction strategies',Revenue growth solutions',Efficiency improvements',
     ]},
   {
 "
-    icon: <CheckCircle className="w-10 h-10" />,'
-    title: 'Quality Guaranteed','
-    description: '30-day money-back guarantee with free migration support.','
-    stats: '100% Quality','
-    color: 'from-purple-500 to-pink-500','
+    icon: <CheckCircle className="w-10 h-10" />,
+    title: 'Quality Guaranteed',
+    description: '30-day money-back guarantee with free migration support.',
+    stats: '100% Quality',
+    color: 'from-purple-500 to-pink-500',
     bgColor: 'from-purple-500/20 to-pink-500/20',
     features: ['
-      'Comprehensive testing','
-      'Code quality standards','
-      'Performance benchmarks','
-      'User experience focus',
+      'Comprehensive testing',Code quality standards',Performance benchmarks',User experience focus',
     ]},
 ];
 ;
 const additionalStats = [
   {
 "
-    icon: <Users className="w-8 h-8" />,'
-    value: '500+','
-    label: 'Happy Clients'},'"
-  { icon: <Clock className="w-8 h-8" />, value: '24/7', label: 'Support' },'"
-  { icon: <Star className="w-8 h-8" />, value: '4.9/5', label: 'Rating' },'"
+    icon: <Users className="w-8 h-8" />,
+    value: '500+',
+    label: 'Happy Clients'},"
+  { icon: <Clock className="w-8 h-8" />, value: '24/7', label: 'Support' },"
+  { icon: <Star className="w-8 h-8" />, value: '4.9/5', label: 'Rating' },"
   { icon: <Award className="w-8 h-8" />, value: '50+', label: 'Awards' },
 ];
 
@@ -106,7 +94,7 @@ export function BenefitsSection() {
       opacity: 1,
       transition: {
 
-        duration: 0.6,'
+        duration: 0.6,
         ease: 'easeOut'}}};
 
   const statsVariants = {
@@ -118,7 +106,7 @@ export function BenefitsSection() {
       opacity: 1,
       transition: {
 
-        duration: 0.4,'
+        duration: 0.4,
         ease: 'easeOut'}}};
 
   return ("
@@ -129,7 +117,7 @@ export function BenefitsSection() {
           className="absolute inset-0"
           style={{
 
-            backgroundImage: `radial-gradient(circle at 75% 75%, currentColor 1px, transparent 1px)`,'
+            backgroundImage: `radial-gradient(circle at 75% 75%, currentColor 1px, transparent 1px)`,
             backgroundSize: '60px 60px'}}
         />
       </div>
@@ -138,12 +126,12 @@ export function BenefitsSection() {
       <div className="absolute inset-0">
         <motion.div"
           className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30"
-          animate={{ rotate: 360 }}'
+          animate={{ rotate: 360 }}
           transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
         />
         <motion.div"
           className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30"
-          animate={{ rotate: -360 }}'
+          animate={{ rotate: -360 }}
           transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
         />
         <motion.div"
@@ -154,7 +142,7 @@ export function BenefitsSection() {
           transition={{
 
             duration: 3,
-            repeat: Infinity,'
+            repeat: Infinity,
             ease: 'easeInOut'}}
         />
       </div>
@@ -173,7 +161,7 @@ export function BenefitsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >"
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">'
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Why Choose{' '}"
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Zion Tech Group
@@ -191,7 +179,7 @@ export function BenefitsSection() {
         <motion.div"
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto"
           variants={containerVariants}"
-          initial="hidden""
+          initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
@@ -221,7 +209,7 @@ export function BenefitsSection() {
               onHoverEnd={() => setHoveredIndex(null)}
               whileHover={{ y: -8 }}
               transition={{
-'
+
                 type: 'spring',
                 stiffness: 300}}
             >"
@@ -261,7 +249,7 @@ export function BenefitsSection() {
                         height: 0}}
                       animate={{
 
-                        opacity: 1,'
+                        opacity: 1,
                         height: 'auto'}}
                       exit={{
 

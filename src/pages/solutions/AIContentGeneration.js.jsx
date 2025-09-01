@@ -10,111 +10,91 @@ import {
   FileText,
   PenTool,
   Image,
-  Video,'
+  Video,
   Music} from 'lucide-react';
 const AIContentGeneration = () => {
   const contentTypes = [
     {
-'
-      title: 'Marketing Content','
+
+      title: 'Marketing Content',
       description: 'Engaging marketing materials and campaigns',
       icon: Target,
       capabilities: ['
-        'Social media posts','
-        'Email campaigns','
-        'Ad copy','
-        'Brand messaging',
+        'Social media posts',Email campaigns',Ad copy',Brand messaging',
       ]},
     {
-'
-      title: 'Educational Content','
+
+      title: 'Educational Content',
       description: 'Learning materials and educational resources',
       icon: Users,
       capabilities: ['
-        'Course materials','
-        'Tutorials','
-        'Documentation','
-        'Learning guides',
+        'Course materials',Tutorials',Documentation',Learning guides',
       ]},
     {
-'
-      title: 'Creative Writing','
+
+      title: 'Creative Writing',
       description: 'Fiction, poetry, and creative content',
       icon: PenTool,
       capabilities: ['
-        'Story generation','
-        'Poetry creation','
-        'Character development','
-        'Plot generation',
+        'Story generation',Poetry creation',Character development',Plot generation',
       ]},
     {
-'
-      title: 'Technical Content','
+
+      title: 'Technical Content',
       description: 'Technical documentation and specifications',
       icon: Cpu,
       capabilities: ['
-        'API documentation','
-        'User manuals','
-        'Technical guides','
-        'Specifications',
+        'API documentation',User manuals',Technical guides',Specifications',
       ]},
     {
-'
-      title: 'Business Content','
+
+      title: 'Business Content',
       description: 'Professional business communications',
-      icon: TrendingUp,'
-      capabilities: ['Reports', 'Presentations', 'Proposals', 'Business plans']},
+      icon: TrendingUp,
+      capabilities: ['Reports',Presentations',Proposals',Business plans']},
     {
-'
-      title: 'Multimedia Content','
+
+      title: 'Multimedia Content',
       description: 'Combined text, image, and video content',
       icon: Globe,
       capabilities: ['
-        'Interactive content','
-        'Rich media','
-        'Cross-platform content','
-        'Engagement materials',
+        'Interactive content',Rich media',Cross-platform content',Engagement materials',
       ]},
   ];
   const benefits = ['
-    'Significantly faster content creation','
-    'Consistent quality and brand voice','
-    'Scalable content production','
-    'Cost-effective content generation','
-    'Multilingual content capabilities','
-    '24/7 content creation availability',
+    'Significantly faster content creation',Consistent quality and brand voice',Scalable content production',Cost-effective content generation',Multilingual content capabilities',24/7 content creation availability',
   ];
   const implementation = [
     {
-'
-      phase: 'Content Strategy','
-      description: 'Define content goals and requirements','
+
+      phase: 'Content Strategy',
+      description: 'Define content goals and requirements',
       duration: '1-2 weeks'},
     {
-'
-      phase: 'AI Training','
-      description: 'Train AI models on your brand and content style','
+
+      phase: 'AI Training',
+      description: 'Train AI models on your brand and content style',
       duration: '2-4 weeks'},
     {
-'
+
       phase: 'Content Templates',
       description:'
-        'Create templates and guidelines for different content types','
+        'Create templates and guidelines for different content types',
       duration: '2-3 weeks'},
     {
-'
-      phase: 'Integration','
-      description: 'Integrate AI content generation into your workflow','
+
+      phase: 'Integration',
+      description: 'Integrate AI content generation into your workflow',
       duration: '3-5 weeks'},
     {
-'
-      phase: 'Testing & Refinement','
-      description: 'Test content quality and refine AI parameters','
+
+      phase: 'Testing & Refinement',
+      description: 'Test content quality and refine AI parameters',
       duration: '2-4 weeks'},
     {
-'
-      phase: 'Deployment','
-      description: 'Full deployment and team training','
+
+      phase: 'Deployment',
+      description: 'Full deployment and team training',
       duration: '1-2 weeks'},
   ];
   return()
@@ -129,7 +109,7 @@ const AIContentGeneration = () => {
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI"
-              <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
                 {' '}
                 Content Generation
               </span>
@@ -140,13 +120,13 @@ const AIContentGeneration = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="#features""
+                href="#features"
                 className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Explore Features
               </a>
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
               >
                 Get Started
@@ -324,13 +304,13 @@ const AIContentGeneration = () => {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="/contact""
+              href="/contact"
               className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Start Creating
             </a>
             <a"
-              href="/solutions""
+              href="/solutions"
               className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
             >
               View All Solutions

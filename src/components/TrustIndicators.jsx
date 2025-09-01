@@ -42,7 +42,7 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
         { label: "Countries", value: "100+", icon: Globe },"
         { label: "Projects", value: "$10M+", icon: Award },"
         { label: "Uptime", value: "99.9%", icon: Zap }
-    ];'
+    ];
     return (<section className={`py-16 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark ${className || ''}`}>"
       <div className="container mx-auto px-4">
         {/* Header */}"

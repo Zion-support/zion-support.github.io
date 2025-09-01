@@ -1,12 +1,12 @@
-import React from 'react';'
-import { cn } from '@/lib/utils';'
+import React from 'react';
+import { cn } from '@/lib/utils';
 export function Loading({ size = 'md', variant = 'spinner', className, text }) {
 
   const sizeClasses = {
-'
-    sm: 'w-4 h-4','
-    md: 'w-6 h-6','
-    lg: 'w-8 h-8','
+
+    sm: 'w-4 h-4',
+    md: 'w-6 h-6',
+    lg: 'w-8 h-8',
     xl: 'w-12 h-12'};
   const renderSkeleton = () => (
     <div'
@@ -15,11 +15,11 @@ export function Loading({ size = 'md', variant = 'spinner', className, text }) {
   );
   const renderContent = () => {
     switch (variant) {
-'
+
       case 'dots':
-        return renderDots();'
+        return renderDots();
       case 'pulse':
-        return renderPulse();'
+        return renderPulse();
       case 'skeleton':
         return renderSkeleton();
       default:

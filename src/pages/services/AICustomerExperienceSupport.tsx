@@ -1,69 +1,69 @@
-import React from 'react.ts';'
-import { Link  } from 'react-router-dom.ts';'
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
 import { MessageCircle, Heart, Headphones, CheckCircle, Zap, Sparkles, ArrowRight, Bot, Users, Star, Clock, TrendingUp  } from 'lucide-react.ts';
 
 export default function AICustomerExperienceSupport(...args: any[]): any {
 
   const features = ['
-    'AI-powered chatbot with 95% accuracy and natural language processing','
-    'Intelligent ticket routing and priority classification',;'
-    'Automated customer sentiment analysis and satisfaction tracking',;'
-    'Multi-channel support integration (email, chat, phone, social media)',;'
-    'Predictive customer behavior analysis and proactive support',;'
-    'Personalized customer journey mapping and optimization',;'
-    'Real-time analytics and performance monitoring dashboard',;'
+    'AI-powered chatbot with 95% accuracy and natural language processing',Intelligent ticket routing and priority classification',;
+    'Automated customer sentiment analysis and satisfaction tracking',;
+    'Multi-channel support integration (email, chat, phone, social media),;
+    'Predictive customer behavior analysis and proactive support',;
+    'Personalized customer journey mapping and optimization',;
+    'Real-time analytics and performance monitoring dashboard',;
     'Integration with CRM, helpdesk, and e-commerce platforms',;
   ];
 
-  const benefits = [;'
-    'Increase customer satisfaction scores by 35-50%',;'
-    'Reduce support response time by 80% with AI automation',;'
-    'Cut support costs by 40-60% through intelligent automation',;'
-    'Improve customer retention rates by 25-40%',;'
-    'Generate 20-30% more upsell opportunities',;'
+  const benefits = [;
+    'Increase customer satisfaction scores by 35-50%',;
+    'Reduce support response time by 80% with AI automation',;
+    'Cut support costs by 40-60% through intelligent automation',;
+    'Improve customer retention rates by 25-40%',;
+    'Generate 20-30% more upsell opportunities',;
     'Achieve 99.9% support ticket resolution rate',;
   ];
 
   const supportChannels = ['
-    'Live Chat & Messaging','
-    'Email Support Automation','
-    'Phone Support Integration','
-    'Social Media Monitoring',;'
-    'Self-Service Knowledge Base',;'
-    'Video Call Support',;'
-    'Mobile App Support',;'
-    'Voice Assistant Integration',;'
-    'WhatsApp Business API',;'
+    'Live Chat & Messaging',Email Support Automation',Phone Support Integration',Social Media Monitoring',;
+    'Self-Service Knowledge Base',;
+    'Video Call Support',;
+    'Mobile App Support',;
+    'Voice Assistant Integration',;
+    'WhatsApp Business API',;
     'SMS Support Automation',;
   ];
 
   const aiCapabilities = ['
-    'Natural Language Processing','
-    'Sentiment Analysis','
-    'Intent Recognition','
-    'Automated Responses',;'
-    'Smart Escalation',;'
-    'Predictive Analytics',;'
-    'Customer Segmentation',;'
-    'Behavioral Analysis',;'
-    'Proactive Support',;'
+    'Natural Language Processing',Sentiment Analysis',Intent Recognition',Automated Responses',;
+    'Smart Escalation',;
+    'Predictive Analytics',;
+    'Customer Segmentation',;
+    'Behavioral Analysis',;
+    'Proactive Support',;
     'Performance Optimization',;
   ];
 
   const integrations = ['
-    'Salesforce Service Cloud','
-    'Zendesk Support','
-    'HubSpot Service Hub','
-    'Intercom',;'
-    'Freshdesk',;'
-    'Shopify',;'
-    'WooCommerce',;'
-    'Magento',;'
-    'Slack',;'
+    'Salesforce Service Cloud',Zendesk Support',HubSpot Service Hub',Intercom',;
+    'Freshdesk',;
+    'Shopify',;
+    'WooCommerce',;
+    'Magento',;
+    'Slack',;
     'Microsoft Teams',;
   ];
 
   const stack = ['
+<<<<<<< HEAD
+    { name: 'OpenAI GPT-4', url: 'https://openai.com/gpt-4' },
+    { name: 'Dialogflow', url: 'https://cloud.google.com/dialogflow' },;
+    { name: 'Twilio', url: 'https://www.twilio.com/' },;
+    { name: 'Intercom', url: 'https://www.intercom.com/' },;
+    { name: 'Zendesk', url: 'https://www.zendesk.com/' },;
+    { name: 'HubSpot', url: 'https://www.hubspot.com/' },;
+    { name: 'Salesforce', url: 'https://www.salesforce.com/' },;
+    { name: 'Analytics', url: 'https://analytics.google.com/' },;
+=======
     { name: 'OpenAI GPT-4', url: 'https://openai.com/gpt-4' },'
     { name: 'Dialogflow', url: 'https://cloud.google.com/dialogflow' },;'
     { name: 'Twilio', url: 'https://www.twilio.com/' },;'
@@ -71,6 +71,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {
     { name: 'Zendesk', url: 'https://www.zendesk.com/' },;'
     { name: 'HubSpot', url: 'https://www.hubspot.com/' },;'
     { name: 'Salesforce', url: 'https://www.salesforce.com/' },;'    { name: 'Analytics', url: 'https://analytics.google.com/' },;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()

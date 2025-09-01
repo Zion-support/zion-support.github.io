@@ -1,6 +1,81 @@
+<<<<<<< HEAD
+import React from 'react.ts';
+import { motion   } from 'framer-motion.ts';
+import { Link   } from 'react-router-dom.ts';
+import { Brain, 
+  Database, 
+  BarChart3, 
+  Users, 
+  Clock, 
+  CheckCircle, 
+  Zap,
+  Shield,
+  TrendingUp,
+  Globe,
+  ArrowRight,
+  Target,
+  PieChart,
+  Activity'
+  } from 'lucide-react.ts';
+import { SEO   } from '../../components/SEO';
+;
+const AIEnterpriseResourcePlanning = (...args: unknown[]): unknown => {
+  const features = [
+    {
+
+      icon: Brain,
+      title: "AI-Powered Forecasting","
+      description: "Advanced machine learning algorithms predict demand, optimize inventory, and forecast market trends with 95% accuracy"
+    },
+    {
+
+      icon: Database,"
+      title: "Real-Time Data Integration","
+      description: "Seamlessly connect all business systems for instant data synchronization and unified reporting"
+    },
+    {
+
+      icon: BarChart3,"
+      title: "Intelligent Analytics","
+      description: "AI-driven insights that identify optimization opportunities and predict business outcomes"
+    },
+    {
+
+      icon: Users,"
+      title: "Collaborative Workflows","
+      description: "Streamlined processes that enhance team productivity and cross-departmental coordination"
+    },
+    {
+
+      icon: Shield,"
+      title: "Enterprise Security","
+      description: "Bank-level security with role-based access control and comprehensive audit trails"
+    },
+    {
+
+      icon: Zap,"
+      title: "Automated Operations","
+      description: "Reduce manual tasks by 80% with intelligent automation and workflow optimization";
+    };
+  ];
+
+  const services = [
+    {
+"
+      name: "Starter Plan","
+      price: "$2,999","
+      period: "/month",
+      features[;"
+        "Core ERP modules","
+        "AI-powered analytics","
+        "Basic automation","
+        "Standard support","
+        "Up to 50 users"
+=======
 import React from 'react.ts';'
 import { motion   } from 'framer-motion.ts';'
 import { Link   } from 'react-router-dom.ts';        "Up to 50 users"
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;
       popular: false
     },
@@ -76,9 +151,16 @@ import { Link   } from 'react-router-dom.ts';        "Up to 50 users"
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark">
       <SEO "
+<<<<<<< HEAD
+        title="AI-Powered Enterprise Resource Planning | Zion Tech Group"
+        description="Transform your business operations with our AI-driven ERP solution. Streamline processes, optimize resources, and drive growth with intelligent automation."
+        keywords="AI ERP, Enterprise Resource Planning, Business Automation, AI Analytics, Process Optimization"
+      />
+=======
         title="AI-Powered Enterprise Resource Planning | Zion Tech Group""
         description="Transform your business operations with our AI-driven ERP solution. Streamline processes, optimize resources, and drive growth with intelligent automation.""        keywords="AI ERP, Enterprise Resource Planning, Business Automation, AI Analytics, Process Optimization"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -108,7 +190,7 @@ import { Link   } from 'react-router-dom.ts';        "Up to 50 users"
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
               >
                 Get Started Today"
@@ -445,7 +527,7 @@ import { Link   } from 'react-router-dom.ts';        "Up to 50 users"
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
                 >
                   Start Your Transformation"

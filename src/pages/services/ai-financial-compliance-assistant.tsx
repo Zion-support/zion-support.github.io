@@ -1,5 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import {
 
@@ -39,44 +39,44 @@ import {
   Scale,
   Gavel,
   Building2,
-  Globe,'
+  Globe,
   Network} from 'lucide-react';
 
 const AIFinancialComplianceAssistant = () => {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI-Powered Compliance Monitoring',
       description:'
         'Advanced machine learning algorithms continuously monitor financial transactions for compliance violations'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Real-time Risk Detection',
       description:'
         'Instant identification of potential compliance risks, fraud, and regulatory violations'},
     {
 
-      icon: FileText,'
+      icon: FileText,
       title: 'Automated Reporting',
       description:'
         'Generate comprehensive compliance reports automatically for regulators and internal audits'},
     {
 
-      icon: AlertTriangle,'
+      icon: AlertTriangle,
       title: 'Proactive Alerts',
       description:'
         'Early warning system for compliance issues before they become violations'},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Compliance Analytics',
       description:'
         'Deep insights into compliance patterns, trends, and risk areas'},
     {
 
-      icon: CheckCircle,'
+      icon: CheckCircle,
       title: 'Regulatory Updates',
       description:'
         'Automatic updates on regulatory changes and their impact on your business'},
@@ -84,127 +84,108 @@ const AIFinancialComplianceAssistant = () => {
 
   const pricingPlans = [
     {
-'
-      name: 'Starter','
-      price: '$199','
-      period: '/month','
+
+      name: 'Starter',
+      price: '$199',
+      period: '/month',
       description: 'Perfect for small financial institutions and startups',
       features: ['
-        'Up to 10,000 transactions/month','
-        'Basic compliance monitoring','
-        'Standard reporting','
-        'Email alerts','
-        'Email support',
+        'Up to 10,000 transactions/month',Basic compliance monitoring',Standard reporting',Email alerts',Email support',
       ],
       popular: false},
     {
-'
-      name: 'Professional','
-      price: '$599','
-      period: '/month','
+
+      name: 'Professional',
+      price: '$599',
+      period: '/month',
       description: 'Ideal for growing financial services companies',
       features: ['
-        'Up to 100,000 transactions/month','
-        'Advanced AI compliance detection','
-        'Real-time monitoring','
-        'Custom reporting','
-        'Priority support','
-        'API access','
-        'Advanced analytics','
-        'Multi-user access',
+        'Up to 100,000 transactions/month',Advanced AI compliance detection',Real-time monitoring',Custom reporting',Priority support',API access',Advanced analytics',Multi-user access',
       ],
       popular: true},
     {
-'
-      name: 'Enterprise','
-      price: '$1,999','
+
+      name: 'Enterprise',
+      price: '$1,999',
       period: '/month',
       description:'
         'For large financial institutions and multinational corporations',
       features: ['
-        'Unlimited transactions','
-        'Custom AI models','
-        'White-label solution','
-        'Dedicated support','
-        'Advanced analytics','
-        'Custom integrations','
-        'On-premise deployment','
-        'SLA guarantees','
-        'Custom training',
+        'Unlimited transactions',Custom AI models',White-label solution',Dedicated support',Advanced analytics',Custom integrations',On-premise deployment',SLA guarantees',Custom training',
       ],
       popular: false},
   ];
 
   const complianceAreas = [
     {
-'
-      title: 'Anti-Money Laundering (AML)',
+
+      title: 'Anti-Money Laundering (AML),
       description:'
         'Monitor transactions for suspicious patterns and ensure AML compliance',
-      icon: Shield,'
+      icon: Shield,
       color: 'from-red-500 to-orange-500'},
     {
-'
-      title: 'Know Your Customer (KYC)','
+
+      title: 'Know Your Customer (KYC),
       description: 'Automated customer verification and identity validation',
-      icon: Users,'
+      icon: Users,
       color: 'from-blue-500 to-purple-500'},
     {
-'
-      title: 'Fraud Detection','
+
+      title: 'Fraud Detection',
       description: 'AI-powered fraud detection and prevention systems',
-      icon: AlertTriangle,'
+      icon: AlertTriangle,
       color: 'from-yellow-500 to-orange-500'},
     {
-'
-      title: 'Regulatory Reporting','
+
+      title: 'Regulatory Reporting',
       description: 'Automated generation of regulatory reports and filings',
-      icon: FileText,'
+      icon: FileText,
       color: 'from-green-500 to-emerald-500'},
   ];
 
   const useCases = [
     {
-'
-      title: 'Banks & Credit Unions','
+
+      title: 'Banks & Credit Unions',
       description: 'Ensure regulatory compliance across all banking operations',
       icon: Building2},
     {
-'
-      title: 'Investment Firms','
+
+      title: 'Investment Firms',
       description: 'Monitor trading activities and ensure SEC compliance',
       icon: TrendingUp},
     {
-'
-      title: 'Insurance Companies','
+
+      title: 'Insurance Companies',
       description: 'Compliance monitoring for insurance operations and claims',
       icon: Shield},
     {
-'
-      title: 'Fintech Startups','
+
+      title: 'Fintech Startups',
       description: 'Build compliance into your financial technology platform',
       icon: Zap},
   ];
 
   const benefits = [
     {
-'
+
       title: 'Reduce Compliance Costs',
       description:'
         'Automate manual compliance processes to save time and money',
       icon: DollarSign},
     {
-'
-      title: 'Prevent Violations','
+
+      title: 'Prevent Violations',
       description: 'Proactive detection prevents costly regulatory violations',
       icon: AlertCircle},
     {
-'
-      title: 'Improve Efficiency','
+
+      title: 'Improve Efficiency',
       description: 'Streamline compliance workflows and reduce manual work',
       icon: TrendingUp},
     {
-'
+
       title: 'Enhance Security',
       description:'
         'Advanced security features protect sensitive financial data',
@@ -214,10 +195,18 @@ const AIFinancialComplianceAssistant = () => {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
+<<<<<<< HEAD
+        title="AI Financial Compliance Assistant - Zion Tech Group"
+        description="Ensure financial compliance with AI-powered monitoring, automated reporting, and real-time risk detection. Stay compliant with regulations while reducing costs."
+        keywords="AI financial compliance, AML compliance, KYC automation, fraud detection, regulatory reporting, financial risk management"
+        canonical="https://ziontechgroup.com/services/ai-financial-compliance-assistant"
+      />
+=======
         title="AI Financial Compliance Assistant - Zion Tech Group""
         description="Ensure financial compliance with AI-powered monitoring, automated reporting, and real-time risk detection. Stay compliant with regulations while reducing costs.""
         keywords="AI financial compliance, AML compliance, KYC automation, fraud detection, regulatory reporting, financial risk management""        canonical="https://ziontechgroup.com/services/ai-financial-compliance-assistant"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -248,13 +237,13 @@ const AIFinancialComplianceAssistant = () => {
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="#pricing""
+                href="#pricing"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-semibold rounded-xl hover:from-emerald-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 View Pricing"
                 <ArrowRight className="ml-2 w-5 h-5" />              </a>
               <a"
-                href="mailto:kleber@ziontechgroup.com""
+                href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border border-slate-600 text-white font-semibold rounded-xl hover:border-slate-500 transition-all duration-200"
               >
                 Schedule Demo
@@ -588,7 +577,7 @@ const AIFinancialComplianceAssistant = () => {
             viewport={{ once: true }}
           >
             <a"
-              href="mailto:kleber@ziontechgroup.com?subject=AI Financial Compliance Assistant Demo Request""
+              href="mailto:kleber@ziontechgroup.com?subject=AI Financial Compliance Assistant Demo Request"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-semibold rounded-xl hover:from-emerald-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               Request Demo"

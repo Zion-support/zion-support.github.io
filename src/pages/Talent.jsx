@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const Talent = () => {
   return()
@@ -6,7 +6,7 @@ const Talent = () => {
       <Helmet>
         <title>Talent - Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Find and hire top technology talent through Zion Tech Group. Connect with skilled professionals for your projects."
         />
       </Helmet>
@@ -22,7 +22,7 @@ const Talent = () => {
           </div>
 "
           <div className="bg-white rounded-lg shadow-lg p-8">"
-            <p className="text-gray-600 text-center">'
+            <p className="text-gray-600 text-center">
               Talent page coming soon. We're building a comprehensive talent
               platform.
             </p>

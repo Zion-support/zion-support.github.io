@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -72,93 +72,88 @@ import {
   Signal,
   Navigation,
   Earth,
-  Moon,'
+  Moon,
   Sun} from 'lucide-react';
 
 const SpaceTech = () => {
   const features = [
     {
 
-      icon: Satellite,'
+      icon: Satellite,
       title: 'Satellite Technology',
       description:'
         'Advanced satellite design, deployment, and management solutions'},
     {
 
-      icon: Orbit,'
-      title: 'Orbital Mechanics','
+      icon: Orbit,
+      title: 'Orbital Mechanics',
       description: 'Precise orbital calculations and trajectory optimization'},
     {
 
-      icon: Antenna,'
-      title: 'Ground Station Systems','
+      icon: Antenna,
+      title: 'Ground Station Systems',
       description: 'Earth-based communication and control infrastructure'},
     {
 
-      icon: Signal,'
-      title: 'Space Communications','
+      icon: Signal,
+      title: 'Space Communications',
       description: 'Reliable data transmission between space and ground'},
     {
 
-      icon: Navigation,'
+      icon: Navigation,
       title: 'Space Navigation',
       description:'
         'Advanced positioning and navigation systems for space missions'},
     {
 
-      icon: Telescope,'
-      title: 'Space Observation','
+      icon: Telescope,
+      title: 'Space Observation',
       description: 'Earth observation and space monitoring capabilities'},
   ];
 
   const benefits = ['
-    'Enable global connectivity and coverage','
-    'Provide critical Earth observation data','
-    'Support space exploration missions','
-    'Enable advanced navigation systems','
-    'Support disaster response and monitoring','
-    'Drive innovation in space technology',
+    'Enable global connectivity and coverage',Provide critical Earth observation data',Support space exploration missions',Enable advanced navigation systems',Support disaster response and monitoring',Drive innovation in space technology',
   ];
 
   const services = [
     {
 
-      icon: Rocket,'
-      title: 'Launch Services','
+      icon: Rocket,
+      title: 'Launch Services',
       description: 'Satellite launch coordination and mission planning'},
     {
 
-      icon: Planet,'
-      title: 'Earth Observation','
+      icon: Planet,
+      title: 'Earth Observation',
       description: 'Satellite imagery and environmental monitoring'},
     {
 
-      icon: Star,'
-      title: 'Space Research','
+      icon: Star,
+      title: 'Space Research',
       description: 'Scientific research and space exploration support'},
     {
 
-      icon: Globe2,'
-      title: 'Global Communications','
+      icon: Globe2,
+      title: 'Global Communications',
       description: 'Satellite communications and internet services'},
   ];
 
   const useCases = [
     {
-'
-      industry: 'Telecommunications','
+
+      industry: 'Telecommunications',
       description: 'Global satellite communications and internet services'},
     {
-'
-      industry: 'Environmental Monitoring','
+
+      industry: 'Environmental Monitoring',
       description: 'Climate change tracking and natural disaster monitoring'},
     {
-'
-      industry: 'Agriculture','
+
+      industry: 'Agriculture',
       description: 'Crop monitoring and precision agriculture support'},
     {
-'
-      industry: 'Defense & Security','
+
+      industry: 'Defense & Security',
       description: 'Surveillance and national security applications'},
   ];
 
@@ -179,7 +174,7 @@ const SpaceTech = () => {
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Space"
-              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                 {' '}
                 Technology
               </span>

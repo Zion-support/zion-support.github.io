@@ -16,14 +16,14 @@ var __rest =
           t[p[i]] = s[p[i]];
       }
     return t;
-  };'
-import { jsx as _jsx } from 'react/jsx-runtime';'
-import React from 'react';'
+  };
+import { jsx as _jsx } from 'react/jsx-runtime';
+import React from 'react';
 import { cn } from '@/lib/utils';
 const Input = React.forwardRef((_a, ref) => {
 
-  var { className, type } = _a,'
-    props = __rest(_a, ['className', 'type']);
+  var { className, type } = _a,
+    props = __rest(_a, ['className',type']);
   return _jsx('
     'input',
     Object.assign() {
@@ -36,7 +36,6 @@ const Input = React.forwardRef((_a, ref) => {
       props
     )
   );
-});'
+});
 Input.displayName = 'Input';
 export { Input };
-'

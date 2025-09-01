@@ -1,6 +1,76 @@
+<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+
+  TrendingUp,
+  Users,
+  DollarSign,
+  Clock,
+  ArrowRight,
+  Star,
+  CheckCircle'
+} from 'lucide-react';
+
+      color: 'from-purple-500 to-pink-500';
+    };
+  ];
+const caseStudies = [
+  {
+
+    id: 1,
+    title: "AI-Powered Supply Chain Optimization","
+    company: "Global Manufacturing Corp","
+    industry: "Manufacturing","
+    challenge: "Inefficient supply chain causing 30% cost overruns and delays","
+    solution: "Implemented AI-driven demand forecasting and route optimization",
+    results: ["
+      "Reduced costs by 25%","
+      "Improved delivery times by 40%","
+      "Increased efficiency by 35%"
+    ],"
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400","
+    color: "from-blue-500 to-cyan-500"
+  },
+  {
+
+    id: 2,"
+    title: "Quantum Computing Financial Modeling","
+    company: "FinTech Innovations Ltd","
+    industry: "Financial Services","
+    challenge: "Complex financial models taking days to compute","
+    solution: "Deployed quantum computing algorithms for portfolio optimization",
+    results: ["
+      "1000x faster computation","
+      "Improved accuracy by 60%","
+      "Reduced risk by 45%"
+    ],"
+    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400","
+    color: "from-purple-500 to-pink-500"
+  },
+  {
+
+    id: 3,"
+    title: "Blockchain Supply Chain Transparency","
+    company: "Organic Foods Inc","
+    industry: "Food & Beverage","
+    challenge: "Lack of transparency in food supply chain","
+    solution: "Implemented blockchain-based tracking system",
+    results: ["
+      "100% supply chain visibility",;"
+      "Reduced fraud by 99%",;"
+      "Improved customer trust by 80%";
+    ],;"
+    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=400",;"
+    color: "from-green-500 to-emerald-500";
+  };
+];
+=======
 import React from 'react';'
 import { motion } from 'framer-motion';'
 import { Link } from 'react-router-dom';];
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 export function CaseStudiesSection() {
   return ("
@@ -26,7 +96,7 @@ export function CaseStudiesSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Success Stories
           </h2>"
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">'
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover how we've helped businesses across industries achieve
             remarkable results through innovative technology solutions.
           </p>
@@ -129,14 +199,14 @@ export function CaseStudiesSection() {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200"
 
                 Start Your Project"
                 <TrendingUp className="ml-2 h-5 w-5" />
               </Link>
               <Link"
-                to="/case-studies""
+                to="/case-studies"
                 className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200"
 
                 View All Case Studies"

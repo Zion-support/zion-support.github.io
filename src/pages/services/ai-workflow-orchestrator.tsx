@@ -1,7 +1,108 @@
+<<<<<<< HEAD
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { Workflow, 
+  Brain, 
+  Zap, 
+  Shield, 
+  Cloud, 
+  BarChart3, 
+  Users, 
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Play,
+  Pause,
+  Settings,
+  Monitor,
+  AlertTriangle,
+  TrendingUp,
+  Database,
+  Network,
+  Cpu,
+  Server,
+  ShoppingCart'
+ } from 'lucide-react.ts';
+;
+const AIWorkflowOrchestrator = (...args: unknown[]): unknown => {
+  const features = [
+    {
+
+      icon: Brain,
+      title: "Intelligent Decision Making","
+      description: "AI-powered workflow decisions based on real-time data analysis and predictive modeling"
+    },
+    {
+
+      icon: Zap,"
+      title: "Lightning Fast Execution","
+      description: "Optimized workflow execution with parallel processing and intelligent resource allocation"
+    },
+    {
+
+      icon: Shield,"
+      title: "Enterprise Security","
+      description: "Bank-level security with encryption, access controls, and compliance monitoring"
+    },
+    {
+
+      icon: Cloud,"
+      title: "Scalable Infrastructure","
+      description: "Auto-scaling cloud infrastructure that grows with your business needs"
+    },
+    {
+
+      icon: BarChart3,"
+      title: "Advanced Analytics","
+      description: "Comprehensive insights into workflow performance and optimization opportunities";
+    },;
+    {;
+      icon: Users,;"
+      title: "Team Collaboration",;"
+      description: "Seamless team coordination with real-time updates and communication tools";
+    };
+  ];
+
+  const benefits = [;"
+    "Reduce manual workflow processing by up to 80%",;"
+    "Improve decision accuracy with AI-powered insights",;"
+    "Scale operations without proportional cost increases",;"
+    "Ensure compliance and audit trail maintenance",;"
+    "Real-time monitoring and alerting capabilities",;"
+    "Seamless integration with existing systems";
+  ];
+
+  const useCases = [
+    {
+"
+      title: "Financial Services","
+      description: "Automate loan processing, fraud detection, and compliance workflows",
+      icon: BarChart3
+    },
+    {
+"
+      title: "Healthcare","
+      description: "Streamline patient care coordination and medical record management",
+      icon: Users
+    },
+    {
+"
+      title: "Manufacturing","
+      description: "Optimize production scheduling and quality control processes",
+      icon: Settings;
+    },;
+    {;"
+      title: "Retail",;"
+      description: "Automate inventory management and customer service workflows",;
+      icon: ShoppingCart;
+    };
+=======
 import React from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
 import { Helmet  } from 'react-helmet-async.ts';      description: "Automate inventory management and customer service workflows",;
       icon: ShoppingCart};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   const pricing = [
@@ -502,7 +603,7 @@ import { Helmet  } from 'react-helmet-async.ts';      description: "Automate inv
                       plan.popular'
                         ? 'bg-blue-600 text-white hover:bg-blue-700''
                         : 'bg-slate-100 text-slate-700 hover:bg-slate-200'`
-                    }`}>'
+                    }`}>
                       {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
                     </button>
                   </motion.div>

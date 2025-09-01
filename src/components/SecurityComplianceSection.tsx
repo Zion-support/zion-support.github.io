@@ -1,6 +1,109 @@
+<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+import {
+
+  Shield,
+  Lock,
+  CheckCircle,
+  AlertTriangle,
+  Users,
+  Award,
+  FileText,
+  Globe,
+  Server,
+  Eye'
+} from 'lucide-react';
+
+      benefits['Firewall protection',IDS/IPS systems',DDoS mitigation',VPN solutions'];
+    };
+  ];
+const securityFeatures = [
+  {
+
+    title: "SOC 2 Type II Compliance","
+    description: "Annual third-party audits ensuring data security, availability, and confidentiality","
+    icon: "🔒","
+    status: "Certified","
+    color: "from-green-500 to-emerald-600"
+  },
+  {
+"
+    title: "ISO 27001","
+    description: "International standard for information security management systems","
+    icon: "🌐","
+    status: "Certified","
+    color: "from-blue-500 to-cyan-600"
+  },
+  {
+"
+    title: "GDPR Compliance","
+    description: "Full compliance with European data protection regulations","
+    icon: "🇪🇺","
+    status: "Compliant","
+    color: "from-purple-500 to-pink-600"
+  },
+  {
+"
+    title: "HIPAA Compliance","
+    description: "Healthcare data protection standards for medical information","
+    icon: "🏥","
+    status: "Compliant","
+    color: "from-orange-500 to-red-600"
+  },
+  {
+"
+    title: "Zero Trust Architecture","
+    description: "Never trust, always verify security model implementation","
+    icon: "🛡️","
+    status: "Implemented","
+    color: "from-indigo-500 to-purple-600"
+  },
+  {;"
+    title: "End-to-End Encryption",;"
+    description: "256-bit AES encryption for all data in transit and at rest",;"
+    icon: "🔐",;"
+    status: "Active",;"
+    color: "from-teal-500 to-green-600";
+  };
+];
+;
+const complianceFeatures = [
+  {
+"
+    category: "Data Protection",
+    features: ["
+      "Automated data classification","
+      "Real-time threat detection","
+      "Automated incident response","
+      "Data loss prevention (DLP)"
+    ]
+  },
+  {
+"
+    category: "Access Control",
+    features: ["
+      "Multi-factor authentication (MFA)","
+      "Role-based access control (RBAC)","
+      "Privileged access management","
+      "Single sign-on (SSO) integration"
+    ]
+  },
+  {
+"
+    category: "Monitoring & Auditing",
+    features: [;"
+      "24/7 security monitoring",;"
+      "Comprehensive audit logs",;"
+      "Real-time alerts",;"
+      "Automated compliance reporting";
+    ];
+  };
+=======
 import React from 'react';'
 import { motion } from 'framer-motion';      "Automated compliance reporting";
     ]};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 
 export function SecurityComplianceSection() {
@@ -94,7 +197,7 @@ export function SecurityComplianceSection() {
                   <p className="text-gray-400 text-sm mb-3">{feature.description}</p>"
                   <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-700 rounded-full">`
                     <div className={`w-2 h-2 rounded-full ${
-'
+
                       feature.status === 'Certified' ? 'bg-green-400' :'
                       feature.status === 'Compliant' ? 'bg-blue-400' : 'bg-purple-400'`
                     }`}></div>"

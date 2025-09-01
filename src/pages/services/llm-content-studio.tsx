@@ -1,6 +1,6 @@
-import React from 'react.ts';'
-import { Helmet  } from 'react-helmet-async.ts';'
-import { BookOpen, PenTool, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Sparkles  } from 'lucide-react';'
+import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { BookOpen, PenTool, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Sparkles  } from 'lucide-react';
 import { Link  } from 'react-router-dom.ts';
 ;
 export { function };export default function LLMContentStudio(...args: []):  {
@@ -35,7 +35,7 @@ export { function };export default function LLMContentStudio(...args: []):  {
 "
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 shadow-lg hover:shadow-xl"
 
                   Get Started"
@@ -223,7 +223,7 @@ export { function };export default function LLMContentStudio(...args: []):  {
                 <h3 className="text-2xl font-semibold text-white mb-4">AI Models Supported</h3>"
                 <div className="space-y-4">
                   {["
-                    { model: "GPT-4", icon: Sparkles, color: "from-blue-500 to-cyan-500", description: "Advanced language model" },'"
+                    { model: "GPT-4", icon: Sparkles, color: "from-blue-500 to-cyan-500", description: "Advanced language model" },"
                     { model: "Claude", icon: BookOpen, color: "from-purple-500 to-pink-500", description: "Anthropic's AI assistant" },"
                     { model: "LLaMA", icon: PenTool, color: "from-green-500 to-emerald-500", description: "Open-source LLM" },"
                     { model: "Custom Models", icon: Settings, color: "from-orange-500 to-red-500", description: "Fine-tuned for your brand" }
@@ -409,13 +409,13 @@ export { function };export default function LLMContentStudio(...args: []):  {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200"
 
                 Start Creating"
                 <ArrowRight className="ml-2 w-5 h-5" />              </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200"
               >
                 Explore All Services;

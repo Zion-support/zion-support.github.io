@@ -1,7 +1,7 @@
 // removed duplicate old section
 
-import React from 'react.ts';'
-import { SEO  } from '@/components/SEO';'
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
 import { TrendingUp, CheckCircle, Database, PlugZap  } from 'lucide-react';
 ;
 const AiLeadScoring: React.FC = (): JSX.Element => {
@@ -9,8 +9,8 @@ const AiLeadScoring: React.FC = (): JSX.Element => {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO"
-        title="AI Lead Scoring - Zion Tech Group""
-        description="Explainable AI lead scoring with CRM integration, A/B tests, and lift tracking.""
+        title="AI Lead Scoring - Zion Tech Group"
+        description="Explainable AI lead scoring with CRM integration, A/B tests, and lift tracking."
         keywords="lead scoring, AI sales, CRM, B2B marketing"
       />"
       <section className="mx-auto max-w-6xl px-6 py-16">"

@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Brain, TrendingUp, Users, Globe, Cpu, Lightbulb, BarChart3, PieChart, Activity, Search } from 'lucide-react';
 const AIBusinessIntelligence = () => {
     const benefits = [

@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const OpenApp = () => {
   return()
@@ -6,7 +6,7 @@ const OpenApp = () => {
       <Helmet>
         <title>Open App - Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Open Zion Tech Group applications. Access our web and mobile apps for seamless service delivery."
         />
       </Helmet>
@@ -22,7 +22,7 @@ const OpenApp = () => {
           </div>
 "
           <div className="bg-white rounded-lg shadow-lg p-8">"
-            <p className="text-gray-600 text-center">'
+            <p className="text-gray-600 text-center">
               App launcher coming soon. We're building comprehensive application
               access.
             </p>

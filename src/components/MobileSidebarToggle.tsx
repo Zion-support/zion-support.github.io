@@ -1,7 +1,37 @@
+<<<<<<< HEAD
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown  } from 'lucide-react';
+import { Link, useLocation  } from 'react-router-dom.ts';
+
+      newExpanded.delete(section)} else {
+
+      newExpanded.add(section)}
+    setExpandedSections(newExpanded)};
+
+      newExpanded.delete (section) } else {
+      newExpanded.add (section) }
+    setExpandedSections (newExpanded) };
+
+  const isActive = (path: string) => location.pathname === path;
+
+  const navigationSections = [
+    {
+
+      title: "Main",
+      icon: Home,
+      items[;"
+        { name: "Home", href: "/", icon: Home },"
+        { name: "About Us", href: "/about", icon: Users },"
+        { name: "Contact", href: "/contact", icon: MessageCircle },"
+        { name: "Partners", href: "/partners", icon: Users },"
+        { name: "Careers", href: "/careers", icon: Briefcase }
+=======
 import React, { useState } from 'react.ts';'
 import { motion, AnimatePresence  } from 'framer-motion.ts';'
 import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown  } from 'lucide-react';'
 import { Link, useLocation  } from 'react-router-dom.ts';        { name: "Careers", href: "/careers", icon: Briefcase }
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ]
     },;
     {
@@ -70,11 +100,11 @@ import { Link, useLocation  } from 'react-router-dom.ts';        { name: "Career
             {/* Mobile Sidebar */}
             <motion.div'
               initial={{ x: '-100%' }}
-              animate={{ x: 0 }}'
+              animate={{ x: 0 }}
               exit={{ x: '-100%' }}
               transition = {
 
-  { duration: 0.3,'
+  { duration: 0.3,
   ease: 'easeOut' 
 
 
@@ -136,7 +166,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';        { name: "Career
                           to={action.href}
                           onClick={() => setIsOpen(false)}
                           className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 group ${
-'
+
                             action.variant === 'primary''
                               ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan/90 hover:to-zion-blue/90 shadow-lg shadow-zion-cyan/25''
                               : 'bg-zion-slate-dark/50 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 border border-zion-cyan/20 hover:border-zion-cyan/40'`
@@ -197,7 +227,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';        { name: "Career
 }}
                             animate = {
 
-  { opacity: 1,'
+  { opacity: 1,
   height: 'auto' 
 
 }}
@@ -237,7 +267,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';        { name: "Career
                                   onClick={() => setIsOpen(false)}`
                                   className={`flex items-center space-x-3 p-2 rounded-lg transition-all duration-300 group ${
 
-                                    isActive(item.href)'
+                                    isActive(item.href)
                                       ? 'text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/30''
                                       : 'text-zion-slate-light hover:text-white hover:bg-zion-cyan/5'`
                                   }`}

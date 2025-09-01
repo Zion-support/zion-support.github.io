@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousScientificResearcher = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousScientificResearcher = () => {
       <Helmet>
         <title>AI Autonomous Scientific Researcher | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous scientific researcher that conducts research, analyzes data, and generates scientific insights with advanced AI capabilities across all scientific domains."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI scientific research, autonomous researcher, AI research, scientific AI, research automation, AI science"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-scientific-researcher"
         />
       </Helmet>
@@ -201,14 +201,7 @@ const AIAutonomousScientificResearcher = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Physics','
-                'Chemistry','
-                'Biology','
-                'Medicine','
-                'Computer Science','
-                'Mathematics','
-                'Psychology','
-                'Economics',
+                'Physics',Chemistry',Biology',Medicine',Computer Science',Mathematics',Psychology',Economics',
               ].map(domain => (
                 <div
                   key={domain}"

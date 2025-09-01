@@ -17,12 +17,12 @@ class ResourceMonitor {
     this.setupErrorListeners();
     this.setupResourceObservers();
     this.monitorCriticalResources();
-'
+
     // console.log('🔍 Resource Monitor started');
   }
 
   stop() {
-    this.isMonitoring = false;'
+    this.isMonitoring = false;
     // console.log('🔍 Resource Monitor stopped');
   }
 
@@ -43,7 +43,7 @@ class ResourceMonitor {
 
             this.handleResourceError()
               url,
-              this.getResourceType(target),'
+              this.getResourceType(target),
               event.error?.message || 'Unknown error'
             );
           }
@@ -62,8 +62,7 @@ class ResourceMonitor {
       ) {
 
         this.handleResourceError('
-          'unknown','
-          'other',
+          'unknown',other',
           `MIME type error: ${event.reason}`
         );
       }
@@ -107,20 +106,18 @@ class ResourceMonitor {
   }
 
   private monitorScript(script: anyHTMLScriptElement) {
-'
+
     script.addEventListener('error', () => {
-'
-      this.handleResourceError(script.src, 'script', 'Script loading failed');
+
+      this.handleResourceError(script.src,script',Script loading failed');
     });
   }
 
   private monitorStylesheet(link: anyHTMLLinkElement) {
-'
+
     link.addEventListener('error', () => {
       this.handleResourceError()
-        link.href,'
-        'stylesheet','
-        'Stylesheet loading failed'
+        link.href,stylesheet',Stylesheet loading failed'
       );
     });
   }
@@ -128,12 +125,7 @@ class ResourceMonitor {
   private monitorCriticalResources() {
     // Monitor critical CSS and JS files
     const criticalResources = ['
-      '/css/index-RK9lga5l.css','
-      '/js/index-C64WnLOI.js','
-      '/js/react-vendor-ClxMxoJB.js','
-      '/js/router-vendor-9KcRWrrL.js','
-      '/js/ui-vendor-B31yGDq-.js','
-      '/js/utils-vendor-CrFdsnXa.js',
+      '/css/index-RK9lga5l.css',/js/index-C64WnLOI.js',/js/react-vendor-ClxMxoJB.js',/js/router-vendor-9KcRWrrL.js',/js/ui-vendor-B31yGDq-.js',/js/utils-vendor-CrFdsnXa.js',
     ];
 
     criticalResources.forEach(resource => {
@@ -144,23 +136,32 @@ class ResourceMonitor {
   private async checkResourceHealth(url: string) {
 
     try {
-'
+
       const response = await fetch(url, { method: 'HEAD' });
 
       if (!response.ok) {
 
         this.handleResourceError()
-          url,'
-          'other',`
+          url,other',`
           `HTTP ${response.status}: ${response.statusText}`
         );
         return;
       }
+<<<<<<< HEAD
+
+      const contentType = response.headers.get('content-type');
+      if (!contentType) {
+
+        this.handleResourceError(url,other',No content-type header');
+        return;
+      }
+=======
 '
       const contentType = response.headers.get('content-type');      if (!contentType) {
 '
         this.handleResourceError(url, 'other', 'No content-type header');
         return}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       // Check for MIME type issues'
       if (url.endsWith('.js') && !contentType.includes('javascript')) {
@@ -168,25 +169,29 @@ class ResourceMonitor {
         this.handleResourceError(url, 'stylesheet', `Incorrect MIME type: ${contentType} (expected css)`)}
 
         this.handleResourceError()
-          url,'
-          'script',`
+          url,script',`
           `Incorrect MIME type: ${contentType} (expected javascript)`
-        );'
+        );
       } else if (url.endsWith('.css') && !contentType.includes('css')) {
 
         this.handleResourceError()
-          url,'
-          'stylesheet',`
+          url,stylesheet',`
           `Incorrect MIME type: ${contentType} (expected css)`
         );
       }
     } catch (error) {
 '`
+<<<<<<< HEAD
+      this.handleResourceError(url,other', `Fetch error: ${error}`);
+    }
+  }
+=======
       this.handleResourceError(url, 'other', `Fetch error: ${error}`);
     }  }
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   private handleResourceError()
-    url: string,'
+    url: string,
     type: ResourceError['type'],
     error: string
   ) {
@@ -198,7 +203,7 @@ class ResourceMonitor {
       error,
       timestamp: Date.now()};
 
-    this.errors.push(resourceError);'
+    this.errors.push(resourceError);
     // console.error('🚨 Resource Error:', resourceError);
 
     // Attempt to retry loading
@@ -207,7 +212,7 @@ class ResourceMonitor {
     // Report to analytics/monitoring service
     this.reportError(resourceError);
   }
-'
+
   private attemptRetry(url: string, type: ResourceError['type']) {
 
     const attempts = this.retryAttempts.get(url) || 0;
@@ -225,15 +230,21 @@ class ResourceMonitor {
         this.retryResource(url, type);
       },
       Math.pow(2, attempts) * 1000
+<<<<<<< HEAD
+    ); // Exponential backoff
+  }
+
+=======
     ); // Exponential backoff  }
 '
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   private retryResource(url: string, type: ResourceError['type']) {
 `
     // console.log(`🔄 Retrying resource: ${url} (attempt ${this.retryAttempts.get(url)})`);
-'
+
     if (type === 'script') {
 
-      this.loadScript(url);'
+      this.loadScript(url);
     } else if (type === 'stylesheet') {
 
       this.loadStylesheet(url);
@@ -241,7 +252,7 @@ class ResourceMonitor {
   }
 
   private loadScript(src: string) {
-'
+
     const script = document.createElement('script');
     script.src = src;
     script.async = true;
@@ -258,8 +269,8 @@ class ResourceMonitor {
   }
 
   private loadStylesheet(href: string) {
-'
-    const link = document.createElement('link');'
+
+    const link = document.createElement('link');
     link.rel = 'stylesheet';
     link.href = href;
     link.onload = () => {
@@ -280,22 +291,28 @@ class ResourceMonitor {
 
       // Example: Sentry, LogRocket, etc.'
       // console.log('📊 Reporting error to monitoring service:', error);
+<<<<<<< HEAD
+    }
+  }
+
+=======
     }  }
 '
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   private getResourceType(element: HTMLElement): ResourceError['type'] {
-'
+
     if (element.tagName === 'SCRIPT') return 'script';
     if ('
       element.tagName === 'LINK' &&'
       (element as HTMLLinkElement).rel === 'stylesheet'
-    )'
-      return 'stylesheet';'
+    )
+      return 'stylesheet';
     if (element.tagName === 'IMG') return 'image';
     if ('
       element.tagName === 'LINK' &&'
       (element as HTMLLinkElement).rel === 'preload'
-    )'
-      return 'font';'
+    )
+      return 'font';
     return 'other';
   }
 

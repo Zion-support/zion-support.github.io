@@ -1,24 +1,192 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+
+  Brain,
+  Zap,
+  Shield,
+  TrendingUp,
+  Users,
+  Globe,
+  ArrowRight,
+  CheckCircle,
+  Play,
+  BarChart3,
+  Cpu,
+  Eye,
+  MessageSquare,
+  Database,
+  Network,
+  Rocket,
+  Target,
+  Award,
+  Clock,
+  Star,
+  Heart,
+  Lock,
+  Cloud,
+  Smartphone,
+  Monitor,
+  Wifi,
+  Bluetooth,
+  Satellite,
+  Atom,
+  Dna,
+  Microscope,
+  Flask,
+  TestTube,
+  Syringe,
+  Stethoscope,
+  HeartPulse,
+  BrainCircuit,
+  Leaf,
+  Space,
+  Handshake,
+  Calendar,
+  DollarSign,
+  Bitcoin,
+  Ethereum,
+  CreditCard,
+  Wallet,
+  Banknote,
+  Coins,
+  PiggyBank,
+  Safe,
+  Vault,
+  LockKeyhole,
+  Key,
+  Fingerprint,
+  QrCode,
+  Barcode,
+  Scan,
+  Camera,
+  VideoOff,
+  Mic,
+  MicOff,
+  Volume2,
+  VolumeX,
+  Building,
+  Truck,
+  Sparkles,
+  Crown,
+  Lightbulb,
+  Globe2,
+  Search,
+  Phone,
+  Mail,
+  FileText,
+  Image,
+  Video,
+  Music,
+  Code,
+  Palette,
+  ShoppingCart,
+  Truck,
+  Plane,
+  Ship,
+  Train,
+  Car,
+  Bike,
+  Bus,
+  Taxi,
+  Helicopter,
+  Rocket,
+  Satellite,
+  Telescope,
+  Microscope,
+  Flask,
+  TestTube,
+  Syringe,
+  Stethoscope,
+  HeartPulse,
+  BrainCircuit,
+  Eye,
+  Ear,
+  Hand,
+  Foot,
+  Bone,
+  Tooth,
+  Pill,
+  Bandage,
+  Thermometer,
+  Scale,
+  Calculator,
+  ChartBar,
+  PieChart,
+  LineChart,
+  Activity,
+  TrendingDown,
+  Minus,
+  Plus,
+  Equal,
+  Divide,
+  Percent,
+  Euro,
+  Pound,
+  Yen,
+  CreditCard,
+  Wallet,
+  Banknote,
+  Coins,
+  PiggyBank,
+  Safe,
+  Vault,
+  LockKeyhole,
+  Key,
+  Fingerprint,
+  QrCode,
+  Barcode,
+  Scan,
+  Camera,
+  VideoOff,
+  Mic,
+  MicOff,
+  Volume2,
+  VolumeX,
+  Building,
+  Leaf,
+  Space,
+  Handshake,
+  Calendar'
+ } from 'lucide-react';
+
+const microSAASServices2028 = [
+  // AI - Powered Content Creation
+  {
+
+    id: 'ai-content-creator-pro',
+    name: 'AI Content Creator Pro',
+    tagline: 'AI-powered content creation for all platforms',
+    price: '$299',
+    period: '/month',
+    description: 'Advanced AI content creation platform that generates high-quality articles, social media posts, marketing copy, and creative content across all platforms.',
+    features[;
+      'AI article generation',Social media content creation',Marketing copy optimization',SEO content optimization',Multi-language support',Content scheduling',Brand voice customization',Plagiarism detection',Content analytics',Team collaboration tools'
+=======
 import React, { useState } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';'
 import { Link } from 'react-router-dom';      'Team collaboration tools'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ],;
     popular: true,
-    icon: FileText,'
-    color: 'from-blue-600 to-cyan-700','
-    textColor: 'text-blue-400','
-    link: '/micro-saas/ai-content-creator','
-    marketPosition: 'Leading AI content creation platform with proven ROI for content marketers and businesses.','
+    icon: FileText,
+    color: 'from-blue-600 to-cyan-700',
+    textColor: 'text-blue-400',
+    link: '/micro-saas/ai-content-creator',
+    marketPosition: 'Leading AI content creation platform with proven ROI for content marketers and businesses.',
     targetAudience: 'Content marketers, Digital agencies, Small businesses, Bloggers, Social media managers',
-    trialDays: 14,'
-    setupTime: '1-2 days','
+    trialDays: 14,
+    setupTime: '1-2 days',
     category: 'AI Content & Marketing',
-    realService: true,'
-    technology['Natural language processing', 'Machine learning', 'Content optimization', 'SEO algorithms', 'Multi-language AI'],;'
-    integrations['WordPress', 'Social media platforms', 'CMS systems', 'Marketing tools', 'Analytics platforms'],;'
-    useCases['Blog content creation', 'Social media marketing', 'Email marketing', 'SEO content', 'Brand content'],;'
-    roi: 'Content marketers achieve 300% ROI through increased engagement and reduced content creation time.','
-    competitors['Traditional content tools', 'Basic AI writing tools', 'Content management platforms'],;'
-    marketSize: '$4.2B content creation market','
+    realService: true,
+    technology['Natural language processing',Machine learning',Content optimization',SEO algorithms',Multi-language AI'],;
+    integrations['WordPress',Social media platforms',CMS systems',Marketing tools',Analytics platforms'],;
+    useCases['Blog content creation',Social media marketing',Email marketing',SEO content',Brand content'],;
+    roi: 'Content marketers achieve 300% ROI through increased engagement and reduced content creation time.',
+    competitors['Traditional content tools',Basic AI writing tools',Content management platforms'],;
+    marketSize: '$4.2B content creation market',
     growthRate: '180% annual growth',
     rating: 4.8,
     reviews: 456,
@@ -27,42 +195,33 @@ import { Link } from 'react-router-dom';      'Team collaboration tools'
 
   // AI Image Generator
   {
-'
-    id: 'ai-image-generator-plus','
-    name: 'AI Image Generator Plus','
-    tagline: 'Professional AI image generation for businesses','
-    price: '$199','
-    period: '/month','
+
+    id: 'ai-image-generator-plus',
+    name: 'AI Image Generator Plus',
+    tagline: 'Professional AI image generation for businesses',
+    price: '$199',
+    period: '/month',
     description: 'Professional AI image generation platform that creates high-quality, customizable images for marketing, design, and business needs.',
-    features[;'
-      'High-resolution image generation','
-      'Custom style training','
-      'Brand-specific image creation','
-      'Batch image generation','
-      'Commercial usage rights','
-      'Style transfer capabilities','
-      'Image editing tools','
-      'API integration','
-      'Team collaboration','
-      'Usage analytics'
+    features[;
+      'High-resolution image generation',Custom style training',Brand-specific image creation',Batch image generation',Commercial usage rights',Style transfer capabilities',Image editing tools',API integration',Team collaboration',Usage analytics'
     ],;
     popular: true,
-    icon: Image,'
-    color: 'from-purple-600 to-pink-700','
-    textColor: 'text-purple-400','
-    link: '/micro-saas/ai-image-generator','
-    marketPosition: 'Professional AI image generation platform with commercial usage rights and brand customization.','
+    icon: Image,
+    color: 'from-purple-600 to-pink-700',
+    textColor: 'text-purple-400',
+    link: '/micro-saas/ai-image-generator',
+    marketPosition: 'Professional AI image generation platform with commercial usage rights and brand customization.',
     targetAudience: 'Designers, Marketing agencies, E-commerce businesses, Content creators, Small businesses',
-    trialDays: 7,'
-    setupTime: '1 day','
+    trialDays: 7,
+    setupTime: '1 day',
     category: 'AI Design & Creative',
-    realService: true,'
-    technology['Generative AI', 'Computer vision', 'Style transfer', 'Image processing', 'Machine learning'],;'
-    integrations['Design tools', 'E-commerce platforms', 'Marketing tools', 'CMS systems', 'Social media'],;'
-    useCases['Marketing materials', 'Product images', 'Social media graphics', 'Website design', 'Brand assets'],;'
-    roi: 'Design agencies achieve 400% ROI through reduced design costs and faster project delivery.','
-    competitors['Open-source AI tools', 'Basic image generators', 'Stock photo services'],;'
-    marketSize: '$2.8B AI image generation market','
+    realService: true,
+    technology['Generative AI',Computer vision',Style transfer',Image processing',Machine learning'],;
+    integrations['Design tools',E-commerce platforms',Marketing tools',CMS systems',Social media'],;
+    useCases['Marketing materials',Product images',Social media graphics',Website design',Brand assets'],;
+    roi: 'Design agencies achieve 400% ROI through reduced design costs and faster project delivery.',
+    competitors['Open-source AI tools',Basic image generators',Stock photo services'],;
+    marketSize: '$2.8B AI image generation market',
     growthRate: '250% annual growth',
     rating: 4.9,
     reviews: 234,
@@ -71,42 +230,33 @@ import { Link } from 'react-router-dom';      'Team collaboration tools'
 
   // AI Video Creator
   {
-'
-    id: 'ai-video-creator-studio','
-    name: 'AI Video Creator Studio','
-    tagline: 'AI-powered video creation and editing platform','
-    price: '$399','
-    period: '/month','
+
+    id: 'ai-video-creator-studio',
+    name: 'AI Video Creator Studio',
+    tagline: 'AI-powered video creation and editing platform',
+    price: '$399',
+    period: '/month',
     description: 'Professional AI video creation platform that generates, edits, and optimizes videos for marketing, social media, and business needs.',
-    features[;'
-      'AI video generation','
-      'Automated video editing','
-      'Text-to-video conversion','
-      'Video optimization','
-      'Multi-format export','
-      'Brand template library','
-      'Voice-over generation','
-      'Music integration','
-      'Analytics dashboard','
-      'Team collaboration'
+    features[;
+      'AI video generation',Automated video editing',Text-to-video conversion',Video optimization',Multi-format export',Brand template library',Voice-over generation',Music integration',Analytics dashboard',Team collaboration'
     ],;
     popular: false,
-    icon: Video,'
-    color: 'from-red-600 to-orange-700','
-    textColor: 'text-red-400','
-    link: '/micro-saas/ai-video-creator','
-    marketPosition: 'Leading AI video creation platform with professional editing capabilities and brand customization.','
+    icon: Video,
+    color: 'from-red-600 to-orange-700',
+    textColor: 'text-red-400',
+    link: '/micro-saas/ai-video-creator',
+    marketPosition: 'Leading AI video creation platform with professional editing capabilities and brand customization.',
     targetAudience: 'Video marketers, Content creators, Marketing agencies, Small businesses, Social media managers',
-    trialDays: 14,'
-    setupTime: '2-3 days','
+    trialDays: 14,
+    setupTime: '2-3 days',
     category: 'AI Video & Media',
-    realService: true,'
-    technology['Computer vision', 'Natural language processing', 'Video processing', 'AI editing', 'Machine learning'],;'
-    integrations['Social media platforms', 'Video hosting', 'Marketing tools', 'CMS systems', 'Analytics platforms'],;'
-    useCases['Marketing videos', 'Social media content', 'Product demos', 'Training videos', 'Brand videos'],;'
-    roi: 'Video marketers achieve 350% ROI through reduced production costs and increased engagement.','
-    competitors['Traditional video tools', 'Basic video editors', 'Video templates'],;'
-    marketSize: '$3.5B AI video market','
+    realService: true,
+    technology['Computer vision',Natural language processing',Video processing',AI editing',Machine learning'],;
+    integrations['Social media platforms',Video hosting',Marketing tools',CMS systems',Analytics platforms'],;
+    useCases['Marketing videos',Social media content',Product demos',Training videos',Brand videos'],;
+    roi: 'Video marketers achieve 350% ROI through reduced production costs and increased engagement.',
+    competitors['Traditional video tools',Basic video editors',Video templates'],;
+    marketSize: '$3.5B AI video market',
     growthRate: '220% annual growth',
     rating: 4.7,
     reviews: 189,
@@ -115,42 +265,33 @@ import { Link } from 'react-router-dom';      'Team collaboration tools'
 
   // AI Code Generator
   {
-'
-    id: 'ai-code-generator-pro','
-    name: 'AI Code Generator Pro','
-    tagline: 'AI-powered code generation and development assistance','
-    price: '$499','
-    period: '/month','
+
+    id: 'ai-code-generator-pro',
+    name: 'AI Code Generator Pro',
+    tagline: 'AI-powered code generation and development assistance',
+    price: '$499',
+    period: '/month',
     description: 'Advanced AI code generation platform that helps developers write, debug, and optimize code across multiple programming languages.',
-    features[;'
-      'Multi-language code generation','
-      'Code completion and suggestions','
-      'Bug detection and fixing','
-      'Code optimization','
-      'Documentation generation','
-      'Testing automation','
-      'Code review assistance','
-      'Team collaboration','
-      'Version control integration','
-      'Performance analytics'
+    features[;
+      'Multi-language code generation',Code completion and suggestions',Bug detection and fixing',Code optimization',Documentation generation',Testing automation',Code review assistance',Team collaboration',Version control integration',Performance analytics'
     ],;
     popular: true,
-    icon: Code,'
-    color: 'from-green-600 to-emerald-700','
-    textColor: 'text-green-400','
-    link: '/micro-saas/ai-code-generator','
-    marketPosition: 'Leading AI code generation platform with support for 50+ programming languages and frameworks.','
+    icon: Code,
+    color: 'from-green-600 to-emerald-700',
+    textColor: 'text-green-400',
+    link: '/micro-saas/ai-code-generator',
+    marketPosition: 'Leading AI code generation platform with support for 50+ programming languages and frameworks.',
     targetAudience: 'Software developers, Development teams, Startups, Tech companies, Freelance developers',
-    trialDays: 21,'
-    setupTime: '2-3 days','
+    trialDays: 21,
+    setupTime: '2-3 days',
     category: 'AI Development & Coding',
-    realService: true,'
-    technology['Large language models', 'Code analysis', 'Machine learning', 'Static analysis', 'AI optimization'],;'
-    integrations['Git repositories', 'IDEs', 'CI/CD platforms', 'Project management tools', 'Testing frameworks'],;'
-    useCases['Code generation', 'Bug fixing', 'Code review', 'Documentation', 'Testing automation'],;'
-    roi: 'Development teams achieve 500% ROI through increased productivity and reduced development time.','
-    competitors['Open-source AI tools', 'Basic code editors', 'Traditional IDEs'],;'
-    marketSize: '$6.8B AI development market','
+    realService: true,
+    technology['Large language models',Code analysis',Machine learning',Static analysis',AI optimization'],;
+    integrations['Git repositories',IDEs',CI/CD platforms',Project management tools',Testing frameworks'],;
+    useCases['Code generation',Bug fixing',Code review',Documentation',Testing automation'],;
+    roi: 'Development teams achieve 500% ROI through increased productivity and reduced development time.',
+    competitors['Open-source AI tools',Basic code editors',Traditional IDEs'],;
+    marketSize: '$6.8B AI development market',
     growthRate: '280% annual growth',
     rating: 4.8,
     reviews: 567,
@@ -159,42 +300,33 @@ import { Link } from 'react-router-dom';      'Team collaboration tools'
 
   // AI Design Assistant
   {
-'
-    id: 'ai-design-assistant','
-    name: 'AI Design Assistant','
-    tagline: 'AI-powered design creation and optimization','
-    price: '$249','
-    period: '/month','
+
+    id: 'ai-design-assistant',
+    name: 'AI Design Assistant',
+    tagline: 'AI-powered design creation and optimization',
+    price: '$249',
+    period: '/month',
     description: 'Intelligent AI design platform that creates logos, graphics, layouts, and visual assets with brand consistency and professional quality.',
-    features[;'
-      'Logo generation and design','
-      'Graphic design creation','
-      'Layout optimization','
-      'Brand consistency tools','
-      'Template library','
-      'Design collaboration','
-      'Export optimization','
-      'Brand guidelines','
-      'Design analytics','
-      'Team management'
+    features[;
+      'Logo generation and design',Graphic design creation',Layout optimization',Brand consistency tools',Template library',Design collaboration',Export optimization',Brand guidelines',Design analytics',Team management'
     ],;
     popular: false,
-    icon: Palette,'
-    color: 'from-pink-600 to-rose-700','
-    textColor: 'text-pink-400','
-    link: '/micro-saas/ai-design-assistant','
-    marketPosition: 'Professional AI design platform with brand consistency and collaboration features.','
+    icon: Palette,
+    color: 'from-pink-600 to-rose-700',
+    textColor: 'text-pink-400',
+    link: '/micro-saas/ai-design-assistant',
+    marketPosition: 'Professional AI design platform with brand consistency and collaboration features.',
     targetAudience: 'Designers, Marketing agencies, Small businesses, Startups, Brand managers',
-    trialDays: 14,'
-    setupTime: '2-3 days','
+    trialDays: 14,
+    setupTime: '2-3 days',
     category: 'AI Design & Creative',
-    realService: true,'
-    technology['Computer vision', 'Design algorithms', 'Machine learning', 'Brand recognition', 'AI optimization'],;'
-    integrations['Design tools', 'Brand platforms', 'Marketing tools', 'CMS systems', 'Social media'],;'
-    useCases['Logo design', 'Brand graphics', 'Marketing materials', 'Website design', 'Social media assets'],;'
-    roi: 'Design agencies achieve 300% ROI through faster design delivery and brand consistency.','
-    competitors['Traditional design tools', 'Basic design platforms', 'Logo generators'],;'
-    marketSize: '$3.2B AI design market','
+    realService: true,
+    technology['Computer vision',Design algorithms',Machine learning',Brand recognition',AI optimization'],;
+    integrations['Design tools',Brand platforms',Marketing tools',CMS systems',Social media'],;
+    useCases['Logo design',Brand graphics',Marketing materials',Website design',Social media assets'],;
+    roi: 'Design agencies achieve 300% ROI through faster design delivery and brand consistency.',
+    competitors['Traditional design tools',Basic design platforms',Logo generators'],;
+    marketSize: '$3.2B AI design market',
     growthRate: '200% annual growth',
     rating: 4.6,
     reviews: 234,
@@ -203,42 +335,33 @@ import { Link } from 'react-router-dom';      'Team collaboration tools'
 
   // AI E - commerce Optimizer
   {
-'
-    id: 'ai-ecommerce-optimizer','
-    name: 'AI E-commerce Optimizer','
-    tagline: 'AI-powered e-commerce optimization and automation','
-    price: '$349','
-    period: '/month','
+
+    id: 'ai-ecommerce-optimizer',
+    name: 'AI E-commerce Optimizer',
+    tagline: 'AI-powered e-commerce optimization and automation',
+    price: '$349',
+    period: '/month',
     description: 'Comprehensive AI e-commerce platform that optimizes product recommendations, pricing, inventory, and customer experience.',
-    features[;'
-      'AI product recommendations','
-      'Dynamic pricing optimization','
-      'Inventory management','
-      'Customer behavior analysis','
-      'Personalization engine','
-      'A/B testing automation','
-      'Conversion optimization','
-      'Analytics dashboard','
-      'Multi-platform support','
-      'API integration'
+    features[;
+      'AI product recommendations',Dynamic pricing optimization',Inventory management',Customer behavior analysis',Personalization engine',A/B testing automation',Conversion optimization',Analytics dashboard',Multi-platform support',API integration'
     ],;
     popular: true,
-    icon: ShoppingCart,'
-    color: 'from-orange-600 to-red-700','
-    textColor: 'text-orange-400','
-    link: '/micro-saas/ai-ecommerce-optimizer','
-    marketPosition: 'Leading AI e-commerce optimization platform with proven ROI for online retailers.','
+    icon: ShoppingCart,
+    color: 'from-orange-600 to-red-700',
+    textColor: 'text-orange-400',
+    link: '/micro-saas/ai-ecommerce-optimizer',
+    marketPosition: 'Leading AI e-commerce optimization platform with proven ROI for online retailers.',
     targetAudience: 'E-commerce businesses, Online retailers, Dropshipping stores, Marketplaces, Digital agencies',
-    trialDays: 14,'
-    setupTime: '3-5 days','
+    trialDays: 14,
+    setupTime: '3-5 days',
     category: 'AI E-commerce & Retail',
-    realService: true,'
-    technology['Machine learning', 'Predictive analytics', 'Personalization algorithms', 'Optimization engines', 'Real-time processing'],;'
-    integrations['Shopify', 'WooCommerce', 'Magento', 'BigCommerce', 'Analytics platforms'],;'
-    useCases['Product recommendations', 'Pricing optimization', 'Inventory management', 'Customer personalization', 'Conversion optimization'],;'
-    roi: 'E-commerce businesses achieve 400% ROI through increased sales and reduced operational costs.','
-    competitors['Traditional e-commerce tools', 'Basic analytics platforms', 'Manual optimization tools'],;'
-    marketSize: '$8.9B AI e-commerce market','
+    realService: true,
+    technology['Machine learning',Predictive analytics',Personalization algorithms',Optimization engines',Real-time processing'],;
+    integrations['Shopify',WooCommerce',Magento',BigCommerce',Analytics platforms'],;
+    useCases['Product recommendations',Pricing optimization',Inventory management',Customer personalization',Conversion optimization'],;
+    roi: 'E-commerce businesses achieve 400% ROI through increased sales and reduced operational costs.',
+    competitors['Traditional e-commerce tools',Basic analytics platforms',Manual optimization tools'],;
+    marketSize: '$8.9B AI e-commerce market',
     growthRate: '320% annual growth',
     rating: 4.8,
     reviews: 345,
@@ -247,42 +370,33 @@ import { Link } from 'react-router-dom';      'Team collaboration tools'
 
   // AI Customer Service
   {
-'
-    id: 'ai-customer-service-pro','
-    name: 'AI Customer Service Pro','
-    tagline: 'AI-powered customer support and chatbot platform','
-    price: '$199','
-    period: '/month','
+
+    id: 'ai-customer-service-pro',
+    name: 'AI Customer Service Pro',
+    tagline: 'AI-powered customer support and chatbot platform',
+    price: '$199',
+    period: '/month',
     description: 'Intelligent AI customer service platform that provides 24/7 support through chatbots, automated responses, and intelligent ticket routing.',
-    features[;'
-      'AI chatbot creation','
-      'Natural language processing','
-      'Automated ticket routing','
-      'Knowledge base management','
-      'Multi-language support','
-      'Integration capabilities','
-      'Analytics dashboard','
-      'Team collaboration','
-      'Custom workflows','
-      'API access'
+    features[;
+      'AI chatbot creation',Natural language processing',Automated ticket routing',Knowledge base management',Multi-language support',Integration capabilities',Analytics dashboard',Team collaboration',Custom workflows',API access'
     ],;
     popular: true,
-    icon: MessageSquare,'
-    color: 'from-blue-600 to-indigo-700','
-    textColor: 'text-blue-400','
-    link: '/micro-saas/ai-customer-service','
-    marketPosition: 'Leading AI customer service platform with advanced NLP and automation capabilities.','
+    icon: MessageSquare,
+    color: 'from-blue-600 to-indigo-700',
+    textColor: 'text-blue-400',
+    link: '/micro-saas/ai-customer-service',
+    marketPosition: 'Leading AI customer service platform with advanced NLP and automation capabilities.',
     targetAudience: 'Customer service teams, Support departments, E-commerce businesses, SaaS companies, Small businesses',
-    trialDays: 14,'
-    setupTime: '2-3 days','
+    trialDays: 14,
+    setupTime: '2-3 days',
     category: 'AI Customer Service',
-    realService: true,'
-    technology['Natural language processing', 'Machine learning', 'Chatbot frameworks', 'Automation engines', 'AI routing'],;'
-    integrations['CRM systems', 'Help desk platforms', 'E-commerce platforms', 'Social media', 'Messaging apps'],;'
-    useCases['Customer support', 'FAQ automation', 'Ticket routing', 'Customer engagement', 'Support analytics'],;'
-    roi: 'Customer service teams achieve 350% ROI through reduced response times and improved customer satisfaction.','
-    competitors['Traditional help desk tools', 'Basic chatbot platforms', 'Manual support systems'],;'
-    marketSize: '$5.6B AI customer service market','
+    realService: true,
+    technology['Natural language processing',Machine learning',Chatbot frameworks',Automation engines',AI routing'],;
+    integrations['CRM systems',Help desk platforms',E-commerce platforms',Social media',Messaging apps'],;
+    useCases['Customer support',FAQ automation',Ticket routing',Customer engagement',Support analytics'],;
+    roi: 'Customer service teams achieve 350% ROI through reduced response times and improved customer satisfaction.',
+    competitors['Traditional help desk tools',Basic chatbot platforms',Manual support systems'],;
+    marketSize: '$5.6B AI customer service market',
     growthRate: '240% annual growth',
     rating: 4.7,
     reviews: 456,
@@ -291,42 +405,33 @@ import { Link } from 'react-router-dom';      'Team collaboration tools'
 
   // AI Analytics Platform
   {
-'
-    id: 'ai-analytics-platform','
-    name: 'AI Analytics Platform','
-    tagline: 'AI-powered business intelligence and analytics','
-    price: '$299','
-    period: '/month','
+
+    id: 'ai-analytics-platform',
+    name: 'AI Analytics Platform',
+    tagline: 'AI-powered business intelligence and analytics',
+    price: '$299',
+    period: '/month',
     description: 'Advanced AI analytics platform that provides intelligent insights, predictive analytics, and automated reporting for business decision-making.',
-    features[;'
-      'AI-powered insights','
-      'Predictive analytics','
-      'Automated reporting','
-      'Data visualization','
-      'Real-time monitoring','
-      'Custom dashboards','
-      'Data integration','
-      'Collaboration tools','
-      'Mobile access','
-      'API integration'
+    features[;
+      'AI-powered insights',Predictive analytics',Automated reporting',Data visualization',Real-time monitoring',Custom dashboards',Data integration',Collaboration tools',Mobile access',API integration'
     ],;
     popular: false,
-    icon: BarChart3,'
-    color: 'from-emerald-600 to-teal-700','
-    textColor: 'text-emerald-400','
-    link: '/micro-saas/ai-analytics','
-    marketPosition: 'Intelligent analytics platform with AI-powered insights and predictive capabilities.','
+    icon: BarChart3,
+    color: 'from-emerald-600 to-teal-700',
+    textColor: 'text-emerald-400',
+    link: '/micro-saas/ai-analytics',
+    marketPosition: 'Intelligent analytics platform with AI-powered insights and predictive capabilities.',
     targetAudience: 'Business analysts, Data scientists, Executives, Marketing teams, Operations managers',
-    trialDays: 21,'
-    setupTime: '3-5 days','
+    trialDays: 21,
+    setupTime: '3-5 days',
     category: 'AI Analytics & BI',
-    realService: true,'
-    technology['Machine learning', 'Predictive analytics', 'Data processing', 'Visualization engines', 'AI insights'],;'
-    integrations['Data sources', 'Business tools', 'CRM systems', 'Marketing platforms', 'Cloud services'],;'
-    useCases['Business intelligence', 'Performance monitoring', 'Predictive insights', 'Data visualization', 'Automated reporting'],;'
-    roi: 'Businesses achieve 400% ROI through improved decision-making and operational efficiency.','
-    competitors['Traditional BI tools', 'Basic analytics platforms', 'Manual reporting tools'],;'
-    marketSize: '$7.2B AI analytics market',;'
+    realService: true,
+    technology['Machine learning',Predictive analytics',Data processing',Visualization engines',AI insights'],;
+    integrations['Data sources',Business tools',CRM systems',Marketing platforms',Cloud services'],;
+    useCases['Business intelligence',Performance monitoring',Predictive insights',Data visualization',Automated reporting'],;
+    roi: 'Businesses achieve 400% ROI through improved decision-making and operational efficiency.',
+    competitors['Traditional BI tools',Basic analytics platforms',Manual reporting tools'],;
+    marketSize: '$7.2B AI analytics market',;
     growthRate: '260% annual growth',;
     rating: 4.6,;
     reviews: 234,;
@@ -405,7 +510,7 @@ import { Link } from 'react-router-dom';      'Team collaboration tools'
             <div className="flex flex-col sm:flex-row gap-4">"
               <div className="relative">
                 <input"
-                  type="text""
+                  type="text"
                   placeholder="Search services..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
@@ -560,13 +665,13 @@ import { Link } from 'react-router-dom';      'Team collaboration tools'
             className="flex flex-col sm:flex-row gap-4 justify-center"
 
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
 "
               <Phone className="w-5 h-5" />              +1 302 464 0950
             </a>
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
 "
               <Mail className="w-5 h-5" />              kleber@ziontechgroup.com

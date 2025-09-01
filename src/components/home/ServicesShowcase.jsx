@@ -1,11 +1,11 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { Button } from '@/components/ui/button';'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';'
-import { Badge } from '@/components/ui/badge';'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
-import { ArrowRight, Star } from "lucide-react";'
-import { FuturisticCard } from '@/components/ui/futuristic-card';'
+import { ArrowRight, Star } from "lucide-react";
+import { FuturisticCard } from '@/components/ui/futuristic-card';
 import { NeonText } from '@/components/ui/neon-text';
 export function ServicesShowcase() {
     const featuredServices = COMPREHENSIVE_SERVICES.slice(0, 6);

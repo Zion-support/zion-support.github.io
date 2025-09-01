@@ -1,5 +1,27 @@
+<<<<<<< HEAD
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+
+  Volume2,
+  VolumeX,
+  Eye,
+  EyeOff,
+  Keyboard,
+  MousePointer,
+  Accessibility,
+  Settings,
+  X'
+ } from 'lucide-react';
+import React, { useEffect, useState, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+
+  Eye, 
+=======
 import React, { useState, useEffect, useCallback } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';  Eye, 
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   EyeOff, 
   Volume2, 
   VolumeX, 
@@ -35,13 +57,13 @@ interface EnhancedAccessibilityProps {
 export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
 
   enabled = true,;
-  showControls = true,;'
+  showControls = true,;
   className = '';
 }) => {;
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<any>({
-'
-  colorBlindness: 'normal' | 'protanopia' | 'deuteranopia' | 'tritanopia';'
+
+  colorBlindness: 'normal' | 'protanopia' | 'deuteranopia' | 'tritanopia';
   fontSize: 'small' | 'medium' | 'large' | 'xlarge';
 }
 export const EnhancedAccessibility: React.FC = () => {
@@ -53,8 +75,8 @@ export const EnhancedAccessibility: React.FC = () => {
     reducedMotion: false,
     screenReader: false,
     keyboardNavigation: false,
-    focusIndicator: true,'
-    colorBlindness: 'normal','
+    focusIndicator: true,
+    colorBlindness: 'normal',
     fontSize: 'medium'
   }) ;
 
@@ -80,10 +102,10 @@ export const EnhancedAccessibility: React.FC = () => {
 
     // High contrast
     if (settings.highContrast) {
-'
+
       root.classList.add('high-contrast');
     } else {
-'
+
       root.classList.remove('high-contrast');
     }
     // Large text'
@@ -91,28 +113,33 @@ export const EnhancedAccessibility: React.FC = () => {
 
     // Reduced motion
     if (settings.reducedMotion) {
-'
-      root.style.setProperty('--reduced-motion', 'reduce');
+
+      root.style.setProperty('--reduced-motion',reduce');
     } else {
+<<<<<<< HEAD
+
+      root.style.removeProperty('--reduced-motion');
+=======
 '      root.style.removeProperty('--reduced-motion');
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     // Focus indicator
     if (settings.focusIndicator) {
-'
-      root.style.setProperty('--focus-visible', '2px solid #22ddd2');
+
+      root.style.setProperty('--focus-visible',2px solid #22ddd2');
     } else {
-'
-      root.style.setProperty('--focus-visible', 'none');
+
+      root.style.setProperty('--focus-visible',none');
     }
     // Color blindness simulation'
     root.style.setProperty('--color-blindness', settings.colorBlindness);
 
     // Font size
     const fontSizeMap = {
-'
-      small: '0.875em','
-      medium: '1em','
-      large: '1.125em','
+
+      small: '0.875em',
+      medium: '1em',
+      large: '1.125em',
       xlarge: '1.25em'
     };
     root.style.fontSize = fontSizeMap[settings.fontSize];
@@ -121,15 +148,15 @@ export const EnhancedAccessibility: React.FC = () => {
 
     }
     if (settings.reducedMotion) {
-'
+
       document.documentElement.classList.add('reduced-motion')} else {
-'
+
       document.documentElement.classList.remove('reduced-motion')}
 
     if (settings.largeText) {
-'
+
       document.documentElement.classList.add('large-text')} else {
-'
+
       document.documentElement.classList.remove('large-text')}
 
     // Save settings to localStorage'
@@ -151,9 +178,16 @@ export const EnhancedAccessibility: React.FC = () => {
     }) ) };
 
   // Screen reader announcements'
+<<<<<<< HEAD
+  const announcement = document.createElement('div');
+    announcement.setAttribute('aria-live',polite');
+    announcement.setAttribute('aria-atomic',true');
+    announcement.className = 'sr-only';
+=======
   const announcement = document.createElement('div');'
     announcement.setAttribute('aria-live', 'polite');'
     announcement.setAttribute('aria-atomic', 'true');'    announcement.className = 'sr-only';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     announcement.textContent = message;
 
     document.body.appendChild (announcement) ;
@@ -175,32 +209,38 @@ export const EnhancedAccessibility: React.FC = () => {
       // Skip if in input/textarea'      if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return;
 
       switch (e.key) {
-'
+
         case 'Tab':
           // Enhanced tab navigation with visual feedback
-          setCurrentFocus(target);'
-          target.style.outline = '2px solid #3b82f6';'
+          setCurrentFocus(target);
+          target.style.outline = '2px solid #3b82f6';
           target.style.outlineOffset = '2px';
 
           setTimeout(() => {
-'
-            target.style.outline = '';'
+
+            target.style.outline = '';
             target.style.outlineOffset = '';
+<<<<<<< HEAD
+          }, 2000) ;
+          break;
+
+=======
           }, 2000) ;          break;
 '
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         case 'Enter':'
         case ' ':'
           if (target.tagName = == 'BUTTON' || target.getAttribute('role') === 'button') {;
             e.preventDefault();
-            target.click();'
+            target.click();
             announce(`Activated ${target.textContent || target.getAttribute('aria-label') || 'button'}`);
 
           break;
-'
+
         case 'Escape':
           // Close modals, dropdowns, etc.'
           const modals = document.querySelectorAll('[role="dialog"], [data-modal]');
-modals.forEach(modal:  > {;'
+modals.forEach(modal:  > {;
             if (modal.getAttribute('aria-hidden') === 'false') {;
               (modal as HTMLElement).click();
 
@@ -215,7 +255,7 @@ modals.forEach(modal:  > {;'
       // Skip to main content'
       if (e.key === 'Tab' && e.altKey) {
 
-        e.preventDefault();'
+        e.preventDefault();
         const mainContent = document.querySelector('main');
         if (mainContent) {
 
@@ -225,7 +265,7 @@ modals.forEach(modal:  > {;'
       // Skip to navigation'
       if (e.key === 'Tab' && e.shiftKey && e.altKey) {
 
-        e.preventDefault();'
+        e.preventDefault();
         const navigation = document.querySelector('nav');
         if (navigation) {
 
@@ -233,12 +273,12 @@ modals.forEach(modal:  > {;'
         }
       }
     };
-'
-    document.addEventListener('keydown', handleKeyDown);'
+
+    document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [settings.keyboardNavigation]);
-'
-        const label = target.getAttribute('aria-label') || ;'
+
+        const label = target.getAttribute('aria-label') || ;
                      target.getAttribute('title') || ;
                      target.textContent;`
         if (label) announce(`Focused on ${label}`);
@@ -246,27 +286,35 @@ modals.forEach(modal:  > {;'
     };
 
     const handleFocusOut = (e: FocusEvent) => {;
-      const target = e.target as HTMLElement;'
-      target.style.outline = '';'
+      const target = e.target as HTMLElement;
+      target.style.outline = '';
       target.style.outlineOffset = '';
     };
-'
-    document.addEventListener('focusin', handleFocusIn);'
+
+    document.addEventListener('focusin', handleFocusIn);
     document.addEventListener('focusout', handleFocusOut);
 
     return () => {
-'
-      document.removeEventListener('focusin', handleFocusIn);'
+
+      document.removeEventListener('focusin', handleFocusIn);
       document.removeEventListener('focusout', handleFocusOut);
     };
   }, [settings.focusIndicator, settings.screenReader, announce]) ;
 
   // Skip to main content link
   useEffect(() => {
+<<<<<<< HEAD
+
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+=======
 '
     const skipLink = document.createElement('a');'
     skipLink.href = '#main-content';'
     skipLink.textContent = 'Skip to main content';'    skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     document.body.insertBefore (skipLink, document.body.firstChild) ;
 
@@ -282,7 +330,7 @@ modals.forEach(modal:  > {;'
   const quickActions = [
     {
 
-      icon: Contrast,'
+      icon: Contrast,
       label: 'Toggle High Contrast',
       action: : unknown {
         const newSettings = {
@@ -301,7 +349,7 @@ modals.forEach(modal:  > {;'
     },
     {
 
-      icon: Type,'
+      icon: Type,
       label: 'Toggle Large Text',
       action: : unknown {
         const newSettings = {
@@ -320,7 +368,7 @@ modals.forEach(modal:  > {;'
     },
     {
 
-      icon: ZoomIn,'
+      icon: ZoomIn,
       label: 'Increase Zoom',
       action: () => {
         const currentZoom = parseFloat(getComputedStyle(document.documentElement).fontSize) / 16;
@@ -331,7 +379,7 @@ modals.forEach(modal:  > {;'
     },
     {
 
-      icon: ZoomOut,'
+      icon: ZoomOut,
       label: 'Decrease Zoom',
       action: () => {
         const currentZoom = parseFloat(getComputedStyle(document.documentElement).fontSize) / 16;
@@ -342,11 +390,11 @@ modals.forEach(modal:  > {;'
     },
     {
 
-      icon: RotateCcw,'
+      icon: RotateCcw,
       label: 'Reset Zoom',
       action: () => {
-'
-        document.documentElement.style.fontSize = '16px';'
+
+        document.documentElement.style.fontSize = '16px';
         announce('Zoom reset to 100%');
       },      active: false // Zoom actions are not toggleable, so they are not active
 
@@ -357,10 +405,18 @@ modals.forEach(modal:  > {;'
   const announceToScreenReader = (message: string) => {
 
     if (settings.screenReader) {
+<<<<<<< HEAD
+
+      const announcement = document.createElement('div');
+      announcement.setAttribute('aria-live',polite');
+      announcement.setAttribute('aria-atomic',true');
+      announcement.className = 'sr-only';
+=======
 '
       const announcement = document.createElement('div');'
       announcement.setAttribute('aria-live', 'polite');'
       announcement.setAttribute('aria-atomic', 'true');'      announcement.className = 'sr-only';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       announcement.textContent = message;
       document.body.appendChild (announcement) ;
       
@@ -377,14 +433,14 @@ modals.forEach(modal:  > {;'
     
     // Announce changes to screen readers
     const settingNames = {
-'
-      highContrast: 'High contrast','
-      largeText: 'Large text','
-      reducedMotion: 'Reduced motion','
-      screenReader: 'Screen reader','
-      keyboardNavigation: 'Keyboard navigation','
-      focusIndicator: 'Focus indicator','
-      colorBlindness: 'Color blindness','
+
+      highContrast: 'High contrast',
+      largeText: 'Large text',
+      reducedMotion: 'Reduced motion',
+      screenReader: 'Screen reader',
+      keyboardNavigation: 'Keyboard navigation',
+      focusIndicator: 'Focus indicator',
+      colorBlindness: 'Color blindness',
       fontSize: 'Font size'
     };
     '`
@@ -395,7 +451,7 @@ modals.forEach(modal:  > {;'
       {/* Accessibility Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}"
-        className="fixed top-4 right-4 z-50 bg-zion-cyan text-zion-slate-dark p-3 rounded-full shadow-lg hover:bg-zion-cyan/80 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 focus:ring-offset-zion-slate-dark""
+        className="fixed top-4 right-4 z-50 bg-zion-cyan text-zion-slate-dark p-3 rounded-full shadow-lg hover:bg-zion-cyan/80 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 focus:ring-offset-zion-slate-dark"
         aria-label="Accessibility settings"
         aria-expanded={isOpen}"
         aria-controls="accessibility-panel"
@@ -412,15 +468,15 @@ modals.forEach(modal:  > {;'
 ;
               {/* Settings Grid */};"
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">;
-                {Object.entries(settings).map(([key, value]) => {;'
-                  const label = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());'
-                  const Icon = key === 'highContrast' ? Contrast : ;'
-                              key === 'largeText' ? Type : ;'
-                              key === 'reducedMotion' ? Eye : ;'
-                              key === 'screenReader' ? Volume2 : ;'
-                              key === 'keyboardNavigation' ? Keyboard : ;'
-                              key === 'focusIndicator' ? MousePointer : ;'
-                              key === 'colorBlind' ? Eye : ;'
+                {Object.entries(settings).map(([key, value]) => {;
+                  const label = key.replace(/([A-Z])/g, $1').replace(/^./, str => str.toUpperCase());
+                  const Icon = key === 'highContrast' ? Contrast : ;
+                              key === 'largeText' ? Type : ;
+                              key === 'reducedMotion' ? Eye : ;
+                              key === 'screenReader' ? Volume2 : ;
+                              key === 'keyboardNavigation' ? Keyboard : ;
+                              key === 'focusIndicator' ? MousePointer : ;
+                              key === 'colorBlind' ? Eye : ;
                               key === 'dyslexia' ? Type : Settings;
 
                   return ("
@@ -445,14 +501,14 @@ modals.forEach(modal:  > {;'
                           announce(`${label} ${newSettings[key as keyof AccessibilitySettings] ? 'enabled' : 'disabled'}`);
                         }}`
                         className = {`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50 ${
-'
+
                           value ? 'bg-cyan-600' : 'bg-slate-600';`
                         }`}"                        role="switch"
                         aria-checked={value}`
                         aria-label={`Toggle ${label}`}
                       >
                         <span;`
-className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${;'
+className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${;
                             value ? 'translate-x-6' : 'translate-x-1';`
                           }`};
                         />;
@@ -470,8 +526,8 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 300 }}
             transition={{ duration: 0.3 }}"
-            className="fixed top-4 right-20 z-40 bg-zion-slate-dark border border-zion-cyan/30 rounded-lg p-6 text-white shadow-2xl min-w-[320px]""
-            role="dialog""
+            className="fixed top-4 right-20 z-40 bg-zion-slate-dark border border-zion-cyan/30 rounded-lg p-6 text-white shadow-2xl min-w-[320px]"
+            role="dialog"
             aria-label="Accessibility settings"
           >"
             <h2 className="text-xl font-bold mb-4 text-zion-cyan flex items-center">"
@@ -488,7 +544,7 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                 <label className="flex items-center space-x-3 cursor-pointer">
                   <input"
                     type="checkbox"
-                    checked={settings.highContrast}'
+                    checked={settings.highContrast}
                     onChange={() => toggleSetting('highContrast')}"
                     className="w-4 h-4 text-zion-cyan bg-zion-slate border-zion-cyan rounded focus:ring-zion-cyan focus:ring-2"
                   />
@@ -498,7 +554,7 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                 <label className="flex items-center space-x-3 cursor-pointer">
                   <input"
                     type="checkbox"
-                    checked={settings.largeText}'
+                    checked={settings.largeText}
                     onChange={() => toggleSetting('largeText')}"
                     className="w-4 h-4 text-zion-cyan bg-zion-slate border-zion-cyan rounded focus:ring-zion-cyan focus:ring-2"
                   />
@@ -508,7 +564,7 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                 <div className="space-y-2">"
                   <label className="block text-sm font-medium">Font Size</label>
                   <select
-                    value={settings.fontSize}'
+                    value={settings.fontSize}
                     onChange={(e) => toggleSetting('fontSize', e.target.value)}"
                     className="w-full bg-zion-slate border border-zion-cyan/30 rounded px-3 py-2 text-white focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                   >"
@@ -522,7 +578,7 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                 <div className="space-y-2">"
                   <label className="block text-sm font-medium">Color Blindness</label>
                   <select
-                    value={settings.colorBlindness}'
+                    value={settings.colorBlindness}
                     onChange={(e) => toggleSetting('colorBlindness', e.target.value)}"
                     className="w-full bg-zion-slate border border-zion-cyan/30 rounded px-3 py-2 text-white focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                   >"
@@ -543,7 +599,7 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                 <label className="flex items-center space-x-3 cursor-pointer">
                   <input"
                     type="checkbox"
-                    checked={settings.reducedMotion}'
+                    checked={settings.reducedMotion}
                     onChange={() => toggleSetting('reducedMotion')}"
                     className="w-4 h-4 text-zion-cyan bg-zion-slate border-zion-cyan rounded focus:ring-zion-cyan focus:ring-2"
                   />
@@ -560,7 +616,7 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                 <label className="flex items-center space-x-3 cursor-pointer">
                   <input"
                     type="checkbox"
-                    checked={settings.keyboardNavigation}'
+                    checked={settings.keyboardNavigation}
                     onChange={() => toggleSetting('keyboardNavigation')}"
                     className="w-4 h-4 text-zion-cyan bg-zion-slate border-zion-cyan rounded focus:ring-zion-cyan focus:ring-2"
                   />
@@ -570,7 +626,7 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                 <label className="flex items-center space-x-3 cursor-pointer">
                   <input"
                     type="checkbox"
-                    checked={settings.focusIndicator}'
+                    checked={settings.focusIndicator}
                     onChange={() => toggleSetting('focusIndicator')}"
                     className="w-4 h-4 text-zion-cyan bg-zion-slate border-zion-cyan rounded focus:ring-zion-cyan focus:ring-2"
                   />
@@ -588,7 +644,7 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                 <label className="flex items-center space-x-3 cursor-pointer">
                   <input"
                     type="checkbox"
-                    checked={settings.screenReader}'
+                    checked={settings.screenReader}
                     onChange={() => toggleSetting('screenReader')}"
                     className="w-4 h-4 text-zion-cyan bg-zion-slate border-zion-cyan rounded focus:ring-zion-cyan focus:ring-2"
                   />
@@ -672,23 +728,23 @@ const accessibilityStyles = `
   }
 "
   [style*="--color-blindness: protanopia"] {
-'
+
     filter: url('#protanopia');
   }
 "
   [style*="--color-blindness: deuteranopia"] {
-'
+
     filter: url('#deuteranopia');
   }
 "
   [style*="--color-blindness: tritanopia"] {
-'
+
     filter: url('#tritanopia');
   }``;
 
 // Inject styles'
 if (typeof document !== 'undefined') {
-'
+
   const style = document.createElement('style');
   style.textContent = accessibilityStyles;
   document.head.appendChild (style) ;

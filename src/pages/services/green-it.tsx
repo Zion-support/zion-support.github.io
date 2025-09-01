@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { SEO } from '../../components/SEO';'
+import React from 'react.ts';
+import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -11,7 +11,7 @@ import {
   Users,
   CheckCircle,
   Lightbulb,
-  Database,'
+  Database,
   Cloud} from 'lucide-react.ts';
 
 export default function GreenIT(...args: any[]): any {
@@ -19,72 +19,67 @@ export default function GreenIT(...args: any[]): any {
   const features = [
     {
 
-      icon: Leaf,'
+      icon: Leaf,
       title: 'Sustainable Infrastructure',
       description:'
         'Eco-friendly IT infrastructure solutions that reduce carbon footprint while maintaining performance.'},
     {
 
-      icon: Zap,'
+      icon: Zap,
       title: 'Energy Optimization',
       description:'
         'AI-powered energy management systems that optimize power consumption across your IT infrastructure.'},
     {
 
-      icon: Cloud,'
+      icon: Cloud,
       title: 'Green Cloud Solutions',
       description:'
         'Carbon-neutral cloud computing options with renewable energy-powered data centers.'},
     {
 
-      icon: Database,'
+      icon: Database,
       title: 'Efficient Data Management',
       description:'
         'Smart data storage and processing solutions that minimize energy consumption and waste.'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Environmental Compliance',
       description:'
         'Built-in compliance monitoring for environmental regulations and sustainability standards.'},
     {
 
-      icon: TrendingUp,'
+      icon: TrendingUp,
       title: 'Performance Monitoring',
       description:'
         'Real-time tracking of environmental impact and sustainability metrics for continuous improvement.'},
   ];
 
   const benefits = ['
-    'Reduce carbon footprint by up to 70%','
-    'Lower energy costs by 40-60%','
-    'Meet sustainability compliance requirements','
-    'Enhance brand reputation and ESG scores','
-    'Future-proof your IT infrastructure','
-    'Contribute to global climate goals',
+    'Reduce carbon footprint by up to 70%',Lower energy costs by 40-60%',Meet sustainability compliance requirements',Enhance brand reputation and ESG scores',Future-proof your IT infrastructure',Contribute to global climate goals',
   ];
 
   const solutions = [
     {
-'
+
       title: 'Green Data Centers',
       description:'
         'Energy-efficient data center design with renewable energy integration and advanced cooling systems.',
       icon: Database},
     {
-'
+
       title: 'Sustainable Cloud Migration',
       description:'
         'Migrate to eco-friendly cloud platforms with carbon-neutral computing options.',
       icon: Cloud},
     {
-'
+
       title: 'Energy Management Systems',
       description:'
         'AI-powered monitoring and optimization of IT infrastructure energy consumption.',
       icon: Zap},
     {
-'
+
       title: 'Circular IT Practices',
       description:'
         'Implement recycling, refurbishment, and responsible disposal of IT equipment.',
@@ -94,7 +89,7 @@ export default function GreenIT(...args: any[]): any {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-        title="Green IT Solutions - Zion Tech Group""
+        title="Green IT Solutions - Zion Tech Group"
         description="Transform your IT infrastructure with sustainable, eco-friendly solutions. Reduce carbon footprint, lower energy costs, and meet sustainability goals."
       />
 

@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousAnalytics = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousAnalytics = () => {
       <Helmet>
         <title>AI Autonomous Analytics Platform | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous analytics platform that analyzes data, generates insights, and provides intelligent business intelligence with advanced AI capabilities."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI analytics, autonomous analytics, AI business intelligence, data analytics, AI insights, autonomous BI"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-analytics"
         />
       </Helmet>
@@ -194,14 +194,7 @@ const AIAutonomousAnalytics = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Business Intelligence','
-                'Predictive Analytics','
-                'Descriptive Analytics','
-                'Prescriptive Analytics','
-                'Real-time Analytics','
-                'Big Data Analytics','
-                'Customer Analytics','
-                'Performance Analytics',
+                'Business Intelligence',Predictive Analytics',Descriptive Analytics',Prescriptive Analytics',Real-time Analytics',Big Data Analytics',Customer Analytics',Performance Analytics',
               ].map(type => (
                 <div
                   key={type}"

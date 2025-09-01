@@ -1,60 +1,59 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityTraining() {
   const features = [
-    'AI-powered security training optimization','
-    'Intelligent training strategy management and execution',;'
-    'Automated security skill assessment and certification',;'
-    'Predictive analytics for training needs',;'
-    'Smart training framework management',;'
-    'AI-driven training automation and orchestration',;'
-    'Real-time training performance tracking',;'
+    'AI-powered security training optimization',Intelligent training strategy management and execution',;
+    'Automated security skill assessment and certification',;
+    'Predictive analytics for training needs',;
+    'Smart training framework management',;
+    'AI-driven training automation and orchestration',;
+    'Real-time training performance tracking',;
     'Custom AI models for training applications';
   ];
 
   const tiers = [
     {
-'
-      name: 'Developer','
-      price: '$199/mo','
-      details: ['Up to 25 users', 'Basic AI features', 'Standard training', 'Email support']
+
+      name: 'Developer',
+      price: '$199/mo',
+      details: ['Up to 25 users',Basic AI features',Standard training',Email support']
     },
     {
-'
-      name: 'Business', '
-      price: '$599/mo', '
-      details: ['Up to 100 users', 'Advanced AI features', 'Enhanced training', 'Priority support'] ;
+
+      name: 'Business',
+      price: '$599/mo',
+      details: ['Up to 100 users',Advanced AI features',Enhanced training',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,499/mo', ;'
-      details: ['Unlimited users', 'Custom AI models', 'Full training suite', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$1,499/mo', ;
+      details: ['Unlimited users',Custom AI models',Full training suite',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Security training optimization',;'
-    'Training strategy management and execution',;'
-    'Security skill assessment and certification',;'
-    'Training framework management and automation',;'
-    'Training automation and orchestration',;'
+  const useCases = [;
+    'Security training optimization',;
+    'Training strategy management and execution',;
+    'Security skill assessment and certification',;
+    'Training framework management and automation',;
+    'Training automation and orchestration',;
     'Training scaling and management';
   ];
 
-  const benefits = [;'
-    'Improve security training performance by 50-80%',;'
-    'Reduce training completion time by 40-70%',;'
-    'Cut security training costs by 35-65%',;'
-    'Enhance security training reliability and scalability',;'
-    'Optimize resource utilization',;'
+  const benefits = [;
+    'Improve security training performance by 50-80%',;
+    'Reduce training completion time by 40-70%',;
+    'Cut security training costs by 35-65%',;
+    'Enhance security training reliability and scalability',;
+    'Optimize resource utilization',;
     'Scale security training operations efficiently';
   ];
 
-  const industries = [;'
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
     'Technology & SaaS';
   ];
 
@@ -107,8 +106,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['50-80% performance improvement', '40-70% completion time reduction', '35-65% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['50-80% performance improvement',40-70% completion time reduction',35-65% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-emerald-600 mb-3" />"              <div className="text-gray-900 font-semibold">{t}</div>
             </div>

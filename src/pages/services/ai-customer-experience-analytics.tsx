@@ -1,14 +1,14 @@
-import React from 'react.ts';'
-import { SEO   } from '../../components/SEO';'
+import React from 'react.ts';
+import { SEO   } from '../../components/SEO';
 import { motion   } from 'framer-motion.ts';
 ;const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
 
   return()
     <>
       <SEO
-        title="AI-Powered Customer Experience Analytics Platform | Zion Tech Group""
-        description="Advanced AI-driven customer experience analytics platform. Real-time sentiment analysis, customer journey tracking, and predictive analytics to boost satisfaction by 35% and reduce churn by 25%.""
-        keywords="AI customer analytics, sentiment analysis, customer journey, predictive analytics, customer experience, CX analytics, churn reduction""
+        title="AI-Powered Customer Experience Analytics Platform | Zion Tech Group"
+        description="Advanced AI-driven customer experience analytics platform. Real-time sentiment analysis, customer journey tracking, and predictive analytics to boost satisfaction by 35% and reduce churn by 25%."
+        keywords="AI customer analytics, sentiment analysis, customer journey, predictive analytics, customer experience, CX analytics, churn reduction"
         canonical="https://ziontechgroup.com/services/ai-customer-experience-analytics"
       />
       "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

@@ -1,5 +1,45 @@
+<<<<<<< HEAD
+import React from 'react';
+import { SEO } from '../components/SEO';
+import {
+
+  Code,
+  Zap,
+  Users,
+  TrendingUp,
+  Shield,
+  Globe,
+  Building,
+  Rocket,
+  Cpu,
+  BarChart3,
+  Database,
+  Cloud,
+  Lock,
+  Smartphone,
+  Target,
+  DollarSign,
+  Clock,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Brain'
+ } from 'lucide-react';
+
+export default function MicroSAASSolutions(...args[]):  {
+
+  const services = [
+    {
+
+      title: "Custom SAAS Development","
+      description: "Tailored software-as-a-service solutions designed specifically for your business needs and industry requirements.",
+      icon: Code,"
+      features["Custom workflows", "API integration", "User management", "Scalable architecture"];
+    },;
+=======
 import React from 'react';'
 import { SEO } from '../components/SEO';    },;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     {
 "
       title: "Multi-tenant Architecture","
@@ -128,8 +168,8 @@ import { SEO } from '../components/SEO';    },;
   return()
     <>
       <SEO"
-        title="Micro SAAS Solutions - Custom Software Development""
-        description="Transform your business with custom Micro SAAS solutions. From development to deployment, we deliver scalable, secure, and efficient software-as-a-service applications.""
+        title="Micro SAAS Solutions - Custom Software Development"
+        description="Transform your business with custom Micro SAAS solutions. From development to deployment, we deliver scalable, secure, and efficient software-as-a-service applications."
         keywords="micro saas, custom software, saas development, software solutions, business applications"
       />
 "      <div className="min-h-screen bg-futuristic">
@@ -301,20 +341,20 @@ import { SEO } from '../components/SEO';    },;
           <div className="container-responsive">"
             <div className="text-center max-w-4xl mx-auto">"
               <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Your Micro SAAS?</h2>"
-              <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">'
+              <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
                 Let's discuss how custom Micro SAAS solutions can transform your business
                 and accelerate your growth in the digital marketplace.
               </p>
 "
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a"
-                  href="/contact""
+                  href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
 
                   Start Your Project
                 </a>
                 <a"
-                  href="/contact""
+                  href="/contact"
                   className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
 
                   Get Consultation

@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from "../../components/SEO";
 import {
@@ -38,107 +38,101 @@ export default function SmartContractRiskScanner(...args: []):  {
   const features = [
     {
 
-      icon: Search,'
-      title: 'Automated Vulnerability Detection','
-      description: 'AI-powered scanning for smart contract vulnerabilities and security risks','
-      benefits: ['Zero-day exploit detection', 'Automated security audits', 'Real-time monitoring', 'Comprehensive reporting']
+      icon: Search,
+      title: 'Automated Vulnerability Detection',
+      description: 'AI-powered scanning for smart contract vulnerabilities and security risks',
+      benefits: ['Zero-day exploit detection',Automated security audits',Real-time monitoring',Comprehensive reporting']
     },
     {
 
-      icon: Shield,'
-      title: 'Multi-Chain Security','
-      description: 'Security scanning across Ethereum, Binance Smart Chain, Polygon, and other major networks','
-      benefits: ['Cross-chain compatibility', 'Network-specific analysis', 'Unified security dashboard', 'Comprehensive coverage']
+      icon: Shield,
+      title: 'Multi-Chain Security',
+      description: 'Security scanning across Ethereum, Binance Smart Chain, Polygon, and other major networks',
+      benefits: ['Cross-chain compatibility',Network-specific analysis',Unified security dashboard',Comprehensive coverage']
     },
     {
 
-      icon: AlertTriangle,'
-      title: 'Risk Assessment Engine','
-      description: 'Advanced risk scoring and prioritization for identified vulnerabilities','
-      benefits: ['Risk-based prioritization', 'Impact assessment', 'Remediation guidance', 'Compliance tracking']
+      icon: AlertTriangle,
+      title: 'Risk Assessment Engine',
+      description: 'Advanced risk scoring and prioritization for identified vulnerabilities',
+      benefits: ['Risk-based prioritization',Impact assessment',Remediation guidance',Compliance tracking']
     },;
     {;
-      icon: Code,;'
-      title: 'Smart Contract Analysis',;'
-      description: 'Deep code analysis and optimization recommendations for smart contracts',;'
-      benefits: ['Code quality metrics', 'Gas optimization', 'Best practices', 'Performance analysis'];
+      icon: Code,;
+      title: 'Smart Contract Analysis',;
+      description: 'Deep code analysis and optimization recommendations for smart contracts',;
+      benefits: ['Code quality metrics',Gas optimization',Best practices',Performance analysis'];
     };
   ];
 
   const scanningCapabilities = [
     {
-'
-      title: 'Reentrancy Attacks','
+
+      title: 'Reentrancy Attacks',
       description: 'Detect and prevent reentrancy vulnerabilities in smart contracts',
-      icon: Bug,'
-      features: ['Call stack analysis', 'State variable tracking', 'External call monitoring', 'Attack simulation']
+      icon: Bug,
+      features: ['Call stack analysis',State variable tracking',External call monitoring',Attack simulation']
     },
     {
-'
-      title: 'Integer Overflow/Underflow','
+
+      title: 'Integer Overflow/Underflow',
       description: 'Identify arithmetic vulnerabilities and overflow conditions',
-      icon: AlertTriangle,'
-      features: ['Boundary checking', 'Safe math validation', 'Range analysis', 'Overflow prevention']
+      icon: AlertTriangle,
+      features: ['Boundary checking',Safe math validation',Range analysis',Overflow prevention']
     },
     {
-'
-      title: 'Access Control Issues','
+
+      title: 'Access Control Issues',
       description: 'Detect improper access control and permission vulnerabilities',
-      icon: Lock,'
-      features: ['Role-based analysis', 'Permission validation', 'Admin function review', 'Access pattern analysis']
+      icon: Lock,
+      features: ['Role-based analysis',Permission validation',Admin function review',Access pattern analysis']
     },;
-    {;'
-      title: 'Logic Vulnerabilities',;'
+    {;
+      title: 'Logic Vulnerabilities',;
       description: 'Identify logical flaws and business logic vulnerabilities',;
-      icon: Lightbulb,;'
-      features: ['Business logic analysis', 'State machine validation', 'Flow control analysis', 'Edge case testing'];
+      icon: Lightbulb,;
+      features: ['Business logic analysis',State machine validation',Flow control analysis',Edge case testing'];
     };
   ];
 
   const pricing = [
     {
-'
-      name: 'Starter','
-      price: '$299','
-      period: '/month','
+
+      name: 'Starter',
+      price: '$299',
+      period: '/month',
       description: 'Perfect for small projects and individual developers',
       features: ['
-        'Up to 50 smart contracts/month','
-        'Basic vulnerability scanning','
-        'Standard security reports','
-        'Email support','
-        'Basic API access','
-        'Monthly security updates'
-      ],'
+        'Up to 50 smart contracts/month',Basic vulnerability scanning',Standard security reports',Email support',Basic API access',Monthly security updates'
+      ],
       cta: 'Get Started',
       popular: false
     },
     {
-'
-      name: 'Professional','
-      price: '$799','
-      period: '/month','
+
+      name: 'Professional',
+      price: '$799',
+      period: '/month',
       description: 'Ideal for growing DeFi projects and development teams',
       features: ['
-        'Up to 500 smart contracts/month','
-        'Advanced vulnerability detection','
-        'AI-powered risk assessment','
-        'Priority support','
-        'Full API access','
-        'Real-time monitoring','
-        'Custom security rules','
-        'SLA guarantee'
-      ],'
+        'Up to 500 smart contracts/month',Advanced vulnerability detection',AI-powered risk assessment',Priority support',Full API access',Real-time monitoring',Custom security rules',SLA guarantee'
+      ],
       cta: 'Start Free Trial',
       popular: true
     },
     {
-'
-      name: 'Enterprise','
-      price: 'Custom','
-      period: '','
+
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
       description: 'Tailored solutions for large organizations and enterprises',
       features: ['
+<<<<<<< HEAD
+        'Unlimited smart contracts',Custom security frameworks',White-label solutions',Dedicated infrastructure',24/7 dedicated support',Custom integrations',;
+        'On-premise deployment',;
+        'Compliance certifications';
+      ],;
+=======
         'Unlimited smart contracts','
         'Custom security frameworks','
         'White-label solutions','
@@ -147,19 +141,29 @@ export default function SmartContractRiskScanner(...args: []):  {
         'Custom integrations',;'
         'On-premise deployment',;'        'Compliance certifications';
       ],;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Contact Sales',;
       popular: false};
   ];
 
   const marketInfo = {
+<<<<<<< HEAD
+
+  marketSize: '$2.8 billion',
+    growthRate: '23.4% CAGR',
+    averageMarketPrice: '$500-$2,000/month',
+    setupTime: '1-2 weeks',;
+  ;
+=======
 '
   marketSize: '$2.8 billion','
     growthRate: '23.4% CAGR','
     averageMarketPrice: '$500-$2,000/month','
     setupTime: '1-2 weeks',;  ;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
-  ;'
+  ;
   roi: '300-500% within 6 months';
   };
 
@@ -171,29 +175,44 @@ export default function SmartContractRiskScanner(...args: []):  {
 };
 
   const supportedNetworks = ['
-    'Ethereum','
-    'Binance Smart Chain',;'
-    'Polygon',;'
-    'Solana',;'
-    'Avalanche',;'
-    'Arbitrum',;'
-    'Optimism',;'
+    'Ethereum',Binance Smart Chain',;
+    'Polygon',;
+    'Solana',;
+    'Avalanche',;
+    'Arbitrum',;
+    'Optimism',;
     'Base';
   ];
 
+<<<<<<< HEAD
+  const securityStandards = [;
+    'OWASP Top 10',;
+    'Smart Contract Security Verification Standard',;
+    'Ethereum Security Best Practices',;
+    'DeFi Security Guidelines',;
+    'ISO 27001 Compliance',;
+    'SOC 2 Type II';
+=======
   const securityStandards = [;'
     'OWASP Top 10',;'
     'Smart Contract Security Verification Standard',;'
     'Ethereum Security Best Practices',;'
     'DeFi Security Guidelines',;'
     'ISO 27001 Compliance',;'    'SOC 2 Type II';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
+        title="Smart Contract Risk Scanner - Zion Tech Group"
+        description="AI-powered smart contract security scanner with automated vulnerability detection, multi-chain support, and comprehensive risk assessment. Protect your DeFi projects from security threats."
+      />
+=======
         title="Smart Contract Risk Scanner - Zion Tech Group""        description="AI-powered smart contract security scanner with automated vulnerability detection, multi-chain support, and comprehensive risk assessment. Protect your DeFi projects from security threats."
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 px-4 overflow-hidden">"
@@ -296,8 +315,8 @@ export default function SmartContractRiskScanner(...args: []):  {
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center"
 "
                 <div className="text-2xl font-bold text-red-400 mb-2">{value}</div>"
-                <div className="text-sm text-gray-400 capitalize">'
-                  {key.replace(/([A-Z])/g, ' $1').trim()}
+                <div className="text-sm text-gray-400 capitalize">
+                  {key.replace(/([A-Z])/g, $1').trim()}
                 </div>
               </motion.div>;
             ))}
@@ -707,7 +726,7 @@ export default function SmartContractRiskScanner(...args: []):  {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Transparent Security Pricing
             </h2>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the security plan that best fits your project's needs.
               All plans include comprehensive vulnerability scanning and reporting.
             </p>

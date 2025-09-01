@@ -1,12 +1,54 @@
+<<<<<<< HEAD
+import React, { useState, useMemo } from 'react';
+import { motion } from 'framer-motion';
+import {
+
+  Brain,
+  Shield,
+  Zap,
+  Cloud,
+  Lock,
+  Globe,
+  Cpu,
+  Database,
+  Network,
+  Smartphone,
+  BarChart3,
+  TrendingUp,
+  Users,
+  Building2,
+  Leaf,
+  Car,
+  Heart,
+  Scale,
+  Eye,
+  Search,
+  Filter,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink'
+} from 'lucide-react';
+import { INNOVATIVE_SERVICES } from '../data/servicesData';
+export default function InnovativeServicesShowcase2026() {
+
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+=======
 import React, { useState, useMemo } from 'react';'
 import { motion } from 'framer-motion';export default function InnovativeServicesShowcase2026() {
 '
   const [selectedCategory, setSelectedCategory] = useState('all');'
   const [searchQuery, setSearchQuery] = useState('');'
   const [selectedCategory, setSelectedCategory] = useState('All');'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [sortBy, setSortBy] = useState('innovation');
-'
-  const categories = ['All', 'AI & Automation', 'Quantum Computing', 'Blockchain', 'Cybersecurity', 'IoT', 'AI & Content', 'DevOps', 'Finance', 'Sustainability'];
+
+  const categories = ['All',AI & Automation',Quantum Computing',Blockchain',Cybersecurity',IoT',AI & Content',DevOps',Finance',Sustainability'];
 
   const filtered = INNOVATIVE_MICRO_SAAS_SERVICES_2026;
     // Filter by search query
@@ -27,11 +69,11 @@ import { motion } from 'framer-motion';export default function InnovativeService
     filtered.sort((a, b) => {
 
       switch (sortBy) {
-'
+
         case 'price':
-          return a.price - b.price;'
+          return a.price - b.price;
         case 'innovation':'
-          return b.innovationLevel === 'Revolutionary' ? 1 : -1;'
+          return b.innovationLevel === 'Revolutionary' ? 1 : -1;
         case 'roi':'
           return parseInt(b.roi.split('-')[0]) - parseInt(a.roi.split('-')[0]);
         default:
@@ -43,23 +85,23 @@ import { motion } from 'framer-motion';export default function InnovativeService
   }, [searchQuery, selectedCategory, sortBy]) ;
 
   const getCategoryIcon = (category: string) => {;
-    switch (category) {;'
+    switch (category) {;
       case 'AI & Automation':;
-        return <Cpu className="w-5 h-5" />;'
+        return <Cpu className="w-5 h-5" />;
       case 'Quantum Computing':;"
-        return <Zap className="w-5 h-5" />;'
+        return <Zap className="w-5 h-5" />;
       case 'Blockchain':;"
-        return <Database className="w-5 h-5" />;'
+        return <Database className="w-5 h-5" />;
       case 'Cybersecurity':;"
-        return <Shield className="w-5 h-5" />;'
+        return <Shield className="w-5 h-5" />;
       case 'IoT':;"
-        return <Globe className="w-5 h-5" />;'
+        return <Globe className="w-5 h-5" />;
       case 'AI & Content':;"
-        return <Cpu className="w-5 h-5" />;'
+        return <Cpu className="w-5 h-5" />;
       case 'DevOps':;"
-        return <Database className="w-5 h-5" />;'
+        return <Database className="w-5 h-5" />;
       case 'Finance':;"
-        return <TrendingUp className="w-5 h-5" />;'
+        return <TrendingUp className="w-5 h-5" />;
       case 'Sustainability':;"
         return <Leaf className="w-5 h-5" />;
       default:
@@ -81,12 +123,18 @@ import { motion } from 'framer-motion';export default function InnovativeService
   const getInnovationBadge = (level: string) => {
 
     const colors = {
+<<<<<<< HEAD
+
+  'Revolutionary': 'bg-gradient-to-r from-purple-600 to-pink-600',Advanced': 'bg-gradient-to-r from-blue-600 to-cyan-600',;
+  ;
+  ;
+=======
 '
   'Revolutionary': 'bg-gradient-to-r from-purple-600 to-pink-600','
       'Advanced': 'bg-gradient-to-r from-blue-600 to-cyan-600',;  ;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
-  ;'
   'Cutting-Edge': 'bg-gradient-to-r from-green-600 to-emerald-600';
     ;
 
@@ -166,7 +214,12 @@ import { motion } from 'framer-motion';export default function InnovativeService
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
+<<<<<<< HEAD
+                  type="text"
+                  placeholder="Search services..."
+=======
                   type="text""                  placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
@@ -205,7 +258,7 @@ import { motion } from 'framer-motion';export default function InnovativeService
       <motion.div"
         className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20"
         variants={containerVariants}"
-        initial="hidden""
+        initial="hidden"
         animate="visible"
       >"
         <div className="max-w-7xl mx-auto">"
@@ -241,7 +294,7 @@ import { motion } from 'framer-motion';export default function InnovativeService
                 {/* Innovation Level Badge */}"
                 <div className="absolute top-4 right-4">`
                   <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-'
+
                     service.innovationLevel === 'Cutting-edge''
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white''
                       : service.innovationLevel === 'Advanced''
@@ -359,19 +412,19 @@ import { motion } from 'framer-motion';export default function InnovativeService
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>"
-            <p className="text-xl text-gray-300 mb-8">'
+            <p className="text-xl text-gray-300 mb-8">
               Let's discuss how our innovative solutions can drive your success.
               Get in touch with our experts today.
             </p>"
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105"
               >"
                 <Phone className="w-5 h-5" />                Call Now
               </a>
               <a"
-                href="mailto:kleber@ziontechgroup.com""
+                href="mailto:kleber@ziontechgroup.com"
                 className="flex items-center gap-2 px-8 py-4 bg-slate-700/50 hover:bg-slate-600/50 text-white rounded-xl font-semibold border border-slate-600/50 transition-all duration-300 hover:scale-105"
               >"
                 <Mail className="w-5 h-5" />                Email Us

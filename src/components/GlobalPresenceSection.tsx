@@ -1,5 +1,63 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import {
+
+  Globe,
+  MapPin,
+  Users,
+  Clock,
+  Star,
+  Award,
+  CheckCircle'
+} from 'lucide-react';
+
+      established: '2022';
+    };
+  ];
+const globalOffices = [
+  {
+
+    city: "Middletown, DE","
+    country: "United States","
+    type: "Headquarters","
+    icon: "🇺🇸","
+    description: "Main office and innovation center"
+  },
+  {
+"
+    city: "London","
+    country: "United Kingdom","
+    type: "European Hub","
+    icon: "🇬🇧","
+    description: "European operations and client services"
+  },
+  {
+"
+    city: "Singapore","
+    country: "Singapore","
+    type: "Asia-Pacific Hub","
+    icon: "🇸🇬","
+    description: "APAC market expansion and support"
+  },
+  {;"
+    city: "Toronto",;"
+    country: "Canada",;"
+    type: "North American Hub",;"
+    icon: "🇨🇦",;"
+    description: "Canadian market and development center";
+  };
+];
+
+const globalStats = ["
+  { label: "Countries Served", value: "25+", icon: "🌍" },"
+  { label: "Global Clients", value: "500+", icon: "👥" },"
+  { label: "Languages Supported", value: "15+", icon: "🗣️" },"
+  { label: "24/7 Support", value: "Global", icon: "⏰" }
+];
+
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export function GlobalPresenceSection() {
   return ("
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
@@ -209,7 +267,7 @@ export function GlobalPresenceSection() {
             <h3 className="text-2xl font-bold mb-4">
               Ready to Go Global?
             </h3>"
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">'
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Whether you're expanding internationally or need local expertise,
               our global presence ensures you get the support you need, when you need it.
             </p>"

@@ -121,21 +121,21 @@ export default function CloudMigrationServices() {
         {
 "
             name: "Alex Rodriguez","
-            role: "CTO, RetailTech Solutions",'"
+            role: "CTO, RetailTech Solutions","
             content: "Zion's cloud migration team transformed our infrastructure. We reduced costs by 40% and improved performance significantly.",
             rating: 5
         },
         {
 "
             name: "Dr. Maria Santos","
-            role: "IT Director, HealthTech Innovations",'"
+            role: "IT Director, HealthTech Innovations","
             content: "The migration was seamless with zero downtime. Zion's expertise in healthcare compliance made all the difference.",
             rating: 5
         },
         {
 "
             name: "James Wilson","
-            role: "VP Engineering, FinTech Startup",'"
+            role: "VP Engineering, FinTech Startup","
             content: "From on-premise to AWS in 6 weeks. Zion's team delivered beyond our expectations with excellent documentation.",
             rating: 5
         }
@@ -311,7 +311,7 @@ export default function CloudMigrationServices() {
             </p>
           </div>
           "
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">'
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (<Card key={index} className={`relative ${plan.popular ? 'border-zion-purple scale-105' : 'border-zion-slate-light'} bg-zion-slate-dark/50 transition-all duration-300 hover:shadow-2xl`}>"
                 {plan.popular && (<Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-zion-purple to-zion-cyan text-white border-0">
                     Most Popular

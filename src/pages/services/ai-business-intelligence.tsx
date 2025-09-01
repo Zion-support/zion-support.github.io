@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -45,134 +45,113 @@ import {
   Gavel,
   Clipboard,
   BookOpen,
-  LineChart,'
+  LineChart,
   ShoppingBag} from 'lucide-react';
 
 export default function AIBusinessIntelligence() {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'Predictive Analytics',
       description:'
         'AI-powered forecasting and trend analysis for strategic decision making'},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Real-time Dashboards',
       description:'
         'Live data visualization and interactive reporting across all business metrics'},
     {
 
-      icon: Target,'
+      icon: Target,
       title: 'Goal Tracking',
       description:'
         'Automated monitoring and progress tracking for business objectives and KPIs'},
     {
 
-      icon: TrendingUp,'
+      icon: TrendingUp,
       title: 'Performance Analytics',
       description:'
         'Comprehensive insights into business performance and operational efficiency'},
     {
 
-      icon: Zap,'
+      icon: Zap,
       title: 'Automated Insights',
       description:'
         'AI-generated recommendations and actionable insights from your data'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Data Security',
       description:'
         'Enterprise-grade security and compliance for sensitive business data'},
   ];
 
   const benefits = ['
-    'Increase decision-making speed by 300% with real-time insights','
-    'Improve business performance by 40% through predictive analytics','
-    'Reduce reporting time by 80% with automated dashboards','
-    'Identify new opportunities with AI-powered trend analysis','
-    'Optimize operations with data-driven recommendations','
-    'Achieve better ROI through intelligent business insights',
+    'Increase decision-making speed by 300% with real-time insights',Improve business performance by 40% through predictive analytics',Reduce reporting time by 80% with automated dashboards',Identify new opportunities with AI-powered trend analysis',Optimize operations with data-driven recommendations',Achieve better ROI through intelligent business insights',
   ];
 
   const analyticsTypes = [
     {
 
-      icon: BarChart3,'
-      title: 'Descriptive Analytics','
-      description: 'What happened? Historical data analysis and reporting','
-      features: ['Data visualization', 'KPI tracking', 'Performance reporting']},
+      icon: BarChart3,
+      title: 'Descriptive Analytics',
+      description: 'What happened? Historical data analysis and reporting',
+      features: ['Data visualization',KPI tracking',Performance reporting']},
     {
 
-      icon: TrendingUp,'
-      title: 'Diagnostic Analytics','
+      icon: TrendingUp,
+      title: 'Diagnostic Analytics',
       description: 'Why did it happen? Root cause analysis and investigation',
       features: ['
-        'Drill-down analysis','
-        'Correlation studies','
-        'Anomaly detection',
+        'Drill-down analysis',Correlation studies',Anomaly detection',
       ]},
     {
 
-      icon: Brain,'
-      title: 'Predictive Analytics','
-      description: 'What will happen? AI-powered forecasting and modeling','
-      features: ['Trend forecasting', 'Risk assessment', 'Scenario planning']},
+      icon: Brain,
+      title: 'Predictive Analytics',
+      description: 'What will happen? AI-powered forecasting and modeling',
+      features: ['Trend forecasting',Risk assessment',Scenario planning']},
     {
 
-      icon: Target,'
+      icon: Target,
       title: 'Prescriptive Analytics',
       description:'
         'What should we do? Actionable recommendations and optimization',
       features: ['
-        'Automated recommendations','
-        'Optimization algorithms','
-        'Decision support',
+        'Automated recommendations',Optimization algorithms',Decision support',
       ]},
   ];
 
   const useCases = [
     {
-'
+
       industry: 'Finance',
       icon: Coins,
       applications: ['
-        'Risk assessment and fraud detection','
-        'Portfolio optimization and investment strategies','
-        'Credit scoring and loan approval','
-        'Market trend analysis and trading insights',
+        'Risk assessment and fraud detection',Portfolio optimization and investment strategies',Credit scoring and loan approval',Market trend analysis and trading insights',
       ]},
     {
-'
+
       industry: 'Healthcare',
       icon: Shield,
       applications: ['
-        'Patient outcome prediction and treatment optimization','
-        'Resource allocation and capacity planning','
-        'Disease outbreak forecasting','
-        'Clinical trial optimization',
+        'Patient outcome prediction and treatment optimization',Resource allocation and capacity planning',Disease outbreak forecasting',Clinical trial optimization',
       ]},
     {
-'
+
       industry: 'Retail',
       icon: ShoppingBag,
       applications: ['
-        'Demand forecasting and inventory optimization','
-        'Customer behavior analysis and personalization','
-        'Price optimization and dynamic pricing','
-        'Supply chain optimization',
+        'Demand forecasting and inventory optimization',Customer behavior analysis and personalization',Price optimization and dynamic pricing',Supply chain optimization',
       ]},
     {
-'
+
       industry: 'Manufacturing',
       icon: Cpu,
       applications: ['
-        'Predictive maintenance and equipment monitoring','
-        'Quality control and defect prediction','
-        'Production optimization and efficiency improvement','
-        'Supply chain management and logistics',
+        'Predictive maintenance and equipment monitoring',Quality control and defect prediction',Production optimization and efficiency improvement',Supply chain management and logistics',
       ]},
   ];
 

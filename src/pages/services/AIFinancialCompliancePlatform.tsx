@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -318,76 +318,71 @@ import {
   CloudDrizzle10,
   CloudFog10,
   CloudHail10,
-  CloudSnow10,'
+  CloudSnow10,
   CloudSleet10} from 'lucide-react.ts';
 
 const AIFinancialCompliancePlatform = () => {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI-Powered Risk Assessment',
       description:'
         'Advanced machine learning algorithms identify compliance risks with 98% accuracy'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Automated Compliance Monitoring',
       description:'
         'Real-time monitoring of regulatory changes and automated compliance updates'},
     {
 
-      icon: FileText,'
+      icon: FileText,
       title: 'Intelligent Document Analysis',
       description:'
         'AI-driven analysis of financial documents for compliance verification'},
     {
 
-      icon: TrendingUp,'
+      icon: TrendingUp,
       title: 'Predictive Compliance Analytics',
       description:'
         'Forecast potential compliance issues before they become violations'},
     {
 
-      icon: Activity,'
+      icon: Activity,
       title: 'Real-time Audit Trails',
       description:'
         'Comprehensive tracking of all compliance activities and decisions'},
     {
 
-      icon: AlertTriangle,'
+      icon: AlertTriangle,
       title: 'Proactive Risk Alerts',
       description:'
         'Instant notifications of compliance risks and regulatory changes'},
   ];
 
   const benefits = ['
-    'Reduce compliance costs by 40-60%','
-    'Improve compliance accuracy by 95%','
-    'Automate 80% of routine compliance tasks','
-    'Reduce audit preparation time by 70%','
-    'Minimize regulatory fines and penalties','
-    'Ensure 24/7 regulatory compliance monitoring',
+    'Reduce compliance costs by 40-60%',Improve compliance accuracy by 95%',Automate 80% of routine compliance tasks',Reduce audit preparation time by 70%',Minimize regulatory fines and penalties',Ensure 24/7 regulatory compliance monitoring',
   ];
 
   const useCases = [
     {
-'
+
       industry: 'Banking & Financial Services',
       description:'
         'Comply with Basel III, Dodd-Frank, AML/KYC, and other financial regulations'},
     {
-'
+
       industry: 'Insurance Companies',
       description:'
         'Meet Solvency II, NAIC, and state-specific insurance compliance requirements'},
     {
-'
+
       industry: 'Investment Firms',
       description:'
         'Ensure SEC, FINRA, and other investment advisory compliance standards'},
     {
-'
+
       industry: 'Fintech Startups',
       description:'
         'Navigate complex regulatory landscapes and maintain compliance as you scale'},
@@ -395,92 +390,53 @@ const AIFinancialCompliancePlatform = () => {
 
   const pricing = [
     {
-'
-      plan: 'Starter','
+
+      plan: 'Starter',
       price: '$2,200/month',
       features: ['
-        'Up to 100 users','
-        'Basic AI risk assessment','
-        'Core compliance monitoring','
-        'Document analysis','
-        'Basic reporting','
-        'Email support',
+        'Up to 100 users',Basic AI risk assessment',Core compliance monitoring',Document analysis',Basic reporting',Email support',
       ]},
     {
-'
-      plan: 'Professional','
+
+      plan: 'Professional',
       price: '$4,500/month',
       features: ['
-        'Up to 500 users','
-        'Advanced AI analytics','
-        'Multi-regulation support','
-        'Custom compliance workflows','
-        'Advanced reporting','
-        'Priority support','
-        'API access',
+        'Up to 500 users',Advanced AI analytics',Multi-regulation support',Custom compliance workflows',Advanced reporting',Priority support',API access',
       ]},
     {
-'
-      plan: 'Enterprise','
+
+      plan: 'Enterprise',
       price: '$9,000/month',
       features: ['
-        'Unlimited users','
-        'Full AI capabilities','
-        'Custom integrations','
-        'White-label options','
-        'Dedicated compliance manager','
-        '24/7 phone support','
-        'Custom training',
+        'Unlimited users',Full AI capabilities',Custom integrations',White-label options',Dedicated compliance manager',24/7 phone support',Custom training',
       ]},
   ];
 
   const integrations = ['
-    'SAP Financials','
-    'Oracle Financials','
-    'QuickBooks Enterprise','
-    'Xero','
-    'Sage Intacct','
-    'NetSuite','
-    'Microsoft Dynamics','
-    'Salesforce','
-    'Workday','
-    'ADP','
-    'Paychex','
-    'Webhook APIs',
+    'SAP Financials',Oracle Financials',QuickBooks Enterprise',Xero',Sage Intacct',NetSuite',Microsoft Dynamics',Salesforce',Workday',ADP',Paychex',Webhook APIs',
   ];
 
   const keyMetrics = [
     {
-'
-      metric: '98%','
+
+      metric: '98%',
       label: 'Compliance Accuracy'},
     {
-'
-      metric: '60%','
+
+      metric: '60%',
       label: 'Cost Reduction'},
     {
-'
-      metric: '80%','
+
+      metric: '80%',
       label: 'Task Automation'},
     {
-'
-      metric: '70%','
+
+      metric: '70%',
       label: 'Time Savings'},
   ];
 
   const regulations = ['
-    'Basel III','
-    'Dodd-Frank Act','
-    'Sarbanes-Oxley (SOX)','
-    'GDPR','
-    'CCPA','
-    'PCI DSS','
-    'SOC 2','
-    'ISO 27001','
-    'FINRA Rules','
-    'SEC Regulations','
-    'AML/KYC','
-    'Anti-Money Laundering',
+    'Basel III',Dodd-Frank Act',Sarbanes-Oxley (SOX),GDPR',CCPA',PCI DSS',SOC 2',ISO 27001',FINRA Rules',SEC Regulations',AML/KYC',Anti-Money Laundering',
   ];
 
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -498,7 +454,7 @@ const AIFinancialCompliancePlatform = () => {
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Transform Financial Compliance with"
-              <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
                 {' '}
                 AI Intelligence
               </span>
@@ -867,13 +823,13 @@ const AIFinancialCompliancePlatform = () => {
               </div>
             </div>"            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="https://ziontechgroup.com/contact""
+                href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-indigo-700 transition-all duration-200"
               >"
                 <ArrowRight className="w-5 h-5 mr-2" />                Contact Us
               </a>
               <a"
-                href="https://ziontechgroup.com""
+                href="https://ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >"
                 <Globe className="w-5 h-5 mr-2" />                Visit Website

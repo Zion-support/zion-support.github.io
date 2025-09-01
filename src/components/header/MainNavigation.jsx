@@ -1,6 +1,6 @@
-import React, { useState } from 'react';'
-import { Link } from 'react-router-dom';'
-import { cn } from '@/lib/utils';'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { cn } from '@/lib/utils';
 import { NavLink } from 'react-router-dom';
 import {
 
@@ -9,7 +9,7 @@ import {
   Brain,
   Shield,
   Users,
-  HardDrive,'
+  HardDrive,
   TrendingUp} from 'lucide-react';
 
 export function MainNavigation({ className }) {
@@ -22,7 +22,7 @@ export function MainNavigation({ className }) {
         to="/"
         className={({ isActive }) =>
           cn('
-            'text-sm font-medium transition-colors hover:text-primary','
+            'text-sm font-medium transition-colors hover:text-primary',
             isActive ? 'text-zion-cyan' : 'text-muted-foreground'
           )
         }
@@ -58,7 +58,7 @@ export function MainNavigation({ className }) {
                   <ul className="space-y-2 text-sm">
                     <li>
                       <Link"
-                        to="/micro-saas""
+                        to="/micro-saas"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         Content Tools
@@ -66,7 +66,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/micro-saas""
+                        to="/micro-saas"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         Marketing Automation
@@ -74,7 +74,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/micro-saas""
+                        to="/micro-saas"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         Business Tools
@@ -82,7 +82,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/micro-saas""
+                        to="/micro-saas"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         Customer Support
@@ -98,7 +98,7 @@ export function MainNavigation({ className }) {
                   <ul className="space-y-2 text-sm">
                     <li>
                       <Link"
-                        to="/services/cloud-devops""
+                        to="/services/cloud-devops"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         Cloud Migration
@@ -106,7 +106,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/services/it-infrastructure""
+                        to="/services/it-infrastructure"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         IT Infrastructure
@@ -114,7 +114,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/services""
+                        to="/services"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         DevOps
@@ -122,7 +122,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/services""
+                        to="/services"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         Cybersecurity
@@ -133,7 +133,7 @@ export function MainNavigation({ className }) {
               </div>"
               <div className="mt-4 pt-4 border-t border-zion-purple/20">
                 <Link"
-                  to="/services""
+                  to="/services"
                   className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center"
                 >
                   View All Services"
@@ -173,7 +173,7 @@ export function MainNavigation({ className }) {
                   <ul className="space-y-2 text-sm">
                     <li>
                       <Link"
-                        to="/talent""
+                        to="/talent"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         Find Experts
@@ -181,7 +181,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/talent""
+                        to="/talent"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         AI Hiring
@@ -189,7 +189,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/talent""
+                        to="/talent"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         Skill Matching
@@ -197,7 +197,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/talent""
+                        to="/talent"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         Project Teams
@@ -213,7 +213,7 @@ export function MainNavigation({ className }) {
                   <ul className="space-y-2 text-sm">
                     <li>
                       <Link"
-                        to="/equipment""
+                        to="/equipment"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         Equipment
@@ -221,7 +221,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/marketplace""
+                        to="/marketplace"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         Marketplace
@@ -229,7 +229,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/marketplace""
+                        to="/marketplace"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         Products
@@ -237,7 +237,7 @@ export function MainNavigation({ className }) {
                     </li>
                     <li>
                       <Link"
-                        to="/green-it""
+                        to="/green-it"
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                       >
                         Green IT
@@ -248,7 +248,7 @@ export function MainNavigation({ className }) {
               </div>"
               <div className="mt-4 pt-4 border-t border-zion-purple/20">
                 <Link"
-                  to="/request-quote""
+                  to="/request-quote"
                   className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center"
                 >
                   Get Custom Quote"
@@ -261,49 +261,49 @@ export function MainNavigation({ className }) {
       </div>
 
       <Link"
-        to="/solutions""
+        to="/solutions"
         className="text-zion-slate-light hover:text-white transition-colors"
       >
         Solutions
       </Link>
 
       <Link"
-        to="/services""
+        to="/services"
         className="text-zion-slate-light hover:text-white transition-colors"
       >
         Services
       </Link>
 
       <Link"
-        to="/case-studies""
+        to="/case-studies"
         className="text-zion-slate-light hover:text-white transition-colors"
       >
         Case Studies
       </Link>
 
       <Link"
-        to="/news""
+        to="/news"
         className="text-zion-slate-light hover:text-white transition-colors"
       >
         News
       </Link>
 
       <Link"
-        to="/events""
+        to="/events"
         className="text-zion-slate-light hover:text-white transition-colors"
       >
         Events
       </Link>
 
       <Link"
-        to="/about""
+        to="/about"
         className="text-zion-slate-light hover:text-white transition-colors"
       >
         About Us
       </Link>
 
       <Link"
-        to="/contact""
+        to="/contact"
         className="text-zion-slate-light hover:text-white transition-colors"
       >
         Contact
@@ -313,9 +313,8 @@ export function MainNavigation({ className }) {
         to="/signup"
         className={({ isActive }) =>
           cn('
-            'text-sm font-medium transition-colors hover:text-primary','
-            isActive ? 'text-zion-cyan' : 'text-muted-foreground','
-            'bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-6 py-2 rounded-lg shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-300 hover:-translate-y-1'
+            'text-sm font-medium transition-colors hover:text-primary',
+            isActive ? 'text-zion-cyan' : 'text-muted-foreground',bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-6 py-2 rounded-lg shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-300 hover:-translate-y-1'
           )
         }
       >

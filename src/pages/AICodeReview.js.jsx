@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -7,66 +7,52 @@ import {
   Zap,
   Users,
   BarChart3,
-  Target,'
+  Target,
   CheckCircle} from 'lucide-react';
 export default function AICodeReview() {
   const features = [
     {
 
-      icon: Code,'
+      icon: Code,
       title: 'Automated Code Analysis',
       description:'
         'AI-powered code review that identifies bugs, security vulnerabilities, and performance issues'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Security Scanning',
       description:'
         'Comprehensive security analysis to detect vulnerabilities and compliance issues'},
     {
 
-      icon: Zap,'
+      icon: Zap,
       title: 'Performance Optimization',
       description:'
         'Identify and fix performance bottlenecks and inefficient code patterns'},
     {
 
-      icon: Users,'
+      icon: Users,
       title: 'Team Collaboration',
       description:'
         'Streamlined code review process with team feedback and approval workflows'},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Quality Metrics',
       description:'
         'Track code quality improvements and maintain high standards across projects'},
     {
 
-      icon: Target,'
+      icon: Target,
       title: 'Best Practices',
       description:'
         'Ensure code follows industry best practices and coding standards'},
   ];
   const benefits = ['
-    'Reduce code review time by 80%','
-    'Improve code quality and maintainability','
-    'Detect security vulnerabilities early','
-    'Ensure consistent coding standards','
-    'Accelerate development cycles','
-    'Reduce production bugs by 60%',
+    'Reduce code review time by 80%',Improve code quality and maintainability',Detect security vulnerabilities early',Ensure consistent coding standards',Accelerate development cycles',Reduce production bugs by 60%',
   ];
   const supportedLanguages = ['
-    'JavaScript/TypeScript','
-    'Python','
-    'Java','
-    'C#','
-    'Go','
-    'Rust','
-    'PHP','
-    'Ruby','
-    'Swift','
-    'Kotlin',
+    'JavaScript/TypeScript',Python',Java',C#',Go',Rust',PHP',Ruby',Swift',Kotlin',
   ];
   return()
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate-darker">
@@ -92,7 +78,7 @@ export default function AICodeReview() {
             className="text-4xl md:text-6xl font-bold text-white mb-6"
           >
             AI-Powered"
-            <span className="bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">'
+            <span className="bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">
               {' '}
               Code Review
             </span>

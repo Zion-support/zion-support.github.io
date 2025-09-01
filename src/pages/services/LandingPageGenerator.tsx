@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { SEO } from '@/components/SEO';
 import {
 
@@ -6,14 +6,14 @@ import {
   Globe,
   DollarSign,
   ExternalLink,
-  Phone,'
+  Phone,
   Mail} from 'lucide-react.ts';
 
 const LandingPageGenerator: React.FC = (): JSX.Element => {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO"
-        title="Landing Page Generator - Zion Tech Group""
+        title="Landing Page Generator - Zion Tech Group"
         description="Generate, A/B test, and deploy high-converting landing pages with AI."
       />"
       <section className="container mx-auto px-4 py-16">"
@@ -28,12 +28,7 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {
 "
         <div className="mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">
           {['
-            'On-brand copy and image generation','
-            'SEO-ready metadata and schema','
-            'A/B testing and analytics hooks','
-            'One-click deploy to Vercel/Netlify/S3','
-            'Forms with spam protection and CRM sync','
-            'Localization and accessibility checks',
+            'On-brand copy and image generation',SEO-ready metadata and schema',A/B testing and analytics hooks',One-click deploy to Vercel/Netlify/S3',Forms with spam protection and CRM sync',Localization and accessibility checks',
           ].map(b => (
             <div
               key={b}"
@@ -55,22 +50,22 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {
             <li>Setup: $2k–$8k (brand + components)</li>
           </ul>
           <a"
-            className="mt-3 inline-flex items-center text-cyan-300 hover:text-cyan-200""
-            href="https://ziontechgroup.com/services""
-            target="_blank""
+            className="mt-3 inline-flex items-center text-cyan-300 hover:text-cyan-200"
+            href="https://ziontechgroup.com/services"
+            target="_blank"
             rel="noreferrer"
           >"
             Learn more <ExternalLink className="ml-1 h-3 w-3" />
           </a>"
           <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-slate-300">
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="inline-flex items-center gap-2 hover:text-cyan-200"
             >"
               <Globe className="h-4 w-4" /> +1 302 464 0950
             </a>
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="inline-flex items-center gap-2 hover:text-cyan-200"
             >"
               <Mail className="h-4 w-4" /> kleber@ziontechgroup.com

@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 const QuantumNeuralNetworkPlatform = () => {
   return()
@@ -17,13 +17,13 @@ const QuantumNeuralNetworkPlatform = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
               >
                 Get Started
               </Link>
               <Link"
-                to="/services/quantum-ai""
+                to="/services/quantum-ai"
                 className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg"
               >
                 Learn More
@@ -149,13 +149,13 @@ const QuantumNeuralNetworkPlatform = () => {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
+              to="/contact"
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
             >
               Schedule a Demo
             </Link>
             <Link"
-              to="/services/quantum-ai""
+              to="/services/quantum-ai"
               className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg"
             >
               Explore Services

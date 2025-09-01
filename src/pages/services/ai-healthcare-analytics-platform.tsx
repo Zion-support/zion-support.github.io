@@ -1,3 +1,169 @@
+<<<<<<< HEAD
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Heart, 
+  Brain, 
+  Activity, 
+  Shield, 
+  Zap, 
+  CheckCircle, 
+  ArrowRight,
+  Clock,
+  Target,
+  BarChart3,
+  Users,
+  Smartphone,
+  Cloud,
+  Database,
+  Cpu,
+  Lock,
+  Eye,
+  PieChart,
+  TrendingUp,
+  AlertTriangle'
+ } from 'lucide-react';
+;
+export { function };
+export default function AIHealthcareAnalyticsPlatform(...args: []):  {
+
+  const features = [
+    {
+
+      icon: Brain,
+      title: 'AI-Powered Diagnosis Support',
+      description: 'Advanced machine learning algorithms assist doctors with accurate diagnosis and treatment recommendations'
+    },
+    {
+
+      icon: Activity,
+      title: 'Predictive Health Analytics',
+      description: 'AI predicts health risks and disease progression based on patient data and medical history'
+    },
+    {
+
+      icon: Heart,
+      title: 'Patient Outcome Prediction',
+      description: 'Machine learning models forecast treatment outcomes and recovery probabilities'
+    },
+    {
+
+      icon: Shield,
+      title: 'Drug Interaction Analysis',
+      description: 'AI identifies potential drug interactions and adverse effects in real-time'
+    },
+    {
+
+      icon: Zap,
+      title: 'Real-Time Monitoring',
+      description: 'Continuous patient monitoring with instant alerts for critical health changes';
+    },;
+    {;
+      icon: Eye,;
+      title: 'Medical Image Analysis',;
+      description: 'AI-powered analysis of X-rays, MRIs, and CT scans for faster, more accurate diagnosis';
+    };
+  ];
+
+  const pricingPlans = [
+    {
+
+      name: 'Clinic',
+      price: '$799',
+      period: '/month',
+      description: 'Perfect for small medical practices',
+      features: ['
+        'Up to 50 patients',Basic AI diagnosis support',Patient analytics dashboard',Basic reporting',Email support',Mobile app access',Standard integrations'
+      ],
+      popular: false
+    },
+    {
+
+      name: 'Hospital',
+      price: '$2,499',
+      period: '/month',
+      description: 'Ideal for hospitals and large practices',
+      features: ['
+        'Up to 500 patients',Advanced AI algorithms',Predictive analytics',Real-time monitoring',Priority support',Custom dashboards',Advanced integrations',Compliance reporting'
+      ],
+      popular: true
+    },
+    {
+
+      name: 'Enterprise',
+      price: '$5,999',
+      period: '/month',
+      description: 'For healthcare systems and networks',
+      features: ['
+        'Unlimited patients',Full AI suite',Custom AI models',Dedicated support team',Advanced compliance',;
+        'On-premise options',;
+        'SLA guarantees',;
+        'Custom integrations';
+      ],;
+      popular: false;
+    };
+  ];
+
+  const benefits = [
+    {
+
+      icon: Heart,
+      title: '30% Faster Diagnosis',
+      description: 'AI assistance reduces diagnosis time and improves accuracy'
+    },
+    {
+
+      icon: Target,
+      title: '95% Accuracy Rate',
+      description: 'Advanced algorithms provide highly accurate medical insights'
+    },
+    {
+
+      icon: Clock,
+      title: '24/7 Patient Monitoring',
+      description: 'Continuous monitoring ensures patient safety around the clock';
+    },;
+    {;
+      icon: BarChart3,;
+      title: '40% Cost Reduction',;
+      description: 'AI optimization reduces healthcare costs and improves efficiency';
+    };
+  ];
+
+  const useCases = [
+    {
+
+      title: 'Diagnostic Imaging',
+      description: 'AI analyzes medical images to detect abnormalities and assist radiologists',
+      icon: Eye
+    },
+    {
+
+      title: 'Patient Risk Assessment',
+      description: 'Predictive models identify high-risk patients for proactive care',
+      icon: AlertTriangle
+    },
+    {
+
+      title: 'Treatment Optimization',
+      description: 'AI recommends optimal treatment plans based on patient data and outcomes',
+      icon: Heart;
+    },;
+    {;
+      title: 'Drug Safety Monitoring',;
+      description: 'Real-time monitoring of drug interactions and adverse effects',;
+      icon: Shield;
+    };
+  ];
+
+  const complianceStandards = [;
+    'HIPAA Compliant',;
+    'FDA Approved',;
+    'ISO 13485',;
+    'SOC 2 Type II',;
+    'GDPR Compliant',;
+    'HITECH Certified';
+=======
 import React from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
 import { SEO  } from '@/components/SEO';      description: 'Real-time monitoring of drug interactions and adverse effects',;
@@ -10,13 +176,20 @@ import { SEO  } from '@/components/SEO';      description: 'Real-time monitoring
     'ISO 13485',;'
     'SOC 2 Type II',;'
     'GDPR Compliant',;'    'HITECH Certified';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
+        title="AI Healthcare Analytics Platform - Zion Tech Group"
+        description="Revolutionary AI-powered healthcare analytics platform with 95% accuracy rate. Diagnostic support, predictive analytics, and patient monitoring. Start from $799/month."
+      />
+=======
         title="AI Healthcare Analytics Platform - Zion Tech Group""        description="Revolutionary AI-powered healthcare analytics platform with 95% accuracy rate. Diagnostic support, predictive analytics, and patient monitoring. Start from $799/month."
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"

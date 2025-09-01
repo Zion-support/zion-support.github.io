@@ -8,7 +8,7 @@ export default FuturisticAnimatedBackground;
   useEffect ( () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-'
+
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
@@ -17,18 +17,24 @@ export default FuturisticAnimatedBackground;
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-    resizeCanvas();'
+    resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
     // Add enhanced grid background'
+<<<<<<< HEAD
+    const gridCanvas = document.createElement('canvas');
+    const gridCtx = gridCanvas.getContext('2d');
+    if (gridCtx) {
+=======
     const gridCanvas = document.createElement('canvas');'
     const gridCtx = gridCanvas.getContext('2d');    if (gridCtx) {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       gridCanvas.width = canvas.width;
       gridCanvas.height = canvas.height;
       
       // Draw enhanced grid'
-      gridCtx.strokeStyle = 'rgba(6, 182, 212, 0.1)';
+      gridCtx.strokeStyle = 'rgba(6, 182, 212, 0.1);
       gridCtx.lineWidth = 1;
       
       for (let x = 0; x < gridCanvas.width; x += 40) {
@@ -85,7 +91,7 @@ export default FuturisticAnimatedBackground;
     const animate = (...args: unknown[]): unknown => {;      time += 0.01;
 
       // Clear canvas with fade effect'
-      ctx.fillStyle = 'rgba(2, 6, 23, 0.1)';
+      ctx.fillStyle = 'rgba(2, 6, 23, 0.1);
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       // Create new particles
@@ -128,7 +134,7 @@ export default FuturisticAnimatedBackground;
         ctx.fill () ;
 
       // Draw grid pattern'
-      ctx.strokeStyle = 'rgba(56, 189, 248, 0.1)';
+      ctx.strokeStyle = 'rgba(56, 189, 248, 0.1);
       ctx.lineWidth = 1;
       ctx.globalAlpha = 0.3;
 
@@ -151,8 +157,8 @@ export default FuturisticAnimatedBackground;
         ctx.stroke();
 
       // Draw floating geometric shapes
-      ctx.globalAlpha = 0.1;'
-      ctx.strokeStyle = 'rgba(168, 85, 247, 0.5)';
+      ctx.globalAlpha = 0.1;
+      ctx.strokeStyle = 'rgba(168, 85, 247, 0.5);
       ctx.lineWidth = 2;
 
       // Rotating triangle
@@ -173,7 +179,12 @@ export default FuturisticAnimatedBackground;
 
       // Floating circle
       const circleSize = 20 + Math.sin(time * 2) * 10;
+<<<<<<< HEAD
+
+      ctx.strokeStyle = 'rgba(56, 189, 248, 0.5);
+=======
 '      ctx.strokeStyle = 'rgba(56, 189, 248, 0.5)';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ctx.beginPath();
       ctx.arc(circleX, circleY, circleSize, 0, Math.PI * 2);
       ctx.stroke();
@@ -182,7 +193,7 @@ export default FuturisticAnimatedBackground;
       ctx.globalAlpha = 1;
 
       // Draw energy waves'
-      ctx.strokeStyle = 'rgba(56, 189, 248, 0.2)';
+      ctx.strokeStyle = 'rgba(56, 189, 248, 0.2);
       ctx.lineWidth = 3;
 
       for (let i = 0; i < 3; i++) {
@@ -200,7 +211,7 @@ export default FuturisticAnimatedBackground;
     animate () ;
 
     return () => {
-'
+
       window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationId);
     };
@@ -210,10 +221,10 @@ export default FuturisticAnimatedBackground;
       ref = {canvasRef}
       className="fixed inset - 0 w - full h - full pointer - events - none z - 0"
       style = {
-'
+
   { background: 'radial-gradient(1200px 600px at 10% -10%, rgba(56,189,248,0.05), transparent 60%), radial-gradient(900px 500px at 110% 10%, rgba(168,85,247,0.03),;
-  ;'
-  transparent 60%)' ;
+  ;
+  transparent 60%);
 ;
 ;
 

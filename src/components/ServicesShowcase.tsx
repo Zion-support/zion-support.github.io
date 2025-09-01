@@ -1,5 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
 
@@ -15,89 +15,89 @@ import {
   MessageCircle,
   BookOpen,
   DollarSign,
-  Gauge,'
+  Gauge,
   HelpCircle} from 'lucide-react';
 
   const services = [
     {
 
-      icon: Brain,'
-      title: 'AI & Analytics','
-      description: 'Machine Learning & Data Science solutions','
-      href: '/services/ai-business-intelligence','
-      category: 'AI','
+      icon: Brain,
+      title: 'AI & Analytics',
+      description: 'Machine Learning & Data Science solutions',
+      href: '/services/ai-business-intelligence',
+      category: 'AI',
       color: 'from-purple-500 to-pink-600'},
     {
 
-      icon: Cloud,'
-      title: 'Cloud & DevOps','
-      description: 'Infrastructure & Automation','
-      href: '/services/cloud-devops','
-      category: 'Infrastructure','
+      icon: Cloud,
+      title: 'Cloud & DevOps',
+      description: 'Infrastructure & Automation',
+      href: '/services/cloud-devops',
+      category: 'Infrastructure',
       color: 'from-blue-500 to-cyan-600'},
     {
 
-      icon: Shield,'
-      title: 'Cybersecurity','
-      description: 'AI-Powered Security solutions','
-      href: '/services','
-      category: 'Security','
+      icon: Shield,
+      title: 'Cybersecurity',
+      description: 'AI-Powered Security solutions',
+      href: '/services',
+      category: 'Security',
       color: 'from-red-500 to-orange-600'},
     {
 
-      icon: Cpu,'
-      title: 'IoT & Edge','
-      description: 'Smart Devices & Networks','
-      href: '/services','
-      category: 'IoT','
+      icon: Cpu,
+      title: 'IoT & Edge',
+      description: 'Smart Devices & Networks',
+      href: '/services',
+      category: 'IoT',
       color: 'from-green-500 to-emerald-600'},
     {
 
-      icon: Lock,'
-      title: 'Blockchain','
-      description: 'DeFi & Smart Contracts','
-      href: '/services','
-      category: 'Blockchain','
+      icon: Lock,
+      title: 'Blockchain',
+      description: 'DeFi & Smart Contracts',
+      href: '/services',
+      category: 'Blockchain',
       color: 'from-yellow-500 to-orange-600'},
     {
 
-      icon: Users,'
-      title: 'Healthcare Tech','
-      description: 'AI Medicine & Diagnostics','
-      href: '/services','
-      category: 'Healthcare','
+      icon: Users,
+      title: 'Healthcare Tech',
+      description: 'AI Medicine & Diagnostics',
+      href: '/services',
+      category: 'Healthcare',
       color: 'from-pink-500 to-rose-600'},
     {
 
-      icon: Globe,'
-      title: 'Sustainability','
-      description: 'Green IT Solutions','
-      href: '/services','
-      category: 'Green IT','
+      icon: Globe,
+      title: 'Sustainability',
+      description: 'Green IT Solutions',
+      href: '/services',
+      category: 'Green IT',
       color: 'from-emerald-500 to-teal-600'},
     {
 
-      icon: ShoppingCart,'
-      title: 'Micro SaaS','
-      description: 'Productized SaaS for niches','
-      href: '/services/micro-saas-solutions','
-      category: 'SaaS','
+      icon: ShoppingCart,
+      title: 'Micro SaaS',
+      description: 'Productized SaaS for niches',
+      href: '/services/micro-saas-solutions',
+      category: 'SaaS',
       color: 'from-indigo-500 to-purple-600'},
     {
 
-      icon: MessageCircle,'
-      title: 'AI Auto Email','
-      description: 'Faster replies, CRM logging','
-      href: '/services/ai-auto-email-responder','
-      category: 'Automation','
+      icon: MessageCircle,
+      title: 'AI Auto Email',
+      description: 'Faster replies, CRM logging',
+      href: '/services/ai-auto-email-responder',
+      category: 'Automation',
       color: 'from-cyan-500 to-blue-600'},
     {
 
-      icon: Users,'
-      title: 'Mobile Surveys','
-      description: 'NPS/CSAT with AI insights','
-      href: '/services/mobile-survey','
-      category: 'Analytics','
+      icon: Users,
+      title: 'Mobile Surveys',
+      description: 'NPS/CSAT with AI insights',
+      href: '/services/mobile-survey',
+      category: 'Analytics',
       color: 'from-teal-500 to-green-600'},
   ];
 
@@ -137,7 +137,7 @@ import {
         >"
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Our Comprehensive"
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">'
+            <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
               {' '}
               Services
             </span>
@@ -199,7 +199,7 @@ import {
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}"
-          initial="hidden""
+          initial="hidden"
           whileInView="visible"'
           viewport={{ once: true, margin: '-50px' }}"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"

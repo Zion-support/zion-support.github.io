@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from 'react';'
-import { Card, CardContent, CardHeader } from '@/components/ui/card';'
-import { Button } from '@/components/ui/button';'
-import { Badge } from '@/components/ui/badge';'
+import React, { useState, useEffect } from 'react';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import { Filter, SortAsc, Star, ShoppingCart import { Footer } from '@/components/Footer';
 
 const EquipmentPage = () => {
   const [equipment, setEquipment] = useState([]);
-  const [loading, setLoading] = useState(true);'
-  const [filterCategory, setFilterCategory] = useState('');'
+  const [loading, setLoading] = useState(true);
+  const [filterCategory, setFilterCategory] = useState('');
   const [sortBy, setSortBy] = useState('newest');
-  const [priceRange, setPriceRange] = useState([0, 10000]);'
-  const [filterBrand, setFilterBrand] = useState('');'
+  const [priceRange, setPriceRange] = useState([0, 10000]);
+  const [filterBrand, setFilterBrand] = useState('');
   const [filterAvailability, setFilterAvailability] = useState('');
   const [minRating, setMinRating] = useState(0);
   const [showRecommended, setShowRecommended] = useState(false);
-'
-  const categories = ['Servers', 'Networking', 'Storage', 'Workstations', 'Security'];'
-  const brandOptions = ['Dell', 'HP', 'Cisco', 'IBM', 'Lenovo'];'
-  const availabilityOptions = ['In Stock', 'Low Stock', 'Out of Stock'];
+
+  const categories = ['Servers',Networking',Storage',Workstations',Security'];
+  const brandOptions = ['Dell',HP',Cisco',IBM',Lenovo'];
+  const availabilityOptions = ['In Stock',Low Stock',Out of Stock'];
 
   useEffect ( () => {
     // Simulate loading

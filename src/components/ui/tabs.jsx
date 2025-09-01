@@ -5,9 +5,9 @@ export function Tabs({
   children,
   defaultValue,
   value,
-  onValueChange,'
+  onValueChange,
   className = ''}) {
-'
+
   const [activeTab, setActiveTab] = useState(value || defaultValue || '');
   const handleTabChange = tab => {
 
@@ -22,7 +22,7 @@ export function Tabs({
       <div className={className}>{children}</div>
     </TabsContext.Provider>
   );
-}'
+}
 export function TabsList({ children, className = '' }) {
 
   return()
@@ -30,10 +30,10 @@ export function TabsList({ children, className = '' }) {
       {children}
     </div>
   );
-}'
+}
 export function TabsTrigger({ children, value, className = '' }) {
 
-  const context = useContext(TabsContext);'
+  const context = useContext(TabsContext);
   if (!context) throw new Error('TabsTrigger must be used within Tabs');
   const isActive = context.activeTab === value;
   return()
@@ -49,10 +49,10 @@ export function TabsTrigger({ children, value, className = '' }) {
       {children}
     </button>
   );
-}'
+}
 export function TabsContent({ children, value, className = '' }) {
 
-  const context = useContext(TabsContext);'
+  const context = useContext(TabsContext);
   if (!context) throw new Error('TabsContent must be used within Tabs');
   if (context.activeTab !== value) return null;
   return <div className={className}>{children}</div>;

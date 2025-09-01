@@ -1,6 +1,6 @@
-import React from 'react.ts';'
-import { SEO   } from '../components/SEO';'
-import { motion   } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { SEO   } from '../components/SEO';
+import { motion   } from 'framer-motion.ts';
 import { Link   } from 'react-router-dom.ts';
 
 const ServicesSitemap: React.FC = (): JSX.Element => {
@@ -177,9 +177,9 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
   return()
     <>
       <SEO"
-        title = "Services Sitemap | Zion Tech Group - Complete Service Directory""
-        description="Complete directory of all Zion Tech Group services: AI-powered micro SAAS, cloud infrastructure, data analytics, security, and more. Find the perfect solution for your business needs.""
-        keywords="Zion Tech Group services, AI services, cloud services, data analytics, cybersecurity, micro SAAS, business solutions, service directory""
+        title = "Services Sitemap | Zion Tech Group - Complete Service Directory"
+        description="Complete directory of all Zion Tech Group services: AI-powered micro SAAS, cloud infrastructure, data analytics, security, and more. Find the perfect solution for your business needs."
+        keywords="Zion Tech Group services, AI services, cloud services, data analytics, cybersecurity, micro SAAS, business solutions, service directory"
         canonical="https://ziontechgroup.com/services-sitemap"
       />
       "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -210,13 +210,13 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link "
-                  to="/ai-services-showcase""
+                  to="/ai-services-showcase"
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
                 >
                   Explore AI Services
                 </Link>
                 <Link "
-                  to="/contact""
+                  to="/contact"
                   className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
                 >
                   Get Expert Advice

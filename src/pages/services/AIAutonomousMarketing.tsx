@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -22,7 +22,7 @@ import {
   Share2,
   TrendingUp,
   Zap,
-  Shield,'
+  Shield,
   Megaphone} from 'lucide-react.ts';
 
 const AIAutonomousMarketing: React.FC = (): JSX.Element => {
@@ -30,47 +30,42 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI-Powered Marketing',
       description:'
         'Advanced machine learning for autonomous marketing strategy and execution'},
     {
 
-      icon: Target,'
+      icon: Target,
       title: 'Audience Targeting',
       description:'
         'Intelligent audience segmentation and targeting with AI-driven insights'},
     {
 
-      icon: BarChart3,'
-      title: 'Campaign Optimization','
+      icon: BarChart3,
+      title: 'Campaign Optimization',
       description: 'Real-time campaign optimization and performance analytics'},
     {
 
-      icon: Users,'
+      icon: Users,
       title: 'Customer Engagement',
       description:'
         'Automated customer engagement and personalized marketing experiences'},
     {
 
-      icon: Megaphone,'
-      title: 'Content Generation','
+      icon: Megaphone,
+      title: 'Content Generation',
       description: 'AI-powered content creation and marketing copy generation'},
     {
 
-      icon: TrendingUp,'
+      icon: TrendingUp,
       title: 'ROI Optimization',
       description:'
         'Continuous optimization of marketing spend and return on investment'},
   ];
 
   const benefits = ['
-    'Increase marketing ROI by 150%','
-    'Reduce campaign setup time by 80%','
-    'Improve conversion rates by 60%','
-    'Automate marketing workflows','
-    '24/7 autonomous operation','
-    'Real-time performance optimization',
+    'Increase marketing ROI by 150%',Reduce campaign setup time by 80%',Improve conversion rates by 60%',Automate marketing workflows',24/7 autonomous operation',Real-time performance optimization',
   ];
 
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -88,7 +83,7 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {
 "
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Transform Your Marketing with"
-              <span className="bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent">
                 {' '}
                 AI Intelligence
               </span>

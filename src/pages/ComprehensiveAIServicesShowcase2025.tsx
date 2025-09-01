@@ -1,6 +1,48 @@
+<<<<<<< HEAD
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Brain, 
+import { motion  } from 'framer - motion.ts';
+
+
+  Shield, 
+  Activity, 
+  TrendingUp, 
+  Zap, 
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  Globe,
+  Users,
+  BarChart3,
+  Lock,
+  FileText,
+  Heart,
+  DollarSign,
+  Truck,
+  Target'
+ } from 'lucide-react';
+import { Link  } from 'react-router-dom.ts';
+
+export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
+
+  const aiServices = [
+    {
+
+      icon: FileText,
+      title: "AI Legal Document Automation","
+      description: "Transform legal operations with AI-powered document automation, compliance monitoring, and intelligent legal research","
+      price: "From $199/month","
+      features["Document Generation", "Compliance Monitoring", "Legal Research", "Workflow Automation"],;"
+      link: "/services/ai-legal-document-automation","
+      category: "Legal Tech"
+=======
 import React from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
 import { SEO  } from '@/components/SEO';      category: "Legal Tech"
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
 
@@ -103,9 +145,9 @@ import { SEO  } from '@/components/SEO';      category: "Legal Tech"
   return()
     <>
       <SEO "
-        title = "Comprehensive AI Services Showcase 2025 - Zion Tech Group""
-        description="Discover our comprehensive portfolio of AI-powered micro SAAS services, IT solutions, and innovative technology services. Transform your business with cutting-edge AI solutions.""
-        canonical="/comprehensive-ai-services-showcase-2025""
+        title = "Comprehensive AI Services Showcase 2025 - Zion Tech Group"
+        description="Discover our comprehensive portfolio of AI-powered micro SAAS services, IT solutions, and innovative technology services. Transform your business with cutting-edge AI solutions."
+        canonical="/comprehensive-ai-services-showcase-2025"
         url="https://ziontechgroup.com/comprehensive-ai-services-showcase-2025"
       />
 "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">

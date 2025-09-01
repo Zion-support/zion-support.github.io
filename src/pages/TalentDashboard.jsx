@@ -166,7 +166,7 @@ function TalentDashboardContent() {
               <TabsContent value="saved" className="mt-0">"
                 <Card className="bg-muted/30">"
                   <CardContent className="pt-6 text-center">"
-                    <p className="text-muted-foreground">'
+                    <p className="text-muted-foreground">
                       You haven't saved  jobs yet.
                     </p>"
                     <Button className="mt-4" asChild>"

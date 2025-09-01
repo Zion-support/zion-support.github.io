@@ -1,84 +1,84 @@
-import React, { useState, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Shield, AlertTriangle, CheckCircle, XCircle, Download, Settings, RefreshCw, Loader2, FileText, BarChart3, Clock, Play, Square } from 'lucide-react';
 import { useSecurityCompliance } from "../hooks/useSecurityCompliance";"
-import { useAnalytics } from "../hooks/useAnalytics";'
+import { useAnalytics } from "../hooks/useAnalytics";
 export const SecurityComplianceDashboard = ({ className = '' }) => {
 
     const { trackEvent } = useAnalytics({
 
         enableTracking: true,
         enableUserBehaviorTracking: true
-    });'
+    });
     const [activeTab, setActiveTab] = useState('overview');
     const [showSettings, setShowSettings] = useState(false);
     const [copied, setCopied] = useState(false);
     const { securityEvents, complianceRules, securityMetrics, isMonitoring, isComplianceChecking, startMonitoring, stopMonitoring, addSecurityEvent, updateEventStatus, addComplianceRule, checkCompliance, generateSecurityReport, exportAuditLog, configureSecurity } = useSecurityCompliance();
     const handleStartMonitoring = useCallback(() => {
-        startMonitoring();'
-        trackEvent('security', 'dashboard', 'monitoring_started')}, [startMonitoring, trackEvent]);
+        startMonitoring();
+        trackEvent('security',dashboard',monitoring_started')}, [startMonitoring, trackEvent]);
     const handleStopMonitoring = useCallback(() => {
-        stopMonitoring();'
-        trackEvent('security', 'dashboard', 'monitoring_stopped')}, [stopMonitoring, trackEvent]);
+        stopMonitoring();
+        trackEvent('security',dashboard',monitoring_stopped')}, [stopMonitoring, trackEvent]);
     const handleCheckCompliance = useCallback(async () => {
-        await checkCompliance();'
-        trackEvent('security', 'dashboard', 'compliance_checked')}, [checkCompliance, trackEvent]);
+        await checkCompliance();
+        trackEvent('security',dashboard',compliance_checked')}, [checkCompliance, trackEvent]);
     const handleGenerateReport = useCallback(() => {
         const report = generateSecurityReport();
         navigator.clipboard.writeText(report);
         setCopied(true);
-        setTimeout(() => setCopied(false), 2000);'
-        trackEvent('security', 'dashboard', 'report_generated')}, [generateSecurityReport, trackEvent]);
+        setTimeout(() => setCopied(false), 2000);
+        trackEvent('security',dashboard',report_generated')}, [generateSecurityReport, trackEvent]);
     const handleExportAuditLog = useCallback(() => {
-        const auditLog = exportAuditLog();'
+        const auditLog = exportAuditLog();
         const blob = new Blob([auditLog], { type: 'application/json' });
-        const url = URL.createObjectURL(blob);'
+        const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
-        a.href = url;'
+        a.href = url;
         a.download = `security-audit-log-${new Date().toISOString().split('T')[0]}.json`;
         a.click();
-        URL.revokeObjectURL(url);'
-        trackEvent('security', 'dashboard', 'audit_log_exported')}, [exportAuditLog, trackEvent]);
+        URL.revokeObjectURL(url);
+        trackEvent('security',dashboard',audit_log_exported')}, [exportAuditLog, trackEvent]);
     const handleAddComplianceRule = useCallback(() => {
         const newRule = {
-'
-  name: 'Custom Compliance Rule','
-            category: 'custom','
-            description: 'Custom compliance requirement','
-            status: 'pending_review','
-            requirements['Requirement 1', 'Requirement 2'],;
+
+  name: 'Custom Compliance Rule',
+            category: 'custom',
+            description: 'Custom compliance requirement',
+            status: 'pending_review',
+            requirements['Requirement 1',Requirement 2'],;
   violations[];
 
 };
-        addComplianceRule(newRule);'
-        trackEvent('security', 'dashboard', 'compliance_rule_added')}, [addComplianceRule, trackEvent]);
+        addComplianceRule(newRule);
+        trackEvent('security',dashboard',compliance_rule_added')}, [addComplianceRule, trackEvent]);
     const getSeverityColor = (severity) => {
 
         switch (severity) {
-'
-            case 'critical': return 'text-red-600 bg-red-100';'
-            case 'high': return 'text-orange-600 bg-orange-100';'
-            case 'medium': return 'text-yellow-600 bg-yellow-100';'
-            case 'low': return 'text-green-600 bg-green-100';'
+
+            case 'critical': return 'text-red-600 bg-red-100';
+            case 'high': return 'text-orange-600 bg-orange-100';
+            case 'medium': return 'text-yellow-600 bg-yellow-100';
+            case 'low': return 'text-green-600 bg-green-100';
             default: return 'text-gray-600 bg-gray-100'}
     };
     const getStatusColor = (status) => {
 
         switch (status) {
-'
-            case 'compliant': return 'text-green-600 bg-green-100';'
-            case 'non_compliant': return 'text-red-600 bg-red-100';'
-            case 'pending_review': return 'text-yellow-600 bg-yellow-100';'
+
+            case 'compliant': return 'text-green-600 bg-green-100';
+            case 'non_compliant': return 'text-red-600 bg-red-100';
+            case 'pending_review': return 'text-yellow-600 bg-yellow-100';
             default: return 'text-gray-600 bg-gray-100'}
     };
     const getThreatLevelColor = (level) => {
 
         switch (level) {
-'
-            case 'critical': return 'text-red-600 bg-red-100 border-red-200';'
-            case 'high': return 'text-orange-600 bg-orange-100 border-orange-200';'
-            case 'medium': return 'text-yellow-600 bg-yellow-100 border-yellow-200';'
-            case 'low': return 'text-green-600 bg-green-100 border-green-200';'
+
+            case 'critical': return 'text-red-600 bg-red-100 border-red-200';
+            case 'high': return 'text-orange-600 bg-orange-100 border-orange-200';
+            case 'medium': return 'text-yellow-600 bg-yellow-100 border-yellow-200';
+            case 'low': return 'text-green-600 bg-green-100 border-green-200';
             default: return 'text-gray-600 bg-gray-100 border-gray-200'}
     };`
     return (<div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}>
@@ -116,7 +116,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
           <div className="flex items-center space-x-4">"
             <div className="flex items-center space-x-2">'`
               <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}/>"
-              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">'
+              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                 {isMonitoring ? 'Monitoring Active' : 'Monitoring Inactive'}
               </span>
             </div>
@@ -144,10 +144,10 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
       {/* Navigation Tabs */}"
       <div className="flex border-b border-gray-200 dark:border-gray-700">
         {['
-            { id: 'overview', label: 'Overview', icon: BarChart3 },'
-            { id: 'events', label: 'Security Events', icon: AlertTriangle },'
-            { id: 'compliance', label: 'Compliance', icon: CheckCircle },'
-            { id: 'threats', label: 'Threats', icon: Shield },'
+            { id: 'overview', label: 'Overview', icon: BarChart3 },
+            { id: 'events', label: 'Security Events', icon: AlertTriangle },
+            { id: 'compliance', label: 'Compliance', icon: CheckCircle },
+            { id: 'threats', label: 'Threats', icon: Shield },
             { id: 'reports', label: 'Reports', icon: FileText }`
         ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id)} className={`flex items-center space-x-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${activeTab === id'
                 ? 'border-blue-500 text-blue-600 dark:text-blue-400''`
@@ -231,7 +231,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                           <AlertTriangle className="w-4 h-4"/>
                         </div>
                         <div>'"
-                          <p className="font-medium text-gray-900 dark:text-white">{event.type.replace('_', ' ')}</p>"
+                          <p className="font-medium text-gray-900 dark:text-white">{event.type.replace('_',)}</p>"
                           <p className="text-sm text-gray-500 dark:text-gray-400">{event.details}</p>
                         </div>
                       </div>"
@@ -269,10 +269,10 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                 <button onClick = {
 
   () => addSecurityEvent({
-'
-                type: 'authentication','
-                severity: 'low','
-                details: 'Test security event','
+
+                type: 'authentication',
+                severity: 'low',
+                details: 'Test security event',
   status: 'new'
             
 "
@@ -289,8 +289,8 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                           <AlertTriangle className="w-4 h-4"/>
                         </div>
                         <div>"
-                          <p className="font-medium text-gray-900 dark:text-white">'
-                            {event.type.replace('_', ' ').toUpperCase()}
+                          <p className="font-medium text-gray-900 dark:text-white">
+                            {event.type.replace('_',).toUpperCase()}
                           </p>"
                           <p className="text-sm text-gray-500 dark:text-gray-400">
                             {event.timestamp.toLocaleString()}
@@ -351,8 +351,8 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                 {complianceRules.map((rule) => (<div key={rule.id} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">"
                     <div className="flex items-center justify-between mb-3">"
                       <h4 className="font-medium text-gray-900 dark:text-white">{rule.name}</h4>`
-                      <span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(rule.status)}`}>'
-                        {rule.status.replace('_', ' ')}
+                      <span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(rule.status)}`}>
+                        {rule.status.replace('_',)}
                       </span>
                     </div>"
                     <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">{rule.description}</p>"
@@ -408,10 +408,10 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                   <h4 className="font-medium text-gray-900 dark:text-white mb-3">Current Threat Level</h4>`
                   <div className={`p-4 rounded-lg border-2 ${getThreatLevelColor(securityMetrics.threatLevel)}`}>"
                     <p className="text-2xl font-bold text-center">{securityMetrics.threatLevel.toUpperCase()}</p>"
-                    <p className="text-center text-sm mt-2">'
-                      {securityMetrics.threatLevel === 'low' && 'Normal operations'}'
-                      {securityMetrics.threatLevel === 'medium' && 'Increased vigilance required'}'
-                      {securityMetrics.threatLevel === 'high' && 'Immediate attention needed'}'
+                    <p className="text-center text-sm mt-2">
+                      {securityMetrics.threatLevel === 'low' && 'Normal operations'}
+                      {securityMetrics.threatLevel === 'medium' && 'Increased vigilance required'}
+                      {securityMetrics.threatLevel === 'high' && 'Immediate attention needed'}
                       {securityMetrics.threatLevel === 'critical' && 'Emergency response required'}
                     </p>
                   </div>
@@ -434,7 +434,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                     </div>"
                     <div className="flex justify-between">"
                       <span className="text-gray-600 dark:text-gray-400">Last Incident:</span>"
-                      <span className="font-medium text-gray-900 dark:text-white">'
+                      <span className="font-medium text-gray-900 dark:text-white">
                         {securityMetrics.lastIncident ? securityMetrics.lastIncident.toLocaleDateString() : 'None'}
                       </span>
                     </div>
@@ -504,7 +504,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
 
 }} animate = {
 
-  { opacity: 1,'
+  { opacity: 1,
   height: 'auto' 
 
 }} exit = {

@@ -1,51 +1,51 @@
-import React, { useState } from 'react';'
-import { Header } from '@/components/Header';'
-import { Footer } from '@/components/Footer';'
-import ConnectWalletButton from '@/components/ConnectWalletButton';'
-import { useWallet } from '@/context/WalletContext';'
+import React, { useState } from 'react';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import ConnectWalletButton from '@/components/ConnectWalletButton';
+import { useWallet } from '@/context/WalletContext';
 import { Button } from '@/components/ui/button';
 import {
 
   Select,
   SelectContent,
   SelectItem,
-  SelectTrigger,'
-  SelectValue} from '@/components/ui/select';'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';'
+  SelectTrigger,
+  SelectValue} from '@/components/ui/select';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 const CHAINS = ['
-  { id: 'ethereum', name: 'Ethereum', logo: '/logos/ethereum-logo.svg' },'
-  { id: 'polygon', name: 'Polygon', logo: '/logos/polygon-logo.svg' },'
-  { id: 'arbitrum', name: 'Arbitrum', logo: '/logos/arbitrum-logo.svg' },'
-  { id: 'optimism', name: 'Optimism', logo: '/logos/optimism-logo.svg' },'
-  { id: 'avalanche', name: 'Avalanche', logo: '/logos/avalanche-logo.svg' },'
+  { id: 'ethereum', name: 'Ethereum', logo: '/logos/ethereum-logo.svg' },
+  { id: 'polygon', name: 'Polygon', logo: '/logos/polygon-logo.svg' },
+  { id: 'arbitrum', name: 'Arbitrum', logo: '/logos/arbitrum-logo.svg' },
+  { id: 'optimism', name: 'Optimism', logo: '/logos/optimism-logo.svg' },
+  { id: 'avalanche', name: 'Avalanche', logo: '/logos/avalanche-logo.svg' },
   { id: 'bnb', name: 'BNB', logo: '/logos/bnb-logo.svg' },
 ];
 function suggestChain(region, stake) {
-'
-  if (stake > 1000) return 'ethereum';'
-  if (region === 'asia') return 'bnb';'
-  if (region === 'europe') return 'polygon';'
+
+  if (stake > 1000) return 'ethereum';
+  if (region === 'asia') return 'bnb';
+  if (region === 'europe') return 'polygon';
   return 'optimism';
 }
 export default function TokenIntegrations() {
-  const { address, isConnected } = useWallet();'
-  const [fromChain, setFromChain] = useState('ethereum');'
+  const { address, isConnected } = useWallet();
+  const [fromChain, setFromChain] = useState('ethereum');
   const [toChain, setToChain] = useState('polygon');
   const [txHash, setTxHash] = useState(null);
-  const [status, setStatus] = useState(null);'
+  const [status, setStatus] = useState(null);
   const [region, setRegion] = useState('');
   const [stake, setStake] = useState(0);
   const [suggested, setSuggested] = useState(null);
   const handleBridge = () => {
-'
+
     setStatus('Bridging...');
     setTxHash(null);
     // TODO: integrate actual LayerZero bridge logic
     // Record onchain tx logs and enforce rate limits
     // Use burn-and-mint model if tokens are wrapped
     setTimeout(() => {
-'
+
       setTxHash('0xabc123');
       setStatus(`ZION$ arrived on ${toChain} in 12s`);
     }, 1200);
@@ -144,7 +144,7 @@ export default function TokenIntegrations() {
                 onChange={e => setRegion(e.target.value)}
               />
               <Input"
-                type="number""
+                type="number"
                 placeholder="Stake"
                 value={stake}
                 onChange={e => setStake(parseInt(e.target.value))}

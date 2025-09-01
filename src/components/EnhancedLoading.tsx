@@ -1,12 +1,49 @@
+<<<<<<< HEAD
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+
+  Loader2,
+  CheckCircle,
+  AlertCircle,
+  Zap,
+  Sparkles,
+  TrendingUp,
+  Cpu,
+  Database,
+  Network,
+  Shield'
+ } from 'lucide-react';
+
+interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
+
+  size?: 'sm' | 'md' | 'lg';
+  text?: string;
+  fullScreen?: boolean}
+
+export function LoadingSpinner({
+
+  size = 'md',
+  text = 'Loading...',
+  fullScreen = false;
+}: LoadingSpinnerProps) {
+
+  const sizeClasses = {
+
+  sm: 'w-8 h-8',
+    md: 'w-16 h-16',;
+  ;
+=======
 import React, { useState, useEffect, useCallback } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';  ;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
-  ;'
+  ;
   lg: 'w-32 h-32';
   ;
 
-  const containerClasses = fullScreen;'
+  const containerClasses = fullScreen;
     ? 'fixed inset-0 flex items-center justify-center bg-zion-slate-dark/95 backdrop-blur-sm z-50''
     : 'flex items-center justify-center p-8';
 
@@ -34,10 +71,8 @@ import { motion, AnimatePresence } from 'framer-motion';  ;
   {
 
                 background: ['
-                  'linear-gradient(45deg, #0ea5e9, #8b5cf6, #0ea5e9)','
-                  'linear-gradient(45deg, #8b5cf6, #0ea5e9, #8b5cf6)','
-                  'linear-gradient(45deg, #0ea5e9, #8b5cf6,'
-  #0ea5e9)';
+                  'linear-gradient(45deg, #0ea5e9, #8b5cf6, #0ea5e9),linear-gradient(45deg, #8b5cf6, #0ea5e9, #8b5cf6),linear-gradient(45deg, #0ea5e9, #8b5cf6,
+  #0ea5e9);
                 ]
 
 }}
@@ -271,9 +306,8 @@ export function SkeletonLoader(...args[]):  {
 
   {
 
-            opacity: [0.5, 1, 0.5],'
-            backgroundPosition: ['200% 0','
-  '-200% 0']
+            opacity: [0.5, 1, 0.5],
+            backgroundPosition: ['200% 0',-200% 0']
 
 }}
           transition = {
@@ -288,6 +322,5 @@ export function SkeletonLoader(...args[]):  {
           style = {
 
   {
-'
-            background: 'linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1), transparent)',
-'"`
+
+            background: 'linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1), transparent),"`

@@ -16,76 +16,43 @@ import {
 export default function AICybersecurityThreatHunter(...args: any[]): any {
 
   const features = ['
-    'AI-powered threat detection and hunting','
-    'Real-time security monitoring 24/7','
-    'Advanced behavioral analytics','
-    'Automated incident response','
-    'Threat intelligence integration','
-    'Zero-day vulnerability detection','
-    'Cloud security posture management','
-    'Compliance reporting (SOC 2, ISO 27001)','
-    'Penetration testing automation','
-    'Security awareness training platform',
+    'AI-powered threat detection and hunting',Real-time security monitoring 24/7',Advanced behavioral analytics',Automated incident response',Threat intelligence integration',Zero-day vulnerability detection',Cloud security posture management',Compliance reporting (SOC 2, ISO 27001),Penetration testing automation',Security awareness training platform',
   ];
 
   const benefits = ['
-    'Detect threats 10x faster than traditional methods','
-    'Reduce false positives by 80%','
-    'Automated response reduces incident time by 60%','
-    '24/7 security monitoring without human fatigue','
-    'Predictive threat intelligence','
-    'Comprehensive compliance coverage',
+    'Detect threats 10x faster than traditional methods',Reduce false positives by 80%',Automated response reduces incident time by 60%',24/7 security monitoring without human fatigue',Predictive threat intelligence',Comprehensive compliance coverage',
   ];
 
   const useCases = ['
-    'Enterprise cybersecurity operations','
-    'Financial services security','
-    'Healthcare data protection','
-    'Government security compliance','
-    'E-commerce fraud prevention','
-    'Critical infrastructure protection',
+    'Enterprise cybersecurity operations',Financial services security',Healthcare data protection',Government security compliance',E-commerce fraud prevention',Critical infrastructure protection',
   ];
 
   const tiers = [
     {
-'
-      name: 'Essential','
+
+      name: 'Essential',
       price: '$2,499/mo',
       details: ['
-        'Up to 100 endpoints','
-        'Basic threat detection','
-        'Email support','
-        'Standard compliance',
+        'Up to 100 endpoints',Basic threat detection',Email support',Standard compliance',
       ]},
     {
-'
-      name: 'Professional','
+
+      name: 'Professional',
       price: '$5,999/mo',
       details: ['
-        'Up to 1000 endpoints','
-        'Advanced threat hunting','
-        '24/7 support','
-        'Full compliance suite',
+        'Up to 1000 endpoints',Advanced threat hunting',24/7 support',Full compliance suite',
       ]},
     {
-'
-      name: 'Enterprise','
+
+      name: 'Enterprise',
       price: '$15,999/mo',
       details: ['
-        'Unlimited endpoints','
-        'Custom AI models','
-        'Dedicated team','
-        'White-label solution',
+        'Unlimited endpoints',Custom AI models',Dedicated team',White-label solution',
       ]},
   ];
 
   const securityFeatures = ['
-    'Machine learning threat detection','
-    'Behavioral analysis engine','
-    'Threat intelligence feeds','
-    'Automated incident response','
-    'Security orchestration','
-    'Compliance automation',
+    'Machine learning threat detection',Behavioral analysis engine',Threat intelligence feeds',Automated incident response',Security orchestration',Compliance automation',
   ];
 
   return()
@@ -146,15 +113,15 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {
             </div>"
             <div className="mt-6 flex flex-wrap gap-3">
               <a"
-                href="/pricing""
+                href="/pricing"
                 className="px-5 py-3 bg-red-600/10 text-red-600 rounded-lg hover:bg-red-600/20 transition-colors inline-flex items-center"
               >"
                 View Full Pricing <ExternalLink className="w-4 h-4 ml-2" />
               </a>
               <a"
-                href="https://ziontechgroup.com""
-                target="_blank""
-                rel="noreferrer""
+                href="https://ziontechgroup.com"
+                target="_blank"
+                rel="noreferrer"
                 className="px-5 py-3 border border-red-600 text-red-600 rounded-lg inline-flex items-center"
               >"
                 Learn More <ExternalLink className="w-4 h-4 ml-2" />              </a>
@@ -236,24 +203,24 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {
           </div>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="inline-flex items-center px-5 py-3 bg-red-600 text-white rounded-lg"
             >"
               <Phone className="w-4 h-4 mr-2" /> +1 302 464 0950
             </a>
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="inline-flex items-center px-5 py-3 border border-red-600 text-red-600 rounded-lg"
             >"
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com
             </a>
           </div>"
-          <div className="mt-4 text-sm text-zion-slate-light">'
+          <div className="mt-4 text-sm text-zion-slate-light">
             Visit us at:{' '}
             <a"
-              href="https://ziontechgroup.com""
-              target="_blank""
-              rel="noreferrer""
+              href="https://ziontechgroup.com"
+              target="_blank"
+              rel="noreferrer"
               className="text-red-600 hover:underline"
             >
               https://ziontechgroup.com            </a>

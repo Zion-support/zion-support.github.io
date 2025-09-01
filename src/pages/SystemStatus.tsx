@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -14,14 +14,30 @@ import {
   Brain,
   Zap,
   BarChart3,
-  TrendingUp,'
+  TrendingUp,
   RefreshCw} from 'lucide-react';
+<<<<<<< HEAD
+
+interface ServiceStatus {
+
+  id: string;
+  name: string;
+  status: 'operational' | 'degraded' | 'outage' | 'maintenance';
+  uptime: number;
+  responseTime: number;
+  lastUpdated: string;
+  description: string;
+  icon: React.ComponentType < any>;
+}
+
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface Incident {
 
   id: string;
   title: string;
-  description: string;'
-  status: 'investigating' | 'identified' | 'monitoring' | 'resolved';'
+  description: string;
+  status: 'investigating' | 'identified' | 'monitoring' | 'resolved';
   severity: 'low' | 'medium' | 'high' | 'critical';
   startTime: string;
   endTime?: string;
@@ -30,78 +46,78 @@ interface Incident {
 ;
 const services: ServiceStatus[] = [
   {
-'
-    id: 'api','
-    name: 'API Services','
+
+    id: 'api',
+    name: 'API Services',
     status: 'operational',
     uptime: 99.99,
-    responseTime: 45,'
-    lastUpdated: '2025-08-27T16:48:00Z','
+    responseTime: 45,
+    lastUpdated: '2025-08-27T16:48:00Z',
     description: 'Core API endpoints and microservices',
     icon: Server},
   {
-'
-    id: 'database','
-    name: 'Database Systems','
+
+    id: 'database',
+    name: 'Database Systems',
     status: 'operational',
     uptime: 99.95,
-    responseTime: 12,'
-    lastUpdated: '2025-08-27T16:48:00Z','
+    responseTime: 12,
+    lastUpdated: '2025-08-27T16:48:00Z',
     description: 'Primary and replica database clusters',
     icon: Database},
   {
-'
-    id: 'web','
-    name: 'Web Application','
+
+    id: 'web',
+    name: 'Web Application',
     status: 'operational',
     uptime: 99.98,
-    responseTime: 180,'
-    lastUpdated: '2025-08-27T16:48:00Z','
+    responseTime: 180,
+    lastUpdated: '2025-08-27T16:48:00Z',
     description: 'Main website and user interface',
     icon: Globe},
   {
-'
-    id: 'security','
-    name: 'Security Services','
+
+    id: 'security',
+    name: 'Security Services',
     status: 'operational',
     uptime: 100.0,
-    responseTime: 8,'
-    lastUpdated: '2025-08-27T16:48:00Z','
+    responseTime: 8,
+    lastUpdated: '2025-08-27T16:48:00Z',
     description: 'Authentication, authorization, and threat detection',
     icon: Shield},
   {
-'
-    id: 'ai','
-    name: 'AI Services','
+
+    id: 'ai',
+    name: 'AI Services',
     status: 'operational',
     uptime: 99.92,
-    responseTime: 320,'
-    lastUpdated: '2025-08-27T16:48:00Z','
+    responseTime: 320,
+    lastUpdated: '2025-08-27T16:48:00Z',
     description: 'Machine learning models and AI processing',
     icon: Brain},
   {
-'
-    id: 'analytics','
-    name: 'Analytics Platform','
+
+    id: 'analytics',
+    name: 'Analytics Platform',
     status: 'operational',
     uptime: 99.97,
-    responseTime: 95,'
-    lastUpdated: '2025-08-27T16:48:00Z','
+    responseTime: 95,
+    lastUpdated: '2025-08-27T16:48:00Z',
     description: 'Data analytics and reporting services',
     icon: BarChart3},
 ];
 ;
 const incidents: Incident[] = [
   {
-'
-    id: 'inc-001','
+
+    id: 'inc-001',
     title: 'Scheduled Maintenance - Database Optimization',
     description:'
-      'Routine database maintenance to improve performance and reliability','
-    status: 'resolved','
-    severity: 'low','
-    startTime: '2025-08-27T02:00:00Z','
-    endTime: '2025-08-27T04:00:00Z','
+      'Routine database maintenance to improve performance and reliability',
+    status: 'resolved',
+    severity: 'low',
+    startTime: '2025-08-27T02:00:00Z',
+    endTime: '2025-08-27T04:00:00Z',
     affectedServices: ['database']},
 ];
 ;
@@ -124,13 +140,13 @@ const SystemStatus: React.FC = () => {
   const getStatusColor = (status: string) => {
 
     switch (status) {
-'
+
       case 'operational':'
-        return 'text-green-400 bg-green-500/20';'
+        return 'text-green-400 bg-green-500/20';
       case 'degraded':'
-        return 'text-yellow-400 bg-yellow-500/20';'
+        return 'text-yellow-400 bg-yellow-500/20';
       case 'outage':'
-        return 'text-red-400 bg-red-500/20';'
+        return 'text-red-400 bg-red-500/20';
       case 'maintenance':'
         return 'text-blue-400 bg-blue-500/20';
       default:'
@@ -141,13 +157,13 @@ const SystemStatus: React.FC = () => {
   const getStatusIcon = (status: string) => {
 
     switch (status) {
-'
+
       case 'operational':
-        return <CheckCircle className="w-5 h-5" />;'
+        return <CheckCircle className="w-5 h-5" />;
       case 'degraded':"
-        return <AlertTriangle className="w-5 h-5" />;'
+        return <AlertTriangle className="w-5 h-5" />;
       case 'outage':"
-        return <XCircle className="w-5 h-5" />;'
+        return <XCircle className="w-5 h-5" />;
       case 'maintenance':"
         return <Clock className="w-5 h-5" />;
       default:"
@@ -158,13 +174,13 @@ const SystemStatus: React.FC = () => {
   const getSeverityColor = (severity: string) => {
 
     switch (severity) {
-'
+
       case 'critical':'
-        return 'text-red-400 bg-red-500/20';'
+        return 'text-red-400 bg-red-500/20';
       case 'high':'
-        return 'text-orange-400 bg-orange-500/20';'
+        return 'text-orange-400 bg-orange-500/20';
       case 'medium':'
-        return 'text-yellow-400 bg-yellow-500/20';'
+        return 'text-yellow-400 bg-yellow-500/20';
       case 'low':'
         return 'text-blue-400 bg-blue-500/20';
       default:'
@@ -174,9 +190,9 @@ const SystemStatus: React.FC = () => {
 
   const overallStatus = services.every('
     service => service.status === 'operational'
-  )'
+  )
     ? 'operational''
-    : services.some(service => service.status === 'outage')'
+    : services.some(service => service.status === 'outage')
       ? 'outage''
       : 'degraded';
 
@@ -199,7 +215,7 @@ const SystemStatus: React.FC = () => {
               <span className="text-white">Status</span>
             </h1>
 "
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">'
+            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Real-time monitoring of our platform's performance, uptime, and
               service status. Stay informed about any issues or maintenance
               activities.
@@ -421,7 +437,7 @@ const SystemStatus: React.FC = () => {
                         {incident.endTime && (
                           <>"
                             <span className="mx-2">•</span>
-                            <span>'
+                            <span>
                               Resolved:{' '}
                               {new Date(incident.endTime).toLocaleString()}
                             </span>
@@ -483,8 +499,14 @@ const SystemStatus: React.FC = () => {
               <h3 className="text-xl font-semibold text-white mb-4">
                 Technical Support
               </h3>"
+<<<<<<< HEAD
+              <p className="text-gray-300 mb-6">
+                If you're experiencing issues not reflected in our status page,
+                please contact our technical support team.
+=======
               <p className="text-gray-300 mb-6">'
                 If you're experiencing issues not reflected in our status page,                please contact our technical support team.
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               </p>"
               <div className="space-y-2 text-gray-400">
                 <p>Email: support@ziontechgroup.com</p>

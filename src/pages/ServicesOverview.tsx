@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';'
+import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -40,130 +40,196 @@ import {
   Sparkles,
   DollarSign,
   Users,
-  Eye,'
-  ArrowUpRight} from 'lucide-react';'
-import { SEO } from '../components/SEO';'
+  Eye,
+  ArrowUpRight} from 'lucide-react';
+import { SEO } from '../components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 
 const categoryIcons: Record<string, React.ReactNode> = {
-'
-  'AI & Analytics': <Brain className="w-6 h-6" />,'"
-  'AI & Sales': <TrendingUp className="w-6 h-6" />,'"
-  'AI & Support': <MessageCircle className="w-6 h-6" />,'"
-  'AI & Finance': <DollarSign className="w-6 h-6" />,'"
-  'AI & Operations': <Settings className="w-6 h-6" />,'"
-  'AI & HR': <Users className="w-6 h-6" />,'"
-  'AI & Management': <Target className="w-6 h-6" />,'"
-  'AI & Marketing': <BarChart3 className="w-6 h-6" />,'"
-  'AI & Education': <GraduationCap className="w-6 h-6" />,'"
-  'AI & Legal': <FileText className="w-6 h-6" />,'"
+
+  'AI & Analytics': <Brain className="w-6 h-6" />,"
+  'AI & Sales': <TrendingUp className="w-6 h-6" />,"
+  'AI & Support': <MessageCircle className="w-6 h-6" />,"
+  'AI & Finance': <DollarSign className="w-6 h-6" />,"
+  'AI & Operations': <Settings className="w-6 h-6" />,"
+  'AI & HR': <Users className="w-6 h-6" />,"
+  'AI & Management': <Target className="w-6 h-6" />,"
+  'AI & Marketing': <BarChart3 className="w-6 h-6" />,"
+  'AI & Education': <GraduationCap className="w-6 h-6" />,"
+  'AI & Legal': <FileText className="w-6 h-6" />,"
   'AI & Healthcare': <Heart className="w-6 h-6" />,"
-  Cybersecurity: <Shield className="w-6 h-6" />,'"
-  'Cloud & DevOps': <Cloud className="w-6 h-6" />,'"
+  Cybersecurity: <Shield className="w-6 h-6" />,"
+  'Cloud & DevOps': <Cloud className="w-6 h-6" />,"
   'IoT & Edge': <Cpu className="w-6 h-6" />,"
-  Blockchain: <Lock className="w-6 h-6" />,'"
+  Blockchain: <Lock className="w-6 h-6" />,"
   'Quantum Computing': <Atom className="w-6 h-6" />,"
-  Sustainability: <Leaf className="w-6 h-6" />,'"
+  Sustainability: <Leaf className="w-6 h-6" />,"
   'Space Tech': <Satellite className="w-6 h-6" />,"
   FinTech: <DollarSign className="w-6 h-6" />,"
-  Healthcare: <Heart className="w-6 h-6" />,'"
-  'E-commerce': <ShoppingCart className="w-6 h-6" />,'"
+  Healthcare: <Heart className="w-6 h-6" />,"
+  'E-commerce': <ShoppingCart className="w-6 h-6" />,"
   'Content & Media': <BookOpen className="w-6 h-6" />,"
   Productivity: <Settings className="w-6 h-6" />,"
   Analytics: <BarChart3 className="w-6 h-6" />,"
   Automation: <Zap className="w-6 h-6" />,"
-  Innovation: <Lightbulb className="w-6 h-6" />,'"
+  Innovation: <Lightbulb className="w-6 h-6" />,"
   'Emerging Tech': <Sparkles className="w-6 h-6" />};
 const categoryColors: Record<string, string> = {
-'
-  'AI & Analytics': 'from-purple-600 to-pink-600','
-  'AI & Sales': 'from-blue-600 to-cyan-600','
-  'AI & Support': 'from-green-600 to-emerald-600','
-  'AI & Finance': 'from-yellow-600 to-orange-600','
-  'AI & Operations': 'from-indigo-600 to-purple-600','
-  'AI & HR': 'from-pink-600 to-rose-600','
-  'AI & Management': 'from-cyan-600 to-blue-600','
-  'AI & Marketing': 'from-orange-600 to-red-600','
-  'AI & Education': 'from-emerald-600 to-green-600','
-  'AI & Legal': 'from-violet-600 to-purple-600','
-  'AI & Healthcare': 'from-red-600 to-pink-600','
-  Cybersecurity: 'from-red-600 to-orange-600','
-  'Cloud & DevOps': 'from-blue-600 to-indigo-600','
-  'IoT & Edge': 'from-green-600 to-teal-600','
-  Blockchain: 'from-yellow-600 to-orange-600','
-  'Quantum Computing': 'from-purple-600 to-indigo-600','
-  Sustainability: 'from-green-600 to-emerald-600','
-  'Space Tech': 'from-indigo-600 to-purple-600','
-  FinTech: 'from-emerald-600 to-teal-600','
-  Healthcare: 'from-red-600 to-pink-600','
-  'E-commerce': 'from-blue-600 to-cyan-600','
-  'Content & Media': 'from-purple-600 to-pink-600','
-  Productivity: 'from-orange-600 to-red-600','
-  Analytics: 'from-cyan-600 to-blue-600','
-  Automation: 'from-green-600 to-emerald-600','
-  Innovation: 'from-yellow-600 to-orange-600','
-  'Emerging Tech': 'from-purple-600 to-indigo-600'};
+
+  'AI & Analytics': 'from-purple-600 to-pink-600',AI & Sales': 'from-blue-600 to-cyan-600',AI & Support': 'from-green-600 to-emerald-600',AI & Finance': 'from-yellow-600 to-orange-600',AI & Operations': 'from-indigo-600 to-purple-600',AI & HR': 'from-pink-600 to-rose-600',AI & Management': 'from-cyan-600 to-blue-600',AI & Marketing': 'from-orange-600 to-red-600',AI & Education': 'from-emerald-600 to-green-600',AI & Legal': 'from-violet-600 to-purple-600',AI & Healthcare': 'from-red-600 to-pink-600',
+  Cybersecurity: 'from-red-600 to-orange-600',Cloud & DevOps': 'from-blue-600 to-indigo-600',IoT & Edge': 'from-green-600 to-teal-600',
+  Blockchain: 'from-yellow-600 to-orange-600',Quantum Computing': 'from-purple-600 to-indigo-600',
+  Sustainability: 'from-green-600 to-emerald-600',Space Tech': 'from-indigo-600 to-purple-600',
+  FinTech: 'from-emerald-600 to-teal-600',
+  Healthcare: 'from-red-600 to-pink-600',E-commerce': 'from-blue-600 to-cyan-600',Content & Media': 'from-purple-600 to-pink-600',
+  Productivity: 'from-orange-600 to-red-600',
+  Analytics: 'from-cyan-600 to-blue-600',
+  Automation: 'from-green-600 to-emerald-600',
+  Innovation: 'from-yellow-600 to-orange-600',Emerging Tech': 'from-purple-600 to-indigo-600'};
 
 const serviceCategories = [
   {
-'
+
     name: 'AI & Machine Learning',
-    icon: Brain,'
+    icon: Brain,
     color: 'from-purple-600 to-pink-600',
     description:'
       'Advanced AI solutions for business automation and intelligence',
     count: 0},
   {
-'
+
     name: 'Cybersecurity & Compliance',
-    icon: Shield,'
-    color: 'from-red-600 to-orange-600','
+    icon: Shield,
+    color: 'from-red-600 to-orange-600',
     description: 'Enterprise-grade security and compliance solutions',
     count: 0},
   {
-'
+
     name: 'Cloud & DevOps',
-    icon: Cloud,'
-    color: 'from-blue-600 to-indigo-600','
+    icon: Cloud,
+    color: 'from-blue-600 to-indigo-600',
     description: 'Cloud infrastructure and development operations',
     count: 0},
   {
-'
+
     name: 'IoT & Edge Computing',
-    icon: Cpu,'
-    color: 'from-green-600 to-teal-600','
+    icon: Cpu,
+    color: 'from-green-600 to-teal-600',
     description: 'Internet of Things and edge computing solutions',
     count: 0},
   {
-'
+
     name: 'Digital Transformation',
-    icon: Rocket,'
-    color: 'from-orange-600 to-red-600','
+    icon: Rocket,
+    color: 'from-orange-600 to-red-600',
     description: 'Business transformation and modernization',
     count: 0},
   {
-'
+
     name: 'Emerging Technologies',
-    icon: Sparkles,'
-    color: 'from-yellow-600 to-orange-600','
+    icon: Sparkles,
+    color: 'from-yellow-600 to-orange-600',
     description: 'Cutting-edge technologies and innovations',
     count: 0},
   {
-'
+
     name: 'Micro SaaS Solutions',
-    icon: ShoppingCart,'
-    color: 'from-teal-600 to-cyan-600','
+    icon: ShoppingCart,
+    color: 'from-teal-600 to-cyan-600',
     description: 'Scalable software-as-a-service solutions',
     count: 0},
   {
-'
+
     name: 'Healthcare & Life Sciences',
-    icon: Heart,'
-    color: 'from-red-600 to-pink-600','
+    icon: Heart,
+    color: 'from-red-600 to-pink-600',
     description: 'Healthcare technology and life sciences solutions',
     count: 0},
 ];
+<<<<<<< HEAD
+
+export default function ServicesOverview() {
+
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [priceRange, setPriceRange] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<string>('name');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+
+  const categories = useMemo(() => {
+    const cats = [
+      ...new Set()
+        INNOVATIVE_MICRO_SAAS_SERVICES_2025.map(service => service.category)
+      ),
+    ];
+    return cats.sort();
+  }, []);
+
+  // Calculate service counts for each category
+  const categoriesWithCounts = useMemo(() => {
+    return serviceCategories.map(cat => {
+
+      const count = INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(service => {
+
+        if (cat.name === 'AI & Machine Learning') {
+
+          return service.category.includes('AI');
+        } else if (cat.name === 'Cybersecurity & Compliance') {
+
+          return ('
+            service.category.includes('Cybersecurity') ||'
+            service.category.includes('Security')
+          );
+        } else if (cat.name === 'Cloud & DevOps') {
+
+          return ('
+            service.category.includes('Cloud') ||'
+            service.category.includes('DevOps')
+          );
+        } else if (cat.name === 'IoT & Edge Computing') {
+
+          return ('
+            service.category.includes('IoT') ||'
+            service.category.includes('Edge')
+          );
+        } else if (cat.name === 'Digital Transformation') {
+
+          return ('
+            service.category.includes('Digital') ||'
+            service.category.includes('Transformation')
+          );
+        } else if (cat.name === 'Emerging Technologies') {
+
+          return ('
+            service.category.includes('Quantum') ||'
+            service.category.includes('Space') ||'
+            service.category.includes('Blockchain')
+          );
+        } else if (cat.name === 'Micro SaaS Solutions') {
+
+          return ('
+            service.category.includes('Micro SaaS') ||'
+            service.category.includes('SaaS')
+          );
+        } else if (cat.name === 'Healthcare & Life Sciences') {
+
+          return ('
+            service.category.includes('Healthcare') ||'
+            service.category.includes('Health')
+          );
+        }
+        return false;
+      }) .length;
+      return { ...cat, count };
+    }) ;
+  }, []) ;
+
+  const filteredServices = useMemo ( () => {
+    let filtered = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
+
+=======
   
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     // Filter by search query
     if (searchQuery) {
 
@@ -193,12 +259,18 @@ const serviceCategories = [
 
       filtered = filtered.filter(service => {
 
+<<<<<<< HEAD
+        const price = service.price;
+        switch (priceRange) {
+
+=======
         const price = service.price;        switch (priceRange) {
 '
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           case 'low':
-            return price <= 1000;'
+            return price <= 1000;
           case 'medium':
-            return price > 1000 && price <= 3000;'
+            return price > 1000 && price <= 3000;
           case 'high':
             return price > 3000;
           default:
@@ -210,13 +282,13 @@ const serviceCategories = [
     filtered.sort((a, b) => {
 
       switch (sortBy) {
-'
+
         case 'name':
-          return a.title.localeCompare(b.title);'
+          return a.title.localeCompare(b.title);
         case 'price-low':
-          return a.price - b.price;'
+          return a.price - b.price;
         case 'price-high':
-          return b.price - a.price;'
+          return b.price - a.price;
         case 'category':
           return a.category.localeCompare (b.category) ;
         default:
@@ -228,17 +300,23 @@ const serviceCategories = [
   }, [searchQuery, selectedCategory, priceRange, sortBy]) ;
 
   const contactInfo = {
-'
-    phone: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com','
-    website: 'https://ziontechgroup.com','
+
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    website: 'https://ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'};
 
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
+<<<<<<< HEAD
+        title="Services Overview - Zion Tech Group"
+        description="Comprehensive overview of all our innovative services including AI solutions, cybersecurity, cloud services, IoT, and emerging technologies. Transform your business with our cutting-edge solutions."
+      />
+=======
         title="Services Overview - Zion Tech Group""        description="Comprehensive overview of all our innovative services including AI solutions, cybersecurity, cloud services, IoT, and emerging technologies. Transform your business with our cutting-edge solutions."
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
@@ -300,11 +378,11 @@ const serviceCategories = [
               <div>"                <p className="text-sm text-blue-100">Website</p>
                 <a
                   href={contactInfo.website}"
-                  className="font-semibold hover:underline""
-                  target="_blank""
+                  className="font-semibold hover:underline"
+                  target="_blank"
                   rel="noopener noreferrer"
-                >'
-                  {contactInfo.website.replace('https://', '')}
+                >
+                  {contactInfo.website.replace('https://',)}
                 </a>
               </div>
             </div>"
@@ -339,7 +417,7 @@ const serviceCategories = [
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}"
                 className="group cursor-pointer"
-                onClick={() =>'
+                onClick={() =>
                   setSelectedCategory(category.name === 'all' ? 'all' : 'all')
                 }
               >"
@@ -387,7 +465,12 @@ const serviceCategories = [
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
+<<<<<<< HEAD
+                  type="text"
+                  placeholder="Search services..."
+=======
                   type="text""                  placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -443,7 +526,7 @@ const serviceCategories = [
                 <button'
                   onClick={() => setViewMode('grid')}`
                   className={`px-4 py-2 rounded-lg transition-colors duration-300 ${
-'
+
                     viewMode === 'grid''
                       ? 'bg-blue-600 text-white''
                       : 'bg-white/20 text-white hover:bg-white/30'`
@@ -454,7 +537,7 @@ const serviceCategories = [
                 <button'
                   onClick={() => setViewMode('list')}`
                   className={`px-4 py-2 rounded-lg transition-colors duration-300 ${
-'
+
                     viewMode === 'list''
                       ? 'bg-blue-600 text-white''
                       : 'bg-white/20 text-white hover:bg-white/30'`
@@ -480,7 +563,7 @@ const serviceCategories = [
               business operations
             </p>
           </div>
-'
+
           {viewMode === 'grid' ? ("
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredServices.map((service, index) => (
@@ -693,9 +776,9 @@ const serviceCategories = [
               </div>
               <button
                 onClick={() => {
-'
-                  setSearchQuery('');'
-                  setSelectedCategory('all');'
+
+                  setSearchQuery('');
+                  setSelectedCategory('all');
                   setPriceRange('all');
                 }}"                className="text-blue-400 hover:text-blue-300 underline"
               >
@@ -717,7 +800,7 @@ const serviceCategories = [
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>"
-            <p className="text-xl text-gray-300 mb-8">'
+            <p className="text-xl text-gray-300 mb-8">
               Let's discuss how our comprehensive services can drive growth,
               efficiency, and competitive advantage for your organization.
             </p>
@@ -760,8 +843,8 @@ const serviceCategories = [
                 </h3>"                <p className="text-gray-300 mb-3">Explore our full portfolio</p>
                 <a
                   href={contactInfo.website}"
-                  target="_blank""
-                  rel="noopener noreferrer""
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-green-400 hover:text-green-300 font-semibold flex items-center justify-center space-x-1"
                 >
                   <span>Visit Site</span>"

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react.ts';'
+import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence } from 'framer-motion.ts';
 import {
 
@@ -40,6 +40,67 @@ import {
   Clock,
   ArrowRight,
   ChevronDown,
+<<<<<<< HEAD
+  CheckCircle,
+  ExternalLink} from 'lucide-react.ts';
+import { SEO } from '@/components/SEO';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from '../data/innovativeMicroSaasServices2028';
+import { COMPREHENSIVE_IT_SERVICES_2028 } from '../data/comprehensiveITServices2028';
+import { COMPREHENSIVE_PRICING_2028 } from '../data/comprehensivePricingGuide2028';
+
+export default function Services2028(...args: any[]): any {
+
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+  const [sortBy, setSortBy] = useState('featured');
+
+  // Combine all services
+  const allServices = [
+    ...INNOVATIVE_MICRO_SAAS_SERVICES_2028,
+    ...COMPREHENSIVE_IT_SERVICES_2028,
+  ];
+
+  // Get unique categories
+  const categories = ['
+    'all',
+    ...Array.from(new Set(allServices.map(s => s.category))),
+  ];
+
+  // Filter services based on search and filters
+  const filteredServices = allServices.filter(service => {
+
+    const matchesSearch =
+      service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      service.tags.some(tag =>
+        tag.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+
+    const matchesCategory ='
+      selectedCategory === 'all' || service.category === selectedCategory;
+
+    const matchesPrice ='
+      selectedPriceRange === 'all' ||'
+      (selectedPriceRange === 'low' && service.price < 2000) ||'
+      (selectedPriceRange === 'medium' &&
+        service.price >= 2000 &&
+        service.price < 5000) ||'
+      (selectedPriceRange === 'high' && service.price >= 5000);
+
+    return matchesSearch && matchesCategory && matchesPrice;
+  }) ;
+
+  // Sort services
+  const sortedServices = [...filteredServices].sort((a, b) => {
+
+    switch (sortBy) {
+
+      case 'price-low':
+        return a.price - b.price;
+      case 'price-high':
+        return b.price - a.price;
+=======
   CheckCircle,'
   ExternalLink} from 'lucide-react.ts';'
 import { SEO } from '@/components/SEO';'
@@ -47,8 +108,9 @@ import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from '../data/innovativeMicroSaas
 import { COMPREHENSIVE_IT_SERVICES_2028 } from '../data/comprehensiveITServices2028';'
 import { COMPREHENSIVE_PRICING_2028 } from '../data/comprehensivePricingGuide2028';      case 'price-high':
         return b.price - a.price;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'rating':
-        return b.rating - a.rating;'
+        return b.rating - a.rating;
       case 'name':
         return a.title.localeCompare (b.title) ;
       default:
@@ -57,10 +119,10 @@ import { COMPREHENSIVE_PRICING_2028 } from '../data/comprehensivePricingGuide202
   }) ;
 
   const contactInfo = {
-'
-    phone: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com','
-    website: 'https://ziontechgroup.com','
+
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    website: 'https://ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'};
 
   return()    <div className="min-h-screen bg-cyber-black">
@@ -93,9 +155,16 @@ import { COMPREHENSIVE_PRICING_2028 } from '../data/comprehensivePricingGuide202
       </div>
 
       <SEO"
+<<<<<<< HEAD
+        title="2028 Services - Zion Tech Group | Revolutionary AI & IT Solutions"
+        description="Discover our comprehensive 2028 services including AI Business Intelligence, Quantum Computing, Blockchain & Web3, Edge Computing, and enterprise IT solutions. Transform your business with cutting-edge technology."
+        keywords="2028 services, AI business intelligence, quantum computing, blockchain, web3, edge computing, IT services, Zion Tech Group"
+      />
+=======
         title="2028 Services - Zion Tech Group | Revolutionary AI & IT Solutions""
         description="Discover our comprehensive 2028 services including AI Business Intelligence, Quantum Computing, Blockchain & Web3, Edge Computing, and enterprise IT solutions. Transform your business with cutting-edge technology.""        keywords="2028 services, AI business intelligence, quantum computing, blockchain, web3, edge computing, IT services, Zion Tech Group"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 overflow-hidden">"
@@ -129,13 +198,13 @@ import { COMPREHENSIVE_PRICING_2028 } from '../data/comprehensivePricingGuide202
             </div>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="#services""
+                href="#services"
                 className="btn-futuristic btn-primary text-lg px-8 py-4"
               >
                 Explore Services
               </a>
               <a"
-                href="/contact""
+                href="/contact"
                 className="btn-futuristic btn-secondary text-lg px-8 py-4"
               >
                 Get Free Quote
@@ -155,7 +224,12 @@ import { COMPREHENSIVE_PRICING_2028 } from '../data/comprehensivePricingGuide202
                 <div className="relative">"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neon-cyan" />
                   <input"
+<<<<<<< HEAD
+                    type="text"
+                    placeholder="Search services..."
+=======
                     type="text""                    placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     value={searchQuery}
                     onChange={e => setSearchQuery(e.target.value)}"
                     className="w-full pl-10 pr-4 py-3 bg-cyber-black/70 border border-neon-cyan/30 rounded-lg text-white placeholder-neon-cyan/50 focus:border-neon-cyan focus:outline-none focus:ring-2 focus:ring-neon-cyan/20 transition-all duration-300"
@@ -171,7 +245,7 @@ import { COMPREHENSIVE_PRICING_2028 } from '../data/comprehensivePricingGuide202
                   className="w-full px-4 py-3 bg-cyber-black/70 border border-neon-blue/30 rounded-lg text-white focus: anyborder-neon-blue focus:outline-none focus:ring-2 focus:ring-neon-blue/20 transition-all duration-300"
                 >
                   {categories.map(category => (
-                    <option key={category} value={category}>'
+                    <option key={category} value={category}>
                       {category === 'all' ? 'All Categories' : category}
                     </option>) ) }
                 </select>
@@ -316,7 +390,7 @@ import { COMPREHENSIVE_PRICING_2028 } from '../data/comprehensivePricingGuide202
                     Learn More
                   </a>
                   <a"
-                    href="/contact""
+                    href="/contact"
                     className="btn-futuristic btn-secondary w-full text-center"
                   >
                     Get Quote
@@ -403,12 +477,12 @@ import { COMPREHENSIVE_PRICING_2028 } from '../data/comprehensivePricingGuide202
 "
             <div className="text-neon-cyan/70">"
               <p className="mb-2">{contactInfo.address}</p>
-              <p>'
+              <p>
                 Visit us at{' '}
                 <a
                   href={contactInfo.website}"
-                  className="text-neon-cyan hover:text-neon-blue transition-colors duration-300""
-                  target="_blank""
+                  className="text-neon-cyan hover:text-neon-blue transition-colors duration-300"
+                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   {contactInfo.website}

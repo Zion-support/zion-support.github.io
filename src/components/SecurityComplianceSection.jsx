@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Shield, Lock, Eye, CheckCircle, Users, Database, Network, ArrowRight, Award const securityStandards = [
 
@@ -19,7 +19,7 @@ import { Shield, Lock, Eye, CheckCircle, Users, Database, Network, ArrowRight, A
 "
         name: "SOC 2 Type II","
         category: "Service Organization Control","
-        logo: "/logos/soc2.svg",'"
+        logo: "/logos/soc2.svg","
         description: "AICPA standard for service organizations' security, availability, and confidentiality","
         status: "Certified","
         validUntil: "2025-06-30","
@@ -31,7 +31,7 @@ import { Shield, Lock, Eye, CheckCircle, Users, Database, Network, ArrowRight, A
 "
         name: "GDPR Compliance","
         category: "Data Protection Regulation","
-        logo: "/logos/gdpr.svg",'"
+        logo: "/logos/gdpr.svg","
         description: "European Union's General Data Protection Regulation compliance","
         status: "Compliant","
         validUntil: "Ongoing","

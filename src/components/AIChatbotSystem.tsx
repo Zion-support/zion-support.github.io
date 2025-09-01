@@ -1,14 +1,80 @@
+<<<<<<< HEAD
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+
+  MessageCircle,
+  Send,
+  Bot,
+  User,
+  Sparkles,
+  X,
+  Settings,
+  Volume2,
+  VolumeX,
+  Mic,
+  MicOff,
+  Paperclip,
+  Image,
+  FileText,
+  Download,
+  Share2,
+  RefreshCw,
+  ThumbsUp,
+  ThumbsDown,
+  Star,
+  Zap,
+  Brain,
+  Globe,
+  Clock,
+  CheckCircle,
+  AlertCircle'
+ } from 'lucide-react';
+
+interface ChatMessage {
+  id: string;
+  content: string;
+  sender: 'user' | 'bot';
+  timestamp: Date;
+  type: 'text' | 'image' | 'file' | 'system';
+  status: 'sending' | 'sent' | 'error';
+metadata?: {
+
+    confidence?: number;
+    suggestions?: string[];
+    relatedServices?: string[];
+    estimatedResponseTime?: number
+}}
+
+interface AIChatbotSystemProps extends React.PropsWithChildren<{}> {
+
+  showHeader?: boolean;
+  showSettings?: boolean;
+  maxMessages?: number;
+  autoScroll?: boolean}
+
+export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
+
+showHeader:  true,;
+  showSettings = true,;
+  maxMessages = 50,;
+  autoScroll = true;
+}) => {;
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [inputValue, setInputValue] = useState('');
+=======
 import React, { useState, useEffect, useRef } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';  const [inputValue, setInputValue] = useState('');
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [isTyping, setIsTyping] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [showSettingsPanel, setShowSettingsPanel] = useState(false);
   const [settings, setSettings] = useState({
 
     voiceEnabled: false,
-    autoResponse: true,'
-    language: 'en','
-    theme: 'dark','
+    autoResponse: true,
+    language: 'en',
+    theme: 'dark',
     responseSpeed: 'normal'
   }) ;
   const [isListening, setIsListening] = useState (false) ;
@@ -19,18 +85,18 @@ import { motion, AnimatePresence } from 'framer-motion';  const [inputValue, set
     if (isOpen && messages.length = == 0) {
 
       const welcomeMessage: ChatMessage = {
-'
-  id: 'welcome','
-        content: "Hello! I'm Zion AI, your intelligent assistant. I can help you with:\n\n• Information about our services\n• Technical support and guidance\n• Project inquiries and quotes\n• General questions about Zion Tech Group\n\nHow can I assist you today?",'
+
+  id: 'welcome',
+        content: "Hello! I'm Zion AI, your intelligent assistant. I can help you with:\n\n• Information about our services\n• Technical support and guidance\n• Project inquiries and quotes\n• General questions about Zion Tech Group\n\nHow can I assist you today?",
         sender: 'bot',
-        timestamp: new Date(),'
-        type: 'text','
+        timestamp: new Date(),
+        type: 'text',
         status: 'sent',
         metadata: {
 
-          confidence: 0.95,'
-          suggestions: ['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],;'
-          relatedServices: ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],;
+          confidence: 0.95,
+          suggestions: ['Tell me about your services',Get a quote',Technical support',Contact information'],;
+          relatedServices: ['AI Consulting',Cloud Solutions',Digital Transformation'],;
   estimatedResponseTime: 2;
         ;
 ;
@@ -42,18 +108,18 @@ import { motion, AnimatePresence } from 'framer-motion';  const [inputValue, set
   // Auto-scroll to bottom
   useEffect(() => {
     if (autoScroll && messagesEndRef.current) {
-'
+
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' })}
   }, [messages, autoScroll]);
 
   // Simulate AI response'
-        suggestions['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],'
-        relatedServices['Digital Transformation', 'Process Optimization', 'Change Management']
+        suggestions['Strategy development',Implementation process',Change management',ROI examples'],
+        relatedServices['Digital Transformation',Process Optimization',Change Management']
       };
       {;"
-        content: "Digital transformation is our specialty! We help businesses modernize their technology stack, improve processes, and enhance customer experiences. Our approach includes strategy development, implementation, and change management.",;'
-        suggestions: ['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],;'
-        relatedServices: ['Digital Transformation', 'Process Optimization', 'Change Management'];
+        content: "Digital transformation is our specialty! We help businesses modernize their technology stack, improve processes, and enhance customer experiences. Our approach includes strategy development, implementation, and change management.",;
+        suggestions: ['Strategy development',Implementation process',Change management',ROI examples'],;
+        relatedServices: ['Digital Transformation',Process Optimization',Change Management'];
       };
     ];
 
@@ -61,10 +127,10 @@ import { motion, AnimatePresence } from 'framer-motion';  const [inputValue, set
     const botMessage: ChatMessage = {
 
   id: Date.now().toString(),
-      content: randomResponse.content,'
+      content: randomResponse.content,
       sender: 'bot',
-      timestamp: new Date(),'
-      type: 'text','
+      timestamp: new Date(),
+      type: 'text',
       status: 'sent',
       metadata: {
 
@@ -141,7 +207,7 @@ import { motion, AnimatePresence } from 'framer-motion';  const [inputValue, set
 }}
             transition = {
 
-  { duration: 0.3,'
+  { duration: 0.3,
   ease: 'easeOut' 
 
 
@@ -172,14 +238,14 @@ import { motion, AnimatePresence } from 'framer-motion';  const [inputValue, set
                     {showSettingsPanel && (
                       <button
                         onClick={() => setShowSettingsPanel(!showSettingsPanel)}"
-                        className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors""
+                        className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
                         aria-label="Chat settings"
 "
                         <Settings className="w-4 h-4" />                      </button>;
                     )}
                     <button
                       onClick={clearChat}"
-                      className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors""
+                      className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
                       aria-label="Clear chat"
 "
                       <RefreshCw className="w-4 h-4" />                    </button>
@@ -197,7 +263,7 @@ import { motion, AnimatePresence } from 'framer-motion';  const [inputValue, set
 
 }}
                   animate = {
-'
+
   { height: 'auto',
   opacity: 1 
 
@@ -294,7 +360,7 @@ import { motion, AnimatePresence } from 'framer-motion';  const [inputValue, set
 '`
                   <div className={`max-w-[80%] ${message.sender === 'user' ? 'order-2' : 'order-1'}`}>`
                     <div className={`p-3 rounded-lg ${
-'
+
                       message.sender === 'user''
                         ? 'bg-zion-cyan text-white''
                         : 'bg-zinc-800/50 text-zinc-100'`
@@ -342,14 +408,13 @@ import { motion, AnimatePresence } from 'framer-motion';  const [inputValue, set
                       <span className="text-xs text-zinc-500">
                         {message.timestamp.toLocaleTimeString()}
                       </span>
-'
+
                       {message.sender === 'bot' && ("
                         <div className="flex items-center gap-1">
                           <button
                             onClick = {
 
-  () => rateResponse(message.id,'
-  'positive')
+  () => rateResponse(message.id,positive')
 
 
 
@@ -357,15 +422,14 @@ import { motion, AnimatePresence } from 'framer-motion';  const [inputValue, set
 
 
 }"
-                            className="p-1 text-zinc-400 hover:text-green-400 transition-colors""
+                            className="p-1 text-zinc-400 hover:text-green-400 transition-colors"
                             aria-label="Rate response positively"
 "
                             <ThumbsUp className="w-3 h-3" />                          </button>
                           <button
                             onClick = {
 
-  () => rateResponse(message.id,'
-  'negative')
+  () => rateResponse(message.id,negative')
 
 
 
@@ -373,7 +437,7 @@ import { motion, AnimatePresence } from 'framer-motion';  const [inputValue, set
 
 
 }"
-                            className="p-1 text-zinc-400 hover:text-red-400 transition-colors""
+                            className="p-1 text-zinc-400 hover:text-red-400 transition-colors"
                             aria-label="Rate response negatively"
 "
                             <ThumbsDown className="w-3 h-3" />                          </button>;
@@ -383,9 +447,9 @@ import { motion, AnimatePresence } from 'framer-motion';  const [inputValue, set
 
                   {/* Avatar */}`
 <div className: {`w-8 h-8 rounded-full flex items-center justify-center ${
-'
+
                     message.sender === 'user' ? 'order-1 ml-2' : 'order-2 mr-2'`
-                  }`}>'
+                  }`}>
                     {message.sender === 'user' ? (;"
                       <div className="w-8 h-8 bg-zinc-700 rounded-full flex items-center justify-center">"
                         <User className="w-4 h-4 text-zinc-300" />
@@ -424,7 +488,7 @@ import { motion, AnimatePresence } from 'framer-motion';  const [inputValue, set
                     type="text"
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}"
-                    placeholder="Ask me thing about Zion Tech Group...""
+                    placeholder="Ask me thing about Zion Tech Group..."
                     className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent resize-none"
                     disabled={isTyping}
                   />
@@ -434,7 +498,7 @@ import { motion, AnimatePresence } from 'framer-motion';  const [inputValue, set
                     <input"
                       type="file"
                       onChange={handleFileUpload}"
-                      className="hidden""
+                      className="hidden"
                       accept="image/*,.pdf,.doc,.docx,.txt"
                     />"
                     <Paperclip className="w-4 h-4 text-zinc-400 hover:text-zinc-300 transition-colors" />                  </label>
@@ -460,7 +524,7 @@ import { motion, AnimatePresence } from 'framer-motion';  const [inputValue, set
                 <button"
                   type="submit"
                   disabled={!inputValue.trim() || isTyping}"
-                  className="p-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed""
+                  className="p-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   aria-label="Send message"
 "
                   <Send className="w-4 h-4" />

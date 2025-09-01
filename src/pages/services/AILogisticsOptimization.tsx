@@ -92,13 +92,7 @@ const AILogisticsOptimization: React.FC = () => {
       period: 'month',
       description: 'Perfect for small logistics operations and startups',
       features: [
-        'Up to 50 vehicles tracked',
-        'Basic route optimization',
-        'Real-time GPS tracking',
-        'Email support',
-        'Mobile app access',
-        'Basic reporting dashboard',
-        'Up to 1,000 shipments/month'
+        'Up to 50 vehicles tracked',Basic route optimization',Real-time GPS tracking',Email support',Mobile app access',Basic reporting dashboard',Up to 1,000 shipments/month'
       ],
       color: 'from-blue-500 to-cyan-500',
       popular: false
@@ -109,16 +103,7 @@ const AILogisticsOptimization: React.FC = () => {
       period: 'month',
       description: 'Ideal for growing logistics companies and mid-size operations',
       features: [
-        'Up to 200 vehicles tracked',
-        'Advanced AI route optimization',
-        'Predictive analytics',
-        'Priority support',
-        'API access',
-        'Advanced reporting suite',
-        'Custom integrations',
-        'Up to 10,000 shipments/month',
-        'Real-time alerts',
-        'Performance analytics'
+        'Up to 200 vehicles tracked',Advanced AI route optimization',Predictive analytics',Priority support',API access',Advanced reporting suite',Custom integrations',Up to 10,000 shipments/month',Real-time alerts',Performance analytics'
       ],
       color: 'from-purple-500 to-pink-500',
       popular: true
@@ -129,16 +114,7 @@ const AILogisticsOptimization: React.FC = () => {
       period: 'month',
       description: 'Comprehensive solution for large logistics corporations and global operations',
       features: [
-        'Unlimited vehicles tracked',
-        'Custom AI model training',
-        'White-label solutions',
-        'Dedicated account manager',
-        'Custom integrations',
-        'Advanced analytics platform',
-        'Multi-location support',
-        'Unlimited shipments',
-        'Onsite training',
-        'Custom SLA agreements'
+        'Unlimited vehicles tracked',Custom AI model training',White-label solutions',Dedicated account manager',Custom integrations',Advanced analytics platform',Multi-location support',Unlimited shipments',Onsite training',Custom SLA agreements'
       ],
       color: 'from-amber-500 to-orange-500',
       popular: false

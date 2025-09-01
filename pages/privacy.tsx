@@ -224,11 +224,11 @@ export default function Privacy(...args[]):  {
 					<h2 className="text-2xl font-bold text-gray-900 mb-4">
 						Questions About Privacy?
 					</h2>"
-					<p className="text-gray-600 mb-6">'
+					<p className="text-gray-600 mb-6">
 						We're here to help. Contact us with  privacy-related questions.
 					</p>
 					<Link"
-						to="/contact""
+						to="/contact"
 						className="inline-flex items-center rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors"
 
 						Contact Us"

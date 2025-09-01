@@ -1,5 +1,5 @@
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';'
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Check, X, Star, Zap, Shield, Users, ArrowRight, Crown, Rocket, Building } from 'lucide-react';
 const plans = [
     {
@@ -107,11 +107,11 @@ const addons = [
     }
 ];
 export function PricingSection() {
-'
+
     const [billingPeriod, setBillingPeriod] = useState('month');
     const [selectedPlan, setSelectedPlan] = useState(null);
     const getDiscountedPrice = (price) => {
-'
+
         return billingPeriod === 'year' ? Math.round(price * 10) : price};
     const containerVariants = {
 
@@ -172,7 +172,7 @@ export function PricingSection() {
           </p>
 
           {/* Billing toggle */}"
-          <div className="inline-flex items-center bg-zion-blue-dark/40 rounded-xl p-1 border border-zion-blue-light/30">'
+          <div className="inline-flex items-center bg-zion-blue-dark/40 rounded-xl p-1 border border-zion-blue-light/30">
             <button onClick={() => setBillingPeriod('month')} className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${billingPeriod === 'month''
             ? 'bg-zion-cyan text-white shadow-lg''`
             : 'text-zion-slate-light hover:text-white'}`}>

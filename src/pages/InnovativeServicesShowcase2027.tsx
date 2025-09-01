@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+
+  Brain, Cpu, Database, Network, Shield, Zap, Rocket, Atom,
+  Globe, Cloud, Lock, Eye, Target, TrendingUp, Star, CheckCircle,
+  ArrowRight, Search, Filter, Grid, List, ChevronDown'
+ } from 'lucide-react';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027  } from '@/data/innovativeMicroSaasServices2027';
+import { EMERGING_TECH_SERVICES_2027  } from '@/data/emergingTechServices2027';
+export default function InnovativeServicesShowcase2027(...args[]):  {
+
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [viewMode, setViewMode] = useState<any>('grid');
+=======
 import React, { useState, useEffect } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';'
 import { Link } from 'react-router-dom';export default function InnovativeServicesShowcase2027(...args[]):  {
@@ -5,11 +23,12 @@ import { Link } from 'react-router-dom';export default function InnovativeServic
   const [searchQuery, setSearchQuery] = useState('');'
   const [selectedCategory, setSelectedCategory] = useState('All');'
   const [viewMode, setViewMode] = useState<any>('grid');'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [sortBy, setSortBy] = useState<any>('aiScore');
-  const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2027, ...EMERGING_TECH_SERVICES_2027];'
+  const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2027, ...EMERGING_TECH_SERVICES_2027];
   const categories = ['All', ...Array.from(new Set(allServices.map(service => service.category)))];
   const filteredServices = allServices;
-    .filter(service =>'
+    .filter(service =>
       (selectedCategory === 'All' || service.category === selectedCategory) &&'
       (searchQuery === '' ||
         service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -176,9 +195,9 @@ import { Link } from 'react-router-dom';export default function InnovativeServic
 }}
           >
             {['
-              { label: 'Total Services', value: allServices.length, icon: Rocket, color: 'from-cyan-500 to-blue-600' },'`
-              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s)  => acc + s.aiScore, 0) / allServices.length)}%`, icon: Brain, color: 'from-purple-500 to-pink-600' },'`
-              { label: 'Rating Avg', value: `${(allServices.reduce((acc, s)  => acc + s.rating, 0) / allServices.length).toFixed(1)}`, icon: Star, color: 'from-yellow-500 to-orange-600' },'
+              { label: 'Total Services', value: allServices.length, icon: Rocket, color: 'from-cyan-500 to-blue-600' },`
+              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s)  => acc + s.aiScore, 0) / allServices.length)}%`, icon: Brain, color: 'from-purple-500 to-pink-600' },`
+              { label: 'Rating Avg', value: `${(allServices.reduce((acc, s)  => acc + s.rating, 0) / allServices.length).toFixed(1)}`, icon: Star, color: 'from-yellow-500 to-orange-600' },
               { label: 'Categories', value: categories.length - 1, icon: Grid, color: 'from-green-500 to-teal-600' }
             ].map((stat, index)  => ("
               <div key={index} className="text-center group">`
@@ -222,7 +241,12 @@ import { Link } from 'react-router-dom';export default function InnovativeServic
                 <div className="relative">"
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
                   <input"
+<<<<<<< HEAD
+                    type="text"
+                    placeholder="Search services, features, or technologies..."
+=======
                     type="text""                    placeholder="Search services, features, or technologies..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}"
                     className="w-full bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg pl-12 pr-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
@@ -244,7 +268,7 @@ import { Link } from 'react-router-dom';export default function InnovativeServic
               {/* Sort By */}"
               <div className="relative">
                 <select
-                  value={sortBy}'
+                  value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as 'aiScore' | 'rating' | 'price')}"
                   className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
 "
@@ -274,7 +298,7 @@ import { Link } from 'react-router-dom';export default function InnovativeServic
       <motion.section"
         className="relative z-10 px-6 pb-20"
         variants={containerVariants}"
-        initial="hidden""
+        initial="hidden"
         animate="visible"
 "
         <div className="max-w-7xl mx-auto">;"
@@ -305,10 +329,10 @@ import { Link } from 'react-router-dom';export default function InnovativeServic
               >
                 {filteredServices.map((service, index)  => (
                   <motion.div
-                    key={service.id}'
-                    variants={viewMode === 'grid' ? itemVariants : { /* empty */ }}'
+                    key={service.id}
+                    variants={viewMode === 'grid' ? itemVariants : { /* empty */ }}
                     className={viewMode === 'grid' ? '' : 'bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20'}
-'
+
                     {viewMode === 'grid' ? (;
                       <motion.div"
                         className="bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20 h-full group cursor-pointer"
@@ -316,8 +340,7 @@ import { Link } from 'react-router-dom';export default function InnovativeServic
                         whileHover="hover"
                         onClick = {
 
-  () => window.open(service.website,'
-  '_blank')
+  () => window.open(service.website,_blank')
 
 
 
@@ -428,7 +451,7 @@ import { Link } from 'react-router-dom';export default function InnovativeServic
                                 </span>) ) }
                             </div>
                             <button'
-                              onClick={() => window.open(service.website, '_blank')}"
+                              onClick={() => window.open(service.website,_blank')}"
                               className="bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2"
 
                               View Details"
@@ -484,13 +507,13 @@ import { Link } from 'react-router-dom';export default function InnovativeServic
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
 
                 Contact Our Team
               </Link>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-black transition-all duration-300"
 
                 Call + 1 302 464 0950

@@ -1,57 +1,67 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
 
 export function SitemapPage(...args: any[]): any {
 
   const sitemapData = [
     {
-'
+
       title: 'Main Pages',
       links: ['
-        { name: 'Home', url: '/' },'
-        { name: 'About', url: '/about' },'
-        { name: 'Services', url: '/services' },'
-        { name: 'Contact', url: '/contact' },'
-        { name: 'Blog', url: '/blog' },'
+        { name: 'Home', url: '/' },
+        { name: 'About', url: '/about' },
+        { name: 'Services', url: '/services' },
+        { name: 'Contact', url: '/contact' },
+        { name: 'Blog', url: '/blog' },
         { name: 'Careers', url: '/careers' },
       ]
     },
     {
-'
+
       title: 'Services',
       links: ['
-        { name: 'AI Services', url: '/services/ai' },'
-        { name: 'IT Services', url: '/services/it' },'
-        { name: 'Cloud Solutions', url: '/services/cloud' },'
-        { name: 'Cybersecurity', url: '/services/cybersecurity' },'
+        { name: 'AI Services', url: '/services/ai' },
+        { name: 'IT Services', url: '/services/it' },
+        { name: 'Cloud Solutions', url: '/services/cloud' },
+        { name: 'Cybersecurity', url: '/services/cybersecurity' },
         { name: 'Digital Transformation', url: '/services/digital-transformation' },
       ]
     },
     {
-'
+
       title: 'Solutions',
       links: ['
-        { name: 'Enterprise', url: '/solutions/enterprise' },'
-        { name: 'Healthcare', url: '/solutions/healthcare' },'
-        { name: 'Financial Services', url: '/solutions/financial' },'
+        { name: 'Enterprise', url: '/solutions/enterprise' },
+        { name: 'Healthcare', url: '/solutions/healthcare' },
+        { name: 'Financial Services', url: '/solutions/financial' },
         { name: 'Manufacturing', url: '/solutions/manufacturing' },
       ]
     },
     {
-'
+
       title: 'Resources',
       links: ['
+<<<<<<< HEAD
+        { name: 'Case Studies', url: '/case-studies' },;
+        { name: 'White Papers', url: '/white-papers' },;
+        { name: 'Webinars', url: '/webinars' },;
+        { name: 'Documentation', url: '/docs' },;
+        { name: 'API Reference', url: '/api' },;
+      ];
+    };
+=======
         { name: 'Case Studies', url: '/case-studies' },;'
         { name: 'White Papers', url: '/white-papers' },;'
         { name: 'Webinars', url: '/webinars' },;'
         { name: 'Documentation', url: '/docs' },;'        { name: 'API Reference', url: '/api' },;
       ]};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
     <div className = "min-h-screen bg-slate-900 text-white py-16">
       <SEO "
-        title="Sitemap - Zion Tech Group" "
+        title="Sitemap - Zion Tech Group"
         description="Complete sitemap of Zion Tech Group website with all pages and services organized by category."
       />
       "
@@ -85,10 +95,10 @@ export function SitemapPage(...args: any[]): any {
         </div>
 "
         <div className="mt-16 text-center">"
-          <p className="text-zinc-400">'
+          <p className="text-zinc-400">
             Can't find what you're looking for?{' '}"
             <a href="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-              Contact us;'
+              Contact us;
             </a>{' '};
             for assistance.;
           </p>;

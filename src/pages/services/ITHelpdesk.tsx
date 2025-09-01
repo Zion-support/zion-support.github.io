@@ -1,19 +1,19 @@
 import React from 'react';
 
 export default function ITHelpdesk() {
-  const features = [;'
-    'Ticketing with SLA and automation rules',;'
-    'Self-service knowledge base and chat widget',;'
-    'Asset inventory and remote assistance',;'
-    'Email-to-ticket and status notifications',;'
-    'Multi-tenant client portals',;'
+  const features = [;
+    'Ticketing with SLA and automation rules',;
+    'Self-service knowledge base and chat widget',;
+    'Asset inventory and remote assistance',;
+    'Email-to-ticket and status notifications',;
+    'Multi-tenant client portals',;
     'Reports: MTTR, CSAT, backlog trends';
   ];
 
-  const pricing = [;'
-    { name: 'Basic', price: '$199/mo', details: ['3 agents', 'Email support', 'KB'] },;'
-    { name: 'Team', price: '$499/mo', details: ['10 agents', 'SLAs', 'Automation'] },;'
-    { name: 'Business', price: '$999/mo', details: ['25 agents', 'SSO', 'Advanced reports'] },;
+  const pricing = [;
+    { name: 'Basic', price: '$199/mo', details: ['3 agents',Email support',KB'] },;
+    { name: 'Team', price: '$499/mo', details: ['10 agents',SLAs',Automation'] },;
+    { name: 'Business', price: '$999/mo', details: ['25 agents',SSO',Advanced reports'] },;
   ];
 
   return()
@@ -57,7 +57,7 @@ export default function ITHelpdesk() {
       </section>
 "
       <section className="pb-16 max-w-6xl mx-auto px-6">"
-        <div className="grid md:grid-cols-3 gap-6">'
+        <div className="grid md:grid-cols-3 gap-6">
           {[{icon: Ticket, t: 'Tickets & SLAs'}, {icon: Cpu, t: 'Remote Support'}, {icon: Shield, t: 'Security & SSO'}].map((c) => ("
             <div key={c.t} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">"
               <c.icon className="w-6 h-6 text-zion-cyan mb-3" />"

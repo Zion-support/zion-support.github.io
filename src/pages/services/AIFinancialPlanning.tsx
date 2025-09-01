@@ -1,6 +1,189 @@
+<<<<<<< HEAD
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '../../components/SEO';
+import { DollarSign, 
+  TrendingUp, 
+  BarChart3, 
+  Users, 
+  Zap, 
+  Globe, 
+  Lock, 
+  Eye,
+  Star,
+  Cpu,
+  Database,
+  Search,
+  Filter,
+  Download,
+  Share2,
+  Play,
+  ArrowRight,
+  CheckCircle,
+  AlertTriangle,
+  FileText,
+  Clock,
+  Award,
+  Brain,
+  Target,
+  PieChart,
+  Activity,
+  Calculator,
+  Shield,
+  Settings,
+  CreditCard,
+  AlertCircle,
+  Calendar,
+  Package,
+  Route,
+  Warehouse,
+  Factory,
+  Ship,
+  Plane,
+  PiggyBank,
+  TrendingDown,
+  Lightbulb,
+  Wallet,
+  Receipt,
+  Banknote'
+ } from 'lucide-react.ts';
+
+export default function AIFinancialPlanning(...args: any[]): any {
+
+  const features = [
+    {
+
+      icon: Brain,
+      title: "AI Budget Optimization","
+      description: "Intelligent budget allocation and optimization based on spending patterns and financial goals."
+    },
+    {
+
+      icon: Calculator,"
+      title: "Smart Expense Tracking","
+      description: "Automated expense categorization and tracking with AI-powered receipt scanning and analysis."
+    },
+    {
+
+      icon: Target,"
+      title: "Goal-Based Planning","
+      description: "Personalized financial planning based on your goals, timeline, and risk tolerance."
+    },
+    {
+
+      icon: PieChart,"
+      title: "Investment Recommendations","
+      description: "AI-powered investment suggestions based on market analysis and your financial profile."
+    },
+    {
+
+      icon: AlertCircle,"
+      title: "Financial Health Monitoring","
+      description: "Real-time monitoring of your financial health with predictive insights and alerts.";
+    },;
+    {;
+      icon: Activity,;"
+      title: "Tax Optimization",;"
+      description: "Intelligent tax planning and optimization to maximize savings and minimize liabilities.";
+    };
+  ];
+
+  const benefits = [
+    {
+
+      icon: Zap,"
+      title: "Improved Financial Health","
+      description: "Better money management and increased savings through intelligent budgeting and planning."
+    },
+    {
+
+      icon: DollarSign,"
+      title: "Cost Savings","
+      description: "Identify unnecessary expenses and optimize spending to save money on daily transactions."
+    },
+    {
+
+      icon: Globe,"
+      title: "Goal Achievement","
+      description: "Set and achieve financial goals faster with AI-powered planning and optimization."
+    },
+    {
+
+      icon: Lock,"
+      title: "Data Security","
+      description: "Bank-level security with encryption and secure data handling for your financial information."
+    },
+    {
+
+      icon: TrendingUp,"
+      title: "Investment Growth","
+      description: "Optimize investment portfolios and maximize returns with AI-driven recommendations.";
+    },;
+    {;
+      icon: Clock,;"
+      title: "Time Savings",;"
+      description: "Automate financial tasks and focus on what matters most with intelligent automation.";
+    };
+  ];
+
+  const pricingPlans = [
+    {
+"
+      name: "Basic","
+      price: "$9.99","
+      period: "/month","
+      description: "Perfect for individuals starting their financial planning journey",
+      features: ["
+        "Basic budget tracking","
+        "Expense categorization","
+        "Email support","
+        "Mobile app access","
+        "Basic reporting","
+        "Goal setting","
+        "Bill reminders"
+      ],"
+      cta: "Start Free Trial",
+      popular: false
+    },
+    {
+"
+      name: "Premium","
+      price: "$24.99","
+      period: "/month","
+      description: "Ideal for individuals and families with advanced financial planning needs",
+      features: ["
+        "Advanced AI budgeting","
+        "Investment recommendations","
+        "Priority support","
+        "Tax optimization","
+        "Advanced analytics","
+        "Portfolio tracking","
+        "Financial health score","
+        "Custom alerts"
+      ],"
+      cta: "Start Free Trial",
+      popular: true
+    },
+    {
+"
+      name: "Professional","
+      price: "$49.99","
+      period: "/month","
+      description: "For financial advisors and professionals requiring advanced tools",
+      features: ["
+        "Client management","
+        "White-label solutions","
+        "Dedicated support","
+        "Advanced reporting","
+        "API access","
+        "Custom integrations",;"
+        "Multi-account support",;"
+        "Tax filing assistance";
+=======
 import React from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
 import { SEO  } from '../../components/SEO';        "Tax filing assistance";
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Contact Sales",;
       popular: false;
@@ -125,8 +308,14 @@ import { SEO  } from '../../components/SEO';        "Tax filing assistance";
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
+<<<<<<< HEAD
+        title="AI Financial Planning & Budgeting - Zion Tech Group"
+        description="Transform your financial future with AI-powered planning and budgeting. Optimize spending, achieve goals, and build wealth with intelligent financial management."
+      />
+=======
         title="AI Financial Planning & Budgeting - Zion Tech Group""        description="Transform your financial future with AI-powered planning and budgeting. Optimize spending, achieve goals, and build wealth with intelligent financial management."
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
@@ -163,7 +352,7 @@ import { SEO  } from '../../components/SEO';        "Tax filing assistance";
             </div>"
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
               AI Financial Planning"
-              <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
                 {' '}& Budgeting
               </span>
             </h1>"

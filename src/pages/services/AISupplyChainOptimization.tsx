@@ -1,6 +1,6 @@
-import React from 'react';'
-import { SEO } from '../../components/SEO';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { SEO } from '../../components/SEO';
+import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import {
 
@@ -35,44 +35,44 @@ import {
   Warehouse,
   Factory,
   Ship,
-  Plane,'
+  Plane,
   Store} from 'lucide-react';
 
 export default function AISupplyChainOptimization() {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI Demand Forecasting',
       description:'
         'Predict demand patterns with 95% accuracy using machine learning and historical data analysis.'},
     {
 
-      icon: Route,'
+      icon: Route,
       title: 'Route Optimization',
       description:'
         'Optimize delivery routes in real-time considering traffic, weather, and delivery windows.'},
     {
 
-      icon: Warehouse,'
+      icon: Warehouse,
       title: 'Inventory Optimization',
       description:'
         'AI-powered inventory management with automated reordering and stock level optimization.'},
     {
 
-      icon: Target,'
+      icon: Target,
       title: 'Supplier Performance Analytics',
       description:'
         'Monitor supplier performance, quality metrics, and delivery reliability with predictive insights.'},
     {
 
-      icon: PieChart,'
+      icon: PieChart,
       title: 'Cost Optimization',
       description:'
         'Identify cost-saving opportunities across transportation, warehousing, and procurement.'},
     {
 
-      icon: Activity,'
+      icon: Activity,
       title: 'Real-time Visibility',
       description:'
         'End-to-end supply chain visibility with real-time tracking and predictive analytics.'},
@@ -81,37 +81,37 @@ export default function AISupplyChainOptimization() {
   const benefits = [
     {
 
-      icon: Zap,'
+      icon: Zap,
       title: 'Reduced Costs',
       description:'
         'Optimize transportation, inventory, and operational costs by up to 30% through AI insights.'},
     {
 
-      icon: DollarSign,'
+      icon: DollarSign,
       title: 'Improved Efficiency',
       description:'
         'Streamline operations and reduce lead times with intelligent automation and optimization.'},
     {
 
-      icon: Globe,'
+      icon: Globe,
       title: 'Global Optimization',
       description:'
         'Manage complex global supply chains with multi-location optimization and risk mitigation.'},
     {
 
-      icon: Lock,'
+      icon: Lock,
       title: 'Risk Management',
       description:'
         'Identify and mitigate supply chain risks with predictive analytics and contingency planning.'},
     {
 
-      icon: TrendingUp,'
+      icon: TrendingUp,
       title: 'Increased Revenue',
       description:'
         'Improve customer satisfaction and increase sales through better inventory availability and faster delivery.'},
     {
 
-      icon: Clock,'
+      icon: Clock,
       title: 'Time Savings',
       description:'
         'Automate routine supply chain tasks and focus on strategic decision-making.'},
@@ -119,98 +119,76 @@ export default function AISupplyChainOptimization() {
 
   const pricingPlans = [
     {
-'
-      name: 'Starter','
-      price: '$599','
+
+      name: 'Starter',
+      price: '$599',
       period: '/month',
       description:'
         'Perfect for small businesses with basic supply chain optimization needs',
       features: ['
-        'Up to 5 locations','
-        'Basic demand forecasting','
-        'Email support','
-        'Standard integrations','
-        'Basic reporting','
-        'Route optimization','
-        'Mobile app access',
-      ],'
+        'Up to 5 locations',Basic demand forecasting',Email support',Standard integrations',Basic reporting',Route optimization',Mobile app access',
+      ],
       cta: 'Start Free Trial',
       popular: false},
     {
-'
-      name: 'Professional','
-      price: '$1,499','
+
+      name: 'Professional',
+      price: '$1,499',
       period: '/month',
       description:'
         'Ideal for growing companies with complex supply chain requirements',
       features: ['
-        'Up to 25 locations','
-        'Advanced AI forecasting','
-        'Priority support','
-        'Custom integrations','
-        'Advanced analytics','
-        'Multi-modal optimization','
-        'API access','
-        'Supplier analytics','
-        'Risk management',
-      ],'
+        'Up to 25 locations',Advanced AI forecasting',Priority support',Custom integrations',Advanced analytics',Multi-modal optimization',API access',Supplier analytics',Risk management',
+      ],
       cta: 'Start Free Trial',
       popular: true},
     {
-'
-      name: 'Enterprise','
-      price: '$4,999','
+
+      name: 'Enterprise',
+      price: '$4,999',
       period: '/month',
       description:'
         'For large organizations requiring enterprise-grade supply chain solutions',
       features: ['
-        'Unlimited locations','
-        'Custom AI models','
-        'Dedicated account manager','
-        'White-label solutions','
-        'Advanced security features','
-        'Custom reporting','
-        'On-premise deployment','
-        'SLA guarantees','
-        '24/7 support',
-      ],'
+        'Unlimited locations',Custom AI models',Dedicated account manager',White-label solutions',Advanced security features',Custom reporting',On-premise deployment',SLA guarantees',24/7 support',
+      ],
       cta: 'Contact Sales',
       popular: false},
   ];
 
   const useCases = [
     {
-'
+
       industry: 'E-commerce',
       description:'
         'Optimize fulfillment networks, reduce delivery times, and improve customer satisfaction',
       icon: Package},
     {
-'
+
       industry: 'Manufacturing',
       description:'
         'Streamline production planning, optimize supplier networks, and reduce lead times',
       icon: Factory},
     {
-'
+
       industry: 'Retail',
       description:'
         'Optimize store replenishment, reduce stockouts, and improve inventory turnover',
       icon: Store},
     {
-'
+
       industry: 'Logistics',
       description:'
         'Optimize transportation networks, reduce costs, and improve delivery efficiency',
       icon: Truck},
     {
-'
+
       industry: 'Food & Beverage',
       description:'
         'Manage perishable supply chains, reduce waste, and ensure food safety',
       icon: Package},
     {
-'
+
       industry: 'Healthcare',
       description:'
         'Optimize medical supply chains, ensure availability, and reduce costs',
@@ -219,102 +197,87 @@ export default function AISupplyChainOptimization() {
 
   const integrations = [
     {
-'
-      name: 'ERP Systems','
-      platforms: ['SAP', 'Oracle', 'Microsoft Dynamics', 'NetSuite']},
+
+      name: 'ERP Systems',
+      platforms: ['SAP',Oracle',Microsoft Dynamics',NetSuite']},
     {
-'
-      name: 'WMS Systems','
-      platforms: ['Manhattan Associates', 'HighJump', 'Softeon', 'JDA']},
+
+      name: 'WMS Systems',
+      platforms: ['Manhattan Associates',HighJump',Softeon',JDA']},
     {
-'
-      name: 'Transportation','
-      platforms: ['FedEx', 'UPS', 'DHL', 'TMS Systems']},
+
+      name: 'Transportation',
+      platforms: ['FedEx',UPS',DHL',TMS Systems']},
     {
-'
-      name: 'E-commerce','
-      platforms: ['Shopify', 'WooCommerce', 'Magento', 'BigCommerce']},
+
+      name: 'E-commerce',
+      platforms: ['Shopify',WooCommerce',Magento',BigCommerce']},
     {
-'
-      name: 'Analytics','
-      platforms: ['Tableau', 'Power BI', 'Google Analytics', 'Custom APIs']},
+
+      name: 'Analytics',
+      platforms: ['Tableau',Power BI',Google Analytics',Custom APIs']},
     {
-'
+
       name: 'IoT & Sensors',
       platforms: ['
-        'RFID','
-        'GPS Tracking','
-        'Temperature Sensors','
-        'IoT Platforms',
+        'RFID',GPS Tracking',Temperature Sensors',IoT Platforms',
       ]},
   ];
 
   const useCases = [
     {
-'
-      metric: '30%','
-      label: 'Cost Reduction','
+
+      metric: '30%',
+      label: 'Cost Reduction',
       description: 'Average reduction in supply chain costs'},
     {
-'
-      metric: '50%','
-      label: 'Lead Time Reduction','
+
+      metric: '50%',
+      label: 'Lead Time Reduction',
       description: 'Faster delivery and reduced lead times'},
     {
-'
-      metric: '95%','
-      label: 'Forecast Accuracy','
+
+      metric: '95%',
+      label: 'Forecast Accuracy',
       description: 'AI-powered demand prediction accuracy'},
     {
-'
-      metric: '40%','
-      label: 'Inventory Optimization','
+
+      metric: '40%',
+      label: 'Inventory Optimization',
       description: 'Reduction in excess inventory levels'},
   ];
 
   const optimizationAreas = [
     {
-'
+
       category: 'Demand Planning',
       areas: ['
-        'Forecasting','
-        'Seasonal Analysis','
-        'Trend Prediction','
-        'Demand Shaping',
+        'Forecasting',Seasonal Analysis',Trend Prediction',Demand Shaping',
       ]},
     {
-'
+
       category: 'Inventory Management',
       areas: ['
-        'Stock Optimization','
-        'Reorder Points','
-        'Safety Stock','
-        'ABC Analysis',
+        'Stock Optimization',Reorder Points',Safety Stock',ABC Analysis',
       ]},
     {
-'
+
       category: 'Transportation',
       areas: ['
-        'Route Optimization','
-        'Load Planning','
-        'Carrier Selection','
-        'Freight Optimization',
+        'Route Optimization',Load Planning',Carrier Selection',Freight Optimization',
       ]},
     {
-'
+
       category: 'Supplier Management',
       areas: ['
-        'Performance Tracking','
-        'Risk Assessment','
-        'Cost Analysis','
-        'Quality Monitoring',
+        'Performance Tracking',Risk Assessment',Cost Analysis',Quality Monitoring',
       ]},
   ];
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-        title="AI Supply Chain Optimization - Zion Tech Group""
+        title="AI Supply Chain Optimization - Zion Tech Group"
         description="Optimize your supply chain with AI-powered forecasting, route optimization, and inventory management. Reduce costs and improve efficiency."
       />
 
@@ -333,7 +296,7 @@ export default function AISupplyChainOptimization() {
             </div>"
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
               AI Supply Chain"
-              <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
                 {' '}
                 Optimization
               </span>

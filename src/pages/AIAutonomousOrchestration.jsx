@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousOrchestration = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousOrchestration = () => {
       <Helmet>
         <title>AI Autonomous Orchestration Platform | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous orchestration platform that continuously coordinates systems, manages workflows, and orchestrates operations with advanced AI capabilities and autonomous operation."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI orchestration, autonomous orchestration, system coordination, workflow management, autonomous operations, AI orchestration platform"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-orchestration"
         />
       </Helmet>
@@ -187,14 +187,7 @@ const AIAutonomousOrchestration = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'System Orchestration','
-                'Workflow Orchestration','
-                'Service Orchestration','
-                'Process Orchestration','
-                'Resource Orchestration','
-                'Network Orchestration','
-                'Cloud Orchestration','
-                'Data Orchestration',
+                'System Orchestration',Workflow Orchestration',Service Orchestration',Process Orchestration',Resource Orchestration',Network Orchestration',Cloud Orchestration',Data Orchestration',
               ].map(type => (
                 <div
                   key={type}"

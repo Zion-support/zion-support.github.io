@@ -1,27 +1,27 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import {
 
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from '@/components/ui/card';'
-import { Badge } from '@/components/ui/badge';'
-import { ArrowRight, Star, Zap, TrendingUp } from 'lucide-react';'
+  CardHeader,
+  CardTitle} from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { ArrowRight, Star, Zap, TrendingUp } from 'lucide-react';
 import { SERVICE_CATEGORIES } from '@/data/expandedServices';
 export function ExpandedServicesPreview() {
   const getCategoryIcon = category => {
 
     switch (category) {
-'
+
       case 'AI Services':'
-        return '🤖';'
+        return '🤖';
       case 'Micro SAAS':'
-        return '☁️';'
+        return '☁️';
       case 'IT Services':'
-        return '💻';'
+        return '💻';
       case 'Digital Services':'
         return '🚀';
       default:'
@@ -31,13 +31,13 @@ export function ExpandedServicesPreview() {
   const getCategoryColor = category => {
 
     switch (category) {
-'
+
       case 'AI Services':'
-        return 'from-purple-500 to-indigo-600';'
+        return 'from-purple-500 to-indigo-600';
       case 'Micro SAAS':'
-        return 'from-blue-500 to-cyan-600';'
+        return 'from-blue-500 to-cyan-600';
       case 'IT Services':'
-        return 'from-green-500 to-emerald-600';'
+        return 'from-green-500 to-emerald-600';
       case 'Digital Services':'
         return 'from-orange-500 to-red-600';
       default:'
@@ -86,7 +86,7 @@ export function ExpandedServicesPreview() {
                 </div>"
                 <Link to="/expanded-services">
                   <Button"
-                    variant="outline""
+                    variant="outline"
                     className="w-full group-hover:bg-zion-purple group-hover:text-white transition-colors"
                   >
                     Explore Services"
@@ -251,7 +251,7 @@ export function ExpandedServicesPreview() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link to="/expanded-services">
                 <Button"
-                  size="lg""
+                  size="lg"
                   className="bg-white text-zion-purple hover:bg-gray-100"
                 >
                   Explore All Services"
@@ -260,8 +260,8 @@ export function ExpandedServicesPreview() {
               </Link>"
               <Link to="/contact">
                 <Button"
-                  size="lg""
-                  variant="outline""
+                  size="lg"
+                  variant="outline"
                   className="border-white text-white hover:bg-white hover:text-zion-purple"
                 >
                   Contact Us

@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import SEO from '@/components/SEO';
 ;
 export { function };export default function AIAutoEmailResponder(...args[]):  {
@@ -6,7 +6,7 @@ export { function };export default function AIAutoEmailResponder(...args[]):  {
   return()
     <div className = "min-h-screen bg-futuristic text-white">;
       <SEO"
-        title="AI Auto Email Responder | Zion Tech Group""
+        title="AI Auto Email Responder | Zion Tech Group"
         description="Automate customer email replies with secure AI, sentiment detection, intent routing, and CRM logging."
       />"
       <section className="container-responsive py-16">"        <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">

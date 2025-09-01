@@ -1,36 +1,36 @@
 
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { BarChart3, CheckCircle, Star, TrendingUp, Users, Zap } from 'lucide-react';
 
   const services = [
     {
-'
-      name: 'AI Business Intelligence','
-      category: 'AI & Analytics','
-      features: ['Machine Learning', 'Data Visualization', 'Predictive Analytics', 'Real-time Insights'],'
+
+      name: 'AI Business Intelligence',
+      category: 'AI & Analytics',
+      features: ['Machine Learning',Data Visualization',Predictive Analytics',Real-time Insights'],
       pricing: 'Custom',
-      rating: 4.9,'
+      rating: 4.9,
       users: '500+',
       icon: BarChart3
     },
     {
-'
-      name: 'Digital Twin Platform','
-      category: 'IoT & Simulation','
-      features: ['Real-time Monitoring', 'Predictive Maintenance', '3D Visualization', 'API Integration'],'
+
+      name: 'Digital Twin Platform',
+      category: 'IoT & Simulation',
+      features: ['Real-time Monitoring',Predictive Maintenance',3D Visualization',API Integration'],
       pricing: 'From $2,500/month',
-      rating: 4.8,'
+      rating: 4.8,
       users: '200+',
       icon: Zap
     },
     {
-'
-      name: 'Cybersecurity Suite','
-      category: 'Security','
-      features: ['Threat Detection', 'Incident Response', 'Compliance Monitoring', '24/7 Support'],'
+
+      name: 'Cybersecurity Suite',
+      category: 'Security',
+      features: ['Threat Detection',Incident Response',Compliance Monitoring',24/7 Support'],
       pricing: 'From $1,800/month',
-      rating: 4.9,'
+      rating: 4.9,
       users: '300+',
       icon: Star
     }

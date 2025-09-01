@@ -1,6 +1,156 @@
+<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+
+  Brain,
+  Shield,
+  Rocket,
+  Lock,
+  Cpu,
+  Code,
+  Users,
+  Globe,
+  Heart,
+  TrendingUp,
+  Zap,
+  Database,
+  Network,
+  Server,
+  Cloud,
+  FileText,
+  BarChart3,
+  MessageCircle,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  Star,
+  CheckCircle,
+  Clock'
+ } from 'lucide-react';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES  } from '@/data/innovativeMicroSaasServices2025';
+
+export function ServicesOverview(...args[]):  {
+
+  const serviceCategories = [
+    {
+
+      id: 'ai-analytics',
+      name: 'AI & Analytics',
+      icon: Brain,
+      color: 'from-zion-cyan to-zion-purple',
+      description: 'Cutting-edge artificial intelligence and advanced analytics solutions',
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('AI'))
+    },
+    {
+
+      id: 'quantum-computing',
+      name: 'Quantum Computing',
+      icon: Rocket,
+      color: 'from-zion-blue to-zion-cyan',
+      description: 'Next-generation quantum computing and quantum machine learning',
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Quantum'))
+    },
+    {
+
+      id: 'blockchain',
+      name: 'Blockchain & Web3',
+      icon: Lock,
+      color: 'from-zion-purple to-zion-blue',
+      description: 'Decentralized solutions and blockchain technology platforms',
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Blockchain'))
+    },
+    {
+
+      id: 'iot-edge',
+      name: 'IoT & Edge Computing',
+      icon: Cpu,
+      color: 'from-zion-green to-zion-cyan',
+      description: 'Internet of Things and edge computing solutions',
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('IoT'))
+    },
+    {
+
+      id: 'cybersecurity',
+      name: 'Cybersecurity',
+      icon: Shield,
+      color: 'from-zion-purple to-zion-red',
+      description: 'Advanced security and threat protection solutions',
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Cybersecurity'))
+    },
+    {
+
+      id: 'digital-twin',
+      name: 'Digital Twin',
+      icon: Server,
+      color: 'from-zion-blue to-zion-purple',
+      description: 'Virtual replicas and simulation platforms',
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Digital Twin'))
+    },
+    {
+
+      id: 'sustainability',
+      name: 'Sustainability',
+      icon: Globe,
+      color: 'from-zion-green to-zion-blue',
+      description: 'Environmental monitoring and sustainability solutions',
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Sustainability'))
+    },
+    {
+
+      id: 'hr-talent',
+      name: 'HR & Talent',
+      icon: Users,
+      color: 'from-zion-pink to-zion-purple',
+      description: 'Human resources and talent management platforms',
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('HR'))
+    },
+    {
+
+      id: 'content-creation',
+      name: 'Content Creation',
+      icon: Code,
+      color: 'from-zion-orange to-zion-purple',
+      description: 'AI-powered content generation and management',
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Content'))
+    },
+    {
+
+      id: 'legal-tech',
+      name: 'Legal Tech',
+      icon: FileText,
+      color: 'from-zion-purple to-zion-cyan',
+      description: 'Legal technology and compliance solutions',
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Legal'))
+    },
+    {
+
+      id: 'fintech',
+      name: 'FinTech',
+      icon: BarChart3,
+      color: 'from-zion-green to-zion-blue',
+      description: 'Financial technology and advisory platforms',
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('FinTech'))
+    },
+    {
+
+      id: 'healthcare-ai',
+      name: 'Healthcare AI',
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Healthcare'))
+    };
+      icon: Heart,;
+      color: 'from-zion-pink to-zion-purple',;
+      description: 'Healthcare artificial intelligence solutions',;
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Healthcare'));
+    };
+  ];
+=======
 import React from 'react';'
 import { motion } from 'framer-motion';'
 import { Link } from 'react-router-dom';  ];
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return()
     <div className = "py-20 bg-futuristic relative overflow-hidden">
@@ -164,7 +314,7 @@ import { Link } from 'react-router-dom';  ];
                   <div className="flex items-center justify-between text-sm">"
                     <span className="text-zion-cyan font-medium">{service.category}</span>`
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-'
+
                       service.innovationLevel === 'Cutting-edge''
                         ? 'bg-zion-cyan/20 text-zion-cyan''
                         : 'bg-zion-purple/20 text-zion-purple'`
@@ -231,14 +381,14 @@ import { Link } from 'react-router-dom';  ];
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="btn-futuristic px-8 py-4 text-lg"
 "
                 <MessageCircle className="w-5 h-5 mr-2" />                Get Free Consultation
               </Link>
 
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="btn-neon px-8 py-4 text-lg"
 "
                 <Phone className="w-5 h-5 mr-2" />                Call Now: +1 302 464 0950

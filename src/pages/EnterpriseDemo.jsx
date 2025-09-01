@@ -15,7 +15,7 @@ export default function EnterpriseDemo() {
           {/* Hero Section */}"
           <div className="text-center mb-16">
             <GradientHeading>Enterprise Demo</GradientHeading>"
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">'
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
               Experience how Zion's AI-powered platform can transform your talent acquisition and marketplace operations
             </p>
           </div>
@@ -129,7 +129,7 @@ export default function EnterpriseDemo() {
               </CardContent>
             </Card>
           </div>
-'
+
           {/* What You'll See */}"
           <div className="mb-16">'"
             <h2 className="text-3xl font-bold text-white mb-8 text-center">What You'll See in the Demo</h2>"
@@ -167,7 +167,7 @@ export default function EnterpriseDemo() {
           {/* CTA Section */}"
           <div className="text-center">"
             <h2 className="text-3xl font-bold text-white mb-6">Ready to See Zion in Action?</h2>"
-            <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">'
+            <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
               Join hundreds of enterprises that have transformed their operations with Zion's AI-powered platform
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"

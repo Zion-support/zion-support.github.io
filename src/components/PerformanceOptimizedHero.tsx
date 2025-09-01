@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
   useEffect ( () => {
     setIsVisible (true) ;
@@ -10,10 +10,10 @@ import { Link } from 'react-router-dom';
 
     return () => clearInterval(interval);
   }, [features.length]);
-'
+
     // // // // // // // // console.log('Hero CTA clicked');
   const handleCTAClick = useCallback(() => {;
-    // Analytics tracking could be added here;'
+    // Analytics tracking could be added here;
     // console.log('Hero CTA clicked');
   }, []);
 
@@ -63,7 +63,7 @@ import { Link } from 'react-router-dom';
       <motion.div"
         className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
         variants={containerVariants}"
-        initial="hidden""
+        initial="hidden"
         animate={isVisible ? "visible" : "hidden"}
 
         {/* Badge */}

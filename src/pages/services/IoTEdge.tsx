@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { SEO  } from "../../components/SEO";'
-import { motion  } from 'framer-motion.ts';'
+import { SEO  } from "../../components/SEO";
+import { motion  } from 'framer-motion.ts';
 import { Cpu, Wifi, Database, Shield, Zap, Globe, Server, BarChart3, Settings, Monitor, Activity, Network, Smartphone, Tablet, Laptop, Cloud, Lock, RefreshCw, TrendingUp, AlertTriangle  } from 'lucide-react';
 
 export default function IoTEdge(...args: []):  {
@@ -8,51 +8,59 @@ export default function IoTEdge(...args: []):  {
   const features = [
     {
 
-      icon: Cpu,'
-      title: 'Edge Computing','
+      icon: Cpu,
+      title: 'Edge Computing',
       description: 'Process data closer to the source for faster response times'
     },
     {
 
-      icon: Wifi,'
-      title: 'IoT Connectivity','
+      icon: Wifi,
+      title: 'IoT Connectivity',
       description: 'Seamless device communication and data transmission'
     },
     {
 
-      icon: Zap,'
-      title: 'Real-time Processing','
+      icon: Zap,
+      title: 'Real-time Processing',
       description: 'Instant data analysis and decision making';
     },;
     {;
-      icon: Database,;'
-      title: 'Data Management',;'
+      icon: Database,;
+      title: 'Data Management',;
       description: 'Efficient storage and processing of IoT data streams';
     };
   ];
 
   const services = [
     {
-'
-      title: 'IoT Device Management','
+
+      title: 'IoT Device Management',
       description: 'Centralized management and monitoring of connected devices',
       icon: Smartphone
     },
     {
-'
-      title: 'Edge Analytics','
+
+      title: 'Edge Analytics',
       description: 'Real-time data processing and analytics at the edge',
       icon: BarChart3
     },
     {
-'
-      title: '5G Integration','
+
+      title: '5G Integration',
       description: 'High-speed connectivity for IoT applications',
       icon: Wifi;
     },;
+<<<<<<< HEAD
+    {;
+      title: 'Security & Compliance',;
+      description: 'End-to-end security for IoT ecosystems',;
+      icon: Shield;
+    };
+=======
     {;'
       title: 'Security & Compliance',;'      description: 'End-to-end security for IoT ecosystems',;
       icon: Shield};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("

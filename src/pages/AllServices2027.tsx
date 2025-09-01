@@ -1,18 +1,75 @@
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';'
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+import SEO from "../components/SEOHead";
+import { INNOVATIVE_SERVICES_2027 } from '@/data/innovativeServices2027';
+import {
+
+  Brain,
+  Shield,
+  Zap,
+  Code,
+  Signal,
+  Users,
+  Truck,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  CheckCircle,
+  TrendingUp,
+  Globe,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  Cloud,
+  Rocket'
+ } from 'lucide-react';
+
+const AllServices2027: React.FC = () => {;
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+
+  const categories = [;
+    { id: 'All', name: 'All Services', icon: Globe, color: 'from-cyan-500 to-blue-600' },;
+    { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from-purple-500 to-pink-600' },;
+    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' },;
+    { id: 'Emerging Technology', name: 'Emerging Technology', icon: Zap, color: 'from-yellow-500 to-orange-600' },;
+    { id: 'IT Services', name: 'IT Services', icon: Code, color: 'from-green-500 to-teal-600' },;
+    { id: 'Telecommunications', name: 'Telecommunications', icon: Signal, color: 'from-blue-500 to-indigo-600' };
+  ];
+
+  const filteredServices = INNOVATIVE_SERVICES_2027.filter(service =>
+    selectedCategory === 'All' || service.category === selectedCategory
+  );
+
+  const getCategoryStats = (categoryId: string)  => {
+
+    if (categoryId === 'All') {
+
+      return {
+
+              count: innovativeServices2027.length,
+      avgPrice: Math.round(innovativeServices2027.reduce((sum, s)  => sum + parseInt(s.price.replace(/[$,]/g,).split('/')[0]), 0) / innovativeServices2027.length),
+      avgRating: Math.round((innovativeServices2027.reduce((sum, s)  => sum + s.rating, 0) / innovativeServices2027.length) * 10) / 10;
+      }};
+    const services = innovativeServices2027.filter (s => s.category === categoryId) ;
+          return {
+=======
 import SEO from "../components/SEOHead";'
 import { INNOVATIVE_SERVICES_2027 } from '@/data/innovativeServices2027';          return {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
-        count: services.length,'
-        avgPrice: Math.round(services.reduce((sum, s)  => sum + parseInt(s.price.replace(/[$,]/g, '').split('/')[0]), 0) / services.length),
+        count: services.length,
+        avgPrice: Math.round(services.reduce((sum, s)  => sum + parseInt(s.price.replace(/[$,]/g,).split('/')[0]), 0) / services.length),
         avgRating: Math.round((services.reduce((sum, s)  => sum + s.rating, 0) / services.length) * 10) / 10
       }};
-  const filteredServices = INNOVATIVE_SERVICES_2027.filter(service => ;'
+  const filteredServices = INNOVATIVE_SERVICES_2027.filter(service => ;
     selectedCategory === 'All' || service.category === selectedCategory;
   );
 
-  const getCategoryStats = (categoryId: string) => {;'
+  const getCategoryStats = (categoryId: string) => {;
     if (categoryId === 'All') {;
       return {;
         count: INNOVATIVE_SERVICES_2027.length,;
@@ -56,10 +113,18 @@ import { INNOVATIVE_SERVICES_2027 } from '@/data/innovativeServices2027';       
   return()
     <>
       <SEOHead"
+<<<<<<< HEAD
+        title="All Services 2027 - Zion Tech Group"
+        description="Explore our complete portfolio of cutting-edge technology services. From AI and cybersecurity to quantum computing and 5G solutions, we have everything your business needs to succeed."
+        canonical="/all-services-2027"
+        url="https://ziontechgroup.com/all-services-2027"
+      />
+=======
         title="All Services 2027 - Zion Tech Group""
         description="Explore our complete portfolio of cutting-edge technology services. From AI and cybersecurity to quantum computing and 5G solutions, we have everything your business needs to succeed.""
         canonical="/all-services-2027""        url="https://ziontechgroup.com/all-services-2027"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light overflow-hidden">'"
@@ -90,13 +155,13 @@ import { INNOVATIVE_SERVICES_2027 } from '@/data/innovativeServices2027';       
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/comprehensive-pricing-2027""
+                to="/comprehensive-pricing-2027"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
 
                 View Pricing
               </Link>
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
 
                 Get Started
@@ -150,7 +215,7 @@ import { INNOVATIVE_SERVICES_2027 } from '@/data/innovativeServices2027';       
                   key = {category.id}
                   variants={itemVariants}
                   className={`bg-zion-slate-dark border border-zion-slate-light rounded-xl p-6 hover:border-cyan-500 transition-all duration-300 cursor-pointer ${
-'
+
                     selectedCategory === category.id ? 'border-cyan-500 bg-zion-slate' : ''`
                   }`}
                   onClick={() => setSelectedCategory(category.id)}
@@ -184,15 +249,15 @@ import { INNOVATIVE_SERVICES_2027 } from '@/data/innovativeServices2027';       
             <h2 className="text-3xl md:text-4xl font-bold text-white">'`
               {selectedCategory === 'All' ? 'All Services' : `${selectedCategory} Services`}
             </h2>"
-            <div className="text-gray-400">'
+            <div className="text-gray-400">
               {filteredServices.length} service{filteredServices.length !== 1 ? 's' : ''} available
             </div>
           </div>
 
           <motion.div
             variants={containerVariants}"
-            initial="hidden""
-            animate="visible""
+            initial="hidden"
+            animate="visible"
             className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredServices.map ( (service) => (<ServiceCard key={service.id} service={service} />) ) }          </motion.div>
@@ -361,13 +426,13 @@ import { INNOVATIVE_SERVICES_2027 } from '@/data/innovativeServices2027';       
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
               >
                 Get Started Today
               </Link>
               <Link"
-                to="/comprehensive-pricing-2027""
+                to="/comprehensive-pricing-2027"
                 className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
               >
                 View Pricing
@@ -385,8 +450,14 @@ const ServiceCard: React.FC<{ service}> = ({ service }) => {
   const getCategoryIcon = (category: string)  => {
 
     switch (category) {
+<<<<<<< HEAD
+
+      case 'AI Services':;
+            </a>;
+=======
 '
       case 'AI Services':;            </a>;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           </div>;
         </div>;
       </section>;
@@ -398,15 +469,15 @@ const ServiceCard: React.FC<{ service}> = ({ service }) => {
 const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
 
   const getCategoryIcon = (category: string) => {;
-    switch (category) {;'
+    switch (category) {;
       case 'AI Services':;"
-        return <Brain className="w-5 h-5" />;'
+        return <Brain className="w-5 h-5" />;
       case 'Cybersecurity':;"
-        return <Shield className="w-5 h-5" />;'
+        return <Shield className="w-5 h-5" />;
       case 'Emerging Technology':;"
-        return <Zap className="w-5 h-5" />;'
+        return <Zap className="w-5 h-5" />;
       case 'IT Services':;"
-        return <Code className="w-5 h-5" />;'
+        return <Code className="w-5 h-5" />;
       case 'Telecommunications':;"
         return <Signal className="w-5 h-5" />;
       default:;"
@@ -476,7 +547,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
             <span>Learn More</span>"
             <ArrowRight className="w-4 h-4" />          </Link>
           <Link"
-            to="/contact""
+            to="/contact"
             className="px-4 py-3 border border-cyan-500 text-cyan-400 rounded-lg font-medium hover:bg-cyan-500 hover:text-white transition-all duration-300"
           >
             Contact;

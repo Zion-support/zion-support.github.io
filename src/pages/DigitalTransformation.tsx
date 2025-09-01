@@ -1,5 +1,59 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import {
+
+  Rocket,
+  Zap,
+  Shield,
+  Users,
+  TrendingUp,
+  Globe,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Cpu,
+  Database,
+  Cloud,
+  Target,
+  Award,
+  Lightbulb,
+  Crown,
+  Sparkles,
+  ChevronRight,
+  Clock,
+  Check,
+  BarChart3,
+  Lock,
+  Eye,
+  Heart'
+ } from 'lucide-react';
+
+    };
+      description: "Enterprise-grade security and regulatory compliance for digital transformation initiatives.",;
+      icon: Shield,;"
+      features: ["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"],;"
+      color: "from-yellow-500 to-orange-500";
+    };
+  ];
+
+  const transformationPhases = [
+    {
+"
+      phase: "01","
+      title: "Discovery & Assessment","
+      description: "Evaluate current state, identify opportunities, and assess digital maturity","
+      duration: "2-4 weeks",
+      activities[;"
+        "Current state analysis","
+        "Digital maturity assessment","
+        "Stakeholder interviews","
+        "Technology audit","
+        "Gap analysis"
+=======
 import React, { useState } from 'react';'
 import { motion } from 'framer-motion';        "Gap analysis"
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ]
     },;
     {
@@ -89,7 +143,7 @@ import { motion } from 'framer-motion';        "Gap analysis"
               <Rocket className="w-12 h-12 text-white" />            </div>
           </div>
 "
-          <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">'
+          <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
             Digital{' '}"
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Transformation
@@ -254,7 +308,7 @@ import { motion } from 'framer-motion';        "Gap analysis"
 
 }}`
                   className={`relative bg-zion-blue-dark/50 backdrop-blur-sm border rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer ${
-'
+
                     selectedPhase === index ? 'border-zion-cyan' : 'border-zion-cyan/20'`
                   }`}
                   onClick={ () => setSelectedPhase (index) }
@@ -284,7 +338,7 @@ import { motion } from 'framer-motion';        "Gap analysis"
 }}
                         animate = {
 
-  { opacity: 1,'
+  { opacity: 1,
   height: 'auto' 
 
 }}
@@ -367,7 +421,7 @@ import { motion } from 'framer-motion';        "Gap analysis"
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>"
-          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">'
+          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
             Let's discuss how digital transformation can revolutionize your operations,
             enhance customer experiences, and drive sustainable growth.
           </p>

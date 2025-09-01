@@ -8,7 +8,7 @@ class IntelligentOrchestrator {
   constructor() {
     this.automationSystems = new Map();
     this.monitoring = false;
-    this.logFile = path.join(__dirname, 'logs', 'intelligent-orchestrator.log');
+    this.logFile = path.join(__dirname,logs',intelligent-orchestrator.log');
     this.ensureLogDirectory();
     this.loadAutomationSystems();
   }
@@ -116,11 +116,11 @@ class IntelligentOrchestrator {
           system.lastChecked = new Date().toISOString();
         } else {
           system.isAccessible = false;
-          this.log(`System ${name} is not accessible`, 'WARN');
+          this.log(`System ${name} is not accessible`,WARN');
         }
       } catch (error) {
         system.isAccessible = false;
-        this.log(`Error checking system ${name}: ${error.message}`, 'ERROR');
+        this.log(`Error checking system ${name}: ${error.message}`,ERROR');
       }
     }
 
@@ -143,7 +143,7 @@ class IntelligentOrchestrator {
         this.log('No performance bottlenecks detected');
       }
     } catch (error) {
-      this.log(`Performance optimization failed: ${error.message}`, 'ERROR');
+      this.log(`Performance optimization failed: ${error.message}`,ERROR');
     }
   }
 
@@ -171,7 +171,7 @@ class IntelligentOrchestrator {
         });
       }
     } catch (error) {
-      this.log(`Error identifying bottlenecks: ${error.message}`, 'ERROR');
+      this.log(`Error identifying bottlenecks: ${error.message}`,ERROR');
     }
 
     return bottlenecks;
@@ -182,7 +182,7 @@ class IntelligentOrchestrator {
     const maxSize = 1024 * 1024; // 1MB
 
     try {
-      const sourceDir = path.join(__dirname, '..', 'src');
+      const sourceDir = path.join(__dirname,..',src');
       if (fs.existsSync(sourceDir)) {
         const files = this.getAllFiles(sourceDir);
 
@@ -198,7 +198,7 @@ class IntelligentOrchestrator {
         }
       }
     } catch (error) {
-      this.log(`Error finding large files: ${error.message}`, 'ERROR');
+      this.log(`Error finding large files: ${error.message}`,ERROR');
     }
 
     return largeFiles;
@@ -208,10 +208,10 @@ class IntelligentOrchestrator {
     const unusedDeps = [];
 
     try {
-      const packageJsonPath = path.join(__dirname, '..', 'package.json');
+      const packageJsonPath = path.join(__dirname,..',package.json');
       if (fs.existsSync(packageJsonPath)) {
         const packageJson = JSON.parse(
-          fs.readFileSync(packageJsonPath, 'utf8')
+          fs.readFileSync(packageJsonPath,utf8')
         );
         const dependencies = Object.keys(packageJson.dependencies || {});
 
@@ -223,7 +223,7 @@ class IntelligentOrchestrator {
         }
       }
     } catch (error) {
-      this.log(`Error finding unused dependencies: ${error.message}`, 'ERROR');
+      this.log(`Error finding unused dependencies: ${error.message}`,ERROR');
     }
 
     return unusedDeps;
@@ -231,7 +231,7 @@ class IntelligentOrchestrator {
 
   isDependencyUsed(dependency) {
     // Simplified check - in reality, you'd scan all source files for imports
-    const commonDeps = ['react', 'react-dom', 'next', 'vite', 'typescript'];
+    const commonDeps = ['react',react-dom',next',vite',typescript'];
     return commonDeps.includes(dependency);
   }
 
@@ -246,7 +246,7 @@ class IntelligentOrchestrator {
         const stat = fs.statSync(fullPath);
 
         if (stat.isDirectory()) {
-          if (!['node_modules', '.git', 'dist', 'build'].includes(item)) {
+          if (!['node_modules',.git',dist',build'].includes(item)) {
             files.push(...this.getAllFiles(fullPath));
           }
         } else {
@@ -254,7 +254,7 @@ class IntelligentOrchestrator {
         }
       }
     } catch (error) {
-      this.log(`Error reading directory ${dir}: ${error.message}`, 'ERROR');
+      this.log(`Error reading directory ${dir}: ${error.message}`,ERROR');
     }
 
     return files;
@@ -270,14 +270,13 @@ class IntelligentOrchestrator {
           // In a real implementation, you'd implement file optimization strategies
         } else if (bottleneck.type === 'unused_dependencies') {
           this.log(
-            `Found unused dependencies: ${bottleneck.dependencies.join(', ')}`
+            `Found unused dependencies: ${bottleneck.dependencies.join(',)}`
           );
           // In a real implementation, you'd suggest removing unused deps
         }
       } catch (error) {
         this.log(
-          `Failed to optimize bottleneck ${bottleneck.type}: ${error.message}`,
-          'ERROR'
+          `Failed to optimize bottleneck ${bottleneck.type}: ${error.message}`,ERROR'
         );
       }
     }
@@ -299,7 +298,7 @@ class IntelligentOrchestrator {
         this.log('All packages are up to date');
       }
     } catch (error) {
-      this.log(`Dependency update failed: ${error.message}`, 'ERROR');
+      this.log(`Dependency update failed: ${error.message}`,ERROR');
     }
   }
 
@@ -310,7 +309,7 @@ class IntelligentOrchestrator {
       // This is a simplified check - in reality, you'd run npm outdated
       // For now, return empty array
     } catch (error) {
-      this.log(`Error checking outdated packages: ${error.message}`, 'ERROR');
+      this.log(`Error checking outdated packages: ${error.message}`,ERROR');
     }
 
     return outdated;
@@ -323,7 +322,7 @@ class IntelligentOrchestrator {
       // In a real implementation, you'd run npm update
       this.log('Package update completed');
     } catch (error) {
-      this.log(`Package update failed: ${error.message}`, 'ERROR');
+      this.log(`Package update failed: ${error.message}`,ERROR');
     }
   }
 

@@ -1,5 +1,5 @@
-import React, { useState } from 'react.ts';'
-import { motion } from 'framer-motion.ts';'
+import React, { useState } from 'react.ts';
+import { motion } from 'framer-motion.ts';
 import { Link } from 'react-router-dom.ts';
 import {
 
@@ -40,249 +40,249 @@ import {
   ChevronDown,
   ChevronUp,
   ExternalLink,
-  Code,'
+  Code,
   DollarSign} from 'lucide-react.ts';
 
 export default function Helpdesk(...args: any[]): any {
-'
-  const [searchQuery, setSearchQuery] = useState('');'
+
+  const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedTicket, setExpandedTicket] = useState<any>(null);
 
   const supportCategories = [
     {
-'
-      id: 'all','
+
+      id: 'all',
       name: 'All Issues',
-      icon: HelpCircle,'
+      icon: HelpCircle,
       color: 'from-blue-500 to-cyan-500'},
     {
-'
-      id: 'technical','
+
+      id: 'technical',
       name: 'Technical Issues',
-      icon: Monitor,'
+      icon: Monitor,
       color: 'from-purple-500 to-pink-500'},
     {
-'
-      id: 'account','
+
+      id: 'account',
       name: 'Account & Billing',
-      icon: Settings,'
+      icon: Settings,
       color: 'from-green-500 to-emerald-500'},
     {
-'
-      id: 'product','
+
+      id: 'product',
       name: 'Product Support',
-      icon: Rocket,'
+      icon: Rocket,
       color: 'from-orange-500 to-red-500'},
     {
-'
-      id: 'integration','
+
+      id: 'integration',
       name: 'Integration Help',
-      icon: Zap,'
+      icon: Zap,
       color: 'from-indigo-500 to-purple-500'},
     {
-'
-      id: 'security','
+
+      id: 'security',
       name: 'Security Issues',
-      icon: Shield,'
+      icon: Shield,
       color: 'from-red-500 to-orange-500'},
   ];
 
   const commonIssues = [
     {
-'
-      id: 'login-issue','
-      title: 'Unable to log in to my account','
-      category: 'account','
+
+      id: 'login-issue',
+      title: 'Unable to log in to my account',
+      category: 'account',
       priority: 'high',
       description:'
         "I'm getting an error when trying to log in to my account. The system says my credentials are invalid.",
       solution:'"
-        'Try resetting your password using the "Forgot Password" link. If the issue persists, contact our support team.','
-      tags: ['login', 'authentication', 'password'],'
+        'Try resetting your password using the "Forgot Password" link. If the issue persists, contact our support team.',
+      tags: ['login',authentication',password'],
       status: 'resolved',
       icon: Lock},
     {
-'
-      id: 'api-error','
-      title: 'API integration errors','
-      category: 'integration','
+
+      id: 'api-error',
+      title: 'API integration errors',
+      category: 'integration',
       priority: 'medium',
       description:'"
         "Our API calls are returning 500 errors and we can't figure out what's wrong.",
       solution:'"
-        "Check your API key and ensure you're using the correct endpoint. Verify your request format matches our documentation.",'
-      tags: ['api', 'integration', 'error'],'
+        "Check your API key and ensure you're using the correct endpoint. Verify your request format matches our documentation.",
+      tags: ['api',integration',error'],
       status: 'open',
       icon: Code},
     {
-'
-      id: 'performance-slow','
-      title: 'Application running very slow','
-      category: 'technical','
+
+      id: 'performance-slow',
+      title: 'Application running very slow',
+      category: 'technical',
       priority: 'medium',
       description:'
         'The application has become extremely slow and is affecting our productivity.',
       solution:'
-        'Clear your browser cache and cookies. Check your internet connection. If the issue persists, it may be a system-wide issue.','
-      tags: ['performance', 'speed', 'browser'],'
+        'Clear your browser cache and cookies. Check your internet connection. If the issue persists, it may be a system-wide issue.',
+      tags: ['performance',speed',browser'],
       status: 'investigating',
       icon: Zap},
     {
-'
-      id: 'data-sync','
-      title: 'Data not syncing between devices','
-      category: 'technical','
+
+      id: 'data-sync',
+      title: 'Data not syncing between devices',
+      category: 'technical',
       priority: 'low',
       description:'
         'Changes made on one device are not appearing on other devices.',
       solution:'"
-        "Ensure all devices are connected to the internet. Try refreshing the application. Check if you're logged into the same account.",'
-      tags: ['sync', 'data', 'devices'],'
+        "Ensure all devices are connected to the internet. Try refreshing the application. Check if you're logged into the same account.",
+      tags: ['sync',data',devices'],
       status: 'resolved',
       icon: Database},
     {
-'
-      id: 'billing-question','
-      title: 'Billing and subscription questions','
-      category: 'account','
+
+      id: 'billing-question',
+      title: 'Billing and subscription questions',
+      category: 'account',
       priority: 'low',
       description:'
         'I have questions about my current billing plan and want to understand the charges.',
       solution:'
-        'Review your billing history in your account settings. Contact our billing team for detailed explanations of charges.','
-      tags: ['billing', 'subscription', 'charges'],'
+        'Review your billing history in your account settings. Contact our billing team for detailed explanations of charges.',
+      tags: ['billing',subscription',charges'],
       status: 'resolved',
       icon: DollarSign},
     {
-'
-      id: 'security-concern','
-      title: 'Security and privacy concerns','
-      category: 'security','
+
+      id: 'security-concern',
+      title: 'Security and privacy concerns',
+      category: 'security',
       priority: 'high',
       description:'"
         "I'm concerned about the security of our data and want to understand our security measures.",
       solution:'
-        'We implement enterprise-grade security including encryption, regular audits, and compliance with industry standards.','
-      tags: ['security', 'privacy', 'compliance'],'
+        'We implement enterprise-grade security including encryption, regular audits, and compliance with industry standards.',
+      tags: ['security',privacy',compliance'],
       status: 'resolved',
       icon: Shield},
   ];
 
   const supportChannels = [
     {
-'
+
       type: 'Live Chat',
-      icon: MessageCircle,'
-      description: 'Get instant help from our support team','
-      availability: '24/7','
-      responseTime: '< 2 minutes','
-      priority: 'high','
-      href: '/support/chat','
+      icon: MessageCircle,
+      description: 'Get instant help from our support team',
+      availability: '24/7',
+      responseTime: '< 2 minutes',
+      priority: 'high',
+      href: '/support/chat',
       color: 'from-blue-500 to-cyan-500'},
     {
-'
+
       type: 'Phone Support',
-      icon: Phone,'
-      description: 'Speak directly with our experts','
-      availability: '24/7','
-      responseTime: 'Immediate','
-      priority: 'high','
-      href: '/support/phone','
+      icon: Phone,
+      description: 'Speak directly with our experts',
+      availability: '24/7',
+      responseTime: 'Immediate',
+      priority: 'high',
+      href: '/support/phone',
       color: 'from-green-500 to-emerald-500'},
     {
-'
+
       type: 'Email Support',
-      icon: Mail,'
-      description: 'Send us detailed questions','
-      availability: '24/7','
-      responseTime: '< 4 hours','
-      priority: 'medium','
-      href: '/support/email','
+      icon: Mail,
+      description: 'Send us detailed questions',
+      availability: '24/7',
+      responseTime: '< 4 hours',
+      priority: 'medium',
+      href: '/support/email',
       color: 'from-purple-500 to-pink-500'},
     {
-'
+
       type: 'Support Tickets',
-      icon: Ticket,'
-      description: 'Submit detailed support requests','
-      availability: '24/7','
-      responseTime: '< 24 hours','
-      priority: 'medium','
-      href: '/support/tickets','
+      icon: Ticket,
+      description: 'Submit detailed support requests',
+      availability: '24/7',
+      responseTime: '< 24 hours',
+      priority: 'medium',
+      href: '/support/tickets',
       color: 'from-orange-500 to-red-500'},
   ];
 
   const quickSolutions = [
     {
 
-      icon: BookOpen,'
-      title: 'Knowledge Base','
-      description: 'Browse our comprehensive documentation','
-      articles: '500+ articles','
-      href: '/docs','
+      icon: BookOpen,
+      title: 'Knowledge Base',
+      description: 'Browse our comprehensive documentation',
+      articles: '500+ articles',
+      href: '/docs',
       color: 'from-blue-500 to-cyan-500'},
     {
 
-      icon: Video,'
-      title: 'Video Tutorials','
-      description: 'Step-by-step video guides','
-      articles: '100+ tutorials','
-      href: '/tutorials','
+      icon: Video,
+      title: 'Video Tutorials',
+      description: 'Step-by-step video guides',
+      articles: '100+ tutorials',
+      href: '/tutorials',
       color: 'from-purple-500 to-pink-500'},
     {
 
-      icon: Users,'
-      title: 'Community Forum','
-      description: 'Connect with other users','
-      articles: '10,000+ members','
-      href: '/community','
+      icon: Users,
+      title: 'Community Forum',
+      description: 'Connect with other users',
+      articles: '10,000+ members',
+      href: '/community',
       color: 'from-green-500 to-emerald-500'},
     {
 
-      icon: FileText,'
-      title: 'FAQ','
-      description: 'Frequently asked questions','
-      articles: '200+ FAQs','
-      href: '/faq','
+      icon: FileText,
+      title: 'FAQ',
+      description: 'Frequently asked questions',
+      articles: '200+ FAQs',
+      href: '/faq',
       color: 'from-orange-500 to-red-500'},
   ];
 
   const systemStatus = [
     {
-'
-      service: 'AI Services','
+
+      service: 'AI Services',
       status: 'operational',
-      icon: Brain,'
+      icon: Brain,
       color: 'green'},
     {
-'
-      service: 'Cloud Infrastructure','
+
+      service: 'Cloud Infrastructure',
       status: 'operational',
-      icon: Cloud,'
+      icon: Cloud,
       color: 'green'},
     {
-'
-      service: 'Security Systems','
+
+      service: 'Security Systems',
       status: 'operational',
-      icon: Shield,'
+      icon: Shield,
       color: 'green'},
     {
-'
-      service: 'Data Analytics','
+
+      service: 'Data Analytics',
       status: 'operational',
-      icon: TrendingUp,'
+      icon: TrendingUp,
       color: 'green'},
     {
-'
-      service: 'API Services','
+
+      service: 'API Services',
       status: 'operational',
-      icon: Globe,'
+      icon: Globe,
       color: 'green'},
     {
-'
-      service: 'Support Portal','
+
+      service: 'Support Portal',
       status: 'operational',
-      icon: HelpCircle,'
+      icon: HelpCircle,
       color: 'green'},
   ];
 
@@ -304,11 +304,11 @@ export default function Helpdesk(...args: any[]): any {
   const getPriorityColor = (priority: anystring) => {
 
     switch (priority) {
-'
+
       case 'high':'
-        return 'text-red-400 bg-red-400/20 border-red-400/30';'
+        return 'text-red-400 bg-red-400/20 border-red-400/30';
       case 'medium':'
-        return 'text-yellow-400 bg-yellow-400/20 border-yellow-400/30';'
+        return 'text-yellow-400 bg-yellow-400/20 border-yellow-400/30';
       case 'low':'
         return 'text-green-400 bg-green-400/20 border-green-400/30';
       default:'
@@ -319,11 +319,11 @@ export default function Helpdesk(...args: any[]): any {
   const getStatusColor = (status: anystring) => {
 
     switch (status) {
-'
+
       case 'resolved':'
-        return 'text-green-400 bg-green-400/20 border-green-400/30';'
+        return 'text-green-400 bg-green-400/20 border-green-400/30';
       case 'investigating':'
-        return 'text-yellow-400 bg-yellow-400/20 border-yellow-400/30';'
+        return 'text-yellow-400 bg-yellow-400/20 border-yellow-400/30';
       case 'open':'
         return 'text-blue-400 bg-blue-400/20 border-blue-400/30';
       default:'
@@ -365,13 +365,18 @@ export default function Helpdesk(...args: any[]): any {
           <form onSubmit={handleSearch} className="relative">"
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <input"
+<<<<<<< HEAD
+              type="text"
+              placeholder="Search for help articles, common issues, or solutions..."
+=======
               type="text""              placeholder="Search for help articles, common issues, or solutions..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}"
               className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-lg"
             />
             <button"
-              type="submit""
+              type="submit"
               className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
             >
               Search
@@ -601,7 +606,7 @@ export default function Helpdesk(...args: any[]): any {
 
                 {expandedTicket === issue.id && (
                   <motion.div
-                    initial={{ opacity: 0, height: 0 }}'
+                    initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}"
@@ -663,13 +668,13 @@ export default function Helpdesk(...args: any[]): any {
 "
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
+              to="/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >
               Contact Support"
               <ArrowRight className="ml-2 h-5 w-5" />            </Link>
             <Link"
-              to="/support/tickets""
+              to="/support/tickets"
               className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
             >
               Submit Ticket

@@ -1,5 +1,5 @@
 import React from 'react';
-import SEO from "@/components/SEO";'
+import SEO from "@/components/SEO";
 import { Shield, Database, Monitor } from 'lucide-react';
 const ITSolutions = () => {
     const features = [
@@ -249,7 +249,7 @@ const ITSolutions = () => {
       <section className="py-20 bg-gradient-to-r from-teal-600 to-cyan-600 text-white">"
         <div className="container mx-auto px-4 text-center">"
           <h2 className="text-4xl font-bold mb-6">Ready to Optimize Your IT?</h2>"
-          <p className="text-xl mb-8 max-w-3xl mx-auto">'
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
             Let's discuss how our IT solutions can improve your business operations and performance.
           </p>"
           <button className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">

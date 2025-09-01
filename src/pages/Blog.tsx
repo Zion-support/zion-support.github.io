@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';'
+import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -7,8 +7,14 @@ import {
   Calendar,
   User,
   Eye,
+<<<<<<< HEAD
+  BookOpen,
+  ArrowRight,
+  Mail,
+=======
   BookOpen,  ArrowRight,
   Mail,'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   Send} from 'lucide-react';
 
 interface BlogPost {
@@ -33,73 +39,73 @@ interface Category {
   name: string;
   count: number;
 const Blog: React.FC = () => {
-'
-  const [searchTerm, setSearchTerm] = useState('');'
+
+  const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   const categories: Category[] = ['
-    { id: 'all', name: 'All Posts', count: 12 },'
-    { id: 'ai', name: 'AI & Machine Learning', count: 4 },'
-    { id: 'cybersecurity', name: 'Cybersecurity', count: 3 },'
-    { id: 'quantum', name: 'Quantum Computing', count: 2 },'
-    { id: 'saas', name: 'Micro SaaS', count: 2 },'
+    { id: 'all', name: 'All Posts', count: 12 },
+    { id: 'ai', name: 'AI & Machine Learning', count: 4 },
+    { id: 'cybersecurity', name: 'Cybersecurity', count: 3 },
+    { id: 'quantum', name: 'Quantum Computing', count: 2 },
+    { id: 'saas', name: 'Micro SaaS', count: 2 },
     { id: 'business', name: 'Business Insights', count: 1 },
   ];
 
   const blogPosts: BlogPost[] = [
     {
-'
-      id: '1','
+
+      id: '1',
       title: 'The Future of AI in Enterprise: 2024 Trends and Predictions',
       excerpt:'
-        "Explore the latest developments in AI technology and how they're reshaping enterprise operations.",'
-      content: 'Full article content here...','
-      author: 'Dr. Sarah Johnson','
-      date: '2024-01-15','
-      category: 'ai','
-      tags: ['AI', 'Enterprise', 'Technology', 'Innovation'],'
+        "Explore the latest developments in AI technology and how they're reshaping enterprise operations.",
+      content: 'Full article content here...',
+      author: 'Dr. Sarah Johnson',
+      date: '2024-01-15',
+      category: 'ai',
+      tags: ['AI',Enterprise',Technology',Innovation'],
       readTime: '5 min read',
       views: 1247,
       featured: true},
     {
-'
-      id: '2','
+
+      id: '2',
       title: 'Quantum Computing: Breaking Down the Hype vs Reality',
       excerpt:'"
-        "A comprehensive look at quantum computing's current state and practical applications.",'
-      content: 'Full article content here...','
-      author: 'Michael Chen','
-      date: '2024-01-10','
-      category: 'quantum','
-      tags: ['Quantum Computing', 'Technology', 'Research'],'
+        "A comprehensive look at quantum computing's current state and practical applications.",
+      content: 'Full article content here...',
+      author: 'Michael Chen',
+      date: '2024-01-10',
+      category: 'quantum',
+      tags: ['Quantum Computing',Technology',Research'],
       readTime: '8 min read',
       views: 892,
       featured: true},
     {
-'
-      id: '3','
+
+      id: '3',
       title: 'Cybersecurity in the Age of AI: New Threats and Solutions',
       excerpt:'
-        'How AI is both creating new security challenges and providing innovative solutions.','
-      content: 'Full article content here...','
-      author: 'Emily Rodriguez','
-      date: '2024-01-08','
-      category: 'cybersecurity','
-      tags: ['Cybersecurity', 'AI', 'Security'],'
+        'How AI is both creating new security challenges and providing innovative solutions.',
+      content: 'Full article content here...',
+      author: 'Emily Rodriguez',
+      date: '2024-01-08',
+      category: 'cybersecurity',
+      tags: ['Cybersecurity',AI',Security'],
       readTime: '6 min read',
       views: 756,
       featured: false},
     {
-'
-      id: '4','
+
+      id: '4',
       title: 'Building Successful Micro SaaS Products: Lessons Learned',
       excerpt:'
-        'Key insights from building and scaling micro SaaS solutions for modern businesses.','
-      content: 'Full article content here...','
-      author: 'David Kim','
-      date: '2024-01-05','
-      category: 'saas','
-      tags: ['SaaS', 'Business', 'Startup'],'
+        'Key insights from building and scaling micro SaaS solutions for modern businesses.',
+      content: 'Full article content here...',
+      author: 'David Kim',
+      date: '2024-01-05',
+      category: 'saas',
+      tags: ['SaaS',Business',Startup'],
       readTime: '7 min read',
       views: 634,
       featured: false},
@@ -123,11 +129,11 @@ const Blog: React.FC = () => {
   }, [searchTerm, selectedCategory]) ;
 
   const formatDate = (dateString: string) => {
-'
+
     return new Date(dateString).toLocaleDateString('en-US', {
-'
-      year: 'numeric','
-      month: 'long','
+
+      year: 'numeric',
+      month: 'long',
       day: 'numeric'});
   };
   return ("
@@ -163,7 +169,12 @@ const Blog: React.FC = () => {
             <div className="relative">"
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input"
+<<<<<<< HEAD
+                type="text"
+                placeholder="Search articles..."
+=======
                 type="text""                placeholder="Search articles..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}"
                 className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -351,8 +362,8 @@ const Blog: React.FC = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input"
-                type="email""
-                placeholder="Enter your email""
+                type="email"
+                placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />"
               <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors flex items-center justify-center gap-2">"

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { RefreshCw, X, CheckCircle, AlertTriangle, Info } from 'lucide-react';
 const PWAUpdater: React.FC<PWAUpdaterProps> = ({
 
@@ -17,13 +17,13 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
   useEffect(() => {
     // Check if service worker is supported'
     if ('serviceWorker' in navigator) {
-'
+
       // // // // // // // // console.log('Service worker not available');
       // Register service worker'
       navigator.serviceWorker.register('/sw.js')
         .then((reg) => {
 
-          setRegistration(reg);'
+          setRegistration(reg);
           // console.log('Service Worker registered successfully:', reg);
           
           // Check for updates
@@ -33,13 +33,13 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
           }          
           // Listen for updates'
           reg.addEventListener('updatefound', () => {
-'
+
             // console.log('Service Worker update found');
             const newWorker = reg.installing;
             if (newWorker) {
-'
+
               newWorker.addEventListener('statechange', () => {
-'
+
                 if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
 
                   setUpdateAvailable(true);
@@ -51,9 +51,9 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
               }) ;
             }          });
           
-          // Listen for controller change (update applied)'
+          // Listen for controller change (update applied)
           navigator.serviceWorker.addEventListener('controllerchange', () => {
-'
+
             // console.log('Service Worker controller changed - update applied');
             setUpdateComplete(true);
             setUpdateAvailable(false);
@@ -64,7 +64,7 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
               setShowPrompt(false);
               setUpdateComplete(false)}, 3000)})})
         .catch((error) => {
-'
+
           // console.error('Service Worker registration failed:', error);
         });
     }
@@ -83,10 +83,10 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
   const checkForUpdates = async (reg: ServiceWorkerRegistration) => {
 
     try {
-      await reg.update();'
+      await reg.update();
       // console.log('Service Worker update check completed');
     } catch (error) {
-'
+
       // console.error('Service Worker update check failed:', error);
     }
   };
@@ -100,7 +100,7 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
     try {
       // Send message to service worker to skip waiting
       if (registration.waiting) {
-'
+
         registration.waiting.postMessage({ type: 'SKIP_WAITING' });
       }
       // Reload the page to apply the update
@@ -108,10 +108,10 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
         window.location.reload () ;
       }, 1000) ;
     } catch (error) {
-'
+
       // // // // // // // // console.error('Update failed:', error);
       setIsUpdating(false);
-'
+
       // console.error('Failed to apply update:', error);
       setUpdating(false);
       setShowPrompt(true)}
@@ -127,7 +127,7 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
       }
     }, 3600000) ;
   };
-'
+
   // Don't render anything if no update is available
   if (!updateAvailable && !updating && !updateComplete) {
 
@@ -204,8 +204,8 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
                   <div className="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
                     <motion.div"
                       className="h-full bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full"'
-                      initial={{ width: '0%' }}'
-                      animate={{ width: '100%' }}'
+                      initial={{ width: '0%' }}
+                      animate={{ width: '100%' }}
                       transition={{ duration: 2, ease: 'easeInOut' }}
                     />
                   </div>

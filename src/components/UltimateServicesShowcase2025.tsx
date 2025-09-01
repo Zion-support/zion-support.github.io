@@ -1,6 +1,6 @@
 import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
-import { SEO } from "@/components/SEO";'
+import { SEO } from "@/components/SEO";
 import { Link } from 'react-router-dom';
 import {
   Brain, 
@@ -23,11 +23,11 @@ import {
   MapPin,
   ExternalLink,
   Search'
-} from 'lucide-react';'
+} from 'lucide-react';
 import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025 } from '@/data/ultimateRealServices2025';
 export default function UltimateServicesShowcase2025() {
-'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
+
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
   
@@ -36,7 +36,7 @@ export default function UltimateServicesShowcase2025() {
     return matchesCategory && matchesSearch});
 
   const filteredServices = ULTIMATE_REAL_SERVICES_2025.filter(service => {
-'
+
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
                          service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
@@ -84,7 +84,7 @@ export default function UltimateServicesShowcase2025() {
           <motion.div "
             className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-12"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             animate="visible"
           >"
             <motion.div variants={itemVariants} className="glass rounded-xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 group">"
@@ -114,7 +114,7 @@ export default function UltimateServicesShowcase2025() {
           >"
             <div className="relative mb-6">
               <input"
-                type="text""
+                type="text"
                 placeholder="Search services, features, or technologies..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
@@ -140,7 +140,7 @@ export default function UltimateServicesShowcase2025() {
               "
               <div className="flex items-center gap-2">
                 <button'
-                  onClick={() => setViewMode('grid')}'
+                  onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-colors ${viewMode === 'grid' ? 'bg-zion-cyan text-white' : 'glass text-gray-300 hover:text-white'}`}
                 >"
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">"
@@ -166,18 +166,18 @@ export default function UltimateServicesShowcase2025() {
         <div className="max-w-7xl mx-auto">
           <motion.div '
             className={viewMode === 'grid' "
-              ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8""
+              ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               : "space-y-6"
             }
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             animate="visible"
           >
             {sortedServices.map ( (service, index) => (<motion.div
                 key={service.id}
-                variants={itemVariants}'
+                variants={itemVariants}
                 className={viewMode === 'grid' "
-                  ? "glass rounded-2xl p-6 border border-white/20 hover:border-zion-cyan/40 transition-all duration-500 hover:transform hover:scale-105 cursor-pointer group""
+                  ? "glass rounded-2xl p-6 border border-white/20 hover:border-zion-cyan/40 transition-all duration-500 hover:transform hover:scale-105 cursor-pointer group"
                   : "glass rounded-2xl p-6 border border-white/20 hover:border-zion-cyan/40 transition-all duration-500 cursor-pointer group"
                 }
                 onClick={ () => handleServiceClick (service) }
@@ -258,7 +258,7 @@ export default function UltimateServicesShowcase2025() {
           <motion.div "
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >"

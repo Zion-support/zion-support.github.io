@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -10,44 +10,44 @@ import {
   AlertCircle,
   User,
   MessageSquare,
-  Building,'
+  Building,
   Rocket} from 'lucide-react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-'
-    name: '','
-    email: '','
-    company: '','
-    phone: '','
-    message: '','
+
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    message: '',
     service: 'general'});
 
   const serviceOptions = ['
     { value: 'general', label: 'General Inquiry' },
     {
-'
-      value: 'ai-autonomous-research','
-      label: 'AI Autonomous Research Assistant'},'
-    { value: 'ai-supply-chain', label: 'AI Supply Chain Optimization' },'
-    { value: 'ai-content-marketing', label: 'AI Content Marketing Suite' },'
+
+      value: 'ai-autonomous-research',
+      label: 'AI Autonomous Research Assistant'},
+    { value: 'ai-supply-chain', label: 'AI Supply Chain Optimization' },
+    { value: 'ai-content-marketing', label: 'AI Content Marketing Suite' },
     { value: 'ai-workflow-orchestrator', label: 'AI Workflow Orchestrator' },
     {
-'
-      value: 'ai-customer-experience','
-      label: 'AI Customer Experience Analytics'},'
-    { value: 'ai-financial-risk', label: 'AI Financial Risk Management' },'
-    { value: 'ai-cybersecurity', label: 'AI Cybersecurity Solutions' },'
-    { value: 'cloud-devops', label: 'Cloud & DevOps Services' },'
-    { value: 'digital-transformation', label: 'Digital Transformation' },'
-    { value: 'micro-saas', label: 'Micro SaaS Solutions' },'
-    { value: 'it-consulting', label: 'IT Consulting' },'
-    { value: 'quantum-computing', label: 'Quantum Computing' },'
-    { value: 'iot-edge', label: 'IoT & Edge Computing' },'
+
+      value: 'ai-customer-experience',
+      label: 'AI Customer Experience Analytics'},
+    { value: 'ai-financial-risk', label: 'AI Financial Risk Management' },
+    { value: 'ai-cybersecurity', label: 'AI Cybersecurity Solutions' },
+    { value: 'cloud-devops', label: 'Cloud & DevOps Services' },
+    { value: 'digital-transformation', label: 'Digital Transformation' },
+    { value: 'micro-saas', label: 'Micro SaaS Solutions' },
+    { value: 'it-consulting', label: 'IT Consulting' },
+    { value: 'quantum-computing', label: 'Quantum Computing' },
+    { value: 'iot-edge', label: 'IoT & Edge Computing' },
     { value: 'custom-development', label: 'Custom Development' },
   ];
 
-  const [isSubmitting, setIsSubmitting] = useState(false);'
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState('idle');
 
   const handleInputChange = (
@@ -66,18 +66,18 @@ export default function Contact() {
 
     // Simulate form submission
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));'
+      await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
       setFormData({
-'
-        name: '','
-        email: '','
-        company: '','
-        phone: '','
-        message: '','
+
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        message: '',
         service: 'general'});
     } catch (error) {
-'
+
       setSubmitStatus('error');
     } finally {
 
@@ -121,30 +121,11 @@ export default function Contact() {
   ];
 
   const services = [
-    'AI Business Intelligence',
-    'Micro SaaS Solutions',
-    'Cloud & DevOps',
-    'Cybersecurity',
-    'Digital Transformation',
-    'Data Analytics',
-    'IoT Solutions',
-    'Custom Development',
-    'Consulting Services',
-    'Other'
+    'AI Business Intelligence',Micro SaaS Solutions',Cloud & DevOps',Cybersecurity',Digital Transformation',Data Analytics',IoT Solutions',Custom Development',Consulting Services',Other'
   ];
 
   const industries = [
-    'Healthcare',
-    'Financial Services',
-    'Manufacturing',
-    'Retail & E-commerce',
-    'Technology',
-    'Education',
-    'Legal Services',
-    'Government',
-    'Startup',
-    'Enterprise',
-    'Other'
+    'Healthcare',Financial Services',Manufacturing',Retail & E-commerce',Technology',Education',Legal Services',Government',Startup',Enterprise',Other'
   ];
 
   const whyChooseUs = [
@@ -182,7 +163,7 @@ export default function Contact() {
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
             Get In Touch
           </h1>"
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-300 leading-relaxed">'
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-300 leading-relaxed">
             Ready to transform your business? Let's discuss how our cutting-edge
             AI and technology solutions can drive your success.
           </p>
@@ -200,7 +181,7 @@ export default function Contact() {
               <h2 className="text-3xl font-bold text-white mb-6">
                 Contact Information
               </h2>"
-              <p className="text-gray-300 text-lg mb-8">'
+              <p className="text-gray-300 text-lg mb-8">
                 We're here to help you navigate the future of technology. Reach
                 out to us for personalized solutions and expert guidance.
               </p>
@@ -223,7 +204,7 @@ export default function Contact() {
                 <div>"
                   <h3 className="text-white font-semibold text-lg">Email</h3>"
                   <p className="text-gray-300">kleber@ziontechgroup.com</p>"
-                  <p className="text-gray-400 text-sm">'
+                  <p className="text-gray-400 text-sm">
                     We'll respond within 24 hours
                   </p>
                 </div>
@@ -290,38 +271,38 @@ export default function Contact() {
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label"
-                    htmlFor="name""
+                    htmlFor="name"
                     className="block text-white font-medium mb-2"
                   >"
                     <User className="w-4 h-4 inline mr-2" />                    Full Name *
                   </label>
                   <input"
-                    type="text""
-                    id="name""
+                    type="text"
+                    id="name"
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
                     required"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent""
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
                     placeholder="Enter your full name"
                   />
                 </div>
 
                 <div>
                   <label"
-                    htmlFor="email""
+                    htmlFor="email"
                     className="block text-white font-medium mb-2"
                   >"
                     <Mail className="w-4 h-4 inline mr-2" />                    Email Address *
                   </label>
                   <input"
-                    type="email""
-                    id="email""
+                    type="email"
+                    id="email"
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
                     required"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent""
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -330,36 +311,36 @@ export default function Contact() {
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label"
-                    htmlFor="company""
+                    htmlFor="company"
                     className="block text-white font-medium mb-2"
                   >"
                     <Building className="w-4 h-4 inline mr-2" />                    Company
                   </label>
                   <input"
-                    type="text""
-                    id="company""
+                    type="text"
+                    id="company"
                     name="company"
                     value={formData.company}
                     onChange={handleInputChange}"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent""
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
                     placeholder="Enter company name"
                   />
                 </div>
 
                 <div>
                   <label"
-                    htmlFor="phone""
+                    htmlFor="phone"
                     className="block text-white font-medium mb-2"
                   >"
                     <Phone className="w-4 h-4 inline mr-2" />                    Phone Number
                   </label>
                   <input"
-                    type="tel""
-                    id="phone""
+                    type="tel"
+                    id="phone"
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent""
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
                     placeholder="Enter phone number"
                   />
                 </div>
@@ -367,13 +348,13 @@ export default function Contact() {
 
               <div>
                 <label"
-                  htmlFor="service""
+                  htmlFor="service"
                   className="block text-white font-medium mb-2"
                 >
                   Service of Interest
                 </label>
                 <select"
-                  id="service""
+                  id="service"
                   name="service"
                   value={formData.service}
                   onChange={handleInputChange}"
@@ -392,24 +373,24 @@ export default function Contact() {
 
               <div>
                 <label"
-                  htmlFor="message""
+                  htmlFor="message"
                   className="block text-white font-medium mb-2"
                 >"
                   <MessageSquare className="w-4 h-4 inline mr-2" />                  Message *
                 </label>
                 <textarea"
-                  id="message""
+                  id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
                   required
                   rows={5}"
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent resize-none""
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent resize-none"
                   placeholder="Tell us about your project or inquiry..."
                 />
               </div>
 
-              {/* Submit Status */}'
+              {/* Submit Status */}
               {submitStatus === 'success' && (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -417,11 +398,11 @@ export default function Contact() {
                   className="bg-green-500/20 border border-green-500/50 rounded-lg p-4 flex items-center space-x-3"
                 >"
                   <CheckCircle className="w-6 h-6 text-green-400" />"
-                  <span className="text-green-400">'
+                  <span className="text-green-400">
                     Message sent successfully! We'll get back to you soon.
                   </span>                </motion.div>
               )}
-'
+
               {submitStatus === 'error' && (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}

@@ -1,70 +1,70 @@
-import React, { useState } from 'react';'
-import { Link } from 'react-router-dom';'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { innovativeMicroSaasServices2025 } from '../data/innovativeMicroSaasServices2025';
 const ComprehensiveServicesLanding2025 = () => {
-'
+
   const [selectedIndustry, setSelectedIndustry] = useState('all');
   const industries = [
     {
-'
-      id: 'all','
-      name: 'All Industries','
-      icon: '🏢','
+
+      id: 'all',
+      name: 'All Industries',
+      icon: '🏢',
       description: 'Comprehensive solutions across all sectors'},
     {
-'
-      id: 'finance','
-      name: 'Financial Services','
-      icon: '💰','
+
+      id: 'finance',
+      name: 'Financial Services',
+      icon: '💰',
       description: 'AI-powered trading, risk management, and compliance'},
     {
-'
-      id: 'healthcare','
-      name: 'Healthcare','
-      icon: '🏥','
+
+      id: 'healthcare',
+      name: 'Healthcare',
+      icon: '🏥',
       description: 'Advanced analytics, patient care, and research'},
     {
-'
-      id: 'manufacturing','
-      name: 'Manufacturing','
-      icon: '🏭','
+
+      id: 'manufacturing',
+      name: 'Manufacturing',
+      icon: '🏭',
       description: 'Smart factories, IoT, and supply chain optimization'},
     {
-'
-      id: 'energy','
-      name: 'Energy & Utilities','
-      icon: '⚡','
+
+      id: 'energy',
+      name: 'Energy & Utilities',
+      icon: '⚡',
       description: 'Renewable energy management and grid optimization'},
     {
-'
-      id: 'logistics','
-      name: 'Logistics & Transportation','
-      icon: '🚚','
+
+      id: 'logistics',
+      name: 'Logistics & Transportation',
+      icon: '🚚',
       description: 'Autonomous logistics and route optimization'},
     {
-'
-      id: 'legal','
-      name: 'Legal Services','
-      icon: '⚖️','
+
+      id: 'legal',
+      name: 'Legal Services',
+      icon: '⚖️',
       description: 'AI-powered research and document analysis'},
     {
-'
-      id: 'marketing','
-      name: 'Marketing & Advertising','
-      icon: '📢','
+
+      id: 'marketing',
+      name: 'Marketing & Advertising',
+      icon: '📢',
       description: 'Autonomous campaigns and AI content generation'},
   ];
   const getServicesByIndustry = industry => {
-'
+
     if (industry === 'all') return innovativeMicroSaasServices2025;
     const industryMap = {
-'
-      finance: ['FinTech & AI', 'Cybersecurity & Quantum Computing'],'
-      healthcare: ['Healthcare & AI'],'
-      manufacturing: ['IoT & Edge Computing', 'Blockchain & Supply Chain'],'
-      energy: ['Energy & Sustainability'],'
-      logistics: ['Logistics & Transportation'],'
-      legal: ['Legal Tech & AI'],'
+
+      finance: ['FinTech & AI',Cybersecurity & Quantum Computing'],
+      healthcare: ['Healthcare & AI'],
+      manufacturing: ['IoT & Edge Computing',Blockchain & Supply Chain'],
+      energy: ['Energy & Sustainability'],
+      logistics: ['Logistics & Transportation'],
+      legal: ['Legal Tech & AI'],
       marketing: ['Marketing & AI']};
     return innovativeMicroSaasServices2025.filter(service =>
       industryMap[industry]?.includes(service.category)
@@ -78,7 +78,7 @@ const ComprehensiveServicesLanding2025 = () => {
         <div className="max-w-7xl mx-auto text-center">"
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Transform Your Business with"
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
               {' '}
               AI-Powered Solutions
             </span>
@@ -112,13 +112,13 @@ const ComprehensiveServicesLanding2025 = () => {
           {/* CTA Buttons */}"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/enhanced-services-2025""
+              to="/enhanced-services-2025"
               className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 hover:scale-105"
             >
               Explore All Services
             </Link>
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 hover:scale-105"
             >
               Call Now: +1 302 464 0950
@@ -179,7 +179,7 @@ const ComprehensiveServicesLanding2025 = () => {
                         {service.period}
                       </span>
                     </span>"
-                    <div className="flex items-center text-yellow-400">'
+                    <div className="flex items-center text-yellow-400">
                       {'★'.repeat(Math.floor(service.rating))}"
                       <span className="text-white/70 ml-1">
                         ({service.reviews})
@@ -529,13 +529,13 @@ const ComprehensiveServicesLanding2025 = () => {
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
               >
                 Call Now: +1 302 464 0950
               </a>
               <a"
-                href="mailto:kleber@ziontechgroup.com""
+                href="mailto:kleber@ziontechgroup.com"
                 className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
               >
                 Email: kleber@ziontechgroup.com

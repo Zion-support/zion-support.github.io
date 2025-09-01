@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion } from 'framer-motion.ts';
 import { Link } from 'react-router-dom.ts';
 import {
 
@@ -15,58 +15,58 @@ import {
   DollarSign,
   Clock,
   Users,
-  Target,'
-  Rocket} from 'lucide-react.ts';'
-import { SEO } from '@/components/SEO';'
+  Target,
+  Rocket} from 'lucide-react.ts';
+import { SEO } from '@/components/SEO';
 import { NEW_INNOVATIVE_SERVICES_2025 } from '../data/newInnovativeServices2025';
 
 export default function NewInnovativeServicesShowcase(...args: any[]): any {
 
   const serviceCategories = [
     {
-'
+
       title: 'AI & Legal Tech',
       description:'
         'Revolutionary legal document automation and compliance solutions',
-      icon: Shield,'
+      icon: Shield,
       color: 'from-blue-500 to-purple-600'},
     {
-'
+
       title: 'AI & Healthcare',
       description:'
         'Transformative healthcare analytics and clinical decision support',
-      icon: TrendingUp,'
+      icon: TrendingUp,
       color: 'from-green-500 to-blue-600'},
     {
-'
+
       title: 'AI & FinTech',
       description:'
         'Advanced trading platforms with intelligent risk management',
-      icon: DollarSign,'
+      icon: DollarSign,
       color: 'from-green-500 to-emerald-600'},
   ];
 
   const keyBenefits = [
     {
-'
+
       title: 'Cutting-Edge AI Technology',
       description:'
         'Leverage the latest advances in machine learning, natural language processing, and predictive analytics',
       icon: Sparkles},
     {
-'
+
       title: 'Industry-Specific Solutions',
       description:'
         'Tailored solutions designed for specific industry challenges and regulatory requirements',
       icon: Target},
     {
-'
+
       title: 'Proven ROI & Results',
       description:'
         'Measurable improvements in efficiency, accuracy, and cost savings across all services',
       icon: TrendingUp},
     {
-'
+
       title: 'Enterprise-Grade Security',
       description:'
         'SOC 2, ISO 27001, and industry-specific compliance certifications for maximum security',
@@ -76,8 +76,14 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO"
+<<<<<<< HEAD
+        title="New Innovative Services 2025 - Zion Tech Group"
+        description="Discover our latest AI-powered innovative services: Legal document automation, healthcare analytics, and financial trading platforms. Transform your business with cutting-edge technology."
+      />
+=======
         title="New Innovative Services 2025 - Zion Tech Group""        description="Discover our latest AI-powered innovative services: Legal document automation, healthcare analytics, and financial trading platforms. Transform your business with cutting-edge technology."
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 sm:py-32 overflow-hidden">"
@@ -94,7 +100,7 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
             </div>"
             <h1 className="text-4xl sm:text-6xl font-bold tracking-tight mb-6">
               New Innovative"
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">'
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
                 {' '}
                 Services 2025
               </span>
@@ -106,13 +112,13 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-lg hover:from-purple-400 hover:to-blue-500 transition-all duration-300 font-semibold"
               >"
                 <Phone className="w-5 h-5 mr-2" />                Call +1 302 464 0950
               </a>
               <a"
-                href="mailto:kleber@ziontechgroup.com""
+                href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center px-6 py-3 border border-purple-400/30 text-purple-400 rounded-lg hover:bg-purple-400/10 transition-all duration-300"
               >"
                 <Mail className="w-5 h-5 mr-2" />                Get Quote
@@ -263,13 +269,13 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
 "
                     <div className="flex flex-col sm:flex-row gap-3">
                       <Link'`
-                        to={`/services/${service.id.replace(/-/g, '-')}`}"
+                        to={`/services/${service.id.replace(/-/g,-')}`}"
                         className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-lg hover:from-purple-400 hover:to-blue-500 transition-all duration-300 font-semibold"
                       >
                         Learn More"
                         <ArrowRight className="w-4 h-4 ml-2" />                      </Link>
                       <a"
-                        href="tel:+13024640950""
+                        href="tel:+13024640950"
                         className="inline-flex items-center px-6 py-3 border border-purple-400/30 text-purple-400 rounded-lg hover:bg-purple-400/10 transition-all duration-300"
                       >"
                         <Phone className="w-4 h-4 mr-2" />                        Call Now
@@ -356,13 +362,13 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-lg hover:from-purple-400 hover:to-blue-500 transition-all duration-300 font-semibold text-lg"
               >"
                 <Phone className="w-6 h-6 mr-2" />                Call +1 302 464 0950
               </a>
               <a"
-                href="mailto:kleber@ziontechgroup.com""
+                href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border-2 border-purple-400/50 text-purple-400 rounded-lg hover:bg-purple-400/10 transition-all duration-300 font-semibold text-lg"
               >"
                 <Mail className="w-6 h-6 mr-2" />
@@ -384,7 +390,7 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
                 <div className="flex items-center justify-center">"
                   <Mail className="h-4 w-4 mr-2 text-purple-400" />
                   <a"
-                    href="mailto:kleber@ziontechgroup.com""
+                    href="mailto:kleber@ziontechgroup.com"
                     className="hover:text-purple-300"
                   >
                     kleber@ziontechgroup.com
@@ -397,9 +403,9 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
                 <div className="flex items-center justify-center">"
                   <Globe className="h-4 w-4 mr-2 text-purple-400" />
                   <a"
-                    href="https://ziontechgroup.com""
-                    target="_blank""
-                    rel="noopener noreferrer""
+                    href="https://ziontechgroup.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="hover:text-purple-300"
                   >
                     ziontechgroup.com

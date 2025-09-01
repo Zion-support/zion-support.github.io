@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from "../ui/Button";
 import { Send export function ChatInput({ onSend, disabled = false }) {
-'
+
     const [message, setMessage] = useState('');
     const inputRef = useRef(null);
     useEffect(() => {
@@ -12,11 +12,11 @@ import { Send export function ChatInput({ onSend, disabled = false }) {
         e.preventDefault();
         if (message.trim() && !disabled) {
 
-            onSend(message);'
+            onSend(message);
             setMessage('')}
     };
     const handleKeyPress = (e) => {
-'
+
         if (e.key === 'Enter' && !e.shiftKey) {
 
             e.preventDefault();

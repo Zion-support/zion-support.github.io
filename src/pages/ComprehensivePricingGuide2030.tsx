@@ -1,8 +1,47 @@
-import React, { useState, useMemo } from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React, { useState, useMemo } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
+<<<<<<< HEAD
+import { CheckCircle, 
+import { innovativeAIServices2030 } from "../data / innovativeAIServices2030";
+import { innovativeCloudDevOpsServices2030 } from "../data / innovativeCloudDevOpsServices2030";
+import { innovativeCybersecurityServices2030 } from "../data / innovativeCybersecurityServices2030";
+import { motion  } from 'framer - motion.ts';
+
+
+  Star, 
+  Zap, 
+  Shield, 
+  TrendingUp, 
+  Brain, 
+  Server, 
+  Globe, 
+  ArrowRight, 
+  Mail, 
+  Phone, 
+  MapPin, 
+  ExternalLink,
+  DollarSign,
+  CreditCard,
+  Wallet,
+  Coins,
+  PiggyBank,
+  Calculator,
+  BarChart3,
+  Target,
+  ArrowRight,
+  Search'
+} from 'lucide-react';
+import { innovativeAIServices2030 } from "../data/innovativeAIServices2030";"
+import { innovativeCybersecurityServices2030 } from "../data/innovativeCybersecurityServices2030";"
+import { innovativeCloudDevOpsServices2030 } from "../data/innovativeCloudDevOpsServices2030";
+
+const ComprehensivePricingGuide2030: React.FC = () => {;
+  const [activeCategory, setActiveCategory] = useState('all');
+=======
 const ComprehensivePricingGuide2030: React.FC = () => {;'
   const [activeCategory, setActiveCategory] = useState('all');'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [searchTerm, setSearchTerm] = useState('');
 
   
@@ -18,31 +57,45 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
     return matchesCategory && matchesSearch;
   }) ;
 
-  const categories = [;'
-    { id: 'all', name: 'All Services', icon: Star, count: allServices.length },;'
-    { id: 'ai', name: 'AI Services', icon: Brain, count: innovativeAIServices2030.length },;'
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: innovativeCybersecurityServices2030.length },;'
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: Star, count: allServices.length },;
+    { id: 'ai', name: 'AI Services', icon: Brain, count: innovativeAIServices2030.length },;
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: innovativeCybersecurityServices2030.length },;
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: innovativeCloudDevOpsServices2030.length };
   ];
 
+<<<<<<< HEAD
+  const getCategoryIcon = (category: string) => {;
+    if (category.toLowerCase().includes('ai')) return Brain;
+    if (category.toLowerCase().includes('cybersecurity')) return Shield;
+    if (category.toLowerCase().includes('cloud')) return Cloud;
+    return Star;
+  };
+=======
   const getCategoryIcon = (category: string) => {;'
     if (category.toLowerCase().includes('ai')) return Brain;'
     if (category.toLowerCase().includes('cybersecurity')) return Shield;'    if (category.toLowerCase().includes('cloud')) return Cloud;
     return Star};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
-  const getPricingTier = (price: number) => {;'
-    if (price < 300) return { tier: 'Starter', color: 'bg-green-600/20 border-green-500/30 text-green-300' };'
-    if (price < 600) return { tier: 'Professional', color: 'bg-blue-600/20 border-blue-500/30 text-blue-300' };'
-    if (price < 1000) return { tier: 'Enterprise', color: 'bg-purple-600/20 border-purple-500/30 text-purple-300' };'
+  const getPricingTier = (price: number) => {;
+    if (price < 300) return { tier: 'Starter', color: 'bg-green-600/20 border-green-500/30 text-green-300' };
+    if (price < 600) return { tier: 'Professional', color: 'bg-blue-600/20 border-blue-500/30 text-blue-300' };
+    if (price < 1000) return { tier: 'Enterprise', color: 'bg-purple-600/20 border-purple-500/30 text-purple-300' };
     return { tier: 'Premium', color: 'bg-orange-600/20 border-orange-500/30 text-orange-300' };
   };
 
   const pricingTiers = [
     {
-'
-      name: 'Starter','
+
+      name: 'Starter',
       description: 'Perfect for small businesses and startups',
       price: 299,
+<<<<<<< HEAD
+      features[;
+        'Basic AI features',Email support',Up to 5 users',Standard integrations',Community forum access',Basic analytics',Mobile app access'
+      ],;
+=======
       features[;'
         'Basic AI features','
         'Email support','
@@ -51,84 +104,68 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
         'Community forum access','
         'Basic analytics','        'Mobile app access'
       ],;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       color: 'from-cyan-500 to-blue-600',
-      popular: false,'
+      popular: false,
       bestFor: 'Small businesses, startups, individual professionals'
     },
     {
-'
-      name: 'Professional','
+
+      name: 'Professional',
       description: 'Ideal for growing businesses and teams',
       price: 999,
-      features[;'
-        'Advanced AI capabilities','
-        'Priority support','
-        'Up to 25 users','
-        'Advanced integrations','
-        'API access','
-        'Custom branding','
-        'Advanced analytics dashboard','
-        'White-label options','
-        'Training and onboarding'
-      ],;'
+      features[;
+        'Advanced AI capabilities',Priority support',Up to 25 users',Advanced integrations',API access',Custom branding',Advanced analytics dashboard',White-label options',Training and onboarding'
+      ],;
       color: 'from-purple-500 to-pink-600',
-      popular: true,'
+      popular: true,
       bestFor: 'Growing businesses, mid-size companies, agencies'
     },
     {
-'
-      name: 'Enterprise','
+
+      name: 'Enterprise',
       description: 'For large organizations with complex needs',
       price: 2999,
-      features[;'
-        'Full AI suite access','
-        '24/7 dedicated support','
-        'Unlimited users','
-        'Custom integrations','
-        'White-label solutions','
-        'Advanced security features','
-        'SLA guarantees','
-        'Dedicated account manager','
-        'Custom development','
-        'On-premise deployment options'
-      ],;'
+      features[;
+        'Full AI suite access',24/7 dedicated support',Unlimited users',Custom integrations',White-label solutions',Advanced security features',SLA guarantees',Dedicated account manager',Custom development',On-premise deployment options'
+      ],;
       color: 'from-indigo-500 to-purple-600',
-      popular: false,'
+      popular: false,
       bestFor: 'Large enterprises, government agencies, Fortune 500 companies';
     };
   ];
 
   const marketInsights = [
     {
-'
-      title: 'AI Services Market','
-      value: '$29.9B','
-      growth: '+32.4%','
-      description: 'Expected market size by 2025','
+
+      title: 'AI Services Market',
+      value: '$29.9B',
+      growth: '+32.4%',
+      description: 'Expected market size by 2025',
       color: 'from-purple-500 to-pink-600'
     },
     {
-'
-      title: 'Cloud Services Market','
-      value: '$832.1B','
-      growth: '+17.5%','
-      description: 'Global cloud market value','
+
+      title: 'Cloud Services Market',
+      value: '$832.1B',
+      growth: '+17.5%',
+      description: 'Global cloud market value',
       color: 'from-blue-500 to-cyan-600'
     },
     {
-'
-      title: 'IoT Market','
-      value: '$1.1T','
-      growth: '+25.7%','
-      description: 'IoT market by 2027','
+
+      title: 'IoT Market',
+      value: '$1.1T',
+      growth: '+25.7%',
+      description: 'IoT market by 2027',
       color: 'from-green-500 to-emerald-600'
     },
     {
-'
-      title: 'Quantum Computing','
-      value: '$65.0B','
-      growth: '+48.2%','
-      description: 'Quantum market by 2030','
+
+      title: 'Quantum Computing',
+      value: '$65.0B',
+      growth: '+48.2%',
+      description: 'Quantum market by 2030',
       color: 'from-indigo-500 to-purple-600';
     };  ];
 
@@ -155,7 +192,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Comprehensive Pricing Guide 2030
             </h1>"
-            <p className="text-xl md:text-2xl text-purple-200 mb-8 max-w-4xl mx-auto">'
+            <p className="text-xl md:text-2xl text-purple-200 mb-8 max-w-4xl mx-auto">
               Transparent pricing for Zion Tech Group's revolutionary micro SAAS, IT infrastructure, and AI services
             </p>"
             <div className="flex flex-wrap justify-center gap-4 mb-12">"
@@ -202,7 +239,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
             <div className="flex-1">"
               <div className="relative">
                 <input"
-                  type="text""
+                  type="text"
                   placeholder="Search services by name, description, or tags..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}"
@@ -389,7 +426,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
                       Learn More"
                       <ArrowRight className="ml-1 h-4 w-4" />                    </Link>
                     <Link"
-                      to="/contact""
+                      to="/contact"
                       className="inline-flex items-center px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium hover:opacity-90 transition-opacity"
                     >"
                       <Mail className="w-4 h-4" />;
@@ -403,8 +440,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
             <div className="text-center py-12">;"
               <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>;
               <button;
-                onClick={() => {;'
-                  setSearchTerm('');'
+                onClick={() => {;
+                  setSearchTerm('');
                   setActiveCategory('all');
                 }}"                className = "bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors"
               >
@@ -518,7 +555,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
               </div>;
               
               <Link "
-                to="/contact" "
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity"
               >
                 Get Personalized ROI Analysis"
@@ -599,7 +636,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
               <div className="flex flex-col items-center">"
                 <Phone className="w-8 h-8 text-cyan-400 mb-4" />"                <div className="text-white font-semibold mb-2">Call Us</div>
                 <a "
-                  href="tel:+13024640950" "
+                  href="tel:+13024640950"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
                   +1 302 464 0950
@@ -608,7 +645,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
               <div className="flex flex-col items-center">"
                 <Mail className="w-8 h-8 text-cyan-400 mb-4" />"                <div className="text-white font-semibold mb-2">Email Us</div>
                 <a "
-                  href="mailto:kleber@ziontechgroup.com" "
+                  href="mailto:kleber@ziontechgroup.com"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
                   kleber@ziontechgroup.com
@@ -645,13 +682,13 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
               className="flex flex-wrap justify-center gap-4"
             >
               <Link "
-                to="/contact" "
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity"
               >
                 Schedule a Consultation"
                 <ArrowRight className="ml-2 h-5 w-5" />              </Link>
               <Link "
-                to="/request-quote" "
+                to="/request-quote"
                 className="inline-flex items-center px-8 py-4 rounded-xl border border-cyan-400/30 text-cyan-400 font-semibold hover:bg-cyan-400/10 transition-colors"
               >
                 Request a Quote
@@ -669,13 +706,13 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
               <strong>Zion Tech Group</strong> - Your partner in digital transformation and innovation.'
               Visit us at{' '}
               <a "
-                href="https://ziontechgroup.com" "
-                target="_blank" "
-                rel="noopener noreferrer""
+                href="https://ziontechgroup.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"
               >
                 ziontechgroup.com
-              </a>'
+              </a>
               {' '}to explore our full range of services and solutions.
             </div>
             <div>"

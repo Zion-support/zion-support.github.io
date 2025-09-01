@@ -1,5 +1,75 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+
+  Search,
+  Filter,
+  Grid3X3,
+  List,
+  ChevronDown,
+  ChevronUp,
+  Star,
+  Users,
+  Globe,
+  Lock,
+  Code,
+  BarChart3,
+  Target,
+  Rocket,
+  Lightbulb,
+  Award,
+  Clock,
+  DollarSign,
+  TrendingUp,
+  Eye,
+  Handshake,
+  Building,
+  ShieldCheck,
+  Network2,
+  Smartphone as Mobile,
+  Server as Infrastructure,
+  Monitor as Analytics,
+  Zap as Lightning,
+  Users2,
+  Award as Trophy,
+  Clock as Time,
+  DollarSign as Money,
+  TrendingUp as Growth,
+  Eye as Vision,
+  Handshake as Partnership,
+  Building as Enterprise,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  CheckCircle,
+  ArrowRight,
+  Shield,
+  Brain,
+  Cloud,
+  Database,
+  Smartphone,
+  Server,
+  Monitor,
+  Cpu,
+  Network,
+  Smartphone as IoT,
+  Server as Edge,
+  Monitor as Healthcare,
+  Cpu as FinTech,
+  ChevronRight,
+  Info,
+  AlertTriangle,
+  Zap'
+import { SEO } from '@/components/SEO';
+import {
+
+  ALL_EXPANDED_SERVICES_PRICING,
+=======
 import React, { useState, useEffect } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_PRICING,
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   type ExpandedServicePricing'
 } from '@/data/expandedServicesPricing2027';
 
@@ -16,7 +86,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
   const getCategoryIcon = (category: string)  => {
 
     switch (category) {
-'
+
       case 'Cybersecurity':;
       pricing = pricing.filter (p => ;
         p.serviceName.toLowerCase () .includes (searchQuery.toLowerCase () ) ||;
@@ -27,25 +97,31 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
   }, [selectedCategory, searchQuery]) ;
 
   const getCategoryIcon = (category: string) => {;
+<<<<<<< HEAD
+    switch (category) {;
+      case 'Cybersecurity':;
+        return Shield;
+=======
     switch (category) {;'      case 'Cybersecurity':;
         return Shield;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'Data Analytics':;
-        return BarChart3;'
+        return BarChart3;
       case 'Cloud & DevOps':;
-        return Cloud;'
+        return Cloud;
       case 'IoT & Edge Computing':;
-        return IoT;'
+        return IoT;
       case 'Financial Technology':;
-        return FinTech;'
+        return FinTech;
       case 'Healthcare Technology':;
         return Healthcare;
       default:;
         return Rocket}
   };
-'
+
         return 'from-gray-500 to-slate-600'}
   };
-'
+
         return 'bg-gray-100 text-gray-800'}
   };
 
@@ -58,9 +134,16 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <SEO"
+<<<<<<< HEAD
+        title="Expanded Services Pricing Guide 2027 - Zion Tech Group"
+        description="Comprehensive pricing guide for our expanded innovative services. Compare pricing tiers, ROI analysis, and market positioning across all service categories."
+        keywords="pricing guide, service pricing, ROI analysis, market comparison, cybersecurity pricing, data analytics pricing, cloud DevOps pricing"
+      />
+=======
         title="Expanded Services Pricing Guide 2027 - Zion Tech Group""
         description="Comprehensive pricing guide for our expanded innovative services. Compare pricing tiers, ROI analysis, and market positioning across all service categories.""        keywords="pricing guide, service pricing, ROI analysis, market comparison, cybersecurity pricing, data analytics pricing, cloud DevOps pricing"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <div className="relative overflow-hidden">"
@@ -182,7 +265,12 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
+<<<<<<< HEAD
+                  type="text"
+                  placeholder="Search pricing..."
+=======
                   type="text""                  placeholder="Search pricing..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
@@ -240,13 +328,13 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
           </p>"
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center space-x-2"
 "
               <Mail className="w-5 h-5" />              <span>Get Custom Quote</span>
             </a>
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200 flex items-center space-x-2"
 "
               <Phone className="w-5 h-5" />              <span>Call Sales Team</span>

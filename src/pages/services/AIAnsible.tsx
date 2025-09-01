@@ -1,60 +1,59 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIAnsible() {
   const features = [
-    'AI-powered Ansible optimization','
-    'Intelligent Ansible management',;'
-    'Automated Ansible monitoring and alerting',;'
-    'Predictive analytics for Ansible scaling',;'
-    'Smart Ansible security and compliance',;'
-    'AI-driven Ansible automation and orchestration',;'
-    'Real-time Ansible analytics and insights',;'
+    'AI-powered Ansible optimization',Intelligent Ansible management',;
+    'Automated Ansible monitoring and alerting',;
+    'Predictive analytics for Ansible scaling',;
+    'Smart Ansible security and compliance',;
+    'AI-driven Ansible automation and orchestration',;
+    'Real-time Ansible analytics and insights',;
     'Custom AI models for Ansible applications';
   ];
 
   const tiers = [
     {
-'
-      name: 'Developer','
-      price: '$299/mo','
-      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support']
+
+      name: 'Developer',
+      price: '$299/mo',
+      details: ['Up to 100GB storage',Basic AI features',Standard monitoring',Email support']
     },
     {
-'
-      name: 'Business', '
-      price: '$799/mo', '
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
+
+      name: 'Business',
+      price: '$799/mo',
+      details: ['Up to 1TB storage',Advanced AI features',Enhanced monitoring',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,999/mo', ;'
-      details: ['Unlimited storage', 'Custom AI models', 'Full Ansible suite', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$1,999/mo', ;
+      details: ['Unlimited storage',Custom AI models',Full Ansible suite',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Ansible optimization',;'
-    'Ansible management',;'
-    'Performance monitoring and analytics',;'
-    'Security and compliance monitoring',;'
-    'Automation and orchestration',;'
+  const useCases = [;
+    'Ansible optimization',;
+    'Ansible management',;
+    'Performance monitoring and analytics',;
+    'Security and compliance monitoring',;
+    'Automation and orchestration',;
     'Ansible scaling and management';
   ];
 
-  const benefits = [;'
-    'Improve Ansible performance by 50-80%',;'
-    'Reduce Ansible deployment time by 40-70%',;'
-    'Cut operational costs by 35-65%',;'
-    'Enhance Ansible reliability and scalability',;'
-    'Optimize resource utilization',;'
+  const benefits = [;
+    'Improve Ansible performance by 50-80%',;
+    'Reduce Ansible deployment time by 40-70%',;
+    'Cut operational costs by 35-65%',;
+    'Enhance Ansible reliability and scalability',;
+    'Optimize resource utilization',;
     'Scale Ansible operations efficiently';
   ];
 
-  const industries = [;'
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
     'Technology & SaaS';
   ];
 
@@ -107,8 +106,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['50-80% performance improvement', '40-70% deployment time reduction', '35-65% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['50-80% performance improvement',40-70% deployment time reduction',35-65% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-red-600 mb-3" />"              <div className="text-gray-900 font-semibold">{t}</div>
             </div>

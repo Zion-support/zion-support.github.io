@@ -1,4 +1,4 @@
-import React, { useState } from 'react.ts';'
+import React, { useState } from 'react.ts';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -15,19 +15,19 @@ import {
   Linkedin,
   Twitter,
   Github,
-  Facebook,'
+  Facebook,
   Instagram} from 'lucide-react.ts';
 
 export function ContactPage(...args: any[]): any {
 
   const [formData, setFormData] = useState({
-'
-    firstName: '','
-    lastName: '','
-    email: '','
-    company: '','
-    phone: '','
-    service: '','
+
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
     message: ''});
 
   const [isSubmitting, setIsSubmitting] = useState (false) ;
@@ -59,107 +59,76 @@ export function ContactPage(...args: any[]): any {
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
-'
-        firstName: '','
-        lastName: '','
-        email: '','
-        company: '','
-        phone: '','
-        service: '','
+
+        firstName: '',
+        lastName: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
         message: ''});
     }, 3000);
   };
 
   const contactMethods = [
     {
-'
-      title: 'Phone','
+
+      title: 'Phone',
       value: '+1 302 464 0950',
-      icon: Phone,'
-      description: 'Call us anytime','
-      color: 'from-blue-500 to-cyan-600','
+      icon: Phone,
+      description: 'Call us anytime',
+      color: 'from-blue-500 to-cyan-600',
       link: 'tel:+13024640950'},
     {
-'
-      title: 'Email','
+
+      title: 'Email',
       value: 'kleber@ziontechgroup.com',
-      icon: Mail,'
-      description: 'Send us a message','
-      color: 'from-purple-500 to-pink-600','
+      icon: Mail,
+      description: 'Send us a message',
+      color: 'from-purple-500 to-pink-600',
       link: 'mailto:kleber@ziontechgroup.com'},
     {
-'
-      title: 'Office','
+
+      title: 'Office',
       value: '364 E Main St STE 1008 Middletown DE 19709',
-      icon: MapPin,'
-      description: 'Visit our headquarters','
-      color: 'from-green-500 to-teal-600','
+      icon: MapPin,
+      description: 'Visit our headquarters',
+      color: 'from-green-500 to-teal-600',
       link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'},
     {
-'
-      title: 'Hours','
+
+      title: 'Hours',
       value: '24/7 Support',
-      icon: Clock,'
-      description: 'Always here for you','
+      icon: Clock,
+      description: 'Always here for you',
       color: 'from-orange-500 to-red-600'},
   ];
 
   const services = ['
-    'AI Solutions','
-    'Quantum Computing','
-    'Cybersecurity','
-    'Cloud & DevOps','
-    'Digital Transformation','
-    'Data Analytics','
-    'IoT & Edge Computing','
-    'Space Technology','
-    'AI Healthcare Platform','
-    'AI Sales Copilot','
-    'AI Marketing Automation','
-    'AI Project Management','
-    'Quantum AI Hybrid Platform','
-    'AI Cybersecurity Platform','
-    'Quantum AI Trading Platform','
-    'Space Technology Solutions','
-    'Digital Twin Solutions','
-    'Green IT Solutions','
-    'Zero Trust Network Access','
-    'AI Creative Studio','
-    'AI Health Monitoring','
-    'AI Financial Advisor','
-    'AI Education Platform','
-    'AI Legal Assistant','
-    'AI Real Estate Platform','
-    'AI Supply Chain Optimizer','
-    'AI Energy Management','
-    'AI Manufacturing Platform','
-    'AI Customer Intelligence','
-    'AI Data Governance','
-    'Custom Development','
-    'Consulting',
+    'AI Solutions',Quantum Computing',Cybersecurity',Cloud & DevOps',Digital Transformation',Data Analytics',IoT & Edge Computing',Space Technology',AI Healthcare Platform',AI Sales Copilot',AI Marketing Automation',AI Project Management',Quantum AI Hybrid Platform',AI Cybersecurity Platform',Quantum AI Trading Platform',Space Technology Solutions',Digital Twin Solutions',Green IT Solutions',Zero Trust Network Access',AI Creative Studio',AI Health Monitoring',AI Financial Advisor',AI Education Platform',AI Legal Assistant',AI Real Estate Platform',AI Supply Chain Optimizer',AI Energy Management',AI Manufacturing Platform',AI Customer Intelligence',AI Data Governance',Custom Development',Consulting',
   ];
 
   const socialLinks = [
     {
 
-      icon: Linkedin,'
-      href: 'https://linkedin.com/company/ziontechgroup','
+      icon: Linkedin,
+      href: 'https://linkedin.com/company/ziontechgroup',
       label: 'LinkedIn'},
     {
 
-      icon: Twitter,'
-      href: 'https://twitter.com/ziontechgroup','
-      label: 'Twitter'},'
+      icon: Twitter,
+      href: 'https://twitter.com/ziontechgroup',
+      label: 'Twitter'},
     { icon: Github, href: 'https://github.com/ziontechgroup', label: 'GitHub' },
     {
 
-      icon: Facebook,'
-      href: 'https://facebook.com/ziontechgroup','
+      icon: Facebook,
+      href: 'https://facebook.com/ziontechgroup',
       label: 'Facebook'},
     {
 
-      icon: Instagram,'
-      href: 'https://instagram.com/ziontechgroup','
+      icon: Instagram,
+      href: 'https://instagram.com/ziontechgroup',
       label: 'Instagram'},
   ];
   
@@ -182,11 +151,16 @@ export function ContactPage(...args: any[]): any {
             <h2 className="text-3xl font-bold text-white mb-4">
               Message Sent Successfully!
             </h2>"
-            <p className="text-gray-400 mb-8">'
+            <p className="text-gray-400 mb-8">
               Thank you for reaching out to Zion Tech Group. We've received your
               message and will get back to you within 24 hours.
             </p>"
+<<<<<<< HEAD
+            <div className="text-sm text-gray-500">
+              You'll receive a confirmation email shortly.
+=======
             <div className="text-sm text-gray-500">'              You'll receive a confirmation email shortly.
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
             </div>
           </motion.div>
         </div>
@@ -234,8 +208,8 @@ export function ContactPage(...args: any[]): any {
                   className="text-cyan-400 font-medium mb-2 hover:text-cyan-300 transition-colors cursor-pointer block"'
                   target={method.link.startsWith('http') ? '_blank' : undefined}
                   rel={
-'
-                    method.link.startsWith('http')'
+
+                    method.link.startsWith('http')
                       ? 'noopener noreferrer'
                       : undefined
                   }
@@ -266,37 +240,37 @@ export function ContactPage(...args: any[]): any {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label"
-                    htmlFor="firstName""
+                    htmlFor="firstName"
                     className="block text-sm font-medium text-gray-300 mb-2"
                   >
                     First Name *
                   </label>
                   <input"
-                    type="text""
-                    id="firstName""
+                    type="text"
+                    id="firstName"
                     name="firstName"
                     value={formData.firstName}
                     onChange={handleInputChange}
                     required"
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="John"
                   />
                 </div>
                 <div>
                   <label"
-                    htmlFor="lastName""
+                    htmlFor="lastName"
                     className="block text-sm font-medium text-gray-300 mb-2"
                   >
                     Last Name *
                   </label>
                   <input"
-                    type="text""
-                    id="lastName""
+                    type="text"
+                    id="lastName"
                     name="lastName"
                     value={formData.lastName}
                     onChange={handleInputChange}
                     required"
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Doe"
                   />
                 </div>
@@ -305,36 +279,36 @@ export function ContactPage(...args: any[]): any {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label"
-                    htmlFor="email""
+                    htmlFor="email"
                     className="block text-sm font-medium text-gray-300 mb-2"
                   >
                     Email *
                   </label>
                   <input"
-                    type="email""
-                    id="email""
+                    type="email"
+                    id="email"
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
                     required"
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="john@company.com"
                   />
                 </div>
                 <div>
                   <label"
-                    htmlFor="phone""
+                    htmlFor="phone"
                     className="block text-sm font-medium text-gray-300 mb-2"
                   >
                     Phone
                   </label>
                   <input"
-                    type="tel""
-                    id="phone""
+                    type="tel"
+                    id="phone"
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}"
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="+1 (555) 123-4567"
                   />
                 </div>
@@ -343,30 +317,30 @@ export function ContactPage(...args: any[]): any {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label"
-                    htmlFor="comp""
+                    htmlFor="comp"
                     className="block text-sm font-medium text-gray-300 mb-2"
                   >
                     Company
                   </label>
                   <input"
-                    type="text""
-                    id="comp""
+                    type="text"
+                    id="comp"
                     name="comp"
                     value={formData.comp}
                     onChange={handleInputChange}"
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Your Comp"
                   />
                 </div>
                 <div>
                   <label"
-                    htmlFor="service""
+                    htmlFor="service"
                     className="block text-sm font-medium text-gray-300 mb-2"
                   >
                     Service Interest
                   </label>
                   <select"
-                    id="service""
+                    id="service"
                     name="service"
                     value={formData.service}
                     onChange={handleInputChange}"
@@ -384,19 +358,19 @@ export function ContactPage(...args: any[]): any {
 
               <div>
                 <label"
-                  htmlFor="message""
+                  htmlFor="message"
                   className="block text-sm font-medium text-gray-300 mb-2"
                 >
                   Message *
                 </label>
                 <textarea"
-                  id="message""
+                  id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
                   required
                   rows={5}"
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none""
+                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
                   placeholder="Tell us about your project or how we can help..."
                 />
               </div>
@@ -461,7 +435,7 @@ export function ContactPage(...args: any[]): any {
               </h3>"
               <div className="space-y-4">
                 <a"
-                  href="tel:+13024640950""
+                  href="tel:+13024640950"
                   className="flex items-center space-x-3 p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors group"
                 >"
                   <Phone className="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform" />"
@@ -469,7 +443,7 @@ export function ContactPage(...args: any[]): any {
                   <ArrowRight className="w-4 h-4 text-gray-400 ml-auto group-hover:translate-x-1 transition-transform" />                </a>
 
                 <a"
-                  href="mailto:kleber@ziontechgroup.com""
+                  href="mailto:kleber@ziontechgroup.com"
                   className="flex items-center space-x-3 p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors group"
                 >"
                   <Mail className="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform" />"
@@ -478,7 +452,7 @@ export function ContactPage(...args: any[]): any {
                 </a>
 
                 <a"
-                  href="/request-quote""
+                  href="/request-quote"
                   className="flex items-center space-x-3 p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 group"
                 >"
                   <MessageSquare className="w-5 h-5 text-white group-hover:scale-110 transition-transform" />"
@@ -497,8 +471,8 @@ export function ContactPage(...args: any[]): any {
                   <a
                     key={social.label}
                     href={social.href}"
-                    target="_blank""
-                    rel="noopener noreferrer""
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 bg-gray-700 hover:bg-cyan-500 rounded-lg flex items-center justify-center transition-all duration-200 group"
                   >"
                     <social.icon className="w-6 h-6 text-gray-400 group-hover:text-white transition-colors" />

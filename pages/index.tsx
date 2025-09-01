@@ -1,38 +1,38 @@
 
-import React, { useState, useEffect } from 'react';'
-import Head from 'next/head';'
-import Link from 'next/link';'
-import { motion } from 'framer-motion';'
-import { ArrowRight, CheckCircle, Star, Users, Code, Cloud, Brain, Shield, Zap, Globe } from 'lucide-react';'
-import AdvancedHero from '../components/AdvancedHero';'
-import AdvancedServicesShowcase from '../components/AdvancedServicesShowcase';'
-import AdvancedTestimonials from '../components/AdvancedTestimonials';'
-import AdvancedContactForm from '../components/AdvancedContactForm';'
-import AdvancedStats from '../components/AdvancedStats';'
-import AdvancedFeaturesShowcase from '../components/AdvancedFeaturesShowcase';'
-import AdvancedPricing from '../components/AdvancedPricing';'
-import AdvancedTeamShowcase from '../components/AdvancedTeamShowcase';'
-import AdvancedCaseStudies from '../components/AdvancedCaseStudies';'
-import AdvancedNewsletter from '../components/AdvancedNewsletter';'
-import AdvancedFAQ from '../components/AdvancedFAQ';'
-import AdvancedBlog from '../components/AdvancedBlog';'
-import AdvancedAnalytics from '../components/AdvancedAnalytics';'
-import AdvancedCustomerSuccess from '../components/AdvancedCustomerSuccess';'
-import AdvancedProjectManagement from '../components/AdvancedProjectManagement';'
-import AdvancedClientPortal from '../components/AdvancedClientPortal';'
-import AdvancedTimeTracking from '../components/AdvancedTimeTracking';'
-import AdvancedInvoiceManagement from '../components/AdvancedInvoiceManagement';'
-import AdvancedTeamScheduling from '../components/AdvancedTeamScheduling';'
-import AdvancedPerformanceDashboard from '../components/AdvancedPerformanceDashboard';'
-import AdvancedWorkflowAutomation from '../components/AdvancedWorkflowAutomation';'
-import AdvancedAnalyticsDashboard from '../components/AdvancedAnalyticsDashboard';'
-import AdvancedProjectHub from '../components/AdvancedProjectHub';'
-import AdvancedAIAssistant from '../components/AdvancedAIAssistant';'
-import AdvancedPerformanceOptimizer from '../components/AdvancedPerformanceOptimizer';'
-import FinalIntegrationHub from '../components/FinalIntegrationHub';'
-import EnhancedPerformanceMetrics from '../components/EnhancedPerformanceMetrics';'
-import EnhancedSecurityDashboard from '../components/EnhancedSecurityDashboard';'
-import AdvancedDataVisualization from '../components/AdvancedDataVisualization';'
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { ArrowRight, CheckCircle, Star, Users, Code, Cloud, Brain, Shield, Zap, Globe } from 'lucide-react';
+import AdvancedHero from '../components/AdvancedHero';
+import AdvancedServicesShowcase from '../components/AdvancedServicesShowcase';
+import AdvancedTestimonials from '../components/AdvancedTestimonials';
+import AdvancedContactForm from '../components/AdvancedContactForm';
+import AdvancedStats from '../components/AdvancedStats';
+import AdvancedFeaturesShowcase from '../components/AdvancedFeaturesShowcase';
+import AdvancedPricing from '../components/AdvancedPricing';
+import AdvancedTeamShowcase from '../components/AdvancedTeamShowcase';
+import AdvancedCaseStudies from '../components/AdvancedCaseStudies';
+import AdvancedNewsletter from '../components/AdvancedNewsletter';
+import AdvancedFAQ from '../components/AdvancedFAQ';
+import AdvancedBlog from '../components/AdvancedBlog';
+import AdvancedAnalytics from '../components/AdvancedAnalytics';
+import AdvancedCustomerSuccess from '../components/AdvancedCustomerSuccess';
+import AdvancedProjectManagement from '../components/AdvancedProjectManagement';
+import AdvancedClientPortal from '../components/AdvancedClientPortal';
+import AdvancedTimeTracking from '../components/AdvancedTimeTracking';
+import AdvancedInvoiceManagement from '../components/AdvancedInvoiceManagement';
+import AdvancedTeamScheduling from '../components/AdvancedTeamScheduling';
+import AdvancedPerformanceDashboard from '../components/AdvancedPerformanceDashboard';
+import AdvancedWorkflowAutomation from '../components/AdvancedWorkflowAutomation';
+import AdvancedAnalyticsDashboard from '../components/AdvancedAnalyticsDashboard';
+import AdvancedProjectHub from '../components/AdvancedProjectHub';
+import AdvancedAIAssistant from '../components/AdvancedAIAssistant';
+import AdvancedPerformanceOptimizer from '../components/AdvancedPerformanceOptimizer';
+import FinalIntegrationHub from '../components/FinalIntegrationHub';
+import EnhancedPerformanceMetrics from '../components/EnhancedPerformanceMetrics';
+import EnhancedSecurityDashboard from '../components/EnhancedSecurityDashboard';
+import AdvancedDataVisualization from '../components/AdvancedDataVisualization';
 import AdvancedNotificationCenter from '../components/AdvancedNotificationCenter';
 ;
 export { function };
@@ -42,7 +42,7 @@ export default function HomePage(...args: unknown[]): unknown {
   const [_isLoaded, _setIsLoaded] = useState<typeof false>(false);
 
 export default function HomePage() {
-  const [_isMenuOpen, _setIsMenuOpen] = useState(false);'
+  const [_isMenuOpen, _setIsMenuOpen] = useState(false);
   const [_activeSection, _setActiveSection] = useState('hero');
   const [_isLoaded, _setIsLoaded] = useState(false);
 
@@ -57,45 +57,45 @@ export default function Index(...args[]):  {
 	const features = [
 		{
 
-			icon: Brain,'
-			title: 'AI & Machine Learning','
-			description: 'Multi-agent workflows, RAG systems, and intelligent automation platforms.','
-			href: '/services#ai','
+			icon: Brain,
+			title: 'AI & Machine Learning',
+			description: 'Multi-agent workflows, RAG systems, and intelligent automation platforms.',
+			href: '/services#ai',
 			color: 'from-purple-600 to-indigo-700'
 		},
 		{
 
-			icon: Cloud,'
-			title: 'Cloud & DevOps','
-			description: 'Serverless infrastructure, Kubernetes orchestration, and DevOps automation.','
-			href: '/services#cloud','
+			icon: Cloud,
+			title: 'Cloud & DevOps',
+			description: 'Serverless infrastructure, Kubernetes orchestration, and DevOps automation.',
+			href: '/services#cloud',
 			color: 'from-cyan-600 to-blue-700'
 		},
 		{
 
-			icon: Shield,'
-			title: 'Cybersecurity Platform','
-			description: 'Enterprise-grade security with AI threat detection and zero-trust architecture','
-			href: '/services/ai-cybersecurity-platform','
+			icon: Shield,
+			title: 'Cybersecurity Platform',
+			description: 'Enterprise-grade security with AI threat detection and zero-trust architecture',
+			href: '/services/ai-cybersecurity-platform',
 			color: 'from-red-500 to-orange-600'
 		},
 		{
 
-			icon: Rocket,'
-			title: 'Micro SAAS Platform','
-			description: 'Build and launch micro SAAS applications in weeks with our comprehensive platform','
-			href: '/services/micro-saas-platform','
+			icon: Rocket,
+			title: 'Micro SAAS Platform',
+			description: 'Build and launch micro SAAS applications in weeks with our comprehensive platform',
+			href: '/services/micro-saas-platform',
 			color: 'from-purple-500 to-indigo-600'
 		}
 	]
 
 
   const technologies = ['
-    { name: 'React & Next.js', icon: '⚛️' },'
-    { name: 'Node.js & Python', icon: '🐍' },'
-    { name: 'AWS & Azure', icon: '☁️' },'
-    { name: 'Docker & Kubernetes', icon: '🐳' },'
-    { name: 'TensorFlow & PyTorch', icon: '🤖' },'
+    { name: 'React & Next.js', icon: '⚛️' },
+    { name: 'Node.js & Python', icon: '🐍' },
+    { name: 'AWS & Azure', icon: '☁️' },
+    { name: 'Docker & Kubernetes', icon: '🐳' },
+    { name: 'TensorFlow & PyTorch', icon: '🤖' },
     { name: 'Blockchain & Web3', icon: '⛓️' }
   ];
 
@@ -212,7 +212,7 @@ export default function Index(...args[]):  {
 
         {/* Enhanced Performance Metrics Section */}
         <EnhancedPerformanceMetrics "
-          title="Advanced Performance Analytics""
+          title="Advanced Performance Analytics"
           subtitle="Real-time monitoring and intelligent insights for optimal system performance"
           showCharts={true}
           autoRefresh={true}
@@ -220,7 +220,7 @@ export default function Index(...args[]):  {
 
         {/* Enhanced Security Dashboard Section */}
         <EnhancedSecurityDashboard "
-          title="Enterprise Security Monitoring""
+          title="Enterprise Security Monitoring"
           subtitle="Comprehensive threat detection and security analytics for your infrastructure"
           showThreats={true}
           autoRefresh={true}
@@ -228,7 +228,7 @@ export default function Index(...args[]):  {
 
         {/* Advanced Data Visualization Section */}
         <AdvancedDataVisualization "
-          title="Interactive Data Analytics""
+          title="Interactive Data Analytics"
           subtitle="Real-time charts, performance metrics, and business intelligence dashboards"
           showControls={true}
           autoRefresh={true}
@@ -253,15 +253,15 @@ export default function Index(...args[]):  {
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <Link "
-                href="#services" "
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-opacity-50""
+                href="#services"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-opacity-50"
                 aria-label="Explore our services"
               >
                 Explore Services
               </Link>
               <Link "
-                href="#contact" "
-                className="bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded-full text-lg hover:bg-white hover:text-gray-900 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50""
+                href="#contact"
+                className="bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded-full text-lg hover:bg-white hover:text-gray-900 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50"
                 aria-label="Contact us"
               >
                 Contact Us
@@ -272,19 +272,14 @@ export default function Index(...args[]):  {
 
 
 	const stats = ['
-		{ number: '500+', label: 'Active Customers', icon: Users },'
-		{ number: '4.7/5', label: 'Customer Rating', icon: Star },'
-		{ number: '99.9%', label: 'Uptime SLA', icon: TrendingUp },'
+		{ number: '500+', label: 'Active Customers', icon: Users },
+		{ number: '4.7/5', label: 'Customer Rating', icon: Star },
+		{ number: '99.9%', label: 'Uptime SLA', icon: TrendingUp },
 		{ number: '50+', label: 'Services Offered', icon: Zap }
 	]
 
 	const benefits = ['
-		'Cutting-edge AI and machine learning solutions','
-		'Enterprise-grade security and compliance','
-		'Scalable cloud infrastructure and DevOps','
-		'Real-time data analytics and insights','
-		'Quantum computing and emerging technologies','
-		'24/7 expert support and consultation'
+		'Cutting-edge AI and machine learning solutions',Enterprise-grade security and compliance',Scalable cloud infrastructure and DevOps',Real-time data analytics and insights',Quantum computing and emerging technologies',24/7 expert support and consultation'
 	]
 
 	return()
@@ -301,7 +296,7 @@ export default function Index(...args[]):  {
 						</p>"
 						<div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
 							<Link"
-								href="/services""
+								href="/services"
 								className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
 "
 								className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
@@ -314,7 +309,7 @@ export default function Index(...args[]):  {
 								className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
 							>
 								Get in Touch"
-								href="/contact""
+								href="/contact"
 								className="text-sm font-semibold leading-6 text-gray-900"
 							>
 								Get in Touch "
@@ -365,8 +360,8 @@ export default function Index(...args[]):  {
                 <div className="text-3xl mb-3" aria-hidden="true">📱</div>"
                 <div className="font-semibold text-lg mb-2">Mobile</div>
                 <a "
-                  href="tel:+13024640950" "
-                  className="text-blue-100 hover:text-white transition-colors duration-300""
+                  href="tel:+13024640950"
+                  className="text-blue-100 hover:text-white transition-colors duration-300"
                   aria-label="Call us at +1 302 464 0950"
                 >
                   +1 302 464 0950
@@ -376,8 +371,8 @@ export default function Index(...args[]):  {
                 <div className="text-3xl mb-3" aria-hidden="true">✉️</div>"
                 <div className="font-semibold text-lg mb-2">Email</div>
                 <a "
-                  href="mailto:kleber@ziontechgroup.com" "
-                  className="text-blue-100 hover:text-white transition-colors duration-300""
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="text-blue-100 hover:text-white transition-colors duration-300"
                   aria-label="Email us at kleber@ziontechgroup.com"
                 >
                   kleber@ziontechgroup.com
@@ -400,8 +395,8 @@ export default function Index(...args[]):  {
               className="mt-12"
             >
               <Link "
-                href="#contact" "
-                className="bg-white text-blue-600 font-bold py-4 px-8 rounded-full text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50""
+                href="#contact"
+                className="bg-white text-blue-600 font-bold py-4 px-8 rounded-full text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50"
                 aria-label="Get started with us"
               >
                 Get Started Today

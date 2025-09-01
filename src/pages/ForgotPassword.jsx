@@ -33,10 +33,10 @@ export default function ForgotPassword() {
                 <CheckCircle className="h-6 w-6 text-green-600"/>
               </div>"
               <h1 className="text-2xl font-bold text-white mb-4">Check Your Email</h1>"
-              <p className="text-zion-slate-light mb-6">'
+              <p className="text-zion-slate-light mb-6">
                 We've sent password reset instructions to <strong>{email}</strong>
               </p>"
-              <p className="text-zion-slate-light text-sm mb-8">'
+              <p className="text-zion-slate-light text-sm mb-8">
                 If you don't see the email, check your spam folder or{' '}"
                 <button onClick={() => setIsSubmitted(false)} className="text-zion-cyan hover:underline">
                   try again
@@ -58,7 +58,7 @@ export default function ForgotPassword() {
               <h2 className="text-3xl font-bold tracking-tight text-white">
                 Reset your password
               </h2>"
-              <p className="mt-2 text-sm text-zion-slate-light">'
+              <p className="mt-2 text-sm text-zion-slate-light">
                 Enter your email and we'll send you a link to reset your password.
               </p>
             </div>
@@ -69,7 +69,7 @@ export default function ForgotPassword() {
                     <Mail className="h-6 w-6 text-zion-purple"/>
                   </div>"
                   <h3 className="text-lg font-medium text-white">Check your email</h3>"
-                  <p className="mt-2 text-sm text-zion-slate-light">'
+                  <p className="mt-2 text-sm text-zion-slate-light">
                     We've sent a password reset link to your email address.
                   </p>"
                   <div className="mt-6">"
@@ -115,13 +115,13 @@ export default function ForgotPassword() {
               </div>
             </div>
 "
-            <Button type="submit" disabled={isLoading || !email.trim()} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple disabled:opacity-50 disabled:cursor-not-allowed">'
+            <Button type="submit" disabled={isLoading || !email.trim()} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple disabled:opacity-50 disabled:cursor-not-allowed">
               {isLoading ? 'Sending...' : 'Send Reset Link'}
             </Button>
           </form>
 "
           <div className="mt-8 text-center">"
-            <p className="text-zion-slate-light text-sm">'
+            <p className="text-zion-slate-light text-sm">
               Remember your password?{' '}"
               <Link to="/login" className="text-zion-cyan hover:underline">
                 Sign in

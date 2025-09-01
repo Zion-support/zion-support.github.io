@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousRiskManagement = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousRiskManagement = () => {
       <Helmet>
         <title>AI Autonomous Risk Management Platform | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous risk management platform that continuously identifies risks, assesses threats, and mitigates vulnerabilities with advanced AI capabilities and autonomous operation."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI risk management, autonomous risk management, risk identification, threat assessment, autonomous operations, AI risk management platform"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-risk-management"
         />
       </Helmet>
@@ -183,14 +183,7 @@ const AIAutonomousRiskManagement = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Security Risk Management','
-                'Financial Risk Management','
-                'Operational Risk Management','
-                'Strategic Risk Management','
-                'Compliance Risk Management','
-                'Technology Risk Management','
-                'Environmental Risk Management','
-                'Reputational Risk Management',
+                'Security Risk Management',Financial Risk Management',Operational Risk Management',Strategic Risk Management',Compliance Risk Management',Technology Risk Management',Environmental Risk Management',Reputational Risk Management',
               ].map(type => (
                 <div
                   key={type}"

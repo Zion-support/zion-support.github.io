@@ -1,16 +1,16 @@
-import { useState, useEffect } from 'react';'
-import { useParams } from 'react-router-dom';'
-import { supabase } from '@/integrations/supabase/client';'
-import { toast } from '@/hooks/use-toast';'
-import { SEO } from '@/components/SEO';'
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from '@/hooks/use-toast';
+import { SEO } from '@/components/SEO';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import {
 
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from '@/components/ui/card';'
+  CardHeader,
+  CardTitle} from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import {
 
@@ -22,8 +22,8 @@ import {
   Linkedin,
   CheckCircle2,
   Mail,
-  Phone,'
-  Globe} from 'lucide-react';'
+  Phone,
+  Globe} from 'lucide-react';
 import { HireNowCTA } from '@/components/profile/HireNowCTA';
 export default function ProfileDetail() {
   // useParams is typed as `` in this environment due to missing type
@@ -38,13 +38,13 @@ export default function ProfileDetail() {
       setError(null);
       try {
         if (!profileId) {
-'
+
           setError('Profile ID is missing.');
           return;
         }
         const { data, error } = await supabase'
-          .from('talent_profiles')'
-          .select('*')'
+          .from('talent_profiles')
+          .select('*')
           .eq('id', profileId)
           .single();
         if (error) {
@@ -52,18 +52,18 @@ export default function ProfileDetail() {
           throw new Error(error.message);
         }
         if (!data) {
-'
+
           setError('Profile not found.');
           return;
         }
         setProfileData(data);
       } catch (err) {
-'
+
         setError(err.message || 'Failed to fetch profile.');
         toast({
-'
-          title: 'Error','
-          description: err.message || 'Failed to fetch profile.','
+
+          title: 'Error',
+          description: err.message || 'Failed to fetch profile.',
           variant: 'destructive'});
       } finally {
 
@@ -173,7 +173,7 @@ export default function ProfileDetail() {
                 </CardTitle>
               </CardHeader>
               <CardContent>"
-                <p className="text-zion-slate-light">'
+                <p className="text-zion-slate-light">
                   {profileData.bio || 'No bio provided.'}
                 </p>
               </CardContent>
@@ -215,7 +215,7 @@ export default function ProfileDetail() {
                     <div key={index} className="mb-4">"
                       <h4 className="font-bold text-white">{exp.title}</h4>"
                       <p className="text-zion-cyan">{exp.comp}</p>"
-                      <p className="text-sm text-zion-slate-light">'
+                      <p className="text-sm text-zion-slate-light">
                         {exp.start_date} - {exp.end_date || 'Present'}
                       </p>"
                       <p className="text-zion-slate-light">{exp.description}</p>
@@ -243,8 +243,8 @@ export default function ProfileDetail() {
                       <a
                         key={index}
                         href={link.url}"
-                        target="_blank""
-                        rel="noopener noreferrer""
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-zion-cyan hover:text-white flex items-center gap-2"
                       >"
                         <LinkIcon className="h-4 w-4" />
@@ -265,9 +265,9 @@ export default function ProfileDetail() {
           <div className="col-span-4 lg:col-span-1">
             <HireNowCTA
               talentProfile={{
-'
-                id: profileData?.id || '','
-                full_name: profileData?.full_name || '','
+
+                id: profileData?.id || '',
+                full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
                 hourly_rate: profileData?.hourly_rate || 0}}
             />
@@ -297,8 +297,8 @@ export default function ProfileDetail() {
                     <Globe className="h-4 w-4" />
                     <a
                       href={profileData.website}"
-                      target="_blank""
-                      rel="noopener noreferrer""
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="hover:text-zion-cyan"
                     >
                       Website
@@ -315,10 +315,10 @@ export default function ProfileDetail() {
                 {profileData.github_url && (
                   <a
                     href={profileData.github_url}"
-                    target="_blank""
-                    rel="noopener noreferrer""
-                    className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan""
-                    aria-label="GitHub""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
+                    aria-label="GitHub"
                     title="GitHub"
                   >"
                     <Github className="h-4 w-4" />
@@ -328,10 +328,10 @@ export default function ProfileDetail() {
                 {profileData.twitter_url && (
                   <a
                     href={profileData.twitter_url}"
-                    target="_blank""
-                    rel="noopener noreferrer""
-                    className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan""
-                    aria-label="Twitter""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
+                    aria-label="Twitter"
                     title="Twitter"
                   >"
                     <Twitter className="h-4 w-4" />
@@ -341,10 +341,10 @@ export default function ProfileDetail() {
                 {profileData.linkedin_url && (
                   <a
                     href={profileData.linkedin_url}"
-                    target="_blank""
-                    rel="noopener noreferrer""
-                    className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan""
-                    aria-label="LinkedIn""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
+                    aria-label="LinkedIn"
                     title="LinkedIn"
                   >"
                     <Linkedin className="h-4 w-4" />

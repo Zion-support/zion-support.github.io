@@ -1,67 +1,126 @@
+<<<<<<< HEAD
+import React from 'react';
+import SEO from '../components/SEO';
+import { motion } from 'framer-motion';
+import {
+
+  Code,
+  BookOpen,
+  Zap,
+  Shield,
+  Users,
+  MessageSquare,
+  Github,
+  ExternalLink,
+  Terminal,
+  Webhook,
+  Key,
+  Mail,
+  ArrowRight,
+  Check,
+  Star,
+  Download,
+  Play,
+  Settings,
+  Database,
+  Globe,
+  Lock,
+  Rocket,
+  Crown,
+  Sparkles,
+  ChevronRight,
+  Clock,
+  BarChart3,
+  Target,
+  Award,
+  Lightbulb'
+} from 'lucide-react';
+
+const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
+
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const apiFeatures = [
+    {
+
+      icon: Code,;
+      title: 'Code Examples',
+      description: 'Ready-to-use code snippets in multiple languages',
+      category: 'Development'
+=======
 import React from 'react';'
 import SEO from '../components/SEO';'
 import { motion } from 'framer-motion';      category: 'Development'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
 
-      icon: Terminal,;'
-      title: 'API Playground','
-      description: 'Test APIs directly in your browser','
+      icon: Terminal,;
+      title: 'API Playground',
+      description: 'Test APIs directly in your browser',
       category: 'Testing'
     },
     {
 
-      icon: BookOpen,;'
-      title: 'Documentation','
-      description: 'Comprehensive guides and tutorials','
+      icon: BookOpen,;
+      title: 'Documentation',
+      description: 'Comprehensive guides and tutorials',
       category: 'Learning'
     },;
     {;
-      icon: Download,;'
-      title: 'SDKs & Libraries',;'
-      description: 'Official client libraries for all platforms',;'
+      icon: Download,;
+      title: 'SDKs & Libraries',;
+      description: 'Official client libraries for all platforms',;
       category: 'Integration';
     };
   ];
 
   const resources = [
     {
+<<<<<<< HEAD
+
+      title: 'Getting Started Guide',;
+      description: 'Quick start tutorial for new developers',
+      icon: '🚀',
+      difficulty: 'Beginner'
+=======
 '
       title: 'Getting Started Guide',;'
       description: 'Quick start tutorial for new developers','
       icon: '🚀','      difficulty: 'Beginner'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
-'
-      title: 'API Reference',;'
-      description: 'Complete endpoint documentation','
-      icon: '📚','
+
+      title: 'API Reference',;
+      description: 'Complete endpoint documentation',
+      icon: '📚',
       difficulty: 'All Levels'
     },
     {
-'
-      title: 'Best Practices',;'
-      description: 'Development guidelines and patterns','
-      icon: '⭐','
+
+      title: 'Best Practices',;
+      description: 'Development guidelines and patterns',
+      icon: '⭐',
       difficulty: 'Intermediate'
     },;
-    {;'
-      title: 'Code Samples',;'
-      description: 'Real-world implementation examples',;'
-      icon: '💻',;'
+    {;
+      title: 'Code Samples',;
+      description: 'Real-world implementation examples',;
+      icon: '💻',;
       difficulty: 'All Levels';
     };
   ];
 
   const community = [
     {
-'
-      language: 'JavaScript',;'
+
+      language: 'JavaScript',;
       code: `const response = await fetch('https://api.ziontechgroup.com/v1/data', {
 
   headers: {
-'
-    'Authorization': 'Bearer YOUR_API_KEY',;'
+
+    'Authorization': 'Bearer YOUR_API_KEY',;
     'Content-Type': 'application/json';
   };
 }) ;
@@ -70,24 +129,24 @@ const data = await response.json();`
 // // // // // console.log(data);`,      icon: Code
     },
     {
-'
-      name: 'GitHub Discussions',;'
-      description: 'Open source collaboration','
-      members: '1.8K+','
+
+      name: 'GitHub Discussions',;
+      description: 'Open source collaboration',
+      members: '1.8K+',
       icon: '🐙'
     },
     {
-'
-      name: 'Discord Server',;'
-      description: 'Real-time developer chat','
-      members: '3.2K+','
+
+      name: 'Discord Server',;
+      description: 'Real-time developer chat',
+      members: '3.2K+',
       icon: '🎮'
     },
     {
-'
-      name: 'Stack Overflow',;'
-      description: 'Q&A platform integration',;'
-      members: '5K+',;'
+
+      name: 'Stack Overflow',;
+      description: 'Q&A platform integration',;
+      members: '5K+',;
       icon: '📝';
     };  ];
 
@@ -110,14 +169,14 @@ const data = await response.json();`
               <Code className="w-12 h-12 text-white" />            </div>
           </div>
 "
-          <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">'
+          <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
             Developer{' '}"
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Portal
             </span>
           </h1>"
           <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
-            Build amazing applications with our powerful APIs, comprehensive documentation,'
+            Build amazing applications with our powerful APIs, comprehensive documentation,
             and developer tools. Everything you need to integrate Zion Tech Group's services.
           </p>
 "
@@ -263,7 +322,7 @@ const data = await response.json();`
 "
                 <div className="flex items-center justify-between">`
                   <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-'
+
                     feature.status === 'Stable' ? 'bg-green-500/20 text-green-400' : 'bg-yellow-500/20 text-yellow-400'`
                   }`}>
                     {feature.status}
@@ -367,7 +426,7 @@ const data = await response.json();`
                     <div className="flex items-center justify-between mb-2">"
                       <h3 className="text-xl font-semibold text-white">{resource.title}</h3>`
                       <span className={`px-2 py-1 rounded-full text-xs ${
-'
+
                         resource.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :'
                         resource.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :'
                         'bg-blue-500/20 text-blue-400'`
@@ -384,7 +443,7 @@ const data = await response.json();`
 "
                 <div className="flex items-center justify-between">`
                   <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-'
+
                     resource.badge === 'Complete' ? 'bg-green-500/20 text-green-400' :'
                     resource.badge === 'Beginner' ? 'bg-blue-500/20 text-blue-400' :'
                     resource.badge === 'Examples' ? 'bg-purple-500/20 text-purple-400' :'
