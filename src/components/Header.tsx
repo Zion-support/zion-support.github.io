@@ -144,12 +144,11 @@ export function Header({ className }: HeaderProps) {
       icon: Phone
     }
   ];
-=======
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
->>>>>>> af3952a87beab0a7961fe3a2e1e9482265ebc0e2
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
