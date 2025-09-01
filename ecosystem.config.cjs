@@ -1,33 +1,29 @@
 module.exports = {
   apps: [
-    // Main website process - temporarily disabled due to startup issues
-    // {
-    //   name: 'zion-website',
-    //   script: 'npm',
-    //   args: 'run dev',
-    //   cwd: '/workspace',
-    //   instances: 1,
-    //   autorestart: true,
-    //   watch: false,
-    //   max_memory_restart: '1G',
-    //   env: {
-    //     NODE_ENV: 'development',
-    //     PORT: 3000
-    //   },
-    //   env_production: {
-    //     NODE_ENV: 'production',
-    //     PORT: 3000
-    //   },
-    //   log_file: './logs/zion-website.log',
-    //   out_file: './logs/zion-website-out.log',
-    //   error_file: './logs/zion-website-error.log',
-    //   log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-    //   merge_logs: true,
-    //   max_restarts: 5,
-    //   min_uptime: '30s',
-    //   restart_delay: 5000,
-    //   pmx: true
-    // },
+    {
+      name: 'zion-website',
+      script: 'npm',
+      args: 'run dev',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development',
+        PORT: 3000
+      },
+      env_production: {
+        NODE_ENV: 'production',
+        PORT: 3000
+      },
+      log_file: './logs/zion-website.log',
+      out_file: './logs/zion-website-out.log',
+      error_file: './logs/zion-website-error.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: false,
+      time: false
+    },
 
     // Error Monitor - runs every 10 minutes
     {
@@ -43,9 +39,9 @@ module.exports = {
       error_file: './logs/error-monitor-error.log',
       out_file: './logs/error-monitor-out.log',
       log_file: './logs/error-monitor-combined.log',
-      time: true,
+      time: false,
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      merge_logs: true,
+      merge_logs: false,
       max_restarts: 10,
       min_uptime: '5s',
       restart_delay: 2000,
@@ -67,9 +63,9 @@ module.exports = {
       error_file: './logs/health-checker-error.log',
       out_file: './logs/health-checker-out.log',
       log_file: './logs/health-checker-combined.log',
-      time: true,
+      time: false,
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      merge_logs: true,
+      merge_logs: false,
       max_restarts: 5,
       min_uptime: '5s',
       restart_delay: 2000,
@@ -91,9 +87,9 @@ module.exports = {
       error_file: './logs/auto-fixer-error.log',
       out_file: './logs/auto-fixer-out.log',
       log_file: './logs/auto-fixer-combined.log',
-      time: true,
+      time: false,
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      merge_logs: true,
+      merge_logs: false,
       max_restarts: 3,
       min_uptime: '10s',
       restart_delay: 5000,
@@ -187,8 +183,9 @@ module.exports = {
       error_file: './logs/log-cleaner-error.log',
       out_file: './logs/log-cleaner-out.log',
       log_file: './logs/log-cleaner-combined.log',
-      time: true,
+      time: false,
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+<<<<<<< HEAD
       merge_logs: true,
       max_restarts: 1,
       min_uptime: '30s',
@@ -243,6 +240,14 @@ module.exports = {
       restart_delay: 5000,
       cron_restart: '0 */6 * * *', // Run every 6 hours
       pmx: true
+=======
+      merge_logs: false,
+      max_restarts: 3,
+      min_uptime: '5s',
+      restart_delay: 2000,
+      cron_restart: '0 2 * * *', // Run daily at 2 AM
+      pmx: true
+>>>>>>> origin/cursor/test-and-fix-pm2-automations-merge-to-main-22c7
     }
   ],
 

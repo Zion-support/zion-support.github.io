@@ -81,12 +81,28 @@ start_pm2_processes() {
     # Start all processes from ecosystem config
     pm2 start "$ECOSYSTEM_CONFIG"
     
-    if [ $? -eq 0 ]; then
-        success "All PM2 automation processes started successfully"
-    else
-        error "Failed to start PM2 processes"
-        exit 1
+    # Wait for processes to start
+    sleep 5
+    
+    # Check process status
+    local failed_count=0
+    local success_count=0
+    
+    # Count processes by status
+    success_count=$(pm2 list | grep -c "online" || echo "0")
+    failed_count=$(pm2 list | grep -c "errored\|stopped" || echo "0")
+    
+    if [ $success_count -gt 0 ]; then
+        success "Successfully started $success_count processes"
     fi
+    
+    if [ $failed_count -gt 0 ]; then
+        warning "$failed_count processes failed to start or are in error state"
+        # Don't exit on failure, just warn
+    fi
+    
+    return 0
+>>>>>>> origin/cursor/test-and-fix-pm2-automations-merge-to-main-22c7
 }
 
 # Save PM2 configuration
@@ -134,5 +150,24 @@ main() {
     echo ""
 }
 
-# Run main function
-main "$@"
+# Handle script arguments
+case "${1:-}" in
+    "stop")
+        pm2 stop all
+        success "PM2 automation system stopped"
+        ;;
+    "restart")
+        pm2 restart all
+        success "PM2 automation system restarted"
+        ;;
+    "status")
+        pm2 status
+        ;;
+    "logs")
+        pm2 logs
+        ;;
+    *)
+        main "$@"
+        ;;
+esac
+>>>>>>> origin/cursor/test-and-fix-pm2-automations-merge-to-main-22c7
