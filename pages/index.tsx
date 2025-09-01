@@ -1722,7 +1722,7 @@ export default function HomePage({ updates = [] }: { updates?: { slug: string; t
                   <li>• Threat detection & response</li>
                   <li>• Zero-trust architecture</li>
                 </ul>
-                <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/README.md#security" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <Link href="/privacy" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   View Security Guide →
                 </Link>
               </div>
@@ -1736,7 +1736,7 @@ export default function HomePage({ updates = [] }: { updates?: { slug: string; t
                   <li>• Security testing</li>
                   <li>• Continuous validation</li>
                 </ul>
-                <Link href="https://github.com/Zion-Holdings/zion.app/search?q=testing+guide+OR+playwright+OR+jest" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <Link href="/resources" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
                   View Testing Guide →
                 </Link>
               </div>
@@ -1750,7 +1750,7 @@ export default function HomePage({ updates = [] }: { updates?: { slug: string; t
                   <li>• Analytics dashboard</li>
                   <li>• Predictive maintenance</li>
                 </ul>
-                <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/PERFORMANCE.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <Link href="/blog/performance-optimization" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   View Performance Guide →
                 </Link>
               </div>
@@ -2239,9 +2239,9 @@ export default function HomePage({ updates = [] }: { updates?: { slug: string; t
                   <li>• Geographic distribution</li>
                   <li>• Real-time monitoring</li>
                 </ul>
-                <div className="text-cyan-400 text-sm font-semibold">
-                  Status: Active & Monitoring
-                </div>
+                <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  Learn More →
+                </Link>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -2253,9 +2253,9 @@ export default function HomePage({ updates = [] }: { updates?: { slug: string; t
                   <li>• Quality assurance</li>
                   <li>• Performance analytics</li>
                 </ul>
-                <div className="text-fuchsia-400 text-sm font-semibold">
-                  Status: Continuously Learning
-                </div>
+                <Link href="/services" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                  Learn More →
+                </Link>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -2267,28 +2267,8 @@ export default function HomePage({ updates = [] }: { updates?: { slug: string; t
                   <li>• Error recovery</li>
                   <li>• Deployment automation</li>
                 </ul>
-                <div className="text-green-400 text-sm font-semibold">
-                  Status: Self-Optimizing
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Key Pages & Resources */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📚 Key Pages & Resources</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-blue-400 mb-4 text-center">📖 Core Resources</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Main README</a> - Project overview</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/ARCHITECTURE.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Architecture Guide</a> - System design</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/API.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">API Documentation</a> - Integration guide</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/DEPLOYMENT.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Deployment Guide</a> - Setup instructions</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Contributing Guide</a> - Development workflow</li>
-                </ul>
-                <Link href="/automation" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  Explore Redundancy →
+                <Link href="/services" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  Learn More →
                 </Link>
               </div>
               
