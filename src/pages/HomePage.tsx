@@ -1,25 +1,33 @@
-import React from 'react';''
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import {}
+import {
   ArrowRight,
   Star,
   Users,
   Award,
   CheckCircle,
   Play,
-  Sparkles;
+  Sparkles,
+  Phone,
+  ChevronRight,
+  ChevronUp,
+  Shield,
+  Globe,
+  Mail,
+  MapPin
 } from 'lucide-react';
-import ServiceShowcase from '../components/ServiceShowcase.tsx';
+import { motion, AnimatePresence } from 'framer-motion';
+import ServiceShowcase from '../components/ServiceShowcase';
 import { contactInfo } from '../data/services';
 
-// Optimized futuristic animated background component;
-const FuturisticBackground: React.FC = () => {}
-  const particles: any = Array.from({ length: 20 }, (_, i) => ({}
+// Optimized futuristic animated background component
+const FuturisticBackground: React.FC = () => {
+  const particles = Array.from({ length: 20 }, (_, i) => ({
     id: i,
     left: `${Math.random() * 100}%`,
     top: `${Math.random() * 100}%`,
     duration: 3 + Math.random() * 4,
-    delay: Math.random() * 2;
+    delay: Math.random() * 2
   }));
 
   return (
@@ -29,37 +37,39 @@ const FuturisticBackground: React.FC = () => {}
 
       {/* Optimized floating particles */}
       {particles.map((particle) => (
-        <motion.div;
+        <motion.div
           key={particle.id}
-          className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-80 shadow-lg shadow-cyan-400/50"""
-          style={{}
+          className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-80 shadow-lg shadow-cyan-400/50"
+          style={{
             left: particle.left,
-            top: particle.top;
+            top: particle.top
           }}
-          animate={{}
+          animate={{
             y: [0, -20, 0],
             opacity: [0.8, 0.4, 0.8]
           }}
-          transition={{}
+          transition={{
             duration: particle.duration,
             delay: particle.delay,
             repeat: Infinity,
-            ease: "easeInOut"""
+            ease: "easeInOut"
           }}
         />
       ))}
+    </div>
+  );
+};
 
-// Loading skeleton components;
-// Floating Action Button Component;
-const FloatingActionButton: React.FC = () => {}
+// Floating Action Button Component
+const FloatingActionButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
 
-  useEffect(() => {}
-    const toggleVisibility: any = () => {}
-      if (window.pageYOffset > 300) {}
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 300) {
         setIsVisible(true);
-      } else {}
+      } else {
         setIsVisible(false);
       }
     };
@@ -71,8 +81,8 @@ const FloatingActionButton: React.FC = () => {}
   return (
     <AnimatePresence>
       {isVisible && (
-        <motion.div;
-          className="fixed bottom-8 right-8 z-50"""
+        <motion.div
+          className="fixed bottom-8 right-8 z-50"
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0 }}
@@ -82,68 +92,51 @@ const FloatingActionButton: React.FC = () => {}
             {/* Quick Actions */}
             <AnimatePresence>
               {isExpanded && (
-                <motion.div;
-                  className="absolute bottom-16 right-0 space-y-3"""
+                <motion.div
+                  className="absolute bottom-16 right-0 space-y-3"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <motion.a;
+                  <motion.a
                     href={`tel:${contactInfo.mobile}`}
-                    className="block w-12 h-12 bg-green-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"""
+                    className="block w-12 h-12 bg-green-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
                     <Phone className="w-5 h-5" />
                   </motion.a>
-                  <motion.a;
+                  <motion.a
                     href={`mailto:${contactInfo.email}`}
-                    className="block w-12 h-12 bg-blue-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"""
+                    className="block w-12 h-12 bg-blue-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
                     <Mail className="w-5 h-5" />
                   </motion.a>
                 </motion.div>
-              ))}""
-            </div>"""
-""""
-            {/* CTA Buttons */}"""""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
-              <Link"""""
-                to="/contact"""""
-                className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900"""""
-                aria-label="Get started with Zion Tech Group""""
-              >""""
-                <span>Get Started</span>"""""
-                <ArrowRight className="w-5 h-5"  />              </Link>""""
-              <Link"""""
-                to="/services"""""
-                className="inline-flex items-center space-x-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg hover:bg-white/20 transition-all duration-200 font-semibold text-lg border border-white/20 hover:border-white/40 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-gray-900"""""
-                aria-label="Explore our services""""
-              >""""
-                <span>Explore Services</span>"""""
-                <ChevronRight className="w-5 h-5"  />              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-            {/* Main FAB */}
-            <motion.button;
-              onClick={() => setIsExpanded(!isExpanded)}
-              className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"""
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <motion.div;
-                animate={{ rotate: isExpanded ? 45 : 0 }}
-                transition={{ duration: 0.2 }}
+              )}
+            </AnimatePresence>
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+                aria-label="Get started with Zion Tech Group"
               >
-                <ChevronUp className="w-6 h-6" />
-              </motion.div>
-            </motion.button>
+                <span>Get Started</span>
+                <ArrowRight className="w-5 h-5"  />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg hover:bg-white/20 transition-all duration-200 font-semibold text-lg border border-white/20 hover:border-white/40 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-gray-900"
+                aria-label="Explore our services"
+              >
+                <span>Explore Services</span>
+                <ChevronRight className="w-5 h-5"  />
+              </Link>
+            </div>
           </div>
         </motion.div>
       )}
@@ -152,8 +145,8 @@ const FloatingActionButton: React.FC = () => {}
 };
 
 // Stats Component;
-const StatsSection: React.FC = () => {}
-  const stats: any = []
+const StatsSection: React.FC = () => {
+  const stats: any = [
     { number: '500+', label: 'Projects Completed', icon: Award },
     { number: '98%', label: 'Client Satisfaction', icon: Star },
     { number: '24/7', label: 'Support Available', icon: Shield },
@@ -165,56 +158,66 @@ const StatsSection: React.FC = () => {}
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
-            <motion.div;
+            <motion.div
               key={index}
-              className="text-center"""
+              className="text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-            >""
-              Our Services"""
-            </motion.h2>""""
-            <motion.p"""""
-              className="text-xl text-gray-400 max-w-3xl mx-auto""
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
             >
-              Comprehensive technology solutions designed to drive innovation;
-              and growth;
-            </motion.p>
-          </div>
-
-          <Suspense;
-            fallback={}
-""
-"""
-""""
-"""""
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"""""
-                <div className="h-80 bg-gray-800 rounded-xl animate-pulse"></div>"""""
-                <div className="h-80 bg-gray-800 rounded-xl animate-pulse"></div>"""""
-                <div className="h-80 bg-gray-800 rounded-xl animate-pulse"></div>"""""
-                <div className="h-80 bg-gray-800 rounded-xl animate-pulse"></div>
-              </div>
-            }""
-          >"""
-            <LazyServicesGrid services={services}  />          </Suspense>""""
-"""""
-          <div className="text-center mt-12">""""
-            <Link"""""
-              to="/services"""""
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-semibold focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900"""""
-              aria-label="View all our services""""
-            >""""
-              <span>View All Services</span>"""""
-              <ArrowRight className="w-5 h-5"  />            </Link>
-          </div>
+              <h2 className="text-4xl font-bold text-white mb-4">
+                {stat.number}
+              </h2>
+              <p className="text-lg text-gray-400">{stat.label}</p>
+            </motion.div>
+          ))}
         </div>
-      </section>
+
+        <div className="mt-16">
+          <h2 className="text-3xl font-bold text-white mb-6 text-center">
+            Our Services
+          </h2>
+          <motion.p
+            className="text-xl text-gray-400 max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            Comprehensive technology solutions designed to drive innovation;
+            and growth;
+          </motion.p>
+        </div>
+
+        <Suspense
+          fallback={
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="h-80 bg-gray-800 rounded-xl animate-pulse"></div>
+              <div className="h-80 bg-gray-800 rounded-xl animate-pulse"></div>
+              <div className="h-80 bg-gray-800 rounded-xl animate-pulse"></div>
+              <div className="h-80 bg-gray-800 rounded-xl animate-pulse"></div>
+            </div>
+          }
+        >
+          <LazyServicesGrid services={services}  />
+        </Suspense>
+
+        <div className="text-center mt-12">
+          <Link
+            to="/services"
+            className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-semibold focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+            aria-label="View all our services"
+          >
+            <span>View All Services</span>
+            <ArrowRight className="w-5 h-5"  />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 // Hero Section Component;
-const HeroSection: React.FC = () => {}
+const HeroSection: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden">
       <FuturisticBackground />
@@ -222,8 +225,8 @@ const HeroSection: React.FC = () => {}
       <div className="container mx-auto px-4 py-32 relative z-10">
         <div className="text-center max-w-5xl mx-auto">
           {/* Hero Badge */}
-          <motion.div;
-            className="inline-flex items-center bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-2 mb-8"""
+          <motion.div
+            className="inline-flex items-center bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-2 mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -233,8 +236,8 @@ const HeroSection: React.FC = () => {}
           </motion.div>
 
           {/* Hero Title */}
-          <motion.h1;
-            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"""
+          <motion.h1
+            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -246,8 +249,8 @@ const HeroSection: React.FC = () => {}
           </motion.h1>
 
           {/* Hero Subtitle */}
-          <motion.p;
-            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"""
+          <motion.p
+            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -257,30 +260,30 @@ const HeroSection: React.FC = () => {}
           </motion.p>
 
           {/* CTA Buttons */}
-          <motion.div;
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"""
+          <motion.div
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <Link;
-              to="/services"""
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 flex items-center group shadow-lg hover:shadow-xl"""
+            <Link
+              to="/services"
+              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 flex items-center group shadow-lg hover:shadow-xl"
             >
               Explore Our Services;
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <a;
+            <a
               href={`tel:${contactInfo.mobile}`}
-              className="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-200 backdrop-blur-sm"""
+              className="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-200 backdrop-blur-sm"
             >
               Get Free Consultation;
             </a>
           </motion.div>
 
           {/* Contact Info */}
-          <motion.div;
-            className="flex flex-wrap justify-center gap-6 text-sm text-gray-400"""
+          <motion.div
+            className="flex flex-wrap justify-center gap-6 text-sm text-gray-400"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
@@ -302,15 +305,15 @@ const HeroSection: React.FC = () => {}
       </div>
 
       {/* Scroll Indicator */}
-      <motion.div;
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"""
+      <motion.div
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1 }}
       >
         <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-          <motion.div;
-            className="w-1 h-3 bg-white rounded-full mt-2"""
+          <motion.div
+            className="w-1 h-3 bg-white rounded-full mt-2"
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
           />
@@ -321,7 +324,7 @@ const HeroSection: React.FC = () => {}
 };
 
 // Main Home Component;
-const Home: React.FC = () => {}
+const Home: React.FC = () => {
   return (
     <div className="min-h-screen">
       <HeroSection />
