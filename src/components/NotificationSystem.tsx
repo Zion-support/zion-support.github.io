@@ -563,7 +563,7 @@ export const notificationUtils = {
       })}
   },
 
-  error: (title: string, message: string, options?: Partial<Notification>)  => {
+  error: (title: string, message: string, options?: Partial<Notification>) => {
     if ((window as ).addNotification) {
       (window as ).addNotification({
         type: 'error',
@@ -574,7 +574,7 @@ export const notificationUtils = {
       })}
   },
 
-  info: (title: string, message: string, options?: Partial<Notification>)  => {
+  info: (title: string, message: string, options?: Partial<Notification>) => {
     if ((window as ).addNotification) {
       (window as ).addNotification({
         type: 'info',
@@ -585,7 +585,7 @@ export const notificationUtils = {
       })}
   },
 
-  achievement: (title: string, message: string, options?: Partial<Notification>)  => {
+  achievement: (title: string, message: string, options?: Partial<Notification>) => {
     if ((window as ).addNotification) {
       (window as ).addNotification({
         type: 'achievement',

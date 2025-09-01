@@ -52,7 +52,7 @@ const metricsRef:  useRef<PerformanceMetrics>({;
   }, []);
 
   // FPS monitoring
-  useEffect(()  => {
+  useEffect(() => {
     if (!enableFPSMonitoring) return;
 
     let animationFrameId: number;
@@ -168,7 +168,7 @@ const metricsRef:  useRef<PerformanceMetrics>({;
   }), [getMetrics]);
 
   // Cleanup on unmount
-  useEffect(()  => {
+  useEffect(() => {
     return cleanup}, [cleanup]);
 
   return {

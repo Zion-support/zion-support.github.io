@@ -34,7 +34,24 @@ module.exports = {
       }
     },
 
-    // Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY)
+    // PM2 Error Prevention Automation - runs every 5 minutes (HIGHEST PRIORITY)
+    {
+      name: 'pm2-error-prevention',
+      script: './scripts/automation/pm2-error-prevention-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '300000' // 5 minutes
+      },
+      log_file: './automation/logs/pm2-error-prevention.log',
+      error_file: './automation/logs/pm2-error-prevention-error.log',
+      out_file: './automation/logs/pm2-error-prevention-out.log'
+    },
+
+    // Continuous console error fixer - runs every 15 minutes (HIGH PRIORITY)
     {
       name: 'console-error-fixer',
       script: './scripts/automation/console-error-fixer.cjs',
@@ -307,7 +324,6 @@ module.exports = {
       log_file: './logs/intelligent-build-pipeline.log',
       error_file: './logs/intelligent-build-pipeline-error.log',
       out_file: './logs/intelligent-build-pipeline-out.log'
-    }
     }
   ],
 
