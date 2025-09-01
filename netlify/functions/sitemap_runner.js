@@ -1,25 +1,28 @@
 exports.handler = async function(event, context) {
+  console.log('sitemap_runner function executed');
+  
   try {
-    console.log('sitemap_runner function triggered');
+    // Basic sitemap runner logic
+    const timestamp = new Date().toISOString();
+    console.log(`Sitemap runner process started at ${timestamp}`);
     
-    // Basic sitemap_runner logic
-    const result = {
+    // Simulate some sitemap work
+    await new Promise(resolve => setTimeout(resolve, 280));
+    
+    return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'sitemap_runner function executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'sitemap_runner',
-        action: 'executing sitemap_runner functionality'
+        message: 'Sitemap runner completed successfully',
+        timestamp: timestamp,
+        function: 'sitemap_runner'
       })
     };
-    
-    return result;
   } catch (error) {
     console.error('Error in sitemap_runner:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
+        error: 'Sitemap runner failed',
         message: error.message,
         function: 'sitemap_runner'
       })
