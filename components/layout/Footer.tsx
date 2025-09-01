@@ -1,80 +1,133 @@
 import React from 'react';
 import Link from 'next/link';
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Globe, 
+  Zap, 
+  Sparkles, 
+  Shield, 
+  Rocket,
+  Twitter,
+  Linkedin,
+  Github,
+  Facebook,
+  Instagram,
+  Youtube,
+  Home,
+  Info,
+  Briefcase,
+  Target,
+  BookOpen,
+  Building,
+  HelpCircle,
+  Users,
+  FileText,
+  Star,
+  DollarSign,
+  BarChart3,
+  Rocket as RocketIcon,
+  Brain,
+  Atom,
+  Cpu,
+  Cloud,
+  Shield as ShieldIcon
+} from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
+  const mainNavigation = [
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'About', href: '/about', icon: Info },
+    { name: 'Services', href: '/services', icon: Briefcase },
+    { name: 'Solutions', href: '/solutions', icon: Target },
+    { name: 'Pricing', href: '/pricing', icon: DollarSign },
+    { name: 'Resources', href: '/resources', icon: BookOpen },
+    { name: 'Contact', href: '/contact', icon: Users }
+  ];
+
   const services = [
-    { name: 'AI & Machine Learning', href: '/ai-services' },
-    { name: 'Quantum Technology', href: '/quantum-services' },
-    { name: 'Space Technology', href: '/space-technology' },
-    { name: 'IT Solutions', href: '/it-services' },
-    { name: 'Specialized Solutions', href: '/solutions' },
-    { name: 'View All Services', href: '/services' }
+    { name: 'AI & Machine Learning', href: '/ai-services', icon: Brain },
+    { name: 'Quantum Technology', href: '/quantum-services', icon: Atom },
+    { name: 'Space Technology', href: '/space-technology', icon: RocketIcon },
+    { name: 'IT Solutions', href: '/it-services', icon: Cpu },
+    { name: 'Cybersecurity', href: '/security', icon: ShieldIcon },
+    { name: 'Cloud & Infrastructure', href: '/cloud-platform', icon: Cloud },
+    { name: 'View All Services', href: '/services', icon: Briefcase }
   ];
 
   const solutions = [
-    { name: 'Services Showcase', href: '/comprehensive-services-showcase-2025' },
-    { name: 'Pricing Plans', href: '/pricing' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Resources', href: '/resources' },
-    { name: 'Support', href: '/support' },
-    { name: 'Documentation', href: '/docs' }
-  ];
-
-  const company = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Partners', href: '/partners' },
-    { name: 'Investors', href: '/investors' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' }
+    { name: 'Enterprise Solutions', href: '/enterprise-solutions-showcase', icon: Building },
+    { name: 'Healthcare Solutions', href: '/healthcare-solutions', icon: Users },
+    { name: 'Financial Solutions', href: '/financial-solutions', icon: DollarSign },
+    { name: 'Government Solutions', href: '/government-technology-solutions', icon: Shield },
+    { name: 'Manufacturing Solutions', href: '/manufacturing-ai-solutions', icon: Target },
+    { name: 'Retail Solutions', href: '/retail-technology-solutions', icon: Users },
+    { name: 'View All Solutions', href: '/solutions', icon: Target }
   ];
 
   const resources = [
-    { name: 'Documentation', href: '/docs' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Support Center', href: '/support' },
-    { name: 'Resources', href: '/resources' },
-    { name: 'Training', href: '/training' }
+    { name: 'Documentation', href: '/docs', icon: FileText },
+    { name: 'Blog', href: '/blog', icon: FileText },
+    { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
+    { name: 'White Papers', href: '/white-papers', icon: FileText },
+    { name: 'Webinars', href: '/webinars', icon: Users },
+    { name: 'Training', href: '/training', icon: Users },
+    { name: 'API Documentation', href: '/api-docs', icon: FileText }
   ];
 
-  const legal = [
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' },
-    { name: 'Security', href: '/security' }
+  const company = [
+    { name: 'About Us', href: '/about', icon: Info },
+    { name: 'Careers', href: '/careers', icon: Users },
+    { name: 'Partners', href: '/partners', icon: Users },
+    { name: 'Investors', href: '/investors', icon: DollarSign },
+    { name: 'News', href: '/news', icon: FileText },
+    { name: 'Events', href: '/events', icon: Users },
+    { name: 'Contact', href: '/contact', icon: Users }
+  ];
+
+  const support = [
+    { name: 'Support Center', href: '/support', icon: HelpCircle },
+    { name: 'Contact Us', href: '/contact', icon: Users },
+    { name: 'Status Page', href: '/status', icon: Shield },
+    { name: 'Community', href: '/community', icon: Users },
+    { name: 'API Documentation', href: '/api-docs', icon: FileText },
+    { name: 'Help & FAQ', href: '/support', icon: HelpCircle }
+  ];
+
+  const showcase = [
+    { name: '2026 Services', href: '/revolutionary-2026-services', icon: Rocket },
+    { name: 'Micro SAAS', href: '/ultimate-2025-micro-saas-showcase', icon: Zap },
+    { name: 'Ultimate 2035', href: '/ultimate-2035-futuristic-services-showcase', icon: Sparkles },
+    { name: 'Market Pricing', href: '/market-pricing', icon: BarChart3 },
+    { name: 'Revolutionary 2026', href: '/revolutionary-2026-pricing', icon: Star },
+    { name: 'All Showcases', href: '/comprehensive-services-showcase-2025', icon: Star }
   ];
 
   const socialLinks = [
-    { name: 'X', href: 'https://x.com/ziontechgroup', icon: Twitter },
-    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/ziontechgroup', icon: Linkedin },
+    { name: 'X (Twitter)', href: '/social/twitter', icon: Twitter },
+    { name: 'LinkedIn', href: '/social/linkedin', icon: Linkedin },
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
     { name: 'Facebook', href: 'https://www.facebook.com/ziontechgroup', icon: Facebook },
     { name: 'Instagram', href: 'https://www.instagram.com/ziontechgroup', icon: Instagram },
     { name: 'YouTube', href: 'https://www.youtube.com/@ziontechgroup', icon: Youtube }
   ];
 
-  const social = [
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'GitHub', href: '#', icon: Github },
-    { name: 'YouTube', href: '#', icon: Youtube },
-    { name: 'Instagram', href: '#', icon: Instagram },
-    { name: 'Facebook', href: '#', icon: Facebook }
+  const legal = [
+    { name: 'Privacy Policy', href: '/privacy', icon: Shield },
+    { name: 'Terms of Service', href: '/terms', icon: FileText },
+    { name: 'Cookie Policy', href: '/cookies', icon: Shield },
+    { name: 'Accessibility', href: '/accessibility-scanner', icon: Users }
   ];
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
-    <footer className="bg-gray-950/95 backdrop-blur-xl border-t border-gray-800/20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-grid opacity-5" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
-          {/* Brand Section */}
+    <footer className="bg-gradient-to-br from-gray-900 to-black border-t border-gray-800">
+      {/* Main Footer Content */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-8 gap-8">
+          {/* Company Info */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center space-x-3 mb-6 group">
               <div className="relative">
@@ -88,33 +141,39 @@ export default function Footer() {
                 <div className="text-sm text-gray-400">Revolutionary Technology Solutions</div>
               </div>
             </div>
-            <p className="text-gray-300 mb-6 max-w-xs">
+            <p className="text-gray-400 mb-6 max-w-xs">
               Pioneering the future of technology with innovative solutions that drive business transformation.
             </p>
-            <div className="flex space-x-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-cyan-500 transition-colors"
-                  aria-label={social.name}
-                >
-                  <social.icon className="w-5 h-5 text-gray-300 hover:text-white" />
-                </a>
-              ))}
+            <div className="space-y-2 text-sm text-gray-400">
+              <div className="flex items-center space-x-2">
+                <Phone className="w-4 h-4 text-cyan-400" />
+                <span>{contactInfo.mobile}</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Mail className="w-4 h-4 text-cyan-400" />
+                <span>{contactInfo.email}</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <MapPin className="w-4 h-4 text-cyan-400" />
+                <span className="text-xs">{contactInfo.address}</span>
+              </div>
             </div>
           </div>
 
           {/* Services */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-6">Services</h3>
-            <ul className="space-y-3">
+          <div className="lg:col-span-1">
+            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+              <Briefcase className="w-5 h-5 mr-2 text-cyan-400" />
+              Services
+            </h3>
+            <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.name}>
-                  <a
+                  <Link 
                     href={service.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors"
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 flex items-center text-sm"
                   >
+                    <service.icon className="w-4 h-4 mr-2" />
                     {service.name}
                   </a>
                 </li>
@@ -123,15 +182,19 @@ export default function Footer() {
           </div>
 
           {/* Solutions */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-6">Solutions</h3>
-            <ul className="space-y-3">
+          <div className="lg:col-span-1">
+            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+              <Target className="w-5 h-5 mr-2 text-cyan-400" />
+              Solutions
+            </h3>
+            <ul className="space-y-2">
               {solutions.map((solution) => (
                 <li key={solution.name}>
-                  <a
+                  <Link 
                     href={solution.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors"
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 flex items-center text-sm"
                   >
+                    <solution.icon className="w-4 h-4 mr-2" />
                     {solution.name}
                   </a>
                 </li>
@@ -139,130 +202,84 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-6">Company</h3>
-            <ul className="space-y-3">
-              {company.map((item) => (
-                <li key={item.name}>
-                  <a
-                    href={item.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resources & Legal */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-6">Resources</h3>
-            <ul className="space-y-3 mb-6">
+          {/* Resources */}
+          <div className="lg:col-span-1">
+            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+              <BookOpen className="w-5 h-5 mr-2 text-cyan-400" />
+              Resources
+            </h3>
+            <ul className="space-y-2">
               {resources.map((resource) => (
                 <li key={resource.name}>
-                  <a
+                  <Link 
                     href={resource.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors"
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 flex items-center text-sm"
                   >
+                    <resource.icon className="w-4 h-4 mr-2" />
                     {resource.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
-            <h3 className="text-lg font-semibold text-white mb-6">Legal</h3>
-            <ul className="space-y-3">
-              {legal.map((item) => (
+          </div>
+
+          {/* Company */}
+          <div className="lg:col-span-1">
+            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+              <Building className="w-5 h-5 mr-2 text-cyan-400" />
+              Company
+            </h3>
+            <ul className="space-y-2">
+              {company.map((item) => (
                 <li key={item.name}>
-                  <a
+                  <Link 
                     href={item.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors"
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 flex items-center text-sm"
                   >
+                    <item.icon className="w-4 h-4 mr-2" />
                     {item.name}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
-        </div>
 
-        {/* Social Links & Newsletter */}
-        <div className="mt-12 pt-8 border-t border-gray-800">
-          <div className="flex flex-col lg:flex-row items-center justify-between">
-            {/* Social Links */}
-            <div className="flex items-center space-x-4 mb-6 lg:mb-0">
-              <span className="text-gray-400 text-sm mr-4">Follow Us:</span>
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  className="w-11 h-11 bg-gray-800 hover:bg-blue-600 rounded-xl flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-500/25 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-950"
-                  aria-label={`Follow us on ${social.name}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Services Section */}
-          <div>
-            <h3 className="text-white font-semibold mb-6 text-lg">Services</h3>
-            <ul className="space-y-3">
-              {services.map((service) => (
-                <li key={service.name}>
-                  <Link
-                    href={service.href}
-                    className="text-gray-400 hover:text-blue-500 transition-all duration-200 hover:translate-x-1 inline-block group focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-950 rounded"
+          {/* Support */}
+          <div className="lg:col-span-1">
+            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+              <HelpCircle className="w-5 h-5 mr-2 text-cyan-400" />
+              Support
+            </h3>
+            <ul className="space-y-2">
+              {support.map((item) => (
+                <li key={item.name}>
+                  <Link 
+                    href={item.href}
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 flex items-center text-sm"
                   >
-                    <span className="relative flex items-center space-x-2">
-                      <service.icon className="w-4 h-4" />
-                      <span>{service.name}</span>
-                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-200 group-hover:w-full" />
-                    </span>
+                    <item.icon className="w-4 h-4 mr-2" />
+                    {item.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Company Section */}
-          <div>
-            <h3 className="text-white font-semibold mb-6 text-lg">Company</h3>
-            <ul className="space-y-3">
-              {company.map((item) => (
+          {/* Showcase & Pricing */}
+          <div className="lg:col-span-1">
+            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+              <Star className="w-5 h-5 mr-2 text-cyan-400" />
+              Showcase
+            </h3>
+            <ul className="space-y-2">
+              {showcase.map((item) => (
                 <li key={item.name}>
-                  <Link
+                  <Link 
                     href={item.href}
-                    className="text-gray-400 hover:text-blue-500 transition-all duration-200 hover:translate-x-1 inline-block group focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-950 rounded"
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 flex items-center text-sm"
                   >
-                    <span className="relative">
-                      {item.name}
-                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-200 group-hover:w-full" />
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resources Section */}
-          <div>
-            <h3 className="text-white font-semibold mb-6 text-lg">Resources</h3>
-            <ul className="space-y-3">
-              {resources.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-gray-400 hover:text-blue-500 transition-all duration-200 hover:translate-x-1 inline-block group focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-950 rounded"
-                  >
-                    <span className="relative">
-                      {item.name}
-                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-200 group-hover:w-full" />
-                    </span>
+                    <item.icon className="w-4 h-4 mr-2" />
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -270,24 +287,52 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="border-t border-gray-800/20 mt-16 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-2 text-gray-400 mb-4 md:mb-0">
-              <span>&copy; {currentYear} Zion Tech Group. All rights reserved.</span>
-              <Heart className="w-4 h-4 text-red-500 animate-pulse" />
-            </div>
-            <div className="flex items-center space-x-6">
+        {/* Bottom Footer */}
+        <div className="border-t border-gray-800 mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            {/* Legal Links */}
+            <div className="flex flex-wrap items-center space-x-6 text-sm text-gray-400">
               {legal.map((item) => (
-                <Link
+                <Link 
                   key={item.name}
                   href={item.href}
-                  className="text-gray-400 hover:text-blue-500 transition-colors duration-200 text-sm"
+                  className="hover:text-cyan-400 transition-colors duration-200 flex items-center"
                 >
+                  <item.icon className="w-4 h-4 mr-1" />
                   {item.name}
                 </Link>
               ))}
             </div>
+          </div>
+
+            {/* Social Links */}
+            <div className="flex items-center space-x-4">
+              {socialLinks.map((social) => (
+                <Link
+                  key={social.name}
+                  href={social.href}
+                  className="w-10 h-10 bg-gray-800 hover:bg-cyan-600 rounded-lg flex items-center justify-center text-gray-400 hover:text-white transition-all duration-200"
+                  aria-label={social.name}
+                >
+                  <social.icon className="w-5 h-5" />
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Copyright */}
+          <div className="text-center mt-8 pt-8 border-t border-gray-800">
+            <p className="text-gray-400 text-sm">
+              © {new Date().getFullYear()} Zion Tech Group. All rights reserved. 
+              <span className="mx-2">•</span>
+              <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-200">
+                Privacy Policy
+              </Link>
+              <span className="mx-2">•</span>
+              <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-200">
+                Terms of Service
+              </Link>
+            </p>
           </div>
 
       {/* Scroll to Top Button */}
