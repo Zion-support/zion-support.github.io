@@ -122,6 +122,8 @@ export function MobileMenu({ onClose }) {
           items: [
             { label: 'AI Legal Research Platform', href: '/services/ai-autonomous-legal-research-platform' },
             { label: 'AI Educational Content', href: '/services/ai-educational-content-creation-platform' },
+            { label: 'AI Autonomous Education Platform', href: '/services/ai-autonomous-education-platform' },
+            { label: 'AI Autonomous Creative Studio', href: '/services/ai-autonomous-creative-studio' },
             { label: 'AI Real Estate Analytics', href: '/services/ai-real-estate-investment-analytics-platform' }
           ]
         }
@@ -166,6 +168,8 @@ export function MobileMenu({ onClose }) {
         { label: 'Training', href: '/training' },
         { label: 'Research', href: '/research-development' },
         { label: 'Case Studies', href: '/case-studies' },
+        { label: 'Innovative Services Showcase 2026', href: '/innovative-services-showcase-2026' },
+        { label: 'Innovative Services Showcase 2027', href: '/innovative-services-showcase-2027' },
         { label: 'Marketplace', href: '/marketplace' },
         { label: 'Request Quote', href: '/request-quote' }
       ]

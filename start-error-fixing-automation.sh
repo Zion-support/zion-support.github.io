@@ -1,11 +1,23 @@
 #!/bin/bash
 
-# 🚨 Comprehensive Error Fixing Automation System Startup Script
-# This script starts the PM2-based error fixing automation system
+# Enhanced Error Fixing Automation Startup Script
+# This script starts the comprehensive error fixing automation system
 
 set -e
 
-echo "🚨 Starting Comprehensive Error Fixing Automation System..."
+echo "🚀 Starting Enhanced Error Fixing Automation System..."
+echo "📁 Project: Zion Tech Group"
+echo "⏰ Timestamp: $(date)"
+echo ""
+
+# Ensure we're in the project root
+cd "$(dirname "$0")"
+
+# Create necessary directories
+echo "📁 Creating log directories..."
+mkdir -p automation/logs
+mkdir -p automation/reports
+mkdir -p automation/backups
 
 # Colors for output
 RED='\033[0;31m'
@@ -31,216 +43,115 @@ print_error() {
     echo -e "${RED}[ERROR]${NC} $1"
 }
 
+# Check if we're in the right directory
+if [ ! -f "package.json" ]; then
+    print_error "package.json not found. Please run this script from the project root."
+    exit 1
+fi
+
 # Check if PM2 is installed
-check_pm2() {
-    if ! command -v pm2 &> /dev/null; then
-        print_error "PM2 is not installed. Installing PM2..."
-        npm install -g pm2
-        if [ $? -ne 0 ]; then
-            print_error "Failed to install PM2. Please install it manually: npm install -g pm2"
-            exit 1
-        fi
-        print_success "PM2 installed successfully"
-    else
-        print_success "PM2 is already installed"
-    fi
-}
+if ! command -v pm2 &> /dev/null; then
+    print_warning "PM2 not found. Installing PM2..."
+    npm install -g pm2
+fi
 
-# Check if required directories exist
-setup_directories() {
-    print_status "Setting up required directories..."
-    
-    mkdir -p logs
-    mkdir -p reports
-    mkdir -p .pm2
-    
-    print_success "Directories created"
-}
+# Create necessary directories
+print_status "Creating automation directories..."
+mkdir -p automation/logs
+mkdir -p automation/reports
 
-# Check if required dependencies are installed
-check_dependencies() {
-    print_status "Checking project dependencies..."
-    
-    if [ ! -d "node_modules" ]; then
-        print_warning "node_modules not found. Installing dependencies..."
-        npm install
-        if [ $? -ne 0 ]; then
-            print_error "Failed to install dependencies"
-            exit 1
-        fi
-        print_success "Dependencies installed"
-    else
-        print_success "Dependencies are already installed"
-    fi
-}
+# Install dependencies if needed
+if [ ! -d "node_modules" ]; then
+    print_status "Installing dependencies..."
+    npm install
+fi
 
-# Check if required automation scripts exist
-check_automation_scripts() {
-    print_status "Checking automation scripts..."
-    
-    local missing_scripts=()
-    
-    if [ ! -f "scripts/automation/comprehensive-error-fixer.cjs" ]; then
-        missing_scripts+=("comprehensive-error-fixer.cjs")
-    fi
-    
-    if [ ! -f "scripts/automation/typescript-error-monitor.cjs" ]; then
-        missing_scripts+=("typescript-error-monitor.cjs")
-    fi
-    
-    if [ ! -f "scripts/automation/eslint-error-cleaner.cjs" ]; then
-        missing_scripts+=("eslint-error-cleaner.cjs")
-    fi
-    
-    if [ ${#missing_scripts[@]} -ne 0 ]; then
-        print_error "Missing automation scripts: ${missing_scripts[*]}"
-        print_error "Please ensure all automation scripts are present before starting"
-        exit 1
-    fi
-    
-    print_success "All automation scripts are present"
-}
+# Install PM2 logrotate for log management
+echo "📊 Setting up PM2 logrotate..."
+pm2 install pm2-logrotate || true
+pm2 set pm2-logrotate:max_size 10M
+pm2 set pm2-logrotate:retain 30
+pm2 set pm2-logrotate:compress true
+pm2 set pm2-logrotate:workerInterval 60
+pm2 set pm2-logrotate:rotateInterval '0 0 * * *'
 
 # Stop any existing PM2 processes
-stop_existing_processes() {
-    print_status "Stopping any existing PM2 processes..."
-    
-    if pm2 list | grep -q "error-fixing"; then
-        pm2 stop ecosystem-error-fixing.config.cjs
-        pm2 delete ecosystem-error-fixing.config.cjs
-        print_success "Existing processes stopped"
-    else
-        print_status "No existing error fixing processes found"
-    fi
-}
+print_status "Stopping existing PM2 processes..."
+pm2 stop ecosystem-error-fixing.config.cjs 2>/dev/null || true
+pm2 delete ecosystem-error-fixing.config.cjs 2>/dev/null || true
 
-# Start the error fixing automation system
-start_automation_system() {
-    print_status "Starting error fixing automation system..."
-    
-    # Start with the main ecosystem configuration
-    pm2 start ecosystem-error-fixing.config.cjs
-    
-    if [ $? -eq 0 ]; then
-        print_success "Error fixing automation system started successfully"
-    else
-        print_error "Failed to start error fixing automation system"
-        exit 1
-    fi
-}
+# Start the error fixing automation
+print_status "Starting error fixing automation with PM2..."
+pm2 start ecosystem-error-fixing.config.cjs --update-env
 
-# Show status of all processes
-show_status() {
-    print_status "Current PM2 status:"
-    pm2 status
-    
-    print_status "Error fixing automation processes:"
-    pm2 list | grep "error-fixing" || echo "No error fixing processes found"
-}
+# Wait a moment for processes to start
+sleep 5
+
+# Show status
+echo ""
+echo "📊 PM2 Status:"
+pm2 status
 
 # Show logs
-show_logs() {
-    print_status "Recent logs from error fixing processes:"
-    
-    echo "=== Comprehensive Error Fixer Logs ==="
-    if [ -f "logs/comprehensive-error-fixer.log" ]; then
-        tail -n 20 logs/comprehensive-error-fixer.log
-    else
-        echo "No logs found yet"
-    fi
-    
-    echo -e "\n=== TypeScript Error Monitor Logs ==="
-    if [ -f "logs/typescript-error-monitor.log" ]; then
-        tail -n 20 logs/typescript-error-monitor.log
-    else
-        echo "No logs found yet"
-    fi
-    
-    echo -e "\n=== ESLint Error Cleaner Logs ==="
-    if [ -f "logs/eslint-error-cleaner.log" ]; then
-        tail -n 20 logs/eslint-error-cleaner.log
-    else
-        echo "No logs found yet"
-    fi
-}
+print_status "Recent logs from error fixing automation:"
+pm2 logs --lines 20
 
-# Main execution
-main() {
-    print_status "🚨 Comprehensive Error Fixing Automation System"
-    print_status "================================================"
-    
-    # Check prerequisites
-    check_pm2
-    check_dependencies
-    check_automation_scripts
-    setup_directories
-    
-    # Stop existing processes
-    stop_existing_processes
-    
-    # Start automation system
-    start_automation_system
-    
-    # Wait a moment for processes to start
-    sleep 3
-    
-    # Show status
-    show_status
-    
-    print_success "🎉 Error fixing automation system is now running!"
-    print_status "The system will automatically:"
-    print_status "  • Monitor for TypeScript errors every 15 minutes"
-    print_status "  • Clean ESLint errors every 20 minutes"
-    print_status "  • Run comprehensive error fixes every 2 hours"
-    print_status "  • Generate detailed reports in the 'reports' directory"
-    print_status "  • Log all activities in the 'logs' directory"
-    
-    echo ""
-    print_status "Useful commands:"
-    print_status "  pm2 status                    - Show process status"
-    print_status "  pm2 logs                      - Show real-time logs"
-    print_status "  pm2 monit                     - Monitor processes"
-    print_status "  pm2 stop ecosystem-error-fixing.config.cjs  - Stop automation"
-    print_status "  pm2 restart ecosystem-error-fixing.config.cjs - Restart automation"
-    
-    echo ""
-    print_status "Logs and reports are available in:"
-    print_status "  • logs/                       - Process logs"
-    print_status "  • reports/                    - Error fix reports"
-    print_status "  • .pm2/                      - PM2 configuration"
-}
+# Create a monitoring script
+cat > monitor-error-fixing.sh << 'EOF'
+#!/bin/bash
+echo "🔍 Monitoring Error Fixing Automation..."
+echo "========================================"
+pm2 status
+echo ""
+echo "📊 Recent Logs:"
+pm2 logs --lines 10
+echo ""
+echo "📈 Error Fixing Reports:"
+ls -la *.json | grep -E "(error|fixing|report)" || echo "No reports found yet"
+EOF
 
-# Handle script arguments
-case "${1:-}" in
-    "status")
-        show_status
-        ;;
-    "logs")
-        show_logs
-        ;;
-    "stop")
-        print_status "Stopping error fixing automation system..."
-        pm2 stop ecosystem-error-fixing.config.cjs
-        pm2 delete ecosystem-error-fixing.config.cjs
-        print_success "Automation system stopped"
-        ;;
-    "restart")
-        print_status "Restarting error fixing automation system..."
-        pm2 restart ecosystem-error-fixing.config.cjs
-        print_success "Automation system restarted"
-        ;;
-    "help"|"-h"|"--help")
-        echo "Usage: $0 [command]"
-        echo ""
-        echo "Commands:"
-        echo "  (no args)  - Start the error fixing automation system"
-        echo "  status     - Show current process status"
-        echo "  logs       - Show recent logs"
-        echo "  stop       - Stop the automation system"
-        echo "  restart    - Restart the automation system"
-        echo "  help       - Show this help message"
-        ;;
-    *)
-        main
-        ;;
-esac
+chmod +x monitor-error-fixing.sh
+
+# Create a stop script
+cat > stop-error-fixing.sh << 'EOF'
+#!/bin/bash
+echo "🛑 Stopping Error Fixing Automation..."
+pm2 stop ecosystem-error-fixing.config.cjs
+pm2 delete ecosystem-error-fixing.config.cjs
+echo "✅ Error fixing automation stopped"
+EOF
+
+chmod +x stop-error-fixing.sh
+
+# Create a restart script
+cat > restart-error-fixing.sh << 'EOF'
+#!/bin/bash
+echo "🔄 Restarting Error Fixing Automation..."
+pm2 restart ecosystem-error-fixing.config.cjs
+echo "✅ Error fixing automation restarted"
+EOF
+
+chmod +x restart-error-fixing.sh
+
+print_success "Error fixing automation system started successfully!"
+print_status "Useful commands:"
+echo "  ./monitor-error-fixing.sh  - Monitor the automation"
+echo "  ./stop-error-fixing.sh     - Stop the automation"
+echo "  ./restart-error-fixing.sh  - Restart the automation"
+echo "  pm2 logs                   - View all logs"
+echo "  pm2 status                 - Check process status"
+
+print_status "The automation will now continuously fix errors in your project:"
+echo "  • TypeScript errors (every 5-10 minutes)"
+echo "  • ESLint errors (every 15 minutes)"
+echo "  • Build errors (every 15 minutes)"
+echo "  • Dependency issues (every 30 minutes)"
+echo "  • Performance monitoring (every 30 minutes)"
+echo "  • Code quality analysis (every hour)"
+echo "  • Security scanning (every 2 hours)"
+echo "  • Link health checking (every 2 hours)"
+echo "  • Automated testing (every 4 hours)"
+echo "  • Backup management (every 8 hours)"
+echo "  • System health reporting (every hour)"
+
+print_success "Your project errors will be automatically fixed! 🎉"

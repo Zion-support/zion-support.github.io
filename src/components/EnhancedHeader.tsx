@@ -207,17 +207,17 @@ export function EnhancedHeader() {
       category: 'AI'
     },
     {
-      name: 'AI Project Management Platform',
-      description: 'AI-powered project management and collaboration',
-      href: '/services/ai-powered-project-management-platform',
-      icon: Workflow,
+      name: 'AI Intelligent Project Management',
+      description: 'AI-powered project management platform',
+      href: '/services/ai-intelligent-project-management-platform',
+      icon: Rocket,
       color: 'from-blue-500 to-cyan-500',
       featured: true,
       category: 'AI'
     },
     {
       name: 'AI Financial Analytics Platform',
-      description: 'Intelligent financial insights and portfolio management',
+      description: 'AI-powered financial analytics and risk management',
       href: '/services/ai-financial-analytics-platform',
       icon: BarChart3,
       color: 'from-green-500 to-emerald-500',
@@ -226,7 +226,7 @@ export function EnhancedHeader() {
     },
     {
       name: 'AI Healthcare Analytics Platform',
-      description: 'AI-powered healthcare insights and patient care',
+      description: 'AI-powered healthcare analytics and clinical support',
       href: '/services/ai-healthcare-analytics-platform',
       icon: Heart,
       color: 'from-red-500 to-pink-500',

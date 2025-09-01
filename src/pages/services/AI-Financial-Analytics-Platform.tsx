@@ -103,233 +103,219 @@ import {
 const AIFinancialAnalyticsPlatform: React.FC = () => {
   const features = [
     {
-      title: 'AI-Powered Financial Forecasting',
-      description: 'Predict future financial trends with 95% accuracy using advanced machine learning algorithms',
+      title: 'Real-time Market Intelligence',
+      description: 'AI-powered market analysis with predictive insights and trend forecasting',
       icon: Brain,
       color: 'from-purple-500 to-pink-500'
     },
     {
-      title: 'Real-time Market Analysis',
-      description: 'Live market data integration with AI-driven insights and trend detection',
-      icon: TrendingUp,
+      title: 'Advanced Risk Assessment',
+      description: 'Comprehensive risk analysis with AI-driven portfolio optimization',
+      icon: Shield,
+      color: 'from-red-500 to-orange-500'
+    },
+    {
+      title: 'Portfolio Optimization',
+      description: 'AI-powered portfolio management with automated rebalancing',
+      icon: BarChart3,
       color: 'from-green-500 to-emerald-500'
     },
     {
-      title: 'Automated Risk Assessment',
-      description: 'Intelligent risk scoring and automated alerts for portfolio management',
-      icon: Shield,
-      color: 'from-red-500 to-pink-500'
-    },
-    {
-      title: 'Smart Portfolio Optimization',
-      description: 'AI-recommended portfolio adjustments based on market conditions and goals',
-      icon: PieChart,
+      title: 'Fraud Detection',
+      description: 'Real-time fraud detection with 99.9% accuracy using machine learning',
+      icon: Lock,
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      title: 'Comprehensive Financial Reporting',
-      description: 'Automated financial reports with customizable dashboards and insights',
-      icon: BarChart3,
+      title: 'Regulatory Compliance',
+      description: 'Automated compliance monitoring and reporting for financial regulations',
+      icon: CheckCircle,
       color: 'from-indigo-500 to-purple-500'
     },
     {
-      title: 'Regulatory Compliance Monitoring',
-      description: 'Automated compliance checking and regulatory reporting for financial institutions',
-      icon: CheckCircle,
+      title: 'Predictive Analytics',
+      description: 'Advanced forecasting models for market trends and investment opportunities',
+      icon: TrendingUp,
       color: 'from-yellow-500 to-orange-500'
+    }
+  ];
+
+  const useCases = [
+    {
+      title: 'Investment Banking',
+      description: 'Real-time market analysis and risk assessment for investment decisions',
+      icon: Bank,
+      benefits: ['40% faster decision making', '35% risk reduction', '99.9% accuracy']
+    },
+    {
+      title: 'Asset Management',
+      description: 'AI-powered portfolio optimization and performance tracking',
+      icon: PieChart,
+      benefits: ['25% better returns', '30% lower volatility', 'Automated rebalancing']
+    },
+    {
+      title: 'Risk Management',
+      description: 'Comprehensive risk assessment and mitigation strategies',
+      icon: Shield,
+      benefits: ['50% faster risk detection', '45% better risk mitigation', 'Real-time monitoring']
+    },
+    {
+      title: 'Trading Operations',
+      description: 'Algorithmic trading with AI-driven market predictions',
+      icon: TrendingUp,
+      benefits: ['60% faster execution', '40% better performance', '24/7 monitoring']
+    }
+  ];
+
+  const benefits = [
+    {
+      metric: '40%',
+      description: 'Faster Financial Decisions',
+      icon: Clock
+    },
+    {
+      metric: '35%',
+      description: 'Risk Reduction',
+      icon: Shield
+    },
+    {
+      metric: '99.99%',
+      description: 'Prediction Accuracy',
+      icon: Target
+    },
+    {
+      metric: '24/7',
+      description: 'Market Monitoring',
+      icon: Eye
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$49',
+      price: '$199',
       period: '/month',
-      description: 'Perfect for individual investors and small portfolios',
+      description: 'Perfect for small financial firms',
       features: [
-        'Up to 5 portfolios',
-        'Basic AI forecasting',
-        'Market data access',
-        'Standard reports',
+        'Real-time market data',
+        'Basic risk assessment',
+        'Portfolio tracking',
         'Email support',
-        'Mobile app access',
-        'Basic risk assessment'
+        '5 user accounts'
       ],
-      cta: 'Start Free Trial',
       popular: false
     },
     {
       name: 'Professional',
-      price: '$149',
+      price: '$599',
       period: '/month',
-      description: 'Ideal for financial advisors and growing portfolios',
+      description: 'Ideal for growing financial institutions',
       features: [
-        'Up to 25 portfolios',
         'Advanced AI analytics',
-        'Real-time market data',
-        'Custom dashboards',
+        'Custom risk models',
+        'Portfolio optimization',
         'Priority support',
+        '25 user accounts',
         'API access',
-        'Advanced risk modeling',
-        'Compliance monitoring',
-        'White-label options'
+        'Custom dashboards'
       ],
-      cta: 'Start Free Trial',
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$399',
+      price: '$1,999',
       period: '/month',
-      description: 'For financial institutions and large portfolios',
+      description: 'For large financial organizations',
       features: [
-        'Unlimited portfolios',
-        'Full AI capabilities',
-        'Institutional data feeds',
+        'Full AI suite',
         'Custom integrations',
         'Dedicated support',
+        'Unlimited users',
+        'White-label options',
         'Advanced security',
-        'Multi-tenant support',
-        'Custom reporting',
-        'Regulatory compliance'
+        'Compliance reporting'
       ],
-      cta: 'Contact Sales',
       popular: false
     }
   ];
 
-  const benefits = [
-    {
-      title: '40% Better Investment Returns',
-      description: 'AI-powered insights lead to smarter investment decisions',
-      icon: TrendingUp,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: '60% Faster Financial Analysis',
-      description: 'Automated processes reduce analysis time significantly',
-      icon: Zap,
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      title: '90% Risk Reduction',
-      description: 'Advanced risk modeling prevents portfolio losses',
-      icon: Shield,
-      color: 'from-red-500 to-pink-500'
-    },
-    {
-      title: '24/7 Market Monitoring',
-      description: 'Continuous AI monitoring with instant alerts',
-      icon: Eye,
-      color: 'from-blue-500 to-cyan-500'
-    }
-  ];
-
-  const useCases = [
-    {
-      title: 'Individual Investors',
-      description: 'Personal portfolio management with AI insights',
-      icon: UserCheck,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Financial Advisors',
-      description: 'Client portfolio optimization and risk management',
-      icon: Users,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'Hedge Funds',
-      description: 'Institutional-grade analytics and risk modeling',
-      icon: Building,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'Banks & Credit Unions',
-      description: 'Regulatory compliance and risk assessment',
-      icon: Bank,
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium mb-6">
-              <Sparkles className="w-4 h-4 mr-2" />
-              AI-Powered Financial Analytics
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-8">
+              <Brain className="w-5 h-5 text-purple-400 mr-2" />
+              <span className="text-purple-300 text-sm font-medium">AI Financial Analytics Platform</span>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Revolutionize Your{' '}
-              <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
-                Financial Intelligence
-              </span>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              AI-Powered Financial
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Analytics</span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Leverage advanced AI algorithms to make smarter investment decisions, optimize portfolios, and stay ahead of market trends with real-time financial analytics.
+              Transform your financial operations with AI-driven analytics, real-time market intelligence, 
+              and predictive insights that deliver measurable results.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#pricing"
-                className="inline-flex items-center px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors"
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
               >
-                <Rocket className="w-5 h-5 mr-2" />
                 Start Free Trial
-              </a>
-              <a
-                href="#demo"
-                className="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors border border-white/20"
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-purple-500 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-500/10 transition-all duration-300"
               >
-                <Play className="w-5 h-5 mr-2" />
-                Watch Demo
-              </a>
+                View Demo
+              </motion.button>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Advanced Financial Intelligence
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Advanced AI Financial Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Everything you need to make informed financial decisions with AI-powered insights
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Leverage cutting-edge AI technology to gain unprecedented insights into your financial operations
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
-                key={feature.title}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
+                className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300"
               >
-                <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
-                  <feature.icon className="w-6 h-6 text-white" />
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6`}>
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -338,109 +324,46 @@ const AIFinancialAnalyticsPlatform: React.FC = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-24 bg-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Who Benefits from Our Platform?
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industry-Specific Solutions
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              From individual investors to financial institutions, our platform scales to meet your needs
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Tailored AI solutions for different financial sectors and use cases
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
-                key={useCase.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 text-center"
+                className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10"
               >
-                <div className={`w-16 h-16 bg-gradient-to-br ${useCase.color} rounded-full flex items-center justify-center mb-4 mx-auto`}>
-                  <useCase.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
-                <p className="text-gray-300 text-sm">{useCase.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section id="pricing" className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Transparent Pricing Plans
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose the plan that fits your financial analytics needs
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-              <motion.div
-                key={plan.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`relative bg-white/5 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${
-                  plan.popular 
-                    ? 'border-green-500/50 bg-green-500/10' 
-                    : 'border-white/10 hover:border-white/20'
-                }`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-medium">
-                      Most Popular
-                    </span>
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center mr-4">
+                    <useCase.icon className="w-6 h-6 text-white" />
                   </div>
-                )}
-
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center mb-2">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
-                  </div>
-                  <p className="text-gray-300">{plan.description}</p>
+                  <h3 className="text-2xl font-semibold text-white">{useCase.title}</h3>
                 </div>
-
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
+                <p className="text-gray-300 mb-6">{useCase.description}</p>
+                <div className="space-y-2">
+                  {useCase.benefits.map((benefit, benefitIndex) => (
+                    <div key={benefitIndex} className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      <span className="text-gray-300">{benefit}</span>
+                    </div>
                   ))}
-                </ul>
-
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
-                  plan.popular
-                    ? 'bg-green-600 hover:bg-green-700 text-white'
-                    : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'
-                }`}>
-                  {plan.cta}
-                </button>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -448,40 +371,107 @@ const AIFinancialAnalyticsPlatform: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Proven Results
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Quantifiable Results
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              See the measurable impact of AI-powered financial analytics
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See the measurable impact of AI-powered financial analytics on your business
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
-                key={benefit.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="flex items-start space-x-4"
+                className="text-center"
               >
-                <div className={`w-12 h-12 bg-gradient-to-br ${benefit.color} rounded-lg flex items-center justify-center flex-shrink-0`}>
-                  <benefit.icon className="w-6 h-6 text-white" />
+                <div className="w-20 h-20 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center mx-auto mb-6">
+                  <benefit.icon className="w-10 h-10 text-white" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-                  <p className="text-gray-300">{benefit.description}</p>
+                <div className="text-4xl font-bold text-white mb-2">{benefit.metric}</div>
+                <div className="text-gray-300">{benefit.description}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-24 bg-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Transparent Pricing
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that fits your financial analytics needs
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className={`bg-white/5 backdrop-blur-lg rounded-2xl p-8 border ${
+                  plan.popular ? 'border-purple-500/50' : 'border-white/10'
+                } relative`}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </div>
+                  </div>
+                )}
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-semibold text-white mb-2">{plan.name}</h3>
+                  <div className="text-4xl font-bold text-white mb-2">
+                    {plan.price}
+                    <span className="text-lg text-gray-300">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-300">{plan.description}</p>
                 </div>
+
+                <div className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      <span className="text-gray-300">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:shadow-lg'
+                      : 'border border-white/20 text-white hover:bg-white/10'
+                  }`}
+                >
+                  Get Started
+                </motion.button>
               </motion.div>
             ))}
           </div>
@@ -489,61 +479,36 @@ const AIFinancialAnalyticsPlatform: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-24">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-green-600/20 to-blue-600/20 backdrop-blur-lg rounded-2xl p-12 border border-green-500/30"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Ready to Transform Your Financial Intelligence?
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Financial Analytics?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of investors and financial professionals using AI-powered analytics
+              Join leading financial institutions using AI to drive better decisions and results
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#pricing"
-                className="inline-flex items-center px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors"
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
               >
-                <Rocket className="w-5 h-5 mr-2" />
                 Start Free Trial
-              </a>
-              <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors border border-white/20"
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-purple-500 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-500/10 transition-all duration-300"
               >
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Schedule Demo
-              </a>
+                Contact Sales
+              </motion.button>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="flex flex-col items-center">
-              <Phone className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
-              <p className="text-gray-300">+1 302 464 0950</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <Mail className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
-              <p className="text-gray-300">kleber@ziontechgroup.com</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <MapPin className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
-              <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
-            </div>
-          </div>
         </div>
       </section>
     </div>

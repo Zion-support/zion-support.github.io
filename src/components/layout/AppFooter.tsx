@@ -128,7 +128,9 @@ export function AppFooter() {
     { name: "Webinars", href: "/webinars" },
     { name: "Training", href: "/training" },
     { name: "Research", href: "/research" },
-    { name: "Case Studies", href: "/case-studies" },
+            { name: "Case Studies", href: "/case-studies" },
+        { name: "Innovative Services Showcase 2026", href: "/innovative-services-showcase-2026" },
+        { name: "Innovative Services Showcase 2027", href: "/innovative-services-showcase-2027" },
     { name: "Help Center", href: "/help" }
   ];
 

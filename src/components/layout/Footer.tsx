@@ -107,7 +107,6 @@ export function Footer() {
         { name: "AI Autonomous Research Assistant", href: "/services/ai-autonomous-research-assistant", icon: Brain },
         { name: "AI Cybersecurity Threat Intelligence", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield },
         { name: "AI Healthcare Diagnostics Platform", href: "/services/ai-healthcare-diagnostics-platform", icon: Heart },
-
         { name: "AI Business Intelligence", href: "/services/ai-business-intelligence-dashboard", icon: BarChart3 },
         { name: "AI Customer Support", href: "/services/ai-customer-support-automation", icon: MessageCircle },
         { name: "AI Project Management", href: "/services/ai-project-management-platform", icon: Workflow },
@@ -117,6 +116,8 @@ export function Footer() {
         { name: "AI Financial Trading", href: "/services/ai-financial-trading-platform", icon: TrendingUp },
         { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform", icon: Heart },
         { name: "AI Educational Content Creation", href: "/services/ai-educational-content-creation-platform", icon: BookOpen },
+        { name: "AI Autonomous Education Platform", href: "/services/ai-autonomous-education-platform", icon: GraduationCap },
+        { name: "AI Autonomous Creative Studio", href: "/services/ai-autonomous-creative-studio", icon: Palette },
         { name: "AI Legal Automation", href: "/services/ai-legal-document-automation-platform", icon: FileText },
         { name: "AI Legal Research Platform", href: "/services/ai-autonomous-legal-research-platform", icon: FileText },
         { name: "AI HR Platform", href: "/services/ai-hr-platform", icon: Users },
@@ -128,7 +129,8 @@ export function Footer() {
         { name: "AI Quantum Neural Network", href: "/services/ai-quantum-neural-network-platform", icon: Atom },
         { name: "AI Space Technology", href: "/services/ai-space-technology-platform", icon: Satellite },
         { name: "AI Customer Churn Predictor", href: "/services/ai-powered-customer-churn-predictor", icon: TrendingDown },
-        { name: "AI Cybersecurity Platform", href: "/services/ai-cybersecurity-intelligence-platform", icon: Shield }
+        { name: "AI Cybersecurity Platform", href: "/services/ai-cybersecurity-intelligence-platform", icon: Shield },
+        { name: "AI Content Generator", href: "/services/ai-content-generator", icon: PenTool }
       ]
     },
     {
@@ -244,7 +246,6 @@ export function Footer() {
     { name: "Press & Media", href: "/press", icon: FileText },
     { name: "Contact", href: "/contact", icon: Phone },
     { name: "Legal", href: "/legal", icon: Scale }
-  ];
   ];
 
   const socialLinks = [
