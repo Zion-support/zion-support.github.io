@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-11T22:25:35.164Z",
+  "generatedAt": "2025-08-11T22:27:02.379Z",
   "functions": [
     "accessibility-quickscan",
     "ai-changelog-runner",
@@ -21,7 +21,7 @@
     "continuous-orchestrator",
     "dead-code-audit",
     "dead-code-report",
-    "dependency-health-radar-runner",
+    "deps-auto-upgrade-runner",
     "docs-index-runner",
     "docs-search-index-runner",
     "external-link-check-runner",
@@ -65,6 +65,7 @@
     "repo-knowledge-graph-runner",
     "repo-radar-and-graph",
     "repo-radar-runner",
+    "revenue-ideas-runner",
     "schedule-content-index",
     "schedule-homepage",
     "schedule-knowledge-graph",
@@ -80,6 +81,7 @@
     "todo-scanner-runner",
     "todo-summary-runner",
     "trigger-all-and-commit",
+    "ui-beautifier-runner",
     "ui-enhancer",
     "ultrafast-front-orchestrator",
     "ultrafast-orchestrator",
