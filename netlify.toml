@@ -302,9 +302,9 @@ schedule = "*/2 * * * *" # every 2 minutes
   schedule = "0 3 * * *" # daily at 03:00 UTC
 
 [[scheduled.functions]]
-  name = "meta-tags-audit-runner"
-  schedule = "13 */4 * * *"
+  name = "unused-assets-report"
+  schedule = "23 */6 * * *" # every 6 hours
 
 [[scheduled.functions]]
-  name = "orphan-pages-report-runner"
-  schedule = "29 */6 * * *"
+  name = "i18n-extractor-runner"
+  schedule = "*/20 * * * *" # every 20 minutes
