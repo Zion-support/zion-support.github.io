@@ -1,1 +1,0 @@
-export const AIChatbot = ({ welcomeMessage = "Hello! I"m Zion Tech Group"s AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => { const { trackEvent } = useAnalytics({ 
