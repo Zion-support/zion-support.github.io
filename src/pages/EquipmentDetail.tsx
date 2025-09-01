@@ -13,9 +13,8 @@ import { Switch } from '@/components/ui/switch';
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { getStripe } from "@/utils/getStripe";
-import { safeStorage } from '@/utils/safeStorage';
-import { SEO } from "@/components/SEO";
-import { StructuredData } from "@/components/StructuredData";
+import { useCart } from '@/context/CartContext';
+import type { CartItem } from '@/types/cart';
 
 interface EquipmentSpecification {
   name: string;
@@ -177,6 +176,8 @@ export default function EquipmentDetail() {
   const { id } = useParams() as { id?: string };
   const navigate = useNavigate();
   const { isAuthenticated } = useAuth();
+  const { dispatch } = useCart();
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [isAdding, setIsAdding] = useState(false);
   const { unit, setUnit } = useUnitSystem();
@@ -223,18 +224,30 @@ export default function EquipmentDetail() {
     );
   }
 
-  const dispatch = useAppDispatch();
-  const handleAddToCart = () => {
+  const handleAddToCart = async () => {
     setIsAdding(true);
-
-    // Simulate API call
-    setTimeout(() => {
-      setIsAdding(false);
+    try {
+      const res = await fetch('/api/cart/add', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          id: equipment.id,
+          name: equipment.name,
+          price: equipment.price,
+          quantity,
+        }),
+      });
+      const items: CartItem[] = await res.json();
+      dispatch({ type: 'SET_ITEMS', payload: items });
       toast({
-        title: "Added to cart",
+        title: 'Added to cart',
         description: `${quantity}x ${equipment.name} added to your cart.`,
       });
-    }, 800);
+    } catch {
+      toast({ title: 'Error', description: 'Could not add to cart.' });
+    } finally {
+      setIsAdding(false);
+    }
   };
 
   const handleBuyNow = async () => {
