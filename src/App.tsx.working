@@ -93,7 +93,10 @@ const Webinars = createLazyComponent(() => import('./pages/Webinars'));
 
 // 2025 Innovative Services
 const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025'));
-// const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
+const InnovativeServicesShowcase2025 = lazy(() => import('./pages/InnovativeServicesShowcase2025'));
+const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
+const ComprehensiveServicesLanding2025 = lazy(() => import('./pages/ComprehensiveServicesLanding2025'));
+const ServicesComparison2025 = lazy(() => import('./pages/ServicesComparison2025'));
 
 // Sitemap-aligned pages
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
@@ -319,7 +322,8 @@ function App() {
 
                     {/* 2025 Innovative Services Routes */}
                     <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
-                    {/* <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} /> */}
+                    <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
+                    <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
 
                     {/* Enhanced Services Showcase 2025 */}
                     <Route path="/enhanced-services-showcase-2025" element={
@@ -333,6 +337,7 @@ function App() {
                     <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
                     {/* <Route path="/comprehensive-services-showcase-2027" element={<ComprehensiveServicesShowcase2027Page />} /> */}
                     <Route path="/comprehensive-services-landing-2025" element={<ComprehensiveServicesLanding2025 />} />
+                    <Route path="/services-comparison-2025" element={<ServicesComparison2025 />} />
                     {/* <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} /> */}
                     {/* <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} /> */}
                     {/* <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} /> */}
