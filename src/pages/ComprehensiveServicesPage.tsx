@@ -5,6 +5,8 @@ export function ComprehensiveServicesPage (...args: any[]) : any {
 import {
 import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data / comprehensivePricingGuide2025';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data / innovativeMicroSaasServices2025';
+import { COMPREHENSIVE_IT_SERVICES_2025 } from '../data / comprehensiveItServices2025';
+import { COMPREHENSIVE_AI_SERVICES_2025 } from '../data / comprehensiveAiServices2025';
 import { motion } from 'framer - motion.ts';
 
   Brain,
@@ -70,7 +72,13 @@ import { motion } from 'framer - motion.ts';
     { id: 'high', name: 'Over $3,000', range: '> $3,000' },
   ];
 
-  const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter (service => {
+  const allComprehensiveServices = [
+    ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
+    ...COMPREHENSIVE_IT_SERVICES_2025,
+    ...COMPREHENSIVE_AI_SERVICES_2025,
+  ];
+
+  const filteredServices = allComprehensiveServices.filter (service => {
       const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
         service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
         service.category.toLowerCase () .includes (searchTerm.toLowerCase () ) ;

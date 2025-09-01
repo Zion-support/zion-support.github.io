@@ -2,6 +2,8 @@ import { Link } from 'react - router - dom';
 import React, { useState, useEffect } from 'react';
 import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from '@/data / additionalInnovativeServices2025';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '@/data / innovativeMicroSaasServices2025';
+import { COMPREHENSIVE_IT_SERVICES_2025 } from '@/data / comprehensiveItServices2025';
+import { COMPREHENSIVE_AI_SERVICES_2025 } from '@/data / comprehensiveAiServices2025';
 import { SEO } from '@/components / SEO';
 export default React.memo (function ServicesPage () {
 import {
@@ -124,6 +126,8 @@ import { motion, AnimatePresence } from 'framer - motion';
   const allServices = [
     ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
     ...ADDITIONAL_INNOVATIVE_SERVICES_2025,
+    ...COMPREHENSIVE_IT_SERVICES_2025,
+    ...COMPREHENSIVE_AI_SERVICES_2025,
   ];
 
   const filteredServices = allServices.filter (service => {
@@ -227,7 +231,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
                 <div role="button" className="text - 3xl font - bold text - zion - cyan mb - 2">
-                  {INNOVATIVE_MICRO_SAAS_SERVICES_2025.length + ADDITIONAL_INNOVATIVE_SERVICES_2025.length}
+                  {INNOVATIVE_MICRO_SAAS_SERVICES_2025.length + ADDITIONAL_INNOVATIVE_SERVICES_2025.length + COMPREHENSIVE_IT_SERVICES_2025.length + COMPREHENSIVE_AI_SERVICES_2025.length}
                   +
                 </div>
                 <div role="button" className="text - zion - slate - light">Innovative Services</div>
@@ -323,7 +327,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 
             <div role="button" className="text - zion - slate - light">
               Showing {sortedServices.length} of{' '}
-              {INNOVATIVE_MICRO_SAAS_SERVICES_2025.length} services
+              {allServices.length} services
             </div>
           </motion.div>
         </div>
