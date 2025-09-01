@@ -36,7 +36,13 @@ export interface EmergingTechService2029V2 {
     mobile: string;
     email: string;
     website: string;
+<<<<<<< HEAD
+    address: string;
+  };
+
+=======
     address: string}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
   {
     id: 'quantum-internet-security-gateway',

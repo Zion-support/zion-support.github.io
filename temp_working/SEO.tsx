@@ -41,7 +41,15 @@ export function SEO({
   const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
   
   // Default meta description if none provided
+<<<<<<< HEAD
   const metaDescription = description || 
+=======
+<<<<<<< HEAD
+  const metaDescription = description ||
+=======
+  const metaDescription = description || ;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> cursor/add-new-services-and-advertise-them-971c
     'Zion Tech Group - Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services. Transform your business with our innovative technology ecosystem.';
 
   // Default title if none provided
@@ -123,6 +131,7 @@ export function SEO({
         {
           "@type": "Offer",
           "itemOffered": {
+<<<<<<< HEAD
             "@type": "Service",
             "name": "Cloud & DevOps",
             "description": "Scalable cloud infrastructure and development operations"
@@ -130,6 +139,25 @@ export function SEO({
         }
       ]
     }
+=======
+<<<<<<< HEAD
+            "@type": "Service",
+            "name": "Cloud & DevOps",
+            "description": "Scalable cloud infrastructure and development operations"
+
+
+      ]
+
+=======
+            "@type": "Service",;
+            "name": "Cloud & DevOps",;
+            "description": "Scalable cloud infrastructure and development operations";
+          };
+        };
+      ];
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> cursor/add-new-services-and-advertise-them-971c
   };
 <<<<<<< HEAD
 
@@ -257,14 +285,35 @@ export function SEO({
 <<<<<<< HEAD
       {/* Additional SEO Meta Tags */}
       <meta name="application-name" content="Zion Tech Group" />
+<<<<<<< HEAD
       <meta name="apple-mobile-web-app-title" content="Zion Tech" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       
+=======
+<<<<<<< HEAD
+      <meta name="apple-mobile-web-app-title" content="Zion Tech" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+>>>>>>> cursor/add-new-services-and-advertise-them-971c
       {/* Security Headers */}
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
       <meta httpEquiv="X-Frame-Options" content="DENY" />
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+<<<<<<< HEAD
+=======
+=======
+      <meta name="apple-mobile-web-app-title" content="Zion Tech" />;
+      <meta name="apple-mobile-web-app-capable" content="yes" />;
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />;
+      ;
+      {/* Security Headers */};
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />;
+      <meta httpEquiv="X-Frame-Options" content="DENY" />;
+      <meta httpEquiv="X-XSS-Protection" content="1; mode = block" />
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> cursor/add-new-services-and-advertise-them-971c
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
       
       {/* Performance and UX */}

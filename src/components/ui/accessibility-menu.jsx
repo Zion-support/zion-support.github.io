@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+import { Settings, FileText, Eye, Zap, Volume2, VolumeX import { Button } from './button';
+=======
 import { Settings, FileText, Eye, Zap, Volume2, VolumeX } from 'lucide-react';
 import { Button } from "./button";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function AccessibilityMenu() {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
@@ -14,7 +18,12 @@ export function AccessibilityMenu() {
         // Load settings from localStorage
         const savedSettings = localStorage.getItem('accessibility-settings');
         if (savedSettings) {
+<<<<<<< HEAD
+            setSettings(JSON.parse(savedSettings));
+
+=======
             setSettings(JSON.parse(savedSettings))}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, []);
     useEffect(() => {
         // Apply settings to document
@@ -28,6 +37,20 @@ export function AccessibilityMenu() {
             newSettings.fontSize === 'large' ? '1.125' : '1');
         // High contrast
         if (newSettings.highContrast) {
+<<<<<<< HEAD
+            root.classList.add('high-contrast');
+
+        else {
+            root.classList.remove('high-contrast');
+
+        // Reduced motion
+        if (newSettings.reducedMotion) {
+            root.classList.add('reduced-motion');
+
+        else {
+            root.classList.remove('reduced-motion');
+
+=======
             root.classList.add('high-contrast')}
         else {
             root.classList.remove('high-contrast')}
@@ -36,6 +59,7 @@ export function AccessibilityMenu() {
             root.classList.add('reduced-motion')}
         else {
             root.classList.remove('reduced-motion')}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const toggleSetting = (key) => {
         setSettings(prev => ({
@@ -49,29 +73,67 @@ export function AccessibilityMenu() {
   fontSize: 'medium',
             highContrast: false,
             reducedMotion: false,
+  <<<<<<< HEAD
+            soundEnabled: true
+        
+
+};
+        setSettings(defaultSettings)};
+=======
   soundEnabled: true
+        
+
+
+
+
 };
         setSettings(defaultSettings);
     };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     return (<>
       {/* Toggle Button */}
       <motion.button onClick={() => setIsOpen(!isOpen)} className="fixed bottom-24 right-8 z-50 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} aria-label="Accessibility settings" aria-expanded={isOpen}>
         <Settings className="h-5 w-5"/>
       </motion.button>
+
       {/* Menu Panel */}
       <AnimatePresence>
         {isOpen && (<motion.div className="fixed bottom-32 right-8 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-md rounded-2xl border border-zion-purple/20 shadow-2xl" initial = {
   { opacity: 0, scale: 0.9,
   y: 20 
+
+
+
+
+
+
 }} animate = {
   { opacity: 1, scale: 1,
   y: 0 
+
+
+
+
+
+
 }} exit = {
   { opacity: 0, scale: 0.9,
   y: 20 
+
+
+
+
+
+
 }} transition = {
   { type: "spring", stiffness: 300,
   damping: 30 
+
+
+
+
+
+
 }}>
             <div className="p-6">
               <div className="flex items-center justify-between mb-6">
@@ -80,6 +142,7 @@ export function AccessibilityMenu() {
                   Reset
                 </Button>
               </div>
+
               {/* Font Size */}
               <div className="mb-6">
                 <label className="flex items-center gap-3 text-white mb-3">
@@ -94,6 +157,7 @@ export function AccessibilityMenu() {
                     </Button>))}
                 </div>
               </div>
+
               {/* High Contrast */}
               <div className="mb-6">
                 <label className="flex items-center gap-3 text-white mb-3">
@@ -106,6 +170,7 @@ export function AccessibilityMenu() {
                   {settings.highContrast ? 'Enabled' : 'Disabled'}
                 </Button>
               </div>
+
               {/* Reduced Motion */}
               <div className="mb-6">
                 <label className="flex items-center gap-3 text-white mb-3">
@@ -118,6 +183,7 @@ export function AccessibilityMenu() {
                   {settings.reducedMotion ? 'Enabled' : 'Disabled'}
                 </Button>
               </div>
+
               {/* Sound Toggle */}
               <div className="mb-6">
                 <label className="flex items-center gap-3 text-white mb-3">
@@ -130,6 +196,7 @@ export function AccessibilityMenu() {
                   {settings.soundEnabled ? 'Enabled' : 'Disabled'}
                 </Button>
               </div>
+
               {/* Info */}
               <div className="text-xs text-zion-slate-light text-center">
                 Settings are automatically saved and applied across your session
@@ -137,8 +204,14 @@ export function AccessibilityMenu() {
             </div>
           </motion.div>)}
       </AnimatePresence>
+
       {/* Backdrop */}
       <AnimatePresence>
         {isOpen && (<motion.div className="fixed inset-0 z-40 bg-black/20" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setIsOpen(false)}/>)}
       </AnimatePresence>
+<<<<<<< HEAD
+    </>);
+}}}}}}</motion.div>}
+=======
     </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

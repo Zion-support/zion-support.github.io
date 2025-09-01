@@ -1,7 +1,17 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+<<<<<<< HEAD
 import path from 'path'
 import compress from 'vite-plugin-compression'
+=======
+<<<<<<< HEAD
+import { resolve } from 'path'
+=======
+import path from 'path'
+import compress from 'vite-plugin-compression'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ba31
+
+>>>>>>> cursor/add-new-services-and-advertise-them-971c
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
@@ -24,7 +34,17 @@ export default defineConfig({
   build: {
     target: 'es2018',
     minify: 'esbuild',
+<<<<<<< HEAD
     sourcemap: false,
+=======
+<<<<<<< HEAD
+    sourcemap: process.env.SOURCEMAP === 'true',
+    cssCodeSplit: true,
+    assetsInlineLimit: 4096,
+=======
+    sourcemap: false,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ba31
+>>>>>>> cursor/add-new-services-and-advertise-them-971c
     outDir: 'dist',
     cssCodeSplit: true,
     modulePreload: {
@@ -69,8 +89,21 @@ export default defineConfig({
         },
       },
     },
+<<<<<<< HEAD
     cssCodeSplit: true,
     brotliSize: true,
+=======
+<<<<<<< HEAD
+    chunkSizeWarningLimit: 1000,
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom'],
+    exclude: ['@radix-ui/react-accordion', '@radix-ui/react-alert-dialog', '@radix-ui/react-aspect-ratio', '@radix-ui/react-avatar', '@radix-ui/react-checkbox', '@radix-ui/react-context-menu', '@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-label', '@radix-ui/react-popover', '@radix-ui/react-progress', '@radix-ui/react-radio-group', '@radix-ui/react-scroll-area', '@radix-ui/react-select', '@radix-ui/react-separator', '@radix-ui/react-slider', '@radix-ui/react-slot', '@radix-ui/react-switch', '@radix-ui/react-tabs', '@radix-ui/react-toast', '@radix-ui/react-tooltip'],
+=======
+    cssCodeSplit: true,
+    brotliSize: true,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ba31
+>>>>>>> cursor/add-new-services-and-advertise-them-971c
   },
   server: {
     port: 3000,

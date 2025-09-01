@@ -1,5 +1,5 @@
 // In-memory storage for fallback with optimizations
-const inMemoryStore = {};
+const inMemoryStore = { /* empty */ };
 let localStorageAvailable = null; // Cache the availability check
 let lastAvailabilityCheck = 0;
 const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max
@@ -10,19 +10,31 @@ function isLocalStorageAvailable() {
     if (localStorageAvailable !== null && (now - lastAvailabilityCheck) < AVAILABILITY_CHECK_INTERVAL) {
         return localStorageAvailable;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/add-new-services-and-advertise-them-971c
     lastAvailabilityCheck = now;
     try {
         if (typeof window === 'undefined') {
             localStorageAvailable = false;
             return false;
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/add-new-services-and-advertise-them-971c
         const testKey = '__localStorage_test__';
         localStorage.setItem(testKey, 'test');
         localStorage.removeItem(testKey);
         localStorageAvailable = true;
         return true;
+<<<<<<< HEAD
     }
     catch {
+=======
+    } catch {
+>>>>>>> cursor/add-new-services-and-advertise-them-971c
         localStorageAvailable = false;
         return false;
     }
@@ -34,6 +46,7 @@ function safeConsoleError(message, error) {
     if (env === 'production') return;
 
     try {
+<<<<<<< HEAD
         console.error(message, error);
     }
     catch {
@@ -80,3 +93,66 @@ export const safeStorage = {
     }
   }
 };
+=======
+        // console.error(message, error);
+    } catch {
+        // Silent fail if console.error causes recursion
+    }
+}
+
+export const safeStorage = {
+    getItem: (key) => {
+        try {
+            if (isLocalStorageAvailable()) {
+                return localStorage.getItem(key);
+            }
+            return inMemoryStore[key] || null;
+        } catch (error) {
+            // console.warn('Failed to get item from localStorage:', error);
+            return inMemoryStore[key] || null;
+        }
+    },
+
+    setItem: (key, value) => {
+        try {
+            if (isLocalStorageAvailable()) {
+                localStorage.setItem(key, value);
+            }
+            inMemoryStore[key] = value;
+            return true;
+        } catch (error) {
+            // console.warn('Failed to set item in localStorage:', error);
+            inMemoryStore[key] = value;
+            return true;
+        }
+    },
+
+    removeItem: (key) => {
+        try {
+            if (isLocalStorageAvailable()) {
+                localStorage.removeItem(key);
+            }
+            delete inMemoryStore[key];
+            return true;
+        } catch (error) {
+            // console.warn('Failed to remove item from localStorage:', error);
+            delete inMemoryStore[key];
+            return true;
+        }
+    },
+
+    clear: () => {
+        try {
+            if (isLocalStorageAvailable()) {
+                localStorage.clear();
+            }
+            Object.keys(inMemoryStore).forEach(key => delete inMemoryStore[key]);
+            return true;
+        } catch (error) {
+            // console.warn('Failed to clear localStorage:', error);
+            Object.keys(inMemoryStore).forEach(key => delete inMemoryStore[key]);
+            return true;
+        }
+    }
+};
+>>>>>>> cursor/add-new-services-and-advertise-them-971c

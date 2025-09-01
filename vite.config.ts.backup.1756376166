@@ -1,6 +1,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/add-new-services-and-advertise-them-971c
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
@@ -17,7 +21,15 @@ export default defineConfig({
     },
   },
   build: {
+<<<<<<< HEAD
     target: 'es2022',
+=======
+<<<<<<< HEAD
+    target: 'esnext',
+=======
+    target: 'es2022',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
+>>>>>>> cursor/add-new-services-and-advertise-them-971c
     minify: 'terser',
     terserOptions: {
       compress: {

@@ -39,17 +39,28 @@ export default function TokenManager() {
                 title: 'Success',
                 description: 'Transaction processed'
             });
+<<<<<<< HEAD
+            fetchTransactions();
+
+=======
             fetchTransactions()}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         else {
             const err = await res.json();
             toast({
                 title: 'Error',
                 description: err.error || 'Failed',
                 variant: 'destructive'
+<<<<<<< HEAD
+            });
+
+=======
             })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<ProtectedRoute adminOnly>
       <div>
+
         <div className="min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
             <h1 className="text-3xl font-bold text-white mb-6">Token Manager</h1>
@@ -66,6 +77,7 @@ export default function TokenManager() {
                 </div>
               </CardContent>
             </Card>
+
             <Tabs defaultValue="history">
               <TabsList>
                 <TabsTrigger value="history">Transaction History</TabsTrigger>
@@ -81,5 +93,11 @@ export default function TokenManager() {
             </Tabs>
           </div>
         </div>
+
       </div>
+<<<<<<< HEAD
+    </ProtectedRoute>);
+</Card></Card></Card>}}}
+=======
     </ProtectedRoute>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

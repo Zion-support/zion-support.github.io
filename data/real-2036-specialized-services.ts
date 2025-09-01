@@ -303,8 +303,16 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     marketSize: '$1.2B',
     targetAudience: 'Space tourism companies, Aerospace firms, Travel agencies',
     competitiveAdvantage: 'Space expertise, Safety focus, Comprehensive management',
+<<<<<<< HEAD
+    integration: ['Spacecraft systems', 'Training facilities', 'Booking systems', 'Safety systems'],
+    useCases: ['Space tourism', 'Training programs', 'Safety management', 'Customer experience'],
+    technology: ['Space systems', 'Safety protocols', 'Training technology', 'Customer management']
+
+];}
+=======
     integration['Spacecraft systems', 'Training facilities', 'Booking systems', 'Safety systems'],
     useCases['Space tourism', 'Training programs', 'Safety management', 'Customer experience'],
     technology['Space systems', 'Safety protocols', 'Training technology', 'Customer management']
   }
 ];
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

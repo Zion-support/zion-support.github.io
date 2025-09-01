@@ -17,6 +17,7 @@ import { professionalServices              } from '../data/professional-services
 import { real2029Q2Additions              } from '../data/real-2029-q2-additions';
 export type ServiceRecord = any;
 const allServiceArrays: ServiceRecord[][] = [
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 	enhancedRealMicroSaasServices,
 	innovativeMicroSaasServices,
 	additionalEnhancedServices,
@@ -37,9 +38,31 @@ const allServiceArrays: ServiceRecord[][] = [
 ];
 export function findServiceBySlug(slug: string): ServiceRecord | null {
 	for (const arr of allServiceArrays) {
+<<<<<<< HEAD
+		const hit = arr.find((s: any) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+			if (!s) return false;
+			if (s.id && s.id === slug) return true;
+			if (s.link && typeof s.link = == 'string') {;
+				try {;
+					const url = new URL(s.link);
+					return url.pathname.replace(/^\/+|\/+$/g, '') === slug;
+				} catch {
+					return s.link.endsWith('/' + slug);
+
+
+			return false;
+		});
+		if (hit) return hit;
+<<<<<<< HEAD
+
+	return undefined;
+
+=======
 	}
 	return null;
 }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function listServicesByCategory(categoryIncludes: string): ServiceRecord[] {
 	const results: ServiceRecord[] = [];
 	for (const arr of allServiceArrays) {

@@ -19,6 +19,31 @@ const CuttingEdgeServicesShowcase = () => {
         return categoryMatch && industryMatch && searchMatch}) ;
     const formatPrice = (price, model) => {
         if (model === 'percentage of revenue') {
+<<<<<<< HEAD
+            return `${price}% of revenue`;
+
+        else if (model === 'per device per day') {
+            return `$${price.toFixed(2)}/device/day`;
+
+        else if (model === 'per kWh managed') {
+            return `$${price.toFixed(3)}/kWh`;
+
+        else if (model === 'per acre') {
+            return `$${price.toFixed(2)}/acre/month`;
+
+        else if (model === 'per inference') {
+            return `$${price.toFixed(3)}/inference`;
+
+        else if (model === 'monthly per student') {
+            return `$${price}/student/month`;
+
+        else if (model === 'monthly per attorney') {
+            return `$${price}/attorney/month`;
+
+        else {
+            return `$${price}/${model}`;
+
+=======
             return `${price}% of revenue`}
         else if (model === 'per device per day') {
             return `$${price.toFixed (2) }/device / day`}
@@ -34,6 +59,7 @@ const CuttingEdgeServicesShowcase = () => {
             return `$${price}/attorney / month`}
         else {
             return `$${price}/${model}`}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 pt - 32">
       <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 20">
@@ -62,6 +88,7 @@ const CuttingEdgeServicesShowcase = () => {
             </span>
           </div>
         </div>
+
         {/* Contact Information */}
         <div className="bg - slate - 800 / 50 border border - white / 10 rounded - 2xl p - 8 mb - 12">
           <div className="text - center">
@@ -101,6 +128,7 @@ const CuttingEdgeServicesShowcase = () => {
             </div>
           </div>
         </div>
+
         {/* Filters */}
         <div className="mb - 12">
           <div className="flex flex - col lg:flex - row gap - 6 items - center justify - between">
@@ -120,6 +148,7 @@ const CuttingEdgeServicesShowcase = () => {
             </div>
           </div>
         </div>
+
         {/* Services Grid */}
         <div className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap - 8">
           {filteredServices.map ( (service) => (<div key={service.id} className="bg - slate - 800 / 50 border border - white / 10 rounded - 2xl p - 6 hover:border - white / 20 transition - all duration - 300 hover:transform hover:scale - 105">
@@ -139,10 +168,12 @@ const CuttingEdgeServicesShowcase = () => {
                   </div>
                 </div>
               </div>
+
               {/* Description */}
               <p className="text - gray - 300 text - sm mb - 4 leading - relaxed">
                 {service.description}
               </p>
+
               {/* Key Features */}
               <div className="mb - 4">
                 <h4 className="text - white font - semibold mb - 2 text - sm">Key Features</h4>
@@ -155,6 +186,7 @@ const CuttingEdgeServicesShowcase = () => {
                     </div>) ) }
                 </div>
               </div>
+
               {/* Benefits */}
               <div className="mb - 4">
                 <h4 className="text - white font - semibold mb - 2 text - sm">Benefits</h4>
@@ -167,6 +199,7 @@ const CuttingEdgeServicesShowcase = () => {
                     </div>) ) }
                 </div>
               </div>
+
               {/* Additional Info */}
               <div className="grid grid - cols - 2 gap - 4 text - xs mb - 4">
                 <div>
@@ -188,6 +221,7 @@ const CuttingEdgeServicesShowcase = () => {
                   </div>
                 </div>
               </div>
+
               {/* Tags */}
               <div className="mb - 4">
                 <div className="flex flex - wrap gap - 2">
@@ -196,6 +230,7 @@ const CuttingEdgeServicesShowcase = () => {
                     </span>) ) }
                 </div>
               </div>
+
               {/* Contact Button */}
               <div className="text - center">
                 <a href={`mailto:kleber@ziontechgroup.com?subject = Inquiry about ${service.name}`} className="inline - block w - full px - 4 py - 2 bg - gradient - to - r from - blue - 600 to - blue - 700 text - white font - medium rounded - lg hover:from - blue - 700 hover:to - blue - 800 transition - all duration - 200">
@@ -207,6 +242,7 @@ const CuttingEdgeServicesShowcase = () => {
               </div>
             </div>) ) }
         </div>
+
         {/* Call to Action */}
         <div className="text - center mt - 20">
           <div className="bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 border border - blue - 500 / 30 rounded - 2xl p - 12">

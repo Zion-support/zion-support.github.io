@@ -3,7 +3,12 @@ export interface Real2025Q2Addition {
   name: string;
   tagline: string;
   price: string;
+<<<<<<< HEAD
+  features: string[];
+
+=======
   features: string[]}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const real2025Q2Additions: Real2025Q2Addition[] = [
   {
     id: 'ai-meeting-notes',

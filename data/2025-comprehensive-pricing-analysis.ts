@@ -32,7 +32,13 @@ export interface PricingAnalysis {
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
+    website: string;
+  };
+
+=======
     website: string}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
   // AI AUTONOMOUS BUSINESS MANAGER
   {
@@ -329,6 +335,39 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
 ];
+<<<<<<< HEAD
+export const getPricingAnalysisByService = (serviceId: string) => {;
+  return comprehensivePricingAnalysis2025.find(s => s.serviceId === serviceId)};
+export const getPricingAnalysisByService = (serviceId: string) => {;
+  return comprehensivePricingAnalysis2025.find(s => s.serviceId === serviceId);
+};
+export const getPricingAnalysisByCategory = (category: string) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  if (!category || category === 'All') return comprehensivePricingAnalysis2025;
+  return comprehensivePricingAnalysis2025.filter(s => s.category === category)};
+export const getMarketInsights = () => {
+  const insights = {
+  totalMarketSize: '$1.2T+',
+    averageGrowthRate: '250% annual',
+    priceRange: '$799 - $6,999/month',
+    mostExpensiveCategory: 'Quantum Computing & AI',
+    mostAffordableCategory: 'IoT & Edge Computing',
+<<<<<<< HEAD
+    highestROI: '1000% (Quantum Neural Network Platform)',
+  fastestPayback: '2-4 months (DeFi Trading Platform)';
+  ;
+
+};
+  return insights};
+export const getCompetitiveLandscape = () => {
+  return {
+    aiServices['IBM Watson', 'Google AI', 'Microsoft Azure AI', 'Amazon SageMaker'],
+    quantumComputing['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'D-Wave'],
+    cybersecurity['CrowdStrike', 'SentinelOne', 'Darktrace', 'Palo Alto Networks'],
+    manufacturing['Siemens', 'Rockwell Automation', 'ABB', 'GE Digital'],;
+    blockchain['Chainalysis', 'ConsenSys', 'Alchemy', 'Infura'];
+  }};
+=======
     highestROI: '1000% (Quantum Neural Network Platform)',;
   ;
   ;
@@ -345,4 +384,9 @@ export const getCompetitiveLandscape = () => {;
     manufacturing: ['Siemens', 'Rockwell Automation', 'ABB', 'GE Digital'],;
     blockchain: ['Chainalysis', 'ConsenSys', 'Alchemy', 'Infura'];
   };
+<<<<<<< HEAD
+};}}}}}}}
+=======
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

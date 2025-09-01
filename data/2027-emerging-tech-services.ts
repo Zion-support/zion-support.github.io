@@ -13,7 +13,12 @@ export interface Service {
   implementationTime: string;
   roi: string;
   link: string;
+<<<<<<< HEAD
+  tags: string[];
+
+=======
   tags: string[]}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const emergingTech2027Services: Service[] = [
   {
     id: 'quantum-machine-learning',
@@ -433,6 +438,12 @@ export const emergingTech2027Services: Service[] = [
     implementationTime: '7-9 weeks',
     roi: '800% within 18 months',
     link: 'https://ziontechgroup.com/services/quantum-climate-modeling',
+<<<<<<< HEAD
+    tags: ['Climate Modeling', 'Quantum Computing', 'Environmental', 'Weather', 'Research']
+
+];}}
+=======
     tags['Climate Modeling', 'Quantum Computing', 'Environmental', 'Weather', 'Research']
   }
 ];
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

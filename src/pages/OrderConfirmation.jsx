@@ -11,4 +11,9 @@ export default function OrderConfirmation() {
       <h1 className="text-3xl font-bold mb-4">Thank you for your order!</h1>
       <p className="mb-6">Your order ID is {orderId}.</p>
       <Link href="/orders" className="text-zion-purple underline">View Orders</Link>
+<<<<<<< HEAD
+    </div>);
+}
+=======
     </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

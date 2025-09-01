@@ -7,6 +7,7 @@ jest.mock('@/integrations/supabase/client', () => ({
 describe('apiClient interceptor', () => {
   it('logs out on 401 and redirects', async () => {
     const error = {
+<<<<<<< HEAD
   response: { status: 401,;
   ;
   ;
@@ -16,6 +17,12 @@ describe('apiClient interceptor', () => {
   data: {;
 } } } as any;
     const redirect = vi.spyOn(window.location, 'assign').mockImplementation(() => {});
+=======
+      response: { status: 401, data: {} }
+    } as any;
+    const redirect = jest.spyOn(window.location, 'assign').mockImplementation(() => {});
+    
+>>>>>>> cursor/add-new-services-and-advertise-them-971c
     // @ts-ignore access internal handler
     const handler = apiClient.interceptors.response.handlers[0].rejected;
     await expect(handler(error)).rejects.toBe(error);

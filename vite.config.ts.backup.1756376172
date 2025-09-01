@@ -1,6 +1,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/add-new-services-and-advertise-them-971c
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
@@ -19,6 +23,11 @@ export default defineConfig({
   build: {
     target: 'es2022',
     minify: 'terser',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-advertise-them-971c
     sourcemap: process.env.NODE_ENV !== 'production' ? 'hidden' : false,
     reportCompressedSize: false,
     outDir: 'dist',
@@ -74,6 +83,10 @@ export default defineConfig({
       },
       external: [],
     },
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b26c
+>>>>>>> cursor/add-new-services-and-advertise-them-971c
     terserOptions: {
       compress: {
         drop_console: true,

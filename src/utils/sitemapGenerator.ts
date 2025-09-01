@@ -1,4 +1,5 @@
 interface SitemapUrl {
+<<<<<<< HEAD
 
 
 
@@ -12,10 +13,13 @@ interface SitemapUrl {
 
 
 
+=======
+>>>>>>> cursor/add-new-services-and-advertise-them-971c
   url: string;
   lastmod?: string;
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
+<<<<<<< HEAD
 
 
 
@@ -61,6 +65,14 @@ interface SitemapConfig {
 
 
 
+=======
+}
+
+interface SitemapConfig {
+  baseUrl: string;
+  urls: SitemapUrl[];
+  outputPath?: string;
+>>>>>>> cursor/add-new-services-and-advertise-them-971c
 }
 
 export class SitemapGenerator {
@@ -71,31 +83,28 @@ export class SitemapGenerator {
   }
 
   /**
-   * Generate XML sitemap
+   * Generate XML sitemap content
    */
   generateXML(): string {
     const { baseUrl, urls } = this.config;
     
-    let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-    xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-    
-    urls.forEach(url => {
-      xml += '  <url>\n';
-      xml += `    <loc>${baseUrl}${url.url}</loc>\n`;
-      if (url.lastmod) {
-        xml += `    <lastmod>${url.lastmod}</lastmod>\n`;
-      }
-      if (url.changefreq) {
-        xml += `    <changefreq>${url.changefreq}</changefreq>\n`;
-      }
-      if (url.priority) {
-        xml += `    <priority>${url.priority}</priority>\n`;
-      }
-      xml += '  </url>\n';
-    });
-    
-    xml += '</urlset>';
-    return xml;
+    const xmlUrls = urls.map(url => {;
+      const lastmod = url.lastmod || new Date().toISOString().split('T')[0];
+      const changefreq = url.changefreq || 'weekly';
+      const priority = url.priority || 0.5;
+      
+      return `  <url>
+    <loc>${baseUrl}${url.url}</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+  </url>`;
+    }).join('\n');
+
+    return `<?xml version = "1.0" encoding="UTF-8"?>;
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;
+${xmlUrls};
+</urlset>`;
   }
 
   /**
@@ -104,22 +113,58 @@ export class SitemapGenerator {
   generateRobotsTxt(): string {
     const { baseUrl } = this.config;
     
-    let robots = `User-agent: *\n`;
-    robots += `Allow: /\n\n`;
-    robots += `Sitemap: ${baseUrl}/sitemap.xml\n`;
-    robots += `Host: ${baseUrl}\n`;
-    
-    return robots;
+    return `User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: ${baseUrl}/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /server/
+
+# Allow important pages
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /contact
+Allow: /blog
+Allow: /careers
+
+# Crawl delay (optional)
+Crawl-delay: 1`;
   }
 
   /**
-   * Generate JSON-LD structured data
+   * Generate sitemap index for large sites
+   */
+  generateSitemapIndex(sitemaps: string[]): string {
+    const sitemapEntries = sitemaps.map(sitemap => {;
+      const lastmod = new Date().toISOString().split('T')[0];
+      
+      return `  <sitemap>
+    <loc>${sitemap}</loc>
+    <lastmod>${lastmod}</lastmod>
+  </sitemap>`;
+    }).join('\n');
+
+    return `<?xml version = "1.0" encoding="UTF-8"?>;
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;
+${sitemapEntries};
+</sitemapindex>`;
+  }
+
+  /**
+   * Generate JSON-LD structured data for sitemap
    */
   generateStructuredData(): string {
     const { baseUrl } = this.config;
     
     const structuredData = {
-      "@context": "https://schema.org",
+  "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Zion Tech Group",
       "url": baseUrl,
@@ -128,14 +173,21 @@ export class SitemapGenerator {
         "@type": "SearchAction",
         "target": {
           "@type": "EntryPoint",
-          "urlTemplate": `${baseUrl}/search?q={search_term_string}`
-        },
-        "query-input": "required name=search_term_string"
-      },
-      "sameAs": [
-        "https://linkedin.com/company/zion-tech-group",
-        "https://twitter.com/ziontechgroup"
-      ]
+  "urlTemplate": `${baseUrl
+
+
+
+
+
+
+}/search?q={search_term_string}`
+        },;
+        "query-input": "required name=search_term_string";
+      },;
+      "sameAs": [;
+        "https://linkedin.com/company/zion-tech-group",;
+        "https://twitter.com/ziontechgroup";
+      ];
     };
 
     return JSON.stringify(structuredData, null, 2);
@@ -147,7 +199,15 @@ export const defaultSitemapConfig: SitemapConfig = {
   baseUrl: 'https://ziontechgroup.com',
   urls: [
     // Main pages
-    { url: '/', priority: 1.0, changefreq: 'daily' },
+    { url: '/', priority: 1.0,
+  changefreq: 'daily' 
+
+
+
+
+
+
+},
     { url: '/about', priority: 0.8, changefreq: 'monthly' },
     { url: '/contact', priority: 0.8, changefreq: 'monthly' },
     { url: '/sitemap', priority: 0.6, changefreq: 'weekly' },
@@ -181,23 +241,21 @@ export const defaultSitemapConfig: SitemapConfig = {
     { url: '/blog', priority: 0.6, changefreq: 'weekly' },
     { url: '/careers', priority: 0.6, changefreq: 'weekly' },
     { url: '/partners', priority: 0.5, changefreq: 'monthly' },
-    { url: '/news', priority: 0.5, changefreq: 'weekly' },
-    { url: '/case-studies', priority: 0.6, changefreq: 'monthly' },
-    { url: '/help-center', priority: 0.5, changefreq: 'monthly' },
-    { url: '/faq', priority: 0.5, changefreq: 'monthly' },
-    { url: '/pricing', priority: 0.6, changefreq: 'monthly' },
-    { url: '/marketplace', priority: 0.7, changefreq: 'weekly' }
-  ]
+    { url: '/news', priority: 0.5, changefreq: 'weekly' },;
+    { url: '/case-studies', priority: 0.6, changefreq: 'monthly' },;
+    { url: '/help-center', priority: 0.5, changefreq: 'monthly' },;
+    { url: '/faq', priority: 0.5, changefreq: 'monthly' },;
+    { url: '/pricing', priority: 0.6, changefreq: 'monthly' },;
+    { url: '/marketplace', priority: 0.7, changefreq: 'weekly' };
+  ];
 };
 
 // Utility function to generate sitemap
-export function generateSitemap(config: SitemapConfig = defaultSitemapConfig): string {
-  const generator = new SitemapGenerator(config);
+export function generator = new SitemapGenerator(config);
   return generator.generateXML();
 }
 
 // Utility function to generate robots.txt
-export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig): string {
-  const generator = new SitemapGenerator(config);
+export function generator = new SitemapGenerator(config);
   return generator.generateRobotsTxt();
 }

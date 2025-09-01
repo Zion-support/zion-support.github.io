@@ -34,7 +34,12 @@ export interface SpecializedIndustrySolution {
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
+  reviews: number;
+
+=======
   reviews: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -246,6 +251,17 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
       'Multi-carrier integration',
       'Mobile app for drivers'
     ],
+<<<<<<< HEAD
+
+];
+export const INDUSTRY_SOLUTION_CATEGORIES = [
+  'Healthcare Technology',
+  'FinTech Solutions',
+  'Manufacturing Technology',
+  'Retail Technology',
+  'Logistics Technology'
+];}}
+=======
     popular: true,
     icon: '🚚',
     color: 'from-orange-600 to-red-600',
@@ -280,3 +296,4 @@ export const INDUSTRY_SOLUTION_CATEGORIES = [;
   'Retail Technology',;
   'Logistics Technology';
 ];
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

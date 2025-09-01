@@ -21,7 +21,13 @@ declare module 'react-day-picker' {
   // The actual library provides full typings but we stub them here so the
   // TypeScript compiler can understand the imports without requiring the real
   // type definitions.
+<<<<<<< HEAD
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  export const DayPicker: any;
+
+=======
   // eslint-disable-next-line @typescript-eslint/no-explicit- export const DayPicker: ;}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 declare module 'sonner';
 declare module 'lucide-react' {
   import { FC, SVGProps } from 'react';
@@ -59,8 +65,14 @@ declare module 'lucide-react' {
 declare module 'child_process';
 declare module 'date-fns';
 declare module 'jspdf' {
+<<<<<<< HEAD
+  export const jsPDF: any;
+  export default jsPDF;
+
+=======
   export const jsPDF: ;export default jsPDF;
 }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 declare module '@hookform/resolvers/zod';
 declare module '@radix-ui/react-accordion';
 declare module '@radix-ui/react-alert-dialog';
@@ -85,10 +97,20 @@ declare module '@radix-ui/react-toast';
 declare module '@radix-ui/react-tooltip';
 declare module '@supabase/supabase-js';
 declare module 'class-variance-authority' {
+<<<<<<< HEAD
+  export function cva(...inputs: any[]): any
+  export type VariantProps<T extends (...args: any) => any> = any
+
+declare module 'clsx' {
+  export type ClassValue = any;
+  export default function clsx(...classes: ClassValue[]): string;
+
+=======
   export function cva(...inputs: []):  export type VariantProps<T extends (...args: ) => any> =  }
 declare module 'clsx' {
   export type ClassValue = ;export default function clsx(...classes: ClassValue[]): string;
 }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 declare module 'embla-carousel-react';
 declare module 'framer-motion';
 declare module 'i18next';
@@ -104,6 +126,48 @@ declare module 'react-hook-form' {
     TFieldValues extends FieldValues = FieldValues,
   > {
     control: Control<TFieldValues>
+<<<<<<< HEAD
+    handleSubmit: any
+    register: any
+    formState: any
+    [key: string]: any
+
+  export function useForm<
+    TFieldValues extends FieldValues = FieldValues,
+  >(options?: any): UseFormReturn<TFieldValues>
+  export function useFieldArray<
+    TFieldValues extends FieldValues = FieldValues,
+  >(options: any): any
+  export interface ControllerProps<
+    TFieldValues extends FieldValues = FieldValues,
+    TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  > {
+    name: TName
+    control?: Control<TFieldValues>
+    rules?: any
+    defaultValue?: any
+    render: (props: any) => ReactElement
+
+  export const Controller: ComponentType<ControllerProps<any, any>>
+  export interface FormProviderProps<
+    TFieldValues extends FieldValues = FieldValues,
+  > {
+    children?: ReactNode
+    [key: string]: any
+
+  export const FormProvider: ComponentType<FormProviderProps<any>>
+  export function useFormContext<
+    TFieldValues extends FieldValues = FieldValues,
+  >(): UseFormReturn<TFieldValues>
+
+=======
+<<<<<<< HEAD
+    handleSubmit:  register:  formState:  [key: string]:  }
+  export function useFormContext<
+    TFieldValues extends FieldValues = FieldValues,
+  >(): UseFormReturn<TFieldValues>
+}
+=======
     handleSubmit: any
     register: any
     formState: any;
@@ -113,6 +177,8 @@ declare module 'react-hook-form' {
     TFieldValues extends FieldValues = FieldValues,;
   >(): UseFormReturn<TFieldValues>;
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 declare module 'react-i18next';
 declare module 'react-dom/client';
 declare module 'react-dom';
@@ -124,7 +190,13 @@ declare module 'semver';
 declare module 'ws';
 declare module 'recharts';
 declare module 'next' {
+<<<<<<< HEAD
+  export type GetStaticPaths = any;
+  export type GetStaticProps<P = any, Q = any> = any;
+
+=======
   export type GetStaticPaths = ;export type GetStaticProps<P = , Q = any> = ;}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 declare module 'next-themes';
 declare module 'tailwind-merge';
 }}}}}}}}}}}}}

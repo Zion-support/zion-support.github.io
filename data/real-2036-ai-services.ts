@@ -312,6 +312,16 @@ export const real2036AIServices = [
       'Traffic optimization',
       'Predictive maintenance'
     ],
+<<<<<<< HEAD
+    useCases: [
+      'Autonomous vehicles',
+      'Fleet management',
+      'Traffic optimization',
+      'Safety systems'
+    ]
+
+];}
+=======
     useCases[;
       'Autonomous vehicles',;
       'Fleet management',;
@@ -320,3 +330,4 @@ export const real2036AIServices = [
     ];
   };
 ];
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

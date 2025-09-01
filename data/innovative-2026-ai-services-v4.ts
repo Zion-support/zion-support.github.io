@@ -36,7 +36,12 @@ export interface Innovative2026AIServiceV4 {
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
+  reviews: number;
+
+=======
   reviews: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
   // AI Consciousness Simulation Platform
   {

@@ -292,6 +292,16 @@ export const advancedITServices2025 = [
     tags['Quantum Computing', 'Cloud Migration', 'AI', 'Zero Downtime'],
     website: 'https://ziontechgroup.com/quantum-migration-pro',
     contact: {
+<<<<<<< HEAD
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com'
+    },
+    marketSize: '$15.7B',
+    targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',
+    competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
+
+];}
+=======
       phone: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com';
     },;
@@ -300,3 +310,4 @@ export const advancedITServices2025 = [
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration';
   };
 ];
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -16,6 +16,23 @@ export const innovativeAIAutomationServices2025 = [
       'Performance analytics and continuous improvement'
     ],
     pricing: {
+<<<<<<< HEAD
+      starter: {
+        price: 299,
+        period: 'month',
+        features: ['Basic business management', 'Process automation', 'Email support', 'Standard reporting']
+      },
+      professional: {
+        price: 799,
+        period: 'month',
+        features: ['Advanced AI decision-making', 'Strategic planning', 'Priority support', 'Custom integrations']
+      },
+      enterprise: {
+        price: 1999,
+        period: 'month',
+        features: ['Full autonomy', 'Custom AI training', 'Dedicated support', 'White-label solution']
+
+=======
       starter: { 
         price: 299, 
         period: 'month', 
@@ -31,6 +48,7 @@ export const innovativeAIAutomationServices2025 = [
         period: 'month', 
         features['Full autonomy', 'Custom AI training', 'Dedicated support', 'White-label solution'] 
       }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     },
     category: 'AI & Automation',
     tags['AI', 'Autonomous Systems', 'Business Intelligence', 'Process Automation', 'Strategic Planning'],
@@ -69,6 +87,23 @@ export const innovativeAIAutomationServices2025 = [
       'Custom emotional intelligence models'
     ],
     pricing: {
+<<<<<<< HEAD
+      starter: {
+        price: 149,
+        period: 'month',
+        features: ['Basic emotion recognition', 'Text analysis', 'Email support', 'Standard API access']
+      },
+      professional: {
+        price: 399,
+        period: 'month',
+        features: ['Multi-modal analysis', 'Advanced AI models', 'Priority support', 'Custom training']
+      },
+      enterprise: {
+        price: 999,
+        period: 'month',
+        features: ['Full emotional intelligence suite', 'Custom models', 'Dedicated support', 'White-label solution']
+
+=======
       starter: { 
         price: 149, 
         period: 'month', 
@@ -84,6 +119,7 @@ export const innovativeAIAutomationServices2025 = [
         period: 'month', 
         features['Full emotional intelligence suite', 'Custom models', 'Dedicated support', 'White-label solution'] 
       }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     },
     category: 'AI & Consciousness',
     tags['AI', 'Emotional Intelligence', 'Human-AI Collaboration', 'Customer Experience', 'Mental Health'],
@@ -122,6 +158,23 @@ export const innovativeAIAutomationServices2025 = [
       'API access for creative applications'
     ],
     pricing: {
+<<<<<<< HEAD
+      starter: {
+        price: 99,
+        period: 'month',
+        features: ['Basic content generation', 'Standard templates', 'Email support', 'Limited API calls']
+      },
+      professional: {
+        price: 299,
+        period: 'month',
+        features: ['Advanced AI models', 'Custom styles', 'Priority support', 'Extended API access']
+      },
+      enterprise: {
+        price: 799,
+        period: 'month',
+        features: ['Full creative suite', 'Custom training', 'Dedicated support', 'White-label solution']
+
+=======
       starter: { 
         price: 99, 
         period: 'month', 
@@ -137,6 +190,7 @@ export const innovativeAIAutomationServices2025 = [
         period: 'month', 
         features['Full creative suite', 'Custom training', 'Dedicated support', 'White-label solution'] 
       }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     },
     category: 'AI & Creativity',
     tags['AI', 'Quantum Computing', 'Creative Content', 'Artistic Intelligence', 'Design Automation'],
@@ -175,6 +229,23 @@ export const innovativeAIAutomationServices2025 = [
       'HIPAA-compliant data security'
     ],
     pricing: {
+<<<<<<< HEAD
+      starter: {
+        price: 199,
+        period: 'month',
+        features: ['Basic diagnostics', 'Health monitoring', 'Email support', 'Standard reports']
+      },
+      professional: {
+        price: 599,
+        period: 'month',
+        features: ['Advanced AI models', 'Predictive analytics', 'Priority support', 'Custom integrations']
+      },
+      enterprise: {
+        price: 1499,
+        period: 'month',
+        features: ['Full healthcare suite', 'Custom AI training', 'Dedicated support', 'White-label solution']
+
+=======
       starter: { 
         price: 199, 
         period: 'month', 
@@ -190,6 +261,7 @@ export const innovativeAIAutomationServices2025 = [
         period: 'month', 
         features['Full healthcare suite', 'Custom AI training', 'Dedicated support', 'White-label solution'] 
       }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     },
     category: 'AI & Healthcare',
     tags['AI', 'Healthcare', 'Predictive Analytics', 'Medical Diagnostics', 'Preventive Medicine'],
@@ -228,6 +300,23 @@ export const innovativeAIAutomationServices2025 = [
       '24/7 autonomous operation'
     ],
     pricing: {
+<<<<<<< HEAD
+      starter: {
+        price: 79,
+        period: 'month',
+        features: ['Basic financial planning', 'Portfolio monitoring', 'Email support', 'Standard reports']
+      },
+      professional: {
+        price: 199,
+        period: 'month',
+        features: ['Advanced AI models', 'Portfolio optimization', 'Priority support', 'Custom strategies']
+      },
+      enterprise: {
+        price: 499,
+        period: 'month',
+        features: ['Full financial suite', 'Custom AI training', 'Dedicated support', 'White-label solution']
+
+=======
       starter: { 
         price: 79, 
         period: 'month', 
@@ -243,6 +332,7 @@ export const innovativeAIAutomationServices2025 = [
         period: 'month', 
         features['Full financial suite', 'Custom AI training', 'Dedicated support', 'White-label solution'] 
       }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     },
     category: 'AI & Finance',
     tags['AI', 'Financial Planning', 'Investment Management', 'Wealth Management', 'Portfolio Optimization'],
@@ -259,6 +349,15 @@ export const innovativeAIAutomationServices2025 = [
       'Investment portfolio management',
       'Retirement planning',
       'Tax optimization',
+<<<<<<< HEAD
+      'Wealth preservation and growth'
+    ],
+<<<<<<< HEAD
+    integrations: ['Brokerage platforms', 'Banking systems', 'Tax software', 'Insurance platforms', 'Real estate platforms'],
+    compliance: ['SEC', 'FINRA', 'SOC2', 'ISO 27001', 'Financial regulations']
+
+];}}}}}}
+=======
     integrations['Brokerage platforms', 'Banking systems', 'Tax software', 'Insurance platforms', 'Real estate platforms'],
     compliance['SEC', 'FINRA', 'SOC2', 'ISO 27001', 'Financial regulations']
   };
@@ -268,4 +367,6 @@ export const innovativeAIAutomationServices2025 = [
     integrations: ['Brokerage platforms', 'Banking systems', 'Tax software', 'Insurance platforms', 'Real estate platforms'],;
     compliance: ['SEC', 'FINRA', 'SOC2', 'ISO 27001', 'Financial regulations'];
   };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

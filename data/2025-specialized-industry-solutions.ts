@@ -35,7 +35,12 @@ export interface SpecializedIndustrySolution {
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
+  reviews: number;
+
+=======
   reviews: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
   // MANUFACTURING & INDUSTRIAL SOLUTIONS
   {
@@ -410,13 +415,30 @@ export const industryCategories2025: string[] = Array.from(
 ).sort();
 export const getSolutionsByIndustry = (industry: string) => {;
   if (!industry || industry === 'All') return specializedIndustrySolutions2025;
+<<<<<<< HEAD
+  return specializedIndustrySolutions2025.filter((s) => s.industry === industry)};
+export const getSolutionsByCategory = (category: string) => {;
+  if (!category || category === 'All') return specializedIndustrySolutions2025;
+  return specializedIndustrySolutions2025.filter((s) => s.category === category)};
+export const getPopularIndustrySolutions = () =>
+  specializedIndustrySolutions2025
+    .filter((s) => !!s.popular);
+=======;
   return specializedIndustrySolutions2025.filter((s) => s.industry === industry);
 };
 export const getSolutionsByCategory = (category: string) => {;
   if (!category || category === 'All') return specializedIndustrySolutions2025;
   return specializedIndustrySolutions2025.filter((s) => s.category === category);
 };
+<<<<<<< HEAD
+export const getPopularIndustrySolutions = () =>
+  specializedIndustrySolutions2025
+    .filter((s) => !!s.popular)
+    .sort((a, b) => (b.rating || 0) - (a.rating || 0));}}
+=======
 export const getPopularIndustrySolutions = () =>;
   specializedIndustrySolutions2025;
     .filter((s) => !!s.popular);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     .sort((a, b) => (b.rating || 0) - (a.rating || 0));
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

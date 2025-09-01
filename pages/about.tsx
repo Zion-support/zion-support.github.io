@@ -1,7 +1,13 @@
+<<<<<<< HEAD
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Users, Target, Eye, Award, TrendingUp, Globe, Zap, Shield export default function About() {
+=======
 import React from 'react.ts'
 import { Link  } from 'react-router-dom.ts'
 import { Users, Target, Eye, Award, TrendingUp, Globe, Zap, Shield  } from 'lucide-react'
 export default function About(...args[]):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	return (
 		<>
 			{/* Hero Section */}
@@ -160,6 +166,14 @@ export default function About(...args[]):  {
 								Explore Our Services <span aria-hidden="true">→</span>
 							</Link>
 						</div>
+<<<<<<< HEAD
+					</div>
+				</div>
+		</section>
+		</>
+	)
+}}
+=======
 					</div>;
 				</div>;
 		</section>;
@@ -167,3 +181,4 @@ export default function About(...args[]):  {
 	);
 };
 ;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

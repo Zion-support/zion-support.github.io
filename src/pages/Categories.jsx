@@ -2,6 +2,7 @@ import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { GradientHeading } from "@/components/GradientHeading";
 export default function Featured() {
     return (<>
+
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto px-4 py-12">
           <div className="text-center mb-12">
@@ -13,8 +14,16 @@ export default function Featured() {
               These featured listings represent the best that the Zion Marketplace has to offer.
             </p>
           </div>
+
           {/* Reuse the FeaturedListings component */}
           <FeaturedListingsSection showTitle={false}/>
         </div>
       </div>
+<<<<<<< HEAD
+
+    </>);
+}
+=======
+      
     </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

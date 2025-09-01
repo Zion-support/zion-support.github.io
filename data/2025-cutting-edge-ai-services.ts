@@ -16,6 +16,23 @@ export const cuttingEdgeAIServices2025 = [
       'Consciousness level assessment and progression tracking'
     ],
     pricing: {
+<<<<<<< HEAD
+      starter: {
+        price: 399,
+        period: 'month',
+        features: ['Basic consciousness development', 'Up to 200 interactions/month', 'Standard analytics', 'Email support']
+      },
+      professional: {
+        price: 999,
+        period: 'month',
+        features: ['Advanced consciousness models', 'Unlimited interactions', 'Custom training', 'Priority support', 'API access']
+      },
+      enterprise: {
+        price: 2499,
+        period: 'month',
+        features: ['Custom consciousness models', 'White-label solution', 'Dedicated support', 'On-premise deployment', '24/7 monitoring']
+
+=======
       starter: { 
         price: 399, 
         period: 'month', 
@@ -31,6 +48,7 @@ export const cuttingEdgeAIServices2025 = [
         period: 'month', 
         features['Custom consciousness models', 'White-label solution', 'Dedicated support', 'On-premise deployment', '24/7 monitoring'] 
       }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     },
     category: 'AI Consciousness',
     tags['AI', 'Consciousness', 'Emotional Intelligence', 'Self-Awareness', 'Human-AI Collaboration'],
@@ -69,6 +87,23 @@ export const cuttingEdgeAIServices2025 = [
       'API access for quantum computing resources and services'
     ],
     pricing: {
+<<<<<<< HEAD
+      starter: {
+        price: 799,
+        period: 'month',
+        features: ['Basic quantum-AI processing', 'Up to 200 quantum operations/month', 'Standard analytics', 'Email support']
+      },
+      professional: {
+        price: 1999,
+        period: 'month',
+        features: ['Advanced quantum-AI models', 'Unlimited quantum operations', 'Custom algorithms', 'Priority support', 'API access']
+      },
+      enterprise: {
+        price: 4999,
+        period: 'month',
+        features: ['Custom quantum-AI development', 'White-label solution', 'Dedicated support', 'On-premise deployment', '24/7 monitoring']
+
+=======
       starter: { 
         price: 799, 
         period: 'month', 
@@ -84,6 +119,7 @@ export const cuttingEdgeAIServices2025 = [
         period: 'month', 
         features['Custom quantum-AI development', 'White-label solution', 'Dedicated support', 'On-premise deployment', '24/7 monitoring'] 
       }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     },
     category: 'Quantum AI',
     tags['Quantum Computing', 'AI', 'Machine Learning', 'Pattern Recognition', 'Hybrid Computing'],
@@ -122,6 +158,23 @@ export const cuttingEdgeAIServices2025 = [
       'Intelligent integration and API management'
     ],
     pricing: {
+<<<<<<< HEAD
+      starter: {
+        price: 599,
+        period: 'month',
+        features: ['Basic autonomous features', 'Up to 100 autonomous operations/month', 'Standard monitoring', 'Email support']
+      },
+      professional: {
+        price: 1499,
+        period: 'month',
+        features: ['Advanced autonomous capabilities', 'Unlimited operations', 'Custom workflows', 'Priority support', 'API access']
+      },
+      enterprise: {
+        price: 3999,
+        period: 'month',
+        features: ['Full autonomous ecosystem', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
+
+=======
       starter: { 
         price: 599, 
         period: 'month', 
@@ -137,6 +190,7 @@ export const cuttingEdgeAIServices2025 = [
         period: 'month', 
         features['Full autonomous ecosystem', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
       }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     },
     category: 'AI Autonomy',
     tags['AI', 'Autonomous Systems', 'Self-Management', 'Machine Learning', 'Automation'],
@@ -175,6 +229,23 @@ export const cuttingEdgeAIServices2025 = [
       'Integration with regulatory frameworks and standards'
     ],
     pricing: {
+<<<<<<< HEAD
+      starter: {
+        price: 299,
+        period: 'month',
+        features: ['Basic ethics monitoring', 'Up to 50 AI models', 'Standard reporting', 'Email support']
+      },
+      professional: {
+        price: 799,
+        period: 'month',
+        features: ['Advanced ethics tools', 'Unlimited models', 'Custom frameworks', 'Priority support', 'API access']
+      },
+      enterprise: {
+        price: 1999,
+        period: 'month',
+        features: ['Full ethics platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
+
+=======
       starter: { 
         price: 299, 
         period: 'month', 
@@ -190,6 +261,7 @@ export const cuttingEdgeAIServices2025 = [
         period: 'month', 
         features['Full ethics platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
       }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     },
     category: 'AI Ethics',
     tags['AI Ethics', 'Governance', 'Bias Detection', 'Fairness', 'Compliance'],
@@ -228,6 +300,23 @@ export const cuttingEdgeAIServices2025 = [
       'Real-time creative collaboration and feedback'
     ],
     pricing: {
+<<<<<<< HEAD
+      starter: {
+        price: 199,
+        period: 'month',
+        features: ['Basic creative tools', 'Up to 100 creations/month', 'Standard templates', 'Email support']
+      },
+      professional: {
+        price: 599,
+        period: 'month',
+        features: ['Advanced creative capabilities', 'Unlimited creations', 'Custom models', 'Priority support', 'API access']
+      },
+      enterprise: {
+        price: 1499,
+        period: 'month',
+        features: ['Full creative studio', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
+
+=======
       starter: { 
         price: 199, 
         period: 'month', 
@@ -243,6 +332,7 @@ export const cuttingEdgeAIServices2025 = [
         period: 'month', 
         features['Full creative studio', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
       }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     },
     category: 'AI Creativity',
     tags['AI', 'Creativity', 'Content Generation', 'Design', 'Innovation'],
@@ -259,6 +349,15 @@ export const cuttingEdgeAIServices2025 = [
       'Marketing and advertising creative',
       'Product design and innovation',
       'Artistic expression and creation',
+<<<<<<< HEAD
+      'Creative problem-solving and ideation'
+    ],
+<<<<<<< HEAD
+    integrations: ['Creative software', 'Design tools', 'Marketing platforms', 'Content management systems', 'Collaboration tools'],
+    compliance: ['SOC2', 'ISO 27001', 'GDPR', 'CCPA', 'Intellectual property protection']
+
+];}}}}}}
+=======
     integrations['Creative software', 'Design tools', 'Marketing platforms', 'Content management systems', 'Collaboration tools'],
     compliance['SOC2', 'ISO 27001', 'GDPR', 'CCPA', 'Intellectual property protection']
   };
@@ -268,4 +367,6 @@ export const cuttingEdgeAIServices2025 = [
     integrations: ['Creative software', 'Design tools', 'Marketing platforms', 'Content management systems', 'Collaboration tools'],;
     compliance: ['SOC2', 'ISO 27001', 'GDPR', 'CCPA', 'Intellectual property protection'];
   };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
