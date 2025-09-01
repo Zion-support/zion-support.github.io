@@ -94,6 +94,7 @@ export function Header({ className }: HeaderProps) {
         { name: 'IoT & Edge Computing', href: '/services/iot-edge-computing', icon: Activity },
         { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },
         { name: 'Comprehensive Services', href: '/comprehensive-services', icon: Globe },
+        { name: 'Comprehensive Services Showcase 2025', href: '/comprehensive-services-showcase-2025', icon: Sparkles },
         { name: 'Revolutionary Services', href: '/revolutionary-services', icon: Sparkles },
         { name: 'New Services 2025', href: '/new-services-2025', icon: Star },
         { name: 'Enhanced Services 2025', href: '/enhanced-new-services-2025', icon: Star },

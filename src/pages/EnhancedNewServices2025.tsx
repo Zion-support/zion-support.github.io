@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Brain,
   Atom,
   Shield,
@@ -165,7 +165,7 @@ import { Brain,
   Mail,
   MapPin,
   Package
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export function EnhancedNewServices2025(...args: any[]): any {
   const newServices = [
@@ -936,3 +936,5 @@ export function EnhancedNewServices2025(...args: any[]): any {
     </div>
   );
 }
+
+export default EnhancedNewServices2025;

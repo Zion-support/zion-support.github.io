@@ -1,6 +1,6 @@
-import React, { useState } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Brain,
   Shield,
   Cpu,
@@ -130,9 +130,9 @@ import { Brain,
   ToolIcon5,
   HammerIcon5,
   ScrewdriverIcon5
- } from 'lucide-react.ts';
-import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025  } from '../data/revolutionaryMicroSaasServices2025';
-import { COMPREHENSIVE_PRICING_GUIDE_2025  } from '../data/comprehensivePricingGuide2025';
+ } from 'lucide-react';
+import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025 } from '../data/revolutionaryMicroSaasServices2025';
+import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data/comprehensivePricingGuide2025';
 
 export function RevolutionaryServicesPage(...args: any[]): any {
   const [searchTerm, setSearchTerm] = useState('');
@@ -623,3 +623,5 @@ export function RevolutionaryServicesPage(...args: any[]): any {
     </div>
   );
 }
+
+export default RevolutionaryServicesPage;
