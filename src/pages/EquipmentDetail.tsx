@@ -216,22 +216,26 @@ export default function EquipmentDetail() {
   }
 
   const handleAddToCart = () => {
-    setIsAdding(true);
+    if (isAdding) return;
 
+    const stored = safeStorage.getItem('cart');
+    let cart: { id: string; name: string; price: number; quantity: number }[] = [];
+    if (stored) {
+      try { cart = JSON.parse(stored); } catch { /* ignore */ }
+    }
+    const existing = cart.find(i => i.id === equipment.id);
+    if (existing) existing.quantity += quantity;
+    else cart.push({ id: equipment.id, name: equipment.name, price: equipment.price, quantity });
+    safeStorage.setItem('cart', JSON.stringify(cart));
+
+    setIsAdding(true);
     setTimeout(() => {
-      const stored = safeStorage.getItem('cart');
-      let cart: { id: string; name: string; price: number; quantity: number }[] = [];
-      if (stored) {
-        try { cart = JSON.parse(stored); } catch { /* ignore */ }
-      }
-      const existing = cart.find(i => i.id === equipment.id);
-      if (existing) existing.quantity += quantity; else cart.push({ id: equipment.id, name: equipment.name, price: equipment.price, quantity });
-      safeStorage.setItem('cart', JSON.stringify(cart));
       setIsAdding(false);
+      setAdded(true);
       toast({
-        title: "Added to cart",
-        description: `${quantity}x ${equipment.name} added to your cart.`,
+        title: `${equipment.name} added to cart`,
       });
+      setTimeout(() => setAdded(false), 1500);
     }, 800);
   };
 
@@ -454,14 +458,14 @@ export default function EquipmentDetail() {
                     {isAdding ? "Processing..." : "Buy Now"}
                   </Button>
                   
-                  <Button 
+                  <Button
                     onClick={handleAddToCart}
                     disabled={isAdding || !equipment.inStock}
                     variant="outline"
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
                   >
                     <ShoppingCart className="h-4 w-4 mr-2" />
-                    Add to Cart
+                    {isAdding ? 'Adding...' : added ? 'Added \u2713' : 'Add to Cart'}
                   </Button>
                 </div>
                 
