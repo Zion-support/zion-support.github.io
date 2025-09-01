@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
 import Link from 'next/link';
-import ShareBar from '../../components/ShareBar';
+import Seo from '../../components/seo/Seo';
 
 const Index: NextPage = () => {
   const title = 'Blog - Zion Tech Solutions';
@@ -9,17 +8,9 @@ const Index: NextPage = () => {
   const ogImage = '/og/default.svg';
   return (
     <div>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={desc} />
-        <meta property="og:title" content="Blog" />
-        <meta property="og:description" content={desc} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:type" content="website" />
-      </Head>
-      
+      <Seo title="Blog" description="Insights on AI, DevOps, and engineering from Zion." openGraph={{ title: 'Blog', description: 'Insights on AI, DevOps, and engineering from Zion.' }} />
       <main>
-        <h1>Index</h1>
+        <h1>Blog</h1>
         <p>Blog content coming soon...</p>
         <ShareBar title="Blog" summary={desc} imageUrl={ogImage} />
         <Link href="/blog"><a>Back to Blog</a></Link>

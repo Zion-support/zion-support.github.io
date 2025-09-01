@@ -1,76 +1,59 @@
-import React, { useEffect, useState } from 'react';
-import type { NextPage, GetServerSideProps } from 'next';
-import { TALENT_PROFILES, TalentProfile } from '../../data/talent';
-import ReviewSummary from '../../components/reviews/ReviewSummary';
-import ReviewCard from '../../components/reviews/ReviewCard';
-import type { PublicReview, ReviewsSummary } from '../../types/reviews';
+import type { NextPage, GetStaticPaths, GetStaticProps } from 'next';
+import { useRouter } from 'next/router';
+import Seo from '../../components/seo/Seo';
+import { SocialProfileJsonLd } from 'next-seo';
+import { TALENT_PROFILES } from '../../data/talent';
+import type { TalentProfile } from '../../data/talent';
 
-type Props = {
-  talent: TalentProfile | null;
-};
+type Props = { profile: TalentProfile | null };
 
-const TalentProfilePage: NextPage<Props> = ({ talent }) => {
-  const [summary, setSummary] = useState<ReviewsSummary | null>(null);
-  const [reviews, setReviews] = useState<PublicReview[]>([]);
-
-  useEffect(() => {
-    if (!talent) return;
-    (async () => {
-      const res = await fetch(`/api/reviews/list?targetType=talent&targetId=${talent.slug}`);
-      const data = await res.json();
-      if (res.ok) {
-        setSummary(data.summary);
-        setReviews(data.reviews);
-      }
-    })();
-  }, [talent]);
-
-  if (!talent) {
-    return (
-      <main className="max-w-4xl mx-auto p-6">
-        <h1 className="text-2xl font-semibold">Talent not found</h1>
-      </main>
-    );
+const TalentProfilePage: NextPage<Props> = ({ profile }) => {
+  const router = useRouter();
+  if (router.isFallback) {
+    return <div>Loading...</div>;
   }
-
-  async function handleReport(id: string) {
-    await fetch('/api/reviews/report', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ reviewId: id, reason: 'Inappropriate content' }),
-    });
+  if (!profile) {
+    return <div>Profile not found</div>;
   }
-
+  const url = `https://ziontechgroup.netlify.app/talent/${profile.slug}`;
   return (
-    <main className="max-w-4xl mx-auto p-6 space-y-6">
-      <header className="enhanced-card">
-        <h1 className="text-3xl font-bold">{talent.name}</h1>
-        <p className="text-gray-600">{talent.title} • {talent.location}</p>
-        <div className="flex flex-wrap gap-2 mt-3">
-          {talent.skills.map((s) => (
-            <span key={s} className="pill">{s}</span>
-          ))}
-        </div>
-      </header>
-
-      {summary && <ReviewSummary summary={summary} />}
-
-      <section className="grid gap-4">
-        {reviews.map((r) => (
-          <ReviewCard key={r.id} review={r} onReport={handleReport} />)
-        )}
-        {!reviews.length && (
-          <div className="enhanced-card">No public reviews yet.</div>
-        )}
-      </section>
-    </main>
+    <div>
+      <Seo
+        title={`${profile.name} — ${profile.title}`}
+        description={`${profile.name}, ${profile.title} in ${profile.location}. Skills: ${profile.skills.join(', ')}`}
+        openGraph={{
+          title: `${profile.name} — ${profile.title}`,
+          description: `${profile.name}, ${profile.title} in ${profile.location}. Skills: ${profile.skills.join(', ')}`,
+          url,
+        }}
+      />
+      <SocialProfileJsonLd
+        type="Person"
+        name={profile.name}
+        url={url}
+        sameAs={[url]}
+      />
+      <main>
+        <h1>{profile.name}</h1>
+        <p>{profile.title}</p>
+        <p>{profile.location}</p>
+        <p>{profile.bio}</p>
+      </main>
+    </div>
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const { slug } = ctx.query as { slug: string };
-  const talent = TALENT_PROFILES.find((t) => t.slug === slug) || null;
-  return { props: { talent } };
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: TALENT_PROFILES.map((p) => ({ params: { slug: p.slug } })),
+    fallback: true,
+  };
+};
+
+export const getStaticProps: GetStaticProps<Props> = async (ctx) => {
+  const slug = ctx.params?.slug as string;
+  const profile = TALENT_PROFILES.find((p) => p.slug === slug) || null;
+  return { props: { profile } };
 };
 
 export default TalentProfilePage;
