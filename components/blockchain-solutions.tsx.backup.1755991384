@@ -1,7 +1,7 @@
-
+import type { NextPage } from 'next';
 import Head from 'next/head';
 
-const BlockchainSolutions = () => {
+const BlockchainSolutions: NextPage = () => {
   return (
     <div>
       <Head>
@@ -17,8 +17,4 @@ const BlockchainSolutions = () => {
   );
 };
 
-<<<<<<< HEAD
 export default BlockchainSolutions;
-=======
-export default BlockchainSolutions;
->>>>>>> origin/cursor/deploy-zion-brain-ai-system-5783

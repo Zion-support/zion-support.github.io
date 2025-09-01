@@ -1,8 +1,8 @@
-import type { NextPage } from 'next';
+
 import Head from 'next/head';
 import Link from 'next/link';
 
-const NetworkEngineeringChat: NextPage = () => {
+const NetworkEngineeringChat = () => {
   return (
     <div>
       <Head>

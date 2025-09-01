@@ -2,16 +2,13 @@
 import { Navigate, useLocation  } from 'react-router-dom';
 
 import React from 'react';
-import { Navigate, useLocation } from 'react-router-dom';
-import { useAuth } from '@/hooks/useAuth';
-import { useTenantAdminStatus } from '@/hooks/useWhitelabelTenant';
-import { useWhitelabel } from '@/context/WhitelabelContext';
-
-  if(roles.length > 0 && user && !roles.includes(user.role || 'user')) {
-"
-    return <Navigate to="/unauthorized" replace  />}
-
-  return <>{children}</>
+export function SupportChatbot() {
+  return (
+    <div>
+      <h1>Component</h1>
+      <p>Component placeholder</p>
+    </div>
+  );
 }
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({

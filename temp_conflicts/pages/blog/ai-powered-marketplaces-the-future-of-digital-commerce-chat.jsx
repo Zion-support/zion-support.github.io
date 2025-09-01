@@ -3,8 +3,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 
-const FeedbackWidget = dynamic(() => import('../../components/feedback/FeedbackWidget'), { ssr: false });
-
 const AiPoweredMarketplacesTheFutureOfDigitalCommerceChat = () => {
   return (
     <div>
@@ -16,7 +14,7 @@ const AiPoweredMarketplacesTheFutureOfDigitalCommerceChat = () => {
       <main>
         <h1>AiPoweredMarketplacesTheFutureOfDigitalCommerceChat</h1>
         <p>Blog content coming soon...</p>
-        <Link href="/blog"><a>Back to Blog</a></Link>
+        <a href="/blog">Back to Blog</a>
       </main>
     </div>
   );

@@ -13,7 +13,7 @@ const SustainableTechnologyGreenComputingSolutionsChat = () => {
       <main>
         <h1>SustainableTechnologyGreenComputingSolutionsChat</h1>
         <p>Blog content coming soon...</p>
-        <Link href="/blog"><a>Back to Blog</a></Link>
+        <a href="/blog">Back to Blog</a>
       </main>
     </div>
   );

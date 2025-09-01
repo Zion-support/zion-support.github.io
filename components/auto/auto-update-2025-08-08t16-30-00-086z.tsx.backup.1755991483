@@ -1,5 +1,3 @@
-export default AutoUpdate20250808t163000086z;
-=======
 import React from 'react';
 
 export default function AutoUpdatePage3() {

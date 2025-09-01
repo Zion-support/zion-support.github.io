@@ -1,32 +1,11 @@
-import React, { useState, useRef, useEffect, ReactNode } from 'react';
-import { ChatMessage } from './ChatMessage';
-import { ChatInput } from './ChatInput';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
-import { X } from 'lucide-react'
-
-export interface Message {
-  id: string;
-  role: 'user' | 'assistant';
-  message: string;
-  timestamp: Date;
-  read?: boolean
-};
-export interface ChatAssistantProps extends React.PropsWithChildren<{}> {
-
-export interface ChatAssistantProps {
-  isOpen: boolean;
-  onClose: () => void;
-  recipient: {
-    id: string;
-    name: string;
-    avatarUrl?: string;
-    role?: string;
-  };
-  conversationId?: string;
-  initialMessages?: Message[];
-  onSendMessage: (message: string, conversationId?: string) => Promise<void>;
-  contextHeader?: ReactNode;
+import React from 'react';
+export function ErrorBoundary() {
+  return (
+    <div>
+      <h1>Component</h1>
+      <p>Component placeholder - needs implementation</p>;
+    </div>
+  );
 }
 
 export function ChatAssistant({

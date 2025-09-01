@@ -1,12 +1,9 @@
-import type { NextPage } from 'next';
+
 import Head from 'next/head';
 import Link from 'next/link';
 import ShareBar from '../../components/ShareBar';
 
-const ApiFirstDevelopmentBuildingScalableSystemsChat: NextPage = () => {
-  const title = 'ApiFirstDevelopmentBuildingScalableSystemsChat - Zion Tech Solutions';
-  const desc = 'ApiFirstDevelopmentBuildingScalableSystemsChat blog post';
-  const ogImage = '/og/default.svg';
+const ApiFirstDevelopmentBuildingScalableSystemsChat = () => {
   return (
     <div>
       <Head>

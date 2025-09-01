@@ -1,58 +1,57 @@
-#!/usr/bin/env node
-/* eslint-disable no-console */
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
 
-const pagesDir = path.join(process.cwd(), 'pages')
-const ignore = new Set(['_app.tsx', '_document.tsx', 'api'])
-
-function* walk(dir) {
-  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
-    const full = path.join(dir, e.name)
-    if (e.isDirectory()) {
-      if (e.name === 'api') continue
-      yield* walk(full)
+function walkPages(dirPath) {
+  const results = [];
+  for (const entry of fs.readdirSync(dirPath, { withFileTypes: true })) {
+    const full = path.join(dirPath, entry.name);
+    if (entry.isDirectory()) {
+      results.push(...walkPages(full));
     } else {
-      yield full
+      results.push(full);
     }
   }
+  return results;
 }
 
-function routeFromFile(file) {
-  const rel = path.relative(pagesDir, file).replace(/\\/g, '/')
-  if (ignore.has(rel)) return null
-  const noExt = rel.replace(/\.(tsx|ts|jsx|js|mdx)$/i, '')
-  if (noExt.endsWith('/index')) return '/' + noExt.replace(/\/index$/, '')
-  if (noExt === 'index') return '/'
-  return '/' + noExt
+function toRoute(root, filePath) {
+  const rel = filePath.replace(root + path.sep, '');
+  if (rel.startsWith('_')) return null;
+  if (/^_app\.|^_document\.|^_error\./.test(path.basename(rel))) return null;
+  if (rel.startsWith('api' + path.sep)) return null;
+  const noExt = rel.replace(/\.(tsx|ts|jsx|js|mdx?|html?)$/, '');
+  let route = '/' + noExt.replace(/index$/, '').replace(/\\/g, '/').replace(/\$/g, '');
+  route = route.replace(/\/+$/g, '');
+  if (route === '') route = '/';
+  return route;
 }
 
-const routes = []
-for (const f of walk(pagesDir)) {
-  const r = routeFromFile(f)
-  if (!r) continue
-  const stat = fs.statSync(f)
-  routes.push({ route: r, bytes: stat.size })
+function main() {
+  const repoRoot = path.resolve(__dirname, '..');
+  const pagesDir = path.resolve(repoRoot, 'pages');
+  const outDir = path.resolve(repoRoot, 'public', 'automation');
+  const outFile = path.join(outDir, 'routes.json');
+
+  if (!fs.existsSync(pagesDir)) {
+    process.stdout.write('No pages directory found. Skipping.\n');
+    return;
+  }
+
+  const files = walkPages(pagesDir);
+  const routes = [];
+  for (const file of files) {
+    const route = toRoute(pagesDir, file);
+    if (!route) continue;
+    routes.push({ route, file: path.relative(repoRoot, file) });
+  }
+
+  routes.sort((a, b) => a.route.localeCompare(b.route));
+
+  fs.mkdirSync(outDir, { recursive: true });
+  fs.writeFileSync(outFile, JSON.stringify({ generatedAt: new Date().toISOString(), count: routes.length, routes }, null, 2) + '\n');
+  process.stdout.write(`Wrote ${routes.length} routes to ${path.relative(repoRoot, outFile)}\n`);
 }
 
-routes.sort((a,b) => a.route.localeCompare(b.route))
-
-const outPath = path.join(process.cwd(), 'public', 'reports', 'route-map.json')
-fs.mkdirSync(path.dirname(outPath), { recursive: true })
-const json = JSON.stringify({ generatedAt: new Date().toISOString(), routes }, null, 2)
-let before = null
-if (fs.existsSync(outPath)) before = fs.readFileSync(outPath, 'utf8')
-if (before !== json) {
-  fs.writeFileSync(outPath, json)
-  try {
-    execSync('git add -A')
-    execSync('git config user.name "zion-bot"')
-    execSync('git config user.email "bot@zion.app"')
-    execSync('git commit -m "chore(automation): update route map" || true')
-    try { execSync('git push') } catch {}
-  } catch {}
-  console.log('[routes] updated')
-} else {
-  console.log('[routes] no changes')
+if (require.main === module) {
+  main();
 }

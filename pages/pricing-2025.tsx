@@ -5,7 +5,8 @@ import {
   ArrowRight, Check, Star, Users, Zap, Shield, Globe, 
   TrendingUp, Award, Clock, CheckCircle, ExternalLink
 } from 'lucide-react';
-import Layout from '../components/Layout';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
 import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
 
 export default function Pricing2025() {
@@ -53,16 +54,18 @@ export default function Pricing2025() {
   };
 
   return (
-    <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
-        <Head>
-          <title>2025 Pricing & Services — Zion Tech Group</title>
-          <meta name="description" content="Explore our comprehensive pricing for innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services. Transparent pricing with flexible plans." />
-          <meta property="og:title" content="2025 Pricing & Services — Zion Tech Group" />
-          <meta property="og:description" content="Explore our comprehensive pricing for innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services." />
-          <meta name="keywords" content="pricing, micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />
-          <link rel="canonical" href="https://ziontechgroup.com/pricing-2025" />
-        </Head>
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
+      <Head>
+        <title>2025 Pricing & Services — Zion Tech Group</title>
+        <meta name="description" content="Explore our comprehensive pricing for innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services. Transparent pricing with flexible plans." />
+        <meta property="og:title" content="2025 Pricing & Services — Zion Tech Group" />
+        <meta property="og:description" content="Explore our comprehensive pricing for innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services." />
+        <meta name="keywords" content="pricing, micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />
+        <link rel="canonical" href="https://ziontechgroup.com/pricing-2025" />
+      
+        <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"2025 Pricing & Services — Zion Tech Group","url":"https://ziontechgroup.com/pricing-2025","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script></Head>
+
+      <EnhancedNavigation />
 
       {/* Hero Section */}
       <section className="relative py-20 px-6">
@@ -386,7 +389,7 @@ export default function Pricing2025() {
         </div>
       </section>
 
-      </div>
-    </Layout>
+      <EnhancedFooter />
+    </div>
   );
 }

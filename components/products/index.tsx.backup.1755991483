@@ -1,7 +1,7 @@
-import type { NextPage } from 'next';
+
 import Head from 'next/head';
 
-const Index: NextPage = () => {
+const Index = () => {
   return (
     <div>
       <Head>
@@ -17,8 +17,4 @@ const Index: NextPage = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Index;
-=======
-export default Index;
->>>>>>> origin/cursor/deploy-zion-brain-ai-system-5783

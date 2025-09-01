@@ -1,12 +1,9 @@
-import type { NextPage } from 'next';
+
 import Head from 'next/head';
 import Link from 'next/link';
 import ShareBar from '../../components/ShareBar';
 
-const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
-  const title = '5gTechnologyAndItsImpactOnIotChat - Zion Tech Solutions';
-  const desc = '5gTechnologyAndItsImpactOnIotChat blog post';
-  const ogImage = '/og/default.svg';
+const FiveGTechnologyAndItsImpactOnIotChat = () => {
   return (
     <div>
       <Head>

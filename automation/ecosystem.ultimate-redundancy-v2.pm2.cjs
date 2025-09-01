@@ -15,18 +15,16 @@ module.exports = {
         NODE_ENV: 'production',
         PORT: 3001
       },
-      log_file: './automation/logs/ultimate-redundancy-v2.log',
-      out_file: './automation/logs/ultimate-redundancy-v2-out.log',
       error_file: './automation/logs/ultimate-redundancy-v2-error.log',
+      out_file: './automation/logs/ultimate-redundancy-v2-out.log',
+      log_file: './automation/logs/ultimate-redundancy-v2-combined.log',
+      time: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
       merge_logs: true,
       max_restarts: 10,
       min_uptime: '10s',
       restart_delay: 4000,
-      kill_timeout: 5000,
-      wait_ready: true,
-      listen_timeout: 8000,
-      source_map_support: false
+      exp_backoff_restart_delay: 100
     },
     {
       name: 'ultimate-redundancy-v2-monitor',
@@ -40,9 +38,15 @@ module.exports = {
         NODE_ENV: 'production',
         MODE: 'monitor'
       },
-      log_file: './automation/logs/ultimate-redundancy-v2-monitor.log',
+      error_file: './automation/logs/ultimate-redundancy-v2-monitor-error.log',
       out_file: './automation/logs/ultimate-redundancy-v2-monitor-out.log',
-      error_file: './automation/logs/ultimate-redundancy-v2-monitor-error.log'
+      log_file: './automation/logs/ultimate-redundancy-v2-monitor-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 5,
+      min_uptime: '10s',
+      restart_delay: 2000
     }
   ]
 };

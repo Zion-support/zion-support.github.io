@@ -1,7 +1,7 @@
-
+import type { NextPage } from 'next';
 import Head from 'next/head';
 
-const Custom404 = () => {
+const Custom404: NextPage = () => {
   return (
     <div>
       <Head>
@@ -18,4 +18,3 @@ const Custom404 = () => {
 };
 
 export default Custom404;
->>>>>>> origin/cursor/deploy-zion-token-economy-simulator-07d9

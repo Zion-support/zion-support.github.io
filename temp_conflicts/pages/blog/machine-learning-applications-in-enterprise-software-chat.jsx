@@ -13,7 +13,7 @@ const MachineLearningApplicationsInEnterpriseSoftwareChat = () => {
       <main>
         <h1>MachineLearningApplicationsInEnterpriseSoftwareChat</h1>
         <p>Blog content coming soon...</p>
-        <Link href="/blog"><a>Back to Blog</a></Link>
+        <a href="/blog">Back to Blog</a>
       </main>
     </div>
   );

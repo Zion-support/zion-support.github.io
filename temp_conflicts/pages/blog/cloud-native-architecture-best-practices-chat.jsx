@@ -13,7 +13,7 @@ const CloudNativeArchitectureBestPracticesChat = () => {
       <main>
         <h1>CloudNativeArchitectureBestPracticesChat</h1>
         <p>Blog content coming soon...</p>
-        <Link href="/blog"><a>Back to Blog</a></Link>
+        <a href="/blog">Back to Blog</a>
       </main>
     </div>
   );

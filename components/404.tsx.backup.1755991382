@@ -1,4 +1,3 @@
-export default function NotFound(){
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -18,10 +17,6 @@ const 404: NextPage = () => {
   );
 };
 
-export default function NotFound() {
-  return <div>Not Found</div>;
-}
-=======
 export default 404;
 =======
   return <div className="min-h-screen flex items-center justify-center">Page not found.</div>;

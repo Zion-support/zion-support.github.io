@@ -1,11 +1,11 @@
 {
   "summary": {
-    "totalFiles": 2,
-    "filesWithIssues": 2,
-    "totalIssues": 3,
-    "totalWarnings": 2,
-    "buildBreakingFiles": 1,
-    "canBuild": false
+    "totalFiles": 4,
+    "filesWithIssues": 4,
+    "totalIssues": 0,
+    "totalWarnings": 4,
+    "buildBreakingFiles": 0,
+    "canBuild": true
   },
   "results": [
     {
@@ -58,5 +58,7 @@
     }
   ],
   "buildBreakingFiles": [],
-  "generatedAt": "2025-08-20T19:04:36.659Z"
+  "generatedAt": "2025-08-20T19:21:03.555Z"
+=======
+  "generatedAt": "2025-08-20T20:44:48.331Z"
 }

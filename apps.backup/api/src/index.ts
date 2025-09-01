@@ -1,16 +1,16 @@
 import Fastify from 'fastify';
 import cors from '@fastify/cors';
 import rateLimit from '@fastify/rate-limit';
-import { createOpenAIClient, generateJobPost } from './openai';
-import { withUser } from './pg';
 import dotenv from 'dotenv';
+import { createOpenAIClient, generateJobPost } from './openai.js';
+import { getPool, withUser } from './pg.js';
 
 dotenv.config();
 
 const app = Fastify({ logger: true });
 
 await app.register(cors, {
-  origin: (origin: string | undefined, cb: (err: Error | null, allow?: boolean) => void) => {
+  origin: (origin, cb) => {
     const allowed = (process.env.CORS_ORIGINS || '').split(',').map((s) => s.trim());
     if (!origin || allowed.includes('*') || allowed.includes(origin)) {
       cb(null, true);
@@ -29,7 +29,7 @@ function getUserId(req: any): string | null {
   return (req.headers['x-user-id'] as string) || (req.query as any)['user_id'] || null;
 }
 
-app.post('/ai/ask', async (req: any, reply: any) => {
+app.post('/ai/ask', async (req, reply) => {
   const body = (req.body as any) || {};
   const prompt = body.prompt as string;
   if (!prompt) return reply.code(400).send({ error: 'prompt required' });
@@ -37,7 +37,7 @@ app.post('/ai/ask', async (req: any, reply: any) => {
   return { text: completion.output_text };
 });
 
-app.post('/jobs/generate', async (req: any, reply: any) => {
+app.post('/jobs/generate', async (req, reply) => {
   const body = (req.body as any) || {};
   const role = (body.role as string) || 'Engineer';
   const userId = getUserId(req);
@@ -53,7 +53,7 @@ app.post('/jobs/generate', async (req: any, reply: any) => {
   return { saved: Boolean(userId), description };
 });
 
-app.get('/talent/search', async (req: any, reply: any) => {
+app.get('/talent/search', async (req, reply) => {
   const q = (req.query as any).q as string;
   const country = (req.query as any).country as string | undefined;
   const userId = getUserId(req);
@@ -74,7 +74,7 @@ app.get('/talent/search', async (req: any, reply: any) => {
   return { results: rows };
 });
 
-app.get('/projects/:name/track', async (req: any, reply: any) => {
+app.get('/projects/:name/track', async (req, reply) => {
   const name = (req.params as any).name as string;
   const userId = getUserId(req);
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
@@ -86,7 +86,7 @@ app.get('/projects/:name/track', async (req: any, reply: any) => {
   return { project };
 });
 
-app.get('/notifications', async (req: any, reply: any) => {
+app.get('/notifications', async (req, reply) => {
   const userId = getUserId(req);
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
   const items = await withUser(userId, async (client) => {
@@ -100,7 +100,7 @@ app.get('/notifications', async (req: any, reply: any) => {
 });
 
 const port = Number(process.env.API_PORT || 4000);
-app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
+app.listen({ port, host: '0.0.0.0' }).catch((err) => {
   app.log.error(err);
-  (process as any).exit(1);
+  process.exit(1);
 });

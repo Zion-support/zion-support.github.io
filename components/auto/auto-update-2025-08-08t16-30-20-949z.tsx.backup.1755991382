@@ -1,4 +1,3 @@
-export default function Auto(){
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -18,8 +17,6 @@ const AutoUpdate20250808t163020949z: NextPage = () => {
   );
 };
 
-export default function AutoPage() { return <div>Auto Update</div>; }
-=======
 export default AutoUpdate20250808t163020949z;
 =======
   return <div className="max-w-3xl mx-auto p-6">Auto Update</div>;

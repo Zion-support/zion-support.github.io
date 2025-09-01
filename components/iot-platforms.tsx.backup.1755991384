@@ -1,7 +1,7 @@
-
+import type { NextPage } from 'next';
 import Head from 'next/head';
 
-const IotPlatforms = () => {
+const IotPlatforms: NextPage = () => {
   return (
     <div>
       <Head>
@@ -17,8 +17,4 @@ const IotPlatforms = () => {
   );
 };
 
-<<<<<<< HEAD
 export default IotPlatforms;
-=======
-export default IotPlatforms;
->>>>>>> origin/cursor/deploy-zion-brain-ai-system-5783

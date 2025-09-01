@@ -110,7 +110,6 @@ const SpaceTechnologyPage: React.FC = () => {
     }
   ];
 
-export default function SpaceTechnology() {
   return (
     <Layout>
       <SEO 
@@ -150,7 +149,8 @@ export default function SpaceTechnology() {
               </div>
             </motion.div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Space Capabilities */}
         <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">

@@ -6,16 +6,10 @@ export default class MyDocument extends Document {
       <Html>
         <Head />
         <body>
-=======
-      <Html>
-        <Head />
-        <body>
           <Main />
           <NextScript />
         </body>
       </Html>
-}
-=======
     )
   }
 }

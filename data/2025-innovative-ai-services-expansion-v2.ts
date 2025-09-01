@@ -303,49 +303,7 @@ export const innovativeAIServices2025ExpansionV2 = [
     customers: 178,
     rating: 4.8,
     reviews: 145
-  }
-];
-
-export interface InnovativeAIService2025 {
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  category: string;
-  price: {
-    monthly: number;
-    yearly: number;
-    currency: string;
-    trialDays: number;
-    setupTime: string;
-  };
-  features: string[];
-  benefits: string[];
-  targetAudience: string[];
-  marketPosition: string;
-  competitors: string[];
-  techStack: string[];
-  realImplementation: boolean;
-  implementationDetails: string;
-  roi: string;
-  useCases: string[];
-  integrations: string[];
-  support: string;
-  compliance: string[];
-  link: string;
-  icon: string;
-  color: string;
-  popular: boolean;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  mobile: string;
-  email: string;
-  address: string;
-}
-
-export const innovativeAIServices2025V2: InnovativeAIService[] = [
+  },
   {
     id: 'quantum-ai-brain-interface',
     name: 'Quantum AI Brain Interface',
@@ -661,16 +619,16 @@ export const innovativeAIServices2025V2: InnovativeAIService[] = [
       'User experience optimization',
       'Human-AI collaboration'
     ],
-    integrations: ['CRM systems, Healthcare platforms, Educational tools, E-commerce platforms'],
-    support: '24/7 support, dedicated AI specialist, training sessions, and comprehensive documentation.',
-    compliance: ['SOC 2 Type II, ISO 27001, HIPAA, GDPR, CCPA, Ethical AI standards'],
-    link: 'https://ziontechgroup.com/ai-emotional-intelligence-engine',
-    icon: '😊',
-    color: 'from-yellow-500 to-orange-600',
-    popular: true,
-    launchDate: '2024-07-01',
-    customers: 1200,
-    rating: 4.8,
+    integrations: ['Document management systems, Legal research tools, E-signature platforms, Case management systems'],
+    support: '24/7 technical support, dedicated legal consultant, training programs, and custom implementation services.',
+    compliance: ['SOC 2 Type II, ISO 27001, GDPR, Legal industry standards'],
+    link: 'https://ziontechgroup.com/ai-legal-analysis',
+    icon: '⚖️',
+    color: 'from-gray-500 to-slate-600',
+    popular: false,
+    launchDate: '2024-05-15',
+    customers: 480,
+        rating: 4.8,
     reviews: 67
   }
 ];

@@ -1,242 +1,424 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  Home, Search, Rocket, FileText, Users, Mail, Map, 
+  ArrowRight, ExternalLink, ChevronRight, Globe, Building
+} from 'lucide-react';
+import SmartHeader from '../components/SmartHeader';
+import SmartFooter from '../components/SmartFooter';
 
 export default function SitemapPage() {
-	const mainPages = [
-		{ name: 'Home', href: '/', description: 'Welcome to Zion Tech Group' },
-		{ name: 'About', href: '/about', description: 'Learn about our mission and vision' },
-		{ name: 'Team', href: '/team', description: 'Meet our expert team' },
-		{ name: 'Services', href: '/services', description: 'Explore our comprehensive services' },
-		{ name: 'Solutions', href: '/solutions', description: 'Industry-specific solutions' },
-		{ name: 'Pricing', href: '/pricing', description: 'Transparent pricing for all services' },
-		{ name: 'Contact', href: '/contact', description: 'Get in touch with our team' },
-		{ name: 'Blog', href: '/blog', description: 'Latest insights and updates' },
-		{ name: 'Careers', href: '/careers', description: 'Join our team' },
-		{ name: 'Trust', href: '/trust', description: 'Security and compliance information' }
-	];
+  const mainPages = [
+    { href: '/', label: '🏠 Home', description: 'Main landing page with company overview and featured services' },
+    { href: '/about', label: '👥 About Us', description: 'Company story, mission, values, and team information' },
+    { href: '/services', label: '🚀 Services', description: 'Complete catalog of AI and technology services' },
+    { href: '/explore', label: '🔍 Explore', description: 'Browse services by category and technology area' },
+    { href: '/contact', label: '📧 Contact', description: 'Get in touch and start your project' }
+  ];
 
-	const aiAutomationServices = [
-		{ name: 'AI Autonomous Research Assistant', href: '/ai-autonomous-research-assistant', description: 'Advanced AI-powered research automation' },
-		{ name: 'Advanced AI Automation Services', href: '/advanced-ai-automation-services', description: 'Comprehensive AI automation solutions' },
-		{ name: 'Agentic RAG System', href: '/agentic-rag', description: 'Intelligent retrieval-augmented generation' },
-		{ name: 'Quantum Neural Network Platform', href: '/quantum-neural-network-platform', description: 'Next-generation quantum computing solutions' }
-	];
+  const serviceCategories = [
+    { href: '/category/ai', label: '🧠 AI & Machine Learning', description: 'Artificial intelligence and machine learning solutions' },
+    { href: '/category/quantum', label: '⚛️ Quantum Computing', description: 'Quantum computing and quantum AI applications' },
+    { href: '/category/cybersecurity', label: '🛡️ Cybersecurity', description: 'Quantum-resistant security and threat detection' },
+    { href: '/category/cloud', label: '☁️ Cloud & DevOps', description: 'Cloud infrastructure and DevOps automation' },
+    { href: '/category/edge', label: '🌐 Edge Computing', description: 'Edge computing orchestration and IoT management' },
+    { href: '/category/space', label: '🚀 Space Technology', description: 'Space exploration and resource optimization' },
+    { href: '/category/biotech', label: '🧬 Biotechnology', description: 'Neural interfaces and biomedical innovations' },
+    { href: '/category/blockchain', label: '⛓️ Blockchain', description: 'AI-powered blockchain governance and DeFi' },
+    { href: '/category/automation', label: '⚡ Automation', description: 'Business process automation and AI agents' },
+    { href: '/category/fintech', label: '💰 Financial Technology', description: 'Quantum financial trading and AI analytics' }
+  ];
 
-	const cybersecurityServices = [
-		{ name: 'Advanced Cybersecurity Suite', href: '/advanced-cybersecurity-suite', description: 'Comprehensive security protection' },
-		{ name: 'SOC2 Compliance Automation', href: '/soc2-compliance-automation', description: 'Automated compliance management' }
-	];
+  const featuredServices = [
+    { href: '/ai-business-intelligence', label: 'AI Business Intelligence', category: 'AI & ML' },
+    { href: '/quantum-cybersecurity', label: 'Quantum Cybersecurity', category: 'Cybersecurity' },
+    { href: '/edge-computing-orchestration', label: 'Edge Computing Orchestration', category: 'Edge Computing' },
+    { href: '/space-technology', label: 'Space Technology Innovation', category: 'Space Technology' },
+    { href: '/neural-interface', label: 'Neural Interface Development', category: 'Biotechnology' },
+    { href: '/autonomous-devops', label: 'Autonomous DevOps', category: 'Cloud & DevOps' },
+    { href: '/ai-customer-experience', label: 'AI Customer Experience', category: 'AI & ML' },
+    { href: '/quantum-neural-networks', label: 'Quantum Neural Networks', category: 'Quantum Computing' }
+  ];
 
-	const infrastructureServices = [
-		{ name: 'Advanced IT Infrastructure Services', href: '/advanced-it-infrastructure-services', description: 'Enterprise-grade infrastructure solutions' },
-		{ name: 'AI-Powered IT Asset Management', href: '/ai-powered-it-asset-management', description: 'Intelligent asset tracking and management' },
-		{ name: '5G Enterprise Solutions', href: '/5g-enterprise-solutions', description: 'Next-generation network infrastructure' }
-	];
+  const resources = [
+    { href: '/reports', label: '📊 Reports', description: 'Latest technology reports and insights' },
+    { href: '/newsroom', label: '📰 Newsroom', description: 'Company updates and industry news' },
+    { href: '/automation', label: '⚡ Automations', description: 'Automation tools and solutions' },
+    { href: '/search', label: '🔎 Search', description: 'Search across all services and content' }
+  ];
 
-	const businessOperationsServices = [
-		{ name: 'Autonomous Business Operations Platform', href: '/autonomous-business-operations-platform', description: 'Self-managing business processes' },
-		{ name: 'Advanced Research Automation', href: '/advanced-research-automation', description: 'Streamlined research workflows' }
-	];
+  const externalLinks = [
+    { href: 'https://github.com/ai-factory', label: 'GitHub', description: 'Open source projects and code examples' },
+    { href: 'https://docs.ziontechgroup.com', label: 'Documentation', description: 'Technical documentation and guides' },
+    { href: 'https://status.ziontechgroup.com', label: 'System Status', description: 'Real-time system status and uptime' }
+  ];
 
-	const toolsAndUtilities = [
-		{ name: 'URL Shortener', href: '/url-shortener', description: 'Professional URL shortening service' },
-		{ name: 'Website Performance Monitor', href: '/website-performance-monitor', description: 'Real-time performance tracking' },
-		{ name: 'WCAG Accessibility Scanner', href: '/wcag-accessibility-scanner', description: 'Web accessibility compliance checker' },
-		{ name: 'Whitepaper Builder', href: '/whitepaper-builder', description: 'Professional document creation tool' }
-	];
+  const contactInfo = [
+    { type: 'Phone', value: '+1 (302) 464-0950', action: 'tel:+13024640950' },
+    { type: 'Email', value: 'kleber@ziontechgroup.com', action: 'mailto:kleber@ziontechgroup.com' },
+    { type: 'Address', value: 'Middletown, DE', action: 'https://maps.google.com/?q=Middletown,DE' }
+  ];
 
-	const resources = [
-		{ name: 'Documentation', href: '/docs', description: 'Comprehensive guides and API docs' },
-		{ name: 'Technology Insights', href: '/technology-insights', description: 'Latest technology trends and insights' },
-		{ name: 'Tool Comparison', href: '/tool-comparison', description: 'Compare different technology solutions' },
-		{ name: 'Startup Tools', href: '/startup-tools', description: 'Essential tools for startups' }
-	];
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+      <Head>
+        <title>Sitemap | Zion Tech Group</title>
+        <meta name="description" content="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category." />
+        <meta property="og:title" content="Sitemap | Zion Tech Group" />
+        <meta property="og:description" content="Complete website sitemap and navigation guide." />
+        <link rel="canonical" href="https://ziontechgroup.com/sitemap" />
+      </Head>
 
-	return (
-		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-			<Head>
-				<title>Sitemap | Zion Tech Group</title>
-				<meta name="description" content="Complete overview of all pages and services available on the Zion Tech Group website." />
-				<link rel="canonical" href="https://ziontechgroup.com/sitemap" />
-			</Head>
-			<div className="max-w-6xl mx-auto space-y-12">
-				<div className="text-center">
-					<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Sitemap</h1>
-					<p className="text-xl text-white/80 max-w-3xl mx-auto">
-						Complete overview of all pages and services available on our website. Navigate easily to find what you're looking for.
-					</p>
-				</div>
+      <SmartHeader />
 
-				{/* Main Pages */}
-				<div>
-					<h2 className="text-2xl font-bold text-white mb-6">Main Pages</h2>
-					<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-						{mainPages.map(page => (
-							<Link 
-								key={page.href} 
-								href={page.href}
-								className="p-4 rounded-xl bg-black/40 border border-cyan-500/20 hover:border-cyan-500/40 transition-colors group"
-							>
-								<div className="text-cyan-300 font-medium group-hover:text-cyan-200 transition-colors">{page.name}</div>
-								<div className="text-white/60 text-sm mt-1">{page.description}</div>
-							</Link>
-						))}
-					</div>
-				</div>
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+              Site Map
+            </h1>
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
+              Navigate our comprehensive website and discover all the AI-powered technology solutions, 
+              resources, and information available at Zion Tech Group.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="#main-pages"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+              >
+                Explore Site
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </a>
+              <a
+                href="/search"
+                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
+              >
+                Search Site
+                <Search className="w-5 h-5 ml-2" />
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
-				{/* AI & Automation Services */}
-				<div>
-					<h2 className="text-2xl font-bold text-white mb-6">🤖 AI & Automation Services</h2>
-					<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-						{aiAutomationServices.map(service => (
-							<Link 
-								key={service.href} 
-								href={service.href}
-								className="p-4 rounded-xl bg-black/40 border border-cyan-500/20 hover:border-cyan-500/40 transition-colors group"
-							>
-								<div className="text-cyan-300 font-medium group-hover:text-cyan-200 transition-colors">{service.name}</div>
-								<div className="text-white/60 text-sm mt-1">{service.description}</div>
-							</Link>
-						))}
-					</div>
-				</div>
+      {/* Main Pages */}
+      <section id="main-pages" className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+              Main Pages
+            </h2>
+            <p className="text-white/60 text-center max-w-2xl mx-auto">
+              Core pages that provide essential information about our company and services
+            </p>
+          </motion.div>
 
-				{/* Cybersecurity Services */}
-				<div>
-					<h2 className="text-2xl font-bold text-white mb-6">🔒 Cybersecurity Services</h2>
-					<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-						{cybersecurityServices.map(service => (
-							<Link 
-								key={service.href} 
-								href={service.href}
-								className="p-4 rounded-xl bg-black/40 border border-cyan-500/20 hover:border-cyan-500/40 transition-colors group"
-							>
-								<div className="text-cyan-300 font-medium group-hover:text-cyan-200 transition-colors">{service.name}</div>
-								<div className="text-white/60 text-sm mt-1">{service.description}</div>
-							</Link>
-						))}
-					</div>
-				</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {mainPages.map((page, index) => (
+              <motion.div
+                key={page.href}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <Link
+                  href={page.href}
+                  className="block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">
+                      {page.label}
+                    </h3>
+                    <ChevronRight className="w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" />
+                  </div>
+                  <p className="text-white/70 text-sm leading-relaxed">{page.description}</p>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-				{/* Infrastructure Services */}
-				<div>
-					<h2 className="text-2xl font-bold text-white mb-6">🏗️ Infrastructure Services</h2>
-					<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-						{infrastructureServices.map(service => (
-							<Link 
-								key={service.href} 
-								href={service.href}
-								className="p-4 rounded-xl bg-black/40 border border-cyan-500/20 hover:border-cyan-500/40 transition-colors group"
-							>
-								<div className="text-cyan-300 font-medium group-hover:text-cyan-200 transition-colors">{service.name}</div>
-								<div className="text-white/60 text-sm mt-1">{service.description}</div>
-							</Link>
-						))}
-					</div>
-				</div>
+      {/* Service Categories */}
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+              Service Categories
+            </h2>
+            <p className="text-white/60 text-center max-w-2xl mx-auto">
+              Browse our comprehensive range of technology solutions organized by category
+            </p>
+          </motion.div>
 
-				{/* Business Operations Services */}
-				<div>
-					<h2 className="text-2xl font-bold text-white mb-6">⚙️ Business Operations Services</h2>
-					<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-						{businessOperationsServices.map(service => (
-							<Link 
-								key={service.href} 
-								href={service.href}
-								className="p-4 rounded-xl bg-black/40 border border-cyan-500/20 hover:border-cyan-500/40 transition-colors group"
-							>
-								<div className="text-cyan-300 font-medium group-hover:text-cyan-200 transition-colors">{service.name}</div>
-								<div className="text-white/60 text-sm mt-1">{service.description}</div>
-							</Link>
-						))}
-					</div>
-				</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {serviceCategories.map((category, index) => (
+              <motion.div
+                key={category.href}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <Link
+                  href={category.href}
+                  className="block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">
+                      {category.label}
+                    </h3>
+                    <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" />
+                  </div>
+                  <p className="text-white/70 text-sm leading-relaxed">{category.description}</p>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-				{/* Tools & Utilities */}
-				<div>
-					<h2 className="text-2xl font-bold text-white mb-6">🛠️ Tools & Utilities</h2>
-					<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-						{toolsAndUtilities.map(tool => (
-							<Link 
-								key={tool.href} 
-								href={tool.href}
-								className="p-4 rounded-xl bg-black/40 border border-cyan-500/20 hover:border-cyan-500/40 transition-colors group"
-							>
-								<div className="text-cyan-300 font-medium group-hover:text-cyan-200 transition-colors">{tool.name}</div>
-								<div className="text-white/60 text-sm mt-1">{tool.description}</div>
-							</Link>
-						))}
-					</div>
-				</div>
+      {/* Featured Services */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+              Featured Services
+            </h2>
+            <p className="text-white/60 text-center max-w-2xl mx-auto">
+              Our most popular and innovative technology solutions
+            </p>
+          </motion.div>
 
-				{/* Resources */}
-				<div>
-					<h2 className="text-2xl font-bold text-white mb-6">📚 Resources</h2>
-					<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-						{resources.map(resource => (
-							<Link 
-								key={resource.href} 
-								href={resource.href}
-								className="p-4 rounded-xl bg-black/40 border border-cyan-500/20 hover:border-cyan-500/40 transition-colors group"
-							>
-								<div className="text-cyan-300 font-medium group-hover:text-cyan-200 transition-colors">{resource.name}</div>
-								<div className="text-white/60 text-sm mt-1">{resource.description}</div>
-							</Link>
-						))}
-					</div>
-				</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredServices.map((service, index) => (
+              <motion.div
+                key={service.href}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <Link
+                  href={service.href}
+                  className="block p-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105"
+                >
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors duration-300 truncate">
+                      {service.label}
+                    </h3>
+                    <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300 flex-shrink-0" />
+                  </div>
+                  <p className="text-white/60 text-xs">{service.category}</p>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-				{/* Additional Services */}
-				<div>
-					<h2 className="text-2xl font-bold text-white mb-6">🚀 Additional Services</h2>
-					<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-						<Link 
-							href="/services-advertising"
-							className="p-4 rounded-xl bg-black/40 border border-cyan-500/20 hover:border-cyan-500/40 transition-colors group"
-						>
-							<div className="text-cyan-300 font-medium group-hover:text-cyan-200 transition-colors">Services Advertising</div>
-							<div className="text-white/60 text-sm mt-1">Promote your services effectively</div>
-						</Link>
-						<Link 
-							href="/market-pricing"
-							className="p-4 rounded-xl bg-black/40 border border-cyan-500/20 hover:border-cyan-500/40 transition-colors group"
-						>
-							<div className="text-cyan-300 font-medium group-hover:text-cyan-200 transition-colors">Market Pricing</div>
-							<div className="text-white/60 text-sm mt-1">Competitive pricing analysis</div>
-						</Link>
-						<Link 
-							href="/comprehensive-2025-services-showcase"
-							className="p-4 rounded-xl bg-black/40 border border-cyan-500/20 hover:border-cyan-500/40 transition-colors group"
-						>
-							<div className="text-cyan-300 font-medium group-hover:text-cyan-200 transition-colors">2025 Services Showcase</div>
-							<div className="text-white/60 text-sm mt-1">Comprehensive service overview</div>
-						</Link>
-					</div>
-				</div>
+      {/* Resources & Tools */}
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+              Resources & Tools
+            </h2>
+            <p className="text-white/60 text-center max-w-2xl mx-auto">
+              Additional resources, tools, and information to help you succeed
+            </p>
+          </motion.div>
 
-				{/* Quick Navigation */}
-				<div className="text-center p-8 rounded-xl bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
-					<h2 className="text-2xl font-bold text-white mb-4">Need Help Finding Something?</h2>
-					<p className="text-white/80 mb-6">
-						Can't find what you're looking for? Our team is here to help you navigate our services and find the right solution.
-					</p>
-					<div className="flex flex-col sm:flex-row gap-4 justify-center">
-						<Link 
-							href="/contact" 
-							className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg font-semibold transition-colors"
-						>
-							Contact Us
-						</Link>
-						<Link 
-							href="/services" 
-							className="px-6 py-3 border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 rounded-lg font-semibold transition-colors"
-						>
-							Browse Services
-						</Link>
-					</div>
-				</div>
-			</div>
-		</div>
-	);
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {resources.map((resource, index) => (
+              <motion.div
+                key={resource.href}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <Link
+                  href={resource.href}
+                  className="block p-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105"
+                >
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">
+                      {resource.label}
+                    </h3>
+                    <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" />
+                  </div>
+                  <p className="text-white/60 text-xs leading-relaxed">{resource.description}</p>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* External Resources */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+              External Resources
+            </h2>
+            <p className="text-white/60 text-center max-w-2xl mx-auto">
+              Additional resources and tools hosted on external platforms
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {externalLinks.map((link, index) => (
+              <motion.div
+                key={link.href}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">
+                      {link.label}
+                    </h3>
+                    <ExternalLink className="w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" />
+                  </div>
+                  <p className="text-white/70 text-sm leading-relaxed">{link.description}</p>
+                </a>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information */}
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+              Contact Information
+            </h2>
+            <p className="text-white/60 text-center max-w-2xl mx-auto">
+              Get in touch with us for consultations, support, or to start your project
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {contactInfo.map((contact, index) => (
+              <motion.div
+                key={contact.type}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl"
+              >
+                <h3 className="text-lg font-bold text-white mb-3">{contact.type}</h3>
+                <a
+                  href={contact.action}
+                  target={contact.action.startsWith('http') ? '_blank' : '_self'}
+                  rel={contact.action.startsWith('http') ? 'noopener noreferrer' : ''}
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+                >
+                  {contact.value}
+                </a>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Navigation */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+              Need Help Finding Something?
+            </h2>
+            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+              Use our search functionality or contact us directly for assistance
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/search"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+              >
+                Search Site
+                <Search className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                href="/contact"
+                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
+              >
+                Contact Support
+                <Mail className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <SmartFooter />
+    </div>
+  );
 }

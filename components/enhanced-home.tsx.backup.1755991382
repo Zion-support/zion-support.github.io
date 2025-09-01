@@ -17,10 +17,6 @@ const EnhancedHome: NextPage = () => {
   );
 };
 
-export default function EnhancedHome() {
-  return <div>Enhanced Home</div>;
-}
-=======
 export default EnhancedHome;
 =======
 export default function EnhancedHome(){

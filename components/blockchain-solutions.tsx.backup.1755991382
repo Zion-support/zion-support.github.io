@@ -1,4 +1,3 @@
-export default function BlockchainSolutions(){
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -18,8 +17,6 @@ const BlockchainSolutions: NextPage = () => {
   );
 };
 
-export default function BlockchainSolutions() { return <div>Blockchain Solutions</div>; }
-=======
 export default BlockchainSolutions;
 =======
   return <div className="max-w-3xl mx-auto p-6">Blockchain Solutions</div>;

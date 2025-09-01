@@ -1,32 +1,56 @@
 #!/usr/bin/env node
-/* eslint-disable no-console */
-const { execSync } = require('child_process')
-const fs = require('fs')
-const path = require('path')
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
-function run(cmd) { return execSync(cmd, { stdio: 'pipe' }).toString().trim() }
-
-try {
-  const since = '24 hours ago'
-  const log = run(`git log --since="${since}" --pretty=format:"- %s (%h)"`)
-  if (!log) { console.log('[changelog] no recent commits'); process.exit(0) }
-  const date = new Date().toISOString().split('T')[0]
-  const entry = `\n## ${date}\n\n${log}\n`
-  const file = path.join(process.cwd(), 'CHANGELOG.md')
-  let before = ''
-  if (fs.existsSync(file)) before = fs.readFileSync(file, 'utf8')
-  const content = `# Changelog\n${entry}${before.replace(/^# Changelog\n?/, '')}`
-  if (content !== before) {
-    fs.writeFileSync(file, content)
-    run('git add CHANGELOG.md')
-    run('git config user.name "zion-bot"')
-    run('git config user.email "bot@zion.app"')
-    run('git commit -m "chore(automation): update changelog" || true')
-    try { run('git push') } catch {}
-    console.log('[changelog] updated')
-  } else {
-    console.log('[changelog] unchanged')
+function getRecentCommits(limit = 30) {
+  try {
+    const raw = execSync(`git log -n ${limit} --pretty=format:%h||%s||%an||%ad --date=iso`, { encoding: 'utf8' });
+    return raw.split('\n').map(l => {
+      const [hash, subject, author, date] = l.split('||');
+      return { hash, subject, author, date };
+    });
+  } catch (e) {
+    return [];
   }
-} catch (e) {
-  console.log('[changelog] non-fatal', e.message)
 }
+
+function categorize(commits) {
+  const cats = { feat: [], fix: [], chore: [], docs: [], refactor: [], perf: [], test: [], other: [] };
+  for (const c of commits) {
+    const s = c.subject || '';
+    if (/^feat/i.test(s)) cats.feat.push(c);
+    else if (/^fix/i.test(s)) cats.fix.push(c);
+    else if (/^docs/i.test(s)) cats.docs.push(c);
+    else if (/^chore/i.test(s)) cats.chore.push(c);
+    else if (/^refactor/i.test(s)) cats.refactor.push(c);
+    else if (/^perf/i.test(s)) cats.perf.push(c);
+    else if (/^test/i.test(s)) cats.test.push(c);
+    else cats.other.push(c);
+  }
+  return cats;
+}
+
+function render(cats) {
+  const lines = [];
+  lines.push(`# Autonomous Changelog`);
+  lines.push(`Last update: ${new Date().toISOString()}`);
+  for (const [k, arr] of Object.entries(cats)) {
+    if (!arr.length) continue;
+    lines.push(`\n## ${k.toUpperCase()}`);
+    for (const c of arr) {
+      lines.push(`- ${c.subject} (${c.hash}, ${c.author}, ${c.date})`);
+    }
+  }
+  return lines.join('\n');
+}
+
+(function main(){
+  const commits = getRecentCommits(50);
+  const cats = categorize(commits);
+  const out = render(cats);
+  const outDir = path.join(process.cwd(), 'docs');
+  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
+  fs.writeFileSync(path.join(outDir, 'AUTONOMOUS_CHANGELOG.md'), out);
+  console.log('Wrote docs/AUTONOMOUS_CHANGELOG.md');
+})();

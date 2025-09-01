@@ -1,4 +1,45 @@
-import { InnovativeAIAutomationService } from './innovative-2025-ai-automation-services';
+import { ServiceVariant } from '../types/service-variants';
+
+export interface InnovativeAIAutomationService {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  variant: ServiceVariant;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+    website: string;
+  };
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
+}
 
 const contact = {
   mobile: '+1 302 464 0950',
@@ -89,21 +130,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     competitors: ['Zendesk, Intercom, Freshdesk, Help Scout, Zoho Desk'],
     marketSize: '$15B customer service software market',
     growthRate: '22% annual growth',
-    variant: 'ai-autonomous',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-=======
-    technology: ['Python, Selenium, Playwright, OpenAI, TensorFlow, Docker'],
-    integrations: ['Jenkins, GitHub Actions, GitLab CI, Azure DevOps, Jira'],
-    useCases: ['Automated testing, CI/CD integration, Quality assurance, Regression testing'],
-    roi: 'Reduce testing time by 80% and increase test coverage by 60%',
-    competitors: ['Selenium, Cypress, Playwright, TestCafe, Katalon'],
-    marketSize: '$4.2B+ test automation market',
-    growthRate: '92% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
@@ -206,21 +232,20 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
   {
     id: 'ai-autonomous-security-monitor',
     name: 'AI Autonomous Security Monitor',
-    tagline: '24/7 AI-powered security monitoring and threat response',
-    price: '$2,800',
+    tagline: 'Intelligent threat detection with automated response and predictive security',
+    price: '$349',
     period: '/month',
-    description: 'Advanced AI security platform that continuously monitors networks, detects threats in real-time, and autonomously responds to security incidents. Provides comprehensive threat intelligence and automated incident response.',
+    description: 'AI-driven security monitoring platform that automatically detects threats, analyzes patterns, and responds to security incidents.',
     features: [
-      'Real-time threat detection',
-      'AI-powered anomaly detection',
+      'AI-powered threat detection',
       'Automated incident response',
-      'Behavioral analysis',
-      'Threat intelligence feeds',
-      'Compliance reporting',
-      'Security orchestration',
-      'Machine learning models',
-      'API integrations',
-      'Custom alerting'
+      'Behavioral analysis and anomaly detection',
+      'Real-time security monitoring',
+      'Compliance reporting automation',
+      'Vulnerability assessment and management',
+      'Security orchestration and automation',
+      'Threat intelligence integration',
+      'Predictive security analytics'
     ],
     popular: true,
     icon: '🛡️',
@@ -233,69 +258,26 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     setupTime: '8 hours',
     category: 'AI & Security',
     realService: true,
-    technology: ['Python, TensorFlow, OpenAI, Elasticsearch, Redis, PostgreSQL'],
-    integrations: ['SIEM systems, Firewalls, IDS/IPS, Vulnerability scanners'],
-    useCases: ['Security monitoring, Threat detection, Incident response, Compliance management'],
-    roi: 'Reduce security incident response time by 75% and improve threat detection by 60%',
-    competitors: ['Splunk, ELK Stack, IBM QRadar, Microsoft Sentinel, Exabeam'],
-    marketSize: '$15.8B+ security monitoring market',
-    growthRate: '95% YoY',
-    variant: 'ai-security',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Real-time security monitoring platform with AI-powered threat detection and automated response capabilities.',
-    launchDate: '2025-02-05',
-    customers: 112,
-    rating: 4.9,
-    reviews: 78
-  },
-
-  // AI Marketing Automation Suite
-  {
-    id: 'ai-marketing-automation-suite',
-    name: 'AI Marketing Automation Suite',
-    tagline: 'Intelligent marketing automation with predictive analytics',
-    price: '$1,900',
-    period: '/month',
-    description: 'Comprehensive marketing automation platform that uses AI to optimize campaigns, predict customer behavior, and automate personalized marketing workflows. Increases conversion rates and reduces manual work.',
-    features: [
-      'AI-powered campaign optimization',
-      'Predictive customer analytics',
-      'Personalized content generation',
-      'Automated A/B testing',
-      'Lead scoring and nurturing',
-      'Multi-channel automation',
-      'ROI tracking',
-      'Customer segmentation',
-      'Email marketing automation',
-      'Social media management'
-    ],
-    popular: false,
-    icon: '📊',
-    color: 'from-blue-600 to-indigo-700',
-    textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-marketing-automation',
-    marketPosition: 'Competes with HubSpot ($800/month), Marketo ($1,250/month), Pardot ($1,250/month). Our advantage: AI-first approach and predictive analytics.',
-    targetAudience: 'Marketing teams, Digital agencies, E-commerce businesses, B2B companies',
-    trialDays: 14,
-    setupTime: '2-4 weeks',
-    category: 'AI Marketing',
-    realService: true,
-    technology: ['React, Node.js, Python, TensorFlow, PostgreSQL, Redis, AWS, Google Analytics API'],
+    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS, Apache Spark'],
     integrations: ['Salesforce, HubSpot, Google Analytics, Facebook Ads, Shopify, QuickBooks'],
-    useCases: ['Campaign automation, Lead nurturing, Customer segmentation, Content optimization, ROI tracking'],
-    roi: 'Marketing teams achieve 250% ROI through improved conversion rates and reduced manual work.',
-    competitors: ['HubSpot, Marketo, Pardot, ActiveCampaign, Mailchimp'],
-    marketSize: '$25B marketing automation market',
-    growthRate: '15% annual growth',
-    variant: 'ai-marketing',
-    contactInfo: contact,
+    useCases: ['Business intelligence, Performance tracking, Customer analytics, Financial reporting, Operational insights'],
+    roi: 'Organizations achieve 400% ROI through faster insights and reduced analyst workload.',
+    competitors: ['Tableau, Power BI, Looker, Qlik, Domo'],
+    marketSize: '$30B business intelligence market',
+    growthRate: '26% annual growth',
+    variant: 'ai-futuristic',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
     realImplementation: true,
-    implementationDetails: 'Complete marketing automation platform with AI capabilities, predictive analytics, and multi-channel campaign management.',
-    launchDate: '2024-09-20',
+    implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.',
+    launchDate: '2025-01-25',
     customers: 156,
-    rating: 4.6,
-    reviews: 92
+    rating: 4.7,
+    reviews: 89
   },
 
   // Autonomous Data Analytics Platform
@@ -326,8 +308,8 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     marketPosition: 'Competes with Tableau ($70/month), Power BI ($9.99/month), Looker ($5,000/month). Our advantage: AI automation, natural language queries, and autonomous insights.',
     targetAudience: 'Data analysts, Business intelligence teams, Executives, Marketing teams, Sales teams',
     trialDays: 30,
-    setupTime: '1-2 weeks',
-    category: 'AI Analytics',
+    setupTime: '2 weeks',
+    category: 'AI & Analytics',
     realService: true,
     technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS, Apache Spark'],
     integrations: ['Salesforce, HubSpot, Google Analytics, Facebook Ads, Shopify, QuickBooks'],
@@ -336,38 +318,21 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     competitors: ['Tableau, Power BI, Looker, Qlik, Domo'],
     marketSize: '$30B business intelligence market',
     growthRate: '26% annual growth',
-    variant: 'ai-analytics',
+    technology: ['Python, TensorFlow, OpenAI, Elasticsearch, Redis, PostgreSQL'],
+    integrations: ['SIEM systems, Firewalls, IDS/IPS, Vulnerability scanners'],
+    useCases: ['Security monitoring, Threat detection, Incident response, Compliance management'],
+    roi: 'Reduce security incident response time by 75% and improve threat detection by 60%',
+    competitors: ['Splunk, ELK Stack, IBM QRadar, Microsoft Sentinel, Exabeam'],
+    marketSize: '$15.8B+ security monitoring market',
+    growthRate: '95% YoY',
+    variant: 'default',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Advanced analytics platform with AI-powered insights, natural language processing, and automated report generation.',
-    launchDate: '2024-11-10',
-    customers: 89,
-    rating: 4.8,
-    reviews: 67
-  },
-
-  // AI HR Management System
-  {
-    id: 'ai-hr-management-system',
-    name: 'AI HR Management System',
-    tagline: 'Intelligent HR automation and employee management',
-    price: '$1,200',
-    period: '/month',
-    description: 'Comprehensive HR management platform that uses AI to streamline recruitment, automate employee onboarding, and provide predictive analytics for workforce planning. Reduces HR workload and improves employee experience.',
-    features: [
-      'AI-powered recruitment',
-      'Automated onboarding',
-      'Performance tracking',
-      'Employee self-service',
-      'Predictive analytics',
-      'Compliance monitoring',
-      'Benefits administration',
-      'Time tracking',
-      'Payroll integration',
-      'Mobile app access'
-    ],
-    popular: false,
-    icon: '👥',
+    implementationDetails: 'Real-time security monitoring platform with AI-powered threat detection and automated response capabilities.',
+    launchDate: '2025-02-05',
+    customers: 112,
+    rating: 4.9,
+    reviews: 78
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-400',
     link: 'https://ziontechgroup.com/ai-hr-management-system',
@@ -385,12 +350,21 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     marketSize: '$20B HR software market',
     growthRate: '20% annual growth',
     variant: 'ai-hr',
-    contactInfo: contact,
+=======
+    variant: 'ai-futuristic',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
     realImplementation: true,
-    implementationDetails: 'Complete HR management platform with AI capabilities, comprehensive automation, and compliance features. Includes training and customization services.',
-    launchDate: '2024-07-15',
-    customers: 189,
-    rating: 4.7,
-    reviews: 95
+=======
+=======
+    implementationDetails: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.',
+    launchDate: '2025-01-28',
+    customers: 234,
+    rating: 4.8,
+    reviews: 167
   }
 ];

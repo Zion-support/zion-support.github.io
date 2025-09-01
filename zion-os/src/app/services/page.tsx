@@ -1,590 +1,617 @@
-"use client";
-
-import { useState } from "react";
-
-interface Service {
-  id: string;
-  name: string;
-  category: string;
-  description: string;
-  features: string[];
-  pricing: string;
-  marketPrice: string;
-  benefits: string[];
-  technology: string[];
-  status: "active" | "beta" | "coming-soon";
-  demoUrl?: string;
-  documentationUrl?: string;
-}
-
-const services: Service[] = [
-  // AI & Machine Learning Services
-  {
-    id: "ai-analytics-platform",
-    name: "AI-Powered Business Intelligence Platform",
-    category: "AI & Machine Learning",
-    description: "Advanced analytics platform with machine learning capabilities for business intelligence, predictive insights, and automated reporting.",
-    features: [
-      "Real-time data processing and visualization",
-      "Predictive analytics and forecasting",
-      "Natural language query interface",
-      "Automated report generation",
-      "Multi-source data integration",
-      "Custom ML model training"
-    ],
-    pricing: "Starting at $299/month",
-    marketPrice: "Market average: $500-2000/month",
-    benefits: [
-      "Reduce manual reporting by 80%",
-      "Improve decision-making with predictive insights",
-      "Real-time business monitoring",
-      "Scalable from startup to enterprise"
-    ],
-    technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
-    status: "active",
-    demoUrl: "https://ziontechgroup.com/demo/ai-analytics",
-    documentationUrl: "https://ziontechgroup.com/docs/ai-analytics"
-  },
-  {
-    id: "intelligent-support-bot",
-    name: "AI Customer Support Automation",
-    category: "AI & Machine Learning",
-    description: "Intelligent chatbot system that provides 24/7 customer support with natural language processing, sentiment analysis, and seamless human handoff.",
-    features: [
-      "Multi-language support (50+ languages)",
-      "Sentiment analysis and emotion detection",
-      "Seamless human agent handoff",
-      "Integration with CRM systems",
-      "Custom knowledge base training",
-      "Analytics and performance metrics"
-    ],
-    pricing: "Starting at $99/month + $0.10/conversation",
-    marketPrice: "Market average: $200-800/month",
-    benefits: [
-      "Reduce support costs by 60%",
-      "24/7 availability in multiple languages",
-      "Instant response times",
-      "Scalable customer support"
-    ],
-    technology: ["Python", "NLP", "React", "FastAPI", "MongoDB", "Redis"],
-    status: "active",
-    demoUrl: "https://ziontechgroup.com/demo/support-bot"
-  },
-  {
-    id: "predictive-maintenance-ai",
-    name: "AI-Driven Predictive Maintenance",
-    category: "AI & Machine Learning",
-    description: "Intelligent system that monitors equipment health, predicts failures, and optimizes maintenance schedules using machine learning algorithms.",
-    features: [
-      "Real-time equipment monitoring",
-      "Failure prediction algorithms",
-      "Maintenance optimization",
-      "IoT sensor integration",
-      "Performance analytics dashboard",
-      "Alert system and notifications"
-    ],
-    pricing: "Starting at $50/equipment/month",
-    marketPrice: "Market average: $100-300/equipment/month",
-    benefits: [
-      "Reduce unplanned downtime by 70%",
-      "Optimize maintenance costs",
-      "Extend equipment lifespan",
-      "Real-time monitoring and alerts"
-    ],
-    technology: ["Python", "Scikit-learn", "React", "PostgreSQL", "IoT protocols", "Docker"],
-    status: "active",
-    demoUrl: "https://ziontechgroup.com/demo/predictive-maintenance"
-  },
-  {
-    id: "computer-vision-platform",
-    name: "Computer Vision & Image Recognition",
-    category: "AI & Machine Learning",
-    description: "Advanced computer vision platform for object detection, facial recognition, quality control, and automated image analysis.",
-    features: [
-      "Real-time object detection and tracking",
-      "Facial recognition and authentication",
-      "Quality control automation",
-      "Image classification and tagging",
-      "Custom model training",
-      "API integration capabilities"
-    ],
-    pricing: "Starting at $199/month + $0.01/image",
-    marketPrice: "Market average: $500-1500/month",
-    benefits: [
-      "Automate quality control processes",
-      "Enhance security with facial recognition",
-      "Reduce manual image analysis",
-      "Scalable image processing"
-    ],
-    technology: ["Python", "OpenCV", "TensorFlow", "PyTorch", "React", "FastAPI"],
-    status: "active",
-    demoUrl: "https://ziontechgroup.com/demo/computer-vision"
-  },
-
-  // IT Infrastructure Services
-  {
-    id: "cloud-migration-suite",
-    name: "Cloud Migration & Optimization Suite",
-    category: "IT Infrastructure",
-    description: "Comprehensive cloud migration platform that automates the process of moving applications and data to cloud environments with optimization recommendations.",
-    features: [
-      "Automated migration planning",
-      "Cost optimization analysis",
-      "Multi-cloud deployment support",
-      "Performance monitoring",
-      "Security compliance checks",
-      "Rollback capabilities"
-    ],
-    pricing: "Starting at $2,500/project",
-    marketPrice: "Market average: $5,000-25,000/project",
-    benefits: [
-      "Reduce migration time by 50%",
-      "Optimize cloud costs by 30%",
-      "Minimize downtime during migration",
-      "Ensure security compliance"
-    ],
-    technology: ["AWS", "Azure", "GCP", "Terraform", "Docker", "Kubernetes"],
-    status: "active",
-    demoUrl: "https://ziontechgroup.com/demo/cloud-migration"
-  },
-  {
-    id: "devops-automation-platform",
-    name: "DevOps Automation & CI/CD Platform",
-    category: "IT Infrastructure",
-    description: "End-to-end DevOps automation platform that streamlines software development, testing, and deployment processes.",
-    features: [
-      "Automated CI/CD pipelines",
-      "Infrastructure as Code (IaC)",
-      "Container orchestration",
-      "Monitoring and alerting",
-      "Security scanning integration",
-      "Multi-environment management"
-    ],
-    pricing: "Starting at $399/month",
-    marketPrice: "Market average: $800-2000/month",
-    benefits: [
-      "Reduce deployment time by 80%",
-      "Improve code quality and security",
-      "Automate repetitive tasks",
-      "Scale development teams efficiently"
-    ],
-    technology: ["Jenkins", "GitLab CI", "Docker", "Kubernetes", "Terraform", "Ansible"],
-    status: "active",
-    demoUrl: "https://ziontechgroup.com/demo/devops-automation"
-  },
-  {
-    id: "cybersecurity-suite",
-    name: "Comprehensive Cybersecurity Suite",
-    category: "IT Infrastructure",
-    description: "Advanced cybersecurity platform providing threat detection, vulnerability assessment, and security monitoring for businesses of all sizes.",
-    features: [
-      "Real-time threat detection",
-      "Vulnerability scanning and assessment",
-      "Security incident response",
-      "Compliance reporting",
-      "Employee security training",
-      "24/7 security monitoring"
-    ],
-    pricing: "Starting at $599/month",
-    marketPrice: "Market average: $1,200-3,000/month",
-    benefits: [
-      "Protect against 99.9% of cyber threats",
-      "Meet compliance requirements",
-      "Reduce security incident response time",
-      "Comprehensive security coverage"
-    ],
-    technology: ["SIEM", "EDR", "Firewall", "IDS/IPS", "Vulnerability scanners", "AI threat detection"],
-    status: "active",
-    demoUrl: "https://ziontechgroup.com/demo/cybersecurity"
-  },
-
-  // Blockchain & Web3 Services
-  {
-    id: "blockchain-development-platform",
-    name: "Enterprise Blockchain Development Platform",
-    category: "Blockchain & Web3",
-    description: "Complete blockchain development platform for creating, deploying, and managing smart contracts, DApps, and enterprise blockchain solutions.",
-    features: [
-      "Smart contract development tools",
-      "Multi-blockchain support",
-      "Security auditing and testing",
-      "Deployment automation",
-      "Monitoring and analytics",
-      "Integration APIs"
-    ],
-    pricing: "Starting at $1,500/project",
-    marketPrice: "Market average: $3,000-15,000/project",
-    benefits: [
-      "Accelerate blockchain development",
-      "Ensure smart contract security",
-      "Reduce development costs",
-      "Multi-chain compatibility"
-    ],
-    technology: ["Ethereum", "Polygon", "Solana", "Solidity", "Web3.js", "Hardhat"],
-    status: "active",
-    demoUrl: "https://ziontechgroup.com/demo/blockchain"
-  },
-  {
-    id: "defi-protocol-suite",
-    name: "DeFi Protocol Development Suite",
-    category: "Blockchain & Web3",
-    description: "Comprehensive DeFi development platform for creating lending protocols, DEXs, yield farming, and other decentralized financial applications.",
-    features: [
-      "Lending protocol templates",
-      "DEX development framework",
-      "Yield farming strategies",
-      "Liquidity management tools",
-      "Risk assessment models",
-      "Regulatory compliance tools"
-    ],
-    pricing: "Starting at $2,500/project",
-    marketPrice: "Market average: $5,000-20,000/project",
-    benefits: [
-      "Fast-track DeFi development",
-      "Reduce development risks",
-      "Ensure regulatory compliance",
-      "Optimize for security and efficiency"
-    ],
-    technology: ["Solidity", "Vyper", "Web3.js", "Ethers.js", "OpenZeppelin", "Chainlink"],
-    status: "beta",
-    demoUrl: "https://ziontechgroup.com/demo/defi-suite"
-  },
-
-  // IoT & Edge Computing Services
-  {
-    id: "iot-data-platform",
-    name: "IoT Data Management & Analytics Platform",
-    category: "IoT & Edge Computing",
-    description: "Scalable IoT platform for collecting, processing, and analyzing data from connected devices with real-time insights and automation.",
-    features: [
-      "Device management and provisioning",
-      "Real-time data processing",
-      "Edge computing capabilities",
-      "Data visualization dashboards",
-      "Automated alerts and actions",
-      "Scalable architecture"
-    ],
-    pricing: "Starting at $5/device/month",
-    marketPrice: "Market average: $10-50/device/month",
-    benefits: [
-      "Reduce IoT infrastructure costs",
-      "Real-time data insights",
-      "Scalable device management",
-      "Automated operations"
-    ],
-    technology: ["Apache Kafka", "Python", "Node.js", "MongoDB", "Docker", "Kubernetes"],
-    status: "active",
-    demoUrl: "https://ziontechgroup.com/demo/iot-platform"
-  },
-  {
-    id: "edge-computing-orchestrator",
-    name: "Edge Computing Orchestration Platform",
-    category: "IoT & Edge Computing",
-    description: "Intelligent edge computing platform that optimizes resource allocation, workload distribution, and edge-to-cloud synchronization.",
-    features: [
-      "Intelligent workload distribution",
-      "Resource optimization",
-      "Edge-to-cloud synchronization",
-      "Real-time monitoring",
-      "Automated scaling",
-      "Security and compliance"
-    ],
-    pricing: "Starting at $20/node/month",
-    marketPrice: "Market average: $50-200/node/month",
-    benefits: [
-      "Reduce latency by 80%",
-      "Optimize resource utilization",
-      "Lower bandwidth costs",
-      "Enhanced security at edge"
-    ],
-    technology: ["Kubernetes", "Docker", "Python", "Go", "MQTT", "WebRTC"],
-    status: "active",
-    demoUrl: "https://ziontechgroup.com/demo/edge-orchestrator"
-  },
-
-  // Data & Analytics Services
-  {
-    id: "data-warehouse-platform",
-    name: "Modern Data Warehouse Platform",
-    category: "Data & Analytics",
-    description: "Cloud-native data warehouse platform with automated ETL processes, real-time analytics, and advanced data modeling capabilities.",
-    features: [
-      "Automated ETL/ELT pipelines",
-      "Real-time data processing",
-      "Advanced data modeling",
-      "Data quality monitoring",
-      "Multi-cloud support",
-      "Scalable architecture"
-    ],
-    pricing: "Starting at $499/month",
-    marketPrice: "Market average: $1,000-3,000/month",
-    benefits: [
-      "Reduce data processing time by 70%",
-      "Improve data quality and reliability",
-      "Real-time business insights",
-      "Cost-effective scaling"
-    ],
-    technology: ["Snowflake", "BigQuery", "Redshift", "Apache Airflow", "dbt", "Python"],
-    status: "active",
-    demoUrl: "https://ziontechgroup.com/demo/data-warehouse"
-  },
-  {
-    id: "real-time-analytics-engine",
-    name: "Real-Time Analytics & Streaming Engine",
-    category: "Data & Analytics",
-    description: "High-performance streaming analytics platform for processing real-time data streams with sub-second latency and complex event processing.",
-    features: [
-      "Sub-second latency processing",
-      "Complex event processing",
-      "Real-time dashboards",
-      "Streaming SQL support",
-      "Horizontal scaling",
-      "Integration connectors"
-    ],
-    pricing: "Starting at $299/month",
-    marketPrice: "Market average: $600-2,000/month",
-    benefits: [
-      "Real-time business insights",
-      "Reduce decision latency",
-      "Handle high-volume data streams",
-      "Scalable architecture"
-    ],
-    technology: ["Apache Kafka", "Apache Flink", "Apache Spark", "Redis", "Elasticsearch", "Grafana"],
-    status: "active",
-    demoUrl: "https://ziontechgroup.com/demo/real-time-analytics"
-  },
-
-  // API & Integration Services
-  {
-    id: "api-management-platform",
-    name: "Enterprise API Management Platform",
-    category: "API & Integration",
-    description: "Comprehensive API management platform with gateway, developer portal, analytics, and security features for enterprise API operations.",
-    features: [
-      "API gateway and routing",
-      "Developer portal",
-      "Rate limiting and throttling",
-      "Authentication and authorization",
-      "API analytics and monitoring",
-      "Documentation generation"
-    ],
-    pricing: "Starting at $199/month",
-    marketPrice: "Market average: $400-1,500/month",
-    benefits: [
-      "Centralize API management",
-      "Improve developer experience",
-      "Enhance API security",
-      "Monitor API performance"
-    ],
-    technology: ["Kong", "Apigee", "Node.js", "Redis", "PostgreSQL", "Docker"],
-    status: "active",
-    demoUrl: "https://ziontechgroup.com/demo/api-management"
-  },
-  {
-    id: "integration-platform",
-    name: "Enterprise Integration Platform",
-    category: "API & Integration",
-    description: "Low-code integration platform for connecting disparate systems, automating workflows, and building data pipelines across organizations.",
-    features: [
-      "Visual workflow designer",
-      "Pre-built connectors",
-      "Data transformation tools",
-      "Real-time synchronization",
-      "Error handling and retry",
-      "Monitoring and logging"
-    ],
-    pricing: "Starting at $399/month",
-    marketPrice: "Market average: $800-2,500/month",
-    benefits: [
-      "Reduce integration time by 60%",
-      "Connect any system or application",
-      "Automate manual processes",
-      "Real-time data synchronization"
-    ],
-    technology: ["Node.js", "Python", "PostgreSQL", "Redis", "Docker", "Kubernetes"],
-    status: "active",
-    demoUrl: "https://ziontechgroup.com/demo/integration-platform"
-  }
-];
-
-const categories = Array.from(new Set(services.map(s => s.category)));
+import Link from 'next/link';
 
 export default function ServicesPage() {
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
-  const [searchTerm, setSearchTerm] = useState("");
-
-  const filteredServices = services.filter(service => {
-    const matchesCategory = selectedCategory === "All" || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-
   return (
-    <div className="space-y-8">
-      {/* Header */}
-      <div className="text-center space-y-4">
-        <h1 className="text-4xl font-bold">Our Services & Solutions</h1>
-        <p className="text-xl opacity-80 max-w-3xl mx-auto">
-          Comprehensive micro SAAS services, IT solutions, and AI-powered platforms designed to accelerate your digital transformation journey.
-        </p>
-      </div>
-
-      {/* Contact Information */}
-      <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg p-6 border border-white/10">
-        <div className="text-center space-y-4">
-          <h2 className="text-2xl font-semibold">Ready to Get Started?</h2>
-          <p className="opacity-80">Contact our team to discuss your requirements and get a personalized solution.</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-            <div>
-              <div className="font-semibold">📱 Mobile</div>
-              <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300">+1 302 464 0950</a>
-            </div>
-            <div>
-              <div className="font-semibold">✉️ Email</div>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">kleber@ziontechgroup.com</a>
-            </div>
-            <div>
-              <div className="font-semibold">📍 Address</div>
-              <div className="opacity-80">364 E Main St STE 1008<br />Middletown DE 19709</div>
-            </div>
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">
+      {/* Hero Section */}
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
+        <div className="container mx-auto px-6 text-center">
+          <h1 className="text-5xl font-bold mb-6">Zion Tech Group Services</h1>
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            Comprehensive technology solutions for modern businesses. From AI-powered automation to enterprise IT infrastructure.
+          </p>
+          <div className="mt-8">
+            <a href="tel:+13024640950" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors mr-4">
+              Call Now: +1 302 464 0950
+            </a>
+            <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+              Get Quote
+            </a>
           </div>
         </div>
       </div>
 
-      {/* Search and Filter */}
-      <div className="flex flex-col md:flex-row gap-4">
-        <div className="flex-1">
-          <input
-            type="text"
-            placeholder="Search services..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full bg-zinc-900 border border-white/10 rounded-lg px-4 py-2 focus:border-blue-500 focus:outline-none"
-          />
-        </div>
-        <div className="flex gap-2">
-          {categories.map(category => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-4 py-2 rounded-lg border transition-colors ${
-                selectedCategory === category
-                  ? "border-blue-500 bg-blue-500/20 text-blue-300"
-                  : "border-white/10 hover:border-white/20"
-              }`}
-            >
-              {category}
-            </button>
-          ))}
+      {/* Contact Info Banner */}
+      <div className="bg-zinc-800 py-4">
+        <div className="container mx-auto px-6 text-center text-sm">
+          <span className="mr-8">📱 +1 302 464 0950</span>
+          <span className="mr-8">✉️ kleber@ziontechgroup.com</span>
+          <span>📍 364 E Main St STE 1008, Middletown DE 19709</span>
         </div>
       </div>
 
-      {/* Services Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {filteredServices.map(service => (
-          <div key={service.id} className="bg-zinc-900/50 border border-white/10 rounded-lg p-6 hover:border-white/20 transition-colors">
-            <div className="flex items-start justify-between mb-4">
-              <div>
-                <h3 className="text-xl font-semibold mb-2">{service.name}</h3>
-                <span className={`px-2 py-1 rounded-full text-xs ${
-                  service.status === 'active' ? 'bg-green-500/20 text-green-300' :
-                  service.status === 'beta' ? 'bg-yellow-500/20 text-yellow-300' :
-                  'bg-blue-500/20 text-blue-300'
-                }`}>
-                  {service.status === 'active' ? 'Active' : service.status === 'beta' ? 'Beta' : 'Coming Soon'}
-                </span>
+      {/* AI Services Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">🤖 AI Services & Solutions</h2>
+            <p className="text-xl text-zinc-300 max-w-2xl mx-auto">
+              Cutting-edge artificial intelligence solutions to transform your business operations
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* ZionGPT Core */}
+            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-blue-500 transition-all">
+              <div className="text-3xl mb-4">🧠</div>
+              <h3 className="text-xl font-semibold mb-3">ZionGPT Core</h3>
+              <p className="text-zinc-300 mb-4">Enterprise-grade AI assistant with custom knowledge base integration and workflow automation.</p>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Starting Price:</span>
+                  <span className="text-green-400">$299/month</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Setup Fee:</span>
+                  <span className="text-yellow-400">$1,500</span>
+                </div>
               </div>
-            </div>
-            
-            <p className="text-sm opacity-80 mb-4">{service.description}</p>
-            
-            <div className="space-y-3 mb-4">
-              <div>
-                <span className="font-semibold text-sm">Key Features:</span>
-                <ul className="text-xs opacity-80 mt-1 space-y-1">
-                  {service.features.slice(0, 3).map((feature, index) => (
-                    <li key={index}>• {feature}</li>
-                  ))}
-                  {service.features.length > 3 && (
-                    <li className="text-blue-400">+{service.features.length - 3} more features</li>
-                  )}
-                </ul>
-              </div>
+              <a href="/services/ai" className="block mt-4 text-blue-400 hover:text-blue-300 text-sm">
+                Learn More →
+              </a>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 text-sm mb-4">
-              <div>
-                <span className="font-semibold">Our Pricing:</span>
-                <div className="text-blue-400">{service.pricing}</div>
+            {/* AI Content Generation */}
+            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-blue-500 transition-all">
+              <div className="text-3xl mb-4">✍️</div>
+              <h3 className="text-xl font-semibold mb-3">AI Content Generation</h3>
+              <p className="text-zinc-300 mb-4">Automated content creation for blogs, social media, marketing materials, and technical documentation.</p>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Starting Price:</span>
+                  <span className="text-green-400">$199/month</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Setup Fee:</span>
+                  <span className="text-yellow-400">$800</span>
+                </div>
               </div>
-              <div>
-                <span className="font-semibold">Market Average:</span>
-                <div className="opacity-80">{service.marketPrice}</div>
-              </div>
+              <a href="/services/ai" className="block mt-4 text-blue-400 hover:text-blue-300 text-sm">
+                Learn More →
+              </a>
             </div>
 
-            <div className="space-y-2 mb-4">
-              <div>
-                <span className="font-semibold text-sm">Key Benefits:</span>
-                <ul className="text-xs opacity-80 mt-1 space-y-1">
-                  {service.benefits.slice(0, 2).map((benefit, index) => (
-                    <li key={index}>• {benefit}</li>
-                  ))}
-                </ul>
+            {/* AI-Powered Analytics */}
+            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-blue-500 transition-all">
+              <div className="text-3xl mb-4">📊</div>
+              <h3 className="text-xl font-semibold mb-3">AI-Powered Analytics</h3>
+              <p className="text-zinc-300 mb-4">Predictive analytics, trend forecasting, and intelligent business insights powered by machine learning.</p>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Starting Price:</span>
+                  <span className="text-green-400">$399/month</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Setup Fee:</span>
+                  <span className="text-yellow-400">$2,000</span>
+                </div>
               </div>
+              <a href="/services/ai" className="block mt-4 text-blue-400 hover:text-blue-300 text-sm">
+                Learn More →
+              </a>
             </div>
 
-            <div className="flex items-center justify-between">
-              <div className="text-xs opacity-60">
-                Tech: {service.technology.slice(0, 3).join(", ")}
-                {service.technology.length > 3 && "..."}
+            {/* AI Customer Support */}
+            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-blue-500 transition-all">
+              <div className="text-3xl mb-4">💬</div>
+              <h3 className="text-xl font-semibold mb-3">AI Customer Support</h3>
+              <p className="text-zinc-300 mb-4">24/7 intelligent chatbots and virtual assistants for customer service automation.</p>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Starting Price:</span>
+                  <span className="text-green-400">$249/month</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Setup Fee:</span>
+                  <span className="text-yellow-400">$1,200</span>
+                </div>
               </div>
-              <div className="flex gap-2">
-                {service.demoUrl && (
-                  <a
-                    href={service.demoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-3 py-1 bg-blue-600 hover:bg-blue-700 rounded text-xs transition-colors"
-                  >
-                    Demo
-                  </a>
-                )}
-                <a
-                  href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
-                  className="px-3 py-1 bg-green-600 hover:bg-green-700 rounded text-xs transition-colors"
-                >
-                  Contact
-                </a>
+              <a href="/services/ai" className="block mt-4 text-blue-400 hover:text-blue-300 text-sm">
+                Learn More →
+              </a>
+            </div>
+
+            {/* AI Process Automation */}
+            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-blue-500 transition-all">
+              <div className="text-3xl mb-4">⚙️</div>
+              <h3 className="text-xl font-semibold mb-3">AI Process Automation</h3>
+              <p className="text-zinc-300 mb-4">Intelligent workflow automation, document processing, and business process optimization.</p>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Starting Price:</span>
+                  <span className="text-green-400">$349/month</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Setup Fee:</span>
+                  <span className="text-yellow-400">$1,800</span>
+                </div>
               </div>
+              <a href="/services/ai" className="block mt-4 text-blue-400 hover:text-blue-300 text-sm">
+                Learn More →
+              </a>
+            </div>
+
+            {/* AI Security & Compliance */}
+            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-blue-500 transition-all">
+              <div className="text-3xl mb-4">🔒</div>
+              <h3 className="text-xl font-semibold mb-3">AI Security & Compliance</h3>
+              <p className="text-zinc-300 mb-4">AI-powered threat detection, compliance monitoring, and security automation for enterprise environments.</p>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Starting Price:</span>
+                  <span className="text-green-400">$499/month</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Setup Fee:</span>
+                  <span className="text-yellow-400">$2,500</span>
+                </div>
+              </div>
+              <a href="/services/ai" className="block mt-4 text-blue-400 hover:text-blue-300 text-sm">
+                Learn More →
+              </a>
             </div>
           </div>
-        ))}
-      </div>
+          
+          <div className="text-center mt-12">
+            <a href="/services/ai" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              View All AI Services
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* IT Services Section */}
+      <section className="py-20 bg-zinc-800">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">💻 IT Services & Solutions</h2>
+            <p className="text-xl text-zinc-300 max-w-2xl mx-auto">
+              Comprehensive IT infrastructure, cloud solutions, and digital transformation services
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Cloud Infrastructure */}
+            <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-green-500 transition-all">
+              <div className="text-3xl mb-4">☁️</div>
+              <h3 className="text-xl font-semibold mb-3">Cloud Infrastructure</h3>
+              <p className="text-zinc-300 mb-4">AWS, Azure, and Google Cloud setup, migration, and optimization services.</p>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Starting Price:</span>
+                  <span className="text-green-400">$150/hour</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Project Range:</span>
+                  <span className="text-yellow-400">$5K - $50K</span>
+                </div>
+              </div>
+              <a href="/services/it" className="block mt-4 text-green-400 hover:text-green-300 text-sm">
+                Learn More →
+              </a>
+            </div>
+
+            {/* DevOps & CI/CD */}
+            <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-green-500 transition-all">
+              <div className="text-3xl mb-4">🚀</div>
+              <h3 className="text-xl font-semibold mb-3">DevOps & CI/CD</h3>
+              <p className="text-zinc-300 mb-4">Automated deployment pipelines, infrastructure as code, and DevOps culture implementation.</p>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Starting Price:</span>
+                  <span className="text-green-400">$175/hour</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Project Range:</span>
+                  <span className="text-yellow-400">$8K - $75K</span>
+                </div>
+              </div>
+              <a href="/services/it" className="block mt-4 text-green-400 hover:text-green-300 text-sm">
+                Learn More →
+              </a>
+            </div>
+
+            {/* Cybersecurity */}
+            <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-green-500 transition-all">
+              <div className="text-3xl mb-4">🛡️</div>
+              <h3 className="text-xl font-semibold mb-3">Cybersecurity</h3>
+              <p className="text-zinc-300 mb-4">Security audits, penetration testing, compliance frameworks, and incident response planning.</p>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Starting Price:</span>
+                  <span className="text-green-400">$200/hour</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Project Range:</span>
+                  <span className="text-yellow-400">$10K - $100K</span>
+                </div>
+              </div>
+              <a href="/services/it" className="block mt-4 text-green-400 hover:text-green-300 text-sm">
+                Learn More →
+              </a>
+            </div>
+
+            {/* Data Engineering */}
+            <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-green-500 transition-all">
+              <div className="text-3xl mb-4">📈</div>
+              <h3 className="text-xl font-semibold mb-3">Data Engineering</h3>
+              <p className="text-zinc-300 mb-4">Data pipelines, warehousing, ETL processes, and business intelligence solutions.</p>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Starting Price:</span>
+                  <span className="text-green-400">$160/hour</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Project Range:</span>
+                  <span className="text-yellow-400">$15K - $150K</span>
+                </div>
+              </div>
+              <a href="/services/it" className="block mt-4 text-green-400 hover:text-green-300 text-sm">
+                Learn More →
+              </a>
+            </div>
+
+            {/* API Development */}
+            <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-green-500 transition-all">
+              <div className="text-3xl mb-4">🔌</div>
+              <h3 className="text-xl font-semibold mb-3">API Development</h3>
+              <p className="text-zinc-300 mb-4">RESTful APIs, GraphQL, microservices architecture, and API gateway solutions.</p>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Starting Price:</span>
+                  <span className="text-green-400">$140/hour</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Project Range:</span>
+                  <span className="text-yellow-400">$8K - $80K</span>
+                </div>
+              </div>
+              <a href="/services/it" className="block mt-4 text-green-400 hover:text-green-300 text-sm">
+                Learn More →
+              </a>
+            </div>
+
+            {/* Digital Transformation */}
+            <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-green-500 transition-all">
+              <div className="text-3xl mb-4">🔄</div>
+              <h3 className="text-xl font-semibold mb-3">Digital Transformation</h3>
+              <p className="text-zinc-300 mb-4">End-to-end digital transformation consulting, legacy system modernization, and change management.</p>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Starting Price:</span>
+                  <span className="text-green-400">$250/hour</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Project Range:</span>
+                  <span className="text-yellow-400">$25K - $500K</span>
+                </div>
+              </div>
+              <a href="/services/it" className="block mt-4 text-green-400 hover:text-green-300 text-sm">
+                Learn More →
+              </a>
+            </div>
+          </div>
+          
+          <div className="text-center mt-12">
+            <a href="/services/it" className="inline-block bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              View All IT Services
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Blockchain & Web3 Services Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">⛓️ Blockchain & Web3 Services</h2>
+            <p className="text-xl text-zinc-300 max-w-2xl mx-auto">
+              Next-generation blockchain solutions, DeFi platforms, NFT marketplaces, and Web3 infrastructure
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* DeFi Platform Development */}
+            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-orange-500 transition-all">
+              <div className="text-3xl mb-4">💰</div>
+              <h3 className="text-xl font-semibold mb-3">DeFi Platform Development</h3>
+              <p className="text-zinc-300 mb-4">Build next-generation decentralized finance platforms with lending, borrowing, and yield farming.</p>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Starting Price:</span>
+                  <span className="text-green-400">$25K</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Project Range:</span>
+                  <span className="text-yellow-400">$25K - $200K+</span>
+                </div>
+              </div>
+              <a href="/services/blockchain" className="block mt-4 text-orange-400 hover:text-orange-300 text-sm">
+                Learn More →
+              </a>
+            </div>
+
+            {/* NFT Marketplace */}
+            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-orange-500 transition-all">
+              <div className="text-3xl mb-4">🎨</div>
+              <h3 className="text-xl font-semibold mb-3">NFT Marketplace Development</h3>
+              <p className="text-zinc-300 mb-4">Create cutting-edge NFT marketplaces with multi-chain support and advanced features.</p>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Starting Price:</span>
+                  <span className="text-green-400">$15K</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Project Range:</span>
+                  <span className="text-yellow-400">$15K - $100K+</span>
+                </div>
+              </div>
+              <a href="/services/blockchain" className="block mt-4 text-orange-400 hover:text-orange-300 text-sm">
+                Learn More →
+              </a>
+            </div>
+
+            {/* Smart Contract Development */}
+            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-orange-500 transition-all">
+              <div className="text-3xl mb-4">📜</div>
+              <h3 className="text-xl font-semibold mb-3">Smart Contract Development</h3>
+              <p className="text-zinc-300 mb-4">Secure, audited smart contracts for any blockchain use case with comprehensive testing.</p>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Starting Price:</span>
+                  <span className="text-green-400">$5K</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Project Range:</span>
+                  <span className="text-yellow-400">$5K - $50K+</span>
+                </div>
+              </div>
+              <a href="/services/blockchain" className="block mt-4 text-orange-400 hover:text-orange-300 text-sm">
+                Learn More →
+              </a>
+            </div>
+
+            {/* Web3 Infrastructure */}
+            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-orange-500 transition-all">
+              <div className="text-3xl mb-4">🌐</div>
+              <h3 className="text-xl font-semibold mb-3">Web3 Infrastructure</h3>
+              <p className="text-zinc-300 mb-4">Build robust Web3 infrastructure with node management, API gateways, and decentralized storage.</p>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Starting Price:</span>
+                  <span className="text-green-400">$10K</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Project Range:</span>
+                  <span className="text-yellow-400">$10K - $100K+</span>
+                </div>
+              </div>
+              <a href="/services/blockchain" className="block mt-4 text-orange-400 hover:text-orange-300 text-sm">
+                Learn More →
+              </a>
+            </div>
+
+            {/* DAO Development */}
+            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-orange-500 transition-all">
+              <div className="text-3xl mb-4">🏛️</div>
+              <h3 className="text-xl font-semibold mb-3">DAO Development</h3>
+              <p className="text-zinc-300 mb-4">Create sophisticated decentralized autonomous organizations with advanced governance tools.</p>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Starting Price:</span>
+                  <span className="text-green-400">$20K</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Project Range:</span>
+                  <span className="text-yellow-400">$20K - $150K+</span>
+                </div>
+              </div>
+              <a href="/services/blockchain" className="block mt-4 text-orange-400 hover:text-orange-300 text-sm">
+                Learn More →
+              </a>
+            </div>
+
+            {/* Blockchain Consulting */}
+            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-orange-500 transition-all">
+              <div className="text-3xl mb-4">💡</div>
+              <h3 className="text-xl font-semibold mb-3">Blockchain Consulting</h3>
+              <p className="text-zinc-300 mb-4">Strategic blockchain consulting including technology selection, architecture design, and compliance.</p>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Consulting Rate:</span>
+                  <span className="text-green-400">$250/hour</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Strategy Package:</span>
+                  <span className="text-yellow-400">$25K - $75K</span>
+                </div>
+              </div>
+              <a href="/services/blockchain" className="block mt-4 text-orange-400 hover:text-orange-300 text-sm">
+                Learn More →
+              </a>
+            </div>
+          </div>
+          
+          <div className="text-center mt-12">
+            <a href="/services/blockchain" className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              View All Blockchain Services
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Micro SAAS Services Section */}
+      <section className="py-20 bg-zinc-800">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">🚀 Micro SAAS Services</h2>
+            <p className="text-xl text-zinc-300 max-w-2xl mx-auto">
+              Ready-to-deploy software solutions for specific business needs
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Zion Marketplace */}
+            <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-purple-500 transition-all">
+              <div className="text-3xl mb-4">🛒</div>
+              <h3 className="text-xl font-semibold mb-3">Zion Marketplace</h3>
+              <p className="text-zinc-300 mb-4">Complete marketplace solution with job boards, talent matching, and project management.</p>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Starting Price:</span>
+                  <span className="text-green-400">$399/month</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Setup Fee:</span>
+                  <span className="text-yellow-400">$2,500</span>
+                </div>
+              </div>
+              <a href="/services/saas" className="block mt-4 text-purple-400 hover:text-purple-300 text-sm">
+                Learn More →
+              </a>
+            </div>
+
+            {/* Resume AI Builder */}
+            <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-purple-500 transition-all">
+              <div className="text-3xl mb-4">📝</div>
+              <h3 className="text-xl font-semibold mb-3">Resume AI Builder</h3>
+              <p className="text-zinc-300 mb-4">AI-powered resume creation, optimization, and ATS-friendly formatting with industry insights.</p>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Starting Price:</span>
+                  <span className="text-green-400">$99/month</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Setup Fee:</span>
+                  <span className="text-yellow-400">$500</span>
+                </div>
+              </div>
+              <a href="/services/saas" className="block mt-4 text-purple-400 hover:text-purple-300 text-sm">
+                Learn More →
+              </a>
+            </div>
+
+            {/* Token Rewards System */}
+            <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-purple-500 transition-all">
+              <div className="text-3xl mb-4">🪙</div>
+              <h3 className="text-xl font-semibold mb-3">Token Rewards System</h3>
+              <p className="text-zinc-300 mb-4">Blockchain-based loyalty and rewards platform with gamification and community engagement.</p>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Starting Price:</span>
+                  <span className="text-green-400">$299/month</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Setup Fee:</span>
+                  <span className="text-yellow-400">$3,000</span>
+                </div>
+              </div>
+              <a href="/services/saas" className="block mt-4 text-purple-400 hover:text-purple-300 text-sm">
+                Learn More →
+              </a>
+            </div>
+
+            {/* KYC/AML Verification */}
+            <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-purple-500 transition-all">
+              <div className="text-3xl mb-4">✅</div>
+              <h3 className="text-xl font-semibold mb-3">KYC/AML Verification</h3>
+              <p className="text-zinc-300 mb-4">Compliance-ready identity verification and anti-money laundering screening system.</p>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Starting Price:</span>
+                  <span className="text-green-400">$199/month</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Setup Fee:</span>
+                  <span className="text-yellow-400">$1,500</span>
+                </div>
+              </div>
+              <a href="/services/saas" className="block mt-4 text-purple-400 hover:text-purple-300 text-sm">
+                Learn More →
+              </a>
+            </div>
+
+            {/* DAO Governance Platform */}
+            <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-purple-500 transition-all">
+              <div className="text-3xl mb-4">🗳️</div>
+              <h3 className="text-xl font-semibold mb-3">DAO Governance Platform</h3>
+              <p className="text-zinc-300 mb-4">Decentralized governance tools with proposal creation, voting mechanisms, and treasury management.</p>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Starting Price:</span>
+                  <span className="text-green-400">$449/month</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Setup Fee:</span>
+                  <span className="text-yellow-400">$4,000</span>
+                </div>
+              </div>
+              <a href="/services/saas" className="block mt-4 text-purple-400 hover:text-purple-300 text-sm">
+                Learn More →
+              </a>
+            </div>
+
+            {/* Zion Academy */}
+            <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-purple-500 transition-all">
+              <div className="text-3xl mb-4">🎓</div>
+              <h3 className="text-xl font-semibold mb-3">Zion Academy</h3>
+              <p className="text-zinc-300 mb-4">Learning management system with AI-powered course creation, assessments, and skill tracking.</p>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Starting Price:</span>
+                  <span className="text-green-400">$179/month</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Setup Fee:</span>
+                  <span className="text-yellow-400">$1,200</span>
+                </div>
+              </div>
+              <a href="/services/saas" className="block mt-4 text-purple-400 hover:text-purple-300 text-sm">
+                Learn More →
+              </a>
+            </div>
+          </div>
+          
+          <div className="text-center mt-12">
+            <a href="/services/saas" className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              View All SAAS Services
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* Call to Action */}
-      <div className="text-center space-y-4 bg-gradient-to-r from-green-600/20 to-blue-600/20 rounded-lg p-8 border border-white/10">
-        <h2 className="text-2xl font-semibold">Need a Custom Solution?</h2>
-        <p className="opacity-80 max-w-2xl mx-auto">
-          Our team specializes in building custom software solutions tailored to your specific business needs. 
-          From concept to deployment, we handle every aspect of your digital transformation.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="mailto:kleber@ziontechgroup.com?subject=Custom Solution Inquiry"
-            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
-          >
-            Get Custom Quote
-          </a>
-          <a
-            href="tel:+13024640950"
-            className="px-6 py-3 border border-white/20 hover:border-white/40 rounded-lg font-semibold transition-colors"
-          >
-            Call Now
-          </a>
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Let's discuss how our AI, IT, blockchain, and SAAS solutions can drive your digital transformation and business growth.
+          </p>
+          <div className="space-y-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a href="tel:+13024640950" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-lg">
+                📞 Call +1 302 464 0950
+              </a>
+              <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-lg">
+                ✉️ Schedule Consultation
+              </a>
+            </div>
+            <p className="text-blue-100 text-sm">
+              📍 364 E Main St STE 1008, Middletown DE 19709 | 🌐 https://ziontechgroup.com
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

@@ -8,26 +8,19 @@ module.exports = {
       watch: false,
       autorestart: true,
       max_restarts: 10,
-      exp_backoff_restart_delay: 5000,
-      min_uptime: "10s",
-      max_memory_restart: "1G",
-      node_args: "--max-old-space-size=1024",
+      exp_backoff_restart_delay: 500,
       env: {
         NODE_ENV: "production",
-        REDUNDANCY_LOG_LEVEL: "INFO",
-        REDUNDANCY_PM2_CHECK_INTERVAL: "30000",
-        REDUNDANCY_GITHUB_CHECK_INTERVAL: "60000",
-        REDUNDANCY_NETLIFY_CHECK_INTERVAL: "120000",
-        PM2_HOME: __dirname + "/.pm2"
+        AUTO_SYNC_REMOTE: process.env.AUTO_SYNC_REMOTE || "origin",
+        AUTO_SYNC_BRANCH: process.env.AUTO_SYNC_BRANCH || "main",
+        AUTO_SYNC_STRATEGY: process.env.AUTO_SYNC_STRATEGY || "hardreset",
+        AUTO_SYNC_CLEAN: process.env.AUTO_SYNC_CLEAN || "1",
+        AUTO_SYNC_GC: process.env.AUTO_SYNC_GC || "0"
       },
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",
-      error_file: "automation/logs/redundancy-system-error.log",
-      out_file: "automation/logs/redundancy-system-out.log",
-      time: true,
-      instances: 1,
-      exec_mode: "fork",
-      kill_timeout: 5000,
-      listen_timeout: 3000
+      error_file: "automation/logs/zion-auto-sync-error.log",
+      out_file: "automation/logs/zion-auto-sync-out.log",
+      time: true
     },
     {
       name: "redundancy-health-monitor",

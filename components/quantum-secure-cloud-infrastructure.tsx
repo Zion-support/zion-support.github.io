@@ -260,4 +260,3 @@ export default function QuantumSecureCloudInfrastructure() {
 		/>
 	);
 }
->>>>>>> 4e26761e9808218b595a40eae6dfbc7c204b5906

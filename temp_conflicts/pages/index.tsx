@@ -196,6 +196,29 @@ export default function HomePage() {
     { number: "24/7", label: "Support Available", icon: Clock }
   ];
 
+  const features = [
+    {
+      title: "Cutting-Edge Technology",
+      description: "Leverage the latest advancements in AI, quantum computing, and cybersecurity",
+      icon: "🚀"
+    },
+    {
+      title: "Enterprise-Grade Security",
+      description: "Bank-level security with SOC 2 compliance and regular penetration testing",
+      icon: "🛡️"
+    },
+    {
+      title: "Scalable Solutions",
+      description: "Built to grow with your business, from startup to enterprise",
+      icon: "📈"
+    },
+    {
+      title: "Expert Support",
+      description: "24/7 technical support with dedicated account managers",
+      icon: "💬"
+    }
+  ];
+
   return (
     <>
       <Head>
@@ -203,7 +226,11 @@ export default function HomePage() {
         <meta name="description" content="Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence." />
         <meta name="keywords" content="technology solutions, AI development, cloud architecture, blockchain, data analytics, web development, mobile development" />
       </Head>
-      
+
+      <UltraFuturisticBackground2029>
+        {/* Navigation */}
+        <UltraFuturisticNavigation2029 />
+
       {/* Hero Section */}
       <section className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center">
         <div className="container mx-auto px-4 py-16">

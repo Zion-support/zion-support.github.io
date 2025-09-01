@@ -24,6 +24,114 @@ export interface EnhancedRealMicroSaasService {
   competitors: string[];
   marketSize: string;
   growthRate: string;
+    technology: ['IoT Sensors', 'Edge Computing', 'Machine Learning', 'Data Analytics', 'React', 'Node.js', 'PostgreSQL'],
+    integrations: ['Traffic Systems', 'Energy Grids', 'Water Systems', 'Public Safety Systems', 'Transportation Networks'],
+    useCases: ['Traffic management', 'Environmental monitoring', 'Energy optimization', 'Public safety', 'Infrastructure management', 'Citizen services'],
+    roi: 'Average city saves $2M+ annually in operational costs and improves citizen satisfaction by 40%.',
+    competitors: ['Siemens', 'Cisco', 'IBM Watson IoT', 'Microsoft Azure IoT', 'AWS IoT'],
+    marketSize: '$1.5B market',
+    growthRate: '180% annual growth',
+    variant: 'neural-quantum-cyberpunk',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true,
+    implementationDetails: 'Comprehensive smart city platform with IoT sensors, edge computing, and AI analytics. Includes real-time monitoring and predictive maintenance.',
+    launchDate: '2024-02-15',
+    customers: 45,
+    rating: 4.9,
+    reviews: 22
+  },
+  {
+    id: 'edge-computing-network',
+    name: 'Edge Computing Network',
+    tagline: 'Distributed edge computing for ultra-low latency applications',
+    price: '$699',
+    period: '/month',
+    description: 'Advanced distributed edge computing platform for ultra-low latency applications and real-time data processing. Reduce latency by 90% and improve performance significantly.',
+    features: [
+      'Ultra-low latency',
+      'Real-time processing',
+      'Distributed computing',
+      'Edge AI',
+      'Load balancing',
+      'Auto-scaling',
+      'Global distribution',
+      'Performance monitoring',
+      'Security features',
+      'API management'
+    ],
+    popular: true,
+    icon: '⚡',
+    color: 'from-yellow-500 to-orange-600',
+    textColor: 'text-yellow-400',
+    link: 'https://ziontechgroup.com/edge-computing',
+    marketPosition: 'Leading edge computing platform. Competes with AWS Edge, Cloudflare Workers, and Azure Edge.',
+    targetAudience: 'Gaming companies, Streaming services, Financial institutions, IoT companies, Real-time applications',
+    trialDays: 30,
+    setupTime: '1-2 weeks',
+    category: 'Edge Computing',
+    realService: true,
+    technology: ['Edge Computing', 'Real-time Processing', 'Load Balancing', 'Auto-scaling', 'React', 'Node.js', 'PostgreSQL'],
+    integrations: ['CDN Networks', 'Cloud Platforms', 'IoT Devices', 'Gaming Platforms', 'Streaming Services'],
+    useCases: ['Gaming', 'Live streaming', 'Real-time trading', 'IoT processing', 'Content delivery', 'Edge AI applications'],
+    roi: 'Average customer reduces latency by 90% and improves user experience by 60% within 3 months.',
+    competitors: ['AWS Edge', 'Cloudflare Workers', 'Azure Edge', 'Google Cloud Edge', 'Fastly'],
+    marketSize: '$900M market',
+    growthRate: '250% annual growth',
+    variant: 'quantum-holographic-advanced',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true,
+    implementationDetails: 'Advanced edge computing platform with global distribution, real-time processing, and auto-scaling. Includes performance monitoring and security features.',
+    launchDate: '2024-01-20',
+    customers: 180,
+    rating: 4.8,
+    reviews: 95
+  },
+  {
+    id: 'quantum-ai-research-platform',
+    name: 'Quantum AI Research Platform',
+    tagline: 'Revolutionary quantum AI platform for advanced research',
+    price: '$1,299',
+    period: '/month',
+    description: 'Cutting-edge quantum AI platform combining quantum computing with advanced cognitive AI for unprecedented problem-solving capabilities. First-to-market solution with 99.99% accuracy for research institutions and enterprises.',
+    features: [
+      'Quantum-enhanced neural networks',
+      'Cognitive reasoning engine',
+      'Multi-dimensional problem solving',
+      'Real-time quantum AI processing',
+      'Advanced research analytics',
+      'Collaborative research tools',
+      'API for custom integrations',
+      '24/7 quantum computing access'
+    ],
+    popular: true,
+    icon: '🧠',
+    color: 'from-purple-500 to-indigo-600',
+    textColor: 'text-purple-400',
+    link: 'https://ziontechgroup.com/quantum-ai-research',
+    marketPosition: 'First-to-market quantum AI research platform. Competes with IBM Quantum ($1,200/month) and Google Quantum AI ($1,500/month). Our advantage: Integrated cognitive AI and quantum computing.',
+    targetAudience: 'Research institutions, Universities, Pharmaceutical companies, Government agencies, Tech companies, AI research labs',
+    trialDays: 30,
+    setupTime: '2 hours',
+    category: 'Quantum Computing & AI',
+    realService: true,
+    technology: ['Quantum Computing', 'OpenAI GPT-4', 'TensorFlow Quantum', 'React', 'Node.js', 'PostgreSQL'],
+    integrations: ['Jupyter Notebooks', 'MATLAB', 'Python APIs', 'R Studio', 'Tableau', 'Power BI'],
+    useCases: ['Drug discovery', 'Climate modeling', 'Financial modeling', 'Material science', 'AI research', 'Complex optimization'],
+    roi: 'Research institutions see 500% ROI through accelerated research timelines and breakthrough discoveries.',
+    competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'Amazon Braket'],
+    marketSize: '$2.1B market',
+    growthRate: '350% annual growth',
+=======
   variant: 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk';
   contactInfo: {
     mobile: string;
@@ -6714,23 +6822,6 @@ export const serviceCategories = [
     setupTime: '10 business days',
     category: 'Cloud & Infrastructure',
     realService: true,
-<<<<<<< HEAD
-    technology: ['Terraform', 'GitHub Actions', 'Kubernetes', 'OpenTelemetry'],
-    integrations: ['AWS', 'Azure', 'GCP'],
-    useCases: ['Foundations upgrade', 'New product launch', 'Compliance readiness'],
-    roi: 'Launch faster with fewer surprises and better guardrails.',
-    competitors: ['Boutique cloud shops', 'Internal DIY'],
-    marketSize: '$150B+ cloud services',
-    growthRate: '18% CAGR',
-    variant: 'ai-futuristic',
-    contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https://ziontechgroup.com' },
-    realImplementation: true,
-    implementationDetails: 'Prebuilt modules and checklists applied to your account with knowledge transfer.',
-    launchDate: '2025-06-15',
-    customers: 22,
-    rating: 4.7,
-    reviews: 12
-=======
     technology: ['Quantum Computing', 'Cloud Management', 'AI/ML', 'DevOps', 'Automation'],
     integrations: ['AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Terraform'],
     useCases: ['Cost optimization', 'Resource management', 'Performance tuning', 'Multi-cloud management', 'DevOps automation'],
@@ -7273,7 +7364,6 @@ export const serviceCategories = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1849
   }
 ];
 
@@ -7351,30 +7441,6 @@ export const getServicesByPriceRange = (minPrice: number, maxPrice: number): Enh
   });
 };
 
-<<<<<<< HEAD
-export const getServicesByROI = (minROI: number): EnhancedRealMicroSaasService[] => {
-  return enhancedRealMicroSaasServices.filter(service => {
-    const roiMatch = service.roi.match(/(\d+)%/);
-    if (roiMatch) {
-      const roi = parseInt(roiMatch[1]);
-      return roi >= minROI;
-    }
-    return false;
-  });
-};
-
-export const searchServices = (query: string): EnhancedRealMicroSaasService[] => {
-  const lowerQuery = query.toLowerCase();
-  return enhancedRealMicroSaasServices.filter(service =>
-    service.name.toLowerCase().includes(lowerQuery) ||
-    service.description.toLowerCase().includes(lowerQuery) ||
-    service.tagline.toLowerCase().includes(lowerQuery) ||
-    service.category.toLowerCase().includes(lowerQuery) ||
-    service.technology.some(tech => tech.toLowerCase().includes(lowerQuery)) ||
-    service.useCases.some(useCase => useCase.toLowerCase().includes(lowerQuery))
-  );
-};
-=======
 export const serviceCategories = [
   'All',
   'Quantum Computing',
@@ -7399,4 +7465,3 @@ export const serviceCategories = [
   'Legal Technology',
   'HR & Talent Management'
 ];
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1849

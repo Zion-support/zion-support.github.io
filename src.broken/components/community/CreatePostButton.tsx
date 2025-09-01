@@ -1,5 +1,5 @@
 import React from 'react';
-export function CreatePostButton() {
+export function ListingScoreCard() {
   return (
     <div>
       <h1>Component</h1>

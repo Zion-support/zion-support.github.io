@@ -17,10 +17,6 @@ const IotPlatforms: NextPage = () => {
   );
 };
 
-export default function IoTPlatforms() {
-  return <div>IoT Platforms</div>;
-}
-=======
 export default IotPlatforms;
 =======
 export default function IoTPlatforms(){

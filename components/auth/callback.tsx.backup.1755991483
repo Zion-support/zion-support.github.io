@@ -1,5 +1,3 @@
-export default Callback;
-=======
 import React from 'react';
 
 export default function AuthCallbackPage() {

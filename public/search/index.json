@@ -81,23 +81,8 @@
   },
   {
     "route": "/about",
-    "title": "About Us | Zion Tech Group",
-    "h1": "About Zion Tech Group"
-  },
-  {
-    "route": "/advanced-ai-automation-services",
-    "title": "Advanced AI Automation Services | Zion Tech Group",
-    "h1": "Advanced AI Automation Services"
-  },
-  {
-    "route": "/advanced-cybersecurity-suite",
-    "title": "Advanced Cybersecurity Suite | Zion Tech Group",
-    "h1": "Advanced Cybersecurity Suite"
-  },
-  {
-    "route": "/advanced-it-infrastructure-services",
-    "title": "Advanced IT Infrastructure Services | Zion Tech Group",
-    "h1": "Advanced IT Infrastructure Services"
+    "title": "About Us - Zion Tech Group",
+    "h1": "We build practical AI and platform solutions"
   },
   {
     "route": "/agency-dashboard",
@@ -158,6 +143,11 @@
     "route": "/ai-guardrails",
     "title": "AI Guardrails Suite | Zion Tech Group",
     "h1": "AI Guardrails Suite"
+  },
+  {
+    "route": "/ai-powered-it-asset-management",
+    "title": "AI-Powered IT Asset Management - Zion Tech Group",
+    "h1": ""
   },
   {
     "route": "/ai-seo-suite",
@@ -230,6 +220,11 @@
     "h1": "Automation Insights"
   },
   {
+    "route": "/autonomous-business-operations-platform",
+    "title": "Autonomous Business Operations Platform - Zion Tech Group",
+    "h1": ""
+  },
+  {
     "route": "/autonomous-vehicle-ai-platform",
     "title": "{service.name} - Zion Tech Group",
     "h1": ""
@@ -246,8 +241,8 @@
   },
   {
     "route": "/blog",
-    "title": "Blog | Zion Tech Group",
-    "h1": "Blog & Insights"
+    "title": "",
+    "h1": "Blog"
   },
   {
     "route": "/browser-automation-cloud",
@@ -266,7 +261,7 @@
   },
   {
     "route": "/careers",
-    "title": "Careers | Zion Tech Group",
+    "title": "Careers - Zion Tech Group | Join Our Revolutionary Technology Team",
     "h1": "Join Our Team"
   },
   {
@@ -600,6 +595,11 @@
     "h1": ""
   },
   {
+    "route": "/quantum-neural-network-platform",
+    "title": "Quantum Neural Network Platform - Zion Tech Group",
+    "h1": ""
+  },
+  {
     "route": "/quantum-secure-cloud-infrastructure",
     "title": "",
     "h1": "Quantum-Secure Cloud Infrastructure 2045"
@@ -676,7 +676,7 @@
   },
   {
     "route": "/services",
-    "title": "Revolutionary 2025 Technology Services | Zion Tech Group",
+    "title": "Revolutionary 2029 Technology Services | Zion Tech Group",
     "h1": ""
   },
   {
@@ -706,8 +706,8 @@
   },
   {
     "route": "/team",
-    "title": "Our Team | Zion Tech Group",
-    "h1": "Meet Our Team"
+    "title": "",
+    "h1": ""
   },
   {
     "route": "/technology-insights",

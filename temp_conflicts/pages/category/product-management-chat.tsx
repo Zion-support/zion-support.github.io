@@ -1,8 +1,9 @@
-import type { NextPage } from 'next';
+
+import Head from 'next/head';
 import Link from 'next/link';
 import Seo from '../../components/seo/Seo';
 
-const ProductManagementChat: NextPage = () => {
+const ProductManagementChat = () => {
   return (
     <div>
       <Seo title="Product Management" description="Product management strategy and insights by Zion." openGraph={{ title: 'Product Management', description: 'Product management strategy and insights by Zion.' }} />

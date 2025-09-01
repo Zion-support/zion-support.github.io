@@ -1,13 +1,5 @@
 import React from 'react';
 
-const Component = () => {
-  return (
-    <div>
-      <h1>Page Content</h1>
-      <p>This page is under construction.</p>
-=======
-import React from 'react';
-
 export default function ContactPage() {
   return <div>Contact Zion</div>;
 }
@@ -35,10 +27,6 @@ const Contact: NextPage = () => {
   );
 };
 
-export default function Contact() {
-  return <div>Contact</div>;
-}
-=======
 export default Contact;
 =======
   return <div className="py-10">Contact us at contact@zion.ai</div>;

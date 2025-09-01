@@ -1,8 +1,8 @@
-
+import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const ProductManagementChat = () => {
+const ProductManagementChat: NextPage = () => {
   return (
     <div>
       <Head>
