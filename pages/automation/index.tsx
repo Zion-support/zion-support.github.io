@@ -13,12 +13,29 @@ const Index: NextPage = () => {
         <p className="text-white/70 mb-8">Discover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.</p>
         <ul className="space-y-4">
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Dependency Health Radar</h2>
-            <p className="text-white/70">Audits npm dependencies and publishes a live report to /reports/deps.</p>
-            <div className="flex items-center gap-4 mt-2">
-              <a className="text-cyan-300 underline" href="/.netlify/functions/dependency-health-radar-runner" target="_blank" rel="noopener">Trigger / View</a>
-              <a className="text-cyan-300 underline" href="/reports/deps" target="_blank" rel="noopener">Open Report</a>
-            </div>
+            <h2 className="text-xl font-bold">Component Docs Generator</h2>
+            <p className="text-white/70">Scans UI components and publishes props documentation.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/component-docs-runner" target="_blank" rel="noopener">Trigger / View</a>
+          </li>
+          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
+            <h2 className="text-xl font-bold">Content Gap Analyzer</h2>
+            <p className="text-white/70">Audits pages for content density and meta descriptions.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/content-gap-analyzer" target="_blank" rel="noopener">Trigger / View</a>
+          </li>
+          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
+            <h2 className="text-xl font-bold">SEO Audit</h2>
+            <p className="text-white/70">Generates SEO report for all pages and publishes it.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/seo-audit-runner" target="_blank" rel="noopener">Trigger / View</a>
+          </li>
+          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
+            <h2 className="text-xl font-bold">AI Trends Radar</h2>
+            <p className="text-white/70">Aggregates trending AI topics into a live report.</p>
+            <a className="text-cyan-300 underline" href="/reports/ai-trends" target="_blank" rel="noopener">Open Report</a>
+          </li>
+          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
+            <h2 className="text-xl font-bold">Website Search Index</h2>
+            <p className="text-white/70">Regenerates the full site search index.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/website-search-index-runner" target="_blank" rel="noopener">Trigger / View</a>
           </li>
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
             <h2 className="text-xl font-bold">Homepage Updates</h2>
