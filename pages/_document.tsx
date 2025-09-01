@@ -1,27 +1,16 @@
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
-  }
-
   render() {
-    const setInitialTheme = `
-(function() {
-  try {
-    var saved = localStorage.getItem('theme');
-    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    var useDark = saved ? saved === 'dark' : prefersDark;
-    if (useDark) document.documentElement.classList.add('dark');
-  } catch (e) {}
-})();
-`;
     return (
-      <Html>
-        <Head />
+      <Html lang="en" className="antialiased">
+        <Head>
+          <meta charSet="utf-8" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+          <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Source+Serif+4:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+        </Head>
         <body>
-          <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
           <Main />
           <NextScript />
         </body>
