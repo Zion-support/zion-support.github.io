@@ -84,82 +84,27 @@ const Index: NextPage = () => {
             <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
               Autonomous innovation hub delivering cutting-edge technology solutions and intelligent automation systems.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/automation" 
-                className="bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-fuchsia-600 transition-all"
-              >
-                Explore Our Systems
-              </a>
+            
+            {/* Navigation Links */}
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
               <a 
                 href="/about" 
-                className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all"
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-fuchsia-600 transition-all duration-200"
               >
-                Learn More
+                About Us
               </a>
-            </div>
-          </section>
-
-          {/* Key Features */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center text-white">Why Choose Zion Tech Group?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-cyan-400">Autonomous AI</h3>
-                <p className="text-white/80">
-                  Our systems learn, adapt, and evolve continuously, providing intelligent solutions that improve over time.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-fuchsia-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-fuchsia-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-fuchsia-400">24/7 Operation</h3>
-                <p className="text-white/80">
-                  Round-the-clock autonomous operation ensures your systems never sleep and continuously optimize performance.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-indigo-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-indigo-400">Global Scale</h3>
-                <p className="text-white/80">
-                  Multi-region infrastructure with intelligent load balancing and synchronization for worldwide performance.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* Statistics */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center text-white">Our Impact</h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
-              <div className="bg-gradient-to-br from-cyan-500/20 to-fuchsia-500/20 p-6 rounded-xl border border-cyan-400/30">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">227+</div>
-                <div className="text-white/80">Automations</div>
-              </div>
-              <div className="bg-gradient-to-br from-cyan-500/20 to-fuchsia-500/20 p-6 rounded-xl border border-cyan-400/30">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">2,960+</div>
-                <div className="text-white/80">Pages Generated</div>
-              </div>
-              <div className="bg-gradient-to-br from-cyan-500/20 to-fuchsia-500/20 p-6 rounded-xl border border-cyan-400/30">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">12</div>
-                <div className="text-white/80">Components</div>
-              </div>
-              <div className="bg-gradient-to-br from-cyan-500/20 to-fuchsia-500/20 p-6 rounded-xl border border-cyan-400/30">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-                <div className="text-white/80">Uptime</div>
-              </div>
+              <a 
+                href="/services" 
+                className="px-6 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
+              >
+                Our Services
+              </a>
+              <a 
+                href="/contact" 
+                className="px-6 py-3 border border-fuchsia-400 text-fuchsia-400 font-semibold rounded-lg hover:bg-fuchsia-400 hover:text-white transition-all duration-200"
+              >
+                Contact
+              </a>
             </div>
           </section>
 
@@ -207,25 +152,98 @@ const Index: NextPage = () => {
           </section>
           {/* AUTO-GENERATED: HOME_LATEST_CONTENT_END */}
 
-          {/* Call to Action */}
-          <section className="text-center">
-            <h2 className="text-3xl font-bold mb-6 text-white">Ready to Get Started?</h2>
-            <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-              Join the future of autonomous AI technology. Let's explore how our systems can transform your operations.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-fuchsia-600 transition-all"
-              >
-                Get in Touch
-              </a>
-              <a 
-                href="/about" 
-                className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all"
-              >
-                Learn More
-              </a>
+          {/* Features Section */}
+          <section className="mx-auto max-w-7xl px-6 pb-14">
+            <h2 className="text-center text-3xl font-bold tracking-wide text-white/90 mb-12">Why Choose Zion Tech Group?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white/10 p-8 rounded-2xl border border-white/20 hover:border-cyan-400/30 transition-all duration-300 group">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-cyan-400">Lightning Fast</h3>
+                <p className="text-white/80">
+                  Our autonomous systems operate 24/7 with instant response times, 
+                  ensuring your business never slows down.
+                </p>
+              </div>
+
+              <div className="bg-white/10 p-8 rounded-2xl border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300 group">
+                <div className="w-16 h-16 bg-gradient-to-r from-fuchsia-500 to-fuchsia-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-fuchsia-400">99.9% Uptime</h3>
+                <p className="text-white/80">
+                  Self-healing infrastructure with autonomous monitoring ensures 
+                  your systems are always available and performing optimally.
+                </p>
+              </div>
+
+              <div className="bg-white/10 p-8 rounded-2xl border border-white/20 hover:border-purple-400/30 transition-all duration-300 group">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-purple-400">AI-Powered Innovation</h3>
+                <p className="text-white/80">
+                  Continuously evolving AI systems that learn, adapt, and improve 
+                  your technology infrastructure automatically.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Stats Section */}
+          <section className="mx-auto max-w-7xl px-6 pb-14">
+            <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 p-12 rounded-3xl border border-cyan-500/20">
+              <h2 className="text-center text-3xl font-bold tracking-wide text-white/90 mb-12">Our Impact</h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="text-5xl font-bold text-cyan-400 mb-2">227</div>
+                  <div className="text-sm text-white/70">Active Automations</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-5xl font-bold text-fuchsia-400 mb-2">2,960</div>
+                  <div className="text-sm text-white/70">Generated Pages</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-5xl font-bold text-purple-400 mb-2">12</div>
+                  <div className="text-sm text-white/70">Core Components</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-5xl font-bold text-green-400 mb-2">99.9%</div>
+                  <div className="text-sm text-white/70">Uptime</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="mx-auto max-w-7xl px-6 pb-14">
+            <div className="text-center">
+              <h2 className="text-3xl font-bold mb-6 text-white">Ready to Experience the Future?</h2>
+              <p className="text-white/80 mb-8 max-w-2xl mx-auto">
+                Join the revolution in autonomous technology and discover how our AI-powered 
+                solutions can transform your business.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="/services" 
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-fuchsia-600 transition-all duration-200"
+                >
+                  Explore Our Services
+                </a>
+                <a 
+                  href="/contact" 
+                  className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
+                >
+                  Get Started Today
+                </a>
+              </div>
             </div>
           </section>
         </main>
