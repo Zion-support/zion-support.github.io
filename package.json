@@ -18,12 +18,11 @@
     "npm": ">=10.0.0"
   },
   "scripts": {
-    "dev:clean": "rm -rf .next && npm run dev",
-    "build:clean": "rm -rf .next out && npm run build",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "lint:fix": "npm run lint -- --fix",
-    "type-check:strict": "tsc --noEmit --strict",
+    "test": "echo \"No tests specified\" && exit 0",
+    "test:build": "npm run build:health-check && npm run build:validate && npm run build",
+    "test:security": "npm run security:scan",
+    "test:quality": "npm run lint && npm run type-check",
+    "test:full": "npm run test:quality && npm run test:security && npm run test:build",
     "pm2:start": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && pm2 start ecosystem.config.cjs --update-env",
     "pm2:stop": "pm2 stop ecosystem.config.cjs || true",
     "pm2:restart": "pm2 restart ecosystem.config.cjs || pm2 start ecosystem.config.cjs --update-env",
@@ -415,12 +414,13 @@
     "master:health": "node automation/master-automation-launcher.cjs health",
     "master:status": "node automation/master-automation-launcher.cjs status",
     "master:report": "node automation/master-automation-launcher.cjs report",
-    "check:all": "npm run lint && npm run type-check && npm run build",
-    "format:check": "prettier --check .",
-    "format:fix": "prettier --write .",
-    "test:all": "npm run lint && npm run type-check && npm run build",
-    "health:check": "npm run build:health-check && npm run build:validate",
-    "clean:all": "rm -rf .next out tsconfig.tsbuildinfo node_modules/.cache"
+    "health:full": "npm run health:monitor && npm run build:health-check && npm run build:validate && npm run security:scan",
+    "clean": "rm -rf .next out tsconfig.tsbuildinfo node_modules/.cache",
+    "clean:full": "npm run clean && rm -rf node_modules && npm install",
+    "analyze": "ANALYZE=true npm run build",
+    "performance": "npm run build && npm run build:monitor",
+    "monitor:all": "npm run build:monitor && npm run redundancy:pm2 && npm run redundancy:github && npm run redundancy:netlify",
+    "health:monitor": "node automation/project-health-monitor.cjs"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
