@@ -3,7 +3,11 @@ const APIMonitoringSaaS: React.FC = (): JSX.Element => (
   <div className="min-h-screen bg-slate-900 text-white">""
     <SEO title="API Monitoring & Status - Zion Tech Group" description="SLA-grade API monitoring, alerting, SLOs, and status pages for your services."  />""
     <section className="container mx-auto px-4 py-12">""
+<<<<<<< HEAD:pages.disabled/pages/services/APIMonitoringSaaS.tsx
       <h1 className="text-4xl font-bold mb-4">API Monitoring & Status</h1>"      <p className="text-slate-300 max-w-3xl">End-to-end API uptime, latency, and error monitoring with synthetic checks, distributed tracing hooks, and public status pages. Define SLOs and get proactive alerts before customers are impacted.</p>"
+=======
+      <h1 className="text-4xl font-bold mb-4">API Monitoring & Status</h1>"      <p className="text-slate-300 max-w-3xl">End-to-end API uptime, latency, and error monitoring with synthetic checks, distributed tracing hooks, and public status pages. Define SLOs and get proactive alerts before customers are impacted.</p>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/APIMonitoringSaaS.tsx
     </section>""
     <section className="container mx-auto px-4 pb-8 grid md:grid-cols-3 gap-6">""
       <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
@@ -13,7 +17,11 @@ const APIMonitoringSaaS: React.FC = (): JSX.Element => (
           <li>Error budgets, SLO tracking and burn-rate alerts</li>
           <li>Distributed tracing hooks (OpenTelemetry)</li>
           <li>Auto incident creation and on-call schedules</li>
+<<<<<<< HEAD:pages.disabled/pages/services/APIMonitoringSaaS.tsx
         </ul>"
+=======
+        </ul>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/APIMonitoringSaaS.tsx
       </div>""
       <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
         <h3 className="font-semibold mb-2">Integrations</h3>""
@@ -21,7 +29,11 @@ const APIMonitoringSaaS: React.FC = (): JSX.Element => (
           <li>PagerDuty, Opsgenie, Slack, MS Teams</li>
           <li>Datadog, New Relic, Grafana, Prometheus</li>
           <li>GitHub, GitLab, Jira for incident workflows</li>
+<<<<<<< HEAD:pages.disabled/pages/services/APIMonitoringSaaS.tsx
         </ul>"
+=======
+        </ul>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/APIMonitoringSaaS.tsx
       </div>""
       <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
         <h3 className="font-semibold mb-2">Pricing</h3>""
@@ -30,7 +42,11 @@ const APIMonitoringSaaS: React.FC = (): JSX.Element => (
           <li>Growth: $249/mo for 50 checks + SLOs</li>
           <li>Enterprise: custom, SSO, advanced analytics</li>
         </ul>
+<<<<<<< HEAD:pages.disabled/pages/services/APIMonitoringSaaS.tsx
       </div>;"
+=======
+      </div>;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/APIMonitoringSaaS.tsx
     </section>;""
     <section className="container mx-auto px-4 pb-16 space-x-4">;""
       <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Request demo</a>;""
@@ -41,5 +57,10 @@ const APIMonitoringSaaS: React.FC = (): JSX.Element => (
 ;
 export { APIMonitoringSaaS };
 export default APIMonitoringSaaS;
+<<<<<<< HEAD:pages.disabled/pages/services/APIMonitoringSaaS.tsx
 "
 '"'"
+=======
+
+'""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/APIMonitoringSaaS.tsx

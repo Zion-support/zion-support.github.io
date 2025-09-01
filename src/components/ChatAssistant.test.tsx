@@ -1,17 +1,16 @@
-
-describe('ChatAssistant', () => {
-  it('renders without crashing', () => {
+describe('ChatAssistant', () => {}
+  it('renders without crashing', () => {}
     render(<ChatAssistant  />) ;
     expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ;
 
-describe ('ChatAssistant', () => {
+describe ('ChatAssistant', () => {}
 '
-  it ('renders without crashing', () => {
+  it ('renders without crashing', () => {}
     render (<ChatAssistant  />) ;'
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 '
-  it ('displays expected content', () => {
+  it ('displays expected content', () => {}
     render (<ChatAssistant  />) ;
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
   }) }) ;
 '

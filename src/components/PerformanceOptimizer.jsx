@@ -1,124 +1,128 @@
-import React, { useEffect, useMemo, useCallback } from 'react';'
+import React, { useEffect, useMemo, useCallback } from 'react';'''
 import { useLocation } from 'react-router-dom';
 
-export const PerformanceOptimizer = ({ children }) => {
-
+export const PerformanceOptimizer = ({ children }) => {}
   const location = useLocation();
 
-  // Preload critical resources
-  useEffect(() => {
-    const preloadCriticalResources = () => {
-      // Note: CSS is already handled by Vite build process
-      // Fonts are loaded via Google Fonts CDN in index.html
+  // Preload critical resources;
+  useEffect(() => {}
+    const preloadCriticalResources = () => {}
+      // Note: CSS is already handled by Vite build process;
+      // Fonts are loaded via Google Fonts CDN in index.html;
     };
     preloadCriticalResources();
   }, []);
 
-  // Optimize images on route change
-  useEffect(() => {
-    const optimizeImages = () => {
+  // Optimize images on route change;
+  useEffect(() => {}
+    const optimizeImages = () => {}
 '
+''
+'''
       const images = document.querySelectorAll('img');
-      images.forEach(img => {
-
-        // Add loading="lazy" to images below the fold
-        if (img.getBoundingClientRect().top > window.innerHeight) {
+      images.forEach(img => {}
+        // Add loading="lazy" to images below the fold;
+        if (img.getBoundingClientRect().top > window.innerHeight) {}
 '
-          img.loading = 'lazy';"
-        }"'"
+          img.loading = 'lazy';"""
+        }"'"""
         // Add decoding="async" for better performance''
         img.decoding = 'async';
-        // Add error handling
-        img.onerror = () => {
+        // Add error handling;
+        img.onerror = () => {}
 '
+''
+'''
           img.style.display = 'none';
         };
       });
     };
 '
     // Use requestIdleCallback for non-critical optimization''
-    if ('requestIdleCallback' in window) {
-
+    if ('requestIdleCallback' in window) {}
       requestIdleCallback(optimizeImages);
-    } else {
-
+    } else {}
       setTimeout(optimizeImages, 100);
     }
   }, [location.pathname]);
 
-  // Memoize expensive computations
+  // Memoize expensive computations;
   const optimizedChildren = useMemo(() => children, [children]);
 
-  // Optimize scroll performance
-  const handleScroll = useCallback(() => {
-    // Throttle scroll events for better performance
-    if(!window.scrollTimeout) {
-
-      window.scrollTimeout = setTimeout(() => {
-        // Handle scroll-based optimizations here
+  // Optimize scroll performance;
+  const handleScroll = useCallback(() => {}
+    // Throttle scroll events for better performance;
+    if(!window.scrollTimeout) {}
+      window.scrollTimeout = setTimeout(() => {}
+        // Handle scroll-based optimizations here;
         window.scrollTimeout = null;
-      }, 16); // ~60fps
+      }, 16); // ~60fps;
     }
   }, []);
 
-  useEffect(() => {
+  useEffect(() => {}
 '
-    window.addEventListener('scroll', handleScroll, { passive: true });'
+''
+'''
+    window.addEventListener('scroll', handleScroll, { passive: true });'''
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
-  // Service Worker registration for caching
-  useEffect(() => {
+  // Service Worker registration for caching;
+  useEffect(() => {}
 '
-    if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+    if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {}
 '
-      navigator.serviceWorker''
+''
+'''
+      navigator.serviceWorker''''
         .register('/sw.js')
-        .then(registration => {
+        .then(registration => {}
 '
           // // console.log('SW registered: ', registration);
 '
           // Check for updates''
-          registration.addEventListener('updatefound', () => {
+          registration.addEventListener('updatefound', () => {}
             const newWorker = registration.installing;
-            if (newWorker) {
+            if (newWorker) {}
 '
-              newWorker.addEventListener('statechange', () => {
+              newWorker.addEventListener('statechange', () => {}
 '
-                if (''
+''
+'''
+                if (''''
                   newWorker.state === 'installed' &&
-                  navigator.serviceWorker.controller
-                ) {
+                  navigator.serviceWorker.controller;
+                ) {}
 '
-                  // New service worker available''
+''
+'''
+                  // New service worker available''''
                   // // console.log('New service worker available');
                 }
               });
             }
           });
         })
-        .catch(registrationError => {
+        .catch(registrationError => {}
 '
+''
+'''
           // // console.warn('SW registration failed: ', registrationError);
         });
     }
   }, []);
 
-  // Intersection Observer for lazy loading
-  useEffect(() => {
+  // Intersection Observer for lazy loading;
+  useEffect(() => {}
 '
-    if ('IntersectionObserver' in window) {
-
+    if ('IntersectionObserver' in window) {}
       const observer = new IntersectionObserver()
-        entries => {
-
-          entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
+        entries => {}
+          entries.forEach(entry => {}
+            if (entry.isIntersecting) {}
               const target = entry.target;
-              if(target.dataset.src) {
-
+              if(target.dataset.src) {}
                 target.src = target.dataset.src;'
                 target.removeAttribute('data-src');
                 observer.unobserve(target);
@@ -126,13 +130,15 @@ export const PerformanceOptimizer = ({ children }) => {
             }
           });
         },
-        {
+        {}
 '
+''
+'''
           rootMargin: '50px',
-          threshold: 0.1}
-      );
-'
-      // Observe all images with data-src''
+          threshold: 0.1}'
+      );''
+'''
+      // Observe all images with data-src''''
       const lazyImages = document.querySelectorAll('img[data-src]');
       lazyImages.forEach(img => observer.observe(img));
 
@@ -144,33 +150,30 @@ export const PerformanceOptimizer = ({ children }) => {
 };
 '
 // Add global performance optimizations''
-if (typeof window !== 'undefined') {
+if (typeof window !== 'undefined') {}
 '
   // Optimize long tasks''
-  if ('scheduler' in window && 'postTask' in window.scheduler) {
-
+  if ('scheduler' in window && 'postTask' in window.scheduler) {}
     window.scheduler.postTask()
-      () => {
-        // Run non-critical tasks during idle time
+      () => {}
+        // Run non-critical tasks during idle time;
       },'
       { priority: 'background' }
     );
   }
 '
   // Optimize memory usage''
-  if ('memory' in performance) {
-
-    const memoryThreshold = 50 * 1024 * 1024; // 50MB
-    if (performance.memory.usedJSHeapSize > memoryThreshold) {
+  if ('memory' in performance) {}
+    const memoryThreshold = 50 * 1024 * 1024; // 50MB;
+    if (performance.memory.usedJSHeapSize > memoryThreshold) {}
 '
       // Trigger garbage collection if available''
-      if ('gc' in window) {
-
+      if ('gc' in window) {}
         window.gc();
       }
     }
   }
 }
 
-export default PerformanceOptimizer;'"
-'"'"
+export default PerformanceOptimizer;'"""
+'"'"""

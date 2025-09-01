@@ -1,76 +1,62 @@
-
-interface User {
+interface User {}
   id: string;
   email: string;
   name: string;
-:src/store/authSlice.tsx
+:src/store/authSlice.tsx;
   avatar?: string}
   avatar?: string}
 
-interface AuthState {
+interface AuthState {}
   isLoggedIn: boolean;
   isAuthenticated: boolean;
   isLoading: boolean;
   user: User | null;
   token: string | null;
 
-:src/store/authSlice.tsx
+:src/store/authSlice.tsx;
   error: string | null}
   error: string | null}
 
 }
 ;
-const initialState: AuthState = {
-
+const initialState: AuthState = {}
   isLoggedIn: false,
   isAuthenticated: false,
   isLoading: false,
   user: null,
   token: null,
-:src/store/authSlice.tsx
+:src/store/authSlice.tsx;
   error: null}},
   error: null}},
-    setUser: (state, action: PayloadAction<User>) => {
-
+    setUser: (state, action: PayloadAction<User>) => {}
       state.user = action.payload;
       state.isAuthenticated = true;
       state.error = null},
-    setToken: (state, action: PayloadAction<string>) => {
-
-:src/store/authSlice.tsx
-
+    setToken: (state, action: PayloadAction<string>) => {}
+:src/store/authSlice.tsx;
       state.token = action.payload},
-    logout: state => {
-
+    logout: state => {}
       state.token = action.payload},
-    logout: (state) => {
-
+    logout: (state) => {}
       state.isLoggedIn = false;
       state.user = null;
       state.isAuthenticated = false;
       state.token = null;
       state.error = null},
-    setLoading: (state, action: PayloadAction<boolean>) => {
-
-:src/store/authSlice.tsx
-
+    setLoading: (state, action: PayloadAction<boolean>) => {}
+:src/store/authSlice.tsx;
       state.isLoading = action.payload},
-    setError: (state, action: PayloadAction<string>) => {
-
+    setError: (state, action: PayloadAction<string>) => {}
       state.error = action.payload},
-    clearError: state => {
-
+    clearError: state => {}
       state.error = null}}});
       state.isLoading = action.payload},
-    setError: (state, action: PayloadAction<string>) => {
-
+    setError: (state, action: PayloadAction<string>) => {}
       state.error = action.payload},
-    clearError: (state) => {
-
+    clearError: (state) => {}
       state.error = null}}});
 
-export const {
-
+export const {}
   setLoggedIn,
   setUser,
   setToken,

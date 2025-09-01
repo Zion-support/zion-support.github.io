@@ -1,17 +1,16 @@
-
-describe('NotificationSystem', () => {
-  it('renders without crashing', () => {
+describe('NotificationSystem', () => {}
+  it('renders without crashing', () => {}
     render(<NotificationSystem  />) ;
     expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ;
 
-describe ('NotificationSystem', () => {
+describe ('NotificationSystem', () => {}
 '
-  it ('renders without crashing', () => {
+  it ('renders without crashing', () => {}
     render (<NotificationSystem  />) ;'
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 '
-  it ('displays expected content', () => {
+  it ('displays expected content', () => {}
     render (<NotificationSystem  />) ;
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
   }) }) ;
 '

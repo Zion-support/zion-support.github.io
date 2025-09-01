@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react';''
 import SEO from '@/components / SEO';
 export default EnhancedServices;
 
-const EnhancedServices = () => {
+const EnhancedServices: any = () => {}
   return (<>
-      <SEO
-        title="Enhanced Services - Zion Tech Group"
-        description="Advanced technology services with enhanced features and capabilities for modern businesses."
-        keywords="enhanced services, advanced technology, modern solutions, business technology"
+      <SEO;
+        title="Enhanced Services - Zion Tech Group"""
+        description="Advanced technology services with enhanced features and capabilities for modern businesses."""
+        keywords="enhanced services, advanced technology, modern solutions, business technology"""
       />
       <div className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - slate - 800 text-white">
         <div className="max - w-7xl mx - auto px-6 py-20">
@@ -16,7 +16,7 @@ const EnhancedServices = () => {
               Enhanced < span className="bg-gradient - to - r from - blue - 400 to - cyan - 400 bg-clip - text text-transparent">Services</span>
             </h1>
             <p className="text-xl text-gray - 300 max - w-3xl mx -auto">
-              Advanced technology services with enhanced features and capabilities
+              Advanced technology services with enhanced features and capabilities;
             </p>
           </div>
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">
@@ -40,4 +40,4 @@ const EnhancedServices = () => {
       </div>;
     </>
   )};export default EnhancedServices;
-'"'"
+'"'"""

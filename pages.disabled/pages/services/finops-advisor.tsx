@@ -1,21 +1,27 @@
 ;
-export { function };export default function FinOpsAdvisor(...args: []):  {
-
+export { function };export default function FinOpsAdvisor(...args: []):  {}
   return()
     <>
       <Helmet>
         <title>FinOps Advisor - Zion Tech Group</title>
         <meta name = "description" content="Optimize your cloud costs with AI-powered FinOps advisory services. Reduce cloud spending, improve resource utilization, and maximize ROI." />""
         <meta name="keywords" content="FinOps, cloud cost optimization, cloud financial management, cost reduction, cloud ROI, financial operations" />
+<<<<<<< HEAD:pages.disabled/pages/services/finops-advisor.tsx
       </Helmet>"
 ""
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
+=======
+      </Helmet>
+""
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/finops-advisor.tsx
         {/* Hero Section */}""
         <section className="relative pt-32 pb-20 overflow-hidden">""
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-600/10"></div>""
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center">""
               <div className="inline-flex items-center px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium mb-8">""
+<<<<<<< HEAD:pages.disabled/pages/services/finops-advisor.tsx
                 <DollarSign className="w-4 h-4 mr-2"  />                Cloud Financial Operations
               </div>"
 ""
@@ -23,10 +29,20 @@ export { function };export default function FinOpsAdvisor(...args: []):  {
                 FinOps""
                 <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent"> Advisor</span>
               </h1>"
+=======
+                <DollarSign className="w-4 h-4 mr-2"  />                Cloud Financial Operations;
+              </div>
+""
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                FinOps""
+                <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent"> Advisor</span>
+              </h1>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/finops-advisor.tsx
 ""
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
                 Optimize your cloud costs with AI-powered FinOps advisory services. Reduce spending,
                 improve resource utilization, and maximize your cloud investment ROI.
+<<<<<<< HEAD:pages.disabled/pages/services/finops-advisor.tsx
               </p>"
 ""
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -39,23 +55,45 @@ export { function };export default function FinOpsAdvisor(...args: []):  {
                 </Link>""
                 <button className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200">""
                   <Play className="mr-2 w-5 h-5"  />                  Watch Demo
+=======
+              </p>
+""
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link""
+                  to="/contact""
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-200 shadow-lg hover:shadow-xl""
+                  Get Started""
+                  <ArrowRight className="ml-2 w-5 h-5"  />
+                </Link>""
+                <button className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200">""
+                  <Play className="mr-2 w-5 h-5"  />                  Watch Demo;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/finops-advisor.tsx
                 </button>
               </div>
             </div>
           </div>
         </section>
+<<<<<<< HEAD:pages.disabled/pages/services/finops-advisor.tsx
 "
+=======
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/finops-advisor.tsx
         {/* Features Section */}""
         <section className="py-20">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+<<<<<<< HEAD:pages.disabled/pages/services/finops-advisor.tsx
                 Cloud Financial Optimization"
+=======
+                Cloud Financial Optimization;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/finops-advisor.tsx
               </h2>""
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Our FinOps platform provides comprehensive tools for managing cloud costs,
                 optimizing resources, and improving financial operations.
               </p>
+<<<<<<< HEAD:pages.disabled/pages/services/finops-advisor.tsx
             </div>"
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
@@ -100,6 +138,46 @@ export { function };export default function FinOpsAdvisor(...args: []):  {
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">""
                     <feature.icon className="w-6 h-6 text-white" />"
+=======
+            </div>
+""
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {[]
+                {}
+                  icon: Calculator,""
+                  title: "Cost Analysis",""
+                  description: "Comprehensive cloud cost analysis and spending insights across all services.""
+                },
+                {}
+                  icon: TrendingUp,""
+                  title: "Optimization Recommendations",""
+                  description: "AI-powered recommendations for cost reduction and resource optimization.""
+                },
+                {}
+                  icon: BarChart3,""
+                  title: "Budget Management",""
+                  description: "Set budgets, track spending, and manage cloud financial planning.""
+                },
+                {}
+                  icon: Users,""
+                  title: "Team Accountability",""
+                  description: "Track costs by team, project, and application for better accountability.""
+                },
+                {}
+                  icon: Shield,""
+                  title: "Compliance & Governance",""
+                  description: "Ensure cloud spending compliance with organizational policies and standards.""
+                },
+                {}
+                  icon: Database,""
+                  title: "Multi-cloud Support",""
+                  description: "Manage costs across AWS, Azure, Google Cloud, and other providers.""
+                }
+              ].map((feature, index)  => (""
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
+                  <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">""
+                    <feature.icon className="w-6 h-6 text-white" />
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/finops-advisor.tsx
                   </div>""
                   <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""
                   <p className="text-slate-300">{feature.description}</p>
@@ -108,17 +186,26 @@ export { function };export default function FinOpsAdvisor(...args: []):  {
             </div>
           </div>
         </section>
+<<<<<<< HEAD:pages.disabled/pages/services/finops-advisor.tsx
 "
+=======
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/finops-advisor.tsx
         {/* Cost Optimization Areas Section */}""
         <section className="py-20 bg-slate-800/30">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+<<<<<<< HEAD:pages.disabled/pages/services/finops-advisor.tsx
                 Cost Optimization Areas"
+=======
+                Cost Optimization Areas;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/finops-advisor.tsx
               </h2>""
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Identify and optimize key areas of cloud spending for maximum cost savings.
               </p>
+<<<<<<< HEAD:pages.disabled/pages/services/finops-advisor.tsx
             </div>"
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
@@ -179,6 +266,62 @@ export { function };export default function FinOpsAdvisor(...args: []):  {
                   <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>""
                   <p className="text-slate-300 mb-4">{area.description}</p>""
                   <ul className="space-y-1">"
+=======
+            </div>
+""
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {[]
+                {}
+""
+                  title: "Compute Resources",""
+                  description: "Optimize EC2 instances, auto-scaling, and resource allocation.",
+                  icon: Calculator,""
+                  benefits: ["Right-sizing", "Auto-scaling", "Reserved instances"]
+                },
+                {}
+""
+                  title: "Storage Optimization",""
+                  description: "Optimize storage costs, lifecycle policies, and data tiering.",
+                  icon: Database,""
+                  benefits: ["Lifecycle policies", "Data tiering", "Storage classes"]
+                },
+                {}
+""
+                  title: "Network Costs",""
+                  description: "Optimize data transfer, CDN usage, and network architecture.",
+                  icon: Activity,""
+                  benefits: ["Data transfer", "CDN optimization", "Network design"]
+                },
+                {}
+""
+                  title: "Database Costs",""
+                  description: "Optimize database instances, storage, and backup strategies.",
+                  icon: BarChart3,""
+                  benefits: ["Instance optimization", "Storage optimization", "Backup strategies"]
+                },
+                {}
+""
+                  title: "Development Tools",""
+                  description: "Optimize CI/CD, monitoring, and development tool costs.",
+                  icon: Settings,""
+                  benefits: ["CI/CD optimization", "Monitoring costs", "Tool consolidation"]
+                },
+                {}
+""
+                  title: "Support & Licensing",""
+                  description: "Optimize support plans, licensing, and service agreements.",
+                  icon: Shield,""
+                  benefits: ["Support plans", "Licensing", "Service agreements"]
+                }
+              ].map((area, index)  => (""
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
+                  <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">""
+                    <area.icon className="w-6 h-6 text-white" />
+                  </div>""
+                  <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>""
+                  <p className="text-slate-300 mb-4">{area.description}</p>""
+                  <ul className="space-y-1">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/finops-advisor.tsx
                     {area.benefits.map((benefit, benefitIndex) => (""
                       <li key={benefitIndex} className="text-sm text-emerald-400 flex items-center">""
                         <CheckCircle className="w-3 h-3 mr-2"  />                        {benefit}
@@ -190,17 +333,26 @@ export { function };export default function FinOpsAdvisor(...args: []):  {
             </div>
           </div>
         </section>
+<<<<<<< HEAD:pages.disabled/pages/services/finops-advisor.tsx
 "
+=======
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/finops-advisor.tsx
         {/* FinOps Framework Section */}""
         <section className="py-20">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+<<<<<<< HEAD:pages.disabled/pages/services/finops-advisor.tsx
                 FinOps Framework Implementation"
+=======
+                FinOps Framework Implementation;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/finops-advisor.tsx
               </h2>""
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Implement industry-standard FinOps practices for sustainable cloud cost management.
               </p>
+<<<<<<< HEAD:pages.disabled/pages/services/finops-advisor.tsx
             </div>"
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
@@ -230,6 +382,34 @@ export { function };export default function FinOpsAdvisor(...args: []):  {
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">""
                     <span className="text-white font-bold text-xl">{step.step}</span>"
+=======
+            </div>
+""
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {[]
+                {}
+""
+                  step: "01",""
+                  title: "Inform",""
+                  description: "Establish cost visibility and reporting across all cloud services.""
+                },
+                {}
+""
+                  step: "02",""
+                  title: "Optimize",""
+                  description: "Implement cost optimization strategies and resource management.""
+                },
+                {}
+""
+                  step: "03",""
+                  title: "Operate",""
+                  description: "Establish ongoing cost management processes and governance.""
+                }
+              ].map((step, index)  => (""
+                <div key={index} className="text-center">""
+                  <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">""
+                    <span className="text-white font-bold text-xl">{step.step}</span>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/finops-advisor.tsx
                   </div>""
                   <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>""
                   <p className="text-slate-300">{step.description}</p>
@@ -238,22 +418,38 @@ export { function };export default function FinOpsAdvisor(...args: []):  {
             </div>
           </div>
         </section>
+<<<<<<< HEAD:pages.disabled/pages/services/finops-advisor.tsx
 "
+=======
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/finops-advisor.tsx
         {/* Cost Savings Section */}""
         <section className="py-20 bg-slate-800/30">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+<<<<<<< HEAD:pages.disabled/pages/services/finops-advisor.tsx
                 Proven Cost Savings"
+=======
+                Proven Cost Savings;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/finops-advisor.tsx
               </h2>""
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Our FinOps solutions deliver measurable cost reductions and improved cloud efficiency.
               </p>
+<<<<<<< HEAD:pages.disabled/pages/services/finops-advisor.tsx
             </div>"
 ""
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">"
               <div>""
                 <div className="space-y-6">"
+=======
+            </div>
+""
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>""
+                <div className="space-y-6">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/finops-advisor.tsx
                   {[""
                     "Average 30-40% reduction in cloud costs",""
                     "Improved resource utilization by 50-60%",""
@@ -267,16 +463,28 @@ export { function };export default function FinOpsAdvisor(...args: []):  {
                     </div>
                   ))}
                 </div>
+<<<<<<< HEAD:pages.disabled/pages/services/finops-advisor.tsx
               </div>"
 ""
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">""
                 <h3 className="text-2xl font-semibold text-white mb-4">Cost Savings Metrics</h3>""
                 <div className="space-y-4">"
+=======
+              </div>
+""
+              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">""
+                <h3 className="text-2xl font-semibold text-white mb-4">Cost Savings Metrics</h3>""
+                <div className="space-y-4">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/finops-advisor.tsx
                   {[""
                     { metric: "30-40%", label: "Cost Reduction", description: "Average savings" },""
                     { metric: "50-60%", label: "Resource Utilization", description: "Improvement" },""
                     { metric: "70%", label: "Faster Decisions", description: "Optimization speed" },""
+<<<<<<< HEAD:pages.disabled/pages/services/finops-advisor.tsx
                     { metric: "90%", label: "Cost Visibility", description: "Transparency" }"
+=======
+                    { metric: "90%", label: "Cost Visibility", description: "Transparency" }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/finops-advisor.tsx
                   ].map((item, index)  => (""
                     <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">""
                       <div className="text-2xl font-bold text-emerald-400 mb-1">{item.metric}</div>""
@@ -289,17 +497,26 @@ export { function };export default function FinOpsAdvisor(...args: []):  {
             </div>
           </div>
         </section>
+<<<<<<< HEAD:pages.disabled/pages/services/finops-advisor.tsx
 "
+=======
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/finops-advisor.tsx
         {/* Tools & Integrations Section */}""
         <section className="py-20">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+<<<<<<< HEAD:pages.disabled/pages/services/finops-advisor.tsx
                 FinOps Tools & Integrations"
+=======
+                FinOps Tools & Integrations;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/finops-advisor.tsx
               </h2>""
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Comprehensive tools and integrations for complete cloud financial management.
               </p>
+<<<<<<< HEAD:pages.disabled/pages/services/finops-advisor.tsx
             </div>"
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
@@ -360,6 +577,62 @@ export { function };export default function FinOpsAdvisor(...args: []):  {
                   <h3 className="text-xl font-semibold text-white mb-2">{tool.title}</h3>""
                   <p className="text-slate-300 mb-4">{tool.description}</p>""
                   <ul className="space-y-1">"
+=======
+            </div>
+""
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {[]
+                {}
+""
+                  title: "Cost Management Tools",""
+                  description: "AWS Cost Explorer, Azure Cost Management, and Google Cloud Billing.",
+                  icon: Calculator,""
+                  features: ["Cost Explorer", "Cost Management", "Cloud Billing"]
+                },
+                {}
+""
+                  title: "Resource Optimization",""
+                  description: "Automated resource optimization and cost-saving recommendations.",
+                  icon: TrendingUp,""
+                  features: ["Auto-optimization", "Recommendations", "Resource management"]
+                },
+                {}
+""
+                  title: "Budget Controls",""
+                  description: "Budget alerts, spending limits, and cost governance controls.",
+                  icon: Shield,""
+                  features: ["Budget alerts", "Spending limits", "Governance controls"]
+                },
+                {}
+""
+                  title: "Reporting & Analytics",""
+                  description: "Comprehensive cost reporting and financial analytics dashboards.",
+                  icon: BarChart3,""
+                  features: ["Cost reporting", "Financial analytics", "Custom dashboards"]
+                },
+                {}
+""
+                  title: "Team Collaboration",""
+                  description: "Cost allocation, team budgets, and collaborative cost management.",
+                  icon: Users,""
+                  features: ["Cost allocation", "Team budgets", "Collaboration tools"]
+                },
+                {}
+""
+                  title: "API Integration",""
+                  description: "REST APIs for custom integrations and automated workflows.",
+                  icon: Settings,""
+                  features: ["REST APIs", "Custom integrations", "Automated workflows"]
+                }
+              ].map((tool, index)  => (""
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
+                  <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">""
+                    <tool.icon className="w-6 h-6 text-white" />
+                  </div>""
+                  <h3 className="text-xl font-semibold text-white mb-2">{tool.title}</h3>""
+                  <p className="text-slate-300 mb-4">{tool.description}</p>""
+                  <ul className="space-y-1">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/finops-advisor.tsx
                     {tool.features.map((feature, featureIndex) => (""
                       <li key={featureIndex} className="text-sm text-emerald-400 flex items-center">""
                         <CheckCircle className="w-3 h-3 mr-2"  />                        {feature}
@@ -371,17 +644,26 @@ export { function };export default function FinOpsAdvisor(...args: []):  {
             </div>
           </div>
         </section>
+<<<<<<< HEAD:pages.disabled/pages/services/finops-advisor.tsx
 "
+=======
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/finops-advisor.tsx
         {/* Implementation Process Section */}""
         <section className="py-20 bg-slate-800/30">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+<<<<<<< HEAD:pages.disabled/pages/services/finops-advisor.tsx
                 Implementation Process"
+=======
+                Implementation Process;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/finops-advisor.tsx
               </h2>""
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Our systematic approach ensures successful FinOps implementation and cost optimization.
               </p>
+<<<<<<< HEAD:pages.disabled/pages/services/finops-advisor.tsx
             </div>"
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
@@ -418,6 +700,40 @@ export { function };export default function FinOpsAdvisor(...args: []):  {
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">""
                     <span className="text-white font-bold text-xl">{step.step}</span>"
+=======
+            </div>
+""
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+              {[]
+                {}
+""
+                  step: "01",""
+                  title: "Assessment",""
+                  description: "Evaluate current cloud spending and identify optimization opportunities.""
+                },
+                {}
+""
+                  step: "02",""
+                  title: "Strategy",""
+                  description: "Develop comprehensive FinOps strategy and implementation roadmap.""
+                },
+                {}
+""
+                  step: "03",""
+                  title: "Implementation",""
+                  description: "Deploy FinOps tools and establish cost management processes.""
+                },
+                {}
+""
+                  step: "04",""
+                  title: "Optimization",""
+                  description: "Continuously monitor, optimize, and improve cost management.""
+                }
+              ].map((step, index)  => (""
+                <div key={index} className="text-center">""
+                  <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">""
+                    <span className="text-white font-bold text-xl">{step.step}</span>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/finops-advisor.tsx
                   </div>""
                   <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>""
                   <p className="text-slate-300">{step.description}</p>
@@ -426,11 +742,16 @@ export { function };export default function FinOpsAdvisor(...args: []):  {
             </div>
           </div>
         </section>
+<<<<<<< HEAD:pages.disabled/pages/services/finops-advisor.tsx
 "
+=======
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/finops-advisor.tsx
         {/* CTA Section */}""
         <section className="py-20 bg-gradient-to-r from-emerald-500/10 to-teal-600/10">;""
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+<<<<<<< HEAD:pages.disabled/pages/services/finops-advisor.tsx
               Ready to Optimize Your Cloud Costs?"
             </h2>""
             <p className="text-xl text-slate-300 mb-8">
@@ -446,6 +767,22 @@ export { function };export default function FinOpsAdvisor(...args: []):  {
               <Link""
                 to="/services""
                 className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200"
+=======
+              Ready to Optimize Your Cloud Costs?
+            </h2>""
+            <p className="text-xl text-slate-300 mb-8">
+              Transform your cloud financial operations with AI-powered FinOps advisory services.
+            </p>""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link""
+                to="/contact""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-200""
+                Schedule a Consultation""
+                <ArrowRight className="ml-2 w-5 h-5"  />              </Link>
+              <Link""
+                to="/services""
+                className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/finops-advisor.tsx
               >
                 Explore All Services;
               </Link>;
@@ -453,5 +790,10 @@ export { function };export default function FinOpsAdvisor(...args: []):  {
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD:pages.disabled/pages/services/finops-advisor.tsx
     </>"
   )}}}}}}}'"'"
+=======
+    </>
+  )}}}}}}}'""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/finops-advisor.tsx

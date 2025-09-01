@@ -1,9 +1,9 @@
-        ref={ref}
+ref={ref}
         className={cn()
           baseClasses,
           variantClasses[variant],
           sizeClasses[size],
-          className
+          className;
         )}
         {...props}
       >

@@ -1,8 +1,8 @@
-import { useEffect, useState, useRef, ReactNode } from "react";"
-import { cn } from "@/lib/utils";"
+import { useEffect, useState, useRef, ReactNode } from "react";"""
+import { cn } from "@/lib/utils";"""
 import { Skeleton } from "@/components/ui/skeleton";
 
-interface LazyLoadProps {
+interface LazyLoadProps {}
   height?: string | number;
   width?: string | number;
   children: ReactNode;
@@ -10,51 +10,45 @@ interface LazyLoadProps {
   className?: string;
 }
 
-export function LazyLoad({
-"
-  height = "200px","
+export function LazyLoad(function LazyLoad(function LazyLoad({}
+"""
+  height = "200px","""
   width = "100%",
   children,
   loadingComponent,
-  className}: LazyLoadProps) {
-
+  className}: LazyLoadProps) {): any {): any {}
   const [isVisible, setIsVisible] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef: any = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const currentRef = containerRef.current; // Store current ref value
-    const observer = new IntersectionObserver()
-      (entries) => {
-
-        if (entries[0].isIntersecting) {
-
+  useEffect(() => {}
+    const currentRef: any = containerRef.current; // Store current ref value;
+    const observer: any = new IntersectionObserver()
+      (entries) => {}
+        if (entries[0].isIntersecting) {}
           setIsVisible(true);
           observer.disconnect();
         }
       },
-      {
-"
+      {}
+"""
         rootMargin: "200px", 
         threshold: 0.1}
     );
 
-    if (currentRef) {
-
+    if (currentRef) {}
       observer.observe(currentRef);
     }
 
-    return () => {
-      if (currentRef) { // Use the stored ref value in cleanup
+    return () => {}
+      if (currentRef) { // Use the stored ref value in cleanup;
         observer.unobserve(currentRef);
       }
     };
-  }, []); // Empty array is correct here for mount/unmount behavior
-
-  useEffect(() => {
-    if (isVisible) {
-
-      const timer = setTimeout(() => {
+  }, []); // Empty array is correct here for mount/unmount behavior;
+  useEffect(() => {}
+    if (isVisible) {}
+      const timer: any = setTimeout(() => {}
         setIsLoaded(true);
       }, 500);
 
@@ -62,19 +56,19 @@ export function LazyLoad({
     }
   }, [isVisible]);
 
-  const defaultLoadingComponent = (
-    <Skeleton
-      style={{ height, width }}"
-      className="rounded-md bg-zion-blue-light/20"
+  const defaultLoadingComponent: any = (
+    <Skeleton;
+      style={{ height, width }}"""
+      className="rounded-md bg-zion-blue-light/20"""
     />
   );
 
   return()
-    <div
-      ref={containerRef}"
-      className={cn("transition-opacity duration-500", "
+    <div;
+      ref={containerRef}"""
+      className={cn("transition-opacity duration-500", """
         isLoaded ? "opacity-100" : "opacity-0",
-        className
+        className;
       )}
     >
       {isVisible ? (
@@ -83,9 +77,9 @@ export function LazyLoad({
           {isLoaded && children}
         </>
       ) : (
-        loadingComponent || defaultLoadingComponent
+        loadingComponent || defaultLoadingComponent;
       )}
     </div>
   );
 }
-"
+"""

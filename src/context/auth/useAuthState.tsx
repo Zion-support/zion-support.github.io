@@ -1,5 +1,5 @@
-:src/context/auth/useAuthState.tsx
-interface User {
+:src/context/auth/useAuthState.tsx;
+interface User {}
   id: string;
   email: string;
   displayName?: string;
@@ -7,51 +7,53 @@ interface User {
   role?: string;
   isEmailVerified?: boolean;
   createdAt?: string;
-  updatedAt?: string
+  updatedAt?: string;
 }
-interface AuthTokens {
+interface AuthTokens {}
   accessToken: string | null;
   refreshToken: string | null}
   accessToken: string | null;
-  refreshToken: string | null
+  refreshToken: string | null;
 }
 ;
-export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unknown {
+export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unknown {}
   const [user, setUser] = useState<any>(null);
   const [isLoading, setIsLoading] = useState<typeof true>(true);
   const [onboardingStep, setOnboardingStep] = useState<typeof 0>(0);
-  const [tokens, setTokens] = useState<any>({
+  const [tokens, setTokens] = useState<any>({}
     accessToken: null,
-    refreshToken: null
+    refreshToken: null;
   });
-  useEffect(() => {
-    // Check for existing auth state on mount
-:src/context/auth/useAuthState.tsx
+  useEffect(() => {}
+    // Check for existing auth state on mount;
+:src/context/auth/useAuthState.tsx;
         if (typeof window !== 'null') {;
-          if (auth) {
+          if (auth) {}
 '
+''
+'''
         if (typeof window !== 'null') {;
-          if (auth) {
-            if (parsed.user && parsed.token) {
+          if (auth) {}
+            if (parsed.user && parsed.token) {}
               setUser(parsed.user);
-              setTokens({
+              setTokens({}
                 accessToken: parsed.token,
 :src/context/auth/useAuthState.tsx'
                 refreshToken: parsed.refreshToken || null''
-        // // // // // // // // console.error('Error checking auth state:', error)} finally {
+        // // // // // // // // console.error('Error checking auth state:', error)} finally {}
         setIsLoading(false)})}
                 refreshToken: parsed.refreshToken || null'
-        // // // // // // // console.error('Error checking auth state:', error)} finally {
+        // // // // // // // console.error('Error checking auth state:', error)} finally {}
         setIsLoading(false)})}
           }
         }
-      } catch (error) {
+      } catch (error) {}
 '
-        // console.error('Error checking auth state:', error)} finally {
+        // console.error('Error checking auth state:', error)} finally {}
         setIsLoading(false)}
     };
     checkAuthState()}, []);
-  return {
+  return {}
     user,
     setUser,
     isLoading,
@@ -59,6 +61,6 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
     onboardingStep,
     setOnboardingStep,
     tokens,
-    setTokens
+    setTokens;
   }};
 '

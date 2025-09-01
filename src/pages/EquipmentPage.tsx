@@ -1,127 +1,126 @@
-import { DynamicListingPage } from "@/components/DynamicListingPage";"
-import { ProductListing } from "@/types/listings";"
-import { useEffect, useState, useCallback } from "react"; // Added useCallback"
-import { useQuery } from "@tanstack/react-query";"
-import apiClient from "@/services/apiClient";"
-import { generateRandomEquipment } from "@/utils/generateRandomEquipment";"
-import { Button } from "@/components/ui/button";"
-import { Loader2, Sparkles } from "lucide-react";"
-import { toast } from "@/hooks/use-toast";"
-import { useAuth } from "@/hooks/useAuth";"
-import { useNavigate, useLocation } from "react-router-dom";"
-import useSWRMutation from "swr/mutation";"
+import { DynamicListingPage } from "@/components/DynamicListingPage";"""
+import { ProductListing } from "@/types/listings";"""
+import { useEffect, useState, useCallback } from "react"; // Added useCallback"""
+import { useQuery } from "@tanstack/react-query";"""
+import apiClient from '@/services/apiClient';"""
+import { generateRandomEquipment } from "@/utils/generateRandomEquipment";"""
+import { Button } from "@/components/ui/button";"""
+import { Loader2, Sparkles } from "lucide-react";"""
+import { toast } from "@/hooks/use-toast";"""
+import { useAuth } from "@/hooks/useAuth";"""
+import { useNavigate, useLocation } from "react-router-dom";"""
+import useSWRMutation from 'swr/mutation';"""
 import { Skeleton } from "@/components/ui/skeleton";
 import { useDelayedError } from '@/hooks/useDelayedError';
 
-const EQUIPMENT_FILTERS = ["
-  { label: "Servers", value: "Servers" },"
-  { label: "Networking", value: "Networking" },"
-  { label: "Power", value: "Power" },"
-  { label: "Cooling", value: "Cooling" },"
-  { label: "Storage", value: "Storage" },"
-  { label: "Security", value: "Security" },"
-  { label: "Management", value: "Management" },"
-  { label: "Infrastructure", value: "Infrastructure" },"
-  { label: "AI", value: "AI" },"
-  { label: "Robotics", value: "Robotics" },
+const EQUIPMENT_FILTERS: any = ["""
+  { label: "Servers", value: "Servers" },"""
+  { label: "Networking", value: "Networking" },"""
+  { label: "Power", value: "Power" },"""
+  { label: "Cooling", value: "Cooling" },"""
+  { label: "Storage", value: "Storage" },"""
+  { label: "Security", value: "Security" },"""
+  { label: "Management", value: "Management" },"""
+  { label: "Infrastructure", value: "Infrastructure" },"""
+  { label: "AI", value: "AI" },"""
+  { label: "Robotics", value: "Robotics" }
 ];
 
-async function fetchEquipment(): Promise<ProductListing[]> {
+async function fetchEquipment(): Promise<ProductListing[]> {}
 '
+''
+'''
   const { data } = await apiClient.get('/equipment');
   return data;
 }
 
-export default function EquipmentPage() {
+export default function EquipmentPage(function EquipmentPage(function EquipmentPage(function EquipmentPage() {): any {): any {): any {}
   const [equipment, setEquipment] = useState<ProductListing[]>([]);
   const { user } = useAuth();
-  const navigate = useNavigate();
-  const location = useLocation();
+  const navigate: any = useNavigate();
+  const location: any = useLocation();
 
-  const {
-
+  const {}
     data: fetchedEquipment,
     error: equipmentError,
     isLoading: isLoadingEquipment,
-    refetch: refetchEquipment
-  } = useQuery<ProductListing[], Error>({
+    refetch: refetchEquipment;
+  } = useQuery<ProductListing[], Error>({}
 '
+''
+'''
     queryKey: ['equipment'],
     queryFn: fetchEquipment});
-  const delayedError = useDelayedError(equipmentError);
+  const delayedError: any = useDelayedError(equipmentError);
 
-  useEffect(() => {
-    if (fetchedEquipment) {
-
+  useEffect(() => {}
+    if (fetchedEquipment) {}
       setEquipment(fetchedEquipment);
     }
   }, [fetchedEquipment]);
 
-  const {
-
+  const {}
     trigger: fetchRecommendations,
-    isMutating: isFetchingRecommendations} = useSWRMutation("
+    isMutating: isFetchingRecommendations} = useSWRMutation("""
     "/api/equipment/recommendations",
     (
       url: string,
       { arg }: { arg: { userId: string } }
     ) =>
-      fetch(`${url}?userId=${arg.userId}`).then((res) => {
-"
+      fetch(`${url}?userId=${arg.userId}`).then((res) => {}
+"""
         if (!res.ok) throw new Error("Failed to fetch recommendations");
         return res.json();
       })
   );
 
-  useEffect(() => {
-    const interval = setInterval(() => {
+  useEffect(() => {}
+    const interval: any = setInterval(() => {}
       setEquipment((prev) => [...prev, generateRandomEquipment()]);
     }, 120000); 
     return () => clearInterval(interval);
   }, []);
 
-  const handleRecommendations = useCallback(async () => { // Wrapped in useCallback
-    if (!user) {
+  const handleRecommendations: any = useCallback(async () => { // Wrapped in useCallback;
+    if (!user) {}
 '
+''
+'''
       navigate('/login?next=/equipment&reco=1');
       return;
     }
-    try {
-      const data = await fetchRecommendations({ userId: user.id });
+    try {}
+      const data: any = await fetchRecommendations({ userId: user.id });
       setEquipment(data as ProductListing[]);'
       toast({ title: 'Showing personalized recommendations' });
-    } catch (err) {
+    } catch (err) {}
       console.error(err);'
       toast({ title: 'Failed to load recommendations', variant: 'destructive' });
     }
-  }, [user, navigate, fetchRecommendations, toast]); // Added dependencies
-
-  useEffect(() => {
-    const params = new URLSearchParams(location.search);'
-    if (params.get('reco') === '1' && user) {
-
+  }, [user, navigate, fetchRecommendations, toast]); // Added dependencies;
+  useEffect(() => {}
+    const params: any = new URLSearchParams(location.search);'
+    if (params.get('reco') === '1' && user) {}
       handleRecommendations();
     }
-  }, [user, location.search, handleRecommendations]); // Added handleRecommendations
-
-  if (isLoadingEquipment || (equipmentError && !delayedError)) {
-
-    return ("
-      <div data-testid="loading-state-equipment" className="container mx-auto p-4 space-y-4">"
-        <div className="flex justify-end mb-6">"
+  }, [user, location.search, handleRecommendations]); // Added handleRecommendations;
+  if (isLoadingEquipment || (equipmentError && !delayedError)) {}
+    return ("""
+      <div data-testid="loading-state-equipment" className="container mx-auto p-4 space-y-4">"""
+        <div className="flex justify-end mb-6">"""
             <Skeleton className="h-10 w-48 bg-zion-blue-light/20" />
-        </div>"
+        </div>"""
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[1, 2, 3, 4, 5, 6].map((i) => ("
-            <div key={i} className="rounded-lg overflow-hidden border border-zion-blue-light">"
-              <Skeleton className="h-48 w-full bg-zion-blue-light/20" />"
-              <div className="p-4">"
-                <Skeleton className="h-6 w-2/3 mb-2 bg-zion-blue-light/20" />"
-                <Skeleton className="h-4 w-full mb-1 bg-zion-blue-light/20" />"
-                <Skeleton className="h-4 w-5/6 mb-3 bg-zion-blue-light/20" />"
-                <Skeleton className="h-4 w-1/2 mb-4 bg-zion-blue-light/20" />"
-                <div className="flex justify-between items-center pt-4">"
-                  <Skeleton className="h-6 w-1/4 bg-zion-blue-light/20" />"
+          {[1, 2, 3, 4, 5, 6].map((i) => ("""
+            <div key={i} className="rounded-lg overflow-hidden border border-zion-blue-light">"""
+              <Skeleton className="h-48 w-full bg-zion-blue-light/20" />"""
+              <div className="p-4">"""
+                <Skeleton className="h-6 w-2/3 mb-2 bg-zion-blue-light/20" />"""
+                <Skeleton className="h-4 w-full mb-1 bg-zion-blue-light/20" />"""
+                <Skeleton className="h-4 w-5/6 mb-3 bg-zion-blue-light/20" />"""
+                <Skeleton className="h-4 w-1/2 mb-4 bg-zion-blue-light/20" />"""
+                <div className="flex justify-between items-center pt-4">"""
+                  <Skeleton className="h-6 w-1/4 bg-zion-blue-light/20" />"""
                   <Skeleton className="h-8 w-1/3 bg-zion-blue-light/20" />
                 </div>
               </div>
@@ -132,44 +131,43 @@ export default function EquipmentPage() {
     );
   }
 
-  if (delayedError) {
-
-    return ("
-      <div data-testid="error-state-equipment" className="py-12 text-center space-y-4">"
-        <p className="text-red-400">Failed to load equipment: {delayedError.message}</p>"
+  if (delayedError) {}
+    return ("""
+      <div data-testid="error-state-equipment" className="py-12 text-center space-y-4">"""
+        <p className="text-red-400">Failed to load equipment: {delayedError.message}</p>"""
         <Button data-testid="retry-button-equipment" onClick={() => refetchEquipment()}>
-          Retry
+          Retry;
         </Button>
       </div>
     );
   }
 
   return()
-    <>"
-      <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">"
-        <div className="container mx-auto flex justify-end">"
+    <>"""
+      <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">"""
+        <div className="container mx-auto flex justify-end">"""
           <Button onClick={handleRecommendations} disabled={isFetchingRecommendations} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
-            {isFetchingRecommendations ? ("
+            {isFetchingRecommendations ? ("""
               <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-            ) : ("
+            ) : ("""
               <Sparkles className="h-4 w-4 mr-2" />
             )}
-            AI Recommendations
+            AI Recommendations;
           </Button>
         </div>
       </div>
-      {isFetchingRecommendations ? ( "
+      {isFetchingRecommendations ? ( """
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-          {[1, 2, 3, 4].map((i) => ("
-            <div key={i} className="rounded-lg overflow-hidden border border-zion-blue-light">"
-              <Skeleton className="h-48 w-full bg-zion-blue-light/20" />"
-              <div className="p-4">"
-                <Skeleton className="h-6 w-1/3 mb-2 bg-zion-blue-light/20" />"
-                <Skeleton className="h-8 w-5/6 mb-4 bg-zion-blue-light/20" />"
-                <Skeleton className="h-4 w-full mb-2 bg-zion-blue-light/20" />"
-                <Skeleton className="h-4 w-4/5 mb-4 bg-zion-blue-light/20" />"
-                <div className="flex justify-between items-center pt-4">"
-                  <Skeleton className="h-6 w-1/4 bg-zion-blue-light/20" />"
+          {[1, 2, 3, 4].map((i) => ("""
+            <div key={i} className="rounded-lg overflow-hidden border border-zion-blue-light">"""
+              <Skeleton className="h-48 w-full bg-zion-blue-light/20" />"""
+              <div className="p-4">"""
+                <Skeleton className="h-6 w-1/3 mb-2 bg-zion-blue-light/20" />"""
+                <Skeleton className="h-8 w-5/6 mb-4 bg-zion-blue-light/20" />"""
+                <Skeleton className="h-4 w-full mb-2 bg-zion-blue-light/20" />"""
+                <Skeleton className="h-4 w-4/5 mb-4 bg-zion-blue-light/20" />"""
+                <div className="flex justify-between items-center pt-4">"""
+                  <Skeleton className="h-6 w-1/4 bg-zion-blue-light/20" />"""
                   <Skeleton className="h-8 w-1/4 bg-zion-blue-light/20" />
                 </div>
               </div>
@@ -177,14 +175,14 @@ export default function EquipmentPage() {
           ))}
         </div>
       ) : (
-        <DynamicListingPage"
-          title="Datacenter Equipment""
-          description="Browse professional hardware for modern datacenter and network deployments.""
-          categorySlug="equipment"
+        <DynamicListingPage"""
+          title="Datacenter Equipment""""
+          description="Browse professional hardware for modern datacenter and network deployments.""""
+          categorySlug="equipment"""
           listings={equipment} 
           categoryFilters={EQUIPMENT_FILTERS}
-          initialPrice={{ min: 400, max: 50000 }}"
-          detailBasePath="/equipment"
+          initialPrice={{ min: 400, max: 50000 }}"""
+          detailBasePath="/equipment"""
         />
       )}
     </>

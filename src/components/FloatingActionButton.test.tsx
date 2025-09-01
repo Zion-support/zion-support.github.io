@@ -1,17 +1,16 @@
-
-describe('FloatingActionButton', () => {
-  it('renders without crashing', () => {
+describe('FloatingActionButton', () => {}
+  it('renders without crashing', () => {}
     render(<FloatingActionButton  />) ;
     expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ;
 
-describe ('FloatingActionButton', () => {
+describe ('FloatingActionButton', () => {}
 '
-  it ('renders without crashing', () => {
+  it ('renders without crashing', () => {}
     render (<FloatingActionButton  />) ;'
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 '
-  it ('displays expected content', () => {
+  it ('displays expected content', () => {}
     render (<FloatingActionButton  />) ;
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
   }) }) ;
 '

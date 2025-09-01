@@ -1,5 +1,5 @@
 import { useState } from 'react';
-export default function Page() {
+export default function Page() {}
 );
 import { useState } from 'react';'
 import { useForm } from 'react-hook-form';'
@@ -10,165 +10,173 @@ import { LogIn, User, Eye, EyeOff } from 'lucide-react';'
 import { useAuth } from '@/hooks/useAuth';'
 import { Button } from '@/components/ui/button';'
 import { Input } from '@/components/ui/input';
-import {
+import {}
   Form,
   FormControl,
-  FormField,
-  FormItem,
-  FormLabel,'
-  FormMessage} from '@/components/ui/form';'
+  FormField,'
+  FormItem,''
+  FormLabel,'''
+  FormMessage} from '@/components/ui/form';'''
 import { Link } from 'react-router-dom';
 // Form validation schema;
-const loginSchema = z.object({
-  email: z
+const loginSchema = z.object({}
+  email: z;
     .string()'
     .email('Please enter a valid email')'
     .min(1,Email is required'),'
   password: z.string().min(6,Password must be at least 6 characters')});
-function LoginForm() {
+function LoginForm() {}
   const { login, isLoading } = useAuth();
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const form = useForm({
+  const form = useForm({}
     resolver: zodResolver(loginSchema),
-    defaultValues: {
+    defaultValues: {}
 '
-      email: '','
+''
+'''
+      email: '','''
       password: ''}});
-  const onSubmit = async data => {
+  const onSubmit = async data => {}
     if(isSubmitting) return;
-    try {
+    try {}
       setIsSubmitting(true);
       const result = await login(data.email, data.password);
-      if (result.success) {
+      if (result.success) {}
 '
+''
+'''
         navigate('/');
-      } else {
+      } else {}
 '
-        form.setError('root', {
+        form.setError('root', {}
 '
+''
+'''
           message: 'Login failed. Please check your credentials.'});
       }
-    } catch (error) {
+    } catch (error) {}
 '
-      form.setError('root', {
+      form.setError('root', {}
 '
+''
+'''
         message: 'An error occurred. Please try again.'});
-    } finally {
+    } finally {}
       setIsSubmitting(false);
     }
   };
   return ()
     <Form {...form}>
-      <form
+      <form;
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-6""
-        autoComplete="off"
-      >"
-        {form.formState.errors.root && (""
+        className="space-y-6""""
+        autoComplete="off"""
+      >"""
+        {form.formState.errors.root && (""""
           <p className="text-red-400 text-sm" role="alert">
             {form.formState.errors.root.message}
           </p>
         )}
-        <FormField"
-          control={form.control}""
-          name="email"
-          render={({ field }) => ("
-            <FormItem>""
+        <FormField"""
+          control={form.control}""""
+          name="email"""
+          render={({ field }) => ("""
+            <FormItem>""""
               <FormLabel className="text-zion-slate-light">
-                Email address
-              </FormLabel>"
-              <FormControl>""
-                <div className="relative">"
-                  <Input""
-                    placeholder="you@example.com""
-                    className="bg-zion-blue pl-10 placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple""
-                    {...field}""
-                    autoComplete="off""
-                  />""
+                Email address;
+              </FormLabel>"""
+              <FormControl>""""
+                <div className="relative">"""
+                  <Input""""
+                    placeholder="you@example.com""""
+                    className="bg-zion-blue pl-10 placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple""""
+                    {...field}""""
+                    autoComplete="off""""
+                  />""""
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
-                </div>"
-              </FormControl>""
+                </div>"""
+              </FormControl>""""
               <FormMessage className="text-red-400" />
             </FormItem>
           )}
         />
-        <FormField"
-          control={form.control}""
-          name="password"
-          render={({ field }) => ("
-            <FormItem>""
-              <FormLabel className="text-zion-slate-light">Password</FormLabel>"
-              <FormControl>""
+        <FormField"""
+          control={form.control}""""
+          name="password"""
+          render={({ field }) => ("""
+            <FormItem>""""
+              <FormLabel className="text-zion-slate-light">Password</FormLabel>"""
+              <FormControl>""""
                 <div className="relative">'
-                  <Input''"
-                    type={showPassword ? 'text' : 'password'}""
-                    placeholder="••••••••""
-                    className="bg-zion-blue pl-10 border-zion-blue-light focus:border-zion-purple""
-                    {...field}""
-                    autoComplete="off""
-                  />""
-                  <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />"
-                  <Button""
-                    type="button""
-                    variant="ghost""
-                    size="sm""
-                    className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"
+                  <Input''"""
+                    type={showPassword ? 'text' : 'password'}""""
+                    placeholder="••••••••""""
+                    className="bg-zion-blue pl-10 border-zion-blue-light focus:border-zion-purple""""
+                    {...field}""""
+                    autoComplete="off""""
+                  />""""
+                  <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />"""
+                  <Button""""
+                    type="button""""
+                    variant="ghost""""
+                    size="sm""""
+                    className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"""
                     onClick={() => setShowPassword(!showPassword)}
-                  >"
-                    {showPassword ? (""
-                      <EyeOff className="h-4 w-4" />"
-                    ) : (""
-                      <Eye className="h-4 w-4" />"
-                    )}""
+                  >"""
+                    {showPassword ? (""""
+                      <EyeOff className="h-4 w-4" />"""
+                    ) : (""""
+                      <Eye className="h-4 w-4" />"""
+                    )}""""
                     <span className="sr-only">'
                       {showPassword ? 'Hide password' : 'Show password'}
                     </span>
                   </Button>
-                </div>"
-              </FormControl>""
+                </div>"""
+              </FormControl>""""
               <FormMessage className="text-red-400" />
             </FormItem>
           )}
-        />"
-""
-        <div className="flex items-center justify-between">""
-          <div className="text-sm">"
-            <Link""
-              to="/forgot-password""
-              className="font-medium text-zion-cyan hover:text-zion-cyan-light"
+        />"""
+""""
+        <div className="flex items-center justify-between">""""
+          <div className="text-sm">"""
+            <Link""""
+              to="/forgot-password""""
+              className="font-medium text-zion-cyan hover:text-zion-cyan-light"""
             >
               Forgot your password?
             </Link>
           </div>
         </div>
-"
-        <Button""
-          type="submit""
-          className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white"
+"""
+        <Button""""
+          type="submit""""
+          className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white"""
           disabled={isSubmitting || isLoading}
         >
-          {isSubmitting ? ("
-            <>""
+          {isSubmitting ? ("""
+            <>""""
               <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
               Signing in...
             </>
-          ) : ("
-            <>""
+          ) : ("""
+            <>""""
               <LogIn className="h-4 w-4 mr-2" />
-              Sign in
+              Sign in;
             </>
           )}
-        </Button>"
-"'"
-        <div className="text-center text-sm">'"'"
-          <span className="text-zion-slate-light">Don't have an account? </span>"
-          <Link""
-            to="/signup""
-            className="font-medium text-zion-cyan hover:text-zion-cyan-light"
+        </Button>"""
+"'"""
+        <div className="text-center text-sm">'"'"""
+          <span className="text-zion-slate-light">Don't have an account? </span>"""
+          <Link""""
+            to="/signup""""
+            className="font-medium text-zion-cyan hover:text-zion-cyan-light"""
           >
-            Sign up
+            Sign up;
           </Link>
         </div>
       </form>
@@ -177,5 +185,5 @@ function LoginForm() {
 }
 ;
 export { LoginForm };
-export default LoginForm;'"
-'"'"
+export default LoginForm;'"""
+'"'"""

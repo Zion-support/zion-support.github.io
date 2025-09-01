@@ -1,13 +1,11 @@
-
-
-describe ('manufacturing - solutions', () => {
+describe ('manufacturing - solutions', () => {}
 '
-  it ('renders without crashing', () => {
+  it ('renders without crashing', () => {}
     render (<manufacturing - solutions />) ;'
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 '
-  it ('displays expected content', () => {
+  it ('displays expected content', () => {}
     render (<manufacturing - solutions />) ;
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
   }) }) ;
 '

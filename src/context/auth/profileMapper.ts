@@ -1,25 +1,24 @@
-interface SupabaseUser {
+interface SupabaseUser {}
   id: string;
   email?: string;
-user_metadata?: {
-
+user_metadata?: {}
     full_name?: string;
-    avatar_url?: string
+    avatar_url?: string;
 };
   created_at?: string;
   updated_at?: string}
 
-interface Profile {
+interface Profile {}
   id: string;
   display_name?: string;
   avatar_url?: string;
   role?: string;
   is_email_verified?: boolean;
   created_at?: string;
-  updated_at?: string
+  updated_at?: string;
 }
 
-interface MappedUser {
+interface MappedUser {}
   id: string;
   email: string;
   displayName?: string;
@@ -27,10 +26,10 @@ interface MappedUser {
   role?: string;
   isEmailVerified?: boolean;
   createdAt?: string;
-  updatedAt?: string
+  updatedAt?: string;
 }
 ;
-export 
+export;
     role: profile.role,;
     isEmailVerified: profile.is_email_verified || false,;
     createdAt: profile.created_at || supabaseUser.created_at,;

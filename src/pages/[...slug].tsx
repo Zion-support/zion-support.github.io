@@ -1,14 +1,9 @@
-
-export default function GenericPage() {
+export default function GenericPage(function GenericPage(function GenericPage() {): any {): any {}
   const { '*': slug } = useParams();
-  
-  
-  
-  
-  return()
-    <main
-      style={{
 
+  return()
+    <main;
+      style={{}
         padding: 20,'
         fontFamily: 'sans-serif',
         lineHeight: 1.6,
@@ -16,34 +11,35 @@ export default function GenericPage() {
         margin: '0 auto'}}
     >      <Helmet>
         <title>{title} | Zion Tech Group</title>
-        <meta
+        <meta;
           name="description"``
-          content={`Information about ${title} at Zion Tech Group.`}"
-        />""
-        <link rel="canonical" href={canonical} />"
-      </Helmet>"'"
-      <nav style={{ marginBottom: 16 }} aria-label="Breadcrumbs">'"'"
+          content={`Information about ${title} at Zion Tech Group.`}"""
+        />""""
+        <link rel="canonical" href={canonical} />"""
+      </Helmet>"'"""
+      <nav style={{ marginBottom: 16 }} aria-label="Breadcrumbs">'"'"""
         <Link to="/" style={{ color: '#2563eb' }}>
-          Home
+          Home;
         </Link>
-        <span
-          style={{
+        <span;
+          style={{}
 '
-            margin: '0 8px','
+''
+'''
+            margin: '0 8px','''
             color: '#9ca3af'}}
         >
           /
         </span>
-        <span>{title}</span>
-      </nav>
-      <h1 style={{ marginBottom: 8 }}>{title}</h1>'
+        <span>{title}</span>'
+      </nav>''
+      <h1 style={{ marginBottom: 8 }}>{title}</h1>'''
       <p style={{ color: '#374151' }}>
-        This page is under active development. If you were expecting specific
+        This page is under active development. If you were expecting specific;
         information, please contact us and we will prioritize it.
       </p>
-      <section
-        style={{
-
+      <section;
+        style={{}
           marginTop: 16,'
           padding: '12px 16px','
           background: '#f9fafb','
@@ -57,10 +53,10 @@ export default function GenericPage() {
 
           <li > Cloud, DevOps, data, and cybersecurity services</li>
         </ul>
-        <p style={{ marginTop: 8 }}>'"
-          Have questions about {title.toLowerCase()}?{' '}'"'"
+        <p style={{ marginTop: 8 }}>'"""
+          Have questions about {title.toLowerCase()}?{' '}'"'"""
           <Link to="/contact" style={{ color: '#2563eb' }}>
-            Contact us
+            Contact us;
           </Link>
           .
         </p>

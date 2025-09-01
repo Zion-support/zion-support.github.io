@@ -1,5 +1,4 @@
-import {
-
+import {}
   Brain, 
   Shield, 
   TrendingUp, 
@@ -37,115 +36,112 @@ import {
   Car,
   Leaf,
   Building,
-  Clock
+  Clock;
 } from 'lucide-react';
 
-export default function ComprehensiveServicesLanding2026() {
+export default function ComprehensiveServicesLanding2026(function ComprehensiveServicesLanding2026(function ComprehensiveServicesLanding2026() {): any {): any {}
 '
-  const [searchTerm, setSearchTerm] = useState('');'
+''
+'''
+  const [searchTerm, setSearchTerm] = useState('');'''
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  
-  
-  
   '
-      case 'AI & Financial Services':
+      case 'AI & Financial Services': any;
         return TrendingUp;'
-      case 'AI & Healthcare':
+      case 'AI & Healthcare': any;
         return Heart;'
-      case 'AI & Legal Services':
+      case 'AI & Legal Services': any;
         return Scale;'
-      case 'AI & Customer Experience':
+      case 'AI & Customer Experience': any;
         return Users;'
-      case 'AI & Content Creation':
+      case 'AI & Content Creation': any;
         return FileText;'
-      case 'AI & Project Management':
+      case 'AI & Project Management': any;
         return Briefcase;'
-      case 'AI & Supply Chain':
+      case 'AI & Supply Chain': any;
         return ShoppingCart;'
-      case 'AI & Human Resources':
+      case 'AI & Human Resources': any;
         return Users;'
-      case 'AI & Marketing':
+      case 'AI & Marketing': any;
         return TrendingUp;'
-      case 'AI & Education':
+      case 'AI & Education': any;
         return BookOpen;
-      default:
+      default: any;
         return Brain}
-  };
-
-  '
-      case 'AI & Financial Services':'
-        return 'from-green-600 to-emerald-600';'
-      case 'AI & Healthcare':'
-        return 'from-blue-600 to-cyan-600';'
-      case 'AI & Legal Services':'
-        return 'from-purple-600 to-pink-600';'
-      case 'AI & Customer Experience':'
-        return 'from-indigo-600 to-blue-600';'
-      case 'AI & Content Creation':'
-        return 'from-yellow-600 to-orange-600';'
-      case 'AI & Project Management':'
-        return 'from-teal-600 to-green-600';'
-      case 'AI & Supply Chain':'
-        return 'from-gray-600 to-slate-600';'
-      case 'AI & Human Resources':'
-        return 'from-pink-600 to-rose-600';'
-      case 'AI & Marketing':'
-        return 'from-violet-600 to-purple-600';'
-      case 'AI & Education':'
-        return 'from-cyan-600 to-blue-600';
-      default:'
+  };'
+''
+  '''
+      case 'AI & Financial Services':'''
+        return 'from-green-600 to-emerald-600';'''
+      case 'AI & Healthcare':'''
+        return 'from-blue-600 to-cyan-600';'''
+      case 'AI & Legal Services':'''
+        return 'from-purple-600 to-pink-600';'''
+      case 'AI & Customer Experience':'''
+        return 'from-indigo-600 to-blue-600';'''
+      case 'AI & Content Creation':'''
+        return 'from-yellow-600 to-orange-600';'''
+      case 'AI & Project Management':'''
+        return 'from-teal-600 to-green-600';'''
+      case 'AI & Supply Chain':'''
+        return 'from-gray-600 to-slate-600';'''
+      case 'AI & Human Resources':'''
+        return 'from-pink-600 to-rose-600';'''
+      case 'AI & Marketing':'''
+        return 'from-violet-600 to-purple-600';'''
+      case 'AI & Education':'''
+        return 'from-cyan-600 to-blue-600';''
+      default:'''
         return 'from-gray-600 to-slate-600'}
   };
 
-  
-  
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}"
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">"
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10"></div>"
+      {/* Hero Section */}"""
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">"""
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10"></div>"""
         <div className="max-w-7xl mx-auto relative z-10">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}"
-            className="text-center"
-          >"
+            transition={{ duration: 0.8 }}"""
+            className="text-center"""
+          >"""
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-blue-600 bg-clip-text text-transparent mb-6">
-              Comprehensive Services 2026
-            </h1>"
+              Comprehensive Services 2026;
+            </h1>"""
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">'
               Discover Zion Tech Group's revolutionary micro SAAS, IT services, and AI solutions that are transforming industries worldwide. 
               From predictive analytics to quantum computing, we deliver cutting-edge technology with proven ROI.
             </p>
-            
-            {/* Stats */}"
+
+            {/* Stats */}"""
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
               {stats.map((stat, index) => (
-                <motion.div
+                <motion.div;
                   key={stat.label}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}"
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"
-                >"
-                  <div className="text-3xl font-bold text-purple-400 mb-2">{stat.value}</div>"
+                  transition={{ duration: 0.5, delay: index * 0.1 }}"""
+                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"""
+                >"""
+                  <div className="text-3xl font-bold text-purple-400 mb-2">{stat.value}</div>"""
                   <div className="text-gray-300 text-sm">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
-"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">"
-              <div className="flex items-center space-x-2 text-white">"
+"""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">"""
+              <div className="flex items-center space-x-2 text-white">"""
                 <Phone className="w-5 h-5"  />
                 <span>{contactInfo.phone}</span>
-              </div>"
-              <div className="flex items-center space-x-2 text-white">"
+              </div>"""
+              <div className="flex items-center space-x-2 text-white">"""
                 <Mail className="w-5 h-5"  />
                 <span>{contactInfo.email}</span>
-              </div>"
-              <div className="flex items-center space-x-2 text-white">"
+              </div>"""
+              <div className="flex items-center space-x-2 text-white">"""
                 <MapPin className="w-5 h-5"  />
                 <span>{contactInfo.address}</span>
               </div>
@@ -154,40 +150,38 @@ export default function ComprehensiveServicesLanding2026() {
         </div>
       </section>
 
-      {/* Search and Filter Section */}"
-      <section className="px-4 sm:px-6 lg:px-8 mb-16">"
-        <div className="max-w-7xl mx-auto">"
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">"
+      {/* Search and Filter Section */}"""
+      <section className="px-4 sm:px-6 lg:px-8 mb-16">"""
+        <div className="max-w-7xl mx-auto">"""
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">"""
             <div className="flex flex-col lg:flex-row gap-6 items-center">
-              {/* Search */}"
-              <div className="flex-1 w-full">"
-                <div className="relative">"
+              {/* Search */}"""
+              <div className="flex-1 w-full">"""
+                <div className="relative">"""
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
-                  <input"
-                    type="text""
-                    placeholder="Search services, features, or tags..."
+                  <input"""
+                    type="text""""
+                    placeholder="Search services, features, or tags..."""
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}"
-                    className="w-full pl-10 pr-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    onChange={(e) => setSearchTerm(e.target.value)}"""
+                    className="w-full pl-10 pr-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"""
                   />
                 </div>
               </div>
 
-              {/* Category Filter */}"
+              {/* Category Filter */}"""
               <div className="flex flex-wrap gap-2">
-                {categories.map((category) => {
-
+                {categories.map((category) => {}
                   return()
-                    <button
+                    <button;
                       key={category}
                       onClick={() => setSelectedCategory(category)}
-                      className={`flex items-center space-x-2 px-4 py-2 rounded-lg border transition-all duration-200 ${
-
+                      className={`flex items-center space-x-2 px-4 py-2 rounded-lg border transition-all duration-200 ${}
                         selectedCategory === category'
                           ? 'bg-purple-600 border-purple-500 text-white''
                           : 'bg-white/10 border-white/20 text-gray-300 hover:bg-white/20'`
                       }`}
-                    >"
+                    >"""
                       <Icon className="w-4 h-4"  />
                       <span>{category}</span>
                     </button>
@@ -198,61 +192,61 @@ export default function ComprehensiveServicesLanding2026() {
         </div>
       </section>
 
-      {/* Featured Services Section */}"
-      <section className="px-4 sm:px-6 lg:px-8 mb-20">"
+      {/* Featured Services Section */}"""
+      <section className="px-4 sm:px-6 lg:px-8 mb-20">"""
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}"
-            className="text-center mb-12"
-          >"
+            transition={{ duration: 0.8 }}"""
+            className="text-center mb-12"""
+          >"""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Featured Services
-            </h2>"
+              Featured Services;
+            </h2>"""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Explore our most popular and innovative services designed to transform your business operations
+              Explore our most popular and innovative services designed to transform your business operations;
             </p>
           </motion.div>
-"
+"""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredServices.map((service, index) => (
-              <motion.div
+              <motion.div;
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}"
-                className="group relative"
-              >"
+                transition={{ duration: 0.5, delay: index * 0.1 }}"""
+                className="group relative"""
+              >"""
                 <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
-                  {/* Category Badge */}"
+                  {/* Category Badge */}"""
                   <div className="flex items-center justify-between mb-4">`
-                    <div className={`inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gradient-to-r ${getCategoryColor(service.category)} text-white text-sm font-medium`}>"
+                    <div className={`inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gradient-to-r ${getCategoryColor(service.category)} text-white text-sm font-medium`}>"""
                       {React.createElement(getCategoryIcon(service.category), { className: "w-4 h-4" })}
                       <span>{service.category}</span>
-                    </div>"
-                    <div className="text-right">"
-                      <div className="text-2xl font-bold text-white">{service.currency}{service.price.toLocaleString()}</div>"
+                    </div>"""
+                    <div className="text-right">"""
+                      <div className="text-2xl font-bold text-white">{service.currency}{service.price.toLocaleString()}</div>"""
                       <div className="text-sm text-gray-300">per {service.pricingModel}</div>
                     </div>
                   </div>
 
-                  {/* Service Title */}"
+                  {/* Service Title */}"""
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                     {service.title}
                   </h3>
 
-                  {/* Description */}"
+                  {/* Description */}"""
                   <p className="text-gray-300 mb-4 line-clamp-3">
                     {service.description}
                   </p>
 
-                  {/* Key Features */}"
-                  <div className="mb-4">"
-                    <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>"
+                  {/* Key Features */}"""
+                  <div className="mb-4">"""
+                    <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>"""
                     <ul className="space-y-1">
-                      {service.features.slice(0, 3).map((feature, idx) => ("
-                        <li key={idx} className="flex items-center text-sm text-gray-400">"
+                      {service.features.slice(0, 3).map((feature, idx) => ("""
+                        <li key={idx} className="flex items-center text-sm text-gray-400">"""
                           <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0"  />
                           {feature}
                         </li>
@@ -260,11 +254,11 @@ export default function ComprehensiveServicesLanding2026() {
                     </ul>
                   </div>
 
-                  {/* Benefits */}"
-                  <div className="mb-6">"
-                    <h4 className="text-sm font-semibold text-white mb-2">Key Benefits:</h4>"
+                  {/* Benefits */}"""
+                  <div className="mb-6">"""
+                    <h4 className="text-sm font-semibold text-white mb-2">Key Benefits:</h4>"""
                     <div className="flex flex-wrap gap-2">
-                      {service.benefits.slice(0, 2).map((benefit, idx) => ("
+                      {service.benefits.slice(0, 2).map((benefit, idx) => ("""
                         <span key={idx} className="inline-block px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-md">
                           {benefit}
                         </span>
@@ -274,84 +268,83 @@ export default function ComprehensiveServicesLanding2026() {
 
                   {/* CTA Button */}
                   <a`
-                    href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.title}`}"
-                    className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300 group-hover:shadow-lg group-hover:shadow-purple-500/25"
+                    href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.title}`}"""
+                    className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300 group-hover:shadow-lg group-hover:shadow-purple-500/25"""
                   >
-                    Get Started"
+                    Get Started"""
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />
                   </a>
                 </div>
               </motion.div>
             ))}
           </div>
-"
+"""
           <div className="text-center mt-12">
-            <Link"
-              to="/comprehensive-services-showcase-2026""
-              className="inline-flex items-center px-8 py-4 bg-white/10 border border-white/30 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-200"
+            <Link"""
+              to="/comprehensive-services-showcase-2026""""
+              className="inline-flex items-center px-8 py-4 bg-white/10 border border-white/30 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-200"""
             >
-              View All Services"
+              View All Services"""
               <ArrowRight className="w-4 h-4 ml-2"  />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Service Categories Section */}"
-      <section className="px-4 sm:px-6 lg:px-8 mb-20">"
+      {/* Service Categories Section */}"""
+      <section className="px-4 sm:px-6 lg:px-8 mb-20">"""
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}"
-            className="text-center mb-12"
-          >"
+            transition={{ duration: 0.8 }}"""
+            className="text-center mb-12"""
+          >"""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Service Categories
-            </h2>"
+              Service Categories;
+            </h2>"""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Explore our comprehensive range of services across different technology domains
+              Explore our comprehensive range of services across different technology domains;
             </p>
           </motion.div>
-"
+"""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {categories.slice(1).map((category, index) => {
-
+            {categories.slice(1).map((category, index) => {}
               return()
-                <motion.div
+                <motion.div;
                   key={category}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}"
-                  className="group"
-                >"
+                  transition={{ duration: 0.5, delay: index * 0.1 }}"""
+                  className="group"""
+                >"""
                   <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">`
-                    <div className={`p-4 rounded-xl bg-gradient-to-r ${getCategoryColor(category)} mb-4 inline-block`}>"
+                    <div className={`p-4 rounded-xl bg-gradient-to-r ${getCategoryColor(category)} mb-4 inline-block`}>"""
                       {React.createElement(Icon, { className: "w-8 h-8 text-white" })}
                     </div>
-                    "
+                    """
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                       {category}
                     </h3>
-                    "
+                    """
                     <p className="text-gray-300 mb-4">
-                      {categoryServices.length} services available starting from ${avgPrice.toLocaleString()}/month
+                      {categoryServices.length} services available starting from ${avgPrice.toLocaleString()}/month;
                     </p>
-                    "
+                    """
                     <div className="space-y-2 mb-6">
-                      {categoryServices.slice(0, 3).map((service, idx) => ("
-                        <div key={idx} className="flex items-center text-sm text-gray-300">"
+                      {categoryServices.slice(0, 3).map((service, idx) => ("""
+                        <div key={idx} className="flex items-center text-sm text-gray-300">"""
                           <CheckCircle className="w-4 h-4 text-purple-400 mr-2"  />
                           <span>{service.title}</span>
                         </div>
                       ))}
                     </div>
-                    
+
                     <Link`
-                      to={`/comprehensive-services-showcase-2026?category=${encodeURIComponent(category)}`}"
-                      className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold transition-colors"
+                      to={`/comprehensive-services-showcase-2026?category=${encodeURIComponent(category)}`}"""
+                      className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold transition-colors"""
                     >
-                      Explore {category}"
+                      Explore {category}"""
                       <ArrowRight className="w-4 h-4 ml-2"  />
                     </Link>
                   </div>
@@ -361,61 +354,57 @@ export default function ComprehensiveServicesLanding2026() {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}"
-      <section className="px-4 sm:px-6 lg:px-8 mb-20">"
+      {/* Why Choose Us Section */}"""
+      <section className="px-4 sm:px-6 lg:px-8 mb-20">"""
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}"
-            className="text-center mb-12"
-          >"
+            transition={{ duration: 0.8 }}"""
+            className="text-center mb-12"""
+          >"""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose Zion Tech Group?
-            </h2>"
+            </h2>"""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We deliver cutting-edge technology solutions with proven ROI, competitive pricing, and world-class support.
             </p>
           </motion.div>
-"
+"""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-
+            {[]
+              {}
                 icon: Zap,'
                 title: 'Fast Implementation','
                 description: 'Get your solutions up and running in 8-12 weeks with our streamlined processes.'
               },
-              {
-
+              {}
                 icon: TrendingUp,'
                 title: 'Proven ROI','
                 description: 'Our services deliver an average ROI of 350% within the first year of implementation.'
               },
-              {
-
+              {}
                 icon: Shield,'
                 title: 'Enterprise Security','
                 description: 'Bank-grade security with SOC 2, ISO 27001, and GDPR compliance built-in.'
               },
-              {
-
+              {}
                 icon: Users,'
                 title: '24/7 Support','
                 description: 'Round-the-clock technical support and dedicated account management.'
               }
             ].map((benefit, index) => (
-              <motion.div
+              <motion.div;
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}"
-                className="text-center"
-              >"
-                <div className="text-4xl mb-4 text-purple-400">"
+                transition={{ duration: 0.5, delay: index * 0.1 }}"""
+                className="text-center"""
+              >"""
+                <div className="text-4xl mb-4 text-purple-400">"""
                   {React.createElement(benefit.icon, { className: "w-16 h-16 mx-auto" })}
-                </div>"
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>"
+                </div>"""
+                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>"""
                 <p className="text-gray-300">{benefit.description}</p>
               </motion.div>
             ))}
@@ -423,54 +412,54 @@ export default function ComprehensiveServicesLanding2026() {
         </div>
       </section>
 
-      {/* CTA Section */}"
-      <section className="px-4 sm:px-6 lg:px-8 mb-20">"
+      {/* CTA Section */}"""
+      <section className="px-4 sm:px-6 lg:px-8 mb-20">"""
         <div className="max-w-4xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}"
-            className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12 text-center text-white"
-          >"
+            transition={{ duration: 0.8 }}"""
+            className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12 text-center text-white"""
+          >"""
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Transform Your Business?
-            </h2>"
+            </h2>"""
             <p className="text-xl mb-8 text-purple-100">'
               Let's discuss how our innovative services can drive growth, reduce costs, and give you a competitive advantage in 2026 and beyond.
             </p>
-            "
+            """
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <a`
-                href={`mailto:${contactInfo.email}?subject=Business Transformation Consultation`}"
-                className="bg-white text-purple-600 py-4 px-8 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-200 flex items-center space-x-2"
-              >"
+                href={`mailto:${contactInfo.email}?subject=Business Transformation Consultation`}"""
+                className="bg-white text-purple-600 py-4 px-8 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-200 flex items-center space-x-2"""
+              >"""
                 <Mail className="w-5 h-5"  />
                 <span>Get Started</span>
               </a>
               <a`
-                href={`tel:${contactInfo.phone}`}"
-                className="bg-white/20 text-white py-4 px-8 rounded-xl font-semibold hover:bg-white/30 transition-all duration-200 flex items-center space-x-2"
-              >"
+                href={`tel:${contactInfo.phone}`}"""
+                className="bg-white/20 text-white py-4 px-8 rounded-xl font-semibold hover:bg-white/30 transition-all duration-200 flex items-center space-x-2"""
+              >"""
                 <Phone className="w-5 h-5"  />
                 <span>Call Now</span>
               </a>
             </div>
-            "
-            <div className="space-y-4">"
-              <div className="flex items-center justify-center space-x-3">"
-                <Phone className="w-5 h-5 text-purple-200"  />"
+            """
+            <div className="space-y-4">"""
+              <div className="flex items-center justify-center space-x-3">"""
+                <Phone className="w-5 h-5 text-purple-200"  />"""
                 <span className="text-purple-100">{contactInfo.phone}</span>
-              </div>"
-              <div className="flex items-center justify-center space-x-3">"
-                <Mail className="w-5 h-5 text-purple-200"  />"
+              </div>"""
+              <div className="flex items-center justify-center space-x-3">"""
+                <Mail className="w-5 h-5 text-purple-200"  />"""
                 <span className="text-purple-100">{contactInfo.email}</span>
-              </div>"
-              <div className="flex items-center justify-center space-x-3">"
-                <MapPin className="w-5 h-5 text-purple-200"  />"
+              </div>"""
+              <div className="flex items-center justify-center space-x-3">"""
+                <MapPin className="w-5 h-5 text-purple-200"  />"""
                 <span className="text-purple-100">{contactInfo.address}</span>
-              </div>"
-              <div className="flex items-center justify-center space-x-3">"
-                <Globe className="w-5 h-5 text-purple-200"  />"
+              </div>"""
+              <div className="flex items-center justify-center space-x-3">"""
+                <Globe className="w-5 h-5 text-purple-200"  />"""
                 <a href={contactInfo.website} className="text-purple-100 hover:text-white underline">
                   {contactInfo.website}
                 </a>

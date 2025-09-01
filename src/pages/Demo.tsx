@@ -1,1 +1,1 @@
-export default React.memo (function Demo (...args: any[]) : any {
+export default React.memo (function Demo (...args: any[]) : any {}

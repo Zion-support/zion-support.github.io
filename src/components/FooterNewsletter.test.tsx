@@ -1,17 +1,16 @@
-
-describe('FooterNewsletter', () => {
-  it('renders without crashing', () => {
+describe('FooterNewsletter', () => {}
+  it('renders without crashing', () => {}
     render(<FooterNewsletter  />) ;
     expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ;
 
-describe ('FooterNewsletter', () => {
+describe ('FooterNewsletter', () => {}
 '
-  it ('renders without crashing', () => {
+  it ('renders without crashing', () => {}
     render (<FooterNewsletter  />) ;'
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 '
-  it ('displays expected content', () => {
+  it ('displays expected content', () => {}
     render (<FooterNewsletter  />) ;
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
   }) }) ;
 '

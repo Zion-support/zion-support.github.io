@@ -1,9 +1,8 @@
-;function DisputesPage(...args[]):  {
-
+;function DisputesPage(...args[]):  {}
   return()
     <ProtectedRoute>;
       <>
-          title="Dispute Resolution Center | Zion AI Marketplace""          description="View and manage disputes between clients and talents"
+          title="Dispute Resolution Center | Zion AI Marketplace""          description="View and manage disputes between clients and talents"""
          />
         <DisputeDashboard  />
       </>
@@ -24,5 +23,5 @@ export default DisputesPage;
 export default DisputesPage;
 export default DisputesPage;
 export default DisputesPage;
-export default DisputesPage;"
-'"'"
+export default DisputesPage;"""
+'"'"""

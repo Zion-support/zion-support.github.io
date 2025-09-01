@@ -1,5 +1,6 @@
-        <CompanyDashboard company={company}  />;
+<CompanyDashboard company={company}  />;
       </main>;
       <Footer  />;
     </ProtectedRoute>) }
+'"`'"`'"`
 '"`'"`

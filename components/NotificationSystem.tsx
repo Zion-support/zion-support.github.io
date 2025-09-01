@@ -4,9 +4,9 @@ import React, {
   useEffect,
   createContext,
   useContext,
-  useCallback} from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';
-'
+  useCallback} from 'react';'''
+import { motion, AnimatePresence } from 'framer-motion';''
+'''
 export type NotificationType = 'success' | 'error' | 'warning' | 'info';
 ;
 export interface Notification {
@@ -25,7 +25,9 @@ export interface Notification {
 }
 
 interface NotificationContextType {
-  notifications: Notification[];'
+'
+''
+  notifications: Notification[];'''
   addNotification: (notification: Omit<Notification,id'>) => void;
   removeNotification: (id: string) => void;
   clearAll: () => void;
@@ -39,7 +41,9 @@ export const useNotifications = () => {
   const context = useContext(NotificationContext);
   if (!context) {
 '
-    throw new Error(''
+''
+'''
+    throw new Error(''''
       'useNotifications must be used within a NotificationProvider'
     );
   }
@@ -62,10 +66,10 @@ export function NotificationProvider({
 
   const removeNotification = useCallback((id: string) => {
 
-    setNotifications(prev => prev.filter(n => n.id !== id));
-  }, []);
-'
-  const addNotification = useCallback(''
+    setNotifications(prev => prev.filter(n => n.id !== id));'
+  }, []);''
+'''
+  const addNotification = useCallback(''''
     (notification: Omit<Notification,id'>) => {
 
       const id = Math.random().toString(36).substr(2, 9);
@@ -132,10 +136,10 @@ function NotificationContainer(...args: unknown[]): unknown {
 
       {notifications.length > 1 && (
         <motion.button
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.8 }}"
-          onClick={clearAll}""
+          initial={{ opacity: 0, scale: 0.8 }}"
+          animate={{ opacity: 1, scale: 1 }}""
+          exit={{ opacity: 0, scale: 0.8 }}"""
+          onClick={clearAll}""""
           className="w-full bg-gray-800 text-gray-300 text-sm py-2 px-3 rounded-lg hover:bg-gray-700 transition-colors duration-200"
         >
           Clear All ({notifications.length})
@@ -158,15 +162,17 @@ function NotificationItem({ notification, onRemove }: NotificationItemProps) {
 
     switch (type) {
 '
-      case 'success':''
-        return '✅';'
-      case 'error':''
-        return '❌';'
-      case 'warning':''
-        return '⚠️';'
-      case 'info':''
-        return 'ℹ️';'
-      default:''
+''
+'''
+      case 'success':''''
+        return '✅';'''
+      case 'error':''''
+        return '❌';'''
+      case 'warning':''''
+        return '⚠️';'''
+      case 'info':''''
+        return 'ℹ️';'''
+      default:''''
         return '📢';
     }
   };
@@ -175,15 +181,17 @@ function NotificationItem({ notification, onRemove }: NotificationItemProps) {
 
     switch (type) {
 '
-      case 'success':''
-        return 'bg-green-600 border-green-500';'
-      case 'error':''
-        return 'bg-red-600 border-red-500';'
-      case 'warning':''
-        return 'bg-yellow-600 border-yellow-500';'
-      case 'info':''
-        return 'bg-blue-600 border-blue-500';'
-      default:''
+''
+'''
+      case 'success':''''
+        return 'bg-green-600 border-green-500';'''
+      case 'error':''''
+        return 'bg-red-600 border-red-500';'''
+      case 'warning':''''
+        return 'bg-yellow-600 border-yellow-500';'''
+      case 'info':''''
+        return 'bg-blue-600 border-blue-500';'''
+      default:''''
         return 'bg-gray-600 border-gray-500';
     }
   };
@@ -192,54 +200,56 @@ function NotificationItem({ notification, onRemove }: NotificationItemProps) {
 
     switch (type) {
 '
-      case 'success':''
-        return 'bg-green-400';'
-      case 'error':''
-        return 'bg-red-400';'
-      case 'warning':''
-        return 'bg-yellow-400';'
-      case 'info':''
-        return 'bg-blue-400';'
-      default:''
+''
+'''
+      case 'success':''''
+        return 'bg-green-400';'''
+      case 'error':''''
+        return 'bg-red-400';'''
+      case 'warning':''''
+        return 'bg-yellow-400';'''
+      case 'info':''''
+        return 'bg-blue-400';'''
+      default:''''
         return 'bg-gray-400';
     }
   };
 
   return()
     <motion.div
-      initial={{ opacity: 0, x: 300, scale: 0.8 }}
-      animate={{ opacity: 1, x: 0, scale: 1 }}
-      exit={{ opacity: 0, x: 300, scale: 0.8 }}'
-      transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-      className={`${getColors(notification.type)} border-l-4 rounded-lg shadow-lg overflow-hidden`}"
-    >""
-      <div className="p-4">""
-        <div className="flex items-start space-x-3">""
-          <div className="text-2xl flex-shrink-0">
-            {getIcon(notification.type)}
-          </div>"
-""
-          <div className="flex-1 min-w-0">""
-            <h4 className="text-white font-semibold text-sm mb-1">
-              {notification.title}"
-            </h4>""
+      initial={{ opacity: 0, x: 300, scale: 0.8 }}'
+      animate={{ opacity: 1, x: 0, scale: 1 }}''
+      exit={{ opacity: 0, x: 300, scale: 0.8 }}'''"
+      transition={{ type: 'spring', stiffness: 300, damping: 30 }}""
+      className={`${getColors(notification.type)} border-l-4 rounded-lg shadow-lg overflow-hidden`}"""
+    >""""
+      <div className="p-4">""""
+        <div className="flex items-start space-x-3">""""
+          <div className="text-2xl flex-shrink-0">"
+            {getIcon(notification.type)}""
+          </div>"""
+""""
+          <div className="flex-1 min-w-0">""""
+            <h4 className="text-white font-semibold text-sm mb-1">""
+              {notification.title}"""
+            </h4>""""
             <p className="text-gray-100 text-sm leading-relaxed">
               {notification.message}
             </p>
-
-            {notification.action && (
-              <button"
-                onClick={notification.action.onClick}""
+"
+            {notification.action && (""
+              <button"""
+                onClick={notification.action.onClick}""""
                 className="mt-2 text-white text-xs underline hover:no-underline transition-all duration-200"
               >
                 {notification.action.label}
               </button>
             )}
           </div>
-
-          {notification.dismissible && (
-            <button"
-              onClick={() => onRemove(notification.id)}""
+"
+          {notification.dismissible && (""
+            <button"""
+              onClick={() => onRemove(notification.id)}""""
               className="text-gray-300 hover:text-white transition-colors duration-200 flex-shrink-0"
             >
               ✕
@@ -247,16 +257,17 @@ function NotificationItem({ notification, onRemove }: NotificationItemProps) {
           )}
         </div>
       </div>
-
-      {/* Progress bar for auto-dismiss */}
-      {notification.duration && notification.duration > 0 && (`
-        <motion.div``
-          className={`h-1 ${getProgressColor(notification.type)}`}'
-          initial={{ width: '100%' }}'
+`
+      {/* Progress bar for auto-dismiss */}``
+      {notification.duration && notification.duration > 0 && (``'`
+        <motion.div``'`'`
+          className={`h-1 ${getProgressColor(notification.type)}`}'''
+          initial={{ width: '100%' }}'''
           animate={{ width: '0%' }}
           transition={{
-
-            duration: notification.duration / 1000,'
+'
+''
+            duration: notification.duration / 1000,'''
             ease: 'linear'}}
         />
       )}
@@ -272,6 +283,8 @@ export const useNotificationActions = (...args: unknown[]): unknown => {
   const showSuccess = useCallback()
     (title: string, message: string, options?: Partial<Notification>) => {
 '
+''
+'''
       addNotification({ type: 'success', title, message, ...options });
     },
     [addNotification]
@@ -280,6 +293,8 @@ export const useNotificationActions = (...args: unknown[]): unknown => {
   const showError = useCallback()
     (title: string, message: string, options?: Partial<Notification>) => {
 '
+''
+'''
       addNotification({ type: 'error', title, message, ...options });
     },
     [addNotification]
@@ -288,6 +303,8 @@ export const useNotificationActions = (...args: unknown[]): unknown => {
   const showWarning = useCallback()
     (title: string, message: string, options?: Partial<Notification>) => {
 '
+''
+'''
       addNotification({ type: 'warning', title, message, ...options });
     },
     [addNotification]
@@ -296,6 +313,8 @@ export const useNotificationActions = (...args: unknown[]): unknown => {
   const showInfo = useCallback()
     (title: string, message: string, options?: Partial<Notification>) => {
 '
+''
+'''
       addNotification({ type: 'info', title, message, ...options });
     },
     [addNotification]
@@ -306,68 +325,70 @@ export const useNotificationActions = (...args: unknown[]): unknown => {
 
 // Example usage component
 export function NotificationExample() {
-  const { showSuccess, showError, showWarning, showInfo } =
-    useNotificationActions();
-"
-  return (""
-    <div className="space-y-4 p-6">""
-      <h2 className="text-2xl font-bold">Notification Examples</h2>"
-""
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <button
-          onClick={() =>'
-            showSuccess('Success!',Operation completed successfully.')"
-          }""
+  const { showSuccess, showError, showWarning, showInfo } ="
+    useNotificationActions();""
+"""
+  return (""""
+    <div className="space-y-4 p-6">""""
+      <h2 className="text-2xl font-bold">Notification Examples</h2>"""
+""""
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">'
+        <button''"
+          onClick={() =>''"'"
+            showSuccess('Success!',Operation completed successfully.')"""
+          }""""
           className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors"
         >
           Show Success
         </button>
-
-        <button
-          onClick={() =>'
-            showError('Error!',Something went wrong. Please try again.')"
-          }""
+'
+        <button''"
+          onClick={() =>''"'"
+            showError('Error!',Something went wrong. Please try again.')"""
+          }""""
           className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors"
         >
           Show Error
         </button>
-
-        <button
-          onClick={() =>'
-            showWarning(''
-              'Warning!',Please review your input before proceeding.'
-            )"
-          }""
+'
+        <button''
+          onClick={() =>'''
+            showWarning(''''"
+              'Warning!',Please review your input before proceeding.'""
+            )"""
+          }""""
           className="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700 transition-colors"
         >
-          Show Warning
-        </button>
-'
-        <button''"
-          onClick={() => showInfo('Info',Here is some helpful information.')}""
+          Show Warning'
+        </button>''"
+''"'"
+        <button''"'"'"
+          onClick={() => showInfo('Info',Here is some helpful information.')}""""
           className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
         >
-          Show Info
-        </button>
-      </div>"
-""
-      <div className="mt-8">
-        <button
-          onClick={() =>'
+          Show Info"
+        </button>""
+      </div>"""
+""""
+      <div className="mt-8">'
+        <button''
+          onClick={() =>'''
             showSuccess('Custom Action',Click the action button below.', {
 
               action: {
 '
-                label: 'View Details','
-                onClick: () => alert('Action clicked!')},
-              duration: 10000})"
-          }""
+''
+'''
+                label: 'View Details','''"
+                onClick: () => alert('Action clicked!')},""
+              duration: 10000})"""
+          }""""
           className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors"
         >
           Show Custom Action Notification
         </button>
       </div>
-    </div>
-  );
-}'"`
-'"`'"`
+    </div>'"`
+  );'"`'"`
+}'"`'"`'"`
+'"`'"`'"`'"`

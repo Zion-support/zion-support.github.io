@@ -1,42 +1,50 @@
 import React from 'react';'
-export function Avatar({ children, className = '' }) {
-
+export function Avatar({ children, className = '' }) {}
   return()
-    <div
+    <div;
       className={`relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full ${className}`}
     >
       {children}
     </div>
   );
 }'
-export function AvatarImage({ src, alt = '', className = '' }) {
-
+export function AvatarImage({ src, alt = '', className = '' }) {}
   return()
-    <img
+    <img;
       src={src}`
       alt={alt}``
       className={`aspect-square h-full w-full ${className}`}
     />
   );
 }'
-export function AvatarFallback({ children, className = '' }) {
-
+export function AvatarFallback({ children, className = '' }) {}
   return()`
-    <div``
+    <img``
+      src={src}```
+      alt={alt}````
+      className={`aspect-square h-full w-full ${className}`}
+    />'
+  );''
+}'''
+export function AvatarFallback({ children, className = '' }) {}
+`
+``
+  return()```
+    <div````
       className={`flex h-full w-full items-center justify-center rounded-full bg-zion-slate ${className}`}
     >
       {children}
-    </div>
-  );
-}'
-import React from 'react';'
+    </div>'
+  );''
+}'''
+import React from 'react';'''
 import { cn } from '@/lib/utils';
 const Avatar = React.forwardRef(({ className, ...props }, ref) => (
-  <div
+  <div;
     ref={ref}'
     className={cn(''
       'relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full',
-      className
+      className;
     )}
     {...props}
   />
@@ -44,22 +52,22 @@ const Avatar = React.forwardRef(({ className, ...props }, ref) => (
 Avatar.displayName = 'Avatar';'
 const AvatarImage = React.forwardRef(''
   ({ className, src, alt = '', ...props }, ref) => (
-    <img
+    <img;
       ref={ref}'
       className={cn('aspect-square h-full w-full', className)}
       src={src}
       alt={alt}
       {...props}
-    />
-  )
-);'
+    />'
+  )''
+);'''
 AvatarImage.displayName = 'AvatarImage';
 const AvatarFallback = React.forwardRef(({ className, ...props }, ref) => (
-  <div
+  <div;
     ref={ref}'
     className={cn(''
       'flex h-full w-full items-center justify-center rounded-full bg-muted',
-      className
+      className;
     )}
     {...props}
   />

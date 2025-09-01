@@ -1,11 +1,19 @@
 ;
 const VendorRiskManagement: React.FC = (): JSX.Element => (
   <div className="min-h-screen bg-slate-900 text-white">""
+<<<<<<< HEAD:pages.disabled/pages/services/VendorRiskManagement.tsx
     <SEO title="Vendor Risk Management (VRM) SaaS - Zion Tech Group" description="Continuously assess, score, and monitor third-party risk with automated evidence collection and remediation workflows."  />"
 ""
     <section className="container mx-auto px-4 py-12">""
       <h1 className="text-4xl font-bold mb-3">Vendor Risk Management (VRM)</h1>"      <p className="text-slate-300 max-w-3xl">Automate third-party due diligence, security questionnaires, continuous control monitoring, and risk scoring. Consolidate SIG/Lite responses, map to SOC 2/ISO 27001, and trigger remediation with owners and SLAs.</p>
     </section>"
+=======
+    <SEO title="Vendor Risk Management (VRM) SaaS - Zion Tech Group" description="Continuously assess, score, and monitor third-party risk with automated evidence collection and remediation workflows."  />
+""
+    <section className="container mx-auto px-4 py-12">""
+      <h1 className="text-4xl font-bold mb-3">Vendor Risk Management (VRM)</h1>"      <p className="text-slate-300 max-w-3xl">Automate third-party due diligence, security questionnaires, continuous control monitoring, and risk scoring. Consolidate SIG/Lite responses, map to SOC 2/ISO 27001, and trigger remediation with owners and SLAs.</p>
+    </section>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/VendorRiskManagement.tsx
 ""
     <section className="container mx-auto px-4 pb-8 grid md:grid-cols-3 gap-6">""
       <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
@@ -15,7 +23,11 @@ const VendorRiskManagement: React.FC = (): JSX.Element => (
           <li>Evidence repository with versioning and expiry alerts</li>
           <li>Risk scoring by domain (security, privacy, financial)</li>
           <li>Continuous monitoring via attack surface feeds</li>
+<<<<<<< HEAD:pages.disabled/pages/services/VendorRiskManagement.tsx
         </ul>"
+=======
+        </ul>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/VendorRiskManagement.tsx
       </div>""
       <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
         <h3 className="font-semibold mb-2">Integrations</h3>""
@@ -23,7 +35,11 @@ const VendorRiskManagement: React.FC = (): JSX.Element => (
           <li>Jira/Asana for remediation workflows</li>
           <li>Okta/Azure AD for vendor access reviews</li>
           <li>SecurityScorecard/BitSight/HaveIBeenPwned</li>
+<<<<<<< HEAD:pages.disabled/pages/services/VendorRiskManagement.tsx
         </ul>"
+=======
+        </ul>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/VendorRiskManagement.tsx
       </div>""
       <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
         <h3 className="font-semibold mb-2">Pricing</h3>""
@@ -33,7 +49,11 @@ const VendorRiskManagement: React.FC = (): JSX.Element => (
           <li>Enterprise: custom, SSO, advanced exports</li>
         </ul>
       </div>
+<<<<<<< HEAD:pages.disabled/pages/services/VendorRiskManagement.tsx
     </section>;"
+=======
+    </section>;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/VendorRiskManagement.tsx
 ;""
     <section className="container mx-auto px-4 pb-16 space-x-4">;""
       <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Request demo</a>;""
@@ -44,5 +64,10 @@ const VendorRiskManagement: React.FC = (): JSX.Element => (
 ;
 export { VendorRiskManagement };
 export default VendorRiskManagement;
+<<<<<<< HEAD:pages.disabled/pages/services/VendorRiskManagement.tsx
 "
 '"'"
+=======
+
+'""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/VendorRiskManagement.tsx

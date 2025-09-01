@@ -1,118 +1,129 @@
-// In-memory storage for fallback with optimizations
-const inMemoryStore = {};
-let localStorageAvailable = null; // Cache the availability check
+// In-memory storage for fallback with optimizations;
+const inMemoryStore: any = {};
+let localStorageAvailable = null; // Cache the availability check;
 let lastAvailabilityCheck = 0;
-const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max
-
-function isLocalStorageAvailable() {
-  const now = Date.now();
-  // Use cached result if checked recently
+const AVAILABILITY_CHECK_INTERVAL: any = 5000; // Check every 5 seconds max;
+function isLocalStorageAvailable(function isLocalStorageAvailable(function isLocalStorageAvailable() {): any {): any {}
+  const now: any = Date.now();
+  // Use cached result if checked recently;
   if()
     localStorageAvailable !== null &&
-    now-lastAvailabilityCheck < AVAILABILITY_CHECK_INTERVAL
-  ) {
-
+<<<<<<< HEAD:src/utils/safeStorage.tsx;
+    now-lastAvailabilityCheck < AVAILABILITY_CHECK_INTERVAL;
+  ) {}
     return localStorageAvailable;
   }
 
   lastAvailabilityCheck = now;
-  try {
-    if(typeof window === 'undefined') {
-
+<<<<<<< HEAD:src/utils/safeStorage.tsx;
+  try {}
+    if(typeof window === 'undefined') {}
       localStorageAvailable = false;
       return false;
     }
 '
-    const testKey = '__localStorage_test__';'
+    const testKey: any = '__localStorage_test__';'
     localStorage.setItem(testKey,test');
     localStorage.removeItem(testKey);
     localStorageAvailable = true;
     return true;
-  } catch {
-
+  } catch {}
     localStorageAvailable = false;
     return false;
   }
 }
 
-function safeConsoleError(message, error) {
+<<<<<<< HEAD:src/utils/safeStorage.tsx;
+function safeConsoleError(function safeConsoleError(function safeConsoleError(message, error) {): any {): any {}
 '
-  const env = globalThis.process?.env?.NODE_ENV ?? 'production';'
+  const env: any = globalThis.process?.env?.NODE_ENV ?? 'production';'
   // Prevent infinite recursion in console logging''
   if (env === 'production') return;
 
-  try {
+  try {}
     // console.error(message, error);
-  } catch {
-
-    // Silent fail if console.error causes recursion
+  } catch {}
+    // Silent fail if console.error causes recursion;
   }}
 
-export const safeStorage = {
-
-  getItem: key => {
-
-    try {
+export const safeStorage: any = {}
+  getItem: key => {}
+    try {}
       return localStorage.getItem(key);
-    } catch (error) {
+<<<<<<< HEAD:src/utils/safeStorage.tsx;
+    } catch (error) {}
 '
+''
+'''
       // console.warn('Failed to get item from localStorage:', error);
       return null;
     }
   },
 
-  setItem: (key, value) => {
-
-    try {
+  setItem: (key, value) => {}
+    try {}
       localStorage.setItem(key, value);
       return true;
-    } catch (error) {
+<<<<<<< HEAD:src/utils/safeStorage.tsx;
+    } catch (error) {}
 '
+''
+'''
       // console.warn('Failed to set item in localStorage:', error);
       return false;
     }
   },
 
-  removeItem: key => {
-
-    try {
+  removeItem: key => {}
+    try {}
       localStorage.removeItem(key);
       return true;
-    } catch (error) {
+<<<<<<< HEAD:src/utils/safeStorage.tsx;
+    } catch (error) {}
 '
+''
+'''
       // console.warn('Failed to remove item from localStorage:', error);
       return false;
     }
   },
 
-  clear: () => {
-    try {
+  clear: () => {}
+    try {}
       localStorage.clear();
       return true;
-    } catch (error) {
+<<<<<<< HEAD:src/utils/safeStorage.tsx;
+    } catch (error) {}
 '
+''
+'''
       // console.warn('Failed to clear localStorage:', error);
       return false;
     }
   },
 
-  key: index => {
-
-    try {
+  key: index => {}
+    try {}
       return localStorage.key(index);
-    } catch (error) {
+<<<<<<< HEAD:src/utils/safeStorage.tsx;
+    } catch (error) {}
 '
 ''
+'''
+''''
       // console.warn('Failed to get key from localStorage:', error);      return null;
     }
   },
 
-  get length() {
-    try {
+  get length() {}
+    try {}
       return localStorage.length;
-    } catch (error) {
+<<<<<<< HEAD:src/utils/safeStorage.tsx;
+    } catch (error) {}
 '
 ''
+'''
+''''
       // console.warn('Failed to get localStorage length:', error);      return 0;
     }
   }};

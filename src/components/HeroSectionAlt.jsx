@@ -1,44 +1,35 @@
 import { Link } from "react - router - dom";
-import React from 'react';"
-import { Search, Rocket, Users, TrendingUp, Shield, Zap, Star, Sparkles import { motion } from "framer-motion";""
-import { Button } from "@/components/ui/button";""
+import React from 'react';"""
+import { Search, Rocket, Users, TrendingUp, Shield, Zap, Star, Sparkles import { motion } from "framer-motion";""""
+import { Button } from "@/components/ui/button";""""
 import { Link } from "react-router-dom";
 
-export const HeroSectionAlt = () => {
-"
+export const HeroSectionAlt = () => {}
+"""
 import { Search, Rocket, Users, TrendingUp, Shield, Zap, Star, Sparkles import { motion } from "framer - motion";
 
-
-  const containerVariants = {
-
+  const containerVariants = {}
     hidden: { opacity: 0 },
-    visible: {
-
+    visible: {}
       opacity: 1,
-      transition: {
-
+      transition: {}
         staggerChildren: 0.2,
-        delayChildren: 0.1
-
+        delayChildren: 0.1;
   };
 
-  const itemVariants = {
-
+  const itemVariants = {}
   hidden: { y: 30,
-  opacity: 0 
-
+  opacity: 0;
 },
-    visible: {
-
+    visible: {}
       y: 0,
       opacity: 1,
-      transition: {
-"
-        duration: 0.8,""
-        ease: "easeOut"
-
+      transition: {}
+"""
+        duration: 0.8,""""
+        ease: "easeOut"""
   };
 
-  const floatingVariants = {
-'"
-'"'"
+  const floatingVariants = {}
+'"""
+'"'"""

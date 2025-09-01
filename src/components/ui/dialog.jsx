@@ -1,59 +1,45 @@
 import React, { createContext, useContext, useState } from 'react';
-const Dialog({ children, open, onOpenChange }) {
-
+const Dialog({ children, open, onOpenChange }) {}
     const [internalOpen, setInternalOpen] = useState(false);
     const isOpen = isControlled ? open : internalOpen;
-    const setIsOpen = (newOpen) => {
-
-        if (!isControlled) {
-
+    const setIsOpen = (newOpen) => {}
+        if (!isControlled) {}
             setInternalOpen(newOpen)}
-        if (onOpenChange) {
-
+        if (onOpenChange) {}
             onOpenChange(newOpen)}
     };
-    return (<DialogContext.Provider value = {
-
+    return (<DialogContext.Provider value = {}
   { isOpen,
-  setIsOpen 
-
-
-
-
-
-
+  setIsOpen;
 }}>
       <div className="relative">
         {children}
       </div>
     </DialogContext.Provider>)};
-export function DialogTrigger({ children, asChild = false }) {
-
+export function DialogTrigger({ children, asChild = false }) {}
     const context = useContext(DialogContext);
     if (!context)'
         throw new Error('DialogTrigger must be used within Dialog');
-    if (asChild) {
-
+    if (asChild) {}
         return (<div onClick={() => context.setIsOpen(true)}>
         {children}
       </div>)}
     return (<div onClick={() => context.setIsOpen(true)}>
       {children}
     </div>)}'
-export function DialogContent({ children, className = '' }) {
-
+export function DialogContent({ children, className = '' }) {}
     const context = useContext(DialogContext);
     if (!context)'
         throw new Error('DialogContent must be used within Dialog');
-    if (!context.isOpen)"
-        return null;""
-    return (<div className="fixed inset-0 z-50 flex items-center justify-center">""
+    if (!context.isOpen)"""
+        return null;""""
+    return (<div className="fixed inset-0 z-50 flex items-center justify-center">""""
       <div className="fixed inset-0 bg-black bg-opacity-50" onClick={() => context.setIsOpen(false)}/>
       <div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className}`}>
         {children}
       </div>
     </div>)}'
-export function DialogFooter({ children, className = '' }) {
+export function DialogFooter({ children, className = '' }) {}
 `
 ``
     return <div className={`flex justify-end gap-2 mt-6 ${className}`}>{children}</div>}'"`

@@ -1,16 +1,14 @@
-export function EnhancedLoadingSpinner({
-
+export function EnhancedLoadingSpinner(function EnhancedLoadingSpinner(function EnhancedLoadingSpinner({}
   size = 'md','
   text = 'Loading...',
   showProgress = false,
   progress = 0,'
-  variant = 'futuristic'}: EnhancedLoadingSpinnerProps) {
+  variant = 'futuristic'}: EnhancedLoadingSpinnerProps) {): any {): any {}
 '
-'  if (variant === 'minimal') {
-
+'  if (variant === 'minimal') {}
     return()
       <div className="flex items-center justify-center">
-        <div
+        <div;
           className={`${sizeClasses[size]} border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin`}
         />`
         {text && (``
@@ -20,9 +18,9 @@ export function EnhancedLoadingSpinner({
         )}
       </div>
     )}'
-'  if (variant === 'default') {
-"
-    return (""
+'  if (variant === 'default') {}
+"""
+    return (""""
       <div className="flex flex-col items-center justify-center space-y-4">`
         <div``
           className={`${sizeClasses[size]} border-4 border-gray-200 border-t-blue-600 rounded-full animate-spin`}
@@ -31,10 +29,10 @@ export function EnhancedLoadingSpinner({
           <p className={`${textSizes[size]} text-gray-600 font-medium`}>
             {text}
           </p>
-        )}"
-        {showProgress && (""
-          <div className="w-48 bg-gray-200 rounded-full h-2">"
-            <motion.div""
+        )}"""
+        {showProgress && (""""
+          <div className="w-48 bg-gray-200 rounded-full h-2">"""
+            <motion.div""""
               className="bg-blue-600 h-2 rounded-full"`
               initial={{ width: 0 }}``
               animate={{ width: `${progress}%` }}
@@ -44,10 +42,10 @@ export function EnhancedLoadingSpinner({
         )}
       </div>
     )}
-  // Futuristic variant (default)"
-  return (""
-    <div className="flex flex-col items-center justify-center space-y-6">"
-      {/* Main spinner with gradient */}""
+  // Futuristic variant (default)"""
+  return (""""
+    <div className="flex flex-col items-center justify-center space-y-6">"""
+      {/* Main spinner with gradient */}""""
       <div className="relative">`
         <div``
           className={`${sizeClasses[size]} border-4 border-cyan-400/20 rounded-full`}
@@ -60,15 +58,15 @@ export function EnhancedLoadingSpinner({
         {/* Inner glow effect */}'`
         <div'`'`
           className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${sizeClasses[size === 'xl' ? 'lg' : size === 'lg' ? 'md' : 'sm']} bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-sm`}
-        />"
-        {/* Center logo/text */}""
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">""
+        />"""
+        {/* Center logo/text */}""""
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">""""
           <div className="text-cyan-400 font-bold text-lg animate-pulse">
-            ZION
+            ZION;
           </div>
         </div>
-      </div>"
-      {/* Loading text */}""
+      </div>"""
+      {/* Loading text */}""""
       <div className="text-center space-y-2">`
         <motion.p``
           className={`${textSizes[size]} text-cyan-400 animate-pulse`}
@@ -76,57 +74,57 @@ export function EnhancedLoadingSpinner({
           transition={{ duration: 2, repeat: Infinity }}
         >
           {text}
-        </motion.p>"
-        {/* Animated dots */}""
+        </motion.p>"""
+        {/* Animated dots */}""""
         <div className="flex justify-center space-x-1">
           {[0, 1, 2].map(i => (
-            <motion.div"
-              key={i}""
-              className="w-2 h-2 bg-cyan-400 rounded-full"
+            <motion.div"""
+              key={i}""""
+              className="w-2 h-2 bg-cyan-400 rounded-full"""
               animate={{ scale: [1, 1.5, 1] }}
               transition={{ duration: 1, repeat: Infinity, delay: i * 0.2 }}
             />
           ))}
         </div>
       </div>
-      {/* Progress bar if enabled */}"
-      {showProgress && (""
-        <div className="w-64 bg-gray-800/50 rounded-full h-3 border border-cyan-400/30">"
-          <motion.div""
+      {/* Progress bar if enabled */}"""
+      {showProgress && (""""
+        <div className="w-64 bg-gray-800/50 rounded-full h-3 border border-cyan-400/30">"""
+          <motion.div""""
             className="bg-gradient-to-r from-cyan-400 to-blue-500 h-3 rounded-full relative overflow-hidden"`
             initial={{ width: 0 }}``
             animate={{ width: `${progress}%` }}'
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            {/* Shimmer effect */}"
-            <motion.div""
-              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+            {/* Shimmer effect */}"""
+            <motion.div""""
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"""
               animate={{ x: [-100, 100] }}
               transition={{ duration: 2, repeat: Infinity }}
             />
           </motion.div>
         </div>
-      )}"
-      {/* Floating particles */}""
+      )}"""
+      {/* Floating particles */}""""
       <div className="relative w-full h-20">
         {[...Array(6)].map(_: unknown, i: unknown()
-          <motion.div"
-            key={i}""
-            className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60"
-            animate={{
-
+          <motion.div"""
+            key={i}""""
+            className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60"""
+            animate={{}
               x: [0, 50, 0],
               y: [0, -30, 0],
               opacity: [0.6, 1, 0.6]}}
-            transition={{
-
+            transition={{}
               duration: 3 + i * 0.5,
               repeat: Infinity,
               delay: i * 0.3}}
-            style={{
+            style={{}
 `
 ``
-              left: `${20 + i * 15}%`,``
+```
+````
+              left: `${20 + i * 15}%`,````
               top: `${30 + i * 10}%`}}
           />
         ))}

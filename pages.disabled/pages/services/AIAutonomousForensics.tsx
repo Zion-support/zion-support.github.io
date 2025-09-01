@@ -1,5 +1,4 @@
-import {
-
+import {}
   Search,
   Brain,
   Target,
@@ -24,15 +23,21 @@ import {
   Users,
   Fingerprint} from 'lucide-react.ts';
 
+<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousForensics.tsx
 const AIAutonomousForensics: React.FC = (): JSX.Element => {
 
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
+=======
+const AIAutonomousForensics: React.FC = (): JSX.Element => {}
+  return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousForensics.tsx
       {/* Hero Section */}""
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousForensics.tsx
             transition={{ duration: 0.8 }}"
           >""
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-blue-500/20 border border-indigo-500/30 text-indigo-400 text-sm font-medium mb-6">""
@@ -42,63 +47,113 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               Revolutionize Digital Forensics with""
               <span className="bg-gradient-to-r from-indigo-400 to-blue-500 bg-clip-text text-transparent">'
+=======
+            transition={{ duration: 0.8 }}
+          >""
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-blue-500/20 border border-indigo-500/30 text-indigo-400 text-sm font-medium mb-6">""
+              <Search className="w-4 h-4 mr-2"  />              AI-Powered Autonomous Forensics;
+            </div>
+""
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Revolutionize Digital Forensics with""
+              <span className="bg-gradient-to-r from-indigo-400 to-blue-500 bg-clip-text text-transparent">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousForensics.tsx
                 {' '}
-                AI Intelligence
+                AI Intelligence;
               </span>
+<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousForensics.tsx
             </h1>"
+=======
+            </h1>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousForensics.tsx
 ""
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your digital forensics capabilities with our AI-powered
-              autonomous platform. Conduct investigations faster, discover
+              Transform your digital forensics capabilities with our AI-powered;
+              autonomous platform. Conduct investigations faster, discover;
               evidence more effectively, and maintain chain of custody.
+<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousForensics.tsx
             </p>"
 ""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-500 text-white rounded-lg font-semibold hover:from-indigo-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial"
+=======
+            </p>
+""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <button className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-500 text-white rounded-lg font-semibold hover:from-indigo-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousForensics.tsx
               </button>""
               <button className="px-8 py-4 border border-indigo-500/30 text-indigo-400 rounded-lg font-semibold hover:bg-indigo-500/10 transition-all duration-300">
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousForensics.tsx
 "
+=======
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousForensics.tsx
       {/* Features Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousForensics.tsx
             transition={{ duration: 0.8 }}"
+=======
+            transition={{ duration: 0.8 }}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousForensics.tsx
             viewport={{ once: true }}""
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousForensics.tsx
               Advanced Forensics Features"
+=======
+              Advanced Forensics Features;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousForensics.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI platform provides comprehensive digital forensics
-              capabilities for modern investigations
+              Our AI platform provides comprehensive digital forensics;
+              capabilities for modern investigations;
             </p>
+<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousForensics.tsx
           </motion.div>"
+=======
+          </motion.div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousForensics.tsx
 ""
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousForensics.tsx
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
+=======
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousForensics.tsx
                 viewport={{ once: true }}""
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-indigo-500/30 transition-all duration-300""
               >""
                 <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">""
+<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousForensics.tsx
                   <feature.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {feature.title}"
+=======
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>""
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousForensics.tsx
                 </h3>""
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
@@ -106,37 +161,62 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousForensics.tsx
 "
+=======
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousForensics.tsx
       {/* Benefits Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousForensics.tsx
             transition={{ duration: 0.8 }}"
+=======
+            transition={{ duration: 0.8 }}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousForensics.tsx
             viewport={{ once: true }}""
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousForensics.tsx
               Why Choose AI Autonomous Forensics?"
+=======
+              Why Choose AI Autonomous Forensics?
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousForensics.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience measurable improvements in investigation efficiency and
-              evidence discovery
+              Experience measurable improvements in investigation efficiency and;
+              evidence discovery;
             </p>
+<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousForensics.tsx
           </motion.div>"
+=======
+          </motion.div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousForensics.tsx
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousForensics.tsx
               viewport={{ once: true }}"
             >""
               <h3 className="text-2xl font-semibold text-white mb-6">
                 Key Benefits"
               </h3>""
               <div className="space-y-4">"
+=======
+              viewport={{ once: true }}
+            >""
+              <h3 className="text-2xl font-semibold text-white mb-6">
+                Key Benefits;
+              </h3>""
+              <div className="space-y-4">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousForensics.tsx
                 {benefits.map((benefit, index) => (""
                   <div key={index} className="flex items-center space-x-3">""
                     <CheckCircle className="w-5 h-5 text-indigo-400 flex-shrink-0"  />"                    <span className="text-gray-300">{benefit}</span>
@@ -145,35 +225,52 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
+<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousForensics.tsx
               transition={{ duration: 0.8 }}"
+=======
+              transition={{ duration: 0.8 }}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousForensics.tsx
               viewport={{ once: true }}""
               className="bg-gradient-to-br from-indigo-500/10 to-blue-500/10 border border-indigo-500/20 rounded-xl p-8""
             >""
               <h3 className="text-2xl font-semibold text-white mb-6">
+<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousForensics.tsx
                 Ready to Transform Forensics?"
               </h3>""
               <p className="text-gray-300 mb-6">
                 Join thousands of investigators already using AI to enhance
                 their forensics capabilities."
+=======
+                Ready to Transform Forensics?
+              </h3>""
+              <p className="text-gray-300 mb-6">
+                Join thousands of investigators already using AI to enhance;
+                their forensics capabilities.
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousForensics.tsx
               </p>""
               <button className="w-full px-6 py-3 bg-gradient-to-r from-indigo-500 to-blue-500 text-white rounded-lg font-semibold hover:from-indigo-600 hover:to-blue-600 transition-all duration-300">
-                Get Started Today
+                Get Started Today;
               </button>
             </motion.div>
           </div>
         </div>
       </section>
+<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousForensics.tsx
 "
+=======
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousForensics.tsx
       {/* CTA Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousForensics.tsx
             viewport={{ once: true }}"
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -186,9 +283,23 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-500 text-white rounded-lg font-semibold hover:from-indigo-600 hover:to-blue-600 transition-all duration-300">
                 Start Free Trial"
+=======
+            viewport={{ once: true }}
+          >""
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Revolutionize Digital Forensics?
+            </h2>""
+            <p className="text-xl text-gray-300 mb-8">
+              Start your journey to AI-powered forensics with our comprehensive;
+              platform.
+            </p>""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <button className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-500 text-white rounded-lg font-semibold hover:from-indigo-600 hover:to-blue-600 transition-all duration-300">
+                Start Free Trial;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousForensics.tsx
               </button>""
               <button className="px-8 py-4 border border-indigo-500/30 text-indigo-400 rounded-lg font-semibold hover:bg-indigo-500/10 transition-all duration-300">
-                Contact Sales
+                Contact Sales;
               </button>
             </div>
           </motion.div>
@@ -197,5 +308,10 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
     </div>
   )};
 
+<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousForensics.tsx
 export default AIAutonomousForensics;'"
 '"'"
+=======
+export default AIAutonomousForensics;
+'""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousForensics.tsx
