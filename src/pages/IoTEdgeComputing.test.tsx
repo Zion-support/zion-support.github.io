@@ -1,18 +1,16 @@
 import { render, screen } from '@testing - library / react';
 import React from 'react';
 import IoTEdgeComputing from './IoTEdgeComputing';
-
-describe ('IoTEdgeComputing', () => {
-
-  it ('renders without crashing', () => {
-
+;
+describe ('IoTEdgeComputing', () => {;
+  it ('renders without crashing', () => {;
     render (<IoTEdgeComputing />) ;
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
   }) ;
-
-  it ('displays expected content', () => {
-
+;
+  it ('displays expected content', () => {;
     render (<IoTEdgeComputing />) ;
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
   }) ;
 }) ;
+;

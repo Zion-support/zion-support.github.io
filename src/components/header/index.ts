@@ -5,3 +5,4 @@ export { MobileMenu, type MobileMenuProps } from './MobileMenu';
 export { UserMenu } from './UserMenu';
 export { MainNavigation } from './MainNavigation';
 export { AvatarMenu } from './AvatarMenu';
+;

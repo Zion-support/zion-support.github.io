@@ -1,7 +1,7 @@
-    setOnboardingStep(0); // Reset onboarding
+    setOnboardingStep(0); // Reset onboarding;
   }, [setUser, setOnboardingStep]);
-
-  return {
-
-    handleSignedIn,
+;
+  return {;
+    handleSignedIn,;
     handleSignedOut}};
+;

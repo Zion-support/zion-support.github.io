@@ -1,341 +1,313 @@
-// Service Worker Registration Utility
-export class ServiceWorkerManager {
+// Service Worker Registration Utility;
+export class ServiceWorkerManager {;
   private static instance: ServiceWorkerManager;
   private swRegistration: ServiceWorkerRegistration | null = null;
   private isSupported: boolean;
-
-  private constructor() {
+;
+  private constructor() {;
     this.isSupported = 'serviceWorker' in navigator;
-  }
-
-  static getInstance(): ServiceWorkerManager {
-    if (!ServiceWorkerManager.instance) {
+  };
+  static getInstance(): ServiceWorkerManager {;
+    if (!ServiceWorkerManager.instance) {;
       ServiceWorkerManager.instance = new ServiceWorkerManager();
-    }
+    };
     return ServiceWorkerManager.instance;
-  }
-
-  async register(): Promise<ServiceWorkerRegistration | null> {
-    if (!this.isSupported) {
+  };
+  async register(): Promise<ServiceWorkerRegistration | null> {;
+    if (!this.isSupported) {;
       console.log('Service Worker not supported');
       return null;
-    }
-
-    try {
-      // Check if service worker is already registered
+    };
+    try {;
+      // Check if service worker is already registered;
       const existingRegistration = await navigator.serviceWorker.getRegistration();
-      if (existingRegistration) {
+      if (existingRegistration) {;
         console.log('Service Worker already registered');
         this.swRegistration = existingRegistration;
         return existingRegistration;
-      }
-
-      // Register new service worker with better error handling
-      const registration = await navigator.serviceWorker.register('/sw.js', {
-        scope: '/',
-        updateViaCache: 'none'
+      };
+      // Register new service worker with better error handling;
+      const registration = await navigator.serviceWorker.register('/sw.js', {;
+        scope: '/',;
+        updateViaCache: 'none';
       });
-
+;
       console.log('Service Worker registered successfully:', registration);
       this.swRegistration = registration;
-
-      // Wait for service worker to be ready before setting up handlers
+;
+      // Wait for service worker to be ready before setting up handlers;
       await navigator.serviceWorker.ready;
-
-      // Handle updates
+;
+      // Handle updates;
       this.handleUpdates(registration);
-
-      // Handle messages
+;
+      // Handle messages;
       this.handleMessages();
-
+;
       return registration;
-    } catch (error) {
+    } catch (error) {;
       console.error('Service Worker registration failed:', error);
       return null;
-    }
-  }
-
-  private handleUpdates(registration: ServiceWorkerRegistration) {
-    try {
-      // Check for updates
-      registration.addEventListener('updatefound', () => {
+    };
+  };
+  private handleUpdates(registration: ServiceWorkerRegistration) {;
+    try {;
+      // Check for updates;
+      registration.addEventListener('updatefound', () => {;
         const newWorker = registration.installing;
-        if (newWorker) {
-          newWorker.addEventListener('statechange', () => {
-            try {
-              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                // New version available
+        if (newWorker) {;
+          newWorker.addEventListener('statechange', () => {;
+            try {;
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {;
+                // New version available;
                 this.showUpdateNotification();
-              }
-            } catch (error) {
+              };
+            } catch (error) {;
               console.error('Error handling worker state change:', error);
-            }
+            };
           });
-        }
+        };
       });
-
-      // Handle controller change
+;
+      // Handle controller change;
       let refreshing = false;
-      navigator.serviceWorker.addEventListener('controllerchange', () => {
-        try {
-          if (!refreshing) {
+      navigator.serviceWorker.addEventListener('controllerchange', () => {;
+        try {;
+          if (!refreshing) {;
             refreshing = true;
             window.location.reload();
-          }
-        } catch (error) {
+          };
+        } catch (error) {;
           console.error('Error handling controller change:', error);
-        }
+        };
       });
-    } catch (error) {
+    } catch (error) {;
       console.error('Error setting up update handlers:', error);
-    }
-  }
-
-  private handleMessages() {
-    navigator.serviceWorker.addEventListener('message', (event) => {
-      try {
+    };
+  };
+  private handleMessages() {;
+    navigator.serviceWorker.addEventListener('message', (event) => {;
+      try {;
         console.log('Message from Service Worker:', event.data);
-        
-        switch (event.data.type) {
-          case 'CACHE_UPDATED':
+        switch (event.data.type) {;
+          case 'CACHE_UPDATED':;
             console.log('Cache updated:', event.data.payload);
             break;
-          case 'OFFLINE_READY':
+          case 'OFFLINE_READY':;
             console.log('App is ready for offline use');
             break;
-          case 'ERROR':
+          case 'ERROR':;
             console.error('Service Worker error:', event.data.payload);
             break;
-          default:
+          default:;
             console.log('Unknown message type:', event.data.type);
-        }
-      } catch (error) {
+        };
+      } catch (error) {;
         console.error('Error handling service worker message:', error);
-      }
+      };
     });
-  }
-
-  private showUpdateNotification() {
-    try {
-      // Create update notification
+  };
+  private showUpdateNotification() {;
+    try {;
+      // Create update notification;
       const notification = document.createElement('div');
       notification.className = 'fixed top-4 right-4 bg-blue-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
-    notification.innerHTML = `
-      <div class="flex items-center space-x-3">
-        <span>🔄 New version available</span>
-        <button id="sw-update-btn" class="bg-white text-blue-500 px-3 py-1 rounded text-sm hover:bg-gray-100">
-          Update
-        </button>
-        <button id="sw-dismiss-btn" class="text-white/80 hover:text-white">
-          ✕
-        </button>
-      </div>
+    notification.innerHTML = `;
+      <div class="flex items-center space-x-3">;
+        <span>🔄 New version available</span>";
+        <button id="sw-update-btn" class="bg-white text-blue-500 px-3 py-1 rounded text-sm hover:bg-gray-100">;
+          Update;
+        </button>";
+        <button id="sw-dismiss-btn" class="text-white/80 hover:text-white">;
+          ✕;
+        </button>;
+      </div>;
     `;
-
+;
     document.body.appendChild(notification);
-
-    // Handle update button
+;
+    // Handle update button;
     const updateBtn = notification.querySelector('#sw-update-btn');
-    if (updateBtn) {
-      updateBtn.addEventListener('click', () => {
+    if (updateBtn) {;
+      updateBtn.addEventListener('click', () => {;
         this.updateServiceWorker();
         notification.remove();
       });
-    }
-
-    // Handle dismiss button
+    };
+    // Handle dismiss button;
     const dismissBtn = notification.querySelector('#sw-dismiss-btn');
-    if (dismissBtn) {
-      dismissBtn.addEventListener('click', () => {
+    if (dismissBtn) {;
+      dismissBtn.addEventListener('click', () => {;
         notification.remove();
       });
-    }
-
-    // Auto-remove after 10 seconds
-    setTimeout(() => {
-      if (notification.parentNode) {
+    };
+    // Auto-remove after 10 seconds;
+    setTimeout(() => {;
+      if (notification.parentNode) {;
         notification.remove();
-      }
+      };
     }, 10000);
-    } catch (error) {
+    } catch (error) {;
       console.error('Error showing update notification:', error);
-    }
-  }
-
-  async updateServiceWorker() {
+    };
+  };
+  async updateServiceWorker() {;
     if (!this.swRegistration) return;
-
-    try {
+;
+    try {;
       await this.swRegistration.update();
       console.log('Service Worker update initiated');
-    } catch (error) {
+    } catch (error) {;
       console.error('Service Worker update failed:', error);
-    }
-  }
-
-  async unregister(): Promise<boolean> {
+    };
+  };
+  async unregister(): Promise<boolean> {;
     if (!this.swRegistration) return false;
-
-    try {
+;
+    try {;
       const unregistered = await this.swRegistration.unregister();
-      if (unregistered) {
+      if (unregistered) {;
         console.log('Service Worker unregistered');
         this.swRegistration = null;
-      }
+      };
       return unregistered;
-    } catch (error) {
+    } catch (error) {;
       console.error('Service Worker unregistration failed:', error);
       return false;
-    }
-  }
-
-  async getRegistration(): Promise<ServiceWorkerRegistration | null> {
+    };
+  };
+  async getRegistration(): Promise<ServiceWorkerRegistration | null> {;
     if (!this.isSupported) return null;
     const registration = await navigator.serviceWorker.getRegistration();
     return registration || null;
-  }
-
-  async getController(): Promise<ServiceWorker | null> {
+  };
+  async getController(): Promise<ServiceWorker | null> {;
     if (!this.isSupported) return null;
     return navigator.serviceWorker.controller;
-  }
-
-  isReady(): boolean {
+  };
+  isReady(): boolean {;
     return this.swRegistration !== null && this.swRegistration.active !== null;
-  }
-
-  // Cache management
-  async clearCaches(): Promise<void> {
+  };
+  // Cache management;
+  async clearCaches(): Promise<void> {;
     if (!this.isSupported) return;
-
-    try {
+;
+    try {;
       const cacheNames = await caches.keys();
-      await Promise.all(
-        cacheNames.map(cacheName => caches.delete(cacheName))
+      await Promise.all(;
+        cacheNames.map(cacheName => caches.delete(cacheName));
       );
       console.log('All caches cleared');
-    } catch (error) {
+    } catch (error) {;
       console.error('Failed to clear caches:', error);
-    }
-  }
-
-  async getCacheSize(): Promise<number> {
+    };
+  };
+  async getCacheSize(): Promise<number> {;
     if (!this.isSupported) return 0;
-
-    try {
+;
+    try {;
       const cacheNames = await caches.keys();
       let totalSize = 0;
-
-      for (const cacheName of cacheNames) {
+;
+      for (const cacheName of cacheNames) {;
         const cache = await caches.open(cacheName);
         const keys = await cache.keys();
-        
-        for (const request of keys) {
+;
+        for (const request of keys) {;
           const response = await cache.match(request);
-          if (response) {
+          if (response) {;
             const blob = await response.blob();
             totalSize += blob.size;
-          }
-        }
-      }
-
+          };
+        };
+      };
       return totalSize;
-    } catch (error) {
+    } catch (error) {;
       console.error('Failed to calculate cache size:', error);
       return 0;
-    }
-  }
-
-  // Background sync
-  async requestBackgroundSync(tag: string): Promise<boolean> {
-    if (!this.isSupported || !('sync' in navigator.serviceWorker)) {
+    };
+  };
+  // Background sync;
+  async requestBackgroundSync(tag: string): Promise<boolean> {;
+    if (!this.isSupported || !('sync' in navigator.serviceWorker)) {;
       return false;
-    }
-
-    try {
+    };
+    try {;
       const registration = await this.getRegistration();
-      if (registration) {
+      if (registration) {;
         await (registration as any).sync.register(tag);
         console.log('Background sync requested:', tag);
         return true;
-      }
+      };
       return false;
-    } catch (error) {
+    } catch (error) {;
       console.error('Background sync request failed:', error);
       return false;
-    }
-  }
-
-  // Push notifications
-  async requestNotificationPermission(): Promise<NotificationPermission> {
-    if (!this.isSupported || !('Notification' in window)) {
+    };
+  };
+  // Push notifications;
+  async requestNotificationPermission(): Promise<NotificationPermission> {;
+    if (!this.isSupported || !('Notification' in window)) {;
       return 'denied';
-    }
-
-    try {
+    };
+    try {;
       const permission = await Notification.requestPermission();
       console.log('Notification permission:', permission);
       return permission;
-    } catch (error) {
+    } catch (error) {;
       console.error('Failed to request notification permission:', error);
       return 'denied';
-    }
-  }
-
-  async subscribeToPushNotifications(): Promise<PushSubscription | null> {
-    if (!this.isSupported || !('PushManager' in window)) {
+    };
+  };
+  async subscribeToPushNotifications(): Promise<PushSubscription | null> {;
+    if (!this.isSupported || !('PushManager' in window)) {;
       return null;
-    }
-
-    try {
+    };
+    try {;
       const permission = await this.requestNotificationPermission();
-      if (permission !== 'granted') {
+      if (permission !== 'granted') {;
         console.log('Notification permission denied');
         return null;
-      }
-
+      };
       const registration = await this.getRegistration();
-      if (!registration) {
+      if (!registration) {;
         console.log('No service worker registration');
         return null;
-      }
-
-      const subscription = await registration.pushManager.subscribe({
-        userVisibleOnly: true,
-        applicationServerKey: this.urlBase64ToUint8Array(process.env['REACT_APP_VAPID_PUBLIC_KEY'] || '')
+      };
+      const subscription = await registration.pushManager.subscribe({;
+        userVisibleOnly: true,;
+        applicationServerKey: this.urlBase64ToUint8Array(process.env['REACT_APP_VAPID_PUBLIC_KEY'] || '');
       });
-
+;
       console.log('Push subscription created:', subscription);
       return subscription;
-    } catch (error) {
+    } catch (error) {;
       console.error('Push subscription failed:', error);
       return null;
-    }
-  }
-
-  private urlBase64ToUint8Array(base64String: string): Uint8Array {
+    };
+  };
+  private urlBase64ToUint8Array(base64String: string): Uint8Array {;
     const padding = '='.repeat((4 - base64String.length % 4) % 4);
-    const base64 = (base64String + padding)
-      .replace(/-/g, '+')
+    const base64 = (base64String + padding);
+      .replace(/-/g, '+');
       .replace(/_/g, '/');
-
+;
     const rawData = window.atob(base64);
     const outputArray = new Uint8Array(rawData.length);
-
-    for (let i = 0; i < rawData.length; ++i) {
+;
+    for (let i = 0; i < rawData.length; ++i) {;
       outputArray[i] = rawData.charCodeAt(i);
-    }
+    };
     return outputArray;
-  }
-}
-
-// Export singleton instance
+  };
+};
+// Export singleton instance;
 export const serviceWorkerManager = ServiceWorkerManager.getInstance();
-
-// Convenience functions
+;
+// Convenience functions;
 export const registerServiceWorker = () => serviceWorkerManager.register();
 export const unregisterServiceWorker = () => serviceWorkerManager.unregister();
 export const clearCaches = () => serviceWorkerManager.clearCaches();
 export const getCacheSize = () => serviceWorkerManager.getCacheSize();
 export const requestNotificationPermission = () => serviceWorkerManager.requestNotificationPermission();
-export const subscribeToPushNotifications = () => serviceWorkerManager.subscribeToPushNotifications();
+export const subscribeToPushNotifications = () => serviceWorkerManager.subscribeToPushNotifications();";

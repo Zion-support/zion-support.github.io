@@ -1,6 +1,5 @@
 
-interface User {
-
+interface User {;
   id: string;
   email: string;
   displayName?: string;
@@ -8,17 +7,13 @@ interface User {
   role?: string;
   isEmailVerified?: boolean;
   createdAt?: string;
-  updatedAt?: string
-}
-
-interface AuthTokens {
-
+  updatedAt?: string;
+};
+interface AuthTokens {;
   accessToken: string | null;
-  refreshToken: string | null
-}
-
-interface AuthContextType {
-
+  refreshToken: string | null;
+};
+interface AuthContextType {;
   user: User | null;
   isLoading: boolean;
   onboardingStep: number;
@@ -32,17 +27,16 @@ login: email: string, password: string Promise<any>;
   loginWithGoogle: : unknown Promise<any>;
   loginWithFacebook: : unknown Promise<any>;
   loginWithTwitter: : unknown Promise<any>;
-  loginWithWeb3: : unknown Promise<any>
-}
+  loginWithWeb3: : unknown Promise<any>;
+};
 ;
-
 ;
-export 
-  
+;
+export;
   if (context = == null) {;
     throw new Error('useAuth must be used within an AuthProvider');
-
+;
   return context};
 ;
 export { AuthContext };
-export type { User, AuthTokens, AuthContextType }}}}}
+export type { User, AuthTokens, AuthContextType }}}}};
