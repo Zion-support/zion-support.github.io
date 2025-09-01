@@ -400,7 +400,7 @@ const Research: React.FC = () => {
                 <div>
                   <h3 className="text - white font - semibold mb - 3">Categories</h3>
                   <div role="button" className="flex flex - wrap gap - 2">
-                    {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
+                    {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                         onClick={ () => setActiveCategory (category.id) }
                         className={`px - 3 py - 1 rounded - lg text - sm font - medium transition - colors ${
                           activeCategory === category.id
@@ -418,7 +418,7 @@ const Research: React.FC = () => {
                 <div>
                   <h3 className="text - white font - semibold mb - 3">Status</h3>
                   <div role="button" className="flex flex - wrap gap - 2">
-                    {statuses.map (status => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={status.id}
+                    {statuses.map (status => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={status.id}
                         onClick={ () => setActiveStatus (status.id) }
                         className={`px - 3 py - 1 rounded - lg text - sm font - medium transition - colors ${
                           activeStatus === status.id
@@ -436,7 +436,7 @@ const Research: React.FC = () => {
                 <div>
                   <h3 className="text - white font - semibold mb - 3">Type</h3>
                   <div role="button" className="flex flex - wrap gap - 2">
-                    {types.map (type => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={type.id}
+                    {types.map (type => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={type.id}
                         onClick={ () => setActiveType (type.id) }
                         className={`px - 3 py - 1 rounded - lg text - sm font - medium transition - colors ${
                           activeType === type.id
@@ -560,10 +560,10 @@ const Research: React.FC = () => {
 
                   {/* Action Buttons */}
                   <div role="button" className="flex gap - 2">
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex - 1 bg - gradient - to - r from - blue - 500 to - purple - 500 text - white py - 2 px - 4 rounded - lg text - sm font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300">
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex - 1 bg - gradient - to - r from - blue - 500 to - purple - 500 text - white py - 2 px - 4 rounded - lg text - sm font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300">
                       View Details
                     </button>
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 2 bg - slate - 700 / 50 text - gray - 300 rounded - lg hover:bg - slate - 600 / 50 transition - colors">
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 2 bg - slate - 700 / 50 text - gray - 300 rounded - lg hover:bg - slate - 600 / 50 transition - colors">
                       <Download className="w - 4 h - 4" />
                     </button>
                   </div>

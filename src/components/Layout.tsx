@@ -88,7 +88,7 @@ const navigation: NavItem[] = [;
             <nav className="space - y-2">
               {sidebarNavigation.map ( (item) => (<div role="button" key={item.label}>
                   {item.children ? (<div>
-                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleSidebarDropdown (item.label) }
+                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleSidebarDropdown (item.label) }
                         className="flex items - center justify - between w - full px - 3 py - 2 text - sm font - medium rounded - md hover:bg - accent transition - colors"
 
                         <span className="flex items - center space - x-2">

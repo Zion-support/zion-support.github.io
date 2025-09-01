@@ -161,7 +161,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = () : JSX.Element => {;
               {/* View Mode Toggle */}
               <div role="button" className="flex - shrink - 0">
                 <div role="button" className="flex bg - slate - 700 rounded - lg p - 1">
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                     className={`p - 2 rounded - md transition - colors ${
                       viewMode === 'grid' 
                         ? 'bg - blue - 500 text - white' 
@@ -170,7 +170,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = () : JSX.Element => {;
                   >
                     <Grid3X3 className="w - 5 h - 5" />
                   </button>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                     className={`p - 2 rounded - md transition - colors ${
                       viewMode === 'list' 
                         ? 'bg - blue - 500 text - white' 
@@ -271,10 +271,10 @@ const Zion2026AIMarketplaceShowcase: React.FC = () : JSX.Element => {;
                   {/* Action Buttons */}
                   <div role="button" className="p - 6 bg - slate - 700">
                     <div role="button" className="flex space - x-3">
-                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex - 1 px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - cyan - 500 text - white font - semibold rounded - lg hover:from - blue - 600 hover:to - cyan - 600 transition - all duration - 300">
+                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex - 1 px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - cyan - 500 text - white font - semibold rounded - lg hover:from - blue - 600 hover:to - cyan - 600 transition - all duration - 300">
                         Get Started
                       </button>
-                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 2 border border - gray - 600 text - gray - 300 rounded - lg hover:border - gray - 500 hover:text - white transition - all duration - 300">
+                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 2 border border - gray - 600 text - gray - 300 rounded - lg hover:border - gray - 500 hover:text - white transition - all duration - 300">
                         Learn More
                       </button>
                     </div>

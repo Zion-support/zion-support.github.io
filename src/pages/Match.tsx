@@ -223,7 +223,7 @@ const Match: React.FC = () => {;
 
             {/* Category Filters */}
             <div role="button" className="flex flex - wrap gap - 3 justify - center">
-              {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
+              {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                   onClick={ () => setSelectedCategory (category.id) }
                   className={`flex items - center gap - 2 px - 4 py - 2 rounded - lg font - medium transition - all duration - 200 ${
                     selectedCategory === category.id

@@ -372,7 +372,7 @@ interface SearchResult {
                 placeholder="Search for services, solutions, documentation, or insights..."
                 className="w - full pl - 12 pr - 4 py - 4 text - lg border border - gray - 300 rounded - xl shadow - sm focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - blue - 500"
               />
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit"
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit"
                 className="absolute right - 2 top - 1/2 transform - translate - y-1 / 2 px - 6 py - 2 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 200"
               >
                 Search
@@ -388,7 +388,7 @@ interface SearchResult {
             <div role="button" className="bg - white rounded - xl shadow - sm border border - gray - 200 p - 6">
               <div role="button" className="flex items - center justify - between mb - 4">
                 <h3 className="text - lg font - semibold text - gray - 900">Filters</h3>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={clearFilters}
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={clearFilters}
                   className="text - sm text - blue - 600 hover:text - blue - 700"
                 >
                   Clear All
@@ -411,7 +411,7 @@ interface SearchResult {
 
               {/* Filter Options */}
               <div role="button" className="space - y-3">
-                {filterOptions.map (filter => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={filter.id}
+                {filterOptions.map (filter => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={filter.id}
                     onClick={ () => toggleFilter (filter.id) }
                     className={`w - full flex items - center justify - between p - 3 rounded - lg transition - colors ${
                       selectedFilters.has (filter.id) ? 'bg - blue - 50 border border - blue - 200'

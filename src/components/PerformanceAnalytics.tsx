@@ -196,7 +196,7 @@ const PerformanceAnalytics: React.FC = () => {;
           className="flex flex - col sm:flex - row gap - 4 justify - center items - center mb - 8"
         >
           <div role="button" className="flex gap - 2">
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={startMonitoring}
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={startMonitoring}
               disabled={isMonitoring}
               className={`px - 6 py - 3 rounded - lg font - semibold transition - all duration - 300 flex items - center gap - 2 ${
                 isMonitoring
@@ -207,7 +207,7 @@ const PerformanceAnalytics: React.FC = () => {;
               <Activity className="w - 5 h - 5" />
               Start Monitoring
             </button>
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={stopMonitoring}
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={stopMonitoring}
               disabled={!isMonitoring}
               className={`px - 6 py - 3 rounded - lg font - semibold transition - all duration - 300 flex items - center gap - 2 ${
                 !isMonitoring

@@ -636,7 +636,7 @@ export const Sidebar: React.FC < SidebarProps> = ({ isOpen, onToggle }) => {
         >
           {navigationSections.slice (0, 6) .map (section => {
             const Icon = section.icon;
-            return (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button"
+            return (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button"
                 key={section.id}
                 onClick={onToggle}
                 className="p - 3 rounded - lg text - slate - 300 hover:text - white hover:bg - slate - 800 transition - colors"
@@ -659,7 +659,7 @@ export const Sidebar: React.FC < SidebarProps> = ({ isOpen, onToggle }) => {
           className="flex items - center justify - between mb - 6"
         >
           <h2 className="text - lg font - semibold text - white">Navigation</h2>
-          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button"
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button"
             onClick={onToggle}
             className="p - 2 rounded - lg text - slate - 300 hover:text - white hover:bg - slate - 800 transition - colors"
           >
@@ -673,7 +673,7 @@ export const Sidebar: React.FC < SidebarProps> = ({ isOpen, onToggle }) => {
             const isExpanded = expandedSections.includes (section.id) ;
 
             return (<div role="button" key={section.id} className="space - y-1">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button"
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button"
                   onClick={ () => toggleSection (section.id) }
                   className="w - full flex items - center justify - between p - 3 rounded - lg text - slate - 300 hover:text - white hover:bg - slate - 800 transition - colors"
                 >

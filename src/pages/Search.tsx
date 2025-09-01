@@ -222,7 +222,7 @@ const Search: React.FC = () => {
                   placeholder="Search for services, talent, equipment, companies..."
                   className="w - full pl - 12 pr - 4 py - 4 bg - slate - 800 / 50 border border - slate - 700 / 50 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent text - lg"
                 />
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit"
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit"
                   className="absolute right - 2 top - 1/2 transform - translate - y-1 / 2 bg - gradient - to - r from - blue - 500 to - purple - 500 text - white px - 6 py - 2 rounded - md font - semibold hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300"
                 >
                   Search
@@ -248,7 +248,7 @@ const Search: React.FC = () => {
                   <div role="button" className="mb - 6">
                     <h4 className="text - white font - medium mb - 3">Categories</h4>
                     <div role="button" className="space - y-2">
-                      {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
+                      {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                           onClick={ () => setActiveCategory (category.id) }
                           className={`w - full text - left px - 3 py - 2 rounded - lg text - sm transition - colors ${
                             activeCategory === category.id
@@ -266,7 +266,7 @@ const Search: React.FC = () => {
                   <div>
                     <h4 className="text - white font - medium mb - 3">Sort By</h4>
                     <div role="button" className="space - y-2">
-                      {sortOptions.map (option => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={option.id}
+                      {sortOptions.map (option => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={option.id}
                           onClick={ () => setSortBy (option.id) }
                           className={`w - full text - left px - 3 py - 2 rounded - lg text - sm transition - colors ${
                             sortBy === option.id
@@ -348,13 +348,13 @@ const Search: React.FC = () => {
                                 </span>) ) }
                           </div>
                           <div role="button" className="flex items - center gap - 2">
-                            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - gray - 400 hover:text - white transition - colors">
+                            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - gray - 400 hover:text - white transition - colors">
                               <Bookmark className="w - 4 h - 4" />
                             </button>
-                            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - gray - 400 hover:text - white transition - colors">
+                            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - gray - 400 hover:text - white transition - colors">
                               <Share2 className="w - 4 h - 4" />
                             </button>
-                            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 text - white rounded - lg text - sm font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300">
+                            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 text - white rounded - lg text - sm font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300">
                               View Details
                             </button>
                           </div>

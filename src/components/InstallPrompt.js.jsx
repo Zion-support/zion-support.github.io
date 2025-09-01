@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components / ui / button';
-  export default InstallPrompt;
 export const InstallPrompt = () => {
-
+export default InstallPrompt;
 
   const [deferred, setDeferred] = useState (null) ;
   useEffect ( () => {

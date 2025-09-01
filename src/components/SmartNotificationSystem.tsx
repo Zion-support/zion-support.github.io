@@ -307,12 +307,12 @@ interface SmartNotificationSystemProps {
                   </div>
                 </div>
                 <div role="button" className="flex items - center space - x-2">
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowSettings (!showSettings) }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowSettings (!showSettings) }
                     className="p - 2 hover:bg - gray - 100 dark:hover:bg - gray - 800 rounded - lg transition - colors"
                   >
                     <Settings className="w - 5 h - 5" />
                   </button>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsOpen (false) }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsOpen (false) }
                     className="p - 2 hover:bg - gray - 100 dark:hover:bg - gray - 800 rounded - lg transition - colors"
                   >
                     <X className="w - 5 h - 5" />
@@ -384,7 +384,7 @@ interface SmartNotificationSystemProps {
                         </label>
                       </div>
                       {settings.desktop &&
-                        Notification.permission === 'default' && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={requestNotificationPermission}
+                        Notification.permission === 'default' && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={requestNotificationPermission}
                             className="px - 3 py - 1 text - sm bg - blue - 600 text - white rounded - lg hover:bg - blue - 700 transition - colors"
                           >
                             Enable Desktop Notifications
@@ -397,7 +397,7 @@ interface SmartNotificationSystemProps {
               <div role="button" className="p - 4 border - b border - gray - 200 dark:border - gray - 700">
                 <div role="button" className="flex items - center justify - between mb - 3">
                   <div role="button" className="flex space - x-1">
-                    { (['all', 'unread', 'important'] as const) .map (filterType => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={filterType}
+                    { (['all', 'unread', 'important'] as const) .map (filterType => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={filterType}
                           onClick={ () => setFilter (filterType) }
                           className={`px - 3 py - 1 text - sm rounded - lg transition - colors ${
                             filter === filterType
@@ -410,12 +410,12 @@ interface SmartNotificationSystemProps {
                         </button>) ) }
                   </div>
                   <div role="button" className="flex space - x-2">
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={markAllAsRead}
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={markAllAsRead}
                       className="px - 3 py - 1 text - sm bg - gray - 600 text - white rounded - lg hover:bg - gray - 700 transition - colors"
                     >
                       Mark All Read
                     </button>
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={clearAllNotifications}
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={clearAllNotifications}
                       className="px - 3 py - 1 text - sm bg - red - 600 text - white rounded - lg hover:bg - red - 700 transition - colors"
                     >
                       Clear All
@@ -497,21 +497,21 @@ interface SmartNotificationSystemProps {
                                     </div>
                                   </div>
                                   <div role="button" className="flex items - center space - x-1 ml - 2">
-                                    {!notification.read && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () =>
+                                    {!notification.read && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () =>
                                           markAsRead (notification.id) }
                                         className="p - 1 hover:bg - gray - 200 dark:hover:bg - gray - 700 rounded transition - colors"
                                         title="Mark as read"
                                       >
                                         <Eye className="w - 4 h - 4" />
                                       </button>) }
-                                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () =>
+                                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () =>
                                         archiveNotification (notification.id) }
                                       className="p - 1 hover:bg - gray - 200 dark:hover:bg - gray - 700 rounded transition - colors"
                                       title="Archive"
                                     >
                                       <Archive className="w - 4 h - 4" />
                                     </button>
-                                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () =>
+                                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () =>
                                         dismissNotification (notification.id) }
                                       className="p - 1 hover:bg - gray - 200 dark:hover:bg - gray - 700 rounded transition - colors"
                                       title="Dismiss"
@@ -524,7 +524,7 @@ interface SmartNotificationSystemProps {
                                 {/* Actions */}
                                 {notification.actions &&
                                   notification.actions.length > 0 && (<div role="button" className="flex space - x-2 mt - 3">
-                                      {notification.actions.map ( (action, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={index}
+                                      {notification.actions.map ( (action, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={index}
                                             onClick={ () =>
                                               handleNotificationAction (notification,
                                                 action) }

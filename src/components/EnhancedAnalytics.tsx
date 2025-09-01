@@ -404,7 +404,7 @@ function gtag (...args: any[]) {
                 <BarChart3 className="w - 5 h - 5" />
                 <h3 className="font - semibold">Analytics</h3>
               </div>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsVisible (false) }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsVisible (false) }
                 className="p - 1 hover:bg - white / 20 rounded transition - colors"
                 aria - label="Close analytics dashboard"
               >

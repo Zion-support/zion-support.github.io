@@ -305,17 +305,17 @@ import { SEO } from '../components / SEO';
               </div>
 
               <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={acceptAll}
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={acceptAll}
                   className="px - 8 py - 3 bg - gradient - to - r from - green - 400 to - blue - 500 text - white font - semibold rounded - lg hover:from - green - 500 hover:to - blue - 600 transition - all duration - 200 hover:scale - 105"
                 >
                   Accept All Cookies
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={rejectAll}
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={rejectAll}
                   className="px - 8 py - 3 bg - slate - 700 / 50 text - gray - 300 font - semibold rounded - lg hover:bg - slate - 600 / 50 transition - all duration - 200"
                 >
                   Reject Non - Essential
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={savePreferences}
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={savePreferences}
                   className="px - 8 py - 3 border border - cyan - 400 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 400 hover:text - white transition - all duration - 200"
                 >
                   Save Preferences
@@ -587,7 +587,7 @@ import { SEO } from '../components / SEO';
                   {category.necessary ? (<div role="button" className="flex items - center text - blue - 400">
                       <CheckCircle className="w - 6 h - 6 mr - 2" />
                       <span className="text - sm font - medium">Required</span>
-                    </div>) : (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleCookieToggle (category.id) }
+                    </div>) : (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleCookieToggle (category.id) }
                       className={`flex items - center px - 4 py - 2 rounded - lg transition - colors ${
                         cookiePreferences[category.id as keyof typeof cookiePreferences]
                           ? 'bg - green - 600 hover:bg - green - 700 text - white'
@@ -614,21 +614,21 @@ import { SEO } from '../components / SEO';
           </h2>
           
           <div role="button" className="grid grid - cols - 1 md:grid - cols - 3 gap - 4 mb - 8">
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={acceptAll}
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={acceptAll}
               className="flex items - center justify - center px - 6 py - 3 bg - green - 600 hover:bg - green - 700 text - white font - semibold rounded - xl transition - colors"
             >
               <CheckCircle className="w - 5 h - 5 mr - 2" />
               Accept All Cookies
             </button>
             
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={rejectAll}
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={rejectAll}
               className="flex items - center justify - center px - 6 py - 3 bg - red - 600 hover:bg - red - 700 text - white font - semibold rounded - xl transition - colors"
             >
               <XCircle className="w - 5 h - 5 mr - 2" />
               Reject Non - Essential
             </button>
             
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={savePreferences}
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={savePreferences}
               className="flex items - center justify - center px - 6 py - 3 bg - blue - 600 hover:bg - blue - 700 text - white font - semibold rounded - xl transition - colors"
             >
               <Settings className="w - 5 h - 5 mr - 2" />

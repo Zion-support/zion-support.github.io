@@ -17,12 +17,12 @@ interface ErrorFallbackProps extends React.PropsWithChildren<{}> {
           We're sorry, but something unexpected happened. Please try refreshing the page.
         </p>
         <div role="button" className="space - y-3">
-          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={resetErrorBoundary}
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={resetErrorBoundary}
             className="w - full bg - blue - 600 text - white px - 4 py - 2 rounded - lg hover:bg - blue - 700 transition - colors"
           >
             Try Again
           </button>
-          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => window.location.href = '/'}
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => window.location.href = '/'}
             className="w - full bg - gray - 200 text - gray - 800 px - 4 py - 2 rounded - lg hover:bg - gray - 300 transition - colors"
           >
             Go Home

@@ -408,7 +408,7 @@ showStats:  true,;
           </div>
 
           {/* Add Feedback Button */}
-          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowFeedbackForm (!showFeedbackForm) }
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowFeedbackForm (!showFeedbackForm) }
             className="px - 6 py - 2 bg - zion - cyan text - white rounded - lg hover:bg - zion - cyan / 80 transition - colors flex items - center gap - 2"
 
             <MessageCircle className="w - 4 h - 4" />;
@@ -445,7 +445,7 @@ showStats:  true,;
                 <div>
                   <label className="block text - sm font - medium text - zinc - 300 mb - 2">Rating</label>
                   <div role="button" className="flex gap - 2">
-                    {[1, 2, 3, 4, 5].map ( (star) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={star}
+                    {[1, 2, 3, 4, 5].map ( (star) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={star}
                         onClick = { () => setNewFeedback (prev => ({ ...prev,
   rating: star 
 
@@ -496,14 +496,14 @@ showStats:  true,;
 
                 {/* Submit Button */}
                 <div role="button" className="flex gap - 3">
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={handleSubmitFeedback}
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={handleSubmitFeedback}
                     disabled={newFeedback.rating === 0 || !newFeedback.comment.trim () }
                     className="px - 6 py - 2 bg - zion - cyan text - white rounded - lg hover:bg - zion - cyan / 80 transition - colors disabled:opacity - 50 disabled:cursor - not - allowed flex items - center gap - 2"
 
                     <Send className="w - 4 h - 4" />
                     Submit Feedback
                   </button>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowFeedbackForm (false) }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowFeedbackForm (false) }
                     className="px - 6 py - 2 bg - zinc - 700 text - white rounded - lg hover:bg - zinc - 600 transition - colors"
 
                     Cancel
@@ -589,27 +589,27 @@ showStats:  true,;
             {/* Actions */}
             <div role="button" className="flex items - center justify - between pt - 4 border - t border - zinc - 700 / 50">
               <div role="button" className="flex items - center gap - 4">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick = { () => handleVote (item.id,
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick = { () => handleVote (item.id,
   'helpful') }
                   className="flex items - center gap - 2 text - zinc - 400 hover:text - green - 400 transition - colors"
 
                   <ThumbsUp className="w - 4 h - 4" />
                   <span className="text - sm">{item.helpful}</span>
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick = { () => handleVote (item.id,
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick = { () => handleVote (item.id,
   'unhelpful') }
                   className="flex items - center gap - 2 text - zinc - 400 hover:text - red - 400 transition - colors"
 
                   <ThumbsDown className="w - 4 h - 4" />
                   <span className="text - sm">{item.unhelpful}</span>
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex items - center gap - 2 text - zinc - 400 hover:text - zion - cyan transition - colors">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex items - center gap - 2 text - zinc - 400 hover:text - zion - cyan transition - colors">
                   <Share2 className="w - 4 h - 4" />
                   <span className="text - sm">Share</span>
                 </button>
               </div>
 
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="text - zinc - 400 hover:text - red - 400 transition - colors">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="text - zinc - 400 hover:text - red - 400 transition - colors">
                 <Flag className="w - 4 h - 4" />
               </button>
             </div>
@@ -627,7 +627,7 @@ showStats:  true,;
           <p className="text - zinc - 400 mb - 4">
             Try adjusting your filters or be the first to share your experience!
           </p>
-          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowFeedbackForm (true) }
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowFeedbackForm (true) }
             className="px - 6 py - 2 bg - zion - cyan text - white rounded - lg hover:bg - zion - cyan / 80 transition - colors"
           >
             Add Feedback;

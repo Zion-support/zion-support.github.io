@@ -295,7 +295,7 @@ interface AdvancedAnalyticsDashboardProps {
                 </div>
 
                 <div role="button" className="flex items - center space - x-2">
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={refreshData}
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={refreshData}
                     disabled={isLoading}
                     className="p - 2 text - gray - 600 hover:text - blue - 600 dark:text - gray - 400 dark:hover:text - blue - 400 transition - colors"
                   >
@@ -304,13 +304,13 @@ interface AdvancedAnalyticsDashboardProps {
                     />
                   </button>
 
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsFullscreen (!isFullscreen) }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsFullscreen (!isFullscreen) }
                     className="p - 2 text - gray - 600 hover:text - blue - 600 dark:text - gray - 400 dark:hover:text - blue - 400 transition - colors"
                   >
                     {isFullscreen ? (<Minimize2 className="w - 5 h - 5" />) : (<Maximize2 className="w - 5 h - 5" />) }
                   </button>
 
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsOpen (false) }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsOpen (false) }
                     className="p - 2 text - gray - 600 hover:text - red - 600 dark:text - gray - 400 dark:hover:text - red - 400 transition - colors"
                   >
                     <X className="w - 5 h - 5" />
@@ -327,7 +327,7 @@ interface AdvancedAnalyticsDashboardProps {
                       Timeframe:
                     </span>
                     <div role="button" className="flex bg - white dark:bg - gray - 700 rounded - lg p - 1">
-                      { (['1h', '24h', '7d', '30d'] as const) .map (timeframe => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={timeframe}
+                      { (['1h', '24h', '7d', '30d'] as const) .map (timeframe => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={timeframe}
                           onClick={ () => setSelectedTimeframe (timeframe) }
                           className={`px - 3 py - 1 text - sm rounded - md transition - colors ${
                             selectedTimeframe === timeframe
@@ -352,7 +352,7 @@ interface AdvancedAnalyticsDashboardProps {
                         'revenue',
                         'engagement',
                         'technical',
-                      ].map (metric => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={metric}
+                      ].map (metric => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={metric}
                           onClick={ () => {
                             setSelectedMetrics (prev =>
                               prev.includes (metric) ? prev.filter (m => m !== metric) : [...prev, metric]) ;
@@ -369,14 +369,14 @@ interface AdvancedAnalyticsDashboardProps {
 
                   {/* Actions */}
                   <div role="button" className="flex items - center space - x-2">
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={exportData}
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={exportData}
                       className="flex items - center space - x-2 px - 4 py - 2 bg - green - 600 text - white rounded - lg hover:bg - green - 700 transition - colors"
                     >
                       <Download className="w - 4 h - 4" />
                       <span > Export</span>
                     </button>
 
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () =>
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () =>
                         setShowAdvancedMetrics (!showAdvancedMetrics) }
                       className="flex items - center space - x-2 px - 4 py - 2 bg - purple - 600 text - white rounded - lg hover:bg - purple - 700 transition - colors"
                     >

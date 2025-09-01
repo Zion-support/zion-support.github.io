@@ -168,12 +168,12 @@ import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES } from '../../data / re
               transition={{ duration: 0.8, delay: 0.2 }}
               className="flex items - center justify - center space - x-4 mb - 8"
             >
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={togglePlay}
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={togglePlay}
                 className="p - 3 bg - gradient - to - r from - purple - 600 to - pink - 600 rounded - full text - white hover:from - purple - 700 hover:to - pink - 700 transition - all duration - 300 transform hover:scale - 110"
               >
                 {isPlaying ? <Pause size={24} /> : <Play size={24} />}
               </button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={toggleMute}
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={toggleMute}
                 className="p - 3 bg - gradient - to - r from - cyan - 600 to - blue - 600 rounded - full text - white hover:from - cyan - 700 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 110"
               >
                 {volume > 0 ? <Volume2 size={24} /> : <VolumeX size={24} />}
@@ -414,7 +414,7 @@ import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES } from '../../data / re
                         >
                           Learn More
                         </a>
-                        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 3 border border - purple - 500 text - purple - 400 rounded - xl hover:bg - purple - 500 hover:text - white transition - all duration - 300">
+                        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 3 border border - purple - 500 text - purple - 400 rounded - xl hover:bg - purple - 500 hover:text - white transition - all duration - 300">
                           <MessageCircle className="w - 5 h - 5" />
                         </button>
                       </div>

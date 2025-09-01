@@ -222,7 +222,7 @@ interface AccessibilitySettings {
                 <Accessibility className="w - 5 h - 5" />
                 <h3 className="font - semibold">Accessibility</h3>
               </div>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsVisible (false) }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsVisible (false) }
                 className="p - 1 hover:bg - white / 20 rounded transition - colors"
                 aria - label="Close accessibility panel"
               >
@@ -245,7 +245,7 @@ interface AccessibilitySettings {
                       High Contrast
                     </span>
                   </div>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleSetting ('highContrast') }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleSetting ('highContrast') }
                     className={`relative inline - flex h - 6 w - 11 items - center rounded - full transition - colors ${
                       settings.highContrast ? 'bg - blue - 600' : 'bg - slate - 300'
                     }`}
@@ -268,7 +268,7 @@ interface AccessibilitySettings {
                       Large Text
                     </span>
                   </div>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleSetting ('largeText') }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleSetting ('largeText') }
                     className={`relative inline - flex h - 6 w - 11 items - center rounded - full transition - colors ${
                       settings.largeText ? 'bg - blue - 600' : 'bg - slate - 300'
                     }`}
@@ -289,7 +289,7 @@ interface AccessibilitySettings {
                       Focus Indicator
                     </span>
                   </div>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleSetting ('focusIndicator') }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleSetting ('focusIndicator') }
                     className={`relative inline - flex h - 6 w - 11 items - center rounded - full transition - colors ${
                       settings.focusIndicator ? 'bg - blue - 600' : 'bg - slate - 300'
                     }`}
@@ -319,7 +319,7 @@ interface AccessibilitySettings {
                       Keyboard Navigation
                     </span>
                   </div>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleSetting ('keyboardNavigation') }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleSetting ('keyboardNavigation') }
                     className={`relative inline - flex h - 6 w - 11 items - center rounded - full transition - colors ${
                       settings.keyboardNavigation
                         ? 'bg - blue - 600'
@@ -344,7 +344,7 @@ interface AccessibilitySettings {
                       Reduced Motion
                     </span>
                   </div>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleSetting ('reducedMotion') }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleSetting ('reducedMotion') }
                     className={`relative inline - flex h - 6 w - 11 items - center rounded - full transition - colors ${
                       settings.reducedMotion ? 'bg - blue - 600' : 'bg - slate - 300'
                     }`}
@@ -372,13 +372,13 @@ interface AccessibilitySettings {
                     {settings.zoomLevel}%
                   </span>
                   <div role="button" className="flex items - center space - x-2">
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => adjustZoom ('out') }
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => adjustZoom ('out') }
                       className="p - 2 rounded - lg bg - slate - 100 dark:bg - slate - 700 hover:bg - slate - 200 dark:hover:bg - slate - 600 transition - colors"
                       aria - label="Zoom out"
                     >
                       <ZoomOut className="w - 4 h - 4" />
                     </button>
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => adjustZoom ('in') }
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => adjustZoom ('in') }
                       className="p - 2 rounded - lg bg - slate - 100 dark:bg - slate - 700 hover:bg - slate - 200 dark:hover:bg - slate - 600 transition - colors"
                       aria - label="Zoom in"
                     >
@@ -401,7 +401,7 @@ interface AccessibilitySettings {
                       Enhanced Support
                     </span>
                   </div>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleSetting ('screenReader') }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleSetting ('screenReader') }
                     className={`relative inline - flex h - 6 w - 11 items - center rounded - full transition - colors ${
                       settings.screenReader ? 'bg - blue - 600' : 'bg - slate - 300'
                     }`}

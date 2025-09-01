@@ -254,7 +254,7 @@ import { motion } from 'framer - motion';
 
                 Quantum Consultation
               </motion.button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - zion - purple text - zion - purple rounded - xl font - semibold text - lg hover:bg - zion - purple hover:text - white transition - all duration - 300">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - zion - purple text - zion - purple rounded - xl font - semibold text - lg hover:bg - zion - purple hover:text - white transition - all duration - 300">
                 View Research
               </button>
             </div>
@@ -375,7 +375,7 @@ import { motion } from 'framer - motion';
           >;
             {applications.map ( (app) => {;
               const Icon = app.icon;
-              return (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key = {app.id}
+              return (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key = {app.id}
                   onClick={ () => setSelectedApplication (app.id) }
                   className={`flex items - center gap - 3 px - 6 py - 3 rounded - xl font - medium transition - all duration - 300 ${
                     selectedApplication === app.id
@@ -662,7 +662,7 @@ import { motion } from 'framer - motion';
 
                 Start Quantum Journey
               </motion.button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - zion - purple text - zion - purple rounded - xl font - semibold text - lg hover:bg - zion - purple hover:text - white transition - all duration - 300">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - zion - purple text - zion - purple rounded - xl font - semibold text - lg hover:bg - zion - purple hover:text - white transition - all duration - 300">
                 Download Quantum Guide
               </button>
             </div>;

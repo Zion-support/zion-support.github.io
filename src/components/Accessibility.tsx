@@ -151,7 +151,7 @@ interface AccessibilitySettings {
 
   return (<>
       {/* Accessibility Toggle Button */}
-      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick = { () => setIsOpen (!isOpen) }
+      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick = { () => setIsOpen (!isOpen) }
         className="fixed bottom - 4 left - 4 z - 50 p - 3 bg - cyan - 500 hover:bg - cyan - 600 text - white rounded - full shadow - lg transition - all duration - 200 hover:scale - 110 focus:outline - none focus:ring - 2 focus:ring - cyan - 400 focus:ring - offset - 2"
         aria - label="Accessibility Settings"
         title="Accessibility Settings"
@@ -191,7 +191,7 @@ interface AccessibilitySettings {
                             <AccessibilityIcon className="w - 5 h - 5 text - cyan - 400" />
           Accessibility
                 </h2>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsOpen (false) }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsOpen (false) }
                   className="text - gray - 400 hover:text - white transition - colors"
                   aria - label="Close accessibility panel"
 
@@ -206,7 +206,7 @@ interface AccessibilitySettings {
                   Font Size
                 </label>
                 <div role="button" className="flex items - center gap - 3">
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={decreaseFontSize}
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={decreaseFontSize}
                     disabled={settings.fontSize <= 12}
                     className="p - 2 bg - slate - 800 hover:bg - slate - 700 disabled:opacity - 50 disabled:cursor - not - allowed rounded - md transition - colors"
                     aria - label="Decrease font size"
@@ -216,7 +216,7 @@ interface AccessibilitySettings {
                   <span className="text - white font - mono min - w-[3rem] text - center">
                     {settings.fontSize}px
                   </span>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={increaseFontSize}
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={increaseFontSize}
                     disabled={settings.fontSize >= 24}
                     className="p - 2 bg - slate - 800 hover:bg - slate - 700 disabled:opacity - 50 disabled:cursor - not - allowed rounded - md transition - colors"
                     aria - label="Increase font size"
@@ -281,7 +281,7 @@ interface AccessibilitySettings {
                   Theme
                 </label>
                 <div role="button" className="grid grid - cols - 3 gap - 2">
-                  { (['auto', 'light', 'dark'] as const) .map ( (theme) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={theme}
+                  { (['auto', 'light', 'dark'] as const) .map ( (theme) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={theme}
                       onClick = { () => updateSetting ('theme',
   theme) }
                       className={`p - 2 rounded - md text - xs font - medium transition - colors ${
@@ -344,7 +344,7 @@ interface AccessibilitySettings {
               </div>
 
               {/* Reset Button */}
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={resetSettings}
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={resetSettings}
                 className="w - full px - 4 py - 2 bg - slate - 800 hover:bg - slate - 700 text - white rounded - md transition - colors text - sm font - medium"
               >
                 Reset to Defaults;

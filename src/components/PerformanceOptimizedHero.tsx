@@ -158,7 +158,7 @@ const PerformanceOptimizedHero: React.FC < HeroProps> = ({
             <div role="button" className="absolute inset - 0 rounded - full bg - gradient - to - r from - cyan - 400 to - blue - 400 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300" />
           </Link>
 
-          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="group inline - flex items - center px - 8 py - 4 border - 2 border - cyan - 500 / 30 text - cyan - 400 font - semibold rounded - full text - lg hover:bg - cyan - 500 / 10 transition - all duration - 300">
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="group inline - flex items - center px - 8 py - 4 border - 2 border - cyan - 500 / 30 text - cyan - 400 font - semibold rounded - full text - lg hover:bg - cyan - 500 / 10 transition - all duration - 300">
             <Play className="mr - 2 w - 5 h - 5" />
             Watch Demo
           </button>

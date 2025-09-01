@@ -226,7 +226,7 @@ const SystemStatus: React.FC = () => {
             <div role="button" className="flex items - center justify - center text - gray - 400 text - sm">
               <Clock className="w - 4 h - 4 mr - 2" />
               Last updated: {lastUpdated.toLocaleString () }
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={refreshData}
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={refreshData}
                 disabled={isRefreshing}
                 className="ml - 4 p - 2 hover:bg - slate - 700 / 50 rounded - lg transition - colors disabled:opacity - 50"
               >

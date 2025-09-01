@@ -170,7 +170,7 @@ const PerformanceOptimizer: React.FC = () => {
             Performance Optimizer
           </h2>
         </div>
-        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button"
+        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button"
           onClick={ () => setIsMonitoring (!isMonitoring) }
           className={`px - 4 py - 2 rounded - lg font - medium transition - colors ${
             isMonitoring
@@ -300,7 +300,7 @@ const PerformanceOptimizer: React.FC = () => {
                     <span > Estimated improvement: 15 - 25%</span>
                   </div>
                 </div>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button"
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button"
                   onClick={ () => toggleSuggestion (suggestion.id) }
                   className={`px - 3 py - 1 rounded text - sm font - medium transition - colors ${
                     suggestion.implemented

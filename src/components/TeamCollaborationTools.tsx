@@ -272,7 +272,7 @@ showProjects:  true,;
             { id: 'projects', label: 'Projects', icon: <Target className="w - 4 h - 4" /> },
             { id: 'communication', label: 'Communication', icon: <MessageCircle className="w - 4 h - 4" /> },
             { id: 'files', label: 'File Sharing', icon: <FileText className="w - 4 h - 4" /> }
-          ].map ( (tab) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={tab.id}
+          ].map ( (tab) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={tab.id}
               onClick={ () => setActiveTab (tab.id as) }
               className={`flex items - center gap - 2 px - 6 py - 3 rounded - lg text - sm font - medium transition - all duration - 300 ${
                 activeTab === tab.id
@@ -461,13 +461,13 @@ showProjects:  true,;
                     Last seen: {member.lastSeen}
                   </div>
                   <div role="button" className="flex items - center gap - 2">
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zinc - 400 hover:text - zion - cyan hover:bg - zion - cyan / 20 rounded - lg transition - colors">
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zinc - 400 hover:text - zion - cyan hover:bg - zion - cyan / 20 rounded - lg transition - colors">
                       <MessageCircle className="w - 4 h - 4" />
                     </button>
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zinc - 400 hover:text - zion - cyan hover:bg - zion - cyan / 20 rounded - lg transition - colors">
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zinc - 400 hover:text - zion - cyan hover:bg - zion - cyan / 20 rounded - lg transition - colors">
                       <Video className="w - 4 h - 4" />
                     </button>
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zinc - 400 hover:text - zinc - 300 hover:bg - zinc - 800 / 50 rounded - lg transition - colors">
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zinc - 400 hover:text - zinc - 300 hover:bg - zinc - 800 / 50 rounded - lg transition - colors">
                       <MoreHorizontal className="w - 4 h - 4" />
                     </button>
                   </div>
@@ -609,13 +609,13 @@ showProjects:  true,;
                   </div>
 
                   <div role="button" className="flex items - center gap - 2 ml - 4">
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zinc - 400 hover:text - white hover:bg - zinc - 800 / 50 rounded - lg transition - colors">
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zinc - 400 hover:text - white hover:bg - zinc - 800 / 50 rounded - lg transition - colors">
                       <Eye className="w - 4 h - 4" />
                     </button>
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zinc - 400 hover:text - white hover:bg - zinc - 800 / 50 rounded - lg transition - colors">
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zinc - 400 hover:text - white hover:bg - zinc - 800 / 50 rounded - lg transition - colors">
                       <Edit className="w - 4 h - 4" />
                     </button>
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zinc - 400 hover:text - red - 400 hover:bg - red - 400 / 20 rounded - lg transition - colors">
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zinc - 400 hover:text - red - 400 hover:bg - red - 400 / 20 rounded - lg transition - colors">
                       <Trash2 className="w - 4 h - 4" />
                     </button>
                   </div>
@@ -676,7 +676,7 @@ showProjects:  true,;
 
           {/* Add Project Button */}
           <div role="button" className="text - center">;
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowProjectForm (true) }
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowProjectForm (true) }
               className="px - 8 py - 3 bg - zion - cyan text - white rounded - lg hover:bg - zion - cyan / 80 transition - colors flex items - center gap - 2 mx - auto"
 
               <Plus className="w - 5 h - 5" />
@@ -797,7 +797,7 @@ showProjects:  true,;
 
                     {/* Reactions */}
                     <div role="button" className="flex items - center gap - 2">
-                      {message.reactions.map ( (reaction, idx) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={idx}
+                      {message.reactions.map ( (reaction, idx) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={idx}
                           onClick = { () => handleMessageReaction (message.id,
   reaction.type) }
                           className="px - 2 py - 1 bg - zinc - 800 / 50 text - zinc - 300 text - xs rounded - full hover:bg - zinc - 700 / 50 transition - colors"
@@ -811,13 +811,13 @@ showProjects:  true,;
                   </div>
 
                   <div role="button" className="flex items - center gap - 2">
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zinc - 400 hover:text - zion - cyan hover:bg - zion - cyan / 20 rounded - lg transition - colors">
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zinc - 400 hover:text - zion - cyan hover:bg - zion - cyan / 20 rounded - lg transition - colors">
                       <Reply className="w - 4 h - 4" />
                     </button>
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zinc - 400 hover:text - zion - cyan hover:bg - zion - cyan / 20 rounded - lg transition - colors">
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zinc - 400 hover:text - zion - cyan hover:bg - zion - cyan / 20 rounded - lg transition - colors">
                       <Share2 className="w - 4 h - 4" />
                     </button>
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zinc - 400 hover:text - zinc - 300 hover:bg - zinc - 800 / 50 rounded - lg transition - colors">
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zinc - 400 hover:text - zinc - 300 hover:bg - zinc - 800 / 50 rounded - lg transition - colors">
                       <MoreHorizontal className="w - 4 h - 4" />
                     </button>
                   </div>
@@ -836,11 +836,11 @@ showProjects:  true,;
                 />
               </div>
 
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 3 bg - zion - cyan text - white rounded - lg hover:bg - zion - cyan / 80 transition - colors">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 3 bg - zion - cyan text - white rounded - lg hover:bg - zion - cyan / 80 transition - colors">
                 <Paperclip className="w - 4 h - 4" />
               </button>
 
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 6 py - 3 bg - zion - cyan text - white rounded - lg hover:bg - zion - cyan / 80 transition - colors flex items - center gap - 2">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 6 py - 3 bg - zion - cyan text - white rounded - lg hover:bg - zion - cyan / 80 transition - colors flex items - center gap - 2">
                 <Send className="w - 4 h - 4" />
                 Send
               </button>
@@ -986,13 +986,13 @@ showProjects:  true,;
                   </div>
 
                   <div role="button" className="flex items - center gap - 2">
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zinc - 400 hover:text - zion - cyan hover:bg - zion - cyan / 20 rounded - lg transition - colors">
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zinc - 400 hover:text - zion - cyan hover:bg - zion - cyan / 20 rounded - lg transition - colors">
                       <Download className="w - 4 h - 4" />
                     </button>
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zinc - 400 hover:text - zion - cyan hover:bg - zion - cyan / 20 rounded - lg transition - colors">
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zinc - 400 hover:text - zion - cyan hover:bg - zion - cyan / 20 rounded - lg transition - colors">
                       <Share2 className="w - 4 h - 4" />
                     </button>
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zinc - 400 hover:text - white hover:bg - zinc - 800 / 50 rounded - lg transition - colors">
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zinc - 400 hover:text - white hover:bg - zinc - 800 / 50 rounded - lg transition - colors">
                       <MoreHorizontal className="w - 4 h - 4" />
                     </button>
                   </div>
@@ -1006,7 +1006,7 @@ showProjects:  true,;
               <FileText className="w - 16 h - 16 text - zinc - 600 mx - auto mb - 4" />
               <h3 className="text - lg font - medium text - zinc - 300 mb - 2">Upload Files</h3>
               <p className="text - zinc - 400 mb - 4">Drag and drop files here or click to browse</p>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 6 py - 2 bg - zion - cyan text - white rounded - lg hover:bg - zion - cyan / 80 transition - colors">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 6 py - 2 bg - zion - cyan text - white rounded - lg hover:bg - zion - cyan / 80 transition - colors">
                 Choose Files
               </button>
             </div>;

@@ -1,10 +1,9 @@
 import { ArrowRight, Zap, Brain, Shield, Cloud } from 'lucide - react';
 import { Link } from 'react - router - dom';
 import React from 'react';
-  import { GradientHeading } from '../ui / GradientHeading';
-  import { NeonGlow } from '../ui / NeonGlow';
 export function ITServiceRequestHero () {
-
+import { GradientHeading } from '../ui / GradientHeading';
+import { NeonGlow } from '../ui / NeonGlow';
 
   const features = [
     {

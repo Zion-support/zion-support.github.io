@@ -218,7 +218,7 @@ import { motion } from 'framer - motion';
 
         {/* Load More */}
         <div className="text - center mt - 12">
-          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="inline - flex items - center space - x-2 px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200 font - semibold">
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="inline - flex items - center space - x-2 px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200 font - semibold">
             <span > Load More Articles</span>
             <ArrowRight className="w - 5 h - 5" />
           </button>
@@ -246,7 +246,7 @@ import { motion } from 'framer - motion';
                 placeholder="Enter your email"
                 className="flex - 1 px - 4 py - 3 bg - white rounded - lg text - gray - 900 placeholder - gray - 500 focus:outline - none focus:ring - 2 focus:ring - cyan - 500"
               />
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 6 py - 3 bg - cyan - 800 text - white rounded - lg hover:bg - cyan - 900 transition - colors font - medium">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 6 py - 3 bg - cyan - 800 text - white rounded - lg hover:bg - cyan - 900 transition - colors font - medium">
                 Subscribe
               </button>
             </div>

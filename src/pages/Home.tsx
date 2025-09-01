@@ -306,7 +306,7 @@ const HeroSection = React.memo ( ({ onGetStarted }: { onGetStarted: () => void }
 
         {/* Slide Indicators */}
         <div role="button" className="flex justify - center mt - 12 space - x-2">
-          {heroSlides.map ( (_, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={index}
+          {heroSlides.map ( (_, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={index}
               onClick={ () => setCurrentSlide (index) }
               className={`w - 3 h - 3 rounded - full transition - all duration - 300 ${
                 index === currentSlide ? 'bg - cyan - 400 w - 8' : 'bg - white / 30'
@@ -339,14 +339,14 @@ const HeroSection = React.memo ( ({ onGetStarted }: { onGetStarted: () => void }
 
         {/* Slide indicators */}
         <div role="button" className="flex justify - center mt - 8 space - x-2">
-          {heroSlides.map ( (_, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={index}
+          {heroSlides.map ( (_, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={index}
               onClick={ () => setCurrentSlide (index) }
               className={`w - 3 h - 3 rounded - full transition - all duration - 300 ${
                 index === currentSlide ? 'bg - blue - 400 scale - 125' : 'bg - gray - 600 hover:bg - gray - 500'
               }`}
               aria - label={`Go to slide ${index + 1}`}
             />) ) }
-          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={togglePlayPause}
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={togglePlayPause}
             className="ml - 4 p - 2 text - gray - 400 hover:text - white transition - colors duration - 200"
             aria - label={isPlaying ? 'Pause slideshow' : 'Play slideshow'}
           >

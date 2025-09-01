@@ -228,7 +228,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             </div>
             {/* View Mode Toggle */}
             <div role="button" className="flex gap - 2">;
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                 className={`p - 3 rounded - lg transition - colors ${
                   viewMode === 'grid'
                     ? 'bg - cyan - 500 text - white'
@@ -237,7 +237,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
                 <Grid className="w - 5 h - 5" />
               </button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                 className={`p - 3 rounded - lg transition - colors ${
                   viewMode === 'list'
                     ? 'bg - cyan - 500 text - white'
@@ -246,7 +246,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
                 <List className="w - 5 h - 5" />
               </button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('comparison') }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('comparison') }
                 className={`p - 3 rounded - lg transition - colors ${
                   viewMode === 'comparison'
                     ? 'bg - cyan - 500 text - white'
@@ -379,7 +379,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             </motion.div>
           </div>
           <div role="button" className="text - center mt - 8">
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 rounded - lg font - semibold text - white hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105">
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 rounded - lg font - semibold text - white hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105">
               Get AI Recommendations
             </button>
           </div>
@@ -527,7 +527,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
           </div>
           <div role="button" className="text - center mt - 8">
             <p className="text - gray - 400 mb - 4">All services integrate seamlessly through our unified API platform</p>
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 3 bg - gradient - to - r from - violet - 500 to - fuchsia - 600 rounded - lg font - semibold text - white hover:from - violet - 600 hover:to - fuchsia - 700 transition - all duration - 300">
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 3 bg - gradient - to - r from - violet - 500 to - fuchsia - 600 rounded - lg font - semibold text - white hover:from - violet - 600 hover:to - fuchsia - 700 transition - all duration - 300">
               View Integration Guide
             </button>
           </div>
@@ -617,7 +617,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
           </div>
           <div role="button" className="text - center mt - 8">
             <p className="text - gray - 400 text - sm mb - 4">All services include free setup, 45 - day trial, and 24 / 7 support</p>
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 rounded - lg font - semibold text - white hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300">
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 rounded - lg font - semibold text - white hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300">
               Download Full Comparison
             </button>
           </div>
@@ -814,7 +814,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                   </table>
                 </div>) : (<div role="button" className="text - center py - 12">
                   <p className="text - gray - 400 mb - 4">Select services from the grid or list view to compare</p>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                     className="px - 6 py - 3 bg - cyan - 500 text - white rounded - lg hover:bg - cyan - 600 transition - colors"
 
                     View Services
@@ -869,7 +869,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                   Monthly Updates
                 </li>
               </ul>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full px - 6 py - 3 bg - green - 500 text - white rounded - lg hover:bg - green - 600 transition - colors">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full px - 6 py - 3 bg - green - 500 text - white rounded - lg hover:bg - green - 600 transition - colors">
                 Get Started
               </button>
             </motion.div>
@@ -920,7 +920,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                   Dedicated Account Manager
                 </li>
               </ul>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full px - 6 py - 3 bg - blue - 500 text - white rounded - lg hover:bg - blue - 600 transition - colors">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full px - 6 py - 3 bg - blue - 500 text - white rounded - lg hover:bg - blue - 600 transition - colors">
                 Get Started
               </button>
             </motion.div>
@@ -972,7 +972,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                   SLA Guarantee
                 </li>
               </ul>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full px - 6 py - 3 bg - purple - 500 text - white rounded - lg hover:bg - purple - 600 transition - colors">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full px - 6 py - 3 bg - purple - 500 text - white rounded - lg hover:bg - purple - 600 transition - colors">
                 Get Started
               </button>
             </motion.div>
@@ -1211,7 +1211,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             </motion.div>
           </div>
           <div role="button" className="text - center mt - 8">
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 3 bg - gradient - to - r from - indigo - 500 to - purple - 600 rounded - lg font - semibold text - white hover:from - indigo - 600 hover:to - purple - 700 transition - all duration - 300">
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 3 bg - gradient - to - r from - indigo - 500 to - purple - 600 rounded - lg font - semibold text - white hover:from - indigo - 600 hover:to - purple - 700 transition - all duration - 300">
               View Live Dashboard
             </button>
           </div>
@@ -1545,7 +1545,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
           </div>
           <div role="button" className="text - center">
             <p className="text - gray - 400 mb - 4">Ready to expand globally? Our revolutionary services scale seamlessly worldwide</p>
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 3 bg - gradient - to - r from - amber - 500 to - orange - 600 rounded - lg font - semibold text - white hover:from - amber - 600 hover:to - orange - 700 transition - all duration - 300">
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 3 bg - gradient - to - r from - amber - 500 to - orange - 600 rounded - lg font - semibold text - white hover:from - amber - 600 hover:to - orange - 700 transition - all duration - 300">
               Explore Global Solutions
             </button>
           </div>
@@ -1575,7 +1575,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               Join thousands of businesses already transforming their operations with our revolutionary AI, Quantum, and Autonomous technology solutions
             </p>
             <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center mb - 8">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                 className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 rounded - lg font - semibold text - white hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105"
 
                 Explore All Services

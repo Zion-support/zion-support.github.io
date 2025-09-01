@@ -445,7 +445,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
           {/* Service Tabs */}
           <div role="button" className="mb - 8">
             <div role="button" className="flex flex - wrap gap - 2 justify - center">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setActiveTab ('microsaas') }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setActiveTab ('microsaas') }
                 className={`px - 6 py - 3 rounded - lg font - semibold transition - all duration - 300 ${
                   activeTab === 'microsaas'
                     ? 'bg - gradient - to - r from - blue - 600 to - purple - 600 text - white shadow - lg'
@@ -453,7 +453,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                 }`}
 
                 Micro SAAS Services ({innovativeMicroSaasServices2030.length}) </button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setActiveTab ('it') }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setActiveTab ('it') }
                 className={`px - 6 py - 3 rounded - lg font - semibold transition - all duration - 300 ${
                   activeTab === 'it'
                     ? 'bg - gradient - to - r from - green - 600 to - blue - 600 text - white shadow - lg'
@@ -461,7 +461,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                 }`}
 
                 IT Services ({comprehensiveITServices2030.length}) </button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setActiveTab ('ai') }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setActiveTab ('ai') }
                 className={`px - 6 py - 3 rounded - lg font - semibold transition - all duration - 300 ${
                   activeTab === 'ai'
                     ? 'bg - gradient - to - r from - purple - 600 to - pink - 600 text - white shadow - lg'

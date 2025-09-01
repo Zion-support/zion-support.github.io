@@ -121,10 +121,10 @@ const InnovativeServicesShowcase: React.FC = () => {;
         </div>
 
         <div className="flex space - x-3">
-          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex - 1 bg - blue - 600 text - white py - 2 px - 4 rounded - lg hover:bg - blue - 700 transition - colors">
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex - 1 bg - blue - 600 text - white py - 2 px - 4 rounded - lg hover:bg - blue - 700 transition - colors">
             Get Quote
           </button>;
-          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex - 1 border border - blue - 600 text - blue - 600 py - 2 px - 4 rounded - lg hover:bg - blue - 50 transition - colors">;
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex - 1 border border - blue - 600 text - blue - 600 py - 2 px - 4 rounded - lg hover:bg - blue - 50 transition - colors">;
             Learn More;
           </button>;
         </div>;
@@ -140,10 +140,10 @@ const InnovativeServicesShowcase: React.FC = () => {;
             Discover Zion Tech Group's cutting - edge AI, IT, and Micro SAAS solutions designed to transform your business and drive innovation.
           </p>
           <div className="flex justify - center space - x-4">
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - gray - 100 transition - colors">
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - gray - 100 transition - colors">
               View All Services
             </button>
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="border border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors">
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="border border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors">
               Contact Sales
             </button>
           </div>
@@ -255,10 +255,10 @@ const InnovativeServicesShowcase: React.FC = () => {;
             Our innovative services are designed to give you a competitive edge in today's rapidly evolving technology landscape.
           </p>
           <div className="flex flex - col sm:flex - row justify - center space - y-4 sm:space - y-0 sm:space - x-6">
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - gray - 100 transition - colors">
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - gray - 100 transition - colors">
               Schedule a Consultation
             </button>
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="border border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors">
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="border border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors">
               Download Brochure
             </button>;
           </div>;

@@ -95,7 +95,7 @@ import { motion } from 'framer - motion.ts';
               <span > Go Home</span>
             </Link>
 
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => window.history.back () }
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => window.history.back () }
               className="inline - flex items - center space - x-2 px - 8 py - 4 bg - gray - 800 text - white rounded - lg hover:bg - gray - 700 transition - all duration - 200 font - semibold text - lg border border - gray - 700"
             >
               <ArrowLeft className="w - 5 h - 5" />

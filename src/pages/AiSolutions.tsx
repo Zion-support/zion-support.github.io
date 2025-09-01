@@ -35,7 +35,7 @@ export default React.memo (function AiSolutions (...args: any[]) : any {
               >
                 Explore Solutions
               </Link>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - zion - cyan text - zion - cyan rounded - xl font - semibold text - lg hover:bg - zion - cyan hover:text - white transition - all duration - 300">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - zion - cyan text - zion - cyan rounded - xl font - semibold text - lg hover:bg - zion - cyan hover:text - white transition - all duration - 300">
                 Schedule Demo
               </button>
             </div>
@@ -116,7 +116,7 @@ export default React.memo (function AiSolutions (...args: any[]) : any {
 
           {/* Industry Filter */}
           <div role="button" className="flex flex - wrap justify - center gap - 4 mb - 12">
-            {industries.map (industry => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={industry.id}
+            {industries.map (industry => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={industry.id}
                 onClick={ () => setSelectedIndustry (industry.id) }
                 className={`px - 6 py - 3 rounded - lg font - medium transition - all duration - 300 ${
                   selectedIndustry === industry.id
@@ -363,7 +363,7 @@ export default React.memo (function AiSolutions (...args: any[]) : any {
               >
                 Start AI Journey
               </Link>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - cyan - 500 text - cyan - 400 rounded - xl font - semibold text - lg hover:bg - cyan - 500 hover:text - white transition - all duration - 300">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - cyan - 500 text - cyan - 400 rounded - xl font - semibold text - lg hover:bg - cyan - 500 hover:text - white transition - all duration - 300">
                 Download AI Guide
               </button>
             </div>

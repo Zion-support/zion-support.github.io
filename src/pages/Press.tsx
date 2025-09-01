@@ -259,7 +259,7 @@ import { motion } from 'framer - motion';
       <section className="py - 8 bg - zion - slate - dark border - b border - zion - cyan / 20">
         <div role="button" className="container mx - auto px - 4">
           <div role="button" className="flex flex - wrap gap - 4 justify - center">
-            {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
+            {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                 onClick={ () => setSelectedCategory (category.id) }
                 className={`px - 6 py - 3 rounded - lg font - medium transition - all duration - 300 ${
                   selectedCategory === category.id
@@ -338,7 +338,7 @@ import { motion } from 'framer - motion';
                           </span>) ) }
                       </div>) }
 
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 6 py - 3 bg - gradient - to - r from - zion - cyan to - zion - purple text - white rounded - lg font - medium hover:scale - 105 transition - all duration - 300 flex items - center gap - 2">
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 6 py - 3 bg - gradient - to - r from - zion - cyan to - zion - purple text - white rounded - lg font - medium hover:scale - 105 transition - all duration - 300 flex items - center gap - 2">
                       Read Full Article < ArrowRight className="w - 4 h - 4" />
                     </button>
                   </div>
@@ -404,7 +404,7 @@ import { motion } from 'framer - motion';
                       </p>
                     </div>
 
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full px - 4 py - 2 border border - zion - cyan text - zion - cyan rounded - lg font - medium hover:bg - zion - cyan hover:text - white transition - all duration - 300 flex items - center justify - center gap - 2">
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full px - 4 py - 2 border border - zion - cyan text - zion - cyan rounded - lg font - medium hover:bg - zion - cyan hover:text - white transition - all duration - 300 flex items - center justify - center gap - 2">
                       Read More < ArrowRight className="w - 4 h - 4" />
                     </button>
                   </div>
@@ -452,7 +452,7 @@ import { motion } from 'framer - motion';
                 Download our comprehensive media kit with company information,
                 logos, and press materials.
               </p>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 6 py - 3 bg - gradient - to - r from - zion - cyan to - zion - purple text - white rounded - lg font - medium hover:scale - 105 transition - all duration - 300">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 6 py - 3 bg - gradient - to - r from - zion - cyan to - zion - purple text - white rounded - lg font - medium hover:scale - 105 transition - all duration - 300">
                 Download
               </button>
             </motion.div>
@@ -472,7 +472,7 @@ import { motion } from 'framer - motion';
                 Key facts, statistics, and company information for media
                 reference.
               </p>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 6 py - 3 bg - gradient - to - r from - zion - cyan to - zion - purple text - white rounded - lg font - medium hover:scale - 105 transition - all duration - 300">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 6 py - 3 bg - gradient - to - r from - zion - cyan to - zion - purple text - white rounded - lg font - medium hover:scale - 105 transition - all duration - 300">
                 Download
               </button>
             </motion.div>
@@ -491,7 +491,7 @@ import { motion } from 'framer - motion';
               <p className="text - zion - slate - light text - sm mb - 6">
                 High - resolution logos and brand assets for media use.
               </p>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 6 py - 3 bg - gradient - to - r from - zion - cyan to - zion - purple text - white rounded - lg font - medium hover:scale - 105 transition - all duration - 300">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 6 py - 3 bg - gradient - to - r from - zion - cyan to - zion - purple text - white rounded - lg font - medium hover:scale - 105 transition - all duration - 300">
                 Download
               </button>
             </motion.div>
@@ -510,7 +510,7 @@ import { motion } from 'framer - motion';
               <p className="text - zion - slate - light text - sm mb - 6">
                 Biographies and photos of our executive leadership team.
               </p>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 6 py - 3 bg - gradient - to - r from - zion - cyan to - zion - purple text - white rounded - lg font - medium hover:scale - 105 transition - all duration - 300">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 6 py - 3 bg - gradient - to - r from - zion - cyan to - zion - purple text - white rounded - lg font - medium hover:scale - 105 transition - all duration - 300">
                 Download
               </button>
             </motion.div>

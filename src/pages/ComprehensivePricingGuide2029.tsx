@@ -147,7 +147,7 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES  } from '../../data / revolut
             {/* Billing Toggle */}
             <div role="button" className="flex items - center justify - center gap - 4 mb - 8">
               <span className={`text - lg ${billingCycle === 'monthly' ? 'text - white' : 'text - gray - 400'}`}>Monthly</span>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setBillingCycle (billingCycle === 'monthly' ? 'yearly' : 'monthly') }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setBillingCycle (billingCycle === 'monthly' ? 'yearly' : 'monthly') }
                 className={`relative inline - flex h - 8 w - 16 items - center rounded - full transition - colors ${
                   billingCycle === 'yearly' ? 'bg - blue - 600' : 'bg - gray - 600'
                 }`}
@@ -208,7 +208,7 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES  } from '../../data / revolut
                 </div>
 
                 {/* CTA Button */}
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className={`w - full bg - gradient - to - r ${plan.buttonColor} text - white py - 3 px - 6 rounded - lg font - semibold hover:opacity - 90 transition - all duration - 300`}>
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className={`w - full bg - gradient - to - r ${plan.buttonColor} text - white py - 3 px - 6 rounded - lg font - semibold hover:opacity - 90 transition - all duration - 300`}>
                   Get Started
                 </button>
               </div>

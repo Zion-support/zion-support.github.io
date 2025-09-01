@@ -372,10 +372,10 @@ import { motion } from 'framer - motion';
                         </span>
                       </div>
                       <div className="flex items - center space - x-2">
-                        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - gray - 400 hover:text - gray - 600 transition - colors">
+                        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - gray - 400 hover:text - gray - 600 transition - colors">
                           <Bookmark className="h - 4 w - 4" />
                         </button>
-                        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - gray - 400 hover:text - gray - 600 transition - colors">
+                        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - gray - 400 hover:text - gray - 600 transition - colors">
                           <Share2 className="h - 4 w - 4" />
                         </button>
                         <a

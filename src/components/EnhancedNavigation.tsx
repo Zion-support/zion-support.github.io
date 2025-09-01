@@ -266,7 +266,7 @@ className:  '',;
           {/* Desktop Navigation */}
           <div role="button" className="hidden lg: anyflex items - center space - x-8">
             {navigationItems.map ( (item) => (<div role="button" key={item.label} className="relative group">
-                {item.children ? (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleDropdown (item.label) }
+                {item.children ? (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleDropdown (item.label) }
                     className="flex items - center space - x-1 px - 3 py - 2 text - sm font - medium text - gray - 700 dark:text - gray - 300 hover:text - blue - 600 dark:hover:text - blue - 400 transition - colors"
                   >
                     <span>{item.label}</span>
@@ -324,7 +324,7 @@ className:  '',;
           <div role="button" className="hidden lg:flex items - center space - x-4">
             {/* Theme Toggle */}
             <div role="button" className="flex items - center space - x-2 bg - gray - 100 dark:bg - slate - 800 rounded - lg p - 1">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleThemeChange ('light') }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleThemeChange ('light') }
                 className={`p - 2 rounded - md transition - colors ${
                   theme === 'light' 
                     ? 'bg - white dark:bg - slate - 700 text - blue - 600 shadow - sm' 
@@ -333,7 +333,7 @@ className:  '',;
               >
                 <Sun className="w - 4 h - 4" />
               </button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleThemeChange ('dark') }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleThemeChange ('dark') }
                 className={`p - 2 rounded - md transition - colors ${
                   theme === 'dark' 
                     ? 'bg - white dark:bg - slate - 700 text - blue - 600 shadow - sm' 
@@ -342,7 +342,7 @@ className:  '',;
               >
                 <Moon className="w - 4 h - 4" />
               </button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleThemeChange ('system') }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleThemeChange ('system') }
                 className={`p - 2 rounded - md transition - colors ${
                   theme === 'system' 
                     ? 'bg - white dark:bg - slate - 700 text - blue - 600 shadow - sm' 
@@ -365,7 +365,7 @@ className:  '',;
 
           {/* Mobile menu button */}
           <div role="button" className="lg:hidden">
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsOpen (!isOpen) }
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsOpen (!isOpen) }
               className="inline - flex items - center justify - center p - 2 rounded - md text - gray - 400 hover:text - gray - 500 hover:bg - gray - 100 dark:hover:bg - slate - 800 transition - colors"
             >
               {isOpen ? <X className="w - 6 h - 6" /> : <Menu className="w - 6 h - 6" />}
@@ -386,7 +386,7 @@ className:  '',;
                     <div role="button" className="px - 4 py - 6 space - y-4">
                       {navigationItems.map ( (item) => (<div role="button" key={item.label}>
                           {item.children ? (<div>
-                              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleDropdown (item.label) }
+                              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleDropdown (item.label) }
                                 className="flex items - center justify - between w - full text - left text - slate - 300 hover:text - white px - 3 py - 2 rounded - md text - base font - medium transition - colors duration - 200 focus:outline - none focus:ring - 2 focus:ring - cyan - 400 focus:ring - offset - 2 focus:ring - offset - slate - 900"
                                 aria - expanded={activeDropdown === item.label}
                                 aria - haspopup="true"

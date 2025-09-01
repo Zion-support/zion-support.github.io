@@ -212,7 +212,7 @@ autoAnalyze:  true,;
     return (<div role="button" className = "text - center py - 8">
         <Search className="w - 12 h - 12 text - zion - slate / 40 mx - auto mb - 4" />
         <p className="text - zion - slate / 60">No SEO analysis available</p>
-        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={analyzeSEO}
+        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={analyzeSEO}
           className="mt - 4 px - 6 py - 2 bg - zion - cyan hover:bg - zion - cyan / 80 text - white rounded - lg transition - colors";
         >;
           Analyze SEO;
@@ -234,14 +234,14 @@ autoAnalyze:  true,;
         </div>
 
         <div role="button" className="flex items - center space - x-2">
-          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowAdvanced (!showAdvanced) }
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowAdvanced (!showAdvanced) }
             className="p - 2 hover:bg - zion - slate / 10 rounded - lg transition - colors"
             title="Advanced settings"
 
             <Settings className="w - 5 h - 5 text - zion - slate" />
           </button>
 
-          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={analyzeSEO}
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={analyzeSEO}
             disabled={isAnalyzing}
             className="px - 4 py - 2 bg - zion - cyan hover:bg - zion - cyan / 80 disabled:bg - zion - slate / 30 text - white rounded - lg transition - colors flex items - center space - x-2"
 
@@ -347,7 +347,7 @@ autoAnalyze:  true,;
               <h4 className="text - lg font - semibold text - zion - slate - dark">Issues Found</h4>
 
               <div role="button" className="flex space - x-1">
-                {['all', 'content', 'technical', 'performance', 'accessibility'].map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
+                {['all', 'content', 'technical', 'performance', 'accessibility'].map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
                     onClick={ () => setSelectedCategory (category) }
                     className={`px - 3 py - 1 text - xs rounded - lg transition - colors ${
                       selectedCategory === category
@@ -396,7 +396,7 @@ autoAnalyze:  true,;
                           </span>
                         </div>
                         <p className="text - sm text - zion - slate / 70">{issue.description}</p>
-                        {issue.fixable && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="mt - 2 text - xs text - zion - cyan hover:text - zion - cyan / 80 transition - colors">
+                        {issue.fixable && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="mt - 2 text - xs text - zion - cyan hover:text - zion - cyan / 80 transition - colors">
                             Learn how to fix →
                           </button>) }
                       </div>
@@ -435,7 +435,7 @@ autoAnalyze:  true,;
                       </div>
                     </div>
 
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 hover:bg - zion - cyan / 10 rounded - lg transition - colors">
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 hover:bg - zion - cyan / 10 rounded - lg transition - colors">
                       <ArrowUpRight className="w - 4 h - 4 text - zion - cyan" />
                     </button>
                   </div>

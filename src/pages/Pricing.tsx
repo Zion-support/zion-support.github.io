@@ -264,7 +264,7 @@ const servicePricing = [
             className="flex justify - center"
           >
             <div role="button" className="bg - slate - 800 / 50 rounded - xl p - 1 border border - slate - 600 / 50">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setBillingCycle ('monthly') }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setBillingCycle ('monthly') }
                 className={`px - 6 py - 3 rounded - lg font - medium transition - all duration - 200 ${
                   billingCycle === 'monthly'
                     ? 'bg - cyan - 400 text - white'
@@ -273,7 +273,7 @@ const servicePricing = [
               >
                 Monthly
               </button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setBillingCycle ('annual') }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setBillingCycle ('annual') }
                 className={`px - 6 py - 3 rounded - lg font - medium transition - all duration - 200 ${
                   billingCycle === 'annual'
                     ? 'bg - cyan - 400 text - white'
@@ -353,7 +353,7 @@ const servicePricing = [
                       </li>) ) }
                   </ul>
 
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedPlan (plan.name) }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedPlan (plan.name) }
                     className={`w - full py - 3 px - 6 rounded - lg font - semibold transition - all duration - 200 ${
                       plan.popular
                         ? 'bg - gradient - to - r from - purple - 500 to - pink - 500 text - white hover:from - purple - 600 hover:to - pink - 600'

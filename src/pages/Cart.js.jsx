@@ -3,9 +3,8 @@ import React from 'react';
 import { Button } from '@/components / ui / button';
 import { useAuth } from '@/hooks / useAuth';
 import Skeleton from '@/components / ui / skeleton';
-  import Link from 'next / link';
 export default function CartPage () {
-
+import Link from 'next / link';
 
   const navigate = useNavigate () ;
   const { items, dispatch } = useCart () ;

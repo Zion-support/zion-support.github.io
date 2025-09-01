@@ -144,11 +144,11 @@ const AutonomousBusinessOperationsPlatform: React.FC = () : JSX.Element => {
               </p>
               
               <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - green - 500 to - cyan - 500 text - white font - semibold rounded - xl hover:from - green - 400 hover:to - cyan - 400 transition - all duration - 300 transform hover:scale - 105 shadow - lg shadow - green - 500 / 30 flex items - center">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - green - 500 to - cyan - 500 text - white font - semibold rounded - xl hover:from - green - 400 hover:to - cyan - 400 transition - all duration - 300 transform hover:scale - 105 shadow - lg shadow - green - 500 / 30 flex items - center">
                   <Rocket className="w - 5 h - 5 mr - 2"/>
                   Start Free Trial
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - green - 400 / 50 text - green - 400 font - semibold rounded - xl hover:bg - green - 400 / 20 transition - all duration - 300 flex items - center">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - green - 400 / 50 text - green - 400 font - semibold rounded - xl hover:bg - green - 400 / 20 transition - all duration - 300 flex items - center">
                   <ArrowRight className="w - 5 h - 5 mr - 2"/>
                   Schedule Demo
                 </button>
@@ -377,11 +377,11 @@ const AutonomousBusinessOperationsPlatform: React.FC = () : JSX.Element => {
               </p>
               
               <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - green - 500 to - cyan - 500 text - white font - semibold rounded - xl hover:from - green - 400 hover:to - cyan - 400 transition - all duration - 300 transform hover:scale - 105 shadow - lg shadow - green - 500 / 30 flex items - center">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - green - 500 to - cyan - 500 text - white font - semibold rounded - xl hover:from - green - 400 hover:to - cyan - 400 transition - all duration - 300 transform hover:scale - 105 shadow - lg shadow - green - 500 / 30 flex items - center">
                   <Rocket className="w - 5 h - 5 mr - 2"/>
                   Start Free Trial
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - green - 400 / 50 text - green - 400 font - semibold rounded - xl hover:bg - green - 400 / 20 transition - all duration - 300 flex items - center">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - green - 400 / 50 text - green - 400 font - semibold rounded - xl hover:bg - green - 400 / 20 transition - all duration - 300 flex items - center">
                   <ArrowRight className="w - 5 h - 5 mr - 2"/>
                   Schedule Demo
                 </button>

@@ -398,7 +398,7 @@ import { motion } from 'framer - motion.ts';
 
             {/* Category Filter */}
             <div role="button" className="flex flex - wrap gap - 2">
-              {Object.entries (categories) .map ( ([key, category]) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={key}
+              {Object.entries (categories) .map ( ([key, category]) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={key}
                   onClick={ () => setSelectedCategory (key) }
                   className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 ${
                     selectedCategory === key
@@ -506,7 +506,7 @@ import { motion } from 'framer - motion.ts';
               <p className="text - gray - 300 mb - 8">
                 Try adjusting your search or filter criteria
               </p>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => {
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => {
                   setSearchTerm ('') ;
                   setSelectedCategory ('all') ;
                 }}

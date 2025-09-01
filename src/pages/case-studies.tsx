@@ -164,7 +164,7 @@ const CaseStudies = () => {
       <section className="py - 12 px - 4 sm:px - 6 lg:px - 8">
         <div role="button" className="max - w-7xl mx - auto">
           <div role="button" className="flex flex - wrap justify - center gap - 4">
-            {industries.map (industry => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={industry}
+            {industries.map (industry => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={industry}
                 onClick={ () => setSelectedIndustry (industry) }
                 className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
                   selectedIndustry === industry
@@ -240,7 +240,7 @@ const CaseStudies = () => {
                   <span className="text - sm text - gray - 400">
                     {study.duration}
                   </span>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="inline - flex items - center gap - 2 text - blue - 400 hover:text - white transition - colors duration - 300">
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="inline - flex items - center gap - 2 text - blue - 400 hover:text - white transition - colors duration - 300">
                     <span className="text - sm font - medium">View Details</span>
                     <ArrowRight className="w - 4 h - 4" />
                   </button>

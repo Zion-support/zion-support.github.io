@@ -787,7 +787,7 @@ const blockchainBenefits = [
 
           {/* Category Filter */}
           <div role="button" className="flex flex - wrap justify - center gap - 4 mb - 12">
-            {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
+            {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
                 onClick={ () => setSelectedCategory (category) }
                 className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
                   selectedCategory === category
@@ -852,7 +852,7 @@ const blockchainBenefits = [
                   <span className="px - 3 py - 1 bg - zion - cyan / 20 text - zion - cyan text - xs rounded - full border border - zion - cyan / 30">
                     {solution.category}
                   </span>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="inline - flex items - center gap - 2 text - zion - cyan hover:text - white transition - colors duration - 300">
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="inline - flex items - center gap - 2 text - zion - cyan hover:text - white transition - colors duration - 300">
                     <span className="text - sm font - medium">Learn More</span>
                     <ArrowRight className="w - 4 h - 4" />
                   </button>

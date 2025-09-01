@@ -384,7 +384,7 @@ const ScheduleDemo: React.FC = () : JSX.Element => {
                     />
                   </div>
 
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit"
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit"
                     disabled={isSubmitting}
                     className="w - full px - 6 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 text - white font - semibold rounded - lg transition - all duration - 300 transform hover:scale - 105 shadow - lg hover:shadow - cyan - 500 / 25 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none"
 

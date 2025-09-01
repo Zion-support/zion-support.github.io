@@ -142,14 +142,14 @@ function UltimateServicesShowcase2025 () {
               </div>
               
               <div role="button" className="flex items - center gap - 2">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                   className={`p - 2 rounded - lg transition - colors ${viewMode === 'grid' ? 'bg - zion - cyan text - white' : 'glass text - gray - 300 hover:text - white'}`}
                 >
                   <svg className="w - 5 h - 5" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M5 3a2 2 0 00 - 2 2v2a2 2 0 002 2h2a2 2 0 002 - 2V5a2 2 0 00 - 2-2H5zM5 11a2 2 0 00 - 2 2v2a2 2 0 002 2h2a2 2 0 002 - 2v - 2a2 2 0 00 - 2-2H5zM11 5a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h - 2a2 2 0 01 - 2-2V5zM11 13a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h - 2a2 2 0 01 - 2-2v - 2z" />
                   </svg>
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                   className={`p - 2 rounded - lg transition - colors ${viewMode === 'list' ? 'bg - zion - cyan text - white' : 'glass text - gray - 300 hover:text - white'}`}
                 >
                   <svg className="w - 5 h - 5" fill="currentColor" viewBox="0 0 20 20">
@@ -228,7 +228,7 @@ function UltimateServicesShowcase2025 () {
                     <Clock className="w - 4 h - 4" />
                     {service.estimatedDelivery}
                   </div>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="text - zion - cyan hover:text - zion - cyan - light transition - colors duration - 300 flex items - center gap - 1 group - hover:gap - 2">
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="text - zion - cyan hover:text - zion - cyan - light transition - colors duration - 300 flex items - center gap - 1 group - hover:gap - 2">
                     Learn More < ArrowRight className="w - 4 h - 4" />
                   </button>
                 </div>
@@ -301,7 +301,7 @@ function UltimateServicesShowcase2025 () {
             >
               <div role="button" className="flex items - start justify - between mb - 6">
                 <div role="button" className="text - 6xl">{selectedService.icon}</div>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={closeModal}
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={closeModal}
                   className="text - gray - 400 hover:text - white transition - colors duration - 300"
                 >
                   <svg className="w - 6 h - 6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -357,10 +357,10 @@ function UltimateServicesShowcase2025 () {
               </div>
 
               <div role="button" className="flex flex - col sm:flex - row gap - 4">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex - 1 bg - gradient - to - r from - zion - cyan to - zion - purple text - white px - 6 py - 3 rounded - lg font - semibold hover:from - zion - cyan - dark hover:to - zion - purple - dark transition - all duration - 300">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex - 1 bg - gradient - to - r from - zion - cyan to - zion - purple text - white px - 6 py - 3 rounded - lg font - semibold hover:from - zion - cyan - dark hover:to - zion - purple - dark transition - all duration - 300">
                   Get Started
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex - 1 glass border border - zion - cyan / 30 text - zion - cyan px - 6 py - 3 rounded - lg font - semibold hover:bg - zion - cyan / 10 transition - all duration - 300">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex - 1 glass border border - zion - cyan / 30 text - zion - cyan px - 6 py - 3 rounded - lg font - semibold hover:bg - zion - cyan / 10 transition - all duration - 300">
                   Contact Sales
                 </button>
               </div>

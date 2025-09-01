@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-  import { ADVANCED_MICRO_SERVICES } from '../data / advancedMicroServices';
-  import { motion, AnimatePresence } from 'framer - motion';
 export const FuturisticServicesShowcase = () => {
-
+import { ADVANCED_MICRO_SERVICES } from '../data / advancedMicroServices';
+import { motion, AnimatePresence } from 'framer - motion';
 
   const ServiceCard = ({ service, index, isVisible }) => {
     const [isHovered, setIsHovered] = useState (false) ;

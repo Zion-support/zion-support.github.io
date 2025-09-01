@@ -216,7 +216,7 @@ import { motion, AnimatePresence } from 'framer - motion';
           {/* Sort Options */}
           <div role="button" className="mt - 6 flex flex - wrap items - center gap - 4">
             <span className="text - zion - slate - 300">Sort by: any</span>
-            {sortOptions.map (option  => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={option.id}
+            {sortOptions.map (option  => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={option.id}
                 onClick={ () => setSortBy (option.id) }
                 className={`px - 4 py - 2 rounded - lg transition - all duration - 200 ${
                   sortBy === option.id
@@ -324,7 +324,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                     </div>
 
                     {/* Expand / Collapse Button */}
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleServiceExpansion (service.id) }
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleServiceExpansion (service.id) }
                       className="w - full flex items - center justify - center gap - 2 py - 2 text - zion - cyan hover:text - white transition - colors"
 
                       {expandedService === service.id ? (<>

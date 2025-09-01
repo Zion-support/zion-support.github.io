@@ -659,7 +659,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
               {/* View Mode Toggle */}
               <div role="button" className="flex bg - zion - slate - 900 / 50 border border - zion - slate - 600 rounded - xl p - 1">;
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                   className={`flex - 1 px - 3 py - 2 rounded - lg transition - all ${
                     viewMode === 'grid'
                       ? 'bg - zion - cyan text - white'
@@ -668,7 +668,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
                   <Grid className="w - 4 h - 4 mx - auto" />
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                   className={`flex - 1 px - 3 py - 2 rounded - lg transition - all ${
                     viewMode === 'list'
                       ? 'bg - zion - cyan text - white'
@@ -791,7 +791,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                     </div>
 
                     {/* CTA Button */}
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full mt - 4 bg - gradient - to - r from - zion - cyan to - zion - purple text - white py - 2 px - 4 rounded - xl font - medium hover:from - zion - cyan / 90 hover:to - zion - purple / 90 transition - all duration - 300 flex items - center justify - center gap - 2">
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full mt - 4 bg - gradient - to - r from - zion - cyan to - zion - purple text - white py - 2 px - 4 rounded - xl font - medium hover:from - zion - cyan / 90 hover:to - zion - purple / 90 transition - all duration - 300 flex items - center justify - center gap - 2">
                       Learn More < ArrowRight className="w - 4 h - 4" />
                     </button>
                   </>) : (;
@@ -830,7 +830,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                         ${service.price.toLocaleString () }
                       </div>
                       <div role="button" className="text - sm text - zion - slate - 400">/month</div>
-                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - gradient - to - r from - zion - cyan to - zion - purple text - white py - 2 px - 4 rounded - xl font - medium hover:from - zion - cyan / 90 hover:to - zion - purple / 90 transition - all duration - 300 flex items - center gap - 2">
+                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - gradient - to - r from - zion - cyan to - zion - purple text - white py - 2 px - 4 rounded - xl font - medium hover:from - zion - cyan / 90 hover:to - zion - purple / 90 transition - all duration - 300 flex items - center gap - 2">
                         Learn More < ArrowRight className="w - 4 h - 4" />
                       </button>
                     </div>
@@ -849,7 +849,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
               <p className="text - zion - slate - 400 mb - 6">
                 Try adjusting your search criteria or filters
               </p>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick = {;
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick = {;
   ;
   ;
   ;
@@ -913,7 +913,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                       {selectedService.description}
                     </p>
                   </div>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={closeModal}
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={closeModal}
                     className="text - zion - slate - 400 hover:text - white transition - colors"
 
                     <X className="w - 6 h - 6" />
@@ -1035,10 +1035,10 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                       </div>
                     </div>
                     <div role="button" className="flex gap - 3">
-                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - zion - slate - 700 text - white px - 6 py - 3 rounded - xl font - medium hover:bg - zion - slate - 600 transition - colors">
+                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - zion - slate - 700 text - white px - 6 py - 3 rounded - xl font - medium hover:bg - zion - slate - 600 transition - colors">
                         Request Demo
                       </button>
-                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - gradient - to - r from - zion - cyan to - zion - purple text - white px - 6 py - 3 rounded - xl font - medium hover:from - zion - cyan / 90 hover:to - zion - purple / 90 transition - colors">
+                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - gradient - to - r from - zion - cyan to - zion - purple text - white px - 6 py - 3 rounded - xl font - medium hover:from - zion - cyan / 90 hover:to - zion - purple / 90 transition - colors">
                         Get Started
                       </button>
                     </div>

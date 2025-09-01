@@ -745,7 +745,7 @@ const Community: React.FC = () => {
                           Featured
                         </span>) }
                     </div>
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="text - gray - 400 hover:text - white transition - colors">
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="text - gray - 400 hover:text - white transition - colors">
                       <MoreHorizontal className="w - 5 h - 5" />
                     </button>
                   </div>
@@ -763,10 +763,10 @@ const Community: React.FC = () => {
                   </div>
 
           <div role="button" className="flex flex - wrap justify - center gap - 4">
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - blue - 500 to - purple - 500 text - white font - semibold rounded - lg hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300">
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - blue - 500 to - purple - 500 text - white font - semibold rounded - lg hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300">
               Get Started Today
             </button>
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - slate - 600 text - white font - semibold rounded - lg hover:border - slate - 500 hover:bg - slate - 800 / 50 transition - all duration - 300">
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - slate - 600 text - white font - semibold rounded - lg hover:border - slate - 500 hover:bg - slate - 800 / 50 transition - all duration - 300">
               Learn More
                   {/* Post Meta */}
                   <div role="button" className="flex items - center justify - between">
@@ -791,11 +791,11 @@ const Community: React.FC = () => {
                     </div>
 
                     <div role="button" className="flex items - center space - x-4 text - sm text - gray - 400">
-                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex items - center space - x-1 hover:text - blue - 400 transition - colors">
+                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex items - center space - x-1 hover:text - blue - 400 transition - colors">
                         <Heart className="w - 4 h - 4" />
                         <span>{post.likes}</span>
                       </button>
-                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex items - center space - x-1 hover:text - green - 400 transition - colors">
+                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex items - center space - x-1 hover:text - green - 400 transition - colors">
                         <MessageCircle className="w - 4 h - 4" />
                         <span>{post.replies}</span>
                       </button>
@@ -803,10 +803,10 @@ const Community: React.FC = () => {
                         <Eye className="w - 4 h - 4" />
                         <span>{post.views}</span>
                       </div>
-                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="text - gray - 400 hover:text - yellow - 400 transition - colors">
+                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="text - gray - 400 hover:text - yellow - 400 transition - colors">
                         <Bookmark className="w - 4 h - 4" />
                       </button>
-                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="text - gray - 400 hover:text - purple - 400 transition - colors">
+                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="text - gray - 400 hover:text - purple - 400 transition - colors">
                         <Share2 className="w - 4 h - 4" />
                       </button>
                     </div>
@@ -836,7 +836,7 @@ const Community: React.FC = () => {
           </p>
           
           <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="inline - flex items - center px - 6 py - 3 bg - blue - 600 hover:bg - blue - 700 text - white font - semibold rounded - xl transition - colors">
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="inline - flex items - center px - 6 py - 3 bg - blue - 600 hover:bg - blue - 700 text - white font - semibold rounded - xl transition - colors">
               <Plus className="w - 5 h - 5 mr - 2" />
               Create New Post
             </button>

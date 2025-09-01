@@ -390,7 +390,7 @@ modals.forEach (modal:  > {;
 
   return (<>
       {/* Accessibility Toggle Button */}
-      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsOpen (!isOpen) }
+      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsOpen (!isOpen) }
         className="fixed top - 4 right - 4 z - 50 bg - zion - cyan text - zion - slate - dark p - 3 rounded - full shadow - lg hover:bg - zion - cyan / 80 transition - all duration - 300 focus:outline - none focus:ring - 2 focus:ring - zion - cyan focus:ring - offset - 2 focus:ring - offset - zion - slate - dark"
         aria - label="Accessibility settings"
         aria - expanded={isOpen}
@@ -425,7 +425,7 @@ modals.forEach (modal:  > {;
                         <Icon className="w - 5 h - 5 text - cyan - 400" />
                         <span className="text - white font - medium">{label}</span>
                       </div>
-                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick = { () => {
+                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick = { () => {
                           const newSettings = { ...settings,;
   ;
   ;

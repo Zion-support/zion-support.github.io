@@ -184,7 +184,7 @@ const categories = [
 
           {/* Category Filter */}
           <div role="button" className="flex flex - wrap justify - center gap - 3">
-            {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
+            {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
                 onClick={ () => setSelectedCategory (category) }
                 className={`px - 6 py - 3 rounded - lg font - medium transition - all duration - 200 ${
                   selectedCategory === category
@@ -213,7 +213,7 @@ const categories = [
                 transition={{ duration: 0.3, delay: index * 0.1 }}
                 className="bg - white / 10 backdrop - blur - lg border border - white / 20 rounded - xl overflow - hidden"
               >
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleItem (faq.id) }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleItem (faq.id) }
                   className="w - full px - 6 py - 6 text - left flex items - center justify - between hover:bg - white / 5 transition - colors"
                 >
                   <div role="button" className="flex items - center space - x-4">

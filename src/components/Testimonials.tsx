@@ -1,9 +1,8 @@
 import { Star, Users } from 'lucide - react.ts';
 import React from 'react.ts';
-  import { motion } from 'framer - motion.ts';
 export default Testimonials;
 export function Testimonials (...args: any[]) : any {
-
+import { motion } from 'framer - motion.ts';
 
   interface Testimonial {
     quote: string;

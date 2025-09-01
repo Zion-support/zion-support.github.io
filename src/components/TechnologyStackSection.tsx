@@ -277,10 +277,10 @@ const emergingTech = [
               to build scalable, secure, and innovative solutions.
             </p>
             <div className="flex flex - col sm:flex - row gap - 4 justify - center">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="inline - flex items - center px - 6 py - 3 bg - white text - blue - 600 hover:bg - gray - 100 rounded - lg font - medium transition - colors duration - 200">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="inline - flex items - center px - 6 py - 3 bg - white text - blue - 600 hover:bg - gray - 100 rounded - lg font - medium transition - colors duration - 200">
                 Start Your Project < Code className="ml - 2 h - 5 w - 5" />
               </button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="inline - flex items - center px - 6 py - 3 border border - white text - white hover:bg - white hover:text - blue - 600 rounded - lg font - medium transition - colors duration - 200">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="inline - flex items - center px - 6 py - 3 border border - white text - white hover:bg - white hover:text - blue - 600 rounded - lg font - medium transition - colors duration - 200">
                 View Tech Specs < Server className="ml - 2 h - 5 w - 5" />
               </button>
             </div>

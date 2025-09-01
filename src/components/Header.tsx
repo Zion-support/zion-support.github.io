@@ -286,7 +286,7 @@ interface HeaderProps {
           {/* Right Side Actions */}
           <div role="button" className="flex items - center space - x-4">
             {/* Search Button */}
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsSearchOpen (!isSearchOpen) }
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsSearchOpen (!isSearchOpen) }
               className="p - 2 text - gray - 300 hover:text - blue - 400 transition - colors"
               aria - label="Search"
             >
@@ -294,7 +294,7 @@ interface HeaderProps {
             </button>
 
             {/* Theme Toggle */}
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={toggleTheme}
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={toggleTheme}
               className="p - 2 text - gray - 300 hover:text - blue - 400 transition - colors"
               aria - label="Toggle theme"
             >
@@ -302,14 +302,14 @@ interface HeaderProps {
             </button>
 
             {/* Notifications */}
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - gray - 300 hover:text - blue - 400 transition - colors relative">
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - gray - 300 hover:text - blue - 400 transition - colors relative">
               <Bell className="w - 5 h - 5" />
               <span className="absolute - top - 1 -right - 1 w - 3 h - 3 bg - red - 500 rounded - full animate - pulse"></span>
             </button>
 
             {/* User Menu */}
             <div role="button" className="relative">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsUserMenuOpen (!isUserMenuOpen) }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsUserMenuOpen (!isUserMenuOpen) }
                 className="flex items - center space - x-2 p - 2 text - gray - 300 hover:text - blue - 400 transition - colors rounded - lg hover:bg - gray - 800 / 50"
               >
                 <div role="button" className="w - 8 h - 8 bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - full flex items - center justify - center">
@@ -364,7 +364,7 @@ interface HeaderProps {
                         <span > Settings</span>
                       </Link>
                       <div role="button" className="border - t border - gray - 700 my - 2"></div>
-                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex items - center space - x-3 px - 4 py - 2 text - gray - 300 hover:text - red - 400 hover:bg - gray - 800 transition - colors w - full text - left"
+                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex items - center space - x-3 px - 4 py - 2 text - gray - 300 hover:text - red - 400 hover:bg - gray - 800 transition - colors w - full text - left"
                         onClick={ () => {
                           // Add logout logic here
                           setIsUserMenuOpen (false) ;
@@ -379,7 +379,7 @@ interface HeaderProps {
             </div>
 
             {/* Mobile Menu Button */}
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={toggleMobileMenu}
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={toggleMobileMenu}
               className="lg:hidden p - 2 text - gray - 300 hover:text - blue - 400 transition - colors"
               aria - label="Toggle mobile menu"
             >

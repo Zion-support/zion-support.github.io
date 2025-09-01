@@ -232,7 +232,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
 
             {/* Category Filter */}
             <div role="button" className="flex flex - wrap gap - 2">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedCategory ('All') }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedCategory ('All') }
                 className={`px - 4 py - 2 rounded - full text - sm font - medium transition - all ${
                   selectedCategory === 'All'
                     ? 'bg - zion - cyan text - white'
@@ -241,7 +241,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
 
                 All Categories
               </button>
-              {enhancedInnovativeServices2027Categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
+              {enhancedInnovativeServices2027Categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
                   onClick={ () => setSelectedCategory (category) }
                   className={`px - 4 py - 2 rounded - full text - sm font - medium transition - all ${
                     selectedCategory === category
@@ -255,14 +255,14 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
             {/* View Mode and Sort */}
             <div role="button" className="flex items - center gap - 4">
               <div role="button" className="flex items - center gap - 2 bg - zion - slate - dark / 50 rounded - lg p - 1">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                   className={`p - 2 rounded - md transition - all ${
                     viewMode === 'grid' ? 'bg - zion - cyan text - white' : 'text - zion - slate - light hover:text - white'
                   }`}
 
                   <Grid3X3 className="w - 5 h - 5" />
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                   className={`p - 2 rounded - md transition - all ${
                     viewMode === 'list' ? 'bg - zion - cyan text - white' : 'text - zion - slate - light hover:text - white'
                   }`}
@@ -459,7 +459,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                     <p className="text - zion - gray - light">{selectedService.category}</p>
                   </div>
                 </div>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedService (null) }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedService (null) }
                   className="text - zion - gray - light hover:text - white transition - colors"
                 >
                   <X className="w - 6 h - 6" />
@@ -468,7 +468,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
 
               {/* Navigation Tabs */}
               <div role="button" className="flex space - x-4 mb - 6 border - b border - zion - gray - dark">
-                {['Overview', 'Features', 'Technical Specs', 'Contact'].map ( (tab, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={tab}
+                {['Overview', 'Features', 'Technical Specs', 'Contact'].map ( (tab, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={tab}
                     onClick={ () => setCurrentSlide (index) }
                     className={`pb - 2 px - 4 transition - colors ${
                       currentSlide === index
@@ -761,7 +761,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
 
               {/* Navigation Arrows */}
               <div role="button" className="flex items - center justify - between mt - 8">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={prevSlide}
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={prevSlide}
                   className="flex items - center space - x-2 text - zion - gray - light hover:text - white transition - colors"
                 >
                   <ChevronLeft className="w - 5 h - 5" />
@@ -769,7 +769,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                 </button>
 
                 <div role="button" className="flex space - x-2">
-                  {[0, 1, 2, 3].map ( (index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={index}
+                  {[0, 1, 2, 3].map ( (index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={index}
                       onClick={ () => setCurrentSlide (index) }
                       className={`w - 2 h - 2 rounded - full transition - colors ${
                         currentSlide === index ? 'bg - zion - cyan' : 'bg - zion - gray - dark'
@@ -777,7 +777,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                     />) ) }
                 </div>
 
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={nextSlide}
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={nextSlide}
                   className="flex items - center space - x-2 text - zion - gray - light hover:text - white transition - colors"
                 >
                   <span > Next</span>

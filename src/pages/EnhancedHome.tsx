@@ -178,7 +178,7 @@ const HeroSection = React.memo ( ({ onGetStarted }: { onGetStarted: () => void }
               <span > Explore Services</span>
               <ArrowRight className="w - 5 h - 5" />
             </Link>
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={onGetStarted}
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={onGetStarted}
               className="px - 8 py - 4 bg - white / 10 backdrop - blur - sm border border - cyan - 400 / 30 hover:bg - white / 20 text - white font - bold rounded - xl transition - all duration - 300 hover:border - cyan - 400 / 50 flex items - center space - x-2 focus:outline - none focus:ring - 2 focus:ring - cyan - 400 focus:ring - offset - 2 focus:ring - offset - zion - slate - dark"
               aria - label="Get started with Zion Tech"
             >
@@ -226,13 +226,13 @@ const HeroSection = React.memo ( ({ onGetStarted }: { onGetStarted: () => void }
             </AnimatePresence>
 
             {/* Navigation Arrows */}
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={prevSlide}
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={prevSlide}
               className="absolute left - 0 top - 1/2 - translate - y-1 / 2 p - 2 bg - white / 10 backdrop - blur - sm rounded - full text - white hover:bg - white / 20 transition - colors focus:outline - none focus:ring - 2 focus:ring - cyan - 400"
               aria - label="Previous slide"
             >
               <ChevronLeft className="w - 6 h - 6" />
             </button>
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={nextSlide}
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={nextSlide}
               className="absolute right - 0 top - 1/2 - translate - y-1 / 2 p - 2 bg - white / 10 backdrop - blur - sm rounded - full text - white hover:bg - white / 20 transition - colors focus:outline - none focus:ring - 2 focus:ring - cyan - 400"
               aria - label="Next slide"
             >
@@ -241,7 +241,7 @@ const HeroSection = React.memo ( ({ onGetStarted }: { onGetStarted: () => void }
 
             {/* Dots Indicator */}
             <div role="button" className="flex justify - center mt - 6 space - x-2">
-              {heroSlides.map ( (_, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={index}
+              {heroSlides.map ( (_, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={index}
                   onClick={ () => setCurrentSlide (index) }
                   className={`w - 3 h - 3 rounded - full transition - colors ${
                     index === currentSlide ? 'bg - cyan - 400' : 'bg - white / 30'

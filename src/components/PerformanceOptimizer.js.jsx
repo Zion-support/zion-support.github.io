@@ -1,8 +1,7 @@
 import { useLocation } from 'react - router - dom';
 import React, { useEffect, useMemo, useCallback } from 'react';
-  export default PerformanceOptimizer;
 export const PerformanceOptimizer = ({ children }) => {
-
+export default PerformanceOptimizer;
 
   const location = useLocation () ;
   // Preload critical resources

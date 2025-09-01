@@ -235,7 +235,7 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
                   Found < span className="text - blue - 400 font - semibold">{filteredServices.length}</span > services
                 </p>
                 <div role="button" className="flex flex - wrap justify - center gap - 2">
-                  {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
+                  {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
                       onClick={ () => setSelectedCategory (category) }
                       className={`px - 4 py - 2 rounded - full text - sm font - medium transition - all duration - 300 ${
                         selectedCategory === category

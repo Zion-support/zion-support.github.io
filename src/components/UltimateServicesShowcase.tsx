@@ -252,7 +252,7 @@ const patentStatusColors = {
 
 }}
         >
-          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedCategory ('all') }
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedCategory ('all') }
             className={`px - 6 py - 3 rounded - full font - semibold transition - all duration - 300 ${
               selectedCategory === 'all'
                 ? 'bg - gradient - to - r from - zion - cyan to - zion - blue text - white shadow - lg shadow - zion - cyan / 25'
@@ -260,7 +260,7 @@ const patentStatusColors = {
             }`}
 
             All Services ({allServices.length}) </button>
-          {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
+          {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
               onClick={ () => setSelectedCategory (category.id) }
               className={`px - 6 py - 3 rounded - full font - semibold transition - all duration - 300 ${
                 selectedCategory === category.id
@@ -362,7 +362,7 @@ const patentStatusColors = {
 
                 {/* Action Buttons */}
                 <div role="button" className="flex gap - 2">
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedService (service) }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedService (service) }
                     className="flex - 1 bg - gradient - to - r from - zion - cyan to - zion - blue text - white px - 4 py - 2 rounded - lg font - semibold hover: from - zion - blue hover: to - zion - cyan transition - all duration - 300 flex items - center justify - center gap - 2"
 
                     Learn More < ArrowRight className="w - 4 h - 4" />
@@ -438,7 +438,7 @@ const patentStatusColors = {
                     {selectedService.tagline}
                   </p>
                 </div>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedService (null) }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedService (null) }
                   className="text - zion - gray - light hover: text - white text - 2xl"
 
                   ×

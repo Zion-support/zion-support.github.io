@@ -109,7 +109,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
                       <p className="text - xs text - zion - slate - light">Mobile Navigation</p>
                     </div>
                   </div>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsOpen (false) }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsOpen (false) }
                     className="p - 2 text - zion - slate - light hover:text - zion - cyan hover:bg - zion - cyan / 10 rounded - lg transition - all duration - 300"
 
                     <X className="w - 5 h - 5" />
@@ -175,7 +175,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
 
 }}
                     >
-                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleSection (section.title) }
+                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleSection (section.title) }
                         className="flex items - center justify - between w - full p - 3 text - left text - zion - slate - light hover:text - white hover:bg - zion - cyan / 10 rounded - lg transition - all duration - 300 group"
 
                         <div role="button" className="flex items - center space - x-3">

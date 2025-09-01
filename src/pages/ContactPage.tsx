@@ -386,7 +386,7 @@ import { motion } from 'framer - motion.ts';
                 />
               </div>
 
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit"
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit"
                 disabled={isSubmitting}
                 className="w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white py - 4 px - 6 rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200 disabled:opacity - 50 disabled:cursor - not - allowed flex items - center justify - center space - x-2"
               >

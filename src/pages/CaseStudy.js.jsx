@@ -3,10 +3,9 @@ import React from 'react';
 import { Button } from '@/components / ui / button';
 import { CASE_STUDIES } from '@/data / case - studies';
 import { SEO } from '@/components / SEO';
-  import { useRouter } from 'next / router';
-  import Link from 'next / link';
 export default function CaseStudy () {
-
+import { useRouter } from 'next / router';
+import Link from 'next / link';
 
   const router = useRouter () ;
   const { slug } = router.query;

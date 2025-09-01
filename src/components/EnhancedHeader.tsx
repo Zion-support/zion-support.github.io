@@ -483,7 +483,7 @@ function EnhancedHeader () {
 
               {/* Enhanced Services Mega Menu */}
               <div role="button" className="relative group">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="nav - link flex items - center space - x-2 font - medium text - gray - 300 hover:text - cyan - 400 transition - all duration - 300"
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="nav - link flex items - center space - x-2 font - medium text - gray - 300 hover:text - cyan - 400 transition - all duration - 300"
                   onMouseEnter={ () => setServicesDropdownOpen (true) }
                   onMouseLeave={ () => setServicesDropdownOpen (false) }
                 >
@@ -650,7 +650,7 @@ function EnhancedHeader () {
 
               {/* User Menu */}
               <div role="button" className="relative group">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors">
                   <User className="w - 5 h - 5" />
                   <span className="hidden lg:block">Account</span>
                   <ChevronDown className="w - 4 h - 4" />
@@ -681,7 +681,7 @@ function EnhancedHeader () {
             </div>
 
             {/* Mobile Menu Button */}
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setMobileMenuOpen (!mobileMenuOpen) }
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setMobileMenuOpen (!mobileMenuOpen) }
               className="xl:hidden p - 2 text - gray - 300 hover:text - white transition - colors"
             >
               {mobileMenuOpen ? (<X className="w - 6 h - 6" />) : (<Menu className="w - 6 h - 6" />) }

@@ -238,7 +238,7 @@ const ComprehensivePricing2025 = () => {
                   </li>) ) }
               </ul>
 
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button"
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button"
                 className="w - full bg - gradient - to - r from - zion - cyan to - zion - blue text - white py - 3 rounded - lg font - medium hover:scale - 105 transition - transform"
               >
                 Get Started

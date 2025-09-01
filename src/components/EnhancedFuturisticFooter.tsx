@@ -456,7 +456,7 @@ import { motion } from 'framer - motion';
                     placeholder="Enter your email"
                     className="flex - 1 px - 3 py - 2 bg - slate - 800 / 50 border border - slate - 600 / 50 rounded - l-lg text - white placeholder - slate - 400 focus:outline - none focus:border - cyan - 400 focus:ring - 2 focus:ring - cyan - 400 / 20"
                   />
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 2 bg - gradient - to - r from - cyan - 400 to - blue - 500 text - white rounded - r-lg hover:from - cyan - 500 hover:to - blue - 600 transition - all duration - 200">
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 2 bg - gradient - to - r from - cyan - 400 to - blue - 500 text - white rounded - r-lg hover:from - cyan - 500 hover:to - blue - 600 transition - all duration - 200">
                     <ArrowRight className="w - 4 h - 4" />
                   </button>
                 </div>
@@ -630,7 +630,7 @@ import { motion } from 'framer - motion';
                   placeholder="Enter your email"
                   className="w - full px - 4 py - 2 bg - slate - 800 / 50 border border - slate - 700 / 50 rounded - lg text - white placeholder - slate - 400 focus:outline - none focus:border - cyan - 400 transition - colors"
                 />
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit"
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit"
                   className="w - full px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 font - medium"
                 >
                   Subscribe
@@ -704,7 +704,7 @@ import { motion } from 'framer - motion';
             </div>
             
             <div role="button" className="flex items - center space - x-4">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={scrollToTop}
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={scrollToTop}
                 className="p - 2 bg - slate - 700 / 50 rounded - lg text - gray - 400 hover:text - cyan - 400 hover:bg - slate - 600 / 50 transition - all duration - 300 transform hover:scale - 110"
                 aria - label="Scroll to top"
               >

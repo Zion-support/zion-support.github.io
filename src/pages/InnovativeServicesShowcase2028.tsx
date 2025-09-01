@@ -573,7 +573,7 @@ import { motion } from 'framer - motion';
 
             {/* Category Filter */}
             <div role="button" className="flex flex - wrap gap - 2">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setActiveCategory ('all') }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setActiveCategory ('all') }
                 className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 ${
                   activeCategory === 'all'
                     ? 'bg - cyan - 500 text - white shadow - lg shadow - cyan - 500 / 25'
@@ -582,7 +582,7 @@ import { motion } from 'framer - motion';
               >
                 All Services
               </button>
-              {serviceCategories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
+              {serviceCategories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                   onClick={ () => setActiveCategory (category.id) }
                   className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 ${
                     activeCategory === category.id

@@ -182,11 +182,11 @@ import { motion } from 'framer - motion';
                 Quick Contact Options
               </h3>
               <div className="space - y-3">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white py - 3 px - 6 rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 flex items - center justify - center space - x-2">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white py - 3 px - 6 rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 flex items - center justify - center space - x-2">
                   <Phone className="w - 5 h - 5" />
                   <span > Call Now</span>
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full bg - gradient - to - r from - blue - 500 to - purple - 500 text - white py - 3 px - 6 rounded - lg hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 200 flex items - center justify - center space - x-2">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full bg - gradient - to - r from - blue - 500 to - purple - 500 text - white py - 3 px - 6 rounded - lg hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 200 flex items - center justify - center space - x-2">
                   <Mail className="w - 5 h - 5" />
                   <span > Send Email</span>
                 </button>
@@ -355,7 +355,7 @@ import { motion } from 'framer - motion';
                   </span>
                 </motion.div>) }
 
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit"
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit"
                 disabled={!isFormValid || isSubmitting}
                 className={`w - full py - 4 px - 6 rounded - lg font - semibold text - lg transition - all duration - 200 flex items - center justify - center space - x-2 ${
                   isFormValid && !isSubmitting

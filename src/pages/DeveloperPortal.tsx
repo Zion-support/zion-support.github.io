@@ -160,10 +160,10 @@ const data = await response.json () ;
           </p>
 
           <div className="flex flex - col sm:flex - row gap - 4 justify - center">
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - zion - cyan to - zion - purple text - white rounded - xl font - semibold text - lg hover:scale - 105 transition - all duration - 300 shadow - 2xl hover:shadow - zion - cyan / 25">
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - zion - cyan to - zion - purple text - white rounded - xl font - semibold text - lg hover:scale - 105 transition - all duration - 300 shadow - 2xl hover:shadow - zion - cyan / 25">
               Get Started
             </button>
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - zion - cyan text - zion - cyan rounded - xl font - semibold text - lg hover:bg - zion - cyan hover:text - white transition - all duration - 300">
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - zion - cyan text - zion - cyan rounded - xl font - semibold text - lg hover:bg - zion - cyan hover:text - white transition - all duration - 300">
               View Documentation
             </button>
           </div>
@@ -230,7 +230,7 @@ const data = await response.json () ;
                   <h3 className="text - lg font - bold text - white mb - 3">{step.title}</h3>
                   <p className="text - zion - slate - light text - sm mb - 4 leading - relaxed">{step.description}</p>
 
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - zion - cyan / 20 text - zion - cyan border border - zion - cyan px - 4 py - 2 rounded - lg hover:bg - zion - cyan hover:text - white transition - all duration - 300 text - sm font - medium">
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - zion - cyan / 20 text - zion - cyan border border - zion - cyan px - 4 py - 2 rounded - lg hover:bg - zion - cyan hover:text - white transition - all duration - 300 text - sm font - medium">
                     {step.action}
                   </button>
                 </div>
@@ -291,7 +291,7 @@ const data = await response.json () ;
                     {feature.status}
                   </span>
 
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="text - zion - cyan hover:text - white transition - colors duration - 300 text - sm">
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="text - zion - cyan hover:text - white transition - colors duration - 300 text - sm">
                     View Docs
                   </button>
                 </div>
@@ -332,7 +332,7 @@ const data = await response.json () ;
                     </pre>
                   </div>
 
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full bg - zion - cyan / 20 text - zion - cyan border border - zion - cyan py - 2 px - 4 rounded - lg hover:bg - zion - cyan hover:text - white transition - all duration - 300 text - sm font - medium">
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full bg - zion - cyan / 20 text - zion - cyan border border - zion - cyan py - 2 px - 4 rounded - lg hover:bg - zion - cyan hover:text - white transition - all duration - 300 text - sm font - medium">
                     Copy Code
                   </button>
                 </div>
@@ -405,7 +405,7 @@ const data = await response.json () ;
                     {resource.badge}
                   </span>
 
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="text - zion - cyan hover:text - white transition - colors duration - 300 text - sm group - hover:translate - x-1 transition - transform duration - 300">
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="text - zion - cyan hover:text - white transition - colors duration - 300 text - sm group - hover:translate - x-1 transition - transform duration - 300">
                     View Resource
                   </button>
                 </div>
@@ -482,7 +482,7 @@ const data = await response.json () ;
             </div>
 
             <div className="mt - 8 text - center">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - green - 500 to - emerald - 600 text - white font - semibold rounded - lg hover:from - green - 400 hover:to - emerald - 500 transition - all duration - 200 hover:scale - 105 shadow - lg shadow - green - 500 / 20">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - green - 500 to - emerald - 600 text - white font - semibold rounded - lg hover:from - green - 400 hover:to - emerald - 500 transition - all duration - 200 hover:scale - 105 shadow - lg shadow - green - 500 / 20">
                 Start Building Now
               </button>
             </div>
@@ -502,10 +502,10 @@ const data = await response.json () ;
           </p>
 
           <div className="flex flex - col sm:flex - row gap - 4 justify - center">
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - zion - cyan to - zion - purple text - white rounded - xl font - semibold text - lg hover:scale - 105 transition - all duration - 300 shadow - 2xl hover:shadow - zion - cyan / 25">
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - zion - cyan to - zion - purple text - white rounded - xl font - semibold text - lg hover:scale - 105 transition - all duration - 300 shadow - 2xl hover:shadow - zion - cyan / 25">
               Get API Keys
             </button>
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - zion - cyan text - zion - cyan rounded - xl font - semibold text - lg hover:bg - zion - cyan hover:text - white transition - all duration - 300">
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - zion - cyan text - zion - cyan rounded - xl font - semibold text - lg hover:bg - zion - cyan hover:text - white transition - all duration - 300">
               Join Community
             </button>
           </div>

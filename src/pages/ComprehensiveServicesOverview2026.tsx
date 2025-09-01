@@ -294,7 +294,7 @@ import { motion, AnimatePresence } from 'framer - motion';
           </div>
 
           <div role="button" className="flex flex - wrap justify - center gap - 4">
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedCategory ('all') }
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedCategory ('all') }
               className={`px - 6 py - 3 rounded - lg transition - all duration - 200 ${
                 selectedCategory === 'all'
                   ? 'bg - zion - cyan text - white'
@@ -303,7 +303,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 
               All Categories
             </button>
-            {serviceCategories.map (category  => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
+            {serviceCategories.map (category  => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                 onClick={ () => setSelectedCategory (category.id) }
                 className={`px - 6 py - 3 rounded - lg transition - all duration - 200 ${
                   selectedCategory === category.id
@@ -411,7 +411,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                   </div>
 
                   {/* Expand / Collapse Button */}
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleCategoryExpansion (category.id) }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleCategoryExpansion (category.id) }
                     className="w - full flex items - center justify - center gap - 2 py - 3 text - zion - cyan hover:text - white transition - colors border - t border - zion - slate - 600 / 30"
 
                     {expandedCategory === category.id ? (;

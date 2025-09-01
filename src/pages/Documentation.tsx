@@ -248,7 +248,7 @@ const Documentation: React.FC = () => {
               <div>
                 <h3 className="text - white font - semibold mb - 3">Categories</h3>
                 <div role="button" className="flex flex - wrap gap - 2">
-                  {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
+                  {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                       onClick={ () => setActiveCategory (category.id) }
                       className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - colors ${
                         activeCategory === category.id
@@ -321,7 +321,7 @@ const Documentation: React.FC = () => {
                       </span>) ) }
                   </div>
 
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full bg - gradient - to - r from - blue - 500 to - purple - 500 text - white py - 2 px - 4 rounded - lg font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300 flex items - center justify - center gap - 2">
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full bg - gradient - to - r from - blue - 500 to - purple - 500 text - white py - 2 px - 4 rounded - lg font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300 flex items - center justify - center gap - 2">
                     <FileText className="w - 4 h - 4" />
                     Read More
                   </button>
@@ -375,7 +375,7 @@ const Documentation: React.FC = () => {
                     {resource.description}
                   </p>
 
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full bg - gradient - to - r from - green - 500 to - blue - 500 text - white py - 2 px - 4 rounded - lg font - medium hover:from - green - 600 hover:to - blue - 600 transition - all duration - 300 flex items - center justify - center gap - 2">
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full bg - gradient - to - r from - green - 500 to - blue - 500 text - white py - 2 px - 4 rounded - lg font - medium hover:from - green - 600 hover:to - blue - 600 transition - all duration - 300 flex items - center justify - center gap - 2">
                     <ExternalLink className="w - 4 h - 4" />
                     Visit Resource
                   </button>

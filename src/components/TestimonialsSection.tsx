@@ -292,7 +292,7 @@ export const TestimonialsSection: React.FC = props {
 
           {/* Navigation Controls */}
           <div role="button" className="flex items - center justify - center mt - 8 gap - 4">
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={prevTestimonial}
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={prevTestimonial}
               className="p - 3 bg - white / 10 hover:bg - white / 20 border border - white / 20 rounded - full text - white transition - all duration - 300 hover:scale - 110"
               aria - label="Previous testimonial"
             >
@@ -301,7 +301,7 @@ export const TestimonialsSection: React.FC = props {
 
             {/* Dots */}
             <div role="button" className="flex gap - 2">
-              {testimonials.map ( (_, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={index}
+              {testimonials.map ( (_, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={index}
                   onClick={ () => goToTestimonial (index) }
                   className={`w - 3 h - 3 rounded - full transition - all duration - 300 ${
                     index === currentTestimonial
@@ -312,7 +312,7 @@ export const TestimonialsSection: React.FC = props {
                 />) ) }
             </div>
 
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={nextTestimonial}
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={nextTestimonial}
               className="p - 3 bg - white / 10 hover:bg - white / 20 border border - white / 20 rounded - full text - white transition - all duration - 300 hover:scale - 110"
               aria - label="Next testimonial"
             >
@@ -322,7 +322,7 @@ export const TestimonialsSection: React.FC = props {
 
           {/* Auto - play Toggle */}
           <div role="button" className="flex justify - center mt - 4">
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsAutoPlaying (!isAutoPlaying) }
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsAutoPlaying (!isAutoPlaying) }
               className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - all duration - 300 ${
                 isAutoPlaying
                   ? 'bg - cyan - 500 text - white'

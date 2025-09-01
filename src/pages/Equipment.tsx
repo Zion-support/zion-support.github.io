@@ -98,7 +98,7 @@ const Equipment: React.FC = () => {
             </div>
 
             <div role="button" className="flex gap - 2">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setView ('grid') }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setView ('grid') }
                 className={`p - 3 rounded - lg transition - colors ${
                   view === 'grid'
                     ? 'bg - blue - 600 text - white'
@@ -107,7 +107,7 @@ const Equipment: React.FC = () => {
               >
                 <Grid className="w - 5 h - 5" />
               </button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setView ('list') }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setView ('list') }
                 className={`p - 3 rounded - lg transition - colors ${
                   view === 'list'
                     ? 'bg - blue - 600 text - white'
@@ -176,7 +176,7 @@ const Equipment: React.FC = () => {
                     </div>
                   </div>
 
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 2 px - 4 rounded - lg font - medium hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 200">
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 2 px - 4 rounded - lg font - medium hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 200">
                     Request Access
                   </button>
                 </motion.div>) ) }
@@ -191,7 +191,7 @@ const Equipment: React.FC = () => {
                 No equipment matches your search criteria. Try adjusting your
                 search terms.
               </p>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSearchQuery ('') }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSearchQuery ('') }
                 className="bg - blue - 600 hover:bg - blue - 700 text - white px - 6 py - 3 rounded - lg font - medium transition - colors"
               >
                 Clear Search

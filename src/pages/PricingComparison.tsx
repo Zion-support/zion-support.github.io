@@ -375,7 +375,7 @@ const PricingComparison: React.FC = () : JSX.Element => {;
                 <span className={`text - lg ${selectedPlan === 'monthly' ? 'text - white' : 'text - gray - 400'}`}>
                   Monthly
                 </span>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedPlan (selectedPlan === 'monthly' ? 'yearly' : 'monthly') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedPlan (selectedPlan === 'monthly' ? 'yearly' : 'monthly') }
                   className="relative w - 16 h - 8 bg - gray - 600 rounded - full p - 1 transition - colors duration - 300"
                 >
                   <motion.div

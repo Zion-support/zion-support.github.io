@@ -267,7 +267,7 @@ const ServicesComparisonMatrix2025: React.FC = () : JSX.Element => {;
               </select>
 
               <div role="button" className="flex items - center gap - 2">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('matrix') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('matrix') }
                   className={`p - 2 rounded - lg transition - colors ${
                     viewMode === 'matrix' 
                       ? 'bg - blue - 100 text - blue - 600' 
@@ -276,7 +276,7 @@ const ServicesComparisonMatrix2025: React.FC = () : JSX.Element => {;
                 >
                   <Grid3X3 className="w - 5 h - 5" />
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                   className={`p - 2 rounded - lg transition - colors ${
                     viewMode === 'list' 
                       ? 'bg - blue - 100 text - blue - 600' 
@@ -310,7 +310,7 @@ const ServicesComparisonMatrix2025: React.FC = () : JSX.Element => {;
                     className="flex items - center gap - 2 bg - blue - 100 text - blue - 800 px - 3 py - 2 rounded - lg"
                   >
                     <span className="text - sm font - medium">{service?.title}</span>
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleServiceSelection (service?.id || '') }
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleServiceSelection (service?.id || '') }
                       className="text - blue - 600 hover:text - blue - 800"
                     >
                       <X className="w - 4 h - 4" />

@@ -422,7 +422,7 @@ import { revolutionaryMicroSaasServices2028,
               </Button>
 
               <div role="button" className="flex gap - 2">
-                {testimonials.map ( (_, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={index}
+                {testimonials.map ( (_, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={index}
                     onClick={ () => setCurrentTestimonial (index) }
                     className={`w - 3 h - 3 rounded - full transition - colors ${
                       index === currentTestimonial ? 'bg - zion - cyan' : 'bg - white / 30'

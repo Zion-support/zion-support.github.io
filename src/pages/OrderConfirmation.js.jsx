@@ -1,9 +1,8 @@
 import React from 'react';
 import CheckoutProgress from '@/components / checkout / CheckoutProgress';
-  import { useRouter } from 'next / router';
-  import Link from 'next / link';
 export default function OrderConfirmation () {
-
+import { useRouter } from 'next / router';
+import Link from 'next / link';
 
   const router = useRouter () ;
   const { orderId } = router.query;

@@ -466,7 +466,7 @@ interface AdvancedAnalyticsProps {
                 <BarChart3 className="w - 5 h - 5 text - blue - 500" />
                 Analytics Dashboard
               </h2>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsOpen (false) }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsOpen (false) }
                 className="text - gray - 400 hover:text - gray - 600 transition - colors"
                 aria - label="Close analytics dashboard"
               >
@@ -567,7 +567,7 @@ interface AdvancedAnalyticsProps {
                   <div className={`w - 2 h - 2 rounded - full ${isTracking ? 'bg - green - 500' : 'bg - red - 500'}`} />
                   <span>{isTracking ? 'Tracking Active' : 'Tracking Inactive'}</span>
                 </div>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => window.location.reload () }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => window.location.reload () }
                   className="text - blue - 500 hover:text - blue - 600"
                 >
                   <RefreshCw className="w - 3 h - 3" />

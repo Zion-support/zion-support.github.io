@@ -232,7 +232,7 @@ const UltimateServicesShowcase2028: React.FC = () : JSX.Element => {
 
               {/* View Mode Toggle */}
               <div role="button" className="flex bg - slate - 700 / 50 border border - slate - 600 / 50 rounded - xl p - 1">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                   className={`px - 3 py - 2 rounded - lg transition - colors ${
                     viewMode === 'grid'
                       ? 'bg - cyan - 500 / 20 text - cyan - 400'
@@ -241,7 +241,7 @@ const UltimateServicesShowcase2028: React.FC = () : JSX.Element => {
                 >
                   Grid
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                   className={`px - 3 py - 2 rounded - lg transition - colors ${
                     viewMode === 'list'
                       ? 'bg - cyan - 500 / 20 text - cyan - 400'
@@ -334,7 +334,7 @@ const UltimateServicesShowcase2028: React.FC = () : JSX.Element => {
                     </div>
 
                     <div role="button" className="flex items - center justify - between">
-                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () =>
+                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () =>
                           setExpandedService (expandedService === service.id ? null : service.id) }
                         className="text - cyan - 400 hover:text - cyan - 300 text - sm font - medium flex items - center gap - 1"
                       >

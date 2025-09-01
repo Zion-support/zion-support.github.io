@@ -280,7 +280,7 @@ const PrivacyPolicy = () => {;
                     </li>
                   </ul>
                 </div>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex items - center gap - 2 px - 4 py - 2 bg - blue - 600 text - white rounded - lg hover:bg - blue - 700 transition - colors">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex items - center gap - 2 px - 4 py - 2 bg - blue - 600 text - white rounded - lg hover:bg - blue - 700 transition - colors">
                   <Download className="w - 4 h - 4" />
                   Download PDF
                 </button>
@@ -1191,7 +1191,7 @@ const PrivacyPolicy = () => {;
               </div>
               
               <div className = "mt - 8">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - white text - green - 600 font - semibold rounded - lg hover:bg - green - 50 transition - colors">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - white text - green - 600 font - semibold rounded - lg hover:bg - green - 50 transition - colors">
                   Contact Privacy Team
                 </button>;
               </div>;

@@ -367,7 +367,7 @@ import { motion } from 'framer - motion.ts';
               onChange={e => setSearchQuery (e.target.value) }
               className="w - full pl - 12 pr - 4 py - 4 bg - slate - 800 / 50 border border - slate - 700 / 50 rounded - xl text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent text - lg"
             />
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit"
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit"
               className="absolute right - 2 top - 1/2 transform - translate - y-1 / 2 px - 6 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - medium rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300"
             >
               Search
@@ -417,7 +417,7 @@ import { motion } from 'framer - motion.ts';
                   </div>
                 </div>
 
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - medium rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - medium rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105">
                   Get Help
                 </button>
               </Link>
@@ -461,7 +461,7 @@ import { motion } from 'framer - motion.ts';
                   {solution.articles}
                 </div>
 
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full px - 4 py - 2 bg - slate - 700 / 50 text - white font - medium rounded - lg hover:bg - slate - 600 / 50 transition - all duration - 300 hover:scale - 105">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full px - 4 py - 2 bg - slate - 700 / 50 text - white font - medium rounded - lg hover:bg - slate - 600 / 50 transition - all duration - 300 hover:scale - 105">
                   Explore
                 </button>
               </Link>
@@ -523,7 +523,7 @@ import { motion } from 'framer - motion.ts';
 
         {/* Category Filter */}
         <div role="button" className="flex flex - wrap gap - 3 justify - center mb - 8">
-          {supportCategories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
+          {supportCategories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
               onClick={ () => setSelectedCategory (category.id) }
               className={`flex items - center gap - 2 px - 6 py - 3 rounded - xl border transition - all duration - 300 hover:scale - 105 ${
                 selectedCategory === category.id
@@ -568,7 +568,7 @@ import { motion } from 'framer - motion.ts';
                       </div>
                     </div>
                   </div>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () =>
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () =>
                       setExpandedTicket (expandedTicket === issue.id ? null : issue.id) }
                     className="p - 2 text - gray - 400 hover:text - white transition - colors"
                   >

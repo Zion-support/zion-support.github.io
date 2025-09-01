@@ -1,7 +1,7 @@
-      export const isAuthenticated = () : boolean => {
-    export const getUserData = () : unknown => {
-  export const getAuthToken = () : string | null => {
-export const cleanupAuthState = () => {
+      export const cleanupAuthState = () => {
+    export const getAuthToken = () : string | null => {
+  export const getUserData = () : unknown => {
+export const isAuthenticated = () : boolean => {
 
         // Clean up stored authentication state
         try {

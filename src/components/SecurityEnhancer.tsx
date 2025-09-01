@@ -337,13 +337,13 @@ interface SecurityMetrics {
                   </h2>
                 </div>
                 <div className="flex items - center space - x-2">
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsExpanded (!isExpanded) }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsExpanded (!isExpanded) }
                     className="p - 1 text - gray - 500 hover: text - gray - 700 dark: text - gray - 400 dark: hover: text - gray - 200"
                     aria - label={isExpanded ? 'Collapse panel' : 'Expand panel'}
                   >
                     {isExpanded ? (<ChevronUp className="w - 4 h - 4" />) : (<ChevronDown className="w - 4 h - 4" />) }
                   </button>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsVisible (false) }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsVisible (false) }
                     className="p - 1 text - gray - 500 hover: text - gray - 700 dark: text - gray - 400 dark: hover: text - gray - 200"
                     aria - label="Close security panel"
                   >
@@ -425,7 +425,7 @@ interface SecurityMetrics {
                   <h3 className="text - lg font - semibold text - gray - 900 dark: text - white">
                     Security Events
                   </h3>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={runSecurityScan}
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={runSecurityScan}
                     disabled={isScanning}
                     className="flex items - center space - x-2 px - 3 py - 1 bg - zion - blue hover: bg - zion - blue - dark text - white text - sm rounded - lg transition - colors disabled: opacity - 50"
                   >
@@ -442,7 +442,7 @@ interface SecurityMetrics {
                 {/* Filters and Search */}
                 <div className="mb - 3 space - y-2">
                   <div className="flex space - x-2">
-                    {['info', 'warning', 'error', 'success'].map (type => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={type}
+                    {['info', 'warning', 'error', 'success'].map (type => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={type}
                         onClick={ () => {
                           setActiveFilters (prev =>
                             prev.includes (type) ? prev.filter (t => t !== type) : [...prev, type]) ;
@@ -504,7 +504,7 @@ interface SecurityMetrics {
                   Quick Actions
                 </h3>
                 <div className="grid grid - cols - 2 gap - 3">
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () =>
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () =>
                       logSecurityEvent ('info',
                         'Manual security check initiated',
                         'User Action',
@@ -515,7 +515,7 @@ interface SecurityMetrics {
                     <span className="text - sm">Check Status</span>
                   </button>
 
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSecurityEvents ([]) }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSecurityEvents ([]) }
                     className="flex items - center justify - center space - x-2 p - 3 bg - gray - 50 dark: bg - gray - 800 text - gray - 700 dark: text - gray - 300 rounded - lg hover: bg - gray - 100 dark: hover: bg - gray - 700 transition - colors"
                   >
                     <Trash2 className="w - 4 h - 4" />

@@ -590,7 +590,7 @@ import { motion } from 'framer - motion';
               <p className="text - slate - 300 mb - 6">
                 Try adjusting your search criteria or filters
               </p>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => {
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => {
                   setSearchQuery ('') ;
                   setActiveCategory ('all') ;
                   setPriceRange ('all') ;

@@ -482,7 +482,7 @@ const serviceCategories = [
 
               {/* View Mode Toggle */}
               <div role="button" className="flex space - x-2">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                   className={`px - 4 py - 2 rounded - lg transition - colors duration - 300 ${
                     viewMode === 'grid'
                       ? 'bg - blue - 600 text - white'
@@ -491,7 +491,7 @@ const serviceCategories = [
                 >
                   Grid
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                   className={`px - 4 py - 2 rounded - lg transition - colors duration - 300 ${
                     viewMode === 'list'
                       ? 'bg - blue - 600 text - white'
@@ -713,7 +713,7 @@ const serviceCategories = [
               <div role="button" className="text - gray - 400 text - lg mb - 4">
                 No services found matching your criteria
               </div>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => {
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => {
                   setSearchQuery ('') ;
                   setSelectedCategory ('all') ;
                   setPriceRange ('all') ;

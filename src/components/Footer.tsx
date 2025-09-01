@@ -376,7 +376,7 @@ function Footer () {
       </div>
 
       {/* Back to Top Button */}
-      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={scrollToTop}
+      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={scrollToTop}
         className="fixed bottom - 6 right - 6 w - 12 h - 12 bg - gradient - to - r from - zion - cyan to - zion - purple rounded - full shadow - lg shadow - zion - purple / 25 hover:shadow - xl hover:shadow - zion - purple / 40 transition - all duration - 300 hover:-translate - y-1 flex items - center justify - center text - white"
         aria - label="Back to top"
       >

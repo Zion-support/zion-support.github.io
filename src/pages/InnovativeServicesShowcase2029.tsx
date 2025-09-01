@@ -161,12 +161,12 @@ import { motion, AnimatePresence } from 'framer - motion.ts';
             transition={{ duration: 0.8, delay: 0.5 }}
             className="flex items - center justify - center space - x-4 mb - 8"
           >
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={togglePlayPause}
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={togglePlayPause}
               className="p - 3 rounded - full bg - gradient - to - r from - cyan - 500 to - purple - 500 hover:from - cyan - 600 hover:to - purple - 600 transition - all duration - 300 transform hover:scale - 110"
             >
               {isPlaying ? (<Pause className="w - 5 h - 5 text - white" />) : (<Play className="w - 5 h - 5 text - white" />) }
             </button>
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={toggleMute}
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={toggleMute}
               className="p - 3 rounded - full bg - gradient - to - r from - purple - 500 to - pink - 500 hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300 transform hover:scale - 110"
             >
               {isMuted ? (<VolumeX className="w - 5 h - 5 text - white" />) : (<Volume2 className="w - 5 h - 5 text - white" />) }
@@ -199,7 +199,7 @@ import { motion, AnimatePresence } from 'framer - motion.ts';
 
               {/* Category Filter */}
               <div role="button" className="flex flex - wrap gap - 2">
-                {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
+                {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
                     onClick={ () => setSelectedCategory (category) }
                     className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - all duration - 300 ${
                       selectedCategory === category
@@ -213,7 +213,7 @@ import { motion, AnimatePresence } from 'framer - motion.ts';
 
               {/* View Mode Toggle */}
               <div role="button" className="flex bg - white / 10 rounded - lg p - 1 border border - white / 20">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                   className={`p - 2 rounded - md transition - all duration - 300 ${
                     viewMode === 'grid'
                       ? 'bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white'
@@ -222,7 +222,7 @@ import { motion, AnimatePresence } from 'framer - motion.ts';
                 >
                   <Grid className="w - 5 h - 5" />
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                   className={`p - 2 rounded - md transition - all duration - 300 ${
                     viewMode === 'list'
                       ? 'bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white'
@@ -364,7 +364,7 @@ import { motion, AnimatePresence } from 'framer - motion.ts';
                         >
                           Learn More < ArrowRight className="w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform duration - 300" />
                         </a>
-                        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 3 border border - white / 20 text - white rounded - xl hover:bg - white / 10 transition - all duration - 300">
+                        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 3 border border - white / 20 text - white rounded - xl hover:bg - white / 10 transition - all duration - 300">
                           <MessageCircle className="w - 5 h - 5" />
                         </button>
                       </div>

@@ -301,7 +301,7 @@ const Training: React.FC = () => {
                 <div>
                   <h3 className="text - white font - semibold mb - 3">Categories</h3>
                   <div role="button" className="flex flex - wrap gap - 2">
-                    {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
+                    {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                         onClick={ () => setActiveCategory (category.id) }
                         className={`px - 3 py - 1 rounded - lg text - sm font - medium transition - colors ${
                           activeCategory === category.id
@@ -319,7 +319,7 @@ const Training: React.FC = () => {
                 <div>
                   <h3 className="text - white font - semibold mb - 3">Level</h3>
                   <div role="button" className="flex flex - wrap gap - 2">
-                    {levels.map (level => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={level.id}
+                    {levels.map (level => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={level.id}
                         onClick={ () => setActiveLevel (level.id) }
                         className={`px - 3 py - 1 rounded - lg text - sm font - medium transition - colors ${
                           activeLevel === level.id
@@ -337,7 +337,7 @@ const Training: React.FC = () => {
                 <div>
                   <h3 className="text - white font - semibold mb - 3">Format</h3>
                   <div role="button" className="flex flex - wrap gap - 2">
-                    {formats.map (format => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={format.id}
+                    {formats.map (format => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={format.id}
                         onClick={ () => setActiveFormat (format.id) }
                         className={`px - 3 py - 1 rounded - lg text - sm font - medium transition - colors ${
                           activeFormat === format.id
@@ -458,11 +458,11 @@ const Training: React.FC = () => {
 
                   {/* Action Buttons */}
                   <div role="button" className="flex gap - 2">
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex - 1 bg - gradient - to - r from - blue - 500 to - purple - 500 text - white py - 2 px - 4 rounded - lg font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300 flex items - center justify - center gap - 2">
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex - 1 bg - gradient - to - r from - blue - 500 to - purple - 500 text - white py - 2 px - 4 rounded - lg font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300 flex items - center justify - center gap - 2">
                       <Play className="w - 4 h - 4" />
                       Enroll Now
                     </button>
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 2 bg - slate - 700 / 50 text - gray - 300 rounded - lg hover:bg - slate - 600 / 50 transition - colors">
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 2 bg - slate - 700 / 50 text - gray - 300 rounded - lg hover:bg - slate - 600 / 50 transition - colors">
                       <Download className="w - 4 h - 4" />
                     </button>
                   </div>

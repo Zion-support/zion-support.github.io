@@ -235,7 +235,7 @@ const EnhancedHeroSection = memo (function EnhancedHeroSection (...args: []) :  
                     {currentSlideData.cta}
                     <ArrowRight className="ml - 2 w - 5 h - 5" />
                   </Link>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="inline - flex items - center px - 8 py - 4 border - 2 border - zion - cyan / 30 text - zion - cyan font - semibold rounded - 2xl hover: bg - zion - cyan / 10 transition - all duration - 300 backdrop - blur - sm">
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="inline - flex items - center px - 8 py - 4 border - 2 border - zion - cyan / 30 text - zion - cyan font - semibold rounded - 2xl hover: bg - zion - cyan / 10 transition - all duration - 300 backdrop - blur - sm">
                     <Play className="mr - 2 w - 5 h - 5" />
                     Watch Demo
                   </button>

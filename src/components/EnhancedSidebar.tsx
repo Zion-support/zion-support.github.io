@@ -296,7 +296,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 
 }}
             >
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleSection (section.title) }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleSection (section.title) }
                 className="flex items - center justify - between w - full text - left p - 3 rounded - lg hover:bg - slate - 800 / 50 transition - colors duration - 200 group"
               >
                 <div role="button" className="flex items - center space - x-3">

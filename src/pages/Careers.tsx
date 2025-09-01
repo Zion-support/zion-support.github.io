@@ -373,7 +373,7 @@ import { motion } from 'framer - motion';
                         </div>
                       </div>
                     </div>
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleJob (job.id) }
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleJob (job.id) }
                       className="text - cyan - 400 hover:text - cyan - 300 transition - colors"
                     >
                       {expandedJob === job.id ? (<ChevronUp className="w - 6 h - 6" />) : (<ChevronDown className="w - 6 h - 6" />) }
@@ -427,7 +427,7 @@ import { motion } from 'framer - motion';
 
                       {/* Apply Button */}
                       <div role="button" className="pt - 4">
-                        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white py - 3 px - 6 rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 transform hover:-translate - y-1 shadow - lg hover:shadow - xl">
+                        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white py - 3 px - 6 rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 transform hover:-translate - y-1 shadow - lg hover:shadow - xl">
                           Apply for this Position
                         </button>
                       </div>
@@ -521,7 +521,7 @@ import { motion } from 'framer - motion';
               </div>
             </div>
 
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white px - 8 py - 4 rounded - lg font - semibold text - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 transform hover:-translate - y-1 shadow - lg hover:shadow - xl">
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white px - 8 py - 4 rounded - lg font - semibold text - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 transform hover:-translate - y-1 shadow - lg hover:shadow - xl">
               Send Your Resume
             </button>
           </div>

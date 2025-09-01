@@ -408,7 +408,7 @@ interface UserSession {
           <BarChart3 className="w - 5 h - 5 text - cyan - 400" />
           <span className="font - medium">Analytics</span>
         </div>
-        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowAnalytics (false) }
+        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowAnalytics (false) }
           className="text - gray - 400 hover:text - white"
         >
           ×
@@ -460,7 +460,7 @@ interface UserSession {
         </div>) }
 
       <div role="button" className="mt - 4 pt - 4 border - t border - gray - 600">
-        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => {
+        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => {
             if (currentSession) {
               saveSessionData (currentSession) ;
             }

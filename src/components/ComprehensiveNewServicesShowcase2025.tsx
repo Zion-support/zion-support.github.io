@@ -124,7 +124,7 @@ import { motion } from 'framer - motion.ts';
 
             {/* Category Filter */}
             <div role="button" className="flex gap - 2 overflow - x-auto pb - 2">
-              {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
+              {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                   onClick={ () => setSelectedCategory (category.id) }
                   className={`flex items - center space - x-2 px - 4 py - 2 rounded - lg whitespace - nowrap transition - all duration - 200 ${
                     selectedCategory === category.id

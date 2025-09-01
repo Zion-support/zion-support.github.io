@@ -218,7 +218,7 @@ const AdvancedAIServicesHub: React.FC = () => {;
           className="mb - 12"
         >
           <div role="button" className="flex flex - wrap gap - 4 justify - center">
-            {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
+            {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                 onClick={ () => setSelectedCategory (category.id) }
                 className={`flex items - center gap - 2 px - 6 py - 3 rounded - full border transition - all duration - 300 ${
                   selectedCategory === category.id
@@ -349,11 +349,11 @@ const AdvancedAIServicesHub: React.FC = () => {;
               Get started today and experience the future of business automation.
             </p>
             <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white font - semibold rounded - lg hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 flex items - center gap - 2">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white font - semibold rounded - lg hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 flex items - center gap - 2">
                 <Rocket className="w - 5 h - 5" />
                 Get Started
               </button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - white / 10 backdrop - blur - sm border border - white / 20 text - white font - semibold rounded - lg hover:bg - white / 20 transition - all duration - 300">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - white / 10 backdrop - blur - sm border border - white / 20 text - white font - semibold rounded - lg hover:bg - white / 20 transition - all duration - 300">
                 Schedule Demo;
               </button>;
             </div>;

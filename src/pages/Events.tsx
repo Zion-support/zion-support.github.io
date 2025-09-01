@@ -630,7 +630,7 @@ export default function Events(...args: unknown[]): unknown {
                         {event.isFree ? 'Free' : event.price}
                       </div>
                       
-                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - gradient - to - r from - zion - cyan to - zion - purple text - white px - 4 py - 2 rounded - lg font - medium hover:shadow - lg hover:shadow - zion - cyan / 25 transition - all duration - 300 hover:-translate - y-1 flex items - center gap - 2">
+                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - gradient - to - r from - zion - cyan to - zion - purple text - white px - 4 py - 2 rounded - lg font - medium hover:shadow - lg hover:shadow - zion - cyan / 25 transition - all duration - 300 hover:-translate - y-1 flex items - center gap - 2">
                         Register Now < ArrowRight className="w - 4 h - 4" />
                       </button>
                     </div>
@@ -654,7 +654,7 @@ export default function Events(...args: unknown[]): unknown {
                     Categories
                   </h3>
                   <div role="button" className="space - y-2">
-                    {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
+                    {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                         onClick={ () => setSelectedCategory (category.id) }
                         className={`w - full text - left px - 3 py - 2 rounded - lg text - sm transition - colors flex items - center justify - between ${
                           selectedCategory === category.id
@@ -689,7 +689,7 @@ export default function Events(...args: unknown[]): unknown {
 
               {/* Load More Button */}
               {filteredEvents.length > 6 && (<div role="button" className="text - center mt - 12">
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - gradient - to - r from - zion - cyan to - zion - purple text - white px - 8 py - 3 rounded - lg font - semibold hover:shadow - lg hover:shadow - zion - cyan / 25 transition - all duration - 300 hover:-translate - y-1">
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - gradient - to - r from - zion - cyan to - zion - purple text - white px - 8 py - 3 rounded - lg font - semibold hover:shadow - lg hover:shadow - zion - cyan / 25 transition - all duration - 300 hover:-translate - y-1">
                     Load More Events
                   </button>
                 </div>) }
@@ -715,10 +715,10 @@ export default function Events(...args: unknown[]): unknown {
             </p>
             
             <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - gradient - to - r from - zion - cyan to - zion - purple text - white px - 8 py - 4 rounded - lg font - semibold hover:shadow - lg hover:shadow - zion - cyan / 25 transition - all duration - 300 hover:-translate - y-1">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - gradient - to - r from - zion - cyan to - zion - purple text - white px - 8 py - 4 rounded - lg font - semibold hover:shadow - lg hover:shadow - zion - cyan / 25 transition - all duration - 300 hover:-translate - y-1">
                 Propose an Event
               </button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="border border - zion - cyan text - zion - cyan px - 8 py - 4 rounded - lg font - semibold hover:bg - zion - cyan hover:text - white transition - all duration - 300">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="border border - zion - cyan text - zion - cyan px - 8 py - 4 rounded - lg font - semibold hover:bg - zion - cyan hover:text - white transition - all duration - 300">
                 Partner with Us
               </button>
             </div>

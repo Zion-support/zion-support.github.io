@@ -169,7 +169,7 @@ interface AccessibilityProviderProps extends React.PropsWithChildren<{}> {
 
                 Skip to navigation
               </a>;
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowSkipLinks (false) }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowSkipLinks (false) }
                 className="px - 4 py - 2 bg - white rounded - lg font - semibold hover:bg - gray - 100 focus:outline - none focus:ring - 2 focus:ring - black"
 
                 Close
@@ -194,7 +194,7 @@ interface AccessibilityProviderProps extends React.PropsWithChildren<{}> {
           className="bg - zion - slate border border - zion - cyan / 20 rounded - lg p - 2 shadow - 2xl"
 
           <div role="button" className="flex flex - col gap - 2">
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={toggleHighContrast}
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={toggleHighContrast}
               className={`p - 2 rounded - md transition - colors duration - 300 focus:outline - none focus:ring - 2 focus:ring - zion - cyan ${
                 highContrast ? 'bg - zion - cyan text - black' : 'bg - zion - slate - light text - zion - cyan hover:bg - zion - cyan / 10'
               }`}
@@ -204,7 +204,7 @@ interface AccessibilityProviderProps extends React.PropsWithChildren<{}> {
               <Braille className="w - 4 h - 4" />
             </button>
 
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={toggleReducedMotion}
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={toggleReducedMotion}
               className={`p - 2 rounded - md transition - colors duration - 300 focus:outline - none focus:ring - 2 focus:ring - zion - cyan ${
                 reducedMotion ? 'bg - zion - cyan text - black' : 'bg - zion - slate - light text - zion - cyan hover:bg - zion - cyan / 10'
               }`}
@@ -214,7 +214,7 @@ interface AccessibilityProviderProps extends React.PropsWithChildren<{}> {
               {reducedMotion ? <VolumeX className="w - 4 h - 4" /> : <Volume2 className="w - 4 h - 4" />}
             </button>
 
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={increaseFontSize}
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={increaseFontSize}
               className="p - 2 rounded - md bg - zion - slate - light text - zion - cyan hover:bg - zion - cyan / 10 transition - colors duration - 300 focus:outline - none focus:ring - 2 focus:ring - zion - cyan"
               aria - label="Increase font size"
               title="Increase font size (Alt + +) "
@@ -222,7 +222,7 @@ interface AccessibilityProviderProps extends React.PropsWithChildren<{}> {
               A+
             </button>
 
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={decreaseFontSize}
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={decreaseFontSize}
               className="p - 2 rounded - md bg - zion - slate - light text - zion - cyan hover:bg - zion - cyan / 10 transition - colors duration - 300 focus:outline - none focus:ring - 2 focus:ring - zion - cyan"
               aria - label="Decrease font size"
               title="Decrease font size (Alt + -) "
@@ -230,7 +230,7 @@ interface AccessibilityProviderProps extends React.PropsWithChildren<{}> {
               A-
             </button>
 
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={resetFontSize}
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={resetFontSize}
               className="p - 2 rounded - md bg - zion - slate - light text - zion - cyan hover:bg - zion - cyan / 10 transition - colors duration - 300 focus:outline - none focus:ring - 2 focus:ring - zion - cyan"
               aria - label="Reset font size"
               title="Reset font size"

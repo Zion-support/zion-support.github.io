@@ -108,7 +108,7 @@ setSwState (prev: > ({ ;
                 {swState.hasUpdate ? 'Update available' : 'Up to date'}
               </p>
             </div>
-            {swState.hasUpdate && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={handleUpdate}
+            {swState.hasUpdate && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={handleUpdate}
                 className="flex - shrink - 0 bg - blue - 600 hover:bg - blue - 700 text - white px - 3 py - 1 rounded - md text - sm font - medium transition - colors"
               >
                 Update;
