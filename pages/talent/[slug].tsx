@@ -1,8 +1,6 @@
-export default function Page() {
-  return (
-    <div className="py-12">
-      <h1 className="text-2xl font-semibold">Talent / Slug</h1>
-      <p className="mt-2 opacity-80">This page is being built by autonomous agents.</p>
-    </div>
-  );
+import { useRouter } from 'next/router';
+
+export default function TalentSlug() {
+  const { query } = useRouter();
+  return <div className="py-10">Talent: {String(query.slug || '')}</div>;
 }

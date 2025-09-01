@@ -1,62 +1,55 @@
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
 
-type AutomationItem = {
-  id: string;
-  title: string;
-  description: string;
-  schedule?: string;
-  link?: string;
-};
-
-export default function AutomationsIndex() {
-  const [items, setItems] = useState<AutomationItem[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    async function load() {
-      try {
-        const res = await fetch('/automation-catalog.json');
-        if (res.ok) {
-          const data = await res.json();
-          setItems(data.items || []);
-          setLoading(false);
-          return;
-        }
-      } catch (_) {}
-      // Fallback minimal list
-      setItems([
-        { id: 'frontend-sync', title: 'Frontend Sync', description: 'Keeps UI consistent and links healthy.', link: '/automation' },
-        { id: 'self-healing', title: 'Self-Healing CI', description: 'Auto-fixes linting and TypeScript errors via CI.' },
-        { id: 'seo-growth', title: 'SEO & Growth Agents', description: 'Publishes content and optimizes SEO on schedule.' }
-      ]);
-      setLoading(false);
-    }
-    load();
-  }, []);
-
+export default function AutomationHub() {
+  const items = [
+    { title: 'Innovation Radar', href: '/automation/innovation-radar', desc: 'Hourly AI/DAO research signals aggregated from public sources.' },
+    { title: 'Global Bounties', href: '/automation/global-bounties', desc: 'Open issues and bounties across GitHub for immediate contribution.' },
+    { title: 'Governance Pulse', href: '/automation/governance-pulse', desc: 'Latest proposals across notable DAOs on Snapshot.' },
+  ];
   return (
-    <div className="space-y-8">
-      <header>
-        <h1 className="text-2xl font-bold">Autonomous Cloud Automations</h1>
-        <p className="text-sm opacity-80">These agents run in the cloud via scheduled workflows and commit improvements back to the repo.</p>
-      </header>
-      {loading ? (
-        <div className="opacity-70">Loading...</div>
-      ) : (
-        <div className="grid md:grid-cols-2 gap-6">
-          {items.map(item => (
-            <div key={item.id} className="border rounded p-5">
-              <h3 className="font-semibold">{item.title}</h3>
-              <p className="text-sm opacity-80 mt-1">{item.description}</p>
-              <div className="text-xs mt-2 opacity-70">{item.schedule || 'scheduled via GitHub Actions'}</div>
-              {item.link && (
-                <div className="mt-3"><Link href={item.link}><a className="text-blue-600">Open →</a></Link></div>
-              )}
-            </div>
+    <EnhancedLayout>
+      <div className="max-w-5xl mx-auto py-12">
+        <h1 className="text-3xl md:text-5xl font-bold">Automation Hub</h1>
+        <p className="mt-3 text-gray-600 dark:text-gray-300">Explore autonomous agents that run in the cloud and sync updates to this repository.</p>
+        <div className="mt-8 grid md:grid-cols-3 gap-6">
+          {items.map((it) => (
+            <Link key={it.href} href={it.href}>
+              <a className="block p-6 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-black dark:hover:border-white transition-colors">
+                <h3 className="text-lg font-semibold">{it.title}</h3>
+                <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">{it.desc}</p>
+                <span className="mt-4 inline-block text-sm font-medium text-blue-600 dark:text-blue-400">Open →</span>
+              </a>
+            </Link>
           ))}
+          <FeatureCard title="ArXiv Research" href="/automation/arxiv-research" desc="Fresh AI governance and agents research papers." />
+          <FeatureCard title="Remote Roles" href="/automation/remote-roles" desc="Remote jobs in AI/Agents/Web3 filtered for relevance." />
+          <FeatureCard title="StackExchange Insights" href="/automation/stackexchange-insights" desc="Newest questions in AI/Blockchain/DAO tags." />
+          <FeatureCard title="NPM Trends" href="/automation/npm-trends" desc="Fresh packages around Agents/Web3/DAO." />
+          <FeatureCard title="OSV Watch" href="/automation/osv-watch" desc="Known vulnerabilities in dependencies." />
+          <FeatureCard title="GitHub Pulse" href="/automation/github-pulse" desc="Stars, issues, PRs in the last 24h." />
+          <FeatureCard title="HF Models" href="/automation/hf-models" desc="Top agent-related models on Hugging Face." />
+          <FeatureCard title="HF Spaces" href="/automation/hf-spaces" desc="Trending agent Spaces on Hugging Face." />
+          <FeatureCard title="DAO Leaderboard" href="/automation/dao-leaderboard" desc="Ranked by recent Snapshot participation." />
+          <FeatureCard title="Roadmap Issues" href="/automation/roadmap-issues" desc="Open roadmap/feature/bug issues." />
+          <FeatureCard title="GitHub Agent Repos" href="/automation/github-agent-repos" desc="New agent repos trending by stars." />
+          <FeatureCard title="HF Datasets" href="/automation/hf-datasets" desc="Datasets for agents/governance/DAO." />
+          <FeatureCard title="Agentic News" href="/automation/agentic-news" desc="Latest agent/AI governance headlines." />
+          <FeatureCard title="GitHub Contributors" href="/automation/github-contributors" desc="Recent contributors to this repo." />
         </div>
-      )}
-    </div>
+      </div>
+    </EnhancedLayout>
+  );
+}
+
+function FeatureCard({ title, desc, href }: { title: string; desc: string; href: string }) {
+  return (
+    <Link href={href}>
+      <a className="block p-6 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-black dark:hover:border-white transition-colors">
+        <h3 className="text-lg font-semibold">{title}</h3>
+        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">{desc}</p>
+        <span className="mt-4 inline-block text-sm font-medium text-blue-600 dark:text-blue-400">Open →</span>
+      </a>
+    </Link>
   );
 }

@@ -1,49 +1,51 @@
 import Link from 'next/link';
+import EnhancedLayout from '../components/layout/EnhancedLayout';
 
 export default function Home() {
   return (
-    <div className="space-y-10">
-      <section className="text-center py-10">
-        <h1 className="text-3xl md:text-5xl font-bold">Zion AI Marketplace Automations</h1>
-        <p className="mt-3 text-gray-600 dark:text-gray-300">
-          Autonomous, cloud-native agents that improve your app, content, and growth—continuously.
-        </p>
-        <div className="mt-6 flex items-center justify-center gap-3">
-          <Link href="/automation"><a className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Explore Automations</a></Link>
-          <Link href="/reports"><a className="px-4 py-2 rounded border">View Reports</a></Link>
-          <Link href="/blog"><a className="px-4 py-2 rounded border">Learn More</a></Link>
+    <EnhancedLayout>
+      <section className="py-16">
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">Autonomous Cloud Agents</h1>
+          <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
+            Always-on automations that research, curate opportunities, and track governance — no servers to manage, no humans required.
+          </p>
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/automation/innovation-radar"><a className="px-6 py-3 rounded-md bg-black text-white dark:bg-white dark:text-black font-semibold">Innovation Radar</a></Link>
+            <Link href="/automation/global-bounties"><a className="px-6 py-3 rounded-md bg-gray-900/10 dark:bg-white/10 font-semibold">Global Bounties</a></Link>
+            <Link href="/automation/governance-pulse"><a className="px-6 py-3 rounded-md bg-gray-900/10 dark:bg-white/10 font-semibold">Governance Pulse</a></Link>
+            <Link href="/automation/arxiv-research"><a className="px-6 py-3 rounded-md bg-gray-900/10 dark:bg-white/10 font-semibold">ArXiv Research</a></Link>
+            <Link href="/automation/remote-roles"><a className="px-6 py-3 rounded-md bg-gray-900/10 dark:bg-white/10 font-semibold">Remote Roles</a></Link>
+            <Link href="/automation/github-agent-repos"><a className="px-6 py-3 rounded-md bg-gray-900/10 dark:bg-white/10 font-semibold">GitHub Agent Repos</a></Link>
+            <Link href="/automation/hf-datasets"><a className="px-6 py-3 rounded-md bg-gray-900/10 dark:bg-white/10 font-semibold">HF Datasets</a></Link>
+            <Link href="/automation/agentic-news"><a className="px-6 py-3 rounded-md bg-gray-900/10 dark:bg-white/10 font-semibold">Agentic News</a></Link>
+            <Link href="/automation/github-contributors"><a className="px-6 py-3 rounded-md bg-gray-900/10 dark:bg-white/10 font-semibold">GitHub Contributors</a></Link>
+          </div>
         </div>
       </section>
 
-      <section className="grid md:grid-cols-3 gap-6">
-        <div className="p-5 rounded border">
-          <h3 className="font-semibold">Continuous Frontend Sync</h3>
-          <p className="text-sm opacity-80">Keeps UI components consistent, repairs links, and syncs content.</p>
-          <Link href="/automation"><a className="text-blue-600">View details →</a></Link>
+      <section className="py-8 border-t border-gray-200 dark:border-gray-800">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
+          <FeatureCard title="Innovation Radar" href="/automation/innovation-radar" desc="Hourly AI/DAO research signals from the global stream." />
+          <FeatureCard title="Global Bounties" href="/automation/global-bounties" desc="Fresh open-source bounties and help-wanted issues." />
+          <FeatureCard title="Governance Pulse" href="/automation/governance-pulse" desc="Live proposals across leading DAOs via Snapshot." />
         </div>
-        <div className="p-5 rounded border">
-          <h3 className="font-semibold">Self-Healing & Linting</h3>
-          <p className="text-sm opacity-80">Detects and fixes issues automatically via CI.</p>
-          <Link href="/automation"><a className="text-blue-600">View details →</a></Link>
-        </div>
-        <div className="p-5 rounded border">
-          <h3 className="font-semibold">Growth & SEO Agents</h3>
-          <p className="text-sm opacity-80">Publishes content, improves SEO, and monitors performance.</p>
-          <Link href="/automation"><a className="text-blue-600">View details →</a></Link>
+        <div className="max-w-5xl mx-auto mt-10 text-center text-sm text-gray-500 dark:text-gray-400">
+          Runs serverlessly on scheduled cloud workflows. Changes sync back to this repo automatically.
         </div>
       </section>
+    </EnhancedLayout>
+  );
+}
 
-      <section className="rounded border p-6">
-        <h2 className="text-xl font-semibold">What runs in the cloud?</h2>
-        <ul className="list-disc pl-6 mt-3 space-y-2 text-sm">
-          <li>GitHub Actions schedules: daily, weekly, and event-driven jobs</li>
-          <li>Automated content generation and UI improvements</li>
-          <li>Health checks and sync monitors with auto-fixes</li>
-        </ul>
-        <div className="mt-4">
-          <Link href="/automation"><a className="text-blue-600">See the full automation catalog →</a></Link>
-        </div>
-      </section>
-    </div>
+function FeatureCard({ title, desc, href }: { title: string; desc: string; href: string }) {
+  return (
+    <Link href={href}>
+      <a className="block p-6 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-black dark:hover:border-white transition-colors">
+        <h3 className="text-lg font-semibold">{title}</h3>
+        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">{desc}</p>
+        <span className="mt-4 inline-block text-sm font-medium text-blue-600 dark:text-blue-400">Open →</span>
+      </a>
+    </Link>
   );
 }
