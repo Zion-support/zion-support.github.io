@@ -173,10 +173,12 @@ If issues persist or new problems emerge:
 find .github/workflows -name "*.backup6" -exec bash -c 'cp "$1" "${1%.backup6}"' _ {} \;
 ```
 
-### 2. **Gradual Rollback**
-- Restore specific problematic workflows from backups
-- Keep the working fixes
-- Identify and fix specific issues
+### Environment Variables
+```bash
+NODE_VERSION=20
+NPM_VERSION=10
+BASE_URL=https://bolt.new.zion.app
+```
 
 ### 3. **Frequency Adjustment**
 - Further reduce workflow frequencies if needed

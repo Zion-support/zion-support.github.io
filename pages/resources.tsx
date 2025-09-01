@@ -26,41 +26,25 @@ export default function ResourcesPage() {
       id: 'autonomous-systems-guide',
       title: 'The Complete Guide to Autonomous Systems',
       description: 'A comprehensive overview of autonomous technology, implementation strategies, and best practices.',
-      downloadUrl: '#',
+      downloadUrl: '/resources/whitepapers/autonomous-systems-guide.pdf',
       pages: '45',
       category: 'Technology'
     },
     {
       id: 'ai-ethics-framework',
       title: 'AI Ethics Framework for Business',
-      type: 'White Paper',
-      size: '1.8 MB',
-      description: 'Framework for implementing ethical AI practices in business operations.',
-      category: 'White Papers'
-    },
-    {
-      id: 'performance-metrics-template',
-      title: 'Performance Metrics Dashboard Template',
-      type: 'Template',
-      size: '892 KB',
-      description: 'Ready-to-use dashboard template for monitoring AI automation performance.',
-      category: 'Templates'
+      description: 'Establishing ethical guidelines for AI implementation in enterprise environments.',
+      downloadUrl: '/resources/whitepapers/ai-ethics-framework.pdf',
+      pages: '32',
+      category: 'Ethics'
     },
     {
       id: 'automation-roi-calculator',
-      title: 'Automation ROI Calculator',
-      type: 'Tool',
-      size: 'Interactive',
-      description: 'Interactive calculator to estimate ROI from automation investments.',
-      category: 'Tools'
-    },
-    {
-      id: 'case-study-template',
-      title: 'Case Study Template',
-      type: 'Template',
-      size: '324 KB',
-      description: 'Template for documenting and presenting automation success stories.',
-      category: 'Templates'
+      title: 'Automation ROI Calculator Guide',
+      description: 'How to calculate and maximize return on investment for automation initiatives.',
+      downloadUrl: '/resources/whitepapers/automation-roi-calculator.pdf',
+      pages: '28',
+      category: 'Business'
     }
   ];
 
