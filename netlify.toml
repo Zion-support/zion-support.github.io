@@ -95,17 +95,13 @@
   schedule = "*/1 * * * *" # every minute
 
 [[scheduled.functions]]
-  name = "innovation-scout"
-  schedule = "*/3 * * * *" # every 3 minutes
+  name = "dependencies-guardian"
+  schedule = "0 * * * *" # hourly
 
 [[scheduled.functions]]
-  name = "content-ux-curator"
-  schedule = "*/7 * * * *" # every 7 minutes
+  name = "ai-innovator"
+  schedule = "17 */6 * * *" # every 6 hours, offset minutes
 
 [[scheduled.functions]]
-  name = "security-and-integrity-runner"
-  schedule = "*/15 * * * *" # every 15 minutes
-
-[[scheduled.functions]]
-  name = "autonomous-cloud-maximizer"
-  schedule = "*/2 * * * *" # every 2 minutes
+  name = "self-healing-guardian"
+  schedule = "*/30 * * * *" # every 30 minutes
