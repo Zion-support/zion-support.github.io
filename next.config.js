@@ -16,15 +16,20 @@ const nextConfig = {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
   webpack: (config, { dev, isServer }) => {
-    // Completely exclude problematic directories from the build
+    // Exclude contracts directory from compilation
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
+      include: [
+        /src/,
+        /pages/,
+        /components/,
+      ],
       exclude: [
         /node_modules/,
+        /contracts/,
         /api-backup/,
         /pages\.disabled/,
         /backup-pages/,
-        /components\//,
         /\.backup/,
         /\.disabled/,
         /automation\/backups/,
