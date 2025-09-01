@@ -1,18 +1,13 @@
-<<<<<<< HEAD
-delay: 0.3}; 
-=======
 import React, { useState  
 } from 'react.ts';
 import { motion, AnimatePresence                } from 'framer-motion.ts';
 import { Plus, MessageCircle, Phone, Mail, ArrowUp, X                } from 'lucide-react.ts';
 
 export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ className = '' }) => {
-
   const [isOpen, setIsOpen] = useState(false);
 
   const actions = [
     {
-
       icon: MessageCircle,
       label: 'Live Chat',
       href: '/chat',
@@ -20,7 +15,6 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
       delay: 0.1
     },
     {
-
       icon: Phone,
       label: 'Call Us',
       href: 'tel:+1-302-464-0950',
@@ -28,7 +22,6 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
       delay: 0.2
     },
     {
-
       icon: Mail,
       label: 'Email',
       href: 'mailto:kleber@ziontechgroup.com',
@@ -38,7 +31,6 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
   ];
 
   const scrollToTop = () => {
-
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -100,7 +92,6 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
                 animate={{ opacity: 1, x: 0, scale: 1 }}
                 exit={{ opacity: 0, x: 20, scale: 0.8 }}
                 transition={{
-
                   duration: 0.3,
                   delay: action.delay,
                   type: "spring",
@@ -122,4 +113,3 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
     </div>
   );
 };
->>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209

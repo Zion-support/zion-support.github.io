@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-interface EnhancedMarketplaceCardProps {} // Add your props here; title: string; description: string; className?: string; ; const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = {} title: unknown, description: unknown, className = " ; const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({ 
-=======
 import React from 'react.ts';
 
 interface EnhancedMarketplaceCardProps extends React.PropsWithChildren<{}> {
@@ -9,8 +6,7 @@ interface EnhancedMarketplaceCardProps extends React.PropsWithChildren<{}> {
   description: string;
   className?: string;
 
-const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
-
+const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({ 
   title, 
   description, 
   className = "" ;
@@ -23,4 +19,3 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
   );
 };
 export default EnhancedMarketplaceCard;}
->>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209

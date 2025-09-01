@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-<= 
-=======
 import { motion } from "framer-motion";
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import {
-
+import { 
   Shield, 
   Eye, 
   Zap, 
@@ -30,9 +26,7 @@ import {
 } from 'lucide-react';
 
 const AICybersecuritySuite: React.FC = () => {
-
   const serviceData = {
-
     title: "AI-Powered Cybersecurity Suite",
     subtitle: "Next-generation threat detection and response powered by artificial intelligence",
     description: "Protect your organization with our comprehensive AI cybersecurity suite that detects, prevents, and responds to threats in real-time. Reduce security incidents by 95% and achieve compliance with industry standards.",
@@ -49,37 +43,31 @@ const AICybersecuritySuite: React.FC = () => {
 
   const features = [
     {
-
       title: "AI Threat Detection",
       description: "Machine learning algorithms detect zero-day threats and advanced persistent threats in real-time",
       icon: "🛡️"
     },
     {
-
       title: "Behavioral Analytics",
       description: "AI-powered user behavior analysis to identify insider threats and anomalous activities",
       icon: "🔍"
     },
     {
-
       title: "Automated Incident Response",
       description: "Intelligent automation that responds to security incidents within seconds",
       icon: "⚡"
     },
     {
-
       title: "Threat Intelligence",
       description: "Real-time threat intelligence feeds and predictive threat modeling",
       icon: "📡"
     },
     {
-
       title: "Compliance Automation",
       description: "Automated compliance reporting for SOC 2, ISO 27001, GDPR, and HIPAA",
       icon: "📋"
     },
     {
-
       title: "Cloud Security",
       description: "Comprehensive cloud security monitoring and threat prevention",
       icon: "☁️"
@@ -97,25 +85,21 @@ const AICybersecuritySuite: React.FC = () => {
 
   const useCases = [
     {
-
       title: "Enterprise Security Operations",
       description: "Comprehensive security monitoring and incident response for large organizations",
       industry: "Enterprise & Fortune 500"
     },
     {
-
       title: "Financial Services Security",
       description: "Advanced threat detection and compliance for banks and financial institutions",
       industry: "Financial Services"
     },
     {
-
       title: "Healthcare Cybersecurity",
       description: "HIPAA-compliant security solutions for healthcare organizations",
       industry: "Healthcare"
     },
     {
-
       title: "Government & Defense",
       description: "High-security solutions for government agencies and defense contractors",
       industry: "Government & Defense"
@@ -124,7 +108,6 @@ const AICybersecuritySuite: React.FC = () => {
 
   const pricingPlans = [
     {
-
       name: "Professional",
       price: 2499,
       currency: "$",
@@ -140,7 +123,6 @@ const AICybersecuritySuite: React.FC = () => {
       popular: false
     },
     {
-
       name: "Enterprise",
       price: 4999,
       currency: "$",
@@ -157,7 +139,6 @@ const AICybersecuritySuite: React.FC = () => {
       popular: true
     },
     {
-
       name: "Government",
       price: 7999,
       currency: "$",
@@ -177,21 +158,18 @@ const AICybersecuritySuite: React.FC = () => {
 
   const competitors = [
     {
-
       name: "CrowdStrike",
       price: "$4,000 - $12,000/month",
       pros: ["Market leader", "Advanced features"],
       cons: ["Very expensive", "Complex setup"]
     },
     {
-
       name: "SentinelOne",
       price: "$3,500 - $10,000/month",
       pros: ["Good performance", "Cloud-native"],
       cons: ["High cost", "Limited AI"]
     },
     {
-
       name: "Zion Tech Group AI Cybersecurity",
       price: "$2,499 - $7,999/month",
       pros: ["Advanced AI", "Cost-effective", "Easy deployment"],
@@ -201,22 +179,18 @@ const AICybersecuritySuite: React.FC = () => {
 
   const faqs = [
     {
-
       question: "How does AI improve threat detection?",
       answer: "Our AI algorithms analyze millions of data points in real-time, learning from patterns to detect unknown threats that traditional signature-based systems miss."
     },
     {
-
       question: "What compliance standards do you support?",
       answer: "We support SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, and many other industry-specific compliance frameworks."
     },
     {
-
       question: "How quickly can you respond to threats?",
       answer: "Our automated response system can respond to threats within seconds, with human analysts reviewing and escalating complex incidents."
     },
     {
-
       question: "Do you offer on-premise deployment?",
       answer: "Yes, we offer both cloud and on-premise deployment options for organizations with specific security requirements."
     }
@@ -393,4 +367,3 @@ const AICybersecuritySuite: React.FC = () => {
 };
 
 export default AICybersecuritySuite;
->>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209

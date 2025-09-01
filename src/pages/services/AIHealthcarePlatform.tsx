@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-import { Heart, Brain, Shield, Users, CheckCircle, ArrowRight, Star, Award, Clock, 
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
-import {
-
+import { 
   Heart, 
   Brain, 
   Target, 
@@ -32,40 +28,33 @@ import {
              } from 'lucide-react.ts';
 
 const AIHealthcarePlatform: React.FC = (): JSX.Element => {
-
   const features = [
     {
-
       icon: Brain,
       title: 'AI-Powered Diagnosis',
       description: 'Advanced machine learning for accurate medical diagnosis and treatment recommendations'
     },
     {
-
       icon: Heart,
       title: 'Patient Monitoring',
       description: 'Real-time health monitoring and early warning systems for critical conditions'
     },
     {
-
       icon: Target,
       title: 'Treatment Optimization',
       description: 'Personalized treatment plans based on patient data and medical research'
     },
     {
-
       icon: BarChart3,
       title: 'Health Analytics',
       description: 'Comprehensive health data analysis and predictive insights'
     },
     {
-
       icon: Shield,
       title: 'Data Security',
       description: 'HIPAA-compliant security with end-to-end encryption'
     },
     {
-
       icon: Stethoscope,
       title: 'Clinical Decision Support',
       description: 'AI-powered tools to assist healthcare professionals in decision making'
@@ -243,4 +232,3 @@ const AIHealthcarePlatform: React.FC = (): JSX.Element => {
 };
 
 export default AIHealthcarePlatform;}}}}}
->>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209

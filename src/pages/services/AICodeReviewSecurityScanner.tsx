@@ -1,49 +1,39 @@
-<<<<<<< HEAD
-{; icon: GitBranch,; title: "Git Integration & Workflow",; description: "Seamless integration with Git workflows, pull request reviews, and automated security checks.",; benefits: ["Pull request scanning",Branch protection",Automated reviews",Workflow integration"]}; ]; "Custom workflows",; "On-premise deployment"; ],; cta: "Contact Sales",; popular: false}; ]; {; title: "Compliance & Auditing",; description: "Meet regulatory requirements and maintain security standards with comprehensive code security auditing.",; icon: Shield,; benefits: ["Regulatory compliance",Security audits",Documentation",Risk assessment"]}; ]; {; title: "Insecure Dependencies",; description: "Identify and update vulnerable third-party libraries and dependencies.",; icon: Package,;" examples: ["Dependency scanning", "Vulnerability databases", "Update automation", "License compliance"]}; ]; 
-=======
 import { motion } from 'framer-motion';
 import { Activity, Activity as ActivityIcon, AlertCircle, AlertTriangle, ArrowRight, ArrowUpRight, AtSign, AtSign as AtSignIcon, Atom, Award, Brain, Building, Calculator, Car, CheckCircle, CheckCircle2, ChevronDown, ChevronRight, ChevronUp, Clock, Cloud, Code, Coins, Cpu, CreditCard, Database, Divide, DollarSign, Download, Equal, ExternalLink, Eye, Eye as EyeIcon, FileText, Filter, Gamepad2, GitBranch, GitBranch as GitBranchIcon, GitCommit, GitCommit as GitCommitIcon, GitCompare, GitCompare as GitCompareIcon, GitFork, GitMerge, GitMerge as GitMergeIcon, GitPullRequest, GitPullRequest as GitPullRequestIcon, Globe, Hash, Hash as HashIcon, Heart, HelpCircle, Info, Leaf, LineChart, Lock, MessageCircle, Minus, Network, Percent, PieChart, PiggyBank, Plane, Plus, RefreshCw, Rocket, Satellite, Search, Server, Settings, Share2, Shield, Ship, ShoppingCart, Smartphone, Sparkles, Star, Target, TrendingDown, Truck, Upload, Users, XCircle, Zap } from 'lucide-react';
 
 const AICodeReviewSecurityScanner = () => {
-
   const features = [
     {
-
       icon: Brain,
       title: 'AI-Powered Vulnerability Detection',
       description: 'Advanced machine learning algorithms that analyze code patterns, identify security vulnerabilities, and suggest remediation strategies.',
       benefits: ['Automated vulnerability scanning', 'Pattern recognition', 'False positive reduction', 'Continuous learning']
     },
     {
-
       icon: Shield,
       title: 'Comprehensive Security Coverage',
       description: 'Cover all major security vulnerabilities including OWASP Top 10, CWE, and industry-specific security requirements.',
       benefits: ['OWASP Top 10 coverage', 'CWE compliance', 'Industry standards', 'Custom rule sets']
     },
     {
-
       icon: Code,
       title: 'Multi-Language Support',
       description: 'Support for all major programming languages including Python, JavaScript, Java, C#, Go, Rust, and more.',
       benefits: ['25+ programming languages', 'Framework-specific rules', 'Language-specific patterns', 'Cross-language analysis']
     },
     {
-
       icon: Eye,
       title: 'Real-time Code Analysis',
       description: 'Continuous monitoring of code changes with instant security feedback during development and CI/CD pipelines.',
       benefits: ['Real-time scanning', 'CI/CD integration', 'Instant feedback', 'Automated blocking']
     },
     {
-
       icon: AlertTriangle,
       title: 'Intelligent Risk Scoring',
       description: 'AI-driven risk assessment that prioritizes vulnerabilities based on severity, exploitability, and business impact.',
       benefits: ['Risk-based prioritization', 'Business context awareness', 'Exploitability assessment', 'Impact analysis']
     },
     {
-
       icon: GitBranch,
       title: 'Git Integration & Workflow',
       description: 'Seamless integration with Git workflows, pull request reviews, and automated security checks.',
@@ -53,7 +43,6 @@ const AICodeReviewSecurityScanner = () => {
 
   const pricing = [
     {
-
       name: 'Developer',
       price: '$99',
       period: '/month',
@@ -69,7 +58,6 @@ const AICodeReviewSecurityScanner = () => {
       popular: false
     },
     {
-
       name: 'Team',
       price: '$299',
       period: '/month',
@@ -87,7 +75,6 @@ const AICodeReviewSecurityScanner = () => {
       popular: true
     },
     {
-
       name: 'Enterprise',
       price: '$999',
       period: '/month',
@@ -108,28 +95,24 @@ const AICodeReviewSecurityScanner = () => {
 
   const useCases = [
     {
-
       title: 'Application Development',
       description: 'Integrate security scanning into your development workflow to catch vulnerabilities before they reach production.',
       icon: Code,
       benefits: ['Early vulnerability detection', 'Developer education', 'Secure coding practices', 'Quality assurance']
     },
     {
-
       title: 'DevOps & CI/CD',
       description: 'Automate security checks in your CI/CD pipeline to ensure code quality and security at every stage.',
       icon: GitBranch,
       benefits: ['Automated security gates', 'Pipeline integration', 'Quality gates', 'Deployment safety']
     },
     {
-
       title: 'Code Review Process',
       description: 'Enhance your code review process with AI-powered security analysis and automated vulnerability detection.',
       icon: Eye,
       benefits: ['Automated security reviews', 'Pull request scanning', 'Reviewer assistance', 'Quality improvement']
     },
     {
-
       title: 'Compliance & Auditing',
       description: 'Meet regulatory requirements and maintain security standards with comprehensive code security auditing.',
       icon: Shield,
@@ -139,28 +122,24 @@ const AICodeReviewSecurityScanner = () => {
 
   const vulnerabilityTypes = [
     {
-
       title: 'SQL Injection',
       description: 'Prevent unauthorized database access through malicious SQL queries.',
       icon: Database,
       examples: ['Parameterized queries', 'Input validation', 'ORM usage', 'Database permissions']
     },
     {
-
       title: 'Cross-Site Scripting (XSS)',
       description: 'Protect against malicious script injection in web applications.',
       icon: Globe,
       examples: ['Output encoding', 'Content Security Policy', 'Input sanitization', 'HTTPS enforcement']
     },
     {
-
       title: 'Authentication Bypass',
       description: 'Secure authentication mechanisms and prevent unauthorized access.',
       icon: Lock,
       examples: ['Multi-factor authentication', 'Session management', 'Password policies', 'Access controls']
     },
     {
-
       title: 'Insecure Dependencies',
       description: 'Identify and update vulnerable third-party libraries and dependencies.',
       icon: Package,
@@ -341,7 +320,6 @@ const AICodeReviewSecurityScanner = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-
                   plan.popular 
                     ? 'border-green-500/50 ring-2 ring-green-500/20' 
                     : 'border-gray-700'
@@ -377,7 +355,6 @@ const AICodeReviewSecurityScanner = () => {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
-
                     plan.popular
                       ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:from-green-600 hover:to-emerald-600'
                       : 'bg-gray-700 text-white hover:bg-gray-600'
@@ -482,4 +459,3 @@ const AICodeReviewSecurityScanner = () => {
 };
 
 export default AICodeReviewSecurityScanner;
->>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209

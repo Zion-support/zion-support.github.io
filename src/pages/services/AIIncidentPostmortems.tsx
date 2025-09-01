@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<= ; ; website: "https://ziontechgroup.com"; <= }},; > {; 
-=======
 import { motion } from "framer-motion";
 import React from 'react';
 import SEO from '@/components/SEO';
@@ -48,4 +45,3 @@ const AIIncidentPostmortems: React.FC = () => (
 
 export default AIIncidentPostmortems;
 
->>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209
