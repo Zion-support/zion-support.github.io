@@ -1,31 +1,14 @@
-import { createClient, SupabaseClient } from "@supabase/supabase-js";
+import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://placeholder.supabase.co";
-const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY || "";
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
+const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key';
 
-export type ServerSupabaseOptions = {
-  bearerToken?: string;
-};
+let cachedClient: SupabaseClient | null = null;
 
-export const createServerClient = (options: ServerSupabaseOptions = {}): SupabaseClient => {
-  const client = createClient(supabaseUrl, supabaseServiceRoleKey, {
-    auth: {
-      autoRefreshToken: false,
-      persistSession: false,
-    },
-    global: options.bearerToken
-      ? {
-          headers: { Authorization: `Bearer ${options.bearerToken}` },
-        }
-      : undefined,
+export function getServerSupabase(): SupabaseClient {
+  if (cachedClient) return cachedClient;
+  cachedClient = createClient(supabaseUrl, serviceRoleKey, {
+    auth: { persistSession: false, autoRefreshToken: false },
   });
-  return client as SupabaseClient;
-};
-
-export const getUserFromBearer = async (bearerToken?: string) => {
-  if (!bearerToken) return null;
-  const supabase = createServerClient({ bearerToken });
-  const { data, error } = await supabase.auth.getUser(bearerToken);
-  if (error) return null;
-  return data.user ?? null;
-};
+  return cachedClient;
+}

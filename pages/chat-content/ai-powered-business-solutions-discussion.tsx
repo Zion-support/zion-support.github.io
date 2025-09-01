@@ -1,1 +1,1 @@
-export default function Page() { return <main style={{padding:'2rem'}}>AI Powered Business Solutions</main>; }
+export default function Page() { return <div>ai-powered-business-solutions-discussion</div>; }

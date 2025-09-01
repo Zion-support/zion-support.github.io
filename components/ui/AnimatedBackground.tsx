@@ -2,26 +2,17 @@ import React from 'react';
 
 export default function AnimatedBackground() {
   return (
-    <div className="absolute inset-0 -z-10 overflow-hidden">
-      <style jsx>{`
-        @keyframes floatSlow {
-          0% { transform: translateY(0px) translateX(0px) scale(1); }
-          50% { transform: translateY(-40px) translateX(20px) scale(1.05); }
-          100% { transform: translateY(0px) translateX(0px) scale(1); }
-        }
-        @keyframes floatMedium {
-          0% { transform: translateY(0px) translateX(0px) scale(1); }
-          50% { transform: translateY(30px) translateX(-30px) scale(0.98); }
-          100% { transform: translateY(0px) translateX(0px) scale(1); }
+    <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+      <div className="absolute -inset-[20%] opacity-40 blur-3xl animate-[bgflow_20s_linear_infinite]" style={{
+        background: 'radial-gradient(600px at 0% 0%, #22d3ee 0%, transparent 60%), radial-gradient(600px at 100% 0%, #a78bfa 0%, transparent 60%), radial-gradient(600px at 0% 100%, #34d399 0%, transparent 60%), radial-gradient(600px at 100% 100%, #f472b6 0%, transparent 60%)'
+      }} />
+      <style jsx global>{`
+        @keyframes bgflow {
+          0% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-20px) rotate(10deg); }
+          100% { transform: translateY(0px) rotate(0deg); }
         }
       `}</style>
-      <div className="absolute -top-24 -left-24 w-[40rem] h-[40rem] rounded-full blur-3xl opacity-40"
-           style={{ background: 'radial-gradient(circle at 30% 30%, #60a5fa, transparent 60%)', animation: 'floatSlow 12s ease-in-out infinite' }} />
-      <div className="absolute top-1/3 -right-24 w-[36rem] h-[36rem] rounded-full blur-3xl opacity-40"
-           style={{ background: 'radial-gradient(circle at 70% 70%, #a78bfa, transparent 60%)', animation: 'floatMedium 10s ease-in-out infinite' }} />
-      <div className="absolute bottom-0 left-1/4 w-[44rem] h-[44rem] rounded-full blur-3xl opacity-30"
-           style={{ background: 'radial-gradient(circle at 50% 50%, #34d399, transparent 60%)', animation: 'floatSlow 14s ease-in-out infinite' }} />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 dark:via-black/10 to-transparent" />
     </div>
   );
 }

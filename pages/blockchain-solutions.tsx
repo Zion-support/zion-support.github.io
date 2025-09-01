@@ -1,1 +1,8 @@
-export default function BlockchainSolutions() { return <main style={{padding:'2rem'}}>Blockchain Solutions</main>; }
+export default function BlockchainSolutions() {
+  return (
+    <div className="space-y-2">
+      <h1 className="text-2xl font-semibold">Blockchain Solutions</h1>
+      <p>Decentralized offerings overview.</p>
+    </div>
+  );
+}

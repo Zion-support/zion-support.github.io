@@ -1,1 +1,1 @@
-export default function Page() { return <main style={{padding:'2rem'}}>Sustainable Technology Practices</main>; }
+export default function Page() { return <div>sustainable-technology-practices</div>; }

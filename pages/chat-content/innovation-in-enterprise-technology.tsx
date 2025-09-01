@@ -1,1 +1,1 @@
-export default function Page() { return <main style={{padding:'2rem'}}>Innovation in Enterprise Technology</main>; }
+export default function Page() { return <div>innovation-in-enterprise-technology</div>; }
