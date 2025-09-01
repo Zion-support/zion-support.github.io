@@ -9,6 +9,8 @@ import {
   Shield,
   CheckCircle,
   ArrowRight
+} from 'lucide-react';
+
 export function AboutSection() {
     const achievements = [
         { number: "10+", label: "Years of Experience", icon: <Award className="w-6 h-6"/> },
@@ -36,7 +38,7 @@ export function AboutSection() {
             title: "Trust & Security",
             description: "Your data and systems are protected with enterprise-grade security and compliance standards.",
             icon: <Shield className="w-8 h-8"/>
-
+        }
     ];
     const technologies = [
         "Artificial Intelligence & ML", "Cloud Computing", "Cybersecurity", "Data Analytics",
@@ -73,7 +75,7 @@ export function AboutSection() {
             <Link
               to="/about"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-neon-lg hover:scale-105 transition-all duration-300 transform"
-
+            >
               Learn Our Story
               <ArrowRight className="w-5 h-5"/>
             </Link>
