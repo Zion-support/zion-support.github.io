@@ -1,1 +1,3 @@
-export default function EnhancedHome(){return <div>Enhanced Home</div>}
+export default function EnhancedHomePage() {
+  return <div>Enhanced Home</div>;
+}

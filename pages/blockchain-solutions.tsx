@@ -1,1 +1,3 @@
-export default function BlockchainSolutions(){return <div>Blockchain Solutions</div>}
+export default function BlockchainSolutionsPage() {
+  return <div>Blockchain Solutions</div>;
+}

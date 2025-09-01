@@ -1,28 +1,24 @@
 import React from 'react';
-import Image from 'next/image';
+import EnhancedCard from './EnhancedCard';
 
-interface EnhancedMarketplaceCardProps {
+export type MarketplaceCardProps = {
   title: string;
-  description: string;
-  price?: string;
-  image?: string;
-}
+  subtitle?: string;
+  description?: string;
+  footer?: React.ReactNode;
+};
 
-export default function EnhancedMarketplaceCard({ title, description, price, image }: EnhancedMarketplaceCardProps) {
+export default function EnhancedMarketplaceCard({ title, subtitle, description, footer }: MarketplaceCardProps) {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden">
-      {image && (
-        <div className="relative w-full h-48">
-          <Image src={image} alt={title} layout="fill" objectFit="cover" sizes="100vw" unoptimized />
+    <EnhancedCard className="p-5">
+      <div className="space-y-2">
+        <div>
+          <h3 className="text-base font-semibold leading-tight">{title}</h3>
+          {subtitle && <p className="text-sm text-gray-500 dark:text-gray-400">{subtitle}</p>}
         </div>
-      )}
-      <div className="p-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-        <p className="text-gray-600 mb-4">{description}</p>
-        {price && (
-          <div className="text-xl font-bold text-blue-600">{price}</div>
-        )}
+        {description && <p className="text-sm text-gray-700 dark:text-gray-300">{description}</p>}
+        {footer && <div className="pt-2">{footer}</div>}
       </div>
-    </div>
+    </EnhancedCard>
   );
 }

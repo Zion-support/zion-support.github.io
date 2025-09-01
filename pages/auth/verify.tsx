@@ -1,1 +1,3 @@
-export default function Verify(){return <div>Verify</div>}
+export default function VerifyPage() {
+  return <div>Verify</div>;
+}

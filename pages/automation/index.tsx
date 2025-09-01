@@ -1,1 +1,3 @@
-export default function Automation(){return <div>Automation</div>}
+export default function AutomationIndexPage() {
+  return <div>Automation</div>;
+}

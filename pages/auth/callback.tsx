@@ -1,1 +1,3 @@
-export default function AuthCallback(){return <div>Auth Callback</div>}
+export default function CallbackPage() {
+  return <div>Callback</div>;
+}
