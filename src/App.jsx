@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from "./layout/AppHeader";
 import { Footer } from "./components/Footer.jsx";
-import { ChatAssistant } from "./components/ChatAssistant";
+import ChatAssistant from "./components/ChatAssistant";
 
 // Lazy load all pages
 const Home = React.lazy(() => import('./pages/Home.tsx'));
@@ -68,7 +68,6 @@ function App() {
               <Route path="/sitemap" element={<Sitemap />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/pricing" element={<ComprehensivePricing />} />
 
               {/* Services routes */}
               <Route path="/services" element={<ServicesPage />} />
@@ -116,13 +115,7 @@ function App() {
         <ChatAssistant />
       </div>
     </Router>
-<<<<<<< HEAD
   );
-
-export default App;
 }
-=======
-  )}
 
 export default App;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
