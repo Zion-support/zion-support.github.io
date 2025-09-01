@@ -1,230 +1,24 @@
 #!/bin/bash
 
-<<<<<<< HEAD
-# PM2 Automation Startup Script
-# This script starts the complete PM2 automation system for error monitoring and fixing
+# Enhanced PM2 Automation System Startup Script
+# This script starts the complete intelligent PM2 automation ecosystem
 
 set -e
 
-echo "🚀 Starting PM2 Automation System..."
-
-=======
-# PM2 Automation System Startup Script
-# This script starts the complete error monitoring and fixing automation system
-
-set -e
-
->>>>>>> f7db7ceeeca70e96601169c4adc70ab97d4c7057
 # Colors for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
-<<<<<<< HEAD
-NC='\033[0m' # No Color
-
-# Function to print colored output
-print_status() {
-    echo -e "${GREEN}[INFO]${NC} $1"
-}
-
-print_warning() {
-    echo -e "${YELLOW}[WARNING]${NC} $1"
-}
-
-print_error() {
-    echo -e "${RED}[ERROR]${NC} $1"
-}
-
-print_header() {
-    echo -e "${BLUE}$1${NC}"
-}
-
-# Check if PM2 is installed
-if ! command -v pm2 &> /dev/null; then
-    print_error "PM2 is not installed. Installing PM2..."
-    npm install -g pm2
-else
-    print_status "PM2 is already installed"
-fi
-
-# Create necessary directories
-print_status "Creating necessary directories..."
-mkdir -p logs
-mkdir -p error-reports
-mkdir -p scripts
-
-# Make scripts executable
-print_status "Making scripts executable..."
-chmod +x scripts/*.js
-chmod +x scripts/*.sh 2>/dev/null || true
-
-# Install dependencies if not already installed
-if [ ! -d "node_modules" ]; then
-    print_status "Installing dependencies..."
-    npm install --legacy-peer-deps
-else
-    print_status "Dependencies already installed"
-fi
-
-# Build the project
-print_status "Building the project..."
-if npm run build; then
-    print_status "Build completed successfully"
-else
-    print_warning "Build failed, but continuing with automation setup"
-fi
-
-# Stop any existing PM2 processes
-print_status "Stopping existing PM2 processes..."
-pm2 delete all 2>/dev/null || true
-
-# Start PM2 processes using ecosystem file
-print_header "🔧 Starting PM2 Ecosystem..."
-if pm2 start ecosystem.config.js; then
-    print_status "PM2 ecosystem started successfully"
-else
-    print_error "Failed to start PM2 ecosystem"
-    exit 1
-fi
-
-# Install PM2 logrotate module
-print_status "Installing PM2 logrotate..."
-pm2 install pm2-logrotate 2>/dev/null || true
-
-# Configure PM2 logrotate
-print_status "Configuring PM2 logrotate..."
-pm2 set pm2-logrotate:max_size 10M
-pm2 set pm2-logrotate:retain 7
-pm2 set pm2-logrotate:compress true
-pm2 set pm2-logrotate:dateFormat 'YYYY-MM-DD_HH-mm-ss'
-
-# Save PM2 configuration
-print_status "Saving PM2 configuration..."
-pm2 save
-
-# Setup PM2 startup (optional - only if running as system service)
-if [ "$1" = "--startup" ]; then
-    print_status "Setting up PM2 startup..."
-    pm2 startup | tail -1 | bash
-fi
-
-# Create health endpoint if it doesn't exist
-print_status "Creating health endpoint..."
-cat > health-endpoint.js << 'EOF'
-const http = require('http');
-const port = process.env.PORT || 3000;
-
-const server = http.createServer((req, res) => {
-  if (req.url === '/health') {
-    res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({
-      status: 'healthy',
-      timestamp: new Date().toISOString(),
-      uptime: process.uptime(),
-      memory: process.memoryUsage(),
-      pid: process.pid
-    }));
-  } else {
-    res.writeHead(404, { 'Content-Type': 'text/plain' });
-    res.end('Not Found');
-  }
-});
-
-server.listen(port, () => {
-  console.log(`Health endpoint server running on port ${port}`);
-});
-EOF
-
-# Start health endpoint server
-print_status "Starting health endpoint server..."
-pm2 start health-endpoint.js --name health-endpoint
-
-# Display PM2 status
-print_header "📊 PM2 Process Status:"
-pm2 list
-
-# Display monitoring information
-print_header "🔍 Monitoring Information:"
-echo -e "${GREEN}PM2 Monitor:${NC} pm2 monit"
-echo -e "${GREEN}View Logs:${NC} pm2 logs"
-echo -e "${GREEN}Restart All:${NC} pm2 restart all"
-echo -e "${GREEN}Stop All:${NC} pm2 stop all"
-echo -e "${GREEN}Health Check:${NC} curl http://localhost:${PORT:-3000}/health"
-
-# Show automation schedule
-print_header "⏰ Automation Schedule:"
-echo -e "${BLUE}Error Monitor:${NC} Every 10 minutes"
-echo -e "${BLUE}Health Checker:${NC} Every 5 minutes"
-echo -e "${BLUE}Auto Fixer:${NC} Every 2 hours"
-echo -e "${BLUE}Log Cleaner:${NC} Daily at 2 AM"
-echo -e "${BLUE}App Restart:${NC} Daily at 4 AM"
-
-# Create a quick test of the automation system
-print_header "🧪 Testing Automation System..."
-
-# Test error monitor
-print_status "Testing error monitor..."
-node scripts/error-monitor.js &
-ERROR_MONITOR_PID=$!
-sleep 5
-kill $ERROR_MONITOR_PID 2>/dev/null || true
-print_status "Error monitor test completed"
-
-# Test health checker
-print_status "Testing health checker..."
-node scripts/health-checker.js &
-HEALTH_CHECKER_PID=$!
-sleep 5
-kill $HEALTH_CHECKER_PID 2>/dev/null || true
-print_status "Health checker test completed"
-
-# Show recent logs
-print_header "📋 Recent Logs:"
-if [ -f "logs/error-monitor.log" ]; then
-    echo -e "${GREEN}Error Monitor Logs:${NC}"
-    tail -5 logs/error-monitor.log 2>/dev/null || echo "No error monitor logs yet"
-fi
-
-if [ -f "logs/health-checker.log" ]; then
-    echo -e "${GREEN}Health Checker Logs:${NC}"
-    tail -5 logs/health-checker.log 2>/dev/null || echo "No health checker logs yet"
-fi
-
-# Final status
-print_header "✅ PM2 Automation System Started Successfully!"
-echo ""
-echo -e "${GREEN}The following automation processes are now running:${NC}"
-echo -e "  • ${BLUE}zion-app${NC} - Main application"
-echo -e "  • ${BLUE}error-monitor${NC} - Monitors and detects errors"
-echo -e "  • ${BLUE}health-checker${NC} - Performs health checks"
-echo -e "  • ${BLUE}auto-fixer${NC} - Automatically fixes detected errors"
-echo -e "  • ${BLUE}log-cleaner${NC} - Manages log files and cleanup"
-echo -e "  • ${BLUE}health-endpoint${NC} - Provides health check endpoint"
-echo ""
-echo -e "${GREEN}Log files are stored in:${NC} ./logs/"
-echo -e "${GREEN}Error reports are stored in:${NC} ./error-reports/"
-echo ""
-echo -e "${YELLOW}To monitor the system:${NC}"
-echo -e "  pm2 monit           - Real-time monitoring dashboard"
-echo -e "  pm2 logs            - View all logs"
-echo -e "  pm2 logs <app-name> - View specific app logs"
-echo ""
-echo -e "${YELLOW}To manage the system:${NC}"
-echo -e "  pm2 restart all     - Restart all processes"
-echo -e "  pm2 stop all        - Stop all processes"
-echo -e "  pm2 delete all      - Delete all processes"
-echo ""
-echo "🎉 Your project now has automated error monitoring and fixing!"
-=======
 PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 NC='\033[0m' # No Color
 
 # Project configuration
-PROJECT_ROOT="/workspace"
-ECOSYSTEM_CONFIG="$PROJECT_ROOT/ecosystem.config.cjs"
-LOGS_DIR="$PROJECT_ROOT/logs"
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+ENHANCED_ECOSYSTEM="$PROJECT_ROOT/ecosystem.enhanced.cjs"
+ORIGINAL_ECOSYSTEM="$PROJECT_ROOT/ecosystem.config.cjs"
+BACKUP_ECOSYSTEM="$PROJECT_ROOT/ecosystem.config.backup.$(date +%s).cjs"
 
 # Logging functions
 log() {
@@ -258,30 +52,31 @@ check_pm2() {
     fi
 }
 
-# Create necessary directories
-setup_directories() {
-    log "Setting up directories..."
-    
-    mkdir -p "$LOGS_DIR"
-    mkdir -p "$PROJECT_ROOT/error-reports"
-    mkdir -p "$PROJECT_ROOT/backups"
-    mkdir -p "$PROJECT_ROOT/scripts/automation"
-    
-    success "Directories created"
+# Backup original ecosystem
+backup_original_ecosystem() {
+    if [ -f "$ORIGINAL_ECOSYSTEM" ]; then
+        log "Backing up original ecosystem configuration..."
+        cp "$ORIGINAL_ECOSYSTEM" "$BACKUP_ECOSYSTEM"
+        success "Original ecosystem backed up to: $BACKUP_ECOSYSTEM"
+    fi
 }
 
-# Install PM2 modules if needed
-install_pm2_modules() {
-    log "Setting up PM2 modules..."
-    
-    # Install PM2 log rotation
-    if ! pm2 list | grep -q "pm2-logrotate"; then
-        pm2 install pm2-logrotate
-        pm2 set pm2-logrotate:max_size 10M
-        pm2 set pm2-logrotate:retain 7
-        pm2 set pm2-logrotate:compress true
-        success "PM2 logrotate installed and configured"
+# Setup enhanced ecosystem
+setup_enhanced_ecosystem() {
+    if [ ! -f "$ENHANCED_ECOSYSTEM" ]; then
+        error "Enhanced ecosystem configuration not found: $ENHANCED_ECOSYSTEM"
+        exit 1
     fi
+    
+    log "Setting up enhanced PM2 ecosystem..."
+    
+    # Create logs directory
+    mkdir -p "$PROJECT_ROOT/logs"
+    
+    # Set proper permissions
+    chmod +x "$PROJECT_ROOT/scripts/automation/"*.cjs
+    
+    success "Enhanced ecosystem setup completed"
 }
 
 # Stop existing PM2 processes
@@ -289,25 +84,20 @@ stop_existing_processes() {
     log "Stopping existing PM2 processes..."
     
     if pm2 list | grep -q "online\|stopped"; then
-        pm2 stop all 2>/dev/null || true
-        pm2 delete all 2>/dev/null || true
-        success "Existing PM2 processes stopped"
+        pm2 stop all
+        pm2 delete all
+        success "Existing PM2 processes stopped and deleted"
     else
         info "No existing PM2 processes found"
     fi
 }
 
-# Start PM2 ecosystem
-start_pm2_ecosystem() {
-    log "Starting PM2 automation ecosystem..."
+# Start enhanced PM2 system
+start_enhanced_system() {
+    log "Starting Enhanced PM2 Automation System..."
     
-    if [ ! -f "$ECOSYSTEM_CONFIG" ]; then
-        error "Ecosystem configuration not found: $ECOSYSTEM_CONFIG"
-        exit 1
-    fi
-    
-    # Start all processes
-    pm2 start "$ECOSYSTEM_CONFIG"
+    # Start the enhanced ecosystem
+    pm2 start "$ENHANCED_ECOSYSTEM"
     
     # Wait for processes to start
     sleep 5
@@ -380,8 +170,8 @@ display_status() {
     echo
     info "System Information:"
     echo "  Project Root: $PROJECT_ROOT"
-    echo "  Ecosystem Config: $ECOSYSTEM_CONFIG"
-    echo "  Logs Directory: $LOGS_DIR"
+    echo "  Ecosystem Config: $ENHANCED_ECOSYSTEM"
+    echo "  Logs Directory: $PROJECT_ROOT/logs"
     echo "  PM2 Version: $(pm2 --version)"
     echo "  Node Version: $(node --version)"
     echo "  NPM Version: $(npm --version)"
@@ -405,11 +195,11 @@ display_status() {
     
     echo
     info "Log Files:"
-    echo "  - Error Monitor: $LOGS_DIR/error-monitor.log"
-    echo "  - Syntax Fixer: $LOGS_DIR/syntax-fixer.log"
-    echo "  - Dependency Manager: $LOGS_DIR/dependency-manager.log"
-    echo "  - Build Monitor: $LOGS_DIR/build-monitor.log"
-    echo "  - Main App: $LOGS_DIR/zion-website.log"
+    echo "  - Error Monitor: $PROJECT_ROOT/logs/error-monitor.log"
+    echo "  - Syntax Fixer: $PROJECT_ROOT/logs/syntax-fixer.log"
+    echo "  - Dependency Manager: $PROJECT_ROOT/logs/dependency-manager.log"
+    echo "  - Build Monitor: $PROJECT_ROOT/logs/build-monitor.log"
+    echo "  - Main App: $PROJECT_ROOT/logs/zion-website.log"
 }
 
 # Create management commands
@@ -477,7 +267,7 @@ main() {
     stop_existing_processes
     
     # Start automation system
-    if start_pm2_ecosystem; then
+    if start_enhanced_system; then
         success "PM2 automation system started successfully"
         
         # Run initial fixes
@@ -536,4 +326,3 @@ case "${1:-}" in
         main "$@"
         ;;
 esac
->>>>>>> f7db7ceeeca70e96601169c4adc70ab97d4c7057
