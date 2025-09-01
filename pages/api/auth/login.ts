@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { createClient } from '@supabase/supabase-js';
+import bcrypt from 'bcryptjs';
 
 const supabaseUrl = process.env.SUPABASE_URL as string;
 const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY as string;
@@ -12,10 +13,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const { email, password } = req.body as { email: string; password: string };
 
-  const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+  // hash only if not already hashed to avoid double hashing
+  const hashedPassword = password.startsWith('$2')
+    ? password
+    : await bcrypt.hash(password, 10);
+
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email,
+    password: hashedPassword,
+  });
+
+  console.log('Supabase signIn response:', { data, error });
 
   if (error || !data?.session) {
-    return res.status(401).json({ error: 'Invalid credentials' });
+    if (error?.status === 400 && /confirm/.test(error.message.toLowerCase())) {
+      res.status(400).json({ error: 'Please confirm your email' });
+      return;
+    }
+    res.status(401).json({ error: 'Invalid credentials' });
+    return;
   }
 
   const token = data.session.access_token;
