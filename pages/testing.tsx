@@ -6,46 +6,40 @@ export default function TestingPage() {
   return (
     <>
       <Head>
-        <title>Testing & Quality | Zion Tech Group</title>
-        <meta name="description" content="Automated testing, QA, and continuous validation for reliable autonomous systems." />
-        <meta property="og:title" content="Testing & Quality" />
-        <meta property="og:description" content="Automated testing, QA, and continuous validation for reliable autonomous systems." />
-        <meta name="twitter:card" content="summary_large_image" />
+        <title>Testing | Zion Tech Group</title>
+        <meta name="description" content="Testing strategy, quality assurance, and validation pipelines." />
       </Head>
-
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-          <section className="text-center mb-12">
-            <h1 className="text-5xl font-extrabold mb-4 bg-gradient-to-r from-fuchsia-400 to-purple-500 bg-clip-text text-transparent">Testing & Quality</h1>
-            <p className="text-white/80 max-w-3xl mx-auto">Robust suites for unit, integration, performance, and security testing, with continuous validation.</p>
-          </section>
-
-          <section className="mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-              <h2 className="text-xl font-semibold text-fuchsia-300 mb-3">Quality Capabilities</h2>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Automated testing suites</li>
-                <li>• Performance testing</li>
-                <li>• Security testing</li>
-                <li>• Accessibility audits</li>
-                <li>• Continuous validation</li>
+          <nav className="mb-8">
+            <Link href="/" className="text-cyan-400 hover:text-cyan-300">← Back to Home</Link>
+          </nav>
+          <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-amber-400 to-yellow-400 bg-clip-text text-transparent">Testing</h1>
+          <p className="text-white/80 max-w-3xl mb-8">Robust automated testing across unit, integration, end-to-end, and performance ensures reliability at scale.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white/10 rounded-xl p-6 border border-white/20">
+              <h2 className="text-lg font-semibold text-amber-400 mb-3">Coverage</h2>
+              <ul className="text-white/80 text-sm space-y-2">
+                <li>• Unit and integration testing</li>
+                <li>• E2E and smoke tests</li>
+                <li>• Security and accessibility checks</li>
+                <li>• Continuous test health monitoring</li>
               </ul>
             </div>
-            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-              <h2 className="text-xl font-semibold text-fuchsia-300 mb-3">Resources</h2>
-              <ul className="text-white/80 space-y-2 text-sm">
+            <div className="bg-white/10 rounded-xl p-6 border border-white/20">
+              <h2 className="text-lg font-semibold text-amber-400 mb-3">Documentation</h2>
+              <ul className="text-white/80 text-sm space-y-2">
                 <li>
-                  <a className="text-fuchsia-300 hover:text-fuchsia-200" href="https://github.com/Zion-Holdings/zion.app/blob/main/TESTING.md" target="_blank" rel="noreferrer">Testing Guide on GitHub →</a>
+                  <a href="https://github.com/Zion-Holdings/zion.app/blob/main/TESTING.md" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200">Testing Guide →</a>
                 </li>
                 <li>
-                  <Link className="text-cyan-300 hover:text-cyan-200" href="/reports">Reports & Analytics →</Link>
+                  <a href="https://github.com/Zion-Holdings/zion.app/blob/main/pr-smoke-report.md" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200">PR Smoke Report →</a>
+                </li>
+                <li>
+                  <a href="https://github.com/Zion-Holdings/zion.app/blob/main/playwright-smoke-report.md" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200">Playwright Smoke →</a>
                 </li>
               </ul>
             </div>
-          </section>
-
-          <div className="text-center mt-10">
-            <Link href="/" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg transition-all">Back to Home</Link>
           </div>
         </main>
       </div>
