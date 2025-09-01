@@ -250,6 +250,23 @@ schedule = "*/2 * * * *" # every 2 minutes
   name = "website-search-index-runner"
   schedule = "29 */4 * * *"
 
+# Resolve conflict: include both redirect tools and a11y audit
+[[scheduled.functions]]
+  name = "redirect-healer"
+  schedule = "*/15 * * * *"
+
+[[scheduled.functions]]
+  name = "sitemap-prioritizer"
+  schedule = "17 */6 * * *"
+
+[[scheduled.functions]]
+  name = "redirect-manager"
+  schedule = "*/30 * * * *"
+
+[[scheduled.functions]]
+  name = "a11y-audit-runner"
+  schedule = "*/20 * * * *"
+
 # From feature branch (keep)
 [[scheduled.functions]]
   name = "automation-guardian-runner"
@@ -267,14 +284,7 @@ schedule = "*/2 * * * *" # every 2 minutes
   name = "branch-cleanup-runner"
   schedule = "0 3 * * *" # daily at 03:00 UTC
 
+# New: Roadmap runner
 [[scheduled.functions]]
-  name = "perf-budget-enforcer"
-  schedule = "29 */6 * * *" # every 6 hours
-
-[[scheduled.functions]]
-  name = "stale-content-refresher"
-  schedule = "23 */6 * * *" # every 6 hours
-
-[[scheduled.functions]]
-  name = "docs-glossary-builder"
-  schedule = "0 2 * * *" # daily at 02:00 UTC
+  name = "roadmap-runner"
+  schedule = "*/10 * * * *"

@@ -136,12 +136,27 @@ const Index: NextPage = () => {
              <a className="text-cyan-300 underline" href="/.netlify/functions/og-tags-validator" target="_blank" rel="noopener">Trigger / View</a>
            </li>
 
-           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-             <h2 className="text-xl font-bold">Internal Redirect Optimizer</h2>
-             <p className="text-white/70">Finds internal 301/302 chains and suggests direct links.</p>
-             <a className="text-cyan-300 underline" href="/.netlify/functions/internal-redirect-optimizer" target="_blank" rel="noopener">Trigger / View</a>
-           </li>
-         </ul>
+          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
+            <h2 className="text-xl font-bold">Cloud Autonomous Orchestrator</h2>
+            <p className="text-white/70">Runs cloud orchestrations; fixes, builds, and syncs.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/cloud-autonomous-orchestrator-runner" target="_blank" rel="noopener">Trigger / View</a>
+          </li>
+
+          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
+            <h2 className="text-xl font-bold">Branch Cleanup Runner</h2>
+            <p className="text-white/70">Deletes merged or stale ephemeral branches via GitHub API.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/branch-cleanup-runner" target="_blank" rel="noopener">Trigger / View</a>
+          </li>
+
+          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
+            <h2 className="text-xl font-bold">Autonomous Roadmap</h2>
+            <p className="text-white/70">Continuously generated roadmap from repository TODOs.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/roadmap-runner" target="_blank" rel="noopener">Trigger / View</a>
+            <span className="block text-white/60 text-sm mt-1">
+              <a className="underline" href="/reports/roadmap" target="_blank" rel="noopener">Open Report</a>
+            </span>
+          </li>
+        </ul>
       </main>
     </div>
   );

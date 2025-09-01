@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-11T22:59:02.238Z",
+  "generatedAt": "2025-08-11T22:59:55.954Z",
   "functions": [
     "a11y-audit-runner",
     "ai-changelog-runner",
@@ -76,7 +76,7 @@
     "repo-knowledge-graph-runner",
     "repo-radar-and-graph",
     "repo-radar-runner",
-    "roadmap-synthesizer",
+    "roadmap-runner",
     "schedule-content-index",
     "schedule-homepage",
     "schedule-knowledge-graph",
