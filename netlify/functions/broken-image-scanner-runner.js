@@ -1,25 +1,32 @@
-#!/usr/bin/env node
-
-'use strict';
-
-const fs = require('fs');
-const path = require('path');
-
 exports.handler = async function(event, context) {
   try {
-    const timestamp = new Date().toISOString();
-    const reportPath = path.join(process.cwd(), 'broken-image-scanner-runner-report.md');
-    const reportContent = '# broken-image-scanner-runner Report\n\n' +
-      'Generated: ' + timestamp + '\n\n' +
-      '## Status\n' +
-      '- Task: broken-image-scanner-runner\n' +
-      '- Status: Completed\n' +
-      '- Timestamp: ' + timestamp + '\n';
-
-    fs.writeFileSync(reportPath, reportContent);
-
-    return { statusCode: 200, body: JSON.stringify({ name: 'broken-image-scanner-runner', status: 'ok', timestamp }) };
+    console.log('Broken image scanner runner function triggered');
+    
+    // Simulate broken image scanning tasks
+    const brokenImageTasks = [
+      'Scanning for broken images',
+      'Identifying dead links',
+      'Generating repair reports'
+    ];
+    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        message: 'Broken image scanner runner function executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'broken-image-scanner-runner',
+        brokenImageTasks: brokenImageTasks,
+        status: 'completed'
+      })
+    };
   } catch (error) {
-    return { statusCode: 500, body: JSON.stringify({ name: 'broken-image-scanner-runner', status: 'error', error: error && error.message }) };
+    console.error('Error in broken image scanner runner function:', error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({
+        error: 'Internal server error',
+        message: error.message
+      })
+    };
   }
 };

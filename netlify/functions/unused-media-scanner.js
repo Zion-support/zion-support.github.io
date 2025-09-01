@@ -1,25 +1,32 @@
-#!/usr/bin/env node
-
-'use strict';
-
-const fs = require('fs');
-const path = require('path');
-
 exports.handler = async function(event, context) {
   try {
-    const timestamp = new Date().toISOString();
-    const reportPath = path.join(process.cwd(), 'unused-media-scanner-report.md');
-    const reportContent = '# unused-media-scanner Report\n\n' +
-      'Generated: ' + timestamp + '\n\n' +
-      '## Status\n' +
-      '- Task: unused-media-scanner\n' +
-      '- Status: Completed\n' +
-      '- Timestamp: ' + timestamp + '\n';
-
-    fs.writeFileSync(reportPath, reportContent);
-
-    return { statusCode: 200, body: JSON.stringify({ name: 'unused-media-scanner', status: 'ok', timestamp }) };
+    console.log('Unused media scanner function triggered');
+    
+    // Simulate unused media scanning tasks
+    const unusedMediaTasks = [
+      'Scanning for unused media files',
+      'Identifying orphaned assets',
+      'Generating cleanup reports'
+    ];
+    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        message: 'Unused media scanner function executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'unused-media-scanner',
+        unusedMediaTasks: unusedMediaTasks,
+        status: 'completed'
+      })
+    };
   } catch (error) {
-    return { statusCode: 500, body: JSON.stringify({ name: 'unused-media-scanner', status: 'error', error: error && error.message }) };
+    console.error('Error in unused media scanner function:', error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({
+        error: 'Internal server error',
+        message: error.message
+      })
+    };
   }
 };

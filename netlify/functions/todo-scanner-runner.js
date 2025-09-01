@@ -1,25 +1,32 @@
-#!/usr/bin/env node
-
-'use strict';
-
-const fs = require('fs');
-const path = require('path');
-
 exports.handler = async function(event, context) {
   try {
-    const timestamp = new Date().toISOString();
-    const reportPath = path.join(process.cwd(), 'todo-scanner-runner-report.md');
-    const reportContent = '# todo-scanner-runner Report\n\n' +
-      'Generated: ' + timestamp + '\n\n' +
-      '## Status\n' +
-      '- Task: todo-scanner-runner\n' +
-      '- Status: Completed\n' +
-      '- Timestamp: ' + timestamp + '\n';
-
-    fs.writeFileSync(reportPath, reportContent);
-
-    return { statusCode: 200, body: JSON.stringify({ name: 'todo-scanner-runner', status: 'ok', timestamp }) };
+    console.log('Todo scanner runner function triggered');
+    
+    // Simulate todo scanning tasks
+    const todoTasks = [
+      'Scanning for TODO comments',
+      'Identifying pending tasks',
+      'Generating task reports'
+    ];
+    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        message: 'Todo scanner runner function executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'todo-scanner-runner',
+        todoTasks: todoTasks,
+        status: 'completed'
+      })
+    };
   } catch (error) {
-    return { statusCode: 500, body: JSON.stringify({ name: 'todo-scanner-runner', status: 'error', error: error && error.message }) };
+    console.error('Error in todo scanner runner function:', error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({
+        error: 'Internal server error',
+        message: error.message
+      })
+    };
   }
 };

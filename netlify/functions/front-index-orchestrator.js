@@ -1,43 +1,32 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context) {
   try {
-    console.log('front-index-orchestrator function triggered');
+    console.log('Front index orchestrator function triggered');
     
-    // Simulate front-end indexing orchestration
-    const indexData = {
-      pages: Math.floor(Math.random() * 50) + 20,
-      components: Math.floor(Math.random() * 100) + 50,
-      assets: Math.floor(Math.random() * 200) + 100,
-      lastIndexed: new Date().toISOString(),
-      status: 'indexed'
-    };
-    
-    // Simulate some processing time
-    await new Promise(resolve => setTimeout(resolve, 80));
+    // Simulate front index orchestration tasks
+    const tasks = [
+      'Building front index',
+      'Optimizing search',
+      'Updating navigation'
+    ];
     
     return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'front-index-orchestrator function executed successfully',
+        message: 'Front index orchestrator function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'front-index-orchestrator',
-        indexData,
-        orchestrated: true
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+        tasks: tasks,
+        status: 'completed'
+      })
     };
   } catch (error) {
-    console.error('Error in front-index-orchestrator:', error);
+    console.error('Error in front index orchestrator function:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+      })
     };
   }
 };

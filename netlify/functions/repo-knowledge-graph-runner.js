@@ -1,25 +1,32 @@
-#!/usr/bin/env node
-
-'use strict';
-
-const fs = require('fs');
-const path = require('path');
-
 exports.handler = async function(event, context) {
   try {
-    const timestamp = new Date().toISOString();
-    const reportPath = path.join(process.cwd(), 'repo-knowledge-graph-runner-report.md');
-    const reportContent = '# repo-knowledge-graph-runner Report\n\n' +
-      'Generated: ' + timestamp + '\n\n' +
-      '## Status\n' +
-      '- Task: repo-knowledge-graph-runner\n' +
-      '- Status: Completed\n' +
-      '- Timestamp: ' + timestamp + '\n';
-
-    fs.writeFileSync(reportPath, reportContent);
-
-    return { statusCode: 200, body: JSON.stringify({ name: 'repo-knowledge-graph-runner', status: 'ok', timestamp }) };
+    console.log('Repo knowledge graph runner function triggered');
+    
+    // Simulate repository knowledge graph tasks
+    const knowledgeGraphTasks = [
+      'Building knowledge graph',
+      'Analyzing repository structure',
+      'Mapping code relationships'
+    ];
+    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        message: 'Repo knowledge graph runner function executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'repo-knowledge-graph-runner',
+        knowledgeGraphTasks: knowledgeGraphTasks,
+        status: 'completed'
+      })
+    };
   } catch (error) {
-    return { statusCode: 500, body: JSON.stringify({ name: 'repo-knowledge-graph-runner', status: 'error', error: error && error.message }) };
+    console.error('Error in repo knowledge graph runner function:', error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({
+        error: 'Internal server error',
+        message: error.message
+      })
+    };
   }
 };

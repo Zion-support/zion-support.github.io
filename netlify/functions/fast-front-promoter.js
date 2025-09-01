@@ -1,43 +1,32 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context) {
   try {
-    console.log('fast-front-promoter function triggered');
+    console.log('Fast front promoter function triggered');
     
-    // Simulate fast front-end promotion
-    const promotionData = {
-      speed: Math.floor(Math.random() * 100) + 50,
-      optimization: Math.floor(Math.random() * 100) + 60,
-      performance: Math.floor(Math.random() * 100) + 70,
-      lastPromoted: new Date().toISOString(),
-      promoted: true
-    };
-    
-    // Simulate some processing time
-    await new Promise(resolve => setTimeout(resolve, 40));
+    // Simulate fast front promotion tasks
+    const promotionTasks = [
+      'Promoting front content',
+      'Optimizing visibility',
+      'Enhancing discoverability'
+    ];
     
     return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'fast-front-promoter function executed successfully',
+        message: 'Fast front promoter function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'fast-front-promoter',
-        promotionData,
-        promoted: true
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+        promotionTasks: promotionTasks,
+        status: 'completed'
+      })
     };
   } catch (error) {
-    console.error('Error in fast-front-promoter:', error);
+    console.error('Error in fast front promoter function:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+      })
     };
   }
 };

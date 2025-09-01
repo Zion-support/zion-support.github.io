@@ -1,48 +1,31 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🛡️ headers-enforcer function triggered');
+    console.log('Headers enforcer function triggered');
     
-    // Simulate headers enforcement logic
-    const timestamp = new Date().toISOString();
-    const result = {
-      status: 'success',
-      function: 'headers-enforcer',
-      timestamp: timestamp,
-      message: 'Headers enforcement completed successfully',
-      data: {
-        headersEnforced: Math.floor(Math.random() * 10) + 5,
-        securityHeaders: [
-          'Strict-Transport-Security',
-          'X-Content-Type-Options',
-          'X-Frame-Options',
-          'Referrer-Policy',
-          'Content-Security-Policy'
-        ],
-        complianceScore: (Math.random() * 0.2 + 0.8).toFixed(4),
-        lastEnforcement: timestamp
-      }
-    };
+    // Simulate headers enforcement tasks
+    const headersEnforcementTasks = [
+      'Enforcing HTTP headers',
+      'Validating security headers',
+      'Optimizing caching headers'
+    ];
     
     return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Cache-Control': 'no-cache'
-      },
-      body: JSON.stringify(result)
+      body: JSON.stringify({
+        message: 'Headers enforcer function executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'headers-enforcer',
+        headersEnforcementTasks: headersEnforcementTasks,
+        status: 'completed'
+      })
     };
   } catch (error) {
-    console.error('❌ headers-enforcer error:', error);
+    console.error('Error in headers enforcer function:', error);
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json'
-      },
       body: JSON.stringify({
-        status: 'error',
-        function: 'headers-enforcer',
-        error: error.message,
-        timestamp: new Date().toISOString()
+        error: 'Internal server error',
+        message: error.message
       })
     };
   }

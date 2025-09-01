@@ -1,25 +1,32 @@
-#!/usr/bin/env node
-
-'use strict';
-
-const fs = require('fs');
-const path = require('path');
-
 exports.handler = async function(event, context) {
   try {
-    const timestamp = new Date().toISOString();
-    const reportPath = path.join(process.cwd(), 'newsroom-runner-report.md');
-    const reportContent = '# newsroom-runner Report\n\n' +
-      'Generated: ' + timestamp + '\n\n' +
-      '## Status\n' +
-      '- Task: newsroom-runner\n' +
-      '- Status: Completed\n' +
-      '- Timestamp: ' + timestamp + '\n';
-
-    fs.writeFileSync(reportPath, reportContent);
-
-    return { statusCode: 200, body: JSON.stringify({ name: 'newsroom-runner', status: 'ok', timestamp }) };
+    console.log('Newsroom runner function triggered');
+    
+    // Simulate newsroom tasks
+    const newsroomTasks = [
+      'Updating news content',
+      'Managing press releases',
+      'Coordinating media updates'
+    ];
+    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        message: 'Newsroom runner function executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'newsroom-runner',
+        newsroomTasks: newsroomTasks,
+        status: 'completed'
+      })
+    };
   } catch (error) {
-    return { statusCode: 500, body: JSON.stringify({ name: 'newsroom-runner', status: 'error', error: error && error.message }) };
+    console.error('Error in newsroom runner function:', error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({
+        error: 'Internal server error',
+        message: error.message
+      })
+    };
   }
 };

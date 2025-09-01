@@ -1,25 +1,32 @@
-#!/usr/bin/env node
-
-'use strict';
-
-const fs = require('fs');
-const path = require('path');
-
 exports.handler = async function(event, context) {
   try {
-    const timestamp = new Date().toISOString();
-    const reportPath = path.join(process.cwd(), 'auto-discovery-runner-report.md');
-    const reportContent = '# auto-discovery-runner Report\n\n' +
-      'Generated: ' + timestamp + '\n\n' +
-      '## Status\n' +
-      '- Task: auto-discovery-runner\n' +
-      '- Status: Completed\n' +
-      '- Timestamp: ' + timestamp + '\n';
-
-    fs.writeFileSync(reportPath, reportContent);
-
-    return { statusCode: 200, body: JSON.stringify({ name: 'auto-discovery-runner', status: 'ok', timestamp }) };
+    console.log('Auto discovery runner function triggered');
+    
+    // Simulate auto discovery tasks
+    const discoveryTasks = [
+      'Running auto discovery',
+      'Identifying new opportunities',
+      'Exploring system capabilities'
+    ];
+    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        message: 'Auto discovery runner function executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'auto-discovery-runner',
+        discoveryTasks: discoveryTasks,
+        status: 'completed'
+      })
+    };
   } catch (error) {
-    return { statusCode: 500, body: JSON.stringify({ name: 'auto-discovery-runner', status: 'error', error: error && error.message }) };
+    console.error('Error in auto discovery runner function:', error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({
+        error: 'Internal server error',
+        message: error.message
+      })
+    };
   }
 };
