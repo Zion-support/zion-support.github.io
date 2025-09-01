@@ -3,7 +3,9 @@ import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
 import { safeStorage } from '@/utils/safeStorage';
 import { Button } from '@/components/ui/button';
+s1yros-codex/fix-unauthenticated-user-redirect-flow
 import { useNavigate, useSearchParams } from 'react-router-dom';
+main
 import { getStripe } from '@/utils/getStripe';
 import { CheckoutShippingOptions, ShippingRate } from '@/components/CheckoutShippingOptions';
 import {
@@ -56,6 +58,7 @@ export default function CheckoutPage() {
         // ignore parsing errors
       }
     }
+    s1yros-codex/fix-unauthenticated-user-redirect-flow
     // Provide mock data if cart empty
     setItems([
       {
@@ -66,10 +69,10 @@ export default function CheckoutPage() {
       },
     ]);
   }, [searchParams]);
+  }, [searchParams]);
 
   const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
-  const [shippingRate, setShippingRate] = useState<ShippingRate | null>(null);
-  const total = subtotal + (shippingRate ? parseFloat(shippingRate.rate) : 0) + (shippingRate?.tax ? parseFloat(shippingRate.tax) : 0);
+  main
 
   const onSubmit = async (data: CheckoutForm) => {
     try {
