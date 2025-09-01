@@ -50,13 +50,21 @@ export function LoginForm() {
         toast.error(resData?.error || "Invalid credentials");
         return;
       }
-      toast.success("Logged in successfully");
-      if (resData?.token) {
-        document.cookie = `token=${resData.token}; path=/`;
+
+      await login(data.email, data.password);
+
+      const next = searchParams.get('next') || '/';
+      if (next === '/checkout') {
+        const intended = sessionStorage.getItem('intendedProduct');
+        sessionStorage.removeItem('intendedProduct');
+        if (intended) {
+          navigate(`/checkout?product=${intended}`);
+        } else {
+          navigate('/checkout');
+        }
+      } else {
+        navigate(next);
       }
-      navigate("/");
-    } catch (err) {
-      toast.error("Unable to login. Please try again.");
     } finally {
       setIsSubmitting(false);
     }

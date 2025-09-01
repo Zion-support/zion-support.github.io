@@ -13,7 +13,7 @@ interface CartItem {
 
 export default function Checkout() {
   const navigate = useNavigate();
-  const { user } = useAuth();
+  const location = useLocation();
   const [items, setItems] = useState<CartItem[]>([]);
 
   useEffect(() => {
@@ -51,7 +51,7 @@ export default function Checkout() {
   const handleCheckout = async () => {
     const product = items[0];
     try {
-      const response = await apiClient('/api/checkout_sessions', {
+      const response = await fetch('/api/stripe/create-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
