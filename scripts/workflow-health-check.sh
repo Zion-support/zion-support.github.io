@@ -47,10 +47,9 @@ check_workflow_structure() {
         issues+=("Missing 'runs-on:' specification")
     fi
     
-    # Check for permissions (optional - not all workflows need explicit permissions)
-    # Only flag as issue if the workflow has actions that would require permissions
-    if grep -q "contents: write\|pull-requests: write\|issues: write\|actions: write" "$file" && ! grep -q "^permissions:" "$file"; then
-        issues+=("Missing 'permissions:' section for write operations")
+    # Check for permissions (either at workflow level or job level)
+    if ! grep -q "^permissions:" "$file" && ! grep -q "^\s*permissions:" "$file"; then
+        issues+=("Missing 'permissions:' section")
     fi
     
     echo "${issues[@]}"
@@ -104,8 +103,9 @@ for workflow_file in "$workflow_dir"/*.yml "$workflow_dir"/*.yaml; do
         fi
         
         # Check structure
-        structure_issues=$(check_workflow_structure "$workflow_file")
-        if [ ${#structure_issues[@]} -eq 0 ]; then
+        check_workflow_structure "$workflow_file"
+        structure_issues_count=$?
+        if [ $structure_issues_count -eq 0 ]; then
             echo -n -e " ${GREEN}✅ Good structure${NC}"
         else
             echo -n -e " ${YELLOW}⚠️  Structure issues${NC}"
@@ -147,10 +147,10 @@ fi
 # Check for workflows without proper structure (only count actual missing required sections)
 for workflow_file in "$workflow_dir"/*.yml "$workflow_dir"/*.yaml; do
     if [ -f "$workflow_file" ]; then
-        structure_issues=$(check_workflow_structure "$workflow_file")
-        # Only count as critical if missing essential sections like name, on, or jobs
-        if echo "$structure_issues" | grep -q "Missing 'name:' section\|Missing 'on:' section\|Missing 'jobs:' section\|Missing 'runs-on:' specification"; then
-            echo -e "  ${RED}❌ $(basename "$workflow_file") has critical structural issues${NC}"
+        check_workflow_structure "$workflow_file"
+        structure_issues_count=$?
+        if [ $structure_issues_count -gt 0 ]; then
+            echo -e "  ${YELLOW}⚠️  $(basename "$workflow_file") has structural issues${NC}"
             critical_issues=$((critical_issues + 1))
         fi
     fi
