@@ -123,9 +123,15 @@ const navigationItems: NavigationItem[] = [
       { 
         name: 'Pricing Plans', 
         href: '/pricing', 
-        description: 'Our pricing options',
+        description: 'Service pricing information',
         icon: <DollarSign className="w-4 h-4" />,
         featured: true
+      },
+      { 
+        name: 'Services Showcase', 
+        href: '/comprehensive-services-showcase-2025', 
+        description: 'Complete services overview',
+        icon: <Grid className="w-4 h-4" />
       },
       { 
         name: 'Market Pricing', 

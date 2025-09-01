@@ -36,14 +36,16 @@ const footerSections = [
     description: 'Our flagship technology solutions',
     icon: <Star className="w-5 h-5 text-yellow-400" />,
     links: [
-      { name: 'AI & Machine Learning', href: '/ai-services', featured: true },
-      { name: 'Quantum Computing', href: '/quantum-services', featured: true },
+      { name: 'AI Services', href: '/ai-services', featured: true },
+      { name: 'Quantum Services', href: '/quantum-services', featured: true },
       { name: 'Space Technology', href: '/space-technology', featured: true },
-      { name: 'Enterprise IT', href: '/it-services', featured: true },
-      { name: 'Micro SAAS Solutions', href: '/micro-saas', featured: true },
-      { name: 'Cybersecurity', href: '/security', featured: true },
-      { name: 'Cloud Infrastructure', href: '/cloud-platform', featured: true },
-      { name: 'Process Automation', href: '/automation', featured: true }
+      { name: 'IT Services', href: '/it-services', featured: true },
+      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029' },
+      { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform' },
+      { name: 'Autonomous Business Operations', href: '/autonomous-business-operations-platform' },
+      { name: 'Space Resource Mining', href: '/space-resource-mining-platform' },
+      { name: 'Brain-Computer Interface', href: '/brain-computer-interface-platform' },
+      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform' }
     ]
   },
   {
@@ -119,6 +121,21 @@ const footerSections = [
       { name: 'Education Technology', href: '/education-technology-solutions' },
       { name: 'Energy & Utilities', href: '/energy-utilities-solutions' },
       { name: 'Space Technology', href: '/space-technology' }
+    ]
+  },
+  {
+    title: 'Company & Resources',
+    description: 'Learn more about Zion Tech Group',
+    icon: <Building className="w-5 h-5 text-indigo-400" />,
+    links: [
+      { name: 'About Us', href: '/about' },
+      { name: 'Contact', href: '/contact' },
+      { name: 'Partners', href: '/partners' },
+      { name: 'Pricing', href: '/pricing' },
+      { name: 'Documentation', href: '/docs' },
+      { name: 'Blog', href: '/blog' },
+      { name: 'Case Studies', href: '/case-studies' },
+      { name: 'Support', href: '/support' }
     ]
   }
 ];
