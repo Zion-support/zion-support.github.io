@@ -45,7 +45,7 @@ export default function Checkout() {
       return;
     }
 
-    const stored = safeStorage.getItem('cart');
+    const stored = safeStorage.getItem('guestCart');
     if (stored) {
       try {
         setItems(JSON.parse(stored) as CartItem[]);
