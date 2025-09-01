@@ -1,35 +1,36 @@
-export default {
-  env: {
-    browser: true,
-    es2021: true,
-    node: true,
-  },
+module.exports = {
   extends: [
     'next/core-web-vitals',
-    'next/typescript',
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
-    'plugin:@typescript-eslint/recommended',
   ],
   parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
   parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 12,
-    sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-  ],
+  env: {
+    browser: true,
+    es6: true,
+    node: true,
+  },
   rules: {
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/no-explicit-any': 'warn',
-    'react/react-in-jsx-scope': 'off',
-    'react/prop-types': 'off',
-    'no-console': 'warn'
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
   },
-  ignorePatterns: ['node_modules/', '.next/', 'out/', 'dist/', 'automation/', 'components.disabled/', '**/*.disabled', '**/*.backup', '**/*.tsbackup']
+  overrides: [
+    {
+      files: ['scripts/**/*.js', 'automation/**/*.js'],
+      env: {
+        node: true,
+      },
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
+  ],
 };
