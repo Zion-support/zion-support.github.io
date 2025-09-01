@@ -14,7 +14,7 @@
       "@/*": ["./src/*"],
       "axios": ["./src/lib/axios"]
     },
-    "types": ["vite/client", "react"],
+    "types": ["vite/client", "react", "react-router-dom", "storybook__react"],
 
     /* Bundler mode */
     "moduleResolution": "node",
