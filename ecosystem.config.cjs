@@ -2,9 +2,9 @@ module.exports = {
   apps: [
     // Main application
     {
-      name: 'bolt-app',
+      name: 'zion-website',
       script: 'npm',
-      args: 'start',
+      args: 'run dev',
       cwd: './',
       instances: 1,
       autorestart: true,
@@ -17,7 +17,12 @@ module.exports = {
       env_production: {
         NODE_ENV: 'production',
         NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
-      }
+      },
+      log_file: './logs/zion-website.log',
+      out_file: './logs/zion-website-out.log',
+      error_file: './logs/zion-website-error.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true
     },
     
     // Backend server
