@@ -37,7 +37,10 @@ import {
   Phone,
   Mail,
   MapPin,
-  Globe as GlobeIcon
+  Globe as GlobeIcon,
+  Lock,
+  DollarSign,
+  Users
 } from 'lucide-react';
 import { SEO } from "@/components/SEO";
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "@/data/innovativeMicroSaasServices2025";
@@ -465,14 +468,6 @@ export default function ServicesPage() {
                 </Link>
               </motion.div>
             ))}
-=======
-  Clock,
-  Linkedin,
-  Twitter,
-  Github,
-  Facebook,
-  Instagram,
-} from 'lucide-react';
 
 export default function ServicesPage() {
   const serviceCategories = [

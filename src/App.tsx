@@ -1,54 +1,18 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
-<<<<<<< HEAD
 import LoadingSpinner from './components/ui/loading-spinner';
-=======
-import { LoadingSpinner } from './components/ui/loading-spinner';
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
-import { Sidebar } from './components/Sidebar';
-// Enhanced Layout Components
-// import { EnhancedHeader } from './components/EnhancedHeader';
-// import { EnhancedFooter } from './components/EnhancedFooter';
-// Enhanced Components
-// Trimmed imports to minimal surface for now
-
-// Enhanced lazy loading with preloading hints
-const createLazyComponent = (
-  importFn: () => Promise<{ default: React.ComponentType<any> }>,
-  fallback?: React.ReactNode
-) => {
-  const LazyComponent = lazy(importFn);
-  return (props: any) => (
-    <Suspense fallback={fallback || <LoadingSpinner />}>
-      <LazyComponent {...props} />
-    </Suspense>
-  );
-};
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
-const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.default })));
-const SolutionsPage = lazy(() => import('./pages/SolutionsPage').then(module => ({ default: module.SolutionsPage })));
-const AboutPage = lazy(() => import('./pages/AboutPage').then(module => ({ default: module.AboutPage })));
-const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ default: module.ContactPage })));
-const BlogPage = lazy(() => import('./pages/BlogPage').then(module => ({ default: module.BlogPage })));
-const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(module => ({ default: module.NotFoundPage })));
-const ComprehensiveServicesPage = lazy(() => import('./pages/ComprehensiveServicesPage').then(module => ({ default: module.ComprehensiveServicesPage })));
-const Sitemap = lazy(() => import('./pages/Sitemap').then(module => ({ default: module.default })));
-const ComprehensiveSitemap = lazy(() => import('./pages/ComprehensiveSitemap').then(module => ({ default: module.ComprehensiveSitemap })));
-const Support = lazy(() => import('./pages/Support').then(module => ({ default: module.default })));
-const Training = lazy(() => import('./pages/Training').then(module => ({ default: module.default })));
-const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default: module.default })));
-const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
+const ServicesPage = lazy(() => import('./pages/SimpleServicesPage').then(module => ({ default: module.default })));
 
-<<<<<<< HEAD
-=======
-// Service Pages - Removed backup-pages references
 
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
+
+const SimplePage = lazy(() => import('./pages/SimplePage').then(module => ({ default: module.default })));
+
+
+
 // Loading component
 const PageLoader = () => (
   <div className="flex items-center justify-center min-h-screen bg-gray-900">
@@ -63,82 +27,42 @@ function App() {
   return (
     <ErrorBoundary fallback={<div>Something went wrong. Please refresh the page.</div>}>
       <div className="App">
-<<<<<<< HEAD
         <div className="min-h-screen">
           <Suspense fallback={<PageLoader />}>
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/services" element={<ServicesPage />} />
               <Route path="/services/*" element={<ServicesPage />} />
-              <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
-              <Route path="/pricing" element={<PricingPage />} />
-              <Route path="/solutions" element={<SolutionsPage />} />
-              <Route path="/solutions/*" element={<SolutionsPage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/about/*" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/blog" element={<BlogPage />} />
-              <Route path="/blog/*" element={<BlogPage />} />
-              <Route path="/careers" element={<AboutPage />} />
-              <Route path="/partners" element={<AboutPage />} />
-              <Route path="/press" element={<AboutPage />} />
-              <Route path="/case-studies" element={<BlogPage />} />
-              <Route path="/research-development" element={<BlogPage />} />
-              <Route path="/docs" element={<BlogPage />} />
-              <Route path="/api" element={<BlogPage />} />
-              <Route path="/developer" element={<BlogPage />} />
-              <Route path="/help" element={<Helpdesk />} />
-              <Route path="/training" element={<Training />} />
-              <Route path="/community" element={<BlogPage />} />
-              <Route path="/support" element={<Support />} />
-              <Route path="/sitemap" element={<Sitemap />} />
-              <Route path="/comprehensive-sitemap" element={<ComprehensiveSitemap />} />
-              <Route path="*" element={<NotFoundPage />} />
+              <Route path="/comprehensive-services" element={<SimplePage />} />
+              <Route path="/pricing" element={<SimplePage />} />
+              <Route path="/solutions" element={<SimplePage />} />
+              <Route path="/solutions/*" element={<SimplePage />} />
+              <Route path="/about" element={<SimplePage />} />
+              <Route path="/about/*" element={<SimplePage />} />
+              <Route path="/contact" element={<SimplePage />} />
+              <Route path="/blog" element={<SimplePage />} />
+              <Route path="/blog/*" element={<SimplePage />} />
+              <Route path="/careers" element={<SimplePage />} />
+              <Route path="/partners" element={<SimplePage />} />
+              <Route path="/press" element={<SimplePage />} />
+              <Route path="/case-studies" element={<SimplePage />} />
+              <Route path="/research-development" element={<SimplePage />} />
+              <Route path="/docs" element={<SimplePage />} />
+              <Route path="/api" element={<SimplePage />} />
+              <Route path="/developer" element={<SimplePage />} />
+              <Route path="/help" element={<SimplePage />} />
+              <Route path="/training" element={<SimplePage />} />
+              <Route path="/community" element={<SimplePage />} />
+              <Route path="/support" element={<SimplePage />} />
+              <Route path="/sitemap" element={<SimplePage />} />
+              <Route path="/comprehensive-sitemap" element={<SimplePage />} />
+              <Route path="/privacy-policy" element={<SimplePage />} />
+              <Route path="/terms-of-service" element={<SimplePage />} />
+              <Route path="/cookie-policy" element={<SimplePage />} />
+              <Route path="/request-quote" element={<SimplePage />} />
+              <Route path="*" element={<SimplePage />} />
             </Routes>
           </Suspense>
-=======
-        <Header />
-        <div className="flex pt-16">
-          <Sidebar isOpen={sidebarOpen} onToggle={() => setSidebarOpen(!sidebarOpen)} />
-          <main className="flex-1 ml-64 min-h-screen">
-            <Suspense fallback={<PageLoader />}>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/services" element={<ServicesPage />} />
-                <Route path="/services/*" element={<ServicesPage />} />
-
-                <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
-                <Route path="/pricing" element={<PricingPage />} />
-                <Route path="/solutions" element={<SolutionsPage />} />
-                <Route path="/solutions/*" element={<SolutionsPage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/about/*" element={<AboutPage />} />
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="/blog" element={<BlogPage />} />
-                <Route path="/blog/*" element={<BlogPage />} />
-                <Route path="/careers" element={<AboutPage />} />
-                <Route path="/partners" element={<AboutPage />} />
-                <Route path="/press" element={<AboutPage />} />
-                <Route path="/case-studies" element={<BlogPage />} />
-                <Route path="/research-development" element={<BlogPage />} />
-                <Route path="/docs" element={<BlogPage />} />
-                <Route path="/api" element={<BlogPage />} />
-                <Route path="/developer" element={<BlogPage />} />
-                <Route path="/help" element={<Helpdesk />} />
-                <Route path="/training" element={<Training />} />
-                <Route path="/community" element={<BlogPage />} />
-                <Route path="/support" element={<Support />} />
-                <Route path="/sitemap" element={<Sitemap />} />
-                <Route path="/comprehensive-sitemap" element={<ComprehensiveSitemap />} />
-                <Route path="/privacy-policy" element={<BlogPage />} />
-                <Route path="/terms-of-service" element={<BlogPage />} />
-                <Route path="/cookie-policy" element={<BlogPage />} />
-                <Route path="/request-quote" element={<ContactPage />} />
-                <Route path="*" element={<NotFoundPage />} />
-              </Routes>
-            </Suspense>
-          </main>
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
         </div>
       </div>
     </ErrorBoundary>
