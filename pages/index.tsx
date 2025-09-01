@@ -2025,6 +2025,54 @@ export default function HomePage({ pageLinks }: HomePageProps) {
             </div>
           </section>
 
+          {/* AI Agents & Specialized Automations */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🧠 AI Agents & Specialized Automations</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">🎯 Expert Agents</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Full Stack Experts</li>
+                  <li>• Deployment Specialists</li>
+                  <li>• Monitoring Advanced</li>
+                  <li>• Testing Experts</li>
+                  <li>• Backend Specialists</li>
+                </ul>
+                <div className="text-cyan-400 text-sm font-semibold">
+                  50+ Specialized AI Agents
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">🔍 Content & Research</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• AI Content Factory</li>
+                  <li>• Research Scout</li>
+                  <li>• Trends Radar</li>
+                  <li>• Content Curation</li>
+                  <li>• Marketing Automation</li>
+                </ul>
+                <div className="text-fuchsia-400 text-sm font-semibold">
+                  Autonomous Content Generation
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">⚙️ Infrastructure & DevOps</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Cloud Orchestrator</li>
+                  <li>• Dependency Management</li>
+                  <li>• CI/CD Automation</li>
+                  <li>• Performance Optimization</li>
+                  <li>• Security Automation</li>
+                </ul>
+                <div className="text-green-400 text-sm font-semibold">
+                  Full DevOps Automation
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Latest Autonomous Content */}
           <section className="mx-auto max-w-7xl px-6 pb-14">
             <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Latest Autonomous Content</h2>
