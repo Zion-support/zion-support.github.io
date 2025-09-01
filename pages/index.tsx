@@ -331,7 +331,7 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Contributing</a> — Workflow</li>
                 </ul>
                 <Link href="/privacy" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  View Security & Privacy →
+                  View Security Guide →
                 </Link>
               </div>
 
@@ -345,7 +345,7 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_CONTINUOUS_OPERATION.md" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">Continuous Operation</a></li>
                 </ul>
                 <Link href="/resources" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  Explore Testing Resources →
+                  View Testing Guide →
                 </Link>
               </div>
 
@@ -359,7 +359,7 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/EXPONENTIAL_GROWTH_AUTOMATION.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Growth Automation</a></li>
                 </ul>
                 <Link href="/blog/performance-optimization" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  Read Performance Optimization →
+                  View Performance Guide →
                 </Link>
               </div>
             </div>
