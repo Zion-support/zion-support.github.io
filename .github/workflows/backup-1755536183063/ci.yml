@@ -51,14 +51,7 @@ jobs:
       - name: Smoke tests
         env:
           CI: true
-        run: echo "Skipping smoke tests in CI environment - requires running server" || true
-
-      - name: Upload test results
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: test-results
-          path: playwright-report/
-          retention-days: 7
+        run: npm run test:smoke
+        continue-on-error: true
 
 
