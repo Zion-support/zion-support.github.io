@@ -18,23 +18,23 @@ test.describe('Smoke Tests', () => {
   });
 
   test('explore page loads successfully', async ({ page }) => {
-    await page.goto('/explore');
+    await page.goto('/explore/');
     
     // Check page loads
     await expect(page).toHaveTitle(/Explore/);
     
-    // Check for content - use the third main element (content area)
-    await expect(page.locator('main').nth(2)).toBeVisible();
+    // Check for content - use first main element
+    await expect(page.locator('main').first()).toBeVisible();
   });
 
   test('front page loads successfully', async ({ page }) => {
-    await page.goto('/front');
+    await page.goto('/front/');
     
-    // Check page loads - front page redirects, so just check it loads
-    await expect(page).toHaveTitle(/Zion/);
+    // Check page loads
+    await expect(page).toHaveTitle(/Front Systems Hub/);
     
-    // Check for content - use the second main element (content area)
-    await expect(page.locator('main').nth(1)).toBeVisible();
+    // Check for content - use first main element
+    await expect(page.locator('main').first()).toBeVisible();
   });
 
   test('newsroom page loads successfully', async ({ page }) => {
@@ -43,8 +43,8 @@ test.describe('Smoke Tests', () => {
     // Check page loads
     await expect(page).toHaveTitle(/Newsroom/);
     
-    // Check for content - use the second main element (content area)
-    await expect(page.locator('main').nth(1)).toBeVisible();
+    // Check for content - use first main element
+    await expect(page.locator('main').first()).toBeVisible();
   });
 
   test('contact page loads successfully', async ({ page }) => {
@@ -89,7 +89,7 @@ test.describe('Smoke Tests', () => {
         // Should navigate to new page
         await expect(page).toHaveURL(href);
         
-        // Page should load
+        // Page should load - use first main element
         await expect(page.locator('main').first()).toBeVisible();
       }
     }
