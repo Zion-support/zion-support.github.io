@@ -1,617 +1,286 @@
-import Link from 'next/link';
+import Link from "next/link";
+
+export const metadata = {
+  title: "Services - Zion Tech Group | AI, Quantum & Autonomous Solutions",
+  description: "Discover Zion Tech Group's comprehensive range of AI, quantum computing, autonomous systems, and technology services. Transform your business with cutting-edge solutions.",
+  keywords: "AI services, quantum computing, autonomous systems, cybersecurity, enterprise IT, Zion Tech Group services",
+};
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-5xl font-bold mb-6">Zion Tech Group Services</h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Comprehensive technology solutions for modern businesses. From AI-powered automation to enterprise IT infrastructure.
+    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            Our <span className="gradient-text">Services</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Comprehensive AI, quantum, and autonomous technology solutions to transform your business
           </p>
-          <div className="mt-8">
-            <a href="tel:+13024640950" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors mr-4">
-              Call Now: +1 302 464 0950
-            </a>
-            <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-              Get Quote
-            </a>
-          </div>
         </div>
-      </div>
 
-      {/* Contact Info Banner */}
-      <div className="bg-zinc-800 py-4">
-        <div className="container mx-auto px-6 text-center text-sm">
-          <span className="mr-8">📱 +1 302 464 0950</span>
-          <span className="mr-8">✉️ kleber@ziontechgroup.com</span>
-          <span>📍 364 E Main St STE 1008, Middletown DE 19709</span>
-        </div>
-      </div>
-
-      {/* AI Services Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">🤖 AI Services & Solutions</h2>
-            <p className="text-xl text-zinc-300 max-w-2xl mx-auto">
-              Cutting-edge artificial intelligence solutions to transform your business operations
+        {/* AI Services Section */}
+        <section className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">AI & Autonomous Systems</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Cutting-edge artificial intelligence and autonomous solutions
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* ZionGPT Core */}
-            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-blue-500 transition-all">
-              <div className="text-3xl mb-4">🧠</div>
-              <h3 className="text-xl font-semibold mb-3">ZionGPT Core</h3>
-              <p className="text-zinc-300 mb-4">Enterprise-grade AI assistant with custom knowledge base integration and workflow automation.</p>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span>Starting Price:</span>
-                  <span className="text-green-400">$299/month</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Setup Fee:</span>
-                  <span className="text-yellow-400">$1,500</span>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Link href="/ai-autonomous-business-manager" className="card group hover:scale-105 transition-transform">
+              <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-500/30 transition-colors">
+                <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
               </div>
-              <a href="/services/ai" className="block mt-4 text-blue-400 hover:text-blue-300 text-sm">
-                Learn More →
-              </a>
-            </div>
+              <h3 className="text-lg font-semibold mb-2">AI Business Manager</h3>
+              <p className="text-sm text-gray-400">
+                Autonomous business management and decision-making systems
+              </p>
+            </Link>
 
-            {/* AI Content Generation */}
-            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-blue-500 transition-all">
-              <div className="text-3xl mb-4">✍️</div>
-              <h3 className="text-xl font-semibold mb-3">AI Content Generation</h3>
-              <p className="text-zinc-300 mb-4">Automated content creation for blogs, social media, marketing materials, and technical documentation.</p>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span>Starting Price:</span>
-                  <span className="text-green-400">$199/month</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Setup Fee:</span>
-                  <span className="text-yellow-400">$800</span>
-                </div>
+            <Link href="/ai-autonomous-business-operations" className="card group hover:scale-105 transition-transform">
+              <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-500/30 transition-colors">
+                <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
               </div>
-              <a href="/services/ai" className="block mt-4 text-blue-400 hover:text-blue-300 text-sm">
-                Learn More →
-              </a>
-            </div>
+              <h3 className="text-lg font-semibold mb-2">Business Operations</h3>
+              <p className="text-sm text-gray-400">
+                Automated business process optimization and management
+              </p>
+            </Link>
 
-            {/* AI-Powered Analytics */}
-            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-blue-500 transition-all">
-              <div className="text-3xl mb-4">📊</div>
-              <h3 className="text-xl font-semibold mb-3">AI-Powered Analytics</h3>
-              <p className="text-zinc-300 mb-4">Predictive analytics, trend forecasting, and intelligent business insights powered by machine learning.</p>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span>Starting Price:</span>
-                  <span className="text-green-400">$399/month</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Setup Fee:</span>
-                  <span className="text-yellow-400">$2,000</span>
-                </div>
+            <Link href="/ai-autonomous-code-review" className="card group hover:scale-105 transition-transform">
+              <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-500/30 transition-colors">
+                <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
               </div>
-              <a href="/services/ai" className="block mt-4 text-blue-400 hover:text-blue-300 text-sm">
-                Learn More →
-              </a>
-            </div>
+              <h3 className="text-lg font-semibold mb-2">AI Code Review</h3>
+              <p className="text-sm text-gray-400">
+                Intelligent code analysis and automated review systems
+              </p>
+            </Link>
 
-            {/* AI Customer Support */}
-            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-blue-500 transition-all">
-              <div className="text-3xl mb-4">💬</div>
-              <h3 className="text-xl font-semibold mb-3">AI Customer Support</h3>
-              <p className="text-zinc-300 mb-4">24/7 intelligent chatbots and virtual assistants for customer service automation.</p>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span>Starting Price:</span>
-                  <span className="text-green-400">$249/month</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Setup Fee:</span>
-                  <span className="text-yellow-400">$1,200</span>
-                </div>
+            <Link href="/ai-autonomous-research-assistant" className="card group hover:scale-105 transition-transform">
+              <div className="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-yellow-500/30 transition-colors">
+                <svg className="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
               </div>
-              <a href="/services/ai" className="block mt-4 text-blue-400 hover:text-blue-300 text-sm">
-                Learn More →
-              </a>
-            </div>
+              <h3 className="text-lg font-semibold mb-2">Research Assistant</h3>
+              <p className="text-sm text-gray-400">
+                AI-powered research automation and data analysis
+              </p>
+            </Link>
 
-            {/* AI Process Automation */}
-            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-blue-500 transition-all">
-              <div className="text-3xl mb-4">⚙️</div>
-              <h3 className="text-xl font-semibold mb-3">AI Process Automation</h3>
-              <p className="text-zinc-300 mb-4">Intelligent workflow automation, document processing, and business process optimization.</p>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span>Starting Price:</span>
-                  <span className="text-green-400">$349/month</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Setup Fee:</span>
-                  <span className="text-yellow-400">$1,800</span>
-                </div>
+            <Link href="/ai-content-generator" className="card group hover:scale-105 transition-transform">
+              <div className="w-12 h-12 bg-indigo-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-indigo-500/30 transition-colors">
+                <svg className="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
               </div>
-              <a href="/services/ai" className="block mt-4 text-blue-400 hover:text-blue-300 text-sm">
-                Learn More →
-              </a>
-            </div>
+              <h3 className="text-lg font-semibold mb-2">Content Generation</h3>
+              <p className="text-sm text-gray-400">
+                AI-powered content creation and marketing automation
+              </p>
+            </Link>
 
-            {/* AI Security & Compliance */}
-            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-blue-500 transition-all">
-              <div className="text-3xl mb-4">🔒</div>
-              <h3 className="text-xl font-semibold mb-3">AI Security & Compliance</h3>
-              <p className="text-zinc-300 mb-4">AI-powered threat detection, compliance monitoring, and security automation for enterprise environments.</p>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span>Starting Price:</span>
-                  <span className="text-green-400">$499/month</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Setup Fee:</span>
-                  <span className="text-yellow-400">$2,500</span>
-                </div>
+            <Link href="/ai-business-intelligence" className="card group hover:scale-105 transition-transform">
+              <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-500/30 transition-colors">
+                <svg className="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
               </div>
-              <a href="/services/ai" className="block mt-4 text-blue-400 hover:text-blue-300 text-sm">
-                Learn More →
-              </a>
-            </div>
+              <h3 className="text-lg font-semibold mb-2">Business Intelligence</h3>
+              <p className="text-sm text-gray-400">
+                Advanced analytics and intelligent business insights
+              </p>
+            </Link>
           </div>
           
-          <div className="text-center mt-12">
-            <a href="/services/ai" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+          <div className="text-center mt-8">
+            <Link href="/ai-services" className="btn-secondary">
               View All AI Services
-            </a>
+            </Link>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* IT Services Section */}
-      <section className="py-20 bg-zinc-800">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">💻 IT Services & Solutions</h2>
-            <p className="text-xl text-zinc-300 max-w-2xl mx-auto">
-              Comprehensive IT infrastructure, cloud solutions, and digital transformation services
+        {/* Quantum Services Section */}
+        <section className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Quantum Computing</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Next-generation quantum solutions for complex computational challenges
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Cloud Infrastructure */}
-            <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-green-500 transition-all">
-              <div className="text-3xl mb-4">☁️</div>
-              <h3 className="text-xl font-semibold mb-3">Cloud Infrastructure</h3>
-              <p className="text-zinc-300 mb-4">AWS, Azure, and Google Cloud setup, migration, and optimization services.</p>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span>Starting Price:</span>
-                  <span className="text-green-400">$150/hour</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Project Range:</span>
-                  <span className="text-yellow-400">$5K - $50K</span>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Link href="/quantum-neural-network-platform" className="card group hover:scale-105 transition-transform">
+              <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-500/30 transition-colors">
+                <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
               </div>
-              <a href="/services/it" className="block mt-4 text-green-400 hover:text-green-300 text-sm">
-                Learn More →
-              </a>
-            </div>
+              <h3 className="text-lg font-semibold mb-2">Quantum Neural Networks</h3>
+              <p className="text-sm text-gray-400">
+                Advanced quantum computing for AI and machine learning
+              </p>
+            </Link>
 
-            {/* DevOps & CI/CD */}
-            <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-green-500 transition-all">
-              <div className="text-3xl mb-4">🚀</div>
-              <h3 className="text-xl font-semibold mb-3">DevOps & CI/CD</h3>
-              <p className="text-zinc-300 mb-4">Automated deployment pipelines, infrastructure as code, and DevOps culture implementation.</p>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span>Starting Price:</span>
-                  <span className="text-green-400">$175/hour</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Project Range:</span>
-                  <span className="text-yellow-400">$8K - $75K</span>
-                </div>
+            <Link href="/quantum-cloud-infrastructure" className="card group hover:scale-105 transition-transform">
+              <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-500/30 transition-colors">
+                <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                </svg>
               </div>
-              <a href="/services/it" className="block mt-4 text-green-400 hover:text-green-300 text-sm">
-                Learn More →
-              </a>
-            </div>
+              <h3 className="text-lg font-semibold mb-2">Quantum Cloud</h3>
+              <p className="text-sm text-gray-400">
+                Scalable quantum computing infrastructure and services
+              </p>
+            </Link>
 
-            {/* Cybersecurity */}
-            <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-green-500 transition-all">
-              <div className="text-3xl mb-4">🛡️</div>
-              <h3 className="text-xl font-semibold mb-3">Cybersecurity</h3>
-              <p className="text-zinc-300 mb-4">Security audits, penetration testing, compliance frameworks, and incident response planning.</p>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span>Starting Price:</span>
-                  <span className="text-green-400">$200/hour</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Project Range:</span>
-                  <span className="text-yellow-400">$10K - $100K</span>
-                </div>
+            <Link href="/quantum-financial-trading" className="card group hover:scale-105 transition-transform">
+              <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-500/30 transition-colors">
+                <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                </svg>
               </div>
-              <a href="/services/it" className="block mt-4 text-green-400 hover:text-green-300 text-sm">
-                Learn More →
-              </a>
-            </div>
-
-            {/* Data Engineering */}
-            <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-green-500 transition-all">
-              <div className="text-3xl mb-4">📈</div>
-              <h3 className="text-xl font-semibold mb-3">Data Engineering</h3>
-              <p className="text-zinc-300 mb-4">Data pipelines, warehousing, ETL processes, and business intelligence solutions.</p>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span>Starting Price:</span>
-                  <span className="text-green-400">$160/hour</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Project Range:</span>
-                  <span className="text-yellow-400">$15K - $150K</span>
-                </div>
-              </div>
-              <a href="/services/it" className="block mt-4 text-green-400 hover:text-green-300 text-sm">
-                Learn More →
-              </a>
-            </div>
-
-            {/* API Development */}
-            <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-green-500 transition-all">
-              <div className="text-3xl mb-4">🔌</div>
-              <h3 className="text-xl font-semibold mb-3">API Development</h3>
-              <p className="text-zinc-300 mb-4">RESTful APIs, GraphQL, microservices architecture, and API gateway solutions.</p>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span>Starting Price:</span>
-                  <span className="text-green-400">$140/hour</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Project Range:</span>
-                  <span className="text-yellow-400">$8K - $80K</span>
-                </div>
-              </div>
-              <a href="/services/it" className="block mt-4 text-green-400 hover:text-green-300 text-sm">
-                Learn More →
-              </a>
-            </div>
-
-            {/* Digital Transformation */}
-            <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-green-500 transition-all">
-              <div className="text-3xl mb-4">🔄</div>
-              <h3 className="text-xl font-semibold mb-3">Digital Transformation</h3>
-              <p className="text-zinc-300 mb-4">End-to-end digital transformation consulting, legacy system modernization, and change management.</p>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span>Starting Price:</span>
-                  <span className="text-green-400">$250/hour</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Project Range:</span>
-                  <span className="text-yellow-400">$25K - $500K</span>
-                </div>
-              </div>
-              <a href="/services/it" className="block mt-4 text-green-400 hover:text-green-300 text-sm">
-                Learn More →
-              </a>
-            </div>
+              <h3 className="text-lg font-semibold mb-2">Quantum Trading</h3>
+              <p className="text-sm text-gray-400">
+                High-frequency trading with quantum computing power
+              </p>
+            </Link>
           </div>
           
-          <div className="text-center mt-12">
-            <a href="/services/it" className="inline-block bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              View All IT Services
-            </a>
+          <div className="text-center mt-8">
+            <Link href="/quantum-services" className="btn-secondary">
+              View All Quantum Services
+            </Link>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Blockchain & Web3 Services Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">⛓️ Blockchain & Web3 Services</h2>
-            <p className="text-xl text-zinc-300 max-w-2xl mx-auto">
-              Next-generation blockchain solutions, DeFi platforms, NFT marketplaces, and Web3 infrastructure
+        {/* Cybersecurity Section */}
+        <section className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Cybersecurity & Compliance</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Advanced security solutions and compliance automation
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* DeFi Platform Development */}
-            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-orange-500 transition-all">
-              <div className="text-3xl mb-4">💰</div>
-              <h3 className="text-xl font-semibold mb-3">DeFi Platform Development</h3>
-              <p className="text-zinc-300 mb-4">Build next-generation decentralized finance platforms with lending, borrowing, and yield farming.</p>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span>Starting Price:</span>
-                  <span className="text-green-400">$25K</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Project Range:</span>
-                  <span className="text-yellow-400">$25K - $200K+</span>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Link href="/advanced-cybersecurity-suite" className="card group hover:scale-105 transition-transform">
+              <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-500/30 transition-colors">
+                <svg className="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
               </div>
-              <a href="/services/blockchain" className="block mt-4 text-orange-400 hover:text-orange-300 text-sm">
-                Learn More →
-              </a>
-            </div>
+              <h3 className="text-lg font-semibold mb-2">Advanced Security</h3>
+              <p className="text-sm text-gray-400">
+                Comprehensive cybersecurity protection and threat detection
+              </p>
+            </Link>
 
-            {/* NFT Marketplace */}
-            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-orange-500 transition-all">
-              <div className="text-3xl mb-4">🎨</div>
-              <h3 className="text-xl font-semibold mb-3">NFT Marketplace Development</h3>
-              <p className="text-zinc-300 mb-4">Create cutting-edge NFT marketplaces with multi-chain support and advanced features.</p>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span>Starting Price:</span>
-                  <span className="text-green-400">$15K</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Project Range:</span>
-                  <span className="text-yellow-400">$15K - $100K+</span>
-                </div>
+            <Link href="/soc2-compliance-automation" className="card group hover:scale-105 transition-transform">
+              <div className="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-yellow-500/30 transition-colors">
+                <svg className="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
               </div>
-              <a href="/services/blockchain" className="block mt-4 text-orange-400 hover:text-orange-300 text-sm">
-                Learn More →
-              </a>
-            </div>
+              <h3 className="text-lg font-semibold mb-2">SOC2 Compliance</h3>
+              <p className="text-sm text-gray-400">
+                Automated compliance management and audit preparation
+              </p>
+            </Link>
 
-            {/* Smart Contract Development */}
-            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-orange-500 transition-all">
-              <div className="text-3xl mb-4">📜</div>
-              <h3 className="text-xl font-semibold mb-3">Smart Contract Development</h3>
-              <p className="text-zinc-300 mb-4">Secure, audited smart contracts for any blockchain use case with comprehensive testing.</p>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span>Starting Price:</span>
-                  <span className="text-green-400">$5K</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Project Range:</span>
-                  <span className="text-yellow-400">$5K - $50K+</span>
-                </div>
+            <Link href="/ai-powered-enterprise-security" className="card group hover:scale-105 transition-transform">
+              <div className="w-12 h-12 bg-indigo-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-indigo-500/30 transition-colors">
+                <svg className="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
               </div>
-              <a href="/services/blockchain" className="block mt-4 text-orange-400 hover:text-orange-300 text-sm">
-                Learn More →
-              </a>
-            </div>
-
-            {/* Web3 Infrastructure */}
-            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-orange-500 transition-all">
-              <div className="text-3xl mb-4">🌐</div>
-              <h3 className="text-xl font-semibold mb-3">Web3 Infrastructure</h3>
-              <p className="text-zinc-300 mb-4">Build robust Web3 infrastructure with node management, API gateways, and decentralized storage.</p>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span>Starting Price:</span>
-                  <span className="text-green-400">$10K</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Project Range:</span>
-                  <span className="text-yellow-400">$10K - $100K+</span>
-                </div>
-              </div>
-              <a href="/services/blockchain" className="block mt-4 text-orange-400 hover:text-orange-300 text-sm">
-                Learn More →
-              </a>
-            </div>
-
-            {/* DAO Development */}
-            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-orange-500 transition-all">
-              <div className="text-3xl mb-4">🏛️</div>
-              <h3 className="text-xl font-semibold mb-3">DAO Development</h3>
-              <p className="text-zinc-300 mb-4">Create sophisticated decentralized autonomous organizations with advanced governance tools.</p>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span>Starting Price:</span>
-                  <span className="text-green-400">$20K</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Project Range:</span>
-                  <span className="text-yellow-400">$20K - $150K+</span>
-                </div>
-              </div>
-              <a href="/services/blockchain" className="block mt-4 text-orange-400 hover:text-orange-300 text-sm">
-                Learn More →
-              </a>
-            </div>
-
-            {/* Blockchain Consulting */}
-            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-orange-500 transition-all">
-              <div className="text-3xl mb-4">💡</div>
-              <h3 className="text-xl font-semibold mb-3">Blockchain Consulting</h3>
-              <p className="text-zinc-300 mb-4">Strategic blockchain consulting including technology selection, architecture design, and compliance.</p>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span>Consulting Rate:</span>
-                  <span className="text-green-400">$250/hour</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Strategy Package:</span>
-                  <span className="text-yellow-400">$25K - $75K</span>
-                </div>
-              </div>
-              <a href="/services/blockchain" className="block mt-4 text-orange-400 hover:text-orange-300 text-sm">
-                Learn More →
-              </a>
-            </div>
+              <h3 className="text-lg font-semibold mb-2">AI Security</h3>
+              <p className="text-sm text-gray-400">
+                Intelligent threat detection and automated response
+              </p>
+            </Link>
           </div>
-          
-          <div className="text-center mt-12">
-            <a href="/services/blockchain" className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              View All Blockchain Services
-            </a>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Micro SAAS Services Section */}
-      <section className="py-20 bg-zinc-800">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">🚀 Micro SAAS Services</h2>
-            <p className="text-xl text-zinc-300 max-w-2xl mx-auto">
-              Ready-to-deploy software solutions for specific business needs
+        {/* Enterprise IT Section */}
+        <section className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Enterprise IT Solutions</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Scalable infrastructure and enterprise-grade technology solutions
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Zion Marketplace */}
-            <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-purple-500 transition-all">
-              <div className="text-3xl mb-4">🛒</div>
-              <h3 className="text-xl font-semibold mb-3">Zion Marketplace</h3>
-              <p className="text-zinc-300 mb-4">Complete marketplace solution with job boards, talent matching, and project management.</p>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span>Starting Price:</span>
-                  <span className="text-green-400">$399/month</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Setup Fee:</span>
-                  <span className="text-yellow-400">$2,500</span>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Link href="/advanced-it-infrastructure-services" className="card group hover:scale-105 transition-transform">
+              <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-500/30 transition-colors">
+                <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                </svg>
               </div>
-              <a href="/services/saas" className="block mt-4 text-purple-400 hover:text-purple-300 text-sm">
-                Learn More →
-              </a>
-            </div>
+              <h3 className="text-lg font-semibold mb-2">IT Infrastructure</h3>
+              <p className="text-sm text-gray-400">
+                Modern, scalable enterprise infrastructure solutions
+              </p>
+            </Link>
 
-            {/* Resume AI Builder */}
-            <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-purple-500 transition-all">
-              <div className="text-3xl mb-4">📝</div>
-              <h3 className="text-xl font-semibold mb-3">Resume AI Builder</h3>
-              <p className="text-zinc-300 mb-4">AI-powered resume creation, optimization, and ATS-friendly formatting with industry insights.</p>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span>Starting Price:</span>
-                  <span className="text-green-400">$99/month</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Setup Fee:</span>
-                  <span className="text-yellow-400">$500</span>
-                </div>
+            <Link href="/ai-powered-it-asset-management" className="card group hover:scale-105 transition-transform">
+              <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-500/30 transition-colors">
+                <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                </svg>
               </div>
-              <a href="/services/saas" className="block mt-4 text-purple-400 hover:text-purple-300 text-sm">
-                Learn More →
-              </a>
-            </div>
+              <h3 className="text-lg font-semibold mb-2">Asset Management</h3>
+              <p className="text-sm text-gray-400">
+                AI-powered IT asset tracking and optimization
+              </p>
+            </Link>
 
-            {/* Token Rewards System */}
-            <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-purple-500 transition-all">
-              <div className="text-3xl mb-4">🪙</div>
-              <h3 className="text-xl font-semibold mb-3">Token Rewards System</h3>
-              <p className="text-zinc-300 mb-4">Blockchain-based loyalty and rewards platform with gamification and community engagement.</p>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span>Starting Price:</span>
-                  <span className="text-green-400">$299/month</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Setup Fee:</span>
-                  <span className="text-yellow-400">$3,000</span>
-                </div>
+            <Link href="/5g-enterprise-solutions" className="card group hover:scale-105 transition-transform">
+              <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-500/30 transition-colors">
+                <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+                </svg>
               </div>
-              <a href="/services/saas" className="block mt-4 text-purple-400 hover:text-purple-300 text-sm">
-                Learn More →
-              </a>
-            </div>
-
-            {/* KYC/AML Verification */}
-            <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-purple-500 transition-all">
-              <div className="text-3xl mb-4">✅</div>
-              <h3 className="text-xl font-semibold mb-3">KYC/AML Verification</h3>
-              <p className="text-zinc-300 mb-4">Compliance-ready identity verification and anti-money laundering screening system.</p>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span>Starting Price:</span>
-                  <span className="text-green-400">$199/month</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Setup Fee:</span>
-                  <span className="text-yellow-400">$1,500</span>
-                </div>
-              </div>
-              <a href="/services/saas" className="block mt-4 text-purple-400 hover:text-purple-300 text-sm">
-                Learn More →
-              </a>
-            </div>
-
-            {/* DAO Governance Platform */}
-            <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-purple-500 transition-all">
-              <div className="text-3xl mb-4">🗳️</div>
-              <h3 className="text-xl font-semibold mb-3">DAO Governance Platform</h3>
-              <p className="text-zinc-300 mb-4">Decentralized governance tools with proposal creation, voting mechanisms, and treasury management.</p>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span>Starting Price:</span>
-                  <span className="text-green-400">$449/month</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Setup Fee:</span>
-                  <span className="text-yellow-400">$4,000</span>
-                </div>
-              </div>
-              <a href="/services/saas" className="block mt-4 text-purple-400 hover:text-purple-300 text-sm">
-                Learn More →
-              </a>
-            </div>
-
-            {/* Zion Academy */}
-            <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-purple-500 transition-all">
-              <div className="text-3xl mb-4">🎓</div>
-              <h3 className="text-xl font-semibold mb-3">Zion Academy</h3>
-              <p className="text-zinc-300 mb-4">Learning management system with AI-powered course creation, assessments, and skill tracking.</p>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span>Starting Price:</span>
-                  <span className="text-green-400">$179/month</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Setup Fee:</span>
-                  <span className="text-yellow-400">$1,200</span>
-                </div>
-              </div>
-              <a href="/services/saas" className="block mt-4 text-purple-400 hover:text-purple-300 text-sm">
-                Learn More →
-              </a>
-            </div>
+              <h3 className="text-lg font-semibold mb-2">5G Solutions</h3>
+              <p className="text-sm text-gray-400">
+                Next-generation network infrastructure and optimization
+              </p>
+            </Link>
           </div>
-          
-          <div className="text-center mt-12">
-            <a href="/services/saas" className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              View All SAAS Services
-            </a>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our AI, IT, blockchain, and SAAS solutions can drive your digital transformation and business growth.
-          </p>
-          <div className="space-y-4">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href="tel:+13024640950" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-lg">
-                📞 Call +1 302 464 0950
-              </a>
-              <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-lg">
-                ✉️ Schedule Consultation
-              </a>
-            </div>
-            <p className="text-blue-100 text-sm">
-              📍 364 E Main St STE 1008, Middletown DE 19709 | 🌐 https://ziontechgroup.com
+        {/* CTA Section */}
+        <section className="text-center">
+          <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30 p-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Let our experts help you choose the right services and implement 
+              cutting-edge solutions for your organization.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="btn-primary text-lg px-8 py-4">
+                Get Started
+              </Link>
+              <Link href="/case-studies" className="btn-secondary text-lg px-8 py-4">
+                View Case Studies
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 }
