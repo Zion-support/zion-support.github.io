@@ -142,6 +142,8 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.41.2",
+    "@rushstack/eslint-patch": "^1.5.1",
+    "@sentry/cli": "^2.46.0",
     "@storybook/addon-a11y": "^7.6.0",
     "@storybook/test-runner": "^0.22.0",
     "@testing-library/cypress": "^10.0.3",
