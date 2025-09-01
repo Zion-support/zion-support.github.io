@@ -16,11 +16,11 @@ const nextConfig = {
   // Performance optimizations
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react',framer-motion']
+    optimizePackageImports: ['lucide-react', 'framer-motion']
   },
 
   // Bundle analyzer (optional)
-  ...(process.env.ANALYZE === 'true' && {
+  ...(process.env.ANALYZE === 'true' ? {
     webpack: config => {
       config.plugins.push(
         new (require('@next/bundle-analyzer'))({
@@ -29,7 +29,7 @@ const nextConfig = {
       );
       return config;
     },
-  }),
+  } : {}),
 };
 
 export default nextConfig;
