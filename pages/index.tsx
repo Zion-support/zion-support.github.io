@@ -1,5 +1,56 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Link from 'next/link';
+
+const HomePage = React.memo(function);
+export default HomePage HomePage() {
+  const featuredReports = [
+    {
+      title: 'Latest Insights',
+      description: 'Discover cutting-edge AI and technology insights',
+      href: '/reports/insights',
+      count: '15+ reports'
+    },
+    {
+      title: 'Strategic Dossiers',
+      description: 'Comprehensive analysis and strategic recommendations',
+      href: '/reports/dossiers',
+      count: '8+ dossiers'
+    },
+    {
+      title: 'Technical Tutorials',
+      description: 'Step-by-step guides for developers and engineers',
+      href: '/reports/tutorials',
+      count: '25+ tutorials'
+    },
+    {
+      title: 'Industry Whitepapers',
+      description: 'In-depth research and industry analysis',
+      href: '/reports/whitepapers',
+      count: '12+ whitepapers'
+    }
+  ];
+
+  const newFeatures = [
+    {
+      title: 'Component Library',
+      description: 'Explore our new reusable UI components',
+      href: '/components',
+      icon: '🧩'
+    },
+    {
+      title: 'Content Discovery',
+      description: 'AI-powered content recommendations',
+      href: '/explore',
+      icon: '🔍'
+    },
+    {
+      title: 'Automation Hub',
+      description: 'See our autonomous systems in action',
+      href: '/automation',
+      icon: '🤖'
+    }
+  ];
 
 const Index: NextPage = () => {
   return (

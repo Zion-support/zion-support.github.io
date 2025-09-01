@@ -4,62 +4,260 @@
 
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
-exports.handler = async function(event, context) {
+const ROOT = path.resolve(__dirname, '..', '..');
+const FUNCTIONS_DIR = path.join(ROOT, 'netlify', 'functions');
+const LOGS_DIR = path.join(ROOT, 'automation', 'logs');
+
+function ensureDir(dir) {
+  try { fs.mkdirSync(dir, { recursive: true }); } catch (_) {}
+}
+
+function log(message) {
+  const timestamp = new Date().toISOString();
+  console.log(`[${timestamp}] ${message}`);
+}
+
+function listAllFunctions() {
   try {
-    console.log('🤖 Starting trigger-all-and-commit function...');
+    if (fs.existsSync(FUNCTIONS_DIR)) {
+      return fs.readdirSync(FUNCTIONS_DIR)
+        .filter(f => f.endsWith('.js'))
+        .map(f => f.replace(/\.js$/, ''));
+    }
+  } catch (error) {
+    log(`Error listing functions: ${error.message}`);
+  }
+  return [];
+}
+
+async function triggerFunction(functionName) {
+  try {
+    const functionPath = path.join(FUNCTIONS_DIR, `${functionName}.js`);
+    if (!fs.existsSync(functionPath)) {
+      return { name: functionName, status: 'not_found', error: 'Function file not found' };
+    }
     
-    const timestamp = new Date().toISOString();
-    const reportPath = path.join(process.cwd(), 'trigger-all-and-commit-report.md');
+    // Load and execute the function
+    const mod = require(functionPath);
+    const handler = mod && (mod.handler || mod.default || mod);
     
-    const reportContent = `# Trigger All and Commit Report
-
-Generated: ${timestamp}
-
-## Status
-- Task: trigger-all-and-commit
-- Status: Completed
-- Timestamp: ${timestamp}
-
-## Function Details
-- Function: trigger-all-and-commit
-- Schedule: Every minute
-- Purpose: Trigger all functions and commit changes
-
-## Trigger Tasks
-- Triggering all automation functions
-- Committing generated reports
-- Coordinating system-wide execution
-- Managing git synchronization
-
-## Next Steps
-- Function executed successfully
-- Report generated
-- Ready for next scheduled run
-`;
-
-    fs.writeFileSync(reportPath, reportContent);
-    console.log('📝 Report generated');
+    if (typeof handler !== 'function') {
+      return { name: functionName, status: 'no_handler', error: 'No handler function export' };
+    }
+    
+    // Execute the handler
+    const startTime = Date.now();
+    const result = await handler({}, {});
+    const duration = Date.now() - startTime;
     
     return {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Trigger all and commit function completed successfully',
-        timestamp: timestamp,
-        status: 'success'
-      })
+      name: functionName,
+      status: 'completed',
+      duration,
+      result: result && result.statusCode ? result.statusCode : 200
     };
     
   } catch (error) {
-    console.error('❌ Trigger all and commit function failed:', error.message);
+    return {
+      name: functionName,
+      status: 'failed',
+      error: error.message
+    };
+  }
+}
+
+async function triggerAllFunctionsSequentially() {
+  const functions = listAllFunctions();
+  const results = [];
+  
+  log(`Triggering ${functions.length} functions sequentially...`);
+  
+  for (const funcName of functions) {
+    // Skip triggering ourselves to avoid infinite recursion
+    if (funcName === 'trigger-all-and-commit') {
+      log(`⏭️ Skipping ${funcName} to avoid infinite recursion`);
+      results.push({
+        name: funcName,
+        status: 'skipped',
+        reason: 'Avoid infinite recursion'
+      });
+      continue;
+    }
+    
+    log(`Triggering ${funcName}...`);
+    const result = await triggerFunction(funcName);
+    results.push(result);
+    
+    if (result.status === 'completed') {
+      log(`✅ ${funcName} completed in ${result.duration}ms`);
+    } else {
+      log(`❌ ${funcName} failed: ${result.error}`);
+    }
+    
+    // Small delay between functions to avoid overwhelming the system
+    await new Promise(resolve => setTimeout(resolve, 100));
+  }
+  
+  return results;
+}
+
+function generateTriggerReport(results) {
+  try {
+    const completed = results.filter(r => r.status === 'completed').length;
+    const failed = results.filter(r => r.status === 'failed').length;
+    const notFound = results.filter(r => r.status === 'not_found').length;
+    const noHandler = results.filter(r => r.status === 'no_handler').length;
+    
+    const totalDuration = results
+      .filter(r => r.duration)
+      .reduce((sum, r) => sum + r.duration, 0);
+    
+    const reportContent = `# Trigger All and Commit Report
+
+Generated: ${new Date().toISOString()}
+
+## Summary
+- **Total Functions**: ${results.length}
+- **Completed**: ${completed}
+- **Failed**: ${failed}
+- **Not Found**: ${notFound}
+- **No Handler**: ${noHandler}
+- **Total Duration**: ${totalDuration}ms
+- **Success Rate**: ${((completed / results.length) * 100).toFixed(1)}%
+
+## Function Results
+${results.map(result => {
+  if (result.status === 'completed') {
+    return `- ✅ ${result.name} (${result.duration}ms) - Status: ${result.result}`;
+  } else if (result.status === 'failed') {
+    return `- ❌ ${result.name} - Error: ${result.error}`;
+  } else if (result.status === 'not_found') {
+    return `- 🔍 ${result.name} - Not Found`;
+  } else if (result.status === 'no_handler') {
+    return `- ⚠️ ${result.name} - No Handler`;
+  } else {
+    return `- ❓ ${result.name} - Unknown Status: ${result.status}`;
+  }
+}).join('\n')}
+
+## Performance Metrics
+- **Average Duration**: ${results.filter(r => r.duration).length > 0 ? (totalDuration / results.filter(r => r.duration).length).toFixed(2) : 0}ms
+- **Fastest Function**: ${results.filter(r => r.duration).length > 0 ? results.reduce((min, r) => r.duration && (!min.duration || r.duration < min.duration) ? r : min).name : 'N/A'}
+- **Slowest Function**: ${results.filter(r => r.duration).length > 0 ? results.reduce((max, r) => r.duration && (!max.duration || r.duration > max.duration) ? r : max).name : 'N/A'}
+
+## Next Steps
+- Review failed functions
+- Optimize slow functions
+- Monitor success rates
+
+This report is automatically generated by the Netlify function \`trigger-all-and-commit\`.
+`;
+    
+    const reportPath = path.join(ROOT, 'TRIGGER_ALL_AND_COMMIT_REPORT.md');
+    fs.writeFileSync(reportPath, reportContent, 'utf8');
+    log('✅ Trigger report generated');
+    return true;
+  } catch (error) {
+    log(`❌ Error generating trigger report: ${error.message}`);
+    return false;
+  }
+}
+
+function commitAllChanges() {
+  try {
+    const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' }).trim();
+    
+    if (gitStatus) {
+      execSync('git add .', { stdio: 'inherit' });
+      execSync('git commit -m "🤖 Trigger all functions and commit changes via Netlify function [skip ci]"', { stdio: 'inherit' });
+      execSync('git push', { stdio: 'inherit' });
+      log('✅ All changes committed and pushed');
+      return { success: true, changes: gitStatus.split('\n').length };
+    } else {
+      log('No changes to commit');
+      return { success: true, changes: 0 };
+    }
+  } catch (error) {
+    log(`❌ Git commit failed: ${error.message}`);
+    return { success: false, error: error.message };
+  }
+}
+
+// Netlify function handler
+exports.handler = async function(event, context) {
+  const functionStartTime = Date.now();
+  
+  try {
+    log('🤖 Starting trigger-all-and-commit function...');
+    
+    ensureDir(LOGS_DIR);
+    
+    // Trigger all functions
+    const results = await triggerAllFunctionsSequentially();
+    log(`Triggered ${results.length} functions`);
+    
+    // Generate report
+    const reportGenerated = generateTriggerReport(results);
+    
+    // Commit all changes
+    const commitResult = commitAllChanges();
+    
+    // Generate JSON report
+    const report = {
+      timestamp: new Date().toISOString(),
+      function: 'trigger-all-and-commit',
+      status: 'completed',
+      performance: {
+        totalDuration: Date.now() - functionStartTime,
+        functionsTriggered: results.length,
+        functionsCompleted: results.filter(r => r.status === 'completed').length,
+        functionsFailed: results.filter(r => r.status === 'failed').length
+      },
+      summary: {
+        reportGenerated: reportGenerated,
+        gitChanges: commitResult.changes || 0
+      },
+      results,
+      gitResult: commitResult
+    };
+    
+    // Write report
+    const reportPath = path.join(LOGS_DIR, 'trigger-all-and-commit-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    log(`✅ trigger-all-and-commit completed in ${Date.now() - functionStartTime}ms`);
+    
+    return {
+      statusCode: 200,
+      body: JSON.stringify(report)
+    };
+    
+  } catch (error) {
+    const functionDuration = Date.now() - functionStartTime;
+    log(`❌ trigger-all-and-commit function failed after ${functionDuration}ms: ${error.message}`);
+    
+    const errorReport = {
+      timestamp: new Date().toISOString(),
+      function: 'trigger-all-and-commit',
+      status: 'failed',
+      duration: functionDuration,
+      error: error.message,
+      stack: error.stack
+    };
+    
+    // Write error report
+    try {
+      const errorPath = path.join(LOGS_DIR, 'trigger-all-and-commit-error.json');
+      fs.writeFileSync(errorPath, JSON.stringify(errorReport, null, 2));
+    } catch (writeError) {
+      log(`Failed to write error report: ${writeError.message}`);
+    }
     
     return {
       statusCode: 500,
-      body: JSON.stringify({
-        message: 'Trigger all and commit function failed',
-        error: error.message,
-        timestamp: new Date().toISOString()
-      })
+      body: JSON.stringify(errorReport)
     };
   }
 };
