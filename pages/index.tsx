@@ -370,9 +370,9 @@ export default function HomePage() {
                   <li>• Netlify Functions Redundancy</li>
                   <li>• Multi-layer failover protection</li>
                 </ul>
-                <Link href="/automation#redundancy" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  Explore Redundancy Systems →
-                </Link>
+                <div className="text-cyan-400 text-sm font-semibold">
+                  Status: Active & Monitoring
+                </div>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -385,9 +385,9 @@ export default function HomePage() {
                   <li>• Innovation Systems</li>
                   <li>• MCP Integration</li>
                 </ul>
-                <Link href="/automation#ai-automation" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  Explore AI Systems →
-                </Link>
+                <div className="text-fuchsia-400 text-sm font-semibold">
+                  Status: Continuously Learning
+                </div>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -400,9 +400,9 @@ export default function HomePage() {
                   <li>• Quality Assurance</li>
                   <li>• Automated Recovery</li>
                 </ul>
-                <Link href="/automation#build-deploy" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  Explore Build Systems →
-                </Link>
+                <div className="text-green-400 text-sm font-semibold">
+                  Status: Self-Optimizing
+                </div>
               </div>
             </div>
           </section>
@@ -414,71 +414,33 @@ export default function HomePage() {
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-blue-400 mb-4 text-center">📖 Core Documentation</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README.md" target="_blank" rel="noopener" className="text-blue-400 hover:text-blue-300">Main README</a> - Project overview</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/ARCHITECTURE.md" target="_blank" rel="noopener" className="text-blue-400 hover:text-blue-300">Architecture Guide</a> - System design</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/API.md" target="_blank" rel="noopener" className="text-blue-400 hover:text-blue-300">API Documentation</a> - Integration guide</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/DEPLOYMENT.md" target="_blank" rel="noopener" className="text-blue-400 hover:text-blue-300">Deployment Guide</a> - Setup instructions</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener" className="text-blue-400 hover:text-blue-300">Contributing Guide</a> - Development workflow</li>
+                  <li>• <a href="/README.md" className="text-blue-400 hover:text-blue-300">Main README</a> - Project overview</li>
+                  <li>• <a href="/ARCHITECTURE.md" className="text-blue-400 hover:text-blue-300">Architecture Guide</a> - System design</li>
+                  <li>• <a href="/API.md" className="text-blue-400 hover:text-blue-300">API Documentation</a> - Integration guide</li>
+                  <li>• <a href="/DEPLOYMENT.md" className="text-blue-400 hover:text-blue-300">Deployment Guide</a> - Setup instructions</li>
+                  <li>• <a href="/CONTRIBUTING.md" className="text-blue-400 hover:text-blue-300">Contributing Guide</a> - Development workflow</li>
                 </ul>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-purple-400 mb-4 text-center">🔧 Automation Guides</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <Link href="/README_ULTIMATE_REDUNDANCY_V2.md" className="text-purple-400 hover:text-purple-300">Ultimate Redundancy</Link> - System overview</li>
-                  <li>• <Link href="/README_COMPREHENSIVE_REDUNDANCY.md" className="text-purple-400 hover:text-purple-300">Comprehensive Redundancy</Link> - Advanced features</li>
-                  <li>• <Link href="/README_PM2_REDUNDANCY_COMPLETE.md" className="text-purple-400 hover:text-purple-300">PM2 Redundancy</Link> - Process management</li>
-                  <li>• <Link href="/README_GITHUB_ACTIONS.md" className="text-purple-400 hover:text-purple-300">GitHub Actions</Link> - CI/CD automation</li>
-                  <li>• <Link href="/README_CONTINUOUS_OPERATION.md" className="text-purple-400 hover:text-purple-300">Continuous Operation</Link> - Zero-downtime</li>
+                  <li>• <a href="/README_ULTIMATE_REDUNDANCY.md" className="text-purple-400 hover:text-purple-300">Ultimate Redundancy</a> - System overview</li>
+                  <li>• <a href="/README_COMPREHENSIVE_REDUNDANCY.md" className="text-purple-400 hover:text-purple-300">Comprehensive Redundancy</a> - Advanced features</li>
+                  <li>• <a href="/README_PM2_REDUNDANCY_COMPLETE.md" className="text-purple-400 hover:text-purple-300">PM2 Redundancy</a> - Process management</li>
+                  <li>• <a href="/README_GITHUB_ACTIONS.md" className="text-purple-400 hover:text-purple-300">GitHub Actions</a> - CI/CD automation</li>
+                  <li>• <a href="/README_CONTINUOUS_OPERATION.md" className="text-purple-400 hover:text-purple-300">Continuous Operation</a> - Zero-downtime</li>
                 </ul>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-green-400 mb-4 text-center">🚀 Advanced Features</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/SECURITY.md" target="_blank" rel="noopener" className="text-green-400 hover:text-green-300">Security Guide</a> - Protection measures</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/PERFORMANCE.md" target="_blank" rel="noopener" className="text-green-400 hover:text-green-300">Performance Guide</a> - Monitoring & tuning</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/search?q=testing" target="_blank" rel="noopener" className="text-green-400 hover:text-green-300">Testing Guides</a> - Quality assurance</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/EXPONENTIAL_GROWTH_AUTOMATION.md" target="_blank" rel="noopener" className="text-green-400 hover:text-green-300">Growth Automation</a> - Scaling systems</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          {/* Additional Documentation & Reports */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📋 Additional Documentation & Reports</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-indigo-400 mb-4 text-center">📊 Performance & Monitoring</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <Link href="/PERFORMANCE.md" className="text-indigo-400 hover:text-indigo-300">Performance Guide</Link> - Optimization strategies</li>
-                  <li>• <Link href="/lighthouse-budgets-report.md" className="text-indigo-400 hover:text-indigo-300">Lighthouse Reports</Link> - Web performance</li>
-                  <li>• <Link href="/performance-weekly-report.md" className="text-indigo-400 hover:text-indigo-300">Weekly Reports</Link> - Performance metrics</li>
-                  <li>• <Link href="/accessibility-audit-report.md" className="text-indigo-400 hover:text-indigo-300">Accessibility Audit</Link> - User experience</li>
-                  <li>• <Link href="/media-optimizer-report.md" className="text-indigo-400 hover:text-indigo-300">Media Optimization</Link> - Content delivery</li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-pink-400 mb-4 text-center">🔍 Testing & Quality</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <Link href="/TESTING.md" className="text-pink-400 hover:text-pink-300">Testing Guide</Link> - Quality assurance</li>
-                  <li>• <Link href="/playwright-smoke-report.md" className="text-pink-400 hover:text-pink-300">Playwright Tests</Link> - E2E testing</li>
-                  <li>• <Link href="/ci-lint-types-build-report.md" className="text-pink-400 hover:text-pink-300">CI/CD Reports</Link> - Build validation</li>
-                  <li>• <Link href="/pr-smoke-report.md" className="text-pink-400 hover:text-pink-300">PR Validation</Link> - Pull request checks</li>
-                  <li>• <Link href="/content-generation-report.md" className="text-pink-400 hover:text-pink-300">Content Reports</Link> - Generation metrics</li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-emerald-400 mb-4 text-center">🚀 Marketing & Growth</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <Link href="/marketing-sync-report.md" className="text-emerald-400 hover:text-emerald-300">Marketing Sync</Link> - Campaign automation</li>
-                  <li>• <Link href="/instagram-marketing-report.md" className="text-emerald-400 hover:text-emerald-300">Instagram Marketing</Link> - Social media</li>
-                  <li>• <Link href="/linkedin-marketing-report.md" className="text-emerald-400 hover:text-emerald-300">LinkedIn Marketing</Link> - Professional network</li>
-                  <li>• <Link href="/marketing-daily-report.md" className="text-emerald-400 hover:text-emerald-300">Daily Reports</Link> - Marketing metrics</li>
-                  <li>• <Link href="/homepage-auto-update-report.md" className="text-emerald-400 hover:text-emerald-300">Homepage Updates</Link> - Content automation</li>
+                  <li>• <a href="/SECURITY.md" className="text-green-400 hover:text-green-300">Security Guide</a> - Protection measures</li>
+                  <li>• <a href="/TESTING.md" className="text-green-400 hover:text-green-300">Testing Guide</a> - Quality assurance</li>
+                  <li>• <a href="/SERVICE_GENERATION_README.md" className="text-green-400 hover:text-green-300">Service Generation</a> - Auto-creation</li>
+                  <li>• <a href="/ULTIMATE_REDUNDANCY_AUTOMATION_README.md" className="text-green-400 hover:text-green-300">Automation README</a> - System details</li>
+                  <li>• <a href="/EXPONENTIAL_GROWTH_AUTOMATION.md" className="text-green-400 hover:text-green-300">Growth Automation</a> - Scaling systems</li>
                 </ul>
               </div>
             </div>
@@ -519,190 +481,9 @@ export default function HomePage() {
                   <li>• ecosystem.comprehensive-redundancy.cjs - Comprehensive setup</li>
                   <li>• ecosystem.ultimate-redundancy-v2.pm2.cjs - V2 configuration</li>
                 </ul>
-                <div className="text-blue-400 text-sm font-semibold">
-                  Status: Multiple Configurations Active
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-purple-400 mb-4 text-center">🚀 Startup Scripts</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• start-ultimate-redundancy.sh - Ultimate redundancy</li>
-                  <li>• start-comprehensive-redundancy.sh - Comprehensive setup</li>
-                  <li>• start-comprehensive-ultimate-redundancy.sh - Ultimate comprehensive</li>
-                  <li>• start-redundancy-system.sh - Main redundancy</li>
-                  <li>• start-enhanced-redundancy-system.sh - Enhanced setup</li>
-                </ul>
-                <div className="text-purple-400 text-sm font-semibold">
-                  Status: Shell Scripts Ready
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">🔧 Automation Scripts</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• master-automation-launcher.cjs - Main launcher</li>
-                  <li>• ultimate-automation-orchestrator.cjs - Ultimate orchestration</li>
-                  <li>• comprehensive-automation-orchestrator.cjs - Comprehensive orchestration</li>
-                  <li>• master-build-orchestrator.cjs - Build orchestration</li>
-                  <li>• master-redundancy-orchestrator.cjs - Redundancy orchestration</li>
-                </ul>
-                <div className="text-green-400 text-sm font-semibold">
-                  Status: Orchestration Active
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Advanced Features Showcase */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📰 From the Blog</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Link href="/blog/ai-automation-trends-2025" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
-                <h3 className="text-lg font-semibold text-cyan-300 mb-2">AI Automation Trends 2025</h3>
-                <p className="text-white/70 text-sm">Emerging patterns in autonomous systems</p>
-              </Link>
-              <Link href="/blog/autonomous-content-generation" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300">
-                <h3 className="text-lg font-semibold text-fuchsia-300 mb-2">Autonomous Content Generation</h3>
-                <p className="text-white/70 text-sm">How AI creates at scale</p>
-              </Link>
-              <Link href="/blog/cloud-native-automation" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-blue-400/30 transition-all duration-300">
-                <h3 className="text-lg font-semibold text-blue-300 mb-2">Cloud-Native Automation</h3>
-                <p className="text-white/70 text-sm">Best practices for resilience</p>
-              </Link>
-              <Link href="/blog/performance-optimization" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-yellow-400/30 transition-all duration-300">
-                <h3 className="text-lg font-semibold text-yellow-300 mb-2">Performance Optimization</h3>
-                <p className="text-white/70 text-sm">Speed and efficiency at scale</p>
-              </Link>
-              <Link href="/blog/ai-ethics-automation" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300">
-                <h3 className="text-lg font-semibold text-green-300 mb-2">AI Ethics in Automation</h3>
-                <p className="text-white/70 text-sm">Responsible and safe systems</p>
-              </Link>
-              <Link href="/blog/future-of-work" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-purple-400/30 transition-all duration-300">
-                <h3 className="text-lg font-semibold text-purple-300 mb-2">The Future of Work</h3>
-                <p className="text-white/70 text-sm">Human + AI collaboration</p>
-              </Link>
-            </div>
-          </section>
-
-          {/* CTA */}
-          <section className="text-center mx-auto max-w-4xl px-6 pb-16">
-            <div className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-12 border border-white/20">
-              <h2 className="text-3xl font-bold text-white mb-6">Ready to Experience the Future of Autonomous Technology?</h2>
-              <p className="text-xl text-white/80 mb-8">
-                Join organizations leveraging our AI-powered platform for unprecedented efficiency, innovation, and reliability.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">Start Your Journey</Link>
-                <Link href="/about" className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white font-semibold transition-all duration-300 hover:border-cyan-400/50">Learn More</Link>
-              </div>
-            </div>
-          </section>
-
-          {/* Automation Systems Architecture */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🏗️ Automation Systems Architecture</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">🔄 Redundancy Orchestration</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Master Redundancy Orchestrator</li>
-                  <li>• PM2 Process Management</li>
-                  <li>• GitHub Actions Redundancy</li>
-                  <li>• Netlify Functions Redundancy</li>
-                  <li>• Geographic Distribution</li>
-                </ul>
-                <div className="text-cyan-400 text-sm font-semibold">
-                  Multi-layer protection system
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">🧠 AI Content Systems</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• AI Content Factory</li>
-                  <li>• AI Research Scout</li>
-                  <li>• AI Trends Radar</li>
-                  <li>• Content Quality Fixer</li>
-                  <li>• Autonomous Agents</li>
-                </ul>
-                <div className="text-fuchsia-400 text-sm font-semibold">
-                  Intelligent content generation
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">⚡ Build & Deploy Systems</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Master Build Orchestrator</li>
-                  <li>• Build Guardian</li>
-                  <li>• Build Recovery Systems</li>
-                  <li>• Continuous Monitoring</li>
-                  <li>• Performance Optimization</li>
-                </ul>
-                <div className="text-green-400 text-sm font-semibold">
-                  Self-healing build pipeline
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Project Structure & Organization */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📁 Project Structure & Organization</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-blue-400 mb-4 text-center">🔧 Core Directories</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <code className="bg-white/10 px-2 py-1 rounded">automation/</code> - 227+ automation scripts</li>
-                  <li>• <code className="bg-white/10 px-2 py-1 rounded">scripts/</code> - Utility & build scripts</li>
-                  <li>• <code className="bg-white/10 px-2 py-1 rounded">pages/</code> - Next.js application pages</li>
-                  <li>• <code className="bg-white/10 px-2 py-1 rounded">components/</code> - Reusable UI components</li>
-                  <li>• <code className="bg-white/10 px-2 py-1 rounded">styles/</code> - CSS & styling assets</li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-purple-400 mb-4 text-center">🚀 Automation Categories</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Content Generation & Management</li>
-                  <li>• Build & Deployment Automation</li>
-                  <li>• Monitoring & Health Checks</li>
-                  <li>• Security & Compliance</li>
-                  <li>• Performance Optimization</li>
-                  <li>• Redundancy & Failover</li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">📊 Key Metrics</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <strong>227+</strong> Autonomous Systems</li>
-                  <li>• <strong>2960+</strong> Dynamic Pages</li>
-                  <li>• <strong>12</strong> Core Components</li>
-                  <li>• <strong>99.99%</strong> Uptime Guarantee</li>
-                  <li>• <strong>100%</strong> Autonomous Operation</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          {/* Integration & API Capabilities */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🔌 Integration & API Capabilities</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">🌐 External Integrations</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• GitHub Actions CI/CD</li>
-                  <li>• Netlify Functions</li>
-                  <li>• PM2 Process Manager</li>
-                  <li>• Docker Containerization</li>
-                  <li>• MCP Integration</li>
-                </ul>
-                <Link href="/API.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  View API Documentation →
-                </Link>
+                <a href="/SECURITY.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  View Security Guide →
+                </a>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -714,9 +495,9 @@ export default function HomePage() {
                   <li>• Performance Guardian</li>
                   <li>• Security Scanner</li>
                 </ul>
-                <Link href="/ARCHITECTURE.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  View Architecture Guide →
-                </Link>
+                <a href="/TESTING.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                  View Testing Guide →
+                </a>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -728,9 +509,9 @@ export default function HomePage() {
                   <li>• Performance alerts</li>
                   <li>• Status dashboards</li>
                 </ul>
-                <Link href="/DEPLOYMENT.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  View Deployment Guide →
-                </Link>
+                <a href="/PERFORMANCE.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  View Performance Guide →
+                </a>
               </div>
             </div>
           </section>
