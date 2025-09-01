@@ -1,32 +1,26 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Bot, Clock, Globe, TrendingDown, CheckCircle  } from 'lucide-react';
-import { GradientHeading  } from "./GradientHeading";
-=======
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star } from 'lucide-react';
 
 interface Benefit {
-
   title: string;
   description: string;
   icon: React.ReactNode;
   color: string;
   bgColor: string;
   stats: string;
-  features: string[]}
+  features: string[];
+}
 
 const benefits: Benefit[] = [
   {
     title: "AI-Powered Matchmaking",
     description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.",
-    icon: <Bot className = "w-8 h-8" />,
+    icon: <Bot className="w-8 h-8" />,
     color: "from-zion-cyan to-zion-cyan-dark",
     bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",
     stats: "95% Match Rate",
-    features[
+    features: [
       "Intelligent service matching",
       "Real-time availability",
       "Expert talent matching",
@@ -40,7 +34,7 @@ const benefits: Benefit[] = [
     color: "from-zion-purple to-zion-purple-dark",
     bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
     stats: "150+ Countries",
-    features[
+    features: [
       "Worldwide talent pool",
       "24/7 availability",
       "Multi-language support",
@@ -49,12 +43,12 @@ const benefits: Benefit[] = [
   },
   {
     title: "24/7 Support",
-    description: "Our dedicated team is available around the clock to assist with  questions or issues you might encounter during your journey.",
+    description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.",
     icon: <Clock className="w-8 h-8" />,
     color: "from-zion-blue to-zion-blue-dark",
     bgColor: "from-zion-blue/20 to-zion-blue-dark/20",
     stats: "99.9% Uptime",
-    features[
+    features: [
       "Round-the-clock assistance",
       "Expert technical support",
       "Rapid response times",
@@ -68,21 +62,13 @@ const benefits: Benefit[] = [
     color: "from-zion-green to-zion-green-dark",
     bgColor: "from-zion-green/20 to-zion-green-dark/20",
     stats: "40% Cost Savings",
-    features[
+    features: [
       "Direct provider connections",
-<<<<<<< HEAD
       "Competitive pricing",
       "Bulk discount options",
       "Transparent cost structure"
     ]
-  },;
-=======;
-      "Competitive pricing",;
-      "Bulk discount options",;
-      "Transparent cost structure";
-    ];
-  };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  }
 ];
 
 export function BenefitsSection() {
@@ -90,18 +76,23 @@ export function BenefitsSection() {
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {;
-      opacity: 1,;
-      transition: {;
-        staggerChildren: 0.2,;
-        delayChildren: 0.1;
-      };
-    };
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }
+    }
   };
 
   const statsVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: { opacity: 1, x: 0 }
   };
 
   const stats = [
@@ -111,74 +102,14 @@ export function BenefitsSection() {
     { value: "24/7", label: "Support Availability", icon: <Clock className="w-6 h-6" /> }
   ];
 
-  const statsVariants = {
-  hidden: { opacity: 0,
-  y: 20 
-
-},;
-    visible: { opacity: 1, y: 0 };
-  };
-
-  const itemVariants = {
-  hidden: { opacity: 0,
-  x: -20 
-
-},;
-    visible: { opacity: 1, x: 0 };
-  };
-
-  const stats = [;
-    { value: "500+", label: "Projects Delivered", icon: Rocket },;
-    { value: "50+", label: "Expert Team Members", icon: Users },;
-    { value: "99.9%", label: "Client Satisfaction", icon: Star },;
-    { value: "24/7", label: "Support Availability", icon: Clock };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  ];
-
-  const statsVariants = {
-  hidden: { opacity: 0,;
-  ;
-  y: 20 ;
-;
-;
-
-
-
-
-},;
-    visible: { opacity: 1, y: 0 };
-  };
-
-  const itemVariants = {
-  hidden: { opacity: 0,;
-  ;
-  y: 20 ;
-;
-;
-
-
-
-
-},;
-    visible: { opacity: 1, y: 0 };
-  };
-
   return (
-    <section className = "py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style = {
-  {
+        <div className="absolute inset-0" style={{
           backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,
-  backgroundSize: '40px 40px'
-        
-
-
-
-
-
-
-}} />
+          backgroundSize: '40px 40px'
+        }} />
       </div>
 
       {/* Floating decorative elements */}
@@ -186,92 +117,25 @@ export function BenefitsSection() {
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30"
           animate={{ rotate: 360 }}
-          transition = {
-  { duration: 20, repeat: Infinity,
-  ease: "linear" 
-
-
-
-
-
-
-}}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         />
         <motion.div
           className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30"
           animate={{ rotate: -360 }}
-          transition = {
-  { duration: 25, repeat: Infinity,
-  ease: "linear" 
-
-
-
-
-
-
-}}
+          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
         />
         <motion.div
           className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20"
-<<<<<<< HEAD
-          animate = {
-  { scale[1, 1.2,
-  1] 
-
-}}
-          transition = {
-  { duration: 3, repeat: Infinity,
-  ease: "easeInOut" 
-
-}}
-=======
-          animate = {
-  { scale: [1, 1.2,
-  1] 
-
-
-
-
-
-
-}}
-          transition = {
-  { duration: 3, repeat: Infinity,
-  ease: "easeInOut" 
-
-
-
-
-
-
-}}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+          animate={{ scale: [1, 1.2, 1] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           className="text-center mb-20"
-          initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-          whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
@@ -298,7 +162,7 @@ export function BenefitsSection() {
               className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
             >
               <div className="text-zion-cyan mb-2 flex justify-center">
-                {React.createElement(stat.icon, { className: "w-6 h-6" })}
+                {stat.icon}
               </div>
               <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
               <div className="text-zion-slate-light text-sm">{stat.label}</div>

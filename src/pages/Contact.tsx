@@ -16,10 +16,10 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    comp: '',
+    company: '',
     phone: '',
-    service: '',
     message: '',
+    service: '',
     budget: '',
     timeline: '',
     preferredContact: 'email'
@@ -28,7 +28,7 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent)  => {;
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -37,13 +37,12 @@ export default function Contact() {
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
       setFormData({
-        firstName: '',
-        lastName: '',
+        name: '',
         email: '',
         company: '',
         phone: '',
-        service: '',
         message: '',
+        service: '',
         budget: '',
         timeline: '',
         preferredContact: 'email'
@@ -77,26 +76,41 @@ export default function Contact() {
     {
       icon: Clock,
       title: 'Business Hours',
-      value: 'Mon-Fri: 9:00 AM - 6:00 PM EST\nSat: 10:00 AM - 2:00 PM EST'
+      value: 'Mon-Fri: 9AM-6PM EST\nWeekend: By Appointment'
     }
   ];
 
   const services = [
-    'AI Services & Machine Learning',
-    'Cloud & DevOps Solutions',
-    'IT Infrastructure & Consulting',
-    'Micro SaaS Development',
+    'AI & Machine Learning',
+    'Cloud & DevOps',
+    'Cybersecurity',
     'Digital Transformation',
-    'Cybersecurity Services',
-    'Quantum Computing Solutions',
-    'Custom Software Development'
+    'Web Development',
+    'Mobile Development',
+    'Data Analytics',
+    'Consulting'
+  ];
+
+  const budgets = [
+    'Under $10K',
+    '$10K - $25K',
+    '$25K - $50K',
+    '$50K - $100K',
+    '$100K+'
+  ];
+
+  const timelines = [
+    'Immediate (1-2 weeks)',
+    'Quick (1-2 months)',
+    'Standard (3-6 months)',
+    'Extended (6+ months)'
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Contact Us - Zion Tech Group"
-        description="Get in touch with Zion Tech Group. We're here to help transform your business with cutting-edge AI and technology solutions."
+        description="Get in touch with Zion Tech Group for AI solutions, quantum computing, and digital transformation services. Let's discuss how we can help your business."
       />
       
       {/* Hero Section */}
@@ -110,17 +124,17 @@ export default function Contact() {
             className="text-center"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Get in <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Touch</span>
+              Let's <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Connect</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Ready to transform your business with cutting-edge AI and technology solutions? 
-              Let's discuss how we can help you achieve your goals.
+              Ready to transform your business with cutting-edge AI solutions? 
+              Get in touch with our team of experts and let's discuss your project.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Contact Form & Info Section */}
+      {/* Contact Form & Info */}
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -137,10 +151,12 @@ export default function Contact() {
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center"
+                    className="bg-green-500/20 border border-green-500/50 rounded-lg p-4 mb-6"
                   >
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-green-400">Thank you! Your message has been sent successfully.</span>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
+                    </div>
                   </motion.div>
                 )}
 
@@ -148,15 +164,17 @@ export default function Contact() {
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center"
+                    className="bg-red-500/20 border border-red-500/50 rounded-lg p-4 mb-6"
                   >
-                    <AlertCircle className="w-5 h-5 text-red-400 mr-3" />
-                    <span className="text-red-400">Something went wrong. Please try again.</span>
+                    <div className="flex items-center">
+                      <AlertCircle className="w-5 h-5 text-red-400 mr-3" />
+                      <span className="text-red-400">Something went wrong. Please try again.</span>
+                    </div>
                   </motion.div>
                 )}
 
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                         Full Name *
@@ -165,34 +183,31 @@ export default function Contact() {
                         type="text"
                         id="name"
                         name="name"
-                        required
                         value={formData.name}
-                        onChange={handleInputChange}
+                        onChange={(e) => setFormData({...formData, name: e.target.value})}
                         required
-                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
-                        placeholder="Enter your full name"
+                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                        placeholder="Your full name"
                       />
                     </div>
-                    
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                        Email Address *
+                        Email *
                       </label>
                       <input
                         type="email"
                         id="email"
                         name="email"
-                        required
                         value={formData.email}
-                        onChange={handleInputChange}
+                        onChange={(e) => setFormData({...formData, email: e.target.value})}
                         required
-                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
-                        placeholder="Enter your email"
+                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                        placeholder="your.email@company.com"
                       />
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                         Company
@@ -202,44 +217,80 @@ export default function Contact() {
                         id="company"
                         name="company"
                         value={formData.company}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
-                        placeholder="Enter company name"
+                        onChange={(e) => setFormData({...formData, company: e.target.value})}
+                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                        placeholder="Your company name"
                       />
                     </div>
-                    
                     <div>
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                        Phone Number
+                        Phone
                       </label>
                       <input
                         type="tel"
                         id="phone"
                         name="phone"
                         value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
-                        placeholder="Enter phone number"
+                        onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                        placeholder="+1 (555) 123-4567"
                       />
                     </div>
                   </div>
 
                   <div>
                     <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                      Service of Interest
+                      Service Interest
                     </label>
                     <select
                       id="service"
                       name="service"
                       value={formData.service}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
+                      onChange={(e) => setFormData({...formData, service: e.target.value})}
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
                     >
                       <option value="">Select a service</option>
                       {services.map((service) => (
                         <option key={service} value={service}>{service}</option>
                       ))}
                     </select>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-2">
+                        Budget Range
+                      </label>
+                      <select
+                        id="budget"
+                        name="budget"
+                        value={formData.budget}
+                        onChange={(e) => setFormData({...formData, budget: e.target.value})}
+                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                      >
+                        <option value="">Select budget range</option>
+                        {budgets.map((budget) => (
+                          <option key={budget} value={budget}>{budget}</option>
+                        ))}
+                      </select>
+                    </div>
+                    <div>
+                      <label htmlFor="timeline" className="block text-sm font-medium text-gray-300 mb-2">
+                        Timeline
+                      </label>
+                      <select
+                        id="timeline"
+                        name="timeline"
+                        value={formData.timeline}
+                        onChange={(e) => setFormData({...formData, timeline: e.target.value})}
+                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                      >
+                        <option value="">Select timeline</option>
+                        {timelines.map((timeline) => (
+                          <option key={timeline} value={timeline}>{timeline}</option>
+                        ))}
+                      </select>
+                    </div>
                   </div>
 
                   <div>
@@ -249,22 +300,54 @@ export default function Contact() {
                     <textarea
                       id="message"
                       name="message"
+                      value={formData.message}
+                      onChange={(e) => setFormData({...formData, message: e.target.value})}
                       required
-                      rows={5}
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200 resize-none"
-                      placeholder="Tell us about your project or how we can help..."
+                      rows={6}
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                      placeholder="Tell us about your project, goals, and how we can help..."
                     />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-3">
+                      Preferred Contact Method
+                    </label>
+                    <div className="flex space-x-6">
+                      <label className="flex items-center">
+                        <input
+                          type="radio"
+                          name="preferredContact"
+                          value="email"
+                          checked={formData.preferredContact === 'email'}
+                          onChange={(e) => setFormData({...formData, preferredContact: e.target.value})}
+                          className="mr-2 text-cyan-400 focus:ring-cyan-400"
+                        />
+                        <span className="text-gray-300">Email</span>
+                      </label>
+                      <label className="flex items-center">
+                        <input
+                          type="radio"
+                          name="preferredContact"
+                          value="phone"
+                          checked={formData.preferredContact === 'phone'}
+                          onChange={(e) => setFormData({...formData, preferredContact: e.target.value})}
+                          className="mr-2 text-cyan-400 focus:ring-cyan-400"
+                        />
+                        <span className="text-gray-300">Phone</span>
+                      </label>
+                    </div>
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full flex items-center justify-center px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                    className="w-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                   >
                     {isSubmitting ? (
                       <>
                         <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                        Sending Message...
+                        Sending...
                       </>
                     ) : (
                       <>
@@ -272,7 +355,7 @@ export default function Contact() {
                         <Send className="w-5 h-5 ml-2" />
                       </>
                     )}
-                  </motion.button>
+                  </button>
                 </form>
               </div>
             </motion.div>
@@ -285,10 +368,10 @@ export default function Contact() {
               className="space-y-8"
             >
               <div>
-                <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
-                <p className="text-gray-300 leading-relaxed mb-8">
-                  We're here to help you navigate the future of technology. 
-                  Reach out to us through any of the channels below.
+                <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
+                <p className="text-lg text-gray-300 leading-relaxed mb-8">
+                  We're here to help you transform your business with cutting-edge technology solutions. 
+                  Reach out to us and let's start a conversation about your project.
                 </p>
               </div>
 
@@ -301,17 +384,15 @@ export default function Contact() {
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     className="flex items-start space-x-4"
                   >
-                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-purple-500/20 rounded-lg flex items-center justify-center">
-                      <info.icon className="w-6 h-6 text-cyan-400" />
+                    <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <info.icon className="w-6 h-6 text-white" />
                     </div>
-                    <div className="flex-1">
+                    <div>
                       <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
                       {info.link ? (
                         <a
                           href={info.link}
-                          target={info.title === 'Address' ? '_blank' : undefined}
-                          rel={info.title === 'Address' ? 'noopener noreferrer' : undefined}
-                          className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 whitespace-pre-line"
+                          className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
                         >
                           {info.value}
                         </a>
@@ -323,162 +404,25 @@ export default function Contact() {
                 ))}
               </div>
 
-              {/* Quick Contact */}
-              <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl p-6 border border-cyan-400/20">
-                <h3 className="text-xl font-semibold text-white mb-4">Need Immediate Assistance?</h3>
-                <p className="text-gray-300 mb-4">
-                  For urgent matters or technical support, our team is available during business hours.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <a
-                    href="tel:+13024640950"
-                    className="inline-flex items-center justify-center px-4 py-2 bg-cyan-400 text-white font-medium rounded-lg hover:bg-cyan-500 transition-colors duration-200"
-                  >
-                    <Phone className="w-4 h-4 mr-2" />
-                    Call Now
-                  </a>
-                  <a
-                    href="mailto:kleber@ziontechgroup.com"
-                    className="inline-flex items-center justify-center px-4 py-2 border border-cyan-400 text-cyan-400 font-medium rounded-lg hover:bg-cyan-400 hover:text-white transition-colors duration-200"
-                  >
-                    <Mail className="w-4 h-4 mr-2" />
-                    Email Us
-                  </a>
-                </div>
-              </div>
-
-          {/* Contact Information */}
-          <motion.section
-            className="py-20"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <motion.div className="text-center mb-16" variants={itemVariants}>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                  Contact <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">Information</span>
-                </h2>
-                <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                  Get in touch with us through any of these channels
-                </p>
-              </motion.div>
-
-              <motion.div
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-              >
-                {stats.map((stat, index) => (
-                  <motion.div
-                    key={index}
-                    variants={itemVariants}
-                    className="text-center group"
-                    whileHover={{ y: -8, scale: 1.05 }}
-                  >
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300 neon-glow">
-                      <Star className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-                    <div className="text-sm text-gray-300">{stat.label}</div>
-                  </motion.div>
-                ))}
-              </motion.div>
-
-              <motion.div
-                className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12"
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-              >
-                <motion.div variants={itemVariants} className="card-futuristic p-8">
-                  <h3 className="text-2xl font-bold text-white mb-6">Company Details</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-3">
-                      <MapPin className="w-5 h-5 text-cyan-400" />
-                      <span className="text-gray-300">{contactInfo.address}</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <Phone className="w-5 h-5 text-cyan-400" />
-                      <a href={`tel:${contactInfo.phone}`} className="text-gray-300 hover:text-cyan-400 transition-colors">
-                        {contactInfo.phone}
-                      </a>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <Mail className="w-5 h-5 text-cyan-400" />
-                      <a href={`mailto:${contactInfo.email}`} className="text-gray-300 hover:text-cyan-400 transition-colors">
-                        {contactInfo.email}
-                      </a>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <Globe className="w-5 h-5 text-cyan-400" />
-                      <a href={contactInfo.website} className="text-gray-300 hover:text-cyan-400 transition-colors">
-                        {contactInfo.website}
-                      </a>
-                    </div>
+              <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-400/20">
+                <h3 className="text-2xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                    <span className="text-gray-300">Expert AI & ML Specialists</span>
                   </div>
-                </motion.div>
-
-                <motion.div variants={itemVariants} className="card-futuristic p-8">
-                  <h3 className="text-2xl font-bold text-white mb-6">Business Hours</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-3">
-                      <Clock className="w-5 h-5 text-cyan-400" />
-                      <span className="text-gray-300">{contactInfo.hours}</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <MessageSquare className="w-5 h-5 text-cyan-400" />
-                      <span className="text-gray-300">Response time: {contactInfo.responseTime}</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <Users className="w-5 h-5 text-cyan-400" />
-                      <span className="text-gray-300">Expert team available</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <Award className="w-5 h-5 text-cyan-400" />
-                      <span className="text-gray-300">Certified professionals</span>
-                    </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                    <span className="text-gray-300">Proven Track Record</span>
                   </div>
-                </motion.div>
-              </motion.div>
-            </div>
-          </motion.section>
-
-          {/* CTA Section */}
-          <motion.section
-            className="py-20"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-              <motion.div variants={itemVariants}>
-                <h2 className="text-4xl font-bold text-white mb-6">
-                  Ready to Start Your <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">Project</span>?
-                </h2>
-                <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                  Let's discuss how our innovative solutions can transform your business and drive growth
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
-                    href={`tel:${contactInfo.phone}`}
-                    className="btn-futuristic inline-flex items-center px-8 py-4 font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
-                  >
-                    <Phone className="mr-2 w-5 h-5" />
-                    Call Now
-                  </a>
-                  <a
-                    href={`mailto:${contactInfo.email}`}
-                    className="btn-neon inline-flex items-center px-8 py-4 font-semibold rounded-lg transition-all duration-300"
-                  >
-                    <Mail className="mr-2 w-5 h-5" />
-                    Send Email
-                  </a>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                    <span className="text-gray-300">24/7 Support Available</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                    <span className="text-gray-300">Competitive Pricing</span>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -486,55 +430,8 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-300">Quick answers to common questions</p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {[
-              {
-                question: "What services does Zion Tech Group offer?",
-                answer: "We offer a comprehensive range of services including AI and machine learning solutions, cloud and DevOps services, IT infrastructure consulting, micro SaaS development, and digital transformation consulting."
-              },
-              {
-                question: "How quickly can you start a project?",
-                answer: "Project timelines vary based on complexity, but we typically begin within 1-2 weeks of project approval. We'll provide a detailed timeline during our initial consultation."
-              },
-              {
-                question: "Do you work with small businesses?",
-                answer: "Absolutely! We work with businesses of all sizes, from startups to enterprise organizations. Our micro SaaS solutions are specifically designed for small to medium businesses."
-              },
-              {
-                question: "What industries do you specialize in?",
-                answer: "We have experience across multiple industries including healthcare, finance, manufacturing, retail, and technology. Our AI solutions are adaptable to any industry."
-              }
-            ].map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50"
-              >
-                <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
-                <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-20">
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -542,11 +439,11 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
+              Ready to Start Your Project?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our AI-powered solutions can transform your business 
-              and drive innovation in your industry.
+              Don't wait to transform your business. Contact us today and let's discuss 
+              how our AI solutions can drive your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -554,12 +451,13 @@ export default function Contact() {
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105"
               >
                 Explore Our Services
+                <MessageSquare className="w-5 h-5 ml-2" />
               </a>
               <a
-                href="/request-quote"
+                href="/about"
                 className="inline-flex items-center px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
               >
-                Request a Quote
+                Learn About Us
               </a>
             </div>
           </motion.div>

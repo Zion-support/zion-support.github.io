@@ -10,7 +10,7 @@ const benefits = [
     stats: "50% Faster",
     color: "from-yellow-500 to-orange-500",
     bgColor: "from-yellow-500/20 to-orange-500/20",
-    features[
+    features: [
       "Agile development methodology",
       "Parallel development teams",
       "Automated testing pipeline",
@@ -24,7 +24,7 @@ const benefits = [
     stats: "99.9% Secure",
     color: "from-blue-500 to-cyan-500",
     bgColor: "from-blue-500/20 to-cyan-500/20",
-    features[
+    features: [
       "SOC 2 Type II compliant",
       "End-to-end encryption",
       "Regular security audits",
@@ -38,7 +38,7 @@ const benefits = [
     stats: "300% ROI",
     color: "from-green-500 to-emerald-500",
     bgColor: "from-green-500/20 to-emerald-500/20",
-    features[
+    features: [
       "Performance optimization",
       "Cost reduction strategies",
       "Revenue growth solutions",
@@ -52,7 +52,7 @@ const benefits = [
     stats: "100% Quality",
     color: "from-purple-500 to-pink-500",
     bgColor: "from-purple-500/20 to-pink-500/20",
-    features[
+    features: [
       "Comprehensive testing",
       "Code quality standards",
       "Performance benchmarks",
@@ -147,32 +147,28 @@ export function BenefitsSection() {
         />
         <motion.div 
           className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20" 
-          animate = {
-  { scale[1, 1.2,
-  1] 
-
-}} 
-          transition = {
-  { duration: 3, repeat: Infinity,
-  ease: "easeInOut" 
-
-}}
+          animate={{
+            scale: [1, 1.2, 1]
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
         />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
         <motion.div 
           className="text-center mb-20" 
-          initial = {
-  { opacity: 0,
-  y: 20 
-
-}} 
-          whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}} 
+          initial={{
+            opacity: 0,
+            y: 20
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0
+          }} 
           viewport={{ once: true }} 
           transition={{ duration: 0.6 }}
         >
@@ -216,11 +212,10 @@ export function BenefitsSection() {
               onHoverStart={() => setHoveredIndex(index)} 
               onHoverEnd={() => setHoveredIndex(null)} 
               whileHover={{ y: -8 }} 
-              transition = {
-  { type: "spring",
-  stiffness: 300 
-
-}}
+              transition={{
+                type: "spring",
+                stiffness: 300
+              }}
             >
               <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group h-full">
                 {/* Icon with enhanced background */}
@@ -248,37 +243,32 @@ export function BenefitsSection() {
                   {hoveredIndex === index && (
                     <motion.div 
                       className="space-y-2" 
-                      initial = {
-  { opacity: 0,
-  height: 0 
-
-}} 
-                      animate = {
-  { opacity: 1,
-  height: "auto" 
-
-}} 
-                      exit = {
-  { opacity: 0,
-  height: 0 
-
-}} 
+                      initial={{
+                        opacity: 0,
+                        height: 0
+                      }}
+                      animate={{
+                        opacity: 1,
+                        height: "auto"
+                      }}
+                      exit={{
+                        opacity: 0,
+                        height: 0
+                      }} 
                       transition={{ duration: 0.3 }}
                     >
                       {benefit.features.map((feature, idx) => (
                         <motion.div 
                           key={idx} 
                           className="flex items-center gap-2 text-zion-slate-light/80 text-sm" 
-                          initial = {
-  { opacity: 0,
-  x: -10 
-
-}} 
-                          animate = {
-  { opacity: 1,
-  x: 0 
-
-}} 
+                          initial={{
+                            opacity: 0,
+                            x: -10
+                          }}
+                          animate={{
+                            opacity: 1,
+                            x: 0
+                          }} 
                           transition={{ delay: idx * 0.1 }}
                         >
                           <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
@@ -301,22 +291,19 @@ export function BenefitsSection() {
         {/* Call to action */}
         <motion.div 
           className="text-center mt-16" 
-          initial = {
-  { opacity: 0,
-  y: 20 
-
-}} 
-          whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}} 
+          initial={{
+            opacity: 0,
+            y: 20
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0
+          }}
           viewport={{ once: true }} 
-          transition = {
-  { duration: 0.6,
-  delay: 0.5 
-
-}}
+          transition={{
+            duration: 0.6,
+            delay: 0.5
+          }}
         >
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
             <div className="px-8 py-4 bg-zion-blue-dark rounded-xl">

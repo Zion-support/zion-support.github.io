@@ -60,15 +60,9 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
   </div>
 );
 
-function App() {
+export default function App() {
   return (
-    <ErrorBoundary
-      FallbackComponent={ErrorFallback}
-      onReset={() => {
-        // Reset the state of your app here
-        window.location.reload();
-      }}
-    >
+    <ErrorBoundary FallbackComponent={ErrorFallback}>
       <div className="min-h-screen bg-gray-900 text-white">
         <Header />
         <div className="flex pt-16">
@@ -116,5 +110,3 @@ function App() {
     </ErrorBoundary>
   );
 }
-
-export default App;

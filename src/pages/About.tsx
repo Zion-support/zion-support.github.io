@@ -289,19 +289,6 @@ export default function About() {
         </div>
       </section>
     </div>
-  )}
-=======
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-white mb-4">Website</h3>
-              <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300 text-lg">
-                https://ziontechgroup.com;
-              </a>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
   );
 };
 

@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { SEO  } from '@/components/SEO';
 import { Users, 
   Target, 
@@ -22,12 +22,12 @@ import { Users,
   Database
  } from 'lucide-react';
 
-export default function About(...args[]):  {
+export default function About() {
   const stats = [
     { number: '500+', label: 'Projects Completed', description: 'Successfully delivered across industries' },
     { number: '50+', label: 'Team Members', description: 'Expert professionals and specialists' },
-    { number: '25+', label: 'Countries Served', description: 'Global presence and reach' },;
-    { number: '99%', label: 'Client Satisfaction', description: 'Consistent high-quality delivery' };
+    { number: '25+', label: 'Countries Served', description: 'Global presence and reach' },
+    { number: '99%', label: 'Client Satisfaction', description: 'Consistent high-quality delivery' }
   ];
 
   const values = [
@@ -53,8 +53,8 @@ export default function About(...args[]):  {
       icon: Security,
       title: 'Security & Trust',
       description: 'Your data and systems are protected with enterprise-grade security and compliance standards.',
-      color: 'from-red-500 to-orange-500';
-    };
+      color: 'from-red-500 to-orange-500'
+    }
   ];
 
   const teamMembers = [
@@ -62,30 +62,30 @@ export default function About(...args[]):  {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
       bio: 'Visionary leader with 15+ years in technology innovation and business transformation.',
-      expertise['AI Strategy', 'Digital Transformation', 'Business Innovation'],
+      expertise: ['AI Strategy', 'Digital Transformation', 'Business Innovation'],
       image: '/images/team/kleber-santos.jpg'
     },
     {
       name: 'Dr. Sarah Chen',
       role: 'CTO & AI Research Lead',
       bio: 'PhD in Computer Science with expertise in machine learning and artificial intelligence.',
-      expertise['Machine Learning', 'AI Research', 'Technical Architecture'],
+      expertise: ['Machine Learning', 'AI Research', 'Technical Architecture'],
       image: '/images/team/sarah-chen.jpg'
     },
     {
       name: 'Marcus Rodriguez',
       role: 'Head of Cloud & DevOps',
       bio: 'Cloud infrastructure expert with certifications in AWS, Azure, and Google Cloud.',
-      expertise['Cloud Architecture', 'DevOps', 'Infrastructure'],
+      expertise: ['Cloud Architecture', 'DevOps', 'Infrastructure'],
       image: '/images/team/marcus-rodriguez.jpg'
     },
     {
       name: 'Dr. Emily Watson',
       role: 'Cybersecurity Director',
       bio: 'Former government cybersecurity specialist with expertise in threat intelligence.',
-      expertise['Cybersecurity', 'Compliance', 'Risk Management'],
-      image: '/images/team/emily-watson.jpg';
-    };
+      expertise: ['Cybersecurity', 'Compliance', 'Risk Management'],
+      image: '/images/team/emily-watson.jpg'
+    }
   ];
 
   const milestones = [
@@ -112,11 +112,10 @@ export default function About(...args[]):  {
     {
       year: '2025',
       title: 'AI Ethics Leadership',
-      description: 'Recognized as industry leader in responsible AI development.';
-    };
+      description: 'Recognized as industry leader in responsible AI development.'
+    }
   ];
 
-const About: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-900">
       <SEO 
@@ -246,42 +245,6 @@ const About: React.FC = () => {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-            </motion.div>
-            
-            <motion.div
-              initial = {
-  { opacity: 0,
-  x: 30 
-
-}}
-              whileInView = {
-  { opacity: 1,
-  x: 0 
-
-}}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="relative"
-            >
-              <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-3xl border border-slate-700">
-                <h3 className="text-2xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h3>
-                <div className="space-y-4">
-                  {[
-                    '15+ years of technology innovation experience',
-                    'Expert team with advanced degrees and certifications',
-                    'Proven track record of successful AI implementations',
-                    'Enterprise-grade security and compliance standards',
-                    '24/7 support and dedicated account management',
-                    'Continuous innovation and R&D investment'
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                      <span className="text-slate-300">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </motion.div>
           </div>
         </div>
@@ -314,26 +277,14 @@ const About: React.FC = () => {
           </motion.div>
           
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
-            {stats.map((stat, index)  => (
+            {stats.map((stat, index) => (
               <motion.div 
                 key={index}
                 className="text-center group"
-                initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition = {
-  { duration: 0.8,
-  delay: index * 0.1 
-
-}}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
               >
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
                   <TrendingUp className="w-10 h-10 text-white" />
@@ -352,16 +303,8 @@ const About: React.FC = () => {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -374,26 +317,14 @@ const About: React.FC = () => {
           </motion.div>
           
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index)  => (
+            {values.map((value, index) => (
               <motion.div
                 key={index}
                 className="text-center group"
-                initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition = {
-  { duration: 0.8,
-  delay: index * 0.1 
-
-}}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
               >
                 <div className={`w-20 h-20 bg-gradient-to-br ${value.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <value.icon className="w-10 h-10 text-white" />
@@ -539,23 +470,7 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
-  )}
-=======
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-white mb-4">Website</h3>
-              <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300 text-lg">
-                https://ziontechgroup.com;
-              </a>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
   );
-};
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
-export default About;
+}

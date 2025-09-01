@@ -1,68 +1,44 @@
-// Enhanced Service Worker for Zion Tech Group
-// Provides offline support, caching strategies, and performance optimizations
+// Service Worker for Zion Tech Group
+// Handles caching, offline functionality, and performance optimization
 
-const CACHE_NAME = 'zion-tech-group-v2.0.0';
-const STATIC_CACHE = 'zion-static-v2.0.0';
-const DYNAMIC_CACHE = 'zion-dynamic-v2.0.0';
-const API_CACHE = 'zion-api-v2.0.0';
-
-// Cache strategies
-const CACHE_STRATEGIES = {
-  STATIC: 'cache-first',
-  DYNAMIC: 'stale-while-revalidate',
-  API: 'network-first',
-  IMAGES: 'cache-first',
-  FONTS: 'cache-first'
-};
-
-// Static assets to cache
+const CACHE_NAME = 'zion-tech-group-v1';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
   '/manifest.json',
   '/favicon.ico',
-  '/logo192.png',
-  '/logo512.png'
+  '/og-image.jpg'
 ];
 
-// Dynamic routes to cache
 const DYNAMIC_ROUTES = [
   '/about',
   '/services',
   '/contact',
-  '/ai-services',
-  '/it-services',
-  '/micro-saas',
+  '/careers',
   '/blog',
-  '/careers'
+  '/case-studies'
 ];
 
-// API endpoints to cache
 const API_ENDPOINTS = [
-  '/api/services',
-  '/api/contact',
-  '/api/blog',
-  '/api/careers'
+  '/api/',
+  '/graphql'
 ];
 
 // Install event - cache static assets
 self.addEventListener('install', (event: ExtendableEvent) => {
   event.waitUntil(
-    Promise.all([
-      caches.open(STATIC_CACHE).then(cache => {
+    caches.open(CACHE_NAME)
+      .then(cache => {
         console.log('Caching static assets');
         return cache.addAll(STATIC_ASSETS);
-      }),
-      caches.open(DYNAMIC_CACHE).then(cache => {
-        console.log('Caching dynamic routes');
-        return cache.addAll(DYNAMIC_ROUTES.map(route => `${route}.html`));
       })
-    ]).then(() => {
-      console.log('Service Worker installed successfully');
-      return self.skipWaiting();
-    })
+      .then(() => {
+        console.log('Service Worker installed successfully');
+        return self.skipWaiting();
+      })
+      .catch(error => {
+        console.error('Service Worker installation failed:', error);
+      })
   );
 });
 
@@ -72,22 +48,20 @@ self.addEventListener('activate', (event: ExtendableEvent) => {
     caches.keys().then(cacheNames => {
       return Promise.all(
         cacheNames.map(cacheName => {
-          if (cacheName !== STATIC_CACHE && 
-              cacheName !== DYNAMIC_CACHE && 
-              cacheName !== API_CACHE) {
+          if (cacheName !== CACHE_NAME) {
             console.log('Deleting old cache:', cacheName);
             return caches.delete(cacheName);
           }
         })
       );
     }).then(() => {
-      console.log('Service Worker activated');
+      console.log('Service Worker activated successfully');
       return self.clients.claim();
     })
   );
 });
 
-// Fetch event - implement caching strategies
+// Fetch event - handle different caching strategies
 self.addEventListener('fetch', (event: FetchEvent) => {
   const { request } = event;
   const url = new URL(request.url);
@@ -97,19 +71,22 @@ self.addEventListener('fetch', (event: FetchEvent) => {
     return;
   }
 
+  // Skip chrome-extension and other non-http requests
+  if (!url.protocol.startsWith('http')) {
+    return;
+  }
+
   // Handle different types of requests
   if (isStaticAsset(request)) {
-    event.respondWith(cacheFirst(request, STATIC_CACHE));
-  } else if (isDynamicRoute(request)) {
-    event.respondWith(staleWhileRevalidate(request, DYNAMIC_CACHE));
+    event.respondWith(cacheFirst(request, CACHE_NAME));
+  } else if (isImage(request) || isFont(request)) {
+    event.respondWith(cacheFirst(request, CACHE_NAME));
   } else if (isAPIRequest(request)) {
-    event.respondWith(networkFirst(request, API_CACHE));
-  } else if (isImage(request)) {
-    event.respondWith(cacheFirst(request, DYNAMIC_CACHE));
-  } else if (isFont(request)) {
-    event.respondWith(cacheFirst(request, STATIC_CACHE));
+    event.respondWith(networkFirst(request, CACHE_NAME));
+  } else if (isDynamicRoute(request)) {
+    event.respondWith(networkFirst(request, CACHE_NAME));
   } else {
-    event.respondWith(networkFirst(request, DYNAMIC_CACHE));
+    event.respondWith(networkFirst(request, CACHE_NAME));
   }
 });
 
@@ -118,29 +95,6 @@ async function cacheFirst(request: Request, cacheName: string): Promise<Response
   const cache = await caches.open(cacheName);
   const cachedResponse = await cache.match(request);
   
-  if (cachedResponse) {
-    return cachedResponse;
-  }
-  
-  try {
-    const networkResponse = await fetch(request);
-    if (networkResponse.ok) {
-      cache.put(request, networkResponse.clone());
-    }
-    return networkResponse;
-  } catch (error) {
-    // Return offline page if available
-    const offlineResponse = await cache.match('/offline.html');
-    return offlineResponse || new Response('Offline', { status: 503 });
-  }
-}
-
-// Stale While Revalidate Strategy
-async function staleWhileRevalidate(request: Request, cacheName: string): Promise<Response> {
-  const cache = await caches.open(cacheName);
-  const cachedResponse = await cache.match(request);
-  
-  // Return cached response immediately if available
   if (cachedResponse) {
     // Update cache in background
     fetch(request).then(response => {
@@ -214,6 +168,8 @@ function isFont(request: Request): boolean {
 
 // Background sync for offline actions
 self.addEventListener('sync', (event: SyncEvent) => {
+  console.log('Background sync triggered:', event.tag);
+  
   if (event.tag === 'background-sync') {
     event.waitUntil(doBackgroundSync());
   }
@@ -221,34 +177,29 @@ self.addEventListener('sync', (event: SyncEvent) => {
 
 async function doBackgroundSync() {
   try {
-    // Sync offline data when connection is restored
+    // Perform background sync operations
+    console.log('Performing background sync...');
+    
+    // Example: Sync offline data
     const offlineData = await getOfflineData();
     if (offlineData.length > 0) {
       await syncOfflineData(offlineData);
     }
+    
+    console.log('Background sync completed successfully');
   } catch (error) {
     console.error('Background sync failed:', error);
   }
 }
 
-// Get offline data from IndexedDB
-async function getOfflineData(): Promise<any[]> {
-  // Implementation would depend on your data storage strategy
-  return [];
-}
-
-// Sync offline data with server
-async function syncOfflineData(data: any[]): Promise<void> {
-  // Implementation would depend on your API structure
-  console.log('Syncing offline data:', data);
-}
-
-// Push notification handling
+// Handle push notifications
 self.addEventListener('push', (event: PushEvent) => {
+  console.log('Push notification received:', event);
+  
   const options = {
-    body: event.data?.text() || 'New update from Zion Tech Group',
-    icon: '/logo192.png',
-    badge: '/logo192.png',
+    body: event.data?.text() || 'New notification from Zion Tech Group',
+    icon: '/icon-192x192.png',
+    badge: '/badge-72x72.png',
     vibrate: [100, 50, 100],
     data: {
       dateOfArrival: Date.now(),
@@ -257,26 +208,28 @@ self.addEventListener('push', (event: PushEvent) => {
     actions: [
       {
         action: 'explore',
-        title: 'Explore',
-        icon: '/logo192.png'
+        title: 'View',
+        icon: '/icon-192x192.png'
       },
       {
         action: 'close',
         title: 'Close',
-        icon: '/logo192.png'
+        icon: '/icon-192x192.png'
       }
     ]
   };
-
+  
   event.waitUntil(
     self.registration.showNotification('Zion Tech Group', options)
   );
 });
 
-// Notification click handling
+// Handle notification clicks
 self.addEventListener('notificationclick', (event: NotificationEvent) => {
+  console.log('Notification clicked:', event);
+  
   event.notification.close();
-
+  
   if (event.action === 'explore') {
     event.waitUntil(
       clients.openWindow('/')
@@ -284,8 +237,10 @@ self.addEventListener('notificationclick', (event: NotificationEvent) => {
   }
 });
 
-// Message handling for communication with main thread
+// Handle message events from main thread
 self.addEventListener('message', (event: ExtendableMessageEvent) => {
+  console.log('Message received in service worker:', event.data);
+  
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
   }
@@ -293,294 +248,18 @@ self.addEventListener('message', (event: ExtendableMessageEvent) => {
   if (event.data && event.data.type === 'GET_VERSION') {
     event.ports[0].postMessage({ version: CACHE_NAME });
   }
-  
-  if (event.data && event.data.type === 'CLEAR_CACHE') {
-    event.waitUntil(clearAllCaches());
-  }
 });
 
-// Clear all caches
-async function clearAllCaches(): Promise<void> {
-  const cacheNames = await caches.keys();
-  await Promise.all(
-    cacheNames.map(cacheName => caches.delete(cacheName))
-  );
-  console.log('All caches cleared');
+// Utility functions for offline data management
+async function getOfflineData(): Promise<any[]> {
+  // Implementation for retrieving offline data
+  return [];
 }
 
-// Periodic cache cleanup
-setInterval(async () => {
-  try {
-    const cacheNames = await caches.keys();
-    for (const cacheName of cacheNames) {
-      const cache = await caches.open(cacheName);
-      const requests = await cache.keys();
-      
-      // Remove old entries (older than 7 days)
-      for (const request of requests) {
-        const response = await cache.match(request);
-        if (response) {
-          const date = response.headers.get('date');
-          if (date && Date.now() - new Date(date).getTime() > 7 * 24 * 60 * 60 * 1000) {
-            await cache.delete(request);
-          }
-        }
-      }
-    }
-  } catch (error) {
-    console.error('Cache cleanup failed:', error);
-  }
-}, 24 * 60 * 60 * 1000); // Run once per day
-
-// Export for TypeScript
-export function registerServiceWorker(): void {
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js')
-        .then(registration => {
-          console.log('SW registered: ', registration);
-          
-          // Check for updates
-          registration.addEventListener('updatefound', () => {
-            const newWorker = registration.installing;
-            if (newWorker) {
-              newWorker.addEventListener('statechange', () => {
-                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                  // New version available
-                  if (confirm('New version available! Reload to update?')) {
-                    window.location.reload();
-                  }
-                }
-              });
-            }
-          });
-        })
-        .catch(registrationError => {
-          console.log('SW registration failed: ', registrationError);
-        });
-    });
-  }
-
-  private showUpdateNotification() {
-    try {
-      // Create update notification
-      const notification = document.createElement('div');
-      notification.className = 'fixed top-4 right-4 bg-blue-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
-    notification.innerHTML = `
-      <div class="flex items-center space-x-3">
-        <span>🔄 New version available</span>
-        <button id="sw-update-btn" class="bg-white text-blue-500 px-3 py-1 rounded text-sm hover:bg-gray-100">;
-          Update;
-        </button>;
-        <button id="sw-dismiss-btn" class="text-white/80 hover:text-white">;
-          ✕;
-        </button>;
-      </div>;
-    `;
-
-    document.body.appendChild(notification);
-
-    // Handle update button
-    const updateBtn = notification.querySelector('#sw-update-btn');
-    if (updateBtn) {
-      updateBtn.addEventListener('click', () => {
-        this.updateServiceWorker();
-        notification.remove();
-      });
-    }
-
-    // Handle dismiss button
-    const dismissBtn = notification.querySelector('#sw-dismiss-btn');
-    if (dismissBtn) {
-      dismissBtn.addEventListener('click', () => {
-        notification.remove();
-      });
-    }
-
-    // Auto-remove after 10 seconds
-    setTimeout(() => {
-      if (notification.parentNode) {
-        notification.remove();
-      }
-    }, 10000);
-    } catch (error) {
-      console.error('Error showing update notification:', error);
-    }
-  }
-
-  async updateServiceWorker() {
-    if (!this.swRegistration) return;
-
-    try {
-      await this.swRegistration.update();
-      console.log('Service Worker update initiated');
-    } catch (error) {
-      console.error('Service Worker update failed:', error);
-    }
-  }
-
-  async unregister(): Promise<boolean> {
-    if (!this.swRegistration) return false;
-
-    try {
-      const unregistered = await this.swRegistration.unregister();
-      if (unregistered) {
-        console.log('Service Worker unregistered');
-        this.swRegistration = null;
-      }
-      return unregistered;
-    } catch (error) {
-      console.error('Service Worker unregistration failed:', error);
-      return false;
-    }
-  }
-
-  async getRegistration(): Promise<ServiceWorkerRegistration | null> {
-    if (!this.isSupported) return null;
-    const registration = await navigator.serviceWorker.getRegistration();
-    return registration || null;
-  }
-
-  async getController(): Promise<ServiceWorker | null> {
-    if (!this.isSupported) return null;
-    return navigator.serviceWorker.controller;
-  }
-
-  isReady(): boolean {
-    return this.swRegistration !== null && this.swRegistration.active !== null;
-  }
-
-  // Cache management
-  async clearCaches(): Promise<void> {
-    if (!this.isSupported) return;
-
-    try {
-      const cacheNames = await caches.keys();
-      await Promise.all(
-        cacheNames.map(cacheName = > caches.delete(cacheName));
-      );
-      console.log('All caches cleared');
-    } catch (error) {
-      console.error('Failed to clear caches:', error);
-    }
-  }
-
-  async getCacheSize(): Promise<number> {
-    if (!this.isSupported) return 0;
-
-    try {
-      const cacheNames = await caches.keys();
-      let totalSize = 0;
-
-      for (const cache = await caches.open(cacheName);
-        const keys = await cache.keys();
-        
-        for (const response = await cache.match(request);
-          if (response) {
-            const blob = await response.blob();
-            totalSize += blob.size;
-          }
-        }
-      }
-
-      return totalSize;
-    } catch (error) {
-      console.error('Failed to calculate cache size:', error);
-      return 0;
-    }
-  }
-
-  // Background sync
-  async requestBackgroundSync(tag: string): Promise<boolean> {
-    if (!this.isSupported || !('sync' in navigator.serviceWorker)) {
-      return false;
-    }
-
-    try {
-      const registration = await this.getRegistration();
-      if (registration) {
-        await (registration as ).sync.register(tag);
-        console.log('Background sync requested:', tag);
-        return true;
-      }
-      return false;
-    } catch (error) {
-      console.error('Background sync request failed:', error);
-      return false;
-    }
-  }
-
-  // Push notifications
-  async requestNotificationPermission(): Promise<NotificationPermission> {
-    if (!this.isSupported || !('Notification' in window)) {
-      return 'denied';
-    }
-
-    try {
-      const permission = await Notification.requestPermission();
-      console.log('Notification permission:', permission);
-      return permission;
-    } catch (error) {
-      console.error('Failed to request notification permission:', error);
-      return 'denied';
-    }
-  }
-
-  async subscribeToPushNotifications(): Promise<PushSubscription | null> {
-    if (!this.isSupported || !('PushManager' in window)) {
-      return null;
-    }
-
-    try {
-      const permission = await this.requestNotificationPermission();
-      if (permission !== 'granted') {
-        console.log('Notification permission denied');
-        return null;
-      }
-
-      const registration = await this.getRegistration();
-      if (!registration) {
-        console.log('No service worker registration');
-        return null;
-      }
-
-      const vapidKey = process.env['REACT_APP_VAPID_PUBLIC_KEY'] || '';
-      const applicationServerKey = this.urlBase64ToUint8Array(vapidKey);
-
-      const subscription = await registration.pushManager.subscribe({
-        userVisibleOnly: true,
-        applicationServerKey: applicationServerKey as ArrayBufferView
-      });
-
-      console.log('Push subscription created:', subscription);
-      return subscription;
-    } catch (error) {
-      console.error('Push subscription failed:', error);
-      return null;
-    }
-  }
-
-  private urlBase64ToUint8Array(base64String: string): Uint8Array {
-    const padding = '='.repeat((4 - base64String.length % 4) % 4);
-    const base64 = (base64String + padding);
-      .replace(/-/g, '+');
-      .replace(/_/g, '/');
-
-    const rawData = window.atob(base64);
-    const outputArray = new Uint8Array(rawData.length);
-
-    for (let i = 0; i < rawData.length; ++i) {
-      outputArray[i] = rawData.charCodeAt(i);
-    }
-    return outputArray;
-  }
+async function syncOfflineData(data: any[]): Promise<void> {
+  // Implementation for syncing offline data
+  console.log('Syncing offline data:', data);
 }
 
-// Unregister service worker
-export function unregisterServiceWorker(): void {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.ready.then(registration => {
-      registration.unregister();
-    });
-  }
-}
+// Export for testing purposes
+export {};

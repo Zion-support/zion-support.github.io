@@ -91,7 +91,7 @@ export default defineConfig({
   preview: {
     port: 4173,
     host: true,
-    open: true,
+    cors: true,
   },
   css: {
     postcss: {
@@ -103,7 +103,7 @@ export default defineConfig({
             discardComments: {
               removeAll: true,
             },
-            normalizeWhitespace: true,
+            normalizeWhitespace: false,
           }],
         }),
       ],
