@@ -1,5 +1,6 @@
 import useSWR from 'swr';
 import { captureException } from '@/utils/sentry';
+import { useState } from 'react';
 
 export interface ServiceItem {
   id: string
@@ -50,4 +51,35 @@ export function useQuoteWizard(
     },
     dedupingInterval: 600000,
   });
+}
+
+type WizardStep = 'Services' | 'Details' | 'Success';
+
+export function useRequestQuoteWizard() {
+  const [step, setStep] = useState<WizardStep>('Services');
+  const [selectedService, setSelectedService] = useState<string | null>(null);
+
+  const selectService = (serviceId: string) => {
+    setSelectedService(serviceId);
+    setStep('Details');
+  };
+
+  const submitQuote = (message: string) => {
+    // In a real app, this would submit to an API
+    console.log('Submitting quote:', { serviceId: selectedService, message });
+    setStep('Success');
+  };
+
+  const resetWizard = () => {
+    setStep('Services');
+    setSelectedService(null);
+  };
+
+  return {
+    step,
+    selectedService,
+    selectService,
+    submitQuote,
+    resetWizard
+  };
 }

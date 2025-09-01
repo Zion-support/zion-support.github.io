@@ -99,6 +99,6 @@ main
       <TalentDetails talent={profile} />
     </>
   );
-};
+}
 
 export default TalentPage;

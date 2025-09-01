@@ -1,37 +1,71 @@
+import React from 'react';
 
-interface FormProps extends React.PropsWithChildren<{}> {
-
+interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {
   children: React.ReactNode;
-  onSubmit?: e: React.FormEvent void}
-;
-export function FormItem(...args[]):  {
+}
 
-  return <div className = "space-y-2">{children}</div>}
+export function Form({ children, ...props }: FormProps) {
+  return (
+    <form {...props}>
+      {children}
+    </form>
+  );
+}
 
-interface FormLabelProps extends React.PropsWithChildren<{}> {;
-;
+interface FormItemProps {
   children: React.ReactNode;
-  className?: string}
-;
-export function FormLabel(...args[]):  {
+  className?: string;
+}
 
-  return <label className = {`block text-sm font-medium ${className}`}>{children}</label>}
+export function FormItem({ children, className = '' }: FormItemProps) {
+  return (
+    <div className={`space-y-2 ${className}`}>
+      {children}
+    </div>
+  );
+}
 
-interface FormFieldProps extends React.PropsWithChildren<{}> {;
-;
-  control;name: string;
-  render: props: unknown React.ReactNode}
-;
-export function FormField(...args[]):  {
+interface FormLabelProps {
+  children: React.ReactNode;
+  className?: string;
+  htmlFor?: string;
+}
 
-  return render({ field: { name, value: '', onChange: ()  => {} } })}
-interface FormMessageProps extends React.PropsWithChildren<{}> {
+export function FormLabel({ children, className = '', htmlFor }: FormLabelProps) {
+  return (
+    <label 
+      htmlFor={htmlFor}
+      className={`block text-sm font-medium ${className}`}
+    >
+      {children}
+    </label>
+  );
+}
 
+interface FormFieldProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export function FormField({ children, className = '' }: FormFieldProps) {
+  return (
+    <div className={`space-y-1 ${className}`}>
+      {children}
+    </div>
+  );
+}
+
+interface FormMessageProps {
   children?: React.ReactNode;
-  className?: string}
-;
-export function FormMessage(...args[]):  {
+  className?: string;
+}
 
-  if (!children) return null;`
-  return <p className = {`text-sm ${className}`}>{children}</p>};
-'"`
+export function FormMessage({ children, className = '' }: FormMessageProps) {
+  if (!children) return null;
+  
+  return (
+    <p className={`text-sm text-red-600 ${className}`}>
+      {children}
+    </p>
+  );
+}
