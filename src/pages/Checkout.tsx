@@ -33,6 +33,7 @@ interface CheckoutForm {
 
 export default function CheckoutPage() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const [items, setItems] = useState<CartItem[]>([]);
   const form = useForm<CheckoutForm>({ defaultValues: { name: '', email: '', address: '', city: '', country: '' } });
   const watchAddr = form.watch(['name', 'address', 'city', 'country']);
@@ -85,7 +86,7 @@ export default function CheckoutPage() {
 
   return (
     <div className="container max-w-2xl py-10">
-      <h1 className="text-3xl font-bold mb-6">Checkout</h1>
+      <h1 className="text-3xl font-bold mb-6">{t('checkout.title')}</h1>
       <div className="grid gap-6">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">

@@ -47,7 +47,11 @@
   "marketplace": {
     "title": "Mercado de IA y Tecnología",
     "description": "Descubra servicios profesionales y productos para sus proyectos de IA y tecnología. Explore nuestra colección de soluciones verificadas.",
-    "search_placeholder": "Buscar en el mercado..."
+    "search_placeholder": "Buscar en el mercado...",
+    "no_results_title": "No se encontraron resultados",
+    "no_results_description": "No encontramos listados que coincidan con tus filtros. Intenta ajustar tu búsqueda.",
+    "clear_filters": "Limpiar filtros",
+    "results_count": "Mostrando {{count}} resultados"
   },
   "checkout": {
     "title": "Pagar",
@@ -70,8 +74,8 @@
     "job_posted": "Trabajo publicado correctamente"
   },
   "language": {
-    "en-US": "English",
-    "es-ES": "Español",
+    "en": "English",
+    "es": "Español",
     "language_changed": "Idioma cambiado a {{language}}",
     "switch_to_detected": "¿Cambiar a {{language}}?"
   },

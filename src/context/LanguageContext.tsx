@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { supabase } from '../integrations/supabase/client';
 import { toast } from '../components/ui/use-toast';
 
-export type SupportedLanguage = 'en-US' | 'es-ES';
+export type SupportedLanguage = 'en' | 'es';
 
 export type LanguageContextType = {
   currentLanguage: SupportedLanguage;
@@ -15,8 +15,8 @@ export type LanguageContextType = {
 };
 
 const supportedLanguages = [
-  { code: 'en-US' as SupportedLanguage, name: 'English', flag: '🇺🇸' },
-  { code: 'es-ES' as SupportedLanguage, name: 'Español', flag: '🇪🇸' }
+  { code: 'en' as SupportedLanguage, name: 'English', flag: '🇺🇸' },
+  { code: 'es' as SupportedLanguage, name: 'Español', flag: '🇪🇸' }
 ];
 
 const defaultLanguageContext: LanguageContextType = {
@@ -59,9 +59,9 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       fetch('/api/detect-language')
         .then(res => res.json())
         .then(data => {
-          if (data.lang && supportedLanguages.some(l => l.code === data.lang)) {
-            i18n.changeLanguage(data.lang);
-            setCurrentLanguage(data.lang as SupportedLanguage);
+          if (data.lang && supportedLanguages.some(l => l === data.lang.substring(0,2))) {
+            i18n.changeLanguage(data.lang.substring(0,2));
+            setCurrentLanguage(data.lang.substring(0,2) as SupportedLanguage);
           }
         })
         .catch(() => {});
