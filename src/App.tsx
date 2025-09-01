@@ -83,6 +83,10 @@ const AISalesAssistant = createLazyComponent(() => import('./pages/services/ai-s
 const SecurityPostureGuardian = createLazyComponent(() => import('./pages/services/security-posture-guardian'));
 const DeveloperProductivityCopilot = createLazyComponent(() => import('./pages/services/developer-productivity-copilot'));
 
+// Additional platform services
+const AISpaceTechnologyPlatform = createLazyComponent(() => import('./pages/services/AI-Space-Technology-Platform'));
+const AIFinancialTechnologyPlatform = createLazyComponent(() => import('./pages/services/AI-Financial-Technology-Platform'));
+
 // 2025 Innovative Services
 const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025'));
 const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
@@ -399,6 +403,8 @@ function App() {
                     <Route path="/services/ai-sales-assistant" element={<AISalesAssistant />} />
                     <Route path="/services/security-posture-guardian" element={<SecurityPostureGuardian />} />
                     <Route path="/services/developer-productivity-copilot" element={<DeveloperProductivityCopilot />} />
+                    <Route path="/services/ai-space-technology-platform" element={<AISpaceTechnologyPlatform />} />
+                    <Route path="/services/ai-financial-technology-platform" element={<AIFinancialTechnologyPlatform />} />
 
                   {/* 2025 New Innovative Services */}
                   <Route path="/services/ai-supply-chain-risk-management" element={<AISupplyChainRiskManagement />} />
