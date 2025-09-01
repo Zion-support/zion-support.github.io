@@ -26,15 +26,16 @@ export function useAISearch() {
 
   const search = async (query: string) => {
     setLoading(true);
-    const response = await fetch(
-      "https://ziontechgroup.functions.supabase.co/functions/v1/ai-search",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query }),
-      }
-    );
-    const data = await response.json();
+    try {
+      const response = await apiClient(
+        "https://ziontechgroup.functions.supabase.co/functions/v1/ai-search",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ query }),
+        }
+      );
+      const data = await response.json();
       const filters: SearchFilters = data.filters || {};
 
       const items: SearchResult[] = [];
