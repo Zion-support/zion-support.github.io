@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
+import api from '@/lib/api';
 
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
@@ -48,26 +49,14 @@ export const safeFetch: typeof fetch = async (input, init) => {
 
   for (let attempt = 0; attempt < RETRY_COUNT; attempt++) {
     try {
-      if (!(await checkOnline())) {
-        throw new Error('No internet connection');
-      }
-
-      // Add timeout to prevent hanging requests
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 30000);
-
-      const response = await fetch(input, {
-        ...init,
-        signal: controller.signal,
-        headers: {
-          ...init?.headers,
-          'x-retry-attempt': attempt.toString(),
-        },
+      const response = await api({
+        url,
+        method: options.method as any,
+        data: (options as any).body,
+        headers: Object.fromEntries(headers.entries()),
       });
 
-      clearTimeout(timeoutId);
-
-      if (!response.ok) {
+      if (response.status < 200 || response.status >= 300) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
