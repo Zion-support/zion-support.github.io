@@ -674,7 +674,7 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Health monitoring</li>
                   <li>• Self-healing infrastructure</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/ULTIMATE_REDUNDANCY_AUTOMATION_README.md" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_ULTIMATE_REDUNDANCY.md" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
@@ -702,10 +702,53 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Performance monitoring</li>
                   <li>• Cluster management</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_COMPLETE_PM2_REDUNDANCY.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_PM2_REDUNDANCY_COMPLETE.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
+            </div>
+          </section>
+
+          {/* Quick Links Directory */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🗂️ Quick Links Directory</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Link href="/about" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 group">
+                <h3 className="text-lg font-semibold text-cyan-400 mb-2 group-hover:text-cyan-300">About Our Vision</h3>
+                <p className="text-white/70 text-sm">Mission, values, and our autonomous future</p>
+              </Link>
+              <Link href="/services" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300 group">
+                <h3 className="text-lg font-semibold text-fuchsia-400 mb-2 group-hover:text-fuchsia-300">AI Services</h3>
+                <p className="text-white/70 text-sm">Automation, cloud, DevOps, analytics</p>
+              </Link>
+              <Link href="/resources" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-blue-400/30 transition-all duration-300 group">
+                <h3 className="text-lg font-semibold text-blue-400 mb-2 group-hover:text-blue-300">Resources</h3>
+                <p className="text-white/70 text-sm">Case studies, whitepapers, tools</p>
+              </Link>
+              <Link href="/blog" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-purple-400/30 transition-all duration-300 group">
+                <h3 className="text-lg font-semibold text-purple-400 mb-2 group-hover:text-purple-300">Blog</h3>
+                <p className="text-white/70 text-sm">Trends and insights</p>
+              </Link>
+              <Link href="/case-studies" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-yellow-400/30 transition-all duration-300 group">
+                <h3 className="text-lg font-semibold text-yellow-400 mb-2 group-hover:text-yellow-300">Case Studies</h3>
+                <p className="text-white/70 text-sm">Success stories and results</p>
+              </Link>
+              <Link href="/contact" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300 group">
+                <h3 className="text-lg font-semibold text-green-400 mb-2 group-hover:text-green-300">Contact</h3>
+                <p className="text-white/70 text-sm">Start a project or ask questions</p>
+              </Link>
+              <Link href="/privacy" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-red-400/30 transition-all duration-300 group">
+                <h3 className="text-lg font-semibold text-red-400 mb-2 group-hover:text-red-300">Privacy</h3>
+                <p className="text-white/70 text-sm">Security, trust, and compliance</p>
+              </Link>
+              <Link href="/reports" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-indigo-400/30 transition-all duration-300 group">
+                <h3 className="text-lg font-semibold text-indigo-400 mb-2 group-hover:text-indigo-300">Reports</h3>
+                <p className="text-white/70 text-sm">Updates and performance data</p>
+              </Link>
+              <a href="https://github.com/Zion-Holdings/zion.app" target="_blank" rel="noopener noreferrer" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group">
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-300">GitHub Repository</h3>
+                <p className="text-white/70 text-sm">Browse code, docs, and issues</p>
+              </a>
             </div>
           </section>
 
