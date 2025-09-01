@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-09-01T10:44:01.332Z",
-  "reportId": "2025-09-01T10-44-01-332Z",
+  "timestamp": "2025-09-01T09:03:34.901Z",
+  "reportId": "2025-09-01T09-03-34-901Z",
   "summary": {
     "totalErrors": 8014,
     "lintErrors": 8014,
@@ -24,7 +24,7 @@
     "build": {
       "hasErrors": false,
       "buildSuccess": true,
-      "output": "\n> bolt.new.zion.app@0.1.0 build\n> vite build\n\nvite v7.1.3 building for production...\ntransforming...\n✓ 28 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                      7.15 kB │ gzip:  2.00 kB\ndist/css/main-CxLHOX42.css         407.99 kB │ gzip: 50.75 kB\ndist/js/utils-vendor-l0sNRNKZ.js     0.00 kB │ gzip:  0.02 kB\ndist/js/ui-vendor-CQN7y3Lm.js        0.04 kB │ gzip:  0.06 kB\ndist/js/form-vendor-CQN7y3Lm.js      0.04 kB │ gzip:  0.06 kB\ndist/js/router-vendor-Dc2g2_IQ.js    0.10 kB │ gzip:  0.11 kB\ndist/js/main-CFMoofRU.js             3.99 kB │ gzip:  1.87 kB\ndist/js/react-vendor-DJcYfsJ3.js   139.19 kB │ gzip: 44.98 kB\n✓ built in 18.31s\n\n/images/grid-pattern.svg referenced in /images/grid-pattern.svg didn't resolve at build time, it will remain unchanged to be resolved at runtime\nGenerated an empty chunk: \"utils-vendor\".\n"
+      "output": "\n> bolt.new.zion.app@0.1.0 build\n> vite build\n\nvite v7.1.3 building for production...\ntransforming...\n✓ 28 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                      7.15 kB │ gzip:  2.00 kB\ndist/css/main-CxLHOX42.css         407.99 kB │ gzip: 50.75 kB\ndist/js/utils-vendor-l0sNRNKZ.js     0.00 kB │ gzip:  0.02 kB\ndist/js/ui-vendor-CQN7y3Lm.js        0.04 kB │ gzip:  0.06 kB\ndist/js/form-vendor-CQN7y3Lm.js      0.04 kB │ gzip:  0.06 kB\ndist/js/router-vendor-Dc2g2_IQ.js    0.10 kB │ gzip:  0.11 kB\ndist/js/main-CFMoofRU.js             3.99 kB │ gzip:  1.87 kB\ndist/js/react-vendor-DJcYfsJ3.js   139.19 kB │ gzip: 44.98 kB\n✓ built in 10.78s\n\n/images/grid-pattern.svg referenced in /images/grid-pattern.svg didn't resolve at build time, it will remain unchanged to be resolved at runtime\nGenerated an empty chunk: \"utils-vendor\".\n"
     },
     "corruptedFiles": []
   },
