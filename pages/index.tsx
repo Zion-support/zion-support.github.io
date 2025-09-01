@@ -1761,40 +1761,13 @@ const HomePage = memo(function HomePage() {
                 <p className="text-white/70 text-sm">Get in touch</p>
               </Link>
 
-              <Link href="/reports/updates" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-xl">📈</span>
-                </div>
-                <h3 className="text-lg font-semibold text-cyan-400 mb-2">Reports</h3>
-                <p className="text-white/70 text-sm">Live updates</p>
-              </Link>
-
               <Link href="/privacy" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-rose-400/30 transition-all duration-300 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-rose-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-xl">🛡️</span>
+                <div className="w-12 h-12 bg-gradient-to-br from-rose-400 to-red-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">📜</span>
                 </div>
-                <h3 className="text-lg font-semibold text-rose-300 mb-2">Privacy</h3>
-                <p className="text-white/70 text-sm">Policy details</p>
+                <h3 className="text-lg font-semibold text-rose-400 mb-2">Privacy Policy</h3>
+                <p className="text-white/70 text-sm">Security & compliance</p>
               </Link>
-            </div>
-          </section>
-
-          {/* Quick Links to Key Content */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-3xl font-bold tracking-wide text-white/90 mb-8">✨ Quick Links</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm">
-              <Link href="/about" className="underline text-white/80 hover:text-cyan-300">About</Link>
-              <Link href="/services" className="underline text-white/80 hover:text-fuchsia-300">Services</Link>
-              <Link href="/resources" className="underline text-white/80 hover:text-blue-300">Resources</Link>
-              <Link href="/case-studies" className="underline text-white/80 hover:text-yellow-300">Case Studies</Link>
-              <Link href="/blog" className="underline text-white/80 hover:text-purple-300">Blog</Link>
-              <Link href="/contact" className="underline text-white/80 hover:text-green-300">Contact</Link>
-              <Link href="/privacy" className="underline text-white/80 hover:text-rose-300">Privacy</Link>
-              <Link href="/reports/updates" className="underline text-white/80 hover:text-cyan-300">Reports</Link>
-              <Link href="/blog/ai-automation-trends-2025" className="underline text-white/80 hover:text-purple-300">AI Automation Trends</Link>
-              <Link href="/blog/cloud-native-automation" className="underline text-white/80 hover:text-purple-300">Cloud-Native Automation</Link>
-              <Link href="/blog/autonomous-content-generation" className="underline text-white/80 hover:text-purple-300">Autonomous Content</Link>
-              <Link href="/blog/ai-ethics-automation" className="underline text-white/80 hover:text-purple-300">AI Ethics</Link>
             </div>
           </section>
 
@@ -1908,62 +1881,40 @@ const HomePage = memo(function HomePage() {
             </div>
           </section>
 
-          {/* Latest Autonomous Content */}
-          <section className="mx-auto max-w-7xl px-6 pb-14">
-            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90 mb-8">Latest Autonomous Content & Achievements</h2>
-            
-            {/* Achievement Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-              <div className="bg-gradient-to-br from-cyan-400/20 to-blue-500/20 backdrop-blur-xl rounded-xl p-6 border border-cyan-400/30 text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">227+</div>
-                <div className="text-white/80 text-sm">Active Automations</div>
-              </div>
-              <div className="bg-gradient-to-br from-fuchsia-400/20 to-purple-500/20 backdrop-blur-xl rounded-xl p-6 border border-fuchsia-400/30 text-center">
-                <div className="text-3xl font-bold text-fuchsia-400 mb-2">2960+</div>
-                <div className="text-white/80 text-sm">Dynamic Pages</div>
-              </div>
-              <div className="bg-gradient-to-br from-green-400/20 to-emerald-500/20 backdrop-blur-xl rounded-xl p-6 border border-green-400/30 text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">99.99%</div>
-                <div className="text-white/80 text-sm">Uptime</div>
-              </div>
-              <div className="bg-gradient-to-br from-yellow-400/20 to-orange-500/20 backdrop-blur-xl rounded-xl p-6 border border-yellow-400/30 text-center">
-                <div className="text-3xl font-bold text-yellow-400 mb-2">24/7</div>
-                <div className="text-white/80 text-sm">Autonomous Operation</div>
-              </div>
-            </div>
+          {/* Featured Articles */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📰 Featured Articles</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Link href="/blog/ai-automation-trends-2025" className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-fuchsia-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">🔮</span>
+                </div>
+                <h3 className="text-lg font-semibold text-center">AI Automation Trends 2025</h3>
+                <p className="text-white/70 text-sm text-center mt-2">The future of autonomous systems</p>
+                <div className="mt-4 text-cyan-300 text-sm font-semibold text-center">Read article →</div>
+              </Link>
 
-            {/* Latest Updates Grid */}
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <Link href="/reports/updates/update-2025-08-15-0406" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 15: 0406</h3>
-                <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+              <Link href="/blog/cloud-native-automation" className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">☁️</span>
+                </div>
+                <h3 className="text-lg font-semibold text-center">Cloud-Native Automation</h3>
+                <p className="text-white/70 text-sm text-center mt-2">Building scalable, reliable systems</p>
+                <div className="mt-4 text-emerald-300 text-sm font-semibold text-center">Read article →</div>
               </Link>
-              <Link href="/reports/updates/update-2025-08-15-0405" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 15: 0405</h3>
-                <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
-              </Link>
-              <Link href="/reports/updates/update-2025-08-15-0404" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 15: 0404</h3>
-                <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
-              </Link>
-            </div>
 
-            {/* View All Updates Link */}
-            <div className="text-center mt-8">
-              <Link href="/reports/updates" className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white font-semibold transition-all duration-300 hover:border-cyan-400/50">
-                View All Autonomous Updates
-                <span className="text-cyan-400">→</span>
+              <Link href="/blog/autonomous-content-generation" className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:border-purple-400/30 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">✍️</span>
+                </div>
+                <h3 className="text-lg font-semibold text-center">Autonomous Content Generation</h3>
+                <p className="text-white/70 text-sm text-center mt-2">AI-powered content at scale</p>
+                <div className="mt-4 text-fuchsia-300 text-sm font-semibold text-center">Read article →</div>
               </Link>
             </div>
           </section>
 
-          {/* Advanced Automation Capabilities Deep Dive */}
+          {/* Advanced Automation Systems Deep Dive */}
           <section className="mx-auto max-w-7xl px-6 pb-16">
             <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🔧 Advanced Automation Systems Deep Dive</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
