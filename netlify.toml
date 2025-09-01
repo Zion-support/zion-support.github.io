@@ -258,9 +258,9 @@ schedule = "0 */2 * * *" # every 2 hours
   schedule = "0 3 * * *" # daily at 03:00 UTC
 
 [[scheduled.functions]]
-  name = "repo-velocity-runner"
-  schedule = "*/10 * * * *"
+  name = "internal-link-graph-runner"
+  schedule = "*/15 * * * *" # every 15 minutes
 
 [[scheduled.functions]]
-  name = "redirects-synthesizer"
-  schedule = "*/15 * * * *"
+  name = "unused-images-runner"
+  schedule = "*/20 * * * *" # every 20 minutes
