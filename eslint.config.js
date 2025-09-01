@@ -10,13 +10,12 @@ export default [
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
-      parser: tsparser,
+      ecmaVersion: 2022,
+      sourceType: 'module',
       parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
         ecmaFeatures: {
-          jsx: true,
-        },
+          jsx: true
+        }
       },
       globals: {
         React: 'readonly',
@@ -30,18 +29,12 @@ export default [
         navigator: 'readonly',
         fetch: 'readonly',
         setTimeout: 'readonly',
-        alert: 'readonly',
-        HTMLInputElement: 'readonly',
-        HTMLTextAreaElement: 'readonly',
-        KeyboardEvent: 'readonly',
-        path: 'readonly',
-      },
-    },
-    plugins: {
-      '@typescript-eslint': tseslint,
-      '@next/next': nextPlugin,
-      'react-hooks': reactHooksPlugin,
-      'react-refresh': reactRefreshPlugin,
+        setInterval: 'readonly',
+        clearTimeout: 'readonly',
+        clearInterval: 'readonly',
+        React: 'readonly',
+        JSX: 'readonly'
+      }
     },
     rules: {
       ...tseslint.configs.recommended.rules,
@@ -59,19 +52,20 @@ export default [
     },
   },
   {
-          ignores: [
-        '.next/',
-        'out/',
-        'dist/',
-        'coverage/',
-        'node_modules/',
-        '*.log',
-        '**/*.generated.*',
-        'automation/',
-        'scripts/',
-        'public/reports/',
-        'ecosystem*.cjs',
-        'ecosystem*.js',
-      ],
-  },
+    ignores: [
+      'node_modules/',
+      '.next/',
+      'out/',
+      'dist/',
+      'build/',
+      '*.config.js',
+      '*.config.ts',
+      'scripts/',
+      'automation/',
+      'public/reports/**',
+      'netlify/',
+      'ecosystem*.cjs',
+      '**/*.cjs'
+    ]
+  }
 ];

@@ -15,12 +15,19 @@ export default function ServicesPage() {
       ),
       color: 'from-purple-500 to-purple-600',
       features: [
-        '227+ autonomous agents',
-        'Intelligent content generation',
-        'Automated quality assurance',
-        'Smart error recovery',
-        'Predictive maintenance'
-      ]
+        'Machine Learning Models',
+        'Natural Language Processing',
+        'Predictive Analytics',
+        'Intelligent Decision Making',
+        'Automated Workflows'
+      ],
+      color: 'bg-gradient-to-br from-fuchsia-500 to-purple-600',
+      textColor: 'text-fuchsia-400',
+      gradient: 'from-fuchsia-400 to-purple-500',
+      pricing: 'Starting at $299/month',
+      marketPrice: '$200-500/month',
+      link: 'https://zapier.com/pricing',
+      competitor: 'Zapier'
     },
     {
       title: 'Cloud Infrastructure',
@@ -32,46 +39,19 @@ export default function ServicesPage() {
       ),
       color: 'from-blue-500 to-blue-600',
       features: [
-        'Self-healing CI/CD pipelines',
-        'Intelligent build orchestration',
-        'Automated dependency management',
-        'Real-time performance monitoring',
-        'Zero-downtime deployments'
-      ]
-    },
-    {
-      title: 'Redundancy & Reliability',
-      description: 'Multi-layer redundancy systems ensuring 99.99% uptime and automatic failover protection.',
-      icon: (
-        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-        </svg>
-      ),
-      color: 'from-green-500 to-green-600',
-      features: [
-        'Multi-layer redundancy systems',
-        'Automatic failover protection',
-        'Geographic distribution',
-        'Continuous health monitoring',
-        'Self-repairing infrastructure'
-      ]
-    },
-    {
-      title: 'Performance Optimization',
-      description: 'AI-driven performance analysis and optimization for maximum efficiency and speed.',
-      icon: (
-        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      ),
-      color: 'from-orange-500 to-orange-600',
-      features: [
-        'Real-time performance metrics',
-        'Automated optimization',
-        'Lighthouse integration',
-        'Performance budgets',
-        'Trend analysis'
-      ]
+        'Multi-Cloud Strategy',
+        'Auto-Scaling Systems',
+        'Load Balancing',
+        'Disaster Recovery',
+        'Performance Optimization'
+      ],
+      color: 'bg-gradient-to-br from-cyan-500 to-blue-600',
+      textColor: 'text-cyan-400',
+      gradient: 'from-cyan-400 to-blue-500',
+      pricing: 'Starting at $199/month',
+      marketPrice: '$150-400/month',
+      link: 'https://aws.amazon.com/pricing/',
+      competitor: 'AWS'
     },
     {
       title: 'Security & Compliance',
@@ -83,12 +63,19 @@ export default function ServicesPage() {
       ),
       color: 'from-red-500 to-red-600',
       features: [
-        'Automated security scanning',
-        'Vulnerability assessment',
-        'Compliance monitoring',
-        'Threat detection & response',
-        'Zero-trust architecture'
-      ]
+        'Threat Detection',
+        'Vulnerability Assessment',
+        'Compliance Monitoring',
+        'Data Encryption',
+        'Access Control'
+      ],
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+      textColor: 'text-green-400',
+      gradient: 'from-green-400 to-emerald-500',
+      pricing: 'Starting at $399/month',
+      marketPrice: '$300-800/month',
+      link: 'https://www.crowdstrike.com/pricing/',
+      competitor: 'CrowdStrike'
     },
     {
       title: 'Content Generation',
@@ -100,13 +87,188 @@ export default function ServicesPage() {
       ),
       color: 'from-indigo-500 to-indigo-600',
       features: [
-        'Autonomous content generation',
-        'SEO optimization automation',
-        'Quality assurance systems',
-        'Content distribution',
-        'Performance analytics'
-      ]
+        'Real-time Analytics',
+        'Business Intelligence',
+        'Data Visualization',
+        'Predictive Modeling',
+        'Performance Metrics'
+      ],
+      color: 'bg-gradient-to-br from-orange-500 to-red-600',
+      textColor: 'text-orange-400',
+      gradient: 'from-orange-400 to-red-500',
+      pricing: 'Starting at $249/month',
+      marketPrice: '$200-600/month',
+      link: 'https://www.tableau.com/pricing',
+      competitor: 'Tableau'
+    },
+    {
+      icon: '🚀',
+      title: 'DevOps & CI/CD',
+      description: 'Streamline your development process with automated pipelines and deployment strategies.',
+      features: [
+        'Continuous Integration',
+        'Automated Testing',
+        'Deployment Automation',
+        'Infrastructure as Code',
+        'Monitoring & Alerting'
+      ],
+      color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
+      textColor: 'text-indigo-400',
+      gradient: 'from-indigo-400 to-purple-500',
+      pricing: 'Starting at $179/month',
+      marketPrice: '$150-350/month',
+      link: 'https://www.atlassian.com/software/jira/pricing',
+      competitor: 'Atlassian'
+    },
+    {
+      icon: '🌐',
+      title: 'Digital Transformation',
+      description: 'Modernize your business with cutting-edge digital solutions and strategic consulting.',
+      features: [
+        'Technology Strategy',
+        'Process Optimization',
+        'Change Management',
+        'Digital Innovation',
+        'Legacy Modernization'
+      ],
+      color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
+      textColor: 'text-teal-400',
+      gradient: 'from-teal-400 to-cyan-500',
+      pricing: 'Starting at $599/month',
+      marketPrice: '$500-1200/month',
+      link: 'https://www.accenture.com/us-en/services/technology/technology-consulting-index',
+      competitor: 'Accenture'
+    },
+    // New Micro SaaS Services
+    {
+      icon: '📧',
+      title: 'Email Marketing Automation',
+      description: 'Advanced email marketing with AI-powered personalization, automation workflows, and analytics.',
+      features: [
+        'AI-Powered Personalization',
+        'Automated Email Sequences',
+        'Advanced Segmentation',
+        'A/B Testing Tools',
+        'ROI Analytics'
+      ],
+      color: 'bg-gradient-to-br from-pink-500 to-rose-600',
+      textColor: 'text-pink-400',
+      gradient: 'from-pink-400 to-rose-500',
+      pricing: 'Starting at $89/month',
+      marketPrice: '$75-200/month',
+      link: 'https://mailchimp.com/pricing/',
+      competitor: 'Mailchimp'
+    },
+    {
+      icon: '💳',
+      title: 'Payment Processing & Billing',
+      description: 'Secure payment processing, subscription billing, and financial management solutions.',
+      features: [
+        'Multi-Payment Gateway Support',
+        'Subscription Billing',
+        'Recurring Payments',
+        'Fraud Detection',
+        'Financial Reporting'
+      ],
+      color: 'bg-gradient-to-br from-emerald-500 to-green-600',
+      textColor: 'text-emerald-400',
+      gradient: 'from-emerald-400 to-green-500',
+      pricing: 'Starting at $49/month + 2.9%',
+      marketPrice: '$29-99/month + 2.5-3.5%',
+      link: 'https://stripe.com/pricing',
+      competitor: 'Stripe'
+    },
+    {
+      icon: '🎯',
+      title: 'Customer Relationship Management',
+      description: 'Comprehensive CRM solution with sales automation, lead management, and customer insights.',
+      features: [
+        'Lead Management',
+        'Sales Pipeline Tracking',
+        'Customer Analytics',
+        'Email Integration',
+        'Mobile App'
+      ],
+      color: 'bg-gradient-to-br from-violet-500 to-purple-600',
+      textColor: 'text-violet-400',
+      gradient: 'from-violet-400 to-purple-500',
+      pricing: 'Starting at $25/month/user',
+      marketPrice: '$20-50/month/user',
+      link: 'https://www.salesforce.com/crm/pricing/',
+      competitor: 'Salesforce'
+    },
+    {
+      icon: '📱',
+      title: 'Mobile App Development',
+      description: 'Native and cross-platform mobile app development with modern frameworks and cloud backend.',
+      features: [
+        'iOS & Android Development',
+        'Cross-Platform Solutions',
+        'Cloud Backend Integration',
+        'Push Notifications',
+        'App Store Optimization'
+      ],
+      color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
+      textColor: 'text-blue-400',
+      gradient: 'from-blue-400 to-indigo-500',
+      pricing: 'Starting at $5,000/project',
+      marketPrice: '$3,000-15,000/project',
+      link: 'https://www.mobomo.com/mobile-app-development-cost/',
+      competitor: 'Mobomo'
+    },
+    {
+      icon: '🛒',
+      title: 'E-commerce Platform',
+      description: 'Complete e-commerce solution with inventory management, payment processing, and analytics.',
+      features: [
+        'Product Catalog Management',
+        'Shopping Cart & Checkout',
+        'Inventory Tracking',
+        'Order Management',
+        'Analytics Dashboard'
+      ],
+      color: 'bg-gradient-to-br from-amber-500 to-orange-600',
+      textColor: 'text-amber-400',
+      gradient: 'from-amber-400 to-orange-500',
+      pricing: 'Starting at $79/month',
+      marketPrice: '$29-299/month',
+      link: 'https://www.shopify.com/pricing',
+      competitor: 'Shopify'
+    },
+    {
+      icon: '📈',
+      title: 'SEO & Content Marketing',
+      description: 'Search engine optimization and content marketing services to improve online visibility.',
+      features: [
+        'Keyword Research & Analysis',
+        'On-Page SEO Optimization',
+        'Content Strategy & Creation',
+        'Link Building',
+        'Performance Tracking'
+      ],
+      color: 'bg-gradient-to-br from-red-500 to-pink-600',
+      textColor: 'text-red-400',
+      gradient: 'from-red-400 to-pink-500',
+      pricing: 'Starting at $299/month',
+      marketPrice: '$200-800/month',
+      link: 'https://www.semrush.com/prices/',
+      competitor: 'SEMrush'
     }
+  ];
+
+  const technologies = [
+    { name: 'Next.js', category: 'Frontend', icon: '⚡' },
+    { name: 'React', category: 'Frontend', icon: '⚛️' },
+    { name: 'Node.js', category: 'Backend', icon: '🟢' },
+    { name: 'Python', category: 'Backend', icon: '🐍' },
+    { name: 'AWS', category: 'Cloud', icon: '☁️' },
+    { name: 'Azure', category: 'Cloud', icon: '🔷' },
+    { name: 'Docker', category: 'DevOps', icon: '🐳' },
+    { name: 'Kubernetes', category: 'DevOps', icon: '☸️' },
+    { name: 'PostgreSQL', category: 'Database', icon: '🐘' },
+    { name: 'Redis', category: 'Cache', icon: '🔴' },
+    { name: 'TensorFlow', category: 'AI/ML', icon: '🧠' },
+    { name: 'PyTorch', category: 'AI/ML', icon: '🔥' },
   ];
 
   return (
@@ -146,14 +308,59 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Autonomous Cloud Systems */}
-            <Card className="hover-lift group">
-              <CardHeader>
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-                  </svg>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+              <Card
+                key={index}
+                className="card-hover group border-gradient-blue"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="flex items-start space-x-6">
+                  <div className="relative">
+                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${service.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
+                      {service.icon}
+                    </div>
+                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${service.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className={`text-2xl font-bold mb-4 ${service.textColor}`}>
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed mb-6">
+                      {service.description}
+                    </p>
+                    <ul className="space-y-2 mb-6">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-gray-300">
+                          <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    {/* Pricing and Market Comparison */}
+                    <div className="border-t border-gray-700 pt-4">
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="text-sm text-gray-400">Our Pricing:</span>
+                        <span className="text-lg font-bold text-white">{service.pricing}</span>
+                      </div>
+                      <div className="flex items-center justify-between mb-4">
+                        <span className="text-sm text-gray-400">Market Average:</span>
+                        <span className="text-sm text-gray-300">{service.marketPrice}</span>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-gray-400">Compare with:</span>
+                        <a 
+                          href={service.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-sm text-blue-400 hover:text-blue-300 underline"
+                        >
+                          {service.competitor}
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <CardTitle className="text-center text-blue-600">Autonomous Cloud Systems</CardTitle>
               </CardHeader>
