@@ -48,10 +48,9 @@ const TalentProfilePage: React.FC = () => {
   return <TalentDetails talent={talent} />;
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = TALENT_PROFILES.map((t) => ({ params: { id: t.id } }));
-  return { paths, fallback: 'blocking' };
-};
+const TalentPage: React.FC = () => {
+  const params = useParams();
+  const id = params.id as string;
 
 export const getStaticProps: GetStaticProps<TalentPageProps> = async ({ params }) => {
   const id = params?.id as string;

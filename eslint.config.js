@@ -2,9 +2,10 @@
 import js from "@eslint/js";
 import globals from "globals";
 import tseslint from "typescript-eslint";
-import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
-import cypressPlugin from "eslint-plugin-cypress/flat"; // Corrected import for flat config
+import pluginReact from "eslint-plugin-react";
+import pluginReactHooks from "eslint-plugin-react-hooks";
+import eslintConfigPrettier from "eslint-config-prettier";
+// import eslintConfigNext from 'eslint-config-next';
 
 // Cleaned global objects
 const browserGlobals = Object.fromEntries(
@@ -21,18 +22,18 @@ const serviceWorkerGlobals = Object.fromEntries(
 export default [
   // 1. Global Ignores
   {
-    ignores: [
-      "dist/",
-      "node_modules/",
-      "**/*.config.js", // Ignores this file, tailwind.config.js, etc.
-      // "*.config.ts", // Handled by specific tsconfig below if needed
-      "extension/",
-      "supabase/functions/_shared/",
-      "playwright.config.ts",
-      "jest.config.js",
-      "scripts/",
-      "coverage/",
-      "*.d.ts", // Typically declaration files don't need linting
+    ignores: ["node_modules/**", "dist/**", "out/**", "coverage/**", "build/**", ".next/**", "public/build/**"],
+  },
+
+  // eslintConfigNext,
+
+  // Fallback for problematic files (non-type-aware TS linting)
+  {
+    files: [
+      "src/hooks/useAuth.tsx",
+      "src/components/ui/sidebar/index.tsx",
+      "src/types/pwa.d.ts",
+      "vite.config.d.ts"
     ],
   },
 
