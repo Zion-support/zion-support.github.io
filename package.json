@@ -374,14 +374,5 @@
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
-  },
-  "description": "![Automations: 76](https://img.shields.io/badge/Automations-76-informational) ![Pages: 5622](https://img.shields.io/badge/Pages-5622-success) ![Components: 13](https://img.shields.io/badge/Components-13-blue)",
-  "main": "commitlint.config.js",
-  "directories": {
-    "doc": "docs",
-    "test": "tests"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  }
 }
