@@ -96,8 +96,8 @@ stop_existing_processes() {
 start_enhanced_system() {
     log "Starting Enhanced PM2 Automation System..."
     
-    # Start the enhanced ecosystem
-    pm2 start "$ENHANCED_ECOSYSTEM"
+    # Start the enhanced ecosystem using PM2
+    pm2 start ecosystem.enhanced.cjs
     
     # Wait for processes to start
     sleep 5
