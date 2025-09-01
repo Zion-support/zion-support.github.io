@@ -1045,6 +1045,14 @@ export default function HomePage() {
                 <p className="text-white/75 text-sm">Augmenting teams with autonomous AI platforms.</p>
                 <div className="mt-3 inline-flex items-center gap-1 text-xs text-purple-300/90">Read article <span aria-hidden>→</span></div>
               </Link>
+
+              <Link href="/privacy" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-teal-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-teal-400 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">🔐</span>
+                </div>
+                <h3 className="text-lg font-semibold text-teal-300 mb-2">Privacy</h3>
+                <p className="text-white/70 text-sm">Your data, protected</p>
+              </Link>
             </div>
           </section>
 
