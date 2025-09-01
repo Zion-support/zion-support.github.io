@@ -1,55 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import {
-
-<<<<<<< HEAD
-        AlertTriangle,
-        RefreshCw,
-        Home,
-        ArrowLeft,
-        Bug,
-        Shield,
-        Zap,
-      } from 'lucide - react';
-=======
   AlertTriangle,
   RefreshCw,
   Home,
   ArrowLeft,
   Bug,
   Shield,
-  Zap} from 'lucide-react';
+  Zap,
+} from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 
 function ErrorFallback({ error, resetError, retryCount = 0 }) {
->>>>>>> main
-
   const navigate = useNavigate();
   const maxRetries = 3;
 
   const handleRetry = () => {
     if (retryCount < maxRetries) {
-
       resetError();
     } else {
-
-      // After max retries, redirect to home'
+      // After max retries, redirect to home
       navigate('/');
     }
   };
 
   const getErrorType = error => {
-
     if (error?.name === 'NetworkError' || error?.message?.includes('network')) {
-
       return 'network';
     }
     if (error?.name === 'TypeError' || error?.message?.includes('undefined')) {
-
       return 'runtime';
     }
     if (error?.name === 'ReferenceError') {
-
       return 'reference';
     }
     return 'general';
@@ -58,7 +40,6 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
   const errorType = getErrorType(error);
 
   const errorMessages = {
-
     network: {
       title: 'Connection Error',
       description: "We're having trouble connecting to our servers. Please check your internet connection and try again.",
@@ -189,41 +170,36 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
 }
 
 export function ErrorBoundary({ children, fallback, onError }) {
-
   const [hasError, setHasError] = useState(false);
   const [error, setError] = useState(null);
   const [retryCount, setRetryCount] = useState(0);
 
   useEffect(() => {
     const handleError = event => {
-
       setHasError(true);
       setError(event.error);
       if (onError) {
-
         onError(event.error, { componentStack: event.error?.stack });
       }
 
       // Log error to console in development
       if (process.env.NODE_ENV === 'development') {
-        // console.error('ErrorBoundary caught an error:', event.error);
+        console.error('ErrorBoundary caught an error:', event.error);
       }
     };
 
     const handleUnhandledRejection = event => {
-
       setHasError(true);
       setError(new Error(event.reason));
       if (onError) {
-
         onError(new Error(event.reason), {
-
-          componentStack: event.reason?.stack});
+          componentStack: event.reason?.stack
+        });
       }
 
       // Log error to console in development
       if (process.env.NODE_ENV === 'development') {
-        // console.error('ErrorBoundary caught an unhandled rejection:', event.reason);
+        console.error('ErrorBoundary caught an unhandled rejection:', event.reason);
       }
     };
 
@@ -231,7 +207,6 @@ export function ErrorBoundary({ children, fallback, onError }) {
     window.addEventListener('unhandledrejection', handleUnhandledRejection);
 
     return () => {
-
       window.removeEventListener('error', handleError);
       window.removeEventListener('unhandledrejection', handleUnhandledRejection);
     };
@@ -244,9 +219,7 @@ export function ErrorBoundary({ children, fallback, onError }) {
   };
 
   if (hasError) {
-
     if (fallback) {
-
       return fallback;
     }
     return (
@@ -266,9 +239,8 @@ export function useErrorHandler() {
   const [error, setError] = useState(null);
 
   const handleError = error => {
-
     setError(error);
-    // console.error('useErrorHandler caught an error:', error);
+    console.error('useErrorHandler caught an error:', error);
   };
 
   const clearError = () => {
@@ -280,9 +252,7 @@ export function useErrorHandler() {
 
 // Higher-order component for error handling
 export function withErrorBoundary(Component, fallback = null) {
-
   return function WrappedComponent(props) {
-
     return (
       <ErrorBoundary fallback={fallback}>
         <Component {...props} />

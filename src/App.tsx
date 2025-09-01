@@ -1,10 +1,14 @@
-
 import React, { Suspense, lazy, useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Sidebar from './components/Sidebar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AppHeader } from './layout/AppHeader';
+import { Footer } from './components/SiteFooter.jsx';
+import { LoadingSpinner } from './components/ui/LoadingSpinner';
+import { EnhancedSEO } from './components/EnhancedSEO';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import ErrorBoundary from './components/ErrorBoundary';
+import { ThemeProvider } from './components/ThemeProvider';
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
@@ -54,55 +58,55 @@ function App() {
 
   return (
     <ErrorBoundary fallback={<div>Something went wrong. Please refresh the page.</div>}>
-      <div className="App">
-        <Header />
-        <div className="flex pt-16">
-          <Sidebar isOpen={sidebarOpen} onToggle={() => setSidebarOpen(!sidebarOpen)} />
-          <main className="flex-1 ml-64 min-h-screen">
-            <Suspense fallback={<PageLoader />}>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/services" element={<ServicesPage />} />
-                <Route path="/services/*" element={<ServicesPage />} />
-                <Route path="/services/ai-threat-intelligence" element={<AIThreatIntelligence />} />
-                <Route path="/services/blockchain-supply-chain" element={<BlockchainSupplyChain />} />
-                <Route path="/advanced-services-2028" element={<AdvancedServicesShowcase />} />
-                <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
-                <Route path="/comprehensive-services-2026" element={<ComprehensiveServicesShowcase2026 />} />
-                <Route path="/comprehensive-marketing-2026" element={<ComprehensiveMarketingPage2026 />} />
-                <Route path="/pricing" element={<PricingPage />} />
-                <Route path="/solutions" element={<SolutionsPage />} />
-                <Route path="/solutions/*" element={<SolutionsPage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/about/*" element={<AboutPage />} />
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="/blog" element={<BlogPage />} />
-                <Route path="/blog/*" element={<BlogPage />} />
-                <Route path="/careers" element={<AboutPage />} />
-                <Route path="/partners" element={<AboutPage />} />
-                <Route path="/press" element={<AboutPage />} />
-                <Route path="/case-studies" element={<BlogPage />} />
-                <Route path="/research-development" element={<BlogPage />} />
-                <Route path="/docs" element={<BlogPage />} />
-                <Route path="/api" element={<BlogPage />} />
-                <Route path="/developer" element={<BlogPage />} />
-                <Route path="/help" element={<Helpdesk />} />
-                <Route path="/training" element={<Training />} />
-                <Route path="/community" element={<BlogPage />} />
-                <Route path="/support" element={<Support />} />
-                <Route path="/sitemap" element={<Sitemap />} />
-                <Route path="/comprehensive-sitemap" element={<ComprehensiveSitemap />} />
-                <Route path="/privacy-policy" element={<BlogPage />} />
-                <Route path="/terms-of-service" element={<BlogPage />} />
-                <Route path="/cookie-policy" element={<BlogPage />} />
-                <Route path="/request-quote" element={<ContactPage />} />
-                <Route path="*" element={<NotFoundPage />} />
-              </Routes>
-            </Suspense>
-          </main>
-        </div>
-        <Footer />
-      </div>
+      <ThemeProvider>
+        <PerformanceOptimizer>
+          <EnhancedSEO />
+          <div className="App">
+            <Header />
+            <div className="flex pt-16">
+              <Sidebar isOpen={sidebarOpen} onToggle={() => setSidebarOpen(!sidebarOpen)} />
+              <main className="flex-1 ml-64 min-h-screen">
+                <Suspense fallback={<PageLoader />}>
+                  <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/services" element={<ServicesPage />} />
+                    <Route path="/services/*" element={<ServicesPage />} />
+                    <Route path="/services/ai-threat-intelligence" element={<AIThreatIntelligence />} />
+                    <Route path="/services/blockchain-supply-chain" element={<BlockchainSupplyChain />} />
+                    <Route path="/advanced-services-2028" element={<AdvancedServicesShowcase />} />
+                    <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
+                    <Route path="/comprehensive-services-2026" element={<ComprehensiveServicesShowcase2026 />} />
+                    <Route path="/comprehensive-marketing-2026" element={<ComprehensiveMarketingPage2026 />} />
+                    <Route path="/pricing" element={<PricingPage />} />
+                    <Route path="/solutions" element={<SolutionsPage />} />
+                    <Route path="/solutions/*" element={<SolutionsPage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/about/*" element={<AboutPage />} />
+                    <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/blog" element={<BlogPage />} />
+                    <Route path="/blog/*" element={<BlogPage />} />
+                    <Route path="/careers" element={<AboutPage />} />
+                    <Route path="/partners" element={<AboutPage />} />
+                    <Route path="/press" element={<AboutPage />} />
+                    <Route path="/case-studies" element={<BlogPage />} />
+                    <Route path="/research-development" element={<BlogPage />} />
+                    <Route path="/docs" element={<BlogPage />} />
+                    <Route path="/api" element={<BlogPage />} />
+                    <Route path="/developer" element={<BlogPage />} />
+                    <Route path="/sitemap" element={<Sitemap />} />
+                    <Route path="/comprehensive-sitemap" element={<ComprehensiveSitemap />} />
+                    <Route path="/support" element={<Support />} />
+                    <Route path="/training" element={<Training />} />
+                    <Route path="/helpdesk" element={<Helpdesk />} />
+                    <Route path="*" element={<NotFoundPage />} />
+                  </Routes>
+                </Suspense>
+              </main>
+            </div>
+            <Footer />
+          </div>
+        </PerformanceOptimizer>
+      </ThemeProvider>
     </ErrorBoundary>
   );
 }

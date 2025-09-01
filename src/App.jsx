@@ -1,8 +1,8 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppHeader } from "./layout/AppHeader";
-import { Footer } from "./components/Footer.jsx";
-import ChatAssistant from "./components/ChatAssistant";
+import { AppHeader } from './layout/AppHeader.jsx';
+import { Footer } from './components/SiteFooter.jsx';
+import ChatAssistant from './components/ChatAssistant';
 
 // Lazy load all pages
 const Home = React.lazy(() => import('./pages/Home.tsx'));
@@ -59,13 +59,11 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/partners" element={<PartnersPage />} />
-              <Route path="/login" element={<Login />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/sitemap" element={<Sitemap />} />
-              <Route path="/partners" element={<PartnersPage />} />
 
               {/* Services routes */}
               <Route path="/services" element={<ServicesPage />} />
@@ -94,18 +92,8 @@ function App() {
               {/* API Playground */}
               <Route path="/api-playground" element={<ApiPlayground />} />
 
-              {/* Catch-all route for 404 */}
-              <Route path="*" element={
-                <div className="flex items-center justify-center min-h-screen">
-                  <div className="text-center">
-                    <h1 className="text-4xl font-bold text-zion-cyan mb-4">404 - Page Not Found</h1>
-                    <p className="text-zion-slate-light mb-6">The page you're looking for doesn't exist.</p>
-                    <a href="/" className="bg-zion-purple text-white px-6 py-3 rounded-lg hover:bg-zion-purple-dark transition-colors">
-                      Go Home
-                    </a>
-                  </div>
-                </div>
-              } />
+              {/* Catch-all route */}
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </main>
