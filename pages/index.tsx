@@ -1145,7 +1145,7 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Health monitoring</li>
                   <li>• Self-healing infrastructure</li>
                 </ul>
-                <Link href="/docs/ultimate-redundancy" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <Link href="/docs/redundancy-ultimate" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
@@ -1159,7 +1159,7 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Error prevention</li>
                   <li>• Predictive analytics</li>
                 </ul>
-                <Link href="/COMPREHENSIVE_REDUNDANCY_README.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <Link href="/docs/redundancy-comprehensive" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
@@ -1173,114 +1173,7 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Performance monitoring</li>
                   <li>• Cluster management</li>
                 </ul>
-                <Link href="/docs/pm2-redundancy" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  Learn More →
-                </a>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">🔧 Syntax & Linting</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Code quality automation</li>
-                  <li>• Syntax error fixing</li>
-                  <li>• Linting automation</li>
-                  <li>• Code formatting</li>
-                  <li>• Quality assurance</li>
-                </ul>
-                <Link href="/FINAL_WORKFLOW_FIX_SUMMARY.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  Learn More →
-                </Link>
-              </div>
-            </div>
-          </section>
-
-          {/* Advanced Automation Features */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">⚙️ Advanced Automation Features & Capabilities</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">🧠 AI Content Generation</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Autonomous content creation</li>
-                  <li>• SEO optimization</li>
-                  <li>• Dynamic page generation</li>
-                  <li>• Content quality assurance</li>
-                  <li>• Multi-language support</li>
-                </ul>
-                <Link href="/content-generation-report.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  View Content Report →
-                </Link>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">🔧 Git & CI/CD Automation</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Automated git sync</li>
-                  <li>• Conflict resolution</li>
-                  <li>• Branch management</li>
-                  <li>• PR automation</li>
-                  <li>• Code quality checks</li>
-                </ul>
-                <Link href="/GITHUB_ACTIONS_IMPROVEMENTS.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  View CI/CD Guide →
-                </Link>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">📊 Monitoring & Analytics</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Real-time dashboards</li>
-                  <li>• Performance metrics</li>
-                  <li>• Health monitoring</li>
-                  <li>• Predictive analytics</li>
-                  <li>• Automated reporting</li>
-                </ul>
-                <Link href="/performance-weekly-report.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  View Performance Report →
-                </Link>
-              </div>
-            </div>
-            
-            {/* Additional Automation Features */}
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-gradient-to-br from-white/5 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10">
-                <h3 className="text-xl font-bold text-blue-400 mb-4 text-center">🔍 Content Intelligence</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• AI content generation</li>
-                  <li>• SEO optimization</li>
-                  <li>• Quality assurance</li>
-                  <li>• Dynamic updates</li>
-                  <li>• Multi-language support</li>
-                </ul>
-                <Link href="/content-generation-report.md" className="text-blue-400 hover:text-blue-300 text-sm font-semibold">
-                  Learn More →
-                </Link>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/5 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10">
-                <h3 className="text-xl font-bold text-purple-400 mb-4 text-center">📊 Monitoring & Analytics</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Real-time dashboards</li>
-                  <li>• Performance metrics</li>
-                  <li>• Health monitoring</li>
-                  <li>• Predictive analytics</li>
-                  <li>• Automated reporting</li>
-                </ul>
-                <Link href="/performance-weekly-report.md" className="text-purple-400 hover:text-purple-300 text-sm font-semibold">
-                  Learn More →
-                </Link>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/5 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10">
-                <h3 className="text-xl font-bold text-emerald-400 mb-4 text-center">🛡️ Security & Compliance</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Automated security scanning</li>
-                  <li>• Vulnerability assessment</li>
-                  <li>• Compliance monitoring</li>
-                  <li>• Threat detection</li>
-                  <li>• Zero-trust architecture</li>
-                </ul>
-                <Link href="/SECURITY.md" className="text-emerald-400 hover:text-emerald-300 text-sm font-semibold">
+                <Link href="/docs/redundancy-pm2" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   Learn More →
                 </Link>
               </div>
@@ -1816,7 +1709,7 @@ export default function HomePage({ pageLinks }: HomePageProps) {
               <div>
                 <h3 className="text-lg font-semibold text-green-400 mb-4">Documentation</h3>
                 <ul className="space-y-2 text-sm text-white/70">
-                  <li><Link href="/docs/readme" className="hover:text-green-300 transition-colors">Project Overview</Link></li>
+                  <li><Link href="/docs/project-overview" className="hover:text-green-300 transition-colors">Project Overview</Link></li>
                   <li><Link href="/docs/architecture" className="hover:text-green-300 transition-colors">Architecture</Link></li>
                   <li><Link href="/docs/api" className="hover:text-green-300 transition-colors">API Docs</Link></li>
                   <li><Link href="/docs/contributing" className="hover:text-green-300 transition-colors">Contributing</Link></li>
@@ -1826,10 +1719,10 @@ export default function HomePage({ pageLinks }: HomePageProps) {
               <div>
                 <h3 className="text-lg font-semibold text-yellow-400 mb-4">Automation & Systems</h3>
                 <ul className="space-y-2 text-sm text-white/70">
-                  <li><Link href="/COMPREHENSIVE_REDUNDANCY_README.md" className="hover:text-yellow-300 transition-colors">Redundancy Systems</Link></li>
-                  <li><Link href="/README_ULTIMATE_REDUNDANCY.md" className="hover:text-yellow-300 transition-colors">Ultimate Redundancy</Link></li>
-                  <li><Link href="/README_PM2_REDUNDANCY_COMPLETE.md" className="hover:text-yellow-300 transition-colors">PM2 Orchestration</Link></li>
-                  <li><Link href="/AUTOMATION_COMPLETION_REPORT.md" className="hover:text-yellow-300 transition-colors">Automation Status</Link></li>
+                  <li><Link href="/docs/redundancy-comprehensive" className="hover:text-yellow-300 transition-colors">Redundancy Systems</Link></li>
+                  <li><Link href="/docs/redundancy-ultimate" className="hover:text-yellow-300 transition-colors">Ultimate Redundancy</Link></li>
+                  <li><Link href="/docs/redundancy-pm2" className="hover:text-yellow-300 transition-colors">PM2 Orchestration</Link></li>
+                  <li><Link href="/docs/automation-status" className="hover:text-yellow-300 transition-colors">Automation Status</Link></li>
                 </ul>
               </div>
             </div>
