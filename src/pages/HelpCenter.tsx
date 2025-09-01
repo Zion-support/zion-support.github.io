@@ -38,7 +38,7 @@ import {
 interface HelpSection {
   id: string;
   title: string;
-  icon: any;
+  icon: unknown;
   description: string;
   articles: Array<{
     title: string;
@@ -307,7 +307,7 @@ const faqData: FAQItem[] = [
   }
 ];
 
-export function HelpCenter() {
+export function HelpCenter(): void {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['getting-started']));
   const [selectedCategory, setSelectedCategory] = useState<string>('All');

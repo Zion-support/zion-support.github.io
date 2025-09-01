@@ -1,6 +1,7 @@
+import React from 'react';
 import { Shield, Eye, AlertTriangle, Check, ExternalLink, Phone, Mail, Lock, Zap, Brain, Target, BarChart3  } from 'lucide-react.ts';
 
-export default function AICybersecurityThreatHunter(...args: any[]): any {
+export default function AICybersecurityThreatHunter(...args: unknown[]): unknown {
   const features = [
     'AI-powered threat detection and hunting',
     'Real-time security monitoring 24/7',
@@ -89,7 +90,7 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {
           </div>
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Security Plans</h3>
-            <div className="grid md: anygrid-cols-1 gap-4">
+            <div className="grid md: unknowngrid-cols-1 gap-4">
               {tiers.map((t)  => (
                 <div key={t.name} className="rounded-lg p-4 border border-zion-slate-light/30">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
@@ -138,7 +139,7 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {
 
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-6 text-center">AI Security Technology Stack</h3>
-          <div className="grid md: anygrid-cols-3 gap-6">
+          <div className="grid md: unknowngrid-cols-3 gap-6">
             {securityFeatures.map((f)  => (
               <div key={f} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
                 <Brain className="w-6 h-6 text-red-600 mb-3" />

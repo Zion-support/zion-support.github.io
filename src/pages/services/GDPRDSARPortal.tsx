@@ -2,7 +2,7 @@ import React from 'react.ts';
 import { Shield, FileText, ExternalLink, CheckCircle, Mail, Phone  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
 
-export default function GDPRDSARPortal(...args: any[]): any {
+export default function GDPRDSARPortal(...args: unknown[]): unknown {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
@@ -15,7 +15,7 @@ export default function GDPRDSARPortal(...args: any[]): any {
               Launch a branded privacy request portal with ID verification, workflow, SLAs, redaction, and audit-ready exports. Integrates with common CRMs and ticketing tools.
             </p>
 
-            <div className="mt-8 grid gap-4 sm: anygrid-cols-2">
+            <div className="mt-8 grid gap-4 sm: unknowngrid-cols-2">
               {[ 
                 { title: 'Identity verification & consent', desc: 'Email/SMS OTP, ID document support.' },
                 { title: 'Workflow automation', desc: 'Intake, triage, routing, collaboration.' },

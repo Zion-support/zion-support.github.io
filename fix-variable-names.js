@@ -9,8 +9,7 @@ function toCamelCase(str) {
         '3': 'Three',
         '2': 'Two',
         '1': 'One',
-  <<<<<<< HEAD
-        '0': 'Zero'
+          '0': 'Zero'
       
 
 };

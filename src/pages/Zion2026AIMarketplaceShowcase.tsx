@@ -35,7 +35,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;
     });
   }, [searchTerm, selectedCategory]);
 
-  const getCategoryIcon = (category: anystring)  => {;
+  const getCategoryIcon = (category: unknownstring)  => {;
     switch (category) {;
       case 'AI Marketplace': return Globe;
       case 'AI Integration': return Zap;
@@ -46,7 +46,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;
     }
   };
 
-  const getCategoryColor = (category: anystring)  => {;
+  const getCategoryColor = (category: unknownstring)  => {;
     switch (category) {;
       case 'AI Marketplace': return 'from-blue-500 to-cyan-500';
       case 'AI Integration': return 'from-purple-500 to-pink-500';
@@ -159,7 +159,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus: unknownoutline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
                   {categories.map(category  => (
                     <option key={category} value={category}>
@@ -210,7 +210,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;
             </div>
           ) : (
             <div className={viewMode === 'grid' 
-              ? 'grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'
+              ? 'grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8'
               : 'space-y-6'
             }>
               {filteredServices.map((service, index)  => (

@@ -281,7 +281,7 @@ import {
   USDZ
 } from 'lucide-react';
 
-export function ComprehensiveSitemap() {
+export function ComprehensiveSitemap(): void {
   const currentYear = new Date().getFullYear();
 
   // Define all the main sections and their pages
@@ -452,7 +452,7 @@ export function ComprehensiveSitemap() {
     }
   };
 
-  const renderSection = (title: string, items: any[], icon: any) => (
+  const renderSection = (title: string, items: unknown[], icon: unknown) => (
     <motion.div
       key={title}
       initial={{ opacity: 0, y: 20 }}

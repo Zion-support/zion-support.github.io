@@ -1,9 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
-import EnterprisePlans from "../pages/EnterprisePlans";
-import EnterpriseAdmin from "../pages/EnterpriseAdmin";
+import EnterprisePlans from "../pages/EnterprisePlans.jsx";
+import EnterpriseAdmin from "../pages/EnterpriseAdmin.jsx";
 import CompWorkspace from "../pages/CompWorkspace";
-import EnterpriseBilling from "../pages/EnterpriseBilling";
-import EnterpriseDemo from "../pages/EnterpriseDemo";
+import EnterpriseBilling from "../pages/EnterpriseBilling.jsx";
+import EnterpriseDemo from "../pages/EnterpriseDemo.jsx";
 
 export default function EnterpriseRoutes() {
   return (

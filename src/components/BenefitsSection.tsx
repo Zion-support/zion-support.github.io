@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star } from 'lucide-react';
-import { GradientHeading } from './ui/GradientHeading';
+import { GradientHeading } from './ui/GradientHeading.jsx';
 
 interface Benefit {
   title: string;

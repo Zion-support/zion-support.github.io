@@ -47,7 +47,7 @@ import { innovativeMicroSAASServices2029  } from '../../data/innovative-micro-sa
 import { revolutionaryAIServices2029  } from '../../data/revolutionary-ai-services-2029';
 import { revolutionaryITServices2029  } from '../../data/revolutionary-it-services-2029';
 
-export default function ComprehensivePricing2029(...args: any[]): any {
+export default function ComprehensivePricing2029(...args: unknown[]): unknown {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<any>('grid');
@@ -84,8 +84,8 @@ export default function ComprehensivePricing2029(...args: any[]): any {
     }
   });
 
-  const getCategoryIcon = (category: anystring)  => {
-    const iconMap: { [key: string]: any } = {
+  const getCategoryIcon = (category: unknownstring)  => {
+    const iconMap: { [key: string]: unknown } = {
       'AI & Analytics': Brain,
       'Cybersecurity': Shield,
       'AI & Operations': Workflow,
@@ -293,7 +293,7 @@ export default function ComprehensivePricing2029(...args: any[]): any {
             transition={{ duration: 0.8, delay: 0.7 }}
             className={`grid gap-6 ${
               viewMode === 'grid' 
-                ? 'grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3' 
+                ? 'grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3' 
                 : 'grid-cols-1'
             }`}
           >

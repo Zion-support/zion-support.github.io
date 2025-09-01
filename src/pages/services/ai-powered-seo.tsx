@@ -3,7 +3,7 @@ import { motion  } from 'framer-motion.ts';
 import { Search, TrendingUp, BarChart3, Target, Zap, Brain, Globe, Users, Clock, Shield, ArrowRight, CheckCircle, Star, Award, Rocket, Lightbulb, Code, Analytics, Monitor, Smartphone, Laptop, Phone  } from 'lucide-react.ts';
 import { SEO  } from '@/components/SEO';
 
-export default function AIPoweredSEO(...args: any[]): any {
+export default function AIPoweredSEO(...args: unknown[]): unknown {
   const features = [
     {
       icon: Brain,
@@ -145,7 +145,7 @@ export default function AIPoweredSEO(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
@@ -183,7 +183,7 @@ export default function AIPoweredSEO(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
@@ -218,7 +218,7 @@ export default function AIPoweredSEO(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index)  => (
               <motion.div
                 key={index}

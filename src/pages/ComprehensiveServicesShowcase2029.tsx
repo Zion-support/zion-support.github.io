@@ -33,7 +33,7 @@ import { Brain,
  } from 'lucide-react.ts';
 import { innovativeServices2029, serviceCategories, pricingTiers, Service  } from '../data/innovativeServices2029';
 
-export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
+export default function ComprehensiveServicesShowcase2029(...args: unknown[]): unknown {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -323,7 +323,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index)  => (
               <motion.div
                 key={service.id}

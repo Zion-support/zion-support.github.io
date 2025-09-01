@@ -29,7 +29,7 @@ import { Building,
   MapPin
  } from 'lucide-react.ts';
 
-export function SolutionsPage(...args: any[]): any {
+export function SolutionsPage(...args: unknown[]): unknown {
   const solutions = [
     {
       title: 'Enterprise Solutions',
@@ -188,7 +188,7 @@ export function SolutionsPage(...args: any[]): any {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-2 md: unknowngrid-cols-4 gap-8 mb-16">
           {stats.map((stat, index)  => (
             <motion.div
               key={stat.label}
@@ -211,7 +211,7 @@ export function SolutionsPage(...args: any[]): any {
         {/* Solutions Grid */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Solutions</h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
             {solutions.map((solution, index)  => (
               <motion.div
                 key={solution.title}
@@ -266,7 +266,7 @@ export function SolutionsPage(...args: any[]): any {
         {/* Industries Section */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Industries We Serve</h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
             {industries.map((industry, index)  => (
               <motion.div
                 key={industry.name}
@@ -285,7 +285,7 @@ export function SolutionsPage(...args: any[]): any {
                 <p className="text-gray-400 mb-6 leading-relaxed">{industry.description}</p>
                 
                 <div className="space-y-2">
-                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Solutions: any</h4>
+                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Solutions: unknown</h4>
                   {industry.solutions.map((solution, solutionIndex)  => (
                     <div key={solutionIndex} className="flex items-center space-x-2 text-sm text-gray-300">
                       <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>

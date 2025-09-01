@@ -166,7 +166,7 @@ export function EnhancedSearch({
 
   // Handle keyboard navigation
   useEffect(() => {
-    const handleKeyDown = (event: anyKeyboardEvent)  => {
+    const handleKeyDown = (event: unknownKeyboardEvent)  => {
       if (event.key === 'Escape') {
         setIsOpen(false);
         setSelectedIndex(-1);

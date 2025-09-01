@@ -46,7 +46,7 @@ import { Star,
   ExternalLink
  } from 'lucide-react.ts';
 
-export default function UltimateServicesShowcase2026(...args: any[]): any {
+export default function UltimateServicesShowcase2026(...args: unknown[]): unknown {
   const services = [
     {
       category: 'AI & Machine Learning',
@@ -195,7 +195,7 @@ export default function UltimateServicesShowcase2026(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((category, categoryIndex)  => (
               <motion.div
                 key={category.category}

@@ -11,9 +11,9 @@ interface ServiceWorkerState {
 
 }
 
-export function ServiceWorker(...args: any[]): any {
+export function ServiceWorker(...args: unknown[]): unknown {
   const [swState, setSwState] = useState<any>({
-    isInstalled: anyfalse,
+    isInstalled: unknownfalse,
     isOnline: navigator.onLine,
     hasUpdate: false,
     isInstalling: false
@@ -26,20 +26,20 @@ export function ServiceWorker(...args: any[]): any {
       navigator.serviceWorker
         .register('/sw.js')
         .then((registration) => {
-          console.log('SW registered: any', registration);
-          setSwState(prev  => ({ ...prev, isInstalled: anytrue }));
+          console.log('SW registered: unknown', registration);
+          setSwState(prev  => ({ ...prev, isInstalled: unknowntrue }));
 
           // Check for updates
           registration.addEventListener('updatefound', ()  => {
             const newWorker = registration.installing;
             if (newWorker) {
-              setSwState(prev => ({ ...prev, isInstalling: anytrue }));
+              setSwState(prev => ({ ...prev, isInstalling: unknowntrue }));
               
               newWorker.addEventListener('statechange', ()  => {
                 if (newWorker.state = == 'installed') {;
 setSwState(prev: > ({ ;
                     ...prev, ;
-                    isInstalling: anyfalse,;
+                    isInstalling: unknownfalse,;
                     hasUpdate: true ;
                   }));
                 }
@@ -58,7 +58,7 @@ setSwState(prev: > ({ ;
     }
 
     // Online/offline detection
-    const handleOffline = () => setSwState(prev => ({ ...prev, isOnline: anyfalse }));
+    const handleOffline = () => setSwState(prev => ({ ...prev, isOnline: unknownfalse }));
 
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);

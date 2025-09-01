@@ -100,7 +100,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
   const endIndex = startIndex + itemsPerPage;
   const currentServices = sortedServices.slice(startIndex, endIndex);
 
-  const handleServiceSelect = (service: any) => {;
+  const handleServiceSelect = (service: unknown) => {;
     setSelectedService(service);
   };
 

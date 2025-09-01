@@ -2,7 +2,7 @@ import React from 'react.ts'
 import { SEO  } from '../../components/SEO'
 import { Bot, MessageSquare, Headphones, Zap, PieChart, CheckCircle2  } from 'lucide-react.ts'
 
-export default function AIAgentHelpdesk(...args: any[]): any {
+export default function AIAgentHelpdesk(...args: unknown[]): unknown {
   const features = [
     { icon: Bot, title: 'Autonomous Triage', desc: 'Understands intent, routes to flows, escalates with full context.' },
     { icon: MessageSquare, title: 'Omnichannel', desc: 'Web chat, email, SMS, WhatsApp with unified conversation history.' },
@@ -52,7 +52,7 @@ export default function AIAgentHelpdesk(...args: any[]): any {
       </section>
 
       <section className="py-10">
-        <div className="container-responsive grid grid-cols-1 md: anygrid-cols-3 gap-6">
+        <div className="container-responsive grid grid-cols-1 md: unknowngrid-cols-3 gap-6">
           {pricing.map((p)  => (
             <div key={p.tier} className="card-futuristic">
               <div className="text-sm text-zion-blue-light/70">{p.tier}</div>

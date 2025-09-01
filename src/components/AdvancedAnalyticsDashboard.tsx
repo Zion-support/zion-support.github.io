@@ -53,7 +53,7 @@ export function AdvancedAnalyticsDashboard({
   const [showAdvancedMetrics, setShowAdvancedMetrics] = useState(false);
   
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
-  const chartRefs = useRef<{ [key: string]: any }>({});
+  const chartRefs = useRef<{ [key: string]: unknown }>({});
 
   // Generate sample analytics data
   const generateAnalyticsData = useCallback(() => {

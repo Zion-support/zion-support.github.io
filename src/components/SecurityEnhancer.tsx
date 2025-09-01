@@ -64,7 +64,7 @@ interface SecurityMetrics {
   complianceScore: number;
 }
 
-export function SecurityEnhancer() {
+export function SecurityEnhancer(): void {
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [securityStatus, setSecurityStatus] = useState<SecurityStatus | null>(null);
@@ -167,7 +167,7 @@ export function SecurityEnhancer() {
 
     // Monitor for console access attempts
     const originalConsoleLog = console.log;
-    console.log = function(...args: any[]) {
+    console.log = function(...args: unknown[]) {
       if (args.some(arg => typeof arg === 'string' && arg.includes('password'))) {
         logSecurityEvent('warning', 'Potential sensitive data logging detected', 'Console Access', 'medium');
       }

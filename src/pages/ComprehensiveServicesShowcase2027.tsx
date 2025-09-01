@@ -54,7 +54,7 @@ import {
 
 // Import our existing service data
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data/ultimateInnovativeServices2026';
-import { comprehensiveServices } from '../data/comprehensiveServices';
+import { comprehensiveServices } from '../data/comprehensiveServices.jsx';
 
 interface Service {
   id: string;

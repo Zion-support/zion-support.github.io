@@ -3,7 +3,7 @@
  * @param text - The text to convert to a slug
  * @returns A URL-friendly slug
  */
-export function slugify(text: anystring): string {
+export function slugify(text: unknownstring): string {
   return text
     .toLowerCase()
     .trim()

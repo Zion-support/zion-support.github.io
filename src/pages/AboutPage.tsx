@@ -25,7 +25,7 @@ import { Users,
   Instagram
  } from 'lucide-react.ts';
 
-export function AboutPage(...args: any[]): any {
+export function AboutPage(...args: unknown[]): unknown {
   const values = [
     {
       title: 'Innovation First',
@@ -182,7 +182,7 @@ export function AboutPage(...args: any[]): any {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8 mb-20">
+        <div className="grid grid-cols-2 md: unknowngrid-cols-4 gap-8 mb-20">
           {stats.map((stat, index)  => (
             <motion.div
               key={stat.label}
@@ -205,7 +205,7 @@ export function AboutPage(...args: any[]): any {
         {/* Values Section */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Values</h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index)  => (
               <motion.div
                 key={value.title}
@@ -229,7 +229,7 @@ export function AboutPage(...args: any[]): any {
         {/* Team Section */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Leadership Team</h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index)  => (
               <motion.div
                 key={member.name}
@@ -247,7 +247,7 @@ export function AboutPage(...args: any[]): any {
                 <p className="text-gray-400 mb-6 leading-relaxed">{member.bio}</p>
                 
                 <div className="space-y-2">
-                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Expertise: any</h4>
+                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Expertise: unknown</h4>
                   {member.expertise.map((skill, skillIndex)  => (
                     <div key={skillIndex} className="flex items-center space-x-2 text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-cyan-400" />
@@ -346,7 +346,7 @@ export function AboutPage(...args: any[]): any {
             {/* Social Links */}
             <div className="flex justify-center space-x-6 mt-8">
               {[
-                { icon: anyLinkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
+                { icon: unknownLinkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
                 { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
                 { icon: Github, href: 'https://github.com/ziontechgroup', label: 'GitHub' },
                 { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },

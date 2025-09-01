@@ -73,7 +73,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "AI Sentiment Analysis",
@@ -161,7 +161,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 { metric: "35%", description: "Increase in customer satisfaction scores" },
                 { metric: "25%", description: "Reduction in customer churn rate" },
@@ -224,7 +224,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md: unknowngrid-cols-2 gap-8">
               {[
                 {
                   industry: "E-commerce",
@@ -309,7 +309,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: unknowngrid-cols-3 gap-8">
               {[
                 {
                   name: "Starter",

@@ -219,7 +219,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
                     <select
                       value={selectedCategory}
                       onChange={(e) => setSelectedCategory(e.target.value)}
-                      className="w-full px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus: unknownoutline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
                       {categories.map(category   => (
                         <option key={category} value={category} className="bg-gray-800 text-white">
@@ -279,7 +279,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
                 </button>
               </motion.div>;
             ) : (
-              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredServices.map((service, index)   => (
                   <motion.div
                     key={service.id}

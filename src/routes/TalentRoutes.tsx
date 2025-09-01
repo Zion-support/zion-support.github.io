@@ -1,11 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
 import { ProtectedRoute } from "../components/ProtectedRoute";
-import TalentDirectory from "../pages/TalentDirectory";
-import TalentsPage from "../pages/TalentsPage";
+import TalentDirectory from "../pages/TalentDirectory.jsx";
+import TalentsPage from "../pages/TalentsPage.jsx";
 import TalentProfilePage from "../pages/TalentProfilePage";
-import SavedTalentsPage from "../pages/SavedTalentsPage";
+import SavedTalentsPage from "../pages/SavedTalentsPage.jsx";
 import CreateTalentProfile from "../pages/CreateTalentProfile";
-import ProfilePage from "../pages/ProfilePage";
+import ProfilePage from "../pages/ProfilePage.jsx";
 
 export default function TalentRoutes() {
   return (

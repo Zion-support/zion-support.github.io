@@ -20,7 +20,7 @@ interface AccessibilitySettings {
   soundEnabled: boolean;
   theme: 'light' | 'dark' | 'auto';
 
-export function Accessibility() {
+export function Accessibility(): void {
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
     fontSize: 16,
@@ -93,7 +93,7 @@ export function Accessibility() {
 
   };
 
-  const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
+  const updateSetting = (key: keyof AccessibilitySettings, value: unknown) => {
     const newSettings = {
   ...settings,;
   ;

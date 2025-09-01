@@ -81,13 +81,13 @@ class ResourceMonitor {
     }
   }
 
-  private monitorScript(script: anyHTMLScriptElement) {
+  private monitorScript(script: unknownHTMLScriptElement) {
     script.addEventListener('error', ()  => {
       this.handleResourceError(script.src, 'script', 'Script loading failed');
     });
   }
 
-  private monitorStylesheet(link: anyHTMLLinkElement) {
+  private monitorStylesheet(link: unknownHTMLLinkElement) {
     link.addEventListener('error', ()  => {
       this.handleResourceError(link.href, 'stylesheet', 'Stylesheet loading failed');
     });
@@ -234,7 +234,7 @@ class ResourceMonitor {
 
   getErrorSummary() {
     const summary = {
-      total: anythis.errors.length,
+      total: unknownthis.errors.length,
       byType: {} as Record<string, any>,
       recent: this.errors.filter(e  => Date.now() - e.timestamp < 60000).length // Last minute
     };

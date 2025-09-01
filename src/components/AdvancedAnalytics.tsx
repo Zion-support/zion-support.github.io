@@ -147,7 +147,7 @@ export function AdvancedAnalytics({
   }, [enabled, userSession]);
 
   // Track user interactions
-  const trackInteraction = useCallback((type: 'click' | 'scroll' | 'form' | 'error', data?: any) => {
+  const trackInteraction = useCallback((type: 'click' | 'scroll' | 'form' | 'error', data?: unknown) => {
     if (!enabled) return;
 
     const interactionData = {
@@ -354,7 +354,7 @@ export function AdvancedAnalytics({
   }, [enabled]);
 
   // Send analytics data to service
-  const sendAnalyticsData = useCallback(async (eventType: string, data: any) => {
+  const sendAnalyticsData = useCallback(async (eventType: string, data: unknown) => {
     if (!trackingId) return;
 
     try {

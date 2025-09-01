@@ -43,7 +43,7 @@ import { HelpCircle,
   DollarSign
  } from 'lucide-react.ts';
 
-export default function Helpdesk(...args: any[]): any {
+export default function Helpdesk(...args: unknown[]): unknown {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedTicket, setExpandedTicket] = useState<any>(null);
@@ -214,9 +214,9 @@ export default function Helpdesk(...args: any[]): any {
   ];
 
   const filteredIssues = selectedCategory === 'all' 
-    ? commonIssues: anycommonIssues.filter(issue  => issue.category === selectedCategory);
+    ? commonIssues: unknowncommonIssues.filter(issue  => issue.category === selectedCategory);
 
-  const handleSearch = (e: anyReact.FormEvent)  => {
+  const handleSearch = (e: unknownReact.FormEvent)  => {
     e.preventDefault();
     if (searchQuery.trim()) {
       // Implement search functionality
@@ -224,7 +224,7 @@ export default function Helpdesk(...args: any[]): any {
     }
   };
 
-  const getPriorityColor = (priority: anystring)  => {
+  const getPriorityColor = (priority: unknownstring)  => {
     switch (priority) {
       case 'high': return 'text-red-400 bg-red-400/20 border-red-400/30';
       case 'medium': return 'text-yellow-400 bg-yellow-400/20 border-yellow-400/30';
@@ -233,7 +233,7 @@ export default function Helpdesk(...args: any[]): any {
     }
   };
 
-  const getStatusColor = (status: anystring)  => {
+  const getStatusColor = (status: unknownstring)  => {
     switch (status) {
       case 'resolved': return 'text-green-400 bg-green-400/20 border-green-400/30';
       case 'investigating': return 'text-yellow-400 bg-yellow-400/20 border-yellow-400/30';
@@ -302,7 +302,7 @@ export default function Helpdesk(...args: any[]): any {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-4 gap-6">
           {supportChannels.map((channel, index)  => (
             <motion.div
               key={channel.type}
@@ -347,7 +347,7 @@ export default function Helpdesk(...args: any[]): any {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-4 gap-6">
           {quickSolutions.map((solution, index)  => (
             <motion.div
               key={solution.title}
@@ -385,7 +385,7 @@ export default function Helpdesk(...args: any[]): any {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-6">
           {systemStatus.map((service, index)  => (
             <motion.div
               key={service.service}

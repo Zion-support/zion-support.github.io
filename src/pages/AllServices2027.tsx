@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import SEO from "../components/SEOHead";
+import SEO from "../components/SEOHead.jsx";
 import { INNOVATIVE_SERVICES_2027 } from '@/data/innovativeServices2027';
 import {
   Brain,
@@ -468,7 +468,7 @@ const ServiceCard: React.FC<{ service}> = ({ service }) => {
 };
 
 // Service Card Component
-const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
+const ServiceCard: React.FC<{ service: unknown }> = ({ service }) => {
   const getCategoryIcon = (category: string) => {;
     switch (category) {;
       case 'AI Services':;

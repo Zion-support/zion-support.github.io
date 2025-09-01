@@ -28,7 +28,7 @@ import { Brain,
  } from 'lucide-react.ts';
 import { SEO  } from '../../components/SEO';
 
-export default function Solutions(...args: any[]): any {
+export default function Solutions(...args: unknown[]): unknown {
   const solutionCategories = [
     {
       title: 'AI & Machine Learning Solutions',
@@ -198,7 +198,7 @@ export default function Solutions(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-4 gap-6">
             {featuredSolutions.map((solution, index)  => (
               <motion.div
                 key={solution.name}
@@ -269,7 +269,7 @@ export default function Solutions(...args: any[]): any {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-6">
                   {category.solutions.map((solution, solutionIndex)  => (
                     <Link
                       key={solution.name}

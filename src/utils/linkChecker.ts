@@ -147,7 +147,7 @@ export class LinkChecker {
   // Get analysis summary
   getSummary() {
     return {
-      totalLinks: anythis.visitedUrls.size,
+      totalLinks: unknownthis.visitedUrls.size,
       brokenLinks: this.brokenLinks.length,
       missingPages: this.missingPages.length,
       externalLinks: Array.from(this.visitedUrls).filter(url  => !this.isInternalLink(url)).length

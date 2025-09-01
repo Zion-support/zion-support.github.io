@@ -65,7 +65,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
       }
     });
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: unknownstring)  => {
     const icons: Record<string, any> = {
       'AI & Enterprise': <Brain className="w-5 h-5" />,
       'Quantum Computing': <Zap className="w-5 h-5" />,
@@ -81,7 +81,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
     return icons[category] || <Sparkles className="w-5 h-5" />;
   };
 
-  const getInnovationLevelColor = (level: anystring)  => {
+  const getInnovationLevelColor = (level: unknownstring)  => {
     switch (level) {
       case 'revolutionary':
         return 'from-purple-500 to-pink-500';
@@ -199,7 +199,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="appearance-none bg-slate-700/50 border border-slate-600/50 rounded-xl px-4 py-3 pr-10 text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
+                  className="appearance-none bg-slate-700/50 border border-slate-600/50 rounded-xl px-4 py-3 pr-10 text-white focus: unknownoutline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
                 >
                   {categories.map(category  => (
                     <option key={category} value={category}>
@@ -261,7 +261,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
             initial="hidden"
             animate="visible"
             className={viewMode === 'grid' 
-              ? 'grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6' 
+              ? 'grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-6' 
               : 'space-y-6'
             }
           >

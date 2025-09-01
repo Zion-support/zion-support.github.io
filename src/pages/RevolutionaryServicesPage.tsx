@@ -134,7 +134,7 @@ import { Brain,
 import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025  } from '../data/revolutionaryMicroSaasServices2025';
 import { COMPREHENSIVE_PRICING_GUIDE_2025  } from '../data/comprehensivePricingGuide2025';
 
-export function RevolutionaryServicesPage(...args: any[]): any {
+export function RevolutionaryServicesPage(...args: unknown[]): unknown {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
@@ -209,23 +209,23 @@ export function RevolutionaryServicesPage(...args: any[]): any {
     }
   });
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: unknownstring)  => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Globe;
   };
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: unknownstring)  => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.color : 'from-gray-500 to-slate-600';
   };
 
-  const getPriceRange = (price: anynumber)  => {
+  const getPriceRange = (price: unknownnumber)  => {
     if (price < 1500) return 'low';
     if (price <= 3000) return 'medium';
     return 'high';
   };
 
-  const getPriceColor = (price: anynumber)  => {
+  const getPriceColor = (price: unknownnumber)  => {
     const range = getPriceRange(price);
     switch (range) {
       case 'low': return 'text-green-400';
@@ -235,7 +235,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
     }
   };
 
-  const getPriceRangeColor = (price: anynumber)  => {
+  const getPriceRangeColor = (price: unknownnumber)  => {
     const range = getPriceRange(price);
     switch (range) {
       case 'low': return 'bg-green-500/20 text-green-400';
@@ -245,7 +245,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
     }
   };
 
-  const getInnovationColor = (level: anystring)  => {
+  const getInnovationColor = (level: unknownstring)  => {
     switch (level) {
       case 'Revolutionary': return 'text-purple-400';
       case 'Advanced': return 'text-blue-400';
@@ -254,7 +254,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
     }
   };
 
-  const getInnovationBgColor = (level: anystring)  => {
+  const getInnovationBgColor = (level: unknownstring)  => {
     switch (level) {
       case 'Revolutionary': return 'bg-purple-500/20';
       case 'Advanced': return 'bg-blue-500/20';
@@ -320,7 +320,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              className="px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus: unknownoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
             >
               {categories.map((category)  => (
                 <option key={category.id} value={category.id}>
@@ -333,7 +333,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
             <select
               value={priceRange}
               onChange={(e) => setPriceRange(e.target.value)}
-              className="px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              className="px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus: unknownoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
             >
               {priceRanges.map((range)  => (
                 <option key={range.id} value={range.id}>
@@ -346,7 +346,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              className="px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus: unknownoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
             >
               {sortOptions.map((option)  => (
                 <option key={option.id} value={option.id}>
@@ -358,7 +358,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg: unknowngrid-cols-2 xl:grid-cols-3 gap-8 mb-16">
           {sortedServices.map((service, index)  => (
             <motion.div
               key={service.id}
@@ -491,7 +491,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg: unknowngrid-cols-3 gap-8">
             {SPECIAL_PRICING_PACKAGES.map((package_, index)  => (
               <motion.div
                 key={package_.name}

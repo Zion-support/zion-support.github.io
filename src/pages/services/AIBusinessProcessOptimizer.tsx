@@ -1,6 +1,6 @@
 import { Brain, TrendingUp, Zap, Check, ExternalLink, Phone, Mail, BarChart3, Clock, Users, Target, Award  } from 'lucide-react.ts';
 
-export default function AIBusinessProcessOptimizer(...args: any[]): any {
+export default function AIBusinessProcessOptimizer(...args: unknown[]): unknown {
   const features = [
     'AI-powered process mining and discovery',
     'Real-time performance monitoring and alerts',
@@ -80,7 +80,7 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {
           </div>
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing Plans</h3>
-            <div className="grid md: anygrid-cols-1 gap-4">
+            <div className="grid md: unknowngrid-cols-1 gap-4">
               {tiers.map((t)  => (
                 <div key={t.name} className="rounded-lg p-4 border border-zion-slate-light/30">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
@@ -127,7 +127,7 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {
           </div>
         </div>
 
-        <div className="mt-12 grid md: anygrid-cols-3 gap-6">
+        <div className="mt-12 grid md: unknowngrid-cols-3 gap-6">
           {['Real-time monitoring', 'AI-powered insights', 'Process automation'].map((t)  => (
             <div key={t} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
               <BarChart3 className="w-6 h-6 text-zion-cyan mb-3" />

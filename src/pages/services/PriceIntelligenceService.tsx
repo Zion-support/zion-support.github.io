@@ -13,7 +13,7 @@ const PriceIntelligenceService: React.FC = (): JSX.Element => {
           elasticity models and guardrails.
         </p>
 
-        <div className="mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm: unknowngrid-cols-2 lg:grid-cols-3">
           {[
             'Competitor crawl + marketplace APIs',
             'SKU matching and outlier detection',

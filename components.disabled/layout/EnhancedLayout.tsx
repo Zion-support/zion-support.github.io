@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:components.disabled/layout/EnhancedLayout.tsx
 import EnhancedNavigation from './EnhancedNavigation';
 import EnhancedFooter from './EnhancedFooter';
 import dynamic from 'next/dynamic';
@@ -27,7 +26,6 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
     </div>
   );
 }
-=======
 import Head from 'next/head';
 import EnhancedNavigation from '../EnhancedNavigation';
 import EnhancedFooter from '../EnhancedFooter';
@@ -152,4 +150,3 @@ const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
 };
 
 export default EnhancedLayout;
->>>>>>> c5596438ff9e89f471f570b77dc8abbad76d99e4:components/layout/EnhancedLayout.tsx

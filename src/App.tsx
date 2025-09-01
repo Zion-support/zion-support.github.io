@@ -15,7 +15,7 @@ import { ChatAssistant } from './components/ChatAssistant';
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
   const LazyComponent = lazy(importFn);
-  return (props: any) => (
+  return (props: unknown) => (
     <Suspense fallback={fallback || <LoadingSpinner />}>
       <LazyComponent {...props} />
     </Suspense>
@@ -77,7 +77,7 @@ const Support = createLazyComponent(() => import('./pages/Support'));
 const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
 const ComprehensivePricing = createLazyComponent(() => import('./pages/ComprehensivePricing'));
 
-function App() {
+function App(): void {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
   return (

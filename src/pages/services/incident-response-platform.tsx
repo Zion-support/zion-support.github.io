@@ -23,7 +23,7 @@ import { Shield,
   MapPin
  } from 'lucide-react.ts';
 
-export default function IncidentResponsePlatform(...args: any[]): any {
+export default function IncidentResponsePlatform(...args: unknown[]): unknown {
   const features = [
     {
       icon: AlertTriangle,
@@ -194,7 +194,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: unknowngrid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
@@ -238,7 +238,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 gap-8">
+          <div className="grid md: unknowngrid-cols-2 gap-8">
             {capabilities.map((capability, index)  => (
               <motion.div
                 key={capability.category}
@@ -281,7 +281,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 gap-8">
+          <div className="grid md: unknowngrid-cols-2 gap-8">
             {technologies.map((tech, index)  => (
               <motion.div
                 key={tech.name}
@@ -319,7 +319,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: unknowngrid-cols-2 lg:grid-cols-4 gap-8">
             {responseMetrics.map((metric, index)  => (
               <motion.div
                 key={metric.metric}

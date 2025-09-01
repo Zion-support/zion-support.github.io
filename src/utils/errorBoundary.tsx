@@ -45,7 +45,7 @@ class ErrorBoundary extends Component<Props, State> {
     this.logError(error, errorInfo);
   }
 
-  logError = (error: anyError, errorInfo: ErrorInfo)  => {
+  logError = (error: unknownError, errorInfo: ErrorInfo)  => {
     // Log to console for development
     if (process.env.NODE_ENV === 'development') {
       console.group('Error Boundary Error');

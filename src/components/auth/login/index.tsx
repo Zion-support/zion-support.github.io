@@ -1,4 +1,4 @@
-import { LoginForm } from "./LoginForm";
+import { LoginForm } from "./LoginForm.jsx";
 
 export function LoginContent(...args[]):  {
   return (

@@ -24,7 +24,7 @@ import { PenTool,
  } from 'lucide-react.ts';
 import { SEO  } from '@/components/SEO';
 
-export default function AIContentCreation(...args: any[]): any {
+export default function AIContentCreation(...args: unknown[]): unknown {
   const features = [
     {
       icon: Brain,
@@ -162,7 +162,7 @@ export default function AIContentCreation(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: unknowngrid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
@@ -200,7 +200,7 @@ export default function AIContentCreation(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-2 gap-8">
+          <div className="grid md: unknowngrid-cols-2 gap-8">
             {services.map((service, index)  => (
               <motion.div
                 key={service.title}
@@ -245,7 +245,7 @@ export default function AIContentCreation(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md: unknowngrid-cols-2 lg:grid-cols-4 gap-6">
             {technologies.map((tech, index)  => (
               <motion.div
                 key={tech}

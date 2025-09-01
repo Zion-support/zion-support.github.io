@@ -26,7 +26,7 @@ import { Rocket,
   MapPin
  } from 'lucide-react.ts';
 
-export default function SpaceTechnology(...args: any[]): any {
+export default function SpaceTechnology(...args: unknown[]): unknown {
   const features = [
     {
       icon: Satellite,
@@ -186,7 +186,7 @@ export default function SpaceTechnology(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: unknowngrid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
@@ -230,7 +230,7 @@ export default function SpaceTechnology(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 gap-8">
+          <div className="grid md: unknowngrid-cols-2 gap-8">
             {applications.map((app, index)  => (
               <motion.div
                 key={app.category}
@@ -273,7 +273,7 @@ export default function SpaceTechnology(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 gap-8">
+          <div className="grid md: unknowngrid-cols-2 gap-8">
             {technologies.map((tech, index)  => (
               <motion.div
                 key={tech.name}
