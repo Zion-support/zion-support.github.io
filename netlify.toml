@@ -285,9 +285,13 @@ schedule = "*/2 * * * *" # every 2 minutes
   schedule = "0 3 * * *" # daily at 03:00 UTC
 
 [[scheduled.functions]]
-  name = "orphan-pages-runner"
-  schedule = "13 */6 * * *" # every 6 hours at minute 13
+  name = "orphan-page-audit-runner"
+  schedule = "17 */6 * * *"
 
 [[scheduled.functions]]
-  name = "asset-size-report"
-  schedule = "17 */6 * * *" # every 6 hours at minute 17
+  name = "meta-og-enhancer-runner"
+  schedule = "0 */12 * * *"
+
+[[scheduled.functions]]
+  name = "rss-feed-generator"
+  schedule = "0 * * * *"
