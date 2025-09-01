@@ -1,41 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('component-size-report function triggered');
     
-    // Component size reporting simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the component size report automation
+    const result = execSync('node automation/component-size-report.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('component-size-report completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Component size report executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'component-size-report',
-        source: event.source || 'unknown',
-        report: {
-          status: 'generated',
-          components: 0,
-          totalSize: '0KB',
-          lastReport: new Date().toISOString()
-        }
+        success: true,
+        message: 'Component size report completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in component-size-report:', error);
+    console.error('component-size-report error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'component-size-report'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

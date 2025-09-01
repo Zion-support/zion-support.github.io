@@ -1,41 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('stale-content-auditor-runner function triggered');
     
-    // Stale content auditing simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the stale content auditor automation
+    const result = execSync('node scripts/stale.js', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('stale-content-auditor-runner completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Stale content auditor runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'stale-content-auditor-runner',
-        source: event.source || 'unknown',
-        audit: {
-          status: 'active',
-          contentAudited: 0,
-          staleFound: 0,
-          lastAudit: new Date().toISOString()
-        }
+        success: true,
+        message: 'Stale content auditor runner completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in stale-content-auditor-runner:', error);
+    console.error('stale-content-auditor-runner error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'stale-content-auditor-runner'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

@@ -1,40 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('continuous-orchestrator function triggered');
     
-    // Continuous orchestration simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the continuous orchestrator automation
+    const result = execSync('node automation/continuous-monitoring-system.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('continuous-orchestrator completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Continuous orchestrator executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'continuous-orchestrator',
-        source: event.source || 'unknown',
-        orchestration: {
-          status: 'continuous',
-          services: 0,
-          lastOrchestration: new Date().toISOString()
-        }
+        success: true,
+        message: 'Continuous orchestrator completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in continuous-orchestrator:', error);
+    console.error('continuous-orchestrator error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'continuous-orchestrator'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

@@ -1,40 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('ultrafast-orchestrator function triggered');
     
-    // Ultrafast orchestration simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the ultrafast orchestrator automation
+    const result = execSync('node automation/ultra-fast-service-generator.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('ultrafast-orchestrator completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Ultrafast orchestrator executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'ultrafast-orchestrator',
-        source: event.source || 'unknown',
-        orchestration: {
-          status: 'ultrafast',
-          services: 0,
-          lastOrchestration: new Date().toISOString()
-        }
+        success: true,
+        message: 'Ultrafast orchestrator completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in ultrafast-orchestrator:', error);
+    console.error('ultrafast-orchestrator error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'ultrafast-orchestrator'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

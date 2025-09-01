@@ -1,41 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('dead-code-report function triggered');
     
-    // Dead code reporting simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the dead code report automation
+    const result = execSync('node automation/dead-code-scanner.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('dead-code-report completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Dead code report executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'dead-code-report',
-        source: event.source || 'unknown',
-        report: {
-          status: 'generated',
-          filesScanned: 0,
-          deadCodeFound: 0,
-          lastReport: new Date().toISOString()
-        }
+        success: true,
+        message: 'Dead code report completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in dead-code-report:', error);
+    console.error('dead-code-report error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'dead-code-report'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

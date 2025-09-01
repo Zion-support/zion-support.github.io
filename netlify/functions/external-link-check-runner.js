@@ -1,41 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('external-link-check-runner function triggered');
     
-    // External link checking simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the external link check automation
+    const result = execSync('node automation/external-link-check.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('external-link-check-runner completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'External link check runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'external-link-check-runner',
-        source: event.source || 'unknown',
-        checking: {
-          status: 'active',
-          linksChecked: 0,
-          brokenLinks: 0,
-          lastCheck: new Date().toISOString()
-        }
+        success: true,
+        message: 'External link check runner completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in external-link-check-runner:', error);
+    console.error('external-link-check-runner error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'external-link-check-runner'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

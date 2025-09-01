@@ -1,40 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('auto-scheduler function triggered');
     
-    // Auto-scheduling simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the auto scheduler automation
+    const result = execSync('node automation/auto-scheduler.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('auto-scheduler completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Auto-scheduler executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'auto-scheduler',
-        source: event.source || 'unknown',
-        scheduling: {
-          status: 'active',
-          tasksScheduled: 0,
-          lastSchedule: new Date().toISOString()
-        }
+        success: true,
+        message: 'Auto scheduler completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in auto-scheduler:', error);
+    console.error('auto-scheduler error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'auto-scheduler'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

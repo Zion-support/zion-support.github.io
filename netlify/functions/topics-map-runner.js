@@ -1,40 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('topics-map-runner function triggered');
     
-    // Topics mapping simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the topics map automation
+    const result = execSync('node automation/topics-map.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('topics-map-runner completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Topics map runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'topics-map-runner',
-        source: event.source || 'unknown',
-        mapping: {
-          status: 'active',
-          topics: 0,
-          lastMap: new Date().toISOString()
-        }
+        success: true,
+        message: 'Topics map runner completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in topics-map-runner:', error);
+    console.error('topics-map-runner error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'topics-map-runner'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

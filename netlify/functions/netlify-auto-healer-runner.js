@@ -1,40 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('netlify-auto-healer-runner function triggered');
     
-    // Netlify auto-healing simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the netlify auto healer automation
+    const result = execSync('node automation/netlify-auto-healer.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('netlify-auto-healer-runner completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Netlify auto-healer runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'netlify-auto-healer-runner',
-        source: event.source || 'unknown',
-        healing: {
-          status: 'active',
-          issuesHealed: 0,
-          lastHeal: new Date().toISOString()
-        }
+        success: true,
+        message: 'Netlify auto healer runner completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in netlify-auto-healer-runner:', error);
+    console.error('netlify-auto-healer-runner error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'netlify-auto-healer-runner'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

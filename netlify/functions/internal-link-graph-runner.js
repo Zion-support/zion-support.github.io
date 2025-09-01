@@ -1,41 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('internal-link-graph-runner function triggered');
     
-    // Internal link graph simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the internal link graph automation
+    const result = execSync('node automation/site-link-crawler.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('internal-link-graph-runner completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Internal link graph runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'internal-link-graph-runner',
-        source: event.source || 'unknown',
-        graph: {
-          status: 'generating',
-          links: 0,
-          nodes: 0,
-          lastGenerated: new Date().toISOString()
-        }
+        success: true,
+        message: 'Internal link graph runner completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in internal-link-graph-runner:', error);
+    console.error('internal-link-graph-runner error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'internal-link-graph-runner'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

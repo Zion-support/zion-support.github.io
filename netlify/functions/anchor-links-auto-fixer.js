@@ -1,40 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('anchor-links-auto-fixer function triggered');
     
-    // Anchor links auto-fixing simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the anchor links auto fixer automation
+    const result = execSync('node automation/external-link-check.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('anchor-links-auto-fixer completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Anchor links auto-fixer executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'anchor-links-auto-fixer',
-        source: event.source || 'unknown',
-        fixing: {
-          status: 'active',
-          linksProcessed: 0,
-          lastFix: new Date().toISOString()
-        }
+        success: true,
+        message: 'Anchor links auto fixer completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in anchor-links-auto-fixer:', error);
+    console.error('anchor-links-auto-fixer error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'anchor-links-auto-fixer'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

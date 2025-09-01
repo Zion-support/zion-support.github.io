@@ -1,40 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('image-optimizer-runner function triggered');
     
-    // Image optimization simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the image optimizer automation
+    const result = execSync('node automation/optimize-images.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('image-optimizer-runner completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Image optimizer runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'image-optimizer-runner',
-        source: event.source || 'unknown',
-        optimization: {
-          status: 'active',
-          imagesOptimized: 0,
-          lastOptimization: new Date().toISOString()
-        }
+        success: true,
+        message: 'Image optimizer runner completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in image-optimizer-runner:', error);
+    console.error('image-optimizer-runner error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'image-optimizer-runner'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

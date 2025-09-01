@@ -1,40 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('autonomous-meta-orchestrator function triggered');
     
-    // Autonomous meta-orchestration simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the autonomous meta orchestrator automation
+    const result = execSync('node automation/autonomous-meta-orchestrator.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('autonomous-meta-orchestrator completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Autonomous meta-orchestrator executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'autonomous-meta-orchestrator',
-        source: event.source || 'unknown',
-        orchestration: {
-          status: 'autonomous',
-          mode: 'meta',
-          lastOrchestration: new Date().toISOString()
-        }
+        success: true,
+        message: 'Autonomous meta orchestrator completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in autonomous-meta-orchestrator:', error);
+    console.error('autonomous-meta-orchestrator error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'autonomous-meta-orchestrator'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

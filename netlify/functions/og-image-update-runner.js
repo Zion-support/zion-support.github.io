@@ -1,40 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('og-image-update-runner function triggered');
     
-    // OG image update simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the OG image update automation
+    const result = execSync('node automation/og-image-generator.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('og-image-update-runner completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'OG image update runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'og-image-update-runner',
-        source: event.source || 'unknown',
-        update: {
-          status: 'active',
-          imagesUpdated: 0,
-          lastUpdate: new Date().toISOString()
-        }
+        success: true,
+        message: 'OG image update runner completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in og-image-update-runner:', error);
+    console.error('og-image-update-runner error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'og-image-update-runner'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

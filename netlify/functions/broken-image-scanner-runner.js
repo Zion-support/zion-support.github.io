@@ -1,40 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('broken-image-scanner-runner function triggered');
     
-    // Broken image scanner runner simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the broken image scanner automation
+    const result = execSync('node automation/broken-image-scanner.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('broken-image-scanner-runner completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Broken image scanner runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'broken-image-scanner-runner',
-        source: event.source || 'unknown',
-        runner: {
-          status: 'active',
-          scannerStatus: 'running',
-          lastRun: new Date().toISOString()
-        }
+        success: true,
+        message: 'Broken image scanner runner completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in broken-image-scanner-runner:', error);
+    console.error('broken-image-scanner-runner error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'broken-image-scanner-runner'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

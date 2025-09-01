@@ -1,41 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('marketing-and-features-promo function triggered');
     
-    // Marketing and features promotion simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the marketing automation
+    const result = execSync('node automation/marketing-daily.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('marketing-and-features-promo completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Marketing and features promo executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'marketing-and-features-promo',
-        source: event.source || 'unknown',
-        promotion: {
-          status: 'active',
-          marketing: 0,
-          features: 0,
-          lastPromo: new Date().toISOString()
-        }
+        success: true,
+        message: 'Marketing and features promo completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in marketing-and-features-promo:', error);
+    console.error('marketing-and-features-promo error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'marketing-and-features-promo'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

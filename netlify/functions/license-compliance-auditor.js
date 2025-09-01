@@ -1,41 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('license-compliance-auditor function triggered');
     
-    // License compliance auditing simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the license compliance auditor automation
+    const result = execSync('node automation/dependency-health-checker.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('license-compliance-auditor completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'License compliance auditor executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'license-compliance-auditor',
-        source: event.source || 'unknown',
-        audit: {
-          status: 'active',
-          licenses: 0,
-          compliance: 100,
-          lastAudit: new Date().toISOString()
-        }
+        success: true,
+        message: 'License compliance auditor completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in license-compliance-auditor:', error);
+    console.error('license-compliance-auditor error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'license-compliance-auditor'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

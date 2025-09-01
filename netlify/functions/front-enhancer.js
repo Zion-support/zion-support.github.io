@@ -1,40 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('front-enhancer function triggered');
     
-    // Front enhancement simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the front enhancer automation
+    const result = execSync('node automation/front-futurizer.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('front-enhancer completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Front enhancer executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'front-enhancer',
-        source: event.source || 'unknown',
-        enhancement: {
-          status: 'active',
-          enhancements: 0,
-          lastEnhancement: new Date().toISOString()
-        }
+        success: true,
+        message: 'Front enhancer completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in front-enhancer:', error);
+    console.error('front-enhancer error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'front-enhancer'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

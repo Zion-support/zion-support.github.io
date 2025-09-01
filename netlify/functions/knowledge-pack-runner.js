@@ -1,40 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('knowledge-pack-runner function triggered');
     
-    // Knowledge pack simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the knowledge pack automation
+    const result = execSync('node automation/repo-knowledge-graph.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('knowledge-pack-runner completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Knowledge pack runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'knowledge-pack-runner',
-        source: event.source || 'unknown',
-        knowledge: {
-          status: 'active',
-          packs: 0,
-          lastPack: new Date().toISOString()
-        }
+        success: true,
+        message: 'Knowledge pack runner completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in knowledge-pack-runner:', error);
+    console.error('knowledge-pack-runner error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'knowledge-pack-runner'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

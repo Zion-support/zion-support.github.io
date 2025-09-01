@@ -1,40 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('topic-cluster-builder-runner function triggered');
     
-    // Topic cluster building simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the topic cluster builder automation
+    const result = execSync('node automation/topic-cluster-builder.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('topic-cluster-builder-runner completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Topic cluster builder runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'topic-cluster-builder-runner',
-        source: event.source || 'unknown',
-        building: {
-          status: 'active',
-          clusters: 0,
-          lastBuilt: new Date().toISOString()
-        }
+        success: true,
+        message: 'Topic cluster builder runner completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in topic-cluster-builder-runner:', error);
+    console.error('topic-cluster-builder-runner error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'topic-cluster-builder-runner'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

@@ -1,41 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('seo-audit-runner function triggered');
     
-    // SEO audit simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the SEO audit automation
+    const result = execSync('node automation/seo-audit.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('seo-audit-runner completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'SEO audit runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'seo-audit-runner',
-        source: event.source || 'unknown',
-        audit: {
-          status: 'active',
-          pagesAudited: 0,
-          issuesFound: 0,
-          lastAudit: new Date().toISOString()
-        }
+        success: true,
+        message: 'SEO audit runner completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in seo-audit-runner:', error);
+    console.error('seo-audit-runner error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'seo-audit-runner'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

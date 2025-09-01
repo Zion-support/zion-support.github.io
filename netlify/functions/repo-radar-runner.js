@@ -1,41 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('repo-radar-runner function triggered');
     
-    // Repository radar simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the repo radar automation
+    const result = execSync('node automation/repo-radar-metrics.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('repo-radar-runner completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Repository radar runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'repo-radar-runner',
-        source: event.source || 'unknown',
-        radar: {
-          status: 'scanning',
-          repositories: 0,
-          signals: 0,
-          lastScan: new Date().toISOString()
-        }
+        success: true,
+        message: 'Repo radar runner completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in repo-radar-runner:', error);
+    console.error('repo-radar-runner error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'repo-radar-runner'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

@@ -1,41 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('canonical-auditor function triggered');
     
-    // Canonical auditing simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the canonical auditor automation
+    const result = execSync('node automation/seo-audit.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('canonical-auditor completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Canonical auditor executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'canonical-auditor',
-        source: event.source || 'unknown',
-        auditing: {
-          status: 'active',
-          pagesAudited: 0,
-          issuesFound: 0,
-          lastAudit: new Date().toISOString()
-        }
+        success: true,
+        message: 'Canonical auditor completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in canonical-auditor:', error);
+    console.error('canonical-auditor error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'canonical-auditor'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

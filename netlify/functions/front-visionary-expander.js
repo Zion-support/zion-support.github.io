@@ -1,40 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('front-visionary-expander function triggered');
     
-    // Front visionary expansion simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the front visionary expander automation
+    const result = execSync('node automation/front-visionary-expander.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('front-visionary-expander completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Front visionary expander executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'front-visionary-expander',
-        source: event.source || 'unknown',
-        expansion: {
-          status: 'visionary',
-          expansions: 0,
-          lastExpansion: new Date().toISOString()
-        }
+        success: true,
+        message: 'Front visionary expander completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in front-visionary-expander:', error);
+    console.error('front-visionary-expander error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'front-visionary-expander'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

@@ -1,41 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('robots-auditor function triggered');
     
-    // Robots auditing simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the robots auditor automation
+    const result = execSync('node automation/seo-audit.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('robots-auditor completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Robots auditor executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'robots-auditor',
-        source: event.source || 'unknown',
-        audit: {
-          status: 'active',
-          robotsFiles: 0,
-          issuesFound: 0,
-          lastAudit: new Date().toISOString()
-        }
+        success: true,
+        message: 'Robots auditor completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in robots-auditor:', error);
+    console.error('robots-auditor error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'robots-auditor'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

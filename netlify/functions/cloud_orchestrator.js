@@ -1,40 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('cloud_orchestrator function triggered');
     
-    // Cloud orchestration simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the cloud orchestrator automation
+    const result = execSync('node automation/cloud-orchestrator-plus.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 60000
+    });
+    
+    console.log('cloud_orchestrator completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Cloud orchestrator executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'cloud_orchestrator',
-        source: event.source || 'unknown',
-        orchestration: {
-          status: 'active',
-          cloudServices: 0,
-          lastOrchestration: new Date().toISOString()
-        }
+        success: true,
+        message: 'Cloud orchestrator completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in cloud_orchestrator:', error);
+    console.error('cloud_orchestrator error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'cloud_orchestrator'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

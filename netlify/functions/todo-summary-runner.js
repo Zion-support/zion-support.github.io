@@ -1,40 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('todo-summary-runner function triggered');
     
-    // Todo summary simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the todo summary automation
+    const result = execSync('node automation/todo-scanner.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('todo-summary-runner completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Todo summary runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'todo-summary-runner',
-        source: event.source || 'unknown',
-        summary: {
-          status: 'active',
-          summaries: 0,
-          lastSummary: new Date().toISOString()
-        }
+        success: true,
+        message: 'Todo summary runner completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in todo-summary-runner:', error);
+    console.error('todo-summary-runner error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'todo-summary-runner'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

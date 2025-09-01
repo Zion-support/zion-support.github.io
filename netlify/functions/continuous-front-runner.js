@@ -1,40 +1,39 @@
-exports.handler = async function(event, context, callback) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('continuous-front-runner function triggered');
     
-    // Continuous front running simulation
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the continuous front runner automation
+    const result = execSync('node automation/frontend-content-display-automator.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('continuous-front-runner completed successfully:', result);
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Continuous front runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'continuous-front-runner',
-        source: event.source || 'unknown',
-        running: {
-          status: 'continuous',
-          cycles: 0,
-          lastCycle: new Date().toISOString()
-        }
+        success: true,
+        message: 'Continuous front runner completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in continuous-front-runner:', error);
+    console.error('continuous-front-runner error:', error);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'continuous-front-runner'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }
