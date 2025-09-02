@@ -226,7 +226,8 @@ const QuantumTechnology = () => {
             Ready for the Quantum Future?"
           </h2>""
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how quantum technology can solve your most
+            Let
+  's discuss how quantum technology can solve your most
             complex computational challenges."
           </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""
@@ -242,4 +243,5 @@ const QuantumTechnology = () => {
   )};
 :pages.disabled/pages/services/QuantumTechnology.tsx
 '"
-export default QuantumTechnology}}}'"'"
+export default QuantumTechnology}}}
+  '"'"

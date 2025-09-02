@@ -6,7 +6,11 @@ export interface PageInfo {
 :pages.disabled/utils/linkChecker.tsxexport interface LinkInfo {}
 export interface PageInfo {}
 url: string;
-  status: 'working' | 'broken' | 'missing' | 'external';
+  status:
+  'working' |
+  'broken' |
+  'missing' |
+  'external';
   page: string;
   anchor?: string;
   error?: string}
@@ -20,9 +24,8 @@ url: string;
   private visitedUrls: Set < string> = new Set () ;
   private brokenLinks: LinkInfo[] = [];
   private missingPages: string[] = [];
-:pages.disabled/utils/linkChecker.tsx
-'
-  constructor (baseUrl: string = 'https://ziontechgroup.com') {
+:pages.disabled/utils/linkChecker.tsx,
+  constructor (baseUrl: string = 'https://ziontechgroup.com) {
 
     this.baseUrl = baseUrl}
 
@@ -40,13 +43,17 @@ url: string;
 
     try {
 '
-      if (url.startsWith ('http') ) {
+      if (url.startsWith (
+  'http') ) {
 
-        return url}'
-      if (url.startsWith ('/') ) {
+        return url}
+  '
+      if (url.startsWith ('/
+  ') ) {
 
         return `${this.baseUrl}${url}`}'
-      if (url.startsWith ('#') ) {
+      if (url.startsWith (
+  '#') ) {
 `
         return `${this.baseUrl}${basePage}${url}`}`
       return `${this.baseUrl}${basePage}/${url}`} catch {
@@ -63,29 +70,35 @@ url: string;
 :pages.disabled/utils/linkChecker.tsx
     while ( (match = hrefRegex.exec (pageContent) ) !== null) {
 
-      if (url &&'
-        !url.startsWith ('javascript:') &&'
-        !url.startsWith ('mailto:') &&'
-        !url.startsWith ('tel:') ) {
+      if (url &&,
+  !url.startsWith ('javascript: ') &&'
+        !url.startsWith (
+  'mailto:') &&
+  '
+        !url.startsWith ('tel:) ) {
 
         links.push ({
 
           url: normalizedUrl,'
-          status: 'working',
-          page: pagePath,'
-          anchor: url.startsWith ('#') ? url : undefined}) }
+          status:
+  'working',
+          page: pagePath,
+,
+  anchor: url.startsWith ('#) ? url : undefined}) }
     }
 
     // Extract src attributes from img, script, and link tags
     
-    while ( (match = srcRegex.exec (pageContent) ) !== null) {
-'
-      if (url && !url.startsWith ('data:') && !url.startsWith ('blob:') ) {
+    while ( (match = srcRegex.exec (pageContent) ) !== null) {,
+  if (url && !url.startsWith (
+  'data: ') && !url.startsWith (
+  'blob:) ) {
 
         links.push ({
 
-          url: normalizedUrl,'
-          status: 'working',
+          url: normalizedUrl,
+,
+  status: 'working,
           page: pagePath}) }}
 
     return links}
@@ -116,12 +129,15 @@ url: string;
 
         if (exists) {
 '
-          link.status = 'working'} else {
-'
-          link.status = 'missing';
+          link.status =
+  'working'} else {
+  '
+          link.status = 'missing
+  ';
           this.missingPages.push (link.url) }
       } else {
-'link.status = 'external'}
+'link.status =
+  'external'}
 
       checkedLinks.push (link) }
 
@@ -134,9 +150,8 @@ url: string;
       exists: true}}
 
   // Extract page title
-  private extractPageTitle (content: string) : string {
-'
-    return titleMatch ? titleMatch[1].trim () : 'Untitled'}
+  private extractPageTitle (content: string) : string {,
+  return titleMatch ? titleMatch[1].trim (): 'Untitled}
 
   // Get analysis summary
   getSummary() {

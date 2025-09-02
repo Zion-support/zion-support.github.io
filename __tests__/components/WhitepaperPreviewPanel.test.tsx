@@ -1,10 +1,15 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel';
+import React from
+  'react';
+import { render, screen } from
+  '@testing-library/react';
+import
+  '@testing-library/jest-dom';
+import WhitepaperPreviewPanel from
+  '@/components/WhitepaperPreviewPanel';
 
 // Mock react-markdown
-jest.mock('react-markdown', () => (props: { children: React.ReactNode }) => (
+jest.mock(
+  'react-markdown', () => (props: { children: React.ReactNode }) => (
   <div data-testid="mock-markdown">{props.children}</div>
 ));
 
@@ -16,7 +21,8 @@ interface MockPieProps {
 }
 
 // Mock recharts
-jest.mock('recharts', () => {
+jest.mock(
+  'recharts', () => {
   const MockResponsiveContainer = ({
     children,
   }: {
@@ -44,22 +50,30 @@ jest.mock('recharts', () => {
 });
 
 const mockSections = [
-  { id: '1', title: 'Introduction', content: 'This is the intro.' },
-  { id: '2', title: 'Tokenomics', content: 'Details about tokenomics.' },
+  { id:,
+  1', title: 'Introduction, content:,
+  This is the intro.' },
+  { id: '2, title:,
+  Tokenomics', content: 'Details about tokenomics. },
   {
-    id: '3',
-    title: 'Token Distribution',
-    content: 'How tokens are distributed.',
+    id:,
+  3',
+    title: 'Token Distribution,
+    content:,
+  How tokens are distributed.',
   },
 ];
 
 const mockDistributionData = [
-  { name: 'Team', value: 20 },
-  { name: 'Marketing', value: 30 },
+  { name: 'Team, value: 20 },
+  { name:
+  'Marketing', value: 30 },
 ];
 
-describe('WhitepaperPreviewPanel', () => {
-  test('renders token name and supply if provided', () => {
+describe(
+  'WhitepaperPreviewPanel', () => {
+  test(
+  'renders token name and supply if provided', () => {
     render(
       <WhitepaperPreviewPanel
         sections={[]}
@@ -72,7 +86,8 @@ describe('WhitepaperPreviewPanel', () => {
     expect(screen.getByText(/Total Supply: 1000000/i)).toBeInTheDocument();
   });
 
-  test('renders all sections with titles and content using react-markdown', () => {
+  test(
+  'renders all sections with titles and content using react-markdown', () => {
     render(
       <WhitepaperPreviewPanel
         sections={mockSections}
@@ -81,28 +96,33 @@ describe('WhitepaperPreviewPanel', () => {
     );
     mockSections.forEach(section => {
       // Check if title is rendered (prepended with ##)
-      expect(screen.getByTestId('mock-markdown')).toHaveTextContent(
+      expect(screen.getByTestId(
+  'mock-markdown')).toHaveTextContent(
         `## ${section.title}`
       );
       // Check if content is rendered
-      expect(screen.getByTestId('mock-markdown')).toHaveTextContent(
+      expect(screen.getByTestId(
+  'mock-markdown')).toHaveTextContent(
         section.content
       );
     });
     // Ensure react-markdown was used multiple times (for title + content per section)
     expect(
-      screen.getAllByTestId('mock-markdown').length
+      screen.getAllByTestId(
+  'mock-markdown').length
     ).toBeGreaterThanOrEqual(mockSections.length * 2);
   });
 
-  test('renders "no sections" message if sections array is empty', () => {
+  test(
+  'renders "no sections" message if sections array is empty', () => {
     render(<WhitepaperPreviewPanel sections={[]} distributionChartData={[]} />);
     expect(
       screen.getByText(/Whitepaper preview will appear here/i)
     ).toBeInTheDocument();
   });
 
-  test('renders distribution chart in "Token Distribution" section if data is provided', () => {
+  test(
+  'renders distribution chart in "Token Distribution" section if data is provided', () => {
     render(
       <WhitepaperPreviewPanel
         sections={mockSections} // includes "Token Distribution"
@@ -111,27 +131,38 @@ describe('WhitepaperPreviewPanel', () => {
     );
     // Check for chart components within the "Token Distribution" section
     const distributionSection = mockSections.find(s =>
-      s.title.toLowerCase().includes('token distribution')
+      s.title.toLowerCase().includes(
+  'token distribution')
     );
     expect(distributionSection).toBeDefined();
 
     // Verify chart components are rendered
-    expect(screen.getByTestId('mock-responsive-container')).toBeInTheDocument();
-    expect(screen.getByTestId('mock-pie-chart')).toBeInTheDocument();
-    const pieElement = screen.getByTestId('mock-pie');
+    expect(screen.getByTestId(
+  'mock-responsive-container')).toBeInTheDocument();
+    expect(screen.getByTestId(
+  'mock-pie-chart')).toBeInTheDocument();
+    const pieElement = screen.getByTestId(
+  'mock-pie');
     expect(pieElement).toBeInTheDocument();
-    expect(JSON.parse(pieElement.getAttribute('data-data') || '{}')).toEqual(
+    expect(JSON.parse(pieElement.getAttribute(
+  'data-data') ||
+  '{}')).toEqual(
       mockDistributionData
     );
-    expect(screen.getAllByTestId('mock-cell').length).toBe(
+    expect(screen.getAllByTestId(
+  'mock-cell').length).toBe(
       mockDistributionData.length
     );
-    expect(screen.getByTestId('mock-tooltip')).toBeInTheDocument();
-    expect(screen.getByTestId('mock-legend')).toBeInTheDocument();
-    expect(screen.getByText('Distribution Chart')).toBeInTheDocument();
+    expect(screen.getByTestId(
+  'mock-tooltip')).toBeInTheDocument();
+    expect(screen.getByTestId(
+  'mock-legend')).toBeInTheDocument();
+    expect(screen.getByText(
+  'Distribution Chart')).toBeInTheDocument();
   });
 
-  test('does not render distribution chart if data is empty', () => {
+  test(
+  'does not render distribution chart if data is empty', () => {
     render(
       <WhitepaperPreviewPanel
         sections={mockSections}
@@ -139,14 +170,18 @@ describe('WhitepaperPreviewPanel', () => {
       />
     );
     expect(
-      screen.queryByTestId('mock-responsive-container')
+      screen.queryByTestId(
+  'mock-responsive-container')
     ).not.toBeInTheDocument();
-    expect(screen.queryByText('Distribution Chart')).not.toBeInTheDocument();
+    expect(screen.queryByText(
+  'Distribution Chart')).not.toBeInTheDocument();
   });
 
-  test('does not render distribution chart if "Token Distribution" section is missing', () => {
+  test(
+  'does not render distribution chart if "Token Distribution" section is missing', () => {
     const sectionsWithoutDistribution = mockSections.filter(
-      s => !s.title.toLowerCase().includes('token distribution')
+      s => !s.title.toLowerCase().includes(
+  'token distribution')
     );
     render(
       <WhitepaperPreviewPanel
@@ -155,7 +190,8 @@ describe('WhitepaperPreviewPanel', () => {
       />
     );
     expect(
-      screen.queryByTestId('mock-responsive-container')
+      screen.queryByTestId(
+  'mock-responsive-container')
     ).not.toBeInTheDocument();
   });
 });
