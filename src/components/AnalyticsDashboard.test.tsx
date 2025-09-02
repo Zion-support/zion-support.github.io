@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';"
-import AnalyticsDashboard from './AnalyticsDashboard';"
+import { render, screen } from '@testing-library/react
+import AnalyticsDashboard from './AnalyticsDashboard
 describe('AnalyticsDashboard', () => {"
   it('renders without crashing', () => {"
     render(<AnalyticsDashboard /" >)"

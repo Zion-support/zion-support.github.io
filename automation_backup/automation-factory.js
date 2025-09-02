@@ -12,11 +12,9 @@ class AutomationFactory {
     this.scripts = new Map();
     this.runningScripts = new Map();
     this.logFile = path.join(__dirname,
-  'logs',
-  'automation-factory.log');
+  'logs,automation-factory.log');
     this.statusFile = path.join(__dirname,
-  'logs',
-  'automation-status.json');
+  'logs,automation-status.json');
     this.ensureLogDirectory();
     this.loadExistingScripts();
     this.loadStatus()}
@@ -96,12 +94,10 @@ class CodeQualityMonitor {
       lastUpdated: new Date().toISOString()}
     this.logFile = path.join(__dirname,
 ,
-  logs',
-  'code-quality.log')}
+  logs,code-quality.log')}
 }
     this.logFile = path.join(__dirname,
-  'logs',
-  'code-quality.log');
+  'logs,code-quality.log');
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage)}
   log(message) {
@@ -182,8 +178,7 @@ class CodeQualityMonitor {
     return files}
   saveMetrics() {
     const metricsFile = path.join(__dirname,
-  'logs',
-  'code-quality-metrics.json');
+  'logs,code-quality-metrics.json');
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2))}
 }
 const monitor = new CodeQualityMonitor();
@@ -222,8 +217,7 @@ class PerformanceOptimizer {
     this.optimizations = [];
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);this.logFile = path.join(__dirname,
-  'logs',
-  'performance-optimizer.log')}
+  'logs,performance-optimizer.log')}
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = \`[\${timestamp}] \${message}\\n\`;
@@ -264,8 +258,7 @@ class PerformanceOptimizer {
         gzippedSize:;
   '650KB',
         recommendations[
-  'Consider code splitting',
-  'Remove unused dependencies']}} catch (error) {
+  'Consider code splitting,Remove unused dependencies']}} catch (error) {
       return { error: error.message }}
   }
   optimizeImages() {
@@ -296,13 +289,12 @@ class PerformanceOptimizer {
     return [;
   'example-unused-package']}
   generateRecommendations() {
-    return [';Implement code splitting for better performance',';Optimize images using WebP format',';Remove unused dependencies',';Enable gzip compression',';Use React.memo for expensive components';
+    return [';Implement code splitting for better performance,;Optimize images using WebP format,;Remove unused dependencies,;Enable gzip compression,;Use React.memo for expensive components';
     // // // // // // // // console.log(
   'Performance report:', report)}]}
   saveReport(report) {
     const reportFile = path.join(__dirname,
-  'logs',
-  'performance-report.json');
+  'logs,performance-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))}
 }
 const optimizer = new PerformanceOptimizer();

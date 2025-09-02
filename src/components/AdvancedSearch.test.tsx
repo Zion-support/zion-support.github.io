@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';"
-import AdvancedSearch from './AdvancedSearch';"
+import { render, screen } from '@testing-library/react
+import AdvancedSearch from './AdvancedSearch
 describe('AdvancedSearch', () => {"
   it('renders without crashing', () => {"
     render(<AdvancedSearch /" >)"

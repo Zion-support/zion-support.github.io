@@ -1,7 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import index from './index'
-describe('index', () => {
+import index  from './index';describe('index', () => {
   it('renders without crashing', () => {
     render(<index />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()

@@ -131,11 +131,7 @@ const AIAutonomousHRPlatform: React.FC = () => {
                   period: '/month',
                   description: 'Perfect for small teams',
                   features: [;
-                    'Up to 50 employees',
-                    'Basic AI recruitment',
-                    'Performance tracking',
-                    'Standard analytics',
-                    'Email support';
+                    'Up to 50 employees,Basic AI recruitment,Performance tracking,Standard analytics,Email support';
                   ]},
                 {
                   name: 'Professional',
@@ -143,12 +139,7 @@ const AIAutonomousHRPlatform: React.FC = () => {
                   period: '/month',
                   description: 'Ideal for growing companies',
                   features: [;
-                    'Up to 500 employees',
-                    'Advanced AI features',
-                    'Employee engagement',
-                    'Workforce planning',
-                    'Priority support',
-                    'Custom integrations';
+                    'Up to 500 employees,Advanced AI features,Employee engagement,Workforce planning,Priority support,Custom integrations';
                   ],
                   popular: true},
                 {
@@ -157,12 +148,7 @@ const AIAutonomousHRPlatform: React.FC = () => {
                   period: '/month',
                   description: 'For large organizations',
                   features: [
-                    'Unlimited employees',
-                    'Full AI capabilities',
-                    'Custom AI models',
-                    'Dedicated support',
-                    'White-label options',
-                    'Advanced reporting'
+                    'Unlimited employees,Full AI capabilities,Custom AI models,Dedicated support,White-label options,Advanced reporting'
                   ]}
               ].map((plan, index) => (
                 <motion.div
@@ -229,12 +215,7 @@ const AIAutonomousHRPlatform: React.FC = () => {
                 <h3 className='text-3xl font-bold text-white mb-6'>Revolutionary Benefits</h3>
                 <div className='space-y-6'>
                   {[;
-                    'Reduce recruitment time by 70% with AI automation',
-                    'Improve employee retention by 45% through predictive analytics',
-                    'Increase hiring quality by 80% with intelligent matching',
-                    'Save 25+ hours per week on manual HR tasks',
-                    'Boost employee satisfaction by 60% with engagement optimization',
-                    'Scale HR operations across unlimited employees efficiently'
+                    'Reduce recruitment time by 70% with AI automation,Improve employee retention by 45% through predictive analytics,Increase hiring quality by 80% with intelligent matching,Save 25+ hours per week on manual HR tasks,Boost employee satisfaction by 60% with engagement optimization,Scale HR operations across unlimited employees efficiently'
                   ].map((benefit, index) => (
                     <div key={index} className='flex items-start'>
                       <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mr-4 mt-1'>

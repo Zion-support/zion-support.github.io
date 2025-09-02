@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import Sitemap from './Sitemap';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import Sitemap from './Sitemap
 describe('Sitemap', () => {"
   it('renders without crashing', () => {
     render(<Sitemap /" >);"

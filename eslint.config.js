@@ -1,25 +1,41 @@
-module.exports = {
-  extends: [
-    'next/core-web-vitals',
-    'eslint:recommended',
-    '@typescript-eslint/recommended'
-  ],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
-  rules: {
-    '@typescript-eslint/no-unused-vars': 'warn',
-    '@typescript-eslint/no-explicit-any': 'warn',
-    'react/no-unescaped-entities': 'off',
-    'react-hooks/exhaustive-deps': 'warn'
+import js from '@eslint/js';
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+
+export default [
+  js.configs.recommended,
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    },
+    plugins: {
+      '@typescript-eslint': typescript
+    },
+    rules: {
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'no-unused-vars': 'off', // Turn off base rule as it can report incorrect errors
+      'no-undef': 'off' // TypeScript handles this
+    }
   },
-  ignorePatterns: [
-    'node_modules/',
-    '.next/',
-    'out/',
-    'build/',
-    'dist/',
-    '*.config.js',
-    '*.config.cjs',
-    '*.config.mjs'
-  ]
-};
+  {
+    ignores: [
+      'node_modules/',
+      '.next/',
+      'out/',
+      'build/',
+      'dist/',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs'
+    ]
+  }
+];

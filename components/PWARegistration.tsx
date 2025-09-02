@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Download, X, Smartphone, Monitor } from 'lucide-react'
-interface BeforeInstallPromptEvent extends Event {
+import { Download, X, Smartphone, Monitor }  from 'lucide-react';interface BeforeInstallPromptEvent extends Event {
   readonly platforms: string[]
   readonly userChoice: Promise<{
     outcome: 'accepted' | 'dismissed'
@@ -66,7 +65,7 @@ const PWARegistration: React.FC = () => {
   const handleDismiss = () => {
     setShowInstallPrompt(false)
 React, { useEffect, useState } from, react'
-import { motion, AnimatePresence  } from 'lucide-react';import { Download, X, Smartphone, Monitor  } from 'lucide-react'';interface BeforeInstallPromptEvent extends Event {
+import { motion, AnimatePresence  } from 'lucide-react';import { Download, X, Smartphone, Monitor  }  from 'lucide-react;interface BeforeInstallPromptEvent extends Event {
   readonly platforms: string[]
   readonly userChoice: Promise<{
     outcome: 'accepted

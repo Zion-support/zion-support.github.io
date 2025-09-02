@@ -8,61 +8,38 @@ export default function Privacy() {
   const lastUpdated = 'January 1, 2024';
 
   const sections = [
-    {
+  {
       title: 'Information We Collect',
       icon: Database,
       content: [
-        'Personal information you provide (name, email, phone number)',
-        'Business information (company name, job title, project details)',
-        'Technical information (IP address, browser type, device information)',
-        'Usage data (pages visited, time spent, interactions with our services)',
-        'Communication records (emails, phone calls, support tickets)'
+        'Personal information you provide (name, email, phone number),Business information (company name, job title, project details),Technical information (IP address, browser type, device information),Usage data (pages visited, time spent, interactions with our services),Communication records (emails, phone calls, support tickets)'
       ]
     },
     {
       title: 'How We Use Your Information',
       icon: Eye,
       content: [
-        'Provide and improve our services',
-        'Communicate with you about projects and services',
-        'Process payments and billing',
-        'Send marketing communications (with your consent)',
-        'Comply with legal obligations',
-        'Protect our rights and prevent fraud'
+        'Provide and improve our services,Communicate with you about projects and services,Process payments and billing,Send marketing communications (with your consent),Comply with legal obligations,Protect our rights and prevent fraud'
       ]
     },
     {
       title: 'Information Sharing',
       icon: Shield,
       content: [
-        'We do not sell your personal information',
-        'We may share information with trusted service providers',
-        'We may disclose information if required by law',
-        'We may share information in case of business transfers',
-        'We may share aggregated, non-personal information'
+        'We do not sell your personal information,We may share information with trusted service providers,We may disclose information if required by law,We may share information in case of business transfers,We may share aggregated, non-personal information'
       ]
     },
     {
       title: 'Data Security',
       icon: Lock,
       content: [
-        'We use industry-standard encryption to protect your data',
-        'Access to personal information is restricted to authorized personnel',
-        'We regularly update our security measures',
-        'We conduct security audits and assessments',
-        'We have incident response procedures in place'
+        'We use industry-standard encryption to protect your data,Access to personal information is restricted to authorized personnel,We regularly update our security measures,We conduct security audits and assessments,We have incident response procedures in place'
       ]
     }
   ];
 
   const rights = [
-    'Access your personal information',
-    'Correct inaccurate information',
-    'Delete your personal information',
-    'Restrict processing of your information',
-    'Data portability',
-    'Object to processing',
-    'Withdraw consent'
+    'Access your personal information,Correct inaccurate information,Delete your personal information,Restrict processing of your information,Data portability,Object to processing,Withdraw consent'
   ];
 
   return (

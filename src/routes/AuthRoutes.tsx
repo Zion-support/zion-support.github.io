@@ -1,9 +1,9 @@
-import { Route, Routes    } from 'react-router-dom';"
+import { Route, Routes    } from 'react-router-dom
 import { Lazy, Settings } from 'lucide-react';
 
 export default function Page() {"
-  import { Suspense, lazy } from 'react';"
-  import { ProtectedRoute } from '../components/ProtectedRoute';"
+  import { Suspense, lazy } from 'react
+  import { ProtectedRoute } from '../components/ProtectedRoute
 import LoadingSpinner from '../components/LoadingSpinner';
 // Lazy load auth pages;"
 const Login = lazy(() => import('../pages/Login'));"

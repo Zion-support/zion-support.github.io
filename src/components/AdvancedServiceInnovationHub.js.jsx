@@ -1,18 +1,18 @@
 import React, { useState, useMemo } from 'react''
-import { motion } from 'framer-motion''
-import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCircle, Cpu, Atom, Satellite, Dna, Shield, Leaf } from 'lucide-react';"
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card'';''
-import { Button } from './ui/button'';''
-import { Badge } from './ui/badge'';''
+import { motion }  from 'framer-motion
+import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCircle, Cpu, Atom, Satellite, Dna, Shield, Leaf } from 'lucide-react
+import { Card, CardContent, CardHeader, CardTitle }  from './ui/card;''
+import { Button }  from './ui/button;''
+import { Badge }  from './ui/badge;''
 import { Input } from './ui/input';
 const AdvancedServiceInnovationHub = () => {}"
 '
 ''
-''';"
-    const [selectedCategory, setSelectedCategory] = useState('all')';'
-    const [selectedImpact, setSelectedImpact] = useState('all')';'
-    const [selectedStatus, setSelectedStatus] = useState('all')';'
-    const [searchTerm, setSearchTerm] = useState('')';'
+''
+    const [selectedCategory, setSelectedCategory] = useState('all')
+    const [selectedImpact, setSelectedImpact] = useState('all')
+    const [selectedStatus, setSelectedStatus] = useState('all')
+    const [searchTerm, setSearchTerm] = useState('')
     const [viewMode, setViewMode] = useState('trends')
     // Mock data - in real app this would come from API
     const innovationTrends = []
@@ -20,91 +20,91 @@ const AdvancedServiceInnovationHub = () => {}"
 '
 ''
 '''
-            id: 'quantum-supremacy','''
-            title: 'Quantum Supremacy & Commercialization','''
-            description: 'The transition from quantum research to practical commercial applications across industries.','''
-            category: 'quantum','''
-            impact: 'High','''
-            timeline: '2025-2030',''
+            id: 'quantum-supremacy,''
+            title: 'Quantum Supremacy & Commercialization,''
+            description: 'The transition from quantum research to practical commercial applications across industries.,''
+            category: 'quantum,''
+            impact: 'High,''
+            timeline: '2025-2030,'
             adoption: 85,'''
-            investment: '$50B+','''
-            keyPlayers['IBM',Google',Microsoft',Startups'],';'
-            technologies['Quantum Computing',Quantum Algorithms',Quantum Software'],';'
+            investment: '$50B+,''
+            keyPlayers['IBM',Google',Microsoft',Startups'],
+            technologies['Quantum Computing',Quantum Algorithms',Quantum Software'],
             status: 'Emerging',
 }, {}"
 '
 ''
 '''
-            id: 'ai-consciousness','''
-            title: 'AI Consciousness & General Intelligence','''
-            description: 'Development of self-aware AI systems with human-like reasoning and consciousness.','''
-            category: 'ai','''
-            impact: 'High','''
-            timeline: '2030-2040',''
+            id: 'ai-consciousness,''
+            title: 'AI Consciousness & General Intelligence,''
+            description: 'Development of self-aware AI systems with human-like reasoning and consciousness.,''
+            category: 'ai,''
+            impact: 'High,''
+            timeline: '2030-2040,'
             adoption: 45,'''
-            investment: '$100B+','''
-            keyPlayers['OpenAI',Anthropic',Research Labs',Universities'],';'
-            technologies['AI Consciousness',General AI',Neural Networks'],';'
+            investment: '$100B+,''
+            keyPlayers['OpenAI',Anthropic',Research Labs',Universities'],
+            technologies['AI Consciousness',General AI',Neural Networks'],
             status: 'Emerging',
 }, {}"
 '
 ''
 '''
-            id: 'space-mining','''
-            title: 'Space Mining & Resource Extraction','''
-            description: 'Commercial extraction of valuable resources from asteroids and celestial bodies.','''
-            category: 'space-tech','''
-            impact: 'High','''
-            timeline: '2030-2040',''
+            id: 'space-mining,''
+            title: 'Space Mining & Resource Extraction,''
+            description: 'Commercial extraction of valuable resources from asteroids and celestial bodies.,''
+            category: 'space-tech,''
+            impact: 'High,''
+            timeline: '2030-2040,'
             adoption: 30,'''
-            investment: '$200B+','''
-            keyPlayers['SpaceX',Blue Origin',Asteroid Mining Companies'],';'
-            technologies['Space Robotics',Resource Processing',Space Logistics'],';'
+            investment: '$200B+,''
+            keyPlayers['SpaceX',Blue Origin',Asteroid Mining Companies'],
+            technologies['Space Robotics',Resource Processing',Space Logistics'],
             status: 'Emerging',
 }, {}"
 '
 ''
 '''
-            id: 'fusion-energy','''
-            title: 'Fusion Energy Commercialization','''
-            description: 'Breakthrough in controlled nuclear fusion for unlimited clean energy.','''
-            category: 'green-tech','''
-            impact: 'High','''
-            timeline: '2030-2040',''
+            id: 'fusion-energy,''
+            title: 'Fusion Energy Commercialization,''
+            description: 'Breakthrough in controlled nuclear fusion for unlimited clean energy.,''
+            category: 'green-tech,''
+            impact: 'High,''
+            timeline: '2030-2040,'
             adoption: 60,'''
-            investment: '$500B+','''
-            keyPlayers['ITER',Private Fusion Companies',Government Labs'],';'
-            technologies['Fusion Physics',Plasma Confinement',Energy Conversion'],';'
+            investment: '$500B+,''
+            keyPlayers['ITER',Private Fusion Companies',Government Labs'],
+            technologies['Fusion Physics',Plasma Confinement',Energy Conversion'],
             status: 'Growing',
 }, {}"
 '
 ''
 '''
-            id: 'synthetic-biology','''
-            title: 'Synthetic Biology Revolution','''
-            description: 'Engineering of custom organisms and biological systems for industrial applications.','''
-            category: 'biotech-ai','''
-            impact: 'High','''
-            timeline: '2025-2035',''
+            id: 'synthetic-biology,''
+            title: 'Synthetic Biology Revolution,''
+            description: 'Engineering of custom organisms and biological systems for industrial applications.,''
+            category: 'biotech-ai,''
+            impact: 'High,''
+            timeline: '2025-2035,'
             adoption: 70,'''
-            investment: '$150B+','''
-            keyPlayers['Ginkgo Bioworks',Twist Bioscience',Research Institutions'],';'
-            technologies['DNA Programming',Genetic Engineering',Bio-Manufacturing'],';'
+            investment: '$150B+,''
+            keyPlayers['Ginkgo Bioworks',Twist Bioscience',Research Institutions'],
+            technologies['DNA Programming',Genetic Engineering',Bio-Manufacturing'],
             status: 'Growing',
 }, {}"
 '
 ''
 '''
-            id: 'brain-computer-interfaces','''
-            title: 'Brain-Computer Interface Revolution','''
-            description: 'Direct neural control of computers and digital systems for enhanced human capabilities.','''
-            category: 'biotech-ai','''
-            impact: 'High','''
-            timeline: '2030-2040',''
+            id: 'brain-computer-interfaces,''
+            title: 'Brain-Computer Interface Revolution,''
+            description: 'Direct neural control of computers and digital systems for enhanced human capabilities.,''
+            category: 'biotech-ai,''
+            impact: 'High,''
+            timeline: '2030-2040,'
             adoption: 40,'''
-            investment: '$80B+','''
-            keyPlayers['Neuralink',Kernel',Medical Device Companies'],';'
-            technologies['Neural Interfaces',Signal Processing',AI/ML'],';'
+            investment: '$80B+,''
+            keyPlayers['Neuralink',Kernel',Medical Device Companies'],
+            technologies['Neural Interfaces',Signal Processing',AI/ML'],
             status: 'Emerging',
 }
     ]
@@ -138,13 +138,13 @@ const AdvancedServiceInnovationHub = () => {}"
         switch(category) {}"
 ''''
 ''''''
-            case 'quantum': return <Atom className='w-5 h-5'/" >'';'''
-            case 'ai': return <Brain className='w-5 h-5'/" >'';'''
-            case 'space-tech': return <Satellite className='w-5 h-5'/" >'';'''
-            case 'green-tech': return <Leaf className='w-5 h-5'/" >'';'''
-            case 'biotech-ai': return <Dna className='w-5 h-5'/" >';''
+            case 'quantum': return <Atom className='w-5 h-5'/" >'''
+            case 'ai': return <Brain className='w-5 h-5'/" >'''
+            case 'space-tech': return <Satellite className='w-5 h-5'/" >'''
+            case 'green-tech': return <Leaf className='w-5 h-5'/" >'''
+            case 'biotech-ai': return <Dna className='w-5 h-5'/" >'
             default: return <Cpu className='w-5 h-5'/" >}",;
-}'';'
+}'
     const categories = [''''''
         { id: 'all', name: 'All Categories', icon: <Globe className='w-4 h-4'/" > },'''''
         { id: 'quantum', name: 'Quantum Technology', icon: <Atom className='w-4 h-4'/" > },'''''
@@ -152,7 +152,7 @@ const AdvancedServiceInnovationHub = () => {}"
         { id: 'space-tech', name: 'Space Technology', icon: <Satellite className='w-4 h-4'/" > },'''''
         { id: 'green-tech', name: 'Green Technology', icon: <Leaf className='w-4 h-4'/" > },'''''
         { id: 'biotech-ai', name: 'Biotech AI', icon: <Dna className='w-4 h-4'/" > }''',
-]';''
+]'
     return (<div className='max-w-7xl mx-auto p-6'>
       {/* Header */}
       <motion.div initial = {}
@@ -239,7 +239,7 @@ const AdvancedServiceInnovationHub = () => {}"
             {filteredTrends.map((trend, index) => (<motion .div key={trend.id} initial = {}
   { opacity: 0, x: index % 2 === 0 ? -20 : 20,
 }} animate = {}"
-  { opacity: 1, x: 0';',
+  { opacity: 1, x: 0,
 }} transition={{ delay: 0.1 * index }}" >''''
                 <Card className='h-full hover:shadow-lg transition-shadow'>'''
                   <CardHeader>''''
@@ -326,7 +326,7 @@ const AdvancedServiceInnovationHub = () => {}"
           {futureRoadmap.map((roadmap, index) => (<motion .div key={roadmap.id} initial = {}
   { opacity: 0, x: -20,
 }} animate = {}"
-  { opacity: 1, x: 0';',
+  { opacity: 1, x: 0,
 }} transition={{ delay: 0.1 * index }}" >''''
               <Card className='hover:shadow-lg transition-shadow'>'''
                 <CardHeader>''''

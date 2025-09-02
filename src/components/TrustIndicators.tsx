@@ -1,42 +1,42 @@
-import React from 'react';"
+import React from 'react
 import { Shield, Award, Users, Clock, CheckCircle, Star } from 'lucide-react';
 
 const TrustIndicators: React.FC = () => {
   const indicators = [
-    {
+  {
       icon: Shield,"
-      title: "Enterprise Security","
-      description: "SOC 2 Type II Certified","
+      title: "Enterprise Security,
+      description: "SOC 2 Type II Certified,
       color: "text-green-500",
 },
     {
       icon: Award,"
-      title: "Industry Recognition","
-      description: "Top 100 Tech Companies 2026","
+      title: "Industry Recognition,
+      description: "Top 100 Tech Companies 2026,
       color: "text-blue-500",
 },
     {
       icon: Users,"
-      title: "Expert Team","
-      description: "50+ Certified Professionals","
+      title: "Expert Team,
+      description: "50+ Certified Professionals,
       color: "text-purple-500",
 },
     {
       icon: Clock,"
-      title: "24/7 Support","
-      description: "Round-the-clock assistance","
+      title: "24/7 Support,
+      description: "Round-the-clock assistance,
       color: "text-orange-500",
 },
     {
       icon: CheckCircle,"
-      title: "Quality Assurance","
-      description: "99.9% Uptime Guarantee","
+      title: "Quality Assurance,
+      description: "99.9% Uptime Guarantee,
       color: "text-cyan-500",
 },
     {
       icon: Star,"
-      title: "Client Satisfaction","
-      description: "98% Customer Rating","
+      title: "Client Satisfaction,
+      description: "98% Customer Rating,
       color: "text-yellow-500",
 }
   ];

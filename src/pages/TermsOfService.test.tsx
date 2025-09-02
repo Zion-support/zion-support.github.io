@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import TermsOfService from './TermsOfService';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import TermsOfService from './TermsOfService
 describe('TermsOfService', () => {"
   it('renders without crashing', () => {
     render(<TermsOfService /" >);"

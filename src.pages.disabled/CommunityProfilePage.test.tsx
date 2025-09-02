@@ -1,7 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import CommunityProfilePage from './CommunityProfilePage'
-describe('CommunityProfilePage', () => {
+import CommunityProfilePage  from './CommunityProfilePage';describe('CommunityProfilePage', () => {
   it('renders without crashing', () => {
     render(<CommunityProfilePage />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()

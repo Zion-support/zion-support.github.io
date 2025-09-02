@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';"
-import PageTransition from './PageTransition';"
+import { render, screen } from '@testing-library/react
+import PageTransition from './PageTransition
 describe('PageTransition', () => {"
   it('renders without crashing', () => {"
     render(<PageTransition /" >)"

@@ -1,7 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import home from './home'
-describe('home', () => {
+import home  from './home';describe('home', () => {
   it('renders without crashing', () => {
     render(<home />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()

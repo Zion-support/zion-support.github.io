@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { useRouter } from 'next/router'';interface SEOProps {
+import { useRouter }  from 'next/router;interface SEOProps {
   title?: string;
    description?: string;
    image?: string;
@@ -19,21 +19,13 @@ const defaultSEO = {
   ', description: Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. Trusted by 500+ companies worldwide.,
   , image: 'https://ziontechgroup.com/og-image.svg,'  url:,
   https: //ziontechgroup.com, type:,
-  website',
-  '  keywords: [';
-  'technology solutions,
+  website,  keywords: [technology solutions,
 ,
-  AI development',
-  '    'quantum computing;
-  ', 'blockchain infrastructure;
-  ',';
-  'digital transformation',
-  'enterprise software',
-  '    'cloud solutions;
-  ', 'cybersecurity;
-  ',';
-  'micro SaaS',
-  'Zion Tech Group''  ], author: 'Zion Tech Group,
+  AI development,    'quantum computing;
+  ,blockchain infrastructure;
+  ',digital transformation,enterprise software,    'cloud solutions;
+  ,cybersecurity;
+  ',micro SaaS,Zion Tech Group''  ], author: 'Zion Tech Group,
   '}';
 export const EnhancedSEO: React.FC<SEOProps> = ({
   title = defaultSEO.title, description = defaultSEO.description,
@@ -49,13 +41,12 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
     noindex ?,
   noindex': 'index, nofollow ?,
   nofollow': 'follow,
-  '  ].join(',
-  ')'  return(
+  '  ].join(,)'  return(
     <Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name='description' content={description} />'      <meta name='keywords' content={keywords.join(
-  ', ')} />
+  ,)} />
   '      <meta name='author' content={author} />'      <meta name='robots' content={robotsContent} />'      <link rel='canonical' href={canonicalUrl} />''      {/* Open Graph / Facebook */}
       <meta property='og: type' content={type} />'      <meta property='og:url' content={canonicalUrl} />'      <meta property='og:title' content={fullTitle} />'      <meta property='og:description' content={description} />'      <meta property='og:image' content={image} />'      <meta property='og:site_name' content='Zion Tech Group' />'      <meta property='og:locale' content='en_US' />''      {/* Twitter */}
       <meta property='twitter:card' content='summary_large_image' />'      <meta property='twitter:url' content={canonicalUrl} />'      <meta property='twitter:title' content={fullTitle} />'      <meta property='twitter:description' content={description} />'      <meta property='twitter:image' content={image} />'      <meta property='twitter:site' content='@ziontechgroup' />'      <meta property='twitter:creator' content='@ziontechgroup' />''      {/* Article specific meta tags */}
@@ -77,12 +68,11 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
   '@type;
   ': 'PostalAddress, addressCountry:,
   US;
-  ','            }, contactPoint: {
+  ,            }, contactPoint: {
   '              '@type;
   ': 'ContactPoint,'              telephone:,
   +1-555-ZION-TECH', contactType: 'customer service,
-}, sameAs: [';
-  'https://twitter.com/ziontechgroup,
+}, sameAs: [https://twitter.com/ziontechgroup,
 ,
   'https: //linkedin.com/company/zion-tech-group, ,
   https: //github.com/zion-tech-group,'            ]})}}'      /></Head>

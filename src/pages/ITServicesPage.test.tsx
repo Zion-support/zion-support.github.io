@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import ITServicesPage from './ITServicesPage';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import ITServicesPage from './ITServicesPage
 describe('ITServicesPage', () => {"
   it('renders without crashing', () => {
     render(<ITServicesPage /" >);"

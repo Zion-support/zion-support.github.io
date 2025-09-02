@@ -1,7 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import SettingsPage from './SettingsPage'
-describe('SettingsPage', () => {
+import SettingsPage  from './SettingsPage';describe('SettingsPage', () => {
   it('renders without crashing', () => {
     render(<SettingsPage />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()

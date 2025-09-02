@@ -7,29 +7,29 @@ import {
 } from 'lucide-react';
 export default function Team() {
   const teamMembers = [
-    {
+  {
       id: 1, name: "Dr. Sarah Chen",
       role: "Chief Executive Officer", department: "Executive",
-      bio: "Visionary leader with 15+ years in AI and quantum computing. Former MIT researcher and Google AI pioneer.", expertise: ["AI Strategy", "Quantum Computing", "Leadership"], achievements: ["MIT PhD", "Google AI Research", "50+ Patents"]
+      bio: "Visionary leader with 15+ years in AI and quantum computing. Former MIT researcher and Google AI pioneer.", expertise: ["AI Strategy,Quantum Computing,Leadership"], achievements: ["MIT PhD,Google AI Research,50+ Patents"]
     }, {
       id: 2,
       name: "Prof. Michael Rodriguez", role: "Chief Technology Officer",
       department: "Technology", bio: "Quantum computing expert and former IBM Research scientist. Leading our quantum technology initiatives.",
-      expertise: ["Quantum Computing", "Research", "Innovation"], achievements: ["IBM Research", "Quantum Pioneer", "Nobel Nominee"]
+      expertise: ["Quantum Computing,Research,Innovation"], achievements: ["IBM Research,Quantum Pioneer,Nobel Nominee"]
     }, {
       id: 3,
       name: "Alex Thompson", role: "Head of AI Research",
       department: "AI & Machine Learning", bio: "AI researcher and entrepreneur. Former DeepMind engineer with expertise in neural networks and deep learning.",
-      expertise: ["Deep Learning", "Neural Networks", "AI Ethics"], achievements: ["DeepMind Alumni", "AI Ethics Leader", "30+ Publications"]
+      expertise: ["Deep Learning,Neural Networks,AI Ethics"], achievements: ["DeepMind Alumni,AI Ethics Leader,30+ Publications"]
     }, {
       id: 4,
       name: "Lisa Park", role: "Chief Security Officer",
       department: "Cybersecurity", bio: "Cybersecurity expert with 12+ years protecting enterprise systems. Former NSA security analyst.",
-      expertise: ["Cybersecurity", "Risk Management", "Compliance"], achievements: ["NSA Experience", "Security Expert", "CISSP Certified"]
+      expertise: ["Cybersecurity,Risk Management,Compliance"], achievements: ["NSA Experience,Security Expert,CISSP Certified"]
     }
   ];
   const stats = [
-    { number: "50+", label: "Team Members", icon: Users }, { number: "15+", label: "Countries", icon: Globe },
+  { number: "50+", label: "Team Members", icon: Users }, { number: "15+", label: "Countries", icon: Globe },
     { number: "200+", label: "Years Combined Experience", icon: Award }, { number: "95%", label: "Employee Satisfaction", icon: Star }
   ];
   return (

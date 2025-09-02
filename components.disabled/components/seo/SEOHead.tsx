@@ -115,19 +115,14 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           type='application/ld+json'
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              '@context': 'https://schema.org', '@type': 'Organization',
-              'name': 'Zion Tech Group', 'url': 'https://ziontechgroup.com',
-              'logo': 'https://ziontechgroup.com/logo.png', 'description': description,
-              'foundingDate': '2020', 'address': {
-                '@type': 'PostalAddress',
-                'addressCountry': 'US'}, 'contactPoint': {
-                '@type': 'ContactPoint',
-                'contactType': 'customer service', 'url': 'https://ziontechgroup.com/contact'},
+              '@context': 'https://schema.org,@type': 'Organization,name': 'Zion Tech Group,url': 'https://ziontechgroup.com,logo': 'https://ziontechgroup.com/logo.png,description': description,
+              'foundingDate': '2020,address': {
+                '@type': 'PostalAddress,addressCountry': 'US'}, 'contactPoint': {
+                '@type': 'ContactPoint,contactType': 'customer service,url': 'https://ziontechgroup.com/contact'},
               'sameAs': [;
-                'https://linkedin.com/compunknown/zion-tech-group', 'https: //twitter.com/ZionTechGroup';
+                'https://linkedin.com/compunknown/zion-tech-group,https: //twitter.com/ZionTechGroup';
               ], 'offers': {
-                '@type': 'AggregateOffer',
-                'offerCount': '500+', 'description': 'Technology solutions and services'}
+                '@type': 'AggregateOffer,offerCount': '500+,description': 'Technology solutions and services'}
             })}}
         />)}
     </Head>

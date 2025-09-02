@@ -24,7 +24,7 @@ import {
 
 export default function AIContentCreation() {
   const features = [
-    {
+  {
       icon: FileText,
       title: 'Blog Post Generation',
       description: 'Automatically generate high-quality blog posts with AI'
@@ -58,16 +58,13 @@ export default function AIContentCreation() {
   ];
 
   const pricingPlans = [
-    {
+  {
       name: 'Starter',
       price: '$299',
       period: '/month',
       description: 'Perfect for small businesses and content creators',
       features: [
-        'Up to 50 blog posts/month',
-        'Social media content generation',
-        '2 languages supported',
-        'Email support',
+        'Up to 50 blog posts/month,Social media content generation,2 languages supported,Email support',
       ],
       popular: false,
     },
@@ -77,11 +74,7 @@ export default function AIContentCreation() {
       period: '/month',
       description: 'Ideal for growing businesses and marketing teams',
       features: [
-        'Up to 200 blog posts/month',
-        'Advanced social media campaigns',
-        '5 languages supported',
-        'Content analytics dashboard',
-        'Priority support',
+        'Up to 200 blog posts/month,Advanced social media campaigns,5 languages supported,Content analytics dashboard,Priority support',
       ],
       popular: true,
     },
@@ -91,13 +84,7 @@ export default function AIContentCreation() {
       period: '/month',
       description: 'For large organizations with high content needs',
       features: [
-        'Unlimited blog posts',
-        'Custom content templates',
-        'Advanced AI models',
-        'Unlimited languages',
-        'Custom integrations',
-        'Dedicated account manager',
-        '24/7 phone support',
+        'Unlimited blog posts,Custom content templates,Advanced AI models,Unlimited languages,Custom integrations,Dedicated account manager,24/7 phone support',
       ],
       popular: false,
     },

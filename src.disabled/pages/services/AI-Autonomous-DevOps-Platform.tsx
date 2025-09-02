@@ -132,11 +132,7 @@ const AIAutonomousDevOpsPlatform: React.FC = () => {
                   period: '/month',
                   description: 'Perfect for small teams',
                   features: [;
-                    'Up to 10 applications',
-                    'Basic automation',
-                    'Standard monitoring',
-                    'Email support',
-                    'Cloud integrations';
+                    'Up to 10 applications,Basic automation,Standard monitoring,Email support,Cloud integrations';
                   ]},
                 {
                   name: 'Professional',
@@ -144,12 +140,7 @@ const AIAutonomousDevOpsPlatform: React.FC = () => {
                   period: '/month',
                   description: 'Ideal for growing teams',
                   features: [;
-                    'Up to 50 applications',
-                    'Advanced AI automation',
-                    'Predictive monitoring',
-                    'Priority support',
-                    'Custom integrations',
-                    'Self-healing systems';
+                    'Up to 50 applications,Advanced AI automation,Predictive monitoring,Priority support,Custom integrations,Self-healing systems';
                   ],
                   popular: true},
                 {
@@ -158,12 +149,7 @@ const AIAutonomousDevOpsPlatform: React.FC = () => {
                   period: '/month',
                   description: 'For large organizations',
                   features: [
-                    'Unlimited applications',
-                    'Full AI capabilities',
-                    'Custom AI models',
-                    'Dedicated support',
-                    'White-label options',
-                    'On-premise deployment'
+                    'Unlimited applications,Full AI capabilities,Custom AI models,Dedicated support,White-label options,On-premise deployment'
                   ]}
               ].map((plan, index) => (
                 <motion.div
@@ -230,12 +216,7 @@ const AIAutonomousDevOpsPlatform: React.FC = () => {
                 <h3 className='text-3xl font-bold text-white mb-6'>Revolutionary Benefits</h3>
                 <div className='space-y-6'>
                   {[;
-                    'Reduce deployment time by 80% with AI automation',
-                    'Decrease infrastructure costs by 50% through intelligent optimization',
-                    'Improve system reliability by 95% with self-healing capabilities',
-                    'Save 40+ hours per week on manual DevOps tasks',
-                    'Boost deployment frequency by 300% with automated pipelines',
-                    'Eliminate 90% of production incidents with predictive monitoring'
+                    'Reduce deployment time by 80% with AI automation,Decrease infrastructure costs by 50% through intelligent optimization,Improve system reliability by 95% with self-healing capabilities,Save 40+ hours per week on manual DevOps tasks,Boost deployment frequency by 300% with automated pipelines,Eliminate 90% of production incidents with predictive monitoring'
                   ].map((benefit, index) => (
                     <div key={index} className='flex items-start'>
                       <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mr-4 mt-1'>

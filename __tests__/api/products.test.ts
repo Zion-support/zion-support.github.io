@@ -49,7 +49,7 @@ describe('/api/products API Endpoint', () => {
     it('should return products matching "gpt" with similarity >= 0.8', async () => {
       // 1. Mock database responses
       const mockRawResults = [
-        {
+  {
           id: 'product-gpt-high-score',
           name_similarity: 0.9,
           description_similarity: 0.5

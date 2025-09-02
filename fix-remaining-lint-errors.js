@@ -16,8 +16,8 @@ function fixRemainingLintErrors(content) {
   fixed = fixed.replace(/<\/a>/g, '</Link>');
   
   // Add Link import if not present
-  if (fixed.includes('<Link') && !fixed.includes("import Link from 'next/link'")) {
-    fixed = fixed.replace(/import\s+([^;]+);/, "import $1;\nimport Link from 'next/link';");
+  if (fixed.includes('<Link') && !fixed.includes("import Link  from 'next/link)) {
+    fixed = fixed.replace(/import\s+([^;]+);/, "import $1;\nimport Link from 'next/link);
   }
   
   return fixed;

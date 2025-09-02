@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import OnsiteSupport from './OnsiteSupport';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import OnsiteSupport from './OnsiteSupport
 describe('OnsiteSupport', () => {"
   it('renders without crashing', () => {
     render(<OnsiteSupport /" >);"

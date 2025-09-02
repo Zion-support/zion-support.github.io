@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import SpaceTech from './SpaceTech';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import SpaceTech from './SpaceTech
 describe('SpaceTech', () => {"
   it('renders without crashing', () => {
     render(<SpaceTech /" >);"

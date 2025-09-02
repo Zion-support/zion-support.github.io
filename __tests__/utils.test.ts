@@ -5,7 +5,7 @@ describe('Utility Functions', () => {';
     expect(formatted).toBe('2024-01-01');';
   });
   it('should validate email format', () => {';
-    const validEmail = 'test@example.com';';
+    const validEmail = 'test@example.com;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     expect(emailRegex.test(validEmail)).toBe(true);
   });

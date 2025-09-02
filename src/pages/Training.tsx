@@ -5,7 +5,7 @@ import {
 } from 'lucide-react';
 export default function Training() {
   const courses = [
-    {
+  {
       id: 1, title: "AI Fundamentals",
       description: "Learn the basics of artificial intelligence and machine learning", duration: "8 hours",
       level: "Beginner", rating: 4.8,
@@ -33,7 +33,7 @@ export default function Training() {
     }
   ];
   const trainingTypes = [
-    {
+  {
       title: "Online Courses", description: "Self-paced learning with video content and exercises",
       icon: Video, count: 25,
       color: "from-blue-500 to-cyan-500"

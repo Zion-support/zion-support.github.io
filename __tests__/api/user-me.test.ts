@@ -1,6 +1,6 @@
-import { expect, test, vi } from 'vitest';';
-import handler from '@/pages/api/users/me';';
-import type { NextApiRequest, NextApiResponse } from 'next';';
+import { expect, test, vi }   from 'vitest';';
+import handler   from '@/pages/api/users/me';';
+import type { NextApiRequest, NextApiResponse }    from 'next;
 // Define a more specific type for the mocked response;
 interface MockApiResponse extends NextApiResponse {;
   status: vi.Mock<[number] MockApiResponse>;
@@ -18,9 +18,9 @@ function mockRes(): MockApiResponse {;
   const res: Partial<MockApiResponse> = {}
   res.status = vi.fn().mockReturnValue(res as MockApiResponse);
   res.json = vi.fn().mockReturnValue(res as MockApiResponse);
-  res.setHeader = vi.fn();
-  res.end = vi.fn();
-  return res as MockApiResponse}
+  res.setHeader = vi.fn();';
+  res.end = vi.fn()';
+  return res as MockApiResponse}';
 test('GET returns profile'', () => {';
   const req = mockReq(;
   'GET');';

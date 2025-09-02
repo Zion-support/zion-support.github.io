@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import ScheduleDemo from './ScheduleDemo';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import ScheduleDemo from './ScheduleDemo
 describe('ScheduleDemo', () => {"
   it('renders without crashing', () => {
     render(<ScheduleDemo /" >);"

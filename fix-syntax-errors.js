@@ -2,154 +2,74 @@
 
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
+import { glob } from 'glob';
 
-// Function to fix common syntax errors in files
-function fixSyntaxErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Fix malformed imports - add missing semicolons
-    content = content.replace(/import\s+{[^}]+}\s+from\s+['"][^'"]+['"]\s*(?!;)/g, (match) => {
-      if (!match.endsWith(';')) {
-        modified = true;
-        return match + ';';
-      }
-      return match;
-    });
-
-    // Fix broken import statements with missing commas
-    content = content.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+['"][^'"]+['"]/g, (match, imports) => {
-      // Check if imports have proper comma separation
-      if (imports.includes(' ') && !imports.includes(',')) {
-        modified = true;
-        const fixedImports = imports.split(/\s+/).join(', ');
-        return match.replace(imports, fixedImports);
-      }
-      return match;
-    });
-
-    // Fix missing semicolons after variable declarations
-    content = content.replace(/(const|let|var)\s+\w+\s*=\s*[^;]+(?!;)\s*(?=\n|$)/g, (match) => {
-      if (!match.endsWith(';')) {
-        modified = true;
-        return match + ';';
-      }
-      return match;
-    });
-
-    // Fix broken JSX syntax - missing closing tags
-    content = content.replace(/<(\w+)([^>]*)>(?!.*<\/\1>)/g, (match, tagName, attributes) => {
-      // Only fix if it's not a self-closing tag and doesn't have a closing tag
-      if (!match.endsWith('/>') && !content.includes(`</${tagName}>`)) {
-        modified = true;
-        return match + `</${tagName}>`;
-      }
-      return match;
-    });
-
-    // Fix malformed function declarations
-    content = content.replace(/export\s+{\s*function\s*}\s*export\s+default\s+function/g, 'export default function');
-    
-    // Fix broken arrow functions
-    content = content.replace(/=>\s*\(\s*\)\s*=>/g, '=> () =>');
-    
-    // Fix malformed object literals
-    content = content.replace(/\{\s*([^}]*)\s*\}\s*}/g, (match, content) => {
-      if (content.includes('{') && !content.includes('}')) {
-        modified = true;
-        return match.replace('}}', '}');
-      }
-      return match;
-    });
-
-    // Fix broken string literals
-    content = content.replace(/['"]([^'"]*)\s*['"]\s*['"]/g, (match, str) => {
-      modified = true;
-      return `"${str}"`;
-    });
-
-    // Fix missing commas in arrays and objects
-    content = content.replace(/\[\s*([^\]]*)\s*\]/g, (match, arrayContent) => {
-      if (arrayContent && !arrayContent.endsWith(',') && !arrayContent.endsWith(';')) {
-        const items = arrayContent.split(',').map(item => item.trim()).filter(item => item);
-        if (items.length > 1) {
-          modified = true;
-          return `[${items.join(', ')}]`;
-        }
-      }
-      return match;
-    });
-
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors in: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+// Function to fix severe syntax errors
+function fixSyntaxErrors(content) {
+  let fixed = content;
+  
+  // Fix malformed imports - remove extra spaces and fix structure
+  fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]/g, 
+    'import { $1 } from \'$2\';\nimport { $3 } from \'$4\);
+  
+  // Fix imports without semicolons
+  fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*(?![;])/g, 
+    'import { $1 } from \'$2\);
+  
+  // Fix malformed function declarations
+  fixed = fixed.replace(/export\s+default\s+function\s+(\w+)\s*\([^)]*\)\s*:\s*any\s*\{/g, 
+    'export default function $1() {');
+  
+  // Fix malformed array declarations with extra quotes and semicolons
+  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\[\s*\{/g, 'const $1 = [\n  {');
+  
+  // Fix malformed object properties with extra quotes
+  fixed = fixed.replace(/title:\s*['"]([^'"]+)['"]\s*,\s*['"]\s*['"]\s*description:/g, 
+    'title: \'$1\',\n    description:');
+  
+  // Fix malformed JSX quotes
+  fixed = fixed.replace(/className\s*=\s*['"]([^'"]+)['"]\s*['"]\s*['"]/g, 
+    'className=\'$1\'');
+  
+  // Fix malformed return statements
+  fixed = fixed.replace(/return\s*\(\s*['"]\s*['"]\s*<div/g, 'return (\n    <div');
+  
+  // Remove extra semicolons and quotes
+  fixed = fixed.replace(/['"]\s*;\s*['"]/g, '');
+  fixed = fixed.replace(/['"]\s*,\s*['"]/g, ,);
+  
+  // Fix malformed closing tags
+  fixed = fixed.replace(/<\/div>\s*['"]\s*['"]\s*\)\s*;\s*}/g, '</div>\n  );\n}');
+  
+  return fixed;
 }
 
-// Function to find all TypeScript and JavaScript files
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  let files = [];
+// Main function
+async function main() {
+  const files = await glob('src/pages/services/*.{ts,tsx,js,jsx}', { ignore: ['node_modules/**'] });
   
-  try {
-    const items = fs.readdirSync(dir);
-    
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        files = files.concat(findFiles(fullPath, extensions));
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
-      }
-    }
-  } catch (error) {
-    console.error(`Error reading directory ${dir}:`, error.message);
-  }
-  
-  return files;
-}
-
-// Main execution
-function main() {
-  console.log('Starting syntax error fixes...');
-  
-  const srcDir = path.join(process.cwd(), 'src');
-  const files = findFiles(srcDir);
+  console.log(`Found ${files.length} service files to process...`);
   
   let fixedCount = 0;
-  let totalCount = files.length;
-  
-  console.log(`Found ${totalCount} files to check...`);
+  let errorCount = 0;
   
   for (const file of files) {
-    if (fixSyntaxErrors(file)) {
-      fixedCount++;
+    try {
+      const content = fs.readFileSync(file, 'utf8');
+      const fixed = fixSyntaxErrors(content);
+      
+      if (content !== fixed) {
+        fs.writeFileSync(file, fixed, 'utf8');
+        console.log(`Fixed: ${file}`);
+        fixedCount++;
+      }
+    } catch (error) {
+      console.error(`Error processing ${file}:`, error.message);
+      errorCount++;
     }
   }
   
-  console.log(`\nFixed syntax errors in ${fixedCount} out of ${totalCount} files.`);
-  
-  // Run linting to check remaining errors
-  console.log('\nRunning linting to check remaining errors...');
-  try {
-    execSync('npm run lint', { stdio: 'inherit' });
-  } catch (error) {
-    console.log('Linting completed with some remaining errors.');
-  }
+  console.log(`\nCompleted: ${fixedCount} files fixed, ${errorCount} errors`);
 }
 
-// Run if this is the main module
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
-}
-
-export { fixSyntaxErrors, findFiles };
+main().catch(console.error);

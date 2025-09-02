@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import DigitalTwin from './DigitalTwin';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import DigitalTwin from './DigitalTwin
 describe('DigitalTwin', () => {"
   it('renders without crashing', () => {
     render(<DigitalTwin /" >);"

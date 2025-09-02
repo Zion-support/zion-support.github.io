@@ -1,6 +1,6 @@
-import { useState, useEffect, useCallback } from 'react';"
-import { motion, AnimatePresence } from 'framer-motion';"
-import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from 'lucide-react';"
+import { useState, useEffect, useCallback } from 'react
+import { motion, AnimatePresence } from 'framer-motion
+import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from 'lucide-react
 export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = true, showProgressBar = true }) => {
     const { trackEvent, trackConversion } = useAnalytics({        enableTracking: enableAnalytics, enableUserBehaviorTracking: true,
 })
@@ -146,8 +146,8 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             if (enableAnalytics) {}"
 '
 ''
-''';"
-                trackEvent('form',submission_success',form_completed')';'
+''
+                trackEvent('form',submission_success',form_completed')
                 trackConversion('form_submission', 1, { formType: title })}
             setIsSubmitted(true)
             // Reset form after successful submission
@@ -178,10 +178,10 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         switch(field.type) {}"
 ''''
 ''''''
-            case 'email': return <Mail className='w-4 h-4'/" >'';'''
-            case 'tel': return <Phone className='w-4 h-4'/" >'';'''
-            case 'textarea': return <MessageSquare className='w-4 h-4'/" >'';'''
-            case 'select': return <Building className='w-4 h-4'/" >';''
+            case 'email': return <Mail className='w-4 h-4'/" >'''
+            case 'tel': return <Phone className='w-4 h-4'/" >'''
+            case 'textarea': return <MessageSquare className='w-4 h-4'/" >'''
+            case 'select': return <Building className='w-4 h-4'/" >'
             default: return <User className='w-4 h-4'/" >}
     }, [])
     // Render field

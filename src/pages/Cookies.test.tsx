@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import Cookies from './Cookies';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import Cookies from './Cookies
 describe('Cookies', () => {"
   it('renders without crashing', () => {
     render(<Cookies /" >);"

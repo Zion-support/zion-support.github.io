@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import financial-solutions from './financial-solutions';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import financial-solutions from './financial-solutions
 describe('financial-solutions', () => {"
   it('renders without crashing', () => {
     render(<financial -solutions /" >);"

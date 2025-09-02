@@ -15,7 +15,7 @@ const FAQ: NextPage = () => {
         : [...prev, index]
     )}
   const faqCategories = [
-    {
+  {
 :pages.disabled_auto/faq.tsx;
       title:,
   General Questions',

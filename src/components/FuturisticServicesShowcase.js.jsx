@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react''
-import { motion, AnimatePresence } from 'framer-motion';"
+import React, { useState, useEffect }  from 'react
+import { motion, AnimatePresence } from 'framer-motion
 import { ADVANCED_MICRO_SERVICES } from '../data/advancedMicroServices.jsx';
 const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, setIsHovered] = useState(false)
     return (<motion .div initial = {}
@@ -138,10 +138,10 @@ const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, se
 export const FuturisticServicesShowcase = () => {}"
 '
 ''
-''';"
-    const [selectedCategory, setSelectedCategory] = useState('all')';'
+''
+    const [selectedCategory, setSelectedCategory] = useState('all')
     const [searchTerm, setSearchTerm] = useState('')'
-    const [visibleServices, setVisibleServices] = useState(new Set())';'
+    const [visibleServices, setVisibleServices] = useState(new Set())
     const categories = ['all', ...new Set(ADVANCED_MICRO_SERVICES.map(s => s.category))]
     const filteredServices = ADVANCED_MICRO_SERVICES.filter(service => {}
         const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -150,8 +150,8 @@ export const FuturisticServicesShowcase = () => {}"
         return matchesCategory && matchesSearch})
     // Set all services as visible initially for better UX
     useEffect(() => {}"
-        const allIndices = new Set(filteredServices.map((_, index) => index))';'
-        setVisibleServices(allIndices)}, [filteredServices])';''
+        const allIndices = new Set(filteredServices.map((_, index) => index))
+        setVisibleServices(allIndices)}, [filteredServices])'
     return (<div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20'>'''
       {/* Animated Background */}''''
       <div className='absolute inset-0 overflow-hidden'>''''

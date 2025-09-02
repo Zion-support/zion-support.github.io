@@ -33,7 +33,7 @@ const EnhancedContactForm: React.FC = () => {
   const [selectedService, setSelectedService] = useState('');
 
   const services = [
-    { id: 'ai-development', name: 'AI Development', icon: Globe, color: 'from-purple-500 to-pink-500' },
+  { id: 'ai-development', name: 'AI Development', icon: Globe, color: 'from-purple-500 to-pink-500' },
     { id: 'cloud-architecture', name: 'Cloud Architecture', icon: Globe, color: 'from-blue-500 to-cyan-500' },
     { id: 'web-development', name: 'Web Development', icon: Globe, color: 'from-green-500 to-emerald-500' },
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Globe, color: 'from-red-500 to-orange-500' },
@@ -43,7 +43,7 @@ const EnhancedContactForm: React.FC = () => {
   ];
 
   const budgetRanges = [
-    { value: 'under-25k', label: 'Under $25K' },
+  { value: 'under-25k', label: 'Under $25K' },
     { value: '25k-50k', label: '$25K - $50K' },
     { value: '50k-100k', label: '$50K - $100K' },
     { value: '100k-250k', label: '$100K - $250K' },
@@ -52,7 +52,7 @@ const EnhancedContactForm: React.FC = () => {
   ];
 
   const timelineOptions = [
-    { value: 'asap', label: 'ASAP' },
+  { value: 'asap', label: 'ASAP' },
     { value: '1-3-months', label: '1-3 Months' },
     { value: '3-6-months', label: '3-6 Months' },
     { value: '6-12-months', label: '6-12 Months' },

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';"
+import { Link } from 'react-router-dom
 import { Bottom, Center, Cloud, Common, Cookie, File, Info, User } from 'lucide-react';
 
 // Common interfaces for better type safety
@@ -38,10 +38,10 @@ interface ComponentProps {
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const footerSections = [
-    {"
+  {"
       title: 'Services', links: [{ name: 'AI & Machine Learning', href: '/services/ai-machine-learning' }, { name: 'Cloud & DevOps', href: '/services/cloud-devops' }, { name: 'Cybersecurity', href: '/services/cybersecurity' }, { name: 'Digital Transformation', href: '/services/digital-transformation' }, { name: 'Financial Solutions', href: '/services/financial-solutions' }, { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' }
       ]}, {"
-      title: 'Solutions',"
+      title: 'Solutions,
       links: ["
         { name: 'Enterprise Solutions', href: '/solutions/enterprise' },"
         { name: 'Startup Solutions', href: '/solutions/startup' },"
@@ -59,7 +59,7 @@ export default function Footer() {
         { name: 'Partners', href: '/partners' },"
         { name: 'Contact', href: '/contact' }
       ]}, {"
-      title: 'Resources',"
+      title: 'Resources,
       links: ["
         { name: 'Blog', href: '/blog' },"
         { name: 'Case Studies', href: '/case-studies' },"
@@ -68,7 +68,7 @@ export default function Footer() {
         { name: 'Training', href: '/training' },"
         { name: 'Documentation', href: '/docs' }
       ]}, {"
-      title: 'Support',"
+      title: 'Support,
       links: ["
         { name: 'Help Center', href: '/help' },"
         { name: 'FAQ', href: '/faq' },"

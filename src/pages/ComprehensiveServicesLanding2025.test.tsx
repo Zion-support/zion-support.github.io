@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import ComprehensiveServicesLanding2025 from './ComprehensiveServicesLanding2025';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import ComprehensiveServicesLanding2025 from './ComprehensiveServicesLanding2025
 describe('ComprehensiveServicesLanding2025', () => {"
   it('renders without crashing', () => {
     render(<ComprehensiveServicesLanding2025 /" >);"

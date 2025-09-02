@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';"
-import ModernErrorBoundary from './ModernErrorBoundary';"
+import { render, screen } from '@testing-library/react
+import ModernErrorBoundary from './ModernErrorBoundary
 describe('ModernErrorBoundary', () => {"
   it('renders without crashing', () => {"
     render(<ModernErrorBoundary /" >)"

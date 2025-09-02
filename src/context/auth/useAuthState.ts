@@ -1,3 +1,3 @@
-import { useState, useEffect } from 'react'  interface User {;
+import { useState, useEffect }  from 'react';interface User {;
 "
 }

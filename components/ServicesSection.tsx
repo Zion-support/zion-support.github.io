@@ -19,41 +19,42 @@ import {
   Smartphone,
   ArrowRight } from 'lucide-react';
 const ServicesSection: React.FC = () => {
-  const services = [{
+  const services = [
+  {
       icon: Brain,
       title: 'AI Services',
       description: 'Machine learning, natural language processing, and AI-powered automation solutions.',
-      features: ['Machine Learning Models', 'NLP Solutions', 'AI Automation', 'Predictive Analytics'],
+      features: ['Machine Learning Models,NLP Solutions,AI Automation,Predictive Analytics'],
       link: '/ai-services'},
     {
       icon: Cloud,
       title: 'Cloud Services',
       description: 'Scalable cloud infrastructure and migration services for modern businesses.',
-      features: ['Cloud Migration', 'Infrastructure Setup', 'DevOps Solutions', 'Monitoring'],
+      features: ['Cloud Migration,Infrastructure Setup,DevOps Solutions,Monitoring'],
       link: '/cloud-services'},
     {
       icon: Shield,
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your digital assets and data.',
-      features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response'],
+      features: ['Security Audits,Penetration Testing,Compliance,Incident Response'],
       link: '/cybersecurity'},
     {
       icon: Database,
       title: 'Data Analytics',
       description: 'Transform your data into actionable insights for better decision making.',
-      features: ['Data Visualization', 'Business Intelligence', 'ETL Processes', 'Reporting'],
+      features: ['Data Visualization,Business Intelligence,ETL Processes,Reporting'],
       link: '/data-analytics'},
     {
       icon: Code,
       title: 'Custom Development',
       description: 'Tailored software solutions built to meet your specific business requirements.',
-      features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration'],
+      features: ['Web Applications,Mobile Apps,API Development,System Integration'],
       link: '/custom-development'},
     {
       icon: Smartphone,
       title: 'Micro SaaS',
       description: 'Lightweight, focused software solutions that solve specific business problems.',
-      features: ['Rapid Development', 'Cost-Effective', 'Scalable', 'User-Friendly'],
+      features: ['Rapid Development,Cost-Effective,Scalable,User-Friendly'],
       link: '/micro-saas'}
   ]
   return(

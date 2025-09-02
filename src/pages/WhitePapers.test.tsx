@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import WhitePapers from './WhitePapers';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import WhitePapers from './WhitePapers
 describe('WhitePapers', () => {"
   it('renders without crashing', () => {
     render(<WhitePapers /" >);"

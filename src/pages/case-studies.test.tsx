@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import CaseStudies from './case-studies';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import CaseStudies from './case-studies
 describe('case-studies', () => {"
   it('renders without crashing', () => {
     render(<case -studies /" >);"

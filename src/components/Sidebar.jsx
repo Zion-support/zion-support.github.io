@@ -1,4 +1,4 @@
-import React, { useState } from 'react';"
+import React, { useState } from 'react
 import { Link, useLocation } from 'react-router-dom';
 import { 
   ChevronDown, 
@@ -50,7 +50,7 @@ import {
 
 export function Sidebar({ isOpen = false, onClose }) {
   const location = useLocation();"
-  const [expandedSections, setExpandedSections] = useState(['services', 'solutions']);
+  const [expandedSections, setExpandedSections] = useState(['services,solutions']);
 
   const toggleSection = (sectionName) => {
     setExpandedSections(prev => 
@@ -61,7 +61,7 @@ export function Sidebar({ isOpen = false, onClose }) {
 };
 
   const navigationSections = [
-    {"
+  {"
       title: 'Main',
       items: ["
         { name: 'Home', href: '/', icon: Home },"

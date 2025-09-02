@@ -1,7 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import Developers from './Developers'
-describe('Developers', () => {
+import Developers  from './Developers';describe('Developers', () => {
   it('renders without crashing', () => {
     render(<Developers />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()

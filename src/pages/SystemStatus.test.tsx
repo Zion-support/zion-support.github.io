@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import SystemStatus from './SystemStatus';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import SystemStatus from './SystemStatus
 describe('SystemStatus', () => {"
   it('renders without crashing', () => {
     render(<SystemStatus /" >);"

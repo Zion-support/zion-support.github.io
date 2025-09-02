@@ -120,13 +120,13 @@ const PerformanceMonitor: React.FC = () => {
 '
 
       case 'fcp':''
-        return value <= 1800 ? 'text-green-500' : value <= 3000 ? 'text-yellow-500' : 'text-red-500';''
+        return value <= 1800 ? 'text-green-500' : value <= 3000 ? 'text-yellow-500' : 'text-red-500'
       case 'lcp':''
-        return value <= 2500 ? 'text-green-500' : value <= 4000 ? 'text-yellow-500' : 'text-red-500';''
+        return value <= 2500 ? 'text-green-500' : value <= 4000 ? 'text-yellow-500' : 'text-red-500'
       case 'fid':''
-        return value <= 100 ? 'text-green-500' : value <= 300 ? 'text-yellow-500' : 'text-red-500';''
+        return value <= 100 ? 'text-green-500' : value <= 300 ? 'text-yellow-500' : 'text-red-500'
       case 'cls':''
-        return value <= 0.1 ? 'text-green-500' : value <= 0.25 ? 'text-yellow-500' : 'text-red-500';'
+        return value <= 0.1 ? 'text-green-500' : value <= 0.25 ? 'text-yellow-500' : 'text-red-500
       default:''
         return 'text-gray-500';
     }
@@ -141,13 +141,13 @@ const PerformanceMonitor: React.FC = () => {
 '
 
       case 'fcp':''
-        return value <= 1800 ? 'Good' : value <= 3000 ? 'Needs Improvement' : 'Poor';''
+        return value <= 1800 ? 'Good' : value <= 3000 ? 'Needs Improvement' : 'Poor'
       case 'lcp':''
-        return value <= 2500 ? 'Good' : value <= 4000 ? 'Needs Improvement' : 'Poor';''
+        return value <= 2500 ? 'Good' : value <= 4000 ? 'Needs Improvement' : 'Poor'
       case 'fid':''
-        return value <= 100 ? 'Good' : value <= 300 ? 'Needs Improvement' : 'Poor';''
+        return value <= 100 ? 'Good' : value <= 300 ? 'Needs Improvement' : 'Poor'
       case 'cls':''
-        return value <= 0.1 ? 'Good' : value <= 0.25 ? 'Needs Improvement' : 'Poor';'
+        return value <= 0.1 ? 'Good' : value <= 0.25 ? 'Needs Improvement' : 'Poor
       default:''
         return 'N/A';
     }

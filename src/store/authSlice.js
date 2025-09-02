@@ -13,7 +13,7 @@ export const loginUser = createAsyncThunk("
               user: {
                 id: 1,
                 email: credentials.email,"
-                name: 'John Doe',"
+                name: 'John Doe,
                 role: 'user',
 },"
               token: 'mock-jwt-token',

@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import MicroSaaS from './MicroSaaS';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import MicroSaaS from './MicroSaaS
 describe('MicroSaaS', () => {"
   it('renders without crashing', () => {
     render(<MicroSaaS /" >);"

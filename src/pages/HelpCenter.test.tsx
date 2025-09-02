@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import HelpCenter from './HelpCenter';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import HelpCenter from './HelpCenter
 describe('HelpCenter', () => {"
   it('renders without crashing', () => {
     render(<HelpCenter /" >);"

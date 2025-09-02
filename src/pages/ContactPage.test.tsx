@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import ContactPage from './ContactPage';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import ContactPage from './ContactPage
 describe('ContactPage', () => {"
   it('renders without crashing', () => {
     render(<ContactPage /" >);"

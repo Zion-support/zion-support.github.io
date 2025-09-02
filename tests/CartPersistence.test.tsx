@@ -5,8 +5,7 @@ import CartPage from '@/pages/Cart'
 import { CartProvider } from '@/context/CartContext'
 import { AuthContext } from '@/context/auth/AuthContext'
 import { safeStorage } from '@/utils/safeStorage'
-import { getCartKey } from '@/utils/cartUtils'
-vi.mock(
+import { getCartKey }  from '@/utils/cartUtils';vi.mock(
   'next/router', () => ({
   useRouter: () => ({ push: vi.fn() })
 }))

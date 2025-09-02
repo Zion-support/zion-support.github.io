@@ -65,20 +65,9 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
 
             __html: JSON.stringify({
 
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": "https://ziontechgroup.com",
-              "logo": "https://ziontechgroup.com/logo.png",
-              "description": "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.",
-              "address": {
+              "@context": "https://schema.org,@type": "Organization,name": "Zion Tech Group,url": "https://ziontechgroup.com,logo": "https://ziontechgroup.com/logo.png,description": "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.,address": {
 
-                "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
-                "addressRegion": "DE",
-                "postalCode": "19709",
-  "addressCountry": "US"
+                "@type": "PostalAddress,streetAddress": "364 E Main St STE 1008,addressLocality": "Middletown,addressRegion": "DE,postalCode": "19709,addressCountry": "US"
               
 
 
@@ -89,15 +78,10 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
 },
               "contactPoint": {
 
-                "@type": "ContactPoint",
-                "telephone": "+1-302-464-0950",
-                "contactType": "customer service",
-                "email": "kleber@ziontechgroup.com"
+                "@type": "ContactPoint,telephone": "+1-302-464-0950,contactType": "customer service,email": "kleber@ziontechgroup.com"
               },
               "sameAs"[
-                "https://linkedin.com/company/ziontechgroup",
-                "https://twitter.com/ziontechgroup",
-                "https://github.com/ziontechgroup"
+                "https://linkedin.com/company/ziontechgroup,https://twitter.com/ziontechgroup,https://github.com/ziontechgroup"
               ]
             })
           }}

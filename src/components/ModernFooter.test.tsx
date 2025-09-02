@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';"
-import ModernFooter from './ModernFooter';"
+import { render, screen } from '@testing-library/react
+import ModernFooter from './ModernFooter
 describe('ModernFooter', () => {"
   it('renders without crashing', () => {"
     render(<ModernFooter /" >)"

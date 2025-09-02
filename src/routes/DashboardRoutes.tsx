@@ -1,9 +1,9 @@
-import { Route, Routes    } from 'react-router-dom';"
+import { Route, Routes    } from 'react-router-dom
 import { Lazy } from 'lucide-react';
 
 export default function Page() {"
-  import { Suspense, lazy } from 'react';"
-  import { ProtectedRoute } from '../components/ProtectedRoute';"
+  import { Suspense, lazy } from 'react
+  import { ProtectedRoute } from '../components/ProtectedRoute
 import LoadingSpinner from '../components/LoadingSpinner';
 // Lazy load dashboard pages;"
 const Dashboard = lazy(() => import('../pages/Dashboard'));"

@@ -4,5 +4,4 @@ import {
   Database, Network,
   Users, Award,
   ShoppingCart, HelpCircle,;
-  ChevronRight} from 'lucide-react';
-"
+  ChevronRight} from 'lucide-react

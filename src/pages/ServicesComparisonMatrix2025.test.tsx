@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import ServicesComparisonMatrix2025 from './ServicesComparisonMatrix2025';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import ServicesComparisonMatrix2025 from './ServicesComparisonMatrix2025
 describe('ServicesComparisonMatrix2025', () => {"
   it('renders without crashing', () => {
     render(<ServicesComparisonMatrix2025 /" >);"

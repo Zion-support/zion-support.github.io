@@ -1,8 +1,7 @@
 import { render } from '@testing-library/react'
 import { axe, toHaveNoViolations } from 'jest-axe'
 import { ModeToggle } from '@/components/ModeToggle'
-import { expect } from 'vitest'
-expect.extend(toHaveNoViolations)
+import { expect }  from 'vitest';expect.extend(toHaveNoViolations)
 
 expect.extend(toHaveNoViolations);
 test(

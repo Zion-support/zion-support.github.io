@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import accessibility-auditor from './accessibility-auditor';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import accessibility-auditor from './accessibility-auditor
 describe('accessibility-auditor', () => {"
   it('renders without crashing', () => {
     render(<accessibility -auditor /" >);"

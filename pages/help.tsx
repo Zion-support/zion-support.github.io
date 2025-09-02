@@ -23,7 +23,7 @@ export default function Help() {
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
   const faqCategories = [
-    {
+  {
       title: 'Getting Started',
       icon: BookOpen,
       questions: [
@@ -98,7 +98,7 @@ export default function Help() {
   ];
 
   const quickLinks = [
-    { title: 'Contact Support', href: '/contact', icon: MessageCircle },
+  { title: 'Contact Support', href: '/contact', icon: MessageCircle },
     { title: 'Documentation', href: '/docs', icon: BookOpen },
     { title: 'Video Tutorials', href: '/training', icon: Video },
     { title: 'API Reference', href: '/api', icon: FileText },
@@ -106,7 +106,7 @@ export default function Help() {
   ];
 
   const contactMethods = [
-    {
+  {
       icon: Phone,
       title: 'Phone Support',
       description: 'Call us for immediate assistance',

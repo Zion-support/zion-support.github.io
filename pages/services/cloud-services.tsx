@@ -24,7 +24,7 @@ import {
 
 export default function CloudServices() {
   const features = [
-    {
+  {
       icon: Cloud,
       title: 'Scalable Infrastructure',
       description: 'Auto-scaling cloud solutions that grow with your business needs'
@@ -57,34 +57,34 @@ export default function CloudServices() {
   ];
 
   const services = [
-    {
+  {
       title: 'Cloud Migration',
       description: 'Seamless migration of your existing infrastructure to the cloud',
       icon: Server,
-      features: ['Assessment & Planning', 'Data Migration', 'Application Migration', 'Performance Optimization']
+      features: ['Assessment & Planning,Data Migration,Application Migration,Performance Optimization']
     },
     {
       title: 'Cloud Architecture',
       description: 'Design and implement robust, scalable cloud architectures',
       icon: Network,
-      features: ['Microservices Design', 'Load Balancing', 'Auto-scaling', 'Disaster Recovery']
+      features: ['Microservices Design,Load Balancing,Auto-scaling,Disaster Recovery']
     },
     {
       title: 'DevOps & CI/CD',
       description: 'Automated deployment pipelines and infrastructure management',
       icon: Settings,
-      features: ['Continuous Integration', 'Automated Testing', 'Deployment Automation', 'Monitoring & Alerting']
+      features: ['Continuous Integration,Automated Testing,Deployment Automation,Monitoring & Alerting']
     },
     {
       title: 'Cloud Security',
       description: 'Comprehensive security solutions for your cloud infrastructure',
       icon: Shield,
-      features: ['Identity Management', 'Network Security', 'Data Encryption', 'Compliance Monitoring']
+      features: ['Identity Management,Network Security,Data Encryption,Compliance Monitoring']
     }
   ];
 
   const platforms = [
-    { name: 'Amazon Web Services (AWS)', category: 'Cloud Platform' },
+  { name: 'Amazon Web Services (AWS)', category: 'Cloud Platform' },
     { name: 'Microsoft Azure', category: 'Cloud Platform' },
     { name: 'Google Cloud Platform', category: 'Cloud Platform' },
     { name: 'Docker', category: 'Containerization' },
@@ -97,7 +97,7 @@ export default function CloudServices() {
   ];
 
   const benefits = [
-    {
+  {
       icon: TrendingUp,
       title: 'Cost Optimization',
       description: 'Reduce infrastructure costs by up to 40% with optimized cloud resources'

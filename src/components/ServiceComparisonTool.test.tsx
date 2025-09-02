@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';"
-import ServiceComparisonTool from './ServiceComparisonTool';"
+import { render, screen } from '@testing-library/react
+import ServiceComparisonTool from './ServiceComparisonTool
 describe('ServiceComparisonTool', () => {"
   it('renders without crashing', () => {"
     render(<ServiceComparisonTool /" >)"

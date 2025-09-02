@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import GreenIT from './GreenIT';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import GreenIT from './GreenIT
 describe('GreenIT', () => {"
   it('renders without crashing', () => {
     render(<GreenIT /" >);"

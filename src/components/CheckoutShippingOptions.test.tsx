@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';"
-import CheckoutShippingOptions from './CheckoutShippingOptions';"
+import { render, screen } from '@testing-library/react
+import CheckoutShippingOptions from './CheckoutShippingOptions
 describe('CheckoutShippingOptions', () => {"
   it('renders without crashing', () => {"
     render(<CheckoutShippingOptions /" >)"

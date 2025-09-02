@@ -18,12 +18,12 @@ import {
 
 export default function Cookies() {
   const cookieTypes = [
-    {
+  {
       type: 'Essential Cookies',
       icon: Shield,
       description: 'These cookies are necessary for the website to function and cannot be switched off in our systems.',
       purpose: 'They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms.',
-      examples: ['Session management', 'Security features', 'Load balancing', 'User authentication'],
+      examples: ['Session management,Security features,Load balancing,User authentication'],
       necessary: true
     },
     {
@@ -31,7 +31,7 @@ export default function Cookies() {
       icon: BarChart3,
       description: 'These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site.',
       purpose: 'They help us to know which pages are the most and least popular and see how visitors move around the site.',
-      examples: ['Google Analytics', 'Page view tracking', 'User behavior analysis', 'Performance monitoring'],
+      examples: ['Google Analytics,Page view tracking,User behavior analysis,Performance monitoring'],
       necessary: false
     },
     {
@@ -39,7 +39,7 @@ export default function Cookies() {
       icon: Settings,
       description: 'These cookies enable the website to provide enhanced functionality and personalisation.',
       purpose: 'They may be set by us or by third party providers whose services we have added to our pages.',
-      examples: ['Language preferences', 'Region settings', 'User interface customization', 'Chat widget functionality'],
+      examples: ['Language preferences,Region settings,User interface customization,Chat widget functionality'],
       necessary: false
     },
     {
@@ -47,13 +47,13 @@ export default function Cookies() {
       icon: Globe,
       description: 'These cookies may be set through our site by our advertising partners to build a profile of your interests.',
       purpose: 'They are used to deliver adverts more relevant to you and your interests. They may also be used to limit the number of times you see an advertisement.',
-      examples: ['Social media integration', 'Advertising networks', 'Retargeting campaigns', 'Interest-based advertising'],
+      examples: ['Social media integration,Advertising networks,Retargeting campaigns,Interest-based advertising'],
       necessary: false
     }
   ];
 
   const cookieDetails = [
-    {
+  {
       name: '_ga',
       purpose: 'Google Analytics - Used to distinguish users',
       duration: '2 years',

@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import Documentation from './Documentation';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import Documentation from './Documentation
 describe('Documentation', () => {"
   it('renders without crashing', () => {
     render(<Documentation /" >);"

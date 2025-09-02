@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';"
-import EnhancedImageLoader from './EnhancedImageLoader';"
+import { render, screen } from '@testing-library/react
+import EnhancedImageLoader from './EnhancedImageLoader
 describe('EnhancedImageLoader', () => {"
   it('renders without crashing', () => {"
     render(<EnhancedImageLoader /" >)"

@@ -1,7 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import Wishlist from './Wishlist'
-describe('Wishlist', () => {
+import Wishlist  from './Wishlist';describe('Wishlist', () => {
   it('renders without crashing', () => {
     render(<Wishlist />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()

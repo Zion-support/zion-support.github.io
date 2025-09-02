@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import Categories from './Categories';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import Categories from './Categories
 describe('Categories', () => {"
   it('renders without crashing', () => {
     render(<Categories /" >);"

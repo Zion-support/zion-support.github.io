@@ -9,7 +9,7 @@ export default function Sitemap() {
   const currentYear = new Date().getFullYear();
 
   const mainPages = [
-    { name: 'Home', href: '/', description: 'Main homepage' },
+  { name: 'Home', href: '/', description: 'Main homepage' },
     { name: 'About', href: '/about', description: 'About Zion Tech Group' },
     { name: 'Contact', href: '/contact', description: 'Contact information' },
     { name: 'Blog', href: '/blog', description: 'Latest news and insights' },
@@ -18,7 +18,7 @@ export default function Sitemap() {
   ];
 
   const services = [
-    { name: 'AI Services', href: '/ai-services', description: 'Artificial Intelligence solutions' },
+  { name: 'AI Services', href: '/ai-services', description: 'Artificial Intelligence solutions' },
     { name: 'IT Services', href: '/it-services', description: 'Information Technology services' },
     { name: 'Micro SaaS', href: '/micro-saas', description: 'Micro Software as a Service' },
     { name: 'Web Development', href: '/services/web-development', description: 'Custom web applications' },
@@ -27,7 +27,7 @@ export default function Sitemap() {
   ];
 
   const solutions = [
-    { name: 'AI Content Creation', href: '/solutions/ai-content-creation', description: 'AI-powered content generation' },
+  { name: 'AI Content Creation', href: '/solutions/ai-content-creation', description: 'AI-powered content generation' },
     { name: 'Customer Support', href: '/solutions/customer-support', description: 'Automated customer support' },
     { name: 'Email Automation', href: '/solutions/email-automation', description: 'Email marketing automation' },
     { name: 'Event Management', href: '/solutions/event-management', description: 'Event planning and management' },
@@ -36,7 +36,7 @@ export default function Sitemap() {
   ];
 
   const resources = [
-    { name: 'Documentation', href: '/docs', description: 'Technical documentation' },
+  { name: 'Documentation', href: '/docs', description: 'Technical documentation' },
     { name: 'API Reference', href: '/api', description: 'API documentation' },
     { name: 'Help & Support', href: '/help', description: 'Support center' },
     { name: 'Training', href: '/training', description: 'Training programs' },
@@ -45,13 +45,13 @@ export default function Sitemap() {
   ];
 
   const legal = [
-    { name: 'Privacy Policy', href: '/privacy', description: 'Privacy policy and data protection' },
+  { name: 'Privacy Policy', href: '/privacy', description: 'Privacy policy and data protection' },
     { name: 'Terms of Service', href: '/terms', description: 'Terms and conditions' },
     { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage policy' }
   ];
 
   const contactInfo = [
-    { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
+  { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
     { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
     { icon: MapPin, text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
   ];

@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';"
-import EnhancedInteractiveFeatures from './EnhancedInteractiveFeatures';"
+import { render, screen } from '@testing-library/react
+import EnhancedInteractiveFeatures from './EnhancedInteractiveFeatures
 describe('EnhancedInteractiveFeatures', () => {"
   it('renders without crashing', () => {"
     render(<EnhancedInteractiveFeatures /" >)"

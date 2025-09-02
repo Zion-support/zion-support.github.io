@@ -1,7 +1,7 @@
-import { createMocks, RequestMethod } from 'node-mocks-http' // RequestMethod can be useful;
+import { createMocks, RequestMethod }  from 'node-mocks-http';// RequestMethod can be useful;
 import type { NextApiRequest, NextApiResponse } from 'next';
-import handler from '@/pages/api/auth/reset' // Adjust path as necessary;
-import { describe, it, expect, vi } from 'vitest' // Import vi for potential mocking if needed later;
+import handler  from '@/pages/api/auth/reset';// Adjust path as necessary;
+import { describe, it, expect, vi }  from 'vitest';// Import vi for potential mocking if needed later;
 // Define expected response structure for error messages
 interface ErrorResponse {
   message: string;

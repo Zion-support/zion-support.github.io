@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';"
-import ComprehensiveSEOEnhancer from './ComprehensiveSEOEnhancer';"
+import { render, screen } from '@testing-library/react
+import ComprehensiveSEOEnhancer from './ComprehensiveSEOEnhancer
 describe('ComprehensiveSEOEnhancer', () => {"
   it('renders without crashing', () => {"
     render(<ComprehensiveSEOEnhancer /" >)"

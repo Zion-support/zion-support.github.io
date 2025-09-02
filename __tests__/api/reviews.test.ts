@@ -1,17 +1,17 @@
 import { createMocks, RequestMethod } from 'node-mocks-http';
 import type { NextApiRequest, NextApiResponse } from 'next';
-import reviewsHandler from '@/pages/api/reviews' // Handler for POST /api/reviews;
-import productReviewsHandler from '@/pages/api/reviews/[productId]' // Handler for GET /api/reviews/[productId];
+import reviewsHandler  from '@/pages/api/reviews';// Handler for POST /api/reviews;
+import productReviewsHandler  from '@/pages/api/reviews/[productId]';// Handler for GET /api/reviews/[productId];
 import {
   PrismaClient,
   ProductReview,
   User as PrismaUser,
-  Prisma} from '@prisma/client' // Import Prisma types;
+  Prisma}  from '@prisma/client';// Import Prisma types;
 import { supabase } from '@/integrations/supabase/client';
 import type {
   User as SupabaseUser,
   Session,
-  AuthError} from '@supabase/supabase-js' // Supabase types;
+  AuthError}  from '@supabase/supabase-js';// Supabase types;
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 
 // Mock Prisma Client;
@@ -174,11 +174,9 @@ describe('/api/reviews API Endpoint', () => {
 
       (prismaMock.productReview.create as jest.Mock).mockRejectedValue(
         new Prisma.PrismaClientKnownRequestError(
-          'Unique constraint failed',
-          'P2002',
-          'client-version',
+          'Unique constraint failed,P2002,client-version',
           {
-            target: ['productId', 'userId']
+            target: ['productId,userId']
           }
         )
       );

@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';"
-import InnovativeServicesShowcase from './InnovativeServicesShowcase';"
+import { render, screen } from '@testing-library/react
+import InnovativeServicesShowcase from './InnovativeServicesShowcase
 describe('InnovativeServicesShowcase', () => {"
   it('renders without crashing', () => {"
     render(<InnovativeServicesShowcase /" >)"

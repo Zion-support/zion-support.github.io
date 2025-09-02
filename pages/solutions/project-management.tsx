@@ -19,7 +19,7 @@ import {
 
 export default function ProjectManagement() {
   const features = [
-    {
+  {
       icon: Target,
       title: 'Task Management',
       description:

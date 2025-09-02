@@ -17,14 +17,14 @@ const Home = memo(() => {
     setSidebarOpen(false);
   }, []);
   const stats = [
-    { number: '500+', label: 'Projects Completed' },
+  { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' }
   ];
   
   const services = [
-    {
+  {
       title: 'AI Services',
       description: 'Cutting-edge artificial intelligence solutions',
       icon: Brain,
@@ -45,7 +45,7 @@ const Home = memo(() => {
   ];
 
   const features = [
-    {
+  {
       icon: Zap,
       title: 'Fast Delivery',
       description: 'Quick turnaround times without compromising quality'
@@ -97,29 +97,14 @@ const Home = memo(() => {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": "https://ziontechgroup.com",
-              "logo": "https://ziontechgroup.com/logo.png",
-              "description": "Leading provider of revolutionary AI services, IT solutions, and micro SaaS development",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
-                "addressRegion": "DE",
-                "postalCode": "19709",
-                "addressCountry": "US"
+              "@context": "https://schema.org,@type": "Organization,name": "Zion Tech Group,url": "https://ziontechgroup.com,logo": "https://ziontechgroup.com/logo.png,description": "Leading provider of revolutionary AI services, IT solutions, and micro SaaS development,address": {
+                "@type": "PostalAddress,streetAddress": "364 E Main St STE 1008,addressLocality": "Middletown,addressRegion": "DE,postalCode": "19709,addressCountry": "US"
               },
               "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+1-302-464-0950",
-                "contactType": "customer service",
-                "email": "kleber@ziontechgroup.com"
+                "@type": "ContactPoint,telephone": "+1-302-464-0950,contactType": "customer service,email": "kleber@ziontechgroup.com"
               },
               "sameAs": [
-                "https://linkedin.com/company/ziontechgroup",
-                "https://twitter.com/ziontechgroup"
+                "https://linkedin.com/company/ziontechgroup,https://twitter.com/ziontechgroup"
               ]
             })
           }}

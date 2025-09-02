@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import Zion2026AIMarketplaceShowcase from './Zion2026AIMarketplaceShowcase';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import Zion2026AIMarketplaceShowcase from './Zion2026AIMarketplaceShowcase
 describe('Zion2026AIMarketplaceShowcase', () => {"
   it('renders without crashing', () => {
     render(<Zion2026AIMarketplaceShowcase /" >);"
