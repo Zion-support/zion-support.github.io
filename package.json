@@ -1,6 +1,7 @@
 {
   "name": "bolt.new.zion.app",
   "version": "0.1.0",
+  "packageManager": "npm@10.9.2",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,7 +11,7 @@
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "prebuild": "echo 'skip prebuild health-check'",
-    "postbuild": "echo 'Build completed successfully'",
+    "postbuild": "node scripts/generate-sitemap.mjs && echo 'Build completed successfully'",
     "lint:fix": "eslint . --fix",
     "type-check:backend": "cd server && npm run type-check",
     "type-check:all": "npm run type-check && npm run lint:backend",
@@ -19,6 +20,7 @@
     "install:all": "npm install && cd server && npm install",
     "preview": "next start",
     "test": "vitest",
+    "sitemap": "node scripts/generate-sitemap.mjs",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --coverage",
     "clean": "rm -rf dist node_modules/.vite",
@@ -201,5 +203,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
