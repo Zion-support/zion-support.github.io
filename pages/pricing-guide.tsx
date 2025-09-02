@@ -19,6 +19,7 @@ import {
   Award,
   Clock,
   Target,
+  Network,
   Brain,
   Server,
   Cloud,
