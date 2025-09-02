@@ -12,33 +12,60 @@
  * 5. Integrates with existing health check system
  */
 ;
-const puppeteer = require('puppeteer');
-const fs = require('fs').promises;
-const path = require('path');
-const { execSync } = require('child_process');
+const puppeteer = require(,
+  puppeteer');
+const fs = require(
+  'fs').promises;
+const path = require(
+  'path');
+const { execSync } = require(
+  'child_process');
 
 // Configuration;
 const CONFIG = {
-  appUrl: 'https://ziontechgroup.com',
+  appUrl: 'https://ziontechgroup.com,
   checkInterval: 5 * 60 * 1000, // 5 minutes
   maxRetries: 3,
-  logDir: path.join(__dirname,../reports'),
+  logDir: path.join(__dirname,../reports,
+  ),
   errorPatterns: {
     // JavaScript errors
     js: {
-      'Cannot read property': 'null-check-fix',is not a function': 'function-check-fix',Unexpected token': 'syntax-fix',ReferenceError': 'reference-fix',TypeError': 'type-fix'
+      'Cannot read property
+  ': 'null-check-fix,is not a function':,
+  function-check-fix',Unexpected token
+  ': 'syntax-fix,ReferenceError':,
+  reference-fix',TypeError
+  ': 'type-fix
     },
     // CSS errors
-    css: {
-      'Failed to load resource': 'resource-fix',404': 'missing-resource-fix',CORS': 'cors-fix'
+    css: {,
+  Failed to load resource
+  ': 'resource-fix,404':,
+  missing-resource-fix',CORS
+  ': 'cors-fix
     },
     // Network errors
-    network: {
-      'net::ERR_': 'network-fix',timeout': 'timeout-fix',connection refused': 'connection-fix'
+    network: {,
+  net: :ERR_
+  ': 'network-fix,timeout':,
+  timeout-fix',connection refused
+  ': 'connection-fix
 
   },
-  fixStrategies: {
-    'null-check-fix': 'Add null/undefined checks',function-check-fix': 'Verify function existence',syntax-fix': 'Fix JavaScript syntax errors',reference-fix': 'Fix variable/function references',type-fix': 'Add type checking',resource-fix': 'Fix resource loading issues',missing-resource-fix': 'Add missing resources',cors-fix': 'Fix CORS configuration',network-fix': 'Fix network connectivity',timeout-fix': 'Increase timeout values',connection-fix': 'Fix connection issues'
+  fixStrategies: {,
+  null-check-fix
+  ': 'Add null/undefined checks,function-check-fix':,
+  Verify function existence',syntax-fix
+  ': 'Fix JavaScript syntax errors,reference-fix':,
+  Fix variable/function references',type-fix
+  ': 'Add type checking,resource-fix':,
+  Fix resource loading issues',missing-resource-fix
+  ': 'Add missing resources,cors-fix':,
+  Fix CORS configuration',network-fix
+  ': 'Fix network connectivity,timeout-fix':,
+  Increase timeout values',connection-fix
+  ': 'Fix connection issues
 
 };
 ;
@@ -58,7 +85,8 @@ class BrowserErrorMonitor {
 
   async initialize() {
     try {
-      // console.log('🚀 Initializing Browser Error Monitor...');
+      // console.log('🚀 Initializing Browser Error Monitor...
+  ');
       
       // Ensure log directory exists
       await fs.mkdir(CONFIG.logDir, { recursive: true });
@@ -66,8 +94,12 @@ class BrowserErrorMonitor {
       // Launch browser
       this.browser = await puppeteer.launch({
         headless: true,
-        args: [
-          '--no-sandbox',--disable-setuid-sandbox',--disable-dev-shm-usage',--disable-accelerated-2d-canvas',--no-first-run',--no-zygote',--disable-gpu'
+        args: [,
+  --no-sandbox
+  ',--disable-setuid-sandbox',--disable-dev-shm-usage
+  ',--disable-accelerated-2d-canvas',--no-first-run
+  ',--no-zygote',--disable-gpu
+  '
         ]
       });
 
@@ -76,33 +108,40 @@ class BrowserErrorMonitor {
       // Set up error listeners
       await this.setupErrorListeners();
       
-      // console.log('✅ Browser Error Monitor initialized successfully');
+      // console.log('✅ Browser Error Monitor initialized successfully
+  ');
       return true;
     } catch (error) {
-      console.error('❌ Failed to initialize Browser Error Monitor:', error);
+      console.error('❌ Failed to initialize Browser Error Monitor: , error);
       return false;
 
 
   async setupErrorListeners() {
     // Listen for console errors
-    this.page.on('console', async (msg) => {
-      if (msg.type() === 'error') {
+    this.page.on(,
+  console
+  ', async (msg) => {
+      if (msg.type() === 'error
+  ') {
         await this.handleConsoleError(msg);
 
     });
 
     // Listen for page errors
-    this.page.on('pageerror', async (error) => {
+    this.page.on('pageerror
+  ', async (error) => {
       await this.handlePageError(error);
     });
 
     // Listen for request failures
-    this.page.on('requestfailed', async (request) => {
+    this.page.on('requestfailed
+  ', async (request) => {
       await this.handleRequestFailure(request);
     });
 
     // Listen for response errors
-    this.page.on('response', async (response) => {
+    this.page.on('response
+  ', async (response) => {
       if (!response.ok()) {
         await this.handleResponseError(response);
 
@@ -110,7 +149,7 @@ class BrowserErrorMonitor {
 
   async handleConsoleError(msg) {
     const error = {
-      type: 'console',
+      type: 'console,
       message: msg.text(),
       timestamp: new Date().toISOString(),
       severity: this.assessErrorSeverity(msg.text()),
@@ -125,7 +164,8 @@ class BrowserErrorMonitor {
 
   async handlePageError(error) {
     const pageError = {
-      type: 'page',
+      type: 'page
+  ',
       message: error.message,
       stack: error.stack,
       timestamp: new Date().toISOString(),
@@ -141,7 +181,8 @@ class BrowserErrorMonitor {
 
   async handleRequestFailure(request) {
     const requestError = {
-      type: 'request',
+      type: 'request
+  ',
       url: request.url(),
       failureReason: request.failure().errorText,
       timestamp: new Date().toISOString(),
@@ -157,7 +198,8 @@ class BrowserErrorMonitor {
 
   async handleResponseError(response) {
     const responseError = {
-      type: 'response',
+      type: 'response
+  ',
       url: response.url(),
       status: response.status(),
       statusText: response.statusText(),
@@ -173,15 +215,23 @@ class BrowserErrorMonitor {
     await this.attemptAutoFix(responseError);
 
   assessErrorSeverity(message) {
-    const criticalKeywords = ['fatal',critical',uncaught',unhandled'];
-    const warningKeywords = ['warning',deprecated',experimental'];
+    const criticalKeywords = [,
+  fatal
+  ',critical',uncaught
+  ',unhandled'];
+    const warningKeywords = [
+  'warning',deprecated
+  ',experimental'];
     
     if (criticalKeywords.some(keyword => message.toLowerCase().includes(keyword))) {
-      return 'critical';
+      return
+  'critical';
     } else if (warningKeywords.some(keyword => message.toLowerCase().includes(keyword))) {
-      return 'warning';
+      return
+  'warning';
     } else {
-      return 'error';
+      return
+  'error';
 
 
   async getErrorLocation() {
@@ -190,7 +240,8 @@ class BrowserErrorMonitor {
       const title = await this.page.title();
       return { url, title };
     } catch (error) {
-      return { url: 'unknown', title: 'unknown' };
+      return { url: 'unknown, title:
+  'unknown' };
 
 
   async attemptAutoFix(error) {
@@ -218,12 +269,15 @@ class BrowserErrorMonitor {
 
 
     } catch (fixError) {
-      console.error('❌ Error during auto-fix attempt:', fixError);
+      console.error(
+  '❌ Error during auto-fix attempt:,
+  , fixError);
       this.stats.failedFixes++;
 
 
   identifyFixStrategy(error) {
-    const message = error.message || error.failureReason || '';
+    const message = error.message || error.failureReason || '
+  ';
     
     for (const [category, patterns] of Object.entries(CONFIG.errorPatterns)) {
       for (const [pattern, strategy] of Object.entries(patterns)) {
@@ -237,30 +291,40 @@ class BrowserErrorMonitor {
   async applyFix(strategy, error) {
     try {
       switch (strategy) {
-        case 'null-check-fix':
-          return await this.fixNullCheck(error);
-        case 'function-check-fix':
+        case 'null-check-fix
+  ': return await this.fixNullCheck(error);
+        case 'function-check-fix
+  ':
           return await this.fixFunctionCheck(error);
-        case 'syntax-fix':
+        case 'syntax-fix
+  ':
           return await this.fixSyntaxError(error);
-        case 'reference-fix':
+        case 'reference-fix
+  ':
           return await this.fixReferenceError(error);
-        case 'type-fix':
+        case 'type-fix
+  ':
           return await this.fixTypeError(error);
-        case 'resource-fix':
+        case 'resource-fix
+  ':
           return await this.fixResourceError(error);
-        case 'missing-resource-fix':
+        case 'missing-resource-fix
+  ':
           return await this.fixMissingResource(error);
-        case 'cors-fix':
+        case 'cors-fix
+  ':
           return await this.fixCorsError(error);
-        case 'network-fix':
+        case 'network-fix
+  ':
           return await this.fixNetworkError(error);
-        case 'timeout-fix':
+        case 'timeout-fix
+  ':
           return await this.fixTimeoutError(error);
-        case 'connection-fix':
+        case 'connection-fix:
           return await this.fixConnectionError(error);
         default:
-          return { success: false, reason: 'Unknown fix strategy' };
+          return { success: false, reason: 'Unknown fix strategy
+  ' };
 
     } catch (fixError) {
       return { success: false, reason: fixError.message };
@@ -270,23 +334,28 @@ class BrowserErrorMonitor {
   async fixNullCheck(error) {
     // Inject null check helper
     await this.page.evaluate(() => {
-      if (typeof window.safeGet === 'undefined') {
+      if (typeof window.safeGet === 'undefined
+  ') {
         window.safeGet = (obj, path, defaultValue = null) => {
-          return path.split('.').reduce((current, key) => {
+          return path.split('.
+  ').reduce((current, key) => {
             return current && current[key] !== undefined ? current[key] : defaultValue;
           }, obj);
         };
 
     });
     
-    return { success: true, message: 'Null check helper injected' };
+    return { success: true, message: 'Null check helper injected
+  ' };
 
   async fixFunctionCheck(error) {
     // Inject function existence checker
     await this.page.evaluate(() => {
-      if (typeof window.safeCall === 'undefined') {
+      if (typeof window.safeCall === 'undefined
+  ') {
         window.safeCall = (func, ...args) => {
-          if (typeof func === 'function') {
+          if (typeof func === 'function
+  ') {
             return func(...args);
 
           return null;
@@ -294,93 +363,119 @@ class BrowserErrorMonitor {
 
     });
     
-    return { success: true, message: 'Function check helper injected' };
+    return { success: true, message:,
+  Function check helper injected
+  ' };
 
   async fixSyntaxError(error) {
     // Try to reload page to clear syntax errors
     try {
-      await this.page.reload({ waitUntil: 'networkidle0' });
-      return { success: true, message: 'Page reloaded to clear syntax errors' };
+      await this.page.reload({ waitUntil: 'networkidle0 });
+      return { success: true, message: 'Page reloaded to clear syntax errors
+  ' };
     } catch (reloadError) {
-      return { success: false, reason: 'Failed to reload page' };
+      return { success: false, reason:,
+  Failed to reload page
+  ' };
 
 
   async fixReferenceError(error) {
     // Inject global error handler
     await this.page.evaluate(() => {
-      if (typeof window.globalErrorHandler === 'undefined') {
+      if (typeof window.globalErrorHandler === 'undefined
+  ') {
         window.globalErrorHandler = (error) => {
-          console.warn('Global error handler caught:', error);
+          console.warn('Global error handler caught: , error);
           return false; // Prevent default error handling
         };
-        window.addEventListener('error', window.globalErrorHandler);
+        window.addEventListener('error
+  ', window.globalErrorHandler);
 
     });
     
-    return { success: true, message: 'Global error handler injected' };
+    return { success: true, message: 'Global error handler injected
+  ' };
 
   async fixTypeError(error) {
     // Inject type checking helper
     await this.page.evaluate(() => {
-      if (typeof window.typeCheck === 'undefined') {
+      if (typeof window.typeCheck === 'undefined
+  ') {
         window.typeCheck = (value, expectedType) => {
-          if (expectedType === 'array') return Array.isArray(value);
-          if (expectedType === 'object') return typeof value === 'object' && value !== null;
+          if (expectedType === 'array
+  ') return Array.isArray(value);
+          if (expectedType === 'object
+  ') return typeof value === 'object
+  ' && value !== null;
           return typeof value === expectedType;
         };
 
     });
     
-    return { success: true, message: 'Type checking helper injected' };
+    return { success: true, message:,
+  Type checking helper injected
+  ' };
 
   async fixResourceError(error) {
     // Try to reload failed resources
     try {
-      await this.page.reload({ waitUntil: 'networkidle0' });
-      return { success: true, message: 'Resources reloaded' };
+      await this.page.reload({ waitUntil: 'networkidle0 });
+      return { success: true, message: 'Resources reloaded
+  ' };
     } catch (reloadError) {
-      return { success: false, reason: 'Failed to reload resources' };
+      return { success: false, reason:,
+  Failed to reload resources
+  ' };
 
 
   async fixMissingResource(error) {
     // Log missing resource for manual review
-    // console.log(`📝 Missing resource detected: ${error.url || 'unknown'}`);
-    return { success: true, message: 'Missing resource logged for review' };
+    // console.log(`📝 Missing resource detected: ${error.url || 'unknown}`);
+    return { success: true, message:,
+  Missing resource logged for review
+  ' };
 
   async fixCorsError(error) {
     // Inject CORS bypass for development (use with caution)
     await this.page.evaluate(() => {
-      if (typeof window.corsBypass === 'undefined') {
+      if (typeof window.corsBypass === 'undefined
+  ') {
         window.corsBypass = (url) => {
-          return fetch(url, { mode: 'no-cors' }).catch(() => null);
+          return fetch(url, { mode: 'no-cors }).catch(() => null);
         };
 
     });
     
-    return { success: true, message: 'CORS bypass helper injected' };
+    return { success: true, message: 'CORS bypass helper injected
+  ' };
 
   async fixNetworkError(error) {
     // Wait and retry
     await new Promise(resolve => setTimeout(resolve, 2000));
-    return { success: true, message: 'Network retry delay applied' };
+    return { success: true, message: 'Network retry delay applied
+  ' };
 
   async fixTimeoutError(error) {
     // Increase page timeout
     this.page.setDefaultTimeout(60000);
-    return { success: true, message: 'Page timeout increased to 60s' };
+    return { success: true, message: 'Page timeout increased to 60s
+  ' };
 
   async fixConnectionError(error) {
     // Wait and retry connection
     await new Promise(resolve => setTimeout(resolve, 5000));
-    return { success: true, message: 'Connection retry delay applied' };
+    return { success: true, message:,
+  Connection retry delay applied
+  ' };
 
   async performHealthCheck() {
     try {
-      // console.log('🔍 Performing browser health check...');
+      // console.log('🔍 Performing browser health check...
+  ');
       
       // Navigate to app
       await this.page.goto(CONFIG.appUrl, { 
-        waitUntil: 'networkidle0',
+        waitUntil: 'networkidle0,
         timeout: 30000 
       });
       
@@ -402,7 +497,8 @@ class BrowserErrorMonitor {
       
       return remainingErrors.length === 0;
     } catch (error) {
-      console.error('❌ Health check failed:', error);
+      console.error(,
+  ❌ Health check failed: , error);
       return false;
 
 
@@ -427,20 +523,24 @@ class BrowserErrorMonitor {
       
       // console.log(`📄 Report generated: ${reportPath}`);
     } catch (error) {
-      console.error('❌ Failed to generate report:', error);
+      console.error(
+  '❌ Failed to generate report:', error);
 
 
   async start() {
     if (this.isRunning) {
-      // console.log('⚠️ Monitor is already running');
+      // console.log(
+  '⚠️ Monitor is already running');
       return;
 
     const initialized = await this.initialize();
     if (!initialized) {
-      throw new Error('Failed to initialize monitor');
+      throw new Error(
+  'Failed to initialize monitor');
 
     this.isRunning = true;
-    // console.log('🚀 Browser Error Monitor started');
+    // console.log(
+  '🚀 Browser Error Monitor started');
     
     // Initial health check
     await this.performHealthCheck();
@@ -461,10 +561,12 @@ class BrowserErrorMonitor {
     if (this.browser) {
       await this.browser.close();
 
-    // console.log('🛑 Browser Error Monitor stopped');
+    // console.log(
+  '🛑 Browser Error Monitor stopped');
 
   async restart() {
-    // console.log('🔄 Restarting Browser Error Monitor...');
+    // console.log(
+  '🔄 Restarting Browser Error Monitor...');
     await this.stop();
     await new Promise(resolve => setTimeout(resolve, 2000));
     await this.start();
@@ -474,27 +576,36 @@ class BrowserErrorMonitor {
 const monitor = new BrowserErrorMonitor();
 
 // Handle process signals
-process.on('SIGINT', async () => {
-  // console.log('🛑 Received SIGINT, shutting down...');
+process.on(
+  'SIGINT', async () => {
+  // console.log(
+  '🛑 Received SIGINT, shutting down...');
   await monitor.stop();
   process.exit(0);
 });
 
-process.on('SIGTERM', async () => {
-  // console.log('🛑 Received SIGTERM, shutting down...');
+process.on(
+  'SIGTERM', async () => {
+  // console.log(
+  '🛑 Received SIGTERM, shutting down...');
   await monitor.stop();
   process.exit(0);
 });
 
 // Handle uncaught exceptions
-process.on('uncaughtException', async (error) => {
-  console.error('❌ Uncaught Exception:', error);
+process.on(
+  'uncaughtException', async (error) => {
+  console.error(
+  '❌ Uncaught Exception:', error);
   await monitor.stop();
   process.exit(1);
 });
 
-process.on('unhandledRejection', async (reason, promise) => {
-  console.error('❌ Unhandled Rejection at:', promise,reason:', reason);
+process.on(
+  'unhandledRejection', async (reason, promise) => {
+  console.error(
+  '❌ Unhandled Rejection at:,
+  , promise,reason: , reason);
   await monitor.stop();
   process.exit(1);
 });

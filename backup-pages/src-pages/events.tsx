@@ -18,55 +18,61 @@ import {
   TrendingUp,
   MessageCircle,
   BookOpen,
-  CheckCircle} from 'lucide-react.ts';
+  CheckCircle} from
+  'lucide-react.ts';
 
-
-
-
-
-=======
   'All','
-  'AI & ML','
-  'Cybersecurity','
-  'Cloud & DevOps','
-  'Data Analytics','
-  'IoT & Edge','
-  'Digital Transformation',
+  'AI & ML',
+  '
+  'Cybersecurity
+  ','
+
+  'Cloud & DevOps',
+  '
+  'Data Analytics
+  ','
+
+  'IoT & Edge',
+  '
+  'Digital Transformation
+  ',
 ];'
 
 export default function Events(...args: any[]): any {
 
-  const [selectedType, setSelectedType] = useState('All');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedStatus, setSelectedStatus] = useState('All');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedType, setSelectedType] = useState(,
+  All');
+  const [selectedCategory, setSelectedCategory] = useState(
+  'All');
+  const [selectedStatus, setSelectedStatus] = useState(
+  'All');
+  const [searchTerm, setSearchTerm] = useState('
+  ');
 
-  
-    
-    
-    
-    return matchesType && matchesCategory && matchesStatus && matchesSearch}) ;
+return matchesType && matchesCategory && matchesStatus && matchesSearch}) ;return date.toLocaleDateString('en-US
+  ', {
 
-  
-  
-  
-    return date.toLocaleDateString('en-US', {
+      weekday: 'long,
+      year:,
+  numeric
+  ',
+      month: 'long,
+      day:,
+  numeric
+  '})};
 
-      weekday: 'long',
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'})};
-
-  
-      case 'Cybersecurity':
-        return Shield;
-      case 'Cloud & DevOps':
+case 'Cybersecurity
+  ': return Shield;
+      case 'Cloud & DevOps
+  ':
         return Cloud;
-      case 'Data Analytics':
+      case 'Data Analytics
+  ':
         return TrendingUp;
-      case 'IoT & Edge':
+      case 'IoT & Edge
+  ':
         return Zap;
-      case 'Digital Transformation':
+      case 'Digital Transformation:
         return Globe;
       default:
         return BookOpen}
@@ -162,10 +168,13 @@ export default function Events(...args: any[]): any {
                 >
                   {statuses.map(status => (
                     <option key={status} value={status}>
-                      {status === 'upcoming''
-                        ? 'Upcoming''
-                        : status === 'past''
-                          ? 'Past'
+                      {status ===,
+  upcoming'
+  '
+                        ? 'Upcoming'
+  ': status === 'past'
+  '
+                          ? 'Past
                           : status}
                     </option>
                   ))}
@@ -198,8 +207,7 @@ export default function Events(...args: any[]): any {
             <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
               {upcomingEvents.map((event, index) => {
 
-                
-                return()                  <motion.div
+return()                  <motion.div
                     key={event.id}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -334,8 +342,7 @@ export default function Events(...args: any[]): any {
             <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
               {pastEvents.map((event, index) => {
 
-                
-                return()                  <motion.div
+return()                  <motion.div
                     key={event.id}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -415,7 +422,8 @@ export default function Events(...args: any[]): any {
             </h2>"
             <p className="text-zion-slate-light text-lg mb-8">
               Partner with Zion Tech Group to host technology events, workshops,
-              or webinars. Let's create valuable learning experiences together.
+              or webinars. Let
+  's create valuable learning experiences together.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
