@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, CheckCircle, Star, TrendingUp, Clock, Award } from 'lucide-react'
 import PageTransition from '../src/components/PageTransition'
 
@@ -69,7 +69,7 @@ export default function Services() {
 									<span>2-4 weeks delivery</span>
 								</div>
 								<Link
-									to="/contact"
+									href="/contact"
 									className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors group"
 									aria-label="Get started with AI services"
 								>
@@ -117,7 +117,7 @@ export default function Services() {
 									<span>4-8 weeks delivery</span>
 								</div>
 								<Link
-									to="/contact"
+									href="/contact"
 									className="inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors group"
 									aria-label="Get started with cloud services"
 								>
@@ -165,7 +165,7 @@ export default function Services() {
 									<span>3-6 weeks delivery</span>
 								</div>
 								<Link
-									to="/contact"
+									href="/contact"
 									className="inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-500 transition-colors group"
 									aria-label="Get started with cybersecurity services"
 								>
@@ -213,7 +213,7 @@ export default function Services() {
 									<span>6-12 weeks delivery</span>
 								</div>
 								<Link
-									to="/contact"
+									href="/contact"
 									className="inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group"
 									aria-label="Get started with custom software services"
 								>
@@ -282,7 +282,7 @@ export default function Services() {
 						</p>
 						<div className="mt-10 flex items-center justify-center gap-x-6">
 							<Link
-								to="/contact"
+								href="/contact"
 								className="group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200 hover:scale-105"
 								aria-label="Contact us to get started"
 							>
@@ -290,7 +290,7 @@ export default function Services() {
 								<ArrowRight className="ml-2 h-4 w-4 inline group-hover:translate-x-1 transition-transform" />
 							</Link>
 							<Link
-								to="/"
+								href="/"
 								className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group"
 								aria-label="Back to homepage"
 							>
