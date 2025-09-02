@@ -5,6 +5,7 @@ import { services, getServicesByCategory } from '../data/services';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { InteractiveButton, AnimatedCard, InteractiveStats, FloatingActionButton } from '../src/components/UI/InteractiveElements';
 
 const Home: NextPage = () => {
   const microSaasServices = getServicesByCategory('micro-saas');
@@ -51,44 +52,36 @@ const Home: NextPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <Link href="/contact" className="group">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center gap-2">
+            <Link href="/contact">
+              <InteractiveButton
+                variant="gradient"
+                size="lg"
+                icon={<ArrowRight className="w-5 h-5" />}
+                className="text-lg font-semibold"
+              >
                 Get Started Today
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </InteractiveButton>
             </Link>
-            <Link href="/services" className="group">
-              <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
+            <Link href="/services">
+              <InteractiveButton
+                variant="secondary"
+                size="lg"
+                icon={<ArrowRight className="w-5 h-5" />}
+                className="text-lg font-semibold border-2 border-white text-white hover:bg-white hover:text-gray-900"
+              >
                 Explore Services
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </InteractiveButton>
             </Link>
           </motion.div>
 
           {/* Stats Section */}
           <motion.div 
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
+            className="max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            {stats.map((stat, index) => {
-              const IconComponent = stat.icon;
-              return (
-                <motion.div 
-                  key={index}
-                  className="text-center"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <div className="flex justify-center mb-2">
-                    <IconComponent className="w-8 h-8 text-blue-400" />
-                  </div>
-                  <div className="text-3xl font-bold text-white">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
-                </motion.div>
-              );
-            })}
+            <InteractiveStats stats={stats} />
           </motion.div>
         </div>
       </section>
@@ -422,6 +415,15 @@ const Home: NextPage = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Floating Action Button */}
+      <FloatingActionButton
+        icon={<ArrowRight className="w-6 h-6" />}
+        onClick={() => window.location.href = '/contact'}
+        tooltip="Get in touch with us"
+        position="bottom-right"
+        color="blue"
+      />
     </MainLayout>
   );
 };
