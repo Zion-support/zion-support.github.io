@@ -115,6 +115,13 @@
     "contracts",
     "cypress",
     "**/*.backup",
-    "**/*.disabled"
+    "**/*.disabled",
+    "temp_working/**",
+    "src/pages/**",
+    "src/utils/**",
+    "src/routes/**",
+    "supabase/functions/**",
+    "src/services/**",
+    "src/types/**"
   ]
 }

@@ -1,9 +1,8 @@
 import React from 'react'
-import { motion } from 'framer-motion'
-import { CheckCircle, TrendingUp, Users, DollarSign } from 'lucide-react'
+import { motion  } from 'framer-motion'
+import { CheckCircle, TrendingUp, Users, DollarSign  } from 'lucide-react'
 
-interface CaseStudy {
-  id: string
+interface CaseStudy { id: string
   title: string
   description: string
   industry: string
@@ -11,14 +10,12 @@ interface CaseStudy {
     metric: string
     value: string
     icon: React.ReactNode
-  }[]
+    }[]
   technologies: string[]
   duration: string
 }
 
-const caseStudies: CaseStudy[] = [
-  {
-    id: '1',
+const caseStudies: CaseStudy[] = [{ id: '1',
     title: 'AI-Powered Customer Service Automation',
     description: 'Implemented multi-agent AI system for enterprise customer service, reducing response time and improving satisfaction.',
     industry: 'E-commerce',
@@ -30,26 +27,22 @@ const caseStudies: CaseStudy[] = [
     technologies: ['OpenAI GPT-4', 'LangChain', 'React', 'Node.js', 'PostgreSQL'],
     duration: '3 months'
   },
-  {
-    id: '2',
+  { id: '2',
     title: 'Cloud-Native Data Platform Migration',
     description: 'Migrated legacy data infrastructure to modern cloud-native platform with real-time analytics capabilities.',
     industry: 'Financial Services',
-    results: [
-      { metric: 'Processing Speed', value: '10x faster', icon: <TrendingUp className="w-5 h-5" /> },
+    results: [{ metric: 'Processing Speed', value: '10x faster', icon: <TrendingUp className="w-5 h-5" /> },
       { metric: 'Scalability', value: 'Unlimited', icon: <Users className="w-5 h-5" /> },
       { metric: 'Infrastructure Cost', value: '-60%', icon: <DollarSign className="w-5 h-5" /> }
     ],
     technologies: ['AWS', 'Kubernetes', 'Apache Kafka', 'Apache Spark', 'Terraform'],
     duration: '6 months'
   },
-  {
-    id: '3',
+  { id: '3',
     title: 'Zero-Trust Cybersecurity Implementation',
     description: 'Deployed comprehensive zero-trust security framework with automated threat detection and response.',
     industry: 'Healthcare',
-    results: [
-      { metric: 'Security Incidents', value: '-95%', icon: <CheckCircle className="w-5 h-5" /> },
+    results: [{ metric: 'Security Incidents', value: '-95%', icon: <CheckCircle className="w-5 h-5" /> },
       { metric: 'Compliance Score', value: '99.9%', icon: <CheckCircle className="w-5 h-5" /> },
       { metric: 'Detection Time', value: 'Real-time', icon: <TrendingUp className="w-5 h-5" /> }
     ],
@@ -59,8 +52,7 @@ const caseStudies: CaseStudy[] = [
 ]
 
 export default function CaseStudies() {
-  return (
-    <section className="py-24 sm:py-32 bg-gradient-to-br from-slate-50 to-blue-50">
+  return(<section className="py-24 sm:py-32 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
         <div className="mx-auto max-w-2xl lg:text-center mb-16">
@@ -68,8 +60,8 @@ export default function CaseStudies() {
             className="text-base font-semibold leading-7 text-blue-600"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true   }}
+            transition={{ duration: 0.6   }}
           >
             Success Stories
           </motion.h2>
@@ -77,7 +69,7 @@ export default function CaseStudies() {
             className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true   }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             Real results from real clients
@@ -86,11 +78,10 @@ export default function CaseStudies() {
             className="mt-6 text-lg leading-8 text-gray-600"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true   }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            See how our AI, cloud, and cybersecurity solutions have transformed businesses across industries.
-          </motion.p>
+            See how our AI, cloud, and cybersecurity solutions have transformed businesses across industries.</motion.p>
         </div>
 
         {/* Case Studies Grid */}
@@ -101,7 +92,7 @@ export default function CaseStudies() {
               className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true   }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <div className="p-8">
@@ -166,7 +157,7 @@ export default function CaseStudies() {
           className="text-center mt-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true   }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <p className="text-lg text-gray-600 mb-6">

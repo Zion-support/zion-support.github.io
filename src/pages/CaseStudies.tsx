@@ -2,8 +2,7 @@ import React from 'react';
 import { SEO } from '../components/SEO';
 
 const CaseStudies: React.FC = () => {
-  return (
-    <>
+  return(<>
       <SEO title="CaseStudies - Zion Tech Group" />
       <div className="min-h-screen bg-white py-20">
         <div className="max-w-4xl mx-auto px-4">

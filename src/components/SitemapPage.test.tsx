@@ -1,1 +1,1 @@
-describe ("SitemapPage", () => { it ("renders without crashing", () => { render (<SitemapPage />) ; expect (screen.getByRole ("main") || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; it ("displays expected content", () => { render (<SitemapPage />) ;
+describe("SitemapPage", () => { it("renders without crashing", () => { render(<SitemapPage />) ; expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; it("displays expected content", () => { render(<SitemapPage />) ;

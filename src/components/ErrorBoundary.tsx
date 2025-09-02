@@ -1,19 +1,16 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-interface Props {
-  children: ReactNode;
+interface Props { children: ReactNode;
   fallback?: ReactNode;
-}
+  }
 
-interface State {
-  hasError: boolean;
+interface State { hasError: boolean;
   error?: Error;
-}
+  }
 
 export class ErrorBoundary extends Component<Props, State> {
-  public state: State = {
-    hasError: false
-  };
+  public state: State = { hasError: false
+    };
 
   public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
@@ -23,14 +20,14 @@ export class ErrorBoundary extends Component<Props, State> {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     
     // Log to external service in production
-    if (process.env.NODE_ENV === 'production') {
+    if(process.env.NODE_ENV === 'production') {
       // You can integrate with services like Sentry here
       console.error('Production error:', { error, errorInfo });
     }
   }
 
   public render() {
-    if (this.state.hasError) {
+    if(this.state.hasError) {
       return this.props.fallback || (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
@@ -42,8 +39,7 @@ export class ErrorBoundary extends Component<Props, State> {
             <div className="mt-4 text-center">
               <h3 className="text-lg font-medium text-gray-900">Something went wrong</h3>
               <p className="mt-2 text-sm text-gray-500">
-                We're sorry, but something unexpected happened. Please try refreshing the page.
-              </p>
+                We're sorry, but something unexpected happened.Please try refreshing the page.</p>
               <div className="mt-6">
                 <button
                   onClick={() => window.location.reload()}

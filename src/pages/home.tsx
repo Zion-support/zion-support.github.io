@@ -2,8 +2,7 @@ import React from 'react';
 import { SEO } from '../components/SEO';
 
 const Home: React.FC = () => {
-  return (
-    <>
+  return(<>
       <SEO 
         title="Zion Tech Group - Leading Technology Solutions"
         description="Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services."
@@ -16,8 +15,7 @@ const Home: React.FC = () => {
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Leading technology solutions provider specializing in AI, cybersecurity, 
-              cloud infrastructure, and digital transformation services.
-            </p>
+              cloud infrastructure, and digital transformation services.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/services" 

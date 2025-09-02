@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { HelmetProvider } from 'react-helmet-async';
+import { Routes, Route  } from 'react-router-dom';
+import { motion, AnimatePresence  } from 'framer-motion';
+import { HelmetProvider  } from 'react-helmet-async';
 import Layout from './components/layout/Layout';
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
@@ -37,8 +37,7 @@ const AIAutonomousSupplyChain = lazy(() => import('./pages/services/AIAutonomous
 const AIFinancialPlanning = lazy(() => import('./pages/services/AIFinancialPlanning'));
 
 const App: React.FC = () => {
-  return (
-    <HelmetProvider>
+  return(<HelmetProvider>
       <ErrorBoundary>
         <Layout>
           <Suspense fallback={<LoadingSpinner />}>
