@@ -1,6 +1,12 @@
-import { Route, Routes } from 'react-router-dom';
-import { Suspense, lazy } from 'react';
-import { ProtectedRoute } from '../components/ProtectedRoute';
+import { Route, Routes    } from 'react-router-dom';
+export default function Page() {
+export default function Page() {
+  import { Suspense, lazy } from 'react';
+export default function Page() {
+export default function Page() {
+  import { ProtectedRoute } from '../components/ProtectedRoute';
+export default function Page() {
+export default function Page() {
 import LoadingSpinner from '../components/LoadingSpinner';
 
 // Lazy load auth pages
@@ -13,8 +19,7 @@ const TalentOnboarding = lazy(() => import('../pages/TalentOnboarding'));
 const ServiceOnboarding = lazy(() => import('../pages/ServiceOnboarding'));
 
 const AuthRoutes: React.FC = () => {
-  return (
-    <Suspense fallback={<LoadingSpinner />}>
+  return (<Suspense fallback={<LoadingSpinner />}>
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />

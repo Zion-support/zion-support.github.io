@@ -1,8 +1,7 @@
 import React from 'react';
 
 export default function ExpandedServicesPlus() {
-  return (
-    <div className="min-h-screen bg-slate-950 text-slate-100">
+  return (<div className="min-h-screen bg-slate-950 text-slate-100">
       <section className="py-12 border-b border-slate-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-6 inline-flex items-center rounded-full border border-slate-700 bg-slate-800/60 px-4 py-1 text-sm text-slate-300">
@@ -10,9 +9,8 @@ export default function ExpandedServicesPlus() {
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">High-Impact Micro SaaS, IT, and AI Services</h1>
           <p className="mt-3 max-w-3xl text-slate-300">
-            Add-on solutions you can deploy quickly, with transparent pricing and clear ROI. We don’t replace your
-            existing tools—we make them smarter and more effective across growth, operations, and security.
-          </p>
+            Add-on solutions you can deploy quickly, with transparent pricing and clear ROI.We don’t replace your
+            existing tools—we make them smarter and more effective across growth, operations, and security.</p>
           <div className="mt-6 flex flex-wrap gap-3 text-sm">
             <a href="tel:+13024640950" className="rounded-lg bg-purple-600 px-4 py-2 font-semibold hover:bg-purple-500">
               Call +1 302 464 0950
@@ -146,7 +144,7 @@ export default function ExpandedServicesPlus() {
             </div>
 
             <div className="rounded-xl border border-slate-800 bg-slate-900 p-5">
-              <h3 className="text-lg font-semibold">Managed Services (MSP)</h3>
+              <h3 className="text-lg font-semibold">Managed Services(MSP)</h3>
               <p className="mt-2 text-sm text-slate-300">SLA-backed monitoring, patching, backups, endpoint security.</p>
               <p className="mt-3 text-sm text-purple-300">Plans: $49–$199/user/month</p>
               <a href="https://ziontechgroup.com/services" target="_blank" rel="noreferrer" className="mt-2 inline-block text-sm text-cyan-300 hover:text-cyan-200">Engage</a>
