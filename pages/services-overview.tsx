@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Activity, ArrowRight, Award, Back, BarChart3, Bot, Brain, Calendar, CheckCircle, Clock, Cloud, Code, Cpu, CreditCard, Cross, Database, Eye, For, From, Globe, Grid, HardDrive, Home, Image, Link2, Lock, Low, Mail, MessageSquare, Mobile, Monitor, Network, No, Palette, Phone, Secure, Server, Settings, Shield, Smartphone, Snowflake, Star, Terminal, Today, TrendingUp, Typical, Users, Wifi, Zap } from 'lucide-react';
+import { Activity, ArrowRight, Award, Back, BarChart3, Bot, Brain, Calendar, CheckCircle, Clock, Cloud, Code, CreditCard, Cross, Database, Eye, For, From, Globe, Grid, HardDrive, Home, Image, Link2, Lock, Low, Mail, MessageSquare, Mobile, Monitor, Network, No, Palette, Phone, Secure, Server, Settings, Shield, Smartphone, Snowflake, Star, Terminal, Today, TrendingUp, Typical, Users, Wifi, Zap } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
 export default function Services() {
@@ -927,7 +927,7 @@ export default function Services() {
             {/* Advanced IT Services */}
             <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Cpu className="h-5 w-5 text-blue-600" />
+                <Brain className="h-5 w-5 text-blue-600" />
                 <h3 className="font-semibold text-gray-900">
                   Edge Computing & IoT Solutions
                 </h3>

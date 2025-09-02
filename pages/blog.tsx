@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import { Header } from '../src/components/Header';
 import Footer from '../src/components/Footer';
-import { Calendar, User, ArrowRight, Tag, Search } from 'lucide-react';
+import { Calendar, User, ArrowRight, Tag, Search, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Blog() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const postsPerPage = 3;
+  
   const blogPosts = [
     {
       id: 1,
@@ -86,6 +89,17 @@ export default function Blog() {
 
   const featuredPost = blogPosts.find(post => post.featured);
   const regularPosts = blogPosts.filter(post => !post.featured);
+  
+  // Pagination logic
+  const totalPages = Math.ceil(regularPosts.length / postsPerPage);
+  const startIndex = (currentPage - 1) * postsPerPage;
+  const endIndex = startIndex + postsPerPage;
+  const currentPosts = regularPosts.slice(startIndex, endIndex);
+  
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <>
@@ -202,7 +216,7 @@ export default function Blog() {
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {regularPosts.map((post) => (
+              {currentPosts.map((post) => (
                 <article key={post.id} className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden">
                   <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
                     <span className="text-white text-4xl font-bold">
@@ -246,6 +260,45 @@ export default function Blog() {
                 </article>
               ))}
             </div>
+            
+            {/* Pagination */}
+            {totalPages > 1 && (
+              <div className="mt-12 flex items-center justify-center">
+                <nav className="flex items-center space-x-2">
+                  <button
+                    onClick={() => handlePageChange(currentPage - 1)}
+                    disabled={currentPage === 1}
+                    className="flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    <ChevronLeft className="w-4 h-4 mr-1" />
+                    Previous
+                  </button>
+                  
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                    <button
+                      key={page}
+                      onClick={() => handlePageChange(page)}
+                      className={`px-3 py-2 text-sm font-medium rounded-md ${
+                        page === currentPage
+                          ? 'bg-blue-600 text-white'
+                          : 'text-gray-500 bg-white border border-gray-300 hover:bg-gray-50'
+                      }`}
+                    >
+                      {page}
+                    </button>
+                  ))}
+                  
+                  <button
+                    onClick={() => handlePageChange(currentPage + 1)}
+                    disabled={currentPage === totalPages}
+                    className="flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    Next
+                    <ChevronRight className="w-4 h-4 ml-1" />
+                  </button>
+                </nav>
+              </div>
+            )}
           </div>
         </section>
 

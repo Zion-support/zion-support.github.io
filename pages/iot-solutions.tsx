@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { Header } from '../src/components/Header';
 import Footer from '../src/components/Footer';
-import { Wifi, Cpu, Database, Shield, ArrowRight, CheckCircle } from 'lucide-react';
+import { Wifi, Brain, Database, Shield, ArrowRight, CheckCircle } from 'lucide-react';
 
 export default function IoTSolutions() {
   const features = [
@@ -12,7 +12,7 @@ export default function IoTSolutions() {
       description: 'Seamless connection and communication between IoT devices and systems'
     },
     {
-      icon: Cpu,
+      icon: Brain,
       title: 'Edge Computing',
       description: 'Process data locally for faster response times and reduced latency'
     },

@@ -29,10 +29,10 @@ import {
   Monitor,
   Server,
   Lock,
-  Cpu,
   Network,
   Terminal,
-  Calendar
+  Calendar,
+  DollarSign
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -296,6 +296,150 @@ export default function MicroSaaS() {
       pricing: '$99 - $399/month',
       delivery: '2-3 weeks',
       category: 'Finance SaaS'
+    },
+    {
+      title: 'AI-Powered Legal Document Analyzer',
+      description: 'Intelligent contract analysis and legal document processing with risk assessment',
+      icon: FileText,
+      features: [
+        'Automated contract review and analysis',
+        'Risk assessment and compliance checking',
+        'Legal clause identification and extraction',
+        'Contract comparison and benchmarking',
+        'Deadline tracking and renewal alerts',
+        'Integration with legal management systems'
+      ],
+      pricing: '$499 - $1,999/month',
+      delivery: '3-4 weeks',
+      category: 'Legal SaaS'
+    },
+    {
+      title: 'Smart Healthcare Appointment Scheduler',
+      description: 'AI-driven healthcare scheduling with patient preference learning and optimization',
+      icon: Calendar,
+      features: [
+        'Intelligent appointment scheduling optimization',
+        'Patient preference learning and adaptation',
+        'Automated reminder and follow-up system',
+        'Waitlist management and cancellation handling',
+        'Provider availability optimization',
+        'Integration with EHR and practice management systems'
+      ],
+      pricing: '$199 - $799/month',
+      delivery: '2-3 weeks',
+      category: 'Healthcare SaaS'
+    },
+    {
+      title: 'AI-Powered Real Estate Valuation Platform',
+      description: 'Intelligent property valuation and market analysis with predictive insights',
+      icon: TrendingUp,
+      features: [
+        'Automated property valuation using ML algorithms',
+        'Market trend analysis and forecasting',
+        'Comparative market analysis (CMA) generation',
+        'Investment opportunity scoring',
+        'Property condition assessment via AI',
+        'Integration with MLS and real estate databases'
+      ],
+      pricing: '$299 - $1,299/month',
+      delivery: '3-5 weeks',
+      category: 'Real Estate SaaS'
+    },
+    {
+      title: 'Smart Fleet Management System',
+      description: 'AI-powered fleet optimization with predictive maintenance and route planning',
+      icon: Network,
+      features: [
+        'Predictive maintenance scheduling',
+        'Route optimization and fuel efficiency',
+        'Driver behavior analysis and scoring',
+        'Real-time vehicle tracking and monitoring',
+        'Automated compliance reporting',
+        'Integration with telematics and IoT devices'
+      ],
+      pricing: '$399 - $1,599/month',
+      delivery: '4-6 weeks',
+      category: 'Fleet SaaS'
+    },
+    {
+      title: 'AI-Powered Learning Management System',
+      description: 'Intelligent educational platform with personalized learning paths and assessment',
+      icon: Users,
+      features: [
+        'Personalized learning path generation',
+        'Adaptive assessment and testing',
+        'Learning analytics and progress tracking',
+        'Automated content curation and recommendation',
+        'Peer learning and collaboration tools',
+        'Integration with educational tools and platforms'
+      ],
+      pricing: '$149 - $599/month',
+      delivery: '3-4 weeks',
+      category: 'Education SaaS'
+    },
+    {
+      title: 'Smart Restaurant Management Platform',
+      description: 'AI-driven restaurant operations with demand forecasting and inventory optimization',
+      icon: Target,
+      features: [
+        'Demand forecasting for menu planning',
+        'Dynamic pricing optimization',
+        'Inventory management and waste reduction',
+        'Customer preference analysis and personalization',
+        'Staff scheduling optimization',
+        'Integration with POS and delivery platforms'
+      ],
+      pricing: '$199 - $899/month',
+      delivery: '3-5 weeks',
+      category: 'Restaurant SaaS'
+    },
+    {
+      title: 'AI-Powered Insurance Claims Processor',
+      description: 'Intelligent claims processing with fraud detection and automated settlement',
+      icon: Shield,
+      features: [
+        'Automated claims processing and validation',
+        'Fraud detection and risk assessment',
+        'Damage assessment using computer vision',
+        'Automated settlement calculation',
+        'Customer communication automation',
+        'Integration with insurance databases and systems'
+      ],
+      pricing: '$599 - $2,499/month',
+      delivery: '4-6 weeks',
+      category: 'Insurance SaaS'
+    },
+    {
+      title: 'Smart Energy Management Platform',
+      description: 'AI-driven energy optimization for buildings and facilities with cost reduction',
+      icon: Zap,
+      features: [
+        'Energy consumption monitoring and analysis',
+        'Predictive maintenance for HVAC systems',
+        'Automated energy optimization recommendations',
+        'Carbon footprint tracking and reporting',
+        'Integration with smart building systems',
+        'Cost savings analytics and ROI tracking'
+      ],
+      pricing: '$299 - $1,199/month',
+      delivery: '3-4 weeks',
+      category: 'Energy SaaS'
+    },
+    {
+      title: 'AI-Powered Personal Finance Coach',
+      description: 'Intelligent personal finance management with budgeting and investment advice',
+      icon: DollarSign,
+      features: [
+        'Automated budget creation and tracking',
+        'Spending pattern analysis and insights',
+        'Investment recommendation engine',
+        'Goal setting and progress monitoring',
+        'Bill payment automation and reminders',
+        'Integration with banks and financial institutions'
+      ],
+      pricing: '$9.99 - $39.99/month',
+      delivery: '2-3 weeks',
+      category: 'Personal Finance SaaS'
     },
     {
       title: 'AI-Powered Customer Onboarding Platform',

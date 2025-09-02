@@ -19,7 +19,9 @@ import {
   Rocket,
   ShoppingCart,
   BarChart3,
-  Info
+  Info,
+  FileText,
+  Calendar
 } from 'lucide-react';
 
 const Navigation = () => {
@@ -42,19 +44,34 @@ const Navigation = () => {
       name: 'Services', 
       href: '/services', 
       dropdown: [
-        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI services' },
+        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI solutions' },
         { name: 'IT Services', href: '/it-services', icon: Network, description: 'Comprehensive IT solutions' },
         { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Scalable SaaS solutions' },
         { name: 'Web Development', href: '/services/web-development', icon: Code, description: 'Custom web applications' },
         { name: 'Cloud Services', href: '/services/cloud-services', icon: Cloud, description: 'Cloud infrastructure' },
-        { name: 'AI Development', href: '/services/ai-development', icon: Brain, description: 'AI development services' }
+        { name: 'AI Development', href: '/services/ai-development', icon: Brain, description: 'AI development services' },
+        { name: 'Blockchain Solutions', href: '/blockchain-solutions', icon: Network, description: 'Blockchain & Web3' },
+        { name: 'IoT Solutions', href: '/iot-solutions', icon: Brain, description: 'IoT & Edge Computing' }
       ]
     },
-    { name: 'Solutions', href: '/solutions' },
+    { 
+      name: 'Solutions', 
+      href: '/solutions',
+      dropdown: [
+        { name: 'AI Content Creation', href: '/solutions/ai-content-creation', icon: FileText, description: 'AI-powered content' },
+        { name: 'Customer Support', href: '/solutions/customer-support', icon: Users, description: 'Support automation' },
+        { name: 'Email Automation', href: '/solutions/email-automation', icon: Mail, description: 'Email workflows' },
+        { name: 'Event Management', href: '/solutions/event-management', icon: Calendar, description: 'Event solutions' },
+        { name: 'Project Management', href: '/solutions/project-management', icon: BarChart3, description: 'Project tools' },
+        { name: 'Workflow Automation', href: '/solutions/workflow-automation', icon: Zap, description: 'Process automation' }
+      ]
+    },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' }
+    { name: 'Careers', href: '/careers' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Support', href: '/support' }
   ];
 
   const contactInfo = [

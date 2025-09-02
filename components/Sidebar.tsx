@@ -16,7 +16,6 @@ import {
   ChevronDown, 
   ChevronRight, 
   Brain, 
-  Cpu, 
   Database, 
   Network, 
   Code, 
@@ -66,9 +65,11 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     { name: 'AI Services', href: '/ai-services', icon: Brain },
     { name: 'IT Services', href: '/it-services', icon: Network },
     { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
+    { name: 'Blockchain Solutions', href: '/blockchain-solutions', icon: Network },
+    { name: 'IoT Solutions', href: '/iot-solutions', icon: Brain },
     { name: 'Web Development', href: '/services/web-development', icon: Code },
     { name: 'Cloud Services', href: '/services/cloud-services', icon: Server },
-    { name: 'AI Development', href: '/services/ai-development', icon: Cpu }
+    { name: 'AI Development', href: '/services/ai-development', icon: Brain }
   ];
 
   const solutions = [
@@ -86,7 +87,9 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     { name: 'Help & Support', href: '/help', icon: HelpCircle },
     { name: 'Training', href: '/training', icon: Users },
     { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
-    { name: 'Pricing Guide', href: '/pricing-guide', icon: DollarSign }
+    { name: 'Pricing Guide', href: '/pricing-guide', icon: DollarSign },
+    { name: 'Search', href: '/search', icon: Search },
+    { name: 'Developer Resources', href: '/developer', icon: Code }
   ];
 
   const legal = [

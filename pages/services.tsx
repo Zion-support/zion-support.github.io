@@ -26,7 +26,6 @@ import {
   MessageSquare,
   Palette,
   Bot,
-  Cpu,
   Link2,
   Wifi,
   HardDrive,
@@ -646,7 +645,7 @@ export default function Services() {
 						{/* Advanced IT Services */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
 							<div className='flex items-center gap-3 mb-3'>
-								<Cpu className='h-5 w-5 text-blue-600' />
+								<Brain className='h-5 w-5 text-blue-600' />
 								<h3 className='font-semibold text-gray-900'>Edge Computing & IoT Solutions</h3>
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Distributed computing infrastructure for real-time data processing and IoT management.</p>

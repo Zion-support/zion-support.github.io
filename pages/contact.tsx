@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { Header } from '../src/components/Header';
 import Footer from '../src/components/Footer';
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, Zap } from 'lucide-react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -113,10 +113,56 @@ export default function Contact() {
           </div>
         </section>
 
-        {/* Contact Information */}
+        {/* Why Choose Us Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                We're not just another technology company. We're your strategic partner in digital transformation, 
+                delivering measurable results that drive your business forward.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+              <div className="text-center">
+                <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <CheckCircle className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Proven Track Record</h3>
+                <p className="text-gray-600">500+ successful projects with 99.9% client satisfaction and measurable ROI across multiple industries.</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="bg-gradient-to-r from-green-500 to-blue-600 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <Zap className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Cutting-Edge Technology</h3>
+                <p className="text-gray-600">Latest AI, cloud, and SaaS technologies with 15+ years of expertise in emerging tech trends.</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="bg-gradient-to-r from-orange-500 to-red-600 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <Clock className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">24/7 Support</h3>
+                <p className="text-gray-600">Round-the-clock technical support with guaranteed response times and proactive monitoring.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Information */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Get in Touch</h2>
+              <p className="text-lg text-gray-600">
+                Ready to start your project? Contact us today for a free consultation and project estimate.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {contactInfo.map((info, index) => (
                 <div key={index} className="text-center">
                   <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
@@ -132,14 +178,28 @@ export default function Contact() {
         </section>
 
         {/* Contact Form */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white rounded-lg shadow-lg p-8">
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg shadow-lg p-8">
               <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Send us a Message</h2>
-                <p className="text-gray-600">
-                  Fill out the form below and we'll get back to you within 24 hours.
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Start Your Project Today</h2>
+                <p className="text-lg text-gray-600 mb-4">
+                  Get a free consultation and project estimate. Our experts are ready to help you transform your business.
                 </p>
+                <div className="flex items-center justify-center space-x-6 text-sm text-gray-500">
+                  <div className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Free Consultation
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    24-Hour Response
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    No Obligation
+                  </div>
+                </div>
               </div>
 
               {isSubmitted ? (

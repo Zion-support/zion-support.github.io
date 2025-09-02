@@ -20,7 +20,7 @@ import {
   Clock,
   Award,
   Star,
-  Cpu,
+  Brain,
   HardDrive,
   Wifi,
   Code,
@@ -185,7 +185,7 @@ export default function ITServices() {
     {
       title: 'IoT & Edge Computing',
       description: 'Internet of Things solutions and edge computing infrastructure',
-      icon: Cpu,
+      icon: Brain,
       features: [
         'IoT device development and integration',
         'Edge computing platform setup',
@@ -201,7 +201,7 @@ export default function ITServices() {
     {
       title: 'Quantum Computing Consulting',
       description: 'Quantum computing strategy, algorithm development, and implementation',
-      icon: Cpu,
+      icon: Brain,
       features: [
         'Quantum algorithm development',
         'Quantum computing strategy consulting',
@@ -299,21 +299,165 @@ export default function ITServices() {
       description: 'Financial technology solutions and payment system integration',
       icon: Database,
       features: [
-        'Payment gateway integration',
-        'Financial API development',
-        'Compliance and regulatory solutions',
-        'Fraud detection and prevention',
-        'Digital banking solutions',
-        'Cryptocurrency integration'
+        'Payment gateway integration and management',
+        'Cryptocurrency and blockchain payment solutions',
+        'Financial data analytics and reporting',
+        'Compliance with PCI DSS and financial regulations',
+        'Fraud detection and prevention systems',
+        'Multi-currency and cross-border payment processing'
       ],
-      pricing: '$8,000 - $60,000/month',
-      delivery: '10-24 weeks',
+      pricing: '$8,000 - $50,000/month',
+      delivery: '8-20 weeks',
       category: 'FinTech Services'
+    },
+    {
+      title: 'AI/ML Infrastructure & MLOps',
+      description: 'Machine learning infrastructure setup and operational management',
+      icon: Brain,
+      features: [
+        'ML pipeline automation and orchestration',
+        'Model training and deployment infrastructure',
+        'A/B testing and model versioning',
+        'ML monitoring and performance tracking',
+        'Data preprocessing and feature engineering',
+        'Model serving and inference optimization'
+      ],
+      pricing: '$6,000 - $35,000/month',
+      delivery: '6-16 weeks',
+      category: 'MLOps Services'
+    },
+    {
+      title: 'Zero-Trust Security Architecture',
+      description: 'Comprehensive zero-trust security implementation and management',
+      icon: Shield,
+      features: [
+        'Identity and access management (IAM) implementation',
+        'Network segmentation and micro-segmentation',
+        'Continuous security monitoring and analytics',
+        'Privileged access management (PAM)',
+        'Security orchestration and automated response',
+        'Compliance automation and reporting'
+      ],
+      pricing: '$10,000 - $60,000/month',
+      delivery: '8-20 weeks',
+      category: 'Security Services'
+    },
+    {
+      title: 'Edge Computing & CDN Solutions',
+      description: 'Edge computing infrastructure and content delivery network optimization',
+      icon: Globe,
+      features: [
+        'Edge server deployment and management',
+        'Content delivery network optimization',
+        'Edge AI and machine learning deployment',
+        'Real-time data processing at the edge',
+        'Edge security and access control',
+        'Performance monitoring and optimization'
+      ],
+      pricing: '$4,000 - $25,000/month',
+      delivery: '4-12 weeks',
+      category: 'Edge Services'
+    },
+    {
+      title: 'Hyperautomation & RPA Solutions',
+      description: 'Robotic process automation and intelligent automation implementation',
+      icon: Settings,
+      features: [
+        'Process discovery and automation mapping',
+        'RPA bot development and deployment',
+        'Intelligent document processing automation',
+        'Workflow orchestration and management',
+        'Exception handling and human-in-the-loop',
+        'Performance monitoring and optimization'
+      ],
+      pricing: '$5,000 - $30,000/month',
+      delivery: '6-16 weeks',
+      category: 'Automation Services'
+    },
+    {
+      title: 'Data Mesh & Modern Data Architecture',
+      description: 'Modern data architecture implementation with data mesh principles',
+      icon: Database,
+      features: [
+        'Data mesh architecture design and implementation',
+        'Data product development and management',
+        'Data governance and quality frameworks',
+        'Real-time data streaming and processing',
+        'Data catalog and discovery platforms',
+        'Cross-domain data sharing and collaboration'
+      ],
+      pricing: '$12,000 - $75,000/month',
+      delivery: '12-24 weeks',
+      category: 'Data Architecture Services'
+    },
+    {
+      title: 'Cloud-Native Application Development',
+      description: 'Modern cloud-native application development with microservices architecture',
+      icon: Cloud,
+      features: [
+        'Microservices architecture design and implementation',
+        'Container orchestration with Kubernetes',
+        'Service mesh implementation and management',
+        'API gateway and service discovery',
+        'Cloud-native CI/CD pipeline setup',
+        'Observability and monitoring implementation'
+      ],
+      pricing: '$8,000 - $45,000/month',
+      delivery: '8-20 weeks',
+      category: 'Cloud Development Services'
+    },
+    {
+      title: 'Digital Twin & IoT Integration',
+      description: 'Digital twin development and IoT ecosystem integration',
+      icon: Network,
+      features: [
+        'Digital twin modeling and simulation',
+        'IoT device integration and management',
+        'Real-time data synchronization and processing',
+        'Predictive maintenance and analytics',
+        'Virtual reality and augmented reality integration',
+        'Performance optimization and monitoring'
+      ],
+      pricing: '$10,000 - $60,000/month',
+      delivery: '10-24 weeks',
+      category: 'Digital Twin Services'
+    },
+    {
+      title: 'Compliance & Regulatory Technology',
+      description: 'Regulatory compliance automation and governance technology solutions',
+      icon: Shield,
+      features: [
+        'Regulatory compliance monitoring and reporting',
+        'Automated compliance testing and validation',
+        'Risk assessment and management frameworks',
+        'Audit trail and documentation management',
+        'Regulatory change management and updates',
+        'Compliance dashboard and analytics'
+      ],
+      pricing: '$6,000 - $40,000/month',
+      delivery: '6-18 weeks',
+      category: 'Compliance Services'
+    },
+    {
+      title: 'Low-Code/No-Code Platform Development',
+      description: 'Custom low-code and no-code platform development for business users',
+      icon: Code,
+      features: [
+        'Visual application development platform',
+        'Drag-and-drop interface builder',
+        'Workflow automation and business process management',
+        'Integration with enterprise systems and APIs',
+        'User management and role-based access control',
+        'Performance monitoring and analytics'
+      ],
+      pricing: '$7,000 - $35,000/month',
+      delivery: '8-16 weeks',
+      category: 'Low-Code Services'
     },
     {
       title: 'Edge Computing & Distributed Systems',
       description: 'Edge computing infrastructure and distributed system architecture',
-      icon: Cpu,
+      icon: Brain,
       features: [
         'Edge computing platform deployment',
         'Distributed system architecture design',
