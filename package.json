@@ -94,7 +94,7 @@
     "deploy:production": "npm run build:full && npm run security:audit && echo 'Deploying to production...'"
   },
   "dependencies": {
-    "@esbuild/linux-x64": "^0.21.5",
+    "esbuild": "0.25.9",
     "@hookform/resolvers": "^5.2.1",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
