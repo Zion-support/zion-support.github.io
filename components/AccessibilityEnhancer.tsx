@@ -34,10 +34,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     } else {
       root.classList.remove('high-contrast');
     }
-
+    
     // Font size adjustments
-    root.style.setProperty('--font-size-multiplier', fontSize === 'large' ? '1.2' : fontSize === 'small' ? '0.8' : '1');
-
+    root.classList.remove('font-small', 'font-normal', 'font-large', 'font-extra-large');
+    root.classList.add(`font-${fontSize}`);
+    
     // Reduced motion
     if (reducedMotion) {
       root.classList.add('reduced-motion');
@@ -53,26 +54,156 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     applyAccessibilityStyles(newValue, fontSize, reducedMotion);
   };
 
-  const changeFontSize = (size: string) => {
-    setFontSize(size);
-    localStorage.setItem('fontSize', size);
-    applyAccessibilityStyles(isHighContrast, size, reducedMotion);
+  const changeFontSize = (newSize: string) => {
+    setFontSize(newSize);
+    localStorage.setItem('fontSize', newSize);
+    applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);
   };
 
   return (
-    <div className="accessibility-enhancer">
-      <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 9999 }}>
-        <button onClick={toggleHighContrast} className="accessibility-btn">
-          {isHighContrast ? 'Normal Contrast' : 'High Contrast'}
-        </button>
-        <div className="font-size-controls">
-          <button onClick={() => changeFontSize('small')} className="accessibility-btn">A-</button>
-          <button onClick={() => changeFontSize('normal')} className="accessibility-btn">A</button>
-          <button onClick={() => changeFontSize('large')} className="accessibility-btn">A+</button>
+    <>
+      {/* Accessibility Controls */}
+      <div className="accessibility-controls fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 border">
+        <h3 className="text-sm font-semibold mb-2 text-gray-900 dark:text-white">
+          Accessibility Options
+        </h3>
+        
+        <div className="space-y-2">
+          <button
+            onClick={toggleHighContrast}
+            className={`w-full px-3 py-1 text-xs rounded ${
+              isHighContrast 
+                ? 'bg-blue-600 text-white' 
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+            aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}
+          >
+            {isHighContrast ? 'Disable' : 'Enable'} High Contrast
+          </button>
+          
+          <div className="text-xs text-gray-600 dark:text-gray-300">
+            Font Size:
+          </div>
+          <div className="flex gap-1">
+            {['small', 'normal', 'large', 'extra-large'].map((size) => (
+              <button
+                key={size}
+                onClick={() => changeFontSize(size)}
+                className={`px-2 py-1 text-xs rounded ${
+                  fontSize === size
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                }`}
+                aria-label={`Set font size to ${size}`}
+              >
+                {size.charAt(0).toUpperCase()}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
-      {children}
-    </div>
+
+      {/* Skip to main content link */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
+      >
+        Skip to main content
+      </a>
+
+      {/* Screen reader only content */}
+      <div className="sr-only">
+        <h1>Zion Tech Group - Technology Solutions Provider</h1>
+        <p>Leading technology solutions provider helping businesses transform their digital presence 
+          with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services.
+        </p>
+      </div>
+
+      {/* Main content wrapper with accessibility attributes */}
+      <main id="main-content" role="main" aria-label="Main content">
+        {children}
+      </main>
+
+      {/* Accessibility styles */}
+      <style jsx global>{`
+        /* High contrast mode */
+        .high-contrast {
+          --tw-bg-opacity: 1;
+          --tw-text-opacity: 1;
+        }
+        
+        .high-contrast * {
+          background-color: white !important;
+          color: black !important;
+          border-color: black !important;
+        }
+        
+        .high-contrast button, .high-contrast a {
+          border: 2px solid black !important;
+        }
+        
+        .high-contrast button:hover, .high-contrast a:hover {
+          background-color: black !important;
+          color: white !important;
+        }
+
+        /* Font size adjustments */
+        .font-small {
+          font-size: 0.875rem;
+        }
+        
+        .font-normal {
+          font-size: 1rem;
+        }
+        
+        .font-large {
+          font-size: 1.125rem;
+        }
+        
+        .font-extra-large {
+          font-size: 1.25rem;
+        }
+
+        /* Reduced motion */
+        .reduced-motion *, .reduced-motion *::before,
+        .reduced-motion *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+
+        /* Focus indicators */
+        *:focus {
+          outline: 2px solid #3b82f6 !important;
+          outline-offset: 2px !important;
+        }
+
+        /* Screen reader only content */
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+
+        .focus\\:not-sr-only:focus {
+          position: static;
+          width: auto;
+          height: auto;
+          padding: inherit;
+          margin: inherit;
+          overflow: visible;
+          clip: auto;
+          white-space: normal;
+        }
+      `}</style>
+    </>
   );
 };
 
