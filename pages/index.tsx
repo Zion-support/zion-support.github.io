@@ -19,19 +19,19 @@ export default function Home() {
       title: 'AI Services',
       description: 'Cutting-edge artificial intelligence solutions',
       icon: Brain,
-      href: '/ai-services'
+      href: '/services#ai-services'
     },
     {
       title: 'IT Services',
       description: 'Comprehensive information technology services',
       icon: Network,
-      href: '/it-services'
+      href: '/services#it-services'
     },
     {
       title: 'Micro SaaS',
       description: 'Scalable software as a service solutions',
       icon: Cloud,
-      href: '/micro-saas'
+      href: '/services#micro-saas'
     }
   ];
   return (
