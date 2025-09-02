@@ -1,11 +1,9 @@
-import React from 'react';
-import { useRouter } from 'next/router';
-
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Layout Components;
 import { EnhancedHeader } from './components/EnhancedHeader';
 import { EnhancedFooter } from './components/EnhancedFooter';
 import { Sidebar } from './components/Sidebar';
-
 // Loading component
 const LoadingSpinner = () => (
   <div className='flex items-center justify-center min-h-screen'>
@@ -41,7 +39,6 @@ const Training = createLazyComponent(() => import('./pages/Training'));
 const Webinars = createLazyComponent(() => import('./pages/Webinars'));
 const Research = createLazyComponent(() => import('./pages/Research'));
 const Sitemap = createLazyComponent(() => import('./pages/Sitemap'));
-
 // Additional required components
 const FAQ = createLazyComponent(() => import('./pages/FAQ'));
 const Privacy = createLazyComponent(() => import('./pages/Privacy'));
@@ -52,26 +49,21 @@ const Accessibility = createLazyComponent(() => import('./pages/Accessibility'))
 const SystemStatus = createLazyComponent(() => import('./pages/SystemStatus'));
 const Search = createLazyComponent(() => import('./pages/Search'));
 const Categories = createLazyComponent(() => import('./pages/Categories'));
-
 // New Autonomous AI Services 2025
 const AIAutonomousContentMarketingPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-Content-Marketing-Platform'));
 const AIAutonomousCustomerSuccessPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-Customer-Success-Platform'));
 const AIAutonomousDevOpsPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-DevOps-Platform'));
 const AIAutonomousSalesPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-Sales-Platform'));
 const AIAutonomousHRPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-HR-Platform'));
-
 // 2028 Services Showcase
 const InnovativeServicesShowcase2028 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2028'));
-
 // 2025 Innovative Services
 const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025'));
 const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
-
 // Sitemap-aligned pages
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
 const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
 const SolutionsHealthcare = lazy(() => import('./pages/solutions/Healthcare'));
-
 // AI Service pages
 const AILegalDocumentAutomation = createLazyComponent(() => import('./pages/services/AILegalDocumentAutomation'));
 const AIContentGenerator = createLazyComponent(() => import('./pages/services/ai-content-generator'));
@@ -88,7 +80,6 @@ const AIProjectManagement = createLazyComponent(() => import('./pages/services/a
 const AISupplyChainOptimization = createLazyComponent(() => import('./pages/services/ai-supply-chain-optimization'));
 const AIWorkflowAutomation = createLazyComponent(() => import('./pages/services/ai-workflow-automation'));
 const AIWorkflowOrchestrator = createLazyComponent(() => import('./pages/services/ai-workflow-orchestrator'));
-
 // New AI Services
 const AIDataGovernancePlatform = createLazyComponent(() => import('./pages/services/AI-Data-Governance-Platform'));
 const AIFinancialRiskManagement = createLazyComponent(() => import('./pages/services/AI-Financial-Risk-Management'));
@@ -97,7 +88,6 @@ const AIESGCompliancePlatform = createLazyComponent(() => import('./pages/servic
 const AIDigitalTwinPlatform = createLazyComponent(() => import('./pages/services/AI-Digital-Twin-Platform'));
 const AIEdgeComputingPlatform = createLazyComponent(() => import('./pages/services/AI-Edge-Computing-Platform'));
 const AIQuantumMachineLearning = createLazyComponent(() => import('./pages/services/AI-Quantum-Machine-Learning'));
-
 // Quantum Computing Services
 const QuantumComputing = createLazyComponent(() => import('./pages/services/QuantumComputing'));
 const QuantumAIPlatform = createLazyComponent(() => import('./pages/services/QuantumAIPlatform'));
@@ -107,7 +97,6 @@ const QuantumComputingElite = createLazyComponent(() => import('./pages/services
 const QuantumComputingSolutions = createLazyComponent(() => import('./pages/services/QuantumComputingSolutions'));
 const QuantumMachineLearning = createLazyComponent(() => import('./pages/services/QuantumMachineLearning'));
 const QuantumTechnology = createLazyComponent(() => import('./pages/services/QuantumTechnology'));
-
 // Other Services
 const BlockchainEnterpriseSolutions = createLazyComponent(() => import('./pages/services/blockchain-enterprise-solutions'));
 const CloudDevOps = createLazyComponent(() => import('./pages/services/cloud-devops'));
@@ -178,12 +167,12 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorB
       <div className='space-y-3'>
         <button
           onClick={resetErrorBoundary}
-          className='w-full bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors'        >
+          className='w-full bg-cyan-500 hover: bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors'        >
           Try again
         </button>
         <button;
           onClick={() => window.location.href = '/'}
-          className='w-full bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors'>
+          className='w-full bg-gray-700 hover: bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors'>
           Go home
         </button>
       </div>
@@ -308,12 +297,12 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorB
                             </p>
                             <button;
                               onClick={() => window.history.back()}
-                              className='px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors mr-4'>
+                              className='px-6 py-3 bg-blue-500 text-white rounded-lg hover: bg-blue-600 transition-colors mr-4'>
                               Go Back
                             </button>
                             <button;
                               onClick={() => window.location.href = '/'}
-                              className='px-6 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors'>
+                              className='px-6 py-3 bg-gray-500 text-white rounded-lg hover: bg-gray-600 transition-colors'>
                               Go Home
                             </button>
                           </div>
@@ -399,7 +388,7 @@ import { ErrorBoundary } from 'react-error-boundary';
                     <div className='text-center'>
                       <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>
                       <p className='text-gray-600 mb-8'>Page not found</p>
-                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors'>
+                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors'>
                         Go Home
                       </a>
                     </div>
@@ -468,4 +457,3 @@ import { ErrorBoundary } from 'react-error-boundary';
       </div>
     </ErrorBoundary>
   )}
-export default App

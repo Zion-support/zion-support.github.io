@@ -4,9 +4,7 @@
   "checks": {
     "dependencies": {
       "status": "warning",
-      "issues": [
-        "Security vulnerabilities detected"
-      ],
+      "issues": ["Security vulnerabilities detected"],
       "totalDependencies": 92
     },
     "build": {
@@ -14,9 +12,7 @@
       "buildExists": false,
       "buildAge": null,
       "buildSuccess": false,
-      "issues": [
-        "Build process failed"
-      ]
+      "issues": ["Build process failed"]
     },
     "codeQuality": {
       "status": "warning",
@@ -43,9 +39,7 @@
     },
     "accessibility": {
       "status": "warning",
-      "issues": [
-        "242 accessibility issues found"
-      ],
+      "issues": ["242 accessibility issues found"],
       "accessibilityIssues": 242
     }
   }

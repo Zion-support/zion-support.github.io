@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react';
-
 interface ImageOptimizerProps {
   src: string;
    alt: string;

@@ -7,8 +7,6 @@ import { useState, useEffect } from 'react.ts' import { motion, AnimatePresence 
    export function Accessibility(...args: any[]): any {
    const [isOpen, setIsOpen] = useState(false);
    const [settings, setSettings] = useState<any>({
-   fontSize: anyanyanyanyanyanyanyanyany16,
-   highContrast: false,
-   reducedMotion: false,
-   soundEnabled: true,
-   theme: 'auto'})  useEffect(() => {';
+   fontSize: anyanyanyanyanyanyanyanyany16, highContrast: false,
+   reducedMotion: false, soundEnabled: true,
+   theme: 'auto'})  useEffect(() => {';'

@@ -31,7 +31,8 @@ class ComprehensiveErrorFixer {
       for (const file of sourceFiles) {
         try {
           await this.fixFileErrors(file);
-        } catch (error) {this.log(`Failed to fix ${file}: ${error.message}`, 'error');
+        } catch (error) {
+          this.log(`Failed to fix ${file}: ${error.message}`, 'error');
         }
       }
 
@@ -43,9 +44,12 @@ class ComprehensiveErrorFixer {
   }
 
   findSourceFiles() {
-    const sourceDirs = [src',
-      'pages',components',
-      'utils',hooks',
+    const sourceDirs = [
+      'src',
+      'pages',
+      'components',
+      'utils',
+      'hooks',
       'types',
     ];
     const extensions = ['.js', '.jsx', '.ts', '.tsx'];
@@ -94,9 +98,12 @@ class ComprehensiveErrorFixer {
 
       // Only write if content changed
       if (content !== originalContent) {
-        fs.writeFileSync(filePath, content);this.log(`Fixed errors in ${filePath}`, 'success');this.fixes.push(`fixed_${filePath}`);
+        fs.writeFileSync(filePath, content);
+        this.log(`Fixed errors in ${filePath}`, 'success');
+        this.fixes.push(`fixed_${filePath}`);
       }
-    } catch (error) {this.log(`Error processing ${filePath}: ${error.message}`, 'error');
+    } catch (error) {
+      this.log(`Error processing ${filePath}: ${error.message}`, 'error');
     }
   }
 
@@ -211,7 +218,8 @@ class ComprehensiveErrorFixer {
 
     // Fix common TypeScript syntax errors
     fixedContent = fixedContent.replace(
-      /:\s*([^,;)\]]+)\s*([,;)\]])/g,: $1$2'
+      /:\s*([^,;)\]]+)\s*([,;)\]])/g,
+      ': $1$2'
     );
     fixedContent = fixedContent.replace(
       /,\s*([^,;)\]]+)\s*([,;)\]])/g,
@@ -271,9 +279,10 @@ class ComprehensiveErrorFixer {
       recommendations: this.generateRecommendations(),
     };
 
-    // Save report to fileconst reportFile = `comprehensive-error-fixer-report-${Date.now()}.json`;
+    // Save report to file
+    const reportFile = `comprehensive-error-fixer-report-${Date.now()}.json`;
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-this.log(`Report saved to ${reportFile}`, 'info');
+    this.log(`Report saved to ${reportFile}`, 'info');
     return report;
   }
 
@@ -317,7 +326,8 @@ this.log(`Report saved to ${reportFile}`, 'info');
 
       this.log('Comprehensive error fixing completed successfully', 'success');
       return report;
-    } catch (error) {this.log(`Comprehensive error fixing failed: ${error.message}`, 'error');
+    } catch (error) {
+      this.log(`Comprehensive error fixing failed: ${error.message}`, 'error');
       const report = await this.generateReport();
       return report;
     }
@@ -331,7 +341,8 @@ async function main() {
   try {
     await fixer.runFullFix();
     process.exit(0);
-  } catch (error) {fixer.log(`Fatal error: ${error.message}`, 'error');
+  } catch (error) {
+    fixer.log(`Fatal error: ${error.message}`, 'error');
     await fixer.generateReport();
     process.exit(1);
   }
@@ -349,6 +360,7 @@ process.on('SIGINT', () => {
 });
 
 // Run the main function
-main().catch(error => {console.error(`Fatal error: ${error.message}`);
+main().catch(error => {
+  console.error(`Fatal error: ${error.message}`);
   process.exit(1);
 });

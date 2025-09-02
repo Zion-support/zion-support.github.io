@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react';
 import ModernServicesShowcase from './ModernServicesShowcase';
-
 describe('ModernServicesShowcase', () => {
   it('renders without crashing', () => {
     render(<ModernServicesShowcase />)

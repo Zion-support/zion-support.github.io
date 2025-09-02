@@ -5,10 +5,8 @@ import { Heart } from 'lucide-react';
 import { useWishlist } from '@/hooks/useWishlist';
 import { Button } from '@/components/ui/button';
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger
+  Tooltip, TooltipContent,
+  TooltipProvider, TooltipTrigger
 } from '@/components/ui/tooltip';
 import { useDispatch } from 'react-redux';
 import { addItem } from '@/store/cartSlice';
@@ -17,14 +15,12 @@ import { useRouter } from 'next/router';
 import { useMediaQuery } from 'usehooks-ts';
 import { useEnqueueSnackbar } from '@/context/SnackbarContext';
 import { captureException } from '@sentry/nextjs';
-
 export default function ProductCard({ product, onBuy, buyDisabled = false }) {
   const { isAuthenticated } = useAuth();
   const { isWishlisted, toggle } = useWishlist();
   const [imageError, setImageError] = useState(false);
   const router = useRouter();
   const enqueueSnackbar = useEnqueueSnackbar();
-
   if (!product || typeof product.id !== 'string' || typeof product.title !== 'string' || product.title.trim() === '') {
     captureException(new Error('Invalid product data received by ProductCard'), {
       extra: { product }
@@ -39,7 +35,6 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
   const active = isWishlisted(product.id);
   const dispatch = useDispatch();
   const isMobile = useMediaQuery('(max-width: 768px)');
-
   const handleWishlistToggle = (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -49,7 +44,6 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
     }
     toggle(product.id, product);
   };
-
   const handleAddToCart = (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -58,22 +52,18 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
       return;
     }
     dispatch(addItem({
-      id: product.id,
-      title: product.title,
-      price: product.price,
-      image: product.image,
+      id: product.id, title: product.title,
+      price: product.price, image: product.image,
       quantity: 1
     }));
     enqueueSnackbar('Item added to cart', { variant: 'success' });
   };
-
   const handleCardClick = () => {
     router.push(`/products/${product.id}`);
   };
-
   return (
     <div 
-      className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover:shadow-lg transition-shadow"
+      className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover: shadow-lg transition-shadow"
       onClick={handleCardClick}
       data-testid="product-card"
     >
