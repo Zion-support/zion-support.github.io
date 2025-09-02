@@ -28,6 +28,7 @@ import {
   Rocket,
   Heart,
   Sparkles,
+  Network,
   Calculator,
   BookOpen,
   Lightbulb,
