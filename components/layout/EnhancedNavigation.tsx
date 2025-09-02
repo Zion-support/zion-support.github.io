@@ -51,26 +51,17 @@ const EnhancedNavigation: React.FC = () => {
                 <Link href="/services/micro-saas" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Micro SaaS
                 </Link>
-                <Link href="/services/ai-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  AI Development
+                <Link href="/services/ai-ops-copilot" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Ops Copilot
                 </Link>
-                <Link href="/services/cloud-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Cloud Services
+                <Link href="/services/security-copilot" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Security Copilot
                 </Link>
-                <Link href="/services/web-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Web Development
+                <Link href="/services/data-platform" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Data Platform
                 </Link>
-                <Link href="/services/mobile-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Mobile Development
-                </Link>
-                <Link href="/services/blockchain-solutions" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Blockchain Solutions
-                </Link>
-                <Link href="/services/iot-platforms" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  IoT Platforms
-                </Link>
-                <Link href="/services/cybersecurity" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Cybersecurity
+                <Link href="/services/martech-automation" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  MarTech Automation
                 </Link>
               </div>
             </div>
@@ -90,6 +81,9 @@ const EnhancedNavigation: React.FC = () => {
                 onMouseEnter={() => setSolutionsOpen(true)}
                 onMouseLeave={() => setSolutionsOpen(false)}
               >
+                <Link href="/solutions" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Solutions Overview
+                </Link>
                 <Link href="/solutions/enterprise" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Enterprise Solutions
                 </Link>
@@ -98,12 +92,6 @@ const EnhancedNavigation: React.FC = () => {
                 </Link>
                 <Link href="/solutions/startups" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Startups
-                </Link>
-                <Link href="/solutions/healthcare" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Healthcare
-                </Link>
-                <Link href="/solutions/finance" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Finance
                 </Link>
                 <Link href="/case-studies" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Case Studies

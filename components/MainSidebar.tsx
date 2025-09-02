@@ -1,5 +1,6 @@
-import React, { useState              } from 'react.ts';
-import Link from 'next/link.ts';
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { Home, 
   Briefcase, 
   Users, 
@@ -64,29 +65,34 @@ import { Home,
   Sun,
   Wind
   
-} from 'lucide-react.ts';
+} from 'lucide-react';
 
 interface SidebarProps extends React.PropsWithChildren<{}> {
-
-  isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
-  onClose: ()               => void}
+  isOpen: boolean;
+  onClose: () => void;
+}
 
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   const router = useRouter();
-  const [expandedSections, setExpandedSections] = useState<any>([]);
+  const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
-  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    setExpandedSections(prev => ;
-      prev.includes(section) ;
-        ? prev.filter(s => s !== section);
-        : [...prev, section];
+  const toggleSection = (section: string) => {
+    setExpandedSections((prev) =>
+      prev.includes(section) ? prev.filter((s) => s !== section) : [...prev, section]
     );
   };
 
-  const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === path;
+  const isActive = (path: string) => router.pathname === path;
 
-  const navigation = {
+  interface NavItem {
+    name: string;
+    href: string;
+    icon: any;
+    description?: string;
+  }
+
+  const navigation: { main: NavItem[]; services: NavItem[]; solutions: NavItem[]; resources: NavItem[]; company: NavItem[] } = {
 
     main: [
       { name: 'Home', href: '/', icon: Home },
@@ -99,23 +105,23 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Contact', href: '/contact', icon: Phone },
     ],
     services: [
-      { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain, description: 'Autonomous AI systems' },
-      { name: 'Cloud & DevOps', href: '/services/cloud', icon: Cloud, description: 'Infrastructure & automation' },
-      { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Zero-trust security' },
-      { name: 'Data & Analytics', href: '/services/data', icon: Database, description: 'Data pipelines & ML ops' },
+      { name: 'AI Services', href: '/services/ai-services', icon: Brain, description: 'Applied AI solutions' },
+      { name: 'IT Services', href: '/services/it-services', icon: Server, description: 'Infrastructure & support' },
       { name: 'Micro SaaS', href: '/services/micro-saas', icon: Store, description: 'Rapid product development' },
-      { name: 'Digital Transformation', href: '/services/transformation', icon: Rocket, description: 'Business modernization' },
+      { name: 'AI Ops Copilot', href: '/services/ai-ops-copilot', icon: Cpu, description: 'Ops automation' },
+      { name: 'Security Copilot', href: '/services/security-copilot', icon: Shield, description: 'Proactive defense' },
+      { name: 'Data Platform', href: '/services/data-platform', icon: Database, description: 'Data pipelines & BI' },
+      { name: 'MarTech Automation', href: '/services/martech-automation', icon: Rocket, description: 'Growth automation' },
     ],
     solutions: [
+      { name: 'Solutions Overview', href: '/solutions', icon: Target, description: 'All solution areas' },
       { name: 'Enterprise', href: '/solutions/enterprise', icon: Building2, description: 'Large-scale implementations' },
-      { name: 'SMB', href: '/solutions/smb', icon: Store, description: 'Small business focused' },
-      { name: 'Startup', href: '/solutions/startup', icon: Rocket, description: 'Growth acceleration' },
-      { name: 'Government', href: '/solutions/government', icon: Building, description: 'Public sector expertise' },
-      { name: 'Healthcare', href: '/solutions/healthcare', icon: Heart, description: 'Health tech solutions' },
-      { name: 'Financial Services', href: '/solutions/financial', icon: DollarSign, description: 'Fintech & compliance' },
+      { name: 'Small Business', href: '/solutions/small-business', icon: Store, description: 'SMB focused' },
+      { name: 'Startups', href: '/solutions/startups', icon: Rocket, description: 'Growth acceleration' },
+      { name: 'Case Studies', href: '/case-studies', icon: BarChart3, description: 'Success stories' },
     ],
     resources: [
-      { name: 'Documentation', href: '/docs', icon: FileText, description: 'Technical guides' },
+      { name: 'Documentation', href: '/documentation', icon: FileText, description: 'Technical guides' },
       { name: 'API Reference', href: '/api', icon: Code, description: 'Developer resources' },
       { name: 'Case Studies', href: '/case-studies', icon: BarChart3, description: 'Success stories' },
       { name: 'Help Center', href: '/help', icon: HelpCircle, description: 'Support & FAQs' },
@@ -127,16 +133,15 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Team', href: '/team', icon: Users, description: 'Meet our experts' },
       { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic partnerships' },
       { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },
-      { name: 'News', href: '/news', icon: Newspaper, description: 'Company updates' },
-      { name: 'Press', href: '/press', icon: Quote, description: 'Media resources' },
+      { name: 'Blog', href: '/blog', icon: Newspaper, description: 'Company updates' },
     ]
   };
 
   const quickActions = [
-    { name: 'Request Quote', href: '/request-quote', icon: Quote, color: 'from-cyan-500 to-blue-600' },
+    { name: 'Contact Sales', href: '/contact', icon: Quote, color: 'from-cyan-500 to-blue-600' },
     { name: 'Get Support', href: '/contact', icon: HelpCircle, color: 'from-green-500 to-emerald-600' },
     { name: 'View Status', href: '/status', icon: CheckCircle, color: 'from-yellow-500 to-orange-600' },
-    { name: 'Documentation', href: '/docs', icon: FileText, color: 'from-purple-500 to-pink-600' },
+    { name: 'Documentation', href: '/documentation', icon: FileText, color: 'from-purple-500 to-pink-600' },
   ];
 
   const contactInfo = [
@@ -151,7 +156,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code, color: 'text-gray-400' },
   ];
 
-  const renderNavSection = (title: anyanyanyanyanyanyanyanyanyanyanyanyanystring, items[], sectionKey: string)               => (
+  const renderNavSection = (title: string, items: NavItem[], sectionKey: string) => (
     <div key={sectionKey} className="mb-6">
       <button
         onClick={() => toggleSection(sectionKey)}

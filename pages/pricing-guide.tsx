@@ -33,6 +33,7 @@ import {
   Lightbulb,
   HelpCircle
 } from 'lucide-react';
+import { Network } from 'lucide-react';
 
 const PricingGuide: React.FC = () => {
   const pricingFactors = [
