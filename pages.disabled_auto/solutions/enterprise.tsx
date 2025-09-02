@@ -1,3 +1,9 @@
+<<<<<<< HEAD:pages/solutions/enterprise.tsx
+import type { NextPage } from 'next';
+import Layout from '../../components/Layout';
+import Link from 'next/link';
+import { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from 'lucide-react';
+=======
 import type { NextPage } from
   'next';
 import Layout from
@@ -6,6 +12,7 @@ import Link from
   'next/link';
 import { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from
   'lucide-react';
+>>>>>>> origin/main:pages.disabled_auto/solutions/enterprise.tsx
 
 const EnterpriseSolutions: NextPage = () => {
   return (

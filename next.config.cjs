@@ -23,11 +23,15 @@ eslint: {
     unoptimized: true,
   },
   compiler: {
+<<<<<<< HEAD:next.config.js
+    removeConsole: process.env.NODE_ENV === 'production',
+=======
     removeConsole: process.env.NODE_ENV ===
   'production',
+>>>>>>> origin/main:next.config.cjs
   },
   webpack: (config, { dev, isServer }) => {
-    // Completely exclude problematic directories from the build
+    // Exclude problematic directories from the build
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       exclude: [
@@ -35,13 +39,22 @@ eslint: {
         /api-backup/,
         /pages\.disabled/,
         /backup-pages/,
+<<<<<<< HEAD:next.config.js
+        /\.backup/,
+=======
 /\.backup/,
+>>>>>>> origin/main:next.config.cjs
         /\.disabled/,
         /automation\/backups/,
         /automation_backup/,
         /broken_files_backup/,
         /contracts/,
+<<<<<<< HEAD:next.config.js
+        /contracts_backup/,
+        /cypress/,
+=======
         /hardhat/,
+>>>>>>> origin/main:next.config.cjs
       ],
     });
     

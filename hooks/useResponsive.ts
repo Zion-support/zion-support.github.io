@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+import { useState, useEffect } from 'react';
+interface ResponsiveState {
+=======
 import { useState, useEffect } from
   'react';
+>>>>>>> origin/main
 
 interface ResponsiveState {
   screenWidth: number;

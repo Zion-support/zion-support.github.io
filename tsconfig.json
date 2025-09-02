@@ -102,7 +102,21 @@
     "cypress",
     "**/*.backup",
     "**/*.disabled",
+<<<<<<< HEAD
+    "cypress_backup",
+    "contracts_backup",
+    "data_backup",
+    "fix_utils_files.ts",
+    "hooks/useResponsive.ts",
+    "lib_backup",
+    "pages-backup",
+    "pages.__backup",
+    "server",
+    "services",
+    "src.broken"
+=======
     "temp_working",
     "supabase/functions"
+>>>>>>> origin/main
   ]
 }
