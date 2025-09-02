@@ -1,11 +1,11 @@
-describe ('MicroSaaS', () => {};
+describe ('MicroSAAS', () => {};
 ';
   it ('renders without crashing', () => {};
-    render (<MicroSaaS  />) ;';
+    render (<MicroSAAS  />) ;';
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 ';
   it ('displays expected content', () => {};
-    render (<MicroSaaS  />) ;
+    render (<MicroSAAS  />) ;
     // Add specific test assertions based on component content;
   }) }) ;
 ';

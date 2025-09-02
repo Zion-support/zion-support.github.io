@@ -1,12 +1,6 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
-<<<<<<< HEAD
-import LoadingSpinner from './components/ui/loading-spinner';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Sidebar from './components/Sidebar';
-=======
 
 // Import enhanced components
 import EnhancedHeader from './components/navigation/EnhancedHeader';
@@ -19,7 +13,6 @@ const Sidebar = ({ isOpen, onToggle }: { isOpen: boolean; onToggle: () => void }
     <button onClick={onToggle} className="p-4 text-white">Toggle Sidebar</button>
   </div>
 );
->>>>>>> origin/main
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
@@ -32,19 +25,6 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
 };
 
 // Lazy load pages for better performance
-<<<<<<< HEAD
-const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.default })));
-const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.default })));
-const SolutionsPage = lazy(() => import('./pages/SolutionsPage').then(module => ({ default: module.default })));
-const AboutPage = lazy(() => import('./pages/AboutPage').then(module => ({ default: module.default })));
-const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ default: module.default })));
-const BlogPage = lazy(() => import('./pages/BlogPage').then(module => ({ default: module.default })));
-const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(module => ({ default: module.default })));
-
-// Loading component
-const PageLoader = () => (
-  <div className="flex items-center justify-center min-h-screen bg-slate-900">
-=======
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
 const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.default })));
 const SolutionsPage = lazy(() => import('./pages/SolutionsPage').then(module => ({ default: module.SolutionsPage })));
@@ -72,7 +52,6 @@ const AdvancedServicesShowcase = lazy(() => import('./backup-pages/src-pages/Adv
 // Loading component
 const PageLoader = () => (
   <div className="flex items-center justify-center min-h-screen bg-gray-900">
->>>>>>> origin/main
     <div className="text-center">
       <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div>
       <p className="text-gray-400">Loading...</p>
@@ -81,14 +60,6 @@ const PageLoader = () => (
 );
 
 function App() {
-<<<<<<< HEAD
-  return (
-    <ErrorBoundary fallback={<div>Something went wrong. Please refresh the page.</div>}>
-      <div className="App">
-        <Header />
-        <div className="flex pt-16">
-          <Sidebar isOpen={false} onToggle={() => {}} />
-=======
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -97,18 +68,11 @@ function App() {
         <EnhancedHeader />
         <div className="flex pt-16">
           <Sidebar isOpen={sidebarOpen} onToggle={() => setSidebarOpen(!sidebarOpen)} />
->>>>>>> origin/main
           <main className="flex-1 ml-64 min-h-screen">
             <Suspense fallback={<PageLoader />}>
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/services" element={<ServicesPage />} />
-<<<<<<< HEAD
-                <Route path="/solutions" element={<SolutionsPage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="/blog" element={<BlogPage />} />
-=======
                 <Route path="/services/*" element={<ServicesPage />} />
                 <Route path="/services/ai-threat-intelligence" element={<AIThreatIntelligence />} />
                 <Route path="/services/blockchain-supply-chain" element={<BlockchainSupplyChain />} />
@@ -143,24 +107,15 @@ function App() {
                 <Route path="/terms-of-service" element={<BlogPage />} />
                 <Route path="/cookie-policy" element={<BlogPage />} />
                 <Route path="/request-quote" element={<ContactPage />} />
->>>>>>> origin/main
                 <Route path="*" element={<NotFoundPage />} />
               </Routes>
             </Suspense>
           </main>
         </div>
-<<<<<<< HEAD
-        <Footer />
-=======
         <EnhancedFooter />
->>>>>>> origin/main
       </div>
     </ErrorBoundary>
   );
 }
 
-<<<<<<< HEAD
 export default App;
-=======
-export default App;
->>>>>>> origin/main

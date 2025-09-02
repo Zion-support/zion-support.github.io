@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export function AICybersecurityPlatform(function AICybersecurityPlatform() {): any {} return() <div className="min-h-screen bg-gray-900 text-white"> 
-=======
 import {}
   Shield,
   Lock,
@@ -413,4 +410,3 @@ const AICybersecurityPlatform: React.FC = () => {
 
 export default AICybersecurityPlatform;'"`
 '"`'"`
->>>>>>> origin/main

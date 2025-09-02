@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-= 
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -411,4 +408,3 @@ export function Cybersecurity() {
 }
 
 export default Cybersecurity;
->>>>>>> origin/main
