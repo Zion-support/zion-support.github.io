@@ -1,5 +1,6 @@
 import { GradientHeading } from "./GradientHeading";
-import { Link } from 'react-router-dom';
+import { Link } from
+  'react-router-dom';
 import { Briefcase, HardDrive, Lightbulb, Users const categories = [
   {
     title: "AI Services",
@@ -125,5 +126,3 @@ const itemVariants = {
     </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-

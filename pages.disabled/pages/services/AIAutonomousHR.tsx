@@ -19,7 +19,8 @@ import {}
   TrendingUp,
   Zap,
   Shield,
-  Briefcase} from 'lucide-react.ts';
+  Briefcase} from
+  'lucide-react.ts';
 
 :pages.disabled/pages/services/AIAutonomousHR.tsx
 const AIAutonomousHR: React.FC = (): JSX.Element => {
@@ -39,7 +40,9 @@ const AIAutonomousHR: React.FC = (): JSX.Element => {
 ""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               Transform Your HR with""
-              <span className="bg-gradient-to-r from-violet-400 to-purple-500 bg-clip-text text-transparent">'{' '}
+              <span className="bg-gradient-to-r from-violet-400 to-purple-500 bg-clip-text text-transparent">
+  '{' 
+  '}
                 AI Intelligence;
               </span>
 :pages.disabled/pages/services/AIAutonomousHR.tsx
@@ -196,4 +199,4 @@ const AIAutonomousHR: React.FC = (): JSX.Element => {
 
 :pages.disabled/pages/services/AIAutonomousHR.tsx
 export default AIAutonomousHR;'"
-'"'"
+  '"'"
